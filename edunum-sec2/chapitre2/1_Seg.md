@@ -1,4 +1,4 @@
-## Décomposition d'un problème en étapes
-
+Décomposition d'un problème en étapes
+=====================================
 
 À compléter

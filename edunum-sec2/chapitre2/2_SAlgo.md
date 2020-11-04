@@ -1,4 +1,4 @@
-## Algorithmes classiques
-
+Algorithmes classiques
+======================
 
 À compléter

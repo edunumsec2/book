@@ -1,3 +1,4 @@
-## Conséquences de l'automatisation
+Conséquences de l'automatisation
+================================
 
 À compléter

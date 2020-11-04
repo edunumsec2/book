@@ -1,4 +1,4 @@
-## Éléments de base d'un ordinateur
-
+Éléments de base d'un ordinateur
+================================
 
 À compléter

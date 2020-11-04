@@ -1,3 +1,4 @@
-## Notion de redondance
+Notion de redondance
+====================
 
 À compléter

@@ -1,4 +1,4 @@
-## Systèmes logiques
-
+Systèmes logiques
+=================
 
 À compléter

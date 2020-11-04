@@ -1,3 +1,4 @@
-## Histoire de l'informatique
+Histoire de l'informatique
+==========================
 
 À compléter

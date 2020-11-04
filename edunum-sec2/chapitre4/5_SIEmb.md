@@ -1,4 +1,5 @@
-## Informatique embarquée
+Informatique embarquée
+======================
 
 À compléter
 

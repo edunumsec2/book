@@ -1,3 +1,4 @@
-## Système et arthmétique binaire
+Systèmes et arthmétique binaire
+===============================
 
 À compléter
