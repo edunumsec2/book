@@ -30,6 +30,9 @@
     - file: chapitre4/5_SIEmb.md
     - file: chapitre4/6_SHInfo.md
 - file: annexes/intro
+- file: playground/_intro
+  sections:
+    - file: playground/notebook
 
 
 
