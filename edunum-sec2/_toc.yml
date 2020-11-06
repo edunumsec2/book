@@ -33,6 +33,7 @@
 - file: playground/_intro
   sections:
     - file: playground/notebook
+    - file: playground/types
 
 
 
