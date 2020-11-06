@@ -33,3 +33,5 @@ Si nécessaire (erreurs, vieux fichiers qui traînent dans `_build`):
 ```bash
 jupyter-book clean edunum-sec2
 ```
+
+Test de commit sur le readme.md
