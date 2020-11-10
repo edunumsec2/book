@@ -1,45 +1,35 @@
 # Table of content
 #
-- file: introduction
-#
-- file: theme/representation-information/introduction
+- file: eleve
+- file: theme/representation-information/eleve
   sections:
-#
-    - file: theme/representation-information/systeme-arithmetique-binaire.md
-    - file: theme/representation-information/representation-entiers.md
-    - file: theme/representation-information/stockage-manipulation-donnees.md
-    - file: theme/representation-information/redondance.md
-    - file: theme/representation-information/transformation-numerique-economie-droit.md
-#
-- file: theme/introduction-algorithmique/introduction
+    - file: theme/representation-information/systeme-arithmetique-binaire/eleve
+    - file: theme/representation-information/representation-entiers/eleve
+    - file: theme/representation-information/stockage-manipulation-donnees/eleve
+    - file: theme/representation-information/redondance/eleve
+    - file: theme/representation-information/transformation-numerique-economie-droit/eleve
+- file: theme/introduction-algorithmique/eleve
   sections:
-    - file: theme/introduction-algorithmique/decomposition-probleme.md
-    - file: theme/introduction-algorithmique/algorithmes-classiques.md
-    - file: theme/introduction-algorithmique/formulation-solutions.md
-    - file: theme/introduction-algorithmique/consequences-automatisation.md
-#
-- file: theme/introduction-programmation/introduction
+    - file: theme/introduction-algorithmique/decomposition-probleme/eleve
+    - file: theme/introduction-algorithmique/algorithmes-classiques/eleve
+    - file: theme/introduction-algorithmique/formulation-solutions/eleve
+    - file: theme/introduction-algorithmique/consequences-automatisation/eleve
+- file: theme/introduction-programmation/eleve
   sections:
-    - file: theme/introduction-programmation/instructions-sequentielles.md
-    - file: theme/introduction-programmation/structures-donnees-controle.md
-    - file: theme/introduction-programmation/transcription-algorithmes.md
-    - file: theme/introduction-programmation/perspectives-citoyennes-politiques.md
-#
-- file: theme/architecture-ordinateurs/introduction
+    - file: theme/introduction-programmation/instructions-sequentielles/eleve
+    - file: theme/introduction-programmation/structures-donnees-controle/eleve
+    - file: theme/introduction-programmation/transcription-algorithmes/eleve
+    - file: theme/introduction-programmation/perspectives-citoyennes-politiques/eleve
+- file: theme/architecture-ordinateurs/eleve
   sections:
-    - file: theme/architecture-ordinateurs/systemes-logiques.md
-    - file: theme/architecture-ordinateurs/microprocesseur.md
-    - file: theme/architecture-ordinateurs/elements-base-ordinateurs.md
-    - file: theme/architecture-ordinateurs/architecture-von-neumann.md
-    - file: theme/architecture-ordinateurs/informatique-embarquee.md
-    - file: theme/architecture-ordinateurs/histoire-informatique.md
-#
-- file: annexe/introduction
-#
-- file: playground/introduction
+    - file: theme/architecture-ordinateurs/systemes-logiques/eleve
+    - file: theme/architecture-ordinateurs/microprocesseur/eleve
+    - file: theme/architecture-ordinateurs/elements-base-ordinateurs/eleve
+    - file: theme/architecture-ordinateurs/architecture-von-neumann/eleve
+    - file: theme/architecture-ordinateurs/informatique-embarquee/eleve
+    - file: theme/architecture-ordinateurs/histoire-informatique/eleve
+- file: annexe/eleve
+- file: playground/eleve
   sections:
     - file: playground/notebook
     - file: playground/types
-
-
-
