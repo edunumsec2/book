@@ -1,35 +1,42 @@
 # Table of content
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
-- file: intro
-- file: chapitre1/0_intro
+- file: introduction
+#
+- file: theme/representation-information/introduction
   sections:
-    - file: chapitre1/1_Sab.md
-    - file: chapitre1/2_SRep.md
-    - file: chapitre1/3_Sstoc.md
-    - file: chapitre1/4_SRed.md
-    - file: chapitre1/5_STransf.md
-- file: chapitre2/0_intro
+#
+    - file: theme/representation-information/systeme-arithmetique-binaire.md
+    - file: theme/representation-information/representation-entiers.md
+    - file: theme/representation-information/stockage-manipulation-donnees.md
+    - file: theme/representation-information/redondance.md
+    - file: theme/representation-information/transformation-numerique-economie-droit.md
+#
+- file: theme/introduction-algorithmique/introduction
   sections:
-    - file: chapitre2/1_Seg.md
-    - file: chapitre2/2_SAlgo.md
-    - file: chapitre2/3_SSol.md
-    - file: chapitre2/4_SAuto.md
-- file: chapitre3/0_intro
+    - file: theme/introduction-algorithmique/decomposition-probleme.md
+    - file: theme/introduction-algorithmique/algorithmes-classiques.md
+    - file: theme/introduction-algorithmique/formulation-solutions.md
+    - file: theme/introduction-algorithmique/consequences-automatisation.md
+#
+- file: theme/introduction-programmation/introduction
   sections:
-    - file: chapitre3/1_Sseq.md
-    - file: chapitre3/2_SStru.md
-    - file: chapitre3/3_STransc.md
-    - file: chapitre3/4_SCitoy.md
-- file: chapitre4/0_intro
+    - file: theme/introduction-programmation/instructions-sequentielles.md
+    - file: theme/introduction-programmation/structures-donnees-controle.md
+    - file: theme/introduction-programmation/transcription-algorithmes.md
+    - file: theme/introduction-programmation/perspectives-citoyennes-politiques.md
+#
+- file: theme/architecture-ordinateurs/introduction
   sections:
-    - file: chapitre4/1_SSyst.md
-    - file: chapitre4/2_SMicro.md
-    - file: chapitre4/3_SElBase.md
-    - file: chapitre4/4_SVNeu.md
-    - file: chapitre4/5_SIEmb.md
-    - file: chapitre4/6_SHInfo.md
-- file: annexes/intro
+    - file: theme/architecture-ordinateurs/systemes-logiques.md
+    - file: theme/architecture-ordinateurs/microprocesseur.md
+    - file: theme/architecture-ordinateurs/elements-base-ordinateurs.md
+    - file: theme/architecture-ordinateurs/architecture-von-neumann.md
+    - file: theme/architecture-ordinateurs/informatique-embarquee.md
+    - file: theme/architecture-ordinateurs/histoire-informatique.md
+#
+- file: annexe/introduction
+#
 - file: playground/_intro
   sections:
     - file: playground/notebook
