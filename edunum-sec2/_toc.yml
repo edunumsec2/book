@@ -1,6 +1,6 @@
 # Table of content
 #
-- file: eleve
+- file: theme/eleve
 - file: theme/representation-information/eleve
   sections:
     - file: theme/representation-information/systeme-arithmetique-binaire/eleve
