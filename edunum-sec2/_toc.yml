@@ -36,7 +36,7 @@
 #
 - file: annexe/introduction
 #
-- file: playground/_intro
+- file: playground/introduction
   sections:
     - file: playground/notebook
     - file: playground/types
