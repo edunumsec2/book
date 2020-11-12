@@ -19,7 +19,8 @@ Comment produire l'output HTML statique depuis les fichiers source:
 
 ```bash
 cd <dossier-du-checkout>
-jupyter-book build edunum-sec2
+jupyter-book build eleve
+jupyter-book build maitre
 ```
 
 Ouvrir ensuite le fichier `edunum-sec2/_build/html/index.html`, par exemple (macOS):
@@ -31,7 +32,8 @@ open edunum-sec2/_build/html/index.html
 Si nécessaire (erreurs, vieux fichiers qui traînent dans `_build`):
 
 ```bash
-jupyter-book clean edunum-sec2
+jupyter-book clean eleve
+jupyter-book clean maitre
 ```
 
 
