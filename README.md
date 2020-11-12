@@ -8,8 +8,10 @@
  * Édition du Markdown (`*.md`) et du format Jupyter (`*.ipynb`):
    * [Visual Studio Code](https://code.visualstudio.com)
  * Contruction du rendu HTML:
+   * Une version récente (3.x, x ≥ 6, ou mieux: x ≥ 9) de [Python](https://www.python.org/downloads/)
    * [Jupyter Book](https://jupyterbook.org)
      * [Installation de Juypter Book](https://jupyterbook.org/intro.html#install-jupyter-book)
+       * En gros, avec Python 3.9: `pip3.9 install -U jupyter-book`
      * Syntaxe Mardown utilisée: [MyST](https://jupyterbook.org/reference/glossary.html#term-MyST)
 
 
