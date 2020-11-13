@@ -2,6 +2,9 @@
 
 ## Outils nécessaires ou recommandés
 
+ * Python
+    * Pour OSX, un excellent tuto (mais il faut bien lire la deuxième partie) : [Tuto](https://opensource.com/article/19/5/python-3-default-mac) 
+   A partir de "What we should do ...". [^1]
  * Git/GitHub:
    * Terminal avec les commandes directes de `git`
    * ou application [GitHub Desktop](https://desktop.github.com)
@@ -38,4 +41,4 @@ jupyter-book clean eleve
 jupyter-book clean maitre
 ```
 
-
+[^1]: J'ai pris la version 3.9.0 et tout ce qui suit fonctionne parfaitement.
