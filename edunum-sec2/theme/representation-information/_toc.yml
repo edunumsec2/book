@@ -1,7 +1,4 @@
 # - file: README
-- file: src/intro
+- file: intro
   sections:
-    - file: src/
-    - file: src/
-    - file: src/
-    - file: src/
+    - file: representation-entiers/eleve
