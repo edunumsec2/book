@@ -1,5 +1,0 @@
-Informatique embarquée
-======================
-
-À compléter
-

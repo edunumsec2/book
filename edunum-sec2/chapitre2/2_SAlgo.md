@@ -1,4 +1,0 @@
-Algorithmes classiques
-======================
-
-À compléter

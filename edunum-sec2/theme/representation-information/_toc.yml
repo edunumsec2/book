@@ -1,0 +1,7 @@
+# - file: README
+- file: src/intro
+  sections:
+    - file: src/
+    - file: src/
+    - file: src/
+    - file: src/

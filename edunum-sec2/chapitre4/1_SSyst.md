@@ -1,4 +1,0 @@
-Systèmes logiques
-=================
-
-À compléter
