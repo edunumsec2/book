@@ -1,7 +1,7 @@
 #######################################################################################
 # Book settings
 title : Représentation de l'information
-author: David Da SILVA
+author: Groupe de travail DGEP, EPFL, HEP, UNIL
 logo: 'logobinaire.jpg'
 
 # Information about where the book exists on the web
@@ -22,7 +22,19 @@ execute:
 # HTML-specific settings
 html:
   home_page_in_navbar         : false
+  extra_footer: |
+    <p>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+    </a>
+    <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+    Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+    </a>.
+    </p>
 
+sphinx:
+  config:
+    html_show_copyright: false
 # #######################################################################################
 # Interact link settings
 notebook_interface            : "notebook"
