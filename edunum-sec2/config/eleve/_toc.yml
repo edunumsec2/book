@@ -1,0 +1,54 @@
+# Table of content
+#
+- file: content/theme/eleve
+  numbered: true
+
+- part: Classifié selon plan
+  chapters:
+  - file: content/theme/representation-information/eleve
+    sections:
+      - file: content/theme/representation-information/systeme-arithmetique-binaire/eleve
+      - file: content/theme/representation-information/representation-entiers/eleve
+      - file: content/theme/representation-information/stockage-manipulation-donnees/eleve
+      - file: content/theme/representation-information/redondance/eleve
+      - file: content/theme/representation-information/transformation-numerique-economie-droit/eleve
+  - file: content/theme/introduction-algorithmique/eleve
+    sections:
+      - file: content/theme/introduction-algorithmique/decomposition-probleme/eleve
+      - file: content/theme/introduction-algorithmique/algorithmes-classiques/eleve
+      - file: content/theme/introduction-algorithmique/formulation-solutions/eleve
+      - file: content/theme/introduction-algorithmique/consequences-automatisation/eleve
+  - file: content/theme/introduction-programmation/eleve
+    sections:
+      - file: content/theme/introduction-programmation/instructions-sequentielles/eleve
+      - file: content/theme/introduction-programmation/structures-donnees-controle/eleve
+      - file: content/theme/introduction-programmation/transcription-algorithmes/eleve
+      - file: content/theme/introduction-programmation/perspectives-citoyennes-politiques/eleve
+  - file: content/theme/architecture-ordinateurs/eleve
+    sections:
+      - file: content/theme/architecture-ordinateurs/systemes-logiques/eleve
+      - file: content/theme/architecture-ordinateurs/microprocesseur/eleve
+      - file: content/theme/architecture-ordinateurs/elements-base-ordinateurs/eleve
+      - file: content/theme/architecture-ordinateurs/architecture-von-neumann/eleve
+      - file: content/theme/architecture-ordinateurs/informatique-embarquee/eleve
+      - file: content/theme/architecture-ordinateurs/histoire-informatique/eleve
+      - file: content/theme/architecture-ordinateurs/ressources
+
+- part: Pas encore classifié
+  chapters:
+  - file: content/annexe/eleve
+  - file: content/playground/eleve
+    sections:
+      - file: content/playground/notebook
+      - file: content/playground/types
+  - file: content/arts/L'app de rencontre
+  - file: content/arts/La poésie des limites
+  - file: content/arts/Python_turtle_extension
+  - file: content/arts/Qui suis-je_retouchesOlivier
+  - file: content/arts/contemporain_final
+  - file: content/enjeux/digital-labor/eleve
+  - file: content/fiche/references-notebook
+  - file: content/theme/algorithmique-programmation/eleve
+  - file: content/theme/projets/eleve
+  - file: content/theme/representation-information/representation-entiers/exercice/carte-perforee/exercice
+  - file: content/theme/reseaux/eleve

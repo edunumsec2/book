@@ -78,7 +78,7 @@ Les mots "incompatibles" avec la *ressource d'entraînement* choisie (ex : "nate
 
 
 
-# :crystal_ball: Labels 
+## :crystal_ball: Labels 
 
 * **Nom (libre)** : La poésie des limites
 * **Genre (contraint)** : plugged

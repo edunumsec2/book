@@ -75,7 +75,7 @@ On peut varier l'activité sous les angles suivants :
 2. Quels problèmes cela pose-t-il dans une société où de plus en plus d'algorithmes de recheche sont utilisés dans de nombreux domaines ? Est-il possible que l'on cherche à classer les gens dans des catégories parce que ça simplifie le travail des machines ? [Note: Ceci, ce serait plutôt relié au tri, justement: prévoir une autre activité...]
 3. Y a-t-il un lien avec les réseaux sociaux et les mécanismes de ciblage publicitaire ? 
 
-# :crystal_ball: Labels 
+## :crystal_ball: Labels 
 
 * **Nom (libre)** : Qui suis-je ? 
 * **Genre (contraint)** : unplugged
