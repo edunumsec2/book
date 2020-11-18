@@ -52,7 +52,7 @@
 
 ## Références
 
- * Syntaxe Mardown utilisée: [MyST](https://jupyterbook.org/reference/glossary.html#term-MyST)
+* Syntaxe Mardown utilisée: [MyST](https://jupyterbook.org/reference/glossary.html#term-MyST)
 
 
 ## Build
