@@ -1,9 +1,9 @@
 # Table of content
 #
 - file: content/theme/eleve
-  numbered: true
 
 - part: Classifié selon plan
+  numbered: true
   chapters:
   - file: content/theme/representation-information/eleve
     sections:
@@ -35,6 +35,7 @@
       - file: content/theme/architecture-ordinateurs/ressources
 
 - part: Pas encore classifié
+  numbered: false
   chapters:
   - file: content/annexe/eleve
   - file: content/playground/eleve
@@ -49,6 +50,8 @@
   - file: content/enjeux/digital-labor/eleve
   - file: content/fiche/references-notebook
   - file: content/theme/algorithmique-programmation/eleve
+  - file: content/theme/algorithmique-programmation/activites/Cupidon est un programme
+  - file: content/theme/algorithmique-programmation/activites/La recette de l'univers
   - file: content/theme/projets/eleve
   - file: content/theme/representation-information/representation-entiers/exercice/carte-perforee/exercice
   - file: content/theme/reseaux/eleve

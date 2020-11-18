@@ -45,7 +45,7 @@ Si vous deviez expliquer à quelqu'un comment se faire cuire un oeuf, par où co
 2. On peut demander une mise en commun des recettes de départ, et entamer à partir de leurs différences une discussion quant à la précision relative des instructions données. 
 3. On peut complexifier les choses en abordant la question du niveau de détail des instructions en rapport à la notion de librairie en programmation. Certaines instructions, comme "prendre une poêle" pourraient être décomposées en une infinité de micro-instructions plus précises. À moins que l'on ne possède une librairie comprenant une méthode `ustensiles.take(poêleàfrire)`
 
-# :crystal_ball: Labels 
+## :crystal_ball: Labels 
 
 * **Nom (libre)** : La recette de l'univers
 * **Genre (contraint)** : unplugged
