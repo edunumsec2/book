@@ -3,12 +3,14 @@
 ## Installation recommandée
 
  1. Seulement si pas encore présent: [installer git](https://git-scm.com/downloads) sur votre machine
-       * Sous Windows, il faut activer les symlinks de git. Après l'installation de git, éditer le fichier `C:\ProgramData\Git\config` et y insérer:
-        ```
-        [core]
-            symlinks = true
-        ```
-        ([Plus d'info](https://www.joshkel.com/2018/01/18/symlinks-in-windows/) si ça ne marche pas sous Windows.)
+   * Sous Windows, il faut activer les symlinks de git. Après l'installation de git, éditer le fichier `C:\ProgramData\Git\config` et y insérer:
+
+     ```
+     [core]
+         symlinks = true
+     ```
+
+     ([Plus d'info](https://www.joshkel.com/2018/01/18/symlinks-in-windows/) si ça ne marche pas sous Windows.)
 
  2. Cloner ce repository git
     * Soit depuis un terminal avec les commandes directes de `git`
