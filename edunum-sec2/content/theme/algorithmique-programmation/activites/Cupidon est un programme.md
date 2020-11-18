@@ -42,7 +42,7 @@ Trop de divorces aujourd'hui dans la société. Pourquoi ? Parce qu'il y a trop 
 2. Expliquer que l'algorithme fonctionne en donnant un arrangement possible parmi une multitude, selon que l'on commence par l'une ou l'autre liste, ou par l'un ou l'autre élément de ladite liste. 
 3. Expliquer que l'algorithme ne donne pas forcément l'optimum de préférence pour l'intégralité des candidats, ce qui dans certaines situations particulières pourrait éventuellement s'avérer dommageable. 
 
-# :crystal_ball: Labels 
+## :crystal_ball: Labels 
 
 * **Nom (libre)** : Cupidon est un programme
 * **Genre (contraint)** : unplugged
