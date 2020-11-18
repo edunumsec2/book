@@ -25,12 +25,12 @@ L’histoire de l’humanité est marquée par la création de multiples systèm
 
 Au milieu du XIXe siècle, les fragments d’un papyrus vieux de plus 4000 ans découvert sur le site de Thèbes sont rassemblés par l’égyptologue écossais Henry Rhind. Aujourd’hui exposés au British Museum de Londres, les cinq mètres du document montrent que les égyptiens utilisaient une représentation binaire des nombres pour effectuer les opérations arithmétiques de base – addition, soustraction, multiplication et division – pour résoudre des problèmes d’algèbre et de géométrie.
 
-Au milieu du XXe siècle, les difficultés liées à l’utilisation du système décimal dans les premiers calculateurs amène les chercheurs à exploiter cette ancienne notion que les multiplications et les divisions dans le système binaire se réalisent au moyen de simples additions et soustractions. L’informatique digitale, basée sur le système binaire, s’est imposée jusqu’à ce jour. 
+Au milieu du XXe siècle, les difficultés liées à l’utilisation du système décimal dans les premiers calculateurs amène les chercheurs à exploiter cette ancienne notion que les multiplications et les divisions dans le système binaire se réalisent au moyen de simples additions et soustractions. L’informatique digitale, basée sur le système binaire, s’est imposée jusqu’à ce jour.
 
 ## Exercice introductif
 
 Trouver différentes représentations de la même information
 
-* Nombres en chiffres classique, romain, lettres
-* Mot en différentes langues, morse, idéogramme
-* Symbole danger, stop, paix
+- Nombres en chiffres classique, romain, lettres
+- Mot en différentes langues, morse, idéogramme
+- Symbole danger, stop, paix
