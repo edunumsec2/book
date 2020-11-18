@@ -2,26 +2,34 @@
 
 ## Installation recommandée
 
- 1. Cloner ce repository git
+ 1. Seulement si pas encore présent: [installer git](https://git-scm.com/downloads) sur votre machine
+       * Sous Windows, il faut activer les symlinks de git. Après l'installation de git, éditer le fichier `C:\ProgramData\Git\config` et y insérer:
+        ```
+        [core]
+            symlinks = true
+        ```
+        ([Plus d'info](https://www.joshkel.com/2018/01/18/symlinks-in-windows/) si ça ne marche pas sous Windows.)
+
+ 2. Cloner ce repository git
     * Soit depuis un terminal avec les commandes directes de `git`
     * Soit avec application [GitHub Desktop](https://desktop.github.com)
 
- 2. Installer une version récente (3.x, x ≥ 8) de **Python**
+ 3. Installer une version récente (3.x, x ≥ 8) de **Python**
     * [Téléchargement](https://www.python.org/downloads/)
       * Pour macOS, un excellent tuto si l'installation pose problème (mais il faut bien lire la deuxième partie): [Tuto](https://opensource.com/article/19/5/python-3-default-mac#what-to-do)<sup>1</sup>
 
- 3. Installer [Jupyter Book](https://jupyterbook.org)
+ 4. Installer [Jupyter Book](https://jupyterbook.org)
     * Avec Python 3.9:
       ```bash
       pip3.9 install -U jupyter-book
       ```
       * [Instructions complètes](https://jupyterbook.org/intro.html#install-jupyter-book) si la version ci-dessus ne marche pas
 
- 3. Installer [Visual Studio Code](https://code.visualstudio.com) 
+ 5. Installer [Visual Studio Code](https://code.visualstudio.com) 
     * Sert à éditer le Markdown et le format Jupyter (et le format YAML pour la config si nécessaire)
     * Fournit des boutons pour produire l'output sans passer par le terminal
 
- 4. Ouvrir le fichier `workspace.code-workspace` dans VS Code
+ 6. Ouvrir le fichier `workspace.code-workspace` dans VS Code
     * L'installation des extensions suivantes de VS Code sera proposée:
       * `ms-python.python` pour avoir un éditeur/linter Python
       * `ms-toolsai.jupyter` pour ouvrir et éditer des fichier Jupyter `*.ipynb`
