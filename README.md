@@ -24,10 +24,14 @@
  4. Ouvrir le fichier `workspace.code-workspace` dans VS Code
     * L'installation des extensions suivantes de VS Code sera proposée:
       * `ms-python.python` pour avoir un éditeur/linter Python
-			* `ms-toolsai.jupyter` pour ouvrir et éditer des fichier Jupyter `*.ipynb`
+      * `ms-toolsai.jupyter` pour ouvrir et éditer des fichier Jupyter `*.ipynb`
       * `redhat.vscode-yaml` pour éditer des fichiers de configuration YAML
       * `executablebookproject.myst-highlight` pour utiliser la syntaxe Markdown étendue prise en charge par `jupyter-book`
       * `seunlanlege.action-buttons` pour avoir des boutons directement dans VS Code pour faire un build
+      
+      Accepter l'installation de ces recommandations à l'ouverture du workspace:
+      
+      ![](docs/extension_recommendations.png)
 
     * Si l'installation des extensions ne vous est pas proposée, le faire manuellement via l'interface graphique de VS Code ou via le terminal:
       ```bash
