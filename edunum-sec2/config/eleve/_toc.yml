@@ -1,9 +1,9 @@
 # Table of content
 #
 - file: content/theme/eleve
-  numbered: true
 
 - part: Classifié selon plan
+  numbered: true
   chapters:
   - file: content/theme/representation-information/eleve
     sections:
@@ -35,6 +35,7 @@
       - file: content/theme/architecture-ordinateurs/ressources
 
 - part: Pas encore classifié
+  numbered: false
   chapters:
   - file: content/annexe/eleve
   - file: content/playground/eleve
