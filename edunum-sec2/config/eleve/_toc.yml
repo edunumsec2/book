@@ -3,7 +3,7 @@
 - file: content/theme/eleve
 
 - part: Classifié selon plan
-  numbered: true
+  numbered: false
   chapters:
   - file: content/theme/representation-information/eleve
     sections:

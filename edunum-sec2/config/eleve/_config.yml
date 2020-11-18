@@ -6,24 +6,72 @@ author: Groupe de travail DGEP, EPFL, HEP, UNIL
 logo: logo.png
 exclude_patterns: ['**/maitre.md']
 
+#######################################################################################
+# Execution settings
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: auto
+  #execute_notebooks           : cache
 
+#######################################################################################
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
     targetname: eleve.tex
 
+#######################################################################################
+# MyST parsing settings
+parse:
+  myst_extended_syntax: true
+
+#######################################################################################
+# HTML-specific settings
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
+  home_page_in_navbar         : false
+  extra_footer: |
+    <p>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+    </a>
+    <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+    Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+    </a>.
+    </p>
+
+#######################################################################################
+sphinx:
+  config:
+    html_show_copyright: false
+
+#######################################################################################
+# Interact link settings
+notebook_interface            : "notebook"
+
+#######################################################################################
 # Information about where the book exists on the web
 repository:
   url: https://github.com/edunum-sec2/ressources  # Online location of your book
   path_to_book: content  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
-html:
-  use_issues_button: true
-  use_repository_button: true
+#######################################################################################
+# Launch button settings
+launch_buttons:
+  notebook_interface: "classic" # or "jupyterlab"
+
+#######################################################################################
+#binder:
+  binderhub_url               : "https://mybinder.org"
+  text                        : "Launch binder"
+
+#######################################################################################
+latex:
+  latex_engine                : "xelatex"
+  latex_documents:
+    targetname: book.tex
+
