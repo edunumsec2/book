@@ -40,7 +40,7 @@ Votre population est en danger. Vous devez sonner l'alerte rouge. Chaque seconde
 
 1. On peut augmenter la complexité en abordant des graphes connexes pondéré orientés. 
 
-# :crystal_ball: Labels 
+## :crystal_ball: Labels 
 
 * **Nom (libre)** : La recette de l'univers
 * **Genre (contraint)** : unplugged
