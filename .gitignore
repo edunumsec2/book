@@ -1,5 +1,4 @@
-_build
-.vscode
+_build/
 
 # General
 .DS_Store

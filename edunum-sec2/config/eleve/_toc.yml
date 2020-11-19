@@ -3,12 +3,13 @@
 - file: content/theme/eleve
 
 - part: Classifié selon plan
-  numbered: true
+  numbered: false
   chapters:
   - file: content/theme/representation-information/eleve
     sections:
-      - file: content/theme/representation-information/systeme-arithmetique-binaire/eleve
       - file: content/theme/representation-information/representation-entiers/eleve
+      - file: content/theme/representation-information/representation-cis/eleve
+      - file: content/theme/representation-information/systeme-arithmetique-binaire/eleve
       - file: content/theme/representation-information/stockage-manipulation-donnees/eleve
       - file: content/theme/representation-information/redondance/eleve
       - file: content/theme/representation-information/transformation-numerique-economie-droit/eleve
