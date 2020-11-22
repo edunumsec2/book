@@ -30,6 +30,7 @@
       - file: content/theme/architecture-ordinateurs/systemes-logiques/eleve
         sections: 
           - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/PortesLogiques
+          - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/Corrige_PortesLogiques
       - file: content/theme/architecture-ordinateurs/microprocesseur/eleve
       - file: content/theme/architecture-ordinateurs/elements-base-ordinateurs/eleve
       - file: content/theme/architecture-ordinateurs/architecture-von-neumann/eleve
