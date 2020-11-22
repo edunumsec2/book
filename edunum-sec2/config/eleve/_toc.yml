@@ -28,6 +28,8 @@
   - file: content/theme/architecture-ordinateurs/eleve
     sections:
       - file: content/theme/architecture-ordinateurs/systemes-logiques/eleve
+        sections: 
+          - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/PortesLogiques
       - file: content/theme/architecture-ordinateurs/microprocesseur/eleve
       - file: content/theme/architecture-ordinateurs/elements-base-ordinateurs/eleve
       - file: content/theme/architecture-ordinateurs/architecture-von-neumann/eleve
@@ -54,6 +56,8 @@
   - file: content/theme/algorithmique-programmation/activites/Cupidon est un programme
   - file: content/theme/algorithmique-programmation/activites/La recette de l'univers
   - file: content/theme/algorithmique-programmation/activites/Crucial Kruskal
+  - file: content/theme/introduction-algorithmique/algorithmes-classiques/activite/dijkstra/dijkstra
+  - file: content/theme/representation-information/representation-cis/exercice/carte-perforee/exercice
   - file: content/theme/projets/eleve
-  - file: content/theme/representation-information/representation-entiers/exercice/carte-perforee/exercice
+ # - file: content/theme/representation-information/representation-entiers/exercice/carte-perforee/exercice
   - file: content/theme/reseaux/eleve
