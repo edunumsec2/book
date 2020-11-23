@@ -15,7 +15,7 @@ Les expression conditionelles permettent d'executer une suite d'instructions seu
  * **==** *"égal à..."*
  * **!=** *"non égal à..."*
 
-:::{admonition} Note
+:::{note} Note
 Ne pas confondre le signe = qui permet d'assigner une valeur à une variable et l'opérateur de comaraison == qui permet de comparer si deux valeurs ou deux chaines de caractères sont égales.
 :::
 ### Les opérateurs logiques
