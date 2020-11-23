@@ -10,7 +10,7 @@ Les exercices dont les résultats sont évidents ne font pas l'objet d'un corrig
 
 ::::{admonition,attention} Exercice 5 : lois de De Morgan
 
-[Corrigé](media/Logidules/Ex5_DeMorgan/EquivalencesDeMorgan) pour le simulateur de Logidules
+{download}`Corrigé <media/Logidules/Ex5_DeMorgan/EquivalencesDeMorgan>` pour le simulateur de Logidules
 
 ::::
 
@@ -48,6 +48,5 @@ Additionneur avec retenue 1
 Additionneur avec retenue 1
 :::
 
-Et le [corrigé](media/Logidules/Ex8_Add/Additionneur) pour le simulateur de logidules
-
+Et le {download}`corrigé <media/Logidules/Ex8_Add/Additionneur>` pour le simulateur de logidules
 ::::
