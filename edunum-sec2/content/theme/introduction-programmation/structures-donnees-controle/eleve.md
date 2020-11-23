@@ -15,9 +15,9 @@ Les expression conditionelles permettent d'executer une suite d'instructions seu
  * **==** *"égal à..."*
  * **!=** *"non égal à..."*
 
-```{admonition} Note
+:::{admonition} Note
 Ne pas confondre le signe = qui permet d'assigner une valeur à une variable et l'opérateur de comaraison == qui permet de comparer si deux valeurs ou deux chaines de caractères sont égales.
-```
+:::
 ### Les opérateurs logiques
 Quand il est nécessaire de réaliser un test logique plus complexe, des opérateurs logiques peuvent être utilisés. Ces opérateurs renvoient un booléen suite à l'analyse logique d'autres booléens. On retrouve les opérateurs logiques suivants:
 * not "non"
