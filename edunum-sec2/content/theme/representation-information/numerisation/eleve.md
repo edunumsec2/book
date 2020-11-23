@@ -6,17 +6,6 @@ La conversion d’une grandeur physique continue  – intensité sonore, tempér
 
 L’intervalle temporel auquel les mesures sont prises est la fréquence d’échantillonnage (sampling rate).
 
-```{figure} media/numerisation-01-a.png
-media/numerisation-01-b.png
-media/numerisation-01-c.png
----
-height: 10em
-name: fig-numerisation
----
-Effets de la fréquence d'échantillonnage (sampling rate) 
-sur la représentation obtenue par numérisation.
-```
-
 #![Sampling rate 100 Hz](media/numerisation-01-a.png)
 #![Sampling rate 200 Hz](media/numerisation-01-b.png)
 #![Sampling rate 400 Hz](media/numerisation-01-c.png)
