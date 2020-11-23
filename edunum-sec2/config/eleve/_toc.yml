@@ -35,6 +35,7 @@
       - file: content/theme/architecture-ordinateurs/introduction
       - file: content/theme/architecture-ordinateurs/systemes-logiques/eleve
         sections: 
+          - file: content/theme/architecture-ordinateurs/systemes-logiques/conclusion
           - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SystemesLogiques
             sections:
               - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SL1_bases
@@ -49,7 +50,6 @@
       - file: content/theme/architecture-ordinateurs/informatique-embarquee/eleve
       - file: content/theme/architecture-ordinateurs/histoire-informatique/eleve
       - file: content/theme/architecture-ordinateurs/ressources
-
 - part: Deuxième année
   numbered: false
   chapters:

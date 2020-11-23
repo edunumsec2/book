@@ -1,4 +1,4 @@
-# Conclusion
+# Conclusion des exercices
 
 Dans cette série d'exercices, nous avons évoqué les principaux éléments pour la construction d'un microprocesseur au coeur de tout système informatique. Si nous avons examiné une bonne partie des briques de bases nécessaires, le domaine des systèmes logiques est encore riche en termes d'outils théoriques pour parvenir à l'élaboration de circuits intégrés complets. Celui qui voudra prolonger son étude commencera par revenir sur l'algèbre de Bool et ses fondements théoriques, sur les représentations, codage ainsi que sur les tables de Karnaugh qui sont autant d'outils essentiels pour l'elaboration de systèmes avancés.
 
