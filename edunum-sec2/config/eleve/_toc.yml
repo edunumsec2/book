@@ -2,17 +2,22 @@
 #
 - file: content/theme/eleve
 
-- part: Classifié selon plan
+- part: Première année
   numbered: false
   chapters:
   - file: content/theme/representation-information/eleve
     sections:
       - file: content/theme/representation-information/representation-entiers/eleve
-      - file: content/theme/representation-information/representation-cis/eleve
+      - file: content/theme/representation-information/representation-caracteres/eleve
+      - file: content/theme/representation-information/representation-images/eleve
+      - file: content/theme/representation-information/numerisation/eleve
       - file: content/theme/representation-information/systeme-arithmetique-binaire/eleve
       - file: content/theme/representation-information/stockage-manipulation-donnees/eleve
       - file: content/theme/representation-information/redondance/eleve
-      - file: content/theme/representation-information/transformation-numerique-economie-droit/eleve
+      - file: content/theme/representation-information/enjeu/transformation-numerique-economie-droit/eleve
+      - file: content/theme/representation-information/exercices
+        sections:
+          - file: content/theme/representation-information/representation-caracteres/exercice/carte-perforee/exercice
   - file: content/theme/introduction-algorithmique/eleve
     sections:
       - file: content/theme/introduction-algorithmique/decomposition-probleme/eleve
@@ -27,6 +32,7 @@
       - file: content/theme/introduction-programmation/perspectives-citoyennes-politiques/eleve
   - file: content/theme/architecture-ordinateurs/eleve
     sections:
+      - file: content/theme/architecture-ordinateurs/introduction
       - file: content/theme/architecture-ordinateurs/systemes-logiques/eleve
         sections: 
           - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SystemesLogiques
@@ -44,7 +50,14 @@
       - file: content/theme/architecture-ordinateurs/histoire-informatique/eleve
       - file: content/theme/architecture-ordinateurs/ressources
 
-- part: Pas encore classifié
+- part: Deuxième année
+  numbered: false
+  chapters:
+  - file: content/theme/algorithmique-programmation/eleve
+  - file: content/theme/projets/eleve
+  - file: content/theme/reseaux/eleve
+
+- part: À affecter
   numbered: false
   chapters:
   - file: content/annexe/eleve
@@ -59,12 +72,7 @@
   - file: content/arts/contemporain_final
   - file: content/enjeux/digital-labor/eleve
   - file: content/fiche/references-notebook
-  - file: content/theme/algorithmique-programmation/eleve
   - file: content/theme/algorithmique-programmation/activites/Cupidon est un programme
   - file: content/theme/algorithmique-programmation/activites/La recette de l'univers
   - file: content/theme/algorithmique-programmation/activites/Crucial Kruskal
   - file: content/theme/introduction-algorithmique/algorithmes-classiques/activite/dijkstra/dijkstra
-  - file: content/theme/representation-information/representation-cis/exercice/carte-perforee/exercice
-  - file: content/theme/projets/eleve
- # - file: content/theme/representation-information/representation-entiers/exercice/carte-perforee/exercice
-  - file: content/theme/reseaux/eleve
