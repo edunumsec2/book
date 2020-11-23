@@ -29,8 +29,14 @@
     sections:
       - file: content/theme/architecture-ordinateurs/systemes-logiques/eleve
         sections: 
-          - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/PortesLogiques
-          - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/Corrige_PortesLogiques
+          - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SystemesLogiques
+            sections:
+              - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SL1_bases
+              - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SL2_portes
+              - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SL3_sl
+              - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SL4_avance
+              - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SL5_conclusion
+          - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/Corrige_SystemesLogiques
       - file: content/theme/architecture-ordinateurs/microprocesseur/eleve
       - file: content/theme/architecture-ordinateurs/elements-base-ordinateurs/eleve
       - file: content/theme/architecture-ordinateurs/architecture-von-neumann/eleve
