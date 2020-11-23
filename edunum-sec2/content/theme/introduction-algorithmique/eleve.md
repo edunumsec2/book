@@ -14,7 +14,7 @@ Considéré comme le père de l’algèbre, j’ai vécu dans le VIIIe siècle d
 
 ## Objectifs
 
-A la fin de ce chapitre, vous serez familiarisé.e avec la notion d’algorithme et vous serez capable de transcrire un algorithme  dans un programme. Vous saurez résoudre des problème, en décomposant leur solution en étapes à suivre. Vous verrez également que pour un même problème, on peut avoir plusieurs solutions avec différentes propriétés, avantages et désavantages. Afin de choisir la meilleure solution, il faut pouvoir les comparer selon des critères objectifs. Vous saurez quels critères prendre en considération pour choisir le meilleur algorithme. 
+A la fin de ce chapitre, vous serez familiarisé.e avec la notion d’algorithme et vous serez capable de transcrire un algorithme  dans un programme. Vous saurez résoudre des problèmes, en décomposant leur solution en étapes à suivre. Vous verrez également que pour un même problème, on peut avoir plusieurs solutions avec différents propriétés, avantages et désavantages. Afin de choisir la meilleure solution, il faut pouvoir les comparer selon des critères objectifs. Vous saurez quels critères prendre en considération pour choisir le meilleur algorithme. 
 
 
 

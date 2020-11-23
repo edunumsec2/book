@@ -13,15 +13,15 @@ Imaginez que votre camarade peut uniquement exécuter l’instruction *marcher 1
 
 ## De l’algorithme au programme
 
-Une fois que l’on a determiné l’algorithme le plus adapté à utiliser, il faut le transcrire dans un programme qu’une machine peut comprendre. Nous allons détailler ce processus pour l’algorithme  du **tri par sélection**. 
+Une fois que l’on a déterminé l’algorithme le plus adapté à utiliser, il faut le transcrire dans un programme qu’une machine peut comprendre. Nous allons détailler ce processus pour l’algorithme  du **tri par sélection**. 
 
-Cet algorithme consiste à parcourir la liste plusieurs fois et à déterminer l’élément le plus petit. Comment pourrait-on traduire ceci en Python ? Comment représenter ces rectangles dans un langage de programmation. Ce qui nous intéresse est leur taille. On peut donc stocker les tailles de la configuration initiale de ces rectangles dans une liste :
+Cet algorithme consiste à parcourir la liste plusieurs fois et à déterminer l’élément le plus petit. Comment pourrait-on traduire ceci en Python ? Comment représenter ces rectangles dans un langage de programmation ? Ce qui nous intéresse est leur taille. On peut donc stocker les tailles de la configuration initiale de ces rectangles dans une liste :
 
 ```
 rectangles = [3,4,1,2,6,5]
 ```
 
-On doit ensuite trouver l’indice du rectangle le plus petit. Pour faire cela il faut parcourir la liste et comparer les différents éléments. On va stocker l’indice de l’élément le plus petit dans la variable que l’on va nommer rectangle_min. On commence par initialiser cette variable.
+On doit ensuite trouver l’indice du rectangle le plus petit. Pour faire cela, il faut parcourir la liste et comparer les différents éléments. On va stocker l’indice de l’élément le plus petit dans la variable que l’on va nommer rectangle_min. On commence par initialiser cette variable.
 
 ```
 rectangle_min = 0
@@ -31,7 +31,7 @@ for i in range(1:len(rectangles)):
 		rectangle_min = i
 ```
 
-A la fin de cette boucle rectangle_min contient l’indice de l’élément le plus petit de la liste. On doit à ce stade, échanger cet élément et le premier élément. Comme nous avons pu le voir dans l’exercice II, il faut une variable temporaire pour échanger les valeurs de deux variables. Si on met la valeur du plus petit élément directement à la position 0, nous perdons la valeur contenue à la position 0. Il faut donc la stocker temporairement dans une autre variable :
+A la fin de cette boucle, rectangle_min contient l’indice de l’élément le plus petit de la liste. On doit à ce stade, échanger cet élément et le premier élément. Comme nous avons pu le voir dans l’exercice II, il faut une variable temporaire pour échanger les valeurs de deux variables. Si on met la valeur du plus petit élément directement à la position 0, nous perdons la valeur contenue à la position 0. Il faut donc la stocker temporairement dans une autre variable :
 
 ```
 # échange l’élément le plus petit et le premier élément
@@ -40,7 +40,7 @@ rectangles[0]	 = rectangles[rectangle_min]
 rectangles[rectangle_min] = rectangle_temp 
 ```
 
-On doit ensuite rechercher le plus petit élément de la liste en excluant le premier élément, et l’échanger avec le deuxième élément de la liste. On reprend le même code que précédemment, mais on commence à le parcours de la liste et la comparaison des éléments à 2 au lieu de 1.
+On doit ensuite rechercher le plus petit élément de la liste en excluant le premier élément, et l’échanger avec le deuxième élément de la liste. On reprend le même code que précédemment, mais on commence le parcours de la liste et la comparaison des éléments à 2 au lieu de 1.
 
 ```
 rectangle_min = 1
@@ -54,7 +54,7 @@ rectangles[1]	 = rectangles[rectangle_min]
 rectangles[rectangle_min] = rectangle_temp
 ```
 
-La suite de l’algorithme consiste à rechercher ensuite le plus petit élément de la liste restante, en excluant le premier et deuxième éléments et l’échanger avec le troisième élément. A nouveau on peut reprendre le même code, mais on fait incrémenter tous les indices de 1. On parcourt la liste à partir du troisième élément, donc l’élément avec un index 2. 
+La suite de l’algorithme consiste à rechercher ensuite le plus petit élément de la liste restante, en excluant le premier et deuxième élément, et l’échanger avec le troisième élément. A nouveau on peut reprendre le même code, mais on fait incrémenter tous les indices de 1. On parcourt la liste à partir du troisième élément, donc l’élément avec un index 2. 
 
 
 ```
@@ -69,11 +69,11 @@ rectangles[2]	 = rectangles[rectangle_min]
 rectangles[rectangle_min] = rectangle_temp
 ```
 
-On détecte un pattern qui se répète. On fait toujours les même actions, mais on commence à une position différente. Plutôt que de ré-écrire le même code autant de fois que d’éléments dans la liste, (moins 1), on peut remplacer l’indice de début par une variable que l’on incrémente. 
+On détecte un pattern qui se répète. On fait toujours les mêmes actions, mais on commence à une position différente. Plutôt que de réécrire le même code autant de fois que d’éléments dans la liste (moins 1), on peut remplacer l’indice de début par une variable que l’on incrémente. 
 
 
 ```
-# pour tous les éléments de la liste non-triée
+# pour tous les éléments de la liste non triée
 for j in range(0,len(rectangles)-1):
 	rectangle_min = j
 	# trouve le rectangle le plus petit de la liste rectangles[j:]
@@ -115,7 +115,7 @@ fonction tri_selection(elements) :
 			if elements[i] < elements[i-1] :
 			element_min = i
 
-		# échange l’élément le plus petit et le j-ième élément
+		# échange l’élément le plus petit et l'élément j
 		element_temp = rectangles[element_min]
 		elements[element_min] = elements[j]
 		elements[j] = element_temp
@@ -132,9 +132,9 @@ fonction tri_selection(elements) :
 Implémenter au moins deux des autres algorithmes de tri vu au cours.
 A l’aide du module time, chronométrer le temps que ça prend pour trier une liste de 10, 100, 1000 et 10000 objets. 
 
-Afficher le résultat sous forme de courbe dans un tableur : noter les temps que ça prend de trier un tableau avec 10, 100, 1000, 10000, 100000 éléments, Ce graphique qui permet de visualiser le temps d’exécution du tri en fonction de la taille de la liste.
+Afficher le résultat sous forme de courbe dans un tableur : noter les temps que ça prend de trier un tableau avec 10, 100, 1000, 10000, 100000 éléments. Ce graphique permet de visualiser le temps d’exécution du tri en fonction de la taille de la liste.
 
-**Exercice 4.** ![](../plugged.png) Analyser les oeuvres cubiques de Piet Mondrian. Trouver un algorithme qui permet de créer une peuvre qui pourrait être attribuées à Mondrian.
+**Exercice 4.** ![](../plugged.png) Analyser les oeuvres cubiques de Piet Mondrian. Trouver un algorithme qui permet de créer une oeuvre qui pourrait être attribuée à Mondrian.
 
-**Exercice 5.** ![](../plugged.png) Télécharger une liste des mots en français.  Imaginez plusieurs algorithmes qui permettent de parcourir cette liste au hasard (ou pas complètement au hasard) et génèrent des poèmes. Programmez-les et faites un councours de poésie numérique dans votre classe. 
+**Exercice 5.** ![](../plugged.png) Télécharger une liste des mots en français.  Imaginez plusieurs algorithmes qui permettent de parcourir cette liste au hasard (ou pas complètement au hasard) et génèrent des poèmes. Programmez-les et faites un concours de poésie numérique dans votre classe. 
 ::::
