@@ -1,4 +1,3 @@
-Algorithmique et programmation
-==============================
+# Algorithmique et programmation
 
-TODO
+TODO : Contenu de 2e année.
