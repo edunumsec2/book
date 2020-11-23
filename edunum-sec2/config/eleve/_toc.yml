@@ -2,7 +2,7 @@
 #
 - file: content/theme/eleve
 
-- part: Classifié selon plan
+- part: Première année
   numbered: false
   chapters:
   - file: content/theme/representation-information/eleve
@@ -49,7 +49,14 @@
       - file: content/theme/architecture-ordinateurs/histoire-informatique/eleve
       - file: content/theme/architecture-ordinateurs/ressources
 
-- part: Pas encore classifié
+- part: Deuxième année
+  numbered: false
+  chapters:
+  - file: content/theme/algorithmique-programmation/eleve
+  - file: content/theme/projets/eleve
+  - file: content/theme/reseaux/eleve
+
+- part: À affecter
   numbered: false
   chapters:
   - file: content/annexe/eleve
@@ -68,8 +75,3 @@
   - file: content/theme/algorithmique-programmation/activites/La recette de l'univers
   - file: content/theme/algorithmique-programmation/activites/Crucial Kruskal
   - file: content/theme/introduction-algorithmique/algorithmes-classiques/activite/dijkstra/dijkstra
-
-# volume 2
-  - file: content/theme/algorithmique-programmation/eleve
-  - file: content/theme/projets/eleve
-  - file: content/theme/reseaux/eleve
