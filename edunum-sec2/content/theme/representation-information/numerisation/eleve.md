@@ -1,16 +1,4 @@
-# Représentation des caractères, des images et des sons
-
-## Introduction
-
-## Représentation des caractères
-
-Jeu de caractères ASCII et UTF.
-
-## Codage des couleurs
-
-Images matricielles
-
-## Numérisation
+# Numérisation
 
 La conversion d’une grandeur physique continue  – intensité sonore, température… – en données numériques manipulables par un ordinateur est appelée numérisation. Elle requiert un échantillonnage et une quantification/encodage.
 
@@ -18,9 +6,20 @@ La conversion d’une grandeur physique continue  – intensité sonore, tempér
 
 L’intervalle temporel auquel les mesures sont prises est la fréquence d’échantillonnage (sampling rate).
 
-![Sampling rate 100 Hz](media/numerisation-01-a.png)
-![Sampling rate 200 Hz](media/numerisation-01-b.png)
-![Sampling rate 400 Hz](media/numerisation-01-c.png)
+```{figure} media/numerisation-01-a.png
+media/numerisation-01-b.png
+media/numerisation-01-c.png
+---
+height: 10em
+name: fig-numerisation
+---
+Effets de la fréquence d'échantillonnage (sampling rate) 
+sur la représentation obtenue par numérisation.
+```
+
+#![Sampling rate 100 Hz](media/numerisation-01-a.png)
+#![Sampling rate 200 Hz](media/numerisation-01-b.png)
+#![Sampling rate 400 Hz](media/numerisation-01-c.png)
 
 Les limites pratiques d’un échantillonnage sont fixées par la fréquence de Nyquist, qui, de façon très simplifiée, indique que l’information découlant d’un processus dont la fréquence est deux fois supérieure à celle de l’échantillonnage sera perdue lors de la numérisation.
 Sachant que l’oreille humaine perçoit globalement les fréquences entre 20 et 20 kHz, une fréquence d’échantillonnage supérieure à 40 kHz permettra de restituer l’ensemble de l’information physiologiquement perceptible par l’oreille humaine, raison pour laquelle l’échantillonnage de la musique en qualité “CD” est réalisé à 44.1 kHz. Une fréquence d’échantillonnage supérieure ne générerait que plus d’information sans ajouter de valeur qualitative pour la plupart des auditeurs.  
