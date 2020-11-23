@@ -40,7 +40,7 @@ Ici encore, plus on augmente la profondeur de l’encodage, plus la quantité d�
 ```{figure} media/numerisation-03.png
 ---
 height: 16em
-name: fig-repr-num-depth
+name: fig-repr-num-bal
 ---
 Effet de la fréquence d'échantillonnage (sampling rate : 400, 200 et 100 Hz) 
 sur la représentation obtenue par numérisation 
