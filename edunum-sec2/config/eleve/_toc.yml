@@ -14,7 +14,10 @@
       - file: content/theme/representation-information/systeme-arithmetique-binaire/eleve
       - file: content/theme/representation-information/stockage-manipulation-donnees/eleve
       - file: content/theme/representation-information/redondance/eleve
-      - file: content/theme/representation-information/transformation-numerique-economie-droit/eleve
+      - file: content/theme/representation-information/enjeu/transformation-numerique-economie-droit/eleve
+      - file: content/theme/representation-information/exercices
+        sections:
+          - file: content/theme/representation-information/representation-caracteres/exercice/carte-perforee/exercice
   - file: content/theme/introduction-algorithmique/eleve
     sections:
       - file: content/theme/introduction-algorithmique/decomposition-probleme/eleve
@@ -61,11 +64,12 @@
   - file: content/arts/contemporain_final
   - file: content/enjeux/digital-labor/eleve
   - file: content/fiche/references-notebook
-  - file: content/theme/algorithmique-programmation/eleve
   - file: content/theme/algorithmique-programmation/activites/Cupidon est un programme
   - file: content/theme/algorithmique-programmation/activites/La recette de l'univers
   - file: content/theme/algorithmique-programmation/activites/Crucial Kruskal
   - file: content/theme/introduction-algorithmique/algorithmes-classiques/activite/dijkstra/dijkstra
-  - file: content/theme/representation-information/representation-caracteres/exercice/carte-perforee/exercice
+
+# volume 2
+  - file: content/theme/algorithmique-programmation/eleve
   - file: content/theme/projets/eleve
   - file: content/theme/reseaux/eleve
