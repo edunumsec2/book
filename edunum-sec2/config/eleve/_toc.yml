@@ -27,6 +27,7 @@
       - file: content/theme/introduction-programmation/perspectives-citoyennes-politiques/eleve
   - file: content/theme/architecture-ordinateurs/eleve
     sections:
+      - file: content/theme/architecture-ordinateurs/introduction
       - file: content/theme/architecture-ordinateurs/systemes-logiques/eleve
         sections: 
           - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SystemesLogiques

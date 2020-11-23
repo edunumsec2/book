@@ -36,13 +36,13 @@ Les exercices dont les résultats sont évidents ne font pas l'objet d'un corrig
 |  1  |  1  |  1        |       1         |   1       |
 
 2. Proposition de schémas pour un circuit logique :
-:::{figure} retenue
+:::{figure} retenue1
 <img src="media/Logidules/Ex8_Add/add1.jpg"  width="200px">
 
 Additionneur avec retenue 1
 :::
 
-:::{figure} retenue
+:::{figure} retenue2
 <img src="media/Logidules/Ex8_Add/add2.jpg"  width="200px">
 
 Additionneur avec retenue 1
