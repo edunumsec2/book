@@ -152,3 +152,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+edunum-sec2/content/theme/representation-information/representation-entiers/eleve.ipynb
