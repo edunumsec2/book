@@ -1,4 +1,4 @@
-# Corrigé - Exercices avec des portes logiques
+# Corrigé - Exercices de systèmes logiques
 
 :::{admonition,error} Corrigé
 

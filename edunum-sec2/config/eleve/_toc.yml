@@ -26,6 +26,8 @@
       - file: content/theme/introduction-algorithmique/consequences-automatisation/eleve
   - file: content/theme/introduction-programmation/eleve
     sections:
+      - file: content/theme/introduction-programmation/1_introduction
+      - file: content/theme/introduction-programmation/2_fonctions
       - file: content/theme/introduction-programmation/instructions-sequentielles/eleve
       - file: content/theme/introduction-programmation/structures-donnees-controle/eleve
       - file: content/theme/introduction-programmation/transcription-algorithmes/eleve
@@ -35,6 +37,7 @@
       - file: content/theme/architecture-ordinateurs/introduction
       - file: content/theme/architecture-ordinateurs/systemes-logiques/eleve
         sections: 
+          - file: content/theme/architecture-ordinateurs/systemes-logiques/conclusion
           - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SystemesLogiques
             sections:
               - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SL1_bases
@@ -43,13 +46,12 @@
               - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SL4_avance
               - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SL5_conclusion
           - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/Corrige_SystemesLogiques
+      - file: content/theme/architecture-ordinateurs/architecture-von-neumann/eleve
       - file: content/theme/architecture-ordinateurs/microprocesseur/eleve
       - file: content/theme/architecture-ordinateurs/elements-base-ordinateurs/eleve
-      - file: content/theme/architecture-ordinateurs/architecture-von-neumann/eleve
       - file: content/theme/architecture-ordinateurs/informatique-embarquee/eleve
       - file: content/theme/architecture-ordinateurs/histoire-informatique/eleve
       - file: content/theme/architecture-ordinateurs/ressources
-
 - part: Deuxième année
   numbered: false
   chapters:
