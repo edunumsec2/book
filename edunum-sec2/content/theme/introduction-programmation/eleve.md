@@ -1,7 +1,5 @@
 Introduction à la programmation
-==============================
-
-# Introduction
+===============================
  
 ## Le but  
 Notre vie moderne est touchée par les ordinateurs. La communication, la recherche d'information, les divertissements, les processus, les réseaux sociaux ou les object connectés, sont autant d'exemples de choses qui font désormais partie de notre quotidien. En programmant un ordinateur, on se dote d'un outil considérable pour simplifier, multiplier et accélérer certaines actions comme la gestion de réservations pour un grand hôtel, effectuer une quantité importante de calculs dans un projet de recherche et même la bonne réalisation d’une recette de cuisine. 
@@ -16,6 +14,7 @@ Il y a des centaines de langages de programmation différents qui ont souvent un
  
 ## Exemples de langages 
 Ces trois programmes font la même chose, mais nous pouvons voir certaines différences de syntaxe et certaines similitude dans la structure.
+
 ### Javascript
 
 ```{code-block} JavaScript
@@ -29,6 +28,7 @@ if (mot_de_passe == "Bonjour") {
 }
 ```
 ### PHP
+
 ```{code-block} PHP
 # Test de mot de passe 
 
@@ -41,6 +41,7 @@ if ($mot_de_passe == "Bonjour") {
 ```
 
 ### Python
+
 ```{code-block} PHP
 # Test de mot de passe 
 
@@ -49,5 +50,4 @@ if mot_de_passe == "Bonjour":
     print("Le mot de passe est correcte")
 else:
     print(Le mot de passe est incorrecte")
-
 ```
