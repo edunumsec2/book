@@ -17,7 +17,7 @@
 * ### Notion abordée
 * ### Théorie
 * ### Exemples
-* ### Prolongements
+* ### Prolongements (ex : référence artistique, populaire, technologique, "pour aller plus loin")
 * ### Exercices
 
 ## Conclusion
