@@ -37,7 +37,11 @@ L’objectif d’un algorithme est de résoudre un problème, concrètement l’
 
 Entre l’entrée et la sortie, l’algorithme précise quelles opérations exécuter. Les opérations que l’on peut attendre d’un humain sont très différentes de celle d’un ordinateur. On peut donner l’instruction à un humain de casser des oeufs, mais un ce n’est pas une instruction qu’un programme peut exécuter. Par contre on peut demander à un programme de stocker une valeur dans une variable, de comparer les valeurs de plusieurs variables, de parcourir des longues listes de données. Il le fera sans se plandre... Une opération cache une multitude d’instructions élémentaires. Lorsque l’ordinateur exécute l’opération comparer les valeurs de deux variables, il doit d’abord accéder chacune des variables là où elles sont stockées. Seulement après les avoir accédées, l’ordinateur peut les soustraire afin de déterminer quelle variable contient la plus grande valeur.
 
-> Notez que l’ordre des opérations est très important. Dans l’exemple de l’omelette, il est impossible de mélanger les œufs avant de les avoir cassés. L’ordinateur a non seulement besoin de recevoir les instructions dans le bon ordre, il a également besoin que tout lui soit précisé, et ce de manière non‑ambigüe. Il doit y avoir une seule lecture possible des opérations indiquées par un algorithme.
+::::{admonition,note} Ordre des opérations
+
+Notez que l’ordre des opérations est très important. Dans l’exemple de l’omelette, il est impossible de mélanger les œufs avant de les avoir cassés. L’ordinateur a non seulement besoin de recevoir les instructions dans le bon ordre, il a également besoin que tout lui soit précisé, et ce de manière non‑ambigüe. Il doit y avoir une seule lecture possible des opérations indiquées par un algorithme.
+
+::::
 
 Ainsi, les ingrédients d’un algorithme sont donc les suivants :
 
