@@ -1,10 +1,10 @@
 Structures de données et structures de contrôle
 ===============================================
 
-# Les expressions conditionnelles
+## Les expressions conditionnelles
 Les expression conditionelles permettent d'executer une suite d'instructions seulement si une condition est remplie. Nous rencontrons des dizaines de conditions par jour, ceci régit les actions que nous entrenons. Par exemple: face à deux files d'attente au supermarché nous allons nous diriger vers la file qui contiens le moins de client. Concrètement nous avons fait le test logique suivant : Est-ce que le nombre de client dans la file A est inférieur au nombre de client dans la file B ? Si la réponse à ce test logique est vraie, on se dirige vers la file A sinon on se dirige vesr la file B.
 
-## Les tests logiques
+### Les tests logiques
  Un test logique permet d'obtenir une valeur booléenne "TRUE" ou "FALSE" suite à une une question qui serait posée à un certain moment du programme. Pour poser ces questions nous devons utiliser un opérateur de comparaison ou un opérateur logique.
  ### Les opérateurs de comparaison
  Comme leur nom l'indique ces opérateurs sont utilisés pour comparer des valeurs numériques ou textuelles. Ainsi, la question "Est-ce que la valeur contenue dans la variable a est inférieur à 4" se transcrira "a < 4".
@@ -33,7 +33,7 @@ if a > 4:
     print('a est plus grande que 4')
 ```
 
-## L'instruction if...else
+### L'instruction if...else
 L'instruction if...else permet d'executer une suite d'instruction si une condition est remplie ou une autre suite d'instruction si la condition n'est pas remplie. 
 ```{code-block} python
 if a > 4:
@@ -42,7 +42,7 @@ else:
     print('la variable a est plus petite ou égale à 4')
 ```
 
-## L'instruction if...elif...else
+### L'instruction if...elif...else
 L'instruction if...elif..else permet d'executer une suite d'instruction si une condition est remplie. Si la première condition n'est pas remplie,une autre est testée.
 
 ```{code-block} python

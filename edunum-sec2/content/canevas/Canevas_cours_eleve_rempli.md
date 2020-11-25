@@ -2,7 +2,7 @@
 
 # Une définition des algorithmes
 
-## Pré-requis
+## Pré-requis
 
 Doit être vu après le chapitre sur la programmation.
 
