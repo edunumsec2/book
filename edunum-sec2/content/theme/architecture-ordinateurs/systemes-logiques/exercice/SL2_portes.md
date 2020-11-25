@@ -46,10 +46,10 @@ Nous avons la fonction A ou B que nous notons : $A \oplus B$
 
 Nous avons la fonction non A que nous notons : $S= \overline{A}$
 
-|  A  |  B  |  $S= \overline{A}$  |
+|  A  |  $S= \overline{A}$  |
 |:---:|:---:|:---:|
-|  0  |  0  |     |
-|  0  |  1  |     |
+|  0  |     |
+|  1  |     |
 
 ::::
 
