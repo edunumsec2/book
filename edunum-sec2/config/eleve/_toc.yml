@@ -28,6 +28,7 @@
     sections:
       - file: content/theme/introduction-programmation/1_introduction
       - file: content/theme/introduction-programmation/2_fonctions
+      - file: content/theme/introduction-programmation/3_structures
       - file: content/theme/introduction-programmation/instructions-sequentielles/eleve
       - file: content/theme/introduction-programmation/structures-donnees-controle/eleve
       - file: content/theme/introduction-programmation/transcription-algorithmes/eleve
