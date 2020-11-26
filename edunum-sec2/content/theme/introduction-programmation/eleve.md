@@ -17,7 +17,7 @@ Ces trois programmes font la mÃªme chose, mais nous pouvons voir certaines diffÃ
 
 ### Javascript
 
-```{code-block} JavaScript
+```JavaScript
 // Test de mot de passe 
 
 var mot_de_passe = "1234";
