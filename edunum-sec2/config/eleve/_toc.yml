@@ -27,8 +27,9 @@
   - file: content/theme/introduction-programmation/eleve
     sections:
       - file: content/theme/introduction-programmation/1_introduction
-      - file: content/theme/introduction-programmation/2_fonctions
+      - file: content/theme/introduction-programmation/2_operations
       - file: content/theme/introduction-programmation/3_structures
+      - file: content/theme/introduction-programmation/4_boucles
       - file: content/theme/introduction-programmation/instructions-sequentielles/eleve
       - file: content/theme/introduction-programmation/structures-donnees-controle/eleve
       - file: content/theme/introduction-programmation/transcription-algorithmes/eleve
@@ -70,7 +71,7 @@
       - file: content/playground/types
   - file: content/arts/L'app de rencontre
   - file: content/arts/La poésie des limites
-  - file: content/arts/Python_turtle_extension
+#  - file: content/arts/Python_turtle_extension
   - file: content/arts/Qui suis-je_retouchesOlivier
   - file: content/arts/contemporain_final
   - file: content/enjeux/digital-labor/eleve
