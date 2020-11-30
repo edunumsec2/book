@@ -28,14 +28,14 @@ Quand il est nécessaire de réaliser un test logique plus complexe, des opérat
 ## L'instruction if
 L'instruction "if" permet d'executer une suite d'instruction si une condition est remplie. Si la condition n'est la remplie le programme suit son cours sans executer ces instructions.
 
-```{code-block} python
+```python
 if a > 4:
     print('a est plus grande que 4')
 ```
 
 ### L'instruction if...else
 L'instruction if...else permet d'executer une suite d'instruction si une condition est remplie ou une autre suite d'instruction si la condition n'est pas remplie. 
-```{code-block} python
+```python
 if a > 4:
     print('la variable a est plus grande que 4')
 else:
@@ -45,7 +45,7 @@ else:
 ### L'instruction if...elif...else
 L'instruction if...elif..else permet d'executer une suite d'instruction si une condition est remplie. Si la première condition n'est pas remplie,une autre est testée.
 
-```{code-block} python
+```python
 if a == 4:
     print('la variable a est égale à 4')
 elif a == 3:
