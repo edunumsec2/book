@@ -8,7 +8,7 @@
 
 **Contexte historique**
 ^^^^
-La deuxième guerre mondiale joue un rôle décisif dans le développement des technologies de l'information. Deux besoins stratégiques révèlent les enjeux de l'informatique : la cryptologie[^1] et les calculs de simulation pour la balistique par exemple.
+La deuxième guerre mondiale joue un rôle décisif dans le développement des technologies de l'information. Deux besoins stratégiques révèlent les enjeux de l'informatique : la cryptologie[^0] et les calculs de simulation pour la balistique par exemple.
 
 Dans ce contexte apparaissent les premières machines de traitement automatique de l'information. Les *bombes* d'**Alan Turing** permettent le decryptage des messages nazi chiffrés avec la machine *enigma* et fonctionnent avec des composants électroméchaniques. La défense aérienne anglaise développe le radar avec les *utbes électroniques* qui deviennent naturellement les  composants des premiers ordinateurs comme l'ENIAC (1945) spécifiquement dédié à ades calculs balistiques. Dès le milieu des années 1950, ils seront remplacés par des transistors et ensuite des circuits intégrés. Tout ces éléments constituent les briques de base des systèmes logiques que nous allons examiner plus en détail dans une première partie.
 
@@ -48,4 +48,4 @@ short bio + photo
 
 ````
 
-[^1]: La cryptologie est la science qui regroupe la Cryptanalyse qui est le décodage des message encodés et la Cryptographie qui recouvre toutes les activités de chiffrement des messages pour les protéger.
+[^0]: La cryptologie est la science qui regroupe la Cryptanalyse qui est le décodage des message encodés et la Cryptographie qui recouvre toutes les activités de chiffrement des messages pour les protéger.
