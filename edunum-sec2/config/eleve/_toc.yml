@@ -26,6 +26,7 @@
       - file: content/theme/introduction-algorithmique/consequences-automatisation/eleve
   - file: content/theme/introduction-programmation/eleve
     sections:
+      - file: content/theme/introduction-programmation/1_intro/intro 
       - file: content/theme/introduction-programmation/1_introduction
       - file: content/theme/introduction-programmation/2_operations
       - file: content/theme/introduction-programmation/3_structures
