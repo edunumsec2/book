@@ -24,17 +24,20 @@
       - file: content/theme/introduction-algorithmique/algorithmes-classiques/eleve
       - file: content/theme/introduction-algorithmique/formulation-solutions/eleve
       - file: content/theme/introduction-algorithmique/consequences-automatisation/eleve
-  - file: content/theme/introduction-programmation/eleve
+  - file: content/theme/programmation/eleve
     sections:
-      - file: content/theme/introduction-programmation/1_intro/intro 
-      - file: content/theme/introduction-programmation/1_introduction
-      - file: content/theme/introduction-programmation/2_operations
-      - file: content/theme/introduction-programmation/3_structures
-      - file: content/theme/introduction-programmation/4_boucles
-      - file: content/theme/introduction-programmation/instructions-sequentielles/eleve
-      - file: content/theme/introduction-programmation/structures-donnees-controle/eleve
-      - file: content/theme/introduction-programmation/transcription-algorithmes/eleve
-      - file: content/theme/introduction-programmation/perspectives-citoyennes-politiques/eleve
+      - file: content/theme/programmation/0_intro/intro
+      - file: content/theme/programmation/1_intro/intro 
+      - file: content/theme/programmation/2_pyth/pyth
+      - file: content/theme/programmation/3_var/var
+      - file: content/theme/programmation/4_flux/flux
+      - file: content/theme/programmation/5_list/list
+      - file: content/theme/programmation/6_dict/dict
+      - file: content/theme/programmation/7_fonc/fonc
+      - file: content/theme/programmation/8_mod/mod
+      - file: content/theme/programmation/9_app/app 
+      - file: content/theme/programmation/structures-donnees-controle/eleve
+      - file: content/theme/programmation/perspectives-citoyennes-politiques/eleve
   - file: content/theme/architecture-ordinateurs/eleve
     sections:
       - file: content/theme/architecture-ordinateurs/introduction
