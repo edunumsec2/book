@@ -5,37 +5,35 @@
 
 # La poésie des limites
 
-:key: Cette page peut être partagée avec les étudiants. Cliquez sur `Share` en haut à droite et activez `Public Access` pour publier la page. Copiez le lien pour la partager. 
-
 >**Contenus abordés** : Algorithmique et programmation "enjeux de l’intelligence artificielle", machine learning
 
 
 ***
 
 
-## 🙇‍♂️ Introduction
+## Introduction
 
 Exercice d'écriture créative à partir de contraintes. L'activité permet d'introduire des concepts d'intelligence artificielle dans le domaine du machine learning appliqué au langage. 
 
-## :honey_pot: Objectifs du cours
+## Objectifs du cours
 
 1. Comprendre la notion de machine learning
 2. Avoir une connaissance générique des protocoles de deep learning
 3. Comprendre la notion de biais algorithmiques
 
-## :lollipop: Accroche
+## Accroche
 
 Ce qui fait la créativité c'est la contrainte. Un ordinateur est d'autant plus performant que les contraintes qu'on lui donne sont précises. Quand vous manquez d'inspiration, donnez-vous des consignes plus restrictives. La magie opérera. 
 
 
-## 🎲 Matériel requis
+## Matériel requis
 
 **Editeur de texte :** n'importe lequel, ne nécessite aucune fonction particulière.
 **Accès à Google et Wikipédia :** en gros, simplement un accès à internet.
 **Quelques oeuvres littéraires numérisées :** si possible des oeuvres du XXème siècle, au vocabulaire riche.
 
 
-## 📚 Marche à suivre
+## Marche à suivre
 
 * L'élève choisit 5 mots `[input initial]`
 * Il choisit ensuite une *forme littéraire* parmi des suggestions : sonnet, chanson de rap, lettre d'amour, poème vers libre, début d'intrigue policière, scénario de science-fiction `[contrainte donnée à la machine sous forme d'instruction]` // {note : les formes littéraires sont à adapter en fonction du niveau de la classe}.
@@ -44,7 +42,7 @@ Ce qui fait la créativité c'est la contrainte. Un ordinateur est d'autant plus
 * Il commence la rédaction, dans la *forme littéraire* définie ci-dessus. L'objectif est de réussir à placer, dans un texte libre, la totalité de ses 20 mots de vocabulaire `[ici la machine, elle, n'aurait QUE ses quinze mots à disposition]`.
 
 
-## 🔥 Niveaux de difficulté
+## Niveaux de difficulté
 
 Dans le but d'augmenter la difficulté, on peut ajouter les ingrédients suivants : 
 
@@ -54,21 +52,21 @@ Dans le but d'augmenter la difficulté, on peut ajouter les ingrédients suivant
 - [ ]  Augmentation du vocabulaire de base.
 - [ ]  Imposition d'oeuvres littéraires au vocabulaire très spécifique (ancien, ou alors technique).
 
-## 💎 Bonus
+## Bonus
 
 En guise de bonus, les élèves peuvent utiliser des "random content generator" (3x maximum), du type https://www.bullshitjob.com/title/. 
 
-## 😢 Bugs éventuels
+## Bugs éventuels
 
 Les mots "incompatibles" avec la *ressource d'entraînement* choisie (ex : "natel", chez Victor Hugo), sont considérés comme bugs du programme et on passe à une autre *ressource d'entraînement*.
 
-## 🤫 Secret
+## Secret
 
 > Ne pas divulguer avant le commencement du jeu
 
 À aucun moment l'exercice ne dit que le texte doit avoir un sens ou des vertus artistiques. Au moment de la mise en commun (fin du cours) un élève qui aurait écrit en mode automatique en cherchant seulement à placer ses mots, aurait parfaitement réussi l'exercice. Nulle part il n'est question de créativité. Ceci permet de faire le lien avec le *débat* sur la question de la créativité des machines. 
 
-## 🤓 Prolongement débats
+## Prolongement débats
 
 > Voilà une liste non exhaustive de questions qui peuvent être soulevées à l'issue de cette activité. 
 
@@ -78,7 +76,7 @@ Les mots "incompatibles" avec la *ressource d'entraînement* choisie (ex : "nate
 
 
 
-## :crystal_ball: Labels 
+## Labels 
 
 * **Nom (libre)** : La poésie des limites
 * **Genre (contraint)** : plugged

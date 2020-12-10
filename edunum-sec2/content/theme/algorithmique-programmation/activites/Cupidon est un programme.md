@@ -8,26 +8,26 @@ Note générale : le problème est mal posé avec les couples. Il fonctionnerait
 ***
 
 
-## 🙇‍♂️ Introduction
+## Introduction
 
 Activité ludique autour de l'algorithme de Gale et Shapley.
 
-## :honey_pot: Objectifs du cours
+## Objectifs du cours
 
 1. Comprendre la notion de couple instable
 2. Comprendre le fonctionnement de l'algorithme de Gale et Shapley. 
 
 
-## :lollipop: Accroche
+## Accroche
 
 Trop de divorces aujourd'hui dans la société. Pourquoi ? Parce qu'il y a trop de couples instables. C'est dommage. Mais heureusement il existe une solution algorithmique à ce problème ! 
 
-## 🎲 Matériel requis
+## Matériel requis
 
 **papier, stylos** 
 
 
-## 📚 Marche à suivre
+## Marche à suivre
 
 * Présenter une liste de *n* hommes classés selon leur qualité principale. Présenter une liste de *n* femmes classées selon leur qualité principales. Présenter pour chacune et chacun d'entre eux un ordre de préférence de ces qualités.
 * Demander aux élèves de trouver le meilleur agencement possible entre eux, sur le critère d'optimiser le plus possible les premiers choix. 
@@ -36,13 +36,13 @@ Trop de divorces aujourd'hui dans la société. Pourquoi ? Parce qu'il y a trop 
 * Pour mettre le problème en perspective, imaginer que l'application prenne en compte les préférences d'un pays entier. 
 * Définir l'algorithme de Gale-Shapley pour la résolution de ce problème. 
 
-## 🤓 Prolongements
+## Prolongements
 
 1. Expliquer que l'algorithme a comme but de trouver un arrangement sans couple instable. Ce qui peut initier une question intéressante sur les objectifs des algorithmes. Philosophiquement cet objectif est-il louable ? Ne pourrait-on pas argumenter qu'une meilleure distribution serait celle dans laquelle certains sont extrêmement heureux, et d'autres extrêmements insatisfaits, ce qui créerait peut-être une société plus intéressante qu'une dans laquelle tout le monde est à peu près heureux. 
 2. Expliquer que l'algorithme fonctionne en donnant un arrangement possible parmi une multitude, selon que l'on commence par l'une ou l'autre liste, ou par l'un ou l'autre élément de ladite liste. 
 3. Expliquer que l'algorithme ne donne pas forcément l'optimum de préférence pour l'intégralité des candidats, ce qui dans certaines situations particulières pourrait éventuellement s'avérer dommageable. 
 
-## :crystal_ball: Labels 
+## Labels 
 
 * **Nom (libre)** : Cupidon est un programme
 * **Genre (contraint)** : unplugged

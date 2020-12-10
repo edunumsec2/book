@@ -7,27 +7,27 @@
 ***
 
 
-## 🙇‍♂️ Introduction
+## Introduction
 
 Activité ludique d'élaboration d'une recette de cuisine infinie. 
 
-## :honey_pot: Objectifs du cours
+## Objectifs du cours
 
 1. Comprendre la notion d'algorithme. 
 2. Comprendre la notion d'ordre topologique.
 3. Comprendre la notion de circuit dans les graphes.
 
-## :lollipop: Accroche
+## Accroche
 
 Si vous deviez expliquer à quelqu'un comment se faire cuire un oeuf, par où commenceriez-vous ? Casser l'oeuf dans la poêle ? Mais pour avoir une poêle, il faut l'acheter, pour l'acheter, il faut travailler, et pour travailler, il faut avoir mangé l'omelette... Comment faire ? 
 
 
-## 🎲 Matériel requis
+## Matériel requis
 
 **papier, stylos** 
 
 
-## 📚 Marche à suivre
+## Marche à suivre
 
 * Les élèves commencent par écrire une recette de cuisine pour se faire une omelette. 
 * On leur explique la notion de graphe orienté. 
@@ -38,14 +38,14 @@ Si vous deviez expliquer à quelqu'un comment se faire cuire un oeuf, par où co
 * Les élèves appliquent l'algorithme et créent un ordre topologique de leur recette. 
 * Après ce premier round, on les fait écrire une recette telle qu'elle comporte un circuit. 
 
-## 🤓 Prolongements
+## Prolongements
 
 
 1. On peut aller plus loin en expliquant en profondeur la notion de graphe avec circuit, ainsi que les problèmes que ces derniers posent en termes d'optimisation d'un parcours (problèmes pour l'algorithme de Dijkstra notamment, si ce dernier a déjà été abordé). 
 2. On peut demander une mise en commun des recettes de départ, et entamer à partir de leurs différences une discussion quant à la précision relative des instructions données. 
 3. On peut complexifier les choses en abordant la question du niveau de détail des instructions en rapport à la notion de librairie en programmation. Certaines instructions, comme "prendre une poêle" pourraient être décomposées en une infinité de micro-instructions plus précises. À moins que l'on ne possède une librairie comprenant une méthode `ustensiles.take(poêleàfrire)`
 
-## :crystal_ball: Labels 
+## Labels 
 
 * **Nom (libre)** : La recette de l'univers
 * **Genre (contraint)** : unplugged

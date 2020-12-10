@@ -1,8 +1,6 @@
 ![](https://fairywrenproject.org/wp-content/uploads/2018/07/SUFW-combined-illustration-1.jpg)
 
-# Qui suis-je ? 
-
-:key: Cette page peut être partagée avec les étudiants. Cliquez sur `Share` en haut à droite et activez `Public Access` pour publier la page. Copiez le lien pour la partager. 
+# Qui suis-je ?  
 
 >**Contenus abordés** : Algorithme de recherche dichotomique d'un élément dans un ensemble
 
@@ -10,25 +8,25 @@
 ***
 
 
-## 🙇‍♂️ Introduction
+## Introduction
 
 Activité ludique de recherche d'un personnage mystère.  
 
-## :honey_pot: Objectifs du cours
+## Objectifs du cours
 
 1. Comprendre la notion d'algorithme de recherche dichotomique. 
 2. Comparer son efficacité à celle d'une recherche "naïve"
 
-## :lollipop: Accroche
+## Accroche
 
 Vous devez trouver l'identité d'un personnage mystère, mais vous n'avez le droit qu'à vingt questions. Comment procéder ?
 
-## 🎲 Matériel requis
+## Matériel requis
 
 **papier, stylos** 
 **post-it**
 
-## 📚 Marche à suivre
+## Marche à suivre
 
 * Former des groupes de deux. 
 
@@ -56,7 +54,7 @@ Vous devez trouver l'identité d'un personnage mystère, mais vous n'avez le dro
 
 * Faire réaliser aux élèves le nombre incroyablement petit de questions qu'il suffit de poser, si on s'y prend bien, pour trouver la réponse dans un ensemble a priori si grand au départ.
 
-## 💎 Variantes
+## Variantes
 
 On peut varier l'activité sous les angles suivants : 
 
@@ -65,7 +63,7 @@ On peut varier l'activité sous les angles suivants :
 - [ ] Enlever la contrainte "personnage humain", et réfléchir aux conséquences d'un tel choix sur le nombre des questions. 
 
 
-## 🤓 Prolongement débats
+## Prolongement débats
 
 > Cette activité est reliée à l'algorithmique, bien sûr, mais aussi à la représentation de l'information (voir notamment le jeu des cartes que David propose de son côté). Ce serait bien de faire des liens.
 
@@ -75,7 +73,7 @@ On peut varier l'activité sous les angles suivants :
 2. Quels problèmes cela pose-t-il dans une société où de plus en plus d'algorithmes de recheche sont utilisés dans de nombreux domaines ? Est-il possible que l'on cherche à classer les gens dans des catégories parce que ça simplifie le travail des machines ? [Note: Ceci, ce serait plutôt relié au tri, justement: prévoir une autre activité...]
 3. Y a-t-il un lien avec les réseaux sociaux et les mécanismes de ciblage publicitaire ? 
 
-## :crystal_ball: Labels 
+## Labels 
 
 * **Nom (libre)** : Qui suis-je ? 
 * **Genre (contraint)** : unplugged

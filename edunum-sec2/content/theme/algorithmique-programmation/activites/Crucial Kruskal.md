@@ -9,25 +9,25 @@
 ***
 
 
-## 🙇‍♂️ Introduction
+## Introduction
 
 Activité ludique d'élaboration d'un système d'alarme à partir de l'algorithme de Kruskal pour trouver un arbre couvrant de poids minimal.
 
-## :honey_pot: Objectifs du cours
+## Objectifs du cours
 
 1. Comprendre la notion d'arbre couvrant de poids minimal
 2. Découvrir l'algorithme de Kruskal
 
-## :lollipop: Accroche
+## Accroche
 
 Votre population est en danger. Vous devez sonner l'alerte rouge. Chaque seconde compte. 
 
-## 🎲 Matériel requis
+## Matériel requis
 
 **papier, stylos** 
 
 
-## 📚 Marche à suivre
+## Marche à suivre
 
 * On donne aux élèves un graphe connexe pondéré relativement complexe. 
 * On explique les poids correspondent au degré de proximité entre les gens. Plus le chiffre est petit, plus ils sont proches. Le poids correspond donc symboliquement au temps qu'ils mettraient à se transmettre l'info. 
@@ -35,12 +35,12 @@ Votre population est en danger. Vous devez sonner l'alerte rouge. Chaque seconde
 * On leur présente l'algorithme de Kruskal. 
 * On peut ajouter celui de Prim. 
 
-## 🤓 Prolongements
+## Prolongements
 
 
 1. On peut augmenter la complexité en abordant des graphes connexes pondéré orientés. 
 
-## :crystal_ball: Labels 
+## Labels 
 
 * **Nom (libre)** : La recette de l'univers
 * **Genre (contraint)** : unplugged
