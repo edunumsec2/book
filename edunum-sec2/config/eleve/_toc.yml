@@ -36,8 +36,6 @@
       - file: content/theme/programmation/7_fonc/fonc
       - file: content/theme/programmation/8_mod/mod
       - file: content/theme/programmation/9_app/app 
-      - file: content/theme/programmation/structures-donnees-controle/eleve
-      - file: content/theme/programmation/perspectives-citoyennes-politiques/eleve
   - file: content/theme/architecture-ordinateurs/eleve
     sections:
       - file: content/theme/architecture-ordinateurs/introduction
