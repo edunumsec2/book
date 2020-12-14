@@ -149,3 +149,6 @@ L'enseignant fait un exemple au tableau avec les élèves et leur propose ensuit
 1. Si on avait un graphe avec des distances négatives, serait-il possible d'utiliser l'algorithme de Dijkstra? 
 2. Supposons que les sommets sont des ordinateurs et les arètes des connections réseaux et que chaque sommet ne peut communiquer qu'avec ses voisins. Un ordinateur peut-il savoir comment envoyer par le plus court chemin un message à un autre ordinateur du réseau? (cf algorithme de routage)
 
+## 8 Lien avec enjeux sociétaux
+
+Retour sur openstreetmap avec fiche (ou activité) correspondante [TODO link]
