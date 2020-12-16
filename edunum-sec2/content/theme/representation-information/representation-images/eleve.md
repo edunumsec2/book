@@ -63,8 +63,17 @@ Chaque pixel d'une image couleur est donc représenté comme un mélange de ces 
 
 Pour dessiner une image sur une feuille A4, on peut la diviser en grille et définir un niveau de gris pour chaque case, mais on peut aussi tout simplement de dessiner n'importe quelle figure, par exemple un trait d'un millimètre d'épaisseur allant d'un point A à un point B. De la même manière, en informatique, il est possible de représenter des images sous forme de grilles de pixels, comme nous l'avons vu, mais pas seulement. Il est en effet également possible de définir une image comme une collection d'objets graphiques (un segment, un carré, une ellipse...) sur un espace 2D, c'est ce que l'on appelle des images vectorielles. 
 
-```{admonition} Exercice
-Identifier les avantages et les inconvénients du format véctoriel en comparasion avec le système matriciel.
+```{admonition} Exercice 1
+Saisissez le texte suivant dans un éditeur de texte et enregistrer le sous forme de fichier *.svg*. Il vous sera ensuite normalement possible d'ouvrir ce fichier avec un logiciel pour afficher les images.
+
+	<svg width="100" height="100"  version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="red"/>
+	</svg>
+
+Modifier le fichier afin de dessiner 4 carrés différents.
 ```
 
+```{admonition} Exercice 2
+Identifier les avantages et les inconvénients du format véctoriel en comparasion avec le système matriciel.
+```
 
