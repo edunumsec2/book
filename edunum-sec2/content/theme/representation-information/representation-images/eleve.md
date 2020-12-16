@@ -19,9 +19,19 @@ Mais alors, comment marche une camera numérique ? Elle marche d'une manière tr
 
 Dans un appareil analogique, la paroi illuminée est recouverte d'une pellicule chimique photosensible ce qui permettra de capturer l'image. La différence est que dans un appareil photo numérique cette parois est recouverte d'une grille de capteurs électroniques photosensibles. Dans ce cas, l'image numérique ne sera rien d'autre que la collection des mesures de tous les capteurs à un temps précis. Comme ces mesures sont organisées sous forme de tableau, on parle souvent d'images matricielles. Plus le nombre de capteurs sera grand, plus la résolution de cette image le sera aussi.
 
+### Représentation d'une image noir et blanc
+
+Un bit est l'unité minimale d'information qu'un ordintaeur comprend : 1 ou 0, allumé ou éteint. Si l'on voulait qu'un ordinateur sauvegarde une image, et l'affiche à l'écran, on pourrait commencer par lui donner uniquement les indications en noir et blanc. Ainsi, un bit pourrait soit être noir, soit être blanc.
+
+![Bitmap1](media/bitmap1.png)
+
+Ceci nous permettrait assez facilement de construire des images simples, et d'une **résolution** très faible.
+
+Un **pixel**, de l'anglais : **pic**ture **el**ement, est le composant minimal d'un image. C'est à dire que c'est la plus petite brique avec laquelle on construit une image sur un écran d'ordinateur, et donc dans sa mémoire. Dans notre exemple minimaliste, chaque pixel peut être soit noir, soit blanc, ce qui nous permet de construire une image.
+
 ### Représentation d'une image monochrome
 
-La plupart des images sont représentées au format matriciel. Une image en niveau de gris sera ainsi généralement représenté comme un tableau de valeurs correspondant à la luminance de chaque sous élément de l'image ou pixel(**pic**ture **el**ement). Les valeurs de luminance sont chacune souvent représentée comme un nombre pouvant aller de 0 à 255, correspondant respectivement au noir et au blanc. 
+La plupart des images sont représentées au format matriciel. Une image en niveau de gris sera ainsi généralement représenté comme un tableau de valeurs correspondant à la luminance de chaque pixel. Les valeurs de luminance sont chacune souvent représentée comme un nombre pouvant aller de 0 à 255, correspondant respectivement au noir et au blanc. 
 
 ```{figure} media/image_et_pixels.svg
 ---
