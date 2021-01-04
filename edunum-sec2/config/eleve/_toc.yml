@@ -14,7 +14,6 @@
       - file: content/theme/representation-information/systeme-arithmetique-binaire/eleve
       - file: content/theme/representation-information/stockage-manipulation-donnees/eleve
       - file: content/theme/representation-information/redondance/eleve
-      - file: content/theme/representation-information/enjeu/transformation-numerique-economie-droit/eleve
       - file: content/theme/representation-information/exercices
         sections:
           - file: content/theme/representation-information/representation-caracteres/exercice/carte-perforee/exercice
