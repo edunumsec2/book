@@ -14,7 +14,6 @@
       - file: content/theme/representation-information/systeme-arithmetique-binaire/eleve
       - file: content/theme/representation-information/stockage-manipulation-donnees/eleve
       - file: content/theme/representation-information/redondance/eleve
-      - file: content/theme/representation-information/enjeu/transformation-numerique-economie-droit/eleve
       - file: content/theme/representation-information/exercices
         sections:
           - file: content/theme/representation-information/representation-caracteres/exercice/carte-perforee/exercice
@@ -63,22 +62,29 @@
   - file: content/theme/projets/eleve
   - file: content/theme/reseaux/eleve
 
-- part: À affecter
+# Ajout d'une partie pour les enjeux sociaux
+
+- part: Enjeux sociaux
   numbered: false
   chapters:
-  - file: content/annexe/eleve
-  - file: content/playground/eleve
-    sections:
-      - file: content/playground/notebook
-      - file: content/playground/types
-  - file: content/arts/L'app de rencontre
-  - file: content/arts/La poésie des limites
+  - file: 
+
+# - part: À affecter
+#  numbered: false
+#  chapters:
+#  - file: content/annexe/eleve
+#  - file: content/playground/eleve
+#    sections:
+#      - file: content/playground/notebook
+#      - file: content/playground/types
+#  - file: content/arts/L'app de rencontre
+#  - file: content/arts/La poésie des limites
 #  - file: content/arts/Python_turtle_extension
-  - file: content/arts/Qui suis-je_retouchesOlivier
-  - file: content/arts/contemporain_final
-  - file: content/enjeux/digital-labor/eleve
-  - file: content/fiche/references-notebook
-  - file: content/theme/algorithmique-programmation/activites/Cupidon est un programme
-  - file: content/theme/algorithmique-programmation/activites/La recette de l'univers
-  - file: content/theme/algorithmique-programmation/activites/Crucial Kruskal
-  - file: content/theme/introduction-algorithmique/algorithmes-classiques/activite/dijkstra/dijkstra
+#  - file: content/arts/Qui suis-je_retouchesOlivier
+#  - file: content/arts/contemporain_final
+#  - file: content/enjeux/digital-labor/eleve
+#  - file: content/fiche/references-notebook
+#  - file: content/theme/algorithmique-programmation/activites/Cupidon est un programme
+#  - file: content/theme/algorithmique-programmation/activites/La recette de l'univers
+#  - file: content/theme/algorithmique-programmation/activites/Crucial Kruskal
+#  - file: content/theme/introduction-algorithmique/algorithmes-classiques/activite/dijkstra/dijkstra
