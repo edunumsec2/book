@@ -67,10 +67,10 @@
 
 # Ajout d'une partie pour les enjeux sociaux
 
-- part: Enjeux sociaux
-  numbered: false
-  chapters:
-  - file: 
+#- part: Enjeux sociaux
+#  numbered: false
+#  chapters:
+#  - file: 
 
 # - part: À affecter
 #  numbered: false

@@ -252,7 +252,7 @@ Voici comment s'écrivent les nombres de cette carte en binaire:
 ````{panels}
 :column: col-md
 
-Carte n°2
+Représentation binaire des chiffres de la carte n°2
 ^^^
 <img src="./Carte2.png" alt="carte2" class="bg-primary" width="600px">
 ````
