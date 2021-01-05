@@ -55,8 +55,7 @@
 					"singleInstance": true,
 				}
 			]
-		},
-		"python.pythonPath": "/Users/ho/opt/anaconda3/bin/python"
+		}
 	},
 	"extensions": {
 		"recommendations": [

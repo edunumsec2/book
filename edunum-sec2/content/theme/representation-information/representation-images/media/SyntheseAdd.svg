@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="420"
+   height="400"
+   version="1.1"
+   id="svg20"
+   sodipodi:docname="SyntheseAdd.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata26">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs24" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="991"
+     inkscape:window-height="633"
+     id="namedview22"
+     showgrid="false"
+     inkscape:zoom="0.59"
+     inkscape:cx="210"
+     inkscape:cy="200"
+     inkscape:window-x="165"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g18" />
+  <rect
+     fill="#000"
+     width="100%"
+     height="100%"
+     id="rect2" />
+  <g
+     transform="translate(210,144) scale(130)"
+     id="g18">
+    <path
+       fill="#F00"
+       d=" M 1 0 A 1 1 0 0 0 -1 0 "
+       id="path4" />
+    <path
+       fill="#0F0"
+       d=" M -1 0 A 1 1 0 0 0 0 1.732050808 "
+       id="path6" />
+    <path
+       d="M 0,1.7320508 A 1,1 0 0 0 1,0"
+       id="path8"
+       inkscape:connector-curvature="0"
+       style="fill:#0000ff" />
+    <path
+       fill="#FF0"
+       d=" M 0 0 A 1 1 0 0 0 -1 0   1 1 0 0 0 -0.5 0.866025404 "
+       id="path10" />
+    <path
+       d=" M -0.5 0.866025404 A 1 1 0 0 0 0 1.732050808   1 1 0 0 0 0.5 0.866025404 "
+       id="path12"
+       fill="#0FF" />
+    <path
+       fill="#F0F"
+       d=" M 0.5 0.866025404 A 1 1 0 0 0 1 0   1 1 0 0 0 0 0 "
+       id="path14" />
+    <path
+       fill="#FFF"
+       d=" M 0 0 A 1 1 0 0 0 -0.5 0.866025404   1 1 0 0 0 0.5 0.866025404   1 1 0 0 0 0 0 "
+       id="path16" />
+  </g>
+</svg>
