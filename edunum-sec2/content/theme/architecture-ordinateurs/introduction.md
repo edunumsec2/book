@@ -2,6 +2,7 @@
 <!--- Architecture des Ordinateurs --->
 ## Contexte historique
 
+
 ````{panels}
 :column: col-lg-12 p-2
 
