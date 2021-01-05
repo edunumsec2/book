@@ -18,6 +18,9 @@
       - file: content/theme/representation-information/exercices
         sections:
           - file: content/theme/representation-information/representation-caracteres/exercice/carte-perforee/exercice
+      - file: content/theme/representation-information/activites
+        sections:
+          - file: content/theme/representation-information/representation-entiers/activite/magie-binaire/magie_binaire
   - file: content/theme/introduction-algorithmique/eleve
     sections:
       - file: content/theme/introduction-algorithmique/decomposition-probleme/eleve
