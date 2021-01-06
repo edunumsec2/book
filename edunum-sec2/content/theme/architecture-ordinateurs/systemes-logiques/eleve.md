@@ -1,4 +1,238 @@
 Systèmes logiques
 =================
 
-À compléter
+En informatique, les systèmes logiques décrivent comment sont connectés les circuits électroniques des ordinateurs afin de leur permettre de faire des calculs. C'est important de réaliser que, même si on a l'impression que les ordinateurs peuvent faire toutes sortes de choses, il y a un ensemble limités d'opérations de bases que l'électronique de la machine peut faire. On parle par exemple de l'addition, la soustraction, la multiplication ou la division de nombre. La vaste majorité de ce que fait l'ordinateur repose sur ces quelques opérations (ainsi que sur quelques opérations dites _logiques_ que nous allons découvrir).
+
+Comme but de ce chapitre, nous proposons de prendre le cas de l'additon et de s'intéresser aux circuits électroniques qui vont permettre à un ordinateur de faire une addition.
+
+Imaginons donc que nous devons additionner deux nombres entiers. Nous allons utiliser leur représentation binaire (avec uniquement des 1 et des 0). Pour faire simple, nous allons chercher à additioner simplement deux bits, disons $A$ et $C$, où chacun peut valoir soit 0 soit 1. Posons $C = A + B$. En énumérant tous les cas figure, on a:
+
+| $A$ | $B$ | $C$ |
+| :-: | :-: | --: |
+| 0   | 0   | 0   |
+| 1   | 0   | 1   |
+| 0   | 1   | 1   |
+| 1   | 1   | 10  |
+
+La dernière ligne est intéressante: nous savons que $1+1=2$, mais en binaire, nous savons aussi que nous n'avons droit qu'à des 0 et des 1, et 2 s'écrit ainsi $10$ (TODO REF section). Cela veut dire que, pour traiter tous les cas d'une addition de 2 bits, nous avons besoin aussi de 2 bits de sortie, et qu'un seul ne suffit pas. En explicitant chaque fois le deuxième bit de sortie, notre tableau devient:
+
+| $A$ | $B$ | $C$ |
+| :-: | :-: | :-: |
+| 0   | 0   | 00  |
+| 1   | 0   | 01  |
+| 0   | 1   | 01  |
+| 1   | 1   | 10  |
+
+La question est de déterminer comment faire calculer les deux bits de $C$ à partir de $A$ et $B$ à un circuit électronique. Pour cela, avons besoin du concept de _portes logiques_.
+
+
+## Portes logiques
+
+Les circuits électroniques qui composent un ordinateur sont constitués de composants électroniques comme des résitances, des condensateurs, des transistors, etc., qui détermine où va passer le courant électrique et sur quels partie du circuit règnera quelle tension.
+
+Nous allons considérer qu'un segment de circuit électronique où la tension est nulle (0V) représente la valeur binaire 0, alors qu'une tension non nulle (par exemple, 3V) représente la valeur binaire 1. Ainsi, pour véhiculer deux bits comme $a$ et $b$ dans un circuit, nous avons besoin de deux «fils».
+
+Les portes logiques sont des composants électroniques (elles-même constitutées en général de transistors et résistances) qui ont une ou plusieurs entrées et qui combinent ces entrées pour produire une sortie.
+
+### Porte ET
+
+Une de ces portes est la porte **ET**. Elle a deux entrées, qu'on appelera $X$ et $Y$, et une sortie $Z$. $Z$ sera $1$ si et seulement si aussi bien $X$ que $Y$ valent $1$. D'où son nom: il faut que $X$ _et_ $Y$ soient à 1 pour obtenir un 1 de sortie.
+
+En énumérant les quatre possibilités pour les entrées, on peut écrire ce qu'on appelle _table de vérité_ pour la porte **ET**:
+
+| $X$ | $Y$ | $Z$ |
+| :-: | :-: | :-: |
+| 0   | 0   | 0   |
+| 1   | 0   | 0   |
+| 0   | 1   | 0   |
+| 1   | 1   | 1   |
+
+On peut dessiner des diagrammes avec des portes logiques. (Ce ne sont pas des diagrammes électroniques, il cachent une partie de la complexité réelle des circuits.) Dans un tel diagramme logique, la porte **ET** est représentée ainsi:
+
+![](media/and_gate.svg)
+
+
+### Porte OU
+
+Il existe d'autres portes logiques. La porte **OU**, par exemple. Pour que la sortie de la porte OU vaille 1, il suffit que l'une des deux entrées vaille $X$ ou $Y$ vaille 1.
+
+Voici sa table de vérité:
+
+| $X$ | $Y$ | $Z$ |
+| :-: | :-: | :-: |
+| 0   | 0   | 0   |
+| 1   | 0   | 1   |
+| 0   | 1   | 1   |
+| 1   | 1   | 1   |
+
+On notera que le **OU** logique est un peu différent du «ou» que l'on utilise en général à l'oral: on voit que la sortie $Z$ vaut également $1$ si les deux entrées $X$ et $Y$ valent $1$. À l'oral, le «ou» est en général interprété comme _exclusif_: si l'on propose à un enfant un bonbon _ou_ une glace, on exclut la possibilité qu'il choisisse les deux. Ce n'est pas le cas pour le **OU** logique.
+
+La porte **OU** est représentée ainsi dans les diagrammes logiques:
+
+![](media/or_gate.svg)
+
+
+### Porte NON
+
+Cette porte est plus simple: elle n'a qu'une entrée, et sa sortie se contente d'inverser la valeur en entrée. On l'appelle d'ailleurs aussi un _inverseur_.
+
+Voici sa table de vérité:
+
+| $X$ | $Z$ |
+| :-: | :-: |
+| 0   | 1   |
+| 1   | 0   |
+
+L'inverseur est représentée ainsi:
+
+![](media/or_gate.svg)
+
+
+### Combinaisons de portes
+
+Les portes peuvent être connectées les unes aux autres. Voici par exemple un diagramme logique réalisant en sortie $Z$ la fonction appelée **XOR**, qui est un «ou exclusif» tel que discuté ci-dessus:
+
+![](media/xor_circuit.svg)
+
+Ce circuit contient une porte **OU**, deux portes **ET** et un inverseur, tous interconnectés.
+
+Discutions d'abord comment vérifier le fonctionnement de ce circuit. On peut annoter les segments avec «1» ou «0» pour les différents cas de figure, en faisant à la main les opérations effectuées par les portes logiques. Prenons $X=Y=0$:
+
+![](media/xor_circuit_00.svg)
+
+Le résultat intermédiaire des deux portes de gauche sera 0. L'inverseur transforme en 1 la sortie de la porte **ET**, mais la porte finale, qui est aussi une porte **ET**, n'obtient qu'un seul 1 en entrée et donc livre une sortie de 0.
+
+Le cas est différent si l'une des deux entrées vaut 1. Voici les deux diagrammes annotées, une fois pour $X=1, Y=0$ et une fois pour $Y=1, X=0$:
+
+![](media/xor_circuit_01.svg)
+![](media/xor_circuit_10.svg)
+
+Ici, la porte **OU** livrera un 1, dont a besoin la porte **ET** finale de droite pour donner une sortie de 1.
+
+Mais dans le cas $X = Y = 1$, représenté ici, la situation est différente:
+
+![](media/xor_circuit_00.svg)
+
+La porte **ET** du bas livre un 1, qui est inversé en 0 avant d'atteindre la porte finale, qui ne peut dès lors elle-même que livrer un 0 comme sortie.
+
+La table de vérité de ce circuit est ainsi:
+
+| $X$ | $Y$ | $Z$ |
+| :-: | :-: | :-: |
+| 0   | 0   | 0   |
+| 1   | 0   | 1   |
+| 0   | 1   | 1   |
+| 1   | 1   | 0   |
+
+TODO explication sur design de ce circuit
+
+Cette fonction de «ou exclusif» ou **XOR** est souvent utilisée, au point qu'on la représente en fait dans les diagrammes simplement par simplement ceci comme simplification du diagramme ci-dessus:
+
+![](media/xor_gate.svg)
+
+
+## Exercice: conception d'un circuit
+
+TODO faire circuit pour porte IMPLY avec table de vérité
+
+| $X$ | $Y$ | $Z$ |
+| :-: | :-: | :-: |
+| 0   | 0   | 1   |
+| 1   | 0   | 1   |
+| 0   | 1   | 0   |
+| 1   | 1   | 1   |
+
+
+## De la logique à l'arithmétique
+
+Ces portes logiques vont nous permettre de finalement réaliser notre petit additionneur. Nous avons déjà dit que nous avions deux bits de sorties à calculer pour notre sortie $C = A + B$. Disons donc que $C$ est donc consitutué de $C_0$, le bit des unités, et de $C_1$, le bit représentant la valeur décimale 2. La table de vérité pour $C_0$, tirée directement de la première section ci-dessous, est:
+
+| $A$ | $B$ |$C_0$|
+| :-: | :-: | :-: |
+| 0   | 0   | 0   |
+| 1   | 0   | 1   |
+| 0   | 1   | 1   |
+| 1   | 1   | 0   |
+
+En comparant cette table de vérité avec celles des portes logiques, on se rend compte que $C_0$ n'est autre qu'un **XOR** de $A$ et $B$.
+
+La table de vérité pour $C_1$ est:
+
+| $A$ | $B$ |$C_0$|
+| :-: | :-: | :-: |
+| 0   | 0   | 0   |
+| 1   | 0   | 0   |
+| 0   | 1   | 0   |
+| 1   | 1   | 1   |
+
+Et on constate que $C_1$ n'est autre qu'un **ET** logique de $A$ et $B$. Ainsi, on peut dessiner notre petit additionneur de deux bits ainsi:
+
+![](half_adder.svg)
+
+Ce circuit est spécialement intéressant en montrant comment des opérateurs logiques sont utilisés pour réaliser l'opération arithmétique de l'addition.
+
+
+## Exercice: additionneur de deux nombres de deux bits
+
+TODO
+
+
+## ALU
+
+TODO
+
+
+## Bascules
+
+TODO
+
+
+## Conclusion
+
+Dans ce chapitre nous avons donc vu les briques de base des ordinateurs. À savoir les éléments suivants:
+* Les portes logiques qui s'assemblent en systèment logiques qui effectuent des opérations logiques qui aboutissent à des fonctions arithmétiques et logiques dans une ALU
+* Les bascules qui permettent de mémoriser une information et s'assemblent dans des registres
+
+Nous pouvons les assembler dans des microprocesseurs que nous allons détailler au chapitre suivant.
+
+````{panels}
+:column: col-lg-12 p-2
+:card: bg-info
+
+**Vite ... très vite**
+^^^^
+Nous avons démontré que finalement nos ordinateurs ont un cerveau très simple dans le fonction de ses éléments de base : des portes logiques qui traitent des **0** ou des **1**. Il est cependant très difficile de se représenter à quel point ces traitement vont vite.
+Imaginons pour cela que le processeur écrive toutes les opérations qu'il effectue sur un ruban de papier et calculons la vitesse de défilement de ce papier. 
+
+Pour cela nous faisons les hypothèses suivantes:
+* Les processeurs actuels ont une cadence d'horloge de 3GHz, c'est à dire $3·10^9 [s^{-1}]$. Pour simplifier nous allons supposer qu'ils effectuent une opération par cycle[^1].
+* Nous transcrivons un mot de 64 bit (taille standard pour les processeurs) sur une longueur de 15cm, ce qui correspond à $15·10^{-2}[m]$.
+
+Le calcul devient alors :
+
+$$
+    3·10^9 [s^{-1}] · 15·10^{-2}[m] \\
+    45·10^7 [m/s]
+$$
+
+Que nous convertissons en km :
+
+$$
+    45·10^5 [km/s] ou encore : 450'000 [km/s]
+$$
+
+Rappelons que la vitesse de la lumière est :
+
+$$
+    c \cong 300'000 [km/s]
+$$
+
+Ce qui veut dire que si un microprocesseur, tel que ceux que l'on trouve dans son ordinateur ou son smartphone, écrivait sur un ruban de papier tout ce qu'il fait, ce ruban de papier devrait se déplacer à une fois et demi la vitesse de la lumière. Ou encore, ce ruban ferait chaque seconde plus de 11 fois le tour de la terre.
+
+Si les éléments de base sont simples, la complexité et la richesse des expériences numériques comme l'immersion dans un jeu vidéo proviennent de la quantité extraordinaire d'opérations effectuées.
+
+[^1]: En fait le opérations d'un processeur prennent plus d'un cycle pour être réalisées, mais comme les processeurs ont plusieurs coeurs et un pipeline dont nous n'abordons pas ici le fonctionnement, la simplification proposée n'est pas aberrante.
+
+
+
+````
