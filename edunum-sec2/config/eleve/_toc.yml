@@ -26,6 +26,10 @@
       - file: content/theme/introduction-algorithmique/algorithmes-classiques/eleve
       - file: content/theme/introduction-algorithmique/formulation-solutions/eleve
       - file: content/theme/introduction-algorithmique/consequences-automatisation/eleve
+      - file: content/theme/introduction-algorithmique/activites
+        sections:
+          - file: content/theme/introduction-algorithmique/algorithmes-classiques/activite/algo-tri/algo-tri
+          - file: content/theme/introduction-algorithmique/algorithmes-classiques/activite/dijkstra/dijkstra
   - file: content/theme/programmation/eleve
     sections:
       - file: content/theme/programmation/0_intro/intro
