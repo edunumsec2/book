@@ -61,7 +61,7 @@ l'augmentation de l'interconnexion entre les ordinateurs personnels a amené
 au début des années 2000 à l'émergence d'une énorme table intégrant le contenu 
 de toutes les tables existantes (et plus encore…).
 
-Le standard Unicode [//home.unicode.org/] (UTF: Universal Character Set Transformation Format) 
+Le [standard Unicode](https://home.unicode.org/) UTF (Universal Character Set Transformation Format) 
 s'est imposé pour l'échange, car il permet d'agréger sur *64 bit par caractère* 
 l'entier des caractères utilisés dans toutes les langues humaines… et même extraterrestres, 
 puisque le Klingon est également intégré. 
@@ -71,7 +71,7 @@ sont en outre, également intégrés.
 
 
 
-## Variantes UTF
+## Variantes UTF
 
 Pour éviter de consommer 64 bit par caractère, des variantes plus compactes 
 ont été mises à disposition. 

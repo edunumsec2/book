@@ -128,7 +128,7 @@ Une importante profondeur d'échantillonnage ne compense pas une fréquence d'é
 
 
 
-# Encodage
+## Encodage
 
 L'encodage de l'information numérisée se fait dans des formats de fichiers spécifiques aux applications. 
 
