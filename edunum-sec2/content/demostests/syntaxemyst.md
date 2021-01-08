@@ -2,7 +2,7 @@
 
 ````{admonition} Important
 :class: caution
-Pour voir la syntaxe MySt brut, ouvrir le document dans un éditeur markdown. 
+Pour voir la syntaxe MySt brut, ouvrir le document source dans un éditeur markdown. 
 ````
 
 ### Encart
@@ -22,7 +22,7 @@ Mon contenu
 
 ````{admonition} Mon titre
 :class: tip
-```{admonition} Mon sous-titre
+​```{admonition} Mon sous-titre
 :class: note
 Mon contenu de sous-titre
 ```
@@ -39,16 +39,16 @@ Voilà le contenu du dropdown. Attention ! Je ne sais pas pourquoi mais le dropd
 
 * on peut ajouter des images dans les encarts de la façon suivante. *Note : pour l'utilisation des images se référer au {ref}`chapitre sur les images et figures <imagesetfigures>`. 
 
-````{admonition} Mon titre
+​````{admonition} Mon titre
 :class: tip
-```{image} images/img1.png
+​```{image} images/img1.png
 ```
 Mon contenu
 ````
 
 ### Contenus en marge
 
-````{sidebar} Titre du contenu en marge
+​````{sidebar} Titre du contenu en marge
 Contenu en marge
 ````
 #### Optimisations des contenus en marge
@@ -56,7 +56,7 @@ Contenu en marge
 * on peut ajouter des encarts à l'intérieur des contenus en marge, selon la syntaxe décrite ci-dessus. Exemple : 
 
 ````{sidebar} Titre du contenu en marge
-```{admonition} titre de l'encart en marge
+​```{admonition} titre de l'encart en marge
 :class: caution
 n'oubliez pas de respectez les contraintes de mise en forme des encarts
 ```
@@ -89,7 +89,7 @@ Note : les "/" qui précèdent le signe "=" et la déclaration du niveau de titr
 
 * on insère une image de la façon suivante : 
 
-```{image} images/img1.png
+​```{image} images/img1.png
 :alt: titreimage1
 :width: 200px
 :align: center
