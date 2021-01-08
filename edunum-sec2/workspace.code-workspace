@@ -19,6 +19,8 @@
 		"search.exclude": {
 			"config/eleve/content": true,
 			"config/maitre/content": true,
+			"config/eleve/_build": true,
+			"config/maitre/_build": true,
 			"**/_build": true,
 			"**/node_modules": true,
 			"**/bower_components": true,

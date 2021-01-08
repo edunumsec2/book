@@ -64,6 +64,11 @@
   - file: content/theme/projets/eleve
   - file: content/theme/reseaux/eleve
 
+- part: Démos et divers
+  numbered: false
+  chapters:
+  - file: content/demostests/glossaire
+
 # Ajout d'une partie pour les enjeux sociaux
 
 #- part: Enjeux sociaux
