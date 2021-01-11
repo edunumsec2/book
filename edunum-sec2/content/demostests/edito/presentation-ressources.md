@@ -76,6 +76,6 @@ La version de MyST utilisée dans ce projet est celle qui a été adaptée pour 
 
 Les ressources sont affichées sous la forme du site statique ici-présent par l'intermédiaire des scripts ayant été développés dans le cadre du projet [jupyter{book}](https://jupyterbook.org/intro.html). 
 
-[jupyter{book}](https://jupyterbook.org/intro.html) est un projet open-source initialement prévu pour créer un site html statique à partir d'une collection de [notebooks jupyter](https://jupyter.org/). Les avantages de cette solution sont multiples, mais en particulier elle offre la possibilité de présenter sur un site html statique des cellules de code compilables. 
+[jupyter{book}](https://jupyterbook.org/intro.html) est un projet open-source initialement prévu pour créer un site html statique à partir d'une collection de [notebooks jupyter](https://jupyter.org/). Les avantages de cette solution sont multiples, mais en particulier elle offre la possibilité de présenter sur un site html statique des cellules de code exécutables. 
 
 
