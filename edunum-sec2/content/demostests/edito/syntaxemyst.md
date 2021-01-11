@@ -126,3 +126,9 @@ a = 2
 print('voilà un print')
 print('voilà un deuxième print')
 ```
+
+## GOOD LUCK 
+
+![Baby Yoda](images/syntaxemyst/babyyoda.gif)
+
+P.s : en effet, on peut intégrer des fichiers `.gif`. C'est exactement le même procédé que pour une image. 
