@@ -1,4 +1,4 @@
-# Liens
+# Liens externes
 
 ## Bases de données d'activités
 
