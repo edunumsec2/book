@@ -8,6 +8,13 @@ Les ressources sont publiées sous licence Creatives Commons `Attribution - Pas 
 
 ![licence](images/presentation/by-nc-sa.png)
 
+Toute personne qui réutilise les ressources est prié de le faire de la façon suivante : 
+
+1. Pas d'utilisation commerciale. 
+2. Possibilité de modifier les ressources à souhait. 
+3. Crédit : "Par le groupe de travail DGEP, EPFL, HEP, UNIL". 
+4. Partage selon les mêmes conditions. Donc en ajoutant simplement le logo ci-dessus pour toute publication éventuelle. 
+
 ## Modification des ressources
 
 Les ressources sont diffusées selon le modèle open-source, qui veut que tout utilisateur ait accès aux documents d'origine, et puisse les transformer à sa guise. Pour ce faire, un accès au dépôt Github contenant les documents sources est disponible en haut à droite de la fenêtre de navigation. 
