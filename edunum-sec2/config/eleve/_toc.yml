@@ -70,6 +70,7 @@
   - file: content/demostests/glossaire
   - file: content/demostests/edito/syntaxemyst
   - file: content/demostests/edito/presentation-ressources
+  - file: content/demostests/edito/liens
 
 # Ajout d'une partie pour les enjeux sociaux
 
