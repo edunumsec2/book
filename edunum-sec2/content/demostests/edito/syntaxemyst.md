@@ -42,7 +42,7 @@ Voilà le contenu du dropdown. Attention ! Je ne sais pas pourquoi mais le dropd
 
 ````{admonition} Mon titre
 :class: tip
-```{image} edito/images/img1.png
+```{image} images/img1.png
 ```
 Mon contenu
 ````
@@ -90,7 +90,7 @@ Note : les "/" qui précèdent le signe "=" et la déclaration du niveau de titr
 
 * on insère une image de la façon suivante : 
 
-```{image} edito/images/img1.png
+```{image} images/img1.png
 :alt: titreimage1
 :width: 200px
 :align: center
