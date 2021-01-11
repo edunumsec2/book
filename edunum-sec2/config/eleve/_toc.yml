@@ -69,6 +69,7 @@
   chapters:
   - file: content/demostests/glossaire
   - file: content/demostests/syntaxemyst
+  - file: content/theme/edito/presentation-ressources
 
 # Ajout d'une partie pour les enjeux sociaux
 

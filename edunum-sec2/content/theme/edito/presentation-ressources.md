@@ -60,7 +60,7 @@ Les documents originaux des ressources sont écrites dans un language appelé [*
 
 Une version allégée de la syntaxe est disponible {ref}`ici <syntaxemyst>`.
 
-````{admonition}
+````{admonition} Important
 :class: note
 La version de MyST utilisée dans ce projet est celle qui a été adaptée pour le projet [jupyter{book}](https://jupyterbook.org/intro.html). 
 ````
