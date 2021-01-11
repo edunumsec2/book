@@ -68,8 +68,8 @@
   numbered: false
   chapters:
   - file: content/demostests/glossaire
-  - file: content/demostests/syntaxemyst
-  - file: content/demostests/presentation-ressources
+  - file: content/demostests/edito/syntaxemyst
+  - file: content/demostests/edito/presentation-ressources
 
 # Ajout d'une partie pour les enjeux sociaux
 
