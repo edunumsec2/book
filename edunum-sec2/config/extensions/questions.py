@@ -28,12 +28,12 @@ def visit_answer_html(self, node):
     else:
         classes.append("incorrect")
 
-    tag = self.starttag(node, "span", CLASS=" ".join(classes))
+    tag = self.starttag(node, "label", CLASS=" ".join(classes))
     self.body.append(tag.strip())
     self.body.append("<input type=\"checkbox\" />")
 
 def depart_answer_html(self, node):
-    self.body.append("</span>")
+    self.body.append("</label>")
 
 def visit_question_html(self, node):
     classes = ["question"]
