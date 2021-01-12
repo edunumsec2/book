@@ -2,7 +2,13 @@
 function ready() {
   var questions = document.getElementsByClassName("question");
   for (const question of questions) {
-    var is_mono = question.classList.contains("mono");
+    var is_mono = true;
+    if (question.classList.contains("multi")) {
+      is_mono = false;
+    }
+    else if (question.getElementsByClassName("correct").length != 1) {
+      is_mono = false;
+    }
     var correct_boxes = [];
     var incorrect_boxes = [];
     var answers = question.getElementsByClassName("answer");

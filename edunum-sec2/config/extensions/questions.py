@@ -37,8 +37,8 @@ def depart_answer_html(self, node):
 
 def visit_question_html(self, node):
     classes = ["question"]
-    if node["mono"]:
-        classes.append("mono")
+    if node["multi"]:
+        classes.append("multi")
 
     tag = self.starttag(node, "div", CLASS=" ".join(classes))
     self.body.append(tag.strip())
@@ -60,14 +60,14 @@ class Question(SphinxDirective):
     optional_arguments = 1
     final_argument_whitespace = True
     option_spec = {
-        "mono": directives.flag
+        "multi": directives.flag
     }
     has_content = True
 
     def run(self):
         self.assert_has_content()
 
-        container = question("", mono="mono" in self.options)
+        container = question("", multi="multi" in self.options)
         self.set_source_info(container)
 
         admonition = nodes.admonition("")
