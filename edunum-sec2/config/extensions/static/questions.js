@@ -29,6 +29,10 @@ function ready() {
     for (const check_button of check_buttons) {
       check_button.addEventListener("click", check_listener(correct_boxes, incorrect_boxes))
     }
+    var show_buttons = question.getElementsByClassName("show");
+    for (const show_button of show_buttons) {
+      show_button.addEventListener("click", show_listener(correct_boxes, incorrect_boxes))
+    }
   }
 }
 
@@ -46,6 +50,17 @@ function check_listener(correct_boxes, incorrect_boxes) {
       }
     }
     alert(correct ? "Bravo!" : "Oups!");
+  };
+}
+
+function show_listener(correct_boxes, incorrect_boxes) {
+  return function(event) {
+    for (const box of correct_boxes) {
+      box.checked = true;
+    }
+    for (const box of incorrect_boxes) {
+      box.checked = false;
+    }
   };
 }
 

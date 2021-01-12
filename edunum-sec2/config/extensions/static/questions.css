@@ -2,8 +2,16 @@
   margin-right: 5px;
 }
 
-input.check {
+.controls {
   margin-top: 5px;
+}
+
+.controls input {
+  margin-left: 10px;
+}
+
+.question .controls {
+  text-align: right;
 }
 
 .question .admonition-title {
