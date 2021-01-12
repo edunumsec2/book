@@ -2,6 +2,7 @@
 function ready() {
   var questions = document.getElementsByClassName("question");
   for (const question of questions) {
+    var is_mono = question.classList.contains("mono");
     var correct_boxes = [];
     var incorrect_boxes = [];
     var answers = question.getElementsByClassName("answer");
@@ -13,6 +14,9 @@ function ready() {
       }
       else {
         incorrect_boxes.push(box);
+      }
+      if (is_mono) {
+        box.addEventListener("click", mono_click_listener(answers));
       }
     }
     var check_buttons = question.getElementsByClassName("check");
@@ -36,6 +40,17 @@ function check_listener(correct_boxes, incorrect_boxes) {
       }
     }
     alert(correct ? "Bravo!" : "Oups!");
+  };
+}
+
+function mono_click_listener(answers) {
+  return function(event) {
+    for (const answer of answers) {
+      var box = answer.getElementsByTagName("input").item(0)
+      if (!box.isSameNode(event.target)) {
+        box.checked = false;
+      }
+    }
   };
 }
 

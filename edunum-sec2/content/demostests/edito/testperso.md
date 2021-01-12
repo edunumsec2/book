@@ -7,6 +7,7 @@ Pour de la <span style="color:red">couleur</span>, il est possible d'insérer de
 ```
 
 ```{question}
+:mono:
 Combien y a t'il de bits dans un octet ?
 * {f}`2`
 * {f}`4`

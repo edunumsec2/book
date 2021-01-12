@@ -3,6 +3,7 @@ import os
 import sys
 
 from docutils import nodes
+from docutils.parsers.rst import directives
 from sphinx.util.docutils import SphinxDirective
 
 class answer(nodes.TextElement, nodes.Inline):
@@ -21,20 +22,13 @@ class check_buttons(nodes.Element, nodes.General):
     pass
 
 def visit_answer_html(self, node):
-    attributes = node.attributes.copy()
-    attributes.pop("backrefs")
-    attributes.pop("classes")
-    attributes.pop("dupnames")
-    attributes.pop("ids")
-    attributes.pop("names")
-
     classes = ["answer"]
     if node.is_correct:
         classes.append("correct")
     else:
         classes.append("incorrect")
 
-    tag = self.starttag(node, "span", CLASS=" ".join(classes), **attributes)
+    tag = self.starttag(node, "span", CLASS=" ".join(classes))
     self.body.append(tag.strip())
     self.body.append("<input type=\"checkbox\" />")
 
@@ -42,14 +36,11 @@ def depart_answer_html(self, node):
     self.body.append("</span>")
 
 def visit_question_html(self, node):
-    attributes = node.attributes.copy()
-    attributes.pop("backrefs")
-    attributes.pop("classes")
-    attributes.pop("dupnames")
-    attributes.pop("ids")
-    attributes.pop("names")
+    classes = ["question"]
+    if node["mono"]:
+        classes.append("mono")
 
-    tag = self.starttag(node, "div", CLASS="question", **attributes)
+    tag = self.starttag(node, "div", CLASS=" ".join(classes))
     self.body.append(tag.strip())
     self.body.append("<form>")
 
@@ -68,13 +59,15 @@ class Question(SphinxDirective):
     required_arguments = 0
     optional_arguments = 1
     final_argument_whitespace = True
-    option_spec = {}
+    option_spec = {
+        "mono": directives.flag
+    }
     has_content = True
 
     def run(self):
         self.assert_has_content()
 
-        container = question("")
+        container = question("", mono="mono" in self.options)
         self.set_source_info(container)
 
         admonition = nodes.admonition("")
