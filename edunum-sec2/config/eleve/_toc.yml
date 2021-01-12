@@ -64,6 +64,11 @@
   - file: content/theme/projets/eleve
   - file: content/theme/reseaux/eleve
 
+- part: Enjeux sociaux
+  numbered: false
+  chapters:
+  - file: content/enjeux/testenjeux
+
 - part: Démos et divers
   numbered: false
   chapters:
