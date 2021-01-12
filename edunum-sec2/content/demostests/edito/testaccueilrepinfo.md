@@ -8,7 +8,7 @@
 
 
 
-# Représentation de l'information
+# Représentation de l'information (test accueil)
 
 Le monde numérique est extrêmement vaste. Au moyen d’applications dédiées, il est possible d’y travailler sur une certaine représentation du réel. Des textes, des images, des sons ou des données financières peuvent tout aussi bien y être manipulées.
 
