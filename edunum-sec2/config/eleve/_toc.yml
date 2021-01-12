@@ -72,6 +72,7 @@
   - file: content/demostests/edito/presentation-ressources
   - file: content/demostests/edito/liens
   - file: content/demostests/edito/referencesart
+  - file: content/demostests/edito/testaccueilrepinfo
 
 # Ajout d'une partie pour les enjeux sociaux
 

@@ -127,6 +127,10 @@ print('voilà un print')
 print('voilà un deuxième print')
 ```
 
+## Couleur
+
+Pour de la <span style="color:red">couleur</span>, il est possible d'insérer de l'HTML directement dans le texte. 
+
 ## GOOD LUCK 
 
 ![Baby Yoda](images/syntaxemyst/babyyoda.gif)

@@ -10,16 +10,34 @@
 
 # Représentation de l'information
 
-Tout ce que vous regardez sur votre écran de smartphone, tout ce que vous envoyez à vos amis, tout ce que vous stockez sur la mémoire de votre appareil, est en réalité une suite de 0 et de 1. 
+Le monde numérique est extrêmement vaste. Au moyen d’applications dédiées, il est possible d’y travailler sur une certaine représentation du réel. Des textes, des images, des sons ou des données financières peuvent tout aussi bien y être manipulées.
 
-````{sidebar} Anecdote historique
+Pourtant, il faut avoir conscience qu’aussi “réelles” que ces représentations peuvent nous paraître, elles n’en sont pas moins des représentations.
+
+````{sidebar} Anecdote
 :class: hint
-Le **code binaire** existe 
+[Le projet Gutenberg](https://www.gutenberg.org/) est une immense bibliothèque en ligne qui rassemble une grande partie des livres ayant été écrits à toutes les époques. Sa taille est de 60GB. 1mn de vidéo smartphone HD pèse environ 100MB. Ce qui signifie que la quasi totalité des livres écrits par l'espère humaine correspond à 100 vidéos smartphones. Quand on sait que Tik Tok possède 500 millions d'utilisateurs actifs, cela devient abyssal.
+````
 
-Pourquoi ? Parce que votre smartphone, au fond, est un ordinateur. 
+Dans cette section, nous allons nous attarder sur la façon de laquelle les ordinateurs digitaux parviennent à représenter le monde et les sacrifices qui doivent être faits pour simplifier le monde réel jusqu’à ce que sa représentation puisse être manipulée automatiquement au moyen de calculs élémentaires.
 
-Mais quel est le langage des ordinateurs ? C'est ce que l'on appelle le **code binaire**. 
+# Personnages-clés
 
+````{tabbed} Grace Hopper
+```{image} images/accueil/gracehopper.jpeg
+:alt: Grace Hopper
+:height: 500px
+:width: 350px
+```
+À partir de 1957, elle travaille pour IBM, où elle défend l'idée qu'un programme devrait pouvoir être écrit dans un langage proche de l'anglais plutôt que d'être calqué sur le langage machine, comme l'assembleur. De cette idée naît le langage COBOL en 1959.
+````
 
+````{tabbed} Claude Shannon
+```{image} images/accueil/claudeshannon.jpg
+:alt: Claude Shannon
+:height: 500px
+:width: 350px
+```
+Pendant la Seconde Guerre mondiale, Shannon travaille pour les services secrets de l'armée américaine, en cryptographie, chargé de localiser de manière automatique dans le code ennemi les parties signifiantes cachées au milieu du brouillage. Son travail est exposé dans un rapport secret (déclassifié dans les années 1980 seulement), qui donne naissance après-guerre à un article, A Mathematical Theory of Communication (1948), qui fut repris en 1949 sous forme de livre publié par l'université de l'Illinois avec les commentaires de Warren Weaver, coordonnateur (Mattelart et Mattelart, 2004) dans les services secrets. Cet ouvrage est centré autour de la problématique de la transmission du signal.
+````
 
-😊 
