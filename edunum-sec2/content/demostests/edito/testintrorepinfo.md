@@ -155,9 +155,9 @@ Un *vocabulaire* plus élaboré que le Morse pour pouvoir représenter tous les 
 Ce *vocabulaire* est le **code binaire**.  
 Il permet, en utilisant uniquement des 0 et des 1, de représenter n'importe quel type d'information : des chiffres, du texte, des images, du son, des vidéos, etc. 
 
-````{admonition} Smartphone, binary inside
+````{admonition} Note
 Ce principe est si puissant que c'est devenu le *langage des ordinateurs*. Comme votre smartphone est en fait un ordinateur, tout ce que vous y voyez quotidiennement, vos discussions, l'image d'un chaton, votre série préférée, ou encore la dernière chanson que vous écoutez, ne sont en réalité qu'une suite de 0 et de 1.
-![Morse](media/binarycodesmartphone.png)
+![Morse](media/smartphone.png)
 `````
 
 <!---
