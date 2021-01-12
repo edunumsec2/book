@@ -1,0 +1,23 @@
+.answer input {
+  margin-right: 5px;
+}
+
+input.check {
+  margin-top: 5px;
+}
+
+.question .admonition-title {
+  background-color: #98bfe9;
+}
+
+.question .admonition {
+  border-left: .2rem solid #427dbd;
+}
+
+.question .admonition-title:before {
+  color:#05245e;
+  padding-left: 2px;
+  font-size: 1.1em;
+  font-weight: bold;
+  content:"?";
+}
