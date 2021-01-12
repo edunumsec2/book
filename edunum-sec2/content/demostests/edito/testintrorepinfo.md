@@ -157,7 +157,7 @@ Il permet, en utilisant uniquement des 0 et des 1, de représenter n'importe que
 
 ````{admonition} Note
 Ce principe est si puissant que c'est devenu le *langage des ordinateurs*. Comme votre smartphone est en fait un ordinateur, tout ce que vous y voyez quotidiennement, vos discussions, l'image d'un chaton, votre série préférée, ou encore la dernière chanson que vous écoutez, ne sont en réalité qu'une suite de 0 et de 1.
-![Morse](media/smartphone.png)
+![Morse](images/introduction/smartphone.png)
 `````
 
 <!---
