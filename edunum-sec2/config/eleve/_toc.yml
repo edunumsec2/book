@@ -74,6 +74,7 @@
   - file: content/demostests/edito/referencesart
   - file: content/demostests/edito/testaccueilrepinfo
   - file: content/demostests/edito/testintrorepinfo
+  - file: content/demostests/edito/testperso
 
 # Ajout d'une partie pour les enjeux sociaux
 
