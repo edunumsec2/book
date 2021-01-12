@@ -1,4 +1,4 @@
-# template accueil
+# Template accueil
 
 Liste de contenus suggérés
 

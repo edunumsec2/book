@@ -10,3 +10,12 @@
 :height: 500px
 :width: 350px
 
+*Note : inverser pour images landscape*
+
+## Image "inline"
+
+:height: 500px
+:width: 350px
+
+*Note : inverser pour images landscape*
+

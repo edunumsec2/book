@@ -127,9 +127,46 @@ print('voilà un print')
 print('voilà un deuxième print')
 ```
 
-## Couleur
+## Couleurs
 
 Pour de la <span style="color:red">couleur</span>, il est possible d'insérer de l'HTML directement dans le texte. 
+
+## Panels
+
+````{panels}
+Contenu du panel en haut à gauche
+
+---
+
+Contenu du panel en haut à droite
+
+{badge}`primary,badge-primary`
+{badge}`secondary,badge-secondary`
+{badge}`info,badge-info`
+{badge}`success,badge-success`
+{badge}`danger,badge-danger`
+{badge}`warning,badge-warning`
+{badge}`light,badge-light`
+{badge}`dark,badge-dark`
+
+
+
+
+---
+
+```{dropdown} Panel en bas à gauche
+Hidden content
+```
+
+---
+
+```{link-button} https://example.com
+:text: Panel clickable
+:classes: stretched-link
+```
+
+````
+
 
 ## GOOD LUCK 
 
