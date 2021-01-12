@@ -117,33 +117,49 @@ Claude Chappe, inventeur français, développe en 1794 un télégraphe capable d
 :width: 350px
 ````
 
-````{panels}
-:column: col-lg
+````{admonition} Piratage du télégraphe Chappe
+:class: warning
+[Le piratage du télégraphe Chappe](https://fr.wikipedia.org/wiki/Piratage_du_t%C3%A9l%C3%A9graphe_Chappe) est un détournement du réseau de télégraphie optique français entrepris par deux hommes d'affaires bordelais, Louis et François Blanc, entre 1834 et 1836, afin de connaître avant tout le monde la clôture des cours de la rente à la Bourse de Paris.
 
-Activité
-^^^
-Créez votre propre système de communication
+Le piratage a été rendu possible par la corruption d'un agent télégraphique de Tours, qui ajoutait discrètement le chiffre du cours aux messages envoyés par l'État.
 ````
+
 
 ### Le morse
 
 Grâce à la découverte de l'électricité au début du XIXème siècle, et les améliorations techniques faites pour la capturer et la transmettre, on a pu utiliser le réseau électrique pour envoyer des messages. En 1832, nait le code Morse, qui s'impose rapidement comme un standard de communication. 
 Bien sûr, le morse peut être utilisé aussi avec des signaux lumineux, ou sonores, mais la plupart du temps il est utilisé sur les lignes électriques qui se développent à cet époque. 
 
+`````{sidebar} Raccourcis en morse
+À l'époque où les transmissions télégraphiques en code morse sont payées à l'unité d'information, donc la lettre, des *codex* spécifiques sont développés par les utilisateurs pour utiliser le moins de caractères possibles. C'est exactement la même situation qui s'est produite avec l'arrivée des sms dans les années 2000, où les utilisateurs payaient au caractère. Aujourd'hui, même s'il est rare de payer à l'unité d'information, ce genre de raccourcis existent encore, mais surtout pour un avantage de vitesse. 
+````{toggle}
+```{image} images/introduction/morsecodeshort.png
+:height: 500px
+:width: 350px
+```
+Le désavantage de ces **codex d'abbréviations** est leur *transférabilité*. Comment savoir quel codex est utilisé ? Et surtout : comment faire pour que tout le monde s'accorde sur le codex ? 
+
+La réponse à cette question est l'apport le plus essentiel de l'introduction du code binaire, et des standards de représentation de l'information qui l'ont suivi. 
+````
+`````
+
 ````{image} images/introduction/morse.png
 :height: 500px
 :width: 350px
 ````
 
-````{admonition} Questions ?
-* À votre avis, pourquoi la lettre "e" est-elle représentée par un seul point ? 
-* Pourquoi les signaux utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet ?
+`````{admonition} Questions ?
+1. À votre avis, pourquoi la lettre "e" est-elle représentée par un seul point ? 
+2. Pourquoi les signaux utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet ?
 
-```{toggle} 
-Réponses à mettre ?
+````{toggle} 
+1. Parce que c'est la lettre la plus utilisée, en anglais. C'est donc logique d'utiliser le symbole le plus *rapide* pour la transmettre. 
+2. Ceci est une extension de la réponse précédente, puisqu'il est logique de coder les lettres les plus fréquentes avec les signaux les plus courts. 
+```{image} images/introduction/letterdistribution.png
+:height: 500px
+:width: 350px
 ```
-
-````
+`````
 
 ### Le binaire
 
@@ -152,13 +168,22 @@ Réponses à mettre ?
 Une pièce technologique, qui permettrait de "stocker" pour ainsi dire cette information : le transistor (cf : chapitre "architecture des ordinateurs").
 
 Un *vocabulaire* plus élaboré que le Morse pour pouvoir représenter tous les types d'informations possibles à partir d'une alternative entre deux états : courant ou pas courant ; allumé ou éteint ; vrai ou faux ; 1 ou 0.  
-Ce *vocabulaire* est le **code binaire**.  
-Il permet, en utilisant uniquement des 0 et des 1, de représenter n'importe quel type d'information : des chiffres, du texte, des images, du son, des vidéos, etc. 
 
-````{admonition} Note
+Ce *vocabulaire* est le **code binaire**. Il permet, en utilisant uniquement des 0 et des 1, de représenter n'importe quel type d'information : des chiffres, du texte, des images, du son, des vidéos, etc. 
+
+````{image} images/introduction/binary.gif
+:height: 500px
+:width: 350px
+````
+
+`````{admonition} Note
 Ce principe est si puissant que c'est devenu le *langage des ordinateurs*. Comme votre smartphone est en fait un ordinateur, tout ce que vous y voyez quotidiennement, vos discussions, l'image d'un chaton, votre série préférée, ou encore la dernière chanson que vous écoutez, ne sont en réalité qu'une suite de 0 et de 1.
-![Morse](images/introduction/smartphone.png)
-`````
+````{toggle}
+```{image} images/introduction/hmm.gif
+```
+Même lui... Oui. 
+````
+``````
 
 <!---
 Au milieu du XIXe siècle, les fragments d’un papyrus vieux de plus 4000 ans découvert sur le site de Thèbes sont rassemblés par l’égyptologue écossais Henry Rhind. Aujourd’hui exposés au British Museum de Londres, les cinq mètres du document montrent que les égyptiens utilisaient une représentation binaire des nombres pour effectuer les opérations arithmétiques de base – addition, soustraction, multiplication et division – pour résoudre des problèmes d’algèbre et de géométrie.
