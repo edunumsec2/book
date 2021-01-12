@@ -48,6 +48,8 @@ html:
 sphinx:
   config:
     html_show_copyright: false
+  local_extensions:
+    questions: ../extensions/
 
 #######################################################################################
 # Interact link settings
