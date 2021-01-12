@@ -33,7 +33,8 @@ parse:
 html:
   use_issues_button: true
   use_repository_button: true
-  home_page_in_navbar         : false
+  home_page_in_navbar: false
+  extra_navbar:
   extra_footer: |
     <p>
     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
@@ -48,6 +49,8 @@ html:
 sphinx:
   config:
     html_show_copyright: false
+    language: fr
+    html_theme: sphinx_book_theme
   local_extensions:
     questions: ../extensions/
 
@@ -71,5 +74,3 @@ launch_buttons:
 #binder:
   binderhub_url               : "https://mybinder.org"
   text                        : "Launch binder"
-
-
