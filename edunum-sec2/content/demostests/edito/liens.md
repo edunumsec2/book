@@ -22,11 +22,7 @@
 
 * [Interstices](https://interstices.info/)
 
-**Interstices** est une plateforme en ligne francophone mettant à disposition des ressources théoriques et des activités au sujet des sciences informatiques avec un accent mis sur les enjeux sociaux du numérique. Le projet est développé par [l'Inria](https://www.inria.fr/fr).
-
-* [Citoyenneté à l'ère du numérique](https://www.citnum.ca/?lang=fr)
-
-**Citoyenneté à l'ère du numérique** est une plateforme en ligne francophone mettant à disposition des ressources théoriques et des activités au sujet des sciences informatiques avec un accent mis sur les enjeux sociaux du numérique. Le projet est développé sous licence **Licence Creative Commons Attribution 4.0 International**
+**Interstices** est une plateforme en ligne francophone mettant à disposition des ressources théoriques et des activités au sujet des sciences informatiques sous un angle que les auteurs du projet appellent "culture informatique". Le projet est déveoppé par [l'Inria](https://www.inria.fr/fr).
 
 * [Code.org](https://code.org)
 
