@@ -173,3 +173,7 @@ Hidden content
 ![Baby Yoda](images/syntaxemyst/babyyoda.gif)
 
 P.s : en effet, on peut intégrer des fichiers `.gif`. C'est exactement le même procédé que pour une image. 
+
+
+{fa}`check,text-success mr-1` Salut.  
+{fa}`microchip, text-success mr-1` Salut. 

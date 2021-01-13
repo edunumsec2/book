@@ -1,6 +1,6 @@
 # Table of content
 #
-- file: content/theme/eleve
+- file: content/demostests/edito/presentation-ressources
 
 - part: Première année
   numbered: false
@@ -74,7 +74,7 @@
   chapters:
   - file: content/demostests/glossaire
   - file: content/demostests/edito/syntaxemyst
-  - file: content/demostests/edito/presentation-ressources
+  # - file: content/demostests/edito/presentation-ressources
   - file: content/demostests/edito/liens
   - file: content/demostests/edito/referencesart
   - file: content/demostests/edito/testaccueilrepinfo
