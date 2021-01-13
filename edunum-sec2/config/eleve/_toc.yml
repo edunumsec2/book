@@ -67,7 +67,7 @@
 - part: Enjeux sociaux
   numbered: false
   chapters:
-  - file: content/enjeux/testenjeux
+  - file: content/enjeux/Bibliographie_EnjeuxSociaux
 
 - part: Démos et divers
   numbered: false
