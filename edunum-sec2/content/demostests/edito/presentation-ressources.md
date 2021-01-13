@@ -40,7 +40,7 @@ C'est l'objectif même du projet d'accueillir vos retours, idées d'amélioratio
 : dans le but de continuer de faire évoluer ce projet dans le bon sens. 
 
 💡 [Récoltez du feedback mesuré scientifiquement]
-à l'aide de questionnaires destinés à vos élèves, à vous-même pour identifier ce qui fonctionne ou pas, ce qui pourrait être amélioré, les questionnaires peuvent porter sur une séquence (une thématique ou un sujet) ou simplement sur une activité, ne vous limitez pas à des impressions pour savoir ce que pensent tous vos élèves
+à l'aide de questionnaires destinés à vos élèves, à vous-même pour identifier ce qui fonctionne ou pas, ce qui pourrait être amélioré, les questionnaires peuvent porter sur une séquence (une thématique ou un sujet) ou simplement sur une activité, ne vous limitez pas à des impressions pour savoir ce que pensent tous vos élèves. Des questionnaires adaptés vous attendent ici :
 
 👍 [Votez pour de nouvelles améliorations](https://github.com/edunum-sec2/ressources)
 : ajoutez un +1 aux *issues* qui vous intéressent particulièrement. 
