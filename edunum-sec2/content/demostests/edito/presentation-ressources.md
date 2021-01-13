@@ -1,6 +1,6 @@
 # Présentation des ressources
 
-Les ressources pour l'enseignement de la branche *Informatique* au niveau secondaire II ont été produites par le `groupe de travail DGEP, EPFL, HEP, UNIL` dans le cadre du projet EduNum du canton de Vaud. Leur objectif est la mise à disposition de contenus théoriques, de séries d'exercices, et d'idées d'activités pour les enseignantes et enseignants de ladite matière. 
+Les ressources pour l'enseignement de la branche *Informatique* au niveau secondaire II ont été produites par le `groupe de travail DGEP, EPFL, HEP, UNIL`, dans le cadre du projet **EduNum** du canton de Vaud. Leur objectif est la mise à disposition de contenus théoriques, de séries d'exercices, et d'idées d'activités pour les enseignantes et enseignants de ladite matière. 
 
 Voici une liste non-exhaustive des usages potentiels de ces ressources : 
 
@@ -39,8 +39,9 @@ C'est l'objectif même du projet d'accueillir vos retours, idées d'amélioratio
 ✉️ [Contactez-nous pour du feedback](https://www.epfl.ch/education/educational-initiatives/center-learn/)
 : dans le but de continuer de faire évoluer ce projet dans le bon sens. 
 
-💡 [Récoltez du feedback mesuré scientifiquement]
-à l'aide de questionnaires destinés à vos élèves, à vous-même pour identifier ce qui fonctionne ou pas, ce qui pourrait être amélioré, les questionnaires peuvent porter sur une séquence (une thématique ou un sujet) ou simplement sur une activité, ne vous limitez pas à des impressions pour savoir ce que pensent tous vos élèves. Des questionnaires adaptés vous attendent ici :
+🧪 [Récoltez du feedback mesuré scientifiquement](https://www.epfl.ch/education/educational-initiatives/center-learn/)
+: à l'aide de questionnaires destinés à vos élèves, à vous-même pour identifier ce qui fonctionne ou pas, ce qui pourrait être amélioré ou modifié. *Les questionnaires peuvent porter sur une séquence (une thématique ou un sujet) ou simplement sur une activité*. 
+%Ne vous limitez pas à des impressions pour savoir ce que pensent tous vos élèves.
 
 👍 [Votez pour de nouvelles améliorations](https://github.com/edunum-sec2/ressources)
 : ajoutez un +1 aux *issues* qui vous intéressent particulièrement. 
