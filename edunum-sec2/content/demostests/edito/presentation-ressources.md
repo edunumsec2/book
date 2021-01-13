@@ -1,10 +1,10 @@
 # Présentation des ressources
 
-Les ressources pour l'enseignement de la branche *Informatique* au niveau secondaire II ont été produites par le `groupe de travail DGEP, EPFL, HEP, UNIL`. Leur objectif est la mise à disposition de contenus théoriques, de séries d'exercices, et d'idées d'activités pour les enseignantes et enseignants de ladite matière. 
+Les ressources pour l'enseignement de la branche *Informatique* au niveau secondaire II ont été produites par le `groupe de travail DGEP, EPFL, HEP, UNIL` dans le cadre du projet EduNum du canton de Vaud. Leur objectif est la mise à disposition de contenus théoriques, de séries d'exercices, et d'idées d'activités pour les enseignantes et enseignants de ladite matière. 
 
 Voici une liste non-exhaustive des usages potentiels de ces ressources : 
 
-{fa}`check, text-success mr-1`**Rafraîchir vos connaissance dans les sujets du plan d'études**
+{fa}`check, text-success mr-1`**Rafraîchir vos connaissance dans les domaines du plan d'études**
 : Ces ressources ont été rédigées en accord avec le plan d'études *informatique* pour le secondaire II. 
 
 {fa}`check, text-success mr-1`**Vous inspirer du fil rouge des différents chapitres**
@@ -38,6 +38,9 @@ C'est l'objectif même du projet d'accueillir vos retours, idées d'amélioratio
 
 ✉️ [Contactez-nous pour du feedback](https://www.epfl.ch/education/educational-initiatives/center-learn/)
 : dans le but de continuer de faire évoluer ce projet dans le bon sens. 
+
+💡 [Récoltez du feedback mesuré scientifiquement]
+à l'aide de questionnaires destinés à vos élèves, à vous-même pour identifier ce qui fonctionne ou pas, ce qui pourrait être amélioré, les questionnaires peuvent porter sur une séquence (une thématique ou un sujet) ou simplement sur une activité, ne vous limitez pas à des impressions pour savoir ce que pensent tous vos élèves. Des questionnaires adaptés vous attendent ici :
 
 👍 [Votez pour de nouvelles améliorations](https://github.com/edunum-sec2/ressources)
 : ajoutez un +1 aux *issues* qui vous intéressent particulièrement. 
@@ -74,7 +77,7 @@ Ceci est une procédure simplifiée. La procédure détaillée est disponible {r
 
 Les ressources sont diffusées selon le modèle open-source, qui veut que tout utilisateur ait accès aux documents d'origine, et puisse les transformer à sa guise. Pour ce faire, un accès au dépôt Github contenant les documents sources est disponible en haut à droite de la fenêtre de navigation. 
 
-L'idée d'une **modification indépendante des ressources** est de vous approprier n'importe quel morceau de ces ressources, le remixer, en faire ce que vous voulez, et utiliser le résultat là où vous le désirez. Cette utilisation n'implique aucune interaction avec la version *originale* des ressources présentée ici. Vous êtes libre d'utiliser cette matière comme vous le souhaitez, pour peu que vous respectiez les usages de {ref}`la licence choisie <licenceduprojet>`. 
+L'idée d'une **modification indépendante des ressources** est de vous approprier n'importe quel morceau de ces ressources, le remixer, en faire ce que vous voulez, et utiliser le résultat là où vous le désirez. Cette utilisation n'implique aucune interaction avec la version *originale* des ressources présentées ici. Vous êtes libre d'utiliser cette matière comme vous le souhaitez, pour peu que vous respectiez les usages de {ref}`la licence choisie <licenceduprojet>`. 
 
 ![iconeGit](images/presentation/iconegit.png)
 
@@ -88,7 +91,7 @@ La marche à suivre pour y accéder est la suivante :
 
 ## Participation au développement
 
-Les ressources sont pensées comme un "work in progress". Elles se veulent flexibles, adaptables, et bénéficieront de tous les apports des personnes concernées. Le groupe de travail considère qu'il est important que toute enseignante ou enseignant de la matière `informatique` se sente libre de contribuer au à l'amélioration des ressources. 
+Les ressources sont pensées comme un "work in progress". Elles se veulent flexibles, adaptables, et bénéficieront de tous les apports des personnes concernées. Le groupe de travail considère qu'il est important que toute enseignante ou enseignant de la matière `informatique` se sente libre de contribuer à l'amélioration des ressources. 
 
 Pour contribuer au projet, suivre la `marche à suivre installation`.
 
