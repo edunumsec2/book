@@ -6,8 +6,6 @@
 :align: center
 `````
 
-
-
 # Accueil : Représentation de l'information
 
 *Note : ceci est un test*
@@ -31,7 +29,7 @@ Dans cette section, nous allons nous attarder sur la façon de laquelle les ordi
 :height: 500px
 :width: 350px
 ```
-À partir de 1957, elle travaille pour IBM, où elle défend l'idée qu'un programme devrait pouvoir être écrit dans un langage proche de l'anglais plutôt que d'être calqué sur le langage machine, comme l'assembleur. De cette idée naît le langage COBOL en 1959.
+**Non finalisé** À partir de 1957, elle travaille pour IBM, où elle défend l'idée qu'un programme devrait pouvoir être écrit dans un langage proche de l'anglais plutôt que d'être calqué sur le langage machine, comme l'assembleur. De cette idée naît le langage COBOL en 1959.
 ````
 
 ````{tabbed} Claude Shannon
@@ -40,7 +38,7 @@ Dans cette section, nous allons nous attarder sur la façon de laquelle les ordi
 :height: 500px
 :width: 350px
 ```
-Pendant la Seconde Guerre mondiale, Shannon travaille pour les services secrets de l'armée américaine, en cryptographie, chargé de localiser de manière automatique dans le code ennemi les parties signifiantes cachées au milieu du brouillage. Son travail est exposé dans un rapport secret (déclassifié dans les années 1980 seulement), qui donne naissance après-guerre à un article, A Mathematical Theory of Communication (1948), qui fut repris en 1949 sous forme de livre publié par l'université de l'Illinois avec les commentaires de Warren Weaver, coordonnateur (Mattelart et Mattelart, 2004) dans les services secrets. Cet ouvrage est centré autour de la problématique de la transmission du signal.
+**Non finalisé** Pendant la Seconde Guerre mondiale, Shannon travaille pour les services secrets de l'armée américaine, en cryptographie, chargé de localiser de manière automatique dans le code ennemi les parties signifiantes cachées au milieu du brouillage. 
 ````
 
 % Contenus du chapitre
