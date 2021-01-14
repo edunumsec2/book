@@ -85,7 +85,7 @@ Voici sa table de vérité:
 
 L'inverseur est représentée ainsi:
 
-![](media/or_gate.svg)
+![](media/not_gate.svg)
 
 
 ### Combinaisons de portes
@@ -124,16 +124,32 @@ La table de vérité de ce circuit est ainsi:
 | 0   | 1   | 1   |
 | 1   | 1   | 0   |
 
-TODO explication sur design de ce circuit
-
-Cette fonction de «ou exclusif» ou **XOR** est souvent utilisée, au point qu'on la représente en fait dans les diagrammes simplement par simplement ceci comme simplification du diagramme ci-dessus:
+Cette fonction de «ou exclusif», aussi appelée **XOR**, est souvent utilisée, au point qu'on la représente en fait dans les diagrammes simplement par simplement ceci comme simplification du diagramme ci-dessus:
 
 ![](media/xor_gate.svg)
+
+Mais discutons maintenant de comment on a pu créerait de zéro ce diagramme réalisant un **XOR** à avec les portes à notre disposition.
+
+On se dit donc, selon la table de vérité, que la sortie de notre circuit «ou exclusif» doit être 1 sur l'une ou l'autre des entrées $X$ et $Y$ est à 1, mais pas les deux. On peut ainsi commencer par insérer une porte **OU** dans le diagramme, qui fait une partie du travail. Mais il faut modifier sa sortie, pour ne pas avoir la valeur 1 lorsque les deux entrées sont à 1: cela contredirait la quatrième ligne de la table de vérité. Comment effectuer cela? En connectant la sortie de cette porte **OU** à une nouvelle porte **ET** à droite (dont on n'a pas encore déterminé la seconde entrée):
+
+À ce moment, on a ce diagramme partiel, qui peut être lu comme: «la sortie $Z$ sera $1$ lorsque ces deux conditions sont vraies en même temps: (1) le **OU** de $X$ et $Y$ vaut 1, et (2) quelque chose qui reste ici à définir, noté par $???$».
+
+![](media/xor_circuit_partial.svg)
+
+On a ici utilisé le fait que connecter une porte **ET** à un signal peut _restreindre_ les conditions sous lesquelles la nouvelle sortie $Z$ sera 1 (alors qu'au contraire, on aurait pu pourrait _étendre_ ces conditions si on avait connecté une nouvelle porte **OU**).
+
+Ce qui reste à définir en remplaçant la lacune «$???$», c'est l'exclusion du cas où $X$ et $Y$ valent les deux 1, de manière à ce que la condition (2) puisse être lue comme «$X$ et $Y$ ne sont pas les deux à 1». Avec une porte **ET** connectée directement aux deux entrées $X$ et $Y$, on obtient une partie de ceci en créant le signal «$X$ et $Y$ sont les deux à 1» C'est en fait la condition inverse que celle que l'on cherche! Pour l'inverser, on insère à la sortie de cette nouvelle porte **ET** un inverseur, ce qui complète le circuit:
+
+![](media/xor_circuit.svg)
+
+La lecture finale du circuit est donc «la sortie $Z$ sera $1$ lorsque ces deux conditions sont vraies en même temps: (1) le **OU** de $X$ et $Y$ vaut 1, et (2) $X$ et $Y$ ne sont pas les deux en même temps à 1».
+
+
 
 
 ## Exercice: conception d'un circuit
 
-TODO faire circuit pour porte IMPLY avec table de vérité
+Dessiner un circuit logique avec deux entrées $X$ et $Y$ et une sortie $Z$ qui réalise la fonction correspondant à la table de vérité suivante. On peut utiliser des portes **ET** et **OU** et des inverseurs. <!-- Annotez les valeurs des signaux avec 1 ou 0 pour les quatre entrées possibles comme ci-dessus. -->
 
 | $X$ | $Y$ | $Z$ |
 | :-: | :-: | :-: |
@@ -141,6 +157,17 @@ TODO faire circuit pour porte IMPLY avec table de vérité
 | 1   | 0   | 1   |
 | 0   | 1   | 0   |
 | 1   | 1   | 1   |
+
+::::{admonition,dropdown} Indice 1
+On peut lire cette fonction comme «$Z$ vaut 1 lorsque $Y$ est à 0 (les deux premières lignes de la table de vérité) ou lorsque $X$ et $Y$ sont les deux à 1 (la dernière ligne)».
+:::{admonition,dropdown} Indice 2
+$Z$ est donc le **OU** de l'inverse de $Y$ et du **ET** de $X$ et $Y$.
+:::
+::::
+
+:::{admonition,dropdown} Corrigé
+![](media/imply_circuit.svg)
+:::
 
 
 ## De la logique à l'arithmétique

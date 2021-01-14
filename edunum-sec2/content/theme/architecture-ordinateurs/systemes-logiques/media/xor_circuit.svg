@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="402.5 382.97586 359.276 101.02414" width="359.276" height="101.02414">
+<svg version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="401.7426 382.97586 360.04775 101.02414" width="360.04775" height="101.02414">
   <defs>
-    <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+    <font-face font-family="CMU Serif" font-size="16" panose-1="2 0 6 3 0 0 0 0 0 0" units-per-em="1000" underline-position="-125" underline-thickness="49.80469" slope="-877.5005" x-height="441.89453" cap-height="693.84766" ascent="930.1758" descent="-373.53516" font-style="italic" font-weight="400">
       <font-face-src>
-        <font-face-name name="HelveticaNeue"/>
+        <font-face-name name="CMUSerif-Italic"/>
       </font-face-src>
     </font-face>
   </defs>
-  <metadata> Produced by OmniGraffle 7.18.1\n2021-01-06 16:14:08 +0000</metadata>
-  <g id="Canvas_1" stroke-opacity="1" fill-opacity="1" fill="none" stroke="none" stroke-dasharray="none">
+  <metadata> Produced by OmniGraffle 7.18.1\n2021-01-14 13:58:05 +0000</metadata>
+  <g id="Canvas_1" stroke-opacity="1" stroke="none" stroke-dasharray="none" fill-opacity="1" fill="none">
     <title>Canvas 1</title>
     <g id="Canvas_1_Layer_1">
       <title>Layer 1</title>
@@ -48,18 +48,18 @@
         </g>
       </g>
       <g id="Graphic_46">
-        <text transform="translate(407.796 414.5)" fill="black">
-          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="8295586e-19" y="15">X</tspan>
+        <text transform="translate(406.7426 414.5)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="15">X</tspan>
         </text>
       </g>
       <g id="Graphic_47">
-        <text transform="translate(407.5 436.552)" fill="black">
-          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="0" y="15">Y</tspan>
+        <text transform="translate(406.7426 436.552)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="15">Y</tspan>
         </text>
       </g>
       <g id="Graphic_48">
-        <text transform="translate(747 403.776)" fill="black">
-          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="8295586e-19" y="15">Z</tspan>
+        <text transform="translate(746.9857 402.49866)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="15">Z</tspan>
         </text>
       </g>
       <g id="Group_49">
@@ -91,16 +91,16 @@
         </g>
       </g>
       <g id="Line_61">
-        <path d="M 422.572 423.724 L 439.1923 423.724 L 439.1923 394 L 497 394" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path d="M 423.6254 425 L 439.1923 425 L 439.1923 394 L 497 394" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
       <g id="Line_62">
         <path d="M 439.1923 400.9063 L 439.1923 411.9063 L 439.00534 452.9892 L 486 453 L 497 453" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
       <g id="Line_63">
-        <path d="M 422.868 445.776 L 432.53817 445.776 C 432.53817 439.276 445.53817 439.276 445.53817 445.776 L 470.03906 445.776 L 470.03906 414 L 497 414" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path d="M 423.6254 447.052 L 432.53236 447.052 C 432.53236 440.552 445.53236 440.552 445.53236 447.052 L 470.03906 447.052 L 470.03906 414 L 497 414" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
       <g id="Line_64">
-        <path d="M 470.03906 444.5 L 470.03906 446.49634 C 476.53906 446.49634 476.53906 459.49634 470.03906 459.49634 L 470.03906 472.91116 L 471.10966 472.91116 L 486 473 L 497 473" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path d="M 471.0952 445.776 L 471.0952 446.4966 C 477.5952 446.49536 477.59764 459.49536 471.09764 459.4966 L 471.10966 472.91116 L 486 473 L 497 473" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
       <g id="Line_65">
         <line x1="557" y1="463" x2="580.5" y2="463" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -109,7 +109,7 @@
         <path d="M 557 403.97586 L 568 403.97586 L 650 403 L 661 403" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
       <g id="Line_67">
-        <path d="M 721 412.64045 L 721 413 L 742 413" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path d="M 721 412.64045 L 721 412.99866 L 741.9857 412.99866" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
       <g id="Line_68">
         <path d="M 640.5 463 L 640.5 452 L 640.3079 422.5605 L 650 423 L 661 423" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>

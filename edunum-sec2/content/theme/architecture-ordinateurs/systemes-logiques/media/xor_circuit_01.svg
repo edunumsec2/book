@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="375.404 573.5605 413.764 217.82569" width="413.764" height="217.82569">
+<svg version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="372.50362 664.0618 418.5257 129.8764" width="418.5257" height="129.8764">
   <defs>
-    <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+    <font-face font-family="CMU Serif" font-size="16" panose-1="2 0 6 3 0 0 0 0 0 0" units-per-em="1000" underline-position="-125" underline-thickness="49.80469" slope="-877.5005" x-height="441.89453" cap-height="693.84766" ascent="930.1758" descent="-373.53516" font-style="italic" font-weight="400">
       <font-face-src>
-        <font-face-name name="HelveticaNeue"/>
+        <font-face-name name="CMUSerif-Italic"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="CMU Serif" font-size="16" panose-1="2 0 6 3 0 0 0 0 0 0" units-per-em="1000" underline-position="-125" underline-thickness="49.80469" slope="0" x-height="439.4531" cap-height="693.84766" ascent="935.0586" descent="-372.5586" font-weight="500">
+      <font-face-src>
+        <font-face-name name="CMUSerif-Roman"/>
       </font-face-src>
     </font-face>
   </defs>
-  <metadata> Produced by OmniGraffle 7.18.1\n2021-01-06 16:20:22 +0000</metadata>
-  <g id="Canvas_1" stroke-opacity="1" fill-opacity="1" fill="none" stroke="none" stroke-dasharray="none">
+  <metadata> Produced by OmniGraffle 7.18.1\n2021-01-14 13:58:05 +0000</metadata>
+  <g id="Canvas_1" stroke-opacity="1" stroke="none" stroke-dasharray="none" fill-opacity="1" fill="none">
     <title>Canvas 1</title>
     <g id="Canvas_1_Layer_1">
       <title>Layer 1</title>
@@ -48,18 +53,21 @@
         </g>
       </g>
       <g id="Graphic_123">
-        <text transform="translate(380.404 708.5)" fill="black">
-          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="7425172e-19" y="15">X = 1</tspan>
+        <text transform="translate(377.50362 708.5)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="15">X</tspan>
+          <tspan font-family="CMU Serif" font-size="16" font-weight="500" fill="black" y="15"> = 1</tspan>
         </text>
       </g>
       <g id="Graphic_124">
-        <text transform="translate(380.404 730.5)" fill="black">
-          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="0" y="15">Y = 0</tspan>
+        <text transform="translate(377.79962 730.5)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="15">Y</tspan>
+          <tspan font-family="CMU Serif" font-size="16" font-weight="500" fill="black" y="15"> = 0</tspan>
         </text>
       </g>
       <g id="Graphic_125">
-        <text transform="translate(747 697.776)" fill="black">
-          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="7425172e-19" y="15">Z = 1</tspan>
+        <text transform="translate(745.1387 696.4987)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="15">Z</tspan>
+          <tspan font-family="CMU Serif" font-size="16" font-weight="500" fill="black" y="15"> = 1</tspan>
         </text>
       </g>
       <g id="Group_126">
@@ -91,13 +99,13 @@
         </g>
       </g>
       <g id="Line_136">
-        <path d="M 422.572 717.724 L 439.1923 717.724 L 439.1923 688 L 497 688" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path d="M 425.4724 719 L 439.1923 719 L 439.1923 688 L 497 688" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
       <g id="Line_137">
         <path d="M 439.1923 694.9063 L 439.1923 705.9063 L 439.00534 746.9892 L 486 747 L 497 747" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
       <g id="Line_138">
-        <path d="M 423.164 739.724 L 432.5384 739.724 C 432.5384 733.224 445.5384 733.224 445.5384 739.724 L 470.03906 739.724 L 470.03906 708 L 497 708" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path d="M 425.7684 741 L 432.5326 741 C 432.5326 734.5 445.5326 734.5 445.5326 741 L 470.03906 741 L 470.03906 708 L 497 708" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
       <g id="Line_139">
         <path d="M 470.03906 738.5 L 470.03906 740.4963 C 476.53906 740.4963 476.53906 753.4963 470.03906 753.4963 L 470.03906 766.9112 L 471.10966 766.9112 L 486 767 L 497 767" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -109,54 +117,54 @@
         <path d="M 557 697.9759 L 568 697.9759 L 650 697 L 661 697" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
       <g id="Line_142">
-        <path d="M 721 706.64045 L 721 707 L 742 707" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path d="M 721 706.64045 L 721 706.9987 L 740.1387 706.9987" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
       <g id="Line_143">
         <path d="M 640.5 757 L 640.5 746 L 640.3079 716.5605 L 650 717 L 661 717" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
       <g id="Graphic_144">
-        <text transform="translate(493.5618 669.0618)" fill="black">
-          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="31974423e-20" y="15">1</tspan>
+        <text transform="translate(494.0098 669.0618)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-weight="500" fill="black" x="0" y="15">1</tspan>
         </text>
       </g>
       <g id="Graphic_145">
-        <text transform="translate(493.5618 707.9382)" fill="black">
-          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="31974423e-20" y="15">0</tspan>
+        <text transform="translate(494.0098 707.9382)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-weight="500" fill="black" x="0" y="15">0</tspan>
         </text>
       </g>
       <g id="Graphic_146">
-        <text transform="translate(551.191 678.7472)" fill="black">
-          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="31974423e-20" y="15">1</tspan>
+        <text transform="translate(551.639 678.7472)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-weight="500" fill="black" x="0" y="15">1</tspan>
         </text>
       </g>
       <g id="Graphic_147">
-        <text transform="translate(493.5618 767.9382)" fill="black">
-          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="31974423e-20" y="15">0</tspan>
+        <text transform="translate(494.0098 767.9382)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-weight="500" fill="black" x="0" y="15">0</tspan>
         </text>
       </g>
       <g id="Graphic_148">
-        <text transform="translate(493 729.3764)" fill="black">
-          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="31974423e-20" y="15">1</tspan>
+        <text transform="translate(493.448 728.5567)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-weight="500" fill="black" x="0" y="15">1</tspan>
         </text>
       </g>
       <g id="Graphic_149">
-        <text transform="translate(551.191 739.5)" fill="black">
-          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="31974423e-20" y="15">0</tspan>
+        <text transform="translate(551.639 738.6803)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-weight="500" fill="black" x="0" y="15">0</tspan>
         </text>
       </g>
       <g id="Graphic_150">
-        <text transform="translate(647.104 730.5)" fill="black">
-          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="31974423e-20" y="15">1</tspan>
+        <text transform="translate(647.552 730.5)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-weight="500" fill="black" x="0" y="15">1</tspan>
         </text>
       </g>
       <g id="Graphic_151">
-        <text transform="translate(658 678.7472)" fill="black">
-          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="31974423e-20" y="15">1</tspan>
+        <text transform="translate(658.448 678.7472)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-weight="500" fill="black" x="0" y="15">1</tspan>
         </text>
       </g>
       <g id="Graphic_152">
-        <text transform="translate(715 688.776)" fill="black">
-          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="31974423e-20" y="15">1</tspan>
+        <text transform="translate(715.448 688.776)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-weight="500" fill="black" x="0" y="15">1</tspan>
         </text>
       </g>
     </g>
