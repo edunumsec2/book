@@ -67,7 +67,7 @@
 
 ::::{admonition,dropdown} Architecture d'Internet
 * Musiani, Francesca. *Nains sans géants. Architecture décentralisée et services Internet*. Presses des Mines, 2015.
-* Le Crosnier, H. et V. Schafer (dir.). *La neutralité de l’internet : Un enjeu de communication*. CNRS Éditions, 2019. 
+* Le Crosnier, Hervé et Schafer, Valérie (dir.). *La neutralité de l’internet : Un enjeu de communication*. CNRS Éditions, 2019. 
 ::::
 
 ::::{admonition,dropdown} Histoire et enjeux globaux d’Internet
@@ -90,7 +90,7 @@
 ::::{admonition,dropdown} Citoyenneté et gouvernance
 * Benayoun, Yaëlle & Régénauld, Irénée. *Technologies partout, démocratie nulle part*. FYP éditions, 2020.
 * Cardon, Dominique. *La démocratie Internet*. Seuil, 2010.
-* Rouvroy, Antoinette et Berns, Thomas, [« Gouvernementalité algorithmique et perspectives d’émancipation »](https://www.cairn.info/revue-reseaux-2013-1-page-163.htm). *Réseaux*, 177, 1, pp 163–196, 2
+* Rouvroy, Antoinette et Berns, Thomas, [« Gouvernementalité algorithmique et perspectives d’émancipation »](https://www.cairn.info/revue-reseaux-2013-1-page-163.htm). *Réseaux*, 177, 1, pp 163–196, 2, 2013.
 ::::
 
 ::::{admonition,dropdown} Genre et numérique
