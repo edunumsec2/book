@@ -34,7 +34,7 @@ html:
   use_issues_button: true
   use_repository_button: true
   home_page_in_navbar: false
-  extra_navbar:
+  extra_navbar: ""
   extra_footer: |
     <p>
     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
