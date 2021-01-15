@@ -9,6 +9,9 @@
     sections: 
       - file: content/demostests/edito/modificationsressources
       - file: content/demostests/edito/participation-developpement
+      - file: content/demostests/edito/exempleutilisation
+      - file: content/demostests/edito/syntaxemyst
+
     
 
 - part: Première année
@@ -82,13 +85,11 @@
   numbered: false
   chapters:
   - file: content/demostests/glossaire
-  - file: content/demostests/edito/syntaxemyst
   - file: content/demostests/edito/liens
   - file: content/demostests/edito/referencesart
   - file: content/demostests/edito/testaccueilrepinfo
   - file: content/demostests/edito/testintrorepinfo
   - file: content/demostests/edito/testperso
-  - file: content/demostests/edito/exempleutilisation
   - file: content/demostests/edito/bugs
 
 # Ajout d'une partie pour les enjeux sociaux

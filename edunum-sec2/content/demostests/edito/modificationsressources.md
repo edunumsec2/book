@@ -1,13 +1,13 @@
 (modificationindependante)=
 ## Modification indépendante des ressources
 
-````{panels}
+<!-- ````{panels}
 :column: col-lg-12 p-3
 ⚠️ Attention
 ^^^^
 Ceci est une procédure simplifiée. La procédure détaillée est disponible {ref}`ici <ajouter référence>` (réf à ajouter). 
 ````
-
+ -->
 Les ressources sont diffusées selon le modèle open-source, qui veut que tout utilisateur ait accès aux documents d'origine, et puisse les transformer à sa guise. Pour ce faire, un accès au dépôt Github contenant les documents sources est disponible en haut à droite de la fenêtre de navigation. 
 
 L'idée d'une **modification indépendante des ressources** est de vous approprier n'importe quel morceau de ces ressources, le remixer, en faire ce que vous voulez, et utiliser le résultat là où vous le désirez. Cette utilisation n'implique aucune interaction avec la version *originale* des ressources présentées ici. Vous êtes libre d'utiliser cette matière comme vous le souhaitez, pour peu que vous respectiez les usages de {ref}`la licence choisie <licenceduprojet>`. 
