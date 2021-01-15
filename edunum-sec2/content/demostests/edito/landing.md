@@ -6,4 +6,4 @@ Bienvenue dans les <span style="color:red">ressources</span> pour <span style="c
 
 Elles ont été conçues pour vous <span style="color:blue">accompagner</span> dans votre enseignement. Une version <span style="color:orange">élève</span> existe également, disponible ici. 
 
-{ref}`Accédez à la présentation des ressources <presentationressources>`.
+{ref}`Accéder à la présentation des ressources <presentationressources>`.
