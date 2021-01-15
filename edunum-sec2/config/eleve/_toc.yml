@@ -1,6 +1,11 @@
 # Table of content
 #
-- file: content/demostests/edito/presentation-ressources
+- file: content/demostests/edito/landing
+
+- part: Introduction
+  numbered: false
+  chapters:
+  - file: content/demostests/edito/presentation-ressources
 
 - part: Première année
   numbered: false
