@@ -6,6 +6,10 @@
   numbered: false
   chapters:
   - file: content/demostests/edito/presentation-ressources
+    sections: 
+      - file: content/demostests/edito/modificationsressources
+      - file: content/demostests/edito/participation-developpement
+    
 
 - part: Première année
   numbered: false
@@ -85,6 +89,7 @@
   - file: content/demostests/edito/testintrorepinfo
   - file: content/demostests/edito/testperso
   - file: content/demostests/edito/exempleutilisation
+  - file: content/demostests/edito/bugs
 
 # Ajout d'une partie pour les enjeux sociaux
 

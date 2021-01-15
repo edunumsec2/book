@@ -68,7 +68,7 @@ Les ressources sont découpées selon un chapitrage qui correspond au plan d'ét
 🔵 [Architecture des ordinateurs](content/theme/architecture-ordinateurs)
 : Il est question ici de notions telles que `les portes logiques`, `les transistors`, `l'architecture de Von Neumann`, et autres concepts essentiels à la compréhension de ce qui se passe au niveau physique et électronique dans un ordinateur.
 
-(modificationindependante)=
+<!-- (modificationindependante)=
 ## Modification indépendante des ressources
 
 ````{panels}
@@ -92,9 +92,9 @@ La marche à suivre pour y accéder est la suivante :
 4. [Créer une branche](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository#:~:text=Further%20reading-,Creating%20a%20branch,main%20page%20of%20the%20repository.&text=Click%20the%20branch%20selector%20menu,branch%2C%20then%20select%20Create%20branch), pour manipuler les fichiers, si besoin. 
 5. Ouvrir un document qui nous intéresse, par exemple dans le chapitre `introduction à l'algorithmique`, avec un éditeur de Markdown. Bien qu'il en existe plusieurs, nous recommandons d'utiliser directement [Visual Studio Code](https://code.visualstudio.com/). Les fichiers sources sont rédigés en [Markdown](https://www.markdownguide.org/), avec une extension de syntaxe particulière pour bénéficier d'options intéressante lors de la génération de l'HTML, nommée [MyST](https://myst-parser.readthedocs.io/en/latest/). 
 6. Transformer les documents à souhait. Les imprimer pour les utiliser comme supports de cours physiques, ou alors en faire un nouveau [jupyter{book}](https://jupyterbook.org/intro.html), selon la {ref}`procédure suivante <marcheasuivreinstallation>`. 
-7. Créditer, selon la licence CC décrite ci-dessus, les éventuelles publications issues de la transformation des fichiers sources. 
+7. Créditer, selon la licence CC décrite ci-dessus, les éventuelles publications issues de la transformation des fichiers sources.  -->
 
-(participationdeveloppement)=
+<!-- (participationdeveloppement)=
 ## Participation au développement
 
 Les ressources sont pensées comme un "work in progress". Elles se veulent flexibles, adaptables, et bénéficieront de tous les apports des personnes concernées. Le groupe de travail considère qu'il est important que toute enseignante ou enseignant de la matière `informatique` se sente libre de contribuer à l'amélioration des ressources. 
@@ -199,7 +199,8 @@ cd <dossier-du-checkout>/edunum-sec2/config/maitre
 
 #puis:
 jupyter-book clean .
-```
+``` -->
+
 (licenceduprojet)=
 ## Licence du projet
 
@@ -240,3 +241,8 @@ La version de MyST utilisée dans ce projet est celle qui a été adaptée pour 
 Les ressources sont affichées sous la forme du site statique ici-présent par l'intermédiaire des scripts ayant été développés dans le cadre du projet [jupyter{book}](https://jupyterbook.org/intro.html). 
 
 [jupyter{book}](https://jupyterbook.org/intro.html) est un projet open-source initialement prévu pour créer un site html statique à partir d'une collection de [notebooks jupyter](https://jupyter.org/). Les avantages de cette solution sont multiples, mais en particulier elle offre la possibilité de présenter sur un site html statique des cellules de code exécutables. 
+
+<!-- # C'est parti ! 
+
+````{image} images/presentation/code.gif
+```` -->
