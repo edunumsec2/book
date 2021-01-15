@@ -1,6 +1,7 @@
+(presentationressources)=
 # Présentation des ressources
 
-Les ressources pour l'enseignement de la branche *Informatique* au niveau secondaire II ont été produites par le `groupe de travail DGEP, EPFL, HEP, UNIL`, dans le cadre du projet **EduNum** du canton de Vaud. Leur objectif est la mise à disposition de contenus théoriques, de séries d'exercices, et d'idées d'activités pour les enseignantes et enseignants de ladite matière. 
+Les ressources pour l'enseignement de la branche *Informatique* au niveau secondaire II ont été produites par le `groupe de travail DGEP, EPFL, HEP, UNIL`, dans le cadre du projet **EduNum** du canton de Vaud. Leur objectif est la mise à disposition de contenus théoriques, de séries d'exercices, et d'idées d'activités pour les enseignantes et enseignants de ladite matière au Gymnase. 
 
 Voici une liste non-exhaustive des usages potentiels de ces ressources : 
 
@@ -67,6 +68,7 @@ Les ressources sont découpées selon un chapitrage qui correspond au plan d'ét
 🔵 [Architecture des ordinateurs](content/theme/architecture-ordinateurs)
 : Il est question ici de notions telles que `les portes logiques`, `les transistors`, `l'architecture de Von Neumann`, et autres concepts essentiels à la compréhension de ce qui se passe au niveau physique et électronique dans un ordinateur.
 
+(modificationindependante)=
 ## Modification indépendante des ressources
 
 ````{panels}
@@ -87,15 +89,19 @@ La marche à suivre pour y accéder est la suivante :
 1. Créer un compte Github ou se connecter à un compte déjà existant. 
 2. Ouvrir le dépôt [edunum-sec2](https://github.com/edunum-sec2/ressources).
 3. Cloner le dépôt selon la [marche à suivre Github](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository). 
-4. [Créer une branche](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository#:~:text=Further%20reading-,Creating%20a%20branch,main%20page%20of%20the%20repository.&text=Click%20the%20branch%20selector%20menu,branch%2C%20then%20select%20Create%20branch.)  pour manipuler les fichiers, si besoin. 
-5. Créditer, selon la licence CC décrite ci-dessus, les éventuelles publications issues de la transformation des fichiers sources. 
+4. [Créer une branche](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository#:~:text=Further%20reading-,Creating%20a%20branch,main%20page%20of%20the%20repository.&text=Click%20the%20branch%20selector%20menu,branch%2C%20then%20select%20Create%20branch), pour manipuler les fichiers, si besoin. 
+5. Ouvrir un document qui nous intéresse, par exemple dans le chapitre `introduction à l'algorithmique`, avec un éditeur de Markdown. Bien qu'il en existe plusieurs, nous recommandons d'utiliser directement [Visual Studio Code](https://code.visualstudio.com/). Les fichiers sources sont rédigés en [Markdown](https://www.markdownguide.org/), avec une extension de syntaxe particulière pour bénéficier d'options intéressante lors de la génération de l'HTML, nommée [MyST](https://myst-parser.readthedocs.io/en/latest/). 
+6. Transformer les documents à souhait. Les imprimer pour les utiliser comme supports de cours physiques, ou alors en faire un nouveau [jupyter{book}](https://jupyterbook.org/intro.html), selon la {ref}`procédure suivante <marcheasuivreinstallation>`. 
+7. Créditer, selon la licence CC décrite ci-dessus, les éventuelles publications issues de la transformation des fichiers sources. 
 
+(participationdeveloppement)=
 ## Participation au développement
 
 Les ressources sont pensées comme un "work in progress". Elles se veulent flexibles, adaptables, et bénéficieront de tous les apports des personnes concernées. Le groupe de travail considère qu'il est important que toute enseignante ou enseignant de la matière `informatique` se sente libre de contribuer à l'amélioration des ressources. 
 
-Pour contribuer au projet, suivre la `marche à suivre installation`.
+Pour contribuer au projet, suivre la {ref}`marche à suivre installation <marcheasuivreinstallation>`.
 
+(marcheasuivreinstallation)=
 ## Marche à suivre installation
 
 ### Environnement Github, jupyter{book}, Visual Studio Code
