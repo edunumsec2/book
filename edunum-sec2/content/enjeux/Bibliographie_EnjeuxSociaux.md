@@ -1,3 +1,89 @@
+
+
+<!-- Test de mise en page -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+.button {
+  background-color: white;
+  border: 1px solid;
+  border-color: black;
+  font-family:"Helvetica";
+  font-weight:300;
+  color: black!important;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button:hover {
+  text-decoration:none;
+  background-color: black; 
+  color: white!important;
+}
+h1 {
+    margin-top: 0;
+    font-size: 35px;
+    font-family: "Helvetica";
+    font-weight: 400;
+    text-align: left;
+}
+h2 {
+    margin-top: 0;
+    font-size: 28px;
+    font-family: "Helvetica";
+    text-align: left;
+    font-weight: 400;
+    }
+h3 {
+    margin-top: 0;
+    font-size: 20px;
+    font-family: "Helvetica";
+    text-align: left;
+    font-weight: 400;
+    }
+p {
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 16px;
+    font-family: "Helvetica";
+    text-align: left;
+    font-weight: 300;
+    line-height:1.5
+    }
+strong {
+    font-weight: 700;
+}
+ul {
+  margin-bottom:20px;
+  padding-left:20px;
+}
+ol {
+  margin-bottom: 20px;
+  padding-left:15px;
+}
+.boxed {
+  border: 1px solid;$
+  border-color:rgb(96, 105, 219);
+  padding: 10px;
+  } 
+.sidebar {
+    font-family: "Helvetica";
+    text-align: justify;
+}
+
+</style>
+</head>
+</html>
+
+
+
+
  ## Bibliographie et références
 <br>
 <br>
