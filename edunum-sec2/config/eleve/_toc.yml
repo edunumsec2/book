@@ -79,7 +79,13 @@
 - part: Enjeux sociaux
   numbered: false
   chapters:
-  - file: content/enjeux/Bibliographie_EnjeuxSociaux
+  - file: content/enjeux/grandes-thematiques/grandes-thematiques
+    sections:
+    - file: content/enjeux/grandes-thematiques/economie-numerique/economie-numerique
+  - file: content/enjeux/fiches-complementaires/fiches-complementaires
+    sections:
+    - file: content/enjeux/fiches-complementaires/digital-labor/digital-labor
+  - file: content/enjeux/bibliographie
 
 - part: Démos et divers
   numbered: false
