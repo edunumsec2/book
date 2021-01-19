@@ -1,5 +1,5 @@
 
-function ready() {
+function questions_ready() {
   var questions = document.getElementsByClassName("question");
   for (const question of questions) {
     var is_mono = true;
@@ -75,4 +75,4 @@ function mono_click_listener(answers) {
   };
 }
 
-document.addEventListener("DOMContentLoaded", ready, false);
+document.addEventListener("DOMContentLoaded", questions_ready, false);

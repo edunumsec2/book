@@ -1,0 +1,9 @@
+
+select.incorrect_selected {
+  background-color: red;
+}
+
+select.correct_selected {
+  text-decoration: underline;
+  text-decoration-color: green;
+}

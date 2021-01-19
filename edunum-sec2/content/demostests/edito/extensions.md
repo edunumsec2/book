@@ -8,7 +8,7 @@ Les sources sont situées dans le dossier `config/extensions/`.
 ## Questions à choix multiples
 
 Il est possible d'intégrer des questions à choix multiples au fil des pages via la directive `question`.
-Dans le corps de la directive, les bonnes et mauvaises réponses sont indiquées via les roles `{v}` et `{f}` pour *vrai* et *faux*.
+Dans le corps de la directive, les bonnes et mauvaises réponses sont indiquées via les rôles `{v}` et `{f}` pour *vrai* et *faux*.
 
 `````{tabbed} Aperçu
 
@@ -85,4 +85,20 @@ Parmis les personnes suivantes, laquelle ou lesquelles sont à l'origine du Web 
 * {v}`Tim Berners-Lee`
 ```
 ````
+`````
+
+## Blancs
+
+Pour ajouter des *blancs* dans le texte, il suffit d'utiliser le rôle `bl`.
+Dans le texte du rôle, les différentes options de réponses sont séparées par un caractère `|`.
+Une réponse valable est précédée d'un caractère `>`.
+
+`````{tabbed} Aperçu
+Dans le texte suivant, certains {bl}`>mots|trucs|machins` sont laissés {bl}`pour compte|>blancs|verts|seuls`.
+`````
+
+`````{tabbed} Code
+```{code-block} markdown
+Dans le texte suivant, certains {bl}`>mots|trucs|machins` sont laissés {bl}`pour compte|>blancs|verts|seuls`.
+```
 `````

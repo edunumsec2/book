@@ -55,6 +55,7 @@ sphinx:
     html_favicon: favicon.ico
   local_extensions:
     questions: ../extensions/
+    blanks: ../extensions/
 
 #######################################################################################
 # Interact link settings
