@@ -33,20 +33,22 @@ function create_reaction(type, text, emoticon) {
     emoticon = random_element(reaction_emoticons[type]);
   }
 
+  var container = document.createElement("div");
+  $(container).addClass("reaction");
+  $(container).addClass(type);
   var elem = document.createElement("div");
-  $(elem).addClass("reaction");
-  $(elem).addClass(type);
   $(elem).append('<span class="emoticon">' + emoticon + '</span>');
   $(elem).append(text);
-  $(".reactions").prepend(elem);
-  $(elem).animate({opacity: "1"}, 250, "linear");
-  setTimeout(hide_reaction(elem), 1500);
+  $(container).prepend(elem);
+  $(".reactions").prepend(container);
+  $(container).animate({opacity: "1"}, 250, "linear");
+  setTimeout(hide_reaction(container), 1500);
 }
 
-function hide_reaction(elem) {
+function hide_reaction(container) {
   return function() {
-    $(elem).animate({marginTop: "200px", opacity: "0"}, 750, "linear", function() {
-      $(elem).remove();
+    $(container).animate({marginTop: "200px", opacity: "0"}, 750, "linear", function() {
+      $(container).remove();
     });
   };
 }
