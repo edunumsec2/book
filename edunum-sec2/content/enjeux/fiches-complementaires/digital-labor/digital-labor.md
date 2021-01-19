@@ -149,7 +149,7 @@ De nouvelles formes d’activités sont ainsi apparues, souvent en dehors des ca
 <br>
 <br>
 
-La notion de digital labor témoigne, de façon plus générale, d’une nouvelle manière de penser le Web social. Jusqu’à la fin des années 1990, dans le champ de la sociologie, le réseau était avant tout envisagé comme un espace permettant l’échange d’informations, la mise en relation d’individus, la création de communautés en ligne dans un esprit participatif non-marchand (👉 voir fiche «Histoire d’Internet et du Web»). Les interactions semblaient guidées par des principes de collaboration, de partage et de don. Les observateurs de ces pratiques dressaient donc un tableau élogieux du Web.
+La notion de *digital labor* témoigne, de façon plus générale, d’une nouvelle manière de penser le Web social. Jusqu’à la fin des années 1990, dans le champ de la sociologie, le réseau était avant tout envisagé comme un espace permettant l’échange d’informations, la mise en relation d’individus, la création de communautés en ligne dans un esprit participatif non-marchand (👉 *voir fiche «Histoire d’Internet et du Web»*). Les interactions semblaient guidées par des principes de collaboration, de partage et de don. Les observateurs de ces pratiques dressaient donc un tableau élogieux du Web.
 
 Mais au milieu des années 2000, avec l’arrivée des plateformes, le regard porté sur le Web s’est transformé. La recherche s’est attachée à souligner la transformation du réseau en espace marchand, dominé par quelques acteurs centraux. Les travaux autour du digital labor s’inscrivent dans cette perspective critiqu
 
@@ -184,7 +184,7 @@ Mais au milieu des années 2000, avec l’arrivée des plateformes, le regard po
 
   <div class="w3-show-inline-block">
   <div class="w3-bar">
-    <a href="#" class="button"> Économie du numérique</a>
+    <a href=economie-numerique.md class="button">Économie du numérique</a>
   </div>
   </div>
 </div>
