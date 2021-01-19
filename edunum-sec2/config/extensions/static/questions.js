@@ -49,7 +49,12 @@ function check_listener(correct_boxes, incorrect_boxes) {
         correct = false
       }
     }
-    alert(correct ? "Bravo!" : "Oups!");
+    if (correct) {
+      create_reaction("Bravo !", "good");
+    }
+    else {
+      create_reaction("Oups !", "bad");
+    }
   };
 }
 

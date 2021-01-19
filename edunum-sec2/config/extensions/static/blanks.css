@@ -1,6 +1,7 @@
 
 select.incorrect_selected {
-  background-color: red;
+  color: white;
+  background-color: rgb(167, 27, 27);
 }
 
 select.correct_selected {

@@ -9,16 +9,18 @@ function blanks_ready() {
       var jqObj = $(blank);
       switch (option.value) {
         case '1': // Correct.
-          jqObj.addClass('correct_selected')
-          jqObj.removeClass('incorrect_selected')
+          jqObj.addClass('correct_selected');
+          jqObj.removeClass('incorrect_selected');
+          create_reaction("Super !", "good");
           break;
         case '0': // Incorrect.
-          jqObj.removeClass('correct_selected')
-          jqObj.addClass('incorrect_selected')
+          jqObj.removeClass('correct_selected');
+          jqObj.addClass('incorrect_selected');
+          create_reaction("Non...", "bad");
           break;
         default: // Blank.
-          jqObj.removeClass('correct_selected')
-          jqObj.removeClass('incorrect_selected')
+          jqObj.removeClass('correct_selected');
+          jqObj.removeClass('incorrect_selected');
       }
     });
   }
