@@ -11,12 +11,12 @@ function blanks_ready() {
         case '1': // Correct.
           jqObj.addClass('correct_selected');
           jqObj.removeClass('incorrect_selected');
-          create_reaction("Super !", "good");
+          create_reaction("good");
           break;
         case '0': // Incorrect.
           jqObj.removeClass('correct_selected');
           jqObj.addClass('incorrect_selected');
-          create_reaction("Non...", "bad");
+          create_reaction("bad");
           break;
         default: // Blank.
           jqObj.removeClass('correct_selected');

@@ -4,9 +4,12 @@
   bottom: 0px;
   height: 200px;
   right: 50px;
+  text-align: right;
+  direction: rtl;
 }
 
 .reaction {
+  display: table;
   opacity: 0;
   padding: 5px;
   padding-right: 15px;
@@ -14,6 +17,7 @@
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin-top: 10px;
+  direction: ltr;
 }
 
 .reaction.good {
@@ -21,17 +25,11 @@
   color: white;
 }
 
-.reaction.good::before {
-  content: "\1F603";
-  margin-right: 10px;
-}
-
 .reaction.bad {
   background-color: rgb(167, 27, 27);
   color:white;
 }
 
-.reaction.bad::before {
-  content: "\1F975";
+.reaction .emoticon {
   margin-right: 10px;
 }

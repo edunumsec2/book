@@ -50,10 +50,10 @@ function check_listener(correct_boxes, incorrect_boxes) {
       }
     }
     if (correct) {
-      create_reaction("Bravo !", "good");
+      create_reaction("good");
     }
     else {
-      create_reaction("Oups !", "bad");
+      create_reaction("bad");
     }
   };
 }
