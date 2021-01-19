@@ -363,7 +363,7 @@ b) Pourquoi modèle économique de Uber Eats n’est-il pas soutenable pour les 
 Les sommes versées pour les courses ne permettent pas d’obtenir un salaire décent. L’un des coursier parle d’environ 400 Euros pour 60h de disponibilité par semaine, avant déductions (le salaire minimum est d’environ 1200 Euros). Les livreurs ne sont payés que lorsqu’ils effectuent une course, le temps d’attente n’est pas comptabilisé. Tous les frais (vélo, sacs, habits) sont à leur charge et ils ne disposent d’aucune prestations sociales (assurance accident, cotisations retraite, etc..). Par ailleurs, les exigences de la plateforme sont de plus en plus difficiles à remplir, comme le montre le témoignage d’un livreur qui a troqué son vélo contre un scooter plus rapide.
    ::::
 
-**Activité complémentaire** :  Faire lire un article du journal Le Temps consacré à la décision du Canton de Genève d'imposer à Uber Eats de salarier ses liveurs. Poser les questions suivantes:
+**Activité complémentaire** :  Faire lire [un article](https://www.letemps.ch/economie/geneve-uber-eats-desormais-recourir-employes) du journal Le Temps consacré à la décision du Canton de Genève d'imposer à Uber Eats de salarier ses liveurs. Poser les questions suivantes:
 
    - *A compléter*
 
