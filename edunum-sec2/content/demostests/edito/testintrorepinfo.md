@@ -148,13 +148,18 @@ La réponse à cette question est l'apport le plus essentiel de l'introduction d
 :width: 350px
 ````
 
-`````{admonition} Questions ?
-1. À votre avis, pourquoi la lettre "e" est-elle représentée par un seul point ? 
-2. Pourquoi les signaux utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet ?
+```{question} Question
+Pourquoi la lettre "e" est-elle représentée par un seul point ? 
+* {v}`Parce que c'est la lettre la plus utilisée en anglais.`
+* {f}`Par hasard.`
+* {f}`Parce que c'est la lettre la plus rare en anglais.`
+* {f}`Parce que c'était la lettre préférée de l'inventeur du Morse.`
+```
 
+`````{admonition} Note
+Si vous observez le code Morse, vous remarquerez que les signaux utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet. 
 ````{toggle} 
-1. Parce que c'est la lettre la plus utilisée, en anglais. C'est donc logique d'utiliser le symbole le plus *rapide* pour la transmettre. 
-2. Ceci est une extension de la réponse précédente, puisqu'il est logique de coder les lettres les plus fréquentes avec les signaux les plus courts. 
+Ceci est une extension de la réponse à la question ci-dessus, puisqu'il est logique de coder les lettres les plus fréquentes avec les signaux les plus courts. 
 ```{image} images/introduction/letterdistribution.png
 :height: 500px
 :width: 350px
