@@ -68,10 +68,6 @@ li.simple {
   margin-bottom:20px;
   padding-left:20px;
 }
-ol {
-  margin-bottom: 20px;
-  padding-left:15px;
-}
 .boxed {
   border: 1px solid;$
   border-color:rgb(96, 105, 219);
@@ -98,7 +94,7 @@ ol {
 
 <br>
 
-Le terme *digital labor* ou "travail du clic" apparait au début des années 2010 dans le champ de la sociologie. Cette notion désigne l'ensemble des activités effectuées via des plateformes numériques et qui permettent à celles-ci de générer de la valeur. Les formes que prennent ce travail sont diverses mais on peut distinguer trois modalités principales [^1].
+Le terme *digital labor* ou "travail du clic" apparait au début des années 2010 dans le champ de la sociologie. Cette notion désigne l'ensemble des activités effectuées via des plateformes numériques et qui permettent à celles-ci de générer de la valeur. Les formes que prennent ce travail sont diverses mais on peut distinguer trois modalités principales <a href="#footnote-1">[1]</a> .
 
 * **Le travail à la demande** **(sous-rémunéré)**
 
@@ -120,7 +116,9 @@ Le terme *digital labor* ou "travail du clic" apparait au début des années 201
 
 Le *digital labor* s'inscrit dans le principe du *crowdsourcing*, qui consiste à faire appel à une "foule" (*crowd*) d'internautes, rémunérés ou non, pour réaliser différents types de tâches.
 
-[^1]: Selon la classification du sociologue Antonio Casilli. Voir références
+<p id="footnote-1"; style="font-size:12px" >[1] Selon la classification du sociologue Antonio Casilli. Voir références.</p>
+
+
 
 <br>
 
@@ -133,7 +131,7 @@ Le *digital labor* s'inscrit dans le principe du *crowdsourcing*, qui consiste �
 Depuis 2005, le géant du e-commerce Amazon possède une plateforme qui met en relation des entreprises avec des personnes disposées à réaliser en ligne des tâches simples et répétitives (reconnaissance d’images, saisie de données, classement de mots, etc.) contre une très faible rémunération. Cette plateforme se nomme Amazon Mechanical Turk (ou «Turc mécanique») en référence à un célèbre canular du XVIIIe siècle. 
 
 
-<img src="mecanical-turk.png" style="width:300px; margin-right:20px; margin-bottom:20px" align="left"> <p>Inventé par le Hongrois Wolgang von Kempelen, Le Turc mécanique était un automate habillé à la mode turque. Cette machine jouait particulièrement bien aux échecs et semblait imbattable. Mais c’était une supercherie ! A l’intérieur de l’installation se trouvait un véritable joueur d’échecs qui manipulait le mannequin.</p>
+<img src="https://i.postimg.cc/vmV4LkDG/mecanical-turk.png" style="width:300px; margin-right:20px; margin-bottom:20px" align="left"> <p>Inventé par le Hongrois Wolgang von Kempelen, Le Turc mécanique était un automate habillé à la mode turque. Cette machine jouait particulièrement bien aux échecs et semblait imbattable. Mais c’était une supercherie ! A l’intérieur de l’installation se trouvait un véritable joueur d’échecs qui manipulait le mannequin.</p>
 
 Si Amazon se réfère à ce canular, c’est que sa plateforme proposant les services de «micro-travailleurs» (ou turkers) fonctionne sur la même illusion. Nous imaginons que des entreprises vendent de puissants logiciels qui réalisent des processus complexes grâce à l’intelligence artificielle alors qu’en réalité, ces systèmes nécessitent l’intervention de nombreux humains dispersés aux quatre coins du monde. Ces derniers sont des travailleurs et travailleuses précaires, invisibles et payés à la tâche, souvent quelques centimes par action. Il s’agit d’une forme de digital labor.
 
@@ -151,7 +149,7 @@ De nouvelles formes d’activités sont ainsi apparues, souvent en dehors des ca
 
 La notion de *digital labor* témoigne, de façon plus générale, d’une nouvelle manière de penser le Web social. Jusqu’à la fin des années 1990, dans le champ de la sociologie, le réseau était avant tout envisagé comme un espace permettant l’échange d’informations, la mise en relation d’individus, la création de communautés en ligne dans un esprit participatif non-marchand (👉 *voir fiche «Histoire d’Internet et du Web»*). Les interactions semblaient guidées par des principes de collaboration, de partage et de don. Les observateurs de ces pratiques dressaient donc un tableau élogieux du Web.
 
-Mais au milieu des années 2000, avec l’arrivée des plateformes, le regard porté sur le Web s’est transformé. La recherche s’est attachée à souligner la transformation du réseau en espace marchand, dominé par quelques acteurs centraux. Les travaux autour du digital labor s’inscrivent dans cette perspective critiqu
+Mais au milieu des années 2000, avec l’arrivée des plateformes, le regard porté sur le Web s’est transformé. La recherche s’est attachée à souligner la transformation du réseau en espace marchand, dominé par quelques acteurs centraux. Les travaux autour du *digital labor* s’inscrivent dans cette perspective critique.
 
 
 <br>
@@ -184,7 +182,47 @@ Mais au milieu des années 2000, avec l’arrivée des plateformes, le regard po
 
   <div class="w3-show-inline-block">
   <div class="w3-bar">
-    <a href=economie-numerique.md class="button">Économie du numérique</a>
+    <a href=../../grandes-thematiques/economie-numerique/economie-numerique.html class="button">Économie du numérique</a>
   </div>
   </div>
 </div>
+
+<br>
+<br>
+
+## En classe
+
+Diffuser l’épisode [« Micro-travailler plus pour micro-gagner moins»](https://www.youtube.com/watch?v=Y8URdO7mDfg) de la série documentaire "Les invisibles" (France TV, 20 min.). 
+ 
+
+[![](lesinvisibles.png)](https://www.youtube.com/watch?v=Y8URdO7mDfg)
+
+
+<br>
+
+
+Suite à la diffusion, poser les questions suivantes :
+
+
+a) Pourquoi parle-t-on de «micro-travail»?
+
+
+   ::::{admonition,dropdown} Réponse
+   Il s'agit d'un travail à la tâche, ou plutôt à la micro-tâche. Les travailleurs et travailleuses sont rémunérés quelques centimes par opération. Ils et elles n'ont pas de contrat de travail et n’ont droit à aucune prestation sociale. Il s’agit donc d’une activité très précaire.
+   ::::
+
+
+b) Pourquoi la personne interviewevée témoigne-t-elle à visage couvert?
+  
+   ::::{admonition,dropdown} Réponse
+   L'entreprise cherche à dissimuler le fait qu'elle a recours aux travailleurs du clic pour faire fonctionner ses systèmes. L'IA est vendue comme une solution entièrement "automatisée".
+   ::::
+
+
+c) Pourriez-vous citer des situations lors desquelles nous travaillons en ligne sans nous en rendre compte?
+
+   ::::{admonition,dropdown} Quelques éléments de réponse
+  * Toutes nos activités sur les réseaux sociaux : commentaires, likes, partage d'image, clic sur un lien, et tout simplement faire défiler le fil d'actualité. De ces activités sont extraites de précieuses données pour les plateformes.
+  * Effectuer une requête sur un moteur de recherche
+  * Identifier des lettres (CAPTCHA) ou des objets sur des images pour valider un formulaire. Par exemple, il est souvent demandés aux internautes d'identifier des objets liés au trafic routier (passage piétons, motos, vélos, etc.). Ces informations servent à entrainer les logiciels de conduite automatisée.
+   ::::

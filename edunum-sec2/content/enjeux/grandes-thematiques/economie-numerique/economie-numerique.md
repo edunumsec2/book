@@ -83,9 +83,11 @@ ol {
 
 <!-- Fin du test de mise en page -->
 
-<a href="#" class="button"> 🖨️ Version imprimable</a>
 
-````{image} economie_numerique.jpg
+
+<a href="economie-numerique.pdf" class="button"> 🖨️ Version imprimable</a>
+
+````{image} economie-numerique.jpg
 :name: économie
 :alt: économie
 :align: center
@@ -218,6 +220,7 @@ Toutefois, l'efficacité réelle de ces stratégies mérite d'être discutée. E
 * [Le livre](https://www.cairn.info/sociologie-du-numerique--9782200291655-page-171.htm) "Sociologie du numérique" (2019) de Dominique Boullier (chapitre "Sociologie économique du numérique")
 * [Le livre](https://www.seuil.com/ouvrage/pour-une-ecologie-de-l-attention-yves-citton/9782021181425) "Pour une écologie de l'attention" de Yves Citton (2014)
 * [Le livre](https://www.le-passeur-editeur.com/les-livres/essais/comment-sortir-de-l-emprise-des-r%C3%A9seaux-sociaux/) "Comment sortir de l'emprise des réseaux sociaux" (2020) de Dominique Boullier 
+* [Un reportage radio](https://www.rts.ch/play/radio/vacarme/audio/societe-numerique-35-hep-uber?id=11541585)(RTS) sur les conditions de travail des chauffeurs Uber
 * [Un podcast](https://www.franceinter.fr/emissions/le-code-a-change/sommes-nous-vraiment-en-train-de-fabriquer-des-cretins-digitaux) qui déconstruit les discours alarmistes autour des écrans chez les jeunes (Le Code a changé, France Inter)
 
   
@@ -264,10 +267,14 @@ En cas de temps limité, privilégier l'activité A ou B
 <br>
 <div class="boxed">
 <br>
- <div align="center"; style="font-size:27px ;font-family: helvetica; font-weight: 300; color:rgb(96, 105, 219)"; ::marker="font-family:"helvetica">
+ <div align="center"; style="font-size:27px ;font-family: helvetica; font-weight: 300; text-transform: upper-case; color:rgb(96, 105, 219)"; ::marker="font-family:"helvetica">
   <b>A. Au delà des GAFAM 
   <hr style="width:100%;text-align:left;margin-left:0; border-color: black">
-   <div align="left"; style="font-size:15px; font-weight: 400; color: black"> 🕓 30 min | Matériel : projecteur, ordinateurs personnels.
+   <div align="left"; style="font-size:15px; font-weight: 300; color: black"> 
+   🎯 Objectif : Prendre conscience de la diversité modèles économiques du numérique
+   <br>
+   🕓 45 min 
+    <br> 💻 Matériel : projecteur, ordinateurs personnels
   <hr style="width:100%;text-align:left;margin-left:0; border-color: black">
   </div>
   </div>
@@ -285,7 +292,9 @@ En cas de temps limité, privilégier l'activité A ou B
    ```
 
 2. Par oral, mettre en commun les réponses des différents groupes et apporter des précisions:
-
+  
+  <br>
+  
    a) Que signifie l'acronyme "GAFAM"?
 
    ::::{admonition,dropdown} Réponse
@@ -304,6 +313,8 @@ En cas de temps limité, privilégier l'activité A ou B
    
    Préciser que la plupart de caractéristiques ne sont pas exclusivement propres au numérique
    ::::
+
+   
 
 
    c) En quoi ces entreprises se différencient-elles? 
@@ -338,9 +349,13 @@ En cas de temps limité, privilégier l'activité A ou B
 <div class="boxed">
 <br>
  <div align="center"; style="font-size:27px ;font-family: helvetica; font-weight: 300; color:rgb(96, 105, 219)">
-  <b>B. Les logiques des plateformes 
+  <b>B. Le travail "uberisé"
   <hr style="width:100%;text-align:left;margin-left:0; border-color: black">
-   <div align="left"; style="font-size:15px; font-weight: 400; color: black"> 🕓 45 min | Matériel : projecteur, ordinateurs personnels.
+   <div align="left"; style="font-size:15px; font-weight: 300; color: black"> 
+   🎯 Objectif : Être sensibilisé·e aux mécanismes  implications sociales de l’«uberisation».
+   <br>
+   🕓 45 min 
+    <br> 💻 Matériel : projecteur, ordinateurs personnels
   <hr style="width:100%;text-align:left;margin-left:0; border-color: black">
   </div>
   </div>
@@ -354,7 +369,7 @@ Poser les questions suivantes :
 a) Présentez en quelques mots le modèle économique de Uber Eats.
 
 ::::{admonition,dropdown} Réponse
-Uber Eats est une plateforme en ligne qui propose des livraisons de repas. L’application met en relation livreurs, clients et restaurants partenaires. L’entreprise prend une commission sur chaque commande, à la fois auprès du restaurant (env. 30%!) et du client. Sur le modèle de la maison mère Uber, les liveurs de Uber Eats ne sont pas salariés, mais des indépendants payés à la course. La somme accordée aux livreurs varie selon de nombreux critères (horaire, météo, demande des clients). A noter que ce modèle économique n’est toujours pas rentable. Uber, comme Uber Eats sont encore largement déficitaire et ne se maintiennent que grâce aux soutiens massifs d’investisseurs.
+Uber Eats est une plateforme en ligne qui propose des livraisons de repas. L’application met en relation livreurs, clients et restaurants partenaires. L’entreprise prend une commission sur chaque commande, à la fois auprès du restaurant (env. 30%!) et du client. Sur le modèle de la maison mère Uber, les liveurs de Uber Eats ne sont pas salariés, mais des indépendants payés à la course. La somme accordée aux livreurs varie selon de nombreux critères (horaire, météo, demande des clients). A noter que ce modèle économique n’est toujours pas rentable. Uber, comme Uber Eats, sont encore largement déficitaires et ne se maintiennent que grâce aux soutiens massifs d’investisseurs.
 ::::
 
 b) Pourquoi modèle économique de Uber Eats n’est-il pas soutenable pour les livreurs
