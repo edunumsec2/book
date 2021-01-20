@@ -4,13 +4,19 @@ function random_element(arr) {
 }
 
 var reaction_emoticons = {
-  "good": ["😀", "😋"],
-  "bad": ["🥵", "🥴"],
+  "good": ["😀", "😋", "😀", "😃", "😄", "😁", "🤩", "😊", 
+  "😇", "🙂", "😉", "😍", "😘", "😙", "🤗", "🤓", "😎", "🤡", "🦾", "👏", "🌈", "🍭", "💎"],
+  "bad": ["🥵", "🥴", "😏", "😒", "😞", "😔", "😟", "😕", 
+  "🙁", "😣", "😖", "😩", "😶", "😐", "😑", "😯", "😦", 
+  "🤯", "😳", "😰", "😓", "🙄", "🧐", "🤔", "🤭", "😬"],
 };
 
 var reaction_texts = {
-  "good": ["Super !", "Bravo !"],
-  "bad": ["Oups !", "Aie..."],
+  "good": ["Super !", "Bravo !", "Tip Top !", "Continue comme ça !", "C'est juste !", 
+  "Toi-même tu sais !", "Voilà !", "Si si !", "Ouiiii !", "Bien !", "C'est exact !", 
+  "Tout juste !", "Excellent !", "Très propre !"],
+  "bad": ["Oups !", "Aie...", "Nope...", "Essaie encore", "Encore un effort", "Hmmm, non...", 
+  "Tu peux y arriver", "Presque", "Pas tout à fait"],
 };
 
 function setup_reactions() {
