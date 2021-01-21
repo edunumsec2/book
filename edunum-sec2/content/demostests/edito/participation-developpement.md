@@ -37,7 +37,7 @@ Ce chapitre s'adresse aux personnes qui souhaitent intervenir sur les fichiers s
     * [Téléchargement](https://www.python.org/downloads/)
       * Pour macOS, un excellent tuto si l'installation pose problème (mais il faut bien lire la deuxième partie): [Tuto](https://opensource.com/article/19/5/python-3-default-mac#what-to-do)
 
- 4. Installer [Jupyter Book](https://jupyterbook.org)
+ 4. Installer [Jupyter Book](https://jupyterbook.org). Ceci **met aussi à jour** Jupyter Book lorsqu'une nouvelle version est disponible. Si l'équipe de rédaction utilise de nouvelles fonctions de Jupyter Book, il faut faire retourner ceci pour l'obtenir.
     * Avec Python 3.9:
       ```bash
       pip3.9 install -U jupyter-book

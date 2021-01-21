@@ -55,7 +55,14 @@
 					"command": "jupyter-book clean .",
 					"cwd": "${workspaceFolder}/config/maitre",
 					"singleInstance": true,
-				}
+				},
+				{
+					"name": "Update jupyter-book",
+					"color": "#ccf",
+					"command": "pip3 install -U jupyter-book",
+					"cwd": "${workspaceFolder}",
+					"singleInstance": true,
+				},
 			]
 		}
 	},
