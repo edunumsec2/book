@@ -1,4 +1,0 @@
-Instructions séquentielles
-==========================
-
-À compléter

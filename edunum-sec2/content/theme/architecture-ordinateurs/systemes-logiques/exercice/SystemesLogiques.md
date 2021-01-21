@@ -31,7 +31,7 @@ Les logidules ont été développés dès 1968 par J.-D. Nicoud. Ils ont beaucou
 
 **Installation**
 
-Pour installer le logiciel, il suffit de le [télécharger](media/Logidules/simul.jar) et de double clicker sur le fichier .jar
+Pour installer le logiciel, il suffit de le {download}`télécharger <media/Logidules/simul.jar>` et de double clicker sur le fichier .jar
 
 Il faut alors un peu réarranger l'environnement (tirer le diagramme de temps que nous n'utiliserons pas à droite)
 

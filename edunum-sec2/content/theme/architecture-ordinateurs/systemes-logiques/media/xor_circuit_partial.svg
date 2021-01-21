@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="392.7426 1100.9759 360.04775 79.57614" width="360.04775" height="79.57614">
+  <defs>
+    <font-face font-family="CMU Serif" font-size="16" panose-1="2 0 6 3 0 0 0 0 0 0" units-per-em="1000" underline-position="-125" underline-thickness="49.80469" slope="-877.5005" x-height="441.89453" cap-height="693.84766" ascent="930.1758" descent="-373.53516" font-style="italic" font-weight="400">
+      <font-face-src>
+        <font-face-name name="CMUSerif-Italic"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="CMU Serif" font-size="16" panose-1="2 0 6 3 0 0 0 0 0 0" units-per-em="1000" underline-position="-125" underline-thickness="49.80469" slope="0" x-height="439.4531" cap-height="693.84766" ascent="935.0586" descent="-372.5586" font-weight="500">
+      <font-face-src>
+        <font-face-name name="CMUSerif-Roman"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.18.1\n2021-01-14 14:21:45 +0000</metadata>
+  <g id="Canvas_1" stroke-opacity="1" stroke="none" stroke-dasharray="none" fill-opacity="1" fill="none">
+    <title>Canvas 1</title>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Group_371">
+        <g id="Graphic_375">
+          <path d="M 662 1111 L 682.00005 1111 C 693.0457 1111 702 1119.9543 702 1131 C 702 1142.0457 693.0457 1151 682.00005 1151 L 662 1151 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_374">
+          <line x1="652" y1="1121" x2="662" y2="1121" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_373">
+          <line x1="652" y1="1141" x2="662" y2="1141" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_372">
+          <line x1="703" y1="1131" x2="712" y2="1131" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+      <g id="Group_376">
+        <g id="Line_382">
+          <path d="M 498 1102 C 498 1102 504.65474 1110.7191 504.65474 1122.0513 C 504.65474 1133.3835 498 1142 498 1142" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_381">
+          <path d="M 498 1102 C 498 1102 511.6678 1101.3339 523 1107 C 534.3322 1112.6661 538 1122 538 1122" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_380">
+          <path d="M 538 1122 C 538 1122 534.3322 1131.3339 523 1137 C 511.6678 1142.6661 498 1142 498 1142" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_379">
+          <line x1="488" y1="1112" x2="503" y2="1112" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_378">
+          <line x1="488" y1="1132" x2="503" y2="1132" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_377">
+          <line x1="538" y1="1121.9759" x2="548" y2="1121.9759" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+      <g id="Graphic_383">
+        <text transform="translate(397.7426 1132.5)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="15">X</tspan>
+        </text>
+      </g>
+      <g id="Graphic_384">
+        <text transform="translate(397.7426 1154.552)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="15">Y</tspan>
+        </text>
+      </g>
+      <g id="Graphic_385">
+        <text transform="translate(737.9857 1120.4987)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="15">Z</tspan>
+        </text>
+      </g>
+      <g id="Line_396">
+        <path d="M 414.6254 1143 L 430.1923 1143 L 430.1923 1112 L 488 1112" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_398">
+        <path d="M 414.6254 1165.052 L 461.03906 1165.052 L 461.03906 1132 L 488 1132" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_401">
+        <path d="M 548 1121.9759 L 559 1121.9759 L 641 1121 L 652 1121" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_402">
+        <path d="M 712 1130.6404 L 712 1130.9987 L 732.98566 1130.9987" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Graphic_404">
+        <text transform="translate(619.9566 1131.0915)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-weight="500" fill="black" x="0" y="15">???</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

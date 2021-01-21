@@ -1,0 +1,13 @@
+p {
+    text-align: justify;
+}
+
+@media (min-width: 768px) {
+    button.toggle-button.toggle-button-hidden:before {
+        content: "Afficher";
+        position: absolute;
+        font-size: .9em;
+        left: -4.5em;
+        bottom: .4em;
+    }
+}

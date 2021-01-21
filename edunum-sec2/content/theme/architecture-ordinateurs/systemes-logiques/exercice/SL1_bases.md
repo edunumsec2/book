@@ -2,7 +2,7 @@
 # Exercices de base
 
 ::::{admonition,attention} Exercice 1 : un binary digit (*bit*)
-Construisons notre premier cirtuit le plus simple dans logic.ly. Ce dernier représente une unité d'information, en anglais *binary digit* abrégé bit.
+Construisons notre premier circuit le plus simple dans logic.ly. Ce dernier représente une unité d'information, en anglais *binary digit* abrégé bit.
 
 :::{figure} simple_bit
 <img src="media/Ex1_PortesLogiques.png">

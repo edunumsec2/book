@@ -19,6 +19,8 @@
 		"search.exclude": {
 			"config/eleve/content": true,
 			"config/maitre/content": true,
+			"config/eleve/_build": true,
+			"config/maitre/_build": true,
 			"**/_build": true,
 			"**/node_modules": true,
 			"**/bower_components": true,
@@ -53,7 +55,14 @@
 					"command": "jupyter-book clean .",
 					"cwd": "${workspaceFolder}/config/maitre",
 					"singleInstance": true,
-				}
+				},
+				{
+					"name": "Update jupyter-book",
+					"color": "#ccf",
+					"command": "pip3 install -U jupyter-book",
+					"cwd": "${workspaceFolder}",
+					"singleInstance": true,
+				},
 			]
 		}
 	},
