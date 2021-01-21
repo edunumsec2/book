@@ -85,6 +85,7 @@
   - file: content/enjeux/fiches-complementaires/fiches-complementaires
     sections:
     - file: content/enjeux/fiches-complementaires/digital-labor/digital-labor
+    - file: content/enjeux/fiches-complementaires/wikipedia/wikipedia
   - file: content/enjeux/bibliographie
 
 - part: Démos et divers

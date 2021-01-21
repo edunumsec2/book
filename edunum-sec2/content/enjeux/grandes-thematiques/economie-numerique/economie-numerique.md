@@ -181,7 +181,7 @@ Cet effet est particulièrement puissant dans le cas des services numériques ca
 
 ```{admonition} Uberisation
 :class: hint
-L’uberisation, dont le nom provient de l'entreprise Uber, est un processus économique qui vise à contourner le fonctionnement classique d’un secteur en créant un nouvel intermédiaire au travers d’une plateforme numérique. Celle-ci met en relation clients et prestataires tout en prélevant une commission sur les transactions. Si les services «uberisés» offrent des prestations flexibles à moindre coût, ce changement de modèle s’opère au travers d’une stratégie de développement agressive et dans un cadre légal peu clair. Dans le cas d’Uber, le modèle implique la participation de travailleurs au statut précaire, considérés comme «indépendants» et pourtant soumis aux exigences de la plateforme. Le statut léglal de ces pratiques est aujourd’hui remis en cause dans plusieurs villes, [dont Genève](https://www.letemps.ch/economie/geneve-uber-eats-desormais-recourir-employes), qui a imposé en 2020 à Uber Eats de salarier ses travailleurs. A noter également que pour Uber, ce modèle n’est toujours pas rentable. L’entreprise, largement déficitaire, doit son maintien aux soutiens massifs d’investisseurs auxquels on promet une rentabilité future.
+L’uberisation, dont le nom provient de l'entreprise Uber, est un processus économique qui vise à contourner le fonctionnement classique d’un secteur en créant un nouvel intermédiaire au travers d’une plateforme numérique. Celle-ci met en relation clients et prestataires tout en prélevant une commission sur les transactions. Si les services «uberisés» offrent des prestations flexibles à moindre coût, ce changement de modèle s’opère au travers d’une stratégie de développement agressive et dans un cadre légal peu clair. Dans le cas d’Uber, le modèle implique la participation de travailleurs au statut précaire, considérés comme «indépendants» et pourtant soumis aux exigences de la plateforme. Le statut légal de ces pratiques est aujourd’hui remis en cause dans plusieurs villes, [dont Genève](https://www.letemps.ch/economie/geneve-uber-eats-desormais-recourir-employes), qui a imposé en 2020 à Uber Eats de salarier ses travailleurs. A noter également que pour Uber, ce modèle n’est toujours pas rentable. L’entreprise, largement déficitaire, doit son maintien aux soutiens massifs d’investisseurs auxquels on promet une rentabilité future.
 ```
 
 
@@ -220,6 +220,7 @@ Toutefois, l'efficacité réelle de ces stratégies mérite d'être discutée. E
 * [Le livre](https://www.cairn.info/sociologie-du-numerique--9782200291655-page-171.htm) "Sociologie du numérique" (2019) de Dominique Boullier (chapitre "Sociologie économique du numérique")
 * [Le livre](https://www.seuil.com/ouvrage/pour-une-ecologie-de-l-attention-yves-citton/9782021181425) "Pour une écologie de l'attention" de Yves Citton (2014)
 * [Le livre](https://www.le-passeur-editeur.com/les-livres/essais/comment-sortir-de-l-emprise-des-r%C3%A9seaux-sociaux/) "Comment sortir de l'emprise des réseaux sociaux" (2020) de Dominique Boullier 
+* [La mini-série documentaire](https://www.youtube.com/playlist?list=PLUDzuI7to_hD6PswmzU0r9oSq048EDoY8) «Les Invisibles" (France TV), qui fait met en lumière les travailleurs des plateformes (livreurs Uber Eats, «travailleurs du clic», modérateurs)
 * [Un reportage radio](https://www.rts.ch/play/radio/vacarme/audio/societe-numerique-35-hep-uber?id=11541585)(RTS) sur les conditions de travail des chauffeurs Uber
 * [Un podcast](https://www.franceinter.fr/emissions/le-code-a-change/sommes-nous-vraiment-en-train-de-fabriquer-des-cretins-digitaux) qui déconstruit les discours alarmistes autour des écrans chez les jeunes (Le Code a changé, France Inter)
 
@@ -268,7 +269,7 @@ En cas de temps limité, privilégier l'activité A ou B
 <div class="boxed">
 <br>
  <div align="center"; style="font-size:27px ;font-family: helvetica; font-weight: 300; text-transform: upper-case; color:rgb(96, 105, 219)"; ::marker="font-family:"helvetica">
-  <b>A. Au delà des GAFAM 
+  <b>A. Au-delà des "GAFAM" 
   <hr style="width:100%;text-align:left;margin-left:0; border-color: black">
    <div align="left"; style="font-size:15px; font-weight: 300; color: black"> 
    🎯 Objectif : Prendre conscience de la diversité modèles économiques du numérique
@@ -287,7 +288,7 @@ En cas de temps limité, privilégier l'activité A ou B
    ```{admonition} Note
    :class: tip
    Pour guider leur recherche, on peut suggérer aux élèves les articles suivants:
-   * [La page Wikipédia](https://fr.wikipedia.org/wiki/GAFAM) consacrée aut terme "GAFA"
+   * [La page Wikipédia](https://fr.wikipedia.org/wiki/GAFAM) consacrée au terme "GAFA"
    * [Un article](https://www.numerama.com/tech/227930-si-vous-souhaitez-etre-credibles-arretez-de-dire-les-gafa.html) qui souligne l'incohérence de l'acronyme "GAFA" (Numérama)
    ```
 
@@ -331,14 +332,14 @@ En cas de temps limité, privilégier l'activité A ou B
   ::::{admonition,dropdown} **Quelques éléments de réponse**
 
   * **Facebook / Instagram / YouTube / Snapchat / Twitter / Pinterest** : La majorité des réseaux sociaux ont un modèle économique qui repose sur la vente d'espaces publicitaires. Ces services sont gratuits mais les utilisateurs "paient" en transmettant de nombreuses données qui permettent aux plateformes de vendre à des annonceurs des audiences ciblées.
-  * **WhatsApp** : l'entreprise, qui appartient à Facebook depuis 2016, n'a pas de système de monétisation. L'application est gratuite et sans publicité. Mais les données émises par les utilisateurs peuvent désormais être [partagées avec Facebook](https://www.lemonde.fr/pixels/article/2021/01/07/whatsapp-revoit-ses-conditions-d-utilisation-sur-le-partage-des-donnees-utilisateurs-avec-facebook_6065529_4408996.html) qui peut s'en servir pour développer ses services et ses capacités de ciblage publicitaire.
-  * **TikTok** : En 2020, TiktTok possède 2 sources de revenus : la publicité et surtout, les [achats intégrés à l'application](https://www.numerama.com/business/535666-comment-tiktok-fait-il-pour-gagner-tellement-dargent.html). Ces derniers s'effectuent au travers d'une monnaie virtuelle, les "*Coins*" (pièces). Les utilisateurs peuvent acheter des crédits (100 pièces pour env. 1 Euro) et les utiliser pour différents services supplémentaires ou pour des "cadeaux" offerts aux influenceurs. Tiktok prélève une commission sur ces transactions (le pourcentage exact n'est pas connu).
+  * **WhatsApp** : L’entreprise, qui appartient à Facebook depuis 2016, n’a pas de système de monétisation. L’application est gratuite et sans publicité. Mais début 2021, WhatsApp a annoncé de nouvelles conditions d’utilisation qui vont permettre à Facebook d’utiliser les données issues de l’application. Son modèle économique pourrait donc évoluer.
+  * **TikTok** : En 2020, TikTok possède 2 sources de revenus : la publicité et surtout, les [achats intégrés à l'application](https://www.numerama.com/business/535666-comment-tiktok-fait-il-pour-gagner-tellement-dargent.html). Ces derniers s'effectuent au travers d'une monnaie virtuelle, les "*Coins*" (pièces). Les utilisateurs peuvent acheter des crédits (100 pièces pour env. 1 Euro) et les utiliser pour différents services supplémentaires ou pour des "cadeaux" offerts aux influenceurs. Tiktok prélève une commission sur ces transactions (le pourcentage exact n'est pas connu).
   *  **Signal** : Le service de messagerie est financé par une fondation à but non lucratif. Il est axé sur la confidentialité et les données des utilisateurs ne sont pas commercialisées.
   *  **Spotify / Netflix** : Les plateformes liées à l'industrie du divertissement fonctionnent le plus souvent sur un principe d'abonnement. La stratégie consiste à offrir un premier mois gratuit ou un service réduit (avec publicités, par exemple) afin de convertir les utilisateurs à une version payante.
   * **Amazon**: Si la principale source de revenus d'Amazon est la vente de produits en ligne, l'entreprise est également le plus grand fournisseur d'hébergement Web. Amazon développe également toute une série d'objets "connectés" (voir ci-dessus)
   *  **Uber, AirBnB** : Ces plateformes se positionnennt comme des intermédiaires entre le client et le prestataire de service. Elles prennent une commission sur les transactions qui s'effectuent entre les deux parties
 
-  On peut encore souligner que, si la commericalisation de données n'est pas au coeur du modèle économique de l'ensemble des plateformes, la plupart cependant, s'appuient sur la collecte de ces "traces numériques" pour développer leurs services. 
+  On peut encore souligner que, si la commercialisation de données n'est pas au coeur du modèle économique de l'ensemble des plateformes, la plupart cependant, s'appuient sur la collecte de ces "traces numériques" pour développer leurs services. 
   ::::
 
 </div
@@ -369,16 +370,16 @@ Poser les questions suivantes :
 a) Présentez en quelques mots le modèle économique de Uber Eats.
 
 ::::{admonition,dropdown} Réponse
-Uber Eats est une plateforme en ligne qui propose des livraisons de repas. L’application met en relation livreurs, clients et restaurants partenaires. L’entreprise prend une commission sur chaque commande, à la fois auprès du restaurant (env. 30%!) et du client. Sur le modèle de la maison mère Uber, les liveurs de Uber Eats ne sont pas salariés, mais des indépendants payés à la course. La somme accordée aux livreurs varie selon de nombreux critères (horaire, météo, demande des clients). A noter que ce modèle économique n’est toujours pas rentable. Uber, comme Uber Eats, sont encore largement déficitaires et ne se maintiennent que grâce aux soutiens massifs d’investisseurs.
+Uber Eats est une plateforme en ligne qui propose des livraisons de repas. L’application met en relation livreurs, clients et restaurants partenaires. L’entreprise prend une commission sur chaque commande, à la fois auprès du restaurant (env. 30%!) et du client. Sur le modèle de la maison mère Uber, les livreurs de Uber Eats ne sont pas salariés, mais des indépendants payés à la course. La somme accordée aux livreurs varie selon de nombreux critères (horaire, météo, demande des clients). A noter que ce modèle économique n’est toujours pas rentable. Uber, comme Uber Eats, sont encore largement déficitaires et ne se maintiennent que grâce aux soutiens massifs d’investisseurs.
 ::::
 
 b) Pourquoi modèle économique de Uber Eats n’est-il pas soutenable pour les livreurs
 
 ::::{admonition,dropdown} Réponse
-Les sommes versées pour les courses ne permettent pas d’obtenir un salaire décent. L’un des coursier parle d’environ 400 Euros pour 60h de disponibilité par semaine, avant déductions (le salaire minimum est d’environ 1200 Euros). Les livreurs ne sont payés que lorsqu’ils effectuent une course, le temps d’attente n’est pas comptabilisé. Tous les frais (vélo, sacs, habits) sont à leur charge et ils ne disposent d’aucune prestations sociales (assurance accident, cotisations retraite, etc..). Par ailleurs, les exigences de la plateforme sont de plus en plus difficiles à remplir, comme le montre le témoignage d’un livreur qui a troqué son vélo contre un scooter plus rapide.
+Les sommes versées pour les courses ne permettent pas d’obtenir un salaire décent. L’un des coursiers parle d’environ 400 Euros pour 60h de disponibilité par semaine, avant déductions (le salaire minimum est d’environ 1200 Euros). Les livreurs ne sont payés que lorsqu’ils effectuent une course, le temps d’attente n’est pas comptabilisé. Tous les frais (vélo, sacs, habits) sont à leur charge et ils ne disposent d’aucune prestations sociales (assurance accident, cotisations retraite, etc..). Par ailleurs, les exigences de la plateforme sont de plus en plus difficiles à remplir, comme le montre le témoignage d’un livreur qui a troqué son vélo contre un scooter plus rapide.
    ::::
 
-**Activité complémentaire** :  Faire lire [un article](https://www.letemps.ch/economie/geneve-uber-eats-desormais-recourir-employes) du journal Le Temps consacré à la décision du Canton de Genève d'imposer à Uber Eats de salarier ses liveurs. Poser les questions suivantes:
+**Activité complémentaire** :  Faire lire [un article](https://www.letemps.ch/economie/geneve-uber-eats-desormais-recourir-employes) du journal Le Temps consacré à la décision du Canton de Genève d'imposer à Uber Eats de salarier ses livreurs. Poser les questions suivantes:
 
    - *A compléter*
 
