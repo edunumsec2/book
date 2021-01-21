@@ -3,138 +3,172 @@ Formulation de solutions algorithmiques à des problèmes simples
 
 ::::{admonition,note} Matière à réfléchir II
 
-Pensez à un lieu en proximité. Décrivez les étapes qu’il faut suivre pour s’y rendre. Demandez à un camarade de classe de suivre ces instructions. Est-ce que votre camarade arrive à deviner à quel endroit il s’est rendu ?
+Pensez à un lieu connu à proximité. Ecrivez les étapes à suivre pour s’y rendre, sans mentionner le lieu. Vous ne pouvez utiliser que les instructions : **avancer, tourner (à gauche ou à droite).**
 
-**Si non :** recommencez l’opération en essayant de comprendre à quel moment il s’est perdu, suivez-le pas à pas. **Si oui :** reformulez vos instructions en utilisant uniquement des verbes, des distances et les mots-clés **si (if)**, **sinon (else)**, **tant que (while)**.
+Demandez à un camarade de classe de suivre ces instructions. Est-ce que votre camarade arrive à deviner à quel endroit il s’est rendu ?
 
-Imaginez que votre camarade peut uniquement exécuter l’instruction *marcher 1m tout droit* et *tourner de 5 degrés*. Reformulez votre solution en utilisant le mot clé **pendant (for)**.
+**Si non** : essayez de comprendre à quel moment il s’est perdu. Adaptez votre algorithme en fonction. 
+
+**Si oui** : reformulez vos instructions en utilisant les mots-clés **si (if), sinon (else), tant que (while)**.
+
+[Optionnel] Imaginez que votre camarade peut uniquement **avancer de 1m tout droit** et **tourner de 30 degrés**. Reformulez votre solution en utilisant le mot clé **pendant (for)**.
 
 ::::
 
 ## De l’algorithme au programme
 
-Une fois que l’on a déterminé l’algorithme le plus adapté à utiliser, il faut le transcrire dans un programme qu’une machine peut comprendre. Nous allons détailler ce processus pour l’algorithme  du **tri par sélection**. 
+Une fois que l’on a déterminé le meilleur algorithme à utiliser, il faut le retranscrire dans un programme qu’une machine peut comprendre. Nous allons détailler ce processus pour l’algorithme du **tri par sélection**. 
 
-Cet algorithme consiste à parcourir la liste plusieurs fois et à déterminer l’élément le plus petit. Comment pourrait-on traduire ceci en Python ? Comment représenter ces rectangles dans un langage de programmation ? Ce qui nous intéresse est leur taille. On peut donc stocker les tailles de la configuration initiale de ces rectangles dans une liste :
+Cet algorithme consiste à parcourir la liste à trier plusieurs fois. A chaque itération on sélectionne le plus petit élément et on l’échange avec le premier élément de la liste non triée. Comment pourrait-on traduire ceci en Python ? Comment représenter ces rectangles dans un langage de programmation ? 
 
-```
-rectangles = [3,4,1,2,6,5]
-```
-
-On doit ensuite trouver l’indice du rectangle le plus petit. Pour faire cela, il faut parcourir la liste et comparer les différents éléments. On va stocker l’indice de l’élément le plus petit dans la variable que l’on va nommer rectangle_min. On commence par initialiser cette variable.
+Tout d’abord, il faut représenter la taille des rectangles numériquement. On peut par exemple représenter l’ordre des rectangles de la première ligne de la Figure 3, en fonction de leur taille, dans une liste nommée  rect:
 
 ```
-rectangle_min = 0
+rect = [3,4,1,2,6,5]
+```
+
+On doit ensuite trouver le plus petit élément de la liste (le rectangle le plus court). Nous allons commencer par supposer que l’élément le plus petit est le premier élément, et nous initialisons une variable nommée indice_min à 0. Cette variable va stocker l’indice du plus petit élément de la liste (la position de l’élément à l’intérieur de la liste). Nous allons ensuite parcourir la liste à partir du deuxième élément. Pour chaque élément nous allons tester s’il est plus petit ou plus grand que le plus petit élément connu jusqu’à là :
+
+```
 # trouve le rectangle le plus petit de la liste
-for i in range(1:len(rectangles)):
-	if rectangles[i] < rectangles[i-1] :
-		rectangle_min = i
+indice_min = 0 
+for i in range(1,len(rect)):
+    if rect[i] < rect[indice_min] :
+    indice_min = i
 ```
 
-A la fin de cette boucle, rectangle_min contient l’indice de l’élément le plus petit de la liste. On doit à ce stade, échanger cet élément et le premier élément. Comme nous avons pu le voir dans l’exercice II, il faut une variable temporaire pour échanger les valeurs de deux variables. Si on met la valeur du plus petit élément directement à la position 0, nous perdons la valeur contenue à la position 0. Il faut donc la stocker temporairement dans une autre variable :
+Pour faire plus simple, nous pouvons également utiliser la fonction min()qui retourne directement le plus petit élément d’une liste. Nous avons aussi besoin de la fonction index() afin d’accéder à la position du plus petit élément.
+
+```
+indice_min = rect.index(min(rect))
+```
+
+Après cette opération, indice_min contient l’indice de l’élément le plus petit de la liste. On doit à ce stade, échanger cet élément et le premier élément. Comme nous avons pu le voir dans l’exercice 3, il faut une variable temporaire pour échanger les valeurs de deux variables. Si on met la valeur du plus petit élément directement à la position 0, nous perdons la valeur contenue à ce moment-là à la position 0. Il faut donc la stocker temporairement dans une autre variable :
 
 ```
 # échange l’élément le plus petit et le premier élément
-rectangle_temp = rectangles[0]
-rectangles[0]	 = rectangles[rectangle_min]
-rectangles[rectangle_min] = rectangle_temp 
+rect_temp = rect[0]
+rect[0] = rect[indice_min]
+rect[indice_min] = rect_temp
 ```
 
-On doit ensuite rechercher le plus petit élément de la liste en excluant le premier élément, et l’échanger avec le deuxième élément de la liste. On reprend le même code que précédemment, mais on commence le parcours de la liste et la comparaison des éléments à 2 au lieu de 1.
-
-```
-rectangle_min = 1
-# trouve le rectangle le plus petit de la liste rectangles[1:]
-for i in range(2:len(rectangles)):
-	if rectangles[i] < rectangles[i-1] :
-		rectangle_min = i
-# échange l’élément le plus petit et le deuxième élément
-rectangle_temp = rectangles[1]
-rectangles[1]	 = rectangles[rectangle_min]
-rectangles[rectangle_min] = rectangle_temp
-```
-
-La suite de l’algorithme consiste à rechercher ensuite le plus petit élément de la liste restante, en excluant le premier et deuxième élément, et l’échanger avec le troisième élément. A nouveau on peut reprendre le même code, mais on fait incrémenter tous les indices de 1. On parcourt la liste à partir du troisième élément, donc l’élément avec un index 2. 
+Là encore, il est possible de l’écrire de manière plus compacte en Python. En affectant les deux variables simultanément, c’est Python qui se charge de créer la variable temporaire :
 
 
 ```
-rectangle_min = 2
-# trouve le rectangle le plus petit de la liste rectangles[2:]
-for i in range(3:len(rectangles)):
-	if rectangles[i] < rectangles[i-1] :
-		rectangle_min = i
-# échange l’élément le plus petit et le troisième élément
-rectangle_temp = rectangles[2]
-rectangles[2]	 = rectangles[rectangle_min]
-rectangles[rectangle_min] = rectangle_temp
+rect[0], rect[indice_min] = rect[indice_min], rect[0]
 ```
 
-On détecte un pattern qui se répète. On fait toujours les mêmes actions, mais on commence à une position différente. Plutôt que de réécrire le même code autant de fois que d’éléments dans la liste (moins 1), on peut remplacer l’indice de début par une variable que l’on incrémente. 
+On doit ensuite refaire exactement les mêmes opérations, mais en excluant le premier élément qui est bien trié. Donc on va rechercher le plus petit élément de la liste restante, et l’échanger cette fois-ci avec le deuxième élément de la liste (position 1). On adapte le code :
 
+
+```
+# trouve le rectangle le plus petit de la liste rect[1:]
+indice_min = rect.index(min(rect[1:]))
+
+# échange le plus petit élément avec le deuxième élément
+rect[1], rect[indice_min] = rect[indice_min], rect[1]
+```
+
+La suite de l’algorithme consiste à nouveau à rechercher le plus petit élément de la liste restante, en excluant le premier et deuxième élément, et l’échanger avec le troisième élément (premier élément non trié). A nouveau on peut reprendre le même code, mais on incrémente tous les indices de 1 :
+
+```
+# trouve le rectangle le plus petit de la liste rect[2:]
+indice_min = rect.index(min(rect[2:]))
+
+# échange le plus petit élément avec le troisième élément
+rect[2], rect[indice_min] = rect[indice_min], rect[2]
+```
+
+On détecte un pattern qui se répète. On fait toujours les mêmes opérations, mais on commençant à une position différente. Plutôt que de réécrire le même code autant de fois que d’éléments dans la liste, on peut remplacer l’indice de début par une variable que l’on incrémente. Notez que ce code est répété len(rect)-1 fois et pas autant de fois qu’il y a des éléments de la liste, car on doit pouvoir comparer et échanger 2 éléments. 
 
 ```
 # pour tous les éléments de la liste non triée
-for j in range(0,len(rectangles)-1):
-	rectangle_min = j
-	# trouve le rectangle le plus petit de la liste rectangles[j:]
-	for i in range(j+1:len(rectangles)):
-		if rectangles[i] < rectangles[i-1] :
-			rectangle_min = i
+for j in range(0,len(rect)-1):
 
-# échange l’élément le plus petit et le j-ième élément
-	rectangle_temp = rectangles[rectangle_min]
-	rectangles[rectangle_min] = rectangles[j]
-	rectangles[j] = rectangle_temp
+	# trouve le rectangle le plus petit de la liste rect[j:]
+	indice_min = rect.index(min(rect[j:]))
+
+    # échange le plus petit élément et le j-ième élément
+    rect[j], rect[indice_min] = rect[indice_min], rect[j]
 ```
 
-Notez que cela rend le programme utilisable pour toutes les longueurs de la liste, on n’a pas besoin de savoir à l’avance combien d’éléments sont contenus dans la liste. Au lieu de répéter le code un nombre prédéterminé de fois, le code s’exécute autaut de fois qu’il y a d’éléments dans la liste (moins 1, car on compare toujours 2 éléments).
+Le principal avantage de cette ***factorisation*** (réécriture) est que maintenant notre code fonctionne pour toutes les longueurs de listes. Nous n’avons plus besoin de savoir à l’avance combien d’éléments sont contenus dans la liste (combien de fois répéter les opérations). Au lieu de répéter le code un nombre prédéterminé de fois, le code s’exécute autant de fois qu’il y a d’éléments dans la liste (moins 1, car on compare toujours 2 éléments).
 
-Plutôt que de définir le contenu de la liste rectangles, on peut encapsuler tout le code dans une fonction qui reçoit la liste en argument.
+L’étape suivante consiste à encapsuler tout le code dans une fonction qui reçoit la liste comme paramètre, afin de le rendre utilisable par différents programmes sans voir à copier-coller le code. Cela permet en cas d’erreur de facilement corriger la fonction, sans avoir à savoir où elle a été utilisée.
 
 ```
 # Tri par sélection
-fonction tri_selection(rectangles) :
-	# pour tous les éléments de la liste non-triée
-	for j in range(0,len(rectangles)-1):
-		rectangle_min = j
-		...
+def fonction tri_selection(rect) :
+    
+    # pour tous les rectangles de la liste non triée
+    for j in range(0,len(rect)-1):
+   
+        # trouve le rectangle le plus petit de la liste rect[j:] 
+        indice_min = rect.index(min(rect[j:]))
+ 
+        # échange le plus petit élément et le j-ième élément
+        rect[j], rect[indice_min] = rect[indice_min], rect[j]
 ```
 
-Finalement le terme rectangles n’est pas assez général, car le tri par sélection peut être utiliser pour trier toute sortes d’éléments. Ainsi on peut renommer les variables qui contiennent le terme rectangle par element.
+Finalement le terme rect n’est pas assez général, car le tri par sélection peut être utilisé pour trier toutes sortes d’éléments et pas seulement des rectangles. Ainsi on peut renommer la variable rect par liste :
+
 
 ```
 # Tri par sélection
-fonction tri_selection(elements) :
-	
-	# pour tous les éléments de la liste non-triée
-	for j in range(0,len(elements)-1):
-		element_min = j
-		
-		# trouve l’élément le plus petit de la liste elements[j:]
-		for i in range(j+1:len(elements)):
-			if elements[i] < elements[i-1] :
-			element_min = i
-
-		# échange l’élément le plus petit et l'élément j
-		element_temp = rectangles[element_min]
-		elements[element_min] = elements[j]
-		elements[j] = element_temp
+def fonction tri_selection(liste) :
+    
+    # pour tous les éléments de la liste non triée
+    for j in range(0,len(liste)-1):
+   
+        # trouve l’élément le plus petit de liste[j:]
+	    indice_min = liste.index(min(liste[j:]))
+ 
+        # échange le plus petit élément et le j-ième élément
+        liste[j], liste[indice_min] = liste[indice_min], liste[j]
 ```
 
-::::{admonition,attention} Exercices supplémentaires
+Pour trier la liste rect définie au tout début, il suiffit d’appeler la fonction tri_selection avec la liste en argument. Ici rect_tri contient la liste triée que l’on affiche :
 
-**Exercice 1.** ![](../plugged.png) Ecrire un algorithme qui détermine si un nombre donné est positif ou négatif. Transcrire l’algorithme en un programme Python.
+```
+rect = [3,4,1,2,6,5]
+rect_tri = tri_selection(rect)
+print(rect_tri)
+```
 
-**Exercice 2.** ![](../plugged.png) Ecrire un algorithme qui calcule la suite de Fibonacci. Traduire l’algorithme en une fonction Python.
+::::{admonition,hint} Conseil
 
-**Exercice 3.** ![](../plugged.png) Créer un tableau (une liste en python) qui contient les valeurs de 1 à n dans un ordre aléatoire, où n prend la valeur 100. Utiliser le module random.
+Vous passez trop de temps à chercher vos affaires ? Pensez à mieux les ranger. Le temps perdu à ranger ses affaires est inférieur à celui que l’on passe à les chercher plus tard.
 
-Implémenter au moins deux des autres algorithmes de tri vu au cours.
-A l’aide du module time, chronométrer le temps que ça prend pour trier une liste de 10, 100, 1000 et 10000 objets. 
-
-Afficher le résultat sous forme de courbe dans un tableur : noter les temps que ça prend de trier un tableau avec 10, 100, 1000, 10000, 100000 éléments. Ce graphique permet de visualiser le temps d’exécution du tri en fonction de la taille de la liste.
-
-**Exercice 4.** ![](../plugged.png) Analyser les oeuvres cubiques de Piet Mondrian. Trouver un algorithme qui permet de créer une oeuvre qui pourrait être attribuée à Mondrian.
-
-**Exercice 5.** ![](../plugged.png) Télécharger une liste des mots en français.  Imaginez plusieurs algorithmes qui permettent de parcourir cette liste au hasard (ou pas complètement au hasard) et génèrent des poèmes. Programmez-les et faites un concours de poésie numérique dans votre classe. 
 ::::
+
+
+## Exercices supplémentaires
+
+::::{admonition,attention} Exercice 9
+
+![](../plugged.png) Ecrire un algorithme qui détermine si un nombre donné est positif ou négatif. Transcrire l’algorithme en un programme Python.
+
+::::
+
+::::{admonition,attention} Exercice 10
+
+![](../plugged.png) Créer une liste qui contient les valeurs de 1 à n dans un ordre aléatoire, où n prend la valeur 100. Vous pouvez utiliser la fonction shuffle() module random.
+
+Implémenter au moins deux des trois algorithmes de tri vu au cours.
+A l’aide du module time et de sa fonction time(), chronométrer le temps que ça prend pour trier une liste de 100, 500, 1000, 10’000, 20’000, 30’000, 40’000 et 50’000. 
+
+Noter les temps obtenus et les afficher sous forme de courbe dans un tableur. Ce graphique permet de visualiser le temps d’exécution du tri en fonction de la taille de la liste. Que constatez‑vous ?
+
+Sur la base de ces mesures pouvez-vous prédire combien de temps prendra le tri de 100’000 éléments ? 
+
+Lancer votre programme avec 100’000 éléments et comparer le temps obtenu avec votre estimation.
+
+::::
+
+::::{admonition,attention} Exercice 11
+
+![](../plugged.png) Ecrire un algorithme qui calcule la suite de Fibonacci. Traduire l’algorithme en une fonction Python. Comparer avec les solutions trouvées par vos camarades de classe.
+::::
+
+
