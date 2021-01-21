@@ -37,7 +37,7 @@ C'est l'objectif même du projet d'accueillir vos retours, idées d'amélioratio
 💡 [Ouvrez une issue Github](https://github.com/edunum-sec2/ressources/issues)
 : pour nous suggérer de nouvelles idées, nous donner des retours sur vos expériences, ou aider d'autres utilisateurs à profiter de ces ressources. to 
 
-✉️ [Contactez-nous pour du feedback](https://www.epfl.ch/education/educational-initiatives/center-learn/)
+✉️ [Contactez-nous pour une éventuelle discussion](https://www.epfl.ch/education/educational-initiatives/center-learn/)
 : dans le but de continuer de faire évoluer ce projet dans le bon sens. 
 
 🧪 [Récoltez du feedback mesuré scientifiquement](https://www.epfl.ch/education/educational-initiatives/center-learn/)
@@ -54,7 +54,7 @@ C'est l'objectif même du projet d'accueillir vos retours, idées d'amélioratio
 
 ## Chapitrage
 
-Les ressources sont découpées selon un chapitrage qui correspond au plan d'études (ajouter réf). Elles sont divisées en quatre parties, dont nulle n'a de préseance sur les autres. Il appartient à l'enseignante ou l'enseignant de choisir l'ordre dans lequel les contenus seront abordés. Le fait que les chapitres soient successifs est le résultat des limitations de l'affichage. Pour atténuer quelque peu ce problème nous avons choisi de renoncer à des numéros de chapitre. 
+Les ressources sont découpées selon un chapitrage qui correspond au plan d'études romand (ajouter réf). Elles sont divisées en quatre parties, dont nulle n'a de préseance sur les autres. Il appartient à l'enseignante ou l'enseignant de choisir l'ordre dans lequel les contenus sont abordés. Le fait que les chapitres soient successifs est le résultat des limitations de l'affichage. Pour atténuer quelque peu ce problème nous avons choisi de renoncer à une numérotation des chapitres. 
 
 🟠 [Représentation de l'information](theme/representation-information/eleve.md)
 : Où il est question du passage du système décimal au `système binaire`, ainsi que des problématiques de traitement des données telles que `l'encodage`, `la compression`, `l'échantillonnage`, `le cryptage`, et la `représentation des caractères, des images et des sons` sous forme de bits. 

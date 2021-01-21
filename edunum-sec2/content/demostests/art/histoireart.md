@@ -11,5 +11,15 @@ Néanmoins, nous commencerons par une courte présentation de l'utilisation d'al
 ## 
 
 Zellige
+Rangoli (India)
+Mandala
 Tessellation
 escher tessellation
+Pavage apériodique (Raphael Robinson, Roger Penrose, Richard Hassell)
+Cohomology
+Jacquard Machine (punch card loom)
+Plotter drawing (1950's)
+Adding randomness
+Generative art
+Input / Output transformations (ex : Kinect)
+Augmented reality

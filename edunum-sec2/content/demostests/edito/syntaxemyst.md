@@ -8,8 +8,6 @@ Pour voir la syntaxe MyST brut, ouvrir le document dans un éditeur markdown.
 
 ### Encart
 
-> Note : dans tout ce qui suit, on peut remplacer les "`" par des ":". 
-
 ```{admonition} Mon titre
 :class: tip
 Mon contenu
@@ -17,18 +15,32 @@ Mon contenu
 (optencarts)=
 #### Optimisations des encarts
 
-* les styles `:class:` disponibles sont : `note, warning, tip, caution, attention, danger, error, hint, important`.
+* les styles `:class:` disponibles sont : `note, warning, tip, caution, attention, danger, error, hint`.
 
-* il est possible de *nester* des encarts dans des encarts. Pour cela, en lieu et place du contenu, ajouter la même syntaxe que pour déclarer l'encart de base, mais en diminuant le nombre de "`". Exemple ci-dessous. 
-
-````{admonition} Mon titre
-:class: tip
-```{admonition} Mon sous-titre
+```{admonition} Mon titre
 :class: note
-Mon contenu de sous-titre
-```
 Mon contenu
-````
+```
+```{admonition} Mon titre
+:class: caution
+Mon contenu
+```
+```{admonition} Mon titre
+:class: attention
+Mon contenu
+```
+```{admonition} Mon titre
+:class: danger
+Mon contenu
+```
+```{admonition} Mon titre
+:class: error
+Mon contenu
+```
+```{admonition} Mon titre
+:class: hint
+Mon contenu
+```
 
 * on peut ajouter une fonction dropdown à un encart, en déclarant `dropdown` après la déclaration `admonition` dans les curly brackets. Attention : pour une raison que j'ignore, dans le cas des dropdowns, il faut déclarer la `class`juste après la déclaration `dropdown`. Exemple ci-dessous : 
 
@@ -42,7 +54,7 @@ Voilà le contenu du dropdown. Attention ! Je ne sais pas pourquoi mais le dropd
 
 ````{admonition} Mon titre
 :class: tip
-```{image} images/img1.png
+```{image} images/landing/img1.jpg
 ```
 Mon contenu
 ````
@@ -90,7 +102,7 @@ Note : les "/" qui précèdent le signe "=" et la déclaration du niveau de titr
 
 * on insère une image de la façon suivante : 
 
-```{image} images/img1.png
+```{image} images/landing/img1.jpg
 :alt: titreimage1
 :width: 200px
 :align: center

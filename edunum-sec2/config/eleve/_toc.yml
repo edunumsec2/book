@@ -7,9 +7,9 @@
   chapters:
   - file: content/demostests/edito/presentation-ressources
     sections: 
+      - file: content/demostests/edito/exempleutilisation
       - file: content/demostests/edito/modificationsressources
       - file: content/demostests/edito/participation-developpement
-      - file: content/demostests/edito/exempleutilisation
       - file: content/demostests/edito/syntaxemyst
 
     

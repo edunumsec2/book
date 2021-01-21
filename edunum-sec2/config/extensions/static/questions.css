@@ -15,11 +15,11 @@
 }
 
 .question .admonition-title {
-  background-color: #98bfe9;
+  background-color: rgb(233, 242, 249);
 }
 
 .question .admonition {
-  border-left: .2rem solid #427dbd;
+  border-left: .2rem solid hsl(211, 48%, 50%);
 }
 
 .question .admonition-title:before {
@@ -27,5 +27,5 @@
   padding-left: 2px;
   font-size: 1.1em;
   font-weight: bold;
-  content:"?";
+  content:"✏️";
 }
