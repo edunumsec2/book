@@ -89,15 +89,23 @@ li.simple {
 <br>
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-<b> 🙋‍♀️ Le renversement d'un modèle</b>
+<b> 📚 Une nouvelle approche du savoir</b>
 </div>
 
 
 <br>
 
-Si l'on ne présente plus Wikipédia, c'est que l'encyclopédie en ligne représente aujourd'hui le succès le plus remarquable du web collaboratif. Lancé en 2001 par Jimmy Wales et Larry Sanger, le projet est audacieux : proposer aux internautes de rédiger eux-mêmes les articles d'une encyclopédie libre et gratuite. Le principe de création de savoir par une "foule" d'internautes non-experte fait débat. Larry Sanger, l'un des fondateurs de l'encyclopédie, abandonne même le projet tant il est en désaccord avec cette idée. En effet, comment garantir la justesse des contenus sans expertise?
+Si l'on ne présente plus Wikipédia, c'est que l'encyclopédie en ligne représente aujourd'hui le succès le plus remarquable du web collaboratif. Lancé en 2001, l'idée est audacieuse : proposer aux internautes de rédiger eux-mêmes les articles d'une encyclopédie libre et gratuite.
 
-Vingt ans après sa création, le fonctionnement de l'encyclopédie a largement fait ses preuves et Wikipédia est l'un des sites les plus consultés au monde. Un précieux bien commun! Son autorité est telle que pour chaque mot-clé saisi dans un moteur de recherche, l'article correspondant arrive en tête des résultats. ... L'une des condition de ce succès réside toutefois dans l'établissement d'[une série de règles](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:R%C3%A8gles_et_recommandations) qui permettent une auto-gouvernance de la communauté.
+Le projet de Jimmy Wales prend forme en mars 2000 et repose tout d'abord sur un fonctionnement classique. Nommée  *Nupedia*, cette première encyclopédie fait appel à l'expertise de spécialistes de différents domaines. Le philosophe Larry Sanger, rédacteur en chef, s'assure de la fiabilité des articles. Mais malgré un investissement financier conséquent, le projet avance lentement et seule une vingtaine d'articles sont rédigés en une année. Face à ce constat, le duo décide d'opter pour un nouvel outil, le *wiki*, un logiciel qui permet la gestion collaborative des contenus et la sauvegarde des modifications sur une même base de données.
+
+Dès le premier mois, plus de 1000 articles qui sont déjà en ligne.
+
+Grâce à un logiciel informatique, le *wiki*, chacun peut contribuer à l'édition du site. Toutes les modifications sont gardées en mémoire et consultables. 
+
+Pourtant, le principe de création de savoir par une "foule" d'internautes non-experte est loin de faire l'unanimité. Beaucoup assurent que le projet est voué à l'échec. Larry Sanger, l'un des fondateurs de l'encyclopédie, abandonne même le projet tant il est en désaccord avec cette idée. En effet, comment garantir la justesse des contenus sans expertise?
+
+Vingt ans après sa création, le fonctionnement de l'encyclopédie a largement fait ses preuves et Wikipédia est l'un des sites les plus consultés au monde. Il démontre la possibilité de créer un bien commun au travers de l'intelligence collective. Son autorité est telle que pour chaque mot-clé saisi dans un moteur de recherche, l'article correspondant arrive en tête des résultats. ... L'une des condition de ce succès réside toutefois dans l'établissement d'[une série de règles](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:R%C3%A8gles_et_recommandations) qui permettent une auto-gouvernance de la communauté.
 
 L'une des particularité de Wikipédia, est qu'elle occupe une postition stratégique entre une actualité médiatique "dans l'action" et un savoir encyclopédique qui permet la prise de recul. Ainsi, Wikipédia ne publie pas d'article inédit ou de témoignage. Pour qu'un sujet y figure, il doit avoir fait l'objet d'une couverture médiatique préalable. Cependant, les savoirs peuvent être actualisés très rapidement au fil des événements. Un principe complémentaire est celui de la neutralité de point de vue : les contributeurs ne peuvent pas exprimer leur opinion, ils ne peuvent que reporter celles des autres. L'encyclopédie est aujourd'hui montrée saluée sa gestion des *fake news*. L'observatoire du conspirationnisme, Consiparcy Watch, parle même d'un ["îlot de rationalité dans un océan de rumeurs"](https://www.conspiracywatch.info/covid-19-wikipedia-fait-figure-dilot-de-rationalite-dans-un-ocean-de-rumeurs.html). 
 
