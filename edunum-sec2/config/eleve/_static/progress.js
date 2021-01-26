@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var max = elem.scrollHeight - elem.clientHeight;
     var progress = (pos / max);
 
-    ring.style.strokeWidth = 6 + 28 * Math.pow(progress, 3);
+    ring.style.strokeWidth = 6 + 28 * Math.pow(progress, 5);
     ring.style.strokeDashoffset = circumference * (1 - progress);
   }
 
