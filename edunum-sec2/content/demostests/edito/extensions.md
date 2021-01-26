@@ -102,3 +102,63 @@ Dans le texte suivant, certains {bl}`>mots|trucs|machins` sont laissés {bl}`pou
 Dans le texte suivant, certains {bl}`>mots|trucs|machins` sont laissés {bl}`pour compte|>blancs|verts|seuls`.
 ```
 `````
+
+## Vidéos YouTube
+
+Pour ajouter une vidéo YouTube directement dans le document, utiliser la directive `youtube`.
+La directive attend en argument l'identifiant de la vidéo (généralement 11 caractères au format `base64url`).
+L'identifiant d'une vidéo YouTube peut être trouvé dans l'URL de la video, juste après la chaîne `?v=`.
+Par exemple, l'identifiant de la vidéo à l'URL `https://www.youtube.com/watch?v=dQw4w9WgXcQ` est `dQw4w9WgXcQ`.
+
+`````{tabbed} Aperçu
+```{youtube} uHKfrz65KSU
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{youtube} uHKfrz65KSU
+```
+````
+`````
+
+### Options
+
+#### Départ de la lecture
+
+Par défaut, la lecture commence au début de la vidéo.
+Via l'option `:start:`, il est possible de faire commencer la lecture à un endroit différent de la vidéo.
+L'option `:start:` attend en argument un nombre entier qui indique la seconde à laquelle la lecture doit commencer.
+
+`````{tabbed} Aperçu
+```{youtube} _OBlgSz8sSM
+:start: 18
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{youtube} _OBlgSz8sSM
+:start: 18
+```
+````
+`````
+
+#### Contrôles
+
+Par défaut, les boutons de contrôle de la vidéo sont affichés dans une barre en bas de la vidéo.
+Ils peuvent cependant être cachés via l'option `:nocontrols:`.
+
+`````{tabbed} Aperçu
+```{youtube} wGGqWwVb3sU
+:nocontrols:
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{youtube} wGGqWwVb3sU
+:nocontrols:
+```
+````
+`````
