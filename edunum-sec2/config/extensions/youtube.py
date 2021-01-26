@@ -26,7 +26,7 @@ def visit_youtube_html(self, node):
       '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/' + 
       node["vid"] + extra + '" frameborder="0" ' +
       'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' + 
-      'allowfullscreen>"')
+      'webkitallowfullscreen mozallowfullscreen allowfullscreen>"')
 
 def depart_youtube_html(self, node):
     self.body.append("</iframe>")

@@ -1,0 +1,8 @@
+.switchtube {
+  text-align: center;
+}
+
+.switchtube iframe {
+  margin: auto;
+  display: inline-block;
+}

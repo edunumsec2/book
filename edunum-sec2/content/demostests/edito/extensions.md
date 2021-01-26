@@ -162,3 +162,42 @@ Ils peuvent cependant être cachés via l'option `:nocontrols:`.
 ```
 ````
 `````
+
+## Vidéos SwitchTube
+
+Pour ajouter une vidéo hébergée sur SwitchTube directement dans le document, utiliser la directive `switchtube`.
+La directive attend en argument l'identifiant de la vidéo (généralement une suite de caractères au format `base64url`).
+L'identifiant d'une vidéo SwitchTube peut être trouvé à la fin de l'URL de la video.
+Par exemple, l'identifiant de la vidéo à l'URL `https://tube.switch.ch/videos/f6365946` est `f6365946`.
+
+`````{tabbed} Aperçu
+```{switchtube} f6365946
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{switchtube} f6365946
+```
+````
+`````
+
+### Options
+
+#### Cacher le titre
+
+Il est possible d'ajouter l'option `:notitle` pour cacher le titre de la vidéo dans le lecteur.
+
+`````{tabbed} Aperçu
+```{switchtube} f6365946
+:notitle:
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{switchtube} f6365946
+:notitle:
+```
+````
+`````

@@ -57,6 +57,7 @@ sphinx:
     questions: ../extensions/
     blanks: ../extensions/
     youtube: ../extensions/
+    switchtube: ../extensions/
 
 #######################################################################################
 # Interact link settings
