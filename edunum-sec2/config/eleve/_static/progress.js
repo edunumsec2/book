@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     '</svg>');
 
   var ring = $("#progress-ring .progress")[0];
+  var outer = $("#progress-ring .outer")[0];
   var radius = ring.r.baseVal.value;
   var circumference = radius * 2 * Math.PI;
 
@@ -18,8 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var pos = elem.scrollTop;
     var max = elem.scrollHeight - elem.clientHeight;
     var progress = (pos / max);
-
-    ring.style.strokeWidth = 6 + 28 * Math.pow(progress, 5);
+    var strokeWidth = 6 + 28 * Math.pow(progress, 5);
+    ring.style.strokeWidth = strokeWidth;
+    outer.style.strokeWidth = strokeWidth;
     ring.style.strokeDashoffset = circumference * (1 - progress);
   }
 

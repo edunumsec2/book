@@ -25,6 +25,7 @@
   stroke: rgb(187, 187, 187);
   stroke-width: 6;
   fill-opacity: 0;
+  transition: stroke-width 0.1s;
   fill: transparent;
   fill-opacity: 0;
 }
