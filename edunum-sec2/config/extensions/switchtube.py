@@ -18,11 +18,17 @@ def visit_switchtube_html(self, node):
     if len(extras) > 0:
       extra = "?" + '&'.join(key + "=" + value for (key, value) in extras)
 
+    start = ""
+    if node["start"] is not None:
+      seconds = node["start"] % 60
+      minutes = node["start"] // 60
+      start = "#" + str(minutes) + ":" + str(seconds)
+
     tag = self.starttag(node, "div", CLASS="switchtube")
     self.body.append(tag.strip())
     self.body.append(
       '<iframe width="560" height="315" src="https://tube.switch.ch/embed/' + 
-      node["vid"] + extra + '" frameborder="0" ' +
+      node["vid"] + start + extra + '" frameborder="0" ' +
       'allow="fullscreen; encrypted-media; picture-in-picture" ' + 
       'allowfullscreen webkitallowfullscreen mozallowfullscreen>"')
 
@@ -36,6 +42,7 @@ class SwitchTubeVideo(SphinxDirective):
     optional_arguments = 0
     final_argument_whitespace = False
     option_spec = {
+      "start": directives.nonnegative_int,
       "notitle": directives.flag
     }
     has_content = False
@@ -44,6 +51,7 @@ class SwitchTubeVideo(SphinxDirective):
         video_id = self.arguments[0]
         container = switchtube_video("",
           vid=video_id,
+          start=self.options.get("start"),
           title="notitle" not in self.options)
         self.set_source_info(container)
 

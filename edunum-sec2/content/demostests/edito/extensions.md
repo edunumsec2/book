@@ -184,6 +184,26 @@ Par exemple, l'identifiant de la vidéo à l'URL `https://tube.switch.ch/videos/
 
 ### Options
 
+#### Départ de la lecture
+
+Par défaut, la lecture commence au début de la vidéo.
+Via l'option `:start:`, il est possible de faire commencer la lecture à un endroit différent de la vidéo.
+L'option `:start:` attend en argument un nombre entier qui indique la seconde à laquelle la lecture doit commencer.
+
+`````{tabbed} Aperçu
+```{switchtube} f6365946
+:start: 122
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{switchtube} f6365946
+:start: 122
+```
+````
+`````
+
 #### Cacher le titre
 
 Il est possible d'ajouter l'option `:notitle` pour cacher le titre de la vidéo dans le lecteur.
