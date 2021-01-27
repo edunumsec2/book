@@ -14,11 +14,12 @@ Zellige
 Rangoli (India)
 Mandala
 Tessellation
-escher tessellation
+Escher tessellation
 Pavage apériodique (Raphael Robinson, Roger Penrose, Richard Hassell)
 Cohomology
 Jacquard Machine (punch card loom)
 Plotter drawing (1950's)
+Teleprinter art
 Adding randomness
 Generative art
 Input / Output transformations (ex : Kinect)
