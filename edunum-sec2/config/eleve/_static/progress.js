@@ -14,16 +14,21 @@ document.addEventListener("DOMContentLoaded", function() {
   ring.style.strokeDasharray = "" + circumference + " " + circumference;
   ring.style.strokeDashoffset = "" + circumference;
 
-  function scrollListener(event) {
+  function scrollListener() {
     var elem = document.scrollingElement;
     var pos = elem.scrollTop;
     var max = elem.scrollHeight - elem.clientHeight;
-    var progress = (pos / max);
+    var progress = 1.0;
+    if (max > 0) {
+      progress = (pos / max);
+    }
     var strokeWidth = 6 + 28 * Math.pow(progress, 5);
     ring.style.strokeWidth = strokeWidth;
     outer.style.strokeWidth = strokeWidth;
     ring.style.strokeDashoffset = circumference * (1 - progress);
   }
+
+  scrollListener();
 
   document.addEventListener("scroll", scrollListener);
 });
