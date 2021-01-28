@@ -102,7 +102,7 @@ ol {
 <br>
 <br>
 
-Ce chapitre propose un éclairage sur l’économie du numérique au travers de quelques questionnements : Comment dépasser la notion de «**GAFAM**»? Quelles sont les logiques de déploiement des **plateformes numériques**? Que nous apprend le concept d’**économie de l’attention**?
+Ce chapitre propose un éclairage sur l’économie du numérique au travers de quelques questionnements : Le terme «**GAFAM**» est-il pertinent? Quelles sont les logiques de déploiement des **plateformes numériques**? Que nous apprend le concept d’**économie de l’attention**?
 
 <br>
 
@@ -213,7 +213,7 @@ Toutefois, l'efficacité réelle de ces stratégies mérite d'être discutée. E
 
 ### Ressources 
 
-* [Un article](https://www.numerama.com/tech/227930-si-vous-souhaitez-etre-credibles-arretez-de-dire-les-gafa.html) qui souligne l'incohérence de l'acronyme "GAFA" (Numérama)
+* [Un article](https://www.numerama.com/tech/227930-si-vous-souhaitez-etre-credibles-arretez-de-dire-les-gafa.html) qui souligne les incohérences de l'acronyme "GAFA" (Numérama)
 * [Un article](https://www.monde-diplomatique.fr/2019/01/ZUBOFF/59443) de la chercheuse Shoshanna Zuboff sur le concept de capitalisme de surveillance (Le Monde diplomatique)
 * [Un dossier](https://www.cae-eco.fr/plateformes-numeriques-reguler-avant-qu-il-ne-soit-trop-tard) sur le pouvoir "structurant" des plateformes et ses enjeux de régulation (rédigé par Conseil d'analyse économique)
 * [Le livre](https://www.cairn.info/sociologie-du-numerique--9782200291655-page-171.htm) "Culture numérique" (2019) de Dominique Cardon (chapitre "économie des plateformes")

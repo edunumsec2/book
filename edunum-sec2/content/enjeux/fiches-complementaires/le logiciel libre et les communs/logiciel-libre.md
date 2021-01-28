@@ -84,7 +84,7 @@ li.simple {
 
 <br>
 
-# Wikipédia
+# Le logiciel libre et les "communs" numériques
 
 <br>
 
@@ -95,17 +95,13 @@ li.simple {
 
 <br>
 
-Si l'on ne présente plus Wikipédia, c'est que l'encyclopédie en ligne représente aujourd'hui le succès le plus remarquable du web collaboratif. Lancé en 2001, le projet est audacieux : proposer aux internautes de rédiger eux-mêmes les articles d'une encyclopédie libre et gratuite.
+Un bien antirival est, selon Weber, un bien dont l’usage n’est pas privatif par nature. Certains biens
+matériels sont généralement antirivaux : l’usage d’un lampadaire, par exemple, ne s’accompagne pas de
+l’indisponibilité de ce bien pour autrui (sauf si un nombre trop important de personnes veulent en profiter).Mais c’est avec la dématérialisation des biens que ce concept prend tout son sens : nous pouvons dupliquer un livre numérique un nombre indéterminé de fois sans pour autant en perdre l’usage.
 
-L'idée de Jimmy Wales prend forme en mars 2000 et repose tout d'abord sur un système de contribution classique. Nommée  *Nupedia*, cette première encyclopédie fait appel à des spécialistes de différents domaines pour rédiger les articles. Le philosophe Larry Sanger, rédacteur en chef, s'assure de leur fiabilité. Mais malgré un investissement financier conséquent, le projet avance lentement et seule une vingtaine d'articles sont rédigés en une année. Face à ce constat, le duo décide d'opter pour un nouvel outil, le *wiki*, un logiciel qui permet la gestion collaborative des contenus et la sauvegarde des modifications sur une même base de données. D'abord pensé comme un support à l'écriture de *Nupedia*, le *wiki* permet à tout un chacun de contribuer aux contenus. Les articles du *wiki* progressent bien plus rapidement et la plateforme devient rapidement le coeur de l'encyclopédie. En 2001, Wikipédia dispose de son propre nom de domaine et en un mois, plus de 1000 articles sont déjà en ligne. Deux ans plus tard, *Nupedia* est définitivement abandonné au profit de Wikipédia.
 
-Vingt ans après sa création, le fonctionnement de l'encyclopédie a largement fait ses preuves et Wikipédia est l'un des sites les plus consultés au monde. Son modèle participatif et libre reste inchangé. Wikipédia est financé par des dons, au travers de l'organisation à but non lucratif Wikimedia Foundation. Son autorité est telle que pour chaque mot-clé saisi dans un moteur de recherche, l'article correspondant arrive en tête des résultats.
-
-Pourtant, le principe de création de savoir par une "foule" d'internautes non-experte était loin de faire l'unanimité. Beaucoup assuraient que le projet était voué à l'échec. Même au sein de Wikipédia, les points de vue divergaient. Larry Sanger, qui déplorait l'absence d'expertise, quitta le projet lorsque le comité scientifique fut abandonné. En effet, comment garantir la justesse des contenus sans aucune forme d'autorité?
-
- L'une des conditions de ce succès réside dans l'établissement d'[une série de règles](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:R%C3%A8gles_et_recommandations) qui garantissent une auto-gouvernance de la communauté. Ces dernières régissent les débats autour de la rédaction des articles et permettent de trancher en cas de conflit. L'un de ces principes est la neutralité de point de vue : les contributeurs ne doivent pas exprimer leur opinion, ils ne font que reporter celles des autres. 
- 
- Cette auto-régulation des articles grâce à des règles communes a permis à Wikipédia de proposer un contenu de qualité. L'encyclopédie est aujourd'hui saluée pour sa gestion des *fake news*. En France, L'observatoire du conspirationnisme, Consiparcy Watch, parle même d'un ["îlot de rationalité dans un océan de rumeurs"](https://www.conspiracywatch.info/covid-19-wikipedia-fait-figure-dilot-de-rationalite-dans-un-ocean-de-rumeurs.html). 
+Ce n’est qu’à partir de la fin des années 1960 que le logiciel est devenu un produit qui pouvait être
+acheté séparément du matériel.
 
 <br>
 
@@ -115,7 +111,8 @@ Pourtant, le principe de création de savoir par une "foule" d'internautes non-e
 
 <br>
 
-Le fonctionnement collaboratif de Wikipédia s'inscrit  dans l'héritage culturel des pionniers d'Internet. Les valeurs de partage et de collaboration, l'absence de hiérarchie, l'accès libre à la connaissance et la valorisation des compétences pratiques constituent les fondemements de la culture *hacker*. Wikipédia doit d'ailleurs beaucoup à Richard Stallman, l'initiateur du mouvement du logiciel libre. Celui-ci défend l'idée que chacun puisse accéder et participer librement à construction du savoir. Lorsqu'il découvrit *Nupedia*, Richard Stallman réussit à convaincre ses fondateurs d'adopter la licence "GNU de documentation libre" qui permet le partage, la copie et la modification d'un contenu. Aujourd'hui, Wikipédia incarne encore cet idéal de création d'un bien commun grâce à la mise en réseau d'une communauté. Le web participatif et les outils du logiciel libre ont permis d'envisager, puis d'ancrer dans les pratiques une nouvelle forme de production et d'accès à la connaissance.
+Le fonctionnement collaboratif de Wikipédia s'inscrit parfaitement dans l'héritage culturel des pionniers d'Internet. Défiant toute forme d'autorité et de hiérarchie, ces jeunes *hackers* valorisaient avant tout les compétences techniques. Celles-ci se déployaient en dehors de toute instance étatique ou commerciale. Aujourd'hui, le mouvement du logiciel libre continue à porter ces principes
+
 <br>
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
@@ -126,7 +123,7 @@ Le fonctionnement collaboratif de Wikipédia s'inscrit  dans l'héritage culture
 <br>
 
  Bien que le succès du projet Wikipédia soit largement acclamé, quelques nouveaux points de controverse sont apparus au cours des dernières années. Si la fiabilité n'est plus remise en question, c'est la neutralité de l'encylopédie qui est questionnée. En effet, les biais présents au sein de notre société se réflètent également dans le profil des auteurs et le choix des contenus. Ces derniers sont créés par un nombre restreint de contributeurs, en majorité des hommes issus de pays occidentaux. Ils ne sont donc que peu représentatifs d'une communauté globale et diverse telle qu'on pourrait l'imaginer. Par ailleurs, certains sujets peu médiatisés n'ont qu'une faible visibilité. Ainsi, les personnalités féminines (scientifiques, écrivaines, artistes) moins représentées dans les médias, tendent à l'être à également parmi les articles de Wikipédia. Il en va de même pour les articles qui concernent le monde extra-occidental ou les minorités. Le principe d'universalisme demeure difficilement atteignable. Dans l'objectif de combler ces lacunes, plusieurs initiatives ont vu le jour, dont le projet ["Noircir Wikipédia"](https://fr.wikipedia.org/wiki/Projet:Noircir_Wikip%C3%A9dia). 
- 
+
 Malgré ces critiques, Wikipédia est la preuve qu'une alternative pérenne au modèle commercial des plateformes est possible. Comme [le souligne Pierre-Yves Beaudouin](https://www.franceculture.fr/medias/fiabilite-pseudonymat-sources-wikipedia-et-lintelligence-des-foules), Président de Wikimédia France,"*Nous ne réussirons sans doute pas partout, mais proposer en 2021 une information fiable, gratuite, sans publicité, le tout élaboré par des bénévoles et soutenu financièrement par des millions de donateurs, est déjà pas mal. Tant mieux si le public souhaite que Wikipédia aille plus loin.*"
 
 
@@ -158,13 +155,10 @@ Malgré ces critiques, Wikipédia est la preuve qu'une alternative pérenne au m
 
   <div class="w3-show-inline-block">
   <div class="w3-bar">
-    <a href=../../grandes-thematiques/economie-numerique/economie-numerique.html class="button">Le logiciel libre et les «communs»</a>
     <a href=../../grandes-thematiques/economie-numerique/economie-numerique.html class="button">Économie du numérique</a>
-    
   </div>
   </div>
 </div>
-
 
 <br>
 <br>
