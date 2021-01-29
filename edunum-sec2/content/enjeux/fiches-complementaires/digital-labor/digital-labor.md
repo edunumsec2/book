@@ -194,13 +194,10 @@ Mais au milieu des années 2000, avec l’arrivée des plateformes, le regard po
 ## En classe
 
 Diffuser l’épisode [« Micro-travailler plus pour micro-gagner moins»](https://www.youtube.com/watch?v=Y8URdO7mDfg) de la série documentaire "Les invisibles" (France TV, 20 min.). 
- 
 
-`````{tabbed} Aperçu
-```{youtube} uHKfrz65KSU
-```
-`````
+<br>
 
+ <a href="https://www.youtube.com/watch?v=Y8URdO7mDfg"><img src="lesinvisibles.png" width="600"/></a>
 
 <br>
 <br>

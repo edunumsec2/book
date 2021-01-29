@@ -112,7 +112,7 @@ _________________
 ### Objectifs
 <br>
 
-* Être conscient·e de la diversité des modèles économiques du numérique
+* Prendre conscience de la diversité des modèles économiques du numérique
 * Comprendre les grands principes qui ont favorisé l’expansion des plateformes
 * Saisir les ressorts et les limites de la notion d’«économie de l’attention»
 
@@ -120,6 +120,7 @@ _________________
 
 _________________
   <br>
+
 
 ### Enjeux
 <br>
@@ -130,7 +131,9 @@ _________________
 
 <br>
 
-En une dizaine d'années, quelques grandes entreprises du numérique sont devenues des puissances économiques mondiales. Aux premiers rangs des capitalisations boursières, ces sociétés sont couramment regroupées sous l’acronyme  "GAFAM" (pour Google, Amazon, Facebook, Apple, Microsoft). Pourtant, leur association tend à masquer des cultures et modèles économiques différents. Bien qu'elles partagent quelques points communs (domination d'un secteur, forte influence, faible imposition, peu de régulation), ces derniers ne sont pas spécifiques au numérique et concernent également d'autres industries. Pour saisir les logiques qui guident ces entreprises, il est important d'identifier ce qu'elles sont et ce qu'elles font, au-delà de ce raccourci si souvent mobilisé dans le discours médiatique et politique. 
+En une quinzaine d'années, les fondements culturels d'Internet ont été ébranlés. Le projet d'un espace numérique commun, ouvert et décentralisé tel qu'imaginé par les pionners du réseau ne semble aujourd'hui plus qu'un rêve lointain. L'une des caractéristiques de ce changement réside dans la montée en puissance de quelques grands acteurs qui ont imposé leurs logiques commerciales et remplacé les standards ouverts par des environnements priopriétaires et opaques. L'essentiel des pratiques numériques se concentre désormais autour de quelques entreprises qui tentent, par des stratégies toujours plus sophistiquées, de tirer profit de chacune de nos interactions. Parmi ces entreprises, cinq font l'objet d'une attention médiatique et politique particulière.
+
+Aux premiers rangs des capitalisations boursières, ces sociétés sont couramment regroupées sous l’acronyme  "GAFAM" (pour Google, Amazon, Facebook, Apple, Microsoft). Pourtant, leur association tend à masquer des cultures et modèles économiques différent. Bien qu'elles partagent quelques points communs (domination d'un secteur, forte influence, faible imposition, peu de régulation), ces derniers ne sont pas nécessairement spécifiques au numérique et concernent également d'autres industries. Pour saisir les logiques qui guident ces entreprises, il est important d'identifier ce qu'elles sont et ce qu'elles font, au-delà de ce raccourci si souvent mobilisé.
 
 
 
@@ -142,13 +145,13 @@ En une dizaine d'années, quelques grandes entreprises du numérique sont devenu
 >
 > **Google** (Alphabet)
 >
-> Créé en 1998, Google est tout d'abord un moteur de recherche qui fonctionne grâce à l'algorithme PageRank. Au départ exploitées dans le but d'améliorer la pertinence des recherches, les traces laissées par l'activité des utilisateurs sont rapidement au coeur du modèle économique de l'entreprise. Grâce aux données qu'il collecte et analyse, Google vend à des annonceurs un ciblage publicitaire toujours plus précis. Au fil des années, l'entreprise déploie de nouveaux services, en acquiert d'autres (notamment YouTube) et devance ses concurrents. Depuis 2015, la société Alphabet regroupe toutes les activités de Google (Gmail, Google Drive, Google Maps, Chrome...) ainsi que d'autres services et plateformes tels que Android, Waze, Waymo (voitures autonomes) ou encore Deepmind (recherche sur l'IA).
+> Créé en 1998, Google est tout d'abord un moteur de recherche qui fonctionne grâce à l'algorithme PageRank. Au départ exploitées dans le but d'améliorer la pertinence des recherches, les traces laissées par l'activité des utilisateurs sont rapidement devenues l'enjeu central du modèle économique de l'entreprise. Grâce aux données qu'il collecte et analyse, Google vend à des annonceurs un ciblage publicitaire toujours plus précis. Au fil des années, l'entreprise déploie de nouveaux services, en acquiert d'autres (notamment YouTube) et devance ses concurrents. Depuis 2015, la société Alphabet regroupe toutes les activités de Google (Gmail, Google Drive, Google Maps, Chrome...) ainsi que d'autres services et plateformes tels que Android, Waze, Waymo (voitures autonomes) ou encore Deepmind (recherche sur l'IA).
 >
 ><br>
 >
 > **Facebook**
 >
-> La plus récente des cinq entreprises, Facebook est un réseau social né en 2005. En quelques années, la plateforme est parvenue à rassembler une base considérable d'utilisateurs (2.7 milliards à fin 2020). Son modèle économique repose sur la vente d'espaces publicitaires ciblés. Des individus ou entreprises peuvent ainsi diffuser des messages (publicités, articles, annonces d'événement, etc.) à une audience déterminée selon des critères sociaux, économiques ou comportementaux. Ces caractéristiques sont induites grâce à la captation et l'analyse des données issues des activités des utilisateurs. Devenu un point de passage obligé, Facebook constitue, avec Google, le principal acteur sur le marché du ciblage publicitaire.
+> La plus récente des cinq entreprises, Facebook est un réseau social né en 2005. En quelques années, la plateforme est parvenue à rassembler une base considérable d'utilisateurs (2,7 milliards à fin 2020). Son modèle économique repose sur la vente d'espaces publicitaires ciblés. Des individus ou entreprises peuvent ainsi diffuser des messages (publicités, articles, annonces d'événement, etc.) à une audience déterminée selon des critères sociaux, économiques ou comportementaux. Ces caractéristiques sont induites grâce à la captation et l'analyse des données issues des activités des utilisateurs. Réseau social réunissant le plus grand nombre de membres, Facebook constitue, avec Google, le principal acteur sur le marché du ciblage publicitaire.
 >
 ><br>
 >
@@ -160,7 +163,7 @@ En une dizaine d'années, quelques grandes entreprises du numérique sont devenu
 >
 > **Microsoft**
 >
-> Fondée en 1975, Microsoft développe principalement des systèmes d'exploitation et des logiciels. L'entreprise est parvenue à dominer le marché en associant son système d'exploitation Windows à la vente d'ordinateurs PC. Cette stratégie commerciale de ["vente liée"](https://fr.wikipedia.org/wiki/Vente_li%C3%A9e) a conduit à ce que les produits Microsoft deviennent des "standards de fait". Aujourd'hui, Windows est installé dans presque 90% des ordinateurs à travers le monde et les outils de bureautique Office comptent plus d'un milliard d'utilisateurs. Les bénéfices colossaux de la firme s'expliquent également par la nature de ses produits : les logiciels étant des biens immatériels, leur coût de reproduction est quasi nul. L'entreprise possède par ailleurs d'autres services, dont Skype et Linkedin.
+> Fondée en 1975, Microsoft développe principalement des systèmes d'exploitation et des logiciels. L'entreprise est parvenue à dominer le marché en associant son système d'exploitation Windows à la vente d'ordinateurs PC. Cette stratégie commerciale de ["vente liée"](https://fr.wikipedia.org/wiki/Vente_li%C3%A9e) a conduit les produits Microsoft à devenir des "standards de fait". Aujourd'hui, Windows est installé dans presque 90% des ordinateurs à travers le monde et les outils de bureautique Office comptent plus d'un milliard d'utilisateurs. Les bénéfices colossaux de la firme s'expliquent également par la nature de ses produits : les logiciels étant des biens immatériels, leur coût de reproduction est quasi nul. L'entreprise possède par ailleurs d'autres services, dont Skype et Linkedin.
 <br>
 
 Ce bref aperçu rend compte de la diversité des modèles économiques du numérique, auquel il faudrait ajouter les services qui prélèvent une commission sur les transactions (Uber, Airbnb, Booking.com) ou encore les plateformes qui fonctionnent sur un principe d'abonnement (Spotify, Netflix). Ces logiques économiques conduisent à des stratégies différenciées. Apple, par exemple, dont le financement ne repose pas sur la captation des données personnelles et la publicité [se positionne comme défenseur de la vie privée](https://www.youtube.com/watch?v=LzQby5ee7hE). 
@@ -173,11 +176,13 @@ Ce bref aperçu rend compte de la diversité des modèles économiques du numér
 
 <br>
 
-Si les modèles sont divers, toutes ces entreprises ont cependant compris la valeur des traces pour développer leurs activités et proposer aux utilisateurs des produits ou services personnalisés. Ces recommandations "sur-mesure", rendues possibles grâce au traitement algorithmique des données, sont particulièrement utiles dans un contexte où les plateformes concentrent un nombre toujours plus important d'informations. Elles apparaissent comme un intermédiaire qui permet à l'utilisateur de s'orienter parmi une offre pléthorique. Les plateformes ont tout intérêt à proposer un balisage pertinent, afin de maximiser les interactions des utilisateurs au sein de cet environnement et gagner leur adhéhsion dans le long terme.
+Si la commercialisation massive des données ne concerne pas l’ensemble des entreprises du numérique, toutes ont cependant compris la valeur des traces pour développer leurs activités et proposer aux utilisateurs des produits ou services personnalisés. Ces recommandations "sur-mesure", rendues possibles grâce au traitement algorithmique des données, sont particulièrement utiles dans un contexte où les plateformes concentrent un nombre toujours plus important d'informations. Elles apparaissent comme un intermédiaire qui permet à l'utilisateur de s'orienter parmi une offre pléthorique. Les plateformes ont tout intérêt à proposer un balisage pertinent, afin de maximiser les interactions des utilisateurs au sein de cet environnement et gagner leur adhéhsion dans le long terme.
 
-Par ailleurs, attirer et garder l'utilisateur captif est d'autant plus important pour les plateformes qu'elles bénéficient des "**effets de réseau**" :  plus une plateforme compte de membres, plus elle en attire de nouveaux. La valeur et l'attractivité de ses activités grandit à mesure que son nombre d'utilisateurs croît. 
+Par ailleurs, attirer et garder l'utilisateur captif est d'autant plus important pour les plateformes qu'elles bénéficient des "**effets de réseau**" :  plus une plateforme compte de membres, plus elle en attire de nouveaux. La valeur et l'attractivité de ses activités grandit à mesure que son nombre d'utilisateurs croît. Si tous nos amis sont sur Facebook, il semble difficile d’opter pour un autre réseau social.
 
-Cet effet est particulièrement puissant dans le cas des services numériques car, contrairement à une entreprise classique, les **coûts de transaction** (comme la recherche d'informations ou la mise en relation entre services, clients et prestataires) sont fortement réduits. La combinaison de ces différents facteurs mène à des situations de monopoles, telles que nous les voyons se déployer aujourd'hui. Selon le principe de *winners take it all*, chaque secteur tend à être dominé par une seule entreprise qui rachète ses concurrents à mesure de son expansion. Ces entreprises deviennent incontournables, tant pour les clients que les prestataires. Il est presque impossible pour un hôtel de se passer d'un référencement sur Booking, tout comme un petit vendeur indépendant peut difficilement éviter Amazon.
+Cet effet de réseau est particulièrement puissant dans le cas des services numériques car, contrairement à une entreprise classique, les coûts de transaction (comme la recherche d'informations ou la mise en relation entre services, clients et prestataires) sont fortement réduits. Un autre effet important est celui des "**économies d'échelle**". Ce principe veut que le coût unitaire de production d'un bien baisse à mesure que son nombre augmente. Ainsi, un 
+
+Par conséquent, la combinaison de ces différents facteurs mène à des situations de monopoles, telles que nous les voyons se déployer aujourd'hui. Selon le principe du *winner takes it all*, chaque secteur tend à être dominé par une seule entreprise qui rachète ses concurrents à mesure de son expansion. Ces entreprises deviennent incontournables, tant pour les clients que les prestataires. Il est presque impossible pour un hôtel de se passer d'un référencement sur Booking, tout comme un petit vendeur indépendant peut difficilement éviter Amazon.
 
 ```{admonition} Uberisation
 :class: hint
@@ -186,9 +191,9 @@ L’uberisation, dont le nom provient de l'entreprise Uber, est un processus éc
 
 
 
-Face à ces pratiques, les instances politiques peinent à s'accorder et les régulations demeurent peu contraignantes, voire inexistantes. Ce cadre flou témoigne également d'une forme de fatalisme face au numérique. La précarité, la financiarisation ou la surveillance sont pensés comme inhérents au développement des technologies. Il apparaît donc nécessaire de souligner que la technique ne contient pas en elle-même un modèle organisationnel ou économique particulier. Pour ces plateformes, la technologie constitue un moyen d'atteindre des objectifs commerciaux. Mais ce modèle, bien que dominant, n'est pas la seule voie possible. Il existe des solutions qui font davantage appel à la coopération.
+Face à ces pratiques, les instances politiques peinent à s'accorder et les régulations demeurent peu contraignantes, voire inexistantes. Ce cadre juridique flou témoigne également d'une forme de fatalisme face au numérique. La précarité, la financiarisation ou la surveillance sont pensés comme inhérents au développement des technologies. Il apparaît donc nécessaire de souligner que la technique ne contient pas en elle-même un modèle organisationnel ou économique particulier. Pour ces plateformes, ces outils technologiques constituent des moyens d'atteindre des objectifs commerciaux. Mais ce modèle, bien que dominant, n'est pas la seule voie possible. Il existe en effet des solutions qui font davantage appel à la coopération.
 
-En ce sens, il faut rappeler que le Web n'a pas toujours été régi par des principes marchands (👉*voir chapitre "Histoire d'Internet et du Web"* ) et l'esprit de collaboration et de partage qui caractérisait les premières communautés en ligne n'a pas disparu. La mise en réseau des individus peut également mener à la création de **biens communs** qui sont librement redistribués aux internautes. Le succès de Wikipédia (👉 *voir fiche "Focus sur... Wikipédia"*) est l'illustration d'une alternative au modèle économique des plateformes. Mais la frontière entre ces deux logiques est parfois difficile à tracer, en témoigne l'utilisation souvent peu claire du terme "économie du partage".  
+En ce sens, il faut rappeler que le Web n'a pas toujours été régi par des principes marchands (👉*voir chapitre "Histoire d'Internet et du Web"* ) et l'esprit de collaboration et de partage qui caractérisait les premières communautés en ligne n'a pas disparu. Comme le défendent les tenants du mouvement du logiciel libre, la mise en réseau des individus peut également mener à la création de **biens communs** En ce sens, le succès de Wikipédia est la démonstration qu'une alternative au modèle des plateformes est possible (👉 *voir fiche "Focus sur... Wikipédia"*). Mais la frontière entre ces deux logiques est parfois difficile à tracer, en témoigne l'utilisation souvent peu claire du terme "économie du partage". Désignant, à l'origine, des initiatives citoyennes et collaboratives tournées vers la création de biens communs, la notion est désormais mobilisée pour décrire des services commerciaux tels que Airbnb ou Uber, dont le mode de fonctionnement et les objectifs n'ont plus rien à voir avec ces principes.
 
 
 <br>
@@ -198,11 +203,11 @@ En ce sens, il faut rappeler que le Web n'a pas toujours été régi par des pri
 
 <br>
 
-Dans ce marché mondial des plateformes, l'attention est un bien rare et convoité. Ainsi, les grands acteurs du numérique luttent pour nous amener dans leur environnement et nous rendre captifs de leurs services. La notion de rareté de l'attention n'est cependant pas nouvelle. Traditionnellement, c'est la publicité qui tentait d'attirer l'attention du public vers un produit ou service. Avec le numérique, cette quête du "temps de cerveau disponible"<a href="#footnote-1">[1]</a> est amplifiée car il est désormais possible de capter, calculer et monétiser les "traces d'attention". 
+Dans ce marché mondial des plateformes, l'attention est un bien rare et convoité. Ainsi, les grands acteurs du numérique luttent pour amener les internautes dans leur environnement et les rendre captifs de leurs services. La notion de rareté de l'attention n'est cependant pas nouvelle. Traditionnellement, c'est la publicité qui tentait d'attirer l'attention du public vers un produit ou service. Avec le numérique, cette quête du "temps de cerveau disponible"<a href="#footnote-1">[1]</a> est amplifiée car il est désormais possible de capter, calculer et monétiser les "traces d'attention". 
 
-Les applications sont alors pensées dans le but de nous retenir le plus longtemps possible. Les pastilles rouges des notifications, les *likes*, les systèmes *auto-play* de YouTube ou Netflix (qui relance une vidéo sans notre consentement), ou encore le *scroll* infini sont autant d'incitations à maximiser notre temps en ligne. Ces astuces de conception jouent sur nos **biais cognitifs** : besoin de récompense immédiate, quête de reconnaissance, attraction pour la nouveauté, peur de passer à côté de quelque chose. Ces biais sont pensés comme d'autant plus efficaces qu'ils peuvent être finement ciblés et personnalisés. 
+Les applications sont alors pensées dans le but de nous retenir le plus longtemps possible. Les pastilles rouges des notifications, les *likes*, les systèmes *auto-play* de YouTube ou Netflix (qui relancent une vidéo sans notre consentement), ou encore le *scroll* infini sont autant d'incitations à maximiser notre temps en ligne. Ces astuces de conception jouent sur nos **biais cognitifs** : besoin de récompense immédiate, quête de reconnaissance, attraction pour la nouveauté, peur de passer à côté de quelque chose. Ces biais sont pensés comme d'autant plus efficaces qu'ils peuvent être finement ciblés et personnalisés. 
 
-Toutefois, l'efficacité réelle de ces stratégies mérite d'être discutée. En effet, ces leviers psycho-cognitifs ne peuvent expliquer à eux seuls le succès des plateformes. Si celles-ci parviennent à attirer un nombre important d'utilisateurs, c'est avant tout grâce à leur position centrale et à leur capacité à réunir une multitude d'usages (communiquer, s'informer, se divertir, jouer, etc.). En ce sens, les discours médiatiques autour de la question des pratiques numériques chez les jeunes, qui se résument souvent à un message alarmiste centré sur la notion de "temps d'écran", peinent à dépasser un rapport à la technologie pensé uniquement au travers du prisme de "l'addiction". Les activités en ligne ne sont pas nécessairement synonymes de "temps perdu" et il est important de comprendre de quelle façon elles s’inscrivent dans des pratiques sociales. Jouer en ligne, échanger des informations les via réseaux sociaux ou créer une vidéo ne peut être assimilé à du temps mort. L'idée qu'il existerait une distinction entre "vie réelle" et "vie virtuelle"  est largement remise en question par les travaux récents en sciences sociales. Toutes ces pratiques s'imbriquent dans ce qui constitue notre vie en société. 
+Toutefois, l'efficacité réelle de ces stratégies attentionnelles mérite d'être discutée. En effet, ces leviers psycho-cognitifs ne peuvent expliquer à eux seuls le succès des plateformes. Si celles-ci parviennent à attirer un nombre important d'utilisateurs, c'est avant tout grâce à leur position centrale et à leur capacité à réunir une multitude d'usages (communiquer, s'informer, se divertir, jouer, etc.). En ce sens, les discours médiatiques autour de la question des pratiques numériques chez les jeunes, qui se résument souvent à un message alarmiste centré sur la notion de "temps d'écran", peinent à dépasser un rapport à la technologie pensé uniquement au travers du prisme de "l'addiction". Les activités en ligne ne sont pas nécessairement synonymes de "temps perdu" et il est important de comprendre de quelle façon elles s’inscrivent dans des pratiques sociales. Jouer en ligne, échanger des informations les via réseaux sociaux ou créer une vidéo ne peut être assimilé à du temps mort. L'idée qu'il existerait une distinction entre "vie réelle" et "vie virtuelle"  est largement remise en question par les travaux récents en sciences sociales (voir notamemnt les publications de la sociologue Anne Cordier). Toutes ces pratiques s'imbriquent dans ce qui constitue notre vie en société. 
 
 
 <p id="footnote-1">[1] Déclaration par Patrick Le Lay (ex-PDG du groupe TF1) en 2004  : « Ce que nous vendons à Coca-Cola, c’est du temps de cerveau humain disponible »</p>
@@ -222,7 +227,7 @@ Toutefois, l'efficacité réelle de ces stratégies mérite d'être discutée. E
 * [Le livre](https://www.le-passeur-editeur.com/les-livres/essais/comment-sortir-de-l-emprise-des-r%C3%A9seaux-sociaux/) "Comment sortir de l'emprise des réseaux sociaux" (2020) de Dominique Boullier 
 * [La mini-série documentaire](https://www.youtube.com/playlist?list=PLUDzuI7to_hD6PswmzU0r9oSq048EDoY8) «Les Invisibles" (France TV), qui fait met en lumière les travailleurs des plateformes (livreurs Uber Eats, «travailleurs du clic», modérateurs)
 * [Un reportage radio](https://www.rts.ch/play/radio/vacarme/audio/societe-numerique-35-hep-uber?id=11541585)(RTS) sur les conditions de travail des chauffeurs Uber
-* [Un podcast](https://www.franceinter.fr/emissions/le-code-a-change/sommes-nous-vraiment-en-train-de-fabriquer-des-cretins-digitaux) qui déconstruit les discours alarmistes autour des écrans chez les jeunes (Le Code a changé, France Inter)
+* [Un podcast](https://www.franceinter.fr/emissions/le-code-a-change/sommes-nous-vraiment-en-train-de-fabriquer-des-cretins-digitaux) qui déconstruit les discours alarmistes autour des écrans chez les jeunes ("Sommes-nous vraiment en train de fabriquer des “crétins digitaux" ?"  Le Code a changé, France Inter)
 
   
 <br>
@@ -307,10 +312,10 @@ En cas de temps limité, privilégier l'activité A ou B
 
    ::::{admonition,dropdown} Réponse
    Leurs points communs, qui correspondent également aux reproches qui leur sont addressés, sont (principalement) : 
-   *  une position dominante dans l'industrie du numérique et des pratiques anticoncurrentielles
+   * une position dominante dans l'industrie du numérique et des pratiques anticoncurrentielles
    * des tactiques visant à "enfermer" l'utilisateur dans un environnement 
    * une collecte massive de données
-   * un faible taux d'imposition
+   * un faible taux d'imposition dans des pays qui leur accorde des régimes fiscaux spéciaux pour les attirer
    
    Préciser que la plupart de caractéristiques ne sont pas exclusivement propres au numérique
    ::::
@@ -353,7 +358,7 @@ En cas de temps limité, privilégier l'activité A ou B
   <b>B. Le travail "uberisé"
   <hr style="width:100%;text-align:left;margin-left:0; border-color: black">
    <div align="left"; style="font-size:15px; font-weight: 300; color: black"> 
-   🎯 Objectif : Être sensibilisé·e aux mécanismes  implications sociales de l’«uberisation».
+   🎯 Objectif : Prendre conscience des mécanismes et implications sociales de l’«uberisation».
    <br>
    🕓 45 min 
     <br> 💻 Matériel : projecteur, ordinateurs personnels
@@ -377,11 +382,36 @@ b) Pourquoi modèle économique de Uber Eats n’est-il pas soutenable pour les 
 
 ::::{admonition,dropdown} Réponse
 Les sommes versées pour les courses ne permettent pas d’obtenir un salaire décent. L’un des coursiers parle d’environ 400 Euros pour 60h de disponibilité par semaine, avant déductions (le salaire minimum est d’environ 1200 Euros). Les livreurs ne sont payés que lorsqu’ils effectuent une course, le temps d’attente n’est pas comptabilisé. Tous les frais (vélo, sacs, habits) sont à leur charge et ils ne disposent d’aucune prestations sociales (assurance accident, cotisations retraite, etc..). Par ailleurs, les exigences de la plateforme sont de plus en plus difficiles à remplir, comme le montre le témoignage d’un livreur qui a troqué son vélo contre un scooter plus rapide.
-   ::::
+
+A cela s'ajoute la précarité de ce type d'emploi, car, de manière générale, les clients sont peu fidèles et passent leurs commandes au dernier moment ; il est donc difficile de planifier une tâche à l'avance, d'assurer que le livreur travaillera tel jour, à telle heure ou pas. Il est sollicité quand on a besoin de lui. Ce qui explique qu'il lui est quasi impossible de travailler à plein temps, voire de prévoir un emploi du temps fixe ou longtemps à l'avance. 
+De plus, le livreur est censé être disponible et prêt à remplir une tâche dès que la centrale l'appelle ; que se passe-t-il s'il refuse trop souvent ? Ne risque-t-il pas de passer dans les derniers à être appelés ? En outre, les annulations de commandes qui ne sont pas communiquées dans les temps contractuels sont tout de même facturés au client, mais cette somme n'est pas reversée au livreur ou alors pas intégralement. 
+::::
 
 **Activité complémentaire** :  Faire lire [un article](https://www.letemps.ch/economie/geneve-uber-eats-desormais-recourir-employes) du journal Le Temps consacré à la décision du Canton de Genève d'imposer à Uber Eats de salarier ses livreurs. Poser les questions suivantes:
 
-   - *A compléter*
+ a) Quelle est l'actualité (la news, l'information principale) de cet article ?
+
+ ::::{admonition,dropdown} Réponse
+ En attendant la confirmation d'une décision de justice, Uber préfère anticiper sa défaite en changeant de modèle économique : de simple plateforme, qui met en contact des clients et de la main d'œuvre indépendante (livreurs), Uber devient un employeur qui est responsable de ses salariés (c'est-à-dire qu'elle doit prendre en charge leurs charges sociales). 
+Uber ayant reçu une décision de justice l'obligeant à respecter la loi, l'entreprise fait recours auprès de l'instance supérieure. En attendant la décision de celle-ci, Uber a tout de même décidé de changer son modèle dans le canton de Genève uniquement. 
+::::
+
+<br>
+
+b) Quelles seront les conséquences de ce changement de politique ?
+
+:::: {admonition,dropdown} Réponse
+* D'autres cantons – ou pays - seront tentés d'exiger d'Uber le même revirement.
+* Les autorités pourraient demander à ce que ce changement s'applique à tous les services Uber – et non seulement à Uber Eats.
+* Si Uber Eats doit prendre en charge les charges sociales de ses livreurs, où va-t-elle répercuter ses prix ? Sachant que ce type de modèle économique n'est pas – encore – viable (il ne sera viable que lorsque toute l'économie suivra ce modèle uberisateur) et que l'entreprise ne peut baisser les salaires en dessous du minimal convenu par la convention collective de travail, Uber Eats va-t-elle augmenter ses tarifs ? 
+::::
+<br>
+
+c) Quel sens donner au mot "flexibilité" du porte-parole d'Uber ?
+
+:::: {admonition,dropdown} Réponse
+Il semblerait bien que précarité soit un synonyme approprié. Du point de vue des livreurs, flexibilité signifie la possibilité de travailler à toute heure, c'est-à-dire en dehors des heures de travail communes (la nuit ou le week-end) – cela suppose donc qu'ils ont un emploi durant les heures de travail normal. Du point de vue des patrons, sous prétexte de permettre aux livreurs de travailler en tant qu'indépendants, c'est-à-dire quand ils le souhaitent, la flexibilité permet de se désengager de responsabilités qui incombe à tout patron employeur de salariés (celui-ci ne peut employer ses salary men la nuit, ou alors seulement sous certaines conditions (majoration du salaire, de simple à double pour des horaires de nuit…).
+:::: 
 
 
 </div
