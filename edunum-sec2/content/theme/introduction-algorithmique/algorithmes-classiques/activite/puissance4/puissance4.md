@@ -1,32 +1,25 @@
-# Programmer un jeu de Puissance 4.
+# Découvrir l'algorithme minimax en programmant un jeu de puissance 4.
 
 ## Information
 
-Durée: 2 période consécutives pour lancer le projet, à finir en classe et/ou à la maison. Puis une période (ou un peu moins) pour présenter le résultat. 
+Durée: 4 périodes au total: 2 période consécutives pour lancer le projet, évenutellement à finir à la maison. 
+Puis 2 périodes pour la strétgie (algorithme minimax) et pour présenter le résultat. 
 
 Mode: Une partie conceptualisation en débranché, suivie d'une réalisation sur ordinateur
 
-Objectif: Découvrir comment on conceptualise et implémente un jeu de stratégie en utilisant la stratégie minimax
+Objectif: Découvrir comment on conceptualise et implémente un jeu de stratégie en utilisant la stratégie minimax. Découvrir l'utilité des API. 
 
 Matériel: Eventuellement un puissance 4.
 
-
+Prérequis: Les élèves ont déjà une certaine maitrise de la programmation, en particulier ils sont à l'aise avec l'utilisation des fonctions et les types composés (dictionnaires, listes, tuples, etc.)
 ## Déroulement
 
 Cette activité comporte les phases suivante:
 
+Première séance: 
 1. Une mise en situation au cours de laquelle les élèves se familiarisent avec le jeu du puissance 4
 
 1. Conceptualisation / discussion au cours de laquelles les élèves prennent conscience des éléments nécessaires à la programmation d'un tel jeu, notamment:
-    1. une représentation de l'état du jeu
-    1. une appréciation de l'état du jeu (et donc de la valeur d'un coup)
-    1. une stratégie de jeu (quel coup choisir)
-
-
-1. Une phase de présentation de la stratégie minimax
-
-
-1. Une phase de simulation de la stratégie minimax
 
 1. Conceptualisation par groupe
 
@@ -36,7 +29,19 @@ Cette activité comporte les phases suivante:
 
 1. Expérimentation des stratégies
 
+Seconde séance:
+
+1. Mini présentation des stratégies utilisées
+
+1. Présentation de l'algorithme minimax
+
+1. Exercices d'application de l'algorithme minimax
+
+1. Codage de l'algorithme minimax
+
 1. Présentation des résultats, éventuellement en faisant jouer les programmes les uns contre les autres. 
+
+## Séance 1
 
 ## Mise en situation (10 min.)
 Afin de faire rentrer les élèves dans cette activité et de s'assurer que tous les élèves connaissent le jeu du puissance 4, il est proposé de commencer la leçon en faisant jouer les élèves au puissance 4. 
@@ -73,21 +78,44 @@ L'enseignant commente ensuite les propositions de stratégie et propose, pour co
 
 ## Programmation (30 min)
 L'enseignant distribue ensuite un canevas de code contenant déjà la partie déroulement et affichage (de manière encapsulée) et les élèves doivent coder,
-par groupe ou individuellement la représentation du jeu, les fonctions d'initialisation, d'accès, et de modification de l'état du jeu. 
+par groupe ou individuellement la représentation du jeu, les fonctions d'initialisation, d'accès, et de modification de l'état du jeu. Les API sont déjà
+définies par l'enseignant.
 
 Les élèves doivent ensuite coder la fonction de stratégie, ce qui leur permettra de tester le jeu. Iels se rendront vite compte de la faiblesse de la stratégie. L'étape suivante consiste à améliorer la stratégie, en excluant les coups qui permettent à l'adversaire de gagner en utilisant testant toutes ses possibilité. Il est ensuite possible d'améliorer la stratégie en regardant un coup en avance, puis deux, puis trois, etc. L'enseignant tentera d'orienter les élèves afin de
 leur faire découvrir par eux-même la stratégie du minimax. 
 
-## Récapitulation (5 min)
-L'enseignant récapitule pour tout le monde la stratégie du minimax, en indiquant 
-qu'elle peut aussi être utilsée avec une fonction d'évaluation à plus de trois états comme ici (perdu, gagné, non-décidé). 
 
-## Programmation (10 min)
-Les élèves continuent à programmer leur jeu et leur stratégie et peuvent tenter d'implémenter une fonction d'évaluation de l'état du jeu, par exemple en comptant le nombre de rangée ouverte. 
+## Compétition (5 min)
 
-Selon l'état d'avancement des élèves et les conditions locales, ils doivent finir la programmation de leur jeu en devoir. 
+L'enseignant montre comment deux groupes peuvent faire jouer leur programme l'un contre l'autre à l'aide d'un programme ad-hoc utilisant les API. 
 
-## Semaine suivante:
+## Stratégies (10 min)
+Les groupes qui le veulent peuvent se confronter les uns les autres et continuer à développer leur stratégie. Ils peuvent avancer/finir à la maison. 
+
+## Séance 2
+(les plus rapides auront déjà eu le temps d'implémenter une stratégie, alors que les plus lent-e-s n'auront que la stratégie de base)
+
+## Mise en situation (5-10 minutes)
+
+Certaines équipes peuvent venir présenter leur jeu et parler de leur stratégie. 
+
+## Présentation théorique (10 minu)
+L'enseignant-e récapitule pour tout le monde la stratégie du minimax, en indiquant qu'elle peut aussi être utilsée avec une fonction d'évaluation à plus de trois états comme ici (perdu, gagné, non-décidé). 
+
+Eventuellement, l'enseignant peut aussi présenté la stratégie du alpha-beta pruning. 
+
+## Exercice (10 min)
+
+Les élèves font individuellement sur papier un exercice d'application de la stratégie minimax, suivi immédiatement d'une correction en commun. 
+
+## Présentation théorique(5 min.)
+L'enseignant parle des différentes manière d'implémenter minimax (in place, en copie, éventuellement en récursion si cela a déjà été abordé). 
+
+
+## Programmation (30 min)
+Les élèves continuent à programmer leur stratégie et peuvent tenter d'implémenter une fonction d'évaluation de l'état du jeu, par exemple en comptant le nombre de rangée ouverte. Optionnellement, en fonction du niveau des élèves, le développement de l'interface graphique peut être considéré. 
+
+## Finalisation (15 minutes)
 Les élèves présentent leur jeu et leur stratégie et on organise un petit tournoi entre les différents programmmes. 
 
 
