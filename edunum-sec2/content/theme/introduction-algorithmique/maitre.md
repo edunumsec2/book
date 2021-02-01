@@ -25,3 +25,4 @@ périodes de pratique en demi-classe (groupes A et B) toutes les deux semaines e
 Si le chapitre programmation n'a pas encore été abordée, il est possible de faire les activités Dijkstra et PageRank à la
 place de l'activité minimax et d'inclure la transcription d'algorithmes dans le chapitre de programmation.
 
+# Activités
