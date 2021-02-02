@@ -82,6 +82,8 @@ Dans ce cas, une icône supplémentaire apparaît dans le menu en haut à droite
 
 ![Binder](https://github.com/edunum-sec2/ressources/blob/master/edunum-sec2/content/demostests/edito/images/presentation/iconebinder.png)
 
+:construction:	**Attention** : la solution Binder est lente. Nous sommes actuellement en train de chercher une alternative plus rapide. Une proposition a été faite d'utiliser https://cocalc.com/. Toute contribution à ce sujet est la bienvenue. 
+
 ## :bulb: Syntaxe MyST
 
 Les documents originaux des ressources sont écrits dans un language appelé [**MyST**](https://myst-parser.readthedocs.io/en/latest/using/syntax.html), pour Markedly Structured Text. 
