@@ -54,7 +54,7 @@ L’algorithme du **tri à bulles** compare les éléments voisins. Commencer pa
 
 ::::{admonition,attention} Exercice 5
 
-Résoudre cet exercice avant d’avancer dans le chapitre. Appliquer les trois algorithmes ci-dessus pour trier les rectangles de la ligne du haut de la Figure 2 en fonction de leur taille (le résultat est illustré dans la ligne du bas), en dessinant l’ordre des éléments à chaque fois qu’il change. 
+[Résoudre cet exercice avant d’avancer dans le chapitre.] Appliquer les trois algorithmes ci-dessus pour trier les rectangles de la ligne du haut de la Figure 2 en fonction de leur taille (le résultat est illustré dans la ligne du bas), en dessinant l’ordre des éléments à chaque fois qu’il change. Vous avez besoin d’une grande feuille de papier ou vous pouvez représenter la taille d’un rectangle par un nombre. 
 
 ::::
 
@@ -75,7 +75,7 @@ Figure 3. Etapes intermédiaires lors de l’application des différents algorit
 
 :::
 
-Avant de continuer la lecture, assurez-vous que vous avez bien résolu l’exercice 4. La figure sur la page précédente détaille les étapes intermédiaires des trois algorithmes de tri vus précédemment. Notez que même si tous les algorithmes arrivent à la même solution finale, ils y arrivent de manière très différente et avec plus ou moins de mouvements. 
+Avant de continuer la lecture, assurez-vous que vous avez bien résolu l’exercice 4. La figure sur la page précédente détaille les étapes intermédiaires des trois algorithmes de tri vus précédemment. Notez que même si tous les algorithmes arrivent à la même solution finale, ils y arrivent de manière très différente et avec plus ou moins de calculs. 
 
 ::::{admonition,attention} Exercice 6
 
@@ -87,14 +87,11 @@ Rappelez-vous la méthode que vous avez utilisée pour résoudre l’exercice 3.
 
 Pour chaque algorithme, compter le nombre de comparaisons, le nombre de mouvements (le rectangle considéré change de place) et le nombre de rectangles à la bonne position (la position du rectangle à une étape intermédiaire est la même que la position finale de la dernière ligne).
 
-Imaginons que ce qui prend le plus de temps est la comparaison de la taille de deux rectangles. Dans ce cas précis, lequel des trois algorithmes faudrait-il utiliser ?
+Imaginons que ce qui prend le plus de temps est la comparaison de la taille de deux rectangles. Dans ce cas précis, lequel des trois algorithmes faudrait-il utiliser ? Indication : compter le nombre de fois que l’on compare deux éléments. 
 
-Imaginons que ce qui prend le plus de temps est le mouvement d’un rectangle (le rectangle est déplacé). Dans ce cas précis, lequel des trois algorithmes serait le plus rapide ? Quel serait l’algorithme le plus lent ?
-
-Imaginons que le meilleur algorithme est celui qui propose le plus de rectangles déjà à la bonne position (à leur position finale une fois les rectangles triés) en considérant toutes les étapes. Cela peut être le cas si l’on n’a pas le temps d’attendre que l’algorithme termine et on souhaite que les étapes intermédiaires nous donnent une réponse aussi proche que possible de la solution finale. Dans ce cas précis, lequel des trois algorithmes serait le plus rapide ? 
+Imaginons que ce qui prend le plus de temps est lorsqu’un rectangle change de place. Dans ce cas précis, lequel des trois algorithmes serait le plus rapide ? Quel serait l’algorithme le plus lent ?
 
 Quel est le meilleur algorithme de tous les algorithmes considérés ?
-
 ::::
 
 ## Comparaison d’algorithmes
@@ -103,7 +100,13 @@ La qualité d’un algorithme dépend de l’aspect que l’on souhaite optimise
 
 La vitesse d’un algorithme dépend également des données en entrée. Selon la situation initiale des données en entrée (correspond à la ligne du haut de la Figure 2 et de la Figure 3), un algorithme « rapide » peut devenir « lent ». Il faut savoir que les algorithmes vus jusqu’ici sont des algorithmes lents, nous verrons un algorithme de tri rapide ultérieurement.
 
-::::{admonition,note} Pour aller plus loin II
+::::{admonition,note} Conseil
+
+Vous passez trop de temps à chercher vos affaires ? Pensez à mieux les ranger. Le temps perdu à ranger ses affaires est bien inférieur à celui que l’on passe à les chercher plus tard.
+
+::::
+
+::::{admonition,note} Pour aller plus loin
 
 Imaginez que les quatre éléments d’une liste sont triés dans le sens inverse de ce que l’on souhaite (ils sont placés du plus grand au plus petit). Trier la liste selon les trois algorithmes de tri vus précédemment : le tri par insertion, le tri par sélection et le tri à bulles. 
 
@@ -113,39 +116,49 @@ Quel algorithme est le plus rapide dans cette configuration précise (présente 
 
 ## Solutions des exercices
 
-::::{admonition,attention} Exercice 4 
+::::{admonition,attention} Solution de l’exercice 4 
 
-Les données en entrée sont les rectangles sur la ligne du haut : leur taille et leur ordre. Le résultat en sortie correspond aux rectangles sur la ligne du bas : leur taille et leur ordre.
+Les données en entrée sont les rectangles sur la ligne du haut : leur taille et leur ordre. Le résultat en sortie correspond aux rectangles sur la ligne du bas : leur taille et leur ordre. 
 
 ::::
 
-::::{admonition,attention} Exercice 5
+::::{admonition,attention} Solution de l’exercice 5
 
 La solution est donnée dans la légende de la Figure 3.
 
 ::::
 
-::::{admonition,attention} Exercice 6
+::::{admonition,attention} Solution de l’exercice 6
 
 La solution dépend de votre solution de l’exercice 3. 
 
 ::::
 
-::::{admonition,attention} Exercice 7
+::::{admonition,attention} Solution de l’exercice 7
 
 Le décompte des opérations effectuées est comme suit :
 
-Tri par insertion : 15 comparaisons, 3 mouvements (flèches rouges) et 7 rectangles bien placés. 
-Tri par sélection : 15 comparaisons (lignes en dessous), 4 mouvements (flèches rouges) et 12 rectangles bien placés. 
-Tri à bulles : 12 comparaisons (lignes en dessous) et 5 mouvements (flèches rouges) et 7 rectangles bien positionnés. 
+Tri par insertion : 9 comparaisons (flèches rouges) et 8 changements de position (flèches rouges).
 
-Si c’est la comparaison de deux éléments qui prend beaucoup de temps, il vaudrait mieux utiliser le tri à bulles, parce qu’il exécute moins de comparaisons que les autres algorithmes.
+Tri par sélection : 15 comparaisons (lignes en dessous) et 6 chagementes de position (flèches rouges). 
 
-Si c’est le mouvement d’un rectangle qui coûte beaucoup de temps, l’algorithme le plus rapide serait le tri par insertion (3 mouvements) au lieu des 6 mouvements du tri par insertion (l’algorithme le plus lent).
+Tri à bulles : 9 comparaisons (lignes en dessous) et 10 chagements de position (flèches rouges). 
 
-Si le meilleur algorithme est celui qui dénombre le maximum de rectangles bien placés toutes étapes confondues, le meilleur algorithme serait le tri par sélection.
+Si c’est la comparaison de deux éléments qui prend beaucoup de temps, il vaudrait mieux utiliser le tri par insertion ou le tri à bulles, parce que le tri par sélection va comparer tous les éléments entre eux. 
+Si c’est le changement de position d’un élément qui coûte beaucoup de temps, l’algorithme le plus rapide serait le tri par sélection (3 éléments intervertis ou 6 éléments changés de place).
+Il faut savoir que ces résultats sont valides pour cette configuration en particulier, si on trie un autre tableau le ranking pourrait changer.
 
-Le meilleur algorithme dépend de la situation, tous les algorithmes étaient les meilleurs dans un des cas considérés. Il existe des algorithmes de tri bien plus rapides que les trois algorithmes considérés que l’on verra ultérieurement.
+Pour ces trois algorithmes, le choix du meilleur algorithme dépend de l’implémentation et de la situation initiale. Il existe des algorithmes de tri bien plus rapides que les trois algorithmes considérés ici.
+
+::::
+
+::::{admonition,note} Ai-je compris ?
+
+1. Je sais qu’il existe plusieurs solutions à un problème, on peut résoudre un problème de manières très différentes.
+
+2. Je sais qu’il faut choisir le meilleur algorithme en fonction de critères objectifs : vitesse de l’algorithme, qualité de la solution,  espace utilisé en mémoire ou encore la consommation d’énergie.
+
+3. Je sais appliquer les trois algorithmes de tri vus au cours.
 
 ::::
 
@@ -159,7 +172,7 @@ Réfléchir à votre journée : y a-t-il des actions qui se retrouvent chaque jo
 
 ::::{admonition,attention} Exercice 6
 
-Trier la liste [2,5,3,4,7,1,6] en utilisant les trois algorithmes de tri vus au cours. Essayer de représenter l’état de la liste après chaque étape qui change l’ordre des éléments.
+Trier la liste [2,5,3,4,7,1,6] en utilisant les trois algorithmes de tri vus au cours. Représenter l’état de la liste après chaque étape qui change l’ordre des éléments.
 
 ::::
 
@@ -178,5 +191,11 @@ Comparer vos algorithmes. Sont-ils différents ?
 ::::{admonition,attention} Exercice 8
 
 Analyser les oeuvres cubiques de Piet Mondrian. Trouver un algorithme qui permet de créer une oeuvre qui pourrait être attribuée à Mondrian.
+
+::::
+
+::::{admonition,hint} Le saviez-vous ? III
+
+Il existe un algorithme, Bogosort, aussi nommé le tri lent ou encore le tri stupide. C’est un tri qui génère différentes permutations des éléments de la liste et s’arrête lorsque la configuration obtenue est par hasard triée. 
 
 ::::

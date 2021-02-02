@@ -132,15 +132,31 @@ Pour trier la liste rect définie au tout début, il suiffit d’appeler la fonc
 
 ```
 rect = [3,4,1,2,6,5]
-rect_tri = tri_selection(rect)
-print(rect_tri)
+print(tri_selection(rect))
 ```
 
-::::{admonition,hint} Conseil
+::::{admonition,note} Question philosophique
 
-Vous passez trop de temps à chercher vos affaires ? Pensez à mieux les ranger. Le temps perdu à ranger ses affaires est inférieur à celui que l’on passe à les chercher plus tard.
+Tout algorithme peut être exprimé sous forme de programme. 
+
+Mais est-ce que derrière chaque programme se cache un algorithme ?
 
 ::::
+
+::::{admonition,note} Ai-je compris ?
+
+1. Je sais lire et appliquer un algorithme, c’est-à dre je peux déduire le résultat que me donnera un algorithme à partir d’un jeu de données particulier.
+
+2. Je sais retranscrire un algorithme en un programme, je sais traduire les opérations d’un algorithme en instructions élémentaires if, else, while et for.
+
+::::
+
+
+
+
+
+
+
 
 
 ## Exercices supplémentaires
@@ -168,7 +184,34 @@ Lancer votre programme avec 100’000 éléments et comparer le temps obtenu ave
 
 ::::{admonition,attention} Exercice 11
 
-![](../plugged.png) Ecrire un algorithme qui calcule la suite de Fibonacci. Traduire l’algorithme en une fonction Python. Comparer avec les solutions trouvées par vos camarades de classe.
+![](../plugged.png) Ecrire un algorithme qui calcule la suite de Fibonacci. 
+
+Traduire l’algorithme en une fonction Python. 
+
+Comparer avec les solutions trouvées par vos camarades de classe.
+::::
+
+
+::::{admonition,attention} Exercice 12
+
+![](../plugged.png) Coder l’algorithme Bogosort en Python (voir Le saviez-vous ? III). 
+
+A partir de quelle taille de liste cet algorithme est inutilisable ?
+ 
+::::
+
+
+::::{admonition,error} A retenir
+
+Un algorithme est une suite d’instructions dans un ordre bien précis qui permet de résoudre un problème. L’algorithme va donner un résultat en fonction de données reçues en entrée.
+
+Pour arriver à résoudre un problème il faut le décomposer en sous-problèmes.
+
+Afin de pouvoir rechercher de manière efficace, les données doivent impérativement être triées.
+
+
+Il existe de multiples manières de résoudre un problème. Toutes ces manières ne se valent pas. Il faut choisir l’algorithme en fonction de ce qui doit être optimisé : le temps de résolution, l’espace de stockage, la précision de la solution, ...
+
 ::::
 
 
