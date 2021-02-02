@@ -162,6 +162,7 @@ Mais au milieu des années 2000, avec l’arrivée des plateformes, le regard po
 * ​[Une émission radio](https://www.rts.ch/play/radio/versus-penser/audio/revolution-travail-15-le-digital-labor?id=9060121&station=a83f29dee7a5d0d3f9fccdb9c92161b1afb512db) de la RTS sur le *digital labor*
 *  [Une enquête](https://usbeketrica.com/fr/article/microtravailleurs-de-tous-les-pays-unissez-vous) du magazine *Usbek et Rica* sur les travailleurs du clic
 *  [Un article](https://www.letemps.ch/economie/piste-ghost-workers-lintelligence-artificielle) du journal Le Temps sur l'ouvrage deux chercheurs consacré aux "travailleurs fantômes" en Inde et aux Etats-Unis
+* [Le témoignage](https://www.lemediatv.fr/emissions/2020/comment-apple-vous-ecoute-en-permanence-63EZI7ruTIqUPIhk7ZqPHA) d'un ancien "travailleur du clic" qui raconte les dessous du fonctionnement de l'assistant vocal Siri.
 
 <br>
 
@@ -193,13 +194,13 @@ Mais au milieu des années 2000, avec l’arrivée des plateformes, le regard po
 ## En classe
 
 Diffuser l’épisode [« Micro-travailler plus pour micro-gagner moins»](https://www.youtube.com/watch?v=Y8URdO7mDfg) de la série documentaire "Les invisibles" (France TV, 20 min.). 
- 
-
-[![](lesinvisibles.png)](https://www.youtube.com/watch?v=Y8URdO7mDfg)
-
 
 <br>
 
+ <a href="https://www.youtube.com/watch?v=Y8URdO7mDfg"><img src="lesinvisibles.png" width="600"/></a>
+
+<br>
+<br>
 
 Suite à la diffusion, poser les questions suivantes :
 
@@ -224,5 +225,5 @@ c) Pourriez-vous citer des situations lors desquelles nous travaillons en ligne 
    ::::{admonition,dropdown} Quelques éléments de réponse
   * Toutes nos activités sur les réseaux sociaux : commentaires, likes, partage d'image, clic sur un lien, et tout simplement faire défiler le fil d'actualité. De ces activités sont extraites de précieuses données pour les plateformes.
   * Effectuer une requête sur un moteur de recherche
-  * Identifier des lettres (CAPTCHA) ou des objets sur des images pour valider un formulaire. Par exemple, il est souvent demandés aux internautes d'identifier des objets liés au trafic routier (passage piétons, motos, vélos, etc.). Ces informations servent à entrainer les sytèmes de conduite automatisée.
+  * Identifier des lettres ou des objets sur des images pour valider un formulaire. Par exemple, il est souvent demandés aux internautes d'identifier des objets liés au trafic routier (passage piétons, motos, vélos, etc.). Ces informations servent à entrainer les sytèmes de conduite automatisée.
    ::::

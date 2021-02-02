@@ -14,6 +14,7 @@
     - file: content/theme/introduction-algorithmique/algorithmes-classiques/maitre
     - file: content/theme/introduction-algorithmique/algorithmes-classiques/activite/dijkstra/dijkstra
     - file: content/theme/introduction-algorithmique/algorithmes-classiques/activite/algo-tri/algo-tri
+    - file: content/theme/introduction-algorithmique/algorithmes-classiques/activite/puissance4/puissance4
     - file: content/theme/introduction-algorithmique/formulation-solutions/maitre
     - file: content/theme/introduction-algorithmique/consequences-automatisation/maitre
 - file: content/theme/introduction-programmation/maitre

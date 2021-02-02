@@ -148,7 +148,8 @@ ol {
 ::::
 
 ::::{admonition,dropdown} Surveillance
-* Tesquet, Olivier. *A la trace*. Premier Parallèle, 2020. 
+* Masutti, Christophe. *Affaires privées. Aux sources du capitalisme de surveillance*. C&F Editions, 2020.
+* Tesquet, Olivier. *A la trace*. Premier Parallèle, 2020.
 ::::
 
 ::::{admonition,dropdown} Architecture d'Internet
@@ -163,8 +164,13 @@ ol {
 * Turner, Fred. *Aux sources de l’utopie numérique. De la contre-culture à la cyberculture : Stewart Brand un homme d’influence*. Trad. de l’anglais par Laurent Vannini, Caen, C&F Éd., 2012.
 ::::
 
+::::{admonition,dropdown} Logiciel libre et commun
+* Paloque-Bergès, Camille, and Christophe Masutti. *Histoires et cultures du Libre. Des logiciels partagés aux licences échangées*. Lulu. com, 2013.
+::::
+
 ::::{admonition,dropdown} Usages des technologies
-* Boyd, Danah. *It’s Complicated : The Social Lives of Networked Teens*. Yale University Press, 2014
+* Boyd, Danah. *C'est compliqué. Les vies numériques des adolescents*. C&F Editions, 2016 (2014)
+* Cordier, Anne. *Grandir connectés.Les adolescents et la recherche d'information*, C&F Editions, 2015.
 * Nova, Nicolas. *Smartphones. Une enquête anthropologique*. Mētispresses, 2020.
 ::::
 
