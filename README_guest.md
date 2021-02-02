@@ -47,7 +47,7 @@ Voici une liste non-exhaustive des usages potentiels de ces ressources :
 
 ## :file_folder: Chapitrage
 
-Les ressources sont découpées selon un chapitrage qui correspond au plan d'études romand (ajouter réf). Elles sont divisées en quatre parties, dont nulle n'a de préseance sur les autres. Il appartient à l'enseignante ou l'enseignant de choisir l'ordre dans lequel les contenus sont abordés. Le fait que les chapitres soient successifs est le résultat des limitations de l'affichage. Pour atténuer quelque peu ce problème nous avons choisi de renoncer à une numérotation des chapitres. 
+Les ressources sont découpées selon un chapitrage qui correspond au plan d'études romand. Elles sont divisées en quatre parties, dont nulle n'a de préséance sur les autres. Il appartient à l'enseignante ou l'enseignant de choisir l'ordre dans lequel les contenus sont abordés. Le fait que les chapitres soient successifs est le résultat des limitations de l'affichage. Pour contourner ce problème nous avons choisi de renoncer à une numérotation des chapitres. 
 
 🟠 [Représentation de l'information](theme/representation-information/eleve.md)
 : Où il est question du passage du système décimal au `système binaire`, ainsi que des problématiques de traitement des données telles que `l'encodage`, `la compression`, `l'échantillonnage`, `le cryptage`, et la `représentation des caractères, des images et des sons` sous forme de bits. 
@@ -59,13 +59,13 @@ Les ressources sont découpées selon un chapitrage qui correspond au plan d'ét
 : Après avoir présenté un échantillon de langages de programmation et leurs différences respectives, ce chapitre `pose les bases du language Python`. 
 
 🔵 [Architecture des ordinateurs](content/theme/architecture-ordinateurs)
-: Il est question ici de notions telles que `les portes logiques`, `les transistors`, `l'architecture de Von Neumann`, et autres concepts essentiels à la compréhension de ce qui se passe au niveau physique et électronique dans un ordinateur.
+: Il est question ici de notions telles que `les portes logiques`, `les transistors`, `l'architecture de Von Neumann`, et autres concepts essentiels à la compréhension de ce qui se passe au niveau physique, micro-électronique et logique d'un ordinateur.
 
 ## :pencil: Licence
 
 Les ressources sont publiées sous licence Creatives Commons `Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions (CC BY-NC-SA)`. Cela signifie qu'elles peuvent être copiées, transformées, adaptées, et diffusées, hormis à des fins commerciales, tant qu'elles créditent le groupe de travail présenté ci-dessus, et qu'elles utilisent la même licence pour le partage futur. Les conditions sont disponibles [ici](https://creativecommons.org/licenses/?lang=fr). 
 
-![licence](.../content/demostests/edito/images/presentation/by-nc-sa.png)
+![licence](https://github.com/edunum-sec2/ressources/blob/master/edunum-sec2/content/demostests/edito/images/presentation/by-nc-sa.png)
 
 Toute personne qui réutilise les ressources est priée de le faire de la façon suivante : 
 
@@ -76,11 +76,11 @@ Toute personne qui réutilise les ressources est priée de le faire de la façon
 
 ## :rocket: Exécution des cellules interactives
 
-Certains chapitres de ces ressources comprennent des contenus exécutables directement dans une fenêtre du navigateur. C'est le cas, par exemple, du chapitre introduction à la programmation. 
+Certains chapitres de ces ressources comprennent des contenus exécutables directement dans une fenêtre du navigateur. C'est le cas, par exemple, du chapitre `introduction à la programmation`. 
 
 Dans ce cas, une icône supplémentaire apparaît dans le menu en haut à droite, qui permet d'ouvrir un environnement en ligne permettant d'exécuter des cellules de code. 
 
-![Binder](images/presentation/iconebinder.png)
+![Binder](https://github.com/edunum-sec2/ressources/blob/master/edunum-sec2/content/demostests/edito/images/presentation/iconebinder.png)
 
 ## :bulb: Syntaxe MyST
 
@@ -92,8 +92,8 @@ Les documents originaux des ressources sont écrits dans un language appelé [**
 
 ## :computer:	Utilisation en ligne
 
-1. Je reçois le lien des ressources en ligne. 
-2. Je parcours la documentation pour comprendre le projet dans son ensemble, en commençant par le chapitre {ref}`présentation des ressources <presentationressources>`.
+1. Je reçois le lien des ressources en ligne, sans passer par GitHub. 
+2. Je parcours la documentation pour comprendre le projet dans son ensemble, en commençant par le chapitre **présentation des ressources**.
 3. Je navigue à travers les différents chapitres du cours. 
 4. Si une information m'intéresse, par exemple une anecdote historique, un angle d'attaque pour une notion, un exemple particulier, voire même une séquence entière de cours théorique, je prends des notes et la réutilise à souhait dans mes leçons. 
 5. Je parcours les idées d'activité et je choisis celles qui m'intéressent. 
@@ -104,16 +104,16 @@ Les documents originaux des ressources sont écrits dans un language appelé [**
 
 1. À tout moment, je peux utiliser la fonction print des ressources, pour en extraire certains contenus. 
 
-````{image} images/utilisation/print.png
-````
+![print](https://github.com/edunum-sec2/ressources/blob/master/edunum-sec2/content/demostests/edito/images/utilisation/print.png)
+
 
 ## :key: Modifications indépendantes
 
 1. Si certains contenus m'intéressent, mais que je considère qu'ils pourraient être transformés pour être plus efficaces, je peux à tout moment aller consulter les fichiers sources. 
 
-![iconeGit](images/presentation/iconegit.png)
+![iconeGit](https://github.com/edunum-sec2/ressources/blob/master/edunum-sec2/content/demostests/edito/images/presentation/iconegit.png)
 
-2. {ref}`Je m'inscris sur Github <modificationindependante>`.
+2. Je m'inscris sur Github.
 3. Je retrouve le chapitre qui m'intéresse. 
 4. Je télécharge le fichier source. 
 5. Je le retravaille pour en faire ma propre version. 
