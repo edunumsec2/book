@@ -1,6 +1,6 @@
 # Présentation des ressources
 
-Les ressources pour l'enseignement de la branche *Informatique* au niveau secondaire II ont été produites par le `groupe de travail DGEP, EPFL, HEP, UNIL`, dans le cadre du projet **EduNum** du canton de Vaud. Leur objectif est la mise à disposition de contenus théoriques, de séries d'exercices, et d'idées d'activités pour les enseignantes et enseignants de ladite matière au Gymnase. 
+Les ressources pour l'enseignement de la discipline obligatoire *Informatique* au niveau secondaire II ont été produites par le `groupe de travail DGEP, EPFL, HEP, UNIL`, dans le cadre du projet **EduNum** du canton de Vaud. Leur objectif est la mise à disposition de contenus théoriques, de séries d'exercices, et d'idées d'activités pour les enseignantes et enseignants de ladite matière au Gymnase. 
 
 ---
 
@@ -43,23 +43,24 @@ Voici une liste non-exhaustive des usages potentiels de ces ressources :
 : Si vous souhaitez faire travailler vos élèves sur des machines, l'option Binder vous permet d'exécuter des cellules de code sans devoir pré-configurer l'environnement. 
 
 :white_check_mark: **Contribuer au développement et à l'amélioration de du projet**
-: Comme tout projet, celui-ci possède ses avantages et ses inconvénients. C'est pour bénéficier de votre expterise que nous avons construit ce projet sur un modèle open-source avec la possibilité à tout moment de le forker, de le transformer, ou d'y contribuer en utilisant l'infrastructure offerte par Github. 
+: Comme tout projet, celui-ci possède ses avantages et ses inconvénients. C'est pour bénéficier de votre expertise que nous avons construit ce projet sur un modèle open-source avec la possibilité à tout moment de le forker, de le transformer, ou d'y contribuer en utilisant l'infrastructure offerte par le serveur git. 
 
 ## :file_folder: Chapitrage
 
-Les ressources sont découpées selon un chapitrage qui correspond au plan d'études romand. Elles sont divisées en quatre parties, dont nulle n'a de préséance sur les autres. Il appartient à l'enseignante ou l'enseignant de choisir l'ordre dans lequel les contenus sont abordés. Le fait que les chapitres soient successifs est le résultat des limitations de l'affichage. Pour contourner ce problème nous avons choisi de renoncer à une numérotation des chapitres. 
+Les ressources sont découpées selon un chapitrage qui correspond au plan d'études vaudois. Elles sont divisées en quatre parties, dont nulle n'a de préséance sur les autres. Il appartient à l'enseignante ou l'enseignant de choisir l'ordre dans lequel les contenus sont abordés. Le fait que les chapitres soient successifs est le résultat des limitations de l'affichage. Pour contourner ce problème nous avons choisi de renoncer à une numérotation des chapitres. 
 
 🟠 [Représentation de l'information](theme/representation-information/eleve.md)
 : Où il est question du passage du système décimal au `système binaire`, ainsi que des problématiques de traitement des données telles que `l'encodage`, `la compression`, `l'échantillonnage`, `le cryptage`, et la `représentation des caractères, des images et des sons` sous forme de bits. 
 
 🟡 [Introduction à l'algorithmique](content/theme/introduction-algorithmique)
-: Ce chapitre propose une `définition générale de l'algorithmique`, ainsi qu'une présentation de certains `algorithmes classiques`. 
+: Ce chapitre présente `les concepts principaux de l'algorithmique`, à travers certains `algorithmes classiques`, ainsi que le développement de
+la `pensée algorithmique` par des activités collectives. 
 
 🟢 [Introduction à la programmation](content/theme/introduction-programmation)
 : Après avoir présenté un échantillon de langages de programmation et leurs différences respectives, ce chapitre `pose les bases du language Python`. 
 
 🔵 [Architecture des ordinateurs](content/theme/architecture-ordinateurs)
-: Il est question ici de notions telles que `les portes logiques`, `les transistors`, `l'architecture de Von Neumann`, et autres concepts essentiels à la compréhension de ce qui se passe au niveau physique, micro-électronique et logique d'un ordinateur.
+: Il est question ici de notions telles que `les portes logiques`, `les transistors`, `l'architecture de Von Neumann`, et autres concepts essentiels à la compréhension de ce qui se passe au niveau physique, électronique et logique d'un ordinateur.
 
 ## :pencil: Licence
 
@@ -81,6 +82,8 @@ Certains chapitres de ces ressources comprennent des contenus exécutables direc
 Dans ce cas, une icône supplémentaire apparaît dans le menu en haut à droite, qui permet d'ouvrir un environnement en ligne permettant d'exécuter des cellules de code. 
 
 ![Binder](https://github.com/edunum-sec2/ressources/blob/master/edunum-sec2/content/demostests/edito/images/presentation/iconebinder.png)
+
+:construction:	**Attention** : la solution Binder est lente. Nous sommes actuellement en train de chercher une alternative plus rapide. Une proposition a été faite d'utiliser https://cocalc.com/. Toute contribution à ce sujet est la bienvenue. 
 
 ## :bulb: Syntaxe MyST
 
