@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="449.7426 196.04253 194.33816 100.75747" width="194.33816" height="100.75747">
+<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="449.7426 196.04253 194.33816 100.75747" width="194.33816" height="100.75747">
   <defs>
     <font-face font-family="CMU Serif" font-size="16" panose-1="2 0 6 3 0 0 0 0 0 0" units-per-em="1000" underline-position="-125" underline-thickness="49.80469" slope="-877.5005" x-height="441.89453" cap-height="693.84766" ascent="930.1758" descent="-373.53516" font-style="italic" font-weight="400">
       <font-face-src>
@@ -13,8 +13,8 @@
       </font-face-src>
     </font-face>
   </defs>
-  <metadata> Produced by OmniGraffle 7.18.1\n2021-01-14 13:58:05 +0000</metadata>
-  <g id="Canvas_1" stroke-opacity="1" stroke="none" stroke-dasharray="none" fill-opacity="1" fill="none">
+  <metadata> Produced by OmniGraffle 7.18.2\n2021-02-03 11:03:03 +0000</metadata>
+  <g id="Canvas_1" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1" stroke="none">
     <title>Canvas 1</title>
     <g id="Canvas_1_Layer_1">
       <title>Layer 1</title>
@@ -78,22 +78,22 @@
         <path d="M 518.03906 256.9704 L 518.03906 259.3447 C 524.53906 259.3447 524.53906 272.3447 518.03906 272.3447 L 518.03906 285.84936 L 519.10966 285.84936 L 534.8 285.8 L 545.8 285.8" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
       <g id="Graphic_368">
-        <text transform="translate(622.14325 206.53263)" fill="black">
+        <text transform="translate(622.14325 205.01492)" fill="black">
           <tspan font-family="CMU Serif" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="15">C</tspan>
           <tspan font-family="CMU Serif" font-size="11" font-weight="500" fill="black" y="20">0</tspan>
         </text>
       </g>
       <g id="Line_367">
-        <path d="M 605.8 217.04253 L 616.8 217.04253 L 616.8 217.78758 L 611.4443 217.78758 L 611.4443 218.53263 L 617.14325 218.53263" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path d="M 605.8 217.04253 L 616.8 217.04253 L 611.4716 217.02873 L 616.0805 217.01492 L 617.14325 217.01492" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
       <g id="Graphic_369">
-        <text transform="translate(622.14325 265.26596)" fill="black">
+        <text transform="translate(622.14325 263.74825)" fill="black">
           <tspan font-family="CMU Serif" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="15">C</tspan>
           <tspan font-family="CMU Serif" font-size="11" font-weight="500" fill="black" y="20">1</tspan>
         </text>
       </g>
       <g id="Line_370">
-        <path d="M 605.8 275.8 L 616.8 275.8 L 616.8 276.53298 L 611.4443 276.53298 L 611.4443 277.26596 L 617.14325 277.26596" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path d="M 605.8 275.8 L 616.8 275.8 L 611.4716 275.77413 L 616.0805 275.74825 L 617.14325 275.74825" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
     </g>
   </g>
