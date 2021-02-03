@@ -24,3 +24,4 @@ Adding randomness
 Generative art
 Input / Output transformations (ex : Kinect)
 Augmented reality
+Art critique (Paolo Cirio, James Bridle)
