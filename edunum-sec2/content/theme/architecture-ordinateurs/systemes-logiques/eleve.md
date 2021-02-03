@@ -7,9 +7,9 @@ C'est assez fascinant que se dire que des tâches a priori pas mathématiques, p
 
 Comme but de ce chapitre, nous proposons de prendre le cas de l'**addition** et de s'intéresser aux circuits électroniques qui vont permettre à un ordinateur de faire une addition.
 
-Imaginons donc que nous devons additionner deux nombres entiers. Nous allons utiliser leur représentation binaire (avec uniquement des 1 et des 0). Pour faire simple, nous allons chercher à additionner simplement deux bits, disons $A$ et $C$, où chacun peut valoir soit 0 soit 1. Posons $C = A + B$. En énumérant tous les cas figure, on a:
+Imaginons donc que nous devons additionner deux nombres entiers. Nous allons utiliser leur représentation binaire (avec uniquement des 1 et des 0). Pour faire simple, nous allons chercher à additionner simplement deux bits, disons $A$ et $B$, où chacun peut valoir soit 0 soit 1. Posons que la somme $S = A + B$. En énumérant tous les cas figure, on a:
 
-| $A$ | $B$ | $C$ |
+| $A$ | $B$ | $S$ |
 | :-: | :-: | --: |
 | 0   | 0   | 0   |
 | 1   | 0   | 1   |
@@ -18,14 +18,14 @@ Imaginons donc que nous devons additionner deux nombres entiers. Nous allons uti
 
 La dernière ligne est intéressante: nous savons que $1+1=2$, mais en binaire, nous savons aussi que nous n'avons droit qu'à des 0 et des 1, et 2 s'écrit ainsi $10$ (TODO REF section). Cela veut dire que, pour traiter tous les cas d'une addition de 2 bits, nous avons besoin aussi de 2 bits de sortie, et qu'un seul ne suffit pas. En explicitant chaque fois le deuxième bit de sortie, notre tableau devient:
 
-| $A$ | $B$ | $C$ |
+| $A$ | $B$ | $S$ |
 | :-: | :-: | :-: |
 | 0   | 0   | 00  |
 | 1   | 0   | 01  |
 | 0   | 1   | 01  |
 | 1   | 1   | 10  |
 
-La question est de déterminer comment faire calculer les deux bits de $C$ à partir de $A$ et $B$ à un circuit électronique. Pour cela, avons besoin du concept de _portes logiques_.
+La question est de déterminer comment faire calculer les deux bits de la somme $S$ à partir de $A$ et $B$ à un circuit électronique. Pour cela, avons besoin du concept de _portes logiques_.
 
 
 ## Portes logiques
@@ -224,36 +224,109 @@ $Z$ est donc le **OU** de l'inverse de $Y$ et du **ET** de $X$ et $Y$.
 
 ## De la logique à l'arithmétique
 
-Ces portes logiques vont nous permettre de finalement réaliser notre petit additionneur. Nous avons déjà dit que nous avions deux bits de sorties à calculer pour notre sortie $C = A + B$. Disons donc que $C$ est donc constitué de $C_0$, le bit des unités, et de $C_1$, le bit représentant la valeur décimale 2. La table de vérité pour $C_0$, tirée directement de la première section ci-dessous, est:
+Ces portes logiques vont nous permettre de finalement réaliser notre petit additionneur. Nous avons déjà dit que nous avions deux bits de sorties à calculer pour notre sortie $S = A + B$. Disons donc que $S$ est donc constitué de $S_0$, le bit des unités, et de $S_1$, le bit représentant la valeur décimale 2. La table de vérité pour $S_0$, tirée directement de la première section ci-dessous, est:
 
-| $A$ | $B$ |$C_0$|
+| $A$ | $B$ |$S_0$|
 | :-: | :-: | :-: |
 | 0   | 0   | 0   |
 | 1   | 0   | 1   |
 | 0   | 1   | 1   |
 | 1   | 1   | 0   |
 
-En comparant cette table de vérité avec celles des portes logiques, on se rend compte que $C_0$ n'est autre qu'un **XOR** de $A$ et $B$.
+En comparant cette table de vérité avec celles des portes logiques, on se rend compte que $S_0$ n'est autre qu'un **XOR** de $A$ et $B$.
 
-La table de vérité pour $C_1$ est:
+La table de vérité pour $S_1$ est:
 
-| $A$ | $B$ |$C_0$|
+| $A$ | $B$ |$S_1$|
 | :-: | :-: | :-: |
 | 0   | 0   | 0   |
 | 1   | 0   | 0   |
 | 0   | 1   | 0   |
 | 1   | 1   | 1   |
 
-Et on constate que $C_1$ n'est autre qu'un **ET** logique de $A$ et $B$. Ainsi, on peut dessiner notre petit additionneur de deux bits ainsi:
+Et on constate que $S_1$ n'est autre qu'un **ET** logique de $A$ et $B$. Ainsi, on peut dessiner notre petit additionneur de deux bits ainsi:
 
 ![](media/half_adder.svg)
 
-Ce circuit est spécialement intéressant en montrant comment des opérateurs logiques sont utilisés pour réaliser l'opération arithmétique de l'addition.
+Ce circuit est spécialement intéressant en montrant comment des opérateurs logiques sont utilisés pour réaliser l'opération arithmétique de l'addition. Notre additionneur est limité: en fait, on l'appelle un _demi-additionneur_. Il n'est capable d'additionner que deux nombres à 1 bit, c'est très limité. En fait, il serait intéressant d'avoir un additionneur de _trois_ nombres à un bit. Pourquoi? À cause de la manière dont nous faisons les additions en colonnes.
+
+Lorsque nous faisons une addition de deux nombres à plusieurs chiffres, que ce soit en base 10 ou en base 2, on commence par la colonne de droite, les unités. Nous connaissons le concept de _retenue_: en base 10, si l'addition des unités dépasse 9, on retient 1 dans la colonne des dizaines. En base 2, de façon similaire, si l'addition des unités dépasse… 1, on retient 1 dans la colonne suivante à gauche. C'est ce qu'on a fait avec le demi-additionneur: on peut considérer que la sortie $S_0$ représente la colonne des unités dans la somme, et la sortie $S_1$ représente la retenue à prendre en compte dans la colonne suivante.
+
+C'est ici que ça se complique: pour additionner les chiffres de la deuxième colonne, nous devons potentiellement additionner trois chiffres, et plus seulement deux. Il y a en effet peut-être cette retenue qui nous vient de la colonne des unités. Ceci est vrai en base 2 comme en base 10. Il nous faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s'appelle _additionneur complet_.
 
 
-## Exercice: additionneur de deux nombres de deux bits
+### Exercice
 
+ * Déterminer combien de combinaisons différentes sont possibles pour trois signaux d'entrées $A$, $B$ et $C$ qui chacun peuvent valoir soit $1$ soit $0$.
+ * Lister toutes ces combinaisons.
+ * Pour chaque combinaisons, déterminer la valeur binaire qui est la somme des 3 signaux d'entrée.
+ * Finalement, avec les informations ainsi obtenues, compléter la table de vérité d'un additionneur complet qui a deux sorties $S_0$ et $S_1$
+
+:::{admonition,dropdown} Corrigé
+ Il y a $2 \cdot 2 \cdot 2 = 2^3 = 8$ combinaisons différentes. Avec la notation $A + B + C =$ valeur en décimal $=$ valeur en binaire, les voici:
+  * $0 + 0 + 0 = 0_d = 00_b$
+  * $0 + 0 + 1 = 1_d = 01_b$
+  * $0 + 1 + 0 = 1_d = 01_b$
+  * $0 + 1 + 1 = 2_d = 10_b$
+  * $1 + 0 + 0 = 1_d = 01_b$
+  * $1 + 0 + 1 = 2_d = 10_b$
+  * $1 + 1 + 0 = 2_d = 10_b$
+  * $1 + 1 + 1 = 3_d = 11_b$
+
+La table de vérité est ainsi:
+
+| $A$ | $B$ | $C$ | $S_0$ | $S_1$ |
+| :-: | :-: | :-: | :-: | :-: |
+| 0   | 0   | 0   | 0   | 0   |
+| 0   | 0   | 1   | 0   | 1   |
+| 0   | 1   | 0   | 0   | 1   |
+| 0   | 1   | 1   | 1   | 0   |
+| 1   | 0   | 0   | 0   | 1   |
+| 1   | 0   | 1   | 1   | 0   |
+| 1   | 1   | 0   | 1   | 0   |
+| 1   | 1   | 1   | 1   | 1   |
+:::
+
+Faisons pour l'instant abstraction des détails d'un additionneur complet. On peut se dire qu'on le dessine simplement ainsi:
+
+![](media/full_adder_box.svg)
+
+La flexibilité de ce composant fait qu'on peut maintenant facilement l'utiliser pour construire un circuit qui additionne deux nombres $A$ et $B$ à 2 bits chacun (donc de $0 + 0 = 0$ à $3 + 3 = 6$). Si $A$ est formé de deux bits $A_0$ et $A_1$ et que $B$ est formé des deux bits $B_0$ et $B_1$ et avec une sortie $S$ sur trois bits $S_0$, $S_1$ et $S_2$, on a:
+
+![](media/full_adders_2bit.svg)
+
+L'additionneur du haut, comme précédemment, additionne les deux bits des unités. Son entrée $C$, qui représente l'éventuelle troisième chiffre à additionner issu d'une retenue, est toujours 0, vu qu'il n'y a aucune colonne précédente dans l'addition qui aurait pu en livrer une. Il livre comme première sortie $S_0$, le chiffre des unités, et sa seconde sortie est la retenue à utiliser pour l'addition des chiffres suivants. C'est pourquoi elle est connectée à l'entrée de la retenue du second additionneur, qui va lui ajouter également les deux bits de la colonne suivante, $A_1$ et $B_1$. Les sorties du second additionneur livrent le deuxième bit $S_1$ de la valeur de sortie, ainsi que la retenue pour la troisième colonne. Comme il n'y a plus de bits d'entrée pour la troisième colonne, cette retenue peut directement être considérée comme le troisième bit de sortie.
+
+
+### Exercice
+
+En connectant des additionneurs complets, réaliser un circuit qui additionne deux nombres $A$ et $B$ de huit bits, numérotés $A_0$ à $A_7$ et $B_0$ à $B_7$, respectivement. Combien de bits de sortie doit-il y avoir pour traiter toutes les valeurs possibles?
+
+:::{admonition,dropdown} Corrigé
+Nous avons besoin de neuf bits de sortie. Le schéma, représenté horizontalement, est:
+
+![](media/full_adders_8bit.svg)
+
+Les trois entrées de chaque additionneur sont interchangeables (reflétant la commutativité de l'addition), mais pas les sorties.
+
+Cet exercice démontre l'opportunité de penser en termes modulaires, ce qui revient souvent en informatique. Ici, on a réalisé qu'un additionneur complet résout un sous-problème bien défini d'une addition générale d'un nombre à $n$ bits, et que, une fois qu'on a créé un tel additionneur, il suffit d'en connecter plusieurs les uns derrière les autres de manière structurée pour additionner des nombres plus grands.
+:::
+
+
+### Exercice
+
+En s'aidant de la table de vérité d'un seul additionneur complet, créer un circuit logique qui calcule ses sorties $S_0$ et $S_1$ en fonction des entrées $A$, $B$ et $C$.
+
+:::{admonition,dropdown} Indice
+ * La sortie $S_0$ doit être $1$ soit lorsque les trois entrées valent $1$, soit lors qu'une seule des trois entrée vaut $1$.
+ * La sortie $S_1$, qui est la retenue, doit être $1$ lorsque deux ou trois des trois entrées sont à $1$.
+:::
+
+:::{admonition,dropdown} Corrigé
 TODO
+![](media/full_adder.svg)
+:::
+
 
 
 ## ALU
