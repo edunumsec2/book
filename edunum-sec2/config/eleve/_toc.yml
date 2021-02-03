@@ -98,6 +98,7 @@
   - file: content/demostests/edito/testintrorepinfo
   - file: content/demostests/edito/extensions
   - file: content/demostests/edito/bugs
+  - file: content/demostests/art/histoireart
 
 # Ajout d'une partie pour les enjeux sociaux
 
