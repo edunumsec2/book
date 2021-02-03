@@ -6,7 +6,7 @@
 
 Dans ce chapitre, nous appelons donc "art numérique" plus spécifiquement des productions utilisant un ordinateur, un programme, un algorithme, comme outil principal de création. 
 
-Néanmoins, nous commencerons par une courte présentation de l'utilisation d'algorithmes simples dans des oeuvres datant de plusieurs siècles. 
+Néanmoins, nous commencerons par une courte présentation de l'utilisation d'algorithmes de dessin dans des oeuvres datant de plusieurs siècles. 
 
 ## Zellige 
 
