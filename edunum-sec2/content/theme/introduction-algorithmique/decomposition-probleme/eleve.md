@@ -33,7 +33,7 @@ Fin Pour
 
 ::::{admonition,attention} Exercice 1
 
- Que contient la variable résultat à la fin de cet algorithme ? Quel est le problème que cet algorithme permet de résoudre ?
+Que contient la variable résultat à la fin de cet algorithme ? Quel  problème cet algorithme permet de résoudre ?
 
 ::::
 
@@ -75,25 +75,35 @@ A quoi correspondent les ingrédients d’un algorithme dans l’exemple de la r
 
 ::::{admonition,attention} Exercice 3
 
-Ecrire un algorithme qui échange les valeurs de 2 variables. Après chaque opération, dessiner le contenu de chaque variable dans une case.
+Ecrire un algorithme qui échange les valeurs de 2 variables. Représenter les deux variables par deux cases. Chaque case a une étiquette (le nom de la variable) et un contenu (la valeur de la variable). Dessiner le contenu de chaque variable aprsè chaque opération de votre algorithme.
 
 ::::
 
+
+::::{admonition,note} Ai-je compris ?
+
+1. Je connais la différence entre un algorithme et un programme.
+
+2. Je sais formuler un algorithme : je décompose le problème en sous-problèmes et je décris les opérations qui permettent de résoudre chaque sous-problème.
+
+::::
+
+
 ## Solutions des exercices 
 
-::::{admonition,attention} Exercice 1
+::::{admonition,attention} Solution de l'exercice 1
 
 L’algorithme permet de calculer la somme des nombres contenus dans la liste Nombres.
 
 ::::
 
-::::{admonition,attention} Exercice 2
+::::{admonition,attention} Solution de l'exercice 2
 
 Les oeufs sont les données en entrée, les opérations correspondent aux instructions numérotées de 1 à 4 dans la recette et finalement le résultat en sortie est l’omelette. On peut considérer le matériel culinaire (bol, fourchette, poêle, spatule) comme du matériel informatique à notre disposition, capable de traiter les données. En effet on peut cuire plein d’autres aliments dans une poêle.
 
 ::::
 
-::::{admonition,attention} Exercice 3
+::::{admonition,attention} Solution de l'exercice 3
 
 Soit les variables X et Y qui contiennent les valeurs 1 et 2. Une solution naïve consisterait à écrire l’algorithme suivant :
 
