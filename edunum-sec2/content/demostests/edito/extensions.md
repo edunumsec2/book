@@ -1,6 +1,6 @@
 # Extensions
 
-<iframe src="../../../skulpt/frame.html" class="skulpt" frameborder="0" border="0" cellspacing="0"></iframe>
+<iframe src="../../../skulpt/frame.html" scrolling="no" class="codeframe" frameborder="0" border="0" cellspacing="0"></iframe>
 
 Dans ce document, vous trouverez de la documentation utilisateur pour toutes les extensions de syntaxe développées spécifiquement pour le projet.
 

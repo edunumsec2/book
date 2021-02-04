@@ -6,32 +6,41 @@
   <script src="skulpt.min.js" type="text/javascript"></script>
   <script src="skulpt-stdlib.js" type="text/javascript"></script>
   <script src="codemirror.js" type="text/javascript"></script>
-  <link rel="stylesheet" type="text/css" href="codemirror.css">
+  <link rel="stylesheet" type="text/css" href="codemirror.css" />
   <script src="python.js" type="text/javascript"></script>
   <script src="main.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="monokai.css" />
+  <link rel="stylesheet" type="text/css" href="bootstrap-buttons.css" />
+  <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
-<body>
 
-  <form>
-    <textarea id="code" cols="40" rows="10">import turtle
+<body>
+  <div id="editor-area">
+    <h1>Programme</h1>
+    <textarea id="code" cols="80" rows="10">import turtle
 
 t = turtle.Turtle()
 
-for i in xrange(3):
-    for j in xrange(36):
-        t.forward(10)
-        t.left(10)
-    t.up()
-    t.forward(50)
-    t.down()
+n = 12
+for j in xrange(n):
+    t.forward(20)
+    t.left(360 / n)
 
 print("Voilà!")
-</textarea><br />
-    <button id="execute" type="button">Executer</button>
-  </form>
-  <pre id="output"></pre>
-  <div id="canvas"></div>
-
+</textarea>
+    <div id="control-area">
+      <button id="execute" class="btn btn-primary" type="button">Executer</button>
+      <button id="interrupt" class="btn btn-secondary" disabled="true" type="button">Interrompre</button>
+    </div>
+  </div>
+  <div id="output-area">
+    <h1>Sortie</h1>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-area">
+    <h1>Dessin</h1>
+    <div id="canvas"></div>
+  </div>
 </body>
 
 </html>

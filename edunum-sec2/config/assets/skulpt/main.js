@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
+  var isInterrupted = false;
+  var executeBtn = document.getElementById("execute");
+  var interruptBtn = document.getElementById("interrupt");
+
   function outputFunction(text) {
     var elem = document.getElementById("output");
     elem.innerHTML = elem.innerHTML + text;
@@ -9,25 +13,59 @@ document.addEventListener("DOMContentLoaded", function() {
     return Sk.builtinFiles["files"][x];
   }
 
-  var codeElem = CodeMirror.fromTextArea(document.getElementById("code"), {lineNumbers:true});
+  var codeElem = CodeMirror.fromTextArea(document.getElementById("code"), {
+    lineNumbers: true,
+    theme: "monokai",
+    indentUnit: 4,
+  });
+
+  codeElem.on("change", resized);
+
+  Sk.configure({
+    killableWhile: true,
+    killableFor: true,
+  });
 
   function runInterpreter() {
+    executeBtn.disabled = true;
+    interruptBtn.disabled = false;
     var prog = codeElem.getValue();
     var elem = document.getElementById("output");
     elem.innerHTML = '';
     Sk.pre = "output";
     Sk.configure({ output: outputFunction, read: builtinRead });
     (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
-    var myPromise = Sk.misceval.asyncToPromise(function () {
+    var myPromise = Sk.misceval.asyncToPromise(function() {
       return Sk.importMainWithBody("<stdin>", false, prog, true);
+    }, { "*": function () {
+      if (isInterrupted) {
+        throw "Interruption";
+      }
+    }});
+    myPromise.then(function() {
+      executeBtn.disabled = false;
+      interruptBtn.disabled = true;
+      isInterrupted = false;
+    }, function(err) {
+      executeBtn.disabled = false;
+      interruptBtn.disabled = true;
+      isInterrupted = false;
+      elem.innerText = err.toString();
     });
-    myPromise.then(function (mod) {
-      console.log('success');
-    },
-      function (err) {
-        console.log(err.toString());
-      });
   }
 
-  document.getElementById("execute").addEventListener("click", runInterpreter);
+  function interruptInterpreter() {
+    isInterrupted = true;
+  }
+
+  interruptBtn.addEventListener("click", interruptInterpreter);
+  executeBtn.addEventListener("click", runInterpreter);
+
+  function resized() {
+    if (parent && parent.frameResized) {
+      parent.frameResized();
+    }
+  }
+
+  resized();
 });
