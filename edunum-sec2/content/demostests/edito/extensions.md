@@ -272,3 +272,22 @@ print(puissance(2, 10))
 ```
 ````
 `````
+
+### Librairies
+
+#### Turtle
+
+```{codeplay}
+from turtle import *
+up()
+forward(-100)
+down()
+speed(10)
+color('red', 'yellow')
+begin_fill()
+for i in range(9):
+    forward(200)
+    left(160)
+end_fill()
+done()
+```
