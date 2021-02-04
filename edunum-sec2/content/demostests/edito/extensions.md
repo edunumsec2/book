@@ -1,6 +1,18 @@
 # Extensions
 
-<iframe src="../../../skulpt/frame.html" scrolling="no" class="codeframe" frameborder="0" border="0" cellspacing="0"></iframe>
+```{codeplay}
+def double(x):
+    return x + x
+
+print(double(1))
+```
+
+```{codeplay}
+def puissance(x, y):
+    return x ** y
+
+print(puissance(2, 10))
+```
 
 Dans ce document, vous trouverez de la documentation utilisateur pour toutes les extensions de syntaxe développées spécifiquement pour le projet.
 

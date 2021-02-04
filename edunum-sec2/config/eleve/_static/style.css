@@ -13,7 +13,7 @@ p {
 }
 
 .codeframe {
-    height: 1000px;
+    height: 250px;
     width: 100%;
-    overflow: hidden;
+    overflow: scroll;
 }

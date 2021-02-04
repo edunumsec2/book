@@ -77,7 +77,7 @@ class Question(SphinxDirective):
 
         title = self.arguments[0] if len(self.arguments) > 0 else "Question"
 
-        textnodes, messages = self.state.inline_text(title, self.lineno)
+        textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
 
         content = nodes.container("", is_div=True, classes=["question-content"])

@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
   Sk.configure({
     killableWhile: true,
     killableFor: true,
+    yieldLimit: 100,
   });
 
   Sk.onAfterImport = function(library) {
@@ -61,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
       executeBtn.disabled = false;
       interruptBtn.disabled = true;
       isInterrupted = false;
-      elem.innerText = err.toString();
+      elem.innerText = elem.innerText + "\n" + err.toString();
     });
   }
 
@@ -74,9 +75,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function resized() {
     if (parent && parent.frameResized) {
-      parent.frameResized();
+      parent.frameResized(self);
     }
   }
 
+  const config = { attributes: false, childList: true, subtree: true };
+  const observer = new MutationObserver(resized);
+  observer.observe(document.getElementById("output"), config);
   resized();
+
+  if (parent && parent.frameResized) {
+    parent.populateFrame(self, codeElem);
+  }
 });

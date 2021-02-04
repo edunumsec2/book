@@ -59,6 +59,7 @@ sphinx:
     blanks: ../extensions/
     youtube: ../extensions/
     switchtube: ../extensions/
+    codeplay: ../extensions/
 
 #######################################################################################
 # Interact link settings
