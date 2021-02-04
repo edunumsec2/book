@@ -1,8 +1,12 @@
 # Marche à suivre relectures
 
-```{admonition}
-:class: note
+````{admonition} Important
 Ceci est une marche à suivre pour faire des corrections directement dans VScode en passant par la fonctionnalité *issue* de GitHub
+````
+(sidentifier)=
+### S'identifier avec son compte GitHub dans VScode
+
+```{image} images/relectures/0.png
 ```
 
 ### Installer l'extension dans VScode
@@ -46,6 +50,8 @@ Ceci est une marche à suivre pour faire des corrections directement dans VScode
 ```
 
 ## Tuto vidéo
+
+🚨 : il manque l'étape {ref}`d'identification <sidentifier>`, dans le tuto vidéo. 
 
 ```{youtube} DPXxQ4IXOhY
 ```
