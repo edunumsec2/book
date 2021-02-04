@@ -36,6 +36,9 @@ Comme on peut le voir, un programme aussi simple ne permet pas d'exprimer toute 
 ```{youtube} QAyHwEuhF4E
 ```
 
+<!-- @elliotvaucher TODO #9 modifier ce paragraphe
+ -->
+
 Mandala
 Tessellation
 Escher tessellation
