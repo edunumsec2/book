@@ -55,6 +55,7 @@ Ce chapitre s'adresse aux personnes qui souhaitent intervenir sur les fichiers s
       * `redhat.vscode-yaml` pour éditer des fichiers de configuration YAML
       * `executablebookproject.myst-highlight` pour utiliser la syntaxe Markdown étendue prise en charge par `jupyter-book`
       * `seunlanlege.action-buttons` pour avoir des boutons directement dans VS Code pour faire un build
+      * `ban.spellright` pour une correction orthographique de base dans VS Code
       
       Accepter l'installation de ces recommandations à l'ouverture du workspace:
       

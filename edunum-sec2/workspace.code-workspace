@@ -64,7 +64,14 @@
 					"singleInstance": true,
 				},
 			]
-		}
+		},
+		"files.watcherExclude": {
+			"**/target": true
+		},
+		"spellright.language": [
+			"fr"
+		],
+		"spellright.recheckOnSave": true
 	},
 	"extensions": {
 		"recommendations": [
@@ -72,7 +79,8 @@
 			"ms-toolsai.jupyter",
 			"redhat.vscode-yaml",
 			"executablebookproject.myst-highlight",
-			"seunlanlege.action-buttons"
+			"seunlanlege.action-buttons",
+			"ban.spellright"
 		]
 	}
 }
