@@ -8,55 +8,26 @@
   <script src="codemirror.js" type="text/javascript"></script>
   <link rel="stylesheet" type="text/css" href="codemirror.css">
   <script src="python.js" type="text/javascript"></script>
+  <script src="main.js" type="text/javascript"></script>
 </head>
 <body>
 
-  <script type="text/javascript">
-    // output functions are configurable.  This one just appends some text
-    // to a pre element.
-    function outf(text) {
-      var mypre = document.getElementById("output");
-      mypre.innerHTML = mypre.innerHTML + text;
-    }
-    function builtinRead(x) {
-      if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-        throw "File not found: '" + x + "'";
-      return Sk.builtinFiles["files"][x];
-    }
-
-    function runit() {
-      var prog = document.getElementById("code").value;
-      var mypre = document.getElementById("output");
-      mypre.innerHTML = '';
-      Sk.pre = "output";
-      Sk.configure({ output: outf, read: builtinRead });
-      (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
-      var myPromise = Sk.misceval.asyncToPromise(function () {
-        return Sk.importMainWithBody("<stdin>", false, prog, true);
-      });
-      myPromise.then(function (mod) {
-        console.log('success');
-      },
-        function (err) {
-          console.log(err.toString());
-        });
-    } 
-  </script>
-
   <form>
     <textarea id="code" cols="40" rows="10">import turtle
-import turtle
 
 t = turtle.Turtle()
 
-for i in xrange(36):
-    t.forward(10)
-    t.left(10)
+for i in xrange(3):
+    for j in xrange(36):
+        t.forward(10)
+        t.left(10)
+    t.up()
+    t.forward(50)
+    t.down()
 
-print("Done!")
+print("Voilà!")
 </textarea><br />
-    <script type="text/javascript">CodeMirror.fromTextArea(document.getElementById("code"), {lineNumbers:true});</script>
-    <button type="button" onclick="runit()">Executer</button>
+    <button id="execute" type="button">Executer</button>
   </form>
   <pre id="output"></pre>
   <div id="canvas"></div>
