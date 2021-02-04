@@ -28,8 +28,8 @@ div#output-area pre {
 
 div#control-area {
   position: absolute;
-  right: 20px;
-  bottom: 10px;
+  right: 10px;
+  top: 10px;
   z-index: 1;
   width: fit-content;
 }
