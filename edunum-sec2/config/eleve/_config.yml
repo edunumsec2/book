@@ -53,6 +53,7 @@ sphinx:
     html_theme: sphinx_book_theme
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     html_favicon: favicon.ico
+    html_extra_path: ['../assets']
   local_extensions:
     questions: ../extensions/
     blanks: ../extensions/
