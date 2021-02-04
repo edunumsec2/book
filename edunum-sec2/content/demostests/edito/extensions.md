@@ -1,19 +1,5 @@
 # Extensions
 
-```{codeplay}
-def double(x):
-    return x + x
-
-print(double(1))
-```
-
-```{codeplay}
-def puissance(x, y):
-    return x ** y
-
-print(puissance(2, 10))
-```
-
 Dans ce document, vous trouverez de la documentation utilisateur pour toutes les extensions de syntaxe développées spécifiquement pour le projet.
 
 Ces extensions de syntaxes sont des extensions Sphinx locales implémentées en Python.
@@ -232,6 +218,57 @@ Il est possible d'ajouter l'option `:notitle` pour cacher le titre de la vidéo 
 ````{code-block} markdown
 ```{switchtube} f6365946
 :notitle:
+```
+````
+`````
+
+## Interpréteur Python
+
+Il est possible d'insérer un interpréteur Python et éditeur directement dans le document, le tout implémenté en Javascript et qui tourne dans le client Web du visiteur.
+Pour ceci, il suffit d'utiliser la directive `codeplay`.
+
+`````{tabbed} Aperçu
+```{codeplay}
+def double(x):
+    return x + x
+
+print(double(1))
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{codeplay}
+def double(x):
+    return x + x
+
+print(double(1))
+```
+````
+`````
+
+### Options
+
+Via l'option `:exec:`, le code est executé dès le chargement de la page.
+
+`````{tabbed} Aperçu
+```{codeplay}
+:exec:
+def puissance(x, y):
+    return x ** y
+
+print(puissance(2, 10))
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{codeplay}
+:exec:
+def puissance(x, y):
+    return x ** y
+
+print(puissance(2, 10))
 ```
 ````
 `````

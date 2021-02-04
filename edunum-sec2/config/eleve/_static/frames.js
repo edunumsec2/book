@@ -10,12 +10,15 @@ function frameResized(self) {
   }
 }
 
-function populateFrame(self, editor) {
+function populateFrame(self, options) {
   var frames = document.getElementsByClassName("codeframe")
   for (const frame of frames) {
     if (frame.contentWindow === self) {
-      editor.setValue(atob(frame.dataset.code));
+      options.editor.setValue(atob(frame.dataset.code));
       frame.style.overflow = "hidden";
+      if (frame.hasAttribute("data-run")) {
+        options.run();
+      }
     }
   }
 }

@@ -85,6 +85,10 @@ document.addEventListener("DOMContentLoaded", function() {
   resized();
 
   if (parent && parent.frameResized) {
-    parent.populateFrame(self, codeElem);
+    const options = {
+      editor: codeElem,
+      run: runInterpreter
+    };
+    parent.populateFrame(self, options);
   }
 });
