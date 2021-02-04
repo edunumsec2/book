@@ -5,6 +5,9 @@
   <title>Python Interpreter</title>
   <script src="skulpt.min.js" type="text/javascript"></script>
   <script src="skulpt-stdlib.js" type="text/javascript"></script>
+  <script src="codemirror.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="codemirror.css">
+  <script src="python.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -21,18 +24,13 @@
       return Sk.builtinFiles["files"][x];
     }
 
-    // Here's everything you need to run a python program in skulpt
-    // grab the code from your textarea
-    // get a reference to your pre element for output
-    // configure the output function
-    // call Sk.importMainWithBody()
     function runit() {
-      var prog = document.getElementById("yourcode").value;
+      var prog = document.getElementById("code").value;
       var mypre = document.getElementById("output");
       mypre.innerHTML = '';
       Sk.pre = "output";
       Sk.configure({ output: outf, read: builtinRead });
-      (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'mycanvas';
+      (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
       var myPromise = Sk.misceval.asyncToPromise(function () {
         return Sk.importMainWithBody("<stdin>", false, prog, true);
       });
@@ -46,7 +44,7 @@
   </script>
 
   <form>
-    <textarea id="yourcode" cols="40" rows="10">import turtle
+    <textarea id="code" cols="40" rows="10">import turtle
 import turtle
 
 t = turtle.Turtle()
@@ -57,11 +55,11 @@ for i in xrange(36):
 
 print("Done!")
 </textarea><br />
-    <button type="button" onclick="runit()">Run</button>
+    <script type="text/javascript">CodeMirror.fromTextArea(document.getElementById("code"), {lineNumbers:true});</script>
+    <button type="button" onclick="runit()">Executer</button>
   </form>
   <pre id="output"></pre>
-  <!-- If you want turtle graphics include a canvas -->
-  <div id="mycanvas"></div>
+  <div id="canvas"></div>
 
 </body>
 
