@@ -46,6 +46,7 @@ div#canvas-area {
   background-color: rgb(238, 238, 238);
   text-align: center;
   padding: 10px;
+  display: none;
 }
 
 div#canvas {

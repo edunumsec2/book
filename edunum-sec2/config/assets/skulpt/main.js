@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var isInterrupted = false;
   var executeBtn = document.getElementById("execute");
   var interruptBtn = document.getElementById("interrupt");
+  var canvasArea = document.getElementById("canvas-area");
 
   function outputFunction(text) {
     var elem = document.getElementById("output");
@@ -26,7 +27,17 @@ document.addEventListener("DOMContentLoaded", function() {
     killableFor: true,
   });
 
+  Sk.onAfterImport = function(library) {
+    switch(library) {
+      case 'turtle':
+        canvasArea.style.display = "block";
+        resized();
+        break;
+    }
+  }
+
   function runInterpreter() {
+    canvasArea.style.display = "none";
     executeBtn.disabled = true;
     interruptBtn.disabled = false;
     var prog = codeElem.getValue();
