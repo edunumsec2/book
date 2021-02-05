@@ -25,6 +25,35 @@ Le code Python ci-dessous, permet de créer un Zellige simplifié à partir de p
 
 <iframe height="400px" width="100%" src="https://repl.it/@elliotvaucher/Zellige?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
+#Moroccan Mosaic using Python Turtle - www.101computing.net/morroccan-mosaic/
+import turtle
+myPen = turtle.Turtle()
+myPen.shape("arrow")
+
+myPen.speed(1000) #Set the speed of the turtle
+
+#A Procedue to draw a mosaic by repeating and rotating a polygon shape.
+def drawMosaic(color1,numberOfSides1,size1,color2,numberOfSides2,size2,numberOfIterations):
+ for i in range(0,numberOfIterations):
+   myPen.color(color1)
+   for j in range (0,numberOfSides1):
+     myPen.forward(size1)
+     myPen.left(360 / numberOfSides1)
+   myPen.color(color2)
+   for k in range (0,numberOfSides2):
+     myPen.forward(size2)
+     myPen.left(360 / numberOfSides2)
+     
+   myPen.left(360 / numberOfIterations)
+
+#Main Program Starts Here
+#Mosaic 1: Hexagon and pentagon
+#drawMosaic("blue",6,100,"lightblue",5,80,8)
+#Mosaic 2: Octogons of different sizes
+drawMosaic("#980C6B",8,80,"#DD6BB8",5,70,20)
+
+myPen.hideturtle()
+
 Comme on peut le voir, un programme aussi simple ne permet pas d'exprimer toute la complexité contenue dans les Zellige de la tradition de l'art géométrique arabe. Les compositions traditionnelles impliquent des répétitions périodiques de motifs très complexes. 
 
 [Cet article](https://dl.acm.org/doi/pdf/10.1145/3064419?casa_token=alNKFW_UWasAAAAA:KuETyYndEmiMiN_ivaN8UkIAEBrvAlvlwZr8eY6qfZT9CVRK4J1J0EgxgvL7vykdjqPACmPd6MNX-Q) datant de 2017, écrit par deux chercheurs de l'université de Fès au Maroc, donne une idée de la subtilité d'un algorithme capable de générer ce genre de motifs. 
