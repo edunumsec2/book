@@ -1,13 +1,20 @@
 document.addEventListener("DOMContentLoaded", function() {
   var isInterrupted = false;
-  var executeBtn = document.getElementById("execute");
-  var interruptBtn = document.getElementById("interrupt");
-  var canvasArea = document.getElementById("canvas-area");
+  const executeBtn = document.getElementById("execute");
+  const interruptBtn = document.getElementById("interrupt");
+  const canvasArea = document.getElementById("canvas-area");
+  const canvasElem = document.getElementById("canvas");
+  const outputElem = document.getElementById("output");
 
   function outputFunction(text) {
-    var elem = document.getElementById("output");
-    elem.innerHTML = elem.innerHTML + text;
+    const atBottom = outputElem.scrollTop + output.clientHeight >= outputElem.scrollHeight;
+    const node = document.createTextNode(text);
+    outputElem.appendChild(node);
+    if (atBottom) {
+      outputElem.scrollTop = outputElem.scrollHeight;
+    }
   }
+
   function builtinRead(x) {
     if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
       throw "File not found: '" + x + "'";
@@ -26,7 +33,11 @@ document.addEventListener("DOMContentLoaded", function() {
     killableWhile: true,
     killableFor: true,
     yieldLimit: 100,
+    output: outputFunction,
+    read: builtinRead,
   });
+
+  Sk.pre = "output";
 
   Sk.onAfterImport = function(library) {
     switch(library) {
@@ -37,6 +48,17 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
+  if (!Sk.TurtleGraphics) {
+    Sk.TurtleGraphics = {};
+  }
+  Sk.TurtleGraphics.target = 'canvas';
+  Sk.TurtleGraphics.width = 600;
+  Sk.TurtleGraphics.height = 400;
+  canvasElem.style.width = "600px";
+  canvasElem.style.height = "400px";
+
+
+
   function runInterpreter() {
     canvasArea.style.display = "none";
     executeBtn.disabled = true;
@@ -44,9 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var prog = codeElem.getValue();
     var elem = document.getElementById("output");
     elem.innerHTML = '';
-    Sk.pre = "output";
-    Sk.configure({ output: outputFunction, read: builtinRead });
-    (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
+    
     var myPromise = Sk.misceval.asyncToPromise(function() {
       return Sk.importMainWithBody("<stdin>", false, prog, true);
     }, { "*": function () {
@@ -62,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
       executeBtn.disabled = false;
       interruptBtn.disabled = true;
       isInterrupted = false;
-      elem.innerText = elem.innerText + "\n" + err.toString();
+      outputFunction(err.toString());
     });
   }
 

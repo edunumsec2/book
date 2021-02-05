@@ -23,7 +23,9 @@ div#output-area pre {
   height: auto;
   min-height: 10px;
   max-height: 500px;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 div#control-area {
@@ -53,8 +55,6 @@ div#canvas {
   display: inline-block;
   border: 3px inset rgb(169, 169, 169);
   background-color: white;
-  width: 400px;
-  height: 400px;
 }
 
 .CodeMirror {
