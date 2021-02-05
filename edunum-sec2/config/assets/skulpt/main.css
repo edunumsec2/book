@@ -21,11 +21,37 @@ div#output-area {
 
 div#output-area pre {
   height: auto;
-  min-height: 10px;
-  max-height: 500px;
+  min-height: 25px;
+  max-height: 300px;
   overflow-y: auto;
   overflow-wrap: break-word;
   white-space: pre-wrap;
+  resize: vertical;
+  font-family: monospace;
+  line-height: 1.3em;
+}
+
+div#output-area input {
+  font-family: monospace;
+  font-size: 14pt;
+  background-color: transparent;
+  width: 200px;
+  resize: horizontal;
+}
+
+div#output-area .user-input {
+  color:rgb(51, 51, 51);
+}
+
+div#output-area pre div {
+  line-height: 1.5em;
+  overflow: hidden;
+}
+
+div#output-area pre button {
+  margin-left: 3px;
+  margin-bottom: 3px;
+  line-height: 0.9em;
 }
 
 div#control-area {

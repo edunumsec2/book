@@ -5,14 +5,63 @@ document.addEventListener("DOMContentLoaded", function() {
   const canvasArea = document.getElementById("canvas-area");
   const canvasElem = document.getElementById("canvas");
   const outputElem = document.getElementById("output");
+  var inputElem = null;
+  var rejectInput = null;
 
-  function outputFunction(text) {
+  function outputElement(elem) {
     const atBottom = outputElem.scrollTop + output.clientHeight >= outputElem.scrollHeight;
-    const node = document.createTextNode(text);
-    outputElem.appendChild(node);
+    outputElem.appendChild(elem);
     if (atBottom) {
       outputElem.scrollTop = outputElem.scrollHeight;
     }
+  }
+
+  function outputFunction(text) {
+    const node = document.createTextNode(text);
+    outputElement(node);
+  }
+
+  function inputFunction(prompt) {
+    return new Promise(function(resolve, reject) {
+        const node = document.createElement("div");
+        const box = document.createElement("input");
+        const text = document.createTextNode(prompt);
+        const send = document.createElement("button");
+        send.type = "button";
+        send.innerText = "↵";
+        send.className = "btn btn-primary";
+        node.appendChild(text);
+        node.appendChild(box);
+        node.appendChild(send);
+        const hideBox = function() {
+          const answer = box.value;
+          const replacement = document.createElement("span");
+          replacement.innerText = answer;
+          replacement.className = "user-input";
+          node.replaceChild(replacement, box);
+          node.removeChild(send);
+          inputElem = null;
+          rejectInput = null;
+        };
+        const validate = function() {
+          const answer = box.value;
+          hideBox();
+          resolve(answer);
+        };
+        send.addEventListener("click", validate);
+        box.addEventListener("keypress", function(event) {
+          if(event.key == "Enter") {
+            validate();
+          }
+        });
+        outputElement(node);
+        inputElem = box;
+        rejectInput = function() {
+          hideBox();
+          reject();
+        };
+        box.focus();
+    });
   }
 
   function builtinRead(x) {
@@ -35,6 +84,8 @@ document.addEventListener("DOMContentLoaded", function() {
     yieldLimit: 100,
     output: outputFunction,
     read: builtinRead,
+    inputfun: inputFunction,
+    inputfunTakesPrompt: true,
   });
 
   Sk.pre = "output";
@@ -88,6 +139,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function interruptInterpreter() {
     isInterrupted = true;
+    if (rejectInput != null) {
+      rejectInput();
+    }
   }
 
   interruptBtn.addEventListener("click", interruptInterpreter);
