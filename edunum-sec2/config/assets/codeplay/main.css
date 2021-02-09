@@ -81,6 +81,21 @@ div#control-area {
 div#control-area button {
   margin-left: 5px;
   line-height: 0.9em;
+  width: 130px;
+}
+
+div#control-area button:disabled {
+  display: none;
+}
+
+div#control-area button#execute::before {
+  content: "▶";
+  margin-right: 10px;
+}
+
+div#control-area button#interrupt::before {
+  content: "◼";
+  margin-right: 10px;
 }
 
 div#canvas-area {
@@ -105,4 +120,15 @@ div#canvas {
   z-index: 0;
   font-size: 12pt;
   margin-top: 18px;
-} 
+}
+
+@keyframes shine {
+  0% {opacity: 100%;}
+  50% {opacity: 75%;}
+	100% {opacity: 100%;}
+}
+
+.shine {
+  animation-name: shine;
+  animation-duration: 250ms;
+}

@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+  var running = false;
+
   // Add KeyboardInterrupt exception.
   Sk.builtin.KeyboardInterrupt = function (args) {
     var o;
@@ -161,6 +163,10 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function runInterpreter() {
+    if (running) {
+      return;
+    }
+    running = true;
     outputDefaultMessage.innerText = "Aucune sortie à afficher.";
     outputDefaultMessage.style.display = "block";
     canvasArea.style.display = "none";
@@ -169,6 +175,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var prog = prelude + codeElem.getValue();
     var elem = document.getElementById("output");
     elem.innerHTML = '';
+    outputElem.classList.remove("shine");
+    void outputElem.offsetWidth;
+    outputElem.classList.add("shine");
     
     var myPromise = Sk.misceval.asyncToPromise(function() {
       return Sk.importMainWithBody("<stdin>", false, prog, true);
@@ -183,10 +192,20 @@ document.addEventListener("DOMContentLoaded", function() {
       executeBtn.disabled = false;
       interruptBtn.disabled = true;
       Sk.hardInterrupt = false;
+      running = false;
+      // Blink the output.
+      executeBtn.classList.remove("shine");
+      void executeBtn.offsetWidth;
+      executeBtn.classList.add("shine");
     }, function(err) {
       executeBtn.disabled = false;
       interruptBtn.disabled = true;
       Sk.hardInterrupt = false;
+      running = false;
+      // Blink the output.
+      executeBtn.classList.remove("shine");
+      void executeBtn.offsetWidth;
+      executeBtn.classList.add("shine");
 
       outputFunction(errorToString(err));
     });
