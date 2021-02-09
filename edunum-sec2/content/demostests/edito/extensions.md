@@ -221,3 +221,73 @@ Il est possible d'ajouter l'option `:notitle` pour cacher le titre de la vidéo 
 ```
 ````
 `````
+
+## Interpréteur Python
+
+Il est possible d'insérer un interpréteur Python et éditeur directement dans le document, le tout implémenté en Javascript et qui tourne dans le client Web du visiteur.
+Pour ceci, il suffit d'utiliser la directive `codeplay`.
+
+`````{tabbed} Aperçu
+```{codeplay}
+def double(x):
+    return x + x
+
+print(double(1))
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{codeplay}
+def double(x):
+    return x + x
+
+print(double(1))
+```
+````
+`````
+
+### Options
+
+Via l'option `:exec:`, le code est executé dès le chargement de la page.
+
+`````{tabbed} Aperçu
+```{codeplay}
+:exec:
+def puissance(x, y):
+    return x ** y
+
+print(puissance(2, 10))
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{codeplay}
+:exec:
+def puissance(x, y):
+    return x ** y
+
+print(puissance(2, 10))
+```
+````
+`````
+
+### Librairies
+
+#### Turtle
+
+```{codeplay}
+from turtle import *
+up()
+forward(-100)
+down()
+speed(10)
+color('red', 'yellow')
+begin_fill()
+for i in range(9):
+    forward(200)
+    left(160)
+end_fill()
+done()
+```
