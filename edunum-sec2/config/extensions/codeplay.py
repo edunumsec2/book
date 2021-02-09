@@ -34,16 +34,28 @@ class InteractiveCode(SphinxDirective):
     final_argument_whitespace = True
     option_spec = {
         "exec": directives.flag,
-        "prelude": directives.nonnegative_int,
+        "noprelude": directives.flag,
     }
     has_content = True
 
     def run(self):
         self.assert_has_content()
 
-        pre = self.options["prelude"] if "prelude" in self.options else 0
-        pre_lines = self.content[:pre]
-        code_lines = self.content[pre:]
+        pre = None
+        if "noprelude" not in self.options:
+            i = 0
+            while i < len(self.content):
+                if self.content[i].strip() == "=" * 3:
+                    pre = i
+                    break
+                i += 1
+        
+        pre_lines = []
+        code_lines = self.content
+        
+        if pre is not None:
+            pre_lines = self.content[:pre]
+            code_lines = self.content[pre + 1:]
 
         container = interactive_code("",
           code='\n'.join(code_lines),

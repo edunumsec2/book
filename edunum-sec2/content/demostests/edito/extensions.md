@@ -275,14 +275,13 @@ print(puissance(2, 10))
 
 ### Prelude
 
-L'option `:prelude:` permet de cacher les `n` premières lignes de code.
+Par défaut toutes les lignes apparaissant avant la première ligne formée uniquement de 3 charactères `=` (ignorant les charactères d'espaces avant et après sur la ligne) est considéré comme un préambule qui n'est pas affiché aux utilisateurs du site mais qui est tout de même executé.
 
 `````{tabbed} Aperçu
 ```{codeplay}
-:prelude: 3
 def puissance(x, y):
     return x ** y
-
+===
 print(puissance(2, 10))
 ```
 `````
@@ -290,14 +289,15 @@ print(puissance(2, 10))
 `````{tabbed} Code
 ````{code-block} markdown
 ```{codeplay}
-:prelude: 3
 def puissance(x, y):
     return x ** y
-
+===
 print(puissance(2, 10))
 ```
 ````
 `````
+
+Pour désactiver cette fonctionnalité, l'option `:noprelude:` peut être spécifiée.
 
 ### Librairies
 
