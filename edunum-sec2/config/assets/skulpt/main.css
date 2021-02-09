@@ -16,7 +16,23 @@ div#output-area {
   color: rgb(10, 10, 10);
   border: 2px solid rgb(194, 194, 194);
   border-top: 0;
-  font-size: 14pt;
+  font-size: 12pt;
+}
+
+div#output-area div#output-message {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30px;
+  text-align: center;
+  margin: auto;
+  color:rgb(169, 169, 169);
+  font-family: Lato, sans-serif;
+}
+
+div#output-area div#output-message span#execute-keyword {
+  font-weight: bold;
+  cursor: pointer;
 }
 
 div#output-area pre {
@@ -33,7 +49,7 @@ div#output-area pre {
 
 div#output-area input {
   font-family: monospace;
-  font-size: 14pt;
+  font-size: 12pt;
   background-color: transparent;
   width: 200px;
   resize: horizontal;
@@ -51,7 +67,7 @@ div#output-area pre div {
 div#output-area pre button {
   margin-left: 3px;
   margin-bottom: 3px;
-  line-height: 0.9em;
+  line-height: 0.8em;
 }
 
 div#control-area {
@@ -87,5 +103,5 @@ div#canvas {
   height: auto;
   padding: 20px;
   z-index: 0;
-  font-size: 14pt;
+  font-size: 12pt;
 }

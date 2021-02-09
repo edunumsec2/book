@@ -1,14 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var isInterrupted = false;
+
   const executeBtn = document.getElementById("execute");
   const interruptBtn = document.getElementById("interrupt");
   const canvasArea = document.getElementById("canvas-area");
   const canvasElem = document.getElementById("canvas");
   const outputElem = document.getElementById("output");
+  const outputDefaultMessage = document.getElementById("output-message");
+
   var inputElem = null;
   var rejectInput = null;
 
   function outputElement(elem) {
+    outputDefaultMessage.style.display = "none";
     const atBottom = outputElem.scrollTop + output.clientHeight >= outputElem.scrollHeight;
     outputElem.appendChild(elem);
     if (atBottom) {
@@ -111,6 +114,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   function runInterpreter() {
+    outputDefaultMessage.innerText = "Aucune sortie à afficher.";
+    outputDefaultMessage.style.display = "block";
     canvasArea.style.display = "none";
     executeBtn.disabled = true;
     interruptBtn.disabled = false;
@@ -121,24 +126,26 @@ document.addEventListener("DOMContentLoaded", function() {
     var myPromise = Sk.misceval.asyncToPromise(function() {
       return Sk.importMainWithBody("<stdin>", false, prog, true);
     }, { "*": function () {
-      if (isInterrupted) {
+      if (Sk.hardInterrupt === true) {
         throw "Interruption";
+      } else {
+        return null;
       }
     }});
     myPromise.then(function() {
       executeBtn.disabled = false;
       interruptBtn.disabled = true;
-      isInterrupted = false;
+      Sk.hardInterrupt = false;
     }, function(err) {
       executeBtn.disabled = false;
       interruptBtn.disabled = true;
-      isInterrupted = false;
+      Sk.hardInterrupt = false;
       outputFunction(err.toString());
     });
   }
 
   function interruptInterpreter() {
-    isInterrupted = true;
+    Sk.hardInterrupt = true;
     if (rejectInput != null) {
       rejectInput();
     }
@@ -146,6 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   interruptBtn.addEventListener("click", interruptInterpreter);
   executeBtn.addEventListener("click", runInterpreter);
+  document.getElementById("execute-keyword").addEventListener("click", runInterpreter);
 
   function resized() {
     if (parent && parent.frameResized) {
