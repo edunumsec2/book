@@ -175,9 +175,15 @@ document.addEventListener("DOMContentLoaded", function() {
     var prog = prelude + codeElem.getValue();
     var elem = document.getElementById("output");
     elem.innerHTML = '';
+    outputDefaultMessage.classList.remove("shine");
+    void outputDefaultMessage.offsetWidth;
+    outputDefaultMessage.classList.add("shine");
     outputElem.classList.remove("shine");
     void outputElem.offsetWidth;
     outputElem.classList.add("shine");
+    executeBtn.classList.remove("shine");
+    void executeBtn.offsetWidth;
+    executeBtn.classList.add("shine");
     
     var myPromise = Sk.misceval.asyncToPromise(function() {
       return Sk.importMainWithBody("<stdin>", false, prog, true);
@@ -193,19 +199,11 @@ document.addEventListener("DOMContentLoaded", function() {
       interruptBtn.disabled = true;
       Sk.hardInterrupt = false;
       running = false;
-      // Blink the output.
-      executeBtn.classList.remove("shine");
-      void executeBtn.offsetWidth;
-      executeBtn.classList.add("shine");
     }, function(err) {
       executeBtn.disabled = false;
       interruptBtn.disabled = true;
       Sk.hardInterrupt = false;
       running = false;
-      // Blink the output.
-      executeBtn.classList.remove("shine");
-      void executeBtn.offsetWidth;
-      executeBtn.classList.add("shine");
 
       outputFunction(errorToString(err));
     });
