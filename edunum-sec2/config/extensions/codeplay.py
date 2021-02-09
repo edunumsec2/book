@@ -21,6 +21,8 @@ def visit_interactive_code_html(self, node):
       'data-code="' + b64encode(node["code"].encode("UTF-8")).decode("UTF-8") + '" ' +
       'scrolling="no" ' + 
       ('data-run="true" ' if node["exec"] else '') +
+      ('data-static="true" ' if node["static"] else '') +
+      ('data-nocontrols="true" ' if node["nocontrols"] else '') +
       'class="codeframe" frameborder="0" border="0" cellspacing="0">')
 
 def depart_interactive_code_html(self, node):
@@ -35,6 +37,8 @@ class InteractiveCode(SphinxDirective):
     option_spec = {
         "exec": directives.flag,
         "noprelude": directives.flag,
+        "static": directives.flag,
+        "nocontrols": directives.flag,
     }
     has_content = True
 
@@ -60,6 +64,8 @@ class InteractiveCode(SphinxDirective):
         container = interactive_code("",
           code='\n'.join(code_lines),
           prelude='\n'.join(pre_lines),
+          static="static" in self.options,
+          nocontrols="nocontrols" in self.options,
           exec="exec" in self.options)
         self.set_source_info(container)
 

@@ -3,6 +3,7 @@ div#editor-area {
   position: relative;
   border: 2px solid rgb(51, 51, 51);
   border-radius: 10px 10px 0 0;
+  padding-top: 10px;
   background: #272822;
 }
 
@@ -71,11 +72,9 @@ div#output-area pre button {
 }
 
 div#control-area {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  z-index: 1;
-  width: fit-content;
+  width: auto;
+  text-align: right;
+  margin-right: 10px;
 }
 
 div#control-area button {
@@ -116,10 +115,9 @@ div#canvas {
 
 .CodeMirror {
   height: auto;
-  padding: 20px;
-  z-index: 0;
+  padding: 10px;
+  padding-top: 0;
   font-size: 12pt;
-  margin-top: 18px;
 }
 
 @keyframes shine {

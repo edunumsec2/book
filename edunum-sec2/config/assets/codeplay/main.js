@@ -239,6 +239,12 @@ document.addEventListener("DOMContentLoaded", function() {
         prelude = rawPrelude + "\n";
         preludeLines = rawPrelude.split("\n").length;
       }
+      if (frame.hasAttribute("data-nocontrols")) {
+        document.getElementById("control-area").style.display = "none";
+      }
+      if (frame.hasAttribute("data-static")) {
+        codeElem.setOption("readOnly", "nocursor");
+      }
       if (frame.hasAttribute("data-run")) {
         runInterpreter()
       }

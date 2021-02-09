@@ -249,6 +249,8 @@ print(double(int(input("x = "))))
 
 ### Options
 
+#### Execution immediate
+
 Via l'option `:exec:`, le code est executé dès le chargement de la page.
 
 `````{tabbed} Aperçu
@@ -265,6 +267,59 @@ print(puissance(2, 10))
 ````{code-block} markdown
 ```{codeplay}
 :exec:
+def puissance(x, y):
+    return x ** y
+
+print(puissance(2, 10))
+```
+````
+`````
+
+#### Code statique
+
+Via l'option `:static:`, l'éditeur est mis en mode lecture seule.
+
+`````{tabbed} Aperçu
+```{codeplay}
+:static:
+def puissance(x, y):
+    return x ** y
+
+print(puissance(2, 10))
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{codeplay}
+:static:
+def puissance(x, y):
+    return x ** y
+
+print(puissance(2, 10))
+```
+````
+`````
+
+#### Cacher les boutons de contrôle
+
+Via l'options `:nocontrols:` les boutons de contrôle sont cachés.
+Le code peut tout de même être lancé via les raccourcis claviers, ainsi qu'initialement via le bouton affiché dans le texte dans la zone de sortie.
+
+`````{tabbed} Aperçu
+```{codeplay}
+:nocontrols:
+def puissance(x, y):
+    return x ** y
+
+print(puissance(2, 10))
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{codeplay}
+:nocontrols:
 def puissance(x, y):
     return x ** y
 
