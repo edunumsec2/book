@@ -1,5 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+  // Add KeyboardInterrupt exception.
+  Sk.builtin.KeyboardInterrupt = function (args) {
+    var o;
+    if (!(this instanceof Sk.builtin.KeyboardInterrupt)) {
+      o = Object.create(Sk.builtin.KeyboardInterrupt.prototype);
+      o.constructor.apply(o, arguments);
+      return o;
+    }
+    Sk.builtin.BaseException.apply(this, arguments);
+  };
+  Sk.abstr.setUpInheritance("KeyboardInterrupt", Sk.builtin.KeyboardInterrupt, Sk.builtin.BaseException);
+
   const executeBtn = document.getElementById("execute");
   const interruptBtn = document.getElementById("interrupt");
   const canvasArea = document.getElementById("canvas-area");
@@ -111,7 +123,37 @@ document.addEventListener("DOMContentLoaded", function() {
   canvasElem.style.width = "600px";
   canvasElem.style.height = "400px";
 
+  function errorToString(err) {
+    var msg = err.tp$name + ": " + err.tp$str().v;
 
+    if (err.traceback.length > 0) {
+      const firstFrame = err.traceback[0];
+      if (firstFrame.filename === "<stdin>.py" &&
+          firstFrame.lineno > preludeLines) {
+        // Error located in user code.
+        msg += " on line " + (firstFrame.lineno - preludeLines);
+      }
+      else {
+        // Error in library code.
+        msg += " in a library call";
+        // Try to find user frame.
+        var i = 1; // Set to 1 as we skip first frame.
+        while (i < err.traceback.length) {
+          const frame = err.traceback[i];
+          if (frame.filename === "<stdin>.py" &&
+              frame.lineno > preludeLines) {
+            msg += " originating from line " + (frame.lineno - preludeLines);
+            break;
+          }
+          i += 1;
+        }
+      }
+    }
+
+    msg += ".";
+
+    return msg;
+  }
 
   function runInterpreter() {
     outputDefaultMessage.innerText = "Aucune sortie à afficher.";
@@ -127,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function() {
       return Sk.importMainWithBody("<stdin>", false, prog, true);
     }, { "*": function () {
       if (Sk.hardInterrupt === true) {
-        throw "Interruption";
+        throw new Sk.builtin.KeyboardInterrupt("interrupted");
       } else {
         return null;
       }
@@ -141,27 +183,7 @@ document.addEventListener("DOMContentLoaded", function() {
       interruptBtn.disabled = true;
       Sk.hardInterrupt = false;
 
-      // Fix line numbers in case of prelude:
-      var i = 0;
-      while (i < err.traceback.length) {
-        const trace = err.traceback[i];
-        if (trace.filename === "<stdin>.py") {
-          const lineno = trace.lineno
-          if (lineno <= preludeLines) {
-            trace.filename = "<prelude>.py";
-            err.traceback.splice(i, 1);
-          }
-          else {
-            trace.lineno = lineno - preludeLines;
-            i += 1;
-          }
-        }
-        else {
-          err.traceback.splice(i, 1);
-        }
-      }
-
-      outputFunction(err.toString());
+      outputFunction(errorToString(err));
     });
   }
 
