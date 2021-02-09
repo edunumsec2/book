@@ -149,13 +149,16 @@ document.addEventListener("DOMContentLoaded", function() {
           const lineno = trace.lineno
           if (lineno <= preludeLines) {
             trace.filename = "<prelude>.py";
-            errorInPrelude = true;
+            err.traceback.splice(i, 1);
           }
           else {
             trace.lineno = lineno - preludeLines;
+            i += 1;
           }
         }
-        i += 1;
+        else {
+          err.traceback.splice(i, 1);
+        }
       }
 
       outputFunction(err.toString());
