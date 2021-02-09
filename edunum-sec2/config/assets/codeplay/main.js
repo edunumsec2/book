@@ -89,6 +89,11 @@ document.addEventListener("DOMContentLoaded", function() {
     lineNumbers: true,
     theme: "monokai",
     indentUnit: 4,
+    extraKeys: {
+      'Shift-Enter': runInterpreter,
+      'Cmd-Enter': runInterpreter,
+      'Ctrl-Enter': runInterpreter,
+    },
   });
 
   codeElem.on("change", resized);
