@@ -78,10 +78,10 @@ div#control-area {
   width: fit-content;
 }
 
-div#control-area input {
-  margin-left: 10px;
+div#control-area button {
+  margin-left: 5px;
+  line-height: 0.9em;
 }
-
 
 div#canvas-area {
   position: relative;
@@ -104,4 +104,5 @@ div#canvas {
   padding: 20px;
   z-index: 0;
   font-size: 12pt;
-}
+  margin-top: 18px;
+} 
