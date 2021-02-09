@@ -232,7 +232,7 @@ Pour ceci, il suffit d'utiliser la directive `codeplay`.
 def double(x):
     return x + x
 
-print(double(1))
+print(double(int(input("x = "))))
 ```
 `````
 
@@ -242,7 +242,7 @@ print(double(1))
 def double(x):
     return x + x
 
-print(double(1))
+print(double(int(input("x = "))))
 ```
 ````
 `````
@@ -265,6 +265,32 @@ print(puissance(2, 10))
 ````{code-block} markdown
 ```{codeplay}
 :exec:
+def puissance(x, y):
+    return x ** y
+
+print(puissance(2, 10))
+```
+````
+`````
+
+### Prelude
+
+L'option `:prelude:` permet de cacher les `n` premières lignes de code.
+
+`````{tabbed} Aperçu
+```{codeplay}
+:prelude: 3
+def puissance(x, y):
+    return x ** y
+
+print(puissance(2, 10))
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{codeplay}
+:prelude: 3
 def puissance(x, y):
     return x ** y
 

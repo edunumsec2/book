@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
   const outputElem = document.getElementById("output");
   const outputDefaultMessage = document.getElementById("output-message");
 
-  var inputElem = null;
+  var prelude = "";
+  var preludeLines = 0;
+
   var rejectInput = null;
 
   function outputElement(elem) {
@@ -43,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function() {
           replacement.className = "user-input";
           node.replaceChild(replacement, box);
           node.removeChild(send);
-          inputElem = null;
           rejectInput = null;
         };
         const validate = function() {
@@ -58,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function() {
           }
         });
         outputElement(node);
-        inputElem = box;
         rejectInput = function() {
           hideBox();
           reject();
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
     canvasArea.style.display = "none";
     executeBtn.disabled = true;
     interruptBtn.disabled = false;
-    var prog = codeElem.getValue();
+    var prog = prelude + codeElem.getValue();
     var elem = document.getElementById("output");
     elem.innerHTML = '';
     
@@ -140,6 +140,24 @@ document.addEventListener("DOMContentLoaded", function() {
       executeBtn.disabled = false;
       interruptBtn.disabled = true;
       Sk.hardInterrupt = false;
+
+      // Fix line numbers in case of prelude:
+      var i = 0;
+      while (i < err.traceback.length) {
+        const trace = err.traceback[i];
+        if (trace.filename === "<stdin>.py") {
+          const lineno = trace.lineno
+          if (lineno <= preludeLines) {
+            trace.filename = "<prelude>.py";
+            errorInPrelude = true;
+          }
+          else {
+            trace.lineno = lineno - preludeLines;
+          }
+        }
+        i += 1;
+      }
+
       outputFunction(err.toString());
     });
   }
@@ -167,10 +185,16 @@ document.addEventListener("DOMContentLoaded", function() {
   resized();
 
   if (parent && parent.frameResized) {
-    const options = {
-      editor: codeElem,
-      run: runInterpreter
-    };
-    parent.populateFrame(self, options);
+    parent.populateFrame(self, function(frame) {
+      codeElem.setValue(atob(frame.dataset.code));
+      if (frame.hasAttribute("data-prelude")) {
+        const rawPrelude = atob(frame.dataset.prelude);
+        prelude = rawPrelude + "\n";
+        preludeLines = rawPrelude.split("\n").length;
+      }
+      if (frame.hasAttribute("data-run")) {
+        runInterpreter()
+      }
+    });
   }
 });
