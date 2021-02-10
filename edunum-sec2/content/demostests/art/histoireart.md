@@ -20,7 +20,7 @@ Les artisans qui découpent les faïences connaissent par coeur un grand nombre 
 
 ```{youtube} dLtV_GTCM6I
 ```
-Le code Python ci-dessous, permet de créer un Zellige simplifié à partir d'hexagones, de carrés et de triangles imbriqués les uns dans les autres. 
+Le code Python ci-dessous, permet de créer un Zellige simplifié à partir d'hexagones, de carrés et de triangles imbriqués les uns dans les autres, aussi appelé ["pavage de Diane"](https://mathcurve.com/polyedres/pavagedediane/pavagedediane.shtml). 
 
 ```{codeplay}
 import turtle
@@ -78,9 +78,17 @@ draw_tile(20, 9, 11)
 pen.hideturtle()
 ```
 
-Comme on peut le voir, un programme aussi simple ne permet pas d'exprimer toute la complexité contenue dans les Zellige de la tradition de l'art géométrique arabe. Les compositions traditionnelles impliquent des répétitions périodiques de motifs très complexes. 
+On retrouve ce type de motifs dans de nombreuses oeuvres culturelles. Comme, par exemple, au Musée archéologique de Séville. 
+
+```{image} images/pavagediane.jpeg
+```
+
+Comme on peut le voir, le programme ci-dessus n'exprime qu'une fraction de la complexité contenue dans les Zellige de la tradition de l'art géométrique arabe. Les compositions traditionnelles impliquent des répétitions périodiques de motifs très complexes, impliquant des entrelacements difficiles à reproduires. 
 
 [Cet article](https://dl.acm.org/doi/pdf/10.1145/3064419?casa_token=alNKFW_UWasAAAAA:KuETyYndEmiMiN_ivaN8UkIAEBrvAlvlwZr8eY6qfZT9CVRK4J1J0EgxgvL7vykdjqPACmPd6MNX-Q) datant de 2017, écrit par deux chercheurs de l'université de Fès au Maroc, donne une idée de la subtilité d'un algorithme capable de générer ce genre de motifs. 
+
+```{image} images/entrelacement2.jpeg
+```
 
 ## Métier à tisser de Joseph Marie Jacquard 
 
@@ -88,7 +96,40 @@ Le métier à tisser développé par [Joseph Marie Jacquard](https://fr.wikipedi
 
 L'exemple le plus simple de tissage est le damier. On utilise un fil blanc et un fil noir. Le fil blanc est déroulé verticalement, et à chaque ligne, le fil noir vient s'insérer perpendiculairement en passant dessus, dessous, dessus, dessous, et ainsi de suite. 
 
-<iframe height="400px" width="100%" src="https://repl.it/@elliotvaucher/jacquard?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<!-- ```{codeplay}
+import turtle
+ 
+def draw_box(t,x,y,size,fill_color):
+    t.penup() 
+    t.goto(x,y)
+    t.pendown()
+    
+    t.fillcolor(fill_color)
+    t.begin_fill()
+    
+    for i in range(0,4):
+        board.forward(size)
+        board.right(90)
+        
+    t.end_fill()
+
+    
+def draw_chess_board():
+    square_color = "black"
+    start_x = 0 
+    start_y = 0 
+    box_size = 30 
+    for i in range(0,8): 
+        for j in range(0,8):
+            draw_box(board,start_x+j*box_size,start_y+i*box_size,box_size,square_color)
+            square_color = 'black' if square_color == 'white' else 'white'
+        square_color = 'black' if square_color == 'white' else 'white'
+        
+board = turtle.Turtle()
+draw_chess_board()
+turtle.done()
+``` 
+-->
 
 Si on veut accélérer le procédé, on utilise un métier à tisser, qui déroule un certain nombre de fils verticalement, et à chaque "ligne" on vient passer un fil horizontal représenté ci-dessus par le fil noir. 
 
@@ -108,39 +149,6 @@ Aujourd'hui, Google développe un projet nommé ["Jacquard"](https://atap.google
 
 ````{youtube} qObSFfdfe7I
 `````
-
-<!-- import turtle
-
-NUM_SQUARES = 8  # Number of squares along one size of board.
-SQUARE_SIZE = 40 # Pixels
-BOARD_SIZE = SQUARE_SIZE * NUM_SQUARES
-BORDER_FRACTION = 1.025  # Add a slight border to the board.
-STAMP_SIZE = 20  # Size of turtle square image.
-
-screen = turtle.Screen()
-screen.title("Turtle Stamps")
-screen.setup(400, 400)
-screen.tracer(0)  # Disable animation.
-pen = turtle.Turtle(shape='square', visible=False)
-pen.shapesize(BOARD_SIZE / STAMP_SIZE * BORDER_FRACTION)
-pen.color('black')
-pen.stamp()
-
-pen.shapesize(SQUARE_SIZE / STAMP_SIZE)
-pen.color('white')
-pen.penup()
-
-for y in range(-NUM_SQUARES // 2, NUM_SQUARES // 2):
-    parity = y % 2 == 0
-
-    for x in range(-NUM_SQUARES // 2, NUM_SQUARES // 2):
-        if parity:
-            pen.goto(x * SQUARE_SIZE + SQUARE_SIZE//2, y * SQUARE_SIZE + SQUARE_SIZE//2)
-            pen.stamp()
-
-        parity = not parity
-
-turtle.done() -->
 
 Plotter drawing (1950's)
 Teleprinter art
