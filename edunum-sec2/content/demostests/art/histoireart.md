@@ -20,7 +20,7 @@ Les artisans qui découpent les faïences connaissent par coeur un grand nombre 
 
 ```{youtube} dLtV_GTCM6I
 ```
-Le code Python ci-dessous, permet de créer un Zellige simplifié à partir de pentagones imbriqués les uns dans les autres. 
+Le code Python ci-dessous, permet de créer un Zellige simplifié à partir d'hexagones, de carrés et de triangles imbriqués les uns dans les autres. 
 
 ```{codeplay}
 import turtle
