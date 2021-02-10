@@ -22,8 +22,6 @@ Les artisans qui découpent les faïences connaissent par coeur un grand nombre 
 ```
 Le code Python ci-dessous, permet de créer un Zellige simplifié à partir de pentagones imbriqués les uns dans les autres. 
 
-<iframe height="400px" width="100%" src="https://repl.it/@elliotvaucher/Zellige?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
 ```{codeplay}
 import turtle
 pen = turtle.Turtle()
