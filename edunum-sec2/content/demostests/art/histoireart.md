@@ -40,14 +40,41 @@ def draw_polygon(size):
             pen.forward(size)
             pen.left(30)
 
-def draw_tile(size):
-    for i in range(6):
+def draw_line(size, count):
+    for i in range(count):
         draw_polygon(size)
         pen.forward(size)
+        for j in range(2):
+            pen.left(30)
+            pen.forward(size)
         pen.right(60)
-        
+
+def draw_tile(size, lines, cols):
+    draw_line(size, cols)
+    for i in range(lines - 1):
+        if i % 2 == 0:
+            for j in range(2):
+                pen.forward(size)
+                pen.left(90)
+        else:
+            pen.left(90)
+            pen.forward(size)
+            for j in range(3):
+                pen.left(30)
+                pen.forward(size)
+            for j in range(3):
+                pen.right(60)
+                pen.forward(size)
+            pen.left(90)
+            pen.forward(size)
+            pen.left(90)
+        draw_line(size, cols)
+
+pen.up()
+pen.setposition(-300, 150)
 pen.right(30)
-draw_tile(20)
+pen.down()
+draw_tile(20, 9, 11)
 pen.hideturtle()
 ```
 
