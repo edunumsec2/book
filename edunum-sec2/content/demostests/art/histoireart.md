@@ -25,34 +25,32 @@ Le code Python ci-dessous, permet de créer un Zellige simplifié à partir de p
 <iframe height="400px" width="100%" src="https://repl.it/@elliotvaucher/Zellige?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ```{codeplay}
-#Moroccan Mosaic using Python Turtle - www.101computing.net/morroccan-mosaic/
 import turtle
-myPen = turtle.Turtle()
-myPen.shape("arrow")
+pen = turtle.Turtle()
+pen.shape("turtle")
+pen.speed(1000)
 
-myPen.speed(1000) #Set the speed of the turtle
+def draw_square(size):
+    for i in range(4):
+        pen.forward(size)
+        pen.left(90)
 
-#A Procedue to draw a mosaic by repeating and rotating a polygon shape.
-def drawMosaic(color1,numberOfSides1,size1,color2,numberOfSides2,size2,numberOfIterations):
- for i in range(0,numberOfIterations):
-   myPen.color(color1)
-   for j in range (0,numberOfSides1):
-     myPen.forward(size1)
-     myPen.left(360 / numberOfSides1)
-   myPen.color(color2)
-   for k in range (0,numberOfSides2):
-     myPen.forward(size2)
-     myPen.left(360 / numberOfSides2)
-     
-   myPen.left(360 / numberOfIterations)
+def draw_polygon(size):
+    for i in range(6):
+        draw_square(size)
+        for i in range(2):
+            pen.forward(size)
+            pen.left(30)
 
-#Main Program Starts Here
-#Mosaic 1: Hexagon and pentagon
-#drawMosaic("blue",6,100,"lightblue",5,80,8)
-#Mosaic 2: Octogons of different sizes
-drawMosaic("#980C6B",8,80,"#DD6BB8",5,70,20)
-
-myPen.hideturtle()
+def draw_tile(size):
+    for i in range(6):
+        draw_polygon(size)
+        pen.forward(size)
+        pen.right(60)
+        
+pen.right(30)
+draw_tile(20)
+pen.hideturtle()
 ```
 
 Comme on peut le voir, un programme aussi simple ne permet pas d'exprimer toute la complexité contenue dans les Zellige de la tradition de l'art géométrique arabe. Les compositions traditionnelles impliquent des répétitions périodiques de motifs très complexes. 
