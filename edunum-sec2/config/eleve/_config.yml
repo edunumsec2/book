@@ -22,32 +22,6 @@ latex:
     targetname: eleve.tex
 
 #######################################################################################
-# MyST parsing settings
-parse:
-  myst_enable_extensions:
-  - amsmath
-
-  - amsmath
-
-  - colon_fence
-
-  - deflist
-
-  - dollarmath
-
-  - html_admonition
-
-  - html_image
-
-  - linkify
-
-  - replacements
-
-  - smartquotes
-
-  - substitution
-
-#######################################################################################
 # HTML-specific settings
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
@@ -75,6 +49,17 @@ sphinx:
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     html_favicon: favicon.ico
     html_extra_path: ['../assets']
+    myst_enable_extensions:
+      - amsmath
+      - colon_fence
+      - deflist
+      - dollarmath
+      - html_admonition
+      - html_image
+      - linkify
+      - replacements
+      - smartquotes
+      - substitution
   local_extensions:
     questions: ../extensions/
     blanks: ../extensions/
