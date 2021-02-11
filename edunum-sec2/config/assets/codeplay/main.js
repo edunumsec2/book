@@ -245,6 +245,9 @@ document.addEventListener("DOMContentLoaded", function() {
       if (frame.hasAttribute("data-static")) {
         codeElem.setOption("readOnly", "nocursor");
       }
+
+      resized();
+
       if (frame.hasAttribute("data-run")) {
         runInterpreter()
       }
