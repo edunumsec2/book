@@ -21,7 +21,7 @@ Pourtant, il faut avoir conscience qu’aussi “réelles” que ces représenta
 
 Dans cette section, nous allons nous attarder sur la façon de laquelle les ordinateurs digitaux parviennent à représenter le monde et les sacrifices qui doivent être faits pour simplifier le monde réel jusqu’à ce que sa représentation puisse être manipulée automatiquement au moyen de calculs élémentaires.
 
-# Personnages-clés
+## Personnages-clés
 
 ````{tabbed} Grace Hopper
 ```{image} images/accueil/gracehopper.jpeg

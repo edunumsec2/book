@@ -11,3 +11,9 @@ p {
         bottom: .4em;
     }
 }
+
+.codeframe {
+    height: 250px;
+    width: 100%;
+    overflow: scroll;
+}

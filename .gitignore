@@ -111,6 +111,9 @@ target/
 profile_default/
 ipython_config.py
 
+# Various IDE stuff
+.metals
+
 # pyenv
 .python-version
 

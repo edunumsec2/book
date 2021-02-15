@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (max > 0) {
       progress = (pos / max);
     }
+
     var strokeWidth = 6 + 28 * Math.pow(progress, 5);
     ring.style.strokeWidth = strokeWidth;
     outer.style.strokeWidth = strokeWidth;
@@ -30,5 +31,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
   scrollListener();
 
-  document.addEventListener("scroll", scrollListener);
+  var supportsPassive = false;
+  try {
+    var opts = Object.defineProperty({}, 'passive', {
+      get: function() {
+        supportsPassive = true;
+      }
+    });
+    window.addEventListener("testPassive", null, opts);
+    window.removeEventListener("testPassive", null, opts);
+  } catch (e) {}
+  document.addEventListener("scroll", scrollListener, supportsPassive ? { passive: true } : false);
 });

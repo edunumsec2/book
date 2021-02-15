@@ -221,3 +221,154 @@ Il est possible d'ajouter l'option `:notitle` pour cacher le titre de la vidéo 
 ```
 ````
 `````
+
+## Interpréteur Python
+
+Il est possible d'insérer un interpréteur Python et éditeur directement dans le document, le tout implémenté en Javascript et qui tourne dans le client Web du visiteur.
+Pour ceci, il suffit d'utiliser la directive `codeplay`.
+
+`````{tabbed} Aperçu
+```{codeplay}
+def double(x):
+    return x + x
+
+print(double(int(input("x = "))))
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{codeplay}
+def double(x):
+    return x + x
+
+print(double(int(input("x = "))))
+```
+````
+`````
+
+### Options
+
+#### Execution immediate
+
+Via l'option `:exec:`, le code est executé dès le chargement de la page.
+
+`````{tabbed} Aperçu
+```{codeplay}
+:exec:
+def puissance(x, y):
+    return x ** y
+
+print(puissance(2, 10))
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{codeplay}
+:exec:
+def puissance(x, y):
+    return x ** y
+
+print(puissance(2, 10))
+```
+````
+`````
+
+#### Code statique
+
+Via l'option `:static:`, l'éditeur est mis en mode lecture seule.
+
+`````{tabbed} Aperçu
+```{codeplay}
+:static:
+def puissance(x, y):
+    return x ** y
+
+print(puissance(2, 10))
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{codeplay}
+:static:
+def puissance(x, y):
+    return x ** y
+
+print(puissance(2, 10))
+```
+````
+`````
+
+#### Cacher les boutons de contrôle
+
+Via l'options `:nocontrols:` les boutons de contrôle sont cachés.
+Le code peut tout de même être lancé via les raccourcis claviers, ainsi qu'initialement via le bouton affiché dans le texte dans la zone de sortie.
+
+`````{tabbed} Aperçu
+```{codeplay}
+:nocontrols:
+def puissance(x, y):
+    return x ** y
+
+print(puissance(2, 10))
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{codeplay}
+:nocontrols:
+def puissance(x, y):
+    return x ** y
+
+print(puissance(2, 10))
+```
+````
+`````
+
+### Prelude
+
+Par défaut toutes les lignes apparaissant avant la première ligne formée uniquement de 3 charactères `=` (ignorant les charactères d'espaces avant et après sur la ligne) est considéré comme un préambule qui n'est pas affiché aux utilisateurs du site mais qui est tout de même executé.
+
+`````{tabbed} Aperçu
+```{codeplay}
+def puissance(x, y):
+    return x ** y
+===
+print(puissance(2, 10))
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{codeplay}
+def puissance(x, y):
+    return x ** y
+===
+print(puissance(2, 10))
+```
+````
+`````
+
+Pour désactiver cette fonctionnalité, l'option `:noprelude:` peut être spécifiée.
+
+### Librairies
+
+#### Turtle
+
+```{codeplay}
+from turtle import *
+up()
+forward(-100)
+down()
+speed(10)
+color('red', 'yellow')
+begin_fill()
+for i in range(9):
+    forward(200)
+    left(160)
+end_fill()
+done()
+```
