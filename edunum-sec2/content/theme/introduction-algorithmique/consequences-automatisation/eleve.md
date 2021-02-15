@@ -5,32 +5,10 @@ Conséquences de l'automatisation
 
 l’ordinateur dans un temps raisonnable.
 L’étude des algorithmes a un effet bénéfique sur votre manière de réfléchir et de résoudre des problèmes de votre vie quotidienne. Elle permet de structurer la pensée et de prendre des décisions fondées sur une réflexion argumentée.
-Les algorithmes sont omniprésents. «Ils» décident de ce que vous voyez sur les réseaux sociaux, ils savent mieux que vous quelle personne vous correspond le mieux, ils vous suggèrent des livres à lire et des films à regarder, corrigent vos textes et vous traduisent ou encore embellissent vos photos en un clic. Ils font la pluie et le beau temps en bourse, ils décident si un prévenu doit être emprisonné, rédigent des articles de journaux, conduisent des voitures autonomes. Cette liste s’allonge chaque jour.
+Les algorithmes sont omniprésents. «Ils» décident de ce que vous voyez sur les réseaux sociaux, ils savent mieux que vous quelle personne vous correspond le mieux, ils vous suggèrent des livres à lire et des films à regarder, corrigent vos textes, vous traduisent ou encore embellissent vos photos en un clic. Ils font la pluie et le beau temps en bourse, décident si un prévenu doit être emprisonné, rédigent des articles de journal, conduisent des voitures autonomes. La liste s’allonge chaque jour.
 
 ::::
 
-::::{admonition,error} A retenir
-
-Un algorithme est une suite d’instructions dans un ordre bien précis qui permet de résoudre un problème. L’algorithme va donner un résultat en fonction des données reçues en entrée.
-Afin de pouvoir rechercher de manière efficace, les données doivent impérativement être triées.
-Il existe de multiples manières de résoudre un problème. Toutes ces manières ne se valent pas. Il faut choisir l’algorithme en fonction de ce qui doit être optimisé : le temps de résolution, l’espace de stockage, la précision de la solution, ...
-La complexité d’un algorithme se mesure en nombre d’opérations. Plus ce nombre est grand, plus l’algorithme est lent. Il existe des problèmes que l’on ne peut toujours pas résoudre de nos jours. 
-
-::::
-
-::::{admonition,note} Ai-je compris ?
-
-1. Je sais lire et appliquer un algorithme. Je sais quel résultat l’algorithme donnera à partir d’un jeu de données.
-
-2. Je sais écrire un algorithme. Je sais décomposer la solution d’un problème en opérations qui suivent un certain ordre. 
-
-3. Je sais retranscrire un algorithme en un programme. Je sais traduire les opérations d’un algorithme en instructions élémentaires if, else, while et for.
-
-4. Je comprends ce qu’est la complexité d’un algorithme, à quoi elle sert et comment la calculer.
-
-5. Je sais choisir le bon algorithme en fonction de ce qu’il faut optimiser.
-
-::::
 
 ## Automatisation
 

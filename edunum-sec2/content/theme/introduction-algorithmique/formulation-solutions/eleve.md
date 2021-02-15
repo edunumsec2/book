@@ -176,7 +176,7 @@ A l’aide du module time et de sa fonction time(), chronométrer le temps que �
 
 Noter les temps obtenus et les afficher sous forme de courbe dans un tableur. Ce graphique permet de visualiser le temps d’exécution du tri en fonction de la taille de la liste. Que constatez‑vous ?
 
-Sur la base de ces mesures pouvez-vous prédire combien de temps prendra le tri de 100’000 éléments ? 
+Sur la base de ces mesures, pouvez-vous estimer le temps que prendrait le tri de 100’000 éléments ?
 
 Lancer votre programme avec 100’000 éléments et comparer le temps obtenu avec votre estimation.
 
