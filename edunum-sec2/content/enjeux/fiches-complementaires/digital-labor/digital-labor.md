@@ -98,14 +98,14 @@ Le terme *digital labor* ou "travail du clic" apparait au début des années 201
 
 * **Le travail à la demande** **(sous-rémunéré)**
 
-  Il s'agit d'un travail qui existait auparavant mais qui s'effectue désormais par l'intermédiaire de plateformes numériques. Cette catégorie inclut les services fournis par les chauffeurs de VTC, les livreurs de repas, etc. Au travers de ces activités, les travailleurs produisent de nombreuses données qui peuvent concerner (entre autres) la position GPS, le temps de parcours, les horaires, les évaluations des clients ou encore le profil d'un chauffeur. Ces données alimentent des algorithmes qui vont servir à "optimiser" les services tout en contrôlant de près les activités des travailleurs.
+  Il s'agit d'un travail qui existait auparavant mais qui s'effectue désormais par l'intermédiaire de plateformes numériques. Cette catégorie inclut les services fournis par les chauffeurs de VTC, les livreurs de repas, etc. Derrière leur activité visible (livrer un repas, conduire un client), les individus effectuent un travail informationnel de production de données. En effet, ils fournissent en permanence de précieuses informations qui peuvent concerner leur position GPS, le temps de parcours, les horaires, les évaluations des clients ou encore leur profil. Ces données alimentent des algorithmes qui vont servir à "optimiser" les services tout en contrôlant de près les activités des travailleurs.
   
   <br>
 
 * **Le micro-travail réalisé sur des plateformes** **(micro-rémunéré)**
 
 
-  Les entreprises peuvent aussi rémunérer des travailleurs pour des micro-tâches effectuées en ligne. Il s'agit le plus souvent d'individus qui réalisent de petites opérations (clics sur une image, saisie de données, transcriptions) au travers de plateformes numériques, telle que Amazon Mechanical Turk (voir ci-dessous). Ces tâches sont nécessaire pour d'entraîner des intelligences artificielles.
+  Les entreprises peuvent aussi rémunérer des travailleurs pour des micro-tâches effectuées en ligne. Il s'agit le plus souvent d'individus qui réalisent de petites opérations (clics sur une image, saisie de données, transcriptions) au travers de plateformes numériques, telle que Amazon Mechanical Turk (voir ci-dessous). Ces tâches sont nécessaire pour entraîner les systèmes d'intelligence artificielle.
   
   <br>
 
@@ -135,8 +135,7 @@ Depuis 2005, le géant du e-commerce Amazon possède une plateforme qui met en r
 
 Si Amazon se réfère à ce canular, c’est que sa plateforme proposant les services de «micro-travailleurs» (ou *turkers*) fonctionne sur la même illusion. Nous imaginons que des entreprises vendent de puissants logiciels qui réalisent des processus complexes grâce à l’intelligence artificielle alors qu’en réalité, ces systèmes nécessitent l’intervention de nombreux humains dispersés aux quatre coins du monde. Ces derniers sont des travailleurs et travailleuses précaires, invisibles et payés à la tâche, souvent quelques centimes par action. Il s’agit d’une forme de *digital labor*.
 
-Malgré les progrès de l’informatique, l’intelligence artificielle nécessite donc toujours un important travail humain. Il faut tout d’abord que des données soient produites et collectées, notamment grâce aux traces laissées par les internautes. Puis, ces données doivent être «préparées» par des individus afin d’assister les systèmes d’intelligence artificielle. Il peut s’agir d’identifier un objet ou des lettres, de retranscrire une parole captée par un assistant vocal ou encore d’évaluer le contenu d’une vidéo. Les machines seules ne peuvent pas réaliser certaines tâches qui demandent des capacités de réflexion, de jugement, d’interprétation et une connaissance du monde. 
-De nouvelles formes d’activités sont ainsi apparues, souvent en dehors des cadres légaux imposés par les états. Aujourd’hui, de nombreuses tâches nécessaires au fonctionnement des algorithmes sont réalisées au travers de l’une des trois modalités présentées ci-dessus.
+Malgré les progrès de l’informatique, l’intelligence artificielle nécessite donc toujours un important travail humain. Il faut tout d’abord que des données soient produites et collectées, notamment grâce aux traces laissées par les internautes. Puis, ces données doivent être «préparées» par des individus afin d’assister les systèmes d’intelligence artificielle. Il peut s’agir d’identifier un objet ou des lettres, de retranscrire une parole captée par un assistant vocal ou encore d’évaluer le contenu d’une vidéo. Les machines seules ne peuvent pas réaliser certaines tâches qui demandent des capacités de réflexion, de jugement, d’interprétation et une connaissance du monde. De nouvelles formes d’activités sont ainsi apparues, souvent en dehors des cadres légaux imposés par les états. Aujourd’hui, de nombreuses tâches nécessaires au fonctionnement des algorithmes sont réalisées au travers de l’une des trois modalités présentées ci-dessus.
 
 <br>
 
@@ -149,7 +148,7 @@ De nouvelles formes d’activités sont ainsi apparues, souvent en dehors des ca
 
 La notion de *digital labor* témoigne, de façon plus générale, d’une nouvelle manière de penser le Web social. Jusqu’à la fin des années 1990, dans le champ de la sociologie, le réseau était avant tout envisagé comme un espace permettant l’échange d’informations, la mise en relation d’individus, la création de communautés en ligne dans un esprit participatif non-marchand (👉 *voir fiche «Histoire d’Internet et du Web»*). Les interactions semblaient guidées par des principes de collaboration, de partage et de don. Les observateurs de ces pratiques dressaient donc un tableau élogieux du Web.
 
-Mais au milieu des années 2000, avec l’arrivée des plateformes, le regard porté sur le Web s’est transformé. La recherche s’est attachée à souligner la transformation du réseau en espace marchand, dominé par quelques acteurs centraux. Les travaux autour du *digital labor* s’inscrivent dans cette perspective critique.
+Mais au milieu des années 2000, avec l’arrivée des plateformes, le regard porté sur le Web s’est transformé. La recherche s’est attachée à souligner la transformation du réseau en espace marchand, dominé par quelques acteurs centraux qui tirent profit des pratiques des utilisateurs. Les travaux autour du *digital labor* s’inscrivent dans cette perspective critique.
 
 
 <br>
@@ -209,21 +208,36 @@ a) Pourquoi parle-t-on de «micro-travail»?
 
 
    ::::{admonition,dropdown} Réponse
-   Il s'agit d'un travail à la tâche, ou plutôt à la micro-tâche. Les travailleurs et travailleuses sont rémunérés quelques centimes par opération. Ils et elles n'ont pas de contrat de travail et n’ont droit à aucune prestation sociale. Il s’agit donc d’une activité très précaire.
+   Il s'agit d'un travail à la tâche, ou plutôt à la micro-tâche. Les travailleurs et travailleuses sont rémunérés quelques centimes par opération. Ils et elles n'ont pas de contrat de travail et n’ont droit à aucune prestation sociale. Il est difficile pour ces travailleurs de prévoir leurs horaires et leur revenu, car aucun nombre d'heures ou de tâches n'est garanti.  Il s’agit donc d’une activité très précaire.
    ::::
 
 
-b) Pourquoi la personne interviewevée témoigne-t-elle à visage couvert?
+
+b) L'un des témoins dit : "On aide l'algorithme à s'améliorer". En quoi les algorithmes doivent-ils être "améliorés"?
   
    ::::{admonition,dropdown} Réponse
-   L'entreprise cherche à dissimuler le fait qu'elle a recours aux travailleurs du clic pour faire fonctionner ses systèmes. L'IA est vendue comme une solution entièrement "automatisée".
+   Les algorithmes sont souvent pensés comme des processus informatiques qui fonctionnent de façon entièrement automatisée. Cependant, ces témoignages nous montrent qu'ils nécessitent un important travail humain. Certaines opérations qui requièrent une connaissance et une expérience du monde doivent être réalisées au prélable par des humains. Par exemple, dans le cas d'un algorithme destiné à traiter les requêtes d'un moteur de recherche, comprendre le sens ou la dimension implicite d'un mot est difficile pour un système informatique. Ils doivent donc être "entrainés" par des humains au travers de très nombreux exemples.
    ::::
 
 
-c) Pourriez-vous citer des situations lors desquelles nous travaillons en ligne sans nous en rendre compte?
+c) Pourquoi la personne qui travaille pour Google témoigne-t-elle à visage caché?
+  
+   ::::{admonition,dropdown} Réponse
+   L'IA est vendue comme une solution entièrement automatisée. Dans l'imaginaire collectif, les algorithmes sont développés par une équipe d'ingénieurs, puis fonctionnent "tout seuls". Google cherche donc à dissimuler le fait que son système est imparfait et que des "travailleurs du clic" effectuent "à la main" des tâches que l'on vend comme des systèmes automatiques. De plus, les conditions de travail de ces personnes sont particulièrment précaires et on peut imaginer que les entreprises ne souhaitent pas afficher publiquement qu'elles externalisent leur travail et participent à ces pratiques peu éthiques.
+   ::::
+
+c) L'une des femmes qui témoigne dit travailler pour Disneyland Paris alors qu'elle se situe à Madagascar. Pourquoi une entreprise française fait-elle appel à des travailleurs si éloignés? Que nous dit cette situation de la "géographie" de l'IA?
+  
+   ::::{admonition,dropdown} Réponse
+   Les entreprises technologiques qui conçoivent l'IA se situent essentiellement dans le monde occidental, tandis que le travail de "petites mains" qui permet son fonctionnement est réalisé en Afrique ou en Asie afin d'en réduire les coûts. Ces activités sont donc largement invisibles pour ceux qui en bénéficient. Le micro-travail reproduit des formes d'inégalités et des asymétries qui existent déjà dans d'autres secteurs industriels. Mais ce travail est encore plus occulté et fragmenté car il est réalisé le plus souvent individuellement et depuis le domicile.
+   
+   Par ailleurs, cette nouvelle forme de délocalisation permet d'envisager l'IA non plus commme le remplacement des humains par des machines mais comme le remplacement d'employés qualifiés par des travailleurs du clic précaires et sous-payés.
+   ::::
+
+d ) Pourriez-vous citer des situations lors desquelles nous travaillons en ligne sans nous en rendre compte?
 
    ::::{admonition,dropdown} Quelques éléments de réponse
-  * Toutes nos activités sur les réseaux sociaux : commentaires, likes, partage d'image, clic sur un lien, et tout simplement faire défiler le fil d'actualité. De ces activités sont extraites de précieuses données pour les plateformes.
+  * Toutes nos activités sur les réseaux sociaux : commentaires, likes, partage d'image, clic sur un lien, et tout simplement faire défiler le fil d'actualité. De ces activités sont extraites de précieuses données pour les plateformes qui vont pouvoir les utiliser pour vendre des audiences ciblées.
   * Effectuer une requête sur un moteur de recherche
-  * Identifier des lettres ou des objets sur des images pour valider un formulaire. Par exemple, il est souvent demandés aux internautes d'identifier des objets liés au trafic routier (passage piétons, motos, vélos, etc.). Ces informations servent à entrainer les sytèmes de conduite automatisée.
+  * Identifier des lettres ou des objets sur des images pour valider un formulaire. Par exemple, il est souvent demandés aux internautes de reconnaître des objets liés au trafic routier (passage piétons, motos, vélos, etc.). Ces informations servent à entrainer les sytèmes de conduite automatisée.
    ::::
