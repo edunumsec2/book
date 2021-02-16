@@ -385,6 +385,52 @@ test(puissance(2, 3) == 8, "Oups, ton implémentation est incorrecte.")
 
 Pour désactiver cette fonctionnalité, l'option `:noprelude:` peut être spécifiée.
 
+### Indices
+
+
+`````{tabbed} Aperçu
+```{codeplay}
+---
+hints: |
+    Rappelle toi de l'opérateur `**`!
+    ===
+    Toujours pas?
+---
+
+def test(condition, erreur):
+     if not condition:
+        print(erreur)
+===
+def puissance(n, m):
+    pass
+===
+test(puissance(2, 3) == 8, "Oups, ton implémentation est incorrecte.")
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{codeplay}
+---
+hints: |
+Rappelle toi de l'opérateur `**`!
+===
+Toujours pas?
+---
+
+def test(condition, erreur):
+     if not condition:
+        print(erreur)
+===
+def puissance(n, m):
+    pass
+===
+test(puissance(2, 3) == 8, "Oups, ton implémentation est incorrecte.")
+```
+````
+`````
+
+
 ### Librairies
 
 #### Turtle
