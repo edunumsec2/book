@@ -14,7 +14,7 @@ texte = input("Ton texte : ")
 
 print("Le texte d'origine est : " + str(texte)) 
   
-res = ''.join(format(ord(i), 'b') for i in texte) 
+res = ' '.join(format(ord(i), 'b') for i in texte) 
   
 print("Le texte en binaire est : " + str(res))
 
@@ -38,6 +38,10 @@ print ("""
 """)
 ```
 
+[Cet outil](https://www.patorjk.com/software/taag/#p=display&f=Small&t=Entrez%20votre%20texte) vous permet de transformer n'importe quel texte en ASCII. 
+
+## Text-based games
+
 À l'époque où les programmes s'exécutaient directement dans le terminal, sans être enrobés dans une interface graphique, beaucoup de jeux furent créés qui n'utilisaient que la fonction *print* des langages de programmation. 
 
 ```{codeplay}
@@ -53,6 +57,9 @@ if int(userInput) == ballPlaceholder:
 else: 
     print('Tu as perdu')
 ```
+
+%%% Ajouter références text-based games plus solides
+
 ## La compression
 
 À partir du moment où l'on possède un alphabet pour représenter les messages écrits en nombres binaires se pose la question de l'optimisation du nombre de bits dont on a besoin pour coder un message. Très tôt des chercheurs se sont penchés sur la question de l'équilibre entre lisibilité et poids du message. Il fallait garder le minimum vital d'information pour que le message soit lisible, tout en compressant au maximum pour optimiser le poids. 
