@@ -49,7 +49,8 @@ class InteractiveCode(SphinxDirective):
         if "noprelude" not in self.options:
             i = 0
             while i < len(self.content):
-                if self.content[i].strip() == "=" * 3:
+                line = self.content[i].strip()
+                if len(line) >= 3 and line == "=" * len(line):
                     pre = i
                     break
                 i += 1
