@@ -15,9 +15,12 @@ def visit_interactive_code_html(self, node):
     prelude_attr = ""
     if len(node["prelude"]) > 0:
         prelude_attr = 'data-prelude="' + b64encode(node["prelude"].encode("UTF-8")).decode("UTF-8") + '" '
+    afterword_attr = ""
+    if len(node["afterword"]) > 0:
+        afterword_attr = 'data-afterword="' + b64encode(node["afterword"].encode("UTF-8")).decode("UTF-8") + '" '
 
     self.body.append('<iframe src="/codeplay/frame.html" ' +
-      prelude_attr +
+      prelude_attr + afterword_attr +
       'data-code="' + b64encode(node["code"].encode("UTF-8")).decode("UTF-8") + '" ' +
       'scrolling="no" ' + 
       ('data-run="true" ' if node["exec"] else '') +
@@ -46,25 +49,40 @@ class InteractiveCode(SphinxDirective):
         self.assert_has_content()
 
         pre = None
+        post = None
         if "noprelude" not in self.options:
             i = 0
             while i < len(self.content):
                 line = self.content[i].strip()
                 if len(line) >= 3 and line == "=" * len(line):
                     pre = i
+                    i += 1
+                    break
+                i += 1
+            while i < len(self.content):
+                line = self.content[i].strip()
+                if len(line) >= 3 and line == "=" * len(line):
+                    post = i
+                    i += 1
                     break
                 i += 1
         
         pre_lines = []
+        post_lines = []
         code_lines = self.content
         
         if pre is not None:
             pre_lines = self.content[:pre]
-            code_lines = self.content[pre + 1:]
+            if post is not None:
+                code_lines = self.content[pre + 1:post]
+                post_lines = self.content[post + 1:]
+            else:
+                code_lines = self.content[pre + 1:]
 
         container = interactive_code("",
           code='\n'.join(code_lines),
           prelude='\n'.join(pre_lines),
+          afterword='\n'.join(post_lines),
           static="static" in self.options,
           nocontrols="nocontrols" in self.options,
           exec="exec" in self.options)

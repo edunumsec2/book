@@ -23,6 +23,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var prelude = "";
   var preludeLines = 0;
+  var afterword = "";
+  var afterwordLines = 0;
+  var code = "";
+  var codeLines = 0;
 
   var rejectInput = null;
 
@@ -136,7 +140,8 @@ document.addEventListener("DOMContentLoaded", function() {
     if (err.traceback.length > 0) {
       const firstFrame = err.traceback[0];
       if (firstFrame.filename === "<stdin>.py" &&
-          firstFrame.lineno > preludeLines) {
+          firstFrame.lineno > preludeLines &&
+          firstFrame.lineno <= preludeLines + codeLines) {
         // Error located in user code.
         msg += " on line " + (firstFrame.lineno - preludeLines);
       }
@@ -172,7 +177,9 @@ document.addEventListener("DOMContentLoaded", function() {
     canvasArea.style.display = "none";
     executeBtn.disabled = true;
     interruptBtn.disabled = false;
-    var prog = prelude + codeElem.getValue();
+    code = codeElem.getValue();
+    codeLines = code.split("\n").length;
+    const prog = prelude + code + afterword;
     var elem = document.getElementById("output");
     elem.innerHTML = '';
     outputDefaultMessage.classList.remove("shine");
@@ -185,6 +192,8 @@ document.addEventListener("DOMContentLoaded", function() {
     void executeBtn.offsetWidth;
     executeBtn.classList.add("shine");
     
+    console.log(prog);
+
     var myPromise = Sk.misceval.asyncToPromise(function() {
       return Sk.importMainWithBody("<stdin>", false, prog, true);
     }, { "*": function () {
@@ -231,13 +240,24 @@ document.addEventListener("DOMContentLoaded", function() {
   observer.observe(document.getElementById("output"), config);
   resized();
 
+  function b64DecodeUnicode(str) {
+    return decodeURIComponent(atob(str).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+  }
+
   if (parent && parent.frameResized) {
     parent.populateFrame(self, function(frame) {
-      codeElem.setValue(atob(frame.dataset.code));
+      codeElem.setValue(b64DecodeUnicode(frame.dataset.code));
       if (frame.hasAttribute("data-prelude")) {
-        const rawPrelude = atob(frame.dataset.prelude);
+        const rawPrelude = b64DecodeUnicode(frame.dataset.prelude);
         prelude = rawPrelude + "\n";
         preludeLines = rawPrelude.split("\n").length;
+      }
+      if (frame.hasAttribute("data-afterword")) {
+        const rawAfterword = b64DecodeUnicode(frame.dataset.afterword);
+        afterword = "\n" + rawAfterword;
+        afterwordLines = rawAfterword.split("\n").length;
       }
       if (frame.hasAttribute("data-nocontrols")) {
         document.getElementById("control-area").style.display = "none";
