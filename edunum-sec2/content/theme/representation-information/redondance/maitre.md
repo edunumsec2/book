@@ -1,1 +1,4 @@
-TODO
+Notion de redondance
+====================
+
+À compléter
