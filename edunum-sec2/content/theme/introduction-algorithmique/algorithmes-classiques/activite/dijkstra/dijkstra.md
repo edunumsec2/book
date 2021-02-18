@@ -2,7 +2,7 @@
 
 ## Informations
 
-Durée: 2 périodes consécutives
+Durée: 2 périodes consécutives avec une suite optionnelle qui porte sur les enjeux de société.
 
 Mode: Débranché
 
@@ -51,6 +51,18 @@ de requête de chemin pour relier deux points.
  - Tout le réseau routier est représenté sous forme d'un graphe
  - Les croisements et embranchements sont représentés par les *sommets* du graphe et les
  routes qui les relient sont représentées par les *arêtes* du graphe. La *longueur* de
+
+## Informations
+
+Durée: 2 périodes consécutives avec une suite optionnelle qui porte sur les enjeux de société.
+
+Mode: Débranché
+
+Chapitre: Algorithmique
+
+Objectifs: Découvrir l'algorithme de Dijkstra, à quoi il sert, et pourquoi il fonctionne.  
+
+Matériel: Une connection internet pour la mise en situation. 
  chaque arête est connue.
  - Un *algorithme* permet de calculer le plus court chemin dans ce graphe. Nous allons
  voir un algorithme du plus court chemin, celui de *Dijkstra* (du nom de son inventeur). 
@@ -166,3 +178,34 @@ programmée par exemple en utilisant une libraire de graphe telle que igraph ou 
 ## 8 Lien avec enjeux sociétaux
 
 Retour sur openstreetmap avec fiche (ou activité) correspondante [TODO link]
+
+# Seconde séance (optionnelle) portant sur les enjeux de société: Produire un business plan 
+
+## Introduction
+ L'idée de cette seconde séance est de faire réfléchir les élèves à la variété des applications des algorithmes
+ de graphe
+
+ ## Déroulement
+ 1. Mise en situation
+ 1. Travail en groupe
+ 1. Présentation et discussion des résultats
+
+ ## 1 Mise en situation( 10 min)
+ L'enseignant présente l'histoire de la startup Waze, rachetée par Google
+
+ ## 2 Travail en groupe(30 min) 
+ Par groupe de 3 ou 4, les élèves doivent proposer une application imaginaire qui utiliserai l'algorithme de Dijkstra
+pour proposer un service à ses utilisateurs. En particulier, ils doivent préciser les points suivants:
+1. Quel service propose l'application
+1. Qui ce service pourrait intéressé.
+1. Quelles sont les données dont l'application aurait besoin (et comment elle pourrait les obtenir)
+1. En quoi la notion de graphe serait utile pour programmer cette application et comment l'algorithme de Dijkstra serait utilisé (donner un exemple concret)
+1. Quels impacts positifs ou négatifs peut-on imaginer pour cette application? 
+
+L'enseignant guide les élèves et donnent des idées à ceux qui n'en n'ont pas. 
+
+Les élèves rédigent ensuite un diaporama dans lequel chacun de ces points est abordé par une diapo
+
+## Présentation et discussion(30 min)
+Chaque groupe fait une présentation de son projet en 5 minutes suivi d'une petite discussion avec la classe. 
+ 
