@@ -94,8 +94,6 @@
   - file: content/demostests/glossaire
   - file: content/demostests/edito/liens
   - file: content/demostests/edito/referencesart
-  - file: content/demostests/edito/testaccueilrepinfo
-  - file: content/demostests/edito/testintrorepinfo
   - file: content/demostests/edito/extensions
   - file: content/demostests/edito/bugs
   - file: content/demostests/art/histoireart
