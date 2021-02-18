@@ -154,7 +154,7 @@ if int(userInput) == ballPlaceholder:
 else: 
     print('Tu as perdu') -->
 
-
+<!-- 
     Pour Huffman : 
         
     # ajouter le texte en code non compressé
@@ -165,3 +165,69 @@ else:
     Ajouter : 
 
     - Exercices qui confirment l'acquisition. 
+ -->
+
+
+```{codeplay}
+
+import random
+
+def trouve():
+    print("Je pense à un nombre entre 1 et 10, lequel ?")
+    number = random.randint(1, 10)
+    found = False
+    tries = 0
+    while not found:
+        tries += 1
+        try: 
+            candidate = int(input("Le nombre: "))
+            if candidate < 1 or candidate > 10:
+                print("Donne moi au moins un nombre entre 1 et 10...")
+            elif candidate == number:
+                print("Bravo!")
+                if tries == 1:
+                    print("Et du premier coup en plus !")
+                elif tries >= 5:
+                    print("Tout arrive !")
+                break
+            elif candidate < number:
+                print("Ton nombre est trop petit, voyons !")
+            else:
+                print("Ton nombre est trop grand, non mais !")
+        except:
+            print("Ce n'est même pas un nombre!")
+===
+trouve()
+```
+
+
+```{codeplay}
+
+def cherche():
+    print("Penses à un nombre entre 1 et 10")
+    print("S'il te plait, réponds à mes questions par <, > ou =.")
+    print("Utilise < quand ton nombre est plus petit que celui "
+          "que je propose, > quand il est plus grand, "
+          "et = quand j'ai trouvé.")
+    minimum = 1
+    maximum = 10
+    while True:
+        if minimum > maximum:
+            print("J'abandonne...")
+            break
+        candidate = (minimum + maximum) // 2
+    	answer = input("Tu penses à " + str(candidate) + ", c'est bien ça ? ")
+        if answer == "<":
+            print("Oups, j'ai visé trop haut !")
+            maximum = candidate - 1
+        elif answer == ">":
+            print("Mince, trop bas !")
+            minimum = candidate + 1
+        elif answer == "=":
+            print("Ha ha, trop facile !")
+            break
+        else:
+            print("J'ai pas bien compris...")
+===
+cherche()
+```
