@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const executeBtn = document.getElementById("execute");
   const interruptBtn = document.getElementById("interrupt");
+  const hintsBtn = document.getElementById("hints");
+  const hintsArea = document.getElementById("tooltip");
+  const hintsElem = document.getElementById("tooltip-content");
   const canvasArea = document.getElementById("canvas-area");
   const canvasElem = document.getElementById("canvas");
   const outputElem = document.getElementById("output");
@@ -23,6 +26,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var prelude = "";
   var preludeLines = 0;
+  var afterword = "";
+  var afterwordLines = 0;
+  var code = "";
+  var codeLines = 0;
+  var hints = [];
 
   var rejectInput = null;
 
@@ -136,7 +144,8 @@ document.addEventListener("DOMContentLoaded", function() {
     if (err.traceback.length > 0) {
       const firstFrame = err.traceback[0];
       if (firstFrame.filename === "<stdin>.py" &&
-          firstFrame.lineno > preludeLines) {
+          firstFrame.lineno > preludeLines &&
+          firstFrame.lineno <= preludeLines + codeLines) {
         // Error located in user code.
         msg += " on line " + (firstFrame.lineno - preludeLines);
       }
@@ -172,7 +181,9 @@ document.addEventListener("DOMContentLoaded", function() {
     canvasArea.style.display = "none";
     executeBtn.disabled = true;
     interruptBtn.disabled = false;
-    var prog = prelude + codeElem.getValue();
+    code = codeElem.getValue();
+    codeLines = code.split("\n").length;
+    const prog = prelude + code + afterword;
     var elem = document.getElementById("output");
     elem.innerHTML = '';
     outputDefaultMessage.classList.remove("shine");
@@ -185,6 +196,8 @@ document.addEventListener("DOMContentLoaded", function() {
     void executeBtn.offsetWidth;
     executeBtn.classList.add("shine");
     
+    console.log(prog);
+
     var myPromise = Sk.misceval.asyncToPromise(function() {
       return Sk.importMainWithBody("<stdin>", false, prog, true);
     }, { "*": function () {
@@ -231,13 +244,90 @@ document.addEventListener("DOMContentLoaded", function() {
   observer.observe(document.getElementById("output"), config);
   resized();
 
+  // Courtesy of https://stackoverflow.com/questions/30106476/using-javascripts-atob-to-decode-base64-doesnt-properly-decode-utf-8-strings
+  function b64DecodeUnicode(str) {
+    return decodeURIComponent(atob(str).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+  }
+
+  var popperInstance = null;
+  function createTooltip() {
+    hintsArea.style.display = "block";
+    popperInstance = Popper.createPopper(hintsBtn, hintsArea, {
+      modifiers: [
+        {
+          name: 'offset',
+          options: {
+            offset: [0, 8],
+          },
+        },
+      ],
+    });
+  }
+
+  function hideTooltip() {
+    hintsArea.style.display = "none";
+    popperInstance.destroy();
+    popperInstance = null;
+  }
+
+  hintsBtn.addEventListener("click", function () {
+    if (popperInstance == null) {
+      createTooltip();
+    }
+    else {
+      hideTooltip();
+    }
+  });
+
+  hintsElem.addEventListener("click", function () {
+    nextHint();
+    console.log(hints);
+  });
+
+  document.addEventListener("click", function(e) {
+    if (popperInstance != null && !hintsBtn.contains(e.target) && !hintsArea.contains(e.target)) {
+      hideTooltip();
+    }
+  });
+
+  var loadedHint = -1;
+  function loadHint(index) {
+    loadedHint = index;
+    hintsElem.innerText = hints[index];
+  }
+
+  function nextHint() {
+    loadHint((loadedHint + 1) % hints.length);
+    if (popperInstance != null) {
+      hideTooltip();
+    }
+    createTooltip();
+  }
+
+
   if (parent && parent.frameResized) {
     parent.populateFrame(self, function(frame) {
-      codeElem.setValue(atob(frame.dataset.code));
+      codeElem.setValue(b64DecodeUnicode(frame.dataset.code));
       if (frame.hasAttribute("data-prelude")) {
-        const rawPrelude = atob(frame.dataset.prelude);
+        const rawPrelude = b64DecodeUnicode(frame.dataset.prelude);
         prelude = rawPrelude + "\n";
         preludeLines = rawPrelude.split("\n").length;
+      }
+      if (frame.hasAttribute("data-afterword")) {
+        const rawAfterword = b64DecodeUnicode(frame.dataset.afterword);
+        afterword = "\n" + rawAfterword;
+        afterwordLines = rawAfterword.split("\n").length;
+      }
+      if (frame.hasAttribute("data-hints")) {
+        const rawHints = frame.dataset.hints.split(" ");
+        for (const hint of rawHints) {
+          hints.push(b64DecodeUnicode(hint));
+        }
+        loadHint(0);
+        hintsBtn.disabled = false;
+        console.log(hints);
       }
       if (frame.hasAttribute("data-nocontrols")) {
         document.getElementById("control-area").style.display = "none";

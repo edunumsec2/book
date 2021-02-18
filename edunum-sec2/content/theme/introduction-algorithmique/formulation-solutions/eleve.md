@@ -37,7 +37,7 @@ for i in range(1,len(rect)):  # len(rect) donne la longueur de rect
         indice_min = i
 ```
 
-Pour faire plus simple, nous pouvons également utiliser la fonction min()qui retourne directement le plus petit élément d’une liste. Nous avons aussi besoin de la fonction index() afin d’accéder à la position du plus petit élément.
+Pour faire plus simple, nous pouvons également utiliser la fonction min() qui retourne directement le plus petit élément d’une liste. Nous avons aussi besoin de la fonction index() afin d’accéder à la position du plus petit élément.
 
 ```
 indice_min = rect.index(min(rect))

@@ -3,6 +3,7 @@ from base64 import b64encode
 
 from docutils import nodes
 from docutils.parsers.rst import directives
+from docutils.statemachine import StringList
 from sphinx.util.docutils import SphinxDirective
 
 class interactive_code(nodes.Element, nodes.General):
@@ -15,9 +16,19 @@ def visit_interactive_code_html(self, node):
     prelude_attr = ""
     if len(node["prelude"]) > 0:
         prelude_attr = 'data-prelude="' + b64encode(node["prelude"].encode("UTF-8")).decode("UTF-8") + '" '
+    afterword_attr = ""
+    if len(node["afterword"]) > 0:
+        afterword_attr = 'data-afterword="' + b64encode(node["afterword"].encode("UTF-8")).decode("UTF-8") + '" '
+    hints_attr = ""
+    if len(node["hints"]) > 0:
+        string_hints = [hint for hint in node["hints"]]
+        hints_attr = ('data-hints="' +
+            ' '.join([b64encode(hint.encode("UTF-8")).decode("UTF-8") for hint in string_hints]) +
+            '" ')
+
 
     self.body.append('<iframe src="/codeplay/frame.html" ' +
-      prelude_attr +
+      prelude_attr + afterword_attr + hints_attr +
       'data-code="' + b64encode(node["code"].encode("UTF-8")).decode("UTF-8") + '" ' +
       'scrolling="no" ' + 
       ('data-run="true" ' if node["exec"] else '') +
@@ -39,31 +50,68 @@ class InteractiveCode(SphinxDirective):
         "noprelude": directives.flag,
         "static": directives.flag,
         "nocontrols": directives.flag,
+        "hints": directives.unchanged
     }
     has_content = True
 
     def run(self):
         self.assert_has_content()
 
+
+        def isSeparatorLine(line):
+            line = line.strip()
+            return len(line) >= 3 and line == "=" * len(line)
+
         pre = None
+        post = None
         if "noprelude" not in self.options:
             i = 0
             while i < len(self.content):
-                if self.content[i].strip() == "=" * 3:
+                if isSeparatorLine(self.content[i]):
                     pre = i
+                    i += 1
+                    break
+                i += 1
+            while i < len(self.content):
+                if isSeparatorLine(self.content[i]):
+                    post = i
+                    i += 1
                     break
                 i += 1
         
+        hints = []
+        if "hints" in self.options:
+            hint = []
+            for line in self.options["hints"].splitlines():
+                if isSeparatorLine(line) and len(hint) > 0:
+                    hints.append('\n'.join(hint))
+                    hint = []
+                else:
+                    hint.append(line)
+            if len(hint) > 0:
+                hints.append('\n'.join(hint))
+
         pre_lines = []
+        post_lines = []
         code_lines = self.content
         
         if pre is not None:
             pre_lines = self.content[:pre]
-            code_lines = self.content[pre + 1:]
+            if post is not None:
+                code_lines = self.content[pre + 1:post]
+                post_lines = self.content[post + 1:]
+            else:
+                code_lines = self.content[pre + 1:]
+
+        hints_node = nodes.paragraph()
+        self.state.nested_parse(StringList(hints), 0, hints_node)
 
         container = interactive_code("",
           code='\n'.join(code_lines),
           prelude='\n'.join(pre_lines),
+          hints=hints,
+          hints_node=hints_node,
+          afterword='\n'.join(post_lines),
           static="static" in self.options,
           nocontrols="nocontrols" in self.options,
           exec="exec" in self.options)

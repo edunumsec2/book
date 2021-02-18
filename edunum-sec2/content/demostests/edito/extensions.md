@@ -330,7 +330,7 @@ print(puissance(2, 10))
 
 ### Prelude
 
-Par défaut toutes les lignes apparaissant avant la première ligne formée uniquement de 3 charactères `=` (ignorant les charactères d'espaces avant et après sur la ligne) est considéré comme un préambule qui n'est pas affiché aux utilisateurs du site mais qui est tout de même executé.
+Par défaut toutes les lignes apparaissant avant la première ligne formée uniquement d'au moins 3 charactères `=` (ignorant les charactères d'espaces avant et après sur la ligne) est considéré comme un préambule qui n'est pas affiché aux utilisateurs du site mais qui est tout de même executé.
 
 `````{tabbed} Aperçu
 ```{codeplay}
@@ -352,7 +352,84 @@ print(puissance(2, 10))
 ````
 `````
 
+De même, lorsqu'au deux délimations sont faites, seule la seconde est affichée.
+L'ordre d'execution est preservé.
+
+`````{tabbed} Aperçu
+```{codeplay}
+def test(condition, erreur):
+     if not condition:
+        print(erreur)
+===
+def puissance(n, m):
+    pass
+===
+test(puissance(2, 3) == 8, "Oups, ton implémentation est incorrecte.")
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{codeplay}
+def test(condition, erreur):
+     if not condition:
+        print(erreur)
+===
+def puissance(n, m):
+    pass
+===
+test(puissance(2, 3) == 8, "Oups, ton implémentation est incorrecte.")
+```
+````
+`````
+
 Pour désactiver cette fonctionnalité, l'option `:noprelude:` peut être spécifiée.
+
+### Indices
+
+
+`````{tabbed} Aperçu
+```{codeplay}
+---
+hints: |
+    Rappelle toi de l'opérateur `**`!
+    ===
+    Toujours pas?
+---
+
+def test(condition, erreur):
+     if not condition:
+        print(erreur)
+===
+def puissance(n, m):
+    pass
+===
+test(puissance(2, 3) == 8, "Oups, ton implémentation est incorrecte.")
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{codeplay}
+---
+hints: |
+Rappelle toi de l'opérateur `**`!
+===
+Toujours pas?
+---
+
+def test(condition, erreur):
+     if not condition:
+        print(erreur)
+===
+def puissance(n, m):
+    pass
+===
+test(puissance(2, 3) == 8, "Oups, ton implémentation est incorrecte.")
+```
+````
+`````
+
 
 ### Librairies
 
