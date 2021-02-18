@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var code = "";
   var codeLines = 0;
   var hints = [];
+  var readOnly = false;
 
   var rejectInput = null;
 
@@ -181,11 +182,11 @@ document.addEventListener("DOMContentLoaded", function() {
     canvasArea.style.display = "none";
     executeBtn.disabled = true;
     interruptBtn.disabled = false;
+    codeElem.setOption("readOnly", "nocursor")
     code = codeElem.getValue();
     codeLines = code.split("\n").length;
     const prog = prelude + code + afterword;
-    var elem = document.getElementById("output");
-    elem.innerHTML = '';
+    outputElem.innerHTML = '';
     outputDefaultMessage.classList.remove("shine");
     void outputDefaultMessage.offsetWidth;
     outputDefaultMessage.classList.add("shine");
@@ -211,11 +212,17 @@ document.addEventListener("DOMContentLoaded", function() {
       executeBtn.disabled = false;
       interruptBtn.disabled = true;
       Sk.hardInterrupt = false;
+      if (!readOnly) {
+        codeElem.setOption("readOnly", false);
+      }
       running = false;
     }, function(err) {
       executeBtn.disabled = false;
       interruptBtn.disabled = true;
       Sk.hardInterrupt = false;
+      if (!readOnly) {
+        codeElem.setOption("readOnly", false);
+      }
       running = false;
 
       outputFunction(errorToString(err));
@@ -334,6 +341,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       if (frame.hasAttribute("data-static")) {
         codeElem.setOption("readOnly", "nocursor");
+        readOnly = true;
       }
 
       resized();
