@@ -3,7 +3,7 @@ Décomposition d'un problème en étapes
 
 ## Algorithme ou la décomposition d’un problème
 
-Un **algorithme** est en quelque sorte « une recette » que l’on suit pour **résoudre un problème**. Voici quelques exemples de problèmes que l’on arrive à résoudre numériquement : calculer le trajet le plus court, gérer les livres d’une bibliothèque, détecter des visages dans une photographie ou recommander des produits. ***L’algorithme n’est donc pas un programme***. Un algorithme ne se code pas, il ne s’exécute pas et il ne donne pas de solution concrète. L’algorithme décrit plutôt un « mode d’emploi » que l’on peut suivre pour créer un programme. C’est le programme qui sera exécuté par un système informatique pour concrètement résoudre le problème.
+Un **algorithme** est en quelque sorte « une recette » que l’on suit pour **résoudre un problème**. Voici quelques exemples de problèmes que l’on arrive à résoudre numériquement : calculer le trajet le plus rapide entre deux lieux, gérer les livres d’une bibliothèque, détecter des visages dans une photographie ou recommander des produits. ***L’algorithme n’est donc pas un programme***. Un algorithme ne se code pas, il ne s’exécute pas et il ne donne pas de solution concrète. L’algorithme décrit plutôt un « mode d’emploi » que l’on peut suivre pour créer un programme. C’est le programme qui sera exécuté par un système informatique pour concrètement résoudre le problème.
 
 Un mode d’emploi ou une recette décrivent **des étapes** à suivre. La préparation des ingrédients, la cuisson ou le service sont différentes étapes d’une recette de cuisine, qu’une personne peut suivre pour réaliser un plat. Prenons un cas précis : ***réaliser une omelette***. Pour chaque étape de la préparation de l’omelette, il faut prévoir une marche à suivre suffisamment détaillée, afin que la personne qui suit la recette arrive au même résultat. Dans le cas de l’omelette, les opérations pourraient être (voir figure ci-dessous) : 
 
@@ -20,14 +20,15 @@ Les opérations à suivre pour la réalisation d’une omelette.
 
 :::
 
-Il en est de même pour l’algorithme qui **décompose le problème en sous-problèmes**. La solution de chaque sous-problème donne lieu à une étape que le système informatique peut suiver pour résoudre le sous-problème. L’algorithme décrit toutes les opérations qu'il faut effectuer pour arriver à un résultat. L’algorithme est donc **une suite d’opérations** qui permettent de résoudre un problème.  Le langage utilisé dans un algorithme est plus libre que celui utilisé dans un programme, comme le montre cet exemple :
+Il en est de même pour l’algorithme qui **décompose le problème en sous-problèmes**. La solution de chaque sous-problème donne lieu à une étape que le système informatique peut suivre pour résoudre le sous-problème. L’algorithme décrit toutes les opérations qu'il faut effectuer pour arriver à un résultat. L’algorithme est donc **une suite d’opérations** qui permettent de résoudre un problème.  Le langage utilisé dans un algorithme est plus libre que celui utilisé dans un programme, comme le montre cet exemple :
 
 ```
 Tableau Nombres : numérique
 Variable i : numérique
-Variable résultat : numérique
+Variable Résultat : numérique
+Variable Résultat ← 0
 Répéter Pour i = 1 à longueur(Nombres)
-    Resultat ← Resultat + Nombres[i]
+    Résultat ← Résultat + Nombres[i]
 Fin Pour
 ```
 
@@ -37,13 +38,13 @@ Que contient la variable résultat à la fin de l'algorithme ci-dessus ? Quel  p
 
 ::::
 
-« Chaque étape d’un algorithme doit être définie précisément » (Knuth, D. E., 2011). En effet, si on ne décompose pas suffisemment la solution du problème, on peut se retrouver face à une recette inutile, par exemple prendre des oeufs et réaliser une omelette. Cette recette ne nous dit pas vraiment comment procéder pour arriver à faire une omelette.
+« Chaque étape d’un algorithme doit être définie précisément » (Knuth, D. E., 2011). En effet, si on ne décompose pas suffisemment la solution du problème, on peut se retrouver face à une recette inutile, par exemple : prendre des oeufs et réaliser une omelette. Cette recette ne nous dit pas vraiment comment procéder pour arriver à faire une omelette.
 
 ### Les ingrédients d’un algorithme
 
-L’objectif d’un algorithme est de résoudre un problème, donc de trouver la solution à un problème donné. Concrètement l’algorithme va utiliser des **données** qu’il reçoit ***en entrée*** et va retourner un **résultat** ***en sortie*** (la solution du problème). Un algorithme qui détecte les visages peut recevoir une image en entrée (les données) et peut répondre "oui" si l’image contient un visage ou "non" si l’image ne contient pas de visage (le résultat). Les données en entrée d’un algorithme qui traduit pourraient être un texte à traduire et un dictionnaire. L’algorithme traite ces données pour retourner en sortie un texte traduit dans une autre langue, dont le sens correspond au texte original.
+L’objectif d’un algorithme est de trouver la solution à un problème donné. Concrètement l’algorithme va utiliser des **données** qu’il reçoit ***en entrée*** et va retourner un **résultat** ***en sortie*** (la solution du problème). Un algorithme qui détecte les visages peut recevoir une image en entrée (les données) et peut répondre "oui" si l’image contient un visage ou "non" si l’image ne contient pas de visage (le résultat). Les données en entrée d’un algorithme qui traduit pourraient être un texte à traduire et un dictionnaire. L’algorithme traite ces données pour retourner en sortie un texte traduit dans une autre langue, dont le sens correspond au texte original.
 
-Entre l’entrée et la sortie, l’algorithme précise quelles **opérations** exécuter. Les opérations que l’on peut demander à un humain sont très différentes de celle d’un ordinateur. On peut demander à un humain de casser des oeufs, mais un ordinateur ne peut comprendre et réaliser cette opération. Par contre on peut demander à un ordinateur de stocker une valeur dans une variable, de comparer les valeurs de plusieurs variables, de parcourir de longues listes de données. Une fois l’algorithme conçu, les opérations qu’il décrit sont retranscrites en instructions élémentaires (un programme)exécutables par un ordinateur.
+Entre l’entrée et la sortie, l’algorithme précise quelles **opérations** exécuter. Les opérations que l’on peut demander à un humain sont très différentes de celles d’un ordinateur. On peut demander à un humain de casser des oeufs, mais un ordinateur ne peut comprendre et réaliser cette opération. Par contre on peut demander à un ordinateur de stocker une valeur dans une variable, de comparer les valeurs de plusieurs variables, de parcourir de longues listes de données. Une fois l’algorithme conçu, les opérations qu’il décrit sont retranscrites en une suite d’instructions élémentaires, c’est-à-dire un programme exécutable par un ordinateur.
 
 Le dernier ingrédient d’un algorithme, mais tout aussi important, est l’**ordre des opérations**. Dans l’exemple de l’omelette, on ne peut cuire les œufs avant de les avoir cassés, sans quoi on obtiendrait des oeufs durs. L’ordinateur a besoin de recevoir les instructions élémentaires à exécuter dans le bon ordre. Pour résumer, les ingrédients pour concevoir un algorithme sont les suivants : 
 
@@ -59,7 +60,7 @@ Schéma des ingrédients d'un algorithme.
 
 :::
 
-Notez que les opérations d’un algorithme doivent être précises et ***non ambigües***. Il doit y avoir une seule interprétation possible de l’algorithme. Une recette de cuisine ne serait pas assez précise pour un ordinateur : il faudrait indiquer précisément ce que température moyenne et mélange homogène veulent dire. Les hommes peuvent interpréter, deviner et supposer, mais pas les ordinateurs.
+Notez que les opérations d’un algorithme doivent être précises et ***non ambigües***. Il doit y avoir une seule interprétation possible de l’algorithme. Une recette de cuisine ne serait pas assez précise pour un ordinateur : il faudrait indiquer précisément ce que température moyenne et mélange homogène veulent dire. Les êtres humains peuvent interpréter, deviner et supposer, mais pas les ordinateurs.
 
 ::::{admonition,hint} Le saviez-vous ? I
 
@@ -75,18 +76,11 @@ A quoi correspondent les ingrédients d’un algorithme dans l’exemple de la r
 
 ::::{admonition,attention} Exercice 3
 
-Ecrire un algorithme qui échange les valeurs de 2 variables. Représenter les deux variables par deux cases. Chaque case a une étiquette (le nom de la variable) et un contenu (la valeur de la variable). Dessiner le contenu de chaque variable après chaque opération de votre algorithme.
+Ecrire un algorithme qui échange les valeurs de 2 variables. Représenter les deux variables par deux cases. Chaque case a une étiquette (le nom de la variable) et un contenu (la valeur de la variable). Représenter le contenu de chaque variable après chaque opération de votre algorithme.
 
 ::::
 
 
-::::{admonition,note} Ai-je compris ?
-
-1. Je connais la différence entre un algorithme et un programme.
-
-2. Je sais formuler un algorithme : je décompose le problème en sous-problèmes et je décris les opérations qui permettent de résoudre chaque sous-problème.
-
-::::
 
 
 ## Exercices supplémentaires
@@ -113,9 +107,9 @@ Avez-vous trouvé la bonne solution ? Si non, modifier votre algorithme afin qu�
 
 ::::{admonition,attention} Exercice 6
 
-On souhaite déterminer l’élève dont la date d’anniversaire est la plus proche de la date d’aujourd’hui (dans le futur). Ecrire un algorithme qui permet de trouver cet élève (utiliser un langage familier). Penser à décomposer le problème en sous-problèmes. 
+On souhaite déterminer l’élève dont la date d’anniversaire est la plus proche de la date d’aujourd’hui dans le futur. Ecrire un algorithme qui permet de trouver cet élève (utiliser un langage familier). Penser à décomposer le problème en sous-problèmes. 
 
-Comparer votre solution à celle d’un autre élèves ? Avez-vous procédé de la même manière. Si non, pourquoi ?
+Comparer votre solution à celle d’un autre élèves : avez-vous procédé de la même manière ? Si non, expliquez vos raisonnements.
 
 Un ordinateur peut-il réaliser les opérations décrites par votre algorithme ?
 
@@ -144,7 +138,18 @@ X ← X – Y
 
 
 
-## Solutions des exercices 
+::::{admonition,note} Ai-je compris ?
+
+1. Je connais la différence entre un algorithme et un programme.
+
+2. Je sais formuler un algorithme : je décompose le problème en sous-problèmes et je décris les opérations qui permettent de résoudre chaque sous-problème.
+
+::::
+
+
+
+
+## Solutions des exercices de la théorie 
 
 ::::{admonition,attention} Solution de l'exercice 1
 
@@ -160,7 +165,7 @@ Les oeufs sont les données en entrée, les opérations correspondent aux instru
 
 ::::{admonition,attention} Solution de l'exercice 3
 
-Soit les variables X et Y qui contiennent les valeurs 1 et 2. Une solution naïve consisterait à écrire l’algorithme suivant :
+Soient les variables X et Y qui contiennent les valeurs 1 et 2. Une solution naïve consisterait à écrire l’algorithme suivant :
 
 ```
 X ← Y

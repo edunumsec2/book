@@ -21,7 +21,7 @@ Pour apprendre à cuisiner, on commence par suivre des recettes classiques. Ains
 
 <img src="media/Tris_base.png" width="40%">
 
-Figure 2. Des objets peuvent être triés selon une relation d’ordre, en lien avec une propriété. Sur la ligne du haut, les rectangles sont organisés selon leur couleur (de la plus sombre à la plus lumineuse), alors que sur la ligne du bas, ils sont triés selon leur taille (du plus petit au plus grand).
+Figure 3. Des objets peuvent être triés selon une relation d’ordre, en lien avec une propriété. Sur la ligne du haut, les rectangles sont organisés selon leur couleur (de la plus sombre à la plus lumineuse), alors que sur la ligne du bas, ils sont triés selon leur taille (du plus petit au plus grand).
 
 :::
 
@@ -35,7 +35,7 @@ Trier les rectangles de la ligne du haut de la Figure 3 en fonction de leur tail
 
 En lien avec les ingrédients d’un algorithme, déterminer les données en entrée et le résultat en sortie de l’algorithme.
 
-Quelles sont les opérations que avez-vous effectuées ? 
+Quelles sont les opérations que vous avez effectuées ? 
 
 ::::
 
@@ -45,7 +45,7 @@ Voici l’algorithme du **tri par insertion**. Parcourir la liste d’éléments
 
 ### Tri par sélection
 
-L’algorithme du **tri par sélection** commence par rechercher le plus petit élément de la liste et l’échange avec le premier élément de la liste. Il recherche ensuite le plus petit élément de la liste restante, en excluant le nouveau premier élément, et l’échange avec le deuxième élément de la liste. Et ainsi de suite, il recherche le plus petit élément de la liste restante, en excluant les éléments déjà triés, et échange cet élément avec le premier élément pas encore trié. Il continue de la sorte jusqu’à ce que toute la liste est triée.
+L’algorithme du **tri par sélection** commence par rechercher le plus petit élément de la liste et l’échange avec le premier élément de la liste. Il recherche ensuite le plus petit élément de la liste restante, en excluant le nouveau premier élément, et l’échange avec le deuxième élément de la liste. Et ainsi de suite : il recherche le plus petit élément de la liste restante, en excluant les éléments déjà triés, et échange cet élément avec le premier élément pas encore trié. Il continue de la sorte jusqu’à ce que toute la liste soit triée.
 
 ### Tri à bulles
 
@@ -54,15 +54,13 @@ L’algorithme du **tri à bulles** compare les éléments voisins. Commencer pa
 
 ::::{admonition,attention} Exercice 9
 
-[Résoudre cet exercice avant d’avancer dans le chapitre.] Appliquer les trois algorithmes ci-dessus pour trier les rectangles de la ligne du haut de la Figure 3 en fonction de leur taille (le résultat est illustré dans la ligne du bas), en dessinant l’ordre des éléments à chaque fois qu’il change. Vous avez besoin d’une grande feuille de papier ou vous pouvez représenter la taille d’un rectangle par un nombre. 
+[Résoudre cet exercice avant d’avancer dans le chapitre.] Appliquer un des trois algorithmes ci-dessus pour trier les rectangles de la ligne du haut de la Figure 3 en fonction de leur taille (le résultat est illustré dans la ligne du bas), en dessinant l’ordre des éléments à chaque fois qu’il change. Vous avez besoin d’une grande feuille de papier ou vous pouvez représenter la taille d’un rectangle par un nombre. 
 
 ::::
 
 ::::{admonition,hint} Le saviez-vous ? II
 
-Pour trier 1 million d’éléments, selon l’algorithme choisi, cela peut prendre de l’ordre de 20 millions à 1 billion d’opérations. 
-
-Si chaque opération prend 1 microseconde (10<sup>-6</sup> s) à s’exécuter, trier 1 million d’éléments pourrait prendre de 20 secondes (algorithme efficace) à 11 jours (pour un algorithme lent). 
+Pour trier 1 million d’éléments, selon l’algorithme choisi, cela peut prendre de l’ordre de 20 millions à 1 milliard d’opérations. Si chaque opération prend 1 microseconde (10<sup>-6</sup> s) à s’exécuter, trier 1 million d’éléments pourrait prendre de 20 secondes (algorithme efficace) à 11 jours (pour un algorithme lent). 
 
 ::::
 
@@ -70,7 +68,7 @@ Si chaque opération prend 1 microseconde (10<sup>-6</sup> s) à s’exécuter, 
 
 <img src="media/Tris_algorithmes.png" width="80%">
 
-Figure 3. Etapes intermédiaires lors de l’application des différents algorithmes de tri. La flèche rouge montre les mouvements des éléments suite à une opération. Si l’élément ne bouge pas, la flèche rouge est remplacée par un point rouge. **A gauche**, le tri par insertion. L’étoile dénote l’élément considéré à un moment donné. **Au milieu**, le tri par sélection. L’étoile désigne le plus petit élément de la liste non triée. **A droite**, le tri à bulles. Ici le point rouge signale les éléments triés.
+Figure 4. Etapes intermédiaires lors de l’application des différents algorithmes de tri. La flèche rouge montre les mouvements des éléments suite à une opération. Si l’élément ne bouge pas, la flèche rouge est remplacée par un point rouge. **A gauche**, le tri par insertion. L’étoile dénote l’élément considéré à un moment donné. **Au milieu**, le tri par sélection. L’étoile désigne le plus petit élément de la liste non triée. **A droite**, le tri à bulles. Ici le point rouge signale les éléments triés.
 
 :::
 
@@ -82,11 +80,11 @@ Vous passez trop de temps à chercher vos affaires ? Pensez à mieux les ranger.
 ::::
 
 
-La figure sur la page précédente détaille les étapes intermédiaires des trois algorithmes de tri vus précédemment. Dans le **tri par insertion** à gauche on parcourt la liste dans l’ordre, un élément après l’autre (dénoté par une étoile). A chaque étape, on cherche à ***insérer*** le rectangle considéré à la bonne place dans la liste précédemment triée. La flèche rouge montre la position à laquelle le rectangle sera inséré. Si l’élément est déjà bien trié, aucune action n’est requise dans ce cas et la flèche est remplacée par un point rouge. Notez que la liste qui précède le rectangle considéré (celui avec l’étoile) est toujours bien triée. 
+La figure sur la page précédente détaille les étapes intermédiaires des trois algorithmes de tri vus précédemment. Dans le **tri par insertion** à gauche, on parcourt la liste dans l’ordre, un élément après l’autre (dénoté par une étoile). A chaque étape, on cherche à ***insérer*** le rectangle considéré à la bonne place dans la liste précédemment triée. La flèche rouge montre la position à laquelle le rectangle sera inséré. Si l’élément est déjà bien trié, aucune action n’est requise dans ce cas et la flèche est remplacée par un point rouge. Notez que la liste qui précède le rectangle considéré (celui avec l’étoile) est toujours bien triée. 
 
 Dans le **tri par sélection** au milieu, on parcourt la liste pour ***sélectionner*** son plus petit élément, et on le met à la bonne position. La ligne noire au‑dessous des rectangles montre la liste parcourue pour rechercher le plus petit élément. Le plus petit élément de cette liste est désigné par l’étoile. Finalement, la flèche rouge montre les éléments échangés : le premier élément de la liste non triée et le plus petit élément. Ainsi, le plus petit élément sélectionné (avec étoile) se retrouve à la fin de la liste déjà triée (liste non soulignée). Si l’élément est déjà bien trié et qu’aucune action n’est requise, la flèche bidirectionnelle est remplacée par un point rouge.
 
-Dans **le tri à bulles** à droite, les lignes en dessous des rectangles montrent les éléments voisins qui sont comparés à chaque étape. Lorsque cette ligne est grise, les éléments sont déjà bien ordonnés et aucune action n’est requise. Lorsque la ligne est noire, les éléments ne sont pas dans le bon ordre est doivent être intervertis (flèche rouge). Après un passage complet de la liste, l’élément le plus grand se retrouve en dernière position, il remonte comme une ***bulle*** (voir la 4e ligne). Le point rouge ici indique les éléments triés. Dans ce cas, la liste est triée après trois parcours complets de la liste.
+Dans **le tri à bulles** à droite, les lignes en dessous des rectangles montrent les éléments voisins qui sont comparés à chaque étape. Lorsque cette ligne est grise, les éléments sont déjà bien ordonnés et aucune action n’est requise. Lorsque la ligne est noire, les éléments ne sont pas dans le bon ordre et doivent être intervertis (flèche rouge). Après un passage complet de la liste, l’élément le plus grand se retrouve en dernière position, il remonte comme une ***bulle*** (voir la 4e ligne). Le point rouge ici indique les éléments triés. Dans ce cas, la liste est triée après deux parcours complets de la liste.
 
 Notez que même si tous les algorithmes arrivent à la même solution finale, ils y arrivent de manière très différente et avec plus ou moins de calculs. 
 
@@ -102,13 +100,13 @@ Pour chaque algorithme, compter le nombre de comparaisons de la taille de deux �
 
 Imaginons que ce qui prend le plus de temps est la comparaison. Dans ce cas précis, lequel des trois algorithmes faudrait-il utiliser ? 
 
-Imaginons que ce qui prend le plus de temps est le movement d’un élément. Dans ce cas précis, lequel des trois algorithmes serait le plus rapide ? Quel serait l’algorithme le plus lent ?
+Imaginons que ce qui prend le plus de temps est le mouvement d’un élément. Dans ce cas précis, lequel des trois algorithmes serait le plus rapide ? Quel serait l’algorithme le plus lent ?
 
 ::::
 
 ::::{admonition,hint} Le saviez-vous ? III
 
-Il existe un algorithme, Bogosort, aussi nommé le tri lent ou encore le tri stupide. C’est un tri qui génère différentes permutations des éléments de la liste et s’arrête lorsque la configuration obtenue est par hasard triée. 
+Il existe un algorithme, Bogosort, aussi nommé le tri lent ou encore le tri stupide. C’est un tri qui génère différentes permutations des éléments de la liste et s’arrête lorsque la configuration obtenue est par hasard triée. Combien d’opérations prend cet algorithme en moyenne ?
 
 ::::
 
@@ -117,7 +115,7 @@ Il existe un algorithme, Bogosort, aussi nommé le tri lent ou encore le tri stu
 
 La qualité d’un algorithme dépend de l’aspect que l’on souhaite optimiser (ou minimiser). Cela peut être la vitesse d’exécution (mesurée par le nombre d’instructions élémentaires exécutées), la place occupée en mémoire, ou encore le coût de certaines opérations comme le déplacement d’un élément. L’algorithme utilisé devrait être choisi en fonction de la situation.
 
-La vitesse d’un algorithme dépend également des données en entrée. Selon la situation initiale des données en entrée (correspond à la ligne du haut de la Figure 2 et de la Figure 3), un algorithme « rapide » peut devenir « lent ». Il faut savoir que les algorithmes vus jusqu’ici sont des algorithmes lents, nous verrons un algorithme de tri rapide ultérieurement.
+La vitesse d’un algorithme dépend également des données en entrée. Selon la situation initiale des données en entrée (correspond à la ligne du haut de la Figure 4), un algorithme « rapide » peut devenir « lent ». Il faut savoir que les algorithmes vus jusqu’ici sont des algorithmes lents, nous verrons un algorithme de tri rapide ultérieurement.
 
 
 
@@ -125,23 +123,15 @@ La vitesse d’un algorithme dépend également des données en entrée. Selon l
 
 Imaginez que les quatre éléments d’une liste sont triés dans le sens inverse de ce que l’on souhaite (ils sont placés du plus grand au plus petit). Trier la liste selon les trois algorithmes de tri vus précédemment : le tri par insertion, le tri par sélection et le tri à bulles. 
 
-Quel algorithme est le plus rapide dans cette configuration précise (présente le moins d’étapes intermédiaires) ? Quel algorithme est le plus lent ?
+Dans cette configuration précise, quel algorithme est le plus rapide  (présente le moins d’étapes intermédiaires) ? Quel algorithme est le plus lent ?
 
 ::::
 
 
 
-::::{admonition,note} Ai-je compris ?
 
-1. Je sais qu’il existe plusieurs solutions à un problème, on peut résoudre un problème de manières très différentes.
 
-2. Je sais qu’il faut choisir le meilleur algorithme en fonction de critères objectifs : vitesse de l’algorithme, qualité de la solution,  espace utilisé en mémoire ou encore la consommation d’énergie.
-
-3. Je sais appliquer les trois algorithmes de tri vus au cours.
-
-::::
-
-## Exercices supplémentaires
+## Exercices
 
 ::::{admonition,attention} Exercice 12
 
@@ -169,13 +159,22 @@ Comparer vos algorithmes. Sont-ils différents ?
 
 ::::{admonition,attention} Exercice 15
 
-Analyser les oeuvres cubiques de Piet Mondrian. Trouver un algorithme qui permet de créer une oeuvre qui pourrait être attribuée à Mondrian.
+Analyser les oeuvres cubistes de Piet Mondrian. Trouver un algorithme qui permet de créer une oeuvre qui pourrait être attribuée à Mondrian.
+
+::::
+
+::::{admonition,note} Ai-je compris ?
+
+1. Je sais qu’il existe plusieurs manières différentes de résoudre un problème.
+
+2. Je sais qu’il faut choisir le meilleur algorithme en fonction de critères objectifs : vitesse de l’algorithme, qualité de la solution,  espace utilisé en mémoire ou encore consommation d’énergie.
+
+3. Je sais appliquer les trois algorithmes de tri vus au cours.
 
 ::::
 
 
-
-## Solutions des exercices
+## Solutions des exercices de la théorie
 
 ::::{admonition,attention} Solution de l’exercice 8
 
@@ -185,7 +184,7 @@ Les données en entrée sont les rectangles sur la ligne du haut : leur taille e
 
 ::::{admonition,attention} Solution de l’exercice 9
 
-La solution est donnée dans la légende de la Figure 3 et le texte qui suit.
+La solution est donnée dans la légende de la Figure 4 et le texte qui suit.
 
 
 ::::
@@ -202,13 +201,13 @@ Le décompte des opérations effectuées est comme suit :
 
 Tri par insertion : 9 comparaisons (flèches rouges) et 8 changements de position (flèches rouges).
 
-Tri par sélection : 15 comparaisons (lignes en dessous) et 6 chagementes de position (flèches rouges). 
+Tri par sélection : 15 comparaisons (lignes en dessous) et 6 changementes de position (flèches rouges). 
 
-Tri à bulles : 9 comparaisons (lignes en dessous) et 10 chagements de position (flèches rouges). 
+Tri à bulles : 9 comparaisons (lignes en dessous) et 10 changements de position (flèches rouges). 
 
 Si c’est le changement de position d’un élément qui coûte beaucoup de temps, l’algorithme le plus rapide serait le tri par sélection (3 éléments intervertis ou 6 éléments changés de place). Le tri à bulles serait le plus lent avec 10 changements de position. 
 
-Il faut savoir que ces résultats sont valides pour cette configuration en particulier, si on trie un autre tableau le ranking pourrait changer. Pour ces trois algorithmes, le choix du meilleur algorithme dépend donc de l’implémentation et de la situation initiale. Il existe des algorithmes de tri bien plus rapides que les trois algorithmes considérés ici.
+Il faut savoir que ces résultats sont valides pour cette configuration en particulier ; si on triait un autre tableau, la comparaison de la performance de chacun de ces algorithmes pourrait changer.  Pour ces trois algorithmes, le choix du meilleur algorithme dépend donc de l’implémentation et de la situation initiale. Notez finalement qu’il existe des algorithmes de tri bien plus rapides que les trois algorithmes considérés ici.
 
 
 ::::
