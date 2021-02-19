@@ -83,6 +83,8 @@ Chaque pixel d'une image couleur est donc représenté comme un mélange de ces 
 
 ## Les images vectorielles
 
+TODO @dasilvadds #12 #11
+
 Pour dessiner une image sur une feuille A4, on peut la diviser en grille et définir un niveau de gris pour chaque case, mais on peut aussi tout simplement de dessiner n'importe quelle figure, par exemple un trait d'un millimètre d'épaisseur allant d'un point A à un point B. De la même manière, en informatique, il est possible de représenter des images sous forme de grilles de pixels, comme nous l'avons vu, mais pas seulement. Il est en effet également possible de définir une image comme une collection d'objets graphiques (un segment, un carré, une ellipse...) sur un espace 2D, c'est ce que l'on appelle des images vectorielles. 
 
 ```{panels} 
@@ -99,6 +101,7 @@ Modifier le fichier afin de dessiner 4 carrés différents.
 ```
 
 ```{panels}
+:column: col-lg
 📱 Vecteurs VS Matrices
 ^^^
 Identifiez et listez les avantages et les inconvénients du format vectoriel en comparaison avec le système matriciel.
