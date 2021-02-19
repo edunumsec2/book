@@ -2,18 +2,6 @@
 #
 - file: content/demostests/edito/landing
 
-- part: Introduction
-  numbered: false
-  chapters:
-  - file: content/demostests/edito/presentation-ressources
-    sections: 
-      - file: content/demostests/edito/exempleutilisation
-      - file: content/demostests/edito/modificationsressources
-      - file: content/demostests/edito/participation-developpement
-      - file: content/demostests/edito/syntaxemyst
-
-    
-
 - part: Première année
   numbered: false
   chapters:
@@ -99,6 +87,16 @@
   - file: content/demostests/art/histoireart
   - file: content/demostests/edito/relectures
   - file: content/demostests/edito/repinfo1test
+
+- part: README
+  numbered: false
+  chapters:
+  - file: content/demostests/edito/presentation-ressources
+    sections: 
+      - file: content/demostests/edito/exempleutilisation
+      - file: content/demostests/edito/modificationsressources
+      - file: content/demostests/edito/participation-developpement
+      - file: content/demostests/edito/syntaxemyst
 
 # Ajout d'une partie pour les enjeux sociaux
 
