@@ -1,6 +1,6 @@
 # Numérisation
 
-La conversion d’une grandeur physique analogique continue  – température, vitesse du vent, position d'une girouette… – en données numériques digitales est appelée *numérisation*. Elle est réalisée en trois étapes: un *échantillonnage*, une *quantification* puis un *encodage*.
+La conversion d’une grandeur physique analogique continue  – température, vitesse du vent, position d'une girouette, etc., – en données numériques digitales est appelée *numérisation*. Elle est réalisée en trois étapes: un *échantillonnage*, une *quantification* puis un *encodage*.
 
 Le processus de numérisation engendre une quantité d'information (des bits) qui vise à représenter, aussi précisément que nécessaire, la grandeur physique sous une forme manipulable par les ordinateurs. 
 
@@ -9,7 +9,7 @@ Il s'agit donc d'un compromis entre la qualité de la représentation et les co�
 Ci-après, un signal continu sera numérisé, mettant en évidence le rôle et les effets des différents paramètres de la numérisation. Il s'agira pour l'exemple de l'intensité sonore telle qu'elle peut être capturée par un microphone.
 
 
-```{figure} media/numerisation-00.png
+```{figure} numerisation/numerisation-00.png
 ---
 height: 16em
 name: fig-repr-num-sig
@@ -21,7 +21,7 @@ Soit un signal continu à numériser, par exemple un son.
 
 ## Échantillonnage
 
-L’intervalle temporel auquel les mesures sont prises est la *fréquence d’échantillonnage* (sampling rate)exprimée en Hz. 
+L’intervalle temporel auquel les mesures sont prises est la *fréquence d’échantillonnage* (sampling rate) exprimée en Hz. 
 
 Les limites pratiques d’un échantillonnage sont fixées par la fréquence de Nyquist, qui, de façon très simplifiée, indique que l’information découlant d’un processus dont la fréquence est deux fois supérieure à celle de l’échantillonnage sera perdue lors de la numérisation. Il ne sera donc jamais possible d'avoir une représentation complète d'un processus complexe, tout au mieux une représentation suffisante. 
 
@@ -35,7 +35,7 @@ Ce choix résulte donc d'une délicate balance entre coûts (taille des données
 
 
 
-```{figure} media/numerisation-01.png
+```{figure} numerisation/numerisation-01.png
 ---
 height: 16em
 name: fig-repr-num-freq
@@ -56,7 +56,7 @@ La précision de l'encodage est donnée par la *profondeur de l'échantillonnage
 
 
 
-```{figure} media/numerisation-02.png
+```{figure} numerisation/numerisation-02.png
 ---
 height: 16em
 name: fig-repr-num-depth
@@ -89,7 +89,7 @@ La numérisation d’un signal dont l’amplitude serait par trop réduite débo
 
 
 
-```{figure} media/numerisation-04.png
+```{figure} numerisation/numerisation-04.png
 ---
 height: 16em
 name: fig-repr-num-dist
@@ -110,7 +110,7 @@ On notera finalement que la numérisation et la quantification travaillent ensem
 Pour l'intesité sonore par exemple, une fréquence d'échantillonnage insuffisante ne peut pas être compensée par une profondeur d'échantillonnage supérieure. La qualité du résultat n'est pas améliorée.
 
 
-```{figure} media/numerisation-03.png
+```{figure} numerisation/numerisation-03.png
 ---
 height: 16em
 name: fig-repr-num-bal

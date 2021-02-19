@@ -5,8 +5,9 @@
 - part: Première année
   numbered: false
   chapters:
-  - file: content/theme/representation-information/introduction/eleve
+  - file: content/theme/representation-information/01_accueil/eleve
     sections:
+      - file: content/theme/representation-information/introduction/eleve
       - file: content/theme/representation-information/representation-entiers/eleve
       - file: content/theme/representation-information/representation-caracteres/eleve
       - file: content/theme/representation-information/representation-images/eleve
