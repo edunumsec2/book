@@ -1,5 +1,5 @@
 (presentationressources)=
-# Présentation des ressources
+# 🌈 Présentation des ressources
 
 Les ressources pour l'enseignement de la branche *Informatique* au niveau secondaire II ont été produites par le `groupe de travail DGEP, EPFL, HEP, UNIL`, dans le cadre du projet **EduNum** du canton de Vaud. Leur objectif est la mise à disposition de contenus théoriques, de séries d'exercices, et d'idées d'activités pour les enseignantes et enseignants de ladite matière au Gymnase. 
 
@@ -246,4 +246,85 @@ Les ressources sont affichées sous la forme du site statique ici-présent par l
 <!-- # C'est parti ! 
 
 ````{image} images/presentation/code.gif
-```` -->
+```` 
+-->
+
+## Grammaire visuelle
+
+Il serait souhaitable de généraliser une grammaire de l'utilisation des différentes "objets" présents dans l'univers jupyter-book, MyST et Sphinx. Voilà, ci-dessous, le commencement de cette tâche. 
+
+### Lexique des types de panels
+
+Les {panels} seraient utilisés pour amener du contenu "intrinsèque au cours". C'est à dire qui s'intègre dans le flux de l'exposé. On pourrait trouver les *types de panels suivants*.
+
+1. 📱 Mini-activités
+2. 🔦 Illustrations (pour l'instant à l'écrit)
+3. 🔮 Anticipation
+4. 🔍 Approfondissement
+5. 🎮 Références jeux vidéos
+6. ☕ Pause-café (anecdote)
+7. 🍿	Références cinématographiques
+8. 📚 Références littéraires
+9. 🗄️ Histoire
+10. 🍪 Applications célèbres
+11. 💊 Enjeu social
+12. 🎧 Références musicales
+13. 💡 Le saviez-vous ? 
+14. 👻 Fun fact
+15. 🎓 Smart
+16. 🎨 Références artistiques
+17. 💰 Anecdote économique
+
+**Exemples** : 
+
+```{panels}
+:column: col-lg
+🍿 Welcome to the Matrix
+^^^
+*Matrix* est le film qui a popularisé l'idée tout ce que nous voyions dans le monde réel est en fait une suite de 0 et de 1 générés par des machines qui nous contrôlent. 
+```
+
+```{panels}
+:column: col-lg
+🍪 Tous les chemins mènent à Google
+^^^
+L'application Google Maps du géant californien est un bel exemple de l'utilisation d'algorithmes d'optimisation des parcours dans les graphes. 
+```
+
+## Utilisation des blocs {admonition}
+
+Les blocs {admonition} seraient utilisés pour indiquer des éléments extérieurs au cours. Comme, par exemple, des dépendances d'installation, de librairies, des problèmes techniques éventuellement rencontrés etc. 
+
+**Exemples** : 
+
+```{admonition} Attention aux dépendances
+:class: caution
+N'oubliez pas d'installer la librairie PyGame si vous souhaitez réaliser les exercices de ce chapitre.
+```
+
+```{admonition} Fiche complémentaire
+:class: note
+Ce document ne traite pas d'un sujet essentiel au plan d'études. C'est une piste de travail pour ceux qui souhaitent aller plus loin.
+```
+
+## Déclarer les images comme des figures
+
+Pour déclarer un document visuel, on peut utiliser la syntaxe {image} ou {figure}. Pour de multiples raisons, la syntaxe figure est à privilégier. La plus importante est que le fichier s'affiche automatiquement au centre du document, avec un espacement adéquoit avant et après le texte. Qui plus est, on peut lui donner une légende. 
+
+**Exemples** : 
+
+Image :
+
+```{image} images/presentation/code.gif
+```
+------
+------
+------
+Figure : 
+
+```{figure} images/presentation/code.gif
+---
+name: fig-codegif
+---
+Ceci est un gif inutile (mais une légende super utile)
+```
