@@ -20,7 +20,7 @@
     * [Téléchargement](https://www.python.org/downloads/)
       * Pour macOS, un excellent tuto si l'installation pose problème (mais il faut bien lire la deuxième partie): [Tuto](https://opensource.com/article/19/5/python-3-default-mac#what-to-do)<sup>1</sup>
 
- 4. Installer [Jupyter Book](https://jupyterbook.org)
+ 4. Installer [Jupyter Book](https://jupyterbook.org).  Ceci **met aussi à jour** Jupyter Book lorsqu'une nouvelle version est disponible. Si l'équipe de rédaction utilise de nouvelles fonctions de Jupyter Book, il faut faire retourner ceci pour l'obtenir.
     * Avec Python 3.9:
       ```bash
       pip3.9 install -U jupyter-book
@@ -38,6 +38,7 @@
       * `redhat.vscode-yaml` pour éditer des fichiers de configuration YAML
       * `executablebookproject.myst-highlight` pour utiliser la syntaxe Markdown étendue prise en charge par `jupyter-book`
       * `seunlanlege.action-buttons` pour avoir des boutons directement dans VS Code pour faire un build
+      * `ban.spellright` pour une correction orthographique de base dans VS Code
       
       Accepter l'installation de ces recommandations à l'ouverture du workspace:
       

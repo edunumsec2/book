@@ -1,0 +1,8 @@
+.youtube {
+  text-align: center;
+}
+
+.youtube iframe {
+  margin: auto;
+  display: inline-block;
+}

@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Informatique en tant que discipline obligatoire — Version élève — Canton de Vaud, 2020
+title: Informatique en tant que discipline obligatoire — Canton de Vaud, 2020
 author: Groupe de travail DGEP, EPFL, HEP, UNIL
 logo: logo.png
 exclude_patterns: ['**/maitre.md', 'content/skel/**']
@@ -22,18 +22,14 @@ latex:
     targetname: eleve.tex
 
 #######################################################################################
-# MyST parsing settings
-parse:
-  myst_extended_syntax: true
-
-#######################################################################################
 # HTML-specific settings
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: true
   use_repository_button: true
-  home_page_in_navbar         : false
+  home_page_in_navbar: false
+  extra_navbar: ""
   extra_footer: |
     <p>
     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
@@ -48,6 +44,28 @@ html:
 sphinx:
   config:
     html_show_copyright: false
+    language: fr
+    html_theme: sphinx_book_theme
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    html_favicon: favicon.ico
+    html_extra_path: ['../assets']
+    myst_enable_extensions:
+      - amsmath
+      - colon_fence
+      - deflist
+      - dollarmath
+      - html_admonition
+      - html_image
+      - linkify
+      - replacements
+      - smartquotes
+      - substitution
+  local_extensions:
+    questions: ../extensions/
+    blanks: ../extensions/
+    youtube: ../extensions/
+    switchtube: ../extensions/
+    codeplay: ../extensions/
 
 #######################################################################################
 # Interact link settings
@@ -69,5 +87,3 @@ launch_buttons:
 #binder:
   binderhub_url               : "https://mybinder.org"
   text                        : "Launch binder"
-
-

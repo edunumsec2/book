@@ -1,6 +1,6 @@
 # L'algorithme du plus court chemin de Dijkstra
 
-## Informations:
+## Informations
 
 Durée: 2 périodes consécutives
 
@@ -10,7 +10,7 @@ Chapitre: Algorithmique
 
 Objectifs: Découvrir l'algorithme de Dijkstra, à quoi il sert, et pourquoi il fonctionne.  
 
-Matériel: 
+Matériel: Une connection internet pour la mise en situation. 
 
 ## Introduction
 
@@ -142,10 +142,27 @@ L'enseignant formalise l'algorithme au tableau avec l'aide des élèves. Pour ai
 
 ## 6 Exemples et exercices d'application et de modélisation
 
-L'enseignant fait un exemple au tableau avec les élèves et leur propose ensuite d'essayer seuls ou par deux sur des graphes proposés dans le recueil d'exercices. 
+L'enseignant fait un exemple au tableau avec les élèves et leur propose ensuite d'essayer seuls ou par deux sur des graphes
+proposés dans le recueil d'exercices. 
+
+### Jeu: De VERSE à LITRE 
+Ce jeu consiste à trouver une manière de relier deux mots ayant le même nombre de lettres (par exemple VERSE et LITRE) avec une série
+de mots existants dont chaque mot ne diffère du précédent que d'une seule lettre. Dans notre exemple, une solution est donnée par:
+
+VERSE - VERRE - SERRE - SEVRE - LEVRE - LIVRE - LITRE
+
+On suppose disposer d'une liste de tous les mots de la langue française.
+Comment l'algorithme du plus cours chemin peut-il être utilisé pour trouver une solution à ce jeu? En particulier,
+quel graphe serait-il nécessaire de construire, à quoi correspondrait ses noeuds et ses arêtes et ses distances?
+
+Selon le niveau atteint en programmation, une petite application proposant ce jeu et les solutions correspondantes pourrait être
+programmée par exemple en utilisant une libraire de graphe telle que igraph ou networkX en python.
 
 ## 7 Pour aller plus loin
 
 1. Si on avait un graphe avec des distances négatives, serait-il possible d'utiliser l'algorithme de Dijkstra? 
 2. Supposons que les sommets sont des ordinateurs et les arètes des connections réseaux et que chaque sommet ne peut communiquer qu'avec ses voisins. Un ordinateur peut-il savoir comment envoyer par le plus court chemin un message à un autre ordinateur du réseau? (cf algorithme de routage)
 
+## 8 Lien avec enjeux sociétaux
+
+Retour sur openstreetmap avec fiche (ou activité) correspondante [TODO link]

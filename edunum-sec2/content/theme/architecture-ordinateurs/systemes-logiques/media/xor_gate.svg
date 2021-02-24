@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="177.002 464.74624 111.08506 53.052" width="111.08506" height="53.052">
+  <defs>
+    <font-face font-family="CMU Serif" font-size="16" panose-1="2 0 6 3 0 0 0 0 0 0" units-per-em="1000" underline-position="-125" underline-thickness="49.80469" slope="-877.5005" x-height="441.89453" cap-height="693.84766" ascent="930.1758" descent="-373.53516" font-style="italic" font-weight="400">
+      <font-face-src>
+        <font-face-name name="CMUSerif-Italic"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.18.1\n2021-01-14 13:58:05 +0000</metadata>
+  <g id="Canvas_1" stroke-opacity="1" stroke="none" stroke-dasharray="none" fill-opacity="1" fill="none">
+    <title>Canvas 1</title>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Group_301">
+        <g id="Line_298">
+          <path d="M 216 471.5 C 216 471.5 222.65474 480.2191 222.65474 491.5513 C 222.65474 502.8835 216 511.5 216 511.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_297">
+          <path d="M 216 471.5 C 216 471.5 229.6678 470.8339 241 476.5 C 252.3322 482.1661 256 491.5 256 491.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_296">
+          <path d="M 256 491.5 C 256 491.5 252.3322 500.8339 241 506.5 C 229.6678 512.1661 216 511.5 216 511.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_295">
+          <path d="M 206 481.5 L 211.1 481.49115 L 216.08314 481.4794" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_294">
+          <line x1="206" y1="501.5" x2="216.1473" y2="501.40023" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_293">
+          <line x1="256" y1="491.47586" x2="266" y2="491.47586" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_300">
+          <path d="M 211.1 471.5 C 211.1 471.5 217.75475 480.2191 217.75475 491.5513 C 217.75475 502.8835 211.1 511.5 211.1 511.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+      <g id="Graphic_304">
+        <text transform="translate(182.002 469.74624)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="15">X</tspan>
+        </text>
+      </g>
+      <g id="Graphic_303">
+        <text transform="translate(182.002 491.79824)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="15">Y</tspan>
+        </text>
+      </g>
+      <g id="Graphic_302">
+        <text transform="translate(273.28237 483.02224)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="15">Z</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

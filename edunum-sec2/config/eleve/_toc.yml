@@ -1,6 +1,18 @@
 # Table of content
 #
-- file: content/theme/eleve
+- file: content/demostests/edito/landing
+
+- part: Introduction
+  numbered: false
+  chapters:
+  - file: content/demostests/edito/presentation-ressources
+    sections: 
+      - file: content/demostests/edito/exempleutilisation
+      - file: content/demostests/edito/modificationsressources
+      - file: content/demostests/edito/participation-developpement
+      - file: content/demostests/edito/syntaxemyst
+
+    
 
 - part: Première année
   numbered: false
@@ -14,10 +26,12 @@
       - file: content/theme/representation-information/systeme-arithmetique-binaire/eleve
       - file: content/theme/representation-information/stockage-manipulation-donnees/eleve
       - file: content/theme/representation-information/redondance/eleve
-      - file: content/theme/representation-information/enjeu/transformation-numerique-economie-droit/eleve
       - file: content/theme/representation-information/exercices
         sections:
           - file: content/theme/representation-information/representation-caracteres/exercice/carte-perforee/exercice
+      - file: content/theme/representation-information/activites
+        sections:
+          - file: content/theme/representation-information/representation-entiers/activite/magie-binaire/magie_binaire
   - file: content/theme/introduction-algorithmique/eleve
     sections:
       - file: content/theme/introduction-algorithmique/decomposition-probleme/eleve
@@ -36,14 +50,11 @@
       - file: content/theme/programmation/7_fonc/fonc
       - file: content/theme/programmation/8_mod/mod
       - file: content/theme/programmation/9_app/app 
-      - file: content/theme/programmation/structures-donnees-controle/eleve
-      - file: content/theme/programmation/perspectives-citoyennes-politiques/eleve
   - file: content/theme/architecture-ordinateurs/eleve
     sections:
       - file: content/theme/architecture-ordinateurs/introduction
       - file: content/theme/architecture-ordinateurs/systemes-logiques/eleve
         sections: 
-          - file: content/theme/architecture-ordinateurs/systemes-logiques/conclusion
           - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SystemesLogiques
             sections:
               - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SL1_bases
@@ -65,22 +76,55 @@
   - file: content/theme/projets/eleve
   - file: content/theme/reseaux/eleve
 
-- part: À affecter
+- part: Enjeux sociaux
   numbered: false
   chapters:
-  - file: content/annexe/eleve
-  - file: content/playground/eleve
+  - file: content/enjeux/grandes-thematiques/grandes-thematiques
     sections:
-      - file: content/playground/notebook
-      - file: content/playground/types
-  - file: content/arts/L'app de rencontre
-  - file: content/arts/La poésie des limites
+    - file: content/enjeux/grandes-thematiques/economie-numerique/economie-numerique
+  - file: content/enjeux/fiches-complementaires/fiches-complementaires
+    sections:
+    - file: content/enjeux/fiches-complementaires/digital-labor/digital-labor
+    - file: content/enjeux/fiches-complementaires/wikipedia/wikipedia
+  - file: content/enjeux/bibliographie
+
+- part: Démos et divers
+  numbered: false
+  chapters:
+  - file: content/demostests/glossaire
+  - file: content/demostests/edito/liens
+  - file: content/demostests/edito/referencesart
+  - file: content/demostests/edito/testaccueilrepinfo
+  - file: content/demostests/edito/testintrorepinfo
+  - file: content/demostests/edito/extensions
+  - file: content/demostests/edito/bugs
+  - file: content/demostests/art/histoireart
+  - file: content/demostests/edito/relectures
+  - file: content/demostests/edito/repinfo1test
+
+# Ajout d'une partie pour les enjeux sociaux
+
+#- part: Enjeux sociaux
+#  numbered: false
+#  chapters:
+#  - file: 
+
+# - part: À affecter
+#  numbered: false
+#  chapters:
+#  - file: content/annexe/eleve
+#  - file: content/playground/eleve
+#    sections:
+#      - file: content/playground/notebook
+#      - file: content/playground/types
+#  - file: content/arts/L'app de rencontre
+#  - file: content/arts/La poésie des limites
 #  - file: content/arts/Python_turtle_extension
-  - file: content/arts/Qui suis-je_retouchesOlivier
-  - file: content/arts/contemporain_final
-  - file: content/enjeux/digital-labor/eleve
-  - file: content/fiche/references-notebook
-  - file: content/theme/algorithmique-programmation/activites/Cupidon est un programme
-  - file: content/theme/algorithmique-programmation/activites/La recette de l'univers
-  - file: content/theme/algorithmique-programmation/activites/Crucial Kruskal
-  - file: content/theme/introduction-algorithmique/algorithmes-classiques/activite/dijkstra/dijkstra
+#  - file: content/arts/Qui suis-je_retouchesOlivier
+#  - file: content/arts/contemporain_final
+#  - file: content/enjeux/digital-labor/eleve
+#  - file: content/fiche/references-notebook
+#  - file: content/theme/algorithmique-programmation/activites/Cupidon est un programme
+#  - file: content/theme/algorithmique-programmation/activites/La recette de l'univers
+#  - file: content/theme/algorithmique-programmation/activites/Crucial Kruskal
+#  - file: content/theme/introduction-algorithmique/algorithmes-classiques/activite/dijkstra/dijkstra

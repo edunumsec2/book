@@ -3,23 +3,33 @@
 - file: content/theme/maitre
 - file: content/theme/representation-information/maitre
   sections:
-    - file: content/theme/representation-information/systeme-arithmetique-binaire/maitre
     - file: content/theme/representation-information/representation-entiers/maitre
+    - file: content/theme/representation-information/systeme-arithmetique-binaire/maitre
     - file: content/theme/representation-information/stockage-manipulation-donnees/maitre
     - file: content/theme/representation-information/redondance/maitre
-    - file: content/theme/representation-information/transformation-numerique-economie-droit/maitre
+    - file: content/theme/representation-information/enjeu/transformation-numerique-economie-droit/maitre
+    - file: content/theme/representation-information/activites
+      sections:
+        - file: content/theme/representation-information/representation-entiers/activite/magie-binaire/magie_binaire
+        - file: content/theme/representation-information/representation-images/activite/bitmap
 - file: content/theme/introduction-algorithmique/maitre
   sections:
     - file: content/theme/introduction-algorithmique/decomposition-probleme/maitre
     - file: content/theme/introduction-algorithmique/algorithmes-classiques/maitre
+    - file: content/theme/introduction-algorithmique/algorithmes-classiques/activite/dijkstra/dijkstra
+    - file: content/theme/introduction-algorithmique/algorithmes-classiques/activite/algo-tri/algo-tri
+    - file: content/theme/introduction-algorithmique/algorithmes-classiques/activite/puissance4/puissance4
     - file: content/theme/introduction-algorithmique/formulation-solutions/maitre
     - file: content/theme/introduction-algorithmique/consequences-automatisation/maitre
-- file: content/theme/introduction-programmation/maitre
+- file: content/theme/programmation/maitre
   sections:
-    - file: content/theme/introduction-programmation/instructions-sequentielles/maitre
-    - file: content/theme/introduction-programmation/structures-donnees-controle/maitre
-    - file: content/theme/introduction-programmation/transcription-algorithmes/maitre
-    - file: content/theme/introduction-programmation/perspectives-citoyennes-politiques/maitre
+    - file: content/theme/programmation/instructions-sequentielles/maitre
+    - file: content/theme/programmation/structures-donnees-controle/maitre
+    - file: content/theme/programmation/transcription-algorithmes/maitre
+    - file: content/theme/programmation/perspectives-citoyennes-politiques/maitre
+    - file: content/theme/programmation/activites
+      sections:
+        - file: content/theme/programmation/activites/microbit/catch-the-fruit/catchFruit
 - file: content/theme/architecture-ordinateurs/maitre
   sections:
     - file: content/theme/architecture-ordinateurs/systemes-logiques/maitre

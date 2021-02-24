@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="401.7426 382.97586 360.04775 101.02414" width="360.04775" height="101.02414">
+  <defs>
+    <font-face font-family="CMU Serif" font-size="16" panose-1="2 0 6 3 0 0 0 0 0 0" units-per-em="1000" underline-position="-125" underline-thickness="49.80469" slope="-877.5005" x-height="441.89453" cap-height="693.84766" ascent="930.1758" descent="-373.53516" font-style="italic" font-weight="400">
+      <font-face-src>
+        <font-face-name name="CMUSerif-Italic"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.18.1\n2021-01-14 13:58:05 +0000</metadata>
+  <g id="Canvas_1" stroke-opacity="1" stroke="none" stroke-dasharray="none" fill-opacity="1" fill="none">
+    <title>Canvas 1</title>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Group_31">
+        <g id="Graphic_35">
+          <path d="M 671 393 L 691.00005 393 C 702.0457 393 711 401.95433 711 413 C 711 424.04567 702.0457 433 691.00005 433 L 671 433 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_34">
+          <line x1="661" y1="403" x2="671" y2="403" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_33">
+          <line x1="661" y1="423" x2="671" y2="423" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_32">
+          <line x1="712" y1="413" x2="721" y2="413" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+      <g id="Group_36">
+        <g id="Line_42">
+          <path d="M 507 384 C 507 384 513.65474 392.7191 513.65474 404.0513 C 513.65474 415.3835 507 424 507 424" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_41">
+          <path d="M 507 384 C 507 384 520.6678 383.3339 532 389 C 543.3322 394.6661 547 404 547 404" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_40">
+          <path d="M 547 404 C 547 404 543.3322 413.3339 532 419 C 520.6678 424.6661 507 424 507 424" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_39">
+          <line x1="497" y1="394" x2="512" y2="394" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_38">
+          <line x1="497" y1="414" x2="512" y2="414" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_37">
+          <line x1="547" y1="403.97586" x2="557" y2="403.97586" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+      <g id="Graphic_46">
+        <text transform="translate(406.7426 414.5)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="15">X</tspan>
+        </text>
+      </g>
+      <g id="Graphic_47">
+        <text transform="translate(406.7426 436.552)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="15">Y</tspan>
+        </text>
+      </g>
+      <g id="Graphic_48">
+        <text transform="translate(746.9857 402.49866)" fill="black">
+          <tspan font-family="CMU Serif" font-size="16" font-style="italic" font-weight="400" fill="black" x="0" y="15">Z</tspan>
+        </text>
+      </g>
+      <g id="Group_49">
+        <g id="Graphic_53">
+          <path d="M 590.5 443 L 620.5 463 L 590.5 483 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Graphic_52">
+          <circle cx="625.5" cy="463" r="4.99999490874106" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_51">
+          <line x1="580.5" y1="463" x2="589.5" y2="463" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_50">
+          <line x1="631.5" y1="463" x2="640.5" y2="463" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+      <g id="Group_56">
+        <g id="Graphic_60">
+          <path d="M 507 443 L 527.00005 443 C 538.0457 443 547 451.95433 547 463 C 547 474.04567 538.0457 483 527.00005 483 L 507 483 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_59">
+          <line x1="497" y1="453" x2="507" y2="453" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_58">
+          <line x1="497" y1="473" x2="507" y2="473" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Line_57">
+          <line x1="548" y1="463" x2="557" y2="463" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+      <g id="Line_61">
+        <path d="M 423.6254 425 L 439.1923 425 L 439.1923 394 L 497 394" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_62">
+        <path d="M 439.1923 400.9063 L 439.1923 411.9063 L 439.00534 452.9892 L 486 453 L 497 453" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_63">
+        <path d="M 423.6254 447.052 L 432.53236 447.052 C 432.53236 440.552 445.53236 440.552 445.53236 447.052 L 470.03906 447.052 L 470.03906 414 L 497 414" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_64">
+        <path d="M 471.0952 445.776 L 471.0952 446.4966 C 477.5952 446.49536 477.59764 459.49536 471.09764 459.4966 L 471.10966 472.91116 L 486 473 L 497 473" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_65">
+        <line x1="557" y1="463" x2="580.5" y2="463" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_66">
+        <path d="M 557 403.97586 L 568 403.97586 L 650 403 L 661 403" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_67">
+        <path d="M 721 412.64045 L 721 412.99866 L 741.9857 412.99866" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_68">
+        <path d="M 640.5 463 L 640.5 452 L 640.3079 422.5605 L 650 423 L 661 423" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>
