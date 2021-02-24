@@ -2,23 +2,12 @@
 #
 - file: content/demostests/edito/landing
 
-- part: Introduction
-  numbered: false
-  chapters:
-  - file: content/demostests/edito/presentation-ressources
-    sections: 
-      - file: content/demostests/edito/exempleutilisation
-      - file: content/demostests/edito/modificationsressources
-      - file: content/demostests/edito/participation-developpement
-      - file: content/demostests/edito/syntaxemyst
-
-    
-
 - part: Première année
   numbered: false
   chapters:
-  - file: content/theme/representation-information/eleve
+  - file: content/theme/representation-information/01_accueil/eleve
     sections:
+      - file: content/theme/representation-information/introduction/eleve
       - file: content/theme/representation-information/representation-entiers/eleve
       - file: content/theme/representation-information/representation-caracteres/eleve
       - file: content/theme/representation-information/representation-images/eleve
@@ -26,12 +15,12 @@
       - file: content/theme/representation-information/systeme-arithmetique-binaire/eleve
       - file: content/theme/representation-information/stockage-manipulation-donnees/eleve
       - file: content/theme/representation-information/redondance/eleve
-      - file: content/theme/representation-information/exercices
+      - file: content/theme/representation-information/03_exercices/exercices
         sections:
-          - file: content/theme/representation-information/representation-caracteres/exercice/carte-perforee/exercice
-      - file: content/theme/representation-information/activites
+          - file: content/theme/representation-information/03_exercices/representation-caracteres/carte-perforee/exercice
+      - file: content/theme/representation-information/00_activites/activites
         sections:
-          - file: content/theme/representation-information/representation-entiers/activite/magie-binaire/magie_binaire
+          - file: content/theme/representation-information/00_activites/representation-entiers/magie-binaire/magie_binaire
   - file: content/theme/introduction-algorithmique/eleve
     sections:
       - file: content/theme/introduction-algorithmique/decomposition-probleme/eleve
@@ -94,13 +83,21 @@
   - file: content/demostests/glossaire
   - file: content/demostests/edito/liens
   - file: content/demostests/edito/referencesart
-  - file: content/demostests/edito/testaccueilrepinfo
-  - file: content/demostests/edito/testintrorepinfo
   - file: content/demostests/edito/extensions
   - file: content/demostests/edito/bugs
   - file: content/demostests/art/histoireart
   - file: content/demostests/edito/relectures
   - file: content/demostests/edito/repinfo1test
+
+- part: README
+  numbered: false
+  chapters:
+  - file: content/demostests/edito/presentation-ressources
+    sections: 
+      - file: content/demostests/edito/exempleutilisation
+      - file: content/demostests/edito/modificationsressources
+      - file: content/demostests/edito/participation-developpement
+      - file: content/demostests/edito/syntaxemyst
 
 # Ajout d'une partie pour les enjeux sociaux
 

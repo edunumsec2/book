@@ -246,4 +246,5 @@ Les ressources sont affichées sous la forme du site statique ici-présent par l
 <!-- # C'est parti ! 
 
 ````{image} images/presentation/code.gif
-```` -->
+```` 
+-->

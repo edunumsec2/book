@@ -75,7 +75,18 @@ les opérations disponibles qui sont:
 
 Dans la situation initiale, il n'y a qu'un seul tas mélangé sur la table.
 
-Par groupe de deux ou trois, les élèves reçoivent un dispositif matériel et doivent tenter de trouver une procédure, un algorithme utilisant les opérations ci-dessus et permettant de trier le tas de carte. Ils doivent rédiger cet algorithme en ordonnçant les opérations ci-dessous.
+
+Par groupe de deux ou trois, les élèves reçoivent un dispositif matériel et doivent tenter de trouver une procédure, un algorithme utilisant les opérations ci-dessus et permettant de trier le tas de carte. Ils doivent rédiger cet algorithme en ordonnçant les opérations ci-dessus.
+
+En guise d'exemple, la classe résoud ensemble un problème plus simple qui consiste à insérer une nouvelle carte dans un tas de carte déjà ordonné. Dans la situation initiale, la carte se trouve dans le comparateur. 
+Une solution possible est la suivante:
+```
+répeter jusqu'à courant.vide():
+    courant.mettre()
+    droite.disposer(petite,au-dessous)
+droite.courant()
+```
+Cette on peut appler cette fonction courant.classer() et l'ajouter à notre répertoire de fonctions 
 
 S'ils pensent avoir trouvé un algorithme qui fonctionne, ils doivent réessayer en remélangeant les cartes pour voir si la procédure fonctionne encore. Si c'est le cas, ils doivent essayer encore une fois, mais cette fois un-e élève fait les manipulations avec les cartes faces cachées
 (cet élève ne peut pas voir les nombres sur les cartes et l'autre élève prend le rôle du comparateur et ne fait qu'indiquer quelle carte du comparateur est plus grande ou plus petite. De cette manière les élèves peuvent être certain-e-s que l'algorithme fonctionne sans jugement humain.
@@ -96,7 +107,28 @@ Les élèves rejoignent leur place et l'enseignant récapitule (au tableau) avec
 à ce moment également en donner une représentation plus standard, qui s'abstrait du dispositif matériel en s'appuyer sur le
 document de théorie. Cette partie peut être entrelacée avec la partie précédente.
 
-TODO: Exprimer les algorithmes classique dans le langage défini ci-dessus. 
+### Tri à bullles
+```
+répeter jusqu'à courant.vide():
+    courant.mettre(haut)
+    répéter jusqu'à courant.vide():
+        courant.mettre(haut)
+        droite.disposer(petit,au-dessous)
+    gauche.disposer(seul,au-dessus)
+    droite.courant()
+gauche.courant()
+```    
+### Tri par insertion
+```
+répéter jusqu'à courant.vide():
+    courant.mettre(haut)
+    gauche.classer()
+gauche.courant()
+```
+
+### Tri par sélection (pas vraiment)
+ Non adapté à ce dispositif...
+ 
 
 ## 5 Application (10-15 min)
 Exercices d'application au cours desquels les élèves doivent trier des listes selon divers algorithmes.

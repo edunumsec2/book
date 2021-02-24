@@ -135,45 +135,64 @@ En une quinzaine d’années, les fondements culturels d’Internet ont été é
 
 Aux premiers rangs des capitalisations boursières, ces sociétés sont couramment regroupées sous l’acronyme  «GAFAM» (pour Google, Amazon, Facebook, Apple, Microsoft). Fréquemment mobilisé dans les médias, ce terme est utile pour comprendre ce qui est commun à ces entreprises américaines, entre autres : une puissance financière sans précédent, la domination d’un secteur, le recours à l’optimisation fiscale, ou encore la quasi-absence de régulation. Cependant, ces caractéristiques ne sont pas toutes spécifiques au numérique et concernent également d’autres industries. L’acronyme «GAFAM» constitue donc un raccourci parfois un peu rapide, masquant la complexité des logiques qui guident ces entreprises. Afin de mieux comprendre les enjeux soulevés par ces sociétés, il est tout d’abord important d’identifier ce qu’elles sont et ce qu’elles font. 
 
-```{admonition} Apple
-:class: hint
+
+````{panels}
+:column: col-lg
+
+**APPLE**
+^^^
 **Création** : 1976 <br>
 **Source principale de revenu** : Vente de matériel informatique (smartphones, tablettes, ordinateurs, accessoires) <br>
 **Autres services** : Vente de musique en ligne, *streaming* vidéo, catalogue d’applications, système de micro-paiement (entre autres) <br>
 **Caractéristiques** : Longtemps considérée comme une marque secondaire à côté de Microsoft, Apple est parvenue à conquérir un large public grâce à une vision innovante de l’informatique et un positionnement haut de gamme. Le design et l’expérience proposées au travers de produits phares tels que l’iPod, l’iPhone, puis l’iPad ont fait de la marque une référence.
-```
+````
 
-```{admonition} Google (Alphabet)
-:class: hint
+````{panels}
+:column: col-lg
+
+**GOOGLE**
+^^^
 **Création** : 1998  <br>
 **Source principale de revenu** : Publicité ciblée <br>
 **Activités** : à l’origine, Google est un moteur de recherche qui fonctionne grâce à l’algorithme PageRank. Dès les années 2000, l’entreprise étend ses services (e-mail, cartographie en ligne, navigateur, stockage cloud, etc.). Depuis 2015, la société Alphabet regroupe toutes les activités de Google, dont YouTube Android, Waze, Waymo (voitures autonomes) ou encore Deepmind (recherche sur l’IA). <br>
 **Caractéristiques** :  Au départ exploitées dans le but d’améliorer la pertinence des recherches, les traces laissées par l’activité des utilisateurs sont rapidement devenues l’enjeu central du modèle économique de l’entreprise. En proposant aux annonceurs des audiences finement ciblées, Google s’est imposé sur le marché de la publicité en ligne. Sa vaste palette de services lui permet de capter une nombre considérables de données, qui viennent alimenter son système et toujours renforcer sa position dominante.
-```
+````
 
-```{admonition} Facebook
-:class: hint
+
+````{panels}
+:column: col-lg
+
+**FACEBOOK**
+^^^
 **Création** : 2005 <br>
 **Source principale de revenu** : Publicité ciblée <br>
 **Activités** : Réseau social, messagerie <br>
 **Caractéristiques** : En quelques années, la plateforme est parvenue à rassembler une base considérable d’utilisateurs (2,7 milliards à fin 2020). Son modèle économique repose sur la vente d’espaces publicitaires ciblés. Des individus ou entreprises peuvent ainsi diffuser des messages (publicités, articles, annonces d’événement, etc.) à une audience déterminée selon des critères sociaux, économiques ou comportementaux. Ces caractéristiques sont induites grâce à la captation et l’analyse des données issues des activités des utilisateurs. Avec Google, Facebook capte l’essentiel du marché de la publicité en ligne.
-```
+````
 
-```{admonition} Amazon
-:class: hint
+````{panels}
+:column: col-lg
+
+**AMAZON**
+^^^
 **Création** : 1994 <br>
 **Source principale de revenu** : Vente au détail <br>
 **Autres services et produits** : stockage cloud (Amazon Web Services), objets connectés (assistants vocaux, domotique), plateforme VOD. <br>
 **Caractéristiques** :  Amazon a débuté en 1994 sous la forme d’une librairie en ligne. Au fil du temps, son catalogue s’est enrichi et la firme propose aujourd’hui des produits de toutes sortes. Si ses revenus proviennent essentiellement du commerce en ligne, Amazon possède également la plus grande des infrastructures de stockage cloud au travers de son entité Amazon Web Services. En parallèle, l’entreprise développe d’autres services (plateforme VOD, musique, gaming) et produits, dont toute une gamme d’objets connectés qui connaissent des succès variables.
-```
+````
 
-```{admonition} Microsoft
-:class: hint
+````{panels}
+:column: col-lg
+
+**Microsoft**
+^^^
 **Création** : 1975 <br>
 **Source principale de revenu** : Systèmes d’exploitation, logiciels et services cloud <br>
 **Autres services et produits** : Moteur de recherche (Bing), jeux vidéos, ordinateurs et tablettes. <br>
 **Caractéristiques** :  L’entreprise est parvenue à dominer le marché en associant son système d’exploitation Windows à la vente d’ordinateurs PC. Cette stratégie commerciale de «vente liée» a conduit les produits Microsoft à devenir des «standards de fait». Aujourd’hui, Windows est installé dans presque 90% des ordinateurs à travers le monde et les outils de bureautique Office 
-```
+````
+
+<br>
 
 Ce bref aperçu témoigne de la diversité des modèles économiques des GAFAM. A noter que la vente de publicité ciblée, souvent associée à ces entreprises, concerne avant tout Google et Facebook. Par ailleurs, d’autres modèles existent, tels que les services qui prélèvent une commission sur les transactions (Uber, Airbnb, Booking.com) ou encore les plateformes qui fonctionnent sur un principe d’abonnement (Spotify, Netflix).
 <br>

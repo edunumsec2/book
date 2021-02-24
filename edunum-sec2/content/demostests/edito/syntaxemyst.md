@@ -2,11 +2,107 @@
 # Syntaxe MyST
 
 ````{admonition} Important
-:class: caution
-Pour voir la syntaxe MyST brut, ouvrir le document dans un éditeur markdown. 
+:class: warning
+- Pour voir la syntaxe MyST brut, ouvrir le document dans un éditeur markdown.
+- Un document exemple est disponible ici (**lien à ajouter** // Pour l'instant, on le trouve sous "README/chapitre exemple").
+- Ce document est coupé en deux : **Définition des standards** / **Éléments de syntaxe**
+- Un document **Extensions** précise la syntaxe utilisée dans les extensions du MyST qui ont été créées spécifiquement pour ces ressources (exercice, éditeur Python, etc.). 
 ````
 
-### Encart
+## Définition des standards
+
+La syntaxe MyST est vaste. Dans un souci de lisibilité, de cohérence visuelle, de simplicité, nous avons pris la décision de la restreindre. 
+
+### Lexique des types de {panels}
+
+Les {panels} seraient utilisés pour amener du contenu "intrinsèque au cours". C'est à dire qui s'intègre dans le flux de l'exposé. On pourrait trouver les *types de panels suivants*.
+
+1. 📱 Mini-activités
+2. 🔦 Illustrations (pour l'instant à l'écrit)
+3. 🔮 Anticipation
+4. 🔍 Approfondissement
+5. 🎮 Références jeux vidéos
+6. ☕ Pause-café (anecdote)
+7. 🍿	Références cinématographiques
+8. 📚 Références littéraires
+9. 🗄️ Histoire
+10. 🍪 Applications célèbres
+11. 💊 Enjeu social
+12. 🎧 Références musicales
+13. 💡 Le saviez-vous ? 
+14. 👻 Fun fact
+15. 🎓 Smart
+16. 🎨 Références artistiques
+17. 💰 Anecdote économique
+
+*Attention : la question de savoir si les {panels} doivent être différenciés à l'aide de couleurs ou d'emojis est encore discutée.*
+
+**Exemples** : 
+
+```{panels}
+:column: col-lg
+🍿 Welcome to the Matrix
+^^^
+*Matrix* est le film qui a popularisé l'idée tout ce que nous voyions dans le monde réel est en fait une suite de 0 et de 1 générés par des machines qui nous contrôlent. 
+```
+
+```{panels}
+:column: col-lg
+🍪 Tous les chemins mènent à Google
+^^^
+L'application Google Maps du géant californien est un bel exemple de l'utilisation d'algorithmes d'optimisation des parcours dans les graphes. 
+```
+
+```{panels}
+:column: col-lg
+:header: bg-success
+Tous les chemins mènent à Google
+^^^
+L'application Google Maps du géant californien est un bel exemple de l'utilisation d'algorithmes d'optimisation des parcours dans les graphes. 
+```
+
+### Utilisation des blocs {admonition}
+
+Les blocs {admonition} seraient utilisés pour indiquer des éléments extérieurs au cours. Comme, par exemple, des dépendances d'installation, de librairies, des problèmes techniques éventuellement rencontrés etc. 
+
+**Exemples** : 
+
+```{admonition} Attention aux dépendances
+:class: caution
+N'oubliez pas d'installer la librairie PyGame si vous souhaitez réaliser les exercices de ce chapitre.
+```
+
+```{admonition} Fiche complémentaire
+:class: note
+Ce document ne traite pas d'un sujet essentiel au plan d'études. C'est une piste de travail pour ceux qui souhaitent aller plus loin.
+```
+
+### Déclarer les images comme des figures
+
+Pour déclarer un document visuel, on peut utiliser la syntaxe {image} ou {figure}. Pour de multiples raisons, la syntaxe figure est à privilégier. La plus importante est que le fichier s'affiche automatiquement au centre du document, avec un espacement adéquoit avant et après le texte. Qui plus est, on peut lui donner une légende. 
+
+**Exemples** : 
+
+Image :
+
+```{image} images/presentation/code.gif
+```
+------
+------
+------
+Figure : 
+
+```{figure} images/presentation/code.gif
+---
+name: fig-codegif
+---
+Ceci est un gif inutile (mais une légende super utile)
+```
+-----
+
+## Éléments de syntaxe
+
+### Déclaration d'un encart {admonition}
 
 ```{admonition} Mon titre
 :class: tip
@@ -59,26 +155,6 @@ Voilà le contenu du dropdown. Attention ! Je ne sais pas pourquoi mais le dropd
 Mon contenu
 ````
 
-### Contenus en marge
-
-````{sidebar} Titre du contenu en marge
-Contenu en marge
-````
-#### Optimisations des contenus en marge
-
-* on peut ajouter des encarts à l'intérieur des contenus en marge, selon la syntaxe décrite ci-dessus. Exemple : 
-
-````{sidebar} Titre du contenu en marge
-```{admonition} titre de l'encart en marge
-:class: caution
-n'oubliez pas de respectez les contraintes de mise en forme des encarts
-```
-Contenu en marge
-````
-* on peut utiliser les fonctions dropdown décrites ci-dessus également en marge.
-
-* on peut insérer des images dans les contenus en marge de la même façon que dans les encarts.
-
 ### Références et labels
 
 * pour créer une référence à un autre chapitre, sous-chapitre, image, figure, etc., je dois d'abord labeliser la cible de la référence de la façon suivante : 
@@ -102,14 +178,16 @@ Note : les "/" qui précèdent le signe "=" et la déclaration du niveau de titr
 
 * on insère une image de la façon suivante : 
 
-```{image} images/landing/img1.jpg
-:alt: titreimage1
-:width: 200px
-:align: center
+```{figure} images/landing/img1.jpg
+---
+alt: titreimage1
+width: 200px
+---
+Voilà une image d'exemple avec une légende d'exemple
 ```
 #### Optimisations de l'image
 
-* les déclarations communes sont : `alt, width, height, align`. Auxquelles on peut ajouter `name`si on veut labeliser l'image. `align` prend trois positions : left, center, right. 
+* les déclarations communes sont : `alt, width, height, align`. Auxquelles on peut ajouter `name` si on veut labeliser l'image. `align` prend trois positions : left, center, right. 
 
 * le chemin relatif de l'image commence dans le dossier où est stocké le fichier actif. 
 
@@ -139,11 +217,7 @@ print('voilà un print')
 print('voilà un deuxième print')
 ```
 
-## Couleurs
-
-Pour de la <span style="color:red">couleur</span>, il est possible d'insérer de l'HTML directement dans le texte. 
-
-## Panels
+### Panels
 
 ````{panels}
 Contenu du panel en haut à gauche
@@ -161,9 +235,6 @@ Contenu du panel en haut à droite
 {badge}`light,badge-light`
 {badge}`dark,badge-dark`
 
-
-
-
 ---
 
 ```{dropdown} Panel en bas à gauche
@@ -176,9 +247,9 @@ Hidden content
 :text: Panel clickable
 :classes: stretched-link
 ```
-
 ````
-## Couleurs
+
+### Couleurs
 
 Pour de la <span style="color:red">couleur</span>, il est possible d'insérer de l'HTML directement dans le texte.
 
@@ -186,34 +257,7 @@ Pour de la <span style="color:red">couleur</span>, il est possible d'insérer de
 Pour de la <span style="color:red">couleur</span>, il est possible d'insérer de l'HTML directement dans le texte.
 ```
 
-## Questions 
-
-```{question}
-Combien y a t'il de bits dans un octet ?
-* {f}`2`
-* {f}`4`
-* {v}`8`
-* {f}`64`
-```
-
-```{question} Question avancée
-Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turing ?
-* {v}`Barbara Liskov`
-* {v}`Niklaus Wirth`
-* {f}`Alan Turing`
-* {v}`Tim Berners-Lee`
-```
-
-```{question} Question avancée
-:multi:
-Parmis les personnes suivantes, laquelle ou lesquelles sont à l'origine du Web ?
-* {f}`Barbara Liskov`
-* {f}`Niklaus Wirth`
-* {f}`Alan Turing`
-* {v}`Tim Berners-Lee`
-```
-
-## Emojis
+### Emojis
 
 Pour insérer des emojis, copiez simplement celui ou ceux qui vous intéressent dans et collez-le dans votre fichier source. 
 
@@ -280,9 +324,7 @@ Flag Emojis
 🇻🇳 🇼🇫 🇪🇭 🇾🇪 🇿🇲 🇿🇼 🏴󠁧󠁢󠁥󠁮󠁧󠁿 🏴󠁧󠁢󠁳󠁣󠁴󠁿 🏴󠁧󠁢󠁷󠁬󠁳󠁿 🏳️‍🌈 🏴‍☠️
 
 
-
-
-## GOOD LUCK 
+### GOOD LUCK 
 
 ![Baby Yoda](images/syntaxemyst/babyyoda.gif)
 

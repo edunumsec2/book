@@ -3,15 +3,18 @@
 ## Information
 
 Durée: 4 périodes au total: 2 période consécutives pour lancer le projet, évenutellement à finir à la maison. 
-Puis 2 périodes pour la strétgie (algorithme minimax) et pour présenter le résultat. 
+Puis 2 périodes pour la stratégie (algorithme minimax) et pour présenter le résultat. 
 
 Mode: Une partie conceptualisation en débranché, suivie d'une réalisation sur ordinateur
 
-Objectif: Découvrir comment on conceptualise et implémente un jeu de stratégie en utilisant la stratégie minimax. Découvrir l'utilité des API. 
+Objectif: Découvrir comment on conceptualise et implémente un jeu de stratégie en utilisant la stratégie minimax.
+En bonus: Découvrir l'utilité des API. 
 
 Matériel: Eventuellement un puissance 4.
 
 Prérequis: Les élèves ont déjà une certaine maitrise de la programmation, en particulier ils sont à l'aise avec l'utilisation des fonctions et les types composés (dictionnaires, listes, tuples, etc.)
+
+
 ## Déroulement
 
 Cette activité comporte les phases suivante:
@@ -102,7 +105,7 @@ Certaines équipes peuvent venir présenter leur jeu et parler de leur stratégi
 ## Présentation théorique (10 minu)
 L'enseignant-e récapitule pour tout le monde la stratégie du minimax, en indiquant qu'elle peut aussi être utilsée avec une fonction d'évaluation à plus de trois états comme ici (perdu, gagné, non-décidé). 
 
-Eventuellement, l'enseignant peut aussi présenté la stratégie du alpha-beta pruning. 
+Eventuellement, l'enseignant peut aussi présenter la stratégie du alpha-beta pruning. 
 
 ## Exercice (10 min)
 
