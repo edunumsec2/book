@@ -2,8 +2,8 @@
 ````
 # Hello world
 
-Bienvenue dans les <span style="color:red">ressources</span> pour <span style="color:green">l'informatique</span> au gymnase. 
+Bienvenue dans les ressources pour l'informatique au gymnase. 
 
-Elles ont été conçues pour vous accompagner dans votre <span style="color:blue">enseignement</span>. Une version <span style="color:orange">élève</span> existe également, disponible ici. 
+Elles ont été conçues pour vous accompagner dans votre enseignement. Une version élève existe également, disponible ici. 
 
 {ref}`Accéder à la présentation des ressources <presentationressources>`.
