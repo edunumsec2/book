@@ -39,7 +39,7 @@
       - file: content/theme/programmation/7_fonc/fonc
       - file: content/theme/programmation/8_mod/mod
       - file: content/theme/programmation/9_app/app 
-  - file: content/theme/architecture-ordinateurs/eleve
+  - file: content/theme/architecture-ordinateurs/accueil
     sections:
       - file: content/theme/architecture-ordinateurs/introduction
       - file: content/theme/architecture-ordinateurs/systemes-logiques/eleve
@@ -88,7 +88,7 @@
   - file: content/demostests/art/histoireart
   - file: content/demostests/edito/relectures
   - file: content/demostests/edito/repinfo1test
-
+  
 - part: README
   numbered: false
   chapters:

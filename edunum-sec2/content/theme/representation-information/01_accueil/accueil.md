@@ -11,11 +11,11 @@
 Représentation de l'information
 ==================================
 
-Le monde numérique est extrêmement vaste. Au moyen d’applications dédiées, il est possible d’y travailler sur une certaine représentation du réel. Des textes, des images, des sons ou des données financières peuvent tout aussi bien y être manipulées.
+Le monde numérique est extrêmement vaste. Au moyen d’applications dédiées, il est possible d’y travailler sur une certaine représentation du réel. Des textes, des images, des sons, des vidéos ou même des données financières peuvent y être manipulées avec la même facilité.
 
-Pourtant, il faut avoir conscience qu’aussi “réelles” que ces représentations peuvent paraître, elles n’en sont pas moins des représentations.
+Pourtant, il faut avoir conscience qu’aussi “réelles” que ces représentations puissent paraître, elles n’en sont pas moins des représentations. Derrière les écrans, les machines ne traitent que des suites de 0 et de 1, appelés nombres binaires. 
 
-Dans cette section, nous allons comprendre comment les ordinateurs parviennent à représenter le monde et les sacrifices qui doivent être faits pour simplifier le réel jusqu’à ce que sa représentation puisse être manipulée automatiquement au moyen de calculs élémentaires.
+Dans ce chapitre, vous allez comprendre comment les ordinateurs parviennent à représenter le monde et les sacrifices qui doivent être faits pour simplifier le réel jusqu’à ce que sa représentation puisse être manipulée automatiquement au moyen de calculs élémentaires.
 
 ## Contenus du chapitre
 
