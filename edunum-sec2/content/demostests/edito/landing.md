@@ -1,4 +1,4 @@
-````{image} images/landing.png
+````{image} images/chatbot.svg
 ```` 
 
 # Hello world
