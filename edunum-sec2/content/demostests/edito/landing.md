@@ -1,5 +1,6 @@
-````{image} images/landing/img2.jpg
-````
+````{image} images/landing.png
+```` 
+
 # Hello world
 
 Bienvenue dans les ressources pour l'informatique au gymnase. 

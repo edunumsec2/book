@@ -1,9 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Informatique en tant que discipline obligatoire — Canton de Vaud, 2020
+title: Informatique discipline obligatoire
 author: Groupe de travail DGEP, EPFL, HEP, UNIL
-logo: logo.png
+logo: logo1.svg
 exclude_patterns: ['**/maitre.md', 'content/skel/**']
 
 #######################################################################################
