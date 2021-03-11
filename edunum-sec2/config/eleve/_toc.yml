@@ -88,7 +88,8 @@
   - file: content/demostests/art/histoireart
   - file: content/demostests/edito/relectures
   - file: content/demostests/edito/repinfo1test
-  
+  - file: content/theme/architecture-ordinateurs/introductiontest
+
 - part: README
   numbered: false
   chapters:

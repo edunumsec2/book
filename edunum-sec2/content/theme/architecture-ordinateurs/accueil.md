@@ -7,7 +7,7 @@ L'iPhone X, pour un poids de 147 grammes, exécute environ 600 milliards d'opér
 
 Plus proche de nous, en 1991, 1 GO de mémoire non volatile coutait environ 45'000 dollars. Aujourd'hui, un iPhone possède 256 GO d'espace libre, ce qui aurait coûté à l'époque 11.5 millions de dollars[^1]. 
 
-Mais que par quoi ont été remplacés les 17'468 tubes électroniques de l'ENIAC ? Et comment se fait-il qu'un objet qui tient dans la poche puisse contenir 256 fois plus d'espace disque qu'un ordinateur des années 1990 ? 
+Mais par quoi ont été remplacés les 17'468 tubes électroniques de l'ENIAC ? Et comment se fait-il qu'un objet qui tient dans la poche puisse contenir 256 fois plus d'espace disque qu'un ordinateur des années 1990 ? 
 
 Dans ce chapitre, vous découvrirez comment sont construits les ordinateurs, comment sont organisés leurs différents composants pour leur permettre d'effectuer des milliards de calculs à la seconde alors qu'ils ne comprennent que la distinction entre 0 et 1, allumé ou éteint.
 
