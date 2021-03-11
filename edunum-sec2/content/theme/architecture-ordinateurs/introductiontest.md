@@ -6,8 +6,8 @@ Comme vous avez pu le voir dans le chapitre lié à la **représentation de l'in
 
 ```{figure} media/abstractionlight.png
 ---
-:height: 400px
-:width: 250px
+height: 400px
+width: 250px
 ---
 Les différents niveaux d'abstraction de l'informatique, en partant des électrons, jusqu'aux "programmes", que l'on appelle aussi aujourd'hui "applications". 
 ```
