@@ -87,10 +87,10 @@ Un transistor seul ne peut représenter qu'un bit d'information. Oui ou non, ouv
 
 ```{figure} media/andgate.svg
 ---
-height: 150px
+height: 100px
 width: 200px
 ---
-Ceci est une porte logique "ET", qui exprime la conjonction. C'est à dire que les deux transistors qui la composent doivent être "ouvert" pour que le courant passe. 
+Ceci est une porte logique "ET", qui exprime la conjonction. C'est à dire que les deux transistors qui la composent (A & B) doivent être "ouvert" pour que le courant passe. 
 ```
 En connectant entre eux les transistors de diverses manières, on est capable de faire que le courant se déplace dans un circuit de façon maîtrisée. Ce qui nous permet, à terme, de construire des programmes qui génèrent certaines "sorties" quand on leur donne certaines "entrées". 
 
