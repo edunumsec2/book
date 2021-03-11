@@ -48,11 +48,32 @@ On aurait pu choisir un code possédant plus que deux signaux différents. Si on
 
 ## Le transistor
 
+Le transistor est la brique de base de construction des systèmes informatiques. Développé dans les années 1940 dans les [laboratoires Bell](https://fr.wikipedia.org/wiki/Laboratoires_Bell), aux Etats-Unis, ce composant électronique est à l'origine d'une révolution dans la taille, la fiabilité, et les performances générales des ordinateurs de l'époque. 
 
+```{figure} media/transistor.jpeg
+---
+height: 350px
+width: 500px
+---
+Différents modèles de transistor. On les reconnaît à leurs trois "pattes" aussi appelées : émetteur, base, collecteur. 
+```
 
+Le transistor fonctionne comme un robinet d'eau qui peut être ouvert ou fermé. Si on l'ouvre le courant passe, si on le ferme il ne passe pas. 
 
+```{figure} media/transistorgif.gif
+---
+height: 350px
+width: 500px
+---
+En appliquant un courant sur la **base** du transistor, on permet au courant de circuler entre le collecteur et l'émetteur (appelés ainsi parce que l'émetteur *émet* des électrons, et le collecteur les *collecte*). Envoyer du courant dans la **base** c'est donc "ouvrir" le transistor. 
+```
 
-
+```{panels}
+:column: col-lg
+Des transistors presque invisibles
+^^^
+Donner une idée de la taille des transistors utilisés dans les microprocesseurs actuels n'a même plus d'intérêt tellement ils sont petits. À titre d'exemple, disons simplement que le microprocesseur Apple A9 de la figure 35 en possède six milliards. 
+```
 
 
 ```{panels}
