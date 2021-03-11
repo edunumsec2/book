@@ -81,5 +81,26 @@ Des transistors presque invisibles
 Donner une idée de la taille des transistors utilisés dans les microprocesseurs actuels n'a même plus d'intérêt tellement ils sont petits. À titre d'exemple, disons simplement que le microprocesseur Apple A9 de la figure 35 en possède six milliards. 
 ```
 
+## Des transistors aux portes logiques
+
+Un transistor seul ne peut représenter qu'un bit d'information. Oui ou non, ouvert ou fermé, 1 ou 0. Mais si l'on rassemble plusieurs transistors, on peut construire des systèmes logiques qui nous permettent d'exprimer des relations logiques plus avancées, comme la conjonction, la disjonction, la négation. C'est ce qu'on appelle des **portes logiques**. 
+
+```{figure} media/andgate.svg
+---
+height: 150px
+width: 200px
+---
+Ceci est une porte logique "ET", qui exprime la conjonction. C'est à dire que les deux transistors qui la composent doivent être "ouvert" pour que le courant passe. 
+```
+En connectant entre eux les transistors de diverses manières, on est capable de faire que le courant se déplace dans un circuit de façon maîtrisée. Ce qui nous permet, à terme, de construire des programmes qui génèrent certaines "sorties" quand on leur donne certaines "entrées". 
+
+```{figure} media/andgatetransistor.png
+---
+height: 300px
+width: 200px
+---
+Voilà le schéma de construction d'une porte logique "ET", à partir de deux transistors. Si les deux transistors sont "ouverts", le courant passe. 
+```
+
 
 
