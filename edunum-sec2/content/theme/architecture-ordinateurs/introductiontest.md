@@ -51,7 +51,7 @@ On aurait pu choisir un code possédant plus que deux signaux différents. Si on
 
 ## Le transistor
 
-Le transistor est la brique de base de construction des systèmes informatiques. Développé dans les années 1940 dans les [laboratoires Bell](https://fr.wikipedia.org/wiki/Laboratoires_Bell), aux Etats-Unis, ce composant électronique est à l'origine d'une révolution dans la taille, la fiabilité, et les performances générales des ordinateurs de l'époque. 
+Le **transistor** est la brique de base de construction des systèmes informatiques. Développé dans les années 1940 dans les [laboratoires Bell](https://fr.wikipedia.org/wiki/Laboratoires_Bell), aux Etats-Unis, ce composant électronique est à l'origine d'une révolution dans la taille, la fiabilité, et les performances générales des ordinateurs de l'époque. 
 
 ```{figure} media/transistor.jpeg
 ---
@@ -61,7 +61,7 @@ width: 500px
 Différents modèles de transistor. On les reconnaît à leurs trois "pattes" aussi appelées : émetteur, base, collecteur. 
 ```
 
-Le transistor fonctionne comme un robinet d'eau qui peut être ouvert ou fermé. Si on l'ouvre le courant passe, si on le ferme il ne passe pas. 
+Le **transistor** fonctionne comme un robinet d'eau qui peut être ouvert ou fermé. Si on l'ouvre le courant passe, si on le ferme il ne passe pas. 
 
 ```{figure} media/transistorgif.gif
 ---
@@ -71,7 +71,7 @@ width: 500px
 En appliquant un courant sur la **base** du transistor, on permet au courant de circuler entre le collecteur et l'émetteur (appelés ainsi parce que l'émetteur *émet* des électrons, et le collecteur les *collecte*). Envoyer du courant dans la **base** c'est donc "ouvrir" le transistor. 
 ```
 
-De par sa capacité à être ouvert ou fermé, le transistor fonctionne comme une brique fondamentale dans la construction de systèmes informatiques permettant de transmettre, stocker et manipuler des suites de 0 et de 1. 
+De par sa capacité à être ouvert ou fermé, le **transistor** fonctionne comme une brique fondamentale dans la construction de systèmes informatiques permettant de transmettre, stocker et manipuler des suites de 0 et de 1. 
 
 
 ```{panels}
@@ -83,7 +83,7 @@ Donner une idée de la taille des transistors utilisés dans les microprocesseur
 
 ## Des transistors aux portes logiques
 
-Un transistor seul ne peut représenter qu'un bit d'information. Oui ou non, ouvert ou fermé, 1 ou 0. Mais si l'on rassemble plusieurs transistors, on peut construire des systèmes logiques qui nous permettent d'exprimer des relations logiques plus avancées, comme la conjonction, la disjonction, la négation. C'est ce qu'on appelle des **portes logiques**. 
+Un **transistor** seul ne peut représenter qu'un bit d'information. Oui ou non, ouvert ou fermé, 1 ou 0. Mais si l'on rassemble plusieurs **transistors**, on peut construire des systèmes logiques qui nous permettent d'exprimer des relations logiques plus avancées, comme la conjonction, la disjonction, la négation. C'est ce qu'on appelle des **portes logiques**. 
 
 ```{figure} media/andgate.svg
 ---
@@ -92,7 +92,7 @@ width: 200px
 ---
 Ceci est une porte logique "ET", qui exprime la conjonction. C'est à dire que les deux transistors qui la composent (A & B) doivent être "ouvert" pour que le courant passe. 
 ```
-En connectant entre eux les transistors de diverses manières, on est capable de faire que le courant se déplace dans un circuit de façon maîtrisée. Ce qui nous permet, à terme, de construire des programmes qui génèrent certaines "sorties" quand on leur donne certaines "entrées". 
+En connectant entre eux les **transistors** de diverses manières, on est capable de faire que le courant se déplace dans un circuit de façon maîtrisée. Ce qui nous permet, à terme, de construire des programmes qui génèrent certaines "sorties" quand on leur donne certaines "entrées". 
 
 ```{figure} media/andgatetransistor.png
 ---
@@ -101,6 +101,25 @@ width: 200px
 ---
 Voilà le schéma de construction d'une porte logique "ET", à partir de deux transistors. Si les deux transistors sont "ouverts", le courant passe. 
 ```
+
+## Des portes logiques aux tables de vérité
+
+Les **portes logiques** sont des circuits extrêmement basiques faits de **transistors** qui permettent d'exprimer des relations logiques tels que la conjonction, la disjonction ou la négation. 
+
+Pour simplifier la représentation de ces relations logiques, on les exprime sous la forme de table de vérité. 
+
+
+<!-- | Table de vérité ET|
+--------------------
+| A   | B   |  résultat |
+| --  | -   | - |
+|  0  |  0  | 0 |
+|  1  |  0  | 0 |
+| 0   |  1  | 0 |
+| 1   |  1  | 1 |  -->
+
+
+
 
 
 
