@@ -4,9 +4,12 @@ Dans ce chapitre, nous aborderons la question de l'**architecture des ordinateur
 
 Comme vous avez pu le voir dans le chapitre lié à la **représentation de l'information** tout ce qui apparaît sur votre écran n'est qu'une suite de 0 et de 1. Pour comprendre comment ces **nombres binaires** sont traités par l'ordinateur, il faut avoir en tête que les ordinateurs sont construits en plusieurs **couches** successives, comme un mille feuille, dont chacune possède ses propres règles. 
 
-```{image} media/abstractionlight.png
+```{figure} media/abstractionlight.png
+---
 :height: 400px
 :width: 250px
+---
+Les différents niveaux d'abstraction de l'informatique, en partant des électrons, jusqu'aux "programmes", que l'on appelle aussi aujourd'hui "applications". 
 ```
 Dans ce chapitre nous nous concentrerons sur les couches de **bas niveau**, et tenterons de remonter progressivement jusqu'aux **couches logicielles**. 
 
