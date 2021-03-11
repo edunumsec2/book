@@ -71,6 +71,9 @@ width: 500px
 En appliquant un courant sur la **base** du transistor, on permet au courant de circuler entre le collecteur et l'émetteur (appelés ainsi parce que l'émetteur *émet* des électrons, et le collecteur les *collecte*). Envoyer du courant dans la **base** c'est donc "ouvrir" le transistor. 
 ```
 
+De par sa capacité à être ouvert ou fermé, le transistor fonctionne comme une brique fondamentale dans la construction de systèmes informatiques permettant de transmettre, stocker et manipuler des suites de 0 et de 1. 
+
+
 ```{panels}
 :column: col-lg
 Des transistors presque invisibles
@@ -79,8 +82,4 @@ Donner une idée de la taille des transistors utilisés dans les microprocesseur
 ```
 
 
-```{panels}
-:column: col-lg
-Des électrons aux lignes de code
-^^^
-Au niveau le plus **bas**, les ordinateurs sont constitués
+
