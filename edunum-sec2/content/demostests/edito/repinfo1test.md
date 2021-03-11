@@ -134,7 +134,7 @@ for (char, frequency) in freq:
 ```
 
 
-## Le cryptage
+## Jeux
 
 
 
@@ -231,3 +231,5 @@ def cherche():
 ===
 cherche()
 ```
+
+## Le cryptage
