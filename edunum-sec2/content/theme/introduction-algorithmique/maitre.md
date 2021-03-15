@@ -1,8 +1,8 @@
-# Introduction
+# Algorithmique
 Les activités décrites ci-dessous sont proposées dans le but d'inciter les élèves, en partant d'éléments aussi concrets que possible, à se poser les questions propres aux concepts informatiques traités et à y réfléchir en mobilisant leurs propres ressources. Idéalement, la théorie devrait apporter des réponses à des questions qu'iels se sont déjà posées, voire confirmer et formaliser des réponses qu'iels ont déjà obtenues de manière autonomes (ou presque). 
 
 
-# Planification
+## Planification
 
 Il existe plusieurs manières possibles de planifier les activités
 de ce chapitre. Une possibilité serait la suivante en faisant
@@ -25,4 +25,4 @@ périodes de pratique en demi-classe (groupes A et B) toutes les deux semaines e
 Si le chapitre programmation n'a pas encore été abordée, il est possible de faire les activités Dijkstra et PageRank à la
 place de l'activité minimax et d'inclure la transcription d'algorithmes dans le chapitre de programmation.
 
-# Activités
+## Activités
