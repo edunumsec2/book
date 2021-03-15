@@ -106,17 +106,31 @@ Voilà le schéma de construction d'une porte logique "ET", à partir de deux tr
 
 Les **portes logiques** sont des circuits extrêmement basiques faits de **transistors** qui permettent d'exprimer des relations logiques tels que la conjonction, la disjonction ou la négation. 
 
-Pour simplifier la représentation de ces relations logiques, on les exprime sous la forme de table de vérité. 
+```{panels}
+:column: col-lg
+Rien de plus logique que la logique
+^^^
+Même si vous ne les appelez pas ainsi, vous utilisez tous les jours des relations logiques de conjonction, de disjonction et de négation. La conjonction c'est "l'intersection logique" de deux propositions. Si vous dites "je vais à la piscine si *il fait beau* ET *mes amies m'accompagnent*", vous utilisez la conjonction. Au contraire, si vous dites "je vais à la piscine si *il fait beau* OU *mes amis m'accompagnent*", vous utilisez la disjonction, qui est comme une sorte de "somme logique" de deux propositions. La négation est encore plus évidente, puisque la proposition "je ne vais pas à la piscine" est simplement la négation, ou l'inverse, de la proposition "je vais à la piscine". 
+```
+
+Pour simplifier la représentation de ces relations logiques, on les exprime sous la forme de table de vérité (cf : diagrammes déjà utilisés dans le sous-chapitre concerné). 
+
+```{panels}
+:column: col-lg
+Une application pour s'exercer
+^^^
+https://booleangame.com/
+```
+
+## La construction de la mémoire
+
+Les transistors, les portes logiques et leur représentation en tables de vérités, permettent de manipuler des 0 et des 1 au niveau physique. Tant qu'un courant électrique se déplace dans nos circuits, nous sommes capables de le transformer, de le laisser passer ou de l'arrêter, dans le but d'exprimer des portes "ouvertes" ou des portes "fermées" et donc des nombres binaires.  
+
+Mais comment faire pour stocker cette information ?
+
+Pour comprendre comment la mémoire des ordinateurs fonctionne, il faut commencer par la classer en deux grandes catégories. La mémoire **volatile**, et la mémoire **permanente**. La mémoire **volatile** s'efface quand la machine et éteinte. La mémoire **permanente**, elle, persiste. Si votre smartphone s'éteint alors que vous êtes en train de retoucher une photo, ces retouches disparaissent. Elles étaient stockées sur la mémoire **volatile**. Par contre, au moment où vous avez sauvegardé ces retouches, elles s'inscrivent dans la mémoire **permanente**. 
 
 
-<!-- | Table de vérité ET|
---------------------
-| A   | B   |  résultat |
-| --  | -   | - |
-|  0  |  0  | 0 |
-|  1  |  0  | 0 |
-| 0   |  1  | 0 |
-| 1   |  1  | 1 |  -->
 
 
 
