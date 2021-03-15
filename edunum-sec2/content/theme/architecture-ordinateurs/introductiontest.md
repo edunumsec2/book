@@ -113,7 +113,7 @@ Rien de plus logique que la logique
 Même si vous ne les appelez pas ainsi, vous utilisez tous les jours des relations logiques de conjonction, de disjonction et de négation. La conjonction c'est "l'intersection logique" de deux propositions. Si vous dites "je vais à la piscine si *il fait beau* ET *mes amies m'accompagnent*", vous utilisez la conjonction. Au contraire, si vous dites "je vais à la piscine si *il fait beau* OU *mes amis m'accompagnent*", vous utilisez la disjonction, qui est comme une sorte de "somme logique" de deux propositions. La négation est encore plus évidente, puisque la proposition "je ne vais pas à la piscine" est simplement la négation, ou l'inverse, de la proposition "je vais à la piscine". 
 ```
 
-Pour simplifier la représentation de ces relations logiques, on les exprime sous la forme de table de vérité (cf : diagrammes déjà utilisés dans le sous-chapitre concerné). 
+Pour simplifier la représentation de ces relations logiques, on les exprime sous la forme de tables de vérité (cf : diagrammes déjà utilisés dans le sous-chapitre concerné). 
 
 ```{panels}
 :column: col-lg
