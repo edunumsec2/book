@@ -68,7 +68,7 @@ Le **transistor** fonctionne comme un robinet d'eau qui peut être ouvert ou fer
 height: 350px
 width: 500px
 ---
-En appliquant un courant sur la **base** du transistor, on permet au courant de circuler entre le collecteur et l'émetteur (appelés ainsi parce que l'émetteur *émet* des électrons, et le collecteur les *collecte*). Envoyer du courant dans la **base** c'est donc "ouvrir" le transistor. 
+En appliquant un courant qui va de la **base** à **l'émetteur** (en rose pâle), on permet au courant de circuler entre le collecteur et l'émetteur (appelés ainsi parce que l'émetteur *émet* des électrons, et le collecteur les *collecte*). Envoyer du courant dans la **base** c'est donc "ouvrir" le transistor. 
 ```
 
 De par sa capacité à être ouvert ou fermé, le **transistor** fonctionne comme une brique fondamentale dans la construction de systèmes informatiques permettant de transmettre, stocker et manipuler des suites de 0 et de 1. 
