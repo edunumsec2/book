@@ -128,7 +128,7 @@ Les transistors, les portes logiques et leur représentation en tables de vérit
 
 Mais comment faire pour stocker cette information ?
 
-Pour comprendre comment la mémoire des ordinateurs fonctionne, il faut commencer par la classer en deux grandes catégories. La mémoire **volatile**, et la mémoire **permanente**. La mémoire **volatile** s'efface quand la machine et éteinte. La mémoire **permanente**, elle, persiste. Si votre smartphone s'éteint alors que vous êtes en train de retoucher une photo, ces retouches disparaissent. Elles étaient stockées sur la mémoire **volatile**. Par contre, au moment où vous avez sauvegardé ces retouches, elles s'inscrivent dans la mémoire **permanente**. 
+Pour comprendre comment la mémoire des ordinateurs fonctionne, il faut commencer par la classer en deux grandes catégories. La mémoire **volatile**, et la mémoire **non volatile**. La mémoire **volatile** s'efface quand la machine et éteinte. La mémoire **non volatile**, elle, persiste. Si votre smartphone s'éteint alors que vous êtes en train de retoucher une photo, ces retouches disparaissent. Elles étaient stockées sur la mémoire **volatile**. Par contre, au moment où vous avez sauvegardé ces retouches, elles s'inscrivent dans la mémoire **non volatile**. 
 
 
 
