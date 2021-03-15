@@ -82,6 +82,8 @@ repository:
 # Launch button settings
 launch_buttons:
   notebook_interface: "classic" # or "jupyterlab"
+# Possibilité de connecter un kernel du projet Noto de l'EPFL
+## jupyterhub_url: "https://noto.epfl.ch/user/ch-epfl-identifiantdelutilisateur"
 
 #######################################################################################
 #binder:
