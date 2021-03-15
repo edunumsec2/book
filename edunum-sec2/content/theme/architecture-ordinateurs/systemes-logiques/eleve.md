@@ -53,6 +53,22 @@ On peut dessiner des diagrammes avec des portes logiques. (Ce ne sont pas des di
 
 ![](media/and_gate.svg)
 
+Sur ce schéma logique, double-cliquez sur les deux entrées $X$ et $Y$ pour changer leurs valeurs et observez le comportement de la sortie $Z$. Est-ce que cela correspond à la table de vérité ci-dessus?
+
+```{logic}
+:height: 90
+:mode: tryout
+
+{
+  "in": [
+    {"name": "X", "id": 3, "pos": [45, 25], "val": 0},
+    {"name": "Y", "id": 4, "pos": [45, 65], "val": 0}
+  ],
+  "out": [{"name": "Z", "id": 5, "pos": [285, 45]}],
+  "gates": [{"type": "AND", "id": 0, "pos": [125, 20]}],
+  "wires": [[3, 0], [4, 1], [2, 5]]
+}
+```
 
 ### Porte OU
 
@@ -69,9 +85,22 @@ Voici sa table de vérité:
 
 On notera que le **OU** logique est un peu différent du «ou» que l'on utilise en général à l'oral: on voit à la dernière ligne de la table de vérité que la sortie $Z$ vaut également $1$ si les deux entrées $X$ et $Y$ valent $1$. À l'oral, le «ou» est en général interprété comme _exclusif_: si l'on propose à un enfant un bonbon _ou_ une glace, on exclut la possibilité qu'il choisisse les deux. Ce n'est pas le cas pour le **OU** logique.
 
-La porte **OU** est représentée ainsi dans les diagrammes logiques:
+Essayez la porte **OU**:
 
-![](media/or_gate.svg)
+```{logic}
+:height: 90
+:mode: tryout
+
+{
+  "in": [
+    {"name": "X", "id": 3, "pos": [45, 25], "val": 0},
+    {"name": "Y", "id": 4, "pos": [45, 65], "val": 0}
+  ],
+  "out": [{"name": "Z", "id": 5, "pos": [285, 45]}],
+  "gates": [{"type": "OR", "id": 0, "pos": [125, 20]}],
+  "wires": [[3, 0], [4, 1], [2, 5]]
+}
+```
 
 
 ### Porte NON
@@ -85,20 +114,52 @@ Voici sa table de vérité:
 | 0   | 1   |
 | 1   | 0   |
 
-L'inverseur est représentée ainsi:
+Essayez l'inverseur:
 
-![](media/not_gate.svg)
+```{logic}
+:height: 75
+:mode: tryout
 
+{
+  "in": [
+    {"name": "X", "id": 0, "pos": [45, 40], "val": 0}
+  ],
+  "out": [{"name": "Z", "id": 3, "pos": [285, 40]}],
+  "gates": [{"type": "NOT", "id": 1, "pos": [112, 15]}],
+  "wires": [[0, 1], [2, 3]]
+}
+```
 
 ### Combinaisons de portes
 
-Les portes peuvent être connectées les unes aux autres. Voici par exemple un diagramme logique réalisant en sortie $Z$ la fonction appelée **XOR**, qui est un «ou exclusif» et dont la sortie $Z$ vaut 1 lorsque soit $A$, soit $B$ vaut $1$, mais pas les deux en même temps:
+Les portes peuvent être connectées les unes aux autres. Voici par exemple un diagramme logique réalisant en sortie $Z$ la fonction appelée **OU-X**, qui est un «ou exclusif» et dont la sortie $Z$ vaut 1 lorsque soit $A$, soit $B$ vaut $1$, mais pas les deux en même temps:
 
-![](media/xor_circuit.svg)
+<!-- ![](media/xor_circuit.svg) -->
+
+```{logic}
+:height: 140
+:mode: static
+
+{
+  "in": [
+    {"name": "X", "id": 0, "pos": [45, 32], "val": 0},
+    {"name": "Y", "id": 1, "pos": [45, 95], "val": 0}
+  ],
+  "out": [{"name": "Z", "id": 2, "pos": [491, 41]}],
+  "gates": [
+    {"type": "OR", "id": 3, "pos": [172, 7]},
+    {"type": "AND", "id": 6, "pos": [341, 16]},
+    {"type": "NOT", "id": 9, "pos": [235, 84]},
+    {"type": "AND", "id": 11, "pos": [125, 84]}
+  ],
+  "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
+}
+```
+
 
 Ce circuit contient une porte **OU**, deux portes **ET** et un inverseur, tous interconnectés.
 
-Discutions d'abord comment interpréter ce circuit pour vérifier s'il effectue bien un **XOR**.
+Discutions d'abord comment interpréter ce circuit avec papier et crayon pour vérifier s'il effectue bien un **OU-X**.
 
 
 #### Analyse d'un circuit
@@ -113,22 +174,84 @@ Pour analyser un circuit logique comme celui présenté ci-dessus, on cherchera 
 | 1   | 1   | $???$ |
 
 
- Pour chaque ligne, on va simuler le circuit et annoter les segments avec «1» ou «0» pour les différents cas de figure, en faisant à la main les opérations effectuées par les portes logiques. Prenons $X=Y=0$:
+ Pour chaque ligne, on va simuler le circuit et annoter les segments avec «1» ou «0» pour les différents cas de figure, en faisant à la main les opérations effectuées par les portes logiques. Prenons $X=Y=0$: c'est le cas représenté par l'état du circuit ci-dessus. Rappelons qu'un segment noir véhicule un 0, alors qu'un segment coloré véhicule un 1.
 
-![](media/xor_circuit_00.svg)
+<!-- ![](media/xor_circuit_00.svg) -->
 
 Le résultat intermédiaire des deux portes de gauche sera 0. L'inverseur transforme en 1 la sortie de la porte **ET**, mais la porte finale, qui est aussi une porte **ET**, n'obtient qu'un seul 1 en entrée et donc livre une sortie de 0.
 
 Le cas est différent si l'une des deux entrées vaut 1. Voici les deux diagrammes annotées, une fois pour $X=1, Y=0$ et une fois pour $Y=1, X=0$:
 
-![](media/xor_circuit_01.svg)
-![](media/xor_circuit_10.svg)
+<!-- ![](media/xor_circuit_01.svg) -->
+<!-- ![](media/xor_circuit_10.svg) -->
 
-Ici, la porte **OU** livrera un 1, dont a besoin la porte **ET** finale de droite pour donner une sortie de 1.
+```{logic}
+:height: 140
+:mode: static
+
+{
+  "in": [
+    {"name": "X", "id": 0, "pos": [45, 32], "val": 1},
+    {"name": "Y", "id": 1, "pos": [45, 95], "val": 0}
+  ],
+  "out": [{"name": "Z", "id": 2, "pos": [491, 41]}],
+  "gates": [
+    {"type": "OR", "id": 3, "pos": [172, 7]},
+    {"type": "AND", "id": 6, "pos": [341, 16]},
+    {"type": "NOT", "id": 9, "pos": [235, 84]},
+    {"type": "AND", "id": 11, "pos": [125, 84]}
+  ],
+  "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
+}
+```
+
+
+```{logic}
+:height: 140
+:mode: static
+
+{
+  "in": [
+    {"name": "X", "id": 0, "pos": [45, 32], "val": 0},
+    {"name": "Y", "id": 1, "pos": [45, 95], "val": 1}
+  ],
+  "out": [{"name": "Z", "id": 2, "pos": [491, 41]}],
+  "gates": [
+    {"type": "OR", "id": 3, "pos": [172, 7]},
+    {"type": "AND", "id": 6, "pos": [341, 16]},
+    {"type": "NOT", "id": 9, "pos": [235, 84]},
+    {"type": "AND", "id": 11, "pos": [125, 84]}
+  ],
+  "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
+}
+```
+
+
+Ici, dans les deux cas, la porte **OU** livrera un 1, dont a besoin la porte **ET** finale de droite pour donner une sortie de 1.
 
 Mais dans le cas $X = Y = 1$, représenté ici, la situation est différente:
 
-![](media/xor_circuit_11.svg)
+<!-- ![](media/xor_circuit_11.svg) -->
+```{logic}
+:height: 140
+:mode: static
+
+{
+  "in": [
+    {"name": "X", "id": 0, "pos": [45, 32], "val": 1},
+    {"name": "Y", "id": 1, "pos": [45, 95], "val": 1}
+  ],
+  "out": [{"name": "Z", "id": 2, "pos": [491, 41]}],
+  "gates": [
+    {"type": "OR", "id": 3, "pos": [172, 7]},
+    {"type": "AND", "id": 6, "pos": [341, 16]},
+    {"type": "NOT", "id": 9, "pos": [235, 84]},
+    {"type": "AND", "id": 11, "pos": [125, 84]}
+  ],
+  "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
+}
+```
+
 
 La porte **ET** du bas livre un 1, qui est inversé en 0 avant d'atteindre la porte finale, qui ne peut dès lors elle-même que livrer un 0 comme sortie.
 
@@ -141,14 +264,29 @@ La table de vérité complétée de ce circuit est ainsi:
 | 0   | 1   | 1   |
 | 1   | 1   | 0   |
 
-Cette fonction **XOR** de «ou exclusif» est souvent utilisée, au point qu'on la représente en fait dans les diagrammes simplement par simplement ceci comme simplification du diagramme ci-dessus:
+Cette fonction **OU-X** de «ou exclusif» est souvent utilisée, au point qu'on la représente en fait dans les diagrammes simplement par simplement ceci comme simplification du diagramme ci-dessus:
 
-![](media/xor_gate.svg)
+<!-- ![](media/xor_gate.svg) -->
+```{logic}
+:height: 90
+:mode: tryout
+
+{
+  "in": [
+    {"name": "X", "id": 3, "pos": [45, 25], "val": 0},
+    {"name": "Y", "id": 4, "pos": [45, 65], "val": 0}
+  ],
+  "out": [{"name": "Z", "id": 5, "pos": [285, 45]}],
+  "gates": [{"type": "XOR", "id": 0, "pos": [125, 20]}],
+  "wires": [[3, 0], [4, 1], [2, 5]]
+}
+```
+
 
 
 #### Création d'un circuit
 
-Discutons maintenant de comment on a pu créerait de zéro ce diagramme réalisant un **XOR** à avec les portes à notre disposition à partir de sa table de vérité. Plusieurs approches sont possibles, et nous verrons que, suivant l'approche, on aurait très bien pu créer un circuit logique différent réalisant la même fonction.
+Discutons maintenant de comment on a pu créerait de zéro ce diagramme réalisant un **OU-X** à avec les portes à notre disposition à partir de sa table de vérité. Plusieurs approches sont possibles, et nous verrons que, suivant l'approche, on aurait très bien pu créer un circuit logique différent réalisant la même fonction.
 
 
 ##### Approche ad hoc
@@ -192,11 +330,11 @@ Ce que cette approche systématique nous apprend, c'est que nous pouvons toujour
 
 Nous faisons aussi les constats suivants:
  * Plusieurs circuits logiques différents peuvent réaliser la même fonction de sortie
- * L'approche systématique décrite ici ne livre pas forcément le circuit le plus compact: on a obtenu un circuit avec 5 portes pour réaliser un **XOR** alors que l'approche ad hoc nous a fait construire un circuit à 4 portes
+ * L'approche systématique décrite ici ne livre pas forcément le circuit le plus compact: on a obtenu un circuit avec 5 portes pour réaliser un **OU-X** alors que l'approche ad hoc nous a fait construire un circuit à 4 portes
 
 ##### Exercice
 
-En annotant le schéma logique avec les quatre cas de figure possible pour les entrées $X$ et $Y$, faire l'analyse du circuit **XOR** construit avec l'approche systématique et montrer que la table de vérité ainsi reconstituée est la même que celle de la porte **XOR**.
+En annotant le schéma logique avec les quatre cas de figure possible pour les entrées $X$ et $Y$, faire l'analyse du circuit **OU-X** construit avec l'approche systématique et montrer que la table de vérité ainsi reconstituée est la même que celle de la porte **OU-X**.
 
 
 ## Exercice: conception d'un circuit
@@ -233,7 +371,7 @@ Ces portes logiques vont nous permettre de finalement réaliser notre petit addi
 | 0   | 1   | 1   |
 | 1   | 1   | 0   |
 
-En comparant cette table de vérité avec celles des portes logiques, on se rend compte que $S_0$ n'est autre qu'un **XOR** de $A$ et $B$.
+En comparant cette table de vérité avec celles des portes logiques, on se rend compte que $S_0$ n'est autre qu'un **OU-X** de $A$ et $B$.
 
 La table de vérité pour $S_1$ est:
 
