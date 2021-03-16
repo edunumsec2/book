@@ -85,7 +85,6 @@
   - file: content/demostests/edito/referencesart
   - file: content/demostests/edito/extensions
   - file: content/demostests/edito/Redaction-Bonnes-pratiques
-  - file: content/demostests/edito/bugs
   - file: content/demostests/art/histoireart
   - file: content/demostests/edito/relectures
   - file: content/demostests/edito/repinfo1test
