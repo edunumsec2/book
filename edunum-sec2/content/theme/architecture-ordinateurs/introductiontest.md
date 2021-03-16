@@ -130,8 +130,31 @@ Mais comment faire pour stocker cette information ?
 
 Pour comprendre comment la mémoire des ordinateurs fonctionne, il faut commencer par la classer en deux grandes catégories. La mémoire **volatile**, et la mémoire **non volatile**. La mémoire **volatile** s'efface quand la machine et éteinte. La mémoire **non volatile**, elle, persiste. Si votre smartphone s'éteint alors que vous êtes en train de retoucher une photo, ces retouches disparaissent. Elles étaient stockées sur la mémoire **volatile**. Par contre, au moment où vous avez sauvegardé ces retouches, elles s'inscrivent dans la mémoire **non volatile**. 
 
+## Les verrous informatiques
 
+Certains circuits sont construits pour "bloquer" une information, ce qui nous permet de la garder en mémoire, tant que le circuit est alimenté par l'électricité. On appelle ces circuits des **verrous**. Le plus élémentaire est le verrou S-R, pour "set", "reset", en anglais. 
 
+```{logic}
+:height: 150
+:mode: tryout
+
+{
+  "in": [
+    {"name": "R", "id": 8, "pos": [45, 15], "val": 0},
+    {"name": "S", "id": 9, "pos": [45, 105], "val": 0}
+  ],
+  "out": [{"name": "Q", "id": 10, "pos": [400, 15]},{"name": "Q'", "id": 11, "pos": [400, 105]}],
+  "gates": [{"type": "NOR", "id": 0, "pos": [125, 0]},{"type": "NOR", "id": 4, "pos": [125, 85]}],
+  "wires": [[8, 0], [9, 5], [4, 2] ,[2, 10], [1, 6], [6, 11]]
+}
+```
+Dans l'exemple ci-dessus, à partir du moment où on a "ouvert" la porte S (donc qu'on a "set", c'est à dire "établi" l'état initial), la sortie Q est 1. Si on avait une ampoule à cet endroit, elle serait allumée. Maintenant, même si on "ferme" la porte S, Q reste bloqué sur 1. On a donc créé une forme de mémoire. La seule façon "d'éteindre" la sortie Q est d'ouvrir R (donc de "reset", c'est à dire réinitialiser le système). 
+
+Voici une vidéo qui illustre ce principe de verrou S-R. *Note : oui, elle est en anglais, mais j'ai contacté l'auteur pour ajouter des sous-titres français, et on pourrait même la regarder sans le son pour illustrer (elliot)*.
+
+```{youtube} KM0DdEaY5sY
+:start: 4:58
+```
 
 
 
