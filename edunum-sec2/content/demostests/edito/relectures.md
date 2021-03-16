@@ -1,7 +1,7 @@
 # Marche à suivre relectures
 
 ````{admonition} Important
-Ceci est une marche à suivre pour faire des corrections directement dans VScode en passant par la fonctionnalité *issue* de GitHub
+Ceci est une marche à suivre pour suggérer des modifications des ressources en créant des *issues* Github, directement dans VScode.
 ````
 (sidentifier)=
 ### S'identifier avec son compte GitHub dans VScode
