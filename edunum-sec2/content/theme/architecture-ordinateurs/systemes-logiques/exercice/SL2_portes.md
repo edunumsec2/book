@@ -7,7 +7,7 @@
 Porte logique ET
 :::
 
-Compléter les tables de vérité suivantes pour les portes logiques ET, OU, NON et XOR
+Compléter les tables de vérité suivantes pour les portes logiques ET, OU, NON et OU-X
 
 **ET (AND)**
 
@@ -31,7 +31,7 @@ Nous avons la fonction A OU B que nous notons : $A+B$
 |  1  |  0  |     |
 |  1  |  1  |     |
 
-**OU EXCLUSIF (XOR)**
+**OU EXCLUSIF (OU-X, XOR)**
 
 Nous avons la fonction A ou B que nous notons : $A \oplus B$
 
@@ -97,7 +97,7 @@ Diagrammes de *Venn* (source wikipedia[^2])
 **Consigne :** Concevoir et mettre en place dans l'un ou l'autre des simulateurs un montage qui démontre le plus efficacement possible les lois de De Morgan.
 
 > En életronique digitale, ces lois sont remarquables parce qu'elles garantissent que l'on peut toujours remplacer des portes **OU** avec des portes **ET** (et inversément). Cette équivalence est abondamment utilisée dans la conception de circuits intégrés digitaux.
-> Sachant que l'on peut également trouver une combinaison équivalente pour construire une porte **XOR** et que l'on peut, en reliant ensemble les deux entrées d'une porte **NAND** en faire un inverseur (**NOT**), on réalise que n'importe quel système de logique combinatoire peut-être réalisé avec uniquement des portes **NAND**.
+> Sachant que l'on peut également trouver une combinaison équivalente pour construire une porte **OU-X** et que l'on peut, en reliant ensemble les deux entrées d'une porte **NON-ET** en faire un inverseur (**NON**), on réalise que n'importe quel système de logique combinatoire peut-être réalisé avec uniquement des portes **NON-ET**.
 
 ::::
 

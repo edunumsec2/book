@@ -12,8 +12,65 @@ p {
     }
 }
 
+@font-face {
+    font-family: "Poppins";
+    src: url("poppins-regular-webfont.woff2") format("woff2"),
+         url("poppins-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 .codeframe {
     height: 250px;
     width: 100%;
     overflow: scroll;
+}
+
+.logic_diagram {
+    width: 100%;
+}
+
+.logic_diagram > iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/** Custom NAV settings. */
+
+nav {
+    font-family: "Poppins", sans-serif !important;
+}
+
+nav p.caption {
+    margin-bottom: 10px !important;
+}
+
+nav .caption-text {
+    text-transform: none !important;
+    font-weight: bold !important;
+    color: #808080;
+}
+
+nav li {
+    margin-left: 10px;
+}
+
+nav a.reference {
+    color: #202020 !important;
+}
+
+nav a.reference.current {
+    color: #0dcca7 !important;
+}
+
+nav a.reference:visited {
+    color: inherit !important;
+}
+
+nav a.reference:hover {
+    color: #0dcca7 !important;
+}
+
+nav li.active > a.active {
+    border-left: 2px solid #0dcca7 !important;
 }

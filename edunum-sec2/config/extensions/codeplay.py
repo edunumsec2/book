@@ -5,6 +5,7 @@ from docutils import nodes
 from docutils.parsers.rst import directives
 from docutils.statemachine import StringList
 from sphinx.util.docutils import SphinxDirective
+from sphinx.util.osutil import relative_uri
 
 class interactive_code(nodes.Element, nodes.General):
     pass
@@ -27,7 +28,7 @@ def visit_interactive_code_html(self, node):
             '" ')
 
 
-    self.body.append('<iframe src="/codeplay/frame.html" ' +
+    self.body.append('<iframe src="' + node["codeplay_path"] + '" ' +
       prelude_attr + afterword_attr + hints_attr +
       'data-code="' + b64encode(node["code"].encode("UTF-8")).decode("UTF-8") + '" ' +
       'scrolling="no" ' + 
@@ -56,7 +57,9 @@ class InteractiveCode(SphinxDirective):
 
     def run(self):
         self.assert_has_content()
-
+        filename = self.env.doc2path(self.env.docname, base=None)
+        codeplay, _ = self.env.relfn2path("/codeplay/frame.html")
+        relative_path = relative_uri(filename, codeplay)
 
         def isSeparatorLine(line):
             line = line.strip()
@@ -114,6 +117,7 @@ class InteractiveCode(SphinxDirective):
           afterword='\n'.join(post_lines),
           static="static" in self.options,
           nocontrols="nocontrols" in self.options,
+          codeplay_path=relative_path,
           exec="exec" in self.options)
         self.set_source_info(container)
 

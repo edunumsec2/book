@@ -53,3 +53,4 @@ sphinx:
     youtube: ../extensions/
     switchtube: ../extensions/
     codeplay: ../extensions/
+    logic: ../extensions/

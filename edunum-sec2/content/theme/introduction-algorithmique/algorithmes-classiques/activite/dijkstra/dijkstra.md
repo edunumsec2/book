@@ -20,7 +20,7 @@ du plus court de chemin de Dijkstra.
 
 ## Déroulement
 
-Cette activité comporte six phases:
+Cette activité comporte sept phases:
 
 1. Une mise en situation générale pour comprendre un contexte de la vie quotidienne dans lequel cet algorithme
 est utilisé et qui constituera un fil rouge concret tout au long de l'activité.  
@@ -38,7 +38,7 @@ est utilisé et qui constituera un fil rouge concret tout au long de l'activité
 1. Une phase de réflexion plus approfondie sur l'algorithme (pour les plus avancés)
 
 
-## 1. Mise en situation générale
+## 1. Mise en situation générale (5 min)
 
 L'enseignant va sur une page de navigation (p.ex OpenStreetMap) et on montre un exemple
 de requête de chemin pour relier deux points.
@@ -52,22 +52,8 @@ de requête de chemin pour relier deux points.
  - Les croisements et embranchements sont représentés par les *sommets* du graphe et les
  routes qui les relient sont représentées par les *arêtes* du graphe. La *longueur* de
 
-## Informations
 
-Durée: 2 périodes consécutives avec une suite optionnelle qui porte sur les enjeux de société.
-
-Mode: Débranché
-
-Chapitre: Algorithmique
-
-Objectifs: Découvrir l'algorithme de Dijkstra, à quoi il sert, et pourquoi il fonctionne.  
-
-Matériel: Une connection internet pour la mise en situation. 
- chaque arête est connue.
- - Un *algorithme* permet de calculer le plus court chemin dans ce graphe. Nous allons
- voir un algorithme du plus court chemin, celui de *Dijkstra* (du nom de son inventeur). 
-
-## 2. Mise en situation spécifique
+## 2. Mise en situation spécifique (15 min)
 
 ### Exemple 1
 L'enseignant distribue à chaque élève un graphe suffisamment compliqué dans lequels la longueur des
@@ -101,14 +87,14 @@ indiqué et on ne peut plus se baser sur les aspects géométriques pour trouver
 - Que faut-il faire pour être sûr-e que ce soit vraiment le plus court? (Essayer tous les chemins?). 
 
 
-## 3 Formalisation
+## 3 Formalisation (5 min)
 
 Le problème est donc donnée sous forme d'un graphe constitué de *sommets* reliés par des *arêtes* qui
 ont une certaine *longueur*. Dans le cas ci-desssus, les sommets représentent des villes, les arêtes les
 routes, et les longueurs la durée du trajet. La *longueur totale* est donnée par la somme des longueurs
 des arêtes empruntée.
 
-## 4 Découverte 
+## 4 Découverte (15 min)
 
 Pour déterminer le plus court chemin dans ce graphe, la classe va le faire tous ensemble. Chaque élèves
 représente un sommet et reçoit le sous-graphe constitué de son sommet et ses voisin directs (autrement dit
@@ -141,7 +127,7 @@ les sépare.
 ### Remarque
 Cette activité implémente dans les faits une version distribuée de l'algorithme où les sommets peuvent changer de zone en parallèle. Il est conseillé de bien marqué la transition à l'algorithme séquentiel.
 
-## 5 Formalisation
+## 5 Formalisation (10 min)
 L'enseignant formalise l'algorithme au tableau avec l'aide des élèves. Pour aider à la compréhension et à la représentation, il peut utiliser des couleurs pour dénommer les zones et ainsi pouvoir changer les sommets de zone en modifiant la couleur (ou en utilisant un autre moyen graphique). Ici la zone 1 est "rouge", la zone 2 est "verte" et la zone 3 est "blanche" (non marquée). La formalisation se fait en français de manière à rendre la compréhension la plus intuitive possible, par exemple ainsi:
 
 1. Mettre le sommet de départ (S) en rouge, sa distance au sommet de départ est 0. 
@@ -152,10 +138,9 @@ L'enseignant formalise l'algorithme au tableau avec l'aide des élèves. Pour ai
 
 
 
-## 6 Exemples et exercices d'application et de modélisation
+## 6 Exemples et exercices d'application et de modélisation (15 min)
 
-L'enseignant fait un exemple au tableau avec les élèves et leur propose ensuite d'essayer seuls ou par deux sur des graphes
-proposés dans le recueil d'exercices. 
+L'enseignant fait un exemple au tableau avec les élèves et leur propose ensuite d'essayer seuls ou par deux sur des graphes donnés. 
 
 ### Jeu: De VERSE à LITRE 
 Ce jeu consiste à trouver une manière de relier deux mots ayant le même nombre de lettres (par exemple VERSE et LITRE) avec une série
@@ -170,30 +155,19 @@ quel graphe serait-il nécessaire de construire, à quoi correspondrait ses noeu
 Selon le niveau atteint en programmation, une petite application proposant ce jeu et les solutions correspondantes pourrait être
 programmée par exemple en utilisant une libraire de graphe telle que igraph ou networkX en python.
 
-## 7 Pour aller plus loin
+### Réseautage
+L'autre jour, vous avez flashé sur quelqu'un que vous ne connaissez pas mais dont vous avez réussi à obtenir
+le nom. Après avoir passé beaucoup de temps sur son profil dans votre réseau social préféré, vous recevez
+une notification vous indiquant quel ami-e pourra sans doute vous aider à vous rapprocher de cette personne.
+Comme ce réseau social a-t-il pu utiliser l'algorithme de Dijkstra pour vous faire cette recommandation?
 
-1. Si on avait un graphe avec des distances négatives, serait-il possible d'utiliser l'algorithme de Dijkstra? 
-2. Supposons que les sommets sont des ordinateurs et les arètes des connections réseaux et que chaque sommet ne peut communiquer qu'avec ses voisins. Un ordinateur peut-il savoir comment envoyer par le plus court chemin un message à un autre ordinateur du réseau? (cf algorithme de routage)
+## 7 Lien avec enjeux sociétaux
 
-## 8 Lien avec enjeux sociétaux
+### Introduction (5 min)
+Retour sur openstreetmap et présentation de l'histoire de la startup Waze, rachetée par Google
+https://fr.wikipedia.org/wiki/Waze 
 
-Retour sur openstreetmap avec fiche (ou activité) correspondante [TODO link]
-
-# Seconde séance (optionnelle) portant sur les enjeux de société: Produire un business plan 
-
-## Introduction
- L'idée de cette seconde séance est de faire réfléchir les élèves à la variété des applications des algorithmes
- de graphe
-
- ## Déroulement
- 1. Mise en situation
- 1. Travail en groupe
- 1. Présentation et discussion des résultats
-
- ## 1 Mise en situation( 10 min)
- L'enseignant présente l'histoire de la startup Waze, rachetée par Google
-
- ## 2 Travail en groupe(30 min) 
+### 2 Travail en groupe(20 min, à finir comme devoir) 
  Par groupe de 3 ou 4, les élèves doivent proposer une application imaginaire qui utiliserai l'algorithme de Dijkstra
 pour proposer un service à ses utilisateurs. En particulier, ils doivent préciser les points suivants:
 1. Quel service propose l'application
@@ -206,6 +180,6 @@ L'enseignant guide les élèves et donnent des idées à ceux qui n'en n'ont pas
 
 Les élèves rédigent ensuite un diaporama dans lequel chacun de ces points est abordé par une diapo
 
-## Présentation et discussion(30 min)
+### Présentation et discussion(30 min)
 Chaque groupe fait une présentation de son projet en 5 minutes suivi d'une petite discussion avec la classe. 
  

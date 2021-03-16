@@ -29,7 +29,7 @@ if (mot_de_passe == "Bonjour") {
 ```
 ### PHP
 
-```{code-block} PHP
+```PHP
 # Test de mot de passe 
 
 $mot_de_passe = "1234";
@@ -42,12 +42,12 @@ if ($mot_de_passe == "Bonjour") {
 
 ### Python
 
-```{code-block} PHP
+```Python
 # Test de mot de passe 
 
 mot_de_passe = "1234"
 if mot_de_passe == "Bonjour":
     print("Le mot de passe est correcte")
 else:
-    print(Le mot de passe est incorrecte")
+    print("Le mot de passe est incorrecte")
 ```

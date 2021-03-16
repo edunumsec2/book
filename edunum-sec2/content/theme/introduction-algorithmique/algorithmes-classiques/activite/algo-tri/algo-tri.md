@@ -1,6 +1,5 @@
 # Les algorithmes de tri
 
-TODO: compléter
 
 ## Informations:
 
@@ -12,17 +11,17 @@ Chapitre: Algorithmique
 
 Objectifs: Découvrir les algorithmes de tri et leur pertinence sociétale
 
-Matériel: plusieurs set de cartes numérotées (p.ex. jeu de Uno), papier, feuille comparateur, un peu d'espace pour se mouvoir dans la classe
+Matériel: plusieurs set de cartes numérotées (p.ex. jeu de Uno), papier, feuille comparateur (une feuille sur laquelles sont dessinés deux rectangle pour poser les deux cartes que l'on veut comparer), un peu d'espace pour se mouvoir dans la classe
 
 ## Introduction
 
 Ceci est une activité de dévolution pour découvrir les algorithmes de tri.
-Un dispositif physique ainsi qu'un catalogues d'opération sont définis afin de forcer un cadrage algorithmique et rendre plus concrète la procédure de tri  
+Un dispositif physique ainsi qu'un catalogue d'opérations sont définis afin de forcer un cadrage algorithmique et rendre plus concrète la procédure de tri.  
 
 
 ## Déroulement
 
-Cette activité les phases suivantes:
+Cette activité comporte les phases suivantes:
 
 1. Une mise en situation générale autour du concept de l'archivage traditionnel,
 son histoire, son utilité, son organisation, ce qu'il a permis comme pratique, et la fonction
@@ -63,16 +62,17 @@ sur laquelle on peut disposer exactement deux cartes à comparer et d'une table.
 Ensuite, l'enseignant-e décrit et affiche ou projette au tableau
 les opérations disponibles qui sont:
 
-1. mettre(haut/bas, courant/gauche/droite): Mettre la carte du haut/bas du tas courant/de gauche/de droite dans le comparateur
-1. disposer (grande/petite, au-dessus/en-dessous, courant/gauche/droite): Prendre la plus grande/petite carte du comparateur et la disposer au-dessus/en-dessous du tas courant/de gauche/de droite.
-1. séparer(gauche/droite): Séparer le tas courant de carte en deux parties égales (ou presque) et disposer la moitié supérieure à gauche/droite du tas courant
-1. initier(gauche/droite): Initier un nouveau tas courant à gauche/droite du tas courant actuel
-1. déplacer(gauche/droite): Déplacer le marqueur du tas courante d'un tas à gauche/droite
-1. vide(courante/gauche/droite) condition 1: le tas courant/de gauche/de droite est vide
-1. unique() condition 2: il n'y a qu'un seul tas
-1. répéter jusqu'à : Répéter jusqu'à ce que condition 1/2
-1. si: Si condition 1/2
+1. `mettre(haut/bas)`: Mettre la carte du haut/bas du tas dans le comparateur
+1. `disposer (grande/petite, au-dessus/en-dessous)`: Prendre la plus grande/petite carte du comparateur et la disposer au-dessus/en-dessous du tas.
+1. `séparer(gauche/droite)`: Séparer le tas courant de carte en deux parties égales (ou presque) et disposer la moitié supérieure à gauche/droite du tas courant
+1. `initier(gauche/droite)`: Initier un nouveau tas courant à gauche/droite du tas.
+1. `vide()`: Condition 1, le tas est vide.
+1. `courant.déplacer(gauche/droite)`: Déplacer le marqueur du tas courante d'un tas à gauche/droite.
+1. `unique()` Condition 2: il n'y a qu'un seul tas.
+1. `répéter jusqu'à` : Répéter jusqu'à ce que condition 1/2.
+1. `si`: Si condition 1/2.
 
+Toutes ces opérations, äl'exception des quatre derniüres sont effectuée sur un tas donné, qui est indiqué en préfix de l'opération, par exemple `droite.mettre(haut)` qui signifie que cette opération s'applique sur le tas de droite. 
 Dans la situation initiale, il n'y a qu'un seul tas mélangé sur la table.
 
 
@@ -107,7 +107,7 @@ Les élèves rejoignent leur place et l'enseignant récapitule (au tableau) avec
 à ce moment également en donner une représentation plus standard, qui s'abstrait du dispositif matériel en s'appuyer sur le
 document de théorie. Cette partie peut être entrelacée avec la partie précédente.
 
-### Tri à bullles
+### Tri à bulles
 ```
 répeter jusqu'à courant.vide():
     courant.mettre(haut)
@@ -126,17 +126,22 @@ répéter jusqu'à courant.vide():
 gauche.courant()
 ```
 
-### Tri par sélection (pas vraiment)
- Non adapté à ce dispositif...
+
+### Remarque
+Les tris par sélection et pivot (quicksort) ne sont pas vraiment adaptés à ce dispositif physique basé sur les
+piles. Une variante de l'activité consisterait à donner au autre dispositif basé sur les tableaux à une partie de la classe afin de faire émerger ces algorithmes. 
  
 
-## 5 Application (10-15 min)
-Exercices d'application au cours desquels les élèves doivent trier des listes selon divers algorithmes.
 
-TODO: rédiger les exercices.  
+## 5 Application (10-15 min)
+Toujours par groupes, les élèves vérifient que ces algorithmes peuvent être utilisés "à l'aveugle", c'est-à-dire
+avec les cartes retournées et un-e élève prenant le rôle du comparateur. 
+
+Ensuite, l'enseignant-e donne une suite de noms non triés et les élèves doivent écrire les différentes étapes du tri en utilisant d'une part le tri à bulles et d'autre part le tri par insertion. 
+
+Une correction commune est ensuite effectuée. 
 
 
 ## 6 Conclusion (5-10 min)
-Une présentation des dérapage de la surveillance de masse à l'heure du numérique avec l'affaire Snowden
+Une présentation des dérapages de la surveillance de masse à l'heure du numérique avec l'affaire Snowden (cf ressources sur les enjeux de société)
 
-TODO: faire le lien avec les fiches et ressources d'enjeux sociétaux proposés
