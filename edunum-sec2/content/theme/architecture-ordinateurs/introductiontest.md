@@ -63,6 +63,12 @@ Différents modèles de transistor. On les reconnaît à leurs trois "pattes" au
 
 Le **transistor** fonctionne comme un robinet d'eau qui peut être ouvert ou fermé. Si on l'ouvre le courant passe, si on le ferme il ne passe pas. 
 
+````{dropdown} Pour aller plus loin
+La vidéo facultative qui suit explique en détail ce qui se passe dans les matériaux qu'on appelle "semi-conducteurs". *Note : contenu en anglais, mais en cours de traduction (elliot)*.
+```{youtube} 33vbFFFn04k
+```
+````
+
 ```{figure} media/transistorgif.gif
 ---
 height: 350px
@@ -78,7 +84,7 @@ De par sa capacité à être ouvert ou fermé, le **transistor** fonctionne comm
 :column: col-lg
 Des transistors presque invisibles
 ^^^
-Donner une idée de la taille des transistors utilisés dans les microprocesseurs actuels n'a même plus d'intérêt tellement ils sont petits. À titre d'exemple, disons simplement que le microprocesseur Apple A9 de la figure 35 en possède six milliards. 
+Donner une idée de la taille des transistors utilisés dans les microprocesseurs actuels n'a même plus d'intérêt tellement ils sont petits. À titre d'exemple, disons simplement que le microprocesseur Apple A9 (igure 35) en possède six milliards. 
 ```
 
 ## Des transistors aux portes logiques
