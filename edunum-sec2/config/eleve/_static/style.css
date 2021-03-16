@@ -70,3 +70,7 @@ nav a.reference:visited {
 nav a.reference:hover {
     color: #0dcca7 !important;
 }
+
+nav li.active > a.active {
+    border-left: 2px solid #0dcca7 !important;
+}
