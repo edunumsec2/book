@@ -36,7 +36,7 @@ width: 500px
 Vos likes, vos partages, vos vidéos transmises via des applications telles que Whatsapp, Instagram, Tik Tok, Snapchat, Youtube, sont stockées dans des centres de données aux quatre coins de la planète. 
 ```
 
-## Comment sont-ils stockés ? 
+## Électricité et nombres binaires
 
 Les nombres binaires, au niveau le plus élémentaire, sont donc de l'électricité. Mais pourquoi avoir choisi des 0 et des 1 comme alphabet ? Quel rapport avec l'électricité ? 
 
