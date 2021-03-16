@@ -160,7 +160,7 @@ Certains circuits sont construits pour "bloquer" une information, ce qui nous pe
 {
   "in": [
     {"name": "R", "id": 8, "pos": [45, 15], "val": 0},
-    {"name": "S", "id": 9, "pos": [45, 105], "val": 0}
+    {"name": "S", "id": 9, "pos": [45, 105], "val": 1}
   ],
   "out": [{"name": "Q", "id": 10, "pos": [400, 15]},{"name": "Q'", "id": 11, "pos": [400, 105]}],
   "gates": [{"type": "NOR", "id": 0, "pos": [125, 0]},{"type": "NOR", "id": 4, "pos": [125, 85]}],
