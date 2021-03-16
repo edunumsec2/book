@@ -46,7 +46,7 @@ En informatique, si nous avons choisi d'utiliser un code binaire ça n'est pas p
 :column: col-lg
 Pourquoi pas un code ternaire ? 
 ^^^
-On aurait pu choisir un code possédant plus que deux signaux différents. Si on choisissait, par exemple, trois signaux, on pourrait les coder par l'électricité en mesurant : un courant faible, un courant moyen, un courant fort. Le problème est qu'on augmente ainsi les possibilités de se tromper dans la mesure, et d'interpréter un courant moyen pour un courant fort, ou inversément. Puisque l'électricité permet une vitesse de transmission par signal très grande, il était plus optimal de garder deux positions clairement distinctes que l'on pouvait transmettre très vite, plutôt que trois positions avec un risque de confusion plus élevé. 
+On aurait pu choisir un code possédant plus que deux signaux différents. Si on choisissait, par exemple, trois signaux, on pourrait les coder par l'électricité en mesurant un courant faible, un courant moyen, un courant fort. Le problème est qu'on augmenterait ainsi les possibilités de se tromper dans la mesure, et d'interpréter un courant moyen pour un courant fort, ou inversément. Puisque l'électricité permet une vitesse de transmission par signal très grande, il est plus performant de garder deux positions clairement distinctes que l'on peut transmettre très vite, plutôt que trois positions avec un risque de confusion plus élevé. 
 ```
 
 ## Le transistor
@@ -84,7 +84,7 @@ De par sa capacité à être ouvert ou fermé, le **transistor** fonctionne comm
 :column: col-lg
 Des transistors presque invisibles
 ^^^
-Donner une idée de la taille des transistors utilisés dans les microprocesseurs actuels n'a même plus d'intérêt tellement ils sont petits. À titre d'exemple, disons simplement que le microprocesseur Apple A9 (igure 35) en possède six milliards. 
+Chercher à se représenter la taille des transistors utilisés dans les microprocesseurs actuels n'a pas d'intérêt tellement ils sont petits. À titre d'exemple, disons simplement que le microprocesseur Apple A9 (igure 35) en possède six milliards. 
 ```
 
 ## Des transistors aux portes logiques
@@ -96,7 +96,7 @@ Un **transistor** seul ne peut représenter qu'un bit d'information. Oui ou non,
 height: 100px
 width: 200px
 ---
-Ceci est une porte logique "ET", qui exprime la conjonction. C'est à dire que les deux transistors qui la composent (A & B) doivent être "ouvert" pour que le courant passe. 
+Ceci est une porte logique "ET", qui exprime la conjonction. C'est à dire que les deux transistors qui la composent (A & B) doivent être "ouverts" pour que le courant passe. 
 ```
 En connectant entre eux les **transistors** de diverses manières, on est capable de faire que le courant se déplace dans un circuit de façon maîtrisée. Ce qui nous permet, à terme, de construire des programmes qui génèrent certaines "sorties" quand on leur donne certaines "entrées". 
 
@@ -119,7 +119,16 @@ Rien de plus logique que la logique
 Même si vous ne les appelez pas ainsi, vous utilisez tous les jours des relations logiques de conjonction, de disjonction et de négation. La conjonction c'est "l'intersection logique" de deux propositions. Si vous dites "je vais à la piscine si *il fait beau* ET *mes amies m'accompagnent*", vous utilisez la conjonction. Au contraire, si vous dites "je vais à la piscine si *il fait beau* OU *mes amis m'accompagnent*", vous utilisez la disjonction, qui est comme une sorte de "somme logique" de deux propositions. La négation est encore plus évidente, puisque la proposition "je ne vais pas à la piscine" est simplement la négation, ou l'inverse, de la proposition "je vais à la piscine". 
 ```
 
-Pour simplifier la représentation de ces relations logiques, on les exprime sous la forme de tables de vérité (cf : diagrammes déjà utilisés dans le sous-chapitre concerné). 
+Pour simplifier la représentation de ces relations logiques, on les exprime sous la forme de tables de vérité.
+
+| $A$ | $B$ | $Q$ |
+| :-: | :-: | :-: |
+| 0   | 0   | 0   |
+| 1   | 0   | 0   |
+| 0   | 1   | 0   |
+| 1   | 1   | 1   |
+
+Dans le tableau qui précède, si on reprend notre exemple de la piscine, on pourrait dire que A représente "il fait beau", B représente "mes amies m'accompagnent", et le résultat Q est "je vais à la piscine". 1 signifie qu'une proposition est vraie, 0 qu'elle est fausse. Le tableau ci-dessus représente donc l'opération logique ET, ou conjonction. 
 
 ```{panels}
 :column: col-lg
