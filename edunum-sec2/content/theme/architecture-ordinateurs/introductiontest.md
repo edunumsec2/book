@@ -36,7 +36,7 @@ width: 500px
 Vos likes, vos partages, vos vidéos transmises via des applications telles que Whatsapp, Instagram, Tik Tok, Snapchat, Youtube, sont stockées dans des centres de données aux quatre coins de la planète. 
 ```
 
-## Comment sont-ils stockés ? 
+## Électricité et nombres binaires
 
 Les nombres binaires, au niveau le plus élémentaire, sont donc de l'électricité. Mais pourquoi avoir choisi des 0 et des 1 comme alphabet ? Quel rapport avec l'électricité ? 
 
@@ -64,7 +64,7 @@ Différents modèles de transistor. On les reconnaît à leurs trois "pattes" au
 Le **transistor** fonctionne comme un robinet d'eau qui peut être ouvert ou fermé. Si on l'ouvre le courant passe, si on le ferme il ne passe pas. 
 
 ````{dropdown} Pour aller plus loin
-La vidéo facultative qui suit explique en détail ce qui se passe dans les matériaux qu'on appelle "semi-conducteurs". *Note : contenu en anglais, mais en cours de traduction (elliot)*.
+Vidéo facultative qui explique en détail ce qui se passe dans les matériaux qu'on appelle "semi-conducteurs". *Note : contenu en anglais, mais en cours de traduction (elliot)*.
 ```{youtube} 33vbFFFn04k
 ```
 ````
@@ -77,15 +77,19 @@ width: 500px
 En appliquant un courant qui va de la **base** à **l'émetteur** (en rose pâle), on permet au courant de circuler entre le collecteur et l'émetteur (appelés ainsi parce que l'émetteur *émet* des électrons, et le collecteur les *collecte*). Envoyer du courant dans la **base** c'est donc "ouvrir" le transistor. 
 ```
 
-De par sa capacité à être ouvert ou fermé, le **transistor** fonctionne comme une brique fondamentale dans la construction de systèmes informatiques permettant de transmettre, stocker et manipuler des suites de 0 et de 1. 
+De par sa capacité à être ouvert ou fermé, le **transistor** fonctionne comme une brique fondamentale dans la construction de systèmes informatiques permettant de transmettre, stocker et manipuler des nombres binaires. 
 
 
-```{panels}
+`````{panels}
 :column: col-lg
 Des transistors presque invisibles
 ^^^
-Chercher à se représenter la taille des transistors utilisés dans les microprocesseurs actuels n'a pas d'intérêt tellement ils sont petits. À titre d'exemple, disons simplement que le microprocesseur Apple A9 (igure 35) en possède six milliards. 
+Chercher à se représenter la taille des transistors utilisés dans les microprocesseurs actuels n'a pas d'intérêt tellement ils sont petits. À titre d'exemple, disons simplement que le microprocesseur Apple A9 (igure 35) en possède six milliards.
+````{dropdown} Zoom sur un transistor
+```{youtube} Fxv3JoS1uY8
 ```
+````
+`````
 
 ## Des transistors aux portes logiques
 
@@ -156,7 +160,7 @@ Certains circuits sont construits pour "bloquer" une information, ce qui nous pe
 {
   "in": [
     {"name": "R", "id": 8, "pos": [45, 15], "val": 0},
-    {"name": "S", "id": 9, "pos": [45, 105], "val": 0}
+    {"name": "S", "id": 9, "pos": [45, 105], "val": 1}
   ],
   "out": [{"name": "Q", "id": 10, "pos": [400, 15]},{"name": "Q'", "id": 11, "pos": [400, 105]}],
   "gates": [{"type": "NOR", "id": 0, "pos": [125, 0]},{"type": "NOR", "id": 4, "pos": [125, 85]}],

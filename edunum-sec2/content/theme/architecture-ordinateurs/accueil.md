@@ -11,7 +11,7 @@ Mais par quoi ont été remplacés les 17'468 tubes électroniques de l'ENIAC ? 
 
 Dans ce chapitre, vous découvrirez comment sont construits les ordinateurs, comment sont organisés leurs différents composants pour leur permettre d'effectuer des milliards de calculs à la seconde alors qu'ils ne comprennent que la distinction entre 0 et 1, allumé ou éteint.
 
-![img](media/microprocessor.gif)
+<!-- ![img](media/microprocessor.gif) -->
 
 ## Contenus du chapitre
 
