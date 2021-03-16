@@ -1,6 +1,5 @@
 # Les algorithmes de tri
 
-TODO: compléter
 
 ## Informations:
 
@@ -12,7 +11,7 @@ Chapitre: Algorithmique
 
 Objectifs: Découvrir les algorithmes de tri et leur pertinence sociétale
 
-Matériel: plusieurs set de cartes numérotées (p.ex. jeu de Uno), papier, feuille comparateur, un peu d'espace pour se mouvoir dans la classe
+Matériel: plusieurs set de cartes numérotées (p.ex. jeu de Uno), papier, feuille comparateur (une feuille sur laquelles sont dessinés deux rectangle pour poser les deux cartes que l'on veut comparer), un peu d'espace pour se mouvoir dans la classe
 
 ## Introduction
 
@@ -144,6 +143,5 @@ Une correction commune est ensuite effectuée.
 
 
 ## 6 Conclusion (5-10 min)
-Une présentation des dérapages de la surveillance de masse à l'heure du numérique avec l'affaire Snowden
+Une présentation des dérapages de la surveillance de masse à l'heure du numérique avec l'affaire Snowden (cf ressources sur les enjeux de société)
 
-TODO: faire le lien avec les fiches et ressources d'enjeux sociétaux proposés
