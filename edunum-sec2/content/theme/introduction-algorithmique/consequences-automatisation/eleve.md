@@ -24,7 +24,7 @@ Afin de pouvoir rechercher de manière efficace, les données doivent impérativ
 
 Il existe de multiples manières de résoudre un problème. Toutes ces manières ne se valent pas. Il faut choisir l’algorithme en fonction de ce qui doit être optimisé : le temps de résolution, l’espace de stockage, la précision de la solution, ...
 
-L’algorithme n’est pas un programme. L’algorithme peut être transcrit en un programme qui lorsque exécuté par un système informatique pourra concrètement résoudre le problème.
+L’algorithme n’est pas un programme. L'algorithme peut être transcrit en un programme qui, quand exécuté par un système informatique, pourra concrètement résoudre le problème.     
 
 ::::
 

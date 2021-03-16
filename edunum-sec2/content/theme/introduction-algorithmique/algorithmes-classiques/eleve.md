@@ -21,7 +21,7 @@ Pour apprendre à cuisiner, on commence par suivre des recettes classiques. Ains
 
 <img src="media/Tris_base.png" width="40%">
 
-Figure 3. Des objets peuvent être triés selon une relation d’ordre, en lien avec une propriété. Sur la ligne du haut, les rectangles sont organisés selon leur couleur (de la plus sombre à la plus lumineuse), alors que sur la ligne du bas, ils sont triés selon leur taille (du plus petit au plus grand).
+Figure 3. Des objets peuvent être triés selon une relation d’ordre, en lien avec une propriété. Sur la ligne du haut, les rectangles sont organisés selon leur couleur (de la plus sombre à la plus claire), alors que sur la ligne du bas, ils sont triés selon leur taille (du plus petit au plus grand).
 
 :::
 
@@ -178,7 +178,7 @@ Analyser les oeuvres cubistes de Piet Mondrian. Trouver un algorithme qui permet
 
 ::::{admonition,attention} Solution de l’exercice 8
 
-Les données en entrée sont les rectangles sur la ligne du haut : leur taille et leur ordre. Le résultat en sortie correspond aux rectangles sur la ligne du bas : leur taille et leur ordre. 
+Les données en entrée sont les rectangles sur la ligne du haut : leur taille et leur ordre. Le résultat en sortie correspond aux rectangles sur la ligne du bas : leur taille et leur ordre. Les opérations effectuées sont des comparaisons de la taille de deux rectangles et des déplacements de rectangles.
 
 ::::
 
