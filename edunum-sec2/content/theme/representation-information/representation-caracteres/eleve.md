@@ -23,7 +23,7 @@ Chaque caractère frappé sur le clavier engendre le nombre correspondant.
 
 Chacun des caractères de la phrase que vous lisez a ainsi été stocké,
 transmis et manipulé par les ordinateurs sous la forme d'une suite
-de nombres qu'on nomme *chaîne de caractères*.
+de nombres qu'on nomme **chaîne de caractères**.
 
 Lorsqu'il s'agit de représenter ce texte à l'écran ou à l'impression
 à destination des êtres humains, les logiciels utilisent la table
@@ -55,7 +55,7 @@ par des constructeurs d'ordinateurs ou des éditeurs de systèmes d'exploitation
 
 La première table à s'imposer historiquement était la table ASCII
 (pour American Standard Code for Information Interchange).
-Malgré sa large acceptation, avec ses *7 bits par caractère*,
+Malgré sa large acceptation, avec ses **7 bits par caractère**,
 cette table avait pour principal défaut de ne pas prendre en compte
 les caractères qui n'existent pas dans la langue anglaise,
 ne serait-ce que les lettres accentuées.
@@ -128,7 +128,7 @@ un aquarium en ASCII dans le terminal.
 ## Standard UTF
 
 Le [standard Unicode](https://home.unicode.org/) UTF (Universal Character Set Transformation Format)
-s'est imposé pour l'échange, car il permet d'agréger sur *64 bits par caractère*
+s'est imposé pour l'échange, car il permet d'agréger sur **64 bits par caractère**
 l'entier des caractères utilisés dans toutes les langues humaines… et même extraterrestres,
 puisque le [Klingon](https://www.kli.org/about-klingon/klingon-history/) est également intégré.
 
