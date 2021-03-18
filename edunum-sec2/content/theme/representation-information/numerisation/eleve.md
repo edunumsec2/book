@@ -1,26 +1,55 @@
 # Numérisation
 
-La conversion d’une grandeur physique analogique continue
+La conversion
+d’une grandeur physique analogique
+continue
 – température, vitesse du vent, position d'une girouette, etc., –
-en données numériques digitales est appelée *numérisation*.
-Elle est réalisée en trois étapes: un *échantillonnage*,
-une *quantification* puis un *encodage*.
+en données numériques digitales
+est appelée **numérisation**.
+Elle est réalisée
+en trois étapes: un **échantillonnage**,
+une **quantification** puis un **encodage**.
 
-Le processus de numérisation engendre une quantité d'information
-(des bits) qui vise à représenter, aussi précisément que nécessaire,
-la grandeur physique sous une forme manipulable par les ordinateurs.
+Le processus
+de numérisation
+engendre une quantité d'information
+(des bits)
+qui vise à représenter,
+aussi précisément
+que nécessaire,
+la grandeur physique
+sous une forme manipulable
+par les ordinateurs.
 
-Il s'agit donc d'un compromis entre la qualité de la représentation
-et les coûts engendrés par un fichier plus grand, qui prend
-plus de place de stockage ; prend plus de temps à copier,
-à transmettre sur un réseau ; et/ou nécessite une puissance de calcul
-plus importante pour la numérisation (conversion analogique/digitale)
-et pour la restitution (conversion digitale/analogique).
+Il s'agit donc
+d'un compromis
+entre la qualité de la représentation
+et les coûts engendrés
+par un fichier plus grand,
+qui prend
+plus de place de stockage ;
+prend plus de temps à copier,
+à transmettre sur un réseau ;
+et/ou nécessite
+une puissance de calcul
+plus importante
+pour la numérisation
+(conversion analogique/digitale)
+et pour la **reconstruction**
+(conversion digitale/analogique).
 
-Ci-après, un signal continu sera numérisé, mettant en évidence
-le rôle et les effets des différents paramètres de la numérisation.
-Il s'agira pour l'exemple de l'intensité sonore
-telle qu'elle peut être capturée par un microphone.
+Ci-après,
+un signal continu sera numérisé,
+mettant en évidence
+le rôle et les effets
+des différents paramètres
+de la numérisation.
+Il s'agira
+pour l'exemple
+de l'intensité sonore
+telle qu'elle
+peut être capturée
+par un microphone.
 
 
 
@@ -78,7 +107,7 @@ d'un signal numérisé.
 L'intervalle temporel
 entre deux mesures est appelé
 la période d'échantillonnage.
-La *fréquence d'échantillonnage* (sampling rate)
+La **fréquence d'échantillonnage** (sampling rate)
 est le nombre de mesures prises par seconde,
 exprimée en Hz.
 
@@ -99,6 +128,12 @@ d'avoir une représentation complète
 d'un processus complexe,
 tout au mieux
 une représentation suffisante.
+Comme toute activité ingénieuriale,
+la solution retenue 
+résulte d'une pesée d'intérêts 
+et non d'une évidence 
+pointant 
+vers une solution unique. 
 
 
 
@@ -109,8 +144,10 @@ une représentation suffisante.
 height: 16em
 name: fig-repr-num-freq
 ---
-Effet de la fréquence d'échantillonnage (sampling rate : 100, 200 et 400 Hz)
-sur la représentation obtenue par numérisation.
+Effet de la fréquence d'échantillonnage
+(sampling rate : 100, 200 et 400 Hz)
+sur la représentation
+obtenue par numérisation.
 Puis la fréquence est élevée,
 puis la quantité
 d'information collectée
@@ -236,8 +273,10 @@ notamment.
 ```
 ````
 
-Une fréquence d'échantillonnage inférieure génère un son
-dont la qualité est dégradée, à commencer par la précision
+Une fréquence d'échantillonnage inférieure
+génère un son
+dont la qualité est dégradée,
+à commencer par la précision
 des sons les plus aigus,
 aboutissant à une numérisation
 qui rappelle le son
@@ -287,7 +326,7 @@ bénéfices
 
 La quantification
 d'une valeur échantillonnée
-requiert de déterminer la *précision*
+requiert de déterminer la **précision**
 de chaque échantillon,
 ce qui détermine
 le volume de données générées.
@@ -297,7 +336,7 @@ par les ordinateurs.
 
 La précision de l'encodage
 est donnée par
-la *profondeur de l'échantillonnage* (bit depth)
+la **profondeur de l'échantillonnage** (bit depth)
 exprimée en bits (binary digits).
 Comme pour l'échantillonnage,
 plus la profondeur de l'échantillonnage
@@ -312,24 +351,33 @@ est importante.
 height: 16em
 name: fig-repr-num-depth
 ---
-Effet de la profondeur de l'échantillonnage (bit depth : 3, 4 et 5 bits)
+Effet de la profondeur de l'échantillonnage
+(bit depth : 3, 4 et 5 bits)
 sur la représentation obtenue par numérisation.
-Plus la profondeur est importante, plus la discrimination du signal et
-la différence entre les basses et les hautes intensités est importante.
-La quantité d'information générées (le nombre de 0 et de 1) devient
+Plus la profondeur est importante,
+plus la discrimination du signal et
+la différence entre les basses et
+les hautes intensités est importante.
+La quantité d'information générées
+(le nombre de 0 et de 1) devient
 également plus importante.
 ```
 
 
-Lorsque l'entier de la plage des valeurs possibles
+Lorsque l'entier
+de la plage des valeurs possibles
 est utilisée pour l'encodage,
 la profondeur de l'échantillonnage
-définit la *plage dynamique* disponible.
+définit la **plage dynamique** disponible.
 Elle est donnée entre la valeur encodée
 la plus petite (0, par exemple)
 à la valeur encodée la plus élevée
 ($2^n - 1$ pour une valeur encodée
 sur n bits, par exemple).
+Elle correspond également 
+à une idée de précision 
+ou de discrimination 
+des échantillons. 
 
 Ici encore,
 l'oreille humaine
@@ -366,19 +414,41 @@ quantité d'information collectée.
 
 
 
-À l'inverse, il est nécessaire de gérer correctement la plage d'amplitude
-dans laquelle la numérisation du signal se déroule. Cela s'opère en agissant
-sur le paramètre de *gain* du signal.
+À l'inverse,
+il est nécessaire
+de gérer correctement
+la plage d'amplitude
+dans laquelle
+la numérisation
+du signal se déroule.
+Cela s'opère en agissant
+sur le paramètre
+de **gain** du signal.
 
-La *distorsion* découle d’un signal dont l’amplitude dépasse
-les capacités d’encodage du système. Dans ces conditions,
-un ajustement du gain d’entrée est nécessaire pour rester
-au plus proche des limites du système, sans les franchir.
+La **distorsion**
+découle d’un signal
+dont l’amplitude dépasse
+les capacités d’encodage du système.
+Dans ces conditions,
+un ajustement du gain
+d’entrée est nécessaire
+pour rester
+au plus proche
+des limites du système,
+sans les franchir.
 
-La numérisation d’un signal dont l’amplitude serait par trop réduite
-débouche au contraire sur un encodage qui contient moins d’information,
-ce qui limite les opérations réalisables numériquement par la suite
-sans détériorer la qualité du signal.
+La numérisation
+d’un signal dont
+l’amplitude serait
+par trop réduite
+débouche au contraire
+sur un encodage
+qui contient moins d’information,
+ce qui limite
+les opérations réalisables numériquement
+par la suite
+sans détériorer
+la qualité du signal.
 
 
 
@@ -391,8 +461,20 @@ Effet du gain (trop haut, correct, trop bas)
 sur la représentation obtenue par numérisation.
 La distorsion résulte de valeurs très différentes
 de celles du signal original.
-Cette aberration du processus de numérisation ne peut plus être corrigée,
+Cette aberration du processus de numérisation
+ne peut plus être corrigée,
 car de l'information a été perdue au passage.
+À l'inverse,
+un gain trop faible nuit
+à la dynamique de l'information collectée,
+c'est-à-dire que l'écart
+entre la valeur retenue
+la plus faible et la plus élevée
+n'est qu'une fraction
+de l'intervalle disponible.
+Il en résulte
+une perte
+de précision.
 ```
 
 
@@ -400,15 +482,25 @@ car de l'information a été perdue au passage.
 
 
 
-On notera finalement que la numérisation et la quantification
-travaillent ensemble pour définir la qualité du signal numérisé.
-Ces deux paramètres ne sont pas complétement indépendants.
-Leur choix est réalisé en fonction du résultat escompté et
-de ce que l'on cherche à réaliser avec le signal numérisé.
+On notera finalement
+que la numérisation et la quantification
+travaillent ensemble
+pour définir la qualité
+du signal numérisé.
+Ces deux paramètres
+ne sont pas complétement indépendants.
+Leur choix est réalisé
+en fonction du résultat escompté et
+de ce que l'on cherche
+à réaliser avec le signal numérisé.
 
-Pour l'intensité sonore par exemple, une fréquence d'échantillonnage
-insuffisante ne peut pas être compensée par une profondeur
-d'échantillonnage supérieure. La qualité du résultat n'est pas améliorée.
+Pour l'intensité sonore par exemple,
+une fréquence d'échantillonnage
+insuffisante ne peut pas être compensée
+par une profondeur
+d'échantillonnage supérieure.
+La qualité du résultat
+n'est pas améliorée.
 
 
 ```{figure} numerisation/numerisation-03.png
@@ -416,7 +508,8 @@ d'échantillonnage supérieure. La qualité du résultat n'est pas améliorée.
 height: 16em
 name: fig-repr-num-bal
 ---
-Effet de la fréquence d'échantillonnage (sampling rate : 400, 200 et 100 Hz)
+Effet de la fréquence d'échantillonnage
+(sampling rate : 400, 200 et 100 Hz)
 sur la représentation obtenue par numérisation
 à une profondeur donnée (sampling depth : 5 bits).
 Une importante profondeur d'échantillonnage ne compense pas
@@ -426,18 +519,33 @@ une fréquence d'échantillonnage insuffisante.
 
 
 
+Les dispositifs électroniques
+dont la fonction
+est l'échantillonnage et la quantification
+des signaux
+sont appelés
+des convertisseurs analogique-numérique
+(CAN) ou
+**analog to digital converter** (ADC),
+en anglais.
+
+
 
 
 
 
 ## Encodage
 
-L'encodage de l'information numérisée se fait dans des formats
+L'encodage de l'information numérisée
+se fait dans des formats
 de fichiers spécifiques aux applications.
 
-Dans l'absolu, on pourrait imaginer un format universel de stockage
-de 0 et de 1. En connaissant la profondeur de l'échantillonnage,
-il serait aisément possible de reconstruire un signal.
+Dans l'absolu, on pourrait imaginer
+un format universel de stockage
+de 0 et de 1. En connaissant
+la profondeur de l'échantillonnage,
+il serait aisément possible
+de reconstruire un signal.
 Toutefois, cela pose plusieurs problèmes.
 
 Cela ne donnerait aucune indication sur l'interprétation
@@ -446,20 +554,74 @@ la variation de la vitesse du vent ?) ou même les bornes
 de ce signal (entre 0 et $2^n - 1$ ?
 entre $-2^{(n-1)}$ et $2^{(n-1)} - 1$ ?).
 
-De plus, cela serait terriblement dispendieux. Il est en effet possible
-de construire des formats de fichiers qui exploitent
-les propriétés specifiques au signal numérisé pour simplifier
-dans un deuxième temps le résultat de la numérisation
-avant de l'enregistrer. Cela débouche sur des fichiers
-qui sacrifient une partie de la qualité du signal numérisé
-en échange d'un gain sur la taille des fichiers générés.
+De plus, cela serait terriblement dispendieux.
+Il est en effet possible
+de construire des formats de fichiers
+qui exploitent
+les propriétés specifiques
+au signal numérisé pour simplifier
+dans un deuxième temps
+le résultat de la numérisation
+avant de l'enregistrer.
+Cela débouche sur des fichiers
+qui sacrifient une partie
+de la qualité du signal numérisé
+en échange d'un gain
+sur la taille des fichiers générés.
 
-C'est ainsi que des fichiers optimisés différents sont disponibles
-pour stocker des fichiers d'images (JPG) ; de vidéo (MP4) ;
-de son (MP3) ; ou de tout autre application.
+C'est ainsi que des fichiers
+optimisés différents sont disponibles
+pour stocker des fichiers d'images (JPG) ;
+de vidéo (MP4) ;
+de son (MP3) ; ou
+de tout autre application.
 La plupart recourent
 pour cela à des compressions destructives
 au-cours desquelles
 une partie de l'information est abandonnée
 car, dans le contexte particulier,
 elles ne sont pas jugées indispensables.
+
+
+Par exemple,
+la reproduction exacte
+des nuances de bleu du ciel
+importe peu
+pour un film d'action.
+Pourtant,
+ces mêmes nuances
+sont essentielles
+pour la reproduction
+d'un tableau de Monnet.
+
+
+
+## Reconstruction
+
+
+On appelle **reconstruction**
+le processus
+qui transforme
+un signal numérisé
+en une variation continue
+d'une grandeur
+physique.
+
+Les dispositifs électroniques
+dont la fonction
+est la reconstruction
+des signaux
+sont appelés
+des convertisseurs numérique-analogique
+(CNA) ou
+**digital to analog converter** (DAC),
+en anglais.
+La sortie
+du convertisseur
+est généralement
+une tension électrique
+proportionnelle
+à l'intensité
+du signal.
+
+
