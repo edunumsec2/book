@@ -17,7 +17,7 @@ Activité collaborative et débranchée pour introduire l'algorithme du plus cou
 * ⏳ : 2 périodes
 * 🔌 : débranché
 * 📕 : algorithmique
-* 💡 : découvrir l'algorithme de Dijkstra, son utilité, son fonctionnement.  
+* 💡 : découvrir l'algorithme de Dijkstra, son utilité, son fonctionnement
 * 🔧 : connexion internet pour la mise en situation
 ```
 
@@ -142,6 +142,7 @@ L'enseignant formalise l'algorithme au tableau avec l'aide des élèves. Pour ai
 1. Vérifier tous les voisins de ce sommet (S) qui sont en vert si leur distance au sommet de départ est plus petite en passant par ce sommet. Si c'est le cas ajuster leur distance au sommet de départ et leur flèche pour qu'elle pointe vers le sommet S.
 1. Prendre le sommet vert avec la plus petite distance au sommet de départ et le mettre en rouge avec sa distance et sa flèche. Ce sommet est le nouveau sommet S.
 1. Si ce sommet S est le sommet d'arrivée, le plus court chemin est obtenu en suivant les flèches, sinon retourner au point 2.
+
 ![step123](figs/step123.gif)
 ```
 ````
@@ -172,7 +173,7 @@ une notification vous indiquant quel ami-e pourra sans doute vous aider à vous 
 Comme ce réseau social a-t-il pu utiliser l'algorithme de Dijkstra pour vous faire cette recommandation?
 ```
 
-## 7 Lien avec enjeux sociétaux
+<!-- ## 7 Lien avec enjeux sociétaux -->
 
 <!-- ### Introduction (5 min)
 Retour sur openstreetmap et présentation de l'histoire de la startup Waze, rachetée par Google
