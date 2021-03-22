@@ -77,18 +77,19 @@
     - file: content/enjeux/fiches-complementaires/wikipedia/wikipedia
   - file: content/enjeux/bibliographie
 
-- part: Démos et divers
-  numbered: false
-  chapters:
-  - file: content/demostests/glossaire
-  - file: content/demostests/edito/liens
-  - file: content/demostests/edito/referencesart
-  - file: content/demostests/edito/extensions
-  - file: content/demostests/edito/Redaction-Bonnes-pratiques
-  - file: content/demostests/art/histoireart
-  - file: content/demostests/edito/relectures
-  - file: content/demostests/edito/repinfo1test
-  - file: content/theme/architecture-ordinateurs/introductiontest
+
+#- part: Démos et divers
+#  numbered: false
+#  chapters:
+#  - file: content/demostests/glossaire
+# - file: content/demostests/edito/liens
+#  - file: content/demostests/edito/referencesart
+#  - file: content/demostests/edito/extensions
+#  - file: content/demostests/edito/Redaction-Bonnes-pratiques
+#  - file: content/demostests/art/histoireart
+#  - file: content/demostests/edito/relectures
+#  - file: content/demostests/edito/repinfo1test
+#  - file: content/theme/architecture-ordinateurs/introductiontest
 
 - part: README
   numbered: false
@@ -101,29 +102,4 @@
       - file: content/demostests/edito/syntaxemyst
       - file: content/demostests/edito/relectures
 
-# Ajout d'une partie pour les enjeux sociaux
 
-#- part: Enjeux sociaux
-#  numbered: false
-#  chapters:
-#  - file: 
-
-# - part: À affecter
-#  numbered: false
-#  chapters:
-#  - file: content/annexe/eleve
-#  - file: content/playground/eleve
-#    sections:
-#      - file: content/playground/notebook
-#      - file: content/playground/types
-#  - file: content/arts/L'app de rencontre
-#  - file: content/arts/La poésie des limites
-#  - file: content/arts/Python_turtle_extension
-#  - file: content/arts/Qui suis-je_retouchesOlivier
-#  - file: content/arts/contemporain_final
-#  - file: content/enjeux/digital-labor/eleve
-#  - file: content/fiche/references-notebook
-#  - file: content/theme/algorithmique-programmation/activites/Cupidon est un programme
-#  - file: content/theme/algorithmique-programmation/activites/La recette de l'univers
-#  - file: content/theme/algorithmique-programmation/activites/Crucial Kruskal
-#  - file: content/theme/introduction-algorithmique/algorithmes-classiques/activite/dijkstra/dijkstra
