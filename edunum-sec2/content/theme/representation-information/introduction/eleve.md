@@ -227,3 +227,12 @@ Que signifie informatique ?
 * {f}`Information + pratique`
 ```
 
+```{question} Question 3
+Que signifie nombre binaire ? 
+* {f}`...`
+* {f}`Information + technique.`
+* {v}`Information + automatique.`
+* {f}`Information + pratique`
+```
+
+
