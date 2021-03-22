@@ -106,22 +106,22 @@ crayon et une gomme.
 ```{dropdown} Déroulement
 
 L'enseignant délimite la classe en trois zones:
-1. La **zone A**, contenant les sommets qui ont trouvé la longueur du chemin le plus court depuis le sommet de départ.
-1. La **zone B** contenant les sommets qui ont trouvé une longueur de chemin depuis le sommet de départ, mais pas forcément la plus petite.
-1. La **zone C** contenant les sommets qui n'ont pas trouvé de longueur depuis le sommet de départ.
+1. La <span style="color:green">**zone A**</span>, contenant les sommets qui ont trouvé la longueur du chemin le plus court depuis le sommet de départ.
+1. La <span style="color:blue">**zone B**</span>, contenant les sommets qui ont trouvé une longueur de chemin depuis le sommet de départ, mais pas forcément la plus petite.
+1. La <span style="color:red">**zone C**</span>, contenant les sommets qui n'ont pas trouvé de longueur depuis le sommet de départ.
 
 Les instructions pour les élèves sont les suivantes:
-1. Les élèves commencent tous dans la **zone C**.
-1. Lorsqu'une élève se rend compte qu'elle peut calculer la longueur d'un chemin depuis le sommet de départ, elle écrit sur sa feuille par quel voisin ce chemin passe ainsi que la distance correspondante, et se place dans la **zone B**.
-1. Les élèves de la **zone B** peuvent se voir mutuellement leur feuille
-1. Lorsqu'une élève de la **zone B** se rend compte qu'il existe un chemin plus court que la longueur indiquée sur sa feuille, elle met sa feuille à jour. 
-1. Lorsqu'une élève se rend compte que le chemin indiqué sur sa feuille est le plus court, elle passe dans la **zone A**.
-1. Dans la **zone A**, toutes les feuilles sont clairement visibles. 
+1. Les élèves commencent tous dans la <span style="color:red">**zone C**</span>.
+1. Lorsqu'une élève se rend compte qu'elle peut calculer la longueur d'un chemin depuis le sommet de départ, elle écrit sur sa feuille par quel voisin ce chemin passe ainsi que la distance correspondante, et se place dans la <span style="color:blue">**zone B**</span>.
+1. Les élèves de la <span style="color:blue">**zone B**</span> peuvent se voir mutuellement leur feuille
+1. Lorsqu'une élève de la <span style="color:blue">**zone B**</span> se rend compte qu'il existe un chemin plus court que la longueur indiquée sur sa feuille, elle met sa feuille à jour. 
+1. Lorsqu'une élève se rend compte que le chemin indiqué sur sa feuille est le plus court, elle passe dans la <span style="color:green">**zone A**</span>.
+1. Dans la <span style="color:green">**zone A**</span>, toutes les feuilles sont clairement visibles. 
 
-Si tout se passe bien, les élèves vont se déplacer dans les **zones B et C** en commençant par le sommet de départ. Idéalement, elles doivent se rendre compte des principes de base de l'alogrithme de Dijkstra:
+Si tout se passe bien, les élèves vont se déplacer dans les **<span style="color:blue">zone B</span> et <span style="color:red">C</span>** en commençant par le sommet de départ. Idéalement, elles doivent se rendre compte des principes de base de l'alogrithme de Dijkstra:
 
 1. Si un de leur voisin direct a trouvé une longueur de chemin, il ont également une longueur de chemin en ajoutant la distance qui les sépare.
-1. Si une élève a le chemin de plus court de la **zone B** et que personne ne s'y ajoute (i.e. tous les voisin des personnes dans la **zone A** sont soit dans la **zone A** soit dans la **zone B**), elle peut passer en **zone A**.
+1. Si une élève a le chemin de plus court de la <span style="color:blue">**zone B**</span> et que personne ne s'y ajoute (i.e. tous les voisin des personnes dans la <span style="color:green">**zone A**</span> sont soit dans la <span style="color:green">**zone A**</span> soit dans la <span style="color:blue">**zone B**</span>), elle peut passer en <span style="color:green">**zone A**</span>.
 1. A la fin, en suivant les relations de voisinage, on peut reconstituer le chemin le plus court. 
 ```
 ````
@@ -137,13 +137,13 @@ L'enseignant formalise l'algorithme au tableau avec l'aide des élèves. Pour ai
 ````{panels}
 :column: col-lg
 ```{dropdown} Formalisation
-1. Mettre le sommet de départ (S) en rouge, sa distance au sommet de départ est 0. 
-1. Mettre en vert tous les sommets voisins de ce sommet S qui sont en blanc et indiquer en vert leur distance au sommet de départ en passant par ce sommet S et indiquer le chemin à ce sommet S par une flèche verte.
-1. Vérifier tous les voisins de ce sommet (S) qui sont en vert si leur distance au sommet de départ est plus petite en passant par ce sommet. Si c'est le cas ajuster leur distance au sommet de départ et leur flèche pour qu'elle pointe vers le sommet S.
-1. Prendre le sommet vert avec la plus petite distance au sommet de départ et le mettre en rouge avec sa distance et sa flèche. Ce sommet est le nouveau sommet S.
+1. Mettre le <span style="color:red">sommet de départ (S)</span> en rouge, sa distance au sommet de départ est 0. 
+1. Mettre en vert tous les <span style="color:green">sommets voisins de ce sommet (S)</span> qui sont en blanc et indiquer en vert leur <span style="color:green">distance au sommet de départ</span> en passant par ce sommet S et indiquer le chemin à ce sommet S par une <span style="color:green">flèche verte</span>.
+1. Vérifier tous les <span style="color:green">voisins de ce sommet (S)</span> qui sont en vert si leur <span style="color:blue">distance au sommet de départ est plus petite en passant par ce sommet</span>. Si c'est le cas ajuster leur distance au sommet de départ et leur flèche pour qu'elle pointe vers le sommet S.
+1. Prendre le <span style="color:green">sommet vert</span> avec la plus petite distance au sommet de départ et le <span style="color:red">mettre en rouge</span> avec sa distance et sa flèche. Ce sommet est le nouveau sommet S.
 1. Si ce sommet S est le sommet d'arrivée, le plus court chemin est obtenu en suivant les flèches, sinon retourner au point 2.
 
-![step123](figs/step123.gif)
+![step123](figs/steps.gif)
 ```
 ````
 
