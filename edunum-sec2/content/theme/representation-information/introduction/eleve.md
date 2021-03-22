@@ -234,12 +234,3 @@ Que signifie informatique ?
 * {v}`Information + automatique.`
 * {f}`Information + pratique`
 ```
-
-```{question} Question 3
-Combien de nombres peut-on représenter avec 4 bits ? 
-* {f}`2^4`
-* {f}`4^2`
-* {v}`2 x 4`
-* {f}`4^4`
-```
-
