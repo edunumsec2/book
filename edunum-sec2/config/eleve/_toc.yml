@@ -78,18 +78,17 @@
   - file: content/enjeux/bibliographie
 
 
-#- part: Démos et divers
-#  numbered: false
-#  chapters:
-#  - file: content/demostests/glossaire
-# - file: content/demostests/edito/liens
-#  - file: content/demostests/edito/referencesart
-#  - file: content/demostests/edito/extensions
-#  - file: content/demostests/edito/Redaction-Bonnes-pratiques
-#  - file: content/demostests/art/histoireart
-#  - file: content/demostests/edito/relectures
-#  - file: content/demostests/edito/repinfo1test
-#  - file: content/theme/architecture-ordinateurs/introductiontest
+- part: Démos et divers
+  numbered: false
+  chapters:
+  - file: content/demostests/glossaire
+  - file: content/demostests/edito/liens
+  # - file: content/demostests/edito/referencesart
+  - file: content/demostests/edito/extensions
+  - file: content/demostests/edito/Redaction-Bonnes-pratiques
+  - file: content/demostests/art/histoireart
+  # - file: content/demostests/edito/repinfo1test
+  - file: content/theme/architecture-ordinateurs/introductiontest
 
 - part: README
   numbered: false
