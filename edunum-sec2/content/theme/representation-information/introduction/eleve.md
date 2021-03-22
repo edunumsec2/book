@@ -226,3 +226,11 @@ Que signifie informatique ?
 * {v}`Information + automatique.`
 * {f}`Information + pratique`
 ```
+
+```{question} Question 2
+Que signifie informatique ? 
+* {f}`Information + quantique.`
+* {f}`Information + technique.`
+* {v}`Information + automatique.`
+* {f}`Information + pratique`
+```
