@@ -1,9 +1,10 @@
 p {
-    font-family: 'Poppins', sans-serif; 
+/*     font-family: 'Poppins', sans-serif; 
+ */    
     text-align: justify;
     font-size: 14px;
     color: #000000;
-    font-weight: 100;
+    font-weight: 350;
     line-height: 1.5;
 }
 
@@ -13,7 +14,7 @@ strong {
 
 h1 {
 
-    font-family: 'Poppins', sans-serif; 
+  /*   font-family: 'Poppins', sans-serif;  */
     font-size: 35px;
     color: #000000;
     font-weight: 400;
@@ -23,7 +24,8 @@ h1 {
 
 h2 {
     
-    font-family: 'Poppins', sans-serif; 
+/*     font-family: 'Poppins', sans-serif; 
+ */    
     font-size: 28px;
     color: #000000;
     font-weight: 400;
