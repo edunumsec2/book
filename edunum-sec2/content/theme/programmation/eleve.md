@@ -1,4 +1,4 @@
-Introduction à la programmation
+Intro à la programmation
 ===============================
  
 ## Le but  

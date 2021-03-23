@@ -53,8 +53,6 @@ L’histoire de l’humanité est marquée par la création de multiples systèm
 ```
 ````
 
-
-
 ````{panels}
 :column: col-lg
 📱 Les multiples visages de l'information

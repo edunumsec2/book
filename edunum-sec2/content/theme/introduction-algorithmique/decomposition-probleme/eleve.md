@@ -138,7 +138,7 @@ X ← X – Y
 
 
 
-::::{admonition,note} Ai-je compris ?
+::::{admonition,hint} Ai-je compris ?
 
 1. Je connais la différence entre un algorithme et un programme.
 

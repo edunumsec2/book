@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Informatique discipline obligatoire
+title: Informatique au Gymnase
 author: Groupe de travail DGEP, EPFL, HEP, UNIL
 logo: logo1.svg
 exclude_patterns: ['**/maitre.md', 'content/skel/**']
