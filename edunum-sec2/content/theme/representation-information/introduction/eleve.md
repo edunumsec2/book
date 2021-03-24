@@ -1,7 +1,7 @@
 
 # Introduction
 
-Dans ce chapitre nous allons nous concentrer sur la représentation de l'information de façon à ce qu'un ordinateur puisse la traiter automatiquement.  
+Dans ce chapitre nous allons nous concentrer sur la {term}`représentation de l'information` de façon à ce qu'un {term}`ordinateur` puisse la traiter automatiquement.  
 
 ````{panels}
 :column: col-lg
@@ -10,13 +10,13 @@ Dans ce chapitre nous allons nous concentrer sur la représentation de l'informa
 Le mot **informatique** est la concaténation de **information** et **automatique**.
 ````
 
-En informatique, l'information est un élément de connaissance (texte, image, son, etc.) susceptible d'être *numérisé*, *stocké* ou *transmis* à l'aide d'un support et d'un mode de codification normalisé.
+En informatique, l'information est un élément de connaissance (texte, image, son, etc.) susceptible d'être {term}`numérisé`, {term}`stocké` ou {term}`transmis` à l'aide d'un support et d'un mode de codification normalisé.
 
-Une des questions centrales de chapitre est d'identifier les caractéristiques de la transformation appliquée au réel donnant une représentation suffisamment précise pour permettre aux ordinateurs de la traiter de manière fiable.
+Une des questions centrales de chapitre est d'identifier les caractéristiques de la transformation appliquée au réel donnant une représentation suffisamment précise pour permettre aux ordinateurs de la {term}`traiter` de manière fiable.
 
 ## Systèmes de communication
 
-L’histoire de l’humanité est marquée par la création de multiples systèmes pour communiquer. Depuis les sumériens qui utilisaient des pictogrammes et l’écriture cunéiforme, en passant par les égyptiens et leurs hiéroglyphes, l’écriture crétoise, les chinois et leurs idéogrammes pour arriver aux symboles de nos alphabets actuels, l’homme n’a eu de cesse de mettre au point des système pour représenter l’information et la transmettre.
+L’histoire de l’humanité est marquée par la création de multiples {term}`systèmes de communication`. Depuis les [sumériens](https://fr.wikipedia.org/wiki/Sum%C3%A9rien) qui utilisaient des {term}`pictogrammes` et [l’écriture cunéiforme](https://fr.wikipedia.org/wiki/Cun%C3%A9iforme), en passant par les égyptiens et leurs [hiéroglyphes](https://fr.wikipedia.org/wiki/%C3%89criture_hi%C3%A9roglyphique_%C3%A9gyptienne), l’écriture [crétoise](https://fr.wikipedia.org/wiki/Hi%C3%A9roglyphes_cr%C3%A9tois), les chinois et leurs [idéogrammes](https://fr.wikipedia.org/wiki/Caract%C3%A8res_chinois) pour arriver aux symboles de nos alphabets actuels, l’homme n’a eu de cesse de mettre au point des système pour {term}`représenter l’information` et la {term}`transmettre`.
 
 ````{tabbed} Sumérien
 ```{image} introduction/cuneiform.jpg
@@ -86,13 +86,13 @@ La beauté de l'informatique moderne, c'est que grâce à l'électricité et sa 
 ```
 ````
 
-On trouve des exemples célèbres et bien documentés de systèmes de communication depuis l'Antiquité Grecque.
+On trouve des exemples célèbres et bien documentés de {term}`systèmes de communication` depuis l'Antiquité Grecque.
 
 ### Le carré de Polybe
 
-Utilisé en Grèce Antique pour transmettre des messages entre cités voisines, ce système utilise des torches enflammées en guise de signaux. 
+Utilisé en Grèce Antique pour transmettre des messages entre cités voisines, ce système utilise des torches enflammées en guise de {term}`signaux`. 
 
-Cinq torches "à gauche", cinq torches "à droite" séparées par un espace suffisamment grand pour être identifiables à longue distance. Une torche peut être soit allumée, soit éteinte. Le nombre de torches allumées à gauche, de 1 à 5, représente les colonnes, le nombre de torches allumées à droite représente les lignes. 
+Cinq torches "à gauche", cinq torches "à droite", séparées par un espace suffisamment grand pour être identifiables à longue distance. Une torche peut être soit allumée, soit éteinte. Le nombre de torches allumées à gauche, de 1 à 5, représente les colonnes, le nombre de torches allumées à droite représente les lignes. 
 
 ````{figure} introduction/polybe.png
 ---
@@ -112,9 +112,9 @@ Dans l'exemple ci-dessus, on utilise les lettres de l'alphabet, mais il est plus
 
 ### Le télégraphe de Chappe
 
-Grâce à l'invention du téléscope au XVIIème siècle, les distances avec lesquelles les villes pouvaient communiquer entre elles ont largement diminué. L'information a commencé à circuler à une vitesse étonnante. 
+Grâce à l'invention du [téléscope](https://fr.wikipedia.org/wiki/T%C3%A9lescope) au XVIIème siècle, les distances avec lesquelles les villes pouvaient communiquer entre elles ont largement diminué. L'information a commencé à circuler à une vitesse étonnante. 
 
-Claude Chappe, inventeur français, développe en 1794 un télégraphe capable de relier des villes entre elles sur plusieurs dizaines de kilomètres grâce à un système de bras mobiles, qui ressemblent aux signaux que pourrait faire un être humain sur le tarmac d'un aéroport. 
+[Claude Chappe](https://fr.wikipedia.org/wiki/Claude_Chappe), inventeur français, développe en 1794 un {term}`télégraphe` capable de relier des villes entre elles sur plusieurs dizaines de kilomètres grâce à un système de bras mobiles, qui ressemblent aux signaux que pourrait faire un être humain sur le tarmac d'un aéroport. 
 
 ````{figure} introduction/chappe.jpeg
 ---
@@ -137,8 +137,9 @@ Le piratage a été rendu possible par la corruption d'un agent télégraphique 
 
 ### Le Morse
 
-Grâce à la découverte de l'électricité au début du XIXème siècle, et les améliorations techniques faites pour la capturer et la transmettre, on a pu utiliser le réseau électrique pour envoyer des messages. En 1832, nait le code Morse, qui s'impose rapidement comme un standard de communication. 
-Bien sûr, le morse peut être utilisé aussi avec des signaux lumineux, ou sonores, mais la plupart du temps il est utilisé sur les lignes électriques qui se développent à l'époque. 
+Grâce à la découverte de l'électricité au début du XIXème siècle, et les améliorations techniques faites pour la capturer et la transmettre, on a pu utiliser le réseau électrique pour envoyer des messages. En 1832, nait le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), qui s'impose rapidement comme un standard de communication. 
+
+Bien sûr, le Morse peut être utilisé aussi avec des signaux lumineux, ou sonores, mais la plupart du temps il est utilisé sur les lignes électriques qui se développent à l'époque. 
 
 [Vous trouverez ici](https://morsedecoder.com/) un traducteur du language naturel vers le Morse. 
 
@@ -163,21 +164,21 @@ Amusez-vous avec votre assistant vocal en lui demandant par exemple : "Salut Sir
 :column: col-lg
 🎓 Raccourcis en Morse
 ^^^
-À l'époque où les transmissions télégraphiques en code morse sont payées à l'unité d'information, donc la lettre, des *codex* spécifiques sont développés par les utilisateurs pour utiliser le moins de caractères possibles. C'est exactement la même situation qui s'est produite avec l'arrivée des sms dans les années 2000, où les utilisateurs payaient au caractère. Aujourd'hui, même s'il est rare de payer à l'unité d'information, ce genre de raccourcis existent encore, mais surtout pour un avantage de vitesse. 
+À l'époque où les transmissions télégraphiques en code Morse sont payées à l'unité d'information, donc la lettre, des {term}`codex` spécifiques sont développés par les utilisateurs pour utiliser le moins de caractères possibles. C'est exactement la même situation qui s'est produite avec l'arrivée des [SMS](https://fr.wikipedia.org/wiki/Short_Message_Service) dans les années 2000, où les utilisateurs payaient au caractère. Aujourd'hui, même s'il est rare de payer à l'unité d'information, ce genre de raccourcis existent encore, mais surtout pour un avantage de vitesse. 
 ````{toggle}
 ```{image} introduction/morsecodeshort.png
 :height: 350px
 :width: 300px
 ```
-Le désavantage de ces **codex d'abbréviations** est leur *transférabilité*. Comment savoir quel codex est utilisé ? Et surtout : comment faire pour que tout le monde s'accorde sur le codex ? 
+Le désavantage de ces {term}`codex` d'abbréviations est leur faible degré de {term}`standardisation`. Comment savoir quel codex est utilisé ? Et surtout : comment faire pour que tout le monde s'accorde sur le codex ? 
 
-La réponse à cette question est l'apport le plus essentiel de l'introduction du code binaire, et des standards de représentation de l'information qui l'ont suivi. 
+La réponse à cette question est l'apport le plus essentiel de l'introduction du {term}`code binaire`, et des standards de représentation de l'information qui l'ont suivi. 
 ````
 `````
 
-Si vous observez le code Morse, vous remarquerez que les signaux utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet. 
+Si vous observez le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), vous remarquerez que les {term}`signaux` utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet. 
 
-Ceci est une extension de la réponse à la question ci-dessus, puisqu'il est logique de coder les lettres les plus fréquentes avec les signaux les plus courts. 
+Ceci est une extension de la réponse à la question ci-dessus, puisqu'il est logique de coder les lettres les plus fréquentes avec les {term}`signaux` les plus courts. 
 
 ```{figure} introduction/letterdistribution.png
 ---
@@ -190,13 +191,13 @@ Ceci est une représentation de la fréquence moyenne de distribution des lettre
 
 ### Le binaire
 
-À partir du moment où le Morse a été inventé comme système de codage et de transmission de l'information par l'électricité, il ne manquait plus que quelques éléments pour commencer à construire les ordinateurs.
+À partir du moment où le [Morse](https://fr.wikipedia.org/wiki/Code_Morse_international) a été inventé comme système de {term}`codage` et de {term}`transmission` de l'information par l'électricité, il ne manquait plus que quelques éléments pour commencer à construire les {term}`ordinateurs`.
 
-Une pièce technologique, qui permettrait de "stocker" pour ainsi dire cette information : le transistor (cf : chapitre "architecture des ordinateurs").
+Une pièce technologique, qui permettrait de {term}`stocker` pour ainsi dire cette information : le {term}`transistor` (cf : chapitre "architecture des ordinateurs").
 
-Un *vocabulaire* plus élaboré que le Morse pour pouvoir représenter tous les types d'informations possibles à partir d'une alternative entre deux états : courant ou pas courant ; allumé ou éteint ; vrai ou faux ; 1 ou 0.  
+Un {term}`code` plus élaboré que le Morse pour pouvoir représenter tous les types d'informations possibles à partir d'une alternative entre deux états : courant ou pas courant ; allumé ou éteint ; vrai ou faux ; 1 ou 0.  
 
-Ce *vocabulaire* est le **code binaire**. Il permet, en utilisant uniquement des 0 et des 1, de représenter n'importe quel type d'information : des chiffres, du texte, des images, du son, des vidéos, etc. 
+Ce {term}`code` est le {term}`code binaire`. Il permet, en utilisant uniquement des 0 et des 1, de représenter n'importe quel type d'information : des chiffres, du texte, des images, du son, des vidéos, etc. 
 
 ````{figure} introduction/binary.gif
 ---
@@ -204,7 +205,7 @@ height: 450px
 width: 350px
 name: fig-binary
 ---
-Dans le code ASCII, chaque lettre de l'alphabet est codé sur 8 bits. 
+Dans le code [ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange), chaque lettre de l'alphabet est codée sur 8 bits. 
 ````
 
 ### Auto-contrôle

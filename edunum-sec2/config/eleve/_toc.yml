@@ -82,6 +82,7 @@
   numbered: false
   chapters:
   - file: content/demostests/glossaire
+  - file: content/demostests/glossaire1
   - file: content/demostests/edito/liens
   # - file: content/demostests/edito/referencesart
   - file: content/demostests/edito/extensions
