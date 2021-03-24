@@ -1,7 +1,7 @@
 (syntaxemyst)=
 # Syntaxe MyST
 
-````{admonition} Important
+````{admonition} Avertissement
 :class: warning
 - Ce document est coupé en deux : **Définition des standards** / **Éléments de syntaxe**
 - Un document **Extensions** précise la syntaxe utilisée dans les extensions du MyST qui ont été créées spécifiquement pour ces ressources (exercice, éditeur Python, etc.). 
@@ -96,26 +96,26 @@ Les blocs {admonition} seraient utilisés pour indiquer des éléments extérieu
 **Exemples** : 
 
 `````{tabbed} Aperçu
-```{admonition} Attention aux dépendances
+```{admonition} Important
 :class: caution
 N'oubliez pas d'installer la librairie PyGame si vous souhaitez réaliser les exercices de ce chapitre.
 ```
 
-```{admonition} Fiche complémentaire
-:class: note
+```{admonition} Avertissement
+:class: warning
 Ce document ne traite pas d'un sujet essentiel au plan d'études. C'est une piste de travail pour ceux qui souhaitent aller plus loin.
 ```
 `````
 
 `````{tabbed} Code
 ````{code-block} markdown
-```{admonition} Attention aux dépendances
+```{admonition} Important
 :class: caution
 N'oubliez pas d'installer la librairie PyGame si vous souhaitez réaliser les exercices de ce chapitre.
 ```
 
-```{admonition} Fiche complémentaire
-:class: note
+```{admonition} Avertissement
+:class: warning
 Ce document ne traite pas d'un sujet essentiel au plan d'études. C'est une piste de travail pour ceux qui souhaitent aller plus loin.
 ```
 ````
@@ -158,16 +158,16 @@ Ceci est un gif inutile (mais une légende super utile)
 ### Déclaration d'un encart {admonition}
 
 `````{tabbed} Aperçu
-```{admonition} Mon titre
-:class: tip
+```{admonition} Aller plus loin
+:class: note
 Mon contenu
 ```
 `````
 
 `````{tabbed} Code
 ````{code-block} markdown
-```{admonition} Mon titre
-:class: tip
+```{admonition} Aller plus loin
+:class: note
 Mon contenu
 ```
 ````
@@ -179,57 +179,49 @@ Mon contenu
 * les styles `:class:` disponibles sont : `note, warning, tip, caution, attention, danger, error, hint`.
 
 `````{tabbed} Aperçu
-```{admonition} Mon titre
+```{admonition} Aller plus loin
 :class: note
-Mon contenu
+Contenus qui suggèrent des prolongements. 
 ```
-```{admonition} Mon titre
-:class: caution
-Mon contenu
-```
-```{admonition} Mon titre
+```{admonition} Anecdote
 :class: attention
-Mon contenu
+Contenus qui illustrent un concept par une anecdote (historique, politique, faits-divers, liens avec l'actualité, etc.).
 ```
-```{admonition} Mon titre
-:class: danger
-Mon contenu
-```
-```{admonition} Mon titre
-:class: error
-Mon contenu
-```
-```{admonition} Mon titre
+```{admonition} Micro-activité
 :class: hint
-Mon contenu
+Contenus qui servent "d'exercices-exemples", c'est à dire pas une série d'exercices mais plutôt l'illustration d'un concept technique par un micro-exercice. On pourrait appeler ça des "micro-activités".
+```
+```{admonition} Important
+:class: caution
+Contenus qui décrivent un aspect technique, qui n'a pas de rapport avec la matière directement mais avec l'environnement, la plateforme, ou du matériel nécessaire pour suivre un cours une activité.  
+```
+```{admonition} Avertissement
+:class: danger
+Contenus liés à des avertissements de maintenance du site, des problèmes rencontrés, ou tout autre mise en garde importante. 
 ```
 `````
 
 `````{tabbed} Code
 ````{code-block} markdown
-```{admonition} Mon titre
+```{admonition} Aller plus loin
 :class: note
-Mon contenu
+Contenus qui suggèrent des prolongements. 
 ```
-```{admonition} Mon titre
-:class: caution
-Mon contenu
-```
-```{admonition} Mon titre
+```{admonition} Anecdote
 :class: attention
-Mon contenu
+Contenus qui illustrent un concept par une anecdote (historique, politique, faits-divers, liens avec l'actualité, etc.).
 ```
-```{admonition} Mon titre
-:class: danger
-Mon contenu
-```
-```{admonition} Mon titre
-:class: error
-Mon contenu
-```
-```{admonition} Mon titre
+```{admonition} Micro-activité
 :class: hint
-Mon contenu
+Contenus qui servent "d'exercices-exemples", c'est à dire pas une série d'exercices mais plutôt l'illustration d'un concept technique par un micro-exercice. On pourrait appeler ça des "micro-activités".
+```
+```{admonition} Important
+:class: caution
+Contenus qui décrivent un aspect technique, qui n'a pas de rapport avec la matière directement mais avec l'environnement, la plateforme, ou du matériel nécessaire pour suivre un cours une activité.  
+```
+```{admonition} Avertissement
+:class: danger
+Contenus liés à des avertissements de maintenance du site, des problèmes rencontrés, ou tout autre mise en garde importante. 
 ```
 ````
 `````

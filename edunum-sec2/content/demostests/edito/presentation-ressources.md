@@ -233,7 +233,7 @@ Les documents originaux des ressources sont écrits dans un language appelé [**
 Une version allégée de la syntaxe est disponible {ref}`ici <syntaxemyst>`.
 
 ````{admonition} Important
-:class: note
+:class: caution
 La version de MyST utilisée dans ce projet est celle qui a été adaptée pour le projet [jupyter{book}](https://jupyterbook.org/intro.html). 
 ````
 

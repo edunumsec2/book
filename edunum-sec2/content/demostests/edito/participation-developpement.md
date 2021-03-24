@@ -67,9 +67,10 @@ Ce chapitre s'adresse aux personnes qui souhaitent intervenir sur les fichiers s
       ```
 
 
-::::{caution} Mises à jour
-N'oubliez pas de contrôler que les mises à jour des différents environnements et extensions soient toujours faites. 
-::::
+```{admonition} Important
+:class: caution
+N'oubliez pas de contrôler que les **mises à jour** des différents environnements et extensions soient toujours faites. 
+```
 
 ### Build
 

@@ -1,6 +1,7 @@
 # Marche à suivre relectures
 
 ````{admonition} Important
+:class: caution
 Ceci est une marche à suivre pour suggérer des modifications des ressources en créant des *issues* Github, directement dans VScode.
 ````
 (sidentifier)=

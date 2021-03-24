@@ -1,7 +1,7 @@
 # Exemples d'utilisation des ressources
 
 ```{admonition} Important
-:class: note
+:class: caution
 Ce chapitre présente des parcours utilisateurs qui servent à exemplifier différents scénarios d'utilisation des ressources. Il va de soi que ces exemples ne sont pas prescriptifs. Libre à vous d'en inventer d'autres.
 ```
 
