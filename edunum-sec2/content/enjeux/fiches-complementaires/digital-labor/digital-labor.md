@@ -59,13 +59,13 @@ Le terme *digital labor* ou "travail du clic" apparait au début des années 201
 * **Le micro-travail réalisé sur des plateformes** **(micro-rémunéré)**
 
 
-  Les entreprises peuvent aussi rémunérer des travailleurs pour des micro-tâches effectuées en ligne. Il s'agit le plus souvent d'individus qui réalisent de petites opérations (clics sur une image, saisie de données, transcriptions) au travers de plateformes numériques, telle que Amazon Mechanical Turk (voir ci-dessous). Ces tâches sont nécessaire pour entraîner les systèmes d'intelligence artificielle.
+  Les entreprises peuvent aussi rémunérer des travailleurs pour des micro-tâches effectuées en ligne. Il s'agit le plus souvent d'individus qui réalisent de petites opérations (clics sur une image, saisie de données, transcriptions) au travers de plateformes numériques, telle que Amazon Mechanical Turk (voir ci-dessous). Ces tâches sont nécessaires pour entraîner les systèmes d'intelligence artificielle.
   
   <br>
 
 * **Le travail effectué par les internautes** **(non-rémunéré)**
 
-  Lorsque l'on regarde une vidéo ou *like* une publication sur Facebook, il s'agit d'activités qui génèrent des données concernant notre profil et notre comportement. Celles-ci sont ensuite analysées afin de vendre à des entreprises des audiences publicitaires ciblées.  Si l'accès à Facebook est gratuit, les internautes fournissent un travail en échange : ils produisent des données. Ce travail est effectué souvent sans s'en rendre compte, car il se situe dans un environnement ludique.
+  Lorsque l'on regarde une vidéo ou *like* une publication sur Facebook, il s'agit d'activités qui génèrent des données concernant notre profil et notre comportement. Celles-ci sont ensuite analysées afin de vendre à des entreprises des audiences publicitaires ciblées. Si l'accès à Facebook est gratuit, les internautes fournissent un travail en échange : ils produisent des données. A noter toutefois que la notion de "travail" peut, dans ce cas-ci, être discutée.
   <br>
 
 Le *digital labor* s'inscrit dans le principe du *crowdsourcing*, qui consiste à faire appel à une "foule" (*crowd*) d'internautes, rémunérés ou non, pour réaliser différents types de tâches.
@@ -85,7 +85,16 @@ Le *digital labor* s'inscrit dans le principe du *crowdsourcing*, qui consiste �
 Depuis 2005, le géant du e-commerce Amazon possède une plateforme qui met en relation des entreprises avec des personnes disposées à réaliser en ligne des tâches simples et répétitives (reconnaissance d’images, saisie de données, classement de mots, etc.) contre une très faible rémunération. Cette plateforme se nomme Amazon Mechanical Turk (ou «Turc mécanique») en référence à un célèbre canular du XVIII<sup>e</sup> siècle. 
 
 
-<img src="https://i.postimg.cc/vmV4LkDG/mecanical-turk.png" style="width:300px; margin-right:20px; margin-bottom:20px" align="left"> <p>Inventé par le Hongrois Wolgang von Kempelen, Le Turc mécanique était un automate habillé à la mode turque. Cette machine jouait particulièrement bien aux échecs et semblait imbattable. Mais c’était une supercherie ! A l’intérieur de l’installation se trouvait un véritable joueur d’échecs qui manipulait le mannequin.</p>
+````{figure} mecanical-turk.png
+---
+height: 350px
+width: 350px
+name: mecanical-turk
+---
+Le Turc mécanique, gravure de Karl Gottlieb von Windisch dans le livre de 1783, *Raison inanimée*.
+````
+
+<p>Inventé par le Hongrois Wolgang von Kempelen, Le Turc mécanique était un automate habillé à la mode turque. Cette machine jouait particulièrement bien aux échecs et semblait imbattable. Mais c’était une supercherie ! A l’intérieur de l’installation se trouvait un véritable joueur d’échecs qui manipulait le mannequin.</p>
 
 Si Amazon se réfère à ce canular, c’est que sa plateforme proposant les services de «micro-travailleurs» (ou *turkers*) fonctionne sur la même illusion. Nous imaginons que des entreprises vendent de puissants logiciels qui réalisent des processus complexes grâce à l’intelligence artificielle alors qu’en réalité, ces systèmes nécessitent l’intervention de nombreux humains dispersés aux quatre coins du monde. Ces derniers sont des travailleurs et travailleuses précaires, invisibles et payés à la tâche, souvent quelques centimes par action. Il s’agit d’une forme de *digital labor*.
 
@@ -94,18 +103,16 @@ Malgré les progrès de l’informatique, l’intelligence artificielle nécessi
 <br>
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-<b>🌍‍ Un nouveau regard sur le Web</b>
+<b>🌍‍Un nouveau regard sur le Web</b>
 </div
 
 <br>
 <br>
 
-La notion de *digital labor* témoigne, de façon plus générale, d’une nouvelle manière de penser le Web social. Jusqu’à la fin des années 1990, dans le champ de la sociologie, le réseau était avant tout envisagé comme un espace permettant l’échange d’informations, la mise en relation d’individus, la création de communautés en ligne dans un esprit participatif non-marchand (👉 *voir fiche «Histoire d’Internet et du Web»*). Les interactions semblaient guidées par des principes de collaboration, de partage et de don. Les observateurs de ces pratiques dressaient donc un tableau élogieux du Web.
+La notion de *digital labor* témoigne, de façon plus générale, d’une nouvelle manière de penser le Web social. Jusqu’à la fin des années 1990, le réseau était avant tout envisagé comme un espace permettant l’échange d’informations, la mise en relation d’individus, la création de communautés en ligne dans un esprit participatif non-marchand (👉 *voir fiche «Histoire d’Internet et du Web»*). Les interactions semblaient guidées par des principes de collaboration, de partage et de don. Les observateurs de ces pratiques dressaient donc un tableau élogieux du Web.
 
 Mais au milieu des années 2000, avec l’arrivée des plateformes, le regard porté sur le Web s’est transformé. La recherche s’est attachée à souligner la transformation du réseau en espace marchand, dominé par quelques acteurs centraux qui tirent profit des pratiques des utilisateurs. Les travaux autour du *digital labor* s’inscrivent dans cette perspective critique.
 
-
-<br>
 
 ## Références
 
@@ -117,7 +124,6 @@ Mais au milieu des années 2000, avec l’arrivée des plateformes, le regard po
 *  [Un article](https://www.letemps.ch/economie/piste-ghost-workers-lintelligence-artificielle) du journal Le Temps sur l'ouvrage deux chercheurs consacré aux "travailleurs fantômes" en Inde et aux Etats-Unis
 * [Le témoignage](https://www.lemediatv.fr/emissions/2020/comment-apple-vous-ecoute-en-permanence-63EZI7ruTIqUPIhk7ZqPHA) d'un ancien "travailleur du clic" qui raconte les dessous du fonctionnement de l'assistant vocal Siri.
 
-<br>
 
 ## Glossaire
 
@@ -128,7 +134,6 @@ Mais au milieu des années 2000, avec l’arrivée des plateformes, le regard po
 * Plateforme
 * Algorithme
 
-<br>
 
 ## Liens thématiques
 
@@ -141,7 +146,6 @@ Mais au milieu des années 2000, avec l’arrivée des plateformes, le regard po
   </div>
 </div>
 
-<br>
 <br>
 
 ## En classe
@@ -185,13 +189,13 @@ c) L'un des témoins dit travailler pour Disneyland Paris alors qu'elle se situe
    ::::{admonition,dropdown} Réponse
    Les entreprises technologiques qui conçoivent l'IA se situent essentiellement dans le monde occidental, tandis que le travail de "petites mains" qui permet son fonctionnement est souvent réalisé en Afrique ou en Asie afin d'en réduire les coûts. Ces activités sont donc largement invisibles pour ceux qui en bénéficient. Le micro-travail reproduit des formes d'inégalités et des asymétries qui existent déjà dans d'autres secteurs industriels. Mais ce travail est encore plus occulté et fragmenté, car il est réalisé essentiellement individuellement et depuis le domicile.
    
-   Par ailleurs, cette nouvelle forme de délocalisation permet d'envisager l'IA non plus commme le remplacement des humains par des machines mais comme le remplacement d'employés qualifiés par des travailleurs du clic précaires et sous-payés.
+   Par ailleurs, cette nouvelle forme de délocalisation permet d'envisager l'IA non plus comme le remplacement des humains par des machines mais comme le remplacement d'employés qualifiés par des "travailleurs du clic" au statut précaire.
    ::::
 
 d ) Pourriez-vous citer des situations lors desquelles nous entrainons les algorithmes, parfois sans nous en rendre compte?
 
    ::::{admonition,dropdown} Quelques éléments de réponse
-  * Toutes nos activités sur les réseaux sociaux : commentaires, *likes*, partage d'images, clic sur un lien ou encore faire défiler le fil d'actualité permettent d'entraîner les algorithmes qui ont pour but de nous suggérer un contenu ciblé.
+  * Toutes nos activités sur les réseaux sociaux : commentaires, *likes*, partage d'images, clic sur un lien ou parcours du fil d'actualité permettent d'entraîner des algorithmes qui ont pour but de nous suggérer un contenu ciblé.
   * Effectuer une requête sur un moteur de recherche.
   * Identifier des lettres ou des objets sur des images pour valider un formulaire. Par exemple, il est souvent demandés aux internautes de reconnaître des objets liés au trafic routier (passage piétons, motos, vélos, etc.). Ces informations servent à entrainer les systèmes de conduite automatisée.
     * Enfin, toute trace laissée par nos activités numériques peut être captée et analysée dans le but d'entrainer des algorithmes.
