@@ -134,8 +134,7 @@ Cette activité implémente dans les faits une version distribuée de l'algorith
 
 L'enseignant formalise l'algorithme au tableau avec l'aide des élèves. Pour aider à la compréhension et à la représentation, il peut utiliser des couleurs pour dénommer les zones et ainsi pouvoir changer les sommets de zone en modifiant la couleur (ou en utilisant un autre moyen graphique). Ici la **zone A** est "rouge", la **zone B** est "verte" et la **zone C** est "blanche" (non marquée). 
 
-````{panels}
-:column: col-lg
+
 ```{dropdown} Formalisation
 1. Mettre le <span style="color:black ">sommet de départ (S)</span> en rouge, sa distance au sommet de départ est 0. 
 1. Mettre en vert tous les <span style="color:green">sommets voisins de ce sommet (S)</span> qui sont en blanc et indiquer en vert leur <span style="color:green">distance au sommet de départ</span> en passant par ce sommet S et indiquer le chemin à ce sommet S par une <span style="color:green">flèche verte</span>.
@@ -145,7 +144,7 @@ L'enseignant formalise l'algorithme au tableau avec l'aide des élèves. Pour ai
 
 ![step123](figs/steps.gif)
 ```
-````
+
 
 
 ## 6. Exemples d'utilisation 
