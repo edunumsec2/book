@@ -27,52 +27,6 @@
   background-color: black; 
   color: white!important;
 }
-h1 {
-    margin-top: 0;
-    font-size: 35px;
-    font-family: "Helvetica";
-    font-weight: 400;
-    text-align: center;
-}
-h2 {
-    margin-top: 0;
-    font-size: 28px;
-    font-family: "Helvetica";
-    text-align: left;
-    font-weight: 400;
-    }
-h3 {
-    margin-top: 0;
-    font-size: 20px;
-    font-family: "Helvetica";
-    text-align: left;
-    font-weight: 400;
-    }
-p {
-    text-align: justify;
-    text-justify: inter-word;
-    font-size: 16px;
-    font-family: "Helvetica";
-    text-align: left;
-    font-weight: 300;
-    line-height:1.5
-    }
-strong {
-    font-weight: 700;
-}
-ul {
-  margin-bottom:20px;
-  padding-left:20px;
-}
-li.simple {
-  margin-bottom:20px;
-  padding-left:20px;
-}
-.boxed {
-  border: 1px solid;$
-  border-color:rgb(96, 105, 219);
-  padding: 10px;
-  } 
 
 </style>
 </head>
@@ -208,7 +162,7 @@ a) Pourquoi parle-t-on de «micro-travail»?
 
 
    ::::{admonition,dropdown} Réponse
-   Il s'agit d'un travail à la tâche, ou plutôt à la micro-tâche. Les travailleurs et travailleuses sont rémunérés quelques centimes par opération. Ils et elles n'ont pas de contrat de travail et n’ont droit à aucune prestation sociale. Il est difficile pour ces travailleurs de prévoir leurs horaires et leur revenu, car aucun nombre d'heures ou de tâches n'est garanti.  Il s’agit donc d’une activité très précaire.
+   Il s'agit d'un travail à la tâche, ou plutôt à la micro-tâche. Les travailleurs et travailleuses sont rémunérés quelques centimes par opération. Ils et elles n'ont pas de contrat de travail et n’ont droit à aucune prestation sociale. Il est difficile pour ces travailleurs de prévoir leurs horaires et leur revenu, car aucun nombre d'heures ou de tâches n'est garanti. Il s’agit donc d’une activité très précaire.
    ::::
 
 
@@ -216,28 +170,29 @@ a) Pourquoi parle-t-on de «micro-travail»?
 b) L'un des témoins dit : "On aide l'algorithme à s'améliorer". En quoi les algorithmes doivent-ils être "améliorés"?
   
    ::::{admonition,dropdown} Réponse
-   Les algorithmes sont souvent pensés comme des processus informatiques qui fonctionnent de façon entièrement automatisée. Cependant, ces témoignages nous montrent qu'ils nécessitent un important travail humain. Certaines opérations qui requièrent une connaissance et une expérience du monde doivent être réalisées au prélable par des humains. Par exemple, dans le cas d'un algorithme destiné à traiter les requêtes d'un moteur de recherche, comprendre le sens ou la dimension implicite d'un mot est difficile pour un système informatique. Ils doivent donc être "entrainés" par des humains au travers de très nombreux exemples.
+   Les algorithmes sont souvent pensés comme des processus informatiques qui fonctionnent de façon entièrement automatisée. Cependant, ces témoignages nous montrent qu'ils nécessitent un important travail humain. Certaines opérations qui requièrent une connaissance et une expérience du monde doivent être réalisées au préalable par des humains. Par exemple, dans le cas d'un algorithme destiné à traiter les requêtes d'un moteur de recherche, comprendre le sens ou la dimension implicite d'un mot est difficile pour un système informatique. Ils doivent donc être "entrainés" par des humains au travers de très nombreux exemples.
    ::::
 
 
 c) Pourquoi la personne qui travaille pour Google témoigne-t-elle à visage caché?
   
    ::::{admonition,dropdown} Réponse
-   L'IA est vendue comme une solution entièrement automatisée. Dans l'imaginaire collectif, les algorithmes sont développés par une équipe d'ingénieurs, puis fonctionnent "tout seuls". Google cherche donc à dissimuler le fait que son système est imparfait et que des "travailleurs du clic" effectuent "à la main" des tâches que l'on vend comme des systèmes automatiques. De plus, les conditions de travail de ces personnes sont particulièrment précaires et on peut imaginer que les entreprises ne souhaitent pas afficher publiquement qu'elles externalisent leur travail et participent à ces pratiques peu éthiques.
+   L'IA est vendue comme une solution entièrement automatisée. Dans l'imaginaire véhiculé est celui d'un monde algorithmes, ces derniers sont développés par une équipe d'ingénieurs, puis fonctionnent "tout seuls". Google cherche donc à dissimuler le fait que son système est imparfait et que des "travailleurs du clic" effectuent "à la main" des tâches que l'on vend comme des systèmes automatiques. De plus, les conditions de travail de ces personnes sont particulièrment précaires et on peut imaginer que les entreprises ne souhaitent pas afficher publiquement qu'elles externalisent leur travail et participent à ces pratiques peu éthiques.
    ::::
 
-c) L'une des femmes qui témoigne dit travailler pour Disneyland Paris alors qu'elle se situe à Madagascar. Pourquoi une entreprise française fait-elle appel à des travailleurs si éloignés? Que nous dit cette situation de la "géographie" de l'IA?
+c) L'un des témoins dit travailler pour Disneyland Paris alors qu'elle se situe à Madagascar. Pourquoi une entreprise française fait-elle appel à des travailleurs si éloignés? Que nous dit cette situation de la "géographie" de l'IA?
   
    ::::{admonition,dropdown} Réponse
-   Les entreprises technologiques qui conçoivent l'IA se situent essentiellement dans le monde occidental, tandis que le travail de "petites mains" qui permet son fonctionnement est réalisé en Afrique ou en Asie afin d'en réduire les coûts. Ces activités sont donc largement invisibles pour ceux qui en bénéficient. Le micro-travail reproduit des formes d'inégalités et des asymétries qui existent déjà dans d'autres secteurs industriels. Mais ce travail est encore plus occulté et fragmenté car il est réalisé le plus souvent individuellement et depuis le domicile.
+   Les entreprises technologiques qui conçoivent l'IA se situent essentiellement dans le monde occidental, tandis que le travail de "petites mains" qui permet son fonctionnement est souvent réalisé en Afrique ou en Asie afin d'en réduire les coûts. Ces activités sont donc largement invisibles pour ceux qui en bénéficient. Le micro-travail reproduit des formes d'inégalités et des asymétries qui existent déjà dans d'autres secteurs industriels. Mais ce travail est encore plus occulté et fragmenté, car il est réalisé essentiellement individuellement et depuis le domicile.
    
    Par ailleurs, cette nouvelle forme de délocalisation permet d'envisager l'IA non plus commme le remplacement des humains par des machines mais comme le remplacement d'employés qualifiés par des travailleurs du clic précaires et sous-payés.
    ::::
 
-d ) Pourriez-vous citer des situations lors desquelles nous travaillons en ligne sans nous en rendre compte?
+d ) Pourriez-vous citer des situations lors desquelles nous entrainons les algorithmes, parfois sans nous en rendre compte?
 
    ::::{admonition,dropdown} Quelques éléments de réponse
-  * Toutes nos activités sur les réseaux sociaux : commentaires, likes, partage d'image, clic sur un lien, et tout simplement faire défiler le fil d'actualité. De ces activités sont extraites de précieuses données pour les plateformes qui vont pouvoir les utiliser pour vendre des audiences ciblées.
-  * Effectuer une requête sur un moteur de recherche
-  * Identifier des lettres ou des objets sur des images pour valider un formulaire. Par exemple, il est souvent demandés aux internautes de reconnaître des objets liés au trafic routier (passage piétons, motos, vélos, etc.). Ces informations servent à entrainer les sytèmes de conduite automatisée.
+  * Toutes nos activités sur les réseaux sociaux : commentaires, *likes*, partage d'images, clic sur un lien ou encore faire défiler le fil d'actualité permettent d'entraîner les algorithmes qui ont pour but de nous suggérer un contenu ciblé.
+  * Effectuer une requête sur un moteur de recherche.
+  * Identifier des lettres ou des objets sur des images pour valider un formulaire. Par exemple, il est souvent demandés aux internautes de reconnaître des objets liés au trafic routier (passage piétons, motos, vélos, etc.). Ces informations servent à entrainer les systèmes de conduite automatisée.
+    * Enfin, toute trace laissée par nos activités numériques peut être captée et analysée dans le but d'entrainer des algorithmes.
    ::::
