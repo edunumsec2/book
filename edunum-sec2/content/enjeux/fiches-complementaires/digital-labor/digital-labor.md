@@ -27,6 +27,13 @@
   background-color: black; 
   color: white!important;
 }
+h1 {
+    margin-top: 0;
+    font-size: 35px;
+    font-family: "Helvetica";
+    font-weight: 400;
+    text-align: center;
+}
 
 </style>
 </head>
@@ -59,18 +66,18 @@ Le terme *digital labor* ou "travail du clic" apparait au début des années 201
 * **Le micro-travail réalisé sur des plateformes** **(micro-rémunéré)**
 
 
-  Les entreprises peuvent aussi rémunérer des travailleurs pour des micro-tâches effectuées en ligne. Il s'agit le plus souvent d'individus qui réalisent de petites opérations (clics sur une image, saisie de données, transcriptions) au travers de plateformes numériques, telle que Amazon Mechanical Turk (voir ci-dessous). Ces tâches sont nécessaires pour entraîner les systèmes d'intelligence artificielle.
+  Les entreprises peuvent aussi faire appel à des travailleurs pour des micro-tâches effectuées en ligne. Il s'agit le plus souvent d'individus qui réalisent de petites opérations (clics sur une image, saisie de données, transcriptions) au travers de plateformes numériques, telle que Amazon Mechanical Turk (voir ci-dessous). Ces tâches sont nécessaires pour entraîner les systèmes d'intelligence artificielle.
   
   <br>
 
 * **Le travail effectué par les internautes** **(non-rémunéré)**
 
-  Lorsque l'on regarde une vidéo ou *like* une publication sur Facebook, il s'agit d'activités qui génèrent des données concernant notre profil et notre comportement. Celles-ci sont ensuite analysées afin de vendre à des entreprises des audiences publicitaires ciblées. Si l'accès à Facebook est gratuit, les internautes fournissent un travail en échange : ils produisent des données. A noter toutefois que la notion de "travail" peut, dans ce cas-ci, être discutée.
+  Lorsque l'on interagit avec des plateformes en ligne, des applications mobiles ou encore des objets connectés, nous laissons des traces concernant notre profil et notre comportement. Celles-ci peuvent ensuite être analysées et valorisées afin d'améliorer un service ou de vendre à des entreprises des audiences publicitaires ciblées. Si l'accès à ces plateformes est généralement gratuit, les internautes fournissent quelque chose en échange : ils produisent des données. A noter toutefois que la notion de "travail" peut, dans ce cas-ci, être discutée.
   <br>
 
 Le *digital labor* s'inscrit dans le principe du *crowdsourcing*, qui consiste à faire appel à une "foule" (*crowd*) d'internautes, rémunérés ou non, pour réaliser différents types de tâches.
 
-<p id="footnote-1"; style="font-size:12px" >[1] Selon la classification du sociologue Antonio Casilli. Voir références.</p>
+<p id="footnote-1"; style="font-size:14px" >[1] Selon la classification du sociologue Antonio Casilli. Voir références.</p>
 
 
 
@@ -94,7 +101,7 @@ name: mecanical-turk
 Le Turc mécanique, gravure de Karl Gottlieb von Windisch dans le livre de 1783, *Raison inanimée*.
 ````
 
-<p>Inventé par le Hongrois Wolgang von Kempelen, Le Turc mécanique était un automate habillé à la mode turque. Cette machine jouait particulièrement bien aux échecs et semblait imbattable. Mais c’était une supercherie ! A l’intérieur de l’installation se trouvait un véritable joueur d’échecs qui manipulait le mannequin.</p>
+<p>Inventé par le Hongrois Wolgang von Kempelen, le Turc mécanique était un automate habillé à la mode turque. Cette machine jouait particulièrement bien aux échecs et semblait imbattable. Mais c’était une supercherie ! A l’intérieur de l’installation se trouvait un véritable joueur d’échecs qui manipulait le mannequin.</p>
 
 Si Amazon se réfère à ce canular, c’est que sa plateforme proposant les services de «micro-travailleurs» (ou *turkers*) fonctionne sur la même illusion. Nous imaginons que des entreprises vendent de puissants logiciels qui réalisent des processus complexes grâce à l’intelligence artificielle alors qu’en réalité, ces systèmes nécessitent l’intervention de nombreux humains dispersés aux quatre coins du monde. Ces derniers sont des travailleurs et travailleuses précaires, invisibles et payés à la tâche, souvent quelques centimes par action. Il s’agit d’une forme de *digital labor*.
 
@@ -103,7 +110,7 @@ Malgré les progrès de l’informatique, l’intelligence artificielle nécessi
 <br>
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-<b>🌍‍Un nouveau regard sur le Web</b>
+<b>🌍 ‍Un nouveau regard sur le Web</b>
 </div
 
 <br>
@@ -157,7 +164,6 @@ Diffuser l’épisode [« Micro-travailler plus pour micro-gagner moins»](https
  <a href="https://www.youtube.com/watch?v=Y8URdO7mDfg"><img src="lesinvisibles.png" width="600"/></a>
 
 <br>
-<br>
 
 Suite à la diffusion, poser les questions suivantes :
 
@@ -166,7 +172,7 @@ a) Pourquoi parle-t-on de «micro-travail»?
 
 
    ::::{admonition,dropdown} Réponse
-   Il s'agit d'un travail à la tâche, ou plutôt à la micro-tâche. Les travailleurs et travailleuses sont rémunérés quelques centimes par opération. Ils et elles n'ont pas de contrat de travail et n’ont droit à aucune prestation sociale. Il est difficile pour ces travailleurs de prévoir leurs horaires et leur revenu, car aucun nombre d'heures ou de tâches n'est garanti. Il s’agit donc d’une activité très précaire.
+   Il s'agit d'un travail à la tâche, ou plutôt à la micro-tâche. Les travailleurs et travailleuses sont rémunérés quelques centimes par opération. Ils et elles n'ont pas de contrat de travail et n’ont droit à aucune prestation sociale. Il leur est difficile de prévoir leurs horaires et d'estimer leur revenu, car aucun nombre d'heures ou de tâches n'est garanti. Il s’agit donc d’une activité très précaire.
    ::::
 
 
@@ -181,15 +187,15 @@ b) L'un des témoins dit : "On aide l'algorithme à s'améliorer". En quoi les a
 c) Pourquoi la personne qui travaille pour Google témoigne-t-elle à visage caché?
   
    ::::{admonition,dropdown} Réponse
-   L'IA est vendue comme une solution entièrement automatisée. Dans l'imaginaire véhiculé est celui d'un monde algorithmes, ces derniers sont développés par une équipe d'ingénieurs, puis fonctionnent "tout seuls". Google cherche donc à dissimuler le fait que son système est imparfait et que des "travailleurs du clic" effectuent "à la main" des tâches que l'on vend comme des systèmes automatiques. De plus, les conditions de travail de ces personnes sont particulièrment précaires et on peut imaginer que les entreprises ne souhaitent pas afficher publiquement qu'elles externalisent leur travail et participent à ces pratiques peu éthiques.
+   L'IA est vendue comme une solution entièrement automatisée. Dans l'imaginaire véhiculé par les concepteurs, les algorithmes sont développés par une équipe d'ingénieurs, puis fonctionnent "tout seuls". Google cherche donc à dissimuler le fait que son système est imparfait et que des "travailleurs du clic" effectuent "à la main" des tâches que l'on vend comme des systèmes automatiques. De plus, les conditions de travail de ces personnes sont particulièrement précaires et on peut imaginer que les entreprises ne souhaitent pas afficher publiquement qu'elles externalisent leur travail et participent à ces pratiques peu éthiques.
    ::::
 
 c) L'un des témoins dit travailler pour Disneyland Paris alors qu'elle se situe à Madagascar. Pourquoi une entreprise française fait-elle appel à des travailleurs si éloignés? Que nous dit cette situation de la "géographie" de l'IA?
   
    ::::{admonition,dropdown} Réponse
-   Les entreprises technologiques qui conçoivent l'IA se situent essentiellement dans le monde occidental, tandis que le travail de "petites mains" qui permet son fonctionnement est souvent réalisé en Afrique ou en Asie afin d'en réduire les coûts. Ces activités sont donc largement invisibles pour ceux qui en bénéficient. Le micro-travail reproduit des formes d'inégalités et des asymétries qui existent déjà dans d'autres secteurs industriels. Mais ce travail est encore plus occulté et fragmenté, car il est réalisé essentiellement individuellement et depuis le domicile.
+   Les entreprises technologiques qui conçoivent l'IA se situent essentiellement dans le monde occidental, tandis que le travail de "petites mains" qui permet son fonctionnement est souvent réalisé en Afrique ou en Asie afin d'en réduire les coûts. Ces activités sont donc largement invisibles pour ceux qui en bénéficient. Le micro-travail reproduit des formes d'inégalités et des asymétries qui existent déjà dans d'autres secteurs industriels. Mais ce travail est encore plus occulté et fragmenté, car il est réalisé essentiellement individuellement et à domicile.
    
-   Par ailleurs, cette nouvelle forme de délocalisation permet d'envisager l'IA non plus comme le remplacement des humains par des machines mais comme le remplacement d'employés qualifiés par des "travailleurs du clic" au statut précaire.
+   Par ailleurs, cette nouvelle forme d'activité délocalisée démontre également que le risque posé par l'automatisation du travail est moins celui d'un "remplacement des humains par les machines" que celui d'une précarisation et déqualification de certains types emplois.
    ::::
 
 d ) Pourriez-vous citer des situations lors desquelles nous entrainons les algorithmes, parfois sans nous en rendre compte?
