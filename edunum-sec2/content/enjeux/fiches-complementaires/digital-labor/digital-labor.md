@@ -55,30 +55,26 @@ h1 {
 
 <br>
 
-Le terme *digital labor* ou "travail du clic" apparait au début des années 2010 dans le champ de la sociologie. Cette notion désigne l'ensemble des activités effectuées via des plateformes numériques et qui permettent à celles-ci de générer de la valeur. Les formes que prennent ce travail sont diverses mais on peut distinguer trois modalités principales <a href="#footnote-1">[1]</a> .
+Le terme *digital labor* ou «travail du clic» apparait au début des années 2010 dans le champ de la sociologie. Cette notion désigne l’ensemble des activités effectuées via des plateformes numériques et qui permettent à celles-ci de générer de la valeur. Le *digital labor* s’inscrit dans le principe du *crowdsourcing*, qui consiste à faire appel à une «foule» (*crowd*) d’internautes, rémunérés ou non, pour réaliser différents types de tâches. Les formes que prennent ce travail sont diverses mais on peut distinguer trois modalités principales <a href="#footnote-1">[1]</a> .
 
 * **Le travail à la demande** **(sous-rémunéré)**
 
-  Il s'agit d'un travail qui existait auparavant mais qui s'effectue désormais par l'intermédiaire de plateformes numériques. Cette catégorie inclut les services fournis par les chauffeurs de VTC, les livreurs de repas, etc. Derrière leur activité visible (livrer un repas, conduire un client), les individus effectuent un travail informationnel de production de données. En effet, ils fournissent en permanence de précieuses informations qui peuvent concerner leur position GPS, le temps de parcours, les horaires, les évaluations des clients ou encore leur profil. Ces données alimentent des algorithmes qui vont servir à "optimiser" les services tout en contrôlant de près les activités des travailleurs.
+Il s’agit d’un travail à la demande pour lequel la mise en relation entre prestataires et demandeurs passe par l’intermédiaire d’une plateforme numérique. Cette catégorie regroupe les activités issues d’une nouvelle économie des «petits boulots» (*gig economy*) : chauffeurs de VTC, livreurs de repas, personnel de ménage, service de réparation, etc. Ces professionnels ont un statut d’indépendant tout en étant très étroitement liés à la plateforme. Le travail numérique à la demande prend place dans un contexte géographique précis (une ville, une région) et peu être soumis à des réglementations locales. Si les défenseurs de cette ces pratiques mettent en avant la flexibilité offerte aux travailleurs, ses détracteurs soulignent le risque de voir émerger une «zone grise» de l’emploi qui s’apparente au salariat, sans pour autant offrir les protections sociales qui l’accompagnent
   
   <br>
 
 * **Le micro-travail réalisé sur des plateformes** **(micro-rémunéré)**
 
-
-  Les entreprises peuvent aussi faire appel à des travailleurs pour des micro-tâches effectuées en ligne. Il s'agit le plus souvent d'individus qui réalisent de petites opérations (clics sur une image, saisie de données, transcriptions) au travers de plateformes numériques, telle que Amazon Mechanical Turk (voir ci-dessous). Ces tâches sont nécessaires pour entraîner les systèmes d'intelligence artificielle.
+Cette catégorie recouvre l’ensemble des micro-tâches réalisées en ligne contre une très faible rémunération. Des entreprises, des institutions mais aussi des particuliers font appel à des travailleurs pour effectuer de petites opérations (clics sur une image, saisie de données, transcriptions, remplissage de questionnaires, annotation de vidéos) au travers de plateformes numériques, telle que Amazon Mechanical Turk (voir ci-dessous). Il s’agit essentiellement de tâches qui ne peuvent être accomplies par des machines et qui, dans certains cas, servent à entrainer des systèmes automatisés. L’aspect fragmenté des tâches tout comme leur rétribution dérisoire, tend à entretenir l’idée que ce type d’activité ne s’inscrit pas dans le cadre d’une relation de travail.
   
   <br>
 
 * **Le travail effectué par les internautes** **(non-rémunéré)**
 
-  Lorsque l'on interagit avec des plateformes en ligne, des applications mobiles ou encore des objets connectés, nous laissons des traces concernant notre profil et notre comportement. Celles-ci peuvent ensuite être analysées et valorisées afin d'améliorer un service ou de vendre à des entreprises des audiences publicitaires ciblées. Si l'accès à ces plateformes est généralement gratuit, les internautes fournissent quelque chose en échange : ils produisent des données. A noter toutefois que la notion de "travail" peut, dans ce cas-ci, être discutée.
+Lorsque l’on interagit avec des plateformes en ligne, des applications mobiles ou encore des objets connectés, nous laissons des traces concernant notre profil et notre comportement. Celles-ci peuvent ensuite être analysées et valorisées afin d’améliorer un service ou de vendre à des entreprises des audiences publicitaires ciblées. Si l’accès à ces services est généralement gratuit, les internautes fournissent quelque chose en échange : ils produisent des données dont sont extraites une certaine valeur. S’agit-il alors d’un travail? La question divise la recherche et le débat public. Pour les uns, la relation entre usagers et plateformes (essentiellement les médias sociaux) relève d’un rapport d’exploitation dès lors que l’activité des utilisateurs génère du profit, tandis que pour les autres, cette relation s’inscrit dans le cadre d’une participation autonome et consentie à un environnement ludique dans lequel l’utilisateur s’engage avec plaisir et sans contrainte.
   <br>
 
-Le *digital labor* s'inscrit dans le principe du *crowdsourcing*, qui consiste à faire appel à une "foule" (*crowd*) d'internautes, rémunérés ou non, pour réaliser différents types de tâches.
-
 <p id="footnote-1"; style="font-size:14px" >[1] Selon la classification du sociologue Antonio Casilli. Voir références.</p>
-
 
 
 <br>
@@ -103,9 +99,12 @@ Le Turc mécanique, gravure de Karl Gottlieb von Windisch dans le livre de 1783,
 
 <p>Inventé par le Hongrois Wolgang von Kempelen, le Turc mécanique était un automate habillé à la mode turque. Cette machine jouait particulièrement bien aux échecs et semblait imbattable. Mais c’était une supercherie ! A l’intérieur de l’installation se trouvait un véritable joueur d’échecs qui manipulait le mannequin.</p>
 
-Si Amazon se réfère à ce canular, c’est que sa plateforme proposant les services de «micro-travailleurs» (ou *turkers*) fonctionne sur la même illusion. Nous imaginons que des entreprises vendent de puissants logiciels qui réalisent des processus complexes grâce à l’intelligence artificielle alors qu’en réalité, ces systèmes nécessitent l’intervention de nombreux humains dispersés aux quatre coins du monde. Ces derniers sont des travailleurs et travailleuses précaires, invisibles et payés à la tâche, souvent quelques centimes par action. Il s’agit d’une forme de *digital labor*.
+i Amazon se réfère à ce canular, c’est que sa plateforme proposant les services de «micro-travailleurs» (ou *turkers*) fonctionne sur le même principe. Elle propose de créer l’illusion d’un système automatisé en s’appuyant sur le travail de «petites mains» qui exécutent des tâches que les machines ne parviennent pas à effectuer.
 
-Malgré les progrès de l’informatique, l’intelligence artificielle nécessite donc toujours un important travail humain. Il faut tout d’abord que des données soient produites et collectées, notamment grâce aux traces laissées par les internautes. Puis, ces données doivent être «préparées» par des individus afin d’assister les systèmes d’intelligence artificielle. Il peut s’agir d’identifier un objet ou des lettres, de retranscrire une parole captée par un assistant vocal ou encore d’évaluer le contenu d’une vidéo. Les machines seules ne peuvent pas réaliser certaines tâches qui demandent des capacités de réflexion, de jugement, d’interprétation et une connaissance du monde. De nouvelles formes d’activités sont ainsi apparues, souvent en dehors des cadres légaux imposés par les États. Aujourd’hui, de nombreuses tâches nécessaires au fonctionnement des algorithmes sont réalisées au travers de l’une des trois modalités présentées ci-dessus.
+Amazon Mechinical Turk se révèle particulièrement utile pour des tâches simples et répétitives qui ne pourraient être confiées à un seul individu et pour lesquelles les machines fourniraient un résultat décevant. Ces opérations ne requièrent de qualifications ou savoirs particuliers, mais font appel à une analyse qui relève du sens commun et qui peut être effectuée en un coup d’oeil par un humain, alors qu’elle demeure encore inaccessible à une système informatique. Il peut s’agir, par exemple, de déterminer le contenu d’une image ou d’évaluer la tonalité d’un message. Certaines de ces opérations ont également pour objectif d’entraîner, compléter ou corriger des systèmes d’intelligence artificielle (résultats de moteurs de recherche, requêtes transmises à un assistant vocal, analyse d’image). L’importance du travail humain dans le développement des ces systèmes permet de relativiser l’autonomie des machines et des algorithmes dans les processus d’apprentissage automatisés.
+
+Aujourd’hui, de nombreuses tâches nécessaires au fonctionnement des systèmes d’intelligence artificielle nécessite donc un travail humain et s’accompagne d’enjeux éthiques et sociaux.
+
 
 <br>
 
