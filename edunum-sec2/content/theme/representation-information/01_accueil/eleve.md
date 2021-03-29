@@ -37,6 +37,7 @@ Dans cette section, nous allons comprendre comment les ordinateurs parviennent √
 
 ```{link-button} content/demostests/edito/syntaxemyst.md
 :text: Repr√©sentation des images
+:type: ref
 :classes: stretched-link
 ```
 ---

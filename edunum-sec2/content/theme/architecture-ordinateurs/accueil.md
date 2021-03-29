@@ -33,6 +33,7 @@ Dans ce chapitre, vous découvrirez comment sont construits les ordinateurs, com
 
 ```{link-button} content/demostests/edito/syntaxemyst.md
 :text: Informatique embarquée
+:type: ref
 :classes: stretched-link
 ```
 ---

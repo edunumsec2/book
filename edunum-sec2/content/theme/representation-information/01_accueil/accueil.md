@@ -36,6 +36,7 @@ Dans ce chapitre, vous allez comprendre comment les ordinateurs parviennent à r
 ---
 
 ```{link-button} content/demostests/edito/syntaxemyst.md
+:type: ref
 :text: Représentation des images
 :classes: stretched-link
 ```
