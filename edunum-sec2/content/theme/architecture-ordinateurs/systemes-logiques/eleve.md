@@ -51,21 +51,26 @@ En énumérant les quatre possibilités pour les entrées, on peut écrire ce qu
 
 On peut dessiner des diagrammes avec des portes logiques. (Ce ne sont pas des diagrammes électroniques, ils cachent une partie de la complexité réelle des circuits.) Dans un tel diagramme logique, la porte **ET** est représentée ainsi:
 
-![](media/and_gate.svg)
+```{logic}
+:height: 60
+:mode: static
+
+{"gates": [{"type": "AND", "pos": [50, 30], "in": [0, 1], "out": 2}]}
+```
 
 Sur ce schéma logique, double-cliquez sur les deux entrées $X$ et $Y$ pour changer leurs valeurs et observez le comportement de la sortie $Z$. Est-ce que cela correspond à la table de vérité ci-dessus?
 
 ```{logic}
-:height: 90
+:height: 100
 :mode: tryout
 
 {
   "in": [
-    {"name": "X", "id": 3, "pos": [45, 25], "val": 0},
-    {"name": "Y", "id": 4, "pos": [45, 65], "val": 0}
+    {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
+    {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
   ],
-  "out": [{"name": "Z", "id": 5, "pos": [285, 45]}],
-  "gates": [{"type": "AND", "id": 0, "pos": [125, 20]}],
+  "out": [{"pos": [220, 50], "id": 5, "name": "Z"}],
+  "gates": [{"type": "AND", "pos": [150, 50], "in": [0, 1], "out": 2}],
   "wires": [[3, 0], [4, 1], [2, 5]]
 }
 ```
@@ -88,19 +93,20 @@ On notera que le **OU** logique est un peu différent du «ou» que l'on utilise
 Essayez la porte **OU**:
 
 ```{logic}
-:height: 90
+:height: 100
 :mode: tryout
 
 {
   "in": [
-    {"name": "X", "id": 3, "pos": [45, 25], "val": 0},
-    {"name": "Y", "id": 4, "pos": [45, 65], "val": 0}
+    {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
+    {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
   ],
-  "out": [{"name": "Z", "id": 5, "pos": [285, 45]}],
-  "gates": [{"type": "OR", "id": 0, "pos": [125, 20]}],
+  "out": [{"pos": [220, 50], "id": 5, "name": "Z"}],
+  "gates": [{"type": "OR", "pos": [150, 50], "in": [0, 1], "out": 2}],
   "wires": [[3, 0], [4, 1], [2, 5]]
 }
 ```
+
 
 
 ### Porte NON
@@ -117,16 +123,14 @@ Voici sa table de vérité:
 Essayez l'inverseur:
 
 ```{logic}
-:height: 75
+:height: 60
 :mode: tryout
 
 {
-  "in": [
-    {"name": "X", "id": 0, "pos": [45, 40], "val": 0}
-  ],
-  "out": [{"name": "Z", "id": 3, "pos": [285, 40]}],
-  "gates": [{"type": "NOT", "id": 1, "pos": [112, 15]}],
-  "wires": [[0, 1], [2, 3]]
+  "in": [{"pos": [50, 30], "id": 0, "name": "X", "val": 0}],
+  "out": [{"pos": [220, 30], "id": 2, "name": "Z"}],
+  "gates": [{"type": "NOT", "pos": [130, 30], "in": 1, "out": 3}],
+  "wires": [[0, 1], [3, 2]]
 }
 ```
 
@@ -137,20 +141,20 @@ Les portes peuvent être connectées les unes aux autres. Voici par exemple un d
 <!-- ![](media/xor_circuit.svg) -->
 
 ```{logic}
-:height: 140
-:mode: static
+:height: 150
+:mode: tryout
 
 {
   "in": [
-    {"name": "X", "id": 0, "pos": [45, 32], "val": 0},
-    {"name": "Y", "id": 1, "pos": [45, 95], "val": 0}
+    {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
+    {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
   ],
-  "out": [{"name": "Z", "id": 2, "pos": [491, 41]}],
+  "out": [{"pos": [390, 50], "id": 2, "name": "Z"}],
   "gates": [
-    {"type": "OR", "id": 3, "pos": [172, 7]},
-    {"type": "AND", "id": 6, "pos": [341, 16]},
-    {"type": "NOT", "id": 9, "pos": [235, 84]},
-    {"type": "AND", "id": 11, "pos": [125, 84]}
+    {"type": "OR", "pos": [190, 40], "in": [3, 4], "out": 5},
+    {"type": "AND", "pos": [330, 50], "in": [6, 7], "out": 8},
+    {"type": "NOT", "pos": [230, 120], "in": 9, "out": 10},
+    {"type": "AND", "pos": [160, 120], "in": [11, 12], "out": 13}
   ],
   "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
 }
@@ -186,41 +190,40 @@ Le cas est différent si l'une des deux entrées vaut 1. Voici les deux diagramm
 <!-- ![](media/xor_circuit_10.svg) -->
 
 ```{logic}
-:height: 140
+:height: 150
 :mode: static
 
 {
   "in": [
-    {"name": "X", "id": 0, "pos": [45, 32], "val": 1},
-    {"name": "Y", "id": 1, "pos": [45, 95], "val": 0}
+    {"pos": [50, 30], "id": 0, "name": "X", "val": 1},
+    {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
   ],
-  "out": [{"name": "Z", "id": 2, "pos": [491, 41]}],
+  "out": [{"pos": [390, 50], "id": 2, "name": "Z"}],
   "gates": [
-    {"type": "OR", "id": 3, "pos": [172, 7]},
-    {"type": "AND", "id": 6, "pos": [341, 16]},
-    {"type": "NOT", "id": 9, "pos": [235, 84]},
-    {"type": "AND", "id": 11, "pos": [125, 84]}
+    {"type": "OR", "pos": [190, 40], "in": [3, 4], "out": 5},
+    {"type": "AND", "pos": [330, 50], "in": [6, 7], "out": 8},
+    {"type": "NOT", "pos": [230, 120], "in": 9, "out": 10},
+    {"type": "AND", "pos": [160, 120], "in": [11, 12], "out": 13}
   ],
   "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
 }
 ```
 
-
 ```{logic}
-:height: 140
+:height: 150
 :mode: static
 
 {
   "in": [
-    {"name": "X", "id": 0, "pos": [45, 32], "val": 0},
-    {"name": "Y", "id": 1, "pos": [45, 95], "val": 1}
+    {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
+    {"pos": [50, 90], "id": 1, "name": "Y", "val": 1}
   ],
-  "out": [{"name": "Z", "id": 2, "pos": [491, 41]}],
+  "out": [{"pos": [390, 50], "id": 2, "name": "Z"}],
   "gates": [
-    {"type": "OR", "id": 3, "pos": [172, 7]},
-    {"type": "AND", "id": 6, "pos": [341, 16]},
-    {"type": "NOT", "id": 9, "pos": [235, 84]},
-    {"type": "AND", "id": 11, "pos": [125, 84]}
+    {"type": "OR", "pos": [190, 40], "in": [3, 4], "out": 5},
+    {"type": "AND", "pos": [330, 50], "in": [6, 7], "out": 8},
+    {"type": "NOT", "pos": [230, 120], "in": 9, "out": 10},
+    {"type": "AND", "pos": [160, 120], "in": [11, 12], "out": 13}
   ],
   "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
 }
@@ -233,25 +236,24 @@ Mais dans le cas $X = Y = 1$, représenté ici, la situation est différente:
 
 <!-- ![](media/xor_circuit_11.svg) -->
 ```{logic}
-:height: 140
+:height: 150
 :mode: static
 
 {
   "in": [
-    {"name": "X", "id": 0, "pos": [45, 32], "val": 1},
-    {"name": "Y", "id": 1, "pos": [45, 95], "val": 1}
+    {"pos": [50, 30], "id": 0, "name": "X", "val": 1},
+    {"pos": [50, 90], "id": 1, "name": "Y", "val": 1}
   ],
-  "out": [{"name": "Z", "id": 2, "pos": [491, 41]}],
+  "out": [{"pos": [390, 50], "id": 2, "name": "Z"}],
   "gates": [
-    {"type": "OR", "id": 3, "pos": [172, 7]},
-    {"type": "AND", "id": 6, "pos": [341, 16]},
-    {"type": "NOT", "id": 9, "pos": [235, 84]},
-    {"type": "AND", "id": 11, "pos": [125, 84]}
+    {"type": "OR", "pos": [190, 40], "in": [3, 4], "out": 5},
+    {"type": "AND", "pos": [330, 50], "in": [6, 7], "out": 8},
+    {"type": "NOT", "pos": [230, 120], "in": 9, "out": 10},
+    {"type": "AND", "pos": [160, 120], "in": [11, 12], "out": 13}
   ],
   "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
 }
 ```
-
 
 La porte **ET** du bas livre un 1, qui est inversé en 0 avant d'atteindre la porte finale, qui ne peut dès lors elle-même que livrer un 0 comme sortie.
 
@@ -268,16 +270,16 @@ Cette fonction **OU-X** de «ou exclusif» est souvent utilisée, au point qu'on
 
 <!-- ![](media/xor_gate.svg) -->
 ```{logic}
-:height: 90
+:height: 100
 :mode: tryout
 
 {
   "in": [
-    {"name": "X", "id": 3, "pos": [45, 25], "val": 0},
-    {"name": "Y", "id": 4, "pos": [45, 65], "val": 0}
+    {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
+    {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
   ],
-  "out": [{"name": "Z", "id": 5, "pos": [285, 45]}],
-  "gates": [{"type": "XOR", "id": 0, "pos": [125, 20]}],
+  "out": [{"pos": [220, 50], "id": 5, "name": "Z"}],
+  "gates": [{"type": "XOR", "pos": [150, 50], "in": [0, 1], "out": 2}],
   "wires": [[3, 0], [4, 1], [2, 5]]
 }
 ```
