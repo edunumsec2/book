@@ -5,6 +5,24 @@ Dans ce document, vous trouverez de la documentation utilisateur pour toutes les
 Ces extensions de syntaxes sont des extensions Sphinx locales implémentées en Python.
 Les sources sont situées dans le dossier `config/extensions/`.
 
+## Affichage différencié
+
+Pour afficher une partie du contenu uniquement pour la version élève:
+
+````{code-block} markdown
+```{role} eleve
+Ce contenu ne sera visible que pour la version `eleve`.
+```
+````
+
+De façon similaire, pour afficher une partie du contenu uniquement pour la version maître:
+
+````{code-block} markdown
+```{role} prof
+Ce contenu ne sera visible que pour la version `prof`.
+```
+````
+
 ## Questions à choix multiples
 
 Il est possible d'intégrer des questions à choix multiples au fil des pages via la directive `question`.

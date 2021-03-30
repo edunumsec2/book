@@ -43,6 +43,7 @@ html:
 #######################################################################################
 sphinx:
   config:
+    user_role: eleve
     html_show_copyright: false
     language: fr
     html_theme: sphinx_book_theme
@@ -67,6 +68,7 @@ sphinx:
     switchtube: ../extensions/
     codeplay: ../extensions/
     logic: ../extensions/
+    role: ../extensions/
 
 #######################################################################################
 # Interact link settings
