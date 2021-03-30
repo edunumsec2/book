@@ -7,8 +7,8 @@
   background-color: white;
   border: 1px solid;
   border-color: black;
-  font-family:"Poppins", sans-serif;
-  font-weight:300;
+  font-family:"Lato",sans-serif;
+  font-weight:350;
   color: black!important;
   padding: 10px 10px;
   text-align: center;
@@ -28,7 +28,7 @@
 </head>
 </html>
 
-<a href="economie-numerique.pdf" class="button"> 🖨️ Version imprimable</a>
+<a href="http://edunumsec2.ch/economie-numerique.pdf" class="button"> 🖨️ Version imprimable</a>
 
 ````{image} economie-numerique.jpg
 :name: économie
@@ -81,7 +81,7 @@ Aux premiers rangs des capitalisations boursières, ces sociétés sont couramme
 ````{panels}
 :column: col-lg
 
-**GOOGLE**
+**GOOGLE (Alphabet)**
 ^^^
 **Création** : 1998  <br>
 **Source principale de revenu** : Publicité ciblée <br>
@@ -99,7 +99,7 @@ Aux premiers rangs des capitalisations boursières, ces sociétés sont couramme
 **Création** : 2004 <br>
 **Source principale de revenu** : Publicité ciblée <br>
 **Activités** : Réseau social, messagerie <br>
-**Caractéristiques** : En quelques années, la plateforme est parvenue à rassembler une base considérable de membres (2,7 milliards à fin 2020). Facebook a également acquis Instagram (2012) et WhatsApp (2014). Le modèle économique de l’entreprise repose sur la vente d’espaces publicitaires ciblés. Des individus ou entreprises peuvent ainsi diffuser des annonces à une audience déterminée selon des critères sociaux, économiques ou comportementaux. Ces caractéristiques sont induites grâce à la captation et l’analyse des données issues des activités des utilisateurs sur Facebook, mais également en dehors du réseau, dès lors qu’un site ou une application utilise un service ou API proposés par Facebook (login, bouton like, etc.). Avec Google, Facebook capte l’essentiel du marché de la publicité en ligne.
+**Caractéristiques** : En quelques années, la plateforme est parvenue à rassembler une base considérable de membres (2,7 milliards à fin 2020). Facebook a également acquis Instagram (2012) et WhatsApp (2014). Le modèle économique de l’entreprise repose sur la vente d’espaces publicitaires ciblés. Des individus ou entreprises peuvent ainsi diffuser des annonces à une audience déterminée selon des critères socio-démographiques ou comportementaux. Ces caractéristiques sont induites grâce à la captation et l’analyse des données issues des activités des utilisateurs sur Facebook, mais également en dehors du réseau, dès lors qu’un site ou une application utilise un service ou API proposés par Facebook (login, bouton like, etc.). Avec Google, Facebook capte l’essentiel du marché de la publicité en ligne.
 ````
 
 ````{panels}
@@ -119,7 +119,7 @@ Aux premiers rangs des capitalisations boursières, ces sociétés sont couramme
 **Microsoft**
 ^^^
 **Création** : 1975 <br>
-**Source principale de revenu** : Systèmes d’exploitation, logiciels et services cloud <br>
+**Source principale de revenu** : Systèmes d’exploitation, logiciels et services *cloud* <br>
 **Autres services et produits** : Moteur de recherche (Bing), console de jeux vidéos, ordinateurs et tablettes. <br>
 **Caractéristiques** :  L’entreprise est parvenue à dominer le marché en associant son système d’exploitation Windows à la vente d’ordinateurs PC. Cette stratégie commerciale de «vente liée» a conduit les produits Microsoft à devenir des «standards de fait». Aujourd’hui, Windows est installé dans presque 90% des ordinateurs à travers le monde et les outils de bureautique Office comptent plus d’un milliard d’utilisateurs. 
  
@@ -127,7 +127,7 @@ Aux premiers rangs des capitalisations boursières, ces sociétés sont couramme
 
 <br>
 
-Ce bref aperçu témoigne de la diversité des modèles économiques des GAFAM. A noter que la vente de publicité ciblée, souvent associée à ces entreprises, concerne avant tout Google et Facebook. Par ailleurs, d’autres modèles économiques existent, tels que les services qui prélèvent une commission sur les transactions (Uber, Airbnb, Booking.com) ou encore les plateformes qui fonctionnent sur un principe d’abonnement (Spotify, Netflix).
+Ce bref aperçu témoigne de la diversité des modèles économiques des GAFAM. A noter que la vente de publicité ciblée, souvent associée à ces entreprises, concerne avant tout Google et Facebook. Par ailleurs, d’autres modèles économiques existent, tels que les services qui prélèvent une commission sur les transactions (Uber, Airbnb, Booking.<span>com</span>) ou encore les plateformes qui fonctionnent sur un principe d’abonnement (Spotify, Netflix).
 <br>
 <br>
 
@@ -158,7 +158,7 @@ Face à ces pratiques, les instances politiques peinent à s’accorder et les r
 
 Ainsi, il faut rappeler que le Web n'a pas toujours été régi par des principes marchands (👉*voir dossier "Histoire d'Internet et du Web"* ) et l'esprit de collaboration et de partage qui caractérisait les premières communautés en ligne n'a pas disparu. Comme le défendent les tenants du mouvement du logiciel libre, la mise en réseau des individus peut également mener à la création de **biens communs**. En ce sens, le succès de Wikipédia est la démonstration qu'une alternative au modèle des plateformes est possible (👉 *voir fiche "Wikipédia"*). 
 
-Mais la frontière entre ces deux logiques est parfois difficile à tracer, en témoigne l’utilisation souvent peu claire du terme «économie du partage». Désignant à l’origine des initiatives citoyennes et collaboratives tournées vers la création de biens communs, la notion est désormais réinvestie par des services commerciaux, tels que Uber, dont le mode de fonctionnement et les objectifs n’ont plus rien à voir avec ces principes. Le concept collaboratif et gratuit de *couchsurfing* par la suite repris par Airbnb illustre parfaitement ce processus.
+Mais la frontière entre ces deux logiques est parfois difficile à tracer, en témoigne l’utilisation souvent peu claire du terme «économie du partage». Désignant à l’origine des initiatives citoyennes et collaboratives tournées vers la création de biens communs, la notion est désormais réinvestie par des services commerciaux, tels que Uber, dont le mode de fonctionnement et les objectifs n’ont plus rien à voir avec ces principes. Le concept collaboratif et gratuit de *couchsurfing* par la suite repris par Airbnb illustre également ce processus.
 
 
 <br>
@@ -168,7 +168,7 @@ Mais la frontière entre ces deux logiques est parfois difficile à tracer, en t
 
 <br>
 
-Dans ce marché mondial des plateformes, l'attention est un bien rare et convoité. Ainsi, les grands acteurs du numérique luttent pour amener les internautes dans leur environnement et les rendre captifs de leurs services. La notion de rareté de l'attention n'est cependant pas nouvelle. Traditionnellement, c'est la publicité qui tentait d'attirer l'attention du public vers un produit ou service. Avec le numérique, cette quête du "temps de cerveau disponible"<a href="#footnote-1">[1]</a> est amplifiée car il est désormais possible de capter, calculer et monétiser les "traces d'attention". 
+Dans ce marché mondial des plateformes, l'attention est un bien rare et convoité. Ainsi, les grands acteurs du numérique luttent pour amener les internautes dans leur environnement et les rendre captifs de leurs services. La notion de rareté de l'attention n'est cependant pas nouvelle. Traditionnellement, c'est la publicité qui tentait d'attirer l'attention du public vers un produit ou service. Avec le numérique, cette quête du "temps de cerveau disponible"<a href="#footnote-1">[1]</a> est amplifiée car il est désormais possible de capter, calculer et monétiser les "traces d'attention".
 
 Les applications sont alors pensées dans le but retenir les utilisateurs plus longtemps possible. Les pastilles rouges des notifications, les *likes*, les systèmes *auto-play* de YouTube ou Netflix (qui relancent une vidéo sans notre consentement), ou encore le *scroll* infini sont autant d'incitations à maximiser le temps passé en ligne. Ces astuces de conception jouent sur des ressorts émotionnels : besoin de récompense immédiate, quête de reconnaissance, attraction pour la nouveauté, peur de passer à côté de quelque chose... Ces tactiques sont d’autant plus efficaces qu’elles peuvent être finement ciblées et personnalisées.
 
@@ -176,7 +176,7 @@ Mais ces leviers psycho-cognitifs suffisent-ils à expliquer le succès des plat
 
 En ce sens, il apparait nécessaire de questionner certains discours médiatiques autour de la question des pratiques numériques - en particulier chez les jeunes - qui se résument souvent à un message alarmiste centré sur la notion de «temps d’écran». Cette perspective récurrente envisage un rapport à la technologie pensé au uniquement au travers du prisme de l’addiction. 
 
-Pourtant, les activités en ligne ne sont pas nécessairement synonymes de «temps perdu» et il est important de comprendre de quelle façon elles s’inscrivent dans des pratiques sociales. Jouer en ligne, échanger des informations via les réseaux sociaux ou créer une vidéo ne peut être assimilé à du temps perdu. L’idée qu’il existerait une distinction et par extension, une hiérarchie, entre «vie réelle» et «vie virtuelle» est largement remise en question par les travaux récents en sciences sociales. Toutes ces pratiques numériques s’imbriquent dans ce qui constitue notre vie en société.
+Pourtant, les activités en ligne ne sont pas nécessairement synonymes de «temps perdu» et il est important de comprendre de quelle façon elles s’inscrivent dans des pratiques sociales. Jouer en ligne, échanger des informations via les réseaux sociaux ou créer une vidéo ne peut être assimilé à du temps perdu. L’idée qu’il existerait une distinction et, par extension, une hiérarchie, entre «vie réelle» et «vie virtuelle» est largement remise en question par les travaux récents en sciences sociales. Toutes ces pratiques numériques s’imbriquent dans ce qui constitue notre vie en société.
 
 
 <p id="footnote-1">[1] Déclaration par Patrick Le Lay (ex-PDG du groupe TF1) en 2004  : « Ce que nous vendons à Coca-Cola, c’est du temps de cerveau humain disponible »</p>
@@ -290,15 +290,13 @@ Demander aux élèves de lister 3 applications ou services en ligne qu’ils uti
 
   * **Facebook / Instagram / Snapchat / Twitter / Pinterest** : La majorité des réseaux sociaux ont un modèle économique qui repose sur la vente d'espaces publicitaires. Ces services sont gratuits mais les utilisateurs "paient" en transmettant de nombreuses données qui permettent aux plateformes de vendre à des annonceurs des audiences ciblées.
   * **YouTube** : A l’origine entièrement gratuite, la plateforme de vidéos propose désormais une double offre : gratuite ou payante. YouTube se situe donc à l’intermédiaire entre les réseaux sociaux gratuits et les offres de divertissement basées sur un principe d’abonnement. 
-  * **WhatsApp** : L’entreprise, qui appartient à Facebook depuis 2016, n’a pas de système de monétisation. Auparvant facturée 1 dollar par année, l’application est maintenant gratuite et sans publicité. Mais, début 2021, WhatsApp a annoncé de nouvelles conditions d’utilisation qui vont permettre à Facebook d’utiliser les données issues de l’application. Son modèle économique pourrait donc évoluer.
+  * **WhatsApp** : L’entreprise, qui appartient à Facebook depuis 2016, n’a pas de système de monétisation. Auparavant facturée 1 dollar par année, l’application est maintenant gratuite et sans publicité. Mais, début 2021, WhatsApp a annoncé de nouvelles conditions d’utilisation qui vont permettre à Facebook d’utiliser les données issues de l’application. Son modèle économique pourrait donc évoluer.
   * **TikTok** : En 2020, TikTok possède 2 sources de revenus : la publicité et surtout, les [achats intégrés à l'application](https://www.numerama.com/business/535666-comment-tiktok-fait-il-pour-gagner-tellement-dargent.html). Ces derniers s'effectuent au travers d'une monnaie virtuelle, les "*Coins*" (pièces). Les utilisateurs peuvent acheter des crédits (100 pièces pour env. 1 Euro) et les utiliser pour différents services supplémentaires ou pour des "cadeaux" offerts aux influenceurs. Tiktok prélève une commission sur ces transactions (le pourcentage exact n'est pas connu).
-  *  **Signal** : Le service de messagerie est financé par une fondation à but non lucratif. Il est axé sur la confidentialité et les données des utilisateurs ne sont pas commercialisées.
+  *  **Signal** : Pour l'instant, le service de messagerie est financé par une fondation à but non lucratif. Il est axé sur la confidentialité et les données des utilisateurs ne sont pas commercialisées.
   * **Telegram** : D’abord entièrement gratuite et sans publicité, le service de messagerie a annoncée en 2021 développer une offre payante pour les entreprises et ainsi qu’une plateforme publicitaire.
   *  **Spotify / Netflix** : Les plateformes liées à l'industrie du divertissement fonctionnent le plus souvent sur un principe d'abonnement. La stratégie consiste à offrir un premier mois gratuit ou un service réduit (avec publicités, par exemple) afin de convertir les utilisateurs à une version payante.
   * **Amazon**: Si la principale source de revenus d'Amazon est la vente de produits en ligne, l'entreprise est également le plus grand fournisseur d'hébergement Web. Amazon développe également toute une série d'objets "connectés" (voir ci-dessus)
   *  **Uber, AirBnB** : Ces plateformes se positionnent comme des intermédiaires entre le client et le prestataire de service. Elles prennent une commission sur les transactions qui s'effectuent entre les deux parties
-
-  On peut encore souligner que, si la commercialisation de données n'est pas au coeur du modèle économique de l'ensemble des plateformes, la plupart cependant, s'appuient sur la collecte de ces "traces numériques" pour développer leurs services.
   ::::
 
 <br>
@@ -306,24 +304,54 @@ Demander aux élèves de lister 3 applications ou services en ligne qu’ils uti
 <!-- Activité pas finalisée -->
 
 
-**B. Le système d’enchères de Google** (30 min)
+**B. Comprendre le modèle de Google** (30 min)
 
-L’enseignant·e commence par expliquer les [principes fondamentaux du système d’enchères par mot-clé](https://fkaplan.wordpress.com/2011/09/07/google-et-le-capitalisme-linguistique/) sur lequel repose la régie publicitaire de Google (Google Ads).  Il/elle peut expliquer - ou rappeler - en quoi cet algorithme se différencie de PageRank.
+En guise d’introduction, demander aux élèves :
 
-Par groupe de 2, les élèves imaginent une enchère en choisissant :
+a) Qu’est-ce qu’un moteur de recherche?
 
-* Un site web (entreprise, institution, événement, artiste, ou autre) à mettre en avant
-* Un mot-clé en lien avec le site web choisi
-* Un montant à miser (CHF)
+::::{admonition,dropdown} **Réponse**
+Un moteur de recherche est un site web qui permet de trouver des ressources en ligne (pages web, images, vidéos, articles, logiciels, etc.) au travers d’une recherche par mots-clés.
+::::
 
-L’enseignant·e joue le rôle de Google, et prend les enchères des groupes.  
+b) Quel moteur de recherche utilisez-vous ?
 
-Il/elle attribue un score à chaque enchère allant de 1 à 10, en fonction du degré de pertinence estimé entre le site et le mot-clé proposés et du montant alloué.
+Il est très probable que la majorité des élèves réponde «Google». Dès lors, on peut suggérer les questions suivantes :
 
-A la fin, l’enseignant·e peut encore souligner la complexité (de nombreux autres facteurs sont déterminants) et la part d’inconnu de ce calcul.
+c) Quel est le modèle économique de Google?
 
+::::{admonition,dropdown} **Réponse**
+Lorsque l’on fait une recherche en ligne, deux grandes catégories de résultats sont proposées : 
 
-**Question complémentaire**
+a. Les résultats dits «naturels» qui apparaissent avant tout grâce à la pertinence entre leur contenu et le mot-clé introduit. 
+
+b. Les résultats issus du «référencement payant», soit des annonces mises en avant car un annonceur a investi un certain montant dans le mot-clé inséré. La place effective des annonces repose sur un système d’enchères en temps réel qui détermine quelle annonce est affichée selon de multiples paramètres (pertinence avec le mot-clé, montant investi, zone géographique, heure, etc.), afin de proposer à l’internaute les liens commerciaux sur lesquels il est le plus susceptible de cliquer.
+
+Ce ciblage publicitaire, au cœur du modèle économique de l’entreprise, s’effectue via le moteur de recherche mais également au travers de ses différents services de Google et des très nombreux sites web qui affichent des annonces gérées par Google en échange d’une rémunération (via la régie publicitaire Adsense). Google se positionne donc comme un intermédiaire qui fait se rencontrer la demande de mots-clés et l’offre d’espace publicitaires.
+::::
+
+d) Comment Google est-elle devenue l’une des entreprises les plus riches au monde, alors que ses services sont gratuits?
+
+::::{admonition,dropdown} **Réponse**
+L’objectif de Google n’est pas de vendre des produits ou services aux internautes mais de recueillir le plus grand nombre de traces afin de proposer à des annonceurs des espaces publicitaires ciblés. L’entreprise a donc intérêt à offrir des services gratuits afin de maximiser le nombre d’utilisateurs et d’interactions sur toutes ses plateformes (Gmail, Chrome, Google Maps, YouTube, etc.). Par ailleurs, plus ces services comptent d’usagers, plus ils deviennent attractifs (et performants), à la fois pour les utilisateurs et les annonceurs. C’est ce cercle vertueux qui a permis à Google d’occuper une position dominante. Une fois cette place acquise, il devient difficile pour un concurrent d’émerger.
+
+A noter toutefois que les recettes de Google proviennent avant tout de la vente de mots-clés. C’est ce paramètre qui permet de déterminer au mieux l’intention de l’internaute et de proposer un espace publicitaire pertinent. Le profilage de l’utilisateur est donc moins nécessaire pour Google que pour d’autres plateformes, telles que Facebook. C’est également la raison pour laquelle Google peut envisager certaines mesures en faveur de la protection de la vie privée.
+::::
+
+e) Si Google représente plus de 90% des parts de marché dans le domaine des moteurs de recherche, il existe des alternatives. Proposer aux élèves, en petits groupes, de rechercher ces alternatives et déterminer quels sont leurs modèles économiques et leurs spécificités. 
+
+::::{admonition,dropdown} **Réponse**
+**Bing** : Élaboré par Microsoft, il est le second moteur de recherche après Google (environ 2-3% de part de marché). Bing vend des espaces publicitaires ciblés et collecte donc les données de ses utilisateurs. La portée de ce traçage est toutefois moins importante que celle de Google, qui dispose d’une infrastructure plus importante. Bing fournit aussi ses services de recherche et publicité à d’autres sites et applications partenaires.
+
+**Qwant** : Moteur de recherche français axé sur le respect de la vie privée. Qwant affirme ne pas pister ses utilisateurs et proposer des résultats de recherche non personnalisés. Si le moteur est financé par la publicité, celle-ci serait basée uniquement sur le mot-clé recherché par l’internaute (et non sur des informations liées à son profil). Qwant est cependant régulièrement pointé du doigt pour son partenariat avec Microsoft et son moteur de recherche Bing, dont sont issus une large part des résultats. Malgré un important soutien politique de l’État français et un chiffre d’affaires en progression, Qwant est encore déficitaire en 2020.
+
+**DuckDuckGo** : Meta-moteur qui agrège les résultats de nombreux moteurs de recherche. Comme Qwant, DuckDuckGo ne propose pas de résultats personnalisés selon le profil des utilisateurs et se positionne comme défenseur de la vie privée. Son financement repose également sur la publicité non-ciblée. Selon DuckDuckGo, il n’est pas nécessaire de
+«pister» les internautes pour leur proposer des résultats pertinents. 
+
+**Ecosia** : Moteur de recherche allemand qui investit 80% de ses bénéfices dans des projets de reforestation, principalement en Amérique du sud et en Afrique. Les résultats du moteur de recherche et les annonces sont générés par Bing. Le service de Microsoft reverse un pourcentage de ces gains publicitaire à Ecosia.
+::::
+
+**Activité complémentaire**
 
 Le chercheur de l’EPFL Frédéric Kaplan parle de [«capitalisme linguistique»](https://fkaplan.wordpress.com/2011/09/07/google-et-le-capitalisme-linguistique/) pour décrire ce système d’enchères. Selon vous, que signifie cette notion?
 
@@ -342,14 +370,14 @@ Michael Bloomberg souhaite investir le créneau écologique et ne laisser, sur c
 Cette stratégie permet-elle réellement à Michael Bloomberg de rediriger tous les résultats de recherche sur la question climatique vers son site ?
 
 ::::{admonition,dropdown} **Réponse**
-Non, car Google propose 2 principes de référencement: le référencement naturel (organic search) et le référencement payant, au travers de l’achat de mots-clé. La stratégie de Michael Bloomberg ne lui permet en réalité qu’une visibilité partielle, car elle ne concerne que les résultats payants. L’achat de mot-clé n’a pas d’influence sur le référencement naturel, davantage basé sur des critères de pertinence.
+Non, car Google propose 2 principes de référencement: le référencement naturel (*organic search*) et le référencement payant, au travers de l’achat de mots-clé. La stratégie de Michael Bloomberg ne lui permet en réalité qu’une visibilité partielle, car elle ne concerne que les résultats payants. L’achat de mot-clé n’a pas d’influence sur le référencement naturel, davantage basé sur des critères de pertinence.
 
-On peut ainsi estimer que l’achat de mots-clés est nécessaire lorsque le site en question n’est pas suffisament pertinent pour apparaître naturellement dans les résultats de recherche. 
+On peut ainsi estimer que l’achat de mots-clés est nécessaire lorsque le site en question n’est pas suffisamment pertinent pour apparaître naturellement dans les résultats de recherche.
 ::::
 
 Quelle bilan peut-on tirer de cette stratégie?
 ::::{admonition,dropdown} **Réponse**
-Malgré le déploiement de moyens considérables, cette stratégie n’a pas permis à Michael Bloomberg d’être élu à la primaire démocrate. Si son échec est certainement dû à de multiples autres facteurs, l’achat massif d’espace de publicité en ligne n’aura pas permis d’inverser la tendance. L’efficacité de ce type de ce type campagnes en ligne doit donc être relativisé.
+Malgré le déploiement de moyens considérables, cette stratégie n’a pas permis à Michael Bloomberg d’être élu à la primaire démocrate. Si son échec est certainement dû à de multiples facteurs, l’achat massif d’espace de publicité en ligne n’aura pas permis d’inverser la tendance. L’efficacité de ce type campagnes en ligne doit donc être relativisé.
 ::::
 
 </div
