@@ -33,7 +33,7 @@
 				{
 					"name": "Build “eleve”",
 					"color": "#cfc",
-					"command": "jupyter-book build . && (cd _build/html; kill $(lsof -t -i:8000) 2>/dev/null; python3 -m http.server 8000 &) && open http://localhost:8000",
+					"command": "conda activate jupyterbook && jupyter-book build . && (cd _build/html; kill $(lsof -t -i:8000) 2>/dev/null; python3 -m http.server 8000 &) && open http://localhost:8000",
 					"cwd": "${workspaceFolder}/config/eleve",
 					"singleInstance": true,
 				},
@@ -47,7 +47,7 @@
 				{
 					"name": "Build “maitre”",
 					"color": "#cfc",
-					"command": "jupyter-book build . && (cd _build/html; kill $(lsof -t -i:8001) 2>/dev/null; python3 -m http.server 8001 &) && open http://localhost:8001",
+					"command": "conda activate jupyterbook && jupyter-book build . && (cd _build/html; kill $(lsof -t -i:8001) 2>/dev/null; python3 -m http.server 8001 &) && open http://localhost:8001",
 					"cwd": "${workspaceFolder}/config/maitre",
 					"singleInstance": true,
 				},

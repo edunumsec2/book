@@ -34,6 +34,77 @@ Tous les pixels marqués d'un 1 s'affichent en blanc, tous ceux marqués d'un z�
 
 Ceci nous permet de construire des images simples, et d'une **résolution** très faible.
 
+```{codeplay}
+import turtle
+
+ATuin = turtle.Turtle()
+ATuin.hideturtle()
+ATuin.speed(0)
+
+def drawSquare(size, color=(1,1,1)):
+    #ATuin.pencolor(color)
+    ATuin.fillcolor(color)
+    ATuin.begin_fill()
+    for i in range(4):
+        ATuin.forward(size)
+        ATuin.right(90)
+    ATuin.end_fill()
+    ATuin.forward(size)
+
+divtpl = lambda tpl : tuple(round(x/255.,2) for x in tpl)
+
+def setColor(col):
+    if isinstance(col,tuple) and len(col) == 3 :
+        return divtpl(col)
+    elif isinstance(col, (int, float)):
+        if col > 1 and col < 255:
+            grey = int(col)
+            return divtpl((grey,)*3)
+        elif col == 1 or col == 0:
+            bw = 255 - int(col)*255
+            return divtpl((bw,)*3)
+        else:
+            return divtpl((1,1,1))
+    else:
+        return divtpl((1,1,1))
+
+
+
+def drawImg(mtrx, imgSize = 300):
+    nb = max(len(mtrx), max([len(line) for line in mtrx]))
+    pixSize = imgSize // nb
+    ATuin.up()
+    ATuin.setpos(-nb*pixSize//2,nb*pixSize//2)
+    ATuin.down()
+    for line in mtrx :
+        for elmt in line:
+            drawSquare(pixSize, setColor(elmt))
+        ATuin.up()
+        pos = ATuin.pos()
+        ATuin.setpos(pos[0]-pixSize*len(line), pos[1]-pixSize)
+        ATuin.down()
+            
+===
+alien=[
+      [0,0,0,0,0,0,0,0,0,0,0],
+      [0,0,1,0,0,0,0,0,1,0,0],
+      [0,0,0,1,0,0,0,1,0,0,0],
+      [0,0,1,1,1,1,1,1,1,0,0],
+      [0,1,1,0,1,1,1,0,1,1,0],
+      [1,1,1,1,1,1,1,1,1,1,1],
+      [1,0,1,1,1,1,1,1,1,0,1],
+      [1,0,1,0,0,0,0,0,1,0,1],
+      [0,0,0,1,1,0,1,1,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0,0]
+      ]
+
+drawImg(alien)
+```
+
+
+
+
 Un **pixel**, de l'anglais : **pic**ture **el**ement, est le composant minimal d'une image. C'est à dire que c'est la plus petite brique avec laquelle on construit une image sur un écran d'ordinateur, et donc dans sa mémoire. Dans notre exemple minimaliste, chaque pixel peut être soit noir, soit blanc, ce qui nous permet de construire une image.
 
 ````{panels}
