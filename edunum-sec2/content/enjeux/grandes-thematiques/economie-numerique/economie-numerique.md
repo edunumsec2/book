@@ -85,7 +85,7 @@ Aux premiers rangs des capitalisations boursières, ces sociétés sont couramme
 ^^^
 **Création** : 1998  <br>
 **Source principale de revenu** : Publicité ciblée <br>
-**Activités** : à l’origine, Google est un moteur de recherche qui fonctionne grâce à l’algorithme PageRank. Dès l’an 2000, l’entreprise commence à vendre des espaces publicitaires dans son moteur de recherche au travers d’un système d’enchères par mot-clé (Google AdWords, aujourd’hui Google Ads). Google étend également ses services (e-mail, cartographie en ligne, navigateur, service cloud, etc.). Depuis 2015, la société Alphabet regroupe toutes les activités de Google, dont YouTube, Android, Waze, Waymo (voitures autonomes) ou encore Deepmind (recherche sur l’IA).<br>
+**Activités** : À l’origine, Google est un moteur de recherche qui fonctionne grâce à l’algorithme PageRank. Dès l’an 2000, l’entreprise commence à vendre des espaces publicitaires dans son moteur de recherche au travers d’un système d’enchères par mot-clé (Google AdWords, aujourd’hui Google Ads). Google étend également ses services (e-mail, cartographie en ligne, navigateur, service cloud, etc.). Depuis 2015, la société Alphabet regroupe toutes les activités de Google, dont YouTube, Android, Waze, Waymo (voitures autonomes) ou encore Deepmind (recherche sur l’IA).<br>
 
 **Caractéristiques** :  Au départ exploitées dans le but d’améliorer la pertinence des recherches, les traces laissées par l’activité des utilisateurs sont rapidement devenues l’enjeu central du modèle économique de l’entreprise. En proposant aux annonceurs des audiences finement ciblées, Google s’est imposé sur le marché de la publicité en ligne. Sa vaste palette de services lui permet de capter une nombre considérables de données, qui viennent alimenter son système et toujours renforcer sa position dominante.
 ````
@@ -98,7 +98,7 @@ Aux premiers rangs des capitalisations boursières, ces sociétés sont couramme
 ^^^
 **Création** : 2004 <br>
 **Source principale de revenu** : Publicité ciblée <br>
-**Activités** : Réseau social, messagerie <br>
+**Activités** : Réseaux sociaux, messagerie <br>
 **Caractéristiques** : En quelques années, la plateforme est parvenue à rassembler une base considérable de membres (2,7 milliards à fin 2020). Facebook a également acquis Instagram (2012) et WhatsApp (2014). Le modèle économique de l’entreprise repose sur la vente d’espaces publicitaires ciblés. Des individus ou entreprises peuvent ainsi diffuser des annonces à une audience déterminée selon des critères socio-démographiques ou comportementaux. Ces caractéristiques sont induites grâce à la captation et l’analyse des données issues des activités des utilisateurs sur Facebook, mais également en dehors du réseau, dès lors qu’un site ou une application utilise un service ou API proposés par Facebook (login, bouton like, etc.). Avec Google, Facebook capte l’essentiel du marché de la publicité en ligne.
 ````
 
@@ -110,7 +110,7 @@ Aux premiers rangs des capitalisations boursières, ces sociétés sont couramme
 **Création** : 1994 <br>
 **Source principale de revenu** : Vente au détail <br>
 **Autres services et produits** : service de *cloud computing* (Amazon Web Services), objets connectés (assistants vocaux, domotique), plateforme VOD. <br>
-**Caractéristiques** :  Amazon a débuté en 1994 sous la forme d’une librairie en ligne. Au fil du temps, son catalogue s’est enrichi et la firme propose aujourd’hui des produits de toutes sortes. Si ses revenus proviennent essentiellement du commerce en ligne, Amazon possède également la plus grande des infrastructures cloud computing au travers de son entité Amazon Web Services. En parallèle, l’entreprise développe d’autres services (plateforme VOD, musique, gaming) et produits, dont une gamme d’objets connectés toujours en lien avec les services proposés par Amazon.
+**Caractéristiques** :  Amazon a débuté en 1994 sous la forme d’une librairie en ligne. Au fil du temps, son catalogue s’est enrichi et la firme propose aujourd’hui des produits de toutes sortes. Si ses revenus proviennent essentiellement du commerce en ligne, Amazon possède également la plus grande des infrastructures *cloud computing* au travers de son entité Amazon Web Services. En parallèle, l’entreprise développe d’autres services (plateforme VOD, musique, *gaming*) et produits, dont une gamme d’objets connectés toujours en lien avec les services proposés par Amazon.
 ````
 
 ````{panels}
@@ -147,18 +147,18 @@ Dans un contexte où les effets de réseaux  sont cruciaux et les économies d�
 
 La combinaison de ces différents facteurs (effets de réseau, économies d’échelle, gratuité) mène à des situations de monopoles, telles que nous les voyons se déployer aujourd’hui. L’expansion de Google est l’illustration emblématique de ce mécanisme. L’entreprise propose des services gratuits et personnalisés qui deviennent à la fois plus performants et attractifs (aussi bien pour les internautes que pour les annonceurs) à mesure que le nombre d’interactions croît. Les données collectées nourrissent toute l’offre de services, tandis que le coût par utilisateur supplémentaire est quasi nul. Il s’agit d’un cercle vertueux dans lequel l’attractivité et la valeur de l’entreprise augmentent simultanément.
 
-Une fois ce processus engagé, il devient difficile pour des offres concurrentes d’émerger. Ainsi, selon le principe du *winner takes all*, chaque secteur tend à être dominé par une seule entreprise qui rachète ses concurrents à mesure de son expansion. Ces entreprises deviennent incontournables, tant pour les clients que les prestataires. Par exemple, Il est presque impossible pour un hôtel de se passer d’un référencement sur Booking tout comme un petit vendeur indépendant peut difficilement éviter Amazon.
+Une fois ce processus engagé, il devient difficile pour des offres concurrentes d’émerger. Ainsi, selon le principe du *winner takes all*, chaque secteur tend à être dominé par une seule entreprise qui rachète ses concurrents à mesure de son expansion. Ces entreprises deviennent incontournables, tant pour les clients que les prestataires. Par exemple, Il est presque impossible pour un hôtel de se passer d’un référencement sur Booking, tout comme un petit vendeur indépendant peut difficilement éviter Amazon.
 
 
 ```{admonition} Uberisation
 :class: hint
-L’uberisation, dont le nom provient de l'entreprise Uber, est un processus économique qui vise à contourner le fonctionnement classique d’un secteur en créant un nouvel intermédiaire au travers d’une plateforme numérique. Celle-ci met en relation clients et prestataires tout en prélevant une commission sur les transactions. Si les services «uberisés» offrent des prestations flexibles à moindre coût, ce changement de modèle s’opère au travers d’une stratégie de développement agressive et dans un cadre légal peu clair. Dans le cas d’Uber, le modèle implique la participation de travailleurs au statut précaire, considérés comme «indépendants» et pourtant soumis aux exigences de la plateforme. Le statut légal de ces pratiques est aujourd’hui remis en cause dans plusieurs villes, [dont Genève](https://www.letemps.ch/economie/geneve-uber-eats-desormais-recourir-employes), qui a imposé en 2020 à Uber Eats de salarier ses travailleurs. A noter également que malgré des pertes  massives déclarées chaque année, Uber continue d’être soutnu par des investisseurs auxquels on promet une rentabilité future.
+L’uberisation, dont le nom provient de l'entreprise Uber, est un processus économique qui vise à contourner le fonctionnement classique d’un secteur en créant un nouvel intermédiaire au travers d’une plateforme numérique. Celle-ci met en relation clients et prestataires tout en prélevant une commission sur les transactions. Si les services «uberisés» offrent des prestations flexibles à moindre coût, ce changement de modèle s’opère au travers d’une stratégie de développement agressive et dans un cadre légal peu clair. Dans le cas d’Uber, le modèle implique la participation de travailleurs au statut précaire, considérés comme «indépendants» et pourtant soumis aux exigences de la plateforme. Le statut légal de ces pratiques est aujourd’hui remis en cause dans plusieurs villes, [dont Genève](https://www.letemps.ch/economie/geneve-uber-eats-desormais-recourir-employes), qui a imposé en 2020 à Uber Eats de salarier ses travailleurs. A noter également que malgré des pertes  massives déclarées chaque année, Uber continue d’être soutenu par des investisseurs auxquels on promet une rentabilité future.
 ```
 Face à ces pratiques, les instances politiques peinent à s’accorder et les régulations demeurent peu contraignantes. Ce cadre juridique flou témoigne également d’une forme de fatalisme face au numérique. La précarité, la financiarisation ou la captation des données sont souvent pensés comme inhérentes au développement des technologies. Il apparaît donc nécessaire de souligner que la technique ne contient pas en elle-même un modèle organisationnel ou économique particulier. Pour des plateformes comme Google ou Facebook, ces outils technologiques constituent des moyens d’atteindre des objectifs commerciaux. Mais ce n’est pas la seule voie possible. Il existe en effet des services numériques dont les motivations se situent en dehors de ces logiques financières
 
 Ainsi, il faut rappeler que le Web n'a pas toujours été régi par des principes marchands (👉*voir dossier "Histoire d'Internet et du Web"* ) et l'esprit de collaboration et de partage qui caractérisait les premières communautés en ligne n'a pas disparu. Comme le défendent les tenants du mouvement du logiciel libre, la mise en réseau des individus peut également mener à la création de **biens communs**. En ce sens, le succès de Wikipédia est la démonstration qu'une alternative au modèle des plateformes est possible (👉 *voir fiche "Wikipédia"*). 
 
-Mais la frontière entre ces deux logiques est parfois difficile à tracer, en témoigne l’utilisation souvent peu claire du terme «économie du partage». Désignant à l’origine des initiatives citoyennes et collaboratives tournées vers la création de biens communs, la notion est désormais réinvestie par des services commerciaux, tels que Uber, dont le mode de fonctionnement et les objectifs n’ont plus rien à voir avec ces principes. Le concept collaboratif et gratuit de *couchsurfing* par la suite repris par Airbnb illustre également ce processus.
+Mais la frontière entre ces deux logiques est parfois difficile à tracer, en témoigne l’utilisation souvent peu claire du terme «économie du partage». Désignant à l’origine des initiatives citoyennes et collaboratives tournées vers la création de biens communs, la notion est désormais réinvestie par des services commerciaux, tels que Uber, dont le mode de fonctionnement et les objectifs n’ont plus rien à voir avec ces principes. Le concept collaboratif et gratuit de *couchsurfing*, par la suite repris par Airbnb, illustre également ce processus.
 
 
 <br>
@@ -168,9 +168,9 @@ Mais la frontière entre ces deux logiques est parfois difficile à tracer, en t
 
 <br>
 
-Dans ce marché mondial des plateformes, l'attention est un bien rare et convoité. Ainsi, les grands acteurs du numérique luttent pour amener les internautes dans leur environnement et les rendre captifs de leurs services. La notion de rareté de l'attention n'est cependant pas nouvelle. Traditionnellement, c'est la publicité qui tentait d'attirer l'attention du public vers un produit ou service. Avec le numérique, cette quête du "temps de cerveau disponible"<a href="#footnote-1">[1]</a> est amplifiée car il est désormais possible de capter, calculer et monétiser les "traces d'attention".
+Dans ce marché mondial des plateformes, l'attention est un bien rare et convoité. Ainsi, les grands acteurs du numérique luttent pour nous amener dans leur environnement et nous rendre captifs de leurs services. La notion de rareté de l'attention n'est cependant pas nouvelle. Traditionnellement, c'est la publicité qui tentait d'attirer l'attention du public vers un produit ou service. Avec le numérique, cette quête du "temps de cerveau disponible"<a href="#footnote-1">[1]</a> est amplifiée car il est désormais possible de capter, calculer et monétiser les "traces d'attention".
 
-Les applications sont alors pensées dans le but retenir les utilisateurs plus longtemps possible. Les pastilles rouges des notifications, les *likes*, les systèmes *auto-play* de YouTube ou Netflix (qui relancent une vidéo sans notre consentement), ou encore le *scroll* infini sont autant d'incitations à maximiser le temps passé en ligne. Ces astuces de conception jouent sur des ressorts émotionnels : besoin de récompense immédiate, quête de reconnaissance, attraction pour la nouveauté, peur de passer à côté de quelque chose... Ces tactiques sont d’autant plus efficaces qu’elles peuvent être finement ciblées et personnalisées.
+Les applications sont alors pensées dans le but de nous retenir le plus longtemps possible. Les pastilles rouges des notifications, les *likes*, les systèmes *auto-play* de YouTube ou Netflix (qui relancent une vidéo sans notre consentement), ou encore le *scroll* infini sont autant d'incitations à maximiser le temps passé en ligne. Ces astuces de conception jouent sur des ressorts émotionnels : besoin de récompense immédiate, quête de reconnaissance, attraction pour la nouveauté, peur de passer à côté de quelque chose... Ces tactiques semblent d’autant plus efficaces qu’elles peuvent être finement ciblées et personnalisées.
 
 Mais ces leviers psycho-cognitifs suffisent-ils à expliquer le succès des plateformes? Bien que ces mécanismes participent à orienter les comportements, l’attraction des services numériques ne saurait être uniquement le résultat de stratégies de captation de l’attention. Si les plateformes parviennent à attirer un nombre important d’utilisateurs, c’est avant tout grâce à leur position centrale et à leur capacité à réunir une multitude d’usages (communiquer, s’informer, se divertir, jouer, etc.).
 
@@ -186,12 +186,12 @@ Pourtant, les activités en ligne ne sont pas nécessairement synonymes de «tem
 
 * [Un article](https://www.numerama.com/tech/227930-si-vous-souhaitez-etre-credibles-arretez-de-dire-les-gafa.html) qui discute la pertinence de l’acronyme «GAFA» (Numérama))
 * [Le livre](https://www.cairn.info/culture-numerique--9782724623659.html) *Culture numérique*(2019) de Dominique Cardon – chapitre 5, "L'Economie des plateformes"
-* [Le livre](https://www.beaude.net/ie/) *Les fins d'Internet* (2014) de Boris Beaude – chapitre 4, "De la gratuité à la propriété""
+* [Le livre](https://www.beaude.net/ie/) *Les fins d'Internet* (2014) de Boris Beaude – chapitre 4, "De la gratuité à la propriété"
 * [Le livre](https://www.seuil.com/ouvrage/pour-une-ecologie-de-l-attention-yves-citton/9782021181425) *Pour une écologie de l'attention* de Yves Citton (2014)
 * [Le livre](https://www.boullier.bzh/livres/comment-sortir-de-lemprise-des-reseaux-sociaux/) *Comment sortir de l'emprise des réseaux sociaux* (2020) de Dominique Boullier 
-* [La mini-série documentaire](https://www.youtube.com/playlist?list=PLUDzuI7to_hD6PswmzU0r9oSq048EDoY8) «Les Invisibles" (France TV), qui fait met en lumière les travailleurs des plateformes (livreurs Uber Eats, «travailleurs du clic», modérateurs)
+* [La mini-série documentaire](https://www.youtube.com/playlist?list=PLUDzuI7to_hD6PswmzU0r9oSq048EDoY8) «Les invisibles" (France TV), qui fait met en lumière les travailleurs des plateformes (livreurs Uber Eats, «travailleurs du clic», modérateurs)
 * [Un reportage radio](https://www.rts.ch/play/radio/vacarme/audio/societe-numerique-35-hep-uber?id=11541585) (RTS) sur les conditions de travail des chauffeurs Uber
-* [Un podcast](https://www.franceinter.fr/emissions/le-code-a-change/sommes-nous-vraiment-en-train-de-fabriquer-des-cretins-digitaux) qui déconstruit les discours alarmistes autour des écrans chez les jeunes ("Sommes-nous vraiment en train de fabriquer des “crétins digitaux" ?"  Le Code a changé, France Inter)
+* [Un podcast](https://www.franceinter.fr/emissions/le-code-a-change/sommes-nous-vraiment-en-train-de-fabriquer-des-cretins-digitaux) qui déconstruit les discours alarmistes autour des écrans chez les jeunes ("Sommes-nous vraiment en train de fabriquer des “crétins digitaux" ?", Le Code a changé, France Inter)
 
 ### Glossaire
 
@@ -226,21 +226,25 @@ ___________
 <br>
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-  <b>1. Au delà des GAFAM</b>
+  <b>1. Au-delà des GAFAM</b>
 </div>
+
+Objectif : Prendre conscience de la diversité des modèles économiques du numérique
 
 <br>
 
-**A.  Que cache la notion de «GAFAM»? (30 min)**
+**A.  Que cache la notion de «GAFAM»?** 
+
+🕑 30 min | 👩‍💻 branché
 
 
-Proposer aux élèves de faire une recherche en ligne du terme «GAFAM» (ou «GAFA»). En petits groupes, ils et elles prennent des notes afin de pouvoir répondre aux questions suivantes (15 min) : Qui sont les «GAFAM»?  Que leur reproche-t-on? En quoi se différencient-elles?
+Proposer aux élèves de faire une recherche en ligne du terme «GAFAM» (ou «GAFA»). En petits groupes, ils et elles prennent des notes afin de pouvoir répondre aux questions suivantes : Qui sont les «GAFAM»?  Que leur reproche-t-on? En quoi se différencient-elles?
 
 
    ```{admonition} Note
    :class: tip
    Pour guider leur recherche, on peut suggérer aux élèves les articles suivants:
-   * [La page Wikipédia](https://fr.wikipedia.org/wiki/GAFAM) consacrée au terme "GAFA"
+   * [La page Wikipédia](https://fr.wikipedia.org/wiki/GAFAM) consacrée au terme "GAFAM"
    * [Un article](https://www.numerama.com/tech/227930-si-vous-souhaitez-etre-credibles-arretez-de-dire-les-gafa.html) qui discute la pertinence de l’acronyme «GAFA» (Numérama)
    ```
 
@@ -278,7 +282,7 @@ Par oral, mettre en commun les réponses des différents groupes et apporter des
   d) A votre avis, est-il pertinent de réunir ces cinq entreprises sous un même terme? 
 
    ::::{admonition,dropdown} Réponse
-  Si le terme «GAFAM» peut être utile pour comprendre certains points communs à ces entreprises (cf. question b), il pose également problème, car il efface les logiques spécifiques à chacune de ces entreprises. En effet, celles-ci ont une histoire, un modèle économique, une culture et des enjeux propres. Par exemple, la question de la captation des données concerne avant tout Google et Facebook. Apple, qui vend avant tout du matériel informatique et ne commercialise pas les données des utilisateurs, se positionne ainsi comme [défenseur de la vie privée](https://www.letemps.ch/economie/protection-vie-privee-fer-lance-marketing-dapple).Ainsi, les enjeux politiques et les problématiques que pose leur régulation ne sont pas les mêmes pour chacune de ces entreprises. Connaître leurs spécificités permet de proposer une politique adaptée.
+  Si le terme «GAFAM» peut être utile pour comprendre certains points communs à ces entreprises (cf. question b), il pose également problème, car il efface les logiques spécifiques à chacune de ces entreprises. En effet, celles-ci ont une histoire, un modèle économique, une culture et des enjeux propres. Par exemple, la question de la captation des données concerne avant tout Google et Facebook. Apple, qui vend avant tout du matériel informatique et ne commercialise pas les données des utilisateurs, se positionne ainsi comme [défenseur de la vie privée](https://www.letemps.ch/economie/protection-vie-privee-fer-lance-marketing-dapple). Ainsi, les enjeux politiques et les problématiques que pose leur régulation ne sont pas les mêmes pour chacune de ces entreprises. Connaître leurs spécificités permet de proposer une politique adaptée.
    ::::
 
 **Activité complémentaire** 
@@ -293,9 +297,8 @@ Demander aux élèves de lister 3 applications ou services en ligne qu’ils uti
   * **WhatsApp** : L’entreprise, qui appartient à Facebook depuis 2016, n’a pas de système de monétisation. Auparavant facturée 1 dollar par année, l’application est maintenant gratuite et sans publicité. Mais, début 2021, WhatsApp a annoncé de nouvelles conditions d’utilisation qui vont permettre à Facebook d’utiliser les données issues de l’application. Son modèle économique pourrait donc évoluer.
   * **TikTok** : En 2020, TikTok possède 2 sources de revenus : la publicité et surtout, les [achats intégrés à l'application](https://www.numerama.com/business/535666-comment-tiktok-fait-il-pour-gagner-tellement-dargent.html). Ces derniers s'effectuent au travers d'une monnaie virtuelle, les "*Coins*" (pièces). Les utilisateurs peuvent acheter des crédits (100 pièces pour env. 1 Euro) et les utiliser pour différents services supplémentaires ou pour des "cadeaux" offerts aux influenceurs. Tiktok prélève une commission sur ces transactions (le pourcentage exact n'est pas connu).
   *  **Signal** : Pour l'instant, le service de messagerie est financé par une fondation à but non lucratif. Il est axé sur la confidentialité et les données des utilisateurs ne sont pas commercialisées.
-  * **Telegram** : D’abord entièrement gratuite et sans publicité, le service de messagerie a annoncée en 2021 développer une offre payante pour les entreprises et ainsi qu’une plateforme publicitaire.
+  * **Telegram** : D’abord entièrement gratuit et sans publicité, le service de messagerie a annoncée en 2021 développer une offre payante pour les entreprises et ainsi qu’une plateforme publicitaire.
   *  **Spotify / Netflix** : Les plateformes liées à l'industrie du divertissement fonctionnent le plus souvent sur un principe d'abonnement. La stratégie consiste à offrir un premier mois gratuit ou un service réduit (avec publicités, par exemple) afin de convertir les utilisateurs à une version payante.
-  * **Amazon**: Si la principale source de revenus d'Amazon est la vente de produits en ligne, l'entreprise est également le plus grand fournisseur d'hébergement Web. Amazon développe également toute une série d'objets "connectés" (voir ci-dessus)
   *  **Uber, AirBnB** : Ces plateformes se positionnent comme des intermédiaires entre le client et le prestataire de service. Elles prennent une commission sur les transactions qui s'effectuent entre les deux parties
   ::::
 
@@ -304,14 +307,17 @@ Demander aux élèves de lister 3 applications ou services en ligne qu’ils uti
 <!-- Activité pas finalisée -->
 
 
-**B. Comprendre le modèle de Google** (30 min)
+**B. Comprendre le modèle de Google** 
+
+🕑 30 min | 👩‍💻 branché
 
 En guise d’introduction, demander aux élèves :
 
 a) Qu’est-ce qu’un moteur de recherche?
 
 ::::{admonition,dropdown} **Réponse**
-Un moteur de recherche est un site web qui permet de trouver des ressources en ligne (pages web, images, vidéos, articles, logiciels, etc.) au travers d’une recherche par mots-clés.
+Un moteur de recherche est une application web qui permet de trouver des ressources en ligne (pages web, images, vidéos, articles, logiciels, etc.) au travers d’une recherche par mots-clés et selon différents paramètres déterminés.
+Il tente de fournir à l’utilisateur la réponse la plus pertinente à sa requête. Sans moteur de recherche, il faudrait connaître l’adresse précise d’un site pour y accéder.
 ::::
 
 b) Quel moteur de recherche utilisez-vous ?
@@ -323,7 +329,7 @@ c) Quel est le modèle économique de Google?
 ::::{admonition,dropdown} **Réponse**
 Lorsque l’on fait une recherche en ligne, deux grandes catégories de résultats sont proposées : 
 
-a. Les résultats dits «naturels» qui apparaissent avant tout grâce à la pertinence entre leur contenu et le mot-clé introduit. 
+a. Les résultats dits [«naturels»](https://support.google.com/google-ads/answer/6054492?hl=fr) qui apparaissent avant tout grâce à la pertinence entre leur contenu et le mot-clé introduit. 
 
 b. Les résultats issus du «référencement payant», soit des annonces mises en avant car un annonceur a investi un certain montant dans le mot-clé inséré. La place effective des annonces repose sur un système d’enchères en temps réel qui détermine quelle annonce est affichée selon de multiples paramètres (pertinence avec le mot-clé, montant investi, zone géographique, heure, etc.), afin de proposer à l’internaute les liens commerciaux sur lesquels il est le plus susceptible de cliquer.
 
@@ -348,15 +354,15 @@ e) Si Google représente plus de 90% des parts de marché dans le domaine des mo
 **DuckDuckGo** : Meta-moteur qui agrège les résultats de nombreux moteurs de recherche. Comme Qwant, DuckDuckGo ne propose pas de résultats personnalisés selon le profil des utilisateurs et se positionne comme défenseur de la vie privée. Son financement repose également sur la publicité non-ciblée. Selon DuckDuckGo, il n’est pas nécessaire de
 «pister» les internautes pour leur proposer des résultats pertinents. 
 
-**Ecosia** : Moteur de recherche allemand qui investit 80% de ses bénéfices dans des projets de reforestation, principalement en Amérique du sud et en Afrique. Les résultats du moteur de recherche et les annonces sont générés par Bing. Le service de Microsoft reverse un pourcentage de ces gains publicitaire à Ecosia.
+**Ecosia** : Moteur de recherche allemand qui investit 80% de ses bénéfices dans des projets de reforestation, principalement en Amérique du sud et en Afrique. Les résultats du moteur de recherche et les annonces sont générés par Bing. Le service de Microsoft reverse un pourcentage de ses gains publicitaires à Ecosia.
 ::::
 
-**Activité complémentaire**
+**Activité complémentaire** (🕑 20 min)
 
 Le chercheur de l’EPFL Frédéric Kaplan parle de [«capitalisme linguistique»](https://fkaplan.wordpress.com/2011/09/07/google-et-le-capitalisme-linguistique/) pour décrire ce système d’enchères. Selon vous, que signifie cette notion?
 
 ::::{admonition,dropdown} **Réponse**
-C’est grâce à la vente de «mots» aux enchères que Google est devenu riche. L’entreprise a créé un véritable système de monétisation du langage. Si chaque requête sur le moteur de recherche génère une enchère, on peut imaginer l’ampleur des gains générés. Le prix des mots peut varier selon différents facteurs, tout comme le cours d’une action en bourse. Il s’agit d’une forme de spéculation sur le langage.
+L’entreprise a créé un véritable système de monétisation du langage. Si chaque requête sur le moteur de recherche génère une enchère, on peut imaginer l’ampleur des gains obtenus. Le prix des mots peut varier selon différents facteurs, tout comme le cours d’une action en bourse. Il s’agit d’une forme de spéculation sur le langage dont Google contrôle l’ensemble des paramètres.
 ::::
 
 Lors de sa campagne pour l’élection présidentielle américaine 2020, le candidat démocrate et milliardaire Michael Bloomberg a dépensé des millions de dollars pour acheter aux enchères de Google le mot «climat» et de nombreux autres termes relatifs au réchauffement climatique.
@@ -370,7 +376,7 @@ Michael Bloomberg souhaite investir le créneau écologique et ne laisser, sur c
 Cette stratégie permet-elle réellement à Michael Bloomberg de rediriger tous les résultats de recherche sur la question climatique vers son site ?
 
 ::::{admonition,dropdown} **Réponse**
-Non, car Google propose 2 principes de référencement: le référencement naturel (*organic search*) et le référencement payant, au travers de l’achat de mots-clé. La stratégie de Michael Bloomberg ne lui permet en réalité qu’une visibilité partielle, car elle ne concerne que les résultats payants. L’achat de mot-clé n’a pas d’influence sur le référencement naturel, davantage basé sur des critères de pertinence.
+La stratégie de Michael Bloomberg ne lui permet en réalité qu’une visibilité partielle, car elle ne concerne que les résultats payants. L’achat de mot-clé n’a pas d’influence sur le référencement naturel, davantage basé sur des critères de pertinence. On peut ainsi estimer que l’achat de mots-clés est nécessaire lorsque le site en question n’est pas suffisamment pertinent pour apparaître naturellement dans les résultats de recherche.
 
 On peut ainsi estimer que l’achat de mots-clés est nécessaire lorsque le site en question n’est pas suffisamment pertinent pour apparaître naturellement dans les résultats de recherche.
 ::::
@@ -387,14 +393,16 @@ Malgré le déploiement de moyens considérables, cette stratégie n’a pas per
 
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-  <b>2.Le travail uberisé</b>
+  <b>2. Le travail uberisé</b>
 </div>
 
 <br>
 
-**A. Travailler pour une application (30 min)**
+**A. Travailler pour une application** 
 
-Faire visionner [l'épisode 1 "Roulez jeunesse"](https://www.youtube.com/watch?v=ST_KVB6bEdw) (0’00’’- 8’20’’) de la série "Invisibles. Les travailleurs du clic" consacré aux livreurs Uber Eats (France TV).
+🕑 30 min | ✍️ débranché
+
+Faire visionner [l'épisode 1 "Roulez jeunesse"](https://www.youtube.com/watch?v=ST_KVB6bEdw) (0’00’’- 8’20’’) de la série *Invisibles. Les travailleurs du clic* consacré aux livreurs Uber Eats (France TV).
 
 Poser les questions suivantes :
 
@@ -415,7 +423,7 @@ Les sommes versées pour les courses ne permettent pas d’obtenir un salaire d�
 c) Quelles sont les données produites par les livreurs et en quoi sont-elles utiles à Uber?
 
 ::::{admonition,dropdown} Réponse
-es livreurs produisent des données dès qu’ils sont connectés à l’application. Il peut s’agir de données relatives à leurs trajets  (géolocalisation), à leur productivité (nombre de commandes prises en charge) à leur profil (notes des clients et restaurateurs). Uber collecte aussi des informations sur les clients (profil, horaires de commandes, etc.). Toutes ces données permettent d’analyser finement les comportements de chacun pour ensuite adapter les prix en temps réel, proposer des «bonus» aux travailleurs lorsque la demande est importante, ou encore sanctionner les livreurs les moins performants. Par ailleurs, les conditions et la finalité de ce traçage demeurent largement opaques.
+Les livreurs produisent des données dès qu’ils sont connectés à l’application. Il peut s’agir de données relatives à leurs trajets  (géolocalisation), à leur productivité (nombre de commandes prises en charge) à leur profil (notes des clients et restaurateurs). Uber collecte aussi des informations sur les clients (profil, horaires de commandes, etc.). Toutes ces données permettent d’analyser finement les comportements de chacun pour ensuite adapter les prix en temps réel, proposer des «bonus» aux travailleurs lorsque la demande est importante, ou encore sanctionner les livreurs les moins performants. Par ailleurs, les conditions et la finalité de ce traçage demeurent largement opaques.
 ::::
 
 d) Livreurs, restaurants et particuliers sont notés  : quel est l’objectif de ces évaluations ? 
@@ -424,7 +432,7 @@ d) Livreurs, restaurants et particuliers sont notés  : quel est l’objectif de
 Les livreurs sont notés par les restaurateurs et par les clients, qui sont, eux, notés par les livreurs.Toutes ces données nourrissent les algorithmes d’Uber et lui permettent de rationaliser ses coûts, d’anticiper les flux et 
 et d’optimiser sa gestion. 
 
-La notation agit comme moyen de pression auprès des livreurs et des restaurateurs qui sont incités à fournir une prestation rapide et conforme aux attentes du client. Les évaluations donnent une impression d’objectivité mais elles dépendent souvent des émotions et du contexte. Et parfois, elles n’évaluent pas ce qu’elles sont supposées évaluer. Par exemple, si un livreur qui apporte un repas mal emballé par un restaurant pourra être sanctionné par le client. 
+La notation agit comme moyen de pression auprès des livreurs et des restaurateurs qui sont incités à fournir une prestation rapide et conforme aux attentes du client. Les évaluations donnent une impression d’objectivité mais elles dépendent souvent des émotions et du contexte. Et parfois, elles n’évaluent pas ce qu’elles sont supposées évaluer. Par exemple, un livreur qui apporte un repas mal emballé par un restaurant pourra être sanctionné par le client.
 
 Pour aller plus loin  : 
 
@@ -433,22 +441,26 @@ Pour aller plus loin  :
  * Le livre [La nouvelle guerre des étoiles] (https://www.internetactu.net/2020/09/23/peut-on-limiter-lextension-de-la-societe-de-la-notation/) des journalistes Vincent Coquaz et Ismaël Halissat qui enquête sur la «société de la notation»*
 ::::
 
-e) Selon vous, peut-on dire qu’Uber propose une technologie «innovante»? 
+e) Peut-on dire qu’Uber propose une technologie «innovante»?
 
 ::::{admonition,dropdown} Réponse
-L’innovation d’Uber se situe davantage au niveau stratégique que technique. En effet, Uber ne propose pas de réelle innovation technologique. L’entreprise s’appuie sur toute une série de dispositifs existants : cartographie, GPS, téléphone mobile, Internet, paiement en ligne. La force d’Uber a été de proposer au moment opportun un service qui mobilise toutes ces technologies, qui corresponde à une certaine demande et qui trouve un contexte politique favorable à son développement.
+L’innovation d’Uber se situe davantage au niveau stratégique que technique. En effet, Uber ne propose pas de réelle innovation technologique. L’entreprise s’appuie sur toute une série de dispositifs qui pré-existaient : cartographie, GPS, téléphone mobile, Internet, paiement en ligne. Par ailleurs, des applications mobile permettant de commander un taxi étaient déjà disponibles. La force de la plateforme a été de proposer au moment opportun un service qui mobilise des technologies pertinentes, mais également qui correspond à une certaine demande, et qui trouve un contexte politique favorable à son développement.
+
 ::::
 
 <br>
 
 **B. Réglementer le travail "uberisé"** 
 
+
+🕑 30 min | ✍️ débranché
+
 Faire lire [un article](https://www.letemps.ch/economie/geneve-uber-eats-desormais-recourir-employes) du journal Le Temps consacré à la décision du Canton de Genève d'imposer à Uber Eats de salarier ses livreurs. Poser les questions suivantes:
 
 a) Résumez l’article en une phrase.
 
  ::::{admonition,dropdown} Réponse
-Uber est sommée d’appliquer une décision de justice cantonale en changeant le statut de ses livreurs, d’indépendants à salariés. 
+Uber est sommé d’appliquer une décision de justice cantonale en changeant le statut de ses livreurs, d’indépendants à salariés. 
 ::::
 
 b) Expliquez l’importance de cette nouvelle.
@@ -460,7 +472,7 @@ Les livreurs seront désormais – et jusqu’à confirmation par la justice –
 c) Quelles peuvent-être les conséquences de ce changement de politique ?
 
 :::: {admonition,dropdown} Réponse
-* D’autres cantons – ou pays - seront tentés d’exiger d’Uber Eats le même revirement.
+* D’autres cantons – ou pays - peuvent être tentés d’exiger d’Uber Eats le même revirement.
 
 * Les autorités pourraient demander à ce que ce changement s’applique à tous les services Uber, voire à d’autres plateformes.
 
