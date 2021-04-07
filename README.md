@@ -51,6 +51,26 @@
 <sup>1</sup> *Note de Philippe: J'ai pris la version 3.9.0 et tout ce qui suit fonctionne parfaitement.*
 
 
+## Installation Ubuntu 20.04 LTS
+
+* Cloner le dépôt  dans un dossier de votre choix
+
+```bash
+# install git if needed
+sudo apt install -y git
+
+# clone in the directory of your choice
+cd {BASE_FOLDER}
+git clone https://github.com/edunum-sec2/ressources.git
+cd ressources
+```
+
+* Lancer le script d'installation
+
+```bash
+./install_ubuntu.sh
+```
+
 ## Références
 
 * Syntaxe Mardown utilisée: [MyST](https://jupyterbook.org/reference/glossary.html#term-MyST)
