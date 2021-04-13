@@ -21,6 +21,17 @@ Dans un appareil analogique, la paroi illuminée est recouverte d'une pellicule 
 
 ### Représentation d'une image noir et blanc
 
+````{tabbed} Image
+```{image} representation-images/thuglife.png
+:width: 300px
+```
+````
+````{tabbed} Code
+```{image} representation-images/thuglife2.png
+:width: 300px
+```
+````
+
 Un bit est l'unité minimale d'information qu'un ordintaeur comprend : 1 ou 0, allumé ou éteint. Si l'on voulait qu'un ordinateur sauvegarde une image, et l'affiche à l'écran, on pourrait commencer par lui donner uniquement les indications en noir et blanc. Ainsi, un bit pourrait soit être noir, soit être blanc.
 
 ```{figure} representation-images/bitmap1.png
@@ -185,10 +196,53 @@ pikachu=[
       [0,0,(252, 230, 84),(242,165,59),(163,87,58),(163,87,58),(242,165,59),0]
 ]     
 
+kirby=[
+
+      [0,1,1,0,1,1,1,1,1,1,0,1,1,1,1,0],
+      [1,150,150,1,150,0,0,0,0,150,1,150,0,150,1,0],
+      [1,0,1,150,0,0,0,0,0,0,150,0,0,0,150,1],
+      [1,0,150,0,0,0,0,0,0,0,0,0,0,0,0,1],
+      [1,0,0,0,1,0,1,0,0,0,0,0,0,0,150,1],
+      [1,150,0,0,1,0,1,0,0,0,0,0,0,150,1,0],
+      [0,1,0,0,1,0,1,0,0,0,0,0,150,1,1,0],
+      [0,1,150,0,0,0,0,0,150,150,0,0,0,150,1,0],
+      [0,1,0,0,0,0,0,0,0,0,0,0,0,150,1,0],
+      [0,1,150,0,0,1,0,0,0,0,0,0,0,1,0,0],
+      [0,0,1,0,0,0,0,0,0,0,0,0,150,1,0,0],
+      [0,0,1,150,0,0,0,0,0,0,0,150,1,150,1,0],
+      [0,0,0,1,150,150,0,0,0,150,1,1,150,150,1,0],
+      [0,0,0,0,1,1,1,1,1,1,1,150,150,150,1,0],
+      [0,0,0,0,0,0,1,150,150,1,0,1,150,150,1,0],
+      [0,0,0,0,0,0,0,1,1,0,0,0,1,1,0,0],
+
+]
+
+kirbycouleur=[
+
+      [0,1,1,0,1,1,1,1,1,1,0,1,1,1,1,0],
+      [1,(238,116,155),(238,116,155),1,(238,116,155),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1,(238,116,155),(243,178,200),(238,116,155),1,0],
+      [1,(243,178,200),1,(238,116,155),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1],
+      [1,(243,178,200),(238,116,155),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),1],
+      [1,(243,178,200),(243,178,200),(243,178,200),1,(243,178,200),1,(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1],
+      [1,(238,116,155),(243,178,200),(243,178,200),1,(243,178,200),1,(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1,0],
+      [0,1,(243,178,200),(243,178,200),1,(243,178,200),1,(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1,1,0],
+      [0,1,(238,116,155),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),(238,116,155),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1,0],
+      [0,1,(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1,0],
+      [0,1,(238,116,155),(243,178,200),(243,178,200),1,(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),1,0,0],
+      [0,0,1,(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1,0,0],
+      [0,0,1,(238,116,155),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1,(255,0,0),1,0],
+      [0,0,0,1,(238,116,155),(238,116,155),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1,1,(255,0,0),(255,0,0),1,0],
+      [0,0,0,0,1,1,1,1,1,1,1,(255,0,0),(255,0,0),(255,0,0),1,0],
+      [0,0,0,0,0,0,1,(255,0,0),(255,0,0),1,0,1,(255,0,0),(255,0,0),1,0],
+      [0,0,0,0,0,0,0,1,1,0,0,0,1,1,0,0],
+
+]
+
 ## source illustrations : https://johanvinet.tumblr.com/
 
 ===
 alien=[
+    
       [0,0,0,0,0,0,0,0,0,0,0],
       [0,0,1,0,0,0,0,0,1,0,0],
       [0,0,0,1,0,0,0,1,0,0,0],
@@ -202,7 +256,8 @@ alien=[
       [0,0,0,0,0,0,0,0,0,0,0]
       ]
 
-drawImg(thuglife)
+
+drawImg(alien)
 ```
 
 
@@ -221,6 +276,17 @@ Un **pixel**, de l'anglais : **pic**ture **el**ement, est le composant minimal d
 ````
 
 ### Représentation d'une image monochrome
+
+````{tabbed} Image
+```{image} representation-images/kirbygrey.png
+:width: 300px
+```
+````
+````{tabbed} Code
+```{image} representation-images/kirbygrey2.png
+:width: 300px
+```
+````
 
 La plupart des images sont représentées au format matriciel. Une image en niveau de gris sera ainsi généralement codée comme un tableau de valeurs correspondant à la luminance de chaque pixel. Les valeurs de luminance sont chacune déclarées comme un nombre allant de 0 à 255, correspondant respectivement au noir et au blanc. 
 
@@ -241,6 +307,17 @@ Ceci est très semblable au fonctionnement des tableurs pour lesquels il est pos
 ```
 
 ### Codage des couleurs
+
+````{tabbed} Image
+```{image} representation-images/kirbycolor.png
+:width: 300px
+```
+````
+````{tabbed} Code
+```{image} representation-images/kirbycolor2.png
+:width: 500px
+```
+````
 
 En peinture, pour obtenir toutes les couleurs de l'arc-en-ciel, on utilise un mélange de magenta, de cyan et de jaune, c'est ce que l'on appelle le système soustractif (en ajoutant du pigment à une surface, une partie du spectre lumineux est soustrait). Pour faire la même chose en informatique, on utilisera également trois couleurs, mais celles-ci seront le rouge, le vert et le bleu. Cela correspond au système additif (en allumant une LED rouge, j'ajoute de la lumière sur la partie du spectre lumineux correspondant).
 
@@ -280,6 +357,12 @@ Modifier le fichier afin de dessiner 4 carrés différents.
 ^^^
 Identifiez et listez les avantages et les inconvénients du format vectoriel en comparaison avec le système matriciel.
 ```
+
+## Bonus
+
+Une oeuvre d'art numérique signée Andreas Gyzin : 
+
+https://play.ertdfgcvb.xyz/#/src/demos/doom_flame_full_color
 
 ### Auto-contrôle
 
