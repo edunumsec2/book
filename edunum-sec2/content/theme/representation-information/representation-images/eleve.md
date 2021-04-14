@@ -360,13 +360,14 @@ Identifiez et listez les avantages et les inconvénients du format vectoriel en 
 
 ## Bonus
 
-Une oeuvre d'art numérique signée Andreas Gyzin : 
+Une oeuvre d'art numérique signée Andreas Gysin : 
 
 https://play.ertdfgcvb.xyz/#/src/demos/doom_flame_full_color
 
 ### Auto-contrôle
 
-La {bl}`>résolution|densité|superficie`d'une image se calcule en {bl}`centimètres|>pixels|niveaux de gris`. La plupart des {bl}`courroies|>images|bananes}` sont représentées au format {bl}`matrix|magique|>matriciel`. La {bl}`>résolution|densité|superficie`d'une image se calcule en {bl}`centimètres|>pixels|niveaux de gris`. La plupart des {bl}`courroies|>images|bananes}` sont représentées au format {bl}`matrix|magique|>matriciel`. La {bl}`>résolution|densité|superficie`d'une image se calcule en {bl}`centimètres|>pixels|niveaux de gris`. La plupart des {bl}`courroies|>images|bananes}` sont représentées au format {bl}`matrix|magique|>matriciel`. La {bl}`>résolution|densité|superficie`d'une image se calcule en {bl}`centimètres|>pixels|niveaux de gris`. La plupart des {bl}`courroies|>images|bananes}` sont représentées au format {bl}`matrix|magique|>matriciel`. 
+<!-- La {bl}`>résolution|densité|superficie`d'une image se calcule en {bl}`centimètres|>pixels|niveaux de gris`. La plupart des {bl}`courroies|>images|bananes}` sont représentées au format {bl}`matrix|magique|>matriciel`. La {bl}`>résolution|densité|superficie`d'une image se calcule en {bl}`centimètres|>pixels|niveaux de gris`. La plupart des {bl}`courroies|>images|bananes}` sont représentées au format {bl}`matrix|magique|>matriciel`. La {bl}`>résolution|densité|superficie`d'une image se calcule en {bl}`centimètres|>pixels|niveaux de gris`. La plupart des {bl}`courroies|>images|bananes}` sont représentées au format {bl}`matrix|magique|>matriciel`. La {bl}`>résolution|densité|superficie`d'une image se calcule en {bl}`centimètres|>pixels|niveaux de gris`. La plupart des {bl}`courroies|>images|bananes}` sont représentées au format {bl}`matrix|magique|>matriciel`.  
+-->
 
 ```{question} Question
 S'il faut 8 bits pour coder un chiffre entre 0 et 255, combien faut-il de bits pour coder un seul pixel d'une image couleur ? 
