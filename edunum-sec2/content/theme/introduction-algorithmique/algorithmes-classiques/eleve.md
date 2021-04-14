@@ -1,7 +1,7 @@
 Algorithmes classiques
 ======================
 
-::::{admonition,note} Matière à réfléchir I
+::::{admonition,attention} Matière à réfléchir I
 
 Imaginez une bibliothèque scolaire un peu spéciale : les livres n’y sont pas rangés par ordre alphabétique ! Ils sont bien rangés sur des étagères, mais sans aucune logique particulière. Vous entrez dans cette bibliothèque un peu spéciale et vous vous mettez à chercher l’ouvrage ***Le Guide du voyageur galactique.***
 
@@ -29,7 +29,7 @@ Un algorithme de tri permet de trier des données, de les organiser selon **une 
 
 Toutes les recettes de cuisine ne se valant pas, un algorithme peut aussi être ***plus adéquat qu’un autre algorithme***. Il existe des dizaines d’algorithmes qui trient avec des approches différentes (nous en verrons quelques-uns). Certains sont plus rapides, d’autres moins gourmands en mémoire ou bien plus simples à coder. Ainsi, selon la situation, il faut choisir le bon algorithme.
 
-::::{admonition,attention} Exercice 8
+::::{admonition,note} Exercice 8
 
 Trier les rectangles de la ligne du haut de la Figure 3 en fonction de leur taille (comme sur la ligne de bas). Représenter toutes les étapes intermédiaires par lesquelles vous passez avant d’arriver à la solution finale. Conseil : remplacer les rectangles par un nombre en lien avec leur taille.
 
@@ -52,7 +52,7 @@ L’algorithme du **tri par sélection** commence par rechercher le plus petit �
 L’algorithme du **tri à bulles** compare les éléments voisins. Commencer par comparer les deux premiers éléments de la liste et les mettre dans le bon ordre (le plus petit des deux éléments précède le plus grand). Comparer ensuite les deux éléments suivants (le nouveau deuxième et troisième élément de la liste) et les mettre dans le bon ordre. Continuer de la sorte jusqu’à la fin de la liste. Après ce premier parcours de la liste, le plus grand élément se retrouve en dernière position de la liste. Parcourir à nouveau la liste, en comparant et déplaçant les éléments voisins et en excluant le dernier élément qui est déjà bien trié. Parcourir la liste de la sorte, autant de fois qu’elle possède d’éléments, en excluant les éléments bien triés à la fin de la liste.
 
 
-::::{admonition,attention} Exercice 9
+::::{admonition,note} Exercice 9
 
 [Résoudre cet exercice avant d’avancer dans le chapitre.] Appliquer un des trois algorithmes ci-dessus pour trier les rectangles de la ligne du haut de la Figure 3 en fonction de leur taille (le résultat est illustré dans la ligne du bas), en dessinant l’ordre des éléments à chaque fois qu’il change. Vous avez besoin d’une grande feuille de papier ou vous pouvez représenter la taille d’un rectangle par un nombre. 
 
@@ -73,7 +73,7 @@ Figure 4. Etapes intermédiaires lors de l’application des différents algorit
 :::
 
 
-::::{admonition,note} Conseil
+::::{admonition,hint} Anecdote
 
 Vous passez trop de temps à chercher vos affaires ? Pensez à mieux les ranger. Le temps perdu à ranger ses affaires est bien inférieur à celui que l’on passe à les chercher plus tard.
 
@@ -88,13 +88,13 @@ Dans **le tri à bulles** à droite, les lignes en dessous des rectangles montre
 
 Notez que même si tous les algorithmes arrivent à la même solution finale, ils y arrivent de manière très différente et avec plus ou moins de calculs. 
 
-::::{admonition,attention} Exercice 10
+::::{admonition,note} Exercice 10
 
 Rappelez-vous la méthode que vous avez utilisée pour résoudre l’exercice 8. De quel algorithme de tri se rapproche-t-elle le plus ? 
 
 ::::
 
-::::{admonition,attention} Exercice 11
+::::{admonition,note} Exercice 11
 
 Pour chaque algorithme, compter le nombre de comparaisons de la taille de deux éléments et le nombre de mouvements (rectangles déplacés).
 
@@ -119,7 +119,7 @@ La vitesse d’un algorithme dépend également des données en entrée. Selon l
 
 
 
-::::{admonition,note} Pour aller plus loin
+::::{admonition,note} Aller plus loin
 
 Imaginez que les quatre éléments d’une liste sont triés dans le sens inverse de ce que l’on souhaite (ils sont placés du plus grand au plus petit). Trier la liste selon les trois algorithmes de tri vus précédemment : le tri par insertion, le tri par sélection et le tri à bulles. 
 
@@ -133,19 +133,19 @@ Dans cette configuration précise, quel algorithme est le plus rapide  (présent
 
 ## Exercices
 
-::::{admonition,attention} Exercice 12
+::::{admonition,note} Exercice 12
 
 Réfléchir à votre journée : y a-t-il des actions qui se retrouvent chaque jour ouvrable ? Arrivez-vous à esquisser un algorithme que vous suivez sans que vous en ayez conscience ?
 
 ::::
 
-::::{admonition,attention} Exercice 13
+::::{admonition,note} Exercice 13
 
 Trier la liste [2,5,3,4,7,1,6] en utilisant les trois algorithmes de tri vus au cours. Représenter l’état de la liste après chaque étape qui change l’ordre des éléments.
 
 ::::
 
-::::{admonition,attention} Exercice 14 
+::::{admonition,note} Exercice 14 
 
 Ecrire un algorithme qui vérifie si une liste est triée. 
 
@@ -157,13 +157,13 @@ Comparer vos algorithmes. Sont-ils différents ?
 
 ::::
 
-::::{admonition,attention} Exercice 15
+::::{admonition,note} Exercice 15
 
 Analyser les oeuvres cubistes de Piet Mondrian. Trouver un algorithme qui permet de créer une oeuvre qui pourrait être attribuée à Mondrian.
 
 ::::
 
-::::{admonition,note} Ai-je compris ?
+::::{admonition,attention} Ai-je compris ?
 
 1. Je sais qu’il existe plusieurs manières différentes de résoudre un problème.
 
@@ -176,26 +176,26 @@ Analyser les oeuvres cubistes de Piet Mondrian. Trouver un algorithme qui permet
 
 ## Solutions des exercices de la théorie
 
-::::{admonition,attention} Solution de l’exercice 8
+::::{admonition,note} Solution de l’exercice 8
 
 Les données en entrée sont les rectangles sur la ligne du haut : leur taille et leur ordre. Le résultat en sortie correspond aux rectangles sur la ligne du bas : leur taille et leur ordre. Les opérations effectuées sont des comparaisons de la taille de deux rectangles et des déplacements de rectangles.
 
 ::::
 
-::::{admonition,attention} Solution de l’exercice 9
+::::{admonition,note} Solution de l’exercice 9
 
 La solution est donnée dans la légende de la Figure 4 et le texte qui suit.
 
 
 ::::
 
-::::{admonition,attention} Solution de l’exercice 10
+::::{admonition,note} Solution de l’exercice 10
 
 La solution dépend de votre solution de l’exercice 8. 
 
 ::::
 
-::::{admonition,attention} Solution de l’exercice 11
+::::{admonition, note} Solution de l’exercice 11
 
 Le décompte des opérations effectuées est comme suit :
 

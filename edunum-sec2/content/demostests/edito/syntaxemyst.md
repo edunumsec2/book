@@ -11,6 +11,8 @@
 
 La syntaxe MyST est vaste. Dans un souci de lisibilité, de cohérence visuelle, de simplicité, nous avons pris la décision de la restreindre. 
 
+**Important : MyST est une extension de la syntaxe Markdown, qui n'est pas traitée ici. Voici un lien pour les  [les bases du Markdown](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf).**
+
 ### Lexique des types de {panels}
 
 > Note : ce lexique de type de panels n'est pas officiellement reconnu. 
@@ -176,20 +178,40 @@ Mon contenu
 (optencarts)=
 #### Optimisations des encarts
 
-* les styles `:class:` disponibles sont : `note, warning, tip, caution, attention, danger, error, hint`.
+* les styles `:class:` disponibles sont : `note, hint, attention, caution danger`.
 
 `````{tabbed} Aperçu
 ```{admonition} Aller plus loin
 :class: note
 Contenus qui suggèrent des prolongements. 
 ```
+```{admonition} Micro-activité
+:class: note
+Contenus qui servent "d'exercices-exemples", c'est à dire pas une série d'exercices mais plutôt l'illustration d'un concept technique par un micro-exercice. On pourrait appeler ça des "micro-activités".
+```
+```{admonition} Pourquoi est-ce important ? 
+:class: note
+Contenus qui soulignent l'importance de telle ou telle notion. 
+```
 ```{admonition} Anecdote
-:class: attention
+:class: hint
 Contenus qui illustrent un concept par une anecdote (historique, politique, faits-divers, liens avec l'actualité, etc.).
 ```
-```{admonition} Micro-activité
+```{admonition} Le saviez-vous ?
 :class: hint
-Contenus qui servent "d'exercices-exemples", c'est à dire pas une série d'exercices mais plutôt l'illustration d'un concept technique par un micro-exercice. On pourrait appeler ça des "micro-activités".
+Contenus qui apportent une information inattendue en lien avec le sujet. 
+```
+```{admonition} À retenir
+:class: attention
+Contenus fondamentaux à retenir impérativement.
+```
+```{admonition} Matière à réfléchir
+:class: attention
+Contenus importants, qui pourraient ouvrir d'éventuels débats.
+```
+```{admonition} Ai-je compris ? 
+:class: attention
+Contenus qui servent à résumer les points importants de la leçon en guise d'auto-évaluation pour l'élève. 
 ```
 ```{admonition} Important
 :class: caution
@@ -226,7 +248,7 @@ Contenus liés à des avertissements de maintenance du site, des problèmes renc
 ````
 `````
 
-* on peut ajouter une fonction dropdown à un encart, en déclarant `dropdown` après la déclaration `admonition` dans les curly brackets. Attention : pour une raison que j'ignore, dans le cas des dropdowns, il faut déclarer la `class`juste après la déclaration `dropdown`. Exemple ci-dessous : 
+<!-- * on peut ajouter une fonction dropdown à un encart, en déclarant `dropdown` après la déclaration `admonition` dans les curly brackets. Attention : pour une raison que j'ignore, dans le cas des dropdowns, il faut déclarer la `class`juste après la déclaration `dropdown`. Exemple ci-dessous : 
 
 
 `````{tabbed} Aperçu
@@ -242,6 +264,7 @@ Voilà le contenu du dropdown. Attention ! Je ne sais pas pourquoi mais le dropd
 ::::
 ````
 `````
+-->
 
 * tous les contenus présents dans les encarts peuvent être stylisés avec la syntaxe élémentaire du Markdown pour la stylisation des polices de caractères (*italiques*, **gras**, etc.).
 

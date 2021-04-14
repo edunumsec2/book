@@ -32,7 +32,7 @@ Répéter Pour i = 1 à longueur(Nombres) # par pas de 1
 Fin Pour
 ```
 
-::::{admonition,attention} Exercice 1
+::::{admonition,note} Exercice 1
 
 Que contient la variable résultat à la fin de l'algorithme ci-dessus ? Quel  problème cet algorithme permet-il de résoudre ?
 
@@ -68,13 +68,13 @@ Le jeu d’instructions élémentaires dépend du système informatique. Un algo
 
 ::::
 
-::::{admonition,attention} Exercice 2
+::::{admonition,note} Exercice 2
 
 A quoi correspondent les ingrédients d’un algorithme dans l’exemple de la recette de l’omelette ?
 
 ::::
 
-::::{admonition,attention} Exercice 3
+::::{admonition,note} Exercice 3
 
 Ecrire un algorithme qui échange les valeurs de 2 variables. Représenter les deux variables par deux cases. Chaque case a une étiquette (le nom de la variable) et un contenu (la valeur de la variable). Représenter le contenu de chaque variable après chaque opération de votre algorithme.
 
@@ -85,7 +85,7 @@ Ecrire un algorithme qui échange les valeurs de 2 variables. Représenter les d
 
 ## Exercices supplémentaires
 
-::::{admonition,attention} Exercice 4 
+::::{admonition,note} Exercice 4 
 
 L’algorithme suivant contrôle un crayon. Quelle forme dessine-t-il ?
 ```
@@ -95,7 +95,7 @@ Répéter 8 fois :
 ```
 ::::
 
-::::{admonition,attention} Exercice 5
+::::{admonition,note} Exercice 5
 
 Ecrire un algorithme qui permet de déterminer le plus petit nombre d’une liste. Penser à décomposer la solution en différentes étapes.
 
@@ -105,7 +105,7 @@ Avez-vous trouvé la bonne solution ? Si non, modifier votre algorithme afin qu�
 
 ::::
 
-::::{admonition,attention} Exercice 6
+::::{admonition,note} Exercice 6
 
 On souhaite déterminer l’élève dont la date d’anniversaire est la plus proche de la date d’aujourd’hui dans le futur. Ecrire un algorithme qui permet de trouver cet élève (utiliser un langage familier). Penser à décomposer le problème en sous-problèmes. 
 
@@ -115,7 +115,7 @@ Un ordinateur peut-il réaliser les opérations décrites par votre algorithme ?
 
 ::::
 
-::::{admonition,attention} Exercice 7
+::::{admonition,note} Exercice 7
 
 Écrire un algorithme qui effectue la permutation circulaire des variables X, Y et Z: à la fin de l’algorithme : X contient la valeur de Z, Y la valeur de X et Z la valeur de Y. Conseil : penser à chaque variable comme un tiroir avec une étiquette X, Y ou Z qui contient une valeur. Ce tiroir ne peut stocker qu’une valeur à un moment donné. 
 
@@ -123,7 +123,7 @@ Une fois l’algorithme écrit, représenter les variables par une case qui cont
 
 ::::
 
-::::{admonition,attention} Exercice 4
+::::{admonition,note} Exercice 4
 
 Quel est le résultat de la suite des trois affectations suivantes ? Vérifier votre solution en dessinant une case par variable et en y mettant des valeurs fictives. Suivre les opérations dans l’ordre et dessiner le contenu des variables après chaque étape.
 
@@ -151,19 +151,19 @@ X ← X – Y
 
 ## Solutions des exercices de la théorie 
 
-::::{admonition,attention} Solution de l'exercice 1
+::::{admonition,note} Solution de l'exercice 1
 
 L’algorithme permet de calculer la somme des nombres contenus dans la liste Nombres.
 
 ::::
 
-::::{admonition,attention} Solution de l'exercice 2
+::::{admonition,note} Solution de l'exercice 2
 
 Les oeufs sont les données en entrée, les opérations correspondent aux instructions numérotées de 1 à 4 dans la recette et finalement le résultat en sortie est l’omelette. On peut considérer le matériel culinaire (bol, fourchette, poêle, spatule) comme du matériel informatique à notre disposition, capable de traiter les données. En effet on peut cuire plein d’autres aliments dans une poêle.
 
 ::::
 
-::::{admonition,attention} Solution de l'exercice 3
+::::{admonition,note} Solution de l'exercice 3
 
 Soient les variables X et Y qui contiennent les valeurs 1 et 2. Une solution naïve consisterait à écrire l’algorithme suivant :
 

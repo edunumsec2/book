@@ -42,24 +42,24 @@ h2 {
 
 }
 
-.note.admonition p {
+.attention.admonition p {
 
 color: gray;
 
 }
 
-.note.admonition p.admonition-title {
+.attention.admonition p.admonition-title {
 
     background: #f2f2f2;
     color: gray;
 }
 
-.note.admonition p.admonition-title::before {
+.attention.admonition p.admonition-title::before {
 
     color: gray;
 }
 
-div.note.admonition {
+div.attention.admonition {
 
     border-radius: 10px;
     background-color: white;
@@ -67,7 +67,7 @@ div.note.admonition {
     border-color: gray;
 }
 
-div.attention.admonition {
+div.note.admonition {
     
     border-radius: 10px;
     background-color: white;
@@ -76,16 +76,22 @@ div.attention.admonition {
     
 }
 
-.attention.admonition p.admonition-title {
+.note.admonition p.admonition-title {
 
-    color: #5933d1;
+    color: #a489fb;
     background: #f7f4ff;
 }
 
-.attention.admonition p.admonition-title::before {
+.note.admonition p.admonition-title::before {
 
     color: #a489fb;
 }
+
+.note.admonition p {
+
+    color: gray;
+    
+    }
 
 
 div.hint.admonition {
@@ -108,6 +114,17 @@ div.hint.admonition {
     color: #70d6c2;
 }
 
+.hint.admonition p {
+
+    color: gray;
+    
+    }
+
+
+    
+
+    
+    
 @media (min-width: 768px) {
     button.toggle-button.toggle-button-hidden:before {
         content: "Afficher";

@@ -1,7 +1,7 @@
 Formulation de solutions algorithmiques à des problèmes simples
 ===============================================================
 
-::::{admonition,note} Matière à réfléchir II
+::::{admonition,attention} Matière à réfléchir II
 
 Pensez à un lieu connu à proximité. Ecrivez les étapes à suivre pour s’y rendre, sans mentionner le lieu. Vous ne pouvez utiliser que les instructions : **avancer, tourner (à gauche ou à droite).**
 
@@ -155,7 +155,7 @@ Mais est-ce que derrière chaque programme se cache un algorithme ?
 
 ## Exercices supplémentaires
 
-::::{admonition,attention} Exercice 16
+::::{admonition,note} Exercice 16
 
 ![](../plugged.png) Coder le jeu de la devinette.
 
@@ -163,13 +163,13 @@ Le programme pense à un nombre au hasard. Lorsque vous lui porposez un nombre, 
  
 ::::
 
-::::{admonition,attention} Exercice 17
+::::{admonition,note} Exercice 17
 
 ![](../plugged.png) Transcrire l’algorithme de l’exercice 5, qui permet de déterminer le plus petit nombre d’une liste, en un programme Python.
 
 ::::
 
-::::{admonition,attention} Exercice 18
+::::{admonition,note} Exercice 18
 
 ![](../plugged.png) Créer une liste qui contient les valeurs de 1 à n dans un ordre aléatoire, où n prend la valeur 100, par exemple. Vous pouvez utiliser la fonction shuffle() du module random.
 
@@ -185,7 +185,7 @@ Lancer votre programme avec 100’000 éléments et comparer le temps obtenu ave
 ::::
 
 
-::::{admonition,attention} Exercice 19
+::::{admonition,note} Exercice 19
 
 ![](../plugged.png) Coder l’algorithme Bogosort en Python (voir Le saviez-vous ? III). 
 
@@ -197,7 +197,7 @@ A partir de quelle taille de liste cet algorithme est inutilisable ?
 
 
 
-::::{admonition,attention} Exercice 20
+::::{admonition,note} Exercice 20
 
 ![](../plugged.png) Ecrire un algorithme qui calcule la suite des nombres de Fibonacci. 
 
@@ -207,7 +207,7 @@ Comparer avec les solutions trouvées par vos camarades de classe.
 ::::
 
 
-::::{admonition,note} Ai-je compris ?
+::::{admonition,attention} Ai-je compris ?
 
 1. Je sais lire et appliquer un algorithme, c’est-à dire que je peux déduire le résultat que me donnera un algorithme à partir d’un jeu de données particulier.
 

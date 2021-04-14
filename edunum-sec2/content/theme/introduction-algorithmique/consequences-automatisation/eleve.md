@@ -1,7 +1,7 @@
 Conséquences de l'automatisation
 ================================
 
-::::{admonition,hint} Pourquoi est-ce important ?
+::::{admonition,note} Pourquoi est-ce important ?
 
 Sans le développement de l’algorithmique, de nombreux problèmes n’auraient pu être résolus par ordinateur dans un temps raisonnable.
 
@@ -14,7 +14,7 @@ Comprendre le fonctionnement de base des algorithmes vous permet de mieux appré
 ::::
 
 
-::::{admonition,error} A retenir
+::::{admonition,attention} A retenir
 
 Un algorithme est une suite d’instructions dans un ordre bien précis qui permet de résoudre un problème. L’algorithme va donner un résultat en fonction de données reçues en entrée.
 
