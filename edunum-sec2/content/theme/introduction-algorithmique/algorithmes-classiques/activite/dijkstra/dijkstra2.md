@@ -21,9 +21,6 @@ Activité collaborative et débranchée pour introduire l'algorithme du plus cou
 * 🔧 : connexion internet pour la mise en situation
 ```
 
-````{panels}
-:column: col-lg
-^^^
 ```{dropdown} **Déroulement**
 1. **Mise en situation générale** (5 min) pour comprendre un contexte de la vie quotidienne dans lequel cet algorithme est utilisé et qui constituera un fil rouge concret tout au long de l'activité.  
 
@@ -39,7 +36,6 @@ Activité collaborative et débranchée pour introduire l'algorithme du plus cou
 
 1. **Réflexions** plus approfondie sur l'algorithme *pour aller plus loin*.
 ```
-````
 
 ## 1. Mise en situation générale
 
@@ -125,9 +121,9 @@ Si tout se passe bien, les élèves vont se déplacer dans les **<span style="co
 1. A la fin, en suivant les relations de voisinage, on peut reconstituer le chemin le plus court. 
 ```
 ````
-```{admonition} Remarque
+```{admonition} Attention
 :class: caution
-Cette activité implémente dans les faits une version distribuée de l'algorithme où les sommets peuvent changer de zone en parallèle. Il est conseillé de bien marqué la transition à l'algorithme séquentiel.
+Cette activité implémente dans les faits une version distribuée de l'algorithme où les sommets peuvent changer de zone en parallèle. Il est conseillé de bien marquer la transition à l'algorithme séquentiel.
 ```
 
 ## 5. Formalisation
