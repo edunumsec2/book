@@ -13,7 +13,7 @@ La syntaxe MyST est vaste. Dans un souci de lisibilité, de cohérence visuelle,
 
 **Important : MyST est une extension de la syntaxe Markdown, qui n'est pas traitée ici. Voici un lien pour les  [les bases du Markdown](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf).**
 
-### Lexique des types de {panels}
+<!-- ### Lexique des types de {panels}
 
 > Note : ce lexique de type de panels n'est pas officiellement reconnu. 
 
@@ -89,7 +89,8 @@ Tous les chemins mènent à Google
 L'application Google Maps du géant californien est un bel exemple de l'utilisation d'algorithmes d'optimisation des parcours dans les graphes. 
 ```
 ````
-`````
+````` 
+-->
 
 ### Utilisation des blocs {admonition}
 
@@ -289,6 +290,72 @@ Mon contenu
 ````
 ````
 `````
+
+### Personnages-clés
+
+`````{tabbed} Aperçu
+````{panels}
+
+:img-top: images/accueil/gracehopper.jpeg
+
+Grace Hopper
+^^^^^
+* **Surnom** Amazing Grace
+* **Naissance** 9 décembre 1906 / New York 🇺🇸 
+* **Déces** 1 er janvier 1992 / Comté d'Arlington 🇺🇸 
+* **Grade** Rear admiral
+```{dropdown} Bio
+:animate: fade-in-slide-down
+[**Grace Hopper**](https://fr.wikipedia.org/wiki/Grace_Hopper) est une informaticienne d'origine américaine. À partir de 1957, elle travaille pour IBM, où elle défend l'idée qu'un programme devrait pouvoir être écrit dans un langage proche de l'anglais plutôt que d'être calqué sur le langage machine, comme l'assembleur. De cette idée naît le langage COBOL en 1959.
+```
+
+----
+:img-top: images/accueil/claudeshannon.jpg
+
+Claude Shannon
+^^^^^
+* **Naissance** 30 avril 1916 / Petosky 🇺🇸 
+* **Déces** 24 janvier 2001 / Medford 🇺🇸 
+* **Institutions** Bell Labs & MIT
+```{dropdown} Bio
+:animate: fade-in-slide-down
+Pendant la Seconde Guerre mondiale, [**Claude Shannon**](https://fr.wikipedia.org/wiki/Claude_Shannon) travaille pour les services secrets de l'armée américaine, en cryptographie. Il est chargé de localiser de manière automatique dans le code ennemi les parties signifiantes cachées au milieu du brouillage. C'est ce qui le mènera par la suite à développer une mesure mathématique de la quantité d'information contenue dans un message. 
+```
+````
+`````
+``````{tabbed} Code
+`````{code-block} markdown
+````{panels}
+
+:img-top: images/accueil/gracehopper.jpeg
+
+Grace Hopper
+^^^^^
+* **Surnom** Amazing Grace
+* **Naissance** 9 décembre 1906 / New York 🇺🇸 
+* **Déces** 1 er janvier 1992 / Comté d'Arlington 🇺🇸 
+* **Grade** Rear admiral
+```{dropdown} Bio
+:animate: fade-in-slide-down
+[**Grace Hopper**](https://fr.wikipedia.org/wiki/Grace_Hopper) est une informaticienne d'origine américaine. À partir de 1957, elle travaille pour IBM, où elle défend l'idée qu'un programme devrait pouvoir être écrit dans un langage proche de l'anglais plutôt que d'être calqué sur le langage machine, comme l'assembleur. De cette idée naît le langage COBOL en 1959.
+```
+
+----
+:img-top: images/accueil/claudeshannon.jpg
+
+Claude Shannon
+^^^^^
+* **Naissance** 30 avril 1916 / Petosky 🇺🇸 
+* **Déces** 24 janvier 2001 / Medford 🇺🇸 
+* **Institutions** Bell Labs & MIT
+```{dropdown} Bio
+:animate: fade-in-slide-down
+Pendant la Seconde Guerre mondiale, [**Claude Shannon**](https://fr.wikipedia.org/wiki/Claude_Shannon) travaille pour les services secrets de l'armée américaine, en cryptographie. Il est chargé de localiser de manière automatique dans le code ennemi les parties signifiantes cachées au milieu du brouillage. C'est ce qui le mènera par la suite à développer une mesure mathématique de la quantité d'information contenue dans un message. 
+```
+````
+`````
+``````
+
 
 ### Références et labels
 

@@ -21,9 +21,9 @@ Dans ce chapitre, vous allez comprendre comment les ordinateurs parviennent à r
 
 ````{panels}
 
-```{link-button} content/theme/representation-information/representation-entiers/eleve.ipynb
+```{link-button} http://edunumsec2.ch/content/theme/representation-information/01_accueil/eleve.html
 :text: Représentation des entiers
-:type: ref
+:type: url
 :classes: stretched-link
 ```
 ---
@@ -52,6 +52,7 @@ Dans ce chapitre, vous allez comprendre comment les ordinateurs parviennent à r
 {fa}`check, text-success mr-1`Appréhender l’importance de la **redondance**.
 
 ## Personnages-clés
+
 
 ````{tabbed} Grace Hopper
 ```{image} 02_media/accueil/gracehopper.jpeg
