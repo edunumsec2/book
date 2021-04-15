@@ -47,7 +47,7 @@ Dans cette section, nous allons comprendre comment les ordinateurs parviennent �
 ```
 ---
 ```{link-button} http://edunumsec2.ch/content/theme/representation-information/systeme-arithmetique-binaire/eleve.html
-:text: Arithémtique binaire
+:text: Arithmétique binaire
 :classes: stretched-link
 ```
 ---
