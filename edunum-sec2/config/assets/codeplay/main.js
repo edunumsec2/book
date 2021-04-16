@@ -100,10 +100,24 @@ document.addEventListener("DOMContentLoaded", function() {
     lineNumbers: true,
     theme: "monokai",
     indentUnit: 4,
+    indentWithTabs: false,
+    smartIndent: true,
     extraKeys: {
       'Shift-Enter': runInterpreter,
       'Cmd-Enter': runInterpreter,
       'Ctrl-Enter': runInterpreter,
+      Tab: function(cm) {
+        if (cm.getMode().name === 'null') {
+          cm.execCommand('insertTab');
+        } else {
+          if (cm.somethingSelected()) {
+            cm.execCommand('indentMore');
+          } else {
+            cm.execCommand('insertSoftTab');
+          }
+        }
+      },
+      'Shift-Tab': function(cm) { cm.execCommand('indentLess'); }
     },
   });
 
