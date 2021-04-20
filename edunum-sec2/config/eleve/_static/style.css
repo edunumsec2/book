@@ -198,3 +198,22 @@ nav a.reference:hover {
 nav li.active > a.active {
     border-left: 2px solid #0dcca7 !important;
 }
+
+/** Adaptations for tables */
+
+.table p {
+    margin-bottom: 0
+}
+
+.table p + p {
+    margin-top: 1ex;
+}
+
+.table td, .table th {
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
+
+.table th p {
+    font-weight: 500;
+}
