@@ -85,7 +85,8 @@
 			"markdown",
 			"latex",
 			"plaintext"
-		]
+		],
+		"jupyter.useNotebookEditor": false
 	},
 	"extensions": {
 		"recommendations": [
