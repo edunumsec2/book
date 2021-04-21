@@ -131,6 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
     read: builtinRead,
     inputfun: inputFunction,
     inputfunTakesPrompt: true,
+    __future__: Sk.python3,
   });
 
   Sk.pre = "output";
