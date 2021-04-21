@@ -354,7 +354,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("control-area").style.display = "none";
       }
       if (frame.hasAttribute("data-static")) {
-        codeElem.setOption("readOnly", "nocursor");
+        codeElem.setOption("readOnly", true);
         readOnly = true;
       }
 
