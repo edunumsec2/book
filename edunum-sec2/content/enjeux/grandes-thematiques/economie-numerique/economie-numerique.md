@@ -28,7 +28,7 @@
 </head>
 </html>
 
-<a href="http://edunumsec2.ch/enjeux-sociaux/economie-numerique_20210406.pdf" class="button"> 🖨️ Version imprimable</a>
+<a href="http://edunumsec2.ch/enjeux-sociaux/economie-numerique.pdf" class="button"> 🖨️ Version imprimable</a>
 
 ````{image} economie-numerique.jpg
 :name: économie
