@@ -21,6 +21,7 @@
       - file: content/theme/representation-information/00_activites/activites
         sections:
           - file: content/theme/representation-information/00_activites/representation-entiers/magie-binaire/magie_binaire
+          - file: content/theme/representation-information/00_activites/redondance/radiotelephonie/activite
   - file: content/theme/introduction-algorithmique/eleve
     sections:
       - file: content/theme/introduction-algorithmique/decomposition-probleme/eleve
