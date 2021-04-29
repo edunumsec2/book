@@ -1,5 +1,6 @@
-Systèmes logiques: les portes
-=============================
+# Portes logiques
+
+## Introduction
 
 En informatique, les systèmes logiques décrivent comment sont connectés les circuits électroniques des ordinateurs afin de leur permettre de faire des calculs. Même si on a l'impression que les ordinateurs peuvent faire toutes sortes de choses, il y a un ensemble limité d'opérations de base que l'électronique d'une machine peut faire. Parmi ces quelques opérations de base, on trouve l'addition, la soustraction, la multiplication ou la division de nombres. La vaste majorité de ce que fait l'ordinateur repose sur ces quelques opérations (ainsi que sur quelques opérations dites _logiques_, que nous allons découvrir, et sur la possibilité de lire et écrire des valeurs dans sa mémoire).
 
@@ -140,8 +141,6 @@ Essayez l'inverseur:
 
 Les portes peuvent être connectées les unes aux autres. Voici par exemple un diagramme logique réalisant en sortie $Z$ la fonction appelée **OU-X**, qui est un «ou exclusif» et dont la sortie $Z$ vaut 1 lorsque soit $A$, soit $B$ vaut $1$, mais pas les deux en même temps:
 
-<!-- ![](media/xor_circuit.svg) -->
-
 ```{logic}
 :height: 150
 :mode: tryout
@@ -182,14 +181,9 @@ Pour analyser un circuit logique comme celui présenté ci-dessus, on cherchera 
 
  Pour remplir chaque ligne, nous allons changer les entrées selon les valeurs de $X$ et $Y$ et observer l'effet des portes et ainsi voir le circuit se comporte. ligne. Prenons $X=Y=0$: c'est le cas représenté par l'état initial du circuit ci-dessus. Rappelons qu'un segment noir véhicule un «0», alors qu'un segment coloré véhicule un «1».
 
-<!-- ![](media/xor_circuit_00.svg) -->
-
 Le résultat intermédiaire des deux portes de gauche sera 0. L'inverseur transforme en 1 la sortie de la porte **ET**, mais la porte finale, qui est aussi une porte **ET**, n'obtient qu'un seul 1 en entrée et donc livre une sortie de 0.
 
 Le cas est différent si l'une des deux entrées vaut 1. Voici deux diagrammes fixes, une fois pour $X=1, Y=0$ et une fois pour $Y=1, X=0$:
-
-<!-- ![](media/xor_circuit_01.svg) -->
-<!-- ![](media/xor_circuit_10.svg) -->
 
 ```{logic}
 :height: 150
@@ -236,7 +230,6 @@ Ici, dans les deux cas, la porte **OU**, en haut, livrera un 1, dont a besoin la
 
 Mais dans le cas $X = Y = 1$, représenté ici, la situation est différente:
 
-<!-- ![](media/xor_circuit_11.svg) -->
 ```{logic}
 :height: 150
 :mode: static
@@ -270,7 +263,6 @@ La table de vérité complétée de ce circuit est ainsi:
 
 Cette fonction s'appelle «ou exclusif», car pour avoir un 1 de sortie, elle exclut le cas où les deux entrées sont 1 en même temps. Elle est souvent utilisée, au point qu'on la représente en fait dans les diagrammes simplement par le dessin de cette porte, appelée **OU-X**, comme simplification du diagramme ci-dessus:
 
-<!-- ![](media/xor_gate.svg) -->
 ```{logic}
 :height: 100
 :mode: tryout
@@ -304,8 +296,6 @@ Pourquoi rajouter une porte **ET**? On utilise ici le fait que connecter une por
 
 À ce moment, on a ce diagramme partiel, qui peut être lu comme: «la sortie $Z$ sera $1$ lorsque ces deux conditions sont vraies en même temps: (1) le **OU** de $X$ et $Y$ vaut 1, et (2) quelque chose qui reste ici à définir, qui sera connecté à la seconde entrée de la porte **ET**».
 
-<!-- ![](media/xor_circuit_partial.svg) -->
-
 ```{logic}
 :height: 120
 :mode: tryout
@@ -327,7 +317,6 @@ Pourquoi rajouter une porte **ET**? On utilise ici le fait que connecter une por
 
 Ce qui reste à définir en complétant avant la porte **ET**, c'est l'exclusion du cas où $X$ et $Y$ valent les deux 1, de manière à ce que la condition (2) puisse être lue comme «$X$ et $Y$ ne sont pas les deux à 1». Avec une porte **ET** connectée directement aux deux entrées $X$ et $Y$, on obtient une partie de ceci en créant le signal «$X$ et $Y$ sont les deux à 1» C'est en fait la condition inverse que celle que l'on cherche! Pour l'inverser, on insère à la sortie de cette nouvelle porte **ET** un inverseur, ce qui complète le circuit:
 
-<!-- ![](media/xor_circuit.svg) -->
 ```{logic}
 :height: 150
 :mode: tryout
@@ -408,7 +397,6 @@ Il est parfois difficile d'avoir l'«intuition» nécessaire pour suivre une tel
 
 La table de vérité nous montre qu'il y a deux lignes où la sortie doit valoir $1$: (a) la ligne où $X=1$ et $Y=0$, et (b) la ligne où $X=0$ et $Y=1$. Si l'on pouvait créer un sous-circuit qui nous livrent un $1$ lorsque qu'on se trouve dans la circonstance (a) et un autre qui nous livre un $1$ lorsqu'on se trouve dans la circonstance (b), on pourrait ensuite les combiner avec une porte **OU** et ainsi construire notre sortie $Z$ ainsi:
 
-<!-- ![](media/xor_circuit_alt_partial_step1.svg) -->
 ```{logic}
 :height: 180
 :mode: static
@@ -435,7 +423,6 @@ Disons que le sous-circuit du haut correspond à la deuxième ligne de la table 
 
 On avance ainsi à ceci:
 
-<!-- ![](media/xor_circuit_alt_partial_step2.svg) -->
 ```{logic}
 :height: 180
 :mode: static
@@ -461,7 +448,6 @@ Pour la condition (b), qui correspond à la troisième ligne de la table de vér
 
 Voici le circuit final ainsi réalisé:
 
-<!-- ![](media/xor_circuit_alt.svg) -->
 ```{logic}
 :height: 180
 :mode: static
@@ -528,7 +514,7 @@ En annotant le schéma logique avec les quatre cas de figure possibles pour les 
 ::::
 
 
-# Exercices
+## Exercices
 
 ::::{admonition} Exercice: porte cachée
 Quelle est la porte cachée de ce circuit?
@@ -651,7 +637,6 @@ $Z$ est donc le **OU** de $X$ et du **ET** de l'inverse de $X$ et de $Y$.
 :::
 
 :::{admonition,dropdown} Corrigé
-<!-- ![](media/imply_circuit.svg) -->
 Il y plusieurs solutions possible. Celle qui correspond aux indices est la suivante:
 
 ```{logic}
@@ -695,172 +680,3 @@ Voici un circuit plus simple, qui fait la même chose mais qui est plus difficil
 :::
 
 ::::
-
-
-
-## De la logique à l'arithmétique
-
-Ces portes logiques vont nous permettre de finalement réaliser notre petit additionneur. Nous avons déjà dit que nous avions deux bits de sorties à calculer pour notre sortie $S = A + B$. Disons donc que $S$ est donc constitué de $S_0$, le bit des unités, et de $S_1$, le bit représentant la valeur décimale 2. La table de vérité pour $S_0$, tirée directement de la première section ci-dessous, est:
-
-| $A$ | $B$ |$S_0$|
-| :-: | :-: | :-: |
-| 0   | 0   | 0   |
-| 1   | 0   | 1   |
-| 0   | 1   | 1   |
-| 1   | 1   | 0   |
-
-En comparant cette table de vérité avec celles des portes logiques, on se rend compte que $S_0$ n'est autre qu'un **OU-X** de $A$ et $B$.
-
-La table de vérité pour $S_1$ est:
-
-| $A$ | $B$ |$S_1$|
-| :-: | :-: | :-: |
-| 0   | 0   | 0   |
-| 1   | 0   | 0   |
-| 0   | 1   | 0   |
-| 1   | 1   | 1   |
-
-Et on constate que $S_1$ n'est autre qu'un **ET** logique de $A$ et $B$. Ainsi, on peut dessiner notre petit additionneur de deux bits ainsi:
-
-![](media/half_adder.svg)
-
-Ce circuit est spécialement intéressant en montrant comment des opérateurs logiques sont utilisés pour réaliser l'opération arithmétique de l'addition. Notre additionneur est limité: en fait, on l'appelle un _demi-additionneur_. Il n'est capable d'additionner que deux nombres à 1 bit, c'est très limité. En fait, il serait intéressant d'avoir un additionneur de _trois_ nombres à un bit. Pourquoi? À cause de la manière dont nous faisons les additions en colonnes.
-
-Lorsque nous faisons une addition de deux nombres à plusieurs chiffres, que ce soit en base 10 ou en base 2, on commence par la colonne de droite, les unités. Nous connaissons le concept de _retenue_: en base 10, si l'addition des unités dépasse 9, on retient 1 dans la colonne des dizaines. En base 2, de façon similaire, si l'addition des unités dépasse… 1, on retient 1 dans la colonne suivante à gauche. C'est ce qu'on a fait avec le demi-additionneur: on peut considérer que la sortie $S_0$ représente la colonne des unités dans la somme, et la sortie $S_1$ représente la retenue à prendre en compte dans la colonne suivante.
-
-C'est ici que ça se complique: pour additionner les chiffres de la deuxième colonne, nous devons potentiellement additionner trois chiffres, et plus seulement deux. Il y a en effet peut-être cette retenue qui nous vient de la colonne des unités. Ceci est vrai en base 2 comme en base 10. Il nous faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s'appelle _additionneur complet_.
-
-
-### Exercice
-
- * Déterminer combien de combinaisons différentes sont possibles pour trois signaux d'entrées $A$, $B$ et $C$ qui chacun peuvent valoir soit $1$ soit $0$.
- * Lister toutes ces combinaisons.
- * Pour chaque combinaisons, déterminer la valeur binaire qui est la somme des 3 signaux d'entrée.
- * Finalement, avec les informations ainsi obtenues, compléter la table de vérité d'un additionneur complet qui a deux sorties $S_0$ et $S_1$
-
-:::{admonition,dropdown} Corrigé
- Il y a $2 \cdot 2 \cdot 2 = 2^3 = 8$ combinaisons différentes. Avec la notation $A + B + C =$ valeur en décimal $=$ valeur en binaire, les voici:
-  * $0 + 0 + 0 = 0_d = 00_b$
-  * $0 + 0 + 1 = 1_d = 01_b$
-  * $0 + 1 + 0 = 1_d = 01_b$
-  * $0 + 1 + 1 = 2_d = 10_b$
-  * $1 + 0 + 0 = 1_d = 01_b$
-  * $1 + 0 + 1 = 2_d = 10_b$
-  * $1 + 1 + 0 = 2_d = 10_b$
-  * $1 + 1 + 1 = 3_d = 11_b$
-
-La table de vérité est ainsi:
-
-| $A$ | $B$ | $C$ | $S_0$ | $S_1$ |
-| :-: | :-: | :-: | :-: | :-: |
-| 0   | 0   | 0   | 0   | 0   |
-| 0   | 0   | 1   | 0   | 1   |
-| 0   | 1   | 0   | 0   | 1   |
-| 0   | 1   | 1   | 1   | 0   |
-| 1   | 0   | 0   | 0   | 1   |
-| 1   | 0   | 1   | 1   | 0   |
-| 1   | 1   | 0   | 1   | 0   |
-| 1   | 1   | 1   | 1   | 1   |
-:::
-
-Faisons pour l'instant abstraction des détails d'un additionneur complet. On peut se dire qu'on le dessine simplement ainsi:
-
-![](media/full_adder_box.svg)
-
-La flexibilité de ce composant fait qu'on peut maintenant facilement l'utiliser pour construire un circuit qui additionne deux nombres $A$ et $B$ à 2 bits chacun (donc de $0 + 0 = 0$ à $3 + 3 = 6$). Si $A$ est formé de deux bits $A_0$ et $A_1$ et que $B$ est formé des deux bits $B_0$ et $B_1$ et avec une sortie $S$ sur trois bits $S_0$, $S_1$ et $S_2$, on a:
-
-![](media/full_adders_2bit.svg)
-
-L'additionneur du haut, comme précédemment, additionne les deux bits des unités. Son entrée $C$, qui représente l'éventuelle troisième chiffre à additionner issu d'une retenue, est toujours 0, vu qu'il n'y a aucune colonne précédente dans l'addition qui aurait pu en livrer une. Il livre comme première sortie $S_0$, le chiffre des unités, et sa seconde sortie est la retenue à utiliser pour l'addition des chiffres suivants. C'est pourquoi elle est connectée à l'entrée de la retenue du second additionneur, qui va lui ajouter également les deux bits de la colonne suivante, $A_1$ et $B_1$. Les sorties du second additionneur livrent le deuxième bit $S_1$ de la valeur de sortie, ainsi que la retenue pour la troisième colonne. Comme il n'y a plus de bits d'entrée pour la troisième colonne, cette retenue peut directement être considérée comme le troisième bit de sortie.
-
-
-### Exercice
-
-En connectant des additionneurs complets, réaliser un circuit qui additionne deux nombres $A$ et $B$ de huit bits, numérotés $A_0$ à $A_7$ et $B_0$ à $B_7$, respectivement. Combien de bits de sortie doit-il y avoir pour traiter toutes les valeurs possibles?
-
-:::{admonition,dropdown} Corrigé
-Nous avons besoin de neuf bits de sortie. Le schéma, représenté horizontalement, est:
-
-![](media/full_adders_8bit.svg)
-
-Les trois entrées de chaque additionneur sont interchangeables (reflétant la commutativité de l'addition), mais pas les sorties.
-
-Cet exercice démontre l'opportunité de penser en termes modulaires, ce qui revient souvent en informatique. Ici, on a réalisé qu'un additionneur complet résout un sous-problème bien défini d'une addition générale d'un nombre à $n$ bits, et que, une fois qu'on a créé un tel additionneur, il suffit d'en connecter plusieurs les uns derrière les autres de manière structurée pour additionner des nombres plus grands.
-:::
-
-
-### Exercice
-
-En s'aidant de la table de vérité d'un seul additionneur complet, créer un circuit logique qui calcule ses sorties $S_0$ et $S_1$ en fonction des entrées $A$, $B$ et $C$.
-
-:::{admonition,dropdown} Indice
- * La sortie $S_0$ doit être $1$ soit lorsque les trois entrées valent $1$, soit lors qu'une seule des trois entrée vaut $1$.
- * La sortie $S_1$, qui est la retenue, doit être $1$ lorsque deux ou trois des trois entrées sont à $1$.
-:::
-
-:::{admonition,dropdown} Corrigé
-TODO
-![](media/full_adder.svg)
-:::
-
-
-
-## ALU
-
-TODO
-
-
-## Bascules
-
-TODO
-
-
-## Conclusion
-
-Dans ce chapitre nous avons donc vu les briques de base des ordinateurs. À savoir les éléments suivants:
-* Les portes logiques qui s'assemblent en systèmes logiques qui effectuent des opérations logiques qui aboutissent à des fonctions arithmétiques et logiques dans une ALU
-* Les bascules qui permettent de mémoriser une information et s'assemblent dans des registres
-
-Nous pouvons les assembler dans des microprocesseurs que nous allons détailler au chapitre suivant.
-
-````{panels}
-:column: col-lg-12 p-2
-:card: bg-info
-
-**Vite ... très vite**
-^^^^
-Nous avons démontré que finalement nos ordinateurs ont un cerveau très simple dans le fonction de ses éléments de base : des portes logiques qui traitent des **0** ou des **1**. Il est cependant très difficile de se représenter à quel point ces traitement vont vite.
-Imaginons pour cela que le processeur écrive toutes les opérations qu'il effectue sur un ruban de papier et calculons la vitesse de défilement de ce papier. 
-
-Pour cela nous faisons les hypothèses suivantes:
-* Les processeurs actuels ont une cadence d'horloge de 3GHz, c'est à dire $3·10^9 [s^{-1}]$. Pour simplifier nous allons supposer qu'ils effectuent une opération par cycle[^1].
-* Nous transcrivons un mot de 64 bit (taille standard pour les processeurs) sur une longueur de 15cm, ce qui correspond à $15·10^{-2}[m]$.
-
-Le calcul devient alors :
-
-$$
-    3·10^9 [s^{-1}] · 15·10^{-2}[m] \\
-    45·10^7 [m/s]
-$$
-
-Que nous convertissons en km :
-
-$$
-    45·10^5 [km/s] ou encore : 450'000 [km/s]
-$$
-
-Rappelons que la vitesse de la lumière est :
-
-$$
-    c \cong 300'000 [km/s]
-$$
-
-Ce qui veut dire que si un microprocesseur, tel que ceux que l'on trouve dans son ordinateur ou son smartphone, écrivait sur un ruban de papier tout ce qu'il fait, ce ruban de papier devrait se déplacer à une fois et demi la vitesse de la lumière. Ou encore, ce ruban ferait chaque seconde plus de 11 fois le tour de la terre.
-
-Si les éléments de base sont simples, la complexité et la richesse des expériences numériques comme l'immersion dans un jeu vidéo proviennent de la quantité extraordinaire d'opérations effectuées.
-
-[^1]: En fait le opérations d'un processeur prennent plus d'un cycle pour être réalisées, mais comme les processeurs ont plusieurs coeurs et un pipeline dont nous n'abordons pas ici le fonctionnement, la simplification proposée n'est pas aberrante.
-
-
-
-````

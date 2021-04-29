@@ -1,5 +1,7 @@
 # Corrigé - Exercices de systèmes logiques
 
+_**Note:** Ces corrigés vont être ventilés sous les thématiques correspondantes sous peu._
+
 :::{admonition,error} Corrigé
 
 Corrigés des exercices sur les portes logiques.

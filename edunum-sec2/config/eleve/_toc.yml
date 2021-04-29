@@ -43,19 +43,20 @@
   - file: content/theme/architecture-ordinateurs/accueil
     sections:
       - file: content/theme/architecture-ordinateurs/introduction
-      - file: content/theme/architecture-ordinateurs/systemes-logiques/eleve
+      - file: content/theme/architecture-ordinateurs/portes-logiques/eleve
+      - file: content/theme/architecture-ordinateurs/de-logique-a-arithmetique/eleve
+      - file: content/theme/architecture-ordinateurs/alu-bascules/eleve
         sections: 
-          - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SystemesLogiques
+          - file: content/theme/architecture-ordinateurs/alu-bascules/exercice/SystemesLogiques
             sections:
-              - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SL1_bases
-              - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SL2_portes
-              - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SL3_sl
-              - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SL4_avance
-              - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/SL5_conclusion
-          - file: content/theme/architecture-ordinateurs/systemes-logiques/exercice/Corrige_SystemesLogiques
+              - file: content/theme/architecture-ordinateurs/alu-bascules/exercice/SL1_bases
+              - file: content/theme/architecture-ordinateurs/alu-bascules/exercice/SL2_portes
+              - file: content/theme/architecture-ordinateurs/alu-bascules/exercice/SL3_sl
+              - file: content/theme/architecture-ordinateurs/alu-bascules/exercice/SL4_avance
+              - file: content/theme/architecture-ordinateurs/alu-bascules/exercice/SL5_conclusion
+          - file: content/theme/architecture-ordinateurs/alu-bascules/exercice/Corrige_SystemesLogiques
       - file: content/theme/architecture-ordinateurs/architecture-von-neumann/eleve
       - file: content/theme/architecture-ordinateurs/microprocesseur/eleve
-      - file: content/theme/architecture-ordinateurs/elements-base-ordinateurs/eleve
       - file: content/theme/architecture-ordinateurs/informatique-embarquee/eleve
       - file: content/theme/architecture-ordinateurs/histoire-informatique/eleve
       - file: content/theme/architecture-ordinateurs/ressources
