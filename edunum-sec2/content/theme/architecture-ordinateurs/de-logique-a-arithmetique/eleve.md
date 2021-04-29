@@ -61,10 +61,10 @@ C'est ici que ça se complique: pour additionner les chiffres de la deuxième co
 
 ::::{admonition} Exercice: Bases de l'additionneur complet
 
- * Déterminer combien de combinaisons différentes sont possibles pour trois signaux d'entrées $A$, $B$ et $C_{in}$ qui chacun peuvent valoir soit $1$ soit $0$.
- * Lister toutes ces combinaisons.
- * Pour chaque combinaisons, déterminer la valeur binaire qui est la somme des 3 signaux d'entrée.
- * Finalement, avec les informations ainsi obtenues, compléter la table de vérité d'un additionneur complet qui a deux sorties $S$ et $C_{out}$
+ * Déterminez combien de combinaisons différentes sont possibles pour trois signaux d'entrées $A$, $B$ et $C_{in}$ qui chacun peuvent valoir soit $1$ soit $0$.
+ * Listez toutes ces combinaisons.
+ * Pour chaque combinaisons, déterminez la valeur binaire qui est la somme des 3 signaux d'entrée.
+ * Finalement, avec les informations ainsi obtenues, complétez la table de vérité d'un additionneur complet qui a deux sorties $S$ et $C_{out}$
 
 :::{admonition,dropdown} Corrigé
  Il y a $2 \cdot 2 \cdot 2 = 2^3 = 8$ combinaisons différentes. Avec la notation $A + B + C =$ valeur en décimal $=$ valeur en binaire, les voici:
@@ -108,24 +108,24 @@ La flexibilité de ce composant fait qu'on peut maintenant facilement l'utiliser
 Si $A$ est formé de deux bits $A_0$ et $A_1$ et que $B$ est formé des deux bits $B_0$ et $B_1$ et avec une sortie $S$ sur trois bits $S_0$, $S_1$ et $S_2$, on a:
 
 ```{logic}
-:height: 250
+:height: 280
 :mode: tryout
 
 {
   "in": [
-    {"pos": [60, 40], "id": 10, "val": 0, "name": "A0"},
-    {"pos": [60, 80], "id": 11, "val": 0, "name": "A1"},
-    {"pos": [60, 150], "id": 12, "val": 0, "name": "B0"},
-    {"pos": [60, 190], "id": 13, "val": 0, "name": "B1"}
+    {"pos": [190, 40], "orient": "s", "id": 10, "name": "A0", "val": 0},
+    {"pos": [90, 40], "orient": "s", "id": 11, "name": "A1", "val": 0},
+    {"pos": [230, 100], "orient": "s", "id": 12, "name": "B0", "val": 0},
+    {"pos": [130, 100], "orient": "s", "id": 13, "name": "B1", "val": 0}
   ],
   "out": [
-    {"pos": [240, 60], "id": 14, "name": "S0"},
-    {"pos": [240, 160], "id": 15, "name": "S1"},
-    {"pos": [240, 210], "id": 16, "name": "S2"}
+    {"pos": [210, 240], "orient": "s", "id": 14, "name": "S0"},
+    {"pos": [110, 240], "orient": "s", "id": 15, "name": "S1"},
+    {"pos": [30, 240], "orient": "s", "id": 16, "name": "S2"}
   ],
   "components": [
-    {"type": "adder", "pos": [170, 60], "in": [0, 1, 2], "out": [3, 4]},
-    {"type": "adder", "pos": [170, 160], "in": [5, 6, 7], "out": [8, 9]}
+    {"type": "adder", "pos": [210, 170], "in": [0, 1, 2], "out": [3, 4]},
+    {"type": "adder", "pos": [110, 170], "in": [5, 6, 7], "out": [8, 9]}
   ],
   "wires": [[4, 7], [10, 0], [11, 5], [13, 6], [12, 1], [3, 14], [8, 15], [9, 16]]
 }
@@ -134,64 +134,60 @@ Si $A$ est formé de deux bits $A_0$ et $A_1$ et que $B$ est formé des deux bit
 L'additionneur du haut, comme précédemment, additionne les deux bits des unités: $A_0$ et $B_0$. Son entrée $C_{in}$, qui représente l'éventuelle troisième chiffre à additionner issu d'une retenue, n'est pas connectée et est toujours 0, vu qu'il n'y a aucune colonne précédente dans l'addition qui aurait pu en livrer une. Il livre comme première sortie $S_0$, le chiffre des unités, et sa seconde sortie $C_{out}$ est la retenue à utiliser pour l'addition des chiffres suivants. C'est pourquoi elle est connectée à l'entrée de la retenue du second additionneur $C_{in}$, qui va lui ajouter également les deux bits de la colonne suivante, $A_1$ et $B_1$. Les sorties du second additionneur livrent le deuxième bit $S_1$ de la valeur de sortie, ainsi que la retenue pour la troisième colonne. Comme il n'y a plus de bits d'entrée pour la troisième colonne, cette retenue peut directement être considérée comme le troisième bit de sortie $S_2$.
 
 
-::::{admonition} Exercice: Additioneur de demi-octets
+::::{admonition} Exercice: Additionneur de demi-octets
 
-En connectant des additionneurs complets, réaliser un circuit qui additionne deux nombres $A$ et $B$ de quatre bits, numérotés $A_0$ à $A_3$ et $B_0$ à $B_3$, respectivement. Combien de bits de sortie doit-il y avoir pour traiter toutes les valeurs possibles?
+En connectant des additionneurs complets, réalisez un circuit qui additionne deux nombres $A$ et $B$ de quatre bits, numérotés $A_0$ à $A_3$ et $B_0$ à $B_3$, respectivement. Combien de bits de sortie doit-il y avoir pour traiter toutes les valeurs possibles?
+
+Les entrées sont déjà disposées. Glissez autant d'additionneurs et de bits de sortie que nécessaire et connectez les composants du circuit.
+
+```{logic}
+:height: 500
+:showonly: LogicOutput Adder
+
+{
+  "in": [
+    {"pos": [90, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
+    {"pos": [190, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
+    {"pos": [290, 40], "orient": "s", "id": 1, "name": "A1", "val": 0},
+    {"pos": [390, 40], "orient": "s", "id": 2, "name": "A0", "val": 0},
+    {"pos": [130, 90], "orient": "s", "id": 15, "name": "B3", "val": 0},
+    {"pos": [230, 90], "orient": "s", "id": 14, "name": "B2", "val": 0},
+    {"pos": [330, 90], "orient": "s", "id": 13, "name": "B1", "val": 0},
+    {"pos": [430, 90], "orient": "s", "id": 12, "name": "B0", "val": 0}
+  ]
+}
+```
 
 :::{admonition,dropdown} Corrigé
 Nous avons besoin de cinq bits de sortie. Le schéma, représenté horizontalement et de droite à gauche pour être proche de la représentation selon laquelle nous faisons les additions en colonne, est:
 
 ```{logic}
-:height: 380
+:height: 300
 :mode: tryout
 
 {
   "in": [
-    {"pos": [170, 50], "orient": "s", "id": 3, "name": "A3", "val": 0},
-    {"pos": [300, 50], "orient": "s", "id": 0, "name": "A2", "val": 0},
-    {"pos": [430, 50], "orient": "s", "id": 1, "name": "A1", "val": 0},
-    {"pos": [560, 50], "orient": "s", "id": 2, "name": "A0", "val": 0},
-    {"pos": [130, 130], "orient": "s", "id": 15, "name": "B3", "val": 0},
-    {"pos": [260, 130], "orient": "s", "id": 14, "name": "B2", "val": 0},
-    {"pos": [390, 130], "orient": "s", "id": 13, "name": "B1", "val": 0},
-    {"pos": [520, 130], "orient": "s", "id": 12, "name": "B0", "val": 0}
+    {"pos": [90, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
+    {"pos": [190, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
+    {"pos": [290, 40], "orient": "s", "id": 1, "name": "A1", "val": 0},
+    {"pos": [390, 40], "orient": "s", "id": 2, "name": "A0", "val": 0},
+    {"pos": [130, 90], "orient": "s", "id": 15, "name": "B3", "val": 0},
+    {"pos": [230, 90], "orient": "s", "id": 14, "name": "B2", "val": 0},
+    {"pos": [330, 90], "orient": "s", "id": 13, "name": "B1", "val": 0},
+    {"pos": [430, 90], "orient": "s", "id": 12, "name": "B0", "val": 0}
   ],
   "out": [
-    {"pos": [30, 330], "orient": "s", "id": 37, "name": "S4"},
-    {"pos": [150, 330], "orient": "s", "id": 36, "name": "S3"},
-    {"pos": [280, 330], "orient": "s", "id": 38, "name": "S2"},
-    {"pos": [410, 330], "orient": "s", "id": 39, "name": "S1"},
-    {"pos": [540, 330], "orient": "s", "id": 40, "name": "S0"}
+    {"pos": [30, 260], "orient": "s", "id": 37, "name": "S4"},
+    {"pos": [110, 260], "orient": "s", "id": 36, "name": "S3"},
+    {"pos": [210, 260], "orient": "s", "id": 38, "name": "S2"},
+    {"pos": [310, 260], "orient": "s", "id": 39, "name": "S1"},
+    {"pos": [410, 260], "orient": "s", "id": 40, "name": "S0"}
   ],
   "components": [
-    {
-      "type": "adder",
-      "pos": [540, 200],
-      "orient": "s",
-      "in": [16, 17, 18],
-      "out": [19, 20]
-    },
-    {
-      "type": "adder",
-      "pos": [410, 200],
-      "orient": "s",
-      "in": [21, 22, 23],
-      "out": [24, 25]
-    },
-    {
-      "type": "adder",
-      "pos": [280, 200],
-      "orient": "s",
-      "in": [26, 27, 28],
-      "out": [29, 30]
-    },
-    {
-      "type": "adder",
-      "pos": [150, 200],
-      "orient": "s",
-      "in": [31, 32, 33],
-      "out": [34, 35]
-    }
+    {"type": "adder", "pos": [410, 190], "in": [16, 17, 18], "out": [19, 20]},
+    {"type": "adder", "pos": [310, 190], "in": [21, 22, 23], "out": [24, 25]},
+    {"type": "adder", "pos": [210, 190], "in": [26, 27, 28], "out": [29, 30]},
+    {"type": "adder", "pos": [110, 190], "in": [31, 32, 33], "out": [34, 35]}
   ],
   "wires": [
     [20, 23],
@@ -221,9 +217,9 @@ Cet exercice démontre l'opportunité de penser en termes modulaires, ce qui rev
 
 ::::{admonition} Exercice: Overflow
 
-Le schéma ci-dessous montre le même additionneur de demi-octets de l'exercice précédent, mais en plus, la valeur en base 10 de ses 4 bits d'entrées pour $A$ et pour $B$ est affichée avec un module d'affichage spécial à droite. La même chose est faite pour représenter la valeur $S = A + B$. Actuellement, le circuit effectue le calcul $0 + 0 = 0$.
+Le schéma ci-dessous montre le même additionneur de demi-octets de l'exercice précédent, mais en plus, la valeur en base 10 de ses 4 bits d'entrées pour $A$ et pour $B$ est affichée avec un module d'affichage spécial à droite. La même chose est faite pour représenter la valeur $S = A + B$ (mais seulement sur les 4 premiers bits de $S$). Actuellement, le circuit effectue le calcul $0 + 0 = 0$.
 
-Réglez les entrées du circuit de manière à lui faire effectuer les additions suivantes, et vérifiez le résultat. Dans quelles circonstances est-il correct et pourquoi est-il de temps en temps incorrect? Comment, en regard de ceci, interpréter le bit de sortie qui est la retenue de l'additionneur de gauche?
+Réglez les entrées du circuit de manière à lui faire effectuer les additions suivantes, et vérifiez le résultat. Dans quelles circonstances est-il correct et pourquoi est-il de temps en temps incorrect? Comment, en regard de ceci, interpréter le bit de sortie $S_4$, qui est la retenue de l'additionneur de gauche?
    1. $1 + 0$
    1. $3 + 1$
    1. $3 + 3$
@@ -233,61 +229,37 @@ Réglez les entrées du circuit de manière à lui faire effectuer les additions
    1. $15 + 15$
 
 ```{logic}
-:height: 480
+:height: 490
 :mode: tryout
 
 {
   "in": [
-    {"pos": [310, 30], "orient": "s", "id": 0, "val": 0},
-    {"pos": [440, 30], "orient": "s", "id": 1, "val": 0},
-    {"pos": [570, 30], "orient": "s", "id": 2, "val": 0},
-    {"pos": [180, 30], "orient": "s", "id": 3, "val": 0},
-    {"pos": [530, 160], "orient": "s", "id": 12, "val": 0},
-    {"pos": [400, 160], "orient": "s", "id": 13, "val": 0},
-    {"pos": [270, 160], "orient": "s", "id": 14, "val": 0},
-    {"pos": [140, 160], "orient": "s", "id": 15, "val": 0}
+    {"pos": [100, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
+    {"pos": [200, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
+    {"pos": [300, 40], "orient": "s", "id": 1, "name": "A1", "val": 0},
+    {"pos": [400, 40], "orient": "s", "id": 2, "name": "A0", "val": 0},
+    {"pos": [140, 180], "orient": "s", "id": 15, "name": "B3", "val": 0},
+    {"pos": [240, 180], "orient": "s", "id": 14, "name": "B2", "val": 0},
+    {"pos": [340, 180], "orient": "s", "id": 13, "name": "B1", "val": 0},
+    {"pos": [440, 180], "orient": "s", "id": 12, "name": "B0", "val": 0}
   ],
   "out": [
-    {"pos": [160, 450], "orient": "s", "id": 36},
-    {"pos": [40, 450], "orient": "s", "id": 37},
-    {"pos": [290, 450], "orient": "s", "id": 38},
-    {"pos": [420, 450], "orient": "s", "id": 39},
-    {"pos": [550, 450], "orient": "s", "id": 40}
+    {"pos": [30, 450], "orient": "s", "id": 37, "name": "S4"},
+    {"pos": [120, 450], "orient": "s", "id": 36, "name": "S3"},
+    {"pos": [220, 450], "orient": "s", "id": 38, "name": "S2"},
+    {"pos": [320, 450], "orient": "s", "id": 39, "name": "S1"},
+    {"pos": [420, 450], "orient": "s", "id": 40, "name": "S0"}
   ],
   "displays": [
-    {"type": "nibble", "pos": [680, 90], "id": [4, 5, 6, 7]},
-    {"type": "nibble", "pos": [680, 220], "id": [8, 9, 10, 11]},
-    {"type": "nibble", "pos": [680, 390], "id": [41, 42, 43, 44]}
+    {"type": "nibble", "pos": [530, 100], "id": [4, 5, 6, 7]},
+    {"type": "nibble", "pos": [530, 240], "id": [8, 9, 10, 11]},
+    {"type": "nibble", "pos": [530, 390], "id": [41, 42, 43, 44]}
   ],
   "components": [
-    {
-      "type": "adder",
-      "pos": [550, 320],
-      "orient": "s",
-      "in": [16, 17, 18],
-      "out": [19, 20]
-    },
-    {
-      "type": "adder",
-      "pos": [420, 320],
-      "orient": "s",
-      "in": [21, 22, 23],
-      "out": [24, 25]
-    },
-    {
-      "type": "adder",
-      "pos": [290, 320],
-      "orient": "s",
-      "in": [26, 27, 28],
-      "out": [29, 30]
-    },
-    {
-      "type": "adder",
-      "pos": [160, 320],
-      "orient": "s",
-      "in": [31, 32, 33],
-      "out": [34, 35]
-    }
+    {"type": "adder", "pos": [420, 320], "in": [16, 17, 18], "out": [19, 20]},
+    {"type": "adder", "pos": [320, 320], "in": [21, 22, 23], "out": [24, 25]},
+    {"type": "adder", "pos": [220, 320], "in": [26, 27, 28], "out": [29, 30]},
+    {"type": "adder", "pos": [120, 320], "in": [31, 32, 33], "out": [34, 35]}
   ],
   "wires": [
     [12, 8],
@@ -323,7 +295,7 @@ Réglez les entrées du circuit de manière à lui faire effectuer les additions
 ```
 
 :::{admonition,dropdown} Corrigé
-Dès que la somme dépasse 15, elle n'est plus représentable sur les 4 bits qui sont affichés sur la sortie. La plupart des ordinateurs et smartphones actuels représentent les nombres non pas sur 4 bits, mais sur 64. Mais même avec 64 bits, il y a un nombre maximal que l'on peut représenter (en l'occurrence, $2^{64} - 1 = 18446744073709551615$.) La retenue du dernier additionneur s'appelle le bit de dépassement (_overflow_ en anglais). Il est à 1 lorsque le résultat de l'addition n'est pas correctement représenté avec les 4 (ou 64) bits de sortie.
+Dès que la somme dépasse 15, elle n'est plus représentable sur les 4 bits qui sont affichés sur la sortie. La plupart des ordinateurs et smartphones actuels représentent les nombres non pas sur 4 bits, mais sur 64. Mais même avec 64 bits, il y a un nombre maximal que l'on peut représenter (en l'occurrence, $2^{64} - 1 = 18446744073709551615$.) La retenue du dernier additionneur s'appelle le bit de dépassement (_overflow_ en anglais). Il est à 1 lorsque le résultat de l'addition n'est pas correctement représenté avec les 4 (ou 64) bits de sortie. Dans les processeurs, il porte souvent le nom de $V$ (deuxième lettre d'_oVerflow_). Nous allons dorénavant aussi utiliser ce nom.
 :::
 ::::
 
@@ -332,64 +304,45 @@ Dès que la somme dépasse 15, elle n'est plus représentable sur les 4 bits qui
 
 L'additionneur de demi-octets ci-dessous a été endommagé et ne fonctionne plus correctement. Par exemple, lorsqu'on lui demande d'effectuer le calcul $11 + 1$, il livre comme réponse $8$.
 
-Déterminer quel composant est défectueux dans ce circuit et comment il faudrait le réparer. Vous pouvez changer les entrées pour vérifier ce qui ne fonctionne pas.
+Déterminez quel composant est défectueux dans ce circuit et comment il faudrait le réparer. Vous pouvez changer les entrées pour vérifier ce qui ne fonctionne pas.
 
 ```{logic}
-:height: 480
+:height: 490
 :mode: tryout
 
 {
   "in": [
-    {"pos": [310, 30], "orient": "s", "id": 0, "val": 0},
-    {"pos": [440, 30], "orient": "s", "id": 1, "val": 1},
-    {"pos": [570, 30], "orient": "s", "id": 2, "val": 1},
-    {"pos": [180, 30], "orient": "s", "id": 3, "val": 1},
-    {"pos": [530, 160], "orient": "s", "id": 12, "val": 1},
-    {"pos": [400, 160], "orient": "s", "id": 13, "val": 0},
-    {"pos": [270, 160], "orient": "s", "id": 14, "val": 0},
-    {"pos": [140, 160], "orient": "s", "id": 15, "val": 0}
+    {"pos": [100, 40], "orient": "s", "id": 3, "name": "A3", "val": 1},
+    {"pos": [200, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
+    {"pos": [300, 40], "orient": "s", "id": 1, "name": "A1", "val": 1},
+    {"pos": [400, 40], "orient": "s", "id": 2, "name": "A0", "val": 1},
+    {"pos": [140, 180], "orient": "s", "id": 15, "name": "B3", "val": 0},
+    {"pos": [240, 180], "orient": "s", "id": 14, "name": "B2", "val": 0},
+    {"pos": [340, 180], "orient": "s", "id": 13, "name": "B1", "val": 0},
+    {"pos": [440, 180], "orient": "s", "id": 12, "name": "B0", "val": 1}
   ],
   "out": [
-    {"pos": [160, 450], "orient": "s", "id": 36},
-    {"pos": [40, 450], "orient": "s", "id": 37},
-    {"pos": [290, 450], "orient": "s", "id": 38},
-    {"pos": [420, 450], "orient": "s", "id": 39},
-    {"pos": [550, 450], "orient": "s", "id": 40}
+    {"pos": [30, 450], "orient": "s", "id": 37, "name": "V"},
+    {"pos": [120, 450], "orient": "s", "id": 36, "name": "S3"},
+    {"pos": [220, 450], "orient": "s", "id": 38, "name": "S2"},
+    {"pos": [320, 450], "orient": "s", "id": 39, "name": "S1"},
+    {"pos": [420, 450], "orient": "s", "id": 40, "name": "S0"}
   ],
   "displays": [
-    {"type": "nibble", "pos": [680, 90], "id": [4, 5, 6, 7]},
-    {"type": "nibble", "pos": [680, 220], "id": [8, 9, 10, 11]},
-    {"type": "nibble", "pos": [680, 390], "id": [41, 42, 43, 44]}
+    {"type": "nibble", "pos": [530, 100], "id": [4, 5, 6, 7]},
+    {"type": "nibble", "pos": [530, 240], "id": [8, 9, 10, 11]},
+    {"type": "nibble", "pos": [530, 390], "id": [41, 42, 43, 44]}
   ],
   "components": [
+    {"type": "adder", "pos": [420, 320], "in": [16, 17, 18], "out": [19, 20]},
     {
       "type": "adder",
-      "pos": [550, 320],
-      "orient": "s",
-      "in": [16, 17, 18],
-      "out": [19, 20]
-    },
-    {
-      "type": "adder",
-      "pos": [420, 320],
-      "orient": "s",
+      "pos": [320, 320],
       "in": [21, 22, 23],
       "out": [24, {"id": 25, "force": 0}]
     },
-    {
-      "type": "adder",
-      "pos": [290, 320],
-      "orient": "s",
-      "in": [26, 27, 28],
-      "out": [29, 30]
-    },
-    {
-      "type": "adder",
-      "pos": [160, 320],
-      "orient": "s",
-      "in": [31, 32, 33],
-      "out": [34, 35]
-    }
+    {"type": "adder", "pos": [220, 320], "in": [26, 27, 28], "out": [29, 30]},
+    {"type": "adder", "pos": [120, 320], "in": [31, 32, 33], "out": [34, 35]}
   ],
   "wires": [
     [12, 8],
