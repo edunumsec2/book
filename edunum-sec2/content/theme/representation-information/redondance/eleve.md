@@ -290,13 +290,52 @@ en l'ignorant.
 
 
 
-On notera que, 
-pour un coût 
-de taille modeste 
-(1/8 bits transmis) 
-et un calcul 
-rapide à réaliser 
-(une somme et une comparaison), 
+
+
+````{panels}
+:column: col-lg
+
+Le code suivant
+permet de tester
+le calcul de parité
+et son contrôle.
+
+```{codeplay}
+
+def getControlBit(number):
+    count = 0
+    bit = 1
+    while bit < 8:
+        if number & bit:
+            count += 1
+        bit <<= 1
+
+    return (count+1) % 2
+
+value = int(input('Valeur à transmettre [0-127] : '))
+print('-'*42)
+print(format(value, ' 39b'))
+value = value & 0x7f
+control = getControlBit(value)
+
+print('-'*42)
+print('  valeur (limitée à 7 bits)  :', value)
+print('  représentation binaire     :', '.' + format(value, '07b'))
+print('  bit de contrôle            :', str(control) + '.'*7)
+print('-'*42)
+print('valeur transmise             :', format((control*128) ^ value, '08b'))
+print('-'*42)
+```
+````
+
+
+On notera que,
+pour un coût
+de taille modeste
+(1/8 bits transmis)
+et un calcul
+rapide à réaliser
+(une somme et une comparaison),
 des erreurs
 de transmission 
 ponctuelles 
@@ -458,10 +497,80 @@ est différent
 entre les deux messages.
 
 
-On notera 
-que la suppressoin 
-d'une lettre 
-au texte 
+
+
+
+````{panels}
+:column: col-lg
+
+Le code suivant
+permet de tester
+la fonction
+de hashage
+décrite précédemment.
+
+
+```{codeplay}
+
+def getSum(information):
+    answer = 0
+    for car in information:
+        answer += ord(car)
+    return answer
+
+
+def getProductsSum(information):
+    answer = 0
+    index = 1
+    for car in information:
+        answer += index * ord(car)
+        index += 1
+    return answer
+
+
+def getTwoLastPositions(value):
+    return '{:02X}'.format(value)[-2:]
+
+
+def toHash(text):
+    return getTwoLastPositions(getSum(text)) \
+         + getTwoLastPositions(getProductsSum(text))
+
+
+text = input('Texte à hacher : ')
+sum = getSum(text)
+prodSum = getProductsSum(text)
+
+print('-'*42)
+print('somme              :', sum)
+print('                    ', hex(sum))
+print('-'*42)
+print('somme des produits :', prodSum)
+print('                    ', hex(prodSum))
+print('-'*42)
+print('hash               :', toHash(text))
+print('-'*42)
+```
+
+On notera
+que les mots
+'hat' et 'fer'
+débouchent
+sur la même empreinte
+(3D86),
+par exemple.
+````
+
+
+
+
+
+
+
+On notera
+que la suppression
+d'une lettre
+au texte
 ("hashage" => D135)
 ne change pas 
 la longueur 
@@ -496,8 +605,6 @@ peuvent être imposées
 lors de l'ajout 
 des blocs 
 dans une **blockchain**.
-
-
 Cela constitue 
 la preuve de travail 
 (*proof-of-Work*, PoW) 
@@ -508,14 +615,14 @@ communément
 
 
 ```{toggle}
-La quantité 
-faramineuse 
-de calculs 
-ainsi engendrée 
-pour complexifier 
-artificiellement 
-ce hashage 
-est ainsi responsable 
+La quantité
+faramineuse
+de calculs
+ainsi engendrée
+pour complexifier
+artificiellement
+ce hashage
+est responsable
 d'une part mesurable 
 de la consommation 
 électrique mondiale.
@@ -544,8 +651,8 @@ de leur maintenance.
 
 
 
-On notera 
-qu'une empreinte numérique 
+On notera
+qu'une empreinte numérique
 est une simplification 
 de l'information hashée. 
 Il est dès lors 
@@ -569,17 +676,17 @@ de la seule empreinte.
 
 
 
-Toutefois, 
-grâce à leurs propriétés 
+Toutefois,
+grâce à leurs propriétés
 (déterministes et rapides),
-des fonctions de hashage 
+des **fonctions de hashage**
 plus complexes
-(SHA, MD5…)
-trouvent des applications 
-dans de nombreux contexts : 
-authenticité (signatures numériques) ; 
+(**SHA**, **MD5**…)
+trouvent des applications
+dans de nombreux contexts :
+authenticité (signatures numériques) ;
 intégrité (erreurs de transfert, stockage, blockchains…) ;
-identification (fichiers, connexions réseau…) ; 
+identification (fichiers, connexions réseau…) ;
 authentification (stockage et vérification des mots de passe)…
 
 
@@ -727,4 +834,35 @@ des postes personnels.
 ## Cloud computing
 
 
+Les systèmes
+informatiques
+récents
+sont distribués
+à l'échelle
+d'Internet,
+tant pour
+leurs parties
+matérielles que logicielles.
+On parle
+de systèmes *cloud*
+ou **informatique en nuage**.
 
+On trouve ainsi
+des systèmes
+de stockage
+de fichiers
+distribués
+sur plusieurs
+ordinateurs
+voire dans
+plusieurs
+fermes
+de stockage.
+Cette configuration
+augmente
+considérablement
+la sécurité
+des données
+en contribuant
+à leur **intégrité** et
+à leur **disponibilité**.
