@@ -41,7 +41,7 @@ h1 {
 
 <!-- Fin du test de mise en page -->
 
-<a href="#" class="button"> 🖨️ Version imprimable</a>
+<a href="http://edunumsec2.ch/enjeux-sociaux/digital-labour" class="button"> 🖨️ Version imprimable</a>
 
 <br>
 
@@ -59,7 +59,7 @@ Le terme *digital labor* ou «travail du clic» apparait au début des années 2
 
 * **Le travail à la demande** **(sous-rémunéré)**
 
-Il s’agit d’un travail à la demande pour lequel la mise en relation entre prestataires et demandeurs passe par l’intermédiaire d’une plateforme numérique. Cette catégorie regroupe les activités issues d’une nouvelle économie des «petits boulots» (*gig economy*) : chauffeurs de VTC, livreurs de repas, personnel de ménage, service de réparation, etc. Ces professionnels ont un statut d’indépendant tout en étant très étroitement liés à la plateforme. Ce travail à la demande prend place dans un contexte géographique précis (une ville, une région) et peu être soumis à des réglementations locales. Si les défenseurs de cette ces pratiques mettent en avant la flexibilité offerte aux travailleurs, ses détracteurs soulignent le risque de voir émerger une «zone grise» de l’emploi qui s’apparente au salariat, sans pour autant offrir les protections sociales qui l’accompagnent
+Il s’agit d’un travail à la demande pour lequel la mise en relation entre prestataires et demandeurs passe par l’intermédiaire d’une plateforme numérique. Cette catégorie regroupe les activités issues d’une nouvelle économie des «petits boulots» (*gig economy*) : conduite de VTC, livraison de repas, prestations de ménage, services de réparation, etc. Ces professionnels ont un statut d’indépendant tout en étant très étroitement liés à la plateforme. Ce travail à la demande prend place dans un contexte géographique précis (une ville, une région) et peu être soumis à des réglementations locales. Si les défenseurs de ces pratiques mettent en avant la flexibilité offerte aux travailleurs, ses détracteurs soulignent le risque de voir émerger une «zone grise» de l’emploi qui s’apparente au salariat, sans pour autant offrir les protections sociales qui l’accompagnent
   
   <br>
 
@@ -94,14 +94,14 @@ height: 350px
 width: 350px
 name: mecanical-turk
 ---
-Le Turc mécanique, gravure de Karl Gottlieb von Windisch dans le livre de 1783, *Raison inanimée*.
+Le canular du Turc mécanique. Source : Wikipédia.
 ````
 
-<p>Inventé par le Hongrois Wolgang von Kempelen, le Turc mécanique était un automate habillé à la mode turque. Cette machine jouait particulièrement bien aux échecs et semblait imbattable. Mais c’était une supercherie ! A l’intérieur de l’installation se trouvait un véritable joueur d’échecs qui manipulait le mannequin.</p>
+<p>Inventé en 1770 par le Hongrois Wolgang von Kempelen, le Turc mécanique était un automate habillé à la mode turque. Cette machine jouait particulièrement bien aux échecs et semblait imbattable. Mais c’était une supercherie ! A l’intérieur de l’installation se trouvait un véritable joueur d’échecs qui manipulait le mannequin.</p>
 
-i Amazon se réfère à ce canular, c’est que sa plateforme proposant les services de «micro-travailleurs» (ou *turkers*) fonctionne sur le même principe. Elle propose de créer l’illusion d’un système automatisé en s’appuyant sur le travail de «petites mains» qui exécutent des tâches que les machines ne parviennent pas à effectuer.
+Si Amazon se réfère à ce canular, c’est que sa plateforme proposant les services de «micro-travailleurs» (ou *turkers*) fonctionne sur le même principe. Elle propose de créer l’illusion d’un système automatisé en s’appuyant sur le travail de «petites mains» qui exécutent des tâches que les machines ne parviennent pas à effectuer.
 
-Amazon Mechinical Turk se révèle particulièrement utile pour des tâches simples et répétitives qui ne pourraient être confiées à un seul individu et pour lesquelles les machines fourniraient un résultat décevant. Ces opérations ne requièrent de qualifications ou savoirs particuliers, mais font appel à une analyse qui relève du sens commun et qui peut être effectuée en un coup d’oeil par un humain, alors qu’elle demeure encore inaccessible à une système informatique. Il peut s’agir, par exemple, de déterminer le contenu d’une image ou d’évaluer la tonalité d’un *tweet*. Certaines de ces opérations ont également pour objectif d’entraîner, compléter ou corriger des systèmes d’intelligence artificielle (résultats de moteurs de recherche, requêtes transmises à un assistant vocal, analyse d’image). L’importance du travail humain dans le développement des ces systèmes permet de relativiser l’autonomie des machines et des algorithmes dans les processus d’apprentissage automatisés.
+Amazon Mechinical Turk se révèle particulièrement utile pour des tâches simples et répétitives qui ne pourraient être confiées à un seul individu et pour lesquelles les machines fourniraient un résultat décevant. Ces opérations ne requièrent pas de qualifications ou savoirs particuliers, mais font appel à une analyse qui relève du sens commun et qui peut être effectuée en un coup d’oeil par un humain, alors qu’elle demeure encore inaccessible à une système informatique. Il peut s’agir, par exemple, de déterminer le contenu d’une image ou d’évaluer la tonalité d’un *tweet*. Certaines de ces opérations ont également pour objectif d’entraîner, compléter ou corriger des systèmes d’intelligence artificielle (résultats de moteurs de recherche, requêtes transmises à un assistant vocal, analyse d’image). L’importance du travail humain dans le développement des ces systèmes permet de relativiser l’autonomie des machines et des algorithmes dans les processus d’apprentissage automatisés.
 
 
 <br>
@@ -171,7 +171,7 @@ a) Pourquoi parle-t-on de «micro-travail»?
 
 
    ::::{admonition,dropdown} Réponse
-   Il s'agit d'un travail à la tâche, ou plutôt à la micro-tâche. Les travailleurs et travailleuses sont rémunérés quelques centimes par opération. Ils et elles n'ont pas de contrat de travail et n’ont droit à aucune prestation sociale. Il leur est difficile de prévoir leurs horaires et d'estimer leur revenu, car aucun nombre d'heures ou de tâches n'est garanti. Il s’agit donc d’une activité très précaire.
+   Il s'agit d'un travail à la tâche, ou plutôt à la micro-tâche. Les travailleurs et travailleuses sont rémunérés quelques centimes par opération. Ils n'ont pas de contrat de travail et n’ont droit à aucune prestation sociale. Il leur est difficile de prévoir leurs horaires et d'estimer leur revenu, car aucun nombre d'heures ou de tâches n'est garanti. Il s’agit donc d’une activité très précaire.
    ::::
 
 
