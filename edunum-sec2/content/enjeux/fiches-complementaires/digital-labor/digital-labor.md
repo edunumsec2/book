@@ -154,6 +154,8 @@ Mais au milieu des années 2000, avec l’arrivée des plateformes, le regard po
 
 ## En classe
 
+🕑 45 min | ✍️ débranché
+
 Diffuser l’épisode [« Micro-travailler plus pour micro-gagner moins»](https://www.youtube.com/watch?v=Y8URdO7mDfg) de la série documentaire "Les invisibles" (France TV, 20 min.). 
 
 <br>
@@ -177,7 +179,7 @@ a) Pourquoi parle-t-on de «micro-travail»?
 b) L'un des témoins dit : "On aide l'algorithme à s'améliorer". En quoi les algorithmes doivent-ils être "améliorés"?
   
    ::::{admonition,dropdown} Réponse
-   Les algorithmes sont souvent pensés comme des processus informatiques qui fonctionnent de façon entièrement automatisée. Cependant, ces témoignages nous montrent qu'ils nécessitent un important travail humain. Certaines opérations qui requièrent une connaissance et une expérience du monde doivent être réalisées au préalable par des humains. Par exemple, dans le cas d'un algorithme destiné à traiter les requêtes d'un moteur de recherche, comprendre le sens ou la dimension implicite d'un mot est difficile pour un système informatique. Ils doivent donc être "entrainés" par des humains au travers de très nombreux exemples.
+   Les algorithmes sont souvent pensés comme des processus informatiques qui fonctionnent de façon entièrement automatisée. Cependant, ces témoignages nous montrent qu'ils nécessitent un important travail humain. Certaines opérations qui requièrent une connaissance et une expérience du monde doivent être réalisées au préalable par des humains. Par exemple, dans le cas d'un algorithme destiné à traiter les requêtes d'un moteur de recherche, comprendre le sens ou la dimension implicite d'un mot est difficile pour un système informatique. Ils doivent donc être "entraînés" par des humains au travers de très nombreux exemples.
    ::::
 
 
@@ -195,7 +197,7 @@ c) Pourquoi des entreprises basées en France, telles que Disneyland Paris, font
    Par ailleurs, cette nouvelle forme d'activité délocalisée démontre également que le risque posé par l'automatisation du travail est moins celui d'un "remplacement des humains par les machines" que celui d'une précarisation et déqualification de certains types emplois.
    ::::
 
-d ) Pourriez-vous citer des situations lors desquelles nous entrainons les algorithmes, parfois sans nous en rendre compte?
+d ) Pourriez-vous citer des situations lors desquelles nous entraînons les algorithmes, parfois sans nous en rendre compte?
 
    ::::{admonition,dropdown} Quelques éléments de réponse
   * Toutes nos activités sur les réseaux sociaux : commentaires, *likes*, partage d'images, clic sur un lien ou parcours du fil d'actualité permettent d'entraîner des algorithmes qui ont pour but de nous suggérer un contenu ciblé.
