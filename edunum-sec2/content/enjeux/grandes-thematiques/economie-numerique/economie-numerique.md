@@ -153,7 +153,7 @@ Une fois ce processus engagé, il devient difficile pour des offres concurrentes
 
 ```{admonition} Uberisation
 :class: hint
-L’uberisation, dont le nom provient de l’entreprise Uber, est un processus économique qui vise à contourner le fonctionnement classique d’un secteur en créant un nouvel intermédiaire via une plateforme numérique. Celle-ci met en relation clients et prestataires tout en prélevant une commission sur les transactions. Si les services «uberisés» offrent des prestations flexibles à moindre coût, ce changement de modèle passe par une stratégie de développement agressive  dans un cadre légal peu clair. Dans le cas d’Uber, le modèle implique la participation de travailleurs au statut précaire, considérés comme «indépendants» et pourtant soumis aux exigences de la plateforme. Le statut légal de ces pratiques est aujourd’hui remis en cause dans plusieurs villes, [dont Genève](https://www.letemps.ch/economie/geneve-uber-eats-desormais-recourir-employes), qui a imposé en 2020 à Uber Eats de salarier ses travailleurs. A noter également que malgré des pertes  massives déclarées chaque année, Uber continue d’être soutenu par des investisseurs auxquels on promet une rentabilité future.
+L’uberisation, dont le nom provient de l’entreprise Uber, est un processus économique qui vise à contourner le fonctionnement classique d’un secteur en créant un nouvel intermédiaire via une plateforme numérique. Celle-ci met en relation clients et prestataires tout en prélevant une commission sur les transactions. Si les services «uberisés» offrent des prestations flexibles à moindre coût, ce changement de modèle passe par une stratégie de développement agressive  dans un cadre légal peu clair. Dans le cas d’Uber, le modèle implique la participation de travailleurs au statut précaire, considérés comme «indépendants» et pourtant soumis aux exigences de la plateforme. Le statut légal de ces pratiques est aujourd’hui remis en cause dans plusieurs villes, [dont Genève](https://www.letemps.ch/economie/geneve-uber-eats-desormais-recourir-employes), qui a imposé en 2020 à Uber Eats de salarier ses travailleurs.
 ```
 Face à ces pratiques, les États peinent à s’accorder et les régulations demeurent peu contraignantes. Ce cadre juridique flou témoigne également d’une forme de fatalisme face au numérique. En effet, la précarité, la financiarisation ou la captation des données sont souvent pensés comme inhérentes au développement des technologies. Il apparaît donc nécessaire de souligner que la technique ne contient pas en elle-même un modèle organisationnel ou économique particulier. Pour des plateformes comme Google ou Facebook, ces outils technologiques constituent des moyens d’atteindre des objectifs commerciaux. Mais ce n’est pas la seule voie possible. Il existe en effet des services numériques dont les motivations se situent en dehors de ces logiques financières
 
@@ -196,8 +196,8 @@ Pourtant, les activités en ligne ne sont pas nécessairement synonymes de temps
 
 ### Glossaire
 
-* Algorithmes
-* Plateformes
+* Algorithme
+* Plateforme
 * Économie d’échelle
 * Effet de réseau
 * Uberisation
@@ -298,14 +298,13 @@ Demander aux élèves de lister 3 applications ou services en ligne qu’ils uti
   * **WhatsApp** : L’entreprise, qui appartient à Facebook depuis 2016, n’est pas monétisée. Auparavant facturée 1 dollar par année, l’application est maintenant gratuite et sans publicité. Mais, début 2021, WhatsApp a annoncé de nouvelles conditions d’utilisation qui vont permettre à Facebook d’utiliser les données issues de l’application. Son modèle économique pourrait donc évoluer.
   * **TikTok** : En 2020, TikTok possède 2 sources de revenus : la publicité et surtout, les [achats intégrés à l'application](https://www.numerama.com/business/535666-comment-tiktok-fait-il-pour-gagner-tellement-dargent.html). Ces derniers s'effectuent au travers d'une monnaie virtuelle, les "*Coins*" (pièces). Les utilisateurs peuvent acheter des crédits (100 pièces pour env. 1 Euro) et les utiliser pour différents services supplémentaires ou pour des "cadeaux" offerts aux influenceurs. Tiktok prélève une commission sur ces transactions (le pourcentage exact n'est pas connu).
   *  **Signal** : Pour l'instant, le service de messagerie est financé par une fondation à but non lucratif. Il est axé sur la confidentialité et les données des utilisateurs ne sont pas commercialisées.
-  * **Telegram** : D’abord entièrement gratuit et sans publicité, le service de messagerie a annoncée en 2021 développer une offre payante pour les entreprises et ainsi qu’une plateforme publicitaire.
+  * **Telegram** : D’abord entièrement gratuit et sans publicité, le service de messagerie a annoncé en 2021 développer une offre payante pour les entreprises et ainsi qu’une plateforme publicitaire.
   *  **Spotify / Netflix** : Les plateformes liées à l'industrie du divertissement fonctionnent le plus souvent sur un principe d'abonnement. La stratégie consiste à offrir un premier mois gratuit ou un service réduit (avec publicités, par exemple) afin de convertir les utilisateurs à une version payante.
   *  **Uber, AirBnB** : Ces plateformes se positionnent comme des intermédiaires entre le client et le prestataire de service. Elles prennent une commission sur les transactions qui s'effectuent entre les deux parties
   ::::
 
 <br>
 
-<!-- Activité pas finalisée -->
 
 
 **B. Comprendre le modèle de Google** 
@@ -340,7 +339,7 @@ Le ciblage publicitaire s’effectue également au travers des très nombreux si
 d) Comment Google est-elle devenue une des entreprises les plus riches au monde, alors que ses services sont gratuits?
 
 ::::{admonition,dropdown} **Réponse**
-L’objectif de Google n’est pas de vendre des produits ou services aux internautes mais de recueillir le plus grand nombre de traces afin de proposer à des annonceurs des espaces publicitaires ciblés. L’entreprise a donc intérêt à offrir des services gratuits afin de maximiser le nombre d’utilisateurs et d’interactions sur toutes ses plateformes (Gmail, Chrome, Google Maps, YouTube, etc.). Par ailleurs, plus ces services comptent d’usagers, plus ils deviennent attractifs (et performants), à la fois pour les utilisateurs et les annonceurs. C’est ce cercle vertueux qui a permis à Google d’occuper une position dominante. Une fois cette place acquise, il devient difficile pour un concurrent d’émerger.
+L’objectif de Google n’est pas de vendre des produits ou services aux internautes mais de recueillir le plus grand nombre de traces concernant leur profil et leur comportement afin de proposer à des annonceurs des espaces publicitaires ciblés. L’entreprise a donc intérêt à offrir des services gratuits afin de maximiser le nombre d’utilisateurs et d’interactions sur toutes ses plateformes (Gmail, Chrome, Google Maps, YouTube, etc.). Par ailleurs, plus ces services comptent d’usagers, plus ils deviennent attractifs et performants, à la fois pour les utilisateurs et les annonceurs. C’est ce cercle vertueux qui a permis à Google d’occuper une position dominante. Une fois cette place acquise, il devient difficile pour un concurrent d’émerger.
 
 A noter toutefois que les recettes de Google proviennent avant tout de la vente de mots-clés. C’est ce paramètre qui permet de déterminer au mieux l’intention de l’internaute et de proposer un espace publicitaire pertinent. Le profilage de l’utilisateur est donc moins nécessaire pour Google que pour d’autres plateformes, telles que Facebook. C’est également la raison pour laquelle Google peut envisager certaines mesures en faveur de la protection de la vie privée.
 ::::
@@ -411,8 +410,6 @@ a) Présentez en quelques mots le modèle économique de Uber Eats.
 
 ::::{admonition,dropdown} Réponse
 Uber Eats est une plateforme en ligne qui propose des livraisons de repas. L’application met en relation livreurs, clients et restaurants partenaires. L’entreprise prend une commission sur chaque commande, à la fois auprès du restaurant (env. 30%) et du client. Sur le modèle de la maison mère Uber, les livreurs de Uber Eats ne sont pas des salariés, mais des indépendants payés à la course. Ce système permet à Uber Eats de disposer d’une base importante de livreurs tout en ne rémunérant que les commandes passées.
-
-A noter que ce modèle économique n’est toujours pas rentable. Uber, comme Uber Eats, sont encore largement déficitaires et ne se maintiennent que grâce aux soutiens massifs d’investisseurs.
 ::::
 
 b) En quoi le modèle économique de Uber Eats n’est-il pas soutenable pour les livreurs?
@@ -444,7 +441,7 @@ Pour aller plus loin  :
 e) Peut-on dire qu’Uber propose une technologie «innovante»?
 
 ::::{admonition,dropdown} Réponse
-L’innovation d’Uber se situe davantage au niveau stratégique que technique. En effet, Uber ne propose pas de réelle innovation technologique. L’entreprise s’appuie sur toute une série de dispositifs qui pré-existaient : cartographie, GPS, téléphone mobile, Internet, paiement en ligne. Par ailleurs, des applications mobiles permettant de commander un taxi étaient déjà disponibles. La force de la plateforme a été de proposer au moment opportun un service qui mobilise des technologies pertinentes, mais également qui correspond à une certaine demande, et qui trouve un contexte politique favorable à son développement.
+L’innovation d’Uber se situe davantage au niveau stratégique que technique. En effet, Uber ne propose pas de réelle innovation technologique. L’entreprise s’appuie sur toute une série de dispositifs qui pré-existaient : cartographie, GPS, téléphone mobile, Internet, paiement en ligne. Par ailleurs, des applications mobiles permettant de commander un taxi étaient déjà disponibles. La force de la plateforme a été de proposer au moment opportun un service qui mobilise des technologies pertinentes, qui corresponde à une certaine demande et qui trouve un contexte politique favorable à son développement.
 
 ::::
 
@@ -476,7 +473,7 @@ c) Quelles peuvent-être les conséquences de ce changement de politique?
 
 * Les autorités pourraient demander à ce que ce changement s’applique à tous les services Uber, voire à d’autres plateformes.
 
-* Si Uber Eats doit s’ajuster au salaire horaire minimal et assumer les charges sociales de ses travailleurs, comment va-t-elle répercuter ces coûts?  La plateforme n’étant déjà rentable avec son modèle actuel, elle risque d’augmenter ses tarifs. 
+* Si Uber Eats doit s’ajuster au salaire horaire minimal et assumer les charges sociales de ses travailleurs, comment va-t-elle répercuter ces coûts? La plateforme étant peu rentable avec son modèle actuel, elle risque d’augmenter ses tarifs.
 ::::
 
 c) Quel sens donner au mot «flexibilité» du porte-parole d’Uber ?
