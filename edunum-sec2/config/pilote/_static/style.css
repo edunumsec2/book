@@ -1,0 +1,219 @@
+p {
+/*     font-family: 'Poppins', sans-serif; 
+ */    
+    text-align: justify;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 350;
+    line-height: 1.5;
+}
+
+/* Permet de forcer la couleur des liens. 
+Note : problèmes de compatibilité 
+avec le "content-tabbed", par exemple
+
+p a {
+    color: #5933d1 !important;
+    }
+*/
+
+strong {
+    font-weight: 500; 
+}
+
+h1 {
+
+  /*   font-family: 'Poppins', sans-serif;  */
+    font-size: 35px;
+    color: #000000;
+    font-weight: 400;
+    line-height: 1.5;
+
+}
+
+h2 {
+    
+/*     font-family: 'Poppins', sans-serif; 
+ */    
+    font-size: 28px;
+    color: #000000;
+    font-weight: 400;
+    line-height: 1.5;
+
+}
+
+.attention.admonition p {
+
+color: gray;
+
+}
+
+.attention.admonition p.admonition-title {
+
+    background: #f2f2f2;
+    color: gray;
+}
+
+.attention.admonition p.admonition-title::before {
+
+    color: gray;
+}
+
+div.attention.admonition {
+
+    border-radius: 10px;
+    background-color: white;
+    border: solid 0.5px;
+    border-color: gray;
+}
+
+div.note.admonition {
+    
+    border-radius: 10px;
+    background-color: white;
+    border: solid 0.5px;
+    border-color:#5933d1;
+    
+}
+
+.note.admonition p.admonition-title {
+
+    color: #a489fb;
+    background: #f7f4ff;
+}
+
+.note.admonition p.admonition-title::before {
+
+    color: #a489fb;
+}
+
+.note.admonition p {
+
+    color: gray;
+    
+    }
+
+
+div.hint.admonition {
+    
+    border-radius: 10px;
+    background-color: white;
+    border: solid 0.5px;
+    border-color:#0dcca7;
+    
+}
+
+.hint.admonition p.admonition-title {
+
+    color: #0dcca7;
+    background: #eefcfa;
+}
+
+.hint.admonition p.admonition-title::before {
+
+    color: #70d6c2;
+}
+
+.hint.admonition p {
+
+    color: gray;
+    
+    }
+
+
+    
+
+    
+    
+@media (min-width: 768px) {
+    button.toggle-button.toggle-button-hidden:before {
+        content: "Afficher";
+        position: absolute;
+        font-size: .9em;
+        left: -4.5em;
+        bottom: .4em;
+    }
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("poppins-regular-webfont.woff2") format("woff2"),
+         url("poppins-regular-webfont.woff") format("woff");
+    font-weight: 100 500;
+    font-style: normal;
+}
+
+.codeframe {
+    height: 250px;
+    width: 100%;
+    overflow: scroll;
+}
+
+.logic_diagram {
+    width: 100%;
+    margin: -1rem 0 1rem 0;
+}
+
+.logic_diagram > iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/** Custom NAV settings. */
+
+nav {
+    font-family: "Poppins", sans-serif !important;
+}
+
+nav p.caption {
+    margin-bottom: 10px !important;
+}
+
+nav .caption-text {
+    text-transform: none !important;
+    font-weight: bold !important;
+    color: #808080;
+}
+
+nav li {
+    margin-left: 10px;
+}
+
+nav a.reference {
+    color: #202020 !important;
+}
+
+nav a.reference.current {
+    color: #0dcca7 !important;
+}
+
+nav a.reference:visited {
+    color: inherit !important;
+}
+
+nav a.reference:hover {
+    color: #0dcca7 !important;
+}
+
+nav li.active > a.active {
+    border-left: 2px solid #0dcca7 !important;
+}
+
+/** Adaptations for tables */
+
+.table p {
+    margin-bottom: 0
+}
+
+.table p + p {
+    margin-top: 1ex;
+}
+
+.table td, .table th {
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
+
+.table th p {
+    font-weight: 500;
+}

@@ -11,7 +11,7 @@
 }
 
 #progress-ring .progress {
-  stroke: #5933d1ff;
+  stroke: rgb(34, 115, 255);
   stroke-width: 6;
   transition: stroke-dashoffset 0.25s;
   transition: stroke-width 0.1s;

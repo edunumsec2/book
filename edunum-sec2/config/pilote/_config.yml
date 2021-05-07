@@ -11,7 +11,7 @@ exclude_patterns: ['**/maitre.md', 'content/skel/**']
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: false
+  execute_notebooks: auto
   #execute_notebooks           : cache
 
 #######################################################################################
@@ -19,7 +19,7 @@ execute:
 latex:
   latex_engine                : "xelatex"
   latex_documents:
-    targetname: eleve.tex
+    targetname: pilote.tex
 
 #######################################################################################
 # HTML-specific settings

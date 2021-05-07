@@ -1,72 +1,87 @@
 # Table of content
-#
-- file: content/demostests/edito/landing
 
+
+## Page d'accueil
+- file: content/0_landing
+
+## Première année
 - part: Première année
   numbered: false
   chapters:
-  - file: content/theme/representation-information/01_accueil/eleve
+  ### Représentation de l'information
+  - file: content/theme/representation-information/accueil/eleve
     sections:
-      - file: content/theme/representation-information/introduction/eleve
-      - file: content/theme/representation-information/representation-entiers/eleve
-      - file: content/theme/representation-information/representation-caracteres/eleve
-      - file: content/theme/representation-information/representation-images/eleve
-      - file: content/theme/representation-information/numerisation/eleve
-      - file: content/theme/representation-information/systeme-arithmetique-binaire/eleve
-      - file: content/theme/representation-information/stockage-manipulation-donnees/eleve
-      - file: content/theme/representation-information/redondance/eleve
-      - file: content/theme/representation-information/03_exercices/exercices
+      - file: content/theme/representation-information/cours/introduction/eleve
+      - file: content/theme/representation-information/cours/representation-entiers/eleve
+      - file: content/theme/representation-information/cours/representation-caracteres/eleve
+      - file: content/theme/representation-information/cours/representation-images/eleve
+      - file: content/theme/representation-information/cours/numerisation/eleve
+      - file: content/theme/representation-information/cours/systeme-arithmetique-binaire/eleve
+      - file: content/theme/representation-information/cours/stockage-manipulation-donnees/eleve
+      - file: content/theme/representation-information/cours/redondance/eleve
+      #### Exercices
+      - file: content/theme/representation-information/exercices/eleve
         sections:
-          - file: content/theme/representation-information/03_exercices/representation-caracteres/carte-perforee/exercice
-      - file: content/theme/representation-information/00_activites/activites
+          - file: content/theme/representation-information/exercices/representation-caracteres/carte-perforee/exercice
+      #### Activités
+      - file: content/theme/representation-information/activites/eleve
         sections:
-          - file: content/theme/representation-information/00_activites/representation-entiers/magie-binaire/magie_binaire
-          - file: content/theme/representation-information/00_activites/redondance/radiotelephonie/activite
-  - file: content/theme/introduction-algorithmique/eleve
+          - file: content/theme/representation-information/activites/representation-entiers/magie-binaire/magie_binaire
+          - file: content/theme/representation-information/activites/redondance/radiotelephonie/activite
+
+  ### Algorithmique         
+  - file: content/theme/introduction-algorithmique/accueil/eleve
     sections:
-      - file: content/theme/introduction-algorithmique/decomposition-probleme/eleve
-      - file: content/theme/introduction-algorithmique/algorithmes-classiques/eleve
-      - file: content/theme/introduction-algorithmique/formulation-solutions/eleve
-      - file: content/theme/introduction-algorithmique/consequences-automatisation/eleve
-  - file: content/theme/programmation/eleve
+      - file: content/theme/introduction-algorithmique/cours/decomposition-probleme/eleve
+      - file: content/theme/introduction-algorithmique/cours/algorithmes-classiques/eleve
+      - file: content/theme/introduction-algorithmique/cours/formulation-solutions/eleve
+      - file: content/theme/introduction-algorithmique/cours/consequences-automatisation/eleve
+
+  ### Programmation    
+  - file: content/theme/programmation/accueil/eleve
     sections:
-      - file: content/theme/programmation/0_intro/intro
-      - file: content/theme/programmation/1_intro/intro 
-      - file: content/theme/programmation/2_pyth/pyth
-      - file: content/theme/programmation/3_var/var
-      - file: content/theme/programmation/4_flux/flux
-      - file: content/theme/programmation/5_list/list
-      - file: content/theme/programmation/6_dict/dict
-      - file: content/theme/programmation/7_fonc/fonc
-      - file: content/theme/programmation/8_mod/mod
-      - file: content/theme/programmation/9_app/app 
-  - file: content/theme/architecture-ordinateurs/accueil
+      - file: content/theme/programmation/cours/0_intro/intro
+      - file: content/theme/programmation/cours/1_intro/intro 
+      - file: content/theme/programmation/cours/2_pyth/pyth
+      - file: content/theme/programmation/cours/3_var/var
+      - file: content/theme/programmation/cours/4_flux/flux
+      - file: content/theme/programmation/cours/5_list/list
+      - file: content/theme/programmation/cours/6_dict/dict
+      - file: content/theme/programmation/cours/7_fonc/fonc
+      - file: content/theme/programmation/cours/8_mod/mod
+      - file: content/theme/programmation/cours/9_app/app 
+
+  ### Architecture des ordinateurs    
+  - file: content/theme/architecture-ordinateurs/accueil/eleve
     sections:
-      - file: content/theme/architecture-ordinateurs/introduction
-      - file: content/theme/architecture-ordinateurs/portes-logiques/eleve
-      - file: content/theme/architecture-ordinateurs/de-logique-a-arithmetique/eleve
-      - file: content/theme/architecture-ordinateurs/alu-bascules/eleve
+      - file: content/theme/architecture-ordinateurs/cours/introduction/eleve
+      - file: content/theme/architecture-ordinateurs/cours/portes-logiques/eleve
+      - file: content/theme/architecture-ordinateurs/cours/de-logique-a-arithmetique/eleve
+      - file: content/theme/architecture-ordinateurs/cours/alu-bascules/eleve
+      #### Exercices
         sections: 
-          - file: content/theme/architecture-ordinateurs/alu-bascules/exercice/SystemesLogiques
+          - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SystemesLogiques
             sections:
-              - file: content/theme/architecture-ordinateurs/alu-bascules/exercice/SL1_bases
-              - file: content/theme/architecture-ordinateurs/alu-bascules/exercice/SL2_portes
-              - file: content/theme/architecture-ordinateurs/alu-bascules/exercice/SL3_sl
-              - file: content/theme/architecture-ordinateurs/alu-bascules/exercice/SL4_avance
-              - file: content/theme/architecture-ordinateurs/alu-bascules/exercice/SL5_conclusion
-          - file: content/theme/architecture-ordinateurs/alu-bascules/exercice/Corrige_SystemesLogiques
-      - file: content/theme/architecture-ordinateurs/architecture-von-neumann/eleve
-      - file: content/theme/architecture-ordinateurs/microprocesseur/eleve
-      - file: content/theme/architecture-ordinateurs/informatique-embarquee/eleve
-      - file: content/theme/architecture-ordinateurs/histoire-informatique/eleve
-      - file: content/theme/architecture-ordinateurs/ressources
+              - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SL1_bases
+              - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SL2_portes
+              - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SL3_sl
+              - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SL4_avance
+              - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SL5_conclusion
+          - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/Corrige_SystemesLogiques
+      - file: content/theme/architecture-ordinateurs/cours/architecture-von-neumann/eleve
+      - file: content/theme/architecture-ordinateurs/cours/microprocesseur/eleve
+      - file: content/theme/architecture-ordinateurs/cours/informatique-embarquee/eleve
+      - file: content/theme/architecture-ordinateurs/cours/histoire-informatique/eleve
+
+## Deuxième année
 - part: Deuxième année
   numbered: false
   chapters:
-  - file: content/theme/algorithmique-programmation/eleve
-  - file: content/theme/projets/eleve
-  - file: content/theme/reseaux/eleve
+  - file: content/theme/algorithmique-programmation/accueil/eleve
+  - file: content/theme/projets/accueil/eleve
+  - file: content/theme/reseaux/accueil/eleve
 
+## Enjeux sociaux
 - part: Enjeux sociaux
   numbered: false
   chapters:
@@ -80,29 +95,30 @@
     - file: content/enjeux/fiches-complementaires/wikipedia/wikipedia
   - file: content/enjeux/bibliographie
 
-
-- part: Démos et divers
-  numbered: false
-  chapters:
-  - file: content/demostests/glossaire
-  - file: content/demostests/glossaire1
-  - file: content/demostests/edito/liens
-  # - file: content/demostests/edito/referencesart
-  - file: content/demostests/edito/extensions
-  - file: content/demostests/edito/Redaction-Bonnes-pratiques
-  - file: content/demostests/art/histoireart
-  # - file: content/demostests/edito/repinfo1test
-  - file: content/theme/architecture-ordinateurs/introductiontest
-
+## README
 - part: README
   numbered: false
   chapters:
-  - file: content/demostests/edito/presentation-ressources
+  - file: content/readme/0_presentation-ressources
     sections: 
-      - file: content/demostests/edito/exempleutilisation
-      - file: content/demostests/edito/modificationsressources
-      - file: content/demostests/edito/participation-developpement
-      - file: content/demostests/edito/syntaxemyst
-      - file: content/demostests/edito/relectures
+      - file: content/readme/exempleutilisation
+      - file: content/readme/modificationsressources
+      - file: content/readme/participation-developpement
+      - file: content/readme/syntaxemyst
+      - file: content/readme/extensions
+      - file: content/readme/glossaire1
+      - file: content/readme/relectures
+      - file: content/readme/redaction-bonnes-pratiques
+
+## Annexes
+- part: Annexes
+  numbered: false
+  chapters:
+  - file: content/annexes/0_annexes
+    sections:
+    - file: content/annexes/art/referencesart
+    - file: content/annexes/art/histoireart
+    - file: content/annexes/references/liens
+
 
 
