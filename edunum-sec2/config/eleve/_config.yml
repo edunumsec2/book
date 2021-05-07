@@ -1,9 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Informatique en tant que discipline obligatoire — Canton de Vaud, 2020
+title: Informatique au Gymnase
 author: Groupe de travail DGEP, EPFL, HEP, UNIL
-logo: logo.png
+logo: logo1.svg
 exclude_patterns: ['**/maitre.md', 'content/skel/**']
 
 #######################################################################################
@@ -11,7 +11,7 @@ exclude_patterns: ['**/maitre.md', 'content/skel/**']
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: auto
+  execute_notebooks: false
   #execute_notebooks           : cache
 
 #######################################################################################
@@ -43,6 +43,7 @@ html:
 #######################################################################################
 sphinx:
   config:
+    user_role: eleve
     html_show_copyright: false
     language: fr
     html_theme: sphinx_book_theme
@@ -66,6 +67,8 @@ sphinx:
     youtube: ../extensions/
     switchtube: ../extensions/
     codeplay: ../extensions/
+    logic: ../extensions/
+    role: ../extensions/
 
 #######################################################################################
 # Interact link settings
@@ -82,6 +85,8 @@ repository:
 # Launch button settings
 launch_buttons:
   notebook_interface: "classic" # or "jupyterlab"
+# Possibilité de connecter un kernel du projet Noto de l'EPFL
+## jupyterhub_url: "https://noto.epfl.ch/user/ch-epfl-identifiantdelutilisateur"
 
 #######################################################################################
 #binder:

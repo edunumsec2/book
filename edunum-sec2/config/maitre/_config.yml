@@ -9,7 +9,7 @@ exclude_patterns: ['**/eleve.md']
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: auto
+  execute_notebooks: false
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -30,6 +30,7 @@ html:
 
 sphinx:
   config:
+    user_role: prof
     html_show_copyright: false
     language: fr
     html_theme: sphinx_book_theme
@@ -53,3 +54,5 @@ sphinx:
     youtube: ../extensions/
     switchtube: ../extensions/
     codeplay: ../extensions/
+    logic: ../extensions/
+    role: ../extensions/

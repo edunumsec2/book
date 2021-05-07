@@ -34,45 +34,7 @@ h1 {
     font-weight: 400;
     text-align: center;
 }
-h2 {
-    margin-top: 0;
-    font-size: 28px;
-    font-family: "Helvetica";
-    text-align: left;
-    font-weight: 400;
-    }
-h3 {
-    margin-top: 0;
-    font-size: 20px;
-    font-family: "Helvetica";
-    text-align: left;
-    font-weight: 400;
-    }
-p {
-    text-align: justify;
-    text-justify: inter-word;
-    font-size: 16px;
-    font-family: "Helvetica";
-    text-align: left;
-    font-weight: 300;
-    line-height:1.5
-    }
-strong {
-    font-weight: 700;
-}
-ul {
-  margin-bottom:20px;
-  padding-left:20px;
-}
-li.simple {
-  margin-bottom:20px;
-  padding-left:20px;
-}
-.boxed {
-  border: 1px solid;$
-  border-color:rgb(96, 105, 219);
-  padding: 10px;
-  } 
+
 
 </style>
 </head>

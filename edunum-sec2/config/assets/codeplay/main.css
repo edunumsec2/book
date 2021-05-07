@@ -1,21 +1,18 @@
 
 div#editor-area {
   position: relative;
-  border: 2px solid rgb(51, 51, 51);
-  border-radius: 10px 10px 0 0;
-  padding-top: 10px;
-  background: #272822;
+  border: 1px solid rgb(194, 194, 194);
 }
 
 div#output-area {
   position: relative;
   background-color: rgb(245, 245, 245);
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   color: rgb(10, 10, 10);
-  border: 2px solid rgb(194, 194, 194);
+  border: 1px solid rgb(194, 194, 194);
   border-top: 0;
   font-size: 12pt;
 }
@@ -24,7 +21,7 @@ div#output-area div#output-message {
   position: absolute;
   left: 0;
   right: 0;
-  top: 30px;
+  top: 25px;
   text-align: center;
   margin: auto;
   color:rgb(169, 169, 169);
@@ -75,13 +72,13 @@ div#control-area {
   width: auto;
   text-align: right;
   margin-right: 10px;
-  margin-bottom: 5px;
 }
 
 div#control-area button {
   margin-left: 5px;
   line-height: 0.9em;
   width: 130px;
+  border-radius: 10px 10px 0 0;
 }
 
 div#control-area button:disabled {
@@ -105,7 +102,7 @@ div#control-area button#hints::before {
 
 div#canvas-area {
   position: relative;
-  border: 2px solid rgb(215, 215, 215);
+  border: 1px solid rgb(215, 215, 215);
   border-top: 0;
   background-color: rgb(238, 238, 238);
   text-align: center;
@@ -121,8 +118,6 @@ div#canvas {
 
 .CodeMirror {
   height: auto;
-  padding: 10px;
-  padding-top: 0;
   font-size: 12pt;
 }
 

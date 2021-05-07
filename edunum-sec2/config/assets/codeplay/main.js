@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
   };
   Sk.abstr.setUpInheritance("KeyboardInterrupt", Sk.builtin.KeyboardInterrupt, Sk.builtin.BaseException);
 
+  const copyBtn = document.getElementById("copy");
   const executeBtn = document.getElementById("execute");
   const interruptBtn = document.getElementById("interrupt");
   const hintsBtn = document.getElementById("hints");
@@ -98,12 +99,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var codeElem = CodeMirror.fromTextArea(document.getElementById("code"), {
     lineNumbers: true,
-    theme: "monokai",
+    theme: "idea",
     indentUnit: 4,
+    indentWithTabs: false,
+    smartIndent: true,
     extraKeys: {
       'Shift-Enter': runInterpreter,
       'Cmd-Enter': runInterpreter,
       'Ctrl-Enter': runInterpreter,
+      Tab: function(cm) {
+        if (cm.getMode().name === 'null') {
+          cm.execCommand('insertTab');
+        } else {
+          if (cm.somethingSelected()) {
+            cm.execCommand('indentMore');
+          } else {
+            cm.execCommand('insertSoftTab');
+          }
+        }
+      },
+      'Shift-Tab': function(cm) { cm.execCommand('indentLess'); }
     },
   });
 
@@ -117,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
     read: builtinRead,
     inputfun: inputFunction,
     inputfunTakesPrompt: true,
+    __future__: Sk.python3,
   });
 
   Sk.pre = "output";
@@ -197,8 +213,6 @@ document.addEventListener("DOMContentLoaded", function() {
     void executeBtn.offsetWidth;
     executeBtn.classList.add("shine");
     
-    console.log(prog);
-
     var myPromise = Sk.misceval.asyncToPromise(function() {
       return Sk.importMainWithBody("<stdin>", false, prog, true);
     }, { "*": function () {
@@ -235,6 +249,19 @@ document.addEventListener("DOMContentLoaded", function() {
       rejectInput();
     }
   }
+
+  var clipboard = new ClipboardJS('#copy', {
+      text: function(trigger) {
+          return codeElem.getValue();
+      }
+  });
+
+  clipboard.on('success', function(e) {
+      if (parent && parent.create_reaction) {
+        parent.create_reaction('good', 'Copié !');
+      }
+      e.clearSelection();
+  });
 
   interruptBtn.addEventListener("click", interruptInterpreter);
   executeBtn.addEventListener("click", runInterpreter);
@@ -290,7 +317,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   hintsElem.addEventListener("click", function () {
     nextHint();
-    console.log(hints);
   });
 
   document.addEventListener("click", function(e) {
@@ -334,13 +360,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         loadHint(0);
         hintsBtn.disabled = false;
-        console.log(hints);
       }
       if (frame.hasAttribute("data-nocontrols")) {
         document.getElementById("control-area").style.display = "none";
       }
       if (frame.hasAttribute("data-static")) {
-        codeElem.setOption("readOnly", "nocursor");
+        codeElem.setOption("readOnly", true);
         readOnly = true;
       }
 
