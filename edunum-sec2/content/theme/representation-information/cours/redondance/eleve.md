@@ -385,7 +385,7 @@ plus élevé.
 
 
 
-### Fonction de hashage
+### Fonction de hachage
 
 
 L'exemple de 
@@ -398,7 +398,7 @@ Une forme
 plus élaborée 
 du même concept 
 prend la forme 
-du **hashage** 
+du **hachage**
 de l'information 
 qui peut alors 
 s'appliquer 
@@ -424,17 +424,17 @@ sur la base
 de calculs simples :
 
 
-|   h |   a |   s |   h |   a |   g |   e |
+|   h |   a |   c |   h |   a |   g |   e |
 |-----|-----|-----|-----|-----|-----|-----|
-| 104 |  97 | 115 | 104 |  97 | 103 | 101 |
+| 104 |  97 |  99 | 104 |  97 | 103 | 101 |
 
 
 La somme 
 de toutes 
 ces valeurs
 totalise 
-721 (= 104 +  97 + 115 + 104 +  97 + 103 + 101), 
-soit 0x2**D1** 
+705 (= 104 +  97 + 99 + 104 +  97 + 103 + 101),
+soit 0x2**C1**
 en hexadécimal.
 
 
@@ -444,8 +444,8 @@ par l'index
 de sa position 
 totalise 
 quant à elle 
-2869 (= 1x104 + 2x97 + 3x115 + 4x104 + 5x97 + 6x103 + 7x101),
-soit 0xB**35**
+2821 (= 1x104 + 2x97 + 3x99 + 4x104 + 5x97 + 6x103 + 7x101),
+soit 0xB**05**
 en hexadécimal.
 
 
@@ -453,12 +453,12 @@ On peut décider
 de limiter 
 ces deux totaux 
 à leur deux dernières positions 
-hexadécimales, 
-(D1 et 35, respectivement), 
+hexadécimales,
+(C1 et 05, respectivement),
 ce qui permet de 
 construire 
 une empreinte digitale 
-(**digest** ou **hash**) D135
+(**digest** ou **hash**) C105
 indépendante
 de la longueur du texte.
 
@@ -473,27 +473,27 @@ ainsi définie
 serait afectée :
 
 
-|   h |   a |   s |   h |   a |    h    |   e |
+|   h |   a |   c |   h |   a |    h    |   e |
 |-----|-----|-----|-----|-----|---------|-----|
-| 104 |  97 | 115 | 104 |  97 | **104** | 101 |
+| 104 |  97 |  99 | 104 |  97 | **104** | 101 |
 
 
 En effet, 
 la somme 
 des valeurs 
 totalise alors 
-722 (= 104 +  97 + 115 + 104 +  97 + 104 + 101), 
-soit 0x2**D2** en hexadécimal, 
+706 (= 104 +  97 + 99 + 104 +  97 + 104 + 101),
+soit 0x2**C2** en hexadécimal,
 alors que la somme des produits 
-totalise 
-2870 (= 1x104 + 2x97 + 3x115 + 4x104 + 5x97 + 6x104 + 7x101)
-soit 0xB**3B**, 
-ce qui donne 
-un hash de D23B 
-au lieu de D135 
-précédemment, 
+totalise
+2827 (= 1x104 + 2x97 + 3x99 + 4x104 + 5x97 + 6x104 + 7x101)
+soit 0xB**0B**,
+ce qui donne
+un hash de C20B
+au lieu de C105
+précédemment,
 alors qu'un seul bit
-est différent 
+est différent
 entre les deux messages.
 
 
@@ -506,7 +506,7 @@ entre les deux messages.
 Le code suivant
 permet de tester
 la fonction
-de hashage
+de hachage
 décrite précédemment.
 
 
@@ -571,17 +571,17 @@ On notera
 que la suppression
 d'une lettre
 au texte
-("hashage" => D135)
+("hachage" => C105)
 ne change pas 
 la longueur 
 de cette simple empreinte 
 mais sa valeur
-("hashag" => 6C72) 
+("hachag" => 5C42)
 ou que 
-cette **fonction de hashage** 
+cette **fonction de hachage**
 est sensible 
 à la casse 
-("Hashage" => B115). 
+("Hachage" => A1E5).
 
 
 
@@ -590,7 +590,7 @@ est sensible
 ````{admonition} Le saviez-vous ?
 :class: note
 Bien que 
-le hashage 
+le hachage
 d'une information 
 soit 
 à dessein
@@ -600,7 +600,7 @@ des contraintes artificielles
 provoquant 
 délibéremment 
 la multiplication 
-de ces hashages 
+de ces hachages
 peuvent être imposées
 lors de l'ajout 
 des blocs 
@@ -621,7 +621,7 @@ de calculs
 ainsi engendrée
 pour complexifier
 artificiellement
-ce hashage
+ce hachage
 est responsable
 d'une part mesurable 
 de la consommation 
@@ -654,7 +654,7 @@ de leur maintenance.
 On notera
 qu'une empreinte numérique
 est une simplification 
-de l'information hashée. 
+de l'information hachée.
 Il est dès lors 
 envisageable 
 de trouver 
@@ -679,7 +679,7 @@ de la seule empreinte.
 Toutefois,
 grâce à leurs propriétés
 (déterministes et rapides),
-des **fonctions de hashage**
+des **fonctions de hachage**
 plus complexes
 (**SHA**, **MD5**…)
 trouvent des applications
