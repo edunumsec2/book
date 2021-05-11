@@ -43,18 +43,18 @@ Dans le cadre du projet pilote, nous vous saurions gré de suivre le protocole m
     - [Sondage en amont de l'enseignement](https://www.surveymonkey.com/r/gymprescinf)
 
 2. Ecrire à nathalie.farenc@epfl.ch pour la tenir informée du début et de la fin d'un cours donné sur l'un ou l'autre des sujets du Plan d'études.
-3. Signaler tout défaut éventuel des ressources à nathalie.farenc@epfl.ch ou à directement à la personne en charge du chapitre en question dont vous trouvez l'adresse sous [comité de rédaction](#comité-de-rédaction).
+3. Signaler tout défaut éventuel des ressources à nathalie.farenc@epfl.ch ou directement à la personne en charge du chapitre en question dont vous trouverez l'adresse sous [comité de rédaction](#comité-de-rédaction).
 
-L'utilisation **avancée** des ressources comprend en outre les étapes suivantes : 
+L'utilisation **avancée** des ressources comprend, en outre, les étapes suivantes : 
 
-4. Utiliser les fonctionnalités de GitHub telles que issues et discussions pour signaler des améliorations potentielles. 
-5. Proposer et rédiger des modifications via la création d'une branche. 
-6. Forker le dépôt pour en faire un clône indépendant via le mécanisme de fork. 
+4. Utiliser les fonctionnalités de GitHub telles que [issues](https://github.com/edunumsec2/book/issues) et [discussions](https://github.com/edunumsec2/book/discussions) pour signaler des améliorations potentielles. 
+5. Proposer et rédiger des modifications via la création d'une [branche](https://github.com/edunumsec2/book/branches). 
+6. Forker le dépôt pour en faire un clône indépendant via le mécanisme de [fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo). 
 7. Utiliser l'environnement Jupyter-book pour tester ses améliorations en local sur sa propre machine. 
 
 ## Installation 
 
-Les fonctionnalités décrites aux points 4 à 6 ne nécessitent pas d'installation particulière et sont inhérentes à GitHub. Pour un déscriptif détaillé de leur utilisation, se référer au WIKI. 
+Les fonctionnalités décrites aux points 4 à 6 ne nécessitent pas d'installation particulière et sont inhérentes à GitHub. Pour un descriptif détaillé de leur utilisation, se référer au WIKI (en construction). Une explication allégée de leur utilisation est disponible directement dans les services en question : [issues](https://github.com/edunumsec2/book/issues) et [discussions](https://github.com/edunumsec2/book/discussions). 
 
 Pour ceux qui souhaitent utiliser l'environnement Jupyter-book pour tester des contenus et participer au développement, la marche à suivre est la suivante : 
 
@@ -191,7 +191,7 @@ jupyter-book clean .
 
 1. Je me réfère au chapitre [installation](#installation). 
 2. Une fois que l'environnement est installé, plusieurs options s'offrent à moi. 
-3. Je peux travailler à l'amélioration des ressources en tant que *correcteur*. Dans ce cas, j'utilise les fonctions issues et discussions de Github et je propose de améliorations ou des modifications qui me paraissent importantes. 
+3. Je peux travailler à l'amélioration des ressources en tant que *correcteur*. Dans ce cas, j'utilise les fonctions [issues](https://github.com/edunumsec2/book/issues) et [discussions](https://github.com/edunumsec2/book/discussions) de Github et je propose de améliorations ou des modifications qui me paraissent importantes. 
 4. Je peux travailler en tant que *rédacteur*. Dans ce cas je crée une branche, je propose des contenus originaux à l'intérieur d'un chapitre - séquences théoriques, activités, séries d'exercices, et je les soumets au reste des utilisateurs pour validation via un pull-request.
 
 ## Comité de rédaction
