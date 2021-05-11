@@ -42,7 +42,7 @@ Dans le cadre du projet pilote, nous vous saurions gré de suivre le protocole m
     - [Sondage profil enseignant](https://fr.surveymonkey.com/r/J3B3J8D)
     - [Sondage en amont de l'enseignement](https://www.surveymonkey.com/r/gymprescinf)
 
-2. Ecrire à nathalie.farenc@epfl.ch pour la tenir informer du début et de la fin d'un cours donné sur l'un ou l'autre des sujets du Plan d'études.
+2. Ecrire à nathalie.farenc@epfl.ch pour la tenir informée du début et de la fin d'un cours donné sur l'un ou l'autre des sujets du Plan d'études.
 3. Signaler tout défaut éventuel des ressources à nathalie.farenc@epfl.ch ou à directement à la personne en charge du chapitre en question dont vous trouvez l'adresse sous [comité de rédaction](#comité-de-rédaction).
 
 L'utilisation **avancée** des ressources comprend en outre les étapes suivantes : 
