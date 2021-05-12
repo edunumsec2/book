@@ -14,7 +14,7 @@ Les ressources sont accessibles via le [site web](https://edunumsec2.ch). Elles 
 
 ### Votre avis est important
 
-Si vous faites usage du matériel proposé, nous vous remercions par avance pour votre participation au processus d’enquête. Les données recueillies permettront d'évaluer la pertinence des contenus afin de réaliser les ajustements nécessaires. La démarche porte uniquement sur les ressources et il ne s'agit en aucun cas d'évaluer la qualité de l'enseignement dispensé. Toutes les données seront traitées de façon confidentielle et transmises seulement à la personne responsable de la thématique. En dernier lieu, ces données agrégées et anonymisées pourront faire l'objet d'analyses statistiques.
+En tant que membre du projet pilote, nous vous remercions par avance pour votre participation au processus d’enquête. Les données recueillies permettront d'évaluer la pertinence des contenus afin de réaliser les ajustements nécessaires. La démarche porte uniquement sur les ressources et il ne s'agit en aucun cas d'évaluer la qualité de l'enseignement dispensé. Toutes les données seront traitées de façon confidentielle. En dernier lieu, ces données agrégées et anonymisées feront l'objet d'analyses statistiques à la fin de chaque semestre.
 
 
 ## Table des matières
