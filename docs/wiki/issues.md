@@ -12,15 +12,15 @@ Dans le projet qui nous concerne, la ressource est le site web, et tous les cont
 
 Quand on se situe dans le dépôt GitHub via un navigateur web, à l'adresse : https://github.com/edunumsec2/book, on peut directement avoir accès aux *Issues* en cliquant sur l'onglet concerné dans le menu de navigation horizontal situé en-dessous du nom du dépôt actif. 
 
-![img] media/issues.png
+![img](media/issues.png)
 
 ### Depuis le site web edunumsec2.ch
 
 Quand on se situe sur le site web https://edunumsec2.ch, on peut ouvrir une issue concernant un chapitre spécifique du cours directement depuis ce dernier. 
 
-![img] media/issue1.png
+![img](media/issue1.png)
 
-![img] media/issue2.png
+![img](media/issue2.png)
 
 ## Création de l'issue
 
