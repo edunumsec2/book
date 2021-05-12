@@ -1,4 +1,5 @@
-# Avant-propos
+
+# Bienvenue
 
 En guise d'introduction générale à l'utilisation de GitHub, il convient de rappeler quelques éléments essentiels. 
 
