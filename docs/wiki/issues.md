@@ -2,7 +2,7 @@
 
 ## Introduction 
 
-Les *Issues* GitHub (de l'anglais "issue" [prononcé isch-you], signifie : problème) sont une fonctionnalité permettant de déclarer un problème rencontré lors de l'utilisation de la ressource en question, dans un projet donné. 
+Les *Issues* GitHub (de l'anglais "issue" [prononcé isch-you], qui signifie : problème) sont une fonctionnalité permettant de déclarer un problème rencontré lors de l'utilisation de la ressource en question, dans un projet donné. 
 
 Dans le projet qui nous concerne, la ressource est le site web, et tous les contenus qui lui sont liés. Une issue est donc, dans notre cas, un problème rencontré lors de l'utilisation du site web https://edunumsec2.ch. 
 
