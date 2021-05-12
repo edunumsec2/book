@@ -100,7 +100,7 @@ Pour ceux qui souhaitent utiliser l'environnement Jupyter-book pour tester des c
       
       Accepter l'installation de ces recommandations à l'ouverture du workspace:
       
-      ![](docs/extension_recommendations.png)
+      ![](docs/media/extension_recommendations.png)
 
     * Si l'installation des extensions ne vous est pas proposée, le faire manuellement via l'interface graphique de VS Code ou via le terminal:
       ```bash
@@ -139,7 +139,7 @@ cd ressources
 
 Avec VS Code si installé comme ci-dessous, cliquer sur un des boutons en bas de la fenêtre:
 
-![](docs/build_screenshot.png)
+![](docs/media/build_screenshot.png)
 
 Sinon, via le terminal. Pour la partie élèves:
 
