@@ -1,4 +1,4 @@
-# F.A.Q
+# Questions fréquentes
 
 * À qui dois-je m'adresser pour une question ou un problème éventuel ? 
 
