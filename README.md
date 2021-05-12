@@ -5,7 +5,7 @@
 
 ## Introduction
 
-Les ressources pour l'enseignement de la discipline obligatoire *Informatique* au niveau secondaire II ont été produites par le groupe de travail DGEP, EPFL, HEP, UNIL, dans le cadre de l’introduction de la discipline obligatoire en informatique qui devrait se faire à la rentrée 2022. Leur objectif est la mise à disposition de contenus théoriques, de séries d'exercices, et d'idées d'activités pour les enseignantes et enseignants de ladite matière au Gymnase. 
+Les ressources pour l'enseignement de la discipline obligatoire *Informatique* au niveau secondaire II ont été produites par le groupe de travail DGEP, EPFL, HEP, UNIL, dans le cadre de l’introduction de la discipline obligatoire en informatique qui devrait se faire à la rentrée 2022, dans le canton de Vaud. Leur objectif est la mise à disposition de contenus théoriques, de séries d'exercices, et d'idées d'activités pour les enseignantes et enseignants de ladite matière au Gymnase. 
 
 En accord avec la DGEP, nous mettons déjà une partie de ce matériel à disposition des enseignants vaudois en informatique pour un enseignement pilote.
 
