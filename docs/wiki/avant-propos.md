@@ -1,4 +1,5 @@
-# Avant-propos
+
+# Bienvenue
 
 En guise d'introduction générale à l'utilisation de GitHub, il convient de rappeler quelques éléments essentiels. 
 
@@ -20,7 +21,7 @@ Ce projet vit grâce à la participation de la communauté qui l'entoure. Nous v
 
 Toute contribution est bonne à prendre. Tout commentaire nous intéresse. Toute suggestion permet d'améliorer la qualité du projet. N'hésitez pas. 
 
-## Bonne lecture
+## Bonne lecture
 
 Dans les autres documents de ce Wiki vous trouverez tout ce dont vous avez besoin pour comprendre les interactions élémentaires qui s'offrent à vous via l'interface GitHub. 
 
