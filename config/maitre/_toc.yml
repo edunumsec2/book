@@ -1,17 +1,15 @@
 # Table of content
 #
 - file: content/theme/maitre
-- file: content/theme/representation-information/maitre
+- file: content/theme/representation-information/cours/introduction/maitre
   sections:
-    - file: content/theme/representation-information/representation-entiers/maitre
-#    - file: content/theme/representation-information/systeme-arithmetique-binaire/maitre
-#    - file: content/theme/representation-information/stockage-manipulation-donnees/maitre
-#   - file: content/theme/representation-information/redondance/maitre
-#    - file: content/theme/representation-information/enjeu/transformation-numerique-economie-droit/maitre
-    - file: content/theme/representation-information/activites
+    - file: content/theme/representation-information/cours/representation-entiers/maitre
       sections:
-        - file: content/theme/representation-information/activites/representation-entiers/activite/magie-binaire/magie_binaire
-        - file: content/theme/representation-information/activites/representation-images/activite/bitmap
+        - file: content/theme/representation-information/activites/representation-entiers/magie-binaire/magie_binaire
+    - file: content/theme/representation-information/cours/representation-images/maitre
+      sections:
+        - file: content/theme/representation-information/activites/representation-images/bitmap/bitmap
+        - file: content/theme/representation-information/activites/representation-images/EncoderImages/EncoderImages
 - file: content/theme/introduction-algorithmique/maitre
   sections:
   #  - file: content/theme/introduction-algorithmique/decomposition-probleme/maitre
@@ -26,11 +24,12 @@
     - file: content/theme/introduction-algorithmique/consequences-automatisation/maitre
 - file: content/theme/programmation/maitre
   sections:
-    - file: content/theme/programmation/instructions-sequentielles/maitre
-    - file: content/theme/programmation/structures-donnees-controle/maitre
-    - file: content/theme/programmation/transcription-algorithmes/maitre
-    - file: content/theme/programmation/perspectives-citoyennes-politiques/maitre
-    - file: content/theme/programmation/activites
+    - file: content/theme/programmation/cours/1_intro/intro
+  #  - file: content/theme/programmation/instructions-sequentielles/maitre
+  #  - file: content/theme/programmation/structures-donnees-controle/maitre
+  #  - file: content/theme/programmation/transcription-algorithmes/maitre
+  #  - file: content/theme/programmation/perspectives-citoyennes-politiques/maitre
+  #  - file: content/theme/programmation/activites
       sections:
         - file: content/theme/programmation/activites/microbit/catch-the-fruit/catchFruit
 - file: content/theme/architecture-ordinateurs/maitre
