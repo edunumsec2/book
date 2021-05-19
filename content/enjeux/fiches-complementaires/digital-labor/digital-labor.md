@@ -65,7 +65,7 @@ Il s’agit d’un travail à la demande pour lequel la mise en relation entre p
 
 * **Le micro-travail réalisé sur des plateformes** **(micro-rémunéré)**
 
-Cette catégorie recouvre l’ensemble des micro-tâches réalisées en ligne contre une très faible rémunération. Des entreprises, des institutions mais aussi des particuliers font appel à des travailleurs pour effectuer de petites opérations (clics sur une image, saisie de données, transcriptions, remplissage de questionnaires, annotation de vidéos) au travers de plateformes numériques, telle que Amazon Mechanical Turk (voir ci-dessous). Il s’agit essentiellement de tâches qui ne peuvent être accomplies par des machines et qui, dans certains cas, servent à entraîner des systèmes automatisés. L’aspect fragmenté des tâches tout comme leur rétribution dérisoire, tend à entretenir l’idée que ce type d’activité ne s’inscrit pas dans le cadre d’une relation de travail.
+Cette catégorie recouvre l’ensemble des micro-tâches réalisées en ligne contre une très faible rémunération. Des entreprises, des institutions mais aussi des particuliers font appel à des travailleurs pour effectuer de petites opérations (clics sur une image, saisie de données, transcriptions, remplissage de questionnaires, annotation de vidéos) au travers de plateformes numériques, telle que Amazon Mechanical Turk (voir ci-dessous). Il s’agit essentiellement de tâches qui ne peuvent être accomplies par des machines et qui, dans certains cas, servent à entraîner des systèmes automatisés. Cette catégorie comprend également les personnes chargées de filtrer les contenus des réseaux sociaux. Dans ce cas, à la précarité du travail s’ajoute la question des conséquences psychologiques d’une exposition régulière à des images violentes.
   
   <br>
 
@@ -179,7 +179,7 @@ a) Pourquoi parle-t-on de «micro-travail»?
 b) L'un des témoins dit : "On aide l'algorithme à s'améliorer". En quoi les algorithmes doivent-ils être "améliorés"?
   
    ::::{admonition,dropdown} Réponse
-   Les algorithmes sont souvent pensés comme des processus informatiques qui fonctionnent de façon entièrement automatisée. Cependant, ces témoignages nous montrent qu'ils nécessitent un important travail humain. Certaines opérations qui requièrent une connaissance et une expérience du monde doivent être réalisées au préalable par des humains. Par exemple, dans le cas d'un algorithme destiné à traiter les requêtes d'un moteur de recherche, comprendre le sens ou la dimension implicite d'un mot est difficile pour un système informatique. Ils doivent donc être "entraînés" par des humains au travers de très nombreux exemples.
+   Les algorithmes sont souvent pensés comme des processus informatiques qui fonctionnent de façon entièrement automatisée. Cependant, ces témoignages nous montrent qu’un important travail humain est nécessaire afin de fournir aux algorithmes des données valides. Certaines opérations qui requièrent une connaissance et une expérience du monde doivent être réalisées au préalable par des humains. Par exemple, dans le cas d'un algorithme destiné à traiter les requêtes d'un moteur de recherche, comprendre le sens ou la dimension implicite d'un mot est difficile pour un système informatique. Ils doivent donc être "entraînés" par des humains au travers de très nombreux exemples.
    ::::
 
 
@@ -202,6 +202,7 @@ d ) Pourriez-vous citer des situations lors desquelles nous entraînons les algo
    ::::{admonition,dropdown} Quelques éléments de réponse
   * Toutes nos activités sur les réseaux sociaux : commentaires, *likes*, partage d'images, clic sur un lien ou parcours du fil d'actualité permettent d'entraîner des algorithmes qui ont pour but de nous suggérer un contenu ciblé.
   * Effectuer une requête sur un moteur de recherche.
-  * Identifier des lettres ou des objets sur des images pour valider un formulaire. Par exemple, il est souvent demandés aux internautes de reconnaître des objets liés au trafic routier (passage piétons, motos, vélos, etc.). Ces informations servent à entrainer les systèmes de conduite automatisée.
-    * Enfin, toute trace laissée par nos activités numériques peut être captée et analysée dans le but d'entrainer des algorithmes.
+  * Identifier des objets sur des images pour valider un formulaire. Par exemple, il est souvent demandés aux internautes de reconnaître des objets liés au trafic routier (passage piétons, motos, vélos, etc.). Ces informations servent à entrainer les systèmes de conduite automatisée.
+  * Compléter un CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart), ce test qui consiste à reconnaître des images ou des sons (plus généralemement des lettres)s et qui permet  de différencier un utilisateur humain d’un robot.
+  * Enfin, toute trace laissée par nos activités numériques peut être captée et analysée dans le but d'entrainer des algorithmes.
    ::::
