@@ -1,0 +1,54 @@
+.glossary-ref {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    cursor: pointer;
+}
+
+#tooltip {
+    display: none;
+    background: black;
+    padding: 15px;
+    z-index: 10000;
+    border-radius: 15px;
+    max-width: 50%;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    font-family: Lato, sans-serif;
+    user-select: none;
+    cursor: pointer;
+}
+
+#tooltip p {
+    color: white !important;
+    margin: 0;
+}
+
+#tooltip-arrow,
+#tooltip-arrow::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    z-index: -1;
+}
+
+#tooltip-arrow::before {
+    content: '';
+    transform: rotate(45deg);
+    background: black;
+}
+
+#tooltip[data-popper-placement^='top'] > #tooltip-arrow {
+    bottom: -4px;
+}
+
+#tooltip[data-popper-placement^='bottom'] > #tooltip-arrow {
+    top: -4px;
+}
+
+#tooltip[data-popper-placement^='left'] > #tooltip-arrow {
+    right: -4px;
+}
+
+#tooltip[data-popper-placement^='right'] > #tooltip-arrow {
+    left: -4px;
+}

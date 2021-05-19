@@ -11,5 +11,5 @@ Elles ont été conçues pour vous accompagner dans votre enseignement. <!-- Une
 
 ````{admonition} Ces ressources sont en cours de rédaction
 :class: hint
-Attention, le document présenté ici ne représente qu'une **étape intermédiaire** de travail. Il n'a pas force de référence, ni au niveau des thématiques abordées, ni au niveau des contenus spécifiques décrits dans les chapitres. Ce que vous consultez ici est susceptible de **modifications**, tant sur la forme que sur le fond. Bonne lecture !
+Attention, le document présenté ici ne représente qu'une **étape intermédiaire** de travail. Il n'a pas force de référence, ni au niveau des thématiques abordées, ni au niveau des contenus spécifiques décrits dans les {glo}`economieechelle@2|chapitres`. Ce que vous consultez ici est susceptible de **modifications**, tant sur la forme que sur le fond. Bonne lecture !
 ````
