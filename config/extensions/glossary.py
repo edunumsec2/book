@@ -16,8 +16,10 @@ class glossary_definition(nodes.Inline, nodes.TextElement):
     pass
 
 def visit_glossary_definition(self, node):
-    self.body.append('<span class="glossary-ref" data-definition="' +
-        b64encode(to_html(node["definition"]).encode("UTF-8")).decode("UTF-8") + '">')
+    self.body.append('<span class="glossary-ref" ' + 
+        'data-definition="' + b64encode(to_html(node["definition"]).encode("UTF-8")).decode("UTF-8") + '" ' +
+        'data-number="' + node["number"] + '" ' +
+        'data-entry-name="' + b64encode(node["entry_name"].encode("UTF-8")).decode("UTF-8") + '">')
 
 def depart_glossary_definition(self, node):
     self.body.append('</span>')
@@ -118,7 +120,11 @@ class GlossaryRole(SphinxRole):
         target_id = 'gl-%s-%d' % (key, env.new_serialno('gl-' + key))
         target_node = nodes.target('', '', ids=[target_id])
 
-        node = glossary_definition(display, display, definition=entry['definition'], classes=["glossary-ref"], **self.options)
+        node = glossary_definition(display, display,
+            definition=entry['definition'],
+            entry_name=entry['name'],
+            number=entry['number'],
+            classes=["glossary-ref"], **self.options)
 
         if not hasattr(env, 'glossary_references'):
             env.glossary_references = {}
