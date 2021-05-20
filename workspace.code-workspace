@@ -62,7 +62,7 @@
 					"name": "git pull",
 					"color": "#caa",
 					"command": "git pull origin master",
-					"cwd": "${workspaceFolder}/..",
+					"cwd": "${workspaceFolder}",
 					"singleInstance": true,
 				},
 				{
