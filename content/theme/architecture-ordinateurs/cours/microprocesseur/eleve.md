@@ -1,11 +1,31 @@
 Microprocesseur
 ===============
 
-Dans ce chapitre, nous allons comprendre comment fonctionne un microprocesseur en détaillant les différents mécanismes qui sont opérés pour assurer le fonctionnement de base d'un ordinateur. 
+Dans ce chapitre, nous allons comprendre comment fonctionne un microprocesseur en détaillant les différents mécanismes qui sont opérés pour assurer le fonctionnement de base d'un microprocesseur. Appelé 
 
 # L'horloge
+Un processeur est un dispositif synchrone, ce qui signifie que les opérations à l'intérieur du processeur se déroulent de manière synchrone à un temps donné. Pour assurer cette simultanéité, il faut comme pour un orchestre, donner le tempo. Cette fonction de métronome est assurée par une horloge, ou un signal d'horloge. Cette horloge est constituée d'un simple signal carré dont la fréquence atteint aujourd'hui plusieurs giga Herz, c'est-à-dire plusieurs milliards de cycles par seconde.
 
 # L'accès à la mémoire
+Comme on l'a vu dans l'architecture de von Neumann, l'Unité Centrale de Traitement (UCT ou CPU en anglais pour Central Processing Unit) doit accéder à la mémoire. On parle de mémoire RAM pour Random Access Memory.
+Le processeur peut accéder à la mémoire en lecture ou en écriture. Les deux mécanismes sont très similaires, mais avant de regarder plus en détail comment cela fonctionne, il faut d'abord définir comment la mémoire est structurée. La mémoire RAM permet, comme son nom l'indique, d'accéder à tout moment à n'importe quel emplacement.
+
+TODO: illustration
+
+ Pour y accéder, le processeur envoie d'abord l'adresse au module mémoire, puis lis ou écrit la valeur. Pour cela le processeur dispose d'un **bus d'adressage**. Il s'agit physiquement de câbles parallèles qui relient le processeur à la mémoire. La taille de ce bus ou sa largeur définit le nombre de connexions parallèles et dépend des caractéristiques du processeur et de la RAM. Chaque connexion transporte un bit, un bus de largeur 32 bit transporte 32 bits ce qui permet d'adresser 2<sup>32</sup> adresses mémoire (env. 4 Go). Le bus de données lui transporte les données entre le processeur et la mémoire (dans les deux sens). Ces deux bus, adresses et données, ne sont pas forcément de largeur identique.
+
+ TODO: illustration
+
+ Il nous manque encore un élément : lorsque la mémoire voit une adresse apparaître elle doit pouvoir déterminer s'il s'agit d'une lecture ou d'une écriture. Pour cela deux connexions supplémentaires relie le processeur à la mémoire: une ligne *enable* et une ligne *set*. Lorsque la ligne *enable* est à 1, alors le processeur accède à la mémoire en lecture et sur le bus de donnée doit apparaître les données qui sont stockées dans la mémoire à l'adresse indiquée sur le bus d'adressage. Lorsque c'est la ligne *set* qui est à 1, alors la mémoire doit enregistrer les données à l'adresse indiquée.
+
+ ### Exercice
+
+```{question} Question 1
+Avec un bus d'adressage de 24 bits, quelle est la taille maximum de la mémoire ? 
+* {f}`32ko`
+* {v}`16Mo`
+* {f}`16Go`
+```
 
 
 # Exemple: le 6502
