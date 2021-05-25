@@ -1,6 +1,22 @@
 Architecture de von Neumann
 ===========================
 
+````{panels}
+
+:img-top: media/JohnvonNeumann-LosAlamos.jpeg
+
+John von Neumann
+^^^^^
+* **Naissance** 28 décembre 1903 / Budapest 
+* **Décès** 8 février 1957 / Washington 
+```{dropdown} Bio
+:animate: fade-in-slide-down
+
+TODO
+
+```
+
+````
 ## Contexte historique
 
 
