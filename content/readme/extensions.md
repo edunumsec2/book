@@ -241,6 +241,23 @@ Il est possible d'ajouter l'option `:notitle` pour cacher le titre de la vidéo 
 ````
 `````
 
+## Vidéos du CNRS
+
+Pour ajouter une vidéo du CNRS directement dans le document, utiliser la directive `cnrs`.
+La directive attend en argument l'identifiant de la vidéo (généralement 8 caractères au format `base64url`). L'identifiant d'une vidéo peut être trouvé dans les sources de la page HTML sur le site du CNRS (par exemple: [https://images.cnrs.fr/video/2975](https://images.cnrs.fr/video/2975)), juste après la chaîne de caractère: `code=`. *À noter que ce code ne correspond pas au numéro figurant dans l'URL de la page.*
+
+`````{tabbed} Aperçu
+```{cnrs} pUV9f15n
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{cnrs} pUV9f15n
+```
+````
+`````
+
 ## Interpréteur Python
 
 Il est possible d'insérer un interpréteur Python et éditeur directement dans le document, le tout implémenté en Javascript et qui tourne dans le client Web du visiteur.
