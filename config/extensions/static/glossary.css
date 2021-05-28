@@ -4,10 +4,15 @@
     cursor: pointer;
 }
 
+.glossary-refs {
+    padding-left: 30px;
+}
+
 .glossary-refs a {
     display: inline-block;
     padding: 2px 5px 2px 5px;
     margin-left: 4px;
+    margin-bottom: 4px;
     background: #eefcfa;
     color: #0dcca7 !important;
     text-decoration: none;
