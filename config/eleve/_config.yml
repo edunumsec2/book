@@ -44,7 +44,7 @@ html:
 sphinx:
   config:
     user_role: eleve
-    glossary_doc: content/readme/extensions
+    glossary_doc: content/readme/glossaire
     html_show_copyright: false
     language: fr
     html_theme: sphinx_book_theme

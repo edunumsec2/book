@@ -8,13 +8,19 @@ Les sources sont situées dans le dossier `config/extensions/`.
 
 ## Glossaire
 
-Entrée 1: {glo}`economieattention`.
-Entrée 2: {glo}`economieattention|L'éco`.
-Entrée 3: {glo}`economieattention@1`.
-Entrée 4: {glo}`economieattention@1|L'eco`.
+Syntaxe pour une référence à un mot du glossaire:
 
-```{glossaire}
+````{code-block} markdown
+{glo}`economieattention|L'économie d'attention` présente...
+Cette {glo}`economieattention@1|économie d'attention`...
+````
+
+Pour insérer la définition dans son propre encart:
+
+````{code-block} markdown
+```{definition} economieattention@1
 ```
+````
 
 ## Affichage différencié
 
