@@ -100,8 +100,30 @@ La mémoire contient le programme et les données.
 Les entrées-sorties permettent de communiquer avec les autres périphériques comme la souris, le clavier, l'écran, etc.
 
 
+:::{admonition} Le modèle Turing
+:class: note
+Cette vidéo de trente minutes présente le modèle Turing. On découvre ainsi la vie et l'oeuvre d'Alan Turing ainsi que les réflexions qui ont abouti à un modèle qui est encore aujourd'hui une référence dans le domaine de l'informatique, mais qui a aussi inspiré de nombreux autres domaines scientifiques. On découvre également le contexte de la seconde guerre mondiale et le rôle crucial qu'a joué Turing dans la résolution de ce conflit.
 ```{cnrs} pUV9f15n
 ```
+:::
+
+:::{admonition} La machine de Turing réalisée
+:class: note
+Cette vidéo de sept minutes présente une réalisation en lego de la machinde de Turing. Les explications permettent d'en comprendre le fonctionnement.
+```{cnrs} 0st7M134
+```
+:::
+
+```{admonition} Activité
+:class: note
+
+[Simulateur de la machinde Turing](https://www.google.com/doodles/alan-turings-100th-birthday)
+
+*Ce simulateur permet de se familiariser avec le concept de programmation et de machine de Turing. Prenez quelques minutes (environ 10') pour résoudre les six enigmes proposées.
+
+```
+
+
 
 ## Références
 
