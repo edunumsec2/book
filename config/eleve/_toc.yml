@@ -106,7 +106,7 @@
       - file: content/readme/participation-developpement
       - file: content/readme/syntaxemyst
       - file: content/readme/extensions
-      - file: content/readme/glossaire1
+      - file: content/readme/glossaire
       - file: content/readme/relectures
       - file: content/readme/redaction-bonnes-pratiques
 

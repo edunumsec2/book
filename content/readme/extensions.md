@@ -8,13 +8,19 @@ Les sources sont situées dans le dossier `config/extensions/`.
 
 ## Glossaire
 
-Entrée 1: {glo}`economieattention`.
-Entrée 2: {glo}`economieattention|L'éco`.
-Entrée 3: {glo}`economieattention@1`.
-Entrée 4: {glo}`economieattention@1|L'eco`.
+Syntaxe pour une référence à un mot du glossaire:
 
-```{glossaire}
+````{code-block} markdown
+{glo}`economieattention|L'économie d'attention` présente...
+Cette {glo}`economieattention@1|économie d'attention`...
+````
+
+Pour insérer la définition dans son propre encart:
+
+````{code-block} markdown
+```{definition} economieattention@1
 ```
+````
 
 ## Affichage différencié
 
@@ -247,6 +253,23 @@ Il est possible d'ajouter l'option `:notitle` pour cacher le titre de la vidéo 
 ````{code-block} markdown
 ```{switchtube} f6365946
 :notitle:
+```
+````
+`````
+
+## Vidéos du CNRS
+
+Pour ajouter une vidéo du CNRS directement dans le document, utiliser la directive `cnrs`.
+La directive attend en argument l'identifiant de la vidéo (généralement 8 caractères au format `base64url`). L'identifiant d'une vidéo peut être trouvé dans les sources de la page HTML sur le site du CNRS (par exemple: [https://images.cnrs.fr/video/2975](https://images.cnrs.fr/video/2975)), juste après la chaîne de caractère: `code=`. *À noter que ce code ne correspond pas au numéro figurant dans l'URL de la page.*
+
+`````{tabbed} Aperçu
+```{cnrs} pUV9f15n
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{cnrs} pUV9f15n
 ```
 ````
 `````

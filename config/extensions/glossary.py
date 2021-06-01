@@ -187,6 +187,8 @@ def index_link_node(app, fromdocname, refs):
 
 def process_glossary_list(app, doctree, fromdocname):
     env = app.builder.env
+    if not hasattr(env, 'glossary_references'):
+        env.glossary_references = {}
 
     for node in doctree.traverse(glossary_list):
         index = node.glossary_index
