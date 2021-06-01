@@ -63,7 +63,7 @@ short bio + photo
 ````
 
 ## L'architecture de Von Neumann
-L'idée centrale de l'architecture de von Neumann, à l'instar de la machine de Turing, est d'enregistrer les données et le programme dans le même espace mémoire. Cela implique que le programme peut se modifier lui-même comme s'il modifiait des données. L'intention derrière cette possibilité résidait dans la capacité de modifier des adresses pour des branchements (sauts dans l'exécution). Mais ce point ne sera finalement pas ou peu exploité. Par contre cela permet à un programme de se crypter lui-même au cours de son exécution pour le rendre difficile à identifier une fois chargé en mémoire ou, pire encore, pour échapper à une décompilation pour en comprendre le fonctionnement. Cette dernière fonctionnalité a été utilisée par des virus et des vers.
+L'idée centrale de l'architecture de von Neumann, à l'instar de la machine de Turing, est d'enregistrer les données et le programme dans le même espace mémoire. Cela implique que le programme peut se modifier lui-même comme s'il modifiait des données. L'intention derrière cette possibilité résidait dans la capacité de modifier des adresses pour des branchements (sauts dans l'exécution). Mais ce point ne sera finalement pas ou peu exploité. Par contre cela permet à un programme de se crypter lui-même au cours de son exécution pour le rendre difficile à identifier une fois chargé en mémoire ou, pire encore, pour échapper à une décompilation pour en comprendre le fonctionnement. Cette dernière  particularité a été utilisée par des virus et des vers.
 
 ```{admonition} Anecdote
 :class: Le ver Internet
@@ -76,11 +76,12 @@ Robert Tappan Morris avait comme première intention de démontrer le principe d
 ---
 height: 400px
 width: 400px
+name: architecture
 ---
-Architecture de von Neumann. 
+Architecture de von Neumann.
 ```
 
-On trouve dans le schémas de la figure ... les éléments suivants :
+On trouve dans le schémas de la figure {numref}`architecture` les éléments suivants :
 
 **L'ALU ou ULA, c'est-à-dire l'unité logique et arithmétique**
 
@@ -92,6 +93,17 @@ Cette unité est responsable du séquençage des opérations. C'est en quelque s
 
 **La mémoire**
 
+La mémoire contient le programme et les données.
+
+**Les entrées et sorties**
+
+Les entrées-sorties permettent de communiquer avec les autres périphériques comme la souris, le clavier, l'écran, etc.
+
+
+```{cnrs} pUV9f15n
+```
+
+## Références
 
 https://fr.wikipedia.org/wiki/John_von_Neumann
 https://fr.wikipedia.org/wiki/John_von_Neumann#/media/Fichier:Von_Neumann_architecture_fr.svg
