@@ -11,7 +11,7 @@ Une écriture **égalitaire** est une écriture qui ne présume pas que le mascu
 
 Les ressources de ce projet ont fait l'objet d'une relecture pour chasser les biais de genre. 
 
-Il existe des réflexes simples pour éviter ces biais culturels si profondement inscrits dans la culture francophone. 
+Il existe des réflexes simples pour éviter ces biais culturels si profondement inscrits dans la culture francophone. L'emploi du terme "Mademoiselle" est à proscrire (sauf demande explicite), la féminisation et maculanisation des désignations de personne doit être la plus fréquente possible, les expressions épicènes permettant de s'adresser à tous sont privilégiées (les êtres humains (les hommes),les membres de ..., les personnes, les responsables, quiconque (celui-celle qui), chaque (tout jeune) )
 Un exemple simple : au lieu de désigner un individu par son métier ou un qualificatif cela impliquant un problème de type, on nomme le phénomène.
 un phénomène d'imposteur => un phénomène d'imposture
 En cas de double désignation, adopter l’ordre de présentation féminin puis masculin. L’accord et la reprise se font au plus proche, soit au masculin.

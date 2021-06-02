@@ -6,6 +6,22 @@ Dans ce document, vous trouverez de la documentation utilisateur pour toutes les
 Ces extensions de syntaxes sont des extensions Sphinx locales implémentées en Python.
 Les sources sont situées dans le dossier `config/extensions/`.
 
+## Glossaire
+
+Syntaxe pour une référence à un mot du glossaire:
+
+````{code-block} markdown
+{glo}`economieattention|L'économie d'attention` présente...
+Cette {glo}`economieattention@1|économie d'attention`...
+````
+
+Pour insérer la définition dans son propre encart:
+
+````{code-block} markdown
+```{definition} economieattention@1
+```
+````
+
 ## Affichage différencié
 
 Pour afficher une partie du contenu uniquement pour la version élève:
@@ -77,14 +93,14 @@ Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turin
 
 ### Options
 
-Par défaut, si il y a uniquement une réponse correcte, les autres réponses se déselectionnent automatiquement.
+Par défaut, si il y a uniquement une réponse correcte, les autres réponses se désélectionnent automatiquement.
 Pour que plusieurs réponses puissent être sélectionnées même s'il n'y a qu'une seule réponse, l'option `:multi:` peut être ajoutée.
 
 `````{tabbed} Aperçu
 
 ```{question}
 :multi: 
-Parmis les personnes suivantes, laquelle ou lesquelles sont à l'origine du Web ?
+Parmi les personnes suivantes, laquelle ou lesquelles sont à l'origine du Web ?
 * {f}`Barbara Liskov`
 * {f}`Niklaus Wirth`
 * {f}`Alan Turing`
@@ -97,7 +113,7 @@ Parmis les personnes suivantes, laquelle ou lesquelles sont à l'origine du Web 
 ````{code-block} markdown
 ```{question}
 :multi: 
-Parmis les personnes suivantes, laquelle ou lesquelles sont à l'origine du Web ?
+Parmi les personnes suivantes, laquelle ou lesquelles sont à l'origine du Web ?
 * {f}`Barbara Liskov`
 * {f}`Niklaus Wirth`
 * {f}`Alan Turing`
@@ -241,6 +257,23 @@ Il est possible d'ajouter l'option `:notitle` pour cacher le titre de la vidéo 
 ````
 `````
 
+## Vidéos du CNRS
+
+Pour ajouter une vidéo du CNRS directement dans le document, utiliser la directive `cnrs`.
+La directive attend en argument l'identifiant de la vidéo (généralement 8 caractères au format `base64url`). L'identifiant d'une vidéo peut être trouvé dans les sources de la page HTML sur le site du CNRS (par exemple: [https://images.cnrs.fr/video/2975](https://images.cnrs.fr/video/2975)), juste après la chaîne de caractère: `code=`. *À noter que ce code ne correspond pas au numéro figurant dans l'URL de la page.*
+
+`````{tabbed} Aperçu
+```{cnrs} pUV9f15n
+```
+`````
+
+`````{tabbed} Code
+````{code-block} markdown
+```{cnrs} pUV9f15n
+```
+````
+`````
+
 ## Interpréteur Python
 
 Il est possible d'insérer un interpréteur Python et éditeur directement dans le document, le tout implémenté en Javascript et qui tourne dans le client Web du visiteur.
@@ -270,7 +303,7 @@ print(double(int(input("x = "))))
 
 #### Execution immediate
 
-Via l'option `:exec:`, le code est executé dès le chargement de la page.
+Via l'option `:exec:`, le code est exécuté dès le chargement de la page.
 
 `````{tabbed} Aperçu
 ```{codeplay}
@@ -347,9 +380,9 @@ print(puissance(2, 10))
 ````
 `````
 
-### Prelude
+### Prélude
 
-Par défaut toutes les lignes apparaissant avant la première ligne formée uniquement d'au moins 3 charactères `=` (ignorant les charactères d'espaces avant et après sur la ligne) est considéré comme un préambule qui n'est pas affiché aux utilisateurs du site mais qui est tout de même executé.
+Par défaut toutes les lignes apparaissant avant la première ligne formée uniquement d'au moins 3 caractères `=` (ignorant les caractères d'espaces avant et après sur la ligne) est considéré comme un préambule qui n'est pas affiché aux utilisateurs du site mais qui est tout de même exécuté.
 
 `````{tabbed} Aperçu
 ```{codeplay}
@@ -371,8 +404,8 @@ print(puissance(2, 10))
 ````
 `````
 
-De même, lorsqu'au deux délimations sont faites, seule la seconde est affichée.
-L'ordre d'execution est preservé.
+De même, lorsqu'au deux délimitations sont faites, seule la seconde est affichée.
+L'ordre d'exécution est préservé.
 
 `````{tabbed} Aperçu
 ```{codeplay}
