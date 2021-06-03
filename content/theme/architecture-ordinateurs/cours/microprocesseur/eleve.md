@@ -28,7 +28,7 @@ Un microprocesseur est un processeur construit avec un circuit intégré, c'est 
 ## L'horloge
 Un processeur est un dispositif synchrone, ce qui signifie que les opérations à l'intérieur du processeur se déroulent de manière synchrone à un temps donné. Pour assurer cette simultanéité, il faut comme pour un orchestre, donner le tempo. Cette fonction de métronome est assurée par une horloge, ou un signal d'horloge. Cette horloge est constituée d'un simple signal carré dont la fréquence atteint aujourd'hui plusieurs giga Herz, c'est-à-dire plusieurs milliards de cycles par seconde.
 
-```{admonition} La notion de synchrone
+```{admonition} La notion de *synchrone*
 :class: attention
 La notion de synchronicité est fondamentale. Sans entrer dans les détails ici, il faut relever que dans un système synchrone il est possible d'assurer une coordination et une cohérence des opérations, ce qui est impossible autrement. Cet aspect devient crucial dans les systèmes distribués qui ne disposent plus de la garantie de synchronicité.
 ```
