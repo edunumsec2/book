@@ -5,7 +5,6 @@ Programmation
 
 ## Le but
 
-Notre vie moderne est <span commented>touchée par les ordinateurs</span><!-- REVIEW/JPP: imprégnée de nos interactions avec des ordinateurs -->. La communication, la recherche d'information, les divertissements, les processus, les réseaux sociaux ou encore les object connectés sont autant d'exemples de choses qui font désormais partie de notre quotidien. En <span commented>programmant</span><!-- REVIEW/JPP: sachant programmer --> un ordinateur, on se dote d'un outil considérable pour simplifier, multiplier et accélérer certaines actions comme la gestion de réservations pour un grand hôtel, effectuer une quantité importante de calculs dans un projet de recherche et même la bonne réalisation d’une recette de cuisine. 
  
 Malheureusement, les ordinateurs ne comprennent pas le langage humain. Les circuits électroniques qui leur permettent de manipuler une grande quantité d'information en peu de temps ne peuvent traiter que des 0 et des 1. Pour pouvoir donner des ordres à l'ordinateur, nous devons utiliser des _langages de programmation_ qui, grâce à leur syntaxe <span commented>particulière</span><!-- REVIEW/JPP: stricte et non ambiguë -->, peuvent à la fois être compris des humains et traités par un ordinateur.
  
