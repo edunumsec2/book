@@ -1,11 +1,13 @@
 Microprocesseur
 ===============
 
+Dans ce chapitre, nous allons explorer le fonctionnement de base d'un processeur. Nous avons précédemment vu le fonctionnement des systèmes logiques à partir desquels nous pouvons construire un processeur. Nous avons également exposé l'architecture de von Neumann qui décrit la façon dont le processeur s'insère dans son environnement qui constitue un ordinateur. Ici, nous allons détailler les différents éléments qui constituent le processeur et qui en assurent le bon fonctionnement. 
+
 ````{panels}
 
 :img-top: media/Gordon_Moore.jpeg
 
-
+Gordon Moore
 ^^^^^
 * **Naissance** 3 janvier 1929 / San Francisco 🇺🇸 
 ```{dropdown} Bio
@@ -51,8 +53,8 @@ La mémoire contient le programme sous-forme de codes qui représentent des inst
 **Les données** : 
 Les données stockées dans la mémoire peuvent être des nombres, des lettres, des chaînes de caractères ainsi que des adresses d'autres emplacement en mémoire. On trouvera plus de détails à ce sujet dans le chapitre [Représentation de l'information](/content/theme/representation-information/accueil/eleve.html "Représentation de l'information").
 
-
 ```
+
 
  ### Exercice
 
@@ -71,18 +73,67 @@ Quelle est la taille maximale de la mémoire pour un processeur 80286, sachant q
 ```
 
 
+# L'unité de contrôle
+L'unité de contrôle reçoit les instructions en provenance de la RAM. Elle s'occupe d'activer les composants qui doivent l'être dans le microprocesseur.
+
+# Les registres
+Les registres permettent de stocker des valeurs, comme la RAM, mais directement à l'intérieur du processeur. Ils fonctionnent aussi en mode lecture ou écriture. C'est l'unité de contrôle qui détermine si un registre est utilisé en lecture ou en écriture avec deux fil de connexion : *enable* et *set*.
+En principe ces registres stockent les informations en provenance de la mémoire ou le résultat d'un calcul.
+Il existe trois registre plus spécifiques:
+
+## Le registre d'état
+Le registre d'état regroupe les drapeaux (en anglais flags). Ils servent à renseigner l'état d'exécution du processeur. Par exemple le drapeau *dépassement* s'il est mis à 1 signal qu'un dépassement de capacité et survenu, ou encore le drapeau *division par zéro* signal une division par zéro.
+
+## Le compteur de programme
+Le compteur de programme (registre **PC** pour *Program Counter*) contient l'adresse mémoire de la prochaine instruction devant être exécutée. En principe l'unité de contrôle l'incrémente de un après chaque instruction, mais certaines instructions qui permettent de se *brancher* ailleurs dans le programme modifient différemment ce registre.
+
+## Le compteur de pile
+Le compteur de pile (registre **SP** pour *Stack Pointer*) contient la position sur une pile. Cette dernière est une zone mémoire à laquelle on ne peut pas accéder aléatoirement, mais uniquement en empilant ou dépilant des éléments.
+
+# L'unité arithmétique et logique
+L'unité arithmétique et logique (UAL plus communément appelée ALU en abréviation anglaise) effectue tous les calculs arithmétiques et logiques. Nous avons vu quelques un de ces composants comme l'additionneur dans la partie sur les systèmes logiques.
 
 
 
 # Exemple: le 6502
 
-image
+Le 6502, conçu en 1975, est le premier microprocesseur grand public avec un prix de 25$ (bien en-dessous des concurrents de cette époque). Une de ses première utilisation pour le *grand public* fût la console de jeux vidéo Atari 2600. A partir de 1985, Nintendo équipe la NES d'une version modifiée du 6502. Il équipe aussi le célèbre Apple II. Il est encore fabriqué et commercialisé en 2014.
 
-réf: visual 6502.org 
+```{figure} media/6502_pad_annot_07.png
+---
+alt: schémas annoté du 6502
+width: 200px
+---
+Ce schémas détaille l'ensemble des transistors du 6502. On voit également quelques-uns des éléments principaux (horloge, registres, etc).
+```
 
-## Pour aller plus loin
+```{admonition} Activité
+:class: note
+
+[Simulateur visuel du 6502](http://visual6502.org/JSSim/index.html)
+
+Ce simulateur reproduit le fonctionnement complet du 6502 jusque dans l'activité de chaque transistor le composant. On peut clairement visualiser la façon dont la complexité du fonctionnement de ce que l'on appelle communément le *cerveau* de l'ordinateur émerge de la quantité de dispositifs triviaux pris individuellement.
+
+1. Observer le déroulement du programme proposé et tenter d'en déduire le fonctionnement. On pourra s'aider du désassembleur proposé sur la même page.
+:::{question} Question
+Que fait le programme en exemple sur le site visual6502 ?
+* {f}`Il parcourt la mémoire et recopie la valeur 40 à des adresses successives`
+* {v}`Il effectue une boucle et incrémente une valeur en mémoire à l'adresse FF`
+* {f}`Il additionne deux registres et stocke le résultat dans un autre registre`
+:::
+
+2. Modifier ou écrire un nouveau programme en allant sur la page *Avanced*.
+
+```
+
+
+# Pour aller plus loin
 Les microprocesseurs modernes ajoutent quelques éléments de complexité que nous n'avons pas exposés ici. Il s'agit notamment des éléments suivants.
-### Les multi-coeurs
+## Les multi-coeurs
 Alors que dans le processeur que nous avons présenté, il n'y avait qu'une seule unité arithmétique et logique, ce qui limitait notre processeur à une opération par cycle d'horloge, l'industrie fournit aujourd'hui des microprocesseurs qui sont capables d'effectuer plusieurs opérations simultanément. Pour cela, ces derniers sont dotés de plusieurs coeurs capable d'effectuer chacun une opération. Mais cette mise en parallèle des opérations ne se fait pas sans difficultés. De la même manière qu'il serait extrêmement difficile pour plusieurs personnes d'écrire un texte en tenant le même stylo, il est compliqué de partager un calcul entre plusieurs unités de traitement.
-### Le pipeline
+## Le pipeline
 Comme nous l'avons vu, l'exécution d'une instruction par le microprocesseur implique plusieurs opérations : accès à la mémoire en lecture et en écriture, accès aux registres en lecture et en écriture, opération logique. Pour optimiser la vitesse d'exécution, les processeurs modernes effectue en série ces opérations. Ainsi alors que les opérations logiques d'une instruction sont effectuées, l'instruction précédente est déjà chargée en mémoire. La difficulté de ce type d'optimisation réside dans le fait que des branchements conditionnels provoquent l'annulation des instructions déjà chargées. Pour optimiser encore ce genre de procédé, les processeur font de la prédiction dans l'exécution. Ces optimisations sont extrêmement compliquées à gérer.
+ ```{admonition} Anecdote
+:class: attention
+La vulnérabilité Spectre (ainsi que d'autres vulnérabilités similaires) exploite justement cette fonction de prédiction dans l'exécution de branchement conditionnels pour accéder à des emplacements mémoire auxquels le programme ne devrait en principe pas accéder.
+```
