@@ -109,7 +109,7 @@ L’un des arguments les plus couramment avancés pour justifier les pratiques d
 Ce discours est également repris par les entreprises dont le modèle économique repose sur la collecte et l’analyse des traces numériques. Ainsi, Eric Schmid, ancien PDG de Google avait déclaré en 2009 : «S’il y a quelque chose que vous faites et que personne ne doit savoir, peut-être qu’il faudrait ne pas le faire en premier lieu». Pourtant, la problématique de la surveillance est bien plus complexe. Voici quelques raisons de remettre en question cet argument.
 
 * **1. N’a-t-on réellement rien à cacher ?**
-Même s’il ne s’agit pas d’actes répréhensibles ou illégaux, tout le monde a une vie privée. Selon le contexte (professionnel, familial, amical, etc.) les éléments ne notre vie que nous partageons ne sont pas les mêmes. Cela ne veut pas dire que nous avons des «choses à cacher».  
+Même s’il ne s’agit pas d’actes répréhensibles ou illégaux, tout le monde a une vie privée. Selon le contexte (professionnel, familial, amical, etc.) les éléments de notre vie que nous partageons ne sont pas les mêmes. Cela ne veut pas dire que nous avons des «choses à cacher».  
 
 * **2. On ne peut être certain que ce que l'on fait aujourd’hui ne sera pas interdit demain.**
 Notre situation peut évoluer, tout comme l’environnement politique et social dans lequel nous vivons. Il n’est pas sûr que ce qui est toléré  aujourd’hui le sera encore dans le futur.
@@ -136,7 +136,7 @@ Comme le montre l’argument présenté plus haut, la mise en place de systèmes
 
 Or, les travaux de recherche sur les pratiques en ligne montrent que le rapport des utilisateurs à leur vie privée ne correspond pas au discours des plateformes. Les individus n’acceptent pas cette surveillance de bon gré. Selon leurs compétences, ils développent diverses stratégies pour tenter de maîtriser les contenus qu’ils partagent et les données qui sont collectées  à leur sujet : obstruction de la webcam, installation de bloqueurs de publicité, suppression des cookies, utilisation de plusieurs comptes, pseudos et adresses e-mail. Mais ces stratégies sont inégalement efficaces et il demeure impossible de contrôler l’ensemble des informations transmises.
 
-Les grandes entreprises du numérique détiennent ainsi un pouvoir considérable que les différents scandales (régulières [fuites de données](https://en.wikipedia.org/wiki/List_of_data_breaches), révélations d’Edward Snowden, affaire [Cambridge Analytica](https://www.lemonde.fr/pixels/article/2018/03/18/comment-une-entreprise-proche-de-la-campagne-de-trump-a-siphonne-les-donnees-de-millions-d-utilisateurs-de-facebook_5272744_4408996.html) n’ont que peu ébranlé. Cependant, la problématique de la protection vie privée fait l’objet d’une attention politique et citoyenne grandissante et les pressions sur les entreprises concernées sont toujours plus fortes.
+Les grandes entreprises du numérique détiennent ainsi un pouvoir considérable que les différents scandales (régulières [fuites de données](https://en.wikipedia.org/wiki/List_of_data_breaches), révélations d’Edward Snowden, affaire [Cambridge Analytica](https://www.lemonde.fr/pixels/article/2018/03/18/comment-une-entreprise-proche-de-la-campagne-de-trump-a-siphonne-les-donnees-de-millions-d-utilisateurs-de-facebook_5272744_4408996.html)) n’ont que peu ébranlé. Cependant, la problématique de la protection vie privée fait l’objet d’une attention politique et citoyenne grandissante et les pressions sur les entreprises concernées sont toujours plus fortes.
 
 Face à ce constat, certains acteurs ont tenté d’esquisser des solutions. En 2020, Google déclarait abandonner les **cookies** tiers. Quant à Facebook, l’entreprise affirme se réorienter vers un espace d’échange davantage privé et limité à un cercle de connaissances restreint. La stratégie du réseau social semble pourtant peu pertinente au regard des inquiétudes des usagers. Celles-ci concernent avant tout l’accès et l’utilisation qui peut être fait des données par Facebook et des entités tierces, et non le degré de visibilité des publications, déjà largement paramétrable. Cependant, le modèle économique de Facebook est difficilement compatible avec une limitation du traçage des utilisateurs.
 
@@ -166,11 +166,11 @@ Impuissant face à certains problèmes structuraux (pauvreté, surendettement, m
 
 * [Un article](https://www.monde-diplomatique.fr/2019/01/ZUBOFF/59443) de la chercheuse Shoshana Zuboff sur la notion de «capitalisme de surveillance (Le Monde diplomatique)
 
-* [Un podcast](https://www.franceinter.fr/emissions/le-code-a-change/ils-cherchent-les-trucs-bizarres-qu-il-y-a-dans-vos-telephones-rencontre-avec-des-traqueurs-de-trackers) qui propose de mieux comprendre le fonctionnement des traqeurs intégrés aux applications mobiles (France Inter, Le code a changé)
+* [Un podcast](https://www.franceinter.fr/emissions/le-code-a-change/ils-cherchent-les-trucs-bizarres-qu-il-y-a-dans-vos-telephones-rencontre-avec-des-traqueurs-de-trackers) qui propose de mieux comprendre le fonctionnement des traqueurs intégrés aux applications mobiles (France Inter, Le code a changé)
 
-* [Un dossier](https://linc.cnil.fr/fr/cahier-ip8-scenes-de-la-vie-numerique-une-exploration-du-rapport-quotidien-la-protection-des-donnees) qui analyse le rapport quotidien des individus à la protection de leurs données personnelles et de leur vie privé (Laboratoire d’innovation numérique de la CNIL)
+* [Un dossier](https://linc.cnil.fr/fr/cahier-ip8-scenes-de-la-vie-numerique-une-exploration-du-rapport-quotidien-la-protection-des-donnees) qui analyse le rapport quotidien des individus à la protection de leurs données personnelles et de leur vie privée (Laboratoire d’innovation numérique de la CNIL)
 
-* [Le livre](https://maisouvaleweb.fr/a-la-trace-enquete-sur-le-nouveaux-territoires-de-la-surveillance/) du journaliste Olivier Tesquet, à la trace. Enquête sur les nouveaux territoires de la surveillance (Premier Parallèle, 2020)
+* [Le livre](https://maisouvaleweb.fr/a-la-trace-enquete-sur-le-nouveaux-territoires-de-la-surveillance/) du journaliste Olivier Tesquet : À la trace. Enquête sur les nouveaux territoires de la surveillance (Premier Parallèle, 2020)
 
 * [Le film documentaire](https://www.youtube.com/watch?v=djbwzEIv7gE) Nothing to Hide (2017)
 
@@ -270,7 +270,7 @@ Par petits groupes, proposer aux élèves de réfléchir aux questions suivantes
 
    ::::{admonition,dropdown} Quelques éléments de réponses
 
-  * Les États peuvent être amenés à collecter des données sur les citoyens. Cette forme de surveillance existait auparavant mais avec le développement des technologies numériques, elle a changé d’échelle. Certains gouvernements ont désormais recours à une surveillance de masse, c’est-à-dire qu’ils ne ciblent plus un individu ou un groupe suspect, mais l’ensemble de la population. Pour cela, ils s'appuient - entre autres - sur les données collectées par les grandes entreprises du numérique, comme l'a révélé le lanceur d’alerte Edward Snowden. Les pays concernés, justifient ces pratiques de surveillance comme le seul moyen de garantir la sécurité intérieure, en particulier suite aux attentats du 11 septembre 2001. Cette position est contestées par de nombreuses ONG et associations (dont [La Quadrature du Net](https://www.laquadrature.net), [Amnesty](https://www.amnesty.ch/fr/themes/surveillance/surveillance), [Privacy International](https://privacyinternational.org/fr)) qui considèrent cette surveillance comme arbitraire et contraire au droit fondamental à la vie privée.
+  * Les États peuvent être amenés à collecter des données sur les citoyens. Cette forme de surveillance existait auparavant mais avec le développement des technologies numériques, elle a changé d’échelle. Certains gouvernements ont désormais recours à une surveillance de masse, c’est-à-dire qu’ils ne ciblent plus un individu ou un groupe suspect, mais l’ensemble de la population. Pour cela, ils s'appuient - entre autres - sur les données collectées par les grandes entreprises du numérique, comme l'a révélé le lanceur d’alerte Edward Snowden. Les pays concernés, justifient ces pratiques de surveillance comme le seul moyen de garantir la sécurité intérieure, en particulier suite aux attentats du 11 septembre 2001. Cette position est contestée par de nombreuses ONG et associations (dont [La Quadrature du Net](https://www.laquadrature.net), [Amnesty](https://www.amnesty.ch/fr/themes/surveillance/surveillance), [Privacy International](https://privacyinternational.org/fr)) qui considèrent cette surveillance comme arbitraire et contraire au droit fondamental à la vie privée.
 
   * Les fournisseurs d’accès à Internet, ainsi que de très nombreux services en ligne: réseaux sociaux, sites de e-commerce, Google et tous ses services (Gmail, Google Maps, Chrome, etc.), vidéo et musique en streaming, jeux en ligne. Pour ces entreprises, la collecte de données constitue un enjeu économique (c.f question b.)
    ::::
@@ -311,7 +311,7 @@ d) Mettre en commun les réponses des différents groupes
 ::::{admonition,dropdown} Exemple avec le site 24heures.ch 
 Une trentaine de traqueurs sont identifiés par CookieViz, dont Google, Facebook, Tiktok, Amazon et diverses régies publicitaires.
 
-Ce pistage sert tout d'abord analyser le profil et le comportements des internautes sur le site (localisation, clics, vues, temps passé sur un article). Il permet au journal de mieux comprendre les habitudes et préférences des utilisateurs. Il pourra ainsi adapter son contenu ou suggérer des offres personnalisées aux lecteurs. Mais certains cookies tiers permettent aussi à d'autres entreprises (essentiellement des régies publicitaires) d'accéder à ces informations et d’établir ainsi un profil le plus précis possible de l'utilisateur afin de lui proposer un contenu publicitaire ciblé en dehors du site du journal.
+Ce pistage sert tout d'abord à analyser le profil et le comportements des internautes sur le site (localisation, clics, vues, temps passé sur un article). Il permet au journal de mieux comprendre les habitudes et préférences des utilisateurs. Il pourra ainsi adapter son contenu ou suggérer des offres personnalisées aux lecteurs. Mais certains cookies tiers permettent aussi à d'autres entreprises (essentiellement des régies publicitaires) d'accéder à ces informations et d’établir ainsi un profil le plus précis possible de l'utilisateur afin de lui proposer un contenu publicitaire ciblé en dehors du site du journal.
 
 A noter que dans ses paramètres de confidentialité, le site du journal 24heures affiche une liste détaillée des cookies tiers. Ces derniers sont considérablement plus nombreux que ce que le logiciel CookieViz est capable de détecter.
 ::::
@@ -385,7 +385,7 @@ c) L'un des arguments que l'on entend souvent pour défendre la mise en place de
 
 
 ::::{admonition,dropdown} Eléments de réponses
-Discutez les réflexions des élèves en amenant les contre-arguments proposés dans le paragraphe "Rien à cacher ?" plus haut. Deux d'entre eux sont déjà évoqués aux questions a) et b.
+Discutez les réflexions des élèves en amenant les contre-arguments proposés dans le paragraphe "Rien à cacher ?" plus haut. Deux d'entre eux sont déjà évoqués aux questions a) et b).
 ::::
 
 Lors d’une [visio-conférence](https://www.youtube.com/watch?v=OVn55kIzJeA) en 2016, Edward Snowden déclare ceci : 
