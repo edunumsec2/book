@@ -8,7 +8,7 @@ Techniquement, on peut considérer un *fork* comme une simple copie intégrale d
 
 Il convient de faire attention aux notions de licences dans ce genre de manipulations. C'est la raison pour laquelle GitHub insiste autant sur la déclaration de licence pour tout nouveau projet. La licence la plus célèbre sur GitHub est la [licence MIT](https://en.wikipedia.org/wiki/MIT_License) qui donne droit à quiconque de copier, transformer, redistribuer et commercialiser des morceaux ou l'intégralité des fichiers sources, sous condition de créditer l'auteur et de diffuser le nouveau contenu créé sous la même licence. 
 
-Le *fork* est un outil puissant de l'idéologie open-source. C'est l'outil que l'on utilisera si l'on souhaite remanier un projet dans son intégralité, de façon autonome, tout en gardant une forme d'allégance à la version de laquelle nous sommes partis. 
+Le *fork* est un outil puissant de l'idéologie open-source. C'est l'outil que l'on utilisera si l'on souhaite remanier un projet dans son intégralité, de façon autonome, tout en gardant une forme d'allégeance à la version de laquelle nous sommes partis. 
 
 ## Créer un fork
 
