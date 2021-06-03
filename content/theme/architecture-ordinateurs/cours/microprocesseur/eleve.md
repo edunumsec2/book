@@ -17,7 +17,15 @@ Gordon Earle Moore est le cofondateur d'Intel en 1968. Intel est le premier fabr
 
 ````
 
-# L'horloge
+```{admonition} (micro)-processeur
+:class: attention
+Le processeur est l'unité de traitement centrale de l'ordinateur. Il est construit avec des circuits regroupés en systèmes qui produisent des fonctions logiques et arithmétiques en suivant un programme et en utilisant des éléments de mémoire appelés registres.
+Un microprocesseur est un processeur construit avec un circuit intégré, c'est à dire une dispositif qui tient sur quelques cm<sup>2</sup>. Il n'y a donc que le taille qui fasse la différence.
+
+```
+
+
+## L'horloge
 Un processeur est un dispositif synchrone, ce qui signifie que les opérations à l'intérieur du processeur se déroulent de manière synchrone à un temps donné. Pour assurer cette simultanéité, il faut comme pour un orchestre, donner le tempo. Cette fonction de métronome est assurée par une horloge, ou un signal d'horloge. Cette horloge est constituée d'un simple signal carré dont la fréquence atteint aujourd'hui plusieurs giga Herz, c'est-à-dire plusieurs milliards de cycles par seconde.
 
 ```{admonition} La notion de synchrone
@@ -25,7 +33,7 @@ Un processeur est un dispositif synchrone, ce qui signifie que les opérations �
 La notion de synchronicité est fondamentale. Sans entrer dans les détails ici, il faut relever que dans un système synchrone il est possible d'assurer une coordination et une cohérence des opérations, ce qui est impossible autrement. Cet aspect devient crucial dans les systèmes distribués qui ne disposent plus de la garantie de synchronicité.
 ```
 
-# L'accès à la mémoire
+## L'accès à la mémoire
 
 ```{admonition} Rappel
 :class: danger
@@ -76,29 +84,29 @@ Quelle est la taille maximale de la mémoire pour un processeur 80286, sachant q
 ```
 
 
-# L'unité de contrôle
+## L'unité de contrôle
 L'unité de contrôle reçoit les instructions en provenance de la RAM. Elle s'occupe d'activer les composants qui doivent l'être dans le microprocesseur.
 
-# Les registres
+## Les registres
 Les registres permettent de stocker des valeurs, comme la RAM, mais directement à l'intérieur du processeur. Ils fonctionnent aussi en mode lecture ou écriture. C'est l'unité de contrôle qui détermine si un registre est utilisé en lecture ou en écriture avec deux fil de connexion : *enable* et *set*.
 En principe ces registres stockent les informations en provenance de la mémoire ou le résultat d'un calcul.
 Il existe trois registre plus spécifiques:
 
-## Le registre d'état
+### Le registre d'état
 Le registre d'état regroupe les drapeaux (en anglais flags). Ils servent à renseigner l'état d'exécution du processeur. Par exemple le drapeau *dépassement* s'il est mis à 1 signal qu'un dépassement de capacité et survenu, ou encore le drapeau *division par zéro* signal une division par zéro.
 
-## Le compteur de programme
+### Le compteur de programme
 Le compteur de programme (registre **PC** pour *Program Counter*) contient l'adresse mémoire de la prochaine instruction devant être exécutée. En principe l'unité de contrôle l'incrémente de un après chaque instruction, mais certaines instructions qui permettent de se *brancher* ailleurs dans le programme modifient différemment ce registre.
 
-## Le compteur de pile
+### Le compteur de pile
 Le compteur de pile (registre **SP** pour *Stack Pointer*) contient la position sur une pile. Cette dernière est une zone mémoire à laquelle on ne peut pas accéder aléatoirement, mais uniquement en empilant ou dépilant des éléments.
 
-# L'unité arithmétique et logique
+## L'unité arithmétique et logique
 L'unité arithmétique et logique (UAL plus communément appelée ALU en abréviation anglaise) effectue tous les calculs arithmétiques et logiques. Nous avons vu quelques un de ces composants comme l'additionneur dans la partie sur les systèmes logiques.
 
 
 
-# Exemple: le 6502
+## Exemple: le 6502
 
 Le 6502, conçu en 1975, est le premier microprocesseur grand public avec un prix de 25$ (bien en-dessous des concurrents de cette époque). Une de ses première utilisation pour le *grand public* fût la console de jeux vidéo Atari 2600. A partir de 1985, Nintendo équipe la NES d'une version modifiée du 6502. Il équipe aussi le célèbre Apple II. Il est encore fabriqué et commercialisé en 2014.
 
@@ -130,11 +138,11 @@ Que fait le programme en exemple sur le site visual6502 ?
 ```
 
 
-# Pour aller plus loin
+## Pour aller plus loin
 Les microprocesseurs modernes ajoutent quelques éléments de complexité que nous n'avons pas exposés ici. Il s'agit notamment des éléments suivants.
-## Les multi-coeurs
+### Les multi-coeurs
 Alors que dans le processeur que nous avons présenté, il n'y avait qu'une seule unité arithmétique et logique, ce qui limitait notre processeur à une opération par cycle d'horloge, l'industrie fournit aujourd'hui des microprocesseurs qui sont capables d'effectuer plusieurs opérations simultanément. Pour cela, ces derniers sont dotés de plusieurs coeurs capable d'effectuer chacun une opération. Mais cette mise en parallèle des opérations ne se fait pas sans difficultés. De la même manière qu'il serait extrêmement difficile pour plusieurs personnes d'écrire un texte en tenant le même stylo, il est compliqué de partager un calcul entre plusieurs unités de traitement.
-## Le pipeline
+### Le pipeline
 Comme nous l'avons vu, l'exécution d'une instruction par le microprocesseur implique plusieurs opérations : accès à la mémoire en lecture et en écriture, accès aux registres en lecture et en écriture, opération logique. Pour optimiser la vitesse d'exécution, les processeurs modernes effectue en série ces opérations. Ainsi alors que les opérations logiques d'une instruction sont effectuées, l'instruction précédente est déjà chargée en mémoire. La difficulté de ce type d'optimisation réside dans le fait que des branchements conditionnels provoquent l'annulation des instructions déjà chargées. Pour optimiser encore ce genre de procédé, les processeur font de la prédiction dans l'exécution. Ces optimisations sont extrêmement compliquées à gérer.
  ```{admonition} Anecdote
 :class: attention
