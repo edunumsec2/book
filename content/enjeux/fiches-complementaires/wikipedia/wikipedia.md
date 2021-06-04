@@ -27,8 +27,13 @@
   background-color: black; 
   color: white!important;
 }
-
-
+h1 {
+    margin-top: 0;
+    font-size: 35px;
+    font-family: "Helvetica";
+    font-weight: 400;
+    text-align: center;
+}
 
 </style>
 </head>
@@ -36,7 +41,7 @@
 
 <!-- Fin du test de mise en page -->
 
-<a href="#" class="button"> 🖨️ Version imprimable</a>
+<a href="http://edunumsec2.ch/enjeux-sociaux/wikipedia.pdf" class="button"> 🖨️ Version imprimable</a>
 
 <br>
 
