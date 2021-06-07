@@ -28,7 +28,7 @@ Mon contenu
 (optencarts)=
 ### Optimisations des encarts
 
-* les styles `:class:` disponibles sont : `note, hint, attention, caution danger`.
+* les styles `:class:` disponibles sont : `note, hint, attention, caution, danger`.
 
 `````{tabbed} Aperçu
 ```{admonition} Aller plus loin
@@ -79,13 +79,33 @@ Contenus liés à des avertissements de maintenance du site, des problèmes renc
 :class: note
 Contenus qui suggèrent des prolongements. 
 ```
+```{admonition} Micro-activité
+:class: note
+Contenus qui servent "d'exercices-exemples", c'est à dire pas une série d'exercices mais plutôt l'illustration d'un concept technique par un micro-exercice. On pourrait appeler ça des "micro-activités".
+```
+```{admonition} Pourquoi est-ce important ? 
+:class: note
+Contenus qui soulignent l'importance de telle ou telle notion. 
+```
 ```{admonition} Anecdote
-:class: attention
+:class: hint
 Contenus qui illustrent un concept par une anecdote (historique, politique, faits-divers, liens avec l'actualité, etc.).
 ```
-```{admonition} Micro-activité
+```{admonition} Le saviez-vous ?
 :class: hint
-Contenus qui servent "d'exercices-exemples", c'est à dire pas une série d'exercices mais plutôt l'illustration d'un concept technique par un micro-exercice. On pourrait appeler ça des "micro-activités".
+Contenus qui apportent une information inattendue en lien avec le sujet. 
+```
+```{admonition} À retenir
+:class: attention
+Contenus fondamentaux à retenir impérativement.
+```
+```{admonition} Matière à réfléchir
+:class: attention
+Contenus importants, qui pourraient ouvrir d'éventuels débats.
+```
+```{admonition} Ai-je compris ? 
+:class: attention
+Contenus qui servent à résumer les points importants de la leçon en guise d'auto-évaluation pour l'élève. 
 ```
 ```{admonition} Important
 :class: caution
