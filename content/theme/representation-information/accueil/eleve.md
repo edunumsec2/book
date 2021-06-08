@@ -58,10 +58,3 @@ Claude Shannon
 Pendant la Seconde Guerre mondiale, [**Claude Shannon**](https://fr.wikipedia.org/wiki/Claude_Shannon) travaille pour les services secrets de l'armée américaine, en cryptographie. Il est chargé de localiser de manière automatique dans le code ennemi les parties signifiantes cachées au milieu du brouillage. C'est ce qui le mènera par la suite à développer une mesure mathématique de la quantité d'information contenue dans un message. 
 
 ````
-
-```{panels} 
-:column: col-lg
-☕ Tous les livres du monde VS Tik Tok
-^^^
-[Le projet Gutenberg](https://www.gutenberg.org/) est une immense bibliothèque en ligne qui rassemble une grande partie des livres ayant été écrits à toutes les époques. Sa taille est de 60GB. 1mn de vidéo smartphone HD pèse environ 100MB. Ce qui signifie que la quasi totalité des livres écrits par l'espère humaine correspond à 100 vidéos smartphones. Quand on sait que Tik Tok possède 500 millions d'utilisateurs actifs, cela devient abyssal.
-```
