@@ -260,9 +260,6 @@ alien=[
 drawImg(alien)
 ```
 
-
-
-
 Un **pixel**, de l'anglais : **pic**ture **el**ement, est le composant minimal d'une image. C'est à dire que c'est la plus petite brique avec laquelle on construit une image sur un écran d'ordinateur, et donc dans sa mémoire. Dans notre exemple minimaliste, chaque pixel peut être soit noir, soit blanc, ce qui nous permet de construire une image.
 
 ````{panels}

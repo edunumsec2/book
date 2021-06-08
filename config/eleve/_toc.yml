@@ -16,7 +16,7 @@
       - file: content/theme/representation-information/cours/representation-caracteres/eleve
       - file: content/theme/representation-information/cours/representation-images/eleve
       - file: content/theme/representation-information/cours/numerisation/eleve
-      - file: content/theme/representation-information/cours/systeme-arithmetique-binaire/eleve
+      #- file: content/theme/representation-information/cours/systeme-arithmetique-binaire/eleve
       - file: content/theme/representation-information/cours/stockage-manipulation-donnees/eleve
       - file: content/theme/representation-information/cours/redondance/eleve
       #### Exercices
