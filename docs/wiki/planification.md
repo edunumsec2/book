@@ -8,7 +8,8 @@ Ce document planifie les pilotes, blabla.
 
 ### Rep.info
 
-* Biljana : période (quand à quand ?) ; état (en cours / achevé) ; questionnaire effectué (oui / non) ; retour fait à l'auteur (oui / non). 
+* Biljana : période (quand à quand ?) ; état (en cours / achevé) ; questionnaire effectué (oui / non) ; retour fait à l'auteur (oui / non).
+* Elliot : période (septembre / octobre) ; état (achevé) ; questionnaire (oui) ; retour (oui).  
 
 ### Algo
 ### Prog
