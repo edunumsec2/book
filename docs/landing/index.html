@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="assets/progress.css">
+    <script src="assets/progress.js"></script>
 </head>
 
 <body class="bg-black muli">
@@ -34,9 +36,9 @@
     <!-- hero section -->
     <section id="home" class="min-h-100vh flex justify-start items-center">
         <div class="mx-5 md-mx-l5">
-            <div class="inline-block br-round bg-indigo-30 indigo-lightest p-2 fs-s2 mb-5">
+            <!-- <div class="inline-block br-round bg-indigo-30 indigo-lightest p-2 fs-s2 mb-5"> -->
                 <a href="https://github.com/edunumsec2" class="inline-block bg-indigo indigo-lightest br-round px-3 py-1 mr-3 fs-s3">Découvrez le projet sur GitHub</a>
-            </div>
+            <!-- </div> -->
             <div>
                 <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 ">Moyens d'enseignement pour <span style="color:#0dcca7">l'Informatique au Gymnase</span>, voie Maturité.</h1>
 
@@ -52,6 +54,29 @@
         </div>
     </section>
 
+    <!-- product options -->
+    <section class="py-l10">
+        <div class="flex flex-column md-flex-row md-w-80pc mx-auto">
+            <div class="w-100pc md-w-50pc">
+                <div class="br-8 p-5 m-5 bg-indigo-lightest-10 pointer hover-scale-up-1 ease-300">
+                    <div class="inline-block bg-indigo indigo-lightest br-3 px-4 py-1 mb-10 fs-s4 uppercase">
+                        élève</div>
+                    <div class="indigo-lightest fw-600 fs-m1">Les élèves <span class="opacity-30"> passent par ici.</span> </div>
+                    <a href="http://eleve.edunumsec2.ch/" class="mt-10 button bg-black fs-s3 white no-underline">Lire</a>
+                </div>
+            </div>
+            <div class="w-100pc md-w-50pc">
+                <div class="br-8 p-5 m-5 bg-indigo-lightest-10  pointer hover-scale-up-1 ease-300">
+                    <div class="inline-block bg-indigo indigo-lightest br-3 px-4 py-1 mb-10 fs-s4 uppercase">
+                        enseignant.es</div>
+                    <div class="indigo-lightest fw-600 fs-m1">Les enseignant.es<span class="opacity-30"> passent par là.</span> </div>
+                    <a href="http://maitre.edunumsec2.ch/" class="mt-10 button bg-black fs-s3 white no-underline">Lire</a>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- features -->
     <section id="features" class="p-10 md-p-l5">
         <div class="flex flex-column md-flex-row mx-auto">
@@ -59,7 +84,7 @@
                 <div class="br-8 p-5 m-5">
                     <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
                             data-feather="inbox" class="w-l5"></i></div>
-                    <h4 class="white fw-600 fs-m3 mb-5">Cours</h4>
+                    <h4 class="white fw-600 fs-m3 mb-5"> <span style="color:#0dcca7">Cours</span></h4>
                     <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">Des cours théoriques adaptés aux plans d'études romands en matière d'éducation numérique.</div>
                     <a href="http://eleve.edunumsec2.ch/"
                         class="mt-5 button bg-indigo-lightest-10 fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Découvrir</a>
@@ -69,8 +94,8 @@
                 <div class="br-8 p-5 m-5">
                     <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
                             data-feather="database" class="w-l5"></i></div>
-                    <h4 class="white fw-600 fs-m3 mb-5">Développement</h4>
-                    <div class="indigo-lightest fw-600 fs-m1 opacity-50">Les documents sources et les fichiers en cours de développement pour l'intégralité du projet, dans une perspective open-source.</div>
+                    <h4 class="white fw-600 fs-m3 mb-5"><span style="color:#0dcca7">Développement</span></h4>
+                    <div class="indigo-lightest fw-600 fs-m1 opacity-50">Les documents originaux et les fichiers en cours de développement pour l'intégralité du projet, dans une perspective open-source.</div>
                     <a href="https://github.com/edunumsec2"
                         class="mt-5 button bg-indigo-lightest-10 fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Découvrir</a>
                 </div>
@@ -79,7 +104,7 @@
                 <div class="br-8 p-5 m-5">
                     <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
                             data-feather="activity" class="w-l5"></i></div>
-                    <h4 class="white fw-600 fs-m3 mb-5">Communauté</h4>
+                    <h4 class="white fw-600 fs-m3 mb-5"><span style="color:#0dcca7">Communauté</span></h4>
                     <div class="indigo-lightest fw-600 fs-m1 opacity-50">Un channel Discord où discuter vos éventuelles questions.</div>
                     <a href="https://discord.gg/YuWXcDRC"
                         class="mt-5 button bg-indigo-lightest-10 fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Découvrir</a>
@@ -89,7 +114,7 @@
                 <div class="br-8 p-5 m-5">
                     <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
                             data-feather="bar-chart-2" class="w-l5"></i></div>
-                    <h4 class="white fw-600 fs-m3 mb-5">Monitoring</h4>
+                    <h4 class="white fw-600 fs-m3 mb-5"><span style="color:#0dcca7">Monitoring</span></h4>
                     <div class="indigo-lightest fw-600 fs-m1 opacity-50">Un ensemble d'outils utiles pour obtenir du feedback sur vos cours et les activités que vous utiliserez.</div>
                     <a href="http://maitre.edunumsec2.ch/"
                         class="mt-5 button bg-indigo-lightest-10 fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Découvrir</a>
@@ -127,34 +152,11 @@
         </ul>
     </section>
 
-    <!-- big text -->
+    <!-- big text
     <section class="p-10 md-py-10">
         <div class="w-100pc md-w-70pc mx-auto py-10">
             <h2 class="white fs-l2 md-fs-xl1 fw-900 lh-2">
                 Du point de vue de l'évolution des sociétés, <span class="border-b bc-indigo bw-4"> l'éducation numérique</span> est aussi importante aujourd'hui que l'a été l'apprentissage de la lecture à la fin du Moyen-Âge.</h2>
-        </div>
-    </section>
-
-    <!-- product options -->
-    <section class="py-l10">
-        <div class="flex flex-column md-flex-row md-w-80pc mx-auto">
-            <div class="w-100pc md-w-50pc">
-                <div class="br-8 p-5 m-5 bg-indigo-lightest-10 pointer hover-scale-up-1 ease-300">
-                    <div class="inline-block bg-indigo indigo-lightest br-3 px-4 py-1 mb-10 fs-s4 uppercase">
-                        élève</div>
-                    <div class="indigo-lightest fw-600 fs-m1">Les élèves <span class="opacity-30"> peuvent accéder ici à un contenu qui a été créé pour eux.</span> </div>
-                    <a href="http://eleve.edunumsec2.ch/" class="mt-10 button bg-black fs-s3 white no-underline">Lire</a>
-                </div>
-            </div>
-            <div class="w-100pc md-w-50pc">
-                <div class="br-8 p-5 m-5 bg-indigo-lightest-10  pointer hover-scale-up-1 ease-300">
-                    <div class="inline-block bg-indigo indigo-lightest br-3 px-4 py-1 mb-10 fs-s4 uppercase">
-                        enseignant.es</div>
-                    <div class="indigo-lightest fw-600 fs-m1">Les enseignant.es<span class="opacity-30"> peuvent accéder ici au contenu qui a été créé pour eux.</span> </div>
-                    <a href="http://maitre.edunumsec2.ch/" class="mt-10 button bg-black fs-s3 white no-underline">Lire</a>
-
-                </div>
-            </div>
         </div>
     </section>
 
@@ -341,7 +343,7 @@
         </div>
     </section>
 
-    <!-- featured blog -->
+    <!-- featured blog
     <section class="p-10 md-p-l10">
         <div class="md-w-75pc">
             <h2 class="white fs-l3 fw-900 lh-1">Sélection d'activités</h2>
@@ -414,8 +416,8 @@
                 <img src="assets/images/logo3.png" class="w-l5" alt="">
                 <div class="white opacity-70 fs-s2 mt-4 md-pr-10">
                     <p>Ces moyens d'enseignement pour l'informatique en discipline obligatoire au niveau Secondaire II 
-                        ont été produits par un groupe de travail issu d'une collaboration entre la DGEP, l'EPFL, la HEP et l'UNIL. 
-                        Dans le cadre de l’introduction de cette discipline, prévue à la rentrée 2022 dans le canton de Vaud, 
+                        ont été produits par un groupe de travail issu d'une collaboration entre la DGEP, l'EPFL, la HEP et l'UNIL.
+                        <br>Dans le cadre de l’introduction de cette discipline, prévue à la rentrée 2022 dans le canton de Vaud, 
                         l'objectif de ces ressources est de proposer aux enseignant·e·s d'informatique des contenus théoriques, des séries d'exercices et des idées d'activités.</p>
                 </div>
             </div>
