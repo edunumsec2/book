@@ -1,6 +1,18 @@
 # Représentation des images
 
 
+````{role} prof
+```{admonition} Suggestion de déroulé
+:class: hint
+Voilà un déroulé de cours pour cette section représentation des images : 
+1. Activité image Bitmap
+2. Activtié Kirby
+3. Présentation des images matricielles
+4. Exercice sur les résolutions
+5. Questionnaire d'auto-contrôl
+```
+````
+
 ## Les images matricielles
 
 Depuis des siècles les humains gardent des traces de leur environnement sous forme d'images. Plus le temps passe, plus ces traces sont fidèles. On découvre par exemple la perspective autour du 15ème siècle, les progrès en optique et en chimie permettent ensuite la création de la camera obscura et de la photographie argentique. Enfin l'informatique se développe permettant l'invention de la photographie numérique.
