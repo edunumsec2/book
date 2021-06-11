@@ -19,7 +19,10 @@
 }
 
 .question .admonition {
-  border-left: .2rem solid hsl(211, 48%, 50%);
+  border-radius: 10px;
+  background-color: white;
+  border: solid 0.5px;
+  border-color: hsl(211, 48%, 50%);
 }
 
 .question .admonition-title:before {

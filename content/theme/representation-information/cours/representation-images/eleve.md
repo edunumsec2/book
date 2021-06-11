@@ -1,7 +1,7 @@
 # Représentation des images
 
 
-### Les images matricielles
+## Les images matricielles
 
 Depuis des siècles les humains gardent des traces de leur environnement sous forme d'images. Plus le temps passe, plus ces traces sont fidèles. On découvre par exemple la perspective autour du 15ème siècle, les progrès en optique et en chimie permettent ensuite la création de la camera obscura et de la photographie argentique. Enfin l'informatique se développe permettant l'invention de la photographie numérique.
 
@@ -19,7 +19,7 @@ Mais alors, comment marche une caméra numérique ? Elle marche d'une manière t
 
 Dans un appareil analogique, la paroi illuminée est recouverte d'une pellicule chimique photosensible ce qui permettra de capturer l'image. La différence est que dans un appareil photo numérique cette paroi est recouverte d'une grille de capteurs électroniques photosensibles. Dans ce cas, l'image numérique ne sera rien d'autre que la collection des mesures de tous les capteurs à un temps précis. Comme ces mesures sont organisées sous forme de tableau, on parle souvent d'images matricielles. Plus le nombre de capteurs sera grand, plus la résolution de cette image le sera aussi.
 
-### Représentation d'une image noir et blanc
+#### Représentation d'une image noir et blanc
 
 ````{tabbed} Image
 ```{image} media/thuglife.png
@@ -353,10 +353,13 @@ Une oeuvre d'art numérique signée Andreas Gysin :
 
 https://play.ertdfgcvb.xyz/#/src/demos/doom_flame_full_color
 
-### Auto-contrôle
+## Auto-contrôle
 
-<!-- La {bl}`>résolution|densité|superficie`d'une image se calcule en {bl}`centimètres|>pixels|niveaux de gris`. La plupart des {bl}`courroies|>images|bananes}` sont représentées au format {bl}`matrix|magique|>matriciel`. La {bl}`>résolution|densité|superficie`d'une image se calcule en {bl}`centimètres|>pixels|niveaux de gris`. La plupart des {bl}`courroies|>images|bananes}` sont représentées au format {bl}`matrix|magique|>matriciel`. La {bl}`>résolution|densité|superficie`d'une image se calcule en {bl}`centimètres|>pixels|niveaux de gris`. La plupart des {bl}`courroies|>images|bananes}` sont représentées au format {bl}`matrix|magique|>matriciel`. La {bl}`>résolution|densité|superficie`d'une image se calcule en {bl}`centimètres|>pixels|niveaux de gris`. La plupart des {bl}`courroies|>images|bananes}` sont représentées au format {bl}`matrix|magique|>matriciel`.  
--->
+### Texte à trous
+
+La résolution d'une image se calcule en {bl}`centimètres|>pixels|niveaux de gris`. La plupart des {bl}`courroies|>images|bananes` sont représentées au format {bl}`matrix|magique|>matriciel`. 
+
+### Questions
 
 ```{question} Question
 S'il faut 8 bits pour coder un chiffre entre 0 et 255, combien faut-il de bits pour coder un seul pixel d'une image couleur ? 

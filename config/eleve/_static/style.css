@@ -26,7 +26,7 @@ h1 {
   /*   font-family: 'Poppins', sans-serif;  */
     font-size: 35px;
     color: #000000;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.5;
 
 }
@@ -37,10 +37,35 @@ h2 {
  */    
     font-size: 28px;
     color: #000000;
-    font-weight: 400;
+    font-weight: 200;
     line-height: 1.5;
 
 }
+
+h3 {
+    
+    /*     font-family: 'Poppins', sans-serif; 
+     */    
+        font-size: 23px;
+        color: #000000;
+        font-style: italic;
+        font-weight: 200;
+        line-height: 1.5;
+    
+    }
+
+  
+h4 {
+    
+    /*     font-family: 'Poppins', sans-serif; 
+    */    
+    font-size: 16px;
+    color: #474747;
+    font-weight: 100;
+    line-height: 1.5;
+        
+        }
+    
 
 .attention.admonition p {
 
