@@ -19,7 +19,7 @@ Mais alors, comment marche une caméra numérique ? Elle marche d'une manière t
 
 Dans un appareil analogique, la paroi illuminée est recouverte d'une pellicule chimique photosensible ce qui permettra de capturer l'image. La différence est que dans un appareil photo numérique cette paroi est recouverte d'une grille de capteurs électroniques photosensibles. Dans ce cas, l'image numérique ne sera rien d'autre que la collection des mesures de tous les capteurs à un temps précis. Comme ces mesures sont organisées sous forme de tableau, on parle souvent d'images matricielles. Plus le nombre de capteurs sera grand, plus la résolution de cette image le sera aussi.
 
-#### Représentation d'une image noir et blanc
+### Représentation d'une image noir et blanc
 
 ````{tabbed} Image
 ```{image} media/thuglife.png
