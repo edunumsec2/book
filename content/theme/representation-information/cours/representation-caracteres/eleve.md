@@ -84,19 +84,16 @@ print("Le texte en binaire est : " + str(res))
 
 
 
-`````{panels}
-:column: col-lg
-ASCII Art
-^^^
+`````{admonition} Le saviez-vous ? 
+:class: hint
 Dès l'introduction de l'encodage ASCII, et jusqu'à aujourd'hui,
 une pratique répandue dans les milieux informatiques
-est d'utiliser les caractères ASCII comme support de créativité artistique.
+est d'utiliser les caractères ASCII comme support de créativité artistique. C'est ce qu'on appelle l'ASCII art. 
 
 Les caractères ont un poids minimal en code binaire,
 c'est donc une façon très efficace de transmettre une information visuelle.
 
-````{toggle}
-```{codeplay}
+````{codeplay}
 print ("""
   /$$$$$$   /$$$$$$  /$$   /$$ /$$$$$$ /$$$$$$$
  /$$__  $$ /$$__  $$| $$  /$$/|_  $$_/| $$__  $$
@@ -108,7 +105,7 @@ print ("""
 |__/  |__/ \______/ |__/  \__/|______/|__/
 
 """)
-```
+````
 
 [Cet outil](https://www.patorjk.com/software/taag/#p=display&f=Small&t=Entrez%20votre%20texte)
 vous permet de transformer n'importe quel texte en ASCII.
@@ -118,7 +115,6 @@ La vidéo suivante présente "l'asciiquarium",
 un aquarium en ASCII dans le terminal.
 
 ```{youtube} pAfvoVtsA64
-````
 `````
 
 
