@@ -64,7 +64,7 @@ Vingt ans après sa création, le fonctionnement de l'encyclopédie a largement 
 
 Pourtant, le principe de création de savoir par une "foule" d'internautes[^1] non-experte était loin de faire l'unanimité. Beaucoup ne croyaient pas en cette forme d’intelligence collective et assuraient que le projet était voué à l'échec. Même au sein de Wikipédia, les points de vue divergeaient. Larry Sanger, qui déplorait l'absence d'expertise, quitta le projet lorsque le comité scientifique fut abandonné. En effet, comment garantir la justesse des contenus sans aucune forme d'autorité?
 
- L'une des conditions de ce succès réside dans l'établissement d'[une série de règles](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:R%C3%A8gles_et_recommandations) qui garantissent une auto-gouvernance de la communauté. Ces dernières régissent les débats autour de la rédaction des articles et permettent de trancher en cas de conflit. L'un de ces principes est la neutralité de point de vue : les contributeurs ne doivent pas exprimer leur opinion, ils ne font que reporter celles des autres. 
+ L'une des conditions de ce succès réside dans l'établissement d'[une série de règles](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:R%C3%A8gles_et_recommandations) qui garantissent une auto-gouvernance de la communauté. Ces dernières régissent les débats autour de la rédaction des articles et permettent de trancher en cas de conflit. L'un de ces principes est la neutralité de point de vue : les contributeurs et contributrices ne doivent pas exprimer leur opinion, mais reporter celles des autres.
  
  Cette auto-régulation des articles grâce à des règles communes a permis à Wikipédia de proposer un contenu de qualité. L'encyclopédie est aujourd'hui saluée pour sa gestion des *fake news*. En France, L'observatoire du conspirationnisme, Conspiracy Watch, parle même d'un ["îlot de rationalité dans un océan de rumeurs"](https://www.conspiracywatch.info/covid-19-wikipedia-fait-figure-dilot-de-rationalite-dans-un-ocean-de-rumeurs.html). 
 
@@ -93,7 +93,7 @@ Le modèle de Wikipédia, participatif, libre et sans publicité, repose sur un 
 <br>
 <br>
 
- Bien que le succès du projet Wikipédia soit largement acclamé, quelques nouveaux points de controverse sont apparus au cours des dernières années. Si la fiabilité n'est plus remise en question, c'est la neutralité de l'encyclopédie qui est questionnée. En effet, les biais présents au sein de notre société se reflètent également dans le profil des auteurs et le choix des contenus. Ces derniers sont créés par un nombre restreint de contributeurs, en majorité des hommes issus de pays occidentaux. Ils ne sont donc que peu représentatifs d'une communauté globale et diverse telle qu'on pourrait l'imaginer. Par ailleurs, certains sujets peu médiatisés n'ont qu'une faible visibilité. Ainsi, les personnalités féminines (scientifiques, écrivaines, artistes) moins représentées dans les médias, tendent à l'être à également moins parmi les articles de Wikipédia. Il en va de même pour les articles qui concernent le monde extra-occidental ou les minorités. Le principe d'universalisme demeure difficilement atteignable. Dans l'objectif de combler ces lacunes, plusieurs initiatives ont vu le jour, dont le projet ["Noircir Wikipédia"](https://fr.wikipedia.org/wiki/Projet:Noircir_Wikip%C3%A9dia). 
+ Bien que le succès du projet Wikipédia soit largement acclamé, quelques nouveaux points de controverse sont apparus au cours des dernières années. Si la fiabilité n'est plus remise en question, c'est la neutralité de l'encyclopédie qui est questionnée. En effet, les biais présents au sein de notre société se reflètent également dans le profil des auteurs et le choix des contenus. Ces derniers sont créés par un nombre restreint de contributeurs et contributrices, en majorité des hommes issus de pays occidentaux. Ils ne sont donc que peu représentatifs d'une communauté globale et diverse telle qu'on pourrait l'imaginer. Par ailleurs, certains sujets peu médiatisés n'ont qu'une faible visibilité. Ainsi, les personnalités féminines (scientifiques, écrivaines, artistes) moins représentées dans les médias, tendent à l'être à également moins parmi les articles de Wikipédia. Il en va de même pour les articles qui concernent le monde extra-occidental ou les minorités. Le principe d'universalisme demeure difficilement atteignable. Dans l'objectif de combler ces lacunes, plusieurs initiatives ont vu le jour, dont le projet ["Noircir Wikipédia"](https://fr.wikipedia.org/wiki/Projet:Noircir_Wikip%C3%A9dia). 
  
 Malgré ces critiques, Wikipédia est la preuve qu'une alternative pérenne au modèle commercial des plateformes est possible. Comme [le souligne Pierre-Yves Beaudouin](https://www.franceculture.fr/medias/fiabilite-pseudonymat-sources-wikipedia-et-lintelligence-des-foules), Président de Wikimédia France : "*Nous ne réussirons sans doute pas partout, mais proposer en 2021 une information fiable, gratuite, sans publicité, le tout élaboré par des bénévoles et soutenu financièrement par des millions de donateurs, est déjà pas mal. Tant mieux si le public souhaite que Wikipédia aille plus loin.*"
 
@@ -139,7 +139,7 @@ Malgré ces critiques, Wikipédia est la preuve qu'une alternative pérenne au m
 🕑 30 min | 👩‍💻 branché
 
 
-Principe : le jeu consiste à désigner un article de départ et un article d'arrivée dans l'encyclopédie. Les élèves doivent se rendre à l'article d'arrivée en utilisant seulement les [liens internes](https://fr.wikipedia.org/wiki/Aide:Liens_internes) de l'encyclopédie. Selon les variantes, on peut demander aux élèves de se rendre à l'article d'arrivée le plus rapidement possible ou en le  moins de clics possible. Ce jeu peut également servir d'exercice pour apprendre à naviguer dans  l'encyclopédie. Une description plus détaillée est disponible [ici](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Exercices/Course_wikip%C3%A9dienne).
+Principe : le jeu consiste à désigner un article de départ et un article d'arrivée dans l'encyclopédie. Les élèves doivent se rendre à l'article d'arrivée en utilisant seulement les [liens internes](https://fr.wikipedia.org/wiki/Aide:Liens_internes) de l'encyclopédie. Selon les variantes, on peut demander aux élèves de se rendre à l'article d'arrivée le plus rapidement possible ou en le moins de clics possible. Ce jeu peut également servir d'exercice pour apprendre à naviguer dans  l'encyclopédie. Une description plus détaillée est disponible [ici](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Exercices/Course_wikip%C3%A9dienne).
 
 
 Déroulement : 
@@ -207,12 +207,12 @@ Discutez du débat en termes de :
   :::: 
 
 
-b) En guise de conclusion, demander aux élèves quels sont les avantages et limites du modèle Wikipédia. 
+b) En guise de conclusion, demander aux élèves quels de lister quelques avantages et limites du modèle Wikipédia.
 
 
 **Avantages**
 
-* Un accès facile et gratuit à une quantité immense de connaissance
+* Un accès facile et gratuit à une quantité immense de connaissances
 
 * Une mise à jour des articles en continu et au plus proche de l’actualité
 
