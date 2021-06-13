@@ -6,11 +6,6 @@ Au niveau du disque dur, c'est à dire de la mémoire de votre ordinateur, on po
 
 Les smartphones que vous possédez ont en moyenne une mémoire de 64Go, ce qui correspond à 512000000000 bits. À chaque fois que vous enregistrez une image, vous utilisez un certain nombre d'entrées de ce tableau, et une fois que la mémoire est pleine, il n'est plus possible d'enregistrer quoi que ce soit. 
 
-> **La taille des fichiers**. Par exemple, une chanson occupe en moyenne 3 Mo, donc 24000000 bit. En gros, il vous faudrait à peu près 2000 chansons pour occuper tout l'espace de votre smartphone de 64Go. C'est à peu près le même espace utilisé par une photo prise par votre caméra en résolution "normale". 
-
-> **Pour aller plus loin** : À votre avis où est stockée une chanson que vous écoutez sur Spotify ? 
-
-
 ```{admonition} Anecdote
 :class: hint
 [Le projet Gutenberg](https://www.gutenberg.org/) est une immense bibliothèque en ligne qui rassemble une grande partie des livres ayant été écrits à toutes les époques. Sa taille est de 60GB. 1mn de vidéo smartphone HD pèse environ 100MB. Ce qui signifie que la quasi totalité des livres écrits par l'espère humaine correspond à 100 vidéos smartphones. Quand on sait que Tik Tok possède 500 millions d'utilisateurs actifs, cela devient abyssal.
@@ -31,3 +26,8 @@ Il existe de nombreux **standards** de compression, qui utilisent tous une techn
 [Comparaison de compression](https://www.csfieldguide.org.nz/en/interactives/compression-comparer/)
 
 Tout l'enjeu de la compression consiste à prendre des décisions sur les informations que l'on doit garder, et les informations que l'on peut "supprimer" pour garder une représentation correcte de notre fichier de base. Bien sûr, c'est toujours une décision, et plus on compresse, plus on perd de l'information, ce qui peut conduire à l'extrême à une dégradation de la qualité du fichier qui le rend inutilisable.
+
+## Bases de données
+
+TODO #6 @farenc-c
+

@@ -4,7 +4,7 @@
 title: Informatique en tant que discipline obligatoire — Version enseignant·e — Canton de Vaud, 2020
 author: Groupe de travail DGEP, EPFL, HEP, UNIL
 logo: logo.png
-exclude_patterns: ['**/eleve.md']
+# exclude_patterns: ['**/eleve.md']
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
