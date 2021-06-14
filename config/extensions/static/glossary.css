@@ -2,6 +2,7 @@
     text-decoration: underline;
     text-decoration-style: dotted;
     cursor: pointer;
+    text-decoration-color: #0071bc;
 }
 
 .glossary-refs {
