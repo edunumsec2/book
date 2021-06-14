@@ -41,7 +41,7 @@ h1 {
 
 <!-- Fin du test de mise en page -->
 
-<a href="http://edunumsec2.ch/enjeux-sociaux/digital-labour" class="button"> 🖨️ Version imprimable</a>
+<a href="http://files.edunumsec2.ch/enjeux-sociaux/digital-labour.pdf" class="button"> 🖨️ Version imprimable</a>
 
 <br>
 
