@@ -8,14 +8,10 @@ p {
     line-height: 1.5;
 }
 
-/* Permet de forcer la couleur des liens. 
-Note : problèmes de compatibilité 
-avec le "content-tabbed", par exemple
 
-p a {
+/* a.reference.internal {
     color: #5933d1 !important;
-    }
-*/
+} */
 
 strong {
     font-weight: 500; 
