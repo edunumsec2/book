@@ -5,19 +5,20 @@ Histoire de l'informatique
 
 Le mot calcul vient de *calculus*, en latin : le petit caillou. Au temps des romain la notion de calcul est donc venue de ces petits cailloux que l'on utilisait pour effectuer des calculs. Mais auparavant déjà, la civilisation grecque utilisait déjà les cailloux pour dénombrer par exemple les moutons : on sortait les cailloux d'un bol le matin, puis on les remettait dedans le soir pour chaque animal rentré. S'il restait des cailloux, c'était autant de mouton perdus. On utilisait également des objets comme des tessons de poterie (ostracas) pour compter les votes menant à l'exil d'un citoyen.
 
-::::{admonition,hint} La machine d'Anticythère
+````{admonition} La machine d'Anticythère
+:class: hint
 La machine d'Anticythère, découverte au tout début du XXe siècle dans une épave, est considéré comme le premier calculateur mécanique. Datée d'environ 200 av. J.-C. elle permettrait de calculer et donc prédire la date d'une éclipse.
 
 ```{image} media/NAMA_Machine_d'Anticythère_1.jpeg
 :height: 200px
 :width: 180px
 ```
+````
 
-::::
-
-::::{admonition,hint} Les abaques
-
-::::
+````{admonition} Les abaques
+:class: hint
+Manque contenu
+````
 
 
 ## Les calculateurs mécaniques

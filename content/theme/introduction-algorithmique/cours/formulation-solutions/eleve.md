@@ -1,7 +1,8 @@
 Formulation de solutions algorithmiques à des problèmes simples
 ===============================================================
 
-::::{admonition,attention} Matière à réfléchir II
+````{admonition} Matière à réfléchir II
+:class: attention
 
 Pensez à un lieu connu à proximité. Ecrivez les étapes à suivre pour s’y rendre, sans mentionner le lieu. Vous ne pouvez utiliser que les instructions : **avancer, tourner (à gauche ou à droite).**
 
@@ -13,7 +14,7 @@ Demandez à un.e camarade de classe de suivre ces instructions. Est-ce que votre
 
 [Optionnel] Imaginez que votre camarade peut uniquement **avancer de 1m tout droit** et **tourner de 30 degrés**. Reformulez votre solution en utilisant le mot clé **répéter**.
 
-::::
+````
 
 ## De l’algorithme au programme
 
@@ -135,13 +136,16 @@ rect = [3,4,1,2,6,5]
 print(tri_selection(rect))
 ```
 
-<!-- ::::{admonition,note} Question philosophique
+<!-- ````{admonition} Question philosophique
+
+:class: note
 
 Tout algorithme peut être exprimé sous forme de programme. 
 
 Mais est-ce que derrière chaque programme se cache un algorithme ?
 
-:::: -->
+```` 
+-->
 
 
 
@@ -155,23 +159,26 @@ Mais est-ce que derrière chaque programme se cache un algorithme ?
 
 ## Exercices supplémentaires
 
-::::{admonition,note} Exercice 16
+````{admonition} Exercice 16
+:class: note
 
-![](../plugged.png) Coder le jeu de la devinette.
+![](media/plugged.png) Coder le jeu de la devinette.
 
 Le programme pense à un nombre au hasard. Lorsque vous lui porposez un nombre, il vous dit si "c'est plus" ou "si c'est moins" jusqu'à ce que vous ayez trouvé.
  
-::::
+````
 
-::::{admonition,note} Exercice 17
+````{admonition} Exercice 17
+:class: note
 
-![](../plugged.png) Transcrire l’algorithme de l’exercice 5, qui permet de déterminer le plus petit nombre d’une liste, en un programme Python.
+![](media/plugged.png) Transcrire l’algorithme de l’exercice 5, qui permet de déterminer le plus petit nombre d’une liste, en un programme Python.
 
-::::
+````
 
-::::{admonition,note} Exercice 18
+````{admonition} Exercice 18
+:class: note
 
-![](../plugged.png) Créer une liste qui contient les valeurs de 1 à n dans un ordre aléatoire, où n prend la valeur 100, par exemple. Vous pouvez utiliser la fonction shuffle() du module random.
+![](media/plugged.png) Créer une liste qui contient les valeurs de 1 à n dans un ordre aléatoire, où n prend la valeur 100, par exemple. Vous pouvez utiliser la fonction shuffle() du module random.
 
 Implémenter au moins deux des trois algorithmes de tri vu au cours.
 A l’aide du module time et de sa fonction time(), chronométrer le temps que ça prend pour trier une liste de 100, 500, 1000, 10’000, 20’000, 30’000, 40’000 et 50’000 nombres. 
@@ -182,37 +189,40 @@ Sur la base de ces mesures, pouvez-vous estimer le temps que prendrait le tri de
 
 Lancer votre programme avec 100’000 éléments et comparer le temps obtenu avec votre estimation.
 
-::::
+````
 
 
-::::{admonition,note} Exercice 19
+````{admonition} Exercice 19
+:class: note
 
-![](../plugged.png) Coder l’algorithme Bogosort en Python (voir Le saviez-vous ? III). 
+![](media/plugged.png) Coder l’algorithme Bogosort en Python (voir Le saviez-vous ? III). 
 
 A partir de quelle taille de liste cet algorithme est inutilisable ?
  
-::::
+````
 
 
 
 
 
-::::{admonition,note} Exercice 20
+````{admonition} Exercice 20
+:class: note
 
-![](../plugged.png) Ecrire un algorithme qui calcule la suite des nombres de Fibonacci. 
+![](media/plugged.png) Ecrire un algorithme qui calcule la suite des nombres de Fibonacci. 
 
 Traduire l’algorithme en une fonction Python. 
 
 Comparer avec les solutions trouvées par vos camarades de classe.
-::::
+````
 
 
-::::{admonition,attention} Ai-je compris ?
+````{admonition} Ai-je compris ?
+:class: attention
 
 1. Je sais lire et appliquer un algorithme, c’est-à dire que je peux déduire le résultat que me donnera un algorithme à partir d’un jeu de données particulier.
 
 2. Je sais retranscrire un algorithme en un programme, je sais traduire les opérations d’un algorithme en instructions élémentaires if, else, while et for.
 
-::::
+````
 
 

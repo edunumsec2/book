@@ -278,9 +278,9 @@ Cette fonction s'appelle «ou exclusif», car pour avoir un 1 de sortie, elle ex
 }
 ```
 
-:::{admonition} Exercice: vérification d’une porte
+```{admonition} Exercice: vérification d’une porte
 Vérifiez que la porte **OU-X** se comporte bien comme le circuit ci-dessous réalisé avec des portes **ET**, **OU** et **NON**.
-:::
+```
 
 
 #### Création d'un circuit
@@ -339,7 +339,7 @@ Ce qui reste à définir en complétant avant la porte **ET**, c'est l'exclusion
 
 La lecture finale du circuit est donc «la sortie $Z$ sera $1$ lorsque ces deux conditions sont vraies en même temps: (1) le **OU** de $X$ et $Y$ vaut 1, et (2) $X$ et $Y$ ne sont pas les deux en même temps à 1».
 
-:::{admonition} Exercice: analyse d'un circuit
+````{admonition} Exercice: analyse d'un circuit
 Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la place, on a inséré deux sorties intermédiaires, $I$ et $J$, qui sont les deux signaux qui allaient précédemment à la porte **ET**:
 
 ```{logic}
@@ -388,7 +388,7 @@ Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la
   "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
 }
 ```
-:::
+````
 
 
 ##### Approche systématique
@@ -482,10 +482,10 @@ Nous faisons aussi les constats suivants:
  * L'approche systématique décrite ici ne livre pas forcément le circuit le plus compact: on a obtenu un circuit avec 5 portes pour réaliser un **OU-X** alors que l'approche ad hoc nous a fait construire un circuit à 4 portes
 
 
-::::{admonition} Exercice: analyse d'un circuit
+`````{admonition} Exercice: analyse d'un circuit
 En annotant le schéma logique avec les quatre cas de figure possibles pour les entrées $X$ et $Y$, faites l'analyse du circuit **OU-X** ci-dessus construit avec l'approche systématique et montrez que la table de vérité ainsi reconstituée est la même que celle de la porte **OU-X**.
 
-:::{admonition,dropdown} Indice
+````{dropdown} Indice
 ```{logic}
 :height: 180
 :mode: tryout
@@ -509,16 +509,15 @@ En annotant le schéma logique avec les quatre cas de figure possibles pour les 
   ]
 }
 ```
-:::
-
-::::
+````
+`````
 
 
 ## Exercices
 
-::::{admonition} Exercice: porte cachée
+`````{admonition} Exercice: porte cachée
 Quelle est la porte cachée de ce circuit?
-```{logic}
+````{logic}
 :height: 100
 :mode: tryout
 
@@ -531,17 +530,16 @@ Quelle est la porte cachée de ce circuit?
   "gates": [{"type": "OR", "pos": [150, 50], "in": [0, 1], "out": 2, "showAsUnknown": true}],
   "wires": [[3, 0], [4, 1], [2, 5]]
 }
-```
-:::{admonition,dropdown} Corrigé
+````
+```{dropdown} Corrigé
 C'est une porte **OU**.
-:::
+```
+`````
 
-::::
-
-::::{admonition} Exercice: circuit défectueux
+`````{admonition} Exercice: circuit défectueux
 Analysez ce circuit. Fonctionne-t-il correctement? Déterminez ce qui pose problème. Dites ce que fait ce circuit une fois corrigé et écrivez sa table de vérité.
 
-```{logic}
+````{logic}
 :height: 140
 :mode: tryout
 
@@ -558,9 +556,9 @@ Analysez ce circuit. Fonctionne-t-il correctement? Déterminez ce qui pose probl
   ],
   "wires": [[3, 0], [4, 1], [6, 8], [2, 7], [9, 5]]
 }
-```
+````
 
-:::{admonition,dropdown} Indice
+````{dropdown} Indice
 Voici le circuit corrigé:
 ```{logic}
 :height: 140
@@ -580,11 +578,11 @@ Voici le circuit corrigé:
   "wires": [[3, 0], [4, 1], [6, 8], [2, 7], [9, 5]]
 }
 ```
-:::
-::::
+````
+`````
 
 
-::::{admonition} Exercice: conception d'un circuit
+````{admonition} Exercice: conception d'un circuit
 
 Écrivez la table de vérité de ce circuit, dont une partie est masquée:
 
@@ -603,14 +601,14 @@ Voici le circuit corrigé:
 }
 ```
 
-:::{admonition,dropdown} Corrigé
+```{dropdown} Corrigé
 | $X$ | $Y$ | $Z$ |
 | :-: | :-: | :-: |
 | 0   | 0   | 1   |
 | 0   | 1   | 0   |
 | 1   | 0   | 1   |
 | 1   | 1   | 1   |
-:::
+```
 
 
 Réalisez ensuite un circuit logique avec les mêmes deux entrées $X$ et $Y$ et la même sortie $Z$ qui implémente cette table de vérité. On peut utiliser des portes **ET** et **OU** et des inverseurs. Glissez les portes depuis la gauche pour en ajouter, et glissez entre les connecteurs rond pour les connecter.
@@ -628,15 +626,15 @@ Réalisez ensuite un circuit logique avec les mêmes deux entrées $X$ et $Y$ et
 }
 ```
 
-:::{admonition,dropdown} Indice 1
+```{dropdown} Indice 1
 On peut lire cette fonction comme «$Z$ vaut 1 lorsque $X$ et $Y$ sont les deux à 0 (la première ligne de la table de vérité) ou lorsque $X$ est à 1 (les deux dernières lignes)».
-:::
+```
 
-:::{admonition,dropdown} Indice 2
+```{dropdown} Indice 2
 $Z$ est donc le **OU** de $X$ et du **ET** de l'inverse de $X$ et de $Y$.
-:::
+```
 
-:::{admonition,dropdown} Corrigé
+```{dropdown} Corrigé
 Il y plusieurs solutions possible. Celle qui correspond aux indices est la suivante:
 
 ```{logic}
@@ -677,6 +675,5 @@ Voici un circuit plus simple, qui fait la même chose mais qui est plus difficil
   "wires": [[3, 6], [8, 5], [4, 11], [12, 7]]
 }
 ```
-:::
 
-::::
+````

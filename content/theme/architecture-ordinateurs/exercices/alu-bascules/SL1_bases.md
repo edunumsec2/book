@@ -1,54 +1,58 @@
 
 # Exercices de base
 
-::::{admonition,attention} Exercice 1 : un binary digit (*bit*)
+````{admonition} Exercice 1 : un binary digit (*bit*)
+:class: attention
+
 Construisons notre premier circuit le plus simple dans logic.ly. Ce dernier représente une unité d'information, en anglais *binary digit* abrégé bit.
 
-:::{figure} simple_bit
-<img src="media/Ex1_PortesLogiques.png">
+```{dropdown} simple_bit
+![](media/Ex1_PortesLogiques.png)
 
 Un simple bit
-:::
+```
+````
 
-::::
+````{admonition} Exercice 2 : un demi-octet
+:class: attention
 
-:::::{admonition,attention} Exercice 2 : un demi-octet
 Un octet est un ensemble de huit bits. Pour simplifier, nous allons ici construire un demi-octet avec sa représentation binaire et sa représentation hexadécimale[^hexa].
+````
+````{admonition} Avec logic.ly
+:class: note
 
-::::{admonition,note}Avec logic.ly
-
-:::{figure} demi_octet
-<img src="media/Ex2_PortesLogiques.png">
+```{dropdown} demi_octet
+![](media/Ex2_PortesLogiques.png)
 
 Un demi-octet
-:::
+```
 
 A réaliser:
 1. Essayer quelques configurations et observer.
 2. Tester la division et la multiplication par deux en décalant à droite et à gauche un nombre binaire.
-::::
+````
 
-::::{admonition,note}Avec des logidules
+`````{admonition} Avec des logidules
+:class: note
 Les logidules ont l'avantage de permettre des montages rapides de portes logiques en parallèle. Nous allons ici réaliser le même montage avec un demi-octet.
 
-:::{figure} logidule_representation
-<img src="media/Logidules/Ex2_RepresentationBinaire/AffichageBinaire.jpg"  width="200px">
+```{dropdown} logidule_representation
+![](media/Logidules/Ex2_RepresentationBinaire/AffichageBinaire.jpg)
 
 Avec des logidules
-:::
+```
 
-:::{figure} simulateur_representation
-<img src="media/Logidules/Ex2_RepresentationBinaire/AffichageBinaireS.png"  width="200px">
+```{dropdown} simulateur_representation
+![](media/Logidules/Ex2_RepresentationBinaire/AffichageBinaireS.png)
 
 Dans le simulateur
-:::
+```
 
 A réaliser: 
 1. Effectuer les même tests que précédemment.
 2. Etendre le circuit à un octet complet ([figure](simulateur_representation)).
-::::
 
-:::::
+`````
 
 
 

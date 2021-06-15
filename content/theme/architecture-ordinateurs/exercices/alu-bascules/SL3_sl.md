@@ -5,7 +5,8 @@ Dans cette partie, nous allons réaliser des systèmes logiques qui rentrent dan
 Nous avons choisi de nous attarder sur l'additionneur et le demi-additionneur parce qu'ils démontrent une fonction facile à comprendre : l'addition en colonnes de nombres binaires.
 
 
-::::{admonition,attention} Exercice 6 : demi-additionneur
+````{admonition} Exercice 6 : demi-additionneur
+:class: attention
 
 Le demi-additionneur calcule sur une colonne et reporte la retenue, mais ne prend pas la retenue de la colonne précédente. C'est en fait l'additionneur qui est utilisé pour le premier bit ou première colonne.
 
@@ -27,32 +28,33 @@ En considérant le demi-additionneur comme une *boîte noire*, nous avons donc d
 **Illustration :**
 Nous avons ci-dessous deux illustrations d'un additionneur sans report de la retenue. On voit donc bien l'erreur de calcul.
 
-:::{figure} demiAdd1
-<img src="media/Logidules/Ex7_DemiAdd/demiAdd1.jpg"  width="300px">
+```{dropdown} demiAdd1
+![](media/Logidules/Ex7_DemiAdd/demiAdd1.jpg)
 
 Demi-additionneur, calcul juste.
-:::
+```
 
-:::{figure} demiAdd2
-<img src="media/Logidules/Ex7_DemiAdd/demiAdd2.jpg"  width="300px">
+```{dropdown} demiAdd2
+![](media/Logidules/Ex7_DemiAdd/demiAdd2.jpg)
 
 Demi-additionneur, calcul faux, perte de la retenue
-:::
+```
 
 
-::::
+````
 
-::::{admonition,attention} Exercice 7 : additionneur
+````{admonition} Exercice 7 : additionneur
+:class: attention
 
 Dans le cas d'un additionneur complet, nous devons reporter la retenue à la colonne suivante : $C_{in}$. Chaque colonne prend donc trois entrées et produit 2 sorties : le résultat de l'addition $S$ et la retenue $C_{out}$ qui devient le $C_{in}$ de la colonne suivante.
 
 Nous avons illustré le problème avec un montage en logidules. Ce dernier calcule uniquement la retenue.
 
-:::{figure} retenue
-<img src="media/Logidules/Ex8_Add/retenue.jpg"  width="300px">
+```{dropdown} retenue
+![](media/Logidules/Ex8_Add/retenue.jpg)
 
 Calcul de la retenue (slt)
-:::
+```
 
 
 La table de vérité augmente en conséquence et passe à huit cas à énumérer. Voici la forme qu'elle prend:
@@ -70,11 +72,11 @@ La table de vérité augmente en conséquence et passe à huit cas à énumérer
 
 À partir du circuit complet de l'additionneur sur un bit, on devrait pouvoir les chaîner pour obtenir le schémas d'ensemble ci-dessous.
 
-:::{figure} Ripplecarryadder
-<img src="media/Ex7_Ripplecarryadder.png">
+```{dropdown} Ripplecarryadder
+![](media/Ex7_Ripplecarryadder.png)
 
 (source wikipedia[^3])
-:::
+```
 
 
 **Consignes :** 
@@ -82,7 +84,7 @@ La table de vérité augmente en conséquence et passe à huit cas à énumérer
 2. Réaliser le circuit complet pour un demi-octet (évtl. un octet complet)
 
 
-::::
+````
 
 
 

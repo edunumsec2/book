@@ -245,16 +245,16 @@ The New Yorker, 2015
   
    a) Comparer les deux dessins. Quel est le message de chacun?
 
-  ::::{admonition,dropdown} Réponse
+  ````{dropdown} Réponse
   Publié en 1993, au moment où l’on commence à parler d’Internet dans la presse grand public, ce premier dessin met en évidence l’anonymat qui caractérisait la navigation sur Internet à ses débuts. Il souligne aussi qu’Internet est un espace où chacun peut évoluer sans être jugé.
 
   Le second dessin propose une version actualisée de cette caricature. Aujourd’hui, chaque activité sur le Web laisse des traces et il n’est plus possible d’être en ligne sans être surveillé et suivi.
-  ::::
+  ````
 
 
    b) Que s’est-il passé entre les deux dessins?
 
-   ::::{admonition,dropdown} Réponse
+   ````{dropdown} Réponse
 
    * Avec l’émergence du Web participatif au début des années 2000, puis des réseaux sociaux, les internautes ont commencé à publier davantage de contenus.
 
@@ -263,24 +263,24 @@ The New Yorker, 2015
   * La valeur grandissante de cette nouvelle masse de données a encouragé le développement de systèmes informatiques toujours plus performants et capables de stocker, traiter, et recouper d’immenses bases de données.
 
   * L’arrivée des terminaux mobiles et de nombreux «objets connectés» a encore considérablement augmenté le nombre et la diversité des traces.  
-  ::::
+  ````
 
 Par petits groupes, proposer aux élèves de réfléchir aux questions suivantes :
 
   c) Qui collecte des données numériques (quel type d'entreprises/institutions) et pour quelles raisons?  
 
-   ::::{admonition,dropdown} Quelques éléments de réponses
+   ````{dropdown} Quelques éléments de réponses
 
   * Les États peuvent être amenés à collecter des données sur les citoyens. Cette forme de surveillance existait auparavant mais avec le développement des technologies numériques, elle a changé d’échelle. Certains gouvernements ont désormais recours à une surveillance de masse, c’est-à-dire qu’ils ne ciblent plus un individu ou un groupe suspect, mais l’ensemble de la population. Pour cela, ils s'appuient - entre autres - sur les données collectées par les grandes entreprises du numérique, comme l'a révélé le lanceur d’alerte Edward Snowden. Les pays concernés, justifient ces pratiques de surveillance comme le seul moyen de garantir la sécurité intérieure, en particulier suite aux attentats du 11 septembre 2001. Cette position est contestée par de nombreuses ONG et associations (dont [La Quadrature du Net](https://www.laquadrature.net), [Amnesty](https://www.amnesty.ch/fr/themes/surveillance/surveillance), [Privacy International](https://privacyinternational.org/fr)) qui considèrent cette surveillance comme arbitraire et contraire au droit fondamental à la vie privée.
 
   * Les fournisseurs d’accès à Internet, ainsi que de très nombreux services en ligne: réseaux sociaux, sites de e-commerce, Google et tous ses services (Gmail, Google Maps, Chrome, etc.), vidéo et musique en streaming, jeux en ligne. Pour ces entreprises, la collecte de données constitue un enjeu économique (c.f question b.)
-   ::::
+   ````
 
   d) De quels types de données s’agit-il?
 
-  ::::{admonition,dropdown} Réponse
+  ````{dropdown} Réponse
   Deux catégories de données sont collectées : les informations publiées en ligne de façon consciente  : tweets, likes, photos, commentaires ; et les données captées à l’insu des utilisateurs : adresse IP, langue, historique de recherche, localisation, temps de visionnage, clics, contenus des e-mails, (pour Gmail, notamment), etc. Nos activités en ligne laissent donc de nombreuses  "traces numériques".
-  ::::
+  ````
 
 <br>
 
@@ -309,13 +309,13 @@ c) Ensuite, à l'aide de CookieViz, taper l'adresse du site dans la fenêtre de 
 d) Mettre en commun les réponses des différents groupes
 
 
-::::{admonition,dropdown} Exemple avec le site 24heures.ch 
+````{dropdown} Exemple avec le site 24heures.ch 
 Une trentaine de traqueurs sont identifiés par CookieViz, dont Google, Facebook, Tiktok, Amazon et diverses régies publicitaires.
 
 Ce pistage sert tout d'abord à analyser le profil et le comportements des internautes sur le site (localisation, clics, vues, temps passé sur un article). Il permet au journal de mieux comprendre les habitudes et préférences des utilisateurs. Il pourra ainsi adapter son contenu ou suggérer des offres personnalisées aux lecteurs. Mais certains cookies tiers permettent aussi à d'autres entreprises (essentiellement des régies publicitaires) d'accéder à ces informations et d’établir ainsi un profil le plus précis possible de l'utilisateur afin de lui proposer un contenu publicitaire ciblé en dehors du site du journal.
 
 A noter que dans ses paramètres de confidentialité, le site du journal 24heures affiche une liste détaillée des cookies tiers. Ces derniers sont considérablement plus nombreux que ce que le logiciel CookieViz est capable de détecter.
-::::
+````
 
 **Options alternatives**
 
@@ -385,9 +385,9 @@ Cette réflexion a pour objectif de montrer la nécessité d'un espace privé. C
 c) L'un des arguments que l'on entend souvent pour défendre la mise en place de dispositifs de surveillance est que  "si nous n'avons a rien à cacher, nous n'avons rien à craindre". Que pensez-vous de cet affirmation?
 
 
-::::{admonition,dropdown} Eléments de réponses
+````{dropdown} Eléments de réponses
 Discutez les réflexions des élèves en amenant les contre-arguments proposés dans le paragraphe "Rien à cacher ?" plus haut. Deux d'entre eux sont déjà évoqués aux questions a) et b).
-::::
+````
 
 Lors d’une [visio-conférence](https://www.youtube.com/watch?v=OVn55kIzJeA) en 2016, Edward Snowden déclare ceci : 
 
@@ -395,6 +395,6 @@ Lors d’une [visio-conférence](https://www.youtube.com/watch?v=OVn55kIzJeA) en
 
 d) Qu’entend-il par là? 
 
-::::{admonition,dropdown} Réponse
+````{dropdown} Réponse
 Ce n'est pas parce que l'on ne fait pas usage d'un droit soi-même que l'on peut nier que d'autres puissent en avoir besoin. Selon Edward Snowden, il s'agit là d'un argument fondamentalement antisocial qui ne tient pas compte des risques que peuvent rencontrer certaines populations lorsque leurs droits sont bafoués.
-::::
+````

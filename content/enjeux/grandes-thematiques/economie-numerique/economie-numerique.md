@@ -254,14 +254,14 @@ Par oral, mettre en commun les réponses des différents groupes et apporter des
   
    a) Qui sont les "GAFAM"?
 
-   ::::{admonition,dropdown} Réponse
+   ````{dropdown} Réponse
    Google, Amazon, Facebook, Apple, Microsoft 
-   ::::
+   ````
 
 
    b) Que leur reproche-t-on?
 
-   ::::{admonition,dropdown} Réponse
+   ````{dropdown} Réponse
 
    * une position dominante dans l'industrie du numérique
    * des pratiques anticoncurrentielles
@@ -270,28 +270,28 @@ Par oral, mettre en commun les réponses des différents groupes et apporter des
    * des pratiques d'optimisation fiscale à large échelle
    
    Préciser que la plupart de ces caractéristiques ne sont pas exclusivement propres au numérique.
-   ::::
+   ````
 
 
 
   c) En quelques mots, quel est le modèle économique de chacune de ces entreprises?
 
-   ::::{admonition,dropdown} Réponse
+   ````{dropdown} Réponse
   Voir paragraphe "au-delà des GAFAM".
-   ::::
+   ````
 
   d) A votre avis, est-il pertinent de réunir ces cinq entreprises sous un même terme? 
 
-   ::::{admonition,dropdown} Réponse
+   ````{dropdown} Réponse
   Si le terme «GAFAM» peut être utile pour comprendre certains points communs à ces entreprises (cf. question b), il pose également problème, car il efface les logiques spécifiques à chacune de ces entreprises. En effet, celles-ci ont une histoire, un modèle économique, une culture et des enjeux propres. Par exemple, la question de la captation des données concerne avant tout Google et Facebook. Apple, qui vend avant tout du matériel informatique et ne commercialise pas les données des utilisateurs, se positionne ainsi comme [défenseur de la vie privée](https://www.letemps.ch/economie/protection-vie-privee-fer-lance-marketing-dapple). Ainsi, les enjeux politiques et les problématiques que pose leur régulation ne sont pas les mêmes pour chacune de ces entreprises. Connaître leurs spécificités permet de proposer une politique adaptée.
-   ::::
+   ````
 
 **Activité complémentaire** 
 
 Demander aux élèves de lister 3 applications ou services en ligne qu’ils utilisent/connaissent, puis d’identifier leurs principales sources de revenus. Compléter les réponses des élèves en présentant les modèles économiques de quelques applications les plus populaires.
 
 
-  ::::{admonition,dropdown} **Quelques éléments de réponse**
+  ````{dropdown} **Quelques éléments de réponse**
 
   * **Facebook / Instagram / Snapchat / Twitter / Pinterest** : La majorité des réseaux sociaux ont adopté un modèle économique qui repose sur la vente d'espaces publicitaires. En apparence gratuits, ces services sont néanmoins "payés" par leurs utilisateurs, qui transmettent de nombreuses données qui permettent aux plateformes de vendre à des annonceurs des audiences ciblées.
   * **YouTube** : A l’origine entièrement gratuite, la plateforme de vidéos propose désormais une double offre : gratuite ou payante. YouTube se situe donc à l’intermédiaire entre les réseaux sociaux gratuits et les offres de divertissement basées sur un principe d’abonnement. 
@@ -301,7 +301,7 @@ Demander aux élèves de lister 3 applications ou services en ligne qu’ils uti
   * **Telegram** : D’abord entièrement gratuit et sans publicité, le service de messagerie a annoncé en 2021 développer une offre payante pour les entreprises et ainsi qu’une plateforme publicitaire.
   *  **Spotify / Netflix** : Les plateformes liées à l'industrie du divertissement fonctionnent le plus souvent sur un principe d'abonnement. La stratégie consiste à offrir un premier mois gratuit ou un service réduit (avec publicités, par exemple) afin de convertir les utilisateurs à une version payante.
   *  **Uber, AirBnB** : Ces plateformes se positionnent comme des intermédiaires entre le client et le prestataire de service. Elles prennent une commission sur les transactions qui s'effectuent entre les deux parties
-  ::::
+  ````
 
 <br>
 
@@ -315,10 +315,10 @@ En guise d’introduction, demander aux élèves :
 
 a) Qu’est-ce qu’un moteur de recherche?
 
-::::{admonition,dropdown} **Réponse**
+````{dropdown} **Réponse**
 Un moteur de recherche est une application web qui permet de trouver des ressources en ligne (pages web, images, vidéos, articles, logiciels, etc.) au travers d’une recherche par mots-clés et selon différents paramètres déterminés.
 Il tente de fournir à l’utilisateur la réponse la plus pertinente à sa requête. Sans moteur de recherche, il faudrait connaître l’adresse précise d’un site pour y accéder.
-::::
+````
 
 b) Quel moteur de recherche utilisez-vous ?
 
@@ -326,7 +326,7 @@ Il est très probable que la majorité des élèves réponde «Google». Dès lo
 
 c) Quel est le modèle économique de Google?
 
-::::{admonition,dropdown} **Réponse**
+````{dropdown} **Réponse**
 Lorsque l’on fait une recherche en ligne, deux grandes catégories de résultats sont proposées : 
 
 a. Les résultats dits [«naturels»](https://support.google.com/google-ads/answer/6054492?hl=fr) qui apparaissent avant tout grâce à la pertinence entre leur contenu et le mot-clé introduit. 
@@ -334,19 +334,19 @@ a. Les résultats dits [«naturels»](https://support.google.com/google-ads/answ
 b. Les résultats issus du «référencement payant», soit des annonces mises en avant car un annonceur a payé pour que, lorsqu'un certain mot-clé est inséré, son lien apparaisse en haut des résultats. La place effective des annonces repose sur un système d’enchères en temps réel qui détermine quelle annonce est affichée selon de multiples paramètres (pertinence avec le mot-clé, montant investi, zone géographique, heure, etc.), afin de proposer à l’internaute les liens commerciaux sur lesquels il est le plus susceptible de cliquer.
 
 Le ciblage publicitaire s’effectue également au travers des très nombreux sites web qui affichent des annonces gérées par Google en échange d’une rémunération (via la régie publicitaire Adsense). Google se positionne donc comme un intermédiaire qui fait se rencontrer la demande de mots-clés et l’offre d’espace publicitaires.
-::::
+````
 
 d) Comment Google est-elle devenue une des entreprises les plus riches au monde, alors que ses services sont gratuits?
 
-::::{admonition,dropdown} **Réponse**
+````{dropdown} **Réponse**
 L’objectif de Google n’est pas de vendre des produits ou services aux internautes mais de recueillir le plus grand nombre de traces concernant leur profil et leur comportement (notamment au travers de sa régie Doubleclick) afin de proposer à des annonceurs des espaces publicitaires ciblés, L’entreprise a donc intérêt à offrir des services gratuits afin de maximiser le nombre d’utilisateurs et d’interactions sur toutes ses plateformes (Gmail, Chrome, Google Maps, YouTube, etc.). Par ailleurs, plus ces services comptent d’usagers, plus ils deviennent attractifs et performants, à la fois pour les utilisateurs et les annonceurs. C’est ce cercle vertueux qui a permis à Google d’occuper une position dominante. Une fois cette place acquise, il devient difficile pour un concurrent d’émerger.
 
 A noter toutefois que les recettes de Google proviennent avant tout de la vente de mots-clés associés à des profils. Ce sont ces mots-cles qui permettent de déterminer au mieux l’intention de l’internaute et de proposer un espace publicitaire pertinent. Le profilage de l’utilisateur est donc moins nécessaire pour Google que pour d’autres plateformes, telles que Facebook. Le profilage de l’utilisateur est donc moins nécessaire pour Google que pour d’autres plateformes, telles que Facebook. C’est également la raison pour laquelle Google peut envisager [certaines mesures en faveur de la protection de la vie privée](https://siecledigital.fr/2021/03/04/fin-des-cookies-tiers-google-abandonne-entierement-le-ciblage-individuel/).
-::::
+````
 
 e) Si Google représente plus de 90% des parts de marché dans le domaine des moteurs de recherche, des services concurrents existent. Proposer aux élèves, en petits groupes, de rechercher des alternatives à Google et déterminer quels sont leurs modèles économiques et leurs spécificités.
 
-::::{admonition,dropdown} **Réponse**
+````{dropdown} **Réponse**
 **Bing** : Élaboré par Microsoft, il est le deuxième moteur de recherche après Google (environ 2-3% de part de marché). Bing vend des espaces publicitaires ciblés et collecte donc les données de ses utilisateurs. La portée de ce traçage est toutefois moins importante que celle de Google, qui dispose d’une infrastructure plus importante. Bing fournit aussi ses services de recherche et publicité à d’autres sites et applications partenaires.
 
 **Qwant** : Moteur de recherche français axé sur le respect de la vie privée, Qwant affirme ne pas pister ses utilisateurs et proposer des résultats de recherche non personnalisés. Si le moteur est financé par la publicité, celle-ci serait basée uniquement sur le mot-clé recherché par l’internaute et non sur des informations liées à son profil. Qwant est cependant régulièrement pointé du doigt pour son partenariat avec Microsoft et son moteur de recherche Bing, dont sont issus une large part des résultats. Malgré un important soutien politique de l’État français et un chiffre d’affaires en progression, Qwant était encore déficitaire en 2020.
@@ -354,36 +354,36 @@ e) Si Google représente plus de 90% des parts de marché dans le domaine des mo
 **DuckDuckGo** : Meta-moteur qui agrège les résultats de nombreux moteurs de recherche. Comme Qwant, DuckDuckGo ne propose pas de résultats personnalisés selon le profil des utilisateurs et se positionne comme défenseur de la vie privée. Son financement repose également sur la publicité non-ciblée. Selon DuckDuckGo, il n’est pas nécessaire de [«pister» les internautes pour leur proposer des résultats pertinents](https://spreadprivacy.com/duckduckgo-revenue-model/). 
 
 **Ecosia** : Moteur de recherche allemand qui investit 80% de ses bénéfices dans des projets de reforestation, principalement en Amérique du sud et en Afrique. Les résultats du moteur de recherche et les annonces sont générés par Bing. Ecosia reverse un pourcentage de ses gains publicitaires à Microsoft.
-::::
+````
 
 **Activité complémentaire** (🕑 20 min)
 
 Le chercheur de l’EPFL Frédéric Kaplan parle de [«capitalisme linguistique»](https://fkaplan.wordpress.com/2011/09/07/google-et-le-capitalisme-linguistique/) pour décrire ce système d’enchères. Selon vous, que signifie cette notion?
 
-::::{admonition,dropdown} **Réponse**
+````{dropdown} **Réponse**
 Google a créé un véritable système de monétisation du langage. Si chaque requête sur le moteur de recherche génère une enchère, on peut imaginer l’ampleur des gains obtenus. Le prix des mots peut varier selon différents facteurs, tout comme le cours d’une action en bourse. Il s’agit d’une forme de spéculation sur le langage dont Google contrôle l’ensemble des paramètres.
-::::
+````
 
 Lors de sa campagne pour l’élection présidentielle américaine 2020, le candidat démocrate et milliardaire Michael Bloomberg a dépensé des millions de dollars pour acheter aux enchères de Google le mot «climat» et de nombreux autres termes relatifs au réchauffement climatique.
 
 Quel était l’objectif du candidat?
 
-::::{admonition,dropdown} **Réponse**
+````{dropdown} **Réponse**
 Michael Bloomberg souhaite investir le créneau écologique et ne laisser, sur cette question, aucune visibilité en ligne à d’autres candidats.
-::::
+````
 
 Cette stratégie permet-elle réellement à Michael Bloomberg de rediriger tous les résultats de recherche sur la question climatique vers son site?
 
-::::{admonition,dropdown} **Réponse**
+````{dropdown} **Réponse**
 La stratégie de Michael Bloomberg ne lui permet en réalité qu’une visibilité partielle, car elle ne concerne que les résultats payants. L’achat de mot-clé n’a pas d’influence sur le référencement naturel, davantage basé sur des critères de pertinence. On peut ainsi estimer que l’achat de mots-clés est nécessaire lorsque le site en question n’est pas suffisamment pertinent pour apparaître naturellement dans les résultats de recherche.
 
 On peut ainsi estimer que l’achat de mots-clés est nécessaire lorsque le site en question n’est pas suffisamment pertinent pour apparaître naturellement dans les résultats de recherche.
-::::
+````
 
 Quel bilan peut-on tirer de cette stratégie?
-::::{admonition,dropdown} **Réponse**
+````{dropdown} **Réponse**
 Malgré le déploiement de moyens considérables, cette stratégie n’a pas permis à Michael Bloomberg d’être élu à la primaire démocrate. Si son échec est certainement dû à de multiples facteurs, l’achat massif d’espaces de publicité en ligne n’aura pas permis d’inverser la tendance. L’efficacité de ce type campagnes en ligne doit donc être relativisée.
-::::
+````
 
 </div
 
@@ -407,25 +407,25 @@ Poser les questions suivantes :
 
 a) Présentez en quelques mots le modèle économique de Uber Eats.
 
-::::{admonition,dropdown} Réponse
+````{dropdown} Réponse
 Uber Eats est une plateforme en ligne qui propose des livraisons de repas. L’application met en relation livreurs, clients et restaurants partenaires. L’entreprise prend une commission sur chaque commande, à la fois auprès du restaurant (env. 30%) et du client. Sur le modèle de la maison mère Uber, les livreurs de Uber Eats ne sont pas des salariés, mais des indépendants payés à la course. Ce système permet à Uber Eats de disposer d’une base importante de livreurs tout en ne rémunérant que les commandes passées.
-::::
+````
 
 b) En quoi le modèle économique de Uber Eats n’est-il pas soutenable pour les livreurs?
 
-::::{admonition,dropdown} Réponse
+````{dropdown} Réponse
 Les sommes versées aux livreurs pour leurs courses ne permettent pas d’obtenir un salaire décent. L’un des coursiers parle d’environ 400 Euros pour 60 heures de disponibilité par semaine, avant déductions (le salaire minimum en France est d’environ 1500 Euros). Les livreurs n’étant payés que lorsqu’ils effectuent une course, le temps d’attente n’est pas comptabilisé. Tous les frais (moyen de transport, dépôt de caution pour l’achat du sac et des vêtements «Uber Eats», réparation des pneus, abonnement de téléphone) sont à leur charge et ils ne disposent d’aucune prestation sociale (assurance accident, cotisations retraite, etc.). Par ailleurs, les exigences de la plateforme sont de plus en plus difficiles à remplir, comme le témoigne un livreur, qui a troqué son vélo contre un scooter plus rapide.
-::::
+````
 
 c) Quelles sont les données produites par les livreurs et en quoi sont-elles utiles à Uber?
 
-::::{admonition,dropdown} Réponse
+````{dropdown} Réponse
 Les livreurs produisent des données dès qu’ils sont connectés à l’application. Il peut s’agir de données relatives à leurs trajets  (géolocalisation), à leur productivité (nombre de commandes prises en charge) à leur profil (notes des clients et restaurateurs). Uber collecte aussi des informations sur les clients (profil, horaires de commandes, etc.). Toutes ces données permettent d’analyser finement les comportements de chacun pour ensuite adapter les prix en temps réel, proposer des «bonus» aux travailleurs lorsque la demande est importante, ou encore sanctionner les livreurs les moins performants. Par ailleurs, les conditions et la finalité de ce traçage demeurent largement opaques.
-::::
+````
 
 d) Livreurs, restaurants et particuliers sont notés  : quel est l’objectif de ces évaluations? 
 
-::::{admonition,dropdown} Réponse
+````{dropdown} Réponse
 Les livreurs sont notés par les restaurateurs et par les clients, qui sont, eux, notés par les livreurs.Toutes ces données nourrissent les algorithmes d’Uber et lui permettent de rationaliser ses coûts, d’anticiper les flux et d’optimiser sa gestion. 
 
 La notation agit comme moyen de pression sur les livreurs et les restaurateurs, qui sont incités à fournir une prestation rapide et conforme aux attentes du client. Les évaluations donnent une impression d’objectivité mais elles dépendent souvent des émotions et du contexte. Et parfois, elles n’évaluent pas ce qu’elles sont supposées évaluer. Par exemple, un livreur qui apporte un repas mal emballé par un restaurant pourra être sanctionné par le client.
@@ -435,14 +435,14 @@ Pour aller plus loin  :
  * L’épisode «Chute libre» de la série [Black Mirror (saison 3)](https://www.netflix.com/at-en/title/70264888), qui imagine une société où tout le monde note tout le monde.
  
  * Le livre [La nouvelle guerre des étoiles] (https://www.internetactu.net/2020/09/23/peut-on-limiter-lextension-de-la-societe-de-la-notation/) des journalistes Vincent Coquaz et Ismaël Halissat qui enquête sur la «société de la notation»*
-::::
+````
 
 e) Peut-on dire qu’Uber propose une technologie «innovante»?
 
-::::{admonition,dropdown} Réponse
+````{dropdown} Réponse
 L’innovation d’Uber se situe davantage au niveau stratégique que technique. En effet, Uber ne propose pas de réelle innovation technologique. L’entreprise s’appuie sur toute une série de dispositifs qui pré-existaient : cartographie, GPS, téléphone mobile, Internet, paiement en ligne. Par ailleurs, des applications mobiles permettant de commander un taxi étaient déjà disponibles. La force de la plateforme a été de proposer au moment opportun un service qui mobilise des technologies pertinentes, qui corresponde à une certaine demande et qui trouve un contexte politique favorable à son développement.
 
-::::
+````
 
 <br>
 
@@ -455,30 +455,30 @@ Faire lire [un article](https://www.letemps.ch/economie/geneve-uber-eats-desorma
 
 a) Résumez l’article en une phrase.
 
- ::::{admonition,dropdown} Réponse
+ ````{dropdown} Réponse
 Uber est sommé d’appliquer une décision de justice cantonale en changeant le statut de ses livreurs, d’indépendants à salariés. 
-::::
+````
 
 b) Expliquez l’importance de cette nouvelle.
 
-:::: {admonition,dropdown} Réponse
+```` {dropdown} Réponse
 Les livreurs seront désormais – et jusqu’à confirmation par la justice – des employés. C’est-à-dire qu’ils recevront un salaire, seront soumis à des cotisations (AVS, AI, APG…) et auront droit au chômage. Cette décision est importante car elle remet en question le modèle économique sur lequel repose Uber et de nombreuses autres plateformes.
-::::
+````
 
 c) Quelles peuvent-être les conséquences de ce changement de politique?
 
-:::: {admonition,dropdown} Réponse
+```` {dropdown} Réponse
 * D’autres cantons – ou pays - peuvent être tentés d’exiger d’Uber Eats le même revirement.
 
 * Les autorités pourraient demander à ce que ce changement s’applique à tous les services Uber, voire à d’autres plateformes.
 
 * Si Uber Eats doit s’ajuster au salaire horaire minimal et assumer les charges sociales de ses travailleurs, comment va-t-elle répercuter ces coûts? La plateforme étant peu rentable avec son modèle actuel, elle risque d’augmenter ses tarifs.
-::::
+````
 
 c) Quel sens donner au mot «flexibilité» du porte-parole d’Uber ?
 
-:::: {admonition,dropdown} Réponse
+```` {dropdown} Réponse
 La flexibilité est souvent présentée par ces  entreprises comme une opportunité pour les les livreurs de travailler de façon autonome et sans contrainte horaire. Pourtant, cette flexibilité cache une grande précarité. Aucun revenu n’est garanti aux livreurs et leur indisponibilité (notamment lors des heures creuses) est sanctionnée. La flexibilité semble donc avant tout profiter à l’employeur, qui bénéficie d’une base de livreurs «ajustable» selon le flux des commandes. Le statut d’indépendant de ses travailleurs lui permet de se désengager des responsabilités qui incombent à tout employeur (paiement des prestations sociales, congés payés, majoration des revenus en cas de travail de nuit, etc.). De la même façon, tous les risques normalement assumés par l’entreprise (baisse des commandes, accidents, maladies, etc.) sont reportés sur les livreurs.
 
 Si Uber se présente comme une entreprise «mondiale» et sans territoire, elle se déploie pourtant dans des espaces culturels particuliers. Sa vision libérale de la flexibilité se heurte donc nécessairement à des environnements politiques divers, qui ne partagent pas toujours cette perspective.
-::::
+````

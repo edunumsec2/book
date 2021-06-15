@@ -1,11 +1,12 @@
 # Portes logiques
-::::{admonition,attention} Exercice 3 : portes logiques élémentaires
+````{admonition} Exercice 3 : portes logiques élémentaires
+:class: attention
 
-:::{figure} porte_ET
-<img src="media/Ex3_PortesLogiques.png">
+```{dropdown} porte_ET
+![](media/Ex3_PortesLogiques.png)
 
 Porte logique ET
-:::
+```
 
 Compléter les tables de vérité suivantes pour les portes logiques ET, OU, NON et OU-X
 
@@ -51,9 +52,10 @@ Nous avons la fonction non A que nous notons : $S= \overline{A}$
 |  0  |     |
 |  1  |     |
 
-::::
+````
 
-::::{admonition,attention} Exercice 4 : comparateur
+````{admonition} Exercice 4 : comparateur
+:class: attention
 
 Il peut être intéressant de disposer d'un moyen de comparer deux nombres. Une telle fonction retourne ***vrai*** (càd. ***1***) lorsque les deux nombres sont identiques.
 
@@ -62,9 +64,10 @@ Il peut être intéressant de disposer d'un moyen de comparer deux nombres. Une 
 
 *Cette fonction relativement simple à réaliser est toujours présente dans les microprocesseurs. On peut cependant se représenter la complexité du circuit lorsque l'opération doit être implémentée pour des mots de 64 bits qui est la taille standard pour les microprocesseurs actuels*
 
-::::
+````
 
-::::{admonition,attention} Exercice 5 : lois de *De Morgan*
+````{admonition} Exercice 5 : lois de *De Morgan*
+:class: attention
 les lois de De Morgan proposent les égalités suivantes:
 
 $$
@@ -88,18 +91,18 @@ Et qui se formule en Francais:
 
 On peut enfin en donner une représentation en diagramme de Venn.
 
-:::{figure} DeMorgan
-<img src="media/Demorganlaws.svg.png" width="300px">
+```{dropdown} DeMorgan
+![](media/Demorganlaws.svg.png)
 
 Diagrammes de *Venn* (source wikipedia[^2])
-:::
+```
 
 **Consigne :** Concevoir et mettre en place dans l'un ou l'autre des simulateurs un montage qui démontre le plus efficacement possible les lois de De Morgan.
 
 > En életronique digitale, ces lois sont remarquables parce qu'elles garantissent que l'on peut toujours remplacer des portes **OU** avec des portes **ET** (et inversément). Cette équivalence est abondamment utilisée dans la conception de circuits intégrés digitaux.
 > Sachant que l'on peut également trouver une combinaison équivalente pour construire une porte **OU-X** et que l'on peut, en reliant ensemble les deux entrées d'une porte **NON-ET** en faire un inverseur (**NON**), on réalise que n'importe quel système de logique combinatoire peut-être réalisé avec uniquement des portes **NON-ET**.
 
-::::
+````
 
 
 

@@ -19,7 +19,6 @@ En tant que membre du projet pilote, nous vous remercions par avance pour votre 
 
 ## Table des matières
 
----
 
 - [Introduction](#introduction)
 - [Documents importants](#documents-importants)

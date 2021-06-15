@@ -2,27 +2,31 @@
 
 _**Note:** Ces corrigés vont être ventilés sous les thématiques correspondantes sous peu._
 
-:::{admonition,error} Corrigé
+```{admonition} Corrigé
+:class: error
 
 Corrigés des exercices sur les portes logiques.
 
 Les exercices dont les résultats sont évidents ne font pas l'objet d'un corrigé.
 
-:::
+```
 
-::::{admonition,attention} Exercice 5 : lois de De Morgan
+````{admonition} Exercice 5 : lois de De Morgan
+:class: attention
 
 {download}`Corrigé <media/Logidules/Ex5_DeMorgan/EquivalencesDeMorgan>` pour le simulateur de Logidules
 
-::::
+````
 
-::::{admonition,attention} Exercice 6 : demi-additionneur
+````{admonition} Exercice 6 : demi-additionneur
+:class: attention
 
 
 
-::::
+````
 
-::::{admonition,attention} Exercice 7 : additionneur
+````{admonition} Exercice 7 : additionneur
+:class: attention
 
 1. Table de vérité complétée :
 
@@ -38,17 +42,17 @@ Les exercices dont les résultats sont évidents ne font pas l'objet d'un corrig
 |  1  |  1  |  1        |       1         |   1       |
 
 2. Proposition de schémas pour un circuit logique :
-:::{figure} retenue1
-<img src="media/Logidules/Ex8_Add/add1.jpg"  width="200px">
+
+![retenue1](media/Logidules/Ex8_Add/add1.jpg)
 
 Additionneur avec retenue 1
-:::
+```
 
-:::{figure} retenue2
-<img src="media/Logidules/Ex8_Add/add2.jpg"  width="200px">
+```{figure} retenue2
+![retenue2](media/Logidules/Ex8_Add/add2.jpg)
 
 Additionneur avec retenue 1
-:::
+```
 
 Et le {download}`corrigé <media/Logidules/Ex8_Add/Additionneur>` pour le simulateur de logidules
-::::
+````

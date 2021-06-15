@@ -4,17 +4,15 @@ Dans cette série d'exercices, nous avons évoqué les principaux éléments pou
 
 Pour terminer, nous avons évoqué le fait que nous pouvions, à partir des éléments vus ici, constuire des Unité Arithmétiques et Logiques (ALU) à la base de tout processeur. Nous vous proposons ci-dessous deux montages qui intègrent ce genre de système logique.
 
-:::{figure} alu1
-<img src="media/Logidules/alu1.jpg" width=300>
+```{figure} media/Logidules/alu1.jpg
 
 Montage avec une ALU
-:::
+```
 
-:::{figure} alu2
-<img src="media/Logidules/alu2.jpg" width=300>
+```{figure} media/Logidules/alu2.jpg
 
 Montage avec une ALU qui prends deux octets comme opérandes
-:::
+```
 
 
 
