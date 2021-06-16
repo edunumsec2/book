@@ -81,21 +81,6 @@
   - file: content/theme/projets/accueil/eleve
   - file: content/theme/reseaux/accueil/eleve
 
-## Enjeux sociaux
-- part: Enjeux sociaux
-  numbered: false
-  chapters:
-  - file: content/enjeux/grandes-thematiques/grandes-thematiques
-    sections:
-    - file: content/enjeux/grandes-thematiques/economie-numerique/economie-numerique
-    - file: content/enjeux/grandes-thematiques/surveillance/surveillance
-  - file: content/enjeux/fiches-complementaires/fiches-complementaires
-    sections:
-    - file: content/enjeux/fiches-complementaires/digital-labor/digital-labor
-    - file: content/enjeux/fiches-complementaires/wikipedia/wikipedia
-    - file: content/enjeux/fiches-complementaires/affaire-snowden/affaire-snowden
-  - file: content/enjeux/bibliographie
-
 ## Annexes
 - part: Annexes
   numbered: false
