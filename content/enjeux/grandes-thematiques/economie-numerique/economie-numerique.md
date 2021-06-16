@@ -23,21 +23,33 @@
   background-color: black; 
   color: white!important;
 }
+.round-button {
+    display:block;
+    width:100px;
+    height:100px;
+    line-height:17px;
+    border:0px ;
+    border-radius: 50%;
+    color:#6069db;
+    text-align:center;
+    text-decoration:none;
+    display: table-cell;
+    vertical-align: middle;
+    background: #6069db;
+    box-shadow: 0 0 0px gray;
+    font-size:14px;
+    font-weight:bold;
+    }
 
 </style>
 </head>
 </html>
 
-<a href="http://files.edunumsec2.ch/enjeux-sociaux/economie-numerique.pdf" class="button"> 🖨️ Version imprimable</a>
-
-````{image} economie-numerique.jpg
-:name: économie
-:alt: économie
-:align: center
-````
-<br>
-<br>
-<br>
+<div align="right"> 
+    <a href="http://files.edunumsec2.ch/enjeux-sociaux/economie-numerique.pdf" class="round-button">
+         <font color=white id="demo">Voir <br>dossier</font>
+    </a>
+</div>
 
 # Économie du numérique
 

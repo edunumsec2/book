@@ -34,8 +34,6 @@
 
 <!-- Fin du test de mise en page -->
 
-<a href="http://edunumsec2.ch/enjeux-sociaux/wikipedia.pdf" class="button"> 🖨️ Version imprimable</a>
-
 <br>
 
 # Wikipédia

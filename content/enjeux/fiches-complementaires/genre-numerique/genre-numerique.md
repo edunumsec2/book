@@ -26,17 +26,35 @@
   text-decoration:none;
   background-color: black; 
   color: white!important;
-
-
+}
+.round-button {
+    display:block;
+    width:100px;
+    height:100px;
+    line-height:17px;
+    border:0px ;
+    border-radius: 50%;
+    color:#167dd0;
+    text-align:center;
+    text-decoration:none;
+    display: table-cell;
+    vertical-align: middle;
+    background: #00bcb7;
+    box-shadow: 0 0 0px gray;
+    font-size:14px;
+    font-weight:bold;
+    }
 </style>
 </head>
 </html>
 
 <!-- Fin du test de mise en page -->
 
-<a href="http://files.edunumsec2.ch/enjeux-sociaux/genre-numerique/genre-numerique.pdf" class="button"> 🖨️ Version imprimable</a>
-
-<br>
+<div align="right"> 
+    <a href="http://files.edunumsec2.ch/enjeux-sociaux/genre-numerique/genre-numerique.pdf" class="round-button">
+         <font color=white id="demo">Voir <br>dossier</font>
+    </a>
+</div>
 
 # Genre et numérique
 
@@ -51,7 +69,7 @@
 
 Malgré l’importance croissante des technologies numériques dans nos sociétés contemporaines, les métiers de l’informatique sont  majoritairement exercés par des hommes. Pourtant, les femmes ont contribué significativement au développement de ce domaine, avant d’en être progressivement éloignées. Que s’est-il passé?
 
-Jusqu’au milieu des années 1940, les premières opérations de programmation sont principalement effectuées par des femmes. A l’instar des [Harvard Computer Girls](https://fr.wikipedia.org/wiki/Harvard_Computers), engagées à la fin du XIXe siècle par l’Observatoire de Harvard pour classer des données astronomiques, les femmes réalisent alors des calculs fastidieux, notamment dans les secteurs de la balistique et de la cryptographie. En 1944, les programmeuses de l’ordinateur ENIAC sont six mathématiciennes. Mais la complexité de ces opérations est largement minimisée et le travail de programmation logicielle (le “software”) dévalorisé en regard de la conception technique (le “hardware”), domaine considéré comme prestigieux et essentiellement investi par les hommes. La frontière entre ces deux catégories est toutefois moins rigide qu’on ne voulait bien l’affirmer et les femmes de l’époque ont également contribué au développement des aspects matériels de l’ordinateur.
+Jusqu’au milieu des années 1940, les premières opérations de programmation sont principalement effectuées par des femmes. A l’instar des [Harvard Computers](https://fr.wikipedia.org/wiki/Harvard_Computers), engagées à la fin du XIXe siècle par l’Observatoire de Harvard pour classer des données astronomiques, les femmes réalisent alors des calculs fastidieux, notamment dans les secteurs de la balistique et de la cryptographie. En 1944, les programmeuses de l’ordinateur ENIAC sont six mathématiciennes. Mais la complexité de ces opérations est largement minimisée et le travail de programmation logicielle (le “software”) dévalorisé en regard de la conception technique (le “hardware”), domaine considéré comme prestigieux et essentiellement investi par les hommes. La frontière entre ces deux catégories est toutefois moins rigide qu’on ne voulait bien l’affirmer et les femmes de l’époque ont également contribué au développement des aspects matériels de l’ordinateur.
 
 ````{figure} girls-coding.png
 ---
@@ -97,7 +115,7 @@ Cette évolution n’est toutefois pas envisageable sans une réelle inclusion d
 * [Le livre](https://www.le-passeur-editeur.com/les-livres/essais/les-oubli%C3%A9es-du-num%C3%A9rique/) d'Isabelle Collet, *Les oubliées du numérique* (2019)
 * [L'émission radio](https://www.franceculture.fr/emissions/entendez-vous-leco/entendez-vous-leco-du-lundi-04-mars-2019) «Femmes et numérique : un bug dans la matrice» (France Culture)
 * [Un reportage](https://www.rts.ch/play/tv/mise-au-point/video/algorithmes-sexistes?urn=urn:rts:video:11687105) sur les biais de genre dans le traitement algorithmique des offres d’emploi (RTS)
-* [Le livre](https://www.belin-editeur.com/lintelligence-artificielle-pas-sans-elles) d’Aude Bernheim et Flora Vincent, L’intelligence artificielle, pas sans elles! (2019)
+* [Le livre](https://www.belin-editeur.com/lintelligence-artificielle-pas-sans-elles) d’Aude Bernheim et Flora Vincent, *L’intelligence artificielle, pas sans elles!* (2019)
 * [La série de 6 reportages](https://www.youtube.com/watch?v=JEVdHlwN3zs&list=PLoTC1KIBEvDmlT1V0yuTNr4U3sWwufhOb) «Les filles aux manettes» sur la place des femmes dans le domaine des jeux vidéo (Arte Creative)
 * [Une frise chronologique](http://computer-grrrls.gaite-lyrique.net/) sur les femmes dans l’histoire de l’informatique (issue de l’exposition Computer Grrrls à la Gaîté Lyrique, 2019)
 
@@ -153,7 +171,7 @@ L’usage d’un clavier, alors associé à une activité féminine de bas nivea
 
 ```{admonition} Note
 :class: note
-Note : Pour une analyse plus complète de la communication autour des premiers micro-ordinateurs Apple, voir·: Stein, J. A. (2011). Domesticity, Gender and the 1977 Apple II Personal Computer. Design and Culture, 3(2), 193-216. Article disponible [ici](https://www.tandfonline.com/doi/abs/10.2752/175470811X13002771867842?casa_token=biA9knjSgPwAAAAA:zQWhWbaAE_m8QyVFUlc0ZWGASkBZtfBHhDr3aN8IMQB6BycXOiunj2PKrHwqUurgo8uSP5rwkWmltWI)
+Note : Pour une analyse plus complète de la communication autour des premiers micro-ordinateurs Apple, voir·: Stein, J. A. (2011). Domesticity, Gender and the 1977 Apple II Personal Computer. *Design and Culture*, 3(2), 193-216. Article disponible [ici](https://www.tandfonline.com/doi/abs/10.2752/175470811X13002771867842?casa_token=biA9knjSgPwAAAAA:zQWhWbaAE_m8QyVFUlc0ZWGASkBZtfBHhDr3aN8IMQB6BycXOiunj2PKrHwqUurgo8uSP5rwkWmltWI)
 ```
 
 <br>

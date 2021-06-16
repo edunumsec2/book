@@ -6,43 +6,79 @@
  <!DOCTYPE html>
 <html>
 <head>
+
 <style>
 .button {
   background-color: white;
-  border: 1px solid;
-  border-color: black;
+  border: 1.5px solid;
+  border-color: #167dd0;
   font-family:"Helvetica";
   font-weight:300;
-  color: black!important;
-  padding: 10px 10px;
+  color:#167dd0;
+  padding: 8px 8px 8px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 15px;
   cursor: pointer;
 }
 .button:hover {
   text-decoration:none;
-  background-color: black; 
+  background-color: #167dd0; 
   color: white!important;
 }
+.h1 {
+  font-family:'Roboto Slab', serif;
+  font-weight:300;
+  font-size:35px;
+  color: black;
+}
+.round-button {
+    display:block;
+    width:100px;
+    height:100px;
+    line-height:17px;
+    border:0px ;
+    border-radius: 50%;
+    color:#167dd0;
+    text-align:center;
+    text-decoration:none;
+    display: table-cell;
+    vertical-align: middle;
+    background: #167dd0;
+    box-shadow: 0 0 0px gray;
+    font-size:14px;
+    font-weight:bold;
+    }
 
 </style>
 </head>
 </html>
 
 <!-- Fin du test de mise en page -->
-
-<a href="http://files.edunumsec2.ch/enjeux-sociaux/affaire-snowden/affaire-snowden.pdf" class="button"> 🖨️ Version imprimable</a>
-
 <br>
+
+
+<div align="right"> 
+    <a href="http://files.edunumsec2.ch/enjeux-sociaux/affaire-snowden/affaire-snowden.pdf" class="round-button">
+         <font color=white id="demo">Voir <br>dossier</font>
+    </a>
+</div>
+
 
 # L'affaire Snowden
 
+
+
+<a href="#" class="button"> Vie privée et surveillance</a>
+
+<br>
+
 Il fut un temps où le simple fait de mettre sur écoute un parti politique adverse valait la démission d’un président des États-Unis. Aujourd’hui, un tel procédé est devenu une pratique courante et a très largement dépassé les murs du seul Watergate, à en croire les révélations du lanceur d’alerte Edward Snowden. Voici un résumé de l’affaire en quelques points-clés.
 
-* **Qui?**
+<div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
+<b> Qui?</b>
+</div>
 
 Ex-employé de la CIA et informaticien surdoué, l’Américain Edward Snowden, 30 ans, travaille alors comme prestataire externe à la National Security Agency (NSA), principale agence de renseignement américaine, pour laquelle il gère le tri d’informations recueillies électroniquement dans le monde entier.
 
@@ -54,34 +90,46 @@ name: edward-snowden
 Crédits : Laura Poitras / Praxis Films / CC BY 3.0
 ````
 
-* **Quoi?**
+<div align="left"; style="font-size:18px ;color:rgb(0, 0, 0); font-family:helvetica">
+<b> Quoi?</b>
+</div>
 
 Edward Snowden a révélé au grand public l’existence de programmes de surveillance de masse, orchestrés dans le monde entier par la NSA et d’autres services d’espionnage des gouvernements américain et britannique. Les documents fournis par l’informaticien ont notamment mis au jour le programme PRISM, qui permet à la NSA d’accéder aux communications d’internautes hors des États-Unis via différentes entreprises du numérique (Microsoft, Apple, Google, Yahoo!, Facebook, Skype, AOL). Edward Snowden a également dévoilé l’interception
 des communications de diverses personnalités politiques, dont la mise sur écoute du portable d'Angela Merkel.
-  
 
-* **Quand?**
+
+<div align="left"; style="font-size:18px ;color:rgb(0, 0, 0); font-family:helvetica">
+<b> Quand?</b>
+</div>
 
 En 2013, soit une dizaine d’années après les attentats du World Trade Center. Depuis cet  événement, les États-Unis ont intensifié la surveillance des communications téléphoniques et numériques, aussi bien dans leur pays qu’à l’étranger. Sous prétexte de lutte contre le terrorisme, ils ont créé tout un arsenal juridique qui permet à la NSA d’aller au-delà de ses prérogatives. Ainsi, l’agence de renseignement en vient à collecter les données de grandes entreprises du numérique et d’opérateurs de télécommunication nationaux et internationaux, avec ou sans leur accord.
-  <br>
 
-* **Comment?**
+
+<div align="left"; style="font-size:18px ;color:rgb(0, 0, 0); font-family:helvetica">
+<b> Comment?</b>
+</div>
 
 Edward Snowden affirme être tombé par hasard sur un «rapport secret» de la NSA qui détaille la façon dont le gouvernement américain contourne la loi pour autoriser la surveillance de masse. En tant que responsable des réseaux internes de la NSA, l’informaticien dispose d’un accès privilégié aux documents de cette agence et se met en quête de réponses. Il découvre des documents classifiés qu’il transmet à quelques journalistes de grands
 titres de presse, notamment The Guardian, Der Spiegel, The Washington Post, The New York Times et El País.
 
-* **Pourquoi?**
+<div align="left"; style="font-size:18px ;color:rgb(0, 0, 0); font-family:helvetica">
+<b> Pourquoi?</b>
+</div>
 
 Edward Snowden affirme avoir agi dans l’intérêt des citoyens, estimant que la surveillance allait trop loin. Il souhaitait alerter l’opinion publique sur les pratiques exercées par ces agences. En effet, au lieu de cibler des individus précis, les agences gouvernementales ont commencé à récolter des informations en masse, plus faciles à collecter et trier grâce à la disponibilité de nouvelles données numériques et à la puissance des algorithmes.
 
-* **Et ensuite?**
+<div align="left"; style="font-size:18px ;color:rgb(0, 0, 0); font-family:helvetica">
+<b> Et ensuite?</b>
+</div>
 
 Après la divulgation des documents par la presse, les États-Unis ont inculpé Edward Snowden pour espionnage, vol de données et violation du secret professionnel. Traître pour le gouvernement américain, lanceur d’alerte
 pour l’opinion publique, Edward Snowden s’est exilé en Russie, un des seuls pays à oser résister à la justice américaine. 
 
 Si la NSA n’a pas été démantelée, en 2015, le sénat américain a voté le USA Freedom Act, une nouvelle loi sur la sécurité intérieure qui vient remplacer le Patriot Act de 2001 et limite les pouvoirs de surveillance de la NSA. Malgré tout, la surveillance numérique a toujours cours et les événements terroristes de ces dernières années n’ont fait qu’augmenter la volonté des États de se doter de nouveaux instruments de surveillance.
 
-* **Les enjeux de cette affaire**
+<div align="left"; style="font-size:18px ;color:rgb(0, 0, 0); font-family:helvetica">
+<b> Les enjeux de cette affaire</b>
+</div>
 
 Les révélations d’Edward Snowden sont les premières à apporter les preuves d’une surveillance de masse orchestrée par les gouvernements américain et britannique impliquant des entreprises du numérique. Ces révélations ont montré l’ampleur de l’atteinte portée aux libertés individuelles au travers de dispositifs technologiques complexes. Tout message, conversation ou donnée est susceptible d’être collecté. 
 
@@ -114,18 +162,9 @@ Depuis ce scandale, un tel fichage de la population n’existe plus. Cependant, 
 * Edward Snowden
 
 
-## Liens thématiques
 
-<div class="w3-container">
 
-  <div class="w3-show-inline-block">
-  <div class="w3-bar">
-    <a href=http://eleve.edunumsec2.ch/content/enjeux/grandes-thematiques/surveillance/surveillance.html class="button">Vie privée et surveillance</a>
-  </div>
-  </div>
-</div>
 
-<br>
 
 ## En classe
 
