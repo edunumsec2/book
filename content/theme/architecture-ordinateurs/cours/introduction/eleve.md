@@ -1,11 +1,7 @@
 # Introduction
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 Dans ce chapitre, nous aborderons la question de l'architecture des ordinateurs, c'est à dire les multiples couches physiques qui rendent possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
-=======
-Dans ce chapitre, nous aborderons la question de l'**architecture des ordinateurs**, c'est à dire les multiples couches physiques qui rendent possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
->>>>>>> parent of f3da61f (changement glossaire)
 =======
 Dans ce chapitre, nous aborderons la question de l'**architecture des ordinateurs**, c'est à dire les multiples couches physiques qui rendent possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
 >>>>>>> parent of f3da61f (changement glossaire)
