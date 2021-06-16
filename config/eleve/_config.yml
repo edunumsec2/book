@@ -70,6 +70,7 @@ sphinx:
     logic: ../extensions/
     role: ../extensions/
     glossary: ../extensions/
+    timeline: ../extensions/
 
 #######################################################################################
 # Interact link settings
