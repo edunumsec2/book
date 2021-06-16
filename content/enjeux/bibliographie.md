@@ -31,7 +31,7 @@ h1 {
     font-size: 35px;
     font-family: "Helvetica";
     font-weight: 400;
-    text-align: center;
+    text-align: left;
 }
 h2 {
     margin-top: 0;
@@ -181,6 +181,7 @@ ol {
 
 ````{dropdown} Genre et numérique
 * Collet, Isabelle. *Les oubliées du numérique*. Le Passeur, 2019.
+* Bernheim, A. et Vincent,F. *L’intelligence artificielle, pas sans elles!*. Belin éditeur, 2019.
 ````
 
 
