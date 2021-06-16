@@ -27,13 +27,6 @@
   background-color: black; 
   color: white!important;
 }
-h1 {
-    margin-top: 0;
-    font-size: 35px;
-    font-family: "Helvetica";
-    font-weight: 400;
-    text-align: center;
-}
 
 </style>
 </head>

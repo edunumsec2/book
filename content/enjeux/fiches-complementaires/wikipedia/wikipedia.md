@@ -27,13 +27,6 @@
   background-color: black; 
   color: white!important;
 }
-h1 {
-    margin-top: 0;
-    font-size: 35px;
-    font-family: "Helvetica";
-    font-weight: 400;
-    text-align: center;
-}
 
 </style>
 </head>
@@ -196,15 +189,15 @@ Discutez du débat en termes de :
 - opinion vs information 
 - sources convoquées
 
-   ````{dropdown} Élements de réponses
-  * D’une part, l’anonymat dont bénéficie les contributeurs et contributrices ne nous renseigne pas sur leur intentionnalité. Dans quel but remplacer un mot, surtout un mot aussi important et chargé de signification que «Shoah» ? Les intentions de Jojosan sont-elles de défendre une cause en particulier (celle des homosexuels, des tziganes ou des Témoins de Jéhovah ? ou souhaitent-elles écarter la stricte cause juive, non par souci de précision mais par esprit révisionniste mal intentionné (raciste ou complotiste) ? Gardons à l’esprit que la fonction de ces pages «Discussion» des articles Wikipédia est de préciser des termes et des notions plutôt que de faire passer des idées.
+ ````{dropdown} Élements de réponses
+* D’une part, l’anonymat dont bénéficie les contributeurs et contributrices ne nous renseigne pas sur leur intentionnalité. Dans quel but remplacer un mot, surtout un mot aussi important et chargé de signification que «Shoah» ? Les intentions de Jojosan sont-elles de défendre une cause en particulier (celle des homosexuels, des tziganes ou des Témoins de Jéhovah ? ou souhaitent-elles écarter la stricte cause juive, non par souci de précision mais par esprit révisionniste mal intentionné (raciste ou complotiste) ? Gardons à l’esprit que la fonction de ces pages «Discussion» des articles Wikipédia est de préciser des termes et des notions plutôt que de faire passer des idées.
 
-  * D’autre part, avancer que l’utilisation du mot «Shoah» dans ce contexte serait «judéocentré» relève-t-il d’une information neutre ou d’une opinion? Les réponses de Goliadkine expliquent pourquoi le mot «Shoah» a été maintenu par la communauté de contributeurs. Cependant, on pourrait argumenter que les explications avancées pour justifier ce choix correspondent également à une opinion (la réponse 6 en particulier).
+* D’autre part, avancer que l’utilisation du mot «Shoah» dans ce contexte serait «judéocentré» relève-t-il d’une information neutre ou d’une opinion? Les réponses de Goliadkine expliquent pourquoi le mot «Shoah» a été maintenu par la communauté de contributeurs. Cependant, on pourrait argumenter que les explications avancées pour justifier ce choix correspondent également à une opinion (la réponse 6 en particulier).
 
-  * Enfin, quelle source est-elle utilisée pour définir le mot «Shoah» ? Quel dictionnaire devrait-on utiliser ? Devrait-on remplacer par ce mot par celui d’«holocauste» ?
+* Enfin, quelle source est-elle utilisée pour définir le mot «Shoah» ? Quel dictionnaire devrait-on utiliser ? Devrait-on remplacer par ce mot par celui d’«holocauste» ?
 
-  * On remarque qu’il est difficile - mais cependant bien utile - de trouver un consensus sur une entrée ou ne serait-ce qu’une expression. L’élaboration collective d’un article Wikipédia prend du temps et nécessite des compromis. Plus le nombre de points de vue différents est élevé, plus il permet d’appréhender le réel au plus près.
-  ```` 
+* On remarque qu’il est difficile - mais cependant bien utile - de trouver un consensus sur une entrée ou ne serait-ce qu’une expression. L’élaboration collective d’un article Wikipédia prend du temps et nécessite des compromis. Plus le nombre de points de vue différents est élevé, plus il permet d’appréhender le réel au plus près.
+```` 
 
 
 b) En guise de conclusion, demander aux élèves quels de lister quelques avantages et limites du modèle Wikipédia.
