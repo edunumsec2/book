@@ -1,9 +1,8 @@
 # Introduction
 
-=======
-Dans ce chapitre, nous aborderons la question de l'**architecture des ordinateurs**, c'est à dire les multiples couches physiques qui rendent possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
+Dans ce chapitre, nous aborderons la question de {glo}`archiordi|l'architecture des ordinateurs`, c'est à dire les multiples couches physiques qui rendent possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
 
-Comme vous avez pu le voir dans le chapitre lié à la **représentation de l'information** tout ce qui apparaît sur votre écran n'est qu'une suite de 0 et de 1. Pour comprendre comment ces **nombres binaires** sont traités par l'ordinateur, il faut avoir en tête que les ordinateurs sont construits en plusieurs **couches** successives, comme un mille feuille, dont chacune possède ses propres règles. 
+Comme vous avez pu le voir dans le chapitre lié à la {glo}`repinfo|représentation de l'information` tout ce qui apparaît sur votre écran n'est qu'une suite de 0 et de 1. Pour comprendre comment ces {glo}`codebinaire|nombres binaires` sont traités par l'ordinateur, il faut avoir en tête que les ordinateurs sont construits en plusieurs couches successives, comme un mille feuille, dont chacune possède ses propres règles. 
 
 ```{figure} media/abstractionlight.png
 ---
@@ -12,12 +11,12 @@ width: 250px
 ---
 Les différents niveaux d'abstraction de l'informatique, en partant des électrons, jusqu'aux "programmes", que l'on appelle aussi aujourd'hui "applications". 
 ```
-Dans ce chapitre nous nous concentrerons sur les couches de **bas niveau**, et tenterons de remonter progressivement jusqu'aux **couches logicielles**. 
+Dans ce chapitre nous nous concentrerons sur les {glo}`basniveau|couches de bas niveau`, et tenterons de remonter progressivement jusqu'aux {glo}`logiciel|couches logicielles`. 
 
 
 ## De quoi sont faits les nombres binaires ? 
 
-Les ordinateurs ne comprennent que les nombres binaires. La lettre "A", par exemple, est pour ces derniers une suite de 0 et de 1. Même chose pour une image, une vidéo, une chanson, et ainsi de suite. Mais alors comment ces 0 et ces 1 sont-ils stockés et manipulés physiquement ? De quelle matière sont-ils faits ? Un indice : que mettez-vous dans votre smartphone pour le faire fonctionner ? De l'essence ? Du gaz ? De l'énergie solaire ? 
+Les ordinateurs ne comprennent que les {glo}`codebinaire|nombres binaires`. La lettre "A", par exemple, est pour ces derniers une suite de 0 et de 1. Même chose pour une image, une vidéo, une chanson et ainsi de suite. Mais alors comment ces 0 et ces 1 sont-ils {glo}`stockage|stockés` et manipulés physiquement ? De quelle matière sont-ils faits ? Un indice : que mettez-vous dans votre smartphone pour le faire fonctionner ? De l'essence ? Du gaz ? De l'énergie solaire ? 
 
 De l'électricité.
 
@@ -39,30 +38,28 @@ Vos likes, vos partages, vos vidéos transmises via des applications telles que 
 
 ## Électricité et nombres binaires
 
-Les nombres binaires, au niveau le plus élémentaire, sont donc de l'électricité. Mais pourquoi avoir choisi des 0 et des 1 comme alphabet ? Quel rapport avec l'électricité ? 
+Les {glo}`codebinaire|nombres binaires`, au niveau le plus élémentaire, sont matérialisés par des courants électriques. Mais pourquoi avoir choisi des 0 et des 1 comme alphabet ? Quel rapport avec l'électricité ? 
 
-En informatique, si nous avons choisi d'utiliser un code binaire ça n'est pas par hasard. Ce sont les deux signaux les plus élémentaires que l'on puisse transmettre avec l'électricité. Soit le courant passe, soit il ne passe pas. Ouvert ou fermé, allumé ou éteint, 1 ou 0. 
+En informatique, si nous avons choisi d'utiliser un {glo}`codebinaire|code binaire` ça n'est pas par hasard. Ce sont les deux signaux les plus élémentaires que l'on puisse transmettre avec l'électricité. Soit le courant passe, soit il ne passe pas. Ouvert ou fermé, allumé ou éteint, 1 ou 0. 
 
-```{panels}
-:column: col-lg
-Pourquoi pas un code ternaire ? 
-^^^
-On aurait pu choisir un code possédant plus que deux signaux différents. Si on choisissait, par exemple, trois signaux, on pourrait les coder par l'électricité en mesurant un courant faible, un courant moyen, un courant fort. Le problème est qu'on augmenterait ainsi les possibilités de se tromper dans la mesure, et d'interpréter un courant moyen pour un courant fort, ou inversément. Puisque l'électricité permet une vitesse de transmission par signal très grande, il est plus performant de garder deux positions clairement distinctes que l'on peut transmettre très vite, plutôt que trois positions avec un risque de confusion plus élevé. 
+```{admonition} Le saviez-vous ?
+:class: hint
+On aurait pu choisir un code possédant plus que deux {glo}`signal|signaux` différents. Si on choisissait, par exemple, trois {glo}`signal|signaux`, on pourrait les coder par l'électricité en mesurant un courant faible, un courant moyen, un courant fort. Le problème est qu'on augmenterait ainsi les possibilités de se tromper dans la mesure, et d'interpréter un courant moyen pour un courant fort, ou inversément. Puisque l'électricité permet une vitesse de transmission par signal très grande, il est plus performant de garder deux positions clairement distinctes que l'on peut transmettre très vite, plutôt que trois positions avec un risque de confusion plus élevé. 
 ```
 
 ## Le transistor
 
-Le **transistor** est la brique de base de construction des systèmes informatiques. Développé dans les années 1940 dans les [laboratoires Bell](https://fr.wikipedia.org/wiki/Laboratoires_Bell), aux Etats-Unis, ce composant électronique est à l'origine d'une révolution dans la taille, la fiabilité, et les performances générales des ordinateurs de l'époque. 
+Le {glo}`transistor|transistor` est la brique de base de construction des systèmes informatiques. Développé dans les années 1940 dans les [laboratoires Bell](https://fr.wikipedia.org/wiki/Laboratoires_Bell), aux Etats-Unis, ce composant électronique est à l'origine d'une révolution dans la taille, la fiabilité, et les performances générales des ordinateurs de l'époque. 
 
 ```{figure} media/transistor.jpeg
 ---
 height: 350px
 width: 500px
 ---
-Différents modèles de transistor. On les reconnaît à leurs trois "pattes" aussi appelées : émetteur, base, collecteur. 
+Différents modèles de transistor. On les reconnaît à leurs trois "pattes" aussi appelées : {glo}`emetteur1|émetteur`, {glo}`base|base`, {glo}`collecteur|collecteur`. 
 ```
 
-Le **transistor** fonctionne comme un robinet d'eau qui peut être ouvert ou fermé. Si on l'ouvre le courant passe, si on le ferme il ne passe pas. 
+Le {glo}`transistor|transistor` fonctionne comme un robinet d'eau qui peut être ouvert ou fermé. Si on l'ouvre le courant passe, si on le ferme il ne passe pas. 
 
 ````{dropdown} Pour aller plus loin
 Vidéo facultative qui explique en détail ce qui se passe dans les matériaux qu'on appelle "semi-conducteurs". *Note : contenu en anglais, mais en cours de traduction (elliot)*.
@@ -75,10 +72,10 @@ Vidéo facultative qui explique en détail ce qui se passe dans les matériaux q
 height: 350px
 width: 500px
 ---
-En appliquant un courant qui va de la **base** à **l'émetteur** (en rose pâle), on permet au courant de circuler entre le collecteur et l'émetteur (appelés ainsi parce que l'émetteur *émet* des électrons, et le collecteur les *collecte*). Envoyer du courant dans la **base** c'est donc "ouvrir" le transistor. 
+En appliquant un courant qui va de la {glo}`base|base` à {glo}`emetteur1|l'émetteur` (en rose pâle), on permet au courant de circuler entre le {glo}`collecteur|collecteur` et {glo}`emetteur1|l'émetteur` (appelés ainsi parce que l'émetteur *émet* des électrons, et le collecteur les *collecte*). Envoyer du courant dans la {glo}`base|base` c'est donc *ouvrir* le transistor. 
 ```
 
-De par sa capacité à être ouvert ou fermé, le **transistor** fonctionne comme une brique fondamentale dans la construction de systèmes informatiques permettant de transmettre, stocker et manipuler des nombres binaires. 
+De par sa capacité à être ouvert ou fermé, le {glo}`transistor|transistor` fonctionne comme une brique fondamentale dans la construction de systèmes informatiques permettant de {glo}`transmission|transmettre`, {glo}`stockage|stocker` et {glo}`traitement|traiter` des nombres binaires. 
 
 
 `````{panels}
@@ -94,7 +91,7 @@ Chercher à se représenter la taille des transistors utilisés dans les micropr
 
 ## Des transistors aux portes logiques
 
-Un **transistor** seul ne peut représenter qu'un bit d'information. Oui ou non, ouvert ou fermé, 1 ou 0. Mais si l'on rassemble plusieurs **transistors**, on peut construire des systèmes logiques qui nous permettent d'exprimer des relations logiques plus avancées, comme la conjonction, la disjonction, la négation. C'est ce qu'on appelle des **portes logiques**. 
+Un {glo}`transistor|transistor` seul ne peut représenter qu'un bit d'information. Oui ou non, ouvert ou fermé, 1 ou 0. Mais si l'on rassemble plusieurs {glo}`transistor|transistor`, on peut construire des systèmes logiques qui nous permettent d'exprimer des relations logiques plus avancées, comme la {glo}`conjonction|conjonction`, la {glo}`disjonction|disjonction`, la {glo}`negation|négation`. C'est ce qu'on appelle des {glo}`portelogique|portes logiques`. 
 
 ```{figure} media/andgate.svg
 ---
@@ -103,7 +100,7 @@ width: 200px
 ---
 Ceci est une porte logique "ET", qui exprime la conjonction. C'est à dire que les deux transistors qui la composent (A & B) doivent être "ouverts" pour que le courant passe. 
 ```
-En connectant entre eux les **transistors** de diverses manières, on est capable de faire que le courant se déplace dans un circuit de façon maîtrisée. Ce qui nous permet, à terme, de construire des programmes qui génèrent certaines "sorties" quand on leur donne certaines "entrées". 
+En connectant entre eux les transistors de diverses manières, on est capable de faire que le courant se déplace dans un circuit de façon maîtrisée. Ce qui nous permet, à terme, de construire des programmes qui génèrent certaines "sorties" quand on leur donne certaines "entrées". 
 
 ```{figure} media/andgatetransistor.png
 ---
@@ -115,7 +112,7 @@ Voilà le schéma de construction d'une porte logique "ET", à partir de deux tr
 
 ## Des portes logiques aux tables de vérité
 
-Les **portes logiques** sont des circuits extrêmement basiques faits de **transistors** qui permettent d'exprimer des relations logiques tels que la conjonction, la disjonction ou la négation. 
+Les {glo}`portelogique|portes logiques`sont des circuits extrêmement basiques faits de {glo}`transistor|transistors` qui permettent d'exprimer des relations logiques tels que la {glo}`conjonction|conjonction`, la {glo}`disjonction|disjonction` ou la {glo}`negation|négation`. 
 
 ```{panels}
 :column: col-lg
@@ -124,7 +121,7 @@ Rien de plus logique que la logique
 Même si vous ne les appelez pas ainsi, vous utilisez tous les jours des relations logiques de conjonction, de disjonction et de négation. La conjonction c'est "l'intersection logique" de deux propositions. Si vous dites "je vais à la piscine si *il fait beau* ET *mes amies m'accompagnent*", vous utilisez la conjonction. Au contraire, si vous dites "je vais à la piscine si *il fait beau* OU *mes amis m'accompagnent*", vous utilisez la disjonction, qui est comme une sorte de "somme logique" de deux propositions. La négation est encore plus évidente, puisque la proposition "je ne vais pas à la piscine" est simplement la négation, ou l'inverse, de la proposition "je vais à la piscine". 
 ```
 
-Pour simplifier la représentation de ces relations logiques, on les exprime sous la forme de tables de vérité.
+Pour simplifier la représentation de ces relations logiques, on les exprime sous la forme de {glo}`tableverite|tables de vérité`.
 
 | $A$ | $B$ | $Q$ |
 | :-: | :-: | :-: |
@@ -133,7 +130,7 @@ Pour simplifier la représentation de ces relations logiques, on les exprime sou
 | 0   | 1   | 0   |
 | 1   | 1   | 1   |
 
-Dans le tableau qui précède, si on reprend notre exemple de la piscine, on pourrait dire que A représente "il fait beau", B représente "mes amies m'accompagnent", et le résultat Q est "je vais à la piscine". 1 signifie qu'une proposition est vraie, 0 qu'elle est fausse. Le tableau ci-dessus représente donc l'opération logique ET, ou conjonction. 
+Dans le tableau qui précède, si on reprend notre exemple de la piscine, on pourrait dire que A représente "il fait beau", B représente "mes amies m'accompagnent", et le résultat Q est "je vais à la piscine". 1 signifie qu'une proposition est vraie, 0 qu'elle est fausse. Le tableau ci-dessus représente donc l'opération logique ET, ou {glo}`conjonction|conjonction`. 
 
 ```{panels}
 :column: col-lg
@@ -144,15 +141,15 @@ https://booleangame.com/
 
 ## La construction de la mémoire
 
-Les transistors, les portes logiques et leur représentation en tables de vérités, permettent de manipuler des 0 et des 1 au niveau physique. Tant qu'un courant électrique se déplace dans nos circuits, nous sommes capables de le transformer, de le laisser passer ou de l'arrêter, dans le but d'exprimer des portes "ouvertes" ou des portes "fermées" et donc des nombres binaires.  
+Les {glo}`transistor|transistors`, les {glo}`portelogique|portes logiques` et leur représentation en {glo}`tableverite|tables de vérités`, permettent de manipuler des 0 et des 1 au niveau physique. Tant qu'un courant électrique se déplace dans nos {glo}`circuit|circuits`, nous sommes capables de le transformer, de le laisser passer ou de l'arrêter, dans le but d'exprimer des portes "ouvertes" ou des portes "fermées" et donc des nombres binaires.  
 
-Mais comment faire pour stocker cette information ?
+Mais comment faire pour {glo}`stockage|stocker` cette information ?
 
-Pour comprendre comment la mémoire des ordinateurs fonctionne, il faut commencer par la classer en deux grandes catégories. La mémoire **volatile**, et la mémoire **non volatile**. La mémoire **volatile** s'efface quand la machine et éteinte. La mémoire **non volatile**, elle, persiste. Si votre smartphone s'éteint alors que vous êtes en train de retoucher une photo, ces retouches disparaissent. Elles étaient stockées sur la mémoire **volatile**. Par contre, au moment où vous avez sauvegardé ces retouches, elles s'inscrivent dans la mémoire **non volatile**. 
+Pour comprendre comment la {glo}`stockage|mémoire` des ordinateurs fonctionne, il faut commencer par la classer en deux grandes catégories. La {glo}`memvolatile|mémoire volatile`, et la {glo}`memnonvolatile|mémoire non volatile`. La {glo}`memvolatile|mémoire volatile` s'efface quand la machine et éteinte. La {glo}`memnonvolatile|mémoire non volatile`, elle, persiste. Si votre smartphone s'éteint alors que vous êtes en train de retoucher une photo, ces retouches disparaissent. Elles étaient stockées sur la {glo}`memvolatile|mémoire volatile`. Par contre, au moment où vous avez sauvegardé ces retouches, elles s'inscrivent dans la {glo}`memnonvolatile|mémoire non volatile`. 
 
 ## Les verrous informatiques
 
-Certains circuits sont construits pour "bloquer" une information, ce qui nous permet de la garder en mémoire, tant que le circuit est alimenté par l'électricité. On appelle ces circuits des **verrous**. Le plus élémentaire est le verrou S-R, pour "set", "reset", en anglais. 
+Certains circuits sont construits pour "bloquer" une information, ce qui nous permet de la garder en mémoire, tant que le circuit est alimenté par l'électricité. On appelle ces circuits des {glo}`verrou|verrous`. Le plus élémentaire est le verrou S-R, pour "set", "reset", en anglais. 
 
 ```{logic}
 :height: 150
