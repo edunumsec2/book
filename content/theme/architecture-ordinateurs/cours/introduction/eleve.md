@@ -1,6 +1,10 @@
 # Introduction
 
+<<<<<<< HEAD
 Dans ce chapitre, nous aborderons la question de l'architecture des ordinateurs, c'est à dire les multiples couches physiques qui rendent possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
+=======
+Dans ce chapitre, nous aborderons la question de l'**architecture des ordinateurs**, c'est à dire les multiples couches physiques qui rendent possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
+>>>>>>> parent of f3da61f (changement glossaire)
 
 Comme vous avez pu le voir dans le chapitre lié à la **représentation de l'information** tout ce qui apparaît sur votre écran n'est qu'une suite de 0 et de 1. Pour comprendre comment ces **nombres binaires** sont traités par l'ordinateur, il faut avoir en tête que les ordinateurs sont construits en plusieurs **couches** successives, comme un mille feuille, dont chacune possède ses propres règles. 
 

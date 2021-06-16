@@ -1,9 +1,12 @@
 (programmation)=
 Programmation
 ========================
+ 
+
+## Le but
 
  
-Les ordinateurs ne comprennent pas le langage humain. Les circuits électroniques qui leur permettent de manipuler une grande quantité d'information en peu de temps ne peuvent traiter que des 0 et des 1. Pour pouvoir donner des ordres à l'ordinateur, nous devons utiliser des _langages de programmation_ qui, grâce à leur syntaxe <span commented>particulière</span><!-- REVIEW/JPP: stricte et non ambiguë -->, peuvent à la fois être compris des humains et traités par un ordinateur.
+Malheureusement, les ordinateurs ne comprennent pas le langage humain. Les circuits électroniques qui leur permettent de manipuler une grande quantité d'information en peu de temps ne peuvent traiter que des 0 et des 1. Pour pouvoir donner des ordres à l'ordinateur, nous devons utiliser des _langages de programmation_ qui, grâce à leur syntaxe <span commented>particulière</span><!-- REVIEW/JPP: stricte et non ambiguë -->, peuvent à la fois être compris des humains et traités par un ordinateur.
  
 
 ## Le fonctionnement
