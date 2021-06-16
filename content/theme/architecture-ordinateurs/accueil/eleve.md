@@ -2,6 +2,9 @@
 Architecture des ordinateurs
 ===========================
 
+<!-- <iframe src='https://timeline.knightlab.com/examples/houston/index.html' width='600' height='600' frameborder='0'></iframe> -->
+
+
 L'ENIAC, l'un des tout premiers ordinateurs opérationnels, conçu en 1945, à la fin de la IIème Guerre Mondiale, pour calculer des trajectoires de missiles, était constitué de 17'468 tubes électroniques de la taille d'une main, qui cassaient en moyenne une fois par semaine.  Il s'étendait sur 170 mètres carrés et pesait plus de 25 tonnes. Il était capable d'exécuter environ 5'000 opérations par seconde. 
 
 L'iPhone X, pour un poids de 147 grammes, exécute environ 600 milliards d'opérations par seconde. 

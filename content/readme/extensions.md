@@ -10,14 +10,14 @@ Les sources sont situées dans le dossier `config/extensions/`.
 
 Syntaxe pour une référence à un mot du glossaire:
 
-````{code-block} markdown
+````{code-block} text
 {glo}`economieattention|L'économie d'attention` présente...
 Cette {glo}`economieattention@1|économie d'attention`...
 ````
 
 Pour insérer la définition dans son propre encart:
 
-````{code-block} markdown
+````{code-block} text
 ```{definition} economieattention@1
 ```
 ````
@@ -26,7 +26,7 @@ Pour insérer la définition dans son propre encart:
 
 Pour afficher une partie du contenu uniquement pour la version élève:
 
-````{code-block} markdown
+````{code-block} text
 ```{role} eleve
 Ce contenu ne sera visible que pour la version `eleve`.
 ```
@@ -34,7 +34,7 @@ Ce contenu ne sera visible que pour la version `eleve`.
 
 De façon similaire, pour afficher une partie du contenu uniquement pour la version maître:
 
-````{code-block} markdown
+````{code-block} text
 ```{role} prof
 Ce contenu ne sera visible que pour la version `prof`.
 ```
@@ -55,7 +55,7 @@ Je pense qu'il y en a {f}`2`, {f}`4`, {v}`8` ou {f}`64`.
 
 `````{tabbed} Code
 
-````{code-block} markdown
+````{code-block} text
 ```{question}
 Combien y a t'il de bits dans un octet ?
 Je pense qu'il y en a {f}`2`, {f}`4`, {v}`8` ou {f}`64`.
@@ -64,7 +64,7 @@ Je pense qu'il y en a {f}`2`, {f}`4`, {v}`8` ou {f}`64`.
 `````
 
 Il est possible de changer le titre affiché au dessus de la question.
-Le contenu de la question peut lui-même être structuré en Markdown.
+Le contenu de la question peut lui-même être structuré en text.
 Dans l'exemple ci-dessous, les réponses sont affichées dans une liste.
 
 `````{tabbed} Aperçu
@@ -80,7 +80,7 @@ Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turin
 
 `````{tabbed} Code
 
-````{code-block} markdown
+````{code-block} text
 ```{question} Question avec un titre personnalisé
 Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turing ?
 * {v}`Barbara Liskov`
@@ -110,7 +110,7 @@ Parmi les personnes suivantes, laquelle ou lesquelles sont à l'origine du Web ?
 
 `````{tabbed} Code
 
-````{code-block} markdown
+````{code-block} text
 ```{question}
 :multi: 
 Parmi les personnes suivantes, laquelle ou lesquelles sont à l'origine du Web ?
@@ -133,7 +133,7 @@ Dans le texte suivant, certains {bl}`>mots|trucs|machins` sont laissés {bl}`pou
 `````
 
 `````{tabbed} Code
-```{code-block} markdown
+```{code-block} text
 Dans le texte suivant, certains {bl}`>mots|trucs|machins` sont laissés {bl}`pour compte|>blancs|verts|seuls`.
 ```
 `````
@@ -151,7 +151,7 @@ Par exemple, l'identifiant de la vidéo à l'URL `https://www.youtube.com/watch?
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{youtube} uHKfrz65KSU
 ```
 ````
@@ -172,7 +172,7 @@ L'option `:start:` attend en argument un nombre entier qui indique la seconde à
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{youtube} _OBlgSz8sSM
 :start: 18
 ```
@@ -191,7 +191,7 @@ Ils peuvent cependant être cachés via l'option `:nocontrols:`.
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{youtube} wGGqWwVb3sU
 :nocontrols:
 ```
@@ -211,7 +211,7 @@ Par exemple, l'identifiant de la vidéo à l'URL `https://tube.switch.ch/videos/
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{switchtube} f6365946
 ```
 ````
@@ -232,7 +232,7 @@ L'option `:start:` attend en argument un nombre entier qui indique la seconde à
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{switchtube} f6365946
 :start: 122
 ```
@@ -250,7 +250,7 @@ Il est possible d'ajouter l'option `:notitle` pour cacher le titre de la vidéo 
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{switchtube} f6365946
 :notitle:
 ```
@@ -268,7 +268,7 @@ La directive attend en argument l'identifiant de la vidéo (généralement 8 car
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{cnrs} pUV9f15n
 ```
 ````
@@ -289,7 +289,7 @@ print(double(int(input("x = "))))
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{codeplay}
 def double(x):
     return x + x
@@ -316,7 +316,7 @@ print(puissance(2, 10))
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{codeplay}
 :exec:
 def puissance(x, y):
@@ -342,7 +342,7 @@ print(puissance(2, 10))
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{codeplay}
 :static:
 def puissance(x, y):
@@ -369,7 +369,7 @@ print(puissance(2, 10))
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{codeplay}
 :nocontrols:
 def puissance(x, y):
@@ -394,7 +394,7 @@ print(puissance(2, 10))
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{codeplay}
 def puissance(x, y):
     return x ** y
@@ -421,7 +421,7 @@ test(puissance(2, 3) == 8, "Oups, ton implémentation est incorrecte.")
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{codeplay}
 def test(condition, erreur):
      if not condition:
@@ -461,7 +461,7 @@ test(puissance(2, 3) == 8, "Oups, ton implémentation est incorrecte.")
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{codeplay}
 ---
 hints: |

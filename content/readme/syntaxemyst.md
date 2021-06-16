@@ -17,7 +17,7 @@ Mon contenu
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{admonition} Aller plus loin
 :class: note
 Mon contenu
@@ -74,7 +74,7 @@ Contenus liés à des avertissements de maintenance du site, des problèmes renc
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{admonition} Aller plus loin
 :class: note
 Contenus qui suggèrent des prolongements. 
@@ -153,7 +153,7 @@ Pendant la Seconde Guerre mondiale, [**Claude Shannon**](https://fr.wikipedia.or
 ````
 `````
 ``````{tabbed} Code
-`````{code-block} markdown
+`````{code-block} text
 ````{panels}
 
 :img-top: images/accueil/gracehopper.jpeg
@@ -221,7 +221,7 @@ Voilà une image d'exemple avec une légende d'exemple
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{figure} media/syntaxemyst/gracehopper.jpeg
 ---
 alt: titreimage1
@@ -252,7 +252,7 @@ print('voilà un print')
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{code-block} python
 a = 2
 print('voilà un print')
@@ -282,7 +282,7 @@ print('voilà un deuxième print')
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{code-block} python
 ---
 lineno-start: 10
@@ -331,7 +331,7 @@ Hidden content
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ````{panels}
 Contenu du panel en haut à gauche
 
@@ -375,7 +375,7 @@ Pour de la <span style="color:red">couleur</span>, il est possible d'insérer de
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```html
 Pour de la <span style="color:red">couleur</span>, il est possible d'insérer de l'HTML directement dans le texte.
 ```
@@ -456,7 +456,7 @@ Flag Emojis
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ![Baby Yoda](media/syntaxemyst/babyyoda.gif)
 ````
 `````
@@ -519,7 +519,7 @@ L'application Google Maps du géant californien est un bel exemple de l'utilisat
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{panels}
 :column: col-lg
 🍿 Welcome to the Matrix
@@ -563,7 +563,7 @@ Ce document ne traite pas d'un sujet essentiel au plan d'études. C'est une pist
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{admonition} Important
 :class: caution
 N'oubliez pas d'installer la librairie PyGame si vous souhaitez réaliser les exercices de ce chapitre.
@@ -587,7 +587,7 @@ Voilà le contenu du dropdown. Attention ! Je ne sais pas pourquoi mais le dropd
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ::::{admonition,dropdown} Cliquez-ici
 Voilà le contenu du dropdown. Attention ! Je ne sais pas pourquoi mais le dropdown ne fonctionne que quand on utilise les ":", à la place des "`" pour déclarer notre encart...
 ::::
@@ -614,7 +614,7 @@ Ceci est un gif inutile (mais une légende super utile)
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{image} images/presentation/code.gif
 ```
 ```{figure} images/presentation/code.gif
