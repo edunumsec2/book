@@ -95,21 +95,6 @@
     - file: content/enjeux/fiches-complementaires/wikipedia/wikipedia
   - file: content/enjeux/bibliographie
 
-## README
-- part: README
-  numbered: false
-  chapters:
-  - file: content/readme/0_presentation-ressources
-    sections: 
-      - file: content/readme/exempleutilisation
-      - file: content/readme/modificationsressources
-      - file: content/readme/participation-developpement
-      - file: content/readme/syntaxemyst
-      - file: content/readme/extensions
-      - file: content/readme/glossaire
-      - file: content/readme/relectures
-      # - file: content/readme/redaction-bonnes-pratiques
-
 ## Annexes
 - part: Annexes
   numbered: false
