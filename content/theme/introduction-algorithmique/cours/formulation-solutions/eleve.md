@@ -1,5 +1,7 @@
-Formulation de solutions algorithmiques à des problèmes simples
-===============================================================
+<span style="color:rgb(92, 201, 169);font-weight:600; font-size:1.2em">Version du 20 avril 2021</span>
+
+De l’algorithme au programme
+============================
 
 ````{admonition} Matière à réfléchir II
 :class: attention
@@ -16,7 +18,7 @@ Demandez à un.e camarade de classe de suivre ces instructions. Est-ce que votre
 
 ````
 
-## De l’algorithme au programme
+## Formalisation et implémentation de solutions algorithmiques
 
 Une fois que l’on a déterminé le meilleur algorithme à utiliser, il faut le retranscrire dans un programme qu’une machine peut comprendre. Nous allons détailler ce processus pour l’algorithme du **tri par sélection**. 
 

@@ -1,5 +1,7 @@
-Conséquences de l'automatisation
-================================
+<span style="color:rgb(92, 201, 169);font-weight:600; font-size:1.2em">Version du 20 avril 2021</span>
+
+Conclusion
+==========
 
 ````{admonition} Pourquoi est-ce important ?
 :class: note
@@ -33,7 +35,7 @@ L’algorithme n’est pas un programme. L'algorithme peut être transcrit en un
 
 
 
-## Automatisation
+## Focus sur l'automatisation
 
 ```{figure} media/Automatisation_avant.png
 

@@ -1,5 +1,8 @@
-Algorithmes classiques
-======================
+<span style="color:rgb(92, 201, 169);font-weight:600; font-size:1.2em">Version du 20 avril 2021</span>
+
+Algorithmes de tris
+===================
+
 
 ````{admonition} Matière à réfléchir I
 :class: attention
@@ -14,7 +17,7 @@ Y a -t-il des objets que vous rangez chez vous dans un ordre bien particulier ?
 
 ````
 
-## Algorithmes de tris
+## Algorithmes de tri classiques
 
 Pour apprendre à cuisiner, on commence par suivre des recettes classiques. Ainsi, pour appréhender l’algorithmique, nous étudierons une classe d’algorithmes classiques : les **algorithmes de tri**. 
 
