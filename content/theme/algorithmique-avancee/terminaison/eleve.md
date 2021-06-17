@@ -1,3 +1,8 @@
+<span style="color:rgb(92, 201, 169);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
+
+Terminaison des algorithmes
+===========================
+
 ````{admonition} Matière à réfléchir I
 :class: attention
 
@@ -19,10 +24,8 @@ Corriger le programme pour qu’il s’arrête à 0.
 Qu’arrive-t-il lorsque l’on exécute la nouvelle version du  programme avec  la valeur -10 en entrée ou `compte_a_rebours(-10)` ?
 
 ````
-<span style="color:rgb(92, 201, 169);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
 
-Terminaison des algorithmes
-===========================
+## Principe de terminaison
 
 La **<span style="color:rgb(89, 51, 209)">terminaison</span>** est une propriété essentielle des algorithmes, qui garantit que les calculs de l’algorithme finiront par s’arrêter. Lorsque l’on conçoit un algorithme, il est important de faire en sorte que les calculs s’arrêtent à un moment donné. Cette garantie doit tenir pour toutes les entrées possibles. 
 Voici un exemple d’algorithme qui compte et ne se termine pas :

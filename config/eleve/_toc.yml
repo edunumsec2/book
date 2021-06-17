@@ -85,6 +85,7 @@ parts:
       - file: content/theme/algorithmique-avancee/complexite/eleve
       - file: content/theme/algorithmique-avancee/heuristiques/eleve
       - file: content/theme/algorithmique-avancee/conclusion/eleve
+      - file: content/theme/algorithmique-avancee/recursivite/eleve
   - file: content/theme/programmation-avancee/eleve
   - file: content/theme/projets/accueil/eleve
   - file: content/theme/reseaux/accueil/eleve
