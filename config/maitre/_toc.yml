@@ -1,8 +1,8 @@
 # Table of content
-- file: content/readme/README_pilote
-
-
-- part: Première année
+format: jb-book
+root: content/readme/README_pilote
+parts:
+- caption: Première année
   numbered: false
   chapters: 
   - file: content/theme/representation-information/cours/introduction/maitre
@@ -45,7 +45,7 @@
       - file: content/theme/architecture-ordinateurs/informatique-embarquee/maitre
       - file: content/theme/architecture-ordinateurs/histoire-informatique/maitre
 
-- part: Enjeux sociaux
+- caption: Enjeux sociaux
   numbered: false
   chapters:
   - file: content/enjeux/grandes-thematiques/grandes-thematiques
@@ -61,7 +61,7 @@
   - file: content/enjeux/bibliographie
 
 ## Annexes
-- part: Annexes
+- caption: Annexes
   numbered: false
   chapters: 
   - file: content/playground/maitre
@@ -70,7 +70,7 @@
       - file: content/playground/types
 
 ## README
-- part: README
+- caption: README
   numbered: false
   chapters:
   - file: content/readme/0_presentation-ressources
