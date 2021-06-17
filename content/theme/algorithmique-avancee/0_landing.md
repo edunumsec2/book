@@ -1,7 +1,7 @@
 <span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
 
-Algorithmique avancée
-=====================
+Algorithmique II
+================
 
 Nous avons vu que pour résoudre un problème, il faut commencer par le décomposer en sous-problèmes. Pour chaque sous-problème à résoudre, on décrit les opérations à réaliser sous la forme d’un algorithme. Il existe une multitude d’algorithmes pour résoudre un problème, mais ils ne se valent pas tous. 
 

@@ -1,5 +1,5 @@
 (algorithmique)=
-Algorithmique
+Algorithmique I
 ==============================
 
 <!-- Quand on cherche ses clés, on commence par fouiller ses poches. Si elles n'y sont pas, on va regarder en surface dans plusieurs pièces de la maison, pour voir si elles ne traîneraient pas quelque part. Si on ne les trouve toujours pas, on finit par refaire le même chemin en boucle, mais en cherchant toujours plus profond dans nos poches, dans nos vestes, dans nos tiroirs, et ainsi de suite jusqu'à les trouver. Pourquoi ne pas avoir commencé par fouiller à fond le premier tiroir rencontré ? Pourquoi ne pas s'être restreint dès le début à ne chercher que dans une pièce mais en soulevant le moindre objet pour voir si elles n'étaient pas dessus ? 
