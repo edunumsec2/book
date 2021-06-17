@@ -1,8 +1,10 @@
+<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
+
 
 Focus sur la récursivité
 ========================
 
-Nous allons maintenant programmer l’algorithme du tri par fusion. Pour rappel, dans sa première phase l’algorithme divise le tableau par deux, comme illustré dans les figures du tri à fusion :
+Nous allons maintenant programmer l’algorithme du tri par fusion. Pour rappel, dans sa première phase l’algorithme divise le tableau par deux, comme illustré dans la <a href="../complexite/eleve.html#diviser">Figure **Diviser**</a> du tri à fusion :
 
 ```{code-block} python
 def tri_fusion(elements):
@@ -56,7 +58,7 @@ Schéma d’une fonction récursive
 
 Le deuxième ingrédient indispensable à toute fonction récursive est la **<span style="color:rgb(13, 204, 166)">condition d’arrêt</span>** : à quel moment tous ces appels imbriqués les uns dans les autres doivent-ils s’arrêter ? Sans cette condition, le programme ne s’arrête jamais. Il est important que la condition d’arrêt précède l’appel à la fonction récursive. Pourquoi ?
 
-A la fin du programme, nous avons rajouté une ligne de code qui correspond à la deuxième phase de l’algorithme – à la fusion des deux listes triées (voir la 2e figure du tri fusion). Il faut maintenant définir cette fonction `fusion`, que nous allons également définir de manière récursive.
+A la fin du programme, nous avons rajouté une ligne de code qui correspond à la deuxième phase de l’algorithme – à la fusion des deux listes triées (voir la <a href="../complexite/eleve.html#fusionner">Figure **Fusionner**</a> du tri fusion). Il faut maintenant définir cette fonction `fusion`, que nous allons également définir de manière récursive.
 
 ```{code-block} python
 
@@ -114,7 +116,8 @@ def fusion(elements_gauche, elements_droite):
 
 Ces deux fonctions implémentent l’algorithme de tri par fusion de manière récursive. La récursivité est un concept difficile à appréhender. Le mieux c’est d’essayer de coder des algorithmes récursifs et d’afficher ce qui se passe au fur et à mesure.
 
-````{admonition}  Exercice 13 ![](media/plugged.png)
+
+````{admonition}  Exercice 13 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)
 :class: note
 
 La fonction factorielle `n!` en mathématiques est le produit de tous les nombres entiers jusqu’à `n`. C’est une des fonctions les plus simples à calculer de manière récursive. Elle peut être définie comme ceci :
@@ -125,7 +128,52 @@ Programmer cette fonction de manière récursive en Python. Proposer également 
 
 ````
 
-````{admonition}  Exercice 14 ![](media/plugged.png)
+
+`````{admonition} Solution de l'exercice 13
+:class: hint
+
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+
+Voici une implémentation en Python de la fonction factorielle où la fonction fait appel à elle-même, sans oublier la condition d’arrêt  :
+
+```{codeplay}
+# fonction factorielle (définition récursive)
+def factorielle_recursive(nombre):
+
+	if nombre == 1:
+		res = 1
+	else:
+		res = nombre * factorielle_recursive(nombre-1)
+
+	return res
+
+res = factorielle_recursive(5)
+print(res)
+
+```
+
+Voici une implémentation en Python de la fonction factorielle qui n’est pas récursive :
+
+```{codeplay}
+
+def factorielle(nombre):
+	res = 1
+	for n in range(2,nombre+1) :
+		res = res * n
+	return res
+
+res = factorielle(5)
+print(res)
+
+```
+````
+`````
+
+
+
+````{admonition}  Exercice 14 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)
+:class: note
 
 En Python, proposer une fonction qui inverse l’ordre des lettres dans un mot. Vous pouvez parcourir les lettres du mot directement ou à travers un indice.
 
@@ -133,7 +181,47 @@ Proposer une autre fonction qui inverse l’ordre des lettres dans un mot de man
 
 ````
 
-````{admonition} Exercice 15 ![](media/plugged.png)
+
+`````{admonition} Solution de l'exercice 14
+:class: hint
+
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+
+Voici plusieurs implémentations itératives et une récursive de la fonction qui inverse un mot :
+
+```{codeplay}
+
+def inverser_mot_iteratif(mot) :
+	mot_inverse = ""
+	for lettre in mot :
+		mot_inverse = lettre + mot_inverse
+	return mot_inverse
+
+def inverser_mot_iteratif_2(mot) :
+	mot_inverse = ""
+	for indice in range(len(mot)-1,-1,-1) :
+		mot_inverse += mot[indice] 
+	return mot_inverse
+
+def inverser_mot_recursif(mot) :
+	if len(mot) == 1:
+		return mot
+	else :
+		return inverser_mot_recursif(mot[1:]) + mot[0] 
+
+un_mot = "mot"
+
+print(inverser_mot_iteratif(un_mot))
+print(inverser_mot_iteratif_2(un_mot))
+print(inverser_mot_recursif(un_mot))
+
+```
+````
+`````
+
+
+````{admonition} Exercice 15 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)
 :class: note
 
 Les fractales sont des objets géométriques, dont la définition récursive est naturelle. Essayer le code suivant pour différentes valeurs de `n` (augmenter à chaque fois de 1). 
@@ -185,7 +273,7 @@ turtle.exitonclick()	 # garde la fenêtre ouverte
 ````
 
 
-````{admonition} Exercice 16 ![](media/plugged.png)
+````{admonition} Exercice 16 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)
 :class: note
 
 
@@ -193,83 +281,12 @@ Implémenter l’algorithme du tri rapide de manière récursive, puis comparer 
 
 ````
 
-## Solutions des exercices
 
-````{admonition} Solutions de l'exercice 13
-:class: note
+`````{admonition} Solution de l'exercice 16
+:class: hint
 
-Voici une implémentation en Python de la fonction factorielle où la fonction fait appel à elle-même, sans oublier la condition d’arrêt  :
-
-```{codeplay}
-# fonction factorielle (définition récursive)
-def factorielle_recursive(nombre):
-
-	if nombre == 1:
-		res = 1
-	else:
-		res = nombre * factorielle_recursive(nombre-1)
-
-	return res
-
-res = factorielle_recursive(5)
-print(res)
-
-```
-
-Voici une implémentation en Python de la fonction factorielle qui n’est pas récursive :
-
-```{codeplay}
-
-def factorielle(nombre):
-	res = 1
-	for n in range(2,nombre+1) :
-		res = res * n
-	return res
-
-res = factorielle(5)
-print(res)
-
-```
-
-````
-
-````{admonition} Solution de l'exercice 14
-:class: note
-
-Voici plusieurs implémentations itératives et une récursive de la fonction qui inverse un mot :
-
-```{codeplay}
-
-def inverser_mot_iteratif(mot) :
-	mot_inverse = ""
-	for lettre in mot :
-		mot_inverse = lettre + mot_inverse
-	return mot_inverse
-
-def inverser_mot_iteratif_2(mot) :
-	mot_inverse = ""
-	for indice in range(len(mot)-1,-1,-1) :
-		mot_inverse += mot[indice] 
-	return mot_inverse
-
-def inverser_mot_recursif(mot) :
-	if len(mot) == 1:
-		return mot
-	else :
-		return inverser_mot_recursif(mot[1:]) + mot[0] 
-
-un_mot = "mot"
-
-print(inverser_mot_iteratif(un_mot))
-print(inverser_mot_iteratif_2(un_mot))
-print(inverser_mot_recursif(un_mot))
-
-```
-
-````
-
-````{admonition} Solution de l'exercice 16
-:class: note
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
 
 ```{codeplay}
 
@@ -316,24 +333,10 @@ elements=list(range(10,0,-1))
 print(tri_fusion(elements))
 
 ```
-
 ````
+`````
 
 
 
-*******************
-*******************
 
 
-````{admonition} Matière à réfléchir VI
-:class: attention
-
-Vous avez décidé de faire le tour du monde. Choisissez 5 pays que vous souhaitez visiter et placez-les sur une carte. Essayez de trouver le meilleur itinéraire pour visiter ces 5 pays. Quels critères avez-vous pris en compte pour décider du meilleur itinéraire, c’est-à-dire un itinéraire qui minimise la distance parcourue ?
-
-Vous avez décidé de visiter 10 pays. Est-ce qu’il est aussi facile de trouver un itinéraire optimal ?
-
-Imaginez que vous souhaitez visiter plus de la moitié des pays du monde, environ 100. Combien y a-t‑il d’itinéraires possibles ?  Comment s’appelle ce nombre ?
-
-Si le calcul d’un itinéraire prenait 1 milliseconde, combien de temps faudrait-il pour trouver la meilleure solution en énumérant toutes les solutions possibles ? Pour comparaison, le nombre d’atomes dans l’univers est d’ordre 10<sup>80</sup>.
-
-````

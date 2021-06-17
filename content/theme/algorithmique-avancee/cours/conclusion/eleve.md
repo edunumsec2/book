@@ -50,22 +50,24 @@ Pour des problèmes difficiles, s’il est impossible de trouver la solution exa
 ```{admonition} A retenir
 :class: danger
 
-Il est important de garantir qu’un algorithme va se terminer pour être utile en pratique.
+Il est important de garantir qu’un algorithme va se **<span style="color:rgb(89, 51, 209)">terminer</span> pour être utile en pratique.
 
-Les algorithmes de tri rapide et de tri par fusion sont plus efficaces que les algorithmes de tri vus précédemment. Ceci est possible grâce à la stratégie algorithmique « diviser pour régner », qui divise un grand problème difficile à résoudre en plein de petits sous-problèmes plus faciles à résoudre. La solution au grand problème s’obtient en combinant les solutions des petits problèmes. 
+Les algorithmes de tri rapide et de tri par fusion sont plus efficaces que les algorithmes de tri vus précédemment. Ceci est possible grâce à la stratégie algorithmique **<span style="color:rgb(89, 51, 209)">« diviser pour régner »</span>, qui divise un grand problème difficile à résoudre en plein de petits sous-problèmes plus faciles à résoudre. La solution au grand problème s’obtient en combinant les solutions des petits problèmes. 
 
-L’ordre de complexité des algorithmes nous dit si un algorithme est lent ou rapide. Un algorithme  avec un ordre de complexité logarithmique est plus rapide qu’un algorithme avec complexité linéaire, qui en retour est plus rapide qu’un algorithme de complexité quadratique.
+L’**<span style="color:rgb(89, 51, 209)">ordre de complexité des algorithmes</span> nous dit si un algorithme est lent ou rapide. Un algorithme  avec un ordre de complexité logarithmique est plus rapide qu’un algorithme avec complexité linéaire, qui en retour est plus rapide qu’un algorithme de complexité quadratique.
 
-Une fonction récursive est une fonction qui fait appel à soi-même. Une condition d’arrêt est nécessaire pour que l’algorithme se termine.
+Une **<span style="color:rgb(89, 51, 209)">fonction récursive</span>** est une fonction qui fait appel à soi-même. Une condition d’arrêt est nécessaire pour que l’algorithme se termine.
 
-Un algorithme avec un ordre de complexité exponentielle implique que le temps nécessaire pour résoudre un problème est trop long en pratique. Dans ce cas, on ne va pas pouvoir trouver une solution exacte, mais seulement une solution approchée en utilisant des méthodes heuristiques.
+Un algorithme avec un ordre de **<span style="color:rgb(89, 51, 209)">complexité exponentielle</span>** implique que le temps nécessaire pour résoudre un problème est trop long en pratique. Dans ce cas, on ne va pas pouvoir trouver une solution exacte, mais seulement une solution approchée en utilisant des méthodes heuristiques.
 
 ```
 
 ```{admonition} Je veux en savoir plus
 :class: hint
 
-**Visualisation de problèmes** 
+<br>
+
+**<span style="color:rgb(13, 204, 166)">Visualisation de problèmes</span>** 
 
 https://visualgo.net/en
 
@@ -73,7 +75,7 @@ https://interstices.info/le-probleme-du-sac-a-dos/
 
 https://clementmihailescu.github.io/Pathfinding-Visualizer/
 
-**Problèmes difficiles**
+**<span style="color:rgb(13, 204, 166)">Problèmes difficiles</span>**
 
 https://www.franceculture.fr/emissions/le-journal-des-sciences/le-journal-des-sciences-du-mardi-01-decembre-2020
 
@@ -81,7 +83,7 @@ https://www.bfmtv.com/sciences/ou-est-charlie-l-algorithme-pour-le-detecter-du-p
 
 https://www.lebigdata.fr/algorithme-definition-tout-savoir
 
-**P = NP ?**
+**<span style="color:rgb(13, 204, 166)">P = NP ?</span>**
 
 https://www.youtube.com/watch?v=AgtOCNCejQ
 

@@ -47,8 +47,18 @@ Si on exécute cet algorithme, le programme ne s’arrête jamais : `i` est incr
 
 Retranscrire l’algorithme infini en programme. Après combien de boucles le programme s’arrête‑t‑il ?
 
-La solution est donnée dans le texte ci-dessous.
 ```
+
+````{admonition} Solution de l'exercice 0
+:class: hint
+
+```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+
+La solution de l'exercice est donnée directement dans le texte qui suit.
+
+```
+````
 
 Pour être certains que le programme finit par s’arrêter, nous pouvons le modifier ainsi :
 
@@ -63,12 +73,21 @@ Pour être certains que le programme finit par s’arrêter, nous pouvons le mod
  ```
 
  ```{admonition} Exercice 1
-:class: note
 
 L’algorithme ci-dessus est appelé « Algorithme qui compte toujours infini ». Pourquoi est-il toujours infini ? Dans quel cas cet algorithme ne s’arrête jamais ?
 
-La solution est donnée dans le texte ci-dessous.
 ```
+
+````{admonition} Solution de l'exercice 1
+:class: hint
+
+```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+
+La solution de l'exercice est donnée directement dans le texte qui suit.
+
+```
+````
 
 Dans la version ci-dessus, si l’utilisateur entre une valeur plus grande que 10000, ou encore une valeur à virgule, l’algorithme ne s’arrête jamais. Pour le programmeur il peut être implicite qu’un décompte se fait toujours avec des nombres entiers, mais il doit prendre des précautions face à l’utilisateur. Voici une version d’un algorithme de décompte qui s’arrête :  
 

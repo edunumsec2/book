@@ -24,7 +24,7 @@ Une fois que l’on a déterminé le meilleur algorithme à utiliser, il faut le
 
 Cet algorithme consiste à parcourir la liste à trier plusieurs fois. A chaque itération, on sélectionne le plus petit élément et on l’échange avec le premier élément de la liste non triée. Comment pourrait-on traduire ceci en Python ? Comment représenter ces rectangles dans un langage de programmation ? 
 
-Tout d’abord, il faut représenter la taille des rectangles numériquement. On peut par exemple représenter l’ordre des rectangles de la première ligne de la Figure 3, en fonction de leur taille, dans une liste nommée  rect:
+Tout d’abord, il faut représenter la taille des rectangles numériquement. On peut par exemple représenter l’ordre des rectangles de la première ligne de la <a href="../algorithmes-classiques/eleve.html#fig-trier">Figure **Trier**</a>, en fonction de leur taille, dans une liste nommée  rect:
 
 ```
 rect = [3,4,1,2,6,5]
@@ -152,14 +152,7 @@ Mais est-ce que derrière chaque programme se cache un algorithme ?
 
 
 
-
-
-
-
-
-
-
-## Exercices supplémentaires
+## Exercices 
 
 ````{admonition} Exercice 16
 :class: note
