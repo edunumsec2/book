@@ -1,4 +1,4 @@
-<span style="color:rgb(92, 201, 169);font-weight:600; font-size:1.2em">Version du 20 avril 2021</span>
+<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 20 avril 2021</span>
 
 De l’algorithme au programme
 ============================
@@ -6,21 +6,21 @@ De l’algorithme au programme
 ````{admonition} Matière à réfléchir II
 :class: attention
 
-Pensez à un lieu connu à proximité. Ecrivez les étapes à suivre pour s’y rendre, sans mentionner le lieu. Vous ne pouvez utiliser que les instructions : **avancer, tourner (à gauche ou à droite).**
+Pensez à un lieu connu à proximité. Ecrivez les étapes à suivre pour s’y rendre, sans mentionner le lieu. Vous ne pouvez utiliser que les instructions : **<span style="color:rgb(89, 51, 209)">avancer, tourner (à gauche ou à droite).</span>**
 
 Demandez à un.e camarade de classe de suivre ces instructions. Est-ce que votre camarade arrive à deviner à quel endroit il/elle s’est rendu.e ?
 
-**Si non** : essayez de comprendre à quel moment il/elle s’est perdu.e. Adaptez votre algorithme en fonction. 
+**<span style="color:rgb(89, 51, 209)">Si non</span>** : essayez de comprendre à quel moment il/elle s’est perdu.e. Adaptez votre algorithme en fonction. 
 
-**Si oui** : reformulez vos instructions en utilisant les mots-clés **si (if), sinon (else), tant que (while)**.
+**<span style="color:rgb(89, 51, 209)">Si oui</span>** : reformulez vos instructions en utilisant les mots-clés **<span style="color:rgb(89, 51, 209)">si (if), sinon (else), tant que (while)</span>**.
 
-[Optionnel] Imaginez que votre camarade peut uniquement **avancer de 1m tout droit** et **tourner de 30 degrés**. Reformulez votre solution en utilisant le mot clé **répéter**.
+[Optionnel] Imaginez que votre camarade peut uniquement **<span style="color:rgb(89, 51, 209)">avancer de 1m tout droit</span>** et **<span style="color:rgb(89, 51, 209)">tourner de 30 degrés</span>**. Reformulez votre solution en utilisant le mot clé **<span style="color:rgb(89, 51, 209)">répéter</span>**.
 
 ````
 
 ## Formalisation et implémentation de solutions algorithmiques
 
-Une fois que l’on a déterminé le meilleur algorithme à utiliser, il faut le retranscrire dans un programme qu’une machine peut comprendre. Nous allons détailler ce processus pour l’algorithme du **tri par sélection**. 
+Une fois que l’on a déterminé le meilleur algorithme à utiliser, il faut le retranscrire dans un programme qu’une machine peut comprendre. Nous allons détailler ce processus pour l’algorithme du **<span style="color:rgb(89, 51, 209)">tri par sélection</span>**. 
 
 Cet algorithme consiste à parcourir la liste à trier plusieurs fois. A chaque itération, on sélectionne le plus petit élément et on l’échange avec le premier élément de la liste non triée. Comment pourrait-on traduire ceci en Python ? Comment représenter ces rectangles dans un langage de programmation ? 
 
@@ -96,7 +96,7 @@ for j in range(0,len(rect)-1):
     rect[j], rect[indice_min] = rect[indice_min], rect[j]
 ```
 
-Le principal avantage de cette ***factorisation*** (réécriture) est que maintenant notre code fonctionne pour toutes les longueurs de listes. Nous n’avons plus besoin de savoir à l’avance combien d’éléments sont contenus dans la liste (combien de fois répéter les opérations). Au lieu de répéter le code un nombre prédéterminé de fois, le code s’exécute autant de fois qu’il y a d’éléments dans la liste (moins 1, car on compare toujours 2 éléments).
+Le principal avantage de cette ***<span style="color:rgb(13, 204, 166)">factorisation</span>*** (réécriture) est que maintenant notre code fonctionne pour toutes les longueurs de listes. Nous n’avons plus besoin de savoir à l’avance combien d’éléments sont contenus dans la liste (combien de fois répéter les opérations). Au lieu de répéter le code un nombre prédéterminé de fois, le code s’exécute autant de fois qu’il y a d’éléments dans la liste (moins 1, car on compare toujours 2 éléments).
 
 L’étape suivante consiste à encapsuler tout le code dans une fonction qui reçoit la liste comme paramètre, afin de le rendre utilisable par différents programmes sans avoir à copier-coller le code. Cela permet aussi en cas d’erreur de facilement corriger la fonction, sans avoir à savoir où elle a été utilisée.
 

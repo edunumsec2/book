@@ -30,7 +30,7 @@ A la fin de ce chapitre, vous saurez ce qu'est un algorithme et vous serez capab
 {fa}`check, text-success mr-1`Être capable de transcrire un algorithme dans un programme.
 
 
-<!-- {fa}`check, text-success mr-1`Pouvoir déterminer quelle est la meilleure solution pour un problème donné, en fonction de critères objectifs.   -->
+
 
 
 ````{panels}

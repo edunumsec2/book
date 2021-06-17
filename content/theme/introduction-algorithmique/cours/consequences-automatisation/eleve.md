@@ -1,4 +1,4 @@
-<span style="color:rgb(92, 201, 169);font-weight:600; font-size:1.2em">Version du 20 avril 2021</span>
+<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 20 avril 2021</span>
 
 Conclusion
 ==========
@@ -45,11 +45,11 @@ Usine du début du siècle dernier. Les machines sont au service des ouvriers.
 
 Grâce aux algorithmes, la machine a pu remplacer l’homme dans de nombreuses tâches, en allant des robots constructeurs d’automobiles (comparez les deux images) aux pilotes d’avion automatiques, ou encore aux logiciels de trading. L’automatisation permet aux employés de se concentrer sur des tâches plus valorisantes et permet aux entreprises  de réaliser des économies. 
 
-**Quelles difficultés voyez-vous dans l’automatisation ?**
+**<span style="color:rgb(89, 51, 209)">Quelles difficultés voyez-vous dans l’automatisation ?</span>**
 
 Selon la chasseuse de têtes Isabelle Rouhan, 85 % des métiers de 2030 n’ont pas encore été inventés.  
 
-**Souhaiteriez-vous devenir neuro-manageur.euse ou éducateur.rice de robots ?**
+**<span style="color:rgb(89, 51, 209)">Souhaiteriez-vous devenir neuro-manageur.euse ou éducateur.rice de robots ?</span>**
 
 ```{figure} media/Automatisation_apres.png
 

@@ -1,4 +1,4 @@
-<span style="color:rgb(92, 201, 169);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
+<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
 
 Solutions heuristiques
 ======================
@@ -9,7 +9,7 @@ Comment procéderiez-vous pour résoudre ce problème ? Prenez le temps d’imag
 
 L’algorithme le plus simple pour résoudre ce problème consiste à énumérer les différentes possibilités de contenus du sac, l’une après l’autre, et de calculer pour chacune la valeur totale. A la fin de l’algorithme il suffit de sélectionner la combinaison qui à la valeur totale la plus grande. Pour 10 objets, combien de combinaisons possibles existe-t-il ? Pour chaque objet, on a deux choix possibles : le mettre dans le sac ou de ne pas le mettre dans le sac. *To put or not to put, that is the question.* Ces deux possibilités existent pour chacun des 10 objets. Donc le nombre de combinaisons possibles est le suivant :
 
-nbsp;nbsp;nbsp;nbsp; 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 = 2<sup>10</sup>
+&nbsp;&nbsp;&nbsp;&nbsp; 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 = 2<sup>10</sup>
 
 Pour `n` objets, le nombre de solutions possibles est de 2<sup>n</sup>. Si on a 2 objets, il y a 4 combinaisons différentes d’objets dans le sac.  Pour 3 objets, le nombre de combinaisons est 8. Pour 5 objets, nous avons 32 possibilités à explorer. Pour 10 objets, ce nombre monte à 1024. Pour 100 objets, ce nombre devient prohibitif et vaut 10<sup>30</sup>. Si on doit résoudre ce problème avec 270 objets sous la main, le nombre de combinaisons possibles dépasse le nombre d’atomes dans l’univers (10<sup>80</sup>). Si le calcul d’une combinaison prenait une microseconde, il nous faudrait pour résoudre ce problème bien plus que le temps de l’univers. Cela va de soi, nous n’avons pas ce temps à disposition.
 

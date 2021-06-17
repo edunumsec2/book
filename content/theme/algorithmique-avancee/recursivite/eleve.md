@@ -43,7 +43,7 @@ def tri_fusion(elements):
 	return fusion(elements_gauche, elements_droite)
 ```
 
-On appelle une fonction qui s’appelle elle-même une [**<span style="color:rgb(92, 201, 169)">fonction récursive</span>**. C’est une sorte de mise en abime ou une définition circulaire. Lorsqu’on entre dans la fonction, des opérations sont exécutées et on fait à nouveau [**<span style="color:rgb(92, 201, 169)">appel à la même fonction</span>**, mais avec d’autres éléments, afin de refaire les mêmes opérations (voir figure ci-dessous). 
+On appelle une fonction qui s’appelle elle-même une [**<span style="color:rgb(13, 204, 166)">fonction récursive</span>**. C’est une sorte de mise en abime ou une définition circulaire. Lorsqu’on entre dans la fonction, des opérations sont exécutées et on fait à nouveau [**<span style="color:rgb(13, 204, 166)">appel à la même fonction</span>**, mais avec d’autres éléments, afin de refaire les mêmes opérations (voir figure ci-dessous). 
 
 ```{figure} media/Recursivite.png
 ---
@@ -54,7 +54,7 @@ name : fig-rec
 Schéma d’une fonction récursive
 ```
 
-Le deuxième ingrédient indispensable à toute fonction récursive est la **<span style="color:rgb(92, 201, 169)">condition d’arrêt</span>** : à quel moment tous ces appels imbriqués les uns dans les autres doivent-ils s’arrêter ? Sans cette condition, le programme ne s’arrête jamais. Il est important que la condition d’arrêt précède l’appel à la fonction récursive. Pourquoi ?
+Le deuxième ingrédient indispensable à toute fonction récursive est la **<span style="color:rgb(13, 204, 166)">condition d’arrêt</span>** : à quel moment tous ces appels imbriqués les uns dans les autres doivent-ils s’arrêter ? Sans cette condition, le programme ne s’arrête jamais. Il est important que la condition d’arrêt précède l’appel à la fonction récursive. Pourquoi ?
 
 A la fin du programme, nous avons rajouté une ligne de code qui correspond à la deuxième phase de l’algorithme – à la fusion des deux listes triées (voir la 2e figure du tri fusion). Il faut maintenant définir cette fonction `fusion`, que nous allons également définir de manière récursive.
 

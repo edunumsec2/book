@@ -1,13 +1,13 @@
-<span style="color:rgb(92, 201, 169);font-weight:600; font-size:1.2em">Version du 20 avril 2021</span>
+<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 20 avril 2021</span>
 
 L'algorithme
 ============
 
 ## Résolution d'un problème par étapes
 
-Un **algorithme** est en quelque sorte « une recette » que l’on suit pour **résoudre un problème**. Voici quelques exemples de problèmes que l’on arrive à résoudre numériquement : calculer le trajet le plus rapide entre deux lieux, gérer les livres d’une bibliothèque, détecter des visages dans une photographie ou recommander des produits. ***L’algorithme n’est donc pas un programme***. Un algorithme ne se code pas, il ne s’exécute pas et il ne donne pas de solution concrète. L’algorithme décrit plutôt un « mode d’emploi » que l’on peut suivre pour créer un programme. C’est le programme qui sera exécuté par un système informatique pour concrètement résoudre le problème.
+Un **<span style="color:rgb(89, 51, 209)">algorithme</span>** est en quelque sorte « une recette » que l’on suit pour **<span style="color:rgb(89, 51, 209)">résoudre un problème</span>**. Voici quelques exemples de problèmes que l’on arrive à résoudre numériquement : calculer le trajet le plus rapide entre deux lieux, gérer les livres d’une bibliothèque, détecter des visages dans une photographie ou recommander des produits. ***<span style="color:rgb(13, 204, 166)">L’algorithme n’est donc pas un programme</span>***. Un algorithme ne se code pas, il ne s’exécute pas et il ne donne pas de solution concrète. L’algorithme décrit plutôt un « mode d’emploi » que l’on peut suivre pour créer un programme. C’est le programme qui sera exécuté par un système informatique pour concrètement résoudre le problème.
 
-Un mode d’emploi ou une recette décrivent **des étapes** à suivre. La préparation des ingrédients, la cuisson ou le service sont différentes étapes d’une recette de cuisine qu’une personne peut suivre pour réaliser un plat. Prenons un cas précis : ***réaliser une omelette***. Pour chaque étape de la préparation de l’omelette, il faut prévoir une marche à suivre suffisamment détaillée, afin que la personne qui suit la recette arrive au même résultat. Dans le cas de l’omelette, les opérations pourraient être (voir figure ci-dessous) : 
+Un mode d’emploi ou une recette décrivent **<span style="color:rgb(89, 51, 209)">des étapes</span>** à suivre. La préparation des ingrédients, la cuisson ou le service sont différentes étapes d’une recette de cuisine qu’une personne peut suivre pour réaliser un plat. Prenons un cas précis : ***<span style="color:rgb(13, 204, 166)">réaliser une omelette</span>***. Pour chaque étape de la préparation de l’omelette, il faut prévoir une marche à suivre suffisamment détaillée, afin que la personne qui suit la recette arrive au même résultat. Dans le cas de l’omelette, les opérations pourraient être (voir figure ci-dessous) : 
 
 1. Casser les oeufs dans un bol. 
 2. Mélanger les œufs jusqu’à obtenir un mélange homogène.
@@ -20,7 +20,7 @@ Les opérations à suivre pour la réalisation d’une omelette.
 
 ```
 
-Il en est de même pour l’algorithme qui **décompose le problème en sous-problèmes**. La solution de chaque sous-problème donne lieu à une étape que le système informatique peut suivre pour résoudre le sous-problème. L’algorithme décrit toutes les opérations qu'il faut effectuer pour arriver à un résultat. L’algorithme est donc **une suite d’opérations** qui permettent de résoudre un problème.  Le langage utilisé dans un algorithme est plus libre que celui utilisé dans un programme, comme le montre cet exemple :
+Il en est de même pour l’algorithme qui **<span style="color:rgb(89, 51, 209)">décompose le problème en sous-problèmes</span>**. La solution de chaque sous-problème donne lieu à une étape que le système informatique peut suivre pour résoudre le sous-problème. L’algorithme décrit toutes les opérations qu'il faut effectuer pour arriver à un résultat. L’algorithme est donc **<span style="color:rgb(89, 51, 209)">une suite d’opérations</span>** qui permettent de résoudre un problème.  Le langage utilisé dans un algorithme est plus libre que celui utilisé dans un programme, comme le montre cet exemple :
 
 ```
 Tableau Nombres : numérique
@@ -43,11 +43,11 @@ Que contient la variable résultat à la fin de l'algorithme ci-dessus ? Quel  p
 
 ### Les ingrédients d’un algorithme
 
-L’objectif d’un algorithme est de trouver la solution à un problème donné. Concrètement l’algorithme va utiliser des **données** qu’il reçoit ***en entrée*** et va retourner un **résultat** ***en sortie*** (la solution du problème). Un algorithme qui détecte les visages peut recevoir une image en entrée (les données) et peut répondre "oui" si l’image contient un visage ou "non" si l’image ne contient pas de visage (le résultat). Les données en entrée d’un algorithme qui traduit pourraient être un texte à traduire et un dictionnaire. L’algorithme traite ces données pour retourner en sortie un texte traduit dans une autre langue, dont le sens correspond au texte original.
+L’objectif d’un algorithme est de trouver la solution à un problème donné. Concrètement l’algorithme va utiliser des **<span style="color:rgb(89, 51, 209)">données</span>** qu’il reçoit ***<span style="color:rgb(13, 204, 166)">en entrée</span>*** et va retourner un **<span style="color:rgb(89, 51, 209)">résultat</span>** ***<span style="color:rgb(13, 204, 166)">en sortie</span>*** (la solution du problème). Un algorithme qui détecte les visages peut recevoir une image en entrée (les données) et peut répondre "oui" si l’image contient un visage ou "non" si l’image ne contient pas de visage (le résultat). Les données en entrée d’un algorithme qui traduit pourraient être un texte à traduire et un dictionnaire. L’algorithme traite ces données pour retourner en sortie un texte traduit dans une autre langue, dont le sens correspond au texte original.
 
-Entre l’entrée et la sortie, l’algorithme précise quelles **opérations** exécuter. Les opérations que l’on peut demander à un humain sont très différentes de celles d’un ordinateur. On peut demander à un humain de casser des oeufs, mais un ordinateur ne peut comprendre et réaliser cette opération. Par contre on peut demander à un ordinateur de stocker une valeur dans une variable, de comparer les valeurs de plusieurs variables, de parcourir de longues listes de données. Une fois l’algorithme conçu, les opérations qu’il décrit sont retranscrites en une suite d’instructions élémentaires, c’est-à-dire un programme exécutable par un ordinateur.
+Entre l’entrée et la sortie, l’algorithme précise quelles **<span style="color:rgb(89, 51, 209)">opérations</span>** exécuter. Les opérations que l’on peut demander à un humain sont très différentes de celles d’un ordinateur. On peut demander à un humain de casser des oeufs, mais un ordinateur ne peut comprendre et réaliser cette opération. Par contre on peut demander à un ordinateur de stocker une valeur dans une variable, de comparer les valeurs de plusieurs variables, de parcourir de longues listes de données. Une fois l’algorithme conçu, les opérations qu’il décrit sont retranscrites en une suite d’instructions élémentaires, c’est-à-dire un programme exécutable par un ordinateur.
 
-Le dernier ingrédient d’un algorithme, mais tout aussi important, est l’**ordre des opérations**. Dans l’exemple de l’omelette, on ne peut cuire les œufs avant de les avoir cassés, sans quoi on obtiendrait des oeufs durs. L’ordinateur a besoin de recevoir les instructions élémentaires à exécuter dans le bon ordre. Pour résumer, les ingrédients pour concevoir un algorithme sont les suivants : 
+Le dernier ingrédient d’un algorithme, mais tout aussi important, est l’**<span style="color:rgb(89, 51, 209)">ordre des opérations</span>**. Dans l’exemple de l’omelette, on ne peut cuire les œufs avant de les avoir cassés, sans quoi on obtiendrait des oeufs durs. L’ordinateur a besoin de recevoir les instructions élémentaires à exécuter dans le bon ordre. Pour résumer, les ingrédients pour concevoir un algorithme sont les suivants : 
 
 1. Des données en entrée
 2. Des opérations, dans un ordre précis
@@ -59,7 +59,7 @@ Schéma des ingrédients d'un algorithme.
 
 ```
 
-Notez que les opérations d’un algorithme doivent être précises et ***non ambigües***. Il doit y avoir une seule interprétation possible de l’algorithme. Une recette de cuisine ne serait pas assez précise pour un ordinateur : il faudrait indiquer précisément ce que température moyenne et mélange homogène veulent dire. Les êtres humains peuvent interpréter, deviner et supposer, mais pas les ordinateurs.
+Notez que les opérations d’un algorithme doivent être précises et ***<span style="color:rgb(13, 204, 166)">non ambigües</span>***. Il doit y avoir une seule interprétation possible de l’algorithme. Une recette de cuisine ne serait pas assez précise pour un ordinateur : il faudrait indiquer précisément ce que température moyenne et mélange homogène veulent dire. Les êtres humains peuvent interpréter, deviner et supposer, mais pas les ordinateurs.
 
 ````{admonition} Le saviez-vous ? I
 :class: hint

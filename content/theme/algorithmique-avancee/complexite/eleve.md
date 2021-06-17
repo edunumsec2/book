@@ -1,4 +1,4 @@
-<span style="color:rgb(92, 201, 169);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
+<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
 
 Complexité des algorithmes
 ==========================
@@ -641,40 +641,40 @@ On échange les positions du premier et du plus petit élément :
 
 On cherche le plus petit élément dans le tableau, en excluant l’élément que l’on vient de trier :
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, 6, 8, 7, 3, 9, 4, **<span style="color:rgb(89, 51, 209)">2</span>**, 5]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, 6, 8, 7, 3, 9, 4, **<span style="color:rgb(89, 51, 209)">2</span>**, 5]
 
 On échange sa position avec le 2e élément du tableau :
 
-&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(89, 51, 209)">2</span>**, 8, 7, 3, 9, 4, **<span style="color:rgb(89, 51, 209)">6</span>**, 5]
+&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(89, 51, 209)">2</span>**, 8, 7, 3, 9, 4, **<span style="color:rgb(89, 51, 209)">6</span>**, 5]
 
 Notez que les étapes qui changent l’ordre des éléments du tableau sont disposées à gauche. On cherche le plus petit élément du tableau non trié et on l’échange avec le troisième élément :
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(92, 201, 169)">2</span>**, 8, 7, **<span style="color:rgb(89, 51, 209)">3</span>**, 9, 4, 6, 5]	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(13, 204, 166)">2</span>**, 8, 7, **<span style="color:rgb(89, 51, 209)">3</span>**, 9, 4, 6, 5]	
 
-&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(92, 201, 169)">2</span>**, **<span style="color:rgb(89, 51, 209)">3</span>**, 7, **<span style="color:rgb(89, 51, 209)">8</span>**, 9, 4, 6, 5] 
+&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(13, 204, 166)">2</span>**, **<span style="color:rgb(89, 51, 209)">3</span>**, 7, **<span style="color:rgb(89, 51, 209)">8</span>**, 9, 4, 6, 5] 
 
 On continue de la sorte jusqu’à ce que tous les éléments soient triés (les éléments triés sont en vert) :
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(92, 201, 169)">2</span>**, **<span style="color:rgb(92, 201, 169)">3</span>**, 7, 8, 9, **<span style="color:rgb(89, 51, 209)">4</span>**, 6, 5]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(13, 204, 166)">2</span>**, **<span style="color:rgb(13, 204, 166)">3</span>**, 7, 8, 9, **<span style="color:rgb(89, 51, 209)">4</span>**, 6, 5]
 
-&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(92, 201, 169)">2</span>**, **<span style="color:rgb(92, 201, 169)">3</span>**, **<span style="color:rgb(89, 51, 209)">4</span>**, 8, 9, **<span style="color:rgb(89, 51, 209)">7</span>**, 6, 5]
+&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(13, 204, 166)">2</span>**, **<span style="color:rgb(13, 204, 166)">3</span>**, **<span style="color:rgb(89, 51, 209)">4</span>**, 8, 9, **<span style="color:rgb(89, 51, 209)">7</span>**, 6, 5]
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(92, 201, 169)">2</span>**, **<span style="color:rgb(92, 201, 169)">3</span>**,  **<span style="color:rgb(92, 201, 169)">4</span>**, 8, 9, 7, 6, **<span style="color:rgb(89, 51, 209)">5</span>**]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(13, 204, 166)">2</span>**, **<span style="color:rgb(13, 204, 166)">3</span>**,  **<span style="color:rgb(13, 204, 166)">4</span>**, 8, 9, 7, 6, **<span style="color:rgb(89, 51, 209)">5</span>**]
 
-&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(92, 201, 169)">2</span>**, **<span style="color:rgb(92, 201, 169)">3</span>**,  **<span style="color:rgb(92, 201, 169)">4</span>**, **<span style="color:rgb(89, 51, 209)">5</span>**, 9, 7, 6, **<span style="color:rgb(89, 51, 209)">8</span>**]
+&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(13, 204, 166)">2</span>**, **<span style="color:rgb(13, 204, 166)">3</span>**,  **<span style="color:rgb(13, 204, 166)">4</span>**, **<span style="color:rgb(89, 51, 209)">5</span>**, 9, 7, 6, **<span style="color:rgb(89, 51, 209)">8</span>**]
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(92, 201, 169)">2</span>**, **<span style="color:rgb(92, 201, 169)">3</span>**,  **<span style="color:rgb(92, 201, 169)">4</span>**, **<span style="color:rgb(92, 201, 169)">5</span>**, 9, 7, **<span style="color:rgb(89, 51, 209)">6</span>**, 8]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(13, 204, 166)">2</span>**, **<span style="color:rgb(13, 204, 166)">3</span>**,  **<span style="color:rgb(13, 204, 166)">4</span>**, **<span style="color:rgb(13, 204, 166)">5</span>**, 9, 7, **<span style="color:rgb(89, 51, 209)">6</span>**, 8]
 
-&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(92, 201, 169)">2</span>**, **<span style="color:rgb(92, 201, 169)">3</span>**,  **<span style="color:rgb(92, 201, 169)">4</span>**, **<span style="color:rgb(92, 201, 169)">5</span>**, **<span style="color:rgb(89, 51, 209)">6</span>**, 7, **<span style="color:rgb(89, 51, 209)">9</span>**, 8]
+&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(13, 204, 166)">2</span>**, **<span style="color:rgb(13, 204, 166)">3</span>**,  **<span style="color:rgb(13, 204, 166)">4</span>**, **<span style="color:rgb(13, 204, 166)">5</span>**, **<span style="color:rgb(89, 51, 209)">6</span>**, 7, **<span style="color:rgb(89, 51, 209)">9</span>**, 8]
 
 Le septième élément du tableau est déjà à la bonne position, donc il n’y a pas besoin d’échanger la position de deux éléments. Le tableau est trié lorsque tous les éléments sont parcourus.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(92, 201, 169)">2</span>**, **<span style="color:rgb(92, 201, 169)">3</span>**,  **<span style="color:rgb(92, 201, 169)">4</span>**, **<span style="color:rgb(92, 201, 169)">5</span>**, **<span style="color:rgb(92, 201, 169)">6</span>**, **<span style="color:rgb(89, 51, 209)">7</span>**, 9, 8]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(13, 204, 166)">2</span>**, **<span style="color:rgb(13, 204, 166)">3</span>**,  **<span style="color:rgb(13, 204, 166)">4</span>**, **<span style="color:rgb(13, 204, 166)">5</span>**, **<span style="color:rgb(13, 204, 166)">6</span>**, **<span style="color:rgb(89, 51, 209)">7</span>**, 9, 8]
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(92, 201, 169)">2</span>**, **<span style="color:rgb(92, 201, 169)">3</span>**,  **<span style="color:rgb(92, 201, 169)">4</span>**, **<span style="color:rgb(92, 201, 169)">5</span>**, **<span style="color:rgb(92, 201, 169)">6</span>**, **<span style="color:rgb(92, 201, 169)">7</span>**, 9, **<span style="color:rgb(89, 51, 209)">8</span>**]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(13, 204, 166)">2</span>**, **<span style="color:rgb(13, 204, 166)">3</span>**,  **<span style="color:rgb(13, 204, 166)">4</span>**, **<span style="color:rgb(13, 204, 166)">5</span>**, **<span style="color:rgb(13, 204, 166)">6</span>**, **<span style="color:rgb(13, 204, 166)">7</span>**, 9, **<span style="color:rgb(89, 51, 209)">8</span>**]
 
 
-&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(92, 201, 169)">2</span>**, **<span style="color:rgb(92, 201, 169)">3</span>**,  **<span style="color:rgb(92, 201, 169)">4</span>**, **<span style="color:rgb(92, 201, 169)">5</span>**, **<span style="color:rgb(92, 201, 169)">6</span>**, **<span style="color:rgb(92, 201, 169)">7</span>**, **<span style="color:rgb(89, 51, 209)">8</span>**, **<span style="color:rgb(89, 51, 209)">9</span>**]
+&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(13, 204, 166)">2</span>**, **<span style="color:rgb(13, 204, 166)">3</span>**,  **<span style="color:rgb(13, 204, 166)">4</span>**, **<span style="color:rgb(13, 204, 166)">5</span>**, **<span style="color:rgb(13, 204, 166)">6</span>**, **<span style="color:rgb(13, 204, 166)">7</span>**, **<span style="color:rgb(89, 51, 209)">8</span>**, **<span style="color:rgb(89, 51, 209)">9</span>**]
 
 ```
 
@@ -688,19 +688,19 @@ Lors de la première étape du tri par insertion, on cherche à trouver la bonne
 
 Le prochain élément considéré est le 8. Cet élément est également déjà bien placé :
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	[**<span style="color:rgb(92, 201, 169)">3</span>**, **<span style="color:rgb(92, 201, 169)">6</span>**, **<span style="color:rgb(89, 51, 209)">8</span>**, 7, 1, 9, 4, 2, 5]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	[**<span style="color:rgb(13, 204, 166)">3</span>**, **<span style="color:rgb(13, 204, 166)">6</span>**, **<span style="color:rgb(89, 51, 209)">8</span>**, 7, 1, 9, 4, 2, 5]
 
 Comme l’ordre des éléments ne change pas, nous notons cette configuration à droite.
 
 Le prochain élément considéré est le 7. Cet élément n’est pas bien placé au regard du tableau que l’on a déjà trié. Sa place est avant le 8, on va donc l’insérer entre le 6 et le 8 : 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	[**<span style="color:rgb(92, 201, 169)">3</span>**, **<span style="color:rgb(92, 201, 169)">6</span>**, **<span style="color:rgb(92, 201, 169)">8</span>**, **<span style="color:rgb(89, 51, 209)">7</span>**, 1, 9, 4, 2, 5]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	[**<span style="color:rgb(13, 204, 166)">3</span>**, **<span style="color:rgb(13, 204, 166)">6</span>**, **<span style="color:rgb(13, 204, 166)">8</span>**, **<span style="color:rgb(89, 51, 209)">7</span>**, 1, 9, 4, 2, 5]
 
-&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">3</span>**, **<span style="color:rgb(92, 201, 169)">6</span>**, **<span style="color:rgb(89, 51, 209)">7</span>**, **<span style="color:rgb(89, 51, 209)">8</span>**, 1, 9, 4, 2, 5]
+&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">3</span>**, **<span style="color:rgb(13, 204, 166)">6</span>**, **<span style="color:rgb(89, 51, 209)">7</span>**, **<span style="color:rgb(89, 51, 209)">8</span>**, 1, 9, 4, 2, 5]
 
 Le prochain élément de la liste non triée est le 1 :
 
-&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">3</span>**, **<span style="color:rgb(92, 201, 169)">6</span>**, **<span style="color:rgb(92, 201, 169)">7</span>**, **<span style="color:rgb(92, 201, 169)">8</span>**, **<span style="color:rgb(89, 51, 209)">1</span>**, 9, 4, 2, 5] 
+&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">3</span>**, **<span style="color:rgb(13, 204, 166)">6</span>**, **<span style="color:rgb(13, 204, 166)">7</span>**, **<span style="color:rgb(13, 204, 166)">8</span>**, **<span style="color:rgb(89, 51, 209)">1</span>**, 9, 4, 2, 5] 
 
 Nous allons l’insérer à la bonne position du tableau déjà trié, c’est-à-dire tout au début :
 
@@ -708,23 +708,23 @@ Nous allons l’insérer à la bonne position du tableau déjà trié, c’est-�
 
 Tous les éléments qui ont changé de position dans l’étape précédente sont désignés en rouge. Le prochain élément à considérer est le 9. Il est déjà bien placé par rapport à la partie triée du tableau :
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(92, 201, 169)">3</span>**, **<span style="color:rgb(92, 201, 169)">6</span>**, **<span style="color:rgb(92, 201, 169)">7</span>**, **<span style="color:rgb(92, 201, 169)">8</span>**, **<span style="color:rgb(89, 51, 209)">9</span>**, 4, 2, 5]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(13, 204, 166)">3</span>**, **<span style="color:rgb(13, 204, 166)">6</span>**, **<span style="color:rgb(13, 204, 166)">7</span>**, **<span style="color:rgb(13, 204, 166)">8</span>**, **<span style="color:rgb(89, 51, 209)">9</span>**, 4, 2, 5]
 
 On continue de la sorte jusqu’à ce que tous les éléments du tableau soient parcourus :
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(92, 201, 169)">3</span>**, **<span style="color:rgb(92, 201, 169)">6</span>**, **<span style="color:rgb(92, 201, 169)">7</span>**, **<span style="color:rgb(92, 201, 169)">8</span>**, **<span style="color:rgb(92, 201, 169)">9</span>**, **<span style="color:rgb(89, 51, 209)">4</span>**, 2, 5]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(13, 204, 166)">3</span>**, **<span style="color:rgb(13, 204, 166)">6</span>**, **<span style="color:rgb(13, 204, 166)">7</span>**, **<span style="color:rgb(13, 204, 166)">8</span>**, **<span style="color:rgb(13, 204, 166)">9</span>**, **<span style="color:rgb(89, 51, 209)">4</span>**, 2, 5]
 
-&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(92, 201, 169)">3</span>**, **<span style="color:rgb(89, 51, 209)">4</span>**, **<span style="color:rgb(89, 51, 209)">6</span>**, **<span style="color:rgb(89, 51, 209)">7</span>**, **<span style="color:rgb(89, 51, 209)">8</span>**, **<span style="color:rgb(89, 51, 209)">9</span>**,  2, 5]
+&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(13, 204, 166)">3</span>**, **<span style="color:rgb(89, 51, 209)">4</span>**, **<span style="color:rgb(89, 51, 209)">6</span>**, **<span style="color:rgb(89, 51, 209)">7</span>**, **<span style="color:rgb(89, 51, 209)">8</span>**, **<span style="color:rgb(89, 51, 209)">9</span>**,  2, 5]
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(92, 201, 169)">3</span>**, **<span style="color:rgb(92, 201, 169)">4</span>**, **<span style="color:rgb(92, 201, 169)">6</span>**, **<span style="color:rgb(92, 201, 169)">7</span>**, **<span style="color:rgb(92, 201, 169)">8</span>**, **<span style="color:rgb(92, 201, 169)">9</span>**, **<span style="color:rgb(89, 51, 209)">2</span>**, 5]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(13, 204, 166)">3</span>**, **<span style="color:rgb(13, 204, 166)">4</span>**, **<span style="color:rgb(13, 204, 166)">6</span>**, **<span style="color:rgb(13, 204, 166)">7</span>**, **<span style="color:rgb(13, 204, 166)">8</span>**, **<span style="color:rgb(13, 204, 166)">9</span>**, **<span style="color:rgb(89, 51, 209)">2</span>**, 5]
 
-&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(89, 51, 209)">2</span>**, **<span style="color:rgb(89, 51, 209)">3</span>**, **<span style="color:rgb(89, 51, 209)">4</span>**, **<span style="color:rgb(89, 51, 209)">6</span>**, **<span style="color:rgb(89, 51, 209)">7</span>**, **<span style="color:rgb(89, 51, 209)">8</span>**, **<span style="color:rgb(89, 51, 209)">9</span>**, 5]
+&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(89, 51, 209)">2</span>**, **<span style="color:rgb(89, 51, 209)">3</span>**, **<span style="color:rgb(89, 51, 209)">4</span>**, **<span style="color:rgb(89, 51, 209)">6</span>**, **<span style="color:rgb(89, 51, 209)">7</span>**, **<span style="color:rgb(89, 51, 209)">8</span>**, **<span style="color:rgb(89, 51, 209)">9</span>**, 5]
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(92, 201, 169)">2</span>**, **<span style="color:rgb(92, 201, 169)">3</span>**, **<span style="color:rgb(92, 201, 169)">4</span>**, **<span style="color:rgb(92, 201, 169)">6</span>**, **<span style="color:rgb(92, 201, 169)">7</span>**, **<span style="color:rgb(92, 201, 169)">8</span>**, **<span style="color:rgb(92, 201, 169)">9</span>**, **<span style="color:rgb(89, 51, 209)">5</span>**]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(13, 204, 166)">2</span>**, **<span style="color:rgb(13, 204, 166)">3</span>**, **<span style="color:rgb(13, 204, 166)">4</span>**, **<span style="color:rgb(13, 204, 166)">6</span>**, **<span style="color:rgb(13, 204, 166)">7</span>**, **<span style="color:rgb(13, 204, 166)">8</span>**, **<span style="color:rgb(13, 204, 166)">9</span>**, **<span style="color:rgb(89, 51, 209)">5</span>**]
 
 Lorsque le dernier élément du tableau est inséré à la bonne position, tout le tableau est trié :
 
-&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(92, 201, 169)">1</span>**, **<span style="color:rgb(92, 201, 169)">2</span>**, **<span style="color:rgb(92, 201, 169)">3</span>**, **<span style="color:rgb(92, 201, 169)">4</span>**, **<span style="color:rgb(89, 51, 209)">5</span>**, **<span style="color:rgb(89, 51, 209)">6</span>**, **<span style="color:rgb(89, 51, 209)">7</span>**, **<span style="color:rgb(89, 51, 209)">8</span>**, **<span style="color:rgb(89, 51, 209)">9</span>**]
+&nbsp;&nbsp;&nbsp;&nbsp; [**<span style="color:rgb(13, 204, 166)">1</span>**, **<span style="color:rgb(13, 204, 166)">2</span>**, **<span style="color:rgb(13, 204, 166)">3</span>**, **<span style="color:rgb(13, 204, 166)">4</span>**, **<span style="color:rgb(89, 51, 209)">5</span>**, **<span style="color:rgb(89, 51, 209)">6</span>**, **<span style="color:rgb(89, 51, 209)">7</span>**, **<span style="color:rgb(89, 51, 209)">8</span>**, **<span style="color:rgb(89, 51, 209)">9</span>**]
 
 ```
 

@@ -1,4 +1,4 @@
-<span style="color:rgb(92, 201, 169);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
+<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
 
 Terminaison des algorithmes
 ===========================
@@ -86,7 +86,7 @@ C’est au programmeur de s’assurer que le programme s’arrête dans tous les
 
 ````{admonition} Matière à réfléchir II
 :class: attention
-De nos jours, on ne sait toujours pas si ce programme termine pour chaque entrée n. Ce problème est connu sous le nom la ***<span style="color:rgb(92, 201, 169)">conjecture de Collatz</span>*** ou ***<span style="color:rgb(92, 201, 169)">la conjecture de Syracuse</span>*** :
+De nos jours, on ne sait toujours pas si ce programme termine pour chaque entrée n. Ce problème est connu sous le nom la ***<span style="color:rgb(13, 204, 166)">conjecture de Collatz</span>*** ou ***<span style="color:rgb(13, 204, 166)">la conjecture de Syracuse</span>*** :
 
 ```{code-block} python
 def Collatz(n) :

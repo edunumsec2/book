@@ -1,4 +1,4 @@
-<span style="color:rgb(92, 201, 169);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
+<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
 
 Conclusion
 ==========
@@ -11,11 +11,11 @@ Conclusion
 
 <li>Je sais calculer la complexité temporelle des algorithmes.</li>
 
-<li>Je comprends comment fonctionne la récursivité.</li>
-
 <li>Je sais pourquoi un algorithme d’ordre de complexité exponentielle est lent.</li>
 
 <li>Je comprends la différence entre une solution exacte et une solution heuristique.</li>
+
+<li>[Pour aller plus loin] Je comprends comment fonctionne la récursivité.</li>
 
 ```
 
