@@ -59,6 +59,20 @@
 					"singleInstance": true,
 				},
 				{
+					"name": "Build “pilote”",
+					"color": "#cfc",
+					"command": "jupyter-book build . && (cd _build/html; kill $(lsof -t -i:8002) 2>/dev/null; python3 -m http.server 8002 &) && open http://localhost:8002",
+					"cwd": "${workspaceFolder}/config/pilote",
+					"singleInstance": true,
+				},
+				{
+					"name": "Clean “pilote”",
+					"color": "#fcc",
+					"command": "kill $(lsof -t -i:8002) 2>/dev/null; jupyter-book clean .",
+					"cwd": "${workspaceFolder}/config/pilote",
+					"singleInstance": true,
+				},
+				{
 					"name": "git pull",
 					"color": "#caa",
 					"command": "git pull origin master",

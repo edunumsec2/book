@@ -1,11 +1,12 @@
 # Table of content
 
-
+format: jb-book
 ## Page d'accueil
-- file: content/0_landing
+root: content/0_landing
 
+parts:
 ## Première année
-- part: Première année
+- caption: Première année
   numbered: false
   chapters:
   ### Représentation de l'information
@@ -75,7 +76,7 @@
       - file: content/theme/architecture-ordinateurs/cours/histoire-informatique/eleve
 
 ## Deuxième année
-- part: Deuxième année
+- caption: Deuxième année
   numbered: false
   chapters:
   - file: content/theme/algorithmique-avancee/eleve
@@ -89,7 +90,7 @@
   - file: content/theme/reseaux/accueil/eleve
 
 ## Annexes
-- part: Annexes
+- caption: Annexes
   numbered: false
   chapters:
   - file: content/annexes/0_annexes

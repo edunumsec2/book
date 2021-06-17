@@ -1,8 +1,9 @@
 # Table of content
 #
-- file: content/demostests/edito/landing
-
-- part: Première année
+format: jb-book
+root: content/readme/README_pilote
+parts:
+- caption: Première année
   numbered: false
   chapters:
   - file: content/theme/representation-information/01_accueil/eleve
@@ -60,7 +61,7 @@
       - file: content/theme/architecture-ordinateurs/informatique-embarquee/eleve
       - file: content/theme/architecture-ordinateurs/histoire-informatique/eleve
       - file: content/theme/architecture-ordinateurs/ressources
-- part: Deuxième année
+- caption: Deuxième année
   numbered: false
   chapters:
   - file: content/theme/algorithmique-avancee/eleve
@@ -73,7 +74,7 @@
   - file: content/theme/projets/eleve
   - file: content/theme/reseaux/eleve
 
-- part: Enjeux sociaux
+- caption: Enjeux sociaux
   numbered: false
   chapters:
   - file: content/enjeux/grandes-thematiques/grandes-thematiques
@@ -86,7 +87,7 @@
   - file: content/enjeux/bibliographie
 
 
-- part: Démos et divers
+- caption: Démos et divers
   numbered: false
   chapters:
   - file: content/demostests/glossaire
@@ -99,7 +100,7 @@
   # - file: content/demostests/edito/repinfo1test
   - file: content/theme/architecture-ordinateurs/introductiontest
 
-- part: README
+- caption: README
   numbered: false
   chapters:
   - file: content/demostests/edito/presentation-ressources

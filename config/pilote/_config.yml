@@ -64,11 +64,12 @@ sphinx:
   local_extensions:
     questions: ../extensions/
     blanks: ../extensions/
-    youtube: ../extensions/
-    switchtube: ../extensions/
+    videos: ../extensions/
     codeplay: ../extensions/
     logic: ../extensions/
     role: ../extensions/
+    glossary: ../extensions/
+    timeline: ../extensions/
 
 #######################################################################################
 # Interact link settings
