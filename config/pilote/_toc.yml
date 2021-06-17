@@ -63,7 +63,13 @@
 - part: Deuxième année
   numbered: false
   chapters:
-  - file: content/theme/algorithmique-programmation/eleve
+  - file: content/theme/algorithmique-avancee/eleve
+    sections:
+      - file: content/theme/algorithmique-avancee/terminaison/eleve
+      - file: content/theme/algorithmique-avancee/complexite/eleve
+      - file: content/theme/algorithmique-avancee/heuristiques/eleve
+      - file: content/theme/algorithmique-avancee/conclusion/eleve
+  - file: content/theme/programmation-avancee/eleve
   - file: content/theme/projets/eleve
   - file: content/theme/reseaux/eleve
 

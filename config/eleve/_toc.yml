@@ -29,13 +29,6 @@
      #     - file: content/theme/representation-information/activites/representation-entiers/magie-binaire/magie_binaire
      #     - file: content/theme/representation-information/activites/redondance/radiotelephonie/activite
 
-  ### Algorithmique         
-  - file: content/theme/introduction-algorithmique/accueil/eleve
-    sections:
-      - file: content/theme/introduction-algorithmique/cours/decomposition-probleme/eleve
-      - file: content/theme/introduction-algorithmique/cours/algorithmes-classiques/eleve
-      - file: content/theme/introduction-algorithmique/cours/formulation-solutions/eleve
-    # - file: content/theme/introduction-algorithmique/cours/consequences-automatisation/eleve
 
   ### Programmation    
   - file: content/theme/programmation/accueil/eleve
@@ -50,6 +43,14 @@
       - file: content/theme/programmation/cours/7_fonc/fonc
       - file: content/theme/programmation/cours/8_mod/mod
       - file: content/theme/programmation/cours/9_app/app 
+
+  ### Algorithmique         
+  - file: content/theme/introduction-algorithmique/accueil/eleve
+    sections:
+      - file: content/theme/introduction-algorithmique/cours/decomposition-probleme/eleve
+      - file: content/theme/introduction-algorithmique/cours/algorithmes-classiques/eleve
+      - file: content/theme/introduction-algorithmique/cours/formulation-solutions/eleve
+      - file: content/theme/introduction-algorithmique/cours/consequences-automatisation/eleve
 
   ### Architecture des ordinateurs    
   - file: content/theme/architecture-ordinateurs/accueil/eleve
@@ -77,7 +78,13 @@
 - part: Deuxième année
   numbered: false
   chapters:
-  - file: content/theme/algorithmique-programmation/accueil/eleve
+  - file: content/theme/algorithmique-avancee/eleve
+    sections:
+      - file: content/theme/algorithmique-avancee/terminaison/eleve
+      - file: content/theme/algorithmique-avancee/complexite/eleve
+      - file: content/theme/algorithmique-avancee/heuristiques/eleve
+      - file: content/theme/algorithmique-avancee/conclusion/eleve
+  - file: content/theme/programmation-avancee/eleve
   - file: content/theme/projets/accueil/eleve
   - file: content/theme/reseaux/accueil/eleve
 
