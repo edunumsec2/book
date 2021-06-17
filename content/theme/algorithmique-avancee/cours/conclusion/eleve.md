@@ -20,20 +20,6 @@ Conclusion
 ```
 
 
-````{admonition} Pour aller plus loin
-:class: attention
-
-Voici un problème à 1 million de dollars, un parmi les sept problèmes mathématiques du prix du millénaire qui rapporteront de l’argent à celui ou celle qui les résout.
-
-On appelle la classe des algorithmes qui sont faciles à résoudre la classe des problèmes P. Ces algorithmes peuvent être résolus en un temps polynomial en fonction de la taille des données n ou log(n<sup>a</sup>). 
-
-Il existe aussi une classe de problèmes difficiles (d’ordre de complexité exponentielle), mais pour lesquelles il est facile de vérifier si une solution proposée permet de résoudre le problème.  Cette classe de problèmes s’appelle NP ou « non déterministe polynomial ».
-
-On souhaite savoir si les problèmes NP peuvent être résolus en un temps P, ou en d’autres termes : est-ce que **P = NP** ? 
-
-S’il s’avérait que c’est bien le cas (ce qui est tout de même peu probable), beaucoup de problèmes difficiles à résoudre deviendraient d’un seul coup plus faciles à résoudre, comme le **problème de repliement des protéines** en biologie pour trouver de nouveaux médicaments.  Cela pourrait également signifier la fin de la cryptographie telle qu’elle existe actuellement.
-
-````
 
 
 ````{admonition} Pourquoi est-ce important ?
