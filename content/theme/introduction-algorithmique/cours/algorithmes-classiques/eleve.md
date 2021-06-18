@@ -133,8 +133,9 @@ Rappelez-vous la méthode que vous avez utilisée pour résoudre l’exercice 8.
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
-```
 La solution dépend de votre solution de l’exercice 8. 
+
+```
 
 ````
 
