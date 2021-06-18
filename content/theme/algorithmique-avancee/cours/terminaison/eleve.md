@@ -73,6 +73,7 @@ Pour être certains que le programme finit par s’arrêter, nous pouvons le mod
  ```
 
  ```{admonition} Exercice 1
+:class: note
 
 L’algorithme ci-dessus est appelé « Algorithme qui compte toujours infini ». Pourquoi est-il toujours infini ? Dans quel cas cet algorithme ne s’arrête jamais ?
 
