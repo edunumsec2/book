@@ -1,0 +1,59 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Informatique au Gymnase / Enseignant.es
+author: Groupe de travail DGEP, EPFL, HEP, UNIL
+logo: logo1.svg
+# exclude_patterns: ['**/eleve.md']
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: false
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: maitre.tex
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/edunum-sec2/ressources  # Online location of your book
+  path_to_book: content  # Optional path to your book, relative to the repository root
+  branch: master  # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
+
+sphinx:
+  config:
+    user_role: prof
+    html_show_copyright: false
+    language: fr
+    html_theme: sphinx_book_theme
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    html_favicon: favicon.ico
+    html_extra_path: ['../assets']
+    myst_enable_extensions:
+      - amsmath
+      - colon_fence
+      - deflist
+      - dollarmath
+      - html_admonition
+      - html_image
+      - linkify
+      - replacements
+      - smartquotes
+      - substitution
+  local_extensions:
+    questions: ../extensions/
+    blanks: ../extensions/
+    videos: ../extensions/
+    codeplay: ../extensions/
+    logic: ../extensions/
+    role: ../extensions/
+    glossary: ../extensions/
+    timeline: ../extensions/

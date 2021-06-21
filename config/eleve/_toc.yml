@@ -1,0 +1,104 @@
+# Table of content
+
+format: jb-book
+## Page d'accueil
+root: content/0_landing
+
+parts:
+## Première année
+- caption: Première année
+  numbered: false
+  chapters:
+  ### Représentation de l'information
+  - file: content/theme/representation-information/accueil/eleve
+    sections:
+      - file: content/theme/representation-information/cours/introduction/eleve
+      - file: content/theme/representation-information/cours/representation-entiers/eleve
+      - file: content/theme/representation-information/cours/representation-caracteres/eleve
+      - file: content/theme/representation-information/cours/representation-images/eleve
+      - file: content/theme/representation-information/cours/numerisation/eleve
+      #- file: content/theme/representation-information/cours/systeme-arithmetique-binaire/eleve
+      - file: content/theme/representation-information/cours/stockage-manipulation-donnees/eleve
+      - file: content/theme/representation-information/cours/redondance/eleve
+      #### Exercices
+      - file: content/theme/representation-information/exercices/eleve
+        sections:
+          - file: content/theme/representation-information/exercices/representation-caracteres/carte-perforee/exercice
+      #### Activités (basculées dans version maître)
+     # - file: content/theme/representation-information/activites/eleve
+     #   sections:
+     #     - file: content/theme/representation-information/activites/representation-entiers/magie-binaire/magie_binaire
+     #     - file: content/theme/representation-information/activites/redondance/radiotelephonie/activite
+
+
+  ### Programmation    
+  - file: content/theme/programmation/accueil/eleve
+    sections:
+      - file: content/theme/programmation/cours/0_intro/intro
+      - file: content/theme/programmation/cours/1_intro/intro 
+      - file: content/theme/programmation/cours/2_pyth/pyth
+      - file: content/theme/programmation/cours/3_var/var
+      - file: content/theme/programmation/cours/4_flux/flux
+      - file: content/theme/programmation/cours/5_list/list
+      - file: content/theme/programmation/cours/6_dict/dict
+      - file: content/theme/programmation/cours/7_fonc/fonc
+      - file: content/theme/programmation/cours/8_mod/mod
+      - file: content/theme/programmation/cours/9_app/app 
+
+  ### Algorithmique         
+  - file: content/theme/introduction-algorithmique/accueil/eleve
+    sections:
+      - file: content/theme/introduction-algorithmique/cours/decomposition-probleme/eleve
+      - file: content/theme/introduction-algorithmique/cours/algorithmes-classiques/eleve
+      - file: content/theme/introduction-algorithmique/cours/formulation-solutions/eleve
+      - file: content/theme/introduction-algorithmique/cours/consequences-automatisation/eleve
+
+  ### Architecture des ordinateurs    
+  - file: content/theme/architecture-ordinateurs/accueil/eleve
+    sections:
+      - file: content/theme/architecture-ordinateurs/cours/introduction/eleve
+      - file: content/theme/architecture-ordinateurs/cours/portes-logiques/eleve
+      - file: content/theme/architecture-ordinateurs/cours/de-logique-a-arithmetique/eleve
+      - file: content/theme/architecture-ordinateurs/cours/alu-bascules/eleve
+      #### Exercices
+        sections: 
+          - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SystemesLogiques
+            sections:
+              - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SL1_bases
+              - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SL2_portes
+              - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SL3_sl
+              - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SL4_avance
+              - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SL5_conclusion
+          - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/Corrige_SystemesLogiques
+      - file: content/theme/architecture-ordinateurs/cours/architecture-von-neumann/eleve
+      - file: content/theme/architecture-ordinateurs/cours/microprocesseur/eleve
+      - file: content/theme/architecture-ordinateurs/cours/informatique-embarquee/eleve
+      - file: content/theme/architecture-ordinateurs/cours/histoire-informatique/eleve
+
+## Deuxième année
+- caption: Deuxième année
+  numbered: false
+  chapters:
+  - file: content/theme/algorithmique-avancee/eleve
+    sections:
+      - file: content/theme/algorithmique-avancee/terminaison/eleve
+      - file: content/theme/algorithmique-avancee/complexite/eleve
+      - file: content/theme/algorithmique-avancee/heuristiques/eleve
+      - file: content/theme/algorithmique-avancee/conclusion/eleve
+      - file: content/theme/algorithmique-avancee/recursivite/eleve
+  - file: content/theme/programmation-avancee/eleve
+  - file: content/theme/projets/accueil/eleve
+  - file: content/theme/reseaux/accueil/eleve
+
+## Annexes
+- caption: Annexes
+  numbered: false
+  chapters:
+  - file: content/annexes/0_annexes
+    sections:
+    - file: content/annexes/art/referencesart
+    - file: content/annexes/art/histoireart
+    - file: content/annexes/references/liens
+
+
+

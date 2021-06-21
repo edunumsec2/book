@@ -1,0 +1,102 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"name": "Moyens d'enseignement",
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"config/eleve/content": true,
+			"config/maitre/content": true,
+			"**/_build": true,
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true
+		},
+		"search.exclude": {
+			"config/eleve/content": true,
+			"config/maitre/content": true,
+			"config/eleve/_build": true,
+			"config/maitre/_build": true,
+			"**/_build": true,
+			"**/node_modules": true,
+			"**/bower_components": true,
+			"**/*.code-search": true
+		},
+		"actionButtons": {
+			"defaultColor": "white",
+			"loadNpmCommands": false,
+			"commands": [
+				{
+					"name": "Build “eleve”",
+					"color": "#cfc",
+					"command": "jupyter-book build . && (cd _build/html; kill $(lsof -t -i:8000) 2>/dev/null; python3 -m http.server 8000 &) && open http://localhost:8000",
+					"cwd": "${workspaceFolder}/config/eleve",
+					"singleInstance": true,
+				},
+				{
+					"name": "Clean “eleve”",
+					"color": "#fcc",
+					"command": "kill $(lsof -t -i:8000) 2>/dev/null; jupyter-book clean .",
+					"cwd": "${workspaceFolder}/config/eleve",
+					"singleInstance": true,
+				},
+				{
+					"name": "Build “maitre”",
+					"color": "#cfc",
+					"command": "jupyter-book build . && (cd _build/html; kill $(lsof -t -i:8001) 2>/dev/null; python3 -m http.server 8001 &) && open http://localhost:8001",
+					"cwd": "${workspaceFolder}/config/maitre",
+					"singleInstance": true,
+				},
+				{
+					"name": "Clean “maitre”",
+					"color": "#fcc",
+					"command": "kill $(lsof -t -i:8001) 2>/dev/null; jupyter-book clean .",
+					"cwd": "${workspaceFolder}/config/maitre",
+					"singleInstance": true,
+				},
+				{
+					"name": "git pull",
+					"color": "#caa",
+					"command": "git pull origin master",
+					"cwd": "${workspaceFolder}",
+					"singleInstance": true,
+				},
+				{
+					"name": "Update jupyter-book",
+					"color": "#ccf",
+					"command": "pip3 install -U jupyter-book",
+					"cwd": "${workspaceFolder}",
+					"singleInstance": true,
+				},
+			]
+		},
+		"files.watcherExclude": {
+			"**/target": true
+		},
+		"spellright.language": [
+			"fr"
+		],
+		"spellright.recheckOnSave": true,
+		"spellright.documentTypes": [
+			"markdown",
+			"latex",
+			"plaintext"
+		],
+		"jupyter.useNotebookEditor": false
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-python.python",
+			"ms-toolsai.jupyter",
+			"redhat.vscode-yaml",
+			"executablebookproject.myst-highlight",
+			"seunlanlege.action-buttons",
+			"github.vscode-pull-request-github",
+			"ban.spellright",
+		]
+	}
+}

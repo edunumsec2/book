@@ -5,13 +5,17 @@
 
 ## Introduction
 
-Les ressources pour l'enseignement de la discipline obligatoire *Informatique* au niveau secondaire II ont été produites par le groupe de travail DGEP, EPFL, HEP, UNIL, dans le cadre de l’introduction de la discipline obligatoire en informatique qui devrait se faire à la rentrée 2022. Leur objectif est la mise à disposition de contenus théoriques, de séries d'exercices, et d'idées d'activités pour les enseignantes et enseignants de ladite matière au Gymnase. 
+Des moyens d'enseignement pour l'informatique en discipline obligatoire au niveau Secondaire II ont été produits par un groupe de travail issu d'une collaboration entre la DGEP, l'EPFL, la HEP et l'UNIL. Dans le cadre de l’introduction de cette discipline, prévue à la rentrée 2022 dans le canton de Vaud, l'objectif de ces ressources est de proposer aux enseignant·e·s d'informatique des contenus théoriques, des séries d'exercices et des idées d'activités.
 
-En accord avec la DGEP, nous mettons déjà une partie de ce matériel à disposition des enseignants vaudois en informatique pour un enseignement pilote.
+En accord avec la DGEP, une partie de ce matériel est déjà mise à disposition des enseignant·e·s vaudois·e·s pour une première phase pilote.
 
-Les ressources pédagogiques sont accessibles via un [site web](https://edunumsec2.ch), elles peuvent être utilisées telles quelles ou modifiées via un [dépôt GitHub](https://github.com/edunumsec2/book).
+Les ressources sont accessibles via le [site web](https://edunumsec2.ch). Elles peuvent être utilisées telles quelles ou modifiées via un [dépôt GitHub](https://github.com/edunumsec2/book).
 
-Merci de bien vouloir vous intégrer dans les processus d’enquêtes qui nous permettront de recueillir des données de manière scientifique afin qu’elles soient pertinentes pour mieux comprendre ce qui marche ou non, pour qui et pourquoi. En aucun cas vos capacités à enseigner ne feront l’objet d’analyses. Toutes les données sont confidentielles et sont destinées soit à vous, soit au responsable de la thématique, avec votre accord. En dernier lieu, les analyses se feront en termes de masse pour de grandes cohortes mais toujours avec votre accord.
+
+### Votre avis et ceux de vos élèves sont importants
+
+En tant que membre du projet pilote, nous vous remercions par avance pour votre participation au processus d’enquête. Les données recueillies permettront d'évaluer la pertinence des contenus afin de réaliser les ajustements nécessaires. La démarche porte uniquement sur les ressources et les élèves, il ne s'agit en aucun cas d'évaluer la qualité de l'enseignement dispensé. Toutes les données seront traitées de façon confidentielle. En dernier lieu, ces données agrégées et anonymisées feront l'objet d'analyses statistiques à la fin de chaque semestre. 
+
 
 ## Table des matières
 
@@ -36,14 +40,14 @@ L'utilisation **standard** des ressources ne requiert pas d'installation particu
 
 Dans le cadre du projet pilote, nous vous saurions gré de suivre le protocole minimal décrit ci-dessous :  
 
-1. Participer aux sondages suivants (30mn) : 
+1. Participer aux sondages suivants (30 min) : 
     - [Choix entre TigerJython et Micro:Bit](https://fr.surveymonkey.com/r/programPR)
-    - [Besoin en termes de Formations](https://fr.surveymonkey.com/r/27QW723)
-    - [Sondage profil enseignant](https://fr.surveymonkey.com/r/J3B3J8D)
+    - [Besoin en termes de formations](https://fr.surveymonkey.com/r/27QW723)
+    - [Sondage profil enseignant·e](https://fr.surveymonkey.com/r/J3B3J8D)
     - [Sondage en amont de l'enseignement](https://www.surveymonkey.com/r/gymprescinf)
 
 2. Ecrire à nathalie.farenc@epfl.ch pour la tenir informée du début et de la fin d'un cours donné sur l'un ou l'autre des sujets du Plan d'études.
-3. Signaler tout défaut éventuel des ressources à nathalie.farenc@epfl.ch ou directement à la personne en charge du chapitre en question dont vous trouverez l'adresse sous [comité de rédaction](#comité-de-rédaction).
+3. Signaler tout défaut éventuel des ressources à nathalie.farenc@epfl.ch ou directement à la personne en charge de la thématique en question, dont vous trouverez l'adresse sous [comité de rédaction](#comité-de-rédaction).
 
 L'utilisation **avancée** des ressources comprend, en outre, les étapes suivantes : 
 
@@ -56,7 +60,7 @@ L'utilisation **avancée** des ressources comprend, en outre, les étapes suivan
 
 Les fonctionnalités décrites aux points 4 à 6 ne nécessitent pas d'installation particulière et sont inhérentes à GitHub. Pour un descriptif détaillé de leur utilisation, se référer au WIKI (en construction). Une explication allégée de leur utilisation est disponible directement dans les services en question : [issues](https://github.com/edunumsec2/book/issues) et [discussions](https://github.com/edunumsec2/book/discussions). 
 
-Pour ceux qui souhaitent utiliser l'environnement Jupyter-book pour tester des contenus et participer au développement, la marche à suivre est la suivante : 
+Pour ceux et celles qui souhaitent utiliser l'environnement Jupyter Book pour tester des contenus et participer au développement, la marche à suivre est la suivante : 
 
 ### Installation recommandée
 
@@ -86,7 +90,7 @@ Pour ceux qui souhaitent utiliser l'environnement Jupyter-book pour tester des c
       * [Instructions complètes](https://jupyterbook.org/intro.html#install-jupyter-book) si la version ci-dessus ne marche pas
 
  5. Installer [Visual Studio Code](https://code.visualstudio.com) 
-    * Sert à éditer le Markdown et le format Jupyter (et le format YAML pour la config si nécessaire)
+    * Permer d'éditer le Markdown et le format Jupyter (et le format YAML pour la config, si nécessaire)
     * Fournit des boutons pour produire l'output sans passer par le terminal
 
  6. Ouvrir le fichier `workspace.code-workspace` dans VS Code
@@ -100,7 +104,7 @@ Pour ceux qui souhaitent utiliser l'environnement Jupyter-book pour tester des c
       
       Accepter l'installation de ces recommandations à l'ouverture du workspace:
       
-      ![](docs/extension_recommendations.png)
+      ![](docs/media/extension_recommendations.png)
 
     * Si l'installation des extensions ne vous est pas proposée, le faire manuellement via l'interface graphique de VS Code ou via le terminal:
       ```bash
@@ -139,7 +143,7 @@ cd ressources
 
 Avec VS Code si installé comme ci-dessous, cliquer sur un des boutons en bas de la fenêtre:
 
-![](docs/build_screenshot.png)
+![](docs/media/build_screenshot.png)
 
 Sinon, via le terminal. Pour la partie élèves:
 
@@ -176,12 +180,12 @@ jupyter-book clean .
 2. Je navigue à travers les différents chapitres du cours. 
 3. Si une information m'intéresse, par exemple une anecdote historique, un angle d'attaque pour une notion, un exemple particulier, voire même une séquence entière de cours théorique, je prends des notes et la réutilise à souhait dans mes leçons. 
 4. Je parcours les idées d'activité et je choisis celles qui m'intéressent. 
-5. J'utilise les séries d'exercice à disposition comme "devoirs" pour mes élèves. 
+5. J'utilise les séries d'exercices à disposition comme "devoirs" pour mes élèves. 
 6. Je demande à mes élèves de lire certains chapitres en préparation des cours. Je reprends les notions essentielles en classe.  
 
 ### Modifications indépendantes
 
-1. Si certains contenus m'intéressent, mais que je considère qu'ils pourraient être transformés pour être plus efficaces, je peux à tout moment aller consulter les fichiers sources. 
+1. Si certains contenus m'intéressent mais que je considère qu'ils pourraient être transformés pour être plus efficaces, je peux à tout moment aller consulter les fichiers sources. 
 2. Je reviens sur ce dépôt Github.
 3. Je retrouve le chapitre qui m'intéresse. 
 4. Je télécharge le fichier source. 
@@ -191,8 +195,8 @@ jupyter-book clean .
 
 1. Je me réfère au chapitre [installation](#installation). 
 2. Une fois que l'environnement est installé, plusieurs options s'offrent à moi. 
-3. Je peux travailler à l'amélioration des ressources en tant que *correcteur*. Dans ce cas, j'utilise les fonctions [issues](https://github.com/edunumsec2/book/issues) et [discussions](https://github.com/edunumsec2/book/discussions) de Github et je propose de améliorations ou des modifications qui me paraissent importantes. 
-4. Je peux travailler en tant que *rédacteur*. Dans ce cas je crée une branche, je propose des contenus originaux à l'intérieur d'un chapitre - séquences théoriques, activités, séries d'exercices, et je les soumets au reste des utilisateurs pour validation via un pull-request.
+3. Je peux travailler à l'amélioration des ressources en tant que *correcteur*. Dans ce cas, j'utilise les fonctions [issues](https://github.com/edunumsec2/book/issues) et [discussions](https://github.com/edunumsec2/book/discussions) de Github et je propose des améliorations ou des modifications qui me paraissent importantes. 
+4. Je peux travailler en tant que *rédacteur*. Dans ce cas je crée une branche, je propose des contenus originaux à l'intérieur d'un chapitre - séquences théoriques, activités, séries d'exercices, et je les soumets aux autres utilisateurs pour validation via un pull-request.
 
 ## Comité de rédaction
 

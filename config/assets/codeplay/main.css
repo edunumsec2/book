@@ -1,0 +1,177 @@
+
+div#editor-area {
+  position: relative;
+  border: 1px solid rgb(194, 194, 194);
+}
+
+div#output-area {
+  position: relative;
+  background-color: rgb(245, 245, 245);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: rgb(10, 10, 10);
+  border: 1px solid rgb(194, 194, 194);
+  border-top: 0;
+  font-size: 12pt;
+}
+
+div#output-area div#output-message {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25px;
+  text-align: center;
+  margin: auto;
+  color:rgb(169, 169, 169);
+  font-family: Lato, sans-serif;
+}
+
+div#output-area div#output-message span#execute-keyword {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+div#output-area pre {
+  height: auto;
+  min-height: 25px;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  resize: vertical;
+  font-family: monospace;
+  line-height: 1.3em;
+}
+
+div#output-area input {
+  font-family: monospace;
+  font-size: 12pt;
+  background-color: transparent;
+  width: 200px;
+  resize: horizontal;
+}
+
+div#output-area .user-input {
+  color:rgb(51, 51, 51);
+}
+
+div#output-area pre div {
+  line-height: 1.5em;
+  overflow: hidden;
+}
+
+div#output-area pre button {
+  margin-left: 3px;
+  margin-bottom: 3px;
+  line-height: 0.7em;
+}
+
+div#control-area {
+  width: auto;
+  text-align: right;
+  margin-right: 10px;
+}
+
+div#control-area button {
+  margin-left: 5px;
+  line-height: 0.9em;
+  width: 130px;
+  border-radius: 10px 10px 0 0;
+}
+
+div#control-area button:disabled {
+  display: none;
+}
+
+div#control-area button#execute::before {
+  content: "▶";
+  margin-right: 10px;
+}
+
+div#control-area button#interrupt::before {
+  content: "◼";
+  margin-right: 10px;
+}
+
+div#control-area button#hints::before {
+  content: "★";
+  margin-right: 10px;
+}
+
+div#canvas-area {
+  position: relative;
+  border: 1px solid rgb(215, 215, 215);
+  border-top: 0;
+  background-color: rgb(238, 238, 238);
+  text-align: center;
+  padding: 10px;
+  display: none;
+}
+
+div#canvas {
+  display: inline-block;
+  border: 3px inset rgb(169, 169, 169);
+  background-color: white;
+}
+
+.CodeMirror {
+  height: auto;
+  font-size: 12pt;
+}
+
+@keyframes shine {
+  0% {opacity: 100%;}
+  50% {opacity: 75%;}
+	100% {opacity: 100%;}
+}
+
+.shine {
+  animation-name: shine;
+  animation-duration: 250ms;
+}
+
+#tooltip {
+  display: none;
+  color: black;
+  background: #fff;
+  padding: 15px;
+  z-index: 3;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  font-family: Lato, sans-serif;
+  user-select: none;
+  cursor: pointer;
+}
+
+#tooltip-arrow,
+#tooltip-arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  z-index: -1;
+}
+
+#tooltip-arrow::before {
+  content: '';
+  transform: rotate(45deg);
+  background: #fff;
+}
+
+#tooltip[data-popper-placement^='top'] > #tooltip-arrow {
+  bottom: -4px;
+}
+
+#tooltip[data-popper-placement^='bottom'] > #tooltip-arrow {
+  top: -4px;
+}
+
+#tooltip[data-popper-placement^='left'] > #tooltip-arrow {
+  right: -4px;
+}
+
+#tooltip[data-popper-placement^='right'] > #tooltip-arrow {
+  left: -4px;
+}

@@ -1,3 +1,0 @@
-# Algorithmique et programmation
-
-Accueil
