@@ -252,15 +252,19 @@ en utilisant
 
 Dans l'exemple
 qui suit,
-on donne la valeur 1
+on donne la valeur 0
 au bit de parité
 lorsque
 la somme des bits
 de la valeur à transmettre
 est paire,
-et la valeur 0
+et la valeur 1
 lorsque cette somme
 est impaire.
+On notera que,
+de cette façon, 
+la somme des 8 bits 
+est toujours paire.
 
 Le bit de parité
 est habituellement placé
@@ -493,7 +497,7 @@ un hash de C20B
 au lieu de C105
 précédemment,
 alors qu'un seul bit
-est différent
+diffère
 entre les deux messages.
 
 
