@@ -29,6 +29,8 @@
     guerisons = 
     deces = 
     ``` 
+    Réfléchir à la cohérence de votre modèle, en particulier pour des valeurs particulières (par exemples 0) de malades et de susceptibles. 
+
 1. En fonction des trois variables définies ci-dessus, calculer les nouvelles valeurs des variables `susceptibles`, `malades`, `gueris` et `morts` après le premier jour et compléter le code suivant en avec le résultat:
     ```
     susceptibles = 
@@ -37,6 +39,8 @@
     morts = 
     ```
     Combien y a-t-il de malades après le premier jour selon ce modèle? Est-ce que cela vous semble cohérent? Sinon, quelle modification pouvez-vous apporter à votre modèle?
+
+    Que peut-on dire du nombre total de personnes (susceptibles, malades, guéries ou décédées) dans votre modèle? Cela vous semble-t-il logique?
 
 1. Placer une boucle `for jour in range(10):` au bon endroit de votre code pour que chaque répétition de la boucle corresponde au passage d'un jour. Attention à bien adapter l'indentation du code. 
     
@@ -51,7 +55,7 @@ Pour remplir cette liste, placer l'instruction
     
     Afficher le nombre d'infection les dix premiers jours. Est-ce que cela vous semble cohérent? Sinon quelle modification pouvez-vous apporter à votre modèle?
 
-1. Afin de pouvoir utiliser `matplotlib`, un module python pour faire des graphique, ajouter l'instruction suivante en début de programme 
+1. Afin de pouvoir utiliser `matplotlib`, un module python pour faire des graphique, ajouter l'instruction suivante en *début* de programme 
     ```
     import matplotlib.pyplot as plt
     ````
@@ -66,13 +70,10 @@ Pour remplir cette liste, placer l'instruction
 
     Modifier le programme pour tracer un graphique du nombre d'infections les 50 premiers jours. 
 1. Ajouter l'instruction `plt.savefig('courbe_infection.png')` en fin de programme pour sauvegarder votre graphique dans le fichier nommé dans la parenthèse ci-dessus. 
+
 1. Modifier le programme pour tracer également la courbe des décès sur les 50 premiers jours.
 
 1. Modifier les paramètres du modèle et relancer la simulation. Est-ce que vous observez des choses bizarres? Si oui, essayer d'en déterminer la cause.
-
-1. Ajouter des contraintes à votre modèle en utilisant les fonctions `max()` ou `min()`, par exemple pour s'assurer que les nombres restent positifs. 
-
-1. Que se passe-t-il si on multiplie la population initiale par deux? Est-ce que le virus se propage plus rapidement? 
 
 1. On souhaite comparer le modèle à l'épidémie de Covid-19 dans le canton de Vaud. Le code suivant vous permet de lire le fichier 'covid_vd.csv' et d'obtenir une liste contenant le nombre de nouveaux cas chaque jour. 
 ```

@@ -30,7 +30,8 @@ parts:
   #  - file: content/theme/introduction-algorithmique/algorithmes-classiques/maitre
       - file: content/theme/introduction-algorithmique/activites/algorithmes-classiques/algo-tri/algo-tri
       - file: content/theme/introduction-algorithmique/activites/algorithmes-classiques/epidemie/epidemie
-      - file: content/theme/introduction-algorithmique/activites/algorithmes-classiques/epidemie/fiche
+        sections:
+        - file: content/theme/introduction-algorithmique/activites/algorithmes-classiques/epidemie/fiche
       - file: content/theme/introduction-algorithmique/activites/algorithmes-classiques/dijkstra/dijkstra2
       - file: content/theme/introduction-algorithmique/activites/algorithmes-classiques/puissance4/puissance4
       - file: content/theme/introduction-algorithmique/activites/formulation-solutions/maitre
