@@ -177,15 +177,6 @@ l’ensemble de l’information
 physiologiquement perceptible
 par l’oreille humaine.
 
-C'est la raison pour laquelle
-l’échantillonnage de la musique
-en qualité “CD” est réalisé à 44.1 kHz,
-en tenant en compte
-une petite marge
-pour l'utilisation
-de filtres
-passe-bas
-lors de l'enregistrement.
 
 
 ````{admonition} Un peu d'histoire…
@@ -206,7 +197,6 @@ représentaient
 le meilleur rapport
 volume de stockage/prix
 pour l'époque.
-
 
 ```{toggle}
 Cependant,
@@ -272,6 +262,17 @@ notamment.
 
 ```
 ````
+
+
+C'est la raison pour laquelle
+l’échantillonnage de la musique
+en qualité “CD” est réalisé à 44.1 kHz,
+en tenant en compte
+une petite marge
+pour l'utilisation
+de filtres
+passe-bas
+lors de l'enregistrement.
 
 Une fréquence d'échantillonnage inférieure
 génère un son
@@ -554,8 +555,13 @@ la variation de la vitesse du vent ?) ou même les bornes
 de ce signal (entre 0 et $2^n - 1$ ?
 entre $-2^{(n-1)}$ et $2^{(n-1)} - 1$ ?).
 
-De plus, cela serait terriblement dispendieux.
-Il est en effet possible
+De plus,
+la quantité de mémoire nécessaire
+pour stocker 
+et pour manipuler 
+les données
+serait maximisée.
+Or, il est possible
 de construire des formats de fichiers
 qui exploitent
 les propriétés specifiques
@@ -568,6 +574,15 @@ qui sacrifient une partie
 de la qualité du signal numérisé
 en échange d'un gain
 sur la taille des fichiers générés.
+L'usage de la mémoire 
+est ainsi économisé,
+mais, 
+en contre-partie, 
+un plus grand nombre 
+de calculs sont nécessaires 
+pour manipuler 
+les signaux. 
+
 
 C'est ainsi que des fichiers
 optimisés différents sont disponibles

@@ -205,3 +205,13 @@ nav li.active > a.active {
 .table th p {
     font-weight: 500;
 }
+
+
+.prev-next-bottom a.left-prev, .prev-next-bottom a.right-next {
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.2);
+    max-width: 45%;
+    overflow-x: hidden;
+    color: rgba(0,0,0,.65);
+    border-radius: 10px !important;
+}

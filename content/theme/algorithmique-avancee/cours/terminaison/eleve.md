@@ -1,4 +1,4 @@
-<span style="color:rgb(92, 201, 169);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
+<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
 
 Terminaison des algorithmes
 ===========================
@@ -47,8 +47,18 @@ Si on exécute cet algorithme, le programme ne s’arrête jamais : `i` est incr
 
 Retranscrire l’algorithme infini en programme. Après combien de boucles le programme s’arrête‑t‑il ?
 
-La solution est donnée dans le texte ci-dessous.
 ```
+
+````{admonition} Solution de l'exercice 0
+:class: hint
+
+```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+
+La solution de l'exercice est donnée directement dans le texte qui suit.
+
+```
+````
 
 Pour être certains que le programme finit par s’arrêter, nous pouvons le modifier ainsi :
 
@@ -67,8 +77,18 @@ Pour être certains que le programme finit par s’arrêter, nous pouvons le mod
 
 L’algorithme ci-dessus est appelé « Algorithme qui compte toujours infini ». Pourquoi est-il toujours infini ? Dans quel cas cet algorithme ne s’arrête jamais ?
 
-La solution est donnée dans le texte ci-dessous.
 ```
+
+````{admonition} Solution de l'exercice 1
+:class: hint
+
+```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+
+La solution de l'exercice est donnée directement dans le texte qui suit.
+
+```
+````
 
 Dans la version ci-dessus, si l’utilisateur entre une valeur plus grande que 10000, ou encore une valeur à virgule, l’algorithme ne s’arrête jamais. Pour le programmeur il peut être implicite qu’un décompte se fait toujours avec des nombres entiers, mais il doit prendre des précautions face à l’utilisateur. Voici une version d’un algorithme de décompte qui s’arrête :  
 
@@ -86,7 +106,7 @@ C’est au programmeur de s’assurer que le programme s’arrête dans tous les
 
 ````{admonition} Matière à réfléchir II
 :class: attention
-De nos jours, on ne sait toujours pas si ce programme termine pour chaque entrée n. Ce problème est connu sous le nom la ***<span style="color:rgb(92, 201, 169)">conjecture de Collatz</span>*** ou ***<span style="color:rgb(92, 201, 169)">la conjecture de Syracuse</span>*** :
+De nos jours, on ne sait toujours pas si ce programme termine pour chaque entrée n. Ce problème est connu sous le nom la ***<span style="color:rgb(13, 204, 166)">conjecture de Collatz</span>*** ou ***<span style="color:rgb(13, 204, 166)">la conjecture de Syracuse</span>*** :
 
 ```{code-block} python
 def Collatz(n) :

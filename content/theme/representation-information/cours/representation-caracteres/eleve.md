@@ -3,37 +3,89 @@
 Toute l'information est représentée dans un ordinateur par des nombres
 encodés sous forme binaire par des 0 et des 1. Se pose alors la question
 de la représentation des caractères, ne serait-ce que parce que la communication
-avec les ordinateurs s'opère essentiellement sous forme textuelle.
+entre les utilisateurs et les ordinateurs s'opère essentiellement sous forme textuelle.
 
 ## Principe
 
 La solution retenue a consisté à définir une table de conversion qui indique
 de façon univoque une concordance entre une valeur numérique et un caractère:
 
-| Caractère | Décimal | Hexadécimal | Binaire  | | | | | Caractère | Décimal | Hexadécimal | Binaire  |
-|-----------|---------|-------------|----------|-|-|-|-|-----------|---------|-------------|----------|
-|     A     |    65   |    0x41     | 01000001 | | | | |     a     |    97   |    0x61     | 01100001 |
-|     B     |    66   |    0x42     | 01000010 | | | | |     b     |    98   |    0x62     | 01100010 |
-|     C     |    67   |    0x43     | 01000011 | | | | |     c     |    99   |    0x63     | 01100011 |
-|     …     |    …    |     …       |    …     | | | | |     …     |    …    |     …       |    …     |
-|     Z     |    90   |    0x5A     | 01011010 | | | | |     z     |   122   |    0x7A     | 01111010 |
+| Caractère | Décimal | Hexadécimal |   Binaire    | | | | | Caractère | Décimal | Hexadécimal |   Binaire    |
+|-----------|---------|-------------|--------------|-|-|-|-|-----------|---------|-------------|--------------|
+|     A     |    65   |    0x41     | 01**0**00001 | | | | |     a     |    97   |    0x61     | 01**1**00001 |
+|     B     |    66   |    0x42     | 01**0**00010 | | | | |     b     |    98   |    0x62     | 01**1**00010 |
+|     C     |    67   |    0x43     | 01**0**00011 | | | | |     c     |    99   |    0x63     | 01**1**00011 |
+|     …     |    …    |     …       |        …     | | | | |     …     |    …    |     …       |      …       |
+|     Z     |    90   |    0x5A     | 01**0**11010 | | | | |     z     |   122   |    0x7A     | 01**1**11010 |
 
 
 Chaque caractère frappé sur le clavier engendre le nombre correspondant.
 
 Chacun des caractères de la phrase que vous lisez a ainsi été stocké,
-transmis et manipulé par les ordinateurs sous la forme d'une suite
-de nombres qu'on nomme **chaîne de caractères**.
+transmis et manipulé par les ordinateurs sous la forme d'une séquence
+de 0 et 1 qu'on nomme **chaîne de caractères**.
 
 Lorsqu'il s'agit de représenter ce texte à l'écran ou à l'impression
 à destination des êtres humains, les logiciels utilisent la table
 dans l'autre sens pour rendre cela intelligible.
 
+
+
+
+
+
+````{panels}
+:column: col-lg
+
+Les propriétés 
+de la table de conversion 
+décrite précédemment 
+sont telles 
+qu'il est aisé 
+de changer la casse 
+(minuscule/majuscule)
+d'un caractère
+en agissant sur
+le bit de valeur 32.
+
+```{codeplay}
+
+saisie = input('Un texte : ')
+
+print('-'*42)
+majuscules = ''
+for each in saisie:
+    # cela ne marche qu'avec les lettres, pas les symboles
+    if each.isalpha():
+        # on s'assure que le bit de valeur 32 est à 0
+        majuscules += chr(ord(each) & 0b11111011111)
+    else:
+        majuscules += each
+
+print("En majuscules :", majuscules)
+
+minuscules = ''
+for each in saisie:
+    # cela ne marche qu'avec les lettres, pas les symboles
+    if each.isalpha():
+        # on s'assure que le bit de valeur 32 est à 1
+        minuscules += chr(ord(each) | 0b00000100000)
+    else:
+        minuscules += each
+
+print("En minuscules :", minuscules)
+print('-'*42)
+```
+````
+
+
+
+
 En plus des lettres, les caractères qui représentent
 les nombres (les chiffres arabes)
 sont eux-mêmes listés dans la table de conversion.
 Contre-intuitivement, la valeur binaire du caractère
-ne correspond généralement pas au nombre.
+représentant un nombre ne correspond pas au nombre lui-même.
 
 | Caractère | Décimal | Hexadécimal | Binaire  |
 |-----------|---------|-------------|----------|

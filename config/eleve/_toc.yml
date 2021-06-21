@@ -79,13 +79,13 @@ parts:
 - caption: Deuxième année
   numbered: false
   chapters:
-  - file: content/theme/algorithmique-avancee/eleve
+  - file: content/theme/algorithmique-avancee/0_landing
     sections:
-      - file: content/theme/algorithmique-avancee/terminaison/eleve
-      - file: content/theme/algorithmique-avancee/complexite/eleve
-      - file: content/theme/algorithmique-avancee/heuristiques/eleve
-      - file: content/theme/algorithmique-avancee/conclusion/eleve
-      - file: content/theme/algorithmique-avancee/recursivite/eleve
+      - file: content/theme/algorithmique-avancee/cours/terminaison/eleve
+      - file: content/theme/algorithmique-avancee/cours/complexite/eleve
+      - file: content/theme/algorithmique-avancee/cours/heuristiques/eleve
+      - file: content/theme/algorithmique-avancee/cours/conclusion/eleve
+      - file: content/theme/algorithmique-avancee/cours/recursivite/eleve
   - file: content/theme/programmation-avancee/eleve
   - file: content/theme/projets/accueil/eleve
   - file: content/theme/reseaux/accueil/eleve
