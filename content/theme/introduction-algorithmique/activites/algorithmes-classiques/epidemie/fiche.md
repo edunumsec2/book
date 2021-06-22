@@ -77,6 +77,7 @@ Pour remplir cette liste, placer l'instruction
 
 1. On souhaite comparer le modèle à l'épidémie de Covid-19 dans le canton de Vaud. Le code suivant vous permet de lire le fichier 'covid_vd.csv' et d'obtenir une liste contenant le nombre de nouveaux cas chaque jour. 
 ```
+import csv
 cascumul = []
 ncas = []
 date = []

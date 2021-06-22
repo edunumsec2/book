@@ -1,4 +1,4 @@
-# Modéliser une épidémie - corrigé
+# Corrigé
 
 
 ```python
