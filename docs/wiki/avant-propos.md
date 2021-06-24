@@ -45,3 +45,4 @@ Si vous avez une suggestion ou un commentaire moins pressant, utilisez la rubriq
 ## Activité 3 
 
 - Nom, prénom. 
+- Petreska, Biljana.
