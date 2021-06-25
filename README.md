@@ -11,18 +11,15 @@ En accord avec la DGEP, une partie de ce matériel est déjà mise à dispositio
 
 Les ressources sont accessibles via le [site web](https://edunumsec2.ch). Elles peuvent être utilisées telles quelles ou modifiées via un [dépôt GitHub](https://github.com/edunumsec2/book).
 
-
-### Votre avis et ceux de vos élèves sont importants
-
-En tant que membre du projet pilote, nous vous remercions par avance pour votre participation au processus d’enquête. Les données recueillies permettront d'évaluer la pertinence des contenus afin de réaliser les ajustements nécessaires. La démarche porte uniquement sur les ressources et les élèves, il ne s'agit en aucun cas d'évaluer la qualité de l'enseignement dispensé. Toutes les données seront traitées de façon confidentielle. En dernier lieu, ces données agrégées et anonymisées feront l'objet d'analyses statistiques à la fin de chaque semestre. 
-
-
 ## Table des matières
 
 ---
 
 - [Introduction](#introduction)
 - [Utilisation](#utilisation)
+- [Documents importants](#documents-importants)
+- [Chapitrage](#chapitrage)
+- [Licence du projet](#licence-du-projet)
 - [Installation](#installation)
   - [Installation recommandée](#installation-recommandée)
   - [Installation Ubuntu 20.04 LTS](#installation-ubuntu-20.04-lts)
@@ -32,6 +29,11 @@ En tant que membre du projet pilote, nous vous remercions par avance pour votre 
   - [Utilisation en ligne](#utilisation-en-ligne)
   - [Modifications indépendantes](#modifications-indépendantes)
   - [Participation au développement](#participation-au-développement)
+
+
+### Votre avis et ceux de vos élèves sont importants
+
+En tant que membre du projet pilote, nous vous remercions par avance pour votre participation au processus d’enquête. Les données recueillies permettront d'évaluer la pertinence des contenus afin de réaliser les ajustements nécessaires. La démarche porte uniquement sur les ressources et les élèves, il ne s'agit en aucun cas d'évaluer la qualité de l'enseignement dispensé. Toutes les données seront traitées de façon confidentielle. En dernier lieu, ces données agrégées et anonymisées feront l'objet d'analyses statistiques à la fin de chaque semestre. 
   
 
 ## Utilisation
@@ -56,9 +58,44 @@ L'utilisation **avancée** des ressources comprend, en outre, les étapes suivan
 6. Forker le dépôt pour en faire un clône indépendant via le mécanisme de [fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo). 
 7. Utiliser l'environnement Jupyter-book pour tester ses améliorations en local sur sa propre machine. 
 
+## Documents importants
+
+* [Plan d'études](http://files.edunumsec2.ch/pe.pdf) pour l'informatique discipline obligatoire. 
+* [Livret de cours](http://files.edunumsec2.ch/livret.pdf) décrivant le découpage du plan d'études dans le détail. 
+
+## Chapitrage
+
+Les ressources sont découpées selon un chapitrage qui correspond au plan d'études romand (ajouter réf). Elles sont divisées en quatre parties, dont nulle n'a de préseance sur les autres. Il appartient à l'enseignante ou l'enseignant de choisir l'ordre dans lequel les contenus sont abordés. Le fait que les chapitres soient successifs est le résultat des limitations de l'affichage. Pour atténuer quelque peu ce problème nous avons choisi de renoncer à une numérotation des chapitres. 
+
+[Représentation de l'information](http://eleve.edunumsec2.ch/content/theme/representation-information/accueil/eleve.html)
+: Où il est question du passage du système décimal au *système binaire*, ainsi que des problématiques de traitement des données telles que *l'encodage*, *la compression*, *l'échantillonnage*, *le cryptage*, et la *représentation des caractères, des images et des sons* sous forme de bits. 
+
+[Algorithmique I](http://eleve.edunumsec2.ch/content/theme/introduction-algorithmique/accueil/eleve.html)
+: Ce chapitre propose une *définition générale de l'algorithmique*, ainsi qu'une présentation de certains *algorithmes classiques*. 
+
+[Programmation I](http://eleve.edunumsec2.ch/content/theme/programmation/accueil/eleve.html)
+: Après avoir présenté un échantillon de langages de programmation et leurs différences respectives, ce chapitre *pose les bases du language Python*. 
+
+[Architecture des ordinateurs](http://eleve.edunumsec2.ch/content/theme/architecture-ordinateurs/accueil/eleve.html)
+: Il est question ici de notions telles que *les portes logiques*, *les transistors*, *l'architecture de Von Neumann*, et autres concepts essentiels à la compréhension de ce qui se passe au niveau physique et électronique dans un ordinateur.
+
+
+## Licence du projet
+
+Les ressources sont publiées sous licence Creatives Commons *Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions (CC BY-NC-SA)*. Cela signifie qu'elles peuvent être copiées, transformées, adaptées, et diffusées, hormis à des fins commerciales, tant qu'elles créditent le groupe de travail présenté ci-dessus, et qu'elles utilisent la même licence pour le partage futur. Les conditions sont disponibles [ici](https://creativecommons.org/licenses/?lang=fr). 
+
+![](docs/media/presentation/by-nc-sa.png)
+
+Toute personne qui réutilise les ressources est priée de le faire de la façon suivante : 
+
+* 💰 Pas d'utilisation commerciale. 
+* ♻️ Possibilité de modifier les ressources à souhait. 
+* 📗 Crédit : "Par le groupe de travail DGEP, EPFL, HEP, UNIL". 
+* 🤝 Partage selon les mêmes conditions. Donc en ajoutant simplement le logo ci-dessus pour toute publication éventuelle. 
+
 ## Installation 
 
-Les fonctionnalités décrites aux points 4 à 6 ne nécessitent pas d'installation particulière et sont inhérentes à GitHub. Pour un descriptif détaillé de leur utilisation, se référer au WIKI (en construction). Une explication allégée de leur utilisation est disponible directement dans les services en question : [issues](https://github.com/edunumsec2/book/issues) et [discussions](https://github.com/edunumsec2/book/discussions). 
+Les fonctionnalités décrites aux points 4 à 6 ne nécessitent pas d'installation particulière et sont inhérentes à GitHub. Pour un descriptif détaillé de leur utilisation, se référer au [wiki](https://github.com/edunumsec2/book/tree/master/docs/wiki). Une explication allégée de leur utilisation est disponible directement dans les services en question : [issues](https://github.com/edunumsec2/book/issues) et [discussions](https://github.com/edunumsec2/book/discussions). 
 
 Pour ceux et celles qui souhaitent utiliser l'environnement Jupyter Book pour tester des contenus et participer au développement, la marche à suivre est la suivante : 
 
