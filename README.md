@@ -54,9 +54,12 @@ Dans le cadre du projet pilote, nous vous saurions gré de suivre le protocole m
 L'utilisation **avancée** des ressources comprend, en outre, les étapes suivantes : 
 
 4. Utiliser les fonctionnalités de GitHub telles que [issues](https://github.com/edunumsec2/book/issues) et [discussions](https://github.com/edunumsec2/book/discussions) pour signaler des améliorations potentielles. 
-5. Proposer et rédiger des modifications via la création d'une [branche](https://github.com/edunumsec2/book/branches). 
-6. Forker le dépôt pour en faire un clône indépendant via le mécanisme de [fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo). 
-7. Utiliser l'environnement Jupyter-book pour tester ses améliorations en local sur sa propre machine. 
+
+Après la phase **pilote**, les enseignant.es pourront en outre : 
+
+6. Proposer et rédiger des modifications via la création d'une [branche](https://github.com/edunumsec2/book/branches). 
+7. Forker le dépôt pour en faire un clône indépendant via le mécanisme de [fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo). 
+8. Utiliser l'environnement [Jupyter-book](#installation) pour tester ses améliorations en local sur sa propre machine. 
 
 ## Documents importants
 
