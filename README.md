@@ -95,6 +95,8 @@ Toute personne qui réutilise les ressources est priée de le faire de la façon
 
 ## Installation 
 
+⚠️ Attention : l'installation qui suit N'EST PAS nécessaire dans le cadre du projet pilote. Elle figure ici à titre informatif pour celles et ceux qui souhaitent comprendre l'architecture globale du projet et veulent avoir une idée de l'intégralité des possibilités qu'offre un modèle de projet open-source. Après la première année de pilote, et compte tenu des retours qui auront été faits, le projet se déployera entièrement, et les enseignant.es d'informatique auront tout le loisir d'installer l'environnement ci-dessous et de s'amuser à leur guise avec la documentation open-source de ce dépôt GitHub. 
+
 Les fonctionnalités décrites aux points 4 à 6 ne nécessitent pas d'installation particulière et sont inhérentes à GitHub. Pour un descriptif détaillé de leur utilisation, se référer au [wiki](https://github.com/edunumsec2/book/tree/master/docs/wiki). Une explication allégée de leur utilisation est disponible directement dans les services en question : [issues](https://github.com/edunumsec2/book/issues) et [discussions](https://github.com/edunumsec2/book/discussions). 
 
 Pour ceux et celles qui souhaitent utiliser l'environnement Jupyter Book pour tester des contenus et participer au développement, la marche à suivre est la suivante : 
