@@ -244,7 +244,7 @@ jupyter-book clean .
 - Architecture des ordinateurs : Philippe Rochat - Gymnase de Morges & Jean-Philippe Pellet - HEP
 - Enjeux sociaux : Virginia Haussauer - EPFL & Franck Dayen - Gymnase de Morges 
 - Plateforme : Romain Edelmann - EPFL & Grégoire Gavin - EPFL
-- Charte éditorial , plateforme ... : Elliot Vaucher - EPFL
+- Charte éditoriale, plateforme, rédaction : Elliot Vaucher - EPFL
 - Coordination : Nathalie Farenc - EPFL
 
 
