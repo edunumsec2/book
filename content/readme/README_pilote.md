@@ -88,10 +88,13 @@ Toute personne qui réutilise les ressources est priée de le faire de la façon
 
 ## Comité de rédaction
 
-- Représentation de l'information : 
-- Algorithmique : 
-- Programmation : 
-- Architecture des ordinateurs : 
-- Enjeux sociaux : 
+* Représentation de l'information : David Da Silva - Gymnase de Chamblandes & Javier Iglesias - Gymnase de Renens
+* Algorithmique : Biljana Petreska - Gymnase d'Yverdon & Micha Hersch Gymnase de Renens / HEP
+* Programmation : Raphaël Holzer - Gymnase du Bugnon & Gilles Racine - Gymnase de Sevelin
+* Architecture des ordinateurs : Philippe Rochat - Gymnase de Morges & Jean-Philippe Pellet - HEP
+* Enjeux sociaux : Virginia Haussauer - EPFL & Franck Dayen - Gymnase de Morges 
+* Plateforme : Romain Edelmann - EPFL & Grégoire Gavin - EPFL
+* Charte éditorial , plateforme ... : Elliot Vaucher - EPFL
+* Coordination : Nathalie Farenc - EPFL
 
 
