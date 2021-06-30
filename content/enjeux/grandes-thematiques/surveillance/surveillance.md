@@ -40,16 +40,20 @@
     font-size:14px;
     font-weight:bold;
     }
+
 }
 </style>
 </head>
 </html>
 
+<br>
+
 <div align="right"> 
-    <a href="http://files.edunumsec2.ch/enjeux-sociaux/surveillance.pdf" class="round-button">
+    <a href="http://files.edunumsec2.ch/enjeux-sociaux/surveillance/surveillance.pdf" class="round-button">
          <font color=white id="demo">Voir <br>dossier</font>
     </a>
 </div>
+
 
 # Vie privée et surveillance
 
@@ -175,7 +179,7 @@ Par ailleurs, le système de crédit social est encore expérimental et loin d�
 
 Impuissant face à certains problèmes structuraux (pauvreté, surendettement, manque d'accès aux soins, spéculation immobilière), le gouvernement chinois multiplie les mécanismes coercitifs dans l'espoir que le respect des règles permettra de garantir la stabilité sociale, le développement économique et la crédibilité du régime. Dans ce contexte, l'omniprésence des technologies numériques permet d'accroitre la perception d'un état qui surveille et évalue chaque fait et geste.
 
-### Ressources 
+### Ressources
 
 * [Un article](https://www.monde-diplomatique.fr/2019/01/ZUBOFF/59443) de la chercheuse Shoshana Zuboff sur la notion de «capitalisme de surveillance (Le Monde diplomatique)
 
@@ -203,7 +207,6 @@ Impuissant face à certains problèmes structuraux (pauvreté, surendettement, m
   <div class="w3-show-inline-block">
   <div class="w3-bar">
     <a href="#" class="button"> L'affaire Snowden</a>
-    <a href="http://edunumsec2.ch/content/enjeux/grandes-thematiques/economie-numerique/economie-numerique.html" class="button"> Economie du numérique</a>
   </div>
   </div>
 </div>
@@ -386,7 +389,7 @@ On peut, par exemple, demander aux élèves s'ils/elles :
 * raconteraient leur dernière soirée
 * diraient du mal d'une personne
 * copieraient leur devoir à la dernière minute avant d'entrer en classe
-* partageraient une information confidentielle avec un ami
+* partageraient une information confidentielle avec un·e ami·e
 * enverraient des messages pendant les cours
 
 ```{admonition} Note

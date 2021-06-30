@@ -163,9 +163,9 @@ La combinaison de ces différents facteurs (effets de réseau, économies d’é
 Une fois ce processus engagé, il devient difficile pour des offres concurrentes d’émerger. Ainsi, selon le principe du *winner takes all*, chaque secteur tend à être dominé par une seule entreprise qui rachète ses concurrents à mesure de son expansion. Ces entreprises deviennent incontournables, tant pour les clients que les prestataires. Par exemple, il est presque impossible pour un hôtel de se passer d’un référencement sur Booking.com, tout comme un petit vendeur indépendant peut difficilement éviter de proposer ses produits sur Amazon.
 
 
-```{admonition} Uberisation
+```{admonition} Ubérisation
 :class: hint
-L’uberisation, dont le nom provient de l’entreprise Uber, est un processus économique qui vise à contourner le fonctionnement classique d’un secteur en créant un nouvel intermédiaire via une plateforme numérique. Celle-ci met en relation clients et prestataires tout en prélevant une commission sur les transactions. Si les services «uberisés» offrent des prestations flexibles à moindre coût, ce changement de modèle passe par une stratégie de développement agressive  dans un cadre légal peu clair. Dans le cas d’Uber, le modèle implique la participation de travailleurs au statut précaire, considérés comme «indépendants» et pourtant soumis aux exigences de la plateforme. Le statut légal de ces pratiques est aujourd’hui remis en cause dans plusieurs villes, [dont Genève](https://www.letemps.ch/economie/geneve-uber-eats-desormais-recourir-employes), qui a imposé en 2020 à Uber Eats de salarier ses travailleurs.
+L’ubérisation, dont le nom provient de l’entreprise Uber, est un processus économique qui vise à contourner le fonctionnement classique d’un secteur en créant un nouvel intermédiaire via une plateforme numérique. Celle-ci met en relation clients et prestataires tout en prélevant une commission sur les transactions. Si les services «ubérisés» offrent des prestations flexibles à moindre coût, ce changement de modèle passe par une stratégie de développement agressive  dans un cadre légal peu clair. Dans le cas d’Uber, le modèle implique la participation de travailleurs au statut précaire, considérés comme «indépendants» et pourtant soumis aux exigences de la plateforme. Le statut légal de ces pratiques est aujourd’hui remis en cause dans plusieurs villes, [dont Genève](https://www.letemps.ch/economie/geneve-uber-eats-desormais-recourir-employes), qui a imposé en 2020 à Uber Eats de salarier ses travailleurs.
 ```
 Face à ces pratiques, les États peinent à s’accorder et les régulations demeurent peu contraignantes. Ce cadre juridique flou témoigne également d’une forme de fatalisme face au numérique. En effet, la précarité, la financiarisation ou la captation des données sont souvent pensés comme inhérentes au développement des technologies. Il apparaît donc nécessaire de souligner que la technique ne contient pas en elle-même un modèle organisationnel ou économique particulier. Pour des plateformes comme Google ou Facebook, ces outils technologiques constituent des moyens d’atteindre des objectifs commerciaux. Mais ce n’est pas la seule voie possible. Il existe en effet des services numériques dont les motivations se situent en dehors de ces logiques financières
 
@@ -212,7 +212,7 @@ Pourtant, les activités en ligne ne sont pas nécessairement synonymes de temps
 * Plateforme
 * Économie d’échelle
 * Effet de réseau
-* Uberisation
+* Ubérisation
 * Biens communs
 * Économie de l’attention
 
@@ -404,7 +404,7 @@ Malgré le déploiement de moyens considérables, cette stratégie n’a pas per
 
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-  <b>2. Le travail uberisé</b>
+  <b>2. Le travail ubérisé</b>
 </div>
 
 <br>
@@ -458,7 +458,7 @@ L’innovation d’Uber se situe davantage au niveau stratégique que technique.
 
 <br>
 
-**B. Réglementer le travail "uberisé"** 
+**B. Réglementer le travail "ubérisé"** 
 
 
 🕑 30 min | ✍️ débranché
