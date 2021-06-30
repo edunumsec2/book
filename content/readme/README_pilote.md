@@ -35,10 +35,8 @@ L'utilisation **standard** des ressources ne requiert pas d'installation particu
 Dans le cadre du projet pilote, nous vous saurions gré de suivre le protocole minimal décrit ci-dessous :  
 
 1. Participer aux sondages suivants (30 min) : 
-    - [Choix entre TigerJython et Micro:Bit](https://fr.surveymonkey.com/r/programPR)
+    - questionnaires élève et enseignant de début d'année (en attente de formatage avec les données de classes et de gymnase pour la rentrée)
     - [Besoin en termes de formations](https://fr.surveymonkey.com/r/27QW723)
-    - [Sondage profil enseignant·e](https://fr.surveymonkey.com/r/J3B3J8D)
-    - [Sondage en amont de l'enseignement](https://www.surveymonkey.com/r/gymprescinf)
 
 2. Ecrire à nathalie.farenc@epfl.ch pour la tenir informée du début et de la fin d'un cours donné sur l'un ou l'autre des sujets du Plan d'études.
 3. Signaler tout défaut éventuel des ressources à nathalie.farenc@epfl.ch ou directement à la personne en charge de la thématique en question, dont vous trouverez l'adresse sous [comité de rédaction](#comité-de-rédaction).
