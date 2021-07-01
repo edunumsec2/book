@@ -22,25 +22,6 @@ latex:
     targetname: eleve.tex
 
 #######################################################################################
-# HTML-specific settings
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
-html:
-  use_issues_button: true
-  use_repository_button: true
-  home_page_in_navbar: false
-  extra_navbar: ""
-  extra_footer: |
-    <p>
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
-    </a>
-    <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-    Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
-    </a>.
-    </p>
-
-#######################################################################################
 sphinx:
   config:
     user_role: eleve
@@ -51,6 +32,22 @@ sphinx:
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     html_favicon: favicon.ico
     html_extra_path: ['../assets']
+    html_theme_options:
+      use_download_button: false
+      repository_url: https://github.com/edunumsec2/book
+      use_issues_button: true
+      use_repository_button: true
+      use_edit_page_button: false
+      extra_navbar: ""
+      extra_footer: |
+        <p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+        </a>
+        <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+        Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+        </a>.
+        </p>
     myst_enable_extensions:
       - amsmath
       - colon_fence
