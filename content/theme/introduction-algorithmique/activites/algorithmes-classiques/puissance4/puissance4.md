@@ -2,7 +2,7 @@
 
 ## Information
 
-Durée: 4 périodes au total: 2 période consécutives pour lancer le projet, évenutellement à finir à la maison. 
+Durée: 4 périodes au total: 2 période consécutives pour lancer le projet, éventuellement à finir à la maison. 
 Puis 2 périodes pour la stratégie (algorithme minimax) et pour présenter le résultat. 
 
 Mode: Une partie conceptualisation en débranché, suivie d'une réalisation sur ordinateur
@@ -22,7 +22,7 @@ Cette activité comporte les phases suivante:
 Première séance: 
 1. Une mise en situation au cours de laquelle les élèves se familiarisent avec le jeu du puissance 4
 
-1. Conceptualisation / discussion au cours de laquelles les élèves prennent conscience des éléments nécessaires à la programmation d'un tel jeu, notamment:
+1. Conceptualisation / discussion au cours de laquelle les élèves prennent conscience des éléments nécessaires à la programmation d'un tel jeu, notamment:
 
 1. Conceptualisation par groupe
 
@@ -51,11 +51,11 @@ Afin de faire rentrer les élèves dans cette activité et de s'assurer que tous
 
 Plusieurs dispositifs sont envisageables. Par exemples, on peut faire jouer deux équipes d'élèves avec un puissance 4 dessiné au tableau. Une autre option est de faire jouer les élèves contre l'enseignant-e, ce qui lui donne un certain contrôle sur la durée de la partie (potentiellement au détriment de son prestige...). Idéalement il faudrait s'assurer que tous les élèves participent à la réflexion, par exemple en faisant désignant à chaque tour l'élève qui va proposer un coup à son équipe qui en discutera. 
 
-Afin de pouvoir désigner sans ambiguité les position du jeu, il sera utile de numéroter les coordonnées de la matrice du jeu, de façon analogue au langage utiliser (par exemple en commençant à 0
+Afin de pouvoir désigner sans ambiguïté les position du jeu, il sera utile de numéroter les coordonnées de la matrice du jeu, de façon analogue au langage utiliser (par exemple en commençant à 0
 
 ## Discussion générale / conceptualisation (10 min.)
 Une fois la partie terminée, l'enseignant-e annonce aux élèves qu'il va falloir programmer un tel jeu de puissance 4. La plupart des élèves n'auront
-sans doute aucune idée de comment commencer et le but de cette discussion sera de déterminer quels sont les différents éléments à prgrammer. En faisant participer les élèves et en les orientant un peu, les éléments suivants devraient émerger:
+sans doute aucune idée de comment commencer et le but de cette discussion sera de déterminer quels sont les différents éléments à programmer. En faisant participer les élèves et en les orientant un peu, les éléments suivants devraient émerger:
 1. l'affichage du jeu (l'interface)
 1. la stratégie de jeu (savoir quel coup jouer)
 1. le déroulement du jeu (tour de rôle et déclaration du vainqueur)
@@ -102,8 +102,8 @@ Les groupes qui le veulent peuvent se confronter les uns les autres et continuer
 
 Certaines équipes peuvent venir présenter leur jeu et parler de leur stratégie. 
 
-## Présentation théorique (10 minu)
-L'enseignant-e récapitule pour tout le monde la stratégie du minimax, en indiquant qu'elle peut aussi être utilsée avec une fonction d'évaluation à plus de trois états comme ici (perdu, gagné, non-décidé). 
+## Présentation théorique (10 minutes)
+L'enseignant-e récapitule pour tout le monde la stratégie du minimax, en indiquant qu'elle peut aussi être utilisée avec une fonction d'évaluation à plus de trois états comme ici (perdu, gagné, non-décidé). 
 
 Eventuellement, l'enseignant peut aussi présenter la stratégie du alpha-beta pruning. 
 
@@ -119,6 +119,6 @@ L'enseignant parle des différentes manière d'implémenter minimax (in place, e
 Les élèves continuent à programmer leur stratégie et peuvent tenter d'implémenter une fonction d'évaluation de l'état du jeu, par exemple en comptant le nombre de rangée ouverte. Optionnellement, en fonction du niveau des élèves, le développement de l'interface graphique peut être considéré. 
 
 ## Finalisation (15 minutes)
-Les élèves présentent leur jeu et leur stratégie et on organise un petit tournoi entre les différents programmmes. 
+Les élèves présentent leur jeu et leur stratégie et on organise un petit tournoi entre les différents programmes. 
 
 
