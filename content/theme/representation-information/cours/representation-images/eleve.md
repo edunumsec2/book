@@ -6,10 +6,10 @@
 :class: hint
 Voilà un déroulé de cours pour cette section représentation des images : 
 1. Activité image Bitmap
-2. Activtié Kirby
+2. Activité Kirby
 3. Présentation des images matricielles
 4. Exercice sur les résolutions
-5. Questionnaire d'auto-contrôl
+5. Questionnaire d'auto-contrôle
 ```
 ````
 
