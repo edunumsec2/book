@@ -17,12 +17,10 @@ parts:
   - file: content/theme/programmation/maitre
     sections:
       - file: content/theme/programmation/cours/1_intro/intro
-  #  - file: content/theme/programmation/instructions-sequentielles/maitre
-  #  - file: content/theme/programmation/structures-donnees-controle/maitre
-  #  - file: content/theme/programmation/transcription-algorithmes/maitre
-  #  - file: content/theme/programmation/perspectives-citoyennes-politiques/maitre
-  #  - file: content/theme/programmation/activites
-      - file: content/theme/programmation/activites/microbit/catch-the-fruit/catchFruit
+      - file: content/theme/programmation/activites/microbit/catch-the-fruit/catchFruit 
+      - file: content/theme/programmation/activites/microbit-python/intro
+        sections:
+        - file: content/theme/programmation/activites/microbit-python/affichage
   
   - file: content/theme/introduction-algorithmique/maitre
     sections:
