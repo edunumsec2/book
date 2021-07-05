@@ -21,7 +21,8 @@ parts:
       - file: content/theme/programmation/activites/microbit-python/intro
         sections:
         - file: content/theme/programmation/activites/microbit-python/affichage
-  
+        - file: content/theme/programmation/activites/microbit-python/condition
+        - file: content/theme/programmation/activites/microbit-python/variables
   - file: content/theme/introduction-algorithmique/maitre
     sections:
   #  - file: content/theme/introduction-algorithmique/decomposition-probleme/maitre
