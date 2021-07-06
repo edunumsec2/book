@@ -2,6 +2,11 @@
 
 ![chatbot](https://user-images.githubusercontent.com/73947555/117774857-301d3580-b23a-11eb-9657-2eeebb19fde3.png)
 
+````{admonition} Ces ressources sont en cours de rédaction
+:class: caution
+Attention, le document présenté ici ne représente qu'une **étape intermédiaire** de travail. Il n'a pas force de référence, ni au niveau des thématiques abordées, ni au niveau des contenus spécifiques décrits dans les chapitres. Ce que vous consultez ici est susceptible de **modifications**, tant sur la forme que sur le fond. Certaines pages n'ont pas encore subi de relectures orthographique ou syntaxique. Nous vous remercions de votre compréhension. Bonne lecture !
+````
+
 
 ## Introduction
 
