@@ -99,6 +99,9 @@ parts:
     - file: content/annexes/art/referencesart
     - file: content/annexes/art/histoireart
     - file: content/annexes/references/liens
+  - file: content/annexes/prolongements/introduction
+    sections:
+    - file: content/annexes/prolongements/bioinf/bioinf
 
 
 
