@@ -61,23 +61,23 @@ Après la phase **pilote**, les enseignant.es pourront en outre :
 
 ## Documents importants
 
-* [Plan d'études](http://files.edunumsec2.ch/pe.pdf) pour l'informatique discipline obligatoire. 
-* [Livret de cours](http://files.edunumsec2.ch/livret.pdf) décrivant le découpage du plan d'études dans le détail. 
+* [Plan d'études](https://files.edunumsec2.ch/pe.pdf) pour l'informatique discipline obligatoire. 
+* [Livret de cours](https://files.edunumsec2.ch/livret.pdf) décrivant le découpage du plan d'études dans le détail. 
 
 ## Chapitrage
 
-Les ressources sont découpées selon un chapitrage qui correspond au plan d'études romand (ajouter réf). Elles sont divisées en quatre parties, dont nulle n'a de préseance sur les autres. Il appartient à l'enseignante ou l'enseignant de choisir l'ordre dans lequel les contenus sont abordés. Le fait que les chapitres soient successifs est le résultat des limitations de l'affichage. Pour atténuer quelque peu ce problème nous avons choisi de renoncer à une numérotation des chapitres. 
+Les ressources sont découpées selon un chapitrage qui correspond au plan d'études romand (voir ci-dessus). Elles sont divisées en quatre parties, dont nulle n'a de préseance sur les autres. Il appartient à l'enseignante ou l'enseignant de choisir l'ordre dans lequel les contenus sont abordés. Le fait que les chapitres soient successifs est le résultat des limitations de l'affichage. Pour atténuer quelque peu ce problème nous avons choisi de renoncer à une numérotation des chapitres. 
 
-[Représentation de l'information](http://eleve.edunumsec2.ch/content/theme/representation-information/accueil/eleve.html)
+[Représentation de l'information](https://eleve.edunumsec2.ch/content/theme/representation-information/accueil/eleve.html)
 : Où il est question du passage du système décimal au *système binaire*, ainsi que des problématiques de traitement des données telles que *l'encodage*, *la compression*, *l'échantillonnage*, *le cryptage*, et la *représentation des caractères, des images et des sons* sous forme de bits. 
 
-[Algorithmique I](http://eleve.edunumsec2.ch/content/theme/introduction-algorithmique/accueil/eleve.html)
+[Algorithmique I](https://eleve.edunumsec2.ch/content/theme/introduction-algorithmique/accueil/eleve.html)
 : Ce chapitre propose une *définition générale de l'algorithmique*, ainsi qu'une présentation de certains *algorithmes classiques*. 
 
-[Programmation I](http://eleve.edunumsec2.ch/content/theme/programmation/accueil/eleve.html)
+[Programmation I](https://eleve.edunumsec2.ch/content/theme/programmation/accueil/eleve.html)
 : Après avoir présenté un échantillon de langages de programmation et leurs différences respectives, ce chapitre *pose les bases du language Python*. 
 
-[Architecture des ordinateurs](http://eleve.edunumsec2.ch/content/theme/architecture-ordinateurs/accueil/eleve.html)
+[Architecture des ordinateurs](https://eleve.edunumsec2.ch/content/theme/architecture-ordinateurs/accueil/eleve.html)
 : Il est question ici de notions telles que *les portes logiques*, *les transistors*, *l'architecture de Von Neumann*, et autres concepts essentiels à la compréhension de ce qui se passe au niveau physique et électronique dans un ordinateur.
 
 
@@ -211,6 +211,8 @@ jupyter-book clean .
 ```
 
 ## Exemples d'utilisation des ressources
+
+⚠️ *Attention : les utilisations suivantes sont présentes à titre indicatif mais ne seront effectives qu'après la phase pilote.* 
 
 ### Utilisation en ligne
 
