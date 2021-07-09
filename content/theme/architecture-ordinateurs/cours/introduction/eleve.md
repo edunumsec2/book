@@ -44,7 +44,7 @@ En informatique, si nous avons choisi d'utiliser un {glo}`codebinaire|code binai
 
 ```{admonition} Le saviez-vous ?
 :class: hint
-On aurait pu choisir un code possédant plus que deux {glo}`signal|signaux` différents. Si on choisissait, par exemple, trois {glo}`signal|signaux`, on pourrait les coder par l'électricité en mesurant un courant faible, un courant moyen, un courant fort. Le problème est qu'on augmenterait ainsi les possibilités de se tromper dans la mesure, et d'interpréter un courant moyen pour un courant fort, ou inversément. Puisque l'électricité permet une vitesse de transmission par signal très grande, il est plus performant de garder deux positions clairement distinctes que l'on peut transmettre très vite, plutôt que trois positions avec un risque de confusion plus élevé. 
+On aurait pu choisir un code possédant plus que deux signaux différents. Si on choisissait, par exemple, trois signal, on pourrait les coder par l'électricité en mesurant un courant faible, un courant moyen, un courant fort. Le problème est qu'on augmenterait ainsi les possibilités de se tromper dans la mesure, et d'interpréter un courant moyen pour un courant fort, ou inversément. Puisque l'électricité permet une vitesse de transmission par signal très grande, il est plus performant de garder deux positions clairement distinctes que l'on peut transmettre très vite, plutôt que trois positions avec un risque de confusion plus élevé. 
 ```
 
 ## Le transistor
@@ -56,13 +56,13 @@ Le {glo}`transistor|transistor` est la brique de base de construction des systè
 height: 350px
 width: 500px
 ---
-Différents modèles de transistor. On les reconnaît à leurs trois "pattes" aussi appelées : {glo}`emetteur1|émetteur`, {glo}`base|base`, {glo}`collecteur|collecteur`. 
+Différents modèles de transistor. On les reconnaît à leurs trois "pattes" aussi appelées : émetteur, base, collecteur. 
 ```
 
 Le {glo}`transistor|transistor` fonctionne comme un robinet d'eau qui peut être ouvert ou fermé. Si on l'ouvre le courant passe, si on le ferme il ne passe pas. 
 
 ````{dropdown} Pour aller plus loin
-Vidéo facultative qui explique en détail ce qui se passe dans les matériaux qu'on appelle "semi-conducteurs". *Note : contenu en anglais, mais en cours de traduction (elliot)*.
+Vidéo facultative qui explique en détail ce qui se passe dans les matériaux qu'on appelle "semi-conducteurs".
 ```{youtube} 33vbFFFn04k
 ```
 ````
@@ -72,7 +72,7 @@ Vidéo facultative qui explique en détail ce qui se passe dans les matériaux q
 height: 350px
 width: 500px
 ---
-En appliquant un courant qui va de la {glo}`base|base` à {glo}`emetteur1|l'émetteur` (en rose pâle), on permet au courant de circuler entre le {glo}`collecteur|collecteur` et {glo}`emetteur1|l'émetteur` (appelés ainsi parce que l'émetteur *émet* des électrons, et le collecteur les *collecte*). Envoyer du courant dans la {glo}`base|base` c'est donc *ouvrir* le transistor. 
+En appliquant un courant qui va de la base à l'émetteur (en rose pâle), on permet au courant de circuler entre le collecteur et l'émetteur (appelés ainsi parce que l'émetteur *émet* des électrons, et le collecteur les *collecte*). Envoyer du courant dans la base c'est donc *ouvrir* le transistor. 
 ```
 
 De par sa capacité à être ouvert ou fermé, le {glo}`transistor|transistor` fonctionne comme une brique fondamentale dans la construction de systèmes informatiques permettant de {glo}`transmission|transmettre`, {glo}`stockage|stocker` et {glo}`traitement|traiter` des nombres binaires. 
@@ -174,7 +174,7 @@ Certains circuits sont construits pour "bloquer" une information, ce qui nous pe
 
 Dans l'exemple ci-dessus, à partir du moment où on a "ouvert" la porte S (donc qu'on a "set", c'est à dire "établi" l'état initial), la sortie Q est 1. Si on avait une ampoule à cet endroit, elle serait allumée. Maintenant, même si on "ferme" la porte S, Q reste bloqué sur 1. On a donc créé une forme de mémoire. La seule façon "d'éteindre" la sortie Q est d'ouvrir R (donc de "reset", c'est à dire réinitialiser le système). 
 
-Voici une vidéo qui illustre ce principe de verrou S-R. *Note : oui, elle est en anglais, mais j'ai contacté l'auteur pour ajouter des sous-titres français, et on pourrait même la regarder sans le son pour illustrer (elliot)*.
+Voici une vidéo qui illustre ce principe de verrou S-R.
 
 ```{youtube} KM0DdEaY5sY
 :start: 4:58

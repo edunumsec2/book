@@ -9,7 +9,7 @@ L'ENIAC, l'un des tout premiers ordinateurs opérationnels, conçu en 1945, à l
 
 L'iPhone X, pour un poids de 147 grammes, exécute environ 600 milliards d'opérations par seconde. 
 
-Plus proche de nous, en 1991, 1 GO de mémoire non volatile coutait environ 45'000 dollars. Aujourd'hui, un iPhone possède 256 GO d'espace libre, ce qui aurait coûté à l'époque 11.5 millions de dollars[^1]. 
+En 1991, 1 GO de mémoire non volatile coutait environ 45'000 dollars. Aujourd'hui, un iPhone possède 256 GO d'espace libre, ce qui aurait coûté à l'époque 11.5 millions de dollars[^1]. 
 
 Mais par quoi ont été remplacés les 17'468 tubes électroniques de l'ENIAC ? Et comment se fait-il qu'un objet qui tient dans la poche puisse contenir 256 fois plus d'espace disque qu'un ordinateur des années 1990 ? 
 
