@@ -20,9 +20,9 @@ Demandez à un.e camarade de classe de suivre ces instructions. Est-ce que votre
 
 ## Formalisation et implémentation de solutions algorithmiques
 
-Une fois que l’on a déterminé le meilleur algorithme à utiliser, il faut le retranscrire dans un programme qu’une machine peut comprendre. Nous allons détailler ce processus pour l’algorithme du **<span style="color:rgb(89, 51, 209)">tri par sélection</span>**. 
+Une fois que l’on a déterminé le meilleur {glo}`algo|algorithme` à utiliser, il faut le retranscrire dans un programme qu’une machine peut comprendre. Nous allons détailler ce processus pour l’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri par sélection</span>**. 
 
-Cet algorithme consiste à parcourir la liste à trier plusieurs fois. A chaque itération, on sélectionne le plus petit élément et on l’échange avec le premier élément de la liste non triée. Comment pourrait-on traduire ceci en Python ? Comment représenter ces rectangles dans un langage de programmation ? 
+Cet {glo}`algo|algorithme` consiste à parcourir la liste à trier plusieurs fois. A chaque {glo}`iteration|itération`, on sélectionne le plus petit élément et on l’échange avec le premier élément de la liste non triée. Comment pourrait-on traduire ceci en Python ? Comment représenter ces rectangles dans un langage de programmation ? 
 
 Tout d’abord, il faut représenter la taille des rectangles numériquement. On peut par exemple représenter l’ordre des rectangles de la première ligne de la <a href="../algorithmes-classiques/eleve.html#fig-trier">Figure **Trier**</a>, en fonction de leur taille, dans une liste nommée  rect:
 
@@ -30,7 +30,7 @@ Tout d’abord, il faut représenter la taille des rectangles numériquement. On
 rect = [3,4,1,2,6,5]
 ```
 
-On doit ensuite trouver le plus petit élément de la liste (le rectangle le plus court). Nous allons commencer par supposer que l’élément le plus petit est le premier élément, et nous initialisons une variable nommée indice_min à 0. Cette variable va stocker l’indice du plus petit élément de la liste (la position de l’élément à l’intérieur de la liste). Nous allons ensuite parcourir la liste à partir du deuxième élément. Pour chaque élément nous allons tester s’il est plus petit ou plus grand que le plus petit élément connu jusqu’à là :
+On doit ensuite trouver le plus petit élément de la liste (le rectangle le plus court). Nous allons commencer par supposer que l’élément le plus petit est le premier élément, et nous initialisons une {glo}`variable|variable` nommée indice_min à 0. Cette {glo}`variable|variable` va stocker l’indice du plus petit élément de la liste (la position de l’élément à l’intérieur de la liste). Nous allons ensuite parcourir la liste à partir du deuxième élément. Pour chaque élément nous allons tester s’il est plus petit ou plus grand que le plus petit élément connu jusqu’à là :
 
 ```
 # trouve le rectangle le plus petit de la liste
@@ -40,13 +40,13 @@ for i in range(1,len(rect)):  # len(rect) donne la longueur de rect
         indice_min = i
 ```
 
-Pour faire plus simple, nous pouvons également utiliser la fonction min() qui retourne directement le plus petit élément d’une liste. Nous avons aussi besoin de la fonction index() afin d’accéder à la position du plus petit élément.
+Pour faire plus simple, nous pouvons également utiliser la {glo}`fonction|fonction` min() qui retourne directement le plus petit élément d’une liste. Nous avons aussi besoin de la {glo}`fonction|fonction` index() afin d’accéder à la position du plus petit élément.
 
 ```
 indice_min = rect.index(min(rect))
 ```
 
-Après cette opération indice_min contient l’indice de l’élément le plus petit de la liste. On doit à ce stade, échanger cet élément et le premier élément. Comme nous avons pu le voir dans l’exercice 3, il faut une variable temporaire pour échanger les valeurs de deux variables. Si on met la valeur du plus petit élément directement à la position 0, nous perdons la valeur contenue à ce moment-là à la position 0. Il faut donc la stocker temporairement dans une autre variable :
+Après cette opération indice_min contient l’indice de l’élément le plus petit de la liste. On doit à ce stade, échanger cet élément et le premier élément. Comme nous avons pu le voir dans l’exercice 3, il faut une {glo}`variable|variable` temporaire pour échanger les valeurs de deux {glo}`variable|variables` . Si on met la valeur du plus petit élément directement à la position 0, nous perdons la valeur contenue à ce moment-là à la position 0. Il faut donc la stocker temporairement dans une autre {glo}`variable|variable`  :
 
 ```
 # échange l’élément le plus petit et le premier élément
@@ -55,7 +55,7 @@ rect[0] = rect[indice_min]
 rect[indice_min] = rect_temp
 ```
 
-Là encore, il est possible de l’écrire de manière plus compacte en Python. En affectant les deux variables simultanément, c’est Python qui se charge de créer la variable temporaire :
+Là encore, il est possible de l’écrire de manière plus compacte en Python. En affectant les deux {glo}`variable|variables` simultanément, c’est Python qui se charge de créer la {glo}`variable|variable` temporaire :
 
 
 ```
@@ -73,7 +73,7 @@ indice_min = rect.index(min(rect[1:]))
 rect[1], rect[indice_min] = rect[indice_min], rect[1]
 ```
 
-La suite de l’algorithme consiste à nouveau à rechercher le plus petit élément de la liste restante (en excluant le premier et deuxième élément) et l’échanger avec le troisième élément (premier élément non trié). A nouveau on peut reprendre le même code, mais on incrémente tous les indices de 1 :
+La suite de l’{glo}`algo|algorithme` consiste à nouveau à rechercher le plus petit élément de la liste restante (en excluant le premier et deuxième élément) et l’échanger avec le troisième élément (premier élément non trié). A nouveau on peut reprendre le même code, mais on incrémente tous les indices de 1 :
 
 ```
 # trouve le rectangle le plus petit de la liste rect[2:]
@@ -83,7 +83,7 @@ indice_min = rect.index(min(rect[2:]))
 rect[2], rect[indice_min] = rect[indice_min], rect[2]
 ```
 
-On détecte un motif qui se répète. On fait toujours les mêmes opérations, mais on commençant à une position différente. Plutôt que de réécrire le même code autant de fois que d’éléments dans la liste, on peut remplacer l’indice de début par une variable que l’on incrémente. Notez que ce code est répété len(rect)-1 fois et pas autant de fois qu’il y a des éléments de la liste, car on doit pouvoir comparer et échanger 2 éléments. 
+On détecte un motif qui se répète. On fait toujours les mêmes opérations, mais on commençant à une position différente. Plutôt que de réécrire le même code autant de fois que d’éléments dans la liste, on peut remplacer l’indice de début par une {glo}`variable|variable` que l’on {glo}`incrementation|incrémente`. Notez que ce code est répété len(rect)-1 fois et pas autant de fois qu’il y a des éléments de la liste, car on doit pouvoir comparer et échanger 2 éléments. 
 
 ```
 # pour tous les éléments de la liste non triée
@@ -98,7 +98,7 @@ for j in range(0,len(rect)-1):
 
 Le principal avantage de cette ***<span style="color:rgb(13, 204, 166)">factorisation</span>*** (réécriture) est que maintenant notre code fonctionne pour toutes les longueurs de listes. Nous n’avons plus besoin de savoir à l’avance combien d’éléments sont contenus dans la liste (combien de fois répéter les opérations). Au lieu de répéter le code un nombre prédéterminé de fois, le code s’exécute autant de fois qu’il y a d’éléments dans la liste (moins 1, car on compare toujours 2 éléments).
 
-L’étape suivante consiste à encapsuler tout le code dans une fonction qui reçoit la liste comme paramètre, afin de le rendre utilisable par différents programmes sans avoir à copier-coller le code. Cela permet aussi en cas d’erreur de facilement corriger la fonction, sans avoir à savoir où elle a été utilisée.
+L’étape suivante consiste à encapsuler tout le code dans une {glo}`fonction|fonction` qui reçoit la liste comme {glo}`parametre|paramètre`, afin de le rendre utilisable par différents {glo}`programme|programmes` sans avoir à copier-coller le code. Cela permet aussi en cas d’erreur de facilement corriger la {glo}`fonction|fonction`, sans avoir à savoir où elle a été utilisée.
 
 ```
 # Tri par sélection
@@ -114,7 +114,7 @@ def fonction tri_selection(rect) :
         rect[j], rect[indice_min] = rect[indice_min], rect[j]
 ```
 
-Finalement le terme rect n’est pas assez général, car le tri par sélection peut être utilisé pour trier toutes sortes d’éléments et pas seulement des rectangles. Ainsi on peut renommer la variable rect par liste :
+Finalement le terme rect n’est pas assez général, car le tri par sélection peut être utilisé pour trier toutes sortes d’éléments et pas seulement des rectangles. Ainsi on peut renommer la {glo}`variable|variable` rect par liste :
 
 
 ```
@@ -131,7 +131,7 @@ def fonction tri_selection(liste) :
         liste[j], liste[indice_min] = liste[indice_min], liste[j]
 ```
 
-Pour trier la liste rect définie au tout début, il suffit d’appeler la fonction tri_selection avec la liste en argument. Pour afficher la liste triée :
+Pour trier la liste rect définie au tout début, il suffit d’appeler la {glo}`fonction|fonction` tri_selection avec la liste en {glo}`argument|argument`. Pour afficher la liste triée :
 
 ```
 rect = [3,4,1,2,6,5]
