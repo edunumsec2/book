@@ -34,7 +34,7 @@ parts:
   ### Programmation    
   - file: content/theme/programmation/accueil/eleve
     sections:
-      - file: content/theme/programmation/cours/0_intro/intro
+      # - file: content/theme/programmation/cours/0_intro/intro
       - file: content/theme/programmation/cours/1_intro/intro 
       - file: content/theme/programmation/cours/2_pyth/pyth
       - file: content/theme/programmation/cours/3_var/var

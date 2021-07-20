@@ -5,7 +5,7 @@
 
 Bienvenue dans les ressources pour l'informatique au gymnase. 
 
-Elles ont été conçues pour vous accompagner dans votre enseignement. <!-- Une version maître existe également, disponible ici.  -->
+Elles ont été conçues pour vous accompagner dans votre enseignement. 
 
 ````{admonition} Ces ressources sont en cours de rédaction
 :class: caution
