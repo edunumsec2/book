@@ -112,14 +112,15 @@ cette table avait pour principal défaut de ne pas prendre en compte
 les caractères qui n'existent pas dans la langue anglaise,
 ne serait-ce que les lettres accentuées.
 
-```{figure} media/ASCII-Table.svg.png
+```{figure} media/ASCII-Table.png
+---
 height: 500px
 width: 400px
-----
+---
 La table de représentation des caractères ASCII
-````
+```
 
-Des tables multiples, mutuellements incompatibles, ont alors émergé: une table
+Des tables multiples, mutuellement incompatibles, ont alors émergé: une table
 pour les européens, une autre pour les japonais et ainsi de suite.
 
 Progressivement, notamment avec l'émergence du Web au cours des années 1990,
