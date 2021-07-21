@@ -73,7 +73,7 @@ Légendes :
 
 * Franck Slama, a.k.a Invaders, est l'artiste français qui réalise les mosaïques de petits monstres inspirés du jeu vidéo *Space Invaders*, que l'on croise parfois aux détours des rues dans les grandes métropoles européennes. Spoiler : on en voit une depuis l'esplanade de la cathédrale à Lausanne, quand on regarde en direction de la place de la Riponne. 
 
-### Labels 
+<!-- ### Labels 
 
 * **Nom (libre)** : Image bitmap
 * **Genre (contraint)** : unplugged
@@ -92,7 +92,7 @@ Légendes :
 * **Centres d'intérêts (libre)** : ? 
 * **Auteur(s)**
 * **Relecteur(s)**
-* **Testeur(s)**
+* **Testeur(s)** -->
 
 ### Résultat 
 
