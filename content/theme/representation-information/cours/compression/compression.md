@@ -15,11 +15,9 @@ Une technique permettant de contourner cette compression automatique consiste à
 
 ## Compression avec ou sans pertes
 
-Les deux grandes catégories de compression sont la compression avec pertes et la compression sans pertes. Comme leur nom l'indique, ces deux types de compression permettent respectivement soit de maintenir la totalité de l'information intacte, soit de perdre une certaine quantité d'information si cela ne pose pas de problème. 
+Les deux grandes catégories de compression sont la compression avec pertes et la compression sans pertes. Comme leurs noms l'indiquent, ces deux types de compression permettent respectivement soit de maintenir la totalité de l'information intacte, soit de perdre une certaine quantité d'information, si cela ne pose pas de problème. 
 
 La compression avec pertes est irréversible, il n'est pas possible de récupérer l'information qui a été perdue. C'est la raison pour laquelle la compression sans pertes est privilégiée dans les cas où l'on souhaite réduire l'espace utilisé par un fichier sans pour autant perdre une once d'information, comme dans le cas des archives. 
-
-
 
 ## Codage par plages
 
