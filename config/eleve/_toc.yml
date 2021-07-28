@@ -18,12 +18,12 @@ parts:
       - file: content/theme/representation-information/cours/representation-images/eleve
       - file: content/theme/representation-information/cours/numerisation/eleve
       #- file: content/theme/representation-information/cours/systeme-arithmetique-binaire/eleve
-      - file: content/theme/representation-information/cours/stockage-manipulation-donnees/eleve
+      # note : commenté car non fini - file: content/theme/representation-information/cours/stockage-manipulation-donnees/eleve
       - file: content/theme/representation-information/cours/redondance/eleve
       #### Exercices
-      - file: content/theme/representation-information/exercices/eleve
-        sections:
-          - file: content/theme/representation-information/exercices/representation-caracteres/carte-perforee/exercice
+      # basculé dans maître - file: content/theme/representation-information/exercices/eleve
+        # sections:
+          #- file: content/theme/representation-information/exercices/representation-caracteres/carte-perforee/exercice
       #### Activités (basculées dans version maître)
      # - file: content/theme/representation-information/activites/eleve
      #   sections:
@@ -32,7 +32,7 @@ parts:
 
 
   ### Programmation    
-  - file: content/theme/programmation/accueil/eleve
+  - file: content/theme/programmation/accueil/elevenew
     sections:
       # - file: content/theme/programmation/cours/0_intro/intro
       - file: content/theme/programmation/cours/1_intro/intro 
@@ -96,8 +96,8 @@ parts:
   chapters:
   - file: content/annexes/0_annexes
     sections:
-    - file: content/annexes/art/referencesart
-    - file: content/annexes/art/histoireart
+  #  - file: content/annexes/art/referencesart
+  #  - file: content/annexes/art/histoireart
     - file: content/annexes/references/liens
   - file: content/annexes/prolongements/introduction
     sections:

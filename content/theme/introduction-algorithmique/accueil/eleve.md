@@ -37,23 +37,22 @@ A la fin de ce chapitre, vous saurez ce qu'est un algorithme et vous serez capab
 
 :img-top: media/Al-Khwarizmi.png
 
-Al-Khwarizmi
+Al-Khwarizmi 🇺🇿
 ^^^^^
-* **Naissance** 780 Ouzbékistan 🇺🇿
-* **Déces** 850 / Bagdad 🇮🇶
+* **Naissance** 780
+* **Déces** 850
 
 Considéré comme le père de l’algèbre [**Al-Khwarizmi**](https://fr.wikipedia.org/wiki/Al-Khw%C3%A2rizm%C3%AE) a vécu au VIIIe siècle dans le Moyen Orient. Il est l'auteur de plusieurs ouvrages de mathématiques, d’astronomie et de géographie. Son nom est à l’origine du mot **algorithme**.
 
 ----
 :img-top: media/Dijkstra.jpg
 
-Edsger Dijkstra
+Edsger Dijkstra 🇳🇱
 ^^^^^
-* **Naissance** 11 mai 1930 / Rotterdam 🇳🇱
-* **Déces** 06 août 2002 / Nuenen 🇳🇱
+* **Naissance** 11 mai 1930
+* **Déces** 06 août 2002
 
-[Edsger Wybe Dijkstra](https://fr.wikipedia.org/wiki/Edsger_Dijkstra) est un mathématicien et informaticien néerlandais du xxe siècle. Il reçoit en 1972 le prix Turing pour ses contributions sur la science et l’art des langages de programmation et au langage Algol. Juste avant sa mort, en 2002, il reçoit le prix PoDC de l'article influent, pour ses travaux sur l'autostabilisation. L'année suivant sa mort, le prix sera renommé en son honneur prix Dijkstra.
-
+[Edsger Wybe Dijkstra](https://fr.wikipedia.org/wiki/Edsger_Dijkstra) est un mathématicien et informaticien néerlandais du XXe siècle. Il reçoit en 1972 le prix Turing pour ses contributions sur la science et l’art des langages de programmation et au langage Algol. Il est le concepteur de l'algorithme éponyme de recherche du plus court chemin. 
 ````
 
 
