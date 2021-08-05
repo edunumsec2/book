@@ -1,3 +1,4 @@
+(porteslogiques)=
 # Portes logiques
 
 ## Introduction

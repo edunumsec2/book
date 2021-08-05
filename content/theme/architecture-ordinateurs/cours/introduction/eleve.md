@@ -110,7 +110,9 @@ width: 200px
 Voilà le schéma de construction d'une porte logique "ET", à partir de deux transistors. Si les deux transistors sont "ouverts", le courant passe. 
 ```
 
-## Des portes logiques aux tables de vérité
+C'est ici que nous entrons dans la partie de ce chapitre qui concerne les {ref}`portes logiques <porteslogiques>`. 
+
+<!-- ## Des portes logiques aux tables de vérité
 
 Les {glo}`portelogique|portes logiques`sont des circuits extrêmement basiques faits de {glo}`transistor|transistors` qui permettent d'exprimer des relations logiques tels que la {glo}`conjonction|conjonction`, la {glo}`disjonction|disjonction` ou la {glo}`negation|négation`. 
 
@@ -184,3 +186,4 @@ Voici une vidéo qui illustre ce principe de verrou S-R.
 
 
 
+ -->
