@@ -9,7 +9,7 @@ Des moyens d'enseignement pour l'informatique en discipline obligatoire au nivea
 
 En accord avec la DGEP, une partie de ce matériel est déjà mise à disposition des enseignant·e·s vaudois·e·s pour une première phase pilote.
 
-Les ressources sont accessibles via le [site web](https://edunumsec2.ch). Elles peuvent être utilisées telles quelles ou modifiées via un [dépôt GitHub](https://github.com/edunumsec2/book).
+Les ressources sont accessibles via le [site web](https://edunumsec2.ch) (Username : edunum, Password : Edunumsecondaire2). Elles peuvent être utilisées telles quelles ou modifiées via un [dépôt GitHub](https://github.com/edunumsec2/book).
 
 ## Table des matières
 
