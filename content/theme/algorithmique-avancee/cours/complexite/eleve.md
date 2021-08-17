@@ -10,13 +10,13 @@ On souhaite comparer deux algorithmes qui permettent de résoudre le même probl
 
 ## Principe de complexité
 
-Nous avons vu dans la section <a href="../introduction-algorithmique/algorithmes-classiques/eleve.html">Algorithmes de tri</a> que certains algorithmes de tri étaient plus rapides que d’autres. Il est important lorsqu’on utilise un algorithme de nous préoccuper de son efficacité. Mais comment pourrait-on calculer la vitesse d’un algorithme ?
+Nous avons vu dans la section <a href="../introduction-algorithmique/algorithmes-classiques/eleve.html">Algorithmes de tri</a> que certains {glo}`algo|algorithmes` de tri étaient plus rapides que d’autres. Il est important lorsqu’on utilise un {glo}`algo|algorithme` de nous préoccuper de son {glo}`efficacite|efficacité`. Mais comment pourrait-on calculer la vitesse d’un {glo}`algo|algorithme` ?
 
-Est-ce qu’on peut utiliser la taille de l’algorithme pour prédire le temps qu’il va prendre à s’exécuter ? En d’autres termes, est-ce qu’un algorithme de 10 lignes est toujours plus lent qu’un algorithme de 5 lignes ? Nous avons vu que l’algorithme infini du chapitre précédent est très court (seulement 5 lignes), mais en théorie il ne s’arrête jamais. Une boucle rallonge le code de seulement 2 lignes, mais rallonge le temps d’exécution de manière bien plus significative. 
+Est-ce qu’on peut utiliser la taille de l’{glo}`algo|algorithme` pour prédire le temps qu’il va prendre à s’exécuter ? En d’autres termes, est-ce qu’un {glo}`algo|algorithme` de 10 lignes est toujours plus lent qu’un {glo}`algo|algorithme` de 5 lignes ? Nous avons vu que l’{glo}`algo|algorithme` infini du chapitre précédent est très court (seulement 5 lignes), mais en théorie il ne s’arrête jamais. Une {glo}`bouclewhile|boucle` rallonge le code de seulement 2 lignes, mais rallonge le temps d’exécution de manière bien plus significative. 
 
-On pourrait croire qu’il suffit de programmer un algorithme et de chronométrer le temps que ce programme prend à s’exécuter. Cette métrique est problématique, car elle ne permet pas de comparer différents algorithmes entre eux lorsqu’ils sont exécutés sur différentes machines. Un algorithme lent implémenté sur une machine dernière génération pourrait prendre moins de temps à s’exécuter qu’un algorithme rapide implémenté sur une machine datant d’une dizaine d’années. 
+On pourrait croire qu’il suffit de programmer un {glo}`algo|algorithme` et de chronométrer le temps que ce programme prend à s’exécuter. Cette métrique est problématique, car elle ne permet pas de comparer différents {glo}`algo|algorithmes` entre eux lorsqu’ils sont exécutés sur différentes machines. Un {glo}`algo|algorithme` lent {glo}`implementation|implémenté` sur une machine dernière génération pourrait prendre moins de temps à s’exécuter qu’un {glo}`algo|algorithme` rapide {glo}`implementation|implémenté` sur une machine datant d’une dizaine d’années. 
 
-Pour mesurer le temps d’exécution (ou la vitesse) d’un algorithme, il nous faut un critère plus objectif : **<span style="color:rgb(89, 51, 209)">le nombre d’instructions élémentaires</span>**.  De manière formelle et rigoureuse, on ne parle pas d’efficacité, mais plutôt de la **<span style="color:rgb(89, 51, 209)">complexité d’un algorithme</span>**, qui est en fait contraire à son efficacité. L’analyse de la complexité d’un algorithme étudie la quantité de ressources (par exemple de temps) nécessaires à l’exécution de cet algorithme.
+Pour mesurer le temps d’exécution (ou la vitesse) d’un {glo}`algo|algorithme`, il nous faut un critère plus objectif : **<span style="color:rgb(89, 51, 209)">le nombre d’instructions élémentaires</span>**.  De manière formelle et rigoureuse, on ne parle pas d’efficacité, mais plutôt de la **<span style="color:rgb(89, 51, 209)">complexité d’un algorithme</span>**, qui est en fait contraire à son efficacité. L’analyse de la complexité d’un algorithme étudie la quantité de ressources (par exemple de temps) nécessaires à l’exécution de cet {glo}`algo|algorithme`.
 
 ```{admonition} Le saviez-vous ?
 :class: hint
@@ -25,7 +25,7 @@ Nous allons surtout étudier la complexité des algorithmes en rapport avec le t
 
 ## Recherche linéaire 
 
-Nous allons tenter ici d’estimer le nombre d’instructions élémentaires nécessaire pour rechercher un élément dans un tableau (liste en Python). La manière la plus simple pour rechercher un élément dans un tableau consiste à parcourir le tableau et à comparer tous ses éléments avec l’élément recherché :
+Nous allons tenter ici d’estimer le nombre d’{glo}`instruction|instructions` élémentaires nécessaire pour rechercher un élément dans un tableau (liste en Python). La manière la plus simple pour rechercher un élément dans un tableau consiste à parcourir le tableau et à comparer tous ses éléments avec l’élément recherché :
 
 ```{code-block} python
 
@@ -43,11 +43,11 @@ Retourner « Non »
 
 ```
 
-Supposons que le tableau contient 10 éléments. Pour trouver l’élément recherché, il faut au moins deux instructions : une instruction qui accède un élément du tableau ou **Elements[i]** et une autre instruction qui le compare à **élément_recherché**. Dans le cas du tableau à 10 éléments, cet algorithme prendrait 20 instructions élémentaires. Mais si le tableau contient 100 éléments, le nombre d’instructions élémentaires monte à environ 200. De manière  générale, si le nombre d’éléments dans le tableau est n, et cela prend 2*n instructions pour parcourir et comparer ses éléments. 
+Supposons que le tableau contient 10 éléments. Pour trouver l’élément recherché, il faut au moins deux {glo}`instruction|instructions` : une {glo}`instruction|instruction` qui accède un élément du tableau ou **Elements[i]** et une autre {glo}`instruction|instruction` qui le compare à **élément_recherché**. Dans le cas du tableau à 10 éléments, cet algorithme prendrait 20 {glo}`instruction|instructions` élémentaires. Mais si le tableau contient 100 éléments, le nombre d’{glo}`instruction|instructions` élémentaires monte à environ 200. De manière  générale, si le nombre d’éléments dans le tableau est n, et cela prend 2*n {glo}`instruction|instructions` pour parcourir et comparer ses éléments. 
 
-Cette estimation n’est pas exacte. Nous n’avons pas pris en compte les instructions élémentaires qui permettent d’incrémenter i et de vérifier si **i == longueur(Nombres)**. Lorsqu’on prend en compte ces 2 instructions liées à **i**, le nombre d’instructions passe de 200 à 400. Ce qui nous intéresse ici n’est pas le nombre exact d’instructions, 200 ou 400, mais plutôt son **<span style="color:rgb(89, 51, 209)">ordre de grandeur</span>** ou comment ce nombre d’instructions élémentaires grandit avec **n**. L’algorithme ici est d’ordre **O(n)** ou linéaire. 
+Cette estimation n’est pas exacte. Nous n’avons pas pris en compte les {glo}`instruction|instructions` élémentaires qui permettent d’incrémenter i et de vérifier si **i == longueur(Nombres)**. Lorsqu’on prend en compte ces 2 {glo}`instruction|instructions` liées à **i**, le nombre d’{glo}`instruction|instructions` passe de 200 à 400. Ce qui nous intéresse ici n’est pas le nombre exact d’{glo}`instruction|instructions`, 200 ou 400, mais plutôt son **<span style="color:rgb(89, 51, 209)">ordre de grandeur</span>** ou comment ce nombre d’{glo}`instruction|instructions` élémentaires grandit avec **n**. L’algorithme ici est d’ordre **O(n)** ou linéaire. 
 
-Un ordre de grandeur linéaire implique que le nombre d’instructions élémentaires de l’algorithme croît linéairement en fonction du nombre d’éléments des données : c*n+a, ou c est une constante. Dans ce cas précis, c vaut 4. La constante a vaut 5 et correspond aux instructions d’initialisation avant la boucle plus l’instruction de retour à la fin. Si le tableau contient 10 éléments, il faut environ 45 instructions ; pour 100 éléments il faut environ 405 instructions ; pour 1000 éléments il faut environ 4005 instructions et ainsi de suite. Le nombre d’instructions grandit de manière linéaire en fonction de la taille des données **n**.
+Un ordre de grandeur linéaire implique que le nombre d’{glo}`instruction|instructions` élémentaires de l’{glo}`algo|algorithme` croît linéairement en fonction du nombre d’éléments des données : c*n+a, ou c est une {glo}`constante|constante` . Dans ce cas précis, c vaut 4. La {glo}`constante|constante`  a vaut 5 et correspond aux {glo}`instruction|instructions` d’initialisation avant la {glo}`bouclewhile|boucle` plus l’instruction de retour à la fin. Si le tableau contient 10 éléments, il faut environ 45 {glo}`instruction|instructions` ; pour 100 éléments il faut environ 405 {glo}`instruction|instructions` ; pour 1000 éléments il faut environ 4005 {glo}`instruction|instructions` et ainsi de suite. Le nombre d’{glo}`instruction|instructions` grandit de manière linéaire en fonction de la taille des données **n**.
 
 ```{admonition} Exercice 2
 :class: note
@@ -140,7 +140,6 @@ Cette différence de croissance se cache dans la constante c de l’ordre de gra
 `````
 
 *******************
-*******************
 
 ```{admonition} Matière à réfléchir IV
 :class: attention
@@ -153,7 +152,7 @@ Quelle propriété du dictionnaire nous permet d’utiliser un autre algorithme 
 
 ## Recherche binaire
 
-Si on doit rechercher un élément dans **un tableau déjà trié**, l’algorithme de la recherche linéaire n’est pas optimal. Dans le cas d’un dictionnaire, lorsque l’on recherche un mot, on ne va pas parcourir tous les mots du dictionnaire dans l’ordre. Nous exploitons le fait que les mots du dictionnaire sont triés dans un ordre alphabétique. On commence par ouvrir le dictionnaire sur une page au hasard et on  regarde si le mot recherché se trouve avant ou après cette page. On ouvre ensuite une autre page au hasard dans la partie avant ou après du dictionnaire. On appelle cette méthode la recherche binaire (ou recherche dichotomique), car concrètement elle divise l’espace de recherche par deux à chaque itération (à chaque nouvelle page ouverte, nous éliminons environ la moitié de l’espace de recherche) :
+Si on doit rechercher un élément dans **un tableau déjà trié**, l’{glo}`algo|algorithme` de la recherche linéaire n’est pas optimal. Dans le cas d’un dictionnaire, lorsque l’on recherche un mot, on ne va pas parcourir tous les mots du dictionnaire dans l’ordre. Nous exploitons le fait que les mots du dictionnaire sont triés dans un ordre alphabétique. On commence par ouvrir le dictionnaire sur une page au hasard et on  regarde si le mot recherché se trouve avant ou après cette page. On ouvre ensuite une autre page au hasard dans la partie avant ou après du dictionnaire. On appelle cette méthode la recherche binaire (ou recherche dichotomique), car concrètement elle divise l’espace de recherche par deux à chaque itération (à chaque nouvelle page ouverte, nous éliminons environ la moitié de l’espace de recherche) :
 
 ```{code-block} python
 
@@ -180,9 +179,9 @@ Retourner trouvé
 
 ```
 
-Prenez le temps d’étudier cet algorithme. Que fait-il ? La boucle Tant que permet de rechercher elément_recherché à l’intérieur d’`Eléments` tant qu’il n’est pas trouvé (`trouvé != Vrai`). A chaque itération (à chaque passage dans la boucle), on vérifie si l’élément au milieu du tableau `Eléments` n’est pas l’`élément recherché`. Si l’ élément au milieu du tableau est plus grand que l’`élément recherché`, cela indique que elément_recherché se trouverait dans la première partie du tableau, les éléments étant triés. Si cet élément du milieu du tableau est plus petit que l’élément recherché, cela indique que l’élément recherché se trouverait au contraire dans la deuxième partie du tableau. 
+Prenez le temps d’étudier cet {glo}`algo|algorithme`. Que fait-il ? La {glo}`bouclewhile|boucle Tant que` permet de rechercher elément_recherché à l’intérieur d’`Eléments` tant qu’il n’est pas trouvé (`trouvé != Vrai`). A chaque itération (à chaque passage dans la {glo}`bouclewhile|boucle`), on vérifie si l’élément au milieu du tableau `Eléments` n’est pas l’`élément recherché`. Si l’ élément au milieu du tableau est plus grand que l’`élément recherché`, cela indique que elément_recherché se trouverait dans la première partie du tableau, les éléments étant triés. Si cet élément du milieu du tableau est plus petit que l’élément recherché, cela indique que l’élément recherché se trouverait au contraire dans la deuxième partie du tableau. 
 
-Dans la recherche linéaire, chaque passage de la boucle permet de comparer un élément à l’élément recherché et l’espace de recherche diminue seulement de 1. A chaque itération de la recherche binaire, l’espace de recherche est divisé par deux et nous n’avons besoin de parcourir plus qu’une moitié du tableau.
+Dans la recherche linéaire, chaque passage de la {glo}`bouclewhile|boucle` permet de comparer un élément à l’élément recherché et l’espace de recherche diminue seulement de 1. A chaque itération de la recherche binaire, l’espace de recherche est divisé par deux et nous n’avons besoin de parcourir plus qu’une moitié du tableau.
 
 
 
@@ -209,7 +208,7 @@ De manière générale, le nombre d’étapes `x` nécessaires pour parcourir un
 &nbsp;&nbsp;&nbsp;&nbsp; x = log2(n) ~ log(n)   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  # simplification : même ordre de grandeur
 
 
-L’ordre de croissance de la recherche binaire est donc `O(log(n))`. La figure ci-dessous permet de comparer la croissance de `n` versus `log(n)`. Un algorithme de complexité `O(log(n))` est beaucoup plus rapide qu’un algorithme de complexité linéaire `O(n)`. La lettre O ici est pour « Ordre ».
+L’ordre de croissance de la recherche binaire est donc `O(log(n))`. La figure ci-dessous permet de comparer la croissance de `n` versus `log(n)`. Un {glo}`algo|algorithme` de complexité `O(log(n))` est beaucoup plus rapide qu’un {glo}`algo|algorithme` de complexité linéaire `O(n)`. La lettre O ici est pour « Ordre ».
 
 
 ```{figure} media/Graphique_Complexite_log.png
@@ -362,11 +361,11 @@ Rechercher une valeur avec la nouvelle version randomisée de recherche binaire.
 
 ## Tri par sélection
 
-Pour rappel, le tri par sélection parcourt le tableau à la recherche du plus petit élément, et ce pour tous les éléments du tableau. Afin de trouver le plus petit élément du tableau, il faut commencer par parcourir toute la liste. Cette opération prend `cn` instructions : `c` instructions pour l’accès et la comparaison des éléments du tableau, multiplié par le nombre d’éléments. Il faut ensuite trouver le plus petit élément des éléments restants `n-1`, et ainsi de suite. Concrètement, on se retrouve avec la somme suivante :
+Pour rappel, le tri par sélection parcourt le tableau à la recherche du plus petit élément, et ce pour tous les éléments du tableau. Afin de trouver le plus petit élément du tableau, il faut commencer par parcourir toute la liste. Cette opération prend `cn` {glo}`instruction|instructions` : `c` {glo}`instruction|instructions` pour l’accès et la comparaison des éléments du tableau, multiplié par le nombre d’éléments. Il faut ensuite trouver le plus petit élément des éléments restants `n-1`, et ainsi de suite. Concrètement, on se retrouve avec la somme suivante :
 
 &nbsp;&nbsp;&nbsp;&nbsp; cn + c(n-1) + c(n-2) + ... + c(n/2+1) + c(n/2) + ... + 3c + 2c + c
 
-Si on réarrange l’ordre des termes on obtient cette somme d’instructions :
+Si on réarrange l’ordre des termes on obtient cette somme d’{glo}`instruction|instructions` :
 
 &nbsp;&nbsp;&nbsp;&nbsp; cn + c + c(n-1) + 2c + c(n-2) + 3c + ... + c(n/2+1) + c(n/2)
 
@@ -382,7 +381,7 @@ Nous avons commencé par `n` termes, que l’on a combinés deux par deux. On se
 
 &nbsp;&nbsp;&nbsp;&nbsp; c(n+1)*n/2	
 
-Le terme qui divise par 2 peut être absorbé dans la constante `c` (la valeur de celle-ci changerait). Finalement, on ajoute une constante a pour prendre en compte le nombre d’instructions qui ne dépendent pas de la taille des données (p. ex : initialisations au début de l’algorithme) :
+Le terme qui divise par 2 peut être absorbé dans la {glo}`constante|constante` `c` (la valeur de celle-ci changerait). Finalement, on ajoute une constante a pour prendre en compte le nombre d’{glo}`instruction|instructions` qui ne dépendent pas de la taille des données (p. ex : initialisations au début de l’{glo}`algo|algorithme`) :
 
 &nbsp;&nbsp;&nbsp;&nbsp; c’(n+1)*n + a = c’n2 + c’n + a	ou 	c’= c/2	
 
@@ -428,7 +427,7 @@ La complexité de l'algorithme par insertion, par sélection et à bulles est de
 
 ## Tri rapide
 
-Tous les algorithmes de tri vus dans le chapitre précédent sont des algorithmes d’ordre quadratique ou de complexité `O(n2)`. Il existe d’autres algorithmes de tri qui sont bien plus rapides. Nous allons voir un algorithme de tri tellement rapide, qu’on lui a donné le nom de **<span style="color:rgb(89, 51, 209)">tri rapide</span>**.
+Tous les {glo}`algo|algorithmes` de tri vus dans le chapitre précédent sont des {glo}`algo|algorithmes`s d’ordre quadratique ou de complexité `O(n2)`. Il existe d’autres {glo}`algo|algorithmes`s de tri qui sont bien plus rapides. Nous allons voir un {glo}`algo|algorithme` de tri tellement rapide, qu’on lui a donné le nom de **<span style="color:rgb(89, 51, 209)">tri rapide</span>**.
 
 On commence par définir un élément pivot : cet élément peut être le premier élément du tableau, l’élément du milieu, le dernier élément ou encore un élément au hasard. Supposons ici que l’élément pivot est le dernier élément du tableau. Une fois que l’on a défini l’élément pivot, on met tous les éléments qui sont plus petits que le pivot à sa gauche et tous les éléments qui sont plus grands que le pivot à droite de celui‑ci (voir la deuxième ligne de la Figure **Tri rapide** ci-dessous). 
 
@@ -443,13 +442,13 @@ name : fig-tri-rapide
 **Tri rapide**. Illustration du tri rapide sur le même set de données que celui utilisé pour illustrer les algorithmes de tri vus au chapitre précédent. L’élément pivot est le dernier élément des tableaux à trier.
 ```
 
-Après la répartition des éléments autour de l’élément pivot en fonction de leur taille, on se retrouve avec deux tableaux non triés, un tableau à chaque côté de l’élément pivot. On continue de traiter ses deux tableaux de la même manière que le tableau initial. On sélectionne pour chaque tableau, celui de gauche et celui de droite, un nouvel élément pivot (le dernier élément du tableau). Pour chaque nouvel élément pivot, on met à gauche les éléments du tableau qui sont plus petits que le pivot. Les éléments qui sont plus grands que le pivot se retrouvent à sa droite. On agit de la sorte jusqu’à ce qu’il ne reste plus que des tableaux à 1 élément.
+Après la répartition des éléments autour de l’élément pivot en fonction de leur taille, on se retrouve avec deux tableaux non triés, un tableau à chaque côté de l’élément pivot. On continue de traiter ces deux tableaux de la même manière que le tableau initial. On sélectionne pour chaque tableau, celui de gauche et celui de droite, un nouvel élément pivot (le dernier élément du tableau). Pour chaque nouvel élément pivot, on met à gauche les éléments du tableau qui sont plus petits que le pivot. Les éléments qui sont plus grands que le pivot se retrouvent à sa droite. On agit de la sorte jusqu’à ce qu’il ne reste plus que des tableaux à 1 élément.
 
-Intéressons‑nous maintenant à la complexité de cet algorithme. A chaque étape (chaque ligne dans la <a href="#tri-rapide">Figure **Tri rapide**</a> ci-dessus), on compare tout au plus n éléments avec les éléments pivots. Mais combien d’étapes faut-il pour que cet algorithme se termine ? 
+Intéressons‑nous maintenant à la complexité de cet {glo}`algo|algorithme`. A chaque étape (chaque ligne dans la <a href="#tri-rapide">Figure **Tri rapide**</a> ci-dessus), on compare tout au plus n éléments avec les éléments pivots. Mais combien d’étapes faut-il pour que cet {glo}`algo|algorithme` se termine ? 
 
-A chaque étape de l’algorithme, l’espace de recherche est divisé par 2 (dans le meilleur des cas). Nous avons vu dans l’algorithme de la recherche binaire que lorsqu’on divise l’espace de recherche par deux, on obtient une complexité de `O(log(n))`. Pour obtenir le nombre total d’instructions élémentaires on multiplie le nombre maximal de comparaisons par étape `n` avec le nombre d’étapes `log(n)`.  Donc l’ordre de complexité du tri rapide est en moyenne `O(nlog(n))`.
+A chaque étape de l’{glo}`algo|algorithme`, l’espace de recherche est divisé par 2 (dans le meilleur des cas). Nous avons vu dans l’{glo}`algo|algorithme` de la recherche binaire que lorsqu’on divise l’espace de recherche par deux, on obtient une complexité de `O(log(n))`. Pour obtenir le nombre total d’{glo}`instruction|instructions` élémentaires on multiplie le nombre maximal de comparaisons par étape `n` avec le nombre d’étapes `log(n)`.  Donc l’ordre de complexité du tri rapide est en moyenne `O(nlog(n))`.
 
-Comparons maintenant les différentes croissances des ordres de complexité vus jusqu’ici (voir la Figure ci-dessous). On voit bien que moins d’instructions élémentaires sont nécessaires pour le tri rapide d’ordre `O(nlog(n))` que pour le tri à sélection d’ordre `O(n2)`. 
+Comparons maintenant les différentes croissances des ordres de complexité vus jusqu’ici (voir la Figure ci-dessous). On voit bien que moins d’{glo}`instruction|instructions` élémentaires sont nécessaires pour le tri rapide d’ordre `O(nlog(n))` que pour le tri à sélection d’ordre `O(n2)`. 
 
 ```{figure} media/Complexites4.png
 ---
@@ -475,12 +474,12 @@ Mêmes questions pour le tri par insertion.
 ## Tri fusion
 
 
-Un autre algorithme de complexité `O(nlog(n))` est le **<span style="color:rgb(89, 51, 209)">tri fusion</span>**. L’algorithme se base sur l’idée qu’il est difficile de trier beaucoup d’éléments, mais qu’il est très facile de trier deux éléments et de fusionner deux tableaux déjà triés.
+Un autre {glo}`algo|algorithme` de complexité `O(nlog(n))` est le **<span style="color:rgb(89, 51, 209)">tri fusion</span>**. L’{glo}`algo|algorithme` se base sur l’idée qu’il est difficile de trier beaucoup d’éléments, mais qu’il est très facile de trier deux éléments et de fusionner deux tableaux déjà triés.
 
 
 <span id="diviser"></span>
 
-L’algorithme commence par une phase de division : on découpe le tableau en deux, jusqu’à arriver à uniquement des tableaux à 1 élément (voir la Figure **Diviser** ci-dessous). Le nombre d’étapes nécessaires pour découper le tableau en tableaux à 1 élément en divisant toujours les tableaux en deux est `log(n)`.
+L’{glo}`algo|algorithme` commence par une phase de division : on découpe le tableau en deux, jusqu’à arriver à uniquement des tableaux à 1 élément (voir la Figure **Diviser** ci-dessous). Le nombre d’étapes nécessaires pour découper le tableau en tableaux à 1 élément en divisant toujours les tableaux en deux est `log(n)`.
 
 
 
@@ -530,7 +529,7 @@ Les sous-problèmes étant plus petits, ils sont plus faciles et donc plus rapid
 ````{admonition} Pour aller plus loin
 :class: attention
 
-La première question que l’on se pose lorsqu’on analyse un algorithme est son ordre de complexité. Si l’algorithme est trop lent, il ne sera pas utilisable dans la vie réelle. Lorsqu’on parle de complexitéé, on pense en fait à la complexité moyenne, mais on peut également calculer la complexité dans le meilleur et dans le pire cas.
+La première question que l’on se pose lorsqu’on analyse un algorithme est son ordre de complexité. Si l’algorithme est trop lent, il ne sera pas utilisable dans la vie réelle. Lorsqu’on parle de complexité, on pense en fait à la complexité moyenne, mais on peut également calculer la complexité dans le meilleur et dans le pire cas.
 
 Par exemple, si on trie un tableau qui est en fait déjà trié avec le tri par insertion, la complexité dans ce cas est linéaire ou `O(n)`.  Au contraire, si on trie ce même tableau avec le tri rapide, la complexité dans ce cas est quadratique ou O(n<sup>2</sup>). On voit donc que selon le tableau que l’on trie, le tri rapide peut être bien plus lent que le tri par insertion.
 
@@ -551,7 +550,7 @@ La complexité ne reflète pas la difficulté à implémenter un algorithme, com
 ```{admonition} Exercice 7
 :class: note
 
-Si une instruction prend 10<sup>-6</sup>  secondes, combien de temps faut-il pour trier un tableau d’1 million d’éléments avec le tri à sélection comparé au tri rapide (sans tenir compte de la constante) ? 
+Si une instruction prend 10<sup>-6</sup> secondes, combien de temps faut-il pour trier un tableau d’1 million d’éléments avec le tri à sélection comparé au tri rapide (sans tenir compte de la constante) ? 
 ```
 
 ````{admonition} Solution de l'exercice 7

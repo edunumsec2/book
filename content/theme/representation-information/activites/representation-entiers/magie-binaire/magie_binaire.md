@@ -83,7 +83,7 @@ Base 10
 ^^^
 ```{list-table}
 :header-rows: 1
-:name: example-table
+:name: example-table-1
 
 * - Niveau
   - Nom

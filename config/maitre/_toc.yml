@@ -9,21 +9,26 @@ parts:
     sections:
       - file: content/theme/representation-information/cours/representation-entiers/maitre
       - file: content/theme/representation-information/cours/representation-images/eleve
-      - file: content/theme/representation-information/activites/representation-entiers/magie-binaire/magie_binaire
       - file: content/theme/representation-information/cours/representation-images/maitre
       - file: content/theme/representation-information/activites/representation-images/bitmap/bitmap
       - file: content/theme/representation-information/activites/representation-images/EncoderImages/EncoderImages
+  - file: content/theme/representation-information/exercices/eleve
+    sections:
+      - file: content/theme/representation-information/exercices/representation-caracteres/carte-perforee/exercice
+  - file: content/theme/representation-information/activites/eleve
+    sections:
+      - file: content/theme/representation-information/activites/representation-entiers/magie-binaire/magie_binaire
+      - file: content/theme/representation-information/activites/redondance/radiotelephonie/activite
 
   - file: content/theme/programmation/maitre
     sections:
       - file: content/theme/programmation/cours/1_intro/intro
-  #  - file: content/theme/programmation/instructions-sequentielles/maitre
-  #  - file: content/theme/programmation/structures-donnees-controle/maitre
-  #  - file: content/theme/programmation/transcription-algorithmes/maitre
-  #  - file: content/theme/programmation/perspectives-citoyennes-politiques/maitre
-  #  - file: content/theme/programmation/activites
-      - file: content/theme/programmation/activites/microbit/catch-the-fruit/catchFruit
-  
+      - file: content/theme/programmation/activites/microbit/catch-the-fruit/catchFruit 
+      - file: content/theme/programmation/activites/microbit-python/intro
+        sections:
+        - file: content/theme/programmation/activites/microbit-python/affichage
+        - file: content/theme/programmation/activites/microbit-python/condition
+        - file: content/theme/programmation/activites/microbit-python/variables
   - file: content/theme/introduction-algorithmique/maitre
     sections:
   #  - file: content/theme/introduction-algorithmique/decomposition-probleme/maitre

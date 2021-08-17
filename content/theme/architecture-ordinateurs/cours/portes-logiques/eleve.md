@@ -1,12 +1,13 @@
+(porteslogiques)=
 # Portes logiques
 
 ## Introduction
 
-En informatique, les systèmes logiques décrivent comment sont connectés les circuits électroniques des ordinateurs afin de leur permettre de faire des calculs. Même si on a l'impression que les ordinateurs peuvent faire toutes sortes de choses, il y a un ensemble limité d'opérations de base que l'électronique d'une machine peut faire. Parmi ces quelques opérations de base, on trouve l'addition, la soustraction, la multiplication ou la division de nombres. La vaste majorité de ce que fait l'ordinateur repose sur ces quelques opérations (ainsi que sur quelques opérations dites _logiques_, que nous allons découvrir, et sur la possibilité de lire et écrire des valeurs dans sa mémoire).
+En informatique, les {glo}`syslogique|systèmes logiques` décrivent comment sont connectés les {glo}`circuitelectronique|circuits électroniques` des ordinateurs afin de leur permettre de faire des calculs. Même si on a l'impression que les ordinateurs peuvent faire toutes sortes de choses, il y a un ensemble limité d'opérations de base que l'électronique d'une machine peut faire. Parmi ces quelques opérations de base, on trouve l'addition, la soustraction, la multiplication ou la division de nombres. La vaste majorité de ce que fait l'ordinateur repose sur ces quelques opérations (ainsi que sur quelques opérations dites _logiques_, que nous allons découvrir, et sur la possibilité de lire et écrire des valeurs dans sa mémoire).
 
-C'est assez fascinant que se dire que des tâches a priori pas mathématiques, par exemple corriger l'orthographe ou la grammaire d'une texte automatiquement, sont réalisées avec ces opérations de base. 
+C'est assez fascinant de se dire que des tâches a priori non mathématiques, comme exemple corriger l'orthographe ou la grammaire d'un texte automatiquement, sont réalisées avec ces opérations de base. 
 
-Comme but de ce chapitre, nous proposons de prendre le cas de l'**addition** et de s'intéresser aux circuits électroniques qui vont permettre à un ordinateur de faire une addition.
+Comme but de ce chapitre, nous proposons de prendre le cas de l'**addition** et de s'intéresser aux {glo}`circuitelectronique|circuits électroniques` qui vont permettre à un ordinateur de faire une addition.
 
 Imaginons donc que nous devons additionner deux nombres entiers. Nous allons utiliser leur représentation binaire (avec uniquement des 1 et des 0). Pour faire simple, nous allons chercher à additionner simplement deux bits, disons $A$ et $B$, où chacun peut valoir soit 0 soit 1. Posons que la somme $S = A + B$. En énumérant tous les cas figure, on a:
 
@@ -17,7 +18,7 @@ Imaginons donc que nous devons additionner deux nombres entiers. Nous allons uti
 | 0   | 1   | 1   |
 | 1   | 1   | 10  |
 
-La dernière ligne est intéressante: nous savons que $1+1=2$, mais en binaire, nous savons aussi que nous n'avons droit qu'à des 0 et des 1, et 2 s'écrit ainsi $10$ (TODO REF section). Cela veut dire que, pour traiter tous les cas d'une addition de 2 bits, nous avons besoin aussi de 2 bits de sortie, et qu'un seul ne suffit pas. En explicitant chaque fois le deuxième bit de sortie, notre tableau devient:
+La dernière ligne est intéressante: nous savons que $1+1=2$, mais en {glo}`codebinaire|binaire`, nous savons aussi que nous n'avons droit qu'à des 0 et des 1, et 2 s'écrit ainsi $10$ (voir le chapitre {ref}`représentation de l'information <representationinformation>`). Cela veut dire que, pour traiter tous les cas d'une addition de 2 {glo}`bit|bits`, nous avons besoin aussi de 2 {glo}`bit|bits` de sortie, et qu'un seul ne suffit pas. En explicitant chaque fois le deuxième {glo}`bit|bit` de sortie, notre tableau devient:
 
 | $A$ | $B$ | $S$ |
 | :-: | :-: | :-: |
@@ -26,22 +27,21 @@ La dernière ligne est intéressante: nous savons que $1+1=2$, mais en binaire, 
 | 0   | 1   | 01  |
 | 1   | 1   | 10  |
 
-La question est de déterminer comment faire calculer les deux bits de la somme $S$ à partir de $A$ et $B$ à un circuit électronique. Pour cela, avons besoin du concept de _portes logiques_. Nous allons maintenant introduire ce concept et voir, petit à petit, comment réaliser cette addition.
-
+La question est de déterminer comment faire calculer les deux {glo}`bit|bits` de la somme $S$ à partir de $A$ et $B$ à un {glo}`circuitelectronique|circuit électronique`. Pour cela, avons besoin du concept de {glo}`portelogique|portes logiques`. Nous allons maintenant introduire ce concept et voir, petit à petit, comment réaliser cette addition.
 
 ## Portes logiques
 
-Les circuits électroniques qui composent un ordinateur sont constitués de composants électroniques comme des résistances, des condensateurs, des transistors, etc., qui déterminent où va passer le courant électrique et sur quelles parties du circuit règnera quelle tension.
+Les {glo}`circuitelectronique|circuits électroniques` qui composent un ordinateur sont constitués de composants électroniques comme des {glo}`resistance|résistances`, des {glo}`condensateur|condensateurs`, des {glo}`transistor|transistors`, etc., qui déterminent où va passer le courant électrique et sur quelles parties du {glo}`circuitelectronique|circuit` règnera quelle {glo}`tension|tension`.
 
-Quand on parle de portes et de circuits logiques, nous simplifions tout cela. On considèrera simplement qu'un segment de circuit électronique où la tension est nulle (0 volt) représente la valeur binaire 0, alors qu'une tension non nulle (par exemple, 3 volts) représente la valeur binaire 1. Ainsi, pour véhiculer deux bits comme $A$ et $B$ dans un circuit, nous avons besoin de deux «fils».
+Quand on parle de {glo}`portelogique|portes` et de {glo}`syslogique|circuits logiques`, nous simplifions tout cela. On considèrera simplement qu'un segment de {glo}`circuitelectronique|circuit électronique` où la {glo}`tension|tension` est nulle (0 volt) représente la valeur binaire 0, alors qu'une {glo}`tension|tension` non nulle (par exemple, 3 volts) représente la valeur binaire 1. Ainsi, pour véhiculer deux bits comme $A$ et $B$ dans un circuit, nous avons besoin de deux «fils».
 
-Les portes logiques sont des composants électroniques (elles-même constituées en général de transistors et résistances) qui ont une ou plusieurs entrées et qui combinent ces entrées pour produire une sortie donnée. La manière dont la sortie est calculée dépend du type de la porte. Voyons maintenant une de ces portes.
+Les {glo}`portelogique|portes` logiques sont des composants électroniques (elles-même constituées en général de {glo}`transistor|transistors` et {glo}`resistance|résistances`) qui ont une ou plusieurs entrées et qui combinent ces entrées pour produire une sortie donnée. La manière dont la sortie est calculée dépend du type de la porte. Voyons maintenant une de ces portes.
 
 ### Porte ET
 
 Une de ces portes est la porte **ET**. Elle a deux entrées, qu'on appellera $X$ et $Y$, et une sortie $Z$. $Z$ sera $1$ si et seulement si aussi bien $X$ que $Y$ valent $1$. D'où son nom: il faut que $X$ **_et_** $Y$ soient à 1 pour obtenir un 1 sur la sortie.
 
-En énumérant les quatre possibilités pour les entrées, on peut écrire ce qu'on appelle _table de vérité_ pour la porte **ET**:
+En énumérant les quatre possibilités pour les entrées, on peut écrire ce qu'on appelle {glo}`tableverite|table de vérité` pour la porte **ET**:
 
 | $X$ | $Y$ | $Z$ |
 | :-: | :-: | :-: |
@@ -50,7 +50,7 @@ En énumérant les quatre possibilités pour les entrées, on peut écrire ce qu
 | 0   | 1   | 0   |
 | 1   | 1   | 1   |
 
-On peut dessiner des diagrammes avec des portes logiques. (Ce ne sont pas des diagrammes électroniques, ils cachent une partie de la complexité réelle des circuits.) Dans un tel diagramme logique, la porte **ET** est représentée ainsi:
+On peut dessiner des diagrammes avec des {glo}portelogique|portes logiques`. (Ce ne sont pas des diagrammes électroniques, ils cachent une partie de la complexité réelle des circuits.) Dans un tel diagramme logique, la porte **ET** est représentée ainsi:
 
 ```{logic}
 :height: 60
@@ -80,7 +80,7 @@ Cliquez sur les entrées $X$ et $Y$ pour changer leurs valeurs et observez le co
 
 ### Porte OU
 
-Il existe d'autres portes logiques. La porte **OU**, par exemple. Pour que la sortie de la porte **OU** vaille 1, il suffit que l'une des deux entrées $X$ ou $Y$ vaille 1.
+Il existe d'autres {glo}`portelogique|portes logiques`. La porte **OU**, par exemple. Pour que la sortie de la porte **OU** vaille 1, il suffit que l'une des deux entrées $X$ ou $Y$ vaille 1.
 
 Voici sa table de vérité:
 
@@ -110,8 +110,6 @@ Essayez la porte **OU**:
 }
 ```
 
-
-
 ### Porte NON
 
 Cette porte est plus simple: elle n'a qu'une entrée, et sa sortie se contente d'inverser la valeur en entrée. On l'appelle d'ailleurs aussi un _inverseur_.
@@ -139,7 +137,7 @@ Essayez l'inverseur:
 
 ### Combinaisons de portes
 
-Les portes peuvent être connectées les unes aux autres. Voici par exemple un diagramme logique réalisant en sortie $Z$ la fonction appelée **OU-X**, qui est un «ou exclusif» et dont la sortie $Z$ vaut 1 lorsque soit $A$, soit $B$ vaut $1$, mais pas les deux en même temps:
+Les {glo}`portelogique|portes` peuvent être connectées les unes aux autres. Voici par exemple un diagramme logique réalisant en sortie $Z$ la fonction appelée **OU-X**, qui est un «ou exclusif» et dont la sortie $Z$ vaut 1 lorsque soit $A$, soit $B$ vaut $1$, mais pas les deux en même temps:
 
 ```{logic}
 :height: 150
@@ -169,7 +167,7 @@ Discutons d'abord comment interpréter ce circuit avec papier et crayon pour vé
 
 #### Analyse d'un circuit
 
-Pour analyser un circuit logique comme celui présenté ci-dessus, on cherchera à établir sa table de vérité. En l'occurrence, comme pour les portes précédentes, ce circuit a deux entrées: si chaque entrée peut valoir $1$ ou $0$, nous avons en tout, de nouveau, 4 configurations possibles à examiner dans le but de remplir la dernière colonne:
+Pour analyser un {glo}`syslogique|circuit logique` comme celui présenté ci-dessus, on cherchera à établir sa {glo}`tableverite|table de vérité`. En l'occurrence, comme pour les portes précédentes, ce circuit a deux entrées: si chaque entrée peut valoir $1$ ou $0$, nous avons en tout, de nouveau, 4 configurations possibles à examiner dans le but de remplir la dernière colonne:
 
 | $X$ | $Y$ | $Z$   |
 | :-: | :-: | :-:   |
@@ -261,7 +259,7 @@ La table de vérité complétée de ce circuit est ainsi:
 | 0   | 1   | 1   |
 | 1   | 1   | 0   |
 
-Cette fonction s'appelle «ou exclusif», car pour avoir un 1 de sortie, elle exclut le cas où les deux entrées sont 1 en même temps. Elle est souvent utilisée, au point qu'on la représente en fait dans les diagrammes simplement par le dessin de cette porte, appelée **OU-X**, comme simplification du diagramme ci-dessus:
+Cette {glo}`fonction|fonction` s'appelle «ou exclusif», car pour avoir un 1 de sortie, elle exclut le cas où les deux entrées sont 1 en même temps. Elle est souvent utilisée, au point qu'on la représente en fait dans les diagrammes simplement par le dessin de cette porte, appelée **OU-X**, comme simplification du diagramme ci-dessus:
 
 ```{logic}
 :height: 100
@@ -285,12 +283,12 @@ Vérifiez que la porte **OU-X** se comporte bien comme le circuit ci-dessous ré
 
 #### Création d'un circuit
 
-Discutons maintenant de comment on a pu créerait de zéro ce diagramme réalisant un **OU-X** à avec les portes à notre disposition à partir de sa table de vérité. Plusieurs approches sont possibles, et nous verrons que, suivant l'approche, on aurait très bien pu créer un circuit logique différent réalisant la même fonction.
+Discutons maintenant de comment on a pu créerait de zéro ce diagramme réalisant un **OU-X** à avec les portes à notre disposition à partir de sa {glo}`tableverite|table de vérité`. Plusieurs approches sont possibles, et nous verrons que, suivant l'approche, on aurait très bien pu créer un circuit logique différent réalisant la même fonction.
 
 
 ##### Approche ad hoc
 
-On se dit donc, selon la table de vérité, que la sortie de notre circuit «ou exclusif» doit être 1 sur l'une ou l'autre des entrées $X$ et $Y$ est à 1, mais pas les deux. On peut ainsi commencer par insérer une porte **OU** dans le diagramme, qui fait une partie du travail. Mais il faut modifier sa sortie, pour ne pas avoir la valeur 1 lorsque les deux entrées sont à 1: cela contredirait la quatrième ligne de la table de vérité. Comment effectuer cela? En connectant la sortie de cette porte **OU** à une nouvelle porte **ET** à droite (dont on n'a pas encore déterminé la seconde entrée).
+On se dit donc, selon la {glo}`tableverite|table de vérité`, que la sortie de notre circuit «ou exclusif» doit être 1 sur l'une ou l'autre des entrées $X$ et $Y$ est à 1, mais pas les deux. On peut ainsi commencer par insérer une porte **OU** dans le diagramme, qui fait une partie du travail. Mais il faut modifier sa sortie, pour ne pas avoir la valeur 1 lorsque les deux entrées sont à 1: cela contredirait la quatrième ligne de la table de vérité. Comment effectuer cela? En connectant la sortie de cette porte **OU** à une nouvelle porte **ET** à droite (dont on n'a pas encore déterminé la seconde entrée).
 
 Pourquoi rajouter une porte **ET**? On utilise ici le fait que connecter une porte **ET** à un signal peut _restreindre_ les conditions sous lesquelles la nouvelle sortie $Z$ sera 1 (alors qu'au contraire, on aurait pu pourrait _étendre_ ces conditions si on avait connecté une nouvelle porte **OU**). Comme si, pour être d'accord de finalement livrer 1 sur la sortie, la porte **ET** voulait la «confirmation» d'un autre signal avant de livrer 1.
 
@@ -444,7 +442,7 @@ On avance ainsi à ceci:
 }
 ```
 
-Pour la condition (b), qui correspond à la troisième ligne de la table de vérité, un raisonnement similaire s'applique. À la place d'inverser $X$, on inversera cette fois $Y$ afin d'obtenir, à la sortie de la nouvelle porte **ET** du bas, un signal qui vaut $1$ lorsque $X=1$ et $Y=0$.
+Pour la condition (b), qui correspond à la troisième ligne de la {glo}`tableverite|table de vérité`, un raisonnement similaire s'applique. À la place d'inverser $X$, on inversera cette fois $Y$ afin d'obtenir, à la sortie de la nouvelle porte **ET** du bas, un signal qui vaut $1$ lorsque $X=1$ et $Y=0$.
 
 Voici le circuit final ainsi réalisé:
 

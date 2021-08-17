@@ -2,6 +2,11 @@
 
 ![chatbot](https://user-images.githubusercontent.com/73947555/117774857-301d3580-b23a-11eb-9657-2eeebb19fde3.png)
 
+````{admonition} Ces ressources sont en cours de rédaction
+:class: caution
+Attention, le document présenté ici ne représente qu'une **étape intermédiaire** de travail. Il n'a pas force de référence, ni au niveau des thématiques abordées, ni au niveau des contenus spécifiques décrits dans les chapitres. Ce que vous consultez ici est susceptible de **modifications**, tant sur la forme que sur le fond. Certaines pages n'ont pas encore subi de relectures orthographique ou syntaxique. Nous vous remercions de votre compréhension. Bonne lecture !
+````
+
 
 ## Introduction
 
@@ -70,7 +75,6 @@ Les ressources sont découpées selon un chapitrage qui correspond au plan d'ét
 : Il est question ici de notions telles que *les portes logiques*, *les transistors*, *l'architecture de Von Neumann*, et autres concepts essentiels à la compréhension de ce qui se passe au niveau physique et électronique dans un ordinateur.
 
 
-(licenceduprojet)=
 ## Licence du projet
 
 Les ressources sont publiées sous licence Creatives Commons *Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions (CC BY-NC-SA)*. Cela signifie qu'elles peuvent être copiées, transformées, adaptées, et diffusées, hormis à des fins commerciales, tant qu'elles créditent le groupe de travail présenté ci-dessus, et qu'elles utilisent la même licence pour le partage futur. Les conditions sont disponibles [ici](https://creativecommons.org/licenses/?lang=fr). 

@@ -4,7 +4,7 @@
 Focus sur la récursivité
 ========================
 
-Nous allons maintenant programmer l’algorithme du tri par fusion. Pour rappel, dans sa première phase l’algorithme divise le tableau par deux, comme illustré dans la <a href="../complexite/eleve.html#diviser">Figure **Diviser**</a> du tri à fusion :
+Nous allons maintenant programmer l’{glo}`algo|algorithme` du tri par fusion. Pour rappel, dans sa première phase l’{glo}`algo|algorithme` divise le tableau par deux, comme illustré dans la <a href="../complexite/eleve.html#diviser">Figure **Diviser**</a> du tri à fusion :
 
 ```{code-block} python
 def tri_fusion(elements):
@@ -15,7 +15,7 @@ def tri_fusion(elements):
 	elements_droite = elements[milieu:]
 ```
 
-Vous pouvez imprimer l’état des variables pour une meilleure visibilité. Notez que l’on utilise une division entière, car les indices pour accéder aux éléments du tableau doivent être des entiers. Par exemple, si le tableau contient 5 éléments, cela n’aurait pas de sens de prendre les premiers 2.5 éléments.
+Vous pouvez imprimer l’état des {glo}`variable|variables` pour une meilleure visibilité. Notez que l’on utilise une division entière, car les indices pour accéder aux éléments du tableau doivent être des entiers. Par exemple, si le tableau contient 5 éléments, cela n’aurait pas de sens de prendre les premiers 2.5 éléments.
 
 Ce qui suit est très intéressant. Dans l’étape d’après, on procède exactement de la même manière pour les nouveaux tableaux obtenus (elements_gauche et elements_droite) - on les divise à nouveau en deux :
 
@@ -26,7 +26,7 @@ Ce qui suit est très intéressant. Dans l’étape d’après, on procède exac
 	elements_droite = tri_fusion(elements[milieu:])
 ```
 
-Regardez bien ce qui se passe. Nous avons fait appel à la même fonction `tri_fusion` que l’on est en train de définir ! Pour l’instant cette fonction ne fait que diviser un tableau en deux, elle va donc diviser chaque partie d’elements à nouveau en deux. La fonction `tri_fusion` appelle la fonction `tri_fusion` (donc elle-même), qui appelle aussi `tri_fusion` et ainsi de suite.
+Regardez bien ce qui se passe. Nous avons fait appel à la même {glo}`fonction|fonction` `tri_fusion` que l’on est en train de définir ! Pour l’instant cette {glo}`fonction|fonction` ne fait que diviser un tableau en deux, elle va donc diviser chaque partie d’elements à nouveau en deux. La {glo}`fonction|fonction` `tri_fusion` appelle la {glo}`fonction|fonction` `tri_fusion` (donc elle-même), qui appelle aussi `tri_fusion` et ainsi de suite.
 
 Le problème ici est que l’appel à `tri_fusion` ne s’arrête jamais. En réalité, il faut arrêter de diviser lorsque les tableaux obtenus ont au moins un élément ou lorsque les tableaux sont vides :
 
@@ -45,7 +45,7 @@ def tri_fusion(elements):
 	return fusion(elements_gauche, elements_droite)
 ```
 
-On appelle une fonction qui s’appelle elle-même une [**<span style="color:rgb(13, 204, 166)">fonction récursive</span>**. C’est une sorte de mise en abime ou une définition circulaire. Lorsqu’on entre dans la fonction, des opérations sont exécutées et on fait à nouveau [**<span style="color:rgb(13, 204, 166)">appel à la même fonction</span>**, mais avec d’autres éléments, afin de refaire les mêmes opérations (voir figure ci-dessous). 
+On appelle une {glo}`fonction|fonction` qui s’appelle elle-même une [**<span style="color:rgb(13, 204, 166)">{glo}`fonction|fonction` récursive</span>**. C’est une sorte de mise en abime ou une définition circulaire. Lorsqu’on entre dans la {glo}`fonction|fonction`, des opérations sont exécutées et on fait à nouveau [**<span style="color:rgb(13, 204, 166)">appel à la même fonction</span>**, mais avec d’autres éléments, afin de refaire les mêmes opérations (voir figure ci-dessous). 
 
 ```{figure} media/Recursivite.png
 ---
@@ -56,9 +56,9 @@ name : fig-rec
 Schéma d’une fonction récursive
 ```
 
-Le deuxième ingrédient indispensable à toute fonction récursive est la **<span style="color:rgb(13, 204, 166)">condition d’arrêt</span>** : à quel moment tous ces appels imbriqués les uns dans les autres doivent-ils s’arrêter ? Sans cette condition, le programme ne s’arrête jamais. Il est important que la condition d’arrêt précède l’appel à la fonction récursive. Pourquoi ?
+Le deuxième ingrédient indispensable à toute {glo}`fonctionrec|fonction récursive` est la **<span style="color:rgb(13, 204, 166)">condition d’arrêt</span>** : à quel moment tous ces appels imbriqués les uns dans les autres doivent-ils s’arrêter ? Sans cette condition, le programme ne s’arrête jamais. Il est important que la condition d’arrêt précède l’appel à la {glo}`fonctionrec|fonction récursive`. Pourquoi ?
 
-A la fin du programme, nous avons rajouté une ligne de code qui correspond à la deuxième phase de l’algorithme – à la fusion des deux listes triées (voir la <a href="../complexite/eleve.html#fusionner">Figure **Fusionner**</a> du tri fusion). Il faut maintenant définir cette fonction `fusion`, que nous allons également définir de manière récursive.
+A la fin du {glo}`programme|programme`, nous avons rajouté une ligne de code qui correspond à la deuxième phase de l’{glo}`algo|algorithme` – à la fusion des deux listes triées (voir la <a href="../complexite/eleve.html#fusionner">Figure **Fusionner**</a> du tri fusion). Il faut maintenant définir cette {glo}`fonction|fonction` `fusion`, que nous allons également définir de manière récursive.
 
 ```{code-block} python
 
@@ -114,7 +114,7 @@ def fusion(elements_gauche, elements_droite):
 
 ```
 
-Ces deux fonctions implémentent l’algorithme de tri par fusion de manière récursive. La récursivité est un concept difficile à appréhender. Le mieux c’est d’essayer de coder des algorithmes récursifs et d’afficher ce qui se passe au fur et à mesure.
+Ces deux {glo}`fonction|fonctions` implémentent l’{glo}`algo|algorithme` de tri par fusion de manière {glo}`recursivite|récursive`. La {glo}`recursivite|récursivité` est un concept difficile à appréhender. Le mieux c’est d’essayer de coder des {glo}`algo|algorithmes` {glo}`recursivite|récursifs` et d’afficher ce qui se passe au fur et à mesure.
 
 
 ````{admonition}  Exercice 13 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)

@@ -9,13 +9,17 @@ Dans ce chapitre nous allons nous concentrer sur la représentation de l'informa
 Le mot **informatique** est la concaténation de **information** et **automatique**.
 ````
 
-En informatique, l'information est un élément de connaissance (texte, image, son, etc.) susceptible d'être {glo}`numerisation|numérisé`, {glo}`stockage|stocké` ou {glo}`transmission|transmis` à l'aide d'un support et d'un mode de codification normalisé.
+En informatique, l'information est un élément de connaissance (texte, image, son, etc.) susceptible d'être {glo}`numerisation|numérisé`, {glo}`stockage|stocké` et/ou {glo}`transmission|transmis` à l'aide d'un support et d'un mode de codification normalisé.
 
-Une des questions centrales de chapitre est d'identifier les caractéristiques de la transformation appliquée au réel donnant une représentation suffisamment précise pour permettre aux ordinateurs de la {glo}`traitement|traiter` de manière fiable.
+Une des questions centrales de ce chapitre est d'identifier les caractéristiques de la transformation appliquée au réel donnant une représentation suffisamment précise pour permettre aux ordinateurs de la {glo}`traitement|traiter` de manière fiable.
 
-## Systèmes de communication
+Mais avant de découvrir le code choisi pour représenter l'information à l'intérieur d'un ordinateur, passons en revue un certain nombre d'alphabets et de systèmes de représentation de l'information qui ont été utilisés au cours de l'histoire. 
 
-L’histoire de l’humanité est marquée par la création de multiples {glo}`sysco|systèmes de communication`. Depuis les [sumériens](https://fr.wikipedia.org/wiki/Sum%C3%A9rien) qui utilisaient des {glo}`picto|pictogrammes` et [l’écriture cunéiforme](https://fr.wikipedia.org/wiki/Cun%C3%A9iforme), en passant par les égyptiens et leurs [hiéroglyphes](https://fr.wikipedia.org/wiki/%C3%89criture_hi%C3%A9roglyphique_%C3%A9gyptienne), l’écriture [crétoise](https://fr.wikipedia.org/wiki/Hi%C3%A9roglyphes_cr%C3%A9tois), les chinois et leurs [idéogrammes](https://fr.wikipedia.org/wiki/Caract%C3%A8res_chinois) pour arriver aux symboles de nos alphabets actuels, l’homme n’a eu de cesse de mettre au point des système pour {glo}`repinfo|représenter l’information` et la {glo}`transmission|transmettre`.
+## Alphabets et systèmes de communication
+
+### Alphabets anciens et traditionnels
+
+Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi que de nombreux {glo}`sysco|systèmes de communication`. Depuis les [sumériens](https://fr.wikipedia.org/wiki/Sum%C3%A9rien) qui utilisaient des {glo}`picto|pictogrammes` et [l’écriture cunéiforme](https://fr.wikipedia.org/wiki/Cun%C3%A9iforme), en passant par les égyptiens et leurs [hiéroglyphes](https://fr.wikipedia.org/wiki/%C3%89criture_hi%C3%A9roglyphique_%C3%A9gyptienne), les chinois et leurs [idéogrammes](https://fr.wikipedia.org/wiki/Caract%C3%A8res_chinois) pour arriver aux symboles de nos alphabets actuels, l’homme n’a eu de cesse de mettre au point des système pour {glo}`repinfo|représenter l’information` et la {glo}`transmission|transmettre`.
 
 ````{tabbed} Sumérien
 ```{image} media/cuneiform.jpg
@@ -30,13 +34,14 @@ L’histoire de l’humanité est marquée par la création de multiples {glo}`s
 :width: 500px
 ```
 ````
-
+<!-- 
 ````{tabbed} Crétois
 ```{image} media/cretois.png
 :height: 250px
 :width: 250px
 ```
-````
+```` 
+-->
 
 ````{tabbed} Chinois
 ```{image} media/chinois.gif
@@ -45,7 +50,7 @@ L’histoire de l’humanité est marquée par la création de multiples {glo}`s
 ```
 ````
 
-````{tabbed} Évolution
+````{tabbed} Synoptique
 ```{image} media/evolution.jpg
 :height: 350px
 :width: 500px
@@ -57,9 +62,9 @@ L’histoire de l’humanité est marquée par la création de multiples {glo}`s
 - Mot en différentes langues, morse, idéogrammes
 - Symboles danger, stop, paix
 ```
-
-Pour créer une communication efficace entre un point A et un point B, il existe toujours un compromis entre plusieurs paramètres : le nombre de symboles qu'on se donne au départ, le nombre de mots que l'on veut être capable d'exprimer, la longueur de la transmission du message, sa lisibilité, la possibilité technique de la transmission, et ainsi de suite. 
-
+TODO #14
+<!-- Pour créer une communication efficace entre un point A et un point B, il existe toujours un compromis entre plusieurs paramètres : le nombre de symboles qu'on se donne au départ, le nombre de mots que l'on veut être capable d'exprimer, la longueur de la transmission du message, sa lisibilité, la possibilité technique de la transmission, et ainsi de suite. // Commentaire :   -->
+<!-- 
 ````{admonition} Matière à réfléchir
 :class: attention
 Imaginez que vous deviez choisir un *code* pour vous transmettre des informations avec l'une ou l'autre de vos camarades. Si vous utilisez un langage des signes, la distance à laquelle vous pourrez communiquer ne sera pas très grande. À plus de 50m il deviendra difficile de lire les mains de votre camarade. Si vous choisissez des signaux sonores, il suffit qu'il y ait du bruit environnant pour brouiller votre message. Si vous utilisez des signaux lumineux, ils ne seront pas visibles en plein jour. 
@@ -71,15 +76,16 @@ Une autre façon d'aborder le problème est de réfléchir au nombre de signaux 
 Il y a toujours un équilibre à trouver entre le nombre de caractères que l'on possède dans notre alphabet, la vitesse de la transmission, la possibilité d'exprimer tout ce que l'on cherche à exprimer, et ainsi de suite. 
 
 La beauté de l'informatique moderne, c'est que grâce à l'électricité et sa vitesse fulgurante de transmission, elle est capable de représenter la majorité de l'information contenue dans le monde à partir de seulement deux caractères, 0 et 1. 
-````
+```` 
+-->
 
 On trouve des exemples célèbres et bien documentés de {glo}`sysco|systèmes de communication` depuis l'Antiquité grecque.
 
 ### Le carré de Polybe
 
-Utilisé en Grèce Antique pour transmettre des messages entre cités voisines, ce système utilise des torches enflammées en guise de {glo}`signal|signaux`. 
+Utilisé en Grèce Antique pour transmettre des messages entre cités voisines, ce système utilisait des torches enflammées en guise de {glo}`signal|signaux`. 
 
-Cinq torches "à gauche", cinq torches "à droite", séparées par un espace suffisamment grand pour être identifiables à longue distance. Une torche peut être soit allumée, soit éteinte. Le nombre de torches allumées à gauche, de 1 à 5, représente les colonnes, le nombre de torches allumées à droite représente les lignes. 
+Cinq torches "à gauche", cinq torches "à droite", étaient séparées par un espace suffisamment grand pour être identifiables à longue distance. Une torche pouvait être soit allumée, soit éteinte. Le nombre de torches allumées à gauche, de 1 à 5, représentait les colonnes, le nombre de torches allumées à droite représentait les lignes. 
 
 ````{figure} media/polybe.png
 ---
@@ -162,7 +168,7 @@ height: 350px
 width: 300px
 name: fig-distribution
 ---
-Ceci est une représentation de la fréquence moyenne de distribution des lettre dans la langue anglaise. 
+Ceci est une représentation de la fréquence moyenne de distribution des lettres dans la langue anglaise. 
 ```
 
 ### Le binaire
@@ -184,7 +190,7 @@ name: fig-binary
 Dans le code [ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange), chaque lettre de l'alphabet est codée sur 8 bits. 
 ````
 
-### Auto-contrôle
+<!-- ### Auto-contrôle
 
 ```{question} Question 1
 Pourquoi la lettre "e", en Morse, est-elle représentée par un seul point ? 
@@ -202,5 +208,5 @@ Que signifie informatique ?
 * {f}`Information + pratique`
 ```
 
-
+ -->
 

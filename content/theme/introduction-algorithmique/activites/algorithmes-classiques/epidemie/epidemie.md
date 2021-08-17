@@ -9,12 +9,12 @@ Le modèle proposé se base sur le modèle SIR classique (Kermack & McKendrick, 
 Cette activité peut être effectuée dans une éditeur python ou sur un jupyter-notebook. L'avantage du notebook est que les élèves ont tout dans un seul fichier (consignes, codes, graphes, réponses aux questions), le désavantage est qu'il faut une infrastructure informatique plus importante pour faire tourner le code à la maison (jupyter-lab).
 
 
-### Mise en situation (5 min)
+## Mise en situation (5 min)
 L'enseignant·e demande aux élèves qui se souvient de l'annonce de la fermeture des écoles le 13 mars 2020. 
 Au début de la pandémie de coronavirus, diverses prédictions sur la durée et la gravité de cette épidémie ont alors été publiées. Ces prédictions étaient basées sur des *modèles* faits par des épidémiologistes. Diverses prédictions d'alors peuvent être présentées. 
 Le but de la leçon sera de faire et analyser un modèle de propagation d'une épidémie. 
 
-## Conception du model (15 min)
+## Conception du modèle (15 min)
 Par groupe de deux, les élèves font les points 1 à 4 de la fiche, pendant que l'enseignant passe dans les groupes pour les orienter. L'enseignant choisi parmi les modèles des élèves ceux qui sont intéressants à discuter.
 
 ## Eventuellement: évaluation (5 min)

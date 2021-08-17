@@ -1,9 +1,9 @@
 # Représentation des images
 
 
-````{role} prof
+<!-- ````{role} prof
 ```{admonition} Suggestion de déroulé
-:class: hint
+:class: danger
 Voilà un déroulé de cours pour cette section représentation des images : 
 1. Activité image Bitmap
 2. Activité Kirby
@@ -11,9 +11,10 @@ Voilà un déroulé de cours pour cette section représentation des images :
 4. Exercice sur les résolutions
 5. Questionnaire d'auto-contrôle
 ```
-````
+```` 
+-->
 
-## Les images matricielles
+<!-- ## Les images matricielles
 
 Depuis des siècles les humains gardent des traces de leur environnement sous forme d'images. Plus le temps passe, plus ces traces sont fidèles. On découvre par exemple la perspective autour du 15ème siècle, les progrès en optique et en chimie permettent ensuite la création de la camera obscura et de la photographie argentique. Enfin l'informatique se développe permettant l'invention de la photographie numérique.
 
@@ -29,9 +30,9 @@ La camera obscura
 
 Mais alors, comment marche une caméra numérique ? Elle marche d'une manière très similaire à la camera obscura et aux appareils photographiques analogiques d'un point de vue optique. Imaginez une chambre noire pourvue d'un trou sur l'une de ses parois. La lumière venant de l'extérieur vient se projeter sur le mur opposé. 
 
-Dans un appareil analogique, la paroi illuminée est recouverte d'une pellicule chimique photosensible ce qui permettra de capturer l'image. La différence est que dans un appareil photo numérique cette paroi est recouverte d'une grille de capteurs électroniques photosensibles. Dans ce cas, l'image numérique ne sera rien d'autre que la collection des mesures de tous les capteurs à un temps précis. Comme ces mesures sont organisées sous forme de tableau, on parle souvent d'images matricielles. Plus le nombre de capteurs sera grand, plus la résolution de cette image le sera aussi.
+Dans un appareil analogique, la paroi illuminée est recouverte d'une pellicule chimique photosensible qui permet de capturer l'image. La différence est que dans un appareil photo numérique cette paroi est recouverte d'une grille de capteurs électroniques photosensibles. Dans ce cas, l'image numérique ne sera rien d'autre que la collection des mesures de tous les capteurs à un temps précis. Comme ces mesures sont organisées sous forme de tableau, on parle souvent d'images matricielles. Plus le nombre de capteurs est grand, plus la résolution de cette image le sera aussi. -->
 
-### Représentation d'une image noir et blanc
+## Représentation d'une image noir et blanc
 
 ````{tabbed} Image
 ```{image} media/thuglife.png
@@ -44,7 +45,14 @@ Dans un appareil analogique, la paroi illuminée est recouverte d'une pellicule 
 ```
 ````
 
-Un bit est l'unité minimale d'information qu'un ordintaeur comprend : 1 ou 0, allumé ou éteint. Si l'on voulait qu'un ordinateur sauvegarde une image, et l'affiche à l'écran, on pourrait commencer par lui donner uniquement les indications en noir et blanc. Ainsi, un bit pourrait soit être noir, soit être blanc.
+Un bit est l'unité minimale d'information qu'un ordintaeur comprend : 1 ou 0, allumé ou éteint. L'image la plus simple qu'un ordinateur puisse afficher est constituée uniquement de noir et blanc. Ainsi, un bit pourrait être soit noir, soit blanc. 
+
+````{role} prof
+```{admonition} Suggestion d'activité
+:class: caution
+Voilà une [activité débranchée](https://maitre.edunumsec2.ch/content/theme/representation-information/activites/representation-images/bitmap/bitmap.html) faciitant l'introduction des notions de bits noirs et blancs pour représenter une image.
+```
+````
 
 ```{figure} media/bitmap1.png
 ---
@@ -55,7 +63,7 @@ width: 250px
 Tous les pixels marqués d'un 1 s'affichent en blanc, tous ceux marqués d'un zéro s'affichent en noir. 
 ```
 
-Ceci nous permet de construire des images simples, et d'une **résolution** très faible.
+Ceci nous permet de construire des images simples, et d'une {glo}`resolution|résolution` très faible.
 
 ```{codeplay}
 import turtle
@@ -271,18 +279,19 @@ alien=[
 
 drawImg(alien)
 ```
+*Conseil : à la place de alien, essayez mario, luigi, link, guerrier, tortueninja1, tortueninja2, homer, pikachu, kirby, kirbycouleur*
 
-Un **pixel**, de l'anglais : **pic**ture **el**ement, est le composant minimal d'une image. C'est à dire que c'est la plus petite brique avec laquelle on construit une image sur un écran d'ordinateur, et donc dans sa mémoire. Dans notre exemple minimaliste, chaque pixel peut être soit noir, soit blanc, ce qui nous permet de construire une image.
+Un {glo}`pixel|pixel`, de l'anglais : **pic**ture **el**ement, est le composant minimal d'une image. C'est à dire que c'est la plus petite brique avec laquelle on construit une image sur un écran d'ordinateur, et donc dans sa mémoire. Dans notre exemple minimaliste, chaque pixel peut être soit noir, soit blanc, ce qui nous permet de construire une image.
 
 ````{admonition} Anecdote
 :class: hint
-[The Million Dollar Homepage](https://fr.wikipedia.org/wiki/The_Million_Dollar_Homepage) est un site web conçu en 2005 par Alex Tew, un étudiant anglais, dans le but de financer ses études supérieures. La page d'accueil est une grille de 1000 X 1000 pixels. Chaque pixel était vendu 1$ en tant qu'espace publicitaire. 
+[The Million Dollar Homepage](https://fr.wikipedia.org/wiki/The_Million_Dollar_Homepage) est un site web conçu en 2005 par Alex Tew, un étudiant anglais, dans le but de financer ses études supérieures. La page d'accueil est une grille de 1000 X 1000 pixels. Chaque pixel était vendu 1$ en tant qu'espace publicitaire. Ils ont tous été vendus...
 
 ```{figure} media/milliondollarhomepage.png
 ```
 ````
 
-### Représentation d'une image monochrome
+## Représentation d'une image en niveaux de gris
 
 ````{tabbed} Image
 ```{image} media/kirbygrey.png
@@ -295,7 +304,7 @@ Un **pixel**, de l'anglais : **pic**ture **el**ement, est le composant minimal d
 ```
 ````
 
-La plupart des images sont représentées au format matriciel. Une image en niveau de gris sera ainsi généralement codée comme un tableau de valeurs correspondant à la luminance de chaque pixel. Les valeurs de luminance sont chacune déclarées comme un nombre allant de 0 à 255, correspondant respectivement au noir et au blanc. 
+La plupart des images sont représentées au format {glo}`matrice|matriciel`. Une image en niveau de gris sera ainsi généralement codée comme un tableau de valeurs correspondant à la {glo}`luminance|luminance` de chaque pixel. Les valeurs de luminance sont chacune déclarées comme un nombre allant de 0 à 255, correspondant respectivement au noir et au blanc. Pour encoder une image en niveaux de gris, chaque pixel nécessite dont 8 bits. 
 
 ```{figure} media/image_et_pixels.svg
 ---
@@ -311,7 +320,7 @@ Pour accéder à un pixel particulier, il faut en général définir à quelle l
 Ce mode de fonctionnement est similaire à celui des tableurs pour lesquels il est possible d'accéder à la valeur d'une case en utilisant sa référence. On pourrait d'ailleurs utiliser le formatage conditionnel pour transformer un tableau de valeurs dans un tableur en image matricielle.
 ```
 
-### Codage des couleurs
+## Codage des couleurs
 
 ````{tabbed} Image
 ```{image} media/kirbycolor.png
@@ -324,7 +333,7 @@ Ce mode de fonctionnement est similaire à celui des tableurs pour lesquels il e
 ```
 ````
 
-En peinture, pour obtenir toutes les couleurs de l'arc-en-ciel, on utilise un mélange de magenta, de cyan et de jaune, c'est ce que l'on appelle le système soustractif (en ajoutant du pigment à une surface, une partie du spectre lumineux est soustrait). Pour faire la même chose en informatique, on utilisera également trois couleurs, mais celles-ci seront le rouge, le vert et le bleu. Cela correspond au système additif (en allumant une LED rouge, j'ajoute de la lumière sur la partie du spectre lumineux correspondant).
+En peinture, pour obtenir toutes les couleurs de l'arc-en-ciel, on utilise un mélange de magenta, de cyan et de jaune, c'est ce que l'on appelle la {glo}`synthsoustractive|synthèse soustractive` : en ajoutant du pigment à une surface, une partie du spectre lumineux est soustrait. Pour faire la même chose en informatique, on utilisera également trois couleurs, mais celles-ci seront le rouge, le vert et le bleu. Cela correspond à la {glo}`synthadditive|synthèse additive additif` : en allumant une LED rouge, j'ajoute de la lumière sur la partie du spectre lumineux correspondant.
 
 ```{figure} media/SyntheseAdd_pixels.svg
 ---
@@ -333,9 +342,11 @@ name: fig-repr-img-sys-pixel
 Système additif et écran au microscope.
 ```
 
-Chaque pixel d'une image couleur est donc représenté comme un mélange de ces trois couleurs et donc sous forme de trois entiers. Comme pour les images en niveaux de gris, ces entiers sont généralement représentés sur 8 bits.
+Chaque pixel d'une image couleur est donc représenté comme un mélange de ces trois couleurs et donc sous forme de trois entiers. Comme pour les images en niveaux de gris, ces entiers sont généralement représentés sur 8 bits. Pour représenter une image en couleur il faut donc 8 bits pour le niveau de rouge, 8 bits pour le niveau de vert, et 8 bits pour le niveau de bleu, donc 24 bits. 
 
 [Dans cette animation](https://www.csfieldguide.org.nz/en/interactives/pixel-viewer/) vous pouvez zoomer sur chacun des pixels qui constituent l'image totale. Chaque pixel possède trois valeurs allant de 0 à 255. RGB signifie en anglais Red, Green, Blue. 
+
+[Dans cette autre animation](https://csfieldguide.org.nz/en/interactives/colour-matcher/) vous pouvez jouer avec la valeur de Rouge, Vert, Bleu, pour créer une couleur finale. L'outil vous permet d'abord de jouer avec des couleurs codées en 24 bits, puis en 8 bits, ce qui illustre bien la précision qu'on arrive à atteindre avec 24 bits. 
 
 ## Les images vectorielles
 
@@ -365,7 +376,7 @@ Une oeuvre d'art numérique signée Andreas Gysin :
 
 https://play.ertdfgcvb.xyz/#/src/demos/doom_flame_full_color
 
-## Auto-contrôle
+<!-- ## Auto-contrôle
 
 ### Texte à trous
 
@@ -378,4 +389,4 @@ S'il faut 8 bits pour coder un chiffre entre 0 et 255, combien faut-il de bits p
 * {v}`24, car il y a trois fois 8 bits.`
 * {f}`3, car il y a trois couleurs qui se mélangent.`
 * {f}`765, car il faut multiplier 255 par 3.`
-```
+``` -->
