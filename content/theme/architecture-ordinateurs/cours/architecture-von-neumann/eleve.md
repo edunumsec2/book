@@ -23,7 +23,7 @@ En informatique, on retient son nom pour l'élaboration d'une architecture, publ
 Alan Turing
 ^^^^^
 * **Naissance** 23 juin 1912 Maida Vale (Londres) (Royaume-Uni) 
-* **Déces** 	7 juin 1954 (à 41 ans) Wilmslow (Cheshire) (Royaume-Uni) 
+* **Décès** 	7 juin 1954 (à 41 ans) Wilmslow (Cheshire) (Royaume-Uni) 
 ```{dropdown} Bio
 :animate: fade-in-slide-down
 Pendant la Seconde Guerre mondiale, [**Alan Mattison Turing**](https://fr.wikipedia.org/wiki/Alan_Turing Alan Turing) travaille pour les services secrets de l'armée anglaise, en cryptographie. Il est chargé déchiffrer les messages allemands chiffrés avec la machine enigma.
