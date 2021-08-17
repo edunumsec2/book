@@ -30,21 +30,21 @@ Un processeur est un dispositif synchrone, ce qui signifie que les opérations �
 
 ```{admonition} La notion de *synchrone*
 :class: attention
-La notion de synchronicité est fondamentale. Sans entrer dans les détails ici, il faut relever que dans un système synchrone il est possible d'assurer une coordination et une cohérence des opérations, ce qui est impossible autrement. Cet aspect devient crucial dans les systèmes distribués qui ne disposent plus de la garantie de synchronicité.
+<span commented>La notion de synchronicité est fondamentale</span><!-- REVIEW/JPP: à mon avis, ils n'en comprennent rien -->. Sans entrer dans les détails ici, il faut relever que dans un système synchrone il est possible d'assurer une coordination et une cohérence des opérations, ce qui est impossible autrement. Cet aspect devient crucial dans les systèmes distribués qui ne disposent plus de la garantie de synchronicité.
 ```
 
 ## L'accès à la mémoire
 
 ```{admonition} Rappel
 :class: danger
-Comme on l'a vu dans l'architecture de vonNeumman, la mémoire contient le programme et les données du programme. Un programme peut donc se modifier lui-même en se modifiant dans la mémoire (c'est rarement un effet souhaité).
+Comme on l'a vu dans l'architecture de vonNeumman, la mémoire contient le programme et les données du programme. Un programme peut donc se <span commented>modifier lui-même</span><!-- REVIEW/JPP: en pratique, toutes les architectures modernes l'interdisent --> en se modifiant dans la mémoire (c'est rarement un effet souhaité).
 ```
 
 L'Unité Centrale de Traitement (UCT ou CPU en anglais pour Central Processing Unit) doit accéder à la mémoire. On parle de mémoire RAM pour Random Access Memory. Le processeur peut accéder à la mémoire en lecture ou en écriture. Les deux mécanismes sont très similaires, mais avant de regarder plus en détail comment cela fonctionne, il faut d'abord définir comment la mémoire est structurée. La mémoire RAM permet, comme son nom l'indique, d'accéder à tout moment à n'importe quel emplacement.
 
 TODO: illustration
 
- Pour y accéder, le processeur envoie d'abord l'adresse au module mémoire, puis lis ou écrit la valeur. Pour cela le processeur dispose d'un **bus d'adressage**. Il s'agit physiquement de câbles parallèles qui relient le processeur à la mémoire. La taille de ce bus ou sa largeur définit le nombre de connexions parallèles et dépend des caractéristiques du processeur et de la RAM. Chaque connexion transporte un bit, un bus de largeur 32 bit transporte 32 bits ce qui permet d'adresser 2<sup>32</sup> adresses mémoire (env. 4 Go). Le bus de données lui transporte les données entre le processeur et la mémoire (dans les deux sens). Ces deux bus, adresses et données, ne sont pas forcément de largeur identique.
+Pour y accéder, le processeur envoie d'abord l'adresse au module mémoire, puis lis ou écrit la valeur. Pour cela le processeur dispose d'un **bus d'adressage**. Il s'agit physiquement de câbles parallèles qui relient le processeur à la mémoire. La taille de ce bus ou sa largeur définit le nombre de connexions parallèles et dépend des caractéristiques du processeur et de la RAM. Chaque connexion transporte un bit, un bus de largeur 32 bit transporte 32 bits ce qui permet d'adresser 2<sup>32</sup> adresses mémoire (env. 4 Go). Le bus de données lui transporte les données entre le processeur et la mémoire (dans les deux sens). Ces deux bus, adresses et données, ne sont pas forcément de largeur identique.
 
  TODO: illustration
 
@@ -108,7 +108,7 @@ L'unité arithmétique et logique (UAL plus communément appelée ALU en abrévi
 
 ## Exemple: le 6502
 
-Le 6502, conçu en 1975, est le premier microprocesseur grand public avec un prix de 25$ (bien en-dessous des concurrents de cette époque). Une de ses première utilisation pour le *grand public* fût la console de jeux vidéo Atari 2600. A partir de 1985, Nintendo équipe la NES d'une version modifiée du 6502. Il équipe aussi le célèbre Apple II. Il est encore fabriqué et commercialisé en 2014.
+Le 6502, conçu en 1975, est le premier microprocesseur grand public avec un prix de 25$ (bien en-dessous des concurrents de cette époque). Une de ses première utilisation pour le *grand public* fut la console de jeux vidéo Atari 2600. A partir de 1985, Nintendo équipe la NES d'une version modifiée du 6502. Il <span commented>équipe</span><!-- REVIEW/JPP: temps du verbe --> aussi le célèbre Apple II. Il est encore fabriqué et commercialisé en <span commented>2014</span><!-- REVIEW/JPP: et maintenant? -->.
 
 ```{figure} media/6502_pad_annot_07.png
 ---

@@ -2,16 +2,16 @@
 
 Dans ce chapitre, nous aborderons la question de {glo}`archiordi|l'architecture des ordinateurs`, c'est à dire les multiples couches physiques qui rendent possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
 
-Comme vous avez pu le voir dans le chapitre lié à la {glo}`repinfo|représentation de l'information` tout ce qui apparaît sur votre écran n'est qu'une suite de 0 et de 1. Pour comprendre comment ces {glo}`codebinaire|nombres binaires` sont traités par l'ordinateur, il faut avoir en tête que les ordinateurs sont construits en plusieurs couches successives, comme un mille feuille, dont chacune possède ses propres règles. 
+Comme vous avez pu le voir dans le chapitre lié à la {glo}`repinfo|représentation de l'information`, tout ce qui apparaît sur votre écran est représenté par l'ordinateur par suite de 0 et de 1. Pour comprendre comment ces <span commented>{glo}`codebinaire|nombres binaires`</span><!-- REVIEW/JPP: pas nombres --> sont traités par l'ordinateur, il faut avoir en tête que les ordinateurs sont <span commented>construits</span><!-- REVIEW/JPP: pour moi, ils ne sont pas construits comme ça. Il n'y a qu'une seule couche, à la base. Mais on y réfléchit selon plusieurs niveaux --> en plusieurs couches successives, comme un mille-feuille, dont chacune possède ses propres règles. 
 
 ```{figure} media/abstractionlight.png
 ---
 height: 400px
 width: 250px
 ---
-Les différents niveaux d'abstraction de l'informatique, en partant des électrons, jusqu'aux "programmes", que l'on appelle aussi aujourd'hui "applications". 
+Les différents niveaux d'abstraction de l'informatique, en partant des électrons, jusqu'aux «programmes», <span commented>que l'on appelle aussi aujourd'hui "applications"</span><!-- REVIEW/JPP: pas la même chose -->. 
 ```
-Dans ce chapitre nous nous concentrerons sur les {glo}`basniveau|couches de bas niveau`, et tenterons de remonter progressivement jusqu'aux {glo}`logiciel|couches logicielles`. 
+Dans ce chapitre, nous nous concentrerons sur les {glo}`basniveau|couches de bas niveau`, et tenterons de remonter progressivement jusqu'aux {glo}`logiciel|couches logicielles`. 
 
 
 ## De quoi sont faits les nombres binaires ? 
@@ -33,14 +33,14 @@ Vos photos, vos vidéos, vos messages, tout ce que vous consultez sur votre tél
 height: 350px
 width: 500px
 ---
-Vos likes, vos partages, vos vidéos transmises via des applications telles que Whatsapp, Instagram, Tik Tok, Snapchat, Youtube, sont stockées dans des centres de données aux quatre coins de la planète. 
+Vos likes, vos partages, vos vidéos transmises via des applications telles que Whatsapp, Instagram, TikTok, Snapchat, Youtube, sont stockées dans des centres de données aux quatre coins de la planète. 
 ```
 
 ## Électricité et nombres binaires
 
-Les {glo}`codebinaire|nombres binaires`, au niveau le plus élémentaire, sont matérialisés par des courants électriques. Mais pourquoi avoir choisi des 0 et des 1 comme alphabet ? Quel rapport avec l'électricité ? 
+Les {glo}`codebinaire|nombres binaires`, au niveau le plus élémentaire, sont matérialisés par des <span commented>courants électriques</span><!-- REVIEW/JPP: discussion courant vs tension? -->. Mais pourquoi avoir choisi des 0 et des 1 comme alphabet ? Quel rapport avec l'électricité ? 
 
-En informatique, si nous avons choisi d'utiliser un {glo}`codebinaire|code binaire` ça n'est pas par hasard. Ce sont les deux signaux les plus élémentaires que l'on puisse transmettre avec l'électricité. Soit le courant passe, soit il ne passe pas. Ouvert ou fermé, allumé ou éteint, 1 ou 0. 
+En informatique, si nous avons choisi d'utiliser un {glo}`codebinaire|code binaire`, ça n'est pas par hasard. Ce sont les deux signaux les plus élémentaires que l'on puisse transmettre avec l'électricité. Soit le courant passe, soit il ne passe pas. Ouvert ou fermé, allumé ou éteint, 1 ou 0. 
 
 ```{admonition} Le saviez-vous ?
 :class: hint
@@ -59,7 +59,7 @@ width: 500px
 Différents modèles de transistor. On les reconnaît à leurs trois "pattes" aussi appelées : {glo}`emetteur1|émetteur`, {glo}`base|base`, {glo}`collecteur|collecteur`. 
 ```
 
-Le {glo}`transistor|transistor` fonctionne comme un robinet d'eau qui peut être ouvert ou fermé. Si on l'ouvre le courant passe, si on le ferme il ne passe pas. 
+<span commented>Le {glo}`transistor|transistor` fonctionne comme un robinet d'eau qui peut être ouvert ou fermé. Si on l'ouvre, le courant passe; si on le ferme, il ne passe pas.</span><!-- REVIEW/JPP: fonctionne plutôt comme un interrupteur contrôlé par du courant --> 
 
 ````{dropdown} Pour aller plus loin
 Vidéo facultative qui explique en détail ce qui se passe dans les matériaux qu'on appelle "semi-conducteurs". *Note : contenu en anglais, mais en cours de traduction (elliot)*.
@@ -91,7 +91,7 @@ Chercher à se représenter la taille des transistors utilisés dans les micropr
 
 ## Des transistors aux portes logiques
 
-Un {glo}`transistor|transistor` seul ne peut représenter qu'un bit d'information. Oui ou non, ouvert ou fermé, 1 ou 0. Mais si l'on rassemble plusieurs {glo}`transistor|transistor`, on peut construire des systèmes logiques qui nous permettent d'exprimer des relations logiques plus avancées, comme la {glo}`conjonction|conjonction`, la {glo}`disjonction|disjonction`, la {glo}`negation|négation`. C'est ce qu'on appelle des {glo}`portelogique|portes logiques`. 
+Un {glo}`transistor|transistor` seul ne peut représenter qu'un bit d'information. Oui ou non, ouvert ou fermé, 1 ou 0. Mais si l'on rassemble plusieurs {glo}`transistor|transistors`, on peut construire des systèmes logiques qui nous permettent d'exprimer des relations logiques plus avancées, comme la {glo}`conjonction|conjonction`, la {glo}`disjonction|disjonction`, la {glo}`negation|négation`. C'est ce qu'on appelle des {glo}`portelogique|portes logiques`. 
 
 ```{figure} media/andgate.svg
 ---
