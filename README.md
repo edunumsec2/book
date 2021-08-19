@@ -62,7 +62,6 @@ Après la phase **pilote**, les enseignant.es pourront en outre :
 
 ## Documents importants
 
-* [Plan d'études](https://files.edunumsec2.ch/pe.pdf) pour l'informatique discipline obligatoire. 
 * [Livret de cours](https://files.edunumsec2.ch/livret.pdf) décrivant le découpage du plan d'études dans le détail. 
 
 ## Chapitrage
