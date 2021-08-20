@@ -30,6 +30,7 @@ Les ressources sont accessibles via le [site web](https://edunumsec2.ch) (Userna
   - [Utilisation en ligne](#utilisation-en-ligne)
   - [Modifications indépendantes](#modifications-indépendantes)
   - [Participation au développement](#participation-au-développement)
+- [Comité de rédaction](#comité-de-rédaction)
 
 
 ### Votre avis et ceux de vos élèves sont importants
