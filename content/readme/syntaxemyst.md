@@ -131,7 +131,7 @@ Grace Hopper
 ^^^^^
 * **Surnom** Amazing Grace
 * **Naissance** 9 décembre 1906 / New York 🇺🇸 
-* **Déces** 1 er janvier 1992 / Comté d'Arlington 🇺🇸 
+* **Décès** 1<sup>er</sup> janvier 1992 / Comté d'Arlington 🇺🇸 
 * **Grade** Rear admiral
 ```{dropdown} Bio
 :animate: fade-in-slide-down
@@ -144,7 +144,7 @@ Grace Hopper
 Claude Shannon
 ^^^^^
 * **Naissance** 30 avril 1916 / Petosky 🇺🇸 
-* **Déces** 24 janvier 2001 / Medford 🇺🇸 
+* **Décès** 24 janvier 2001 / Medford 🇺🇸 
 * **Institutions** Bell Labs & MIT
 ```{dropdown} Bio
 :animate: fade-in-slide-down
@@ -162,7 +162,7 @@ Grace Hopper
 ^^^^^
 * **Surnom** Amazing Grace
 * **Naissance** 9 décembre 1906 / New York 🇺🇸 
-* **Déces** 1 er janvier 1992 / Comté d'Arlington 🇺🇸 
+* **Décès** 1<sup>er</sup> janvier 1992 / Comté d'Arlington 🇺🇸 
 * **Grade** Rear admiral
 ```{dropdown} Bio
 :animate: fade-in-slide-down
@@ -175,7 +175,7 @@ Grace Hopper
 Claude Shannon
 ^^^^^
 * **Naissance** 30 avril 1916 / Petosky 🇺🇸 
-* **Déces** 24 janvier 2001 / Medford 🇺🇸 
+* **Décès** 24 janvier 2001 / Medford 🇺🇸 
 * **Institutions** Bell Labs & MIT
 ```{dropdown} Bio
 :animate: fade-in-slide-down

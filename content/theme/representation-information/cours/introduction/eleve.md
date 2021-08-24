@@ -85,7 +85,11 @@ On trouve des exemples célèbres et bien documentés de {glo}`sysco|systèmes d
 
 Utilisé en Grèce Antique pour transmettre des messages entre cités voisines, ce système utilisait des torches enflammées en guise de {glo}`signal|signaux`. 
 
-Cinq torches "à gauche", cinq torches "à droite", étaient séparées par un espace suffisamment grand pour être identifiables à longue distance. Une torche pouvait être soit allumée, soit éteinte. Le nombre de torches allumées à gauche, de 1 à 5, représentait les colonnes, le nombre de torches allumées à droite représentait les lignes. 
+Cinq torches "à gauche", cinq torches "à droite", étaient séparées par un espace
+suffisamment grand pour être identifiables à longue distance. Une torche pouvait
+être soit allumée, soit éteinte. Le nombre de torches allumées à gauche, de 1 à
+5, représentait la ligne d'un tableau de décodage, le nombre de torches allumées
+à droite représentait la colonne de ce même tableau.
 
 ````{figure} media/polybe.png
 ---
