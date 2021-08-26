@@ -30,6 +30,7 @@ Les ressources sont accessibles via le [site web](https://edunumsec2.ch) (Userna
   - [Utilisation en ligne](#utilisation-en-ligne)
   - [Modifications indépendantes](#modifications-indépendantes)
   - [Participation au développement](#participation-au-développement)
+- [Comité de rédaction](#comité-de-rédaction)
 
 
 ### Votre avis et ceux de vos élèves sont importants
@@ -62,7 +63,6 @@ Après la phase **pilote**, les enseignant.es pourront en outre :
 
 ## Documents importants
 
-* [Plan d'études](https://files.edunumsec2.ch/pe.pdf) pour l'informatique discipline obligatoire. 
 * [Livret de cours](https://files.edunumsec2.ch/livret.pdf) décrivant le découpage du plan d'études dans le détail. 
 
 ## Chapitrage
@@ -247,13 +247,13 @@ jupyter-book clean .
 
 ## Comité de rédaction
 
-- Représentation de l'information : David Da Silva - Gymnase de Chamblandes & Javier Iglesias - Gymnase de Renens
-- Algorithmique : Biljana Petreska - Gymnase d'Yverdon & Micha Hersch Gymnase de Renens / HEP
-- Programmation : Raphaël Holzer - Gymnase du Bugnon & Gilles Racine - Gymnase de Sevelin
-- Architecture des ordinateurs : Philippe Rochat - Gymnase de Morges & Jean-Philippe Pellet - HEP
-- Enjeux sociaux : Virginia Haussauer - EPFL & Franck Dayen - Gymnase de Morges 
-- Plateforme : Romain Edelmann - EPFL & Grégoire Gavin - EPFL
-- Charte éditoriale, plateforme, rédaction : Elliot Vaucher - EPFL
-- Coordination : Nathalie Farenc - EPFL
+- Représentation de l'information : David Da Silva (david.dasilva@eduvaud.ch) - Gymnase de Chamblandes & Javier Iglesias (javier.iglesias@eduvaud.ch) - Gymnase de Renens
+- Algorithmique : Biljana Petreska (biljana.petreska@fileinformatique.ch) - Gymnase d'Yverdon & Micha Hersch (demander contact à nathalie.farenc@epfl.ch) Gymnase de Renens / HEP
+- Programmation : Raphaël Holzer (raphael.holzer@eduvaud.ch) - Gymnase du Bugnon & Gilles Racine (gilles.racine@eduvaud.ch) - Gymnase de Sevelin
+- Architecture des ordinateurs : Philippe Rochat (philippe.rochat@fileinformatique.ch) - Gymnase de Morges & Jean-Philippe Pellet (jean-philippe.pellet@fileinformatique.ch) - HEP
+- Enjeux sociaux : Virginia Haussauer (virginia.haussauer@epfl.ch) - EPFL & Franck Dayen (frank.dayen@eduvaud.ch) - Gymnase de Morges 
+- Plateforme : Romain Edelmann (romain.edelmann@epfl.ch) - EPFL & Grégoire Gavin (gregoire.gavin@epfl.ch) - EPFL
+- Charte éditoriale, plateforme, rédaction : Elliot Vaucher (elliot.vaucher@epfl.ch) - EPFL
+- Coordination : Nathalie Farenc (nathalie.farenc@epfl.ch) - EPFL
 
 

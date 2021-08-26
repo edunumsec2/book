@@ -133,10 +133,11 @@ ol {
 * Zuboff, Shoshana. *L’âge du capitalisme de surveillance.* Paris, Éditions Zulma, 2020.
 ````
 
-````{dropdown} Algorithmes
+````{dropdown} Intelligence artificielle et enjeux de l'automatisation
 * Abiteboul, Serge et Dowek, Gilles. *Le temps des algorithmes*. Le Pommier, 2017.
 * Cardon, Dominique, [« Dans l’esprit du PageRank. Une enquête sur l’algorithme de Google »](https://www.cairn.info/revue-reseaux-2013-1-page-63.htm?ref=doi). *Réseaux*, 2013, n° 177, 1, pp 159-198.
 * Cardon, Dominique. *A quoi rêvent les algorithmes ? Nos vies à l’heure des big data*. Seuil, 2015.
+* Casilli, Antonio. *En attendant les robots. Enquête sur le travail du clic*. Seuil, 2018.
 * O'Neil, Cathy. *Algorithmes, la bombe à retardement*. Les Arènes, 2018. 
 * Pariser, Eli. *The filter bubble: What the Internet is hiding from you*. Penguin, 2011.
 * Pasquale, Frank. *The Black Box Society: The Secret Algorithms That Control Money and Information*. Harvard University Press, 2015.
@@ -148,6 +149,7 @@ ol {
 ````
 
 ````{dropdown} Surveillance
+* Massutti, Christophe. *Affaires privées. Aux sources du capitalisme de surveillance*. C&F Éditions, 2020.
 * Tesquet, Olivier. *A la trace*. Premier Parallèle, 2020. 
 ````
 
@@ -156,7 +158,7 @@ ol {
 * Le Crosnier, Hervé et Schafer, Valérie (dir.). *La neutralité de l’internet : Un enjeu de communication*. CNRS Éditions, 2019. 
 ````
 
-````{dropdown} Histoire et enjeux globaux d’Internet
+````{dropdown} Histoire, culture et enjeux globaux d’Internet
 * Beaude, Boris. *Les fins d’Internet*. FYP Éditions, 2012.
 * Morozov, Evgeny. *Pour tout résoudre, cliquez ici*. FYP Éditions, 2014.
 * Tréguer, Félix. *L’utopie déchue. Une contre-histoire d’Internet*. Fayard, 2019.
