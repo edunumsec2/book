@@ -56,23 +56,27 @@ parts:
   ### Architecture des ordinateurs    
   - file: content/theme/architecture-ordinateurs/accueil/eleve
     sections:
-      - file: content/theme/architecture-ordinateurs/cours/introduction/eleve
-      - file: content/theme/architecture-ordinateurs/cours/portes-logiques/eleve
-      - file: content/theme/architecture-ordinateurs/cours/de-logique-a-arithmetique/eleve
-      - file: content/theme/architecture-ordinateurs/cours/alu-bascules/eleve
-      #### Exercices
+      - file: content/theme/architecture-ordinateurs/cours/0_introduction/eleve
+      - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/eleve
+        sections:
+          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/1_portes-logiques/eleve
+          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/2_de-logique-a-arithmetique/eleve
+          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/3_de-logique-a-la-memoire/eleve
+      - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/eleve
+        sections:
+          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/alu-bascules/eleve
+          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/architecture-von-neumann/eleve
+          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/microprocesseur/eleve
+      - file: content/theme/architecture-ordinateurs/cours/3_composants/eleve
+      - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler
         sections: 
-          - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SystemesLogiques
-            sections:
-              - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SL1_bases
-              - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SL2_portes
-              - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SL3_sl
-              - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SL4_avance
-              - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/SL5_conclusion
-          - file: content/theme/architecture-ordinateurs/exercices/alu-bascules/Corrige_SystemesLogiques
-      - file: content/theme/architecture-ordinateurs/cours/architecture-von-neumann/eleve
-      - file: content/theme/architecture-ordinateurs/cours/microprocesseur/eleve
-      - file: content/theme/architecture-ordinateurs/cours/informatique-embarquee/eleve
+          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SystemesLogiques
+          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL1_bases
+          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL2_portes
+          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL3_sl
+          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL4_avance
+          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL5_conclusion
+          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/Corrige_SystemesLogiques
       - file: content/theme/architecture-ordinateurs/cours/histoire-informatique/eleve
 
 ## Deuxième année

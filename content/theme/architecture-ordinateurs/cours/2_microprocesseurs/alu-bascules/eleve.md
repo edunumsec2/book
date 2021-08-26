@@ -26,27 +26,27 @@ Nous pouvons les assembler dans des microprocesseurs que nous allons détailler 
 
 **Vite ... très vite**
 ^^^^
-Nous avons démontré que finalement nos ordinateurs ont un cerveau très simple dans le fonction de ses éléments de base : des portes logiques qui traitent des **0** ou des **1**. Il est cependant très difficile de se représenter à quel point ces traitement vont vite.
+Nous avons démontré que finalement nos ordinateurs ont un cerveau très simple dans le fonction de ses éléments de base: des portes logiques qui traitent des **0** ou des **1**. Il est cependant très difficile de se représenter à quel point ces traitement vont vite.
 Imaginons pour cela que le processeur écrive toutes les opérations qu'il effectue sur un ruban de papier et calculons la vitesse de défilement de ce papier. 
 
 Pour cela nous faisons les hypothèses suivantes:
 * Les processeurs actuels ont une cadence d'horloge de 3GHz, c'est à dire $3·10^9 [s^{-1}]$. Pour simplifier nous allons supposer qu'ils effectuent une opération par cycle[^1].
 * Nous transcrivons un mot de 64 bit (taille standard pour les processeurs) sur une longueur de 15cm, ce qui correspond à $15·10^{-2}[m]$.
 
-Le calcul devient alors :
+Le calcul devient alors:
 
 $$
     3·10^9 [s^{-1}] · 15·10^{-2}[m] \\
     45·10^7 [m/s]
 $$
 
-Que nous convertissons en km :
+Que nous convertissons en km:
 
 $$
-    45·10^5 [km/s] ou encore : 450'000 [km/s]
+    45·10^5 [km/s] ou encore: 450'000 [km/s]
 $$
 
-Rappelons que la vitesse de la lumière est :
+Rappelons que la vitesse de la lumière est:
 
 $$
     c \cong 300'000 [km/s]

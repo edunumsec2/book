@@ -2,7 +2,7 @@
 
 _**Note:** Ces exercices vont être ventilés sous les thématiques correspondantes sous peu. L'usage de logic.ly, système tiers payant non open source, sera notamment remplacé par des embeds du système que vous avons développé._
 
->**Contenus abordés** : Portes logiques, loi de De Morgan, systèmes logiques simples, demi-additionneur, additionneur
+>**Contenus abordés**: Portes logiques, loi de De Morgan, systèmes logiques simples, demi-additionneur, additionneur
 
 ## Introduction
 

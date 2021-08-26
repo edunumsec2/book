@@ -12,7 +12,7 @@ Nous avons tous entendu parler DES ALGORITHMES. Ils sont partout et font toutes 
 
 Bienvenue dans le monde fascinant des algorithmes. 
 
-## Contenus du chapitre
+## Contenu du chapitre
 
 ```{tableofcontents}
 ```
@@ -40,7 +40,7 @@ A la fin de ce chapitre, vous saurez ce qu'est un algorithme et vous serez capab
 Al-Khwarizmi 🇺🇿
 ^^^^^
 * **Naissance** 780
-* **Déces** 850
+* **Décès** 850
 
 Considéré comme le père de l’algèbre [**Al-Khwarizmi**](https://fr.wikipedia.org/wiki/Al-Khw%C3%A2rizm%C3%AE) a vécu au VIIIe siècle dans le Moyen Orient. Il est l'auteur de plusieurs ouvrages de mathématiques, d’astronomie et de géographie. Son nom est à l’origine du mot **algorithme**.
 
@@ -50,7 +50,7 @@ Considéré comme le père de l’algèbre [**Al-Khwarizmi**](https://fr.wikiped
 Edsger Dijkstra 🇳🇱
 ^^^^^
 * **Naissance** 11 mai 1930
-* **Déces** 06 août 2002
+* **Décès** 06 août 2002
 
 [Edsger Wybe Dijkstra](https://fr.wikipedia.org/wiki/Edsger_Dijkstra) est un mathématicien et informaticien néerlandais du XXe siècle. Il reçoit en 1972 le prix Turing pour ses contributions sur la science et l’art des langages de programmation et au langage Algol. Il est le concepteur de l'algorithme éponyme de recherche du plus court chemin. 
 ````

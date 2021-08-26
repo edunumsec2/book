@@ -1,7 +1,7 @@
 
 # Exercices de base
 
-````{admonition} Exercice 1 : un binary digit (*bit*)
+````{admonition} Exercice 1: un binary digit (*bit*)
 :class: attention
 
 Construisons notre premier circuit le plus simple dans logic.ly. Ce dernier représente une unité d'information, en anglais *binary digit* abrégé bit.
@@ -13,7 +13,7 @@ Un simple bit
 ```
 ````
 
-````{admonition} Exercice 2 : un demi-octet
+````{admonition} Exercice 2: un demi-octet
 :class: attention
 
 Un octet est un ensemble de huit bits. Pour simplifier, nous allons ici construire un demi-octet avec sa représentation binaire et sa représentation hexadécimale[^hexa].

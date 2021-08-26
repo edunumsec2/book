@@ -11,24 +11,24 @@ Les exercices dont les résultats sont évidents ne font pas l'objet d'un corrig
 
 ```
 
-````{admonition} Exercice 5 : lois de De Morgan
+````{admonition} Exercice 5: lois de De Morgan
 :class: attention
 
 {download}`Corrigé <media/Logidules/Ex5_DeMorgan/EquivalencesDeMorgan>` pour le simulateur de Logidules
 
 ````
 
-````{admonition} Exercice 6 : demi-additionneur
+````{admonition} Exercice 6: demi-additionneur
 :class: attention
 
 
 
 ````
 
-````{admonition} Exercice 7 : additionneur
+````{admonition} Exercice 7: additionneur
 :class: attention
 
-1. Table de vérité complétée :
+1. Table de vérité complétée:
 
 |  A  |  B  | $C_{in}$  | $S$             | $C_{out}$ |
 |:---:|:---:|:---------:|:---------------:|:---------:|
@@ -41,7 +41,7 @@ Les exercices dont les résultats sont évidents ne font pas l'objet d'un corrig
 |  1  |  1  |  0        |       0         |   1       |
 |  1  |  1  |  1        |       1         |   1       |
 
-2. Proposition de schémas pour un circuit logique :
+2. Proposition de schémas pour un circuit logique:
 
 ![retenue1](media/Logidules/Ex8_Add/add1.jpg)
 

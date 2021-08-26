@@ -1,5 +1,5 @@
 # Portes logiques
-````{admonition} Exercice 3 : portes logiques élémentaires
+````{admonition} Exercice 3: portes logiques élémentaires
 :class: attention
 
 ```{dropdown} porte_ET
@@ -12,7 +12,7 @@ Compléter les tables de vérité suivantes pour les portes logiques ET, OU, NON
 
 **ET (AND)**
 
-Nous avons la fonction A et B que nous notons : $A·B$
+Nous avons la fonction A et B que nous notons: $A·B$
 
 |  A  |  B  |  $S=A·B$  |
 |:---:|:---:|:---:|
@@ -23,7 +23,7 @@ Nous avons la fonction A et B que nous notons : $A·B$
 
 **OU (OR)**
 
-Nous avons la fonction A OU B que nous notons : $A+B$
+Nous avons la fonction A OU B que nous notons: $A+B$
 
 |  A  |  B  |  $S=A+B$  |
 |:---:|:---:|:---:|
@@ -34,7 +34,7 @@ Nous avons la fonction A OU B que nous notons : $A+B$
 
 **OU EXCLUSIF (OU-X, XOR)**
 
-Nous avons la fonction A ou B que nous notons : $A \oplus B$
+Nous avons la fonction A ou B que nous notons: $A \oplus B$
 
 |  A  |  B  |  $S=A \oplus B$  |
 |:---:|:---:|:---:|
@@ -45,7 +45,7 @@ Nous avons la fonction A ou B que nous notons : $A \oplus B$
 
 **NON (NOT)**
 
-Nous avons la fonction non A que nous notons : $S= \overline{A}$
+Nous avons la fonction non A que nous notons: $S= \overline{A}$
 
 |  A  |  $S= \overline{A}$  |
 |:---:|:---:|:---:|
@@ -54,7 +54,7 @@ Nous avons la fonction non A que nous notons : $S= \overline{A}$
 
 ````
 
-````{admonition} Exercice 4 : comparateur
+````{admonition} Exercice 4: comparateur
 :class: attention
 
 Il peut être intéressant de disposer d'un moyen de comparer deux nombres. Une telle fonction retourne ***vrai*** (càd. ***1***) lorsque les deux nombres sont identiques.
@@ -66,7 +66,7 @@ Il peut être intéressant de disposer d'un moyen de comparer deux nombres. Une 
 
 ````
 
-````{admonition} Exercice 5 : lois de *De Morgan*
+````{admonition} Exercice 5: lois de *De Morgan*
 :class: attention
 les lois de De Morgan proposent les égalités suivantes:
 
@@ -97,7 +97,7 @@ On peut enfin en donner une représentation en diagramme de Venn.
 Diagrammes de *Venn* (source wikipedia[^2])
 ```
 
-**Consigne :** Concevoir et mettre en place dans l'un ou l'autre des simulateurs un montage qui démontre le plus efficacement possible les lois de De Morgan.
+**Consigne:** Concevoir et mettre en place dans l'un ou l'autre des simulateurs un montage qui démontre le plus efficacement possible les lois de De Morgan.
 
 > En életronique digitale, ces lois sont remarquables parce qu'elles garantissent que l'on peut toujours remplacer des portes **OU** avec des portes **ET** (et inversément). Cette équivalence est abondamment utilisée dans la conception de circuits intégrés digitaux.
 > Sachant que l'on peut également trouver une combinaison équivalente pour construire une porte **OU-X** et que l'on peut, en reliant ensemble les deux entrées d'une porte **NON-ET** en faire un inverseur (**NON**), on réalise que n'importe quel système de logique combinatoire peut-être réalisé avec uniquement des portes **NON-ET**.

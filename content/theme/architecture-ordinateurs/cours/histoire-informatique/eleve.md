@@ -3,7 +3,7 @@ Histoire de l'informatique
 
 ## Quand les doigts de la main ne suffisent plus
 
-Le mot calcul vient de *calculus*, en latin : le petit caillou. Au temps des romain la notion de calcul est donc venue de ces petits cailloux que l'on utilisait pour effectuer des calculs. Mais auparavant déjà, la civilisation grecque utilisait déjà les cailloux pour dénombrer par exemple les moutons : on sortait les cailloux d'un bol le matin, puis on les remettait dedans le soir pour chaque animal rentré. S'il restait des cailloux, c'était autant de mouton perdus. On utilisait également des objets comme des tessons de poterie (ostracas) pour compter les votes menant à l'exil d'un citoyen.
+Le mot calcul vient de *calculus*, en latin: le petit caillou. Au temps des romain la notion de calcul est donc venue de ces petits cailloux que l'on utilisait pour effectuer des calculs. Mais auparavant déjà, la civilisation grecque utilisait déjà les cailloux pour dénombrer par exemple les moutons: on sortait les cailloux d'un bol le matin, puis on les remettait dedans le soir pour chaque animal rentré. S'il restait des cailloux, c'était autant de mouton perdus. On utilisait également des objets comme des tessons de poterie (ostracas) pour compter les votes menant à l'exil d'un citoyen.
 
 ````{admonition} La machine d'Anticythère
 :class: hint

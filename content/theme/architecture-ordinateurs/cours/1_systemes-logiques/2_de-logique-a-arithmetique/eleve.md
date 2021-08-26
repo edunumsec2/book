@@ -294,7 +294,7 @@ Réglez les entrées du circuit de manière à lui faire effectuer les additions
 ```
 
 ```{dropdown} Corrigé
-Dès que la somme dépasse 15, elle n'est plus représentable sur les 4 bits qui sont affichés sur la sortie. La plupart des ordinateurs et smartphones actuels représentent les nombres non pas sur 4 bits, mais sur 64. Mais même avec 64 bits, il y a un nombre maximal que l'on peut représenter (en l'occurrence, $2^{64} - 1 = 18446744073709551615$.) La retenue du dernier additionneur s'appelle le bit de dépassement (_overflow_ en anglais). Il est à 1 lorsque le résultat de l'addition n'est pas correctement représenté avec les 4 (ou 64) bits de sortie. Dans les processeurs, il porte souvent le nom de $V$ (deuxième lettre d'_oVerflow_). Nous allons dorénavant aussi utiliser ce nom.
+Dès que la somme dépasse 15, elle n'est plus représentable sur les 4 bits qui sont affichés sur la sortie. La plupart des ordinateurs et smartphones actuels représentent les nombres non pas sur 4 bits, mais sur 64. Mais même avec 64 bits, il y a un nombre maximal que l'on peut représenter (en l'occurrence, $2^{64} - 1 = 18\,446\,744\,073\,709\,551\,615$.) La retenue du dernier additionneur s'appelle le bit de dépassement (_overflow_ en anglais). Il est à 1 lorsque le résultat de l'addition n'est pas correctement représenté avec les 4 (ou 64) bits de sortie. Dans les processeurs, il porte souvent le nom de $V$ (deuxième lettre d'_oVerflow_). Nous allons dorénavant aussi utiliser ce nom.
 ```
 ````
 

@@ -2,15 +2,15 @@
 
 Dans cette partie, nous allons réaliser des systèmes logiques qui rentrent dans la conception des microprocesseurs tels que ceux utilisés dans votre odrinateur personnel ou votre smartphone.
 
-Nous avons choisi de nous attarder sur l'additionneur et le demi-additionneur parce qu'ils démontrent une fonction facile à comprendre : l'addition en colonnes de nombres binaires.
+Nous avons choisi de nous attarder sur l'additionneur et le demi-additionneur parce qu'ils démontrent une fonction facile à comprendre: l'addition en colonnes de nombres binaires.
 
 
-````{admonition} Exercice 6 : demi-additionneur
+````{admonition} Exercice 6: demi-additionneur
 :class: attention
 
 Le demi-additionneur calcule sur une colonne et reporte la retenue, mais ne prend pas la retenue de la colonne précédente. C'est en fait l'additionneur qui est utilisé pour le premier bit ou première colonne.
 
-En considérant le demi-additionneur comme une *boîte noire*, nous avons donc deux entrées (les opérandes A et B) et deux sorties : la somme des deux entrées et la retenue (ou dépassement, en anglais : *carry*, noté C).
+En considérant le demi-additionneur comme une *boîte noire*, nous avons donc deux entrées (les opérandes A et B) et deux sorties: la somme des deux entrées et la retenue (ou dépassement, en anglais: *carry*, noté C).
 
 À partir de là, nous pouvons proposer la table de vérité suivante:
 
@@ -21,11 +21,11 @@ En considérant le demi-additionneur comme une *boîte noire*, nous avons donc d
 |  1  |  0  |  1  |  0  |
 |  1  |  1  |  0  |  1  |
 
-**Consignes :** 
+**Consignes:** 
 1. Concevoir le circuit logique complet.
 2. Réaliser le circuit dans un simulateur et vérifier qu'il produit bien le résultat attendu.
 
-**Illustration :**
+**Illustration:**
 Nous avons ci-dessous deux illustrations d'un additionneur sans report de la retenue. On voit donc bien l'erreur de calcul.
 
 ```{dropdown} demiAdd1
@@ -43,10 +43,10 @@ Demi-additionneur, calcul faux, perte de la retenue
 
 ````
 
-````{admonition} Exercice 7 : additionneur
+````{admonition} Exercice 7: additionneur
 :class: attention
 
-Dans le cas d'un additionneur complet, nous devons reporter la retenue à la colonne suivante : $C_{in}$. Chaque colonne prend donc trois entrées et produit 2 sorties : le résultat de l'addition $S$ et la retenue $C_{out}$ qui devient le $C_{in}$ de la colonne suivante.
+Dans le cas d'un additionneur complet, nous devons reporter la retenue à la colonne suivante: $C_{in}$. Chaque colonne prend donc trois entrées et produit 2 sorties: le résultat de l'addition $S$ et la retenue $C_{out}$ qui devient le $C_{in}$ de la colonne suivante.
 
 Nous avons illustré le problème avec un montage en logidules. Ce dernier calcule uniquement la retenue.
 
@@ -79,7 +79,7 @@ La table de vérité augmente en conséquence et passe à huit cas à énumérer
 ```
 
 
-**Consignes :** 
+**Consignes:** 
 1. Compléter la table.
 2. Réaliser le circuit complet pour un demi-octet (évtl. un octet complet)
 

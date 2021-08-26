@@ -1,35 +1,4 @@
-(porteslogiques)=
 # Portes logiques
-
-## Introduction
-
-En informatique, les {glo}`syslogique|systèmes logiques` décrivent comment sont connectés les {glo}`circuitelectronique|circuits électroniques` des ordinateurs afin de leur permettre de faire des calculs. Même si on a l'impression que les ordinateurs peuvent faire toutes sortes de choses, il y a un ensemble limité d'opérations de base que l'électronique d'une machine peut faire. Parmi ces quelques opérations de base, on trouve l'addition, la soustraction, la multiplication ou la division de nombres. La vaste majorité de ce que fait l'ordinateur repose sur ces quelques opérations (ainsi que sur quelques opérations dites _logiques_, que nous allons découvrir, et sur la possibilité de lire et écrire des valeurs dans sa mémoire).
-
-C'est assez fascinant de se dire que des tâches a priori non mathématiques, comme exemple corriger l'orthographe ou la grammaire d'un texte automatiquement, sont réalisées avec ces opérations de base. 
-
-Comme but de ce chapitre, nous proposons de prendre le cas de l'**addition** et de s'intéresser aux {glo}`circuitelectronique|circuits électroniques` qui vont permettre à un ordinateur de faire une addition.
-
-Imaginons donc que nous devons additionner deux nombres entiers. Nous allons utiliser leur représentation binaire (avec uniquement des 1 et des 0). Pour faire simple, nous allons chercher à additionner simplement deux bits, disons $A$ et $B$, où chacun peut valoir soit 0 soit 1. Posons que la somme $S = A + B$. En énumérant tous les cas figure, on a:
-
-| $A$ | $B$ | $S$ |
-| :-: | :-: | --: |
-| 0   | 0   | 0   |
-| 1   | 0   | 1   |
-| 0   | 1   | 1   |
-| 1   | 1   | 10  |
-
-La dernière ligne est intéressante: nous savons que $1+1=2$, mais en {glo}`codebinaire|binaire`, nous savons aussi que nous n'avons droit qu'à des 0 et des 1, et 2 s'écrit ainsi $10$ (voir le chapitre {ref}`représentation de l'information <representationinformation>`). Cela veut dire que, pour traiter tous les cas d'une addition de 2 {glo}`bit|bits`, nous avons besoin aussi de 2 {glo}`bit|bits` de sortie, et qu'un seul ne suffit pas. En explicitant chaque fois le deuxième {glo}`bit|bit` de sortie, notre tableau devient:
-
-| $A$ | $B$ | $S$ |
-| :-: | :-: | :-: |
-| 0   | 0   | 00  |
-| 1   | 0   | 01  |
-| 0   | 1   | 01  |
-| 1   | 1   | 10  |
-
-La question est de déterminer comment faire calculer les deux {glo}`bit|bits` de la somme $S$ à partir de $A$ et $B$ à un {glo}`circuitelectronique|circuit électronique`. Pour cela, avons besoin du concept de {glo}`portelogique|portes logiques`. Nous allons maintenant introduire ce concept et voir, petit à petit, comment réaliser cette addition.
-
-## Portes logiques
 
 Les {glo}`circuitelectronique|circuits électroniques` qui composent un ordinateur sont constitués de composants électroniques comme des {glo}`resistance|résistances`, des {glo}`condensateur|condensateurs`, des {glo}`transistor|transistors`, etc., qui déterminent où va passer le courant électrique et sur quelles parties du {glo}`circuitelectronique|circuit` règnera quelle {glo}`tension|tension`.
 
@@ -50,7 +19,7 @@ En énumérant les quatre possibilités pour les entrées, on peut écrire ce qu
 | 0   | 1   | 0   |
 | 1   | 1   | 1   |
 
-On peut dessiner des diagrammes avec des {glo}portelogique|portes logiques`. (Ce ne sont pas des diagrammes électroniques, ils cachent une partie de la complexité réelle des circuits.) Dans un tel diagramme logique, la porte **ET** est représentée ainsi:
+On peut dessiner des diagrammes avec des {glo}`portelogique|portes logiques`. (Ce ne sont pas des diagrammes électroniques, ils cachent une partie de la complexité réelle des circuits.) Dans un tel diagramme logique, la porte **ET** est représentée ainsi:
 
 ```{logic}
 :height: 60
@@ -77,6 +46,22 @@ Cliquez sur les entrées $X$ et $Y$ pour changer leurs valeurs et observez le co
   "wires": [[3, 0], [4, 1], [2, 5]]
 }
 ```
+
+````{dropdown} Pour aller plus loin
+Comment une porte **ET** est-elle elle-même construite? Nous l'avons déjà mentionné: avec d'autres composants électroniques plus simples. En simplifiant un peu, on peut considérer qu'une porte **ET** est constituée de deux transistors:
+
+```{figure} media/andgatetransistor.png
+---
+height: 300px
+width: 200px
+---
+Construction d'une porte logique **ET** à partir de deux transistors (et de résistances)
+```
+
+Ici, les deux transistors sont les composants symbolisés par un cercle. Rappelons qu'ils laissent passer du courant de haut en bas lorsqu'ils détectent un courant sur l'entrée qui vient de la droite. Ici, si **V** représente un courant continu de, disons, 5 volts, on aura donc un courant sur la sortie **Out** que si à la fois **A** et **B**, qui sont ici les entrées du circuit, sont «actives» — donc lorsque les deux transistors sont «ouverts».
+````
+
+
 
 ### Porte OU
 
@@ -135,6 +120,31 @@ Essayez l'inverseur:
 }
 ```
 
+Ensemble, les portes **ET**, **OU** et **NON** représentent les relations logiques de la {glo}`conjonction|conjonction`, la {glo}`disjonction|disjonction` et la {glo}`negation|négation`. Même si vous ne les appelez pas ainsi, vous utilisez tous les jours des relations logiques de conjonction, de disjonction et de négation.
+
+ * La **conjonction** est ainsi l'«intersection logique» de deux propositions. Si vous dites «je vais à la piscine s'*il fait beau* **ET** *que mes amis m'accompagnent*», vous utilisez la conjonction.
+ * Au contraire, si vous dites «je vais à la piscine s'*il fait beau* **OU** *que mes amis m'accompagnent*», vous utilisez la **disjonction**, qui est comme une sorte de «somme logique» de deux propositions (même si, comme noté plus haut, le «ou», dans le langage courant, est généralement exclusif, contrairement au **OU** logique, qui est inclusif).
+ * La **négation** est encore plus évidente, puisque la proposition «je ne vais pas à la piscine» est simplement la négation, ou l'inverse, de la proposition «je vais à la piscine». 
+
+```{panels}
+:column: col-lg
+Ressource complémentaire
+^^^
+Une application pour s'exercer à l'interprétation des conjonctions, disjonctions et négations logiques: [The Boolean Game](https://booleangame.com/)
+```
+
+<!-- Pour simplifier la représentation de ces relations logiques, on les exprime sous la forme de {glo}`tableverite|tables de vérité`.
+
+| $A$ | $B$ | $Q$ |
+|:-: |:-: |:-: |
+| 0   | 0   | 0   |
+| 1   | 0   | 0   |
+| 0   | 1   | 0   |
+| 1   | 1   | 1   |
+
+Dans le tableau qui précède, si on reprend notre exemple de la piscine, on pourrait dire que A représente «il fait beau», B représente «mes amies m'accompagnent», et le résultat Q est «je vais à la piscine». 1 signifie qu'une proposition est vraie, 0 qu'elle est fausse. Le tableau ci-dessus représente donc l'opération logique ET, ou {glo}`conjonction|conjonction`.  -->
+
+
 ### Combinaisons de portes
 
 Les {glo}`portelogique|portes` peuvent être connectées les unes aux autres. Voici par exemple un diagramme logique réalisant en sortie $Z$ la fonction appelée **OU-X**, qui est un «ou exclusif» et dont la sortie $Z$ vaut 1 lorsque soit $A$, soit $B$ vaut $1$, mais pas les deux en même temps:
@@ -162,7 +172,7 @@ Les {glo}`portelogique|portes` peuvent être connectées les unes aux autres. Vo
 
 Ce circuit contient une porte **OU**, deux portes **ET** et un inverseur, tous interconnectés.
 
-Discutons d'abord comment interpréter ce circuit avec papier et crayon pour vérifier s'il effectue bien un **OU-X**.
+Ce diagramme n'est pas forcément facile à lire — discutons d'abord comment l'interpréter avec papier et crayon pour vérifier s'il effectue bien un **OU-X**.
 
 
 #### Analyse d'un circuit
@@ -259,7 +269,7 @@ La table de vérité complétée de ce circuit est ainsi:
 | 0   | 1   | 1   |
 | 1   | 1   | 0   |
 
-Cette {glo}`fonction|fonction` s'appelle «ou exclusif», car pour avoir un 1 de sortie, elle exclut le cas où les deux entrées sont 1 en même temps. Elle est souvent utilisée, au point qu'on la représente en fait dans les diagrammes simplement par le dessin de cette porte, appelée **OU-X**, comme simplification du diagramme ci-dessus:
+Cette fonction s'appelle «ou exclusif», car pour avoir un 1 de sortie, elle exclut le cas où les deux entrées sont 1 en même temps. Elle est souvent utilisée, au point qu'on la représente en fait dans les diagrammes simplement par le dessin de cette porte, appelée **OU-X**, comme simplification du diagramme ci-dessus:
 
 ```{logic}
 :height: 100
@@ -535,7 +545,7 @@ C'est une porte **OU**.
 `````
 
 `````{admonition} Exercice: circuit défectueux
-Analysez ce circuit. Fonctionne-t-il correctement? Déterminez ce qui pose problème. Dites ce que fait ce circuit une fois corrigé et écrivez sa table de vérité.
+Analysez ce circuit. De quel type de portes est-il constitué? Fonctionne-t-il correctement? Déterminez ce qui pose problème. Dites ce que fait ce circuit une fois corrigé et écrivez sa table de vérité.
 
 ````{logic}
 :height: 140
@@ -557,7 +567,7 @@ Analysez ce circuit. Fonctionne-t-il correctement? Déterminez ce qui pose probl
 ````
 
 ````{dropdown} Indice
-Voici le circuit corrigé:
+Voici le circuit corrigé (il a la même apparence que le circuit de la question, mais toutes les portes fonctionnent ici correctement).
 ```{logic}
 :height: 140
 :mode: tryout

@@ -43,14 +43,14 @@ parts:
       - file: content/theme/introduction-algorithmique/activites/formulation-solutions/maitre
       - file: content/theme/introduction-algorithmique/consequences-automatisation/maitre
 
-  - file: content/theme/architecture-ordinateurs/maitre
-    sections:
-      - file: content/theme/architecture-ordinateurs/systemes-logiques/maitre
-      - file: content/theme/architecture-ordinateurs/microprocesseur/maitre
-      - file: content/theme/architecture-ordinateurs/elements-base-ordinateurs/maitre
-      - file: content/theme/architecture-ordinateurs/architecture-von-neumann/maitre
-      - file: content/theme/architecture-ordinateurs/informatique-embarquee/maitre
-      - file: content/theme/architecture-ordinateurs/histoire-informatique/maitre
+  - file: content/theme/architecture-ordinateurs/accueil/maitre
+#    sections:
+#      - file: content/theme/architecture-ordinateurs/systemes-logiques/maitre
+#      - file: content/theme/architecture-ordinateurs/microprocesseur/maitre
+#      - file: content/theme/architecture-ordinateurs/elements-base-ordinateurs/maitre
+#      - file: content/theme/architecture-ordinateurs/architecture-von-neumann/maitre
+#      - file: content/theme/architecture-ordinateurs/informatique-embarquee/maitre
+#      - file: content/theme/architecture-ordinateurs/histoire-informatique/maitre
 
 - caption: Enjeux sociaux
   numbered: false

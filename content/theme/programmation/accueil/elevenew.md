@@ -6,7 +6,7 @@ Notre vie moderne est imprégnée de nos interactions avec des ordinateurs. La c
  
 Malheureusement, les ordinateurs ne comprennent pas le langage humain. Les circuits électroniques qui leur permettent de manipuler une grande quantité d'information en peu de temps ne peuvent traiter que des 0 et des 1. Pour pouvoir donner des ordres à l'ordinateur, nous devons utiliser des _langages de programmation_ qui, grâce à leur syntaxe stricte et non ambiguë, peuvent à la fois être compris des humains et traités par un ordinateur.
 
-## Contenus du chapitre
+## Contenu du chapitre
 
 ```{tableofcontents}
 ```
@@ -28,7 +28,7 @@ Malheureusement, les ordinateurs ne comprennent pas le langage humain. Les circu
 Frances Spence 🇺🇸
 ^^^^^
 * **Naissance** 2 mars 1922 
-* **Déces** 18 mars 2012
+* **Décès** 18 mars 2012
 
 [**Frances Spence**](https://fr.wikipedia.org/wiki/Frances_Spence) Frances V. Spence est l'une des programmeuses de l'ENIAC, l'un des premiers ordinateurs de l'histoire. Elle est considérée comme l'une des pionnières de la programmation informatique.
 

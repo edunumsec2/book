@@ -27,7 +27,7 @@ Alan Turing
 ```{dropdown} Bio
 :animate: fade-in-slide-down
 Pendant la Seconde Guerre mondiale, [**Alan Mattison Turing**](https://fr.wikipedia.org/wiki/Alan_Turing Alan Turing) travaille pour les services secrets de l'armée anglaise, en cryptographie. Il est chargé déchiffrer les messages allemands chiffrés avec la machine enigma.
-Dans un article de 1936, Alan Turing présente une "machine à programme enregistré dans laquelle le programme et les données ont une égale importance" (Gérard Berry).
+Dans un article de 1936, Alan Turing présente une «machine à programme enregistré dans laquelle le programme et les données ont une égale importance» (Gérard Berry).
 ```
 
 ````
@@ -81,7 +81,7 @@ name: architecture
 Architecture de von Neumann.
 ```
 
-On trouve dans le schémas de la figure {numref}`architecture` les éléments suivants :
+On trouve dans le schémas de la figure {numref}`architecture` les éléments suivants:
 
 **L'ALU ou ULA, c'est-à-dire l'unité logique et arithmétique**
 

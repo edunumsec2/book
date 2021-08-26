@@ -8,7 +8,7 @@ Pourtant, il faut avoir conscience qu’aussi “réelles” que ces représenta
 
 Dans cette section, nous allons comprendre comment les ordinateurs parviennent à représenter le monde et les sacrifices qui doivent être faits pour simplifier le réel jusqu’à ce que sa représentation puisse être manipulée automatiquement au moyen de calculs élémentaires.
 
-## Contenus du chapitre
+## Contenu du chapitre
 
 ```{tableofcontents}
 ```
