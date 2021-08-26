@@ -3,7 +3,7 @@ Les biens communs immatériels, également appelés biens communs de la connaiss
 capitalismedesurveillance,1,Capitalisme de surveillance,"Notion développée par la chercheuse Shoshana Zuboff. Selon elle, il s'agit nouvelle forme de capitalisme qui repose sur la surveillance des individus, notamment au travers de la collecte de leurs traces numériques, et qui vise à orienter leur comportements dans le but de générer des revenus. Le modèle économique de Google s'inscrit dans cette",Wikipédia - définition adaptée
 cookie,1,Cookie,"Petit fichier installé sur le disque dur lors de la consultation d'un site web, qui permet au serveur de mémoriser des informations sur l'internaute et son comportement. Les cookies ont de multiples usages : ils peuvent servir à mémoriser un identifiant client auprès d'un site marchand, le contenu courant de votre panier d'achat, la langue d’affichage de la page web, un identifiant permettant de tracer votre navigation à des fins statistiques ou publicitaires, etc.",Le Robert + CNIL
 crowdsourcing,1,Crowdsourcing,"Le crowdsourcing est l'utilisation du travail, de la créativité, de l'intelligence et du savoir-faire d'un grand nombre de personnes, en sous-traitance, pour réaliser certaines tâches traditionnellement effectuées par un employé ou un entrepreneur. ",Wikipédia
-digitallabor,1,Digital labour,"Notion apparue à la fin des années 2000 qui désigne un ensemble d'activités effectuées via des plateformes numériques et qui permettent à celles-ci de générer de la valeur. Le sociologue Antonio Casilli distingue 3 formes de digital labour: 1) Le travail à la demande, soit les ""petits boulots"" des plateformes (chauffeur, livreur, etc.); 2) le micro-travail réalisé sur les plateformes ; 3) le travail effectué par les internautes. 
+digitallabor,1,Digital labour,"Notion apparue à la fin des années 2000 qui désigne un ensemble d'activités effectuées via des plateformes numériques et qui permettent à celles-ci de générer de la valeur. Le sociologue Antonio Casilli distingue 3 formes de digital labour: 1) Le travail à la demande, soit les ""petits boulots"" des plateformes (chauffeur, livreur, etc.); 2) le micro-travail réalisé sur les plateformes ; 3) le travail effectué par les internautes.
 
 Il peut s'agir de petites tâches faiblement rémunérées, comme en propose la plateforme Amazon Mechanical Turk, voire pas rémunérée du tout, si elle s'effectuent dans un contexte de loisirs (réseaux sociaux, etc.). ",Antonio Casilli
 economieechelle,1,Economie d'échelle,"Une économie d'échelle correspond à la diminution du coût de réalisation d'un produit obtenue après l'augmentation de la production de ce produit. Plus un produit est fabriqué, moins son coût unitaire est grand.",linternaute.fr
@@ -24,7 +24,7 @@ femtech,1,Femtech,"Contraction des mots female et technology, le terme femtech d
 wikipedia,1,Wikipédia,,
 biencommun,1,Bien commun,,
 intelligencecollective,1,Intelligence collective,,
-ordinateur,1,Ordinateur,Archiordi,
+ordinateur,1,Ordinateur,Machine capable de traiter automatiquement de l’information,
 numerisation,1,Numérisation,Repinfo,
 stockage,1,Stockage,Repinfo,
 transmission,1,Transmission,Repinfo,
@@ -63,9 +63,9 @@ bouclewhile,1,Boucle tant que,Algo,
 constante,1,Constante,Algo,
 heuristique,1,Heuristique,Algo,
 variable,1,Variable,Prog,
-fonction,1,Fonction,Prog,
-fonctionrec,1,Fonction récursive,Prog,
-programme,1,Programme,Prog,
+fonction,1,Fonction,Sous-programme pouvant être appelé à l’intérieur d’un programme et pouvant avour des entrées et des sorties.,
+fonctionrec,1,Fonction récursive,Fonction qui s’appelle elle-même.,
+programme,1,Programme,Séquence d’instructions (dans un langage de programmation) pouvant être exécutée par un ordinateur.,
 recursivite,1,Récursivité,Algo,
 incrementation,1,Incrémentation,Prog,
 bit,1,Bit,Repinfo,
@@ -75,14 +75,14 @@ circuitelectronique,1,Circuit électronique,Archiordi,
 resistance,1,Résistance,Archiordi,
 condensateur,1,Condensateur,Archiordi,
 tension,1,Tension,Archiordi,
-algorithmique,1,Algorithme,Algo,
-data,1,Données,Repinfo,
-input,1,Entrées,Algo,
-output,1,Sorties,Algo,
-iteration,1,Itération,Prog,
-parametre,1,Paramètre,Prog,
-argument,1,Argument,Prog (programmation),
-programmation,1,Programmation,Prog,
+algorithmique,1,Algorithme,Séquence d’opérations permettant d’obtenir un résultat en fonction d’informations données en entrée.,
+data,1,Données,Informations enregistrées,
+input,1,Entrées,Informations fournies à un algorithme ou un (sous-) programme.,
+output,1,Sorties,Informations fournies en résultat par un algorithme ou un (sous-) programme.,
+iteration,1,Itération,Répétition d’opérations.,
+parametre,1,Paramètre,Variable par laquelle une entrée est fournie à un (sous-) programme.,
+argument,1,Argument,Valeur donnée à un paramètre.,
+programmation,1,Programmation,Activité consistant à spécifier à un ordinateur ce qu’il doit faire à l’aide d’un langage précis (langage de programmation). ,
 pixel,1,Pixel,Repinfo,
 resolution,1,Résolution,Repinfo,
 matrice,1,Matrice,Repinfo,
