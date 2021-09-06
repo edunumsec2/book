@@ -216,6 +216,6 @@ d ) Pourriez-vous citer des situations lors desquelles nous entraînons les algo
   * Toutes nos activités sur les réseaux sociaux : commentaires, *likes*, partage d'images, clic sur un lien ou parcours du fil d'actualité permettent d'entraîner des algorithmes qui ont pour but de nous suggérer un contenu ciblé.
   * Effectuer une requête sur un moteur de recherche.
   * Identifier des objets sur des images pour valider un formulaire. Par exemple, il est souvent demandés aux internautes de reconnaître des objets liés au trafic routier (passage piétons, motos, vélos, etc.). Ces informations servent à entrainer les systèmes de conduite automatisée.
-  * Compléter un CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart), ce test qui consiste à reconnaître des images ou des sons (plus généralemement des lettres)s et qui permet  de différencier un utilisateur humain d’un robot.
+  * Compléter un CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart), ce test qui consiste à reconnaître des images ou des sons (plus généralemement des lettres) et qui permet  de différencier un utilisateur humain d’un robot.
   * Enfin, toute trace laissée par nos activités numériques peut être captée et analysée dans le but d'entrainer des algorithmes.
    ````
