@@ -103,7 +103,7 @@ Base 10
 ```
 ````
 
-La forme canonique de 3528 est : $3 \cdot 10^3 + 5 \cdot 10^2 + 2 \cdot 10^1 + 8 \cdot 10^0$.
+La forme canonique de 3528 est : $3.10^3 + 5.10^2 + 2.10^1 + 8.10^0$.
 
 En binaire c’est la même chose sauf qu’il n’y a que 2 chiffres qui composent la base, le 0 et le 1.
 
@@ -148,7 +148,7 @@ Base 2
 
 [^0]: Les noms sont au singulier car il ne peut pas y en avoir plus que 1 par niveau...
 
-La forme canonique du nombre binaire $10101_{(2)}$ est : $1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0$
+La forme canonique du nombre binaire $10101_{(2)}$ est : $1.2^4 + 0.2^3 + 1.2^2 + 0.2^1 + 1.2^0$
 
 ````{panels}
 :column: col-md
