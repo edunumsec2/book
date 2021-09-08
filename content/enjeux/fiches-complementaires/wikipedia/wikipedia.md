@@ -195,34 +195,55 @@ Pour les sensibiliser au processus d’élaboration d’une entrée Wikipédia d
 
 Il s’agit de l’historique des discussions qui ont conduit, par étapes, à la constitution de la version la plus actuelle.
 
-On peut ensuite proposer d’analyser plus en détail la discussion d’un article (potentiellement sujet à controverse). Par exemple, l’article «Adolf Hitler» :
+On peut ensuite proposer d’analyser plus en détail la discussion d’un article controversé, par exemple la page «Objet volant non identifié» :
 
-1. Aller sur l’onglet [«Discussion»](https://fr.wikipedia.org/wiki/Discussion:Adolf_Hitler) (en haut à gauche) de la page consacrée à Adolf Hitler
-2. Choisir les [Archives 1](https://fr.wikipedia.org/wiki/Discussion:Adolf_Hitler/Archives_1) (dans l’encadré à droite)
-3. Dans le sommaire de cette page, cliquer sur «2.7 Neutralisation de certains termes» 
-4. Lire le commentaire de Jojosan, puis la réponse de Goliadkine
+1. Depuis cet article, aller sur l'onglet «[Discussion](https://fr.wikipedia.org/wiki/Discussion:Objet_volant_non_identifié)», en haut à gauche de la page.
+2. Au bas de l'encadré «Archives», cliquer sur «[Années 2011-2013](https://fr.wikipedia.org/wiki/Discussion:Objet_volant_non_identifié/Archive_5)».
+3. Répondre aux questions suivantes:
 
-Poser ensuite la questions suivantes :
 
-a) Quels enjeux soulèvent ce passage à propos de l’utilisation du mot «Shoah» ? 
+a) Dresser la liste de tous les contributeurs ayant participé à la discussion «Années 2011-2013». Que nous indique cette liste concernant le fonctionnement de Wikipédia?
 
-Discutez du débat en termes de : 
+b) Parcourir la première discussion «Ovnis avant 1947». Quel sujet divise les deux utilisateurs? Quel est leur point de vue respectif?
 
-- opinion vs information 
-- sources convoquées
+c) Dans le premier paragraphe, *Titi2* oppose deux types de sources, lesquelles?
+
+d) Selon *Titi2*, quelles sources peuvent être utilisées afin de vérifier des propos et donc de respecter la neutralité de point de vue?
+
+e) Selon *Titi2*, présenter les faits comme voudrait le faire *Elnon* va à l'encontre des règles de bases de publication sur Wikipédia. Quelle règle mentionne-t-il précisément?
+
+f) Quelles solutions propose *Titi2* pour maintenir les contenus proposés par *Elnon*?
+
+
 
  ````{dropdown} Élements de réponses
-* D’une part, l’anonymat dont bénéficie les contributeurs et contributrices ne nous renseigne pas sur leur intentionnalité. Dans quel but remplacer un mot, surtout un mot aussi important et chargé de signification que «Shoah» ? Les intentions de Jojosan sont-elles de défendre une cause en particulier (celle des homosexuels, des tziganes ou des Témoins de Jéhovah ? ou souhaitent-elles écarter la stricte cause juive, non par souci de précision mais par esprit révisionniste mal intentionné (raciste ou complotiste) ? Gardons à l’esprit que la fonction de ces pages «Discussion» des articles Wikipédia est de préciser des termes et des notions plutôt que de faire passer des idées.
 
-* D’autre part, avancer que l’utilisation du mot «Shoah» dans ce contexte serait «judéocentré» relève-t-il d’une information neutre ou d’une opinion? Les réponses de Goliadkine expliquent pourquoi le mot «Shoah» a été maintenu par la communauté de contributeurs. Cependant, on pourrait argumenter que les explications avancées pour justifier ce choix correspondent également à une opinion (la réponse 6 en particulier).
+a)	*Titi2/ Elnon/ Konstantinos/ 85.26.91.44/ 95.182.223.243/ Kasos fr/ 82.123.40.153/ 92.103.180.98/ 78.113.173.241*
 
-* Enfin, quelle source est-elle utilisée pour définir le mot «Shoah» ? Quel dictionnaire devrait-on utiliser ? Devrait-on remplacer par ce mot par celui d’«holocauste» ?
+Premièrement, on remarque que les signatures sont soit des pseudonymes, soit des adresses IP. Les contributeurs de Wikipédia ont deux options d’identification: Le pseudonyme, dans le cas où l’utilisateur possède un compte sur la plateforme. L’adresse IP, qui permet de modifier ou discuter d’un article sans être connecté à un compte. 
+Deuxièmement, le nombre de contributeurs (9), montre que Wikiépdia est une plateforme collaborative où chacun peut prendre part à une discussion et participer à la rédaction d'un article. 
 
-* On remarque qu’il est difficile - mais cependant bien utile - de trouver un consensus sur une entrée ou ne serait-ce qu’une expression. L’élaboration collective d’un article Wikipédia prend du temps et nécessite des compromis. Plus le nombre de points de vue différents est élevé, plus il permet d’appréhender le réel au plus près.
+b) *Elnon* souhaite faire figurer des éléments antérieurs à 1947, directement sur la page Ovni. *Titi2* estime que cette manière de faire est contraire aux règles d’utilisation, car le contenu n’est pas vérifiable. *Elnon* défend la présence de contenu non-vérifiable en expliquant que les faits alternatifs sont clairement présentés comme tels sur la page Ovni. Selon lui, enlever le contenu controversé aurait pour conséquence d’appauvrir la page. 
+
+c) Les ouvrages à sensation sont opposés aux revues historiques ou sociologiques. 
+
+d)	Les revues historiques ou sociologiques. Il cite également plus bas les livres d’histoire et les journaux d’époque. 
+
+e)	*Titi2* indique que les contributeurs sont responsables de vérifier que les événements historiques qu’ils citent ont bien eu lieu. Il estime que les éléments non-factuels ne respecte pas les « prescrits encyclopédiques ». Il fait référence à l’un des principes fondateurs de la plateforme : « [Wikipédia est une encyclopédie](https://fr.wikipedia.org/wiki/Wikipédia:Wikipédia_est_une_encyclopédie) »
+
+f) Il propose de faire figurer le contenu sur une page alternative, qui indiquerait clairement que les faits ne sont pas vérifiés. C’est finalement la solution qui semble avoir été privilégiée car le contenu concernant les Ovnis avant 1947 apparait sur la page «néo-évhémérisme», devenue «[Théorie des anciens astronautes](https://fr.wikipedia.org/wiki/Théorie_des_anciens_astronautes)», clairement définie comme une « spéculation pseudo-scientifique ».
+
+Remarque générale pour terminer cet exercice: 
+
+Le choix d’un article particulièrement controversé est volontaire. Il permet d’illustrer comment les utilisateurs interagissent lorsqu’ils ne sont pas d’accord. Cet article est un exemple de « [guerre d’édition](https://fr.wikipedia.org/wiki/Wikipédia:Guerre_d%27édition) ». On constate néanmoins que, malgré une certaine tension entre les contributeurs, les échanges restent en lien direct avec le sujet et qu’une forme de consensus semble être atteint en fin de discussion. 
+
+
+
+
 ```` 
 
 
-b) En guise de conclusion, demander aux élèves quels de lister quelques avantages et limites du modèle Wikipédia.
+En guise de conclusion, demander aux élèves quels de lister quelques avantages et limites du modèle Wikipédia.
 
 
 **Avantages**
