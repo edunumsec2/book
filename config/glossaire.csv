@@ -55,8 +55,7 @@ circuit,1,Circuit,Archiordi,
 memvolatile,1,Mémoire volatile,Archiordi,
 memnonvolatile,1,Mémoire non volatile,Archiordi,
 verrou,1,Verrou,Archiordi,
-algo,1,Algorithme,Algo,
-efficacite,1,Efficacité algorithmique,Algo,
+efficacite,1,Efficacité algorithmique,L'efficacité d'un algorithme est son aptitude à utiliser de manière optimale (au mieux) les ressources du matériel qui l'exécute (espace mémoire, nombre d'instructions de base mises en oeuvre), parfois on mesure le temps de calcul (qui est le résultat de l'utilisation des ressources physiques).,
 implementation,1,Implémentation,Algo,
 instruction,1,Instructions, Une instruction dicte au processeur l'action à effectuer avant de passer à l'instruction suivante.,
 bouclewhile,1,Boucle tant que,Algo,
@@ -85,7 +84,7 @@ parametre,1,Paramètre,Variable par laquelle une entrée est fournie à un (sous
 argument,1,Argument,Un argument est une valeur donnée en entrée d'une fonction pour être traitée. En Python, il est possible de nommer les arguments par des variables : def f(a=1).,
 programmation,1,Programmation,Activité consistant à spécifier à un ordinateur ce qu’il doit faire à l’aide d’un langage précis (langage de programmation). ,
 pixel,1,Pixel,Le pixel est le plus petit élément composant une image numérique définie par sa couleur et sa luminosité. Unité de surface, son nombre permet de définir la résolution d'un écran ou d'une image.
-resolution,1,Résolution,La résolution d'une image est le nombre de pixels qu'elle contient. Si vous trouvez une mesure associée à "PPP" ou "DPI" (ex. 300dpi), c'est le nombre de pixels pour un pouce carré (un pouce valant 2.54cm), soit 90 000pixels pour une surface carrée de 2,54 cm de coté.
+resolution,1,Résolution,La résolution d'une image est le nombre de pixels qu'elle contient. Si vous trouvez une mesure associée à "PPP" ou "DPI" (ex. 300dpi), c'est le nombre de pixels pour un pouce carré (un pouce valant 2.54cm), soit pour notre exemple de 300dpi, 90 000 pixels pour une surface carrée de 2,54 cm de coté.
 matrice,1,Matrice, Une matrice est un tableau d'éléments (une donnée :nombres ou caractères) généralement à 2 dimensions. Une table de multiplication est une matrice, une image numérique aussi.,
 luminance,1,Luminance,Repinfo,
 synthsoustractive,1,Synthèse soustractive,Repinfo,
