@@ -93,4 +93,4 @@ synthadditive,1,Synthèse additive,Repinfo,
 informatique,1,informatique,L'informatique est la science du traitement automatique de l'information.
 Byte,1,byte, Un byte ou octet est une unité d'information composée de 8 bits. ex: 00110100
 codesource,1,code source, Un code source est un code en langage de programmation qui sera, en fonction de son type (Python, Prolog, C, Ada ..) soit compilé &/ou interprété ou exécuté pour obtenir un résultat.
-langageinterprete,1,langage interprété, Un langage interprété est une suite d'instructions (code source) lues et analysées par un interprète (ou interpréteur). L'interprète, lit et analyse une instruction, si elle est correcte, l'exécute et passe à l'instruction suivante.
+langageinterprete,1,langage interprété, Un langage interprété est une suite d'instructions (code source) lues et analysées par un programme : l'interpréteur. L'interpréteur, lit et analyse une instruction et, si elle est correcte, l'exécute et passe à l'instruction suivante.
