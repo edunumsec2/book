@@ -587,6 +587,23 @@ Voici le circuit corrigé (il a la même apparence que le circuit de la question
 }
 ```
 ````
+
+````{dropdown} Corrigé
+Ce circuit est constituté de deux portes **ET**. Mais la porte **ET** de droite semble poser problème, parce qu'elle se comporte comme une porte **OU**! Le circuit montré dans l'indice se comporte correctement.
+
+Ce circuit, une fois corrigé, implémente en fait un **ET** à trois entrée $X$, $Y$ et $W$, où la sortie $Z$ ne vaut 1 que si les trois entrées valent 1. Sa table de vérité, à huit lignes dues aux trois entrées, est ainsi la suivante:
+
+| $X$ | $Y$ | $W$ | $Z$ |
+| :-: | :-: | :-: | :-: |
+| 0   | 0   | 0   | 0   |
+| 0   | 0   | 1   | 0   |
+| 0   | 1   | 0   | 0   |
+| 0   | 1   | 1   | 0   |
+| 1   | 0   | 0   | 0   |
+| 1   | 0   | 1   | 0   |
+| 1   | 1   | 0   | 0   |
+| 1   | 1   | 1   | 1   |
+````
 `````
 
 
