@@ -1,8 +1,8 @@
 # De la logique à l'arithmétique
 
-Nous avons découvert quelques {glo}`portelogique|portes logiques` ainsi que la possibilité que nous avons de les connecter pour en faire des circuits logiques plus complexes. Ces {glo}`portelogique|portes logiques` vont maintenant nous permettre de réaliser notre petit additionneur, annoncé en début de chapitre précédent.
+Nous avons découvert quelques {glo}`portelogique|portes logiques` ainsi que la possibilité que nous avons de les connecter pour en faire des circuits logiques plus complexes. Ces {glo}`portelogique|portes logiques` vont maintenant nous permettre de réaliser l'additionneur annoncé en début de chapitre précédent.
 
-Nous avons déjà dit que nous avions deux {glo}`bit|bits` de sorties à calculer pour notre sortie $S = A + B$. Disons donc que $S$ est donc constitué de $S_0$, le {glo}`bit|bit` des unités, et de $S_1$, le {glo}`bit|bit` représentant la valeur décimale 2. Rappelons ici la {glo}`tableverite|table de vérité` pour $S_0$, tirée directement du chapitre précédent:
+Nous avons déjà dit que nous avions deux {glo}`bit|bits` de sortie à calculer pour notre sortie $S = A + B$. Disons donc que $S$ est donc constitué de $S_0$, le {glo}`bit|bit` des unités, et de $S_1$, le {glo}`bit|bit` représentant la valeur décimale 2. Rappelons ici la {glo}`tableverite|table de vérité` pour $S_0$, tirée directement du chapitre précédent:
 
 | $A$ | $B$ |$S_0$|
 | :-: | :-: | :-: |
@@ -22,7 +22,7 @@ La table de vérité pour $S_1$ est:
 | 0   | 1   | 0   |
 | 1   | 1   | 1   |
 
-Et on constate que $S_1$ n'est autre qu'un **ET** logique de $A$ et $B$. Ainsi, on peut dessiner notre petit additionneur de deux {glo}`bit|bits` ainsi:
+Et on constate que $S_1$ n'est autre qu'un **ET** logique de $A$ et $B$. Ainsi, on peut dessiner l'additionneur de deux {glo}`bit|bits` ainsi:
 
 ```{logic}
 :height: 140
@@ -46,22 +46,22 @@ Et on constate que $S_1$ n'est autre qu'un **ET** logique de $A$ et $B$. Ainsi, 
 ```
 
 ````{admonition} Exercice
-Vérifiez que ce circuit livre bien les bonnes valeurs de sorties qui correspondent aux tables de vérité ci-dessous. Combien de combinaisons différentes devrez-vous tester?
+Vérifiez que ce circuit livre bien les bonnes valeurs de sortie qui correspondent aux tables de vérité ci-dessous. Combien de combinaisons différentes devrez-vous tester?
 ```{dropdown} Corrigé
 Le circuit fonctionne correctement. Il faut tester les quatre combinaisons qui apparaissent dans les tables de vérité.
 ```
 ````
 
-Ce circuit est spécialement intéressant en montrant comment des opérateurs logiques sont utilisés pour réaliser l'opération arithmétique de l'addition. Notre additionneur est limité: en fait, on l'appelle un _demi-additionneur_. Il n'est capable d'additionner que deux nombres à 1 {glo}`bit|bit` — c'est très limité. En fait, il serait intéressant d'avoir un additionneur de _trois_ nombres à un {glo}`bit|bit`. Pourquoi? À cause de la manière dont nous faisons les additions en colonnes.
+Ce circuit est spécialement intéressant, car il montre qu'il est possible d'utiliser des opérateurs logiques pour réaliser l'opération arithmétique de l'addition. Notre additionneur est limité: en fait, on l'appelle un _demi-additionneur_. Il n'est capable d'additionner que deux nombres à 1 {glo}`bit|bit` — c'est très limité. En fait, il serait intéressant d'avoir un additionneur de _trois_ nombres à un {glo}`bit|bit`. Pourquoi? À cause de la manière dont nous faisons les additions en colonnes.
 
 Lorsque nous faisons une addition de deux nombres à plusieurs chiffres, que ce soit en base 10 ou en base 2, on commence par la colonne de droite, les unités. Nous connaissons le concept de _retenue_: en base 10, si l'addition des unités dépasse 9, on retient 1 dans la colonne des dizaines. En base 2, de façon similaire, si l'addition des unités dépasse… 1, on retient 1 dans la colonne suivante à gauche. C'est ce qu'on a fait avec le demi-additionneur: on peut considérer que la sortie $S_0$ représente la colonne des unités dans la somme, et la sortie $S_1$ représente la retenue à prendre en compte dans la colonne suivante.
 
-C'est ici que ça se complique: pour additionner les chiffres de la deuxième colonne, nous devons potentiellement additionner _trois_ chiffres, et plus seulement deux. Nous avons donc, en entrées, les deux {glo}`bit|bits` $A$ et $B$ qui viennent des nombres à additioner, et aussi potentiellement cette retenue qui nous vient de la colonne des unités, qu'on appellera $C_{in}$ (pour _carry_, «retenue» en anglais). Ceci est vrai en base 2 comme en base 10. Il nous faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s'appelle _additionneur complet_ et livrera deux sorties: le {glo}`bit|bit` de somme, que nous appelerons simplement $S$, et la retenue à reporter pour la colonne suivante, que nous appellerons $C_{out}$.
+C'est ici que ça se complique: pour additionner les chiffres de la deuxième colonne, nous devons potentiellement additionner _trois_ chiffres, et plus seulement deux. Nous avons donc, en entrée, les deux {glo}`bit|bits` $A$ et $B$ qui viennent des nombres à additioner, et aussi potentiellement cette retenue qui nous vient de la colonne des unités, qu'on appellera $C_{in}$ (pour _carry_, «retenue» en anglais). Ceci est vrai en base 2 comme en base 10. Il nous faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s'appelle _additionneur complet_ et livrera deux sorties: le {glo}`bit|bit` de somme, que nous appelerons simplement $S$, et la retenue à reporter pour la colonne suivante, que nous appellerons $C_{out}$.
 
 
 ````{admonition} Exercice: Bases de l'additionneur complet
 
- * Déterminez combien de combinaisons différentes sont possibles pour trois signaux d'entrées $A$, $B$ et $C_{in}$ qui chacun peuvent valoir soit $1$ soit $0$.
+ * Déterminez combien de combinaisons différentes sont possibles pour trois signaux d'entrée $A$, $B$ et $C_{in}$ qui chacun peuvent valoir soit $1$ soit $0$.
  * Listez toutes ces combinaisons.
  * Pour chaque combinaison, déterminez la valeur binaire qui est la somme des 3 signaux d'entrée.
  * Finalement, avec les informations ainsi obtenues, complétez la table de vérité d'un additionneur complet qui a deux sorties $S$ et $C_{out}$
@@ -131,7 +131,19 @@ Si $A$ est formé de deux {glo}`bit|bits` $A_0$ et $A_1$ et que $B$ est formé d
 }
 ```
 
-L'additionneur du haut, comme précédemment, additionne les deux {glo}`bit|bits` des unités: $A_0$ et $B_0$. Son entrée $C_{in}$, qui représente l'éventuelle troisième chiffre à additionner issu d'une retenue, n'est pas connectée et est toujours 0, vu qu'il n'y a aucune colonne précédente dans l'addition qui aurait pu en livrer une. Il livre comme première sortie $S_0$, le chiffre des unités, et sa seconde sortie $C_{out}$ est la retenue à utiliser pour l'addition des chiffres suivants. C'est pourquoi elle est connectée à l'entrée de la retenue du second additionneur $C_{in}$, qui va lui ajouter également les deux {glo}`bit|bits` de la colonne suivante, $A_1$ et $B_1$. Les sorties du second additionneur livrent le deuxième {glo}`bit|bit` $S_1$ de la valeur de sortie, ainsi que la retenue pour la troisième colonne. Comme il n'y a plus de {glo}`bit|bits` d'entrée pour la troisième colonne, cette retenue peut directement être considérée comme le troisième {glo}`bit|bit` de sortie $S_2$.
+L'additionneur du haut, comme précédemment, additionne les deux {glo}`bit|bits` des unités: $A_0$ et $B_0$. Son entrée $C_{in}$, qui représente l'éventuel troisième chiffre à additionner issu d'une retenue, n'est pas connectée et est toujours 0, vu qu'il n'y a aucune colonne précédente dans l'addition qui aurait pu en livrer une. Il livre comme première sortie $S_0$, le chiffre des unités, et sa seconde sortie $C_{out}$ est la retenue à utiliser pour l'addition des chiffres suivants. C'est pourquoi elle est connectée à l'entrée de la retenue du second additionneur $C_{in}$, qui va lui ajouter également les deux {glo}`bit|bits` de la colonne suivante, $A_1$ et $B_1$. Les sorties du second additionneur livrent le deuxième {glo}`bit|bit` $S_1$ de la valeur de sortie, ainsi que la retenue pour la troisième colonne. Comme il n'y a plus de {glo}`bit|bits` d'entrée pour la troisième colonne, cette retenue peut directement être considérée comme le troisième {glo}`bit|bit` de sortie $S_2$.
+
+````{admonition} Exercice: Limite de cet additionneur à 2 bits
+Avec l'additionneur ci-dessus, est-il possible d'obtenir des $1$ sur toutes les sorties, donc d'avoir $S_2 = S_1 = S_0 = 1$?
+
+```{dropdown} Indice
+Déterminez quel est le nombre décimal qui serait représenté par $S_2 = S_1 = S_0 = 1$: $111_{(2)} =\;???_{(10)}$  Ensuite, déterminez les nombres maximums représentables sur les deux fois 2 bits d'entrée et tirez-en une conclusion.
+```
+
+```{dropdown} Corrigé
+La configuration $S_2 = S_1 = S_0 = 1$ représente le nombre décimal $7$. Ce serait le résultat de notre addition. Il faudrait ainsi chercher une configuration des bits d'entrées qui, une fois additionnés, donnent $7$. Mais ceci n'est pas possible, car sur chacune des entrées $(A_1, A_0)$ et $(B_1, B_0)$, la plus grande valeur représentable est $11_{(2)}$, autrement dit $3_{(10)}$ — et c'est impossible d'atteindre $7$ en évaluant au maximum $3+3$.
+```
+````
 
 
 ````{admonition} Exercice: Additionneur de demi-octets
@@ -216,7 +228,7 @@ Cet exercice démontre l'opportunité de penser en termes {glo}`modulo|modulaire
 
 ````{admonition} Exercice: Overflow
 
-Le schéma ci-dessous montre le même additionneur de demi-octets de l'exercice précédent, mais en plus, la valeur en base 10 de ses 4 bits d'entrées pour $A$ et pour $B$ est affichée avec un module d'affichage spécial à droite. La même chose est faite pour représenter la valeur $S = A + B$ (mais seulement sur les 4 premiers bits de $S$). Actuellement, le circuit effectue le calcul $0 + 0 = 0$.
+Le schéma ci-dessous montre le même additionneur de demi-octets de l'exercice précédent, mais en plus, la valeur en base 10 de ses 4 bits d'entrée pour $A$ et pour $B$ est affichée avec un module d'affichage spécial à droite. La même chose est faite pour représenter la valeur $S = A + B$ (mais seulement sur les 4 premiers bits de $S$). Actuellement, le circuit effectue le calcul $0 + 0 = 0$.
 
 Réglez les entrées du circuit de manière à lui faire effectuer les additions suivantes, et vérifiez le résultat. Dans quelles circonstances est-il correct et pourquoi est-il de temps en temps incorrect? Comment, en regard de ceci, interpréter le bit de sortie $S_4$, qui est la retenue de l'additionneur de gauche?
    1. $1 + 0$
@@ -294,7 +306,7 @@ Réglez les entrées du circuit de manière à lui faire effectuer les additions
 ```
 
 ```{dropdown} Corrigé
-Dès que la somme dépasse 15, elle n'est plus représentable sur les 4 bits qui sont affichés sur la sortie. La plupart des ordinateurs et smartphones actuels représentent les nombres non pas sur 4 bits, mais sur 64. Mais même avec 64 bits, il y a un nombre maximal que l'on peut représenter (en l'occurrence, $2^{64} - 1 = 18\,446\,744\,073\,709\,551\,615$.) La retenue du dernier additionneur s'appelle le bit de dépassement (_overflow_ en anglais). Il est à 1 lorsque le résultat de l'addition n'est pas correctement représenté avec les 4 (ou 64) bits de sortie. Dans les processeurs, il porte souvent le nom de $V$ (deuxième lettre d'_oVerflow_). Nous allons dorénavant aussi utiliser ce nom.
+Dès que la somme dépasse 15, elle n'est plus représentable sur les 4 bits qui sont affichés sur la sortie. La plupart des ordinateurs et smartphones actuels représentent les nombres non pas sur 4 bits, mais sur 64. Mais même avec 64 bits, il y a un nombre maximal que l'on peut représenter (en l'occurrence, $2^{64} - 1 = 18\,446\,744\,073\,709\,551\,615$.) La retenue du dernier additionneur s'appelle le bit de dépassement (_overflow_ en anglais). Il vaut 1 lorsque le résultat de l'addition n'est pas correctement représenté avec les 4 (ou 64) bits de sortie. Dans les processeurs, il porte souvent le nom de $V$ (deuxième lettre d'_oVerflow_). Nous allons dorénavant aussi utiliser ce nom.
 ```
 ````
 
@@ -384,17 +396,17 @@ La retenue sortant du deuxième additionneur depuis la droite est bloquée à 0 
 
 ````{admonition} Exercice: Design d'un additionneur complet
 
-_**Note:** Exercice difficile et actuellement peu guidé ici; opportunité discutable._
+_**Note:** Exercice difficile et actuellement peu guidé ici; prochainement complété par davantage d'indications._
 
 En s'aidant de la table de vérité d'un seul additionneur complet, créer un circuit logique qui calcule ses sorties $S$ et $C_{out}$ en fonction des entrées $A$, $B$ et $C_{in}$.
 
 ```{dropdown} Indice
- * La sortie $S$ doit être $1$ soit lorsque les trois entrées valent $1$, soit lors qu'une seule des trois entrée vaut $1$.
- * La sortie $C_{out}$, qui est la retenue, doit être $1$ lorsque deux ou trois des trois entrées sont à $1$.
+ * La sortie $S$ doit être $1$ soit lorsque les trois entrées valent $1$, soit lorsqu'une seule des trois entrée vaut $1$.
+ * La sortie $C_{out}$, qui est la retenue, doit être $1$ lorsque deux ou trois des trois entrées valent $1$.
 ```
 
 ```{dropdown} Corrigé
 TODO
-% ![](media/full_adder.svg)
+<!-- ![](media/full_adder.svg) -->
 ```
 ````
