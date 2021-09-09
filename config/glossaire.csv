@@ -58,7 +58,7 @@ verrou,1,Verrou,Archiordi,
 algo,1,Algorithme,Algo,
 efficacite,1,Efficacité algorithmique,Algo,
 implementation,1,Implémentation,Algo,
-instruction,1,Instructions, Une instruction dicte au processeur l'action à effectuer avant de passer à l'instruction suivante.,
+instruction,1,Instructions,Une instruction dicte au processeur l'action à effectuer avant de passer à l'instruction suivante.,
 bouclewhile,1,Boucle tant que,Algo,
 constante,1,Constante,Une constante est un identificateur associée à une valeur fixe - définitive durant une exécution (mais qui peut être initialisée différement d'une execution à l'autre), un peu comme une variable qui ne varie pas! ,
 heuristique,1,Heuristique,Se dit d'un algorithme qui permet de résoudre rapidement des problèmes complexes d'optimisation sans se fonder sur une modélisation formelle, ce n'est pas necessairement une solution optimale.,
@@ -76,7 +76,7 @@ resistance,1,Résistance,Archiordi,
 condensateur,1,Condensateur,Archiordi,
 tension,1,Tension,Archiordi,
 algorithme,1,Algorithme,Séquence d’opérations permettant d’obtenir un résultat en fonction d’informations données en entrée.Ou encore,un algorithme est une suite ordonnée d'instructions qui indique la démarche à suivre pour résoudre une série de problèmes équivents.,
-algorithmique,1,Algorithmique, L'algorithmique est la science des algorithmes.,
+algorithmique,1,Algorithmique,L'algorithmique est la science des algorithmes.,
 data,1,Données,Informations enregistrées,
 input,1,Entrées,Informations fournies à un algorithme ou un (sous-) programme.,
 output,1,Sorties,Informations fournies en résultat par un algorithme ou un (sous-) programme.,
@@ -86,11 +86,11 @@ argument,1,Argument,Un argument est une valeur donnée en entrée d'une fonction
 programmation,1,Programmation,Activité consistant à spécifier à un ordinateur ce qu’il doit faire à l’aide d’un langage précis (langage de programmation). ,
 pixel,1,Pixel,Le pixel est le plus petit élément composant une image numérique définie par sa couleur et sa luminosité. Unité de surface, son nombre permet de définir la résolution d'un écran ou d'une image.
 resolution,1,Résolution,La résolution d'une image est le nombre de pixels qu'elle contient. Si vous trouvez une mesure associée à "PPP" ou "DPI" (ex. 300dpi), c'est le nombre de pixels pour un pouce carré (un pouce valant 2.54cm), soit 90 000pixels pour une surface carrée de 2,54 cm de coté.
-matrice,1,Matrice, Une matrice est un tableau d'éléments (une donnée :nombres ou caractères) généralement à 2 dimensions. Une table de multiplication est une matrice, une image numérique aussi.,
+matrice,1,Matrice,Une matrice est un tableau d'éléments (une donnée :nombres ou caractères) généralement à 2 dimensions. Une table de multiplication est une matrice, une image numérique aussi.,
 luminance,1,Luminance,Repinfo,
 synthsoustractive,1,Synthèse soustractive,Repinfo,
 synthadditive,1,Synthèse additive,Repinfo,
 informatique,1,informatique,L'informatique est la science du traitement automatique de l'information.
-Byte,1,byte, Un byte ou octet est une unité d'information composée de 8 bits. ex: 00110100
-codesource,1,code source, Un code source est un code en langage de programmation qui sera, en fonction de son type (Python, Prolog, C, Ada ..) soit compilé &/ou interprété ou exécuté pour obtenir un résultat.
-langageinterprete,1,langage interprété, Un langage interprété est une suite d'instructions (code source) lues et analysées par un programme : l'interpréteur. L'interpréteur, lit et analyse une instruction et, si elle est correcte, l'exécute et passe à l'instruction suivante.
+Byte,1,byte,Un byte ou octet est une unité d'information composée de 8 bits. ex: 00110100
+codesource,1,code source,Un code source est un code en langage de programmation qui sera, en fonction de son type (Python, Prolog, C, Ada ..) soit compilé &/ou interprété ou exécuté pour obtenir un résultat.
+langageinterprete,1,langage interprété,Un langage interprété est une suite d'instructions (code source) lues et analysées par un programme : l'interpréteur. L'interpréteur, lit et analyse une instruction et, si elle est correcte, l'exécute et passe à l'instruction suivante.
