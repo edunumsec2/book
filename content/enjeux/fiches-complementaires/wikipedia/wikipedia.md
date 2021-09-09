@@ -77,11 +77,11 @@ L’idée de Jimmy Wales prend forme en mars 2000 et repose tout d’abord sur u
 
 Vingt ans après sa création, le fonctionnement de l'encyclopédie a largement fait ses preuves et Wikipédia est devenu l'un des sites les plus consultés au monde. Son modèle participatif et libre reste inchangé. Wikipédia est financé par des dons, au travers de l'organisation à but non lucratif Wikimedia Foundation. Son autorité est telle que, pour pratiquement chaque mot-clé saisi dans un moteur de recherche, l'article correspondant arrive en tête des résultats.
 
-Pourtant, le principe de création de savoir par une "foule" d'internautes[^1] non-experte était loin de faire l'unanimité. Beaucoup ne croyaient pas en cette forme d’intelligence collective et assuraient que le projet était voué à l'échec. Même au sein de Wikipédia, les points de vue divergeaient. Larry Sanger, qui déplorait l'absence d'expertise, quitta le projet lorsqu’il fut décidé de ne plus faire appel à un comité scientifique. En effet, comment garantir la justesse des contenus sans aucune forme d'autorité?
+Pourtant, le principe de création de savoir par une «foule d'internautes[^1] non-experte était loin de faire l'unanimité. Beaucoup ne croyaient pas en cette forme d’intelligence collective et assuraient que le projet était voué à l'échec. Même au sein de Wikipédia, les points de vue divergeaient. Larry Sanger, qui déplorait l'absence d'expertise, quitta le projet lorsqu’il fut décidé de ne plus faire appel à un comité scientifique. En effet, comment garantir la justesse des contenus sans aucune forme d'autorité?
 
  Une des conditions de ce succès réside dans l'établissement d'[une série de règles](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:R%C3%A8gles_et_recommandations) qui garantissent une auto-gouvernance de la communauté. Ces dernières régissent les débats autour de la rédaction des articles et permettent de trancher en cas de conflit. Par exemple, en vertu du principe de la neutralité de point de vue, les contributeurs et contributrices se garderont d’exprimer leur propre opinion, pour préférer reporter celles des autres.
  
- Cette auto-régulation des articles grâce à des règles communes a permis à Wikipédia de proposer un contenu de qualité. Ainsi, l'encyclopédie est aujourd'hui saluée pour sa gestion des *fake news*. En France, L'observatoire du conspirationnisme, Conspiracy Watch, parle même d'un ["îlot de rationalité dans un océan de rumeurs"](https://www.conspiracywatch.info/covid-19-wikipedia-fait-figure-dilot-de-rationalite-dans-un-ocean-de-rumeurs.html). 
+ Cette auto-régulation des articles grâce à des règles communes a permis à Wikipédia de proposer un contenu de qualité. Ainsi, l'encyclopédie est aujourd'hui saluée pour sa gestion des *fake news*. En France, L'observatoire du conspirationnisme, Conspiracy Watch, parle même d'un [«îlot de rationalité dans un océan de rumeurs–](https://www.conspiracywatch.info/covid-19-wikipedia-fait-figure-dilot-de-rationalite-dans-un-ocean-de-rumeurs.html). 
 
 [^1]: Cette forme de contribution est communément appelée *crowdsourcing* ou «production participative».
 
@@ -89,7 +89,7 @@ Pourtant, le principe de création de savoir par une "foule" d'internautes[^1] n
 <br>
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-<b> ‍💻 Un héritage de la culture "hacker" </b>
+<b> ‍💻 Un héritage de la culture «hacker» </b>
 </div>
 
 <br>
@@ -108,9 +108,9 @@ Toutefois, ce modèle idéal soulève nécessairement la question de son finance
 <br>
 <br>
 
- Malgré le succès du projet Wikipédia, quelques nouveaux sujets de controverse sont apparus au cours des dernières années. Si la fiabilité n'est plus remise en question, c'est la neutralité de l'encyclopédie qui est questionnée. En effet, les biais présents au sein de notre société se reflètent également dans le profil des auteurs et le choix des contenus. Seul un nombre restreint de wikipédistes contribuent à la rédaction d’articles, en majorité des hommes issus de pays occidentaux. Ils ne sont donc que peu représentatifs d'une communauté globale et diverse telle qu'on pourrait l'imaginer. Par ailleurs, certains sujets peu médiatisés n'ont qu'une faible visibilité. Ainsi, les personnalités féminines (scientifiques, écrivaines, artistes) peu représentées dans les médias font rarement l’objet d’articles Wikipédia. Il en va de même pour les sujets qui concernent le monde extra-occidental ou les minorités. Le principe d'universalisme demeure donc difficilement atteignable. Dans l'objectif de combler ces lacunes, plusieurs initiatives ont vu le jour, dont le projet ["Noircir Wikipédia"](https://fr.wikipedia.org/wiki/Projet:Noircir_Wikip%C3%A9dia). 
+Malgré le succès du projet Wikipédia, quelques nouveaux sujets de controverse sont apparus au cours des dernières années. Si la fiabilité n'est plus remise en question, c'est la neutralité de l'encyclopédie qui est questionnée. En effet, les biais présents au sein de notre société se reflètent également dans le profil des auteurs et le choix des contenus. Seul un nombre restreint de wikipédistes contribuent à la rédaction d’articles, en majorité des hommes issus de pays occidentaux. Ils ne sont donc que peu représentatifs d'une communauté globale et diverse telle qu'on pourrait l'imaginer. Par ailleurs, certains sujets peu médiatisés n'ont qu'une faible visibilité. Ainsi, les personnalités féminines (scientifiques, écrivaines, artistes) peu représentées dans les médias font rarement l’objet d’articles Wikipédia. Il en va de même pour les sujets qui concernent le monde extra-occidental ou les minorités. Le principe d'universalisme demeure donc difficilement atteignable. Dans l'objectif de combler ces lacunes, plusieurs initiatives ont vu le jour, dont le projet [«Noircir Wikipédia»](https://fr.wikipedia.org/wiki/Projet:Noircir_Wikip%C3%A9dia). 
  
-Malgré ces critiques, Wikipédia est la preuve qu'une alternative pérenne au modèle commercial des plateformes est possible. Comme [le souligne Pierre-Yves Beaudouin](https://www.franceculture.fr/medias/fiabilite-pseudonymat-sources-wikipedia-et-lintelligence-des-foules), Président de Wikimédia France : "*Nous ne réussirons sans doute pas partout, mais proposer en 2021 une information fiable, gratuite, sans publicité, le tout élaboré par des bénévoles et soutenu financièrement par des millions de donateurs, est déjà pas mal. Tant mieux si le public souhaite que Wikipédia aille plus loin.*"
+Malgré ces critiques, Wikipédia est la preuve qu'une alternative pérenne au modèle commercial des plateformes est possible. Comme [le souligne Pierre-Yves Beaudouin](https://www.franceculture.fr/medias/fiabilite-pseudonymat-sources-wikipedia-et-lintelligence-des-foules), Président de Wikimédia France :«*Nous ne réussirons sans doute pas partout, mais proposer en 2021 une information fiable, gratuite, sans publicité, le tout élaboré par des bénévoles et soutenu financièrement par des millions de donateurs, est déjà pas mal. Tant mieux si le public souhaite que Wikipédia aille plus loin.*»
 
 
 ## Références
@@ -149,7 +149,7 @@ Malgré ces critiques, Wikipédia est la preuve qu'une alternative pérenne au m
 ## En classe
 
 
-<u>Activité 1 - Course "wikipédienne"</u> 
+<u>Activité 1 - Course «wikipédienne»</u> 
 
 🕑 30 min | 👩‍💻 branché
 
@@ -175,7 +175,7 @@ Des [tutoriels vidéo](https://fr.wikipedia.org/wiki/Aide:Wikip%C3%A9dia_pas_%C3
 
 🕑 30 min | 👩‍💻 branché
 
-Le portail Wikipédia permet à tout un chacun de créer ou modifier un article. Pour cela, il faut cependant suivre un certain nombre de  [principes fondateurs, règles et recommandations](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Liste_des_r%C3%A8gles_et_recommandations). 
+Le portail Wikipédia permet à tout un chacun de créer ou modifier un article. Pour cela, il faut cependant suivre un certain nombre de [principes fondateurs et règles et recommandations](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Liste_des_r%C3%A8gles_et_recommandations). 
 
 Pour les élèves, il s’agit de retenir que :
 
@@ -185,9 +185,9 @@ Pour les élèves, il s’agit de retenir que :
 
 * Une information est vérifiée et sourcée. Sa référence doit faire l’objet d’une citation ou d’une note de bas de page.
 
-* Vérifiabilité ne veut pas dire vérité. Un énoncé peut être vérifié, mais pas cela ne veut pas dire que ce qu’il décrit relève d’une vérité.
+* Vérifiabilité ne veut pas dire vérité. Un énoncé peut être vérifié, mais cela ne veut pas dire que ce qu’il décrit relève d’une vérité.
 
-Pour les sensibiliser au processus d’élaboration d’une entrée Wikipédia demander aux élèves de :
+Pour les sensibiliser au processus d’élaboration d’une entrée Wikipédia, demander aux élèves de :
 
 1. Se rendre sur une page au hasard (par exemple en cliquant sur la rubrique «Article au hasard» dans le menu latéral)
 2. Cliquer sur l’onglet «Discussion» en haut à gauche de l’article, à côté de l’onglet «Article actif» 
@@ -204,46 +204,49 @@ On peut ensuite proposer d’analyser plus en détail la discussion d’un artic
 
 a) Dresser la liste de tous les contributeurs ayant participé à la discussion «Années 2011-2013». Que nous indique cette liste concernant le fonctionnement de Wikipédia?
 
+ ````{dropdown} Réponse
+*Titi2/ Elnon/ Konstantinos/ 85.26.91.44/ 95.182.223.243/ Kasos fr/ 82.123.40.153/ 92.103.180.98/ 78.113.173.241*
+
+Premièrement, on remarque que les signatures sont soit des pseudonymes, soit des adresses IP. Les contributeurs de Wikipédia ont deux options d’identification : le pseudonyme (si l’utilisateur possède un compte sur la plateforme) ou l’adresse IP, qui permet de modifier ou discuter d’un article sans être connecté à un compte. 
+Deuxièmement, le nombre de contributeurs (9), montre que Wikipédia est une plateforme collaborative où chacun peut prendre part à une discussion et participer à la rédaction d'un article. 
+```` 
+
 b) Parcourir la première discussion «Ovnis avant 1947». Quel sujet divise les deux utilisateurs? Quel est leur point de vue respectif?
+
+ ````{dropdown} Réponse
+*Elnon* souhaite faire figurer des éléments antérieurs à 1947, directement sur la page Ovni. *Titi2* estime que cette manière de faire est contraire aux règles d’utilisation, car le contenu n’est pas vérifiable. *Elnon* défend la présence de contenu non-vérifiable en expliquant que les faits alternatifs sont clairement présentés comme tels sur la page Ovni. Selon lui, enlever le contenu controversé aurait pour conséquence d’appauvrir la page. 
+````
 
 c) Dans le premier paragraphe, *Titi2* oppose deux types de sources, lesquelles?
 
+ ````{dropdown} Réponse
+Les ouvrages à sensation sont opposés aux revues historiques ou sociologiques. 
+```` 
+
 d) Selon *Titi2*, quelles sources peuvent être utilisées afin de vérifier des propos et donc de respecter la neutralité de point de vue?
+
+ ````{dropdown} Réponse
+Les revues historiques ou sociologiques. Il cite également plus bas les livres d’histoire et les journaux d’époque.
+```` 
 
 e) Selon *Titi2*, présenter les faits comme voudrait le faire *Elnon* va à l'encontre des règles de bases de publication sur Wikipédia. Quelle règle mentionne-t-il précisément?
 
+ ````{dropdown} Réponse
+*Titi2* indique que les contributeurs sont responsables de vérifier que les événements historiques qu’ils citent ont bien eu lieu. Il estime que les éléments non-factuels ne respectent pas les « prescrits encyclopédiques ». Il fait référence à l’un des principes fondateurs de la plateforme : «[Wikipédia est une encyclopédie](https://fr.wikipedia.org/wiki/Wikipédia:Wikipédia_est_une_encyclopédie)»
+```` 
+
 f) Quelles solutions propose *Titi2* pour maintenir les contenus proposés par *Elnon*?
 
-
-
- ````{dropdown} Élements de réponses
-
-a)	*Titi2/ Elnon/ Konstantinos/ 85.26.91.44/ 95.182.223.243/ Kasos fr/ 82.123.40.153/ 92.103.180.98/ 78.113.173.241*
-
-Premièrement, on remarque que les signatures sont soit des pseudonymes, soit des adresses IP. Les contributeurs de Wikipédia ont deux options d’identification: Le pseudonyme, dans le cas où l’utilisateur possède un compte sur la plateforme. L’adresse IP, qui permet de modifier ou discuter d’un article sans être connecté à un compte. 
-Deuxièmement, le nombre de contributeurs (9), montre que Wikiépdia est une plateforme collaborative où chacun peut prendre part à une discussion et participer à la rédaction d'un article. 
-
-b) *Elnon* souhaite faire figurer des éléments antérieurs à 1947, directement sur la page Ovni. *Titi2* estime que cette manière de faire est contraire aux règles d’utilisation, car le contenu n’est pas vérifiable. *Elnon* défend la présence de contenu non-vérifiable en expliquant que les faits alternatifs sont clairement présentés comme tels sur la page Ovni. Selon lui, enlever le contenu controversé aurait pour conséquence d’appauvrir la page. 
-
-c) Les ouvrages à sensation sont opposés aux revues historiques ou sociologiques. 
-
-d)	Les revues historiques ou sociologiques. Il cite également plus bas les livres d’histoire et les journaux d’époque. 
-
-e)	*Titi2* indique que les contributeurs sont responsables de vérifier que les événements historiques qu’ils citent ont bien eu lieu. Il estime que les éléments non-factuels ne respecte pas les « prescrits encyclopédiques ». Il fait référence à l’un des principes fondateurs de la plateforme : « [Wikipédia est une encyclopédie](https://fr.wikipedia.org/wiki/Wikipédia:Wikipédia_est_une_encyclopédie) »
-
-f) Il propose de faire figurer le contenu sur une page alternative, qui indiquerait clairement que les faits ne sont pas vérifiés. C’est finalement la solution qui semble avoir été privilégiée car le contenu concernant les Ovnis avant 1947 apparait sur la page «néo-évhémérisme», devenue «[Théorie des anciens astronautes](https://fr.wikipedia.org/wiki/Théorie_des_anciens_astronautes)», clairement définie comme une « spéculation pseudo-scientifique ».
+  ````{dropdown} Réponse
+ Il propose de faire figurer le contenu sur une page alternative, qui indiquerait clairement que les faits ne sont pas vérifiés. C’est finalement la solution qui semble avoir été privilégiée car le contenu concernant les Ovnis avant 1947 apparait sur la page «néo-évhémérisme», devenue «[Théorie des anciens astronautes](https://fr.wikipedia.org/wiki/Théorie_des_anciens_astronautes)», clairement définie comme une « spéculation pseudo-scientifique ».
+```` 
 
 Remarque générale pour terminer cet exercice: 
 
-Le choix d’un article particulièrement controversé est volontaire. Il permet d’illustrer comment les utilisateurs interagissent lorsqu’ils ne sont pas d’accord. Cet article est un exemple de « [guerre d’édition](https://fr.wikipedia.org/wiki/Wikipédia:Guerre_d%27édition) ». On constate néanmoins que, malgré une certaine tension entre les contributeurs, les échanges restent en lien direct avec le sujet et qu’une forme de consensus semble être atteint en fin de discussion. 
+Le choix d’un article particulièrement controversé est volontaire. Il permet d’illustrer comment les utilisateurs interagissent lorsqu’ils ne sont pas d’accord. Cet article est un exemple de «[guerre d’édition](https://fr.wikipedia.org/wiki/Wikipédia:Guerre_d%27édition)». On constate néanmoins que, malgré une certaine tension entre les contributeurs, les échanges restent en lien direct avec le sujet et qu’une forme de consensus semble être atteint en fin de discussion. 
+^
 
-
-
-
-```` 
-
-
-En guise de conclusion, demander aux élèves quels de lister quelques avantages et limites du modèle Wikipédia.
+En guise de conclusion, demander aux élèves de lister quelques avantages et limites du modèle Wikipédia.
 
 
 **Avantages**
@@ -260,11 +263,11 @@ En guise de conclusion, demander aux élèves quels de lister quelques avantages
 
 **Limites** 
 
-* Pour qu’un article figure dans Wikipédia, il doit avoir fait l’objet d’un traitement médiatique préalable. Certaines thématiques ou personnalités qui ont une faible visibilité dans l’espace public (par exemple, les sujets qui concernent des minorité ethniques ou de genre) seront également peu visibles dans Wikipédia
+* Pour qu’un article figure dans Wikipédia, il doit avoir fait l’objet d’un traitement médiatique préalable. Certaines thématiques ou personnalités qui ont une faible visibilité dans l’espace public (par exemple, les sujets qui concernent des minorités ethniques ou de genre) seront également peu visibles dans Wikipédia
 
 * Si l’édition de l’encyclopédie est ouverte à toutes et tous, les articles sont le plus souvent rédigés par un nombre restreint de contributeurs, en majorité des hommes issus de pays occidentaux. Ils ne sont donc que peu représentatifs d’une communauté globale et diverse.
 
-* La neutralité de point de vue est un idéal difficile à atteindre, surtout pour certains sujets dont les controverses sont importantes
+* La neutralité de point de vue est un idéal difficile à atteindre, surtout pour certains sujets dont les controverses sont importantes.
 
 
 
