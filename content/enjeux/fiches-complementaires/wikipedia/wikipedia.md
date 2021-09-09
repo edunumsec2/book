@@ -195,7 +195,7 @@ Pour les sensibiliser au processus d’élaboration d’une entrée Wikipédia d
 
 Il s’agit de l’historique des discussions qui ont conduit, par étapes, à la constitution de la version la plus actuelle.
 
-On peut ensuite proposer d’analyser plus en détail la discussion d’un article controversé, par exemple la page «Objet volant non identifié» :
+On peut ensuite proposer d’analyser plus en détail la discussion d’un article controversé, par exemple la page «[Objet volant non identifié](https://fr.wikipedia.org/wiki/Objet_volant_non_identifié)» :
 
 1. Depuis cet article, aller sur l'onglet «[Discussion](https://fr.wikipedia.org/wiki/Discussion:Objet_volant_non_identifié)», en haut à gauche de la page.
 2. Au bas de l'encadré «Archives», cliquer sur «[Années 2011-2013](https://fr.wikipedia.org/wiki/Discussion:Objet_volant_non_identifié/Archive_5)».
