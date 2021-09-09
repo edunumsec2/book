@@ -6,7 +6,7 @@ Même si on a l'impression que les ordinateurs peuvent faire toutes sortes de ch
 
 C'est assez fascinant de se dire que des tâches a priori non mathématiques, comme corriger l'orthographe ou la grammaire d'un texte automatiquement, sont réalisées avec ces opérations de base. 
 
-En parallèle à ce qui leur permet de faire des calculs, les ordinateurs disposent d'une mémoire de travail, appelée aussi RAM (_random-access memory_). L'étude des systèmes logiques permet de comprendre les principes derrière la gestion de cette mémoire et de voir comment les ordinateurs peuvent y lire et écrire des données entre deux calculs.
+En parallèle à ce qui leur permet de faire des calculs, les ordinateurs disposent utilisent de la mémoire. Il y en a au cœur des microprocesseurs, les _registres_; il y ce qu'on appelle la _mémoire vive_, appelée aussi RAM (_random-access memory_). (La mémoire servant au stackage de longue durée comme disques durs et autres SSD n'est pas discutée dans cette section.) L'étude des systèmes logiques permet de comprendre les principes derrière la gestion de cette mémoire et de voir comment les ordinateurs peuvent y lire et écrire des données entre deux calculs.
 
 
 ## Exemple suivi: addition de deux nombres

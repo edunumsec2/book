@@ -187,7 +187,7 @@ Pour analyser un {glo}`syslogique|circuit logique` comme celui présenté ci-des
 | 1   | 1   | $???$ |
 
 
- Pour remplir chaque ligne, nous allons changer les entrées selon les valeurs de $X$ et $Y$ et observer l'effet des portes et ainsi voir le circuit se comporte. ligne. Prenons $X=Y=0$: c'est le cas représenté par l'état initial du circuit ci-dessus. Rappelons qu'un segment noir véhicule un «0», alors qu'un segment coloré véhicule un «1».
+ Pour remplir chaque ligne, nous allons changer les entrées selon les valeurs de $X$ et $Y$ et observer l'effet des portes et ainsi voir comment le circuit se comporte. Prenons $X=Y=0$: c'est le cas représenté par l'état initial du circuit ci-dessus. Rappelons qu'un segment noir véhicule un «0», alors qu'un segment coloré véhicule un «1».
 
 Le résultat intermédiaire des deux portes de gauche sera 0. L'inverseur transforme en 1 la sortie de la porte **ET**, mais la porte finale, qui est aussi une porte **ET**, n'obtient qu'un seul 1 en entrée et donc livre une sortie de 0.
 
@@ -293,7 +293,7 @@ Vérifiez que la porte **OU-X** se comporte bien comme le circuit ci-dessous ré
 
 #### Création d'un circuit
 
-Discutons maintenant de comment on a pu créerait de zéro ce diagramme réalisant un **OU-X** à avec les portes à notre disposition à partir de sa {glo}`tableverite|table de vérité`. Plusieurs approches sont possibles, et nous verrons que, suivant l'approche, on aurait très bien pu créer un circuit logique différent réalisant la même fonction.
+Discutons maintenant de comment on a pu créer de zéro ce diagramme réalisant un **OU-X** à avec les portes à notre disposition à partir de sa {glo}`tableverite|table de vérité`. Plusieurs approches sont possibles, et nous verrons que, suivant l'approche, on aurait très bien pu créer un circuit logique différent réalisant la même fonction.
 
 
 ##### Approche ad hoc
@@ -372,7 +372,7 @@ Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la
 }
 ```
 
- 1. Combien de lignes a une table de vérité pour $I$ et $Y$ en fonction des deux entrées $X$ et $Y$? Écrivez cette table de vérité.
+ 1. Combien de lignes a une table de vérité pour $I$ et $J$ en fonction des deux entrées $X$ et $Y$? Écrivez cette table de vérité.
  1. Quelle différence y a-t-il entre $J$ et ce qu'on obtient en connectant directement une porte **ET** aux entrées $X$ et $Y$? Quel élément du schéma réalise cette différence?
  1. Dans votre table de vérité, ajoutez une colonne et remplissez-là: elle doit représenter une nouvelle sortie $K$, qui serait produite si on connectait une porte **OU** en lui donnant $I$ et $J$ comme entrées, comme montré ci-dessous. Le schéma représente ici le circuit dans un état indéterminé, mais les types des portes ont été ajoutés pour vous aider. La sortie $K$ est-elle ici toujours la même que la sortie $Z$ plus haut? Quelles sont les éventuelles différences? Finalement, la sortie $K$ a-t-elle un intérêt?
 
@@ -643,7 +643,7 @@ $Z$ est donc le **OU** de $X$ et du **ET** de l'inverse de $X$ et de $Y$.
 ```
 
 ```{dropdown} Corrigé
-Il y plusieurs solutions possible. Celle qui correspond aux indices est la suivante:
+Il y plusieurs solutions possibles. Celle qui correspond aux indices est la suivante:
 
 ```{logic}
 :height: 200
