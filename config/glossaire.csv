@@ -65,7 +65,7 @@ heuristique,1,Heuristique,Se dit d'un algorithme qui permet de résoudre rapidem
 variable,1,Variable,Prog,
 fonction,1,Fonction,Sous-programme pouvant être appelé à l’intérieur d’un programme et pouvant avour des entrées et des sorties.,
 fonctionrec,1,Fonction récursive,Fonction qui s’appelle elle-même.,
-programme,1,Programme,Séquence d’instructions (dans un langage de programmation) pouvant être exécutée par un ordinateur.
+programme,1,Programme,Séquence d’instructions (dans un langage de programmation) pouvant être exécutée par un ordinateur.,
 recursivite,1,Récursivité,Algo,
 incrementation,1,Incrémentation,Action d'augmenter une valeur (hebergée par une variable souvent) suivant un incrément donné. Si j'incrémente 3 fois ma variable initialement à 1 de la valeur 3, je vais obtenir (1)4,7,10.,
 bit,1,Bit,Un bit est un chiffre binaire (0 ou 1). C'est l'unité élémentaire d'information, à ne pas confondre avec le byte (octet, paquet de 8 bits).,
