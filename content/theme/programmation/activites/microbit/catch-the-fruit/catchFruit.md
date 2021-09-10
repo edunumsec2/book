@@ -78,7 +78,7 @@ On utilise les blocs `allumer` et `éteindre` du menu `LED`. Ces blocs ont besoi
 ##### Problèmes
 
 On ne voir rien qui se passe !  
-C'est dû au fait que le micro:bit effectue les opérations trop rapidement pour que notre oeil le voit, il faut mettre des pauses avant d'éteindre chaque led.
+C'est dû au fait que le micro:bit effectue les opérations trop rapidement pour que notre œil le voit, il faut mettre des pauses avant d'éteindre chaque led.
 
 Si au lieu d'avoir un écran de 5 leds de hauteur il en faisait 50, ou 100, ce code deviendrait vite laborieux à écrire... comment faire ?
 

@@ -102,7 +102,7 @@ Les entrées-sorties permettent de communiquer avec les autres périphériques c
 
 :::{admonition} Le modèle Turing
 :class: note
-Cette vidéo de trente minutes présente le modèle Turing. On découvre ainsi la vie et l'oeuvre d'Alan Turing ainsi que les réflexions qui ont abouti à un modèle qui est encore aujourd'hui une référence dans le domaine de l'informatique, mais qui a aussi inspiré de nombreux autres domaines scientifiques. On découvre également le contexte de la seconde guerre mondiale et le rôle crucial qu'a joué Turing dans la résolution de ce conflit.
+Cette vidéo de trente minutes présente le modèle Turing. On découvre ainsi la vie et l'œuvre d'Alan Turing ainsi que les réflexions qui ont abouti à un modèle qui est encore aujourd'hui une référence dans le domaine de l'informatique, mais qui a aussi inspiré de nombreux autres domaines scientifiques. On découvre également le contexte de la seconde guerre mondiale et le rôle crucial qu'a joué Turing dans la résolution de ce conflit.
 ```{cnrs} pUV9f15n
 ```
 :::

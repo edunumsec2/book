@@ -236,7 +236,7 @@ Comparer vos algorithmes. Sont-ils différents ?
 ````{admonition} Exercice 15
 :class: note
 
-Analyser les oeuvres cubistes de Piet Mondrian. Trouver un algorithme qui permet de créer une oeuvre qui pourrait être attribuée à Mondrian.
+Analyser les œuvres cubistes de Piet Mondrian. Trouver un algorithme qui permet de créer une œuvre qui pourrait être attribuée à Mondrian.
 
 ````
 

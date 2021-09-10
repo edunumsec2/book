@@ -116,7 +116,7 @@ Le 6502, conçu en 1975, est le premier microprocesseur grand public avec un pri
 ```{figure} media/6502_pad_annot_07.png
 ---
 alt: schémas annoté du 6502
-width: 400px
+width: 750px
 ---
 Ce schéma détaille l'ensemble des transistors du 6502. On voit également quelques-uns des éléments principaux (horloge, registres, etc).
 ```
@@ -147,9 +147,9 @@ Que fait le programme en exemple sur le site visual6502?
 
 Les microprocesseurs modernes ajoutent quelques éléments de complexité que nous n'avons pas exposés ici. Il s'agit notamment des éléments suivants.
 
-### Les multi-coeurs
+### Les multi-cœurs
 
-Alors que dans le processeur que nous avons présenté, il n'y avait qu'une seule unité arithmétique et logique, ce qui limitait notre processeur à une opération par cycle d'horloge, l'industrie fournit aujourd'hui des microprocesseurs qui sont capables d'effectuer plusieurs opérations simultanément. Pour cela, ces derniers sont dotés de plusieurs coeurs capable d'effectuer chacun une opération. Mais cette mise en parallèle des opérations ne se fait pas sans difficultés. De la même manière qu'il serait extrêmement difficile pour plusieurs personnes d'écrire un texte en tenant le même stylo, il est compliqué de partager un calcul entre plusieurs unités de traitement.
+Alors que dans le processeur que nous avons présenté, il n'y avait qu'une seule unité arithmétique et logique, ce qui limitait notre processeur à une opération par cycle d'horloge, l'industrie fournit aujourd'hui des microprocesseurs qui sont capables d'effectuer plusieurs opérations simultanément. Pour cela, ces derniers sont dotés de plusieurs cœurs capable d'effectuer chacun une opération. Mais cette mise en parallèle des opérations ne se fait pas sans difficultés. De la même manière qu'il serait extrêmement difficile pour plusieurs personnes d'écrire un texte en tenant le même stylo, il est compliqué de partager un calcul entre plusieurs unités de traitement.
 
 <!-- REVIEW/Olivier: comparaison sympathique, mais est-ce que ce ne serait pas mieux de faire une comparaison plus fidèle (et un peu plus terre à terre aussi) du genre "se mettre à plusieurs pour effectuer une addition de deux nombres avec beaucoup de chiffres, chacun prenant une partie de ces nombres" -->
 

@@ -267,7 +267,7 @@ Une fois toutes les cartes passées en revue il a donné le code binaire de son 
 
 Si on a du temps pour escalader la pyramide d’Anderson et Krathwohl[^1].
 
-Les élèves doivent créer la version du tour pour le petit frère (ou petite soeur) avec 4 cartes.
+Les élèves doivent créer la version du tour pour le petit frère (ou petite sœur) avec 4 cartes.
 
 1. Quels sont les nombres possibles ?
 2. Combien y a-t-il de nombres par carte ?
