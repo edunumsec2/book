@@ -13,7 +13,7 @@ John von Neumann
 :animate: fade-in-slide-down
 
 John von Neumann est un mathématicien et physicien américano-hongrois qui apporte des contributions importantes dans les domaines des mathématiques, de la physique quantique, de l'informatique et de l'économie. Il participe à des projets militaires comme le projet Manhatten (mise au point de la première bombe atomique américaine).
-En informatique, on retient son nom pour l'élaboration d'une architecture, publiée en 1945 et qui est encore aujourd'hui la référence dans la conception des ordinateurs. L'idée centrale de son architecture est de stocker dans la mémoire à la fois le programme et les données du programme. Sur ce dernier point, sa proposition est très similaire à celle de proposée par Turing.
+En informatique, on retient son nom pour l'élaboration d'une architecture, publiée en 1945 et qui est encore aujourd'hui la référence dans la conception des ordinateurs. L'idée centrale de son architecture est de stocker dans la mémoire à la fois le programme et les données du programme. Sur ce dernier point, sa proposition est très similaire à celle proposée par Turing.
 
 ```
 
@@ -68,7 +68,7 @@ L'idée centrale de l'architecture de von Neumann, à l'instar de la machine de 
 ```{admonition} Anecdote
 :class: Le ver Internet
 Le 2 novembre 1988 est lancé le ver Morris ou ver de Morris ou  ver Internet ou encore Le Ver. Il est considéré comme le premier ver à s'être propagé sur Internet et il a aussi mené à la première condamnation pour fraude informatique.
-Robert Tappan Morris avait comme première intention de démontrer le principe de propagation et les vulnérabilités, mais des erreur de programmation ont conduit à une propagation hors de control et à un blocage de nombreux système. On considère de manière très approximative que dix pour cent des soixante mille machines connectées à Internet avait été infectées à l'époque.
+Robert Tappan Morris avait comme première intention de démontrer le principe de propagation et les vulnérabilités, mais des erreur de programmation ont conduit à une propagation hors de contrôle et à un blocage de nombreux système. On considère de manière très approximative que dix pour cent des soixante mille machines connectées à Internet avait été infectées à l'époque.
 
 ```
 
@@ -109,7 +109,7 @@ Cette vidéo de trente minutes présente le modèle Turing. On découvre ainsi l
 
 :::{admonition} La machine de Turing réalisée
 :class: note
-Cette vidéo de sept minutes présente une réalisation en lego de la machinde de Turing. Les explications permettent d'en comprendre le fonctionnement.
+Cette vidéo de sept minutes présente une réalisation en lego de la machine de Turing. Les explications permettent d'en comprendre le fonctionnement.
 ```{cnrs} 0st7M134
 ```
 :::
@@ -117,7 +117,7 @@ Cette vidéo de sept minutes présente une réalisation en lego de la machinde d
 ```{admonition} Activité
 :class: note
 
-[Simulateur de la machinde Turing](https://www.google.com/doodles/alan-turings-100th-birthday)
+[Simulateur de la machine de Turing](https://www.google.com/doodles/alan-turings-100th-birthday)
 
 *Ce simulateur permet de se familiariser avec le concept de programmation et de machine de Turing. Prenez quelques minutes (environ 10') pour résoudre les six enigmes proposées.
 
