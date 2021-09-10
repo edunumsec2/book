@@ -17,11 +17,11 @@
 1. Modifier votre programme pour qu'il ajoute une image lorsque le compteur arrive à zéro.
 
 ## 2 Arythmie cardiaque
-1. Reprendre le programme du coeur qui bat du fichier "coeur.py" et y ajouter la ligne `duree=500` avant la boucle `while`.
+1. Reprendre le programme du cœur qui bat du fichier "cœur.py" et y ajouter la ligne `duree=500` avant la boucle `while`.
 1. Modifier les appels à la fonction `sleep` afin de faire intervenir la variable `duree` dans les appels: `sleep(duree)`. 
 1. Tester votre programme avec diverses valeurs de la variables `duree``
-1. Modifier votre programme pour que le coeur batte de plus en plus vite. Il faut pour cela modifier la valeur de `duree` à l'intérieur de la boucle `while`. 
-1. Avec un instruction `if`, modifier le programme pour que si la durée d'un battement de coeur passe en dessous de 50 ms, on la remet à 1000 ms. 
+1. Modifier votre programme pour que le cœur batte de plus en plus vite. Il faut pour cela modifier la valeur de `duree` à l'intérieur de la boucle `while`. 
+1. Avec un instruction `if`, modifier le programme pour que si la durée d'un battement de cœur passe en dessous de 50 ms, on la remet à 1000 ms. 
 
 
 ## 3 Tamagotchi

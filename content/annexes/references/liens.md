@@ -44,7 +44,7 @@
 
 * [Ben Eater](https://www.youtube.com/user/eaterbc)
 
-**Ben Eater** a mis en place une chaîne Youtube expliquant de façon géniale certains principes de micro-éléctroniques au coeur des ordinateurs. La chaîne comprend une multitude de vidéos présentant des composants électroniques et leur assemblage sur des circuits imprimés, le tout étape par étape. 
+**Ben Eater** a mis en place une chaîne Youtube expliquant de façon géniale certains principes de micro-éléctroniques au cœur des ordinateurs. La chaîne comprend une multitude de vidéos présentant des composants électroniques et leur assemblage sur des circuits imprimés, le tout étape par étape. 
 
 * [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
 

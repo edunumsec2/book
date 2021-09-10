@@ -48,9 +48,9 @@ sur le bouton A.
     display.scroll("Bye!")
     ````
 1. Que va-t-il se passer si le mot \var{not} est enlevé de la troisième ligne? Vérifier sa réponse. 
-1. Reprendre le programme de la série précédente qui affiche un coeur qui bat (sauvé dans le fichier "coeur.py") et modifier la ligne du `for`
+1. Reprendre le programme de la série précédente qui affiche un cœur qui bat (sauvé dans le fichier "cœur.py") et modifier la ligne du `for`
 pour qu'il s'arrête de battre lorsqu'on appuie sur le bouton A.
-1. Modifier le programme du coeur pour qu'il affiche un fantôme (`Image.GHOST`) après qu'on a appuyé sur le bouton A. 
+1. Modifier le programme du cœur pour qu'il affiche un fantôme (`Image.GHOST`) après qu'on a appuyé sur le bouton A. 
 
 
 ## 4. L'histoire sans fin
