@@ -10,9 +10,9 @@ Un {glo}`algo|algorithme` est en quelque sorte « une recette » que l’on suit
 
 Un mode d’emploi ou une recette décrivent **<span style="color:rgb(89, 51, 209)">des étapes</span>** à suivre. La préparation des ingrédients, la cuisson ou le service sont différentes étapes d’une recette de cuisine qu’une personne peut suivre pour réaliser un plat. Prenons un cas précis : ***<span style="color:rgb(13, 204, 166)">réaliser une omelette</span>***. Pour chaque étape de la préparation de l’omelette, il faut prévoir une marche à suivre suffisamment détaillée, afin que la personne qui suit la recette arrive au même résultat. Dans le cas de l’omelette, les opérations pourraient être (voir figure ci-dessous) : 
 
-1. Casser les oeufs dans un bol. 
+1. Casser les œufs dans un bol. 
 2. Mélanger les œufs jusqu’à obtenir un mélange homogène.
-3. Cuire le mélange d’oeufs dans une poêle à température moyenne.
+3. Cuire le mélange d’œufs dans une poêle à température moyenne.
 4. Lorsque cuite, glisser l’omelette dans une assiette.
 
 ```{figure} media/Omelette_1.png
@@ -50,15 +50,15 @@ L’algorithme permet de calculer la somme des nombres contenus dans la liste No
 ```
 ````
 
-« Chaque étape d’un algorithme doit être définie précisément » (Knuth, D. E., 2011). En effet, si on ne décompose pas suffisemment la solution du problème, on peut se retrouver face à une recette inutile, par exemple : prendre des oeufs et réaliser une omelette. Cette recette ne nous dit pas vraiment comment procéder pour arriver à faire une omelette.
+« Chaque étape d’un algorithme doit être définie précisément » (Knuth, D. E., 2011). En effet, si on ne décompose pas suffisemment la solution du problème, on peut se retrouver face à une recette inutile, par exemple : prendre des œufs et réaliser une omelette. Cette recette ne nous dit pas vraiment comment procéder pour arriver à faire une omelette.
 
 ### Les ingrédients d’un algorithme
 
 L’objectif d’un {glo}`algo|algorithme` est de trouver la solution à un problème donné. Concrètement l’{glo}`algo|algorithme` va utiliser des **<span style="color:rgb(89, 51, 209)">données</span>** qu’il reçoit ***<span style="color:rgb(13, 204, 166)">en entrée</span>*** et va retourner un **<span style="color:rgb(89, 51, 209)">résultat</span>** ***<span style="color:rgb(13, 204, 166)">en sortie</span>*** (la solution du problème). Un {glo}`algo|algorithme` qui détecte les visages peut recevoir une image en {glo}`input|entrée` (les {glo}`data|données`) et peut répondre "oui" si l’image contient un visage ou "non" si l’image ne contient pas de visage (le résultat). Les {glo}`data|données` en {glo}`input|entrée` d’un {glo}`algo|algorithme` qui traduit pourraient être un texte à traduire et un dictionnaire. L’{glo}`algo|algorithme` traite ces {glo}`data|données` pour retourner en {glo}`output|sortie` un texte traduit dans une autre langue, dont le sens correspond au texte original.
 
-Entre l’{glo}`input|entrée` et la {glo}`output|sortie`, l’{glo}`algo|algorithme` précise quelles **<span style="color:rgb(89, 51, 209)">opérations</span>** exécuter. Les opérations que l’on peut demander à un humain sont très différentes de celles d’un ordinateur. On peut demander à un humain de casser des oeufs, mais un ordinateur ne peut comprendre et réaliser cette opération. Par contre on peut demander à un ordinateur de stocker une valeur dans une variable, de comparer les valeurs de plusieurs variables, de parcourir de longues listes de {glo}`data|données`. Une fois l’{glo}`algo|algorithme` conçu, les opérations qu’il décrit sont retranscrites en une suite d’instructions élémentaires, c’est-à-dire un programme exécutable par un ordinateur.
+Entre l’{glo}`input|entrée` et la {glo}`output|sortie`, l’{glo}`algo|algorithme` précise quelles **<span style="color:rgb(89, 51, 209)">opérations</span>** exécuter. Les opérations que l’on peut demander à un humain sont très différentes de celles d’un ordinateur. On peut demander à un humain de casser des œufs, mais un ordinateur ne peut comprendre et réaliser cette opération. Par contre on peut demander à un ordinateur de stocker une valeur dans une variable, de comparer les valeurs de plusieurs variables, de parcourir de longues listes de {glo}`data|données`. Une fois l’{glo}`algo|algorithme` conçu, les opérations qu’il décrit sont retranscrites en une suite d’instructions élémentaires, c’est-à-dire un programme exécutable par un ordinateur.
 
-Le dernier ingrédient d’un {glo}`algo|algorithme`, mais tout aussi important, est l’**<span style="color:rgb(89, 51, 209)">ordre des opérations</span>**. Dans l’exemple de l’omelette, on ne peut cuire les œufs avant de les avoir cassés, sans quoi on obtiendrait des oeufs durs. L’ordinateur a besoin de recevoir les instructions élémentaires à exécuter dans le bon ordre. Pour résumer, les ingrédients pour concevoir un {glo}`algo|algorithme` sont les suivants : 
+Le dernier ingrédient d’un {glo}`algo|algorithme`, mais tout aussi important, est l’**<span style="color:rgb(89, 51, 209)">ordre des opérations</span>**. Dans l’exemple de l’omelette, on ne peut cuire les œufs avant de les avoir cassés, sans quoi on obtiendrait des œufs durs. L’ordinateur a besoin de recevoir les instructions élémentaires à exécuter dans le bon ordre. Pour résumer, les ingrédients pour concevoir un {glo}`algo|algorithme` sont les suivants : 
 
 1. Des {glo}`data|données` en {glo}`input|entrée`
 2. Des opérations, dans un ordre précis
@@ -90,7 +90,7 @@ A quoi correspondent les ingrédients d’un algorithme dans l’exemple de la r
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
-Les oeufs sont les données en entrée, les opérations correspondent aux instructions numérotées de 1 à 4 dans la recette et finalement le résultat en sortie est l’omelette. On peut considérer le matériel culinaire (bol, fourchette, poêle, spatule) comme du matériel informatique à notre disposition, capable de traiter les données. En effet on peut cuire plein d’autres aliments dans une poêle.
+Les œufs sont les données en entrée, les opérations correspondent aux instructions numérotées de 1 à 4 dans la recette et finalement le résultat en sortie est l’omelette. On peut considérer le matériel culinaire (bol, fourchette, poêle, spatule) comme du matériel informatique à notre disposition, capable de traiter les données. En effet on peut cuire plein d’autres aliments dans une poêle.
 ```
 ````
 

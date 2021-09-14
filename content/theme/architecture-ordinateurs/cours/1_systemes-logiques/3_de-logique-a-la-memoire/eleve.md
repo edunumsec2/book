@@ -42,3 +42,8 @@ Voici une vidéo qui illustre ce principe de verrou S-R.
 ```{youtube} KM0DdEaY5sY
 :start: 4:58
 ```
+
+Pour aller plus loin, une vidéo de résumé qui parle aussi des bascules et des registres:
+
+```{youtube} I0-izyq6q5s
+```

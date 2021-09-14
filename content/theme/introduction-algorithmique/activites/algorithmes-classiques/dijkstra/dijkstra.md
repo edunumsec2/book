@@ -150,7 +150,7 @@ VERSE - VERRE - SERRE - SEVRE - LEVRE - LIVRE - LITRE
 
 On suppose disposer d'une liste de tous les mots de la langue française.
 Comment l'algorithme du plus cours chemin peut-il être utilisé pour trouver une solution à ce jeu? En particulier,
-quel graphe serait-il nécessaire de construire, à quoi correspondrait ses noeuds et ses arêtes et ses distances?
+quel graphe serait-il nécessaire de construire, à quoi correspondrait ses nœuds et ses arêtes et ses distances?
 
 Selon le niveau atteint en programmation, une petite application proposant ce jeu et les solutions correspondantes pourrait être
 programmée par exemple en utilisant une libraire de graphe telle que igraph ou networkX en python.

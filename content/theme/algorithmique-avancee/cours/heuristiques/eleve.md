@@ -87,6 +87,8 @@ Quelle est la complexité d’un algorithme qui doit parcourir un tableau 2 fois
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
+<!-- TODO #21 @edunum-sec2 : Clarification de la consigne car telle que je la comprend, 2 fois un parcours pour chaque élément fais 2 * n * n = O(n^2) -->
+
 Pour chaque élément on doit parcourir le tableau 2 fois, on a donc une complexité de n * n * n = n<sup>3</sup>, ou une complexité cubique.
 
 ```

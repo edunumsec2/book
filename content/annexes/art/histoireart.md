@@ -2,11 +2,11 @@
 
 ## Introduction
 
-Établir une histoire de l'art *numérique* est problématique. Il est difficile, dans ce contexte, de donner une définition satisfaisante du concept *numérique*. Une définition trop large incluerait toute création artistique utilisant une forme de calcul comme paramètre fondamental de la réalisation de l'oeuvre. Alors qu'une définition trop restreinte, du type "oeuvre ayant été réalisée par un ordinateur" excluerait une part importante de la production du XXème siècle qui utilisait, par exemple, des instructions données à des imprimantes pour produire des oeuvres *numériques*. 
+Établir une histoire de l'art *numérique* est problématique. Il est difficile, dans ce contexte, de donner une définition satisfaisante du concept *numérique*. Une définition trop large incluerait toute création artistique utilisant une forme de calcul comme paramètre fondamental de la réalisation de l'œuvre. Alors qu'une définition trop restreinte, du type "œuvre ayant été réalisée par un ordinateur" excluerait une part importante de la production du XXème siècle qui utilisait, par exemple, des instructions données à des imprimantes pour produire des œuvres *numériques*. 
 
 Dans ce chapitre, nous appelons donc "art numérique" plus spécifiquement des productions utilisant un ordinateur, un programme, un algorithme, comme outil principal de création. 
 
-Néanmoins, nous commencerons par une courte présentation de l'utilisation d'algorithmes de dessin dans des oeuvres datant de plusieurs siècles. 
+Néanmoins, nous commencerons par une courte présentation de l'utilisation d'algorithmes de dessin dans des œuvres datant de plusieurs siècles. 
 
 ## Zellige 
 
@@ -16,7 +16,7 @@ Néanmoins, nous commencerons par une courte présentation de l'utilisation d'al
 :alt: By إيان - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=88836894
 :align: center
 ```
-Les artisans qui découpent les faïences connaissent par coeur un grand nombre de ces puzzles, ce qui leur permet de travailler directement sur la pierre sans passer par l'étape du dessin. Néanmoins, il existe sur Youtube un grand nombre de tutoriels qui expliquent étape par étape comment réaliser ce genre de dessins à l'aide d'un compas, d'une équerre, et d'un crayon. 
+Les artisans qui découpent les faïences connaissent par cœur un grand nombre de ces puzzles, ce qui leur permet de travailler directement sur la pierre sans passer par l'étape du dessin. Néanmoins, il existe sur Youtube un grand nombre de tutoriels qui expliquent étape par étape comment réaliser ce genre de dessins à l'aide d'un compas, d'une équerre, et d'un crayon. 
 
 ```{youtube} dLtV_GTCM6I
 ```
@@ -78,7 +78,7 @@ draw_tile(20, 9, 11)
 pen.hideturtle()
 ```
 
-On retrouve ce type de motifs dans de nombreuses oeuvres culturelles. Comme, par exemple, au Musée archéologique de Séville. 
+On retrouve ce type de motifs dans de nombreuses œuvres culturelles. Comme, par exemple, au Musée archéologique de Séville. 
 
 ```{image} media/pavagediane.jpeg
 ```

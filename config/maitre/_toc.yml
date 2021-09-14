@@ -55,6 +55,7 @@ parts:
 - caption: Enjeux sociaux
   numbered: false
   chapters:
+  - file: content/enjeux/intro-enjeux
   - file: content/enjeux/grandes-thematiques/grandes-thematiques
     sections:
     - file: content/enjeux/grandes-thematiques/economie-numerique/economie-numerique
