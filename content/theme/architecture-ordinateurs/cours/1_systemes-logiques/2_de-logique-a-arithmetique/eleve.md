@@ -146,7 +146,7 @@ La configuration $S_2 = S_1 = S_0 = 1$ représente le nombre décimal $7$. Ce se
 ````
 
 
-````{admonition} Exercice: Additionneur de demi-octets
+`````{admonition} Exercice: Additionneur de demi-octets
 
 En connectant des additionneurs complets, réalisez un circuit qui additionne deux nombres $A$ et $B$ de quatre bits, numérotés $A_0$ à $A_3$ et $B_0$ à $B_3$, respectivement. Combien de bits de sortie doit-il y avoir pour traiter toutes les valeurs possibles?
 
@@ -170,7 +170,7 @@ Les entrées sont déjà disposées. Glissez autant d'additionneurs et de bits d
 }
 ```
 
-```{dropdown} Corrigé
+````{dropdown} Corrigé
 Nous avons besoin de cinq bits de sortie. Le schéma, représenté horizontalement et de droite à gauche pour être proche de la représentation selon laquelle nous faisons les additions en colonne, est:
 
 ```{logic}
@@ -222,6 +222,7 @@ Nous avons besoin de cinq bits de sortie. Le schéma, représenté horizontaleme
 }
 ```
 ````
+`````
 
 Cet exercice démontre l'opportunité de penser en termes {glo}`modulo|modulaires`, ce qui revient souvent en informatique. Ici, on a réalisé qu'un additionneur complet résout un sous-problème bien défini d'une addition générale d'un nombre à $n$ {glo}`bit|bits`, et que, une fois qu'on a créé un tel additionneur, il suffit d'en connecter plusieurs les uns derrière les autres de manière structurée pour additionner des nombres plus grands.
 
@@ -262,9 +263,9 @@ Réglez les entrées du circuit de manière à lui faire effectuer les additions
     {"pos": [420, 450], "orient": "s", "id": 40, "name": "S0"}
   ],
   "displays": [
-    {"type": "nibble", "pos": [530, 100], "id": [4, 5, 6, 7]},
-    {"type": "nibble", "pos": [530, 240], "id": [8, 9, 10, 11]},
-    {"type": "nibble", "pos": [530, 390], "id": [41, 42, 43, 44]}
+    {"type": "nibble", "pos": [530, 100], "id": [4, 5, 6, 7], "name": "A"},
+    {"type": "nibble", "pos": [530, 240], "id": [8, 9, 10, 11], "name": "B"},
+    {"type": "nibble", "pos": [530, 390], "id": [41, 42, 43, 44], "name": "S"}
   ],
   "components": [
     {"type": "adder", "pos": [420, 320], "in": [16, 17, 18], "out": [19, 20]},
@@ -340,18 +341,13 @@ Déterminez quel composant est défectueux dans ce circuit et comment il faudrai
     {"pos": [420, 450], "orient": "s", "id": 40, "name": "S0"}
   ],
   "displays": [
-    {"type": "nibble", "pos": [530, 100], "id": [4, 5, 6, 7]},
-    {"type": "nibble", "pos": [530, 240], "id": [8, 9, 10, 11]},
-    {"type": "nibble", "pos": [530, 390], "id": [41, 42, 43, 44]}
+    {"type": "nibble", "pos": [530, 100], "id": [4, 5, 6, 7], "name": "A"},
+    {"type": "nibble", "pos": [530, 240], "id": [8, 9, 10, 11], "name": "B"},
+    {"type": "nibble", "pos": [530, 390], "id": [41, 42, 43, 44], "name": "S"}
   ],
   "components": [
     {"type": "adder", "pos": [420, 320], "in": [16, 17, 18], "out": [19, 20]},
-    {
-      "type": "adder",
-      "pos": [320, 320],
-      "in": [21, 22, 23],
-      "out": [24, {"id": 25, "force": 0}]
-    },
+    {"type": "adder", "pos": [320, 320], "in": [21, 22, 23], "out": [24, {"id": 25, "force": 0}]},
     {"type": "adder", "pos": [220, 320], "in": [26, 27, 28], "out": [29, 30]},
     {"type": "adder", "pos": [120, 320], "in": [31, 32, 33], "out": [34, 35]}
   ],

@@ -129,12 +129,12 @@ Ce schéma détaille l'ensemble des transistors du 6502. On voit également quel
 Ce simulateur reproduit le fonctionnement complet du 6502 jusque dans l'activité de chaque transistor le composant. On peut clairement visualiser la façon dont la complexité du fonctionnement de ce que l'on appelle communément le *cerveau* de l'ordinateur émerge de la quantité de dispositifs triviaux pris individuellement.
 
 1. Observer le déroulement du programme proposé et tenter d'en déduire le fonctionnement. On pourra s'aider du désassembleur proposé sur la même page.
-:::{question} Question
-Que fait le programme en exemple sur le site visual6502?
-* {f}`Il parcourt la mémoire et recopie la valeur 40 à des adresses successives`
-* {v}`Il effectue une boucle et incrémente une valeur en mémoire à l'adresse FF`
-* {f}`Il additionne deux registres et stocke le résultat dans un autre registre`
-:::
+    :::{question} Question
+    Que fait le programme en exemple sur le site visual6502?
+    * {f}`Il parcourt la mémoire et recopie la valeur 40 à des adresses successives`
+    * {v}`Il effectue une boucle et incrémente une valeur en mémoire à l'adresse FF`
+    * {f}`Il additionne deux registres et stocke le résultat dans un autre registre`
+    :::
 
 2. Modifier ou écrire un nouveau programme en allant sur la page *Avanced*.
 
