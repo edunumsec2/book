@@ -105,7 +105,7 @@ Elle mérite bien entendue d’être enrichie, en particulier par les retours en
 
 <a name="Section1.1.1"></a>
 
-### Onde de pression.
+### Onde de pression
 Le son est une onde mécanique nécessitant un milieu matériel pour se propager. Ce milieu peut être un gaz (comme l'air), un solide ou un liquide. Le son ne peut donc pas se propager dans le vide. Une onde sonore est une succession de champs de pression-dépression, ou compression-dilatation.
 L’exemple « visible » de l’impulsion mécanique donnée sur une corde élastique illustre parfaitement ce phénomène.
 
