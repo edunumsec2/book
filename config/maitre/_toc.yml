@@ -12,6 +12,8 @@ parts:
       - file: content/theme/representation-information/cours/representation-images/maitre
       - file: content/theme/representation-information/activites/representation-images/bitmap/bitmap
       - file: content/theme/representation-information/activites/representation-images/EncoderImages/EncoderImages
+      - file: content/theme/representation-information/activites/representation-son/visu-et-ecoute-son.md
+      
   - file: content/theme/representation-information/exercices/eleve
     sections:
       - file: content/theme/representation-information/exercices/representation-caracteres/carte-perforee/exercice
