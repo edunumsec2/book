@@ -3,7 +3,6 @@
 
 # Table des matières
 
-
 * [Introduction](#Introduction)
 * [Le son](#Chapter1)
     * [Signal analogique (physique) temporel](#Section1.1)
@@ -165,14 +164,68 @@ Un son pur est représenté par une fonction sinusoïdale du temps, de période 
 <br/>
 
 Un son est une vibration mécanique se propageant dans un milieu matériel jusqu’à atteindre un récepteur, notre oreille par exemple.
-* *{Activité 1 : Graphique sinusoïde obtenu via un programme python : familiarisation avec l’environnement de programmation (éditeur VS ou autre, ...), avec la création de programme, le débug. Sortie graphique. Plusieurs graphiques sont créés pour plusieurs fréquences, afin d’apprécier graphiquement ce paramètre}*
 
-     *[Supports didactiques : ordinateur et environnement de programmation, documentation papier ou en ligne, supports papier pour la prise de notes]*
+</br>
+
+* * Activité 1 - **Signal sonore élémentaire**
+
+    Classe : 1M, 2M
+
+    <span style="color:green">Difficulté : basique </span> <sup> [1](#myfootnote1)</sup>
+    
+
+    Objectif informatique 1 : 
+    - le premier objet de cette activité est de permettre à l'élève d'appréhender la problématique de la représentation de l'information au sens large, comme le passage d'un univers symbolique à un autre.
+    Il s'agit ici de passer d'un espace physique sensoriel (l'audition) à un autre espace sensoriel (la vue) et à la modélisation mathématique permettant de représenter un phénomène, ici acoustique (la représentation sinusoïdale continue d'une onde harmonique). Ce premier travail intellectuel doit permettre aux élèves d'une part de se familiariser avec le matériau servant de support aux activités suivantes (les éléments relatifs au son), et d'autre part de faciliter leur compréhension du changement de paradigme entre l'espace physique (plutôt que mathématique) et l'espace numérique et le codage binaire de l'information.
+    - le second objet de cette activité est de permettre aux élèves de se familiariser avec les outils informatiques de visualisation graphique et de production sonore, offrant deux modes de représentation du son. 
+    En particulier l'information fréquentielle, essentielle en traitement du signal, est abordée visuellement dans le plan temporel (sinusoide, période), puis fréquentiel (spectre), et perçue auditivement (hauteur du son - grave/aigu).
+    
+    </br>
+
+    Objectif informatique 2 : 
+    - cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphe sinusoïdal obtenu via un programme python, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
+    
+    
+    </br>
+
+    Objectif mathématique et physique (transversal) :
+    - l'activité permet de réactiver, confirmer ou s'appuyer sur des savoirs mathématiques relatifs aux relations fonctionnelles,  aux représentations dans le plan et à la trigonométrie.
+    - l'activité permet de réactiver, confirmer ou s'appuyer sur savoirs mécaniques et physiques relativement aux ondes, à la notion de milieu de propagation, de période et de fréquence.
+
+    </br>
+
+    Pré-requis : 
+
+    - informatique :
+        * <span style="color:green">programmation</span>
+        * <span style="color:green">utilisation de l'ordinateur et environnement</span> 
+        
+        </br> 
+    
+    - mathématique :
+        * <span style="color:orange">fonctions</span>
+        * <span style="color:orange">fonctions trigonométriques simples</span> 
+        * <span style="color:green">représentation sur un repère plan</span> 
+        
+        </br>
+    
+    - physique :
+        
+        * <span style="color:orange">notion d'onde mécanique (pression, compression-dilatation)</span>    
+</br>
+    
+    Supports didactiques : 
+    
+    ordinateur et environnement de programmation, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur.
 
 <br/>
 
-<a name="Section1.2"></a>
+<a name="myfootnote1">1</a>: *code couleur pour le niveau de connaissance dans le degré :* 
 
+<span style="color:green">vert : basique </span>  <span style="color:orange"> orange : médian </span> <span style="color:red"> rouge : avancé </span> 
+
+<a name="Section1.2"></a>
+<br/>
 ## Contenu fréquentiel (analyse spectrale) 
 
 <a name="Section1.2.1"></a>
