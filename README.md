@@ -44,9 +44,13 @@ L'utilisation **standard** des ressources ne requiert pas d'installation particu
 
 Dans le cadre du projet pilote, nous vous saurions gré de suivre le protocole minimal décrit ci-dessous :  
 
-1. Participer aux sondages suivants (30 min) : 
-    - questionnaires élève et enseignant de début d'année (en attente de formatage avec les données de classes et de gymnase pour la rentrée)
+1. Participer aux sondages suivants (10 min par sondage) : 
     - [Besoin en termes de formations](https://fr.surveymonkey.com/r/27QW723)
+    - [Questionnaire de rentrée / élève](https://www.surveymonkey.com/r/VVZQYRR)
+    - [Questionnaire de rentrée / enseignant·e](https://www.surveymonkey.com/r/s2enspre)
+    - [Questionnaire post-thématique / élève](https://www.surveymonkey.com/r/s2elpostthem)
+    - [Questionnaire post-thématique / enseignant·e](https://www.surveymonkey.com/r/s2enspostthem)
+    - [Questionnaire post thématique enjeux sociax / enseignant·e](https://www.surveymonkey.com/r/s2postensejs)
 
 2. Ecrire à nathalie.farenc@epfl.ch pour la tenir informée du début et de la fin d'un cours donné sur l'un ou l'autre des sujets du Plan d'études.
 3. Signaler tout défaut éventuel des ressources à nathalie.farenc@epfl.ch ou directement à la personne en charge de la thématique en question, dont vous trouverez l'adresse sous [comité de rédaction](#comité-de-rédaction).
