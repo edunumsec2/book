@@ -45,7 +45,6 @@ L'utilisation **standard** des ressources ne requiert pas d'installation particu
 Dans le cadre du projet pilote, nous vous saurions gré de suivre le protocole minimal décrit ci-dessous :  
 
 1. Participer aux sondages suivants (10 min par sondage) : 
-    - [Besoin en termes de formations](https://fr.surveymonkey.com/r/27QW723)
     - [Questionnaire de rentrée / élève](https://www.surveymonkey.com/r/VVZQYRR)
     - [Questionnaire de rentrée / enseignant·e](https://www.surveymonkey.com/r/s2enspre)
     - [Questionnaire post-thématique / élève](https://www.surveymonkey.com/r/s2elpostthem)
@@ -68,6 +67,11 @@ Après la phase **pilote**, les enseignant.es pourront en outre :
 ## Documents importants
 
 * [Livret de cours](https://files.edunumsec2.ch/livret.pdf) décrivant le découpage du plan d'études dans le détail. 
+* [Questionnaire de rentrée / élève](https://www.surveymonkey.com/r/VVZQYRR)
+* [Questionnaire de rentrée / enseignant·e](https://www.surveymonkey.com/r/s2enspre)
+* [Questionnaire post-thématique / élève](https://www.surveymonkey.com/r/s2elpostthem)
+* [Questionnaire post-thématique / enseignant·e](https://www.surveymonkey.com/r/s2enspostthem)
+* [Questionnaire post thématique enjeux sociax / enseignant·e](https://www.surveymonkey.com/r/s2postensejs)
 
 ## Chapitrage
 
