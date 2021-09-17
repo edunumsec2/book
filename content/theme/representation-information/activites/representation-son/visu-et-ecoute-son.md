@@ -45,25 +45,82 @@
 <a name="Introduction"></a>
 # Introduction 
 Le lien entre mathématiques et musique n’est pas récent puisque dès l'antiquité la musique est associée aux mathématiques. Elle est même considérée par Pythagore au VIe siècle avant J.C. comme étant une science mathématique, au même titre que l'arithmétique, l'astronomie et la géométrie.
-
+<center> 
+```{image} png/Im01.jpg
+:width: 500px
+:height: 350px
+```
+</center>
+  
 On cite souvent Pythagore comme l'un des pères de la théorie musicale. C'est à lui qu'on doit la compréhension des fréquences, c'est-à-dire des différentes hauteurs qui sont symbolisées par les notes de musique.
 
-Un travail que continuera, des siècles plus tard, Jean-Philippe Rameau avec son fameux Traité de l'harmonie réduite à ses principes naturels publié en 1722. A la même époque, Jean-Sébastien Bach s'amuse à utiliser des procédés mathématiques, pour écrire ses fugues en jouant avec la symétrie par exemple.
+Un travail que continuera, des siècles plus tard, Jean-Philippe Rameau avec son fameux Traité de l'harmonie réduite à ses principes naturels publié en 1722. <center> 
+```{image} png/Im02.jpg
+:width: 300px
+:height: 400px
+```
+</center>
+  À la même époque, Jean-Sébastien Bach s'amuse à utiliser des procédés mathématiques, pour écrire ses fugues en jouant avec la symétrie par exemple.
 
 La musique serait donc mathématique, c'est du moins ce que disait Leibniz en 1712 :
-"La musique est un exercice caché d'arithmétique, l'esprit n'ayant pas conscience qu'il est en train de compter ".
-Car contrairement à la peinture ou la littérature, la musique peut très précisément se traduire en équations et en graphique.
+"La musique est un exercice caché d'arithmétique, l'esprit n'ayant pas conscience qu'il est en train de compter".
+
+<center> 
+```{image} png/Im03.jpg
+:width: 300px
+:height: 400px
+```
+</center>
+Car contrairement à la peinture ou la littérature, la musique peut très précisément se traduire en équations et en graphique.  
 
 Au XXe siècle, les compositeurs cherchent à tout prix à se détacher de la musique tonale. Il faut trouver de nouveaux systèmes de composition. On assiste alors à la création de l'atonalité, du dodécaphonisme, de la musique sérielle.
-Exemple avec l'un des compositeurs les plus inclassables de la première moitié du siècle dernier: Béla Bartók. Il utilise le nombre d'or pour structurer ses compositions, c'est-à-dire un rapport proportionnel entre différents éléments d'une même pièce. Il est certainement l'un des premiers compositeurs à se servir de ce procédé de manière consciente. En résulte une structure cohérente et qui paraît équilibrée sans que l'esprit ne comprenne pourquoi. Jugez par vous même avec le 3e mouvement du Concerto pour piano n°3.
-Le nombre d'or également utilisé par Iannis Xenakis, compositeur grec, et qui a une formation d'architecte et d'ingénieur. Il crée une musique nouvelle qui est constituée de masses sonores. Cela donnera Metastasis en 1955, une composition entièrement déduite de règles et de procédures mathématiques.
-Il ira encore plus loin en créant des algorithmes pour tenter de représenter musicalement les notions de hasard et de probabilité.
+Exemple avec l'un des compositeurs les plus inclassables de la première moitié du siècle dernier: Béla Bartók. <center> 
 
-Il n'y a pas que les compositeurs qui se soient intéressés aux mathématiques. L'inverse est aussi vérifiable. De nombreux mathématiciens, physiciens, sont également de grands mélomanes voire de bons musiciens. Einstein qui était un excellent violoniste, celle qui deviendra la directrice du Cern, Fabiola Gianotti, qui en plus de son doctorat de physique sub-nucléaire expérimentale, a également un diplôme professionnel du conservatoire de Milan en piano. Ou encore la chanteuse lyrique Karen Vourc'h titulaire d'un DEA en physique théorique à l'Ecole Normale Supérieure qui déclarait dans une interview "qu'imaginer des sons, des univers, grâce à des formules mathématiques ou sous la forme de mélodies participe au même processus de recherche intellectuelle."
+```{image} png/Im05.jpg
+:width: 200px
+:height: 300px
+```
+</center>
+<center> 
+
+```{image} png/Im04.jpg
+:width: 300px
+:height: 400px
+```
+</center>Il utilise le nombre d'or pour structurer ses compositions, c'est-à-dire un rapport proportionnel entre différents éléments d'une même pièce. Il est certainement l'un des premiers compositeurs à se servir de ce procédé de manière consciente. 
+<center> 
+
+```{image} png/Im07.jpg
+:width: 300px
+:height: 250px
+```
+</center> <center> 
+
+```{image} png/Im08.jpg
+:width: 300px
+:height: 400px
+```
+</center>En résulte une structure cohérente et qui paraît équilibrée sans que l'esprit ne comprenne pourquoi. <a href="https://youtu.be/5D3cwOUQIYs"> Jugez par vous même</a> avec <a href="https://youtu.be/bKWZVYnALXo ">  le 3e mouvement du Concerto pour piano n°3.</a>
+Le nombre d'or également utilisé par Iannis Xenakis, compositeur grec, et qui a une formation d'architecte et d'ingénieur. Il crée une musique nouvelle qui est constituée de masses sonores. Cela donnera Metastasis en 1955, une composition entièrement déduite de règles et de procédures mathématiques.
+Il ira encore plus loin en créant des algorithmes pour tenter de représenter musicalement les notions de hasard et de probabilité.<center> 
+
+```{image} png/Im06.jpg
+:width: 500px
+:height: 400px
+```
+</center>
+
+Il n'y a pas que les compositeurs qui se soient intéressés aux mathématiques. L'inverse est aussi vérifiable. De nombreux mathématiciens, physiciens, sont également de grands mélomanes voire de bons musiciens. Einstein qui était un excellent violoniste, celle qui deviendra la directrice du Cern, Fabiola Gianotti, qui en plus de son doctorat de physique sub-nucléaire expérimentale, a également un diplôme professionnel du conservatoire de Milan en piano. Ou encore la chanteuse lyrique <a href="http://www.karenvourch.com/"> Karen Vourc'h </a> titulaire d'un DEA en physique théorique à l'Ecole Normale Supérieure qui déclarait dans une interview "qu'imaginer des sons, des univers, grâce à des formules mathématiques ou sous la forme de mélodies participe au même processus de recherche intellectuelle."
 
 Et c'est certainement là que réside le mystère qui a fasciné et qui fascine toujours autant les mathématiciens, les physiciens, les scientifiques au même titre que les compositeurs. L'émotion provoquée par la musique est-elle explicable, théorisable ? A partir de quand arrête-t-on de parler de sons pour parler de musique ? La musique contemporaine basée sur des équations est-elle trop abstraite pour provoquer des émotions ?
 
-Le XXe siècle est aussi celui des machines, et en particulier celui des ordinateurs. Depuis Alan Turing en 1936 et sa célèbre « machine », ses concepts de programme prendront tout leur sens avec l’essort des ordinateurs. Ce siècle voit s’interpénétrer mathématiques et informatique, cette dernière discipline investissant aujourd’hui tous les champs de l’activité humaine.
+Le XXe siècle est aussi celui des machines, et en particulier celui des ordinateurs. Depuis Alan Turing en 1936 et sa célèbre « machine », ses concepts de programme prendront tout leur sens avec l’essort des ordinateurs. <center> 
+
+```{image} png/Im09.jpg
+:width: 500px
+:height: 450px
+```
+</center>Ce siècle voit s’interpénétrer mathématiques et informatique, cette dernière discipline investissant aujourd’hui tous les champs de l’activité humaine.
 L'algorithme, objet central de l'informatique, mais aussi objet des mathématiques depuis des siècles, prend maintenant une nouvelle place dans les mathématiques et nécessairement dans leur enseignement. Les mathématiques s'en trouvent interrogées et leur enseignement aussi. Cette discipline a acquis aujourd’hui dans le monde de la recherche un statut comparable à celui de l’algèbre, de la géométrie ou de l’analyse, ou encore des probabilités statistiques. Le National Council of Teachers of Mathematics a consacré en 1998, son «Yearbook» à l'enseignement et l'apprentissage des algorithmes dans la classe de mathématiques (NCTM 1998). 
 
 Depuis 2009, en France, une part d'algorithmique a été introduite dans les programmes du lycée et le vocable apparaît même à l’école primaire. La discipline trouve peu à peu sa place dans les manuels du secondaire... et dans le cœur des enseignants de mathématiques.
@@ -167,65 +224,6 @@ Un son est une vibration mécanique se propageant dans un milieu matériel jusqu
 
 </br>
 
-* * Activité 1 - **Signal sonore élémentaire**
-
-    Classe : 1M, 2M
-
-    <span style="color:green">Difficulté : basique </span> <sup> [1](#myfootnote1)</sup>
-    
-
-    Objectif informatique 1 : 
-    - le premier objet de cette activité est de permettre à l'élève d'appréhender la problématique de la représentation de l'information au sens large, comme le passage d'un univers symbolique à un autre.
-    Il s'agit ici de passer d'un espace physique sensoriel (l'audition) à un autre espace sensoriel (la vue) et à la modélisation mathématique permettant de représenter un phénomène, ici acoustique (la représentation sinusoïdale continue d'une onde harmonique). Ce premier travail intellectuel doit permettre aux élèves d'une part de se familiariser avec le matériau servant de support aux activités suivantes (les éléments relatifs au son), et d'autre part de faciliter leur compréhension du changement de paradigme entre l'espace physique (plutôt que mathématique) et l'espace numérique et le codage binaire de l'information.
-    - le second objet de cette activité est de permettre aux élèves de se familiariser avec les outils informatiques de visualisation graphique et de production sonore, offrant deux modes de représentation du son. 
-    En particulier l'information fréquentielle, essentielle en traitement du signal, est abordée visuellement dans le plan temporel (sinusoide, période), puis fréquentiel (spectre), et perçue auditivement (hauteur du son - grave/aigu).
-    
-    </br>
-
-    Objectif informatique 2 : 
-    - cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphe sinusoïdal obtenu via un programme python, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
-    
-    
-    </br>
-
-    Objectif mathématique et physique (transversal) :
-    - l'activité permet de réactiver, confirmer ou s'appuyer sur des savoirs mathématiques relatifs aux relations fonctionnelles,  aux représentations dans le plan et à la trigonométrie.
-    - l'activité permet de réactiver, confirmer ou s'appuyer sur savoirs mécaniques et physiques relativement aux ondes, à la notion de milieu de propagation, de période et de fréquence.
-
-    </br>
-
-    Pré-requis : 
-
-    - informatique :
-        * <span style="color:green">programmation</span>
-        * <span style="color:green">utilisation de l'ordinateur et environnement</span> 
-        
-        </br> 
-    
-    - mathématique :
-        * <span style="color:orange">fonctions</span>
-        * <span style="color:orange">fonctions trigonométriques simples</span> 
-        * <span style="color:green">représentation sur un repère plan</span> 
-        
-        </br>
-    
-    - physique :
-        
-        * <span style="color:orange">notion d'onde mécanique (pression, compression-dilatation)</span>    
-</br>
-    
-    Supports didactiques : 
-    
-    ordinateur et environnement de programmation, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur.
-
-<br/>
-
-<a name="myfootnote1">1</a>: *code couleur pour le niveau de connaissance dans le degré :* 
-
-<span style="color:green">vert : basique </span>  <span style="color:orange"> orange : médian </span> <span style="color:red"> rouge : avancé </span> 
-
-<a name="Section1.2"></a>
-<br/>
 ## Contenu fréquentiel (analyse spectrale) 
 
 <a name="Section1.2.1"></a>
@@ -233,10 +231,9 @@ Un son est une vibration mécanique se propageant dans un milieu matériel jusqu
 ### Signal pur
 Un signal audio pur est un signal sinusoïdal.
 
-* *{Activité 2 : l’activité 1 est reprise. Le module pyo va être utilisé. Import de la bibliothèque, utilisation des fonctions pyo spécifique afin de « sortir » le son à partir des fichiers sinusoïdaux créés au cours de l’activité 1. La relation fréquence – hauteur du son est ainsi appréciée}*
 
-     *[Supports didactiques : ordinateur et environnement de programmation, documentation papier ou en ligne, supports papier pour la prise de notes]* 
-
+<a name="Section1.2"></a>
+<br/>
 <center> 
 
 ```{image} png/Im6.png
@@ -286,9 +283,172 @@ Un signal complexe est un signal à contenu fréquentiel multiple. Il correspond
 <center> Composition spectrale d’un signal </center>
 <br/>
 
-* *{Activité 3 : les travaux des deux précédentes activités sont repris. Les élèves vont construire des nouveaux signaux à partir des fichiers sinusoïdaux déjà obtenus... en les ajoutant ! De nouvelles courbes sont ainsi tracées. Via le module pyo, le résultat peut être écouté. Cette activité permet d’aller progressivement vers la notion de composition/décomposition spectrale et de transformée de Fourier..}*
 
-    *[Supports didactiques : ordinateur et environnement de programmation, documentation papier ou en ligne, supports papier pour la prise de notes]*
+* * Activité 1 - **Signaux sonores élémentaires**
+
+    Classe : 1M, 2M
+
+    <span style="color:green">Difficulté : basique </span> <sup> [1](#myfootnote1)</sup>
+    
+
+    Objectif informatique 1 : 
+    - le premier objet de cette activité est de permettre à l'élève d'appréhender la problématique de la représentation de l'information au sens large, comme le passage d'un univers symbolique à un autre.
+    Il s'agit ici de passer d'un espace physique sensoriel (l'audition) à un autre espace sensoriel (la vue) et à la modélisation mathématique permettant de représenter un phénomène, ici acoustique (la représentation sinusoïdale continue d'une onde harmonique). Ce premier travail intellectuel doit permettre aux élèves d'une part de se familiariser avec le matériau servant de support aux activités suivantes (les éléments relatifs au son), et d'autre part de faciliter leur compréhension du changement de paradigme ultérieur entre l'espace physique (plutôt que mathématique) et l'espace numérique et le codage binaire de l'information.
+    - le second objet de cette activité est de permettre aux élèves de se familiariser avec les outils informatiques de visualisation graphique et de production sonore, offrant deux modes de représentation du son. 
+    En particulier l'information fréquentielle, essentielle en traitement du signal, est abordée visuellement dans le plan temporel (sinusoide, période) et perçue auditivement (hauteur du son - grave/aigu).
+    
+    </br>
+
+    Objectif informatique 2 : 
+    - cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphe sinusoïdal obtenu via un programme python, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
+    
+    
+    </br>
+
+    Objectif mathématique et physique (transversal) :
+    - l'activité permet de réactiver, confirmer ou s'appuyer sur des savoirs mathématiques relatifs aux relations fonctionnelles,  aux représentations dans le plan et à la trigonométrie.
+    - l'activité permet de réactiver, confirmer ou s'appuyer sur savoirs mécaniques et physiques relativement aux ondes, à la notion de milieu de propagation, de période et de fréquence.
+
+    </br>
+
+    Mode : branché / débranché
+
+    <br/>
+    Pré-requis : 
+
+    - informatique :
+        * <span style="color:green">programmation</span>
+        * <span style="color:green">utilisation de l'ordinateur et environnement</span> 
+        
+        </br> 
+    
+    - mathématique :
+        * <span style="color:orange">fonctions</span>
+        * <span style="color:orange">fonctions trigonométriques simples</span> 
+        * <span style="color:green">représentation sur un repère plan</span> 
+        
+        </br>
+    
+    - physique :
+        
+        * <span style="color:orange">notion d'onde mécanique (pression, compression-dilatation)</span>    
+</br>
+
+    Durée : la séquence d'enseignement se découpe en quatre séances de 45mn et une de 30mn. 
+        
+    1ère séance : éléments de cours sur l'information et le son en particulier.
+    Problématique de la représentation. Rappels mathématiques et physiques sur les notions abordées.
+
+    2ème séance : activité proprement dite.
+
+    3ème séance : reprise de l'activité et des notions traitées.
+    
+    4ème séance : exercices pratiques.
+
+    5ème séance : évaluation.
+</br>
+</br>
+    Moments didactiques :
+</br>  1. Mise en situation - Première séance (cours) - <span style="color:violet">45mn</span>
+</br>2. Exploration individuelle : chaque élève prend possession du matériel, des outils : ordinateur, environnement de travail, programmes son1.py et son2.py, matériel audio - Deuxième séance (activité proprement dite) - <span style="color:violet">10mn</span>
+</br>3. Moment technique et technologique : les élèves manipulent les programmes son1.py puis son2.py, lancent les exécutions, manipulent les fenêtres graphiques (interfaces), observent graphes et sons. Via la bibliothèque matplotlib, le résultat peut être visualisé et via la bibliothèque pyo, il peut être écouté. Les élèves travaillent de manière autonome, les échanges sont limités. L'enseignant circule dans la classe et s'assure de l'appropriation des outils et de la compréhension des phénomènes. Deuxième séance - <span style="color:violet">35mn</span>
+</br>4. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, imterprétation. Interprétation de la courbe sinusoïde et de sa fréquence (espace temporel) visuellement et auditivement, par l'utilisation du programme son2.py. Troisième séance - <span style="color:violet">45mn</span>
+</br>5. Travail sur la technique : les élèves sont laissés en autonomie sur leurs postes de travail, ré-expérimentent les outils et concepts institutionnalisés en manipulant les paramètres du programme son2.py (fréquences, amplitudes). Ils réalisent les signaux (graphiques et audios) proposés sur la fiche d'exercice distribuée par l'enseignant. Quatrième séance - <span style="color:violet">45mn</span>
+</br>6. Evaluation. Cinquième séance - <span style="color:violet">30mn</span>
+</br> </br>
+
+    Supports didactiques : 
+    
+    ordinateur individuel et environnement de programmation, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
+
+<br/>
+
+<a name="myfootnote1">1</a>: *code couleur pour le niveau de connaissance dans le degré :* 
+
+<span style="color:green">vert : basique </span>  <span style="color:orange"> orange : médian </span> <span style="color:red"> rouge : avancé </span> 
+
+<br/>
+
+* * Activité 2 - **Composition (addition) de signaux sonores élémentaires**
+
+    Classe : 1M, 2M
+
+    <span style="color:orange">Difficulté : médian </span> <sup> [1](#myfootnote1)</sup>
+    
+
+    Objectif informatique 1 : 
+    - cette activité poursuit la problématique de la représentation de l'information sonore, dans la continuité de l'activité 1.
+    L'élève poursuit son apprentissage des différents modes de représentation par une complexification liée à la somme de signaux sinusoïdaux. Ce deuxième travail met l'élève face à modification visuelle opérées par l'addition de signaux, et la modification auditive perçue.
+    Cette complexification est une étape décisive afin de comprendre la nature d'un signal sonore quelconque et de la problématique ultérieure de sa représentation numérique.
+    - le second objet de cette activité reste la familiarisation avec les outils informatiques de visualisation graphique et de production sonore, offrant deux modes de représentation du son, le premier offrant à présent une représentation également dans le plan spectral.
+    L'addition sonore est ainsi perçue visuellement (différentes oscillations) et auditivement (composition harmonique).
+    
+    </br>
+
+    Objectif informatique 2 : 
+    - cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphes sinusoïdaux obtenus via un programme python, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
+    
+    
+    </br>
+
+    Objectif mathématique et physique (transversal) :
+    - l'activité permet de réactiver, confirmer ou s'appuyer sur des savoirs mathématiques relatifs aux relations fonctionnelles,  aux représentations dans le plan et à la trigonométrie.
+    - l'activité permet de réactiver, confirmer ou s'appuyer sur savoirs mécaniques et physiques relativement aux ondes, à la notion de milieu de propagation, de période et de fréquence.
+
+    </br>
+
+    Mode : branché / débranché
+
+    <br/>
+    Pré-requis : 
+
+    - informatique :
+        * <span style="color:green">programmation</span>
+        * <span style="color:green">utilisation de l'ordinateur et environnement</span> 
+        
+        </br> 
+    
+    - mathématique :
+        * <span style="color:orange">fonctions, addition de fonctions</span>
+        * <span style="color:orange">fonctions trigonométriques simples</span> 
+        * <span style="color:green">représentation sur un repère plan</span> 
+        
+        </br>
+    
+    - physique :
+        
+        * <span style="color:orange">notion d'onde mécanique (pression, compression-dilatation)</span>    
+</br>
+
+    Durée : la séquence d'enseignement se découpe en quatre séances de 45mn et une de 30mn. 
+        
+    1ère séance : reprise rapide des éléments de cours sur l'information et le son en particulier. Rappels mathématiques (somme de fonctions) et physiques sur les notions abordées.
+
+    2ème séance : activité proprement dite.
+
+    3ème séance : reprise de l'activité et des notions traitées.
+    
+    4ème séance : exercices pratiques.
+
+    5ème séance : évaluation.
+</br>
+</br>
+    Moments didactiques :
+</br>  1. Mise en situation - Première séance (cours) - <span style="color:violet">45mn</span>
+</br>2. Exploration individuelle : chaque élève prend possession du matériel, des outils : ordinateur, environnement de travail, programmes son2.py (déjà utilisé) puis son3.py et son4.py, matériel audio - Deuxième séance (activité proprement dite) - <span style="color:violet">10mn</span>
+</br>3. Moment technique et technologique : les travaux de la précédente activité sont repris. Les élèves vont construire des nouveaux signaux à partir des fichiers sinusoïdaux déjà obtenus... en les ajoutant ! De nouvelles courbes sont ainsi tracées. Via la bibliothèque matplotlib, le résultat peut être visualisé et via la bibliothèque pyo, il peut être écouté. Cette activité permet d’aller progressivement vers la notion de composition/décomposition spectrale et de transformée de Fourier... Les élèves manipulent les programmes son3.py puis son4.py, lancent les exécutions, manipulent les fenêtres graphiques (interfaces), observent graphes et sons. Ils travaillent de manière autonome, les échanges sont limités. L'enseignant circule dans la classe et s'assure de l'appropriation des outils et de la compréhension des phénomènes. Deuxième séance - <span style="color:violet">35mn</span>
+</br>4. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, imterprétation. Interprétation du signal obtenu dans le plan fréquence (spectre) pour un signal simple, puis de la courbe résultant de la somme des sinusoïdes élémentaires (espace temporel) visuellement et auditivement, par l'utilisation du programme son3.py. Examen du spectre pour le signal somme et écoute (son4.py). Troisième séance - <span style="color:violet">45mn</span>
+</br>5. Travail sur la technique : les élèves sont laissés en autonomie sur leurs postes de travail, ré-expérimentent les outils et concepts institutionnalisés en manipulant les paramètres du programme son3.py et son4.py (fréquences, nombre d'harmoniques, amplitudes). Ils réalisent les signaux (graphiques et audios) proposés sur la fiche d'exercice distribuée par l'enseignant. Quatrième séance - <span style="color:violet">45mn</span>
+</br>6. Evaluation. Cinquième séance - <span style="color:violet">30mn</span>
+</br> </br>
+
+    Supports didactiques : 
+    
+    ordinateur individuel et environnement de programmation, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
+
+<br/>
+
+
 
 <br/>
 
