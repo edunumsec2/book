@@ -350,17 +350,80 @@ Un signal complexe est un signal à contenu fréquentiel multiple. Il correspond
 </br>
     Moments didactiques :
 </br>  1. Mise en situation - Première séance (cours) - <span style="color:violet">45mn</span>
-</br>2. Exploration individuelle : chaque élève prend possession du matériel, des outils : ordinateur, environnement de travail, programmes son1.py et son2.py, matériel audio - Deuxième séance (activité proprement dite) - <span style="color:violet">10mn</span>
-</br>3. Moment technique et technologique : les élèves manipulent les programmes son1.py puis son2.py, lancent les exécutions, manipulent les fenêtres graphiques (interfaces), observent graphes et sons. Via la bibliothèque matplotlib, le résultat peut être visualisé et via la bibliothèque pyo, il peut être écouté. Les élèves travaillent de manière autonome, les échanges sont limités. L'enseignant circule dans la classe et s'assure de l'appropriation des outils et de la compréhension des phénomènes. Deuxième séance - <span style="color:violet">35mn</span>
-</br>4. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, imterprétation. Interprétation de la courbe sinusoïde et de sa fréquence (espace temporel) visuellement et auditivement, par l'utilisation du programme son2.py. Troisième séance - <span style="color:violet">45mn</span>
-</br>5. Travail sur la technique : les élèves sont laissés en autonomie sur leurs postes de travail, ré-expérimentent les outils et concepts institutionnalisés en manipulant les paramètres du programme son2.py (fréquences, amplitudes). Ils réalisent les signaux (graphiques et audios) proposés sur la fiche d'exercice distribuée par l'enseignant. Quatrième séance - <span style="color:violet">45mn</span>
+</br>2. Exploration individuelle : chaque élève prend possession du matériel, des outils : ordinateur, environnement de travail, programmes tracesinus.py et listensinus.py, puis tracesinush.py et listensinush.py, matériel audio - Deuxième séance (activité proprement dite) - <span style="color:violet">10mn</span>
+</br>3. Moment technique et technologique : les élèves manipulent les programmes tracesinus.py et listensinus.py, puis tracesinush.py et listensinush, lancent les exécutions, manipulent les fenêtres graphiques (interfaces), observent graphes et sons. Via la bibliothèque matplotlib, le résultat peut être visualisé et via la bibliothèque pyo, il peut être écouté. Les élèves travaillent de manière autonome, les échanges sont limités. L'enseignant circule dans la classe et s'assure de l'appropriation des outils et de la compréhension des phénomènes. Deuxième séance - <span style="color:violet">35mn</span>
+</br>4. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, imterprétation. Interprétation de la courbe sinusoïde et de sa fréquence (espace temporel) visuellement et auditivement, par l'utilisation des programmes listensinus.py et listensinush.py.. Troisième séance - <span style="color:violet">45mn</span>
+</br>5. Travail sur la technique : les élèves sont laissés en autonomie sur leurs postes de travail, ré-expérimentent les outils et concepts institutionnalisés en manipulant les paramètres des programmes tracesinush.py et listensinush.py (fréquences, amplitudes). Ils réalisent les signaux (graphiques et audios) proposés sur la fiche d'exercice distribuée par l'enseignant. Quatrième séance - <span style="color:violet">45mn</span>
 </br>6. Evaluation. Cinquième séance - <span style="color:violet">30mn</span>
 </br> </br>
 
     Supports didactiques : 
     
-    ordinateur individuel et environnement de programmation, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
+    ordinateur individuel, environnement de programmation et programmes python, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
 
+```
+def tracesinus(freq):
+#  sinus function at freq(Hz) frequency
+    t = np.arange(0., 0.01, 0.00005)
+    plt.plot(t,np.sin(2*pi*freq*t))
+    label1 = "fonction sinus, fréquence " 
+    label2 = str(freq) 
+    label3 = "Hz"
+    label = label1 + label2 + label3 
+    plt.ylabel(label)
+    plt.show()
+   ```
+```
+def listensinus(freq):
+#  sinus function at freq(Hz) frequency
+   s = Server().boot()
+   s.start()
+   a = Sine(freq, mul=1, add=0).out()
+   time.sleep(5)
+   s.stop()
+   ```
+
+
+```
+def tracesinush(freq, harmo):
+#  sinus function at freq(Hz) frequency, and harmo harmonics
+   t = np.arange(0., 0.005, 1/(30*harmo*freq))
+   plt.figure(figsize = (harmo+4, harmo+2))
+   for i in range (1,harmo+1):
+      nbr = 330+i
+      plt.subplot(nbr)
+      plt.plot(t,np.sin(2*pi*i*freq*t))
+      label1 = "fonction sinus, fréquence " 
+      label2 = str(i*freq) 
+      label3 = "Hz"
+      label = label1 + label2 + label3 
+      myText = plt.title(label, size = 'x-small')
+      fontsize = 8
+      plt.title(label)
+   plt.show()   
+   plt.figure(figsize = (8, 6))
+   for i in range (1,harmo+1):
+      plt.plot(t,np.sin(2*pi*i*freq*t))
+   label1 = "fonction sinus, fréquences " 
+   label =''
+   for i in range (1,harmo+1):
+      label2 = str(i*freq) 
+      label3 = "Hz "
+      label = label + label2 + label3 
+   label = label1 + label
+   plt.title(label)
+   plt.show()   
+```
+```
+def listensinush(freq, harmo):
+#  sinus function at freq(Hz) frequency, and harmo harmonics
+   s = Server().boot()
+   for i in range (1,harmo+1):
+      s.start()
+      a = Sine(i*freq, mul=1, add=0).out()
+      time.sleep(1)
+      s.stop()  
+```
 <br/>
 
 <a name="myfootnote1">1</a>: *code couleur pour le niveau de connaissance dans le degré :* 
@@ -435,19 +498,40 @@ Un signal complexe est un signal à contenu fréquentiel multiple. Il correspond
 </br>
     Moments didactiques :
 </br>  1. Mise en situation - Première séance (cours) - <span style="color:violet">45mn</span>
-</br>2. Exploration individuelle : chaque élève prend possession du matériel, des outils : ordinateur, environnement de travail, programmes son2.py (déjà utilisé) puis son3.py et son4.py, matériel audio - Deuxième séance (activité proprement dite) - <span style="color:violet">10mn</span>
-</br>3. Moment technique et technologique : les travaux de la précédente activité sont repris. Les élèves vont construire des nouveaux signaux à partir des fichiers sinusoïdaux déjà obtenus... en les ajoutant ! De nouvelles courbes sont ainsi tracées. Via la bibliothèque matplotlib, le résultat peut être visualisé et via la bibliothèque pyo, il peut être écouté. Cette activité permet d’aller progressivement vers la notion de composition/décomposition spectrale et de transformée de Fourier... Les élèves manipulent les programmes son3.py puis son4.py, lancent les exécutions, manipulent les fenêtres graphiques (interfaces), observent graphes et sons. Ils travaillent de manière autonome, les échanges sont limités. L'enseignant circule dans la classe et s'assure de l'appropriation des outils et de la compréhension des phénomènes. Deuxième séance - <span style="color:violet">35mn</span>
-</br>4. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, imterprétation. Interprétation du signal obtenu dans le plan fréquence (spectre) pour un signal simple, puis de la courbe résultant de la somme des sinusoïdes élémentaires (espace temporel) visuellement et auditivement, par l'utilisation du programme son3.py. Examen du spectre pour le signal somme et écoute (son4.py). Troisième séance - <span style="color:violet">45mn</span>
-</br>5. Travail sur la technique : les élèves sont laissés en autonomie sur leurs postes de travail, ré-expérimentent les outils et concepts institutionnalisés en manipulant les paramètres du programme son3.py et son4.py (fréquences, nombre d'harmoniques, amplitudes). Ils réalisent les signaux (graphiques et audios) proposés sur la fiche d'exercice distribuée par l'enseignant. Quatrième séance - <span style="color:violet">45mn</span>
+</br>2. Exploration individuelle : chaque élève prend possession du matériel, des outils : ordinateur, environnement de travail, programmes tracesinush.py et listensinush.py (déjà utilisés), puis puresignalssum.py, matériel audio - Deuxième séance (activité proprement dite) - <span style="color:violet">10mn</span>
+</br>3. Moment technique et technologique : les travaux de la précédente activité sont repris. Les élèves vont construire des nouveaux signaux à partir des fichiers sinusoïdaux déjà obtenus... en les ajoutant via le programme puresignalssum.py ! De nouvelles courbes sont ainsi tracées. Via la bibliothèque pyo, le résultat peut être visualisé et écouté. Cette activité permet d’aller progressivement vers la notion de composition/décomposition spectrale et de transformée de Fourier... Les élèves manipulent le programme puresignalssum.py, lancent les exécutions, manipulent les fenêtres graphiques (interfaces), observent graphes et sons. Ils travaillent de manière autonome, les échanges sont limités. L'enseignant circule dans la classe et s'assure de l'appropriation des outils et de la compréhension des phénomènes. Deuxième séance - <span style="color:violet">35mn</span>
+</br>4. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, imterprétation. Interprétation du signal obtenu dans le plan fréquence (spectre) pour un signal simple, puis de la courbe résultant de la somme des sinusoïdes élémentaires (espace temporel) visuellement et auditivement, par l'utilisation du programme puresignalssum.py. Examen du spectre pour le signal somme et écoute. Troisième séance - <span style="color:violet">45mn</span>
+</br>5. Travail sur la technique : les élèves sont laissés en autonomie sur leurs postes de travail, ré-expérimentent les outils et concepts institutionnalisés en manipulant les paramètres du programme puresignalssum.py (fréquences, nombre d'harmoniques, puis amplitudes et fenêtre via l'interface graphique). Ils réalisent les signaux (graphiques et audios) proposés sur la fiche d'exercice distribuée par l'enseignant. Quatrième séance - <span style="color:violet">45mn</span>
 </br>6. Evaluation. Cinquième séance - <span style="color:violet">30mn</span>
 </br> </br>
 
     Supports didactiques : 
     
-    ordinateur individuel et environnement de programmation, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
+    ordinateur individuel, environnement de programmation et programmes python, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
+
+```
+def puresignalssum(freq, harmo):
+#  harmonic signals
+   s = Server().boot()
+   somme = 0
+   for i in range (1,harmo+1):
+      s.start()
+      a = Sine(i*freq, mul=1, add=0).out()
+      time.sleep(1)
+#  graphic vizualisation       
+      namesc = 'Signal '+str(i*freq)+' Hz'
+      sc = Scope(a, 0.003, 0.2, wintitle=namesc) 
+      namespeca = 'Spectre du signal '+str(i*freq)+' Hz'
+      speca = Spectrum(a, size=4096, wintype=0, wintitle=namespeca)
+      somme=somme+a
+   speca.outsc = Scope(somme, 0.003, 0.2, wintitle='somme des signaux')
+   speca = Spectrum(somme, size=4096, wintype=0, wintitle='spectre de la somme')
+   somme.out
+   s.gui(locals())
+
+```
 
 <br/>
-
 
 
 <br/>
@@ -467,7 +551,7 @@ Un signal complexe est un signal à contenu fréquentiel multiple. Il correspond
 #### Amplitude
 #### Fréquence ou contenu fréquentiel
 #### Enveloppe
-* *{Activité 4.2 : les fichiers de l’activité 3 sont repris. Les élèves éditent des courbes de différentes amplitudes et fréquence et apprécient auditivement le résultat, via le module pyo ou music21. Ensuite, via un interface graphique, ils peuvent modifier ces paramètres en temps réel en manipulant des « potentiomètres » graphiques : modulation d’amplitude et de fréquence. Une troisième étape est l’introduction de la notion d’enveloppe (Attack Delay Sustain Release} : elle est introduite via le module pyo ; les élèves peuvent modifier chacun de ces 4 paramètres, distinctement ou ensemble.}*
+* *{Activité 4.2 : les fichiers de l’activité 2 sont repris. Les élèves éditent des courbes de différentes amplitudes et fréquence et apprécient auditivement le résultat, via le module pyo. Ensuite, via un interface graphique, ils peuvent modifier ces paramètres en temps réel en manipulant des « potentiomètres » graphiques : modulation d’amplitude et de fréquence. Une troisième étape est l’introduction de la notion d’enveloppe (Attack Delay Sustain Release} : elle est introduite via le module pyo ; les élèves peuvent modifier chacun de ces 4 paramètres, distinctement ou ensemble.}*
 
 A travers la perception de ces trois paramètres (amplitude, fréquence-contenu fréquentiel et enveloppe), les élèves ont une appréciation auditive et visuelle (donc sensorielle), mais également physique et mathématique de la notion de timbre.
 * *[Supports didactiques : ordinateur et environnement de programmation, documentation papier ou en ligne, supports papier pour la prise de notes]*
