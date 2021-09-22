@@ -9,17 +9,17 @@ parts:
     sections:
       - file: content/theme/representation-information/cours/representation-entiers/maitre
       - file: content/theme/representation-information/cours/representation-images/eleve
+    #  - file: content/theme/representation-information/cours/representation-images/maitre
       - file: content/theme/representation-information/activites/representation-images/bitmap/bitmap
       - file: content/theme/representation-information/activites/representation-images/EncoderImages/EncoderImages
       - file: content/theme/representation-information/activites/representation-son/visu-et-ecoute-son.md
-      
-  - file: content/theme/representation-information/exercices/eleve
-    sections:
-      - file: content/theme/representation-information/exercices/representation-caracteres/carte-perforee/exercice
-  - file: content/theme/representation-information/activites/eleve
-    sections:
-      - file: content/theme/representation-information/activites/representation-entiers/magie-binaire/magie_binaire
-      - file: content/theme/representation-information/activites/redondance/radiotelephonie/activite
+      - file: content/theme/representation-information/exercices/eleve
+        sections:
+          - file: content/theme/representation-information/exercices/representation-caracteres/carte-perforee/exercice
+      - file: content/theme/representation-information/activites/maitre
+        sections:
+          - file: content/theme/representation-information/activites/representation-entiers/magie-binaire/magie_binaire
+          - file: content/theme/representation-information/activites/redondance/radiotelephonie/activite
 
   - file: content/theme/programmation/maitre
     sections:
