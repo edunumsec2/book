@@ -25,9 +25,9 @@
     * [Générer et enregistrer un son numérique](#Section2.2)
         * [Synthèse pwm – Problématique générale](#Section2.2.1)
         * [Les synthétiseurs actuels et les banques de sons](#Section2.2.2)
-        * [« Capter » le son numérique¶](#Section2.2.3)
-        * [« Garder en mémoire » le son numérique¶](#Section2.2.4)
-        * [Transmettre le son numérique¶](#Section2.2.5)
+        * [« Capter » le son numérique](#Section2.2.3)
+        * [« Garder en mémoire » le son numérique](#Section2.2.4)
+        * [Transmettre le son numérique](#Section2.2.5)
 * [Transmission du son](#Chapter3)
     * [Problématique du canal de transmission](#Section3.1)
         * [De l'émetteur vers le récepteur](#Section3.1.1)
@@ -45,36 +45,47 @@
 <a name="Introduction"></a>
 # Introduction 
 Le lien entre mathématiques et musique n’est pas récent puisque dès l'antiquité la musique est associée aux mathématiques. Elle est même considérée par Pythagore au VIe siècle avant J.C. comme étant une science mathématique, au même titre que l'arithmétique, l'astronomie et la géométrie.
+</br>
 <center> 
+
 ```{image} png/Im01.jpg
-:width: 500px
-:height: 350px
+:width: 400px
+:height: 300px
 ```
 </center>
-  
+</br>
+
 On cite souvent Pythagore comme l'un des pères de la théorie musicale. C'est à lui qu'on doit la compréhension des fréquences, c'est-à-dire des différentes hauteurs qui sont symbolisées par les notes de musique.
 
-Un travail que continuera, des siècles plus tard, Jean-Philippe Rameau avec son fameux Traité de l'harmonie réduite à ses principes naturels publié en 1722. <center> 
+Un travail que continuera, des siècles plus tard, Jean-Philippe Rameau avec son fameux Traité de l'harmonie réduite à ses principes naturels publié en 1722. 
+</br>
+<center> 
+
 ```{image} png/Im02.jpg
 :width: 300px
-:height: 400px
+:height: 300px
 ```
 </center>
+</br>
   À la même époque, Jean-Sébastien Bach s'amuse à utiliser des procédés mathématiques, pour écrire ses fugues en jouant avec la symétrie par exemple.
 
 La musique serait donc mathématique, c'est du moins ce que disait Leibniz en 1712 :
 "La musique est un exercice caché d'arithmétique, l'esprit n'ayant pas conscience qu'il est en train de compter".
-
+</br>
 <center> 
+
 ```{image} png/Im03.jpg
-:width: 300px
-:height: 400px
+:width: 250px
+:height: 300px
 ```
 </center>
+</br>
 Car contrairement à la peinture ou la littérature, la musique peut très précisément se traduire en équations et en graphique.  
 
 Au XXe siècle, les compositeurs cherchent à tout prix à se détacher de la musique tonale. Il faut trouver de nouveaux systèmes de composition. On assiste alors à la création de l'atonalité, du dodécaphonisme, de la musique sérielle.
-Exemple avec l'un des compositeurs les plus inclassables de la première moitié du siècle dernier: Béla Bartók. <center> 
+Exemple avec l'un des compositeurs les plus inclassables de la première moitié du siècle dernier: Béla Bartók. 
+</br>
+<center> 
 
 ```{image} png/Im05.jpg
 :width: 200px
@@ -87,7 +98,11 @@ Exemple avec l'un des compositeurs les plus inclassables de la première moitié
 :width: 300px
 :height: 400px
 ```
-</center>Il utilise le nombre d'or pour structurer ses compositions, c'est-à-dire un rapport proportionnel entre différents éléments d'une même pièce. Il est certainement l'un des premiers compositeurs à se servir de ce procédé de manière consciente. 
+</center>
+</br>
+Il utilise le nombre d'or pour structurer ses compositions, c'est-à-dire un rapport proportionnel entre différents éléments d'une même pièce. Il est certainement l'un des premiers compositeurs à se servir de ce procédé de manière consciente. 
+</br>
+</br>
 <center> 
 
 ```{image} png/Im07.jpg
@@ -100,27 +115,36 @@ Exemple avec l'un des compositeurs les plus inclassables de la première moitié
 :width: 300px
 :height: 400px
 ```
-</center>En résulte une structure cohérente et qui paraît équilibrée sans que l'esprit ne comprenne pourquoi. <a href="https://youtu.be/5D3cwOUQIYs"> Jugez par vous même</a> avec <a href="https://youtu.be/bKWZVYnALXo ">  le 3e mouvement du Concerto pour piano n°3.</a>
+</center>
+</br>
+En résulte une structure cohérente et qui paraît équilibrée sans que l'esprit ne comprenne pourquoi. <a href="https://youtu.be/5D3cwOUQIYs"> Jugez par vous même</a> avec <a href="https://youtu.be/bKWZVYnALXo ">  le 3e mouvement du Concerto pour piano n°3.</a>
 Le nombre d'or également utilisé par Iannis Xenakis, compositeur grec, et qui a une formation d'architecte et d'ingénieur. Il crée une musique nouvelle qui est constituée de masses sonores. Cela donnera Metastasis en 1955, une composition entièrement déduite de règles et de procédures mathématiques.
-Il ira encore plus loin en créant des algorithmes pour tenter de représenter musicalement les notions de hasard et de probabilité.<center> 
+Il ira encore plus loin en créant des algorithmes pour tenter de représenter musicalement les notions de hasard et de probabilité.
+</br>
+</br>
+<center> 
 
 ```{image} png/Im06.jpg
 :width: 500px
 :height: 400px
 ```
 </center>
-
+</br>
 Il n'y a pas que les compositeurs qui se soient intéressés aux mathématiques. L'inverse est aussi vérifiable. De nombreux mathématiciens, physiciens, sont également de grands mélomanes voire de bons musiciens. Einstein qui était un excellent violoniste, celle qui deviendra la directrice du Cern, Fabiola Gianotti, qui en plus de son doctorat de physique sub-nucléaire expérimentale, a également un diplôme professionnel du conservatoire de Milan en piano. Ou encore la chanteuse lyrique <a href="http://www.karenvourch.com/"> Karen Vourc'h </a> titulaire d'un DEA en physique théorique à l'Ecole Normale Supérieure qui déclarait dans une interview "qu'imaginer des sons, des univers, grâce à des formules mathématiques ou sous la forme de mélodies participe au même processus de recherche intellectuelle."
 
 Et c'est certainement là que réside le mystère qui a fasciné et qui fascine toujours autant les mathématiciens, les physiciens, les scientifiques au même titre que les compositeurs. L'émotion provoquée par la musique est-elle explicable, théorisable ? A partir de quand arrête-t-on de parler de sons pour parler de musique ? La musique contemporaine basée sur des équations est-elle trop abstraite pour provoquer des émotions ?
 
-Le XXe siècle est aussi celui des machines, et en particulier celui des ordinateurs. Depuis Alan Turing en 1936 et sa célèbre « machine », ses concepts de programme prendront tout leur sens avec l’essort des ordinateurs. <center> 
+Le XXe siècle est aussi celui des machines, et en particulier celui des ordinateurs. Depuis Alan Turing en 1936 et sa célèbre « machine », ses concepts de programme prendront tout leur sens avec l’essort des ordinateurs. 
+</br>
+<center> 
 
 ```{image} png/Im09.jpg
 :width: 500px
 :height: 450px
 ```
-</center>Ce siècle voit s’interpénétrer mathématiques et informatique, cette dernière discipline investissant aujourd’hui tous les champs de l’activité humaine.
+</center>
+</br>
+Ce siècle voit s’interpénétrer mathématiques et informatique, cette dernière discipline investissant aujourd’hui tous les champs de l’activité humaine.
 L'algorithme, objet central de l'informatique, mais aussi objet des mathématiques depuis des siècles, prend maintenant une nouvelle place dans les mathématiques et nécessairement dans leur enseignement. Les mathématiques s'en trouvent interrogées et leur enseignement aussi. Cette discipline a acquis aujourd’hui dans le monde de la recherche un statut comparable à celui de l’algèbre, de la géométrie ou de l’analyse, ou encore des probabilités statistiques. Le National Council of Teachers of Mathematics a consacré en 1998, son «Yearbook» à l'enseignement et l'apprentissage des algorithmes dans la classe de mathématiques (NCTM 1998). 
 
 Depuis 2009, en France, une part d'algorithmique a été introduite dans les programmes du lycée et le vocable apparaît même à l’école primaire. La discipline trouve peu à peu sa place dans les manuels du secondaire... et dans le cœur des enseignants de mathématiques.
@@ -141,7 +165,7 @@ Dans ce contexte, l’élaboration de séquences d’enseignement, dont la final
 
 On se propose ici de poser le cadre de séquences d’enseignement de l’informatique à destination d’un public d’élèves de l’enseignement secondaire deux (maturité), mêlant mathématiques, physique, et s’appuyant sur les leviers pédagogiques et didactiques offerts par l’expérience sensorielle (la musique) et la métacognition.
 
-Cette vingtaine d’activités constitue une base de travail pouvant être utilisée à différents niveaux d’approfondissement concernant l’apprentissage informatique : familiarisation avec un environnement informatique général (machine et hardware, système d’exploitation, fichiers, dossiers, communication via serveur ou entre machines, ...), de programmation (éditeur graphique, langage – python), exploitation et création via l’environnement de programmation (accès aux bibliothèques spécifiques, à la documentation en ligne, créations de programmes et d’utilitaires, manipulation et/ou création d’interfaces graphiques, utilisation approfondie du langage de programmation et des interfaces ...).
+Cette dizaine d’activités constitue une base de travail pouvant être utilisée à différents niveaux d’approfondissement concernant l’apprentissage informatique : familiarisation avec un environnement informatique général (machine et hardware, système d’exploitation, fichiers, dossiers, communication via serveur ou entre machines, ...), de programmation (éditeur graphique, langage – python), exploitation et création via l’environnement de programmation (accès aux bibliothèques spécifiques, à la documentation en ligne, créations de programmes et d’utilitaires, manipulation et/ou création d’interfaces graphiques, utilisation approfondie du langage de programmation et des interfaces ...).
 
 Elle peut être ajustée également s’agissant des différents niveaux de profondeurs souhaités concernant les autres disciplines fondamentales dont il est fait référence, les mathématiques, la mécanique et la physique, et intéresser indifféremment toutes les années de la maturité.
 
@@ -288,7 +312,8 @@ Un signal complexe est un signal à contenu fréquentiel multiple. Il correspond
 
     Classe : 1M, 2M
 
-    <span style="color:green">Difficulté : basique </span> <sup> [1](#myfootnote1)</sup>
+    <span style="color:green">Difficulté : basique </span> 
+    <sup> [1](#myfootnote1)</sup>
     
 
     Objectif informatique 1 : 
@@ -318,7 +343,8 @@ Un signal complexe est un signal à contenu fréquentiel multiple. Il correspond
 
     - informatique :
         * <span style="color:green">programmation</span>
-        * <span style="color:green">utilisation de l'ordinateur et environnement</span> 
+        * <span style="color:green">utilisation de l'ordinateur et environnement
+        </span> 
         
         </br> 
     
@@ -436,7 +462,8 @@ def listensinush(freq, harmo):
 
     Classe : 1M, 2M
 
-    <span style="color:orange">Difficulté : médian </span> <sup> [1](#myfootnote1)</sup>
+    <span style="color:orange">Difficulté : médian </span> 
+    <sup> [1](#myfootnote1)</sup>
     
 
     Objectif informatique 1 : 
@@ -467,7 +494,8 @@ def listensinush(freq, harmo):
 
     - informatique :
         * <span style="color:green">programmation</span>
-        * <span style="color:green">utilisation de l'ordinateur et environnement</span> 
+        * <span style="color:green">utilisation de l'ordinateur et environnement
+        </span> 
         
         </br> 
     
@@ -594,7 +622,8 @@ L'enveloppe d'un signal sonore représente l'évolution de l'amplitude du signal
 
     Classe : 1M, 2M, 3M
 
-    <span style="color:orange">Difficulté : médian </span> <sup> [1](#myfootnote1)</sup>
+    <span style="color:orange">Difficulté : médian </span> 
+    <sup> [1](#myfootnote1)</sup>
     
 
     Objectif informatique 1 : 
@@ -623,7 +652,8 @@ L'enveloppe d'un signal sonore représente l'évolution de l'amplitude du signal
 
     - informatique :
         * <span style="color:green">(programmation)</span>
-        * <span style="color:green">utilisation de l'ordinateur et environnement</span> 
+        * <span style="color:green">utilisation de l'ordinateur et environnement
+        </span> 
         
         </br> 
     
