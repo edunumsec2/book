@@ -129,7 +129,8 @@ Tout d'abord, le principe de l'argument «si vous n’avez rien à cacher, vous 
 Ensuite, cet argument minimise les implications de la surveillance en termes de libertés et droits fondamentaux. Voici quelques-uns des points qu'on peut lui opposer.
 
 * **1. On ne peut être certain que ce que l'on fait aujourd’hui ne sera pas interdit demain ou ailleurs.**
-Notre situation peut évoluer, tout comme l’environnement politique et social dans lequel nous vivons. Il n’est pas sûr que ce qui est toléré  aujourd’hui le sera encore dans le futur. Notre situation peut évoluer, tout comme l’environnement politique et social dans lequel nous vivons. Il n’est pas sûr que ce qui est toléré  aujourd’hui le sera encore dans le futur. De la même manière, un acte admis dans un pays peut faire l'objet d'une répression dans un autre. Cette situation est particulièrement délicate pour les journalistes, avocat·es ou militant·es des droits humains dont les libertés peuvent être menacées.
+Notre situation peut évoluer, tout comme l’environnement politique et social dans lequel nous vivons. Il n’est pas sûr que ce qui est toléré  aujourd’hui le sera encore dans le futur. De la même manière, un acte admis dans un pays peut faire l'objet d'une répression dans un autre. Cette situation est particulièrement délicate pour les journalistes, avocat·es ou militant·es des droits humains dont les libertés peuvent être menacées. Pour ces raisons, certaines de ces professions sont déjà davantage protégées.
+
 
 * **2. On n’agit pas de la  même façon lorsque l’on se sait surveillé.** 
 La surveillance peut ainsi limiter la liberté d’expression, de création et d’action.
@@ -286,7 +287,7 @@ Par petits groupes, proposer aux élèves de réfléchir aux questions suivantes
 
    ````{dropdown} Quelques éléments de réponses
 
-  * Les États peuvent être amenés à collecter des données sur les citoyens. Cette forme de surveillance existait auparavant mais avec le développement des technologies numériques, elle a changé d’échelle. Certains gouvernements ont désormais recours à une surveillance de masse, c’est-à-dire qu’ils ne ciblent plus un individu ou un groupe suspect, mais l’ensemble de la population. Pour cela, ils s'appuient - entre autres - sur les données collectées par les grandes entreprises du numérique, comme l'a révélé le lanceur d’alerte Edward Snowden. Les pays concernés, justifient ces pratiques de surveillance comme le seul moyen de garantir la sécurité intérieure, en particulier suite aux attentats du 11 septembre 2001. Cette position est contestée par de nombreuses ONG et associations (dont [La Quadrature du Net](https://www.laquadrature.net), [Amnesty](https://www.amnesty.ch/fr/themes/surveillance/surveillance), [Privacy International](https://privacyinternational.org/fr)) qui considèrent cette surveillance comme arbitraire et contraire au droit fondamental à la vie privée.
+  * Les États peuvent être amenés à collecter des données sur les citoyens. Cette forme de surveillance existait auparavant mais avec le développement des technologies numériques, elle a changé d’échelle. Certains gouvernements ont désormais recours à une surveillance de masse, c’est-à-dire qu’ils ne ciblent plus un individu ou un groupe suspect, mais l’ensemble de la population. Pour cela, ils s'appuient - entre autres - sur les données collectées par les grandes entreprises du numérique, comme l'a révélé le lanceur d’alerte Edward Snowden. Les pays concernés, justifient ces pratiques de surveillance comme le seul moyen de garantir la sécurité intérieure, en particulier suite aux attentats du 11 septembre 2001. Cette position est contestée par de nombreuses ONG et associations (dont [La Quadrature du Net](https://www.laquadrature.net), [Amnesty International](https://www.amnesty.ch/fr/themes/surveillance/surveillance), [Privacy International](https://privacyinternational.org/fr)) qui considèrent cette surveillance comme arbitraire et contraire au droit fondamental à la vie privée.
 
   * Les fournisseurs d’accès à Internet, ainsi que de très nombreux services en ligne: réseaux sociaux, sites de e-commerce, Google et tous ses services (Gmail, Google Maps, Chrome, etc.), vidéo et musique en streaming, jeux en ligne. Pour ces entreprises, la collecte de données constitue un enjeu économique (c.f question b.)
    ````
@@ -372,7 +373,7 @@ Avec quelle personne ou groupe ci-dessous...
 
 * Votre historique de recherche Google
 * Les photos de votre smartphone
-* Vos messages WhatsApp
+* Vos messages privés
 * Les personnes que vous avez cherchées sur les réseaux sociaux
 * Les dernières vidéos que vous avez visionnées
 
