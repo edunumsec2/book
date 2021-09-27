@@ -141,16 +141,12 @@ La solution dépend de votre solution de l’exercice 8.
 ````{admonition} Exercice 11
 :class: note
 
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
 Pour chaque algorithme, compter le nombre de comparaisons de la taille de deux éléments et le nombre de mouvements (rectangles déplacés).
 
 Imaginons que ce qui prend le plus de temps est la comparaison. Dans ce cas précis, lequel des trois algorithmes faudrait-il utiliser ? 
 
 Imaginons que ce qui prend le plus de temps est le mouvement d’un élément. Dans ce cas précis, lequel des trois algorithmes serait le plus rapide ? Quel serait l’algorithme le plus lent ?
 
-```
 ````
 
 ````{admonition} Solution de l’exercice 11
