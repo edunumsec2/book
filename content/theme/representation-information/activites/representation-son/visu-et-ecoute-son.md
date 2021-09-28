@@ -697,6 +697,239 @@ Travail sur la technique : les élèves ré-expérimentent les outils et concept
 
 </br>
 
+* * Activité 3.3 - **Analyse d'un morceau de musique 1**
+
+    Classe : 1M, 2M, 3M
+
+    <span style="color:orange">Difficulté : médian </span> 
+    <sup> [1](#myfootnote1)</sup>
+    
+
+    Objectif informatique 1 : 
+    - cette activité poursuit la problématique de la représentation de l'information sonore, dans la continuité des activités précédentes.
+    Il est proposé à l'élève, à partir de l'écoute d'un morceau de musique actuelle, de retrouver les éléments mis en pratique lors des activités précédentes, de manière auditive et visuelle à travers l'utilisation du logiciel Audacity.
+    En particulier les aspects liés à la fréquence, au timbre, à l'enveloppe et à la notion d'impulsion face à celle de signal continu.
+    
+    
+    - le second objet de cette activité reste la familiarisation avec les outils informatiques de visualisation graphique et de production sonore, offrant toujours les deux modes de représentation du son. 
+    
+    
+    </br>
+
+    Objectif informatique 2 : 
+    - cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphes sinusoïdaux et ADSR obtenus via des programmes python, paramétrage de l'ADSR via une interface graphique spécifique, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
+    
+    
+    </br>
+
+    Objectif mathématique et physique (transversal) :
+    - l'activité s'appuie implicitement sur les savoirs mathématiques, physiques et mécaniques présents pour les activités précédentes, sans provoquer la réactivation de la totalité de ces savoirs. L'objet n'est pas de rentrer dans une formalisation complexe de la représentation temps-fréquence pour un signal impulsionnel, mais de sensibiliser les élèves simplement visuellement et auditivement par l'écoute et l'analyse d'un morceau de musique. 
+
+    </br>
+
+    Mode : branché / débranché
+
+    <br/>
+    Pré-requis : 
+
+    - informatique :
+        * <span style="color:green">(programmation)</span>
+        * <span style="color:green">utilisation de l'ordinateur et environnement
+        </span> 
+        
+        </br> 
+    
+    - mathématique :
+        * <span style="color:green">fonctions</span>
+        * <span style="color:green">fonctions trigonométriques simples</span> 
+        * <span style="color:green">représentation sur un repère plan</span> 
+        
+        </br>
+    
+    - physique :
+        
+        * <span style="color:green">notion d'onde mécanique (pression, compression-dilatation)</span>    
+</br>
+
+    Durée : la séquence d'enseignement se décompose en une séance de 45mn et un début de séance de 20mn : 
+        
+    1ère temps de séquence : écoute, manipulation du logiciel Audacity, prise en main (15mn). 
+<center> 
+
+```{image} png/Im39.png
+:width: 300px
+:height: 200px
+``` 
+</center> 
+<center> Visualisation d'un morceau de musique sur Audacity </center>
+</br>
+ 2ème temps de séquence : identification des savoirs  abordés lors des activités précédentes (amplitude, fréquences, enveloppe, timbre, signal comme somme de sinusoïdes). Cette phase est très dirigée par l'enseignant (15mn). 
+ 
+ </br> 
+
+<center> 
+</br> 
+
+```{image} png/Im38.png
+:width: 300px
+:height: 200px
+``` 
+
+
+```{image} png/Im37.png
+:width: 300px
+:height: 200px
+``` 
+
+```{image} png/Im36.png
+:width: 300px
+:height: 200px
+``` 
+
+```{image} png/Im35.png
+:width: 300px
+:height: 200px
+``` 
+</center> 
+<center> Visualisation d'un morceau de musique sur Audacity - zooms </center>
+<br/>
+<br/>
+    3ème temps de séquence : réutilisation des programmes puresignalssum.py et interfenvelope.py afin de construire un signal sinusoidal s'approchant d'un signal identifiable observé sur une tranche choisie du morceau (ou plusieurs). De la même manière, construction d'un signal complexe, somme de sinusoides, afin de s'approcher d'un signal observé dans le morceau. Cette phase est également très dirigée par l'enseignant qui soumet les "bons" paramétrages à la fois pour le programme puresignalssum.py, interfenvelope.py et Audacity (15mn).
+<br/>
+    4ème temps de séquence (2ème séance) : 
+    Reprise de l'activité et des notions traitées, institutionnalisation. Evaluation formative (20mn).
+</br>
+</br>
+    Moments didactiques :
+</br>  1. Mise en situation - Première séance : prise en main du logiciel Audacity - <span style="color:violet">15mn</span>
+</br>2. Rappels de connaissances tirées des expérimentations précédentes, encadré par l'enseignant (réactivation). Première séance - <span style="color:violet">15mn</span>
+</br>3. Moment technique et technologique : appropriation par comparaison, approche constructiviste. Les outils de la précédente activité sont repris (programmes puresignalssum.py, interfenvelope.py) et utilisés par les élèves sous les recommandations de l'enseignant donnant des indications précises et claires permettant de construire les signaux. Les élèves vont ainsi pouvoir comparer leurs signaux construits avec ce qu'ils ont observée préalablement avec Audacity et ainsi faire l'analogie entre les savoirs qu'ils ont développés lors des activités préceédentes et ce qu'ils ont pu observer auditivement et visuellement via le morceau analysé par Audacity.
+Premiére séance (activité proprement dite) - <span style="color:violet">15mn</span>
+</br>4-5-6. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, interprétation des signaux obtenus (espace temporel) visuellement et auditivement, par l'utilisation du programme interfenvelope.py combiné à puresignalssum.py.
+Travail sur la technique : les élèves tentent de construire d'eux-même un signal extrait du morceau à partir des programmes interfenvelope.py et puresignalssum.py. Deuxième séance - <span style="color:violet">30mn</span>. Evaluation formative. 
+</br> </br>
+    Supports didactiques : 
+    ordinateur individuel, environnement de programmation et programmes python, logiciel Audacity, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
+
+</br>
+</br>
+
+* * Activité 3.4 - **Analyse d'un morceau de musique - 2**
+
+    Classe : 1M, 2M, 3M
+
+    <span style="color:green">Difficulté : basique </span> 
+    <sup> [1](#myfootnote1)</sup>
+    
+
+    Objectif informatique 1 : 
+    - cette activité poursuit la problématique de la représentation de l'information sonore, dans la continuité des activités précédentes.
+    Il est proposé à l'élève, à partir de l'écoute d'un morceau de musique actuelle, de comprendre simplement la problématique de la numérisation discrète d'un signal continu, de manière auditive et visuelle à travers l'utilisation du logiciel Audacity.
+    
+    
+    
+    - le second objet de cette activité reste la familiarisation avec les outils informatiques de visualisation graphique et de production sonore, offrant toujours les deux modes de représentation du son. 
+    
+    
+    </br>
+
+    Objectif informatique 2 : 
+    - cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphes sinusoïdaux et ADSR obtenus via des programmes python, paramétrage de l'ADSR via une interface graphique spécifique, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
+    
+    
+    </br>
+
+    Objectif mathématique et physique (transversal) :
+    - l'activité s'appuie implicitement sur les savoirs mathématiques, physiques et mécaniques présents pour les activités précédentes, sans provoquer la réactivation de la totalité de ces savoirs. L'objet n'est pas de rentrer dans une formalisation complexe de la représentation discrète d'un signal continu, ni de rentrer dans la théorie de l'échantillonnage, mais de sensibiliser les élèves simplement visuellement et auditivement par l'écoute et l'analyse d'une tranche d'un morceau de musique. 
+
+    </br>
+
+    Mode : branché / débranché
+
+    <br/>
+    Pré-requis : 
+
+    - informatique :
+        * <span style="color:green">(programmation)</span>
+        * <span style="color:green">utilisation de l'ordinateur et environnement
+        </span> 
+        
+        </br> 
+    
+    - mathématique :
+        * <span style="color:green">fonctions</span>
+        * <span style="color:green">fonctions trigonométriques simples</span> 
+        * <span style="color:green">représentation sur un repère plan</span> 
+        
+        </br>
+    
+    - physique :
+        
+        * <span style="color:green">notion d'onde mécanique (pression, compression-dilatation)</span>    
+</br>
+
+    Durée : la séquence d'enseignement se décompose en une séance de 45mn, et un début de séance de 20 mn pour une évaluation  : 
+        
+    1ère temps de séquence : écoute, manipulation du logiciel Audacity, reprise des fichiers déjà créés (5mn). 
+    
+    2ème temps de séquence : reprise d'une tranche musicale déjà étudiée précédemment : découpage, grossissement. Cette phase est très dirigée par l'enseignant (10mn).
+    <center> 
+</br> 
+<center> 
+
+```{image} png/Im35.png
+:width: 300px
+:height: 200px
+``` 
+
+
+```{image} png/Im40.png
+:width: 300px
+:height: 200px
+``` 
+
+```{image} png/Im42.png
+:width: 300px
+:height: 200px
+``` 
+
+```{image} png/Im44.png
+:width: 300px
+:height: 200px
+``` 
+```{image} png/Im46.png
+:width: 300px
+:height: 200px
+``` 
+</center> 
+<center> Zooms successifs - Mise en évidence de la discrétisation numérique</center>
+<br/>
+    3ème temps de séquence : analyse et interprétation du phénomène observé : de la visualisation continue de la courbe représentant le son, on passe à une vision "discrète", c'est à dire que les étudiants constatent que la courbe est "découpée" en une multitude de points, les coordonnées en abscisse étant uniformément réparties.
+    Les zooms et dé-zooms successifs permettent de passer d'une vision continue "habituelle" (analogique) à une vision discrète (numérique) et donc un nouveau type de représentation. Les élèves reprennent ensuite les programmes puresignalssum.py et interfenvelope.py, génèrent un signal avec un premier paramétrage indiqué par l'enseignant, puis le même signal avec un deuxième paramétrage indiqué (échelles différentes). Ils observent la différence visuelle et auditive entre un premier signal "lisse" et le même signal avec un paramétrage différent constitué alors de lignes brisées. Ils tentent d'interpréter ce qu'ils observent.
+    Cette phase est très dirigée par l'enseignant qui donne les paramétrages à la fois pour les programmes puresignalssum.py, interfenvelope.py et Audacity (10mn).
+ <br/>   
+    4ème temps de séquence : 
+    reprise de l'activité et des notions traitées par l'enseignant, institutionnalisation (20mn).
+<br/> 
+    5ème temps de séquence : évaluation (15mn) - 2ème séance
+</br>
+</br>
+    Moments didactiques :
+</br>  1. Mise en situation - Première séance : reprise en main du logiciel Audacity et des fichiers déja créés - <span style="color:violet">5mn</span>
+</br>2. Moment technique et technologique, encadré par l'enseignant (réactivation, expérimentation). - <span style="color:violet">10mn</span>
+</br>3. Moment technique et technologique : appropriation par comparaison, approche constructiviste. Les outils de la précédente activité sont repris (programmes puresignalssum.py, interfenvelope.py) et utilisés par les élèves sous les recommandations de l'enseignant donnant des indications précises et claires permettant de construire les signaux. Les élèves vont ainsi pouvoir comparer leurs signaux construits avec ce qu'ils ont observée préalablement avec Audacity et ainsi faire l'analogie entre les savoirs qu'ils ont développés lors des activités préceédentes et ce qu'ils ont pu observer auditivement et visuellement via le morceau analysé par Audacity.
+Premiére séance (activité proprement dite) - <span style="color:violet">10mn</span>
+</br>4-5. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, interprétation des signaux obtenus (espace temporel) visuellement et auditivement, par l'utilisation du programme interfenvelope.py combiné à puresignalssum.py.
+Travail sur la technique : les élèves tentent de construire d'eux-même un signal extrait du morceau à partir des programmes interfenvelope.py et puresignalssum.py. - <span style="color:violet">20mn</span>
+</br> 6. Deuxième séance - <span style="color:violet">15mn</span>. Evaluation. 
+</br> </br>
+    Supports didactiques : 
+    ordinateur individuel, environnement de programmation et programmes python, logiciel Audacity, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
+
+
+</br><br/>
+
+
 <a name="Section1.3.2"></a>
 
 ### La musique comme « organisation » de timbres sonores
