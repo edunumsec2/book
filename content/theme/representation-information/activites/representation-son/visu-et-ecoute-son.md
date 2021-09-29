@@ -11,9 +11,9 @@
         * [Vibration et fréquence](#Section1.1.3)
     * [Contenu fréquentiel (analyse spectrale)](#Section1.2)
         * [Signal pur](#Section1.2.1)
-        * [Signal complexe (à contenu fréquentiel)](#Section1.2.2)
+        * [Signal complexe (à contenu fréquentiel)](#Section1.2.2) <span style="color:white"> ____ </span> [<span style="color:red"> Activité 1 </span>](#activite-1) <span style="color:white">____</span> [<span style="color:red"> Activité 2 </span>](#activite-2)
     * [Signal sonore et musique](#Section1.3)       
-        * [Le timbre : caractéristique d'un signal sonore](#Section1.3.1)
+        * [Le timbre : caractéristique d'un signal sonore](#Section1.3.1) <span style="color:white"> __ </span> [<span style="color:red"> Activité 3.2 </span>](#activite-3-2) <span style="color:white"> __ </span> [<span style="color:red"> Activité 3.3 </span>](#activite-3-3) <span style="color:white">__</span> [<span style="color:red"> Activité 3.4 </span>](#activite-3-4)
         * [La musique comme « organisation » de timbres sonores](#Section1.3.2)    
 * [Génération et enregistrement sonores](#Chapter2)
     * [Générer et enregistrer un son analogique](#Section2.1)
@@ -307,71 +307,68 @@ Un signal complexe est un signal à contenu fréquentiel multiple. Il correspond
 <center> Composition spectrale d’un signal </center>
 <br/>
 
+# Activité 1
+**Signaux sonores élémentaires** 
 
-* * Activité 1 - **Signaux sonores élémentaires**
+Classe : 1M, 2M
 
-    Classe : 1M, 2M
-
-    <span style="color:green">Difficulté : basique </span> 
-    <sup> [1](#myfootnote1)</sup>
+<span style="color:green">Difficulté : basique </span> 
+<sup> [1](#myfootnote1)</sup>
     
 
-    Objectif informatique 1 : 
-    - le premier objet de cette activité est de permettre à l'élève d'appréhender la problématique de la représentation de l'information au sens large, comme le passage d'un univers symbolique à un autre.
+Objectif informatique 1 : 
+- le premier objet de cette activité est de permettre à l'élève d'appréhender la problématique de la représentation de l'information au sens large, comme le passage d'un univers symbolique à un autre.
     Il s'agit ici de passer d'un espace physique sensoriel (l'audition) à un autre espace sensoriel (la vue) et à la modélisation mathématique permettant de représenter un phénomène, ici acoustique (la représentation sinusoïdale continue d'une onde harmonique). Ce premier travail intellectuel doit permettre aux élèves d'une part de se familiariser avec le matériau servant de support aux activités suivantes (les éléments relatifs au son), et d'autre part de faciliter leur compréhension du changement de paradigme ultérieur entre l'espace physique (plutôt que mathématique) et l'espace numérique et le codage binaire de l'information.
-    - le second objet de cette activité est de permettre aux élèves de se familiariser avec les outils informatiques de visualisation graphique et de production sonore, offrant deux modes de représentation du son. 
+- le second objet de cette activité est de permettre aux élèves de se familiariser avec les outils informatiques de visualisation graphique et de production sonore, offrant deux modes de représentation du son. 
     En particulier l'information fréquentielle, essentielle en traitement du signal, est abordée visuellement dans le plan temporel (sinusoide, période) et perçue auditivement (hauteur du son - grave/aigu).
     
     </br>
 
-    Objectif informatique 2 : 
-    - cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphe sinusoïdal obtenu via un programme python, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
+Objectif informatique 2 : 
+- cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphe sinusoïdal obtenu via un programme python, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
     
     
     </br>
 
-    Objectif mathématique et physique (transversal) :
-    - l'activité permet de réactiver, confirmer ou s'appuyer sur des savoirs mathématiques relatifs aux relations fonctionnelles,  aux représentations dans le plan et à la trigonométrie.
-    - l'activité permet de réactiver, confirmer ou s'appuyer sur savoirs mécaniques et physiques relativement aux ondes, à la notion de milieu de propagation, de période et de fréquence.
+Objectif mathématique et physique (transversal) :
+- l'activité permet de réactiver, confirmer ou s'appuyer sur des savoirs mathématiques relatifs aux relations fonctionnelles,  aux représentations dans le plan et à la trigonométrie.
+- l'activité permet de réactiver, confirmer ou s'appuyer sur savoirs mécaniques et physiques relativement aux ondes, à la notion de milieu de propagation, de période et de fréquence.
 
     </br>
 
-    Mode : branché / débranché
+Mode : branché / débranché
 
-    <br/>
-    Pré-requis : 
+<br/>
+Pré-requis : 
 
-    - informatique :
-        * <span style="color:green">programmation</span>
-        * <span style="color:green">utilisation de l'ordinateur et environnement
+- informatique :
+        <span style="color:green">programmation</span>
+        <span style="color:green">utilisation de l'ordinateur et environnement
         </span> 
         
-        </br> 
     
-    - mathématique :
-        * <span style="color:orange">fonctions</span>
-        * <span style="color:orange">fonctions trigonométriques simples</span> 
-        * <span style="color:green">représentation sur un repère plan</span> 
+- mathématique :
+        <span style="color:orange">fonctions</span>
+        <span style="color:orange">fonctions trigonométriques simples</span> 
+        <span style="color:green">représentation sur un repère plan</span> 
         
-        </br>
     
-    - physique :
-        
-        * <span style="color:orange">notion d'onde mécanique (pression, compression-dilatation)</span>    
+- physique :
+        <span style="color:orange">notion d'onde mécanique (pression, compression-dilatation)</span>    
 </br>
 
-    Durée : la séquence d'enseignement se découpe en quatre séances de 45mn et une de 30mn. 
+Durée : la séquence d'enseignement se découpe en quatre séances de 45mn et une de 30mn. 
         
-    1ère séance : éléments de cours sur l'information et le son en particulier.
+1ère séance : éléments de cours sur l'information et le son en particulier.
     Problématique de la représentation. Rappels mathématiques et physiques sur les notions abordées.
 
-    2ème séance : activité proprement dite.
+2ème séance : activité proprement dite.
 
-    3ème séance : reprise de l'activité et des notions traitées.
+3ème séance : reprise de l'activité et des notions traitées.
     
-    4ème séance : exercices pratiques.
+4ème séance : exercices pratiques.
 
-    5ème séance : évaluation.
+5ème séance : évaluation.
 </br>
 </br>
     Moments didactiques :
@@ -383,9 +380,9 @@ Un signal complexe est un signal à contenu fréquentiel multiple. Il correspond
 </br>6. Evaluation. Cinquième séance - <span style="color:violet">30mn</span>
 </br> </br>
 
-    Supports didactiques : 
+Supports didactiques : 
     
-    ordinateur individuel, environnement de programmation et programmes python, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
+ordinateur individuel, environnement de programmation et programmes python, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
 
 ```
 def tracesinus(freq):
@@ -458,70 +455,68 @@ def listensinush(freq, harmo):
 
 <br/>
 
-* * Activité 2 - **Composition (addition) de signaux sonores élémentaires**
+# Activité 2
+**Composition (addition) de signaux sonores élémentaires**
 
-    Classe : 1M, 2M
+Classe : 1M, 2M
 
-    <span style="color:orange">Difficulté : médian </span> 
-    <sup> [1](#myfootnote1)</sup>
+<span style="color:orange">Difficulté : médian </span> 
+<sup> [1](#myfootnote1)</sup>
     
 
-    Objectif informatique 1 : 
-    - cette activité poursuit la problématique de la représentation de l'information sonore, dans la continuité de l'activité 1.
+Objectif informatique 1 : 
+    cette activité poursuit la problématique de la représentation de l'information sonore, dans la continuité de l'activité 1.
     L'élève poursuit son apprentissage des différents modes de représentation par une complexification liée à la somme de signaux sinusoïdaux. Ce deuxième travail met l'élève face à modification visuelle opérées par l'addition de signaux, et la modification auditive perçue.
     Cette complexification est une étape décisive afin de comprendre la nature d'un signal sonore quelconque et de la problématique ultérieure de sa représentation numérique.
-    - le second objet de cette activité reste la familiarisation avec les outils informatiques de visualisation graphique et de production sonore, offrant deux modes de représentation du son, le premier offrant à présent une représentation également dans le plan spectral.
+    Le second objet de cette activité reste la familiarisation avec les outils informatiques de visualisation graphique et de production sonore, offrant deux modes de représentation du son, le premier offrant à présent une représentation également dans le plan spectral.
     L'addition sonore est ainsi perçue visuellement (différentes oscillations) et auditivement (composition harmonique).
     
-    </br>
+</br>
 
-    Objectif informatique 2 : 
-    - cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphes sinusoïdaux obtenus via un programme python, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
+Objectif informatique 2 : 
+    cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphes sinusoïdaux obtenus via un programme python, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
     
     
-    </br>
+</br>
 
-    Objectif mathématique et physique (transversal) :
+Objectif mathématique et physique (transversal) :
     - l'activité permet de réactiver, confirmer ou s'appuyer sur des savoirs mathématiques relatifs aux relations fonctionnelles,  aux représentations dans le plan et à la trigonométrie.
     - l'activité permet de réactiver, confirmer ou s'appuyer sur savoirs mécaniques et physiques relativement aux ondes, à la notion de milieu de propagation, de période et de fréquence.
 
-    </br>
-
-    Mode : branché / débranché
-
-    <br/>
-    Pré-requis : 
-
-    - informatique :
-        * <span style="color:green">programmation</span>
-        * <span style="color:green">utilisation de l'ordinateur et environnement
-        </span> 
-        
-        </br> 
-    
-    - mathématique :
-        * <span style="color:orange">fonctions, addition de fonctions</span>
-        * <span style="color:orange">fonctions trigonométriques simples</span> 
-        * <span style="color:green">représentation sur un repère plan</span> 
-        
-        </br>
-    
-    - physique :
-        
-        * <span style="color:orange">notion d'onde mécanique (pression, compression-dilatation)</span>    
 </br>
 
-    Durée : la séquence d'enseignement se découpe en quatre séances de 45mn et une de 30mn. 
+Mode : branché / débranché
+
+<br/>
+Pré-requis : 
+
+- informatique :
+        <span style="color:green">programmation</span>
+        <span style="color:green">utilisation de l'ordinateur et environnement
+        </span> 
         
-    1ère séance : reprise rapide des éléments de cours sur l'information et le son en particulier. Rappels mathématiques (somme de fonctions) et physiques sur les notions abordées.
-
-    2ème séance : activité proprement dite.
-
-    3ème séance : reprise de l'activité et des notions traitées.
     
-    4ème séance : exercices pratiques.
+- mathématique :
+        <span style="color:orange">fonctions, addition de fonctions</span>
+        <span style="color:orange">fonctions trigonométriques simples</span> 
+        <span style="color:green">représentation sur un repère plan</span> 
+        
+    
+- physique :
+        <span style="color:orange">notion d'onde mécanique (pression, compression-dilatation)</span>    
 
-    5ème séance : évaluation.
+
+Durée : la séquence d'enseignement se découpe en quatre séances de 45mn et une de 30mn. 
+        
+1ère séance : reprise rapide des éléments de cours sur l'information et le son en particulier. Rappels mathématiques (somme de fonctions) et physiques sur les notions abordées.
+
+2ème séance : activité proprement dite.
+
+3ème séance : reprise de l'activité et des notions traitées.
+    
+4ème séance : exercices pratiques.
+
+5ème séance : évaluation.
 </br>
 </br>
     Moments didactiques :
@@ -533,9 +528,9 @@ def listensinush(freq, harmo):
 </br>6. Evaluation. Cinquième séance - <span style="color:violet">30mn</span>
 </br> </br>
 
-    Supports didactiques : 
+Supports didactiques : 
     
-    ordinateur individuel, environnement de programmation et programmes python, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
+ordinateur individuel, environnement de programmation et programmes python, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
 
 ```
 def puresignalssum(freq, harmo):
@@ -618,64 +613,61 @@ L'enveloppe d'un signal sonore représente l'évolution de l'amplitude du signal
 <br/>
 </br>
 
-* * Activité 3.2 - **Timbre et ADSR**
+# Activité 3.2
+**Timbre et ADSR**
 
-    Classe : 1M, 2M, 3M
+Classe : 1M, 2M, 3M
 
-    <span style="color:orange">Difficulté : médian </span> 
+<span style="color:orange">Difficulté : médian </span> 
     <sup> [1](#myfootnote1)</sup>
     
 
-    Objectif informatique 1 : 
-    - cette activité poursuit la problématique de la représentation de l'information sonore, dans la continuité des activités 2 et 3.1.
+Objectif informatique 1 : 
+    cette activité poursuit la problématique de la représentation de l'information sonore, dans la continuité des activités 2 et 3.1.
     L'élève poursuit son apprentissage des différents modes de représentation par l'introduction de la notion d'enveloppe sonore, ou ADSR. L'activité 3.1 a permis de le sensibiliser à la spécificité de chaque instrument acoustique, différenciés par leurs timbres, leurs "signatures sonores". Ce deuxième travail met l'élève face à la représentation visuelle de cette enveloppe, brique essentielle dans la construction de tout signal réel qui devra être ensuite numérisé. La nouveauté est ici importante : l'élève se confronte à présent à un signal limité dans le temps (signal impulsionnel), induisant une approche spectrale différente : passage du périodique à l'impulsionnel pour le signal en temps, passage du discret au continu en fréquence.
-    - le second objet de cette activité reste la familiarisation avec les outils informatiques de visualisation graphique et de production sonore, offrant toujours les deux modes de représentation du son. 
+    Le second objet de cette activité reste la familiarisation avec les outils informatiques de visualisation graphique et de production sonore, offrant toujours les deux modes de représentation du son. 
     
     
-    </br>
-
-    Objectif informatique 2 : 
-    - cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphes sinusoïdaux et ADSR obtenus via des programmes python, paramétrage de l'ADSR via une interface graphique spécifique, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
-    
-    
-    </br>
-
-    Objectif mathématique et physique (transversal) :
-    - l'activité s'appuie implicitement sur les savoirs mathématiques, physiques et mécaniques présents pour les activités précédentes, sans provoquer la réactivation de la totalité de ces savoirs. L'objet n'est pas de rentrer dans une formalisation complexe de la représentation temps-fréquence pour un signal impulsionnel, mais de sensibiliser les élèves simplement visuellement, voire auditivement par l'écoute du spectre d'un signal temporel impulsionnel. Le parralèle signal périodique-spectre discret, puis signal impulsionnel-spectre continu est ainsi abordé simplement "expérimentalement".
-
-    </br>
-
-    Mode : branché / débranché
-
-    <br/>
-    Pré-requis : 
-
-    - informatique :
-        * <span style="color:green">(programmation)</span>
-        * <span style="color:green">utilisation de l'ordinateur et environnement
-        </span> 
-        
-        </br> 
-    
-    - mathématique :
-        * <span style="color:green">fonctions</span>
-        * <span style="color:green">fonctions trigonométriques simples</span> 
-        * <span style="color:green">représentation sur un repère plan</span> 
-        
-        </br>
-    
-    - physique :
-        
-        * <span style="color:green">notion d'onde mécanique (pression, compression-dilatation)</span>    
 </br>
 
-    Durée : la séquence d'enseignement se décompose en trois séances de 45mn : 
-        
-    1ère séance : approche expérimentale de la notion de timbre ; jeu avec les instruments acoustiques, paramètres définissant le timbre (fréquence, composition fréquentielle, ADSR)
+Objectif informatique 2 : 
+    cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphes sinusoïdaux et ADSR obtenus via des programmes python, paramétrage de l'ADSR via une interface graphique spécifique, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
     
-    2ème séance : reprise rapide du programme précédent permettant de générer des signaux complexes (sommes de sinusoïdes), introduction des nouveaux programmes - manipulation par les élèves et observations. Observation des spectres des signaux obtenus sur plusieurs exemples types donnés sur une fiche exercice par l'enseignant.
+    
+</br>
 
-    3ème séance : reprise de l'activité et des notions traitées, institutionnalisation. Evaluation formative.
+Objectif mathématique et physique (transversal) :
+    l'activité s'appuie implicitement sur les savoirs mathématiques, physiques et mécaniques présents pour les activités précédentes, sans provoquer la réactivation de la totalité de ces savoirs. L'objet n'est pas de rentrer dans une formalisation complexe de la représentation temps-fréquence pour un signal impulsionnel, mais de sensibiliser les élèves simplement visuellement, voire auditivement par l'écoute du spectre d'un signal temporel impulsionnel. Le parralèle signal périodique-spectre discret, puis signal impulsionnel-spectre continu est ainsi abordé simplement "expérimentalement".
+
+</br>
+
+Mode : branché / débranché
+
+<br/>
+Pré-requis : 
+
+- informatique :
+        <span style="color:green">(programmation)</span>
+        <span style="color:green">utilisation de l'ordinateur et environnement
+        </span> 
+        
+    
+- mathématique :
+        <span style="color:green">fonctions</span>
+        <span style="color:green">fonctions trigonométriques simples</span> 
+        <span style="color:green">représentation sur un repère plan</span> 
+        
+    
+- physique : <span style="color:green">notion d'onde mécanique (pression, compression-dilatation)</span>    
+</br>
+
+Durée : la séquence d'enseignement se décompose en trois séances de 45mn : 
+        
+1ère séance : approche expérimentale de la notion de timbre ; jeu avec les instruments acoustiques, paramètres définissant le timbre (fréquence, composition fréquentielle, ADSR)
+    
+2ème séance : reprise rapide du programme précédent permettant de générer des signaux complexes (sommes de sinusoïdes), introduction des nouveaux programmes - manipulation par les élèves et observations. Observation des spectres des signaux obtenus sur plusieurs exemples types donnés sur une fiche exercice par l'enseignant.
+
+3ème séance : reprise de l'activité et des notions traitées, institutionnalisation. Evaluation formative.
 </br>
 </br>
     Moments didactiques :
@@ -688,72 +680,69 @@ Travail sur la technique : les élèves ré-expérimentent les outils et concept
 </br> 6. Evaluation. Troisième séance - <span style="color:violet">10mn</span>
 </br> </br>
 
-    Supports didactiques : 
+Supports didactiques : 
     
-    ordinateur individuel, environnement de programmation et programmes python, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
+ordinateur individuel, environnement de programmation et programmes python, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
 
 
 
 
 </br>
 
-* * Activité 3.3 - **Analyse d'un morceau de musique 1**
+# Activité 3.3
 
-    Classe : 1M, 2M, 3M
+**Analyse d'un morceau de musique - 1**
 
-    <span style="color:orange">Difficulté : médian </span> 
+Classe : 1M, 2M, 3M
+
+<span style="color:orange">Difficulté : médian </span> 
     <sup> [1](#myfootnote1)</sup>
     
 
-    Objectif informatique 1 : 
-    - cette activité poursuit la problématique de la représentation de l'information sonore, dans la continuité des activités précédentes.
+Objectif informatique 1 : 
+    cette activité poursuit la problématique de la représentation de l'information sonore, dans la continuité des activités précédentes.
     Il est proposé à l'élève, à partir de l'écoute d'un morceau de musique actuelle, de retrouver les éléments mis en pratique lors des activités précédentes, de manière auditive et visuelle à travers l'utilisation du logiciel Audacity.
     En particulier les aspects liés à la fréquence, au timbre, à l'enveloppe et à la notion d'impulsion face à celle de signal continu.
+    Le second objet de cette activité reste la familiarisation avec les outils informatiques de visualisation graphique et de production sonore, offrant toujours les deux modes de représentation du son. 
     
     
-    - le second objet de cette activité reste la familiarisation avec les outils informatiques de visualisation graphique et de production sonore, offrant toujours les deux modes de représentation du son. 
+</br>
+
+Objectif informatique 2 : 
+    cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphes sinusoïdaux et ADSR obtenus via des programmes python, paramétrage de l'ADSR via une interface graphique spécifique, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
     
     
-    </br>
+</br>
 
-    Objectif informatique 2 : 
-    - cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphes sinusoïdaux et ADSR obtenus via des programmes python, paramétrage de l'ADSR via une interface graphique spécifique, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
-    
-    
-    </br>
+Objectif mathématique et physique (transversal) :
+    l'activité s'appuie implicitement sur les savoirs mathématiques, physiques et mécaniques présents pour les activités précédentes, sans provoquer la réactivation de la totalité de ces savoirs. L'objet n'est pas de rentrer dans une formalisation complexe de la représentation temps-fréquence pour un signal impulsionnel, mais de sensibiliser les élèves simplement visuellement et auditivement par l'écoute et l'analyse d'un morceau de musique. 
 
-    Objectif mathématique et physique (transversal) :
-    - l'activité s'appuie implicitement sur les savoirs mathématiques, physiques et mécaniques présents pour les activités précédentes, sans provoquer la réactivation de la totalité de ces savoirs. L'objet n'est pas de rentrer dans une formalisation complexe de la représentation temps-fréquence pour un signal impulsionnel, mais de sensibiliser les élèves simplement visuellement et auditivement par l'écoute et l'analyse d'un morceau de musique. 
+</br>
 
-    </br>
+Mode : branché / débranché
 
-    Mode : branché / débranché
+<br/>
+Pré-requis : 
 
-    <br/>
-    Pré-requis : 
-
-    - informatique :
-        * <span style="color:green">(programmation)</span>
-        * <span style="color:green">utilisation de l'ordinateur et environnement
+- informatique :
+        <span style="color:green">(programmation)</span>
+        <span style="color:green">utilisation de l'ordinateur et environnement
         </span> 
         
-        </br> 
     
-    - mathématique :
-        * <span style="color:green">fonctions</span>
-        * <span style="color:green">fonctions trigonométriques simples</span> 
-        * <span style="color:green">représentation sur un repère plan</span> 
+- mathématique :
+        <span style="color:green">fonctions</span>
+        <span style="color:green">fonctions trigonométriques simples</span> 
+        <span style="color:green">représentation sur un repère plan</span> 
         
-        </br>
     
-    - physique :
-        
-        * <span style="color:green">notion d'onde mécanique (pression, compression-dilatation)</span>    
-    </br>
+- physique :
+        <span style="color:green">notion d'onde mécanique (pression, compression-dilatation)</span>    
+</br>
 
-    Durée : la séquence d'enseignement se décompose en une séance de 45mn et un début de séance de 20mn : 
+Durée : la séquence d'enseignement se décompose en une séance de 45mn et un début de séance de 20mn : 
         
-    1ère temps de séquence : écoute du [fichier audio proposé](https://maitre.edunumsec2.ch/_sources/content/theme/representation-information/activites/representation-son/Audio1.mp3), manipulation du logiciel Audacity, prise en main (15mn). 
+1ère temps de séquence : écoute du [fichier audio proposé](https://maitre.edunumsec2.ch/_sources/content/theme/representation-information/activites/representation-son/Audio1.mp3), manipulation du logiciel Audacity, prise en main (15mn). 
 
 
 </br>
@@ -765,7 +754,7 @@ Travail sur la technique : les élèves ré-expérimentent les outils et concept
     <body>
         <div id="player">
         <audio controls>
-        <source src="https://maitre.edunumsec2.ch/_sources/content/theme/representation-information/activites/representation-son/Audio1.mp3" type="audio/mpeg">
+        <source src="https://maitre.edunumsec2.ch/_videos/Audio1.mp3" type="audio/mpeg">
         </audio> 
         </div>
     </body> 
@@ -782,7 +771,25 @@ Travail sur la technique : les élèves ré-expérimentent les outils et concept
  <center> Visualisation d'un morceau de musique sur Audacity </center>
     </br> </br></center>
 
-* * 2ème temps de séquence : identification des savoirs  abordés lors des activités précédentes (amplitude, fréquences, enveloppe, timbre, signal comme somme de sinusoïdes). Cette phase est très dirigée par l'enseignant (15mn). 
+<center> 
+<html>
+    <head>
+        <title> Util_Audacity.mov </title>
+    </head>
+    <body>
+        <div id="player">
+        <video width="500" height="300" controls>
+        <source src="https://maitre.edunumsec2.ch/_videos/Util_Audacity.mov" type="video/quicktime">
+        </audio> 
+        </div>
+    </body> 
+</html>     
+
+</center> 
+ <center> Manipulation d'un morceau de musique sur Audacity </center>
+    </br> </br>    
+
+2ème temps de séquence : identification des savoirs  abordés lors des activités précédentes (amplitude, fréquences, enveloppe, timbre, signal comme somme de sinusoïdes). Cette phase est très dirigée par l'enseignant (15mn). 
     </br> 
 
 <center> 
@@ -813,7 +820,7 @@ Travail sur la technique : les élèves ré-expérimentent les outils et concept
 
 <br/>
 
-* * 3ème temps de séquence : utilisation du programme puresignalssum2.py (extension de puresignalssum.py utilisé lors de l'activité précédente) afin de construire un signal sinusoidal s'approchant d'un signal identifiable observé sur une tranche choisie du morceau (ou plusieurs). 
+3ème temps de séquence : utilisation du programme puresignalssum2.py (extension de puresignalssum.py utilisé lors de l'activité précédente) afin de construire un signal sinusoidal s'approchant d'un signal identifiable observé sur une tranche choisie du morceau (ou plusieurs). 
 ```
 def puresignalssum2(freq, harmo1, amp1, harmo2, amp2, harmo3, amp3):
 #  harmonic signals
@@ -848,7 +855,7 @@ def puresignalssum2(freq, harmo1, amp1, harmo2, amp2, harmo3, amp3):
 <center> Identification d'un contenu fréquentiel basse fréquence (ici 50Hz) sur la tranche d'un morceau de musique </center></br> 
 
 <center> 
-</br> 
+
 
 ```{image} png/Im50.png
 :width: 350px
@@ -857,20 +864,11 @@ def puresignalssum2(freq, harmo1, amp1, harmo2, amp2, harmo3, amp3):
 </center> 
 <center> Construction d'un signal analogue basse fréquence (50Hz) à l'aide du programme puresignalssum2.py </center></br> 
 
-* * De la même manière, construction d'un signal complexe, somme de sinusoides, afin de s'approcher du signal observé dans le morceau. 
 
-<center> 
-</br> 
 
-```{image} png/Im48.png
-:width: 300px
-:height: 200px
-``` 
-</center> 
-<center> Construction d'un signal multifréquences s'appuyant sur les fréquences identifiées sur la tranche d'un morceau de musique </center>
-<br/>
 
-* * On poursuit la construction de signal complexe en tentant de s'approcher d'une tranche de signal identifiée sur le morceau : on calcule la fréquence fondamentale directement à partir du visuel (ici 50Hz), et on choisit les fréquences et les amplitudes des harmoniques. La composition ainsi créée peut être écoutée en même temps que visualisée.
+
+On poursuit la construction de signal complexe en tentant de s'approcher d'une tranche de signal identifiée sur le morceau : on calcule la fréquence fondamentale directement à partir du visuel (ici 50Hz), et on choisit les fréquences et les amplitudes des harmoniques. La composition ainsi créée peut être écoutée en même temps que visualisée.
 Les élèves sont invités ensuite à revenir à la tranche de morceau pour établir analogies et correspondances.
 
 <center> 
@@ -887,7 +885,26 @@ Les élèves sont invités ensuite à revenir à la tranche de morceau pour éta
 </center> 
 <center> Construction d'un signal analogue multi-fréquences (fondamentale 50Hz et harmoniques choisies - fréquences et amplitudes) à l'aide du programme puresignalssum2.py </center></br> 
 
-* * Cette phase est également très dirigée par l'enseignant qui soumet les "bons" paramétrages à la fois pour le programme puresignalssum2.py et Audacity (15mn).
+De la même manière, construction d'un signal complexe, somme de sinusoides, afin de s'approcher du signal observé dans le morceau. On observe par exemple à la 52ème seconde du fichier audio, un signal multifréquence très régulier pendant plusieurs périodes. On distingue très bien la fréquence fondamentale d'environ 66Hz et d'amplitude environ 0.5, puis une harmonique de fréquence proche de 333Hz (5 fois la fondamentale) et d'amplitude proche de 0.15. Une troisième harmonique est vraisemblablement présente, on la négligera dans la construction d'un signal multifréquence avec le programme puresignalssum2.py, affecté des paramètres : (66, 1, 0.5, 5, 0.15, 0, 0.)
+
+<center> 
+</br> 
+
+```{image} png/Im53.png
+:width: 300px
+:height: 200px
+``` 
+
+```{image} png/Im54.png
+:width: 300px
+:height: 200px
+``` 
+</center> 
+<center> Construction d'un signal multifréquences s'appuyant sur les fréquences identifiées sur la tranche d'un morceau de musique </center>
+<br/>
+<br/>
+
+Cette phase est également très dirigée par l'enseignant qui soumet les "bons" paramétrages à la fois pour le programme puresignalssum2.py et Audacity (15mn).
 <br/>
     4ème temps de séquence (2ème séance) : 
     reprise de l'activité et des notions traitées, institutionnalisation. Evaluation formative (20mn).
@@ -905,69 +922,62 @@ Travail sur la technique : les élèves tentent de construire d'eux-même un sig
     ordinateur individuel, environnement de programmation et programmes python, logiciel Audacity, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
 
 </br>
+
+# Activité 3.4
+
+**Analyse d'un morceau de musique - 2**
+
+Classe : 1M, 2M, 3M
+
+<span style="color:green">Difficulté : basique </span> 
+<sup> [1](#myfootnote1)</sup>
+    
+
+Objectif informatique 1 : 
+    cette activité poursuit la problématique de la représentation de l'information sonore, dans la continuité des activités précédentes.
+    Il est proposé à l'élève, à partir de l'écoute d'un morceau de musique actuelle, de comprendre simplement la problématique de la numérisation discrète d'un signal continu, de manière auditive et visuelle à travers l'utilisation du logiciel Audacity.
+     Le second objet de cette activité reste la familiarisation avec les outils informatiques de visualisation graphique et de production sonore, offrant toujours les deux modes de représentation du son. 
+    
+    
 </br>
 
-* * Activité 3.4 - **Analyse d'un morceau de musique - 2**
-
-    Classe : 1M, 2M, 3M
-
-    <span style="color:green">Difficulté : basique </span> 
-    <sup> [1](#myfootnote1)</sup>
-    
-
-    Objectif informatique 1 : 
-    - cette activité poursuit la problématique de la représentation de l'information sonore, dans la continuité des activités précédentes.
-    Il est proposé à l'élève, à partir de l'écoute d'un morceau de musique actuelle, de comprendre simplement la problématique de la numérisation discrète d'un signal continu, de manière auditive et visuelle à travers l'utilisation du logiciel Audacity.
+Objectif informatique 2 : 
+    cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphes sinusoïdaux et ADSR obtenus via des programmes python, paramétrage de l'ADSR via une interface graphique spécifique, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
     
     
-    
-    - le second objet de cette activité reste la familiarisation avec les outils informatiques de visualisation graphique et de production sonore, offrant toujours les deux modes de représentation du son. 
-    
-    
-    </br>
+</br>
 
-    Objectif informatique 2 : 
-    - cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphes sinusoïdaux et ADSR obtenus via des programmes python, paramétrage de l'ADSR via une interface graphique spécifique, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
-    
-    
-    </br>
+Objectif mathématique et physique (transversal) :
+    l'activité s'appuie implicitement sur les savoirs mathématiques, physiques et mécaniques présents pour les activités précédentes, sans provoquer la réactivation de la totalité de ces savoirs. L'objet n'est pas de rentrer dans une formalisation complexe de la représentation discrète d'un signal continu, ni de rentrer dans la théorie de l'échantillonnage, mais de sensibiliser les élèves simplement visuellement et auditivement par l'écoute et l'analyse d'une tranche d'un morceau de musique. 
 
-    Objectif mathématique et physique (transversal) :
-    - l'activité s'appuie implicitement sur les savoirs mathématiques, physiques et mécaniques présents pour les activités précédentes, sans provoquer la réactivation de la totalité de ces savoirs. L'objet n'est pas de rentrer dans une formalisation complexe de la représentation discrète d'un signal continu, ni de rentrer dans la théorie de l'échantillonnage, mais de sensibiliser les élèves simplement visuellement et auditivement par l'écoute et l'analyse d'une tranche d'un morceau de musique. 
+</br>
 
-    </br>
+Mode : branché / débranché
 
-    Mode : branché / débranché
+<br/>
+Pré-requis : 
 
-    <br/>
-    Pré-requis : 
-
-    - informatique :
-        * <span style="color:green">(programmation)</span>
-        * <span style="color:green">utilisation de l'ordinateur et environnement
+- informatique :
+        <span style="color:green">(programmation)</span>
+        <span style="color:green">utilisation de l'ordinateur et environnement
         </span> 
-        
-        </br> 
-    
-    - mathématique :
-        * <span style="color:green">fonctions</span>
-        * <span style="color:green">fonctions trigonométriques simples</span> 
-        * <span style="color:green">représentation sur un repère plan</span> 
-        
-        </br>
-    
-    - physique :
-        
-        * <span style="color:green">notion d'onde mécanique (pression, compression-dilatation)</span>    
-    </br>
 
-    Durée : la séquence d'enseignement se décompose en une séance de 45mn, et un début de séance de 20 mn pour une évaluation  : 
-        
-    1ère temps de séquence : écoute, manipulation du logiciel Audacity, reprise des fichiers déjà créés (5mn). 
     
-    2ème temps de séquence : reprise d'une tranche musicale déjà étudiée précédemment : découpage, grossissement. Cette phase est très dirigée par l'enseignant (10mn).
+- mathématique :
+        <span style="color:green">fonctions</span>
+        <span style="color:green">fonctions trigonométriques simples</span> 
+        <span style="color:green">représentation sur un repère plan</span> 
+        
+    
+- physique : <span style="color:green">notion d'onde mécanique (pression, compression-dilatation)</span>    
+</br>
 
-    <center> 
+Durée : la séquence d'enseignement se décompose en une séance de 45mn, et un début de séance de 20 mn pour une évaluation  : 
+        
+1ère temps de séquence : écoute, manipulation du logiciel Audacity, reprise des fichiers déjà créés (5mn). 
+    
+2ème temps de séquence : reprise d'une tranche musicale déjà étudiée précédemment : découpage, grossissement. Cette phase est très dirigée par l'enseignant (10mn).
+ 
 </br> 
 <center> 
 
@@ -995,14 +1005,14 @@ Travail sur la technique : les élèves tentent de construire d'eux-même un sig
 <center> Zooms successifs sur Audacity - Mise en évidence de la discrétisation numérique d'un signal sonore à différentes fréquences d'échantillonnage</center>
     <br/>
 
-* * 3ème temps de séquence : analyse et interprétation du phénomène observé : de la visualisation continue de la courbe représentant le son, on passe à une vision "discrète", c'est à dire que les étudiants constatent que la courbe est "découpée" en une multitude de points, les coordonnées en abscisse étant uniformément réparties.
+3ème temps de séquence : analyse et interprétation du phénomène observé : de la visualisation continue de la courbe représentant le son, on passe à une vision "discrète", c'est à dire que les étudiants constatent que la courbe est "découpée" en une multitude de points, les coordonnées en abscisse étant uniformément réparties.
     Les zooms et dé-zooms successifs permettent de passer d'une vision continue "habituelle" (analogique) à une vision discrète (numérique) et donc un nouveau type de représentation. Les élèves sont ensuite invités à écouter le même morceau de musique, mais pour différentes valeurs de la fréquence d'échantillonnage, visualiser les différentes courbes obtenues et écouter les "tranches" audio correspondantes : sous l'impulsion de l'enseignant, ils comparent les écarts temporels entre deux points successifs, pour différentes courbes échantillonnées à des taux différents. Ils tentent d'interpréter ce qu'ils observent.
     Cette phase est très dirigée par l'enseignant qui donne les paramétrages pour Audacity (10mn).
     <br/>   
-    4ème temps de séquence : 
-    reprise de l'activité et des notions traitées par l'enseignant, institutionnalisation (20mn).
-    <br/> 
-    5ème temps de séquence : évaluation (15mn) - 2ème séance
+    4ème temps de séquence : reprise de l'activité et des notions traitées par l'enseignant, institutionnalisation (20mn).
+    </br> 
+
+5ème temps de séquence : évaluation (15mn) - 2ème séance
 </br>
 </br>
     Moments didactiques :
