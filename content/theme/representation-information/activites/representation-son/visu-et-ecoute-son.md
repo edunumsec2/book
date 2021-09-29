@@ -1025,7 +1025,7 @@ Premiére séance (activité proprement dite) - <span style="color:violet">10mn<
 Travail sur la technique : les élèves manipulent le logiciel Audacity et des fichiers audio au format mp3. - <span style="color:violet">20mn</span>
 </br> 6. Deuxième séance - <span style="color:violet">15mn</span>. Evaluation. 
 </br> </br>
-    Supports didactiques : 
+    Supports didactiques :  
     ordinateur individuel, environnement de programmation et programmes python, logiciel Audacity, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
 
 
