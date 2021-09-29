@@ -749,64 +749,157 @@ Travail sur la technique : les élèves ré-expérimentent les outils et concept
     - physique :
         
         * <span style="color:green">notion d'onde mécanique (pression, compression-dilatation)</span>    
-</br>
+    </br>
 
     Durée : la séquence d'enseignement se décompose en une séance de 45mn et un début de séance de 20mn : 
         
-    1ère temps de séquence : écoute, manipulation du logiciel Audacity, prise en main (15mn). 
+    1ère temps de séquence : écoute du [fichier audio proposé](https://maitre.edunumsec2.ch/_sources/content/theme/representation-information/activites/representation-son/Audio1.mp3), manipulation du logiciel Audacity, prise en main (15mn). 
+
+
+</br>
+<center> 
+<html>
+    <head>
+        <title> audio1.mp3 </title>
+    </head>
+    <body>
+        <div id="player">
+        <audio controls>
+        <source src="https://maitre.edunumsec2.ch/_sources/content/theme/representation-information/activites/representation-son/Audio1.mp3" type="audio/mpeg">
+        </audio> 
+        </div>
+    </body> 
+</html>     
+</br>
+</br>
+</center> 
 <center> 
 
 ```{image} png/Im39.png
-:width: 300px
-:height: 200px
+:width: 500px
+:height: 300px
 ``` 
-</center> 
-<center> Visualisation d'un morceau de musique sur Audacity </center>
-</br>
- 2ème temps de séquence : identification des savoirs  abordés lors des activités précédentes (amplitude, fréquences, enveloppe, timbre, signal comme somme de sinusoïdes). Cette phase est très dirigée par l'enseignant (15mn). 
- 
- </br> 
+ <center> Visualisation d'un morceau de musique sur Audacity </center>
+    </br> </br></center>
+
+* * 2ème temps de séquence : identification des savoirs  abordés lors des activités précédentes (amplitude, fréquences, enveloppe, timbre, signal comme somme de sinusoïdes). Cette phase est très dirigée par l'enseignant (15mn). 
+    </br> 
 
 <center> 
 </br> 
 
 ```{image} png/Im38.png
-:width: 300px
+:width: 350px
 :height: 200px
 ``` 
 
-
 ```{image} png/Im37.png
-:width: 300px
+:width: 350px
 :height: 200px
 ``` 
 
 ```{image} png/Im36.png
-:width: 300px
+:width: 350px
 :height: 200px
 ``` 
 
 ```{image} png/Im35.png
+:width: 350px
+:height: 200px
+``` 
+</center> 
+<center> Visualisation d'un morceau de musique sur Audacity - zooms - identification amplitude, fréquences, enveloppe, timbre, signal comme somme de sinusoïdes</center>
+<br/>
+
+<br/>
+
+* * 3ème temps de séquence : utilisation du programme puresignalssum2.py (extension de puresignalssum.py utilisé lors de l'activité précédente) afin de construire un signal sinusoidal s'approchant d'un signal identifiable observé sur une tranche choisie du morceau (ou plusieurs). 
+```
+def puresignalssum2(freq, harmo1, amp1, harmo2, amp2, harmo3, amp3):
+#  harmonic signals
+   s = Server().boot()
+   somme = 0
+   harmon = [harmo1, harmo2, harmo3]
+   amplit = [amp1, amp2, amp3]
+   for i in range (0,3):
+      s.start()
+      a = Sine(harmon[i]*freq, mul=amplit[i], add=0).out()
+      time.sleep(1)
+#  graphic vizualisation       
+      namesc = 'Signal '+str(harmon[i]*freq)+' Hz'
+      sc = Scope(a, 0.003, 0.2, wintitle=namesc) 
+#      namespeca = 'Spectre du signal '+str(i*freq)+' Hz'
+#      speca = Spectrum(a, size=4096, wintype=0, wintitle=namespeca)
+      somme=somme+a
+   s.stop
+   sc = Scope(somme, 0.003, 0.2, wintitle='somme des signaux')
+#   speca = Spectrum(somme, size=4096, wintype=0, wintitle='spectre de la somme')
+   somme.out
+   s.gui(locals())
+```
+<center> 
+</br> 
+
+```{image} png/Im49.png
+:width: 350px
+:height: 200px
+``` 
+</center> 
+<center> Identification d'un contenu fréquentiel basse fréquence (ici 50Hz) sur la tranche d'un morceau de musique </center></br> 
+
+<center> 
+</br> 
+
+```{image} png/Im50.png
+:width: 350px
+:height: 200px
+``` 
+</center> 
+<center> Construction d'un signal analogue basse fréquence (50Hz) à l'aide du programme puresignalssum2.py </center></br> 
+
+* * De la même manière, construction d'un signal complexe, somme de sinusoides, afin de s'approcher du signal observé dans le morceau. 
+
+<center> 
+</br> 
+
+```{image} png/Im48.png
 :width: 300px
 :height: 200px
 ``` 
 </center> 
-<center> Visualisation d'un morceau de musique sur Audacity - zooms </center>
+<center> Construction d'un signal multifréquences s'appuyant sur les fréquences identifiées sur la tranche d'un morceau de musique </center>
 <br/>
-<br/>
-    3ème temps de séquence : réutilisation des programmes puresignalssum.py et interfenvelope.py afin de construire un signal sinusoidal s'approchant d'un signal identifiable observé sur une tranche choisie du morceau (ou plusieurs). De la même manière, construction d'un signal complexe, somme de sinusoides, afin de s'approcher d'un signal observé dans le morceau. Cette phase est également très dirigée par l'enseignant qui soumet les "bons" paramétrages à la fois pour le programme puresignalssum.py, interfenvelope.py et Audacity (15mn).
+
+* * On poursuit la construction de signal complexe en tentant de s'approcher d'une tranche de signal identifiée sur le morceau : on calcule la fréquence fondamentale directement à partir du visuel (ici 50Hz), et on choisit les fréquences et les amplitudes des harmoniques. La composition ainsi créée peut être écoutée en même temps que visualisée.
+Les élèves sont invités ensuite à revenir à la tranche de morceau pour établir analogies et correspondances.
+
+<center> 
+</br> 
+
+```{image} png/Im51.png
+:width: 350px
+:height: 200px
+``` 
+```{image} png/Im52.png
+:width: 350px
+:height: 200px
+``` 
+</center> 
+<center> Construction d'un signal analogue multi-fréquences (fondamentale 50Hz et harmoniques choisies - fréquences et amplitudes) à l'aide du programme puresignalssum2.py </center></br> 
+
+* * Cette phase est également très dirigée par l'enseignant qui soumet les "bons" paramétrages à la fois pour le programme puresignalssum2.py et Audacity (15mn).
 <br/>
     4ème temps de séquence (2ème séance) : 
-    Reprise de l'activité et des notions traitées, institutionnalisation. Evaluation formative (20mn).
+    reprise de l'activité et des notions traitées, institutionnalisation. Evaluation formative (20mn).
 </br>
 </br>
     Moments didactiques :
 </br>  1. Mise en situation - Première séance : prise en main du logiciel Audacity - <span style="color:violet">15mn</span>
 </br>2. Rappels de connaissances tirées des expérimentations précédentes, encadré par l'enseignant (réactivation). Première séance - <span style="color:violet">15mn</span>
-</br>3. Moment technique et technologique : appropriation par comparaison, approche constructiviste. Les outils de la précédente activité sont repris (programmes puresignalssum.py, interfenvelope.py) et utilisés par les élèves sous les recommandations de l'enseignant donnant des indications précises et claires permettant de construire les signaux. Les élèves vont ainsi pouvoir comparer leurs signaux construits avec ce qu'ils ont observée préalablement avec Audacity et ainsi faire l'analogie entre les savoirs qu'ils ont développés lors des activités préceédentes et ce qu'ils ont pu observer auditivement et visuellement via le morceau analysé par Audacity.
+</br>3. Moment technique et technologique : appropriation par comparaison, approche constructiviste. Les outils de la précédente activité sont repris, le programme puresignalssum2.py (extension de puresignalssum.py précédemment utilisé) est utilisé par les élèves sous les recommandations de l'enseignant donnant des indications précises et claires permettant de construire les signaux. Les élèves vont ainsi pouvoir comparer leurs signaux construits avec ce qu'ils ont observée préalablement avec Audacity et ainsi faire l'analogie entre les savoirs qu'ils ont développés lors des activités précédentes et ce qu'ils ont pu observer auditivement et visuellement via le morceau analysé par Audacity.
 Premiére séance (activité proprement dite) - <span style="color:violet">15mn</span>
-</br>4-5-6. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, interprétation des signaux obtenus (espace temporel) visuellement et auditivement, par l'utilisation du programme interfenvelope.py combiné à puresignalssum.py.
-Travail sur la technique : les élèves tentent de construire d'eux-même un signal extrait du morceau à partir des programmes interfenvelope.py et puresignalssum.py. Deuxième séance - <span style="color:violet">30mn</span>. Evaluation formative. 
+</br>4-5-6. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, interprétation des signaux obtenus (espace temporel) visuellement et auditivement, par l'utilisation du programme puresignalssum2.py.
+Travail sur la technique : les élèves tentent de construire d'eux-même un signal extrait du morceau à partir du programme puresignalssum2.py. Deuxième séance - <span style="color:violet">30mn</span>. Evaluation formative. 
 </br> </br>
     Supports didactiques : 
     ordinateur individuel, environnement de programmation et programmes python, logiciel Audacity, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
@@ -866,13 +959,14 @@ Travail sur la technique : les élèves tentent de construire d'eux-même un sig
     - physique :
         
         * <span style="color:green">notion d'onde mécanique (pression, compression-dilatation)</span>    
-</br>
+    </br>
 
     Durée : la séquence d'enseignement se décompose en une séance de 45mn, et un début de séance de 20 mn pour une évaluation  : 
         
     1ère temps de séquence : écoute, manipulation du logiciel Audacity, reprise des fichiers déjà créés (5mn). 
     
     2ème temps de séquence : reprise d'une tranche musicale déjà étudiée précédemment : découpage, grossissement. Cette phase est très dirigée par l'enseignant (10mn).
+
     <center> 
 </br> 
 <center> 
@@ -881,18 +975,14 @@ Travail sur la technique : les élèves tentent de construire d'eux-même un sig
 :width: 300px
 :height: 200px
 ``` 
-
-
 ```{image} png/Im40.png
 :width: 300px
 :height: 200px
 ``` 
-
 ```{image} png/Im42.png
 :width: 300px
 :height: 200px
 ``` 
-
 ```{image} png/Im44.png
 :width: 300px
 :height: 200px
@@ -902,25 +992,27 @@ Travail sur la technique : les élèves tentent de construire d'eux-même un sig
 :height: 200px
 ``` 
 </center> 
-<center> Zooms successifs - Mise en évidence de la discrétisation numérique</center>
-<br/>
-    3ème temps de séquence : analyse et interprétation du phénomène observé : de la visualisation continue de la courbe représentant le son, on passe à une vision "discrète", c'est à dire que les étudiants constatent que la courbe est "découpée" en une multitude de points, les coordonnées en abscisse étant uniformément réparties.
-    Les zooms et dé-zooms successifs permettent de passer d'une vision continue "habituelle" (analogique) à une vision discrète (numérique) et donc un nouveau type de représentation. Les élèves reprennent ensuite les programmes puresignalssum.py et interfenvelope.py, génèrent un signal avec un premier paramétrage indiqué par l'enseignant, puis le même signal avec un deuxième paramétrage indiqué (échelles différentes). Ils observent la différence visuelle et auditive entre un premier signal "lisse" et le même signal avec un paramétrage différent constitué alors de lignes brisées. Ils tentent d'interpréter ce qu'ils observent.
-    Cette phase est très dirigée par l'enseignant qui donne les paramétrages à la fois pour les programmes puresignalssum.py, interfenvelope.py et Audacity (10mn).
- <br/>   
+<center> Zooms successifs sur Audacity - Mise en évidence de la discrétisation numérique d'un signal sonore à différentes fréquences d'échantillonnage</center>
+    <br/>
+
+* * 3ème temps de séquence : analyse et interprétation du phénomène observé : de la visualisation continue de la courbe représentant le son, on passe à une vision "discrète", c'est à dire que les étudiants constatent que la courbe est "découpée" en une multitude de points, les coordonnées en abscisse étant uniformément réparties.
+    Les zooms et dé-zooms successifs permettent de passer d'une vision continue "habituelle" (analogique) à une vision discrète (numérique) et donc un nouveau type de représentation. Les élèves sont ensuite invités à écouter le même morceau de musique, mais pour différentes valeurs de la fréquence d'échantillonnage, visualiser les différentes courbes obtenues et écouter les "tranches" audio correspondantes : sous l'impulsion de l'enseignant, ils comparent les écarts temporels entre deux points successifs, pour différentes courbes échantillonnées à des taux différents. Ils tentent d'interpréter ce qu'ils observent.
+    Cette phase est très dirigée par l'enseignant qui donne les paramétrages pour Audacity (10mn).
+    <br/>   
     4ème temps de séquence : 
     reprise de l'activité et des notions traitées par l'enseignant, institutionnalisation (20mn).
-<br/> 
+    <br/> 
     5ème temps de séquence : évaluation (15mn) - 2ème séance
 </br>
 </br>
     Moments didactiques :
 </br>  1. Mise en situation - Première séance : reprise en main du logiciel Audacity et des fichiers déja créés - <span style="color:violet">5mn</span>
 </br>2. Moment technique et technologique, encadré par l'enseignant (réactivation, expérimentation). - <span style="color:violet">10mn</span>
-</br>3. Moment technique et technologique : appropriation par comparaison, approche constructiviste. Les outils de la précédente activité sont repris (programmes puresignalssum.py, interfenvelope.py) et utilisés par les élèves sous les recommandations de l'enseignant donnant des indications précises et claires permettant de construire les signaux. Les élèves vont ainsi pouvoir comparer leurs signaux construits avec ce qu'ils ont observée préalablement avec Audacity et ainsi faire l'analogie entre les savoirs qu'ils ont développés lors des activités préceédentes et ce qu'ils ont pu observer auditivement et visuellement via le morceau analysé par Audacity.
+</br>3. Moment technique et technologique : appropriation par manipulation et analogie. Les fichiers sons de la précédente activité sont repris et manipulés sur Audacity par les élèves sous les recommandations de l'enseignant donnant des indications précises et claires permettant de modifier le visuel des signaux. Les élèves vont ainsi pouvoir, en jouant sur le grossissement (zoom), identifier les points de la courbe de signal qui vont être effectivement joués par le logiciel. Ils comprennent ainsi la signification de la notion d'échantillonnage.
+En jouant sur la fréquence d'échantillonnage (en bas à gauche de la fenêtre du logiciel), ils observent directement auditivement l'impact du choix de la fréquence d'échantillonnage sur la qualité de ce qu'ils écoutent. Au dessous d'une certaine fréquence, ils comprennent qu'ils ne peuvent aller (qualité trop mauvaise) ; au dessus, ils observent que le changement n'est pas perceptible à l'oreille. Les fichiers correspondant à trois fréquences d'échantillonnage (11025, 44100 et 192000 Hz) sont enregistrés. Leurs tailles peuvent ainsi être comparées.
 Premiére séance (activité proprement dite) - <span style="color:violet">10mn</span>
-</br>4-5. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, interprétation des signaux obtenus (espace temporel) visuellement et auditivement, par l'utilisation du programme interfenvelope.py combiné à puresignalssum.py.
-Travail sur la technique : les élèves tentent de construire d'eux-même un signal extrait du morceau à partir des programmes interfenvelope.py et puresignalssum.py. - <span style="color:violet">20mn</span>
+</br>4-5. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, interprétation des signaux observés visuellement et auditivement, sur Audacity. Mise en évidence de la problématique de "récupération" numérique du signal (échantillonnage). Importance du choix de la fréquence d'échantillonnage pour récupérer des fichiers sons à la fois de qualité satisfaisante et de taille pas top importante.
+Travail sur la technique : les élèves manipulent le logiciel Audacity et des fichiers audio au format mp3. - <span style="color:violet">20mn</span>
 </br> 6. Deuxième séance - <span style="color:violet">15mn</span>. Evaluation. 
 </br> </br>
     Supports didactiques : 
