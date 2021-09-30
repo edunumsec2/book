@@ -4,46 +4,46 @@
 # Table des matières
 
 * [Introduction](#Introduction)
-* [Le son](#Chapter1)
-    * [Signal analogique (physique) temporel](#Section1.1)
-        * [Onde de pression](#Section1.1.1)
-        * [L'oreille comme capteur](#Section1.1.2)
-        * [Vibration et fréquence](#Section1.1.3)
-    * [Contenu fréquentiel (analyse spectrale)](#Section1.2)
-        * [Signal pur](#Section1.2.1)
-        * [Signal complexe (à contenu fréquentiel)](#Section1.2.2) <span style="color:white"> ____ </span> [<span style="color:red"> Activité 1 </span>](#activite-1) <span style="color:white">____</span> [<span style="color:red"> Activité 2 </span>](#activite-2)
-    * [Signal sonore et musique](#Section1.3)       
-        * [Le timbre : caractéristique d'un signal sonore](#Section1.3.1) <span style="color:white"> __ </span> [<span style="color:red"> Activité 3.2 </span>](#activite-3-2) <span style="color:white"> __ </span> [<span style="color:red"> Activité 3.3 </span>](#activite-3-3) <span style="color:white">__</span> [<span style="color:red"> Activité 3.4 </span>](#activite-3-4)
-        * [La musique comme « organisation » de timbres sonores](#Section1.3.2)    
-* [Génération et enregistrement sonores](#Chapter2)
-    * [Générer et enregistrer un son analogique](#Section2.1)
-        * [Les instruments acoustiques classiques](#Section2.1.1)
-        * [Les synthétiseurs analogiques](#Section2.1.2)
-        * [« Capter » le son analogique ](#Section2.1.3)
-        * [« Garder en mémoire » le son analogique](#Section2.1.4)
-        * [Transmettre le son analogique](#Section2.1.5)
-    * [Générer et enregistrer un son numérique](#Section2.2)
-        * [Synthèse pwm – Problématique générale](#Section2.2.1)
-        * [Les synthétiseurs actuels et les banques de sons](#Section2.2.2)
-        * [« Capter » le son numérique](#Section2.2.3)
-        * [« Garder en mémoire » le son numérique](#Section2.2.4)
-        * [Transmettre le son numérique](#Section2.2.5)
-* [Transmission du son](#Chapter3)
-    * [Problématique du canal de transmission](#Section3.1)
-        * [De l'émetteur vers le récepteur](#Section3.1.1)
-        * [Perturbation liée au canal de transmission : la fidélité](#Section3.1.2)
-    * [Solution : du signal physique au signal numérique](#Section3.2)
-        * [Théorie et codage de l’information](#Section3.2.1)
-    * [Spécificités du codage numérique](#Section3.3)
-        * [Un signal physique exprimé sous forme de ... 0 et de 1 ?!](#Section3.3.1)
-        * [Echantillonnage](#Section3.3.2)
+* [1. Le son](#Chapter1)
+    * [1.1. Signal analogique (physique) temporel](#Section1.1)
+        * [1.1.1. Onde de pression](#Section1.1.1)
+        * [1.1.2. L'oreille comme capteur](#Section1.1.2)
+        * [1.1.3. Vibration et fréquence](#Section1.1.3)
+    * [1.2. Contenu fréquentiel (analyse spectrale)](#Section1.2)
+        * [1.2.1. Signal pur](#Section1.2.1)
+        * [1.2.2. Signal complexe (à contenu fréquentiel)](#Section1.2.2) <span style="color:white"> ____ </span> [<span style="color:red"> Activité 1 </span>](#activite-1) <span style="color:white">____</span> [<span style="color:red"> Activité 2 </span>](#activite-2)
+    * [1.3. Signal sonore et musique](#Section1.3)       
+        * [1.3.1. Le timbre : caractéristique d'un signal sonore](#Section1.3.1) <span style="color:white"> __ </span> [<span style="color:red"> Activité 3 </span>](#activite-3) <span style="color:white"> __ </span> [<span style="color:red"> Activité 4 </span>](#activite-4) <span style="color:white">__</span> [<span style="color:red"> Activité 5 </span>](#activite-5)
+        * [1.3.2. La musique comme « organisation » de timbres sonores](#Section1.3.2)    
+* [2. Génération et enregistrement sonores](#Chapter2)
+    * [2.1. Générer et enregistrer un son analogique](#Section2.1)
+        * [2.1.1. Les instruments acoustiques classiques](#Section2.1.1)
+        * [2.1.2. Les synthétiseurs analogiques](#Section2.1.2)
+        * [2.1.3. « Capter » le son analogique ](#Section2.1.3)
+        * [2.1.4. « Garder en mémoire » le son analogique](#Section2.1.4)
+        * [2.1.5. Transmettre le son analogique](#Section2.1.5)
+    * [2.2. Générer et enregistrer un son numérique](#Section2.2)
+        * [2.2.1. Synthèse pwm – Problématique générale](#Section2.2.1)
+        * [2.2.2 Les synthétiseurs actuels et les banques de sons](#Section2.2.2)
+        * [2.2.3. « Capter » le son numérique](#Section2.2.3)
+        * [2.2.4. « Garder en mémoire » le son numérique](#Section2.2.4)
+        * [2.2.5. Transmettre le son numérique](#Section2.2.5)
+* [3. Transmission du son](#Chapter3)
+    * [3.1. Problématique du canal de transmission](#Section3.1)
+        * [3.1.1. De l'émetteur vers le récepteur](#Section3.1.1)
+        * [3.1.2. Perturbation liée au canal de transmission : la fidélité](#Section3.1.2)
+    * [3.2. Solution : du signal physique au signal numérique](#Section3.2)
+        * [3.2.1. Théorie et codage de l’information](#Section3.2.1)
+    * [3.3. Spécificités du codage numérique](#Section3.3)
+        * [3.3.1. Un signal physique exprimé sous forme de ... 0 et de 1 ?!](#Section3.3.1)
+        * [3.3.2. Echantillonnage](#Section3.3.2)
 * [Conclusion](#Conclusion)
 
 </br>
 </br>
 
 <a name="Introduction"></a>
-# Introduction 
+# Introduction
 Le lien entre mathématiques et musique n’est pas récent puisque dès l'antiquité la musique est associée aux mathématiques. Elle est même considérée par Pythagore au VIe siècle avant J.C. comme étant une science mathématique, au même titre que l'arithmétique, l'astronomie et la géométrie.
 </br>
 <center> 
@@ -177,15 +177,15 @@ Elle mérite bien entendue d’être enrichie, en particulier par les retours en
 
 <a name="Chapter1"></a>
 
-# Le son
+# 1. Le son
 
 <a name="Section1.1"></a>
 
-## Signal analogique (physique) temporel
+## 1.1. Signal analogique (physique) temporel
 
 <a name="Section1.1.1"></a>
 
-### Onde de pression
+### 1.1.1. Onde de pression
 Le son est une onde mécanique nécessitant un milieu matériel pour se propager. Ce milieu peut être un gaz (comme l'air), un solide ou un liquide. Le son ne peut donc pas se propager dans le vide. Une onde sonore est une succession de champs de pression-dépression, ou compression-dilatation.
 L’exemple « visible » de l’impulsion mécanique donnée sur une corde élastique illustre parfaitement ce phénomène.
 
@@ -209,7 +209,7 @@ Lorsqu’on frappe les branches d'un diapason, celles-ci se mettent à vibrer et
 
 <a name="Section1.1.2"></a>
 
-### L’oreille comme capteur
+### 1.1.2. L’oreille comme capteur
 *Caractéristiques de l’oreille, sensibilité, oreille interne, transfert acoustique-électrique vers le système nerveux. - à compléter*
 
 <br/>
@@ -229,7 +229,7 @@ Lorsqu’on frappe les branches d'un diapason, celles-ci se mettent à vibrer et
 
 <a name="Section1.1.3"></a>
 
-### Vibration et fréquence
+### 1.1.3. Vibration et fréquence
 Un son pur est représenté par une fonction sinusoïdale du temps, de période T et de fréquence f = 1/T.
 
 <br/>
@@ -248,11 +248,11 @@ Un son est une vibration mécanique se propageant dans un milieu matériel jusqu
 
 </br>
 
-## Contenu fréquentiel (analyse spectrale) 
+## 1.2. Contenu fréquentiel (analyse spectrale) 
 
 <a name="Section1.2.1"></a>
 
-### Signal pur
+### 1.2.1. Signal pur
 Un signal audio pur est un signal sinusoïdal.
 
 
@@ -277,7 +277,7 @@ Signal temporel et signal spectral
 
 <a name="Section1.2.2"></a>
 
-### Signal complexe (à contenu fréquentiel)
+### 1.2.2. Signal complexe (à contenu fréquentiel)
 Un signal complexe est un signal à contenu fréquentiel multiple. Il correspond acoustiquement à un signal audio réel. Ce type de signal s’obtient en fait en sommant plusieurs signaux « fondamentaux », sinusoïdaux.
 
 <br/>
@@ -316,25 +316,24 @@ Classe : 1M, 2M
 <sup> [1](#myfootnote1)</sup>
     
 
-Objectif informatique 1 : 
-- le premier objet de cette activité est de permettre à l'élève d'appréhender la problématique de la représentation de l'information au sens large, comme le passage d'un univers symbolique à un autre.
+Objectif informatique 1 : le premier objet de cette activité est de permettre à l'élève d'appréhender la problématique de la représentation de l'information au sens large, comme le passage d'un univers symbolique à un autre.
     Il s'agit ici de passer d'un espace physique sensoriel (l'audition) à un autre espace sensoriel (la vue) et à la modélisation mathématique permettant de représenter un phénomène, ici acoustique (la représentation sinusoïdale continue d'une onde harmonique). Ce premier travail intellectuel doit permettre aux élèves d'une part de se familiariser avec le matériau servant de support aux activités suivantes (les éléments relatifs au son), et d'autre part de faciliter leur compréhension du changement de paradigme ultérieur entre l'espace physique (plutôt que mathématique) et l'espace numérique et le codage binaire de l'information.
-- le second objet de cette activité est de permettre aux élèves de se familiariser avec les outils informatiques de visualisation graphique et de production sonore, offrant deux modes de représentation du son. 
+Le second objet de cette activité est de permettre aux élèves de se familiariser avec les outils informatiques de visualisation graphique et de production sonore, offrant deux modes de représentation du son. 
     En particulier l'information fréquentielle, essentielle en traitement du signal, est abordée visuellement dans le plan temporel (sinusoide, période) et perçue auditivement (hauteur du son - grave/aigu).
     
-    </br>
+</br>
 
 Objectif informatique 2 : 
-- cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphe sinusoïdal obtenu via un programme python, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
+cette activité peut être envisagée comme support de sensibilisation de l'élève à l'environnement de programmation et à la programmation en python elle même : graphe sinusoïdal obtenu via un programme python, familiarisation avec l’environnement de programmation (éditeur Visual Studio ou autre, ...), avec la création de programme, le débug ; entrées / sorties, sotie graphique, appels aux bibliothèques (numpy, matplotlib, pyo). Certaines notions élémentaires relatives aux langages de programmations et au langage python peuvent être mises en pratique, après un cours préalable (notion de variable, boucle for, passage de valeur à travers une fonction, ...). Elle pourra donc être reprise dans l'onglet "programmation" du document général.
     
     
-    </br>
+</br>
 
 Objectif mathématique et physique (transversal) :
-- l'activité permet de réactiver, confirmer ou s'appuyer sur des savoirs mathématiques relatifs aux relations fonctionnelles,  aux représentations dans le plan et à la trigonométrie.
-- l'activité permet de réactiver, confirmer ou s'appuyer sur savoirs mécaniques et physiques relativement aux ondes, à la notion de milieu de propagation, de période et de fréquence.
+l'activité permet de réactiver, confirmer ou s'appuyer sur des savoirs mathématiques relatifs aux relations fonctionnelles,  aux représentations dans le plan et à la trigonométrie.
+L'activité permet de réactiver, confirmer ou s'appuyer sur savoirs mécaniques et physiques relativement aux ondes, à la notion de milieu de propagation, de période et de fréquence.
 
-    </br>
+</br>
 
 Mode : branché / débranché
 
@@ -479,9 +478,7 @@ Objectif informatique 2 :
     
 </br>
 
-Objectif mathématique et physique (transversal) :
-    - l'activité permet de réactiver, confirmer ou s'appuyer sur des savoirs mathématiques relatifs aux relations fonctionnelles,  aux représentations dans le plan et à la trigonométrie.
-    - l'activité permet de réactiver, confirmer ou s'appuyer sur savoirs mécaniques et physiques relativement aux ondes, à la notion de milieu de propagation, de période et de fréquence.
+Objectif mathématique et physique (transversal) : l'activité permet de réactiver, confirmer ou s'appuyer sur des savoirs mathématiques relatifs aux relations fonctionnelles,  aux représentations dans le plan et à la trigonométrie. L'activité permet de réactiver, confirmer ou s'appuyer sur savoirs mécaniques et physiques relativement aux ondes, à la notion de milieu de propagation, de période et de fréquence.
 
 </br>
 
@@ -561,11 +558,11 @@ def puresignalssum(freq, harmo):
 
 <a name="Section1.3"></a>
 
-## Signal sonore et musique
+## 1.3. Signal sonore et musique
 
 <a name="Section1.3.1"></a>
 
-### Le timbre : caractéristique d’un signal sonore
+### 1.3.1. Le timbre : caractéristique d’un signal sonore
 
 La notion de timbre d'un instrument, ou plus généralement d'un signal, regroupe plusieurs composants : l'amplitude, la fréquence (ou plutôt le contenu fréquentiel) et l'enveloppe.
 
@@ -573,13 +570,13 @@ La notion de timbre d'un instrument, ou plus généralement d'un signal, regroup
 
     *[Supports didactiques : instruments, audio, photos, vidéo]*
 
-#### Amplitude
+#### 1.3.1.1. Amplitude
 L'amplitude d'un signal est directement liée à la notion d'intensité sonore, mesurée en dB ; cette unité logarithmique est par ailleurs directement liée à la sensibilité de l'oreille.
 
-#### Fréquence ou contenu fréquentiel
+#### 1.3.1.2. Fréquence ou contenu fréquentiel
 La période d'un signal représente le temps au bout duquel le signal se reproduit égal à lui-même. La fréquence est l'inverse de la période, c'est à dire le nombre fois où le signal se reproduit égal à lui-même en une seconde.
 
-#### Enveloppe
+#### 1.3.1.3. Enveloppe
 L'enveloppe d'un signal sonore représente l'évolution de l'amplitude du signal en fonction du temps. Elle est caractérisée par quatre phases :
 
 * l'attaque (Attack) : c'est la phase ascendante du signal. Un signal percussif sera caractérisé par une attaque brêve : c'est le pizzicato au violon ou encore l'aspect caractéristique des instruments de percussion (batterie, congas, ...). L'intensité sonore passe du niveau zéro au niveau maximal. L'attaque est une durée.
@@ -613,7 +610,7 @@ L'enveloppe d'un signal sonore représente l'évolution de l'amplitude du signal
 <br/>
 </br>
 
-# Activité 3.2
+# Activité 3
 **Timbre et ADSR**
 
 Classe : 1M, 2M, 3M
@@ -689,7 +686,7 @@ ordinateur individuel, environnement de programmation et programmes python, casq
 
 </br>
 
-# Activité 3.3
+# Activité 4
 
 **Analyse d'un morceau de musique - 1**
 
@@ -923,7 +920,7 @@ Travail sur la technique : les élèves tentent de construire d'eux-même un sig
 
 </br>
 
-# Activité 3.4
+# Activité 5
 
 **Analyse d'un morceau de musique - 2**
 
@@ -1034,8 +1031,8 @@ Travail sur la technique : les élèves manipulent le logiciel Audacity et des f
 
 <a name="Section1.3.2"></a>
 
-### La musique comme « organisation » de timbres sonores
-#### Harmonie : gammes et modes
+### 1.3.2. La musique comme « organisation » de timbres sonores
+#### 1.3.2.1. Harmonie : gammes et modes
 Gammes de pythagore, naturelle, tempérée : construction mathématique. Autres types de gammes.
 Les 7 modes, Ionien, Dorien, Phrygien, Lydien, Mixolydien, Éolien et Locrien : écoute et construction des enchaînements de notes (renversement de gammes).
 
@@ -1068,7 +1065,7 @@ Les 7 modes, Ionien, Dorien, Phrygien, Lydien, Mixolydien, Éolien et Locrien : 
 
 <br/>
 
-#### Rythme et tempo
+#### 1.3.2.2. Rythme et tempo
 <br/>
 <center> 
 
@@ -1103,7 +1100,7 @@ Mesures, décomposition rythmique et tempo
 
 <br/>
 
-#### Composition et accords
+#### 1.3.2.3. Composition et accords
 * *{Activité 6 : les élèves manipulent leurs fichiers afin d’associer des notes fondamentales et créer des accords. Ils composent mélodie et suite d’accords en programmant.}*
 
     *[Supports didactiques : ordinateur et environnement de programmation, documentation papier ou en ligne, – notions de cours projetées – cahiers élèves pour prise de notes]*
@@ -1120,7 +1117,7 @@ Composition d’un accord sur le clavier d’un piano
 </center>
 <br/>
 
-#### Séquences rythmiques et harmoniques
+####  1.3.2.4. Séquences rythmiques et harmoniques
 * *{Activité 7 : via le module graphique de Pyo, les élèves ont la possibilité d’enregistrer une séquence audio qu’ils ont composée à partir de python. Ils peuvent moduler la vitesse d’exécution de la séquence... mais aussi la tonalité!}*
 
     *[Supports didactiques : ordinateur et environnement de programmation, documentation papier ou en ligne – notions de cours projetées – cahiers élèves pour prise de notes]*
@@ -1142,15 +1139,15 @@ Environnement de programmation python et bibliothèque pyo
 
 <a name="Chapter2"></a>
 
-# Génération et enregistrement sonores 
+# 2. Génération et enregistrement sonores 
 
 <a name="Section2.1"></a>
 
-## Générer et enregistrer un son analogique
+## 2.1. Générer et enregistrer un son analogique
 
 <a name="Section2.1.1"></a>
 
-### Les instruments acoustiques « classiques »
+### 2.1.1. Les instruments acoustiques « classiques »
 Quelques principes de génération sonore pour les instruments acoustiques : piano , saxophone, guitare, percussions.
 </br>
 <center> 
@@ -1171,7 +1168,7 @@ Instruments acoustiques : piano, saxophone, guitare, percussion
 
 <a name="Section2.1.2"></a>
 
-### Les synthétiseurs analogiques
+### 2.1.2. Les synthétiseurs analogiques
 Les musiques électroniques se sont popularisées dans les années 80 quand les avancées technologiques, appuyées sur les résultats de la recherche scientifique, ont permis le développement d'un nouvel instrument : le synthétiseur. Rien n'est enregistré à l'intérieur, il n'a pas de mémoire, il crée lui-même des sons sous forme de signaux électriques qui sont ensuite transformés en signaux sonores à l'aide d'une ou plusieurs enceintes.
 
 
@@ -1195,7 +1192,7 @@ Synthétiseurs analogiques et électronique
 
 <a name="Section2.1.3"></a>
 
-### « Capter » le son analogique
+### 2.1.3. « Capter » le son analogique
 Principe du microphone permettant de capter un son analogique, afin de le distribuer sur un système d’amplification ou d’enregistrement.
 
 </br>
@@ -1213,7 +1210,7 @@ Principe du microphone permettant de capter un son analogique, afin de le distri
 
 <a name="Section2.1.4"></a>
 
-### « Garder en mémoire » le son analogique
+### 2.1.4. « Garder en mémoire » le son analogique
 Principe de l’enregistrement analogique
 
 </br>
@@ -1229,7 +1226,7 @@ Principe de l’enregistrement analogique
 
 <a name="Section2.1.5"></a>
 
-### Transmettre le son analogique
+### 2.1.5. Transmettre le son analogique
 
 Principe de la diffusion analogique
 * *{Activité 8.3 : présentation de la chaîne émetteur – microphone – amplificateur – enceintes}*
@@ -1240,11 +1237,11 @@ Principe de la diffusion analogique
 
 <a name="Section2.2"></a>
 
-## Générer et enregistrer un son numérique 
+## 2.2. Générer et enregistrer un son numérique 
 
 <a name="Section2.2.1"></a>
 
-### Synthèse pwm – Problématique générale
+### 2.2.1. Synthèse pwm – Problématique générale
 Un exemple : cas de la synthèse pwm : du numérique à l’analogique (Raspberry Pi) et inversement.
 
 </br>
@@ -1272,7 +1269,7 @@ Un exemple : cas de la synthèse pwm : du numérique à l’analogique (Raspberr
 
 <a name="Section2.2.2"></a>
 
-### Les synthétiseurs actuels et les banques de sons
+### 2.2.2. Les synthétiseurs actuels et les banques de sons
 De la synthèse analogique à la synthèse numérique (actuelle).
 * *{Activité 9.1 : après une démonstration de l’enseignant via un synthétiseur numérique ou une vidéo, les élèves sont amenés à reprendre leurs fichiers créés via python... et reproduire les effets générés avec le synthétiseur : via pyo, puis en associant l’interface graphique, ils créent leur propre synthétiseur... numérique ! }*
 
@@ -1290,7 +1287,7 @@ De la synthèse analogique à la synthèse numérique (actuelle).
 
 <a name="Section2.2.3"></a>
 
-### « Capter » le son numérique
+### 2.2.3. « Capter » le son numérique
 Intérêt de la dispense de l’interface micro et de la transmission filaire ou wifi du signal numérique
 * *{Activité 9.2 : simulation de l’émission-réception d’un signal analogique et d’un signal numérique : les élèves sont amenés à générer différents sons (purs, complexes) à partir de leurs codes python. Via la carte son, ces signaux sont rendus audibles et captés par un microphone. Ce microphone est relié à la carte d’acquisition de la machine et on accède au signal récupé directement sur l’ordinateur. Les élèves peuvent ainsi comparer le signal de départ avec celui d’arrivée, ayant subi deux conversions et le transit aérien sous forme analogique. Les élèves sont amenés à observer et comparer via un outil visuel Pyo. Ils exploitent à nouveau les fichiers créés au cours d’activités précédentes et peuvent en créer de nouveaux.*
 
@@ -1310,7 +1307,7 @@ Intérêt de la dispense de l’interface micro et de la transmission filaire ou
 
 <a name="Section2.2.4"></a>
 
-### « Garder en mémoire » le son numérique
+### 2.2.4. « Garder en mémoire » le son numérique
 Principe et intérêt de l’enregistrement numérique
 </br>
 <center> 
@@ -1325,8 +1322,8 @@ Principe et intérêt de l’enregistrement numérique
 
 <a name="Section2.2.5"></a>
 
-### Transmettre le son numérique
-#### Diffusion dans un réseau numérique
+### 2.2.5. Transmettre le son numérique
+#### 2.2.5.1. Diffusion dans un réseau numérique
    
 </br>
 <center> 
@@ -1342,7 +1339,7 @@ Principe et intérêt de l’enregistrement numérique
 * *{Activité 9.3 : simulation de la transmission de l’information d’un signal analogique et d’un signal numérique en fonction de la longueur du canal de transmission (câble standard / fibre optique). Les élèves sont amenés à introduire des constantes de propagation liées aux matériaux, effectuer des calculs et simuler les effets de la propagation avec un outil visuel Pyo. Ils exploitent à nouveau les fichiers créés au cours d’activités précédentes et peuvent en créer de nouveaux. Comparaison des signaux reçus.}*
 
     *[Supports didactiques : ordinateur et environnement de programmation, documentation papier ou en ligne – notions de cours projetées – cahiers élèves pour prise de notes]*
-#### Diffusion vers un monde analogique (l’oreille humaine)
+#### 2.2.5.2. Diffusion vers un monde analogique (l’oreille humaine)
  </br>
 </br>
 <center> 
@@ -1364,21 +1361,21 @@ Principe et intérêt de l’enregistrement numérique
 
 <a name="Chapter3"></a>
 
-# Transmission du son
+# 3. Transmission du son
 
 <a name="Section3.1"></a>
 
-## Problématique du canal de transmission
+## 3.1. Problématique du canal de transmission
 
 <a name="Section3.1.1"></a>
 
-### De l’émetteur vers le récepteur
+### 3.1.1. De l’émetteur vers le récepteur
 
 Reprise des éléments du chapitre trois, activités de 9.1 à 9.4, synthèse et interprétation.
 
 <a name="Section3.1.2"></a>
 
-### Perturbation liée au canal de transmission : la fidélité
+### 3.1.2. Perturbation liée au canal de transmission : la fidélité
 Reprise des éléments du chapitre trois, activités de 9.1 à 9.4, synthèse et interprétation.
 Privilège de la transmission numérique, nécessité de « coder » l’information.
 * *[Supports didactiques : ordinateur et environnement de programmation, documentation papier ou en ligne – notions de cours projetées – cahiers élèves pour prise de notes]*
@@ -1387,14 +1384,14 @@ Privilège de la transmission numérique, nécessité de « coder » l’informa
 
 <a name="Section3.2"></a>
 
-## Solution : du signal physique au signal numérique 
+## 3.2. Solution : du signal physique au signal numérique 
 
 <a name="Section3.2.1"></a>
 
-### Théorie et codage de l’information
-#### Analogique (historique et principe)
+### 3.2.1. Théorie et codage de l’information
+#### 3.2.1.1. Analogique (historique et principe)
 Des ondes acoustiques au micro-sillon et à la bande magnétique... La physique derrière les techniques classiques de « gravage » de l’information. Avantages et inconvénients.
-#### Numérique – avantage et limites
+#### 3.2.1.2. Numérique – avantage et limites
 Des ondes acoustiques... aux nombres
 * *{Activité 10.1 : les élèves sont invités à écouter un passage musical sur un disque vinyle lu sur une platine disque puis commenter. Le même morceau de musique est ensuite écouté via une clé usb. Les élèves sont invités à commenter et tirer leurs propres conclusions. Pour terminer, une partie du passage musical diffusé en analogique est enregistré via le microphone et visualisé sur l’ordinateur via l’environnement graphique proposé par Py. Les élèves doivent sélectionner la partie correspondante sur le signal numérique et identifier les correspondances, ainsi que le bruit. Le travail proposé ici est l’opposé de la construction harmonique de l’activité 3 : il s’agit à présent « d’extraire » du signal parasite, le « bruit », afin de retrouver un signal se rapprochant le plus possible du signal numérique de départ. }*
 
@@ -1406,7 +1403,7 @@ Des ondes acoustiques... aux nombres
 
 <a name="Section3.2.2"></a>
 
-### Théorie de l’information de Shannon
+### 3.2.2. Théorie de l’information de Shannon
 </br>
 <center> 
 
@@ -1427,11 +1424,11 @@ Des ondes acoustiques... aux nombres
 
 <a name="Section3.3"></a>
 
-## Spécificités du codage numérique
+## 3.3. Spécificités du codage numérique
 
 <a name="Section3.3.1"></a>
 
-### Un signal physique exprimé sous forme de ... 0 et de 1 ?!
+### 3.3.1. Un signal physique exprimé sous forme de ... 0 et de 1 ?!
 * *{Activité 10.3 : les élèves vont échantillonner un signal numérique diffusé depuis l’ordinateur sur une enceinte audio, via le convertisseur analogique / numérique. L’outil Pyo avec interface visuelle est utilisé. Les élèves peuvent choisir différentes fréquences d’échantillonnage et constater les effets visuels et audios. Le choix d’une fréquence acceptable doit amener au critère de Shannon, qui sera simplement énoncé ensuite.}*
 
     *[Supports didactiques : ordinateur et environnement de programmation, interfaces A/N, documentation papier ou en ligne – notions de cours projetées – cahiers élèves pour prise de notes]*
@@ -1440,7 +1437,7 @@ Des ondes acoustiques... aux nombres
 
 <a name="Section3.3.2"></a>
 
-### Échantillonnage
+### 3.3.2. Échantillonnage
 
 Théorème de Shannon
 
