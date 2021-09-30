@@ -58,6 +58,11 @@ div.hint.admonition {
     border: solid 0.5px;
 }
 
+details.dropdown .summary-title {
+    margin: 0 -1.3rem;
+    padding-left: 2.65rem;
+}
+
 @media (min-width: 768px) {
     button.toggle-button.toggle-button-hidden:before {
         content: "Afficher";

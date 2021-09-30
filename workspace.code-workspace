@@ -98,5 +98,23 @@
 			"github.vscode-pull-request-github",
 			"ban.spellright",
 		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			
+
+
+			{
+				"type": "pwa-node",
+				"request": "launch",
+				"name": "Launch Program",
+				"skipFiles": [
+					"<node_internals>/**"
+				],
+				"program": "${file}",
+				"__workspaceFolder": "."
+			}
+		]
 	}
 }

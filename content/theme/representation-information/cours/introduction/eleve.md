@@ -107,7 +107,7 @@ Dans l'exemple ci-dessus, on utilise les lettres de l'alphabet, mais il est plus
 
 ### Le télégraphe de Chappe
 
-Grâce à l'invention du [téléscope](https://fr.wikipedia.org/wiki/T%C3%A9lescope) au XVIIème siècle, les distances avec lesquelles les villes pouvaient communiquer entre elles ont largement diminué. L'information a commencé à circuler à une vitesse étonnante. 
+Grâce à l'invention du [télescope](https://fr.wikipedia.org/wiki/T%C3%A9lescope) au XVII<sup>e</sup> siècle, les distances avec lesquelles les villes pouvaient communiquer entre elles ont largement augmenté. L'information a commencé à circuler à une vitesse étonnante. 
 
 [Claude Chappe](https://fr.wikipedia.org/wiki/Claude_Chappe), inventeur français, développe en 1794 un {glo}`telegraphe|télégraphe` capable de relier des villes entre elles sur plusieurs dizaines de kilomètres grâce à un système de bras mobiles, qui ressemblent aux signaux que pourrait faire un être humain sur le tarmac d'un aéroport. 
 

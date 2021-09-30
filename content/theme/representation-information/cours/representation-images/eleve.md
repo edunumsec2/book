@@ -372,7 +372,7 @@ Identifiez et listez les avantages et les inconvénients du format vectoriel en 
 
 ## Bonus
 
-Une oeuvre d'art numérique signée Andreas Gysin : 
+Une œuvre d'art numérique signée Andreas Gysin : 
 
 https://play.ertdfgcvb.xyz/#/src/demos/doom_flame_full_color
 

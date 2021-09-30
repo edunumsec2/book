@@ -40,8 +40,8 @@
 1. Modifer le programme pour qu'il affiche la première image plus longtemps. 
 1. Modifier le programme pour qu'il affiche une autre séquence d'image
 1. Modifier le programme pour qu'il affiche cette séquence six fois
-1. Ecrire dans un nouveau fichier appelé "coeur.py" un programme qui montre un coeur qui bat en affichant successivement un grand et un petit coeur. Le coeur doit faire 1000 battements
-1. Modifier le programme pour que le coeur batte plus vite. 
+1. Ecrire dans un nouveau fichier appelé "cœur.py" un programme qui montre un cœur qui bat en affichant successivement un grand et un petit cœur. Le cœur doit faire 1000 battements
+1. Modifier le programme pour que le cœur batte plus vite. 
 
 ## 3 Animations
 1. Créer une petite animation contenant du texte et des images
