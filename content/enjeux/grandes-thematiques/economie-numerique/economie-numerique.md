@@ -82,7 +82,7 @@ Aux premiers rangs des capitalisations boursières, ces sociétés sont couramme
 ````{panels}
 :column: col-lg
 
-**APPLE**
+**Apple**
 ^^^
 **Création** : 1976 <br>
 **Source principale de revenu** : Vente d’iPhones, puis  de matériel informatique (tablettes, ordinateurs, accessoires) <br>
@@ -93,7 +93,7 @@ Aux premiers rangs des capitalisations boursières, ces sociétés sont couramme
 ````{panels}
 :column: col-lg
 
-**GOOGLE (Alphabet)**
+**Google (Alphabet)**
 ^^^
 **Création** : 1998  <br>
 **Source principale de revenu** : Publicité ciblée <br>
@@ -106,7 +106,7 @@ Aux premiers rangs des capitalisations boursières, ces sociétés sont couramme
 ````{panels}
 :column: col-lg
 
-**FACEBOOK**
+**Facebook**
 ^^^
 **Création** : 2004 <br>
 **Source principale de revenu** : Publicité ciblée <br>
@@ -117,7 +117,7 @@ Aux premiers rangs des capitalisations boursières, ces sociétés sont couramme
 ````{panels}
 :column: col-lg
 
-**AMAZON**
+**Amazon**
 ^^^
 **Création** : 1994 <br>
 **Source principale de revenu** : Vente au détail <br>
