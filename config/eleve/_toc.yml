@@ -77,7 +77,7 @@ parts:
           - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL4_avance
           - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL5_conclusion
           - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/Corrige_SystemesLogiques
-      - file: content/theme/architecture-ordinateurs/cours/histoire-informatique/eleve
+      # - file: content/theme/architecture-ordinateurs/cours/histoire-informatique/eleve
 
 ## Deuxième année
 - caption: Deuxième année
