@@ -566,7 +566,7 @@ def puresignalssum(freq, harmo):
 
 La notion de timbre d'un instrument, ou plus généralement d'un signal, regroupe plusieurs composants : l'amplitude, la fréquence (ou plutôt le contenu fréquentiel) et l'enveloppe.
 
-* *{Activité 3.1 : plusieurs timbres d’instruments classiques ou de synthétiseurs sont écoutés. Les élèves déterminent d’eux-mêmes ce qui caractérise tel instrument par rapport à un autre}*
+* *Activité intermédiaire : plusieurs timbres d’instruments classiques (analogiques) ou de synthétiseurs sont écoutés. Les élèves déterminent d’eux-mêmes ce qui caractérise tel instrument par rapport à un autre}*
 
     *[Supports didactiques : instruments, audio, photos, vidéo]*
 
@@ -1059,7 +1059,7 @@ Les 7 modes, Ionien, Dorien, Phrygien, Lydien, Mixolydien, Éolien et Locrien : 
 
 <br/>
 
-* *{Activité 4 : les élèves, après avoir apprécié auditivement chacune des gammes, en particulier sur le clavier du piano (numérique...), se placent dans l’environnement informatique et créent des enchaînements de notes. Le but est de reproduire les intervalles (donc créer les notes) pour chacune des gammes.}*
+* *{Activité 6 : les élèves, après avoir apprécié auditivement chacune des gammes, en particulier sur le clavier du piano (numérique...), se placent dans l’environnement informatique et créent des enchaînements de notes. Le but est de reproduire les intervalles (donc créer les notes) pour chacune des gammes.}*
 
     *[Supports didactiques : instruments, audio, photos, vidéo, ordinateur et environnement de programmation, documentation papier ou en ligne – notions de cours projetées – cahiers élèves pour prise de notes]*
 
@@ -1094,14 +1094,14 @@ Mesures, décomposition rythmique et tempo
 </center>
 <br/>
 
-* *{Activité 5 : le découpage en temps – mesures musicales, durée de signal – et la vitesse d’exécution (tempo ou BPM). Les élèves écoutent, puis manipulent leurs fichiers générés sous python et les exploitent : enchaînements de notes déroulés à différents tempi et types de mesures (2/4, 3/4, 4/4, 5/4!).}*
+* *{Activité 7 : le découpage en temps – mesures musicales, durée de signal – et la vitesse d’exécution (tempo ou BPM). Les élèves écoutent, puis manipulent leurs fichiers générés sous python et les exploitent : enchaînements de notes déroulés à différents tempi et types de mesures (2/4, 3/4, 4/4, 5/4!).}*
 
     *[Supports didactiques : audio, photos, vidéo, ordinateur et environnement de programmation, documentation papier ou en ligne – notions de cours projetées – cahiers élèves pour prise de notes]*  
 
 <br/>
 
 #### 1.3.2.3. Composition et accords
-* *{Activité 6 : les élèves manipulent leurs fichiers afin d’associer des notes fondamentales et créer des accords. Ils composent mélodie et suite d’accords en programmant.}*
+* *{Activité 8 : les élèves manipulent leurs fichiers afin d’associer des notes fondamentales et créer des accords. Ils composent mélodie et suite d’accords en programmant.}*
 
     *[Supports didactiques : ordinateur et environnement de programmation, documentation papier ou en ligne, – notions de cours projetées – cahiers élèves pour prise de notes]*
 
@@ -1118,7 +1118,7 @@ Composition d’un accord sur le clavier d’un piano
 <br/>
 
 ####  1.3.2.4. Séquences rythmiques et harmoniques
-* *{Activité 7 : via le module graphique de Pyo, les élèves ont la possibilité d’enregistrer une séquence audio qu’ils ont composée à partir de python. Ils peuvent moduler la vitesse d’exécution de la séquence... mais aussi la tonalité!}*
+* *{Activité 9 : via le module graphique de Pyo, les élèves ont la possibilité d’enregistrer une séquence audio qu’ils ont composée à partir de python. Ils peuvent moduler la vitesse d’exécution de la séquence... mais aussi la tonalité!}*
 
     *[Supports didactiques : ordinateur et environnement de programmation, documentation papier ou en ligne – notions de cours projetées – cahiers élèves pour prise de notes]*
 
@@ -1163,7 +1163,7 @@ Instruments acoustiques : piano, saxophone, guitare, percussion
 </br>
 
 
-* *{Activité 8.1 : par la pratique instrumentale (plus ou moins sommaire...) de l’enseignant, les élèves tentent de s’approprier les mécanismes de production sonore pour les instruments acoustiques. Ces aspects sont repris par l’enseignant via un support projeté : percussion (onde mécanique), résonance, conduit aérien et forme (saxophone...) ou table d’harmonie}*
+* *{Activité 10 : par la pratique instrumentale (plus ou moins sommaire...) de l’enseignant, les élèves tentent de s’approprier les mécanismes de production sonore pour les instruments acoustiques. Ces aspects sont repris par l’enseignant via un support projeté : percussion (onde mécanique), résonance, conduit aérien et forme (saxophone...) ou table d’harmonie}*
     *[Supports didactiques : instruments, audio, photos, vidéo, cahiers élèves pour prise de notes]*
 
 <a name="Section2.1.2"></a>
@@ -1186,7 +1186,7 @@ Synthétiseurs analogiques et électronique
 
 </br>
 
-* *{Activité 8.2 : présentation d’un synthétiseur analogique - principe. Génération d’un son en manipulant les différents modules (VCF, VCO, ...) et analogie avec l’étude préalable (signal pur, complexe, analyse spectrale, enveloppe, timbre (ADSR), .... Ce type d’instrument n’étant pas forcément facilement accessible pour l’enseignant, une séquence vidéo peut être présentée aux élèves. }*
+* *{Activité 11 : présentation d’un synthétiseur analogique - principe. Génération d’un son en manipulant les différents modules (VCF, VCO, ...) et analogie avec l’étude préalable (signal pur, complexe, analyse spectrale, enveloppe, timbre (ADSR), .... Ce type d’instrument n’étant pas forcément facilement accessible pour l’enseignant, une séquence vidéo peut être présentée aux élèves. }*
 
     *[Supports didactiques : instruments, audio, photos, vidéo, cahiers élèves pour prise de notes]*
 
@@ -1229,7 +1229,7 @@ Principe de l’enregistrement analogique
 ### 2.1.5. Transmettre le son analogique
 
 Principe de la diffusion analogique
-* *{Activité 8.3 : présentation de la chaîne émetteur – microphone – amplificateur – enceintes}*
+* *{Activité 12 : présentation de la chaîne émetteur – microphone – amplificateur – enceintes}*
 
     *[Supports didactiques : instruments, matériel audio (microphone, amplificateur, enceintes), photos, vidéo, cahiers élèves pour prise de notes]*
 
@@ -1271,7 +1271,7 @@ Un exemple : cas de la synthèse pwm : du numérique à l’analogique (Raspberr
 
 ### 2.2.2. Les synthétiseurs actuels et les banques de sons
 De la synthèse analogique à la synthèse numérique (actuelle).
-* *{Activité 9.1 : après une démonstration de l’enseignant via un synthétiseur numérique ou une vidéo, les élèves sont amenés à reprendre leurs fichiers créés via python... et reproduire les effets générés avec le synthétiseur : via pyo, puis en associant l’interface graphique, ils créent leur propre synthétiseur... numérique ! }*
+* *{Activité 13 : après une démonstration de l’enseignant via un synthétiseur numérique ou une vidéo, les élèves sont amenés à reprendre leurs fichiers créés via python... et reproduire les effets générés avec le synthétiseur : via pyo, puis en associant l’interface graphique, ils créent leur propre synthétiseur... numérique ! }*
 
     *[Supports didactiques : synthétiseur numérique ou support vidéo, ordinateur et environnement de programmation, documentation papier ou en ligne – notions de cours projetées – cahiers élèves pour prise de notes]*
 </br>
@@ -1289,7 +1289,7 @@ De la synthèse analogique à la synthèse numérique (actuelle).
 
 ### 2.2.3. « Capter » le son numérique
 Intérêt de la dispense de l’interface micro et de la transmission filaire ou wifi du signal numérique
-* *{Activité 9.2 : simulation de l’émission-réception d’un signal analogique et d’un signal numérique : les élèves sont amenés à générer différents sons (purs, complexes) à partir de leurs codes python. Via la carte son, ces signaux sont rendus audibles et captés par un microphone. Ce microphone est relié à la carte d’acquisition de la machine et on accède au signal récupé directement sur l’ordinateur. Les élèves peuvent ainsi comparer le signal de départ avec celui d’arrivée, ayant subi deux conversions et le transit aérien sous forme analogique. Les élèves sont amenés à observer et comparer via un outil visuel Pyo. Ils exploitent à nouveau les fichiers créés au cours d’activités précédentes et peuvent en créer de nouveaux.*
+* *{Activité 14 : simulation de l’émission-réception d’un signal analogique et d’un signal numérique : les élèves sont amenés à générer différents sons (purs, complexes) à partir de leurs codes python. Via la carte son, ces signaux sont rendus audibles et captés par un microphone. Ce microphone est relié à la carte d’acquisition de la machine et on accède au signal récupé directement sur l’ordinateur. Les élèves peuvent ainsi comparer le signal de départ avec celui d’arrivée, ayant subi deux conversions et le transit aérien sous forme analogique. Les élèves sont amenés à observer et comparer via un outil visuel Pyo. Ils exploitent à nouveau les fichiers créés au cours d’activités précédentes et peuvent en créer de nouveaux.*
 
     *[Supports didactiques : ordinateur et environnement de programmation, documentation papier ou en ligne, – notions de cours projetées – cahiers élèves pour prise de notes]*
 
@@ -1336,7 +1336,7 @@ Principe et intérêt de l’enregistrement numérique
 <center>Transmission de l’information sonore numérique sur le réseau digital</center>
 </br>
 
-* *{Activité 9.3 : simulation de la transmission de l’information d’un signal analogique et d’un signal numérique en fonction de la longueur du canal de transmission (câble standard / fibre optique). Les élèves sont amenés à introduire des constantes de propagation liées aux matériaux, effectuer des calculs et simuler les effets de la propagation avec un outil visuel Pyo. Ils exploitent à nouveau les fichiers créés au cours d’activités précédentes et peuvent en créer de nouveaux. Comparaison des signaux reçus.}*
+* *{Activité 15 : simulation de la transmission de l’information d’un signal analogique et d’un signal numérique en fonction de la longueur du canal de transmission (câble standard / fibre optique). Les élèves sont amenés à introduire des constantes de propagation liées aux matériaux, effectuer des calculs et simuler les effets de la propagation avec un outil visuel Pyo. Ils exploitent à nouveau les fichiers créés au cours d’activités précédentes et peuvent en créer de nouveaux. Comparaison des signaux reçus.}*
 
     *[Supports didactiques : ordinateur et environnement de programmation, documentation papier ou en ligne – notions de cours projetées – cahiers élèves pour prise de notes]*
 #### 2.2.5.2. Diffusion vers un monde analogique (l’oreille humaine)
@@ -1352,7 +1352,7 @@ Principe et intérêt de l’enregistrement numérique
 <center>Conversion numérique – analogique – Méthodes de compression</center>
 </br>
 
-* *{Activité 9.4 : les élèves sont amenés à enregistrer leurs créations via différents formats d’enregistrement, compressés ou non, avec ou sans pertes (avi, mp3, wav, aiff, ...) et constater les différences ; puis ils s’échangent leurs créations via le réseau et constatent la fidélité lors du transfert de l’information numérique audio }*
+* *{Activité 16 : les élèves sont amenés à enregistrer leurs créations via différents formats d’enregistrement, compressés ou non, avec ou sans pertes (avi, mp3, wav, aiff, ...) et constater les différences ; puis ils s’échangent leurs créations via le réseau et constatent la fidélité lors du transfert de l’information numérique audio }*
 
     *[Supports didactiques : ordinateur et environnement de programmation, documentation papier ou en ligne – notions de cours projetées – cahiers élèves pour prise de notes]*
 </br>
@@ -1371,12 +1371,12 @@ Principe et intérêt de l’enregistrement numérique
 
 ### 3.1.1. De l’émetteur vers le récepteur
 
-Reprise des éléments du chapitre trois, activités de 9.1 à 9.4, synthèse et interprétation.
+Reprise des éléments du chapitre trois, activités de 13 à 16, synthèse et interprétation.
 
 <a name="Section3.1.2"></a>
 
 ### 3.1.2. Perturbation liée au canal de transmission : la fidélité
-Reprise des éléments du chapitre trois, activités de 9.1 à 9.4, synthèse et interprétation.
+Reprise des éléments du chapitre trois, activités de 13 à 16, synthèse et interprétation.
 Privilège de la transmission numérique, nécessité de « coder » l’information.
 * *[Supports didactiques : ordinateur et environnement de programmation, documentation papier ou en ligne – notions de cours projetées – cahiers élèves pour prise de notes]*
 </br>
@@ -1393,7 +1393,7 @@ Privilège de la transmission numérique, nécessité de « coder » l’informa
 Des ondes acoustiques au micro-sillon et à la bande magnétique... La physique derrière les techniques classiques de « gravage » de l’information. Avantages et inconvénients.
 #### 3.2.1.2. Numérique – avantage et limites
 Des ondes acoustiques... aux nombres
-* *{Activité 10.1 : les élèves sont invités à écouter un passage musical sur un disque vinyle lu sur une platine disque puis commenter. Le même morceau de musique est ensuite écouté via une clé usb. Les élèves sont invités à commenter et tirer leurs propres conclusions. Pour terminer, une partie du passage musical diffusé en analogique est enregistré via le microphone et visualisé sur l’ordinateur via l’environnement graphique proposé par Py. Les élèves doivent sélectionner la partie correspondante sur le signal numérique et identifier les correspondances, ainsi que le bruit. Le travail proposé ici est l’opposé de la construction harmonique de l’activité 3 : il s’agit à présent « d’extraire » du signal parasite, le « bruit », afin de retrouver un signal se rapprochant le plus possible du signal numérique de départ. }*
+* *{Activité 17 : les élèves sont invités à écouter un passage musical sur un disque vinyle lu sur une platine disque puis commenter. Le même morceau de musique est ensuite écouté via une clé usb. Les élèves sont invités à commenter et tirer leurs propres conclusions. Pour terminer, une partie du passage musical diffusé en analogique est enregistré via le microphone et visualisé sur l’ordinateur via l’environnement graphique proposé par Py. Les élèves doivent sélectionner la partie correspondante sur le signal numérique et identifier les correspondances, ainsi que le bruit. Le travail proposé ici est l’opposé de la construction harmonique de l’activité 3 : il s’agit à présent « d’extraire » du signal parasite, le « bruit », afin de retrouver un signal se rapprochant le plus possible du signal numérique de départ. }*
 
     *[Supports didactiques : ordinateur et environnement de programmation, clé usb avec enregistrement numérique, disque vinyl et table de lecture, micro et enceintes, CAN, documentation papier ou en ligne – notions de cours projetées – cahiers élèves pour prise de notes]*
 
@@ -1415,7 +1415,7 @@ Des ondes acoustiques... aux nombres
 <center> Concepts et outils pour l’échantillonnage </center>
 </br>
 
-* *{Activité 10.2 : les élèves vont échantillonner un signal au départ numérique diffusé depuis l’ordinateur sur une enceinte audio, via le convertisseur analogique / numérique. L’outil Pyo avec interface visuelle est utiliser. Les élèves peuvent choisir différentes fréquences d’échantillonnage et constater les effets visuels et audios. Le choix d’une fréquence acceptable doit amener au critère de Shannon, qui sera simplement énoncé ensuite.}*
+* *{Activité 18 : les élèves vont échantillonner un signal au départ numérique diffusé depuis l’ordinateur sur une enceinte audio, via le convertisseur analogique / numérique. L’outil Pyo avec interface visuelle est utiliser. Les élèves peuvent choisir différentes fréquences d’échantillonnage et constater les effets visuels et audios. Le choix d’une fréquence acceptable doit amener au critère de Shannon, qui sera simplement énoncé ensuite.}*
 
     *[Supports didactiques : ordinateur et environnement de programmation, interfaces A/N, documentation papier ou en ligne – notions de cours projetées – cahiers élèves pour prise de notes]*
 
@@ -1429,7 +1429,7 @@ Des ondes acoustiques... aux nombres
 <a name="Section3.3.1"></a>
 
 ### 3.3.1. Un signal physique exprimé sous forme de ... 0 et de 1 ?!
-* *{Activité 10.3 : les élèves vont échantillonner un signal numérique diffusé depuis l’ordinateur sur une enceinte audio, via le convertisseur analogique / numérique. L’outil Pyo avec interface visuelle est utilisé. Les élèves peuvent choisir différentes fréquences d’échantillonnage et constater les effets visuels et audios. Le choix d’une fréquence acceptable doit amener au critère de Shannon, qui sera simplement énoncé ensuite.}*
+* *{Activité 19 : les élèves vont échantillonner un signal numérique diffusé depuis l’ordinateur sur une enceinte audio, via le convertisseur analogique / numérique. L’outil Pyo avec interface visuelle est utilisé. Les élèves peuvent choisir différentes fréquences d’échantillonnage et constater les effets visuels et audios. Le choix d’une fréquence acceptable doit amener au critère de Shannon, qui sera simplement énoncé ensuite.}*
 
     *[Supports didactiques : ordinateur et environnement de programmation, interfaces A/N, documentation papier ou en ligne – notions de cours projetées – cahiers élèves pour prise de notes]*
 
