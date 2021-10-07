@@ -12,26 +12,49 @@ Pour comprendre comment la {glo}`stockage|mémoire` des ordinateurs fonctionne, 
 
 ## Les verrous informatiques
 
-Certains circuits sont construits pour «bloquer» une information, ce qui nous permet de la garder en mémoire, tant que le circuit est alimenté par l'électricité. On appelle ces circuits des {glo}`verrou|verrous`. Le plus élémentaire est le verrou S-R, pour «set», «reset», en anglais. 
+Pour stocker de l'information avec un circuit logique, il faut utiliser une autre technique que ce que nous avons fait jusqu'à maintenant, où toutes les sorties dépendent exlusivement et immédiatement des entrées. Regardons ce qui se passe avec ce circuit, par exemple: c'est une simple porte **OU**, dont l'une des entrées est en fait sa propre sortie.
 
 ```{logic}
-:height: 150
+:height: 100
+:mode: tryout
+
+{
+  "in": [{"pos": [50, 30], "id": 4, "name": "X", "val": 0}],
+  "gates": [{"type": "OR", "pos": [140, 40], "in": [5, 6], "out": 7}],
+  "out": [{"pos": [240, 40], "id": 0, "name": "Z"}],
+  "wires": [[4, 5], [7, 6, {"waypoints": [[170, 80, "w"], [110, 80, "w"]]}], [7, 0]]
+}
+```
+
+Au début, les deux entrées de la porte valent 0, comme sa sortie. Essayez de faire passer l'entrée $X$ à 1: vous verrez que la sortie $Z$ passera à 1 elle aussi, comme il s'agit d'une porte **OU**. Mais comme $Z$ est aussi relié à l'autre entrée de la porte, nous avons maintenant un circuit que nous ne pouvons plus modifier la sortie: même si $X$ passe de nouveau à 0, l'autre entrée reste à 1 et suffit donc pour que $Z$ valent maintenant 1 indéfiniment. Nous sommes obligés de remettre le circuit complètement à zéro (l'équivalent de débrancher la prise de courant et de la rebrancher) pour obtenir à nouveau un 0 sur la sortie $Z$.
+
+Assurément, ce circuit n'est pas très intéressant: il se bloque dans un état sans retour possible. Serait-ce possible de construire un circuit un peu plus élaboré qui nous permettrait de choisir la valeur de sa sortie et de la conserver? Ces circuits existent en effet et sont à la base du stockage de l'information dans les microprocesseurs. On appelle ces circuits des {glo}`verrou|verrous`. Examinons le circuit ci-dessous: c'est le verrou dit «S-R», pour _set/reset_, en anglais. 
+
+```{logic}
+:height: 160
 :mode: tryout
 
 {
   "in": [
     {"pos": [50, 30], "id": 8, "name": "R", "val": 0},
-    {"pos": [50, 120], "id": 9, "name": "S", "val": 1}
+    {"pos": [50, 130], "id": 9, "name": "S", "val": 0}
   ],
   "out": [
     {"pos": [240, 40], "id": 10, "name": "Q"},
-    {"pos": [240, 110], "id": 11, "name": "Q'"}
+    {"pos": [240, 120], "id": 11, "name": "Q'"}
   ],
   "gates": [
     {"type": "NOR", "pos": [120, 40], "in": [0, 1], "out": 2},
-    {"type": "NOR", "pos": [120, 110], "in": [4, 5], "out": 6}
+    {"type": "NOR", "pos": [120, 120], "in": [4, 5], "out": 6}
   ],
-  "wires": [[8, 0], [9, 5], [2, 4], [2, 10], [6, 1], [6, 11]]
+  "wires": [
+    [8, 0],
+    [9, 5],
+    [2, 4, {"waypoints": [[170, 70, "w"], [70, 90, "w"]]}],
+    [2, 10],
+    [6, 1, {"waypoints": [[170, 90, "w"], [70, 70, "w"]]}],
+    [6, 11]
+  ]
 }
 ```
 
