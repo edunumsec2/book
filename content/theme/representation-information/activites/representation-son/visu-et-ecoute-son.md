@@ -197,7 +197,7 @@ L’exemple « visible » de l’impulsion mécanique donnée sur une corde éla
 :height: 200px
 ```
 </center>
-<center> Propagation d’onde de pression</center> 
+<center> Fig. 1 - Propagation d’onde de pression</center> 
   
 <br/>
 
@@ -224,7 +224,7 @@ Lorsqu’on frappe les branches d'un diapason, celles-ci se mettent à vibrer et
 :height: 300px
 ```
 </center>
-<center> Schéma de l’oreille et rôle des cellules ciliées </center>
+<center> Fig. 2 - Schéma de l’oreille et rôle des cellules ciliées </center>
 <br/>
 
 <a name="Section1.1.3"></a>
@@ -240,7 +240,7 @@ Un son pur est représenté par une fonction sinusoïdale du temps, de période 
 :height: 200px
 ``` 
 </center> 
-<center> Représentation graphique d’un son pur (monofréquence) </center> 
+<center> Fig. 3 - Représentation graphique d’un son pur (monofréquence) </center> 
 
 <br/>
 
@@ -271,7 +271,7 @@ Un signal audio pur est un signal sinusoïdal.
 </center>
 
 <center>
-Signal temporel et signal spectral
+Fig. 4 - Signal temporel et signal spectral
 </center>
 <br/>
 
@@ -295,7 +295,7 @@ Un signal complexe est un signal à contenu fréquentiel multiple. Il correspond
 ``` 
 </center> 
 </center> 
-<center> Composition (addition) de signaux – signal résultat </center>
+<center> Fig. 5 - Composition (addition) de signaux – signal résultat </center>
 <br/>
 <center> 
 
@@ -304,7 +304,7 @@ Un signal complexe est un signal à contenu fréquentiel multiple. Il correspond
 :height: 200px
 ``` 
 </center> 
-<center> Composition spectrale d’un signal </center>
+<center> Fig. 6 - Composition spectrale d’un signal </center>
 <br/>
 
 # Activité 1
@@ -606,7 +606,7 @@ L'enveloppe d'un signal sonore représente l'évolution de l'amplitude du signal
 ``` 
 </center> 
 </center> 
-<center> Trois représentations de l'ADSR </center>
+<center> Fig. 7 - Trois représentations de l'ADSR </center>
 <br/>
 </br>
 
@@ -765,7 +765,7 @@ Durée : la séquence d'enseignement se décompose en une séance de 45mn et un 
 :width: 500px
 :height: 300px
 ``` 
- <center> Visualisation d'un morceau de musique sur Audacity </center>
+ <center> Fig. 8 - Visualisation d'un morceau de musique sur Audacity </center>
     </br> </br></center>
 
 <center> 
@@ -783,7 +783,7 @@ Durée : la séquence d'enseignement se décompose en une séance de 45mn et un 
 </html>     
 
 </center> 
- <center> Manipulation d'un morceau de musique sur Audacity </center>
+ <center> Fig. 9 - Manipulation d'un morceau de musique sur Audacity </center>
     </br> </br>    
 
 2ème temps de séquence : identification des savoirs  abordés lors des activités précédentes (amplitude, fréquences, enveloppe, timbre, signal comme somme de sinusoïdes). Cette phase est très dirigée par l'enseignant (15mn). 
@@ -812,7 +812,7 @@ Durée : la séquence d'enseignement se décompose en une séance de 45mn et un 
 :height: 200px
 ``` 
 </center> 
-<center> Visualisation d'un morceau de musique sur Audacity - zooms - identification amplitude, fréquences, enveloppe, timbre, signal comme somme de sinusoïdes</center>
+<center> Fig. 10 - Visualisation d'un morceau de musique sur Audacity - zooms - identification amplitude, fréquences, enveloppe, timbre, signal comme somme de sinusoïdes</center>
 <br/>
 
 <br/>
@@ -849,7 +849,7 @@ def puresignalssum2(freq, harmo1, amp1, harmo2, amp2, harmo3, amp3):
 :height: 200px
 ``` 
 </center> 
-<center> Identification d'un contenu fréquentiel basse fréquence (ici 50Hz) sur la tranche d'un morceau de musique </center></br> 
+<center> Fig. 11 - Identification d'un contenu fréquentiel basse fréquence (ici 50Hz) sur la tranche d'un morceau de musique </center></br> 
 
 <center> 
 
@@ -859,7 +859,7 @@ def puresignalssum2(freq, harmo1, amp1, harmo2, amp2, harmo3, amp3):
 :height: 200px
 ``` 
 </center> 
-<center> Construction d'un signal analogue basse fréquence (50Hz) à l'aide du programme puresignalssum2.py </center></br> 
+<center> Fig. 12 - Construction d'un signal analogue basse fréquence (50Hz) à l'aide du programme puresignalssum2.py </center></br> 
 
 
 
@@ -880,7 +880,7 @@ Les élèves sont invités ensuite à revenir à la tranche de morceau pour éta
 :height: 200px
 ``` 
 </center> 
-<center> Construction d'un signal analogue multi-fréquences (fondamentale 50Hz et harmoniques choisies - fréquences et amplitudes) à l'aide du programme puresignalssum2.py </center></br> 
+<center> Fig. 13 - Construction d'un signal analogue multi-fréquences (fondamentale 50Hz et harmoniques choisies - fréquences et amplitudes) à l'aide du programme puresignalssum2.py </center></br> 
 
 De la même manière, construction d'un signal complexe, somme de sinusoides, afin de s'approcher du signal observé dans le morceau. On observe par exemple à la 52ème seconde du fichier audio, un signal multifréquence très régulier pendant plusieurs périodes. On distingue très bien la fréquence fondamentale d'environ 66Hz et d'amplitude environ 0.5, puis une harmonique de fréquence proche de 333Hz (5 fois la fondamentale) et d'amplitude proche de 0.15. Une troisième harmonique est vraisemblablement présente, on la négligera dans la construction d'un signal multifréquence avec le programme puresignalssum2.py, affecté des paramètres : (66, 1, 0.5, 5, 0.15, 0, 0.)
 
@@ -897,7 +897,7 @@ De la même manière, construction d'un signal complexe, somme de sinusoides, af
 :height: 200px
 ``` 
 </center> 
-<center> Construction d'un signal multifréquences s'appuyant sur les fréquences identifiées sur la tranche d'un morceau de musique </center>
+<center> Fig. 14 - Construction d'un signal multifréquences s'appuyant sur les fréquences identifiées sur la tranche d'un morceau de musique </center>
 <br/>
 <br/>
 
@@ -999,7 +999,7 @@ Durée : la séquence d'enseignement se décompose en une séance de 45mn, et un
 :height: 200px
 ``` 
 </center> 
-<center> Zooms successifs sur Audacity - Mise en évidence de la discrétisation numérique d'un signal sonore à différentes fréquences d'échantillonnage</center>
+<center> Fig. 15 - Zooms successifs sur Audacity - Mise en évidence de la discrétisation numérique d'un signal sonore à différentes fréquences d'échantillonnage</center>
     <br/>
 
 3ème temps de séquence : analyse et interprétation du phénomène observé : de la visualisation continue de la courbe représentant le son, on passe à une vision "discrète", c'est à dire que les étudiants constatent que la courbe est "découpée" en une multitude de points, les coordonnées en abscisse étant uniformément réparties.
@@ -1054,7 +1054,7 @@ Les 7 modes, Ionien, Dorien, Phrygien, Lydien, Mixolydien, Éolien et Locrien : 
 :height: 200px
 ``` 
 </center> 
-<center> Représentation modale sur le clavier du piano
+<center> Fig. 16 - Représentation modale sur le clavier du piano
 </center> 
 
 <br/>
@@ -1090,7 +1090,7 @@ Les 7 modes, Ionien, Dorien, Phrygien, Lydien, Mixolydien, Éolien et Locrien : 
 </center> 
 
 <center> 
-Mesures, décomposition rythmique et tempo
+Fig. 17 - Mesures, décomposition rythmique et tempo
 </center>
 <br/>
 
@@ -1113,7 +1113,7 @@ Mesures, décomposition rythmique et tempo
 ``` 
 </center> 
 <center>
-Composition d’un accord sur le clavier d’un piano
+Fig. 18 - Composition d’un accord sur le clavier d’un piano
 </center>
 <br/>
 
@@ -1131,7 +1131,7 @@ Composition d’un accord sur le clavier d’un piano
 </center> 
 
 <center>
-Environnement de programmation python et bibliothèque pyo
+Fig. 19 - Environnement de programmation python et bibliothèque pyo
 </center>
 </br>
 </br>
@@ -1158,7 +1158,7 @@ Quelques principes de génération sonore pour les instruments acoustiques : pia
 ``` 
 </center> 
 <center>
-Instruments acoustiques : piano, saxophone, guitare, percussion
+Fig. 20 - Instruments acoustiques : piano, saxophone, guitare, percussion
 </center>
 </br>
 
@@ -1181,7 +1181,7 @@ Les musiques électroniques se sont popularisées dans les années 80 quand les 
 ``` 
 </center> 
 <center>
-Synthétiseurs analogiques et électronique
+Fig. 21 - Synthétiseurs analogiques et électronique
 </center>
 
 </br>
@@ -1204,7 +1204,7 @@ Principe du microphone permettant de capter un son analogique, afin de le distri
 :height: 200px
 ``` 
 </center> 
-<center>Prise de son avec un microphone dans une chambre anéchoïque</center>
+<center>Fig. 22 - Prise de son avec un microphone dans une chambre anéchoïque</center>
 </br>
 
 
@@ -1222,7 +1222,7 @@ Principe de l’enregistrement analogique
 :height: 200px
 ``` 
 </center> 
-<center>Enregistreur à bande de studio</center>
+<center>Fig. 23 - Enregistreur à bande de studio</center>
 
 <a name="Section2.1.5"></a>
 
@@ -1253,7 +1253,7 @@ Un exemple : cas de la synthèse pwm : du numérique à l’analogique (Raspberr
 :height: 150px
 ``` 
 </center> 
-<center>Principe de l’enregistrement numérique d’un signal analogique</center>
+<center>Fig. 24 - Principe de l’enregistrement numérique d’un signal analogique</center>
 </br>
 
 </br>
@@ -1264,7 +1264,7 @@ Un exemple : cas de la synthèse pwm : du numérique à l’analogique (Raspberr
 :height: 200px
 ``` 
 </center> 
-<center>De l’analogique vers l’analogique... en passant par le numérique</center>
+<center>Fig. 25 - De l’analogique vers l’analogique... en passant par le numérique</center>
 </br>
 
 <a name="Section2.2.2"></a>
@@ -1282,7 +1282,7 @@ De la synthèse analogique à la synthèse numérique (actuelle).
 :height: 200px
 ``` 
 </center> 
-<center>Synthèse sonore numérique actuelle – Outils pythons-pyo </center>  
+<center>Fig. 26 - Synthèse sonore numérique actuelle – Outils pythons-pyo </center>  
 </br>
 
 <a name="Section2.2.3"></a>
@@ -1301,7 +1301,7 @@ Intérêt de la dispense de l’interface micro et de la transmission filaire ou
 :height: 200px
 ``` 
 </center> 
-<center>Câbles de transmission par fibre optique et routeur wifi</center>
+<center>Fig. 27 - Câbles de transmission par fibre optique et routeur wifi</center>
 
 </br>
 
@@ -1317,7 +1317,7 @@ Principe et intérêt de l’enregistrement numérique
 :height: 200px
 ``` 
 </center>   
-<center>Supports d’enregistrement numérique : disque dur Ssd et clé Usb</center>
+<center>Fig. 28 - Supports d’enregistrement numérique : disque dur Ssd et clé Usb</center>
 </br>
 
 <a name="Section2.2.5"></a>
@@ -1333,7 +1333,7 @@ Principe et intérêt de l’enregistrement numérique
 :height: 200px
 ``` 
 </center>    
-<center>Transmission de l’information sonore numérique sur le réseau digital</center>
+<center>Fig. 29 - Transmission de l’information sonore numérique sur le réseau digital</center>
 </br>
 
 * *{Activité 15 : simulation de la transmission de l’information d’un signal analogique et d’un signal numérique en fonction de la longueur du canal de transmission (câble standard / fibre optique). Les élèves sont amenés à introduire des constantes de propagation liées aux matériaux, effectuer des calculs et simuler les effets de la propagation avec un outil visuel Pyo. Ils exploitent à nouveau les fichiers créés au cours d’activités précédentes et peuvent en créer de nouveaux. Comparaison des signaux reçus.}*
@@ -1349,7 +1349,7 @@ Principe et intérêt de l’enregistrement numérique
 :height: 200px
 ``` 
 </center>       
-<center>Conversion numérique – analogique – Méthodes de compression</center>
+<center>Fig. 30 - Conversion numérique – analogique – Méthodes de compression</center>
 </br>
 
 * *{Activité 16 : les élèves sont amenés à enregistrer leurs créations via différents formats d’enregistrement, compressés ou non, avec ou sans pertes (avi, mp3, wav, aiff, ...) et constater les différences ; puis ils s’échangent leurs créations via le réseau et constatent la fidélité lors du transfert de l’information numérique audio }*
@@ -1412,7 +1412,7 @@ Des ondes acoustiques... aux nombres
 :height: 200px
 ``` 
 </center>     
-<center> Concepts et outils pour l’échantillonnage </center>
+<center> Fig. 31 - Concepts et outils pour l’échantillonnage </center>
 </br>
 
 * *{Activité 18 : les élèves vont échantillonner un signal au départ numérique diffusé depuis l’ordinateur sur une enceinte audio, via le convertisseur analogique / numérique. L’outil Pyo avec interface visuelle est utiliser. Les élèves peuvent choisir différentes fréquences d’échantillonnage et constater les effets visuels et audios. Le choix d’une fréquence acceptable doit amener au critère de Shannon, qui sera simplement énoncé ensuite.}*
@@ -1449,7 +1449,7 @@ Théorème de Shannon
 :height: 200px
 ``` 
 </center> 
-<center>Principe de l’échantillonnage – aspects temporels et fréquentiels</center>
+<center>Fig. 32 - Principe de l’échantillonnage – aspects temporels et fréquentiels</center>
 
 </br>
 </br>
