@@ -69,7 +69,6 @@ Dans la première boucle l'instruction `print('dedans')` fait parti du bloc d'it
 Dans la deuxième boucle l'instruction `print('dehors')` ne fait pas parti du bloc d'itération et elle est exécutée seulement 1 fois.
 
 ```{codeplay}
-:exec:
 for i in range(3):
     print('itération', i)
     print('dedans')
@@ -95,7 +94,6 @@ Dans l'exemple suivant nous affectons une valeur à la variable `a` et nous effe
 Le résultat d'une comparaison est une valeur booléenne (valeur logique) qui prend la valeur `True` ou `False`
 
 ```{codeplay}
-:exec:
 a = 3
 print(a > 2)
 print(a < 2)
@@ -106,7 +104,6 @@ print(a != 2)
 Ne confondez pas l'opérateur d'_affectation_ (`=`) avec l'opérateur de _comparaison_ (`==`).
 
 ```{codeplay}
-:exec:
 a = 2           # affectation
 print(a)
 print(a == 2)   # comparaison
@@ -119,7 +116,6 @@ L'instruction `if` permet d'exécuter un bloc si une condition est vraie, sinon 
 L'exemple suivant affiche `majeur` si l'âge est plus grand ou égale à 18.
 
 ```{codeplay}
-:exec:
 age = 21
 
 if age >= 18:
@@ -132,7 +128,6 @@ L'instruction `if...else` permet de choisir entre deux blocs selon une condition
 Si la condition est vraie, le bloc **if** est exécuté; sinon, le bloc **else** est exécuté.
 
 ```{codeplay}
-:exec:
 note = 4.5
 
 if note >= 4:
@@ -146,8 +141,6 @@ else:
 L'instruction `if...elif...else` permet d'exécuter un bloc d'instruction si une condition est vraie. Si la première condition n'est pas remplie, une autre est testée.
 
 ```{codeplay}
-:exec:
-
 n = -3
 print('le nombre', n, 'est')
 
@@ -169,7 +162,6 @@ Les opérateurs logiques permettent de combiner deux valeurs logiques.
 Pour tester si un nombre x est dans l'intervalle (a, b) il faut combiner deux comparaisons avec une opération logique.
 
 ```{codeplay}
-:exec:
 a = 5
 b = 10
 
@@ -192,7 +184,6 @@ Une double inversion revient à l'identité.
 Dans l'exemple suivant, essayez de changer la valeur de `p`.
 
 ```{codeplay}
-:exec:
 p = True
 
 print('p =', p)
@@ -211,7 +202,6 @@ en passant dans l'ordre, de la première valeur à la dernière.
 Dans l'exemple suivant nous itérons à travers la chaine `'hello'`
 
 ```{codeplay}
-:exec:
 for c in 'hello':
     print(c)
 ````
@@ -221,7 +211,7 @@ L'expression `range(a, b)` exprime la plage numérique allant de `a` à `b-1`.
 Dans notre cas nous itérons de 3 à 9.
 
 ```{codeplay}
-:exec:
+
 for i in range(3, 10):
     print(i)
 ```
@@ -229,7 +219,6 @@ for i in range(3, 10):
 Nous pouvons faire des calculs avec chaque valeur de la boucle.
 
 ```{codeplay}
-:exec:
 for i in range(1, 10):
     print(i, 'au carré est', i ** 2)
 ```
