@@ -1,16 +1,3 @@
----
-jupytext:
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.10.3
-kernelspec:
-  display_name: Python 3
-  language: python
-  name: python3
----
-
 # Listes
 
 Une liste est un séquence linéaire d'objets. En Python, syntaxiquement, une liste
@@ -28,10 +15,7 @@ print(fruits)
 print(len(fruits))
 ```
 
-**Exercice**
-
-- Ajoutez un élément à la liste `fruits`
-- Ajoutez une deuxième liste `prix` avec des éléments numériques.
+**Exercice**: Ajoutez un élément à la liste `fruits`. Ajoutez une deuxième liste `prix` avec des éléments numériques.
 
 ## La fonction `list`
 
@@ -58,9 +42,7 @@ fruits = ['banane', 'pomme', 'orange']
 print(fruits[0])
 ```
 
-**Exercice**
-
-- Esseyez d'accéder aux éléments `fruits[2]` et `fruits[3]`.
+**Exercice**: Esseyez d'accéder aux éléments `fruits[2]` et `fruits[3]`.
 
 ```{codeplay}
 m = list('Monty Python')

@@ -1,15 +1,3 @@
----
-jupytext:
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.10.3
-kernelspec:
-  display_name: Python 3.9.1 64-bit
-  name: python3
----
-
 # Variables et expressions
 
 Les données qu'un ordinateur manipule se trouvent dans sa mémoire.
