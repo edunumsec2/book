@@ -1,8 +1,8 @@
 # Introduction
 
-Dans ce chapitre, nous aborderons la question de {glo}`archiordi|l'architecture des ordinateurs`, c'est à dire les multiples couches physiques qui rendent possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
+Dans ce chapitre, nous aborderons la question de l'architecture des ordinateurs, c'est à dire les multiples couches physiques qui rendent possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
 
-Comme vous avez pu le voir dans le chapitre lié à la {glo}`repinfo|représentation de l'information`, tout ce qui apparaît sur votre écran est représenté par l'ordinateur par suite de 0 et de 1. Pour comprendre comment ces <span commented>{glo}`codebinaire|nombres binaires`</span><!-- REVIEW/JPP: pas nombres --> sont traités par l'ordinateur, il faut avoir en tête que les ordinateurs sont <span commented>construits</span><!-- REVIEW/JPP: pour moi, ils ne sont pas construits comme ça. Il n'y a qu'une seule couche, à la base. Mais on y réfléchit selon plusieurs niveaux --> en plusieurs couches successives, comme un mille-feuille, dont chacune possède ses propres règles. 
+Comme vous avez pu le voir dans le chapitre lié à la représentation de l'information, tout ce qui apparaît sur votre écran est représenté par l'ordinateur par suite de 0 et de 1. Pour comprendre comment ces <span commented>{glo}`codebinaire|nombres binaires`</span><!-- REVIEW/JPP: pas nombres --> sont traités par l'ordinateur, il faut avoir en tête que les ordinateurs sont <span commented>construits</span><!-- REVIEW/JPP: pour moi, ils ne sont pas construits comme ça. Il n'y a qu'une seule couche, à la base. Mais on y réfléchit selon plusieurs niveaux --> en plusieurs couches successives, comme un mille-feuille, dont chacune possède ses propres règles. 
 
 ```{figure} media/abstractionlight.png
 ---
@@ -11,7 +11,7 @@ width: 250px
 ---
 Les différents niveaux d'abstraction de l'informatique, en partant des électrons, jusqu'aux «programmes», <span commented>que l'on appelle aussi aujourd'hui «applications»</span><!-- REVIEW/JPP: pas la même chose -->. 
 ```
-Dans ce chapitre, nous nous concentrerons sur les {glo}`basniveau|couches de bas niveau`, et tenterons de remonter progressivement jusqu'aux {glo}`logiciel|couches logicielles`. 
+Dans ce chapitre, nous nous concentrerons sur les couches de bas niveau, et tenterons de remonter progressivement jusqu'aux couches logicielles. 
 
 
 ## De quoi sont faits les nombres binaires? 
