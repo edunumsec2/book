@@ -1,104 +1,112 @@
----
-jupytext:
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.10.3
-kernelspec:
-  display_name: Python 3
-  language: python
-  name: python3
----
-
 # Modules
-<span commented>Les modules sont des fichiers</span><!-- REVIEW/JPP: On pourrait commencer par une petite motivation sur pourquoi les modules -->, aussi appelés scripts, contenant un ensemble de <span commented>déclarations de fonctions</span><!-- REVIEW/JPP: plus généralement, de définitions — typiquement des fonctions, mais aussi des variables/constantes comme pi de math -->. Lorsqu'on crée un programme, les modules ne sont pas importés d'office, ils sont stockés sur l'ordinateur lors de l'installation de Python et il faut les importer lorsqu'ils sont nécessaires.
 
-+++
+Lorsque vous créez multiples programmes dans un domaine similiare, il est for probable que vous pourriez réutiliser des parties de code. Il serait donc plus éfficace de placer ce code d'utilité générale dans un endroit spécifique. 
+
+Un **module** est un ou plusieurs fichiers en Python que vous pouvez importer au début de votre programme.
+Ce sont des scripts, contenant un ensemble de définitions — typiquement des fonctions, mais aussi des variables ou constantes (comme pi du module `math`).
+
+Python est accompagné d'une bibliothèque de modules standards, tel que
+
+- `math`
+- `random`
+- `time`
+- `turtle`
+
+Vous trouvez l'index des modules ici: https://docs.python.org/3/py-modindex.html
 
 ## Importer un module
-Selon l'utilité qu'on en fait, y a plusieurs façons d'importer un module:
 
-    from module import *
-    from module import fonction
-    import module
-    import module as autre_nom
+Le mot-clé `import` permet d'importer un module. La fonction `dir` permet de voir le contenu du module. 
+Normalement toutes les modules sont importé au début d'un programme.
 
-Selon la façon dont on a importé le module, la forme que l'on va donner aux fonctions est différente.
-- Avec la première forme, il suffira d'appeler la fonction par son nom.
-- Avec les autres formes, il sera nécessaire de précéder le nom de la fonction par <span commented>celui du module</span><!-- REVIEW/JPP: ce n'est pas vrai pour la 2e ligne -->
+```{codeplay}
+import math
 
-**Bonne pratique : Pourquoi ne pas simplement importer tout le module sans sélectionner de fonctions ?**
+print(dir(math))
+````
 
-De manière générale, il ne faut pas faire `from module import *`. Ceci encombre l'espace de nommage de l'importateur et rend la détection de noms non définis beaucoup plus ardue pour les analyseurs de code.
+**Exericice:** Importe le module `random` et affiche son contenu avec `dir`.
 
-Il est préférable d'importer les module au début d'un programme. Ceci permet d'afficher clairement de quels modules le code a besoin et évite de se demander <span commented>si le module est dans le contexte</span><!-- REVIEW/JPP: je ne comprends pas cette fin de phrase -->.
+Pour utiliser une fonction du module importé, il faut précéder le nom de la fonction par le nom du module, séparé par un point.
 
-+++
+```{codeplay}
+print('e =', math.e)
+print('pi =', math.pi)
+print('fact(7) =', math.factorial(7))
+````
+
+**Exercice:** Utilisez la fonction `pow` (puissance) et affichez le résultat.
+
 
 ## Module `math`
+
 On retrouve dans le module `math` des <span commented>fonctions</span><!-- REVIEW/JPP: ainsi que des constantes --> 
+
 - arithmétiques
 - logarithmiques et exponentielles
 - trigonométriques
 
-Voici quelques utilisations du module `math`.
+Voici quelques utilisations du module `math` avec des fonctions trigonométriques.
 
-```{code-cell} ipython3
-from math import pi
+![](trigo.gif)
 
-print(pi)
-```
-
-```{code-cell} ipython3
+```{codeplay}
 from math import asin, acos, atan, degrees
 
-opp = 4
+opp = 3
+adj = 4
 hyp = 5
-adj = 3
 
-a = asin(opp/hyp)
-b = acos(adj/hyp)
-c = atan(opp/adj)
-
-print(degrees(a),degrees(b),degrees(c), sep='\n')
+print(degrees(asin(opp/hyp)))
+print(degrees(acos(adj/hyp)))
+print(degrees(atan(opp/adj))
 ```
 
-<span commented>Dans cet exemple</span><!-- REVIEW/JPP: ce serait bien d'éviter les arguments nommés et de simplement avoir 3 print ici pour éviter les complications non nécessaires --> on importe les fonction `asin`, `acos`, `atan` et `degrees` du module `math`. Les 3 premières renvoient un angle en radiant et la dernière permet de convertir les radiant en degrés. <span commented>Pour consulter toutes les fonction diponibles dans un module</span><!-- REVIEW/JPP: Ceci m'a l'air mieux en haut de page ou en bas de page, mais pas ici au milieu -->, la documentation de référence se trouve ici : https://docs.python.org/fr et **l'index des modules de Python** ici : https://docs.python.org/fr/3/py-modindex.html
+Dans cet exemple on importe les fonction `asin`, `acos`, `atan` et `degrees` du module `math`. Les 3 premières renvoient un angle en radian et la dernière permet de convertir radian en degré.
 
-+++
+## Module `random`
 
-## Le module `random` 
-Le module `random` permet d'utiliser des fonctions basées sur la génération de nombres aléatoire dans un programme. 
+Le module `random` permet de créer des nombres pseudo-aléatoires. 
 
-Exercice jeu de casino: la roulette 
+La fonction `random()` retourne un nombre aléatoire dans l'intervalle [0, 1].
 
-```{code-cell} ipython3
-from random import random, randrange, choice
-
-a = random()
-
-b = choice(['gagné', 'perdu', 'match nul'])
-
-c = randrange(9)
-
-d = randrange(20, 101, 5)
-
-print(a,b,c,d,sep='\n')
+```{codeplay}
+from random import random
+    
+for i in range(3):
+    print(random())
 ```
 
-Dans l'exemple ci-dessus, trois fonction sont importées du module `random`. La fonction `random` permet de générer un nombre aléatoire entre 0.0 et 1.0. La fonction `choice` permet de choisir aléatoirement un élément d'une liste. La fonction `randrange` peut être utilisée avec un ou trois arguments: Dans le premier cas, un nombre entier est généré aléatoirement entre 0 et l'argument et dans le deuxième cas, un nombre entier est généré aléatoirement entre le premier et le deuxième argument en respectant des pas définis par le troisième argument.
+La fonction `randint(a, b)` retourne un entier aléatoire dans l'interval [a, b].
 
-+++
+```{codeplay}
+from random import randint
+    
+print('randint - random integer')
+for i in range(15):
+    print(randint(0, 9), end=' ')
+```
 
-## Turtle – dessin avec la tortue Python 
+La fonction `choice(liste)` retourne un élément aléatoire de la liste.
 
-+++
+```{codeplay}
+from random import choice
+
+for i in range(5):
+    c = choice(['gagné', 'perdu', 'match nul'])
+    print(c)
+```
+
+## Module `turtle` 
 
 Python peut être utilisé pour donner des ordres à un robot afin qu'il execute des tâches. Ceci demande une perception particulière de l'espace pour se mettre à la place du robot et ainsi détérminer où est la droite et la gauche en fonction des actions déjà executées. Le module `turtle` permet de reproduire cette logique en animant une tortue virtuelle.
 
-```{code-cell} ipython3
+```{codeplay}
 from turtle import *
+
+forward(100)
+left(90)
+forward(100)
 ```
 
 La tortue peut faire différents déplacements: avancer, reculer, tourner à droite et tourner à gauche. 
