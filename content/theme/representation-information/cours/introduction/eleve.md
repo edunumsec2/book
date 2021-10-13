@@ -83,7 +83,7 @@ On trouve des exemples célèbres et bien documentés de {glo}`sysco|systèmes d
 
 ### Le carré de Polybe
 
-Utilisé en Grèce Antique pour transmettre des messages entre cités voisines, ce système utilisait des torches enflammées en guise de {glo}`signal|signaux`. 
+Utilisé en Grèce Antique pour transmettre des messages entre cités voisines, ce système utilisait des torches enflammées en guise de signaux. 
 
 Cinq torches "à gauche", cinq torches "à droite", étaient séparées par un espace
 suffisamment grand pour être identifiables à longue distance. Une torche pouvait
@@ -162,9 +162,9 @@ Le désavantage de ces codex d'abbréviations est leur faible degré de standard
 La réponse à cette question est l'apport le plus essentiel de l'introduction du code binaire, et des standards de représentation de l'information qui l'ont suivi : un langage pour les contrôler tous. 
 ````
 
-Si vous observez le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), vous remarquerez que les {glo}`signal|signaux` utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet. 
+Si vous observez le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), vous remarquerez que les signaux utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet. 
 
-Ceci est une extension de la réponse à la question ci-dessus, puisqu'il est logique de coder les lettres les plus fréquentes avec les {glo}`signal|signaux` les plus courts. 
+Ceci est une extension de la réponse à la question ci-dessus, puisqu'il est logique de coder les lettres les plus fréquentes avec les signaux les plus courts. 
 
 ```{figure} media/letterdistribution.png
 ---
