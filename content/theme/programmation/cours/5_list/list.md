@@ -42,7 +42,7 @@ fruits = ['banane', 'pomme', 'orange']
 print(fruits[0])
 ```
 
-**Exercice**: Esseyez d'accéder aux éléments `fruits[2]` et `fruits[3]`.
+**Exercice**: Essayez d'accéder aux éléments `fruits[2]` et `fruits[3]`.
 
 ```{codeplay}
 m = list('Monty Python')

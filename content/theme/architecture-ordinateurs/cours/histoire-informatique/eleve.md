@@ -7,7 +7,7 @@ Le mot calcul vient de *calculus*, en latin: le petit caillou. Au temps des roma
 
 ````{admonition} La machine d'Anticythère
 :class: hint
-La machine d'Anticythère, découverte au tout début du XXe siècle dans une épave, est considéré comme le premier calculateur mécanique. Datée d'environ 200 av. J.-C. elle permettrait de calculer et donc prédire la date d'une éclipse.
+La machine d'Anticythère, découverte au tout début du XX<sup>e</sup> siècle dans une épave, est considéré comme le premier calculateur mécanique. Datée d'environ 200 av. J.-C. elle permettrait de calculer et donc prédire la date d'une éclipse.
 
 ```{image} media/NAMA_Machine_d'Anticythère_1.jpeg
 :height: 200px
@@ -22,7 +22,7 @@ Manque contenu
 
 
 ## Les calculateurs mécaniques
-Les dispositifs d'aide au calcul restent rudimentaires jusqu'à la Pascaline au XVIIe siècle. Cette machine créée et mise au point par Blaise Pascal est considérée comme le premier calculateur mécanique.
+Les dispositifs d'aide au calcul restent rudimentaires jusqu'à la Pascaline au XVII<sup>e</sup> siècle. Cette machine créée et mise au point par Blaise Pascal est considérée comme le premier calculateur mécanique.
 
 Babage
 

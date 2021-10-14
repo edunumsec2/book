@@ -28,7 +28,7 @@ On peut dessiner des diagrammes avec des {glo}`portelogique|portes logiques`. (C
 {"gates": [{"type": "AND", "pos": [50, 30], "in": [0, 1], "out": 2}]}
 ```
 
-Sur ce schéma logique, les entrées sont à gauche, la sortie à droit et la porte est connectée au milieu. Les circuits sont représentés en noir s'ils véhiculent un «0» et avec une couleur s'ils véhiculent un «1».
+Sur ce schéma logique, les entrées sont à gauche, la sortie à droite et la porte est connectée au milieu. Les circuits sont représentés en noir s'ils véhiculent un «0» et avec une couleur s'ils véhiculent un «1».
 
 Cliquez sur les entrées $X$ et $Y$ pour changer leurs valeurs et observez le comportement de la sortie $Z$. Est-ce que cela correspond à la table de vérité ci-dessus?
 
@@ -481,7 +481,7 @@ Voici le circuit final ainsi réalisé:
 }
 ```
 
-(Ce schéma ne peut être simulé quand dans l'indice de l'exercice suivant.)
+(Ce schéma ne peut être simulé que dans l'indice de l'exercice suivant.)
 
 Ce que cette approche systématique nous apprend, c'est que nous pouvons toujours penser un circuit comme un **OU** de toutes les conditions sous lesquelles la sortie doit être à $1$. Ces conditions sont elles-mêmes réalisables avec les entrées du circuit avec des portes **ET** et des inverseurs.
 

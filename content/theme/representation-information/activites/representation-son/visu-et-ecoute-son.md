@@ -44,7 +44,7 @@
 
 <a name="Introduction"></a>
 # Introduction
-Le lien entre mathématiques et musique n’est pas récent puisque dès l'antiquité la musique est associée aux mathématiques. Elle est même considérée par Pythagore au VIe siècle avant J.C. comme étant une science mathématique, au même titre que l'arithmétique, l'astronomie et la géométrie.
+Le lien entre mathématiques et musique n’est pas récent puisque dès l'antiquité la musique est associée aux mathématiques. Elle est même considérée par Pythagore au VI<sup>e</sup> siècle avant J.C. comme étant une science mathématique, au même titre que l'arithmétique, l'astronomie et la géométrie.
 </br>
 <center> 
 
@@ -82,7 +82,7 @@ La musique serait donc mathématique, c'est du moins ce que disait Leibniz en 17
 </br>
 Car contrairement à la peinture ou la littérature, la musique peut très précisément se traduire en équations et en graphique.  
 
-Au XXe siècle, les compositeurs cherchent à tout prix à se détacher de la musique tonale. Il faut trouver de nouveaux systèmes de composition. On assiste alors à la création de l'atonalité, du dodécaphonisme, de la musique sérielle.
+Au XX<sup>e</sup> siècle, les compositeurs cherchent à tout prix à se détacher de la musique tonale. Il faut trouver de nouveaux systèmes de composition. On assiste alors à la création de l'atonalité, du dodécaphonisme, de la musique sérielle.
 Exemple avec l'un des compositeurs les plus inclassables de la première moitié du siècle dernier: Béla Bartók. 
 </br>
 <center> 
@@ -134,7 +134,7 @@ Il n'y a pas que les compositeurs qui se soient intéressés aux mathématiques.
 
 Et c'est certainement là que réside le mystère qui a fasciné et qui fascine toujours autant les mathématiciens, les physiciens, les scientifiques au même titre que les compositeurs. L'émotion provoquée par la musique est-elle explicable, théorisable ? A partir de quand arrête-t-on de parler de sons pour parler de musique ? La musique contemporaine basée sur des équations est-elle trop abstraite pour provoquer des émotions ?
 
-Le XXe siècle est aussi celui des machines, et en particulier celui des ordinateurs. Depuis Alan Turing en 1936 et sa célèbre « machine », ses concepts de programme prendront tout leur sens avec l’essort des ordinateurs. 
+Le XX<sup>e</sup> siècle est aussi celui des machines, et en particulier celui des ordinateurs. Depuis Alan Turing en 1936 et sa célèbre « machine », ses concepts de programme prendront tout leur sens avec l’essort des ordinateurs. 
 </br>
 <center> 
 
@@ -148,7 +148,7 @@ Ce siècle voit s’interpénétrer mathématiques et informatique, cette derni�
 L'algorithme, objet central de l'informatique, mais aussi objet des mathématiques depuis des siècles, prend maintenant une nouvelle place dans les mathématiques et nécessairement dans leur enseignement. Les mathématiques s'en trouvent interrogées et leur enseignement aussi. Cette discipline a acquis aujourd’hui dans le monde de la recherche un statut comparable à celui de l’algèbre, de la géométrie ou de l’analyse, ou encore des probabilités statistiques. Le National Council of Teachers of Mathematics a consacré en 1998, son «Yearbook» à l'enseignement et l'apprentissage des algorithmes dans la classe de mathématiques (NCTM 1998). 
 
 Depuis 2009, en France, une part d'algorithmique a été introduite dans les programmes du lycée et le vocable apparaît même à l’école primaire. La discipline trouve peu à peu sa place dans les manuels du secondaire... et dans le cœur des enseignants de mathématiques.
-La science informatique s’est également imposée, progressivement, comme une discipline tout aussi fondamentale que les disciplines scientifiques « dures » classiques que sont les mathématiques, la physique ou la mécanique. Le développement exponentiel des capacités des ordinateurs, dans un XXème siècle de l’information a accéléré de manière phénoménale ce positionnement. L’enseignement « officiel » de la discipline peut apparaître tardif, en France comme en Suisse, malgré des plans numériques élaborés depuis plusieurs années.
+La science informatique s’est également imposée, progressivement, comme une discipline tout aussi fondamentale que les disciplines scientifiques « dures » classiques que sont les mathématiques, la physique ou la mécanique. Le développement exponentiel des capacités des ordinateurs, dans un XX<sup>e</sup> siècle de l’information a accéléré de manière phénoménale ce positionnement. L’enseignement « officiel » de la discipline peut apparaître tardif, en France comme en Suisse, malgré des plans numériques élaborés depuis plusieurs années.
 
 La Conférence intercantonale de l’instruction publique de la Suisse romande et du Tessin (CIIP) a adopté son plan d’action pour l’éducation numérique en 2018. Ce plan prévoyait que dans les cinq prochaines années, tous les élèves de l’école obligatoire et de toutes les filières du degré secondaire II disposent de connaissances et de compétences numériques. L’utilisation active des outils, l’éducation aux médias et la science informatique sont concernées. Ce plan ambitieux décline ses objectifs en cinq domaines prioritaires : les plans d’études, les équipements, la formation des directions d’établissements et du corps enseignant, ainsi que la collaboration avec les hautes écoles et le développement de la veille technologique et pédagogique. Il s’agit de doter l’école des moyens de former au numérique par le numérique. L’informatique, science et technique du traitement automatique de l’information, est clairement distinguée des usages des outils numériques de médiation des savoirs, tandis que l’éducation aux médias a pour objet la compréhension de l’environnement médiatique contemporain dans une perspective critique et responsable. Ces trois dimensions sont considérées comme inséparables.
 
