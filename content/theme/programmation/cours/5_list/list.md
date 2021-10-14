@@ -114,7 +114,7 @@ print(fruits)
 ```
 ## Ajouter des éléments
 
-Une `méthode` comme comme des fonctions, mais attaché à une liste avec la notation doté (`.`). 
+Une **méthode** fonctionne comme une fonction, mais est rattachée à une liste avec la notation doté (`.`). 
 Par exemple si `a` designe une liste, on peux ajouter un élément à cette liste avec l'expression `a.append(x)`. 
 
 Ces 3 méthodes différentes permettent d’ajouter des éléments à une liste existante:
@@ -131,7 +131,7 @@ a.append(99)
 print(a)
 ```
 
-La méthode `extend(itéarable)` ajoute plusieurs éléments. Un itérable est une séquence tel que liste, chaîne de texte, ensemble, tuple, ...
+La méthode `extend(itérable)` ajoute plusieurs éléments. Un itérable est une séquence telle que liste, chaîne de texte, ensemble, tuple, ...
 
 ```{codeplay}
 a = [1, 2, 3]
@@ -140,7 +140,7 @@ a.extend('abc')
 print(a)
 ```
 
-La méthode `insert(i, x)` insert un nouveau élément `x` à la i-ième position.
+La méthode `insert(i, x)` insert un nouveau élément `x` à la i<sup>e</sup> position.
 
 ```{codeplay}
 a = [1, 2, 3]
@@ -172,7 +172,7 @@ a.pop()
 print(a)
 ```
 
-La méthode `pop(i)` enlève le i-ème élément.
+La méthode `pop(i)` enlève le i<sup>e</sup> élément.
 
 ```{codeplay}
 a = [1, 2, 3, 4]
