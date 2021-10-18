@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Établir une histoire de l'art *numérique* est problématique. Il est difficile, dans ce contexte, de donner une définition satisfaisante du concept *numérique*. Une définition trop large incluerait toute création artistique utilisant une forme de calcul comme paramètre fondamental de la réalisation de l'œuvre. Alors qu'une définition trop restreinte, du type "œuvre ayant été réalisée par un ordinateur" excluerait une part importante de la production du XXème siècle qui utilisait, par exemple, des instructions données à des imprimantes pour produire des œuvres *numériques*. 
+Établir une histoire de l'art *numérique* est problématique. Il est difficile, dans ce contexte, de donner une définition satisfaisante du concept *numérique*. Une définition trop large incluerait toute création artistique utilisant une forme de calcul comme paramètre fondamental de la réalisation de l'œuvre. Alors qu'une définition trop restreinte, du type "œuvre ayant été réalisée par un ordinateur" excluerait une part importante de la production du XX<sup>e</sup> siècle qui utilisait, par exemple, des instructions données à des imprimantes pour produire des œuvres *numériques*. 
 
 Dans ce chapitre, nous appelons donc "art numérique" plus spécifiquement des productions utilisant un ordinateur, un programme, un algorithme, comme outil principal de création. 
 

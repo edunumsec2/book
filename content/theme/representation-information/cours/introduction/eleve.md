@@ -19,7 +19,7 @@ Mais avant de découvrir le code choisi pour représenter l'information à l'int
 
 ### Alphabets anciens et traditionnels
 
-Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi que de nombreux {glo}`sysco|systèmes de communication`. Depuis les [sumériens](https://fr.wikipedia.org/wiki/Sum%C3%A9rien) qui utilisaient des {glo}`picto|pictogrammes` et [l’écriture cunéiforme](https://fr.wikipedia.org/wiki/Cun%C3%A9iforme), en passant par les égyptiens et leurs [hiéroglyphes](https://fr.wikipedia.org/wiki/%C3%89criture_hi%C3%A9roglyphique_%C3%A9gyptienne), les chinois et leurs [idéogrammes](https://fr.wikipedia.org/wiki/Caract%C3%A8res_chinois) pour arriver aux symboles de nos alphabets actuels, l’homme n’a eu de cesse de mettre au point des système pour {glo}`repinfo|représenter l’information` et la {glo}`transmission|transmettre`.
+Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi que de nombreux {glo}`sysco|systèmes de communication`. Depuis les [sumériens](https://fr.wikipedia.org/wiki/Sum%C3%A9rien) qui utilisaient des {glo}`picto|pictogrammes` et [l’écriture cunéiforme](https://fr.wikipedia.org/wiki/Cun%C3%A9iforme), en passant par les égyptiens et leurs [hiéroglyphes](https://fr.wikipedia.org/wiki/%C3%89criture_hi%C3%A9roglyphique_%C3%A9gyptienne), les chinois et leurs [idéogrammes](https://fr.wikipedia.org/wiki/Caract%C3%A8res_chinois) pour arriver aux symboles de nos alphabets actuels, l’homme n’a eu de cesse de mettre au point des système pour représenter l’information et la {glo}`transmission|transmettre`.
 
 ````{tabbed} Sumérien
 ```{image} media/cuneiform.jpg
@@ -83,7 +83,7 @@ On trouve des exemples célèbres et bien documentés de {glo}`sysco|systèmes d
 
 ### Le carré de Polybe
 
-Utilisé en Grèce Antique pour transmettre des messages entre cités voisines, ce système utilisait des torches enflammées en guise de {glo}`signal|signaux`. 
+Utilisé en Grèce Antique pour transmettre des messages entre cités voisines, ce système utilisait des torches enflammées en guise de signaux. 
 
 Cinq torches "à gauche", cinq torches "à droite", étaient séparées par un espace
 suffisamment grand pour être identifiables à longue distance. Une torche pouvait
@@ -130,7 +130,7 @@ Le piratage a été rendu possible par la corruption d'un agent télégraphique 
 
 ### Le Morse
 
-Grâce à la découverte de l'électricité au début du XIXème siècle, et les améliorations techniques faites pour la capturer et la transmettre, on a pu utiliser le réseau électrique pour envoyer des messages. En 1832, nait le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), qui s'impose rapidement comme un standard de communication. 
+Grâce à la découverte de l'électricité au début du XIX<sup>e</sup> siècle, et les améliorations techniques faites pour la capturer et la transmettre, on a pu utiliser le réseau électrique pour envoyer des messages. En 1832, nait le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), qui s'impose rapidement comme un standard de communication. 
 
 Bien sûr, le Morse peut être utilisé aussi avec des signaux lumineux, ou sonores, mais la plupart du temps il est utilisé sur les lignes électriques qui se développent à l'époque. 
 
@@ -162,9 +162,9 @@ Le désavantage de ces codex d'abbréviations est leur faible degré de standard
 La réponse à cette question est l'apport le plus essentiel de l'introduction du code binaire, et des standards de représentation de l'information qui l'ont suivi : un langage pour les contrôler tous. 
 ````
 
-Si vous observez le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), vous remarquerez que les {glo}`signal|signaux` utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet. 
+Si vous observez le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), vous remarquerez que les signaux utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet. 
 
-Ceci est une extension de la réponse à la question ci-dessus, puisqu'il est logique de coder les lettres les plus fréquentes avec les {glo}`signal|signaux` les plus courts. 
+Ceci est une extension de la réponse à la question ci-dessus, puisqu'il est logique de coder les lettres les plus fréquentes avec les signaux les plus courts. 
 
 ```{figure} media/letterdistribution.png
 ---
