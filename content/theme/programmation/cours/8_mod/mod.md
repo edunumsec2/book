@@ -1,6 +1,6 @@
 # Modules
 
-Lorsque vous créez multiples programmes dans un domaine similiare, il est for probable que vous pourriez réutiliser des parties de code. Il serait donc plus éfficace de placer ce code d'utilité générale dans un endroit spécifique. 
+Lorsque vous créez multiples programmes dans un domaine similiare, il est for probable que vous pourriez réutiliser des parties de code. Il serait donc plus éfficace de placer ce code d'utilité générale dans un endroit spécifique.
 
 Un **module** est un ou plusieurs fichiers en Python que vous pouvez importer au début de votre programme.
 Ce sont des scripts, contenant un ensemble de définitions — typiquement des fonctions, mais aussi des variables ou constantes (comme pi du module `math`).
@@ -12,11 +12,11 @@ Python est accompagné d'une bibliothèque de modules standards, tel que
 - `time`
 - `turtle`
 
-Vous trouvez l'index des modules ici: https://docs.python.org/3/py-modindex.html
+Pour d'autres module consultez l'[index des modules Python](Vous trouvez l'index des modules ici: <)https://docs.python.org/3/py-modindex.html).
 
 ## Importer un module
 
-Le mot-clé `import` permet d'importer un module. La fonction `dir` permet de voir le contenu du module. 
+Le mot-clé `import` permet d'importer un module. La fonction `dir` permet de voir le contenu du module.
 Normalement toutes les modules sont importé au début d'un programme.
 
 ```{codeplay}
@@ -25,11 +25,14 @@ import math
 print(dir(math))
 ````
 
-**Exericice:** Importe le module `random` et affiche son contenu avec `dir`.
+**Exercice:** Importe le module `random` et affiche son contenu avec `dir`.
 
 Pour utiliser une fonction du module importé, il faut précéder le nom de la fonction par le nom du module, séparé par un point.
 
 ```{codeplay}
+import math
+
+
 print('e =', math.e)
 print('pi =', math.pi)
 print('fact(7) =', math.factorial(7))
@@ -37,10 +40,9 @@ print('fact(7) =', math.factorial(7))
 
 **Exercice:** Utilisez la fonction `pow` (puissance) et affichez le résultat.
 
-
 ## Module `math`
 
-On retrouve dans le module `math` des <span commented>fonctions</span><!-- REVIEW/JPP: ainsi que des constantes --> 
+On retrouve dans le module `math` des <span commented>fonctions</span><!-- REVIEW/JPP: ainsi que des constantes -->
 
 - arithmétiques
 - logarithmiques et exponentielles
@@ -48,7 +50,7 @@ On retrouve dans le module `math` des <span commented>fonctions</span><!-- REVIE
 
 Voici quelques utilisations du module `math` avec des fonctions trigonométriques.
 
-![](trigo.gif)
+![trigonometry](trigo.gif)
 
 ```{codeplay}
 from math import asin, acos, atan, degrees
@@ -59,14 +61,14 @@ hyp = 5
 
 print(degrees(asin(opp/hyp)))
 print(degrees(acos(adj/hyp)))
-print(degrees(atan(opp/adj))
+print(degrees(atan(opp/adj)))
 ```
 
 Dans cet exemple on importe les fonction `asin`, `acos`, `atan` et `degrees` du module `math`. Les 3 premières renvoient un angle en radian et la dernière permet de convertir radian en degré.
 
 ## Module `random`
 
-Le module `random` permet de créer des nombres pseudo-aléatoires. 
+Le module `random` permet de créer des nombres pseudo-aléatoires.
 
 La fonction `random()` retourne un nombre aléatoire dans l'intervalle [0, 1].
 
@@ -97,90 +99,81 @@ for i in range(5):
     print(c)
 ```
 
-## Module `turtle` 
+## Module `turtle`
 
-Python peut être utilisé pour donner des ordres à un robot afin qu'il execute des tâches. Ceci demande une perception particulière de l'espace pour se mettre à la place du robot et ainsi détérminer où est la droite et la gauche en fonction des actions déjà executées. Le module `turtle` permet de reproduire cette logique en animant une tortue virtuelle.
+Le module `turtle` permet de déplacer une tortue virtuelle sur un écran en lui donnant des commandes pour se déplacer.
+En se déplaçant elle dessine une trace.
+
+- la fonction `forward(200)` fait avancer la tortue de 200 pixels,
+- la fonction `left(90)` fait tourner la tortue de 90 degrés vers la gauche
 
 ```{codeplay}
 from turtle import *
 
-forward(100)
+forward(200)
 left(90)
 forward(100)
 ```
 
-La tortue peut faire différents déplacements: avancer, reculer, tourner à droite et tourner à gauche. 
+La tortue connait aussi les commandes:
 
-Pour avancer, l'instruction s'appelle `forward`, elle est suivie du nombre de pixels entre parenthèses.
+- `backward()` pour faire reculer la tortue, et
+- `right()` pour la faire tourner vers la droite.
 
-Pour reculer, l'instruction s'appelle `backward`, elle est suivie du nombre de pixels entre parenthèses.
+Ceci dessine un pentagone.
 
-Pour tourner à gauche, l'instruction s'appelle `left`, elle est suivie du nombre de degrés entre parenthèses.
-
-Pour tourner à droite, l'instruction s'appelle `right`, elle est suivie du nombre de degrés entre parenthèses 
-
-```{code-cell} ipython3
+```{codeplay}
 from turtle import *
-forward(100)
+
+n = 5
+for i in range(n):
+    forward(100)
+    left(360/n) 
 ```
 
-Mettre un GIF
+**Exercice:** Déssinez un héxagone, changez la taille.
 
-```{code-cell} ipython3
+```{codeplay}
 from turtle import *
-backward(100)
-```
+from math import atan2, degrees, sqrt
 
-Mettre un GIF
+a = 200
+b = 100
+c = sqrt(a*a + b*b)
+alpha = degrees(atan2(a, b))
 
-```{code-cell} ipython3
-from turtle import *
+forward(a)
 left(90)
+forward(b)
+left(180 - alpha)
+forward(c)
 ```
 
-Mettre un GIF
+**Exercice:** Modifiez a et b. Affichez a, b, et c avec la fonction `write()` au milieu du segment.
 
-```{code-cell} ipython3
-from turtle import *
-right(90)
-```
-
-Mettre un GIF
-
-+++
-
-Il est possible de personnaliser le pinceau et l'apparence du curseur ou de choisir si le pinceau est en train d'écrire ou s'il est relevé avec d'autres instructions que l'on peut retrouver via l'index des modules python cité au début de ce chapitre. 
-
-+++
+Il est possible de personnaliser le pinceau et l'apparence du curseur ou de choisir si le pinceau est en train d'écrire ou s'il est relevé.
+Vous trouvez plus d'infos sous [Python - Tortue graphique](https://docs.python.org/fr/3/library/turtle.html#module-turtle).
 
 ## Exercices
 
-+++
+### Exercice 1 - Pythagore
 
-### Ex1
 Faites un programme permettant de retourner la taille de l'angle en degrés d'un triangle rectangle.
 
 Le programme doit demander à l'utilisateur les longueurs des côtés opposé et adjacent par rapport à l'angle à calculer ainsi que de l'hypoténuse. Si l'utilisateur ne connait pas la longueur d'un côté, il doit inscrire un **x** comme longueur du côté manquant. Avec ces informations, le programme doit retourner la taille de l'angle en degrés.
 
-+++
+### Exercice 2 - Jeu
 
-### Ex2
 Faites un programme contre lequel on peut jouer à feuille-cailloux-ciseaux.
 
-Le programme doit demander à l'utilisateur de faire son choix parmi les 3 possibiliés. Si l'utilisateur fait un choix qui n'existe pas, retourner une information et reposer la question. L'ordinateur doit faire un choix aléatoire. Le programme doit confronter le choix de l'utilisateur et celui de l'ordinateur puis retourner une information sur le gagnant du jeu.
+Le programme doit demander à l'utilisateur de faire son choix parmi les 3 possibilités. Si l'utilisateur fait un choix qui n'existe pas, retourner une information et reposer la question. L'ordinateur doit faire un choix aléatoire. Le programme doit confronter le choix de l'utilisateur et celui de l'ordinateur puis retourner une information sur le gagnant du jeu.
 
-Ce programme peut être amélioré en mettant en œuvre un système de score, de manches ou multijoueurs.
+Ce programme peut être amélioré en mettant en œuvre un système de score, de manches ou multi-joueurs.
 
-+++
+### Exercice 3 - Etoile
 
-### Ex3
 Dessinez une étoile avec la tortue.
 
-+++
+### Exercice 4 - Maison
 
-### Ex4
 Dessinez une maison avec une porte et une fenêtre avec la tortue
-
-```{code-cell} ipython3
-
-```

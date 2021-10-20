@@ -23,6 +23,6 @@ Ces deux formats ont été pensés dans l'objectif d'être complémentaires et m
 
 Ces contenus étant en cours d'élaboration, nous apprécierions connaître l'avis des enseignant·e·s qui les ont testés.
 
-Si vous souhaitez participer à notre enquête, rendez-vous sur :(lien à venir)
+Si vous souhaitez participer à notre enquête, rendez-vous [ici](https://www.surveymonkey.com/r/s2postensejs}.
 
 Nous vous remercions par avance pour votre collaboration.

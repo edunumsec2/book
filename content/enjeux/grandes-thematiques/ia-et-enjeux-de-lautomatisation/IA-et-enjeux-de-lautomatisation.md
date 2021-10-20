@@ -51,25 +51,31 @@
     </a>
 </div>
 
-# Économie du numérique
+# IA et enjeux de l'automatisation
 
 <br>
 
-Ce chapitre propose un éclairage sur l’économie du numérique à travers quelques questionnements : En quoi l'acronyme «**GAFAM**» est-il pertinent? Quelles sont les logiques d'expansion des **plateformes numériques**? Que nous apprend le concept d’**économie de l’attention**?
-
+Ce chapitre aborde le vaste sujet que forment l’intelligence artificielle (IA) et l’automatisation. Qu’est-ce que l’IA, d’où vient-elle et quelle place occupe-t-elle dans la société ? Quelles sont les opportunités, les craintes et les problèmes propres aux applications de l’IA ? Comment réguler les usages de ces nouvelles technologies ?
 
 ## Objectifs
 
-* Prendre conscience de la diversité des modèles économiques du numérique
-* Comprendre les grands principes qui ont favorisé l’expansion des plateformes
-* Saisir les ressorts et les limites de la notion d’«économie de l’attention»
+* Comprendre le contexte d’émergence de l’intelligence artificielle
+* Différencier l’IA symbolique et connexionniste
+* Connaître les forces et les faiblesses de l’IA
+* Comprendre les enjeux relatifs à la délégation des prises de décisions 
+* Prendre conscience des différentes manières de réguler les pratiques liées à l’IA
 
 
-## Enjeux
+## Introduction
+
 <br>
+Depuis les années 2010, on observe un retour en force de l’intelligence artificielle. La puissance des ordinateurs combinée à l’important volume de données disponible (big data) permet d’envisager de nouvelle approche notamment dans le domaine de l’apprentissage profond (deep learning). Entre 2015 et 2020, les investissements privés dans le domaine de l’IA ont quadruplé.  Dans le secteur des véhicules dits « autonomes », l’IA est considérée comme la solution aux erreurs humaines. Plus généralement, nos pratiques numériques sont, elles aussi, guidées par des algorithmes qui organisent automatiquement les contenus visibles en fonction des données connues sur l’utilisateur. Difficile d’échapper à une forme automatisée du traitement de l’information, alors que 92% des adultes vivant en Suisse utilisent quotidiennement un smartphone.  
+
+L’intelligence artificielle et ses technologies sont à la fois porteuses d’espoir et de craintes. D’un côté, l’IA fait miroiter la possibilité de résoudre des problèmes extrêmement complexes. De l’autre, les bouleversements potentiels amené par l’automatisation de certaines tâches et prises de décision inquiète, tant dans le secteur public que privé. Afin de faire la lumière sur les impacts, les forces et les faiblesses de l’intelligence artificielle, ce dossier propose un retour sur son histoire. Les principaux enjeux contemporains sont identifiés et présentés dans la deuxième partie du cours. 
+
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-  <b>📈 Au-delà des "GAFAM"</b>
+  <b>L'IA entre science et fiction</b>
 </div>
 
 <br>
