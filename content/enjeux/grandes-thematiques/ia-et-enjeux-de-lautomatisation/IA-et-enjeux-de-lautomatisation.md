@@ -75,77 +75,55 @@ L’intelligence artificielle et ses technologies sont à la fois porteuses d’
 
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-  <b>L'IA entre science et fiction</b>
+  <b>L'IA, un ensemble de technologies</b>
 </div>
 
 <br>
 
-En une quinzaine d’années, les fondements culturels d’Internet ont été ébranlés. Le projet d’un espace numérique commun, ouvert et décentralisé, tel qu’imaginé par les pionniers du réseau, ne semble aujourd’hui plus qu’un rêve lointain. L’une des caractéristiques de ce changement réside dans la montée en puissance de quelques grands acteurs qui ont imposé leurs logiques commerciales et remplacé les standards ouverts par des environnements fermés et propriétaires. La décentralisation, pourtant au fondement du réseau, ne s’observe plus dans les pratiques, toujours davantage concentrées autour de quelques entreprises. Parmi celles-ci, cinq font l’objet d’une attention médiatique et politique particulière.
+Trouver une définition universelle de l’IA est un exercice difficile car il s’agit en fait d’un ensemble de technologies distinctes. Dans le domaine scientifique, on distingue principalement deux approches historiques avec d’un côté l’IA symbolique qui vise à reproduire le raisonnement humain et l’intégrer à des machines. C’est sur ce principe que sont basés les **systèmes experts**. De l’autre, l’IA connexionniste est capable d’apprendre à partir de grands volumes de données et de déduire ses propres règles. Cette technique est plus communément appelée **apprentissage profond** ou *deep learning*. Elle se base sur des modèles de réseaux de neurones, superposés en plusieurs couches pour permettre l’établissement de règles complexes. 
 
-Aux premiers rangs des capitalisations boursières, ces sociétés sont couramment regroupées sous l’acronyme  **«GAFAM»** (pour Google, Amazon, Facebook, Apple, Microsoft). Fréquemment mobilisé dans les médias, ce terme est utile pour comprendre ce qui est commun à ces entreprises, entre autres : une puissance financière sans précédent, la domination d’un secteur, le recours à l’optimisation fiscale, ou encore la quasi-absence de régulation. Cependant, d’une part, ces caractéristiques ne sont pas uniquement spécifiques aux GAFAM et concernent également d’autres industries ; d’autre part, l’acronyme GAFAM constitue un raccourci parfois un peu rapide, masquant la complexité des logiques qui guident ces entreprises. Afin de mieux comprendre leurs enjeux, il est tout d’abord important d’identifier ce qu’elles sont et ce qu’elles font.  
-
-
-````{panels}
-:column: col-lg
-
-**Apple**
-^^^
-**Création** : 1976 <br>
-**Source principale de revenu** : Vente d’iPhones, puis  de matériel informatique (tablettes, ordinateurs, accessoires) <br>
-**Autres services** : Vente de musique en ligne, *streaming* vidéo, catalogue d’applications, système de micro-paiement (entre autres) <br>
-**Caractéristiques** : Longtemps considérée comme une marque secondaire à côté de Microsoft, Apple est parvenue à conquérir un large public grâce à une vision innovante de l’informatique. Le design et l’expérience proposées au travers de produits phares tels que l’iPod, l’iPhone, puis l’iPad ont fait de la marque une référence.
-````
-
-````{panels}
-:column: col-lg
-
-**Google (Alphabet)**
-^^^
-**Création** : 1998  <br>
-**Source principale de revenu** : Publicité ciblée <br>
-**Activités** : À l’origine, Google est un moteur de recherche qui fonctionne grâce à l'algorithme PageRank. Dès l’an 2000, l’entreprise commence à vendre des espaces publicitaires dans son moteur de recherche via un système d’enchères par mots-clés (Google AdWords, aujourd’hui Google Ads) et étend progressivement ses services (e-mail, cartographie en ligne, navigateur, service cloud, etc.). Depuis 2015, la société Alphabet regroupe toutes les activités de Google, dont YouTube, Android, Waze, Waymo (voitures autonomes) ou encore Deepmind (recherche sur l’IA).<br>
-
-**Caractéristiques** :  Au départ exploitées dans le but d’améliorer la pertinence des recherches, les traces laissées par l’activité des utilisateurs sont rapidement devenues l’enjeu central du modèle économique de l’entreprise. En proposant aux annonceurs des audiences finement ciblées, Google s’est imposé sur le marché de la publicité en ligne. Sa vaste palette de services lui permet de capter une nombre considérables de données, qui viennent alimenter son système commercial et toujours renforcer sa position dominante.
-````
-
-
-````{panels}
-:column: col-lg
-
-**Facebook**
-^^^
-**Création** : 2004 <br>
-**Source principale de revenu** : Publicité ciblée <br>
-**Activités** : Réseaux sociaux, messagerie <br>
-**Caractéristiques** : En quelques années, la plateforme est parvenue à rassembler une base considérable de membres (2,7 milliards à fin 2020). Facebook a également acquis Instagram (2012) et WhatsApp (2014). Le modèle économique de l’entreprise repose sur la vente d’espaces publicitaires ciblés. Des individus ou entreprises peuvent ainsi diffuser leurs annonces à l’attention d’une audience déterminée selon des critères socio-démographiques ou comportementaux. Ces caractéristiques sont induites grâce à la captation et l’analyse des données issues des activités des utilisateurs sur Facebook, mais également en dehors du réseau, dès lors qu’un site ou une application utilise un service ou API proposés par Facebook (login, bouton like, etc.). Avec Google, Facebook capte l’essentiel du marché de la publicité en ligne.
-````
-
-````{panels}
-:column: col-lg
-
-**Amazon**
-^^^
-**Création** : 1994 <br>
-**Source principale de revenu** : Vente au détail <br>
-**Autres services et produits** : service de *cloud computing* (Amazon Web Services), objets connectés (assistants vocaux, domotique), plateforme VOD. <br>
-**Caractéristiques** :  Amazon a débuté en 1994 sous la forme d’une librairie en ligne. Au fil du temps, son catalogue s’est enrichi et la firme propose aujourd’hui des produits de toutes sortes. Si ses revenus proviennent essentiellement du commerce en ligne, Amazon possède également la plus grande des infrastructures de *cloud computing* : Amazon Web Services. En parallèle, l’entreprise développe d’autres services (plateforme VOD, musique, *gaming*) et produits, dont une gamme d’objets connectés toujours en lien avec les services proposés par Amazon.
-````
-
-````{panels}
-:column: col-lg
-
-**Microsoft**
-^^^
-**Création** : 1975 <br>
-**Source principale de revenu** : Systèmes d’exploitation, logiciels et services *cloud* <br>
-**Autres services et produits** : Moteur de recherche (Bing), console de jeux vidéos, ordinateurs et tablettes. <br>
-**Caractéristiques** :  L’entreprise est parvenue à dominer le marché en associant son système d’exploitation Windows à la vente d’ordinateurs PC. Cette stratégie commerciale de «vente liée» a conduit les produits Microsoft à devenir des «standards de fait». Aujourd’hui, Windows est installé dans presque 90% des ordinateurs à travers le monde et les outils de bureautique Office comptent plus d’un milliard d’utilisateurs. 
- 
-````
+<div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
+  <b>Entre science et fiction</b>
+</div>
 
 <br>
 
-Ce bref aperçu témoigne de la diversité des modèles économiques des GAFAM. A noter que la vente de publicité ciblée, souvent associée à ces entreprises, concerne avant tout Google et Facebook. Par ailleurs, d’autres modèles économiques existent, tels que les services qui prélèvent une commission sur les transactions (Uber, Airbnb, Booking.<span>com</span>) ou encore les plateformes qui fonctionnent sur un principe d’abonnement (Spotify, Netflix).
+Historiquement, les premières formes d’intelligence artificielle apparaissent dans la littérature. L’un des premiers exemples est le roman « Frankenstein » de Mary Shelley (1818). Plus tard, la science-fiction en fera un thème central et récurrent, des premiers robots rebelles de la pièce R.U.R. (Čapek, 1920) à la voix de *Her* du film homonyme (Spike Jonze, 2013). L’impact des histoires et des images issus de la science-fiction sont perceptibles dans certaines représentations, fantasmes et inquiétudes suscitées par l’IA. Mais les récits fictifs qui mobilisent diverses formes d’IA n’ont pas la prétention de prédire l’avenir. Au contraire, ils doivent être interprétés dans leur contexte respectif afin de comprendre leurs significations propres. Pour rassurer les plus inquiets, les technologies actuelles ne laissent pas entrevoir une autonomisation des robots et autres logiciels intelligents pour tout de suite. 
+Reste que les avancées techniques et technologiques laissent entrevoir de nouveaux possibles dans le domaine de l’IA et posent aussi de nouvelles questions. Dans quelle situation fait-on appel à ces nouvelles technologies ? Quelles tâches et prises de décision peuvent être déléguées aux machines et en quelles proportions ? Qui est responsable en cas de problème ?
+
+<br>
+
+**Héritage de la cybernétique**
+
+Les pionniers de l’intelligence artificielle sont influencés par le courant de pensée de la cybernétique, fondé par le mathématicien Norbert Wiener. Ce mouvement interdisciplinaire popularisé à la fin des années 1940 aux États-Unis considère que tous les systèmes vivants, (humains et animaux) et matériels (machines) sont régulés par une loi générale basée sur des boucles de rétroaction ou feedbacks. Cette hypothèse théorique place les humains et les machines sur un pied d’égalité, d'un point de vue fonctionnel. Elle promeut une vision formaliste et donc simplificatrice du fonctionnement du vivant. Bien que réductrice, cette approche permettra notamment d’envisager les premières théories concernant l’intelligence artificielle basée sur le raisonnement humain. 
+
+L’engouement autour de la cybernétique s’essouffle à la moitié des années 1960, mais son influence reste aujourd’hui encore perceptible dans de nombreux domaines scientifiques tels que les sciences cognitives, l’informatique et bien sur les recherches en IA. 
+
+
+
+**« Les machines peuvent-elles penser ? »**
+
+Dans une approche symbolique de l’intelligence artificielle le mathématicien britannique Alan Turing pose cette question dans un célèbre article publié en 1950.  Pour y répondre, il propose le « jeu de l’imitation », également connu sous le nom de « Test de Turing ». L’expérience se résume comme suit : Un être humain (A) est mis en communication via un clavier et un écran, avec deux entités qu’il ne voit pas et dont il ignore la nature ; d’un côté, se trouve un ordinateur (B), de l’autre, un humain (C). Si, au bout de 5 minutes de conversation, l’être humain (A) n’est pas capable de savoir qui de (B) et (C) est l’ordinateur, ce dernier passe le test. 
+
+Le jeu de l’imitation est avant tout un exemple théorique. La puissance des machines des années 1950 ne permet pas d’envisager l’assimilation des questions et encore moins la formulation de réponses adaptées. Aujourd’hui, les agents conversationnels ou ***chat bots*** sont ce qui se rapprochent le plus de l’ordinateur du jeu de l’imitation. Leurs performances actuelles demeurent relativement faibles et sont encore loin de créer la confusion pour les utilisateurs. 
+
+Au-delà de la pertinence du jeu de l’imitation, sa conceptualisation permet de comprendre comment Turing concevait la pensée. Pour lui, elle est faite de capacités cognitives, c’est-à-dire d'un ensemble de facultés qui permettent d’apprendre, d’organiser et d’utiliser les connaissances. En considérant que la pensée peut être réduite à un ensemble de facultés définies (entre autres la perception, la mémoire et le langage), il devient également possible d’envisager de les reproduire de manière artificielle. C’est sur ce principe, inspiré de la cybernétique, que se baseront les premières recherches dans le domaine, quelques années plus tard. Cette approche très rationnelle de la pensée permet de placer l’intelligence humaine et l’intelligence artificielle au même niveau afin de les mettre en opposition. Le rapport de force entre l'être humain et la machine instauré par Turing aura une influence certaine dans l'histoire. Cette opposition servira de point de repère pour évaluer l'efficacité des systèmes d'IA face à l'intelligence humaine. 
+
+**Création d’un domaine scientifique**
+
+Les termes intelligence artificielle ou plutôt artificial intelligence en anglais, apparaissent pour la première fois en 1955, aux États-Unis. Quatre scientifiques formés en mathématique et en neurologie organisent une conférence d’été au Dartmouth College, afin de discuter et de réfléchir aux questions de programmation et de langage des ordinateurs, de réseaux de neurones, de puissance de calcul et d’auto-apprentissage. Mises ensemble, ces thématiques forment un nouveau domaine appelé intelligence artificielle. 
+
+Dans leur proposition de projet, les auteurs expliquent leur approche de la manière suivante : 
+« L’étude devra se dérouler sur la base de la conjecture que chaque aspect de l’apprentissage ou tout autre caractéristique de l’intelligence peut, en principe, être décrit avec une telle précision qu’une machine peut être conçue pour la simuler » 
+
+L’un des but motivant les premières recherches en IA est explicitement de reproduire l’intelligence humaine. 
+Comme Turing avant eux, les pionniers de l’IA partent du principe que le fonctionnement du raisonnement humain est suffisamment compris pour être modélisé. Certes, cette approche permet d’ouvrir la voie dans certains domaines bien précis. Cependant, l’intelligence humaine ne se limitent pas à un processus logique et individuel contrairement aux idées des pionniers de l’IA. Cette conception est en fait porteuse d’un paradoxe : pour pouvoir modéliser et reproduire artificiellement l’intelligence, elle est réduite à des fonctions définies. Or, les notions d’intelligence sociale, émotionnelle ou créative sont exclues du problème. La notion du corps est également totalement absente de ces considérations.  
+
+
+
+<br>
+
+
 <br>
 <br>
 
