@@ -66,8 +66,16 @@ Ce chapitre aborde le vaste sujet que forment l’intelligence artificielle (IA)
 * Prendre conscience des différentes manières de réguler les pratiques liées à l’IA
 
 
-## Enjeux
+## Introduction
+
 <br>
+Les processus automatisés sont de plus en plus présents dans nos vies quotidiennes. Recommandations basées sur des algorithmes, assistance à la conduite, reconnaissances vocale et faciale, traducteurs automatiques et autres chat bots sont quelques exemples intégrant ce qui est communément appelé « intelligence artificielle ». Les projets de recherche en lien plus ou moins étroit avec l’IA se multiplient tant dans le monde académique que dans le secteur privé et les financements atteignent des sommes records. À titre d’exemple, les investissements privés ont quadruplé entre 2015 et 2020 pour les entreprises actives dans le domaine.  En parallèle, l’intérêt médiatique pour l’IA s’est également fortement intensifié ces dernières années, illustrant à la fois les espoirs et les craintes portés par ses technologies. 
+
+Mais de quoi parle-t-on exactement lorsque l’on évoque l’IA ? La réponse dépend fortement du contexte. Très présente dans les récits de science-fiction, elle est souvent mobilisée pour représenter une altérité autonome, longtemps sous la forme de robots humanoïdes où plus récemment dématérialisée en voix de synthèse. Les termes sont également volontiers mobilisés dans les campagnes publicitaires qui promeuvent divers objets connectés tels que des assistants vocaux ou des robot-ménagers. 
+
+Trouver une définition universelle de l’IA reste un exercice difficile car il s’agit en fait d’un ensemble de technologies distinctes. Dans le domaine scientifique, on distingue deux approches historiques avec d’un côté l’IA symbolique qui vise à reproduire le raisonnement humain et l’intégrer à des machines. C’est sur ce principe que sont basés les systèmes experts. De l’autre, l’IA connexionniste est capable d’apprendre à partir de grands volumes de données et de déduire ses propres règles. Cette technique est plus communément appelée apprentissage profond ou deep learning. Elle se base sur des modèles de réseaux de neurones, superposés en plusieurs couches pour permettre l’établissement de règles complexes.
+
+Afin de faire la lumière sur les différents enjeux que soulèvent ces technologies, un retour historique est proposé avant de s’intéresser à des questions plus contemporaines en lien avec l’utilisation de ces systèmes automatiques.  
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
   <b>📈 Au-delà des "GAFAM"</b>
