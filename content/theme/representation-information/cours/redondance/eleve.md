@@ -596,7 +596,7 @@ est aussi sensible
 Même si
 le hachage
 d'une information
-soit
+est
 à dessein
 relativement rapide
 en soi,

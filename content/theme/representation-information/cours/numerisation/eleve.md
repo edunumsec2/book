@@ -148,8 +148,8 @@ Effet de la fréquence d'échantillonnage
 (sampling rate : 100, 200 et 400 Hz)
 sur la représentation
 obtenue par numérisation.
-Puis la fréquence est élevée,
-puis la quantité
+Plus la fréquence est élevée,
+plus la quantité
 d'information collectée
 est importante.
 Dans tous les cas,
