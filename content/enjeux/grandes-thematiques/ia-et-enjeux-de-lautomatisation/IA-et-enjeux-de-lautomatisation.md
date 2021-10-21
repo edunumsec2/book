@@ -69,9 +69,12 @@ Ce chapitre aborde le vaste sujet que forment l’intelligence artificielle (IA)
 ## Introduction
 
 <br>
-Depuis les années 2010, on observe un retour en force de l’intelligence artificielle. La puissance des ordinateurs combinée à l’important volume de données disponible (big data) permet d’envisager de nouvelle approche notamment dans le domaine de l’apprentissage profond (deep learning). Entre 2015 et 2020, les investissements privés dans le domaine de l’IA ont quadruplé.  Dans le secteur des véhicules dits « autonomes », l’IA est considérée comme la solution aux erreurs humaines. Plus généralement, nos pratiques numériques sont, elles aussi, guidées par des algorithmes qui organisent automatiquement les contenus visibles en fonction des données connues sur l’utilisateur. Difficile d’échapper à une forme automatisée du traitement de l’information, alors que 92% des adultes vivant en Suisse utilisent quotidiennement un smartphone.  
+Depuis les années 2010, on observe un retour en force de l’intelligence artificielle. La puissance des ordinateurs combinée à l’important volume de données disponible (big data) permet d’envisager de nouvelle approche notamment dans le domaine de l’apprentissage profond (deep learning). Entre 2015 et 2020, les investissements privés dans le domaine de l’IA ont quadruplé.  Dans le secteur des véhicules dits « autonomes », l’IA est considérée comme la solution aux erreurs humaines. Plus généralement, nos pratiques numériques sont, elles aussi, guidées par des algorithmes qui organisent automatiquement les contenus visibles en fonction des données connues sur l’utilisateur. Difficile d’échapper à une forme automatisée du traitement de l’information, alors que 92% des adultes vivant en Suisse utilisent quotidiennement un smartphone. 
 
-L’intelligence artificielle et ses technologies sont à la fois porteuses d’espoir et de craintes. D’un côté, l’IA fait miroiter la possibilité de résoudre des problèmes extrêmement complexes. De l’autre, les bouleversements potentiels amené par l’automatisation de certaines tâches et prises de décision inquiète, tant dans le secteur public que privé. Afin de faire la lumière sur les impacts, les forces et les faiblesses de l’intelligence artificielle, ce dossier propose un retour sur son histoire. Les principaux enjeux contemporains sont identifiés et présentés dans la deuxième partie du cours. 
+L’intelligence artificielle et ses technologies sont à la fois porteuses d’espoir et de craintes. D’un côté, l’IA fait miroiter la possibilité de résoudre des problèmes extrêmement complexes. De l’autre, les bouleversements potentiels amené par l’automatisation de certaines tâches et prises de décision inquiète, tant dans le secteur public que privé. Retourner aux débuts de l’IA en tant que domaine scientifique permet de comprendre une certaine vision de l’être humain et du monde, toujours plus influente aussi bien dans le domaine scientifique que dans l’orientations de certaines politiques publiques. 
+
+Afin de faire la lumière sur les impacts, les forces et les faiblesses de l’intelligence artificielle, ce dossier propose un retour sur son histoire. Les principaux enjeux contemporains sont identifiés et présentés dans la deuxième partie du cours. 
+
 
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
@@ -140,9 +143,9 @@ Ces prouesses techniques montrent que l’IA est, dans certaines situations bien
 
 <br>
 
-**Domaines d'action**
+**Domaines d'application de l'IA**
 
-
+L'IA 
 Sciences
 
 
@@ -152,9 +155,13 @@ Public/privé
 
 ...
 
-**Craintes**
+**Nouvelles technologies, anciens problèmes**
 
-... 
+Question des voitures autonomes
+
+Les biais de représentation causés par les données
+
+
 
 **Gouvernance**
 
@@ -184,24 +191,7 @@ Jean-Gabriel Ganascia (2017), Le mythe de la Singularité. Faut-il craindre l’
 
 
 <br>
-<div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-  <b>👁️ Une économie de l'attention?</b>
-</div>
 
-<br>
-
-Dans ce marché mondial des données, l’attention est un bien rare et convoité. Ainsi, chacun des grands acteurs du numérique tente d’amener l’internaute sur ses plateformes et le rendre captif de ses services. La notion de rareté de l'attention n'est cependant pas nouvelle. Traditionnellement, c'est la publicité qui tentait d'attirer l'attention du public vers un produit ou service. Avec le numérique, cette quête du "temps de cerveau disponible"<a href="#footnote-1">[1]</a> est amplifiée car il est désormais possible de capter, calculer et monétiser les "traces d'attention".
-
-Les applications sont alors pensées dans le but de retenir l'utilisateur le plus longtemps possible. Les pastilles rouges des notifications, les *likes*, les systèmes *auto-play* de YouTube ou Netflix (qui relancent une vidéo sans notre consentement), ou encore le *scroll* infini sont autant d'incitations à maximiser le temps passé en ligne. Ces astuces de conception jouent sur des ressorts émotionnels : besoin de récompense immédiate, quête de reconnaissance, attraction pour la nouveauté, peur de passer à côté de quelque chose... Ces tactiques semblent d’autant plus efficaces qu’elles peuvent être finement ciblées et personnalisées.
-
-Mais ces leviers psycho-cognitifs suffisent-ils à expliquer le succès des plateformes? Bien que ces mécanismes contribuent à orienter les comportements, l’attraction des services numériques ne saurait être uniquement le résultat de stratégies de captation de l’attention. Si les plateformes parviennent à attirer un nombre important d’utilisateurs, c’est avant tout grâce à leur position centrale et à leur capacité à réunir une multitude d’usages (communiquer, s’informer, se divertir, jouer, etc.).
-
-En ce sens, il apparaît nécessaire de questionner certains discours médiatiques autour de la question des pratiques numériques - en particulier chez les jeunes - qui se résument souvent à un message alarmiste centré sur la notion de «temps d’écran». Ce point de vue ne permet pas de considérer le rapport à la technologie autrement qu’au travers du prisme de l’addiction.
-
-Pourtant, les activités en ligne ne sont pas nécessairement synonymes de temps perdu et il est important de comprendre de quelle façon elles s’inscrivent dans des pratiques sociales. Jouer en ligne, échanger des informations via les réseaux sociaux ou créer une vidéo ne peut être assimilé à du temps perdu. L’idée qu’il existerait une distinction et, par extension, une hiérarchie, entre «vie réelle» et «vie virtuelle» est largement remise en question par les travaux récents en sciences sociales. Toutes ces pratiques numériques font partie intégrante de la vie en société.
-
-
-<p id="footnote-1">[1] Déclaration par Patrick Le Lay (ex-PDG du groupe TF1) en 2004  : « Ce que nous vendons à Coca-Cola, c’est du temps de cerveau humain disponible »</p>
 
 
 ### Ressources 
@@ -215,15 +205,13 @@ Pourtant, les activités en ligne ne sont pas nécessairement synonymes de temps
 * [Un reportage radio](https://www.rts.ch/play/radio/vacarme/audio/societe-numerique-35-hep-uber?id=11541585) (RTS) sur les conditions de travail des chauffeurs Uber
 * [Un podcast](https://www.franceinter.fr/emissions/le-code-a-change/sommes-nous-vraiment-en-train-de-fabriquer-des-cretins-digitaux) qui déconstruit les discours alarmistes autour des écrans chez les jeunes ("Sommes-nous vraiment en train de fabriquer des “crétins digitaux" ?", Le Code a changé, France Inter)
 
+
 ### Glossaire
 
-* Algorithme
-* Plateforme
-* Économie d’échelle
-* Effet de réseau
-* Ubérisation
-* Biens communs
-* Économie de l’attention
+* Sytème expert
+* Apprentissage profond ou *deep learning*
+* Réseaux de neurones
+
 
 ### Fiches complémentaires
 
