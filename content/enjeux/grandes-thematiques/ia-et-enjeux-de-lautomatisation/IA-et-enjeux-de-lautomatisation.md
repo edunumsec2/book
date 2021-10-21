@@ -75,109 +75,112 @@ L’intelligence artificielle et ses technologies sont à la fois porteuses d’
 
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-  <b>L'IA entre science et fiction</b>
+  <b>L'IA, un ensemble de technologies</b>
 </div>
 
 <br>
 
-En une quinzaine d’années, les fondements culturels d’Internet ont été ébranlés. Le projet d’un espace numérique commun, ouvert et décentralisé, tel qu’imaginé par les pionniers du réseau, ne semble aujourd’hui plus qu’un rêve lointain. L’une des caractéristiques de ce changement réside dans la montée en puissance de quelques grands acteurs qui ont imposé leurs logiques commerciales et remplacé les standards ouverts par des environnements fermés et propriétaires. La décentralisation, pourtant au fondement du réseau, ne s’observe plus dans les pratiques, toujours davantage concentrées autour de quelques entreprises. Parmi celles-ci, cinq font l’objet d’une attention médiatique et politique particulière.
-
-Aux premiers rangs des capitalisations boursières, ces sociétés sont couramment regroupées sous l’acronyme  **«GAFAM»** (pour Google, Amazon, Facebook, Apple, Microsoft). Fréquemment mobilisé dans les médias, ce terme est utile pour comprendre ce qui est commun à ces entreprises, entre autres : une puissance financière sans précédent, la domination d’un secteur, le recours à l’optimisation fiscale, ou encore la quasi-absence de régulation. Cependant, d’une part, ces caractéristiques ne sont pas uniquement spécifiques aux GAFAM et concernent également d’autres industries ; d’autre part, l’acronyme GAFAM constitue un raccourci parfois un peu rapide, masquant la complexité des logiques qui guident ces entreprises. Afin de mieux comprendre leurs enjeux, il est tout d’abord important d’identifier ce qu’elles sont et ce qu’elles font.  
-
-
-````{panels}
-:column: col-lg
-
-**Apple**
-^^^
-**Création** : 1976 <br>
-**Source principale de revenu** : Vente d’iPhones, puis  de matériel informatique (tablettes, ordinateurs, accessoires) <br>
-**Autres services** : Vente de musique en ligne, *streaming* vidéo, catalogue d’applications, système de micro-paiement (entre autres) <br>
-**Caractéristiques** : Longtemps considérée comme une marque secondaire à côté de Microsoft, Apple est parvenue à conquérir un large public grâce à une vision innovante de l’informatique. Le design et l’expérience proposées au travers de produits phares tels que l’iPod, l’iPhone, puis l’iPad ont fait de la marque une référence.
-````
-
-````{panels}
-:column: col-lg
-
-**Google (Alphabet)**
-^^^
-**Création** : 1998  <br>
-**Source principale de revenu** : Publicité ciblée <br>
-**Activités** : À l’origine, Google est un moteur de recherche qui fonctionne grâce à l'algorithme PageRank. Dès l’an 2000, l’entreprise commence à vendre des espaces publicitaires dans son moteur de recherche via un système d’enchères par mots-clés (Google AdWords, aujourd’hui Google Ads) et étend progressivement ses services (e-mail, cartographie en ligne, navigateur, service cloud, etc.). Depuis 2015, la société Alphabet regroupe toutes les activités de Google, dont YouTube, Android, Waze, Waymo (voitures autonomes) ou encore Deepmind (recherche sur l’IA).<br>
-
-**Caractéristiques** :  Au départ exploitées dans le but d’améliorer la pertinence des recherches, les traces laissées par l’activité des utilisateurs sont rapidement devenues l’enjeu central du modèle économique de l’entreprise. En proposant aux annonceurs des audiences finement ciblées, Google s’est imposé sur le marché de la publicité en ligne. Sa vaste palette de services lui permet de capter une nombre considérables de données, qui viennent alimenter son système commercial et toujours renforcer sa position dominante.
-````
-
-
-````{panels}
-:column: col-lg
-
-**Facebook**
-^^^
-**Création** : 2004 <br>
-**Source principale de revenu** : Publicité ciblée <br>
-**Activités** : Réseaux sociaux, messagerie <br>
-**Caractéristiques** : En quelques années, la plateforme est parvenue à rassembler une base considérable de membres (2,7 milliards à fin 2020). Facebook a également acquis Instagram (2012) et WhatsApp (2014). Le modèle économique de l’entreprise repose sur la vente d’espaces publicitaires ciblés. Des individus ou entreprises peuvent ainsi diffuser leurs annonces à l’attention d’une audience déterminée selon des critères socio-démographiques ou comportementaux. Ces caractéristiques sont induites grâce à la captation et l’analyse des données issues des activités des utilisateurs sur Facebook, mais également en dehors du réseau, dès lors qu’un site ou une application utilise un service ou API proposés par Facebook (login, bouton like, etc.). Avec Google, Facebook capte l’essentiel du marché de la publicité en ligne.
-````
-
-````{panels}
-:column: col-lg
-
-**Amazon**
-^^^
-**Création** : 1994 <br>
-**Source principale de revenu** : Vente au détail <br>
-**Autres services et produits** : service de *cloud computing* (Amazon Web Services), objets connectés (assistants vocaux, domotique), plateforme VOD. <br>
-**Caractéristiques** :  Amazon a débuté en 1994 sous la forme d’une librairie en ligne. Au fil du temps, son catalogue s’est enrichi et la firme propose aujourd’hui des produits de toutes sortes. Si ses revenus proviennent essentiellement du commerce en ligne, Amazon possède également la plus grande des infrastructures de *cloud computing* : Amazon Web Services. En parallèle, l’entreprise développe d’autres services (plateforme VOD, musique, *gaming*) et produits, dont une gamme d’objets connectés toujours en lien avec les services proposés par Amazon.
-````
-
-````{panels}
-:column: col-lg
-
-**Microsoft**
-^^^
-**Création** : 1975 <br>
-**Source principale de revenu** : Systèmes d’exploitation, logiciels et services *cloud* <br>
-**Autres services et produits** : Moteur de recherche (Bing), console de jeux vidéos, ordinateurs et tablettes. <br>
-**Caractéristiques** :  L’entreprise est parvenue à dominer le marché en associant son système d’exploitation Windows à la vente d’ordinateurs PC. Cette stratégie commerciale de «vente liée» a conduit les produits Microsoft à devenir des «standards de fait». Aujourd’hui, Windows est installé dans presque 90% des ordinateurs à travers le monde et les outils de bureautique Office comptent plus d’un milliard d’utilisateurs. 
- 
-````
-
-<br>
-
-Ce bref aperçu témoigne de la diversité des modèles économiques des GAFAM. A noter que la vente de publicité ciblée, souvent associée à ces entreprises, concerne avant tout Google et Facebook. Par ailleurs, d’autres modèles économiques existent, tels que les services qui prélèvent une commission sur les transactions (Uber, Airbnb, Booking.<span>com</span>) ou encore les plateformes qui fonctionnent sur un principe d’abonnement (Spotify, Netflix).
-<br>
-<br>
+Trouver une définition universelle de l’IA est un exercice difficile car il s’agit en fait d’un ensemble de technologies distinctes. Dans le domaine scientifique, on distingue principalement deux approches historiques avec d’un côté l’IA symbolique qui vise à reproduire le raisonnement humain et l’intégrer à des machines. C’est sur ce principe que sont basés les **systèmes experts**. De l’autre, l’IA connexionniste est capable d’apprendre à partir de grands volumes de données et de déduire ses propres règles. Cette technique est plus communément appelée **apprentissage profond** ou *deep learning*. Elle se base sur des modèles de réseaux de neurones, superposés en plusieurs couches pour permettre l’établissement de règles complexes. 
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-  <b>🌀 Les dynamiques des plateformes</b>
+  <b>Entre science et fiction</b>
 </div>
 
 <br>
 
-Si l’exploitation massive des données ne concerne pas l’ensemble des entreprises du numérique, toutes ont cependant compris la valeur des traces pour développer leurs activités et pour proposer aux utilisateurs des produits ou services personnalisés. Ces recommandations «sur-mesure», rendues possibles grâce au traitement algorithmique des données, sont particulièrement utiles dans un contexte où les plateformes concentrent un nombre toujours plus important d’informations. Elles s’affirment comme le principal intermédiaire permettant à l’utilisateur de s’orienter parmi une offre pléthorique. Les plateformes ont tout intérêt à effectuer un tri pertinent, afin de proposer un contenu susceptible de satisfaire l’usager et ainsi gagner son adhésion à long terme.
+Historiquement, les premières formes d’intelligence artificielle apparaissent dans la littérature. L’un des premiers exemples est le roman « Frankenstein » de Mary Shelley (1818). Plus tard, la science-fiction en fera un thème central et récurrent, des premiers robots rebelles de la pièce R.U.R. (Čapek, 1920) à la voix de *Her* du film homonyme (Spike Jonze, 2013). L’impact des histoires et des images issus de la science-fiction sont perceptibles dans certaines représentations, fantasmes et inquiétudes suscitées par l’IA. Mais les récits fictifs qui mobilisent diverses formes d’IA n’ont pas la prétention de prédire l’avenir. Leur lecture permet surtout d’identifier des problématiques centrales concernant les aspects juridiques et philosophiques autours de l’IA. Aujourd’hui, les avancées techniques et technologiques appellent à répondre concrètement à certaines questions longtemps restreintes au monde de la fiction. Dans quelles situations fait-on et peut-on faire appel à l’IA ? Quelles tâches et prises de décision peuvent être déléguées aux machines et en quelles proportions ? Qui est responsable en cas de problème généré par une machine ?
+<br>
+
+**Héritage de la cybernétique**
+
+Les premiers scientifiques intéressés par le concept d'IA sont influencés par le courant de pensée de la cybernétique, fondé par le mathématicien Norbert Wiener. Ce mouvement interdisciplinaire popularisé à la fin des années 1940 aux États-Unis considère que tous les systèmes vivants, (humains et animaux) et matériels (machines) sont régulés par une loi générale basée sur des boucles de rétroaction ou feedbacks. Cette hypothèse théorique place les humains et les machines sur un pied d’égalité, d'un point de vue fonctionnel. Elle promeut une vision formaliste et donc simplificatrice du fonctionnement du vivant. Bien que réductrice, cette approche permettra notamment d’envisager les premières théories concernant l’intelligence artificielle basée sur le raisonnement humain. 
+
+L’engouement autour de la cybernétique s’essouffle à la moitié des années 1960, mais son influence reste aujourd’hui encore perceptible dans de nombreux domaines scientifiques tels que les sciences cognitives, l’informatique et bien sur les recherches en IA. 
 
 
-Par ailleurs, attirer et garder l'utilisateur captif est d'autant plus important pour les plateformes qu'elles bénéficient des "**effets de réseau**" :  plus une plateforme compte de membres, plus elle en attire de nouveaux. Son attractivité et sa valeur grandissent à mesure que son nombre d'utilisateurs croît. Si tous nos amis sont actifs sur Instagram, il semble difficile d’opter pour un autre réseau social. Cet effet de réseau est particulièrement puissant dans le cas des services numériques car, contrairement à une entreprise classique, les coûts de transaction (comme la recherche d'informations ou la mise en relation entre services, clients et prestataires) sont fortement réduits.
 
-Un autre effet important est celui des **«économies d’échelle»**. Ce principe veut que le coût unitaire de production d’un bien baisse à mesure que les quantités produites augmentent. Ces logiques, déjà présentes dans de nombreux secteurs économiques, sont considérablement augmentées grâce aux possibilités offertes par le numérique. Si la reproduction et la distribution d’un livre, d’un journal ou d’un CD implique un coût (certes, toujours dégressif), la duplication et le partage de leur version numérique n’engage que des frais négligeables. Il en va de même pour tous les biens immatériels. 
+**« Les machines peuvent-elles penser ? »**
 
-Dans un contexte où les effets de réseaux  sont cruciaux et les économies d’échelle considérables, la **gratuité** joue un rôle central. Celle-ci permet notamment de constituer rapidement une base d’utilisateurs. Mais elle a également ses revers : des services en apparence gratuits se paient par la collecte de données personnelles, tandis que les producteurs de contenus voient leurs créations exploitées sans parvenir à obtenir une (juste) rémunération.
+Dans une approche symbolique de l’intelligence artificielle le mathématicien britannique Alan Turing pose cette question dans un célèbre article publié en 1950.  Pour y répondre, il propose le « jeu de l’imitation », également connu sous le nom de « Test de Turing ». L’expérience se résume comme suit : Un être humain (A) est mis en communication via un clavier et un écran, avec deux entités qu’il ne voit pas et dont il ignore la nature ; d’un côté, se trouve un ordinateur (B), de l’autre, un humain (C). Si, au bout de 5 minutes de conversation, l’être humain (A) n’est pas capable de savoir qui de (B) et (C) est l’ordinateur, ce dernier passe le test. 
 
-La combinaison de ces différents facteurs (effets de réseau, économies d’échelle, gratuité) favorise des situations de monopoles, telles que nous les voyons se déployer aujourd’hui. L’expansion de Google est l’illustration emblématique de ce mécanisme. L’entreprise propose des services gratuits et personnalisés qui deviennent à la fois plus performants et attractifs (aussi bien pour les internautes que pour les annonceurs) à mesure que le nombre d’interactions croît. Les données collectées nourrissent toute l’offre de services, tandis que le coût par utilisateur supplémentaire est quasi nul. Il s’agit d’un cercle vertueux dans lequel l’attractivité et la valeur de l’entreprise augmentent simultanément.
+Le jeu de l’imitation est avant tout un exemple théorique. La puissance des machines des années 1950 ne permet pas d’envisager l’assimilation des questions et encore moins la formulation de réponses adaptées. Aujourd’hui, les agents conversationnels ou ***chat bots*** sont ce qui se rapprochent le plus de l’ordinateur du jeu de l’imitation. Leurs performances actuelles demeurent relativement faibles et sont encore loin de créer la confusion pour les utilisateurs. 
 
-Une fois ce processus engagé, il devient difficile pour des offres concurrentes d’émerger. Ainsi, selon le principe du *winner takes all*, chaque secteur tend à être dominé par une seule entreprise qui rachète ses concurrents à mesure de son expansion. Ces entreprises deviennent incontournables, tant pour les clients que les prestataires. Par exemple, il est presque impossible pour un hôtel de se passer d’un référencement sur Booking.com, tout comme un petit vendeur indépendant peut difficilement éviter de proposer ses produits sur Amazon.
+Au-delà de la pertinence du jeu de l’imitation, sa conceptualisation permet de comprendre comment Turing concevait la pensée. Pour lui, elle est faite de capacités cognitives, c’est-à-dire d'un ensemble de facultés qui permettent d’apprendre, d’organiser et d’utiliser les connaissances. En considérant que la pensée peut être réduite à un ensemble de facultés définies (entre autres la perception, la mémoire et le langage), il devient également possible d’envisager de les reproduire de manière artificielle. C’est sur ce principe, inspiré de la cybernétique, que se baseront les premières recherches dans le domaine, quelques années plus tard. Cette approche très rationnelle de la pensée permet de placer l’intelligence humaine et l’intelligence artificielle au même niveau afin de les mettre en opposition. Le rapport de force entre l'être humain et la machine instauré par Turing aura une influence certaine dans l'histoire. Cette opposition servira de point de repère pour évaluer l'efficacité des systèmes d'IA face à l'intelligence humaine. 
+
+**Création d’un domaine scientifique**
+
+Les termes intelligence artificielle ou plutôt *artificial intelligence* en anglais, apparaissent pour la première fois en 1955, aux États-Unis. Quatre scientifiques formés en mathématique et en neurologie organisent une conférence d’été au Dartmouth College, afin de discuter et de réfléchir aux questions de programmation et de langage des ordinateurs, de réseaux de neurones, de puissance de calcul et d’auto-apprentissage. Mises ensemble, ces thématiques forment un nouveau domaine appelé intelligence artificielle. 
+
+Dans leur [proposition de projet](http://jmc.stanford.edu/articles/dartmouth/dartmouth.pdf) les auteurs expliquent leur approche de la manière suivante :
+
+« L’étude devra se dérouler sur la base de la conjecture que chaque aspect de l’apprentissage ou toute autre caractéristique de l’intelligence peut, en principe, être décrit avec une telle précision qu’une machine peut être conçue pour la simuler » 
+
+L’un des but motivant les premières recherches en IA est explicitement de reproduire l’intelligence humaine. 
+Comme Turing avant eux, les pionniers de l’IA partent du principe que le fonctionnement du raisonnement humain est suffisamment compris pour être modélisé. Certes, cette approche permet d’ouvrir la voie dans certains domaines bien précis. Cependant, l’intelligence humaine ne se limitent pas à un processus logique et individuel contrairement aux idées des pionniers de l’IA. Cette conception est en fait porteuse d’un paradoxe : pour pouvoir modéliser et reproduire artificiellement l’intelligence, elle est réduite à des fonctions définies. Or, les notions d’intelligence sociale, émotionnelle ou créative sont exclues du problème. La notion du corps est également totalement absente de ces considérations.  
+
+**Tournants**
+
+Si les théories concernant l’intelligence artificielle existent dès les années 1950, il faut attendre plusieurs décennies pour observer les premiers résultats concrets. En 1997, après plus de dix ans de recherche et d’entraînement, le superordinateur d’IBM « Deep Blue » bat le grand maître d’échec Garry Kasparov. Cette première victoire de la machine sur l’homme marque un tournant dans l’histoire de l’IA. Dans un souci de transparence et pour comprendre sa défaite, le joueur russe demande à IBM de produire la liste des coups joués par l’ordinateur. L’entreprise fournit uniquement l’historique de l’une des six parties du match avant de démanteler la machine. 
+
+La victoire de « Deep Blue » est avant tout rendue possible par de nombreuses années de développement et d’entraînement à partir de données produites par des humains. La machine dispose principalement d'une forte puissance de calcul qui permet d’évaluer les meilleurs coups de manière extrêmement rapide. Lors de sa victoire, « Deep Blue » calcule environ 200 millions de possibilités par seconde ce qui correspond à l’anticipation de 12 coups. Kasparov est capable d’anticiper au mieux les 10 prochains coups. 
+
+En 2015, l’histoire de l’IA prend un nouveau virage important. Le programme informatique AlphaGo (développée par la société britannique Deep Mind, rachetée par Google en 2014) bat un joueur professionnel lors d’une partie du traditionnel jeu de Go. L’exploit réside surtout dans le cheminement emprunté pour parvenir à cette victoire. Le jeu de Go est bien plus complexe que les échecs et les possibilités sont trop nombreuses pour être listées et apprises à une machine. Une combinaison d’apprentissage supervisé considérant des parties jouées par des humains et d’apprentissage profond uniquement basé sur l'expérience de la machine va permettre à AlphaGo de déduire les coups optimaux et de battre pour la première fois de l’histoire un joueur professionnel. La dernière version du programme baptisée AlphaGo Zero est parvenue à battre n’importe quel joueur humain ainsi qu’AlphaGo lui-même, en apprenant uniquement de sa propre expérience. Le programme est ainsi devenu imbattable. 
+
+Les technologies qui régissent « Deep Blue » et « AlphaGo » sont très différentes. Pour le premier, il s’agit uniquement d’application de règles logiques prédéfinies et de puissants calculs de probabilités. Pour le second, une association complexe de techniques d’apprentissage machine et d’apprentissage profond basé sur des réseaux de neurones artificiels permet au programme de trouver des possibilités auxquelles l’être humain n’avait encore pas pensé.  
+
+Ces prouesses techniques montrent que l’IA est, dans certaines situations bien précises, supérieure à l’intelligence humaine. Il faut cependant garder en tête que ces domaines de performance correspondent à des environnements fermés, où le but est fixé à l’avance. 
+
+<br>
 
 
-```{admonition} Ubérisation
-:class: hint
-L’ubérisation, dont le nom provient de l’entreprise Uber, est un processus économique qui vise à contourner le fonctionnement classique d’un secteur en créant un nouvel intermédiaire via une plateforme numérique. Celle-ci met en relation clients et prestataires tout en prélevant une commission sur les transactions. Si les services «ubérisés» offrent des prestations flexibles à moindre coût, ce changement de modèle passe par une stratégie de développement agressive  dans un cadre légal peu clair. Dans le cas d’Uber, le modèle implique la participation de travailleurs au statut précaire, considérés comme «indépendants» et pourtant soumis aux exigences de la plateforme. Le statut légal de ces pratiques est aujourd’hui remis en cause dans plusieurs villes, [dont Genève](https://www.letemps.ch/economie/geneve-uber-eats-desormais-recourir-employes), qui a imposé en 2020 à Uber Eats de salarier ses travailleurs.
-```
-Face à ces pratiques, les États peinent à s’accorder et les régulations demeurent peu contraignantes. Ce cadre juridique flou témoigne également d’une forme de fatalisme face au numérique. En effet, la précarité, la financiarisation ou la captation des données sont souvent pensés comme inhérentes au développement des technologies. Il apparaît donc nécessaire de souligner que la technique ne contient pas en elle-même un modèle organisationnel ou économique particulier. Pour des plateformes comme Google ou Facebook, ces outils technologiques constituent des moyens d’atteindre des objectifs commerciaux. Mais ce n’est pas la seule voie possible. Il existe en effet des services numériques dont les motivations se situent en dehors de ces logiques financières
 
-Ainsi, il faut rappeler que le Web n'a pas toujours été régi par des principes marchands (👉*voir dossier "Histoire d'Internet et du web"* ) et l'esprit de collaboration et de partage qui caractérisait les premières communautés en ligne n'a pas disparu. Comme le défendent les tenants du mouvement du logiciel libre, la mise en réseau des individus peut également mener à la création de **biens communs**. En ce sens, le succès de Wikipédia est la démonstration qu'une alternative au modèle des plateformes est possible (👉 *voir fiche "Wikipédia"*). 
+<div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
+  <b>🌀 Enjeux contemporains autours de l'IA</b>
+</div>
 
-Toutefois, la frontière entre ces deux logiques est parfois difficile à tracer, comme en témoigne l’utilisation souvent peu claire du terme «économie du partage». Désignant à l’origine des initiatives citoyennes et collaboratives tournées vers la création de biens communs, la notion est désormais réinvestie par des services commerciaux, tels que Uber, dont le mode de fonctionnement et les objectifs n’ont plus rien à voir avec ces principes. Le concept collaboratif et gratuit de *couchsurfing*, par la suite repris par Airbnb, illustre également ce processus.
+<br>
+
+**Domaines d'action**
+
+
+Sciences
+
+
+Pratiques numériques
+
+Public/privé
+
+...
+
+**Craintes**
+
+... 
+
+**Gouvernance**
+
+À la suite des diverses controverses engendrées par les biais racistes des IA, certaines grandes entreprises comme Google, Microsoft ou IBM ont mis en place des comités d’éthique. Plusieurs projets en cours ont ainsi été suspendus ou abandonnés en raison du risque de perpétuer des pratiques discriminatoires. Il s’agit dans ce cas d’une forme de gouvernance interne aux entreprises et donc non contraignante. 
+
+Une autre manière d’appréhender les risques liés à l’IA est de légiférer sur ses usages. Aux [États-Unis](https://www.ncsl.org/research/telecommunications-and-information-technology/2020-legislation-related-to-artificial-intelligence.aspx), leader mondial dans le domaine, seuls quatre états avaient adopté une forme de regulation relative à l'IA en 2021. En Europe, la Commission Européenne a proposé en avril 2021 « [un ensemble d’actions visant à stimuler l’excellence dans le domaine de l’IA, ainsi que des règles destinées à garantir la fiabilité de cette technologie](https://ec.europa.eu/france/news/20210421/nouvelles_regles_europeennes_intelligence_artificielle_fr) ». Afin d’estimer les risques que pourraient représenter l’IA pour les citoyens et citoyennes, la CE propose un classement qui détermine le niveau de régulation nécessaire pour chaque domaine. La catégorie « haut risque » comprend par exemple les logiciels de recrutement ou les prises de décision automatisées dans l’attribution d’un crédit, situations où les biais sont souvent présents. La situation est encore différente en Chine, où le gouvernement a publié un plan dans le but de devenir le leader mondial dans le domaine de l'IA d'ici 2030. 
+
+Les perspectives de règlementation du numérique sont bien présentes en Europe, même s’il faudra vraisemblablement attendre encore quelques années avant l’entrée en vigueur de cet ensemble de lois. La course à l'IA entre les États-Unis et la Chine n'encourage pas une régulation contraignante des pratiques par le politique.
+
+
+**La Singularité technologique** (encadré)
+
+La Singularité technologique correspond au moment hypothétique du dépassement de l’intelligence humaine par l’intelligence artificielle. Plusieurs scientifiques dont Ray Kurzweil, Stephen Hawking et Elon Musk ont fait part de leurs inquiétudes quant aux dangers potentiels d’une technologie qui deviendra tôt ou tard, supérieure aux humains.
+
+La théorie de la singularité est basée sur la loi de Moore qui illustre l’évolution exponentielle de la puissance de calcul des ordinateurs. En effet, depuis les premiers microprocesseurs des années 1970, on observe que le nombre de transistors double environ tous les deux ans. Les défenseurs de la singularité partent du principe que cette croissance exponentielle continuera jusqu’à ce que les machines soient elles-mêmes capables de programmer d’autres machines. 
+
+Or, ces prédictions omettent plusieurs facteurs et il parait aujourd’hui difficile de penser que la croissance technologique poursuive sa route vers l’infini.  Les limites matérielles et énergétiques ne sont par exemple pas prises en compte. Les détracteurs de la singularité considèrent que ces prédictions relèvent plus de la science-fiction que de faits scientifiques fiables. 
+
+Pour aller plus loin: 
+Jean-Gabriel Ganascia (2017), Le mythe de la Singularité. Faut-il craindre l’intelligence artificielle. Édition du Seuil.
+
+
+
+
+<br>
+
 
 
 <br>
