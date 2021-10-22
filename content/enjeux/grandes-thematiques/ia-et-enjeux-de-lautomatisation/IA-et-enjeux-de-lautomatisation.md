@@ -198,7 +198,7 @@ Jean-Gabriel Ganascia (2017), Le mythe de la Singularité. Faut-il craindre l’
 
 ### Glossaire
 
-* Sytème expert
+* Système expert
 * Apprentissage machine 
 * Apprentissage profond ou *deep learning*
 * Réseaux de neurones
