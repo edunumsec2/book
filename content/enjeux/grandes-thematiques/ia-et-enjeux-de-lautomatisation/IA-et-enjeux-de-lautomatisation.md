@@ -170,8 +170,8 @@ Une autre manière d’appréhender les risques liés à l’IA est de légifér
 
 Les perspectives de règlementation du numérique sont bien présentes en Europe, même s’il faudra vraisemblablement attendre encore quelques années avant l’entrée en vigueur de cet ensemble de lois. La course à l'IA entre les États-Unis et la Chine n'encourage pas une régulation contraignante des pratiques par le politique.
 
-
-**La Singularité technologique** (encadré)
+```{admonition} La Singularité technologique
+:class: hint
 
 La Singularité technologique correspond au moment hypothétique du dépassement de l’intelligence humaine par l’intelligence artificielle. Plusieurs scientifiques dont Ray Kurzweil, Stephen Hawking et Elon Musk ont fait part de leurs inquiétudes quant aux dangers potentiels d’une technologie qui deviendra tôt ou tard, supérieure aux humains.
 
@@ -181,7 +181,7 @@ Or, ces prédictions omettent plusieurs facteurs et il parait aujourd’hui diff
 
 Pour aller plus loin: 
 Jean-Gabriel Ganascia (2017), Le mythe de la Singularité. Faut-il craindre l’intelligence artificielle. Édition du Seuil.
-
+```
 
 
 ### Ressources 
