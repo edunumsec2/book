@@ -1,4 +1,4 @@
-# Microprocesseurs
+# 2. Microprocesseurs
 
 Cette section est composée des sous-sections suivantes:
 

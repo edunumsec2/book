@@ -1,6 +1,6 @@
-<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 20 avril 2021</span>
+<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 12 octobre 2021</span>
 
-Algorithmes de tris
+2. Algorithmes de tris
 ===================
 
 ````{admonition} Matière à réfléchir I
@@ -16,7 +16,7 @@ Y a -t-il des objets que vous rangez chez vous dans un ordre bien particulier ?
 
 ````
 
-## Algorithmes de tri classiques
+## 2. Algorithmes de tri classiques
 
 <span id=fig-trier></span>
 Pour apprendre à cuisiner, on commence par suivre des recettes classiques. Ainsi, pour appréhender l’{glo}`algorithmique|algorithmique`, nous étudierons une classe d’{glo}`algo|algorithmes` classiques : les **<span style="color:rgb(89, 51, 209)">algorithmes de tri</span>**. 
@@ -179,7 +179,7 @@ Il existe un algorithme, Bogosort, aussi nommé le tri lent ou encore le tri stu
 ````
 
 
-## Comparaison d’algorithmes
+### Comparaison d’algorithmes
 
 La qualité d’un {glo}`algo|algorithme` dépend de l’aspect que l’on souhaite optimiser (ou minimiser). Cela peut être la vitesse d’exécution (mesurée par le nombre d’{glo}`instruction|instructions` élémentaires exécutées), la place occupée en mémoire, ou encore le coût de certaines opérations comme le déplacement d’un élément. L'{glo}`algo|algorithme` utilisé devrait être choisi en fonction de la situation.
 
@@ -200,7 +200,7 @@ Dans cette configuration précise, quel algorithme est le plus rapide  (présent
 
 
 
-## Exercices
+### Exercices
 
 ````{admonition} Exercice 12
 :class: note

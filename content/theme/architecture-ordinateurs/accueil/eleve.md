@@ -17,12 +17,12 @@ Dans ce chapitre, vous découvrirez comment sont construits les ordinateurs, com
 
 <!-- ![img](media/microprocessor.gif) -->
 
-## Contenu du chapitre
+## Contenu de la thématique
 
 ```{tableofcontents}
 ```
 
-## Objectifs du chapitre
+## Objectifs de la thématique
 
 {fa}`check, text-success mr-1`Découvrir les **éléments de base** qui composent l'ordinateur.
 

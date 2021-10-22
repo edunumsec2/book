@@ -192,7 +192,7 @@ L’exemple « visible » de l’impulsion mécanique donnée sur une corde éla
 <br/>
 <center> 
 
-```{image} png/Im1.png
+```{figure} png/Im1.png
 :width: 400px
 :height: 200px
 ```

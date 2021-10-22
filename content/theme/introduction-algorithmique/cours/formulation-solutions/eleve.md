@@ -1,6 +1,6 @@
 <span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 20 avril 2021</span>
 
-De l’algorithme au programme
+3. De l’algorithme au programme
 ============================
 
 ````{admonition} Matière à réfléchir II
@@ -18,7 +18,7 @@ Demandez à un.e camarade de classe de suivre ces instructions. Est-ce que votre
 
 ````
 
-## Formalisation et implémentation de solutions algorithmiques
+## 3. Formalisation et implémentation de solutions algorithmiques
 
 Une fois que l’on a déterminé le meilleur {glo}`algo|algorithme` à utiliser, il faut le retranscrire dans un programme qu’une machine peut comprendre. Nous allons détailler ce processus pour l’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri par sélection</span>**. 
 
@@ -152,7 +152,7 @@ Mais est-ce que derrière chaque programme se cache un algorithme ?
 
 
 
-## Exercices 
+### Exercices 
 
 ````{admonition} Exercice 16
 :class: note

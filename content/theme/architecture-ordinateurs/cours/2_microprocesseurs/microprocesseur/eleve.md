@@ -1,5 +1,4 @@
-Microprocesseur
-===============
+## Fonctionnement du microprocesseur
 
 Dans ce chapitre, nous allons explorer le fonctionnement de base d'un processeur. Nous avons précédemment vu le fonctionnement des systèmes logiques à partir desquels nous pouvons construire un processeur. Nous avons également exposé l'architecture de von Neumann qui décrit la façon dont le processeur s'insère dans son environnement qui constitue un ordinateur. Ici, nous allons détailler les différents éléments qui constituent le processeur et qui en assurent le bon fonctionnement. 
 
@@ -25,7 +24,7 @@ Un microprocesseur est un processeur construit avec un circuit intégré, c'est-
 ```
 
 
-## L'horloge
+### L'horloge
 Un processeur est un dispositif synchrone, ce qui signifie que les opérations à l'intérieur du processeur se déroulent de manière synchrone à un temps donné. Pour assurer cette simultanéité, il faut comme pour un orchestre, donner le tempo. Cette fonction de métronome est assurée par une horloge, ou un signal d'horloge. Cette horloge est constituée d'un simple signal carré <!-- TODO: ajouter image --> dont la fréquence atteint aujourd'hui plusieurs gigahertz, c'est-à-dire plusieurs milliards de cycles par seconde.
 
 ```{admonition} La notion de *synchrone*
@@ -33,7 +32,7 @@ Un processeur est un dispositif synchrone, ce qui signifie que les opérations �
 <span commented>La notion de synchronicité est fondamentale</span><!-- REVIEW/JPP: à mon avis, ils n'en comprennent rien... OLIVIER: ??? contradiction entre "cet aspect devient crucial" et les systèmes qui ne sont plus synchrones... -->. Sans entrer dans les détails ici, il faut relever que dans un système synchrone il est possible d'assurer une coordination et une cohérence des opérations, ce qui est impossible autrement. Cet aspect devient crucial dans les systèmes distribués qui ne disposent plus de la garantie de synchronicité.
 ```
 
-## L'accès à la mémoire
+### L'accès à la mémoire
 
 ```{admonition} Rappel
 :class: danger
@@ -70,7 +69,7 @@ Les données stockées dans la mémoire peuvent être des nombres, des lettres, 
 ```
 
 
- ### Exercice
+### Exercices
 
 ```{question} Question 1
 Avec un bus d'adressage de 24 bits, quelle est la taille maximum de la mémoire? 
@@ -87,15 +86,15 @@ Quelle est la taille maximale de la mémoire pour un processeur 80286, sachant q
 ```
 
 
-## L'unité de contrôle
+### L'unité de contrôle
 L'unité de contrôle reçoit les instructions en provenance de la RAM. Elle s'occupe d'activer les composants qui doivent l'être dans le microprocesseur.
 
-## Les registres
+### Les registres
 Les registres permettent de stocker des valeurs, comme la RAM, mais directement à l'intérieur du processeur. Ils fonctionnent aussi en mode lecture ou écriture. C'est l'unité de contrôle qui détermine si un registre est utilisé en lecture ou en écriture avec deux fils de connexion: *enable* et *set*.
 En principe ces registres stockent les informations en provenance de la mémoire ou le résultat d'un calcul.
 Il existe trois registres plus spécifiques:
 
-### Le registre d'état
+#### <u> Le registre d'état </u>
 Le registre d'état regroupe les drapeaux (en anglais flags). Ils servent à renseigner l'état d'exécution du processeur. Par exemple le drapeau *dépassement* s'il est mis à 1 signal qu'un dépassement de capacité et survenu, ou encore le drapeau *division par zéro* signal une division par zéro.
 
 ### Le compteur de programme
@@ -104,12 +103,12 @@ Le compteur de programme (registre **PC** pour *Program Counter*) contient l'adr
 ### Le compteur de pile
 Le compteur de pile (registre **SP** pour *Stack Pointer*) contient la position sur une pile. Cette dernière est une zone mémoire à laquelle on ne peut pas accéder aléatoirement, mais uniquement en empilant ou dépilant des éléments.
 
-## L'unité arithmétique et logique
+### L'unité arithmétique et logique
 L'unité arithmétique et logique (UAL plus communément appelée ALU en abréviation anglaise) effectue tous les calculs arithmétiques et logiques. Nous avons vu quelques-uns de ces composants comme l'additionneur dans la partie sur les systèmes logiques.
 
 
 
-## Exemple: le 6502
+#### <u> Exemple: le 6502 </u>
 
 Le 6502, conçu en 1975, est le premier microprocesseur grand public avec un prix de 25$ (bien en-dessous des concurrents de cette époque). Une de ses premières utilisations pour le *grand public* fut la console de jeux vidéo Atari 2600. A partir de 1985, Nintendo équipe la NES d'une version modifiée du 6502. Il <span commented>équipe</span><!-- REVIEW/JPP: temps du verbe --> aussi le célèbre Apple II. Il est encore fabriqué et commercialisé en <span commented>2014</span><!-- REVIEW/JPP: et maintenant? -->.
 

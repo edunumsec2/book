@@ -8,13 +8,13 @@ Pourtant, il faut avoir conscience qu’aussi “réelles” que ces représenta
 
 Dans cette section, nous allons comprendre comment les ordinateurs parviennent à représenter le monde et les sacrifices qui doivent être faits pour simplifier le réel jusqu’à ce que sa représentation puisse être manipulée automatiquement au moyen de calculs élémentaires.
 
-## Contenu du chapitre
+## Contenu de la thématique
 
 ```{tableofcontents}
 ```
 
 
-## Objectifs du chapitre
+## Objectifs de la thématique
 
 {fa}`check, text-success mr-1`Découvrir la **représentation binaire** des nombres entiers, des caractères, des images et des sons.
 

@@ -1,5 +1,4 @@
-Architecture de von Neumann
-===========================
+## De Turing à Von Neumann
 
 ````{panels}
 
@@ -31,7 +30,7 @@ Dans un article de 1936, Alan Turing présente une «machine à programme enregi
 ```
 
 ````
-## Contexte historique
+### Contexte historique
 
 ````{panels}
 :column: col-lg-12 p-2
@@ -125,7 +124,7 @@ Cette vidéo de sept minutes présente une réalisation en lego de la machine de
 
 
 
-## Références
+### Références
 
 https://fr.wikipedia.org/wiki/John_von_Neumann
 https://fr.wikipedia.org/wiki/John_von_Neumann#/media/Fichier:Von_Neumann_architecture_fr.svg

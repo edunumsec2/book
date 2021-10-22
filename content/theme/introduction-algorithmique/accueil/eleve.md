@@ -12,12 +12,12 @@ Nous avons tous entendu parler DES ALGORITHMES. Ils sont partout et font toutes 
 
 Bienvenue dans le monde fascinant des algorithmes. 
 
-## Contenu du chapitre
+## Contenu de la thématique
 
 ```{tableofcontents}
 ```
 
-## Objectifs
+## Objectifs de la thématique
 
 A la fin de ce chapitre, vous saurez ce qu'est un algorithme et vous serez capable de transcrire des algorithmes en programmes. Vous saurez résoudre des problèmes, en décomposant leur solution en étapes à suivre. Vous verrez également que pour un même problème, on peut avoir plusieurs solutions avec différents propriétés, avantages et désavantages. 
 
@@ -30,7 +30,7 @@ A la fin de ce chapitre, vous saurez ce qu'est un algorithme et vous serez capab
 {fa}`check, text-success mr-1`Être capable de transcrire un algorithme dans un programme.
 
 
-
+## Personnages-clés
 
 
 ````{panels}

@@ -1,7 +1,7 @@
 <span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
 
-Complexité des algorithmes
-==========================
+# 2. Complexité des algorithmes
+
 
 ````{admonition} Matière à réfléchir III
 :class: attention

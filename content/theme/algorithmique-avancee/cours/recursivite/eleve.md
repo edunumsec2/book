@@ -1,8 +1,7 @@
 <span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
 
 
-Focus sur la récursivité
-========================
+# 4. Focus sur la récursivité
 
 Nous allons maintenant programmer l’{glo}`algo|algorithme` du tri par fusion. Pour rappel, dans sa première phase l’{glo}`algo|algorithme` divise le tableau par deux, comme illustré dans la <a href="../complexite/eleve.html#diviser">Figure **Diviser**</a> du tri à fusion :
 

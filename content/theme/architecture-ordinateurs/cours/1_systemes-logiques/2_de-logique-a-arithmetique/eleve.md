@@ -1,4 +1,4 @@
-# De la logique à l'arithmétique
+## De la logique à l'arithmétique
 
 Nous avons découvert quelques {glo}`portelogique|portes logiques` ainsi que la possibilité que nous avons de les connecter pour en faire des circuits logiques plus complexes. Ces {glo}`portelogique|portes logiques` vont maintenant nous permettre de réaliser l'additionneur annoncé en début de chapitre précédent.
 

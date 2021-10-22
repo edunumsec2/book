@@ -1,4 +1,4 @@
-# Représentation des images
+# 3. Représentation des images
 
 
 <!-- ````{role} prof
@@ -14,25 +14,29 @@ Voilà un déroulé de cours pour cette section représentation des images :
 ```` 
 -->
 
-<!-- ## Les images matricielles
+## Les images matricielles
 
+<<<<<<< Updated upstream
 Depuis des siècles les humains gardent des traces de leur environnement sous forme d'images. Plus le temps passe, plus ces traces sont fidèles. On découvre par exemple la perspective autour du XV<sup>e</sup> siècle, les progrès en optique et en chimie permettent ensuite la création de la camera obscura et de la photographie argentique. Enfin l'informatique se développe permettant l'invention de la photographie numérique.
+=======
+Depuis des siècles les humains gardent des traces de leur environnement sous forme d'images. Plus le temps passe, plus ces traces sont fidèles. On découvre par exemple la perspective autour du 15ème siècle, les progrès en optique et en chimie permettent ensuite la création de la camera *obscura* et de la photographie argentique. Enfin l'informatique se développe permettant l'invention de la photographie numérique.
+>>>>>>> Stashed changes
 
 ```{figure} media/camera_obscura.jpg
 ---
 height: 16em
 name: fig-repr-img-obscur
 ---
-La camera obscura
+La camera obscura.
 ```
 
 ### De la camera obscura à la caméra numérique
 
-Mais alors, comment marche une caméra numérique ? Elle marche d'une manière très similaire à la camera obscura et aux appareils photographiques analogiques d'un point de vue optique. Imaginez une chambre noire pourvue d'un trou sur l'une de ses parois. La lumière venant de l'extérieur vient se projeter sur le mur opposé. 
+Mais alors, comment fonctionne une caméra numérique ? Elle fonctionne en fait d'une manière très similaire à la camera obscura et aux appareils photographiques analogiques d'un point de vue optique. Imaginez une chambre noire pourvue d'un trou sur l'une de ses parois. La lumière venant de l'extérieur vient se projeter sur le mur opposé. 
 
-Dans un appareil analogique, la paroi illuminée est recouverte d'une pellicule chimique photosensible qui permet de capturer l'image. La différence est que dans un appareil photo numérique cette paroi est recouverte d'une grille de capteurs électroniques photosensibles. Dans ce cas, l'image numérique ne sera rien d'autre que la collection des mesures de tous les capteurs à un temps précis. Comme ces mesures sont organisées sous forme de tableau, on parle souvent d'images matricielles. Plus le nombre de capteurs est grand, plus la résolution de cette image le sera aussi. -->
+Dans un appareil analogique, la paroi illuminée est recouverte d'une pellicule chimique photosensible qui permet de capturer l'image. La différence est que dans un appareil photo numérique cette paroi est recouverte d'une grille de capteurs électroniques photosensibles. Dans ce cas, l'image numérique ne sera rien d'autre que la collection des mesures de tous les capteurs à un temps précis. Comme ces mesures sont organisées sous forme de tableau, on parle souvent d'images matricielles. Plus le nombre de capteurs est grand, plus la résolution de cette image le sera aussi. 
 
-## Représentation d'une image noir et blanc
+## Représentation d'une image en noir et blanc
 
 ````{tabbed} Image
 ```{image} media/thuglife.png
@@ -281,7 +285,7 @@ drawImg(alien)
 ```
 *Conseil : à la place de alien, essayez mario, luigi, link, guerrier, tortueninja1, tortueninja2, homer, pikachu, kirby, kirbycouleur*
 
-Un {glo}`pixel|pixel`, de l'anglais : **pic**ture **el**ement, est le composant minimal d'une image. C'est à dire que c'est la plus petite brique avec laquelle on construit une image sur un écran d'ordinateur, et donc dans sa mémoire. Dans notre exemple minimaliste, chaque pixel peut être soit noir, soit blanc, ce qui nous permet de construire une image.
+Un {glo}`pixel|pixel`, de l'anglais "**pic**ture **el**ement", est le composant minimal d'une image. C'est à dire que c'est la plus petite brique avec laquelle on construit une image sur un écran d'ordinateur, et donc dans sa mémoire. Dans notre exemple minimaliste, chaque pixel peut être soit noir, soit blanc, ce qui nous permet de construire une image.
 
 ````{admonition} Anecdote
 :class: hint
@@ -310,7 +314,7 @@ La plupart des images sont représentées au format {glo}`matrice|matriciel`. Un
 ---
 name: fig-repr-img-pixel
 ---
-Images monochrome, pixels et luminance.
+Image monochrome, pixels et luminance.
 ```
 
 Pour accéder à un pixel particulier, il faut en général définir à quelle ligne et à quelle colonne de l'image ce pixel correspond. Le pixel (0,0) correspondra normalement au pixel de la première ligne et de la première colonne.
@@ -333,7 +337,7 @@ Ce mode de fonctionnement est similaire à celui des tableurs pour lesquels il e
 ```
 ````
 
-En peinture, pour obtenir toutes les couleurs de l'arc-en-ciel, on utilise un mélange de magenta, de cyan et de jaune, c'est ce que l'on appelle la {glo}`synthsoustractive|synthèse soustractive` : en ajoutant du pigment à une surface, une partie du spectre lumineux est soustrait. Pour faire la même chose en informatique, on utilisera également trois couleurs, mais celles-ci seront le rouge, le vert et le bleu. Cela correspond à la {glo}`synthadditive|synthèse additive additif` : en allumant une LED rouge, j'ajoute de la lumière sur la partie du spectre lumineux correspondant.
+En peinture, pour obtenir toutes les couleurs de l'arc-en-ciel, on utilise un mélange de magenta, de cyan et de jaune, qui vont chacune absorber une partie de la lumière ; c'est ce que l'on appelle la {glo}`synthsoustractive|synthèse soustractive` : en ajoutant du pigment à une surface, une partie du spectre lumineux est soustrait. Pour faire la même chose en informatique, on utilisera également trois couleurs, mais celles-ci seront le rouge, le vert et le bleu. Cela correspond à la {glo}`synthadditive|synthèse additive` : en allumant une LED rouge, j'ajoute de la lumière sur la partie du spectre lumineux correspondant.
 
 ```{figure} media/SyntheseAdd_pixels.svg
 ---
@@ -352,7 +356,7 @@ Chaque pixel d'une image couleur est donc représenté comme un mélange de ces 
 
 <!-- TODO #13 @dasilvadds : Modifier le paragraphe suivant en changeant blablabla
  -->
-Pour dessiner une image sur une feuille A4, on peut la diviser en grille et définir un niveau de gris pour chaque case, mais on peut aussi tout simplement de dessiner n'importe quelle figure, par exemple un trait d'un millimètre d'épaisseur allant d'un point A à un point B. De la même manière, en informatique, il est possible de représenter des images sous forme de grilles de pixels, comme nous l'avons vu, mais pas seulement. Il est en effet également possible de définir une image comme une collection d'objets graphiques (un segment, un carré, une ellipse...) sur un espace 2D, c'est ce que l'on appelle des images vectorielles. 
+Pour dessiner une image sur une feuille A4, on peut la diviser en grille et définir un niveau de gris pour chaque case, mais on peut aussi tout simplement dessiner n'importe quelle figure, par exemple un trait d'un millimètre d'épaisseur allant d'un point A à un point B. De la même manière, en informatique, il est possible de représenter des images sous forme de grilles de pixels, comme nous l'avons vu, mais pas seulement. Il est en effet également possible de définir une image comme une collection d'objets graphiques (un segment, un carré, une ellipse...) sur un espace 2D, c'est ce que l'on appelle des images vectorielles. 
 
 ```{admonition} Micro-activité
 :class: note

@@ -1,8 +1,8 @@
-# De la logique à la mémoire
+## De la logique à la mémoire
 
 **TODO:** _Du contenu supplémentaire sera rajouté ici pour parler de la mémoire._
 
-## La construction de la mémoire
+### La construction de la mémoire
 
 Les {glo}`transistor|transistors`, les {glo}`portelogique|portes logiques` et leur représentation en {glo}`tableverite|tables de vérités`, permettent de manipuler des 0 et des 1 au niveau physique. Tant qu'un courant électrique se déplace dans nos {glo}`circuit|circuits`, nous sommes capables de le transformer, de le laisser passer ou de l'arrêter, dans le but d'exprimer des portes «ouvertes» ou des portes «fermées» et donc des nombres binaires.  
 
@@ -10,7 +10,7 @@ Mais comment faire pour {glo}`stockage|stocker` cette information?
 
 Pour comprendre comment la {glo}`stockage|mémoire` des ordinateurs fonctionne, il faut commencer par la classer en deux grandes catégories. La {glo}`memvolatile|mémoire volatile`, et la {glo}`memnonvolatile|mémoire non volatile`. La {glo}`memvolatile|mémoire volatile` s'efface quand la machine et éteinte. La {glo}`memnonvolatile|mémoire non volatile`, elle, persiste. Si votre smartphone s'éteint alors que vous êtes en train de retoucher une photo, ces retouches disparaissent. Elles étaient stockées sur la {glo}`memvolatile|mémoire volatile`. Par contre, au moment où vous avez sauvegardé ces retouches, elles s'inscrivent dans la {glo}`memnonvolatile|mémoire non volatile`. 
 
-## Les verrous informatiques
+### Les verrous informatiques
 
 Pour stocker de l'information avec un circuit logique, il faut utiliser une autre technique que ce que nous avons fait jusqu'à maintenant, où toutes les sorties dépendent exlusivement et immédiatement des entrées. Regardons ce qui se passe avec ce circuit, par exemple: c'est une simple porte **OU**, dont l'une des entrées est en fait sa propre sortie.
 

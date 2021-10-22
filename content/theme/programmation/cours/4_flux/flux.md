@@ -1,13 +1,29 @@
+<<<<<<< Updated upstream
 # Structures de contrôle
+=======
+---
+jupytext:
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.10.3
+kernelspec:
+  display_name: Python 3.9.0 64-bit
+  name: python3
+---
 
-Jusqu'à maintenant un programme était une **séquence linéaire**.
-Les instructions s'exécutaient
+# 3. Structures de contrôle
+>>>>>>> Stashed changes
+
+Jusqu'à présent un programme était envisagé comme une **séquence linéaire**.
+Les instructions s'exécutaient :
 
 - les unes après les autres,
 - de haut en bas,
 - chacune une seule fois.
 
-Dans cette section nous allons voir des structures de contrôle qui permet de changer cette séquence purement linéaire:
+Dans cette section nous allons aborder les structures de contrôle qui permettent de changer cette séquence purement linéaire :
 
 - L'**instruction conditionnelle**  permet de ne pas exécuter certaines instructions.
 - La **boucle** permet d'exécuter certaines instructions plusieurs fois.
@@ -18,21 +34,21 @@ On appelle **bloc** une ou plusieurs instructions qui forment un ensemble.
 En C ou JavaScript un bloc est délimité avec des accolades `{...}`.
 L'indentation est encouragé mais reste optionnelle.
 
-En Python l'indentation est obligatoire. C'est la façon officiel de designer un bloc.
-Ceci a deux avantages:
+En Python l'indentation est obligatoire. C'est la façon officielle de designer un bloc.
+Ceci présente deux avantages :
 
-- pas besoin d'accolades pour délimiter une bloc
-- la structure des blocs est clair et visuel
+- pas besoin d'accolades pour délimiter une bloc,
+- la structure des blocs est claire et visuelle.
 
 Une **indentation** est un retrait du code par rapport à la marge gauche de 4 caractères.
 Elle peut être insérée avec la touche tabulateur **TAB** (symbolisée par une flèche à gauche du clavier).
 
 Une suite d'instructions indentée de la même manière forme un bloc.
-Ces blocs se trouvent dans
+Ces blocs se trouvent dans :
 
 - la définition de fonction (`def`),
-- l'instruction conditionnelle (`if-else`)
-- la boucles (`for`, `while`)
+- l'instruction conditionnelle (`if-else`),
+- la boucles (`for`, `while`).
 
 En Python le symbole `:` en fin de ligne introduit un sous-bloc qui doit être indenté.
 Voici des sous-blocs à la suite des mot-clés `def`, `if`, `else`, `for`.
@@ -50,11 +66,11 @@ for i in range(3):
     print('itération', i) 
 ```
 
-Dans l'exemple suivant nous avons deux fois une boucle qui fait 3 itérations.
+Dans l'exemple suivant nous avons deux fois une boucle qui fait trois itérations.
 
-Dans la première boucle l'instruction `print('dedans')` fait parti du bloc d'itération et elle est exécutée 3 fois.
+Dans la première boucle l'instruction `print('dedans')` fait partie du bloc d'itération et elle est exécutée trois fois.
 
-Dans la deuxième boucle l'instruction `print('dehors')` ne fait pas parti du bloc d'itération et elle est exécutée seulement 1 fois.
+Dans la deuxième boucle l'instruction `print('dehors')` ne fait pas partie du bloc d'itération et elle est exécutée seulement une fois.
 
 ```{codeplay}
 for i in range(3):
@@ -67,29 +83,46 @@ for i in range(3):
 print('dehors')
 ```
 
-## Opérations de comparaison
+## <span commented>La comparaison</span>
+On peut être amené, dans un programme, à comparer des résultats issus de traitements divers, via par exemple l'utilisation de formules différentes, ou tout simplement comparer le résultat d'un calcul avec une valeur test.
+Python connait six types de comparaisons :
 
-Les 6 opérateurs de comparaison permettent de comparer 2 valeurs.
+- plus petit - inférieur strictement (`<`),
+- plus petit ou égal - inférieur ou égal (`<=`),
+- égal (`==`),
+- différent (`!=`),
+- plus grand - supérieur strictement (`>`),
+- plus grand ou égal - supérieur ou égal (`>=`).
 
-- plus grand que (`>`)
-- plus petit que (`<`)
-- plus petit ou égal à (`<=`)
-- plus grand ou égal à (`>=`)
-- égal à (`==`)
-- non égal à (`!=`)
+Le résultat d'une comparaison est une valeur qui est soit vraie, soit fausse. C'est une valeur dite _booléenne_. En Python, ces deux valeurs sont représentées avec les mots clés `True` et `False`.
 
-Dans l'exemple suivant nous affectons une valeur à la variable `a` et nous effectuons 3 comparaisons.
-Le résultat d'une comparaison est une valeur booléenne (valeur logique) qui prend la valeur `True` ou `False`
+Voici quelques exemples :
 
+<<<<<<< Updated upstream
 ```{codeplay}
 a = 3
 print(a > 2)
 print(a < 2)
 print(a != 2)
 ```
+=======
+2 > 3
 
-**Note**:
-Ne confondez pas l'opérateur d'_affectation_ (`=`) avec l'opérateur de _comparaison_ (`==`).
+2 < 3
+
+2 != 3
+
+On peut aussi comparer des chaînes de caractères. C'est l'ordre alphabétique qui détermine le résultat.
+
+'antilope' < 'zèbre'
+
+L'ordre des mots est celui utilisé dans les dictionnaires.
+
+'art' < 'artiste'
+>>>>>>> Stashed changes
+
+**Note** :
+ne pas confondre l'opérateur d'_affectation_ (`=`) avec l'opérateur de _comparaison_ (`==`).
 
 ```{codeplay}
 a = 2           # affectation
@@ -259,20 +292,20 @@ print('Bravo. Vous avez réussi')
 
 ## Exercices
 
-### Exercice 1 - intervalle
+## Exercice 1 - intervalle
 
 Vérifiez si une variable `x` contient une valeur qui est entre deux bornes [a, b].
 
-### Exercice 2 - question
+## Exercice 2 - question
 
 Faites un programme qui pose une question simple à l'utilisateur. Si sa réponse est juste, affichez `Bravo`.
 
-### Exercice 3 - age
+## Exercice 3 - age
 
 Faites un programme qui demande à l'utilisateur son âge.
 Si l'âge est supérieur ou égal à 18, le programme doit afficher: "Vous êtes majeur, vous pouvez voter" et si l'âge est inférieur à 18, le programme doit afficher: "Vous êtes mineur, vous pourrez voter dans (*calcul de la différence*) année(s)"
 
-### Exercice 4 - jeu
+## Exercice 4 - jeu
 
 Faites un programme qui demande à l'utilisateur d'entrer un chiffre entre 0 et 2.
 Si l'utilisateur choisit
@@ -281,7 +314,7 @@ Si l'utilisateur choisit
 - 1: affichez **Feuille**
 - 2: affichez **Ciseaux**.
 
-### Exercice 5 - carré
+## Exercice 5 - carré
 
 Faites un programme qui affiche un carré de longueur `n` avec le caractère `'x'`.
 Mais vide à l'intérieur
@@ -293,11 +326,11 @@ for i in range(n):
     print('x' * n) 
 ```
 
-### Exercice 6 - triangle
+## Exercice 6 - triangle
 
 Faites un programme qui affiche un triangle de hauteur `n` avec des `x`.
 
-### Exercice 7 - rectangle
+## Exercice 7 - rectangle
 
 Faites un programme qui affiche une boite de hauteur `a` et longueur `b` avec des `x`.
 L'intérieur de la boite doit rester vide.

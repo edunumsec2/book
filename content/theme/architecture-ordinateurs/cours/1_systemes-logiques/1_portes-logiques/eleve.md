@@ -1,4 +1,4 @@
-# Portes logiques
+## Portes logiques
 
 Les {glo}`circuitelectronique|circuits électroniques` qui composent un ordinateur sont constitués de composants électroniques comme des {glo}`resistance|résistances`, des {glo}`condensateur|condensateurs`, des {glo}`transistor|transistors`, etc., qui déterminent où va passer le courant électrique et sur quelles parties du {glo}`circuitelectronique|circuit` règnera quelle {glo}`tension|tension`.
 
@@ -175,7 +175,7 @@ Ce circuit contient une porte **OU**, deux portes **ET** et un inverseur, tous i
 Ce diagramme n'est pas forcément facile à lire — discutons d'abord comment l'interpréter avec papier et crayon pour vérifier s'il effectue bien un **OU-X**.
 
 
-#### Analyse d'un circuit
+#### <u> Analyse d'un circuit </u>
 
 Pour analyser un {glo}`syslogique|circuit logique` comme celui présenté ci-dessus, on cherchera à établir sa {glo}`tableverite|table de vérité`. En l'occurrence, comme pour les portes précédentes, ce circuit a deux entrées: si chaque entrée peut valoir $1$ ou $0$, nous avons en tout, de nouveau, 4 configurations possibles à examiner dans le but de remplir la dernière colonne:
 
@@ -291,7 +291,7 @@ Vérifiez que la porte **OU-X** se comporte bien comme le circuit ci-dessous ré
 ```
 
 
-#### Création d'un circuit
+#### <u> Création d'un circuit </u>
 
 Discutons maintenant de comment on a pu créer de zéro ce diagramme réalisant un **OU-X** à avec les portes à notre disposition à partir de sa {glo}`tableverite|table de vérité`. Plusieurs approches sont possibles, et nous verrons que, suivant l'approche, on aurait très bien pu créer un circuit logique différent réalisant la même fonction.
 

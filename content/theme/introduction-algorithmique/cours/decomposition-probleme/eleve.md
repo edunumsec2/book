@@ -1,12 +1,12 @@
-<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 20 avril 2021</span>
+<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 12 octobre 2021</span>
 
 
-L'algorithme
-============
+## 1. Pensée algorithmique et principes
+
 
 Un {glo}`algo|algorithme` est en quelque sorte « une recette » que l’on suit pour **<span style="color:rgb(89, 51, 209)">résoudre un problème</span>**. Voici quelques exemples de problèmes que l’on arrive à résoudre numériquement : calculer le trajet le plus rapide entre deux lieux, gérer les livres d’une bibliothèque, détecter des visages dans une photographie ou recommander des produits. ***<span style="color:rgb(13, 204, 166)">L’algorithme n’est donc pas un programme</span>***. Un {glo}`algo|algorithme` ne se code pas, il ne s’exécute pas et il ne donne pas de solution concrète. L’{glo}`algo|algorithme` décrit plutôt un « mode d’emploi » que l’on peut suivre pour créer un {glo}`programme|programme`. C’est le {glo}`programme|programme` qui sera exécuté par un système informatique pour concrètement résoudre le problème.
 
-## Résolution d'un problème par étapes
+### Résolution d'un problème par étapes
 
 Un mode d’emploi ou une recette décrivent **<span style="color:rgb(89, 51, 209)">des étapes</span>** à suivre. La préparation des ingrédients, la cuisson ou le service sont différentes étapes d’une recette de cuisine qu’une personne peut suivre pour réaliser un plat. Prenons un cas précis : ***<span style="color:rgb(13, 204, 166)">réaliser une omelette</span>***. Pour chaque étape de la préparation de l’omelette, il faut prévoir une marche à suivre suffisamment détaillée, afin que la personne qui suit la recette arrive au même résultat. Dans le cas de l’omelette, les opérations pourraient être (voir figure ci-dessous) : 
 
@@ -142,7 +142,7 @@ Si on dessine l’état des variables après chacune de ces opérations dans des
 
 
 
-## Exercices 
+### Exercices 
 
 ````{admonition} Exercice 3
 :class: note

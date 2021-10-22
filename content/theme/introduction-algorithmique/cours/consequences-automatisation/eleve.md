@@ -1,6 +1,6 @@
 <span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 20 avril 2021</span>
 
-Conclusion
+*Conclusion*
 ==========
 
 ````{admonition} Pourquoi est-ce important ?

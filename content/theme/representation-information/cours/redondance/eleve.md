@@ -1,4 +1,4 @@
-# Redondance
+# 5. Redondance
 
 Pourrait-on
 construire
@@ -26,17 +26,17 @@ Ce résultat
 est atteint
 au prix
 d'une maintenance
-extrêmement stricte ;
+extrêmement stricte,
 une formation
 exigeante et continue
-du personnel de bord ;
+du personnel de bord,
 une analyse méticuleuse
-de chaque incident ;
+de chaque incident,
 un contrôle permanent
-du respect des recommandations,
+du respect des recommandations
 tant par les constructeurs
-que par les opérateurs ;
-et
+que par les opérateurs,
+et enfin
 un soin particulier
 apporté
 à la redondance
@@ -55,8 +55,8 @@ ses performances.
 Évidemment,
 la redondance des systèmes
 a un coût :
-en complexité ;
-en masse et volume ;
+en complexité,
+en masse et volume,
 et en maintenance.
 En effet,
 paradoxalement,
@@ -389,7 +389,7 @@ plus élevé.
 
 
 
-### Fonction de hachage
+## Fonction de hachage
 
 
 L'exemple de
@@ -596,7 +596,7 @@ est aussi sensible
 Même si
 le hachage
 d'une information
-soit
+est
 à dessein
 relativement rapide
 en soi,
@@ -688,9 +688,9 @@ plus complexes
 (**SHA**, **MD5**…)
 trouvent des applications
 dans de nombreux contextes :
-authenticité (signatures numériques) ;
-intégrité (erreurs de transfert, stockage, blockchains…) ;
-identification (fichiers, connexions réseau…) ;
+authenticité (signatures numériques),
+intégrité (erreurs de transfert, stockage, blockchains…),
+identification (fichiers, connexions réseau…),
 authentification (stockage et vérification des mots de passe)…
 
 
@@ -717,7 +717,7 @@ parfois irrécupérables.
 La mise en place
 de sauvegardes
 automatiques
-réguliers
+régulières
 sur des supports
 distincts et,
 de préférence,
@@ -827,7 +827,6 @@ des systèmes critiques
 qui ne peuvent
 se permettre
 de perdre des informations,
-ce qui pourrait inclure
 ce qui pourrait inclure,
 à terme,
 les copies de sécurité

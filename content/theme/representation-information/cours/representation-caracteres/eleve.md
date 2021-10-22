@@ -1,4 +1,4 @@
-# Représentation des caractères
+# 2. Représentation des caractères
 
 Toute l'information est représentée dans un ordinateur par des nombres
 encodés sous forme binaire par des 0 et des 1. Se pose alors la question
@@ -8,7 +8,7 @@ entre les utilisateurs et les ordinateurs s'opère essentiellement sous forme te
 ## Principe
 
 La solution retenue a consisté à définir une table de conversion qui indique
-de façon univoque une concordance entre une valeur numérique et un caractère:
+de façon univoque une concordance entre une valeur numérique et un caractère :
 
 | Caractère | Décimal | Hexadécimal |   Binaire    | | | | | Caractère | Décimal | Hexadécimal |   Binaire    |
 |-----------|---------|-------------|--------------|-|-|-|-|-----------|---------|-------------|--------------|
@@ -114,8 +114,8 @@ ne serait-ce que les lettres accentuées.
 
 ```{figure} media/ASCII-Table.png
 ---
-height: 500px
-width: 400px
+height: 600px
+width: 700px
 ---
 La table de représentation des caractères ASCII
 ```
