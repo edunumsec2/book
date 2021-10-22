@@ -3,7 +3,7 @@
 La conversion
 d’une grandeur physique analogique
 continue
-– température, vitesse du vent, position d'une girouette, etc., –
+– température, vitesse du vent, position d'une girouette, etc. –
 en données numériques digitales
 est appelée **numérisation**.
 Elle est réalisée
