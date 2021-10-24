@@ -1,6 +1,9 @@
 # 2. Microprocesseurs
 
-Cette section est composée des sous-sections suivantes:
+TODO : partie introductive, images, vidéos ...
+
+
+Ce chapitre est composée des sous-chapitres suivants :
 
 ```{tableofcontents}
 ```

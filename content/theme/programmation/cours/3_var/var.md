@@ -1,20 +1,4 @@
-<<<<<<< Updated upstream
-# Variables et expressions
-=======
----
-jupytext:
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.10.3
-kernelspec:
-  display_name: Python 3.9.1 64-bit
-  name: python3
----
-
 # 2. Variables et expressions
->>>>>>> Stashed changes
 
 Les données qu'un ordinateur manipule se trouvent dans sa mémoire.
 On peux s'imaginer la mémoire comme un grand espace divisé en octets.
@@ -199,11 +183,15 @@ Ceux-ci ne sont pas valides :
 - `var$2` (contient un caractère spécial),
 - `mon nom` (contient une espace et est interprété comme deux noms de variables).
 
-## Exercices
 
-Faites ces exercices dans l'éditeur de script, et non pas dans la console.
 
-## Exercice 1 - affectation
+<br>
+<br>
+
+*Faites ces exercices dans l'éditeur de script, et non pas dans la console.*
+
+````{admonition} Exercice 1 : affectation
+:class: note
 
 Sans utiliser l'ordinateur, déterminez ce qui va être affiché par les cinq instructions `print` dans ce programme.
 
@@ -219,20 +207,27 @@ Sans utiliser l'ordinateur, déterminez ce qui va être affiché par les cinq in
     print(c)
     print(b + a)
 ```
+````
 
-## Exercice 2 - input()
+
+````{admonition} Exercice 2 : input
+:class: note
 
 Faites un programme qui demande le **prénom** de l'utilisateur et qui affiche la phrase suivante :
 
 ```text
     Bonjour, _prénom_, avez-vous passé une bonne journée ?
 ```
+````
 
-## Exercice 3 -  cylindre
+````{admonition} Exercice 3 : cylindre
+:class: note
 
 Faites un programme qui demande à l'utilisateur la hauteur et le diamètre d'un cylindre et retourne le volume du cylindre avec une phrase complète.
+````
 
-## Exercice 4 - jeu
+````{admonition} Exercice 4 : jeu
+:class: note
 
 Le **cadavre exquis** est un jeu graphique ou d'écriture collectif inventé par les surréalistes, en particulier Jacques Prévert et Yves Tanguy, vers 1925.
 
@@ -245,3 +240,4 @@ Faites un programme qui permet de faire un jeu d'écriture collectif (cadavre ex
 - le troisième, un complément d'objet direct (COD),
 - le quatrième, un complément d'objet indirect (COI),
 - le dernier, un groupe permutable.
+````

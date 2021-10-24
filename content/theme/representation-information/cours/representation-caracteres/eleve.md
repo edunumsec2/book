@@ -3,7 +3,7 @@
 Toute l'information est représentée dans un ordinateur par des nombres
 encodés sous forme binaire par des 0 et des 1. Se pose alors la question
 de la représentation des caractères, ne serait-ce que parce que la communication
-entre les utilisateurs et les ordinateurs s'opère essentiellement sous forme textuelle.
+entre les utilisateurs et les ordinateurs s'opère essentiellement sous forme textuelle. 
 
 ## Principe
 
@@ -203,5 +203,35 @@ qui nous concernent… – est la table UTF-8. Elle se concentre
 sur les premiers 8 bits de la table UTF complète.
 
 
+````{admonition} Exercice 1 : ???
+:class: note
+
+......
+
+````
+````{admonition} Exercice 2 : ???
+:class: note
+
+......
+
+````
+````{admonition} Exercice 3 : ???
+:class: note
+
+......
+
+````
+````{admonition} Exercice 4 : ???
+:class: note
+
+......
+
+````
+````{admonition} Exercice 5 : ???
+:class: note
+
+......
+
+````
 
 

@@ -1,8 +1,8 @@
 # *Introduction*
 
-Dans ce chapitre, nous aborderons la question de l'architecture des ordinateurs, c'est à dire les multiples couches physiques qui rendent possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
+Ce chapitre aborde la question de l'architecture des ordinateurs, c'est à dire les multiples couches physiques qui rendent possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant les smartphones par exemple. 
 
-Comme vous avez pu le voir dans le chapitre lié à la représentation de l'information, tout ce qui apparaît sur votre écran est représenté par l'ordinateur par suite de 0 et de 1. Pour comprendre comment ces <span commented>{glo}`codebinaire|nombres binaires`</span><!-- REVIEW/JPP: pas nombres --> sont traités par l'ordinateur, il faut avoir en tête que les ordinateurs sont <span commented>construits</span><!-- REVIEW/JPP: pour moi, ils ne sont pas construits comme ça. Il n'y a qu'une seule couche, à la base. Mais on y réfléchit selon plusieurs niveaux --> en plusieurs couches successives, comme un mille-feuille, dont chacune possède ses propres règles. 
+Le chapitre consacré à la représentation de l'information a montré que tout ce qui apparaît sur les écrans des ordinateurs ou smartphones est représenté par l'ordinateur par une suite de 0 et de 1. Pour comprendre le traitement opéré par un ordinateur, il faut avoir en tête leur construction sous forme de couches successives, comme un mille-feuille, dont chacune possède ses propres règles. 
 
 ```{figure} media/abstractionlight.png
 ---

@@ -1,21 +1,30 @@
-# Listes
+# 4. Listes
 
-Une liste est un séquence linéaire d'objets. En Python, syntaxiquement, une liste
+Une liste est un séquence linéaire d'objets. En Python, syntaxiquement, une liste :
 
-- est délimitée par des crochets `[]`
-- ses éléments sont séparés par des virgules `,`
+- est délimitée par des crochets `[]`,
+- voit ses éléments séparés par des virgules `,`.
 
-Voici un exemple avec une liste de chaines de caractères.
-La fonction `len` retourne la longueur d'une liste, le nombre d'éléments qu'elle contient.
+Voici des exemples de listes homogènes (même type de variables).
+
+    a = [123, 43, 5]
+    b = [`chat`, `chien`, `5`]
+
+On peut également créer des listes non-homogènes, mais les "bonnes pratiques" de programmation induisent alors qu'on utilise plutôt des *tuples*.
+
+La fonction `len` retourne la longueur d'une liste, c'est à dire le nombre d'éléments qu'elle contient.
 
 ```{codeplay}
 fruits = ['banane', 'pomme', 'orange']
-
-print(fruits)
 print(len(fruits))
 ```
 
-**Exercice**: Ajoutez un élément à la liste `fruits`. Ajoutez une deuxième liste `prix` avec des éléments numériques.
+La fonction `print` peut imprimer une liste. 
+```{codeplay}
+print(fruits)
+````
+
+**Exercice** : Ajoutez un élément à la liste `fruits`. Ajoutez une deuxième liste `prix` avec des éléments numériques.
 
 ## La fonction `list`
 
@@ -42,7 +51,7 @@ fruits = ['banane', 'pomme', 'orange']
 print(fruits[0])
 ```
 
-**Exercice**: Essayez d'accéder aux éléments `fruits[2]` et `fruits[3]`.
+**Exercice** : Essayez d'accéder aux éléments `fruits[2]` et `fruits[3]`.
 
 ```{codeplay}
 m = list('Monty Python')
@@ -50,7 +59,7 @@ print(m[0])
 print(m[4])
 ```
 
-Un index négatif désigne un élément d'une liste depuis la fin de la liste.
+Un index négatif désigne un élément d'une liste pris depuis la fin de la liste.
 
 ```{codeplay}
 m = list('Monty Python')
@@ -60,9 +69,10 @@ print(m[-2])
 
 ## Tranche
 
-La notation `[i:j]`, après le nom d'une variable qui contient une liste, permet d'extraire une tranche (un sous-séquence) de la liste telle qu'identifiée par les deux index `i` et `j`. 
 
-L'expression suivante extrait la sous-liste du 3e au 5e élément</span><!-- REVIEW/JPP: ceci est tellement bizarre pour qui le lit la première fois que ça mérite une explication sur comment ces index sont traités -->.
+La notation `[i:j]`, après le nom d'une variable qui contient une liste, permet d'extraire une tranche de la liste, c'est à dire une partie de la liste telle qu'identifiée par ses bornes, les deux index `i` et `j`.
+
+L'expression suivante extrait la sous-liste du 3e au 5e élément.
 
 ```{codeplay}
 m = list('Monty Python')
@@ -78,7 +88,7 @@ print(m[:4])
 print(m[8:])
 ```
 
-Ceci extrait les éléments à partir de l'avant-dernier, jusqu'à la fin.
+Ici on extrait les éléments à partir de l'avant-dernier, jusqu'à la fin.
 
 ```{codeplay}
 m = list('Monty Python')
@@ -87,7 +97,7 @@ print(m[-2:])
 
 ## Itération sur une liste
 
-La boucle `for` peut itérer sur les éléments d’une une liste. La variable d’itération prend successivement la valeur de chaque élément de la liste.
+La boucle `for` peut itérer sur les éléments d’une liste. La variable d’itération prend successivement la valeur de chaque élément de la liste.
 La pratique est d'utiliser pour la liste un nom de variable au pluriel (fruits) et pour l'itérateur le même nom au singulier (fruit).
 
 ```{codeplay}
@@ -98,7 +108,7 @@ for fruit in fruits:
 
 ## Concaténation
 
-L'opérateur `+` permet de concatener (enchainer) deux listes.
+L'opérateur `+` permet de concaténer (mettre bout à bout) deux listes.
 
 ```{codeplay}
 fruits = ['banane', 'pomme', 'orange'] + ['ananas']
@@ -114,16 +124,15 @@ print(fruits)
 ```
 ## Ajouter des éléments
 
-Une **méthode** fonctionne comme une fonction, mais est rattachée à une liste avec la notation doté (`.`). 
-Par exemple si `a` designe une liste, on peux ajouter un élément à cette liste avec l'expression `a.append(x)`. 
+Une **méthode** fonctionne comme une fonction, mais est rattachée à une liste avec la notation (`.`). 
+Par exemple si `a` désigne une liste, on peux ajouter un élément `x` à la fin de cette liste avec l'expression `a.append(x)`. 
 
-Ces 3 méthodes différentes permettent d’ajouter des éléments à une liste existante:
+Ces trois méthodes différentes permettent d’ajouter des éléments à une liste existante :
 
-- `append(x)`
-- `extend(iterable)`
-- `insert(i, x)`
+- `append(x)`,
+- `extend(iterable)`,
+- `insert(i, x)`.
 
-La méthode `append(x)` permet d'ajouter un élément `x` à la fin de la liste.
 
 ```{codeplay}
 a = [1, 2, 3]
@@ -131,7 +140,7 @@ a.append(99)
 print(a)
 ```
 
-La méthode `extend(itérable)` ajoute plusieurs éléments. Un itérable est une séquence telle que liste, chaîne de texte, ensemble, tuple, ...
+La méthode `extend(itérable)` ajoute plusieurs éléments. Un *itérable* est une séquence telle qu'une liste, une chaîne de caractères (texte), un ensemble, un tuple, ..., c'est à dire un objet pour lequel on peut itérer sur les objets élémentaires le constituant. 
 
 ```{codeplay}
 a = [1, 2, 3]
@@ -140,7 +149,7 @@ a.extend('abc')
 print(a)
 ```
 
-La méthode `insert(i, x)` insert un nouveau élément `x` à la i<sup>e</sup> position.
+La méthode `insert(i, x)` insère un nouvel élément `x` à la i<sup>ème</sup> position.
 
 ```{codeplay}
 a = [1, 2, 3]
@@ -152,9 +161,9 @@ print(a)
 
 Les méthodes suivantes permettent d'enlever des éléments à une liste.
 
-- `remove(x)`
-- `pop(i)`
-- `clear()`
+- `remove(x)`,
+- `pop(i)`,
+- `clear()`.
 
 La méthode `remove(x)` enlève l'élément `x` s'il existe, et donne une erreur autrement.
 
@@ -172,7 +181,7 @@ a.pop()
 print(a)
 ```
 
-La méthode `pop(i)` enlève le i<sup>e</sup> élément.
+La méthode `pop(i)` enlève le i<sup>ème</sup> élément.
 
 ```{codeplay}
 a = [1, 2, 3, 4]
@@ -190,10 +199,10 @@ print(a)
 
 ## Opérations
 
-Les listes disposent aussi de méthodes pour trier et inverser ses éléments et pour compter un élément spécifique.
+Les listes disposent aussi de méthodes pour trier et inverser leurs éléments et pour compter un élément spécifique.
 
-La méthode `sort()` trie la liste. 
-Cette méthode fonctionne uniquement si tous les éléments sont du même type (nombre, texte) et peuvent être comparés. 
+La méthode `sort()` trie la liste dans l'ordre croissant (pour les caractères, on se réfère au code ASCII ou UTF utilisé). 
+Cette méthode fonctionne uniquement si tous les éléments sont évidemment du même type (nombre, texte) et peuvent être comparés. 
 
 ```{codeplay}
 m = list('Python')
@@ -201,7 +210,7 @@ m.sort()
 print(m)
 ```
 
-La fonction `reverse()` inverse la liste.
+La fonction `reverse()` inverse l'ordre de la liste.
 
 ```{codeplay}
 m = list('Python')
@@ -214,35 +223,6 @@ La fonction `count(x)` compte le nombre d'occurences de l'élément `x`.
 ```{codeplay}
 m = list('Monty Python')
 print(m.count('y'))
-```
-
-## <span commented>La pile (LIFO)</span><!-- REVIEW/JPP: je pense qu'on a besoin de faire maintenant pas mal d'exercices sur les listes avant de pouvoir comprendre le reste. Je ne trouve pas super clair dans la présentation actuelle le parallèle entre list et stack. On vient d'apprendre à manier des listes en Python avec leurs primitives, bien; mais maintenant, on a l'impression qu'on va aprrendre d'autres structures de données (pile et tampon) et on ne sait pas si c'est différent des listes ou pas. Il faudrait que ce soit vraiment clair, et que les exemples sont plus concrets, parce que ces valeurs numériques ne veulent pas dire grand-chose ou ne représente pas un problème ou une situation de la vie réelle. Pour moi, on n'a simplement pas besoin de parler de stack ou queue ici, mais on peut mettre en pratique des listes dans des exercices où elles ont ce genre de fonctionnement -->
-
-Une **pile** est une structure de données qui permet de gérer un <span commented>ensemble</span><!-- REVIEW/JPP: pas un ensemble; une séquence, voire une série si on veut être un peu plus souple avec les termes --> d'éléments et leur arrivée et départ dans le temps. Dans une pile le dernier élément arrivé est le premier à partir.
-
-Cette structure s'appelle **stack** en anglais ou **LIFO** (last in first out)
-
-```{codeplay}
-pile = [3, 1]
-pile.append(4)
-pile.append(1)
-print(pile)
-pile.pop()
-print(pile)
-```
-
-## Le tampon (FIFO)
-
-Le **tampon** (ou le file d'attente) est une structure de données qui permet de gérer des éléments et leur arrivée et départ. Dans une file d'attente, le premier élément arrivé est le premier à partir.
-
-Cette structure s'appele **buffer** en anglais ou **FIFO** (first in first out)
-
-```{codeplay}
-tampon = ['h', 'a']
-tampon.append('m')
-print(tampon)
-pop(0)
-print(tampon)
 ```
 
 ## Vecteurs
@@ -294,9 +274,10 @@ print(s)
 ```
 
 ## Compréhension de liste
-Une **compréhension de liste** est une manière compacte de construire des listes sur une seule ligne.
+Une **compréhension de liste** est une spécificité «élégante» du langage Python qui permet de construire de manière compacte des listes sur une seule ligne.
 
-Voici un exemple de construction «traditionnelle» d'une liste où on ajoute un élément après l'autre avec une boucle:
+Voici un exemple de construction «traditionnelle» d'une liste où on ajoute un élément après l'autre avec une boucle :
+
 
 ```{codeplay}
 cubes = []
@@ -305,14 +286,16 @@ for i in range(10):
 print(cubes)
 ```
 
-En utilisant les compréhension des listes, on peut construire la même liste sur une seule ligne:<!-- REVIEW/JPP: à mon avis, il faut davantage commenter et expliquer ceci, notamment comment la lire et l'interpréter -->
+En utilisant la compréhension de liste, on peut construire la même liste sur une seule ligne :
 
 ```{codeplay}
 cubes = [i ** 3 for i in range(10)]
 print(cubes)
 ```
 
-Une condition peut être ajoutée dans la <span commented>compréhension</span><!-- REVIEW/JPP: oui mais le prochain exemple n'est pas une compréhension de liste, c'est confusing --> (par exemple, pour n'ajouter à la liste que les <span commented>valeurs impaires</span><!-- REVIEW/JPP: le test ' % 2 == 1' va sûrement poser bcp de questions si pas expliqué... je ne sais plus si on a parlé de l'opérateur %-->):
+On peut comprendre cette formulation de la manière suivante : *«la liste cubes indicée par i prend la valeur i<sup>3</sup> pour toutes les valeurs de i de 0 à 9.»*
+
+Une condition peut être ajoutée dans la compréhension (par exemple, pour n'ajouter à la liste que les valeurs impaires) :
 
 ```{codeplay}
 a = []
@@ -321,6 +304,7 @@ for i in range(10):
         a.append(i ** 2)
 print(a)
 ```
+*Note : l'opérateur % est l'opérateur modulo, c'est à dire renvoie le reste de la division par 2.*
 
 Nous pouvons alors écrire la formation de cette liste en une seule ligne.
 
@@ -328,3 +312,61 @@ Nous pouvons alors écrire la formation de cette liste en une seule ligne.
 a = [i**2 for i in range(10) if i % 2 == 1]
 print(a)
 ```
+
+## <span commented>La pile (LIFO)</span><!-- REVIEW/JPP: je pense qu'on a besoin de faire maintenant pas mal d'exercices sur les listes avant de pouvoir comprendre le reste. Je ne trouve pas super clair dans la présentation actuelle le parallèle entre list et stack. On vient d'apprendre à manier des listes en Python avec leurs primitives, bien; mais maintenant, on a l'impression qu'on va aprrendre d'autres structures de données (pile et tampon) et on ne sait pas si c'est différent des listes ou pas. Il faudrait que ce soit vraiment clair, et que les exemples sont plus concrets, parce que ces valeurs numériques ne veulent pas dire grand-chose ou ne représente pas un problème ou une situation de la vie réelle. Pour moi, on n'a simplement pas besoin de parler de stack ou queue ici, mais on peut mettre en pratique des listes dans des exercices où elles ont ce genre de fonctionnement -->
+
+Une **pile** est une structure de données qui permet de gérer un <span commented>ensemble</span><!-- REVIEW/JPP: pas un ensemble; une séquence, voire une série si on veut être un peu plus souple avec les termes --> d'éléments et leur arrivée et départ dans le temps. Dans une pile le dernier élément arrivé est le premier à partir.
+
+Cette structure s'appelle **stack** en anglais ou **LIFO** (last in first out)
+
+```{codeplay}
+pile = [3, 1]
+pile.append(4)
+pile.append(1)
+print(pile)
+pile.pop()
+print(pile)
+```
+
+## Le tampon (FIFO)
+
+Le **tampon** (ou file d'attente) est une structure de données qui permet de gérer des éléments et leur arrivée et départ. Dans une file d'attente, le premier élément arrivé est le premier à partir.
+
+Cette structure s'appele **buffer** en anglais ou **FIFO** (first in first out)
+
+```{codeplay}
+tampon = ['h', 'a']
+tampon.append('m')
+print(tampon)
+pop(0)
+print(tampon)
+```
+
+
+````{admonition} Exercice 1 : ???
+:class: note
+......
+```` 
+
+````{admonition} Exercice 2 : ???
+:class: note
+......
+```` 
+
+````{admonition} Exercice 3 : ???
+:class: note
+......
+````
+
+````{admonition} Exercice 4 : ???
+:class: note
+......
+```` 
+
+````{admonition} Exercice 5 : ???
+:class: note
+......
+```` 
+
+ 
+

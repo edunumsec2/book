@@ -228,5 +228,5 @@ Que signifie informatique ?
 * {f}`Information + pratique`
 ```
 
- -->
+
 

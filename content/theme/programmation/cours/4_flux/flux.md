@@ -1,20 +1,4 @@
-<<<<<<< Updated upstream
-# Structures de contrôle
-=======
----
-jupytext:
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.10.3
-kernelspec:
-  display_name: Python 3.9.0 64-bit
-  name: python3
----
-
 # 3. Structures de contrôle
->>>>>>> Stashed changes
 
 Jusqu'à présent un programme était envisagé comme une **séquence linéaire**.
 Les instructions s'exécutaient :
@@ -98,28 +82,13 @@ Le résultat d'une comparaison est une valeur qui est soit vraie, soit fausse. C
 
 Voici quelques exemples :
 
-<<<<<<< Updated upstream
+
 ```{codeplay}
 a = 3
 print(a > 2)
 print(a < 2)
 print(a != 2)
 ```
-=======
-2 > 3
-
-2 < 3
-
-2 != 3
-
-On peut aussi comparer des chaînes de caractères. C'est l'ordre alphabétique qui détermine le résultat.
-
-'antilope' < 'zèbre'
-
-L'ordre des mots est celui utilisé dans les dictionnaires.
-
-'art' < 'artiste'
->>>>>>> Stashed changes
 
 **Note** :
 ne pas confondre l'opérateur d'_affectation_ (`=`) avec l'opérateur de _comparaison_ (`==`).
@@ -134,7 +103,7 @@ print(a == 2)   # comparaison
 
 L'instruction `if` permet d'exécuter un bloc si une condition est vraie, sinon le programme suit son cours sans exécuter ce bloc.
 
-L'exemple suivant affiche `majeur` si l'âge est plus grand ou égale à 18.
+L'exemple suivant affiche `majeur` si l'âge est plus grand ou égal à 18.
 
 ```{codeplay}
 age = 21
@@ -146,7 +115,7 @@ if age >= 18:
 ## L'instruction if...else
 
 L'instruction `if...else` permet de choisir entre deux blocs selon une condition.
-Si la condition est vraie, le bloc **if** est exécuté; sinon, le bloc **else** est exécuté.
+Si la condition est vraie, le bloc **if** est exécuté ; sinon, le bloc **else** est exécuté.
 
 ```{codeplay}
 note = 4.5
@@ -159,7 +128,7 @@ else:
 
 ## L'instruction if...elif...else
 
-L'instruction `if...elif...else` permet d'exécuter un bloc d'instruction si une condition est vraie. Si la première condition n'est pas remplie, une autre est testée.
+L'instruction `if...elif...else` permet d'exécuter un bloc d'instructions si une condition est vraie. Si la première condition n'est pas remplie, une autre est testée.
 
 ```{codeplay}
 n = -3
@@ -177,8 +146,8 @@ else:
 
 Les opérateurs logiques permettent de combiner deux valeurs logiques.
 
-- et logique (`and`)
-- ou logique (`or`)
+- et logique (`and`),
+- ou logique (`or`).
 
 Pour tester si un nombre x est dans l'intervalle (a, b) il faut combiner deux comparaisons avec une opération logique.
 
@@ -195,10 +164,10 @@ if (x < a) or (b < x):
     print(x, "est dehors l'interval (", a, '...', b, ')')
 ```
 
-L'opérateur `not` inverse de la valeur logique.
+L'opérateur `not` inverse la valeur logique.
 
-- `True` devient `False`
-- `False` devient `True`
+- `True` devient `False`,
+- `False` devient `True`.
 
 Une double inversion revient à l'identité.
 
@@ -215,21 +184,22 @@ print('not not p =', not not p)
 ## La boucle for
 
 Le boucle `for` permet d'itérer sur un ensemble de valeurs.
-Par exemple une chaine de texte est un ensemble de caractères.
+Le mot **itérer** signifie parcourir l'ensemble et assumer une valeur particulière à chaque fois,
+en passant dans l'ordre, de la première à la dernière valeur.
 
-Le mot **itérer** veut dire de parcourir l'ensemble et assumer une valeur particulière à chaque tour,
-en passant dans l'ordre, de la première valeur à la dernière.
+Une chaine de caractères étant un ensemble de caractères, on va pouvoir "itérer" sur un texte par exemple.
 
-Dans l'exemple suivant nous itérons à travers la chaine `'hello'`
+
+Dans l'exemple suivant on itère à travers la chaine `'hello'`.
 
 ```{codeplay}
 for c in 'hello':
     print(c)
 ````
 
-Nous pouvons aussi itérer sur une plage numérique.
+On peut aussi itérer sur une plage numérique.
 L'expression `range(a, b)` exprime la plage numérique allant de `a` à `b-1`.
-Dans notre cas nous itérons de 3 à 9.
+Ici, on itère de 3 à 9.
 
 ```{codeplay}
 
@@ -237,7 +207,7 @@ for i in range(3, 10):
     print(i)
 ```
 
-Nous pouvons faire des calculs avec chaque valeur de la boucle.
+On peut faire des calculs avec chaque valeur de la boucle.
 
 ```{codeplay}
 for i in range(1, 10):
@@ -248,8 +218,8 @@ for i in range(1, 10):
 
 La boucle `while` exécute un bloc tant qu'une condition est vraie.
 
-Nous pouvons l'utiliser pour créer un compteur à rebours.
-Pour faire l'attente d'une seconde nous importons la fonction `sleep()` du module `time`.
+On peut l'utiliser pour créer un compteur à rebours.
+Pour l'attente d'une seconde la fonction `sleep()` du module `time` est importée.
 
 ```{codeplay}
 from time import sleep
@@ -263,8 +233,8 @@ while n > 0:
 print('boum!!!')
 ```
 
-Nous pouvons aussi utiliser pour deviner un nombre.
-Ici nous importons la fonction `randint()` du module `random`.
+On peut aussi l'utiliser pour deviner un nombre.
+Ici on importe la fonction `randint()` du module `random`.
 Elle fournit un nombre entier aléatoire entre deux bornes (1, 99).
 
 La fonction `input()` ne retourne que le type `string`.
@@ -290,34 +260,40 @@ print()
 print('Bravo. Vous avez réussi')
 ```
 
-## Exercices
-
-## Exercice 1 - intervalle
+````{admonition} Exercice 1 : intervalle
+:class: note
 
 Vérifiez si une variable `x` contient une valeur qui est entre deux bornes [a, b].
+````
 
-## Exercice 2 - question
+````{admonition} Exercice 2 : question
+:class: note
 
 Faites un programme qui pose une question simple à l'utilisateur. Si sa réponse est juste, affichez `Bravo`.
+````
 
-## Exercice 3 - age
+````{admonition} Exercice 3 : âge
+:class: note
 
 Faites un programme qui demande à l'utilisateur son âge.
-Si l'âge est supérieur ou égal à 18, le programme doit afficher: "Vous êtes majeur, vous pouvez voter" et si l'âge est inférieur à 18, le programme doit afficher: "Vous êtes mineur, vous pourrez voter dans (*calcul de la différence*) année(s)"
+Si l'âge est supérieur ou égal à 18, le programme doit afficher : «Vous êtes majeur, vous pouvez voter» et si l'âge est inférieur à 18, le programme doit afficher: «Vous êtes mineur, vous pourrez voter dans (*calcul de la différence*) année(s).»
+```` 
 
-## Exercice 4 - jeu
+````{admonition} Exercice 4 : jeu
+:class: note
 
 Faites un programme qui demande à l'utilisateur d'entrer un chiffre entre 0 et 2.
-Si l'utilisateur choisit
+Si l'utilisateur choisit :
 
-- 0: affichez **Caillou**
-- 1: affichez **Feuille**
-- 2: affichez **Ciseaux**.
+- 0 : affichez **Caillou**,
+- 1 : affichez **Feuille**,
+- 2 : affichez **Ciseaux**.
+```` 
 
-## Exercice 5 - carré
+````{admonition} Exercice 5 : carré
+:class: note
 
-Faites un programme qui affiche un carré de longueur `n` avec le caractère `'x'`.
-Mais vide à l'intérieur
+Faites un programme qui affiche un carré de longueur `n` avec le caractère `'x'`, mais vide à l'intérieur.
 
 ```{codeplay}
 n = int(input('Entrez n: '))
@@ -325,12 +301,18 @@ n = int(input('Entrez n: '))
 for i in range(n):
     print('x' * n) 
 ```
+```` 
 
-## Exercice 6 - triangle
+````{admonition} Exercice 6 : triangle
+:class: note
 
 Faites un programme qui affiche un triangle de hauteur `n` avec des `x`.
+````
 
-## Exercice 7 - rectangle
+````{admonition} Exercice 7 : rectangle
+:class: note
 
-Faites un programme qui affiche une boite de hauteur `a` et longueur `b` avec des `x`.
+Faites un programme qui affiche une boite de hauteur `a` et de longueur `b` avec des `x`.
 L'intérieur de la boite doit rester vide.
+```` 
+

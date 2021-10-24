@@ -16,11 +16,7 @@ Voilà un déroulé de cours pour cette section représentation des images :
 
 ## Les images matricielles
 
-<<<<<<< Updated upstream
 Depuis des siècles les humains gardent des traces de leur environnement sous forme d'images. Plus le temps passe, plus ces traces sont fidèles. On découvre par exemple la perspective autour du XV<sup>e</sup> siècle, les progrès en optique et en chimie permettent ensuite la création de la camera obscura et de la photographie argentique. Enfin l'informatique se développe permettant l'invention de la photographie numérique.
-=======
-Depuis des siècles les humains gardent des traces de leur environnement sous forme d'images. Plus le temps passe, plus ces traces sont fidèles. On découvre par exemple la perspective autour du 15ème siècle, les progrès en optique et en chimie permettent ensuite la création de la camera *obscura* et de la photographie argentique. Enfin l'informatique se développe permettant l'invention de la photographie numérique.
->>>>>>> Stashed changes
 
 ```{figure} media/camera_obscura.jpg
 ---
@@ -379,6 +375,38 @@ Identifiez et listez les avantages et les inconvénients du format vectoriel en 
 Une œuvre d'art numérique signée Andreas Gysin : 
 
 https://play.ertdfgcvb.xyz/#/src/demos/doom_flame_full_color
+
+
+````{admonition} Exercice 1 : ???
+:class: note
+
+......
+
+````
+````{admonition} Exercice 2 : ???
+:class: note
+
+......
+
+````
+````{admonition} Exercice 3 : ???
+:class: note
+
+......
+
+````
+````{admonition} Exercice 4 : ???
+:class: note
+
+......
+
+````
+````{admonition} Exercice 5 : ???
+:class: note
+
+......
+
+````
 
 <!-- ## Auto-contrôle
 

@@ -875,3 +875,35 @@ des données
 en contribuant
 à leur **intégrité** et
 à leur **disponibilité**.
+
+
+````{admonition} Exercice 1 : ???
+:class: note
+
+......
+
+````
+````{admonition} Exercice 2 : ???
+:class: note
+
+......
+
+````
+````{admonition} Exercice 3 : ???
+:class: note
+
+......
+
+````
+````{admonition} Exercice 4 : ???
+:class: note
+
+......
+
+````
+````{admonition} Exercice 5 : ???
+:class: note
+
+......
+
+````

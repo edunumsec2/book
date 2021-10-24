@@ -1,16 +1,14 @@
-<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
-
 # 3. Solutions heuristiques
 
 
 ````{admonition} Matière à réfléchir VI
 :class: attention
 
-Vous avez décidé de faire le tour du monde. Choisissez 5 pays que vous souhaitez visiter et placez-les sur une carte. Essayez de trouver le meilleur itinéraire pour visiter ces 5 pays. Quels critères avez-vous pris en compte pour décider du meilleur itinéraire, c’est-à-dire un itinéraire qui minimise la distance parcourue ?
+Vous avez décidé de faire le tour du monde. Choisissez cinq pays que vous souhaitez visiter et placez-les sur une carte. Essayez de trouver le meilleur itinéraire pour visiter ces cinq pays. Quels critères avez-vous pris en compte pour décider du meilleur itinéraire, c’est-à-dire un itinéraire qui minimise la distance parcourue ?
 
-Vous avez décidé de visiter 10 pays. Est-ce qu’il est aussi facile de trouver un itinéraire optimal ?
+Vous avez décidé de visiter dix pays. Est-ce qu’il est aussi facile de trouver un itinéraire optimal ?
 
-Imaginez que vous souhaitez visiter plus de la moitié des pays du monde, environ 100. Combien y a-t‑il d’itinéraires possibles ?  Comment s’appelle ce nombre ?
+Imaginez que vous souhaitez visiter plus de la moitié des pays du monde, environ cent. Combien y a-t‑il d’itinéraires possibles ?  Comment s’appelle ce nombre ?
 
 Si le calcul d’un itinéraire prenait 1 milliseconde, combien de temps faudrait-il pour trouver la meilleure solution en énumérant toutes les solutions possibles ? Pour comparaison, le nombre d’atomes dans l’univers est d’ordre 10<sup>80</sup>.
 
@@ -47,17 +45,14 @@ Une solution heuristique pour le problème du sac à dos serait la solution suiv
 Il n’y a pas que des {glo}`heuristique|heuristiques` gloutonnes. Il existe d’autres types d’{glo}`heuristique|heuristiques`, plus lentes, mais qui permettent de s’approcher davantage de la solution optimale. Il existe des stratégies de résolution statistiques, génétiques, neuronales, parmi d’autres. La majorité des problèmes que l’on tente de résoudre aujourd’hui sont difficiles et les solutions de leurs {glo}`algo|algorithmes` ne donnent pas la meilleure solution. 
 
 
-
-## Exercices
-
-```{admonition} Exercice 17
+```{admonition} Exercice 1
 :class: note
 
 L’âge estimé de l’univers est de 14 milliards d’années. Si le calcul d’une combinaison d’objets dans le problème du sac à dos prenait une microseconde, pour quel nombre d’objets il est possible de trouver une solution exacte sans dépasser l’âge de l’univers ?
 
 ```
 
-````{admonition} Solution de l'exercice 17
+````{admonition} Solution
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -73,7 +68,7 @@ n = log<sub>2</sub>(1.4*10<sup>10</sup> / 10<sup>-6</sup>) = log<sub>2</sub>(1.4
 ````
 
 
-```{admonition} Exercice 18
+```{admonition} Exercice 2
 :class: note
 
 Quelle est la complexité d’un algorithme qui doit parcourir un tableau 2 fois, pour chacun de ses éléments (au lieu de 1 fois comme pour le tri par sélection) ?
@@ -81,7 +76,7 @@ Quelle est la complexité d’un algorithme qui doit parcourir un tableau 2 fois
 ```
 
 
-````{admonition} Solution de l'exercice 18
+````{admonition} Solution
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>

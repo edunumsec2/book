@@ -4,13 +4,13 @@ Algorithmique I
 
 <!-- Quand on cherche ses clés, on commence par fouiller ses poches. Si elles n'y sont pas, on va regarder en surface dans plusieurs pièces de la maison, pour voir si elles ne traîneraient pas quelque part. Si on ne les trouve toujours pas, on finit par refaire le même chemin en boucle, mais en cherchant toujours plus profond dans nos poches, dans nos vestes, dans nos tiroirs, et ainsi de suite jusqu'à les trouver. Pourquoi ne pas avoir commencé par fouiller à fond le premier tiroir rencontré ? Pourquoi ne pas s'être restreint dès le début à ne chercher que dans une pièce mais en soulevant le moindre objet pour voir si elles n'étaient pas dessus ? 
 
-Parce que, grâce à l'habitude, on sait que la meilleure stratégie, c'est à dire celle qui a fait que l'on trouve ses clés la plupart du temps, est celle que l'on a utilisé. 
+Parce que, grâce à l'habitude, on sait que la meilleure stratégie, c'est à dire celle qui a fait que l'on trouve ses clés la plupart du temps, est celle que l'on a utilisée. 
 
 Cette stratégie, en informatique, ressemble à peu de choses près à un algorithme nommé [algorithme de parcours en profondeur itératif](https://en.wikipedia.org/wiki/Iterative_deepening_depth-first_search). Derrière ce nom se cache un principe simple. Dans l'exemple des clés ce serait : commencer par fouiller une pièce, en se limitant dans la profondeur de la recherche, puis changer de pièce, et réitérer ce schéma en allant de plus en plus profond dans les tiroirs et les poches.  -->
 
-Nous avons tous entendu parler DES ALGORITHMES. Ils sont partout et font toutes sortes de choses... Mais, c'est quoi en fait un algorithme ? Comment ça marche ? Et comment faire la différence entre un bon et un mauvais algorithme ? Nous tenterons ici de répondre à toutes ces questions.
+Le terme d'algorithme s'est progressivement diffusé dans toutes les facettes de la société actuelle, pour dépasser le cadre de l'utilisation par les seuls experts en informatique. Ils sont partout, de la plus petite application pour smartphone au système d'intelligence artificielle le plus complexe et ont largement investi la sphère médiatique et nos espaces de communication. Ils font toutes sortes de choses... Mais, qu'est ce qu'un algorithme réellement ? Comment ça marche ? Comment faire la différence entre un bon et un mauvais algorithme ? Quelles sont ses spécificités, ses caractéristiques ? Tant de questions qui tenteront de s'éclaircir au cours des chapitres qui suivent.
 
-Bienvenue dans le monde fascinant des algorithmes. 
+Bienvenue dans le monde fascinant des algorithmes...
 
 ## Contenu de la thématique
 
