@@ -84,13 +84,13 @@ Afin de faire la lumière sur les impacts, les forces et les faiblesses de l’i
 
 <br>
 
-Trouver une définition générale de l’IA est un exercice difficile car il s’agit en fait d’un ensemble de technologies particulières. Dans le domaine scientifique, on différencie principalement deux approches historiques avec d’un côté l’IA symbolique qui vise à reproduire le raisonnement humain et l’intégrer à des machines. C’est sur ce principe que sont basés les **systèmes experts**. De l’autre, l’IA connexionniste est un sous-ensemble de techniques qui apprend à partir des grands volumes de données. Elle comprend l’**apprentissage machine** ou ***machine learning*** et l’**apprentissage profond** ou ***deep learning***. Cette dernière se base sur des modèles de **réseaux de neurones**, superposés en plusieurs couches pour permettre l’établissement de règles complexes. 
+Trouver une définition générale de l’IA est un exercice difficile car il s’agit en fait d’un ensemble de technologies particulières. Dans le domaine scientifique, on différencie principalement deux approches historiques avec d’un côté l’IA symbolique qui vise à reproduire le raisonnement humain et l’intégrer à des machines. C’est sur ce principe que sont basés les **systèmes experts**. De l’autre, l’IA connexionniste est un sous-ensemble de techniques qui apprend à partir des grands volumes de données. Elle comprend l’**apprentissage automatique** ou ***machine learning*** et l’**apprentissage profond** ou ***deep learning***. Cette dernière se base sur des modèles de **réseaux de neurones**, superposés en plusieurs couches pour permettre l’établissement de règles complexes. 
 
 
 **L'IA - Entre science et fiction**
 <br>
 
-Historiquement, les premières références à une forme d’intelligence artificielle apparaissent dans la littérature. L’un des premiers exemples est le roman « Frankenstein » de Mary Shelley (1818). Plus tard, la science-fiction en fera un thème central et récurrent, des premiers robots rebelles de la pièce R.U.R. (Čapek, 1920) à la voix de *Her* du film homonyme (Spike Jonze, 2013). L’impact des histoires et des images issus de la science-fiction sont perceptibles dans certaines représentations, fantasmes et inquiétudes suscitées par l’IA. Mais les récits fictifs qui mobilisent diverses formes d’IA n’ont pas la prétention de prédire l’avenir. Leur lecture permet surtout d’identifier des problématiques centrales concernant les aspects juridiques et philosophiques autours de l’IA. Aujourd’hui, les avancées techniques et technologiques appellent à répondre concrètement à certaines questions longtemps restreintes au monde de la fiction. Dans quelles situations fait-on et peut-on faire appel à l’IA ? Quelles tâches et prises de décision peuvent être déléguées aux machines et en quelles proportions ? Qui est responsable en cas de problème généré par une machine ?
+Historiquement, les premières références à une forme d’intelligence artificielle apparaissent dans la littérature. L’un des premiers exemples est le roman « Frankenstein » de Mary Shelley (1818). Plus tard, la science-fiction en fera un thème central et récurrent, des premiers robots rebelles de la pièce R.U.R. (Čapek, 1920) à la voix de *Her* du film homonyme (Spike Jonze, 2013). L’impact des histoires et des images issus de la science-fiction sont perceptibles dans certaines représentations, fantasmes et inquiétudes suscitées par l’IA. Mais les récits fictifs qui mobilisent diverses formes d’IA n’ont pas la prétention de prédire l’avenir. Leur lecture permet surtout d’identifier des problématiques centrales concernant les aspects juridiques et philosophiques autours de l’IA. Aujourd’hui, les avancées techniques et technologiques amènent à réfléchir à certaines questions longtemps restreintes au monde de la fiction. Dans quelles situations fait-on et peut-on faire appel à l’IA ? Quelles tâches et prises de décision peuvent être déléguées aux machines et en quelles proportions ? Qui est responsable en cas de problème généré par une machine ?
 <br>
 
 **Héritage de la cybernétique**
@@ -107,7 +107,7 @@ Dans une approche symbolique de l’intelligence artificielle le mathématicien 
 
 Le jeu de l’imitation est avant tout un exemple théorique. La puissance des machines des années 1950 ne permet pas d’envisager l’assimilation des questions et encore moins la formulation de réponses adaptées. Aujourd’hui, les agents conversationnels ou ***chat bots*** sont ce qui se rapprochent le plus de l’ordinateur du jeu de l’imitation. Leurs performances actuelles demeurent relativement faibles et sont encore loin de créer la confusion pour les utilisateurs. 
 
-Au-delà de la pertinence du jeu de l’imitation, sa conceptualisation permet de comprendre comment Turing concevait la pensée. Pour lui, elle est faite de capacités cognitives, c’est-à-dire d'un ensemble de facultés qui permettent d’apprendre, d’organiser et d’utiliser les connaissances. En considérant que la pensée peut être réduite à un ensemble de facultés définies (entre autres la perception, la mémoire et le langage), il devient également possible d’envisager de les reproduire de manière artificielle. C’est sur ce principe, inspiré de la cybernétique, que se baseront les premières recherches dans le domaine, quelques années plus tard. Cette approche très rationnelle de la pensée permet de placer l’intelligence humaine et l’intelligence artificielle au même niveau afin de les mettre en opposition. Le rapport de force entre l'être humain et la machine instauré par Turing aura une influence certaine dans l'histoire. Cette opposition servira de point de repère pour évaluer l'efficacité des systèmes d'IA face à l'intelligence humaine. 
+Au-delà de la pertinence du jeu de l’imitation, sa conceptualisation permet de comprendre comment Turing concevait la pensée. Pour lui, elle est faite de capacités cognitives, c’est-à-dire d'un ensemble de facultés qui permettent d’apprendre, d’organiser et d’utiliser les connaissances. En considérant que la pensée peut être réduite à un ensemble de facultés définies (entre autres la perception, la mémoire et le langage), il devient également possible d’envisager de les reproduire de manière artificielle. C’est sur ce principe, inspiré de la cybernétique, que se baseront les premières recherches dans le domaine, quelques années plus tard. Cette approche très rationnelle de la pensée permet de placer l’intelligence humaine et l’intelligence artificielle au même niveau afin de les mettre en opposition. Le rapport de force entre l'être humain et la machine instauré par Turing exercera une influence certaine dans l'histoire. Cette opposition servira de point de repère pour évaluer l'efficacité des systèmes d'IA face à l'intelligence humaine. 
 
 **Création d’un domaine scientifique**
 
@@ -142,11 +142,12 @@ Ces prouesses techniques montrent que l’IA est, dans certaines situations bien
 
 <br>
 
-**Domaines d'application de l'IA**
+**Domaines d'application**
 
-L'IA 
+Quelles tâches et prises de décision sont déléguées aux IA?
+
+
 Sciences
-
 
 Pratiques numériques
 
@@ -156,6 +157,8 @@ Public/privé
 
 **Nouvelles technologies, anciens problèmes**
 
+Les biais discriminatoires, le remplacement de la force de travail des humains 
+
 Question des voitures autonomes
 
 Les biais de représentation causés par les données
@@ -164,9 +167,9 @@ Les biais de représentation causés par les données
 
 **Gouvernance**
 
-À la suite des diverses controverses engendrées par les biais racistes des IA, certaines grandes entreprises comme Google, Microsoft ou IBM ont mis en place des comités d’éthique. Plusieurs projets en cours ont ainsi été suspendus ou abandonnés en raison du risque de perpétuer des pratiques discriminatoires. Il s’agit dans ce cas d’une forme de gouvernance interne aux entreprises et donc non contraignante. 
+À la suite des diverses controverses engendrées par les biais racistes des IA, certaines grandes entreprises comme Google, Microsoft ou IBM ont mis en place des comités d’éthique. Plusieurs projets en cours ont ainsi été suspendus ou abandonnés en raison du risque de perpétuer des pratiques discriminatoires. Il s’agit dans ce cas d’une forme de gouvernance interne aux entreprises qui n'est pas contraignante. 
 
-Une autre manière d’appréhender les risques liés à l’IA est de légiférer sur ses usages. Aux [États-Unis](https://www.ncsl.org/research/telecommunications-and-information-technology/2020-legislation-related-to-artificial-intelligence.aspx), leader mondial dans le domaine, seuls quatre états avaient adopté une forme de regulation relative à l'IA en 2021. En Europe, la Commission Européenne a proposé en avril 2021 « [un ensemble d’actions visant à stimuler l’excellence dans le domaine de l’IA, ainsi que des règles destinées à garantir la fiabilité de cette technologie](https://ec.europa.eu/france/news/20210421/nouvelles_regles_europeennes_intelligence_artificielle_fr) ». Afin d’estimer les risques que pourraient représenter l’IA pour les citoyens et citoyennes, la CE propose un classement qui détermine le niveau de régulation nécessaire pour chaque domaine. La catégorie « haut risque » comprend par exemple les logiciels de recrutement ou les prises de décision automatisées dans l’attribution d’un crédit, situations où les biais sont souvent présents. La situation est encore différente en Chine, où le gouvernement a publié un plan dans le but de devenir le leader mondial dans le domaine de l'IA d'ici 2030. 
+Une autre manière d’appréhender les risques liés à l’IA est de légiférer sur ses usages. Aux [États-Unis](https://www.ncsl.org/research/telecommunications-and-information-technology/2020-legislation-related-to-artificial-intelligence.aspx), leader mondial dans le domaine, seuls quatre états avaient adopté une forme de regulation relative à l'IA en 2021. En Europe, la Commission Européenne a proposé en avril 2021 « [un ensemble d’actions visant à stimuler l’excellence dans le domaine de l’IA, ainsi que des règles destinées à garantir la fiabilité de cette technologie](https://ec.europa.eu/france/news/20210421/nouvelles_regles_europeennes_intelligence_artificielle_fr) ». Afin d’estimer les risques que pourraient représenter l’IA pour les citoyens et citoyennes, la CE propose un classement qui détermine le niveau de régulation nécessaire pour chaque domaine. La catégorie « haut risque » comprend par exemple les logiciels de recrutement ou les prises de décision automatisées dans l’attribution d’un crédit, situations où les biais sont souvent présents. La situation est encore différente en Chine, où le gouvernement a publié un plan dans le but de devenir le leader mondial dans le domaine de l'IA d'ici 2030. Pour atteindre cet objectif, l'Etat n'entend  pas réguler l'IA mais encourage et soutient les srtat-ups et entrerpises impliquées dans le domaine. 
 
 Les perspectives de règlementation du numérique sont bien présentes en Europe, même s’il faudra vraisemblablement attendre encore quelques années avant l’entrée en vigueur de cet ensemble de lois. La course à l'IA entre les États-Unis et la Chine n'encourage pas une régulation contraignante des pratiques par le politique.
 
@@ -199,9 +202,29 @@ Jean-Gabriel Ganascia (2017), Le mythe de la Singularité. Faut-il craindre l’
 ### Glossaire
 
 * Système expert
-* Apprentissage machine 
+* Apprentissage automatique ou *machine learning*
 * Apprentissage profond ou *deep learning*
 * Réseaux de neurones
 * *Chatbot*
 
+
+<br>
+
+## Pistes pédagogiques 
+
+<br>
+
+<div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
+  <b>1. Le jeu de l'imitation 2021</b>
+</div>
+
+Objectif : Prendre conscience d
+es forces et des faiblesses d'un assistant vocal de type Siri ou Alexa
+
+Matériel: 
+* Un assistant vocal 
+* Une liste de [questions](https://www.aiunplugged.org/activity5-german.pdf) (En allemand pour l'instant)
+
+
+Par groupe de 3 trois, les élèves posent tour à tour les questions de la liste à un assistant vocal. 
 
