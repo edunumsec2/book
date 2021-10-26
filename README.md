@@ -49,7 +49,7 @@ Dans le cadre du projet pilote, nous vous saurions gré de suivre le protocole m
     - [Questionnaire de rentrée / enseignant·e](https://www.surveymonkey.com/r/s2enspre)
     - [Questionnaire post-thématique / élève](https://www.surveymonkey.com/r/s2elpostthem)
     - [Questionnaire post-thématique / enseignant·e](https://www.surveymonkey.com/r/s2enspostthem)
-    - [Questionnaire post thématique enjeux sociax / enseignant·e](https://www.surveymonkey.com/r/s2postensejs)
+    - [Questionnaire post thématique enjeux sociaux / enseignant·e](https://www.surveymonkey.com/r/s2postensejs)
 
 2. Ecrire à nathalie.farenc@epfl.ch pour la tenir informée du début et de la fin d'un cours donné sur l'un ou l'autre des sujets du Plan d'études.
 3. Signaler tout défaut éventuel des ressources à nathalie.farenc@epfl.ch ou directement à la personne en charge de la thématique en question, dont vous trouverez l'adresse sous [comité de rédaction](#comité-de-rédaction).
@@ -61,7 +61,7 @@ L'utilisation **avancée** des ressources comprend, en outre, les étapes suivan
 Après la phase **pilote**, les enseignant.es pourront en outre : 
 
 6. Proposer et rédiger des modifications via la création d'une [branche](https://github.com/edunumsec2/book/branches). 
-7. Forker le dépôt pour en faire un clône indépendant via le mécanisme de [fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo). 
+7. Forker le dépôt pour en faire un clone indépendant via le mécanisme de [fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo). 
 8. Utiliser l'environnement [Jupyter-book](#installation) pour tester ses améliorations en local sur sa propre machine. 
 
 ## Documents importants
@@ -75,7 +75,7 @@ Après la phase **pilote**, les enseignant.es pourront en outre :
 
 ## Chapitrage
 
-Les ressources sont découpées selon un chapitrage qui correspond au plan d'études romand (voir ci-dessus). Elles sont divisées en quatre parties, dont nulle n'a de préseance sur les autres. Il appartient à l'enseignante ou l'enseignant de choisir l'ordre dans lequel les contenus sont abordés. Le fait que les chapitres soient successifs est le résultat des limitations de l'affichage. Pour atténuer quelque peu ce problème nous avons choisi de renoncer à une numérotation des chapitres. 
+Les ressources sont découpées selon un chapitrage qui correspond au plan d'études romand (voir ci-dessus). Elles sont divisées en quatre parties, dont nulle n'a de préséance sur les autres. Il appartient à l'enseignante ou l'enseignant de choisir l'ordre dans lequel les contenus sont abordés. Le fait que les chapitres soient successifs est le résultat des limitations de l'affichage. Pour atténuer quelque peu ce problème, nous avons choisi de renoncer à une numérotation des chapitres. 
 
 [Représentation de l'information](https://eleve.edunumsec2.ch/content/theme/representation-information/accueil/eleve.html)
 : Où il est question du passage du système décimal au *système binaire*, ainsi que des problématiques de traitement des données telles que *l'encodage*, *la compression*, *l'échantillonnage*, *le cryptage*, et la *représentation des caractères, des images et des sons* sous forme de bits. 
@@ -84,7 +84,7 @@ Les ressources sont découpées selon un chapitrage qui correspond au plan d'ét
 : Ce chapitre propose une *définition générale de l'algorithmique*, ainsi qu'une présentation de certains *algorithmes classiques*. 
 
 [Programmation I](https://eleve.edunumsec2.ch/content/theme/programmation/accueil/eleve.html)
-: Après avoir présenté un échantillon de langages de programmation et leurs différences respectives, ce chapitre *pose les bases du language Python*. 
+: Après avoir présenté un échantillon de langages de programmation et leurs différences respectives, ce chapitre *pose les bases du langage Python*. 
 
 [Architecture des ordinateurs](https://eleve.edunumsec2.ch/content/theme/architecture-ordinateurs/accueil/eleve.html)
 : Il est question ici de notions telles que *les portes logiques*, *les transistors*, *l'architecture de Von Neumann*, et autres concepts essentiels à la compréhension de ce qui se passe au niveau physique et électronique dans un ordinateur.
@@ -111,7 +111,7 @@ Toute personne qui réutilise les ressources est priée de le faire de la façon
 
 ## Installation 
 
-⚠️ *Attention : l'installation qui suit N'EST PAS nécessaire dans le cadre du projet pilote. Elle figure ici à titre informatif pour celles et ceux qui souhaitent comprendre l'architecture globale du projet et veulent avoir une idée de l'intégralité des possibilités qu'offre un modèle de projet open-source. Après la première année de pilote, et compte tenu des retours qui auront été faits, le projet se déployera entièrement, et les enseignant.es d'informatique auront tout le loisir d'installer l'environnement ci-dessous et de s'amuser à leur guise avec la documentation open-source de ce dépôt GitHub.* 
+⚠️ *Attention : l'installation qui suit N'EST PAS nécessaire dans le cadre du projet pilote. Elle figure ici à titre informatif pour celles et ceux qui souhaitent comprendre l'architecture globale du projet et veulent avoir une idée de l'intégralité des possibilités qu'offre un modèle de projet open source. Après la première année de pilote, et compte tenu des retours qui auront été faits, le projet se déploiera entièrement, et les enseignant.es d'informatique auront tout le loisir d'installer l'environnement ci-dessous et de s'amuser à leur guise avec la documentation open source de ce dépôt GitHub.* 
 
 Pour ceux et celles qui souhaitent utiliser l'environnement Jupyter Book pour tester des contenus et participer au développement, la marche à suivre est la suivante : 
 
@@ -263,5 +263,3 @@ jupyter-book clean .
 - Plateforme : Romain Edelmann (romain.edelmann@epfl.ch) - EPFL & Grégoire Gavin (gregoire.gavin@epfl.ch) - EPFL
 - Charte éditoriale, plateforme, rédaction : Elliot Vaucher (elliot.vaucher@epfl.ch) - EPFL
 - Coordination : Nathalie Farenc (nathalie.farenc@epfl.ch) - EPFL
-
-
