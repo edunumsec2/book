@@ -71,7 +71,7 @@ parts:
 #          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/architecture-von-neumann/eleve
 #          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/microprocesseur/eleve
       - file: content/theme/architecture-ordinateurs/cours/3_composants/eleve
-#      - file: content/theme/architecture-ordinateurs/cours/4_conclusion/eleve
+      - file: content/theme/architecture-ordinateurs/cours/4_conclusion/eleve
 #      - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler
 #        sections: 
 #          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SystemesLogiques
