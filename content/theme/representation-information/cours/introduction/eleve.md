@@ -1,7 +1,7 @@
 
 # *Introduction*
 
-Dans ce chapitre nous allons nous intéresser à la manière dont un {glo}`ordinateur|ordinateur` représente l'information afin de pouvoir la traiter automatiquement.   
+Dans ce chapitre on s'intéresse à la manière dont un {glo}`ordinateur|ordinateur` représente l'information afin de pouvoir la traiter automatiquement.   
 
 
 ````{admonition} Le saviez-vous ?
