@@ -33,7 +33,7 @@ Pour des problèmes difficiles, s’il est impossible de trouver la solution exa
 
 ````
 
-```{admonition} A retenir
+```{admonition} À retenir
 :class: danger
 
 Il est important de garantir qu’un algorithme va se **<span style="color:rgb(89, 51, 209)">terminer</span> pour être utile en pratique.

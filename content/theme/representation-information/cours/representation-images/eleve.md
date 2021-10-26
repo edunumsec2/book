@@ -116,21 +116,19 @@ def drawImg(mtrx, imgSize = 300):
         ATuin.down()
 
 ===
-alien=[
-    
-      [0,0,0,0,0,0,0,0,0,0,0],
-      [0,0,1,0,0,0,0,0,1,0,0],
-      [0,0,0,1,0,0,0,1,0,0,0],
-      [0,0,1,1,1,1,1,1,1,0,0],
-      [0,1,1,0,1,1,1,0,1,1,0],
-      [1,1,1,1,1,1,1,1,1,1,1],
-      [1,0,1,1,1,1,1,1,1,0,1],
-      [1,0,1,0,0,0,0,0,1,0,1],
-      [0,0,0,1,1,0,1,1,0,0,0],
-      [0,0,0,0,0,0,0,0,0,0,0],
-      [0,0,0,0,0,0,0,0,0,0,0]
-      ]
-
+alien = [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0],
+    [0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0],
+    [0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1],
+    [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1],
+    [0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+]
 
 drawImg(alien)
 ```
@@ -340,7 +338,7 @@ Un {glo}`pixel|pixel`, de l'anglais : **pic**ture **el**ement, est le composant 
 
 ````{admonition} Anecdote
 :class: hint
-[The Million Dollar Homepage](https://fr.wikipedia.org/wiki/The_Million_Dollar_Homepage) est un site web conçu en 2005 par Alex Tew, un étudiant anglais, dans le but de financer ses études supérieures. La page d'accueil est une grille de 1000 X 1000 pixels. Chaque pixel était vendu 1$ en tant qu'espace publicitaire. Ils ont tous été vendus...
+[The Million Dollar Homepage](https://fr.wikipedia.org/wiki/The_Million_Dollar_Homepage) est un site web conçu en 2005 par Alex Tew, un étudiant anglais, dans le but de financer ses études supérieures. La page d'accueil est une grille de 1000 × 1000 pixels. Chaque pixel était vendu 1$ en tant qu'espace publicitaire. Ils ont tous été vendus...
 
 ```{figure} media/milliondollarhomepage.png
 ```

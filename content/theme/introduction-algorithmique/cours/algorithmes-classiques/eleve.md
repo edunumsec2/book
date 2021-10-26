@@ -12,7 +12,7 @@ Pensez-vous pouvoir retrouver ce livre ?
 
 Combien de temps cela vous prendrait-il ? 
 
-Y a -t-il des objets que vous rangez chez vous dans un ordre bien particulier ?
+Y a-t-il des objets que vous rangez chez vous dans un ordre bien particulier ?
 
 ````
 

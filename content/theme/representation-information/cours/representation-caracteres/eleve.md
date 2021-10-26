@@ -135,11 +135,11 @@ L'exemple ci-dessous vous renvoie la valeur binaire du texte que vous écrivez.
 
 texte = input("Le texte : ")
 
-print("Le texte d'origine est : " + str(texte))
+print("Le texte d'origine est : " + texte)
 
 res = ' '.join(format(ord(i), 'b') for i in texte)
 
-print("Le texte en binaire est : " + str(res))
+print("Le texte en binaire est : " + res)
 ```
 
 

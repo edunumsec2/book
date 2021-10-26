@@ -32,28 +32,31 @@ Assurément, ce circuit n'est pas très intéressant: il se bloque dans un état
 
 ```{logic}
 :height: 160
-:mode: tryout
 
 {
   "in": [
-    {"pos": [50, 30], "id": 8, "name": "R", "val": 0},
+    {"pos": [50, 30], "id": 8, "name": "R", "val": 1},
     {"pos": [50, 130], "id": 9, "name": "S", "val": 0}
   ],
   "out": [
-    {"pos": [240, 40], "id": 10, "name": "Q"},
-    {"pos": [240, 120], "id": 11, "name": "Q'"}
+    {"pos": [290, 40], "id": 10, "name": "Q"},
+    {"pos": [290, 120], "id": 11, "name": "Q'"}
   ],
   "gates": [
-    {"type": "NOR", "pos": [120, 40], "in": [0, 1], "out": 2},
-    {"type": "NOR", "pos": [120, 120], "in": [4, 5], "out": 6}
+    {"type": "OR", "pos": [130, 40], "in": [0, 1], "out": 2},
+    {"type": "OR", "pos": [130, 120], "in": [4, 5], "out": 6},
+    {"type": "NOT", "pos": [200, 120], "in": 3, "out": 7},
+    {"type": "NOT", "pos": [200, 40], "in": 12, "out": 13}
   ],
   "wires": [
     [8, 0],
     [9, 5],
-    [2, 4, {"waypoints": [[170, 70, "w"], [70, 90, "w"]]}],
-    [2, 10],
-    [6, 1, {"waypoints": [[170, 90, "w"], [70, 70, "w"]]}],
-    [6, 11]
+    [6, 3],
+    [7, 11],
+    [2, 12],
+    [13, 10],
+    [7, 1, {"waypoints": [[80, 50]]}],
+    [13, 4, {"waypoints": [[80, 110]]}]
   ]
 }
 ```
@@ -70,3 +73,9 @@ Pour aller plus loin, une vidéo de résumé qui parle aussi des bascules et des
 
 ```{youtube} I0-izyq6q5s
 ```
+
+````{admonition} Pour aller plus loin
+:class: attention
+
+Dans le jeu en ligne «Nandgame» (<https://nandgame.com>), on construit petit à petit un ordinateur complet juste avec, à la base, des portes **NON-ET**. Elles sont la particularité, avec la porte **NON-OU**, de pouvoir simuler toutes les autres portes (y compris un inverseur).
+````
