@@ -1,8 +1,8 @@
-## De la logique à la mémoire
+<font size="6"> De la logique à la mémoire </font>
 
 **TODO:** _Du contenu supplémentaire sera rajouté ici pour parler de la mémoire._
 
-### La construction de la mémoire
+<u> La construction de la mémoire </u>
 
 Les {glo}`transistor|transistors`, les {glo}`portelogique|portes logiques` et leur représentation en {glo}`tableverite|tables de vérités`, permettent de manipuler des 0 et des 1 au niveau physique. Tant qu'un courant électrique se déplace dans les {glo}`circuit|circuits`, on est capable de le transformer, de le laisser passer ou de l'arrêter, dans le but d'exprimer des portes «ouvertes» ou des portes «fermées» et donc des nombres binaires.  
 

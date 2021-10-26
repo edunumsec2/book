@@ -61,17 +61,17 @@ parts:
     sections:
       - file: content/theme/architecture-ordinateurs/cours/0_introduction_/eleve
       - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/eleve
-        sections:
-          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/1_portes-logiques/eleve
-          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/2_de-logique-a-arithmetique/eleve
-          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/3_de-logique-a-la-memoire/eleve
+#        sections:
+#         - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/1_portes-logiques/eleve
+#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/2_de-logique-a-arithmetique/eleve
+#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/3_de-logique-a-la-memoire/eleve
       - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/eleve
-        sections:
-          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/alu-bascules/eleve
-          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/architecture-von-neumann/eleve
-          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/microprocesseur/eleve
+#        sections:
+#          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/alu-bascules/eleve
+#          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/architecture-von-neumann/eleve
+#          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/microprocesseur/eleve
       - file: content/theme/architecture-ordinateurs/cours/3_composants/eleve
-      - file: content/theme/architecture-ordinateurs/cours/4_conclusion/eleve
+#      - file: content/theme/architecture-ordinateurs/cours/4_conclusion/eleve
 #      - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler
 #        sections: 
 #          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SystemesLogiques
