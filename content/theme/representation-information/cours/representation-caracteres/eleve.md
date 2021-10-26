@@ -203,14 +203,28 @@ qui nous concernent… – est la table UTF-8. Elle se concentre
 sur les premiers 8 bits de la table UTF complète.
 
 
-````{admonition} Exercice 1 : ???
+````{admonition} Exercice 1 : utilisation de la table ASCII
 :class: note
+
+
+1 - À l’aide de la table ASCII, codez en binaire la phrase suivante  «L’an qui vient !».
+
+2 - Voici maintenant une exclamation codée en binaire : 01000010 01110010 01100001 01110110 01101111 00100001. Retrouvez cette exclamation !
+
+3 - Peut-on coder en binaire la phrase «Un âne est-il passé par là ?» à l’aide de la table ASCII (Justifiez la réponse) ?
+
 
 ......
 
 ````
-````{admonition} Exercice 2 : ???
+````{admonition} Exercice 2 : coder en UTF-8
 :class: note
+
+Le symbole € correspond à la valeur décimale 8364.
+
+1 - Convertir cette valeur en binaire.
+2 - Combien d’octets doit-on utiliser en UTF-8 pour coder ce nombre convenablement (les moitiés d’octet sont interdites) ?
+3 - Donner le codage UTF-8 correspondant.
 
 ......
 
