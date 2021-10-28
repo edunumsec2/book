@@ -55,7 +55,7 @@
 
 <br>
 
-Ce dossier aborde le vaste sujet que forment l’intelligence artificielle (IA) et l’automatisation. Qu’est-ce que l’IA, d’où vient-elle et comment impose-t-elle une certaine vision du monde ? Quelles sont les opportunités, les craintes et les problèmes propres aux applications de l’IA ? Comment réguler les usages nouvelles technologies ?
+Ce dossier aborde le vaste sujet que forment l’intelligence artificielle (IA) et l’automatisation. Qu’est-ce que l’IA, d’où vient-elle et comment impose-t-elle une certaine vision du monde ? Quelles sont les opportunités, les craintes et les problèmes propres aux applications de l’IA ? Comment réguler les usages de ces nouvelles technologies ?
 
 ## Objectifs
 
@@ -84,7 +84,11 @@ Afin de faire la lumière sur les impacts, les forces et les faiblesses de l’i
 
 <br>
 
-Trouver une définition générale de l’IA est un exercice difficile car il s’agit en fait d’un ensemble de technologies particulières. Dans le domaine scientifique, on différencie principalement deux approches historiques avec d’un côté l’IA symbolique qui vise à reproduire le raisonnement humain et l’intégrer à des machines. C’est sur ce principe que sont basés les **systèmes experts**. De l’autre, l’IA connexionniste est un sous-ensemble de techniques qui apprend à partir des grands volumes de données. Elle comprend l’**apprentissage automatique** ou ***machine learning*** et l’**apprentissage profond** ou ***deep learning***. Cette dernière se base sur des modèles de **réseaux de neurones**, superposés en plusieurs couches pour permettre l’établissement de règles complexes. 
+Trouver une définition générale de l’IA est un exercice difficile car il s’agit en fait d’un ensemble de technologies particulières. Historiquement, on différencie principalement deux approches, avec d’un côté l’IA symbolique qui vise à reproduire le raisonnement humain sous la forme de règles statiques pour l’intégrer à des machines. C’est sur ce principe que reposent les **systèmes experts**. De l’autre, l’IA connexionniste est un sous-ensemble de techniques qui apprend à partir des grands volumes de données. Elle comprend l’**apprentissage automatique** ou ***machine learning*** et l’**apprentissage profond** ou ***deep learning***. Cette dernière se base sur des modèles de **réseaux de neurones**, superposés en plusieurs couches pour permettre l’établissement de règles complexes. 
+
+Aujourd'hui, l'IA est principalement utilisée à des fins prédictives. À partir d'informations connues, les données, elle établit des modèles statistiques qui serviront ensuite à prédire des faits ou des comportements. 
+
+
 
 
 **L'IA - Entre science et fiction**
