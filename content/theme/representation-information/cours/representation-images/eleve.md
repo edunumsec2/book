@@ -31,13 +31,13 @@ name: fig-repr-img-obscur
 height: 16em
 name: fig-repr-img-obscur
 ---
-La camera obscura.
+La caméra obscura.
 ```
 
 
 ### De la camera obscura à la caméra numérique
 
-Mais alors, comment fonctionne une caméra numérique ? Elle fonctionne en fait d'une manière très similaire à la camera obscura et aux appareils photographiques analogiques d'un point de vue optique. Imaginez une chambre noire pourvue d'un trou sur l'une de ses parois. La lumière venant de l'extérieur vient se projeter sur le mur opposé. 
+Comment fonctionne une caméra numérique ? Une caméra numérique fonctionne en fait d'une manière très similaire à la caméra obscura et aux appareils photographiques analogiques d'un point de vue optique. Imaginez une chambre noire pourvue d'un trou sur l'une de ses parois. La lumière venant de l'extérieur vient se projeter sur le mur opposé. 
 
 Dans un appareil analogique, la paroi illuminée est recouverte d'une pellicule chimique photosensible qui permet de capturer l'image. 
 
@@ -71,7 +71,7 @@ Principe de la capture numérique d'une image.
 ```
 ````
 
-Un bit est l'unité minimale d'information qu'un ordintaeur comprend : 1 ou 0, allumé ou éteint. L'image la plus simple qu'un ordinateur puisse afficher est constituée uniquement de noir et blanc. Ainsi, un bit pourrait être soit noir, soit blanc. 
+Un bit est l'unité minimale d'information qu'un ordinateur comprend : 1 ou 0, allumé ou éteint. L'image la plus simple qu'un ordinateur puisse afficher est constituée uniquement de noir et blanc. Ainsi, un bit pourrait être soit noir, soit blanc. 
 
 ````{role} prof
 ```{admonition} Suggestion d'activité
@@ -90,71 +90,6 @@ Tous les pixels marqués d'un 1 s'affichent en blanc, tous ceux marqués d'un z�
 ```
 
 Ceci nous permet de construire des images simples, et d'une {glo}`resolution|résolution` très faible.
-
-
-
-Un {glo}`pixel|pixel`, de l'anglais "**pic**ture **el**ement", est le composant minimal d'une image. C'est à dire que c'est la plus petite brique avec laquelle on construit une image sur un écran d'ordinateur, et donc dans sa mémoire. Dans notre exemple minimaliste, chaque pixel peut être soit noir, soit blanc, ce qui nous permet de construire une image.
-
-````{admonition} Anecdote
-:class: hint
-[The Million Dollar Homepage](https://fr.wikipedia.org/wiki/The_Million_Dollar_Homepage) est un site web conçu en 2005 par Alex Tew, un étudiant anglais, dans le but de financer ses études supérieures. La page d'accueil est une grille de 1000 X 1000 pixels. Chaque pixel était vendu 1$ en tant qu'espace publicitaire. Ils ont tous été vendus...
-
-```{figure} media/milliondollarhomepage.png
-```
-````
-
-## Représentation d'une image en niveaux de gris
-
-````{tabbed} Image
-```{image} media/kirbygrey.png
-:width: 300px
-```
-````
-````{tabbed} Code
-```{image} media/kirbygrey2.png
-:width: 300px
-```
-````
-
-La plupart des images sont représentées au format {glo}`matrice|matriciel`. Une image en niveau de gris sera ainsi généralement codée comme un tableau de valeurs correspondant à la {glo}`luminance|luminance` de chaque pixel. Les valeurs de luminance sont chacune déclarées comme un nombre allant de 0 (noir) à 255 (blanc). Pour encoder une image en niveaux de gris, chaque pixel nécessite dont 8 bits. 
-
-```{figure} media/image_et_pixels.svg
----
-name: fig-repr-img-pixel
----
-Image monochrome, pixels et luminance.
-```
-
-Pour accéder à un pixel particulier, il faut en général définir à quelle ligne et à quelle colonne de l'image ce pixel correspond. Le pixel (0,0) correspondra normalement au pixel de la première ligne et de la première colonne.
-
-```{admonition} Le saviez-vous ? 
-:class: hint
-Ce mode de fonctionnement est similaire à celui des tableurs pour lesquels il est possible d'accéder à la valeur d'une case en utilisant sa référence. On pourrait d'ailleurs utiliser le formatage conditionnel pour transformer un tableau de valeurs dans un tableur en image matricielle.
-```
-
-## Codage des couleurs
-
-````{tabbed} Image
-```{image} media/kirbycolor.png
-:width: 300px
-```
-````
-````{tabbed} Code
-```{image} media/kirbycolor2.png
-:width: 500px
-```
-````
-
-En peinture, pour obtenir toutes les couleurs de l'arc-en-ciel, on utilise un mélange de magenta, de cyan et de jaune, qui vont chacune absorber une partie de la lumière ; c'est ce que l'on appelle la {glo}`synthsoustractive|synthèse soustractive` : en ajoutant du pigment à une surface, une partie du spectre lumineux est soustrait. Pour faire la même chose en informatique, on utilisera également trois couleurs, mais celles-ci seront le rouge, le vert et le bleu. Cela correspond à la {glo}`synthadditive|synthèse additive` : en allumant une LED rouge, j'ajoute de la lumière sur la partie du spectre lumineux correspondant.
-
-```{figure} media/SyntheseAdd_pixels.svg
----
-name: fig-repr-img-sys-pixel
----
-Système additif et écran au microscope.
-```
-
-Chaque pixel d'une image couleur est donc représenté comme un mélange de ces trois couleurs et donc sous forme de trois entiers. Comme pour les images en niveaux de gris, ces entiers sont généralement représentés sur 8 bits. Pour représenter une image en couleur il faut donc 8 bits pour le niveau de rouge, 8 bits pour le niveau de vert, et 8 bits pour le niveau de bleu, donc 24 bits. 
 
 ```{codeplay}
 import turtle
@@ -190,8 +125,6 @@ def setColor(col):
     else:
         return divtpl((1,1,1))
 
-
-
 def drawImg(mtrx, imgSize = 300):
     nb = max(len(mtrx), max([len(line) for line in mtrx]))
     pixSize = imgSize // nb
@@ -217,6 +150,153 @@ thuglife=[
       [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],   
 ]
 
+
+## source illustrations : https://johanvinet.tumblr.com/
+
+===
+alien=[
+    
+      [0,0,0,0,0,0,0,0,0,0,0],
+      [0,0,1,0,0,0,0,0,1,0,0],
+      [0,0,0,1,0,0,0,1,0,0,0],
+      [0,0,1,1,1,1,1,1,1,0,0],
+      [0,1,1,0,1,1,1,0,1,1,0],
+      [1,1,1,1,1,1,1,1,1,1,1],
+      [1,0,1,1,1,1,1,1,1,0,1],
+      [1,0,1,0,0,0,0,0,1,0,1],
+      [0,0,0,1,1,0,1,1,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0,0]
+      ]
+
+
+drawImg(alien)
+```
+
+
+Un {glo}`pixel|pixel`, de l'anglais "**pic**ture **el**ement", est le composant minimal d'une image. C'est à dire que c'est la plus petite brique avec laquelle on construit une image sur un écran d'ordinateur, et donc dans sa mémoire. Dans notre exemple minimaliste, chaque pixel peut être soit noir, soit blanc, ce qui nous permet de construire une image.
+
+
+
+## Représentation d'une image en niveaux de gris
+
+````{tabbed} Image
+```{image} media/kirbygrey.png
+:width: 300px
+```
+````
+````{tabbed} Code
+```{image} media/kirbygrey2.png
+:width: 300px
+```
+````
+
+La plupart des images sont représentées au format {glo}`matrice|matriciel`. Une image en niveau de gris sera ainsi généralement codée comme un tableau de valeurs correspondant à la {glo}`luminance|luminance` de chaque pixel. Les valeurs de luminance sont chacune déclarées comme un nombre allant de 0 (blanc) à 255 (noir). Pour encoder une image en niveaux de gris, chaque pixel nécessite dont 8 bits. 
+
+```{figure} media/image_et_pixels.svg
+---
+name: fig-repr-img-pixel
+---
+Image monochrome, pixels et luminance.
+```
+
+Pour accéder à un pixel particulier, il faut en général définir à quelle ligne et à quelle colonne de l'image ce pixel correspond. Le pixel (0,0) correspondra normalement au pixel de la première ligne et de la première colonne.
+
+```{admonition} Le saviez-vous ? 
+:class: hint
+Ce mode de fonctionnement est similaire à celui des tableurs pour lesquels il est possible d'accéder à la valeur d'une case en utilisant sa référence. On pourrait d'ailleurs utiliser le formatage conditionnel pour transformer un tableau de valeurs dans un tableur en image matricielle.
+```
+
+## Représentation d'une image en couleurs
+
+````{admonition} Anecdote
+:class: hint
+[The Million Dollar Homepage](https://fr.wikipedia.org/wiki/The_Million_Dollar_Homepage) est un site web conçu en 2005 par Alex Tew, un étudiant anglais, dans le but de financer ses études supérieures. La page d'accueil est une grille de 1000 X 1000 pixels. Chaque pixel était vendu 1$ en tant qu'espace publicitaire. Ils ont tous été vendus...
+
+```{figure} media/milliondollarhomepage.png
+```
+````
+
+````{tabbed} Image
+```{image} media/kirbycolor.png
+:width: 300px
+```
+````
+````{tabbed} Code
+```{image} media/kirbycolor2.png
+:width: 500px
+```
+````
+
+En peinture, pour obtenir toutes les couleurs de l'arc-en-ciel, on utilise un mélange de magenta, de cyan et de jaune, qui vont chacune absorber une partie de la lumière ; c'est ce que l'on appelle la {glo}`synthsoustractive|synthèse soustractive` : en ajoutant du pigment à une surface, une partie du spectre lumineux est soustrait. Pour faire la même chose en informatique, on utilisera également trois couleurs, mais celles-ci seront le rouge, le vert et le bleu (couleurs primaires). Cela correspond à la {glo}`synthadditive|synthèse additive` : en allumant une LED rouge, j'ajoute de la lumière sur la partie du spectre lumineux correspondant.
+
+```{figure} media/SyntheseAdd_pixels.svg
+---
+name: fig-repr-img-sys-pixel
+---
+Système additif et écran au microscope.
+```
+
+Chaque pixel d'une image couleur est donc représenté comme un mélange de ces trois couleurs et donc sous forme de trois entiers. Comme pour les images en niveaux de gris, ces entiers sont généralement représentés sur 8 bits ; les valeurs de luminance sont chacune déclarées comme un nombre allant de 0 (intensité nulle) à 255 (intensité maximale). Pour représenter une image en couleurs il faut donc 8 bits pour le niveau de rouge, 8 bits pour le niveau de vert, et 8 bits pour le niveau de bleu, soit 24 bits. 
+
+```{codeplay}
+import turtle
+
+ATuin = turtle.Turtle()
+ATuin.hideturtle()
+ATuin.speed(0)
+
+def drawSquare(size, color=(1,1,1)):
+    #ATuin.pencolor(color)
+    ATuin.fillcolor(color)
+    ATuin.begin_fill()
+    for i in range(4):
+        ATuin.forward(size)
+        ATuin.right(90)
+    ATuin.end_fill()
+    ATuin.forward(size)
+
+divtpl = lambda tpl : tuple(round(x/255.,2) for x in tpl)
+
+def setColor(col):
+    if isinstance(col,tuple) and len(col) == 3 :
+        return divtpl(col)
+    elif isinstance(col, (int, float)):
+        if col > 1 and col < 255:
+            grey = int(col)
+            return divtpl((grey,)*3)
+        elif col == 1 or col == 0:
+            bw = 255 - int(col)*255
+            return divtpl((bw,)*3)
+        else:
+            return divtpl((1,1,1))
+    else:
+        return divtpl((1,1,1))
+
+def drawImg(mtrx, imgSize = 300):
+    nb = max(len(mtrx), max([len(line) for line in mtrx]))
+    pixSize = imgSize // nb
+    ATuin.up()
+    ATuin.setpos(-nb*pixSize//2,nb*pixSize//2)
+    ATuin.down()
+    for line in mtrx :
+        for elmt in line:
+            drawSquare(pixSize, setColor(elmt))
+        ATuin.up()
+        pos = ATuin.pos()
+        ATuin.setpos(pos[0]-pixSize*len(line), pos[1]-pixSize)
+        ATuin.down()
+
+thuglife=[
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],      
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0],
+      [0,0,1,0,1,1,1,1,1,1,0,0,1,0,1,0,1,1,1,1,1,0,0,0,0,1,1,0],
+      [0,0,0,1,0,1,1,1,1,0,0,0,0,1,0,1,0,1,1,1,0,0,0,0,0,0,0,0],
+      [0,0,0,0,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],   
+]
 
 mario=[
     [1,1,(255,0,0),(255,0,0),(255,0,0), (255,0,0),1,1],
@@ -370,7 +450,7 @@ alien=[
 
 drawImg(alien)
 ```
-*Conseil : à la place de alien, essayez mario, luigi, link, guerrier, tortueninja1, tortueninja2, homer, pikachu, kirby, kirbycouleur*
+*Conseil : à la place de mario, essayez luigi, link, guerrier, tortueninja1, tortueninja2, homer, pikachu, kirby, kirbycouleur*
 
 [Dans cette animation](https://www.csfieldguide.org.nz/en/interactives/pixel-viewer/) vous pouvez zoomer sur chacun des pixels qui constituent l'image totale. Chaque pixel possède trois valeurs allant de 0 à 255. RGB signifie en anglais Red, Green, Blue. 
 
