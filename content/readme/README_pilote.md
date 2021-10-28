@@ -96,7 +96,7 @@ Toute personne qui réutilise les ressources est priée de le faire de la façon
 * Algorithmique : Biljana Petreska - Gymnase d'Yverdon & Micha Hersch Gymnase de Renens / HEP
 * Programmation : Raphaël Holzer - Gymnase du Bugnon & Gilles Racine - Gymnase de Sevelin
 * Architecture des ordinateurs : Philippe Rochat - Gymnase de Morges & Jean-Philippe Pellet - HEP
-* Enjeux sociaux : Virginia Haussauer - EPFL & Franck Dayen - Gymnase de Morges 
+* Enjeux sociaux : Lucile Berset - EPFL, Virginia Haussauer - EPFL, Frank Dayen - Gymnase de Morges 
 * Plateforme : Romain Edelmann - EPFL & Grégoire Gavin - EPFL
 * Charte éditoriale, plateforme, rédaction : Elliot Vaucher - EPFL
 * Coordination : Nathalie Farenc - EPFL

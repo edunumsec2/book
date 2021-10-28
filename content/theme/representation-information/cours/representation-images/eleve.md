@@ -115,6 +115,76 @@ def drawImg(mtrx, imgSize = 300):
         ATuin.setpos(pos[0]-pixSize*len(line), pos[1]-pixSize)
         ATuin.down()
 
+===
+alien = [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0],
+    [0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0],
+    [0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1],
+    [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1],
+    [0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+]
+
+drawImg(alien)
+```
+
+Dans l'exemple qui suit, d'autre matrices de 0 et de 1 ont été configurées dans le programme, pour dessiner de nouveaux personnages. À la place de mario, essayez luigi, link, guerrier, tortueninja1, tortueninja2, homer, pikachu, kirby. 
+
+```{codeplay}
+import turtle
+
+ATuin = turtle.Turtle()
+ATuin.hideturtle()
+ATuin.speed(0)
+
+def drawSquare(size, color=(1,1,1)):
+    #ATuin.pencolor(color)
+    ATuin.fillcolor(color)
+    ATuin.begin_fill()
+    for i in range(4):
+        ATuin.forward(size)
+        ATuin.right(90)
+    ATuin.end_fill()
+    ATuin.forward(size)
+
+divtpl = lambda tpl : tuple(round(x/255.,2) for x in tpl)
+
+def setColor(col):
+    if isinstance(col,tuple) and len(col) == 3 :
+        return divtpl(col)
+    elif isinstance(col, (int, float)):
+        if col > 1 and col < 255:
+            grey = int(col)
+            return divtpl((grey,)*3)
+        elif col == 1 or col == 0:
+            bw = 255 - int(col)*255
+            return divtpl((bw,)*3)
+        else:
+            return divtpl((1,1,1))
+    else:
+        return divtpl((1,1,1))
+
+
+
+def drawImg(mtrx, imgSize = 300):
+    nb = max(len(mtrx), max([len(line) for line in mtrx]))
+    pixSize = imgSize // nb
+    ATuin.up()
+    ATuin.setpos(-nb*pixSize//2,nb*pixSize//2)
+    ATuin.down()
+    for line in mtrx :
+        for elmt in line:
+            drawSquare(pixSize, setColor(elmt))
+        ATuin.up()
+        pos = ATuin.pos()
+        ATuin.setpos(pos[0]-pixSize*len(line), pos[1]-pixSize)
+        ATuin.down()
+
 thuglife=[
       [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],      
       [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -261,31 +331,14 @@ kirbycouleur=[
 ## source illustrations : https://johanvinet.tumblr.com/
 
 ===
-alien=[
-    
-      [0,0,0,0,0,0,0,0,0,0,0],
-      [0,0,1,0,0,0,0,0,1,0,0],
-      [0,0,0,1,0,0,0,1,0,0,0],
-      [0,0,1,1,1,1,1,1,1,0,0],
-      [0,1,1,0,1,1,1,0,1,1,0],
-      [1,1,1,1,1,1,1,1,1,1,1],
-      [1,0,1,1,1,1,1,1,1,0,1],
-      [1,0,1,0,0,0,0,0,1,0,1],
-      [0,0,0,1,1,0,1,1,0,0,0],
-      [0,0,0,0,0,0,0,0,0,0,0],
-      [0,0,0,0,0,0,0,0,0,0,0]
-      ]
-
-
-drawImg(alien)
+drawImg(mario)
 ```
-*Conseil : à la place de alien, essayez mario, luigi, link, guerrier, tortueninja1, tortueninja2, homer, pikachu, kirby, kirbycouleur*
 
 Un {glo}`pixel|pixel`, de l'anglais : **pic**ture **el**ement, est le composant minimal d'une image. C'est à dire que c'est la plus petite brique avec laquelle on construit une image sur un écran d'ordinateur, et donc dans sa mémoire. Dans notre exemple minimaliste, chaque pixel peut être soit noir, soit blanc, ce qui nous permet de construire une image.
 
 ````{admonition} Anecdote
 :class: hint
-[The Million Dollar Homepage](https://fr.wikipedia.org/wiki/The_Million_Dollar_Homepage) est un site web conçu en 2005 par Alex Tew, un étudiant anglais, dans le but de financer ses études supérieures. La page d'accueil est une grille de 1000 X 1000 pixels. Chaque pixel était vendu 1$ en tant qu'espace publicitaire. Ils ont tous été vendus...
+[The Million Dollar Homepage](https://fr.wikipedia.org/wiki/The_Million_Dollar_Homepage) est un site web conçu en 2005 par Alex Tew, un étudiant anglais, dans le but de financer ses études supérieures. La page d'accueil est une grille de 1000 × 1000 pixels. Chaque pixel était vendu 1$ en tant qu'espace publicitaire. Ils ont tous été vendus...
 
 ```{figure} media/milliondollarhomepage.png
 ```
@@ -347,6 +400,81 @@ Chaque pixel d'une image couleur est donc représenté comme un mélange de ces 
 [Dans cette animation](https://www.csfieldguide.org.nz/en/interactives/pixel-viewer/) vous pouvez zoomer sur chacun des pixels qui constituent l'image totale. Chaque pixel possède trois valeurs allant de 0 à 255. RGB signifie en anglais Red, Green, Blue. 
 
 [Dans cette autre animation](https://csfieldguide.org.nz/en/interactives/colour-matcher/) vous pouvez jouer avec la valeur de Rouge, Vert, Bleu, pour créer une couleur finale. L'outil vous permet d'abord de jouer avec des couleurs codées en 24 bits, puis en 8 bits, ce qui illustre bien la précision qu'on arrive à atteindre avec 24 bits. 
+
+```{codeplay}
+import turtle
+
+ATuin = turtle.Turtle()
+ATuin.hideturtle()
+ATuin.speed(0)
+
+def drawSquare(size, color=(1,1,1)):
+    #ATuin.pencolor(color)
+    ATuin.fillcolor(color)
+    ATuin.begin_fill()
+    for i in range(4):
+        ATuin.forward(size)
+        ATuin.right(90)
+    ATuin.end_fill()
+    ATuin.forward(size)
+
+divtpl = lambda tpl : tuple(round(x/255.,2) for x in tpl)
+
+def setColor(col):
+    if isinstance(col,tuple) and len(col) == 3 :
+        return divtpl(col)
+    elif isinstance(col, (int, float)):
+        if col > 1 and col < 255:
+            grey = int(col)
+            return divtpl((grey,)*3)
+        elif col == 1 or col == 0:
+            bw = 255 - int(col)*255
+            return divtpl((bw,)*3)
+        else:
+            return divtpl((1,1,1))
+    else:
+        return divtpl((1,1,1))
+
+
+
+def drawImg(mtrx, imgSize = 300):
+    nb = max(len(mtrx), max([len(line) for line in mtrx]))
+    pixSize = imgSize // nb
+    ATuin.up()
+    ATuin.setpos(-nb*pixSize//2,nb*pixSize//2)
+    ATuin.down()
+    for line in mtrx :
+        for elmt in line:
+            drawSquare(pixSize, setColor(elmt))
+        ATuin.up()
+        pos = ATuin.pos()
+        ATuin.setpos(pos[0]-pixSize*len(line), pos[1]-pixSize)
+        ATuin.down()
+===
+
+kirbycouleur=[
+
+      [0,1,1,0,1,1,1,1,1,1,0,1,1,1,1,0],
+      [1,(238,116,155),(238,116,155),1,(238,116,155),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1,(238,116,155),(243,178,200),(238,116,155),1,0],
+      [1,(243,178,200),1,(238,116,155),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1],
+      [1,(243,178,200),(238,116,155),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),1],
+      [1,(243,178,200),(243,178,200),(243,178,200),1,(243,178,200),1,(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1],
+      [1,(238,116,155),(243,178,200),(243,178,200),1,(243,178,200),1,(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1,0],
+      [0,1,(243,178,200),(243,178,200),1,(243,178,200),1,(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1,1,0],
+      [0,1,(238,116,155),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),(238,116,155),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1,0],
+      [0,1,(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1,0],
+      [0,1,(238,116,155),(243,178,200),(243,178,200),1,(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),1,0,0],
+      [0,0,1,(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1,0,0],
+      [0,0,1,(238,116,155),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1,(255,0,0),1,0],
+      [0,0,0,1,(238,116,155),(238,116,155),(243,178,200),(243,178,200),(243,178,200),(238,116,155),1,1,(255,0,0),(255,0,0),1,0],
+      [0,0,0,0,1,1,1,1,1,1,1,(255,0,0),(255,0,0),(255,0,0),1,0],
+      [0,0,0,0,0,0,1,(255,0,0),(255,0,0),1,0,1,(255,0,0),(255,0,0),1,0],
+      [0,0,0,0,0,0,0,1,1,0,0,0,1,1,0,0],
+
+]
+
+drawImg(kirbycouleur)
+```
 
 ## Les images vectorielles
 

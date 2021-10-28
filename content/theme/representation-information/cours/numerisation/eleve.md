@@ -209,7 +209,7 @@ du système électrique local :
 50 Hz pour le PAL européen
 (et 25 images par seconde).
 En choisissant
-le mulitple commun
+le multiple commun
 de 44.1 kHz,
 la norme permettait d'être
 utilisée

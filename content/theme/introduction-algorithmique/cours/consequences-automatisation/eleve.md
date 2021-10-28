@@ -17,7 +17,7 @@ Comprendre le fonctionnement de base des algorithmes vous permet de mieux appré
 ````
 
 
-````{admonition} A retenir
+````{admonition} À retenir
 :class: attention
 
 Un algorithme est une suite d’instructions dans un ordre bien précis qui permet de résoudre un problème. L’algorithme va donner un résultat en fonction de données reçues en entrée.
