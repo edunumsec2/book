@@ -69,18 +69,13 @@ Ce dossier aborde le vaste sujet que forment l’intelligence artificielle (IA) 
 ## Introduction
 
 <br>
-Depuis les années 2010, on observe un retour en force de l’intelligence artificielle. La puissance des ordinateurs combinée à l’important volume de données disponible (big data) permet d’envisager de nouvelles approches notamment dans le domaine de l’apprentissage profond (deep learning). Pour illustrer cet engouement, les investissements globaux dans le domaine de l’IA ont augmenté de 40% entre 2019 et 2020 pour atteindre près de 68 milliards de dollars. <a href="#footnote-1">[1]</a>  Aujourd’hui, l’IA offre de nouvelles perspectives pour la recherche scientifique, oriente nos pratiques numériques et a été adoptée dans divers secteurs publics et privés. Difficile d’échapper à une forme automatisée du traitement de l’information, alors que 92% des adultes vivant en Suisse utilisent quotidiennement un smartphone. <a href="#footnote-2">[2]</a>  
+Depuis les années 2010, on observe un retour en force de l’intelligence artificielle. La puissance des ordinateurs combinée à l’important volume de données disponible (big data) permet d’envisager de nouvelles approches notamment dans le domaine de l’apprentissage profond (deep learning). Pour illustrer cet engouement, les investissements globaux dans le domaine de l’IA ont augmenté de 40% entre 2019 et 2020 pour atteindre près de 68 milliards de dollars. <a href="#footnote-1">[1]</a>  L'IA offre désormais de nouvelles perspectives pour la recherche scientifique, oriente nos pratiques numériques et a été adoptée par divers secteurs publics et privés. Difficile d’échapper à une forme automatisée du traitement de l’information, alors que 92% des adultes vivant en Suisse utilisent quotidiennement un smartphone. <a href="#footnote-2">[2]</a>  
 
 L’intelligence artificielle et ses technologies sont à la fois porteuses d’espoir et de craintes. D’un côté, l’IA fait miroiter la possibilité de résoudre des problèmes extrêmement complexes. De l’autre, les bouleversements potentiels amenés par l’automatisation de certaines tâches et prises de décision inquiètent. Retourner aux débuts de l’IA en tant que domaine scientifique permet de comprendre une certaine vision de l’être humain et du monde, toujours plus influente aussi bien dans le domaine scientifique que dans l’orientation de certaines politiques publiques. 
 
 Afin de faire la lumière sur les impacts, les forces et les faiblesses de l’intelligence artificielle, ce dossier propose un retour sur son histoire. Les principaux enjeux contemporains sont identifiés et présentés dans la deuxième partie du cours. 
 
-<p id="footnote-1">[1] "Artificial Intelligence Index Report 2021", HAI Stanford University
-https://aiindex.stanford.edu/wp-content/uploads/2021/03/2021-AI-Index-Report-_Chapter-3.pdf p. 14.
-</p>
-<p id="footnote-2">[2] "Le smartphone est au coeur de nos vies – Seuls 8% de la population suisse n'en possèdent pas encore", Deloitte
-https://www2.deloitte.com/ch/fr/pages/press-releases/articles/deloitte-in-switzerland-smartphones-become-control-centre.html
-</p>
+
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
   <b>L'IA - un ensemble de technologies</b>
