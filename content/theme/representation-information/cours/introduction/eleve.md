@@ -19,7 +19,7 @@ Mais avant de découvrir le code choisi pour représenter l'information à l'int
 
 ### Alphabets anciens et traditionnels
 
-Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi que de nombreux {glo}`sysco|systèmes de communication`. Depuis les [sumériens](https://fr.wikipedia.org/wiki/Sum%C3%A9rien) qui utilisaient des {glo}`picto|pictogrammes` et [l’écriture cunéiforme](https://fr.wikipedia.org/wiki/Cun%C3%A9iforme), en passant par les égyptiens et leurs [hiéroglyphes](https://fr.wikipedia.org/wiki/%C3%89criture_hi%C3%A9roglyphique_%C3%A9gyptienne), les chinois et leurs [idéogrammes](https://fr.wikipedia.org/wiki/Caract%C3%A8res_chinois) pour arriver aux symboles de nos alphabets actuels, l’homme n’a eu de cesse de mettre au point des système pour représenter l’information et la {glo}`transmission|transmettre`.
+Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi que de nombreux {glo}`sysco|systèmes de communication`. Depuis les [sumériens](https://fr.wikipedia.org/wiki/Sum%C3%A9rien) qui utilisaient des {glo}`picto|pictogrammes` et [l’écriture cunéiforme](https://fr.wikipedia.org/wiki/Cun%C3%A9iforme), en passant par les égyptiens et leurs [hiéroglyphes](https://fr.wikipedia.org/wiki/%C3%89criture_hi%C3%A9roglyphique_%C3%A9gyptienne), les chinois et leurs [idéogrammes](https://fr.wikipedia.org/wiki/Caract%C3%A8res_chinois) pour arriver aux symboles de nos alphabets actuels, l'espèce humaine n’a eu de cesse de mettre au point des systèmes pour représenter l’information et la {glo}`transmission|transmettre`.
 
 ````{tabbed} Sumérien
 ```{image} media/cuneiform.jpg
@@ -62,7 +62,7 @@ Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi q
 - Mot en différentes langues, morse, idéogrammes
 - Symboles danger, stop, paix
 ```
-TODO #14
+<!-- TODO #14
 <!-- Pour créer une communication efficace entre un point A et un point B, il existe toujours un compromis entre plusieurs paramètres : le nombre de symboles qu'on se donne au départ, le nombre de mots que l'on veut être capable d'exprimer, la longueur de la transmission du message, sa lisibilité, la possibilité technique de la transmission, et ainsi de suite. // Commentaire :   -->
 <!-- 
 ````{admonition} Matière à réfléchir
