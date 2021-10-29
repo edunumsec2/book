@@ -167,6 +167,16 @@ Un {glo}`pixel|pixel`, de l'anglais "**pic**ture **el**ement", est le composant 
 
 ## Représentation d'une image en niveaux de gris
 
+Dans ce type d’image seul le niveau de l'intensité est codé sur un octet (256 valeurs). Par convention, la valeur 0 représente le noir (intensité lumineuse nulle) et la valeur 255 le blanc (intensité lumineuse maximale) :
+
+```{figure} media/Niveaux_gris.png
+---
+name: fig-repr-img-pixel
+---
+Niveaux de gris, codage sur 8 bits.
+```
+
+
 ````{tabbed} Image
 ```{image} media/kirbygrey.png
 :width: 300px
@@ -178,7 +188,7 @@ Un {glo}`pixel|pixel`, de l'anglais "**pic**ture **el**ement", est le composant 
 ```
 ````
 
-La plupart des images sont représentées au format {glo}`matrice|matriciel`. Une image en niveau de gris sera ainsi généralement codée comme un tableau de valeurs correspondant à la {glo}`luminance|luminance` de chaque pixel. Les valeurs de luminance sont chacune déclarées comme un nombre allant de 0 (blanc) à 255 (noir). Pour encoder une image en niveaux de gris, chaque pixel nécessite dont 8 bits. 
+La plupart des images sont représentées au format {glo}`matrice|matriciel`. Une image en niveau de gris sera ainsi généralement codée comme un tableau de valeurs correspondant à la {glo}`luminance|luminance` de chaque pixel. Les valeurs de luminance sont chacune déclarées comme un nombre allant de 0 (noir) à 255 (blanc). Pour encoder une image en niveaux de gris, chaque pixel nécessite dont 8 bits. 
 
 ```{figure} media/image_et_pixels.svg
 ---
@@ -186,6 +196,8 @@ name: fig-repr-img-pixel
 ---
 Image monochrome, pixels et luminance.
 ```
+
+
 
 Pour accéder à un pixel particulier, il faut en général définir à quelle ligne et à quelle colonne de l'image ce pixel correspond. Le pixel (0,0) correspondra normalement au pixel de la première ligne et de la première colonne.
 
@@ -438,14 +450,18 @@ Les formats matriciels sont Portable Network Graphics (.png), Joint Photographic
 
 ### Définition et résolution
 
-On appelle *définition* le nombre de points (pixel) constituant l'image, c'est-à-dire sa « dimension informatique » (le nombre de colonnes de l'image que multiplie son nombre de lignes). Une image possédant 640 pixels en largeur et 480 en hauteur aura une définition de 640 pixels par 480, notée 640x480.
+On appelle *définition* le nombre de points (pixel) constituant l'image, c'est-à-dire sa « dimension informatique » (le nombre de colonnes de l'image que multiplie son nombre de lignes). Une image possédant 640 pixels en largeur et 480 en hauteur aura une définition de 640 pixels par 480, notée 640x480 soit 307200 pixels.
 
-La *résolution*, terme souvent confondu avec la définition, détermine en revanche le nombre de points par unité de surface, exprimé en points par pouce (PPP, en anglais DPI pour Dots Per Inch), un pouce représentant 2.54 cm. La résolution permet ainsi d'établir le rapport entre le nombre de pixels d'une image et la taille réelle de sa représentation sur un support physique. Une résolution de 300 dpi signifie donc 300 colonnes et 300 rangées de pixels sur un pouce carré ce qui donne donc 90000 pixels sur un pouce carré. La résolution de référence de 72 dpi nous donne un pixel de 1"/72 (un pouce divisé par 72) soit 0.353 mm, correspondant à un point pica (unité typographique anglo saxonne).
+La *résolution*, terme souvent confondu avec la *définition*, détermine en revanche le nombre de points par unité de surface, exprimé en points par pouce (PPP, en anglais DPI pour Dots Per Inch), un pouce représentant 2.54 cm. La résolution permet ainsi d'établir le rapport entre le nombre de pixels d'une image et la taille réelle de sa représentation sur un support physique. Une résolution de 300 dpi signifie donc 300 colonnes et 300 rangées de pixels sur un pouce carré ce qui donne donc 90000 pixels sur un pouce carré. La résolution de référence de 72 dpi nous donne un pixel de 1/72 (un pouce divisé par 72) soit 0.353 mm, correspondant à un point pica (unité typographique anglo saxonne).
+
+Les dimensions d'une image sont donc définies par :
+- largeur = nombre de colonnes / résolution
+- hauteur = nombre de lignes / résolution
 
 ### Compression
 La plupart de ces formats utilisent des algorithmes de compression, afin de réduire la taille de l’image sur les mémoires de masse de l'ordinateur (disque durs, …).
 
-On définit alors le taux de compression par : 1 - taille du fichier image/taille de l'image en mémoire
+On définit alors le taux de compression par : (1 - (taille du fichier image))/(taille de l'image en mémoire)
 
 
 La compression peut être réalisée avec ou sans perte :
@@ -465,9 +481,9 @@ L'image vectorielle est dépourvue de matrice. Elle est en fait créée à parti
 
 
 À l'inverse de l'image matricielle composée de pixels, l'image vectorielle peut être **redimensionnée** sans pour autant perdre en qualité. Elle est contenue dans un **fichier beaucoup plus léger** qu'une image pixelisée, indépendamment de sa taille et de sa résolution.
-En revanche, chaque forme d'une image vectorielle est remplie d'une seule couleur dite solide ou d'un dégradé de couleurs. Elle reste donc **limitée en termes de réalisme**, et donc inutilisable en photographie par exemple. De plus une image vectorielle ne peut être **créée qu'à partir d'un logiciel dédié**. 
+En revanche, chaque forme d'une image vectorielle est remplie d'une seule couleur dite solide ou d'un dégradé de couleurs. Elle reste donc **limitée en termes de réalisme**, et donc inutilisable en photographie par exemple. De plus une image vectorielle ne peut être **créée qu'à partir d'un logiciel dédié**, et n'est pas reconnue par les navigateurs internet.
 
-Les formats vectoriels sont Postscript (.ps) et Encapsulé Postscript (.eps), Adobe Illustrator (AI) et Portable Document Format (PDF).
+Les formats vectoriels les plus courants sont Postscript (.ps) et Encapsulé Postscript (.eps), Adobe Illustrator (AI), Portable Document Format (PDF), WMF (format Windows).
 
 ```{admonition} Micro-activité
 :class: note
@@ -492,10 +508,10 @@ Une œuvre d'art numérique signée Andreas Gysin :
 https://play.ertdfgcvb.xyz/#/src/demos/doom_flame_full_color
 
 
-````{admonition} Exercice 1 : ???
+````{admonition} Exercice 1 : définition
 :class: note
 
-......
+Quelle est la définition d’une feuille scannée de largeur 6,5 pouces, de hauteur 9 pouces en 400 dpi ?
 
 ````
 
