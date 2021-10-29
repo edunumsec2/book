@@ -86,7 +86,7 @@ name: fig-bitmap-1
 height: 250px
 width: 250px
 ---
-Tous les pixels marqués d'un 1 s'affichent en blanc, tous ceux marqués d'un zéro s'affichent en noir. 
+Tous les pixels marqués d'un 1 s'affichent en blanc, tous ceux marqués d'un 0 s'affichent en noir. 
 ```
 
 Ceci nous permet de construire des images simples, et d'une {glo}`resolution|résolution` très faible.
@@ -238,7 +238,7 @@ Système additif et écran au microscope.
 
 Chaque pixel d'une image couleur est donc représenté comme un mélange de ces trois couleurs et donc sous forme de trois entiers. Comme pour les images en niveaux de gris, ces entiers sont généralement représentés sur 8 bits ; les valeurs de luminance sont chacune déclarées comme un nombre allant de 0 (intensité nulle) à 255 (intensité maximale). Pour représenter une image en couleurs il faut donc 8 bits pour le niveau de rouge, 8 bits pour le niveau de vert, et 8 bits pour le niveau de bleu, soit 24 bits. 
 
-Dans l'exemple qui suit, d'autre matrices de 0 et de 1 ont été configurées dans le programme, pour dessiner de nouveaux personnages. À la place de mario, essayez luigi, link, guerrier, tortueninja1, tortueninja2, homer, pikachu, kirby. 
+Dans l'exemple qui suit, d'autres matrices de 0 et de 1 ont été configurées dans le programme, pour dessiner de nouveaux personnages. À la place de mario, essayez luigi, link, guerrier, tortueninja1, tortueninja2, homer, pikachu, kirby. 
 
 ```{codeplay}
 import turtle
@@ -301,7 +301,6 @@ thuglife=[
       [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],   
 ]
 
-<<<<<<< Updated upstream
 
 mario=[
     [1,1,(255,0,0),(255,0,0),(255,0,0), (255,0,0),1,1],
@@ -314,8 +313,6 @@ mario=[
     [1,1,(118,55,18),1,1,(118,55,18),1,1]
 ]
 
-=======
->>>>>>> Stashed changes
 luigi=[
     [1,1,(55,124,38),(55,124,38),(55,124,38), (55,124,38),1,1],
     [1,1,(55,124,38),(55,124,38),(55,124,38),0,(55,124,38),1],
@@ -439,21 +436,6 @@ kirbycouleur=[
 ## source illustrations : https://johanvinet.tumblr.com/
 
 ===
-<<<<<<< Updated upstream
-=======
-mario=[
-    [1,1,(255,0,0),(255,0,0),(255,0,0), (255,0,0),1,1],
-    [1,1,(255,0,0),(255,0,0),(255,0,0),0,(255,0,0),1],
-    [1,1,(252, 233, 142),(0,26,122),(252, 233,142),(0,26,122),1,1],
-    [1,1,(252, 233, 142),(252, 233, 142),(118,55,18),(118,55,18),1,1],
-    [(252, 233, 142),(255,0,0),(0,26,122),(255,0,0),(255,0,0),(0,26,122),(255,0,0),(252, 233, 142)],
-    [1,1,(0,26,122),(0,26,122),(0,26,122),(0,26,122),1,1],
-    [1,1,(0,26,122),(0,26,122),(0,26,122),(0,26,122),1,1],  
-    [1,1,(118,55,18),1,1,(118,55,18),1,1]
-]
-
-
->>>>>>> Stashed changes
 drawImg(mario)
 ```
 
@@ -473,8 +455,8 @@ On appelle *définition* le nombre de points (pixel) constituant l'image, c'est-
 La *résolution*, terme souvent confondu avec la *définition*, détermine en revanche le nombre de points par unité de surface, exprimé en points par pouce (PPP, en anglais DPI pour Dots Per Inch), un pouce représentant 2.54 cm. La résolution permet ainsi d'établir le rapport entre le nombre de pixels d'une image et la taille réelle de sa représentation sur un support physique. Une résolution de 300 dpi signifie donc 300 colonnes et 300 rangées de pixels sur un pouce carré ce qui donne donc 90000 pixels sur un pouce carré. La résolution de référence de 72 dpi nous donne un pixel de 1/72 (un pouce divisé par 72) soit 0.353 mm, correspondant à un point pica (unité typographique anglo saxonne).
 
 Les dimensions d'une image sont donc définies par :
-- largeur = nombre de colonnes / résolution
-- hauteur = nombre de lignes / résolution
+- largeur = nombre de colonnes / résolution,
+- hauteur = nombre de lignes / résolution.
 
 ### Compression
 La plupart de ces formats utilisent des algorithmes de compression, afin de réduire la taille de l’image sur les mémoires de masse de l'ordinateur (disque durs, …).
@@ -497,6 +479,14 @@ Pour reproduire une image sur une feuille, on peut la diviser en grille et défi
 L'image vectorielle est dépourvue de matrice. Elle est en fait créée à partir d'équations mathématiques. Cette image numérique est composée d'objets géométriques individuels, des *primitives géométriques* (segments de droite, arcs de cercle, polygones, etc.), définies chacunes par différents attributs (forme, position, couleur, remplissage, visibilité, etc.) et auxquels on peut appliquer différentes transformations (rotations, écrasement, mise à l'échelle, inclinaison, effet miroir, symétrie, translation, et bien d'autres ...).
 
 
+```{figure} media/matvect.png
+---
+name: fig-bitmap-1
+height: 250px
+width: 400px
+---
+Un même cercle en représentation matricielle et vectorielle. 
+```
 
 À l'inverse de l'image matricielle composée de pixels, l'image vectorielle peut être **redimensionnée** sans pour autant perdre en qualité. Elle est contenue dans un **fichier beaucoup plus léger** qu'une image pixelisée, indépendamment de sa taille et de sa résolution.
 En revanche, chaque forme d'une image vectorielle est remplie d'une seule couleur dite solide ou d'un dégradé de couleurs. Elle reste donc **limitée en termes de réalisme**, et donc inutilisable en photographie par exemple. De plus une image vectorielle ne peut être **créée qu'à partir d'un logiciel dédié**, et n'est pas reconnue par les navigateurs internet.
@@ -505,14 +495,17 @@ Les formats vectoriels les plus courants sont Postscript (.ps) et Encapsulé Pos
 
 ```{admonition} Micro-activité
 :class: note
+<span style="color:green">Niveau débutant</span> ✏️ 📒
+
 Saisissez le texte suivant dans un éditeur de texte et enregistrer le sous forme de fichier *.svg*. Il vous sera ensuite normalement possible d'ouvrir ce fichier avec un logiciel pour afficher les images.
 
 	<svg width="100" height="100"  version="1.1" xmlns="http://www.w3.org/2000/svg">
 	<circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="red"/>
 	</svg>
 
-Modifier le fichier afin de dessiner 4 carrés différents.
+Modifier le fichier afin de dessiner quatre carrés différents.
 ```
+<br>
 
 ```{admonition} Aller plus loin
 :class: note
@@ -525,9 +518,13 @@ Une œuvre d'art numérique signée Andreas Gysin :
 
 https://play.ertdfgcvb.xyz/#/src/demos/doom_flame_full_color
 
+<br>
+<br>
 
 ````{admonition} Exercice 1 : définition
 :class: note
+<span style="color:green">Niveau débutant</span> ✏️ 📒
+
 
 Quelle est la définition d’une feuille scannée de largeur 6,5 pouces, de hauteur 9 pouces en 400 dpi ?
 
@@ -536,6 +533,7 @@ Quelle est la définition d’une feuille scannée de largeur 6,5 pouces, de h
 
 ````{admonition} Exercice 2 : carte graphique
 :class: note
+<span style="color:orange">Niveau intermédiaire</span> ✏️ 📒
 
 1 - Calculer, pour chaque définition d'image et chaque couleur, la taille mémoire nécessaire à l'affichage.
 |  Définition de l'image    |   Noir et blanc | 256 couleurs | 65000 couleurs | True color | 
@@ -570,6 +568,7 @@ C'est la quantité de mémoire vive minimale que nécessite la carte graphique (
 
 ````{admonition} Exercice 3 : compression
 :class: note
+<span style="color:orange">Niveau intermédiaire</span> ✏️ 📒
 
 1. Une image de couleur a pour format : 360 X 270. Elle est enregistrée en bitmap 8 bits. Quelle est sa taille sur le disque dur (détaillez les calculs) ? 
 
@@ -589,16 +588,32 @@ Comme le taux de compression est 50, on divise par 2 : 1048576/2 = 524288 octets
 ````
 
 
-
-
-````{admonition} Exercice 4 : ???
+````{admonition} Exercice 4 : appareil photo
 :class: note
+<span style="color:orange">Niveau intermédiaire</span> ✏️ 📒
+
+
+L’appareil numérique FinePix2400Z (Fujifilm) permet la prise de vue avec trois résolutions : a) 640x480 pixels ; b) 1280x960 pixels ; c) 1600x1200 pixels.
+
+Calculez pour chaque type de résolution la taille de l’image non-compressée.
+
 
 ......
 
 ````
-````{admonition} Exercice 5 : ???
+````{admonition} Exercice 5 : pixelisation
 :class: note
+<span style="color:red">Niveau expert</span> ✏️ 📒
+
+
+Une image numérique de définition 1024×768 mesure 30 cm de large et 20 cm de haut. 
+
+1. Déterminez les dimensions des pixels.
+
+2. On a une photographie de 10 cm sur 5 cm que l'on scanne avec une résolution de 300 ppi. Quelle sera alors la taille de l'image (en nombre de pixels) ?
+
+3. Soit une image 15×9 cm, définie en RVB, que l'on scanne en 72, 300 et 1200 ppi. Quels seront les poids des images, pour une profondeur de 16 bits ?
+
 
 ......
 

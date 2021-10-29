@@ -251,7 +251,7 @@ L'encodage binaire UTF-8 global s'écrit donc, en concaténant les deux charges 
 
 ```{figure} media/UTF8_exemples.png
 ---
-height: 200px
+height: 150px
 width: 600px
 ---
 Exemples de codage UTF-8
