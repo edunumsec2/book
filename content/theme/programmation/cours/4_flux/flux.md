@@ -259,28 +259,35 @@ while x !=  n:
 print()
 print('Bravo. Vous avez réussi')
 ```
+<br>
+
+*Les exercices suivants sont à faire dans l'IDE de votre choix.*
 
 ````{admonition} Exercice 1 : intervalle
 :class: note
+<span style="color:green">Niveau débutant</span> 🔌
 
 Vérifiez si une variable `x` contient une valeur qui est entre deux bornes [a, b].
 ````
 
 ````{admonition} Exercice 2 : question
 :class: note
+<span style="color:green">Niveau débutant</span> 🔌
 
 Faites un programme qui pose une question simple à l'utilisateur. Si sa réponse est juste, affichez `Bravo`.
 ````
 
 ````{admonition} Exercice 3 : âge
 :class: note
+<span style="color:orange">Niveau intermédiaire</span> 🔌
 
 Faites un programme qui demande à l'utilisateur son âge.
-Si l'âge est supérieur ou égal à 18, le programme doit afficher : «Vous êtes majeur, vous pouvez voter» et si l'âge est inférieur à 18, le programme doit afficher: «Vous êtes mineur, vous pourrez voter dans (*calcul de la différence*) année(s).»
+Si l'âge est supérieur ou égal à 18, le programme doit afficher : «Vous êtes majeur, vous pouvez voter» et si l'âge est inférieur à 18, le programme doit afficher : «Vous êtes mineur, vous pourrez voter dans (*calcul de la différence*) année(s).»
 ```` 
 
 ````{admonition} Exercice 4 : jeu
 :class: note
+<span style="color:orange">Niveau intermédiaire</span> 🔌
 
 Faites un programme qui demande à l'utilisateur d'entrer un chiffre entre 0 et 2.
 Si l'utilisateur choisit :
@@ -292,8 +299,10 @@ Si l'utilisateur choisit :
 
 ````{admonition} Exercice 5 : carré
 :class: note
+<span style="color:red">Niveau avancé</span> 🔌
 
 Faites un programme qui affiche un carré de longueur `n` avec le caractère `'x'`, mais vide à l'intérieur.
+Vous pouvez vous appuyer sur les instructions ci-dessous, et utiliser cette console pour effectuer des tests le cas échéant.
 
 ```{codeplay}
 n = int(input('Entrez n: '))
@@ -305,14 +314,16 @@ for i in range(n):
 
 ````{admonition} Exercice 6 : triangle
 :class: note
+<span style="color:red">Niveau avancé</span> 🔌
 
 Faites un programme qui affiche un triangle de hauteur `n` avec des `x`.
 ````
 
-````{admonition} Exercice 7 : rectangle
+````{admonition} Exercice 7 : boite
 :class: note
+<span style="color:black">Niveau expert</span> 🔌
 
-Faites un programme qui affiche une boite de hauteur `a` et de longueur `b` avec des `x`.
-L'intérieur de la boite doit rester vide.
+Faites un programme qui affiche une boite de hauteur `a`, de longueur `b`, de profondeur `c` avec des `x`.
+L'intérieur de la boite doit rester bien entendu vide !
 ```` 
 

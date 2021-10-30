@@ -140,12 +140,13 @@ print(vitesse(3, 12), "km/h")
 
 Il est possible d'utiliser plusieurs arguments dans une fonction en les séparant par une virgule. L'ordre des arguments doit être respecté ; ainsi, `vitesse(12, 3)` ne retournera pas la même valeur que `vitesse(3, 12)` : l'un calcule la vitesse nécessaire pour parcourir 12 kilomètres en 3 heures, alors que l'autre calcule la vitesse nécessaire pour parcourir 3 kilomètres en 12 heures.
 
-**Exercice :** calculez la vitesse d'une voiture qui parcourt la distance Lausanne-Genève (65 km) en 45 minutes.
+***Exercice :*** *calculez la vitesse d'une voiture qui parcourt la distance Lausanne-Genève (65 km) en 45 minutes.*
 
 
 
 ````{admonition} Exercice 1 : Pythagore
 :class: note
+<span style="color:green">Niveau débutant</span> 🔌
 
 Définissez une fonction `pythagore` qui calcule l'hypoténuse d'un triangle rectangle à partir de ses deux cotés.
 La racine carrée peut s'obtenir avec la puissance 0.5.
@@ -158,6 +159,8 @@ print(pythagore(3, 4))
 
 ````{admonition} Exercice 2 : équation quadratique
 :class: note
+<span style="color:red">Niveau avancé</span> 🔌
+
 Faites un programme qui demande à l'utilisateur les coefficients **a, b** et **c** d'une fonction du deuxième degré et qui retourne les solutions de l'équation $ax^2 + bx + d = 0$.
 
 ```{codeplay}

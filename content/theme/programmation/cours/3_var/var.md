@@ -188,10 +188,11 @@ Ceux-ci ne sont pas valides :
 <br>
 <br>
 
-*Faites ces exercices dans l'éditeur de script, et non pas dans la console.*
+*Les exercices suivants sont à faire dans l'IDE de votre choix.*
 
 ````{admonition} Exercice 1 : affectation
 :class: note
+<span style="color:green">Niveau débutant</span> ✏️ 📒
 
 Sans utiliser l'ordinateur, déterminez ce qui va être affiché par les cinq instructions `print` dans ce programme.
 
@@ -212,6 +213,7 @@ Sans utiliser l'ordinateur, déterminez ce qui va être affiché par les cinq in
 
 ````{admonition} Exercice 2 : input
 :class: note
+<span style="color:green">Niveau débutant</span> 🔌
 
 Faites un programme qui demande le **prénom** de l'utilisateur et qui affiche la phrase suivante :
 
@@ -222,12 +224,14 @@ Faites un programme qui demande le **prénom** de l'utilisateur et qui affiche l
 
 ````{admonition} Exercice 3 : cylindre
 :class: note
+<span style="color:orange">Niveau intermédiaire</span> 🔌
 
 Faites un programme qui demande à l'utilisateur la hauteur et le diamètre d'un cylindre et retourne le volume du cylindre avec une phrase complète.
 ````
 
 ````{admonition} Exercice 4 : jeu
 :class: note
+<span style="color:red">Niveau avancé</span> 🔌
 
 Le **cadavre exquis** est un jeu graphique ou d'écriture collectif inventé par les surréalistes, en particulier Jacques Prévert et Yves Tanguy, vers 1925.
 

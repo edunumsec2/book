@@ -603,7 +603,7 @@ Calculez pour chaque type de résolution la taille de l’image non-compressée.
 ````
 ````{admonition} Exercice 5 : pixelisation
 :class: note
-<span style="color:red">Niveau expert</span> ✏️ 📒
+<span style="color:red">Niveau avancé</span> ✏️ 📒
 
 
 Une image numérique de définition 1024×768 mesure 30 cm de large et 20 cm de haut. 

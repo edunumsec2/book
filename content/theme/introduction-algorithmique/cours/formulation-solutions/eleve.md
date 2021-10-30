@@ -149,60 +149,60 @@ Mais est-ce que derrière chaque programme se cache un algorithme ?
 
 
 
-````{admonition} Exercice 1
+````{admonition} Exercice 1 : jeu de la devinette
 :class: note
+<span style="color:green">Niveau débutant</span> 🔌
 
-![](media/plugged.png) Coder le jeu de la devinette.
-
-Le programme pense à un nombre au hasard. Lorsque vous lui porposez un nombre, il vous dit si "c'est plus" ou "si c'est moins" jusqu'à ce que vous ayez trouvé.
+Ecrire le programme suivant : le programme pense à un nombre au hasard. Lorsque vous lui proposez un nombre, il vous dit si «c'est plus» ou «si c'est moins» jusqu'à ce que vous ayez trouvé.
  
 ````
 
-````{admonition} Exercice 2
+````{admonition} Exercice 2 : plus petit nombre
 :class: note
+<span style="color:orange">Niveau intermédiaire</span> 🔌
 
-![](media/plugged.png) Transcrire l’algorithme de l’exercice 5, qui permet de déterminer le plus petit nombre d’une liste, en un programme Python.
+Transcrire l’algorithme de l’exercice qui permet de déterminer le plus petit nombre d’une liste, en un programme Python.
 
 ````
 
-````{admonition} Exercice 3
+````{admonition} Exercice 3 : tris
 :class: note
+<span style="color:red">Niveau avancé</span> 🔌
 
-![](media/plugged.png) Créer une liste qui contient les valeurs de 1 à n dans un ordre aléatoire, où n prend la valeur 100, par exemple. Vous pouvez utiliser la fonction shuffle() du module random.
+Créez une liste qui contient les valeurs de 1 à n dans un ordre aléatoire, où n prend la valeur 100, par exemple. Vous pouvez utiliser la fonction shuffle() du module random.
 
-Implémenter au moins deux des trois algorithmes de tri vu au cours.
-A l’aide du module time et de sa fonction time(), chronométrer le temps que ça prend pour trier une liste de 100, 500, 1000, 10’000, 20’000, 30’000, 40’000 et 50’000 nombres. 
+Implémentez au moins deux des trois algorithmes de tri vu au cours.
+A l’aide du module time et de sa fonction time(), chronométrez le temps prend le tri d'une liste de 100, 500, 1000, 10000, 20000, 30000, 40000 puis 50000 nombres. 
 
-Noter les temps obtenus et les afficher sous forme de courbe dans un tableur. Ce graphique permet de visualiser le temps d’exécution du tri en fonction de la taille de la liste. Que constatez‑vous ?
+Notez les temps obtenus et affichez-les sous forme de courbe dans un tableur. Ce graphique permet de visualiser le temps d’exécution du tri en fonction de la taille de la liste. Que constatez‑vous ?
 
-Sur la base de ces mesures, pouvez-vous estimer le temps que prendrait le tri de 100’000 éléments ?
+Sur la base de ces mesures, pouvez-vous estimer le temps que prendrait le tri de 100000 éléments ?
 
-Lancer votre programme avec 100’000 éléments et comparer le temps obtenu avec votre estimation.
+Lancez votre programme avec 100000 éléments et comparez le temps obtenu avec votre estimation.
 
 ````
 
 
-````{admonition} Exercice 4
+````{admonition} Exercice 4 : Bogosort
 :class: note
+<span style="color:red">Niveau avancé</span> 🔌
 
-![](media/plugged.png) Coder l’algorithme Bogosort en Python (voir Le saviez-vous ? III). 
+Codez l’algorithme Bogosort en Python (voir chapitre 2 : Le saviez-vous ?). 
 
-A partir de quelle taille de liste cet algorithme est inutilisable ?
+A partir de quelle taille de liste cet algorithme est-il inutilisable ?
  
 ````
 
 
-
-
-
-````{admonition} Exercice 5
+````{admonition} Exercice 5 : Fibonacci
 :class: note
+<span style="color:red">Niveau avancé</span> 🔌
 
-![](media/plugged.png) Ecrire un algorithme qui calcule la suite des nombres de Fibonacci. 
+Ecrivez un algorithme qui calcule la suite des nombres de Fibonacci. 
 
-Traduire l’algorithme en une fonction Python. 
+Traduisez l’algorithme en une fonction Python. 
 
-Comparer avec les solutions trouvées par vos camarades de classe.
+Comparez avec les solutions trouvées par vos camarades de classe.
 ````
 
 

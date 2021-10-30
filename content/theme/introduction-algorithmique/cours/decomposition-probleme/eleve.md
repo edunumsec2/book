@@ -31,14 +31,14 @@ Répéter Pour i = 1 à longueur(Nombres) # par pas de 1
 Fin Pour
 ```
 
-````{admonition} Exercice 0
+````{admonition} Exercice-application 0
 :class: note
 
 Que contient la variable résultat à la fin de l'algorithme ci-dessus ? Quel problème cet algorithme permet-il de résoudre ?
 
 ````
 
-````{admonition} Solution de l'exercice 0
+````{admonition} Solution
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -70,19 +70,20 @@ Schéma des ingrédients d'un algorithme.
 
 Notez que les opérations d’un {glo}`algo|algorithme` doivent être précises et ***<span style="color:rgb(13, 204, 166)">non ambigües</span>***. Il doit y avoir une seule interprétation possible de l’{glo}`algo|algorithme`. Une recette de cuisine ne serait pas assez précise pour un ordinateur : il faudrait indiquer précisément ce que température moyenne et mélange homogène veulent dire. Les êtres humains peuvent interpréter, deviner et supposer, mais pas les ordinateurs.
 
-````{admonition} Le saviez-vous ? I
+````{admonition} Le saviez-vous ?
 :class: hint
 
 Le jeu d’instructions élémentaires dépend du système informatique. Un algorithme spécifie des opérations à suivre dans un ordre donné. Ces opérations sont transcrites à travers un programme en instructions élémentaires exécutables par la machine, qui peuvent être très différentes d’un système informatique à l’autre. L’algorithmique permet d’aborder la résolution de problème de manière générale, sans se préoccuper des détails de l’implémentation sur différents systèmes. 
 
 ````
+<br>
 
-````{admonition} Exercice-exemple 1
+````{admonition} Exercice-application 1
 :class: note
 A quoi correspondent les ingrédients d’un algorithme dans l’exemple de la recette de l’omelette ?
 ````
 
-````{admonition} Solution de l'exercice-exemple 1
+````{admonition} Solution
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -92,7 +93,7 @@ Les œufs sont les données en entrée, les opérations correspondent aux instru
 ```
 ````
 
-````{admonition} Exercice-exemple 2
+````{admonition} Exercice-application 2
 :class: note
 
 Ecrire un algorithme qui échange les valeurs de deux variables. Représenter les deux variables par deux cases. Chaque case a une étiquette (le nom de la variable) et un contenu (la valeur de la variable). Représenter le contenu de chaque variable après chaque opération de votre algorithme.
@@ -100,7 +101,7 @@ Ecrire un algorithme qui échange les valeurs de deux variables. Représenter le
 ````
 
 
-`````{admonition} Solution de l'exercice-exemple 2
+`````{admonition} Solution
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -137,13 +138,15 @@ Si on dessine l’état des variables après chacune de ces opérations dans des
 
 `````
 
+<br>
+<br>
 
 
 
-### Exercices 
 
-````{admonition} Exercice 3
+````{admonition} Exercice 1
 :class: note
+<span style="color:green">Niveau débutant</span> ✏️ 📒
 
 L’algorithme suivant contrôle un crayon. Quelle forme dessine-t-il ?
 ```
@@ -153,8 +156,9 @@ Répéter 8 fois :
 ```
 ````
 
-````{admonition} Exercice 4
+````{admonition} Exercice 2
 :class: note
+<span style="color:orange">Niveau intermédiaire</span> ✏️ 📒
 
 Ecrivez un algorithme qui permet de déterminer le plus petit nombre d’une liste. Pensez à décomposer la solution en différentes étapes.
 
@@ -164,8 +168,9 @@ Avez-vous trouvé la bonne solution ? Sinon, modifiez votre algorithme afin qu�
 
 ````
 
-````{admonition} Exercice 5
+````{admonition} Exercice 3
 :class: note
+<span style="color:orange">Niveau intermédiaire</span> ✏️ 📒
 
 On souhaite déterminer l’élève dont la date d’anniversaire est la plus proche de la date d’aujourd’hui dans le futur. Ecrivez un algorithme qui permet de trouver cet élève (utiliser un langage familier). Pensez à décomposer le problème en sous-problèmes. 
 
@@ -175,8 +180,9 @@ Un ordinateur peut-il réaliser les opérations décrites par votre algorithme ?
 
 ````
 
-````{admonition} Exercice 6
+````{admonition} Exercice 4
 :class: note
+<span style="color:red">Niveau avancé</span> ✏️ 📒
 
 Écrivez un algorithme qui effectue la permutation circulaire des variables X, Y et Z : à la fin de l’algorithme, X contient la valeur de Z, Y la valeur de X et Z la valeur de Y. Conseil : pensez à chaque variable comme un tiroir avec une étiquette X, Y ou Z qui contient une valeur. Ce tiroir ne peut stocker qu’une valeur à un moment donné. 
 
@@ -184,8 +190,9 @@ Une fois l’algorithme écrit, représentez les variables par une case qui cont
 
 ````
 
-````{admonition} Exercice 7
+````{admonition} Exercice 5
 :class: note
+<span style="color:red">Niveau avancé</span> ✏️ 📒
 
 Quel est le résultat de la suite des trois affectations suivantes ? Vérifiez votre solution en dessinant une case par variable et en y mettant des valeurs fictives. Suivez les opérations dans l’ordre et dessinez le contenu des variables après chaque étape.
 

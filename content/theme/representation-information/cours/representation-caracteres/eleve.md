@@ -338,7 +338,7 @@ Le symbole Ø correspond à la valeur décimale 8709.
 
 ````{admonition} Exercice 4 : activité Hexadécimal
 :class: note
-<span style="color:red">Niveau expert</span> ✏️ 📒
+<span style="color:red">Niveau avancé</span> ✏️ 📒
 
 Nous avons vu au cours du chapitre précédent deux systèmes de numération, décimal et binaire. Il existe également un troisième système de numération très utilisé, le système hexadécimal, visible par ailleurs sur les tables. Le système binaire permet d'exprimer n'importe quel nombre en base 2 (soit 0, soit 1), le système décimal en base 10 (de 0 à 9) - c'est notre mode de représentation usuel. Le système hexadécimal permet d'exprimer n'importe quel nombre en base 16 : de 0 à 9... puis les lettres A, B, C, D, E, F.
 

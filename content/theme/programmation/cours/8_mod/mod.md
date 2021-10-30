@@ -160,13 +160,17 @@ Plus d'infos sous [Python - Tortue graphique](https://docs.python.org/fr/3/libra
 
 ````{admonition} Exercice 1 : Pythagore (toujours...)
 :class: note
+<span style="color:green">Niveau débutant</span> 🔌
+
 Faites un programme permettant de retourner la valeur en degré d'un des angles quelconques d'un triangle rectangle.
 
-Le programme doit demander à l'utilisateur les longueurs des côtés opposé et adjacent par rapport à l'angle à calculer ainsi que de l'hypoténuse. Si l'utilisateur ne connait pas la longueur d'un côté, il doit inscrire un **x** comme longueur du côté manquant. Avec ces informations, le programme doit retourner la valeur de l'angle en degrés.
+Le programme doit demander à l'utilisateur les longueurs des côtés opposé et adjacent par rapport à l'angle à calculer, ainsi que de l'hypoténuse. Avec ces informations, le programme doit retourner la valeur de l'angle en degrés.
 ```` 
 
 ````{admonition} Exercice 2 : jeu
 :class: note
+<span style="color:orange">Niveau intermédiaire</span> 🔌
+
 Faites un programme contre lequel on peut jouer à feuille-cailloux-ciseaux.
 
 Le programme doit demander à l'utilisateur de faire son choix parmi les trois possibilités. Si l'utilisateur fait un choix qui n'existe pas, le programme retourne une information et repose la question. L'ordinateur doit faire un choix aléatoire. Le programme doit confronter le choix de l'utilisateur et celui de l'ordinateur puis retourner une information sur le gagnant du jeu.
@@ -176,17 +180,16 @@ Ce programme peut être amélioré en mettant en œuvre un système de score, de
 
 ````{admonition} Exercice 3 : étoile
 :class: note
+<span style="color:red">Niveau avancé</span> 🔌
+
 Dessinez une étoile avec la tortue.
 ````
 
 ````{admonition} Exercice 4 : maison
 :class: note
-Dessinez une maison comprenant une porte et une fenêtre avec la tortue.
-```` 
+<span style="color:red">Niveau avancé</span> 🔌
 
-````{admonition} Exercice 5 : ???
-:class: note
-......
+Dessinez une maison comprenant une porte et une fenêtre avec la tortue.
 ```` 
 
 
