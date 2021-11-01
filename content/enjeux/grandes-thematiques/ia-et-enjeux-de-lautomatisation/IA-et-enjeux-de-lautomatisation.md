@@ -121,11 +121,27 @@ En 2015, l’histoire de l’IA est à nouveau marquée par une victoire de la m
 Ces exemples montrent que les technologies de l’IA peuvent s’avérer plus performantes que l’être humain dans des situations précises. Ces domaines de performance correspondent à des environnements fermés, où le but est fixé à l’avance. C’est le cas du jeu d’échec et du jeu de Go. La logique d’opposition est également privilégiée par le contexte du jeu et du calcul de la performance de la machine contre le joueur. Mais cette logique élude tout le travail que l’humain a consacré au développement de ses programmes, sans lequel l’exploit ne peut pas avoir lieu. 
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-  <b>⚒ Le travail au défi de l'automatisation</b>
+  <b>🛠 Le travail au défi de l'automatisation</b>
 </div>
 
 <br>
 La logique de l’opposition entre l’être humain et la machine, souvent thématisé en science-fiction et reprise dans la présentation des victoires de Deep Blue et AlphaGo, est à l’origine d’une crainte quant au remplacement des travailleurs et travailleuses humains par des systèmes automatisés. En 2013, une étude menée par des chercheurs de l’Université d’Oxford conclut que 47% des emplois ont une forte probabilité de disparaître compte tenu des avancées dans le domaine de l’apprentissage automatique. Des erreurs méthodologiques sont rapidement identifiées et discrédites les résultats de la recherche. Le sociologue Antonio Casilli (EHESS) souligne que les auteurs de l’étude d’Oxford ne prennent pas en compte les résistances sociales souvent engendrées par la suppression de postes de travail.
+
+Dans un [article scientifique](https://www.aeaweb.org/articles?id=10.1257/jep.29.3.3) publié en 2015, l’économiste David H. Autor (MIT) démontre que les peurs liées au remplacement du travail de l’être humain par la machine ne sont ni nouvelles, ni fondées. Au début du 19e siècle, en Grande Bretagne, des travailleurs de l’industrie du textile détruisent des machines qu’ils accusent de provoquer le chômage. Si l’automatisation de certaines tâches a bien eu lieu au cours du 20e siècle et continue aujourd’hui encore, [l’évolution des taux de chômage de différents pays](https://data.oecd.org/unemp/unemployment-rate.htm) ne reflètent pas une baisse drastique de l’emploi.
+
+**Déplacement, pas remplacement**
+
+
+<div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
+  <b>L'IA et nos pratiques numériques</b>
+</div>
+
+<br>
+Où?
+
+Biais
+
+
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
   <b>Réguler</b>
