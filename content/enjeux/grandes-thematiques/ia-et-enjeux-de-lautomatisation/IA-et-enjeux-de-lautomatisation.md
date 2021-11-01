@@ -125,7 +125,7 @@ Ces exemples montrent que les technologies de l’IA peuvent s’avérer plus pe
 </div>
 
 <br>
-
+La logique de l’opposition entre l’être humain et la machine, souvent thématisé en science-fiction et reprise dans la présentation des victoires de Deep Blue et AlphaGo, est à l’origine d’une crainte quant au remplacement des travailleurs et travailleuses humains par des systèmes automatisés. En 2013, une étude menée par des chercheurs de l’Université d’Oxford conclut que 47% des emplois ont une forte probabilité de disparaître compte tenu des avancées dans le domaine de l’apprentissage automatique. Des erreurs méthodologiques sont rapidement identifiées et discrédites les résultats de la recherche. Le sociologue Antonio Casilli (EHESS) souligne que les auteurs de l’étude d’Oxford ne prennent pas en compte les résistances sociales souvent engendrées par la suppression de postes de travail.
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
   <b>Réguler</b>
