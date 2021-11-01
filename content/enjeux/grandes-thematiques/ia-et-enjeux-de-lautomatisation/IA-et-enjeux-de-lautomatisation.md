@@ -85,7 +85,7 @@ Afin de faire la lumière sur les impacts, les forces et les faiblesses de l’i
 
 Trouver une définition générale de l’IA est un exercice difficile car il s’agit en fait d’un ensemble de technologies particulières. Historiquement, on différencie principalement deux approches : d’un côté l’IA symbolique vise à reproduire le raisonnement humain sous la forme de règles statiques pour l’intégrer à des machines. C’est sur ce principe que reposent les **systèmes experts**. De l’autre, l’IA connexionniste est un ensemble de techniques qui apprend à partir des grands volumes de données, également appelés ***big data***. Elle comprend l’**apprentissage automatique** ou ***machine learning*** et l’**apprentissage profond** ou ***deep learning***. Cette dernière se base sur des modèles de **réseaux de neurones**, superposés en plusieurs couches pour permettre l’établissement de règles complexes. 
 
-Aujourd'hui, l'IA est principalement utilisée à des fins prédictives. À partir d'importantes quantités d'information connues, les données, elle établit des modèles statistiques qui serviront ensuite à prédire des faits ou des comportements. 
+Aujourd’hui, l’IA est principalement utilisée à des fins prédictives. À partir d’importants volumes d’informations connues, les données, des modèles statistiques sont mis au point et servent ensuite à prédire des faits ou des comportements.
 
 
 **L'IA - Entre science et fiction**
@@ -192,6 +192,8 @@ Jean-Gabriel Ganascia (2017), Le mythe de la Singularité. Faut-il craindre l’
 https://www2.deloitte.com/ch/fr/pages/press-releases/articles/deloitte-in-switzerland-smartphones-become-control-centre.html
 </p>
 
+<p id="footnote-3"> [3] Sara Ibrahim, "Des vaccins en un temps record grâce à l'intelligence artificielle" 
+https://www.swissinfo.ch/fre/ai-e-vaccini_des-vaccins-en-un-temps-record--l-intelligence-artificielle-apporte-sa-contribution-%C3%A0-la-science/46260326
 ### Ressources 
 
 * [Le sous-chapitre](https://www.boullier.bzh/livres/boullier-dominique-sociologie-du-numerique/) "Science-fiction et mythologie du numérique" du livre *Sociologie du numérique* (2016) de Dominique Boullier pour une discussion concernant les liens entre la science-fiction et le numérique. (303-306)
