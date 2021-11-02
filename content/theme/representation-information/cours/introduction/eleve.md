@@ -6,7 +6,7 @@ Dans ce chapitre nous allons nous concentrer sur la représentation de l'informa
 
 ````{admonition} Le saviez-vous ?
 :class: hint
-Le mot **informatique** est la concaténation de **information** et **automatique**.
+Le mot **informatique** est la concaténation de "information" et "automatique".
 ````
 
 En informatique, l'information est un élément de connaissance (texte, image, son, etc.) susceptible d'être {glo}`numerisation|numérisé`, {glo}`stockage|stocké` et/ou {glo}`transmission|transmis` à l'aide d'un support et d'un mode de codification normalisé.
@@ -107,7 +107,7 @@ Dans l'exemple ci-dessus, on utilise les lettres de l'alphabet, mais il est plus
 
 ### Le télégraphe de Chappe
 
-Grâce à l'invention du [télescope](https://fr.wikipedia.org/wiki/T%C3%A9lescope) au XVII<sup>e</sup> siècle, les distances avec lesquelles les villes pouvaient communiquer entre elles ont largement augmenté. L'information a commencé à circuler à une vitesse étonnante. 
+Grâce à l'invention du [télescope](https://fr.wikipedia.org/wiki/T%C3%A9lescope) au XVII<sup>e</sup> siècle, les distances avec lesquelles les villes pouvaient communiquer entre elles ont largement augmenté. L'information a commencé à circuler à une vitesse étonnante. Des messages pouvaient être transmis sur une longue distance par l'intermédiaire de relais espacés d'une dizaine de kilomètres et situés sur des hauteurs. 
 
 [Claude Chappe](https://fr.wikipedia.org/wiki/Claude_Chappe), inventeur français, développe en 1794 un {glo}`telegraphe|télégraphe` capable de relier des villes entre elles sur plusieurs dizaines de kilomètres grâce à un système de bras mobiles, qui ressemblent aux signaux que pourrait faire un être humain sur le tarmac d'un aéroport. 
 
@@ -134,7 +134,7 @@ Grâce à la découverte de l'électricité au début du XIX<sup>e</sup> siècle
 
 Bien sûr, le Morse peut être utilisé aussi avec des signaux lumineux, ou sonores, mais la plupart du temps il est utilisé sur les lignes électriques qui se développent à l'époque. 
 
-[Vous trouverez ici](https://morsedecoder.com/) un traducteur du language naturel vers le Morse. 
+[Vous trouverez ici](https://morsedecoder.com/) un traducteur du langage naturel vers le Morse. 
 
 ````{figure} media/morse.png
 ---
@@ -152,7 +152,7 @@ Amusez-vous avec votre assistant vocal en lui demandant par exemple : "Salut Sir
 
 ````{admonition} Le saviez-vous ? 
 :class: hint
-À l'époque où les transmissions télégraphiques en code Morse sont payées à l'unité d'information, donc la lettre, des codex spécifiques sont développés par les utilisateurs pour utiliser le moins de caractères possibles. C'est exactement la même situation qui s'est produite avec l'arrivée des [SMS](https://fr.wikipedia.org/wiki/Short_Message_Service) dans les années 2000, où les utilisateurs payaient au caractère. Aujourd'hui, même s'il est rare de payer à l'unité d'information, ce genre de raccourcis existent encore, mais surtout pour un avantage de vitesse. 
+À l'époque où les transmissions télégraphiques en code Morse sont payées à l'unité d'information, donc la lettre, des codex spécifiques sont développés par les utilisateurs pour utiliser le moins de caractères possibles. C'est exactement la même situation qui s'est produite avec l'arrivée des [SMS](https://fr.wikipedia.org/wiki/Short_Message_Service) dans les années 1990, où les utilisateurs payaient au caractère. Aujourd'hui, même s'il est rare de payer à l'unité d'information, ce genre de raccourcis existent encore, mais surtout pour un avantage de vitesse. 
 ```{image} media/morsecodeshort.png
 :height: 350px
 :width: 300px
@@ -162,9 +162,7 @@ Le désavantage de ces codex d'abbréviations est leur faible degré de standard
 La réponse à cette question est l'apport le plus essentiel de l'introduction du code binaire, et des standards de représentation de l'information qui l'ont suivi : un langage pour les contrôler tous. 
 ````
 
-Si vous observez le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), vous remarquerez que les signaux utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet. 
-
-Ceci est une extension de la réponse à la question ci-dessus, puisqu'il est logique de coder les lettres les plus fréquentes avec les signaux les plus courts. 
+Si vous observez le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), vous remarquerez que les signaux utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet, puisqu'il est plus économique de coder les lettres les plus fréquentes avec les codes les plus courts. 
 
 ```{figure} media/letterdistribution.png
 ---
