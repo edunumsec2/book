@@ -125,11 +125,16 @@ Ces exemples montrent que les technologies de l’IA peuvent s’avérer plus pe
 </div>
 
 <br>
-La logique de l’opposition entre l’être humain et la machine, souvent thématisé en science-fiction et reprise dans la présentation des victoires de Deep Blue et AlphaGo, est à l’origine d’une crainte quant au remplacement des travailleurs et travailleuses humains par des systèmes automatisés. En 2013, une étude menée par des chercheurs de l’Université d’Oxford conclut que 47% des emplois ont une forte probabilité de disparaître compte tenu des avancées dans le domaine de l’apprentissage automatique. Des erreurs méthodologiques sont rapidement identifiées et discrédites les résultats de la recherche. Le sociologue Antonio Casilli (EHESS) souligne que les auteurs de l’étude d’Oxford ne prennent pas en compte les résistances sociales souvent engendrées par la suppression de postes de travail.
+La logique de l’opposition entre l’être humain et la machine, souvent thématisé en science-fiction et reprise dans la présentation des victoires de Deep Blue et AlphaGo, entretient la crainte du remplacement des travailleurs et travailleuses humains par des systèmes automatisés. En 2013, une étude menée par des chercheurs de l’Université d’Oxford conclut que 47% des emplois ont une forte probabilité de disparaître compte tenu des avancées dans le domaine de l’apprentissage automatique. Des erreurs méthodologiques sont rapidement identifiées et discrédites les résultats de cette recherche. Le sociologue Antonio Casilli (EHESS) souligne que les auteurs de l’étude d’Oxford ne prennent pas en compte les résistances sociales souvent engendrées par la suppression de postes de travail.
 
 Dans un [article scientifique](https://www.aeaweb.org/articles?id=10.1257/jep.29.3.3) publié en 2015, l’économiste David H. Autor (MIT) démontre que les peurs liées au remplacement du travail de l’être humain par la machine ne sont ni nouvelles, ni fondées. Au début du 19e siècle, en Grande Bretagne, des travailleurs de l’industrie du textile détruisent des machines qu’ils accusent de provoquer le chômage. Si l’automatisation de certaines tâches a bien eu lieu au cours du 20e siècle et continue aujourd’hui encore, [l’évolution des taux de chômage de différents pays](https://data.oecd.org/unemp/unemployment-rate.htm) ne reflètent pas une baisse drastique de l’emploi.
 
 **Déplacement, pas remplacement**
+
+Dans son livre « En attendant les robots » (Seuil, 2019) Antionio Casilli déconstruit la croyance du remplacement du travail de l’être humain par les machines et les IA. Selon l’auteur, les emplois ne disparaissent pas, mais se transforment. Avec l’arrivée des grands noms du numérique (voir dossier thématique économie du numérique), le phénomène de polarisation du travail semble s’amplifier. D’un côté, on constate une forte demande pour les métiers hautement spécialisés, de l’autre, un besoin croissant de main d’œuvre peu qualifiée pour effectuer des tâches répétitives et standardisées. 
+
+Cette deuxième catégorie comprend tout le travail d’entraînements des algorithmes 
+Il est peu réglementé et effectué par des personnes en situation précaire. 
 
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
@@ -139,7 +144,15 @@ Dans un [article scientifique](https://www.aeaweb.org/articles?id=10.1257/jep.29
 <br>
 Où?
 
-Biais
+Les biais
+Dans le domaine des statistiques, le biais correspond à une erreur méthodologique qui engendre de faux résultats. Il peut être causé lors de la sélection d’un échantillon non-représentatif ou par la manière de collecter les données. Les algorithmes des IA, dont les choix sont déterminés par des calculs exploitant différents types de données, sont également à l’origine de nombreux biais. 
+Au début du mois de septembre 2021, une ancienne employée de Facebook dénonce un biais raciste dans l’algorithme de suggestion de la plateforme. Au bas d’une vidéo dans laquelle figure des personnes noires, une bannière demande à l’utilisateur s’il ou elle souhaite continuer à « voir des vidéos sur des primates ». À la suite de cet épisode, Facebook admet que cette erreur est inacceptable s’excuse. Mais comment un tel scénario est-il possible? Pour le savoir, il faut comprendre le fonctionnement des techniques de reconnaissance automatique d’image.
+
+Lorsqu’un programme est mis au point pour reconnaître des images, un volume important de données (dans ce cas, d’images) est nécessaire pour apprendre à reconnaitre les différentes formes qui la composent. Des techniques d’apprentissage automatique supervisés permettent par exemple de faire la différence entre ce qui est un visage et ce qui ne l’est pas. Dans le cas de l’algorithme de Facebook, la base de données utilisées ne contenait vraisemblablement pas assez d’exemples représentant des personnes de couleurs.
+
+L’enjeu des biais se situe au niveaux de la qualité des bases de données disponibles pour entrainer les algorithmes; si les données ne sont pas représentatives de la diversité des individus, des biais seront inévitablement reproduits. L’utilisation de systèmes d’apprentissage automatique dans les processus de prise de décision n’étant pas limité aux pratiques en ligne, les risques de voir ces biais se reproduire sont réels. Dans son ouvrage « Weapons of Math Destruction » (2016, Crown Books), la mathématicienne Cathy O’Neil met en garde contre l’utilisation des big data et des algorithmes dans le domaine des assurances, du recrutement et des forces de l’ordre. Elle explique que la délégation d’importantes prises de décision à des programme automatiques est dangereuse car elle renforce les inégalités existantes dans la société. 
+
+Pour contrer cette tendance de reproduction numérique des biais, l’ingénieure Joy Buolamwini  (MIT) a crée la plateforme « Algorithmic Justice League ». Elle propose de rendre le domaine de l’IA plus inclusif, en s’assurant notamment que les spécialistes représentent la diversité de la société. 
 
 
 
