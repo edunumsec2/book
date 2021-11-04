@@ -1,9 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Informatique au Gymnase / Enseignant.es
+title: Enseigner
 author: Groupe de travail DGEP, EPFL, HEP, UNIL
-logo: logo1.svg
+logo: logo_modulo.svg
 # exclude_patterns: ['**/eleve.md']
 
 # Force re-execution of notebooks on each build.
