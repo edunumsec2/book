@@ -17,25 +17,12 @@ parts:
       - file: content/theme/representation-information/cours/representation-caracteres/eleve
       - file: content/theme/representation-information/cours/representation-images/eleve
       - file: content/theme/representation-information/cours/representation-son/eleve
-      #- file: content/theme/representation-information/cours/systeme-arithmetique-binaire/eleve
-      # note : commenté car non fini - file: content/theme/representation-information/cours/stockage-manipulation-donnees/eleve
       - file: content/theme/representation-information/cours/redondance/eleve
       - file: content/theme/representation-information/cours/conclusion/eleve
-      #### Exercices
-      # basculé dans maître - file: content/theme/representation-information/exercices/eleve
-        # sections:
-          #- file: content/theme/representation-information/exercices/representation-caracteres/carte-perforee/exercice
-      #### Activités (basculées dans version maître)
-     # - file: content/theme/representation-information/activites/eleve
-     #   sections:
-     #     - file: content/theme/representation-information/activites/representation-entiers/magie-binaire/magie_binaire
-     #     - file: content/theme/representation-information/activites/redondance/radiotelephonie/activite
-
 
   ### Programmation    
   - file: content/theme/programmation/accueil/elevenew
     sections:
-      # - file: content/theme/programmation/cours/0_intro/intro
       - file: content/theme/programmation/cours/1_intro/intro 
       - file: content/theme/programmation/cours/2_pyth/pyth
       - file: content/theme/programmation/cours/3_var/var
@@ -61,29 +48,10 @@ parts:
     sections:
       - file: content/theme/architecture-ordinateurs/cours/0_introduction_/eleve
       - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/eleve
-#        sections:
-#         - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/1_portes-logiques/eleve
-#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/2_de-logique-a-arithmetique/eleve
-#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/3_de-logique-a-la-memoire/eleve
       - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/eleve
-#        sections:
-#          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/alu-bascules/eleve
-#          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/architecture-von-neumann/eleve
-#          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/microprocesseur/eleve
       - file: content/theme/architecture-ordinateurs/cours/3_composants/eleve
       - file: content/theme/architecture-ordinateurs/cours/4_conclusion/eleve
-#      - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler
-#        sections: 
-#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SystemesLogiques
-#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL1_bases
-#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL2_portes
-#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL3_sl
-#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL4_avance
-#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL5_conclusion
-#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/Corrige_SystemesLogiques
-      # - file: content/theme/architecture-ordinateurs/cours/histoire-informatique/eleve
 
-## Deuxième année
 - caption: Deuxième année
   numbered: false
   chapters:
@@ -105,8 +73,6 @@ parts:
   chapters:
   - file: content/annexes/0_annexes
     sections:
-  #  - file: content/annexes/art/referencesart
-  #  - file: content/annexes/art/histoireart
     - file: content/annexes/references/liens
   - file: content/annexes/prolongements/introduction
     sections:
