@@ -2,9 +2,10 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Apprendre
+subtitle: Version du 25 octobre 2021
 author: Groupe de travail DGEP, EPFL, HEP, UNIL
 logo: logo_modulo.svg
-exclude_patterns: ['**/maitre.md', 'content/skel/**']
+exclude_patterns: ['**/maitre.md', 'content/skel/**', '**/old_**']
 
 #######################################################################################
 # Execution settings
