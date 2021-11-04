@@ -47,9 +47,9 @@ parts:
   - file: content/theme/archi-ordis/accueil/eleve
     sections:
       - file: content/theme/archi-ordis/cours/0_intro/eleve
-      - file: content/theme/archi-ordis/cours/1_systemes-logiques/eleve
-      - file: content/theme/archi-ordis/cours/2_microprocesseurs/eleve
-      - file: content/theme/archi-ordis/cours/3_composants/eleve
+      - file: content/theme/archi-ordis/cours/1_sys-log/eleve
+      - file: content/theme/archi-ordis/cours/2_micro-pro/eleve
+      - file: content/theme/archi-ordis/cours/3_comp/eleve
       - file: content/theme/archi-ordis/cours/4_conclusion/eleve
 
 - caption: Deuxième année
