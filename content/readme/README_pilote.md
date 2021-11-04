@@ -1,6 +1,7 @@
-# Informatique au Gymnase
+ ````{image} modulo_banner3.svg
+````
 
-![chatbot](https://user-images.githubusercontent.com/73947555/117774857-301d3580-b23a-11eb-9657-2eeebb19fde3.png)
+# Informatique au Gymnase
 
 ````{admonition} Ces ressources sont en cours de rédaction
 :class: caution
