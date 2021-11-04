@@ -60,17 +60,15 @@ Ce dossier aborde le vaste sujet que forment l’intelligence artificielle (IA) 
 ## Objectifs
 
 * Comprendre le contexte d’émergence de l’intelligence artificielle
-* Différencier l’IA symbolique et connexionniste
 * Connaître les forces et les faiblesses de l’IA
-* Comprendre les enjeux relatifs à la délégation des prises de décisions 
-* Prendre conscience des différentes manières de réguler les pratiques liées à l’IA
+* Prendre conscience des défis de l'automatisation en matière de délégation et de régulation
 
 
-## Introduction
+##
 
-<br>
+La quête d’une forme d’intelligence artificielle n’est pas nouvelle et apparait dans la littérature dès 1818 avec le fameux roman *Frankenstein* de Mary Shelley. Plus tard, la science-fiction en fera également un thème central et récurrent, des premiers robots rebelles de la pièce R.U.R. (Čapek, 1920) à la voix artificielle de Her du film homonyme (Spike Jonze, 2013). Ces personnages sont des exemples d’**intelligence artificielle forte**, ils sont autonomes et dotés d’une conscience. L’impact des histoires et des images issues de la science-fiction sont perceptibles dans certaines représentations, fantasmes et inquiétudes suscitées par l’IA. Mais les récits fictifs qui mobilisent diverses formes d’IA n’ont pas la prétention de prédire l’avenir. De plus, les techniques actuelles se limitent à de l’**intelligence artificielle faible**, centrées sur une tâche précise. 
 
-La quête d’une forme d’intelligence artificielle n’est pas nouvelle et apparait dans la littérature dès 1818 avec le fameux roman « Frankenstein» de Mary Shelley. Plus tard, la science-fiction en fera également un thème central et récurrent, des premiers robots rebelles de la pièce R.U.R. (Čapek, 1920) à la voix artificielle de Her du film homonyme (Spike Jonze, 2013). Ces personnages sont des exemples d’**intelligence artificielle forte**, ils sont autonomes et dotés d’une conscience. L’impact des histoires et des images issus de la science-fiction sont perceptibles dans certaines représentations, fantasmes et inquiétudes suscitées par l’IA. Mais les récits fictifs qui mobilisent diverses formes d’IA n’ont pas la prétention de prédire l’avenir. De plus, les techniques actuelles se limitent à de l’**intelligence artificielle faible**, centrées sur une tâche précise. La lecture des récits de science-fiction permet surtout d’identifier des problématiques centrales concernant les aspects philosophiques, sociaux ou juridiques autours de l’IA. Le retour en force de l’IA observé depuis le début des années 2010 nous amènent à réfléchir à certaines questions longtemps restreintes au monde de la fiction. Quelle place accorde-t-on à l’IA et à ses technologies ? Sont-elles pensées en opposition ou au contraire, avec l’intelligence humaine ? Qui est responsable en cas de problème généré par une machine ?
+La lecture des récits de science-fiction permet surtout d’identifier des problématiques centrales concernant les aspects philosophiques, sociaux ou juridiques autours de l’IA. Le retour en force de l’IA observé depuis le début des années 2010 nous amène à réfléchir à certaines questions longtemps restreintes au monde de la fiction. Quelle place accorde-t-on à l’IA et à ses technologies ? Sont-elles pensées en opposition ou au contraire, avec l’intelligence humaine ? Qui est responsable en cas de problème généré par une machine ?
 
 Pour apporter des pistes de réflexion, un rappel du contexte d’émergence de l’IA est proposé avant de présenter trois enjeux contemporains propres à ses utilisations.
 
@@ -84,7 +82,7 @@ Pour apporter des pistes de réflexion, un rappel du contexte d’émergence de 
 
 L’émergence des premières techniques dites d’intelligence artificielle s’inscrit dans le courant de pensée de la cybernétique, fondé par le mathématicien Norbert Wiener à la fin des années 1940 aux États-Unis. Ce mouvement interdisciplinaire considère que tous les systèmes vivants (humains et animaux) et matériel (machines) sont régulés par une loi générale basée sur des boucles de rétroaction ou feedback. Cette conjecture permet de placer les humains et les machines sur un pied d’égalité quant à leur fonctionnement. Elle promeut une vision formaliste et donc simplificatrice du fonctionnement du vivant. Bien que réductrice, cette approche permettra notamment d’envisager les premières théories concernant l’intelligence artificielle basée sur le raisonnement humain.
 
-L’engouement autour de la cybernétique s’essouffle à la moitié des années 1960, mais son influence reste aujourd’hui encore perceptible dans de nombreux domaines scientifiques tels que les sciences cognitives, l’informatique et bien sur les recherches en IA.
+L’engouement autour de la cybernétique s’essouffle à la moitié des années 1960, mais son influence reste aujourd’hui encore perceptible dans de nombreux domaines scientifiques tels que les sciences cognitives, l’informatique et bien sûr, les recherches en IA.
 
 **« Les machines peuvent-elles penser ? »**
 
@@ -96,16 +94,18 @@ Au-delà de la pertinence du jeu de l’imitation, sa conceptualisation permet d
 
 **Création d’un domaine scientifique**
 
-Le terme intelligence artificielle ou plutôt artificial intelligence en anglais, apparaissent pour la première fois en 1955, aux États-Unis. Quatre scientifiques formés en mathématique et en neurologie organisent une conférence d’été au Dartmouth College, afin de discuter et de réfléchir aux questions de programmation et de langage des ordinateurs, de réseaux de neurones, de puissance de calcul et d’auto-apprentissage. Mises ensemble, ces disciplines forment un nouveau domaine appelé intelligence artificielle.
+Le terme intelligence artificielle ou plutôt artificial intelligence en anglais, apparait pour la première fois en 1955 aux États-Unis. Quatre scientifiques formés en mathématiques et en neurologie organisent une conférence d’été au Dartmouth College, afin de réfléchir aux questions de programmation et de langage des ordinateurs, de réseaux de neurones, de puissance de calcul et d’auto-apprentissage. Mises ensemble, ces disciplines forment un nouveau domaine appelé "intelligence artificielle".
 Dans leur [proposition de projet](http://jmc.stanford.edu/articles/dartmouth/dartmouth.pdf) les auteurs expliquent leur approche de la manière suivante :
 
 *« L’étude devra se dérouler sur la base de la conjecture que chaque aspect de l’apprentissage ou toute autre caractéristique de l’intelligence peut, en principe, être décrit avec une telle précision qu’une machine peut être conçue pour la simuler »*
 
-L’un des but motivant les premières recherches en IA est explicitement de reproduire l’intelligence humaine. Comme Turing avant eux, les pionniers de l’IA partent du principe que le fonctionnement du raisonnement humain est suffisamment compris pour être modélisé. Certes, cette approche permet d’ouvrir la voie dans certains domaines bien précis. Cependant, l’intelligence humaine ne se limitent pas à un processus logique, mesurable et individuel contrairement aux idées des pionniers de l’IA. Cette conception est en fait porteuse d’un paradoxe : pour pouvoir modéliser et reproduire artificiellement l’intelligence, elle est réduite à des fonctions définies. Or, les notions d’intelligence sociale, émotionnelle ou créative sont exclues du problème. La notion du corps est également totalement absente de ces considérations.
+L’un des buts motivant les premières recherches en IA est explicitement de reproduire l’intelligence humaine. Comme Turing avant eux, les pionniers de l’IA partent du principe que le fonctionnement du raisonnement humain est suffisamment compris pour être modélisé. 
+
+Certes, cette approche permet d’ouvrir la voie dans certains domaines bien précis. Cependant, l’intelligence humaine ne se limite pas à un processus logique, mesurable et individuel contrairement aux idées des pionniers de l’IA. Cette conception est en fait porteuse d’un paradoxe : pour pouvoir modéliser et reproduire artificiellement l’intelligence, elle est réduite à des fonctions définies. Or, les notions d’intelligence sociale, émotionnelle ou créative sont exclues du problème. La notion du corps est également totalement absente de ces considérations.
 
 **Courants symbolique et connexionniste**
 
-Trouver une définition générale de l’IA est un exercice difficile car il s’agit en fait d’un ensemble de technologies particulières. Historiquement, on différencie principalement deux approches, avec d’un côté l’IA symbolique qui vise à reproduire le raisonnement humain sous la forme de règles statiques pour l’intégrer à des machines. C’est sur ce principe que reposent l’ordinateur du jeu de l’imitation et les systèmes experts. De l’autre, l’IA connexionniste est un ensemble de techniques d’apprentissage basées sur de grands volumes de données. Elle comprend l’apprentissage automatique ou machine learning et l’apprentissage profond ou deep learning. Cette dernière utilise des modèles de réseaux de neurones, superposés en plusieurs couches pour établir des règles complexes de manière autonome. 
+Trouver une définition générale de l’IA est un exercice difficile car il s’agit en fait d’un ensemble de technologies particulières. Historiquement, on différencie principalement deux approches.D'un côté, l’**IA symbolique** qui vise à reproduire le raisonnement humain sous la forme de règles statiques pour l’intégrer à des machines. C’est sur ce principe que reposent l’ordinateur du jeu de l’imitation et plus généralement les **systèmes experts**. De l’autre, l’**IA connexionniste** est un ensemble de techniques d’apprentissage basées sur de grands volumes de données. Elle comprend l’**apprentissage automatique** ou machine learning et l’**apprentissage profond** ou deep learning. Cette dernière utilise des modèles de **réseaux de neurones**, superposés en plusieurs couches pour établir des règles complexes de manière autonome. 
 
 Les techniques d’IA sont principalement utilisées à des fins prédictives. À partir d’importants volumes d’informations connues, des modèles statistiques sont mis au point et servent ensuite à prédire des faits ou des comportements. 
 
