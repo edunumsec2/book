@@ -10,60 +10,60 @@ parts:
   numbered: false
   chapters:
   ### Représentation de l'information
-  - file: content/theme/representation-information/accueil/eleve
+  - file: content/theme/rep-info/accueil/eleve
     sections:
-      - file: content/theme/representation-information/cours/introduction/eleve
-      - file: content/theme/representation-information/cours/representation-entiers/eleve
-      - file: content/theme/representation-information/cours/representation-caracteres/eleve
-      - file: content/theme/representation-information/cours/representation-images/eleve
-      - file: content/theme/representation-information/cours/representation-son/eleve
-      - file: content/theme/representation-information/cours/redondance/eleve
-      - file: content/theme/representation-information/cours/conclusion/eleve
+      - file: content/theme/rep-info/cours/intro/eleve
+      - file: content/theme/rep-info/cours/entiers/eleve
+      - file: content/theme/rep-info/cours/caracteres/eleve
+      - file: content/theme/rep-info/cours/images/eleve
+      - file: content/theme/rep-info/cours/son/eleve
+      - file: content/theme/rep-info/cours/redondance/eleve
+      - file: content/theme/rep-info/cours/conclusion/eleve
 
   ### Programmation    
-  - file: content/theme/programmation/accueil/elevenew
+  - file: content/theme/prog-1/accueil/elevenew
     sections:
-      - file: content/theme/programmation/cours/1_intro/intro 
-      - file: content/theme/programmation/cours/2_pyth/pyth
-      - file: content/theme/programmation/cours/3_var/var
-      - file: content/theme/programmation/cours/4_flux/flux
-      - file: content/theme/programmation/cours/5_list/list
-      - file: content/theme/programmation/cours/6_dict/dict
-      - file: content/theme/programmation/cours/7_fonc/fonc
-      - file: content/theme/programmation/cours/8_mod/mod
-#     - file: content/theme/programmation/cours/9_app/app 
-      - file: content/theme/programmation/cours/10_conclusion/concl 
+      - file: content/theme/prog-1/cours/1_intro/intro 
+      - file: content/theme/prog-1/cours/2_pyth/pyth
+      - file: content/theme/prog-1/cours/3_var/var
+      - file: content/theme/prog-1/cours/4_flux/flux
+      - file: content/theme/prog-1/cours/5_list/list
+      - file: content/theme/prog-1/cours/6_dict/dict
+      - file: content/theme/prog-1/cours/7_fonc/fonc
+      - file: content/theme/prog-1/cours/8_mod/mod
+#     - file: content/theme/prog-1/cours/9_app/app 
+      - file: content/theme/prog-1/cours/10_conclusion/concl 
 
   ### Algorithmique         
-  - file: content/theme/introduction-algorithmique/accueil/eleve
+  - file: content/theme/algo-1/accueil/eleve
     sections:
-      - file: content/theme/introduction-algorithmique/cours/intro
-      - file: content/theme/introduction-algorithmique/cours/decomposition-probleme/eleve
-      - file: content/theme/introduction-algorithmique/cours/algorithmes-classiques/eleve
-      - file: content/theme/introduction-algorithmique/cours/formulation-solutions/eleve
-      - file: content/theme/introduction-algorithmique/cours/consequences-automatisation/eleve
+      - file: content/theme/algo-1/cours/intro
+      - file: content/theme/algo-1/cours/decomposition-probleme/eleve
+      - file: content/theme/algo-1/cours/algorithmes-classiques/eleve
+      - file: content/theme/algo-1/cours/formulation-solutions/eleve
+      - file: content/theme/algo-1/cours/consequences-automatisation/eleve
 
   ### Architecture des ordinateurs    
-  - file: content/theme/architecture-ordinateurs/accueil/eleve
+  - file: content/theme/archi-ordis/accueil/eleve
     sections:
-      - file: content/theme/architecture-ordinateurs/cours/0_introduction_/eleve
-      - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/eleve
-      - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/eleve
-      - file: content/theme/architecture-ordinateurs/cours/3_composants/eleve
-      - file: content/theme/architecture-ordinateurs/cours/4_conclusion/eleve
+      - file: content/theme/archi-ordis/cours/0_intro/eleve
+      - file: content/theme/archi-ordis/cours/1_systemes-logiques/eleve
+      - file: content/theme/archi-ordis/cours/2_microprocesseurs/eleve
+      - file: content/theme/archi-ordis/cours/3_composants/eleve
+      - file: content/theme/archi-ordis/cours/4_conclusion/eleve
 
 - caption: Deuxième année
   numbered: false
   chapters:
-  - file: content/theme/algorithmique-avancee/0_landing
+  - file: content/theme/algo-2/0_landing
     sections:
-      - file: content/theme/algorithmique-avancee/cours/introduction/eleve
-      - file: content/theme/algorithmique-avancee/cours/terminaison/eleve
-      - file: content/theme/algorithmique-avancee/cours/complexite/eleve
-      - file: content/theme/algorithmique-avancee/cours/heuristiques/eleve
-      - file: content/theme/algorithmique-avancee/cours/recursivite/eleve
-      - file: content/theme/algorithmique-avancee/cours/conclusion/eleve
-  - file: content/theme/programmation-avancee/eleve
+      - file: content/theme/algo-2/cours/introduction/eleve
+      - file: content/theme/algo-2/cours/terminaison/eleve
+      - file: content/theme/algo-2/cours/complexite/eleve
+      - file: content/theme/algo-2/cours/heuristiques/eleve
+      - file: content/theme/algo-2/cours/recursivite/eleve
+      - file: content/theme/algo-2/cours/conclusion/eleve
+  - file: content/theme/prog-2/eleve
   - file: content/theme/projets/accueil/eleve
   - file: content/theme/reseaux/accueil/eleve
 
