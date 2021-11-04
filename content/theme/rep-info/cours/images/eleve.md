@@ -1,4 +1,4 @@
-# 3. Représentation des images
+# 3. Les images
 
 
 <!-- ````{role} prof
