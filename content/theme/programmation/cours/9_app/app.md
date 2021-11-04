@@ -10,6 +10,7 @@ kernelspec:
   language: python
   name: python3
 ---
+... ... à reventiler
 
 # Programmation appliquée
 

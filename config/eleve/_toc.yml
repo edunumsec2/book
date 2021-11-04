@@ -16,10 +16,11 @@ parts:
       - file: content/theme/representation-information/cours/representation-entiers/eleve
       - file: content/theme/representation-information/cours/representation-caracteres/eleve
       - file: content/theme/representation-information/cours/representation-images/eleve
-      - file: content/theme/representation-information/cours/numerisation/eleve
+      - file: content/theme/representation-information/cours/representation-son/eleve
       #- file: content/theme/representation-information/cours/systeme-arithmetique-binaire/eleve
       # note : commenté car non fini - file: content/theme/representation-information/cours/stockage-manipulation-donnees/eleve
       - file: content/theme/representation-information/cours/redondance/eleve
+      - file: content/theme/representation-information/cours/conclusion/eleve
       #### Exercices
       # basculé dans maître - file: content/theme/representation-information/exercices/eleve
         # sections:
@@ -43,11 +44,13 @@ parts:
       - file: content/theme/programmation/cours/6_dict/dict
       - file: content/theme/programmation/cours/7_fonc/fonc
       - file: content/theme/programmation/cours/8_mod/mod
-      - file: content/theme/programmation/cours/9_app/app 
+#     - file: content/theme/programmation/cours/9_app/app 
+      - file: content/theme/programmation/cours/10_conclusion/concl 
 
   ### Algorithmique         
   - file: content/theme/introduction-algorithmique/accueil/eleve
     sections:
+      - file: content/theme/introduction-algorithmique/cours/intro
       - file: content/theme/introduction-algorithmique/cours/decomposition-probleme/eleve
       - file: content/theme/introduction-algorithmique/cours/algorithmes-classiques/eleve
       - file: content/theme/introduction-algorithmique/cours/formulation-solutions/eleve
@@ -56,27 +59,28 @@ parts:
   ### Architecture des ordinateurs    
   - file: content/theme/architecture-ordinateurs/accueil/eleve
     sections:
-      - file: content/theme/architecture-ordinateurs/cours/0_introduction/eleve
+      - file: content/theme/architecture-ordinateurs/cours/0_introduction_/eleve
       - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/eleve
-        sections:
-          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/1_portes-logiques/eleve
-          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/2_de-logique-a-arithmetique/eleve
-          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/3_de-logique-a-la-memoire/eleve
+#        sections:
+#         - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/1_portes-logiques/eleve
+#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/2_de-logique-a-arithmetique/eleve
+#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/3_de-logique-a-la-memoire/eleve
       - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/eleve
-        sections:
-          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/alu-bascules/eleve
-          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/architecture-von-neumann/eleve
-          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/microprocesseur/eleve
+#        sections:
+#          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/alu-bascules/eleve
+#          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/architecture-von-neumann/eleve
+#          - file: content/theme/architecture-ordinateurs/cours/2_microprocesseurs/microprocesseur/eleve
       - file: content/theme/architecture-ordinateurs/cours/3_composants/eleve
-      - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler
-        sections: 
-          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SystemesLogiques
-          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL1_bases
-          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL2_portes
-          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL3_sl
-          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL4_avance
-          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL5_conclusion
-          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/Corrige_SystemesLogiques
+      - file: content/theme/architecture-ordinateurs/cours/4_conclusion/eleve
+#      - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler
+#        sections: 
+#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SystemesLogiques
+#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL1_bases
+#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL2_portes
+#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL3_sl
+#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL4_avance
+#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/SL5_conclusion
+#          - file: content/theme/architecture-ordinateurs/cours/1_systemes-logiques/a-ventiler/Corrige_SystemesLogiques
       # - file: content/theme/architecture-ordinateurs/cours/histoire-informatique/eleve
 
 ## Deuxième année
@@ -85,11 +89,12 @@ parts:
   chapters:
   - file: content/theme/algorithmique-avancee/0_landing
     sections:
+      - file: content/theme/algorithmique-avancee/cours/introduction/eleve
       - file: content/theme/algorithmique-avancee/cours/terminaison/eleve
       - file: content/theme/algorithmique-avancee/cours/complexite/eleve
       - file: content/theme/algorithmique-avancee/cours/heuristiques/eleve
-      - file: content/theme/algorithmique-avancee/cours/conclusion/eleve
       - file: content/theme/algorithmique-avancee/cours/recursivite/eleve
+      - file: content/theme/algorithmique-avancee/cours/conclusion/eleve
   - file: content/theme/programmation-avancee/eleve
   - file: content/theme/projets/accueil/eleve
   - file: content/theme/reseaux/accueil/eleve

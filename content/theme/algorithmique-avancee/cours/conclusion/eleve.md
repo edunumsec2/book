@@ -1,7 +1,5 @@
-<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
+# *Conclusion*
 
-Conclusion
-==========
 
 ```{admonition} Ai-je compris ?
 :class: hint
@@ -36,15 +34,15 @@ Pour des problèmes difficiles, s’il est impossible de trouver la solution exa
 ```{admonition} À retenir
 :class: danger
 
-Il est important de garantir qu’un algorithme va se **<span style="color:rgb(89, 51, 209)">terminer</span> pour être utile en pratique.
+Il est important de garantir qu’un algorithme va se **<span style="color:rgb(89, 51, 209)">terminer</span>** pour être utile en pratique.
 
-Les algorithmes de tri rapide et de tri par fusion sont plus efficaces que les algorithmes de tri vus précédemment. Ceci est possible grâce à la stratégie algorithmique **<span style="color:rgb(89, 51, 209)">« diviser pour régner »</span>, qui divise un grand problème difficile à résoudre en plein de petits sous-problèmes plus faciles à résoudre. La solution au grand problème s’obtient en combinant les solutions des petits problèmes. 
+Les algorithmes de tri rapide et de tri par fusion sont plus efficaces que les algorithmes de tri vus précédemment. Ceci est possible grâce à la stratégie algorithmique **<span style="color:rgb(89, 51, 209)">« diviser pour régner »</span>**, qui divise un grand problème difficile à résoudre en plein de petits sous-problèmes plus faciles à résoudre. La solution au grand problème s’obtient en combinant les solutions des petits problèmes. 
 
-L’**<span style="color:rgb(89, 51, 209)">ordre de complexité des algorithmes</span> nous dit si un algorithme est lent ou rapide. Un algorithme  avec un ordre de complexité logarithmique est plus rapide qu’un algorithme avec complexité linéaire, qui en retour est plus rapide qu’un algorithme de complexité quadratique.
+L’**<span style="color:rgb(89, 51, 209)">ordre de complexité des algorithmes</span>** nous dit si un algorithme est lent ou rapide. Un algorithme  avec un ordre de complexité logarithmique est plus rapide qu’un algorithme avec complexité linéaire, qui en retour est plus rapide qu’un algorithme de complexité quadratique, ou pire exponentielle.
 
-Une **<span style="color:rgb(89, 51, 209)">fonction récursive</span>** est une fonction qui fait appel à soi-même. Une condition d’arrêt est nécessaire pour que l’algorithme se termine.
+Une **<span style="color:rgb(89, 51, 209)">fonction récursive</span>** est une fonction qui fait appel à elle-même. Une condition d’arrêt est nécessaire pour que l’algorithme se termine.
 
-Un algorithme avec un ordre de **<span style="color:rgb(89, 51, 209)">complexité exponentielle</span>** implique que le temps nécessaire pour résoudre un problème est trop long en pratique. Dans ce cas, on ne va pas pouvoir trouver une solution exacte, mais seulement une solution approchée en utilisant des méthodes heuristiques.
+Un algorithme avec un ordre de **<span style="color:rgb(89, 51, 209)">complexité exponentiel</span>** implique que le temps nécessaire pour résoudre un problème est trop long en pratique. Dans ce cas, on ne va pas pouvoir trouver une solution exacte, mais seulement une solution approchée en utilisant des méthodes heuristiques.
 
 ```
 

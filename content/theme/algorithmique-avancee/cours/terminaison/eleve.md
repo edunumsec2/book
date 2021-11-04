@@ -1,7 +1,6 @@
-<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
 
-Terminaison des algorithmes
-===========================
+# 1. Terminaison des algorithmes
+
 
 ````{admonition} Matière à réfléchir I
 :class: attention
@@ -42,14 +41,14 @@ Voici un exemple d’{glo}`algo|algorithme` qui compte et ne se termine pas :
 
 Si on exécute cet {glo}`algo|algorithme`, le {glo}`programme|programme` ne s’arrête jamais : `i` est {glo}`incrementation|incrémenté` de `1` indéfiniment.  En pratique, si on retranscrit cet {glo}`algo|algorithme` en {glo}`programme|programme` et que l’on exécute le {glo}`programme|programme`, le {glo}`programme|programme` finira par s’arrêter lorsque les nombres représentés seront trop grands pour être représentés.
 
-```{admonition} Exercice 0
+```{admonition} Exercice 1
 :class: note
 
 Retranscrire l’algorithme infini en programme. Après combien de boucles le programme s’arrête‑t‑il ?
 
 ```
 
-````{admonition} Solution de l'exercice 0
+````{admonition} Solution
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -72,14 +71,14 @@ Pour être certains que le {glo}`programme|programme` finit par s’arrêter, no
  Fin Tant que
  ```
 
- ```{admonition} Exercice 1
+ ```{admonition} Exercice 2
 :class: note
 
 L’algorithme ci-dessus est appelé « Algorithme qui compte toujours infini ». Pourquoi est-il toujours infini ? Dans quel cas cet algorithme ne s’arrête jamais ?
 
 ```
 
-````{admonition} Solution de l'exercice 1
+````{admonition} Solution
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>

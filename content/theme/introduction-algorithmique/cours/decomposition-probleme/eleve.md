@@ -1,12 +1,10 @@
-<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 20 avril 2021</span>
 
+## 1. Pensée algorithmique et principes
 
-L'algorithme
-============
 
 Un {glo}`algo|algorithme` est en quelque sorte « une recette » que l’on suit pour **<span style="color:rgb(89, 51, 209)">résoudre un problème</span>**. Voici quelques exemples de problèmes que l’on arrive à résoudre numériquement : calculer le trajet le plus rapide entre deux lieux, gérer les livres d’une bibliothèque, détecter des visages dans une photographie ou recommander des produits. ***<span style="color:rgb(13, 204, 166)">L’algorithme n’est donc pas un programme</span>***. Un {glo}`algo|algorithme` ne se code pas, il ne s’exécute pas et il ne donne pas de solution concrète. L’{glo}`algo|algorithme` décrit plutôt un « mode d’emploi » que l’on peut suivre pour créer un {glo}`programme|programme`. C’est le {glo}`programme|programme` qui sera exécuté par un système informatique pour concrètement résoudre le problème.
 
-## Résolution d'un problème par étapes
+### Résolution d'un problème par étapes
 
 Un mode d’emploi ou une recette décrivent **<span style="color:rgb(89, 51, 209)">des étapes</span>** à suivre. La préparation des ingrédients, la cuisson ou le service sont différentes étapes d’une recette de cuisine qu’une personne peut suivre pour réaliser un plat. Prenons un cas précis : ***<span style="color:rgb(13, 204, 166)">réaliser une omelette</span>***. Pour chaque étape de la préparation de l’omelette, il faut prévoir une marche à suivre suffisamment détaillée, afin que la personne qui suit la recette arrive au même résultat. Dans le cas de l’omelette, les opérations pourraient être (voir figure ci-dessous) : 
 
@@ -33,14 +31,14 @@ Répéter Pour i = 1 à longueur(Nombres) # par pas de 1
 Fin Pour
 ```
 
-````{admonition} Exercice 0
+````{admonition} Exercice-application 0
 :class: note
 
-Que contient la variable résultat à la fin de l'algorithme ci-dessus ? Quel  problème cet algorithme permet-il de résoudre ?
+Que contient la variable résultat à la fin de l'algorithme ci-dessus ? Quel problème cet algorithme permet-il de résoudre ?
 
 ````
 
-````{admonition} Solution de l'exercice 0
+````{admonition} Solution
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -50,7 +48,7 @@ L’algorithme permet de calculer la somme des nombres contenus dans la liste No
 ```
 ````
 
-« Chaque étape d’un algorithme doit être définie précisément » (Knuth, D. E., 2011). En effet, si on ne décompose pas suffisemment la solution du problème, on peut se retrouver face à une recette inutile, par exemple : prendre des œufs et réaliser une omelette. Cette recette ne nous dit pas vraiment comment procéder pour arriver à faire une omelette.
+« Chaque étape d’un algorithme doit être définie précisément » (Knuth, D. E., 2011). En effet, si on ne décompose pas suffisamment la solution du problème, on peut se retrouver face à une recette inutile, par exemple : prendre des œufs et réaliser une omelette. Cette recette ne nous dit pas vraiment comment procéder pour arriver à faire une omelette...
 
 ### Les ingrédients d’un algorithme
 
@@ -60,9 +58,9 @@ Entre l’{glo}`input|entrée` et la {glo}`output|sortie`, l’{glo}`algo|algori
 
 Le dernier ingrédient d’un {glo}`algo|algorithme`, mais tout aussi important, est l’**<span style="color:rgb(89, 51, 209)">ordre des opérations</span>**. Dans l’exemple de l’omelette, on ne peut cuire les œufs avant de les avoir cassés, sans quoi on obtiendrait des œufs durs. L’ordinateur a besoin de recevoir les instructions élémentaires à exécuter dans le bon ordre. Pour résumer, les ingrédients pour concevoir un {glo}`algo|algorithme` sont les suivants : 
 
-1. Des {glo}`data|données` en {glo}`input|entrée`
-2. Des opérations, dans un ordre précis
-3. Un résultat en {glo}`output|sortie`
+1. Des {glo}`data|données` en {glo}`input|entrée`.
+2. Des opérations, dans un ordre précis.
+3. Un résultat en {glo}`output|sortie`.
 
 ```{figure} media/Diagramme_algorithme.png
 
@@ -72,19 +70,20 @@ Schéma des ingrédients d'un algorithme.
 
 Notez que les opérations d’un {glo}`algo|algorithme` doivent être précises et ***<span style="color:rgb(13, 204, 166)">non ambigües</span>***. Il doit y avoir une seule interprétation possible de l’{glo}`algo|algorithme`. Une recette de cuisine ne serait pas assez précise pour un ordinateur : il faudrait indiquer précisément ce que température moyenne et mélange homogène veulent dire. Les êtres humains peuvent interpréter, deviner et supposer, mais pas les ordinateurs.
 
-````{admonition} Le saviez-vous ? I
+````{admonition} Le saviez-vous ?
 :class: hint
 
 Le jeu d’instructions élémentaires dépend du système informatique. Un algorithme spécifie des opérations à suivre dans un ordre donné. Ces opérations sont transcrites à travers un programme en instructions élémentaires exécutables par la machine, qui peuvent être très différentes d’un système informatique à l’autre. L’algorithmique permet d’aborder la résolution de problème de manière générale, sans se préoccuper des détails de l’implémentation sur différents systèmes. 
 
 ````
+<br>
 
-````{admonition} Exercice 1
+````{admonition} Exercice-application 1
 :class: note
 A quoi correspondent les ingrédients d’un algorithme dans l’exemple de la recette de l’omelette ?
 ````
 
-````{admonition} Solution de l'exercice 1
+````{admonition} Solution
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -94,15 +93,15 @@ Les œufs sont les données en entrée, les opérations correspondent aux instru
 ```
 ````
 
-````{admonition} Exercice 2
+````{admonition} Exercice-application 2
 :class: note
 
-Ecrire un algorithme qui échange les valeurs de 2 variables. Représenter les deux variables par deux cases. Chaque case a une étiquette (le nom de la variable) et un contenu (la valeur de la variable). Représenter le contenu de chaque variable après chaque opération de votre algorithme.
+Ecrire un algorithme qui échange les valeurs de deux variables. Représenter les deux variables par deux cases. Chaque case a une étiquette (le nom de la variable) et un contenu (la valeur de la variable). Représenter le contenu de chaque variable après chaque opération de votre algorithme.
 
 ````
 
 
-`````{admonition} Solution de l'exercice 2
+`````{admonition} Solution
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -139,13 +138,15 @@ Si on dessine l’état des variables après chacune de ces opérations dans des
 
 `````
 
+<br>
+<br>
 
 
 
-## Exercices 
 
-````{admonition} Exercice 3
+````{admonition} Exercice 1
 :class: note
+<span style="color:green">Niveau débutant</span> ✏️ 📒
 
 L’algorithme suivant contrôle un crayon. Quelle forme dessine-t-il ?
 ```
@@ -155,41 +156,45 @@ Répéter 8 fois :
 ```
 ````
 
-````{admonition} Exercice 4
+````{admonition} Exercice 2
 :class: note
+<span style="color:orange">Niveau intermédiaire</span> ✏️ 📒
 
-Ecrire un algorithme qui permet de déterminer le plus petit nombre d’une liste. Penser à décomposer la solution en différentes étapes.
+Ecrivez un algorithme qui permet de déterminer le plus petit nombre d’une liste. Pensez à décomposer la solution en différentes étapes.
 
-Appliquer l’algorithme à la liste [3,6,2,8,1,9,7,5].
+Appliquez l’algorithme à la liste [3, 6, 2, 8, 1, 9, 7, 5].
 
-Avez-vous trouvé la bonne solution ? Si non, modifier votre algorithme afin qu’il permette de trouver la bonne solution.
+Avez-vous trouvé la bonne solution ? Sinon, modifiez votre algorithme afin qu’il permette de trouver la bonne solution.
 
 ````
 
-````{admonition} Exercice 5
+````{admonition} Exercice 3
 :class: note
+<span style="color:orange">Niveau intermédiaire</span> ✏️ 📒
 
-On souhaite déterminer l’élève dont la date d’anniversaire est la plus proche de la date d’aujourd’hui dans le futur. Ecrire un algorithme qui permet de trouver cet élève (utiliser un langage familier). Penser à décomposer le problème en sous-problèmes. 
+On souhaite déterminer l’élève dont la date d’anniversaire est la plus proche de la date d’aujourd’hui dans le futur. Ecrivez un algorithme qui permet de trouver cet élève (utiliser un langage familier). Pensez à décomposer le problème en sous-problèmes. 
 
-Comparer votre solution à celle d’un autre élèves : avez-vous procédé de la même manière ? Si non, expliquez vos raisonnements.
+Comparez votre solution à celle d’un autre élève : avez-vous procédé de la même manière ? Si non, expliquez vos raisonnements.
 
 Un ordinateur peut-il réaliser les opérations décrites par votre algorithme ?
 
 ````
 
-````{admonition} Exercice 6
+````{admonition} Exercice 4
 :class: note
+<span style="color:red">Niveau avancé</span> ✏️ 📒
 
-Écrire un algorithme qui effectue la permutation circulaire des variables X, Y et Z: à la fin de l’algorithme : X contient la valeur de Z, Y la valeur de X et Z la valeur de Y. Conseil : penser à chaque variable comme un tiroir avec une étiquette X, Y ou Z qui contient une valeur. Ce tiroir ne peut stocker qu’une valeur à un moment donné. 
+Écrivez un algorithme qui effectue la permutation circulaire des variables X, Y et Z : à la fin de l’algorithme, X contient la valeur de Z, Y la valeur de X et Z la valeur de Y. Conseil : pensez à chaque variable comme un tiroir avec une étiquette X, Y ou Z qui contient une valeur. Ce tiroir ne peut stocker qu’une valeur à un moment donné. 
 
-Une fois l’algorithme écrit, représenter les variables par une case qui contient des valeurs de votre choix. Suivre les opérations de l’algorithme une après l’autre et dessiner leur impact sur le contenu des variables. Est-ce que votre algorithme donne le résultat attendu ? Si non, modifier votre algorithme afin qu’il permette de résoudre le problème correctement.
+Une fois l’algorithme écrit, représentez les variables par une case qui contient des valeurs de votre choix. Suivez les opérations de l’algorithme une après l’autre et dessinez leur impact sur le contenu des variables. Est-ce que votre algorithme donne le résultat attendu ? Si non, modifiez votre algorithme afin qu’il permette de résoudre le problème correctement.
 
 ````
 
-````{admonition} Exercice 7
+````{admonition} Exercice 5
 :class: note
+<span style="color:red">Niveau avancé</span> ✏️ 📒
 
-Quel est le résultat de la suite des trois affectations suivantes ? Vérifier votre solution en dessinant une case par variable et en y mettant des valeurs fictives. Suivre les opérations dans l’ordre et dessiner le contenu des variables après chaque étape.
+Quel est le résultat de la suite des trois affectations suivantes ? Vérifiez votre solution en dessinant une case par variable et en y mettant des valeurs fictives. Suivez les opérations dans l’ordre et dessinez le contenu des variables après chaque étape.
 
 ```
 X ← X + Y

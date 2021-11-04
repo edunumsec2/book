@@ -1,13 +1,13 @@
-# Structures de contrôle
+# 3. Structures de contrôle
 
-Jusqu'à maintenant un programme était une **séquence linéaire**.
-Les instructions s'exécutaient
+Jusqu'à présent un programme était envisagé comme une **séquence linéaire**.
+Les instructions s'exécutaient :
 
 - les unes après les autres,
 - de haut en bas,
 - chacune une seule fois.
 
-Dans cette section nous allons voir des structures de contrôle qui permet de changer cette séquence purement linéaire:
+Dans cette section nous allons aborder les structures de contrôle qui permettent de changer cette séquence purement linéaire :
 
 - L'**instruction conditionnelle**  permet de ne pas exécuter certaines instructions.
 - La **boucle** permet d'exécuter certaines instructions plusieurs fois.
@@ -18,21 +18,21 @@ On appelle **bloc** une ou plusieurs instructions qui forment un ensemble.
 En C ou JavaScript un bloc est délimité avec des accolades `{...}`.
 L'indentation est encouragé mais reste optionnelle.
 
-En Python l'indentation est obligatoire. C'est la façon officiel de designer un bloc.
-Ceci a deux avantages:
+En Python l'indentation est obligatoire. C'est la façon officielle de designer un bloc.
+Ceci présente deux avantages :
 
-- pas besoin d'accolades pour délimiter une bloc
-- la structure des blocs est clair et visuel
+- pas besoin d'accolades pour délimiter une bloc,
+- la structure des blocs est claire et visuelle.
 
 Une **indentation** est un retrait du code par rapport à la marge gauche de 4 caractères.
 Elle peut être insérée avec la touche tabulateur **TAB** (symbolisée par une flèche à gauche du clavier).
 
 Une suite d'instructions indentée de la même manière forme un bloc.
-Ces blocs se trouvent dans
+Ces blocs se trouvent dans :
 
 - la définition de fonction (`def`),
-- l'instruction conditionnelle (`if-else`)
-- la boucles (`for`, `while`)
+- l'instruction conditionnelle (`if-else`),
+- la boucles (`for`, `while`).
 
 En Python le symbole `:` en fin de ligne introduit un sous-bloc qui doit être indenté.
 Voici des sous-blocs à la suite des mot-clés `def`, `if`, `else`, `for`.
@@ -50,11 +50,11 @@ for i in range(3):
     print('itération', i) 
 ```
 
-Dans l'exemple suivant nous avons deux fois une boucle qui fait 3 itérations.
+Dans l'exemple suivant nous avons deux fois une boucle qui fait trois itérations.
 
-Dans la première boucle l'instruction `print('dedans')` fait parti du bloc d'itération et elle est exécutée 3 fois.
+Dans la première boucle l'instruction `print('dedans')` fait partie du bloc d'itération et elle est exécutée trois fois.
 
-Dans la deuxième boucle l'instruction `print('dehors')` ne fait pas parti du bloc d'itération et elle est exécutée seulement 1 fois.
+Dans la deuxième boucle l'instruction `print('dehors')` ne fait pas partie du bloc d'itération et elle est exécutée seulement une fois.
 
 ```{codeplay}
 for i in range(3):
@@ -67,19 +67,21 @@ for i in range(3):
 print('dehors')
 ```
 
-## Opérations de comparaison
+## <span commented>La comparaison</span>
+On peut être amené, dans un programme, à comparer des résultats issus de traitements divers, via par exemple l'utilisation de formules différentes, ou tout simplement comparer le résultat d'un calcul avec une valeur test.
+Python connait six types de comparaisons :
 
-Les 6 opérateurs de comparaison permettent de comparer 2 valeurs.
+- plus petit - inférieur strictement (`<`),
+- plus petit ou égal - inférieur ou égal (`<=`),
+- égal (`==`),
+- différent (`!=`),
+- plus grand - supérieur strictement (`>`),
+- plus grand ou égal - supérieur ou égal (`>=`).
 
-- plus grand que (`>`)
-- plus petit que (`<`)
-- plus petit ou égal à (`<=`)
-- plus grand ou égal à (`>=`)
-- égal à (`==`)
-- non égal à (`!=`)
+Le résultat d'une comparaison est une valeur qui est soit vraie, soit fausse. C'est une valeur dite _booléenne_. En Python, ces deux valeurs sont représentées avec les mots clés `True` et `False`.
 
-Dans l'exemple suivant nous affectons une valeur à la variable `a` et nous effectuons 3 comparaisons.
-Le résultat d'une comparaison est une valeur booléenne (valeur logique) qui prend la valeur `True` ou `False`
+Voici quelques exemples :
+
 
 ```{codeplay}
 a = 3
@@ -88,8 +90,8 @@ print(a < 2)
 print(a != 2)
 ```
 
-**Note**:
-Ne confondez pas l'opérateur d'_affectation_ (`=`) avec l'opérateur de _comparaison_ (`==`).
+**Note** :
+ne pas confondre l'opérateur d'_affectation_ (`=`) avec l'opérateur de _comparaison_ (`==`).
 
 ```{codeplay}
 a = 2           # affectation
@@ -101,7 +103,7 @@ print(a == 2)   # comparaison
 
 L'instruction `if` permet d'exécuter un bloc si une condition est vraie, sinon le programme suit son cours sans exécuter ce bloc.
 
-L'exemple suivant affiche `majeur` si l'âge est plus grand ou égale à 18.
+L'exemple suivant affiche `majeur` si l'âge est plus grand ou égal à 18.
 
 ```{codeplay}
 age = 21
@@ -113,7 +115,7 @@ if age >= 18:
 ## L'instruction if...else
 
 L'instruction `if...else` permet de choisir entre deux blocs selon une condition.
-Si la condition est vraie, le bloc **if** est exécuté; sinon, le bloc **else** est exécuté.
+Si la condition est vraie, le bloc **if** est exécuté ; sinon, le bloc **else** est exécuté.
 
 ```{codeplay}
 note = 4.5
@@ -126,7 +128,7 @@ else:
 
 ## L'instruction if...elif...else
 
-L'instruction `if...elif...else` permet d'exécuter un bloc d'instruction si une condition est vraie. Si la première condition n'est pas remplie, une autre est testée.
+L'instruction `if...elif...else` permet d'exécuter un bloc d'instructions si une condition est vraie. Si la première condition n'est pas remplie, une autre est testée.
 
 ```{codeplay}
 n = -3
@@ -144,8 +146,8 @@ else:
 
 Les opérateurs logiques permettent de combiner deux valeurs logiques.
 
-- et logique (`and`)
-- ou logique (`or`)
+- et logique (`and`),
+- ou logique (`or`).
 
 Pour tester si un nombre x est dans l'intervalle (a, b) il faut combiner deux comparaisons avec une opération logique.
 
@@ -162,10 +164,10 @@ if (x < a) or (b < x):
     print(x, "est dehors l'interval (", a, '...', b, ')')
 ```
 
-L'opérateur `not` inverse de la valeur logique.
+L'opérateur `not` inverse la valeur logique.
 
-- `True` devient `False`
-- `False` devient `True`
+- `True` devient `False`,
+- `False` devient `True`.
 
 Une double inversion revient à l'identité.
 
@@ -182,21 +184,22 @@ print('not not p =', not not p)
 ## La boucle for
 
 Le boucle `for` permet d'itérer sur un ensemble de valeurs.
-Par exemple une chaine de texte est un ensemble de caractères.
+Le mot **itérer** signifie parcourir l'ensemble et assumer une valeur particulière à chaque fois,
+en passant dans l'ordre, de la première à la dernière valeur.
 
-Le mot **itérer** veut dire de parcourir l'ensemble et assumer une valeur particulière à chaque tour,
-en passant dans l'ordre, de la première valeur à la dernière.
+Une chaine de caractères étant un ensemble de caractères, on va pouvoir "itérer" sur un texte par exemple.
 
-Dans l'exemple suivant nous itérons à travers la chaine `'hello'`
+
+Dans l'exemple suivant on itère à travers la chaine `'hello'`.
 
 ```{codeplay}
 for c in 'hello':
     print(c)
 ````
 
-Nous pouvons aussi itérer sur une plage numérique.
+On peut aussi itérer sur une plage numérique.
 L'expression `range(a, b)` exprime la plage numérique allant de `a` à `b-1`.
-Dans notre cas nous itérons de 3 à 9.
+Ici, on itère de 3 à 9.
 
 ```{codeplay}
 
@@ -204,7 +207,7 @@ for i in range(3, 10):
     print(i)
 ```
 
-Nous pouvons faire des calculs avec chaque valeur de la boucle.
+On peut faire des calculs avec chaque valeur de la boucle.
 
 ```{codeplay}
 for i in range(1, 10):
@@ -215,8 +218,8 @@ for i in range(1, 10):
 
 La boucle `while` exécute un bloc tant qu'une condition est vraie.
 
-Nous pouvons l'utiliser pour créer un compteur à rebours.
-Pour faire l'attente d'une seconde nous importons la fonction `sleep()` du module `time`.
+On peut l'utiliser pour créer un compteur à rebours.
+Pour l'attente d'une seconde la fonction `sleep()` du module `time` est importée.
 
 ```{codeplay}
 from time import sleep
@@ -230,8 +233,8 @@ while n > 0:
 print('boum!!!')
 ```
 
-Nous pouvons aussi utiliser pour deviner un nombre.
-Ici nous importons la fonction `randint()` du module `random`.
+On peut aussi l'utiliser pour deviner un nombre.
+Ici on importe la fonction `randint()` du module `random`.
 Elle fournit un nombre entier aléatoire entre deux bornes (1, 99).
 
 La fonction `input()` ne retourne que le type `string`.
@@ -256,35 +259,50 @@ while x !=  n:
 print()
 print('Bravo. Vous avez réussi')
 ```
+<br>
 
-## Exercices
+*Les exercices suivants sont à faire dans l'IDE de votre choix.*
 
-### Exercice 1 - intervalle
+````{admonition} Exercice 1 : intervalle
+:class: note
+<span style="color:green">Niveau débutant</span> 🔌
 
 Vérifiez si une variable `x` contient une valeur qui est entre deux bornes [a, b].
+````
 
-### Exercice 2 - question
+````{admonition} Exercice 2 : question
+:class: note
+<span style="color:green">Niveau débutant</span> 🔌
 
 Faites un programme qui pose une question simple à l'utilisateur. Si sa réponse est juste, affichez `Bravo`.
+````
 
-### Exercice 3 - age
+````{admonition} Exercice 3 : âge
+:class: note
+<span style="color:orange">Niveau intermédiaire</span> 🔌
 
 Faites un programme qui demande à l'utilisateur son âge.
-Si l'âge est supérieur ou égal à 18, le programme doit afficher: "Vous êtes majeur, vous pouvez voter" et si l'âge est inférieur à 18, le programme doit afficher: "Vous êtes mineur, vous pourrez voter dans (*calcul de la différence*) année(s)"
+Si l'âge est supérieur ou égal à 18, le programme doit afficher : «Vous êtes majeur, vous pouvez voter» et si l'âge est inférieur à 18, le programme doit afficher : «Vous êtes mineur, vous pourrez voter dans (*calcul de la différence*) année(s).»
+```` 
 
-### Exercice 4 - jeu
+````{admonition} Exercice 4 : jeu
+:class: note
+<span style="color:orange">Niveau intermédiaire</span> 🔌
 
 Faites un programme qui demande à l'utilisateur d'entrer un chiffre entre 0 et 2.
-Si l'utilisateur choisit
+Si l'utilisateur choisit :
 
-- 0: affichez **Caillou**
-- 1: affichez **Feuille**
-- 2: affichez **Ciseaux**.
+- 0 : affichez **Caillou**,
+- 1 : affichez **Feuille**,
+- 2 : affichez **Ciseaux**.
+```` 
 
-### Exercice 5 - carré
+````{admonition} Exercice 5 : carré
+:class: note
+<span style="color:red">Niveau avancé</span> 🔌
 
-Faites un programme qui affiche un carré de longueur `n` avec le caractère `'x'`.
-Mais vide à l'intérieur
+Faites un programme qui affiche un carré de longueur `n` avec le caractère `'x'`, mais vide à l'intérieur.
+Vous pouvez vous appuyer sur les instructions ci-dessous, et utiliser cette console pour effectuer des tests le cas échéant.
 
 ```{codeplay}
 n = int(input('Entrez n: '))
@@ -292,12 +310,20 @@ n = int(input('Entrez n: '))
 for i in range(n):
     print('x' * n) 
 ```
+```` 
 
-### Exercice 6 - triangle
+````{admonition} Exercice 6 : triangle
+:class: note
+<span style="color:red">Niveau avancé</span> 🔌
 
 Faites un programme qui affiche un triangle de hauteur `n` avec des `x`.
+````
 
-### Exercice 7 - rectangle
+````{admonition} Exercice 7 : boite
+:class: note
+<span style="color:black">Niveau expert</span> 🔌
 
-Faites un programme qui affiche une boite de hauteur `a` et longueur `b` avec des `x`.
-L'intérieur de la boite doit rester vide.
+Faites un programme qui affiche une boite de hauteur `a`, de longueur `b`, de profondeur `c` avec des `x`.
+L'intérieur de la boite doit rester bien entendu vide !
+```` 
+

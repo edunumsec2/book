@@ -1,8 +1,4 @@
-<span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 16 juin 2021</span>
-
-
-Focus sur la récursivité
-========================
+# 4. Focus sur la récursivité
 
 Nous allons maintenant programmer l’{glo}`algo|algorithme` du tri par fusion. Pour rappel, dans sa première phase l’{glo}`algo|algorithme` divise le tableau par deux, comme illustré dans la <a href="../complexite/eleve.html#diviser">Figure **Diviser**</a> du tri à fusion :
 
@@ -45,7 +41,7 @@ def tri_fusion(elements):
 	return fusion(elements_gauche, elements_droite)
 ```
 
-On appelle une {glo}`fonction|fonction` qui s’appelle elle-même une [**<span style="color:rgb(13, 204, 166)">{glo}`fonction|fonction` récursive</span>**. C’est une sorte de mise en abime ou une définition circulaire. Lorsqu’on entre dans la {glo}`fonction|fonction`, des opérations sont exécutées et on fait à nouveau [**<span style="color:rgb(13, 204, 166)">appel à la même fonction</span>**, mais avec d’autres éléments, afin de refaire les mêmes opérations (voir figure ci-dessous). 
+On appelle une {glo}`fonction|fonction` qui s’appelle elle-même une **<span style="color:rgb(13, 204, 166)">{glo}`fonction|fonction` récursive</span>**. C’est une sorte de mise en abime ou une définition circulaire. Lorsqu’on entre dans la {glo}`fonction|fonction`, des opérations sont exécutées et on fait à nouveau **<span style="color:rgb(13, 204, 166)">appel à la même fonction</span>**, mais avec d’autres éléments, afin de refaire les mêmes opérations (voir figure ci-dessous). 
 
 ```{figure} media/Recursivite.png
 ---
@@ -117,7 +113,7 @@ def fusion(elements_gauche, elements_droite):
 Ces deux {glo}`fonction|fonctions` implémentent l’{glo}`algo|algorithme` de tri par fusion de manière {glo}`recursivite|récursive`. La {glo}`recursivite|récursivité` est un concept difficile à appréhender. Le mieux c’est d’essayer de coder des {glo}`algo|algorithmes` {glo}`recursivite|récursifs` et d’afficher ce qui se passe au fur et à mesure.
 
 
-````{admonition}  Exercice 13 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)
+````{admonition}  Exercice 1 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)
 :class: note
 
 La fonction factorielle `n!` en mathématiques est le produit de tous les nombres entiers jusqu’à `n`. C’est une des fonctions les plus simples à calculer de manière récursive. Elle peut être définie comme ceci :
@@ -129,7 +125,7 @@ Programmer cette fonction de manière récursive en Python. Proposer également 
 ````
 
 
-`````{admonition} Solution de l'exercice 13
+`````{admonition} Solution
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -172,7 +168,7 @@ print(res)
 
 
 
-````{admonition}  Exercice 14 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)
+````{admonition}  Exercice 2 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)
 :class: note
 
 En Python, proposer une fonction qui inverse l’ordre des lettres dans un mot. Vous pouvez parcourir les lettres du mot directement ou à travers un indice.
@@ -182,7 +178,7 @@ Proposer une autre fonction qui inverse l’ordre des lettres dans un mot de man
 ````
 
 
-`````{admonition} Solution de l'exercice 14
+`````{admonition} Solution
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -221,7 +217,7 @@ print(inverser_mot_recursif(un_mot))
 `````
 
 
-````{admonition} Exercice 15 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)
+````{admonition} Exercice 3 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)
 :class: note
 
 Les fractales sont des objets géométriques, dont la définition récursive est naturelle. Essayer le code suivant pour différentes valeurs de `n` (augmenter à chaque fois de 1). 
@@ -273,7 +269,7 @@ turtle.exitonclick()	 # garde la fenêtre ouverte
 ````
 
 
-````{admonition} Exercice 16 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)
+````{admonition} Exercice 4 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)
 :class: note
 
 
@@ -282,7 +278,7 @@ Implémenter l’algorithme du tri rapide de manière récursive, puis comparer 
 ````
 
 
-`````{admonition} Solution de l'exercice 16
+`````{admonition} Solution
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>

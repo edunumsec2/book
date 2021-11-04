@@ -1,5 +1,4 @@
-Architecture de von Neumann
-===========================
+## De Turing à Von Neumann
 
 ````{panels}
 
@@ -12,7 +11,7 @@ John von Neumann
 ```{dropdown} Bio
 :animate: fade-in-slide-down
 
-John von Neumann est un mathématicien et physicien américano-hongrois qui apporte des contributions importantes dans les domaines des mathématiques, de la physique quantique, de l'informatique et de l'économie. Il participe à des projets militaires comme le projet Manhatten (mise au point de la première bombe atomique américaine).
+John von Neumann est un mathématicien et physicien américano-hongrois qui a apporté des contributions importantes dans les domaines des mathématiques, de la physique quantique, de l'informatique et de l'économie. Il participa à des projets militaires comme le projet Manhattan, sur la mise au point de la première bombe atomique américaine.
 En informatique, on retient son nom pour l'élaboration d'une architecture, publiée en 1945 et qui est encore aujourd'hui la référence dans la conception des ordinateurs. L'idée centrale de son architecture est de stocker dans la mémoire à la fois le programme et les données du programme. Sur ce dernier point, sa proposition est très similaire à celle proposée par Turing.
 
 ```
@@ -26,12 +25,12 @@ Alan Turing
 * **Décès** 	7 juin 1954 (à 41 ans) Wilmslow (Cheshire) (Royaume-Uni) 
 ```{dropdown} Bio
 :animate: fade-in-slide-down
-Pendant la Seconde Guerre mondiale, [**Alan Mattison Turing**](https://fr.wikipedia.org/wiki/Alan_Turing Alan Turing) travaille pour les services secrets de l'armée anglaise, en cryptographie. Il est chargé déchiffrer les messages allemands chiffrés avec la machine enigma.
+Pendant la Seconde Guerre mondiale, [**Alan Mattison Turing**](https://fr.wikipedia.org/wiki/Alan_Turing Alan Turing) travaille pour les services secrets de l'armée anglaise, en cryptographie. Il est chargé de déchiffrer les messages allemands chiffrés avec la machine Enigma.
 Dans un article de 1936, Alan Turing présente une «machine à programme enregistré dans laquelle le programme et les données ont une égale importance» (Gérard Berry).
 ```
 
 ````
-## Contexte historique
+### Contexte historique
 
 ````{panels}
 :column: col-lg-12 p-2
@@ -119,13 +118,13 @@ Cette vidéo de sept minutes présente une réalisation en lego de la machine de
 
 [Simulateur de la machine de Turing](https://www.google.com/doodles/alan-turings-100th-birthday)
 
-*Ce simulateur permet de se familiariser avec le concept de programmation et de machine de Turing. Prenez quelques minutes (environ 10') pour résoudre les six enigmes proposées.
+Ce simulateur permet de se familiariser avec le concept de programmation et de machine de Turing. Prenez quelques minutes (environ 10') pour résoudre les six enigmes proposées.
 
 ```
 
 
 
-## Références
+### Références
 
 https://fr.wikipedia.org/wiki/John_von_Neumann
 https://fr.wikipedia.org/wiki/John_von_Neumann#/media/Fichier:Von_Neumann_architecture_fr.svg

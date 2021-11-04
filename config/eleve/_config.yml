@@ -2,6 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Informatique au Gymnase
+subtitle: Version du 25 octobre 2021
 author: Groupe de travail DGEP, EPFL, HEP, UNIL
 logo: logo1.svg
 exclude_patterns: ['**/maitre.md', 'content/skel/**']

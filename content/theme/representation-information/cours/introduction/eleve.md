@@ -1,7 +1,7 @@
 
-# Introduction
+# *Introduction*
 
-Dans ce chapitre nous allons nous concentrer sur la représentation de l'information de façon à ce qu'un {glo}`ordinateur|ordinateur` puisse la traiter automatiquement.  
+Dans ce chapitre on s'intéresse à la manière dont un {glo}`ordinateur|ordinateur` représente l'information afin de pouvoir la traiter automatiquement.   
 
 
 ````{admonition} Le saviez-vous ?
@@ -9,7 +9,7 @@ Dans ce chapitre nous allons nous concentrer sur la représentation de l'informa
 Le mot **informatique** est la concaténation de "information" et "automatique".
 ````
 
-En informatique, l'information est un élément de connaissance (texte, image, son, etc.) susceptible d'être {glo}`numerisation|numérisé`, {glo}`stockage|stocké` et/ou {glo}`transmission|transmis` à l'aide d'un support et d'un mode de codification normalisé.
+En informatique, l'information est un élément de connaissance (texte, image, son, ...) susceptible d'être {glo}`numerisation|numérisé`, {glo}`stockage|stocké` et/ou {glo}`transmission|transmis` à l'aide d'un support et d'un mode de codification normalisé.
 
 Une des questions centrales de ce chapitre est d'identifier les caractéristiques de la transformation appliquée au réel donnant une représentation suffisamment précise pour permettre aux ordinateurs de la {glo}`traitement|traiter` de manière fiable.
 
@@ -19,7 +19,7 @@ Mais avant de découvrir le code choisi pour représenter l'information à l'int
 
 ### Alphabets anciens et traditionnels
 
-Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi que de nombreux {glo}`sysco|systèmes de communication`. Depuis les [sumériens](https://fr.wikipedia.org/wiki/Sum%C3%A9rien) qui utilisaient des {glo}`picto|pictogrammes` et [l’écriture cunéiforme](https://fr.wikipedia.org/wiki/Cun%C3%A9iforme), en passant par les égyptiens et leurs [hiéroglyphes](https://fr.wikipedia.org/wiki/%C3%89criture_hi%C3%A9roglyphique_%C3%A9gyptienne), les chinois et leurs [idéogrammes](https://fr.wikipedia.org/wiki/Caract%C3%A8res_chinois) pour arriver aux symboles de nos alphabets actuels, l’homme n’a eu de cesse de mettre au point des système pour représenter l’information et la {glo}`transmission|transmettre`.
+Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi que de nombreux {glo}`sysco|systèmes de communication`. Depuis les [sumériens](https://fr.wikipedia.org/wiki/Sum%C3%A9rien) qui utilisaient des {glo}`picto|pictogrammes` et [l’écriture cunéiforme](https://fr.wikipedia.org/wiki/Cun%C3%A9iforme), en passant par les égyptiens et leurs [hiéroglyphes](https://fr.wikipedia.org/wiki/%C3%89criture_hi%C3%A9roglyphique_%C3%A9gyptienne), les chinois et leurs [idéogrammes](https://fr.wikipedia.org/wiki/Caract%C3%A8res_chinois) pour arriver aux symboles de nos alphabets actuels, l'espèce humaine n’a eu de cesse de mettre au point des systèmes pour représenter l’information et la {glo}`transmission|transmettre`.
 
 ````{tabbed} Sumérien
 ```{image} media/cuneiform.jpg
@@ -62,7 +62,7 @@ Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi q
 - Mot en différentes langues, morse, idéogrammes
 - Symboles danger, stop, paix
 ```
-TODO #14
+<!-- TODO #14
 <!-- Pour créer une communication efficace entre un point A et un point B, il existe toujours un compromis entre plusieurs paramètres : le nombre de symboles qu'on se donne au départ, le nombre de mots que l'on veut être capable d'exprimer, la longueur de la transmission du message, sa lisibilité, la possibilité technique de la transmission, et ainsi de suite. // Commentaire :   -->
 <!-- 
 ````{admonition} Matière à réfléchir
@@ -91,14 +91,20 @@ suffisamment grand pour être identifiables à longue distance. Une torche pouva
 5, représentait la ligne d'un tableau de décodage, le nombre de torches allumées
 à droite représentait la colonne de ce même tableau.
 
+<center>
+
 ````{figure} media/polybe.png
 ---
 height: 300px
 width: 300px
 name: fig-polybe
 ---
+
+
 Le codage de la lettre "s" dans le carré de Polybe est quatre torches à gauche, trois torches à droite. 
+
 ````
+</center>
 
 ````{admonition} Anecdote
 :class: hint
@@ -111,6 +117,8 @@ Grâce à l'invention du [télescope](https://fr.wikipedia.org/wiki/T%C3%A9lesco
 
 [Claude Chappe](https://fr.wikipedia.org/wiki/Claude_Chappe), inventeur français, développe en 1794 un {glo}`telegraphe|télégraphe` capable de relier des villes entre elles sur plusieurs dizaines de kilomètres grâce à un système de bras mobiles, qui ressemblent aux signaux que pourrait faire un être humain sur le tarmac d'un aéroport. 
 
+<center>
+
 ````{figure} media/chappe.jpeg
 ---
 height: 300px
@@ -119,6 +127,7 @@ name: fig-chappe
 ---
 Le télégraphe de Chappe émet des signaux ressemblant aux bras d'un être humain. 
 ````
+</center>
 
 ````{admonition} Anecdote
 :class: hint
@@ -154,9 +163,10 @@ Amusez-vous avec votre assistant vocal en lui demandant par exemple : "Salut Sir
 :class: hint
 À l'époque où les transmissions télégraphiques en code Morse sont payées à l'unité d'information, donc la lettre, des codex spécifiques sont développés par les utilisateurs pour utiliser le moins de caractères possibles. C'est exactement la même situation qui s'est produite avec l'arrivée des [SMS](https://fr.wikipedia.org/wiki/Short_Message_Service) dans les années 1990, où les utilisateurs payaient au caractère. Aujourd'hui, même s'il est rare de payer à l'unité d'information, ce genre de raccourcis existent encore, mais surtout pour un avantage de vitesse. 
 ```{image} media/morsecodeshort.png
-:height: 350px
-:width: 300px
+:height: 400px
+:width: 400px
 ```
+
 Le désavantage de ces codex d'abbréviations est leur faible degré de standardisation. Comment savoir quel codex est utilisé ? Et surtout : comment faire pour que tout le monde s'accorde sur le codex ? 
 
 La réponse à cette question est l'apport le plus essentiel de l'introduction du code binaire, et des standards de représentation de l'information qui l'ont suivi : un langage pour les contrôler tous. 
@@ -177,11 +187,13 @@ Ceci est une représentation de la fréquence moyenne de distribution des lettre
 
 À partir du moment où le [Morse](https://fr.wikipedia.org/wiki/Code_Morse_international) a été inventé comme système de {glo}`codage|codage` et de {glo}`transmission|transmission` de l'information par l'électricité, il ne manquait plus que quelques éléments pour commencer à construire les {glo}`ordinateur|ordinateurs`.
 
-Une pièce technologique, qui permettrait de {glo}`stockage|stocker` pour ainsi dire cette information : le {glo}`transistor|transistor` (voir {ref}`architecture des ordinateurs <architectureordinateurs>`).
+Une pièce technologique, qui permettrait de {glo}`transmission|transmettre` pour ainsi dire cette information : le {glo}`transistor|transistor` (voir {ref}`architecture des ordinateurs <architectureordinateurs>`).
 
 Un {glo}`codage|code` plus élaboré que le Morse pour pouvoir représenter tous les types d'informations possibles à partir d'une alternative entre deux états : courant ou pas courant ; allumé ou éteint ; vrai ou faux ; 1 ou 0.  
 
 Ce {glo}`codage|code` est le {glo}`codebinaire|code binaire`. Il permet, en utilisant uniquement des 0 et des 1, de représenter n'importe quel type d'information : des chiffres, du texte, des images, du son, des vidéos, etc. 
+
+<center>
 
 ````{figure} media/binary.gif
 ---
@@ -189,10 +201,13 @@ height: 450px
 width: 350px
 name: fig-binary
 ---
-Dans le code [ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange), chaque lettre de l'alphabet est codée sur 8 bits. 
-````
 
-<!-- ### Auto-contrôle
+Dans le code [ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange), chaque lettre de l'alphabet est codée sur 8 bits. 
+
+````
+</center>
+
+
 
 ```{question} Question 1
 Pourquoi la lettre "e", en Morse, est-elle représentée par un seul point ? 
@@ -210,5 +225,5 @@ Que signifie informatique ?
 * {f}`Information + pratique`
 ```
 
- -->
+
 

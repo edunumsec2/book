@@ -1,4 +1,7 @@
-# Numérisation
+# 4. Représentation du son
+
+## Numérisation
+
 
 La conversion
 d’une grandeur physique analogique
@@ -7,7 +10,7 @@ continue
 en données numériques digitales
 est appelée **numérisation**.
 Elle est réalisée
-en trois étapes: un **échantillonnage**,
+en trois étapes : un **échantillonnage**,
 une **quantification** puis un **encodage**.
 
 Le processus
@@ -27,9 +30,9 @@ entre la qualité de la représentation
 et les coûts engendrés
 par un fichier plus grand,
 qui prend
-plus de place de stockage ;
-prend plus de temps à copier,
-à transmettre sur un réseau ;
+plus de place de stockage,
+plus de temps à copier,
+à transmettre sur un réseau
 et/ou nécessite
 une puissance de calcul
 plus importante
@@ -60,7 +63,7 @@ par un microphone.
 height: 16em
 name: fig-repr-num-sig
 ---
-Soit un signal continu à numériser, par exemple un son.
+Signal continu à numériser, par exemple un son.
 ```
 
 
@@ -230,7 +233,7 @@ de données,
 puis
 l'apparition
 du support DAT,
-l'échantillonage
+l'échantillonnage
 à 48 kHz
 s'impose progressivement
 (avec ses multiples
@@ -267,7 +270,7 @@ notamment.
 C'est la raison pour laquelle
 l’échantillonnage de la musique
 en qualité “CD” est réalisé à 44.1 kHz,
-en tenant en compte
+en prenant en compte
 une petite marge
 pour l'utilisation
 de filtres
@@ -359,20 +362,20 @@ Plus la profondeur est importante,
 plus la discrimination du signal et
 la différence entre les basses et
 les hautes intensités est importante.
-La quantité d'information générées
+La quantité d'information générée
 (le nombre de 0 et de 1) devient
 également plus importante.
 ```
 
 
-Lorsque l'entier
+Lorsque l'ensemble
 de la plage des valeurs possibles
 est utilisée pour l'encodage,
 la profondeur de l'échantillonnage
 définit la **plage dynamique** disponible.
-Elle est donnée entre la valeur encodée
+Elle est définie entre la valeur encodée
 la plus petite (0, par exemple)
-à la valeur encodée la plus élevée
+et la valeur encodée la plus élevée
 ($2^n - 1$ pour une valeur encodée
 sur n bits, par exemple).
 Elle correspond également 
@@ -408,7 +411,7 @@ engendre
 une plage dynamique
 qui n'a pas d'application pertinente
 pour la restitution
-des sons à la plupart des humains,
+des sons pour la plupart des humains,
 au coût d'une plus grande
 quantité d'information collectée.
 
@@ -489,7 +492,7 @@ travaillent ensemble
 pour définir la qualité
 du signal numérisé.
 Ces deux paramètres
-ne sont pas complétement indépendants.
+ne sont pas complètement indépendants.
 Leur choix est réalisé
 en fonction du résultat escompté et
 de ce que l'on cherche
@@ -564,7 +567,7 @@ serait maximisée.
 Or, il est possible
 de construire des formats de fichiers
 qui exploitent
-les propriétés specifiques
+les propriétés spécifiques
 au signal numérisé pour simplifier
 dans un deuxième temps
 le résultat de la numérisation
@@ -579,17 +582,17 @@ est ainsi économisé,
 mais, 
 en contre-partie, 
 un plus grand nombre 
-de calculs sont nécessaires 
+de calculs est nécessaire 
 pour manipuler 
 les signaux. 
 
 
 C'est ainsi que des fichiers
 optimisés différents sont disponibles
-pour stocker des fichiers d'images (JPG) ;
-de vidéo (MP4) ;
-de son (MP3) ; ou
-de tout autre application.
+pour stocker des fichiers d'images (JPG),
+de vidéo (MP4),
+de son (MP3), ou
+de toute autre application.
 La plupart recourent
 pour cela à des compressions destructives
 au-cours desquelles
@@ -607,7 +610,7 @@ Pourtant,
 ces mêmes nuances
 sont essentielles
 pour la reproduction
-d'un tableau de Monnet.
+d'un tableau de Monnet...
 
 
 
@@ -640,3 +643,34 @@ proportionnelle
 du signal.
 
 
+
+````{admonition} Exercice 1 : ???
+:class: note
+
+......
+
+````
+````{admonition} Exercice 2 : ???
+:class: note
+
+......
+
+````
+````{admonition} Exercice 3 : ???
+:class: note
+
+......
+
+````
+````{admonition} Exercice 4 : ???
+:class: note
+
+......
+
+````
+````{admonition} Exercice 5 : ???
+:class: note
+
+......
+
+````
