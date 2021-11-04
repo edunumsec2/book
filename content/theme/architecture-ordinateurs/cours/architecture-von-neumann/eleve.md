@@ -38,7 +38,19 @@ Dans un article de 1936, Alan Turing présente une "machine à programme enregis
 
 **Contexte historique**
 ^^^^
-L'ENIAC
+![ENIAC](media/ENIAC.jpeg)
+
+Vous connaissez sans doute tous la formule : 
+
+$
+    ax^2 + bx + x
+$
+
+Qui correspond entre autre au calcul d'une trajectoire ballistique. La réalité est un peu plus complexe lorsque l'on prend en compte (et c'est nécessaire pour des questions de précision) le vent, les conditions atmosphérique et toute l'aérodynamique de l'objet en vol que ce soit un obus de canon ou un missile.
+
+Ces calculs prennent une dimension stratégique au cours de la deuxième guerre mondiale. Ils sont long et fastidieux. Sur le terrain on utilise des tables pré-calculées, mais ces tables demandent un travail de fournis pour être établies. La mise au point de calculateurs capables d'effectuer automatiquement ces calculs et produire ces tables devient donc aussi un enjeux stratégique.
+
+Dans ce contexte est élaboré l'ENIAC, un calculateur de 30 tonnes qui occupe 167m<sup>2</sup>. Il est opérationel fin 1945, mais ne sera dévoilé au public que le 14 février 1946.
 
 ````
 
