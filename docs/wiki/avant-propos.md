@@ -11,7 +11,7 @@ La particularité de GitHub, dont il existe des concurrents directs tels que Git
 
 Mais la différence est surtout la communauté qui est active sur l'une ou l'autre de ces solutions. Or, la communauté GitHub est très active. Puisque le monde de l'informatique est aussi le monde des standards et de la puissance que ces derniers peuvent apporter, il nous a semblé opportun de construire notre projet sur GitHub. En effet, c'est ici que les logiciels des dix dernières années se développent. 
 
-Plus précisément, c'est ici que les logiciels open-source se construisent. Et force est de constater que l'idéologie open-source a le vent en poupe. Un nombre grandissant de projets optent pour ce modèle de développement, considérant que l'adoption d'un produit passe avant tout par la transparence des scripts qui lui permettent de fonctionner. L'idéologie GitHub est celle du "don't trust, verify", considérant qu'il est important de pouvoir tester soi-même la robsutesse d'un programme auquel on nous demanderait de faire confiance. Bien sûr, cela s'applique essentiellement à des projets qui en sont encore aux phases de développement, et la majorité du temps la version du produit qui est commercialisé, elle, n'est plus accessible en open-source. 
+Plus précisément, c'est ici que les logiciels open-source se construisent. Et force est de constater que l'idéologie open-source a le vent en poupe. Un nombre grandissant de projets optent pour ce modèle de développement, considérant que l'adoption d'un produit passe avant tout par la transparence des scripts qui lui permettent de fonctionner. L'idéologie GitHub est celle du "don't trust, verify", considérant qu'il est important de pouvoir tester soi-même la robustesse d'un programme auquel on nous demanderait de faire confiance. Bien sûr, cela s'applique essentiellement à des projets qui en sont encore aux phases de développement, et la majorité du temps la version du produit qui est commercialisé, elle, n'est plus accessible en open-source. 
 
 Mais pour un projet tel que le nôtre, il nous a semblé évident que les fichiers sources devaient être accessibles et modifiables par la communauté d'enseignant.es qui joindraient leurs forces aux nôtres. 
 
@@ -40,3 +40,9 @@ Dans les autres documents de ce Wiki vous trouverez tout ce dont vous avez besoi
 Contactez-nous pour toute question urgente directement à l'adresse : nathalie.farenc@epfl.ch
 
 Si vous avez une suggestion ou un commentaire moins pressant, utilisez la rubrique "Q&A" des [Discussions](https://github.com/edunumsec2/book/discussions/categories/q-a). 
+
+
+## Activité 3 
+
+- Nom, prénom. 
+- Petreska, Biljana.

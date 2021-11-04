@@ -140,7 +140,7 @@ def load_glossary_csv(app, env, docnames):
             index[entry['key']] = {}
         numbered = index[entry['key']]
         if entry['number'] in numbered:
-            raise ExtensionError("Duplicate entry for glossary.")
+            raise ExtensionError("Duplicate entry for glossary: " + entry['key'])
         numbered[entry['number']] = i
 
     env.glossary_entries = entries

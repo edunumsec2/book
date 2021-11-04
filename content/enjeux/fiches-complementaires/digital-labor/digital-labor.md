@@ -26,13 +26,24 @@
   text-decoration:none;
   background-color: black; 
   color: white!important;
-}
-h1 {
-    margin-top: 0;
-    font-size: 35px;
-    font-family: "Helvetica";
-    font-weight: 400;
-    text-align: center;
+  }
+.round-button {
+    display:block;
+    width:100px;
+    height:100px;
+    line-height:17px;
+    border:0px ;
+    border-radius: 50%;
+    color:#6069db;
+    text-align:center;
+    text-decoration:none;
+    display: table-cell;
+    vertical-align: middle;
+    background: #6069db;
+    box-shadow: 0 0 0px gray;
+    font-size:14px;
+    font-weight:bold;
+    }
 }
 
 </style>
@@ -41,9 +52,11 @@ h1 {
 
 <!-- Fin du test de mise en page -->
 
-<a href="http://edunumsec2.ch/enjeux-sociaux/digital-labour" class="button"> 🖨️ Version imprimable</a>
-
-<br>
+<div align="right"> 
+    <a href="http://files.edunumsec2.ch/enjeux-sociaux/digital-labour.pdf" class="round-button">
+         <font color=white id="demo">Voir <br>dossier</font>
+    </a>
+</div>
 
 # Le digital labor
 
@@ -101,7 +114,7 @@ Le canular du Turc mécanique. Source : Wikipédia.
 
 Si Amazon se réfère à ce canular, c’est que sa plateforme proposant les services de «micro-travailleurs» (ou *turkers*) fonctionne sur le même principe. Elle propose de créer l’illusion d’un système automatisé en s’appuyant sur le travail de «petites mains» qui exécutent des tâches que les machines ne parviennent pas à effectuer.
 
-Amazon Mechinical Turk se révèle particulièrement utile pour des tâches simples et répétitives qui ne pourraient être confiées à un seul individu et pour lesquelles les machines fourniraient un résultat décevant. Ces opérations ne requièrent pas de qualifications ou savoirs particuliers, mais font appel à une analyse qui relève du sens commun et qui peut être effectuée en un coup d’oeil par un humain, alors qu’elle demeure encore inaccessible à une système informatique. Il peut s’agir, par exemple, de déterminer le contenu d’une image ou d’évaluer la tonalité d’un *tweet*. Certaines de ces opérations ont également pour objectif d’entraîner, compléter ou corriger des systèmes d’intelligence artificielle (résultats de moteurs de recherche, requêtes transmises à un assistant vocal, analyse d’image). L’importance du travail humain dans le développement des ces systèmes permet de relativiser l’autonomie des machines et des algorithmes dans les processus d’apprentissage automatisés.
+Amazon Mechinical Turk se révèle particulièrement utile pour des tâches simples et répétitives qui ne pourraient être confiées à un seul individu et pour lesquelles les machines fourniraient un résultat décevant. Ces opérations ne requièrent pas de qualifications ou savoirs particuliers, mais font appel à une analyse qui relève du sens commun et qui peut être effectuée en un coup d’œil par un humain, alors qu’elle demeure encore inaccessible à une système informatique. Il peut s’agir, par exemple, de déterminer le contenu d’une image ou d’évaluer la tonalité d’un *tweet*. Certaines de ces opérations ont également pour objectif d’entraîner, compléter ou corriger des systèmes d’intelligence artificielle (résultats de moteurs de recherche, requêtes transmises à un assistant vocal, analyse d’image). L’importance du travail humain dans le développement des ces systèmes permet de relativiser l’autonomie des machines et des algorithmes dans les processus d’apprentissage automatisés.
 
 
 <br>
@@ -170,39 +183,39 @@ Suite à la diffusion, poser les questions suivantes :
 a) Pourquoi parle-t-on de «micro-travail»?
 
 
-   ::::{admonition,dropdown} Réponse
+   ````{dropdown} Réponse
    Il s'agit d'un travail à la tâche, ou plutôt à la micro-tâche. Les travailleurs et travailleuses sont rémunérés quelques centimes par opération. Ils n'ont pas de contrat de travail et n’ont droit à aucune prestation sociale. Il leur est difficile de prévoir leurs horaires et d'estimer leur revenu, car aucun nombre d'heures ou de tâches n'est garanti. Il s’agit donc d’une activité très précaire.
-   ::::
+   ````
 
 
 
 b) L'un des témoins dit : "On aide l'algorithme à s'améliorer". En quoi les algorithmes doivent-ils être "améliorés"?
   
-   ::::{admonition,dropdown} Réponse
+   ````{dropdown} Réponse
    Les algorithmes sont souvent pensés comme des processus informatiques qui fonctionnent de façon entièrement automatisée. Cependant, ces témoignages nous montrent qu’un important travail humain est nécessaire afin de fournir aux algorithmes des données valides. Certaines opérations qui requièrent une connaissance et une expérience du monde doivent être réalisées au préalable par des humains. Par exemple, dans le cas d'un algorithme destiné à traiter les requêtes d'un moteur de recherche, comprendre le sens ou la dimension implicite d'un mot est difficile pour un système informatique. Ils doivent donc être "entraînés" par des humains au travers de très nombreux exemples.
-   ::::
+   ````
 
 
 c) Pourquoi la personne qui travaille pour Google témoigne-t-elle à visage caché?
   
-   ::::{admonition,dropdown} Réponse
+   ````{dropdown} Réponse
    L'IA est vendue comme une solution entièrement automatisée. Dans l'imaginaire véhiculé par les concepteurs, les algorithmes sont développés par une équipe d'ingénieurs, puis fonctionnent "tout seuls". Google cherche donc à dissimuler le fait que son système est imparfait et que des "travailleurs du clic" effectuent "à la main" des tâches que l'on vend comme des systèmes automatiques. De plus, les conditions de travail de ces personnes sont particulièrement précaires et on peut imaginer que les entreprises ne souhaitent pas afficher publiquement qu'elles externalisent leur travail et participent à ces pratiques peu éthiques.
-   ::::
+   ````
 
 c) Pourquoi des entreprises basées en France, telles que Disneyland Paris, font-elles appel à des travailleurs si éloignés? Que nous dit cette situation de la “géographie” de l’IA?
   
-   ::::{admonition,dropdown} Réponse
+   ````{dropdown} Réponse
    Les entreprises technologiques qui conçoivent l'IA se situent essentiellement dans le monde occidental, tandis que le travail de "petites mains" qui permet son fonctionnement est souvent réalisé en Afrique ou en Asie afin d'en réduire les coûts. Ces activités sont donc largement invisibles pour ceux qui en bénéficient. Le micro-travail reproduit des formes d'inégalités et des asymétries qui existent déjà dans d'autres secteurs industriels. Mais ce travail est encore plus occulté et fragmenté, car il est réalisé essentiellement individuellement et à domicile.
    
    Par ailleurs, cette nouvelle forme d'activité délocalisée démontre également que le risque posé par l'automatisation du travail est moins celui d'un "remplacement des humains par les machines" que celui d'une précarisation et déqualification de certains types emplois.
-   ::::
+   ````
 
 d ) Pourriez-vous citer des situations lors desquelles nous entraînons les algorithmes, parfois sans nous en rendre compte?
 
-   ::::{admonition,dropdown} Quelques éléments de réponse
+   ````{dropdown} Quelques éléments de réponse
   * Toutes nos activités sur les réseaux sociaux : commentaires, *likes*, partage d'images, clic sur un lien ou parcours du fil d'actualité permettent d'entraîner des algorithmes qui ont pour but de nous suggérer un contenu ciblé.
   * Effectuer une requête sur un moteur de recherche.
   * Identifier des objets sur des images pour valider un formulaire. Par exemple, il est souvent demandés aux internautes de reconnaître des objets liés au trafic routier (passage piétons, motos, vélos, etc.). Ces informations servent à entrainer les systèmes de conduite automatisée.
-  * Compléter un CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart), ce test qui consiste à reconnaître des images ou des sons (plus généralemement des lettres)s et qui permet  de différencier un utilisateur humain d’un robot.
+  * Compléter un CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart), ce test qui consiste à reconnaître des images ou des sons (plus généralemement des lettres) et qui permet  de différencier un utilisateur humain d’un robot.
   * Enfin, toute trace laissée par nos activités numériques peut être captée et analysée dans le but d'entrainer des algorithmes.
-   ::::
+   ````

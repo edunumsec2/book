@@ -17,7 +17,7 @@ Mon contenu
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{admonition} Aller plus loin
 :class: note
 Mon contenu
@@ -28,7 +28,7 @@ Mon contenu
 (optencarts)=
 ### Optimisations des encarts
 
-* les styles `:class:` disponibles sont : `note, hint, attention, caution danger`.
+* les styles `:class:` disponibles sont : `note, hint, attention, caution, danger`.
 
 `````{tabbed} Aperçu
 ```{admonition} Aller plus loin
@@ -74,18 +74,38 @@ Contenus liés à des avertissements de maintenance du site, des problèmes renc
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{admonition} Aller plus loin
 :class: note
 Contenus qui suggèrent des prolongements. 
 ```
+```{admonition} Micro-activité
+:class: note
+Contenus qui servent "d'exercices-exemples", c'est à dire pas une série d'exercices mais plutôt l'illustration d'un concept technique par un micro-exercice. On pourrait appeler ça des "micro-activités".
+```
+```{admonition} Pourquoi est-ce important ? 
+:class: note
+Contenus qui soulignent l'importance de telle ou telle notion. 
+```
 ```{admonition} Anecdote
-:class: attention
+:class: hint
 Contenus qui illustrent un concept par une anecdote (historique, politique, faits-divers, liens avec l'actualité, etc.).
 ```
-```{admonition} Micro-activité
+```{admonition} Le saviez-vous ?
 :class: hint
-Contenus qui servent "d'exercices-exemples", c'est à dire pas une série d'exercices mais plutôt l'illustration d'un concept technique par un micro-exercice. On pourrait appeler ça des "micro-activités".
+Contenus qui apportent une information inattendue en lien avec le sujet. 
+```
+```{admonition} À retenir
+:class: attention
+Contenus fondamentaux à retenir impérativement.
+```
+```{admonition} Matière à réfléchir
+:class: attention
+Contenus importants, qui pourraient ouvrir d'éventuels débats.
+```
+```{admonition} Ai-je compris ? 
+:class: attention
+Contenus qui servent à résumer les points importants de la leçon en guise d'auto-évaluation pour l'élève. 
 ```
 ```{admonition} Important
 :class: caution
@@ -111,7 +131,7 @@ Grace Hopper
 ^^^^^
 * **Surnom** Amazing Grace
 * **Naissance** 9 décembre 1906 / New York 🇺🇸 
-* **Déces** 1 er janvier 1992 / Comté d'Arlington 🇺🇸 
+* **Décès** 1<sup>er</sup> janvier 1992 / Comté d'Arlington 🇺🇸 
 * **Grade** Rear admiral
 ```{dropdown} Bio
 :animate: fade-in-slide-down
@@ -124,7 +144,7 @@ Grace Hopper
 Claude Shannon
 ^^^^^
 * **Naissance** 30 avril 1916 / Petosky 🇺🇸 
-* **Déces** 24 janvier 2001 / Medford 🇺🇸 
+* **Décès** 24 janvier 2001 / Medford 🇺🇸 
 * **Institutions** Bell Labs & MIT
 ```{dropdown} Bio
 :animate: fade-in-slide-down
@@ -133,7 +153,7 @@ Pendant la Seconde Guerre mondiale, [**Claude Shannon**](https://fr.wikipedia.or
 ````
 `````
 ``````{tabbed} Code
-`````{code-block} markdown
+`````{code-block} text
 ````{panels}
 
 :img-top: images/accueil/gracehopper.jpeg
@@ -142,7 +162,7 @@ Grace Hopper
 ^^^^^
 * **Surnom** Amazing Grace
 * **Naissance** 9 décembre 1906 / New York 🇺🇸 
-* **Déces** 1 er janvier 1992 / Comté d'Arlington 🇺🇸 
+* **Décès** 1<sup>er</sup> janvier 1992 / Comté d'Arlington 🇺🇸 
 * **Grade** Rear admiral
 ```{dropdown} Bio
 :animate: fade-in-slide-down
@@ -155,7 +175,7 @@ Grace Hopper
 Claude Shannon
 ^^^^^
 * **Naissance** 30 avril 1916 / Petosky 🇺🇸 
-* **Déces** 24 janvier 2001 / Medford 🇺🇸 
+* **Décès** 24 janvier 2001 / Medford 🇺🇸 
 * **Institutions** Bell Labs & MIT
 ```{dropdown} Bio
 :animate: fade-in-slide-down
@@ -201,7 +221,7 @@ Voilà une image d'exemple avec une légende d'exemple
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{figure} media/syntaxemyst/gracehopper.jpeg
 ---
 alt: titreimage1
@@ -232,7 +252,7 @@ print('voilà un print')
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{code-block} python
 a = 2
 print('voilà un print')
@@ -262,7 +282,7 @@ print('voilà un deuxième print')
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{code-block} python
 ---
 lineno-start: 10
@@ -311,7 +331,7 @@ Hidden content
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ````{panels}
 Contenu du panel en haut à gauche
 
@@ -355,7 +375,7 @@ Pour de la <span style="color:red">couleur</span>, il est possible d'insérer de
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```html
 Pour de la <span style="color:red">couleur</span>, il est possible d'insérer de l'HTML directement dans le texte.
 ```
@@ -436,7 +456,7 @@ Flag Emojis
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ![Baby Yoda](media/syntaxemyst/babyyoda.gif)
 ````
 `````
@@ -499,7 +519,7 @@ L'application Google Maps du géant californien est un bel exemple de l'utilisat
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{panels}
 :column: col-lg
 🍿 Welcome to the Matrix
@@ -543,7 +563,7 @@ Ce document ne traite pas d'un sujet essentiel au plan d'études. C'est une pist
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{admonition} Important
 :class: caution
 N'oubliez pas d'installer la librairie PyGame si vous souhaitez réaliser les exercices de ce chapitre.
@@ -567,7 +587,7 @@ Voilà le contenu du dropdown. Attention ! Je ne sais pas pourquoi mais le dropd
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ::::{admonition,dropdown} Cliquez-ici
 Voilà le contenu du dropdown. Attention ! Je ne sais pas pourquoi mais le dropdown ne fonctionne que quand on utilise les ":", à la place des "`" pour déclarer notre encart...
 ::::
@@ -594,7 +614,7 @@ Ceci est un gif inutile (mais une légende super utile)
 `````
 
 `````{tabbed} Code
-````{code-block} markdown
+````{code-block} text
 ```{image} images/presentation/code.gif
 ```
 ```{figure} images/presentation/code.gif

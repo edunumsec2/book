@@ -1,10 +1,10 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Informatique en tant que discipline obligatoire — Version enseignant·e — Canton de Vaud, 2020
+title: Enseigner
 author: Groupe de travail DGEP, EPFL, HEP, UNIL
-logo: logo.png
-exclude_patterns: ['**/eleve.md']
+logo: logo_modulo.svg
+# exclude_patterns: ['**/eleve.md']
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -18,7 +18,7 @@ latex:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/edunum-sec2/ressources  # Online location of your book
+  url: https://github.com/edunumsec2/book  # Online location of your book
   path_to_book: content  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
@@ -55,3 +55,5 @@ sphinx:
     codeplay: ../extensions/
     logic: ../extensions/
     role: ../extensions/
+    glossary: ../extensions/
+    timeline: ../extensions/

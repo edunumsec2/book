@@ -1,48 +1,95 @@
 # Table of content
-#
-- file: content/theme/maitre
-- file: content/theme/representation-information/cours/introduction/maitre
-  sections:
-    - file: content/theme/representation-information/cours/representation-entiers/maitre
-      sections:
-        - file: content/theme/representation-information/activites/representation-entiers/magie-binaire/magie_binaire
-    - file: content/theme/representation-information/cours/representation-images/maitre
-      sections:
-        - file: content/theme/representation-information/activites/representation-images/bitmap/bitmap
-        - file: content/theme/representation-information/activites/representation-images/EncoderImages/EncoderImages
-- file: content/theme/introduction-algorithmique/maitre
-  sections:
+format: jb-book
+root: content/readme/README_pilote
+parts:
+- caption: Première année
+  numbered: false
+  chapters: 
+  - file: content/theme/representation-information/cours/introduction/maitre
+    sections:
+      - file: content/theme/representation-information/cours/representation-entiers/maitre
+      - file: content/theme/representation-information/cours/representation-images/eleve
+    #  - file: content/theme/representation-information/cours/representation-images/maitre
+      - file: content/theme/representation-information/activites/representation-son/visu-et-ecoute-son.md
+      - file: content/theme/representation-information/exercices/eleve
+        sections:
+          - file: content/theme/representation-information/exercices/representation-caracteres/carte-perforee/exercice
+          - file: content/theme/representation-information/activites/redondance/radiotelephonie/activite
+          - file: content/theme/representation-information/activites/representation-images/bitmap/bitmap
+      - file: content/theme/representation-information/activites/maitre
+        sections:
+          - file: content/theme/representation-information/activites/representation-entiers/magie-binaire/magie_binaire
+          - file: content/theme/representation-information/activites/representation-images/EncoderImages/EncoderImages
+
+  - file: content/theme/programmation/maitre
+    sections:
+      - file: content/theme/programmation/cours/1_intro/intro
+      - file: content/theme/programmation/activites/microbit/catch-the-fruit/catchFruit 
+      - file: content/theme/programmation/activites/microbit-python/intro
+        sections:
+        - file: content/theme/programmation/activites/microbit-python/affichage
+        - file: content/theme/programmation/activites/microbit-python/condition
+        - file: content/theme/programmation/activites/microbit-python/variables
+  - file: content/theme/introduction-algorithmique/maitre
+    sections:
   #  - file: content/theme/introduction-algorithmique/decomposition-probleme/maitre
   #  - file: content/theme/introduction-algorithmique/algorithmes-classiques/maitre
-    - file: content/theme/introduction-algorithmique/activites/algorithmes-classiques/algo-tri/algo-tri
-    - file: content/theme/introduction-algorithmique/activites/algorithmes-classiques/epidemie/epidemie
-      sections:
+      - file: content/theme/introduction-algorithmique/activites/algorithmes-classiques/algo-tri/algo-tri
+      - file: content/theme/introduction-algorithmique/activites/algorithmes-classiques/epidemie/epidemie
+        sections:
         - file: content/theme/introduction-algorithmique/activites/algorithmes-classiques/epidemie/fiche
-    - file: content/theme/introduction-algorithmique/activites/algorithmes-classiques/dijkstra/dijkstra2
-    - file: content/theme/introduction-algorithmique/activites/algorithmes-classiques/puissance4/puissance4
-    - file: content/theme/introduction-algorithmique/activites/formulation-solutions/maitre
-    - file: content/theme/introduction-algorithmique/consequences-automatisation/maitre
-- file: content/theme/programmation/maitre
-  sections:
-    - file: content/theme/programmation/cours/1_intro/intro
-  #  - file: content/theme/programmation/instructions-sequentielles/maitre
-  #  - file: content/theme/programmation/structures-donnees-controle/maitre
-  #  - file: content/theme/programmation/transcription-algorithmes/maitre
-  #  - file: content/theme/programmation/perspectives-citoyennes-politiques/maitre
-  #  - file: content/theme/programmation/activites
-      sections:
-        - file: content/theme/programmation/activites/microbit/catch-the-fruit/catchFruit
-- file: content/theme/architecture-ordinateurs/maitre
-  sections:
-    - file: content/theme/architecture-ordinateurs/systemes-logiques/maitre
-    - file: content/theme/architecture-ordinateurs/microprocesseur/maitre
-    - file: content/theme/architecture-ordinateurs/elements-base-ordinateurs/maitre
-    - file: content/theme/architecture-ordinateurs/architecture-von-neumann/maitre
-    - file: content/theme/architecture-ordinateurs/informatique-embarquee/maitre
-    - file: content/theme/architecture-ordinateurs/histoire-informatique/maitre
-- file: content/annexe/maitre
-- file: content/playground/maitre
-  sections:
-    - file: content/playground/notebook
-    - file: content/playground/types
+        - file: content/theme/introduction-algorithmique/activites/algorithmes-classiques/epidemie/solution
+      - file: content/theme/introduction-algorithmique/activites/algorithmes-classiques/dijkstra/dijkstra2
+      - file: content/theme/introduction-algorithmique/activites/algorithmes-classiques/puissance4/puissance4
+      - file: content/theme/introduction-algorithmique/activites/formulation-solutions/maitre
+      - file: content/theme/introduction-algorithmique/consequences-automatisation/maitre
+
+  - file: content/theme/architecture-ordinateurs/accueil/maitre
+#    sections:
+#      - file: content/theme/architecture-ordinateurs/systemes-logiques/maitre
+#      - file: content/theme/architecture-ordinateurs/microprocesseur/maitre
+#      - file: content/theme/architecture-ordinateurs/elements-base-ordinateurs/maitre
+#      - file: content/theme/architecture-ordinateurs/architecture-von-neumann/maitre
+#      - file: content/theme/architecture-ordinateurs/informatique-embarquee/maitre
+#      - file: content/theme/architecture-ordinateurs/histoire-informatique/maitre
+
+- caption: Enjeux sociaux
+  numbered: false
+  chapters:
+  - file: content/enjeux/intro-enjeux
+  - file: content/enjeux/grandes-thematiques/grandes-thematiques
+    sections:
+    - file: content/enjeux/grandes-thematiques/economie-numerique/economie-numerique
+    - file: content/enjeux/grandes-thematiques/surveillance/surveillance
+  - file: content/enjeux/fiches-complementaires/fiches-complementaires
+    sections:
+    - file: content/enjeux/fiches-complementaires/digital-labor/digital-labor
+    - file: content/enjeux/fiches-complementaires/wikipedia/wikipedia
+    - file: content/enjeux/fiches-complementaires/affaire-snowden/affaire-snowden
+    - file: content/enjeux/fiches-complementaires/genre-numerique/genre-numerique
+  - file: content/enjeux/bibliographie
+
+## Annexes
+- caption: Annexes
+  numbered: false
+  chapters: 
+  - file: content/playground/maitre
+    sections:
+      - file: content/playground/notebook
+      - file: content/playground/types
+
+## README
+- caption: README
+  numbered: false
+  chapters:
+  - file: content/readme/0_presentation-ressources
+    sections: 
+      - file: content/readme/exempleutilisation
+      - file: content/readme/modificationsressources
+      - file: content/readme/participation-developpement
+      - file: content/readme/syntaxemyst
+      - file: content/readme/extensions
+      - file: content/readme/glossaire
+      - file: content/readme/relectures
+      - file: content/readme/redaction-bonnes-pratiques
 

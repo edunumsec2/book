@@ -30,7 +30,7 @@ Voici une liste non-exhaustive des usages potentiels de ces ressources :
 : Comme tout projet, celui-ci possède ses avantages et ses inconvénients. C'est pour bénéficier de votre expterise que nous avons construit ce projet sur un modèle open-source avec la possibilité à tout moment de le forker, de le transformer, ou d'y contribuer en utilisant l'infrastructure offerte par Github. 
 
 
-:::{admonition,tip} Votre implication nous tient à ❤️
+````{admonition} Votre implication nous tient à ❤️
 
 C'est l'objectif même du projet d'accueillir vos retours, idées d'améliorations, critiques, suggestions de toutes sortes. 
 
@@ -49,8 +49,7 @@ C'est l'objectif même du projet d'accueillir vos retours, idées d'amélioratio
 
 🙌 [Contribuez aux ressources](../demostests/edito/presentation-ressources.md)
 : en lisant la documentation relative à la contribution aux ressources. 
-
-:::
+````
 
 ## Chapitrage
 
