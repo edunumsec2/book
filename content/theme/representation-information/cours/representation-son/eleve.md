@@ -1,4 +1,4 @@
-# 4. Représentation du son
+# 4. Le son
 
 ## Numérisation
 
