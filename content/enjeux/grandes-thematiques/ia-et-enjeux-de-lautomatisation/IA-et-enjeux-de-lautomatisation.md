@@ -107,19 +107,39 @@ Certes, cette approche permet d’ouvrir la voie dans certains domaines bien pr�
 
 Trouver une définition générale de l’IA est un exercice difficile car il s’agit en fait d’un ensemble de technologies particulières. Historiquement, on différencie principalement deux approches.D'un côté, l’**IA symbolique** qui vise à reproduire le raisonnement humain sous la forme de règles statiques pour l’intégrer à des machines. C’est sur ce principe que reposent l’ordinateur du jeu de l’imitation et plus généralement les **systèmes experts**. De l’autre, l’**IA connexionniste** est un ensemble de techniques d’apprentissage basées sur de grands volumes de données. Elle comprend l’**apprentissage automatique** ou machine learning et l’**apprentissage profond** ou deep learning. Cette dernière utilise des modèles de **réseaux de neurones**, superposés en plusieurs couches pour établir des règles complexes de manière autonome. 
 
-Les techniques d’IA sont principalement utilisées à des fins prédictives. À partir d’importants volumes d’informations connues, des modèles statistiques sont mis au point et servent ensuite à prédire des faits ou des comportements. 
+**Enregistrer, modéliser, prédire**
 
+Les techniques d’IA sont principalement utilisées à des fins prédictives. À partir d’importants volumes d’informations connues, des modèles statistiques sont mis au point et servent ensuite à prédire des faits ou des comportements. (...)
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
   <b>L'IA, avec ou contre nous?</b>
 </div>
 
-La force de prédiction des intelligences artificielles n’a cessé d’augmenté depuis son émergence. En 1997, la victoire du superordinateur Deep Blue (IBM) face au grand maître d’échec Garry Kasporov marque un tournant dans l’histoire opposant l’humain à la machine. Lors de sa victoire, Deep Blue calcule environ 200 millions de possibilités par seconde ce qui correspond à l’anticipation de 12 coups. Kasparov est capable d’anticiper au mieux les 10 prochains coups. Mais cet exploit a également nécessité d’importants moyens humains. Les ingénieurs d’IBM ont travaillé plus de 10 ans pour développer «Deep Blue». Ce sont également des données produites par de grands joueurs qui ont servi à entrainer la machine.  
+La force de prédiction des intelligences artificielles n’a cessé d’augmenter depuis son émergence. En 1997, la victoire du superordinateur Deep Blue (IBM) face au grand maître d’échecs Garry Kasporov marque un tournant dans l’histoire opposant l’humain à la machine. 
+
+Lors de sa victoire, Deep Blue calcule environ 200 millions de possibilités par seconde ce qui correspond à l’anticipation de 12 coups. Kasparov est capable d’anticiper au mieux les 10 prochains coups. Mais cet exploit a également nécessité d’importants moyens humains. Les ingénieurs d’IBM ont travaillé plus de 10 ans pour développer «Deep Blue». Ce sont également des données produites par de grands joueurs qui ont servi à entrainer la machine.  
 
 En 2015, l’histoire de l’IA est à nouveau marquée par une victoire de la machine sur l’être humain. Le programme informatique AlphaGo (développée par la société britannique Deep Mind, rachetée par Google en 2014) bat un joueur professionnel lors d’une partie du traditionnel jeu de Go. L’exploit réside surtout dans le cheminement emprunté pour parvenir à cette victoire. Le jeu de Go est bien plus complexe que les échecs et les possibilités sont trop nombreuses pour être listées et apprises à une machine. Une combinaison d’apprentissage supervisé considérant des parties jouées par des humains et d’apprentissage profond uniquement basé sur l’expérience de la machine va permettre à AlphaGo de déduire les coups optimaux et de battre pour la première fois de l’histoire un joueur professionnel. La dernière version du programme baptisée AlphaGo Zero est parvenue à battre n’importe quel joueur humain ainsi qu’AlphaGo lui-même, en apprenant uniquement de sa propre expérience. Le programme est ainsi devenu imbattable. 
 
 Ces exemples montrent que les technologies de l’IA peuvent s’avérer plus performantes que l’être humain dans des situations précises. Ces domaines de performance correspondent à des environnements fermés, où le but est fixé à l’avance. C’est le cas du jeu d’échec et du jeu de Go. La logique d’opposition est également privilégiée par le contexte du jeu et du calcul de la performance de la machine contre le joueur. Mais cette logique élude tout le travail que l’humain a consacré au développement de ses programmes, sans lequel l’exploit ne peut pas avoir lieu. 
 
+> **La Singularité technologique** 
+<br>
+La Singularité technologique correspond au moment hypothétique du dépassement de l’intelligence humaine par l’intelligence artificielle. Plusieurs scientifiques dont Ray Kurzweil, Stephen Hawking et Elon Musk ont fait part de leurs inquiétudes quant aux dangers potentiels d’une technologie qui deviendra tôt ou tard, supérieure aux humains.
+<br>
+La théorie de la singularité est basée sur la loi de Moore qui illustre l’évolution exponentielle de la puissance de calcul des ordinateurs. En effet, depuis les premiers microprocesseurs des années 1970, on observe que le nombre de transistors double environ tous les deux ans. Les défenseurs de la singularité partent du principe que cette croissance exponentielle continuera jusqu’à ce que les machines soient elles-mêmes capables de programmer d’autres machines. 
+<br>
+Or, ces prédictions omettent plusieurs facteurs et il parait aujourd’hui difficile de penser que la croissance technologique poursuive sa route vers l’infini.  Les limites matérielles et énergétiques ne sont par exemple pas prises en compte. Les détracteurs de la singularité considèrent que ces prédictions relèvent plus de la science-fiction que de faits scientifiques fiables. 
+<br>
+Pour aller plus loin: 
+Jean-Gabriel Ganascia (2017), Le mythe de la Singularité. Faut-il craindre l’intelligence artificielle. Édition du Seuil.
+<div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
+  <b>🧬 Science et IA</b>
+</div>
+
+(...)
+
+<br>
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
   <b>🛠 Le travail au défi de l'automatisation</b>
 </div>
@@ -127,11 +147,11 @@ Ces exemples montrent que les technologies de l’IA peuvent s’avérer plus pe
 <br>
 La logique de l’opposition entre l’être humain et la machine, souvent thématisé en science-fiction et reprise dans la présentation des victoires de Deep Blue et AlphaGo, entretient la crainte du remplacement des travailleurs et travailleuses humains par des systèmes automatisés. En 2013, une étude menée par des chercheurs de l’Université d’Oxford conclut que 47% des emplois ont une forte probabilité de disparaître compte tenu des avancées dans le domaine de l’apprentissage automatique. Des erreurs méthodologiques sont rapidement identifiées et discrédites les résultats de cette recherche. Le sociologue Antonio Casilli (EHESS) souligne que les auteurs de l’étude d’Oxford ne prennent pas en compte les résistances sociales souvent engendrées par la suppression de postes de travail.
 
-Dans un [article scientifique](https://www.aeaweb.org/articles?id=10.1257/jep.29.3.3) publié en 2015, l’économiste David H. Autor (MIT) démontre que les peurs liées au remplacement du travail de l’être humain par la machine ne sont ni nouvelles, ni fondées. Au début du 19e siècle, en Grande Bretagne, des travailleurs de l’industrie du textile détruisent des machines qu’ils accusent de provoquer le chômage. Si l’automatisation de certaines tâches a bien eu lieu au cours du 20e siècle et continue aujourd’hui encore, [l’évolution des taux de chômage de différents pays](https://data.oecd.org/unemp/unemployment-rate.htm) ne reflètent pas une baisse drastique de l’emploi.
+Dans un [article scientifique](https://www.aeaweb.org/articles?id=10.1257/jep.29.3.3) publié en 2015, l’économiste David H. Autor (MIT) démontre que les peurs liées au remplacement du travail de l’être humain par la machine ne sont ni nouvelles, ni fondées. Au début du XIX<sup>e</sup> siècle, en Grande Bretagne, des travailleurs de l’industrie du textile détruisent des machines qu’ils accusent de provoquer le chômage. Si l’automatisation de certaines tâches a bien eu lieu au cours du XX<sup>e</sup> siècle et continue aujourd’hui encore, [l’évolution des taux de chômage de différents pays](https://data.oecd.org/unemp/unemployment-rate.htm) ne reflètent pas une baisse drastique de l’emploi.
 
-**Déplacement, pas remplacement**
+**Polarisation, pas remplacement**
 
-Dans son livre « En attendant les robots » (Seuil, 2019) Antionio Casilli déconstruit la croyance du remplacement du travail de l’être humain par les machines et les IA. Selon l’auteur, les emplois ne disparaissent pas, mais se transforment. Avec l’arrivée des grands noms du numérique (voir dossier thématique économie du numérique), le phénomène de polarisation du travail semble s’amplifier. D’un côté, on constate une forte demande pour les métiers hautement spécialisés, de l’autre, un besoin croissant de main d’œuvre peu qualifiée pour effectuer des tâches répétitives et standardisées. 
+Dans son livre *En attendant les robots* (Seuil, 2019) Antionio Casilli déconstruit la croyance du remplacement du travail de l’être humain par les machines et les IA. Selon l’auteur, les emplois ne disparaissent pas, mais se transforment. Avec l’arrivée des grands noms du numérique, le phénomène de polarisation du travail semble s’amplifier. D’un côté, on constate une forte demande pour les métiers hautement spécialisés, de l’autre, un besoin croissant de main d’œuvre peu qualifiée pour effectuer des tâches répétitives et standardisées. 
 
 Cette deuxième catégorie comprend tout le travail d’entraînements des algorithmes 
 Il est peu réglementé et effectué par des personnes en situation précaire. 
@@ -144,25 +164,30 @@ Il est peu réglementé et effectué par des personnes en situation précaire.
 <br>
 Les pratiques en ligne sont orientées par des algorithmes qui collectent, agencent et analyses les traces numériques des utilisateurs de manière automatisée. Ainsi, les contenus, les suggestions et les publicités qui apparaissent sur leur écran sont déterminés à partir de leurs données respectives. Voici quelques exemples de domaines où une forme d’IA influence les contenus consommés : 
 
-* Vente (Amazon, Galaxus, Zalando)
+* E-commerce (Amazon, Galaxus, Zalando)
 * Moteurs de recherche (Google Suggest)
 * Plateformes de streaming vidéo (YouTube, Netflix)
 * Plateformes de streaming audio (Spotify, Apple Music, Deezer)
 * Médias sociaux (Facebook, Instagram, Twitter, TikTok,  Twitch)
 
-Proposer du contenu «sur mesure» vise à améliorer l’expérience des utilisateurs  et des utilisatrices afin de prolonger le temps passé sur un site ou une application. Néanmoins, l’automatisation de certaines tâches est problématiques pour différentes raisons. 
+Proposer du contenu «sur mesure» vise à améliorer l’expérience des utilisateurs  et des utilisatrices afin de prolonger le temps passé sur un site ou une application. Néanmoins, l’automatisation de certaines tâches est problématique pour différentes raisons. 
+
+**L'effet bulle de filtre**
+
+
 
 **Les biais**
 
-Dans le domaine des statistiques, le biais correspond à une erreur méthodologique qui engendre de faux résultats. Il peut être causé lors de la sélection d’un échantillon non-représentatif ou par la manière de collecter les données. Les algorithmes des IA, dont les choix sont déterminés par des calculs exploitant différents types de données, sont également à l’origine de nombreux biais.
+Dans le domaine des statistiques, le biais correspond à une erreur méthodologique qui engendre de faux résultats. Il peut être causé par de la sélection d’un échantillon non-représentatif ou par la manière de collecter les données. Les algorithmes des IA, dont les choix sont déterminés par des calculs exploitant différents types de données, sont également à l’origine de nombreux biais.
 
-Au début du mois de septembre 2021, une ancienne employée de Facebook dénonce un biais raciste dans l’algorithme de suggestion de la plateforme. Au bas d’une vidéo dans laquelle figure des personnes noires, une bannière demande à l’utilisateur s’il ou elle souhaite continuer à « voir des vidéos sur des primates ». À la suite de cet épisode, Facebook admet que cette erreur est inacceptable s’excuse. Mais comment un tel scénario est-il possible? Pour le savoir, il faut comprendre le fonctionnement des techniques de reconnaissance automatique d’images.
+Au début du mois de septembre 2021, une ancienne employée de Facebook [dénonce un biais raciste](https://www.24heures.ch/facebook-a-confondu-des-personnes-noires-avec-des-singes-677330452425) dans l’algorithme de suggestion de la plateforme. Au bas d’une vidéo dans laquelle figure des personnes noires, une bannière demande à l’utilisateur s’il ou elle souhaite continuer à « voir des vidéos sur des primates ». À la suite de cet épisode, Facebook admet que cette erreur est inacceptable s’excuse. Mais comment un tel scénario est-il possible? Pour le savoir, il faut comprendre le fonctionnement des techniques de reconnaissance automatique d’images.
 
 Lorsqu’un programme est développé pour reconnaître des images, un volume important de données (dans ce cas, d’images) est nécessaire pour apprendre à reconnaitre les différentes formes qui la composent. Des techniques d’apprentissage automatique supervisé permettent par exemple de faire la différence entre ce qui est un visage et ce qui ne l’est pas. Dans le cas de l’algorithme de Facebook, la base de données utilisées ne contenait vraisemblablement pas assez d’exemples représentant des personnes de couleurs.
 
-L’enjeu des biais se situe au niveaux de la qualité des bases de données disponibles pour entrainer les algorithmes; si les données ne sont pas représentatives de la diversité des individus, des biais seront inévitablement reproduits. L’utilisation de systèmes d’apprentissage automatique dans les processus de prise de décision n’étant pas limité aux pratiques en ligne, les risques de voir ces biais se reproduire sont réels. Dans son ouvrage « Weapons of Math Destruction » (2016, Crown Books), la mathématicienne Cathy O’Neil met en garde contre l’utilisation des big data et des algorithmes dans le domaine des assurances, du recrutement et des forces de l’ordre. Elle explique que la délégation d’importantes prises de décision à des programme automatiques est dangereuse car elle renforce les inégalités existantes dans la société. 
+L’enjeu des biais se situe au niveaux de la qualité des bases de données disponibles pour entrainer les algorithmes. Si les données ne sont pas représentatives de la diversité des individus, des biais seront inévitablement reproduits. L’utilisation de systèmes d’apprentissage automatique dans les processus de prise de décision n’étant pas limitée aux pratiques en ligne, les risques de voir ces biais se reproduire sont réels. Dans son ouvrage *Weapons of Math Destruction* (2016, Crown Books), la mathématicienne Cathy O’Neil met en garde contre l’utilisation des big data et des algorithmes dans le domaine des assurances, du recrutement et des forces de l’ordre. Elle explique que la délégation d’importantes prises de décision à des programmes automatiques est dangereuse car elle renforce les inégalités existantes dans la société. 
 
-Pour contrer cette tendance de reproduction numérique des biais, l’ingénieure Joy Buolamwini  (MIT) a crée la plateforme « Algorithmic Justice League ». Elle propose de rendre le domaine de l’IA plus inclusif, en s’assurant notamment que les spécialistes représentent la diversité de la société. 
+Pour contrer cette tendance de reproduction numérique des biais, l’ingénieure Joy Buolamwini  (MIT) a créé la plateforme *Algorithmic Justice League*. Elle propose de rendre le domaine de l’IA plus inclusif, en s’assurant notamment que les spécialistes représentent la diversité de la société. Augmenter la part de femmes et de personnes non-blanches dans le processus de développement et d'entraînement des IA permettrait d'éviter de grossières erreurs de discrimination.
+
 
 
 
@@ -172,22 +197,15 @@ Pour contrer cette tendance de reproduction numérique des biais, l’ingénieur
 
 À la suite des diverses controverses engendrées par les biais racistes des IA, certaines grandes entreprises comme Google, Microsoft ou IBM ont mis en place des comités d’éthique. Plusieurs projets en cours ont ainsi été suspendus ou abandonnés en raison du risque de perpétuer des pratiques discriminatoires. Il s’agit dans ce cas d’une forme de gouvernance interne aux entreprises qui n'est pas contraignante. 
 
-Une autre manière de réguler l’IA est de légiférer sur ses usages. Aux [États-Unis](https://www.ncsl.org/research/telecommunications-and-information-technology/2020-legislation-related-to-artificial-intelligence.aspx), leader mondial dans le domaine, seuls quatre états avaient adopté une forme de regulation relative à l'IA en 2021. En Europe, la Commission Européenne a proposé en avril 2021 « [un ensemble d’actions visant à stimuler l’excellence dans le domaine de l’IA, ainsi que des règles destinées à garantir la fiabilité de cette technologie](https://ec.europa.eu/france/news/20210421/nouvelles_regles_europeennes_intelligence_artificielle_fr) ». Afin d’estimer les risques que pourraient représenter l’IA pour les citoyens et citoyennes, la CE propose un classement qui détermine le niveau de régulation nécessaire pour chaque domaine. La catégorie « haut risque » comprend par exemple les logiciels de recrutement ou les prises de décision automatisées dans l’attribution d’un crédit, situations où les biais sont souvent présents. La situation est encore différente en Chine, où le gouvernement a publié un plan dans le but de devenir le leader mondial dans le domaine de l'IA d'ici 2030. Pour atteindre cet objectif, l'Etat n'entend  pas réguler l'IA mais encourage et soutient les start-ups et entrerpises impliquées dans le domaine. 
+Une autre manière de réguler l’IA est de légiférer sur ses usages. Aux [États-Unis](https://www.ncsl.org/research/telecommunications-and-information-technology/2020-legislation-related-to-artificial-intelligence.aspx), leader mondial dans le domaine, seuls quatre états avaient adopté une forme de regulation relative à l'IA en 2021. En Europe, la Commission Européenne a proposé en avril 2021 « [un ensemble d’actions visant à stimuler l’excellence dans le domaine de l’IA, ainsi que des règles destinées à garantir la fiabilité de cette technologie](https://ec.europa.eu/france/news/20210421/nouvelles_regles_europeennes_intelligence_artificielle_fr) ». Afin d’estimer les risques que pourraient représenter l’IA pour les citoyens et citoyennes, la CE propose un classement qui détermine le niveau de régulation nécessaire pour chaque domaine. La catégorie « haut risque » comprend par exemple les logiciels de recrutement ou les prises de décision automatisées dans l’attribution d’un crédit, situations où les biais sont souvent présents. 
 
-L’Europe apparait donc comme le seul endroit où des perspectives concrètes de réglementation du numérique et plus précisément de l’IA et des ses usages sont envisagées. Il faudra néanmoins attendre encore quelques années avant l’entrée en vigueur de l’ensemble de lois proposé par la CE. 
+La situation est encore différente en Chine, où le gouvernement a publié un plan dans le but de devenir le leader mondial dans le domaine de l'IA d'ici 2030. Pour atteindre cet objectif, l'Etat n'entend  pas réguler l'IA mais encourage et soutient les start-ups et entrerpises impliquées dans le domaine. 
+
+L’Europe apparait donc comme le seul endroit où des perspectives concrètes de réglementation du numérique et plus précisément de l’IA et des ses usages sont envisagées. Il faudra néanmoins attendre encore quelques années avant l’entrée en vigueur de l’ensemble des lois proposé par la CE. 
 
 Ces différentes approches quant à la régulation de l’IA traduisent l’ambiguïté des technologies qu’elle englobe. L’Europe considère leur utilisation comme potentiellement dangereuse pour la société et y voit donc un besoin de régulation par l’état. La maîtrise de l’IA constitue un outil de mesure de la puissance nationale pour la Chine, ce qui ne favorise aucunement sa régulation. 
 
-**La Singularité technologique** (encadré)
 
-La Singularité technologique correspond au moment hypothétique du dépassement de l’intelligence humaine par l’intelligence artificielle. Plusieurs scientifiques dont Ray Kurzweil, Stephen Hawking et Elon Musk ont fait part de leurs inquiétudes quant aux dangers potentiels d’une technologie qui deviendra tôt ou tard, supérieure aux humains.
-
-La théorie de la singularité est basée sur la loi de Moore qui illustre l’évolution exponentielle de la puissance de calcul des ordinateurs. En effet, depuis les premiers microprocesseurs des années 1970, on observe que le nombre de transistors double environ tous les deux ans. Les défenseurs de la singularité partent du principe que cette croissance exponentielle continuera jusqu’à ce que les machines soient elles-mêmes capables de programmer d’autres machines. 
-
-Or, ces prédictions omettent plusieurs facteurs et il parait aujourd’hui difficile de penser que la croissance technologique poursuive sa route vers l’infini.  Les limites matérielles et énergétiques ne sont par exemple pas prises en compte. Les détracteurs de la singularité considèrent que ces prédictions relèvent plus de la science-fiction que de faits scientifiques fiables. 
-
-Pour aller plus loin: 
-Jean-Gabriel Ganascia (2017), Le mythe de la Singularité. Faut-il craindre l’intelligence artificielle. Édition du Seuil.
 
 <p id="footnote-1">[1] "Artificial Intelligence Index Report 2021", https://aiindex.stanford.edu/wp-content/uploads/2021/03/2021-AI-Index-Report-_Chapter-3.pdf, HAI Stanford University
  p. 14.
