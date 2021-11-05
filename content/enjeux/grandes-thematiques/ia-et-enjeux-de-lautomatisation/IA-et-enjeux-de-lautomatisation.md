@@ -174,7 +174,11 @@ Proposer du contenu «sur mesure» vise à améliorer l’expérience des utilis
 
 **L'effet bulle de filtre**
 
+L’un des phénomène engendré par la suggestion automatique de contenu individualisé est l’effet bulle de filtre. 
 
+Étant donné que les prédictions se font à partir des traces existantes, les contenus et publicités suggérés automatiquement vont toujours dans le sens de l’utilisateur ou de l’utilisatrice. L’effet bulle de filtre est particulièrement fort sur les fils d’actualité des réseaux sociaux tels que Instagram, Tik Tok ou YouTube où les informations sur les profils sont nombreuses (genre, âge, localisation, etc.). La possibilité d’interagir avec les contenus, via les fonctions « j’aime » ou « ce contenu ne m'interesse pas »  renforce le profilage des comptes et augment les probabilités de voir les mêmes types de contenus apparaître plus tard. 
+
+Les résultats des requêtes sur le moteur de recherche de Google varient également en fonction des données connues sur l’utilisateur ou l’utilisatrice. Même s’il / elle n’est pas connecté-e à un compte, Google prend en considération la géolocalisation, le type d’appareil ou encore le navigateur utilisé lors de l’affichage des résultats. Deux individus faisant la même recherche auront ainsi des propositions de contenus différentes. 
 
 **Les biais**
 
@@ -220,6 +224,8 @@ Ces différentes approches quant à la régulation de l’IA traduisent l’ambi
 
 ### Glossaire
 
+* IA symbolique
+* IA connextionniste
 * Système expert
 * Apprentissage automatique ou *machine learning*
 * Apprentissage profond ou *deep learning*
@@ -234,16 +240,33 @@ Ces différentes approches quant à la régulation de l’IA traduisent l’ambi
 <br>
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-  <b>1. Usages</b>
+  <b>Usages quotidiens</b>
 </div>
 
 
-Objectif : Prendre conscience 
+1. IA ou pas? | Débranché
+
+Objectif : être capable d'identifier les situations dans lesquelle l'IA influence les contenus consultés. 
+
+Matériel:
+* Captures d'écran à projeter à la classe 
+
+2. Jeu de l'imitation | Branché
+
+Objectif : Prendre conscience des forces et des limites d'un assistant vocal
 
 Matériel: 
-* Un assistant vocal de typle Siri
+* Un assistant vocal de type Siri
 * Une liste de [questions](https://www.aiunplugged.org/activity5-german.pdf) (En allemand pour l'instant)
 
 
 Par groupe de 3 trois, les élèves posent tour à tour les questions de la liste à un assistant vocal et notent les réponses.
 
+<div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
+  <b>Gouvernance</b>
+  </div>
+
+  1. Débat
+  
+  Un jeu de rôle par groupe. 
+  Chaque groupe représente un acteur social de type citoyen / gouvernement / plateforme / scientifique... et 
