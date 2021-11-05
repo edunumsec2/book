@@ -207,17 +207,6 @@ Ces différentes approches quant à la régulation de l’IA traduisent l’ambi
 
 
 
-<p id="footnote-1">[1] "Artificial Intelligence Index Report 2021", https://aiindex.stanford.edu/wp-content/uploads/2021/03/2021-AI-Index-Report-_Chapter-3.pdf, HAI Stanford University
- p. 14.
-</p>
-
-<p id="footnote-2">[2] "Le smartphone est au coeur de nos vies – Seuls 8% de la population suisse n'en possèdent pas encore", Deloitte
-https://www2.deloitte.com/ch/fr/pages/press-releases/articles/deloitte-in-switzerland-smartphones-become-control-centre.html
-</p>
-
-<p id="footnote-3"> [3] Sara Ibrahim, "Des vaccins en un temps record grâce à l'intelligence artificielle" 
-https://www.swissinfo.ch/fre/ai-e-vaccini_des-vaccins-en-un-temps-record--l-intelligence-artificielle-apporte-sa-contribution-%C3%A0-la-science/46260326
-### Ressources 
 
 * [Le sous-chapitre](https://www.boullier.bzh/livres/boullier-dominique-sociologie-du-numerique/) "Science-fiction et mythologie du numérique" du livre *Sociologie du numérique* (2016) de Dominique Boullier pour une discussion concernant les liens entre la science-fiction et le numérique. (303-306)
 
@@ -245,16 +234,16 @@ https://www.swissinfo.ch/fre/ai-e-vaccini_des-vaccins-en-un-temps-record--l-inte
 <br>
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-  <b>1. Le jeu de l'imitation 2021</b>
+  <b>1. Usages</b>
 </div>
 
-Objectif : Prendre conscience d
-es forces et des faiblesses d'un assistant vocal de type Siri ou Alexa
+
+Objectif : Prendre conscience 
 
 Matériel: 
-* Un assistant vocal 
+* Un assistant vocal de typle Siri
 * Une liste de [questions](https://www.aiunplugged.org/activity5-german.pdf) (En allemand pour l'instant)
 
 
-Par groupe de 3 trois, les élèves posent tour à tour les questions de la liste à un assistant vocal. 
+Par groupe de 3 trois, les élèves posent tour à tour les questions de la liste à un assistant vocal et notent les réponses.
 
