@@ -61,7 +61,7 @@
 				{
 					"name": "git pull",
 					"color": "#caa",
-					"command": "git pull origin master",
+					"command": "git pull origin $(git rev-parse --abbrev-ref HEAD)",
 					"cwd": "${workspaceFolder}",
 					"singleInstance": false,
 				},
