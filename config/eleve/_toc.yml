@@ -21,49 +21,49 @@ parts:
       - file: content/theme/rep-info/cours/conclusion/eleve
 
   ### Programmation    
-  - file: content/theme/prog-1/accueil/elevenew
+  - file: content/theme/prog1/accueil/elevenew
     sections:
-      - file: content/theme/prog-1/cours/1_intro/intro 
-      - file: content/theme/prog-1/cours/2_pyth/pyth
-      - file: content/theme/prog-1/cours/3_var/var
-      - file: content/theme/prog-1/cours/4_flux/flux
-      - file: content/theme/prog-1/cours/5_list/list
-      - file: content/theme/prog-1/cours/6_dict/dict
-      - file: content/theme/prog-1/cours/7_fonc/fonc
-      - file: content/theme/prog-1/cours/8_mod/mod
-#     - file: content/theme/prog-1/cours/9_app/app 
-      - file: content/theme/prog-1/cours/10_conclusion/concl 
+      - file: content/theme/prog1/cours/1_intro/intro 
+      - file: content/theme/prog1/cours/2_pyth/pyth
+      - file: content/theme/prog1/cours/3_var/var
+      - file: content/theme/prog1/cours/4_flux/flux
+      - file: content/theme/prog1/cours/5_list/list
+      - file: content/theme/prog1/cours/6_dict/dict
+      - file: content/theme/prog1/cours/7_fonc/fonc
+      - file: content/theme/prog1/cours/8_mod/mod
+#     - file: content/theme/prog1/cours/9_app/app 
+      - file: content/theme/prog1/cours/10_conclusion/concl 
 
   ### Algorithmique         
-  - file: content/theme/algo-1/accueil/eleve
+  - file: content/theme/algo1/accueil/eleve
     sections:
-      - file: content/theme/algo-1/cours/intro
-      - file: content/theme/algo-1/cours/decomposition-probleme/eleve
-      - file: content/theme/algo-1/cours/algorithmes-classiques/eleve
-      - file: content/theme/algo-1/cours/formulation-solutions/eleve
-      - file: content/theme/algo-1/cours/consequences-automatisation/eleve
+      - file: content/theme/algo1/cours/intro
+      - file: content/theme/algo1/cours/decomposition-probleme/eleve
+      - file: content/theme/algo1/cours/algorithmes-classiques/eleve
+      - file: content/theme/algo1/cours/formulation-solutions/eleve
+      - file: content/theme/algo1/cours/consequences-automatisation/eleve
 
   ### Architecture des ordinateurs    
-  - file: content/theme/archi-ordis/accueil/eleve
+  - file: content/theme/archi/accueil/eleve
     sections:
-      - file: content/theme/archi-ordis/cours/0_intro/eleve
-      - file: content/theme/archi-ordis/cours/1_sys-log/eleve
-      - file: content/theme/archi-ordis/cours/2_micro-pro/eleve
-      - file: content/theme/archi-ordis/cours/3_comp/eleve
-      - file: content/theme/archi-ordis/cours/4_conclusion/eleve
+      - file: content/theme/archi/cours/0_intro/eleve
+      - file: content/theme/archi/cours/1_sys-log/eleve
+      - file: content/theme/archi/cours/2_micro-pro/eleve
+      - file: content/theme/archi/cours/3_comp/eleve
+      - file: content/theme/archi/cours/4_conclusion/eleve
 
 - caption: Deuxième année
   numbered: false
   chapters:
-  - file: content/theme/algo-2/0_landing
+  - file: content/theme/algo2/0_landing
     sections:
-      - file: content/theme/algo-2/cours/introduction/eleve
-      - file: content/theme/algo-2/cours/terminaison/eleve
-      - file: content/theme/algo-2/cours/complexite/eleve
-      - file: content/theme/algo-2/cours/heuristiques/eleve
-      - file: content/theme/algo-2/cours/recursivite/eleve
-      - file: content/theme/algo-2/cours/conclusion/eleve
-  - file: content/theme/prog-2/eleve
+      - file: content/theme/algo2/cours/introduction/eleve
+      - file: content/theme/algo2/cours/terminaison/eleve
+      - file: content/theme/algo2/cours/complexite/eleve
+      - file: content/theme/algo2/cours/heuristiques/eleve
+      - file: content/theme/algo2/cours/recursivite/eleve
+      - file: content/theme/algo2/cours/conclusion/eleve
+  - file: content/theme/prog2/eleve
   - file: content/theme/projets/accueil/eleve
   - file: content/theme/reseaux/accueil/eleve
 
