@@ -1,7 +1,12 @@
  ````{image} modulo_banner3.svg
 ````
+<br>
+<br>
 
-# Informatique au Gymnase
+
+# Informatique au gymnase
+</div>
+<br>
 
 ````{admonition} Ces ressources sont en cours de rédaction
 :class: caution
@@ -15,10 +20,10 @@ Des moyens d'enseignement pour l'informatique en discipline obligatoire au nivea
 
 En accord avec la DGEP, une partie de ce matériel est déjà mise à disposition des enseignant·e·s vaudois·e·s pour une première phase pilote.
 
-Les ressources sont accessibles via le [site web](https://edunumsec2.ch). Elles peuvent être utilisées telles quelles ou modifiées via un [dépôt GitHub](https://github.com/edunumsec2/book).
+Les ressources sont accessibles via le [site web](https://modulo-info.ch). Elles peuvent être utilisées telles quelles ou modifiées via un [dépôt GitHub](https://github.com/edunumsec2/book). Pour avoir accès au dépôt, merci de nous envoyer votre identifiant GitHub à modulo-team@epfl.ch
 
 
-### Votre avis et ceux de vos élèves sont importants
+<!-- ### Votre avis et ceux de vos élèves sont importants
 
 En tant que membre du projet pilote, nous vous remercions par avance pour votre participation au processus d’enquête. Les données recueillies permettront d'évaluer la pertinence des contenus afin de réaliser les ajustements nécessaires. La démarche porte uniquement sur les ressources et les élèves, il ne s'agit en aucun cas d'évaluer la qualité de l'enseignement dispensé. Toutes les données seront traitées de façon confidentielle. En dernier lieu, ces données agrégées et anonymisées feront l'objet d'analyses statistiques à la fin de chaque semestre. 
 
@@ -74,7 +79,7 @@ Les ressources sont découpées selon un chapitrage qui correspond au plan d'ét
 
 {ref}`Architecture des ordinateurs <architectureordinateurs>`
 : Il est question ici de notions telles que *les portes logiques*, *les transistors*, *l'architecture de Von Neumann*, et autres concepts essentiels à la compréhension de ce qui se passe au niveau physique et électronique dans un ordinateur.
-
+ -->
 
 ## Licence du projet
 
@@ -99,7 +104,7 @@ Toute personne qui réutilise les ressources est priée de le faire de la façon
 * Architecture des ordinateurs : Philippe Rochat - Gymnase de Morges & Jean-Philippe Pellet - HEP
 * Enjeux sociaux : Lucile Berset - EPFL, Virginia Haussauer - EPFL, Frank Dayen - Gymnase de Morges 
 * Plateforme : Romain Edelmann - EPFL & Grégoire Gavin - EPFL
-* Charte éditoriale, plateforme, rédaction : Elliot Vaucher - EPFL
+* Charte éditoriale, plateforme, rédaction : Christophe Dumas - EPFL & Elliot Vaucher - EPFL
 * Coordination : Nathalie Farenc - EPFL
 
 

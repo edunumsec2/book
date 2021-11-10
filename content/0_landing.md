@@ -17,5 +17,5 @@ Attention, le document présenté ici ne représente qu'une **étape intermédia
 
 <!-- {ref}`Accéder à la présentation des ressources <presentationressources>`. -->
 
-```{tableofcontents}
-```
+<!-- ```{tableofcontents}
+``` -->
