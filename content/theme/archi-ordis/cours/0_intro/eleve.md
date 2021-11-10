@@ -49,14 +49,14 @@ On aurait pu choisir un code possédant plus de deux signaux différents. Si on 
 
 La grande idée derrière la conception des ordinateurs et de leur circuits électroniques repose sur l'utilisation de sortes d'«interrupteurs automatiques». Ce composant fonctionne donc comme un interrupteur (en laissant ou non passer le courant sur un fil donné), mais de façon automatique: ce n'est pas un humain qui doit venir commuter l'interrupteur, mais l'interrupteur commute automatiquement en fonction de si oui ou non du courant passe sur un _autre_ fil du système. Historiquement, on a réalisé que si l'on disposait d'un tel composant, on pouvait en assembler plusieurs (en fait, plusieurs milliers) et ainsi construire des systèmes à même de manipuler des données représentées par des 0 et de 1. Nous allons voir comment dans les prochaines sections.
 
-Dans les premiers ordinateurs entre les années 1950 et 1960, ce sont les [tubes à vide](https://fr.wikipedia.org/wiki/Tube_électronique) qui ont rempli cette fonction. Mais les tubes à vides étaient gros, consommaient beaucoup d'électricité, et avaient une durée de vie limitée: il fallait souvent les changer, un peu comme de vieilles ampoules à incandescence. En utilisant des tubes à vide, on pouvait certes construire des ordinateurs, mais certainement pas ceux que l'on connaît aujourd'hui.
+Dans les premiers ordinateurs entre les années 1950 et 1960, ce sont les [tubes électronique](https://fr.wikipedia.org/wiki/Tube_électronique) qui ont rempli cette fonction. Mais les tubes électroniques étaient gros, consommaient beaucoup d'électricité, et avaient une durée de vie limitée: il fallait souvent les changer, un peu comme de vieilles ampoules à incandescence. En utilisant des tubes électronique, on pouvait certes construire des ordinateurs, mais certainement pas ceux que l'on connaît aujourd'hui.
 
 
 ```{figure} media/vaccum_tubes.jpeg
 ---
 height: 350px
 ---
-Différents modèles de tubes à vide. Photographie de Stefan Riepl, 2008, CC BY-SA.
+Différents modèles de tubes électronique. Photographie de Stefan Riepl, 2008, CC BY-SA.
 ```
 
 
@@ -64,7 +64,7 @@ Il a fallu attendre une invention majeure pour permettre aux ordinateurs de se m
 
 ## Le transistor
 
-Le {glo}`transistor|transistor` est aujourd'hui la brique de base de construction des systèmes informatiques. Il a été développé dans les années 1940 dans les [laboratoires Bell](https://fr.wikipedia.org/wiki/Laboratoires_Bell), aux Etats-Unis. Ce n'est que vers la fin des années 1950 que l'on commence à construire des ordinateurs commerciaux qui utilisent des transistors plutôt que des tubes à vide. Le transistor est à l'origine d'une révolution dans la taille, la fiabilité, et les performances générales des ordinateurs de l'époque. 
+Le {glo}`transistor|transistor` est aujourd'hui la brique de base de construction des systèmes informatiques. Il a été développé dans les années 1940 dans les [laboratoires Bell](https://fr.wikipedia.org/wiki/Laboratoires_Bell), aux Etats-Unis. Ce n'est que vers la fin des années 1950 que l'on commence à construire des ordinateurs commerciaux qui utilisent des transistors plutôt que des tubes électronique. Le transistor est à l'origine d'une révolution dans la taille, la fiabilité, et les performances générales des ordinateurs de l'époque. 
 
 ```{figure} media/transistor.jpeg
 ---
@@ -74,7 +74,7 @@ width: 500px
 Différents modèles de transistor. On les reconnaît à leurs trois «pattes» aussi appelées: émetteur, base, collecteur. 
 ```
 
-<span commented>Le {glo}`transistor|transistor`, comme le tube à vide qu'il remplace, fonctionne comme un interupteur automatique. Il laissera ou non passer du courant entre deux de ses pattes en fonction de ce qui se passe sur sa troisième patte. On peut aussi le comparer à un robinet d'eau qui peut être ouvert ou fermé, et qu'on peut ouvrir ou fermer automatiquement sans devoir l'activer manuellement. 
+<span commented>Le {glo}`transistor|transistor`, comme le tube électronique qu'il remplace, fonctionne comme un interrupteur automatique. Il laissera ou non passer du courant entre deux de ses pattes en fonction de ce qui se passe sur sa troisième patte. On peut aussi le comparer à un robinet d'eau qui peut être ouvert ou fermé, et qu'on peut ouvrir ou fermer automatiquement sans devoir l'activer manuellement. 
 
 ```{figure} media/transistorgif.gif
 ---
