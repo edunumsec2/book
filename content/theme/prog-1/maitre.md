@@ -1,3 +1,0 @@
-# Programmation
-
-L'introduction à la programmation peut se faire en utilisants de multiples approches...

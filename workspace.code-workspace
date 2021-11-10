@@ -2,7 +2,7 @@
 	"folders": [
 		{
 			"path": ".",
-			"name": "Moyens d'enseignement",
+			"name": "Book",
 		}
 	],
 	"settings": {
@@ -31,30 +31,30 @@
 			"loadNpmCommands": false,
 			"commands": [
 				{
-					"name": "Build “eleve”",
+					"name": "Build “apprendre”",
 					"color": "#cfc",
-					"command": "test -f venv/bin/activate && source venv/bin/activate; (cd config/eleve && jupyter-book build . && (cd _build/html; kill $(lsof -t -i:8000) 2>/dev/null; python3 -m http.server 8000 &)) && open http://localhost:8000",
+					"command": "test -f venv/bin/activate && source venv/bin/activate; (cd config/apprendre && jupyter-book build . && (cd _build/html; kill $(lsof -t -i:8000) 2>/dev/null; python3 -m http.server 8000 &)) && open http://localhost:8000",
 					"cwd": "${workspaceFolder}",
 					"singleInstance": false,
 				},
 				{
-					"name": "Clean “eleve”",
+					"name": "Clean “apprendre”",
 					"color": "#fcc",
-					"command": "kill $(lsof -t -i:8000) 2>/dev/null; test -f venv/bin/activate && source venv/bin/activate; (cd config/eleve && jupyter-book clean .)",
+					"command": "kill $(lsof -t -i:8000) 2>/dev/null; test -f venv/bin/activate && source venv/bin/activate; (cd config/apprendre && jupyter-book clean .)",
 					"cwd": "${workspaceFolder}",
 					"singleInstance": false,
 				},
 				{
-					"name": "Build “maitre”",
+					"name": "Build “enseigner”",
 					"color": "#cfc",
-					"command": "test -f venv/bin/activate && source venv/bin/activate; (cd config/maitre && jupyter-book build . && (cd _build/html; kill $(lsof -t -i:8001) 2>/dev/null; python3 -m http.server 8001 &)) && open http://localhost:8001",
+					"command": "test -f venv/bin/activate && source venv/bin/activate; (cd config/enseigner && jupyter-book build . && (cd _build/html; kill $(lsof -t -i:8001) 2>/dev/null; python3 -m http.server 8001 &)) && open http://localhost:8001",
 					"cwd": "${workspaceFolder}",
 					"singleInstance": false,
 				},
 				{
-					"name": "Clean “maitre”",
+					"name": "Clean “enseigner”",
 					"color": "#fcc",
-					"command": "kill $(lsof -t -i:8001) 2>/dev/null; test -f venv/bin/activate && source venv/bin/activate; (cd config/maitre && jupyter-book clean .)",
+					"command": "kill $(lsof -t -i:8001) 2>/dev/null; test -f venv/bin/activate && source venv/bin/activate; (cd config/enseigner && jupyter-book clean .)",
 					"cwd": "${workspaceFolder}",
 					"singleInstance": false,
 				},
