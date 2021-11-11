@@ -134,12 +134,21 @@ Or, ces prédictions omettent plusieurs facteurs et il parait aujourd’hui diff
 Pour aller plus loin: 
 Jean-Gabriel Ganascia (2017), Le mythe de la Singularité. Faut-il craindre l’intelligence artificielle. Édition du Seuil.
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-  <b>🧬 Science et IA</b>
+  <b>🧬 Terrains de prédilection</b>
 </div>
 
-(...)
-
 <br>
+
+Les possibilités offertes par l’IA et les grands volumes de données disponibles font miroiter des perspectives inédites en termes de vitesse, de puissance et de quantité d’information pouvant être traitée. Depuis la fin des années 2010, les techniques d’apprentissage automatique basées sur des réseaux de neurones ont révolutionné des domaines tels que la traduction automatique, le traitement d’images et de la recherche en bio-informatique. 
+
+Actif depuis 2017, le traducteur automatique DeepL a dépassé ses concurrents Google Translate, Microsoft Traduction et Facebook. En apprenant de textes existants indexées sur la base de données du site Linguee, DeepL offre un service de traduction efficace pour plus de 26 langues. 
+
+Les technologies de traitement automatique de l’image et du son sont également performantes, si elles sont entraînées avec une quantité suffisante de donnée. Dans le domaine de l’audio-visuel, la technique des *deepfake* permet de mettre en scène une personnalité publique dans une vidéo de manière ultra réaliste. Les vidéos 
+
+Cette technologie peut littéralement faire dire n’importe quoi à n’importe qui. 
+
+Finalement, l’entreprise DeepMind s’est inspiré des méthodes d’apprentissage profond utilisées par AlphaGo pour développer AlphaFold. Grâce à la modélisation de protéines encore méconnues, AlphaFold a marqué un tournant dans le domaine de la bio-informatique. (...)
+
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
   <b>🛠 Le travail au défi de l'automatisation</b>
 </div>
@@ -151,10 +160,9 @@ Dans un [article scientifique](https://www.aeaweb.org/articles?id=10.1257/jep.29
 
 **Polarisation, pas remplacement**
 
-Dans son livre *En attendant les robots* (Seuil, 2019) Antionio Casilli déconstruit la croyance du remplacement du travail de l’être humain par les machines et les IA. Selon l’auteur, les emplois ne disparaissent pas, mais se transforment. Avec l’arrivée des grands noms du numérique, le phénomène de polarisation du travail semble s’amplifier. D’un côté, on constate une forte demande pour les métiers hautement spécialisés, de l’autre, un besoin croissant de main d’œuvre peu qualifiée pour effectuer des tâches répétitives et standardisées. 
+Dans son livre En attendant les robots (Seuil, 2019) Antionio Casilli déconstruit la croyance du remplacement du travail de l’être humain par les machines et les IA. Selon l’auteur, les emplois ne disparaissent pas, mais se transforment. Avec l’arrivée des grands noms du numérique, le phénomène de polarisation du travail semble s’amplifier. D’un côté, on constate une forte demande pour les métiers hautement spécialisés, de l’autre, un besoin croissant de main d’œuvre peu qualifiée pour effectuer des tâches répétitives et standardisées, essentielles au bon fonctionnement des systèmes automatisés. 
 
-Cette deuxième catégorie comprend tout le travail d’entraînements des algorithmes 
-Il est peu réglementé et effectué par des personnes en situation précaire. 
+Ce travail humain, peu qualifié mais indispensable à l’entraînement des IA, entre dans la catégorie du *digital labour*. Les entreprises ayant recours à ce type de  main d’œuvre font généralement appel à des services externalisés et le travail est divisé en micro-tâches (cliquer sur des images, retranscrire un texte, etc.). Les rémunérations ne dépassent que rarement les quelques centimes par micro-tâches effectuées. Cette nouvelle catégorie d’emplois peu qualifiés, rémunérés à la tâche et externalisé, dévalorise le travail humain au profit des grandes entreprises. 
 
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
