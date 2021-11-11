@@ -6,7 +6,7 @@ En Python, un _dictionnaire_ est une structure de données qui, comme une liste,
 
 La fonction `dict` crée un dictionnaire vide. On pourrait aussi créer ce dictionnaire avec une paire d'accolades `{}`. 
 
-```{code-cell} ipython3
+```{code-block} python
 d = dict()
 d
 ```
