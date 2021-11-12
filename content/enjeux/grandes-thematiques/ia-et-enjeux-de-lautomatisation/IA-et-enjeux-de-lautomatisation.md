@@ -143,11 +143,12 @@ Les possibilités offertes par l’IA et les grands volumes de données disponib
 
 Actif depuis 2017, le traducteur automatique DeepL a dépassé ses concurrents Google Translate, Microsoft Traduction et Facebook. En apprenant de textes existants indexées sur la base de données du site Linguee, DeepL offre un service de traduction efficace pour plus de 26 langues. 
 
-Les technologies de traitement automatique de l’image et du son sont également performantes, si elles sont entraînées avec une quantité suffisante de donnée. Dans le domaine de l’audio-visuel, la technique des *deepfake* permet de mettre en scène une personnalité publique dans une vidéo de manière ultra réaliste. Les vidéos 
+Les technologies de traitement automatique de l’image et du son sont également performantes, si elles sont entraînées avec une quantité suffisante de données. Dans le domaine de l’audio-visuel, la technique du deepfake s’est rependue depuis 2017. Elle permet de reconstituer le visage d’une personne de manière ultra réaliste, de la mettre en scène et de lui faire tenir des propos inventés. Cette technique est particulièrement efficace avec des personnalités publiques (acteur-trice-s, politicien-nes, etc.) dont les images sont nombreuses et facilement accessibles sur Internet. Utilisée correctement, la technique du deepfake est difficile à desceller. Les risques relatifs à cette technologie sont les possibilités de nuire à un individu en utilisant son image dans un contexte inapproprié. Les possibilités de manipulation des opinions politiques ont aussi été pointée du doigt, en France et aux États-Unis.
 
-Cette technologie peut littéralement faire dire n’importe quoi à n’importe qui. 
+Finalement, la société DeepMind s’est inspirée des méthodes d’apprentissage profond utilisées par AlphaGo pour développer AlphaFold.
+En 2020, le système a permis de modéliser des protéines encore méconnues en un temps record. Ces nouvelles approches contribuent par exemple à l’accélération du développement de certains vaccins. 
 
-Finalement, l’entreprise DeepMind s’est inspiré des méthodes d’apprentissage profond utilisées par AlphaGo pour développer AlphaFold. Grâce à la modélisation de protéines encore méconnues, AlphaFold a marqué un tournant dans le domaine de la bio-informatique. (...)
+
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
   <b>🛠 Le travail au défi de l'automatisation</b>
@@ -235,7 +236,7 @@ Ces différentes approches quant à la régulation de l’IA traduisent l’ambi
 ### Glossaire
 
 * IA symbolique
-* IA connextionniste
+* IA connexionniste
 * Système expert
 * Apprentissage automatique ou *machine learning*
 * Apprentissage profond ou *deep learning*
