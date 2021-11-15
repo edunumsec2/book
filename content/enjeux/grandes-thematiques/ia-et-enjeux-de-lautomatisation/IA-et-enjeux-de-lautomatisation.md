@@ -107,9 +107,11 @@ Certes, cette approche permet d’ouvrir la voie dans certains domaines bien pr�
 
 Trouver une définition générale de l’IA est un exercice difficile car il s’agit en fait d’un ensemble de technologies particulières. Historiquement, on différencie principalement deux approches.D'un côté, l’**IA symbolique** qui vise à reproduire le raisonnement humain sous la forme de règles statiques pour l’intégrer à des machines. C’est sur ce principe que reposent l’ordinateur du jeu de l’imitation et plus généralement les **systèmes experts**. De l’autre, l’**IA connexionniste** est un ensemble de techniques d’apprentissage basées sur de grands volumes de données. Elle comprend l’**apprentissage automatique** ou machine learning et l’**apprentissage profond** ou deep learning. Cette dernière utilise des modèles de **réseaux de neurones**, superposés en plusieurs couches pour établir des règles complexes de manière autonome. 
 
-**Enregistrer, modéliser, prédire**
+**Prédire à partir des données**
 
-Les techniques d’IA sont principalement utilisées à des fins prédictives. À partir d’importants volumes d’informations connues, des modèles statistiques sont mis au point et servent ensuite à prédire des faits ou des comportements. (...)
+Aujourd’hui, l’IA fait principalement référence aux techniques d’apprentissage automatique. Le but des systèmes intégrant ces technologies est d’exploiter de grands volumes de données afin d’établir des modèles statistiques qui serviront ensuite à orienter des décisions de manières automatiques. 
+
+Mais le travail des ingénieures demeure central tant dans le choix et la préparation des données exploitées que dans le développement et l’application des algorithmes. Les tâches de collecte, de tri et de mise en forme des données se doivent d’être effectuées de manière réflexive, en prenant en compte les buts du traitement automatiques de l’information. Le développement ou le choix des algorithmes qui traiteront les données sont également à considérer. Finalement, le travail d’interprétation des résultats est nécessaire, puisque le système se limite à élaborer des modèles statistiques, basés sur des propriétés mathématiques.
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
   <b>L'IA, avec ou contre nous?</b>
@@ -121,7 +123,9 @@ Lors de sa victoire, Deep Blue calcule environ 200 millions de possibilités par
 
 En 2015, l’histoire de l’IA est à nouveau marquée par une victoire de la machine sur l’être humain. Le programme informatique AlphaGo (développée par la société britannique Deep Mind, rachetée par Google en 2014) bat un joueur professionnel lors d’une partie du traditionnel jeu de Go. L’exploit réside surtout dans le cheminement emprunté pour parvenir à cette victoire. Le jeu de Go est bien plus complexe que les échecs et les possibilités sont trop nombreuses pour être listées et apprises à une machine. Une combinaison d’apprentissage supervisé considérant des parties jouées par des humains et d’apprentissage profond uniquement basé sur l’expérience de la machine va permettre à AlphaGo de déduire les coups optimaux et de battre pour la première fois de l’histoire un joueur professionnel. La dernière version du programme baptisée AlphaGo Zero est parvenue à battre n’importe quel joueur humain ainsi qu’AlphaGo lui-même, en apprenant uniquement de sa propre expérience. Le programme est ainsi devenu imbattable. 
 
-Ces exemples montrent que les technologies de l’IA peuvent s’avérer plus performantes que l’être humain dans des situations précises. Ces domaines de performance correspondent à des environnements fermés, où le but est fixé à l’avance. C’est le cas du jeu d’échec et du jeu de Go. La logique d’opposition est également privilégiée par le contexte du jeu et du calcul de la performance de la machine contre le joueur. Mais cette logique élude tout le travail que l’humain a consacré au développement de ses programmes, sans lequel l’exploit ne peut pas avoir lieu. 
+Ces exemples montrent que les technologies de l’IA peuvent s’avérer plus performantes que l’être humain dans des situations précises. Ces domaines de performance correspondent à des environnements fermés, où le but est fixé à l’avance. C’est le cas du jeu d’échec et du jeu de Go. La capacité d’adaptation contextuelle des systèmes d’IA constitue l’un des défis non résolu pour les chercheurs.  
+
+C’est également grâce au contexte du jeu que subsiste la logique d’opposition entre le joueur et la machine, dans la continuité du Test de Turing. Mais cette logique élude tout le travail humain consacré au développement des programmes et des algorithmes, sans lesquels l’exploit ne peut pas avoir lieu. Des années de développement et de tests réalisés par des ingénieurs, associés à des données issues de parties jouées par des êtres humains sont nécessaires pour parvenir à de telles performances. En prenant un pas de recul sur les performances de Deep Blue et AlphaGo, l’opposition apparente entre l’humain et la machine se transforme en un exploit collaboratif entre les ingénieurs d’une part, mais également avec la technologie et la puissance de calcul des ordinateurs d’autre part.  
 
 > **La Singularité technologique** 
 <br>
@@ -148,6 +152,7 @@ Les technologies de traitement automatique de l’image et du son sont égalemen
 Finalement, la société DeepMind s’est inspirée des méthodes d’apprentissage profond utilisées par AlphaGo pour développer AlphaFold.
 En 2020, le système a permis de modéliser des protéines encore méconnues en un temps record. Ces nouvelles approches contribuent par exemple à l’accélération du développement de certains vaccins. 
 
+**IA**
 
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
