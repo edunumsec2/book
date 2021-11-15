@@ -111,10 +111,10 @@ Trouver une définition générale de l’IA est un exercice difficile car il s�
 
 Aujourd’hui, l’IA fait principalement référence aux techniques d’apprentissage automatique. Le but des systèmes intégrant ces technologies est d’exploiter de grands volumes de données afin d’établir des modèles statistiques qui serviront ensuite à orienter des décisions de manières automatiques. 
 
-Mais le travail des ingénieures demeure central tant dans le choix et la préparation des données exploitées que dans le développement et l’application des algorithmes. Les tâches de collecte, de tri et de mise en forme des données se doivent d’être effectuées de manière réflexive, en prenant en compte les buts du traitement automatiques de l’information. Le développement ou le choix des algorithmes qui traiteront les données sont également à considérer. Finalement, le travail d’interprétation des résultats est nécessaire, puisque le système se limite à élaborer des modèles statistiques, basés sur des propriétés mathématiques.
+Mais le travail des ingénieurs demeure central tant dans le choix et la préparation des données exploitées que dans le développement et l’application des algorithmes. Les tâches de collecte, de tri et de mise en forme des données se doivent d’être effectuées de manière réflexive, en prenant en compte les buts du traitement automatiques de l’information. Le développement ou le choix des algorithmes qui traiteront les données sont également à considérer. Finalement, le travail d’interprétation des résultats est nécessaire, puisque le système se limite à élaborer des modèles statistiques, basés sur des propriétés mathématiques.
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-  <b>L'IA, avec ou contre nous?</b>
+  <b>♟ Avec ou contre l'être humain?</b>
 </div>
 
 La force de prédiction des intelligences artificielles n’a cessé d’augmenter depuis son émergence. En 1997, la victoire du superordinateur Deep Blue (IBM) face au grand maître d’échecs Garry Kasporov marque un tournant dans l’histoire opposant l’humain à la machine. 
@@ -152,7 +152,7 @@ Les technologies de traitement automatique de l’image et du son sont égalemen
 Finalement, la société DeepMind s’est inspirée des méthodes d’apprentissage profond utilisées par AlphaGo pour développer AlphaFold.
 En 2020, le système a permis de modéliser des protéines encore méconnues en un temps record. Ces nouvelles approches contribuent par exemple à l’accélération du développement de certains vaccins. 
 
-**IA**
+**(...)**
 
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
@@ -172,7 +172,7 @@ Ce travail humain, peu qualifié mais indispensable à l’entraînement des IA,
 
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-  <b>L'IA et nos pratiques numériques</b>
+  <b>📱 L'IA et nos pratiques numériques</b>
 </div>
 
 <br>
@@ -212,9 +212,9 @@ Pour contrer cette tendance de reproduction numérique des biais, l’ingénieur
 
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-  <b>Réguler</b>
+  <b>👩🏻‍⚖️ Réguler</b>
 </div>
-
+<br>
 À la suite des diverses controverses engendrées par les biais racistes des IA, certaines grandes entreprises comme Google, Microsoft ou IBM ont mis en place des comités d’éthique. Plusieurs projets en cours ont ainsi été suspendus ou abandonnés en raison du risque de perpétuer des pratiques discriminatoires. Il s’agit dans ce cas d’une forme de gouvernance interne aux entreprises qui n'est pas contraignante. 
 
 Une autre manière de réguler l’IA est de légiférer sur ses usages. Aux [États-Unis](https://www.ncsl.org/research/telecommunications-and-information-technology/2020-legislation-related-to-artificial-intelligence.aspx), leader mondial dans le domaine, seuls quatre états avaient adopté une forme de regulation relative à l'IA en 2021. En Europe, la Commission Européenne a proposé en avril 2021 « [un ensemble d’actions visant à stimuler l’excellence dans le domaine de l’IA, ainsi que des règles destinées à garantir la fiabilité de cette technologie](https://ec.europa.eu/france/news/20210421/nouvelles_regles_europeennes_intelligence_artificielle_fr) ». Afin d’estimer les risques que pourraient représenter l’IA pour les citoyens et citoyennes, la CE propose un classement qui détermine le niveau de régulation nécessaire pour chaque domaine. La catégorie « haut risque » comprend par exemple les logiciels de recrutement ou les prises de décision automatisées dans l’attribution d’un crédit, situations où les biais sont souvent présents. 
@@ -225,8 +225,7 @@ L’Europe apparait donc comme le seul endroit où des perspectives concrètes d
 
 Ces différentes approches quant à la régulation de l’IA traduisent l’ambiguïté des technologies qu’elle englobe. L’Europe considère leur utilisation comme potentiellement dangereuse pour la société et y voit donc un besoin de régulation par l’état. La maîtrise de l’IA constitue un outil de mesure de la puissance nationale pour la Chine, ce qui ne favorise aucunement sa régulation. 
 
-
-
+### Ressources
 
 * [Le sous-chapitre](https://www.boullier.bzh/livres/boullier-dominique-sociologie-du-numerique/) "Science-fiction et mythologie du numérique" du livre *Sociologie du numérique* (2016) de Dominique Boullier pour une discussion concernant les liens entre la science-fiction et le numérique. (303-306)
 
