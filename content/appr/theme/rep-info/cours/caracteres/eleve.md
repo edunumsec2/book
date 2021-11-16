@@ -7,8 +7,7 @@ entre les utilisateurs et les ordinateurs s'opère essentiellement sous forme te
 
 ## Principe
 
-La solution retenue a consisté à définir une table de conversion qui indique
-de façon univoque une concordance entre une valeur numérique et un caractère :
+La solution est simple : on associe chaque caractère à un code binaire.
 
 | Caractère | Décimal | Hexadécimal |   Binaire    | | | | | Caractère | Décimal | Hexadécimal |   Binaire    |
 |-----------|---------|-------------|--------------|-|-|-|-|-----------|---------|-------------|--------------|
@@ -19,15 +18,14 @@ de façon univoque une concordance entre une valeur numérique et un caractère 
 |     Z     |    90   |    0x5A     | 01**0**11010 | | | | |     z     |   122   |    0x7A     | 01**1**11010 |
 
 
-Chaque caractère frappé sur le clavier engendre un nombre binaire correspondant, c'est à dire une représentation machine unique.
+Chaque caractère frappé sur le clavier est représenté par le code correspondant dans ce tableau.
 
 Chacun des caractères de la phrase que vous lisez (qu'on nomme **chaîne de caractères**) a ainsi été stocké,
 transmis et manipulé par l'ordinateur sous la forme d'une séquence
 de 0 et 1.
 
-Lorsqu'il s'agit de représenter ce texte à l'écran ou à l'impression
-à destination des êtres humains, les logiciels utilisent la table
-dans l'autre sens pour rendre cela intelligible.
+Lorsqu'il s'agit de représenter ce texte à l'écran ou à l'impression, les logiciels utilisent la table
+dans l'autre sens pour trouver le caractère correspondant au nombre binaire.
 
 
 
@@ -82,10 +80,9 @@ print('-'*42)
 
 
 En plus des lettres, les caractères qui représentent
-les nombres (les chiffres arabes)
-sont eux-mêmes listés dans la table de conversion.
+les chiffres sont eux-mêmes listés dans la table de conversion.
 Contre-intuitivement, la valeur binaire du caractère
-représentant un nombre ne correspond pas au nombre lui-même.
+représentant un chiffre ne correspond pas au chiffre lui-même.
 
 | Caractère | Décimal | Hexadécimal | Binaire  |
 |-----------|---------|-------------|----------|
@@ -105,8 +102,7 @@ par des constructeurs d'ordinateurs ou des éditeurs de systèmes d'exploitation
 
 ## Table ASCII
 
-La première table à s'imposer historiquement dès 1963 fut la table ASCII
-(pour American Standard Code for Information Interchange).
+Le code américain normalisé pour l’échange d’information ASCII (pour American Standard Code for Information Interchange) est apparu dans les année 1960.
 Malgré sa large acceptation, avec ses **7 bits par caractère**,
 cette table avait pour principal défaut de ne pas prendre en compte
 les caractères qui n'existent pas dans la langue anglaise,
@@ -170,7 +166,7 @@ un aquarium en ASCII dans le terminal.
 `````
 
 Des tables multiples, mutuellement incompatibles, ont alors émergé : une table
-pour les européens, une autre pour les japonais et ainsi de suite.
+pour les européens, une autre pour les Japonais et ainsi de suite.
 
 Progressivement, notamment avec l'émergence du Web au cours des années 1990,
 l'augmentation de l'interconnexion des ordinateurs personnels a amené
@@ -181,22 +177,20 @@ intégrant le contenu de toutes les tables existantes, via le standard UTF.
 
 ## Standard UTF
 
-Le [standard Unicode](https://home.unicode.org/) UTF (Universal character set Transformation Format)
-s'est imposé pour l'échange, car il permet d'agréger sur **64 bits par caractère**
-la totalité des caractères utilisés dans toutes les langues humaines… et même extraterrestres,
-puisque le [Klingon](https://www.kli.org/about-klingon/klingon-history/) est également intégré !
+Le [standard Unicode](https://home.unicode.org/) UTF (Universal Character Set Transformation Format)
+s'est imposé pour l'échange, car il permet d'agréger sur 8 bits, 16 bits ou 32 bits par caractère la totalité des caractères utilisés dans toutes les langues humaines… et même extraterrestres,
+puisque le [Klingon](https://www.kli.org/about-klingon/klingon-history/) est également intégré. 
 
-Les caractères liés à l'édition des partitions de musique ou les émojis
-y sont également intégrés.
+Les caractères liés à l'édition des partitions de musique ou les émojis sont également intégrés.
 
 
 
 ### Variantes
 
-Pour éviter de consommer 64 bits par caractère, des variantes plus compactes
+Pour éviter de consommer 32 bits par caractère, des variantes plus compactes
 ont été mises à disposition.
 
-La plus connue – des européens, puisqu'elle regroupe les caractères qui nous concernent… – est la [table UTF-8](https://www.utf8-chartable.de/). Elle se concentre sur les premiers 8 bits de la table UTF complète.
+La plus connue – des européens, puisqu'elle regroupe les caractères qui nous concernent – est la [table UTF-8](https://www.utf8-chartable.de/). Elle se concentre sur les premiers 8 bits de la table UTF complète.
 Par sa nature, UTF-8 est d'un usage très répandu sur internet et dans les systèmes échangeant de l'information. 
 Il s'agit également du codage le plus
 utilisé dans les systèmes de logiciels libres pour gérer le plus simplement possible des

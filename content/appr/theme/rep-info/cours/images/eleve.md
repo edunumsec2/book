@@ -71,7 +71,7 @@ Principe de la capture numérique d'une image.
 ```
 ````
 
-Un bit est l'unité minimale d'information qu'un ordinateur comprend : 1 ou 0, allumé ou éteint. L'image la plus simple qu'un ordinateur puisse afficher est constituée uniquement de noir et blanc. Ainsi, un bit pourrait être à l'état soit «noir», soit «blanc». 
+Un bit est l'unité minimale d'information qu'un ordinateur manipule : 1 ou 0, allumé ou éteint. L'image la plus simple qu'un ordinateur puisse afficher est constituée uniquement de noir et blanc. Ainsi, un pixel pourrait être à l'état soit «noir», soit «blanc». 
 
 ````{role} prof
 ```{admonition} Suggestion d'activité
@@ -89,7 +89,7 @@ width: 250px
 Tous les pixels marqués d'un 1 s'affichent en blanc, tous ceux marqués d'un 0 s'affichent en noir. 
 ```
 
-Ceci nous permet de construire des images simples, et d'une {glo}`resolution|résolution` très faible.
+Ceci nous permet de construire des images simples, dessinées seulement en noir et blanc.
 
 ```{codeplay}
 import turtle
@@ -161,7 +161,7 @@ drawImg(alien)
 
 
 
-Un {glo}`pixel|pixel`, de l'anglais "**pic**ture **el**ement", est le composant minimal d'une image. C'est à dire que c'est la plus petite brique avec laquelle on construit une image sur un écran d'ordinateur, et donc dans sa mémoire. Dans notre exemple minimaliste, chaque pixel peut être soit noir, soit blanc, ce qui nous permet de construire une image.
+Un {glo}`pixel|pixel`, de l'anglais "**pic**ture **el**ement", est le composant minimal d'une image. C'est à dire que c'est le plus petit élément avec lequel on construit une image sur un écran d'ordinateur. Dans notre exemple minimaliste, chaque pixel peut être soit noir, soit blanc, ce qui nous permet de construire une image.
 
 
 
@@ -188,7 +188,7 @@ Niveaux de gris, codage sur 8 bits.
 ```
 ````
 
-La plupart des images sont représentées au format {glo}`matrice|matriciel`. Une image en niveau de gris sera ainsi généralement codée comme un tableau de valeurs correspondant à la {glo}`luminance|luminance` de chaque pixel. Les valeurs de luminance sont chacune déclarées comme un nombre allant de 0 (noir) à 255 (blanc). Pour encoder une image en niveaux de gris, chaque pixel nécessite dont 8 bits. 
+En général, les images sont représentées sous forme de tableau numérique, aussi appelé format {glo}`matrice|matriciel`. Une image en niveau de gris sera ainsi représentée par un tableau de valeurs correspondant à la {glo}`luminance|luminance` de chaque pixel. Les valeurs de luminance sont des nombres allant de 0 (noir) à 255 (blanc). Pour encoder une image en niveaux de gris, chaque pixel nécessite donc 8 bits. 
 
 ```{figure} media/image_et_pixels.svg
 ---
@@ -199,7 +199,7 @@ Image monochrome, pixels et luminance.
 
 
 
-Pour accéder à un pixel particulier, il faut en général définir à quelle ligne et à quelle colonne de l'image ce pixel correspond. Le pixel (0,0) correspondra normalement au pixel de la première ligne et de la première colonne.
+Pour accéder à un pixel particulier, il faut indiquer à quelle ligne et à quelle colonne de l'image ce pixel se trouve. Le pixel (0,0) correspondra normalement au pixel de la première ligne et de la première colonne.
 
 ```{admonition} Le saviez-vous ? 
 :class: hint
@@ -227,7 +227,9 @@ Ce mode de fonctionnement est similaire à celui des tableurs pour lesquels il e
 ```
 ````
 
-En peinture, pour obtenir toutes les couleurs de l'arc-en-ciel, on utilise un mélange de magenta, de cyan et de jaune, qui vont chacune absorber une partie de la lumière ; c'est ce que l'on appelle la {glo}`synthsoustractive|synthèse soustractive` : en ajoutant du pigment à une surface, une partie du spectre lumineux est soustrait. Pour faire la même chose en informatique, on utilisera également trois couleurs, mais celles-ci seront le rouge, le vert et le bleu (couleurs primaires). Cela correspond à la {glo}`synthadditive|synthèse additive` : en allumant une LED rouge, j'ajoute de la lumière sur la partie du spectre lumineux correspondant.
+En peinture, pour obtenir toutes les couleurs de l'arc-en-ciel, on utilise un mélange de magenta, de cyan et de jaune, qui vont chacune absorber une partie de la lumière ; c'est ce que l'on appelle la {glo}`synthsoustractive|synthèse soustractive` : en ajoutant du pigment à une surface, une partie du spectre lumineux est soustraite. 
+
+Pour faire la même chose sur un écran, on utilisera également trois couleurs, mais celles-ci seront le rouge, le vert et le bleu (couleurs primaires). Cela correspond à la {glo}`synthadditive|synthèse additive` : en allumant une LED rouge par exemple, on ajoute de la lumière sur la partie du spectre lumineux correspondant.
 
 ```{figure} media/SyntheseAdd_pixels.svg
 ---
@@ -236,7 +238,7 @@ name: fig-repr-img-sys-pixel
 Système additif et écran au microscope.
 ```
 
-Chaque pixel d'une image couleur est donc représenté comme un mélange de ces trois couleurs et donc sous forme de trois entiers. Comme pour les images en niveaux de gris, ces entiers sont généralement représentés sur 8 bits ; les valeurs de luminance sont chacune déclarées comme un nombre allant de 0 (intensité nulle) à 255 (intensité maximale). Pour représenter une image en couleurs il faut donc 8 bits pour le niveau de rouge, 8 bits pour le niveau de vert, et 8 bits pour le niveau de bleu, soit 24 bits. 
+Chaque couleur est donc représentée comme un mélange de ces trois couleurs et donc sous forme de trois entiers (triplet). Comme pour les images en niveaux de gris, ces entiers sont généralement représentés sur 8 bits ; les valeurs de luminance sont chacune déclarées comme un nombre allant de 0 (intensité nulle) à 255 (intensité maximale). Pour représenter une image en couleurs il faut donc 8 bits pour le niveau de rouge, 8 bits pour le niveau de vert, et 8 bits pour le niveau de bleu, soit 24 bits. 
 
 Dans l'exemple qui suit, d'autres matrices de 0 et de 1 ont été configurées dans le programme, pour dessiner de nouveaux personnages. À la place de mario, essayez luigi, link, guerrier, tortueninja1, tortueninja2, homer, pikachu, kirby. 
 
@@ -470,7 +472,7 @@ La compression peut être réalisée avec ou sans perte :
 ## Les images vectorielles
 
 
-Pour reproduire une image sur une feuille, on peut la diviser en grille et définir un niveau de gris pour chaque case, mais on peut aussi tout simplement dessiner n'importe quelle figure, par exemple un trait d'un millimètre d'épaisseur allant d'un point A à un point B de l'image. De la même manière, en informatique, il est possible de représenter des images sous forme de grilles de pixels, comme nous l'avons vu, mais il est en effet également possible de définir une image comme une collection d'objets graphiques élémentaires (un segment, un carré, une ellipse...) sur un espace plan : c'est le principe des images vectorielles.
+Pour reproduire une image sur une feuille, on peut la diviser en grille et définir un niveau de gris pour chaque case, mais on peut aussi tout simplement dessiner une figure, par exemple un trait d'un millimètre d'épaisseur allant d'un point A à un point B de l'image. De la même manière, en informatique, il est possible de représenter des images sous forme de grilles de pixels, comme nous l'avons vu, mais il est en effet également possible de définir une image comme une collection d'objets graphiques élémentaires (un segment, un carré, une ellipse...) sur un espace plan : c'est le principe des images vectorielles.
 
 L'image vectorielle est dépourvue de matrice. Elle est en fait créée à partir d'équations mathématiques. Cette image numérique est composée d'objets géométriques individuels, des *primitives géométriques* (segments de droite, arcs de cercle, polygones, etc.), définies chacunes par différents attributs (forme, position, couleur, remplissage, visibilité, etc.) et auxquels on peut appliquer différentes transformations (rotations, écrasement, mise à l'échelle, inclinaison, effet miroir, symétrie, translation, et bien d'autres ...).
 
