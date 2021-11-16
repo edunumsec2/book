@@ -159,6 +159,17 @@ Le code Morse est le système de représentation de l'information qui se rapproc
 Amusez-vous avec votre assistant vocal en lui demandant par exemple : "Salut Siri. Quel est le code Morse pour *j'ai envie de dormir* ?".
 ````
 
+Si vous observez le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), vous remarquerez que les signaux utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet, puisqu'il est plus économique de coder les lettres les plus fréquentes avec les codes les plus courts. 
+
+```{figure} media/letterdistribution.png
+---
+height: 350px
+width: 300px
+name: fig-distribution
+---
+Ceci est une représentation de la fréquence moyenne de distribution des lettres dans la langue anglaise. 
+```
+
 ````{admonition} Le saviez-vous ? 
 :class: hint
 À l'époque où les transmissions télégraphiques en code Morse sont payées à l'unité d'information, donc la lettre, des codex spécifiques sont développés par les utilisateurs pour utiliser le moins de caractères possibles. C'est exactement la même situation qui s'est produite avec l'arrivée des [SMS](https://fr.wikipedia.org/wiki/Short_Message_Service) dans les années 1990, où les utilisateurs payaient au caractère. Aujourd'hui, même s'il est rare de payer à l'unité d'information, ce genre de raccourcis existent encore, mais surtout pour un avantage de vitesse. 
@@ -172,17 +183,6 @@ Le désavantage de ces codex d'abbréviations est leur faible degré de standard
 La réponse à cette question est l'apport le plus essentiel de l'introduction du code binaire, et des standards de représentation de l'information qui l'ont suivi : un langage pour les contrôler tous. 
 ````
 
-Si vous observez le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), vous remarquerez que les signaux utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet, puisqu'il est plus économique de coder les lettres les plus fréquentes avec les codes les plus courts. 
-
-```{figure} media/letterdistribution.png
----
-height: 350px
-width: 300px
-name: fig-distribution
----
-Ceci est une représentation de la fréquence moyenne de distribution des lettres dans la langue anglaise. 
-```
-
 ### Le binaire
 
 À partir du moment où le [Morse](https://fr.wikipedia.org/wiki/Code_Morse_international) a été inventé comme système de {glo}`codage|codage` et de {glo}`transmission|transmission` de l'information par l'électricité, il ne manquait plus que quelques éléments pour commencer à construire les {glo}`ordinateur|ordinateurs`.
@@ -193,21 +193,9 @@ Un {glo}`codage|code` plus élaboré que le Morse pour pouvoir représenter tous
 
 Ce {glo}`codage|code` est le {glo}`codebinaire|code binaire`. Il permet, en utilisant uniquement des 0 et des 1, de représenter n'importe quel type d'information : des chiffres, du texte, des images, du son, des vidéos, etc. 
 
-<center>
+<!-- TODO #33 : @dasilvadds -->
 
-````{figure} media/binary.gif
----
-height: 450px
-width: 350px
-name: fig-binary
----
-
-Dans le code [ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange), chaque lettre de l'alphabet est codée sur 8 bits. 
-
-````
-</center>
-
-
+<!-- TODO #32 @elliotvaucher : panel question et darkmode -->
 
 ```{question} Question 1
 Pourquoi la lettre "e", en Morse, est-elle représentée par un seul point ? 
