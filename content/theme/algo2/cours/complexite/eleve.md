@@ -47,7 +47,7 @@ Cette estimation n’est pas exacte. Nous n’avons pas pris en compte les {glo}
 
 Un ordre de grandeur linéaire implique que le nombre d’{glo}`instruction|instructions` élémentaires de l’{glo}`algo|algorithme` croît linéairement en fonction du nombre d’éléments des données : c*n+a, ou c est une {glo}`constante|constante` . Dans ce cas précis, c vaut 4. La {glo}`constante|constante`  a vaut 5 et correspond aux {glo}`instruction|instructions` d’initialisation avant la {glo}`bouclewhile|boucle` plus l’instruction de retour à la fin. Si le tableau contient 10 éléments, il faut environ 45 {glo}`instruction|instructions` ; pour 100 éléments il faut environ 405 {glo}`instruction|instructions` ; pour 1000 éléments il faut environ 4005 {glo}`instruction|instructions` et ainsi de suite. Le nombre d’{glo}`instruction|instructions` grandit de manière linéaire en fonction de la taille des données **n**.
 
-```{admonition} Exercice 1
+```{admonition} Exercice 1 : affichage des entiers ✏️📒
 :class: note
 
 Ecrire un algorithme qui affiche tous les nombres de **1** à **n**. 
@@ -91,7 +91,7 @@ name : fig-rech-lin2
 `````
 
 
-```{admonition} Exercice 2
+```{admonition} Exercice 2 : affichage des nooébres pairs ✏️📒
 :class: note
 
 Ecrire un algorithme qui affiche tous les nombres *pairs* de **1** à **n**. 
@@ -219,7 +219,7 @@ Un algorithme avec un ordre de complexité logarithmique est plus rapide qu’un
 ```
 
 
-```{admonition} Exercice 3 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)
+```{admonition} Exercice 3 : recherche linéaire et binaire 🔌
 :class: note
 
 Programmer les algorithmes de recherche linéaire et binaire en Python. 
@@ -385,7 +385,7 @@ Le terme qui divise par 2 peut être absorbé dans la {glo}`constante|constante`
 Quand `n` est très grand, le terme qui domine cette somme est le `c’n2`. Comme ce qui nous intéresse est l’ordre de grandeur de la croissance, la complexité du tri par sélection est `O(n2)` ou quadratique.
 
 
-```{admonition} Exercice 4
+```{admonition} Exercice 4 : complexité et tri par insertion ✏️📒
 :class: note
 
 Quelle est la complexité de l’algorithme de tri par insertion ? En d’autres termes, si le tableau contient n éléments, combien faut-il d’instructions pour trier ce tableau ?
@@ -403,7 +403,7 @@ La complexité de l'algorithme par insertion est de n * n = n<sup>2</sup> ou **q
 ```
 ````
 
-```{admonition} Exercice 5
+```{admonition} Exercice 5 : complexité et tri à bulles ✏️📒
 :class: note
 
 Quelle est la complexité de l’algorithme de tri à bulles ? 
@@ -542,7 +542,7 @@ La complexité ne reflète pas la difficulté à implémenter un algorithme, com
 ```
 
 
-```{admonition} Exercice 6
+```{admonition} Exercice 6 : comparaison de tris ✏️📒
 :class: note
 
 Si une instruction prend 10<sup>-6</sup> secondes, combien de temps faut-il pour trier un tableau d’1 million d’éléments avec le tri à sélection comparé au tri rapide (sans tenir compte de la constante) ? 
@@ -561,7 +561,7 @@ Cette différence de temps est suffisante pour rendre rédhibitoire l’utilisat
 
 ````
 
-```{admonition} Exercice 7
+```{admonition} Exercice 7 : tri rapide et pivot ✏️📒
 :class: note
 
 Trier le tableau suivant avec l’algorithme de tri rapide : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main, en prenant le dernier élément comme pivot. Représenter l’état du tableau lors de toutes les étapes intermédiaires.
@@ -597,7 +597,7 @@ Le choix du pivot est important et à prendre en comptes si on a des indications
 ```
 ````
 
-```{admonition} Exercice 8
+```{admonition} Exercice 8 : tri fusion ✏️📒
 :class: note
 
 Trier le tableau suivant avec l’algorithme de tri fusion : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main. Représenter l’état du tableau lors de toutes les étapes intermédiaires.
@@ -654,7 +654,7 @@ On procède de la même manière pour fusionner le tableau contenant le chiffre 
 
 ````
 
-```{admonition} Exercice 9
+```{admonition} Exercice 9 : tri par selection ✏️📒
 :class: note
 
 Trier le tableau suivant avec l’algorithme de tri par sélection : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main. Représenter l’état du tableau lors de toutes les étapes intermédiaires.
@@ -715,7 +715,7 @@ Le septième élément du tableau est déjà à la bonne position, donc il n’y
 ```
 ````
 
-```{admonition} Exercice 10
+```{admonition} Exercice 10 : tri par insertion ✏️📒
 :class: note
 
 Trier le tableau suivant avec l’algorithme de tri par insertion : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main. Représenter l’état du tableau lors de toutes les étapes intermédiaires.
@@ -775,7 +775,7 @@ Lorsque le dernier élément du tableau est inséré à la bonne position, tout 
 ```
 ````
 
-```{admonition} Exercice 11
+```{admonition} Exercice 11 : tri à bulles ✏️📒
 :class: note
 
 Trier le tableau suivant avec l’algorithme de tri à bulles : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main. Représenter l’état du tableau lors de toutes les étapes intermédiaires.

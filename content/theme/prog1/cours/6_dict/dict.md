@@ -202,27 +202,27 @@ print(inverse)
 
 
 
-````{admonition} Exercice 1 : ???
+````{admonition} Exercice 1 : 
 :class: note
 ......
 ```` 
 
-````{admonition} Exercice 2 : ???
+````{admonition} Exercice 2 : 
 :class: note
 ......
 ```` 
 
-````{admonition} Exercice 3 : ???
+````{admonition} Exercice 3 : 
 :class: note
 ......
 ````
 
-````{admonition} Exercice 4 : ???
+````{admonition} Exercice 4 : 
 :class: note
 ......
 ```` 
 
-````{admonition} Exercice 5 : ???
+````{admonition} Exercice 5 : 
 :class: note
 ......
 ```` 

@@ -113,7 +113,7 @@ def fusion(elements_gauche, elements_droite):
 Ces deux {glo}`fonction|fonctions` implémentent l’{glo}`algo|algorithme` de tri par fusion de manière {glo}`recursivite|récursive`. La {glo}`recursivite|récursivité` est un concept difficile à appréhender. Le mieux c’est d’essayer de coder des {glo}`algo|algorithmes` {glo}`recursivite|récursifs` et d’afficher ce qui se passe au fur et à mesure.
 
 
-````{admonition}  Exercice 1 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)
+````{admonition}  Exercice 1 : factorielle récursive 🔌
 :class: note
 
 La fonction factorielle `n!` en mathématiques est le produit de tous les nombres entiers jusqu’à `n`. C’est une des fonctions les plus simples à calculer de manière récursive. Elle peut être définie comme ceci :
@@ -168,7 +168,7 @@ print(res)
 
 
 
-````{admonition}  Exercice 2 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)
+````{admonition}  Exercice 2 : inversion littérale ✏️📒
 :class: note
 
 En Python, proposer une fonction qui inverse l’ordre des lettres dans un mot. Vous pouvez parcourir les lettres du mot directement ou à travers un indice.
@@ -217,10 +217,10 @@ print(inverser_mot_recursif(un_mot))
 `````
 
 
-````{admonition} Exercice 3 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)
+````{admonition} Exercice 3 : fractales 🔌
 :class: note
 
-Les fractales sont des objets géométriques, dont la définition récursive est naturelle. Essayer le code suivant pour différentes valeurs de `n` (augmenter à chaque fois de 1). 
+Les fractales sont des objets géométriques, dont la définition récursive est naturelle. Essayez le code suivant pour différentes valeurs de `n` (augmenter à chaque fois de 1). 
 
 Essayez de comprendre comment le flocon se construit, de manière récursive. Vous pouvez aussi varier la longueur du segment dessiné et la vitesse d’affichage en décommentant la ligne correspondante.
 
@@ -269,7 +269,7 @@ turtle.exitonclick()	 # garde la fenêtre ouverte
 ````
 
 
-````{admonition} Exercice 4 ![](../../../introduction-algorithmique/cours/formulation-solutions/media/plugged.png)
+````{admonition} Exercice 4 : tri rapide récursif 🔌
 :class: note
 
 

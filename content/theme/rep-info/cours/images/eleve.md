@@ -18,7 +18,7 @@ Voilà un déroulé de cours pour cette section représentation des images :
 
 Depuis des siècles les humains gardent des traces de leur environnement sous forme d'images. Plus le temps passe, plus ces traces sont fidèles. On découvre par exemple la perspective autour du XV<sup>e</sup> siècle, les progrès en optique et en chimie permettent ensuite la création de la camera obscura et de la photographie argentique. Enfin l'informatique se développe permettant l'invention de la photographie numérique.
 
-
+<!---
 ```{figure} media/camera_obscura.jpg
 ---
 height: 16em
@@ -33,6 +33,12 @@ name: fig-repr-img-obscur
 ---
 La caméra obscura.
 ```
+-->
+
+
+<img src="media/camera_obscura.jpg" height="300" width="400"/> <img src="media/camobscura.png" height="300" width="400"/>
+
+La caméra obscura
 
 
 ### De la camera obscura à la caméra numérique
@@ -45,7 +51,7 @@ La différence est que dans un appareil photo numérique cette paroi, le capteur
 
 L'image numérique ne sera alors rien d'autre que la collection des mesures de tous les capteurs à un temps précis. Comme ces mesures sont organisées sous forme de tableau (grille), on parle souvent d'images matricielles. Plus le nombre de capteurs est grand, plus la résolution de cette image le sera aussi. 
 
-
+<!---
 ```{figure} media/captimage.png
 ---
 height: 16em
@@ -53,7 +59,11 @@ name: fig-repr-img-obscur
 ---
 Principe de la capture numérique d'une image.
 ```
+--->
 
+<img src="media/captimage.png" height="300" width="400"/> 
+
+Principe de la capture numérique d'une image
 
 
 
@@ -80,6 +90,7 @@ Voilà une [activité débranchée](https://maitre.edunumsec2.ch/content/theme/r
 ```
 ````
 
+<!---
 ```{figure} media/bitmap1.png
 ---
 name: fig-bitmap-1
@@ -88,6 +99,11 @@ width: 250px
 ---
 Tous les pixels marqués d'un 1 s'affichent en blanc, tous ceux marqués d'un 0 s'affichent en noir. 
 ```
+-->
+
+<img src="media/bitmap1.png" height="300" width="400"/> 
+
+Tous les pixels marqués d'un 1 s'affichent en blanc, tous ceux marqués d'un 0 s'affichent en noir
 
 Ceci nous permet de construire des images simples, et d'une {glo}`resolution|résolution` très faible.
 
@@ -169,13 +185,18 @@ Un {glo}`pixel|pixel`, de l'anglais "**pic**ture **el**ement", est le composant 
 
 Dans ce type d’image seul le niveau de l'intensité est codé sur un octet (256 valeurs). Par convention, la valeur 0 représente le noir (intensité lumineuse nulle) et la valeur 255 le blanc (intensité lumineuse maximale) :
 
+<!---
 ```{figure} media/Niveaux_gris.png
 ---
 name: fig-repr-img-pixel
 ---
 Niveaux de gris, codage sur 8 bits.
 ```
+-->
 
+<img src="media/Niveaux_gris.png" height="100" width="600"/>
+
+Niveaux de gris, codage sur 8 bits
 
 ````{tabbed} Image
 ```{image} media/kirbygrey.png
@@ -190,13 +211,18 @@ Niveaux de gris, codage sur 8 bits.
 
 La plupart des images sont représentées au format {glo}`matrice|matriciel`. Une image en niveau de gris sera ainsi généralement codée comme un tableau de valeurs correspondant à la {glo}`luminance|luminance` de chaque pixel. Les valeurs de luminance sont chacune déclarées comme un nombre allant de 0 (noir) à 255 (blanc). Pour encoder une image en niveaux de gris, chaque pixel nécessite dont 8 bits. 
 
+<!---
 ```{figure} media/image_et_pixels.svg
 ---
 name: fig-repr-img-pixel
 ---
 Image monochrome, pixels et luminance.
 ```
+-->
 
+<img src="media/image_et_pixels.svg" height="200" width="450"/>
+
+Image monochrome, pixels et luminance
 
 
 Pour accéder à un pixel particulier, il faut en général définir à quelle ligne et à quelle colonne de l'image ce pixel correspond. Le pixel (0,0) correspondra normalement au pixel de la première ligne et de la première colonne.
@@ -212,9 +238,14 @@ Ce mode de fonctionnement est similaire à celui des tableurs pour lesquels il e
 :class: hint
 [The Million Dollar Homepage](https://fr.wikipedia.org/wiki/The_Million_Dollar_Homepage) est un site web conçu en 2005 par Alex Tew, un étudiant anglais, dans le but de financer ses études supérieures. La page d'accueil est une grille de 1000 X 1000 pixels. Chaque pixel était vendu 1$ en tant qu'espace publicitaire. Ils ont tous été vendus...
 
+<!---
 ```{figure} media/milliondollarhomepage.png
 ```
 ````
+-->
+
+
+<img src="media/milliondollarhomepage.png" height="250" width="400"/>
 
 ````{tabbed} Image
 ```{image} media/kirbycolor.png
@@ -229,12 +260,19 @@ Ce mode de fonctionnement est similaire à celui des tableurs pour lesquels il e
 
 En peinture, pour obtenir toutes les couleurs de l'arc-en-ciel, on utilise un mélange de magenta, de cyan et de jaune, qui vont chacune absorber une partie de la lumière ; c'est ce que l'on appelle la {glo}`synthsoustractive|synthèse soustractive` : en ajoutant du pigment à une surface, une partie du spectre lumineux est soustrait. Pour faire la même chose en informatique, on utilisera également trois couleurs, mais celles-ci seront le rouge, le vert et le bleu (couleurs primaires). Cela correspond à la {glo}`synthadditive|synthèse additive` : en allumant une LED rouge, j'ajoute de la lumière sur la partie du spectre lumineux correspondant.
 
+<!---
 ```{figure} media/SyntheseAdd_pixels.svg
 ---
 name: fig-repr-img-sys-pixel
 ---
 Système additif et écran au microscope.
 ```
+-->
+
+<img src="media/SyntheseAdd_pixels.svg" height="200" width="400"/>
+
+Système additif et écran au microscope
+</br>
 
 Chaque pixel d'une image couleur est donc représenté comme un mélange de ces trois couleurs et donc sous forme de trois entiers. Comme pour les images en niveaux de gris, ces entiers sont généralement représentés sur 8 bits ; les valeurs de luminance sont chacune déclarées comme un nombre allant de 0 (intensité nulle) à 255 (intensité maximale). Pour représenter une image en couleurs il faut donc 8 bits pour le niveau de rouge, 8 bits pour le niveau de vert, et 8 bits pour le niveau de bleu, soit 24 bits. 
 
@@ -478,7 +516,7 @@ Pour reproduire une image sur une feuille, on peut la diviser en grille et défi
 
 L'image vectorielle est dépourvue de matrice. Elle est en fait créée à partir d'équations mathématiques. Cette image numérique est composée d'objets géométriques individuels, des *primitives géométriques* (segments de droite, arcs de cercle, polygones, etc.), définies chacunes par différents attributs (forme, position, couleur, remplissage, visibilité, etc.) et auxquels on peut appliquer différentes transformations (rotations, écrasement, mise à l'échelle, inclinaison, effet miroir, symétrie, translation, et bien d'autres ...).
 
-
+<!---
 ```{figure} media/matvect.png
 ---
 name: fig-bitmap-1
@@ -487,15 +525,22 @@ width: 400px
 ---
 Un même cercle en représentation matricielle et vectorielle. 
 ```
+-->
+
+
+<img src="media/matvect.png" height="300" width="500"/>
+
+Un même cercle en représentation matricielle et vectorielle
+<br>
 
 À l'inverse de l'image matricielle composée de pixels, l'image vectorielle peut être **redimensionnée** sans pour autant perdre en qualité. Elle est contenue dans un **fichier beaucoup plus léger** qu'une image pixelisée, indépendamment de sa taille et de sa résolution.
 En revanche, chaque forme d'une image vectorielle est remplie d'une seule couleur dite solide ou d'un dégradé de couleurs. Elle reste donc **limitée en termes de réalisme**, et donc inutilisable en photographie par exemple. De plus une image vectorielle ne peut être **créée qu'à partir d'un logiciel dédié**, et n'est pas reconnue par les navigateurs internet.
 
 Les formats vectoriels les plus courants sont Postscript (.ps) et Encapsulé Postscript (.eps), Adobe Illustrator (AI), Portable Document Format (PDF), WMF (format Windows).
 
-```{admonition} Micro-activité
+```{admonition} Micro-activité ✏️📒
 :class: note
-<span style="color:green">Niveau débutant</span> ✏️ 📒
+<!--- <span style="color:green">Niveau débutant</span> -->
 
 Saisissez le texte suivant dans un éditeur de texte et enregistrer le sous forme de fichier *.svg*. Il vous sera ensuite normalement possible d'ouvrir ce fichier avec un logiciel pour afficher les images.
 
@@ -514,16 +559,14 @@ Identifiez et listez les avantages et les inconvénients du format vectoriel en 
 
 ## Bonus
 
-Une œuvre d'art numérique signée Andreas Gysin : 
-
-https://play.ertdfgcvb.xyz/#/src/demos/doom_flame_full_color
+[Une œuvre d'art numérique signée Andreas Gysin ...](https://play.ertdfgcvb.xyz/#/src/demos/doom_flame_full_color)
 
 <br>
 <br>
 
-````{admonition} Exercice 1 : définition
+````{admonition} Exercice 1 : définition ✏️📒
 :class: note
-<span style="color:green">Niveau débutant</span> ✏️ 📒
+<!--- <span style="color:green">Niveau débutant</span> -->
 
 
 Quelle est la définition d’une feuille scannée de largeur 6,5 pouces, de hauteur 9 pouces en 400 dpi ?
@@ -531,9 +574,9 @@ Quelle est la définition d’une feuille scannée de largeur 6,5 pouces, de h
 ````
 
 
-````{admonition} Exercice 2 : carte graphique
+````{admonition} Exercice 2 : carte graphique ✏️📒
 :class: note
-<span style="color:orange">Niveau intermédiaire</span> ✏️ 📒
+<!--- <span style="color:orange">Niveau intermédiaire</span> -->
 
 1 - Calculer, pour chaque définition d'image et chaque couleur, la taille mémoire nécessaire à l'affichage.
 |  Définition de l'image    |   Noir et blanc | 256 couleurs | 65000 couleurs | True color | 
@@ -566,9 +609,9 @@ C'est la quantité de mémoire vive minimale que nécessite la carte graphique (
 ````
 
 
-````{admonition} Exercice 3 : compression
+````{admonition} Exercice 3 : compression ✏️📒
 :class: note
-<span style="color:orange">Niveau intermédiaire</span> ✏️ 📒
+<!--- <span style="color:orange">Niveau intermédiaire</span> -->
 
 1. Une image de couleur a pour format : 360 X 270. Elle est enregistrée en bitmap 8 bits. Quelle est sa taille sur le disque dur (détaillez les calculs) ? 
 
@@ -588,9 +631,9 @@ Comme le taux de compression est 50, on divise par 2 : 1048576/2 = 524288 octets
 ````
 
 
-````{admonition} Exercice 4 : appareil photo
+````{admonition} Exercice 4 : appareil photo ✏️📒
 :class: note
-<span style="color:orange">Niveau intermédiaire</span> ✏️ 📒
+<!--- <span style="color:orange">Niveau intermédiaire</span> -->
 
 
 L’appareil numérique FinePix2400Z (Fujifilm) permet la prise de vue avec trois résolutions : a) 640x480 pixels ; b) 1280x960 pixels ; c) 1600x1200 pixels.
@@ -601,9 +644,9 @@ Calculez pour chaque type de résolution la taille de l’image non-compressée.
 ......
 
 ````
-````{admonition} Exercice 5 : pixelisation
+````{admonition} Exercice 5 : pixelisation ✏️📒
 :class: note
-<span style="color:red">Niveau avancé</span> ✏️ 📒
+<!--- <span style="color:red">Niveau avancé</span> -->
 
 
 Une image numérique de définition 1024×768 mesure 30 cm de large et 20 cm de haut. 

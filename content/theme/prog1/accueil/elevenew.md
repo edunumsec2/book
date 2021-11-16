@@ -29,8 +29,7 @@ Malheureusement, les ordinateurs ne comprennent pas le langage humain. Les circu
 
 Frances Spence 🇺🇸
 ^^^^^
-* **Naissance** 2 mars 1922 
-* **Décès** 18 mars 2012
+***1922-2012***
 
 [**Frances Spence**](https://fr.wikipedia.org/wiki/Frances_Spence) Frances V. Spence est l'une des programmeuses de l'ENIAC, l'un des premiers ordinateurs de l'histoire. Elle est considérée comme l'une des pionnières de la programmation informatique.
 
@@ -39,7 +38,7 @@ Frances Spence 🇺🇸
 
 Niklaus Wirth 🇨🇭
 ^^^^^
-* **Naissance** 15 février 1934
+***Né en 1934***
 
 [**Niklaus Wirth**](https://en.wikipedia.org/wiki/Niklaus_Wirth) est un informaticien suisse. Il a conçu plusieurs langages de programmation, dont l'Euler  en 1965, l'ALGOL W en 1966, le Pascal en 1970, le Modula en 1975 et l'Oberon en 1987. En 1984, il a reçu le prix Turing pour l'ensemble de ses travaux.  
 ````

@@ -144,9 +144,9 @@ Il est possible d'utiliser plusieurs arguments dans une fonction en les séparan
 
 
 
-````{admonition} Exercice 1 : Pythagore
+````{admonition} Exercice 1 : Pythagore 🔌
 :class: note
-<span style="color:green">Niveau débutant</span> 🔌
+<!-- <span style="color:green">Niveau débutant</span> 🔌 -->
 
 Définissez une fonction `pythagore` qui calcule l'hypoténuse d'un triangle rectangle à partir de ses deux cotés.
 La racine carrée peut s'obtenir avec la puissance 0.5.
@@ -157,9 +157,9 @@ print(pythagore(3, 4))
 ```
 ```` 
 
-````{admonition} Exercice 2 : équation quadratique
+````{admonition} Exercice 2 : équation quadratique 🔌
 :class: note
-<span style="color:red">Niveau avancé</span> 🔌
+<!-- <span style="color:red">Niveau avancé</span> 🔌 -->
 
 Faites un programme qui demande à l'utilisateur les coefficients **a, b** et **c** d'une fonction du deuxième degré et qui retourne les solutions de l'équation $ax^2 + bx + d = 0$.
 
@@ -198,17 +198,17 @@ Calculez par exemple les solutions de :
 
 ```` 
 
-````{admonition} Exercice 3 : ???
+````{admonition} Exercice 3 : 
 :class: note
 ......
 ````
 
-````{admonition} Exercice 4 : ???
+````{admonition} Exercice 4 : 
 :class: note
 ......
 ```` 
 
-````{admonition} Exercice 5 : ???
+````{admonition} Exercice 5 : 
 :class: note
 ......
 ```` 
