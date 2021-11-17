@@ -1,88 +1,5 @@
 
 
-<!-- Test de mise en page -->
-
- <!DOCTYPE html>
-<html>
-<head>
-<style>
-.button {
-  background-color: white;
-  border: 1px solid;
-  border-color: black;
-  font-family:"Helvetica";
-  font-weight:300;
-  color: black!important;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-.button:hover {
-  text-decoration:none;
-  background-color: black; 
-  color: white!important;
-}
-h1 {
-    margin-top: 0;
-    font-size: 35px;
-    font-family: "Helvetica";
-    font-weight: 400;
-    text-align: left;
-}
-h2 {
-    margin-top: 0;
-    font-size: 28px;
-    font-family: "Helvetica";
-    text-align: left;
-    font-weight: 400;
-    }
-h3 {
-    margin-top: 0;
-    font-size: 20px;
-    font-family: "Helvetica";
-    text-align: left;
-    font-weight: 400;
-    }
-p {
-    text-align: justify;
-    text-justify: inter-word;
-    font-size: 16px;
-    font-family: "Helvetica";
-    text-align: left;
-    font-weight: 300;
-    line-height:1.5
-    }
-strong {
-    font-weight: 700;
-}
-ul {
-  margin-bottom:20px;
-  padding-left:20px;
-}
-li.simple {
-  margin-bottom:20px;
-  padding-left:20px;
-}
-ol {
-  margin-bottom: 20px;
-  padding-left:15px;
-}
-.boxed {
-  border: 1px solid;$
-  border-color:rgb(96, 105, 219);
-  padding: 10px;
-  } 
-
-</style>
-</head>
-</html>
-
-
-
 
  # Bibliographie et références
 <br>
@@ -102,8 +19,7 @@ ol {
 ````
 
 
-
-<a href="#"><img src="https://i.postimg.cc/hj7BRyVk/Socio-Num-Boullier-Couv.jpg" width="350" style="vertical-align:middle;margin:auto 60px"/></a> 
+<a href="#"><img src="https://i.postimg.cc/hj7BRyVk/Socio-Num-Boullier-Couv.jpg" width="350" style="vertical-align:middle;margin:auto 40px"/></a> 
 
 
 <br>
@@ -215,4 +131,27 @@ Une série d’épisodes qui questionnent la façon dans le numérique change no
 
 [Mais où va le web?](https://maisouvaleweb.fr)<br> 
 Un blog qui éclaire les débats politiques et éthiques autour du numérique.
+
+<br>
+<div align="left"; style="font-size:18px ;color:rgb(0, 0, 0)">
+  <b>Cycle de conférences <a href=https://www.unige.ch/sciences-societe/socio/fr/enseignements/master/forum-de-recherche/forum-de-recherche-sociologique-2021/>"Vivre avec le numérique"</a> - Université de Genève (2020/2021)</b><br>
+</div>
+<br>
+
+**Sélection de vidéos:**
+
+[Le smartphone objet-témoin de la vie numérique contemporaine](https://www.youtube.com/watch?v=aUBN2Lv9kOo&ab_channel=IRSInstitutderecherchessociologiquesUniGe)<br> 
+Nicolas Nova (HEAD) 
+
+[Pourquoi avons-nous peur des fake news?](https://www.youtube.com/watch?v=p719TtSVgLY&ab_channel=IRSInstitutderecherchessociologiquesUniGe)<br>
+Dominique Cardon (Sciences Po Paris)
+
+[La réception des fake news chez les publics jeunes: entre contrôle et usage politique](https://www.youtube.com/watch?v=p719TtSVgLY&ab_channel=IRSInstitutderecherchessociologiquesUniGe)<br>
+Sébastien Salerno (UNIGE)
+
+[Pluralisme des politiques de réseaux: 5G et objets connectés](https://www.youtube.com/watch?v=01Cypt93_7U&ab_channel=IRSInstitutderecherchessociologiquesUniGe)<br>
+Dominique Boullier (Science Po Paris), Jean-Henry Morin (UNIGE) et Justin Veuthey (UNIGE)
+
+[«Je suis assez geek quand même». La parentalité face au défi de la place des écrans](https://www.youtube.com/watch?v=THmkgKtcDuo&ab_channel=IRSInstitutderecherchessociologiquesUniGe)<br>
+Claire Balleys (UNIGE)
 
