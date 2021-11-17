@@ -55,7 +55,7 @@
 
 <br>
 
-Ce dossier aborde le vaste sujet que forment l’intelligence artificielle (IA) et l’automatisation. Qu’est-ce que l’IA, d’où vient-elle et comment impose-t-elle une certaine vision du monde ? Quelles sont les opportunités, les craintes et les problèmes propres aux applications de l’IA ? Comment réguler les usages de ces nouvelles technologies ?
+Ce dossier aborde le vaste sujet que forment l’intelligence artificielle (IA) et l’automatisation. Qu’est-ce que l’IA, d’où vient-elle et quelle place occupe-t-elle dans nos vies ? Comment les imaginaires culturels impactent-ils les discours sur l’IA ? Quelles sont les opportunités, les craintes et les défis propres aux applications de l’IA ? Comment réguler ces nouvelles technologies ?
 
 ## Objectifs
 
@@ -114,7 +114,7 @@ Aujourd’hui, l’IA fait principalement référence aux techniques d’apprent
 Mais le travail des ingénieurs demeure central tant dans le choix et la préparation des données exploitées que dans le développement et l’application des algorithmes. Les tâches de collecte, de tri et de mise en forme des données se doivent d’être effectuées de manière réflexive, en prenant en compte les buts du traitement automatiques de l’information. Le développement ou le choix des algorithmes qui traiteront les données sont également à considérer. Finalement, le travail d’interprétation des résultats est nécessaire, puisque le système se limite à élaborer des modèles statistiques, basés sur des propriétés mathématiques.
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
-  <b>♟ Avec ou contre l'être humain?</b>
+  <b>♖ Avec ou contre l'être humain?</b>
 </div>
 
 La force de prédiction des intelligences artificielles n’a cessé d’augmenter depuis son émergence. En 1997, la victoire du superordinateur Deep Blue (IBM) face au grand maître d’échecs Garry Kasporov marque un tournant dans l’histoire opposant l’humain à la machine. 
