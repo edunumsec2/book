@@ -19,6 +19,9 @@ Un mode d’emploi ou une recette décrivent **<span style="color:rgb(89, 51, 20
 :height: 150
 ```
 
+<br>
+<br>
+
 Les opérations à suivre pour la réalisation d’une omelette
 
 <br>
@@ -74,6 +77,7 @@ Le dernier ingrédient d’un {glo}`algo|algorithme`, mais tout aussi important,
 Schéma des ingrédients d'un algorithme
 
 
+<br>
 <br>
 
 
@@ -151,8 +155,6 @@ Si on dessine l’état des variables après chacune de ces opérations dans des
 <br>
 
 
-
-
 ````{admonition} Exercice 1 : forme ✏️📒
 :class: note
 
@@ -208,8 +210,65 @@ X ← X – Y
 ```
 
 ````
+<!--
+
+***Exercice 1***
+<span style="color:green"> 🔧 </span> ✏️📒 
+
+L’algorithme suivant contrôle un crayon. Quelle forme dessine-t-il ?
+```
+Répéter 8 fois :
+    Avance de 5 cm
+    Tourne à droite de 60°
+```
+<br>
+<br>
+
+***Exercice 2***
+<span style="color:orange"> 🔧🔧 </span>  ✏️📒
+
+Ecrivez un algorithme qui permet de déterminer le plus petit nombre d’une liste. Pensez à décomposer la solution en différentes étapes.
+
+Appliquez l’algorithme à la liste [3, 6, 2, 8, 1, 9, 7, 5].
+
+Avez-vous trouvé la bonne solution ? Sinon, modifiez votre algorithme afin qu’il permette de trouver la bonne solution.
 
 
+<br>
+<br>
+
+***Exercice 3***
+<span style="color:orange"> 🔧🔧 </span> ✏️📒
+
+On souhaite déterminer l’élève dont la date d’anniversaire est la plus proche de la date d’aujourd’hui dans le futur. Ecrivez un algorithme qui permet de trouver cet élève (utiliser un langage familier). Pensez à décomposer le problème en sous-problèmes. 
+
+Comparez votre solution à celle d’un autre élève : avez-vous procédé de la même manière ? Si non, expliquez vos raisonnements.
+
+Un ordinateur peut-il réaliser les opérations décrites par votre algorithme ?
+
+<br>
+<br>
+
+***Exercice 4***
+<span style="color:red"> 🔧🔧🔧 </span> ✏️📒
+
+Écrivez un algorithme qui effectue la permutation circulaire des variables X, Y et Z : à la fin de l’algorithme, X contient la valeur de Z, Y la valeur de X et Z la valeur de Y. Conseil : pensez à chaque variable comme un tiroir avec une étiquette X, Y ou Z qui contient une valeur. Ce tiroir ne peut stocker qu’une valeur à un moment donné. 
+
+Une fois l’algorithme écrit, représentez les variables par une case qui contient des valeurs de votre choix. Suivez les opérations de l’algorithme une après l’autre et dessinez leur impact sur le contenu des variables. Est-ce que votre algorithme donne le résultat attendu ? Si non, modifiez votre algorithme afin qu’il permette de résoudre le problème correctement.
+
+
+***Exercice 5***
+<span style="color:red"> 🔧🔧🔧 </span> ✏️📒
+
+Quel est le résultat de la suite des trois affectations suivantes ? Vérifiez votre solution en dessinant une case par variable et en y mettant des valeurs fictives. Suivez les opérations dans l’ordre et dessinez le contenu des variables après chaque étape.
+
+```
+X ← X + Y
+Y ← X – Y
+X ← X – Y
+```
+
+-->
 
 ````{admonition} Ai-je compris ?
 :class: hint
