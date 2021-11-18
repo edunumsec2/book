@@ -14,21 +14,47 @@
   text-align: right;
 }
 
+.question .admonition {
+  border-radius: 10px;
+  border: solid 0.5px;
+}
+
+.question .admonition-title:before {
+  color:#05245e;
+}
+
+
+/* Next, settings for light theme: */
+
 .question .admonition-title {
   background-color: rgb(233, 242, 249);
 }
 
 .question .admonition {
-  border-radius: 10px;
   background-color: white;
-  border: solid 0.5px;
   border-color: hsl(211, 48%, 50%);
 }
 
 .question .admonition-title:before {
   color:#05245e;
-  padding-left: 2px;
-  font-size: 1.1em;
-  font-weight: bold;
-  content:"✏️";
+}
+
+
+/* Next, settings for dark theme: */
+
+@media (prefers-color-scheme: dark) {
+
+  .question .admonition-title {
+    background-color: rgb(32, 32, 56);
+  }
+  
+  .question .admonition {
+    background-color: rgb(var(--inf-offblack));
+    border-color: hsl(211, 48%, 50%);
+  }
+  
+  .question .admonition-title:before {
+    color:#667081;
+  }
+
 }
