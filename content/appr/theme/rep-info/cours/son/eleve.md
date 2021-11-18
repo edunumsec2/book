@@ -723,7 +723,9 @@ proportionnelle
 à l'intensité
 du signal.
 
+<br>
 
+## Exercices
 
 ````{admonition} Exercice 1 : ???
 :class: note

@@ -91,7 +91,7 @@ name : fig-rech-lin2
 `````
 
 
-```{admonition} Exercice 2 : affichage des nooébres pairs ✏️📒
+```{admonition} Exercice 2 : affichage des nombres pairs ✏️📒
 :class: note
 
 Ecrire un algorithme qui affiche tous les nombres *pairs* de **1** à **n**. 
@@ -188,7 +188,7 @@ Le nombre d’étapes nécessaires pour rechercher dans un tableau de taille 16 
 
 &nbsp;&nbsp;&nbsp;&nbsp;  16 / 2 / 2 / 2 / 2 = 1, donc	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	16 = 2 * 2 * 2 * 2 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   ou 16 = 2<sup>4</sup>
 
-
+<!--
 ```{figure} media/Logn.png
 ---
 alt: le parcours d'un tableau trié est en logn
@@ -197,6 +197,15 @@ name : fig-logn
 ---
 Seulement 4 étapes sont suffisantes pour parcourir un tableau trié de 16 éléments à la recherche d’un élément. A chaque étape, l’espace de recherche est divisé par 2.
 ```
+-->
+
+
+```{image} media/Logn.png
+:width: 400px
+:height: 300px
+```
+Seulement 4 étapes sont suffisantes pour parcourir un tableau trié de 16 éléments à la recherche d’un élément. A chaque étape, l’espace de recherche est divisé par 2
+<br>
 
 
 De manière générale, le nombre d’étapes `x` nécessaires pour parcourir un tableau de taille `n` est :
@@ -208,7 +217,7 @@ De manière générale, le nombre d’étapes `x` nécessaires pour parcourir un
 
 L’ordre de croissance de la recherche binaire est donc `O(log(n))`. La figure ci-dessous permet de comparer la croissance de `n` versus `log(n)`. Un {glo}`algo|algorithme` de complexité `O(log(n))` est beaucoup plus rapide qu’un {glo}`algo|algorithme` de complexité linéaire `O(n)`. La lettre O ici est pour « Ordre ».
 
-
+<!-- 
 ```{figure} media/Graphique_Complexite_log.png
 ---
 alt: complexité logarithmique
@@ -217,6 +226,14 @@ name : fig-comp-log
 ---
 Un algorithme avec un ordre de complexité logarithmique est plus rapide qu’un algorithme de complexité linéaire.
 ```
+-->
+
+```{image} media/Graphique_Complexite_log.png
+:width: 400px
+:height: 300px
+```
+Un algorithme avec un ordre de complexité logarithmique est plus rapide qu’un algorithme de complexité linéaire
+<br>
 
 
 ```{admonition} Exercice 3 : recherche linéaire et binaire 🔌
@@ -427,7 +444,7 @@ Tous les {glo}`algo|algorithmes` de tri vus dans le chapitre précédent sont de
 
 On commence par définir un élément pivot : cet élément peut être le premier élément du tableau, l’élément du milieu, le dernier élément ou encore un élément au hasard. Supposons ici que l’élément pivot est le dernier élément du tableau. Une fois que l’on a défini l’élément pivot, on met tous les éléments qui sont plus petits que le pivot à sa gauche et tous les éléments qui sont plus grands que le pivot à droite de celui‑ci (voir la deuxième ligne de la Figure **Tri rapide** ci-dessous). 
 
-
+<!--
 <span id="tri-rapide"></span>
 ```{figure} media/Tri_rapide.png
 ---
@@ -437,6 +454,15 @@ name : fig-tri-rapide
 ---
 **Tri rapide**. Illustration du tri rapide sur le même set de données que celui utilisé pour illustrer les algorithmes de tri vus au chapitre précédent. L’élément pivot est le dernier élément des tableaux à trier.
 ```
+-->
+
+```{image} media/Tri_rapide.png
+:width: 400px
+:height: 300px
+```
+**Tri rapide**. Illustration du tri rapide sur le même set de données que celui utilisé pour illustrer les algorithmes de tri vus au chapitre précédent. L’élément pivot est le dernier élément des tableaux à trier
+<br>
+
 
 Après la répartition des éléments autour de l’élément pivot en fonction de leur taille, on se retrouve avec deux tableaux non triés, un tableau à chaque côté de l’élément pivot. On continue de traiter ces deux tableaux de la même manière que le tableau initial. On sélectionne pour chaque tableau, celui de gauche et celui de droite, un nouvel élément pivot (le dernier élément du tableau). Pour chaque nouvel élément pivot, on met à gauche les éléments du tableau qui sont plus petits que le pivot. Les éléments qui sont plus grands que le pivot se retrouvent à sa droite. On agit de la sorte jusqu’à ce qu’il ne reste plus que des tableaux à 1 élément.
 
@@ -446,6 +472,7 @@ A chaque étape de l’{glo}`algo|algorithme`, l’espace de recherche est divis
 
 Comparons maintenant les différentes croissances des ordres de complexité vus jusqu’ici (voir la Figure ci-dessous). On voit bien que moins d’{glo}`instruction|instructions` élémentaires sont nécessaires pour le tri rapide d’ordre `O(nlog(n))` que pour le tri à sélection d’ordre `O(n2)`. 
 
+<!--
 ```{figure} media/Complexites4.png
 ---
 alt: comparaison de différentes complexités
@@ -454,6 +481,16 @@ name : fig-compl-4
 ---
 Comparaison des ordres de complexité vus jusqu’ici. Plus le nombre d’instructions élémentaires grandit avec la taille des données, plus l’algorithme est lent. 
 ```
+-->
+
+```{image} media/Complexites4.png
+:width: 400px
+:height: 300px
+```
+Comparaison des ordres de complexité vus jusqu’ici. Plus le nombre d’instructions élémentaires grandit avec la taille des données, plus l’algorithme est lent
+<br>
+
+
 
 ````{admonition} Matière à réfléchir V
 :class: attention
@@ -482,7 +519,7 @@ L’{glo}`algo|algorithme` commence par une phase de division : on découpe le t
 La deuxième phase consiste à fusionner les petits tableaux. On commence par fusionner les éléments 1 à 1, dans un ordre qui dépend de leur taille. Il suffit d’assembler les deux éléments du plus petit au plus grand (voir la 2e ligne de la <a href="#fusionner">Figure **Fusionner**</a> ci-dessous).
 
 
-
+<!--
 ```{figure} media/Tri_fusion_diviser.png
 ---
 alt: etape de division dans le tri fusion
@@ -491,6 +528,17 @@ name : fig-div-fus
 ---
 **Diviser.** Illustration de la première phase du tri fusion. A chaque étape le tableau est découpé en deux jusqu’à ce qu’il ne reste que des tableaux à 1 élément
 ```
+-->
+
+```{image} media/Tri_fusion_diviser.png
+:width: 400px
+:height: 300px
+```
+**Diviser.** Illustration de la première phase du tri fusion. A chaque étape le tableau est découpé en deux jusqu’à ce qu’il ne reste que des tableaux à 1 élément
+<br> <br>
+
+
+<!--
 <span id="fusionner"></span>
 
 ```{figure} media/Tri_fusion_fusionner.png
@@ -501,6 +549,15 @@ name : fig-fus-fus
 ---
 **Fusionner.**Illustration de la deuxième phase du tri fusion. A chaque étape les tableaux sont fusionnés par paires de deux, en faisant attention à respecter l’ordre de tri. On continue ainsi jusqu’à ce qu’il ne reste qu’un tableau unique.
 ```
+-->
+
+```{image} media/Tri_fusion_fusionner.png
+:width: 400px
+:height: 300px
+```
+**Fusionner.** Illustration de la deuxième phase du tri fusion. A chaque étape les tableaux sont fusionnés par paires de deux, en faisant attention à respecter l’ordre de tri. On continue ainsi jusqu’à ce qu’il ne reste qu’un tableau unique
+<br> <br>
+
 
 Dans les prochaines étapes (lignes 3 et 4 de la Figure **Fusionner** ci-dessus), on continue à fusionner les tableaux par paires de deux. Il est facile de fusionner ces tableaux, car ils sont déjà triés. Tout d’abord, on compare les premiers éléments des deux tableaux et on prend le plus petit des deux. Concrètement, on enlève le plus petit élément des deux tableaux pour commencer un nouveau tableau fusionné. On compare ensuite les premiers éléments des éléments restants dans les tableaux à fusionner et on prend à nouveau le plus petit des deux. On continue de la sorte jusqu’à ce qu’il ne reste pas d’éléments dans les tableaux à fusionner. 
 

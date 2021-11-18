@@ -299,6 +299,8 @@ width: 750px
 Extrait de la table de représentation UTF-8
 
 
+## Exercices
+
 ````{admonition} Exercice 1 : utilisation de la table ASCII ✏️📒
 :class: note 
 <!--- <span style="color:orange">Niveau intermédiaire</span> -->

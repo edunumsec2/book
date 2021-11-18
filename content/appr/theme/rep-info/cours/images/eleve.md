@@ -562,6 +562,8 @@ Identifiez et listez les avantages et les inconvénients du format vectoriel en 
 <br>
 <br>
 
+## Exercices
+
 ````{admonition} Exercice 1 : définition ✏️📒
 :class: note
 <!--- <span style="color:green">Niveau débutant</span> -->
