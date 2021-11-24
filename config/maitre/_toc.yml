@@ -7,8 +7,8 @@ parts:
   chapters: 
   - file: content/theme/representation-information/cours/introduction/maitre
     sections:
-      - file: content/theme/representation-information/cours/representation-entiers/maitre
-      - file: content/theme/representation-information/cours/representation-images/eleve
+    #  - file: content/theme/representation-information/cours/representation-entiers/maitre
+    #  - file: content/theme/representation-information/cours/representation-images/eleve
     #  - file: content/theme/representation-information/cours/representation-images/maitre
       - file: content/theme/representation-information/activites/representation-son/visu-et-ecoute-son.md
       - file: content/theme/representation-information/exercices/eleve
