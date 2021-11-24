@@ -37,8 +37,7 @@ Dans ce chapitre, vous découvrirez comment sont construits les ordinateurs, com
 
 Anita Borg 🇺🇸 
 ^^^^^
-* **Naissance** 17 janvier 1949
-* **Décès** 6 avril 2003
+***1949-2003***
 
 [**Anita Borg**](https://fr.wikipedia.org/wiki/Anita_Borg) est une informaticienne américaine. Elle a notamment travaillé pour Digital Equipment Corporation où elle a développé une méthode permettant de concevoir des systèmes mémoriels à haute vitesse. 
 
@@ -47,8 +46,7 @@ Anita Borg 🇺🇸
 
 Charles Babbage 🇬🇧 
 ^^^^^
-* **Naissance** 26 décembre 1791
-* **Décès** 18 octobre 1871
+***1791-1871***
 
 [**Charles Babbage**](https://fr.wikipedia.org/wiki/Charles_Babbage) fut le premier inventeur à énoncer le principe d'un ordinateur. C'est en 1834, pendant le développement d'une machine à calculer destinée au calcul et à l'impression de tables mathématiques, qu'il eut l'idée d'y incorporer des cartes du métier Jacquard, dont la lecture séquentielle donnerait des instructions et des données à sa machine. 
 ````

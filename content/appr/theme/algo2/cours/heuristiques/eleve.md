@@ -45,10 +45,10 @@ Une solution heuristique pour le problème du sac à dos serait la solution suiv
 Il n’y a pas que des {glo}`heuristique|heuristiques` gloutonnes. Il existe d’autres types d’{glo}`heuristique|heuristiques`, plus lentes, mais qui permettent de s’approcher davantage de la solution optimale. Il existe des stratégies de résolution statistiques, génétiques, neuronales, parmi d’autres. La majorité des problèmes que l’on tente de résoudre aujourd’hui sont difficiles et les solutions de leurs {glo}`algo|algorithmes` ne donnent pas la meilleure solution. 
 
 
-```{admonition} Exercice 1
+```{admonition} Exercice 1 : univers et sac à dos ✏️📒
 :class: note
 
-L’âge estimé de l’univers est de 14 milliards d’années. Si le calcul d’une combinaison d’objets dans le problème du sac à dos prenait une microseconde, pour quel nombre d’objets il est possible de trouver une solution exacte sans dépasser l’âge de l’univers ?
+L’âge estimé de l’univers est de 14 milliards d’années. Si le calcul d’une combinaison d’objets dans le problème du sac à dos prenait une microseconde, pour quel nombre d’objets est-il possible de trouver une solution exacte sans dépasser l’âge de l’univers ?
 
 ```
 
@@ -68,10 +68,10 @@ n = log<sub>2</sub>(1.4*10<sup>10</sup> / 10<sup>-6</sup>) = log<sub>2</sub>(1.4
 ````
 
 
-```{admonition} Exercice 2
+```{admonition} Exercice 2 : parcours de tableaux ✏️📒
 :class: note
 
-Quelle est la complexité d’un algorithme qui doit parcourir un tableau 2 fois, pour chacun de ses éléments (au lieu de 1 fois comme pour le tri par sélection) ?
+Quelle est la complexité d’un algorithme qui doit parcourir un tableau deux fois, pour chacun de ses éléments (au lieu d'une fois comme pour le tri par sélection) ?
 
 ```
 
@@ -92,14 +92,14 @@ Pour chaque élément on doit parcourir le tableau 2 fois, on a donc une complex
 ````{admonition} Pour aller plus loin
 :class: attention
 
-Voici un problème à 1 million de dollars, un parmi les sept problèmes mathématiques du prix du millénaire qui rapporteront de l’argent à celui ou celle qui les résout.
+Voici un problème à un million de dollars, un parmi les sept problèmes mathématiques du prix du millénaire qui rapporteront de l’argent à celui ou celle qui les résoudra.
 
 On appelle la classe des algorithmes qui sont faciles à résoudre la classe des problèmes P. Ces algorithmes peuvent être résolus en un temps polynomial en fonction de la taille des données n ou log(n<sup>a</sup>). 
 
-Il existe aussi une classe de problèmes difficiles (d’ordre de complexité exponentielle), mais pour lesquelles il est facile de vérifier si une solution proposée permet de résoudre le problème.  Cette classe de problèmes s’appelle NP ou « non déterministe polynomial ».
+Il existe aussi une classe de problèmes difficiles (d’ordre de complexité exponentielle), mais pour lesquels il est facile de vérifier si une solution proposée permet de résoudre le problème. Cette classe de problèmes s’appelle NP ou « non déterministe polynomial ».
 
 On souhaite savoir si les problèmes NP peuvent être résolus en un temps P, ou en d’autres termes : est-ce que **P = NP** ? 
 
-S’il s’avérait que c’est bien le cas (ce qui est tout de même peu probable), beaucoup de problèmes difficiles à résoudre deviendraient d’un seul coup plus faciles à résoudre, comme le **problème de repliement des protéines** en biologie pour trouver de nouveaux médicaments.  Cela pourrait également signifier la fin de la cryptographie telle qu’elle existe actuellement.
+S’il s’avérait que c’est bien le cas (ce qui est tout de même peu probable), beaucoup de problèmes difficiles à résoudre deviendraient d’un seul coup plus faciles à résoudre, comme le **problème de repliement des protéines** en biologie pour trouver de nouveaux médicaments. Cela pourrait également signifier la fin de la cryptographie telle qu’elle existe actuellement.
 
 ````

@@ -13,11 +13,18 @@ Un mode d’emploi ou une recette décrivent **<span style="color:rgb(89, 51, 20
 3. Cuire le mélange d’œufs dans une poêle à température moyenne.
 4. Lorsque cuite, glisser l’omelette dans une assiette.
 
-```{figure} media/Omelette_1.png
 
-Les opérations à suivre pour la réalisation d’une omelette.
-
+```{image} media/Omelette_1.png
+:width: 600
+:height: 150
 ```
+
+<br>
+<br>
+
+Les opérations à suivre pour la réalisation d’une omelette
+
+<br>
 
 Il en est de même pour l’{glo}`algo|algorithme` qui **<span style="color:rgb(89, 51, 209)">décompose le problème en sous-problèmes</span>**. La solution de chaque sous-problème donne lieu à une étape que le système informatique peut suivre pour résoudre le sous-problème. L’{glo}`algo|algorithme` décrit toutes les opérations qu'il faut effectuer pour arriver à un résultat. L’{glo}`algo|algorithme` est donc **<span style="color:rgb(89, 51, 209)">une suite d’opérations</span>** qui permettent de résoudre un problème.  Le langage utilisé dans un {glo}`algo|algorithme` est plus libre que celui utilisé dans un programme, comme le montre cet exemple :
 
@@ -31,7 +38,7 @@ Répéter Pour i = 1 à longueur(Nombres) # par pas de 1
 Fin Pour
 ```
 
-````{admonition} Exercice-application 0
+````{admonition} Exercice-application 0 ✏️📒
 :class: note
 
 Que contient la variable résultat à la fin de l'algorithme ci-dessus ? Quel problème cet algorithme permet-il de résoudre ?
@@ -62,11 +69,17 @@ Le dernier ingrédient d’un {glo}`algo|algorithme`, mais tout aussi important,
 2. Des opérations, dans un ordre précis.
 3. Un résultat en {glo}`output|sortie`.
 
-```{figure} media/Diagramme_algorithme.png
 
-Schéma des ingrédients d'un algorithme.
-
+```{image} media/Diagramme_algorithme.png
+:width: 600
+:height: 150
 ```
+Schéma des ingrédients d'un algorithme
+
+
+<br>
+<br>
+
 
 Notez que les opérations d’un {glo}`algo|algorithme` doivent être précises et ***<span style="color:rgb(13, 204, 166)">non ambigües</span>***. Il doit y avoir une seule interprétation possible de l’{glo}`algo|algorithme`. Une recette de cuisine ne serait pas assez précise pour un ordinateur : il faudrait indiquer précisément ce que température moyenne et mélange homogène veulent dire. Les êtres humains peuvent interpréter, deviner et supposer, mais pas les ordinateurs.
 
@@ -78,7 +91,7 @@ Le jeu d’instructions élémentaires dépend du système informatique. Un algo
 ````
 <br>
 
-````{admonition} Exercice-application 1
+````{admonition} Exercice-application 1 ✏️📒
 :class: note
 A quoi correspondent les ingrédients d’un algorithme dans l’exemple de la recette de l’omelette ?
 ````
@@ -93,10 +106,10 @@ Les œufs sont les données en entrée, les opérations correspondent aux instru
 ```
 ````
 
-````{admonition} Exercice-application 2
+````{admonition} Exercice-application 2 ✏️📒
 :class: note
 
-Ecrire un algorithme qui échange les valeurs de deux variables. Représenter les deux variables par deux cases. Chaque case a une étiquette (le nom de la variable) et un contenu (la valeur de la variable). Représenter le contenu de chaque variable après chaque opération de votre algorithme.
+Ecrivez un algorithme qui échange les valeurs de deux variables. Représentez les deux variables par deux cases. Chaque case a une étiquette (le nom de la variable) et un contenu (la valeur de la variable). Représentez le contenu de chaque variable après chaque opération de votre algorithme.
 
 ````
 
@@ -142,11 +155,8 @@ Si on dessine l’état des variables après chacune de ces opérations dans des
 <br>
 
 
-
-
-````{admonition} Exercice 1
+````{admonition} Exercice 1 : forme ✏️📒
 :class: note
-<span style="color:green">Niveau débutant</span> ✏️ 📒
 
 L’algorithme suivant contrôle un crayon. Quelle forme dessine-t-il ?
 ```
@@ -156,9 +166,9 @@ Répéter 8 fois :
 ```
 ````
 
-````{admonition} Exercice 2
+````{admonition} Exercice 2 : minimum ✏️📒
 :class: note
-<span style="color:orange">Niveau intermédiaire</span> ✏️ 📒
+
 
 Ecrivez un algorithme qui permet de déterminer le plus petit nombre d’une liste. Pensez à décomposer la solution en différentes étapes.
 
@@ -168,9 +178,8 @@ Avez-vous trouvé la bonne solution ? Sinon, modifiez votre algorithme afin qu�
 
 ````
 
-````{admonition} Exercice 3
+````{admonition} Exercice 3 : anniversaire ✏️📒
 :class: note
-<span style="color:orange">Niveau intermédiaire</span> ✏️ 📒
 
 On souhaite déterminer l’élève dont la date d’anniversaire est la plus proche de la date d’aujourd’hui dans le futur. Ecrivez un algorithme qui permet de trouver cet élève (utiliser un langage familier). Pensez à décomposer le problème en sous-problèmes. 
 
@@ -180,9 +189,8 @@ Un ordinateur peut-il réaliser les opérations décrites par votre algorithme ?
 
 ````
 
-````{admonition} Exercice 4
+````{admonition} Exercice 4 : permutation circulaire ✏️📒
 :class: note
-<span style="color:red">Niveau avancé</span> ✏️ 📒
 
 Écrivez un algorithme qui effectue la permutation circulaire des variables X, Y et Z : à la fin de l’algorithme, X contient la valeur de Z, Y la valeur de X et Z la valeur de Y. Conseil : pensez à chaque variable comme un tiroir avec une étiquette X, Y ou Z qui contient une valeur. Ce tiroir ne peut stocker qu’une valeur à un moment donné. 
 
@@ -190,9 +198,8 @@ Une fois l’algorithme écrit, représentez les variables par une case qui cont
 
 ````
 
-````{admonition} Exercice 5
+````{admonition} Exercice 5 : affectations successives ✏️📒
 :class: note
-<span style="color:red">Niveau avancé</span> ✏️ 📒
 
 Quel est le résultat de la suite des trois affectations suivantes ? Vérifiez votre solution en dessinant une case par variable et en y mettant des valeurs fictives. Suivez les opérations dans l’ordre et dessinez le contenu des variables après chaque étape.
 
@@ -203,8 +210,65 @@ X ← X – Y
 ```
 
 ````
+<!--
+
+***Exercice 1***
+<span style="color:green"> 🔧 </span> ✏️📒 
+
+L’algorithme suivant contrôle un crayon. Quelle forme dessine-t-il ?
+```
+Répéter 8 fois :
+    Avance de 5 cm
+    Tourne à droite de 60°
+```
+<br>
+<br>
+
+***Exercice 2***
+<span style="color:orange"> 🔧🔧 </span>  ✏️📒
+
+Ecrivez un algorithme qui permet de déterminer le plus petit nombre d’une liste. Pensez à décomposer la solution en différentes étapes.
+
+Appliquez l’algorithme à la liste [3, 6, 2, 8, 1, 9, 7, 5].
+
+Avez-vous trouvé la bonne solution ? Sinon, modifiez votre algorithme afin qu’il permette de trouver la bonne solution.
 
 
+<br>
+<br>
+
+***Exercice 3***
+<span style="color:orange"> 🔧🔧 </span> ✏️📒
+
+On souhaite déterminer l’élève dont la date d’anniversaire est la plus proche de la date d’aujourd’hui dans le futur. Ecrivez un algorithme qui permet de trouver cet élève (utiliser un langage familier). Pensez à décomposer le problème en sous-problèmes. 
+
+Comparez votre solution à celle d’un autre élève : avez-vous procédé de la même manière ? Si non, expliquez vos raisonnements.
+
+Un ordinateur peut-il réaliser les opérations décrites par votre algorithme ?
+
+<br>
+<br>
+
+***Exercice 4***
+<span style="color:red"> 🔧🔧🔧 </span> ✏️📒
+
+Écrivez un algorithme qui effectue la permutation circulaire des variables X, Y et Z : à la fin de l’algorithme, X contient la valeur de Z, Y la valeur de X et Z la valeur de Y. Conseil : pensez à chaque variable comme un tiroir avec une étiquette X, Y ou Z qui contient une valeur. Ce tiroir ne peut stocker qu’une valeur à un moment donné. 
+
+Une fois l’algorithme écrit, représentez les variables par une case qui contient des valeurs de votre choix. Suivez les opérations de l’algorithme une après l’autre et dessinez leur impact sur le contenu des variables. Est-ce que votre algorithme donne le résultat attendu ? Si non, modifiez votre algorithme afin qu’il permette de résoudre le problème correctement.
+
+
+***Exercice 5***
+<span style="color:red"> 🔧🔧🔧 </span> ✏️📒
+
+Quel est le résultat de la suite des trois affectations suivantes ? Vérifiez votre solution en dessinant une case par variable et en y mettant des valeurs fictives. Suivez les opérations dans l’ordre et dessinez le contenu des variables après chaque étape.
+
+```
+X ← X + Y
+Y ← X – Y
+X ← X – Y
+```
+
+-->
 
 ````{admonition} Ai-je compris ?
 :class: hint

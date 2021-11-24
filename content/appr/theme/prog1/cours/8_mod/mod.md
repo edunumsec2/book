@@ -12,7 +12,7 @@ Python est accompagné d'une bibliothèque de modules standards, tels que :
 - `time`,
 - `turtle`.
 
-Pour d'autres modules, on peut consulter l'[index des modules Python](On trouve l'index des modules ici: <)https://docs.python.org/3/py-modindex.html).
+Pour d'autres modules, on peut consulter l'[index des modules Python](https://docs.python.org/3/py-modindex.html).
 
 ## Importer un module
 
@@ -158,18 +158,18 @@ Plus d'infos sous [Python - Tortue graphique](https://docs.python.org/fr/3/libra
 
 <br>
 
-````{admonition} Exercice 1 : Pythagore (toujours...)
+````{admonition} Exercice 1 : Pythagore (toujours...) 🔌
 :class: note
-<span style="color:green">Niveau débutant</span> 🔌
+<!-- <span style="color:green">Niveau débutant</span> 🔌 -->
 
 Faites un programme permettant de retourner la valeur en degré d'un des angles quelconques d'un triangle rectangle.
 
 Le programme doit demander à l'utilisateur les longueurs des côtés opposé et adjacent par rapport à l'angle à calculer, ainsi que de l'hypoténuse. Avec ces informations, le programme doit retourner la valeur de l'angle en degrés.
 ```` 
 
-````{admonition} Exercice 2 : jeu
+````{admonition} Exercice 2 : jeu 🔌
 :class: note
-<span style="color:orange">Niveau intermédiaire</span> 🔌
+<!-- <span style="color:orange">Niveau intermédiaire</span> 🔌 -->
 
 Faites un programme contre lequel on peut jouer à feuille-cailloux-ciseaux.
 
@@ -178,16 +178,16 @@ Le programme doit demander à l'utilisateur de faire son choix parmi les trois p
 Ce programme peut être amélioré en mettant en œuvre un système de score, de manches ou multi-joueurs.
 ```` 
 
-````{admonition} Exercice 3 : étoile
+````{admonition} Exercice 3 : étoile 🔌
 :class: note
-<span style="color:red">Niveau avancé</span> 🔌
+<!-- <span style="color:red">Niveau avancé</span> 🔌 -->
 
 Dessinez une étoile avec la tortue.
 ````
 
-````{admonition} Exercice 4 : maison
+````{admonition} Exercice 4 : maison 🔌
 :class: note
-<span style="color:red">Niveau avancé</span> 🔌
+<!-- <span style="color:red">Niveau avancé</span> 🔌 -->
 
 Dessinez une maison comprenant une porte et une fenêtre avec la tortue.
 ```` 

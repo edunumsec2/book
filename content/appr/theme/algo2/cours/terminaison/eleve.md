@@ -41,7 +41,7 @@ Voici un exemple d’{glo}`algo|algorithme` qui compte et ne se termine pas :
 
 Si on exécute cet {glo}`algo|algorithme`, le {glo}`programme|programme` ne s’arrête jamais : `i` est {glo}`incrementation|incrémenté` de `1` indéfiniment.  En pratique, si on retranscrit cet {glo}`algo|algorithme` en {glo}`programme|programme` et que l’on exécute le {glo}`programme|programme`, le {glo}`programme|programme` finira par s’arrêter lorsque les nombres représentés seront trop grands pour être représentés.
 
-```{admonition} Exercice 1
+```{admonition} Exercice 1 : infini programmé ✏️📒
 :class: note
 
 Retranscrire l’algorithme infini en programme. Après combien de boucles le programme s’arrête‑t‑il ?
@@ -71,7 +71,7 @@ Pour être certains que le {glo}`programme|programme` finit par s’arrêter, no
  Fin Tant que
  ```
 
- ```{admonition} Exercice 2
+ ```{admonition} Exercice 2 : infini... toujours ✏️📒
 :class: note
 
 L’algorithme ci-dessus est appelé « Algorithme qui compte toujours infini ». Pourquoi est-il toujours infini ? Dans quel cas cet algorithme ne s’arrête jamais ?
