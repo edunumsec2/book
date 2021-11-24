@@ -1,4 +1,4 @@
-# 2. Microprocesseurs
+# 3. Microprocesseurs
 
 TODO : partie introductive, images, vidéos ...
 
