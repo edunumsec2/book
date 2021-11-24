@@ -47,9 +47,9 @@ parts:
   - file: content/appr/theme/archi/accueil/eleve
     sections:
       - file: content/appr/theme/archi/cours/0_intro/eleve
-      - file: content/appr/theme/archi/cours/1_sys-log/eleve
+      - file: content/appr/theme/archi/cours/1_comp/eleve
       - file: content/appr/theme/archi/cours/2_micro-pro/eleve
-      - file: content/appr/theme/archi/cours/3_comp/eleve
+      - file: content/appr/theme/archi/cours/3_sys-log/eleve
       - file: content/appr/theme/archi/cours/4_conclusion/eleve
 
 - caption: Deuxième année
