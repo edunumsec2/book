@@ -33,7 +33,7 @@ sphinx:
     html_favicon: favicon.ico
     html_extra_path: ['../assets']
     html_theme_options:
-      use_download_button: false
+      use_download_button: true
       repository_url: https://github.com/edunumsec2/book
       use_issues_button: true
       use_repository_button: true
