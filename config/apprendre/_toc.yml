@@ -49,9 +49,10 @@ parts:
       - file: content/appr/theme/archi/cours/0_intro/eleve
       - file: content/appr/theme/archi/cours/1_archgen/eleve
       - file: content/appr/theme/archi/cours/2_composants/eleve
-      - file: content/appr/theme/archi/cours/3_micro-pro/eleve
-      - file: content/appr/theme/archi/cours/4_sys-log/eleve
-      - file: content/appr/theme/archi/cours/5_conclusion/eleve
+      - file: content/appr/theme/archi/cours/3_sys-log/eleve
+      - file: content/appr/theme/archi/cours/4_architecture-von-neumann/eleve
+      - file: content/appr/theme/archi/cours/5_micro-pro/microprocesseur/eleve
+      - file: content/appr/theme/archi/cours/6_conclusion/eleve
       
 
 - caption: Deuxième année
