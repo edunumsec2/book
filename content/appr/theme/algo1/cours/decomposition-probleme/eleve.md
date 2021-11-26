@@ -34,6 +34,9 @@ width: 100%
 
 **Un algorithme est un peu comme une recette de cuisine.** Cet exemple illustre les opérations à suivre pour la réalisation d’une omelette.
 
+```{image} media/Omelette_1.png
+:width: 600
+:height: 150
 ```
 
 Dans le cas de la recette d'une omelette, nous avons décomposé la marche à suivre en étapes à réaliser dans un certain ordre. Il en est de même pour un {glo}`algo|algorithme`. Pour résoudre un problème, il faut d'abord **<span style="color:rgb(89, 51, 209)">décomposer le problème en sous-problèmes</span>** que l'on *sait résoudre*. La solution de chaque sous-problème donne lieu à une étape qu'il faudra exécuter pour arriver à un résultat. Voici les sous-problèmes que certaines étapes ci-dessus permettent de résoudre. Afin d'extraire le contenu édible de l'œuf, il faut casser les oeufs. Pour que l'omelette ait une jolie couleur uniforme, il faut mélanger le jaune et le blanc d'œuf. Cette dernière étape ne serait pas du tout pertinente si le problème que l'on essaie de résoudre est la préparation d'un oeuf au plat. *<span style="color:rgb(13, 204, 166)">L’{glo}`algo|algorithme` décrit donc toutes les opérations qu'il faut effectuer pour arriver à ce résultat</span>*. Nous allons ainsi définir l’{glo}`algo|algorithme` comme **<span style="color:rgb(89, 51, 209)">une suite d’opérations qui permettent de résoudre un problème</span>**. 
@@ -470,10 +473,67 @@ X ← X – Y ou X ← (X + Y) - Y, donc X ← Y
 Cet algorithme échange les valeurs des deux variables sans avoir le besoin d'utiliser une variable temporaire.
 
 ````
+<!--
+
+***Exercice 1***
+<span style="color:green"> 🔧 </span> ✏️📒 
+
+L’algorithme suivant contrôle un crayon. Quelle forme dessine-t-il ?
+```
+Répéter 8 fois :
+    Avance de 5 cm
+    Tourne à droite de 60°
+```
+<br>
+<br>
+
+***Exercice 2***
+<span style="color:orange"> 🔧🔧 </span>  ✏️📒
+
+Ecrivez un algorithme qui permet de déterminer le plus petit nombre d’une liste. Pensez à décomposer la solution en différentes étapes.
+
+Appliquez l’algorithme à la liste [3, 6, 2, 8, 1, 9, 7, 5].
 
 `````
 
+Avez-vous trouvé la bonne solution ? Sinon, modifiez votre algorithme afin qu’il permette de trouver la bonne solution.
 
+
+<br>
+<br>
+
+***Exercice 3***
+<span style="color:orange"> 🔧🔧 </span> ✏️📒
+
+On souhaite déterminer l’élève dont la date d’anniversaire est la plus proche de la date d’aujourd’hui dans le futur. Ecrivez un algorithme qui permet de trouver cet élève (utiliser un langage familier). Pensez à décomposer le problème en sous-problèmes. 
+
+Comparez votre solution à celle d’un autre élève : avez-vous procédé de la même manière ? Si non, expliquez vos raisonnements.
+
+Un ordinateur peut-il réaliser les opérations décrites par votre algorithme ?
+
+<br>
+<br>
+
+***Exercice 4***
+<span style="color:red"> 🔧🔧🔧 </span> ✏️📒
+
+Écrivez un algorithme qui effectue la permutation circulaire des variables X, Y et Z : à la fin de l’algorithme, X contient la valeur de Z, Y la valeur de X et Z la valeur de Y. Conseil : pensez à chaque variable comme un tiroir avec une étiquette X, Y ou Z qui contient une valeur. Ce tiroir ne peut stocker qu’une valeur à un moment donné. 
+
+Une fois l’algorithme écrit, représentez les variables par une case qui contient des valeurs de votre choix. Suivez les opérations de l’algorithme une après l’autre et dessinez leur impact sur le contenu des variables. Est-ce que votre algorithme donne le résultat attendu ? Si non, modifiez votre algorithme afin qu’il permette de résoudre le problème correctement.
+
+
+***Exercice 5***
+<span style="color:red"> 🔧🔧🔧 </span> ✏️📒
+
+Quel est le résultat de la suite des trois affectations suivantes ? Vérifiez votre solution en dessinant une case par variable et en y mettant des valeurs fictives. Suivez les opérations dans l’ordre et dessinez le contenu des variables après chaque étape.
+
+```
+X ← X + Y
+Y ← X – Y
+X ← X – Y
+```
+
+-->
 
 ````{admonition} Ai-je compris ?
 :class: hint

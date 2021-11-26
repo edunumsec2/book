@@ -7,8 +7,8 @@
 	],
 	"settings": {
 		"files.exclude": {
-			"config/eleve/content": true,
-			"config/maitre/content": true,
+			"config/apprendre/content": true,
+			"config/enseigner/content": true,
 			"**/_build": true,
 			"**/.git": true,
 			"**/.svn": true,
@@ -17,10 +17,10 @@
 			"**/.DS_Store": true
 		},
 		"search.exclude": {
-			"config/eleve/content": true,
-			"config/maitre/content": true,
-			"config/eleve/_build": true,
-			"config/maitre/_build": true,
+			"config/apprendre/content": true,
+			"config/enseigner/content": true,
+			"config/apprendre/_build": true,
+			"config/enseigner/_build": true,
 			"**/_build": true,
 			"**/node_modules": true,
 			"**/bower_components": true,
