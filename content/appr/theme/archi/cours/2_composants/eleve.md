@@ -1,4 +1,4 @@
-# 2. Composants d'un ordinateur
+# 4. Composants d'un ordinateur
 
 Par composant d'ordinateur on désigne le matériel à l'intérieur de l'ordinateur, contrairement aux périphériques externes qui sont reliés par des câbles ou des moyens de communication sans fil.
 Il s'agit de :

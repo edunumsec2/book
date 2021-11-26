@@ -238,20 +238,25 @@ Ce mode de fonctionnement est similaire à celui des tableurs pour lesquels il e
 :class: hint
 [The Million Dollar Homepage](https://fr.wikipedia.org/wiki/The_Million_Dollar_Homepage) est un site web conçu en 2005 par Alex Tew, un étudiant anglais, dans le but de financer ses études supérieures. La page d'accueil est une grille de 1000 X 1000 pixels. Chaque pixel était vendu 1$ en tant qu'espace publicitaire. Ils ont tous été vendus...
 
-<!---
+
+<!--
 ```{figure} media/milliondollarhomepage.png
 ```
-````
 -->
 
 
 <img src="media/milliondollarhomepage.png" height="250" width="400"/>
+
+````
+
+
 
 ````{tabbed} Image
 ```{image} media/kirbycolor.png
 :width: 300px
 ```
 ````
+
 ````{tabbed} Code
 ```{image} media/kirbycolor2.png
 :width: 500px
