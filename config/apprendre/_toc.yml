@@ -69,6 +69,12 @@ parts:
   - file: content/appr/theme/projets/eleve
   - file: content/appr/theme/reseaux/eleve
 
+
+- caption: Glossaire
+  numbered: false
+  chapters:
+  - file: content/glossaire
+
 ## Annexes
 #- caption: Annexes
 #  numbered: false
