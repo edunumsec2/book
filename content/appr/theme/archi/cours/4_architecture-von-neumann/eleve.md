@@ -78,15 +78,15 @@ Architecture de von Neumann
 
 <br> <br>
 
-On trouve dans le schéma de cette figure les éléments suivants :
+On trouve dans le schéma de cette figure les éléments suivants:
 
-**L'ALU ou ULA, c'est-à-dire l'unité logique et arithmétique** : cet élément effectue les opérations logiques et arithmétiques.
+**L'ALU ou ULA, c'est-à-dire l'unité logique et arithmétique**: cet élément effectue les opérations logiques et arithmétiques.
 
-**L'unité de contrôle (UC)** : cette unité est responsable du séquençage des opérations. C'est en quelque sorte le chef d'orchestre.
+**L'unité de contrôle (UC)**: cette unité est responsable du séquençage des opérations. C'est en quelque sorte le chef d'orchestre.
 
-**La mémoire** : la mémoire contient le programme et les données.
+**La mémoire**: la mémoire contient le programme et les données.
 
-**Les entrées et sorties (E/S ou I/O en anglais)** : les entrées-sorties permettent de communiquer avec les autres périphériques comme la souris, le clavier, l'écran, etc.
+**Les entrées et sorties (E/S ou I/O en anglais)**: les entrées-sorties permettent de communiquer avec les autres périphériques comme la souris, le clavier, l'écran, etc.
 
 
 :::{admonition} Le modèle Turing

@@ -12,7 +12,9 @@ Y a-t-il des objets que vous rangez chez vous dans un ordre bien particulier ?
 
 ````
 
-# 2. Algorithmes de tri classiques
+# 2. Trie, cherche et trouve
+
+Pour l'instant vous devez nous croire sur parole, mais si l'on veut pouvoir trouver une information parmi une avalanche d'informations, il faut que ces informations soient bien rangées. L'exemple de la bibliothèque illustre ce fait de manière intuitive, mais vous aller pouvoir l'expérimenter de première main dans le chapitre Algorithmique II. Finalement, le succès fulgurant de *Google* n'est dû qu'à sa capacité à bien ranger l'information disponible sur le Web et qu'au moment où vous avez besoin d'une information particulière, leurs algorithmes sont capables de vous la trouver extrêmement rapidement.
 
 <span id=fig-trier></span>
 Pour apprendre à cuisiner, on commence par suivre des recettes classiques. Ainsi, pour appréhender l’{glo}`algorithmique|algorithmique`, nous étudierons une classe d’{glo}`algo|algorithmes` classiques : les **<span style="color:rgb(89, 51, 209)">algorithmes de tri</span>**. 

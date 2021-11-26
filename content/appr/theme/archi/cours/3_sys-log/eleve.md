@@ -9,11 +9,11 @@ C'est assez fascinant de se dire que des tâches a priori non mathématiques, co
 En parallèle à ce qui leur permet de faire des calculs, les ordinateurs disposent et utilisent de la mémoire. Il y en a au cœur des microprocesseurs, les _registres_, ce qu'on appelle la _mémoire vive_ - appelée aussi RAM (_Random-Access Memory_). La mémoire servant au stockage de longue durée comme disques durs et autres SSD n'est pas discutée dans cette section. L'étude des systèmes logiques permet de comprendre les principes derrière la gestion de cette mémoire et de voir comment les ordinateurs peuvent y lire et écrire des données entre deux calculs.
 
 
-## Exemple suivi : addition de deux nombres
+## Exemple suivi: addition de deux nombres
 
-On s'intéresse à une des opérations arithmétiques les plus simples : l'**addition**. Comment l'ordinateur additionne-t-il deux nombres ? On va définir le cadre de travail et s'intéresser aux {glo}`circuitelectronique|circuits électroniques` qui vont être à même de réaliser une addition.
+On s'intéresse à une des opérations arithmétiques les plus simples: l'**addition**. Comment l'ordinateur additionne-t-il deux nombres: On va définir le cadre de travail et s'intéresser aux {glo}`circuitelectronique|circuits électroniques` qui vont être à même de réaliser une addition.
 
-Que se passe-t-il pour l'addition de deux nombres entiers ? On va utiliser leur représentation binaire (avec uniquement des 1 et des 0). Pour faire simple, on va chercher à additionner simplement deux bits, disons $A$ et $B$, où chacun peut valoir soit 0 soit 1. Posons que la somme $S = A + B$. En énumérant tous les cas de figure, on a :
+Que se passe-t-il pour l'addition de deux nombres entiers: On va utiliser leur représentation binaire (avec uniquement des 1 et des 0). Pour faire simple, on va chercher à additionner simplement deux bits, disons $A$ et $B$, où chacun peut valoir soit 0 soit 1. Posons que la somme $S = A + B$. En énumérant tous les cas de figure, on a:
 
 | $A$ | $B$ | $S$ |
 | :-: | :-: | --: |
@@ -22,7 +22,7 @@ Que se passe-t-il pour l'addition de deux nombres entiers ? On va utiliser leur 
 | 0   | 1   | 1   |
 | 1   | 1   | 10  |
 
-La dernière ligne est intéressante : On sait que $1+1=2$, mais en {glo}`codebinaire|binaire`, on sait aussi que n'existent que des 0 et des 1, et 2 s'écrit ainsi $10$ (voir le chapitre {ref}`représentation de l'information <representationinformation>`). Cela veut dire que, pour traiter tous les cas d'une addition de deux {glo}`bit|bits`, on a besoin aussi de deux {glo}`bit|bits` de sortie, et qu'un seul ne suffit pas. En explicitant chaque fois le deuxième {glo}`bit|bit` de sortie, notre tableau devient:
+La dernière ligne est intéressante: On sait que $1+1=2$, mais en {glo}`codebinaire|binaire`, on sait aussi que n'existent que des 0 et des 1, et 2 s'écrit ainsi $10$ (voir le chapitre {ref}`représentation de l'information <representationinformation>`). Cela veut dire que, pour traiter tous les cas d'une addition de deux {glo}`bit|bits`, on a besoin aussi de deux {glo}`bit|bits` de sortie, et qu'un seul ne suffit pas. En explicitant chaque fois le deuxième {glo}`bit|bit` de sortie, notre tableau devient:
 
 | $A$ | $B$ | $S$ |
 | :-: | :-: | :-: |
@@ -39,7 +39,7 @@ Ensuite, on regarde comment, fort de cette connaissance des portes logiques, il 
 
 Finalement, on comprendra comment un ordinateur est capable, avec un circuit logique, de stocker le résultat d'un tel calcul afin qu'il soit réutilisable plus tard.
 
-<!-- Ce chapitre est ainsi composée des sous-chapitres suivants :
+<!-- Ce chapitre est ainsi composée des sous-chapitres suivants:
 
 ```{tableofcontents}
 ``` 
@@ -57,9 +57,9 @@ Les {glo}`portelogique|portes` logiques sont des composants électroniques (elle
 
 ## Portes ET
 
-Une de ces portes est la porte **ET**. Elle a deux entrées, qu'on appellera $X$ et $Y$, et une sortie $Z$. $Z$ sera $1$ si et seulement si aussi bien $X$ que $Y$ valent $1$. D'où son nom : il faut que $X$ **_et_** $Y$ soient à 1 pour obtenir un 1 sur la sortie.
+Une de ces portes est la porte **ET**. Elle a deux entrées, qu'on appellera $X$ et $Y$, et une sortie $Z$. $Z$ sera $1$ si et seulement si aussi bien $X$ que $Y$ valent $1$. D'où son nom: il faut que $X$ **_et_** $Y$ soient à 1 pour obtenir un 1 sur la sortie.
 
-En énumérant les quatre possibilités pour les entrées, on peut écrire ce qu'on appelle {glo}`tableverite|table de vérité` pour la porte **ET** :
+En énumérant les quatre possibilités pour les entrées, on peut écrire ce qu'on appelle {glo}`tableverite|table de vérité` pour la porte **ET**:
 
 | $X$ | $Y$ | $Z$ |
 | :-: | :-: | :-: |
@@ -68,7 +68,7 @@ En énumérant les quatre possibilités pour les entrées, on peut écrire ce qu
 | 0   | 1   | 0   |
 | 1   | 1   | 1   |
 
-On peut dessiner des diagrammes avec des {glo}`portelogique|portes logiques`. Ce ne sont pas des diagrammes électroniques, ils cachent une partie de la complexité réelle des circuits. Dans un tel diagramme logique, la porte **ET** est représentée ainsi :
+On peut dessiner des diagrammes avec des {glo}`portelogique|portes logiques`. Ce ne sont pas des diagrammes électroniques, ils cachent une partie de la complexité réelle des circuits. Dans un tel diagramme logique, la porte **ET** est représentée ainsi:
 
 ```{logic}
 :height: 60
@@ -97,7 +97,7 @@ Cliquez sur les entrées $X$ et $Y$ pour changer leurs valeurs et observez le co
 ```
 
 ````{dropdown} Pour aller plus loin
-Comment une porte **ET** est-elle elle-même construite ? Cela a déjà été mentionné : avec d'autres composants électroniques plus simples. En simplifiant un peu, on peut considérer qu'une porte **ET** est constituée de deux transistors :
+Comment une porte **ET** est-elle elle-même construite: Cela a déjà été mentionné: avec d'autres composants électroniques plus simples. En simplifiant un peu, on peut considérer qu'une porte **ET** est constituée de deux transistors:
 
 ```{figure} 1_portes-logiques/media/andgatetransistor.png
 ---
@@ -125,9 +125,9 @@ Voici sa table de vérité:
 | 0   | 1   | 1   |
 | 1   | 1   | 1   |
 
-On notera que le **OU** logique est un peu différent du «ou» que l'on utilise en général à l'oral : on voit à la dernière ligne de la table de vérité que la sortie $Z$ vaut également $1$ si les deux entrées $X$ et $Y$ valent $1$. À l'oral, le «ou» est en général interprété comme _exclusif_ : si l'on propose à un enfant un bonbon _ou_ une glace, on exclut la possibilité qu'il choisisse les deux. Ce n'est pas le cas pour le **OU** logique.
+On notera que le **OU** logique est un peu différent du «ou» que l'on utilise en général à l'oral: on voit à la dernière ligne de la table de vérité que la sortie $Z$ vaut également $1$ si les deux entrées $X$ et $Y$ valent $1$. À l'oral, le «ou» est en général interprété comme _exclusif_: si l'on propose à un enfant un bonbon _ou_ une glace, on exclut la possibilité qu'il choisisse les deux. Ce n'est pas le cas pour le **OU** logique.
 
-Essayez la porte **OU** :
+Essayez la porte **OU**:
 
 ```{logic}
 :height: 100
@@ -146,16 +146,16 @@ Essayez la porte **OU** :
 
 ## Portes NON
 
-Cette porte est plus simple : elle n'a qu'une entrée, et sa sortie se contente d'inverser la valeur en entrée. On l'appelle d'ailleurs aussi un _inverseur_.
+Cette porte est plus simple: elle n'a qu'une entrée, et sa sortie se contente d'inverser la valeur en entrée. On l'appelle d'ailleurs aussi un _inverseur_.
 
-Voici sa table de vérité :
+Voici sa table de vérité:
 
 | $X$ | $Z$ |
 | :-: | :-: |
 | 0   | 1   |
 | 1   | 0   |
 
-Essayez l'inverseur :
+Essayez l'inverseur:
 
 ```{logic}
 :height: 60
@@ -226,7 +226,7 @@ Ce diagramme n'est pas forcément facile à lire — discutons d'abord comment l
 
 <u> Analyse d'un circuit </u>
 
-Pour analyser un {glo}`syslogique|circuit logique` comme celui présenté ci-dessus, on cherchera à établir sa {glo}`tableverite|table de vérité`. En l'occurrence, comme pour les portes précédentes, ce circuit a deux entrées : si chaque entrée peut valoir $1$ ou $0$, on a en tout, de nouveau, quatre configurations possibles à examiner dans le but de remplir la dernière colonne :
+Pour analyser un {glo}`syslogique|circuit logique` comme celui présenté ci-dessus, on cherchera à établir sa {glo}`tableverite|table de vérité`. En l'occurrence, comme pour les portes précédentes, ce circuit a deux entrées: si chaque entrée peut valoir $1$ ou $0$, on a en tout, de nouveau, quatre configurations possibles à examiner dans le but de remplir la dernière colonne:
 
 | $X$ | $Y$ | $Z$   |
 | :-: | :-: | :-:   |
@@ -285,7 +285,7 @@ Le cas est différent si l'une des deux entrées vaut 1. Voici deux diagrammes f
 
 Ici, dans les deux cas, la porte **OU**, en haut, livrera un 1, dont a besoin la porte **ET** finale de droite pour donner une sortie de 1. La porte **ET** du bas, elle, continue de livrer un 0.
 
-Mais dans le cas $X = Y = 1$, représenté ici, la situation est différente :
+Mais dans le cas $X = Y = 1$, représenté ici, la situation est différente:
 
 ```{logic}
 :height: 150
@@ -309,7 +309,7 @@ Mais dans le cas $X = Y = 1$, représenté ici, la situation est différente :
 
 La porte **ET** du bas livre un 1, qui est inversé en 0 avant d'atteindre la porte finale, qui ne peut dès lors elle-même que livrer un 0 comme sortie.
 
-La table de vérité complétée de ce circuit est ainsi :
+La table de vérité complétée de ce circuit est ainsi:
 
 | $X$ | $Y$ | $Z$ |
 | :-: | :-: | :-: |
@@ -318,7 +318,7 @@ La table de vérité complétée de ce circuit est ainsi :
 | 0   | 1   | 1   |
 | 1   | 1   | 0   |
 
-Cette fonction s'appelle «ou exclusif», car pour avoir un 1 de sortie, elle exclut le cas où les deux entrées sont 1 en même temps. Elle est souvent utilisée, au point qu'on la représente en fait dans les diagrammes simplement par le dessin de cette porte, appelée **OU-X**, comme simplification du diagramme ci-dessus :
+Cette fonction s'appelle «ou exclusif», car pour avoir un 1 de sortie, elle exclut le cas où les deux entrées sont 1 en même temps. Elle est souvent utilisée, au point qu'on la représente en fait dans les diagrammes simplement par le dessin de cette porte, appelée **OU-X**, comme simplification du diagramme ci-dessus:
 
 ```{logic}
 :height: 100
@@ -335,7 +335,7 @@ Cette fonction s'appelle «ou exclusif», car pour avoir un 1 de sortie, elle ex
 }
 ```
 
-```{admonition} Exercice 1 : vérification d’une porte
+```{admonition} Exercice 1: vérification d’une porte
 Vérifiez que la porte **OU-X** se comporte bien comme le circuit ci-dessous réalisé avec des portes **ET**, **OU** et **NON**.
 ```
 
@@ -347,11 +347,11 @@ On s'intéresse à présent à la création de ce diagramme réalisant un **OU-X
 
 Approche ad hoc
 
-On se dit donc, selon la {glo}`tableverite|table de vérité`, que la sortie de notre circuit «ou exclusif» doit être 1, donc l'une ou l'autre des entrées $X$ ou $Y$ est à 1, mais pas les deux. On peut ainsi commencer par insérer une porte **OU** dans le diagramme, qui fait une partie du travail. Mais il faut modifier sa sortie, pour ne pas avoir la valeur 1 lorsque les deux entrées sont à 1 : cela contredirait la quatrième ligne de la table de vérité. Comment effectuer cela ? En connectant la sortie de cette porte **OU** à une nouvelle porte **ET** à droite (dont on n'a pas encore déterminé la seconde entrée).
+On se dit donc, selon la {glo}`tableverite|table de vérité`, que la sortie de notre circuit «ou exclusif» doit être 1, donc l'une ou l'autre des entrées $X$ ou $Y$ est à 1, mais pas les deux. On peut ainsi commencer par insérer une porte **OU** dans le diagramme, qui fait une partie du travail. Mais il faut modifier sa sortie, pour ne pas avoir la valeur 1 lorsque les deux entrées sont à 1: cela contredirait la quatrième ligne de la table de vérité. Comment effectuer cela: En connectant la sortie de cette porte **OU** à une nouvelle porte **ET** à droite (dont on n'a pas encore déterminé la seconde entrée).
 
-Pourquoi rajouter une porte **ET** ? On utilise ici le fait que connecter une porte **ET** à un signal peut _restreindre_ les conditions sous lesquelles la nouvelle sortie $Z$ sera 1 (alors qu'au contraire, on aurait pu _étendre_ ces conditions si on avait connecté une nouvelle porte **OU**). Comme si, pour être d'accord de finalement livrer 1 sur la sortie, la porte **ET** voulait la «confirmation» d'un autre signal avant de livrer 1...
+Pourquoi rajouter une porte **ET**: On utilise ici le fait que connecter une porte **ET** à un signal peut _restreindre_ les conditions sous lesquelles la nouvelle sortie $Z$ sera 1 (alors qu'au contraire, on aurait pu _étendre_ ces conditions si on avait connecté une nouvelle porte **OU**). Comme si, pour être d'accord de finalement livrer 1 sur la sortie, la porte **ET** voulait la «confirmation» d'un autre signal avant de livrer 1...
 
-À ce moment, on a ce diagramme partiel, qui peut être lu comme : «la sortie $Z$ sera $1$ lorsque ces deux conditions sont vraies en même temps : (1) le **OU** de $X$ et $Y$ vaut 1, et (2) quelque chose qui reste ici à définir, qui sera connecté à la seconde entrée de la porte **ET**».
+À ce moment, on a ce diagramme partiel, qui peut être lu comme: «la sortie $Z$ sera $1$ lorsque ces deux conditions sont vraies en même temps: (1) le **OU** de $X$ et $Y$ vaut 1, et (2) quelque chose qui reste ici à définir, qui sera connecté à la seconde entrée de la porte **ET**».
 
 ```{logic}
 :height: 120
@@ -372,7 +372,7 @@ Pourquoi rajouter une porte **ET** ? On utilise ici le fait que connecter une po
 ```
 
 
-Ce qui reste à définir en complétant avant la porte **ET**, c'est l'exclusion du cas où $X$ et $Y$ valent les deux 1, de manière à ce que la condition (2) puisse être lue comme «$X$ et $Y$ ne sont pas en même temps les deux à 1». Avec une porte **ET** connectée directement aux deux entrées $X$ et $Y$, on obtient une partie de ceci en créant le signal «$X$ et $Y$ sont les deux à 1» C'est en fait la condition inverse que celle que l'on cherche ! Pour l'inverser, on insère à la sortie de cette nouvelle porte **ET** un inverseur, ce qui complète le circuit :
+Ce qui reste à définir en complétant avant la porte **ET**, c'est l'exclusion du cas où $X$ et $Y$ valent les deux 1, de manière à ce que la condition (2) puisse être lue comme «$X$ et $Y$ ne sont pas en même temps les deux à 1». Avec une porte **ET** connectée directement aux deux entrées $X$ et $Y$, on obtient une partie de ceci en créant le signal «$X$ et $Y$ sont les deux à 1» C'est en fait la condition inverse que celle que l'on cherche: Pour l'inverser, on insère à la sortie de cette nouvelle porte **ET** un inverseur, ce qui complète le circuit:
 
 ```{logic}
 :height: 150
@@ -396,7 +396,7 @@ Ce qui reste à définir en complétant avant la porte **ET**, c'est l'exclusion
 
 La lecture finale du circuit est donc «la sortie $Z$ sera $1$ lorsque ces deux conditions sont vraies en même temps: (1) le **OU** de $X$ et $Y$ vaut 1, et (2) $X$ et $Y$ ne sont pas les deux en même temps à 1».
 
-````{admonition} Exercice 2 : analyse d'un circuit
+````{admonition} Exercice 2: analyse d'un circuit
 Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la place, on a inséré deux sorties intermédiaires, $I$ et $J$, qui sont les deux signaux qui allaient précédemment à la porte **ET**:
 
 ```{logic}
@@ -421,9 +421,9 @@ Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la
 }
 ```
 
- 1. Combien de lignes a une table de vérité pour $I$ et $J$ en fonction des deux entrées $X$ et $Y$ ? Écrivez cette table de vérité.
- 1. Quelle différence y a-t-il entre $J$ et ce qu'on obtient en connectant directement une porte **ET** aux entrées $X$ et $Y$ ? Quel élément du schéma réalise cette différence ?
- 1. Dans votre table de vérité, ajoutez une colonne et remplissez-là : elle doit représenter une nouvelle sortie $K$, qui serait produite si on connectait une porte **OU** en lui donnant $I$ et $J$ comme entrées, comme montré ci-dessous. Le schéma représente ici le circuit dans un état indéterminé, mais les types des portes ont été ajoutés pour vous aider. La sortie $K$ est-elle ici toujours la même que la sortie $Z$ plus haut ? Quelles sont les éventuelles différences ? Finalement, la sortie $K$ a-t-elle un intérêt ?
+ 1. Combien de lignes a une table de vérité pour $I$ et $J$ en fonction des deux entrées $X$ et $Y$: Écrivez cette table de vérité.
+ 1. Quelle différence y a-t-il entre $J$ et ce qu'on obtient en connectant directement une porte **ET** aux entrées $X$ et $Y$: Quel élément du schéma réalise cette différence:
+ 1. Dans votre table de vérité, ajoutez une colonne et remplissez-là: elle doit représenter une nouvelle sortie $K$, qui serait produite si on connectait une porte **OU** en lui donnant $I$ et $J$ comme entrées, comme montré ci-dessous. Le schéma représente ici le circuit dans un état indéterminé, mais les types des portes ont été ajoutés pour vous aider. La sortie $K$ est-elle ici toujours la même que la sortie $Z$ plus haut: Quelles sont les éventuelles différences: Finalement, la sortie $K$ a-t-elle un intérêt:
 
 ```{logic}
 :height: 150
@@ -452,7 +452,7 @@ Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la
 
 Il est parfois difficile d'avoir l'«intuition» nécessaire pour suivre une telle approche ad hoc. Voici donc une autre technique, illustrée avec le même exemple.
 
-La table de vérité montre qu'il y a deux lignes où la sortie doit valoir $1$: (a) la ligne où $X=1$ et $Y=0$, et (b) la ligne où $X=0$ et $Y=1$. Si l'on pouvait créer un sous-circuit qui livre un $1$ lorsque qu'on se trouve dans la circonstance (a) et un autre qui livre un $1$ lorsqu'on se trouve dans la circonstance (b), on pourrait ensuite les combiner avec une porte **OU** et ainsi construire notre sortie $Z$ ainsi :
+La table de vérité montre qu'il y a deux lignes où la sortie doit valoir $1$: (a) la ligne où $X=1$ et $Y=0$, et (b) la ligne où $X=0$ et $Y=1$. Si l'on pouvait créer un sous-circuit qui livre un $1$ lorsque qu'on se trouve dans la circonstance (a) et un autre qui livre un $1$ lorsqu'on se trouve dans la circonstance (b), on pourrait ensuite les combiner avec une porte **OU** et ainsi construire notre sortie $Z$ ainsi:
 
 ```{logic}
 :height: 180
@@ -478,7 +478,7 @@ Ici, les deux sous-circuits notés avec «?» et encadrés donc encore à défin
 
 Disons que le sous-circuit du haut correspond à la deuxième ligne de la table de vérité, le cas de figure (a). Pour cette ligne, nous voulons un $1$ de sortie lorsque $X=1$ et $Y=0$. En lisant littéralement cette dernière phrase,on y détecte un **ET** de deux conditions qui doivent être remplies: $X=1$ et $Y=0$. Mais ajouter une porte **ET** directement avec les signaux $X$ et $Y$ ne fera pas l'affaire, parce que cela livrerait un $1$ lors que les _deux_ entrées $X$ et $Y$ sont à $1$. La solution ici, c'est d'_inverser_ $Y$ avant l'entrée dans la porte **ET** — ce qui donne bel et bien la condition (a).
 
-On avance ainsi à ceci  :
+On avance ainsi à ceci:
 
 ```{logic}
 :height: 180
@@ -503,7 +503,7 @@ On avance ainsi à ceci  :
 
 Pour la condition (b), qui correspond à la troisième ligne de la {glo}`tableverite|table de vérité`, un raisonnement similaire s'applique. À la place d'inverser $X$, on inversera cette fois $Y$ afin d'obtenir, à la sortie de la nouvelle porte **ET** du bas, un signal qui vaut $1$ lorsque $X=1$ et $Y=0$.
 
-Voici le circuit final ainsi réalisé :
+Voici le circuit final ainsi réalisé:
 
 ```{logic}
 :height: 180
@@ -534,12 +534,12 @@ Voici le circuit final ainsi réalisé :
 
 Ce que cette approche systématique apprend, c'est qu'un circuit peut toujours être pensé comme un **OU** de toutes les conditions sous lesquelles la sortie doit être à $1$. Ces conditions sont elles-mêmes réalisables avec les entrées du circuit avec des portes **ET** et des inverseurs.
 
-On fait également les constats suivants :
+On fait également les constats suivants:
  * plusieurs circuits logiques différents peuvent réaliser la même fonction de sortie,
- * l'approche systématique décrite ici ne livre pas forcément le circuit le plus compact : on a obtenu un circuit avec cinq portes pour réaliser un **OU-X** alors que l'approche ad hoc a conduit à la construction d'un circuit à quatre portes.
+ * l'approche systématique décrite ici ne livre pas forcément le circuit le plus compact: on a obtenu un circuit avec cinq portes pour réaliser un **OU-X** alors que l'approche ad hoc a conduit à la construction d'un circuit à quatre portes.
 
 
-`````{admonition} Exercice 3 : analyse d'un circuit
+`````{admonition} Exercice 3: analyse d'un circuit
 En annotant le schéma logique avec les quatre cas de figure possibles pour les entrées $X$ et $Y$, faites l'analyse du circuit **OU-X** ci-dessus construit avec l'approche systématique et montrez que la table de vérité ainsi reconstituée est la même que celle de la porte **OU-X**.
 
 ````{dropdown} Indice
@@ -570,7 +570,7 @@ En annotant le schéma logique avec les quatre cas de figure possibles pour les 
 `````
 
 
-`````{admonition} Exercice 4 : porte cachée
+`````{admonition} Exercice 4: porte cachée
 Quelle est la porte cachée de ce circuit?
 ````{logic}
 :height: 100
@@ -591,7 +591,7 @@ C'est une porte **OU**.
 ```
 `````
 
-`````{admonition} Exercice 5 : circuit défectueux
+`````{admonition} Exercice 5: circuit défectueux
 Analysez ce circuit. De quel type de portes est-il constitué? Fonctionne-t-il correctement? Déterminez ce qui pose problème. Dites ce que fait ce circuit une fois corrigé et écrivez sa table de vérité.
 
 ````{logic}
@@ -654,7 +654,7 @@ Ce circuit, une fois corrigé, implémente en fait un **ET** à trois entrée $X
 `````
 
 
-````{admonition} Exercice 6 : conception d'un circuit
+````{admonition} Exercice 6: conception d'un circuit
 
 Écrivez la table de vérité de ce circuit, dont une partie est masquée:
 
@@ -764,7 +764,7 @@ On rappelle qu'on a deux {glo}`bit|bits` de sortie à calculer pour la sortie $S
 
 En comparant cette {glo}`tableverite|table de vérité` avec celles des {glo}`portelogique|portes logiques`, on se rend compte que $S_0$ n'est autre qu'un **OU-X** de $A$ et $B$.
 
-La table de vérité pour $S_1$ est :
+La table de vérité pour $S_1$ est:
 
 | $A$ | $B$ |$S_1$|
 | :-: | :-: | :-: |
@@ -773,7 +773,7 @@ La table de vérité pour $S_1$ est :
 | 0   | 1   | 0   |
 | 1   | 1   | 1   |
 
-Et on constate que $S_1$ n'est autre qu'un **ET** logique de $A$ et $B$. On peut dessiner l'additionneur de deux {glo}`bit|bits` ainsi :
+Et on constate que $S_1$ n'est autre qu'un **ET** logique de $A$ et $B$. On peut dessiner l'additionneur de deux {glo}`bit|bits` ainsi:
 
 ```{logic}
 :height: 140
@@ -797,20 +797,20 @@ Et on constate que $S_1$ n'est autre qu'un **ET** logique de $A$ et $B$. On peut
 ```
 
 ````{admonition} Exercice 7
-Vérifiez que ce circuit livre bien les bonnes valeurs de sortie qui correspondent aux tables de vérité ci-dessous. Combien de combinaisons différentes devrez-vous tester ?
+Vérifiez que ce circuit livre bien les bonnes valeurs de sortie qui correspondent aux tables de vérité ci-dessous. Combien de combinaisons différentes devrez-vous tester:
 ```{dropdown} Corrigé
 Le circuit fonctionne correctement. Il faut tester les quatre combinaisons qui apparaissent dans les tables de vérité.
 ```
 ````
 
-Ce circuit est particulièrement intéressant, car il montre qu'il est possible d'utiliser des opérateurs logiques pour réaliser l'opération arithmétique de l'addition. L'additionneur est limité : en fait, on l'appelle un _demi-additionneur_. Il n'est capable d'additionner que deux nombres à 1 {glo}`bit|bit` — c'est très limité. En fait, il serait intéressant d'avoir un additionneur de _trois_ nombres à un {glo}`bit|bit`. Pourquoi ? À cause de la manière dont on pose les additions en colonnes.
+Ce circuit est particulièrement intéressant, car il montre qu'il est possible d'utiliser des opérateurs logiques pour réaliser l'opération arithmétique de l'addition. L'additionneur est limité: en fait, on l'appelle un _demi-additionneur_. Il n'est capable d'additionner que deux nombres à 1 {glo}`bit|bit` — c'est très limité. En fait, il serait intéressant d'avoir un additionneur de _trois_ nombres à un {glo}`bit|bit`. Pourquoi: À cause de la manière dont on pose les additions en colonnes.
 
-Lorsque on additionne deux nombres à plusieurs chiffres, que ce soit en base 10 ou en base 2, on commence par la colonne de droite, les unités. On connait le concept de _retenue_ : en base 10, si l'addition des unités dépasse 9, on retient 1 dans la colonne des dizaines. En base 2, de façon similaire, si l'addition des unités dépasse… 1, on retient 1 dans la colonne suivante à gauche. C'est ce qu'on a fait avec le demi-additionneur : on peut considérer que la sortie $S_0$ représente la colonne des unités dans la somme, et la sortie $S_1$ représente la retenue à prendre en compte dans la colonne suivante.
+Lorsque on additionne deux nombres à plusieurs chiffres, que ce soit en base 10 ou en base 2, on commence par la colonne de droite, les unités. On connait le concept de _retenue_: en base 10, si l'addition des unités dépasse 9, on retient 1 dans la colonne des dizaines. En base 2, de façon similaire, si l'addition des unités dépasse… 1, on retient 1 dans la colonne suivante à gauche. C'est ce qu'on a fait avec le demi-additionneur: on peut considérer que la sortie $S_0$ représente la colonne des unités dans la somme, et la sortie $S_1$ représente la retenue à prendre en compte dans la colonne suivante.
 
-C'est ici que ça se complique : pour additionner les chiffres de la deuxième colonne, on doit potentiellement additionner _trois_ chiffres, et plus seulement deux. On a donc, en entrée, les deux {glo}`bit|bits` $A$ et $B$ qui viennent des nombres à additionner, et aussi potentiellement cette retenue qui vient de la colonne des unités, qu'on appellera $C_{in}$ (pour _carry_, «retenue» en anglais). Ceci est vrai en base 2 comme en base 10. Il faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s'appelle _additionneur complet_ et livrera deux sorties : le {glo}`bit|bit` de somme, appelé simplement $S$, et la retenue à reporter pour la colonne suivante, appelée $C_{out}$.
+C'est ici que ça se complique: pour additionner les chiffres de la deuxième colonne, on doit potentiellement additionner _trois_ chiffres, et plus seulement deux. On a donc, en entrée, les deux {glo}`bit|bits` $A$ et $B$ qui viennent des nombres à additionner, et aussi potentiellement cette retenue qui vient de la colonne des unités, qu'on appellera $C_{in}$ (pour _carry_, «retenue» en anglais). Ceci est vrai en base 2 comme en base 10. Il faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s'appelle _additionneur complet_ et livrera deux sorties: le {glo}`bit|bit` de somme, appelé simplement $S$, et la retenue à reporter pour la colonne suivante, appelée $C_{out}$.
 
 
-````{admonition} Exercice 8 : bases de l'additionneur complet
+````{admonition} Exercice 8: bases de l'additionneur complet
 
  * Déterminez combien de combinaisons différentes sont possibles pour trois signaux d'entrée $A$, $B$ et $C_{in}$ qui chacun peuvent valoir soit $1$ soit $0$.
  * Listez toutes ces combinaisons.
@@ -818,7 +818,7 @@ C'est ici que ça se complique : pour additionner les chiffres de la deuxième c
  * Finalement, avec les informations ainsi obtenues, complétez la table de vérité d'un additionneur complet qui a deux sorties $S$ et $C_{out}$
 
 ```{dropdown} Corrigé
- Il y a $2 \cdot 2 \cdot 2 = 2^3 = 8$ combinaisons différentes. Avec la notation $A + B + C =$ valeur en décimal $=$ valeur en binaire, les voici :
+ Il y a $2 \cdot 2 \cdot 2 = 2^3 = 8$ combinaisons différentes. Avec la notation $A + B + C =$ valeur en décimal $=$ valeur en binaire, les voici:
   * $0 + 0 + 0 = 0_{(10)} = 00_{(2)}$
   * $0 + 0 + 1 = 1_{(10)} = 01_{(2)}$
   * $0 + 1 + 0 = 1_{(10)} = 01_{(2)}$
@@ -828,7 +828,7 @@ C'est ici que ça se complique : pour additionner les chiffres de la deuxième c
   * $1 + 1 + 0 = 2_{(10)} = 10_{(2)}$
   * $1 + 1 + 1 = 3_{(10)} = 11_{(2)}$
 
-La table de vérité est ainsi :
+La table de vérité est ainsi:
 
 | $A$ | $B$ |$C_{in}$|$C_{out}$| $S$ |
 | :-: | :-: | :-:    | :-:     | :-: |
@@ -845,7 +845,7 @@ La table de vérité est ainsi :
 ````
 
 
-En faisant pour l'instant abstraction des détails d'un additionneur complet, on peut se dire qu'on le dessine simplement ainsi :
+En faisant pour l'instant abstraction des détails d'un additionneur complet, on peut se dire qu'on le dessine simplement ainsi:
 
 ```{logic}
 :height: 120
@@ -882,10 +882,10 @@ Si $A$ est formé de deux {glo}`bit|bits` $A_0$ et $A_1$ et que $B$ est formé d
 }
 ```
 
-L'additionneur du haut, comme précédemment, additionne les deux {glo}`bit|bits` des unités : $A_0$ et $B_0$. Son entrée $C_{in}$, qui représente l'éventuel troisième chiffre à additionner issu d'une retenue, n'est pas connectée et est toujours 0, vu qu'il n'y a aucune colonne précédente dans l'addition qui aurait pu en livrer une. Il livre comme première sortie $S_0$, le chiffre des unités, et sa seconde sortie $C_{out}$ est la retenue à utiliser pour l'addition des chiffres suivants. C'est pourquoi elle est connectée à l'entrée de la retenue du second additionneur $C_{in}$, qui va lui ajouter également les deux {glo}`bit|bits` de la colonne suivante, $A_1$ et $B_1$. Les sorties du second additionneur livrent le deuxième {glo}`bit|bit` $S_1$ de la valeur de sortie, ainsi que la retenue pour la troisième colonne. Comme il n'y a plus de {glo}`bit|bits` d'entrée pour la troisième colonne, cette retenue peut directement être considérée comme le troisième {glo}`bit|bit` de sortie $S_2$.
+L'additionneur du haut, comme précédemment, additionne les deux {glo}`bit|bits` des unités: $A_0$ et $B_0$. Son entrée $C_{in}$, qui représente l'éventuel troisième chiffre à additionner issu d'une retenue, n'est pas connectée et est toujours 0, vu qu'il n'y a aucune colonne précédente dans l'addition qui aurait pu en livrer une. Il livre comme première sortie $S_0$, le chiffre des unités, et sa seconde sortie $C_{out}$ est la retenue à utiliser pour l'addition des chiffres suivants. C'est pourquoi elle est connectée à l'entrée de la retenue du second additionneur $C_{in}$, qui va lui ajouter également les deux {glo}`bit|bits` de la colonne suivante, $A_1$ et $B_1$. Les sorties du second additionneur livrent le deuxième {glo}`bit|bit` $S_1$ de la valeur de sortie, ainsi que la retenue pour la troisième colonne. Comme il n'y a plus de {glo}`bit|bits` d'entrée pour la troisième colonne, cette retenue peut directement être considérée comme le troisième {glo}`bit|bit` de sortie $S_2$.
 
-````{admonition} Exercice 9 : limite de cet additionneur à 2 bits
-Avec l'additionneur ci-dessus, est-il possible d'obtenir des $1$ sur toutes les sorties, donc d'avoir $S_2 = S_1 = S_0 = 1$ ?
+````{admonition} Exercice 9: limite de cet additionneur à 2 bits
+Avec l'additionneur ci-dessus, est-il possible d'obtenir des $1$ sur toutes les sorties, donc d'avoir $S_2 = S_1 = S_0 = 1$:
 
 ```{dropdown} Indice
 Déterminez quel est le nombre décimal qui serait représenté par $S_2 = S_1 = S_0 = 1$: $111_{(2)} =\;???_{(10)}$  Ensuite, déterminez les nombres les plus grands représentables sur les deux fois 2 bits d'entrée et tirez-en une conclusion.
@@ -897,7 +897,7 @@ La configuration $S_2 = S_1 = S_0 = 1$ représente le nombre décimal $7$. Ce se
 ````
 
 
-`````{admonition} Exercice 10 : additionneur de demi-octets
+`````{admonition} Exercice 10: additionneur de demi-octets
 
 En connectant des additionneurs complets, réalisez un circuit qui additionne deux nombres $A$ et $B$ de quatre bits, numérotés $A_0$ à $A_3$ et $B_0$ à $B_3$, respectivement. Combien de bits de sortie doit-il y avoir pour traiter toutes les valeurs possibles?
 
@@ -922,7 +922,7 @@ Les entrées sont déjà disposées. Glissez autant d'additionneurs et de bits d
 ```
 
 ````{dropdown} Corrigé
-On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et de droite à gauche pour être proche de la représentation selon laquelle les additions se résolvent en colonne, est :
+On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et de droite à gauche pour être proche de la représentation selon laquelle les additions se résolvent en colonne, est:
 
 ```{logic}
 :height: 300
@@ -978,11 +978,11 @@ On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et 
 Cet exercice démontre l'opportunité de penser en termes {glo}`modulo|modulaires`, ce qui revient souvent en informatique. Ici, on a réalisé qu'un additionneur complet résout un sous-problème bien défini d'une addition générale d'un nombre à $n$ {glo}`bit|bits`, et qu'une fois qu'on a créé un tel additionneur, il suffit d'en connecter plusieurs les uns derrière les autres de manière structurée pour additionner des nombres plus grands.
 
 
-````{admonition} Exercice 11 : overflow
+````{admonition} Exercice 11: overflow
 
 Le schéma ci-dessous montre le même additionneur de demi-octets de l'exercice précédent, mais, de plus, la valeur en base 10 de ses 4 bits d'entrée pour $A$ et pour $B$ est affichée avec un module d'affichage spécial à droite. La même chose est faite pour représenter la valeur $S = A + B$ (mais seulement sur les quatre premiers bits de $S$). Actuellement, le circuit effectue le calcul $0 + 0 = 0$.
 
-Réglez les entrées du circuit de manière à lui faire effectuer les additions suivantes, et vérifiez le résultat. Dans quelles circonstances est-il correct et pourquoi est-il de temps en temps incorrect ? Comment, en regard de ceci, interpréter le bit de sortie $S_4$, qui est la retenue de l'additionneur de gauche ?
+Réglez les entrées du circuit de manière à lui faire effectuer les additions suivantes, et vérifiez le résultat. Dans quelles circonstances est-il correct et pourquoi est-il de temps en temps incorrect: Comment, en regard de ceci, interpréter le bit de sortie $S_4$, qui est la retenue de l'additionneur de gauche:
    1. $1 + 0$
    1. $3 + 1$
    1. $3 + 3$
@@ -1063,7 +1063,7 @@ Dès que la somme dépasse 15, elle n'est plus représentable sur les 4 bits qui
 ````
 
 
-````{admonition} Exercice 12 : circuit défectueux
+````{admonition} Exercice 12: circuit défectueux
 
 L'additionneur de demi-octets ci-dessous a été endommagé et ne fonctionne plus correctement. Par exemple, lorsqu'on lui demande d'effectuer le calcul $11 + 1$, il livre comme réponse $8$.
 
@@ -1141,9 +1141,9 @@ La retenue sortant du deuxième additionneur depuis la droite est bloquée à 0 
 ````
 
 
-````{admonition} Exercice 13 : design d'un additionneur complet
+````{admonition} Exercice 13: design d'un additionneur complet
 
-_**Note :** Exercice difficile et actuellement peu guidé ici ; prochainement complété par davantage d'indications._
+_**Note:** Exercice difficile et actuellement peu guidé ici ; prochainement complété par davantage d'indications._
 
 En s'aidant de la table de vérité d'un seul additionneur complet, créer un circuit logique qui calcule ses sorties $S$ et $C_{out}$ en fonction des entrées $A$, $B$ et $C_{in}$.
 
@@ -1172,7 +1172,7 @@ On rappelle qu'on a deux {glo}`bit|bits` de sortie à calculer pour la sortie $S
 
 En comparant cette {glo}`tableverite|table de vérité` avec celles des {glo}`portelogique|portes logiques`, on se rend compte que $S_0$ n'est autre qu'un **OU-X** de $A$ et $B$.
 
-La table de vérité pour $S_1$ est :
+La table de vérité pour $S_1$ est:
 
 | $A$ | $B$ |$S_1$|
 | :-: | :-: | :-: |
@@ -1181,7 +1181,7 @@ La table de vérité pour $S_1$ est :
 | 0   | 1   | 0   |
 | 1   | 1   | 1   |
 
-Et on constate que $S_1$ n'est autre qu'un **ET** logique de $A$ et $B$. On peut dessiner l'additionneur de deux {glo}`bit|bits` ainsi :
+Et on constate que $S_1$ n'est autre qu'un **ET** logique de $A$ et $B$. On peut dessiner l'additionneur de deux {glo}`bit|bits` ainsi:
 
 ```{logic}
 :height: 140
@@ -1205,20 +1205,20 @@ Et on constate que $S_1$ n'est autre qu'un **ET** logique de $A$ et $B$. On peut
 ```
 
 ````{admonition} Exercice 14
-Vérifiez que ce circuit livre bien les bonnes valeurs de sortie qui correspondent aux tables de vérité ci-dessous. Combien de combinaisons différentes devrez-vous tester ?
+Vérifiez que ce circuit livre bien les bonnes valeurs de sortie qui correspondent aux tables de vérité ci-dessous. Combien de combinaisons différentes devrez-vous tester:
 ```{dropdown} Corrigé
 Le circuit fonctionne correctement. Il faut tester les quatre combinaisons qui apparaissent dans les tables de vérité.
 ```
 ````
 
-Ce circuit est particulièrement intéressant, car il montre qu'il est possible d'utiliser des opérateurs logiques pour réaliser l'opération arithmétique de l'addition. L'additionneur est limité : en fait, on l'appelle un _demi-additionneur_. Il n'est capable d'additionner que deux nombres à 1 {glo}`bit|bit` — c'est très limité. En fait, il serait intéressant d'avoir un additionneur de _trois_ nombres à un {glo}`bit|bit`. Pourquoi ? À cause de la manière dont on pose les additions en colonnes.
+Ce circuit est particulièrement intéressant, car il montre qu'il est possible d'utiliser des opérateurs logiques pour réaliser l'opération arithmétique de l'addition. L'additionneur est limité: en fait, on l'appelle un _demi-additionneur_. Il n'est capable d'additionner que deux nombres à 1 {glo}`bit|bit` — c'est très limité. En fait, il serait intéressant d'avoir un additionneur de _trois_ nombres à un {glo}`bit|bit`. Pourquoi: À cause de la manière dont on pose les additions en colonnes.
 
-Lorsque on additionne deux nombres à plusieurs chiffres, que ce soit en base 10 ou en base 2, on commence par la colonne de droite, les unités. On connait le concept de _retenue_ : en base 10, si l'addition des unités dépasse 9, on retient 1 dans la colonne des dizaines. En base 2, de façon similaire, si l'addition des unités dépasse… 1, on retient 1 dans la colonne suivante à gauche. C'est ce qu'on a fait avec le demi-additionneur : on peut considérer que la sortie $S_0$ représente la colonne des unités dans la somme, et la sortie $S_1$ représente la retenue à prendre en compte dans la colonne suivante.
+Lorsque on additionne deux nombres à plusieurs chiffres, que ce soit en base 10 ou en base 2, on commence par la colonne de droite, les unités. On connait le concept de _retenue_: en base 10, si l'addition des unités dépasse 9, on retient 1 dans la colonne des dizaines. En base 2, de façon similaire, si l'addition des unités dépasse… 1, on retient 1 dans la colonne suivante à gauche. C'est ce qu'on a fait avec le demi-additionneur: on peut considérer que la sortie $S_0$ représente la colonne des unités dans la somme, et la sortie $S_1$ représente la retenue à prendre en compte dans la colonne suivante.
 
-C'est ici que ça se complique : pour additionner les chiffres de la deuxième colonne, on doit potentiellement additionner _trois_ chiffres, et plus seulement deux. On a donc, en entrée, les deux {glo}`bit|bits` $A$ et $B$ qui viennent des nombres à additionner, et aussi potentiellement cette retenue qui vient de la colonne des unités, qu'on appellera $C_{in}$ (pour _carry_, «retenue» en anglais). Ceci est vrai en base 2 comme en base 10. Il faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s'appelle _additionneur complet_ et livrera deux sorties : le {glo}`bit|bit` de somme, appelé simplement $S$, et la retenue à reporter pour la colonne suivante, appelée $C_{out}$.
+C'est ici que ça se complique: pour additionner les chiffres de la deuxième colonne, on doit potentiellement additionner _trois_ chiffres, et plus seulement deux. On a donc, en entrée, les deux {glo}`bit|bits` $A$ et $B$ qui viennent des nombres à additionner, et aussi potentiellement cette retenue qui vient de la colonne des unités, qu'on appellera $C_{in}$ (pour _carry_, «retenue» en anglais). Ceci est vrai en base 2 comme en base 10. Il faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s'appelle _additionneur complet_ et livrera deux sorties: le {glo}`bit|bit` de somme, appelé simplement $S$, et la retenue à reporter pour la colonne suivante, appelée $C_{out}$.
 
 
-````{admonition} Exercice 15 : bases de l'additionneur complet
+````{admonition} Exercice 15: bases de l'additionneur complet
 
  * Déterminez combien de combinaisons différentes sont possibles pour trois signaux d'entrée $A$, $B$ et $C_{in}$ qui chacun peuvent valoir soit $1$ soit $0$.
  * Listez toutes ces combinaisons.
@@ -1226,7 +1226,7 @@ C'est ici que ça se complique : pour additionner les chiffres de la deuxième c
  * Finalement, avec les informations ainsi obtenues, complétez la table de vérité d'un additionneur complet qui a deux sorties $S$ et $C_{out}$
 
 ```{dropdown} Corrigé
- Il y a $2 \cdot 2 \cdot 2 = 2^3 = 8$ combinaisons différentes. Avec la notation $A + B + C =$ valeur en décimal $=$ valeur en binaire, les voici :
+ Il y a $2 \cdot 2 \cdot 2 = 2^3 = 8$ combinaisons différentes. Avec la notation $A + B + C =$ valeur en décimal $=$ valeur en binaire, les voici:
   * $0 + 0 + 0 = 0_{(10)} = 00_{(2)}$
   * $0 + 0 + 1 = 1_{(10)} = 01_{(2)}$
   * $0 + 1 + 0 = 1_{(10)} = 01_{(2)}$
@@ -1236,7 +1236,7 @@ C'est ici que ça se complique : pour additionner les chiffres de la deuxième c
   * $1 + 1 + 0 = 2_{(10)} = 10_{(2)}$
   * $1 + 1 + 1 = 3_{(10)} = 11_{(2)}$
 
-La table de vérité est ainsi :
+La table de vérité est ainsi:
 
 | $A$ | $B$ |$C_{in}$|$C_{out}$| $S$ |
 | :-: | :-: | :-:    | :-:     | :-: |
@@ -1253,7 +1253,7 @@ La table de vérité est ainsi :
 ````
 
 
-En faisant pour l'instant abstraction des détails d'un additionneur complet, on peut se dire qu'on le dessine simplement ainsi :
+En faisant pour l'instant abstraction des détails d'un additionneur complet, on peut se dire qu'on le dessine simplement ainsi:
 
 ```{logic}
 :height: 120
@@ -1290,10 +1290,10 @@ Si $A$ est formé de deux {glo}`bit|bits` $A_0$ et $A_1$ et que $B$ est formé d
 }
 ```
 
-L'additionneur du haut, comme précédemment, additionne les deux {glo}`bit|bits` des unités : $A_0$ et $B_0$. Son entrée $C_{in}$, qui représente l'éventuel troisième chiffre à additionner issu d'une retenue, n'est pas connectée et est toujours 0, vu qu'il n'y a aucune colonne précédente dans l'addition qui aurait pu en livrer une. Il livre comme première sortie $S_0$, le chiffre des unités, et sa seconde sortie $C_{out}$ est la retenue à utiliser pour l'addition des chiffres suivants. C'est pourquoi elle est connectée à l'entrée de la retenue du second additionneur $C_{in}$, qui va lui ajouter également les deux {glo}`bit|bits` de la colonne suivante, $A_1$ et $B_1$. Les sorties du second additionneur livrent le deuxième {glo}`bit|bit` $S_1$ de la valeur de sortie, ainsi que la retenue pour la troisième colonne. Comme il n'y a plus de {glo}`bit|bits` d'entrée pour la troisième colonne, cette retenue peut directement être considérée comme le troisième {glo}`bit|bit` de sortie $S_2$.
+L'additionneur du haut, comme précédemment, additionne les deux {glo}`bit|bits` des unités: $A_0$ et $B_0$. Son entrée $C_{in}$, qui représente l'éventuel troisième chiffre à additionner issu d'une retenue, n'est pas connectée et est toujours 0, vu qu'il n'y a aucune colonne précédente dans l'addition qui aurait pu en livrer une. Il livre comme première sortie $S_0$, le chiffre des unités, et sa seconde sortie $C_{out}$ est la retenue à utiliser pour l'addition des chiffres suivants. C'est pourquoi elle est connectée à l'entrée de la retenue du second additionneur $C_{in}$, qui va lui ajouter également les deux {glo}`bit|bits` de la colonne suivante, $A_1$ et $B_1$. Les sorties du second additionneur livrent le deuxième {glo}`bit|bit` $S_1$ de la valeur de sortie, ainsi que la retenue pour la troisième colonne. Comme il n'y a plus de {glo}`bit|bits` d'entrée pour la troisième colonne, cette retenue peut directement être considérée comme le troisième {glo}`bit|bit` de sortie $S_2$.
 
-````{admonition} Exercice 16 : limite de cet additionneur à 2 bits
-Avec l'additionneur ci-dessus, est-il possible d'obtenir des $1$ sur toutes les sorties, donc d'avoir $S_2 = S_1 = S_0 = 1$ ?
+````{admonition} Exercice 16: limite de cet additionneur à 2 bits
+Avec l'additionneur ci-dessus, est-il possible d'obtenir des $1$ sur toutes les sorties, donc d'avoir $S_2 = S_1 = S_0 = 1$:
 
 ```{dropdown} Indice
 Déterminez quel est le nombre décimal qui serait représenté par $S_2 = S_1 = S_0 = 1$: $111_{(2)} =\;???_{(10)}$  Ensuite, déterminez les nombres les plus grands représentables sur les deux fois 2 bits d'entrée et tirez-en une conclusion.
@@ -1305,7 +1305,7 @@ La configuration $S_2 = S_1 = S_0 = 1$ représente le nombre décimal $7$. Ce se
 ````
 
 
-`````{admonition} Exercice 17 : additionneur de demi-octets
+`````{admonition} Exercice 17: additionneur de demi-octets
 
 En connectant des additionneurs complets, réalisez un circuit qui additionne deux nombres $A$ et $B$ de quatre bits, numérotés $A_0$ à $A_3$ et $B_0$ à $B_3$, respectivement. Combien de bits de sortie doit-il y avoir pour traiter toutes les valeurs possibles?
 
@@ -1330,7 +1330,7 @@ Les entrées sont déjà disposées. Glissez autant d'additionneurs et de bits d
 ```
 
 ````{dropdown} Corrigé
-On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et de droite à gauche pour être proche de la représentation selon laquelle les additions se résolvent en colonne, est :
+On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et de droite à gauche pour être proche de la représentation selon laquelle les additions se résolvent en colonne, est:
 
 ```{logic}
 :height: 300
@@ -1386,11 +1386,11 @@ On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et 
 Cet exercice démontre l'opportunité de penser en termes {glo}`modulo|modulaires`, ce qui revient souvent en informatique. Ici, on a réalisé qu'un additionneur complet résout un sous-problème bien défini d'une addition générale d'un nombre à $n$ {glo}`bit|bits`, et qu'une fois qu'on a créé un tel additionneur, il suffit d'en connecter plusieurs les uns derrière les autres de manière structurée pour additionner des nombres plus grands.
 
 
-````{admonition} Exercice 18 : overflow
+````{admonition} Exercice 18: overflow
 
 Le schéma ci-dessous montre le même additionneur de demi-octets de l'exercice précédent, mais, de plus, la valeur en base 10 de ses 4 bits d'entrée pour $A$ et pour $B$ est affichée avec un module d'affichage spécial à droite. La même chose est faite pour représenter la valeur $S = A + B$ (mais seulement sur les quatre premiers bits de $S$). Actuellement, le circuit effectue le calcul $0 + 0 = 0$.
 
-Réglez les entrées du circuit de manière à lui faire effectuer les additions suivantes, et vérifiez le résultat. Dans quelles circonstances est-il correct et pourquoi est-il de temps en temps incorrect ? Comment, en regard de ceci, interpréter le bit de sortie $S_4$, qui est la retenue de l'additionneur de gauche ?
+Réglez les entrées du circuit de manière à lui faire effectuer les additions suivantes, et vérifiez le résultat. Dans quelles circonstances est-il correct et pourquoi est-il de temps en temps incorrect: Comment, en regard de ceci, interpréter le bit de sortie $S_4$, qui est la retenue de l'additionneur de gauche:
    1. $1 + 0$
    1. $3 + 1$
    1. $3 + 3$
@@ -1471,7 +1471,7 @@ Dès que la somme dépasse 15, elle n'est plus représentable sur les 4 bits qui
 ````
 
 
-````{admonition} Exercice 19 : circuit défectueux
+````{admonition} Exercice 19: circuit défectueux
 
 L'additionneur de demi-octets ci-dessous a été endommagé et ne fonctionne plus correctement. Par exemple, lorsqu'on lui demande d'effectuer le calcul $11 + 1$, il livre comme réponse $8$.
 
@@ -1549,9 +1549,9 @@ La retenue sortant du deuxième additionneur depuis la droite est bloquée à 0 
 ````
 
 
-````{admonition} Exercice 20 : design d'un additionneur complet
+````{admonition} Exercice 20: design d'un additionneur complet
 
-_**Note :** Exercice difficile et actuellement peu guidé ici ; prochainement complété par davantage d'indications._
+_**Note:** Exercice difficile et actuellement peu guidé ici ; prochainement complété par davantage d'indications._
 
 En s'aidant de la table de vérité d'un seul additionneur complet, créer un circuit logique qui calcule ses sorties $S$ et $C_{out}$ en fonction des entrées $A$, $B$ et $C_{in}$.
 
