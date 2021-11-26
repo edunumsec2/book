@@ -2,9 +2,13 @@
 Algorithmique I
 ==============================
 
-Le terme d'algorithme s'est progressivement diffusé dans toutes les facettes de la société actuelle, pour dépasser le cadre de l'utilisation par les seuls experts en informatique. Ils sont partout, de la plus petite application pour smartphone au système d'intelligence artificielle le plus complexe et ont largement investi la sphère médiatique et nos espaces de communication. Ils font toutes sortes de choses... Mais, qu'est ce qu'un algorithme réellement ? Comment ça marche ? Comment faire la différence entre un bon et un mauvais algorithme ? Quelles sont ses spécificités, ses caractéristiques ? Tant de questions qui tenteront de s'éclaircir au cours des chapitres qui suivent.
+Nous avons tous entendu parler DES ALGORITHMES. Normal, c’est le mot à la mode et que tout le monde utilise sans vraiment le comprendre. Ils sont partout, ils font toutes sortes de choses, ils nous manipulent: Pourquoi on en parle de la même manière que des extraterrestres? Dans ce cours, nous allons tenter de revenir sur terre, parce que les algorithmes c’est pas si compliqué que ça. On apprendra à les définir, à les faire fonctionner et surtout à reconnaître la différence entre un bon et un mauvais algorithme…. ou plutôt un bon et un mauvais code, puisque c’est de cela qu’il s’agit. 
 
-Bienvenue dans le monde fascinant des algorithmes...
+Bienvenue dans le monde fascinant des algorithmes.
+
+<!-- Le terme d'algorithme s'est progressivement diffusé dans toutes les facettes de la société actuelle, pour dépasser le cadre de l'utilisation par les seuls experts en informatique. Ils sont partout, de la plus petite application pour smartphone au système d'intelligence artificielle le plus complexe et ont largement investi la sphère médiatique et nos espaces de communication. Ils font toutes sortes de choses... Mais, qu'est ce qu'un algorithme réellement ? Comment ça marche ? Comment faire la différence entre un bon et un mauvais algorithme ? Quelles sont ses spécificités, ses caractéristiques ? Tant de questions qui tenteront de s'éclaircir au cours des chapitres qui suivent.
+
+Bienvenue dans le monde fascinant des algorithmes... -->
 
 <!-- 
 ## Contenu de la thématique
