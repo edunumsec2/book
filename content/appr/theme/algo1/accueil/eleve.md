@@ -2,7 +2,7 @@
 Algorithmique I
 ==============================
 
-Nous avons tous entendu parler DES ALGORITHMES. Normal, c’est le mot à la mode et que tout le monde utilise sans vraiment le comprendre. Ils sont partout, ils font toutes sortes de choses, ils nous manipulent: Pourquoi on en parle de la même manière que des extraterrestres? Dans ce cours, nous allons tenter de revenir sur terre, parce que les algorithmes c’est pas si compliqué que ça. On apprendra à les définir, à les faire fonctionner et surtout à reconnaître la différence entre un bon et un mauvais algorithme…. ou plutôt un bon et un mauvais code, puisque c’est de cela qu’il s’agit. 
+Nous avons tous entendu parler des ALGORITHMES. Normal, c’est le mot à la mode et que tout le monde utilise sans vraiment le comprendre. Ils sont partout, ils font toutes sortes de choses, ils nous manipulent : pourquoi en parle-t-on de la même manière que des extraterrestres ? Dans ce cours, nous allons tenter de revenir sur terre, parce que les algorithmes ce n’est pas si compliqué que ça. On apprendra à les définir, à les faire fonctionner et surtout à reconnaître la différence entre un « bon » et un « mauvais » algorithme…
 
 Bienvenue dans le monde fascinant des algorithmes.
 
