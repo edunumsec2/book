@@ -202,6 +202,7 @@ Imaginer que les quatre éléments d’une liste sont triés dans le sens invers
 
 Dans cette configuration précise, quel algorithme est le plus rapide  (présente le moins d’étapes intermédiaires) ? Quel algorithme est le plus lent ?
 
+
 ````
 
 
