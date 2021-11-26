@@ -28,7 +28,7 @@ Dans ce chapitre, nous nous concentrerons sur les couches de bas niveau, et tent
 
 ## De quoi sont faits les nombres binaires? 
 
-Les ordinateurs ne comprennent que les {glo}`codebinaire|nombres binaires`. La lettre «A», par exemple, est pour ces derniers une suite de 0 et de 1. Même chose pour une image, une vidéo, une chanson et ainsi de suite. Mais alors comment ces 0 et ces 1 sont-ils {glo}`stockage|stockés` et manipulés physiquement par les ordinateurs ? De quelle matière sont-ils faits ? Un indice : que mettez-vous dans votre smartphone pour le faire fonctionner ? De l'essence ? Du gaz ? De l'énergie solaire ? 
+Les ordinateurs ne comprennent que les {glo}`codebinaire|nombres binaires`. La lettre «A», par exemple, est pour ces derniers une suite de 0 et de 1. Même chose pour une image, une vidéo, une chanson et ainsi de suite. Mais alors comment ces 0 et ces 1 sont-ils {glo}`stockage|stockés` et manipulés physiquement par les ordinateurs: De quelle matière sont-ils faits: Un indice: que mettez-vous dans votre smartphone pour le faire fonctionner: De l'essence: Du gaz: De l'énergie solaire: 
 
 De l'électricité.
 
@@ -63,23 +63,23 @@ Vos likes, vos partages, vos vidéos transmises via des applications telles que 
 :width: 600
 :height: 500
 ```
-Likes, partages, vidéos transmises via des applications telles que WhatsApp, Instagram, TikTok, Snapchat, YouTube, ... : tout est stocké dans des centres de données (Data Center) aux quatre coins de la planète
+Likes, partages, vidéos transmises via des applications telles que WhatsApp, Instagram, TikTok, Snapchat, YouTube, etc.: tout est stocké dans des centres de données (Data Center) aux quatre coins de la planète
 
 
 ## Électricité et nombres binaires
 
-Les {glo}`codebinaire|nombres binaires`, au niveau le plus élémentaire, sont matérialisés par des <span commented>courants électriques</span><!-- REVIEW/JPP: discussion courant vs tension? -->, qui traversent les circuits des ordinateurs. Mais pourquoi avoir choisi des 0 et des 1 comme alphabet ? Quel rapport avec l'électricité ? 
+Les {glo}`codebinaire|nombres binaires`, au niveau le plus élémentaire, sont matérialisés par des <span commented>courants électriques</span><!-- REVIEW/JPP: discussion courant vs tension? -->, qui traversent les circuits des ordinateurs. Mais pourquoi avoir choisi des 0 et des 1 comme alphabet: Quel rapport avec l'électricité: 
 
 En informatique, si nous avons choisi d'utiliser un {glo}`codebinaire|code binaire`, ça n'est pas par hasard. Ce sont les deux signaux les plus élémentaires que l'on puisse transmettre avec l'électricité. Soit le courant passe, soit il ne passe pas. Ouvert ou fermé ; allumé ou éteint ; 1 ou 0. 
 
 ```{admonition} Le saviez-vous?
 :class: hint
-On aurait pu choisir un code possédant plus de deux signaux différents. Si on choisissait, par exemple, trois signaux, on pourrait les coder par l'électricité en mesurant un courant faible, un courant moyen, un courant fort. En fait, cela s'est déjà fait : les soviétiques ont développé en 1958 un ordinateur nommé [Setun](https://en.wikipedia.org/wiki/Setun) basé sur ce principe. Mais le problème est qu'on augmente ainsi les possibilités de se tromper dans la mesure, et d'interpréter un courant moyen pour un courant fort, ou inversément. Puisque l'électricité permet une vitesse de transmission par signal très grande, il est plus performant de garder deux positions clairement distinctes que l'on peut transmettre très vite, plutôt que trois positions avec un risque de confusion plus élevé. D'autre part, il est plus simple de concevoir des circuits électroniques qui ne doivent traiter que deux valeurs.
+On aurait pu choisir un code possédant plus de deux signaux différents. Si on choisissait, par exemple, trois signaux, on pourrait les coder par l'électricité en mesurant un courant faible, un courant moyen, un courant fort. En fait, cela s'est déjà fait: les soviétiques ont développé en 1958 un ordinateur nommé [Setun](https://en.wikipedia.org/wiki/Setun) basé sur ce principe. Mais le problème est qu'on augmente ainsi les possibilités de se tromper dans la mesure, et d'interpréter un courant moyen pour un courant fort, ou inversément. Puisque l'électricité permet une vitesse de transmission par signal très grande, il est plus performant de garder deux positions clairement distinctes que l'on peut transmettre très vite, plutôt que trois positions avec un risque de confusion plus élevé. D'autre part, il est plus simple de concevoir des circuits électroniques qui ne doivent traiter que deux valeurs.
 ```
 
-La grande idée derrière la conception des ordinateurs et de leur circuits électroniques repose sur l'utilisation de sortes d'«interrupteurs automatiques». Ce composant fonctionne donc comme un interrupteur (en laissant ou non passer le courant sur un fil donné), mais de façon automatique : ce n'est pas un humain qui doit venir commuter l'interrupteur, mais l'interrupteur commute automatiquement en fonction de si oui ou non du courant passe sur un _autre_ fil du système. Historiquement, on a réalisé que si l'on disposait d'un tel composant, on pouvait en assembler plusieurs (en fait, plusieurs milliers) et ainsi construire des systèmes à même de manipuler des données représentées par des 0 et des 1. Nous allons voir comment dans les prochaines sections.
+La grande idée derrière la conception des ordinateurs et de leur circuits électroniques repose sur l'utilisation de sortes d'«interrupteurs automatiques». Ce composant fonctionne donc comme un interrupteur (en laissant ou non passer le courant sur un fil donné), mais de façon automatique: ce n'est pas un humain qui doit venir commuter l'interrupteur, mais l'interrupteur commute automatiquement en fonction de si oui ou non du courant passe sur un _autre_ fil du système. Historiquement, on a réalisé que si l'on disposait d'un tel composant, on pouvait en assembler plusieurs (en fait, plusieurs milliers) et ainsi construire des systèmes à même de manipuler des données représentées par des 0 et des 1. Nous allons voir comment dans les prochaines sections.
 
-Dans les premiers ordinateurs entre les années 1950 et 1960, ce sont les [tubes à vide](https://fr.wikipedia.org/wiki/Tube_électronique) qui ont rempli cette fonction. Mais les tubes à vides étaient gros, consommaient beaucoup d'électricité, et avaient une durée de vie limitée : il fallait souvent les changer, un peu comme de vieilles ampoules à incandescence. En utilisant des tubes à vide, on pouvait certes construire des ordinateurs, mais certainement pas ceux que l'on connaît aujourd'hui.
+Dans les premiers ordinateurs entre les années 1950 et 1960, ce sont les [tubes à vide](https://fr.wikipedia.org/wiki/Tube_électronique) qui ont rempli cette fonction. Mais les tubes à vides étaient gros, consommaient beaucoup d'électricité, et avaient une durée de vie limitée: il fallait souvent les changer, un peu comme de vieilles ampoules à incandescence. En utilisant des tubes à vide, on pouvait certes construire des ordinateurs, mais certainement pas ceux que l'on connaît aujourd'hui.
 
 <!--
 ```{figure} media/vaccum_tubes.jpeg
@@ -119,7 +119,7 @@ Différents modèles de transistor. On les reconnaît à leurs trois «pattes» 
 :width: 600
 :height: 350
 ```
-Différents modèles de transistor. On les reconnaît à leurs trois «pattes» aussi appelées : émetteur, base, collecteur
+Différents modèles de transistor. On les reconnaît à leurs trois «pattes» aussi appelées: émetteur, base, collecteur
 <br> <br>
 
 

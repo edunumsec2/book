@@ -11,7 +11,7 @@ Pour comparaison, les microprocesseurs des smartphones modernes exécutent de l'
 
 En 1991, 1 Go (un milliard d'octets) de mémoire non volatile coûtait environ 45 000 dollars. Aujourd'hui, un smartphone moderne dispose de l'ordre de 256 Go d'espace de stockage, ce qui aurait coûté à l'époque 11.5 millions de dollars[^1]. 
 
-À quoi servaient précisément 17 468 tubes électroniques de l'ENIAC dans le rôle que l'ordinateur avait ? Et par quoi ont-ils été remplacés dans nos machines modernes ? Et comment se fait-il qu'un objet qui tient dans la poche puisse contenir 256 fois plus d'espace disque qu'un ordinateur des années 1990 ? 
+À quoi servaient précisément 17 468 tubes électroniques de l'ENIAC dans le rôle que l'ordinateur avait: Et par quoi ont-ils été remplacés dans nos machines modernes: Et comment se fait-il qu'un objet qui tient dans la poche puisse contenir 256 fois plus d'espace disque qu'un ordinateur des années 1990: 
 
 Dans ce chapitre, vous découvrirez comment sont construits les ordinateurs, comment sont organisés leurs différents composants pour leur permettre d'effectuer des milliards de calculs à la seconde alors qu'ils ne comprennent que la distinction entre 0 et 1, allumé ou éteint.
 
