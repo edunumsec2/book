@@ -13,7 +13,7 @@ Demandez à un.e camarade de classe de suivre ces instructions. Est-ce que votre
 
 ````
 
-# 3. De l'algorithme au programme
+# 3. Des algorithmes aux programmes
 
 Une fois que l’on a déterminé le meilleur {glo}`algo|algorithme` à utiliser, il faut le retranscrire dans un programme qu’une machine peut comprendre. Nous allons détailler ce processus pour l’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri par sélection</span>**. 
 

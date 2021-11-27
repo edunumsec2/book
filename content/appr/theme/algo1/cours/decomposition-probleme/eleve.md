@@ -152,6 +152,13 @@ Au niveau des désavantages, l'automatisation est en général énergivore (avec
 « Chaque étape d’un algorithme doit être définie précisément » (Knuth, 2011). En effet, si on ne décompose pas suffisamment la solution du problème, on peut se retrouver face à une recette inutile, par exemple : prendre des œufs et cuire l'omelette. Cette recette ne nous dit pas vraiment comment procéder pour arriver à faire une omelette...
 
 
+````{admonition} Liens
+:class: hint
+
+Lorsqu'on sauve un fichier dans un ordinateur, il est stocké dans une mémoire. La mémoire d'un ordinateur pourrait être comparée a une grande commode de tiroirs étiquetés. Ainsi, lorsqu'un fichier est stocké en mémoire, la taille du fichier correspond aux nombre de tiroirs qu'il occupe. Si c'est un fichier de texte par exemple, on peut imaginer qu'un tiroir contient un caractère simple (un octet). Si c'est une image en couleur, un pixel de cette image occuperait 3 tiroirs (un octet par couleur rouge, verte et bleue).
+
+````
+
 ## Les ingrédients d’un algorithme
 
 L’objectif d’un {glo}`algo|algorithme` est de décrire la solution à un problème donné. Concrètement, pour résoudre un problème, l’{glo}`algo|algorithme` va utiliser des **<span style="color:rgb(89, 51, 209)">données</span>** qu’il reçoit ***<span style="color:rgb(13, 204, 166)">en entrée</span>*** et va retourner un **<span style="color:rgb(89, 51, 209)">résultat</span>** ***<span style="color:rgb(13, 204, 166)">en sortie</span>***. Le résultat en sortie va être la solution au problème sur la base des calculs effectués sur les données en entrée. Un exemple d'{glo}`algo|algorithme` qui détecte les visages reçoit en {glo}`input|entrée` une image (ce sont les {glo}`data|données`) et retourne en sortie "oui" ou "non" (c'est le résultat) selon si l’image contient un visage ou pas. Les {glo}`data|données` en {glo}`input|entrée` d’un {glo}`algo|algorithme` qui traduit pourraient être le mot à traduire et un dictionnaire. L’{glo}`algo|algorithme` traiterait ces {glo}`data|données` pour retourner en {glo}`output|sortie` la traduction du mot dans une autre langue.
