@@ -34,9 +34,6 @@ width: 100%
 
 **Un algorithme est un peu comme une recette de cuisine.** Cet exemple illustre les opérations à suivre pour la réalisation d’une omelette.
 
-```{image} media/Omelette_1.png
-:width: 600
-:height: 150
 ```
 
 Dans le cas de la recette d'une omelette, nous avons décomposé la marche à suivre en étapes à réaliser dans un certain ordre. Il en est de même pour un {glo}`algo|algorithme`. Pour résoudre un problème, il faut d'abord **<span style="color:rgb(89, 51, 209)">décomposer le problème en sous-problèmes</span>** que l'on *sait résoudre*. La solution de chaque sous-problème donne lieu à une étape qu'il faudra exécuter pour arriver à un résultat. Voici les sous-problèmes que certaines étapes ci-dessus permettent de résoudre. Afin d'extraire le contenu édible de l'œuf, il faut casser les oeufs. Pour que l'omelette ait une jolie couleur uniforme, il faut mélanger le jaune et le blanc d'œuf. Cette dernière étape ne serait pas du tout pertinente si le problème que l'on essaie de résoudre est la préparation d'un oeuf au plat. *<span style="color:rgb(13, 204, 166)">L’{glo}`algo|algorithme` décrit donc toutes les opérations qu'il faut effectuer pour arriver à ce résultat</span>*. Nous allons ainsi définir l’{glo}`algo|algorithme` comme **<span style="color:rgb(89, 51, 209)">une suite d’opérations qui permettent de résoudre un problème</span>**. 
@@ -86,7 +83,7 @@ width: 50%
 Lorsque l'on dit que i ← 1, ou que i = 1 en Python, cela veut tout simplement dire que la variable *i* vaut maintenant 1. Cette opération signifie que l'on va prendre le tiroir avec étiquette *i* dans la commode (s'il n'existe pas encore on va noter *i* sur l'étiquette d'un tirroir disponible) et on va mettre la valeur 1 dedans. Ce qui se trouvait dans le tirroir avant la valeur 1 ne s'y trouve plus, on dit que *la valeur précédente est écrasée*. A chaque fois que nous utilisons *i* dans l'algorithme ou dans le code, nous faisons référence à la valeur stockée dans le tiroir.
 
 
-````{admonition} Exercice 0
+````{admonition} Exercice 0. Algorithme mystère
 :class: note
 
 Lisez bien l'algorithme présenté ci-dessus. 
@@ -95,7 +92,7 @@ Quel problème cet algorithme permet-il de résoudre ? Il est plus facile de ré
 
 ````
 
-`````{admonition} Solution 0
+`````{admonition} Solution 0. Algorithme mystère
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -125,7 +122,7 @@ Cet algorithme permet calculer la somme des nombres contenus dans une liste (ici
 Pour comprendre ce que fait l'algorithme ci-dessus, il faut se mettre à la place de la machine. On parle de *<span style="color:rgb(13, 204, 166)">simuler</span>* un algorithme, de faire comme si l'algorithme s'exécutait sur une machine. Pour que ce soit plus concret, on peut imaginer des valeurs fictives pour les variables telles que *Nombres*. Dans la vie réelle, *Nombres* pourra contenir tous les nombres possibles, mais cela ne nous aide pas à comprendre. On imagine alors des nombres précis que *Nombres* pourrait contenir, comme par exemple 4, 5 et 6. Lorsqu'on exécute les opérations de l'algorithme l'une après l'autre, avec des valeurs concrètes, on comprend mieux quel effet ces opérations ont sur les valeurs contenues dans les variables. La {glo}`algo|simulation` de l'algorithme nous permet de saisir **<span style="color:rgb(89, 51, 209)">les calculs</span>** réalisés par cet algorithme, ici une simple somme.
 
 
-````{admonition} Exercice 1
+````{admonition} Exercice 1. Machine mystère
 :class: note
 
 Quel objet du quotidien (autre que la calculatrice) fait des additions et utilise cet algorithme pour résoudre un problème ?  
@@ -136,7 +133,7 @@ Il y a-t-il des désavantages à automatiser cette tâche ?
 
 ````
 
-`````{admonition} Solution 1
+`````{admonition} Solution 1. Machine mystère
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -188,12 +185,12 @@ Le jeu d’instructions élémentaires dépend du système informatique sur lequ
 ````
 <br>
 
-````{admonition} Exercice 2
+````{admonition} Exercice 2. Ingrédients de l'algorithme mystère
 :class: note
 A quoi correspondent les ingrédients d’un algorithme dans l’exemple de la recette de l’omelette ?
 ````
 
-````{admonition} Solution 2
+````{admonition} Solution 2. Ingrédients de l'algorithme mystère
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -203,7 +200,7 @@ A quoi correspondent les ingrédients d’un algorithme dans l’exemple de la r
 ```
 ````
 
-````{admonition} Exercice 3
+````{admonition} Exercice 3. Echange de deux variables
 :class: note
 
 Ecrire un algorithme qui échange les valeurs de deux variables. Par exemple, si la première variable X contient 1 et la deuxième variable Y contient 2, à la fin de l'algorithme X contient 2 et Y contient 1. Pour rappel, une variable peut contenir une seule valeur à la fois. 
@@ -213,7 +210,7 @@ Conseil : mettez-vous à la place de la machine et représentez le contenu de ch
 ````
 
 
-`````{admonition} Solution 3
+`````{admonition} Solution 3. Echange de deux variables
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -244,7 +241,7 @@ Y ← Z
 
 Si on dessine l’état des variables après chacune de ces opérations dans des tirroirs, voici ce qu’on obtient :
 
-<img src="media/Swap2.png" width="45%"> &nbsp;  
+<img src="media/Swap2.png" width="40%"> &nbsp;  
 
 Nous avons donc la confirmation que la solution obtenue résout correctement notre problème d'échange des valeurs de deux variables.
 
@@ -253,30 +250,54 @@ Nous avons donc la confirmation que la solution obtenue résout correctement not
 `````
 
 
-````{admonition} Exercice 4
+````{admonition} Exercice 4. Forme mystère
 :class: note
 
 L’algorithme suivant contrôle un crayon. Quelle forme dessine-t-il ?
 ```
 Répéter 8 fois :
-    Avance de 5 cm
+    Avance de 2 cm
     Tourne à droite de 60°
 ```
 ````
 
-`````{admonition} Solution 4
+`````{admonition} Solution 4. Forme mystère
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
-Un hexagone. On pourrait croire que le fait de répéter l'action qui dessine une ligne 8 fois aboutit à un octogone. Cependant, pour trouver la bonne réponse il faut simuler les effets de l'algorithme sur le crayon. La forme que l'on obtient en tournant de 60° est bien un hexagone et les deux dernières lignes sont dessinées par dessus des lignes déja existantes. Si on change la valeur 8 à 6, on obtient exactement le même dessin.
+
+```{codeplay}
+
+# import the turtle modules
+import turtle
+ 
+# Start a work Screen
+ws = turtle.Screen()
+ 
+# Define a Turtle Instance
+crayon = turtle.Turtle()
+
+crayon.speed(1)
+
+for i in range(8):
+ 
+    # Avance d'à peu près 2 cm
+    crayon.forward(100) 
+
+    # Tourne à droite de 60°
+    crayon.right(60)
+
+``` 
+
+Un hexagone. Pour vérifier, exécuter le code ci-dessus. On pourrait croire que le fait de répéter l'action qui dessine une ligne 8 fois aboutit à un octogone. Cependant, pour trouver la bonne réponse il faut simuler les effets de l'algorithme sur le crayon. La forme que l'on obtient en tournant de 60° est bien un hexagone et les deux dernières lignes sont dessinées par dessus des lignes déja existantes. Si on change la valeur 8 à 6, on obtient exactement le même dessin.
 
 ````
 `````
 
 
-````{admonition} Exercice 5
+````{admonition} Exercice 5. Recherche du minimum
 :class: note
 
 Ecrire un algorithme qui permet de déterminer le plus petit nombre d’une liste. Penser à décomposer la solution en différentes étapes.
@@ -287,7 +308,7 @@ L'algorithme trouve-t-il la bonne solution ? Sinon, modifier votre algorithme af
 
 ````
 
-`````{admonition} Solution 5
+`````{admonition} Solution 5. Recherche du minimum
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -366,7 +387,7 @@ Le résultat obtenu est bien le résultat attendu, l'algorithme a trouvé la plu
 
 
 
-````{admonition} Exercice 6
+````{admonition} Exercice 6. Le prochain anniversaire
 :class: note
 
 On souhaite déterminer l’élève dont la date d’anniversaire est la plus proche de la date d’aujourd’hui, dans le futur. Ecrire un algorithme qui permet de trouver cet élève (utiliser un langage familier). Penser à décomposer le problème en sous-problèmes. 
@@ -377,7 +398,7 @@ Un ordinateur peut-il réaliser les opérations décrites par votre algorithme ?
 
 ````
 
-`````{admonition} Solution 6
+`````{admonition} Solution 6. Le prochain anniversaire
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -398,7 +419,7 @@ Oui, un ordinateur peut exécuter ces opérations, mais elles doivent être déc
 
 
 
-````{admonition} Exercice 7
+````{admonition} Exercice 7. Echange de trois variables
 :class: note
 
 Écrire un algorithme qui effectue la permutation circulaire des variables X, Y et Z : à la fin de l’algorithme, X contient la valeur de Z, Y la valeur de X et Z la valeur de Y. Pour rappel, une variable ne peut contenir qu'une valeur à la fois.
@@ -407,7 +428,7 @@ Conseil : mettez-vous à la place de la machine et représentez le contenu de ch
 
 ````
 
-`````{admonition} Solution 7
+`````{admonition} Solution 7. Echange de trois variables
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>

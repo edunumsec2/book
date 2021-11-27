@@ -6,29 +6,34 @@ Imaginez une bibliothèque scolaire un peu spéciale : les livres n’y sont pas
 
 Pensez-vous pouvoir retrouver ce livre ?
 
-Combien de temps cela vous prendrait-il ? 
+Combien de temps cela vous prendra-t-il ? 
 
-Y a-t-il des objets que vous rangez chez vous dans un ordre bien particulier ?
+Y a-t-il des objets chez vous, que vous rangez dans un ordre bien particulier ?
+
+Y a-t-il des objets chez vous, que vous feriez mieux de ranger dans un ordre bien particulier, parce que vous passez beaucoup de temps à les chercher ?
 
 ````
 
 # 2. Trie, cherche et trouve
 
-Pour l'instant vous devez nous croire sur parole, mais si l'on veut pouvoir trouver une information parmi une avalanche d'informations, il faut que ces informations soient bien rangées. L'exemple de la bibliothèque illustre ce fait de manière intuitive, mais vous aller pouvoir l'expérimenter de première main dans le chapitre Algorithmique II. Finalement, le succès fulgurant de *Google* n'est dû qu'à sa capacité à bien ranger l'information disponible sur le Web et qu'au moment où vous avez besoin d'une information particulière, leurs algorithmes sont capables de vous la trouver extrêmement rapidement.
+Pour l'instant il faut nous croire sur parole, mais si on veut pouvoir trouver une information parmi une avalanche d'informations, il faut que ces informations soient bien rangées. L'exemple de la bibliothèque ci-dessus illustre ce besoin de manière intuitive, mais vous aller pouvoir l'expérimenter de première main dans le chapitre Algorithmique II. 
 
-<span id=fig-trier></span>
-Pour apprendre à cuisiner, on commence par suivre des recettes classiques. Ainsi, pour appréhender l’{glo}`algorithmique|algorithmique`, nous étudierons une classe d’{glo}`algo|algorithmes` classiques : les **<span style="color:rgb(89, 51, 209)">algorithmes de tri</span>**. 
+Saviez-vous que le succès fulgurant de *Google* est surtout dû à sa capacité à bien ranger l'information disponible sur le Web et qu'au moment où vous avez besoin d'une information particulière, leurs algorithmes sont capables trouver cette information extrêmement rapidement. Ce problème qui consiste à ranger l'information a un nom, il s'agit du **<span style="color:rgb(89, 51, 209)">problème du Tri</span>**. Ce problème est si important qu'il est un des problèmes les plus étudiés en algorithmique.
 
-<br>
 
-```{image} media/Tris_base.png
-:width: 400
-:height: 300
-```
-<br>
+```{figure} media/Tris_base.png
+---
+alt: **Les Trier.**
+width: 60%
+---
 
 **Trier.** Des objets peuvent être triés selon une relation d’ordre, en lien avec une propriété. Sur la ligne du haut, les rectangles sont organisés selon leur couleur (de la plus sombre à la plus claire), alors que sur la ligne du bas, ils sont triés selon leur taille (du plus petit au plus grand).
-<br> <br>
+
+```
+
+
+<!-- Pour apprendre à cuisiner, on commence par suivre des recettes classiques. -->
+<!-- Pour apprendre à cuisiner, on commence par suivre des recettes classiques. Ainsi, pour appréhender l’{glo}`algorithmique|algorithmique`, nous étudierons une classe d’{glo}`algo|algorithmes` classiques : les **<span style="color:rgb(89, 51, 209)">algorithmes de tri</span>**.  -->
 
 
 Un algorithme de tri permet de trier des données, de les organiser selon **<span style="color:rgb(89, 51, 209)">une relation d’ordre</span>**. Dans la figure ci-dessus, les objets sont organisés soit par la luminosité de leur couleur, soit par leur taille, dans un ordre croissant.
