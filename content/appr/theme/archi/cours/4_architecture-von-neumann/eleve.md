@@ -1,4 +1,4 @@
-# 4. De Turing à Von Neumann
+# 2. De Turing à Von Neumann
 
 ````{panels}
 
