@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="420"
+   height="400"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.45.1"
+   sodipodi:docname="Von_Neumann_architecture_fr.svg"
+   sodipodi:docbase="/home/noemie/Dessin vectoriel/wikipedia"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata2264">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="599"
+     inkscape:window-width="822"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="0.9425"
+     inkscape:cx="210"
+     inkscape:cy="206"
+     inkscape:window-x="5"
+     inkscape:window-y="27"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs5" />
+  <g
+     transform="translate(69.9226,59.43743)"
+     id="g1898">
+    <rect
+       width="348.75012"
+       height="58.750015"
+       x="-49.000015"
+       y="-47.750011"
+       style="opacity:1;fill:#c0c0c0;fill-opacity:1;stroke:#000000;stroke-width:1.25000036;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1873" />
+    <rect
+       width="158.75005"
+       height="158.75006"
+       x="-49.000004"
+       y="66.437469"
+       style="opacity:1;fill:#c0c0c0;fill-opacity:1;stroke:#000000;stroke-width:1.25000012;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2760" />
+    <rect
+       width="158.75005"
+       height="158.75006"
+       x="142.62497"
+       y="66.437469"
+       style="opacity:1;fill:#c0c0c0;fill-opacity:1;stroke:#000000;stroke-width:1.25000012;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2762" />
+    <rect
+       width="118.74995"
+       height="38.750008"
+       x="93.624977"
+       y="290.12515"
+       style="opacity:1;fill:#c0c0c0;fill-opacity:1;stroke:#000000;stroke-width:1.25000095;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2764" />
+    <rect
+       width="118.74995"
+       height="38.750008"
+       x="231.62503"
+       y="290.12515"
+       style="opacity:1;fill:#c0c0c0;fill-opacity:1;stroke:#000000;stroke-width:1.25000095;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2768" />
+    <rect
+       width="118.74995"
+       height="38.750008"
+       x="162.62502"
+       y="176.4375"
+       style="opacity:1;fill:#ffffff;fill-opacity:0.77777782;stroke:#000000;stroke-width:1.25000095;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2788" />
+    <text
+       x="124.45903"
+       y="-11.299809"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:start;line-height:100%;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       id="text2817"
+       xml:space="preserve"
+       sodipodi:linespacing="100%"><tspan
+         x="124.45903"
+         y="-11.299809"
+         style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;font-family:Arial"
+         id="tspan2823">Mémoire</tspan></text>
+    <text
+       x="151.78999"
+       y="318.15363"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:start;line-height:100%;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       id="text2830"
+       xml:space="preserve"
+       sodipodi:linespacing="100%"><tspan
+         x="151.78999"
+         y="318.15363"
+         style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;font-family:Arial"
+         id="tspan2836">Entrée</tspan></text>
+    <text
+       x="290.41895"
+       y="318.33136"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:start;line-height:100%;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       id="text2843"
+       xml:space="preserve"
+       sodipodi:linespacing="100%"><tspan
+         x="290.41895"
+         y="318.33136"
+         style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;font-family:Arial"
+         id="tspan2845">Sortie</tspan></text>
+    <text
+       x="221.89893"
+       y="202.14941"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-align:start;line-height:100%;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       id="text2847"
+       xml:space="preserve"
+       sodipodi:linespacing="100%"><tspan
+         x="221.89893"
+         y="202.14941"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;font-family:Arial"
+         id="tspan2849">Accumulateur</tspan></text>
+    <g
+       id="g2855">
+      <path
+         d="M -17.854446,64.802101 L -17.854446,13.53686 L -21.482164,19.820251 L -14.318912,19.820251 L -17.67767,13.360083"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         id="path2851" />
+      <use
+         transform="matrix(1,0,0,-1,89.19243,78.16218)"
+         id="use2853"
+         x="0"
+         y="0"
+         width="300"
+         height="281"
+         xlink:href="#path2851" />
+    </g>
+    <use
+       transform="translate(189.8994,0)"
+       id="use2859"
+       x="0"
+       y="0"
+       width="300"
+       height="281"
+       xlink:href="#g2855" />
+    <path
+       d="M 140.97097,167.54605 L 111.70573,167.54605 L 117.98912,163.91834 L 117.98912,171.08159 L 111.52895,167.72283"
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       id="use2861" />
+    <use
+       transform="matrix(-1,0,0,1,252.4999,-43)"
+       id="use2865"
+       x="0"
+       y="0"
+       width="300"
+       height="281"
+       xlink:href="#use2861" />
+    <path
+       d="M 144.09738,287.78166 L 214.79103,217.08799 L 212.91317,224.09621 L 207.848,219.03102 L 214.79102,216.83799"
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000036px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       id="path2867" />
+    <use
+       transform="matrix(0,1,-1,0,511.754,72.86562)"
+       id="use2871"
+       x="0"
+       y="0"
+       width="300"
+       height="281"
+       xlink:href="#path2867" />
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     x="42.440319"
+     y="215.38461"
+     id="text3278"><tspan
+       sodipodi:role="line"
+       id="tspan3280"
+       x="42.440319"
+       y="215.38461" /></text>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot3326"
+     transform="matrix(1.8996102,0,0,1.8996102,-38.17721,-155.79075)"
+     style="fill:none;fill-opacity:1"><flowRegion
+       id="flowRegion3328"><rect
+         id="rect3330"
+         width="60.194912"
+         height="30.654911"
+         x="42.440319"
+         y="170.82228"
+         style="fill:none;fill-opacity:1" /></flowRegion><flowPara
+       id="flowPara3332">  Unité de</flowPara><flowPara
+       id="flowPara3334">  contrôle</flowPara></flowRoot>  <text
+     xml:space="preserve"
+     style="font-size:25.73999977px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     x="42.091305"
+     y="193.09637"
+     id="text3207"><tspan
+       sodipodi:role="line"
+       id="tspan3209"
+       x="42.091305"
+       y="193.09637">Unité de</tspan><tspan
+       sodipodi:role="line"
+       x="42.091305"
+       y="225.27137"
+       id="tspan3211">contrôle</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:20.42050362px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     x="225.26837"
+     y="163.84927"
+     id="text3213"><tspan
+       sodipodi:role="line"
+       id="tspan3215"
+       x="225.26837"
+       y="163.84927">     Unité</tspan><tspan
+       sodipodi:role="line"
+       x="225.26837"
+       y="189.3749"
+       id="tspan3217">arithmétique</tspan><tspan
+       sodipodi:role="line"
+       x="225.26837"
+       y="214.90053"
+       id="tspan3219">   et logique</tspan></text>
+</svg>
