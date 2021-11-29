@@ -4,11 +4,11 @@
 Dans cette section, nous continuons notre exploration de comment les portes logiques, selon leur assemblages, fournissent les fonctionnalités de base des ordinateurs. En particulier, nous nous intéressons à comment faire effectuer plusieurs opérations à un ordinateur via ce qui s'appelle une unité arithmétique et logique, puis nous voyons comment l'ordinateur se rappelle les résultats des calculs intermédiaires via des bascules.
 
 
-## Unité Arithmétique et Logique
+## Unité arithmétique et logique
 
 Dans la section précédente, nous avons vu comment créer, via un assemblage de portes logiques, un circuit qui réalise l'addition de deux nombres de 4 bits. Ce circuit était fixe : avec les deux nombres d'entrées, il réalisait toujours une addition et ne servait ainsi qu'à ça.
 
-Les ordinateurs ont la propriété d'être programmables : ils savent effectuer plusieurs opérations, et c'est la manière dont ils sont programmés qui va déterminer l'opération qu'ils effectuent. C'est aussi vrai pour des machines plus simples; une calculatrice de poche, par exemple, pourra effectuer au moins les quatre opérations de base : addition, soustraction, multiplication et division.
+Les ordinateurs ont la propriété d'être programmables : ils savent effectuer plusieurs opérations, et c'est la manière dont ils sont programmés qui va déterminer l'opération qu'ils effectuent. C'est aussi vrai pour des machines plus simples ; une calculatrice de poche, par exemple, pourra effectuer au moins les quatre opérations de base : addition, soustraction, multiplication et division.
 
 Le composant qui nous permettra de sélectionner une opération ou une autre s'appelle « unité arithmétique et logique », communément appelé simplement « ALU » (de l'anglais _arithmetic logic unit_). Avant d'inspecter une ALU, nous avons besoin de comprendre comment on peut sélectionner une opération ou une autre avec des circuits logiques.
 
@@ -250,12 +250,26 @@ Nous avons ici construit un circuit qui, grâce à un bit de contrôle $Op$, sé
 `````{admonition} Exercice 2 : construction d'un sélecteur
 En réutilisant les principes appliqués ci-dessus, construisez un circuit à deux bits d'entrées $X$ et $Y$ et un bit de contôle $Op$ qui donnera sur sa sortie $Z$ :
 
- * Le **OU** exclusif de $X$ et $Y$ lorsque $Op=0$;
- * L'inverse du bit $Y$ lorsque $Op=1$.
+ * Le **OU** exclusif de $X$ et $Y$, lorsque $Op=0$ ;
+ * L'inverse du bit $Y$, lorsque $Op=1$.
 
-TODO éditeur
+```{logic}
+:height: 400
+:showonly: AND OR NOT XOR
+
+{
+  "in": [
+    {"pos": [230, 50], "orient": "s", "id": 2, "name": "Op", "val": 0},
+    {"pos": [50, 170], "id": 19, "name": "X", "val": 0},
+    {"pos": [50, 250], "id": 20, "name": "Y", "val": 0}
+  ],
+  "out": [{"pos": [530, 200], "id": 8, "name": "Z"}]
+}
+```
 
 ````{dropdown} Corrigé
+Voici un circuit qui réutilise le sélecteur de signal et qui fournit à ce sélecteur les deux nouvelles entrées décrites, à savoir, en haut, le **OU** exclusif de $X$ et $Y$ tel que fourni par une porte **OU-X**, et en bas, $Y$ une fois inversé par une porte **NON** :
+
 ```{logic}
 :height: 300
 :mode: tryout
@@ -295,18 +309,31 @@ TODO éditeur
 
 
 `````{admonition} Exercice 3 : inverseur conditionnel
-En réutilisant les principes appliqués ci-dessus, contruisez un circuit à une entrée $X$ avec un bit de contrôle $Op$ qui donnera sur sa sortie $Z$  :
+En réutilisant les principes appliqués ci-dessus, contruisez un circuit à une entrée $X$ avec un bit de contrôle $Op$ qui donnera sur sa sortie $Z$ :
 
- * $X$ tel quel lorsque $Op=0$;
- * $X$ inversé lorsque $Op=1$.
+ * $X$ tel quel, lorsque $Op=0$ ;
+ * $X$ inversé, lorsque $Op=1$.
 
 Écrivez la table de vérité de ce circuit. Correspond-elle par hasard à une porte déjà connue? Serait-ce dès lors possible de simplifier votre circuit?
 
-TODO éditeur
+```{logic}
+:height: 400
+:showonly: AND OR NOT XOR
+
+{
+  "in": [
+    {"pos": [230, 50], "orient": "s", "id": 2, "name": "Op", "val": 0},
+    {"pos": [50, 170], "id": 19, "name": "X", "val": 0},
+    {"pos": [50, 250], "id": 20, "name": "Y", "val": 0}
+  ],
+  "out": [{"pos": [530, 200], "id": 8, "name": "Z"}]
+}
+```
+
 
 ````{dropdown} Corrigé
 
-Voici A TODO:
+Voici une proposition qui réutilise le sélecteur de signal et qui fournit à ce sélecteur $X$ en haut et $X$ inversé en bas :
 
 ```{logic}
 :height: 290
@@ -339,7 +366,8 @@ Voici A TODO:
 }
 ```
 
-On peut blabla TODO:
+La table de vérité est identique à celle d'une porte **OU-X**. On peut donc simplement remplacer tout le circuit par cette unique porte :
+
 ```{logic}
 :height: 180
 :mode: tryout
@@ -354,14 +382,68 @@ On peut blabla TODO:
   "wires": [[19, 26], [2, 25], [27, 8]]
 }
 ```
-
 ````
 `````
 
+
 ### Une ALU à 4 bits
 
-TODO
+Une unité arithmétique et logique, ou ALU, est un circuit qui ressemble dans ses principes de base à ce que nous venons de faire. L'ALU réaliste plusieurs opérations et permet de sélectionner, via un ou plusieurs bits de contrôle, l'opération qui est réalisée. Les opérations proposées sont, comme le nom de l'ALU indique, des opérations arithmétiques (typiquement, l'addition et la soustraction) et des opérations logiques (par exemple, un **ET** et un **OU** logiques).
 
+Nous présentons ici une ALU simple à 4 bits :
+
+```{logic}
+:height: 240
+:mode: static
+
+{
+  "components": [
+    {
+      "type": "alu",
+      "pos": [70, 120],
+      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "out": [10, 11, 12, 13, 14, {"id": 15, "force": 0}],
+      "showOp": false
+    }
+  ]
+}
+```
+
+Cette ALU sait effectuer l'addition ou la soustration de deux nombres entiers représentés sur 4 bits. Elle a ainsi 8 bits d'entrée pour les données et 4 bits de sorties, à gauche et à droite. En plus de l'addition et de la soustraction, elle sait aussi faire les opérations logiques **ET** et **OU** — en tout donc, quatre opérations. Pour sélectionner l'une des quatre opération, on ne peut plus se contenter d'un seul bit de contrôle, mais nous allons en utiliser deux pour avoir quatre combinaisons possibles. Ce sont les deux entrées supérieures de l'ALU. La convention utilisée pour la sélection de l'opération est la suivante :
+
+| $Op$ | Opération effectuée |
+| :--: | :-----------------: | 
+|  00  |       Addition      |
+|  01  |     Soustraction    |
+|  10  |        **OU**       |
+|  11  |        **ET**       |
+
+
+`````{admonition} Exercice XX : test de l'ALU
+Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effectuer l'opération $7 + 2 = 9$. Connectez les 4 bits des entrées et de la sortie à des afficheurs de demi-octet pour vérifier leur fonctionnement. Connectez ensuite une entrée pour le bit de contrôle qui permettra d'effecter la soustraction avec les mêmes données d'entrée, donc $7 - 2 = 5$
+
+```{logic}
+:height: 400
+:showonly: LogicInput LogicOutput DisplayNibble
+
+{
+  "components": [
+    {
+      "type": "alu", "pos": [300, 200],
+      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], "out": [10, 11, 12, 13, 14, 15]
+    }
+  ]
+}
+```
+
+TODO corrigé
+`````
+
+L'ALU a deux sorties en plus, en bas : comme pour le circuit de l'additionneur, la sortie $V$ vaut 1 lors d'un dépassement de capacité (si le résultat de l'opération arithmétique représenté sur la sortie n'est pas valable parce qu'il vaudrait davantage de bits pour le représenter; par exemple, le résultat de $8 + 8 = 16$ n'est pas représentable sur 4 bits, qui suffisent à représenter les valeurs entières jusqu'à 15 seulement).
+
+TODO final talk alu
+
+TODO pour en savoir plus: valeurs signées
 
 
 ## Mémoire
