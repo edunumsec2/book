@@ -60,7 +60,7 @@ Lorsque on additionne deux nombres à plusieurs chiffres, que ce soit en base 10
 C'est ici que ça se complique: pour additionner les chiffres de la deuxième colonne, on doit potentiellement additionner _trois_ chiffres, et plus seulement deux. On a donc, en entrée, les deux {glo}`bit|bits` $A$ et $B$ qui viennent des nombres à additionner, et aussi potentiellement cette retenue qui vient de la colonne des unités, qu'on appellera $C_{in}$ (pour _carry_, «retenue» en anglais). Ceci est vrai en base 2 comme en base 10. Il faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s'appelle _additionneur complet_ et livrera deux sorties: le {glo}`bit|bit` de somme, appelé simplement $S$, et la retenue à reporter pour la colonne suivante, appelée $C_{out}$.
 
 
-````{admonition} Exercice 2 : bases de l'additionneur complet
+````{admonition} Exercice 2 : bases de l'additionneur complet
 
  * Déterminez combien de combinaisons différentes sont possibles pour trois signaux d'entrée $A$, $B$ et $C_{in}$ qui chacun peuvent valoir soit $1$ soit $0$.
  * Listez toutes ces combinaisons.
@@ -134,7 +134,7 @@ Si $A$ est formé de deux {glo}`bit|bits` $A_0$ et $A_1$ et que $B$ est formé d
 
 L'additionneur du haut, comme précédemment, additionne les deux {glo}`bit|bits` des unités: $A_0$ et $B_0$. Son entrée $C_{in}$, qui représente l'éventuel troisième chiffre à additionner issu d'une retenue, n'est pas connectée et est toujours 0, vu qu'il n'y a aucune colonne précédente dans l'addition qui aurait pu en livrer une. Il livre comme première sortie $S_0$, le chiffre des unités, et sa seconde sortie $C_{out}$ est la retenue à utiliser pour l'addition des chiffres suivants. C'est pourquoi elle est connectée à l'entrée de la retenue du second additionneur $C_{in}$, qui va lui ajouter également les deux {glo}`bit|bits` de la colonne suivante, $A_1$ et $B_1$. Les sorties du second additionneur livrent le deuxième {glo}`bit|bit` $S_1$ de la valeur de sortie, ainsi que la retenue pour la troisième colonne. Comme il n'y a plus de {glo}`bit|bits` d'entrée pour la troisième colonne, cette retenue peut directement être considérée comme le troisième {glo}`bit|bit` de sortie $S_2$.
 
-````{admonition} Exercice 3 : limite de cet additionneur à 2 bits
+````{admonition} Exercice 3 : limite de cet additionneur à 2 bits
 Avec l'additionneur ci-dessus, est-il possible d'obtenir des $1$ sur toutes les sorties, donc d'avoir $S_2 = S_1 = S_0 = 1$:
 
 ```{dropdown} Indice
@@ -147,7 +147,7 @@ La configuration $S_2 = S_1 = S_0 = 1$ représente le nombre décimal $7$. Ce se
 ````
 
 
-`````{admonition} Exercice 4 : additionneur de demi-octets
+`````{admonition} Exercice 4 : additionneur de demi-octets
 
 En connectant des additionneurs complets, réalisez un circuit qui additionne deux nombres $A$ et $B$ de quatre bits, numérotés $A_0$ à $A_3$ et $B_0$ à $B_3$, respectivement. Combien de bits de sortie doit-il y avoir pour traiter toutes les valeurs possibles?
 
@@ -228,7 +228,7 @@ On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et 
 Cet exercice démontre l'opportunité de penser en termes {glo}`modulo|modulaires`, ce qui revient souvent en informatique. Ici, on a réalisé qu'un additionneur complet résout un sous-problème bien défini d'une addition générale d'un nombre à $n$ {glo}`bit|bits`, et qu'une fois qu'on a créé un tel additionneur, il suffit d'en connecter plusieurs les uns derrière les autres de manière structurée pour additionner des nombres plus grands.
 
 
-````{admonition} Exercice 5 : overflow
+````{admonition} Exercice 5 : overflow
 
 Le schéma ci-dessous montre le même additionneur de demi-octets de l'exercice précédent, mais, de plus, la valeur en base 10 de ses 4 bits d'entrée pour $A$ et pour $B$ est affichée avec un module d'affichage spécial à droite. La même chose est faite pour représenter la valeur $S = A + B$ (mais seulement sur les quatre premiers bits de $S$). Actuellement, le circuit effectue le calcul $0 + 0 = 0$.
 
@@ -313,7 +313,7 @@ Dès que la somme dépasse 15, elle n'est plus représentable sur les 4 bits qui
 ````
 
 
-````{admonition} Exercice 6 : circuit défectueux
+````{admonition} Exercice 6 : circuit défectueux
 
 L'additionneur de demi-octets ci-dessous a été endommagé et ne fonctionne plus correctement. Par exemple, lorsqu'on lui demande d'effectuer le calcul $11 + 1$, il livre comme réponse $8$.
 
@@ -391,9 +391,9 @@ La retenue sortant du deuxième additionneur depuis la droite est bloquée à 0 
 ````
 
 
-````{admonition} Exercice 7 : design d'un additionneur complet
+````{admonition} Exercice 7 : design d'un additionneur complet
 
-_**Note:** Exercice difficile et actuellement peu guidé ici ; prochainement complété par davantage d'indications._
+_**Note:** Exercice difficile et actuellement peu guidé ici ; prochainement complété par davantage d'indications._
 
 En s'aidant de la table de vérité d'un seul additionneur complet, créer un circuit logique qui calcule ses sorties $S$ et $C_{out}$ en fonction des entrées $A$, $B$ et $C_{in}$.
 
@@ -468,7 +468,7 @@ Lorsque on additionne deux nombres à plusieurs chiffres, que ce soit en base 10
 C'est ici que ça se complique: pour additionner les chiffres de la deuxième colonne, on doit potentiellement additionner _trois_ chiffres, et plus seulement deux. On a donc, en entrée, les deux {glo}`bit|bits` $A$ et $B$ qui viennent des nombres à additionner, et aussi potentiellement cette retenue qui vient de la colonne des unités, qu'on appellera $C_{in}$ (pour _carry_, «retenue» en anglais). Ceci est vrai en base 2 comme en base 10. Il faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s'appelle _additionneur complet_ et livrera deux sorties: le {glo}`bit|bit` de somme, appelé simplement $S$, et la retenue à reporter pour la colonne suivante, appelée $C_{out}$.
 
 
-````{admonition} Exercice 9 : bases de l'additionneur complet
+````{admonition} Exercice 9 : bases de l'additionneur complet
 
  * Déterminez combien de combinaisons différentes sont possibles pour trois signaux d'entrée $A$, $B$ et $C_{in}$ qui chacun peuvent valoir soit $1$ soit $0$.
  * Listez toutes ces combinaisons.
@@ -542,7 +542,7 @@ Si $A$ est formé de deux {glo}`bit|bits` $A_0$ et $A_1$ et que $B$ est formé d
 
 L'additionneur du haut, comme précédemment, additionne les deux {glo}`bit|bits` des unités: $A_0$ et $B_0$. Son entrée $C_{in}$, qui représente l'éventuel troisième chiffre à additionner issu d'une retenue, n'est pas connectée et est toujours 0, vu qu'il n'y a aucune colonne précédente dans l'addition qui aurait pu en livrer une. Il livre comme première sortie $S_0$, le chiffre des unités, et sa seconde sortie $C_{out}$ est la retenue à utiliser pour l'addition des chiffres suivants. C'est pourquoi elle est connectée à l'entrée de la retenue du second additionneur $C_{in}$, qui va lui ajouter également les deux {glo}`bit|bits` de la colonne suivante, $A_1$ et $B_1$. Les sorties du second additionneur livrent le deuxième {glo}`bit|bit` $S_1$ de la valeur de sortie, ainsi que la retenue pour la troisième colonne. Comme il n'y a plus de {glo}`bit|bits` d'entrée pour la troisième colonne, cette retenue peut directement être considérée comme le troisième {glo}`bit|bit` de sortie $S_2$.
 
-````{admonition} Exercice 10 : limite de cet additionneur à 2 bits
+````{admonition} Exercice 10 : limite de cet additionneur à 2 bits
 Avec l'additionneur ci-dessus, est-il possible d'obtenir des $1$ sur toutes les sorties, donc d'avoir $S_2 = S_1 = S_0 = 1$:
 
 ```{dropdown} Indice
@@ -555,7 +555,7 @@ La configuration $S_2 = S_1 = S_0 = 1$ représente le nombre décimal $7$. Ce se
 ````
 
 
-`````{admonition} Exercice 11 : additionneur de demi-octets
+`````{admonition} Exercice 11 : additionneur de demi-octets
 
 En connectant des additionneurs complets, réalisez un circuit qui additionne deux nombres $A$ et $B$ de quatre bits, numérotés $A_0$ à $A_3$ et $B_0$ à $B_3$, respectivement. Combien de bits de sortie doit-il y avoir pour traiter toutes les valeurs possibles?
 
@@ -636,7 +636,7 @@ On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et 
 Cet exercice démontre l'opportunité de penser en termes {glo}`modulo|modulaires`, ce qui revient souvent en informatique. Ici, on a réalisé qu'un additionneur complet résout un sous-problème bien défini d'une addition générale d'un nombre à $n$ {glo}`bit|bits`, et qu'une fois qu'on a créé un tel additionneur, il suffit d'en connecter plusieurs les uns derrière les autres de manière structurée pour additionner des nombres plus grands.
 
 
-````{admonition} Exercice 12 : overflow
+````{admonition} Exercice 12 : overflow
 
 Le schéma ci-dessous montre le même additionneur de demi-octets de l'exercice précédent, mais, de plus, la valeur en base 10 de ses 4 bits d'entrée pour $A$ et pour $B$ est affichée avec un module d'affichage spécial à droite. La même chose est faite pour représenter la valeur $S = A + B$ (mais seulement sur les quatre premiers bits de $S$). Actuellement, le circuit effectue le calcul $0 + 0 = 0$.
 
@@ -721,7 +721,7 @@ Dès que la somme dépasse 15, elle n'est plus représentable sur les 4 bits qui
 ````
 
 
-````{admonition} Exercice 13 : circuit défectueux
+````{admonition} Exercice 13 : circuit défectueux
 
 L'additionneur de demi-octets ci-dessous a été endommagé et ne fonctionne plus correctement. Par exemple, lorsqu'on lui demande d'effectuer le calcul $11 + 1$, il livre comme réponse $8$.
 
@@ -799,9 +799,9 @@ La retenue sortant du deuxième additionneur depuis la droite est bloquée à 0 
 ````
 
 
-````{admonition} Exercice 14 : design d'un additionneur complet
+````{admonition} Exercice 14 : design d'un additionneur complet
 
-_**Note:** Exercice difficile et actuellement peu guidé ici ; prochainement complété par davantage d'indications._
+_**Note:** Exercice difficile et actuellement peu guidé ici ; prochainement complété par davantage d'indications._
 
 En s'aidant de la table de vérité d'un seul additionneur complet, créer un circuit logique qui calcule ses sorties $S$ et $C_{out}$ en fonction des entrées $A$, $B$ et $C_{in}$.
 

@@ -2,7 +2,7 @@
 
 
 
-Il est commun d’entendre parler du microprocesseur comme du «coeur de l’ordinateur». On se propose de dégager les caractéristiques essentielles de ce qui constitue cette machine «intelligente» appelée ordinateur, tout en explicitant les composants informatiques spécifiques (le matériel ou «hardware»).
+Il est commun d’entendre parler du microprocesseur comme du « cœur de l’ordinateur ». On se propose de dégager les caractéristiques essentielles de ce qui constitue cette machine « intelligente » appelée ordinateur, tout en explicitant les composants informatiques spécifiques (le matériel ou « hardware »).
 
 Si l’on suit l'évolution de l'ordinateur, depuis les années 50 jusqu’à aujourd’hui, on peut distinguer les éléments caractéristiques illustrés sur la figure suivante.
 
@@ -14,7 +14,7 @@ Si l’on suit l'évolution de l'ordinateur, depuis les années 50 jusqu’à au
 Schéma simplifié d'un ordinateur
 <br> <br>
 
-D'un point de vue matériel, on distingue :
+D'un point de vue matériel, on distingue :
 
 - l'alimentation,
 - la carte mère,
@@ -30,17 +30,17 @@ On distingue ce matériel, partie intégrante de la machine, avec les périphér
 
 ## La mémoire
 
-**ROM** (Read Only Memory) : ce que l’on nomme ROM constitue une mémoire «fixe», statique de la machine, dont la taille est définie à la conception. On parle de mémoire morte, ou mémoire en lecture seule. Ce qu’elle stocke ne « part pas» lors de la mise hors tension de la machine. 
+**ROM** (Read-Only Memory) : ce que l’on nomme ROM constitue une mémoire « fixe », statique de la machine, dont la taille est définie à la conception. On parle de mémoire morte, ou mémoire en lecture seule. Ce qu’elle stocke ne « part pas » lors de la mise hors tension de la machine. 
       
-Cette mémoire fixe va intégrer tous les éléments nécessaires en particulier au démarrage de la machine, au lancement du système d’exploitation ; il en est de même en ce qui concerne les facteurs de conversion, tables de constantes, instructions propres de la machine. On distingue différents types de ROM :
+Cette mémoire fixe va intégrer tous les éléments nécessaires en particulier au démarrage de la machine, au lancement du système d’exploitation ; il en est de même en ce qui concerne les facteurs de conversion, tables de constantes, instructions propres de la machine. On distingue différents types de ROM :
 
 - ROM standard,
 
-- EPROM : ce type de mémoire rend programmation et effacement accessibles à l’utilisateur,
+- EPROM : ce type de mémoire rend programmation et effacement accessibles à l’utilisateur,
 
-- PROM : une programmation unique est possible sur ce type de mémoire,
+- PROM : une programmation unique est possible sur ce type de mémoire,
 
-- EEPROM : c’est une mémoire programmable dont les données peuvent être effacées électriquement (succède à l’UVPROM dont les données pouvaient être supprimées dans une «chambre à UV»).
+- EEPROM : c’est une mémoire programmable dont les données peuvent être effacées électriquement (succède à l’UVPROM dont les données pouvaient être supprimées dans une « chambre à UV »).
 
 Il s’agit d’une mémoire à long terme.
 
@@ -93,11 +93,11 @@ Les composants de mémoire RAM existent en général en «barrettes» allant de 
 <br>
 
 ### Mémoire externe ou mémoire de masse
- Ce terme désigne les supports externes à la machine permettant du stockage supplémentaire et donc venant en complément du stockage initial fixe de la machine (ROM). Par exemple : disque dur interne ou externe, bande magnétique, SSD, disque optique, clé usb, carte SD, … Cette mémoire permet de stocker une grande quantité d’informations, mais à une vitesse limitée. C’est un peu l’intermédiaire entre la RAM et la ROM.
+ Ce terme désigne les supports externes à la machine permettant du stockage supplémentaire et donc venant en complément du stockage initial fixe de la machine (ROM). Par exemple : disque dur interne ou externe, bande magnétique, SSD, disque optique, clé usb, carte SD, … Cette mémoire permet de stocker une grande quantité d’informations, mais à une vitesse limitée. C’est un peu l’intermédiaire entre la RAM et la ROM.
 
-Sur le disque dur peuvent être enregistrées les données à conserver : les fichiers du système d'exploitation, les logiciels et surtout les données personnelles (photo, vidéo, musique, emails etc...). 
+Sur le disque dur peuvent être enregistrées les données à conserver : les fichiers du système d'exploitation, les logiciels et surtout les données personnelles (photo, vidéo, musique, emails etc...). 
 
-Le disque dur se présente sous la forme d'un boîtier rectangulaire, vissé au boiter du PC, qui intègre toute la mécanique (plateau, bras, tête de lecture...). Plus la vitesse de rotation des plateaux est importante, plus les performances sont élevées : on trouve actuellement des disques durs tournant à 5400, 7200, 10000 ou 15000 RPM (Round Per Minute: tours par minute), les vitesses de 7200 et 10000 RPM étant les plus répandues. 
+Le disque dur se présente sous la forme d'un boîtier rectangulaire, vissé au boiter du PC, qui intègre toute la mécanique (plateau, bras, tête de lecture...). Plus la vitesse de rotation des plateaux est importante, plus les performances sont élevées : on trouve actuellement des disques durs tournant à 5400, 7200, 10000 ou 15000 RPM (Round Per Minute: tours par minute), les vitesses de 7200 et 10000 RPM étant les plus répandues. 
 
 Il est relié à la carte mère grâce à une nappe (câble plat) de type IDE ou grâce aux interfaces SATA (Serial ATA) ou SCSI. Un cavalier à positionner à l'arrière du boîtier permet généralement de le désigner comme disque «Maître», le disque dur principal (Master) ou comme «Esclave», un disque auxiliaire (Slave). 
 
@@ -108,7 +108,7 @@ Les disques durs aujourd'hui peuvent contenir des centaines de giga-octets, voir
 :height: 400
 ```
 
-Les ordinateurs récents sont de plus en plus équipés de SSD (Solid-State Drive) qui permettent de stocker des données tout comme les disques durs, mais leur conception est purement électronique et non plus mécanique. Ils sont donc plus résistant aux chocs et plus légers - et donc particulièrement adaptés aux ordinateurs portables - et beaucoup plus rapides. Ils ont une taille de plus en plus réduite et des gains de performance importants : temps d'accès réduits, meilleure bande passante que les disques durs traditionnels.
+Les ordinateurs récents sont de plus en plus équipés de SSD (Solid-State Drive) qui permettent de stocker des données tout comme les disques durs, mais leur conception est purement électronique et non plus mécanique. Ils sont donc plus résistant aux chocs et plus légers - et donc particulièrement adaptés aux ordinateurs portables - et beaucoup plus rapides. Ils ont une taille de plus en plus réduite et des gains de performance importants : temps d'accès réduits, meilleure bande passante que les disques durs traditionnels.
 
 La fiabilité et les capacités des disques durs classiques pérennisent cependant leur utilisation.
 
@@ -167,8 +167,8 @@ Elle intègre également la ROM sur laquelle est enregistrée le BIOS, petit pro
 <br> <br>
 
 ## Les entrées-sorties
-Un ordinateur traite de l'information au niveau de sa mémoire et de son processeur. Il récupère donc cette information via des ports d'entrée et redistribue une information après traitement via des ports de sortie. L'ensemble de cet environnement d'entrées-sorties constitue ce que l'on nomme les périphériques : clavier, écran, enceintes audio ou casque, imprimante, souris ou pad, disques externes, microphone, réseau ethernet ou wifi, etc.
-Certains périphériques sont par nature destinés uniquement à l'entrée de données (claviers et souris, microphones), tandis que d'autres s'occupent avant tout de la sortie (imprimantes, écrans non-tactiles) ; d'autres encore permettent à la fois l'entrée et la sortie de données (disques durs, disquettes, CD-ROM inscriptibles, clés usb).
+Un ordinateur traite de l'information au niveau de sa mémoire et de son processeur. Il récupère donc cette information via des ports d'entrée et redistribue une information après traitement via des ports de sortie. L'ensemble de cet environnement d'entrées-sorties constitue ce que l'on nomme les périphériques : clavier, écran, enceintes audio ou casque, imprimante, souris ou pad, disques externes, microphone, réseau ethernet ou wifi, etc.
+Certains périphériques sont par nature destinés uniquement à l'entrée de données (claviers et souris, microphones), tandis que d'autres s'occupent avant tout de la sortie (imprimantes, écrans non-tactiles) ; d'autres encore permettent à la fois l'entrée et la sortie de données (disques durs, disquettes, CD-ROM inscriptibles, clés usb).
 
 ```{image} media/peripheriques1.png
 :width: 650
@@ -183,15 +183,15 @@ Pour résoudre ce problème, on intercale des registres d'interfaçage entre le 
 
 Les commandes sont traitées par un contrôleur de périphérique, qui va lire les commandes envoyées par le processeur, les interpréter, et piloter le périphérique de façon à faire ce qui est demandé. Le contrôleur de périphérique génère des signaux de commande qui déclencheront une action effectuée par le périphérique. Certains contrôleurs de périphérique peuvent permettre au processeur de communiquer avec plusieurs périphériques en même temps. C'est notamment le cas pour tout ce qui est des contrôleurs PCI, USB et autres. Certains périphériques, comme les disques IDE intègrent en leur sein ce contrôleur. Certains de ces contrôleurs intègrent un registre d'état, lisible par le processeur, qui contient des informations sur l'état du périphérique. Ils servent à signaler des erreurs de configuration ou des pannes touchant un périphérique.
 
-Le système d'exploitation d'un ordinateur ne connait pas toujours le fonctionnement d'un périphérique ou de son contrôleur : il faut alors installer un programme qui va permettre la communication avec le périphérique, et qui va gérer transfert des données, adressage du périphérique, etc. Ce petit programme est appelé un *driver* ou pilote de périphérique. 
+Le système d'exploitation d'un ordinateur ne connait pas toujours le fonctionnement d'un périphérique ou de son contrôleur : il faut alors installer un programme qui va permettre la communication avec le périphérique, et qui va gérer transfert des données, adressage du périphérique, etc. Ce petit programme est appelé un *driver* ou pilote de périphérique. 
 
 <br> <br>
 
 ## Les bus
 Un bus informatique est un dispositif de transmission de données partagé entre plusieurs composants d'un système informatique. Le bus informatique est la réunion des parties matérielles et immatérielles qui permet la transmission de données entre les composants de la machine.
-On distingue deux types de bus : le FSB (Front Side Bus), ou *bus système*, et le bus d'extension. Le premier permet au processeur de communiquer avec la mémoire vive, le second est une voie de liaison entre le processeur et les cartes d'extension. Des connecteurs d'extension présents sur la carte mère permettent d'y ajouter de nouveaux composants : cartes d'extension tels que carte son, carte d'acquisition vidéo, carte réseau, etc.
-Il existe différents types de bus d'extension : [ISA, EISA, PCI, PCMCIA, VESA.](http://www.dicofr.com/cgi-bin/n.pl/dicofr/definition/20010101000612)
-On se propose ici de décrire exclusivement les différents types de bus système : bus de données, d'adressage et de commande.
+On distingue deux types de bus : le FSB (Front Side Bus), ou *bus système*, et le bus d'extension. Le premier permet au processeur de communiquer avec la mémoire vive, le second est une voie de liaison entre le processeur et les cartes d'extension. Des connecteurs d'extension présents sur la carte mère permettent d'y ajouter de nouveaux composants : cartes d'extension tels que carte son, carte d'acquisition vidéo, carte réseau, etc.
+Il existe différents types de bus d'extension : [ISA, EISA, PCI, PCMCIA, VESA.](http://www.dicofr.com/cgi-bin/n.pl/dicofr/definition/20010101000612)
+On se propose ici de décrire exclusivement les différents types de bus système : bus de données, d'adressage et de commande.
 
 
 ```{image} media/Schéma_ordi.png
@@ -247,7 +247,7 @@ Une puissance de 400 watts est généralement suffisante pour les ordinateurs en
 ### La carte graphique
 La carte graphique, bien que très importante pour certains usages, est placée en dernière position de cette liste car elle peut-être remplacée par un chipset intégré (jeu de circuit) directement à la carte mère. Toutefois, pour certaines applications et notamment les jeux, gros consommateurs de ressources graphiques, elle est indispensable. En prenant à sa charge la gestion de l'affichage, elle libère le processeur de cette fonction, traite elle-même les informations et utilise sa propre mémoire (voir accélération matérielle). 
 
-La carte graphique s'insère dans un connecteur de la carte mère : le port AGP ou le port PCI Express pour les plus récentes. Une fois connectée, les entrées et sorties de la carte sont accessibles par l'arrière du boîtier afin de fournir une image au système de visualisation (écran, TV, projecteur).
+La carte graphique s'insère dans un connecteur de la carte mère : le port AGP ou le port PCI Express pour les plus récentes. Une fois connectée, les entrées et sorties de la carte sont accessibles par l'arrière du boîtier afin de fournir une image au système de visualisation (écran, TV, projecteur).
 
 
 ```{image} media/CarteVidéo.png
