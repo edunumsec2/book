@@ -419,8 +419,8 @@ Cette ALU sait effectuer l'addition ou la soustration de deux nombres entiers re
 |  11  |        **ET**       |
 
 
-`````{admonition} Exercice XX : test de l'ALU
-Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effectuer l'opération $7 + 2 = 9$. Connectez les 4 bits des entrées et de la sortie à des afficheurs de demi-octet pour vérifier leur fonctionnement. Connectez ensuite une entrée pour le bit de contrôle qui permettra d'effecter la soustraction avec les mêmes données d'entrée, donc $7 - 2 = 5$
+`````{admonition} Exercice 4 : test de l'ALU
+Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effectuer l'opération $7 + 2 = 9$. Connectez les 4 bits des entrées et de la sortie à des afficheurs de demi-octet pour vérifier leur fonctionnement. Connectez ensuite une entrée pour le bit de contrôle qui permettra d'effecter la soustraction avec les mêmes données d'entrée, donc $7 - 2 = 5$.
 
 ```{logic}
 :height: 400
@@ -436,14 +436,290 @@ Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effec
 }
 ```
 
-TODO corrigé
+````{dropdown} Corrigé
+```{logic}
+:height: 400
+:mode: tryout
+
+{
+  "components": [
+    {
+      "type": "alu",
+      "pos": [300, 200],
+      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "out": [10, 11, 12, 13, 14, 15]
+    }
+  ],
+  "in": [
+    {"pos": [50, 70], "id": 16, "val": 1},
+    {"pos": [50, 100], "id": 17, "val": 1},
+    {"pos": [50, 130], "id": 18, "val": 1},
+    {"pos": [50, 160], "id": 19, "val": 0},
+    {"pos": [50, 250], "id": 24, "val": 0},
+    {"pos": [50, 280], "id": 25, "val": 1},
+    {"pos": [50, 310], "id": 26, "val": 0},
+    {"pos": [50, 340], "id": 27, "val": 0},
+    {"pos": [360, 60], "orient": "w", "id": 36, "name": "Add./Soustr.", "val": 0}
+  ],
+  "displays": [
+    {"type": "nibble", "pos": [220, 50], "id": [20, 21, 22, 23], "name": "A"},
+    {"type": "nibble", "pos": [220, 350], "id": [28, 29, 30, 31], "name": "B"},
+    {"type": "nibble", "pos": [400, 200], "id": [32, 33, 34, 35], "name": "S"}
+  ],
+  "wires": [
+    [16, 20],
+    [17, 21],
+    [18, 22],
+    [19, 23],
+    [16, 0],
+    [17, 1],
+    [18, 2],
+    [19, 3],
+    [24, 4],
+    [25, 5],
+    [26, 6],
+    [27, 7],
+    [24, 28],
+    [25, 29],
+    [26, 30],
+    [27, 31],
+    [10, 32],
+    [11, 33],
+    [12, 34],
+    [13, 35],
+    [36, 8]
+  ]
+}
+```
+````
 `````
 
-L'ALU a deux sorties en plus, en bas : comme pour le circuit de l'additionneur, la sortie $V$ vaut 1 lors d'un dépassement de capacité (si le résultat de l'opération arithmétique représenté sur la sortie n'est pas valable parce qu'il vaudrait davantage de bits pour le représenter; par exemple, le résultat de $8 + 8 = 16$ n'est pas représentable sur 4 bits, qui suffisent à représenter les valeurs entières jusqu'à 15 seulement).
+L'ALU a deux sorties en plus, en bas du composant :
 
-TODO final talk alu
+ * la sortie $V$ (pour _oVerflow_) vaut 1 lors d'un dépassement de capacité (si le résultat de l'opération arithmétique représenté sur la sortie n'est pas valable parce qu'il vaudrait davantage de bits pour le représenter ; par exemple, le résultat de $8 + 8 = 16$ n'est pas représentable sur 4 bits, qui suffisent à représenter les valeurs entières jusqu'à 15 seulement) ;
+ * la sortie $Z$ (pour _Zero_) vaut 1 lorsque tous les bits de sortie valent 0.
 
-TODO pour en savoir plus: valeurs signées
+`````{admonition} Exercice 5 : une ALU comme comparateur
+En programmation, c'est fréquent de tester, par exemple dans un condition avec un `if`, si deux valeurs sont égales. Par exemple, ce fragment de code affichera « Ces valeurs sont égales! » uniquement si les deux nombres entiers donnés lors de l'exécution du code sont les mêmes:
+
+```{codeplay}
+A = int(input("Quel est le premier nombre? "))
+B = int(input("Quel est le second nombre? "))
+if A == B:
+    print("Ces valeurs sont égales!")
+```
+
+Ce qui nous intéresse spécialement, c'est la comparaison à la ligne 3. Cette comparaison peut être réalisée avec une ALU. Pour cet exercice, créez un circuit avec une ALU qui compare deux nombres de quatre bits et indique sur la sortie $Z$ un 1 si les deux nombres sont égaux et un 0 s'ils sont différents.
+
+```{logic}
+:height: 330
+:showonly: ALU LogicInput LogicOutput NOT OR AND XOR
+
+{
+  "in": [
+    {"pos": [50, 30], "id": 16, "val": 0},
+    {"pos": [50, 60], "id": 17, "val": 0},
+    {"pos": [50, 90], "id": 18, "val": 0},
+    {"pos": [50, 120], "id": 19, "val": 0},
+    {"pos": [50, 210], "id": 24, "val": 0},
+    {"pos": [50, 240], "id": 25, "val": 0},
+    {"pos": [50, 270], "id": 26, "val": 0},
+    {"pos": [50, 300], "id": 27, "val": 0}
+  ],
+  "out": [{"pos": [410, 160], "id": 37, "name": "Z"}]
+}
+```
+
+````{dropdown} Indice
+Deux nombres $A$ et $B$ sont égaux si leur différence est nulle — donc si tous les bits de sortie de $A - B$ valent 0.
+````
+
+````{dropdown} Corrigé avec ALU — approche arithmétique
+On connecte les 8 entrées, on règle l'opération de l'ALU sur soustraction et on utilise la sortie de l'ALU qui indique si tous les bits de sortie sont à zéro. En effet, cela ne se produit que lorsque la différence entre les deux nombres d'entrée est 0 — c'est-à-dire, s'ils sont égaux. On constate qu'on peut ignorer les 4 bits de sorties ici !
+
+```{logic}
+:mode: tryout
+:height: 330
+
+{
+  "in": [
+    {"pos": [50, 30], "id": 16, "val": 0},
+    {"pos": [50, 60], "id": 17, "val": 0},
+    {"pos": [50, 90], "id": 18, "val": 0},
+    {"pos": [50, 120], "id": 19, "val": 0},
+    {"pos": [50, 210], "id": 24, "val": 0},
+    {"pos": [50, 240], "id": 25, "val": 0},
+    {"pos": [50, 270], "id": 26, "val": 0},
+    {"pos": [50, 300], "id": 27, "val": 0},
+    {"pos": [230, 30], "orient": "s", "id": 54, "val": 1}
+  ],
+  "out": [{"pos": [410, 160], "id": 37, "name": "Z"}],
+  "components": [
+    {
+      "type": "alu",
+      "pos": [220, 150],
+      "in": [38, 39, 40, 41, 42, 43, 44, 45, 46, 47],
+      "out": [48, 49, 50, 51, 52, 53]
+    }
+  ],
+  "wires": [
+    [16, 38],
+    [17, 39],
+    [18, 40],
+    [19, 41],
+    [24, 42],
+    [25, 43],
+    [26, 44],
+    [27, 45],
+    [54, 46],
+    [53, 37]
+  ]
+}
+```
+````
+
+Plus difficile : essayez de réaliser un circuit qui calcule la même valeur de sortie, mais sans utiliser d'ALU.
+
+````{dropdown} Indice
+Une porte **OU-X** peut être vue comme un comparateur de deux bits : sa sortie vaudra 1 si et seulement si ses deux entrées sont différentes.
+````
+
+````{dropdown} Corrigé sans ALU — approche logique
+Cette solution utilise des portes **OU-X** comme comparateurs. On voit ici que 4 portes **OU-X** comparent deux à deux les 8 bits d'entrée. Leurs sorties sont ensuite combinées avec des portes **OU**, afin d'obtenir un signal qui vaudra 1 si au moins une différence est détectée, donc si les deux nombres d'entrées ne sont pas égaux. Il ne reste plus qu'à inverser ce signal pour obtenir la sortie demandée qui, selon la donnée, doit valoir 1 lorsque les nombre sont égaux.
+
+```{logic}
+:height: 330
+:mode: tryout
+
+{
+  "in": [
+    {"pos": [50, 30], "id": 16, "val": 0},
+    {"pos": [50, 60], "id": 17, "val": 0},
+    {"pos": [50, 90], "id": 18, "val": 0},
+    {"pos": [50, 120], "id": 19, "val": 0},
+    {"pos": [50, 210], "id": 24, "val": 0},
+    {"pos": [50, 240], "id": 25, "val": 0},
+    {"pos": [50, 270], "id": 26, "val": 0},
+    {"pos": [50, 300], "id": 27, "val": 0}
+  ],
+  "out": [{"pos": [530, 160], "id": 37, "name": "Z"}],
+  "gates": [
+    {"type": "XOR", "pos": [190, 270], "in": [55, 56], "out": 57},
+    {"type": "OR", "pos": [290, 210], "in": [58, 59], "out": 60},
+    {"type": "OR", "pos": [290, 110], "in": [61, 62], "out": 63},
+    {"type": "OR", "pos": [390, 160], "in": [64, 65], "out": 66},
+    {"type": "XOR", "pos": [190, 200], "in": [67, 68], "out": 69},
+    {"type": "XOR", "pos": [190, 120], "in": [70, 71], "out": 72},
+    {"type": "XOR", "pos": [190, 50], "in": [73, 74], "out": 75},
+    {"type": "NOT", "pos": [460, 160], "in": 76, "out": 77}
+  ],
+  "wires": [
+    [16, 73],
+    [24, 74],
+    [17, 70],
+    [25, 71],
+    [18, 67],
+    [26, 68],
+    [19, 55],
+    [27, 56],
+    [75, 61],
+    [72, 62],
+    [63, 64],
+    [60, 65],
+    [69, 58],
+    [57, 59],
+    [66, 76],
+    [77, 37]
+  ]
+}
+```
+````
+`````
+
+
+En résumé, nous avons appris ici ce qu'est une unité arithmétique et logique et avons examiné de plus près comment construire un circuit qui est à même de « choisir » parmi plusieurs signaux d'entrées. L'ALU est spécialement intéressante, car c'est le premier composant que nous rencontrons qui incarne une des propriétés de base d'un ordinateur, à savoir d'être programmable, en faisant en sorte que l'opération effectuée ne soit pas préprogrammée mais dépende d'un signal externe.
+
+
+````{admonition} Pour aller plus loin
+:class: attention
+
+Notre petite ALU peut aussi faire des calculs en utilisant une représentation signée des nombres entiers. Sur 4 bits, une représentation en complément à deux peut représenter les nombres de $-8$ à $+7$. Il est possible d'utiliser les mêmes afficheurs de demi-octets en mode signé pour effecter des opérations arithmétiques avec des valeurs négatives, par exemple, ici, $-2 - (-4) = 2$ :
+
+```{logic}
+:height: 400
+:mode: tryout
+
+{
+  "in": [
+    {"pos": [50, 70], "id": 16, "val": 0},
+    {"pos": [50, 100], "id": 17, "val": 1},
+    {"pos": [50, 130], "id": 18, "val": 1},
+    {"pos": [50, 160], "id": 19, "val": 1},
+    {"pos": [50, 250], "id": 24, "val": 0},
+    {"pos": [50, 280], "id": 25, "val": 0},
+    {"pos": [50, 310], "id": 26, "val": 1},
+    {"pos": [50, 340], "id": 27, "val": 1},
+    {"pos": [360, 60], "orient": "w", "id": 36, "name": "Add./Soustr.", "val": 1}
+  ],
+  "displays": [
+    {
+      "type": "nibble",
+      "pos": [220, 50],
+      "id": [20, 21, 22, 23],
+      "name": "A",
+      "radix": -10
+    },
+    {
+      "type": "nibble",
+      "pos": [220, 350],
+      "id": [28, 29, 30, 31],
+      "name": "B",
+      "radix": -10
+    },
+    {
+      "type": "nibble",
+      "pos": [400, 200],
+      "id": [32, 33, 34, 35],
+      "name": "S",
+      "radix": -10
+    }
+  ],
+  "components": [
+    {
+      "type": "alu",
+      "pos": [300, 200],
+      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "out": [10, 11, 12, 13, 14, 15]
+    }
+  ],
+  "wires": [
+    [16, 20],
+    [17, 21],
+    [18, 22],
+    [19, 23],
+    [16, 0],
+    [17, 1],
+    [18, 2],
+    [19, 3],
+    [24, 4],
+    [25, 5],
+    [26, 6],
+    [27, 7],
+    [24, 28],
+    [25, 29],
+    [26, 30],
+    [27, 31],
+    [10, 32],
+    [11, 33],
+    [12, 34],
+    [13, 35],
+    [36, 8]
+  ]
+}
+```
+
+Notez que grâce à la représentation en complément à deux, la circuiterie interne de l'ALU peut se permettre de complètement ignorer si ses entrées sont signées ou pas et livrera le bon résultat tant que la convention d'entrée et de sortie reste la même.
+````
 
 
 ## Mémoire
