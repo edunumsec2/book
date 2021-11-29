@@ -36,11 +36,21 @@ L’algorithme n’est pas un programme. L'algorithme peut être transcrit en un
 
 Focus sur l'automatisation
 
+<!--
 ```{figure} media/Automatisation_avant.png
 
 Usine du début du siècle dernier. Les machines sont au service des ouvriers.
 
 ```
+-->
+
+```{image} media/Automatisation_avant.png
+:width: 700
+:height: 200
+```
+Usine du début du siècle dernier. Les machines sont au service des ouvriers
+
+
 
 Grâce aux algorithmes, la machine a pu remplacer l’homme dans de nombreuses tâches, en allant des robots constructeurs d’automobiles (comparez les deux images) aux pilotes d’avion automatiques, ou encore aux logiciels de trading. L’automatisation permet aux employés de se concentrer sur des tâches plus valorisantes et permet aux entreprises  de réaliser des économies. 
 
@@ -50,12 +60,23 @@ Selon la chasseuse de têtes Isabelle Rouhan, 85 % des métiers de 2030 n’ont 
 
 **<span style="color:rgb(89, 51, 209)">Souhaiteriez-vous devenir neuro-manageur.euse ou éducateur.rice de robots ?</span>**
 
+<!--
+
 ```{figure} media/Automatisation_apres.png
 
 
 Usine du début de ce siècle. Les machines ont remplacé les ouvriers.
 
 ```
+-->
+
+```{image} media/Automatisation_apres.png
+:width: 700
+:height: 200
+```
+Usine du début de ce siècle. Les machines ont remplacé les ouvriers
+
+
 
 ````
 

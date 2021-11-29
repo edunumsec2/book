@@ -145,9 +145,9 @@ Mais est-ce que derrière chaque programme se cache un algorithme ?
 -->
 
 
+<br>
 
-
-
+## Exercices
 
 ````{admonition} Exercice 1 : jeu de la devinette 🔌
 :class: note
@@ -199,7 +199,7 @@ Traduisez l’algorithme en une fonction Python.
 
 Comparez avec les solutions trouvées par vos camarades de classe.
 ````
-
+<br>
 
 ````{admonition} Ai-je compris ?
 :class: attention

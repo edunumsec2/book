@@ -26,6 +26,15 @@ Saviez-vous que le succès fulgurant de *Google* est surtout dû à sa capacité
 
 Un **<span style="color:rgb(89, 51, 209)">algorithme de tri</span>** est un algorithme qui permet de résoudre le problème du tri des données, donc d'organiser les données selon ***<span style="color:rgb(13, 204, 166)">une relation d’ordre</span>***. Dans la figure ci-dessous, les objets sont organisés soit par la luminosité de leur couleur (ligne du haut), soit par leur taille (lignes du bas), dans **un ordre croissant**.
 
+
+```{image} media/Tris_base.png
+:width: 600
+:height: 400
+```
+**Problème du tri.** Des objets peuvent être triés selon une relation d’ordre, en lien avec une propriété. Sur la ligne du haut, les rectangles sont organisés selon leur couleur (de la plus sombre à la plus claire), alors que sur la ligne du bas, ils sont triés selon leur taille (du plus petit au plus grand)
+
+
+<!--
 ```{figure} media/Tris_base.png
 ---
 alt: Problème du tri.
@@ -35,15 +44,15 @@ width: 50%
 **Problème du tri.** Des objets peuvent être triés selon une relation d’ordre, en lien avec une propriété. Sur la ligne du haut, les rectangles sont organisés selon leur couleur (de la plus sombre à la plus claire), alors que sur la ligne du bas, ils sont triés selon leur taille (du plus petit au plus grand).
 
 ```
-
+-->
 
 <!-- Pour apprendre à cuisiner, on commence par suivre des recettes classiques. -->
 <!-- Pour apprendre à cuisiner, on commence par suivre des recettes classiques. Ainsi, pour appréhender l’{glo}`algorithmique|algorithmique`, nous étudierons une classe d’{glo}`algo|algorithmes` classiques : les **<span style="color:rgb(89, 51, 209)">algorithmes de tri</span>**.  -->
 
+<br> 
 
 
-
-````{admonition} Exercice 0. Tri de rectangles
+````{admonition} Exercice - application 0 : tri de rectangles
 :class: note
 
 Trier les rectangles de la ligne du haut de la <a href="#fig-trier">Figure ci-dessus</a> en fonction de leur taille, pour arriver à la disposition de la ligne du bas. Noter toutes les étapes intermédiaires de vos actions et la disposition des rectangles avant d’arriver à la solution finale. Conseil : remplacer les rectangles par un nombre qui représente leur taille.
@@ -54,7 +63,7 @@ Quels types d'opérations avez-vous effectuées ?
 
 ````
 
-````{admonition} Solution 0. Tri de rectangles
+````{admonition} Solution - application 0 : tri de rectangles
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -86,7 +95,7 @@ L’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri par sé
 L’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri à bulles</span>** compare les éléments voisins, deux par deux. Il commence par comparer les deux premiers éléments de la liste et les met dans le bon ordre (le plus petit des deux éléments précède le plus grand des deux). Il compare ensuite les deux éléments suivants (le nouveau deuxième et le troisième élément de la liste) et les met dans le bon ordre. Il continue de la sorte jusqu’à la fin de la liste. Après ce premier parcours de la liste, le plus grand élément se retrouve en dernière position de la liste. L'algorithme parcourt à nouveau la liste, en comparant et en déplaçant les éléments voisins deux par deux (en excluant également le dernier élément qui est déjà bien trié). Après le deuxième parcours de la liste, le deuxième plus grand élément se retrouve en avant-dernière position de la liste. L'algorithme parcourt la liste de la sorte, autant de fois qu’elle possède d’éléments, en excluant les éléments bien triés en fin de la liste.
 
 
-````{admonition} Exercice 1. Algorithme de tri
+````{admonition} Exercice - application 1 : algorithme de tri 
 :class: note
 
 Il est fortement recommandé de résoudre cet exercice avant d’avancer dans le chapitre. 
@@ -95,7 +104,7 @@ Appliquer au moins un des trois algorithmes ci-dessus (tri par insertion, tri pa
 
 ````
 
-````{admonition} Solution 1. Algorithme de tri
+````{admonition} Solution - application 1 : algorithme de tri
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -112,12 +121,9 @@ La solution est donnée dans la suite du chapitre et est illustrée dans la Figu
 Vous passez trop de temps à chercher vos affaires ? Pensez à mieux les trier. Le temps perdu à ranger vos affaires sera bien inférieur à celui que vous passerez à les chercher plus tard.
 
 ````
-
+<br> 
 
 La figure ci-dessous détaille les étapes intermédiaires des trois {glo}`algo|algorithmes` de tri vus précédemment. Dans le **<span style="color:rgb(89, 51, 209)">tri par insertion</span>** à gauche, on parcourt la liste dans l’ordre, un élément après l’autre (dénoté par une étoile). A chaque étape, on cherche à ***<span style="color:rgb(13, 204, 166)">insérer</span>*** le rectangle considéré à la bonne place dans la liste précédemment triée. La flèche rouge montre la position à laquelle le rectangle sera inséré. Si l’élément est déjà bien trié, aucune action n’est requise dans ce cas et la flèche est remplacée par un point rouge. Notez que la liste qui précède le rectangle considéré (celui avec l’étoile) est toujours bien triée. 
-
-
-
 
 
 
@@ -135,7 +141,8 @@ Notez que même si tous les {glo}`algo|algorithmes` arrivent à la même solutio
 
 
 
-```{figure} media/Tris_algorithmes.png
+<!--
+```{figure} media/Tris_base.png
 ---
 alt: Algorithmes de tri
 width: 100%
@@ -143,17 +150,29 @@ width: 100%
 
 **Algorithmes de tri**. Etapes intermédiaires lors de l’application des différents algorithmes de tri. La flèche rouge montre les mouvements des éléments suite à une opération. Si l’élément ne bouge pas, la flèche rouge est remplacée par un point rouge. **A gauche**, le tri par insertion. L’étoile dénote l’élément considéré à un moment donné. **Au milieu**, le tri par sélection. L’étoile désigne le plus petit élément de la liste non triée. **A droite**, le tri à bulles. Ici le point rouge signale les éléments triés.
 
+-->
 
 
 
-````{admonition} Exercice - application 2 : tri ✏️📒
+```{image} media/Tris_base.png
+:width: 600
+:height: 400
+```
+**Algorithmes de tri**. Etapes intermédiaires lors de l’application des différents algorithmes de tri. La flèche rouge montre les mouvements des éléments suite à une opération. Si l’élément ne bouge pas, la flèche rouge est remplacée par un point rouge. **A gauche**, le tri par insertion. L’étoile dénote l’élément considéré à un moment donné. **Au milieu**, le tri par sélection. L’étoile désigne le plus petit élément de la liste non triée. **A droite**, le tri à bulles. Ici le point rouge signale les éléments triés.
+
+
+<br> <br>
+
+
+
+````{admonition} Exercice - application 2 : tri 
 :class: note
 
 Rappelez-vous la méthode que vous avez utilisée pour résoudre l’exercice 8. De quel algorithme de tri se rapproche-t-elle le plus ? 
 
 ````
 
-````{admonition} Solution
+````{admonition} Solution - application 2 : tri
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -165,7 +184,7 @@ La solution dépend de votre solution de l’exercice 8.
 
 ````
 
-````{admonition} Exercice - application 3 : comparaison et mouvements ✏️📒
+````{admonition} Exercice - application 3 : comparaison et mouvements 
 :class: note
 
 Pour chaque algorithme, comptez le nombre de comparaisons de la taille de deux éléments et le nombre de mouvements (rectangles déplacés).
@@ -176,7 +195,7 @@ Imaginons que ce qui prend le plus de temps est le mouvement d’un élément. D
 
 ````
 
-````{admonition} Solution
+````{admonition} Solution - application 3 : comparaison et mouvements
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -234,41 +253,41 @@ Dans cette configuration précise, quel algorithme est le plus rapide  (présent
 
 
 
+## Exercices
 
 
-
-````{admonition} Exercice 1. L'algorithme de votre journée
+````{admonition} Exercice 1 : l'algorithme de votre journée 
 :class: note
 
-Réfléchir à votre journée : y a-t-il des actions qui se retrouvent chaque jour ouvrable ? Arrivez-vous à esquisser un algorithme que vous suivez sans que vous en ayez conscience ?
+Réfléchissez à votre journée : y a-t-il des actions qui se retrouvent chaque jour ouvrable ? Arrivez-vous à esquisser un algorithme que vous suivez sans que vous en ayez conscience ?
 
 ````
 
-````{admonition} Exercice 2. Trois algorithmes de tri
+````{admonition} Exercice 2 : trois algorithmes de tri 
 :class: note
 
 
-Trier la liste [2,5,3,4,7,1,6] en utilisant les trois algorithmes de tri vus adans le cours. Représenter l’état de la liste après chaque étape qui change l’ordre des éléments.
+Triez la liste [2,5,3,4,7,1,6] en utilisant les trois algorithmes de tri vus dans le cours. Représentez l’état de la liste après chaque étape qui change l’ordre des éléments.
 
 ````
 
-````{admonition} Exercice 3. Vérificateur de tri
+````{admonition} Exercice 3 : vérificateur de tri 
 :class: note
 
-Ecrire un algorithme qui vérifie si une liste est triée. 
+Ecrivez un algorithme qui vérifie si une liste est triée. 
 
 Que prend l’algorithme en entrée et qu’est-ce qu’il retourne en sortie ?
 
-Demander ensuite à un autre élève de suivre les opérations décrites par votre algorithme. Est-ce que votre algorithme est correct ?
+Demandez ensuite à un autre élève de suivre les opérations décrites par votre algorithme. Est-ce que votre algorithme est correct ?
 
 Comparer vos algorithmes. Sont-ils différents ?
 
 ````
 
-````{admonition} Exercice 4. Mondrian
+````{admonition} Exercice 4 : Mondrian 
 :class: note
 
-Analyser les œuvres cubistes de Piet Mondrian. Trouver un algorithme qui permet de créer une œuvre qui pourrait être attribuée à Mondrian.
+Analysez les œuvres cubistes de Piet Mondrian. Trouvez un algorithme qui permet de créer une œuvre qui pourrait être attribuée à Mondrian.
 
 ````
 

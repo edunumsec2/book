@@ -1,5 +1,5 @@
 
-# 3. De la logique à la mémoire
+# 3. ALU et mémoire
 
 Dans cette section, nous continuons notre exploration de comment les portes logiques, selon leur assemblages, fournissent les fonctionnalités de base des ordinateurs. En particulier, nous nous intéressons à comment faire effectuer plusieurs opérations à un ordinateur via ce qui s'appelle une unité arithmétique et logique, puis nous voyons comment l'ordinateur se rappelle les résultats des calculs intermédiaires via des bascules.
 
