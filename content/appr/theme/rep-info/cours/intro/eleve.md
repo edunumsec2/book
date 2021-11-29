@@ -159,7 +159,7 @@ Grâce à la découverte de l'électricité au début du XIX<sup>e</sup> siècle
 
 Bien sûr, le Morse peut être utilisé aussi avec des signaux lumineux, ou sonores, mais la plupart du temps il est utilisé sur les lignes électriques qui se développent à l'époque. 
 
-[Vous trouverez ici](https://morsedecoder.com/) un traducteur du langage naturel vers le Morse. 
+[Vous trouverez ici](https://morsedecoder.com/) un traducteur du langage naturel vers le Morse.
 
 
 <!--
@@ -183,27 +183,39 @@ Le code Morse est le système de représentation de l'information qui se rapproc
 
 ````{admonition} Micro-activité
 :class: note
-Amusez-vous avec votre assistant vocal en lui demandant par exemple : "Salut Siri. Quel est le code Morse pour *j'ai envie de dormir* ?".
+Amusez-vous avec votre assistant vocal en lui demandant par exemple : «Salut Siri. Quel est le code Morse pour *j'ai envie de dormir* ?».
 ````
 
-Si vous observez le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), vous remarquerez que les signaux utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet, puisqu'il est plus économique de coder les lettres les plus fréquentes avec les codes les plus courts. 
+Si vous observez le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), vous remarquerez que les signaux utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet, puisqu'il est plus économique de coder les lettres les plus fréquentes avec les codes les plus courts.
 
+
+```{image} media/letterdistribution.png
+:width: 500
+:height: 350
+```
+Ceci est une représentation de la fréquence moyenne de distribution des lettres dans la langue anglaise
+
+
+
+<!--
 ```{figure} media/letterdistribution.png
 ---
 height: 350px
 width: 300px
 name: fig-distribution
 ---
-Ceci est une représentation de la fréquence moyenne de distribution des lettres dans la langue anglaise. 
+Ceci est une représentation de la fréquence moyenne de distribution des lettres dans la langue anglaise 
 ```
+-->
+
 
 ````{admonition} Le saviez-vous ? 
 :class: hint
 À l'époque où les transmissions télégraphiques en code Morse sont payées à l'unité d'information, donc la lettre, des codex spécifiques sont développés par les utilisateurs pour utiliser le moins de caractères possibles. C'est exactement la même situation qui s'est produite avec l'arrivée des [SMS](https://fr.wikipedia.org/wiki/Short_Message_Service) dans les années 1990, où les utilisateurs payaient au caractère. Aujourd'hui, même s'il est rare de payer à l'unité d'information, ce genre de raccourcis existent encore, mais surtout pour un avantage de vitesse. 
 
 ```{image} media/morsecodeshort.png
-:height: 450px
-:width: 450px
+:height: 500px
+:width: 500px
 ```
 
 Le désavantage de ces codex d'abbréviations est leur faible degré de standardisation. Comment savoir quel codex est utilisé ? Et surtout : comment faire pour que tout le monde s'accorde sur le codex ? 
@@ -211,7 +223,6 @@ Le désavantage de ces codex d'abbréviations est leur faible degré de standard
 La réponse à cette question est l'apport le plus essentiel de l'introduction du code binaire, et des standards de représentation de l'information qui l'ont suivi : un langage pour les contrôler tous. 
 ````
 
-Si vous observez le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), vous remarquerez que les signaux utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet, puisqu'il est plus économique de coder les lettres les plus fréquentes avec les codes les plus courts. 
 
 <!--
 ```{figure} media/letterdistribution.png
@@ -224,11 +235,6 @@ Ceci est une représentation de la fréquence moyenne de distribution des lettre
 ```
 -->
 
-```{image} media/letterdistribution.png
-:width: 500
-:height: 350
-```
-Ceci est une représentation de la fréquence moyenne de distribution des lettres dans la langue anglaise.
 
 
 ### Le binaire
