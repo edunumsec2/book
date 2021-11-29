@@ -876,6 +876,9 @@ en contribuant
 à leur **intégrité** et
 à leur **disponibilité**.
 
+<br>
+
+## Exercices
 
 ````{admonition} Exercice 1 : ???
 :class: note

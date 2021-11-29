@@ -47,10 +47,13 @@ parts:
   - file: content/appr/theme/archi/accueil/eleve
     sections:
       - file: content/appr/theme/archi/cours/0_intro/eleve
-      - file: content/appr/theme/archi/cours/1_sys-log/eleve
-      - file: content/appr/theme/archi/cours/2_micro-pro/eleve
-      - file: content/appr/theme/archi/cours/3_comp/eleve
-      - file: content/appr/theme/archi/cours/4_conclusion/eleve
+      - file: content/appr/theme/archi/cours/1_syst_logiques/eleve
+      - file: content/appr/theme/archi/cours/2_additionneur/eleve
+      - file: content/appr/theme/archi/cours/3_alu_et_memoire/eleve
+      - file: content/appr/theme/archi/cours/4_archi_gen_comp/eleve
+      - file: content/appr/theme/archi/cours/5_micropro/eleve
+      - file: content/appr/theme/archi/cours/6_conclusion/eleve
+      
 
 - caption: Deuxième année
   numbered: false
@@ -66,6 +69,12 @@ parts:
   - file: content/appr/theme/prog2/eleve
   - file: content/appr/theme/projets/eleve
   - file: content/appr/theme/reseaux/eleve
+
+
+- caption: Glossaire
+  numbered: false
+  chapters:
+  - file: content/glossaire
 
 ## Annexes
 #- caption: Annexes

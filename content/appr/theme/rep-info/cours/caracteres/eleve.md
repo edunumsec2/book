@@ -108,6 +108,7 @@ cette table avait pour principal défaut de ne pas prendre en compte
 les caractères qui n'existent pas dans la langue anglaise,
 ne serait-ce que les lettres accentuées.
 
+<!---
 ```{figure} media/ASCII-Table.png
 ---
 height: 600px
@@ -115,9 +116,18 @@ width: 700px
 ---
 La table de représentation des caractères ASCII
 ```
+-->
 
 
-L'exemple ci-dessous vous renvoie la valeur binaire du texte que vous écrivez.
+```{image} media/ASCII-Table.png
+:width: 600
+:height: 700
+```
+
+La table de représentation des caractères ASCII
+
+<br>
+L'exemple ci-dessous renvoie la valeur binaire du texte écrit.
 
 ```{codeplay}
 
@@ -219,6 +229,7 @@ Les points de code multi-octets commencent chacun par quelques bits à 1 du prem
 Enfin, les octets qui suivent ces codes de démarrage sont tous de la forme : 10xx xxxx.
 Les bits représentés par le caractère «x» représentent ce que l'on appelle la *charge utile*, c'est à dire l'encodage du caractère proprement dit.    
 
+<!---
 ```{figure} media/UTF8_nboctets.png
 ---
 height: 200px
@@ -226,6 +237,13 @@ width: 600px
 ---
 Définition du nombre d'octets utilisés
 ```
+-->
+
+```{image} media/UTF8_nboctets.png
+:width: 500
+:height: 200
+```
+Définition du nombre d'octets utilisés
 
 Puisqu'on peut dire quel type d'octet on regarde à partir des premiers bits du premier octet à gauche, alors même si quelque chose est altéré quelque part, la séquence entière n'est pas perdue : ce codage est appelé *codage auto-synchronisant*.
 
@@ -242,7 +260,7 @@ Si l'on prend à présent, par exemple, le caractère «æ», on lit sur la tabl
 On constate bien le passage du codage sur deux octets. L'adresse décimale 195 du premier octet correspond a la valeur binaire 11000011. On retrouve la suite de deux "1" en début de ce premier octet en partant de la gauche, indiquant ce codage total sur deux octets ; il reste 000011 pour la charge utile du premier octet du codage UTF-8. L'adresse décimale de 166 est 10100110 et commence donc bien par 10 comme bits de poids fort ; la charge utile du deuxième octet du codage UTF-8 est donc 100110.
 L'encodage binaire UTF-8 global s'écrit donc, en concaténant les deux charges utiles : 000011100110, ce qui correspond à 230 en décimal, valeur qu'on peut vérifier sur cette autre [table UTF-8](https://kellykjones.tripod.com/webtools/ascii_utf8_table.html) indiquant également le codage décimal.
 
-
+<!---
 ```{figure} media/UTF8_exemples.png
 ---
 height: 150px
@@ -250,26 +268,42 @@ width: 600px
 ---
 Exemples de codage UTF-8
 ```
+-->
+
+```{image} media/UTF8_exemples.png
+:width: 500
+:height: 200
+```
+Définition du nombre d'octets utilisés
 
 
 Par exemple le caractère « € » (euro) est le 8365e caractère du répertoire Unicode ; son index, ou point de code, est donc 8364, il se code en UTF-8 sur 3 octets : 226, 130, et 172 exprimé en décimal (11100010 10000010 10101100 exprimé en binaire).
 
 <br>
 
-
+<!---
 ```{figure} media/UTF8.png
 ---
 height: 400px
 width: 750px
 ---
-Extrait de la table de représentation UTF-8
+
 ```
 
+-->
+
+```{image} media/UTF8.png
+:width: 700
+:height: 400
+```
+Extrait de la table de représentation UTF-8
 
 
-````{admonition} Exercice 1 : utilisation de la table ASCII
+## Exercices
+
+````{admonition} Exercice 1 : utilisation de la table ASCII ✏️📒
 :class: note 
-<span style="color:orange">Niveau intermédiaire</span> ✏️ 📒
+<!--- <span style="color:orange">Niveau intermédiaire</span> -->
 
 
 1 - À l’aide de la table ASCII, codez en binaire la phrase suivante  «L’an qui vient !».
@@ -281,9 +315,9 @@ Extrait de la table de représentation UTF-8
 ````
 
 
-`````{admonition} Exercice 2 : activité codage et internet
+`````{admonition} Exercice 2 : activité codage et internet 🔌
 :class: note
-<span style="color:green">Niveau débutant</span> 🔌
+<!--- <span style="color:green">Niveau débutant</span> -->
 
 Ouvrez un navigateur Internet (Firefox, …). Dans la barre d’outils, on peut voir à «Affichage», «Encodage des caractères» que c’est le format UTF-8 qui est sélectionné par défaut. 
 
@@ -313,9 +347,9 @@ En allant dans «Outils», «Informations sur la page», on voit que cette page 
 
 
 
-````{admonition} Exercice 3 : coder en UTF-8
+````{admonition} Exercice 3 : coder en UTF-8 ✏️📒
 :class: note
-<span style="color:orange">Niveau intermédiaire</span> ✏️ 📒
+<!--- <span style="color:orange">Niveau intermédiaire</span> -->
 
 Le symbole Ø correspond à la valeur décimale 8709.
 
@@ -330,9 +364,9 @@ Le symbole Ø correspond à la valeur décimale 8709.
 
 
 
-````{admonition} Exercice 4 : activité Hexadécimal
+````{admonition} Exercice 4 : activité Hexadécimal ✏️📒
 :class: note
-<span style="color:red">Niveau avancé</span> ✏️ 📒
+<!--- <span style="color:red">Niveau avancé</span> -->
 
 Nous avons vu au cours du chapitre précédent deux systèmes de numération, décimal et binaire. Il existe également un troisième système de numération très utilisé, le système hexadécimal, visible par ailleurs sur les tables. Le système binaire permet d'exprimer n'importe quel nombre en base 2 (soit 0, soit 1), le système décimal en base 10 (de 0 à 9) - c'est notre mode de représentation usuel. Le système hexadécimal permet d'exprimer n'importe quel nombre en base 16 : de 0 à 9... puis les lettres A, B, C, D, E, F.
 

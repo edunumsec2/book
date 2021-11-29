@@ -5,7 +5,7 @@
 :class: hint
 
 <ol>
-<li>Je sais appliquer un algorithme de rechercher et un algorithme de tri rapide.</li>
+<li>Je sais appliquer un algorithme de recherche et un algorithme de tri rapide.</li>
 
 <li>Je sais calculer la complexité temporelle des algorithmes.</li>
 

@@ -13,7 +13,7 @@ Demandez à un.e camarade de classe de suivre ces instructions. Est-ce que votre
 
 ````
 
-# 3. Formalisation et implémentation de solutions algorithmiques
+# 3. Des algorithmes aux programmes
 
 Une fois que l’on a déterminé le meilleur {glo}`algo|algorithme` à utiliser, il faut le retranscrire dans un programme qu’une machine peut comprendre. Nous allons détailler ce processus pour l’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri par sélection</span>**. 
 
@@ -145,29 +145,26 @@ Mais est-ce que derrière chaque programme se cache un algorithme ?
 -->
 
 
+<br>
 
+## Exercices
 
-
-
-````{admonition} Exercice 1 : jeu de la devinette
+````{admonition} Exercice 1 : jeu de la devinette 🔌
 :class: note
-<span style="color:green">Niveau débutant</span> 🔌
 
 Ecrire le programme suivant : le programme pense à un nombre au hasard. Lorsque vous lui proposez un nombre, il vous dit si «c'est plus» ou «si c'est moins» jusqu'à ce que vous ayez trouvé.
  
 ````
 
-````{admonition} Exercice 2 : plus petit nombre
+````{admonition} Exercice 2 : plus petit nombre 🔌
 :class: note
-<span style="color:orange">Niveau intermédiaire</span> 🔌
 
 Transcrire l’algorithme de l’exercice qui permet de déterminer le plus petit nombre d’une liste, en un programme Python.
 
 ````
 
-````{admonition} Exercice 3 : tris
+````{admonition} Exercice 3 : tris 🔌
 :class: note
-<span style="color:red">Niveau avancé</span> 🔌
 
 Créez une liste qui contient les valeurs de 1 à n dans un ordre aléatoire, où n prend la valeur 100, par exemple. Vous pouvez utiliser la fonction shuffle() du module random.
 
@@ -183,9 +180,8 @@ Lancez votre programme avec 100000 éléments et comparez le temps obtenu avec v
 ````
 
 
-````{admonition} Exercice 4 : Bogosort
+````{admonition} Exercice 4 : Bogosort 🔌
 :class: note
-<span style="color:red">Niveau avancé</span> 🔌
 
 Codez l’algorithme Bogosort en Python (voir chapitre 2 : Le saviez-vous ?). 
 
@@ -194,9 +190,8 @@ A partir de quelle taille de liste cet algorithme est-il inutilisable ?
 ````
 
 
-````{admonition} Exercice 5 : Fibonacci
+````{admonition} Exercice 5 : Fibonacci 🔌
 :class: note
-<span style="color:red">Niveau avancé</span> 🔌
 
 Ecrivez un algorithme qui calcule la suite des nombres de Fibonacci. 
 
@@ -204,7 +199,7 @@ Traduisez l’algorithme en une fonction Python.
 
 Comparez avec les solutions trouvées par vos camarades de classe.
 ````
-
+<br>
 
 ````{admonition} Ai-je compris ?
 :class: attention
