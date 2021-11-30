@@ -6,7 +6,7 @@ Dans ce chapitre on s'intéresse à la manière dont un {glo}`ordinateur|ordinat
 
 ````{admonition} Le saviez-vous ?
 :class: hint
-Le mot **informatique** est la concaténation de "information" et "automatique".
+Le mot **informatique** est la concaténation de «information» et «automatique».
 ````
 
 En informatique, l'information est un élément de connaissance (texte, image, son, ...) susceptible d'être {glo}`numerisation|numérisé`, {glo}`stockage|stocké` et/ou {glo}`transmission|transmis` à l'aide d'un support et d'un mode de codification normalisé.
