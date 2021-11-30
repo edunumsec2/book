@@ -1,4 +1,4 @@
-*Conclusion*
+Conclusion
 ==========
 
 ````{admonition} Pourquoi est-ce important ?

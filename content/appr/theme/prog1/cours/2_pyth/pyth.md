@@ -212,7 +212,9 @@ Un commentaire peut aussi être placé après une instruction pour donner une ex
 print('bonjour') # utilisé le matin
 print('bonsoir') # utilisé le soir
 ```
+<br>
 
+## Exercices
 *Les exercices suivants sont à faire après avoir installé l'IDE de votre choix.*
 
 
@@ -264,5 +266,5 @@ Trouvez et programmez une expression qui calcule la surface d'un carré de 9 cm 
 :class: note
 <!-- <span style="color:red">Niveau avancé</span> -->
 
-Trouvez et programmez une instruction qui renvoie la longueur de la chaîne `"anticonstitutionnellement"`.
+Trouvez et programmez une instruction qui renvoie la longueur de la chaîne `«anticonstitutionnellement»`.
 ````
