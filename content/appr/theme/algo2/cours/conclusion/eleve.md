@@ -1,4 +1,4 @@
-# *Conclusion*
+# Conclusion
 
 
 ```{admonition} Ai-je compris ?

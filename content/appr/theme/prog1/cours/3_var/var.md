@@ -188,6 +188,7 @@ Ceux-ci ne sont pas valides :
 <br>
 <br>
 
+## Exercices
 *Les exercices suivants sont à faire dans l'IDE de votre choix.*
 
 ````{admonition} Exercice 1 : affectation ✏️📒
