@@ -341,7 +341,9 @@ print(tampon)
 pop(0)
 print(tampon)
 ```
+<br> <br>
 
+## Exercices
 
 ````{admonition} Exercice 1 : 
 :class: note

@@ -142,7 +142,9 @@ Il est possible d'utiliser plusieurs arguments dans une fonction en les séparan
 
 ***Exercice :*** *calculez la vitesse d'une voiture qui parcourt la distance Lausanne-Genève (65 km) en 45 minutes.*
 
+<br> <br>
 
+## Exercices
 
 ````{admonition} Exercice 1 : Pythagore 🔌
 :class: note

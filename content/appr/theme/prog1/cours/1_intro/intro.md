@@ -9,15 +9,15 @@ La {glo}`programmation|programmation` est le processus consistant à «dire» à
 
 ## Historique
 
-Un ordinateur consiste de 3 composantes principales:
+Un ordinateur consiste en trois composantes principales :
 
-- une machine (processeur)
-- une mémoire
-- un programme (algorithme)
+- une machine (processeur),
+- une mémoire,
+- un programme (algorithme).
 
 ### Une machine
 
-En 1642, le scientifique et philosophe français Blaise Pascal inventa la première machine à calculer (mécanique), la *pascaline*, initialement dénommée *machine d’arithmétique* puis *roue pascaline* : elle permettait d’additionner et de soustraire deux nombres d'une façon directe et de faire des multiplications et des divisions par répétitions.
+En 1642, le scientifique et philosophe français Blaise Pascal inventa la première machine à calculer (mécanique), la *pascaline*, initialement dénommée *machine d’arithmétique* puis *roue pascaline* : elle permettait d’additionner et de soustraire deux nombres d'une façon directe et de faire des multiplications et des divisions par répétitions.
 
 Pascal construisit ensuite une vingtaine de pascalines dans la décennie suivante souvent en les perfectionnant, dont huit ont survécu jusqu’à aujourd'hui.
 
@@ -48,7 +48,7 @@ La première machine programmable est probablement le **métier à tisser de Jac
 -->
 
 <!---
-<iframe width="745" height="545" src="https://www.youtube.com/embed/eE5wxtaIcEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+<iframe width="745" height="545" src="https://www.youtube.com/embed/eE5wxtaIcE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
 ### Un programme
 
