@@ -277,7 +277,7 @@ Répéter 8 fois :
 ```
 ````
 
-`````{admonition} Solution 4. Forme mystère
+<!-- `````{admonition} Solution 4. Forme mystère
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -311,7 +311,7 @@ Un hexagone. Pour vérifier, exécuter le code ci-dessus. On pourrait croire que
 
 ````
 `````
-
+ -->
 
 ````{admonition} Exercice 5. Nombre minimum
 :class: note
@@ -323,7 +323,7 @@ Appliquer votre algorithme à la liste [3, 6, 2, 8, 1, 9, 7, 5].
 L'algorithme trouve-t-il la bonne solution ? Sinon, modifier votre algorithme afin qu’il trouve la bonne solution.
 
 ````
-
+<!-- 
 `````{admonition} Solution 5. Nombre minimum
 :class: hint
 
@@ -399,7 +399,7 @@ width: 70%
 Le résultat obtenu est bien le résultat attendu, l'algorithme a trouvé la plus petite valeur contenue dans la liste. L'algorithme est correct.
 
 ````
-`````
+````` -->
 
 
 
@@ -413,7 +413,7 @@ Comparer votre solution à celle de la personne à côté de vous. Avez-vous pro
 Un ordinateur peut-il réaliser les opérations décrites par votre algorithme ?
 
 ````
-
+<!-- 
 `````{admonition} Solution 6. Le prochain anniversaire
 :class: hint
 
@@ -432,7 +432,7 @@ Oui, un ordinateur peut exécuter ces opérations, mais elles doivent être déc
 
 ````
 `````
-
+ -->
 
 
 ````{admonition} Exercice 7. Echange de trois variables
@@ -444,7 +444,7 @@ Conseil : mettez-vous à la place de la machine et représentez le contenu de ch
 
 ````
 
-`````{admonition} Solution 7. Echange de trois variables
+<!-- `````{admonition} Solution 7. Echange de trois variables
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -466,7 +466,8 @@ Nous avons donc la confirmation que la solution obtenue résout correctement not
 
 ````
 
-`````
+````` 
+-->
 
 
 
@@ -485,7 +486,7 @@ X ← X – Y
 ````
 
 
-`````{admonition} Solution 8. Affectations
+<!-- `````{admonition} Solution 8. Affectations
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -509,7 +510,7 @@ X ← X – Y ou X ← (X + Y) - Y, donc X ← Y
 
 Cet algorithme échange les valeurs des deux variables *sans avoir le besoin d'utiliser une variable temporaire*.
 
-````
+```` -->
 <!--
 
 ***Exercice 1***

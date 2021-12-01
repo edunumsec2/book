@@ -839,4 +839,20 @@ Trier le tableau suivant avec l’algorithme de tri à bulles : [3, 6, 8, 7, 1, 
 
 ```
 
+````{admonition} Exercice 12. Comparaison temporelle des algorithmes de tris 🔌
+:class: note
+
+Créer une liste qui contient les valeurs de 1 à n dans un ordre aléatoire, où n prend la valeur 100, par exemple. Vous pouvez utiliser la fonction shuffle() du module random.
+
+Implémenter au moins deux des trois algorithmes de tri vu au cours.
+A l’aide du module time et de sa fonction time(), chronométrez le temps prend le tri d'une liste de 100, 500, 1000, 10000, 20000, 30000, 40000 puis 50000 nombres. 
+
+Noter les temps obtenus et affichez-les sous forme de courbe dans un tableur. Ce graphique permet de visualiser le temps d’exécution du tri en fonction de la taille de la liste. Que constatez‑vous ?
+
+Sur la base de ces mesures, pouvez-vous estimer le temps que prendrait le tri de 100000 éléments ?
+
+Lancer votre programme avec 100000 éléments et comparez le temps obtenu avec votre estimation.
+
+````
+
 

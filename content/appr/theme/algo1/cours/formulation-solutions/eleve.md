@@ -158,7 +158,9 @@ Mais est-ce que derrière chaque programme se cache un algorithme ?
 ````{admonition} Exercice 1. Jeu de la devinette 🔌
 :class: note
 
-Ecrire le programme suivant : le programme pense à un nombre au hasard. Lorsque vous lui proposez un nombre, il vous dit si «c'est plus» ou «si c'est moins» jusqu'à ce que vous ayez trouvé.
+Ecrire le programme suivant : le programme pense à un nombre au hasard. Lorsque vous lui proposez un nombre, il vous dit si « c'est plus » ou si « c'est moins» jusqu'à ce que vous ayez trouvé. Conseil : utiliser le module Python *random*.
+
+Y a-t-il une stratégie gagnante ?
  
 ````
 
@@ -169,27 +171,52 @@ Transcrire l’algorithme de l’exercice qui permet de déterminer le plus peti
 
 ````
 
-````{admonition} Exercice 3. Comparaison de tris 🔌
+
+````{admonition} Exercice 3. Programmes de tri 🔌
 :class: note
 
-Créez une liste qui contient les valeurs de 1 à n dans un ordre aléatoire, où n prend la valeur 100, par exemple. Vous pouvez utiliser la fonction shuffle() du module random.
+Implémenter le tri à bulles et/ou le tri par insertion vus au cours.
 
-Implémentez au moins deux des trois algorithmes de tri vu au cours.
+Créer une liste qui contient les valeurs de 1 à n dans un ordre aléatoire, où n prend la valeur 10, par exemple. Vous pouvez utiliser la fonction shuffle() du module random.
+
+*Pour aller plus loin.*
+
 A l’aide du module time et de sa fonction time(), chronométrez le temps prend le tri d'une liste de 100, 500, 1000, 10000, 20000, 30000, 40000 puis 50000 nombres. 
 
-Notez les temps obtenus et affichez-les sous forme de courbe dans un tableur. Ce graphique permet de visualiser le temps d’exécution du tri en fonction de la taille de la liste. Que constatez‑vous ?
+Noter les temps obtenus et affichez-les sous forme de courbe dans un tableur. Ce graphique permet de visualiser le temps d’exécution du tri en fonction de la taille de la liste. Que constatez‑vous ?
 
 Sur la base de ces mesures, pouvez-vous estimer le temps que prendrait le tri de 100000 éléments ?
 
-Lancez votre programme avec 100000 éléments et comparez le temps obtenu avec votre estimation.
+Lancer votre programme avec 100000 éléments et comparez le temps obtenu avec votre estimation.
 
 ````
 
 
-````{admonition} Exercice 4. Bogosort 🔌
+<!--
+
+````{admonition} Exercice 3. Comparaison de tris 🔌
 :class: note
 
-Codez l’algorithme Bogosort en Python (voir chapitre 2 : Le saviez-vous ?). 
+Créer une liste qui contient les valeurs de 1 à n dans un ordre aléatoire, où n prend la valeur 100, par exemple. Vous pouvez utiliser la fonction shuffle() du module random.
+
+Implémenter au moins deux des trois algorithmes de tri vu au cours.
+A l’aide du module time et de sa fonction time(), chronométrez le temps prend le tri d'une liste de 100, 500, 1000, 10000, 20000, 30000, 40000 puis 50000 nombres. 
+
+Noter les temps obtenus et affichez-les sous forme de courbe dans un tableur. Ce graphique permet de visualiser le temps d’exécution du tri en fonction de la taille de la liste. Que constatez‑vous ?
+
+Sur la base de ces mesures, pouvez-vous estimer le temps que prendrait le tri de 100000 éléments ?
+
+Lancer votre programme avec 100000 éléments et comparez le temps obtenu avec votre estimation.
+
+````
+-->
+
+````{admonition} Exercice 4. Tri de Bogo🔌
+:class: note
+
+Coder l’algorithme du tri de Bogo en Python (voir chapitre 2 : Le saviez-vous ?). 
+
+Relancer l'algorithme plusieurs fois, en notant le nombre d'itération nécessaires pour qu'il termine.
 
 A partir de quelle taille de liste cet algorithme est-il inutilisable ?
  
@@ -205,7 +232,7 @@ Traduisez l’algorithme en une fonction Python.
 
 Comparez avec les solutions trouvées par vos camarades de classe.
 ````
-<br>
+
 
 ````{admonition} Ai-je compris ?
 :class: attention
