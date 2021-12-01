@@ -61,6 +61,7 @@ parts:
     sections:
     - file: content/enjeux/grandes-thematiques/economie-numerique/economie-numerique
     - file: content/enjeux/grandes-thematiques/surveillance/surveillance
+    - file: content/enjeux/grandes-thematiques/environnement/environnement
   - file: content/enjeux/fiches-complementaires/fiches-complementaires
     sections:
     - file: content/enjeux/fiches-complementaires/digital-labor/digital-labor
