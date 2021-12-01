@@ -263,17 +263,6 @@ Dans le code [ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_In
 </center>
 -->
 
-
-```{image} media/binary.gif
-:width: 450
-:height: 350
-```
-Dans le code [ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange), chaque lettre de l'alphabet est codée sur 8 bits
-
-
-
-<!-- TODO #32 @elliotvaucher : panel question et darkmode -->
-
 ```{question} Question 1
 Pourquoi la lettre "e", en Morse, est-elle représentée par un seul point ? 
 * {v}`Parce que c'est la lettre la plus utilisée en anglais.`

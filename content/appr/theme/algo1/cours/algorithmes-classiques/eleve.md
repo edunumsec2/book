@@ -1,5 +1,5 @@
 
-````{admonition} Matière à réfléchir
+````{admonition} Matière à réfléchir. La bibliothèque inutile
 :class: attention
 
 Imaginez une bibliothèque scolaire un peu spéciale : les livres n’y sont pas rangés par ordre alphabétique ! Ils sont bien rangés sur des étagères, mais sans aucune logique particulière. Vous entrez dans cette bibliothèque un peu spéciale et vous vous mettez à chercher l’ouvrage ***<span style="color:rgb(13, 204, 166)">Le Guide du voyageur galactique.</span>***
@@ -27,14 +27,7 @@ Saviez-vous que le succès fulgurant de *Google* est surtout dû à sa capacité
 Un **<span style="color:rgb(89, 51, 209)">algorithme de tri</span>** est un algorithme qui permet de résoudre le problème du tri des données, donc d'organiser les données selon ***<span style="color:rgb(13, 204, 166)">une relation d’ordre</span>***. Dans la figure ci-dessous, les objets sont organisés soit par la luminosité de leur couleur (ligne du haut), soit par leur taille (lignes du bas), dans **un ordre croissant**.
 
 
-```{image} media/Tris_base.png
-:width: 600
-:height: 400
-```
-**Problème du tri.** Des objets peuvent être triés selon une relation d’ordre, en lien avec une propriété. Sur la ligne du haut, les rectangles sont organisés selon leur couleur (de la plus sombre à la plus claire), alors que sur la ligne du bas, ils sont triés selon leur taille (du plus petit au plus grand)
 
-
-<!--
 ```{figure} media/Tris_base.png
 ---
 alt: Problème du tri.
@@ -44,15 +37,14 @@ width: 50%
 **Problème du tri.** Des objets peuvent être triés selon une relation d’ordre, en lien avec une propriété. Sur la ligne du haut, les rectangles sont organisés selon leur couleur (de la plus sombre à la plus claire), alors que sur la ligne du bas, ils sont triés selon leur taille (du plus petit au plus grand).
 
 ```
--->
 
 <!-- Pour apprendre à cuisiner, on commence par suivre des recettes classiques. -->
 <!-- Pour apprendre à cuisiner, on commence par suivre des recettes classiques. Ainsi, pour appréhender l’{glo}`algorithmique|algorithmique`, nous étudierons une classe d’{glo}`algo|algorithmes` classiques : les **<span style="color:rgb(89, 51, 209)">algorithmes de tri</span>**.  -->
 
-<br> 
+ 
 
 
-````{admonition} Exercice - application 0 : tri de rectangles
+````{admonition} Exercice 0. Problème du tri
 :class: note
 
 Trier les rectangles de la ligne du haut de la <a href="#fig-trier">Figure ci-dessus</a> en fonction de leur taille, pour arriver à la disposition de la ligne du bas. Noter toutes les étapes intermédiaires de vos actions et la disposition des rectangles avant d’arriver à la solution finale. Conseil : remplacer les rectangles par un nombre qui représente leur taille.
@@ -63,7 +55,7 @@ Quels types d'opérations avez-vous effectuées ?
 
 ````
 
-````{admonition} Solution - application 0 : tri de rectangles
+````{admonition} Solution 0. Problème du tri
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -86,6 +78,8 @@ Nous allons exposer ici trois algorithmes de tri simple, que l'on pourrait utili
 
 L’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri par insertion</span>** parcourt la liste d’éléments à trier du deuxième au dernier élément. Pour chaque nouvel élément considéré, il l'insère à l'emplacement correct dans la liste déjà parcourue. A tout moment, la liste d'éléments déjà parcourus (jusqu’à l’élément que l'on considère à un moment donné) est toujours bien triée.
 
+
+<span id=tri-selection></span>
 ## Tri par sélection
 
 L’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri par sélection</span>** commence par rechercher le plus petit élément de la liste et l’échange avec le premier élément de la liste. Il recherche ensuite le plus petit élément de la liste restante (sans le premier plus petit élément). Il sélectionne ainsi le deuxième plus petit élément de la liste et l’échange avec le deuxième élément de la liste. Et ainsi de suite : il recherche le plus petit élément de la liste restante, en excluant les éléments déjà triés, et échange ce plus petit élément avec le premier élément pas encore trié. Il continue de la sorte jusqu’à arriver au dernier élément de la liste. 
@@ -95,7 +89,7 @@ L’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri par sé
 L’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri à bulles</span>** compare les éléments voisins, deux par deux. Il commence par comparer les deux premiers éléments de la liste et les met dans le bon ordre (le plus petit des deux éléments précède le plus grand des deux). Il compare ensuite les deux éléments suivants (le nouveau deuxième et le troisième élément de la liste) et les met dans le bon ordre. Il continue de la sorte jusqu’à la fin de la liste. Après ce premier parcours de la liste, le plus grand élément se retrouve en dernière position de la liste. L'algorithme parcourt à nouveau la liste, en comparant et en déplaçant les éléments voisins deux par deux (en excluant également le dernier élément qui est déjà bien trié). Après le deuxième parcours de la liste, le deuxième plus grand élément se retrouve en avant-dernière position de la liste. L'algorithme parcourt la liste de la sorte, autant de fois qu’elle possède d’éléments, en excluant les éléments bien triés en fin de la liste.
 
 
-````{admonition} Exercice - application 1 : algorithme de tri 
+````{admonition} Exercice 1. Algorithme de tri 
 :class: note
 
 Il est fortement recommandé de résoudre cet exercice avant d’avancer dans le chapitre. 
@@ -104,7 +98,7 @@ Appliquer au moins un des trois algorithmes ci-dessus (tri par insertion, tri pa
 
 ````
 
-````{admonition} Solution - application 1 : algorithme de tri
+````{admonition} Solution 1. Algorithme de tri
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -121,7 +115,7 @@ La solution est donnée dans la suite du chapitre et est illustrée dans la Figu
 Vous passez trop de temps à chercher vos affaires ? Pensez à mieux les trier. Le temps perdu à ranger vos affaires sera bien inférieur à celui que vous passerez à les chercher plus tard.
 
 ````
-<br> 
+
 
 La figure ci-dessous détaille les étapes intermédiaires des trois {glo}`algo|algorithmes` de tri vus précédemment. Dans le **<span style="color:rgb(89, 51, 209)">tri par insertion</span>** à gauche, on parcourt la liste dans l’ordre, un élément après l’autre (dénoté par une étoile). A chaque étape, on cherche à ***<span style="color:rgb(13, 204, 166)">insérer</span>*** le rectangle considéré à la bonne place dans la liste précédemment triée. La flèche rouge montre la position à laquelle le rectangle sera inséré. Si l’élément est déjà bien trié, aucune action n’est requise dans ce cas et la flèche est remplacée par un point rouge. Notez que la liste qui précède le rectangle considéré (celui avec l’étoile) est toujours bien triée. 
 
@@ -140,9 +134,7 @@ Notez que même si tous les {glo}`algo|algorithmes` arrivent à la même solutio
 <span id=fig-algos-tri></span>
 
 
-
-<!--
-```{figure} media/Tris_base.png
+```{figure} media/Tris_algorithmes.png
 ---
 alt: Algorithmes de tri
 width: 100%
@@ -150,8 +142,6 @@ width: 100%
 
 **Algorithmes de tri**. Etapes intermédiaires lors de l’application des différents algorithmes de tri. La flèche rouge montre les mouvements des éléments suite à une opération. Si l’élément ne bouge pas, la flèche rouge est remplacée par un point rouge. **A gauche**, le tri par insertion. L’étoile dénote l’élément considéré à un moment donné. **Au milieu**, le tri par sélection. L’étoile désigne le plus petit élément de la liste non triée. **A droite**, le tri à bulles. Ici le point rouge signale les éléments triés.
 ```
-
--->
 
 
 
@@ -204,10 +194,10 @@ Ces résultats sont valables pour cette configuration en particulier. Si on trie
 ````
 
 
-````{admonition} Le saviez-vous ?
+````{admonition} Le saviez-vous ? Tri stupide
 :class: hint
 
-Il existe un algorithme, Bogosort, aussi nommé le tri lent ou encore le tri stupide. C’est un tri qui génère différentes permutations des éléments de la liste et s’arrête lorsque la configuration obtenue par hasard est triée. A votre avis, combien d’opérations prend cet algorithme en moyenne ?
+Il existe un algorithme, Bogosort, aussi nommé le *tri lent* ou encore le *tri stupide*. C’est un tri qui génère différentes permutations des éléments de la liste et s’arrête lorsque la configuration obtenue par hasard est triée. A votre avis, combien d’opérations prend cet algorithme en moyenne ?
 
 ````
 
@@ -220,7 +210,7 @@ La qualité d’un {glo}`algo|algorithme` dépend de la propriété que l’on s
 
 ***<span style="color:rgb(13, 204, 166)">La vitesse d’un {glo}`algo|algorithme` dépend également des {glo}`data|données` en {glo}`input|entrée`</span>***. Selon la configuration initiale des {glo}`data|données` en {glo}`input|entrée` (correspond à la ligne du haut de la <a href="#fig-algos-tri">Figure **Algorithmes de tri**</a>), un {glo}`algo|algorithme` « rapide » peut devenir « lent » et *vice versa*. Il faut savoir que les {glo}`algo|algorithmes` vus jusqu’ici sont tous des {glo}`algo|algorithmes` lents (nous verrons un {glo}`algo|algorithme` de tri rapide ultérieurement).
 
-````{admonition} Le saviez-vous ?
+````{admonition} Le saviez-vous ? Tri trop lent
 :class: hint
 
 Pour trier 1 million d’éléments, selon l’algorithme choisi, cela peut prendre de 20 millions à 1 billion d’opérations. Si chaque opération prenait 1 microseconde (10<sup>-6</sup> s) à s’exécuter, il faudrait 20 secondes pour trier 1 million d’éléments si l'algorithme est efficace. Par contre, pour un des algorithmes ci-dessus, cela pourrait prendre 11 jours !  
@@ -389,9 +379,9 @@ Fin Pour
 Retourner Vrai
 ```
 
-L'algorithme compare les éléments deux par deux et retourne ***Faux*** (et se termine) si l'élément d'après est plus petit que l'élément d'avant. Si tous les éléments parcourus sont dans le bon ordre, l'algorithme arrive à la dernière ligne et retourne ***Vrai***. 
+L'algorithme compare les éléments deux par deux et retourne `Faux` (et se termine) si l'élément d'après est plus petit que l'élément d'avant. Si tous les éléments parcourus sont dans le bon ordre, l'algorithme arrive à la dernière ligne et retourne `Vrai`. 
 
-L'algorithme prend une liste (triée ou non triée) en entrée et retourne **Vrai** ou **Faux** en sortie, selon si la liste est triée. L'algorithme pourrait retourner aussi ***Oui*** et ***Non***, mais *par convention* on préfère les valeurs logiques Vrai et Faux, car ces dernières peuvent être utilisées par la suite dans une condition. Par exemple, si l'algorithme retourne Faux, on pourrait demander à un autre algorithme de trier la liste. **Vrai** et **Faux** correspondent également à 0 et 1, ce qui permet de les utiliser pour faire des calculs. 
+L'algorithme prend une liste (triée ou non triée) en entrée et retourne `Vrai` ou `Faux` en sortie, selon si la liste est triée. L'algorithme pourrait retourner aussi `Oui` et `Non`, mais *par convention* on préfère les valeurs logiques Vrai et Faux, car ces dernières peuvent être utilisées par la suite dans une condition. Par exemple, si l'algorithme retourne Faux, on pourrait demander à un autre algorithme de trier la liste. `Vrai` et `Faux` correspondent également à 0 et 1, ce qui permet de les utiliser pour faire des calculs. 
 
 ````
 `````
