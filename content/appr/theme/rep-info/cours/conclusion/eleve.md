@@ -40,18 +40,18 @@ La chaine complète émetteur - canal de transmission - récepteur participe
 
 
 
-Représenter l'information à travers ce que comprend la machine (c'est à dire le mode binaire) assure de pouvoir étendre ses possibilités de transmission : aujourd'hui nous pouvons écrire un texte avec un logiciel de traitement de texte, dessiner une image avec un logiciel ou la capturer avec un appareil photo numérique, enregistrer un son, puis transmettre ces «objets numériques» à une multitude de personnes, à l'autre bout du monde, sans altération significative de l'objet initialement créé. Cette information peut être stockée, modifiée, complétée et s'intégrer à nouveau dans ce flux mondial : c'est toute la puissance et la révolution apportée par la technologie numérique, partagée aujourd'hui sur la quasi totalité de la planète.
+Représenter l'information à travers ce que comprend la machine (c'est à dire le mode binaire) assure de pouvoir étendre ses possibilités de transmission : aujourd'hui nous pouvons écrire un texte avec un logiciel de traitement de texte, dessiner une image avec un logiciel ou la capturer avec un appareil photo numérique, enregistrer un son, puis transmettre ces «objets numériques» à une multitude de personnes, à l'autre bout du monde, sans altération significative de l'objet initial. Cette information peut être stockée, modifiée, complétée et s'intégrer à nouveau dans ce flux mondial : c'est toute la puissance et la révolution apportée par la technologie numérique, partagée aujourd'hui par [plus de 80% des pays de la planète](http://www.smartaddict.fr/ces-regions-sans-internet/), et [60% des humains](https://www.suricats-consulting.com/fresque-du-numerique/?cn-reloaded=1).
 
 Dès lors, on peut s'interroger sur les évolutions de cette technologie dans le sens d'un accroissement de ces performances de représentation, c'est à dire principalement la fidélité, la rapidité et l'accessibilité.
 L'accroissement des performances des machines liées à l'adoption des transistors, l'arrivée des microprocesseurs puis à la miniaturisation suit une croissance exponentielle depuis sa prédiction par Gordon E. Moore en 1965 : c'est la fameuse [loi de Moore](https://fr.wikipedia.org/wiki/Loi_de_Moore). Les ordinateurs sont devenus de plus en plus petits, de moins en moins coûteux et de plus en plus rapides et puissants.
 
-Les performances calculatoires ont impacté les mathématiques elles-mêmes, science des nombres s'il en est.
+Les performances calculatoires ont impacté les mathématiques elles-mêmes, science des nombres.
 
 Les outils de traduction parviennent à des niveaux inimaginables il y a encore vingt ans.
 
 La synthèse vocale atteint aujourd'hui une telle qualité qu'il devient difficile pour l'oreille humaine de distinguer une voix humaine de celle d'un robot.
 
-Si l'on peut imaginer des marges de progression encore possibles en terme de fidélité, c'est sans doute sur l'accessibilité, la diffusion, la consommation des ressources et l'impact sur le climat que se situent les enjeux du développement numérique concernant la représentation du réel qu'il permet.
+Pour représenter le réel, si l'on peut imaginer des marges de progression encore possibles en terme de fidélité, c'est sans doute sur l'accessibilité, la diffusion, la consommation des ressources et l'impact sur le climat que se situent les enjeux du développement numérique.
 
 
 
