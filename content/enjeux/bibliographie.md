@@ -129,9 +129,6 @@ Le blog de Olivier Ertzscheid, maître de conférences en sciences de l'informat
 Une série d’épisodes qui questionnent la façon dans le numérique change notre société.  
 
 
-[Mais où va le web?](https://maisouvaleweb.fr)<br> 
-Un blog qui éclaire les débats politiques et éthiques autour du numérique.
-
 <br>
 <div align="left"; style="font-size:18px ;color:rgb(0, 0, 0)">
   <b>Cycle de conférences <a href=https://www.unige.ch/sciences-societe/socio/fr/enseignements/master/forum-de-recherche/forum-de-recherche-sociologique-2021/>"Vivre avec le numérique"</a> - Université de Genève (2020/2021)</b><br>
