@@ -724,21 +724,20 @@ Notez que grâce à la représentation en complément à deux, la circuiterie in
 
 ## Mémoire
 
+Les {glo}`transistor|transistors`, les {glo}`portelogique|portes logiques` et leur représentation en {glo}`tableverite|tables de vérités`, permettent de manipuler des 0 et des 1 au niveau physique.. Tant qu'un courant électrique se déplace dans les {glo}`circuit|circuits`, on est capable de le transformer, de le laisser passer ou de l'arrêter, dans le but d'exprimer des portes « ouvertes » ou des portes « fermées » et donc des nombres binaires. L'ALU va une étape plus loin et permet de choisir une opération à effecter en fonction de bits de contrôle supplémentaire, et livre le résultat de l'opération arithmétique ou logique choisie.
+
+Mais comment faire pour {glo}`stockage|stocker` cette information ? Comment faire pour que l'on se rappelle le résultat d'une addition effectuée par une ALU afin de pouvoir réutiliser cette valeur plus tard ? C'est là que nous avons besoin de _mémoire_.
+
+Dans les ordinateurs, il y a en fait plusieurs types de {glo}`stockage|mémoires`, qu'on peut classer en deux grandes catégories. La {glo}`memvolatile|mémoire volatile`, et la {glo}`memnonvolatile|mémoire non volatile`. La {glo}`memvolatile|mémoire volatile` s'efface quand la machine et éteinte. C'est le cas de la RAM (_random-access memory_), par exemple. La {glo}`memnonvolatile|mémoire non volatile`, elle, persiste. C'est le cas d'un disque dur ou d'un SSD (_solid-state drive_). Si un smartphone s'éteint alors que qu'on est en train de retoucher une photo sans avoir validé les modifications, ces retouches disparaissent. Elles étaient stockées sur la {glo}`memvolatile|mémoire volatile`. Par contre, au moment où ces retouches sont sauvegardées, elles s'inscrivent dans la {glo}`memnonvolatile|mémoire non volatile`.
+
+On peut se demander pourquoi on n'utiliserait pas que de la mémoire non volatile, vu les « risques » posés par la mémoire volatile. La réponse est que la mémoire non volatile va probablement être entre 100 et 100 000 fois moins rapide que la mémoire volatile. On privilégie donc la mémoire volatile comme mémoire de travail rapide d'un ordinateur.
+
+Dans les sections qui suivent, on propose de s'intéresser au cas le plus simple: la construction d'une cellule de mémoire volatile qui sera à même de stocker un bit. Par la suite, nous discuterons de la manière dont ce genre de mémoire est utilisée au cœur des microprocesseurs.
 
 
+### Le verrou SR
 
-**TODO:** _Du contenu supplémentaire sera rajouté ici pour parler de la mémoire._
-
-<u> La construction de la mémoire </u>
-
-Les {glo}`transistor|transistors`, les {glo}`portelogique|portes logiques` et leur représentation en {glo}`tableverite|tables de vérités`, permettent de manipuler des 0 et des 1 au niveau physique. Tant qu'un courant électrique se déplace dans les {glo}`circuit|circuits`, on est capable de le transformer, de le laisser passer ou de l'arrêter, dans le but d'exprimer des portes «ouvertes» ou des portes «fermées» et donc des nombres binaires.  
-
-Mais comment faire pour {glo}`stockage|stocker` cette information ?
-
-Pour comprendre comment la {glo}`stockage|mémoire` des ordinateurs fonctionne, il faut commencer par la classer en deux grandes catégories. La {glo}`memvolatile|mémoire volatile`, et la {glo}`memnonvolatile|mémoire non volatile`. La {glo}`memvolatile|mémoire volatile` s'efface quand la machine et éteinte. La {glo}`memnonvolatile|mémoire non volatile`, elle, persiste. Si un smartphone s'éteint alors que qu'on est en train de retoucher une photo, ces retouches disparaissent. Elles étaient stockées sur la {glo}`memvolatile|mémoire volatile`. Par contre, au moment où ces retouches sont sauvegardées, elles s'inscrivent dans la {glo}`memnonvolatile|mémoire non volatile`. 
-
-### Les verrous informatiques
-
+L'idée principale derrière la conception d'un circuit logique qui est capable de stocker un signal est que l'on va utiliser la ou les sorties du circuit en les reconnectant à certaines de ses entrées. Essayons par exemple ce circuit simple avec une seule porte **OU** :
 
 ```{logic}
 :height: 100
@@ -754,14 +753,17 @@ Pour comprendre comment la {glo}`stockage|mémoire` des ordinateurs fonctionne, 
 
 Au début, les deux entrées de la porte valent 0, comme sa sortie. Si l'on essaie de faire passer l'entrée $X$ à 1, on voit que la sortie $Z$ passera à 1 elle aussi, comme il s'agit d'une porte **OU**. Mais comme $Z$ est aussi relié à l'autre entrée de la porte, on a maintenant un circuit dont on ne peux plus modifier la sortie : même si $X$ passe de nouveau à 0, l'autre entrée reste à 1 et suffit donc pour que $Z$ vale maintenant 1 indéfiniment. On est obligé de remettre le circuit complètement à zéro (l'équivalent de débrancher la prise de courant et de la rebrancher) pour obtenir à nouveau un 0 sur la sortie $Z$.
 
-Assurément, ce circuit n'est pas très intéressant : il se bloque dans un état sans retour possible. Serait-ce possible de construire un circuit un peu plus élaboré qui permettrait de choisir la valeur de sa sortie et de la conserver ? Ces circuits existent en effet et sont à la base du stockage de l'information dans les microprocesseurs. On appelle ces circuits des {glo}`verrou|verrous`. Examinons le circuit ci-dessous : c'est le verrou dit « S-R », pour _set/reset_, en anglais. 
+Assurément, ce circuit n'est pas très intéressant : il se bloque dans un état sans retour possible. Serait-ce possible de construire un circuit un peu plus élaboré qui permettrait de choisir la valeur de sa sortie et de la conserver ? Ces circuits existent en effet et sont à la base du stockage de l'information dans les microprocesseurs. On appelle ces circuits des {glo}`verrou|verrous`, vu qu'ils « verrouillent » une valeur donnée.
+
+Examinons le circuit ci-dessous : c'est le verrou dit « SR », pour _set/reset_, en anglais. 
 
 ```{logic}
 :height: 160
+:mode: tryout
 
 {
   "in": [
-    {"pos": [50, 30], "id": 8, "name": "R", "val": 1},
+    {"pos": [50, 30], "id": 8, "name": "R", "val": 0},
     {"pos": [50, 130], "id": 9, "name": "S", "val": 0}
   ],
   "out": [
@@ -787,21 +789,333 @@ Assurément, ce circuit n'est pas très intéressant : il se bloque dans un é
 }
 ```
 
-Dans l'exemple ci-dessus, à partir du moment où on a « ouvert » la porte S (donc qu'on a « set », c'est à dire « établi » l'état initial), la sortie Q est 1. Si on avait une ampoule à cet endroit, elle serait allumée. Maintenant, même si on « ferme » la porte S, Q reste bloqué sur 1. On a donc créé une forme de mémoire. La seule façon « d'éteindre » la sortie Q est d'ouvrir R (donc de « reset », c'est à dire réinitialiser le système). 
+Ce circuit stocke un bit de donnée un 0 ou un 1, qu'on va pouvoir lire via la sortie $Q$ et modifier avec les deux entrées $R$ et $S$. (La seconde sortie $\bar{Q}$ est ici toujours l'inverse de $Q$.)
 
-Voici une vidéo qui illustre ce principe de verrou S-R.
+Dans l'état normal de ce verrou, la sortie $Q$ vaut soit 1, soit 0, et les deux entrées $S$ et $R$ restent à 0. Testez le circuit ci-dessus et observez l'effet de $R$ et $S$. $S$, pour _set_, sert à changer l'état du verrou pour lui faire dorénavant stocker un 1. « Allumer » $S$ cause ainsi $Q$ à passer à 1. Ce qu'il y a d'intéressant, c'est qu'une fois que $Q$ est passé à 1, on peut sans autre « éteindre » le signal $S$ et le faire repasser à 0, et la sortie $Q$, elle, reste à 1 — alors que les deux entrées du circuit $S$ et $R$ sont maintenant à nouveau les mêmes qu'avant, lorsque la sortie $Q$ valait 0.
+
+De manière similaire, l'entrée $R$, pour _reset_, sert à faire passer la valeur stockée par le du verrou à 0, et cet état reste 0 même lorsque $R$ est de nouveau « éteint ».
+
+On essaie en général d'éviter d'avoir un 1 sur $R$ et sur $S$ en même temps, cela place le verrou dans un état où $\bar{Q}$ n'est plus l'inverse de $Q$. Pour cette raison, nous allons plutôt créer le circuit comme suit — les connexions sont exactement les mêmes, mais les entrées $S$ et $R$ ne restent pas à 1 lorsqu'on clique dessus, elle retombent à 0 dès que le clic se termine.
+
+```{logic}
+:height: 160
+:mode: tryout
+
+{
+  "in": [
+    {"pos": [50, 30], "id": 8, "name": "R", "val": 0, "isPushButton": true},
+    {"pos": [50, 130], "id": 9, "name": "S", "val": 0, "isPushButton": true}
+  ],
+  "out": [
+    {"pos": [290, 40], "id": 10, "name": "Q"},
+    {"pos": [290, 120], "id": 11, "name": "Q'"}
+  ],
+  "gates": [
+    {"type": "OR", "pos": [130, 40], "in": [0, 1], "out": 2},
+    {"type": "OR", "pos": [130, 120], "in": [4, 5], "out": 6},
+    {"type": "NOT", "pos": [200, 120], "in": 3, "out": 7},
+    {"type": "NOT", "pos": [200, 40], "in": 12, "out": 13}
+  ],
+  "wires": [
+    [8, 0],
+    [9, 5],
+    [6, 3],
+    [7, 11],
+    [2, 12],
+    [13, 10],
+    [7, 1, {"waypoints": [[80, 50]]}],
+    [13, 4, {"waypoints": [[80, 110]]}]
+  ]
+}
+```
+
+Ces verrous sont communs, et pour le reste du chapitre, on simplifera la notation pour les représenter ainsi, sans changement de fonctionnalité, mais en faisant abstraction des détails internes :
+
+```{logic}
+:height: 100
+:mode: tryout
+
+{
+  "in": [
+    {"pos": [50, 30], "id": 10, "name": "R", "val": 0, "isPushButton": true},
+    {"pos": [50, 70], "id": 11, "name": "S", "val": 0, "isPushButton": true}
+  ],
+  "out": [
+    {"pos": [210, 30], "id": 12, "name": "Q"},
+    {"pos": [210, 70], "id": 13, "name": "Q'"}
+  ],
+  "components": [
+    {"type": "latch-sr", "pos": [130, 50], "in": [6, 7], "out": [8, 9], "state": 0}
+  ],
+  "wires": [[10, 7], [11, 6], [8, 12], [9, 13]]
+}
+```
+
+````{dropdown} Pour aller plus loin
+Voici une vidéo qui illustre ce principe de verrou SR.
 
 ```{youtube} KM0DdEaY5sY
 :start: 4:58
 ```
+````
 
+
+### La bascule D
+
+Un souci avec le verrou SR est qu'on a rarement un signal d'entrée qui soit facilement exploitable pour être « converti » en cette logique _set/reset_. La plupart du temps, on a simplement un signal donné, disons $D$, pour « donnée » (ou _data_ en anglais), et c'est ce signal-ci qu'on aimerait stocker. Avec ce système, il serait impossible de connecter $D$ à ce verrou ; on ne peut le brancher directement ni à l'entrée $S$, ni à l'entrée $R$.
+
+On va utiliser pour cela un circuit similaire, mais qui fonctionne un peu différemment, qui s'appelle une **bascule D**[^flipflop] :
+
+[^flipflop]: Il y a une différence conceptuelle fondamentale entre les verrous et les bascules : les verrous sont des composants dits _asynchrones_, dont l'état peut changer dès qu'une des entrées change, alors que les bascules sont des composants dits _synchrones_, qui ont une entrée appelé Horloge, et dont l'état ne changera qu'au moment où le signal d'horloge effetuera une transition (dans notre cas, passera de 0 à 1). Une discussion plus poussée de ces différence dépasse le cadre de ce cours.
+
+```{logic}
+:height: 120
+:mode: tryout
+
+{
+  "in": [
+    {"pos": [90, 40], "id": 0, "name": "D", "val": 0},
+    {"pos": [90, 80], "id": 1, "name": "Horloge", "val": 0, "isPushButton": true}
+  ],
+  "out": [
+    {"pos": [250, 40], "id": 9, "name": "Q"},
+    {"pos": [250, 80], "id": 10, "name": "Q'"}
+  ],
+  "components": [
+    {
+      "type": "flipflop-d",
+      "pos": [170, 60],
+      "in": [2, 3, 4, 5],
+      "out": [6, 7],
+      "state": 0
+    }
+  ],
+  "wires": [[0, 2], [1, 3], [6, 9], [7, 10]]
+}
+```
+
+Cette bascule va stocker son entrée $D$ et la propager sur sa sortie $Q$ uniquement lorsque l'entrée spéciale $Horloge$ passe de 0 à 1. Le reste du temps, $Q$ et $\overline{Q}$ garderont leur valeur précédente. Notez que cette bascule a aussi deux entrées $S$ et $R$, qui servent à forcer l'état interne à valoir 1 ou 0, respectivement, indépendamment du signal $D$ et de l'horloge.
+
+Testez cette bascule. Réglez l'entrée de données $D$ à 1 ou 0 et observez comme la bascule ne réagit pas : sa sortie $Q$ reste telle quelle. Donnez ensuite une impulsion en cliquant sur l'entrée $Horloge$ et voyez comme la valeur de $D$ est maintenant stockée sur la bascule.
+
+````{dropdown} Pour aller plus loin
 Pour aller plus loin, une vidéo de résumé qui parle aussi des bascules et des registres :
 
 ```{youtube} I0-izyq6q5s
 ```
+````
 
-````{admonition} Pour aller plus loin
-:class: attention
 
-Dans le jeu en ligne « Nandgame » (<https://nandgame.com>), on construit petit à petit un ordinateur complet juste avec, à la base, des portes **NON-ET**. Elles sont la particularité, avec la porte **NON-OU**, de pouvoir simuler toutes les autres portes (y compris un inverseur).
+`````{admonition} Exercice 6 : stocker deux bits
+Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$, et, d'autre part, le **ET** de ces deux mêmes entrées. À l'aide de bascules D, compétez le circuit de manière à ce qu'il stocke ces deux valeurs calculées lors d'un coup d'horloge et les sortes sur les sortes $P$ et $Q$, respectivement. Faites finalement en sorte que le signal $Reset$, si activé, réinitialise les bascules à 0. Vérifiez qu'une fois les valeurs stockées par les bascules, des changements sur les entrées $X$ et $Y$ n'aient pas d'effet direct sur $P$ et $Q$.
+
+```{logic}
+:height: 400
+:showonly: AND OR NOT XOR FlipflopD
+
+{
+  "in": [
+    {"pos": [100, 50], "id": 24, "name": "X", "val": 1},
+    {"pos": [100, 130], "id": 25, "name": "Y", "val": 1},
+    {"pos": [100, 200], "id": 26, "name": "Horloge", "val": 0, "isPushButton": true},
+    {"pos": [100, 270], "id": 29, "name": "Reset", "val": 0, "isPushButton": true}
+  ],
+  "out": [
+    {"pos": [500, 50], "id": 27, "name": "P"},
+    {"pos": [500, 160], "id": 28, "name": "Q"}
+  ]
+}
+```
+
+````{dropdown} Corrigé
+```{logic}
+:height: 320
+:mode: tryout
+
+{
+  "in": [
+    {"pos": [100, 50], "id": 24, "name": "X", "val": 1},
+    {"pos": [100, 130], "id": 25, "name": "Y", "val": 1},
+    {"pos": [100, 200], "id": 26, "name": "Horloge", "val": 0, "isPushButton": true},
+    {"pos": [100, 270], "id": 29, "name": "Reset", "val": 0, "isPushButton": true}
+  ],
+  "out": [
+    {"pos": [500, 50], "id": 27, "name": "P"},
+    {"pos": [500, 160], "id": 28, "name": "Q"}
+  ],
+  "gates": [
+    {"type": "OR", "pos": [210, 60], "in": [0, 1], "out": 2},
+    {"type": "AND", "pos": [210, 120], "in": [3, 4], "out": 5}
+  ],
+  "components": [
+    {
+      "type": "flipflop-d",
+      "pos": [390, 70],
+      "in": [6, 7, 8, 9],
+      "out": [10, 11],
+      "state": 0
+    },
+    {
+      "type": "flipflop-d",
+      "pos": [390, 180],
+      "in": [12, 13, 14, 15],
+      "out": [16, 17],
+      "state": 0
+    }
+  ],
+  "wires": [
+    [24, 0],
+    [25, 1],
+    [24, 3],
+    [25, 4],
+    [10, 27],
+    [16, 28],
+    [2, 6],
+    [5, 12],
+    [26, 7],
+    [26, 13],
+    [29, 15, {"waypoints": [[340, 240]]}],
+    [29, 9, {"waypoints": [[340, 130]]}]
+  ]
+}
+```
+````
+`````
+
+
+`````{admonition} Exercice 7 : signal alternatif
+À l'aide d'une bascule, créez un circuit avec une sortie $Q$ qui s'inverse à chaque coup d'horloge.
+
+```{logic}
+:height: 300
+:showonly: AND OR NOT XOR FlipflopD
+
+{
+  "in": [
+    {"pos": [100, 90], "id": 6, "name": "Horloge", "val": 0, "isPushButton": true}
+  ],
+  "out": [{"pos": [380, 90], "id": 7, "name": "Q"}]
+}
+```
+
+````{dropdown} Corrigé
+```{logic}
+:height: 190
+:mode: tryout
+
+{
+  "components": [
+    {
+      "type": "flipflop-d",
+      "pos": [230, 100],
+      "in": [0, 1, 2, 3],
+      "out": [4, 5],
+      "state": 0
+    }
+  ],
+  "in": [
+    {"pos": [100, 90], "id": 6, "name": "Horloge", "val": 0, "isPushButton": true}
+  ],
+  "out": [{"pos": [380, 90], "id": 7, "name": "Q"}],
+  "wires": [
+    [4, 7],
+    [6, 1],
+    [5, 0, {"waypoints": [[290, 120, "n"], [290, 40, "n"], [190, 40, "w"]]}]
+  ]
+}
+```
+````
+`````
+
+
+`````{admonition} Exercice 8 : jeu de fréquences
+Observez le circuit ci-dessous. L'horloge principale $A$ fonctionne ici toute seule et produit un coup d'horloge par seconde (elle a donc une fréquence d'un hertz — 1 Hz). Que pouvez-vous dire des signaux $B$ et $C$ par rapport au signal $A$ ? Comment expliquer cela avec ce que vous savez des bascules ?
+
+Vous pouvez mettre l'animation en pause et exécuter chaque transition pas à pas pour mieux comprendre ce qui se passe.
+
+```{logic}
+:height: 280
+:mode: tryout
+
+{
+  "out": [
+    {"pos": [380, 30], "id": 7, "name": "A"},
+    {"pos": [380, 80], "id": 10, "name": "B"},
+    {"pos": [380, 130], "id": 11, "name": "C"}
+  ],
+  "components": [
+    {
+      "type": "flipflop-d",
+      "pos": [180, 100],
+      "in": [12, 13, 14, 15],
+      "out": [16, 17],
+      "state": 1
+    },
+    {
+      "type": "flipflop-d",
+      "pos": [180, 230],
+      "in": [24, 25, 26, 27],
+      "out": [28, 29],
+      "state": 1
+    }
+  ],
+  "clocks": [{"pos": [40, 30], "id": 30, "period": 1000}],
+  "wires": [
+    [16, 25, {"waypoints": [[250, 120, "s"], [120, 180, "s"]]}],
+    [16, 10],
+    [28, 11],
+    [17, 12, {"waypoints": [[230, 120], [230, 50], [140, 50]]}],
+    [29, 24, {"waypoints": [[230, 250], [230, 180], [140, 180]]}],
+    [30, 13],
+    [30, 7]
+  ]
+}
+```
+
+````{dropdown} Corrigé
+Le signal $B$ a une fréquence deux fois plus petite que le signal $A$, et le signal $C$, de façon similaire, a une fréquence deux fois plus petite que le signal $B$. Ainsi, $B$ « bat » à 0.5 Hz et $C$ à 0.25 Hz.
+
+TODO ajouter explication
+
+Si ce petit circuit fonctionne à 1 Hz, les appareils que nous utilisons aujourd'hui ont des horloges qui fonctionnent à plusieurs gigahertz (GHz), c'est-à-dire plusieurs milliards de fois plus vite. On attend ainsi moins d'une nanoseconde entre deux coups d'horloge.
+````
+`````
+
+
+### Addition en plusieurs étapes
+
+Dans notre dernier exemple, nous allons construire un circuit capable d'effectuer l'addition de plusieurs nombres: par exemple, d'évaluer la somme $1 + 4 + 5 + 3$ pour trouver $13$.
+
+Si ce calcul a l'air simple, il s'y cache une subtilité: TODO
+
+TODO circuit qui fait cela, description de ce circuit, test du circuit
+
+
+`````{admonition} Exercice 9 : bit de dépassement
+problème du carry, comment s'en souvenir? circuit à modifier
+
+TODO circuit de départ, mêne qu'en haut mais modifiable
+
+````{dropdown} Corrigé
+La solution consiste à stocker aussi le bit de dépassement $V$ au sortir de l'ALU à chaque coup d'horloge. Pour cela, il nous faut ajouter une nouvelle bascule, dont l'entrée récupère la sortie $V$ de l'ALU et dont l'horloge et le _reset_ dont les mêmes signaux que pour les autres bascules.
+
+TODO circuit corrigé
+````
+`````
+
+## Récapitulatif
+
+Au cours des trois chapitres précédent, nous avons vu comment les portes logiques sont utilisées comme composants de base des ordinateurs. Nous avons d'abord exploré des portes simples comme **OU** et **ET**, puis montré comment ces portes peuvent être combinées en systèmes logiques plus complexes.
+
+Avec des portes, nous avons construit un additionneur de deux bits. Nous avons ensuite été à même, en enchaînant plusieurs additionneurs, de créer un système qui peut additionner non pas simplement deux bits, mais deux nombres entiers codés sur 4 bits chacun.
+
+Nous avons ensuite découvert l'unité arithmétique et logique, capable de réaliser plusieurs opérations différentes avec ses entrées en fonction de bits supplémentaires qui permettent de sélectionner l'opération à effectuer.
+
+Notre dernière étape d'exploration des systèmes logiques nous a menés aux verrous et aux bascules, des composants pensés pour stocker des bits de données et ainsi constituer des cellules de mémoire pour l'ordinateur. Nous avons enfin construit capable, avec une ALU et une série de bascules, d'additioner à la chaîne plusieurs nombres, en se rappelant les résultats des additions intermédiaires.
+
+Il existe bien d'autres éléments qui composent les ordinateurs et nous n'avons pas l'occasion de tous les explorer en détail. Dans la section qui suit, faisons un saut conceptuel et parlons de l'architecture générale des ordinateurs et de la manière dont les grands composants sont interconnectés pour permettre à un ordinateur de remplir les fonctions que nous lui connaissons.
+
+
+````{dropdown} Jeu pour aller plus loin
+Dans le jeu en ligne « Nandgame » (<https://nandgame.com>), on construit petit à petit un ordinateur complet juste avec, à la base, des portes **NON-ET**. Elles sont la particularité (avec les portes **NON-OU**, d'ailleurs) de pouvoir simuler toutes les autres portes — y compris un inverseur.
 ````

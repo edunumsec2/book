@@ -99,7 +99,7 @@ Cliquez sur les entrées $X$ et $Y$ pour changer leurs valeurs et observez le co
 ````{dropdown} Pour aller plus loin
 Comment une porte **ET** est-elle elle-même construite ? Cela a déjà été mentionné : avec d'autres composants électroniques plus simples. En simplifiant un peu, on peut considérer qu'une porte **ET** est constituée de deux transistors :
 
-```{figure} 1_portes-logiques/media/andgatetransistor.png
+```{figure} media/andgatetransistor.png
 ---
 height: 300px
 width: 200px
