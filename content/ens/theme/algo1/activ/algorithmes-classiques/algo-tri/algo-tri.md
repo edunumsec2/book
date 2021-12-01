@@ -56,27 +56,37 @@ s'atteller: quelle procédure donner à un ordinateur pour le rendre capable de 
 
 ## 2 Exploration (20-30 min)
 
-Pour ceci, on va s'aider d'un dispositif matériel constitué d'un paquet de cartes numérotée, d'un "comparateur" c'est-à-dire une feuille de papier
-sur laquelle on peut disposer exactement deux cartes à comparer et d'une table. Le tas de cartes ne dois pas contenir uniquement des nombres consécutifs, ce qui permettrait de classer directement la carte à la bonne position. Il peut contenir des doublons. 
+Pour ceci, on va s'aider d'un dispositif matériel constitué d'un paquet de cartes numérotées, d'un "comparateur" c'est-à-dire une feuille de papier sur laquelle on peut disposer exactement deux cartes à comparer, un marqueur (par exemple un jeton ou une gomme) et d'une table. Le tas de cartes ne dois pas contenir uniquement des nombres consécutifs, ce qui permettrait de classer directement la carte à la bonne position. Il peut contenir des doublons. 
 
 Ensuite, l'enseignant-e décrit et affiche ou projette au tableau
 les opérations disponibles qui sont:
 
+Manipulation des cartes:
 1. `mettre(haut/bas)`: Mettre la carte du haut/bas du tas dans le comparateur
 1. `disposer (grande/petite, au-dessus/en-dessous)`: Prendre la plus grande/petite carte du comparateur et la disposer au-dessus/en-dessous du tas.
+
+Manipulation des tas:
 1. `séparer(gauche/droite)`: Séparer le tas courant de carte en deux parties égales (ou presque) et disposer la moitié supérieure à gauche/droite du tas courant
 1. `initier(gauche/droite)`: Initier un nouveau tas courant à gauche/droite du tas.
-1. `vide()`: Condition 1, le tas est vide.
+1. `superposer(gauche/droite, au-dessus/en-dessous)`: Superposer le tas courant sur/sous le tas de gauche/droite
+
+Manipulation du markeur:
 1. `courant.déplacer(gauche/droite)`: Déplacer le marqueur du tas courante d'un tas à gauche/droite.
-1. `unique()` Condition 2: il n'y a qu'un seul tas.
+
+Tests:
+1. `vide`: Condition 1, le tas est vide.
+1. `unique` Condition 2: il n'y a qu'un seul tas.
+1. `plus grand que (G>D ou D>G)`: La carte de de gauche du comparateur est plus grande/petite que la carte de droite
+
+Structures de contrôle:
 1. `répéter jusqu'à` : Répéter jusqu'à ce que condition 1/2.
 1. `si`: Si condition 1/2.
 
-Toutes ces opérations, äl'exception des quatre derniüres sont effectuée sur un tas donné, qui est indiqué en préfix de l'opération, par exemple `droite.mettre(haut)` qui signifie que cette opération s'applique sur le tas de droite. 
+Toutes ces opérations, à l'exception des quatre derniüres sont effectuée sur un tas donné, qui est indiqué en préfix de l'opération, par exemple `droite.mettre(haut)` qui signifie que cette opération s'applique sur le tas de droite. 
 Dans la situation initiale, il n'y a qu'un seul tas mélangé sur la table.
 
 
-Par groupe de deux ou trois, les élèves reçoivent un dispositif matériel et doivent tenter de trouver une procédure, un algorithme utilisant les opérations ci-dessus et permettant de trier le tas de carte. Ils doivent rédiger cet algorithme en ordonnçant les opérations ci-dessus.
+Par groupe de deux ou trois, les élèves reçoivent un dispositif matériel et doivent tenter de trouver une procédure, un algorithme utilisant les opérations ci-dessus et permettant de trier le tas de carte. Ils doivent rédiger cet algorithme en utilisant les opérations ci-dessus. L'idée à ce stade n'est pas de bloquer les élèves avec les aspects formels, mais de les faire réfléchir sur une manière rigoureuse de trier les cartes. 
 
 En guise d'exemple, la classe résoud ensemble un problème plus simple qui consiste à insérer une nouvelle carte dans un tas de carte déjà ordonné. Dans la situation initiale, la carte se trouve dans le comparateur. 
 Une solution possible est la suivante:
@@ -88,7 +98,7 @@ droite.courant()
 ```
 Cette on peut appler cette fonction courant.classer() et l'ajouter à notre répertoire de fonctions 
 
-S'ils pensent avoir trouvé un algorithme qui fonctionne, ils doivent réessayer en remélangeant les cartes pour voir si la procédure fonctionne encore. Si c'est le cas, ils doivent essayer encore une fois, mais cette fois un-e élève fait les manipulations avec les cartes faces cachées
+S'ils pensent avoir trouvé un algorithme qui fonctionne, ils doivent le "rédiger" de manière non ambigüe et réessayer en remélangeant les cartes pour voir si la procédure fonctionne encore. Si c'est le cas, ils doivent essayer encore une fois, mais cette fois un-e élève fait les manipulations avec les cartes faces cachées
 (cet élève ne peut pas voir les nombres sur les cartes et l'autre élève prend le rôle du comparateur et ne fait qu'indiquer quelle carte du comparateur est plus grande ou plus petite. De cette manière les élèves peuvent être certain-e-s que l'algorithme fonctionne sans jugement humain.
 
 Pendant cette phase, l'enseigant-e passe dans les groupes, clarifie au besoin, oriente la recherche des élèves, propose éventuellement des
@@ -97,9 +107,10 @@ simplifications potentielle, et valide les méthodes trouvées.
 
 ## 3 Mise en commun (15 min)
 
+Selon le temps à disposition, il est de regrouper deux groupes de deux (ayant chcun un autre algorithhme, si possible) et chacun présente son algorithme à l'autre groupe qui doit essayer de l'exécuter à l'aveugle. 
+
 Chaque groupe va décrire sa méthode au reste de la classe, et l'illustrer en triant les élèves des autres groupes. Chaque élève prend une feuille
-de papier est écrit un nombre dessus. Les élève se disposent ensuite en file, ce qui représente l'équivalent du tas de carte. L'enseigant-e indique au sol (par exemple avec du scotch carrossier) la position du comparateur. Le groupe qui présente sa méthode trie ainsi les élèves selon le numéros qu'ils ont indiqué sur leur feuille. Pendant ce temps les élèves essaient de comprendre la méthode exposée. L'enseignant peut ensuite présenter
-les algorithmes qu'il souhaite également aborder. 
+de papier est écrit un nombre dessus. Les élève se disposent ensuite en file, ce qui représente l'équivalent du tas de carte. L'enseigant-e indique au sol (par exemple avec du scotch carrossier) la position du comparateur. Le groupe qui présente sa méthode trie ainsi les élèves selon le numéros qu'ils ont indiqué sur leur feuille. Pendant ce temps les élèves essaient de comprendre la méthode exposée. L'enseignant peut ensuite présenter les algorithmes qu'il souhaite également aborder. 
 
 
 ## 4 Formalisation (20 min)
@@ -125,7 +136,6 @@ répéter jusqu'à courant.vide():
     gauche.classer()
 gauche.courant()
 ```
-
 
 ### Remarque
 Les tris par sélection et pivot (quicksort) ne sont pas vraiment adaptés à ce dispositif physique basé sur les

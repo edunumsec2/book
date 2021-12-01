@@ -200,7 +200,9 @@ for c in d:
 print(inverse)
 ```
 
+<br> <br>
 
+## Exercices
 
 ````{admonition} Exercice 1 : 
 :class: note

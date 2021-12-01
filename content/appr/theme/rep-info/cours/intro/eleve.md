@@ -1,12 +1,12 @@
 
-# *Introduction*
+# Introduction
 
 Dans ce chapitre on s'intéresse à la manière dont un {glo}`ordinateur|ordinateur` représente l'information afin de pouvoir la traiter automatiquement.   
 
 
 ````{admonition} Le saviez-vous ?
 :class: hint
-Le mot **informatique** est la concaténation de "information" et "automatique".
+Le mot **informatique** est la concaténation de «information» et «automatique».
 ````
 
 En informatique, l'information est un élément de connaissance (texte, image, son, ...) susceptible d'être {glo}`numerisation|numérisé`, {glo}`stockage|stocké` et/ou {glo}`transmission|transmis` à l'aide d'un support et d'un mode de codification normalisé.
@@ -110,7 +110,7 @@ Le codage de la lettre "s" dans le carré de Polybe est quatre torches à gauche
 :width: 400px
 :height: 300px
 ```
-Le codage de la lettre «s» dans le carré de Polybe est quatre torches à gauche, trois torches à droite. 
+Le codage de la lettre «s» dans le carré de Polybe est quatre torches à gauche, trois torches à droite 
 
 
 ````{admonition} Anecdote
@@ -142,7 +142,7 @@ Le télégraphe de Chappe émet des signaux ressemblant aux bras d'un être huma
 :width: 400px
 :height: 300px
 ```
-Le télégraphe de Chappe émet des signaux ressemblant aux bras d'un être humain. 
+Le télégraphe de Chappe émet des signaux ressemblant aux bras d'un être humain
 
 
 ````{admonition} Anecdote
@@ -177,7 +177,7 @@ Le code Morse est le système de représentation de l'information qui se rapproc
 :width: 500
 :height: 500
 ```
-Le code Morse est le système de représentation de l'information qui se rapproche le plus du langage binaire de l'informatique moderne.
+Le code Morse est le système de représentation de l'information qui se rapproche le plus du langage binaire de l'informatique moderne
 
 
 
@@ -262,17 +262,6 @@ Dans le code [ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_In
 ````
 </center>
 -->
-
-
-```{image} media/binary.gif
-:width: 450
-:height: 350
-```
-Dans le code [ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange), chaque lettre de l'alphabet est codée sur 8 bits. 
-
-
-
-<!-- TODO #32 @elliotvaucher : panel question et darkmode -->
 
 ```{question} Question 1
 Pourquoi la lettre "e", en Morse, est-elle représentée par un seul point ? 

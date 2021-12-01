@@ -156,7 +156,9 @@ Il est possible de personnaliser le pinceau et l'apparence du curseur ou de choi
 Plus d'infos sous [Python - Tortue graphique](https://docs.python.org/fr/3/library/turtle.html#module-turtle).
 
 
-<br>
+<br> <br>
+
+## Exercices
 
 ````{admonition} Exercice 1 : Pythagore (toujours...) 🔌
 :class: note
