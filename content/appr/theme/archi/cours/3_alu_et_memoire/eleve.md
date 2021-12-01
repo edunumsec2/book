@@ -1,7 +1,7 @@
 
 # 3. ALU et mémoire
 
-Dans cette section, nous continuons notre exploration de comment les portes logiques, selon leur assemblages, fournissent les fonctionnalités de base des ordinateurs. En particulier, nous nous intéressons à comment faire effectuer plusieurs opérations à un ordinateur via ce qui s'appelle une unité arithmétique et logique, puis nous voyons comment l'ordinateur se rappelle les résultats des calculs intermédiaires via des bascules.
+Dans cette section, nous continuons notre exploration de comment les portes logiques, selon leur assemblage, fournissent les fonctionnalités de base des ordinateurs. En particulier, nous nous intéressons à comment faire effectuer plusieurs opérations à un ordinateur via ce qui s'appelle une unité arithmétique et logique, puis nous voyons comment l'ordinateur se rappelle les résultats des calculs intermédiaires via des bascules.
 
 
 ## Unité arithmétique et logique
@@ -130,7 +130,7 @@ La porte **OU** peut ainsi servir à combiner deux signaux, pour autant que l'un
 
 Avec tout ceci, on peut ainsi construire un sélecteur de signal. Supposons qu'on ait les deux signaux $A$ et $B$ : nous pouvons construire un circuit qui combine soit $A$ tel quel et $B$ annulé, soit $A$ annulé et $B$ tel quel. Cela nous aidera pour notre projet initial ! Il faut cependant s'assurer que $A$ soit chaque fois annulé quand $B$ passe tel quel, et inversement. Ceci peut se faire en réutilisant l'idée d'une entrée de contrôle $Op$ ainsi. Nous avons ainsi deux cas :
 
- * Lorsque $Op = 0$, on va sélectionner $A$ et annuler $B$. On va donc faire passer $A$ à travers une porte **ET** à laquelle on donne 1 à l'autre entrée, et faire passer $B$ à travers une porte **ET** à laquelle on donne 0 à la secondre entrée.
+ * Lorsque $Op = 0$, on va sélectionner $A$ et annuler $B$. On va donc faire passer $A$ à travers une porte **ET** à laquelle on donne 1 à l'autre entrée, et faire passer $B$ à travers une porte **ET** à laquelle on donne 0 à la seconde entrée.
  * Lorsque $Op = 1$, on va faire exactement l'inverse: sélectionner $B$ et annuler $A$. On donnera donc un 0 à la porte **ET** qui filtre $A$, et $1$ à la porte **ET** qui filtre $B$.
 
 En relisant ces lignes, on voit que ce qu'on donne à la seconde entrée de la porte qui filtre $B$ est toujours la même chose que $Op$, et que ce qu'on donne à la seconde entrée de la porte qui filtre $A$ est toujours l'inverse de $Op$. On peut donc construire ce circuit avec un inverseur en plus :
@@ -202,7 +202,7 @@ Pour recombiner ces sorties filtrées, il ne nous reste plus qu'à les connecter
 
 Essayez ce circuit pour confirmer qu'il agit comme un sélecteur : lorsque $Op=0$, on aura sur la sortie $Z=A$, et lorsque $Op=1$, on aura $Z=B$.
 
-Ceci nous permet de compléter le circuit lacunaire de début de chapitre pour sélectionner avec le même mécanime soit le **OU** soit le **ET** de nos deux entrées $X$ et $Y$. On ajoute notre sélecteur en connectant à l'entrée $A$ le signal représentant $X$ **OU** $Y$, et à l'entrée $B$ le signal représentant $X$ **ET** $Y$ :
+Ceci nous permet de compléter le circuit lacunaire de début de chapitre pour sélectionner avec le même mécanisme soit le **OU** soit le **ET** de nos deux entrées $X$ et $Y$. On ajoute notre sélecteur en connectant à l'entrée $A$ le signal représentant $X$ **OU** $Y$, et à l'entrée $B$ le signal représentant $X$ **ET** $Y$ :
 
 ```{logic}
 :height: 300
@@ -248,7 +248,7 @@ Nous avons ici construit un circuit qui, grâce à un bit de contrôle $Op$, sé
 
 
 `````{admonition} Exercice 2 : construction d'un sélecteur
-En réutilisant les principes appliqués ci-dessus, construisez un circuit à deux bits d'entrées $X$ et $Y$ et un bit de contôle $Op$ qui donnera sur sa sortie $Z$ :
+En réutilisant les principes appliqués ci-dessus, construisez un circuit à deux bits d'entrées $X$ et $Y$ et un bit de contrôle $Op$ qui donnera sur sa sortie $Z$ :
 
  * Le **OU** exclusif de $X$ et $Y$, lorsque $Op=0$ ;
  * L'inverse du bit $Y$, lorsque $Op=1$.
@@ -309,7 +309,7 @@ Voici un circuit qui réutilise le sélecteur de signal et qui fournit à ce sé
 
 
 `````{admonition} Exercice 3 : inverseur conditionnel
-En réutilisant les principes appliqués ci-dessus, contruisez un circuit à une entrée $X$ avec un bit de contrôle $Op$ qui donnera sur sa sortie $Z$ :
+En réutilisant les principes appliqués ci-dessus, construisez un circuit à une entrée $X$ avec un bit de contrôle $Op$ qui donnera sur sa sortie $Z$ :
 
  * $X$ tel quel, lorsque $Op=0$ ;
  * $X$ inversé, lorsque $Op=1$.
@@ -409,7 +409,7 @@ Nous présentons ici une ALU simple à 4 bits :
 }
 ```
 
-Cette ALU sait effectuer l'addition ou la soustration de deux nombres entiers représentés sur 4 bits. Elle a ainsi 8 bits d'entrée pour les données et 4 bits de sorties, à gauche et à droite. En plus de l'addition et de la soustraction, elle sait aussi faire les opérations logiques **ET** et **OU** — en tout donc, quatre opérations. Pour sélectionner l'une des quatre opération, on ne peut plus se contenter d'un seul bit de contrôle, mais nous allons en utiliser deux pour avoir quatre combinaisons possibles. Ce sont les deux entrées supérieures de l'ALU. La convention utilisée pour la sélection de l'opération est la suivante :
+Cette ALU sait effectuer l'addition ou la soustraction de deux nombres entiers représentés sur 4 bits. Elle a ainsi 8 bits d'entrée pour les données et 4 bits de sorties, à gauche et à droite. En plus de l'addition et de la soustraction, elle sait aussi faire les opérations logiques **ET** et **OU** — en tout donc, quatre opérations. Pour sélectionner l'une des quatre opérations, on ne peut plus se contenter d'un seul bit de contrôle, mais nous allons en utiliser deux pour avoir quatre combinaisons possibles. Ce sont les deux entrées supérieures de l'ALU. La convention utilisée pour la sélection de l'opération est la suivante :
 
 | $Op$ | Opération effectuée |
 | :--: | :-----------------: | 
@@ -420,7 +420,7 @@ Cette ALU sait effectuer l'addition ou la soustration de deux nombres entiers re
 
 
 `````{admonition} Exercice 4 : test de l'ALU
-Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effectuer l'opération $7 + 2 = 9$. Connectez les 4 bits des entrées et de la sortie à des afficheurs de demi-octet pour vérifier leur fonctionnement. Connectez ensuite une entrée pour le bit de contrôle qui permettra d'effecter la soustraction avec les mêmes données d'entrée, donc $7 - 2 = 5$.
+Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effectuer l'opération $7 + 2 = 9$. Connectez les 4 bits des entrées et de la sortie à des afficheurs de demi-octet pour vérifier leur fonctionnement. Connectez ensuite une entrée pour le bit de contrôle qui permettra d'effectuer la soustraction avec les mêmes données d'entrée, donc $7 - 2 = 5$.
 
 ```{logic}
 :height: 400
@@ -500,7 +500,7 @@ L'ALU a deux sorties en plus, en bas du composant :
  * la sortie $Z$ (pour _Zero_) vaut 1 lorsque tous les bits de sortie valent 0.
 
 `````{admonition} Exercice 5 : une ALU comme comparateur
-En programmation, c'est fréquent de tester, par exemple dans un condition avec un `if`, si deux valeurs sont égales. Par exemple, ce fragment de code affichera « Ces valeurs sont égales! » uniquement si les deux nombres entiers donnés lors de l'exécution du code sont les mêmes:
+En programmation, c'est fréquent de tester, par exemple dans une condition avec un `if`, si deux valeurs sont égales. Par exemple, ce fragment de code affichera « Ces valeurs sont égales! » uniquement si les deux nombres entiers donnés lors de l'exécution du code sont les mêmes:
 
 ```{codeplay}
 A = int(input("Quel est le premier nombre? "))
@@ -585,7 +585,7 @@ Une porte **OU-X** peut être vue comme un comparateur de deux bits : sa sorti
 ````
 
 ````{dropdown} Corrigé sans ALU — approche logique
-Cette solution utilise des portes **OU-X** comme comparateurs. On voit ici que 4 portes **OU-X** comparent deux à deux les 8 bits d'entrée. Leurs sorties sont ensuite combinées avec des portes **OU**, afin d'obtenir un signal qui vaudra 1 si au moins une différence est détectée, donc si les deux nombres d'entrées ne sont pas égaux. Il ne reste plus qu'à inverser ce signal pour obtenir la sortie demandée qui, selon la donnée, doit valoir 1 lorsque les nombre sont égaux.
+Cette solution utilise des portes **OU-X** comme comparateurs. On voit ici que 4 portes **OU-X** comparent deux à deux les 8 bits d'entrée. Leurs sorties sont ensuite combinées avec des portes **OU**, afin d'obtenir un signal qui vaudra 1 si au moins une différence est détectée, donc si les deux nombres d'entrées ne sont pas égaux. Il ne reste plus qu'à inverser ce signal pour obtenir la sortie demandée qui, selon la donnée, doit valoir 1 lorsque les nombres sont égaux.
 
 ```{logic}
 :height: 330
@@ -643,7 +643,7 @@ En résumé, nous avons appris ici ce qu'est une unité arithmétique et logique
 ````{admonition} Pour aller plus loin
 :class: attention
 
-Notre petite ALU peut aussi faire des calculs en utilisant une représentation signée des nombres entiers. Sur 4 bits, une représentation en complément à deux peut représenter les nombres de $-8$ à $+7$. Il est possible d'utiliser les mêmes afficheurs de demi-octets en mode signé pour effecter des opérations arithmétiques avec des valeurs négatives, par exemple, ici, $-2 - (-4) = 2$ :
+Notre petite ALU peut aussi faire des calculs en utilisant une représentation signée des nombres entiers. Sur 4 bits, une représentation en complément à deux peut représenter les nombres de $-8$ à $+7$. Il est possible d'utiliser les mêmes afficheurs de demi-octets en mode signé pour effectuer des opérations arithmétiques avec des valeurs négatives, par exemple, ici, $-2 - (-4) = 2$ :
 
 ```{logic}
 :height: 400
@@ -724,11 +724,11 @@ Notez que grâce à la représentation en complément à deux, la circuiterie in
 
 ## Mémoire
 
-Les {glo}`transistor|transistors`, les {glo}`portelogique|portes logiques` et leur représentation en {glo}`tableverite|tables de vérités`, permettent de manipuler des 0 et des 1 au niveau physique.. Tant qu'un courant électrique se déplace dans les {glo}`circuit|circuits`, on est capable de le transformer, de le laisser passer ou de l'arrêter, dans le but d'exprimer des portes « ouvertes » ou des portes « fermées » et donc des nombres binaires. L'ALU va une étape plus loin et permet de choisir une opération à effecter en fonction de bits de contrôle supplémentaire, et livre le résultat de l'opération arithmétique ou logique choisie.
+Les {glo}`transistor|transistors`, les {glo}`portelogique|portes logiques` et leur représentation en {glo}`tableverite|tables de vérités`, permettent de manipuler des 0 et des 1 au niveau physique.. Tant qu'un courant électrique se déplace dans les {glo}`circuit|circuits`, on est capable de le transformer, de le laisser passer ou de l'arrêter, dans le but d'exprimer des portes « ouvertes » ou des portes « fermées » et donc des nombres binaires. L'ALU va une étape plus loin et permet de choisir une opération à effectuer en fonction de bits de contrôle supplémentaire, et livre le résultat de l'opération arithmétique ou logique choisie.
 
 Mais comment faire pour {glo}`stockage|stocker` cette information ? Comment faire pour que l'on se rappelle le résultat d'une addition effectuée par une ALU afin de pouvoir réutiliser cette valeur plus tard ? C'est là que nous avons besoin de _mémoire_.
 
-Dans les ordinateurs, il y a en fait plusieurs types de {glo}`stockage|mémoires`, qu'on peut classer en deux grandes catégories. La {glo}`memvolatile|mémoire volatile`, et la {glo}`memnonvolatile|mémoire non volatile`. La {glo}`memvolatile|mémoire volatile` s'efface quand la machine et éteinte. C'est le cas de la RAM (_random-access memory_), par exemple. La {glo}`memnonvolatile|mémoire non volatile`, elle, persiste. C'est le cas d'un disque dur ou d'un SSD (_solid-state drive_). Si un smartphone s'éteint alors que qu'on est en train de retoucher une photo sans avoir validé les modifications, ces retouches disparaissent. Elles étaient stockées sur la {glo}`memvolatile|mémoire volatile`. Par contre, au moment où ces retouches sont sauvegardées, elles s'inscrivent dans la {glo}`memnonvolatile|mémoire non volatile`.
+Dans les ordinateurs, il y a en fait plusieurs types de {glo}`stockage|mémoires`, qu'on peut classer en deux grandes catégories. La {glo}`memvolatile|mémoire volatile`, et la {glo}`memnonvolatile|mémoire non volatile`. La {glo}`memvolatile|mémoire volatile` s'efface quand la machine et éteinte. C'est le cas de la RAM (_random-access memory_), par exemple. La {glo}`memnonvolatile|mémoire non volatile`, elle, persiste. C'est le cas d'un disque dur ou d'un SSD (_solid-state drive_). Si un smartphone s'éteint inopinément alors qu'on est en train de retoucher une photo sans avoir validé les modifications, ces retouches disparaissent. Elles étaient stockées sur la {glo}`memvolatile|mémoire volatile`. Par contre, au moment où ces retouches sont sauvegardées, elles s'inscrivent dans la {glo}`memnonvolatile|mémoire non volatile`.
 
 On peut se demander pourquoi on n'utiliserait pas que de la mémoire non volatile, vu les « risques » posés par la mémoire volatile. La réponse est que la mémoire non volatile va probablement être entre 100 et 100 000 fois moins rapide que la mémoire volatile. On privilégie donc la mémoire volatile comme mémoire de travail rapide d'un ordinateur.
 
@@ -751,7 +751,7 @@ L'idée principale derrière la conception d'un circuit logique qui est capable 
 }
 ```
 
-Au début, les deux entrées de la porte valent 0, comme sa sortie. Si l'on essaie de faire passer l'entrée $X$ à 1, on voit que la sortie $Z$ passera à 1 elle aussi, comme il s'agit d'une porte **OU**. Mais comme $Z$ est aussi relié à l'autre entrée de la porte, on a maintenant un circuit dont on ne peux plus modifier la sortie : même si $X$ passe de nouveau à 0, l'autre entrée reste à 1 et suffit donc pour que $Z$ vale maintenant 1 indéfiniment. On est obligé de remettre le circuit complètement à zéro (l'équivalent de débrancher la prise de courant et de la rebrancher) pour obtenir à nouveau un 0 sur la sortie $Z$.
+Au début, les deux entrées de la porte valent 0, comme sa sortie. Si l'on essaie de faire passer l'entrée $X$ à 1, on voit que la sortie $Z$ passera à 1 elle aussi, comme il s'agit d'une porte **OU**. Mais comme $Z$ est aussi relié à l'autre entrée de la porte, on a maintenant un circuit dont on ne peut plus modifier la sortie : même si $X$ passe de nouveau à 0, l'autre entrée reste à 1 et suffit donc pour que $Z$ vale maintenant 1 indéfiniment. On est obligé de remettre le circuit complètement à zéro (l'équivalent de débrancher la prise de courant et de la rebrancher) pour obtenir à nouveau un 0 sur la sortie $Z$.
 
 Assurément, ce circuit n'est pas très intéressant : il se bloque dans un état sans retour possible. Serait-ce possible de construire un circuit un peu plus élaboré qui permettrait de choisir la valeur de sa sortie et de la conserver ? Ces circuits existent en effet et sont à la base du stockage de l'information dans les microprocesseurs. On appelle ces circuits des {glo}`verrou|verrous`, vu qu'ils « verrouillent » une valeur donnée.
 
@@ -795,7 +795,7 @@ Dans l'état normal de ce verrou, la sortie $Q$ vaut soit 1, soit 0, et les deux
 
 De manière similaire, l'entrée $R$, pour _reset_, sert à faire passer la valeur stockée par le du verrou à 0, et cet état reste 0 même lorsque $R$ est de nouveau « éteint ».
 
-On essaie en général d'éviter d'avoir un 1 sur $R$ et sur $S$ en même temps, cela place le verrou dans un état où $\bar{Q}$ n'est plus l'inverse de $Q$. Pour cette raison, nous allons plutôt créer le circuit comme suit — les connexions sont exactement les mêmes, mais les entrées $S$ et $R$ ne restent pas à 1 lorsqu'on clique dessus, elle retombent à 0 dès que le clic se termine.
+On essaie en général d'éviter d'avoir un 1 sur $R$ et sur $S$ en même temps, cela place le verrou dans un état où $\bar{Q}$ n'est plus l'inverse de $Q$. Pour cette raison, nous allons plutôt créer le circuit comme suit — les connexions sont exactement les mêmes, mais les entrées $S$ et $R$ ne restent pas à 1 lorsqu'on clique dessus, elles retombent à 0 dès que le clic se termine.
 
 ```{logic}
 :height: 160
@@ -829,7 +829,7 @@ On essaie en général d'éviter d'avoir un 1 sur $R$ et sur $S$ en même temps,
 }
 ```
 
-Ces verrous sont communs, et pour le reste du chapitre, on simplifera la notation pour les représenter ainsi, sans changement de fonctionnalité, mais en faisant abstraction des détails internes :
+Ces verrous sont communs, et pour le reste du chapitre, on simplifiera la notation pour les représenter ainsi, sans changement de fonctionnalité, mais en faisant abstraction des détails internes :
 
 ```{logic}
 :height: 100
@@ -866,7 +866,7 @@ Un souci avec le verrou SR est qu'on a rarement un signal d'entrée qui soit fac
 
 On va utiliser pour cela un circuit similaire, mais qui fonctionne un peu différemment, qui s'appelle une **bascule D**[^flipflop] :
 
-[^flipflop]: Il y a une différence conceptuelle fondamentale entre les verrous et les bascules : les verrous sont des composants dits _asynchrones_, dont l'état peut changer dès qu'une des entrées change, alors que les bascules sont des composants dits _synchrones_, qui ont une entrée appelé Horloge, et dont l'état ne changera qu'au moment où le signal d'horloge effetuera une transition (dans notre cas, passera de 0 à 1). Une discussion plus poussée de ces différence dépasse le cadre de ce cours.
+[^flipflop]: Il y a une différence conceptuelle fondamentale entre les verrous et les bascules : les verrous sont des composants dits _asynchrones_, dont l'état peut changer dès qu'une des entrées change, alors que les bascules sont des composants dits _synchrones_, qui ont une entrée appelée Horloge, et dont l'état ne changera qu'au moment où le signal d'horloge effectuera une transition (dans notre cas, passera de 0 à 1). Une discussion plus poussée de ces différences dépasse le cadre de ce cours.
 
 ```{logic}
 :height: 120
@@ -907,7 +907,7 @@ Pour aller plus loin, une vidéo de résumé qui parle aussi des bascules et des
 
 
 `````{admonition} Exercice 6 : stocker deux bits
-Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$, et, d'autre part, le **ET** de ces deux mêmes entrées. À l'aide de bascules D, compétez le circuit de manière à ce qu'il stocke ces deux valeurs calculées lors d'un coup d'horloge et les sortes sur les sortes $P$ et $Q$, respectivement. Faites finalement en sorte que le signal $Reset$, si activé, réinitialise les bascules à 0. Vérifiez qu'une fois les valeurs stockées par les bascules, des changements sur les entrées $X$ et $Y$ n'aient pas d'effet direct sur $P$ et $Q$.
+Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$, et, d'autre part, le **ET** de ces deux mêmes entrées. À l'aide de bascules D, complétez le circuit de manière à ce qu'il stocke ces deux valeurs calculées lors d'un coup d'horloge et les sorte sur les sorties $P$ et $Q$, respectivement. Faites finalement en sorte que le signal $Reset$, si activé, réinitialise les bascules à 0. Vérifiez qu'une fois les valeurs stockées par les bascules, des changements sur les entrées $X$ et $Y$ n'aient pas d'effet direct sur $P$ et $Q$.
 
 ```{logic}
 :height: 400
@@ -1084,34 +1084,352 @@ Si ce petit circuit fonctionne à 1 Hz, les appareils que nous utilisons aujourd
 
 ### Addition en plusieurs étapes
 
-Dans notre dernier exemple, nous allons construire un circuit capable d'effectuer l'addition de plusieurs nombres: par exemple, d'évaluer la somme $1 + 4 + 5 + 3$ pour trouver $13$.
+Dans cet exemple final, nous allons construire un circuit capable d'effectuer l'addition de plusieurs nombres ; par exemple, d'évaluer la somme $1 + 4 + 5 + 3$ pour trouver $13$.
 
-Si ce calcul a l'air simple, il s'y cache une subtilité: TODO
+Si ce calcul a l'air simple, il s'y cache une subtilité : nous n'avons aucun circuit auquel nous pourrions donner quatre nombres et qui en ferait la somme. Nous ne savons additionner que deux nombres à la fois. Mais nous pouvons additionner progressivement les nombres un à un à une sorte d'« accumulateur » qui stockerait les résultats intermédiaires. Au début, avant d'avoir additionné quoi que ce soit, cet accumulateur représenterait un 0. Ensuite, on y additionnerait, l'un après l'autre, chacun des nombres du calcul ainsi :
 
-TODO circuit qui fait cela, description de ce circuit, test du circuit
+$$\begin{aligned}
+0 + 1 &= 1 \\
+1 + 4 &= 5 \\
+5 + 5 &= 10 \\
+10 + 3 &= 13
+\end{aligned}$$
+
+Chacune de ces lignes a la forme « accumulateur + nombre à additionner = nouvel accumulateur ».
+
+L'avantage de procéder ainsi, en décomposant à l'extrême, est que chaque étape est une addition de précisément deux nombres — et nous savons faire de telles additions avec une ALU.
+
+Commençons à créer un circuit capable de faire ceci. Notre ALU opérant sur des nombres de 4 bits, prenons le parti de représenter notre accumulateur via également 4 bits — 4 cellules mémoire, et donc 4 bascules. Pour remettre l'accumulateur à zéro, nous allons connecter un signal unique au _reset_ de chacune de ces bascules. Nous allons aussi, comme chaque fois, connecter un signal d'horloge aux bascules, pour leur indiquer leur moment où elles doivent stocker les valeurs qui sont sur leurs entrées respectives. Ajoutons aussi une ALU pour effectuer l'addition et un afficheur décimal pour les 4 bits stockés dans les bascules.
+
+Cela nous donne ce début de circuit, qui pour l'instant n'est pas fonctionnel :
+
+```{logic}
+:height: 510
+:mode: tryout
+
+{
+  "in": [
+    {
+      "pos": [340, 450],
+      "orient": "n",
+      "id": 40,
+      "name": "Reset",
+      "val": 0,
+      "isPushButton": true
+    },
+    {
+      "pos": [280, 450],
+      "orient": "n",
+      "id": 45,
+      "name": "Horloge",
+      "val": 0,
+      "isPushButton": true
+    }
+  ],
+  "components": [
+    {
+      "type": "alu",
+      "pos": [180, 170],
+      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "out": [10, 11, 12, 13, 14, 15]
+    },
+    {
+      "type": "flipflop-d",
+      "pos": [390, 60],
+      "in": [16, 17, 18, 19],
+      "out": [20, 21],
+      "state": 0
+    },
+    {
+      "type": "flipflop-d",
+      "pos": [390, 160],
+      "in": [22, 23, 24, 25],
+      "out": [26, 27],
+      "state": 0
+    },
+    {
+      "type": "flipflop-d",
+      "pos": [390, 260],
+      "in": [28, 29, 30, 31],
+      "out": [32, 33],
+      "state": 0
+    },
+    {
+      "type": "flipflop-d",
+      "pos": [390, 360],
+      "in": [34, 35, 36, 37],
+      "out": [38, 39],
+      "state": 0
+    }
+  ],
+  "displays": [
+    {"type": "nibble", "pos": [550, 190], "id": [46, 47, 48, 49], "name": "Acc."}
+  ],
+  "wires": [
+    [40, 37, {"waypoints": [[340, 400]]}],
+    [40, 31, {"waypoints": [[340, 300, "n"]]}],
+    [40, 25, {"waypoints": [[340, 200, "n"]]}],
+    [40, 19, {"waypoints": [[340, 100, "n"]]}],
+    [45, 35, {"waypoints": [[280, 380]]}],
+    [45, 29, {"waypoints": [[280, 280, "n"]]}],
+    [45, 23, {"waypoints": [[280, 180, "n"]]}],
+    [45, 17, {"waypoints": [[280, 80, "n"]]}],
+    [20, 46, {"waypoints": [[480, 40]]}],
+    [26, 47, {"waypoints": [[480, 140]]}],
+    [32, 48, {"waypoints": [[480, 240]]}],
+    [38, 49, {"waypoints": [[480, 340]]}]
+  ]
+}
+```
+
+Connectons maintenant les entrées de l'ALU. On se rappelle qu'à chaque étape, l'ALU calculera une addition de la forme « accumulateur + nombre à additionner = nouvel accumulateur ». L'entrée $A$ de l'ALU est la valeur de l'accumulateur, donc ce qui est stocké par nos bascules. On connecte donc la sortie $Q$ de chaque bascule vers le bit d'entrée $A$ correspondant de l'ALU.
+
+L'entrée $B$ de l'ALU est le nouveau nombre à additionner. Pour cela, nous ajoutons simplement quatre entrées normales, ainsi qu'un afficheur décimal pour nous simplifier la lecture du nombre représenté par ces entrées :
+
+```{logic}
+:height: 550
+:mode: tryout
+
+{
+  "in": [
+    {
+      "pos": [340, 490],
+      "orient": "n",
+      "id": 40,
+      "name": "Reset",
+      "val": 0,
+      "isPushButton": true
+    },
+    {"pos": [40, 220], "id": 41, "val": 0},
+    {"pos": [40, 250], "id": 42, "val": 0},
+    {"pos": [40, 280], "id": 43, "val": 0},
+    {"pos": [40, 310], "id": 44, "val": 0},
+    {
+      "pos": [280, 490],
+      "orient": "n",
+      "id": 45,
+      "name": "Horloge",
+      "val": 0,
+      "isPushButton": true
+    }
+  ],
+  "displays": [
+    {
+      "type": "nibble",
+      "pos": [100, 390],
+      "orient": "s",
+      "id": [50, 51, 52, 53],
+      "name": "B"
+    },
+    {"type": "nibble", "pos": [550, 230], "id": [46, 47, 48, 49], "name": "Acc."}
+  ],
+  "components": [
+    {
+      "type": "alu",
+      "pos": [180, 210],
+      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "out": [10, 11, 12, 13, 14, 15]
+    },
+    {
+      "type": "flipflop-d",
+      "pos": [390, 100],
+      "in": [16, 17, 18, 19],
+      "out": [20, 21],
+      "state": 0
+    },
+    {
+      "type": "flipflop-d",
+      "pos": [390, 200],
+      "in": [22, 23, 24, 25],
+      "out": [26, 27],
+      "state": 0
+    },
+    {
+      "type": "flipflop-d",
+      "pos": [390, 300],
+      "in": [28, 29, 30, 31],
+      "out": [32, 33],
+      "state": 0
+    },
+    {
+      "type": "flipflop-d",
+      "pos": [390, 400],
+      "in": [34, 35, 36, 37],
+      "out": [38, 39],
+      "state": 0
+    }
+  ],
+  "wires": [
+    [40, 37, {"waypoints": [[340, 440]]}],
+    [40, 31, {"waypoints": [[340, 340, "n"]]}],
+    [40, 25, {"waypoints": [[340, 240, "n"]]}],
+    [40, 19, {"waypoints": [[340, 140, "n"]]}],
+    [20, 0, {"waypoints": [[430, 80], [430, 50], [130, 50], [130, 130]]}],
+    [26, 1, {"waypoints": [[440, 180], [440, 40], [120, 40], [120, 150]]}],
+    [32, 2, {"waypoints": [[450, 280], [450, 30], [110, 30], [110, 170]]}],
+    [38, 3, {"waypoints": [[460, 380, "n"], [460, 20], [100, 20], [100, 190]]}],
+    [41, 4],
+    [42, 5],
+    [43, 6],
+    [44, 7],
+    [45, 35, {"waypoints": [[280, 420]]}],
+    [45, 29, {"waypoints": [[280, 320, "n"]]}],
+    [45, 23, {"waypoints": [[280, 220, "n"]]}],
+    [45, 17, {"waypoints": [[280, 120, "n"]]}],
+    [41, 50],
+    [42, 51],
+    [43, 52],
+    [44, 53],
+    [20, 46, {"waypoints": [[480, 80]]}],
+    [26, 47, {"waypoints": [[480, 180]]}],
+    [32, 48, {"waypoints": [[480, 280]]}],
+    [38, 49, {"waypoints": [[480, 380]]}]
+  ]
+}
+```
+
+Il reste à connecter la sortie $S$ de l'ALU. Cette sortie nous livre la prochaine valeur à stocker dans l'accumulateur, et nous pouvons ainsi la connecter aux quatre entrées $D$ des bascules.
+
+Voici le circuit final :
+
+```{logic}
+:height: 550
+:mode: tryout
+
+{
+  "in": [
+    {
+      "pos": [340, 490],
+      "orient": "n",
+      "id": 40,
+      "name": "Reset",
+      "val": 0,
+      "isPushButton": true
+    },
+    {"pos": [40, 220], "id": 41, "val": 0},
+    {"pos": [40, 250], "id": 42, "val": 0},
+    {"pos": [40, 280], "id": 43, "val": 0},
+    {"pos": [40, 310], "id": 44, "val": 0},
+    {
+      "pos": [280, 490],
+      "orient": "n",
+      "id": 45,
+      "name": "Horloge",
+      "val": 0,
+      "isPushButton": true
+    }
+  ],
+  "displays": [
+    {
+      "type": "nibble",
+      "pos": [100, 390],
+      "orient": "s",
+      "id": [50, 51, 52, 53],
+      "name": "B"
+    },
+    {"type": "nibble", "pos": [550, 230], "id": [46, 47, 48, 49], "name": "Acc."}
+  ],
+  "components": [
+    {
+      "type": "alu",
+      "pos": [180, 210],
+      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "out": [10, 11, 12, 13, 14, 15]
+    },
+    {
+      "type": "flipflop-d",
+      "pos": [390, 100],
+      "in": [16, 17, 18, 19],
+      "out": [20, 21],
+      "state": 0
+    },
+    {
+      "type": "flipflop-d",
+      "pos": [390, 200],
+      "in": [22, 23, 24, 25],
+      "out": [26, 27],
+      "state": 0
+    },
+    {
+      "type": "flipflop-d",
+      "pos": [390, 300],
+      "in": [28, 29, 30, 31],
+      "out": [32, 33],
+      "state": 0
+    },
+    {
+      "type": "flipflop-d",
+      "pos": [390, 400],
+      "in": [34, 35, 36, 37],
+      "out": [38, 39],
+      "state": 0
+    }
+  ],
+  "wires": [
+    [10, 16, {"waypoints": [[260, 80]]}],
+    [11, 22, {"waypoints": [[260, 180]]}],
+    [12, 28, {"waypoints": [[260, 280]]}],
+    [13, 34, {"waypoints": [[260, 380]]}],
+    [40, 37, {"waypoints": [[340, 440]]}],
+    [40, 31, {"waypoints": [[340, 340, "n"]]}],
+    [40, 25, {"waypoints": [[340, 240, "n"]]}],
+    [40, 19, {"waypoints": [[340, 140, "n"]]}],
+    [20, 0, {"waypoints": [[430, 80], [430, 50], [130, 50], [130, 130]]}],
+    [26, 1, {"waypoints": [[440, 180], [440, 40], [120, 40], [120, 150]]}],
+    [32, 2, {"waypoints": [[450, 280], [450, 30], [110, 30], [110, 170]]}],
+    [38, 3, {"waypoints": [[460, 380, "n"], [460, 20], [100, 20], [100, 190]]}],
+    [41, 4],
+    [42, 5],
+    [43, 6],
+    [44, 7],
+    [45, 35, {"waypoints": [[280, 420]]}],
+    [45, 29, {"waypoints": [[280, 320, "n"]]}],
+    [45, 23, {"waypoints": [[280, 220, "n"]]}],
+    [45, 17, {"waypoints": [[280, 120, "n"]]}],
+    [41, 50],
+    [42, 51],
+    [43, 52],
+    [44, 53],
+    [20, 46, {"waypoints": [[480, 80]]}],
+    [26, 47, {"waypoints": [[480, 180]]}],
+    [32, 48, {"waypoints": [[480, 280]]}],
+    [38, 49, {"waypoints": [[480, 380]]}]
+  ]
+}
+```
+
+Ce circuit fonctionne ainsi : au début du calcul, on réinitialise les bascules à zéro avec le signal $Reset$. Ensuite, on compose le prochain nombre à additionner sur l'entrée $B$. L'ALU va calculer immédiatement la somme $A + B$, mais ce n'est qu'au prochain coup d'horloge que cette somme sera stockée dans les bascules et apparaîtra ainsi à droite. Après avoir donné ce coup d'horloge, donc, on pourra à nouveau composer sur l'entrée $B$ le prochain nombre à additionner, et ainsi de suite.
+
+On réalise ici l'importance du coup d'horloge : si les bascules stockaient immédiatement la valeur livrée par l'ALU sans attendre le coup d'horloge, on retrouverait presque sans délai cette valeur sur la sortie des bascules et donc… à l'entrée $A$ de l'ALU, qui recalculerait immédiatement la somme de cette valeur et de l'entrée $B$, livrerait le résultat sur la sortie vers les bascules, qui feraient à nouveau la propagation immédiate de ceci sur leurs sorties et sur l'entrée $A$ de l'ALU, etc. — le système s'emballerait. Le signal d'horloge veille à ce que l'opération de stockage et de propagation soit coordonnée et se passe au bon moment.
+
+`````{admonition} Exercice 9 : additions avec bascules
+Suivez la procédure décrite ci-dessus pour effectuer l'addition $1 + 4 + 5 + 3 = 13$.
+`````
 
 
-`````{admonition} Exercice 9 : bit de dépassement
-problème du carry, comment s'en souvenir? circuit à modifier
+<!-- TODO avons-nous besoin de cet exercice?
+`````{admonition} Exercice 10 : bit de dépassement
+Un problème avec le circuit actuel est qu'en cas de dépassement de capacité, (décrire problème du carry, comment s'en souvenir? circuit à modifier)
 
-TODO circuit de départ, mêne qu'en haut mais modifiable
+ajouter circuit de départ, mêne qu'en haut mais modifiable
 
 ````{dropdown} Corrigé
 La solution consiste à stocker aussi le bit de dépassement $V$ au sortir de l'ALU à chaque coup d'horloge. Pour cela, il nous faut ajouter une nouvelle bascule, dont l'entrée récupère la sortie $V$ de l'ALU et dont l'horloge et le _reset_ dont les mêmes signaux que pour les autres bascules.
 
-TODO circuit corrigé
+montrer circuit corrigé
 ````
 `````
+-->
 
 ## Récapitulatif
 
-Au cours des trois chapitres précédent, nous avons vu comment les portes logiques sont utilisées comme composants de base des ordinateurs. Nous avons d'abord exploré des portes simples comme **OU** et **ET**, puis montré comment ces portes peuvent être combinées en systèmes logiques plus complexes.
+Au cours des trois chapitres précédents, nous avons vu comment les portes logiques sont utilisées comme composants de base des ordinateurs. Nous avons d'abord exploré des portes simples comme **OU** et **ET**, puis montré comment ces portes peuvent être combinées en systèmes logiques plus complexes.
 
 Avec des portes, nous avons construit un additionneur de deux bits. Nous avons ensuite été à même, en enchaînant plusieurs additionneurs, de créer un système qui peut additionner non pas simplement deux bits, mais deux nombres entiers codés sur 4 bits chacun.
 
 Nous avons ensuite découvert l'unité arithmétique et logique, capable de réaliser plusieurs opérations différentes avec ses entrées en fonction de bits supplémentaires qui permettent de sélectionner l'opération à effectuer.
 
-Notre dernière étape d'exploration des systèmes logiques nous a menés aux verrous et aux bascules, des composants pensés pour stocker des bits de données et ainsi constituer des cellules de mémoire pour l'ordinateur. Nous avons enfin construit capable, avec une ALU et une série de bascules, d'additioner à la chaîne plusieurs nombres, en se rappelant les résultats des additions intermédiaires.
+Notre dernière étape d'exploration des systèmes logiques nous a menés aux verrous et aux bascules, des composants pensés pour stocker des bits de données et ainsi constituer des cellules de mémoire pour l'ordinateur. Nous avons enfin été capables, avec une ALU et une série de bascules, d'additionner à la chaîne plusieurs nombres, en nous rappelant les résultats des additions intermédiaires.
 
 Il existe bien d'autres éléments qui composent les ordinateurs et nous n'avons pas l'occasion de tous les explorer en détail. Dans la section qui suit, faisons un saut conceptuel et parlons de l'architecture générale des ordinateurs et de la manière dont les grands composants sont interconnectés pour permettre à un ordinateur de remplir les fonctions que nous lui connaissons.
 
