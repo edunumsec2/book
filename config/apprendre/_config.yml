@@ -37,8 +37,8 @@ sphinx:
       use_download_button: true
       repository_url: https://github.com/edunumsec2/book
       use_issues_button: true
-      use_repository_button: false
-      use_edit_page_button: true
+      use_repository_button: true
+      use_edit_page_button: false
       extra_navbar: ""
       extra_footer: |
         <p>
