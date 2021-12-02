@@ -25,12 +25,18 @@ Une ALU se construit avec des portes logiques, constituées de transistors, **co
 
 Chaque nouvelle couche d’abstraction peut être étudiée de manière autonome et donner lieu à une réflexion propre en faisant abstraction des détails de la couche supérieure.
 
+<br>
+
+Quid du futur des ordinateurs ? Suivant quels axes va se définir l'amélioration de leurs performances ?
+
+
 Une étape semble se franchir aujourd'hui avec une réflexion menée concernant la définition de cette architecture classique quaternaire de Von Neumann. Cette nouvelle architecture s'inspire directement du fonctionnement du cerveau, composé de synapses jouant à la fois le rôle de mémoire et de calculateur. Il est alors question de faire jouer à la mémoire un rôle calculatoire et de fusionner les deux fonctions. 
 
 Cette approche, 80 ans après Von Neumann, semble apporter des gains en terme de performance exceptionnel, au niveau de la rapidité et de la gestion mémoire.
 
 
-
+<br>
+<br>
 
 
 
