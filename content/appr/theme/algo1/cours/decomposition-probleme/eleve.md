@@ -36,7 +36,7 @@ width: 100%
 
 ```
 
-Dans le cas de la recette d'une omelette, nous avons décomposé la marche à suivre en étapes à réaliser dans un certain ordre. Il en est de même pour un {glo}`algo|algorithme`. Pour résoudre un problème, il faut d'abord **<span style="color:rgb(89, 51, 209)">décomposer le problème en sous-problèmes</span>** que l'on *sait résoudre*. La solution de chaque sous-problème donne lieu à une étape qu'il faudra exécuter pour arriver à un résultat. Voici les sous-problèmes que certaines étapes ci-dessus permettent de résoudre. Afin d'extraire le contenu édible de l'œuf, il faut casser les oeufs. Pour que l'omelette ait une jolie couleur uniforme, il faut mélanger le jaune et le blanc d'œuf. Cette dernière étape ne serait pas du tout pertinente si le problème que l'on essaie de résoudre est la préparation d'un oeuf au plat. *<span style="color:rgb(13, 204, 166)">L’{glo}`algo|algorithme` décrit donc toutes les opérations qu'il faut effectuer pour arriver à ce résultat</span>*. Nous allons ainsi définir l’{glo}`algo|algorithme` comme **<span style="color:rgb(89, 51, 209)">une suite d’opérations qui permettent de résoudre un problème</span>**. 
+Dans le cas de la recette d'une omelette, nous avons décomposé la marche à suivre en étapes à réaliser dans un certain ordre. Il en est de même pour un {glo}`algo|algorithme`. Pour résoudre un problème, il faut d'abord **<span style="color:rgb(89, 51, 209)">décomposer le problème en sous-problèmes</span>** que l'on *sait résoudre*. La solution de chaque sous-problème donne lieu à une étape qu'il faudra exécuter pour arriver à un résultat. Voici les sous-problèmes que certaines étapes ci-dessus permettent de résoudre. Afin d'extraire le contenu édible de l'œuf, il faut casser les œufs. Pour que l'omelette ait une jolie couleur uniforme, il faut mélanger le jaune et le blanc d'œuf. Cette dernière étape ne serait pas du tout pertinente si le problème que l'on essaie de résoudre est la préparation d'un œuf au plat. *<span style="color:rgb(13, 204, 166)">L’{glo}`algo|algorithme` décrit donc toutes les opérations qu'il faut effectuer pour arriver à ce résultat</span>*. Nous allons ainsi définir l’{glo}`algo|algorithme` comme **<span style="color:rgb(89, 51, 209)">une suite d’opérations qui permettent de résoudre un problème</span>**. 
 
 Le langage utilisé pour écrire un programme doit être extrêment précis, sans quoi une machine ne pourrait pas le comprendre. Nous avons vu qu'un algorithme n'a pas besoin d'être compris par une machine, mais seulement par les humains. Ainsi, le langage que l'on va utiliser pour exprimer un algorithme sera plus libre que celui utilisé pour coder un programme. Ce langage **peut varier d'une personne à l'autre** et se rapproche dans notre cas de la langue française, comme le montre cet exemple :
 
@@ -206,7 +206,7 @@ A quoi correspondent les ingrédients d’un algorithme dans l’exemple de la r
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
- Les données en entrée sont les œufs, les opérations sont les étapes 1 à 4 de la recette et finalement le résultat en sortie est l’omelette. On peut considérer le matériel culinaire (bol, fourchette, poêle, spatule) comme du matériel informatique à notre disposition, capable de traiter des données (oeufs). En effet on peut cuire plein d’autres aliments dans une poêle.
+ Les données en entrée sont les œufs, les opérations sont les étapes 1 à 4 de la recette et finalement le résultat en sortie est l’omelette. On peut considérer le matériel culinaire (bol, fourchette, poêle, spatule) comme du matériel informatique à notre disposition, capable de traiter des données (œufs). En effet on peut cuire plein d’autres aliments dans une poêle.
 ```
 ````
 
@@ -277,7 +277,7 @@ Répéter 8 fois :
 ```
 ````
 
-`````{admonition} Solution 4. Forme mystère
+<!-- `````{admonition} Solution 4. Forme mystère
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -311,7 +311,7 @@ Un hexagone. Pour vérifier, exécuter le code ci-dessus. On pourrait croire que
 
 ````
 `````
-
+ -->
 
 ````{admonition} Exercice 5. Nombre minimum
 :class: note
@@ -323,7 +323,7 @@ Appliquer votre algorithme à la liste [3, 6, 2, 8, 1, 9, 7, 5].
 L'algorithme trouve-t-il la bonne solution ? Sinon, modifier votre algorithme afin qu’il trouve la bonne solution.
 
 ````
-
+<!-- 
 `````{admonition} Solution 5. Nombre minimum
 :class: hint
 
@@ -399,7 +399,7 @@ width: 70%
 Le résultat obtenu est bien le résultat attendu, l'algorithme a trouvé la plus petite valeur contenue dans la liste. L'algorithme est correct.
 
 ````
-`````
+````` -->
 
 
 
@@ -413,7 +413,7 @@ Comparer votre solution à celle de la personne à côté de vous. Avez-vous pro
 Un ordinateur peut-il réaliser les opérations décrites par votre algorithme ?
 
 ````
-
+<!-- 
 `````{admonition} Solution 6. Le prochain anniversaire
 :class: hint
 
@@ -432,7 +432,7 @@ Oui, un ordinateur peut exécuter ces opérations, mais elles doivent être déc
 
 ````
 `````
-
+ -->
 
 
 ````{admonition} Exercice 7. Echange de trois variables
@@ -444,7 +444,7 @@ Conseil : mettez-vous à la place de la machine et représentez le contenu de ch
 
 ````
 
-`````{admonition} Solution 7. Echange de trois variables
+<!-- `````{admonition} Solution 7. Echange de trois variables
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -466,7 +466,8 @@ Nous avons donc la confirmation que la solution obtenue résout correctement not
 
 ````
 
-`````
+````` 
+-->
 
 
 
@@ -485,7 +486,7 @@ X ← X – Y
 ````
 
 
-`````{admonition} Solution 8. Affectations
+<!-- `````{admonition} Solution 8. Affectations
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -509,7 +510,7 @@ X ← X – Y ou X ← (X + Y) - Y, donc X ← Y
 
 Cet algorithme échange les valeurs des deux variables *sans avoir le besoin d'utiliser une variable temporaire*.
 
-````
+```` -->
 <!--
 
 ***Exercice 1***

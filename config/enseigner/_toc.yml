@@ -34,6 +34,7 @@ parts:
     sections:
   #  - file: content/ens/theme/algo1/decomposition-probleme/maitre
   #  - file: content/ens/theme/algo1/algorithmes-classiques/maitre
+      - file: content/ens/theme/algo1/accueil/solutions
       - file: content/ens/theme/algo1/activ/algorithmes-classiques/algo-tri/algo-tri
       - file: content/ens/theme/algo1/activ/algorithmes-classiques/epidemie/epidemie
         sections:

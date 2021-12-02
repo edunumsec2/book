@@ -189,14 +189,14 @@ En termes simples, un processeur quadricœur possède quatre cœurs et il en va 
 :width: 600
 :height: 400
 ```
-Microprocesseur quadricoeur
+Microprocesseur quadricœur
 <br> 
 
 ```{image} media/8coeurs.png
 :width: 600
 :height: 400
 ```
-Microprocesseur octocoeur
+Microprocesseur octocœur
 <br> <br>
 
 

@@ -117,10 +117,7 @@ Vous passez trop de temps à chercher vos affaires ? Pensez à mieux les trier. 
 ````
 
 
-La figure ci-dessous détaille les étapes intermédiaires des trois {glo}`algo|algorithmes` de tri vus précédemment. Dans le **<span style="color:rgb(89, 51, 209)">tri par insertion</span>** à gauche, on parcourt la liste dans l’ordre, un élément après l’autre (dénoté par une étoile). A chaque étape, on cherche à ***<span style="color:rgb(13, 204, 166)">insérer</span>*** le rectangle considéré à la bonne place dans la liste précédemment triée. La flèche rouge montre la position à laquelle le rectangle sera inséré. Si l’élément est déjà bien trié, aucune action n’est requise dans ce cas et la flèche est remplacée par un point rouge. Notez que la liste qui précède le rectangle considéré (celui avec l’étoile) est toujours bien triée. 
-
-
-
+La figure ci-dessous détaille les étapes intermédiaires des trois {glo}`algo|algorithmes` de tri vus précédemment. Dans le **<span style="color:rgb(89, 51, 209)">tri par insertion</span>** à gauche, on parcourt la liste dans l’ordre, un élément après l’autre (dénoté par une étoile). A chaque étape, on cherche à ***<span style="color:rgb(13, 204, 166)">insérer</span>*** le rectangle considéré à la bonne place dans la liste précédemment triée. La flèche rouge montre la position à laquelle le rectangle sera inséré après comparaison avec l'élément précédent. Si l’élément est déjà bien trié, aucune action n’est requise dans ce cas et la flèche est remplacée par un point rouge. Notez que la liste qui précède le rectangle considéré (celui avec l’étoile) est toujours bien triée. 
 
 
 Dans le **<span style="color:rgb(89, 51, 209)">tri par sélection</span>** au milieu, on parcourt la liste pour ***<span style="color:rgb(13, 204, 166)">sélectionner</span>*** son plus petit élément, et on le met à la bonne position. La ligne noire au‑dessous des rectangles montre la liste parcourue pour rechercher le plus petit élément. Le plus petit élément de cette liste est désigné par l’étoile. Finalement, la flèche rouge montre les éléments échangés : le premier élément de la liste non triée et le plus petit élément. Ainsi, le plus petit élément sélectionné (avec étoile) se retrouve à la fin de la liste déjà triée (liste non soulignée). Si l’élément est déjà bien trié et qu’aucune action n’est requise, la flèche bidirectionnelle est remplacée par un point rouge.
@@ -197,7 +194,7 @@ Ces résultats sont valables pour cette configuration en particulier. Si on trie
 ````{admonition} Le saviez-vous ? Tri stupide
 :class: hint
 
-Il existe un algorithme, Bogosort, aussi nommé le *tri lent* ou encore le *tri stupide*. C’est un tri qui génère différentes permutations des éléments de la liste et s’arrête lorsque la configuration obtenue par hasard est triée. A votre avis, combien d’opérations prend cet algorithme en moyenne ?
+Il existe un algorithme, Tri de Bogo (ou *Bogosort*), aussi nommé le *tri lent* ou encore le *tri stupide*. C’est un tri qui génère différentes permutations des éléments de la liste et s’arrête lorsque la configuration obtenue par hasard est triée. A votre avis, combien d’opérations prend cet algorithme en moyenne ?
 
 ````
 
@@ -240,7 +237,7 @@ Dans cette configuration précise, quel algorithme est le plus rapide  (présent
 Réfléchissez à votre journée : y a-t-il des actions qui se retrouvent chaque jour ouvrable ? Arrivez-vous à esquisser un algorithme que vous suivez sans que vous en ayez conscience ?
 
 ````
-
+<!-- 
 `````{admonition} Solution 4. L'algorithme de votre journée
 :class: hint
 
@@ -272,7 +269,8 @@ Se brosser les dents
 Se coucher
 ```
 ````
-`````
+````` -->
+
 
 ````{admonition} Exercice 5. Trois algorithmes de tri
 :class: note
@@ -281,7 +279,7 @@ Se coucher
 Trier la liste [2,5,3,4,7,1,6] en utilisant les trois algorithmes de tri vus adans le cours. Représenter l’état de la liste après chaque étape.
 
 ````
-
+<!-- 
 `````{admonition} Solution 5. Trois algorithmes de tri
 :class: hint
 
@@ -340,7 +338,7 @@ Voici le détail de toutes les étapes intermédiaires des trois algorithmes de 
 ````
 
 `````
-
+ -->
 
 
 
@@ -357,7 +355,7 @@ Comparer vos algorithmes. Sont-ils différents ?
 
 ````
 
-
+<!-- 
 
 `````{admonition} Exercice 6. Vérificateur de tri
 :class: hint
@@ -384,7 +382,8 @@ L'algorithme compare les éléments deux par deux et retourne `Faux` (et se term
 L'algorithme prend une liste (triée ou non triée) en entrée et retourne `Vrai` ou `Faux` en sortie, selon si la liste est triée. L'algorithme pourrait retourner aussi `Oui` et `Non`, mais *par convention* on préfère les valeurs logiques Vrai et Faux, car ces dernières peuvent être utilisées par la suite dans une condition. Par exemple, si l'algorithme retourne Faux, on pourrait demander à un autre algorithme de trier la liste. `Vrai` et `Faux` correspondent également à 0 et 1, ce qui permet de les utiliser pour faire des calculs. 
 
 ````
-`````
+````` 
+-->
 
 
 ````{admonition} Exercice 7. Mondrian
@@ -394,7 +393,7 @@ Analysez les œuvres cubistes de Piet Mondrian. Trouvez un algorithme qui permet
 
 ````
 
-
+<!-- 
 
 `````{admonition} Exercice 7. Mondrian
 :class: hint
@@ -430,7 +429,7 @@ Cet algorithme est approximatif. Il pourrait être amélioré pour colorier en p
 Si vous avez un niveau de programmation avancé, vous pouvez essayer de coder cet algorithme.
 ````
 `````
-
+ -->
 
 
 ````{admonition} Ai-je compris ?

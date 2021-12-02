@@ -137,10 +137,10 @@ Un ordinateur peut encore aujourd'hui être équipé d'un graveur, vissé au bo�
 
 ## Le CPU (Central Processing Unit)
 
-Il s’agit du processeur de l’ordinateur. C’est le coeur de l’ordinateur, c’est à dire l’espace où va se dérouler l’ensemble des opérations et instructions de la machine. C’est un peu le «cerveau» de la machine. 
+Il s’agit du processeur de l’ordinateur. C’est le cœur de l’ordinateur, c’est à dire l’espace où va se dérouler l’ensemble des opérations et instructions de la machine. C’est un peu le «cerveau» de la machine. 
 Le CPU va aller chercher les informations dans la ROM en passant par la RAM qui est donc essentielle pour le traitement du processeur. On parle d’Unité Centrale de Traitement en français. Le processeur sert à l’échange de données entre composants informatiques : disques durs – carte graphique – ROM – RAM. Il coordonne, interprète, calcule, exécute.
 
-La puissance du CPU est caractérisée par son nombre de bits, 32 ou 64 bits aujourd’hui, et la fréquence de traitement de l’information qu’il assure caractérise la rapidité avec laquelle il traite les informations. Cette puissance de traitement des cycles CPU, qui est donc la puissance de l’ordinateur, représente la capacité d’un ordinateur à manipuler des données. La puissance de calcul et la rapidité de traitement se trouvent multipliées par le nombres de coeurs éventuellement présents sur la puce. Nombre de bits et fréquence de traitement sont donc deux paramètres essentiels, mais également le nombre de coeurs que le processeur comporte.
+La puissance du CPU est caractérisée par son nombre de bits, 32 ou 64 bits aujourd’hui, et la fréquence de traitement de l’information qu’il assure caractérise la rapidité avec laquelle il traite les informations. Cette puissance de traitement des cycles CPU, qui est donc la puissance de l’ordinateur, représente la capacité d’un ordinateur à manipuler des données. La puissance de calcul et la rapidité de traitement se trouvent multipliées par le nombres de cœurs éventuellement présents sur la puce. Nombre de bits et fréquence de traitement sont donc deux paramètres essentiels, mais également le nombre de cœurs que le processeur comporte.
 
 
 ```{image} media/PROCESSEURS.png
