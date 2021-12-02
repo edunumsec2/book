@@ -1,19 +1,4 @@
 
-A reprendre complètement ...
-
-## ALU et bascules
-
-TODO
-
-### ALU
-
-TODO
-
-
-### Bascules
-
-TODO
-
 
 ### Conclusion
 
