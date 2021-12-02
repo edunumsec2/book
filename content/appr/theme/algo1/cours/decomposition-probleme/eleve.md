@@ -77,7 +77,7 @@ alt: Une variable est un tiroir avec une étiquette.
 width: 50%
 ---
 
-**Une variable est un tirroir avec une étiquette.** Cela peut être utile de voir la variable comme un tiroir qui permet de stocker une valeur (contenu du tiroir) sous un nom (étiquette du tiroir). Attention, le tiroir est petit et ne peut contenir qu'une chose (valeur) à la fois. Deux tirroirs différents ne peuvent porter la même étiquette.
+**Une variable est un tiroir avec une étiquette.** Cela peut être utile de voir la variable comme un tiroir qui permet de stocker une valeur (contenu du tiroir) sous un nom (étiquette du tiroir). Attention, le tiroir est petit et ne peut contenir qu'une chose (valeur) à la fois. Deux tiroirs différents ne peuvent porter la même étiquette.
 
 ```
 
@@ -218,7 +218,7 @@ A quoi correspondent les ingrédients d’un algorithme dans l’exemple de la r
 
 Ecrire un algorithme qui échange les valeurs de deux variables. Par exemple, si la première variable X contient 1 et la deuxième variable Y contient 2, à la fin de l'algorithme X contient 2 et Y contient 1. Pour rappel, une variable peut contenir une seule valeur à la fois. 
 
-Conseil : mettez-vous à la place de la machine et représentez le contenu de chaque variable sous la forme d'un tirroir, dessinez le tirroir avec l'étiquette et son contenu *après chaque opération de votre algorithme*.
+Conseil : mettez-vous à la place de la machine et représentez le contenu de chaque variable sous la forme d'un tiroir, dessinez le tiroir avec l'étiquette et son contenu *après chaque opération de votre algorithme*.
 
 ````
 
@@ -245,7 +245,7 @@ Après la première opération où on met la valeur de Y dans la variable X on s
 
 <img src="media/Swap1.png" width="25%"> &nbsp;   
 
-En effet, un tirroir ne peut contenir qu'une seule valeur ! Nous n’avons donc plus accès à la valeur qui était stockée dans la variable X avant d'y mettre celle de Y. Pour remédier à ce problème, il faut penser à utiliser une variable temporaire Z qui permet de se souvenir de la valeur initiale de X. Un algorithme correct pour échanger les valeurs de deux variables est :
+En effet, un tiroir ne peut contenir qu'une seule valeur ! Nous n’avons donc plus accès à la valeur qui était stockée dans la variable X avant d'y mettre celle de Y. Pour remédier à ce problème, il faut penser à utiliser une variable temporaire Z qui permet de se souvenir de la valeur initiale de X. Un algorithme correct pour échanger les valeurs de deux variables est :
 
 ```
 Z ← X
@@ -253,7 +253,7 @@ X ← Y
 Y ← Z
 ```
 
-Si on dessine l’état des variables après chacune de ces opérations dans des tirroirs, voici ce qu’on obtient :
+Si on dessine l’état des variables après chacune de ces opérations dans des tiroirs, voici ce qu’on obtient :
 
 <img src="media/Swap2.png" width="40%"> &nbsp;  
 
@@ -440,7 +440,7 @@ Oui, un ordinateur peut exécuter ces opérations, mais elles doivent être déc
 
 Écrire un algorithme qui effectue la permutation circulaire des variables X, Y et Z : à la fin de l’algorithme, X contient la valeur de Z, Y la valeur de X et Z la valeur de Y. Pour rappel, une variable ne peut contenir qu'une valeur à la fois.
 
-Conseil : mettez-vous à la place de la machine et représentez le contenu de chaque variable sous la forme d'un tirroir, dessinez le tirroir avec l'étiquette et son contenu *après chaque opération de votre algorithme*. Est-ce que votre algorithme donne le résultat attendu ? Si non, modifiez votre algorithme pour qu’il résolve le problème correctement.
+Conseil : mettez-vous à la place de la machine et représentez le contenu de chaque variable sous la forme d'un tiroir, dessinez le tiroir avec l'étiquette et son contenu *après chaque opération de votre algorithme*. Est-ce que votre algorithme donne le résultat attendu ? Si non, modifiez votre algorithme pour qu’il résolve le problème correctement.
 
 ````
 
@@ -458,7 +458,7 @@ X ← Y
 Y ← Z
 Z ← W
 ```
-Supposons que X contient 1, Y contient 2 et Z contient 3. Si on dessine l’état des variables après chacune de ces opérations dans des tirroirs, voici ce qu’on obtient :
+Supposons que X contient 1, Y contient 2 et Z contient 3. Si on dessine l’état des variables après chacune de ces opérations dans des tiroirs, voici ce qu’on obtient :
 
 <img src="media/Swap4.png" width="45%"> &nbsp;  
 

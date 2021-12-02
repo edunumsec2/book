@@ -178,7 +178,7 @@ Oui, un ordinateur peut exécuter ces opérations, mais elles doivent être déc
 
 Écrire un algorithme qui effectue la permutation circulaire des variables X, Y et Z : à la fin de l’algorithme, X contient la valeur de Z, Y la valeur de X et Z la valeur de Y. Pour rappel, une variable ne peut contenir qu'une valeur à la fois.
 
-Conseil : mettez-vous à la place de la machine et représentez le contenu de chaque variable sous la forme d'un tirroir, dessinez le tirroir avec l'étiquette et son contenu *après chaque opération de votre algorithme*. Est-ce que votre algorithme donne le résultat attendu ? Si non, modifiez votre algorithme pour qu’il résolve le problème correctement.
+Conseil : mettez-vous à la place de la machine et représentez le contenu de chaque variable sous la forme d'un tiroir, dessinez le tiroir avec l'étiquette et son contenu *après chaque opération de votre algorithme*. Est-ce que votre algorithme donne le résultat attendu ? Si non, modifiez votre algorithme pour qu’il résolve le problème correctement.
 
 ````
 
@@ -196,7 +196,7 @@ X ← Y
 Y ← Z
 Z ← W
 ```
-Supposons que X contient 1, Y contient 2 et Z contient 3. Si on dessine l’état des variables après chacune de ces opérations dans des tirroirs, voici ce qu’on obtient :
+Supposons que X contient 1, Y contient 2 et Z contient 3. Si on dessine l’état des variables après chacune de ces opérations dans des tiroirs, voici ce qu’on obtient :
 
 <img src="media/Swap4.png" width="45%"> &nbsp;  
 
