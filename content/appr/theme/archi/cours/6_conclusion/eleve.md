@@ -29,10 +29,13 @@ Chaque nouvelle couche d’abstraction peut être étudiée de manière autonome
 
 Quid du futur des ordinateurs ? Suivant quels axes va se définir l'amélioration de leurs performances ?
 
+Il semblerait qu'on arrive aujourd'hui à un palier concernant les composants et la loi de Moore. La miniaturisation atteint les limites fixées par l'atome et le comportement aléatoire des électrons. 
 
-Une étape semble se franchir aujourd'hui avec une réflexion menée concernant la définition de cette architecture classique quaternaire de Von Neumann. Cette nouvelle architecture s'inspire directement du fonctionnement du cerveau, composé de synapses jouant à la fois le rôle de mémoire et de calculateur. Il est alors question de faire jouer à la mémoire un rôle calculatoire et de fusionner les deux fonctions. 
+L'avenir est-il réellement vers l'informatique quantique, ou l'informatique neuromorphique ? Ou encore la spintronique, qui permet d'effectuer des calculs en renversant la rotation des électrons plutôt que de les déplacer ? 
 
-Cette approche, 80 ans après Von Neumann, semble apporter des gains en terme de performance exceptionnel, au niveau de la rapidité et de la gestion mémoire.
+Une étape fondamentale semble se franchir aujourd'hui avec une réflexion menée concernant la définition de cette architecture classique quaternaire de Von Neumann. Une nouvelle architecture s'inspire directement du fonctionnement du cerveau, composé de synapses jouant à la fois le rôle de mémoire et de calculateur. Il est alors question de faire jouer à la mémoire un rôle calculatoire et de fusionner les deux fonctions. 
+
+Cette approche, 80 ans après Von Neumann, semble apporter des gains exceptionnel en terme de performance, en ce qui concerne la rapidité et la gestion mémoire.
 
 
 <br>
