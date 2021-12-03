@@ -313,7 +313,7 @@ Voici le détail de toutes les étapes intermédiaires des trois algorithmes de 
 **<span style="color:rgb(89, 51, 209)">Tri à bulles</span>** : 
 
 ```
-[2,5,3,4,7,1,6]  # on compare 2 et 5
+[2,5,3,4,7,1,6]  # on compare 2 et 5 et
 [2,5,3,4,7,1,6]  # on compare 5 et 3 et on les déplace
 [2,3,5,4,7,1,6]  # on compare 5 et 4 et on les déplace
 [2,3,4,5,7,1,6]  # on compare 5 et 7
