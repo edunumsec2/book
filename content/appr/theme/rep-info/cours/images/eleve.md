@@ -86,7 +86,7 @@ Un bit est l'unité minimale d'information qu'un ordinateur manipule : 1 ou 0, a
 ````{role} prof
 ```{admonition} Suggestion d'activité
 :class: caution
-Voilà une [activité débranchée](https://maitre.edunumsec2.ch/content/theme/representation-information/activites/representation-images/bitmap/bitmap.html) faciitant l'introduction des notions de bits noirs et blancs pour représenter une image.
+Voilà une [activité débranchée](https://maitre.edunumsec2.ch/content/theme/representation-information/activites/representation-images/bitmap/bitmap.html) facilitant l'introduction des notions de bits noirs et blancs pour représenter une image.
 ```
 ````
 
