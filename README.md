@@ -198,28 +198,29 @@ Avec VS Code si installé comme ci-dessous, cliquer sur un des boutons en bas de
 
 ![](docs/media/build_screenshot.png)
 
-Sinon, via le terminal. Pour la partie élèves:
+Sinon, via le terminal. Pour la partie apprendre:
 
 ```bash
-cd <dossier-du-checkout>/edunum-sec2/config/eleve
+cd <dossier-du-checkout>/config/apprendre
 jupyter-book build .
 ```
 
-Pour la partie enseignant·e·s:
+Pour la partie enseigner:
 
 ```bash
-cd <dossier-du-checkout>/edunum-sec2/config/maitre
+cd <dossier-du-checkout>/config/enseigner
 jupyter-book build .
 ```
 
-Ouvrir ensuite le fichier `_build/html/index.html`, par exemple (macOS):
+Ouvrir ensuite le fichier `_build/html/index.html`.
+
 
 Si nécessaire (erreurs, vieux fichiers qui traînent dans `_build`):
 
 ```bash
-cd <dossier-du-checkout>/edunum-sec2/config/eleve
+cd <dossier-du-checkout>/config/apprendre
 # ou:
-cd <dossier-du-checkout>/edunum-sec2/config/maitre
+cd <dossier-du-checkout>/config/enseigner
 
 #puis:
 jupyter-book clean .
