@@ -234,7 +234,7 @@ Dans cette configuration précise, quel algorithme est le plus rapide  (présent
 ````{admonition} Exercice 4. L'algorithme de votre journée
 :class: note
 
-Réfléchissez à votre journée : y a-t-il des actions qui se retrouvent chaque jour ouvrable ? Arrivez-vous à esquisser un algorithme que vous suivez sans que vous en ayez conscience ?
+Réfléchir à votre journée : y a-t-il des actions qui se retrouvent chaque jour ouvrable ? Arrivez-vous à esquisser un algorithme que vous suivez sans que vous en ayez conscience ?
 
 ````
 <!-- 
