@@ -1,5 +1,5 @@
 
-# 0. Introduction
+# Introduction
 
 ## Quoi ?
 

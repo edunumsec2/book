@@ -155,7 +155,7 @@ Mais est-ce que derrière chaque programme se cache un algorithme ?
 
 ## Exercices
 
-````{admonition} Exercice 1. Jeu de la devinette 🔌
+````{admonition} Exercice 1 : jeu de la devinette 🔌
 :class: note
 
 Ecrire le programme suivant : le programme pense à un nombre au hasard. Lorsque vous lui proposez un nombre, il vous dit si « c'est plus » ou si « c'est moins» jusqu'à ce que vous ayez trouvé. Conseil : utiliser le module Python *random*.
@@ -164,7 +164,7 @@ Y a-t-il une stratégie gagnante ?
  
 ````
 
-````{admonition} Exercice 2. Plus petit nombre 🔌
+````{admonition} Exercice 2 : plus petit nombre 🔌
 :class: note
 
 Transcrire l’algorithme de l’exercice qui permet de déterminer le plus petit nombre d’une liste, en un programme Python.
@@ -172,7 +172,7 @@ Transcrire l’algorithme de l’exercice qui permet de déterminer le plus peti
 ````
 
 
-````{admonition} Exercice 3. Programmes de tri 🔌
+````{admonition} Exercice 3 : programmes de tri 🔌
 :class: note
 
 Implémenter le tri à bulles et/ou le tri par insertion vus au cours.
@@ -194,7 +194,7 @@ Lancer votre programme avec 100000 éléments et comparez le temps obtenu avec v
 
 <!--
 
-````{admonition} Exercice 3. Comparaison de tris 🔌
+````{admonition} Exercice 3 : comparaison de tris 🔌
 :class: note
 
 Créer une liste qui contient les valeurs de 1 à n dans un ordre aléatoire, où n prend la valeur 100, par exemple. Vous pouvez utiliser la fonction shuffle() du module random.
@@ -211,7 +211,7 @@ Lancer votre programme avec 100000 éléments et comparez le temps obtenu avec v
 ````
 -->
 
-````{admonition} Exercice 4. Tri de Bogo🔌
+````{admonition} Exercice 4 : tri de Bogo🔌
 :class: note
 
 Coder l’algorithme du tri de Bogo en Python (voir chapitre 2 : Le saviez-vous ?). 
@@ -223,7 +223,7 @@ A partir de quelle taille de liste cet algorithme est-il inutilisable ?
 ````
 
 
-````{admonition} Exercice 5. Fibonacci 🔌
+````{admonition} Exercice 5 : Fibonacci 🔌
 :class: note
 
 Ecrivez un algorithme qui calcule la suite des nombres de Fibonacci. 

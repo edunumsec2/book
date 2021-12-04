@@ -37,11 +37,11 @@ parts:
   ### Algorithmique         
   - file: content/appr/theme/algo1/accueil/eleve
     sections:
-      - file: content/appr/theme/algo1/cours/intro
-      - file: content/appr/theme/algo1/cours/decomposition-probleme/eleve
-      - file: content/appr/theme/algo1/cours/algorithmes-classiques/eleve
-      - file: content/appr/theme/algo1/cours/formulation-solutions/eleve
-      - file: content/appr/theme/algo1/cours/consequences-automatisation/eleve
+      - file: content/appr/theme/algo1/cours/0_intro/eleve
+      - file: content/appr/theme/algo1/cours/1_les_algorithmes/eleve
+      - file: content/appr/theme/algo1/cours/2_trie_cherche_trouve/eleve
+      - file: content/appr/theme/algo1/cours/3_des_algos_aux_prog/eleve
+      - file: content/appr/theme/algo1/cours/4_conclusion/eleve
 
   ### Architecture des ordinateurs    
   - file: content/appr/theme/archi/accueil/eleve
