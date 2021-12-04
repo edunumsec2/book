@@ -8,13 +8,11 @@ Un {glo}`algo|algorithme` est en quelque sorte « une recette » que l’on peut
 Ce n'est pas l'{glo}`algo|algorithme` qui est exécuté sur une machine pour nous donner une solution concrète pour tous ces problèmes. *<span style="color:rgb(13, 204, 166)">L’algorithme n’est donc pas un programme</span>*. L’{glo}`algo|algorithme` décrit plutôt un « mode d’emploi », qui permet de réfléchir à un problème de manière générale et ensuite de créer un {glo}`programme|programme`. C'est le {glo}`programme|programme` qui sera exécuté par un système informatique pour concrètement résoudre le problème. En d'autres mots, l'{glo}`algo|algorithme` décrit l'idée humaine derrière la solution d'un problème, alors que c'est le {glo}`programme|programme` qui permet à une machine de trouver une solution numérique dans des cas précis.
 
 
-```{figure} media/algoprog.png
----
-alt: Différence entre un algorithme et un programme.
-width: 65%
----
-**Différence entre un algorithme et un programme.** Un algorithme doit être compréhensible par un humain, alors qu'un programme est écrit de façon à ce qu'il soit compréhensible par une machine.
+```{image} media/algoprog.png
+:width: 600
+:height: 300
 ```
+**Différence entre un algorithme et un programme.** Un algorithme doit être compréhensible par un humain, alors qu'un programme est écrit de façon à ce qu'il soit compréhensible par une machine.
 
 ## Résolution d'un problème par étapes
 
@@ -26,15 +24,12 @@ Un mode d’emploi, ou une recette, décrit les **<span style="color:rgb(89, 51,
 4. Lorsque cuite, glisser l’omelette dans une assiette.
 
 
-```{figure} media/Omelette.png
----
-alt: Un algorithme est un peu comme une recette de cuisine.
-width: 100%
----
-
+```{image} media/omelette.png
+:width: 700
+:height: 250
+```
 **Un algorithme est un peu comme une recette de cuisine.** Cet exemple illustre les opérations à suivre pour la réalisation d’une omelette.
 
-```
 
 Dans le cas de la recette d'une omelette, nous avons décomposé la marche à suivre en étapes à réaliser dans un certain ordre. Il en est de même pour un {glo}`algo|algorithme`. Pour résoudre un problème, il faut d'abord **<span style="color:rgb(89, 51, 209)">décomposer le problème en sous-problèmes</span>** que l'on *sait résoudre*. La solution de chaque sous-problème donne lieu à une étape qu'il faudra exécuter pour arriver à un résultat. Voici les sous-problèmes que certaines étapes ci-dessus permettent de résoudre. Afin d'extraire le contenu édible de l'œuf, il faut casser les œufs. Pour que l'omelette ait une jolie couleur uniforme, il faut mélanger le jaune et le blanc d'œuf. Cette dernière étape ne serait pas du tout pertinente si le problème que l'on essaie de résoudre est la préparation d'un œuf au plat. *<span style="color:rgb(13, 204, 166)">L’{glo}`algo|algorithme` décrit donc toutes les opérations qu'il faut effectuer pour arriver à ce résultat</span>*. Nous allons ainsi définir l’{glo}`algo|algorithme` comme **<span style="color:rgb(89, 51, 209)">une suite d’opérations qui permettent de résoudre un problème</span>**. 
 
@@ -71,6 +66,11 @@ Dans cet algorithme on mentionne le terme *variable*. Pour rappel, les variables
 Pour mieux vous représenter une variable, imaginez un grand meuble avec des tiroirs (voir Figure ci-dessous). Les variables sont les tiroirs. Chaque tiroir comporte une étiquette, c'est le nom de la variable, et c'est grâce à ce nom que l'on sait quel tiroir ouvrir et quelle valeur utiliser. Le tiroir est petit et ne peut contenir qu'une valeur. Donc *i* peut valoir 1 ou 2, mais pas 1 et 2 à la fois. Par contre *i* pourrait contenir une liste qui contient les valeurs [1, 2]. Cependant, *i* ne peut contenir qu'une seule liste à la fois et pas par exemple deux listes [1, 2] et [3, 4].
 
 
+<<<<<<< HEAD:content/appr/theme/algo1/cours/1_les_algorithmes/eleve.md
+```{image} media/commode.webp
+:width: 600
+:height: 400
+=======
 ```{figure} media/commode.webp
 ---
 alt: Une variable est un tiroir avec une étiquette.
@@ -79,13 +79,16 @@ width: 50%
 
 **Une variable est un tiroir avec une étiquette.** Cela peut être utile de voir la variable comme un tiroir qui permet de stocker une valeur (contenu du tiroir) sous un nom (étiquette du tiroir). Attention, le tiroir est petit et ne peut contenir qu'une chose (valeur) à la fois. Deux tiroirs différents ne peuvent porter la même étiquette.
 
+>>>>>>> 9c7fe1ae29f7ebf5c17edc4b6871e61be6c51858:content/appr/theme/algo1/cours/decomposition-probleme/eleve.md
 ```
+**Une variable est un tiroir avec une étiquette.** Cela peut être utile de voir la variable comme un tiroir qui permet de stocker une valeur (contenu du tiroir) sous un nom (étiquette du tiroir). Attention, le tiroir est petit et ne peut contenir qu'une chose (valeur) à la fois. Deux tiroirs différents ne peuvent porter la même étiquette.
+
 
 
 Lorsque l'on dit que i ← 1, ou que i = 1 en Python, cela veut tout simplement dire que la variable *i* vaut maintenant 1. Cette opération signifie que l'on va prendre le tiroir avec étiquette *i* dans la commode (s'il n'existe pas encore on va noter *i* sur l'étiquette d'un tiroir disponible) et on va mettre la valeur 1 dedans. Ce qui se trouvait dans le tiroir avant la valeur 1 ne s'y trouve plus, on dit que *la valeur précédente est écrasée*. A chaque fois que nous utilisons *i* dans l'algorithme ou dans le code, nous faisons référence à la valeur stockée dans le tiroir.
 
 
-````{admonition} Exercice 0. Algorithme mystère
+````{admonition} Exercice 0 : algorithme mystère
 :class: note
 
 Lisez bien l'algorithme présenté ci-dessus. 
@@ -94,7 +97,7 @@ Quel problème cet algorithme permet-il de résoudre ? Il est plus facile de ré
 
 ````
 
-`````{admonition} Solution 0. Algorithme mystère
+`````{admonition} Solution 0 : algorithme mystère
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -124,7 +127,7 @@ Cet algorithme permet de calculer la somme des nombres contenus dans une liste (
 Pour comprendre ce que fait l'algorithme ci-dessus, il faut se mettre à la place de la machine. On parle de *<span style="color:rgb(13, 204, 166)">simuler</span>* un algorithme, de faire comme si l'algorithme s'exécutait sur une machine. Pour que ce soit plus concret, on peut imaginer des valeurs fictives pour les variables telles que *Nombres*. Dans la vie réelle, *Nombres* pourra contenir tous les nombres possibles, mais cela ne nous aide pas à comprendre. On imagine alors des nombres précis que *Nombres* pourrait contenir, comme par exemple 4, 5 et 6. Lorsqu'on exécute les opérations de l'algorithme l'une après l'autre, avec des valeurs concrètes, on comprend mieux quel effet ces opérations ont sur les valeurs contenues dans les variables. La {glo}`algo|simulation` de l'algorithme nous permet de saisir **<span style="color:rgb(89, 51, 209)">les calculs</span>** réalisés par cet algorithme, ici une simple somme.
 
 
-````{admonition} Exercice 1. Machine mystère
+````{admonition} Exercice 1 : machine mystère
 :class: note
 
 Quel objet du quotidien (autre que la calculatrice) fait des additions et utilise cet algorithme pour résoudre un problème ?  
@@ -135,7 +138,7 @@ Il y a-t-il des désavantages à automatiser cette tâche ?
 
 ````
 
-`````{admonition} Solution 1. Machine mystère
+`````{admonition} Solution 1 : machine mystère
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -174,16 +177,13 @@ Le dernier ingrédient de l'{glo}`algo|algorithme`, mais tout aussi important, e
 3. Un résultat en {glo}`output|sortie`.
 
 
-````{figure} media/Diagramme_algorithme.png 
+```{image} media/Diagramme_algorithme.png 
 
----
-alt: Schéma des ingrédients d'un algorithme.
-width: 70%
----
-
+:width: 600
+:height: 400
+```
 **Schéma des ingrédients d'un algorithme.** Un algorithme reçoit des données en entrée, qu'il traite selon des opérations dans un ordre précis, dans le but de produire un résultat en sortie. Ce résultat représente la solution à un problème donné.
 
-````
 
 Notez que les opérations d’un {glo}`algo|algorithme` doivent être précises et ***<span style="color:rgb(13, 204, 166)">non ambigües</span>***. Il doit y avoir une seule interprétation possible de l’{glo}`algo|algorithme`. Une recette de cuisine ne serait pas assez précise pour une machine, par exemple, il faudrait indiquer précisément ce que température moyenne et mélange homogène veulent dire. Les êtres humains peuvent interpréter, deviner et supposer, mais pas les machines (pour l'instant).
 
@@ -195,12 +195,12 @@ Le jeu d’instructions élémentaires dépend du système informatique sur lequ
 ````
 
 
-````{admonition} Exercice 2. Ingrédients de l'algorithme mystère
+````{admonition} Exercice 2 : ingrédients de l'algorithme mystère
 :class: note
 A quoi correspondent les ingrédients d’un algorithme dans l’exemple de la recette de l’omelette ?
 ````
 
-````{admonition} Solution 2. Ingrédients de l'algorithme mystère
+````{admonition} Solution 2 : ingrédients de l'algorithme mystère
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -213,7 +213,7 @@ A quoi correspondent les ingrédients d’un algorithme dans l’exemple de la r
 
 <span id=exercice-echange> </span>
 
-````{admonition} Exercice 3. Echange de deux variables
+````{admonition} Exercice 3 : échange de deux variables
 :class: note
 
 Ecrire un algorithme qui échange les valeurs de deux variables. Par exemple, si la première variable X contient 1 et la deuxième variable Y contient 2, à la fin de l'algorithme X contient 2 et Y contient 1. Pour rappel, une variable peut contenir une seule valeur à la fois. 
@@ -224,7 +224,7 @@ Conseil : mettez-vous à la place de la machine et représentez le contenu de ch
 
 
 
-`````{admonition} Solution 3. Echange de deux variables
+`````{admonition} Solution 3 : échange de deux variables
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -266,7 +266,7 @@ Nous avons donc la confirmation que la solution obtenue résout correctement not
 
 ## Exercices
 
-````{admonition} Exercice 4. Forme mystère
+````{admonition} Exercice 4 : forme mystère
 :class: note
 
 L’algorithme suivant contrôle un crayon. Quelle forme dessine-t-il ?
@@ -313,7 +313,7 @@ Un hexagone. Pour vérifier, exécuter le code ci-dessus. On pourrait croire que
 `````
  -->
 
-````{admonition} Exercice 5. Nombre minimum
+````{admonition} Exercice 5 : nombre minimum
 :class: note
 
 Ecrire un algorithme qui permet de trouver le plus petit nombre d’une liste. Penser à décomposer la solution en différentes étapes.
@@ -403,7 +403,7 @@ Le résultat obtenu est bien le résultat attendu, l'algorithme a trouvé la plu
 
 
 
-````{admonition} Exercice 6. Le prochain anniversaire
+````{admonition} Exercice 6 : le prochain anniversaire
 :class: note
 
 On souhaite déterminer l’élève dont la date d’anniversaire est la plus proche de la date d’aujourd’hui, dans le futur. Ecrire un algorithme qui permet de trouver cet élève (utiliser un langage familier). Penser à décomposer le problème en sous-problèmes. 
@@ -435,7 +435,7 @@ Oui, un ordinateur peut exécuter ces opérations, mais elles doivent être déc
  -->
 
 
-````{admonition} Exercice 7. Echange de trois variables
+````{admonition} Exercice 7 : échange de trois variables
 :class: note
 
 Écrire un algorithme qui effectue la permutation circulaire des variables X, Y et Z : à la fin de l’algorithme, X contient la valeur de Z, Y la valeur de X et Z la valeur de Y. Pour rappel, une variable ne peut contenir qu'une valeur à la fois.
@@ -471,7 +471,7 @@ Nous avons donc la confirmation que la solution obtenue résout correctement not
 
 
 
-````{admonition} Exercice 8. Affectations
+````{admonition} Exercice 8 : affectations
 :class: note
 
 Quel est le résultat de la suite des trois affectations suivantes ? 
