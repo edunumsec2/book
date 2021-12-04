@@ -127,4 +127,3 @@ Cette approche, 80 ans après Von Neumann, semble apporter des gains exceptionne
 <br>
 
 
-

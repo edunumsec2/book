@@ -224,7 +224,7 @@ Ce circuit contient une porte **OU**, deux portes **ET** et un inverseur, tous i
 Ce diagramme n'est pas forcément facile à lire — discutons d'abord comment l'interpréter avec papier et crayon pour vérifier s'il effectue bien un **OU-X**.
 
 
-<u> Analyse d'un circuit </u>
+### Analyse d'un circuit
 
 Pour analyser un {glo}`syslogique|circuit logique` comme celui présenté ci-dessus, on cherchera à établir sa {glo}`tableverite|table de vérité`. En l'occurrence, comme pour les portes précédentes, ce circuit a deux entrées: si chaque entrée peut valoir $1$ ou $0$, on a en tout, de nouveau, quatre configurations possibles à examiner dans le but de remplir la dernière colonne :
 
@@ -340,12 +340,12 @@ Vérifiez que la porte **OU-X** se comporte bien comme le circuit ci-dessous ré
 ```
 
 
- <u> Création d'un circuit </u>
+### Création d'un circuit
 
 On s'intéresse à présent à la création de ce diagramme réalisant un **OU-X** avec les portes à disposition à partir de sa {glo}`tableverite|table de vérité`. Plusieurs approches sont possibles, et on constatera que, suivant l'approche, on aurait très bien pu créer un circuit logique différent réalisant la même fonction.
 
 
-Approche ad hoc
+**Approche ad hoc**
 
 On se dit donc, selon la {glo}`tableverite|table de vérité`, que la sortie de notre circuit «ou exclusif» doit être 1, donc l'une ou l'autre des entrées $X$ ou $Y$ est à 1, mais pas les deux. On peut ainsi commencer par insérer une porte **OU** dans le diagramme, qui fait une partie du travail. Mais il faut modifier sa sortie, pour ne pas avoir la valeur 1 lorsque les deux entrées sont à 1: cela contredirait la quatrième ligne de la table de vérité. Comment effectuer cela: En connectant la sortie de cette porte **OU** à une nouvelle porte **ET** à droite (dont on n'a pas encore déterminé la seconde entrée).
 
@@ -448,7 +448,7 @@ Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la
 ````
 
 
-### Approche systématique
+**Approche systématique**
 
 Il est parfois difficile d'avoir l'«intuition» nécessaire pour suivre une telle approche ad hoc. Voici donc une autre technique, illustrée avec le même exemple.
 

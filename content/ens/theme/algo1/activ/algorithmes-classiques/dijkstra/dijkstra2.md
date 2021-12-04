@@ -89,7 +89,7 @@ On retrouve le même graphe qu'avant, mais cette fois on a le temps de parcours 
 
 ## 3. Identification du problème
 
-Le problème est donc donnée sous forme d'un graphe constitué de *sommets* reliés par des *arêtes* qui ont une certaine *longueur*. Dans le cas ci-desssus, les sommets représentent des villes, les arêtes les routes, et les longueurs la durée du trajet. La *longueur totale* est donnée par la somme des longueurs des arêtes empruntée.
+Le problème est donc donné sous forme d'un graphe constitué de *sommets* reliés par des *arêtes* qui ont une certaine *longueur*. Dans le cas ci-desssus, les sommets représentent des villes, les arêtes les routes, et les longueurs la durée du trajet. La *longueur totale* est donnée par la somme des longueurs des arêtes empruntée.
 
 ## 4. Découverte 
 
@@ -108,16 +108,16 @@ L'enseignant délimite la classe en trois zones:
 
 Les instructions pour les élèves sont les suivantes:
 1. Les élèves commencent tous dans la <span style="color:black ">**zone C**</span>.
-1. Lorsqu'une élève se rend compte qu'elle peut calculer la longueur d'un chemin depuis le sommet de départ, elle écrit sur sa feuille par quel voisin ce chemin passe ainsi que la distance correspondante, et se place dans la <span style="color:green">**zone B**</span>.
+1. Lorsqu'un·e élève se rend compte qu'elle peut calculer la longueur d'un chemin depuis le sommet de départ, elle écrit sur sa feuille par quel voisin ce chemin passe ainsi que la distance correspondante, et se place dans la <span style="color:green">**zone B**</span>.
 1. Les élèves de la <span style="color:green">**zone B**</span> peuvent se voir mutuellement leur feuille
-1. Lorsqu'une élève de la <span style="color:green">**zone B**</span> se rend compte qu'il existe un chemin plus court que la longueur indiquée sur sa feuille, elle met sa feuille à jour. 
-1. Lorsqu'une élève se rend compte que le chemin indiqué sur sa feuille est le plus court, elle passe dans la <span style="color:red">**zone A**</span>.
+1. Lorsqu'un·e élève de la <span style="color:green">**zone B**</span> se rend compte qu'il existe un chemin plus court que la longueur indiquée sur sa feuille, elle met sa feuille à jour. 
+1. Lorsqu'un·e élève se rend compte que le chemin indiqué sur sa feuille est le plus court, elle passe dans la <span style="color:red">**zone A**</span>.
 1. Dans la <span style="color:red">**zone A**</span>, toutes les feuilles sont clairement visibles. 
 
 Si tout se passe bien, les élèves vont se déplacer dans les **<span style="color:green">zones B</span> et <span style="color:red ">C</span>** en commençant par le sommet de départ. Idéalement, elles doivent se rendre compte des principes de base de l'alogrithme de Dijkstra:
 
 1. Si un de leur voisin direct a trouvé une longueur de chemin, il ont également une longueur de chemin en ajoutant la distance qui les sépare.
-1. Si une élève a le chemin de plus court de la <span style="color:green">**zone B**</span> et que personne ne s'y ajoute (i.e. tous les voisin des personnes dans la <span style="color:red">**zone A**</span> sont soit dans la <span style="color:red">**zone A**</span> soit dans la <span style="color:green">**zone B**</span>), elle peut passer en <span style="color:red">**zone A**</span>.
+1. Si un·e élève a le chemin de plus court de la <span style="color:green">**zone B**</span> et que personne ne s'y ajoute (i.e. tous les voisin des personnes dans la <span style="color:red">**zone A**</span> sont soit dans la <span style="color:red">**zone A**</span> soit dans la <span style="color:green">**zone B**</span>), elle peut passer en <span style="color:red">**zone A**</span>.
 1. A la fin, en suivant les relations de voisinage, on peut reconstituer le chemin le plus court. 
 ```
 ````

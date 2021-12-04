@@ -228,7 +228,7 @@ Dans cette configuration précise, quel algorithme est le plus rapide  (présent
 ````{admonition} Exercice 4 : l'algorithme de votre journée
 :class: note
 
-Réfléchissez à votre journée : y a-t-il des actions qui se retrouvent chaque jour ouvrable ? Arrivez-vous à esquisser un algorithme que vous suivez sans que vous en ayez conscience ?
+Réfléchir à votre journée : y a-t-il des actions qui se retrouvent chaque jour ouvrable ? Arrivez-vous à esquisser un algorithme que vous suivez sans que vous en ayez conscience ?
 
 ````
 <!-- 
@@ -307,7 +307,7 @@ Voici le détail de toutes les étapes intermédiaires des trois algorithmes de 
 **<span style="color:rgb(89, 51, 209)">Tri à bulles</span>** : 
 
 ```
-[2,5,3,4,7,1,6]  # on compare 2 et 5
+[2,5,3,4,7,1,6]  # on compare 2 et 5 et
 [2,5,3,4,7,1,6]  # on compare 5 et 3 et on les déplace
 [2,3,5,4,7,1,6]  # on compare 5 et 4 et on les déplace
 [2,3,4,5,7,1,6]  # on compare 5 et 7
