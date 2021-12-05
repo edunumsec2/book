@@ -1,7 +1,7 @@
 
 # Conclusion
 
-Trois éléments clés sous entendent notre description du monde : la matière, l’énergie et l’information. 
+Trois éléments clés sous entendent notre description du monde : la matière, l’énergie et l’information. 
 Transmettre l'information est sans aucun doute la révolution de ce 20ème siècle achevé et l'enjeu majeur de ce début du 21ème.
 
 La notion d'information est porteuse de sens. Elle s'appuie sur des *données* et un *canal de transmission* ; elle est véhiculée entre un *émetteur* et un *récepteur*. 

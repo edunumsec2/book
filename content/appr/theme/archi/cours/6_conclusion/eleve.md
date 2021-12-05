@@ -1,5 +1,16 @@
 # Conclusion
 
+
+
+
+<!--
+Idée d'un sondage réalisé en introduction puis en conclusion au chapitre : Qu'est ce qu'un ordinateur (nuages de mots sortis) ? Comment fonctionne selon vous un ordinateur ? L'ordinateur a-t-il selon vous évolué depuis 70 ans d'existence ? Justifiez
+
+=> forme d'évaluation formative
+
+-->
+
+
 La large diffusion de l'ordinateur individuel dans les foyers depuis près de 40 ans a bouleversé nos sociétés, nos comportements, nos habitudes. Pour beaucoup, ordinateur reste cependant synonyme de complexité, et si la confrontation à la machine aujourd'hui concerne quasiment tout un chacun dans les pays développés, la perception de l'univers numérique, de l'informatique et de la machine «ordinateur» varie considérablement d'une personne à une autre. Interrogations, réactions épidermiques, peurs pour les uns, ou au contraire passion, voire dépendance pour les autres, la discipline ne laisse personne indifférent, et suscite souvent perplexité et angoisse.
 
 
@@ -71,7 +82,7 @@ Entrée _____________________calcul - communication - mémoire _________________
 
 <br>
 
-Peut-on douter alors de la faiblesse de ce type de réponse dans notre sondage ? Non, à l'évidence. Il est vrai qu'on rentre ici dans un schéma de fonctionnement global, donc avec une vision peut-être un peu technique, mais qui se trouve être étonnamment stable dans le temps pour définir l'ordinateur depuis qu'il existe. Depuis plus de 70 ans, un ordinateur c'est simplement cela : mémoire - unité de calcul - bus - zone entrées sorties.
+Peut-on douter alors de la faiblesse de ce type de réponse dans notre sondage ? Non, à l'évidence. Il est vrai qu'on rentre ici dans un schéma de fonctionnement global, donc avec une vision peut-être un peu technique, mais qui se trouve être étonnamment stable dans le temps pour définir l'ordinateur depuis qu'il existe. Depuis plus de 70 ans, un ordinateur c'est simplement cela : mémoire - unité de calcul - bus - zone entrées sorties.
 
 
 ```{image} media/progressionordi2.png
@@ -87,7 +98,7 @@ On en revient donc, finalement, au problème de la perception : ce que perçoi
 
 <br>
 
-Pour construire un ordinateur il faut donc toujours assembler les mêmes **composants de haut niveau** : de la mémoire RAM et ROM, un CPU avec du câblage, les trois premiers étant complexes du point de vue des composants électroniques de base. 
+Pour construire un ordinateur il faut donc toujours assembler les mêmes **composants de haut niveau** : de la mémoire RAM et ROM, un CPU avec du câblage, les trois premiers étant complexes du point de vue des composants électroniques de base. 
 
 Au sein du CPU, figure une ALU qui réalise les calculs et des registres pour stocker des résultats intermédiaires. 
 
@@ -114,13 +125,13 @@ L'avenir est-il réellement vers l'[informatique quantique](https://www.numerama
 
 Une étape fondamentale semble se franchir aujourd'hui avec une réflexion menée concernant la définition de cette architecture classique quaternaire de Von Neumann. Une nouvelle architecture s'inspire directement du fonctionnement du cerveau, composé de synapses jouant à la fois le rôle de mémoire et de calculateur. Il est alors question de faire jouer à la [mémoire un rôle calculatoire et de fusionner les deux fonctions](https://technologiemedia.net/2018/10/04/des-chercheurs-ont-concu-une-nouvelle-architecture-informatique/). 
 
-Cette approche, 80 ans après Von Neumann, semble apporter des gains exceptionnel en terme de performance, en ce qui concerne la rapidité et la gestion mémoire.
+Cette approche, 80 ans après Von Neumann, semble apporter des gains exceptionnels en terme de performance, en ce qui concerne la rapidité et la gestion mémoire.
 
 ```{image} media/multilayer2.png
 :width: 300
 :height: 500
 ```
-**Nouvelle conception d'architecture hybride de type «gratte-ciel»** : elle est basée sur des matériaux plus avancés que le silicium ; les unités de mémoire et les transistors à base de nanotubes de carbone sont empilés successivement 
+**Nouvelle conception d'architecture hybride de type «gratte-ciel»** : elle est basée sur des matériaux plus avancés que le silicium ; les unités de mémoire et les transistors à base de nanotubes de carbone sont empilés successivement 
 
 <br> <br>
 <br>
