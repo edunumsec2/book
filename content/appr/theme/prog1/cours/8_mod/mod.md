@@ -120,7 +120,6 @@ La tortue connait aussi les commandes :
 - `backward()` pour faire reculer la tortue,
 - `right()` pour la faire tourner vers la droite.
 
-
 Ceci dessine un pentagone.
 
 ```{codeplay}
@@ -156,7 +155,62 @@ Il est possible de personnaliser le pinceau et l'apparence du curseur ou de choi
 Plus d'infos sous [Python - Tortue graphique](https://docs.python.org/fr/3/library/turtle.html#module-turtle).
 
 
-<br> <br>
+## Epaisseur de ligne
+
+La fonction `width()` permet de spécifier l'épaisseur de ligne.
+
+```{codeplay}
+from turtle import *
+
+for i in range(10):
+    forward(50)
+    write(i, font=('Arial', 12))
+    width(i)
+    left(36)
+```
+
+## Remplir une forme
+
+Les fonctions `begin_fill()` et `end_fill()` permettent de spécifier un remplissage.
+
+```{codeplay}
+from turtle import *
+
+width(5)
+fillcolor('hotpink')
+n = 5
+
+begin_fill()
+for i in range(n):
+    forward(100)
+    left(360/n)
+end_fill()
+```
+## Ajouter un texte
+
+
+La fonction `write()` permet d'afficher du texte.
+
+```{codeplay}
+from turtle import *
+
+left(90)
+write('default text size')
+
+fillcolor('red')
+forward(30)
+write('Courier 24', font=('Courier', 24))
+
+fillcolor('blue')
+forward(30)
+write('Arial 36', font=('Arial', 36))
+```
+
+```{codeplay}
+from turtle import *
+
+
+```
 
 ## Exercices
 
@@ -167,7 +221,7 @@ Plus d'infos sous [Python - Tortue graphique](https://docs.python.org/fr/3/libra
 Faites un programme permettant de retourner la valeur en degré d'un des angles quelconques d'un triangle rectangle.
 
 Le programme doit demander à l'utilisateur les longueurs des côtés opposé et adjacent par rapport à l'angle à calculer, ainsi que de l'hypoténuse. Avec ces informations, le programme doit retourner la valeur de l'angle en degrés.
-```` 
+````
 
 ````{admonition} Exercice 2 : jeu 🔌
 :class: note
@@ -178,7 +232,7 @@ Faites un programme contre lequel on peut jouer à feuille-cailloux-ciseaux.
 Le programme doit demander à l'utilisateur de faire son choix parmi les trois possibilités. Si l'utilisateur fait un choix qui n'existe pas, le programme retourne une information et repose la question. L'ordinateur doit faire un choix aléatoire. Le programme doit confronter le choix de l'utilisateur et celui de l'ordinateur puis retourner une information sur le gagnant du jeu.
 
 Ce programme peut être amélioré en mettant en œuvre un système de score, de manches ou multi-joueurs.
-```` 
+````
 
 ````{admonition} Exercice 3 : étoile 🔌
 :class: note
@@ -192,8 +246,4 @@ Dessinez une étoile avec la tortue.
 <!-- <span style="color:red">Niveau avancé</span> 🔌 -->
 
 Dessinez une maison comprenant une porte et une fenêtre avec la tortue.
-```` 
-
-
-
-
+````
