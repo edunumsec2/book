@@ -137,8 +137,24 @@ répéter jusqu'à courant.vide():
 gauche.courant()
 ```
 
+### Tri par pivot (quicksort)
+````
+répéter tant qu'il y des tas avec au moins deux cartes:
+    courant.mettre(haut, gauche):
+    initier(gauche)
+    initier(droite)
+    répéter jusqu'à courant.vide():
+        courant mettre(haut,droite)
+        si plus grand que (G>D):
+            disposer(petite, gauche)
+        sinon
+            disposer(grande, droite)
+    disposer(seule,courant)
+    déplacer le marqueur vers le tas avec au moins 2 cartes le plus à droite
+superposer tous les tas de gauche à droite.
+
 ### Remarque
-Les tris par sélection et pivot (quicksort) ne sont pas vraiment adaptés à ce dispositif physique basé sur les
+Le tri par sélection n'est pas vraiment adaptés à ce dispositif physique basé sur les
 piles. Une variante de l'activité consisterait à donner au autre dispositif basé sur les tableaux à une partie de la classe afin de faire émerger ces algorithmes. 
  
 
