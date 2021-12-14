@@ -24,6 +24,7 @@ Nous savons faire un circuit simple qui calcule le **OU** de deux entrées $X$ e
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 110], "id": 1, "name": "Y", "val": 0}
@@ -41,6 +42,7 @@ Nous pouvons sans autre y ajouter une porte **ET** pour calculer une autre sorti
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 110], "id": 1, "name": "Y", "val": 0}
@@ -64,6 +66,7 @@ L'idée est maintenant de combiner ces sorties intermédiaires pour n'en avoir p
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 170], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 250], "id": 1, "name": "Y", "val": 0},
@@ -91,6 +94,7 @@ Pour la suite, nous avons besoin de nous rappeler ceci. Lorsqu'un signal, disons
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 40], "id": 0, "name": "A", "val": 0},
     {"pos": [50, 130], "id": 1, "name": "A'", "val": 0},
@@ -116,6 +120,7 @@ Ensuite, lorsqu'un signal, disons $B$ cette fois, passe à travers une porte log
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 1, "name": "B", "val": 0},
     {"pos": [130, 50], "id": 2, "name": "0", "val": 0}
@@ -140,6 +145,7 @@ En relisant ces lignes, on voit que ce qu'on donne à la seconde entrée de la p
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 180], "id": 0, "name": "A", "val": 0},
     {"pos": [50, 240], "id": 1, "name": "B", "val": 0},
@@ -175,6 +181,7 @@ Pour recombiner ces sorties filtrées, il ne nous reste plus qu'à les connecter
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 180], "id": 0, "name": "A", "val": 0},
     {"pos": [50, 240], "id": 1, "name": "B", "val": 0},
@@ -209,6 +216,7 @@ Ceci nous permet de compléter le circuit lacunaire de début de chapitre pour s
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [230, 50], "orient": "s", "id": 2, "name": "Op", "val": 0},
     {"pos": [50, 170], "id": 19, "name": "X", "val": 0},
@@ -258,6 +266,7 @@ En réutilisant les principes appliqués ci-dessus, construisez un circuit à de
 :showonly: AND OR NOT XOR
 
 {
+  "v": 1,
   "in": [
     {"pos": [230, 50], "orient": "s", "id": 2, "name": "Op", "val": 0},
     {"pos": [50, 170], "id": 19, "name": "X", "val": 0},
@@ -275,6 +284,7 @@ Voici un circuit qui réutilise le sélecteur de signal et qui fournit à ce sé
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [230, 50], "orient": "s", "id": 2, "name": "Op", "val": 0},
     {"pos": [50, 170], "id": 19, "name": "X", "val": 0},
@@ -321,6 +331,7 @@ En réutilisant les principes appliqués ci-dessus, construisez un circuit à un
 :showonly: AND OR NOT XOR
 
 {
+  "v": 1,
   "in": [
     {"pos": [230, 50], "orient": "s", "id": 2, "name": "Op", "val": 0},
     {"pos": [50, 170], "id": 19, "name": "X", "val": 0},
@@ -340,6 +351,7 @@ Voici une proposition qui réutilise le sélecteur de signal et qui fournit à c
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [150, 50], "orient": "s", "id": 2, "name": "Op", "val": 0},
     {"pos": [50, 180], "id": 19, "name": "X", "val": 0}
@@ -373,6 +385,7 @@ La table de vérité est identique à celle d'une porte **OU-X**. On peut donc s
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [100, 50], "orient": "s", "id": 2, "name": "Op", "val": 0},
     {"pos": [50, 130], "id": 19, "name": "X", "val": 0}
@@ -397,6 +410,7 @@ Nous présentons ici une ALU simple à 4 bits :
 :mode: static
 
 {
+  "v": 1,
   "components": [
     {
       "type": "alu",
@@ -427,6 +441,7 @@ Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effec
 :showonly: LogicInput LogicOutput DisplayNibble
 
 {
+  "v": 1,
   "components": [
     {
       "type": "alu", "pos": [300, 200],
@@ -442,6 +457,7 @@ Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effec
 :mode: tryout
 
 {
+  "v": 1,
   "components": [
     {
       "type": "alu",
@@ -516,6 +532,7 @@ Ce qui nous intéresse spécialement, c'est la comparaison à la ligne 3. Cette 
 :showonly: ALU LogicInput LogicOutput NOT OR AND XOR
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 16, "val": 0},
     {"pos": [50, 60], "id": 17, "val": 0},
@@ -542,6 +559,7 @@ On connecte les 8 entrées, on règle l'opération de l'ALU sur soustraction et 
 :height: 330
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 16, "val": 0},
     {"pos": [50, 60], "id": 17, "val": 0},
@@ -592,6 +610,7 @@ Cette solution utilise des portes **OU-X** comme comparateurs. On voit ici que 4
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 16, "val": 0},
     {"pos": [50, 60], "id": 17, "val": 0},
@@ -650,6 +669,7 @@ Notre petite ALU peut aussi faire des calculs en utilisant une représentation s
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 70], "id": 16, "val": 0},
     {"pos": [50, 100], "id": 17, "val": 1},
@@ -744,6 +764,7 @@ L'idée principale derrière la conception d'un circuit logique qui est capable 
 :mode: tryout
 
 {
+  "v": 1,
   "in": [{"pos": [50, 30], "id": 4, "name": "X", "val": 0}],
   "gates": [{"type": "OR", "pos": [140, 40], "in": [5, 6], "out": 7}],
   "out": [{"pos": [240, 40], "id": 0, "name": "Z"}],
@@ -762,6 +783,7 @@ Examinons le circuit ci-dessous : c'est le verrou dit « SR », pour _set/
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 8, "name": "R", "val": 0},
     {"pos": [50, 130], "id": 9, "name": "S", "val": 0}
@@ -802,6 +824,7 @@ On essaie en général d'éviter d'avoir un 1 sur $R$ et sur $S$ en même temps,
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 8, "name": "R", "val": 0, "isPushButton": true},
     {"pos": [50, 130], "id": 9, "name": "S", "val": 0, "isPushButton": true}
@@ -836,6 +859,7 @@ Ces verrous sont communs, et pour le reste du chapitre, on simplifiera la notati
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 10, "name": "R", "val": 0, "isPushButton": true},
     {"pos": [50, 70], "id": 11, "name": "S", "val": 0, "isPushButton": true}
@@ -873,6 +897,7 @@ On va utiliser pour cela un circuit similaire, mais qui fonctionne un peu diffé
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [90, 40], "id": 0, "name": "D", "val": 0},
     {"pos": [90, 80], "id": 1, "name": "Horloge", "val": 0, "isPushButton": true}
@@ -914,6 +939,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 :showonly: AND OR NOT XOR FlipflopD
 
 {
+  "v": 1,
   "in": [
     {"pos": [100, 50], "id": 24, "name": "X", "val": 1},
     {"pos": [100, 130], "id": 25, "name": "Y", "val": 1},
@@ -933,6 +959,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [100, 50], "id": 24, "name": "X", "val": 1},
     {"pos": [100, 130], "id": 25, "name": "Y", "val": 1},
@@ -991,6 +1018,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 :showonly: AND OR NOT XOR FlipflopD
 
 {
+  "v": 1,
   "in": [
     {"pos": [100, 90], "id": 6, "name": "Horloge", "val": 0, "isPushButton": true}
   ],
@@ -1004,6 +1032,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 :mode: tryout
 
 {
+  "v": 1,
   "components": [
     {
       "type": "flipflop-d",
@@ -1038,6 +1067,7 @@ Vous pouvez mettre l'animation en pause et exécuter chaque transition pas à pa
 :mode: tryout
 
 {
+  "v": 1,
   "in": [{"type": "clock", "pos": [40, 30], "id": 30, "period": 1000}],
   "out": [
     {"pos": [380, 30], "id": 7, "name": "A"},
@@ -1108,6 +1138,7 @@ Cela nous donne ce début de circuit, qui pour l'instant n'est pas fonctionnel�
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {
       "pos": [340, 450],
@@ -1191,6 +1222,7 @@ L'entrée $B$ de l'ALU est le nouveau nombre à additionner. Pour cela, nous ajo
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {
       "pos": [340, 490],
@@ -1297,6 +1329,7 @@ Voici le circuit final :
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {
       "pos": [340, 490],

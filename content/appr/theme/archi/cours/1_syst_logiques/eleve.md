@@ -74,7 +74,7 @@ On peut dessiner des diagrammes avec des {glo}`portelogique|portes logiques`. Ce
 :height: 60
 :mode: static
 
-{"gates": [{"type": "AND", "pos": [50, 30], "in": [0, 1], "out": 2}]}
+{"v": 1, "gates": [{"type": "AND", "pos": [50, 30], "in": [0, 1], "out": 2}]}
 ```
 
 Sur ce schéma logique, les entrées sont à gauche, la sortie à droite et la porte est connectée au milieu. Les circuits sont représentés en noir s'ils véhiculent un «0» et avec une couleur s'ils véhiculent un «1».
@@ -86,6 +86,7 @@ Cliquez sur les entrées $X$ et $Y$ pour changer leurs valeurs et observez le co
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
@@ -134,6 +135,7 @@ Essayez la porte **OU**:
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
@@ -162,6 +164,7 @@ Essayez l'inverseur:
 :mode: tryout
 
 {
+  "v": 1,
   "in": [{"pos": [50, 30], "id": 0, "name": "X", "val": 0}],
   "out": [{"pos": [220, 30], "id": 2, "name": "Z"}],
   "gates": [{"type": "NOT", "pos": [130, 30], "in": 1, "out": 3}],
@@ -203,6 +206,7 @@ Les {glo}`portelogique|portes` peuvent être connectées les unes aux autres. Vo
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
@@ -247,6 +251,7 @@ Le cas est différent si l'une des deux entrées vaut 1. Voici deux diagrammes f
 :mode: static
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 1},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
@@ -267,6 +272,7 @@ Le cas est différent si l'une des deux entrées vaut 1. Voici deux diagrammes f
 :mode: static
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 1}
@@ -292,6 +298,7 @@ Mais dans le cas $X = Y = 1$, représenté ici, la situation est différente :
 :mode: static
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 1},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 1}
@@ -325,6 +332,7 @@ Cette fonction s'appelle «ou exclusif», car pour avoir un 1 de sortie, elle ex
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
@@ -358,6 +366,7 @@ Pourquoi rajouter une porte **ET**: On utilise ici le fait que connecter une por
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
@@ -379,6 +388,7 @@ Ce qui reste à définir en complétant avant la porte **ET**, c'est l'exclusion
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
@@ -404,6 +414,7 @@ Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
@@ -430,6 +441,7 @@ Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la
 :mode: static
 
 {
+  "v": 1,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": "?"},
@@ -459,6 +471,7 @@ La table de vérité montre qu'il y a deux lignes où la sortie doit valoir $1$:
 :mode: static
 
 {
+  "v": 1,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": "?"},
@@ -485,6 +498,7 @@ On avance ainsi à ceci :
 :mode: static
 
 {
+  "v": 1,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": "?"},
@@ -510,6 +524,7 @@ Voici le circuit final ainsi réalisé :
 :mode: static
 
 {
+  "v": 1,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": "?"},
@@ -548,6 +563,7 @@ En annotant le schéma logique avec les quatre cas de figure possibles pour les 
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 150], "id": 1, "name": "Y", "val": 0}
@@ -577,6 +593,7 @@ Quelle est la porte cachée de ce circuit ?
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
@@ -599,6 +616,7 @@ Analysez ce circuit. De quel type de portes est-il constitué ? Fonctionne-t-i
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0},
@@ -620,6 +638,7 @@ Voici le circuit corrigé (il a la même apparence que le circuit de la question
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0},
@@ -663,6 +682,7 @@ Ce circuit, une fois corrigé, implémente en fait un **ET** à trois entrée $X
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
@@ -690,6 +710,7 @@ Réalisez ensuite un circuit logique avec les mêmes deux entrées $X$ et $Y$ et
 :showonly: AND OR NOT
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 40], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 160], "id": 4, "name": "Y", "val": 0}
@@ -714,6 +735,7 @@ Il y plusieurs solutions possibles. Celle qui correspond aux indices est la suiv
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 40], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 160], "id": 4, "name": "Y", "val": 0}
@@ -735,6 +757,7 @@ Voici un circuit plus simple, qui fait la même chose mais qui est plus difficil
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 40], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 80], "id": 4, "name": "Y", "val": 0}
