@@ -461,7 +461,7 @@ Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effec
     {"pos": [50, 340], "id": 27, "val": 0},
     {"pos": [360, 60], "orient": "w", "id": 36, "name": "Add./Soustr.", "val": 0}
   ],
-  "displays": [
+  "out": [
     {"type": "nibble", "pos": [220, 50], "id": [20, 21, 22, 23], "name": "A"},
     {"type": "nibble", "pos": [220, 350], "id": [28, 29, 30, 31], "name": "B"},
     {"type": "nibble", "pos": [400, 200], "id": [32, 33, 34, 35], "name": "S"}
@@ -661,7 +661,7 @@ Notre petite ALU peut aussi faire des calculs en utilisant une représentation s
     {"pos": [50, 340], "id": 27, "val": 1},
     {"pos": [360, 60], "orient": "w", "id": 36, "name": "Add./Soustr.", "val": 1}
   ],
-  "displays": [
+  "out": [
     {
       "type": "nibble",
       "pos": [220, 50],
@@ -885,7 +885,7 @@ On va utiliser pour cela un circuit similaire, mais qui fonctionne un peu diffé
     {
       "type": "flipflop-d",
       "pos": [170, 60],
-      "in": [2, 3, 4, 5],
+      "in": [3, 4, 5, 2],
       "out": [6, 7],
       "state": 0
     }
@@ -951,14 +951,14 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
     {
       "type": "flipflop-d",
       "pos": [390, 70],
-      "in": [6, 7, 8, 9],
+      "in": [7, 8, 9, 6],
       "out": [10, 11],
       "state": 0
     },
     {
       "type": "flipflop-d",
       "pos": [390, 180],
-      "in": [12, 13, 14, 15],
+      "in": [13, 14, 15, 12],
       "out": [16, 17],
       "state": 0
     }
@@ -1008,7 +1008,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
     {
       "type": "flipflop-d",
       "pos": [230, 100],
-      "in": [0, 1, 2, 3],
+      "in": [1, 2, 3, 0],
       "out": [4, 5],
       "state": 0
     }
@@ -1038,6 +1038,7 @@ Vous pouvez mettre l'animation en pause et exécuter chaque transition pas à pa
 :mode: tryout
 
 {
+  "in": [{"type": "clock", "pos": [40, 30], "id": 30, "period": 1000}],
   "out": [
     {"pos": [380, 30], "id": 7, "name": "A"},
     {"pos": [380, 80], "id": 10, "name": "B"},
@@ -1047,19 +1048,18 @@ Vous pouvez mettre l'animation en pause et exécuter chaque transition pas à pa
     {
       "type": "flipflop-d",
       "pos": [180, 100],
-      "in": [12, 13, 14, 15],
+      "in": [13, 14, 15, 12],
       "out": [16, 17],
       "state": 1
     },
     {
       "type": "flipflop-d",
       "pos": [180, 230],
-      "in": [24, 25, 26, 27],
+      "in": [25, 26, 27, 24],
       "out": [28, 29],
       "state": 1
     }
   ],
-  "clocks": [{"pos": [40, 30], "id": 30, "period": 1000}],
   "wires": [
     [16, 25, {"waypoints": [[250, 120, "s"], [120, 180, "s"]]}],
     [16, 10],
@@ -1136,33 +1136,33 @@ Cela nous donne ce début de circuit, qui pour l'instant n'est pas fonctionnel�
     {
       "type": "flipflop-d",
       "pos": [390, 60],
-      "in": [16, 17, 18, 19],
+      "in": [17, 18, 19, 16],
       "out": [20, 21],
       "state": 0
     },
     {
       "type": "flipflop-d",
       "pos": [390, 160],
-      "in": [22, 23, 24, 25],
+      "in": [23, 24, 25, 22],
       "out": [26, 27],
       "state": 0
     },
     {
       "type": "flipflop-d",
       "pos": [390, 260],
-      "in": [28, 29, 30, 31],
+      "in": [29, 30, 31, 28],
       "out": [32, 33],
       "state": 0
     },
     {
       "type": "flipflop-d",
       "pos": [390, 360],
-      "in": [34, 35, 36, 37],
+      "in": [35, 36, 37, 34],
       "out": [38, 39],
       "state": 0
     }
   ],
-  "displays": [
+  "out": [
     {"type": "nibble", "pos": [550, 190], "id": [46, 47, 48, 49], "name": "Acc."}
   ],
   "wires": [
@@ -1213,7 +1213,7 @@ L'entrée $B$ de l'ALU est le nouveau nombre à additionner. Pour cela, nous ajo
       "isPushButton": true
     }
   ],
-  "displays": [
+  "out": [
     {
       "type": "nibble",
       "pos": [100, 390],
@@ -1233,28 +1233,28 @@ L'entrée $B$ de l'ALU est le nouveau nombre à additionner. Pour cela, nous ajo
     {
       "type": "flipflop-d",
       "pos": [390, 100],
-      "in": [16, 17, 18, 19],
+      "in": [17, 18, 19, 16],
       "out": [20, 21],
       "state": 0
     },
     {
       "type": "flipflop-d",
       "pos": [390, 200],
-      "in": [22, 23, 24, 25],
+      "in": [23, 24, 25, 22],
       "out": [26, 27],
       "state": 0
     },
     {
       "type": "flipflop-d",
       "pos": [390, 300],
-      "in": [28, 29, 30, 31],
+      "in": [29, 30, 31, 28],
       "out": [32, 33],
       "state": 0
     },
     {
       "type": "flipflop-d",
       "pos": [390, 400],
-      "in": [34, 35, 36, 37],
+      "in": [35, 36, 37, 34],
       "out": [38, 39],
       "state": 0
     }
@@ -1319,7 +1319,7 @@ Voici le circuit final :
       "isPushButton": true
     }
   ],
-  "displays": [
+  "out": [
     {
       "type": "nibble",
       "pos": [100, 390],
@@ -1339,28 +1339,28 @@ Voici le circuit final :
     {
       "type": "flipflop-d",
       "pos": [390, 100],
-      "in": [16, 17, 18, 19],
+      "in": [17, 18, 19, 16],
       "out": [20, 21],
       "state": 0
     },
     {
       "type": "flipflop-d",
       "pos": [390, 200],
-      "in": [22, 23, 24, 25],
+      "in": [23, 24, 25, 22],
       "out": [26, 27],
       "state": 0
     },
     {
       "type": "flipflop-d",
       "pos": [390, 300],
-      "in": [28, 29, 30, 31],
+      "in": [29, 30, 31, 28],
       "out": [32, 33],
       "state": 0
     },
     {
       "type": "flipflop-d",
       "pos": [390, 400],
-      "in": [34, 35, 36, 37],
+      "in": [35, 36, 37, 34],
       "out": [38, 39],
       "state": 0
     }
