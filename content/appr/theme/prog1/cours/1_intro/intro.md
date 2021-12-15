@@ -71,7 +71,7 @@ L'application ci-dessous simule le fonctionnement d'une machine de Turing : on p
 
 <iframe width="745" height="345" src="https://animations.interstices.info/machine-turing/index.html" title="Simu Turing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Les instructions d'un processeur sont représentées avec des séquences binaires (des 0 et des 1). Les ordinateurs, au niveau le plus bas, représentent toutes les données en binaire, avec des 0 et des 1. C'est aussi vrai pour un programme qu'un processeur pourra exécuter : chaque instruction élémentaire sera aussi représentée par une série de 1 et de 0. Il est difficile pour un humain de directement comprendre un tel langage. Donc, rapidement, des **assembleurs et compilateurs** ont été développés, qui permettaient d'écrire un programme avec des commandes exprimées en anglais et plus facilement compréhensibles pour un humain.
+Les instructions d'un processeur sont représentées avec des séquences binaires (des 0 et des 1). Les ordinateurs, au niveau le plus bas, représentent toutes les données en binaire, avec des 0 et des 1. C'est aussi vrai pour un programme qu'un processeur pourra exécuter : chaque instruction élémentaire sera aussi représentée par une série de 1 et de 0. Il est difficile pour un humain de directement comprendre un tel langage. Donc, rapidement, des **assembleurs et {glo}`compilateurs|compilateurs`** ont été développés, qui permettaient d'écrire un programme avec des commandes exprimées en anglais et plus facilement compréhensibles pour un humain. 
 
 ## Le langage machine
 

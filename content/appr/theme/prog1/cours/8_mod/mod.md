@@ -5,7 +5,7 @@ Lorsqu'on crée de multiples programmes dans des domaines similaires, il est for
 Un **module** est un ou plusieurs fichiers en Python que l'on peut importer au début d'un programme.
 Ce sont des scripts, contenant un ensemble de définitions — typiquement des fonctions, mais aussi des variables ou constantes (comme *pi* du module `math`).
 
-Python est accompagné d'une bibliothèque de modules standards, tels que :
+Python est accompagné d'une bibliothèque de modules standards, tels que :
 
 - `math`,
 - `random`,
@@ -25,7 +25,7 @@ import math
 print(dir(math))
 ````
 
-**Exercice :** importez le module `random` et affichez son contenu avec `dir`.
+**Exercice :** importez le module `random` et affichez son contenu avec `dir`.
 
 Pour utiliser une fonction du module importé, il faut faire précéder le nom de la fonction par le nom du module, séparé d'un point.
 
@@ -38,11 +38,11 @@ print('pi =', math.pi)
 print('fact(7) =', math.factorial(7))
 ````
 
-**Exercice :** utilisez la fonction `pow` (puissance) et affichez le résultat.
+**Exercice :** utilisez la fonction `pow` (puissance) et affichez le résultat.
 
 ## Module `math`
 
-On retrouve dans le module `math` des fonctions ainsi que des constantes :
+On retrouve dans le module `math` des fonctions ainsi que des constantes :
 
 - arithmétiques,
 - logarithmiques et exponentielles,
@@ -102,7 +102,7 @@ for i in range(5):
 ## Module `turtle`
 
 Le module `turtle` permet de déplacer une tortue virtuelle sur un écran en lui donnant des commandes pour se déplacer.
-En se déplaçant elle dessine une trace :
+En se déplaçant elle dessine une trace :
 
 - la fonction `forward(200)` fait avancer la tortue de 200 pixels,
 - la fonction `left(90)` fait tourner la tortue de 90 degrés vers la gauche.
@@ -115,7 +115,7 @@ left(90)
 forward(100)
 ```
 
-La tortue connait aussi les commandes :
+La tortue connait aussi les commandes :
 
 - `backward()` pour faire reculer la tortue,
 - `right()` pour la faire tourner vers la droite.
@@ -131,7 +131,7 @@ for i in range(n):
     left(360/n) 
 ```
 
-**Exercice :** dessinez un hexagone, changez la taille.
+**Exercice :** dessinez un hexagone, changez la taille.
 
 ```{codeplay}
 from turtle import *
@@ -149,7 +149,7 @@ left(180 - alpha)
 forward(c)
 ```
 
-**Exercice :** modifiez a et b. Affichez a, b et c avec la fonction `write()` au milieu du segment.
+**Exercice :** modifiez a et b. Affichez a, b et c avec la fonction `write()` au milieu du segment.
 
 Il est possible de personnaliser le pinceau et l'apparence du curseur ou de choisir si le pinceau est en train d'écrire ou s'il est relevé.
 Plus d'infos sous [Python - Tortue graphique](https://docs.python.org/fr/3/library/turtle.html#module-turtle).
@@ -161,17 +161,17 @@ On s'imagine une tortue qui se déplace dans un rectangle et laisse une trace.
 
 Elle peut se déplacer avec les 4 fonctions:
 
-- `forward()` pour avancer
-- `back()` pour reculer
-- `left()` pour tourner à gauche
-- `right()` pour tourner à droite
+- `forward()` pour avancer,
+- `back()` pour reculer,
+- `left()` pour tourner à gauche,
+- `right()` pour tourner à droite.
 
 Au début elle se trouve au centre d'une zone rectangulaire.
 Ce rectangle a les propriétés suivants:
 
-- l'origine (0, 0) se trouve au centre
-- l'axe x s'étend de -300 à +300
-- l'axe y s'étend de -200 à +200
+- l'origine (0, 0) se trouve au centre,
+- l'axe x s'étend de -300 à +300,
+- l'axe y s'étend de -200 à +200.
 
 Voici comment dessiner un carré.
 
@@ -207,11 +207,11 @@ On appelle cette façon de faire **définir** une fonction.
 Ensuite il suffit d'écrire `square()`pour dessiner le carré. On appelle ceci **appeler** une fonction.
 Rappelez vous ceci:
 
-- on définit une fonction une seule fois
-- on peut appeler une fonction autant de fois qu'on veut
+- on définit une fonction une seule fois,
+- on peut appeler une fonction autant de fois qu'on veut.
 
 De nouveau nous réduisons les lignes de code nécessaires.
-Au lieu d'écrire 3 lignes, nous écrivons que 1 ligne de code.
+Au lieu d'écrire 3 lignes, nous n'écrivons qu'une seule ligne de code.
 
 ```{codeplay}
 from turtle import *
@@ -224,7 +224,7 @@ def square():
 square()
 ```
 
-Que se passe-t-il si nous tournons de 90° et répétions a dessiner un carré?
+Que se passe-t-il si nous tournons de 90° et recommençons à dessiner un carré ?
 
 ```{codeplay}
 from turtle import *
@@ -271,7 +271,7 @@ for i in range(36):
 ```
 
 Une autre façon serait de toujours avancer, mais tourner à chaque fois d'un angle un peu plus petit que 180°.
-Essayons!
+Essayons !
 
 ```{codeplay}
 from turtle import *
@@ -282,10 +282,10 @@ for i in range(9):
     left(160)
 ```
 
-Jusqu'a maintenant notre carré a toujours la même taille.
+Jusqu'à maintenant notre carré a toujours la même taille.
 Il serait bien si notre nouvelle commande `square()` pouvait dessiner des carrés de taille variable.
 C'est possible en spécifiant un argument pour la fonction.
-L'argument de la fonction est une valeur (variable locale) qui est passé à la fonction quand elle est appelé.
+L'argument de la fonction est une valeur (variable locale) qui est passée à la fonction quand elle est appelée.
 
 ```{codeplay}
 from turtle import *
@@ -301,7 +301,7 @@ square(90)
 ```
 
 De nouveaux nous constatons une suite de nombres `30, 60, 90, ...`.
-Nous pouvons utiliser une boucle avec une plage `range(start, end, increment)`
+Nous pouvons utiliser une boucle avec une plage `range(start, end, increment)`.
 
 ```{codeplay}
 from turtle import *
@@ -378,8 +378,8 @@ house(110)
 house(120)
 ```
 
-Si nous déformons les angles d'un carré, nous obtenons un losange (`diamond).
-Quelle forme obtenons-nous en dessinant un carré et deux losanges
+Si nous déformons les angles d'un carré, nous obtenons un losange (`diamond`).
+Quelle forme obtenons-nous en dessinant un carré et deux losanges ?
 
 ```{codeplay}
 from turtle import *
@@ -422,7 +422,7 @@ for i in range(6):
 
 ## Polygone
 
-Un polyone régulier est une forme ou toutes les côtes ont la même longueur est toute les angles sont identiques.
+Un polygone régulier est une forme géométrique où tous les côtés ont même longueur et tous les angles sont identiques.
 
 ```{codeplay}
 from turtle import *
@@ -439,10 +439,10 @@ polygon(5, 100)
 polygon(6, 100)
 ```
 
-Pour dessiner des formes qui ne sont pas connecté par une ligne, nous utilisons les deux fonctions:
+Pour dessiner des formes qui ne sont pas connectées par une ligne, nous utilisons les deux fonctions :
 
-- `up()` pour lever le stylo
-- `down()` pour baisser le stylo
+- `up()` pour lever le stylo,
+- `down()` pour baisser le stylo.
 
 ```{codeplay}
 from turtle import *
@@ -466,10 +466,10 @@ for i in range(3, 7):
 ## Couleur
 
 Avec la fonction `fill_color()` nous pouvons définir une couleur de remplissage.
-Pour remplir une forme avec une couleur, nous devons ajouter les deux fonctions:
+Pour remplir une forme avec une couleur, nous devons ajouter les deux fonctions :
 
-- `begin_fill()` au début de la forme
-- `end_fill()` à la fin de la forme
+- `begin_fill()` au début de la forme,
+- `end_fill()` à la fin de la forme.
 
 ```{codeplay}
 from turtle import *
@@ -482,7 +482,7 @@ for i in range(4):
 end_fill()
 ```
 
-La forme ne doit pas nécessairement être fermé pour la remplir d'une couleur.
+La forme ne doit pas nécessairement être fermée pour être remplie d'une couleur.
 Dans l'exemple suivant nous dessinons une forme ouverte avec seulement deux lignes.
 Le résultat est un triangle.
 
@@ -505,9 +505,9 @@ end_fill()
 ```
 
 Comme avant nous allons définir une fonction `square()`.
-Cette fois elle a deux arguments:
-- `a` pour la taille du carré
-- `color` pour la couleur du carrée
+Cette fois elle a deux arguments :
+- `a` pour la taille du carré,
+- `color` pour la couleur du carré.
 
 ```{codeplay}
 from turtle import *
@@ -526,11 +526,11 @@ square(100, 'yellow')
 square(100, 'orange')
 square(100, 'red')
 ```
-Voici une liste des couleurs disponible.
+Voici une liste des couleurs disponibles.
 
 ![couleurs](colors.png)
 
-Pour dessiner multiples couleurs, nous pouvons définir une liste de couleurs et itérer sur cette liste.
+Pour dessiner de multiples couleurs, nous pouvons définir une liste de couleurs et itérer sur cette liste.
 
 ```{codeplay}
 from turtle import *
@@ -574,7 +574,7 @@ while color:
 ```
 
 De nouveaux nous définissons une fonction `line()` pour dessiner une liste de couleurs.
-En fin de liste, la tortue est place à la position prête pour dessiner la ligne suivante.
+En fin de liste, la tortue est placée à la position prête pour dessiner la ligne suivante.
 
 ```{codeplay}
 from turtle import *
@@ -618,8 +618,8 @@ line(['yellow', 'yellow', 'yellow', 'white'])
 ```
 
 ## Objets
-Quelle sont toutes les fonctions que nous importons avec le module `turtle` ?
-La fonction `dir()` retourne une liste avec toutes les noms de fonctions et classes qui appartiennent au module.
+Quelles sont toutes les fonctions que nous importons avec le module `turtle` ?
+La fonction `dir()` retourne une liste avec tous les noms de fonctions et classes qui appartiennent au module.
 
 ```{codeplay}
 import turtle
@@ -669,7 +669,7 @@ write('Arial 36', font=('Arial', 36))
 
 ## Exercices
 
-````{admonition} Exercice 1 : Pythagore (toujours...) 🔌
+````{admonition} Exercice 1 : Pythagore (toujours...) 🔌
 :class: note
 <!-- <span style="color:green">Niveau débutant</span> 🔌 -->
 
@@ -678,7 +678,7 @@ Faites un programme permettant de retourner la valeur en degré d'un des angles 
 Le programme doit demander à l'utilisateur les longueurs des côtés opposé et adjacent par rapport à l'angle à calculer, ainsi que de l'hypoténuse. Avec ces informations, le programme doit retourner la valeur de l'angle en degrés.
 ````
 
-````{admonition} Exercice 2 : jeu 🔌
+````{admonition} Exercice 2 : jeu 🔌
 :class: note
 <!-- <span style="color:orange">Niveau intermédiaire</span> 🔌 -->
 
@@ -689,14 +689,14 @@ Le programme doit demander à l'utilisateur de faire son choix parmi les trois p
 Ce programme peut être amélioré en mettant en œuvre un système de score, de manches ou multi-joueurs.
 ````
 
-````{admonition} Exercice 3 : étoile 🔌
+````{admonition} Exercice 3 : étoile 🔌
 :class: note
 <!-- <span style="color:red">Niveau avancé</span> 🔌 -->
 
 Dessinez une étoile avec la tortue.
 ````
 
-````{admonition} Exercice 4 : maison 🔌
+````{admonition} Exercice 4 : maison 🔌
 :class: note
 <!-- <span style="color:red">Niveau avancé</span> 🔌 -->
 

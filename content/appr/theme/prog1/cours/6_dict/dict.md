@@ -13,7 +13,7 @@ d
 
 ## Mémoire associative
 
-Un dictionnaire associe une série de **clés** à une autre série de **valeurs**. Cette structure est aussi appelée :
+Un dictionnaire associe une série de **clés** à une autre série de **valeurs**. Cette structure est aussi appelée :
 
 - structure associative,
 - table de hachage.
@@ -30,18 +30,18 @@ print(trees)
 Ce type de structures de données est standard dans les langages récents (JavaScript, Python, Ruby, ...) mais absent des langages plus anciens (C, Fortran, etc.).
 
 ## La paire `clé:valeur`
-Un dictionnaire est un ensemble de paires clé-valeur (`key:value`) séparées par deux-points (`:`). Un dictionnaire est donc un ensemble ayant la forme `{k1:v1, k2:v2, ...}`, par exemple :
+Un dictionnaire est un ensemble de paires clé-valeur (`key:value`) séparées par deux-points (`:`). Un dictionnaire est donc un ensemble ayant la forme `{k1:v1, k2:v2, ...}`, par exemple :
 
     dico = {"voiture": "véhicule à 4 roues", "moto": "véhicule à 2 roues"} 
 
-ou encore :
+ou encore :
 
 ```{codeplay}
 fr_en = {'un':'one', 'deux':'two'}
 print(fr_en)
 ```
 
-**Exercice** : ajoutez une paire *clé:valeur* supplémentaire.
+**Exercice** : ajoutez une paire *clé:valeur* supplémentaire.
 
 Un autre exemple pour un dictionnaire est la table du code Morse.
 
@@ -50,9 +50,9 @@ Morse = {'a':'.-', 'b':'-...', 'c':'-.-.'}
 print(Morse)
 ```
 
-**Exercice** : compléter le code pour trois lettres supplémentaires.
+**Exercice** : complétez le code pour trois lettres supplémentaires.
 
-La syntaxe d'un dictionnaire est la suivante :
+La syntaxe d'un dictionnaire est la suivante :
 
 - un dictionnaire est délimité par des accolades (`{}`),
 - ses éléments sont séparés par des virgules (`,`),
@@ -84,7 +84,7 @@ Morse = {'a':'.-', 'b':'-...', 'c':'-.-.'}
 print(len(Morse))
 ```
 
-**Exercice** : ajoutez une paire et vérifiez la nouvelle longueur du dictionnaire.
+**Exercice** : ajoutez une paire et vérifiez la nouvelle longueur du dictionnaire.
 
 Avec l'opérateur spécial `in`, on peut tester si une clé donnée fait partie du dictionnaire.
 
@@ -111,7 +111,7 @@ for letter in phrase:
 print(letter_count)
 ```
 
-On appelle cette structure aussi un **histogramme**. Il montre ici que :
+On appelle cette structure aussi un **histogramme**. Il montre ici que :
 
 - la lettre **d** apparait une fois,
 - la lettre **i** apparait trois fois.
@@ -204,27 +204,27 @@ print(inverse)
 
 ## Exercices
 
-````{admonition} Exercice 1 : 
+````{admonition} Exercice 1 : 
 :class: note
 ......
 ```` 
 
-````{admonition} Exercice 2 : 
+````{admonition} Exercice 2 : 
 :class: note
 ......
 ```` 
 
-````{admonition} Exercice 3 : 
+````{admonition} Exercice 3 : 
 :class: note
 ......
 ````
 
-````{admonition} Exercice 4 : 
+````{admonition} Exercice 4 : 
 :class: note
 ......
 ```` 
 
-````{admonition} Exercice 5 : 
+````{admonition} Exercice 5 : 
 :class: note
 ......
 ```` 

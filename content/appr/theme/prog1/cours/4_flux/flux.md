@@ -1,16 +1,16 @@
 # 3. Structures de contrôle
 
 Jusqu'à présent un programme était envisagé comme une **séquence linéaire**.
-Les instructions s'exécutaient :
+Les instructions s'exécutaient :
 
 - les unes après les autres,
 - de haut en bas,
 - chacune une seule fois.
 
-Dans cette section nous allons aborder les structures de contrôle qui permettent de changer cette séquence purement linéaire :
+Dans cette section nous allons aborder les structures de contrôle qui permettent de changer cette séquence purement linéaire :
 
-- L'**instruction conditionnelle**  permet de ne pas exécuter certaines instructions.
-- La **boucle** permet d'exécuter certaines instructions plusieurs fois.
+- l'**instruction conditionnelle** permet de ne pas exécuter certaines instructions,
+- la **boucle** permet d'exécuter certaines instructions plusieurs fois.
 
 ## Indentation
 
@@ -19,7 +19,7 @@ En C ou JavaScript un bloc est délimité avec des accolades `{...}`.
 L'indentation est encouragé mais reste optionnelle.
 
 En Python l'indentation est obligatoire. C'est la façon officielle de designer un bloc.
-Ceci présente deux avantages :
+Ceci présente deux avantages :
 
 - pas besoin d'accolades pour délimiter une bloc,
 - la structure des blocs est claire et visuelle.
@@ -28,14 +28,14 @@ Une **indentation** est un retrait du code par rapport à la marge gauche de 4 c
 Elle peut être insérée avec la touche tabulateur **TAB** (symbolisée par une flèche à gauche du clavier).
 
 Une suite d'instructions indentée de la même manière forme un bloc.
-Ces blocs se trouvent dans :
+Ces blocs se trouvent dans :
 
 - la définition de fonction (`def`),
 - l'instruction conditionnelle (`if-else`),
 - la boucles (`for`, `while`).
 
 En Python le symbole `:` en fin de ligne introduit un sous-bloc qui doit être indenté.
-Voici des sous-blocs à la suite des mot-clés `def`, `if`, `else`, `for`.
+Voici des sous-blocs à la suite des mot-clés `def`, `if`, `else`, `for` :
 
 ```python
 def f(x):
@@ -69,7 +69,7 @@ print('dehors')
 
 ## <span commented>La comparaison</span>
 On peut être amené, dans un programme, à comparer des résultats issus de traitements divers, via par exemple l'utilisation de formules différentes, ou tout simplement comparer le résultat d'un calcul avec une valeur test.
-Python connait six types de comparaisons :
+Python connait six types de comparaisons :
 
 - plus petit - inférieur strictement (`<`),
 - plus petit ou égal - inférieur ou égal (`<=`),
@@ -80,7 +80,7 @@ Python connait six types de comparaisons :
 
 Le résultat d'une comparaison est une valeur qui est soit vraie, soit fausse. C'est une valeur dite _booléenne_. En Python, ces deux valeurs sont représentées avec les mots clés `True` et `False`.
 
-Voici quelques exemples :
+Voici quelques exemples :
 
 
 ```{codeplay}
@@ -90,7 +90,7 @@ print(a < 2)
 print(a != 2)
 ```
 
-**Note** :
+**Note** :
 ne pas confondre l'opérateur d'_affectation_ (`=`) avec l'opérateur de _comparaison_ (`==`).
 
 ```{codeplay}
@@ -253,7 +253,7 @@ while x !=  n:
     else:
         print(x, 'est trop petit')
         
-    x = input('Essayez encore:')
+    x = input('Essayez encore :')
     x = int(x)
 
 print()
@@ -264,41 +264,41 @@ print('Bravo. Vous avez réussi')
 ## Exercices
 *Les exercices suivants sont à faire dans l'IDE de votre choix.*
 
-````{admonition} Exercice 1 : intervalle 🔌
+````{admonition} Exercice 1 : intervalle 🔌
 :class: note
 <!-- <span style="color:green">Niveau débutant</span> 🔌 -->
 
 Vérifiez si une variable `x` contient une valeur qui est entre deux bornes [a, b].
 ````
 
-````{admonition} Exercice 2 : question 🔌
+````{admonition} Exercice 2 : question 🔌
 :class: note
 <!-- <span style="color:green">Niveau débutant</span> 🔌 -->
 
 Faites un programme qui pose une question simple à l'utilisateur. Si sa réponse est juste, affichez `Bravo`.
 ````
 
-````{admonition} Exercice 3 : âge 🔌
+````{admonition} Exercice 3 : âge 🔌
 :class: note
 <!-- <span style="color:orange">Niveau intermédiaire</span> 🔌 -->
 
 Faites un programme qui demande à l'utilisateur son âge.
-Si l'âge est supérieur ou égal à 18, le programme doit afficher : «Vous êtes majeur, vous pouvez voter» et si l'âge est inférieur à 18, le programme doit afficher : «Vous êtes mineur, vous pourrez voter dans (*calcul de la différence*) année(s).»
+Si l'âge est supérieur ou égal à 18, le programme doit afficher : «Vous êtes majeur, vous pouvez voter» et si l'âge est inférieur à 18, le programme doit afficher : «Vous êtes mineur, vous pourrez voter dans (*calcul de la différence*) année(s).»
 ```` 
 
-````{admonition} Exercice 4 : jeu 🔌
+````{admonition} Exercice 4 : jeu 🔌
 :class: note
 <!-- <span style="color:orange">Niveau intermédiaire</span> 🔌 -->
 
 Faites un programme qui demande à l'utilisateur d'entrer un chiffre entre 0 et 2.
-Si l'utilisateur choisit :
+Si l'utilisateur choisit :
 
-- 0 : affichez **Caillou**,
-- 1 : affichez **Feuille**,
-- 2 : affichez **Ciseaux**.
+- 0 : affichez **Caillou**,
+- 1 : affichez **Feuille**,
+- 2 : affichez **Ciseaux**.
 ```` 
 
-````{admonition} Exercice 5 : carré 🔌
+````{admonition} Exercice 5 : carré 🔌
 :class: note
 <!-- <span style="color:red">Niveau avancé</span> 🔌 -->
 
@@ -313,14 +313,14 @@ for i in range(n):
 ```
 ```` 
 
-````{admonition} Exercice 6 : triangle 🔌
+````{admonition} Exercice 6 : triangle 🔌
 :class: note
 <!-- <span style="color:red">Niveau avancé</span> 🔌 -->
 
 Faites un programme qui affiche un triangle de hauteur `n` avec des `x`.
 ````
 
-````{admonition} Exercice 7 : boite 🔌
+````{admonition} Exercice 7 : boite 🔌
 :class: note
 <!-- <span style="color:black">Niveau expert</span> 🔌 -->
 

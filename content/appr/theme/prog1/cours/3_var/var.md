@@ -238,9 +238,9 @@ Le **cadavre exquis** est un jeu graphique ou d'écriture collectif inventé par
 
 Définition : _jeu qui consiste à faire composer une phrase, ou un dessin, par plusieurs personnes sans qu'aucune d'elles ne puisse tenir compte de la collaboration ou des collaborations précédentes._
 
-Faites un programme qui permet de faire un jeu d'écriture collectif (cadavre exquis).
+Faites un programme qui permet de faire un jeu d'écriture collectif (cadavre exquis) :
 
-- Le premier utilisateur doit proposer un sujet,
+- le premier utilisateur doit proposer un sujet,
 - le deuxième, un verbe,
 - le troisième, un complément d'objet direct (COD),
 - le quatrième, un complément d'objet indirect (COI),

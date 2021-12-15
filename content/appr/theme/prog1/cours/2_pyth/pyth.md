@@ -14,11 +14,11 @@ Le langage Python, comme la plupart des langages de programmation, est basé sur
 
 Pourquoi choisir ici Python?
 
-- Python est multiplateforme (Windows, Mac, Linux),
+- Python est {glo}`multiplateforme|multiplateforme` (Windows, Mac, Linux),
 - Python a une syntaxe simple et visuelle,
-- Python est interprété et donne un résultat immédiat,
+- Python est interprété et donne un résultat immédiat.
 
-## Qu'est un programme ?
+## Qu'est un programme ?
 
 Un **programme** est une séquence d'instructions pour faire faire quelque chose par un ordinateur. Par exemple :
 
@@ -42,7 +42,7 @@ Nous allons nous lancer tout de suite dans la programmation, avec un programme m
 print('bonjour')
 ```
 
-**Exercice:** Ajoutez une deuxième ligne de code et ré-exécuté le programme.
+**Exercice:** ajoutez une deuxième ligne de code et ré-exécutez le programme.
 
 Ce premier programme afficher le mot *bonjour* sur la console.
 
@@ -51,7 +51,7 @@ Le programme consiste en :
 - une fonction `print` qui affiche son argument, <!-- REVIEW/JPP: on ne sait pas à ce stade ce qu'est un argument, il faudrait pouvoir le définir -->
 - des parenthèses `()` qui entourent l'argument,
 - des guillemets `'...'` qui délimitent une <span commented>chaîne de caractères (du texte),</span><!-- REVIEW/JPP: une chaîne de caractères, ou du texte -->
-- du texte (chaine de caractères), `bonjour`, qui est délimité par des guillemets.
+- du texte (chaîne de caractères), `bonjour`, qui est délimité par des guillemets.
 
 ## L'éditeur (IDE)
 
@@ -90,7 +90,7 @@ print('hello')
 print(123)
 ```
 
-**Exercice:** Transformez le texte en une phrase avec plusieurs mots.
+**Exercice :** transformez le texte en une phrase avec plusieurs mots.
 
 La fonction `print()` peut prendre multiples arguments entre ses parenthèses.
 Les éléments sont alors séparé par une virgule (`,`) mais quand ils sont imprimé, ils sont séparé par une espace (`' '`).
@@ -100,7 +100,7 @@ print('moniteur', 'clavier')
 print(2, 3, 5, 7, 11)
 ```
 
-**Exercice:** Ajoutez un autre périphérique et le prochain nombre premier.
+**Exercice :** ajoutez un autre périphérique et le prochain nombre premier.
 
 Nous pouvons aussi mélanger nombres et text.
 
@@ -110,7 +110,7 @@ print('temps =', 55, 'minutes')
 print('vitesse =', 105/55*60, 'km/h')
 ```
 
-**Exercice** Augmentez la distance d'environ 10% et diminuez la vitesse de 10%.
+**Exercice :** augmentez la distance d'environ 10% et diminuez la vitesse de 10%.
 
 ## Opérations arithmétiques
 
@@ -124,11 +124,11 @@ print('image 640 x 480')
 print(640 * 480, 'pixels')
 ```
 
-**Exercice:** Calculez le nombre de pixels d'une image HD.
+**Exercice :** calculez le nombre de pixels d'une image HD.
 
 La division utilise l'opérateur `/` et retourne un <span commented>nombre à virgule flottante</span><!-- REVIEW/JPP: ils ne savent pas ce que c'est --> comme résultat.
 
-**NOTE** : en Python, comme dans la plupart des langages de programmation, quand on indique un nombre à virgule, on sépare par un point et non par une virgule la partie entière de la partie décimale.
+**NOTE** : en Python, comme dans la plupart des langages de programmation, quand on indique un nombre à virgule, on sépare par un point et non par une virgule la partie entière de la partie décimale.
 
 ```{codeplay}
 print('123 / 456 =', 123/456)
@@ -154,7 +154,7 @@ Ceci montre que les résultats des calculs en nombres entiers en Python
 ne sont pas limités en termes de nombres de chiffres nécessaires à la représentation de ces entiers:
 le nombre ci-dessus, par exemple, s'écrit avec 953 chiffres.
 
-**Exercice:** Exprime le fameux nombre [gogol](https://fr.wikipedia.org/wiki/Gogol_(nombre))  
+**Exercice :** exprimez le fameux nombre [gogol](https://fr.wikipedia.org/wiki/Gogol_(nombre)).
 
 ## Délimiter un texte
 
@@ -190,7 +190,7 @@ Si une sous-partie du texte est délimitée par des guillemets doubles, il faut 
 
 Lorsqu'il est utilisé avec du texte, l'opérateur `+` crée une nouvelle chaîne de caractères formée à partir des deux chaînes indiquées — une opération appelée _concaténation_.
 
-Toute espace blanc entre deux chaines donne comme résultat sa concaténation.
+Toute espace blanc entre deux chaînes donne comme résultat sa concaténation.
 
 ```{codeplay}
 print('bon' + 'jour')
@@ -199,7 +199,7 @@ print('bon'             "jour")
 print('bon''jour')
 ```
 
-Les nombres peuvent être représentés comme chaîne de caractères:
+Les nombres peuvent être représentés comme chaînes de caractères:
 
 ```{codeplay}
 print('12' + '12')
@@ -232,7 +232,7 @@ print('12 * 12')  # expression comme chaîne
 
 ## Longueur d'une chaîne
 
-La fonction `len()` retourne la longueur d'une chaine.
+La fonction `len()` retourne la longueur d'une chaîne.
 Si nous connaissons la longueur d'une phrase, nous pouvons par exemple souligner cette phrase avec un tiret répété.
 
 ```{codeplay}
@@ -252,8 +252,7 @@ print(99 ** 99)
 print('longeur =', len(str(99 ** 99)))
 ```
 
-**Exercice**  
-Quel est la longueur de l'expression $123^{234}$
+**Exercice :** quelle est la longueur de l'expression $123^{234}$ ?
 
 ## Commentaire
 
@@ -280,7 +279,7 @@ print('bonsoir') # utilisé le soir
 
 *Les exercices suivants sont à faire après avoir installé l'IDE de votre choix.*
 
-````{admonition} Exercice 1 : première impression ... 🔌
+````{admonition} Exercice 1 : première impression ... 🔌
 :class: note
 <!-- <span style="color:green">Niveau débutant</span> -->
 
@@ -288,7 +287,7 @@ Programmez une instruction qui vous demande, puis affiche votre âge.
 
 ````
 
-````{admonition} Exercice 2 : ... deuxième impression ! 🔌
+````{admonition} Exercice 2 : ... deuxième impression ! 🔌
 :class: note
 <!-- <span style="color:green">Niveau débutant</span> -->
 
@@ -300,7 +299,7 @@ Programmez une instruction qui vous demande, puis affiche votre âge.
 
 ````
 
-````{admonition} Exercice 3 : multiplication 🔌
+````{admonition} Exercice 3 : multiplication 🔌
 :class: note
 <!-- <span style="color:green">Niveau débutant</span> -->
 
@@ -308,7 +307,7 @@ Trouvez et programmez l'expression qui calcule le résultat de 4321 multiplié p
 
 ````
 
-````{admonition} Exercice 4 : moyenne 🔌
+````{admonition} Exercice 4 : moyenne 🔌
 :class: note
 <!-- <span style="color:orange">Niveau intermédiaire</span> -->
 
@@ -316,7 +315,7 @@ Trouvez et programmez une expression qui calcule la moyenne des 5 notes suivante
 
 ````
 
-````{admonition} Exercice 5 : surface 🔌
+````{admonition} Exercice 5 : surface 🔌
 :class: note
 <!-- <span style="color:orange">Niveau intermédiaire</span> -->
 
@@ -324,7 +323,7 @@ Trouvez et programmez une expression qui calcule la surface d'un carré de 9 cm 
 
 ````
 
-````{admonition} Exercice 6 : chaîne 🔌
+````{admonition} Exercice 6 : chaîne 🔌
 :class: note
 <!-- <span style="color:red">Niveau avancé</span> -->
 

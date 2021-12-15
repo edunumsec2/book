@@ -1,6 +1,6 @@
 # 4. Listes
 
-Une liste est un séquence linéaire d'objets. En Python, syntaxiquement, une liste :
+Une liste est un séquence linéaire d'objets. En Python, syntaxiquement, une liste :
 
 - est délimitée par des crochets `[]`,
 - voit ses éléments séparés par des virgules `,`.
@@ -24,7 +24,7 @@ La fonction `print` peut imprimer une liste.
 print(fruits)
 ````
 
-**Exercice** : Ajoutez un élément à la liste `fruits`. Ajoutez une deuxième liste `prix` avec des éléments numériques.
+**Exercice** : ajoutez un élément à la liste `fruits`. Ajoutez une deuxième liste `prix` avec des éléments numériques.
 
 ## La fonction `list`
 
@@ -51,7 +51,7 @@ fruits = ['banane', 'pomme', 'orange']
 print(fruits[0])
 ```
 
-**Exercice** : Essayez d'accéder aux éléments `fruits[2]` et `fruits[3]`.
+**Exercice** : essayez d'accéder aux éléments `fruits[2]` et `fruits[3]`.
 
 ```{codeplay}
 m = list('Monty Python')
@@ -127,7 +127,7 @@ print(fruits)
 Une **méthode** fonctionne comme une fonction, mais est rattachée à une liste avec la notation (`.`). 
 Par exemple si `a` désigne une liste, on peux ajouter un élément `x` à la fin de cette liste avec l'expression `a.append(x)`. 
 
-Ces trois méthodes différentes permettent d’ajouter des éléments à une liste existante :
+Ces trois méthodes différentes permettent d’ajouter des éléments à une liste existante :
 
 - `append(x)`,
 - `extend(iterable)`,
@@ -276,7 +276,7 @@ print(s)
 ## Compréhension de liste
 Une **compréhension de liste** est une spécificité «élégante» du langage Python qui permet de construire de manière compacte des listes sur une seule ligne.
 
-Voici un exemple de construction «traditionnelle» d'une liste où on ajoute un élément après l'autre avec une boucle :
+Voici un exemple de construction «traditionnelle» d'une liste où on ajoute un élément après l'autre avec une boucle :
 
 
 ```{codeplay}
@@ -286,16 +286,16 @@ for i in range(10):
 print(cubes)
 ```
 
-En utilisant la compréhension de liste, on peut construire la même liste sur une seule ligne :
+En utilisant la compréhension de liste, on peut construire la même liste sur une seule ligne :
 
 ```{codeplay}
 cubes = [i ** 3 for i in range(10)]
 print(cubes)
 ```
 
-On peut comprendre cette formulation de la manière suivante : *«la liste cubes indicée par i prend la valeur i<sup>3</sup> pour toutes les valeurs de i de 0 à 9.»*
+On peut comprendre cette formulation de la manière suivante : *«la liste cubes indicée par i prend la valeur i<sup>3</sup> pour toutes les valeurs de i de 0 à 9.»*
 
-Une condition peut être ajoutée dans la compréhension (par exemple, pour n'ajouter à la liste que les valeurs impaires) :
+Une condition peut être ajoutée dans la compréhension (par exemple, pour n'ajouter à la liste que les valeurs impaires) :
 
 ```{codeplay}
 a = []
@@ -304,7 +304,7 @@ for i in range(10):
         a.append(i ** 2)
 print(a)
 ```
-*Note : l'opérateur % est l'opérateur modulo, c'est à dire renvoie le reste de la division par 2.*
+*Note : l'opérateur % est l'opérateur modulo, c'est à dire renvoie le reste de la division par 2.*
 
 Nous pouvons alors écrire la formation de cette liste en une seule ligne.
 
@@ -345,27 +345,27 @@ print(tampon)
 
 ## Exercices
 
-````{admonition} Exercice 1 : 
+````{admonition} Exercice 1 : 
 :class: note
 ......
 ```` 
 
-````{admonition} Exercice 2 : 
+````{admonition} Exercice 2 : 
 :class: note
 ......
 ```` 
 
-````{admonition} Exercice 3 : 
+````{admonition} Exercice 3 : 
 :class: note
 ......
 ````
 
-````{admonition} Exercice 4 : 
+````{admonition} Exercice 4 : 
 :class: note
 ......
 ```` 
 
-````{admonition} Exercice 5 : 
+````{admonition} Exercice 5 : 
 :class: note
 ......
 ```` 

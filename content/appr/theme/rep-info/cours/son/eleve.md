@@ -58,7 +58,7 @@ par un microphone.
 
 <!---
 
-```{figure} media/numerisation-00.png
+```{figure} media/soncontinu.png
 ---
 height: 16em
 name: fig-repr-num-sig
@@ -68,7 +68,7 @@ Signal continu à numériser, par exemple un son.
 -->
 
 
-<img src="media/numerisation-00.png" height="350" width="500"/>
+<img src="media/soncontinu.png" height="350" width="500"/>
 
 **Signal continu à numériser, par exemple un son**
 <br> <br>
