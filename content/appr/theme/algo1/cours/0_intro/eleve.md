@@ -3,15 +3,16 @@
 
 ## Quoi ?
 
-Il y a de fortes chances que vous ayez déjà entendu parler d'{glo}`algo|algorithmes` dans les médias. Il y a aussi de fortes chances que ce mot vous évoque des notions bien différentes de la personne à côté de vous. L'objectif de ce chapitre est de vous donner une idée claire de ce qu'est un algorithme et d'éclaircir sa relation avec le programme informatique.
+Il y a de fortes chances que vous ayez déjà entendu parler d'{glo}`algo|algorithmes` dans les médias. Il y a aussi de fortes chances que ce mot évoque pour vous des notions bien différentes de celles de votre voisin. L'objectif de ce chapitre est de vous éclairer sur la notion d'algorithme et la distinction avec la notion de programme informatique.
 
 ## Pourquoi ?
 
-Les algorithmes existent depuis des millénaires. On doit le nom d'algorithme à Al-Khwârizmî, mathématicien perse né en l'an 780 dont les ouvrages ont permis la popularisation des chiffres arabes en Europe, ainsi que la popularisation de nombreux algorithmes connus à ce moment. D'ailleurs l'algorithme le plus connu, l'algorithme d'Euclide date de l'an 300 av J.-C. et permet de calculer le plus grand diviseur commun. C'est intéressant de noter que ce n'est pas Euclide qui a écrit cet algorithme, mais il l'a laissé pour la postérité dans ses écrits. Si ce n'est qu'aujourd'hui que les algorithmes connaissent leur heure de gloire, c'est parce que la machine a permis de les automatiser. Que ce soit dans votre smartphone, sur un ordinateur ou dans un système embarqué, ils nous permettent de résoudre une quantité de problèmes, facilement et avec une rapidité impressionnante.
+Les algorithmes existent depuis des millénaires. On doit le nom d'algorithme à Al-Khwârizmî, mathématicien perse né en l'an 780 dont les ouvrages ont contribué à la popularisation des chiffres arabes en Europe, ainsi que la classification de plusieurs algorithmes connus à ce moment. D'ailleurs l'algorithme le plus connu, l'algorithme d'Euclide, date environ de l'an 300 av J.-C. et permet de calculer le plus grand diviseur commun de deux nombres. Si Euclide a bien laissé des traces écrites de cet algorithme, il est vraisemblable qu'il ait puisé cette connaissance auprès de disciples de Pythagore lui-même. 
+Les algorithmes sont devenus très populaires aujourd'hui grâce à la machine qui a permis de les automatiser. Que ce soit dans votre smartphone, sur un ordinateur ou dans un système embarqué, ils permettent de résoudre une quantité de problèmes, facilement et avec une rapidité impressionnante.
 
 ## Comment ?
 
-Dans un premier temps nous allons nous intéresser à l'algorithme lui-même, à ce qui le caractérise et à ce qu'il faut faire pour le faire exécuter par une machine. Nous allons voir que pour un problème il existe de nombreuses solutions, mais que toutes ces solutions ne sont pas des *bonnes* solutions, selon le contexte dans lequel on tente de résoudre le problème. Dans un deuxième temps nous allons voir comment départager ces différentes solutions parmi elles.
+Dans un premier temps nous allons nous intéresser à la notion même d'algorithme : qu'est-ce qui caractérise un algorithme et comment le faire exécuter par une machine ? Nous allons voir que pour un problème donné il existe de nombreuses solutions, mais que toutes ces solutions ne sont pas de *bonnes* solutions, selon le contexte dans lequel on tente de résoudre le problème. Dans un deuxième temps nous chercherons à départager ces différentes solutions.
 
 
 <!-- 

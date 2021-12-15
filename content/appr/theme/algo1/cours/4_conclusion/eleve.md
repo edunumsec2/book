@@ -8,7 +8,7 @@ L’étude des algorithmes a un effet bénéfique sur notre manière de ré
 
 Les algorithmes sont omniprésents. « Ils » décident de ce que nous voyons sur les réseaux sociaux, ils influencent nos choix quand nous cherchons une personne qui nous correspond, ils nous suggèrent des livres à lire et des films à regarder, corrigent nos textes, les traduisent ou encore embellissent nos photos en un clic. Ils font la pluie et le beau temps en bourse, décident si un prévenu doit être emprisonné, rédigent des articles de journal, conduisent des voitures autonomes. Cette liste s’allonge chaque jour...
 
-Comprendre le fonctionnement de base des algorithmes permet de mieux appréhender ce qu’il se passe dans toutes ces situations. Nous y reviendrons plus en détail dans la deuxième partie du cours d'Algorithmique.
+Comprendre le fonctionnement de base des algorithmes permet de mieux appréhender ce qu’il se passe dans toutes ces situations. Nous y reviendrons plus en détail dans la deuxième partie du cours d'algorithmique.
 
 ````{admonition} À retenir
 :class: attention
@@ -19,7 +19,7 @@ Pour arriver à résoudre un problème, il faut le décomposer en sous-problème
 
 Afin de pouvoir rechercher de manière efficace, les données doivent impérativement être triées.
 
-Il existe de multiples manières de résoudre un problème. Toutes ces manières ne se valent pas. Il faut choisir l’algorithme en fonction de ce qui doit être optimisé : le temps de résolution, l’espace de stockage, la consommation d'énergie, la précision de la solution, etc.
+Il existe de multiples manières de résoudre un problème. Toutes ces manières ne se valent pas. Il faut choisir l’algorithme en fonction de ce qui doit être optimisé : le temps de résolution, l’espace de stockage, la consommation d'énergie, la précision de la solution, etc.
 
 L’algorithme n’est pas un programme. Pour être exécuté sur un système informatique, l'algorithme doit être transcrit en un programme, pour résoudre le problème concrètement et de manière automatisée.     
 
@@ -29,7 +29,7 @@ L’algorithme n’est pas un programme. Pour être exécuté sur un système in
 ## Focus sur l'automatisation
 
 
-Grâce aux algorithmes, la machine a pu remplacer l’homme dans de nombreuses tâches (comparez les deux images ci-dessous), en allant des robots constructeurs d’automobiles aux pilotes d’avion automatiques, ou encore aux logiciels de trading. L’automatisation permet aux employés de se concentrer sur des tâches plus valorisantes et permet aux entreprises de réaliser des économies. 
+Grâce aux algorithmes, la machine a pu remplacer l’homme dans de nombreuses tâches (comparez les deux images ci-dessous), en allant des robots constructeurs d’automobiles aux pilotes automatiques dans les avions, ou encore aux logiciels de trading. L’automatisation permet aux employés de se concentrer sur des tâches plus valorisantes et permet aux entreprises de réaliser des économies. 
 
 **<span style="color:rgb(89, 51, 209)">Quelles difficultés voyez-vous dans l’automatisation ?</span>**
 
@@ -41,17 +41,17 @@ Grâce aux algorithmes, la machine a pu remplacer l’homme dans de nombreuses t
 :width: 500
 :height: 300
 ```
-**Usine du début du siècle dernier.** Les machines dans cette usine de métallurgie à Vallorbe dans le canton de Vaud sont au service des ouvriers. Source : https://wikivaud.ch/metallurgie-vaudoise/
+**Usine du début du siècle dernier.** Les machines dans cette usine de métallurgie à Vallorbe dans le canton de Vaud sont au service des ouvriers. Source : https://wikivaud.ch/metallurgie-vaudoise/
 
 
 ```{image} media/Usine_après.jpeg
 :width: 500
 :height: 300
 ```
-**Usine du début de ce siècle.** Les machines dans cette usine de montage Mistubishi en Chine ont remplacé les ouvriers. Source : https://www.lemonde.fr/blog/fredericjoignot/2015/12/25/robotisation-generale/
+**Usine du début de ce siècle.** Les machines dans cette usine de montage Mistubishi en Chine ont remplacé les ouvriers. Source : https://www.lemonde.fr/blog/fredericjoignot/2015/12/25/robotisation-generale/
 
 
-Selon un rapport publié en 2017 par DELL et le Think Tank californien « L’institut du futur », cité par la chasseuse de tête Isabelle Rouhan dans sans livre « Les métiers du futur », ***<span style="color:rgb(13, 204, 166)">85% des métiers</span>*** qui seront exercés en 2030 par les écoliers d’aujourd’hui n’ont pas encore été inventés.
+Selon un rapport publié en 2017 par DELL et le Think Tank californien « L’institut du futur », cité par la chasseuse de tête Isabelle Rouhan dans son livre « Les métiers du futur », ***<span style="color:rgb(13, 204, 166)">85% des métiers</span>*** qui seront exercés en 2030 par les écoliers d’aujourd’hui n’ont pas encore été inventés.
 
 **<span style="color:rgb(89, 51, 209)">Souhaiteriez-vous devenir neuro-manageur.euse ou éducateur.rice de robots ?</span>**
 
