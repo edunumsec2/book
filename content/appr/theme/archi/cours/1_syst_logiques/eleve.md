@@ -16,16 +16,16 @@ On s'intéresse à une des opérations arithmétiques les plus simples : l'**a
 Que se passe-t-il pour l'addition de deux nombres entiers ? On va utiliser leur représentation binaire (avec uniquement des 1 et des 0). Pour faire simple, on va chercher à additionner simplement deux bits, disons $A$ et $B$, où chacun peut valoir soit 0 soit 1. Posons que la somme $S = A + B$. En énumérant tous les cas de figure, on a :
 
 | $A$ | $B$ | $S$ |
-| :-: | :-: | --: |
+| :-: | :-: | --: |
 | 0   | 0   | 0   |
 | 1   | 0   | 1   |
 | 0   | 1   | 1   |
 | 1   | 1   | 10  |
 
-La dernière ligne est intéressante: On sait que $1+1=2$, mais en {glo}`codebinaire|binaire`, on sait aussi que n'existent que des 0 et des 1, et 2 s'écrit ainsi $10$ (voir le chapitre {ref}`représentation de l'information <representationinformation>`). Cela veut dire que, pour traiter tous les cas d'une addition de deux {glo}`bit|bits`, on a besoin aussi de deux {glo}`bit|bits` de sortie, et qu'un seul ne suffit pas. En explicitant chaque fois le deuxième {glo}`bit|bit` de sortie, notre tableau devient :
+La dernière ligne est intéressante : on sait que $1+1=2$, mais en {glo}`codebinaire|binaire`, on sait aussi que n'existent que des 0 et des 1, et 2 s'écrit ainsi $10$ (voir le chapitre {ref}`représentation de l'information <representationinformation>`). Cela veut dire que, pour traiter tous les cas d'une addition de deux {glo}`bit|bits`, on a besoin aussi de deux {glo}`bit|bits` de sortie, et qu'un seul ne suffit pas. En explicitant chaque fois le deuxième {glo}`bit|bit` de sortie, notre tableau devient :
 
 | $A$ | $B$ | $S$ |
-| :-: | :-: | :-: |
+| :-: | :-: | :-: |
 | 0   | 0   | 00  |
 | 1   | 0   | 01  |
 | 0   | 1   | 01  |
@@ -62,7 +62,7 @@ Une de ces portes est la porte **ET**. Elle a deux entrées, qu'on appellera $X$
 En énumérant les quatre possibilités pour les entrées, on peut écrire ce qu'on appelle {glo}`tableverite|table de vérité` pour la porte **ET** :
 
 | $X$ | $Y$ | $Z$ |
-| :-: | :-: | :-: |
+| :-: | :-: | :-: |
 | 0   | 0   | 0   |
 | 1   | 0   | 0   |
 | 0   | 1   | 0   |
@@ -120,15 +120,15 @@ Pour que la sortie de la porte **OU** vaille 1, il suffit que l'une des deux ent
 Voici sa table de vérité:
 
 | $X$ | $Y$ | $Z$ |
-| :-: | :-: | :-: |
+| :-: | :-: | :-: |
 | 0   | 0   | 0   |
 | 1   | 0   | 1   |
 | 0   | 1   | 1   |
 | 1   | 1   | 1   |
 
-On notera que le **OU** logique est un peu différent du «ou» que l'on utilise en général à l'oral: on voit à la dernière ligne de la table de vérité que la sortie $Z$ vaut également $1$ si les deux entrées $X$ et $Y$ valent $1$. À l'oral, le «ou» est en général interprété comme _exclusif_: si l'on propose à un enfant un bonbon _ou_ une glace, on exclut la possibilité qu'il choisisse les deux. Ce n'est pas le cas pour le **OU** logique.
+On notera que le **OU** logique est un peu différent du «ou» que l'on utilise en général à l'oral : on voit à la dernière ligne de la table de vérité que la sortie $Z$ vaut également $1$ si les deux entrées $X$ et $Y$ valent $1$. À l'oral, le «ou» est en général interprété comme _exclusif_: si l'on propose à un enfant un bonbon _ou_ une glace, on exclut la possibilité qu'il choisisse les deux. Ce n'est pas le cas pour le **OU** logique.
 
-Essayez la porte **OU**:
+Essayez la porte **OU** :
 
 ```{logic}
 :height: 100
@@ -150,14 +150,14 @@ Essayez la porte **OU**:
 
 Cette porte est plus simple: elle n'a qu'une entrée, et sa sortie se contente d'inverser la valeur en entrée. On l'appelle d'ailleurs aussi un _inverseur_.
 
-Voici sa table de vérité:
+Voici sa table de vérité :
 
 | $X$ | $Z$ |
-| :-: | :-: |
+| :-: | :-: |
 | 0   | 1   |
 | 1   | 0   |
 
-Essayez l'inverseur:
+Essayez l'inverseur :
 
 ```{logic}
 :height: 60
@@ -233,7 +233,7 @@ Ce diagramme n'est pas forcément facile à lire — discutons d'abord comment l
 Pour analyser un {glo}`syslogique|circuit logique` comme celui présenté ci-dessus, on cherchera à établir sa {glo}`tableverite|table de vérité`. En l'occurrence, comme pour les portes précédentes, ce circuit a deux entrées: si chaque entrée peut valoir $1$ ou $0$, on a en tout, de nouveau, quatre configurations possibles à examiner dans le but de remplir la dernière colonne :
 
 | $X$ | $Y$ | $Z$   |
-| :-: | :-: | :-:   |
+| :-: | :-: | :-:   |
 | 0   | 0   | $???$ |
 | 1   | 0   | $???$ |
 | 0   | 1   | $???$ |
@@ -319,7 +319,7 @@ La porte **ET** du bas livre un 1, qui est inversé en 0 avant d'atteindre la po
 La table de vérité complétée de ce circuit est ainsi :
 
 | $X$ | $Y$ | $Z$ |
-| :-: | :-: | :-: |
+| :-: | :-: | :-: |
 | 0   | 0   | 0   |
 | 1   | 0   | 1   |
 | 0   | 1   | 1   |
@@ -464,7 +464,7 @@ Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la
 
 Il est parfois difficile d'avoir l'«intuition» nécessaire pour suivre une telle approche ad hoc. Voici donc une autre technique, illustrée avec le même exemple.
 
-La table de vérité montre qu'il y a deux lignes où la sortie doit valoir $1$: (a) la ligne où $X=1$ et $Y=0$, et (b) la ligne où $X=0$ et $Y=1$. Si l'on pouvait créer un sous-circuit qui livre un $1$ lorsque qu'on se trouve dans la circonstance (a) et un autre qui livre un $1$ lorsqu'on se trouve dans la circonstance (b), on pourrait ensuite les combiner avec une porte **OU** et ainsi construire notre sortie $Z$ ainsi :
+La table de vérité montre qu'il y a deux lignes où la sortie doit valoir $1$ : (a) la ligne où $X=1$ et $Y=0$, et (b) la ligne où $X=0$ et $Y=1$. Si l'on pouvait créer un sous-circuit qui livre un $1$ lorsque qu'on se trouve dans la circonstance (a) et un autre qui livre un $1$ lorsqu'on se trouve dans la circonstance (b), on pourrait ensuite les combiner avec une porte **OU** et ainsi construire notre sortie $Z$ ainsi :
 
 ```{logic}
 :height: 180
@@ -660,7 +660,7 @@ Ce circuit est constitué de deux portes **ET**. Mais la porte **ET** de droite 
 Ce circuit, une fois corrigé, implémente en fait un **ET** à trois entrée $X$, $Y$ et $W$, où la sortie $Z$ ne vaut 1 que si les trois entrées valent 1. Sa table de vérité, à huit lignes dues aux trois entrées, est ainsi la suivante :
 
 | $X$ | $Y$ | $W$ | $Z$ |
-| :-: | :-: | :-: | :-: |
+| :-: | :-: | :-: | :-: |
 | 0   | 0   | 0   | 0   |
 | 0   | 0   | 1   | 0   |
 | 0   | 1   | 0   | 0   |
@@ -695,7 +695,7 @@ Ce circuit, une fois corrigé, implémente en fait un **ET** à trois entrée $X
 
 ```{dropdown} Corrigé
 | $X$ | $Y$ | $Z$ |
-| :-: | :-: | :-: |
+| :-: | :-: | :-: |
 | 0   | 0   | 1   |
 | 0   | 1   | 0   |
 | 1   | 0   | 1   |
