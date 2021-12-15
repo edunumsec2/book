@@ -260,9 +260,7 @@ Réglez les entrées du circuit de manière à lui faire effectuer les additions
     {"pos": [120, 450], "orient": "s", "id": 36, "name": "S3"},
     {"pos": [220, 450], "orient": "s", "id": 38, "name": "S2"},
     {"pos": [320, 450], "orient": "s", "id": 39, "name": "S1"},
-    {"pos": [420, 450], "orient": "s", "id": 40, "name": "S0"}
-  ],
-  "displays": [
+    {"pos": [420, 450], "orient": "s", "id": 40, "name": "S0"},
     {"type": "nibble", "pos": [530, 100], "id": [4, 5, 6, 7], "name": "A"},
     {"type": "nibble", "pos": [530, 240], "id": [8, 9, 10, 11], "name": "B"},
     {"type": "nibble", "pos": [530, 390], "id": [41, 42, 43, 44], "name": "S"}
@@ -338,9 +336,7 @@ Déterminez quel composant est défectueux dans ce circuit et comment il faudrai
     {"pos": [120, 450], "orient": "s", "id": 36, "name": "S3"},
     {"pos": [220, 450], "orient": "s", "id": 38, "name": "S2"},
     {"pos": [320, 450], "orient": "s", "id": 39, "name": "S1"},
-    {"pos": [420, 450], "orient": "s", "id": 40, "name": "S0"}
-  ],
-  "displays": [
+    {"pos": [420, 450], "orient": "s", "id": 40, "name": "S0"},
     {"type": "nibble", "pos": [530, 100], "id": [4, 5, 6, 7], "name": "A"},
     {"type": "nibble", "pos": [530, 240], "id": [8, 9, 10, 11], "name": "B"},
     {"type": "nibble", "pos": [530, 390], "id": [41, 42, 43, 44], "name": "S"}
