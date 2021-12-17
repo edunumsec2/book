@@ -1,11 +1,41 @@
 # Colorier
 
 Dans ce chapitre nous explorons ce que c'est la couleur. 
-Les lignes peuvent être colorié et les formes peuvetz être remplis
+Les lignes peuvent être colorié et les formes être remplis de couleurs.
 
 - une couleur est défin avec trois nombres
 - Le système RVB (Rouge Vert Bleu) définit les couleurs de base
 
+Mais avant de passer aux couleurs, nous allons voir l'épaisseur de ligne.
+
+## Epaisseur de ligne
+
+La fonction `width()` permet de définir l'épaisseur de ligne. Les bouts de lignes sont arrondis.
+
+Pour démontrer différents épaisseurs, nous allons itérer sur une liste des épaisseurs.
+
+Ici nous utilisons 3 nouvelles fonctions:
+
+- `write(d)` affiche d à la position actuelle
+- `setpos(x, y)`définit une nouvelle position de tortue
+- `xcor()` retourne la coordonnée x
+
+```{codeplay}
+from turtle import *
+
+up()
+back(100)
+left(90)
+
+for d in [1, 2, 5, 10, 20, 30]: 
+    width(d)
+    write(d)
+    forward(30)
+    down()
+    forward(100)
+    up()
+    setpos(xcor() + 50, 0)
+```
 
 ## Couleur de ligne
 
@@ -32,6 +62,7 @@ Les 3 fonctions permettent de définir ou lire les couleurs :
 - `fillcolor()` retourne la couleur de remplissage
 - `color()` retourne un tuple avec les deux couleurs
 
+
 ## Couleur de remplissage
 
 Avec la fonction `fill_color()` nous pouvons définir une couleur de remplissage.
@@ -49,6 +80,29 @@ for i in range(4):
     forward(100)
     left(90)
 end_fill()
+```
+
+## Couleur d'arrière-fond
+
+Le fonction `getscreen()` retourne un objet `Screen`. Celui ci possède une méthode `bgcolor()`.
+L'objet qui appelle sa méthode permet de changer la couleur de l'arrière-fond.
+
+Dans l'exemple suivant, nous commençons avec un fond limette et changeons en pink une fois le carré dessiné.
+
+
+```{codeplay}
+from turtle import *
+
+getscreen().bgcolor('lime')
+fillcolor('yellow')
+
+begin_fill()
+for i in range(4):
+    forward(100)
+    left(90)
+end_fill()
+
+getscreen().bgcolor('pink')
 ```
 
 ## Forme ouverte
@@ -74,30 +128,8 @@ for i in range(2):
     left(90)
 end_fill()
 ```
+
 **Exercice** : Dessiner un drapeau bi-colore.
-
-## Couleur d'arrière-fond
-
-Le fonction `getscreen()` retourne un objet `Screen`. Celui ci possède une méthode `bgcolor()`.
-L'objet qui appelle sa méthode permet de changer la couleur de l'arrière-fond.
-
-Dans l'exemple suivant, nous commençons avec un fond limette et changeons en pink une fois le carré dessiné.
-
-
-```{codeplay}
-from turtle import *
-
-getscreen().bgcolor('lime')
-fillcolor('yellow')
-
-begin_fill()
-for i in range(4):
-    forward(100)
-    left(90)
-end_fill()
-
-getscreen().bgcolor('pink')
-```
 
 ## Dessiner un pixel
 
@@ -124,11 +156,57 @@ square(100, 'orange')
 square(100, 'red')
 ```
 
+## Rouge-Vert-Bleu (RGB)
+
+Dans un ordinateur les couleurs sont exprimé par un triplet de nombres.
+Ces nombres indiquent l'intensité des trois couleurs de base : rouge-vert-bleu (RVB)
+
+L'intensité de couleur est exprimé soit :
+
+- en virgule flottante sur dans une plage de 0.0 ... 1.0
+- en entiers sur une plage de 0 ... 255
+
+En utilisant la définition précédente nous pouvons exprimer les couleurs aussi avec un triplet.
+
+```{codeplay}
+from turtle import *
+
+def square(a, color):
+    fillcolor(color)
+    begin_fill()
+    for i in range(4):
+        forward(a)
+        left(90)
+    end_fill()
+    forward(a)
+===
+back(200)
+square(50, (0, 0, 0))   # black
+square(50, (1, 0, 0))   # red
+square(50, (0, 1, 0))   # green
+square(50, (0, 0, 1))   # blue
+square(50, (1, 1, 0))   # yellow
+square(50, (0, 1, 1))   # cyan
+square(50, (1, 0, 1))   # magenta
+square(50, (1, 1, 1))   # white
+```
+
 ## Liste de couleurs
 
 Voici une liste des couleurs disponibles.
 
 ![couleurs](colors.png)
+
+```{codeplay}
+from turtle import *
+
+color = input('Enter a color: ')
+while color:
+    getscreen().bgcolor(color)
+    color = input('Enter a color: ')
+```
+
+## Liste de couleurs
 
 Pour dessiner de multiples couleurs, nous pouvons définir une liste de couleurs et itérer sur cette liste.
 
