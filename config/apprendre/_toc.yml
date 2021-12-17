@@ -31,9 +31,10 @@ parts:
       - file: content/appr/theme/prog1/cours/6_dict/dict
       - file: content/appr/theme/prog1/cours/7_fonc/fonc
       - file: content/appr/theme/prog1/cours/8_mod/mod
-      - file: content/appr/theme/prog1/cours/8_mod/dessiner
-      - file: content/appr/theme/prog1/cours/8_mod/colorier
-      - file: content/appr/theme/prog1/cours/8_mod/memoriser
+      
+      - file: content/appr/theme/prog1/new/dessiner
+      - file: content/appr/theme/prog1/new/colorier
+      - file: content/appr/theme/prog1/new/memoriser
 #     - file: content/appr/theme/prog1/cours/9_app/app 
       - file: content/appr/theme/prog1/cours/10_conclusion/concl 
 
