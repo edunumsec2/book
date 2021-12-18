@@ -1,18 +1,101 @@
-# 7. Modules
+# Trier
 
-Lorsqu'on crée de multiples programmes dans des domaines similaires, il est fort probable que des parties de code puissent être réutilisées très fréquemment. Il serait donc plus efficace de placer ce code d'utilité générale dans un endroit spécifique.
+Pouvoir trier les éléments dans une liste est une fonctionalité fondamentale dans l'informatique. Le succès énorme de Google est basé sur un tri efficace de l'information. 
 
-Un **module** est un ou plusieurs fichiers en Python que l'on peut importer au début d'un programme.
-Ce sont des scripts, contenant un ensemble de définitions — typiquement des fonctions, mais aussi des variables ou constantes (comme *pi* du module `math`).
+Les éléments de la liste peuvent être des nombres, des mots, ou des phrases. Si la liste est trié il devient très facile de trouver un certain élément.
 
-Python est accompagné d'une bibliothèque de modules standards, tels que :
+## Trouver une liste aléatoire
 
-- `math`,
-- `random`,
-- `time`,
-- `turtle`.
+Pour tester les fonctions de tri, nous avons besoin de liste avec de valeur aléatoires.
+Ici nous créons d'abord une liste avec les valeur 0 à 9. Ensuite nous les mélangeons comme on le ferait avec un jeu de cartes.
 
-Pour d'autres modules, on peut consulter l'[index des modules Python](https://docs.python.org/3/py-modindex.html).
+```{codeplay}
+from random import *
+
+liste = list(range(10))
+print(liste)
+
+shuffle(liste)
+print(liste)
+```
+
+## Visualiser une liste
+
+Nous visualisons les valeurs numériques dans la list avec aun diagramme de barres
+
+```{codeplay}
+from random import *
+from turtle import *
+
+liste = list(range(10))
+shuffle(liste)
+print(liste)
+
+speed(10)
+color('blue')
+up()
+left(90)
+goto(-250, -50)
+width(20)
+
+for i in liste:
+    write(i)
+    forward(20)
+    down()
+    forward(i * 20 + 1)
+    up()
+    goto(xcor() + 50, -50)
+```
+
+## Trouver un minimum
+
+Pour trouver un minimum nous : 
+
+- prenons la première valeur comme minimum courant 
+- parcourons le reste de la liste
+- gardons la valeur comme nouveau minimum si elle est plus petite
+
+```{codeplay}
+liste = [3, 6, 8, 2, -3, 20, 12]
+print(liste)
+
+min = liste[0]
+print(min)
+
+for val in liste[1:]:
+    if val < min:
+        min = val
+        print(min)
+```
+
+**Exercice** : Modifiez la liste et essayez de nouveau.
+
+## Trouver un maximum
+
+Pour trouver un maximum nous : 
+
+- prenons la première valeur comme maximum courant 
+- parcourons le reste de la liste
+- gardons la valeur comme nouveau maximum si elle est plus grande
+
+```{codeplay}
+liste = [3, 6, 8, 2, -3, 20, 12]
+print(liste)
+
+max = liste[0]
+print(max)
+
+for val in liste[1:]:
+    if val > max:
+        max = val
+        print(max)
+```
+
+**Exercice** : Modifiez la liste et essayez de nouveau.
+
+## Compter des éléments
+
+
 
 ## Importer un module
 
@@ -253,233 +336,4 @@ from random import choice
 for i in range(5):
     c = choice(['gagné', 'perdu', 'match nul'])
     print(c)
-```
-
-## Module `turtle`
-
-Le module `turtle` permet de déplacer une tortue virtuelle sur un écran en lui donnant des commandes pour se déplacer.
-En se déplaçant elle dessine une trace :
-
-- la fonction `forward(200)` fait avancer la tortue de 200 pixels,
-- la fonction `left(90)` fait tourner la tortue de 90 degrés vers la gauche.
-
-```{codeplay}
-from turtle import *
-
-forward(200)
-left(90)
-forward(100)
-```
-
-La tortue connait aussi les commandes :
-
-- `backward()` pour faire reculer la tortue,
-- `right()` pour la faire tourner vers la droite.
-
-Ceci dessine un pentagone.
-
-```{codeplay}
-from turtle import *
-
-n = 5
-for i in range(n):
-    forward(100)
-    left(360/n) 
-```
-
-**Exercice :** dessinez un hexagone, changez la taille.
-
-```{codeplay}
-from turtle import *
-from math import atan2, degrees, sqrt
-
-a = 200
-b = 100
-c = sqrt(a*a + b*b)
-alpha = degrees(atan2(a, b))
-
-forward(a)
-left(90)
-forward(b)
-left(180 - alpha)
-forward(c)
-```
-
-**Exercice :** modifiez a et b. Affichez a, b et c avec la fonction `write()` au milieu du segment.
-
-Il est possible de personnaliser le pinceau et l'apparence du curseur ou de choisir si le pinceau est en train d'écrire ou s'il est relevé.
-Plus d'infos sous [Python - Tortue graphique](https://docs.python.org/fr/3/library/turtle.html#module-turtle).
-
-
-## Goto
-
-La fonction `goto(x, y)` permet d'aller directement vers la position `(x, y)`,
-sans changer l'orientation de la tortue.
-
-```{codeplay}
-from turtle import *
-shape('turtle')
-color('red', 'lime')
-speed(3)
-
-goto(40, 0)
-goto(40, 40)
-goto(60, 40)
-goto(60, 0)
-goto(100, 0)
-goto(100, 100)
-goto(50, 150)
-goto(0, 100)
-goto(0, 0)
-```
-
-## Compter en binaire
-
-```{codeplay}
-from turtle import *
-
-def finger(x):
-    forward(x)
-    circle(-20, 180)
-    forward(x)
-    left(180)
-
-def binaire(code):
-    left(90)
-    for c in code :
-        write(c, font=('Arial', 24))
-        if c == '1':
-            finger(120)
-        else :
-            finger(30)
-              
-binaire('00110')
-```
-
-## Polygone
-
-Un polygone régulier est une forme ou toutes les côtes ont la même longueur est toute les angles sont identiques.
-
-```{codeplay}
-from turtle import *
-
-def polygon(n, a):
-    for i in range(n):
-        forward(a)
-        dot(8)
-        left(360/n)
-        
-polygon(3, 100)
-polygon(4, 100)
-polygon(5, 100)
-polygon(6, 100)
-```
-
-Pour dessiner des formes qui ne sont pas connecté par une ligne, nous utilisons les deux fonctions:
-
-- `up()` pour lever le stylo
-- `down()` pour baisser le stylo
-
-```{codeplay}
-from turtle import *
-
-def polygon(n, a):
-    for i in range(n):
-        forward(a)
-        dot(8)
-        left(360/n)
-
-up()
-back(200)
-
-for i in range(3, 7):
-    down()
-    polygon(i, 60)
-    up()
-    forward(120)
-```
-
-##  Cercles
-
-La fonction `circle(r)` dessine un cercle de rayon `r`.
-Le cercle est dessiné
-
-- vers la gauche si r est positif,
-- vers la droite si r est négatif.
-
-```{codeplay}
-from turtle import *
-
-forward(50)
-circle(40)
-forward(100)
-circle(-30)
-forward(100)
-```
-
-Cette fonction peut avoir un deuxième paramètre sous la forme `circle(r, angle)` 
-ou `angle` représente l'angle du cercle dessiné.
-Par défaut c'est 360°, donc un cercle entier.
-
-Voici un exemple qui utilise deux demi-cercles de 180°.
-
-```{codeplay}
-from turtle import *
-
-forward(100)
-circle(40, 180)
-forward(50)
-circle(-30)
-forward(50)
-circle(40, 180)
-```
-
-Nous pouvons combiner deux segments de cercle et deux segments droits pour dessiner un coeur.
-
-```{codeplay}
-from turtle import *
-r = 40
-fillcolor('red')
-
-begin_fill()
-forward(2 * r)
-circle(r, 180)
-right(90)
-circle(r, 180)
-forward(2 * r)
-end_fill()
-```
-
-Dessinons des cercle dans une boucle, et tournons à chaque fois.
-
-```{codeplay}
-from turtle import *
-
-n = 6
-for i in range(n):
-    circle(50)
-    left(360/n)
-```
-
-Il est également possible de faire varier le rayon dans une boucle `for` avec une expression `range()`.
-
-```{codeplay}
-from turtle import *
-
-for r in range(20, 100, 20):
-    circle(r)
-```
-
-## Objets
-Quelle sont toutes les fonctions que nous importons avec le module `turtle` ?
-La fonction `dir()` retourne une liste avec toutes les noms de fonctions et classes qui appartiennent au module.
-
-```{codeplay}
-import turtle
-print(dir(turtle))
-```
-
-
-```{codeplay}
-
 ```

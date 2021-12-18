@@ -32,7 +32,6 @@ Pour utiliser une fonction du module importé, il faut faire précéder le nom d
 ```{codeplay}
 import math
 
-
 print('e =', math.e)
 print('pi =', math.pi)
 print('fact(7) =', math.factorial(7))

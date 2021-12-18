@@ -37,6 +37,8 @@ parts:
       - file: content/appr/theme/prog1/new/ecrire
       - file: content/appr/theme/prog1/new/calculer
       - file: content/appr/theme/prog1/new/repeter
+      - file: content/appr/theme/prog1/new/trier
+      
 #     - file: content/appr/theme/prog1/cours/9_app/app 
 #     - file: content/appr/theme/prog1/cours/10_conclusion/concl 
 

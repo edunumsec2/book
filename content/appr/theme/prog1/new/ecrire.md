@@ -116,7 +116,7 @@ le texte peut s'étaler sur plusieurs lignes.
 
 **Exercice** : Ajoutez quelques caractères et re-exécutez le code.
 
-Pour savoir combien de fois il faut répéter un symbole, pour obtenir la même longuer qu'un texte donné,  nous pouvons utiliser la fonction `len()` et ainsi créer des lignes qui ont la même longueur qu'un texte.
+Pour savoir combien de fois il faut répéter un symbole, pour obtenir la même longueur qu'un texte donné,  nous pouvons utiliser la fonction `len()` et ainsi créer des lignes qui ont la même longueur qu'un texte.
 
 ```{codeplay}
 x = input('Entrez une phrase: ')
@@ -149,7 +149,7 @@ print("""
 ## Echapper un caractère
 
 Les sybmoles `'` et `"` sont utilisés pour délimiter du texte. 
-Si nous voulons utiliser ces caractères à l'intérieur, nous devons les échapper avec une barre oblique en arrière `\`.
+Si nous voulons utiliser ces caractères à l'intérieur de la chaîne, nous devons les échapper avec une barre oblique en arrière `\`.
 
 ```{codeplay}
 print('c\'est bien')
