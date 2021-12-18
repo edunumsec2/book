@@ -106,7 +106,7 @@ def square():
 square()
 ```
 
-## Definir une fonction
+## Définir une fonction
 
 Nous avons maintenant tout pour definir une nouvelle commande pour dessiner une maison.
 Le dessin commence en bas à gauche de maison et se termine au même endroit. 
