@@ -75,6 +75,31 @@ print('bon''jour')
 print('bon' + 'jour')
 ```
 
+## La fonction `input()`
+
+La fonction `input('question')` permet de demander une entrée (input) à l'utilisateur.
+L'utilisateur voit `question` affiché à la console et doit répondre à cette question. Il termine son entrée avec la touche Enter.
+
+La réponse de l'utilisateur est ensuite mémorisée dans une variable que nous appelons `x` dans cet exemple. 
+Ensuite nous pouvons utiliser cette variable `x` dans la suite du programme, par exemple dans une expression `print()`. 
+
+```{codeplay}
+x = input('Entrez votre nom: ')
+print('Bonjour', x)
+```
+
+Vous êtes complétement libre dans le choix des noms pour les variables, mais c'est recommandé de choisir des noms qui sont le plus explicite possible. C'est mieux d'utiliser des variables parlant, comme `'nom'` et `'age'`,  bien qu'on aurait pu utiliser `'x'` et `'y'`.  
+
+```{codeplay}
+nom = input('Entrez votre nom: ')
+print('Bonjour', nom)
+
+age = input('Entrez votre age: ')
+print('Trés bien', nom, 'vous avez', age, 'ans')
+```
+
+**Exercice** : Ajoutez une 3e question.
+
 ## La longuer d'une chaine
 
 La fonction `len()` retourne la longuer d'une chaine.
@@ -94,7 +119,7 @@ le texte peut s'étaler sur plusieurs lignes.
 Pour savoir combien de fois il faut répéter un symbole, pour obtenir la même longuer qu'un texte donné,  nous pouvons utiliser la fonction `len()` et ainsi créer des lignes qui ont la même longueur qu'un texte.
 
 ```{codeplay}
-x = 'Python peux manipuler du texte'
+x = input('Entrez une phrase: ')
 print('=' * len(x))
 print(x)
 print('=' * len(x))

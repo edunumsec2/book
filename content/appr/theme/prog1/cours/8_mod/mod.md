@@ -154,20 +154,6 @@ forward(c)
 Il est possible de personnaliser le pinceau et l'apparence du curseur ou de choisir si le pinceau est en train d'écrire ou s'il est relevé.
 Plus d'infos sous [Python - Tortue graphique](https://docs.python.org/fr/3/library/turtle.html#module-turtle).
 
-## Objets
-Quelles sont toutes les fonctions que nous importons avec le module `turtle` ?
-La fonction `dir()` retourne une liste avec tous les noms de fonctions et classes qui appartiennent au module.
-
-```{codeplay}
-import turtle
-print(dir(turtle))
-```
-
-
-```{codeplay}
-
-```
-
 
 ## Exercices
 
