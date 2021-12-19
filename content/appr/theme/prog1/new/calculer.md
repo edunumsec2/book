@@ -145,11 +145,11 @@ print('surface =')
 
 **Exercice** : Complétez le programme pour afficher la surface du cercle.
 
-Nous pouvons également créer des programmes ou nous demandons plusieurs valeurs à l'utilisateur.
+Nous pouvons également créer des programmes ou nous demandons plusieurs valeurs à l'utilisateur. Cette fois nous permettons que l'utilisation d'entiers, et donc transformons la chaine obtenu avec `int()` en nombre entier.
 
 ```{codeplay}
-a = int(input('Entrez la largeur:'))
-b = int(input('Entrez la longeur:'))
+a = int(input('Entrez la largeur: '))
+b = int(input('Entrez la longeur: '))
 
 print('surface =', a * b)
 print('périmètre =')
@@ -182,7 +182,9 @@ print(x, y)
 
 ## Compter en binaire
 
-Si nous utilsons le code binaire pour compter avec les doigts, nou pof
+Si nous utilisons le code binaire pour compter avec nos doigts, alors nous pouvons représenter les codes binaires `00000` à `11111`.
+
+Voici un programme qui affiche le code binaire et dessine les doigts.
 
 ```{codeplay}
 from turtle import *
