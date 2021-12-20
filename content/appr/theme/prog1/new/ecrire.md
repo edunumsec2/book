@@ -1,6 +1,6 @@
-# Ecrire
+# Ecrire - `str`
 
-Un programme informatique peut manipulier ces différents catégories d'objets :
+Un programme informatique peut manipuler ces différents catégories d'objets :
 
 - image
 - texte
