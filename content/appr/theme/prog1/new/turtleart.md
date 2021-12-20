@@ -171,7 +171,7 @@ Un **moulin à vent** est un jouet composé d'une roue munie de pales en papier 
 ```{codeplay}
 from turtle import *
 
-getscreen().bgcolor('yellow')
+getscreen().bgcolor('azure')
 color('red', 'pink')
 width(3)
 
@@ -227,18 +227,41 @@ def petale(a):
         left(90)
     end_fill()
 
-color('lime')
+color('green', 'lime')
 petale(40)
 left(90)
 forward(30)
 petale(40)
 forward(90)
-color('fuchsia')
+color('fuchsia', 'pink')
 n = 5
 for i in range(n):
     petale(30)
     left(360/n)
 ```
+
+## Coeur
+
+Le **coeur** est un organe musculaire qui assure la circulation du sang dans le corps à travers des contractions rythmiques.
+
+```{codeplay}
+from turtle import *
+getscreen().bgcolor('pink')
+
+r = 40
+left(45)
+fillcolor('red')
+
+begin_fill()
+forward(2 * r)
+circle(r, 180)
+right(90)
+circle(r, 180)
+forward(2 * r)
+end_fill()
+```
+
+**Exercice** : Définissez une fonction `coeur()` et dessinez pleins de coeurs.
 
 ```{codeplay}
 

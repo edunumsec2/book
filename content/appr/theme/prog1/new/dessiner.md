@@ -1,6 +1,6 @@
 # Dessiner - `turtle`
 
-Dans ce chapitre nous explorons ce que c'est un programme et nous prenons 
+Dans ce chapitre nous explorons ce que c'est un programme et nous prenons
 ici la métaphore du dessin. Un dessin est une séquence de lignes qui forment une image.
 
 - un programme est une séquence d'instructions

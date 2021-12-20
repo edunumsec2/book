@@ -192,6 +192,48 @@ square(50, (1, 0, 1))   # magenta
 square(50, (1, 1, 1))   # white
 ```
 
+## Mode couleur
+
+Il a deux façon d'exprimer les 3 composantes RVB :
+
+- avec un nombre à virgule flottante dans l'intervalle [0, 1]
+- avec un entier dans l'intervalle [0, 255]
+
+La fonction `colormode()` retourne le mode actuelle si utilisé sans argument. Si un argument est fourni (1 ou 255), ce mode est activé.
+
+```{codeplay}
+from turtle import *
+print(colormode())
+
+colormode(255)
+print(colormode(1))
+```
+
+## Intensité
+
+Voici un programme qui affiche les intensité pour rouge et vert de 0 à 1.
+
+```{codeplay}
+from turtle import *
+up()
+n = 11
+
+goto(-200, 0)
+for i in range(n):
+    color((i/(n-1), 0, 0))
+    dot(30)
+    forward(400/n)
+write('rouge', font=(None, 18))
+
+goto(-200, 50)
+for i in range(n):
+    color((0, i/(n-1), 0))
+    dot(30)
+    forward(400/n)
+write('vert', font=(None, 18)) 
+```
+
+**Exercice** : Ajoutez une ligne de points pour la couleur bleue.
 ## Liste de couleurs
 
 Voici une liste des couleurs disponibles.

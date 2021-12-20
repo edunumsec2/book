@@ -1,4 +1,4 @@
-# Aléatoire -  `random`
+# Aléatoire - `random`
 
 Le module `random` permet de créer des nombres pseudo-aléatoires. Il met à disposition 13 fonctions:
 
