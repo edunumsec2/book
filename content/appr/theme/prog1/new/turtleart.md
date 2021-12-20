@@ -278,5 +278,3 @@ end_fill()
 ```{codeplay}
 
 ```
-
-

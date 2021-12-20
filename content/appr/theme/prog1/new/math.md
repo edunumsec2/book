@@ -101,7 +101,6 @@ for x in range(-300, 300, 10):
 
 Dessinons aussi des axes :
 
-
 ```{codeplay}
 from turtle import *
 width(1)
@@ -173,8 +172,6 @@ for y in range(-180, 180+1, d):
     up()
 ```
 
-
-
 ## Grapher des fonctions
 
 ```{codeplay}
@@ -216,7 +213,6 @@ def graph(f, col, name):
 graph(atan, 'red', 'atan')
 graph(cos, 'blue', 'cos')
 ````
-
 
 ```{codeplay}
 

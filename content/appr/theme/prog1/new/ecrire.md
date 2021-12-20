@@ -6,7 +6,7 @@ Un programme informatique peut manipuler ces différents catégories d'objets :
 - texte
 - nombre
 
-Les activités, ou verbes, qui y sont associés sont : 
+Les activités, ou verbes, qui y sont associés sont :
 
 - dessiner
 - écrire
@@ -34,7 +34,7 @@ Toute caractère imprimable peux être utilisé pour créer un texte :
 - parenthèses (`[]{}<>`)
 - symboles (`$*#...`)
 
-Pour différencier un morceau de texte du reste d'un programme, il doit être délimité par des symboles spéciaux qui sont : 
+Pour différencier un morceau de texte du reste d'un programme, il doit être délimité par des symboles spéciaux qui sont :
 
 - apostrophe (`'`)
 - guillemets doubles (`"`)
@@ -48,26 +48,27 @@ Délimité avec trois guillements,
 le texte peut s'étaler sur plusieurs lignes.
 """)
 ```
-**Exercice** : Ajoutez du texte sur les deux lignes qui contienntent  `"""`.
+
+**Exercice** : Ajoutez du texte sur les deux lignes qui contiennent  `"""`.
 
 ## Répéter un texte
 
-L'opérateur `*` permet de répéter un texte composé d'un ou de plusiers caractères.
+L'opérateur `*` permet de répéter un texte composé d'un ou de plusieurs caractères.
 
 ```{codeplay}
 print('ha' * 10)
 print('=' * 20)
 print('hello ' * 3)
 ```
-**Exercice** : Répétez une chaines plus longue.
 
+**Exercice** : Répétez une chaines plus longue.
 
 ## Concaténer un texte
 
 Le mot **concaténer** veut dire enchaîner ou coller ensemble.
 
-L'opérateur `+` permet de concatener deux chaînes de texte. 
-Mais juxaposer deux chaines de texte et les séparer par zéro ou plusieurs espaces va aussi concatener la chaîne.
+L'opérateur `+` permet de concaténer deux chaînes de texte.
+Mais juxtaposer deux chaines de texte et les séparer par zéro ou plusieurs espaces va aussi concaténer la chaîne.
 
 ```{codeplay}
 print('bon'    'jour')
@@ -81,14 +82,14 @@ La fonction `input('question')` permet de demander une entrée (input) à l'util
 L'utilisateur voit `question` affiché à la console et doit répondre à cette question. Il termine son entrée avec la touche Enter.
 
 La réponse de l'utilisateur est ensuite mémorisée dans une variable que nous appelons `x` dans cet exemple. 
-Ensuite nous pouvons utiliser cette variable `x` dans la suite du programme, par exemple dans une expression `print()`. 
+Ensuite nous pouvons utiliser cette variable `x` dans la suite du programme, par exemple dans une expression `print()`.
 
 ```{codeplay}
 x = input('Entrez votre nom: ')
 print('Bonjour', x)
 ```
 
-Vous êtes complétement libre dans le choix des noms pour les variables, mais c'est recommandé de choisir des noms qui sont le plus explicite possible. C'est mieux d'utiliser des variables parlant, comme `'nom'` et `'age'`,  bien qu'on aurait pu utiliser `'x'` et `'y'`.  
+Vous êtes complètement libre dans le choix des noms pour les variables, mais c'est recommandé de choisir des noms qui sont le plus explicite possible. C'est mieux d'utiliser des variables parlant, comme `'nom'` et `'age'`,  bien qu'on aurait pu utiliser `'x'` et `'y'`.  
 
 ```{codeplay}
 nom = input('Entrez votre nom: ')
@@ -100,10 +101,10 @@ print('Trés bien', nom, 'vous avez', age, 'ans')
 
 **Exercice** : Ajoutez une 3e question.
 
-## La longuer d'une chaine
+## La longueur d'une chaine
 
-La fonction `len()` retourne la longuer d'une chaine.
-La chaine vide (`""`) a une longeur de 0.
+La fonction `len()` retourne la longueur d'une chaine.
+La chaine vide (`""`) a une longueur de 0.
 
 ```{codeplay}
 print(len('bonjour'))
@@ -148,7 +149,7 @@ print("""
 
 ## Echapper un caractère
 
-Les sybmoles `'` et `"` sont utilisés pour délimiter du texte. 
+Les symboles `'` et `"` sont utilisés pour délimiter du texte.
 Si nous voulons utiliser ces caractères à l'intérieur de la chaîne, nous devons les échapper avec une barre oblique en arrière `\`.
 
 ```{codeplay}
@@ -165,7 +166,7 @@ print('c\'est la \\barre oblique\\ en arière.')
 ## Retour à la ligne
 
 Chaque commande `print()` termine avec un retour à la ligne.
-Pour insérer un retour à la ligne à l'intéreur d'une chaîne de caractères nous utilisons la séquences d'échappement `\n` (newline).
+Pour insérer un retour à la ligne à l'intérieur d'une chaîne de caractères nous utilisons la séquences d'échappement `\n` (newline).
 
 ```{codeplay}
 print('chaque\nmot\nsur\nune\nligne')
@@ -185,7 +186,7 @@ print('12\tclavier\t25.95')
 
 ## Le code ASCII
 
-La fonction `ord(c)` retourne le code ASCII qui est associé au caractère `c`. 
+La fonction `ord(c)` retourne le code ASCII qui est associé au caractère `c`.
 
 ```{codeplay}
 print('A', ord('A'))
@@ -193,7 +194,7 @@ print('B', ord('B'))
 print('a', ord('a'))
 ```
 
-Nous constatons que : 
+Nous constatons que :
 
 - le code ASCII pour la lettre A est 65
 - les codes suivent l'ordre de l'alphabet
@@ -207,16 +208,16 @@ for c in 'Python':
 ## Les commentaires
 
 Un commentaire en Python est un bout de code qui est ignoré par Python.
-Un commentaire commence par le symole hashtag (`#`).
+Un commentaire commence par le symbole hashtag (`#`).
 
 Les commentaires sont utilisés pour ajouter à un programme des informations supplémentaires :
 
 - explications
 - nom de l'auteur
-- revisons
+- révisions
 
-Parfois un commentaire est utilisé pour desactiver une ligne de code.
-La pluspart des éditeurs marquent les commentaires en couleur grisée.
+Parfois un commentaire est utilisé pour désactiver une ligne de code.
+La plupart des éditeurs marquent les commentaires en couleur grisée.
 
 ```{codeplay}
 # commentaire sur une ligne
@@ -256,4 +257,3 @@ write('Arial 36', font=('Arial', 36))
 ```{codeplay}
 
 ```
-

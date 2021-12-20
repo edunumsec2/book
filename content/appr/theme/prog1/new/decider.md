@@ -2,7 +2,9 @@
 
 Un programme doit parfois faire un choix, basé sur une conditions. Ceci est exprimé par la fameuse expression `if-else` ou si-sinon en français.
 
-## Etes vous majeur ?
+## Etes-vous majeur ?
+
+Basé sur votre âge, le programme décide si vous êtes majeur ou pas.
 
 ```{codeplay}
 age = input('Entrez votre age: ')
@@ -11,6 +13,55 @@ if int(age) < 17:
     print('accès interdit - vous êtes mineur')
 else:
     print('accès OK - vous êtes majeur')
+```
+
+## Pair ou impair ?
+
+Le programme vous dit si le nombre que vous entrez est pair ou impair.
+
+```{codeplay}
+x = input('Entrez un entier: ')
+
+if int(x) % 2 == 0:
+    print('pair')
+else:
+    print('impair')
+```
+
+## Factoriser
+
+Le programme va factoriser le nombre que vous entrez
+
+```{codeplay}
+n = int(input('Entrez un entier: '))
+i = 2
+
+while i < n:
+    if n % i == 0:
+        print(i)
+        n = n // i 
+    else:
+        i = i + 1
+
+print(n)
+```
+
+## En code binaire
+
+Le programme transforme l'entier en code binaire.
+
+```{codeplay}
+n = int(input('Entrez un entier: '))
+
+code = ''
+while n > 0:
+    if n % 2 == 1:
+        code = '1' + code
+    else:
+        code = '0' + code
+    n = n // 2
+
+print(code)
 ```
 
 ## Décrire un chemin
@@ -46,12 +97,9 @@ print(len(E))
 walk(E)
 ```
 
-
-
 ```{codeplay}
 
 ```
-
 
 ```{codeplay}
 

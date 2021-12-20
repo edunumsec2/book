@@ -1,7 +1,7 @@
 # Répéter - `for`
 
 Un programme exécute souvent certaines instructions multiples fois. Dans ce cas une boucle permet de rendre le code plus court et mieux structuré.
-Une boucle ne représente pas seulement une économie de lignes de code, mais donne en plus la possibilité de contrôler facilement le nombre de répétitions. 
+Une boucle ne représente pas seulement une économie de lignes de code, mais donne en plus la possibilité de contrôler facilement le nombre de répétitions.
 
 En Python nous avons deux types de boucle :
 
@@ -27,14 +27,14 @@ for i in range(x):
 
 ## Itérer x fois
 
-Le mot **itérer** veut dire parcourir un ensemble un par un. Dans la boucle `for` une variable d'itération va parcourir un ensemble qui peut être : 
+Le mot **itérer** veut dire parcourir un ensemble un par un. Dans la boucle `for` une variable d'itération va parcourir un ensemble qui peut être :
 
 - une plage numérique avec `range()`
 - une chaîne de caractères
 - une liste
 
-La **variable d'itération** prend succéssivement les valeurs 0 à x-1.
-Quand la variable d'itération est de type entier (`int`) on l'appelle souvent `i`. 
+La **variable d'itération** prend successivement les valeurs 0 à x-1.
+Quand la variable d'itération est de type entier (`int`) on l'appelle souvent `i`.
 
 Nous reprenons l'exemple précédent du polygone, mais cette fois nous dessinons pas les segments mais seulement les sommets. La valeur de la variable d'itération `i` est affichée à chaque sommet du polygone.
 
@@ -55,7 +55,7 @@ for i in range(x):
 
 ## Itérer avec `range()`
 
-La fonction `range(start, stop, step)` permet de produire une séquence linéaire d'entiers. Les entiers se trouvent dans l'intervalle semi-fermé `[start, stop[` avec un increment de `step`. 
+La fonction `range(start, stop, step)` permet de produire une séquence linéaire d'entiers. Les entiers se trouvent dans l'intervalle semi-fermé `[start, stop[` avec un incrément de `step`.
 
 Le sens des paramètres :
 
@@ -85,7 +85,7 @@ for i in range(-100, -200, -3):
 
 La fonction `range()` peut fonctionner avec 1, 2 ou 3 paramètres. Les valeur par défaut sont :
 
-- 0 pour `start`, 
+- 0 pour `start`,
 - 1 pour `step`.
 
 ```{codeplay}
@@ -110,7 +110,7 @@ for i in range(10, 100, 7):
 
 La ligne de code `for c in mot:` signifie que la variable `c` va prendre à chaque répétition un caractère différent de la chaîne `mot`.
 
-Quand la variable d'itération est un caractère on l'appelle souvent `c`. 
+Quand la variable d'itération est un caractère on l'appelle souvent `c`.
 
 ```{codeplay}
 from time import sleep
@@ -146,7 +146,7 @@ for color in colors:
 
 ## Dessiner une spirale
 
-Si nous dessinons un polygone mais augmentons la longeur de chaque segment succéssif en utilisant la variable d'itération `i`, nous obtenons une spirale.
+Si nous dessinons un polygone mais augmentons la longueur de chaque segment successif en utilisant la variable d'itération `i`, nous obtenons une spirale.
 
 ```{codeplay}
 from turtle import *
@@ -159,7 +159,7 @@ for i in range(100):
 ## Du polygone au cercle
 
 Plus que le polygone régulier a de sommets, plus il ressemble à un cercle.
-Avec 36 sommets, il ressemble déjà raisonablement à un cercle.
+Avec 36 sommets, il ressemble déjà raisonnablement à un cercle.
 
 ```{codeplay}
 from turtle import *
@@ -192,7 +192,7 @@ forward(100)
 
 **Exercice** : Inversez le signe du rayon.
 
-Cette fonction peut avoir un deuxième paramètre sous la forme `circle(r, angle)` 
+Cette fonction peut avoir un deuxième paramètre sous la forme `circle(r, angle)`
 ou `angle` représente l'angle du cercle dessiné.
 Par défaut c'est 360°, donc un cercle entier.
 
@@ -240,11 +240,12 @@ for r in range(20, 100, 20):
 Dans Excel, les cellules sont désignées avec une lettre et un nombre. 
 Pour recréer les noms de cellule nous itérons dans une chaîne de chiffres et une deuxième fois dans une chaîne de lettres.
 
-On appelle la première boucle avec `y` la **boucle exterieure** et la deuxième boucle avec `x` **la boucle intérieure**. 
+On appelle la première boucle avec `y` la **boucle extérieure** et la deuxième boucle avec `x` **la boucle intérieure**. 
 
-Nous concatenons les deux éléments lettre et nombre (`x + y`) et nous ajoutons l'option `end=' '` pour remplacer le retour à la ligne par une espace.
+Nous concaténons les deux éléments lettre et nombre (`x + y`) et nous ajoutons l'option `end=' '` pour remplacer le retour à la ligne par une espace.
 
-Pour bien montrer l'ordre conséqutif nous importons la fonction `sleep()` du module `time` pour ralentir le parcours de la boucle.
+Pour bien montrer l'ordre consécutif nous importons la fonction `sleep()` du module `time` pour ralentir le parcours de la boucle.
+
 ```{codeplay}
 from time import sleep
 
@@ -277,7 +278,7 @@ print('boum!!!')
 
 ### Lister des noms
 
-Nous utilisons une boucle `while` pour demander des noms à l'utilsateur. 
+Nous utilisons une boucle `while` pour demander des noms à l'utilisateur. 
 On ne peut pas savoir à l'avance combien de noms il y aura, donc ici nous ne pouvons pas utiliser la boucle `for`.  Nous prenons comme condition de terminaison une réponse avec une chaîne vide (`''`).
 
 La convention est d'utiliser des noms au pluriel (`noms`) pour désigner la liste et le même nom au singulier (`nom`) pour désigner un de ses éléments.
@@ -297,11 +298,11 @@ print(noms)
 
 ### Calculer une somme
 
-Nous utilisons une boucle `while` pour demander des nombres à l'utilsateur. 
+Nous utilisons une boucle `while` pour demander des nombres à l'utilisateur. 
 On ne peut pas savoir à l'avance combien de nombres il y aura, et donc nous ne pouvons pas utiliser la boucle `for`. Nous prenons comme condition de terminaison une réponse avec une chaîne vide (`''`).
 
 Au lieu d'écrire `while x != '':` nous pouvons simplifier vers  `while x:`. 
-La raison est que la chaîne vide est associée à `False` et toute autre chaîne non-vide est associée à `True`. 
+La raison est que la chaîne vide est associée à `False` et toute autre chaîne non-vide est associée à `True`.
 
 ```{codeplay}
 somme = 0
