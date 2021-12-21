@@ -247,7 +247,7 @@ La fonction `str()` transforme un nombre en texte (string).
 Ceci nous permet de trouver le nombre de chiffres d'un résultat de calcul numérique.
 
 ```{codeplay}
-print(str(99 ** 99))
+print('99 ** 99')
 print(99 ** 99)
 print('longeur =', len(str(99 ** 99)))
 ```
