@@ -83,7 +83,7 @@ Le résultat apparaît sur la ligne suivante, et une nouvelle invite `>>>` est a
 ## La fonction print()
 
 La fonction `print()` affiche (imprime) ce qui se trouve entre ses parenthèses vers la console.
-Nous pouvons afficher texte et nombres.
+Nous pouvons afficher textes et nombres.
 
 ```{codeplay}
 print('hello')
@@ -92,8 +92,8 @@ print(123)
 
 **Exercice :** transformez le texte en une phrase avec plusieurs mots.
 
-La fonction `print()` peut prendre multiples arguments entre ses parenthèses.
-Les éléments sont alors séparé par une virgule (`,`) mais quand ils sont imprimé, ils sont séparé par une espace (`' '`).
+La fonction `print()` peut prendre plusieurs arguments entre ses parenthèses.
+Les éléments sont alors séparés par une virgule (`,`) mais quand ils sont imprimés, ils sont séparés par une espace (`' '`).
 
 ```{codeplay}
 print('moniteur', 'clavier')
@@ -102,7 +102,7 @@ print(2, 3, 5, 7, 11)
 
 **Exercice :** ajoutez un autre périphérique et le prochain nombre premier.
 
-Nous pouvons aussi mélanger nombres et text.
+Nous pouvons aussi mélanger nombres et textes.
 
 ```{codeplay}
 print('distance =', 105, 'km')
@@ -114,7 +114,7 @@ print('vitesse =', 105/55*60, 'km/h')
 
 ## Opérations arithmétiques
 
-Avec la fonction `print()` nous pouvons afficher le résultat d'opérations arithmétique de base
+Avec la fonction `print()` nous pouvons afficher le résultat d'opérations arithmétiques de base
 tel que l'addition, la soustraction, la division et la multiplication.
 
 Nous pouvons par exemple calculer le nombre de pixels dans une image VGA.
@@ -190,7 +190,7 @@ Si une sous-partie du texte est délimitée par des guillemets doubles, il faut 
 
 Lorsqu'il est utilisé avec du texte, l'opérateur `+` crée une nouvelle chaîne de caractères formée à partir des deux chaînes indiquées — une opération appelée _concaténation_.
 
-Toute espace blanc entre deux chaînes donne comme résultat sa concaténation.
+Toute espace blanche entre deux chaînes donne comme résultat sa concaténation.
 
 ```{codeplay}
 print('bon' + 'jour')
@@ -221,7 +221,7 @@ print('- ' * 20)
 ```
 
 Une opération mathématique entre guillemets n'est pas exécutée.
-Elle est considéré comme chaîne de caractères.
+Elle est considérée comme chaîne de caractères.
 Ce nombre (représenté sous forme de chaîne) est répété et non pas multiplié.
 
 ```{codeplay}
@@ -247,7 +247,7 @@ La fonction `str()` transforme un nombre en texte (string).
 Ceci nous permet de trouver le nombre de chiffres d'un résultat de calcul numérique.
 
 ```{codeplay}
-print('99 ** 99')
+print(str(99 ** 99))
 print(99 ** 99)
 print('longeur =', len(str(99 ** 99)))
 ```
