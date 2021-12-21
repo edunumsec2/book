@@ -470,7 +470,7 @@ shuffle(nombres)
 score = 0
 n = 3
 
-for n in nombres[:n]:
+for i in nombres[:n]:
     print(f'{n:04b} + 1')
     reponse = input()
     solution = f'{n+1:04b}'

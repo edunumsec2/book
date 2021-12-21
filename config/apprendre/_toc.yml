@@ -28,7 +28,7 @@ parts:
       - file: content/appr/theme/prog1/cours/3_var/var
       - file: content/appr/theme/prog1/cours/4_flux/flux
       - file: content/appr/theme/prog1/cours/5_list/list
-      - file: content/appr/theme/prog1/cours/6_dict/dict
+#     - file: content/appr/theme/prog1/cours/6_dict/dict
       - file: content/appr/theme/prog1/cours/7_fonc/fonc
 #     - file: content/appr/theme/prog1/cours/8_mod/mod
 
@@ -80,6 +80,10 @@ parts:
       - file: content/appr/theme/algo2/cours/recursivite/eleve
       - file: content/appr/theme/algo2/cours/conclusion/eleve
   - file: content/appr/theme/prog2/eleve
+    sections:
+      - file: content/appr/theme/prog2/intro
+      - file: content/appr/theme/prog2/dict
+      
   - file: content/appr/theme/projets/eleve
   - file: content/appr/theme/reseaux/eleve
 
