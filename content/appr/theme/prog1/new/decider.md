@@ -1,6 +1,6 @@
 # Décider - `if`
 
-Un programme doit parfois faire un choix, basé sur une conditions. Ceci est exprimé par la fameuse expression `if-else` ou si-sinon en français.
+Un programme doit parfois faire un choix, basé sur une condition. Ceci est exprimé par la fameuse expression `if-else` ou si-sinon en français.
 
 ## Etes-vous majeur ?
 
@@ -14,6 +14,53 @@ if int(age) < 17:
 else:
     print('accès OK - vous êtes majeur')
 ```
+
+## Comparer
+
+Un programme doit parfois comparer deux valeurs. 
+Python connait six types de comparaisons :
+
+- plus petit (`<`),
+- plus petit ou égal (`<=`),
+- égal (`==`),
+- différent (`!=`),
+- plus grand  (`>`),
+- plus grand ou égal (`>=`).
+
+Le résultat d'une comparaison est une valeur booléenne, soit `True` soit `False`. 
+
+Voici quelques exemples :
+
+```{codeplay}
+x = 3
+print(x > 2)
+print(x < 2)
+print(x != 2)
+```
+
+**Attention** : Il ne faut pas confondre l'opérateur d'_affectation_ (`=`) avec l'opérateur de _comparaison_ (`==`).
+
+```{codeplay}
+a = 2           # affectation
+print(a)
+print(a == 2)   # comparaison
+```
+
+Trouvez le signe d'un nombre.
+
+```{codeplay}
+n = input('Entrez un nombre: ')
+n = int(n)
+
+if n > 0:
+    print('positif')
+elif n < 0:
+    print('négatif')
+else:
+    print('zéro')
+```
+
+**Exercice** : Testez le programme avec -2, 0, 3.
 
 ## Pair ou impair ?
 
@@ -97,6 +144,44 @@ print(len(E))
 walk(E)
 ```
 
+## Opérations logiques
+
+Les opérateurs logiques permettent de combiner deux valeurs logiques.
+
+- et logique (`and`),
+- ou logique (`or`).
+
+Pour tester si un nombre x est dans l'intervalle (a, b) il faut combiner deux comparaisons avec une opération logique.
+
+```{codeplay}
+a = 5
+b = 10
+
+x = 8
+
+if (a < x) and (x < b):
+    print(x, 'est entre', a, 'et', b)
+
+if (x < a) or (b < x):
+    print(x, "est dehors l'interval (", a, '...', b, ')')
+```
+
+L'opérateur `not` inverse la valeur logique.
+
+- `True` devient `False`,
+- `False` devient `True`.
+
+Une double inversion revient à l'identité.
+
+Dans l'exemple suivant, essayez de changer la valeur de `p`.
+
+```{codeplay}
+p = True
+
+print('p =', p)
+print('not p =', not p)
+print('not not p =', not not p)
+```
 ```{codeplay}
 
 ```

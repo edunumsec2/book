@@ -71,10 +71,21 @@ Pour nommer une variable vous pouvez utiliser :
 - chiffres (`0...9`)
 - le tiret bas (`_`)
 
-Le nom de variable : 
+Le nom de variable :
+
 - est sensible aux majuscules/minuscules
 - ne peut pas commencer avec un chiffre
 - ne dois pas consister d'un mot-clé (`if`, `else`, `for`)
+- ne dois pas contenir d'autre caractère spécial (`* + % & $ - / ?`).
+
+Ces noms de variables sont donc valides : `a2`, `_a`, `speed`, `pos_x`, `POS_X`
+
+Ceux-ci ne sont pas valides :
+
+- `2var` (commence avec un chiffre),
+- `if` (correspond à un mot-clé),
+- `var$2` (contient un caractère spécial),
+- `mon nom` (contient une espace et est interprété comme deux noms de variables).
 
 Voici un autre calcul où `a`  et `b` désignent largeur et hauteur d'un rectangle.
 
@@ -209,3 +220,36 @@ binaire('00110')
 ```
 
 **Exercice** : modifier le programme pour compter de 0 à 31.
+
+## Quiz
+
+```{question} Variable
+Lesquels des noms de variable sont valides ?
+
+{f}`var 2`  
+{v}`var2`  
+{f}`2var`  
+{f}`if`  
+{v}`IF_VAR`
+```
+
+```{question} Variable
+Quels noms de variable sont valides ?
+
+{f}`if`  
+{v}`VAR_2`  
+{v}`_if`  
+{v}`elseif`  
+{f}`var$2`
+```
+
+```{question} Expression
+Quel est le résultat de l'expression `'1 + 2 * 3'` ?
+
+{f}`1`
+{f}`2`
+{f}`3`
+{f}`6`
+{v}`7`
+{f}`9`
+```

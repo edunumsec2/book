@@ -172,7 +172,7 @@ def polygon(n, a):
 polygon(36, 10)
 ```
 
-### La fonction `circle(r)`
+## La fonction `circle(r)`
 
 La fonction `circle(r)` dessine un cercle de rayon `r`.
 Le cercle est dessiné :
@@ -211,7 +211,7 @@ circle(40, 180)
 
 **Exercice** : Dessinez un bonhomme de neige et utilisez `dot()` pour les yeux.
 
-### Dessiner une fleur
+## Dessiner une fleur
 
 Dessinons des cercles dans une boucle, et tournons à chaque fois.
 
@@ -257,82 +257,3 @@ for y in '1234567':
 ```
 
 **Exercice** : Transformez le code pour afficher 20 colonnes de cellules.
-
-## La boucle `while`
-
-La boucle `while` exécute un bloc tant qu'une condition est vraie.
-On peut l'utiliser pour créer un compteur à rebours.
-Pour attendre une seconde la fonction `sleep()` du module `time` est importée.
-
-```{codeplay}
-from time import sleep
-
-n = int(input('Entrez un entier: '))
-while n > 0:
-    print(n)
-    sleep(1)
-    n = n - 1
-
-print('boum!!!')
-```
-
-### Lister des noms
-
-Nous utilisons une boucle `while` pour demander des noms à l'utilisateur. 
-On ne peut pas savoir à l'avance combien de noms il y aura, donc ici nous ne pouvons pas utiliser la boucle `for`.  Nous prenons comme condition de terminaison une réponse avec une chaîne vide (`''`).
-
-La convention est d'utiliser des noms au pluriel (`noms`) pour désigner la liste et le même nom au singulier (`nom`) pour désigner un de ses éléments.
-
-```{codeplay}
-noms = []
-nom = input('Entrez un nom: ')
-
-while nom != '':
-    noms.append(nom)
-    nom = input('Entrez un nom: ')
-    
-print(noms)
-```
-
-**Exercice** : Entrez les noms de 3-4 de vos amis.
-
-### Calculer une somme
-
-Nous utilisons une boucle `while` pour demander des nombres à l'utilisateur. 
-On ne peut pas savoir à l'avance combien de nombres il y aura, et donc nous ne pouvons pas utiliser la boucle `for`. Nous prenons comme condition de terminaison une réponse avec une chaîne vide (`''`).
-
-Au lieu d'écrire `while x != '':` nous pouvons simplifier vers  `while x:`. 
-La raison est que la chaîne vide est associée à `False` et toute autre chaîne non-vide est associée à `True`.
-
-```{codeplay}
-somme = 0
-x = input('Entrez un nombre: ')
-
-while x:
-    somme += float(x)
-    x = input('Entrez un nombre: ')
-    
-print('somme =', somme)
-```
-
-**Exercice** : Entrez les frais de vos 3 derniers achats.
-
-### Calculer une moyenne
-
-Nous utilisons une boucle `while` pour demander des nombres à l'utilisateur. 
-On ne peut pas savoir à l'avance combien de nombres il y aura, et donc nous ne pouvons pas utiliser la boucle `for`.  Nous prenons comme condition de terminaison une réponse avec une chaîne vide (`''`).
-
-```{codeplay}
-somme = 0
-n = 0
-x = input('Entrez un nombre: ')
-
-while x:
-    somme += float(x)
-    n += 1
-    x = input('Entrez un nombre: ')
-    
-print('moyenne =', somme/n)
-```
-
-**Exercice** : Entrez vos notes de français.
