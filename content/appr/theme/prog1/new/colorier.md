@@ -157,7 +157,7 @@ square(100, 'orange')
 square(100, 'red')
 ```
 
-## Rouge-Vert-Bleu (RGB)
+## Rouge-Vert-Bleu (RVB)
 
 Dans un ordinateur les couleurs sont exprimé par un triplet de nombres.
 Ces nombres indiquent l'intensité des trois couleurs de base : rouge-vert-bleu (RVB)
@@ -206,7 +206,7 @@ from turtle import *
 print(colormode())
 
 colormode(255)
-print(colormode(1))
+print(colormode())
 ```
 
 ## Intensité

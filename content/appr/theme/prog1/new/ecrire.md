@@ -190,22 +190,73 @@ print('12\tclavier\t25.95')
 La fonction `ord(c)` retourne le code ASCII qui est associé au caractère `c`.
 
 ```{codeplay}
-print('A', ord('A'))
-print('B', ord('B'))
-print('a', ord('a'))
+print('A =', ord('A'))
+print('B =', ord('B'))
+print('a =', ord('a'))
 ```
 
 Nous constatons que :
 
-- le code ASCII pour la lettre A est 65
-- les codes suivent l'ordre de l'alphabet
-- les codes des minuscules ont un écart de 32 par rapport au code des majuscules
+- le code ASCII pour la lettre A est 65,
+- les codes suivent l'ordre de l'alphabet,
+- les codes des minuscules ont un écart de 32 par rapport au code des majuscules.
 
 ```{codeplay}
 for c in 'Python':
+    print(c, '=', ord(c))
+```
+
+La fonction `chr(i)` retourne le caractère qui correspond au code `i`.
+
+```{codeplay}
+for i in range(65, 75):
+    print(i, '=', chr(i))
+```
+
+## Les emojis
+
+Un émoji est une petite image qui peut être utilisée à l'intérieur d'un texte.
+Nous pouvons les répéter avec l'opérateur `*` et obtenir leur **Unicode** avec la fonction `ord(c)`.
+
+```{codeplay}
+print('😀' * 10)
+
+print(ord('🍎'))
+print(ord('😀'))
+```
+
+Avec la fonction `chr(i)` nous pouvons afficher les 10 caractères qui suivent l'émoji de pomme.
+
+```{codeplay}
+for i in range(10):
+    print(chr(i + 127822))
+```
+
+**Exercice** : Affichez les 10 emojis qui suivent 😀.
+
+## Les kanji
+
+Le japonais est écrit avec des pictogrammes qui s'appellent des kanjis.
+Avec la fonction `ord(c)` nous pouvons obtenir leur **Unicode**.
+
+```{codeplay}
+print('日本語')
+print('nihongo')
+print('japonais\n')
+
+for c in  '日本語': 
     print(c, ord(c))
 ```
 
+Avec la fonction `chr(i)` nous pouvons afficher les 10 kanjis qui suivent le kanji 日 qui signifie soleil. Si vous regardez bien, vous remarquez qu'ils contiennent tous le radical pour soleil.
+
+```{codeplay}
+n = ord('日')
+for i in  range(n, n + 10): 
+    print(i, chr(i))
+```
+
+Exercice : Affichez les 10 kanjis qui suivent 語.
 ## Les commentaires
 
 Un commentaire en Python est un bout de code qui est ignoré par Python.
