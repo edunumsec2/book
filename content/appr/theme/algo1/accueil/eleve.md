@@ -41,7 +41,7 @@ Al-Khwarizmi 🇺🇿
 ^^^^^
 ***780-850***
 
-Considéré comme le père de l’algèbre [**Al-Khwarizmi**](https://fr.wikipedia.org/wiki/Al-Khw%C3%A2rizm%C3%AE) a vécu au VIII<sup>e</sup> siècle dans le Moyen Orient. Il est l'auteur de plusieurs ouvrages de mathématiques, d’astronomie et de géographie. Son nom est à l’origine du mot **algorithme**.
+Considéré comme le père de l’algèbre [**Al-Khwarizmi**](https://fr.wikipedia.org/wiki/Al-Khw%C3%A2rizm%C3%AE) a vécu au VIII<sup>e</sup> siècle dans le Moyen-Orient. Il est l'auteur de plusieurs ouvrages de mathématiques, d’astronomie et de géographie. Son nom est à l’origine du mot **algorithme**.
 
 ----
 :img-top: media/Dijkstra.jpg

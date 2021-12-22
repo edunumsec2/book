@@ -203,7 +203,7 @@ Il existe un algorithme, Tri de Bogo (ou *Bogosort*), aussi nommé le *tri lent*
 
 Toutes les recettes de cuisine ne se valent pas, de la même manière, un {glo}`algo|algorithme` peut aussi être ***<span style="color:rgb(13, 204, 166)">plus approprié</span>*** qu’un autre algorithme pour résoudre le même problème. Il existe des dizaines d’{glo}`algo|algorithmes` qui trient avec des approches différentes (nous en verrons encore quelques-uns). Certains algorithmes sont plus rapides, d’autres plus économes en mémoire ou encore plus simples à coder. Ainsi, selon la situation, il faut choisir le « bon » {glo}`algo|algorithme`.
 
-La qualité d’un {glo}`algo|algorithme` dépend de la propriété que l’on souhaite optimiser (maximiser ou minimiser). Cela pourrait être de maximiser la **<span style="color:rgb(89, 51, 209)">vitesse d’exécution</span>** (mesurée par le nombre d’{glo}`instruction|instructions` élémentaires exécutées), de minimiser la place occupée en **<span style="color:rgb(89, 51, 209)">mémoire</span>**, de minimiser la **<span style="color:rgb(89, 51, 209)">consommation d'énérgie</span>** ou de maximiser la **<span style="color:rgb(89, 51, 209)">précision de la solution</span>**. L'{glo}`algo|algorithme` utilisé devrait être choisi en fonction de ce qui est important.
+La qualité d’un {glo}`algo|algorithme` dépend de la propriété que l’on souhaite optimiser (maximiser ou minimiser). Cela pourrait être de maximiser la **<span style="color:rgb(89, 51, 209)">vitesse d’exécution</span>** (mesurée par le nombre d’{glo}`instruction|instructions` élémentaires exécutées), de minimiser la place occupée en **<span style="color:rgb(89, 51, 209)">mémoire</span>**, de minimiser la **<span style="color:rgb(89, 51, 209)">consommation d'énergie</span>** ou de maximiser la **<span style="color:rgb(89, 51, 209)">précision de la solution</span>**. L'{glo}`algo|algorithme` utilisé devrait être choisi en fonction de ce qui est important.
 
 ***<span style="color:rgb(13, 204, 166)">La vitesse d’un {glo}`algo|algorithme` dépend également des {glo}`data|données` en {glo}`input|entrée`</span>***. Selon la configuration initiale des {glo}`data|données` en {glo}`input|entrée` (correspond à la ligne du haut de la <a href="#fig-algos-tri">Figure **Algorithmes de tri**</a>), un {glo}`algo|algorithme` « rapide » peut devenir « lent » et *vice versa*. Il faut savoir que les {glo}`algo|algorithmes` vus jusqu’ici sont tous des {glo}`algo|algorithmes` lents (nous verrons un {glo}`algo|algorithme` de tri rapide ultérieurement).
 
@@ -276,7 +276,7 @@ Se coucher
 :class: note
 
 
-Trier la liste [2,5,3,4,7,1,6] en utilisant les trois algorithmes de tri vus adans le cours. Représenter l’état de la liste après chaque étape.
+Trier la liste [2,5,3,4,7,1,6] en utilisant les trois algorithmes de tri vus dans le cours. Représenter l’état de la liste après chaque étape.
 
 ````
 <!-- 
@@ -345,11 +345,11 @@ Voici le détail de toutes les étapes intermédiaires des trois algorithmes de 
 ````{admonition} Exercice 6. Vérificateur de tri
 :class: note
 
-Ecrivez un algorithme qui vérifie si une liste est triée. 
+Ecrire un algorithme qui vérifie si une liste est triée. 
 
 Que prend l’algorithme en entrée et que retourne-t-il en sortie ?
 
-Demandez ensuite à un autre élève de suivre les opérations décrites par votre algorithme. Est-ce que votre algorithme est correct ?
+Demander ensuite à un autre élève de suivre les opérations décrites par votre algorithme. Est-ce que votre algorithme est correct ?
 
 Comparer vos algorithmes. Sont-ils différents ?
 
@@ -389,7 +389,7 @@ L'algorithme prend une liste (triée ou non triée) en entrée et retourne `Vrai
 ````{admonition} Exercice 7. Mondrian
 :class: note
 
-Analysez les œuvres cubistes de Piet Mondrian. Trouvez un algorithme qui permet de créer une œuvre qui pourrait être attribuée à Mondrian.
+Analyser les œuvres cubistes de Piet Mondrian. Trouver un algorithme qui permet de créer une œuvre qui pourrait être attribuée à Mondrian.
 
 ````
 
