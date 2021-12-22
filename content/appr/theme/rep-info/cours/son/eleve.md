@@ -58,7 +58,7 @@ par un microphone.
 
 <!---
 
-```{figure} media/numerisation-00.png
+```{figure} media/soncontinu.png
 ---
 height: 16em
 name: fig-repr-num-sig
@@ -68,9 +68,9 @@ Signal continu à numériser, par exemple un son.
 -->
 
 
-<img src="media/numerisation-00.png" height="350" width="500"/>
+<img src="media/soncontinu.png" height="350" width="500"/>
 
-*Signal continu à numériser, par exemple un son*
+**Signal continu à numériser, par exemple un son**
 <br> <br>
 
 
@@ -176,10 +176,10 @@ sont perdus.
 
 <img src="media/numerisation-01.png" height="270" width="800"/>
 
-*Effet de la fréquence d'échantillonnage
+**Effet de la fréquence d'échantillonnage
 (sampling rate : 100, 200 et 400 Hz)
 sur la représentation
-obtenue par numérisation*
+obtenue par numérisation**
 
 <br> <br>
 
@@ -400,9 +400,9 @@ La quantité d'information générée
 
 <img src="media/numerisation-02.png" height="300" width="800"/>
 
-*Effet de la profondeur de l'échantillonnage
+**Effet de la profondeur de l'échantillonnage
 (bit depth : 3, 4 et 5 bits)
-sur la représentation obtenue par numérisation*
+sur la représentation obtenue par numérisation**
 
 <br> <br>
 Plus la profondeur est importante,
@@ -531,8 +531,8 @@ de précision.
 
 <img src="media/numerisation-02.png" height="300" width="800"/>
 
-*Effet du gain (trop haut, correct, trop bas)
-sur la représentation obtenue par numérisation*
+**Effet du gain (trop haut, correct, trop bas)
+sur la représentation obtenue par numérisation**
 <br> <br>
 
 La distorsion résulte de valeurs très différentes
@@ -595,10 +595,10 @@ une fréquence d'échantillonnage insuffisante.
 
 <img src="media/numerisation-03.png" height="300" width="800"/>
 
-*Effet de la fréquence d'échantillonnage
+**Effet de la fréquence d'échantillonnage
 (sampling rate : 400, 200 et 100 Hz)
 sur la représentation obtenue par numérisation
-à une profondeur donnée (sampling depth : 5 bits)*
+à une profondeur donnée (sampling depth : 5 bits)**
 <br> <br>
 Une importante profondeur d'échantillonnage ne compense pas
 une fréquence d'échantillonnage insuffisante.

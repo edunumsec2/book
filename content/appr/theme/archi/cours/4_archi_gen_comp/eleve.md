@@ -11,7 +11,7 @@ Si l’on suit l'évolution de l'ordinateur, depuis les années 50 jusqu’à au
 :width: 600
 :height: 300
 ```
-Schéma simplifié d'un ordinateur
+**Schéma simplifié d'un ordinateur**
 <br> <br>
 
 D'un point de vue matériel, on distingue :
@@ -49,7 +49,7 @@ Il s’agit d’une mémoire à long terme.
 :width: 600
 :height: 300
 ```
-Barrettes ROM
+**Barrettes ROM**
 
 <br> 
 
@@ -63,7 +63,7 @@ Barrettes ROM
 :width: 600
 :height: 300
 ```
-Barrettes RAM
+**Barrettes RAM**
 
 <br>     
     
@@ -147,7 +147,7 @@ La puissance du CPU est caractérisée par son nombre de bits, 32 ou 64 bits auj
 :width: 600
 :height: 400
 ```
-Différents types de microprocesseurs simple cœur et multicœurs
+**Différents types de microprocesseurs simple cœur et multicœurs**
 <br> <br>
 
 Le cœur du processeur est en fait une unité de traitement qui permet de lire des instructions pour effectuer des actions spécifiques. Ainsi, quelle que soit l'action que l'on souhaite effectuer sur la machine, elle est exécutée par le cœur, et s'il y a plusieurs cœurs, qui sont en fait des unités de traitement, on peut effectuer toutes les actions rapidement et en même temps.
@@ -174,7 +174,7 @@ Certains périphériques sont par nature destinés uniquement à l'entrée de do
 :width: 650
 :height: 500
 ```
-Unité centrale et périphériques
+**Unité centrale et périphériques**
 <br> <br>
 
 ### Interfaçage
@@ -198,7 +198,7 @@ On se propose ici de décrire exclusivement les différents types de bus systèm
 :width: 600
 :height: 400
 ```
-Schéma général d'un ordinateur
+**Schéma général d'un ordinateur**
 <br> <br>
 
 

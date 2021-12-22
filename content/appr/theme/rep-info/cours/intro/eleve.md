@@ -85,7 +85,7 @@ On trouve des exemples célèbres et bien documentés de {glo}`sysco|systèmes d
 
 Utilisé en Grèce Antique pour transmettre des messages entre cités voisines, ce système utilisait des torches enflammées en guise de signaux. 
 
-Cinq torches "à gauche", cinq torches "à droite", étaient séparées par un espace
+Cinq torches «à gauche», cinq torches «à droite», étaient séparées par un espace
 suffisamment grand pour être identifiables à longue distance. Une torche pouvait
 être soit allumée, soit éteinte. Le nombre de torches allumées à gauche, de 1 à
 5, représentait la ligne d'un tableau de décodage, le nombre de torches allumées
@@ -115,7 +115,7 @@ Le codage de la lettre «s» dans le carré de Polybe est quatre torches à gauc
 
 ````{admonition} Anecdote
 :class: hint
-Dans l'exemple ci-dessus, on utilise les lettres de l'alphabet, mais il est plus probable qu'à l'époque les cités voisines utilisaient des expressions toutes faites dans chacune des cases, comme "l'ennemi est à nos portes" ou "envoyez-nous de l'aide". 
+Dans l'exemple ci-dessus, on utilise les lettres de l'alphabet, mais il est plus probable qu'à l'époque les cités voisines utilisaient des expressions toutes faites dans chacune des cases, comme «l'ennemi est à nos portes» ou «envoyez-nous de l'aide». 
 ````
 
 ### Le télégraphe de Chappe
@@ -218,7 +218,7 @@ Ceci est une représentation de la fréquence moyenne de distribution des lettre
 :width: 500px
 ```
 
-Le désavantage de ces codex d'abbréviations est leur faible degré de standardisation. Comment savoir quel codex est utilisé ? Et surtout : comment faire pour que tout le monde s'accorde sur le codex ? 
+Le désavantage de ces codex d'abréviations est leur faible degré de standardisation. Comment savoir quel codex est utilisé ? Et surtout : comment faire pour que tout le monde s'accorde sur le codex ? 
 
 La réponse à cette question est l'apport le plus essentiel de l'introduction du code binaire, et des standards de représentation de l'information qui l'ont suivi : un langage pour les contrôler tous. 
 ````
@@ -264,7 +264,7 @@ Dans le code [ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_In
 -->
 
 ```{question} Question 1
-Pourquoi la lettre "e", en Morse, est-elle représentée par un seul point ? 
+Pourquoi la lettre «e», en Morse, est-elle représentée par un seul point ? 
 * {v}`Parce que c'est la lettre la plus utilisée en anglais.`
 * {f}`Par hasard.`
 * {f}`Parce que c'est la lettre la plus rare en anglais.`

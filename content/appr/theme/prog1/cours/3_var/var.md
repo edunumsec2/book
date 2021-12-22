@@ -22,61 +22,67 @@ On peut notamment stocker dans des variables :
 
 ## Affectation
 
-On appelle **affectation** l'action d'associer une valeur à une variable.
+On appelle **affectation** l'action d'associer une valeur à une variable.  
 La forme générale d'une affectation est `var = valeur` :
 
 - le nom de la variable se trouve à gauche (`var`),
 - le symbole d'affectation (`=`) se trouve ou milieu,
 - la valeur à affecter à la variable se trouve à droite (`valeur`).
 
-Dans l'exemple suivant nous affectons trois valeurs aux variables `a`, `b` et `c`.
-Ensuite nous pouvons afficher ces variables avec la fonction `print()`.
+Dans l'exemple suivant nous avons deux variables `r` et `pi`.
+Ensuite nous pouvons utiliser dans une expression mathématiques et afficher le résultat avec la fonction `print()`. L'exemple suivant calcule la circonférence d'un cercle.
 
 ```{codeplay}
-a = 123
-b = 'hello'
-c = True
+r = 10
+pi = 3.14
 
-print(a, b, c)
+print(2 * pi * r)
 ```
 
-Par la suite, nous pouvons utiliser la variable `a` dans une expression arithmétique.
+**Exercice** : Calculez et affichez en plus la surface du cercle.
+
+Faisons un autre exemple ou les variables `a` et `b` désignent hauteur et largeur d'un rectangle.
 
 ```{codeplay}
-a = 123
+a = 5
+b = 8
 
-print(a + 2)
-print(a * 2)
-print(a ** 2)
+print('surface =', a * b)
+print('périmètre =')
+print('diagonale =')
 ```
+
+**Exercice** : Complétez le calcul du périmètre et de la diagonale.
+
 
 À n'importe quel moment, la variable peut être réaffectée, et donc changer de valeur.
 
 ```{codeplay}
-a = 12
-print(a ** 2)
+r = 1
+print('r =', r, 'surface =', 3.14 * r ** 2)
 
-a = 1234
-print(a ** 2)
+r = 3
+print('r =', r, 'surface =', 3.14 * r ** 2)
 ```
 
 ## Affectation multiple
 
 Python permet d'affecter plusieurs variables sur une même ligne.
+Ceci est parfois utilisé pour assigner des coordonnées.
 
 ```{codeplay}
-a, b = 10, 200
-print(a, b)
+x, y = 3, 4
+print(x, y)
 ```
 
 L'affectation multiple est une manière élégante d'échanger les valeurs de deux variables.
 
 ```{codeplay}
-a, b = 10, 200
-print(a, b)
+x, y = 3, 4
+print(x, y)
 
-a, b = b, a
-print(a, b)
+x, y = y, x
+print(x, y)
 ```
 
 ## Fonction input()
@@ -91,9 +97,18 @@ Normalement cette valeur est affectée à une variable.
 Voici un exemple de code pour vous saluer personnellement...
 
 ```{codeplay}
-nom = input('Entrez votre nom (suivi par Enter): ')
+nom = input('Entrez votre nom: ')
 print('Bonjour', nom)
 ```
+
+Bien sur, nous pouvons utiliser n'importe quel nom de variable, par exemple `x` :
+
+```{codeplay}
+x = input('Entrez votre nom: ')
+print('Bonjour', x)
+```
+
+**Exercice** : Ecrivez un programme qui demande votre age et qui affiche ensuite la phrase 'Vous avez x ans'
 
 ## Valeur et expression
 
@@ -137,10 +152,11 @@ Par exemple nous pouvons multiplier deux nombres mais nous ne pouvons pas multip
 La fonction `type()` nous retourne le type de la valeur donnée comme argument.
 
 ```{codeplay}
-print(123, type(123))
-print(1.23, type(1.23))
-print('123', type('123'))
+print(type(123))
+print(type('123'))
 ```
+
+**Exercice** : De quel type est `1.23` ?
 
 L'expression `123` est de type `int` (integer = entier) tandis que la même expression entre guillemets `'123'` devient une chaîne de caractères de type `str` (string = chaine).
 
@@ -150,6 +166,32 @@ Les objets `123` et `'123'` sont traités de façon différente dans une express
 print(123 * 3)
 print('123' * 3)
 ```
+
+## Transformer `str` en `int`
+
+La valeur retourne avec `input()` est toujours une chaîne de caractères (`str`).
+Avec la fonction `int()` nous pouvons transformer un nombre sous forme texte vers un entier.
+
+```{codeplay}
+x = input('entrez un nombre: ')
+print(type(x))
+print(x * 12)
+
+x = int(x)
+print(type(x))
+print(int(x) * 12)
+```
+
+Avec la fonction `str` nous pouvons transformer un nombre en texte.
+Ceci peut être utile pour connaître le nombre de chiffres dans un nombre.
+
+```{codeplay}
+x = str(123 ** 123)
+print(x)
+print(len(x))
+````
+
+**Exercice** : Combien de chiffres comporte le résultat de $123 ^ 456$
 
 ## Nom d'une variable
 
@@ -238,9 +280,9 @@ Le **cadavre exquis** est un jeu graphique ou d'écriture collectif inventé par
 
 Définition : _jeu qui consiste à faire composer une phrase, ou un dessin, par plusieurs personnes sans qu'aucune d'elles ne puisse tenir compte de la collaboration ou des collaborations précédentes._
 
-Faites un programme qui permet de faire un jeu d'écriture collectif (cadavre exquis).
+Faites un programme qui permet de faire un jeu d'écriture collectif (cadavre exquis) :
 
-- Le premier utilisateur doit proposer un sujet,
+- le premier utilisateur doit proposer un sujet,
 - le deuxième, un verbe,
 - le troisième, un complément d'objet direct (COD),
 - le quatrième, un complément d'objet indirect (COI),

@@ -16,16 +16,16 @@ On s'intéresse à une des opérations arithmétiques les plus simples : l'**a
 Que se passe-t-il pour l'addition de deux nombres entiers ? On va utiliser leur représentation binaire (avec uniquement des 1 et des 0). Pour faire simple, on va chercher à additionner simplement deux bits, disons $A$ et $B$, où chacun peut valoir soit 0 soit 1. Posons que la somme $S = A + B$. En énumérant tous les cas de figure, on a :
 
 | $A$ | $B$ | $S$ |
-| :-: | :-: | --: |
+| :-: | :-: | --: |
 | 0   | 0   | 0   |
 | 1   | 0   | 1   |
 | 0   | 1   | 1   |
 | 1   | 1   | 10  |
 
-La dernière ligne est intéressante: On sait que $1+1=2$, mais en {glo}`codebinaire|binaire`, on sait aussi que n'existent que des 0 et des 1, et 2 s'écrit ainsi $10$ (voir le chapitre {ref}`représentation de l'information <representationinformation>`). Cela veut dire que, pour traiter tous les cas d'une addition de deux {glo}`bit|bits`, on a besoin aussi de deux {glo}`bit|bits` de sortie, et qu'un seul ne suffit pas. En explicitant chaque fois le deuxième {glo}`bit|bit` de sortie, notre tableau devient :
+La dernière ligne est intéressante : on sait que $1+1=2$, mais en {glo}`codebinaire|binaire`, on sait aussi que n'existent que des 0 et des 1, et 2 s'écrit ainsi $10$ (voir le chapitre {ref}`représentation de l'information <representationinformation>`). Cela veut dire que, pour traiter tous les cas d'une addition de deux {glo}`bit|bits`, on a besoin aussi de deux {glo}`bit|bits` de sortie, et qu'un seul ne suffit pas. En explicitant chaque fois le deuxième {glo}`bit|bit` de sortie, notre tableau devient :
 
 | $A$ | $B$ | $S$ |
-| :-: | :-: | :-: |
+| :-: | :-: | :-: |
 | 0   | 0   | 00  |
 | 1   | 0   | 01  |
 | 0   | 1   | 01  |
@@ -62,7 +62,7 @@ Une de ces portes est la porte **ET**. Elle a deux entrées, qu'on appellera $X$
 En énumérant les quatre possibilités pour les entrées, on peut écrire ce qu'on appelle {glo}`tableverite|table de vérité` pour la porte **ET** :
 
 | $X$ | $Y$ | $Z$ |
-| :-: | :-: | :-: |
+| :-: | :-: | :-: |
 | 0   | 0   | 0   |
 | 1   | 0   | 0   |
 | 0   | 1   | 0   |
@@ -74,7 +74,7 @@ On peut dessiner des diagrammes avec des {glo}`portelogique|portes logiques`. Ce
 :height: 60
 :mode: static
 
-{"gates": [{"type": "AND", "pos": [50, 30], "in": [0, 1], "out": 2}]}
+{"v": 1, "gates": [{"type": "AND", "pos": [50, 30], "in": [0, 1], "out": 2}]}
 ```
 
 Sur ce schéma logique, les entrées sont à gauche, la sortie à droite et la porte est connectée au milieu. Les circuits sont représentés en noir s'ils véhiculent un «0» et avec une couleur s'ils véhiculent un «1».
@@ -86,6 +86,7 @@ Cliquez sur les entrées $X$ et $Y$ pour changer leurs valeurs et observez le co
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
@@ -119,21 +120,22 @@ Pour que la sortie de la porte **OU** vaille 1, il suffit que l'une des deux ent
 Voici sa table de vérité:
 
 | $X$ | $Y$ | $Z$ |
-| :-: | :-: | :-: |
+| :-: | :-: | :-: |
 | 0   | 0   | 0   |
 | 1   | 0   | 1   |
 | 0   | 1   | 1   |
 | 1   | 1   | 1   |
 
-On notera que le **OU** logique est un peu différent du «ou» que l'on utilise en général à l'oral: on voit à la dernière ligne de la table de vérité que la sortie $Z$ vaut également $1$ si les deux entrées $X$ et $Y$ valent $1$. À l'oral, le «ou» est en général interprété comme _exclusif_: si l'on propose à un enfant un bonbon _ou_ une glace, on exclut la possibilité qu'il choisisse les deux. Ce n'est pas le cas pour le **OU** logique.
+On notera que le **OU** logique est un peu différent du «ou» que l'on utilise en général à l'oral : on voit à la dernière ligne de la table de vérité que la sortie $Z$ vaut également $1$ si les deux entrées $X$ et $Y$ valent $1$. À l'oral, le «ou» est en général interprété comme _exclusif_: si l'on propose à un enfant un bonbon _ou_ une glace, on exclut la possibilité qu'il choisisse les deux. Ce n'est pas le cas pour le **OU** logique.
 
-Essayez la porte **OU**:
+Essayez la porte **OU** :
 
 ```{logic}
 :height: 100
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
@@ -148,20 +150,21 @@ Essayez la porte **OU**:
 
 Cette porte est plus simple: elle n'a qu'une entrée, et sa sortie se contente d'inverser la valeur en entrée. On l'appelle d'ailleurs aussi un _inverseur_.
 
-Voici sa table de vérité:
+Voici sa table de vérité :
 
 | $X$ | $Z$ |
-| :-: | :-: |
+| :-: | :-: |
 | 0   | 1   |
 | 1   | 0   |
 
-Essayez l'inverseur:
+Essayez l'inverseur :
 
 ```{logic}
 :height: 60
 :mode: tryout
 
 {
+  "v": 1,
   "in": [{"pos": [50, 30], "id": 0, "name": "X", "val": 0}],
   "out": [{"pos": [220, 30], "id": 2, "name": "Z"}],
   "gates": [{"type": "NOT", "pos": [130, 30], "in": 1, "out": 3}],
@@ -203,6 +206,7 @@ Les {glo}`portelogique|portes` peuvent être connectées les unes aux autres. Vo
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
@@ -224,12 +228,12 @@ Ce circuit contient une porte **OU**, deux portes **ET** et un inverseur, tous i
 Ce diagramme n'est pas forcément facile à lire — discutons d'abord comment l'interpréter avec papier et crayon pour vérifier s'il effectue bien un **OU-X**.
 
 
-<u> Analyse d'un circuit </u>
+### Analyse d'un circuit
 
 Pour analyser un {glo}`syslogique|circuit logique` comme celui présenté ci-dessus, on cherchera à établir sa {glo}`tableverite|table de vérité`. En l'occurrence, comme pour les portes précédentes, ce circuit a deux entrées: si chaque entrée peut valoir $1$ ou $0$, on a en tout, de nouveau, quatre configurations possibles à examiner dans le but de remplir la dernière colonne :
 
 | $X$ | $Y$ | $Z$   |
-| :-: | :-: | :-:   |
+| :-: | :-: | :-:   |
 | 0   | 0   | $???$ |
 | 1   | 0   | $???$ |
 | 0   | 1   | $???$ |
@@ -247,6 +251,7 @@ Le cas est différent si l'une des deux entrées vaut 1. Voici deux diagrammes f
 :mode: static
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 1},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
@@ -267,6 +272,7 @@ Le cas est différent si l'une des deux entrées vaut 1. Voici deux diagrammes f
 :mode: static
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 1}
@@ -292,6 +298,7 @@ Mais dans le cas $X = Y = 1$, représenté ici, la situation est différente :
 :mode: static
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 1},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 1}
@@ -312,7 +319,7 @@ La porte **ET** du bas livre un 1, qui est inversé en 0 avant d'atteindre la po
 La table de vérité complétée de ce circuit est ainsi :
 
 | $X$ | $Y$ | $Z$ |
-| :-: | :-: | :-: |
+| :-: | :-: | :-: |
 | 0   | 0   | 0   |
 | 1   | 0   | 1   |
 | 0   | 1   | 1   |
@@ -325,6 +332,7 @@ Cette fonction s'appelle «ou exclusif», car pour avoir un 1 de sortie, elle ex
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
@@ -340,12 +348,12 @@ Vérifiez que la porte **OU-X** se comporte bien comme le circuit ci-dessous ré
 ```
 
 
- <u> Création d'un circuit </u>
+### Création d'un circuit
 
 On s'intéresse à présent à la création de ce diagramme réalisant un **OU-X** avec les portes à disposition à partir de sa {glo}`tableverite|table de vérité`. Plusieurs approches sont possibles, et on constatera que, suivant l'approche, on aurait très bien pu créer un circuit logique différent réalisant la même fonction.
 
 
-Approche ad hoc
+**Approche ad hoc**
 
 On se dit donc, selon la {glo}`tableverite|table de vérité`, que la sortie de notre circuit «ou exclusif» doit être 1, donc l'une ou l'autre des entrées $X$ ou $Y$ est à 1, mais pas les deux. On peut ainsi commencer par insérer une porte **OU** dans le diagramme, qui fait une partie du travail. Mais il faut modifier sa sortie, pour ne pas avoir la valeur 1 lorsque les deux entrées sont à 1: cela contredirait la quatrième ligne de la table de vérité. Comment effectuer cela: En connectant la sortie de cette porte **OU** à une nouvelle porte **ET** à droite (dont on n'a pas encore déterminé la seconde entrée).
 
@@ -358,6 +366,7 @@ Pourquoi rajouter une porte **ET**: On utilise ici le fait que connecter une por
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
@@ -379,6 +388,7 @@ Ce qui reste à définir en complétant avant la porte **ET**, c'est l'exclusion
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
@@ -404,6 +414,7 @@ Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
@@ -430,6 +441,7 @@ Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la
 :mode: static
 
 {
+  "v": 1,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": "?"},
@@ -448,17 +460,18 @@ Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la
 ````
 
 
-### Approche systématique
+**Approche systématique**
 
 Il est parfois difficile d'avoir l'«intuition» nécessaire pour suivre une telle approche ad hoc. Voici donc une autre technique, illustrée avec le même exemple.
 
-La table de vérité montre qu'il y a deux lignes où la sortie doit valoir $1$: (a) la ligne où $X=1$ et $Y=0$, et (b) la ligne où $X=0$ et $Y=1$. Si l'on pouvait créer un sous-circuit qui livre un $1$ lorsque qu'on se trouve dans la circonstance (a) et un autre qui livre un $1$ lorsqu'on se trouve dans la circonstance (b), on pourrait ensuite les combiner avec une porte **OU** et ainsi construire notre sortie $Z$ ainsi :
+La table de vérité montre qu'il y a deux lignes où la sortie doit valoir $1$ : (a) la ligne où $X=1$ et $Y=0$, et (b) la ligne où $X=0$ et $Y=1$. Si l'on pouvait créer un sous-circuit qui livre un $1$ lorsque qu'on se trouve dans la circonstance (a) et un autre qui livre un $1$ lorsqu'on se trouve dans la circonstance (b), on pourrait ensuite les combiner avec une porte **OU** et ainsi construire notre sortie $Z$ ainsi :
 
 ```{logic}
 :height: 180
 :mode: static
 
 {
+  "v": 1,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": "?"},
@@ -485,6 +498,7 @@ On avance ainsi à ceci :
 :mode: static
 
 {
+  "v": 1,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": "?"},
@@ -510,6 +524,7 @@ Voici le circuit final ainsi réalisé :
 :mode: static
 
 {
+  "v": 1,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": "?"},
@@ -548,6 +563,7 @@ En annotant le schéma logique avec les quatre cas de figure possibles pour les 
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 150], "id": 1, "name": "Y", "val": 0}
@@ -577,6 +593,7 @@ Quelle est la porte cachée de ce circuit ?
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
@@ -599,6 +616,7 @@ Analysez ce circuit. De quel type de portes est-il constitué ? Fonctionne-t-i
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0},
@@ -620,6 +638,7 @@ Voici le circuit corrigé (il a la même apparence que le circuit de la question
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0},
@@ -641,7 +660,7 @@ Ce circuit est constitué de deux portes **ET**. Mais la porte **ET** de droite 
 Ce circuit, une fois corrigé, implémente en fait un **ET** à trois entrée $X$, $Y$ et $W$, où la sortie $Z$ ne vaut 1 que si les trois entrées valent 1. Sa table de vérité, à huit lignes dues aux trois entrées, est ainsi la suivante :
 
 | $X$ | $Y$ | $W$ | $Z$ |
-| :-: | :-: | :-: | :-: |
+| :-: | :-: | :-: | :-: |
 | 0   | 0   | 0   | 0   |
 | 0   | 0   | 1   | 0   |
 | 0   | 1   | 0   | 0   |
@@ -663,6 +682,7 @@ Ce circuit, une fois corrigé, implémente en fait un **ET** à trois entrée $X
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
@@ -675,7 +695,7 @@ Ce circuit, une fois corrigé, implémente en fait un **ET** à trois entrée $X
 
 ```{dropdown} Corrigé
 | $X$ | $Y$ | $Z$ |
-| :-: | :-: | :-: |
+| :-: | :-: | :-: |
 | 0   | 0   | 1   |
 | 0   | 1   | 0   |
 | 1   | 0   | 1   |
@@ -690,6 +710,7 @@ Réalisez ensuite un circuit logique avec les mêmes deux entrées $X$ et $Y$ et
 :showonly: AND OR NOT
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 40], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 160], "id": 4, "name": "Y", "val": 0}
@@ -714,6 +735,7 @@ Il y plusieurs solutions possibles. Celle qui correspond aux indices est la suiv
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 40], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 160], "id": 4, "name": "Y", "val": 0}
@@ -735,6 +757,7 @@ Voici un circuit plus simple, qui fait la même chose mais qui est plus difficil
 :mode: tryout
 
 {
+  "v": 1,
   "in": [
     {"pos": [50, 40], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 80], "id": 4, "name": "Y", "val": 0}

@@ -5,7 +5,7 @@ Lorsqu'on crée de multiples programmes dans des domaines similaires, il est for
 Un **module** est un ou plusieurs fichiers en Python que l'on peut importer au début d'un programme.
 Ce sont des scripts, contenant un ensemble de définitions — typiquement des fonctions, mais aussi des variables ou constantes (comme *pi* du module `math`).
 
-Python est accompagné d'une bibliothèque de modules standards, tels que :
+Python est accompagné d'une bibliothèque de modules standards, tels que :
 
 - `math`,
 - `random`,
@@ -25,24 +25,23 @@ import math
 print(dir(math))
 ````
 
-**Exercice :** importez le module `random` et affichez son contenu avec `dir`.
+**Exercice :** importez le module `random` et affichez son contenu avec `dir`.
 
 Pour utiliser une fonction du module importé, il faut faire précéder le nom de la fonction par le nom du module, séparé d'un point.
 
 ```{codeplay}
 import math
 
-
 print('e =', math.e)
 print('pi =', math.pi)
 print('fact(7) =', math.factorial(7))
 ````
 
-**Exercice :** utilisez la fonction `pow` (puissance) et affichez le résultat.
+**Exercice :** utilisez la fonction `pow` (puissance) et affichez le résultat.
 
 ## Module `math`
 
-On retrouve dans le module `math` des fonctions ainsi que des constantes :
+On retrouve dans le module `math` des fonctions ainsi que des constantes :
 
 - arithmétiques,
 - logarithmiques et exponentielles,
@@ -102,7 +101,7 @@ for i in range(5):
 ## Module `turtle`
 
 Le module `turtle` permet de déplacer une tortue virtuelle sur un écran en lui donnant des commandes pour se déplacer.
-En se déplaçant elle dessine une trace :
+En se déplaçant elle dessine une trace :
 
 - la fonction `forward(200)` fait avancer la tortue de 200 pixels,
 - la fonction `left(90)` fait tourner la tortue de 90 degrés vers la gauche.
@@ -115,11 +114,10 @@ left(90)
 forward(100)
 ```
 
-La tortue connait aussi les commandes :
+La tortue connait aussi les commandes :
 
 - `backward()` pour faire reculer la tortue,
 - `right()` pour la faire tourner vers la droite.
-
 
 Ceci dessine un pentagone.
 
@@ -132,7 +130,7 @@ for i in range(n):
     left(360/n) 
 ```
 
-**Exercice :** dessinez un hexagone, changez la taille.
+**Exercice :** dessinez un hexagone, changez la taille.
 
 ```{codeplay}
 from turtle import *
@@ -150,26 +148,24 @@ left(180 - alpha)
 forward(c)
 ```
 
-**Exercice :** modifiez a et b. Affichez a, b et c avec la fonction `write()` au milieu du segment.
+**Exercice :** modifiez a et b. Affichez a, b et c avec la fonction `write()` au milieu du segment.
 
 Il est possible de personnaliser le pinceau et l'apparence du curseur ou de choisir si le pinceau est en train d'écrire ou s'il est relevé.
 Plus d'infos sous [Python - Tortue graphique](https://docs.python.org/fr/3/library/turtle.html#module-turtle).
 
 
-<br> <br>
-
 ## Exercices
 
-````{admonition} Exercice 1 : Pythagore (toujours...) 🔌
+````{admonition} Exercice 1 : Pythagore (toujours...) 🔌
 :class: note
 <!-- <span style="color:green">Niveau débutant</span> 🔌 -->
 
 Faites un programme permettant de retourner la valeur en degré d'un des angles quelconques d'un triangle rectangle.
 
 Le programme doit demander à l'utilisateur les longueurs des côtés opposé et adjacent par rapport à l'angle à calculer, ainsi que de l'hypoténuse. Avec ces informations, le programme doit retourner la valeur de l'angle en degrés.
-```` 
+````
 
-````{admonition} Exercice 2 : jeu 🔌
+````{admonition} Exercice 2 : jeu 🔌
 :class: note
 <!-- <span style="color:orange">Niveau intermédiaire</span> 🔌 -->
 
@@ -178,22 +174,18 @@ Faites un programme contre lequel on peut jouer à feuille-cailloux-ciseaux.
 Le programme doit demander à l'utilisateur de faire son choix parmi les trois possibilités. Si l'utilisateur fait un choix qui n'existe pas, le programme retourne une information et repose la question. L'ordinateur doit faire un choix aléatoire. Le programme doit confronter le choix de l'utilisateur et celui de l'ordinateur puis retourner une information sur le gagnant du jeu.
 
 Ce programme peut être amélioré en mettant en œuvre un système de score, de manches ou multi-joueurs.
-```` 
+````
 
-````{admonition} Exercice 3 : étoile 🔌
+````{admonition} Exercice 3 : étoile 🔌
 :class: note
 <!-- <span style="color:red">Niveau avancé</span> 🔌 -->
 
 Dessinez une étoile avec la tortue.
 ````
 
-````{admonition} Exercice 4 : maison 🔌
+````{admonition} Exercice 4 : maison 🔌
 :class: note
 <!-- <span style="color:red">Niveau avancé</span> 🔌 -->
 
 Dessinez une maison comprenant une porte et une fenêtre avec la tortue.
-```` 
-
-
-
-
+````

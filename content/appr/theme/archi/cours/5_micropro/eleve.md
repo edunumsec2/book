@@ -116,7 +116,7 @@ Le 6502, conçu en 1975, est le premier microprocesseur grand public avec un pri
 :width: 600
 :height: 400
 ```
-Ce schéma détaille l'ensemble des transistors du 6502. On voit également quelques-uns des éléments principaux (horloge, registres, etc).
+**Ce schéma détaille l'ensemble des transistors du 6502. On voit également quelques-uns des éléments principaux (horloge, registres, etc)**
 
 
 ```{admonition} Activité
@@ -167,7 +167,7 @@ Un processeur à double cœur possède deux cœurs pour exécuter les opération
 :width: 600
 :height: 400
 ```
-Microprocesseur bicœur
+**Microprocesseur bicœur**
 <br> <br>
 
 
@@ -189,14 +189,14 @@ En termes simples, un processeur quadricœur possède quatre cœurs et il en va 
 :width: 600
 :height: 400
 ```
-Microprocesseur quadricœur
+**Microprocesseur quadricœur**
 <br> 
 
 ```{image} media/8coeurs.png
 :width: 600
 :height: 400
 ```
-Microprocesseur octocœur
+**Microprocesseur octocœur**
 <br> <br>
 
 
