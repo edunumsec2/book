@@ -393,4 +393,4 @@ for i in 3:
     left(100, 120)
 ```
 
-**Exercice** : Corrigez les 3 erreurs de type. 
+**Exercice** : Corrigez les 3 erreurs de type.

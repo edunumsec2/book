@@ -98,9 +98,12 @@ color('navy')
 width(5)
 left(90)
 
+begin_fill()
 circle(-50, 180)
 circle(50, 180)
-circle(100)
+circle(100, 180)
+end_fill()
+circle(100, 180)
 ```
 
 ## Soleil
@@ -261,7 +264,62 @@ forward(2 * r)
 end_fill()
 ```
 
-**Exercice** : Définissez une fonction `coeur()` et dessinez pleins de coeurs.
+## Bulle comics
+
+Un **phylactère**, également appelé bulle ou ballon, est un élément graphique permettant de placer le texte d'un dialogue dans une bande dessinée. 
+
+```{codeplay}
+from turtle import *
+
+getscreen().bgcolor('skyblue')
+fillcolor('white')
+
+begin_fill()
+left(50)
+forward(50)
+right(50)
+forward(170)
+circle(40, 180)
+forward(200)
+circle(40, 180)
+goto(0, 0)
+end_fill()
+
+up()
+goto(30, 60)
+color('black')
+write('hello', font=('Courier', 32))
+```
+
+## Arbre recursif
+
+La **récursivité** est une démarche dont la description mène à la répétition d'une même règle.
+
+```{codeplay}
+from turtle import *
+
+getscreen().bgcolor('lightgreen')
+color('brown')
+
+def branche(d):
+    if d == 1:
+        width(1)
+        forward(30)
+        back(30)
+    else:
+        width(d)
+        forward(50)
+        left(55)
+        branche(d//2)
+        right(55+55)
+        branche(d//2)
+        left(55)
+        back(50)
+
+left(90)
+back(50)
+branche(8)
+```
 
 ```{codeplay}
 
