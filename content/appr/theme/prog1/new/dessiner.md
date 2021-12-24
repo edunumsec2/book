@@ -283,7 +283,26 @@ for i in range(9):
     forward(10)
 ```
 
-**Exercice** : Dessinez une grille avec des lignes horizontales.
+## Epaisseur de ligne
+
+La fonction `width(d)` permet de définir l'épaisseur de la ligne.
+
+```{codeplay}
+from turtle import *
+
+forward(200)
+left(120)
+
+width(5)
+forward(200)
+left(120)
+
+width(10)
+forward(200)
+left(120)
+```
+
+**Exercice** : Explorez les différent4s épaisseurs de ligne.
 
 ## Dessiner un éventail
 
@@ -348,11 +367,13 @@ Donc nous décidons de définir une troisième fonction `maison()` pour dessiner
 from turtle import *
 
 def carre():
+    width(1)
     for i in range(4):
         forward(100)
         right(90)
         
 def triangle():
+    width(3)
     for i in range(3):
         forward(100)
         left(120)

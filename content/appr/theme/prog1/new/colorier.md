@@ -1,72 +1,57 @@
 # Colorier - `color`
 
-Dans ce chapitre nous explorons ce que c'est la couleur. 
-Les lignes peuvent être colorié et les formes être remplis de couleurs.
+Dans ce chapitre nous explorons ce que c'est la couleur.
+Une ligne peut être coloriée et une forme peut être rempli d'une couleur.
 
+- la fonction `color()` permet de choisir une couleur.
 - une couleur est définie avec trois nombres
-- Le système RVB (Rouge Vert Bleu) définit les couleurs de base
+- Le système RVB (Rouge Vert Bleu) définit une couleur avec 3 nombres
 
-Mais avant de passer aux couleurs, nous allons voir l'épaisseur de ligne.
+## Couleur de ligne
 
-## Epaisseur de ligne
+La fonction `color()` permet de définir la couleur de ligne.
 
-La fonction `width()` permet de définir l'épaisseur de ligne. 
-Les deux extrémités de ligne sont arrondies.
+```{codeplay}
+from turtle import *
 
-Pour démontrer différents épaisseurs, nous allons itérer sur une liste des épaisseurs.
+width(10)
+color('red')
+forward(150)
+left(120)
 
-Ici nous utilisons 3 nouvelles fonctions:
+color('lime')
+forward(150)
+left(120)
 
-- `write(d)` affiche d à la position actuelle
-- `setpos(x, y)`définit une nouvelle position de tortue
-- `xcor()` retourne la coordonnée x
+color('blue')
+forward(150)
+left(120)
+```
+
+## Couleur de point
+
+Nous pouvons afficher des points à chaque sommet. La fonction `dot(d)` dessine un disque avec le diamètre `d`.
 
 ```{codeplay}
 from turtle import *
 
 up()
-back(100)
-left(90)
+color('red')
+dot(40)
 
-for d in [1, 2, 5, 10, 20, 30]: 
-    width(d)
-    write(d)
-    forward(30)
-    down()
-    forward(100)
-    up()
-    setpos(xcor() + 50, 0)
-```
-
-## Couleur de ligne
-
-La fonction `color()` définit deux couleurs:
-- la couleur de ligne
-- la couleur de remplissage (intérieur de la tortue)
-
-```{codeplay}
-from turtle import *
-shape('turtle')
-
-color('red', 'yellow')
 forward(150)
+color('lime')
+dot(40)
 
-print(pencolor())
-print(fillcolor())
-print(color())
+left(120)
+forward(150)
+color('blue')
+dot(40)
 ```
 
-Les 3 fonctions permettent de définir ou lire les couleurs :
+## Couleur de forme
 
-- `pencolor()` retourne la couleur du stylo
-- `fillcolor()` retourne la couleur de remplissage
-- `color()` retourne un tuple avec les deux couleurs
-
-
-## Couleur de remplissage
-
-Avec la fonction `fill_color()` nous pouvons définir une couleur de remplissage.
-Pour remplir une forme avec une couleur, nous devons ajouter les deux fonctions :
+Avec la fonction `fill_color()` nous pouvons définir une couleur de remplissage d'une forme. Pour remplir une forme avec une couleur, nous devons ajouter les deux fonctions :
 
 - `begin_fill()` au début de la forme,
 - `end_fill()` à la fin de la forme.
@@ -93,7 +78,7 @@ Dans l'exemple suivant, nous commençons avec un fond limette et changeons en pi
 ```{codeplay}
 from turtle import *
 
-getscreen().bgcolor('lime')
+getscreen().bgcolor('pink')
 fillcolor('yellow')
 
 begin_fill()
@@ -101,8 +86,6 @@ for i in range(4):
     forward(100)
     left(90)
 end_fill()
-
-getscreen().bgcolor('pink')
 ```
 
 ## Forme ouverte
@@ -114,6 +97,7 @@ Le résultat est un triangle.
 ```{codeplay}
 from turtle import *
 
+getscreen().bgcolor('azure')
 fillcolor('yellow')
 begin_fill()
 for i in range(2):
