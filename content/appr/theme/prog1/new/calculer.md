@@ -253,3 +253,59 @@ Quel est le résultat de l'expression `'1 + 2 * 3'` ?
 {v}`7`
 {f}`9`
 ```
+
+## Erreurs
+
+Pour bien programmer vous devez savoir interpréter les messages d'erreurs. Ces messages vous indiquent sur quel ligne du programme il y a quel type d'erreur.
+
+### SyntaxError
+
+Cet erreur est produit quand vous oubliez un signe de ponctuation (parenthèse, virgule, apostrophe).
+
+```{codeplay}
+print('hello'
+print(12 34)
+print('bonjour)
+```
+
+**Exercice** : Corrigez les 3 erreurs de syntaxe.
+
+### TypeError
+
+Cet erreur se produit quand vous mettez des opérandes dont le type n'est pas approprié pour l'opérateur.
+
+```{codeplay}
+print('10' > 0)
+print('10' * '10')
+print('10' + 10)
+```
+
+**Exercice** : Corrigez les 3 erreurs de type.
+
+### ZeroDivisionError
+
+Cet erreur se produit quand vous essayez de diviser par zéro.
+
+```{codeplay}
+print(10 / 0)
+print(10 // 0)
+print(10 % 0)
+```
+**Exercice** : Corrigez les 3 erreurs de division par zéro.
+
+### RangeError
+
+Cet erreur se produit quand une fonction recursive s'appelle trop. 
+
+```{codeplay}
+def f(x):
+    if x == 1:
+        return 1
+    else: 
+        return 1 + f(x-1)
+
+print(f(100))
+print(f(1000))
+print(f(10000))
+print(f(20000))
+```
