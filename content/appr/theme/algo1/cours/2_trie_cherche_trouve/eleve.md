@@ -103,7 +103,7 @@ Appliquer au moins un des trois algorithmes ci-dessus (tri par insertion, tri pa
 
 Noter l’ordre des éléments à chaque fois qu’il change. Vous aurez besoin d’une grande feuille de papier. Vous pouvez aussi représenter la taille des rectangles par un nombre, cela permet de gagner de la place. Si cela vous aide, vous pouvez découper les rectangles ci-dessous et les manipuler. 
 
-<img src="media/Tris_découpe.png" width="60%"> &nbsp;  
+<img src="media/Tris_decoupe.png" width="60%"> &nbsp;  
 
 ````
 
