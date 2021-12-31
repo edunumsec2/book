@@ -1,5 +1,7 @@
 # Idées
 
+Les programmes de ce chapitres sont des idées sous construction, à développer et à placer à leur endroit approprié.
+
 ## Fenêtre
 
 ```{codeplay}
@@ -28,7 +30,7 @@ def fenetre():
     carre2()
     
 fenetre()
-````
+```
 
 ## Arbre
 
@@ -76,7 +78,7 @@ def branche8():
 left(90)
 back(50)
 branche8()
-````
+```
 
 ## Etat de la tortue
 

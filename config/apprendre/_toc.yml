@@ -82,9 +82,8 @@ parts:
       - file: content/appr/theme/algo2/cours/heuristiques/eleve
       - file: content/appr/theme/algo2/cours/recursivite/eleve
       - file: content/appr/theme/algo2/cours/conclusion/eleve
-  - file: content/appr/theme/prog2/eleve
+  - file: content/appr/theme/prog2/intro
     sections:
-      - file: content/appr/theme/prog2/intro
       - file: content/appr/theme/prog2/dict
       - file: content/appr/theme/prog2/compter
       - file: content/appr/theme/prog2/math
