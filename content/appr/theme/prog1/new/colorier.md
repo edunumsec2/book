@@ -336,6 +336,24 @@ for color in colors:
     square(50, color)
 ```
 
+## Intensité des couleurs
+
+```{codeplay}
+ from turtle import *
+up()
+
+d = 50
+
+for x in [0, 0.2, 0.4, 0.6, 0.8, 1]:
+    c = (x, 0, 0)
+    color((x, 0, 0))
+    dot(d)
+    sety(ycor() + d)
+    write(c, font=(None, 8), align='center')
+    sety(ycor() - d)
+    forward(d)
+```
+
 ## Couleur interactive
 
 Nous pouvons aussi utiliser une entrée interactive avec la fonction `input()`

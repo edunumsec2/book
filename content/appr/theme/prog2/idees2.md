@@ -288,6 +288,44 @@ getscreen().onkey(clear, 'c')
     
 getscreen().onclick(ligne)
 getscreen().listen()
+````
+## Système binaire
+
+```{codeplay}
+for i in range(16):
+    print(i, '=', bin(i))
+````
+
+```{codeplay}
+for i in range(16):
+    print(f'{i:2} = {i:4b}')
+```
+
+```{codeplay}
+for i in range(100, 105):
+    print(f'{i:2} = b{i:08b} = x{i:2x}')
+```
+
+```{codeplay}
+from random import *
+
+n = 10
+score = 0
+
+for i in range(10):
+    num = randint(2, 15)
+    x = input(f'{num:4b} = ')
+    if int(x) == num:
+        score += 1
+    else:
+        print('Faux. Réponse correcte =', num)
+
+print('score =', score, '/', n)
+```
+
+```{codeplay}
+for i in range(100):
+    print(f'{i}={i:x}', end=' ')
 ```
 
 ## Narration
@@ -313,50 +351,40 @@ for line in histoire.split('\n'):
         sleep(0.1)
     sleep(1)
     print()
-```
+````
 
-## Events
+## Intensité des couleurs
+
 ```{codeplay}
  from turtle import *
+up()
 
-shape('turtle')
-forward(100)
+d = 50
 
-def click():
-    print('click')
-    
-def drag():
-    print('drag')
-    
-def release():
-    print('release')
-    
-getturtle().onclick(click)
-getturtle().ondrag(drag)
-getturtle().onrelease(release)
-getscreen().listen()
+for x in [0, 0.2, 0.4, 0.6, 0.8, 1]:
+    c = (x, 0, 0)
+    color((x, 0, 0))
+    dot(d)
+    sety(ycor() + d)
+    write(c, font=(None, 8), align='center')
+    sety(ycor() - d)
+    forward(d)
 ```
+
+
+
+
 
 ```{codeplay}
  
-```
+````
 
 ```{codeplay}
  
-```
+````
 
 ```{codeplay}
  
-```
+````
 
-```{codeplay}
- 
-```
 
-```{codeplay}
- 
-```
-
-```{codeplay}
- 
-```

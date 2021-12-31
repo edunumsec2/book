@@ -1,4 +1,4 @@
-# TurtleArt
+# Créer - `turtle`
 
 Ce chapitre vous donne des idées artistiques, inspirées du travail de Artemis Papert, présenté sur le site [TurtleArt](https://turtleart.org).
 
@@ -301,24 +301,36 @@ from turtle import *
 getscreen().bgcolor('lightgreen')
 color('brown')
 
-def branche(d):
-    if d == 1:
-        width(1)
-        forward(30)
-        back(30)
-    else:
-        width(d)
-        forward(50)
-        left(55)
-        branche(d//2)
-        right(55+55)
-        branche(d//2)
-        left(55)
-        back(50)
+def branche(d, n, angle=50):
+    width(n)
+    forward(d)
+    if n > 1:
+        left(angle)
+        branche(d-10, n-1)
+        right(2 * angle)
+        branche(d-10, n-1)
+        left(angle)
+    back(d)
 
 left(90)
-back(50)
-branche(8)
+back(70)
+branche(70, 6, 60)
+```
+
+## Bulles de savon
+
+```{codeplay}
+from turtle import *
+from random import *
+up()
+
+for i in range(100):
+    x = randint(-300, 300)
+    y = randint(-200, 200)
+    s = randint(20, 100)
+    goto(x, y)
+    color((random(), random(), random(), 0.7))
+    dot(s)
 ```
 
 ```{codeplay}
