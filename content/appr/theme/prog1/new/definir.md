@@ -140,3 +140,65 @@ print(x, 'est', signe(x))
 
 **Exercice** : Testez avec -2, 0 et 3.
 
+## Dessiner un pixel
+
+Comme avant nous allons définir une fonction `square()`.
+Cette fois elle a deux arguments :
+
+- `a` pour la taille du carré,
+- `color` pour la couleur du carré.
+
+```{codeplay}
+from turtle import *
+
+def square(a, color):
+    fillcolor(color)
+    begin_fill()
+    for i in range(4):
+        forward(a)
+        left(90)
+    end_fill()
+    forward(a)
+
+back(100)
+square(100, 'yellow')
+square(100, 'orange')
+square(100, 'red')
+```
+
+
+## Dessiner Pikachu
+
+De nouveaux nous définissons une fonction `line()` pour dessiner une liste de couleurs.
+En fin de liste, la tortue est placée à la position prête pour dessiner la ligne suivante.
+
+```{codeplay}
+from turtle import *
+
+def square(a, color):
+    fillcolor(color)
+    begin_fill()
+    for i in range(4):
+        forward(a)
+        left(90)
+    end_fill()
+    forward(a)
+
+a = 50
+
+def line(colors):
+    for color in colors:
+        square(a, color)
+    back(len(colors) * a)
+    up()
+    sety(ycor() - a)
+    down()
+
+back(2 * a)
+line(['black', 'yellow', 'yellow', 'black'])
+line(['white', 'red', 'yellow', 'white'])
+line(['yellow', 'yellow', 'yellow', 'yellow'])
+line(['yellow', 'yellow', 'yellow', 'white'])
+```
+
+**Exercice** : Dessinez un autre Pokemon.
