@@ -1,39 +1,5 @@
 # Colorier
 
-Dans ce chapitre nous explorons ce que c'est la couleur. 
-Les lignes peuvent être colorié et les formes peuvetz être remplis
-
-- une couleur est défin avec trois nombres
-- Le système RVB (Rouge Vert Bleu) définit les couleurs de base
-
-
-## Couleur de ligne
-
-La fonction `color()` déinit deux couleurs:
-- la couleur de ligne
-- la couleur de remplissage (intérieur de la tortue)
-
-
-```{codeplay}
-from turtle import *
-shape('turtle')
-
-color('red', 'yellow')
-forward(150)
-
-print(pencolor())
-print(fillcolor())
-print(color())
-```
-
-Les 3 fonctions permettent de définir ou lire les couleurs :
-
-- `pencolor()` retourne la couleur du stylo
-- `fillcolor()` retourne la couleur de remplissage
-- `color()` retourne un tuple avec les deux couleurs
-
-## Couleur de remplissage
-
 Avec la fonction `fill_color()` nous pouvons définir une couleur de remplissage.
 Pour remplir une forme avec une couleur, nous devons ajouter les deux fonctions :
 
@@ -50,8 +16,6 @@ for i in range(4):
     left(90)
 end_fill()
 ```
-
-## Forme ouverte
 
 La forme ne doit pas nécessairement être fermée pour être remplie d'une couleur.
 Dans l'exemple suivant nous dessinons une forme ouverte avec seulement deux lignes.
@@ -74,32 +38,6 @@ for i in range(2):
     left(90)
 end_fill()
 ```
-**Exercice** : Dessiner un drapeau bi-colore.
-
-## Couleur d'arrière-fond
-
-Le fonction `getscreen()` retourne un objet `Screen`. Celui ci possède une méthode `bgcolor()`.
-L'objet qui appelle sa méthode permet de changer la couleur de l'arrière-fond.
-
-Dans l'exemple suivant, nous commençons avec un fond limette et changeons en pink une fois le carré dessiné.
-
-
-```{codeplay}
-from turtle import *
-
-getscreen().bgcolor('lime')
-fillcolor('yellow')
-
-begin_fill()
-for i in range(4):
-    forward(100)
-    left(90)
-end_fill()
-
-getscreen().bgcolor('pink')
-```
-
-## Dessiner un pixel
 
 Comme avant nous allons définir une fonction `square()`.
 Cette fois elle a deux arguments :
@@ -123,9 +61,6 @@ square(100, 'yellow')
 square(100, 'orange')
 square(100, 'red')
 ```
-
-## Liste de couleurs
-
 Voici une liste des couleurs disponibles.
 
 ![couleurs](colors.png)
@@ -151,8 +86,6 @@ for color in colors:
     square(50, color)
 ```
 
-## Couleur interactive
-
 Nous pouvons aussi utiliser une entrée interactive avec la fonction `input()`
 et demander à l'utilisateur d'entrer une couleur valide.
 
@@ -174,8 +107,6 @@ while color:
     square(100, color)
     color = input('Enter a color: ')
 ```
-
-## Dessiner Pikachu
 
 De nouveaux nous définissons une fonction `line()` pour dessiner une liste de couleurs.
 En fin de liste, la tortue est placée à la position prête pour dessiner la ligne suivante.
@@ -208,8 +139,6 @@ line(['white', 'red', 'yellow', 'white'])
 line(['yellow', 'yellow', 'yellow', 'yellow'])
 line(['yellow', 'yellow', 'yellow', 'white'])
 ```
-
-**Exercice** : Dessinez un autre Pokemon.
 
 ```{codeplay}
 
