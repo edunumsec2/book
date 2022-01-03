@@ -40,16 +40,6 @@ Ce rectangle a les propriétés suivants:
 - l'axe x s'étend de -300 à +300
 - l'axe y s'étend de -200 à +200
 
-```{question}
-La largeur de la zone de dessin de la tortue est de
-{f}`200`,
-{f}`300`,
-{f}`400`,
-{v}`600` ou
-{f}`800`
-pixels.
-```
-
 ## Une séquence
 
 Un programme est une séquence d'instructions. Le bloc des 8 instructions ci-dessous indique comment dessiner un carré. La tortue doit avancer, tourner, avancer, tourner etc.
@@ -57,11 +47,11 @@ Un programme est une séquence d'instructions. Le bloc des 8 instructions ci-des
 ```{codeplay}
 from turtle import *
 
-forward(200)
+forward(100)
 left(90)
 forward(100)
 left(90)
-forward(200)
+forward(100)
 left(90)
 forward(100)
 left(90)
@@ -69,53 +59,59 @@ left(90)
 
 **Exercice** : Modifiez ce code pour dessiner une maison.
 
+## Répéter une séquence
+
+Si nous regardons le code de près, nous remarquons que 2 lignes de code sont répétées 4 fois.
+Nous pouvons utiliser une boucle `for` et réduire le code de 8 à 3 lignes.
+
+A ce stade, nous apprenons juste que `for i in range(n):` va répéter le bloc qui suit `n` fois.
+Le bloc à répéter doit être indenté.
+
+```{codeplay}
+from turtle import *
+
+for i in range(4):
+    forward(100)
+    left(90)
+```
+
+**Exercice** : Ajoutez une deuxième boucle pour dessiner un triangle.
+
 ## Nommer une séquence
 
-Dessiner un rectangle est assez utile. C'est une forme qu'on pourra réutiliser certainement plein de fois. Il serait pratique de définir un nom pour ces 8 lignes de code.
-Avec le mot-clé `def` nous pouvons définir une nouvelle commande que nous allons appeler `rectangle()`.
+Dessiner un carré est assez utile. C'est une forme qu'on pourra réutiliser certainement plein de fois. Il serait pratique de définir un nom pour ces 3 lignes de code.
+Avec le mot-clé `def` nous pouvons définir une nouvelle commande que nous allons appeler `square()`.
 On appelle cette façon de faire **définir** une fonction.
 
-Ensuite il suffit d'écrire `rectangle()`pour dessiner un rectangle. On appelle ceci **appeler** une fonction.
+Ensuite il suffit d'écrire `square()`pour dessiner le carré. On appelle ceci **appeler** une fonction.
 Rappelez vous ceci:
 
 - on définit une fonction une seule fois
 - on peut appeler une fonction autant de fois qu'on veut
 
 De nouveau nous réduisons les lignes de code nécessaires.
-Au lieu d'écrire 8 lignes, nous écrivons que 1 ligne de code.
+Au lieu d'écrire 3 lignes, nous écrivons que 1 ligne de code.
+
+- la boucle `for` nous a permit réduire 8 lignes en 3 lignes,
+- la fonction `def` nous permet de réduire encore plus de 3 ligne en 1. 
 
 ```{codeplay}
 from turtle import *
 
-def rectangle():
-    forward(200)
-    left(90)
-    forward(100)
-    left(90)
-    forward(200)
-    left(90)
-    forward(100)
-    left(90)
+def square():
+    for i in range(4):
+        forward(100)
+        left(90)
         
-rectangle()
-left(180)
-rectangle()
+square()
 ```
 
-**Exercice** : Dessinez plusieurs rectangles en utilisant la nouvelle fonction.
+**Exercice** : Dessinez plusieurs carrés en utilisant la nouvelle fonction.
 
 ## Définir une fonction
 
-Le fait de donner un nom à une séquence d'instructions est aussi appelé **définir un fonction**. Une **définition de fonction** comporte :
-
-- le mot-clé `def` (définir)
-- le nom de la fonction
-- le deux-points `:``
-- un bloc indentée
-
-L'indentation est très importante en Python. C'est l'indentation qui indique la séquence d'instructions qui fait partie de la définition de fonction.
-
-Nous avons maintenant tout pour définir une nouvelle commande qui va dessiner une maison. Le dessin commence en bas à gauche de maison et se termine au même endroit.
+Nous avons maintenant tout pour définir une nouvelle commande pour dessiner une maison.
+Le dessin commence en bas à gauche de maison et se termine au même endroit.
 
 ```{codeplay}
 from turtle import *
@@ -142,131 +138,46 @@ maison()
 
 **Exercice** : Ajoutez une porte à la maison.
 
-```{question}
-La définition de la fonction `maison` comporte :
-{f}`5`,
-{f}`8`, 
-{v}`10`,
-{f}`11` ou
-{f}`12`
-lignes de code.
-```
-
 ## Appeler une fonction
 
-Une stratégie importante dans la programmation est de reconnaitre des structure identiques. Par exemple quand vous voyez une symmétrie dans un dessin,
-vous devez repérer la partie qui est répétée et en créer une fonction.
+Nous pouvons appeler une fonction autant de fois que nous voulons. Ceci ajoute juste une ligne de code, mais pourrait représenter des centaines de ligne de code exécuté.
 
-Ensuite il suffit d'**appeler** cette fonction.
-Rappelez vous ceci:
-
-- on définit une fonction une seule fois
-- on peut appeler une fonction autant de fois qu'on veut
-
-De nouveau nous réduisons les lignes de code nécessaires.
-Avec la fonction `boite`, au lieu d'écrire 6 lignes, nous écrivons que 1 ligne de code.
+Que se passe-t-il si nous tournons de 90° et recommencions a dessiner un carré ?
 
 ```{codeplay}
 from turtle import *
 
-def boite():
-    forward(60)
-    left(90)
-    forward(60)
-    left(90)
-    forward(60)
-    right(90)
-    
-boite()
-boite()
-boite()
-boite()
+def square():
+    for i in range(4):
+        forward(100)
+        left(90)
+
+square()
+left(90)
+square()
+left(90)
+square()
+left(90)
 ```
 
-## Dessiner une étoile
-
-Par exemple dans une étoile nous repérons des pics qui sont répétés.
-Nous pouvons en créer une fonction.
-
-```{codeplay}
-from turtle import *
-
-def pic():
-    forward(100)
-    left(160)
-    forward(100)
-    right(100)
-    
-pic()
-pic()
-pic()
-pic()
-pic()
-pic()
-```
-
-## Répéter une séquence
-
-Si nous regardons le code de près, nous remarquons que la ligne de code `pic()` est répétée 6 fois.
-Nous pouvons utiliser une boucle `for` et répéter ce code.
-
-A ce stade, nous apprenons juste que `for i in range(x):` va répéter le bloc qui suit `x` fois. Le bloc à répéter doit être indenté.
-
-```{codeplay}
-from turtle import *
-
-def pic():
-    forward(100)
-    left(160)
-    forward(100)
-    right(100)
-
-for i in range(6):
-    pic()
-```
-
-**Exercice** : Modifier le nombre de pics de l'étoile.
-
-
-```{question}
-L'expression `for i in range(4+2)` répète le bloc qui suit
-{f}`2`,
-{f}`4`,
-{v}`6` ou 
-{f}`8`
-fois.
-```
-
+De nouveau nous avons répété 3 fois la même séquence de 2 lignes.
+Nous pensons toute suite à la boucle `for`.
 Que se passe t'il si nous dessinons des carrés et tournons de 45° à chaque tour ?
 
 ```{codeplay}
 from turtle import *
 
-def carre():
+def square():
     for i in range(4):
         forward(100)
         left(90)
 
 for i in range(8):
-    carre()
+    square()
     left(45)
 ```
 
 **Exercice** : Si nous tournons de seulement 30°, combien de fois devons-nous répéter ?
-
-```{question}
-
-    forward(100)
-    left(-90)
-    back(-20)
-
-place la tortue à la position
-{f}`(0, 0)` 
-{f}`(100, 0)`
-{f}`(100, -20)`
-{v}`(100, 20)`
-{f}`(20, 100)`
-```
 
 ## Lever/baisser le stylo
 
@@ -319,12 +230,12 @@ for i in range(9):
 ## Dessiner un triangle
 
 Maintenant nous sommes prêts pour définir une deuxième fonction que nous appelons `triangle()`.
-Dessinés ensemble avec `carre()`, nous obtenons une petite maisonnette.
+Dessinés ensemble avec `square()`, nous obtenons une petite maisonnette.
 
 ```{codeplay}
 from turtle import *
 
-def carre():
+def square():
     for i in range(4):
         forward(100)
         right(90)
@@ -334,7 +245,7 @@ def triangle():
         forward(100)
         left(120)
         
-carre()
+square()
 triangle()
 ```
 
@@ -342,12 +253,12 @@ triangle()
 
 ## Dessiner une maison
 
-Donc nous décidons de définir une troisième fonction `maison()` pour dessiner une maisonnette.
+Donc nous décidons de définir une troisième fonction `house()` pour dessiner une maisonnette.
 
 ```{codeplay}
 from turtle import *
 
-def carre():
+def square():
     for i in range(4):
         forward(100)
         right(90)
@@ -357,15 +268,15 @@ def triangle():
         forward(100)
         left(120)
     
-def maison():
-    carre()
+def house():
+    square()
     triangle()
     forward(100)
     
 back(200)
-maison()
-maison()
-maison()
+house()
+house()
+house()
 ```
 
 **Exercice** : Modifiez le code pour écarter les maisons.
@@ -378,23 +289,23 @@ Quelle forme obtenons-nous en dessinant un carré et deux losanges
 ```{codeplay}
 from turtle import *
 
-def carre():
+def square():
     for i in range(4):
         right(90)
         forward(100)
 
-def losange():
+def diamond():
     for i in range(2):
         forward(100)
         left(120)
         forward(100)
         left(60)
         
-carre()
+square()
 right(90)
-losange()
+diamond()
 left(120)
-losange()
+diamond()
 ```
 
 ## Dessiner une fleur
@@ -404,7 +315,7 @@ Si nous dessinons le losange 6 fois, nous obtenons une jolie fleur.
 ```{codeplay}
 from turtle import *
 
-def losange():
+def diamond():
     for i in range(2):
         forward(100)
         left(60)
@@ -412,7 +323,7 @@ def losange():
         left(120)
 
 for i in range(6):
-    losange()
+    diamond()
     left(60)
 ```
 
