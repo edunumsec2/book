@@ -131,32 +131,8 @@ Nous reconnaissons la différence entre en entier (`int`) et un nombre à virgul
 
 ## La fonction `input()`
 
-La fonction `input()` permet d'obtenir une entrée de l'utilisateur. La valeur retourné est une chaine de caractères. Pour pouvoir l'utiliser dans un calcul nous devons la transformer en virgule flottante avec la fonction de conversion `float()`.
-
 ```{codeplay}
-r = float(input('Entrez le rayon: '))
-pi = 3.14
-
-print('rayon =', r)
-print('diamètre =', 2 * r)
-print('circonférence =', pi * 2 * r)
-print('surface =')
 ```
-
-**Exercice** : Complétez le programme pour afficher la surface du cercle.
-
-Nous pouvons également créer des programmes ou nous demandons plusieurs valeurs à l'utilisateur.
-
-```{codeplay}
-a = int(input('Entrez la largeur:'))
-b = int(input('Entrez la longeur:'))
-
-print('surface =', a * b)
-print('périmètre =')
-print('diagonale =')
-```
-
-**Exercice** : Complétez le programme pour afficher perimètre et la diagonale.
 
 ## Affectation multiple
 
@@ -179,30 +155,3 @@ print(x, y)
 ```
 
 **Exercice** : Ajoutez une 3e variable et faites un permutation cyclique.
-
-## Compter en binaire
-
-Si nous utilsons le code binaire pour compter avec les doigts, nou pof
-
-```{codeplay}
-from turtle import *
-
-def finger(x):
-    forward(x)
-    circle(-20, 180)
-    forward(x)
-    left(180)
-
-def binaire(code):
-    left(90)
-    for c in code :
-        write(c, font=('Arial', 24))
-        if c == '1':
-            finger(120)
-        else :
-            finger(30)
-              
-binaire('00110')
-```
-
-**Exercice** : modifier le programme pour compter de 0 à 31.
