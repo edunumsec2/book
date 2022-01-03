@@ -45,7 +45,9 @@ parts:
       - file: content/appr/theme/prog1/new/grouper 
       - file: content/appr/theme/prog1/new/random
       - file: content/appr/theme/prog1/new/trier
+      - file: content/appr/theme/prog1/new/math
       - file: content/appr/theme/prog1/new/turtleart
+      - file: content/appr/theme/prog1/new/quiz
       
 #     - file: content/appr/theme/prog1/cours/9_app/app 
 #     - file: content/appr/theme/prog1/cours/10_conclusion/concl 
@@ -87,14 +89,7 @@ parts:
       - file: content/appr/theme/prog2/intro
       - file: content/appr/theme/prog2/dict
       - file: content/appr/theme/prog2/compter
-      - file: content/appr/theme/prog2/math
-      - file: content/appr/theme/prog2/color
-      - file: content/appr/theme/prog2/ensemble
-      - file: content/appr/theme/prog2/logique
-      - file: content/appr/theme/prog2/bitwise
-      - file: content/appr/theme/prog2/poo
       - file: content/appr/theme/prog2/idees
-      - file: content/appr/theme/prog2/quiz
       
   - file: content/appr/theme/projets/eleve
   - file: content/appr/theme/reseaux/eleve

@@ -1,4 +1,4 @@
-# Tracer - `math`
+# Fonctions - `math`
 
 Le module `math` permet d'importer toute une série de constantes et fonctions mathématiques.
 
@@ -212,32 +212,32 @@ def graph(f, col, name):
 
 graph(atan, 'red', 'atan')
 graph(cos, 'blue', 'cos')
-```
+````
 
 ```{codeplay}
 
-```
+````
 
 ```{codeplay}
 
-```
+````
 
 ```{codeplay}
 
-```
+````
 
 ```{codeplay}
 
-```
+````
 
 ```{codeplay}
 
-```
+````
 
 ```{codeplay}
 
-```
+````
 
 ```{codeplay}
 
-```
+````

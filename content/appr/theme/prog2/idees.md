@@ -313,50 +313,31 @@ for line in histoire.split('\n'):
         sleep(0.1)
     sleep(1)
     print()
-```
+````
 
-## Events
-```{codeplay}
- from turtle import *
-
-shape('turtle')
-forward(100)
-
-def click():
-    print('click')
-    
-def drag():
-    print('drag')
-    
-def release():
-    print('release')
-    
-getturtle().onclick(click)
-getturtle().ondrag(drag)
-getturtle().onrelease(release)
-getscreen().listen()
-```
 
 ```{codeplay}
  
-```
+````
 
 ```{codeplay}
  
-```
+````
 
 ```{codeplay}
  
-```
+````
 
 ```{codeplay}
  
-```
+````
 
 ```{codeplay}
  
-```
+````
 
 ```{codeplay}
  
-```
+````
+
+

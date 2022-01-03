@@ -1,4 +1,4 @@
-# Subir - `random`
+# Aléatoire - `random`
 
 Le module `random` permet de créer des nombres pseudo-aléatoires. Il met à disposition 13 fonctions:
 
@@ -12,7 +12,7 @@ import random
 print(dir(random))
 ```
 
-## Nombre aléatoire
+## Nombre aléatoire dans [0 ... 1]
 
 La fonction `random()` retourne une valeur aléatoire dans la plage [0, 1].
 
