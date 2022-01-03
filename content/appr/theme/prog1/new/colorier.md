@@ -239,7 +239,7 @@ write('vert', font=(None, 18))
 
 Voici une liste des couleurs disponibles.
 
-![couleurs](media/colors.png)
+![couleurs](colors.png)
 
 ```{codeplay}
 from turtle import *

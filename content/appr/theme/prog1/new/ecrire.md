@@ -132,7 +132,7 @@ L’**art ASCII** consiste à réaliser des images uniquement à l'aide des lett
 
 Voici un exemple :
 
-![](media/ascii-art.jpeg)
+![](ascii-art.jpeg)
 
 ```{codeplay}
 print("""
@@ -170,10 +170,9 @@ Pour insérer un retour à la ligne à l'intérieur d'une chaîne de caractères
 
 ```{codeplay}
 print('chaque\nmot\nsur\nune\nligne')
-print('\nhello world' * 5)
 ```
 
-**Exercice** : Ajoutez une nouvelle ligne de code qui contient des `\n`.
+**Exercice** : Ajoutez une deuxième ligne de code qui contient des `\n`.
 
 ## Aligner en colonnes
 
@@ -181,7 +180,7 @@ La séquence `\t` (tabulateur) permet d'aligner des éléments de texte en colon
 
 ```{codeplay}
 print('qte\tart.\tprix')
-print('4\tsouris\t15.95')
+print('1\tsouris\t15.95')
 print('12\tclavier\t25.95')
 ```
 

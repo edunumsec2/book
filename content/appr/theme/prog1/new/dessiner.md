@@ -19,7 +19,6 @@ On s'imagine une tortue qui se déplace sur un canevas et laisse une trace.
 
 ```{codeplay}
 from turtle import *
-
 shape('turtle')
 forward(150)
 ```
@@ -106,8 +105,6 @@ def square():
 square()
 ```
 
-**Exercice** : Dessinez plusieurs carrés en utilisant la nouvelle fonction.
-
 ## Définir une fonction
 
 Nous avons maintenant tout pour définir une nouvelle commande pour dessiner une maison.
@@ -127,8 +124,8 @@ def maison():
     left(45)
     forward(60)
     left(90)
-
-backward(150)
+    
+backward(150)    
 maison()
 forward(140)
 maison()
@@ -151,7 +148,7 @@ def square():
     for i in range(4):
         forward(100)
         left(90)
-
+        
 square()
 left(90)
 square()
@@ -193,7 +190,6 @@ for i in range(9):
     up()
     forward(10)
 ```
-
 **Exercice** : Dessinez une grille avec des lignes horizontales.
 
 ## Dessiner un éventail
@@ -219,7 +215,6 @@ Essayons !
 
 ```{codeplay}
 from turtle import *
-
 for i in range(9):
     forward(200)
     left(160)
@@ -227,7 +222,66 @@ for i in range(9):
 
 **Exercice** : Ajoutez `up()/down()` et définissez une fonction `etoile()`. Ensuite dessinez plein d'étoiles !
 
-## Dessiner un triangle
+## Paramétrer la fonction
+
+Jusqu'a maintenant notre carré a toujours la même taille.
+Il serait bien si notre nouvelle commande `square()` pouvait dessiner des carrés de taille variable.
+C'est possible en spécifiant un argument pour la fonction.
+L'argument de la fonction est une valeur (variable locale) qui est passé à la fonction quand elle est appelé.
+
+```{codeplay}
+from turtle import *
+
+def square(a):
+    for i in range(4):
+        forward(a)
+        left(90)
+        
+square(30)
+square(60)
+square(90)
+```
+
+## La fonction `range()`
+
+De nouveaux nous constatons une suite de nombres `30, 60, 90, ...`.
+Nous pouvons utiliser une boucle avec une plage `range(start, stop, step)`
+
+```{codeplay}
+from turtle import *
+
+def square(a):
+    for i in range(4):
+        forward(a)
+        left(90)
+      
+for x in range(30, 180, 30):
+    square(x)
+```
+
+Au lieu d'imbriquer les carrés, nous pouvons aussi les dessiner les uns après les autres.
+Le terme technique est de les **juxtaposer**.
+
+```{codeplay}
+from turtle import *
+
+def square(a):
+    down()
+    for i in range(4):
+        forward(a)
+        left(90)
+    up()
+  
+up()
+back(250)
+for x in range(30, 180, 30):
+    square(x)
+    forward(x)
+```
+
+**Exercice** : Ecartez les carrés de 10-20 pixels.
+
+## Ajouter un triangle
 
 Maintenant nous sommes prêts pour définir une deuxième fonction que nous appelons `triangle()`.
 Dessinés ensemble avec `square()`, nous obtenons une petite maisonnette.
@@ -235,48 +289,46 @@ Dessinés ensemble avec `square()`, nous obtenons une petite maisonnette.
 ```{codeplay}
 from turtle import *
 
-def square():
+def square(a):
     for i in range(4):
-        forward(100)
+        forward(a)
         right(90)
         
-def triangle():
+def triangle(a):
     for i in range(3):
-        forward(100)
+        forward(a)
         left(120)
         
-square()
-triangle()
+square(100)
+triangle(100)
 ```
 
-**Exercice** : Dessinez plusieurs triangles en utilisant la nouvelle fonction.
-
-## Dessiner une maison
+## Dessiner une maisonnette
 
 Donc nous décidons de définir une troisième fonction `house()` pour dessiner une maisonnette.
 
 ```{codeplay}
 from turtle import *
 
-def square():
+def square(a):
     for i in range(4):
-        forward(100)
+        forward(a)
         right(90)
         
-def triangle():
+def triangle(a):
     for i in range(3):
-        forward(100)
+        forward(a)
         left(120)
     
-def house():
-    square()
-    triangle()
-    forward(100)
+def house(a):
+    square(a)
+    triangle(a)
+    forward(a)
     
 back(200)
-house()
-house()
-house()
+house(100)
+house(110)
+house(120)
 ```
 
 **Exercice** : Modifiez le code pour écarter les maisons.
@@ -289,23 +341,23 @@ Quelle forme obtenons-nous en dessinant un carré et deux losanges
 ```{codeplay}
 from turtle import *
 
-def square():
+def square(a):
     for i in range(4):
         right(90)
-        forward(100)
+        forward(a)
 
-def diamond():
+def diamond(a):
     for i in range(2):
-        forward(100)
+        forward(a)
         left(120)
-        forward(100)
+        forward(a)
         left(60)
         
-square()
+square(100)
 right(90)
-diamond()
+diamond(100)
 left(120)
-diamond()
+diamond(100)
 ```
 
 ## Dessiner une fleur
@@ -315,15 +367,15 @@ Si nous dessinons le losange 6 fois, nous obtenons une jolie fleur.
 ```{codeplay}
 from turtle import *
 
-def diamond():
+def diamond(a):
     for i in range(2):
-        forward(100)
+        forward(a)
         left(60)
-        forward(100)
+        forward(a)
         left(120)
 
 for i in range(6):
-    diamond()
+    diamond(100)
     left(60)
 ```
 

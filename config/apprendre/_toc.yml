@@ -21,33 +21,28 @@ parts:
       - file: content/appr/theme/rep-info/cours/conclusion/eleve
 
   ### Programmation    
-#  - file: content/appr/theme/prog1/accueil/elevenew
-  - file: content/appr/theme/prog1/new/intro
-
+  - file: content/appr/theme/prog1/accueil/elevenew
     sections:
-#      - file: content/appr/theme/prog1/cours/1_intro/intro 
-#      - file: content/appr/theme/prog1/cours/2_pyth/pyth
-#      - file: content/appr/theme/prog1/cours/3_var/var
-#      - file: content/appr/theme/prog1/cours/4_flux/flux
-#      - file: content/appr/theme/prog1/cours/5_list/list
-#      - file: content/appr/theme/prog1/cours/6_dict/dict
-#      - file: content/appr/theme/prog1/cours/7_fonc/fonc
-#      - file: content/appr/theme/prog1/cours/8_mod/mod
+      - file: content/appr/theme/prog1/cours/1_intro/intro 
+      - file: content/appr/theme/prog1/cours/2_pyth/pyth
+      - file: content/appr/theme/prog1/cours/3_var/var
+      - file: content/appr/theme/prog1/cours/4_flux/flux
+      - file: content/appr/theme/prog1/cours/5_list/list
+#     - file: content/appr/theme/prog1/cours/6_dict/dict
+      - file: content/appr/theme/prog1/cours/7_fonc/fonc
+#     - file: content/appr/theme/prog1/cours/8_mod/mod
 
       - file: content/appr/theme/prog1/new/dessiner
       - file: content/appr/theme/prog1/new/colorier
       - file: content/appr/theme/prog1/new/ecrire
       - file: content/appr/theme/prog1/new/calculer
       - file: content/appr/theme/prog1/new/repeter
-      - file: content/appr/theme/prog1/new/attendre
       - file: content/appr/theme/prog1/new/decider
-      - file: content/appr/theme/prog1/new/definir
       - file: content/appr/theme/prog1/new/grouper 
       - file: content/appr/theme/prog1/new/random
       - file: content/appr/theme/prog1/new/trier
       - file: content/appr/theme/prog1/new/math
       - file: content/appr/theme/prog1/new/turtleart
-      - file: content/appr/theme/prog1/new/quiz
       
 #     - file: content/appr/theme/prog1/cours/9_app/app 
 #     - file: content/appr/theme/prog1/cours/10_conclusion/concl 
