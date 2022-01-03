@@ -1,10 +1,6 @@
 (programmation)=
 # Programmation I
 
-```{admonition} Ancienne version du chapitre
-Attention, ceci est une nouvelle version du chapitre programmation I. L'ancienne version est disponible ici : https://old-apprendre.modulo-info.ch/content/theme/programmation/accueil/elevenew.html
-```
-
 Programmer est simple. Si vous savez dessiner, écrire et calculer, alors vous savez aussi programmer. 
 Quand vous envoyez un message avec WhatsApp, postez une image sur Instagram ou parlez à Siri, vous interagissez avec votre smartphone ou ordinateur. Vous communiquez avec cet machine.
 
