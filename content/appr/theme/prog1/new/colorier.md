@@ -333,64 +333,14 @@ line(['yellow', 'yellow', 'yellow', 'white'])
 
 **Exercice** : Dessinez un autre Pokemon.
 
-## Erreurs
-
-Il est important de bien comprendre les messages d'erreurs.
-Dans cette section vous allez découvrir les différentes catégories d'erreur et les corriger.
-
-
-### ImportError
-
-Cet erreur est produit si vous essayez d'importer un module qui n'existe pas.
-
 ```{codeplay}
-from turtl import *
 
-for i in range(3):
-    forward(100)
-    left(120)
 ```
 
-**Exercice** : Corrigez l'erreur d'importation.
-
-### SyntaxError
-
-Cet erreur est produit quand vous écrivez mal un mot-clé, ou si vous oubliez une ponctuation. Dans ce cas le mot-clé mal écrit n'est pas reconnu et il n'est pas colorié.
-
 ```{codeplay}
-fro turtle import *
 
-fore i in range(3)
-    forward(100)
-    left(120)
 ```
 
-**Exercice** : Corrigez les 3 erreurs de syntaxe.
-
-### NameError
-
-Cet erreur est produit quand vous écrivez mal le nom d'une variable ou fonction.
-
 ```{codeplay}
-from turtle import *
 
-for i in range(n):
-    forwarde(100)
-    lefft(120)
 ```
-
-**Exercice** : Corrigez les 3 erreurs de nom.
-
-### TypeError
-
-Cet erreur est produit si vous ne mettez pas le nombre d'arguments correcte pour une fonction.
-
-```{codeplay}
-from turtle import *
-
-for i in 3:
-    forward()
-    left(100, 120)
-```
-
-**Exercice** : Corrigez les 3 erreurs de type. 

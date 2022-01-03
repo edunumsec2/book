@@ -148,7 +148,7 @@ forward(50)
 left(45)
 
 print('\nCouleur:')
-print(p'color =', color())
+print(color())
 print('pen =', pencolor())
 print('fill =', fillcolor())
 print('mode =', colormode())
@@ -160,6 +160,7 @@ print('down =', isdown())
 print('visible =', isvisible())
 print('speed =', speed())
 print('delay =', delay())
+
 
 print('\nPosition:')
 print('h =', heading())
@@ -190,13 +191,6 @@ Affiche tous les méthodes et attributs de `Screen`.
 from turtle import *
 
 print(dir(Screen))
-```
-
-```{codeplay}
-from turtle import *
-
-print('shapes =', Screen.getshapes()))
-print('shape =', shape())
 ```
 
 ## Key events
@@ -258,123 +252,11 @@ print("Utilisez U/D pour up/down.")
 print("Utilisez H/C/R pour home/clear/reset.")
 ````
 
-## Animer un point
-
-Animation en utilisant la fonction `undo()` pour effacer la dernière position.
-
 ```{codeplay}
-from turtle import *
-from time import *
 
-getscreen().bgcolor('azure')
-setundobuffer(1)
-hideturtle()
-up()
-color('red')
-
-d = 40
-x0 = 300 - d//2
-
-for x in range(-x0, x0+1, 20):
-    undo()
-    setx(x)
-    dot(d)
-    sleep(0.2)
-````
-
-Animation en utilisant la couleur `white` pour effacer la dernière position.
-
-
-```{codeplay}
-from turtle import *
-from time import *
-
-hideturtle()
-speed(0)
-up()
-
-d = 40
-x0 = 300 - d//2
-
-for x in range(-x0, x0+1, 20):
-    color('white')
-    dot(d)
-    
-    setx(x)
-    color('red')
-    dot(d)
-    
-    sleep(0.2)
-````
-
-## Fonction `onclick`
-
-```{codeplay}
-from turtle import *
-hideturtle()
-speed(0)
-up()
-
-def f(x, y):
-    print('click at', x, y)
-    goto(x, y)
-    dot()
-    
-getscreen().onclick(f)
-getscreen().listen()
-````
-
-## Dessiner une forme
-
-```{codeplay}
-from turtle import *
-hideturtle()
-speed(0)
-up()
-
-def ligne(x, y):
-    goto(x, y)
-    down()
-    dot()
-    
-getscreen().onkey(up, 'u')
-getscreen().onkey(clear, 'c')
-    
-getscreen().onclick(ligne)
-getscreen().listen()
-````
-## Système binaire
-
-```{codeplay}
-for i in range(16):
-    print(i, '=', bin(i))
 ````
 
 ```{codeplay}
-for i in range(16):
-    print(f'{i:2} = {i:4b}')
+
 ````
-
-```{codeplay}
-for i in range(100, 105):
-    print(f'{i:2} = b{i:08b} = x{i:2x}')
-````
-
-```{codeplay}
-from random import *
-
-n = 10
-score = 0
-
-for i in range(10):
-    num = randint(2, 15)
-    x = input(f'{num:4b} = ')
-    if int(x) == num:
-        score += 1
-    else:
-        print('Faux. Réponse correcte =', num)
-
-print('score =', score, '/', n)
-````
-
 
