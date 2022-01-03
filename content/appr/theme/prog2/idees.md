@@ -288,6 +288,44 @@ getscreen().onkey(clear, 'c')
     
 getscreen().onclick(ligne)
 getscreen().listen()
+````
+## Système binaire
+
+```{codeplay}
+for i in range(16):
+    print(i, '=', bin(i))
+````
+
+```{codeplay}
+for i in range(16):
+    print(f'{i:2} = {i:4b}')
+```
+
+```{codeplay}
+for i in range(100, 105):
+    print(f'{i:2} = b{i:08b} = x{i:2x}')
+```
+
+```{codeplay}
+from random import *
+
+n = 10
+score = 0
+
+for i in range(10):
+    num = randint(2, 15)
+    x = input(f'{num:4b} = ')
+    if int(x) == num:
+        score += 1
+    else:
+        print('Faux. Réponse correcte =', num)
+
+print('score =', score, '/', n)
+```
+
+```{codeplay}
+for i in range(100):
+    print(f'{i}={i:x}', end=' ')
 ```
 
 ## Narration

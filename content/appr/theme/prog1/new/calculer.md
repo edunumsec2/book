@@ -192,6 +192,35 @@ print(x, y)
 
 **Exercice** : Ajoutez une 3e variable et faites un permutation cyclique.
 
+## Compter en binaire
+
+Si nous utilisons le code binaire pour compter avec nos doigts, alors nous pouvons représenter les codes binaires `00000` à `11111`.
+
+Voici un programme qui affiche le code binaire et dessine les doigts.
+
+```{codeplay}
+from turtle import *
+
+def finger(x):
+    forward(x)
+    circle(-20, 180)
+    forward(x)
+    left(180)
+
+def binaire(code):
+    left(90)
+    for c in code :
+        write(c, font=('Arial', 24))
+        if c == '1':
+            finger(120)
+        else :
+            finger(30)
+              
+binaire('00110')
+```
+
+**Exercice** : modifier le programme pour compter de 0 à 31.
+
 ## Quiz
 
 ```{question} Variable
