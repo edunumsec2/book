@@ -333,30 +333,8 @@ for i in range(100):
     dot(s)
 ```
 
-## Modulo
-
 ```{codeplay}
-from turtle import *
-from time import *
 
-up()
-d = 60
-color('rebeccapurple')
-for c in 'modulo':
-    write(c, font=(None, d), move=True)
-    
-goto(-2*d, d)
-dot(0.8*d)
-
-color('turquoise')
-goto(-d, 0)
-dot(0.8*d)
-
-color('lightgray')
-goto(-2*d, 0)
-dot(d/2)
-goto(-d, d)
-dot(d/2)
 ```
 
 ```{codeplay}
