@@ -1,4 +1,4 @@
-# Trier - `sort`
+# Trier
 
 Pouvoir trier les éléments dans une liste est une fonctionalité fondamentale dans l'informatique. Le succès énorme de Google est basé sur un tri efficace de l'information. 
 
@@ -21,7 +21,7 @@ print(liste)
 
 ## Visualiser une liste
 
-Nous visualisons les valeurs numériques dans la liste avec un diagramme de barres
+Nous visualisons les valeurs numériques dans la list avec aun diagramme de barres
 
 ```{codeplay}
 from random import *
@@ -245,3 +245,95 @@ for x in range(-6, 7, 1):
 ```
 
 
+## Module `random`
+
+Le module `random` permet de créer des nombres pseudo-aléatoires. Il met à disposition 13 fonctions:
+
+- `choice`
+- `expovariage`
+- `gauss`
+- ...
+
+```{codeplay}
+import random
+print(dir(random))
+```
+
+La fonction `random.random()` retourne une valeur aléatoire dans la plage [0, 1].
+
+```{codeplay}
+from turtle import *
+import random
+
+n = 20
+for i in range(n):
+    setx((i/n - 0.5) * 600)
+    write(i)
+    y = random.random()
+    sety((y - 0.5) * 400)
+    dot()
+    write(y)
+    sety(0)
+```
+
+La fonction `random.randint(a, b)` retourne une valeur aléatoire dans la plage [a, b].
+
+```{codeplay}
+from turtle import *
+import random
+
+n = 20
+for i in range(n):
+    setx((i/n - 0.5) * 600)
+    write(i)
+    y = random.randint(-200, 200)
+    sety(y)
+    dot()
+    write(y)
+    sety(0)
+```
+
+La fonction `choice(liste)` retourne un élément aléatoire de la liste.
+Parmis les 5 couleurs nous choisissons 1.
+
+```{codeplay}
+from random import *
+from turtle import *
+
+up()
+n = 50
+for y in range(200-n//2, -200, -n):
+    for x in range(-300+n//2, 300, n):
+        setpos(x, y)
+        color(choice(['red', 'lime', 'blue', 'yellow', 'cyan']))
+        dot(n)
+```
+
+La fonction `random()` retourne un nombre aléatoire dans l'intervalle [0, 1].
+
+```{codeplay}
+from random import random
+    
+for i in range(3):
+    print(random())
+```
+
+La fonction `randint(a, b)` retourne un entier aléatoire dans l'intervalle [a, b].
+
+```{codeplay}
+from random import randint
+    
+print('randint - random integer')
+for i in range(15):
+    print(randint(0, 9), end=' ')
+```
+
+La fonction `choice(liste)` retourne un élément aléatoire de la liste.
+
+```{codeplay}
+from random import choice
+
+for i in range(5):
+    c = choice(['gagné', 'perdu', 'match nul'])
+    print(c)
+```

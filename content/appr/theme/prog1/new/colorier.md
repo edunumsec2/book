@@ -1,4 +1,4 @@
-# Colorier - `color`
+# Colorier
 
 Dans ce chapitre nous explorons ce que c'est la couleur. 
 Les lignes peuvent être colorié et les formes être remplis de couleurs.

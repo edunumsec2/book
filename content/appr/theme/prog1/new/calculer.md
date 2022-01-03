@@ -1,4 +1,4 @@
-# Calculer - `int`
+# Calculer
 
 Nous avons déjà vu qu'un programme informatique peut manipuler ces différents catégories d’objet :
 
