@@ -168,6 +168,41 @@ print(dir(turtle))
 
 ```
 
+## Epaisseur de ligne
+
+La fonction `width()` permet de spécifier l'épaisseur de ligne.
+
+```{codeplay}
+from turtle import *
+
+for i in range(10):
+    forward(50)
+    write(i, font=('Arial', 12))
+    width(i)
+    left(36)
+```
+## Ajouter un texte
+
+La fonction `write()` permet d'afficher du texte.
+
+```{codeplay}
+from turtle import *
+
+left(90)
+write('default text size')
+
+fillcolor('red')
+forward(30)
+write('Courier 24', font=('Courier', 24))
+
+fillcolor('blue')
+forward(30)
+write('Arial 36', font=('Arial', 36))
+```
+
+```{codeplay}
+
+```
 
 ## Exercices
 

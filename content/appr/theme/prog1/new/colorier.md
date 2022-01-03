@@ -10,8 +10,7 @@ Mais avant de passer aux couleurs, nous allons voir l'épaisseur de ligne.
 
 ## Epaisseur de ligne
 
-La fonction `width()` permet de définir l'épaisseur de ligne. 
-Les deux extrémités de ligne sont arrondies.
+La fonction `width()` permet de définir l'épaisseur de ligne. Les bouts de lignes sont arrondis.
 
 Pour démontrer différents épaisseurs, nous allons itérer sur une liste des épaisseurs.
 
@@ -207,7 +206,7 @@ while color:
     color = input('Enter a color: ')
 ```
 
-## Itérer dans un liste
+## Liste de couleurs
 
 Pour dessiner de multiples couleurs, nous pouvons définir une liste de couleurs et itérer sur cette liste.
 
