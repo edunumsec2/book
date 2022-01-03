@@ -1,7 +1,8 @@
 # Créer - `turtle`
 
-Ce chapitre vous donne des idées artistiques, inspirées du travail de Artemis Papert, présenté sur le site [TurtleArt](https://turtleart.org).
+Dans ce chapitre nous présentons toute une série d'idées artistiques, inspirées du travail d'Artemis Papert que vous trouvez sur le site [TurtleArt](https://turtleart.org).
 
+Explorez, modifiez, créez !
 ## Etoile
 
 Une **étoile** est un point lumineux dans le ciel nocturne, et par extension, une figure géométrique représentant des rayons partant du centre.
@@ -319,6 +320,8 @@ branche(70, 6, 60)
 
 ## Bulles de savon
 
+Les bulles de savons sont des cercles colorés, qui utilisent une transparence de 70%, ce qui permet de voir à travers.
+
 ```{codeplay}
 from turtle import *
 from random import *
@@ -334,6 +337,8 @@ for i in range(100):
 ```
 
 ## Modulo
+
+Le nom Modulo fait référence à l'opérateur **modulo** en mathématique `%` et à la structure **modulaire** du cour.
 
 ```{codeplay}
 from turtle import *

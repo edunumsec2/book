@@ -31,5 +31,5 @@ Urban Müller 🇨🇭
 ^^^^^
 ***Né en 1969***
 
-Un étudiant physicien Suisse [**Urban Müller**](https://fr.wikipedia.org/wiki/Brainfuck), est le créateur de **Brainfuck**. Ce langage exotique tire son nom de l’union de brain (cerveau) et fuck (niquer), est volontairement simpliste et met le cerveau dans un état de confusion par sa complexité apparente.
+L'étudiant physicien Suisse [**Urban Müller**](https://fr.wikipedia.org/wiki/Brainfuck), est le créateur de **Brainfuck**. Ce langage exotique tire son nom de l’union de brain (cerveau) et fuck (niquer), est volontairement simpliste et met le cerveau dans un état de confusion par sa complexité apparente.
 ````

@@ -1,13 +1,13 @@
 # Répéter - `for`
 
-Un programme exécute souvent certaines instructions multiples fois. Dans ce cas une boucle permet de rendre le code plus court et mieux structuré.
-Une boucle ne représente pas seulement une économie de lignes de code, mais donne en plus la possibilité de contrôler facilement le nombre de répétitions.
+Dans ce chapitre nous allons voir de près comment un programme peut exécuter certaines instructions multiples fois.
 
-En Python nous avons deux types de boucle :
+Une boucle permet de rendre le code plus court et mieux structuré.
+Une boucle ne représente pas seulement une économie de lignes de code, mais donne aussi la possibilité de contrôler le nombre de répétitions.
 
-- la boucle `for` pour parcourir un ensemble de valeurs,
-- la boucle `while` pour répéter pendant qu'une condition est vraie.
-
+- la boucle `for` répète du code pour un ensemble de valeurs données
+- la variable d'itération `i` prend une autre valeur à chaque tour
+- on peut itérer sur des plages numériques, du texte, et des listes 
 ## Répéter x fois
 
 Le programme suivant demande comme entrée le nombre `x` de sommets, et dessine alors un polygone régulier. C'est un cas ou il faut **répéter x fois**.
@@ -257,3 +257,17 @@ for y in '1234567':
 ```
 
 **Exercice** : Transformez le code pour afficher 20 colonnes de cellules.
+
+## Itérer sur x et y
+
+Deux boucles imbriquées peuvent itérer dans les directions x et y. Ceci permet d'afficher les coordonnées de la tortue.
+
+```{codeplay}
+from turtle import *
+up()
+
+for y in range(100, -150, -50):
+    for x in range(-200, 300, 100):
+        goto(x, y)
+        dot()
+        write(f'  {x}, {y}')

@@ -258,3 +258,232 @@ def f(x, y):
 getscreen().onclick(f)
 getscreen().listen()
 ```
+
+## Texte cliquable
+
+```{codeplay}
+from turtle import *
+hideturtle()
+speed(0)
+up()
+
+class Bin4(): 
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+        self.n = 3
+        self.draw()
+        
+    def draw(self):
+        goto(self.x, self.y)
+        down()
+        color('black', 'white')
+        begin_fill()
+        for i in range(2):
+            forward(100)
+            left(90)
+            forward(50)
+            left(90)
+        end_fill()
+        up()
+        
+        goto(self.x+10, self.y+10)
+        color('black')
+        write(f'{self.n:04b}', font=('Courier', 24))
+       
+    def __str__(self):
+        return f'Bin4({self.x}, {self.y})'
+        
+p0 = Bin4()
+p1 = Bin4(-200, -100)
+p2 = Bin4(100, -100)
+
+print(p0)
+print(p1)
+print(p2)
+```
+
+## Nombre binaire 4-bits
+
+Le programme suivant définit une classe `Bin4`. Elle:
+
+- dessine un nombre à 4 digits binaires
+- à la position (x, y)
+- vérifie si un click est dedans
+- incrémente le nombre
+
+```{codeplay}
+from turtle import *
+hideturtle()
+speed(0)
+up()
+
+class Bin4(): 
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+        self.n = 0
+        self.draw()
+        
+    def draw(self):
+        goto(self.x, self.y)
+        color('linen')
+        dot(60)
+        color('black')
+        goto(self.x, self.y-8)
+        write(f'{self.n:04b}', font=('Courier', 16), align='center')
+    
+    def inside(self, x, y):
+        return (-30 < x-self.x < 30) and (-30 < y-self.y < 30)
+    
+    def inc(self):
+        self.n = (self.n + 1) % 16
+        self.draw()
+        
+    def set(self, n):
+        self.n = n % 16
+        self.draw()
+        
+    def click(self, x, y):
+        if self.inside(x, y):
+            self.inc()
+        
+b0 = Bin4(-100, 100)
+b1 = Bin4(100, 100)
+b2 = Bin4(0, -100)
+
+def f(x, y):
+    b0.click(x, y)    
+    b1.click(x, y)
+    b2.set(b0.n + b1.n)
+            
+getscreen().onclick(f)
+getscreen().listen()
+```
+
+## Dessiner le symbole ALU
+
+L'unité arithmétique et logique (UAL, en anglais arithmetic–logic unit, ALU), est l'organe de l'ordinateur chargé d'effectuer les calculs.
+
+```{codeplay}
+from turtle import *
+
+def alu():
+    a = 60
+    left(a)
+    forward(50)
+    right(a)
+    forward(150)
+    right(180-a)
+    forward(150)
+    right(a)
+    forward(200)
+    right(a)
+    forward(150)
+    right(180-a)
+    forward(150)
+    right(a)
+    forward(50)
+    up()
+
+def line(x, y):
+    goto(x, y)
+    seth(-90)
+    down()
+    goto(x, y-50)
+    stamp()
+    up()
+
+alu()
+line(-100, 100)
+line(100, 100)
+line(0, -90) 
+```
+
+## Une ALU interactive
+
+```{codeplay}
+from turtle import *
+
+def alu():
+    a = 60
+    left(a)
+    forward(50)
+    right(a)
+    forward(150)
+    right(180-a)
+    forward(150)
+    right(a)
+    forward(200)
+    right(a)
+    forward(150)
+    right(180-a)
+    forward(150)
+    right(a)
+    forward(50)
+    up()
+
+def line(x, y):
+    goto(x, y)
+    seth(-90)
+    down()
+    goto(x, y-50)
+    stamp()
+    up()
+
+class Bin4(): 
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+        self.n = 0
+        self.draw()
+        
+    def draw(self):
+        goto(self.x, self.y)
+        color('lightgray')
+        dot(60)
+        color('black')
+        goto(self.x, self.y-8)
+        write(f'{self.n:04b}', font=('Courier', 16), align='center')
+    
+    def inside(self, x, y):
+        return (-30 < x-self.x < 30) and (-30 < y-self.y < 30)
+    
+    def inc(self):
+        self.n = (self.n + 1) % 16
+        self.draw()
+        
+    def set(self, n):
+        self.n = n % 16
+        self.draw()
+        
+    def click(self, x, y):
+        if self.inside(x, y):
+            self.inc()
+
+===
+alu()
+line(-100, 100)
+line(100, 100)
+line(0, -90) 
+    
+b0 = Bin4(-100, 120)
+b1 = Bin4(100, 120)
+b2 = Bin4(0, -170)
+
+hideturtle()
+speed(0)
+
+def f(x, y):
+    b0.click(x, y)    
+    b1.click(x, y)
+    b2.set(b0.n + b1.n)
+            
+getscreen().onclick(f)
+getscreen().listen()
+```
+
+```{codeplay}
+
+```
+

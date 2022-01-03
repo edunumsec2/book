@@ -1,12 +1,18 @@
 # Colorier - `color`
 
-Dans ce chapitre nous continuons à dessiner et nous explorons la couleur.
-Une couleur peut être appliquée à une ligne, à un point, à une forme et à l'arrière-fond.
+Dans ce chapitre nous continuons à dessiner et nous introduisons la couleur.
+Une couleur peut être appliquée à une ligne, à un point, à une forme ou à l'arrière-fond.
 
 - la fonction `color()` permet de choisir une couleur
 - la fonction `dot(d)` dessine un disque de diamètre `d`
-- la fonction `input('question')` demande à l'utilisateur une entrée
 - la structure `['red', 'pink']` représente une liste
+
+## Liste de couleurs
+
+Voici une liste des couleurs disponibles. Pour les utiliser vous devez les écrire entre des apostrophes,
+comme par exemple `'pink'` ou `'hotpink'`.
+
+![couleurs](media/colors.png)
 
 ## Couleur de ligne
 
@@ -175,27 +181,6 @@ dot(80)
 
 **Exercice** : Dessinez un autre smiley.
 
-## Liste de couleurs
-
-Voici une liste des couleurs disponibles.
-
-![couleurs](media/colors.png)
-
-La fonction `input()` permet de demander une entrée (input) à l'utilisateur.
-La réponse de l'utilisateur est mémorisé dans la variable `x`.
-La boucle `while` permet de répéter les instructions qui se trouvent dans son bloc indenté.
-Cette boucle répète aussi longtemps que la variable `x` contient une valeur.
-Si vous appuyez sur Enter sans entrer quelque chose, la boucle s'arrête.
-
-```{codeplay}
-from turtle import *
-
-x = input('Entrez une couleur: ')
-while x:
-    getscreen().bgcolor(x)
-    x = input('Entrez une couleur: ')
-```
-
 ## Itérer dans un liste
 
 Pour dessiner multiples couleurs, nous pouvons définir une liste de couleurs et itérer sur cette liste.
@@ -213,26 +198,6 @@ for x in ['blue', 'cyan', 'red', 'magenta', 'pink', 'lime']:
 ```
 
 **Exercice** : Modifiez la liste des couleurs.
-
-## Couleur interactive
-
-Nous pouvons utiliser une entrée interactive avec la fonction `input()`
-et demander à l'utilisateur d'entrer une couleur valide.
-
-```{codeplay}
-from turtle import *
-up()
-
-back(200)
-x = input('Entrez une couleur: ')
-while x:
-    color(x)
-    dot(80)
-    forward(80)
-    x = input('Entrez une couleur: ')
-```
-
-**Exercice** : Entrez différents couleurs valides.
 
 ## Dessiner une croix
 

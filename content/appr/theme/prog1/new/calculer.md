@@ -1,10 +1,15 @@
 # Calculer - `int`
 
-Nous avons déjà vu qu'un programme informatique peut manipuler ces différents catégories d’objet :
+Dans ce chapitre nous allons voir comment un programme peut calculer avec des nombres.
+Ceci est utilisé dans une calculatrice ou un programme de tableur.
 
-- image
-- texte
-- nombre
+Les nombres entiers forment une catégorie très importantes. En anglais un entier est appelé **integer** (`int`).
+
+- les opérateurs de base sont `+-*/`
+- les nombres sont du type `int` ou `float`
+- un texte est du type `str`
+
+## Un calcul simple
 
 Dans ce chapitre nous allons explorer comment nous pouvons calculer avec des nombres. Voici un exemple qui affiche texte et nombre :
 

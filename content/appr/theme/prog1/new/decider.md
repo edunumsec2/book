@@ -1,6 +1,10 @@
 # Décider - `if`
 
-Un programme doit parfois faire un choix, basé sur une condition. Ceci est exprimé par la fameuse expression `if-else` ou si-sinon en français.
+Dans ce chapitre nous allons voir comment un programme peut faire des choix, et comment il peut exécuter du code de façon sélective.
+
+- le mot-clé `if condition:` permet une exécution conditionnelle
+- les mot-clés `if-else` permettent de choisir entre deux alternatives
+- le mot-clé `elif` (else if) permet d'ajouter différentes conditions
 
 ## Etes-vous majeur ?
 

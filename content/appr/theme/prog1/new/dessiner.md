@@ -3,10 +3,12 @@
 Dans ce chapitre nous explorons ce que c'est un programme et nous prenons
 ici la métaphore du dessin. Un dessin est une séquence de lignes qui forment une image.
 
+Allons-y en avant (forward) avec la programmation.
+
 - un programme est une séquence d'instructions
 - les instructions `forward, back, left, right` permettent de dessiner
-- une boucle `for` permet de répéter des instructions
 - le mot-clé `def` permet de nommer (définir) une séquence
+- une boucle `for` permet de répéter des instructions
 
 ## Le module tortue
 
@@ -318,7 +320,7 @@ for i in range(18):
     left(10)
 ```
 
-**Exercice** : Utilisez cette méthode pour dessiner un coucher de soleil.
+**Exercice** : Utilisez cette méthode pour dessiner les rayons du soleil.
 
 ## Dessiner une étoile
 

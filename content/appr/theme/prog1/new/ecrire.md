@@ -1,28 +1,12 @@
 # Ecrire - `str`
 
-Un programme informatique peut manipuler ces différents catégories d'objets :
+Dans ce chapitre nous allons regarder de plus près ce que c'est le texte. Le texte est une catégorie d'information qui est essentiel dans beaucoup de programmes, tel une application messager ou un programme de traitement de texte.
 
-- image
-- texte
-- nombre
+Techniquement un texte est appelé une **chaîne de caractères**, ou string en anglais (`str`).
 
-Les activités, ou verbes, qui y sont associés sont :
-
-- dessiner
-- écrire
-- calculer
-
-Dans ce chapitre nous explorons ce que c'est le texte, et comment un programme peut écrire.
-
-## Dire bonjour
-
-Nous commençons par le grand classique des livres d'introduction à la programmation.
-
-```{codeplay}
-print('hello world.')
-```
-
-**Exercice** : Affichez des lignes de texte supplémentaires.
+- un texte est délimité par un apostrophe `'` ou un guillemet double `"`
+- l'opérateur `*` répète un texte
+- la fonction `ord(c)` retourne le code pour représenter un caractère
 
 ## Délimiter un texte
 
@@ -76,31 +60,6 @@ print('bon''jour')
 print('bon' + 'jour')
 ```
 
-## La fonction `input()`
-
-La fonction `input('question')` permet de demander une entrée (input) à l'utilisateur.
-L'utilisateur voit `question` affiché à la console et doit répondre à cette question. Il termine son entrée avec la touche Enter.
-
-La réponse de l'utilisateur est ensuite mémorisée dans une variable que nous appelons `x` dans cet exemple. 
-Ensuite nous pouvons utiliser cette variable `x` dans la suite du programme, par exemple dans une expression `print()`.
-
-```{codeplay}
-x = input('Entrez votre nom: ')
-print('Bonjour', x)
-```
-
-Vous êtes complètement libre dans le choix des noms pour les variables, mais c'est recommandé de choisir des noms qui sont le plus explicite possible. C'est mieux d'utiliser des variables parlant, comme `'nom'` et `'age'`,  bien qu'on aurait pu utiliser `'x'` et `'y'`.  
-
-```{codeplay}
-nom = input('Entrez votre nom: ')
-print('Bonjour', nom)
-
-age = input('Entrez votre age: ')
-print('Trés bien', nom, 'vous avez', age, 'ans')
-```
-
-**Exercice** : Ajoutez une 3e question.
-
 ## La longueur d'une chaine
 
 La fonction `len()` retourne la longueur d'une chaine.
@@ -125,6 +84,8 @@ print('=' * len(x))
 print(x)
 print('=' * len(x))
 ```
+
+**Exercice** : Entourez votre texte d'un autre symbole.
 
 ## L'art ASCII
 
