@@ -1,5 +1,30 @@
 # Idées
 
+## Bulle comics
+
+```{codeplay}
+from turtle import *
+
+getscreen().bgcolor('skyblue')
+fillcolor('white')
+
+begin_fill()
+left(50)
+forward(50)
+right(50)
+forward(170)
+circle(40, 180)
+forward(200)
+circle(40, 180)
+goto(0, 0)
+end_fill()
+
+up()
+goto(30, 60)
+color('black')
+write('hello', font=('Courier', 32))
+```
+
 ## Fenêtre
 
 ```{codeplay}
@@ -78,6 +103,34 @@ back(50)
 branche8()
 ````
 
+## Arbre recursif
+
+```{codeplay}
+from turtle import *
+
+getscreen().bgcolor('lightgreen')
+color('brown')
+
+def branche(d):
+    if d == 1:
+        width(1)
+        forward(30)
+        back(30)
+    else:
+        width(d)
+        forward(50)
+        left(55)
+        branche(d//2)
+        right(55+55)
+        branche(d//2)
+        left(55)
+        back(50)
+
+left(90)
+back(50)
+branche(8)
+````
+
 ## Etat de la tortue
 
 Plusieurs fonctions nous renseignent sur l'état de la tortue :
@@ -94,11 +147,19 @@ color('red', 'lime')
 forward(50)
 left(45)
 
-print('Couleur:')
-print('color =', color())
+print('\nCouleur:')
+print(p'color =', color())
 print('pen =', pencolor())
 print('fill =', fillcolor())
 print('mode =', colormode())
+print('fill =', fill())
+
+print('\nTortue:')
+print('shape =', shape())
+print('down =', isdown())
+print('visible =', isvisible())
+print('speed =', speed())
+print('delay =', delay())
 
 print('\nPosition:')
 print('h =', heading())
@@ -134,14 +195,8 @@ print(dir(Screen))
 ```{codeplay}
 from turtle import *
 
-print('Tortue:')
-print('shapes =', getscreen().getshapes())
+print('shapes =', Screen.getshapes()))
 print('shape =', shape())
-print('down =', isdown())
-print('visible =', isvisible())
-print('fill =', fill())
-print('speed =', speed())
-print('delay =', delay())
 ```
 
 ## Key events
@@ -174,9 +229,9 @@ getscreen().listen()
 
 print("Cliquez dans la fenêtre pour l'activer.")
 print("Utilisez les touches WASD pour bouger la tortue.")
-```
+````
 
-## Key events `lambda`
+## Key events `lamdda`
 
 ```{codeplay}
 from turtle import *
@@ -201,7 +256,7 @@ print("Utilisez les touches de direction pour orienter la tortue.")
 print("Utilisez espace pour avancer.")
 print("Utilisez U/D pour up/down.")
 print("Utilisez H/C/R pour home/clear/reset.")
-```
+````
 
 ## Animer un point
 
@@ -214,7 +269,6 @@ from time import *
 getscreen().bgcolor('azure')
 setundobuffer(1)
 hideturtle()
-speed(0)
 up()
 color('red')
 
@@ -226,7 +280,7 @@ for x in range(-x0, x0+1, 20):
     setx(x)
     dot(d)
     sleep(0.2)
-```
+````
 
 Animation en utilisant la couleur `white` pour effacer la dernière position.
 
@@ -251,7 +305,7 @@ for x in range(-x0, x0+1, 20):
     dot(d)
     
     sleep(0.2)
-```
+````
 
 ## Fonction `onclick`
 
@@ -268,7 +322,7 @@ def f(x, y):
     
 getscreen().onclick(f)
 getscreen().listen()
-```
+````
 
 ## Dessiner une forme
 
@@ -299,12 +353,12 @@ for i in range(16):
 ```{codeplay}
 for i in range(16):
     print(f'{i:2} = {i:4b}')
-```
+````
 
 ```{codeplay}
 for i in range(100, 105):
     print(f'{i:2} = b{i:08b} = x{i:2x}')
-```
+````
 
 ```{codeplay}
 from random import *
@@ -321,6 +375,6 @@ for i in range(10):
         print('Faux. Réponse correcte =', num)
 
 print('score =', score, '/', n)
-```
+````
 
 
