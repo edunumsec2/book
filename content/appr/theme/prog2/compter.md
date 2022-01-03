@@ -169,52 +169,12 @@ for i in range(32):
     sleep(2)
 ````
 
-## Entier naturel sur 4 bits
-
 ```{codeplay}
-from turtle import *
-from time import *
 
-getscreen().bgcolor('azure')
-hideturtle()
-up()
-goto(0, 120)
-
-right(360/32)
-for i in range(16):
-    dot()
-    write(i, font=('Courier', 14))
-    sety(ycor() - 15)
-    write(f'{i:04b}', font=('Courier', 8), align='center')
-    sety(ycor() + 15)
-    forward(50)
-    right(360/16)
 ````
 
-## Entier relatif sur 4 bits
-
 ```{codeplay}
-from turtle import *
-from time import *
 
-getscreen().bgcolor('azure')
-hideturtle()
-up()
-goto(0, 120)
-
-right(360/32)
-for i in range(16):
-    if i <=8: 
-        write(i, font=('Courier', 14))
-    else:
-        color('red')
-        write(i-16, font=('Courier', 14))
-    dot()
-    sety(ycor() - 15)
-    write(f'{i:04b}', font=('Courier', 8), align='center')
-    sety(ycor() + 15)
-    forward(50)
-    right(360/16)
 ````
 
 ```{codeplay}

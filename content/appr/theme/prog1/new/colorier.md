@@ -115,52 +115,6 @@ end_fill()
 
 **Exercice** : Dessiner un drapeau bi-colore.
 
-## Smiley
-
-Avec des disques (`dot()`) de différents tailles nou pouvons dessiner un smiley.
-
-```{codeplay}
-from turtle import *
-
-getscreen().bgcolor('linen')
-up()
-
-color('yellow')
-dot(300)
-
-color('black')
-goto(50, 40)
-dot(40)
-goto(-50, 40)
-dot(40)
-
-goto(-50, -50)
-width(10)
-down()
-forward(100)
-```
-
-Voici un smiley qui est surpris.
-
-```{codeplay}
-from turtle import *
-
-getscreen().bgcolor('linen')
-up()
-
-color('yellow')
-dot(300)
-
-color('black')
-goto(50, 40)
-dot(40)
-goto(-50, 40)
-dot(40)
-
-goto(0, -50)
-dot(80)
-```
-
 ## Dessiner un pixel
 
 Comme avant nous allons définir une fonction `square()`.
@@ -201,27 +155,25 @@ En utilisant la définition précédente nous pouvons exprimer les couleurs auss
 
 ```{codeplay}
 from turtle import *
-up()
 
-color(1, 0, 0)  # rouge
+def square(a, color):
+    fillcolor(color)
+    begin_fill()
+    for i in range(4):
+        forward(a)
+        left(90)
+    end_fill()
+    forward(a)
+===
 back(200)
-dot(80)
-
-color(1, 1, 0)  # jaune
-forward(100)
-dot(80)
-
-color(0, 1, 0)  # vert
-forward(100)
-dot(80)
-
-color(0, 1, 1)  # cyan
-forward(100)
-dot(80)
-
-color(0, 0, 1)  # bleu
-forward(100)
-dot(80)
+square(50, (0, 0, 0))   # black
+square(50, (1, 0, 0))   # red
+square(50, (0, 1, 0))   # green
+square(50, (0, 0, 1))   # blue
+square(50, (1, 1, 0))   # yellow
+square(50, (0, 1, 1))   # cyan
+square(50, (1, 0, 1))   # magenta
+square(50, (1, 1, 1))   # white
 ```
 
 ## Mode couleur
@@ -241,62 +193,31 @@ colormode(255)
 print(colormode())
 ```
 
-```{codeplay}
-from turtle import *
-colormode(255)
-up()
-
-color(255, 0, 0)  # rouge
-back(200)
-dot(80)
-
-color(255, 255, 0)  # jaune
-forward(100)
-dot(80)
-
-color(0, 255, 0)  # vert
-forward(100)
-dot(80)
-
-color(0, 255, 255)  # cyan
-forward(100)
-dot(80)
-
-color(0, 0, 255)  # bleu
-forward(100)
-dot(80)
-```
-
 ## Intensité
 
-Voici un programme qui affiche les intensité pour rouge en incréments de 25%.
+Voici un programme qui affiche les intensité pour rouge et vert de 0 à 1.
 
 ```{codeplay}
 from turtle import *
 up()
+n = 11
 
-color(0, 0, 0)  # 0%
-back(200)
-dot(80)
+goto(-200, 0)
+for i in range(n):
+    color((i/(n-1), 0, 0))
+    dot(30)
+    forward(400/n)
+write('rouge', font=(None, 18))
 
-color(0.25, 0, 0)  # 25%
-forward(100)
-dot(80)
-
-color(0.5, 0, 0)  # 50%
-forward(100)
-dot(80)
-
-color(0.75, 0, 0)  # 75%
-forward(100)
-dot(80)
-
-color(1, 0, 0)  # 100%
-forward(100)
-dot(80)
+goto(-200, 50)
+for i in range(n):
+    color((0, i/(n-1), 0))
+    dot(30)
+    forward(400/n)
+write('vert', font=(None, 18)) 
 ```
 
-**Exercice** : Faites un dégradé pour la couleur bleu.
+**Exercice** : Ajoutez une ligne de points pour la couleur bleue.
 
 ## Liste de couleurs
 
