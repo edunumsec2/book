@@ -328,16 +328,3 @@ for i in range(6):
 ```
 
 **Exercice** : Choisissez un angle plus petit que 60°
-
-## Quiz
-
-```{question} Turtle
-L'expression `left(90)` est équivalent à
-
-{v}`right(-90)`
-{f}`right(180)`
-{f}`left(180)`
-{f}`left(270)`
-{v}`right270)`
-{v}`left(-270)`
-```

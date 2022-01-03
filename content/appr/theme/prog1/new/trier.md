@@ -216,7 +216,6 @@ from random import *
 
 getscreen().bgcolor('skyblue')
 color('blue')
-hideturtle()
 speed(0)
 up()
 a = []
@@ -252,7 +251,6 @@ from random import *
 
 getscreen().bgcolor('skyblue')
 color('blue')
-hideturtle()
 speed(0)
 up()
 a = []
@@ -308,7 +306,6 @@ from random import *
 
 getscreen().bgcolor('skyblue')
 color('blue')
-hideturtle()
 speed(0)
 up()
 a = []
@@ -365,7 +362,6 @@ from random import *
 
 getscreen().bgcolor('skyblue')
 color('blue')
-hideturtle()
 speed(0)
 up()
 a = []
@@ -422,7 +418,6 @@ from random import *
 
 getscreen().bgcolor('skyblue')
 color('blue')
-hideturtle()
 speed(0)
 up()
 a = []
