@@ -125,7 +125,6 @@ print(liste)
 echange(liste, 0, 2)
 print(liste)
 ```
-
 ## Tri par sélection
 
 L’algorithme du tri par sélection commence par rechercher le plus petit élément de la liste et l’échange avec le premier élément de la liste.
@@ -230,7 +229,7 @@ def show():
 show()
 ```
 
-## Bubble sort en action
+## Bubblesort en action
 
 ```{codeplay}
 from turtle import *
@@ -311,3 +310,4 @@ for i in range(n-1):
             
             a[j], a[j+1] = a[j+1], a[j]
 ````
+

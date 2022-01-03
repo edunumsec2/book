@@ -11,11 +11,12 @@ ici la métaphore du dessin. Un dessin est une séquence de lignes qui forment u
 ## Le module tortue
 
 Le module `turtle` présente une façon sympathique pour faire des dessins.
-On s'imagine une tortue qui se déplace sur un canevas et laisse une trace.
+On s'imagine une tortue qui se déplace sur un canvas et laisse une trace.
 
 - dans la première ligne nous importons toutes les fonctions du module `turtle`
 - avec `shape('turtle')` nous affichons une tortue (au lieu de la flèche)
 - avec `forward(150)` nous faisons avancer la tortue de 150 pixels
+
 
 ```{codeplay}
 from turtle import *
@@ -64,7 +65,7 @@ Si nous regardons le code de près, nous remarquons que 2 lignes de code sont r�
 Nous pouvons utiliser une boucle `for` et réduire le code de 8 à 3 lignes.
 
 A ce stade, nous apprenons juste que `for i in range(n):` va répéter le bloc qui suit `n` fois.
-Le bloc à répéter doit être indenté.
+Le bloc à répéter doit être indentée.
 
 ```{codeplay}
 from turtle import *
@@ -107,8 +108,8 @@ square()
 
 ## Définir une fonction
 
-Nous avons maintenant tout pour définir une nouvelle commande pour dessiner une maison.
-Le dessin commence en bas à gauche de maison et se termine au même endroit.
+Nous avons maintenant tout pour definir une nouvelle commande pour dessiner une maison.
+Le dessin commence en bas à gauche de maison et se termine au même endroit. 
 
 ```{codeplay}
 from turtle import *
@@ -137,7 +138,7 @@ maison()
 
 ## Appeler une fonction
 
-Nous pouvons appeler une fonction autant de fois que nous voulons. Ceci ajoute juste une ligne de code, mais pourrait représenter des centaines de ligne de code exécuté.
+Nous pouvons appeler une fonction autant de fois que nous voulons. Ceci ajoute juste une ligne de code, mais pourrait representer des centains de ligne de code exécuté.
 
 Que se passe-t-il si nous tournons de 90° et recommencions a dessiner un carré ?
 
@@ -174,7 +175,7 @@ for i in range(8):
     left(45)
 ```
 
-**Exercice** : Si nous tournons de seulement 30°, combien de fois devons-nous répéter ?
+**Exercice** : Si nous nournos de seulement 30°, combiens de fois devons-nous répéter ? 
 
 ## Lever/baisser le stylo
 
@@ -192,10 +193,10 @@ for i in range(9):
 ```
 **Exercice** : Dessinez une grille avec des lignes horizontales.
 
-## Dessiner un éventail
+## Dessiner un eventail
 
 Que se passe-t-il si nous dessinons une ligne (`forward/back`) et tournons d'un petit angle à chaque fois ?
-C'est un peut comme un éventail qui s'ouvre.
+C'est un peut comme un eventail qui s'ouvre.
 
 ```{codeplay}
 from turtle import *
@@ -206,21 +207,24 @@ for i in range(18):
     left(10)
 ```
 
-**Exercice** : Utilisez cette méthode pour dessiner un coucher de soleil.
+**Exercice** : Utilisez cette méthode pour dessiner un coucher de soleil. 
 
 ## Dessiner une étoile
 
 Une autre façon serait de toujours avancer, mais tourner à chaque fois d'un angle un peu plus petit que 180°.
 Essayons !
 
+
 ```{codeplay}
 from turtle import *
+
 for i in range(9):
     forward(200)
     left(160)
 ```
 
 **Exercice** : Ajoutez `up()/down()` et définissez une fonction `etoile()`. Ensuite dessinez plein d'étoiles !
+
 
 ## Paramétrer la fonction
 
@@ -303,7 +307,7 @@ square(100)
 triangle(100)
 ```
 
-## Dessiner une maisonnette
+## Dessiner une maisonette
 
 Donc nous décidons de définir une troisième fonction `house()` pour dessiner une maisonnette.
 
@@ -335,7 +339,7 @@ house(120)
 
 ## Dessiner un losange
 
-Si nous déformons les angles d'un carré, nous obtenons un losange (diamant).
+Si nous déformons les angles d'un carré, nous obtenons un losange (diamond).
 Quelle forme obtenons-nous en dessinant un carré et deux losanges
 
 ```{codeplay}
@@ -361,7 +365,6 @@ diamond(100)
 ```
 
 ## Dessiner une fleur
-
 Si nous dessinons le losange 6 fois, nous obtenons une jolie fleur.
 
 ```{codeplay}

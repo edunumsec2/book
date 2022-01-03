@@ -76,7 +76,7 @@ Le nom de variable :
 - ne peut pas commencer avec un chiffre
 - ne dois pas consister d'un mot-clé (`if`, `else`, `for`)
 
-Voici un autre calcul où `a`  et `b` désignent largeur et hauteur d'un rectangle.
+Voici un autre calcul où `a`  et `b` designent largeur et hauteur d'un rectangle. 
 
 ```{codeplay}
 a = 3
@@ -88,7 +88,6 @@ print('surface =', a * b)
 print('périmètre =')
 print('diagonale =')
 ```
-
 **Exercice** : Complétez le calcul du périmètre et de la diagonale.
 
 ## Les types
@@ -103,7 +102,7 @@ print(type(123))
 print(type(3.14))
 ```
 
-- `str` (string) désigne des chaînes de caractères
+- `str` (string) designe des chaînes de caractères
 - `int` (integer) désigne des nombres entiers
 - `float` (floating point) désigne des nombres à virgule flottante
 
@@ -157,7 +156,7 @@ print('périmètre =')
 print('diagonale =')
 ```
 
-**Exercice** : Complétez le programme pour afficher périmètre et la diagonale.
+**Exercice** : Complétez le programme pour afficher perimètre et la diagonale.
 
 ## Affectation multiple
 

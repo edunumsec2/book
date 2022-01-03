@@ -3,7 +3,7 @@
 Dans ce chapitre nous explorons ce que c'est la couleur. 
 Les lignes peuvent être colorié et les formes être remplis de couleurs.
 
-- une couleur est définie avec trois nombres
+- une couleur est défin avec trois nombres
 - Le système RVB (Rouge Vert Bleu) définit les couleurs de base
 
 Mais avant de passer aux couleurs, nous allons voir l'épaisseur de ligne.
@@ -40,9 +40,10 @@ for d in [1, 2, 5, 10, 20, 30]:
 
 ## Couleur de ligne
 
-La fonction `color()` définit deux couleurs:
+La fonction `color()` déinit deux couleurs:
 - la couleur de ligne
 - la couleur de remplissage (intérieur de la tortue)
+
 
 ```{codeplay}
 from turtle import *
@@ -135,7 +136,6 @@ end_fill()
 
 Comme avant nous allons définir une fonction `square()`.
 Cette fois elle a deux arguments :
-
 - `a` pour la taille du carré,
 - `color` pour la couleur du carré.
 
@@ -234,7 +234,6 @@ write('vert', font=(None, 18))
 ```
 
 **Exercice** : Ajoutez une ligne de points pour la couleur bleue.
-
 ## Liste de couleurs
 
 Voici une liste des couleurs disponibles.

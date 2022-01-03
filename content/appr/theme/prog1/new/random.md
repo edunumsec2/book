@@ -13,7 +13,6 @@ print(dir(random))
 ```
 
 ## Nombre aléatoire dans [0 ... 1]
-
 La fonction `random()` retourne une valeur aléatoire dans la plage [0, 1].
 
 ```{codeplay}
@@ -97,9 +96,11 @@ for i in range(15):
     print(randint(0, 9), end=' ')
 ```
 
+
+
 ## Permuter
 
-La fonction `shuffle()` permet de permuter les éléments d'une liste. Ceci est l'équivalent de ce qu'on fait avec des cartes de jeux, quand on les mélange.
+La function `shuffle()` permet de permuter les éléments d'une liste. Ceci est l'équivalent de ce qu'on fait avec des cartes de jeux, quand on les mélange.
 
 ```{codeplay}
 from random import *
