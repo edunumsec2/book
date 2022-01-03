@@ -1,313 +1,247 @@
 # Trier - `sort`
 
-Pouvoir trier les éléments dans une liste est une fonctionnalité fondamentale dans l'informatique. Le succès énorme de Google est basé sur un tri efficace de l'information.
+Pouvoir trier les éléments dans une liste est une fonctionalité fondamentale dans l'informatique. Le succès énorme de Google est basé sur un tri efficace de l'information. 
 
-Les éléments de la liste peuvent être des nombres, des mots, ou des phrases. Si une liste est triée il devient très facile de trouver un élément dans la liste.
+Les éléments de la liste peuvent être des nombres, des mots, ou des phrases. Si la liste est trié il devient très facile de trouver un certain élément.
 
-## Fonction `min` et `max`
+## Trouver une liste aléatoire
 
-Les fonctions `min()` et `max()` retournent le minimum et le maximum d'une liste.
+Pour tester les fonctions de tri, nous avons besoin de liste avec de valeur aléatoires.
+Ici nous créons d'abord une liste avec les valeur 0 à 9. Ensuite nous les mélangeons comme on le ferait avec un jeu de cartes.
 
 ```{codeplay}
-liste = [3, 4, 1, 2, 6, 5]
+from random import *
 
-print(min(liste))
-print(max(liste))
+liste = list(range(10))
+print(liste)
+
+shuffle(liste)
+print(liste)
+```
+
+## Visualiser une liste
+
+Nous visualisons les valeurs numériques dans la liste avec un diagramme de barres
+
+```{codeplay}
+from random import *
+from turtle import *
+
+liste = list(range(10))
+shuffle(liste)
+print(liste)
+
+speed(10)
+color('blue')
+up()
+left(90)
+goto(-250, -50)
+width(20)
+
+for i in liste:
+    write(i)
+    forward(20)
+    down()
+    forward(i * 20 + 1)
+    up()
+    goto(xcor() + 50, -50)
+```
+
+## Trouver un minimum
+
+Pour trouver un minimum nous : 
+
+- prenons la première valeur comme minimum courant 
+- parcourons le reste de la liste
+- gardons la valeur comme nouveau minimum si elle est plus petite
+
+```{codeplay}
+liste = [3, 6, 8, 2, -3, 20, 12]
+print(liste)
+
+min = liste[0]
+print(min)
+
+for val in liste[1:]:
+    if val < min:
+        min = val
+        print(min)
 ```
 
 **Exercice** : Modifiez la liste et essayez de nouveau.
 
-Comment marche l'algorithme de ces fonctions ?
+## Trouver un maximum
 
-## Trouver le minimum
+Pour trouver un maximum nous : 
 
-Pour trouver le minimum dans une liste nous :
-
-- prenons la première valeur comme minimum courant,
-- parcourons le reste de la liste,
-- gardons la valeur comme nouveau minimum si elle est plus petite.
+- prenons la première valeur comme maximum courant 
+- parcourons le reste de la liste
+- gardons la valeur comme nouveau maximum si elle est plus grande
 
 ```{codeplay}
-liste = [3, 4, 1, 2, 6, 5]
+liste = [3, 6, 8, 2, -3, 20, 12]
+print(liste)
 
-min = liste[0]
+max = liste[0]
+print(max)
+
 for val in liste[1:]:
-    if val < min:
-        min = val
-        
-print(min)
+    if val > max:
+        max = val
+        print(max)
 ```
 
-**Exercice** : Modifiez l'algorithme pour trouver le maximum.
+**Exercice** : Modifiez la liste et essayez de nouveau.
 
-## L'indice du minimum
+## Compter des éléments
 
-Souvent on ne doit pas seulement trouver la valeur minimum, mais aussi son indice dans la liste.
-Différent au cas précédent, nous itérons pas sur les valeurs, mais sur les indices.
 
-```{codeplay}
-liste = [3, 4, 1, 2, 6, 5]
 
-min = liste[0]
-i_min = 0
-n = len(liste)
+## Importer un module
 
-for i in range(1, n):
-    if liste[i] < min:
-        min = liste[i]
-        i_min = i
-        
-print(i_min)
-```
-
-**Exercice** : Modifiez l'algorithme pour trouver l'indice du maximum.
-
-## Enumérer une liste
-
-La fonction `enumerate()` permet d'énumérer une liste. Nous utilisons cette fonction dans une boucle `for` pour itérer à la fois sur l'indice et la valeur. Nous avons donc deux variables d'itération :
-
-- `i` - index de l'élément
-- `val` - valeur de l'élément
+Le mot-clé `import` permet d'importer un module. La fonction `dir` permet de voir le contenu du module.
+Normalement tous les modules sont importés au début d'un programme.
 
 ```{codeplay}
-liste = [3, 4, 1, 2, 6, 5]
+import math
 
-for i, val in enumerate(liste):
-    print(i, val)
-```
-
-**Exercice** : Modifier la liste et exécutez de nouveau.
-
-Il est également possible d'énumérer une chaîne de caractères.
-
-```{codeplay}
-for i, val in enumerate('Python'):
-    print(i, val)
-```
-
-## Minimum et son indice
-
-Avec la fonction `enumerate()` nous pouvons itérer sur index et valeur à la fois.
-
-```{codeplay}
-liste = [3, 4, 1, 2, 6, 5]
-
-i_min, min = 0, liste[0]
-
-for i, val in enumerate(liste):
-    if val < min:
-        i_min, min = i, val
-        
-print(i_min, min)
-```
-
-## Echanger deux éléments
-
-Pour échanger deux éléments d'une liste nous utilisons une affectation multiple.
-
-```{codeplay}
-liste = [3, 4, 1, 2, 6, 5]
-
-print(liste)
-liste[0], liste[1] = liste[1], liste[0]
-print(liste)
+print(dir(math))
 ````
 
-Le programme devient plus lisible si nous définissons une fonction `echange()`.
+**Exercice :** importez le module `random` et affichez son contenu avec `dir`.
+
+Pour utiliser une fonction du module importé, il faut faire précéder le nom de la fonction par le nom du module, séparé d'un point.
 
 ```{codeplay}
-liste = [3, 4, 1, 2, 6, 5]
+import math
 
-def echange(liste, i, j):
-    liste[i], liste[j] = liste[j], liste[i]
 
-print(liste)
-echange(liste, 0, 2)
-print(liste)
-```
-## Tri par sélection
-
-L’algorithme du tri par sélection commence par rechercher le plus petit élément de la liste et l’échange avec le premier élément de la liste.
-
-```{codeplay}
-liste = [3, 4, 1, 2, 6, 5]
-print(liste)
-
-def echange(liste, i, j):
-    liste[i], liste[j] = liste[j], liste[i]
-
-n = len(liste)
-for i in range(n-1):
-    i_min = i
-    min = liste[i]
-    for j in range(i+1, n):
-        if liste[j] < liste[i_min]:
-            i_min = j
-            min = liste[j]
-    echange(liste, i, i_min)
-    print(liste)
-```
-
-```{codeplay}
-liste = [3, 4, 1, 2, 6, 5]
-
-def tri_selection(liste):
-    for i in range(0,len(liste)-1):
-        i_min = liste.index(min(liste[i:]))
-        liste[i], liste[i_min] = liste[i_min], liste[i]
-
-print(liste)
-tri_selection(liste)
-print(liste)
-```
-
-## Tri par insertion
-
-Le **tri par insertion** est un algorithme de tri utilisé par la plupart des personnes pour trier des cartes à jouer.
-
-Ci-dessous mous trions une liste en ordre décroissante, ce qui permet de bien voir ce qui se passe.
-On peut alors observer comment le `4` descend vers le bas, ensuite c'est le tour du `3` de descendre vers le bas, et ainsi de suite.
-
-```{codeplay}
-a = [5, 4, 3, 2, 1]
-print(a)
-
-n = len(a)
-for i in range(1, n):
-    for j in range(i, 0, -1):
-        if a[j] < a[j-1]:
-            a[j], a[j-1] = a[j-1], a[j]
-        else:
-            break
-        print(a)
-```
-
-## Tri à bulles
-
-L’algorithme du tri à bulles compare les éléments voisins, deux par deux, et les met dans le bon ordre.
-Ci-dessous mous trions une liste en ordre décroissante, ce qui permet de bien voir ce qui se passe.
-
-On peut alors observer comment le `5` flotte vers le haut, ensuite c'est le tour du `4` monte vers la surface, comme des bulles dans l'eau.
-
-```{codeplay}
-a = [5, 4, 3, 2, 1]
-print(a)
-
-n = len(a)
-for i in range(n-1):
-    for j in range(n-i-1):
-        if a[j] > a[j+1]:
-            a[j], a[j+1] = a[j+1], a[j]
-        print(a)
-```
-
-## Afficher des valeurs
-
-```{codeplay}
-from turtle import *
-from random import *
-getscreen().bgcolor('skyblue')
-color('blue')
-speed(0)
-up()
-
-d = 40
-a = []
-for i in range(600//d):
-    y = randint(-200, 200)
-    a.append(y)
-    
-def show():
-    clear()
-    i = 0
-    for x in range(-300, 300, d):
-        y = a[i]
-        goto(x, y)
-        dot(d)
-        i += 1
-        
-show()
-```
-
-## Bubblesort en action
-
-```{codeplay}
-from turtle import *
-from random import *
-getscreen().bgcolor('skyblue')
-color('blue')
-speed(0)
-up()
-
-d = 40
-a = []
-for i in range(600//d):
-    y = randint(-200, 200)
-    a.append(y)
-    
-def show():
-    clear()
-    i = 0
-    for x in range(-300, 300, d):
-        y = a[i]
-        goto(x, y)
-        dot(d)
-        i += 1
-        
-show()
-
-n = len(a)
-for i in range(n-1):
-    for j in range(n-i-1):
-        if a[j] > a[j+1]:
-            a[j], a[j+1] = a[j+1], a[j]
-    show()
+print('e =', math.e)
+print('pi =', math.pi)
+print('fact(7) =', math.factorial(7))
 ````
 
+**Exercice :** utilisez la fonction `pow` (puissance) et affichez le résultat.
+
+## Module `math`
+
+On retrouve dans le module `math` des fonctions ainsi que des constantes :
+
+- arithmétiques,
+- logarithmiques et exponentielles,
+- trigonométriques.
+
+Voici quelques utilisations du module `math` avec des fonctions trigonométriques.
+
+![trigonometry](trigo.gif)
 
 ```{codeplay}
+from math import asin, acos, atan, degrees
+
+opp = 3
+adj = 4
+hyp = 5
+
+print(degrees(asin(opp/hyp)))
+print(degrees(acos(adj/hyp)))
+print(degrees(atan(opp/adj)))
+```
+
+Dans cet exemple, on importe les fonctions `asin`, `acos`, `atan` et `degrees` du module `math`. Les trois premières renvoient un angle en radian et la dernière permet de convertir radian en degré.
+
+## Constantes
+
+Voici toutes les objets importé par le module `math`:
+
+```{codeplay}
+import math
+print(dir(math))
+```
+
+Parmi ces objets il y en a 5 qui sont des constantes:
+
+- `math.e  ` base des logarithmes naturels (nombre d'Euler)
+- `math.inf` symbole pour infinité
+- `math.nan` symbole pour *not a number*
+- `math.pi ` rapport de la circonférence d'un cercle à son diamètre
+- `math.tau` rapport de la circonférence d'un cercle à son rayon
+
+
+```{codeplay}
+import math
+
+print('Constantes:')
+print('e   =', math.e)
+print('inf =', math.inf)
+print('nan =', math.nan)
+print('pi  =', math.pi)
+print('tau =', math.tau)
+```
+
+## Fonctions trigonométriques
+
+Voici les fonctions trigonométriques:
+
+- `math.sin/cos` fonction sinus/cosinus
+- `math.sinh/cosh` fonctions sinus/cosinus hyperbolique
+- `math.tan/tan2` fonction tangente avec 1 ou 2 arguments
+- `math.tanh` fonction tangente hyperbolique
+
+Et leurs fonctions inverses (arc):
+
+- `math.asin/asinh`
+- `math.acos/acosh`
+- `math.atan/atanh`
+
+Affichons donc les fonctions `math.sin()` et `math.cos()` avec deux couleurs différentes.
+
+```{codeplay}
+import math
 from turtle import *
-from random import *
-getscreen().bgcolor('skyblue')
-color('blue')
-speed(0)
-up()
 
-d = 40
-a = []
-for i in range(600//d):
-    y = randint(-200, 200)
-    a.append(y)
+color('red')
+for x in range(-300, 300, 10):
+    y = 100 * math.sin(x/50)
+    setpos(x, y)
+    dot()
     
-def show():
-    clear()
-    i = 0
-    for x in range(-300, 300, d):
-        y = a[i]
-        goto(x, y)
-        dot(d)
-        i += 1
-        
-show()
+color('blue')
+for x in range(-300, 300, 10):
+    y = 100 * math.cos(x/50)
+    setpos(x, y)
+    dot()
+```
 
-n = len(a)
-for i in range(n-1):
-    for j in range(n-i-1):
-        if a[j] > a[j+1]:
-            color('white')
-            goto(-300 + j*d, a[j])
-            dot(d)
-            color('blue')
-            goto(-300 + j*d, a[j+1])
-            dot(d)
-            
-            color('white')
-            goto(-300 + (j+1)*d, a[j+1])
-            dot(d)
-            color('blue')
-            goto(-300 + (j+1)*d, a[j])
-            dot(d)
-            
-            a[j], a[j+1] = a[j+1], a[j]
-````
+Dessinons aussi des axes :
+
+```{codeplay}
+import math
+from turtle import *
+
+for x in range(-6, 7, 1):
+    setx(x * 50)
+    dot()
+    write(' ' + str(x))
+```
+
+```{codeplay}
+
+```
+
+```{codeplay}
+
+```
+
+```{codeplay}
+
+```
+
+```{codeplay}
+
+```
+
+```{codeplay}
+
+```
+
 

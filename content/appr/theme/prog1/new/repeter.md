@@ -89,21 +89,16 @@ La fonction `range()` peut fonctionner avec 1, 2 ou 3 paramètres. Les valeur pa
 - 1 pour `step`.
 
 ```{codeplay}
-from time import sleep
-
 for i in range(10):
     print(i, end=' ')
-    sleep(0.1)
 print()
 
 for i in range(10, 20):
     print(i, end=' ')
-    sleep(0.1)
 print()
 
 for i in range(10, 100, 7):
     print(i, end=' ')
-    sleep(0.1)
 ```
 
 ## Itérer sur une chaîne
@@ -113,12 +108,10 @@ La ligne de code `for c in mot:` signifie que la variable `c` va prendre à chaq
 Quand la variable d'itération est un caractère on l'appelle souvent `c`. 
 
 ```{codeplay}
-from time import sleep
 mot = input('Entrez un mot: ')
 
 for c in mot:
     print(c)
-    sleep(0.1)
 ```
 
 **Exercice** : Testez avec différents textes.
@@ -210,6 +203,28 @@ circle(40, 180)
 ```
 
 **Exercice** : Dessinez un bonhomme de neige et utilisez `dot()` pour les yeux.
+
+### Dessiner un coeur
+
+Nous pouvons combiner deux segments de cercle de 180° et deux segments droits pour dessiner un coeur.
+
+```{codeplay}
+from turtle import *
+
+r = 40
+left(45)
+fillcolor('red')
+
+begin_fill()
+forward(2 * r)
+circle(r, 180)
+right(90)
+circle(r, 180)
+forward(2 * r)
+end_fill()
+```
+
+**Exercice** : Définissez une fonction `coeur()` et dessinez pleins de coeurs.
 
 ### Dessiner une fleur
 
