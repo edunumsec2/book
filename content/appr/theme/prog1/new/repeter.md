@@ -1,155 +1,126 @@
 # Répéter
 
-Un programme exécute souvent certaines instructions multiples fois. Dans ce cas une boucle permet de rendre le code plus court et mieux structuré.
-Une boucle ne représente pas seulement une économie de lignes de code, mais donne en plus la possibilité de contrôler facilement le nombre de répétitions. 
+Nous avons vu qu'un programme exécute souvent des instructions similaires multiples fois. Dans ce cas une boucle permet de mieux structurer le code et le rendre beaucoup plus court.
+Une boucle ne représente pas seulement une économie de code, mais donne aussi beaucoup de flexibilté. En Python nous avons deux types de boucle :
 
-En Python nous avons deux types de boucle :
+- la boucle `for` pour parcourir un ensemble de valeurs
+- la boucle `while` pour répéter pendant qu'une condition est vrai
 
-- la boucle `for` pour parcourir un ensemble de valeurs,
-- la boucle `while` pour répéter pendant qu'une condition est vraie.
-
-## Répéter x fois
-
-Le programme suivant demande comme entrée le nombre `x` de sommets, et dessine alors un polygone régulier. C'est un cas ou il faut **répéter x fois**.
+Le programme suivant demande comme entrée le nombre de sommets, et dessine alors un polygon avec n sommets.
 
 ```{codeplay}
 from turtle import *
 
-x = input('Nombre de sommets: ')
-x = int(x)
+n = input('Nombre de sommets: ')
+n = int(n)
 
-for i in range(x):
+for i in range(n):
     forward(50)
-    left(360/x)
+    left(360/n)
 ```
 
-**Exercice** : Testez avec des nombres différents entre 3 et 13.
-
-## Itérer x fois
+## Itérer
 
 Le mot **itérer** veut dire parcourir un ensemble un par un. Dans la boucle `for` une variable d'itération va parcourir un ensemble qui peut être : 
 
-- une plage numérique avec `range()`
-- une chaîne de caractères
+- une plage numérique avec `range()``
+- une chaîne numérique
 - une liste
 
-La **variable d'itération** prend succéssivement les valeurs 0 à x-1.
-Quand la variable d'itération est de type entier (`int`) on l'appelle souvent `i`. 
+La **varible d'itération** prend succéssivement les valeurs 0, 1, ... n-1.
+Cette fois nous affichons cette variable dans chaque sommet. 
 
-Nous reprenons l'exemple précédent du polygone, mais cette fois nous dessinons pas les segments mais seulement les sommets. La valeur de la variable d'itération `i` est affichée à chaque sommet du polygone.
-
-```{codeplay}
-from turtle import *
-
-x = int(input('Nombre de sommets: '))
-up()
-
-for i in range(x):
-    forward(50)
-    left(360/x)
-    dot()
-    write(i, font=(None, 12))
-```
-
-**Exercice** : Testez avec des nombres différents entre 5 et 13.
-
-## Itérer avec `range()`
-
-La fonction `range(start, stop, step)` permet de produire une séquence linéaire d'entiers. Les entiers se trouvent dans l'intervalle semi-fermé `[start, stop[` avec un increment de `step`. 
-
-Le sens des paramètres :
-
-- `start` est la valeur de départ
-- `stop` est la valeur finale, mais sans l'inclure
-- `step` est l'incrément
-
-```{codeplay}
-start = int(input('start = '))
-stop = int(input('stop = '))
-step = int(input('step = '))
-
-for i in range(start, stop, step):
-    print(i, end=' ')
-```
-
-**Exercice** : Affichez les entiers entre 100 et 200 avec un incrément de 3.
-
-La fonction range fonctionne aussi dans l'ordre décroissant. Dans ce cas il faut choisir pour `step` une valeur négative.
-
-```{codeplay}
-for i in range(-100, -200, -3):
-    print(i, end=' ')
-```
-
-**Exercice** : Affichez les entiers de +10 à -10.
-
-La fonction `range()` peut fonctionner avec 1, 2 ou 3 paramètres. Les valeur par défaut sont :
-
-- 0 pour `start`, 
-- 1 pour `step`.
-
-```{codeplay}
-for i in range(10):
-    print(i, end=' ')
-print()
-
-for i in range(10, 20):
-    print(i, end=' ')
-print()
-
-for i in range(10, 100, 7):
-    print(i, end=' ')
-```
-
-## Itérer sur une chaîne
-
-La ligne de code `for c in mot:` signifie que la variable `c` va prendre à chaque répétition un caractère différent de la chaîne `mot`.
-
-Quand la variable d'itération est un caractère on l'appelle souvent `c`. 
-
-```{codeplay}
-mot = input('Entrez un mot: ')
-
-for c in mot:
-    print(c)
-```
-
-**Exercice** : Testez avec différents textes.
-
-## Itérer sur une liste
-
-La ligne de code `for color in colors:` signifie que la variable `color` va prendre à chaque répétition un élément différent de la liste `colors`.
-
-Quand on itère sur une liste la convention est d'utiliser un mot au pluriel pour la liste (`colors`) et le même mot en singulier pour la variable d'itération (`color`).
+La valeur de `i` est affichée dans chaque sommet du polygone.
 
 ```{codeplay}
 from turtle import *
 
-colors = ['hotpink', 'lime', 'beige', 'pink']
-left(120)
-speed(1)
+n = input('Nombre de sommets: ')
+n = int(n)
 
-for color in colors:
-    getscreen().bgcolor(color)
-    write(color, font=(None, 18))
+for i in range(n):
     forward(50)
+    left(360/n)
+    write(i, font=(None, 24))
 ```
-
-**Exercice** : Ajoutez d'autres couleurs à la liste.
 
 ## Dessiner une spirale
 
-Si nous dessinons un polygone mais augmentons la longeur de chaque segment succéssif en utilisant la variable d'itération `i`, nous obtenons une spirale.
+Si nous dessinons un polygone mais augmentons la longeur de chaque segment succéssif, nous obtenons une spirale.
 
 ```{codeplay}
 from turtle import *
 
 for i in range(100):
-    forward(i)
-    left(30)
+    forward(i * 2)
+    left(60)
 ```
 
-## Du polygone au cercle
+**Exercice** : Modifie le code pour que l'image ressemble plus à une vraie spirale.
+
+## Goto
+
+La fonction `goto(x, y)` permet d'aller directement vers la position `(x, y)`,
+sans changer l'orientation de la tortue.
+
+```{codeplay}
+from turtle import *
+
+goto(40, 0)
+goto(40, 40)
+goto(60, 40)
+goto(60, 0)
+goto(100, 0)
+goto(100, 60)
+goto(50, 110)
+goto(0, 60)
+goto(0, 0)
+```
+
+## Polygone
+
+Un polygone régulier est une forme ou toutes les côtes ont la même longueur est toute les angles sont identiques.
+
+```{codeplay}
+from turtle import *
+
+def polygon(n, a):
+    for i in range(n):
+        forward(a)
+        dot(8)
+        left(360/n)
+        
+polygon(3, 100)
+polygon(4, 100)
+polygon(5, 100)
+polygon(6, 100)
+```
+
+Pour dessiner des formes qui ne sont pas connecté par une ligne, nous utilisons les deux fonctions:
+
+- `up()` pour lever le stylo
+- `down()` pour baisser le stylo
+
+```{codeplay}
+from turtle import *
+
+def polygon(n, a):
+    for i in range(n):
+        forward(a)
+        dot(8)
+        left(360/n)
+
+up()
+back(200)
+
+for i in range(3, 7):
+    down()
+    polygon(i, 60)
+    up()
+    forward(120)
+```
+
+##  Cercle
 
 Plus que le polygone régulier a de sommets, plus il ressemble à un cercle.
 Avec 36 sommets, il ressemble déjà raisonablement à un cercle.
@@ -165,7 +136,9 @@ def polygon(n, a):
 polygon(36, 10)
 ```
 
-### La fonction `circle(r)`
+**Exercice** : Modifie le code pour que l'image ressemble plus à une vraie spirale.
+
+## La fonction `circle(r)`
 
 La fonction `circle(r)` dessine un cercle de rayon `r`.
 Le cercle est dessiné :
@@ -182,8 +155,6 @@ forward(100)
 circle(-30)
 forward(100)
 ```
-
-**Exercice** : Inversez le signe du rayon.
 
 Cette fonction peut avoir un deuxième paramètre sous la forme `circle(r, angle)` 
 ou `angle` représente l'angle du cercle dessiné.
@@ -202,17 +173,13 @@ forward(50)
 circle(40, 180)
 ```
 
-**Exercice** : Dessinez un bonhomme de neige et utilisez `dot()` pour les yeux.
+## Dessiner un coeur
 
-### Dessiner un coeur
-
-Nous pouvons combiner deux segments de cercle de 180° et deux segments droits pour dessiner un coeur.
+Nous pouvons combiner deux segments de cercle et deux segments droits pour dessiner un coeur.
 
 ```{codeplay}
 from turtle import *
-
 r = 40
-left(45)
 fillcolor('red')
 
 begin_fill()
@@ -224,11 +191,9 @@ forward(2 * r)
 end_fill()
 ```
 
-**Exercice** : Définissez une fonction `coeur()` et dessinez pleins de coeurs.
+## Dessiner une fleur
 
-### Dessiner une fleur
-
-Dessinons des cercles dans une boucle, et tournons à chaque fois.
+Dessinons des cercle dans une boucle, et tournons à chaque fois.
 
 ```{codeplay}
 from turtle import *
@@ -239,7 +204,7 @@ for i in range(n):
     left(360/n)
 ```
 
-Il est également possible d'imbriquer des cercles en faisant varier le rayon dans une boucle `for` avec une expression `range()`.
+Il est également possible de faire varier le rayon dans une boucle `for` avec une expression `range()`.
 
 ```{codeplay}
 from turtle import *
@@ -248,25 +213,17 @@ for r in range(20, 100, 20):
     circle(r)
 ```
 
-**Exercice** : Dessinez les cercles empilés les uns sur les autres.
-
 ## Deux boucles imbriquées
 
-Dans Excel, les cellules sont désignées avec une lettre et un nombre. 
-Pour recréer les noms de cellule nous itérons dans une chaîne de chiffres et une deuxième fois dans une chaîne de lettres.
-
-On appelle la première boucle avec `y` la **boucle exterieure** et la deuxième boucle avec `x` **la boucle intérieure**. 
+Dans Excel, les cellules sont nommés avec une lettre et un nombre. 
+Pour recréer les noms de cellule nous itérons dans une chaine de chiffres et une deuxième fois dans une chaîne des lettres de l'alphabet.
 
 Nous concatenons les deux éléments lettre et nombre (`x + y`) et nous ajoutons l'option `end=' '` pour remplacer le retour à la ligne par une espace.
 
-Pour bien montrer l'ordre conséqutif nous importons la fonction `sleep()` du module `time` pour ralentir le parcours de la boucle.
 ```{codeplay}
-from time import sleep
-
 for y in '1234567':
     for x in 'ABCDEFG':
         print(x + y, end=' ')
-        sleep(0.1)
     print()
 ```
 
@@ -275,6 +232,7 @@ for y in '1234567':
 ## La boucle `while`
 
 La boucle `while` exécute un bloc tant qu'une condition est vraie.
+
 On peut l'utiliser pour créer un compteur à rebours.
 Pour attendre une seconde la fonction `sleep()` du module `time` est importée.
 
@@ -290,12 +248,10 @@ while n > 0:
 print('boum!!!')
 ```
 
-### Lister des noms
+## Lister des noms
 
 Nous utilisons une boucle `while` pour demander des noms à l'utilsateur. 
-On ne peut pas savoir à l'avance combien de noms il y aura, donc ici nous ne pouvons pas utiliser la boucle `for`.  Nous prenons comme condition de terminaison une réponse avec une chaîne vide (`''`).
-
-La convention est d'utiliser des noms au pluriel (`noms`) pour désigner la liste et le même nom au singulier (`nom`) pour désigner un de ses éléments.
+On ne peut pas savoir à l'avance combien de noms il y aura. Nous prenons comme condition de terminaison de boucle le fait de répondre avec une chaine vide (`''`).
 
 ```{codeplay}
 noms = []
@@ -308,15 +264,13 @@ while nom != '':
 print(noms)
 ```
 
-**Exercice** : Entrez les noms de 3-4 de vos amis.
-
-### Calculer une somme
+## Calculer une somme
 
 Nous utilisons une boucle `while` pour demander des nombres à l'utilsateur. 
-On ne peut pas savoir à l'avance combien de nombres il y aura, et donc nous ne pouvons pas utiliser la boucle `for`. Nous prenons comme condition de terminaison une réponse avec une chaîne vide (`''`).
+On ne peut pas savoir à l'avance combien de nombres il y aura. Nous prenons comme condition de terminaison de boucle le fait de répondre avec une chaine vide (`''`).
 
 Au lieu d'écrire `while x != '':` nous pouvons simplifier vers  `while x:`. 
-La raison est que la chaîne vide est associée à `False` et toute autre chaîne non-vide est associée à `True`. 
+La raison est que la chaine vide est associé à `False` et toute autre chaine non-vide est associé à `True`. 
 
 ```{codeplay}
 somme = 0
@@ -329,12 +283,10 @@ while x:
 print('somme =', somme)
 ```
 
-**Exercice** : Entrez les frais de vos 3 derniers achats.
+## Calculer une moyenne
 
-### Calculer une moyenne
-
-Nous utilisons une boucle `while` pour demander des nombres à l'utilisateur. 
-On ne peut pas savoir à l'avance combien de nombres il y aura, et donc nous ne pouvons pas utiliser la boucle `for`.  Nous prenons comme condition de terminaison une réponse avec une chaîne vide (`''`).
+Nous utilisons une boucle `while` pour demander des nombres à l'utilsateur. 
+On ne peut pas savoir à l'avance combien de nombres il y aura. Nous prenons comme condition de terminaison de boucle le fait de répondre avec une chaine vide (`''`).
 
 ```{codeplay}
 somme = 0
@@ -348,5 +300,3 @@ while x:
     
 print('moyenne =', somme/n)
 ```
-
-**Exercice** : Entrez vos notes de français.
