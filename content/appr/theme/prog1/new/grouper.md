@@ -1,10 +1,18 @@
 # Grouper - `list`
 
-Dans un programme on doit souvent manipuler des groupes d'objets : 
+Dans ce chapitre nous découvrons une nouvelle structure de données - les listes.
 
-- noms des élèves
+- une liste est un séquence d'objets entre crochets `[2, 3, 5]`
+- la notation d'index `liste[i]` permet d'accéder au i-ème élément de la liste
+- la notation de tranche `liste[i:j]` permet d'accéder à une sous-liste
+
+## Des groupes d'objets
+
+Une liste permet de manipuler des groupes d'objets tel que :
+
+- noms d'élèves
 - notes d'un cours
-- couleurs possibles
+- couleurs
 
 En Python on peut grouper des objets avec une liste. Une liste est ordonnée, ce qui veut dire qu'il y a un premier objet et un dernier objet.
 
@@ -15,7 +23,7 @@ couleurs = ['fuchsia', 'pink', 'orange']
 
 print(noms)
 print(notes)
-````
+```
 
 **Exercice** : Ajoutez une nouvelle liste at affichez-la.
 
@@ -134,7 +142,7 @@ L'opérateur `*` permet de répéter une liste.
 noms = ['Kim', 'Ada'] * 2
 print(noms)
 print([0] * 6)
-print(5 * [0])
+print(5 * [1])
 ```
 
 ## Ajouter des éléments
@@ -214,26 +222,86 @@ print(a)
 
 ## Opérations
 
-Les listes disposent aussi de méthodes pour trier et inverser leurs éléments et pour compter un élément spécifique.
+Les listes disposent aussi de méthodes avec notation dotée :
+
+- `liste.sort()` pour trier une liste
+- `liste.reverse()` pour inverser l'ordre des éléments
+- `liste.count(x)` pour compter l'occurrence d'un élément x
+
+### Trier une liste
 
 La méthode `sort()` trie la liste dans l'ordre croissant (pour les caractères, on se réfère au code ASCII ou UTF utilisé). 
 Cette méthode fonctionne uniquement si tous les éléments sont évidemment du même type (nombre, texte) et peuvent être comparés. 
 
 ```{codeplay}
-m = list('Python')
-m.sort()
-print(m)
+a = [23, 10, -89, -54, 99, 2, 13]
+a.sort()
+print('trié', a)
 ```
 
-La fonction `reverse()` inverse l'ordre de la liste.
+Le programme suivant montre le même tri de liste sous forme graphique.
 
 ```{codeplay}
-m = list('Python')
-m.reverse()
-print(m)
+from turtle import *
+up()
+
+def affiche(liste, couleur, etiquette):
+    n = len(liste)
+    color(couleur)
+    for i in range(n):
+        goto(i/n*500-250, liste[i])
+        down()
+        dot(10)
+    write('  ' + etiquette, font=(None, 12))
+    up()
+
+a = [23, 10, -89, -54, 99, 2, 13]
+
+affiche(a, 'blue', 'originale')
+a.sort()
+affiche(a, 'red', 'triée')
+hideturtle()
 ```
 
-La fonction `count(x)` compte le nombre d'occurences de l'élément `x`.
+**Exercice** : Ajoutez 5 éléments en plus.
+
+### Inverser une liste
+
+La méthode `reverse()` inverse l'ordre de la liste.
+
+```{codeplay}
+a = [1, 23, 10, -89, -54, 99]
+a.reverse()
+print('inversé', a)
+```
+
+De nouveau nous donnons un exemple graphique.
+
+```{codeplay}
+from turtle import *
+up()
+
+def affiche(liste, couleur, etiquette):
+    n = len(liste)
+    color(couleur)
+    for i in range(n):
+        goto(i/n*500-250, liste[i])
+        down()
+        dot(10)
+    write('  ' + etiquette, font=(None, 12))
+    up()
+
+a = [1, 23, 10, -89, -54, 99]
+
+affiche(a, 'blue', 'originale')
+a.reverse()
+affiche(a, 'red', 'inversée')
+hideturtle()
+```
+
+### Compter un élément
+
+La méthode `count(x)` compte le nombre d'occurrences de l'élément `x`.
 
 ```{codeplay}
 m = list('Monty Python')
@@ -326,7 +394,7 @@ Nous pouvons alors écrire la formation de cette liste en une seule ligne.
 print([i**2 for i in range(10) if i % 2 == 1])
 ```
 
-## <span commented>La pile (LIFO)</span><!-- REVIEW/JPP: je pense qu'on a besoin de faire maintenant pas mal d'exercices sur les listes avant de pouvoir comprendre le reste. Je ne trouve pas super clair dans la présentation actuelle le parallèle entre list et stack. On vient d'apprendre à manier des listes en Python avec leurs primitives, bien; mais maintenant, on a l'impression qu'on va aprrendre d'autres structures de données (pile et tampon) et on ne sait pas si c'est différent des listes ou pas. Il faudrait que ce soit vraiment clair, et que les exemples sont plus concrets, parce que ces valeurs numériques ne veulent pas dire grand-chose ou ne représente pas un problème ou une situation de la vie réelle. Pour moi, on n'a simplement pas besoin de parler de stack ou queue ici, mais on peut mettre en pratique des listes dans des exercices où elles ont ce genre de fonctionnement -->
+## <span commented>La pile</span><!-- REVIEW/JPP: je pense qu'on a besoin de faire maintenant pas mal d'exercices sur les listes avant de pouvoir comprendre le reste. Je ne trouve pas super clair dans la présentation actuelle le parallèle entre list et stack. On vient d'apprendre à manier des listes en Python avec leurs primitives, bien; mais maintenant, on a l'impression qu'on va aprrendre d'autres structures de données (pile et tampon) et on ne sait pas si c'est différent des listes ou pas. Il faudrait que ce soit vraiment clair, et que les exemples sont plus concrets, parce que ces valeurs numériques ne veulent pas dire grand-chose ou ne représente pas un problème ou une situation de la vie réelle. Pour moi, on n'a simplement pas besoin de parler de stack ou queue ici, mais on peut mettre en pratique des listes dans des exercices où elles ont ce genre de fonctionnement -->
 
 Une **pile** est une structure de données qui permet de gérer l'arrivée et le départ des éléments. Dans une pile d'assiettes ou de magazines, le dernier élément ajouté est le premier à être enlevé.
 
@@ -348,6 +416,8 @@ while x or len(pile):
 
 print('fin')
 ```
+
+**Exercice** : Ajoutez des objets (nombres, texte) sur la pile. Enlevez avec Enter.
 
 ## La file d'attente
 
@@ -373,3 +443,5 @@ while x or len(file):
 
 print('fin')
 ```
+
+**Exercice** : Ajoutez des objets (nombres, texte) à la file. Enlevez avec Enter.

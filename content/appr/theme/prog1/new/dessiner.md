@@ -393,6 +393,45 @@ maison()
 
 **Exercice** : Modifiez le code pour écarter les maisons.
 
+## Dessiner une fenêtre
+
+Dans la fonction `maison()` nous avons utilisé 2 fonctions: `carre()` et `triangle`.
+Dans l'exemple suivant nous utilisons une définition hiérarchique pour dessiner une fenêtre :
+
+- la fonction `cote()` dessine uniquement un seul côté et tourne de 90°,
+- la fonction `cote2()` dessine deux côtés,
+- la fonction `carre()` appelle `cote2()` deux fois,
+- la fonction `carre2()` dessine 2 carrés,
+- la fonction `fenetre()` dessine les 4 carrés d'une fenêtre.
+
+```{codeplay}
+from turtle import *
+
+def cote():
+    forward(100)
+    left(90)
+    
+def cote2():
+    cote()
+    cote()
+
+def carre():
+    cote2()
+    cote2()
+
+def carre2():
+    carre()
+    left(90)
+    carre()
+    left(90)
+    
+def fenetre():
+    carre2()
+    carre2()
+    
+fenetre()
+```
+
 ## Dessiner un losange
 
 Si nous déformons les angles d'un carré, nous obtenons un losange (diamant).

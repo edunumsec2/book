@@ -1,11 +1,14 @@
 # Subir - `random`
 
-Le module `random` permet de créer des nombres pseudo-aléatoires. Il met à disposition 13 fonctions:
+Dans ce chapitre nous verrons comment un programme peux 'subir' des influences aléatoires. Ceci est très important pour programmer certains jeux.
 
-- `choice`
-- `expovariage`
-- `gauss`
-- ...
+- la fonction `random()` retourne une valeur aléatoire dans l'intervalle [0, 1]
+- la fonction `randint(a, b)` retourne un entier aléatoire dans l'intervalle [a, b]
+- la fonction `shuffle(liste)` fait une permutation aléatoire des éléments d'une liste
+
+## Le contenu du module
+
+Le module `random` permet de créer des nombres pseudo-aléatoires. Il met à disposition 13 fonctions.
 
 ```{codeplay}
 import random
@@ -19,16 +22,19 @@ La fonction `random()` retourne une valeur aléatoire dans la plage [0, 1].
 ```{codeplay}
 from turtle import *
 from random import *
+up()
 
-n = 20
+n = 15
 for i in range(n):
-    setx((i/n - 0.5) * 600)
+    x = (i/n - 0.5) * 500
+    goto(x, -150)
+    down()
     write(i)
-    y = random()
-    sety((y - 0.5) * 400)
+    y = round(random(), 2)
+    sety((y - 0.5) * 300)
     dot()
     write(y)
-    sety(0)
+    sety(-150)
 ```
 
 ## Entier aléatoire
@@ -121,11 +127,12 @@ from turtle import *
 from random import *
 
 speed(0)
+color(0, 0, 0, 0.5)
 up()
 
 for i in range(1000):
     x = gauss(0, 50)
     y = gauss(0, 50)
     goto(x, y)
-    dot()
+    dot(10)
 ```

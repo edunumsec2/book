@@ -1,63 +1,68 @@
 # Définir - `def`
 
-La fonction est le concept le plus important, le plus puissant dans, le plus créatif dans toute langue de programmation.
+Dans ce chapitre nous allons voir de plus près le concept de la fonction, concept que nous avons vu dès le premier chapitre comme façon de donner un nom à une séquence d'instructions.
 
-C'est un moyen incroyable d'inventer des nouveaux mots d'un langage de programmation. Dès le premier chapitre nous avons introduit la fonction comme façon de donner un nom à une séquence.
+En fait, la fonction est peut-être le concept le plus important dans la programmation.
+C'est un moyen puissant pour inventer des nouvelles commandes dans un langage de programmation.
 
-Ceci nous a permit :
+- le mot-clé `def` permet de définir une fonction
+- le mot-clé `return` permet de retourner une valeur
+- un paramètre `f(param0, ...)` est une variable dans la définition de fonction
+- un argument `f(arg0, ...)` est une valeur dans l'appel de fonction
 
-- une économie de code
-- plus de lisibilité
-- plus de choix
+## Un fonction simple
 
-Une fonction permet aussi de découper un problème complexe en sous-problèmes.
+Dès le premier chapitre nous avons vu la fonction comme façon de donner un nom à une séquence d'instructions.
 
 ```{codeplay}
 from turtle import *
 
-def square():
+def carre():
     for i in range(4):
         forward(100)
         left(90)
 
 for i in range(10):
-    square()
+    carre()
     left(36)
 ```
 
 ## Paramétrer la fonction
 
 Jusqu'a maintenant notre carré a toujours eu la même taille.
-Il serait très utile si notre nouvelle commande `square()` pouvait dessiner des carrés de taille différentes.
-C'est possible en spécifiant un argument pour la fonction.
-L'argument de la fonction est une valeur (variable locale) qui est passé à la fonction quand elle est appelé.
+Il serait très utile si notre nouvelle commande `carre(longueur)` pouvait dessiner des carrés de taille différentes.
+C'est possible en spécifiant un paramètre pour la fonction.
+Le paramètre de la fonction est une variable locale qui est utilisé dans sa définition.
+
+Lors de l'appel de la fonction nous donnons une valeur à la fonction.
+Cette valeur placée entre parenthèses s'appelle l'**argument** de la fonction.
+Ici, la fonction `carre()` est appelé successivement avec les valeurs 50, 100 et 150.
 
 ```{codeplay}
 from turtle import *
 
-def square(a):
+def carre(longueur):
     for i in range(4):
-        forward(a)
+        forward(longueur)
         left(90)
         
-square(30)
-square(60)
-square(90)
+carre(50)
+carre(100)
+carre(150)
 ```
 
-De nouveaux nous constatons une suite de nombres `30, 60, 90, ...`.
-Nous pouvons utiliser une boucle avec une plage `range(start, stop, step)`
+Une fonction peut être appelée avec une valeur numérique directe tel que `carre(50)`, mais aussi avec une valeur numérique donnée par une variable tel que `carre(x)`, obtenu par une variable d'itération sur une plage numérique donnée avec `range(start, stop, step)`.
 
 ```{codeplay}
 from turtle import *
 
-def square(a):
+def carre(a):
     for i in range(4):
         forward(a)
         left(90)
-      
+
 for x in range(30, 180, 30):
-    square(x)
+    carre(x)
 ```
 
 Au lieu d'imbriquer les carrés, nous pouvons aussi les dessiner les uns après les autres.
@@ -66,17 +71,17 @@ Le terme technique est de les **juxtaposer**.
 ```{codeplay}
 from turtle import *
 
-def square(a):
+def carre(a):
     down()
     for i in range(4):
         forward(a)
         left(90)
     up()
-  
+
 up()
 back(250)
 for x in range(30, 180, 30):
-    square(x)
+    carre(x)
     forward(x)
 ```
 
@@ -86,9 +91,9 @@ for x in range(30, 180, 30):
 
 Voici quelques fonctions natives, c'est à dire des fonctions standards qui font partie de Python :
 
-- la fonction `pow` retourne la puissance de ses deux arguments (ici, par exemple, $3^5$),
-- la fonction `len` retourne la longueur d'une chaine de caractères ou d'une liste,
-- la fonction `round` retourne l'arrondi d'une valeur numérique.
+- la fonction `pow(m, e)` retourne la puissance de ses deux arguments ($m^e$),
+- la fonction `len(a)` retourne la longueur d'une chaine de caractères ou d'une liste,
+- la fonction `round(n)` retourne l'arrondi d'une valeur numérique.
 
 ```{codeplay}
 print(pow(3, 5))
@@ -106,7 +111,7 @@ Le grand intérêt d'une valeur de retour est qu'on peut l'utiliser de nouveau d
 Par exemple nous pouvons créer une expression comme celle-ci : `square(x) + cube(x)`
 
 ```{codeplay}
-def square(x):
+def carre(x):
     return x ** 2
 
 def cube(x):
@@ -114,14 +119,14 @@ def cube(x):
 
 x = input('Entrez un nombre: ')
 x = int(x)
-print(square(x))
-print(cube(x))
-print(square(x) + cube(x))
+print('carré =', carre(x))
+print('cube =', cube(x))
+print('carré + cube =', carre(x) + cube(x))
 ```
 
 ## Points de sortie
 
-Une fonction peut avoir plusieurs points de sortie. En fait quand une ligne avec `return` est exécuté, toutes les lignes qui suivent ne sont plus exécuté.
+Une fonction peut avoir plusieurs points de sortie. En fait quand une ligne avec `return` est exécutée, toutes les lignes qui suivent ne sont plus exécutées.
 
 La fonction `signe()` possède 3 points de sortie.
 
@@ -142,63 +147,61 @@ print(x, 'est', signe(x))
 
 ## Dessiner un pixel
 
-Comme avant nous allons définir une fonction `square()`.
-Cette fois elle a deux arguments :
+Similaire à notre fonction pour dessiner un carré nous allons définir une fonction `pixel()`, mais cette fois nous ajoutons un deuxième argument :
 
-- `a` pour la taille du carré,
-- `color` pour la couleur du carré.
+- `taille` pour la taille du carré,
+- `couleur` pour la couleur du carré.
 
 ```{codeplay}
 from turtle import *
 
-def square(a, color):
-    fillcolor(color)
+def pixel(taille, couleur):
+    fillcolor(couleur)
     begin_fill()
     for i in range(4):
-        forward(a)
+        forward(taille)
         left(90)
     end_fill()
-    forward(a)
+    forward(taille)
 
 back(100)
-square(100, 'yellow')
-square(100, 'orange')
-square(100, 'red')
+pixel(100, 'yellow')
+pixel(100, 'orange')
+pixel(100, 'red')
 ```
-
 
 ## Dessiner Pikachu
 
-De nouveaux nous définissons une fonction `line()` pour dessiner une liste de couleurs.
-En fin de liste, la tortue est placée à la position prête pour dessiner la ligne suivante.
+Nous définissons une nouvelle fonction `ligne(couleurs)` pour dessiner une série de pixels, qui sont donnés par une liste de couleurs.
+Quand le dernier pixel de la ligne est dessiné, la tortue est retourné à la position prête pour dessiner la ligne suivante.
 
 ```{codeplay}
 from turtle import *
 
-def square(a, color):
-    fillcolor(color)
+def pixel(taille, couleur):
+    fillcolor(couleur)
     begin_fill()
     for i in range(4):
-        forward(a)
+        forward(taille)
         left(90)
     end_fill()
-    forward(a)
+    forward(taille)
 
-a = 50
+taille = 50
 
-def line(colors):
-    for color in colors:
-        square(a, color)
-    back(len(colors) * a)
+def ligne(couleurs):
+    for couleur in couleurs:
+        pixel(taille, couleur)
+    back(len(couleurs) * taille)
     up()
-    sety(ycor() - a)
+    sety(ycor() - taille)
     down()
 
-back(2 * a)
-line(['black', 'yellow', 'yellow', 'black'])
-line(['white', 'red', 'yellow', 'white'])
-line(['yellow', 'yellow', 'yellow', 'yellow'])
-line(['yellow', 'yellow', 'yellow', 'white'])
+back(2 * taille)
+ligne(['black', 'yellow', 'yellow', 'black'])
+ligne(['white', 'red', 'yellow', 'white'])
+ligne(['yellow', 'yellow', 'yellow', 'yellow'])
+ligne(['yellow', 'yellow', 'yellow', 'white'])
 ```
 
 **Exercice** : Dessinez un autre Pokemon.

@@ -2,35 +2,6 @@
 
 Les programmes de ce chapitres sont des idées sous construction, à développer et à placer à leur endroit approprié.
 
-## Fenêtre
-
-```{codeplay}
-from turtle import *
-
-def cote():
-    forward(100)
-    left(90)
-    
-def cote2():
-    cote()
-    cote()
-
-def carre():
-    cote2()
-    cote2()
-
-def carre2():
-    carre()
-    left(90)
-    carre()
-    left(90)
-    
-def fenetre():
-    carre2()
-    carre2()
-    
-fenetre()
-```
 
 ## Arbre
 
@@ -306,7 +277,7 @@ A: veux-tu faire un voyage ?
 B: oui, vers où ?
 A: à Rio de Janeiro.
 B: choutte, on part quand ?
-A: il y un vol ce soir.
+A: il y a un vol ce soir.
 """
 
 for line in histoire.split('\n'):
@@ -318,20 +289,27 @@ for line in histoire.split('\n'):
 ```
 
 ## Events
+
+La tortue a trois événements qui y sont associés : 
+
+- cliquer
+- tirer
+- relâcher
+
 ```{codeplay}
- from turtle import *
+from turtle import *
 
 shape('turtle')
 forward(100)
 
-def click():
-    print('click')
+def click(x, y):
+    print('click', x, y)
     
-def drag():
-    print('drag')
+def drag(x, y):
+    print('drag', x, y)
     
-def release():
-    print('release')
+def release(x, y):
+    print('release', x, y)
     
 getturtle().onclick(click)
 getturtle().ondrag(drag)
