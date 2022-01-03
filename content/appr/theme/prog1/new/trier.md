@@ -406,8 +406,10 @@ show()
 
 for i in range(1, n):
     for j in range(i, 0, -1):
-        while a[j] < a[j-1]:
+        if a[j] < a[j-1]:
             swap(j, j-1)
+        else:
+            break
 ```
 
 ## Tri par sélection en action
