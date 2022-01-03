@@ -204,270 +204,110 @@ for i in range(n-1):
 
 ## Afficher des valeurs
 
-Le programme ci-dessous crée et affiche `n` valeur aléatoires. Par la suite nous les utilisons pour illustrer les trois algorithmes de tri :
-
-- par bulles
-- par insertion
-- par sélection
-
 ```{codeplay}
 from turtle import *
 from random import *
-
 getscreen().bgcolor('skyblue')
 color('blue')
 speed(0)
 up()
-a = []
 
-def create(size):
-    global n, d, x0, y0
-    
-    n = size
-    d = 600//n
-    x0 = -300+d//2
-    y0 = 200 - d//2
-    
-    for i in range(n):
-        y = randint(-y0, y0)
-        a.append(y)
+d = 40
+a = []
+for i in range(600//d):
+    y = randint(-200, 200)
+    a.append(y)
     
 def show():
-    for i in range(n):
-        x = x0 + i * d
+    clear()
+    i = 0
+    for x in range(-300, 300, d):
         y = a[i]
         goto(x, y)
         dot(d)
-
-create(20)      
+        i += 1
+        
 show()
 ```
-
-## Echanger deux éléments
-
-```{codeplay}
-from turtle import *
-from random import *
-
-getscreen().bgcolor('skyblue')
-color('blue')
-speed(0)
-up()
-a = []
-
-def create(size):
-    global n, d, x0, y0
-    
-    n = size
-    d = 600 //n
-    x0 = -300 + d // 2
-    y0 = 200 - d // 2
-    
-    for i in range(n):
-        y = randint(-y0, y0)
-        a.append(y)
-    
-def show():
-    for i in range(n):
-        x = x0 + i * d
-        y = a[i]
-        goto(x, y)
-        dot(d)
-
-===    
-def swap(i, j):
-    color('white')
-    goto(x0 + i * d, a[i])
-    dot(d)
-    goto(x0 + j * d, a[j])
-    dot(d)
-    
-    color('blue')
-    goto(x0 + i * d, a[j])
-    dot(d)
-    goto(x0 + j * d, a[i])
-    dot(d)
-    
-    a[i], a[j] = a[j], a[i]
-
-create(20)
-show()
-
-for i in range(n-1):
-    swap(i, i+1)
-```
-
 
 ## Bubble sort en action
 
 ```{codeplay}
 from turtle import *
 from random import *
-
 getscreen().bgcolor('skyblue')
 color('blue')
 speed(0)
 up()
-a = []
 
-def create(size):
-    global n, d, x0, y0
-    
-    n = size
-    d = 600 //n
-    x0 = -300 + d // 2
-    y0 = 200 - d // 2
-    
-    for i in range(n):
-        y = randint(-y0, y0)
-        a.append(y)
+d = 40
+a = []
+for i in range(600//d):
+    y = randint(-200, 200)
+    a.append(y)
     
 def show():
-    for i in range(n):
-        x = x0 + i * d
+    clear()
+    i = 0
+    for x in range(-300, 300, d):
         y = a[i]
         goto(x, y)
         dot(d)
-   
-def swap(i, j):
-    color('white')
-    goto(x0 + i * d, a[i])
-    dot(d)
-    goto(x0 + j * d, a[j])
-    dot(d)
-    
-    color('blue')
-    goto(x0 + i * d, a[j])
-    dot(d)
-    goto(x0 + j * d, a[i])
-    dot(d)
-    
-    a[i], a[j] = a[j], a[i]
-
-===
-create(20)
+        i += 1
+        
 show()
 
+n = len(a)
 for i in range(n-1):
     for j in range(n-i-1):
         if a[j] > a[j+1]:
-            swap(j, j+1)
-```
+            a[j], a[j+1] = a[j+1], a[j]
+    show()
+````
 
-## Tri par insertion en action
-
-```{codeplay}
-from turtle import *
-from random import *
-
-getscreen().bgcolor('skyblue')
-color('blue')
-speed(0)
-up()
-a = []
-
-def create(size):
-    global n, d, x0, y0
-    
-    n = size
-    d = 600 //n
-    x0 = -300 + d // 2
-    y0 = 200 - d // 2
-    
-    for i in range(n):
-        y = randint(-y0, y0)
-        a.append(y)
-    
-def show():
-    for i in range(n):
-        x = x0 + i * d
-        y = a[i]
-        goto(x, y)
-        dot(d)
-        
-def swap(i, j):
-    color('white')
-    goto(x0 + i * d, a[i])
-    dot(d)
-    goto(x0 + j * d, a[j])
-    dot(d)
-    
-    color('blue')
-    goto(x0 + i * d, a[j])
-    dot(d)
-    goto(x0 + j * d, a[i])
-    dot(d)
-    
-    a[i], a[j] = a[j], a[i]
-
-===
-create(20)
-show()
-
-for i in range(1, n):
-    for j in range(i, 0, -1):
-        if a[j] < a[j-1]:
-            swap(j, j-1)
-        else:
-            break
-```
-
-## Tri par sélection en action
 
 ```{codeplay}
 from turtle import *
 from random import *
-
 getscreen().bgcolor('skyblue')
 color('blue')
 speed(0)
 up()
-a = []
 
-def create(size):
-    global n, d, x0, y0
-    
-    n = size
-    d = 600 //n
-    x0 = -300 + d // 2
-    y0 = 200 - d // 2
-    
-    for i in range(n):
-        y = randint(-y0, y0)
-        a.append(y)
+d = 40
+a = []
+for i in range(600//d):
+    y = randint(-200, 200)
+    a.append(y)
     
 def show():
-    for i in range(n):
-        x = x0 + i * d
+    clear()
+    i = 0
+    for x in range(-300, 300, d):
         y = a[i]
         goto(x, y)
         dot(d)
+        i += 1
         
-def swap(i, j):
-    color('white')
-    goto(x0 + i * d, a[i])
-    dot(d)
-    goto(x0 + j * d, a[j])
-    dot(d)
-    
-    color('blue')
-    goto(x0 + i * d, a[j])
-    dot(d)
-    goto(x0 + j * d, a[i])
-    dot(d)
-    
-    a[i], a[j] = a[j], a[i]
-
-===
-create(20)
 show()
 
+n = len(a)
 for i in range(n-1):
-    i_min = i
-    min = a[i]
-    for j in range(i+1, n):
-        if a[j] < a[i_min]:
-            i_min = j
-            min = a[j]
-    swap(i, i_min)
-```
+    for j in range(n-i-1):
+        if a[j] > a[j+1]:
+            color('white')
+            goto(-300 + j*d, a[j])
+            dot(d)
+            color('blue')
+            goto(-300 + j*d, a[j+1])
+            dot(d)
+            
+            color('white')
+            goto(-300 + (j+1)*d, a[j+1])
+            dot(d)
+            color('blue')
+            goto(-300 + (j+1)*d, a[j])
+            dot(d)
+            
+            a[j], a[j+1] = a[j+1], a[j]
+````
