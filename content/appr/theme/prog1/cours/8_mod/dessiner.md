@@ -51,7 +51,7 @@ forward(100)
 left(90)
 ```
 
-**Exercice** : Transformez le code pour dessiner une maison.
+**Exercice :** Transformez le code pour dessiner une maison.
 
 ## Répéter un bout de code
 
@@ -69,7 +69,7 @@ for i in range(4):
     left(90)
 ```
 
-**Exercice** : Ajouter du code pour dessiner un triangle.
+**Exercice :** Ajouter du code pour dessiner un triangle.
 
 ## Nommer un bout de code
 

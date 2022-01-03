@@ -1,10 +1,10 @@
 # Colorier
 
 Avec la fonction `fill_color()` nous pouvons définir une couleur de remplissage.
-Pour remplir une forme avec une couleur, nous devons ajouter les deux fonctions :
+Pour remplir une forme avec une couleur, nous devons ajouter les deux fonctions:
 
-- `begin_fill()` au début de la forme,
-- `end_fill()` à la fin de la forme.
+- `begin_fill()` au début de la forme
+- `end_fill()` à la fin de la forme
 
 ```{codeplay}
 from turtle import *
@@ -17,7 +17,7 @@ for i in range(4):
 end_fill()
 ```
 
-La forme ne doit pas nécessairement être fermée pour être remplie d'une couleur.
+La forme ne doit pas nécessairement être fermé pour la remplir d'une couleur.
 Dans l'exemple suivant nous dessinons une forme ouverte avec seulement deux lignes.
 Le résultat est un triangle.
 
@@ -40,9 +40,9 @@ end_fill()
 ```
 
 Comme avant nous allons définir une fonction `square()`.
-Cette fois elle a deux arguments :
-- `a` pour la taille du carré,
-- `color` pour la couleur du carré.
+Cette fois elle a deux arguments:
+- `a` pour la taille du carré
+- `color` pour la couleur du carrée
 
 ```{codeplay}
 from turtle import *
@@ -61,11 +61,11 @@ square(100, 'yellow')
 square(100, 'orange')
 square(100, 'red')
 ```
-Voici une liste des couleurs disponibles.
+Voici une liste des couleurs disponible.
 
 ![couleurs](colors.png)
 
-Pour dessiner de multiples couleurs, nous pouvons définir une liste de couleurs et itérer sur cette liste.
+Pour dessiner multiples couleurs, nous pouvons définir une liste de couleurs et itérer sur cette liste.
 
 ```{codeplay}
 from turtle import *
@@ -109,7 +109,7 @@ while color:
 ```
 
 De nouveaux nous définissons une fonction `line()` pour dessiner une liste de couleurs.
-En fin de liste, la tortue est placée à la position prête pour dessiner la ligne suivante.
+En fin de liste, la tortue est place à la position prête pour dessiner la ligne suivante.
 
 ```{codeplay}
 from turtle import *
@@ -138,16 +138,4 @@ line(['black', 'yellow', 'yellow', 'black'])
 line(['white', 'red', 'yellow', 'white'])
 line(['yellow', 'yellow', 'yellow', 'yellow'])
 line(['yellow', 'yellow', 'yellow', 'white'])
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
 ```
