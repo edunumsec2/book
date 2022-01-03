@@ -35,8 +35,7 @@ parts:
       - file: content/appr/theme/prog1/new/dessiner
       - file: content/appr/theme/prog1/new/colorier
       - file: content/appr/theme/prog1/new/ecrire
-      - file: content/appr/theme/prog1/new/calculer
-      - file: content/appr/theme/prog1/new/iterer
+      - file: content/appr/theme/prog1/new/memoriser
 #     - file: content/appr/theme/prog1/cours/9_app/app 
       - file: content/appr/theme/prog1/cours/10_conclusion/concl 
 
