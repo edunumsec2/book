@@ -1,4 +1,4 @@
-# Associer - `dict`
+# Dictionnaires
 
 En Python, un _dictionnaire_ est une structure de données qui, comme une liste, contient plusieurs éléments, mais est plus puissante. Dans une liste les indices sont des entiers. Dans un dictionnaire les indices peuvent être de n'importe quel type immuable (entier, nombre, texte, tuple, ...).
 
