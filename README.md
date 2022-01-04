@@ -1,7 +1,7 @@
  ````{image} modulo_banner3.svg
 ````
 
-# Informatique au Gymnase / Pilote
+# Informatique au Gymnase
 
 ## Introduction
 
