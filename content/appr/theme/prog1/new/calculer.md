@@ -3,15 +3,15 @@
 Dans ce chapitre nous allons voir comment un programme peut calculer avec des nombres.
 Ceci est utilisé dans une calculatrice ou un programme de tableur.
 
-Les nombres entiers forment une catégorie très importantes. En anglais un entier est appelé **integer** (`int`).
+Les nombres entiers forment une catégorie très importantes. En anglais un entier est appelé **integer** (`int`). Nous allons voir que
 
-- les opérateurs de base sont `+-*/`
-- les nombres sont du type `int` ou `float`
-- un texte est du type `str`
+- les opérateurs de base sont `+-*/`,
+- les nombres sont du type `int` ou `float`,
+- un texte est du type `str`.
 
 ## Un calcul simple
 
-Dans ce chapitre nous allons explorer comment nous pouvons calculer avec des nombres. Voici un exemple qui affiche texte et nombre :
+Dans ce chapitre nous allons explorer comment nous pouvons calculer avec des nombres. Voici un exemple qui affiche dans une première ligne sous forme de texte une expression mathématique, et dans une deuxième ligne une expression mathématique qui sera évalué vers son résultat numérique.
 
 ```{codeplay}
 print('2 à la puissance 32 =')
@@ -20,7 +20,7 @@ print(2 ** 32)
 
 ## Les opérations de base
 
-Nous retrouvons les 4 opérations arithmétiques de base :
+En Python, nous retrouvons les 4 opérations arithmétiques de base :
 
 - addition (`+`)
 - soustraction (`-`)
@@ -39,11 +39,11 @@ print('3 / 4 =', 3 / 4)
 
 ## Les opérations supplémentaires
 
-Dans Python nous avons 3 opérateurs supplémentaires :
+En Python, nous avons également 3 opérateurs supplémentaires :
 
-- puissance (`**`)
-- division entière (`//`)
-- reste de la division entière ou modulo (`%`)
+- puissance (`**`),
+- division entière (`//`),
+- reste de la division entière ou modulo (`%`).
 
 ```{codeplay}
 print('7 ** 3 =', 7 ** 3)
@@ -55,9 +55,9 @@ print('7 % 3 =', 7 % 3)
 
 ## Une variable
 
-Une **variable** est une manière de designer une valeur par un nom. Le terme technique est **affectation** et elle utilise le symbole `=` (égal).
+Une **variable** est une manière de designer une valeur par un nom. Le terme technique pour associer une valeur à une variable est **affectation** et elle utilise le symbole `=` (égal).
 
-Mais faites attention ! Il ne s'agit pas d'une équation dans le sens mathématique. La variable dois toujours figurer seul à gauche. 
+Mais faites attention ! Il ne s'agit pas d'une équation dans le sens mathématique. La variable dois toujours figurer seul à gauche.
 La forme générique d'une affectation est `var = expression`.
  
 ```{codeplay}
@@ -70,29 +70,29 @@ print('circonférence =', pi * 2 * r)
 ```
 **Exercice** : Ajoutez le calcul de la surface du cercle.
 
-Pour nommer une variable vous pouvez utiliser : 
+Pour nommer une variable vous pouvez utiliser :
 
-- lettres (`a...z` et `A...Z`)
-- chiffres (`0...9`)
-- le tiret bas (`_`)
+- lettres (`a...z` et `A...Z`),
+- chiffres (`0...9`),
+- le tiret bas (`_`).
 
 Le nom de variable :
 
-- est sensible aux majuscules/minuscules
-- ne peut pas commencer avec un chiffre
-- ne dois pas consister d'un mot-clé (`if`, `else`, `for`)
-- ne dois pas contenir d'autre caractère spécial (`* + % & $ - / ?`).
+- est sensible aux majuscules/minuscules,
+- ne peut pas commencer avec un chiffre,
+- ne dois pas consister d'un mot-clé (`if`, `else`, `for`),
+- ne dois pas contenir un caractère spécial (`* + % & $ - / ?`).
 
 Ces noms de variables sont donc valides : `a2`, `_a`, `speed`, `pos_x`, `POS_X`
 
-Ceux-ci ne sont pas valides :
+Ceux-ci ne sont pas valides :
 
 - `2var` (commence avec un chiffre),
 - `if` (correspond à un mot-clé),
 - `var$2` (contient un caractère spécial),
 - `mon nom` (contient une espace et est interprété comme deux noms de variables).
 
-Voici un autre calcul où `a`  et `b` désignent largeur et hauteur d'un rectangle.
+Voici un autre calcul où `a` et `b` désignent largeur et hauteur d'un rectangle.
 
 ```{codeplay}
 a = 3
@@ -119,17 +119,17 @@ print(type(123))
 print(type(3.14))
 ```
 
-- `str` (string) désigne des chaînes de caractères
-- `int` (integer) désigne des nombres entiers
-- `float` (floating point) désigne des nombres à virgule flottante
-
 **Exercice** : Trouvez encore d'autres types.
 
+L'exemple ci-dessus nous montre que
 
+- `str` (string) désigne des chaînes de caractères,
+- `int` (integer) désigne des nombres entiers,
+- `float` (floating point) désigne des nombres à virgule flottante.
 
 ## Conversion de type
 
-Les trois fonctions `str()`, `int()` et `float()` permettent de transformer d'un type à un autre. 
+Les trois fonctions `str()`, `int()` et `float()` permettent de transformer d'un type à un autre.
 
 Par exemple la chaîne `'123'` peut être transformé soit en entier, soit en nombre à virgule flottante.
 
@@ -162,7 +162,7 @@ print('surface =')
 
 **Exercice** : Complétez le programme pour afficher la surface du cercle.
 
-Nous pouvons également créer des programmes ou nous demandons plusieurs valeurs à l'utilisateur. Cette fois nous permettons que l'utilisation d'entiers, et donc transformons la chaine obtenu avec `int()` en nombre entier.
+Nous pouvons également créer des programmes ou nous demandons plusieurs valeurs à l'utilisateur. Cette fois nous permettons seulement l'utilisation de nombres entiers, et donc transformons la chaine obtenu avec `int()` en nombre entier.
 
 ```{codeplay}
 a = int(input('Entrez la largeur: '))
@@ -173,7 +173,7 @@ print('périmètre =')
 print('diagonale =')
 ```
 
-**Exercice** : Complétez le programme pour afficher périmètre et la diagonale.
+**Exercice** : Complétez le programme pour afficher le périmètre et la diagonale.
 
 ## Affectation multiple
 
@@ -195,7 +195,7 @@ x, y = y, x
 print(x, y)
 ```
 
-**Exercice** : Ajoutez une 3e variable et faites un permutation cyclique.
+**Exercice** : Ajoutez une 3e variable et faites une permutation cyclique.
 
 ## Quiz
 
@@ -232,11 +232,11 @@ Quel est le résultat de l'expression `'1 + 2 * 3'` ?
 
 ## Erreurs
 
-Pour bien programmer vous devez savoir interpréter les messages d'erreurs. Ces messages vous indiquent sur quel ligne du programme il y a quel type d'erreur.
+Pour bien programmer vous devez savoir interpréter les messages d'erreurs. Ces messages vous indiquent sur quelle ligne du programme il y a quel type d'erreur.
 
 ### SyntaxError
 
-Cet erreur est produit quand vous oubliez un signe de ponctuation (parenthèse, virgule, apostrophe).
+Cette erreur se produit quand vous oubliez un signe de ponctuation (parenthèse, virgule, apostrophe).
 
 ```{codeplay}
 print('hello'
@@ -248,7 +248,7 @@ print('bonjour)
 
 ### TypeError
 
-Cet erreur se produit quand vous mettez des opérandes dont le type n'est pas approprié pour l'opérateur.
+Cette erreur se produit quand vous mettez des opérandes dont le type n'est pas approprié pour l'opérateur.
 
 ```{codeplay}
 print('10' > 0)
@@ -260,7 +260,7 @@ print('10' + 10)
 
 ### ZeroDivisionError
 
-Cet erreur se produit quand vous essayez de diviser par zéro.
+Cette erreur se produit quand vous essayez de diviser par zéro.
 
 ```{codeplay}
 print(10 / 0)
@@ -271,7 +271,7 @@ print(10 % 0)
 
 ### RangeError
 
-Cet erreur se produit quand une fonction recursive s'appelle trop. 
+Cette erreur se produit quand une fonction récursive s'appelle trop.
 
 ```{codeplay}
 def f(x):

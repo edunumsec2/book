@@ -1,24 +1,22 @@
 # Colorier - `color`
 
 Dans ce chapitre nous continuons à dessiner et nous introduisons la couleur.
-Une couleur peut être appliquée à une ligne, à un point, à une forme ou à l'arrière-fond.
+Une couleur peut être appliquée à une ligne, à un point, à une forme ou à l'arrière-fond. Nous allons voir que
 
-- la fonction `color()` permet de choisir une couleur
-- la fonction `dot(d)` dessine un disque de diamètre `d`
-- la structure `['red', 'pink']` représente une liste
+- la fonction `color()` permet de choisir une couleur,
+- la fonction `dot(d)` dessine un disque de diamètre `d`,
+- la structure `['red', 'pink']` représente une liste.
 
 ## Liste de couleurs
 
-Voici une liste des couleurs disponibles. Pour les utiliser vous devez les écrire entre des apostrophes,
-comme par exemple `'pink'` ou `'hotpink'`.
+Voici une liste des couleurs disponibles. Pour les utiliser vous devez les écrire entre des apostrophes, comme par exemple `'pink'` ou `'hotpink'`.
 
 ![couleurs](media/colors.png)
 
 ## Couleur de ligne
 
 La fonction `color()` permet de définir la couleur de ligne.
-Entre les parenthèses de la fonction vous devez écrire le nom d'une couleur, entouré d'apostrophes,
-par exemple `color('red')` pour dessiner une ligne rouge.
+Entre les parenthèses de la fonction vous devez écrire le nom d'une couleur, entouré d'apostrophes, par exemple `color('red')` pour dessiner une ligne rouge.
 
 Voici un triangle avec 3 segments de couleurs différentes.
 
@@ -39,7 +37,7 @@ forward(150)
 left(120)
 ```
 
-**Exercice** : Transformez en rectangle avec 4 couleurs différentes.
+**Exercice** : Transformez le dessin en rectangle avec 4 couleurs différentes.
 
 ## Couleur de point
 
@@ -63,14 +61,16 @@ color('blue')
 dot(40)
 ```
 
-**Exercice** : Ajoutez un 4e point d'une couleur différente.
+**Exercice** : Ajoutez un 4e point d'une couleur différente.
 
 ## Couleur de forme
 
-Avec la fonction `fillcolor()` nous pouvons définir une couleur de remplissage d'une forme. Pour remplir une forme avec une couleur, nous devons ajouter les deux fonctions :
+Avec la fonction `fillcolor()` nous pouvons définir une couleur de remplissage de forme. Pour remplir une forme avec une couleur, nous devons ajouter les deux fonctions :
 
 - `begin_fill()` au début de la forme,
 - `end_fill()` à la fin de la forme.
+
+Par exemple ce programme-ci dessine un carré jaune.
 
 ```{codeplay}
 from turtle import *
@@ -83,7 +83,7 @@ for i in range(4):
 end_fill()
 ```
 
-**Exercice** : Ajoutez un triangle d'une couleur différente.
+**Exercice** : Ajoutez un triangle d'une couleur différente.
 
 ## Couleur d'arrière-fond
 
@@ -109,7 +109,7 @@ end_fill()
 
 La forme ne doit pas nécessairement être fermée pour être remplie d'une couleur.
 Dans l'exemple suivant nous dessinons une forme ouverte avec seulement deux lignes.
-Le résultat est un triangle.
+Le résultat est un triangle avec deux bordures et un troisième segment sans bordure.
 
 ```{codeplay}
 from turtle import *
@@ -130,11 +130,11 @@ for i in range(2):
 end_fill()
 ```
 
-**Exercice** : Dessinez un drapeau bi-colore.
+**Exercice** : Dessinez un drapeau bi-colore.
 
 ## Smiley
 
-Avec des disques `dot(d)` de taille différentes nous pouvons dessiner un smiley.
+Avec des cercles `dot(d)` de taille différentes nous pouvons dessiner un smiley.
 Voici un smiley qui exprime l'indifférence.
 
 ```{codeplay}
@@ -179,12 +179,14 @@ goto(0, -50)
 dot(80)
 ```
 
-**Exercice** : Dessinez un autre smiley.
+**Exercice** : Dessinez encore un autre smiley.
 
 ## Itérer dans un liste
 
 Pour dessiner multiples couleurs, nous pouvons définir une liste de couleurs et itérer sur cette liste.
 En Python une liste est délimitée par des crochets `[]` et les éléments sont séparé par une virgule.
+
+Dans l'expression `for x in [...]` la variable `x` va prendre à tour de rôle les valeurs dans la liste. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'blue'`, `'cyan'`, `'red'`, etc.
 
 ```{codeplay}
 from turtle import *
@@ -197,11 +199,11 @@ for x in ['blue', 'cyan', 'red', 'magenta', 'pink', 'lime']:
     forward(80)
 ```
 
-**Exercice** : Modifiez la liste des couleurs.
+**Exercice** : Modifiez la liste des couleurs.
 
 ## Dessiner une croix
 
-La fonction `boite` dessine les 3 cotés d'un carré.
+La fonction `boite()` dessine les 3 cotés d'un carré.
 Répété 4 fois, ceci donne la forme d'une croix.
 
 ```{codeplay}
@@ -226,11 +228,11 @@ boite()
 end_fill()
 ```
 
-**Exercice** : Faites ce programme plus court en utilisant une boucle.
+**Exercice** : Faites ce programme plus court en utilisant une boucle.
 
 ## Dessiner une maison
 
-Nous reprenons l'exemple du chapitre précédent et ajoutons de la couleur.
+Nous reprenons l'exemple du chapitre précédent et ajoutons de la couleur pour dessiner des maisons jaunes avec un toit rouge.
 
 ```{codeplay}
 from turtle import *
@@ -268,7 +270,7 @@ for i in range(3):
 
 ## Dessiner une fleur
 
-Si nous dessinons ce losange 6 fois pour obtenir une fleur.
+Ci-dessous nous dessinons un losange 6 fois pour obtenir une fleur.
 Avec une boucle `for` nous alternons entre deux couleurs de pétale.
 
 ```{codeplay}
@@ -292,17 +294,16 @@ for i in range(3):
         left(60)
 ```
 
-**Exercice** : Changez le nombre de pétales.
+**Exercice** : Changez le nombre de pétales.
 
 ## Erreurs
 
 Il est important de bien comprendre les messages d'erreurs.
-Dans cette section vous allez découvrir les différentes catégories d'erreur et les corriger.
-
+Dans cette section vous allez découvrir les différentes catégories d'erreur et comment les corriger.
 
 ### ImportError
 
-Cet erreur est produit si vous essayez d'importer un module qui n'existe pas.
+Cette erreur est produite si vous essayez d'importer un module qui n'existe pas.
 
 ```{codeplay}
 from turtl import *
@@ -312,11 +313,11 @@ for i in range(3):
     left(120)
 ```
 
-**Exercice** : Corrigez l'erreur d'importation.
+**Exercice** : Corrigez l'erreur d'importation.
 
 ### SyntaxError
 
-Cet erreur est produit quand vous écrivez mal un mot-clé, ou si vous oubliez une ponctuation. Dans ce cas le mot-clé mal écrit n'est pas reconnu et il n'est pas colorié.
+Cette erreur est produite quand vous écrivez mal un mot-clé, ou si vous oubliez une ponctuation. Dans ce cas le mot-clé mal écrit n'est pas reconnu et il n'est pas colorié.
 
 ```{codeplay}
 fro turtle import *
@@ -326,11 +327,11 @@ fore i in range(3)
     left(120)
 ```
 
-**Exercice** : Corrigez les 3 erreurs de syntaxe.
+**Exercice** : Corrigez les 3 erreurs de syntaxe.
 
 ### NameError
 
-Cet erreur est produit quand vous écrivez mal le nom d'une variable ou fonction.
+Cette erreur est produite quand vous écrivez mal le nom d'une variable ou fonction.
 
 ```{codeplay}
 from turtle import *
@@ -340,11 +341,11 @@ for i in range(n):
     lefft(120)
 ```
 
-**Exercice** : Corrigez les 3 erreurs de nom.
+**Exercice** : Corrigez les 3 erreurs de nom.
 
 ### TypeError
 
-Cet erreur est produit si vous ne mettez pas le nombre d'arguments correcte pour une fonction.
+Cette erreur est produite si vous ne mettez pas le nombre d'arguments correcte pour une fonction.
 
 ```{codeplay}
 from turtle import *
@@ -354,4 +355,14 @@ for i in 3:
     left(100, 120)
 ```
 
-**Exercice** : Corrigez les 3 erreurs de type.
+**Exercice** : Corrigez les 3 erreurs de type.
+
+## Exercices
+
+Dans tous les exercices suivants commencez par définir une couleur d'arrière-fond appropriée.
+
+1. Dessinez et coloriez un sapin de Noël. Définissez des fonctions pour des boules et des étoiles.
+1. Dessinez et coloriez une ville. Définissez des fonctions pour des maisons et des immeubles.
+1. Dessinez et coloriez un paysage. Définissez des fonctions pour des montagnes et des sapins.
+1. Dessinez et coloriez un jardin. Définissez des fonctions pour les feuilles, les pétales et les fleurs.
+1. Dessinez et coloriez un aquarium. Définissez des fonctions pour les poissons, l'herbe, et les bulles.

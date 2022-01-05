@@ -2,15 +2,15 @@
 
 Dans ce chapitre nous allons regarder de plus près ce que c'est le texte. Le texte est une catégorie d'information qui est essentiel dans beaucoup de programmes, tel une application messager ou un programme de traitement de texte.
 
-Techniquement un texte est appelé une **chaîne de caractères**, ou string en anglais (`str`).
+Techniquement un texte est appelé une **chaîne de caractères**, ou string en anglais (`str`). Nous allons voir que
 
-- un texte est délimité par un apostrophe `'` ou un guillemet double `"`
-- l'opérateur `*` répète un texte
-- la fonction `ord(c)` retourne le code pour représenter un caractère
+- un texte est délimité par un apostrophe `'` ou un guillemet double `"`,
+- l'opérateur `*` répète un texte,
+- la fonction `ord(c)` retourne le code pour représenter un caractère.
 
 ## Délimiter un texte
 
-Toute caractère imprimable peux être utilisé pour créer un texte :
+Tout caractère imprimable peux être utilisé pour créer un texte :
 
 - lettres (`a...z` et `A...Z`)
 - chiffres (`0...9`)
@@ -22,7 +22,7 @@ Pour différencier un morceau de texte du reste d'un programme, il doit être d�
 
 - apostrophe (`'`)
 - guillemets doubles (`"`)
-- trois guillemets (`"""`)
+- trois guillemets doubles (`"""`)
 
 ```{codeplay}
 print('apostrophe')
@@ -33,7 +33,7 @@ le texte peut s'étaler sur plusieurs lignes.
 """)
 ```
 
-**Exercice** : Ajoutez du texte sur les deux lignes qui contiennent  `"""`.
+**Exercice** : Ajoutez des lignes supplémentaires au texte qui est délimité par `"""`.
 
 ## Répéter un texte
 
@@ -45,14 +45,14 @@ print('=' * 20)
 print('hello ' * 3)
 ```
 
-**Exercice** : Répétez une chaines plus longue.
+**Exercice** : Répétez une chaîne plus longue.
 
 ## Concaténer un texte
 
 Le mot **concaténer** veut dire enchaîner ou coller ensemble.
 
 L'opérateur `+` permet de concaténer deux chaînes de texte.
-Mais juxtaposer deux chaines de texte et les séparer par zéro ou plusieurs espaces va aussi concaténer la chaîne.
+Mais juxtaposer deux chaînes de texte et les séparer par zéro ou plusieurs espaces va aussi concaténer la chaîne.
 
 ```{codeplay}
 print('bon'    'jour')
@@ -60,10 +60,10 @@ print('bon''jour')
 print('bon' + 'jour')
 ```
 
-## La longueur d'une chaine
+## La longueur d'une chaîne
 
-La fonction `len()` retourne la longueur d'une chaine.
-La chaine vide (`""`) a une longueur de 0.
+La fonction `len()` retourne la longueur d'une chaîne.
+La chaîne vide (`""`) a une longueur de 0.
 
 ```{codeplay}
 print(len('bonjour'))
@@ -86,6 +86,36 @@ print('=' * len(x))
 ```
 
 **Exercice** : Entourez votre texte d'un autre symbole.
+
+## Le code ASCII
+
+Le code ASCII  (American Standard Code for Information Interchange) définit un ensemble de lettres, chiffres, symboles et ponctuations et y associe un code.
+
+La fonction `ord(c)` retourne le code ASCII qui est associé au caractère `c`.
+
+```{codeplay}
+print('A =', ord('A'))
+print('B =', ord('B'))
+print('a =', ord('a'))
+```
+
+Nous constatons que :
+
+- le code ASCII pour la lettre A est 65,
+- les codes suivent l'ordre de l'alphabet,
+- les codes des minuscules ont un écart de 32 par rapport au code des majuscules.
+
+```{codeplay}
+for c in 'Python':
+    print(c, '=', ord(c))
+```
+
+La fonction `chr(i)` retourne le caractère qui correspond au code `i`.
+
+```{codeplay}
+for i in range(65, 75):
+    print(i, '=', chr(i))
+```
 
 ## L'art ASCII
 
@@ -146,37 +176,9 @@ print('4\tsouris\t15.95')
 print('12\tclavier\t25.95')
 ```
 
-## Le code ASCII
-
-La fonction `ord(c)` retourne le code ASCII qui est associé au caractère `c`.
-
-```{codeplay}
-print('A =', ord('A'))
-print('B =', ord('B'))
-print('a =', ord('a'))
-```
-
-Nous constatons que :
-
-- le code ASCII pour la lettre A est 65,
-- les codes suivent l'ordre de l'alphabet,
-- les codes des minuscules ont un écart de 32 par rapport au code des majuscules.
-
-```{codeplay}
-for c in 'Python':
-    print(c, '=', ord(c))
-```
-
-La fonction `chr(i)` retourne le caractère qui correspond au code `i`.
-
-```{codeplay}
-for i in range(65, 75):
-    print(i, '=', chr(i))
-```
-
 ## Les emojis
 
-Un émoji est une petite image qui peut être utilisée à l'intérieur d'un texte.
+Un émoji est une petite image qui peut être utilisée comme un caractère à l'intérieur d'un texte.
 Nous pouvons les répéter avec l'opérateur `*` et obtenir leur **Unicode** avec la fonction `ord(c)`.
 
 ```{codeplay}
@@ -217,17 +219,18 @@ for i in  range(n, n + 10):
     print(i, chr(i))
 ```
 
-Exercice : Affichez les 10 kanjis qui suivent 語.
+Exercice : Affichez les 10 kanjis qui suivent 語 (langage).
+
 ## Les commentaires
 
-Un commentaire en Python est un bout de code qui est ignoré par Python.
+En Python, un commentaire est un bout de code qui est ignoré par Python.
 Un commentaire commence par le symbole hashtag (`#`).
 
 Les commentaires sont utilisés pour ajouter à un programme des informations supplémentaires :
 
-- explications
-- nom de l'auteur
-- révisions
+- explications,
+- nom de l'auteur,
+- révision.
 
 Parfois un commentaire est utilisé pour désactiver une ligne de code.
 La plupart des éditeurs marquent les commentaires en couleur grisée.
@@ -235,14 +238,14 @@ La plupart des éditeurs marquent les commentaires en couleur grisée.
 ```{codeplay}
 # commentaire sur une ligne
 
-print('bonjour')  # commentaire en fin de ligne
+print('bonjour')  # commentaire en fin de ligne
 print("# ceci n'est pas un commentaire")
 # print('au revoir')
 
 """
 Ceci est 
 un long commentaire
-sur plusieur lignes.
+sur plusieurs lignes.
 """
 ```
 
@@ -250,7 +253,7 @@ sur plusieur lignes.
 
 ## La fonction `write()`
 
-Dans le module `turtle` nous avons fonction `write()` qui permet d'afficher du texte à l'intérieur d'un dessin. Cette fonction permet de spécifier la police sous forme de tuple (police, taille).
+Dans le module `turtle` nous avons la fonction `write()` qui permet d'afficher du texte à l'intérieur d'un dessin. Cette fonction permet de spécifier la police sous forme de paire (police, taille).
 
 ```{codeplay}
 from turtle import *
@@ -267,6 +270,3 @@ forward(40)
 write('Arial 36', font=('Arial', 36))
 ```
 
-```{codeplay}
-
-```

@@ -3,12 +3,12 @@
 Dans ce chapitre nous allons voir de plus près le concept de la fonction, concept que nous avons vu dès le premier chapitre comme façon de donner un nom à une séquence d'instructions.
 
 En fait, la fonction est peut-être le concept le plus important dans la programmation.
-C'est un moyen puissant pour inventer des nouvelles commandes dans un langage de programmation.
+C'est un moyen puissant pour inventer des nouvelles commandes dans un langage de programmation. Nous allons voir que
 
-- le mot-clé `def` permet de définir une fonction
-- le mot-clé `return` permet de retourner une valeur
-- un paramètre `f(param0, ...)` est une variable dans la définition de fonction
-- un argument `f(arg0, ...)` est une valeur dans l'appel de fonction
+- le mot-clé `def` permet de définir une fonction,
+- le mot-clé `return` permet de retourner une valeur,
+- un paramètre `f(param0, ...)` est une variable dans la définition de fonction,
+- un argument `f(arg0, ...)` est une valeur dans l'appel de fonction.
 
 ## Un fonction simple
 
@@ -29,7 +29,7 @@ for i in range(10):
 
 ## Paramétrer la fonction
 
-Jusqu'a maintenant notre carré a toujours eu la même taille.
+Jusqu'à maintenant notre carré a toujours eu la même taille.
 Il serait très utile si notre nouvelle commande `carre(longueur)` pouvait dessiner des carrés de taille différentes.
 C'est possible en spécifiant un paramètre pour la fonction.
 Le paramètre de la fonction est une variable locale qui est utilisé dans sa définition.
@@ -85,15 +85,15 @@ for x in range(30, 180, 30):
     forward(x)
 ```
 
-**Exercice** : Ecartez les carrés de 20 pixels.
+**Exercice** : Ecartez les carrés de 20 pixels.
 
 ## Fonctions natives
 
 Voici quelques fonctions natives, c'est à dire des fonctions standards qui font partie de Python :
 
 - la fonction `pow(m, e)` retourne la puissance de ses deux arguments ($m^e$),
-- la fonction `len(a)` retourne la longueur d'une chaine de caractères ou d'une liste,
-- la fonction `round(n)` retourne l'arrondi d'une valeur numérique.
+- la fonction `len()` retourne la longueur d'une chaine de caractères ou d'une liste,
+- la fonction `round()` retourne l'arrondi d'une valeur numérique.
 
 ```{codeplay}
 print(pow(3, 5))
@@ -101,14 +101,14 @@ print(len("Bonjour"))
 print((round(333.76)))
 ```
 
-**Exercice :** : Ajoutez une ligne avec la fonction `min` qui retourne la valeur minimale des arguments qu'on lui fournit.
+**Exercice** : Ajoutez une ligne de code avec la fonction `min` qui retourne la valeur minimale des arguments qu'on lui fournit.
 
 ## Valeur de retour
 
 L'instruction `return` permet de retourner une valeur.
 Le grand intérêt d'une valeur de retour est qu'on peut l'utiliser de nouveau dans des expression.
 
-Par exemple nous pouvons créer une expression comme celle-ci : `square(x) + cube(x)`
+Par exemple nous pouvons créer une expression comme celle-ci : `square(x) + cube(x)`
 
 ```{codeplay}
 def carre(x):
@@ -143,7 +143,7 @@ x = int(input('Entrez un nombre: '))
 print(x, 'est', signe(x))
 ```
 
-**Exercice** : Testez avec -2, 0 et 3.
+**Exercice** : Testez avec -2, 0 et 3.
 
 ## Dessiner un pixel
 
@@ -173,7 +173,7 @@ pixel(100, 'red')
 ## Dessiner Pikachu
 
 Nous définissons une nouvelle fonction `ligne(couleurs)` pour dessiner une série de pixels, qui sont donnés par une liste de couleurs.
-Quand le dernier pixel de la ligne est dessiné, la tortue est retourné à la position prête pour dessiner la ligne suivante.
+Quand le dernier pixel de la ligne est dessiné, la tortue est retournée à la position prête pour dessiner la ligne suivante.
 
 ```{codeplay}
 from turtle import *
@@ -204,4 +204,4 @@ ligne(['yellow', 'yellow', 'yellow', 'yellow'])
 ligne(['yellow', 'yellow', 'yellow', 'white'])
 ```
 
-**Exercice** : Dessinez un autre Pokemon.
+**Exercice** : Dessinez un autre Pokemon.
