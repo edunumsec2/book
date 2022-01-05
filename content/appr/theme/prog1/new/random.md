@@ -1,10 +1,10 @@
 # Subir - `random`
 
-Dans ce chapitre nous verrons comment un programme peux 'subir' des influences aléatoires. Ceci est très important pour programmer certains jeux.
+Dans ce chapitre nous verrons comment un programme peux 'subir' des influences aléatoires. Ceci est très important pour programmer certains jeux. Nous allons voir que
 
-- la fonction `random()` retourne une valeur aléatoire dans l'intervalle [0, 1]
-- la fonction `randint(a, b)` retourne un entier aléatoire dans l'intervalle [a, b]
-- la fonction `shuffle(liste)` fait une permutation aléatoire des éléments d'une liste
+- la fonction `random()` retourne une valeur aléatoire dans l'intervalle [0, 1],
+- la fonction `randint(a, b)` retourne un entier aléatoire dans l'intervalle [a, b],
+- la fonction `shuffle(liste)` fait une permutation aléatoire des éléments d'une liste.
 
 ## Le contenu du module
 

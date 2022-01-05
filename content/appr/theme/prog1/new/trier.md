@@ -3,9 +3,11 @@
 Dans ce chapitre nous allons découvrir quelques algorithmes de tri. 
 Pouvoir trier les éléments d'une liste est une fonctionnalité fondamentale dans l'informatique. Le succès énorme de Google est basé sur un tri efficace de l'information, car dans une liste triée on peux trouver un élément **beaucoup** plus vite.
 
-- la fonction `min(liste)` retourne le minimum
-- la fonction `max(liste)` retourne le maximum
-- la méthode `liste.sort()` trie une liste
+Nous allons voir que
+
+- la fonction `min(liste)` retourne le minimum,
+- la fonction `max(liste)` retourne le maximum,
+- la méthode `liste.sort()` trie une liste.
 
 ## Fonction `min` et `max`
 

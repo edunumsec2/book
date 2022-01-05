@@ -1,20 +1,20 @@
 # Grouper - `list`
 
-Dans ce chapitre nous découvrons une nouvelle structure de données - les listes.
+Dans ce chapitre nous découvrons une nouvelle structure de données - les listes. Nous allons voir que
 
-- une liste est un séquence d'objets entre crochets `[2, 3, 5]`
-- la notation d'index `liste[i]` permet d'accéder au i-ème élément de la liste
-- la notation de tranche `liste[i:j]` permet d'accéder à une sous-liste
+- une liste est un séquence d'objets entre crochets tel que `[2, 3, 5]`, 
+- la notation d'index `liste[i]` permet d'accéder au i-ème élément de la liste, 
+- la notation de tranche `liste[i:j]` permet d'accéder à une sous-liste.
 
 ## Des groupes d'objets
 
-Une liste permet de manipuler des groupes d'objets tel que :
+Une liste permet de manipuler des groupes d'objets tel que :
 
 - noms d'élèves
 - notes d'un cours
 - couleurs
 
-En Python on peut grouper des objets avec une liste. Une liste est ordonnée, ce qui veut dire qu'il y a un premier objet et un dernier objet.
+En Python, on peut grouper des objets divers dans une liste. Une liste est ordonnée, ce qui veut dire qu'il y a un premier objet et un dernier objet.
 
 ```{codeplay}
 noms = ['Tim', 'Kim', 'Anna', 'Cindy']
@@ -25,13 +25,13 @@ print(noms)
 print(notes)
 ```
 
-**Exercice** : Ajoutez une nouvelle liste at affichez-la.
+**Exercice** : Ajoutez une nouvelle liste et affichez-la.
 
-En Python,une liste est délimitée par des crochets `[]` ses éléments sont séparés par des virgules `,`.
+En Python, une liste est délimitée par des crochets `[]` et ses éléments sont séparés par des virgules `,`.
 
 ## La fonction `len()`
 
-La fonction `len` retourne la longueur d'une liste, c'est à dire le nombre d'éléments qu'elle contient.
+La fonction `len()` retourne la longueur d'une liste, c'est à dire le nombre d'éléments qu'elle contient.
 
 ```{codeplay}
 noms = ['Tim', 'Kim', 'Anna', 'Cindy']
@@ -40,9 +40,9 @@ couleurs = ['fuchsia', 'pink', 'orange']
 
 print(len(noms))
 print(len(notes))
-````
+```
 
-**Exercice** : Ajoutez des éléments à une liste at affichez de nouveau sa longueur.
+**Exercice** : Ajoutez des éléments à une liste at affichez de nouveau sa longueur.
 
 ## La fonction `list()`
 
@@ -54,27 +54,9 @@ print(list(range(10)))
 print(list(range(100, 150, 7)))
 ```
 
-## Créer une liste
-
-Nous utilisons une boucle `while` pour demander des noms à l'utilisateur. 
-On ne peut pas savoir à l'avance combien de noms il y aura, donc ici nous ne pouvons pas utiliser la boucle `for`.  Nous prenons comme condition de terminaison une réponse avec une chaîne vide (`''`).
-
-La convention est d'utiliser des noms au pluriel (`noms`) pour désigner la liste et le même nom au singulier (`nom`) pour désigner un de ses éléments.
-
-```{codeplay}
-noms = []
-nom = input('Entrez un nom: ')
-
-while nom != '':
-    noms.append(nom)
-    nom = input('Entrez un nom: ')
-    
-print(noms)
-```
-
 ## Index `[i]`
 
-Nous pouvons accéder à un élément de la liste en utilisant un numéro entre crochets `[]`, appelé _index_. L'index d'un élément est toujours un nombre entier. En Python, comme dans beaucoup de langages de programmation, l'index pour le premier élément de la liste est 0 et non pas 1. Ainsi, les éléments d'une liste de longueur `n` auront comme premier index 0 et comme dernier index `n - 1`.
+Nous pouvons accéder à un élément de la liste en utilisant un numéro entre crochets `[]`, appelé **index**. L'index d'un élément est toujours un nombre entier. En Python, comme dans beaucoup de langages de programmation, l'index pour le premier élément de la liste est 0 et non pas 1. Ainsi, les éléments d'une liste de longueur `n` auront comme premier index 0 et comme dernier index `n - 1`.
 
 ```{codeplay}
 noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
@@ -86,7 +68,7 @@ print(noms[-2])
 
 Un index négatif désigne un élément d'une liste pris depuis la fin de la liste.
 
-Les chaines de caractères (`str`) peuvent aussi être indexé.
+Les chaînes de caractères (`str`) peuvent aussi être indexé.
 
 ```{codeplay}
 noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
@@ -97,7 +79,7 @@ print(noms[-1][2])
 
 ## Tranche `[i:j]`
 
-La notation `[i:j]`, après le nom d'une variable qui contient une liste, permet d'extraire une tranche de la liste, c'est à dire une partie de la liste telle qu'identifiée par ses bornes, les deux index `i` et `j`.
+La notation `[i:j]`, après le nom d'une variable qui contient une liste, permet d'extraire une sous-liste de la liste. Cette sous-liste, aussi appelé **tranche**, est une partie de la liste identifiée par les deux index `i` et `j`.
 
 ```{codeplay}
 noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
@@ -110,7 +92,7 @@ print(noms[::2])   # chaque 2e élément
 print(noms[1::2])  # chaque 2e élément
 ```
 
-**Exercice** : Modifiez l'expression de tranche et exécutez de nouveau.
+**Exercice** : Modifiez l'expression de tranche et exécutez de nouveau.
 
 ## Itérer sur une liste
 
@@ -148,14 +130,13 @@ print(5 * [1])
 ## Ajouter des éléments
 
 Une **méthode** fonctionne comme une fonction, mais est rattachée à une liste avec la notation (`.`). 
-Par exemple si `a` désigne une liste, on peux ajouter un élément `x` à la fin de cette liste avec l'expression `a.append(x)`. 
+Par exemple si `a` désigne une liste, on peux ajouter un élément `x` à la fin de cette liste avec l'expression `a.append(x)`.
 
-Ces trois méthodes différentes permettent d’ajouter des éléments à une liste existante :
+Ces trois méthodes permettent tous d’ajouter des éléments à une liste existante :
 
 - `append(x)`,
 - `extend(iterable)`,
 - `insert(i, x)`.
-
 
 ```{codeplay}
 a = [1, 2, 3]
@@ -163,7 +144,7 @@ a.append(99)
 print(a)
 ```
 
-La méthode `extend(itérable)` ajoute plusieurs éléments. Un *itérable* est une séquence telle qu'une liste, une chaîne de caractères (texte), un ensemble, un tuple, ..., c'est à dire un objet pour lequel on peut itérer sur les objets élémentaires le constituant. 
+La méthode `extend(iterable)` ajoute plusieurs éléments. Un **itérable** est une séquence telle qu'une liste ou une chaîne de caractères (texte),  c'est à dire un objet qui permet d'itérer sur ses éléments.
 
 ```{codeplay}
 a = [1, 2, 3]
@@ -182,7 +163,7 @@ print(a)
 
 ## Enlever des éléments
 
-Les méthodes suivantes permettent d'enlever des éléments à une liste.
+Les méthodes suivantes permettent d'enlever des éléments à une liste :
 
 - `remove(x)`,
 - `pop(i)`,
@@ -224,13 +205,13 @@ print(a)
 
 Les listes disposent aussi de méthodes avec notation dotée :
 
-- `liste.sort()` pour trier une liste
-- `liste.reverse()` pour inverser l'ordre des éléments
-- `liste.count(x)` pour compter l'occurrence d'un élément x
+- `liste.sort()` pour trier une liste,
+- `liste.reverse()` pour inverser l'ordre des éléments,
+- `liste.count(x)` pour compter l'occurrence d'un élément x.
 
 ### Trier une liste
 
-La méthode `sort()` trie la liste dans l'ordre croissant (pour les caractères, on se réfère au code ASCII ou UTF utilisé). 
+La méthode `sort()` trie la liste dans l'ordre croissant (pour les caractères, on se réfère au code ASCII ou UTF utilisé).
 Cette méthode fonctionne uniquement si tous les éléments sont évidemment du même type (nombre, texte) et peuvent être comparés. 
 
 ```{codeplay}
@@ -263,7 +244,7 @@ affiche(a, 'red', 'triée')
 hideturtle()
 ```
 
-**Exercice** : Ajoutez 5 éléments en plus.
+**Exercice** : Ajoutez 5 éléments en plus.
 
 ### Inverser une liste
 
@@ -359,8 +340,7 @@ print(s)
 ## Compréhension de liste
 Une **compréhension de liste** est une spécificité «élégante» du langage Python qui permet de construire de manière compacte des listes sur une seule ligne.
 
-Voici un exemple de construction «traditionnelle» d'une liste où on ajoute un élément après l'autre avec une boucle :
-
+Voici un exemple de construction «traditionnelle» d'une liste où on ajoute un élément après l'autre avec une boucle.
 
 ```{codeplay}
 cubes = []
@@ -369,15 +349,16 @@ for i in range(10):
 print(cubes)
 ```
 
-En utilisant la compréhension de liste, on peut construire la même liste sur une seule ligne :
+En utilisant la compréhension de liste, on peut construire la même liste sur une seule ligne.
 
 ```{codeplay}
 print([i ** 3 for i in range(10)])
 ```
 
-On peut comprendre cette formulation de la manière suivante : *«la liste cubes indicée par i prend la valeur i<sup>3</sup> pour toutes les valeurs de i de 0 à 9.»*
+On peut comprendre cette formulation de la manière suivante : la liste cubes indicée par i prend la valeur $i^3$ pour toutes les valeurs de i de 0 à 9.
 
-Une condition peut être ajoutée dans la compréhension (par exemple, pour n'ajouter à la liste que les valeurs impaires) :
+Une condition peut être ajoutée dans la compréhension (par exemple, pour n'ajouter à la liste que les valeurs impaires).
+L'opérateur `%` est l'opérateur modulo qui renvoie le reste de la division.
 
 ```{codeplay}
 a = []
@@ -386,7 +367,6 @@ for i in range(10):
         a.append(i ** 2)
 print(a)
 ```
-*Note : l'opérateur % est l'opérateur modulo, c'est à dire renvoie le reste de la division par 2.*
 
 Nous pouvons alors écrire la formation de cette liste en une seule ligne.
 
@@ -401,7 +381,7 @@ Une **pile** est une structure de données qui permet de gérer l'arrivée et le
 En anglais cette structure s'appelle **stack** ou **LIFO** (last in first out).
 
 L'exemple suivant est une pile qui accumule des entiers.
-Répondre avec une chaine vide, enlève le dernier élément mis sur la pile, jusqu'à ce que la pile est vide.
+Si répondez avec une chaîne vide, ceci enlève le dernier élément mis sur la pile, jusqu'à ce que la pile est vide.
 
 ```{codeplay}
 x = input('[] < ')
@@ -417,7 +397,7 @@ while x or len(pile):
 print('fin')
 ```
 
-**Exercice** : Ajoutez des objets (nombres, texte) sur la pile. Enlevez avec Enter.
+**Exercice** : Ajoutez des objets (nombres, texte) sur la pile. Enlevez un élément avec *Enter*.
 
 ## La file d'attente
 
@@ -428,7 +408,7 @@ Dans une file d'attente devant un guichet, la première personne arrivée est la
 En anglais cette structure s'appelle **buffer** ou encore **FIFO** (first in first out).
 
 L'exemple suivant est une file d'attente pour des entiers.
-Répondre avec une chaine vide, enlève le plus ancien élément de la file, jusqu'à ce que la file est vide.
+Si vous répondez avec une chaîne vide, ceci enlève le plus ancien élément de la file, jusqu'à ce que la file est vide.
 
 ```{codeplay}
 x = input('[] < ')
@@ -444,4 +424,4 @@ while x or len(file):
 print('fin')
 ```
 
-**Exercice** : Ajoutez des objets (nombres, texte) à la file. Enlevez avec Enter.
+**Exercice** : Ajoutez des objets (nombres, texte) à la file. Enlevez avec *Enter*.
