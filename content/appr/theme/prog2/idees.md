@@ -317,16 +317,32 @@ getturtle().onrelease(release)
 getscreen().listen()
 ```
 
-```{codeplay}
- 
-```
+## Le Zen de Python
+
+Le Zen de Python est un ensemble de 19 principes qui influencent la conception du langage de programmation Python, et sont utiles pour comprendre et utiliser le langage.
+
+Il est aussi inclus comme "Easter egg" dans Python, et apparait quand on tape la commande `import this`.
 
 ```{codeplay}
- 
+import this
 ```
 
+## Mot-clés de Python
+
+Ce module contient la liste de tous les mot-clés de Python.
+
 ```{codeplay}
- 
+import keyword
+a = keyword.kwlist
+print(a)
+print(len(a)) 
+```
+
+## Expression réguliers
+
+```{codeplay}
+import re
+print(dir(re))
 ```
 
 ```{codeplay}

@@ -1,12 +1,16 @@
 # Trier - `sort`
 
-Pouvoir trier les éléments dans une liste est une fonctionnalité fondamentale dans l'informatique. Le succès énorme de Google est basé sur un tri efficace de l'information.
+Dans ce chapitre nous allons découvrir quelques algorithmes de tri. 
+Pouvoir trier les éléments d'une liste est une fonctionnalité fondamentale dans l'informatique. Le succès énorme de Google est basé sur un tri efficace de l'information, car dans une liste est triée on peux trouver un élément **beaucoup** plus vite.
 
-Les éléments de la liste peuvent être des nombres, des mots, ou des phrases. Si une liste est triée il devient très facile de trouver un élément dans la liste.
+- la fonction `min(liste)` retourne le minimum
+- la fonction `max(liste)` retourne le maximum
+- la méthode `liste.sort()` trie une liste
 
 ## Fonction `min` et `max`
 
-Les fonctions `min()` et `max()` retournent le minimum et le maximum d'une liste.
+Les fonctions `min()` et `max()` retournent le minimum et le maximum d'une liste à l'aide d'un algorithme.  
+Mais comment fonctionne cet algorithme ?
 
 ```{codeplay}
 liste = [3, 4, 1, 2, 6, 5]
@@ -15,9 +19,7 @@ print(min(liste))
 print(max(liste))
 ```
 
-**Exercice** : Modifiez la liste et essayez de nouveau.
-
-Comment marche l'algorithme de ces fonctions ?
+**Exercice** : Modifiez la liste avec des nouvelles valeurs et essayez de nouveau.
 
 ## Trouver le minimum
 
@@ -39,6 +41,112 @@ print(min)
 ```
 
 **Exercice** : Modifiez l'algorithme pour trouver le maximum.
+
+## Créer une liste
+
+Pour visualiser les algorithmes que nous allons rencontrer dans ce chapitre,
+nous allons créer des listes avec des nombres aléatoires.
+
+Avec une compréhension nous allons créer :
+
+- une liste `x` avec des valeurs équidistantes dans l'intervalle [-300, 300]
+- une liste `y` avec des valeurs aléatoires dans l'intervalle [-200, 200]
+
+```{codeplay}
+from random import *
+
+n = 10
+d = 600//n
+x0 = 300 - d//2
+y0 = 200 - d//2
+x = [-x0 + i * d for i in range(n)]
+y = [randint(-y0, y0) for i in range(n)]
+
+print('x =', x)
+print('y =', y)
+```
+
+## Visualiser une liste
+
+Nous utilisons les listes `x` et `y` pour afficher des points et visualiser la liste `y`.
+
+```{codeplay}
+from turtle import *
+from random import *
+
+color('blue')
+up()
+
+def create(size, bg='skyblue'):
+    global n, d, x, y
+    getscreen().bgcolor(bg)
+    n = size
+    d = 600/n
+    x0 = 300 - d//2
+    y0 = 200 - d//2
+    x = [-x0 + i * d for i in range(n)]
+    y = [randint(-y0, y0) for i in range(n)]
+                 
+def show():
+    for i in range(n):
+        goto(x[i], y[i])
+        dot(d)
+
+speed(0)
+create(20)
+show()
+```
+
+**Exercice** Modifiez le nombre d'éléments.
+
+## Visualiser un algorithme
+
+Pour visualiser l'algorithme du minimum nous dessinons en rouge les valeurs du minimum courant.
+Cet algorithme :
+
+- prend la première valeur comme minimum courant,
+- parcourt le reste de la liste,
+- garde la valeur comme nouveau minimum si elle est plus petite.
+
+```{codeplay}
+from turtle import *
+from random import *
+
+color('blue')
+up()
+
+def create(size, bg='skyblue'):
+    global n, d, x, y
+    getscreen().bgcolor(bg)
+    n = size
+    d = 600/n
+    x0 = 300 - d//2
+    y0 = 200 - d//2
+    x = [-x0 + i * d for i in range(n)]
+    y = [randint(-y0, y0) for i in range(n)]
+                 
+def show():
+    for i in range(n):
+        goto(x[i], y[i])
+        dot(d)
+=== 
+speed(5)
+create(20)
+show()
+
+color('red')
+for i in range(n):
+    if i == 0:
+        min = y[i]
+    else:
+        if y[i] < min:
+            min = y[i]
+    goto(x[i], min)
+    down()
+    dot(d/2)
+```
+
+**Exercice** Modifiez l'algorithme pour trouver le maximum.
 
 ## L'indice du minimum
 
@@ -62,44 +170,6 @@ print(i_min)
 
 **Exercice** : Modifiez l'algorithme pour trouver l'indice du maximum.
 
-## Enumérer une liste
-
-La fonction `enumerate()` permet d'énumérer une liste. Nous utilisons cette fonction dans une boucle `for` pour itérer à la fois sur l'indice et la valeur. Nous avons donc deux variables d'itération :
-
-- `i` - index de l'élément
-- `val` - valeur de l'élément
-
-```{codeplay}
-liste = [3, 4, 1, 2, 6, 5]
-
-for i, val in enumerate(liste):
-    print(i, val)
-```
-
-**Exercice** : Modifier la liste et exécutez de nouveau.
-
-Il est également possible d'énumérer une chaîne de caractères.
-
-```{codeplay}
-for i, val in enumerate('Python'):
-    print(i, val)
-```
-
-## Minimum et son indice
-
-Avec la fonction `enumerate()` nous pouvons itérer sur index et valeur à la fois.
-
-```{codeplay}
-liste = [3, 4, 1, 2, 6, 5]
-
-i_min, min = 0, liste[0]
-
-for i, val in enumerate(liste):
-    if val < min:
-        i_min, min = i, val
-        
-print(i_min, min)
-```
 
 ## Echanger deux éléments
 
@@ -126,6 +196,148 @@ echange(liste, 0, 2)
 print(liste)
 ```
 
+## Déplacer un point
+
+Pour visualiser le déplacement d'un point de l'indice `i` vers l'indice `j` nous effaçons le premier point en le dessinant en blanc, et nous indiquons avec une flèche le déplacement vers la nouvelle position.
+
+```{codeplay}
+from turtle import *
+from random import *
+
+color('blue')
+up()
+
+def create(size, bg='skyblue'):
+    global n, d, x, y
+    getscreen().bgcolor(bg)
+    n = size
+    d = 600/n
+    x0 = 300 - d//2
+    y0 = 200 - d//2
+    x = [-x0 + i * d for i in range(n)]
+    y = [randint(-y0, y0) for i in range(n)]
+                 
+def show():
+    for i in range(n):
+        goto(x[i], y[i])
+        dot(d)
+===
+def move(i, j):
+    goto(x[i], y[i])
+    color('white')
+    dot(d)
+    down()
+    goto(x[j], y[i])
+    color('blue')
+    dot(d)
+    up()
+
+create(15)
+show()
+move(3, 13)
+```
+
+## Echanger deux points
+
+Pour échanger deux points, il faut :
+
+- déplacer point `i` vers `j`
+- déplacer point `j` vers `i`
+- échanger les deux éléments dans la liste
+
+```{codeplay}
+from turtle import *
+from random import *
+
+color('blue')
+up()
+
+def create(size, bg='skyblue'):
+    global n, d, x, y
+    getscreen().bgcolor(bg)
+    n = size
+    d = 600/n
+    x0 = 300 - d//2
+    y0 = 200 - d//2
+    x = [-x0 + i * d for i in range(n)]
+    y = [randint(-y0, y0) for i in range(n)]
+                 
+def show():
+    for i in range(n):
+        goto(x[i], y[i])
+        dot(d)
+
+def move(i, j):
+    goto(x[i], y[i])
+    color('white')
+    dot(d)
+    down()
+    goto(x[j], y[i])
+    color('blue')
+    dot(d)
+    up()
+===
+def swap(i, j):
+    move(i, j)
+    move(j, i)
+    y[i], y[j] = y[j], y[i]
+
+create(15)
+show()
+swap(3, 13)
+```
+
+## Echanger tous les points
+
+Dans l'exemple suivant nous échangeons deux points successives pour toute la liste. Nous observons que :
+
+- le premier point avance complètement de gauche à droite
+- tous les autres points reculent d'une position
+
+```{codeplay}
+from turtle import *
+from random import *
+
+color('blue')
+up()
+
+def create(size, bg='skyblue'):
+    global n, d, x, y
+    getscreen().bgcolor(bg)
+    n = size
+    d = 600/n
+    x0 = 300 - d//2
+    y0 = 200 - d//2
+    x = [-x0 + i * d for i in range(n)]
+    y = [randint(-y0, y0) for i in range(n)]
+                 
+def show():
+    for i in range(n):
+        goto(x[i], y[i])
+        dot(d)
+
+def move(i, j):
+    goto(x[i], y[i])
+    color('white')
+    dot(d)
+    down()
+    goto(x[j], y[i])
+    color('blue')
+    dot(d)
+    up()
+
+def swap(i, j):
+    move(i, j)
+    move(j, i)
+    y[i], y[j] = y[j], y[i]
+===
+create(15)
+show()
+
+for i in range(n-1):
+    swap(i, i+1)
+```
+
 ## Tri par sélection
 
 L’algorithme du tri par sélection commence par rechercher le plus petit élément de la liste et l’échange avec le premier élément de la liste.
@@ -149,6 +361,8 @@ for i in range(n-1):
     print(liste)
 ```
 
+Avec les fonctions `min()` et `index()` nous pouvons écrire cet algorithme de façon encore plus compact.
+
 ```{codeplay}
 liste = [3, 4, 1, 2, 6, 5]
 
@@ -170,17 +384,17 @@ Ci-dessous mous trions une liste en ordre décroissante, ce qui permet de bien v
 On peut alors observer comment le `4` descend vers le bas, ensuite c'est le tour du `3` de descendre vers le bas, et ainsi de suite.
 
 ```{codeplay}
-a = [5, 4, 3, 2, 1]
-print(a)
+y = [5, 4, 3, 2, 1]
+print(y)
 
-n = len(a)
+n = len(y)
 for i in range(1, n):
     for j in range(i, 0, -1):
-        if a[j] < a[j-1]:
-            a[j], a[j-1] = a[j-1], a[j]
+        if y[j] < y[j-1]:
+            y[j], y[j-1] = y[j-1], y[j]
         else:
             break
-        print(a)
+        print(y)
 ```
 
 ## Tri à bulles
@@ -191,114 +405,16 @@ Ci-dessous mous trions une liste en ordre décroissante, ce qui permet de bien v
 On peut alors observer comment le `5` flotte vers le haut, ensuite c'est le tour du `4` monte vers la surface, comme des bulles dans l'eau.
 
 ```{codeplay}
-a = [5, 4, 3, 2, 1]
-print(a)
+y = [5, 4, 3, 2, 1]
+print(y)
 
-n = len(a)
+n = len(y)
 for i in range(n-1):
     for j in range(n-i-1):
-        if a[j] > a[j+1]:
-            a[j], a[j+1] = a[j+1], a[j]
-        print(a)
+        if y[j] > y[j+1]:
+            y[j], y[j+1] = y[j+1], y[j]
+        print(y)
 ```
-
-## Afficher des valeurs
-
-Le programme ci-dessous crée et affiche `n` valeur aléatoires. Par la suite nous les utilisons pour illustrer les trois algorithmes de tri :
-
-- par bulles
-- par insertion
-- par sélection
-
-```{codeplay}
-from turtle import *
-from random import *
-
-getscreen().bgcolor('skyblue')
-color('blue')
-hideturtle()
-speed(0)
-up()
-a = []
-
-def create(size):
-    global n, d, x0, y0
-    
-    n = size
-    d = 600//n
-    x0 = -300+d//2
-    y0 = 200 - d//2
-    
-    for i in range(n):
-        y = randint(-y0, y0)
-        a.append(y)
-    
-def show():
-    for i in range(n):
-        x = x0 + i * d
-        y = a[i]
-        goto(x, y)
-        dot(d)
-
-create(20)      
-show()
-```
-
-## Echanger deux éléments
-
-```{codeplay}
-from turtle import *
-from random import *
-
-getscreen().bgcolor('skyblue')
-color('blue')
-hideturtle()
-speed(0)
-up()
-a = []
-
-def create(size):
-    global n, d, x0, y0
-    
-    n = size
-    d = 600 //n
-    x0 = -300 + d // 2
-    y0 = 200 - d // 2
-    
-    for i in range(n):
-        y = randint(-y0, y0)
-        a.append(y)
-    
-def show():
-    for i in range(n):
-        x = x0 + i * d
-        y = a[i]
-        goto(x, y)
-        dot(d)
-
-===    
-def swap(i, j):
-    color('white')
-    goto(x0 + i * d, a[i])
-    dot(d)
-    goto(x0 + j * d, a[j])
-    dot(d)
-    
-    color('blue')
-    goto(x0 + i * d, a[j])
-    dot(d)
-    goto(x0 + j * d, a[i])
-    dot(d)
-    
-    a[i], a[j] = a[j], a[i]
-
-create(20)
-show()
-
-for i in range(n-1):
-    swap(i, i+1)
-```
-
 
 ## Bubble sort en action
 
@@ -306,54 +422,46 @@ for i in range(n-1):
 from turtle import *
 from random import *
 
-getscreen().bgcolor('skyblue')
 color('blue')
-hideturtle()
-speed(0)
 up()
-a = []
 
-def create(size):
-    global n, d, x0, y0
-    
+def create(size, bg='skyblue'):
+    global n, d, x, y
+    getscreen().bgcolor(bg)
     n = size
-    d = 600 //n
-    x0 = -300 + d // 2
-    y0 = 200 - d // 2
-    
-    for i in range(n):
-        y = randint(-y0, y0)
-        a.append(y)
-    
+    d = 600/n
+    x0 = 300 - d//2
+    y0 = 200 - d//2
+    x = [-x0 + i * d for i in range(n)]
+    y = [randint(-y0, y0) for i in range(n)]
+                 
 def show():
     for i in range(n):
-        x = x0 + i * d
-        y = a[i]
-        goto(x, y)
+        goto(x[i], y[i])
         dot(d)
-   
-def swap(i, j):
-    color('white')
-    goto(x0 + i * d, a[i])
-    dot(d)
-    goto(x0 + j * d, a[j])
-    dot(d)
-    
-    color('blue')
-    goto(x0 + i * d, a[j])
-    dot(d)
-    goto(x0 + j * d, a[i])
-    dot(d)
-    
-    a[i], a[j] = a[j], a[i]
 
+def move(i, j):
+    goto(x[i], y[i])
+    color('white')
+    dot(d)
+    down()
+    goto(x[j], y[i])
+    color('blue')
+    dot(d)
+    up()
+
+def swap(i, j):
+    move(i, j)
+    move(j, i)
+    y[i], y[j] = y[j], y[i]
 ===
+speed(0)
 create(20)
 show()
 
 for i in range(n-1):
     for j in range(n-i-1):
-        if a[j] > a[j+1]:
+        if y[j] > y[j+1]:
             swap(j, j+1)
 ```
 
@@ -363,54 +471,46 @@ for i in range(n-1):
 from turtle import *
 from random import *
 
-getscreen().bgcolor('skyblue')
 color('blue')
-hideturtle()
-speed(0)
 up()
-a = []
 
-def create(size):
-    global n, d, x0, y0
-    
+def create(size, bg='skyblue'):
+    global n, d, x, y
+    getscreen().bgcolor(bg)
     n = size
-    d = 600 //n
-    x0 = -300 + d // 2
-    y0 = 200 - d // 2
-    
-    for i in range(n):
-        y = randint(-y0, y0)
-        a.append(y)
-    
+    d = 600/n
+    x0 = 300 - d//2
+    y0 = 200 - d//2
+    x = [-x0 + i * d for i in range(n)]
+    y = [randint(-y0, y0) for i in range(n)]
+                 
 def show():
     for i in range(n):
-        x = x0 + i * d
-        y = a[i]
-        goto(x, y)
+        goto(x[i], y[i])
         dot(d)
-        
-def swap(i, j):
-    color('white')
-    goto(x0 + i * d, a[i])
-    dot(d)
-    goto(x0 + j * d, a[j])
-    dot(d)
-    
-    color('blue')
-    goto(x0 + i * d, a[j])
-    dot(d)
-    goto(x0 + j * d, a[i])
-    dot(d)
-    
-    a[i], a[j] = a[j], a[i]
 
+def move(i, j):
+    goto(x[i], y[i])
+    color('white')
+    dot(d)
+    down()
+    goto(x[j], y[i])
+    color('blue')
+    dot(d)
+    up()
+
+def swap(i, j):
+    move(i, j)
+    move(j, i)
+    y[i], y[j] = y[j], y[i]
 ===
+speed(0)
 create(20)
 show()
 
 for i in range(1, n):
     for j in range(i, 0, -1):
-        while a[j] < a[j-1]:
+        while y[j] < y[j-1]:
             swap(j, j-1)
 ```
 
@@ -420,57 +520,84 @@ for i in range(1, n):
 from turtle import *
 from random import *
 
-getscreen().bgcolor('skyblue')
 color('blue')
-hideturtle()
-speed(0)
 up()
-a = []
 
-def create(size):
-    global n, d, x0, y0
-    
+def create(size, bg='skyblue'):
+    global n, d, x, y
+    getscreen().bgcolor(bg)
     n = size
-    d = 600 //n
-    x0 = -300 + d // 2
-    y0 = 200 - d // 2
-    
-    for i in range(n):
-        y = randint(-y0, y0)
-        a.append(y)
-    
+    d = 600/n
+    x0 = 300 - d//2
+    y0 = 200 - d//2
+    x = [-x0 + i * d for i in range(n)]
+    y = [randint(-y0, y0) for i in range(n)]
+                 
 def show():
     for i in range(n):
-        x = x0 + i * d
-        y = a[i]
-        goto(x, y)
+        goto(x[i], y[i])
         dot(d)
-        
-def swap(i, j):
-    color('white')
-    goto(x0 + i * d, a[i])
-    dot(d)
-    goto(x0 + j * d, a[j])
-    dot(d)
-    
-    color('blue')
-    goto(x0 + i * d, a[j])
-    dot(d)
-    goto(x0 + j * d, a[i])
-    dot(d)
-    
-    a[i], a[j] = a[j], a[i]
 
+def move(i, j):
+    goto(x[i], y[i])
+    color('white')
+    dot(d)
+    down()
+    goto(x[j], y[i])
+    color('blue')
+    dot(d)
+    up()
+
+def swap(i, j):
+    move(i, j)
+    move(j, i)
+    y[i], y[j] = y[j], y[i]
 ===
 create(20)
 show()
 
 for i in range(n-1):
     i_min = i
-    min = a[i]
+    min = y[i]
     for j in range(i+1, n):
-        if a[j] < a[i_min]:
+        if y[j] < y[i_min]:
             i_min = j
-            min = a[j]
+            min = y[j]
     swap(i, i_min)
+```
+
+```{codeplay}
+
+```
+
+```{codeplay}
+
+```
+
+```{codeplay}
+
+```
+
+```{codeplay}
+
+```
+
+```{codeplay}
+
+```
+
+```{codeplay}
+
+```
+
+```{codeplay}
+
+```
+
+```{codeplay}
+
+```
+
+```{codeplay}
+
 ```
