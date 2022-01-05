@@ -1,7 +1,7 @@
 # Trier - `sort`
 
 Dans ce chapitre nous allons découvrir quelques algorithmes de tri. 
-Pouvoir trier les éléments d'une liste est une fonctionnalité fondamentale dans l'informatique. Le succès énorme de Google est basé sur un tri efficace de l'information, car dans une liste est triée on peux trouver un élément **beaucoup** plus vite.
+Pouvoir trier les éléments d'une liste est une fonctionnalité fondamentale dans l'informatique. Le succès énorme de Google est basé sur un tri efficace de l'information, car dans une liste triée on peux trouver un élément **beaucoup** plus vite.
 
 - la fonction `min(liste)` retourne le minimum
 - la fonction `max(liste)` retourne le maximum
@@ -23,11 +23,11 @@ print(max(liste))
 
 ## Trouver le minimum
 
-Pour trouver le minimum dans une liste nous :
+Pour trouver le minimum dans une liste il faut :
 
-- prenons la première valeur comme minimum courant,
-- parcourons le reste de la liste,
-- gardons la valeur comme nouveau minimum si elle est plus petite.
+- prendre la première valeur comme minimum courant,
+- parcourir le reste de la liste,
+- garder la valeur comme nouveau minimum si elle est plus petite.
 
 ```{codeplay}
 liste = [3, 4, 1, 2, 6, 5]
@@ -66,6 +66,8 @@ print('x =', x)
 print('y =', y)
 ```
 
+**Exercice** : Modifiez `n` à 14.
+
 ## Visualiser une liste
 
 Nous utilisons les listes `x` et `y` pour afficher des points et visualiser la liste `y`.
@@ -75,6 +77,7 @@ from turtle import *
 from random import *
 
 color('blue')
+speed(0)
 up()
 
 def create(size, bg='skyblue'):
@@ -92,7 +95,6 @@ def show():
         goto(x[i], y[i])
         dot(d)
 
-speed(0)
 create(20)
 show()
 ```
@@ -113,6 +115,7 @@ from turtle import *
 from random import *
 
 color('blue')
+speed(0)
 up()
 
 def create(size, bg='skyblue'):
@@ -130,10 +133,10 @@ def show():
         goto(x[i], y[i])
         dot(d)
 === 
-speed(5)
-create(20)
+create(30)
 show()
 
+speed(3)
 color('red')
 for i in range(n):
     if i == 0:
@@ -146,7 +149,7 @@ for i in range(n):
     dot(d/2)
 ```
 
-**Exercice** Modifiez l'algorithme pour trouver le maximum.
+**Exercice** : Modifiez l'algorithme pour trouver le maximum.
 
 ## L'indice du minimum
 
@@ -170,10 +173,10 @@ print(i_min)
 
 **Exercice** : Modifiez l'algorithme pour trouver l'indice du maximum.
 
-
 ## Echanger deux éléments
 
 Pour échanger deux éléments d'une liste nous utilisons une affectation multiple.
+Ici nous échangeons les deux premiers éléments, donc les éléments avec les indices 0 et 1.
 
 ```{codeplay}
 liste = [3, 4, 1, 2, 6, 5]
@@ -198,13 +201,14 @@ print(liste)
 
 ## Déplacer un point
 
-Pour visualiser le déplacement d'un point de l'indice `i` vers l'indice `j` nous effaçons le premier point en le dessinant en blanc, et nous indiquons avec une flèche le déplacement vers la nouvelle position.
+Pour visualiser le déplacement d'un point de l'indice `i` vers l'indice `j` nous effaçons le premier point en le dessinant en blanc, et nous indiquons avec une ligne le déplacement vers la nouvelle position.
 
 ```{codeplay}
 from turtle import *
 from random import *
 
 color('blue')
+speed(0)
 up()
 
 def create(size, bg='skyblue'):
@@ -234,6 +238,8 @@ def move(i, j):
 
 create(15)
 show()
+
+speed(3)
 move(3, 13)
 ```
 
@@ -250,6 +256,7 @@ from turtle import *
 from random import *
 
 color('blue')
+speed(0)
 up()
 
 def create(size, bg='skyblue'):
@@ -284,6 +291,8 @@ def swap(i, j):
 
 create(15)
 show()
+
+speed(3)
 swap(3, 13)
 ```
 
@@ -299,6 +308,7 @@ from turtle import *
 from random import *
 
 color('blue')
+speed(0)
 up()
 
 def create(size, bg='skyblue'):
@@ -334,6 +344,7 @@ def swap(i, j):
 create(15)
 show()
 
+speed(3)
 for i in range(n-1):
     swap(i, i+1)
 ```
@@ -376,102 +387,14 @@ tri_selection(liste)
 print(liste)
 ```
 
-## Tri par insertion
-
-Le **tri par insertion** est un algorithme de tri utilisé par la plupart des personnes pour trier des cartes à jouer.
-
-Ci-dessous mous trions une liste en ordre décroissante, ce qui permet de bien voir ce qui se passe.
-On peut alors observer comment le `4` descend vers le bas, ensuite c'est le tour du `3` de descendre vers le bas, et ainsi de suite.
-
-```{codeplay}
-y = [5, 4, 3, 2, 1]
-print(y)
-
-n = len(y)
-for i in range(1, n):
-    for j in range(i, 0, -1):
-        if y[j] < y[j-1]:
-            y[j], y[j-1] = y[j-1], y[j]
-        else:
-            break
-        print(y)
-```
-
-## Tri à bulles
-
-L’algorithme du tri à bulles compare les éléments voisins, deux par deux, et les met dans le bon ordre.
-Ci-dessous mous trions une liste en ordre décroissante, ce qui permet de bien voir ce qui se passe.
-
-On peut alors observer comment le `5` flotte vers le haut, ensuite c'est le tour du `4` monte vers la surface, comme des bulles dans l'eau.
-
-```{codeplay}
-y = [5, 4, 3, 2, 1]
-print(y)
-
-n = len(y)
-for i in range(n-1):
-    for j in range(n-i-1):
-        if y[j] > y[j+1]:
-            y[j], y[j+1] = y[j+1], y[j]
-        print(y)
-```
-
-## Bubble sort en action
+Voici une visualisation du tri par séléction.
 
 ```{codeplay}
 from turtle import *
 from random import *
 
 color('blue')
-up()
-
-def create(size, bg='skyblue'):
-    global n, d, x, y
-    getscreen().bgcolor(bg)
-    n = size
-    d = 600/n
-    x0 = 300 - d//2
-    y0 = 200 - d//2
-    x = [-x0 + i * d for i in range(n)]
-    y = [randint(-y0, y0) for i in range(n)]
-                 
-def show():
-    for i in range(n):
-        goto(x[i], y[i])
-        dot(d)
-
-def move(i, j):
-    goto(x[i], y[i])
-    color('white')
-    dot(d)
-    down()
-    goto(x[j], y[i])
-    color('blue')
-    dot(d)
-    up()
-
-def swap(i, j):
-    move(i, j)
-    move(j, i)
-    y[i], y[j] = y[j], y[i]
-===
 speed(0)
-create(20)
-show()
-
-for i in range(n-1):
-    for j in range(n-i-1):
-        if y[j] > y[j+1]:
-            swap(j, j+1)
-```
-
-## Tri par insertion en action
-
-```{codeplay}
-from turtle import *
-from random import *
-
-color('blue')
 up()
 
 def create(size, bg='skyblue'):
@@ -483,57 +406,8 @@ def create(size, bg='skyblue'):
     y0 = 200 - d//2
     x = [-x0 + i * d for i in range(n)]
     y = [randint(-y0, y0) for i in range(n)]
-                 
-def show():
-    for i in range(n):
-        goto(x[i], y[i])
-        dot(d)
 
-def move(i, j):
-    goto(x[i], y[i])
-    color('white')
-    dot(d)
-    down()
-    goto(x[j], y[i])
-    color('blue')
-    dot(d)
-    up()
-
-def swap(i, j):
-    move(i, j)
-    move(j, i)
-    y[i], y[j] = y[j], y[i]
-===
-speed(0)
-create(20)
-show()
-
-for i in range(1, n):
-    for j in range(i, 0, -1):
-        while y[j] < y[j-1]:
-            swap(j, j-1)
-```
-
-## Tri par sélection en action
-
-```{codeplay}
-from turtle import *
-from random import *
-
-color('blue')
-up()
-
-def create(size, bg='skyblue'):
-    global n, d, x, y
-    getscreen().bgcolor(bg)
-    n = size
-    d = 600/n
-    x0 = 300 - d//2
-    y0 = 200 - d//2
-    x = [-x0 + i * d for i in range(n)]
-    y = [randint(-y0, y0) for i in range(n)]
-                 
-def show():
+def show():           
     for i in range(n):
         goto(x[i], y[i])
         dot(d)
@@ -564,7 +438,154 @@ for i in range(n-1):
             i_min = j
             min = y[j]
     swap(i, i_min)
+show()
 ```
+
+**Exercice** : Modifiez la taille de la liste.
+
+## Tri par insertion
+
+Le **tri par insertion** est un algorithme de tri utilisé par la plupart des personnes pour trier des cartes à jouer.
+
+Ci-dessous mous trions une liste en ordre décroissante, ce qui permet de bien voir ce qui se passe.
+On peut alors observer comment le `4` descend vers le bas, ensuite c'est le tour du `3` de descendre vers le bas, et ainsi de suite.
+
+```{codeplay}
+y = [5, 4, 3, 2, 1]
+print(y)
+
+n = len(y)
+for i in range(1, n):
+    for j in range(i, 0, -1):
+        if y[j] < y[j-1]:
+            y[j], y[j-1] = y[j-1], y[j]
+        else:
+            break
+        print(y)
+```
+
+Voici une visualisation du tri par insértion.
+
+```{codeplay}
+from turtle import *
+from random import *
+
+color('blue')
+speed(0)
+up()
+
+def create(size, bg='skyblue'):
+    global n, d, x, y
+    getscreen().bgcolor(bg)
+    n = size
+    d = 600/n
+    x0 = 300 - d//2
+    y0 = 200 - d//2
+    x = [-x0 + i * d for i in range(n)]
+    y = [randint(-y0, y0) for i in range(n)]
+
+def show():          
+    for i in range(n):
+        goto(x[i], y[i])
+        dot(d)
+
+def move(i, j):
+    goto(x[i], y[i])
+    color('white')
+    dot(d)
+    down()
+    goto(x[j], y[i])
+    color('blue')
+    dot(d)
+    up()
+
+def swap(i, j):
+    move(i, j)
+    move(j, i)
+    y[i], y[j] = y[j], y[i]
+===
+create(20)
+show()
+
+for i in range(1, n):
+    for j in range(i, 0, -1):
+        while y[j] < y[j-1]:
+            swap(j, j-1)
+show()
+```
+
+**Exercice** : Modifiez la taille de la liste.
+
+## Tri à bulles
+
+L’algorithme du tri à bulles compare les éléments voisins, deux par deux, et les met dans le bon ordre.
+Ci-dessous mous trions une liste en ordre décroissante, ce qui permet de bien voir ce qui se passe.
+
+On peut alors observer comment le `5` flotte vers le haut, ensuite c'est le tour du `4` monte vers la surface, comme des bulles dans l'eau.
+
+```{codeplay}
+y = [5, 4, 3, 2, 1]
+print(y)
+
+n = len(y)
+for i in range(n-1):
+    for j in range(n-i-1):
+        if y[j] > y[j+1]:
+            y[j], y[j+1] = y[j+1], y[j]
+        print(y)
+```
+
+Voici une visualisation du tri à bulles.
+
+```{codeplay}
+from turtle import *
+from random import *
+
+color('blue')
+speed(0)
+up()
+
+def create(size, bg='skyblue'):
+    global n, d, x, y
+    getscreen().bgcolor(bg)
+    n = size
+    d = 600/n
+    x0 = 300 - d//2
+    y0 = 200 - d//2
+    x = [-x0 + i * 600/n for i in range(n)]
+    y = [randint(-y0, y0) for i in range(n)]
+
+def show():              
+    for i in range(n):
+        goto(x[i], y[i])
+        dot(d)
+
+def move(i, j):
+    goto(x[i], y[i])
+    color('white')
+    dot(d)
+    down()
+    goto(x[j], y[i])
+    color('blue')
+    dot(d)
+    up()
+
+def swap(i, j):
+    move(i, j)
+    move(j, i)
+    y[i], y[j] = y[j], y[i]
+===
+create(20)
+show()
+
+for i in range(n-1):
+    for j in range(n-i-1):
+        if y[j] > y[j+1]:
+            swap(j, j+1)
+show()
+```
+
+**Exercice** : Modifiez la taille de la liste.
 
 ```{codeplay}
 
