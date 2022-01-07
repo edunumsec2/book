@@ -157,35 +157,7 @@ for i in range(n+1):
     print('x' * i + '-' * (n-i))
 
 print(n * (n+1) // 2)
-````
-
-## Equation de 2e degré
-
-```{codeplay}
-from turtle import *
-
-back(280)
-forward(560)
-stamp()
-back(280)
-left(90)
-back(180)
-forward(360)
-stamp()
-up()
-
-color('red')
-
-def f(x): 
-    return 3 * x ** 2 - 5 * x - 40
-
-for x in range(-5, 6):
-    goto(50 * x, 2 * f(x))
-    down()
-    dot()
-````
-
-
+```
 
 ```{codeplay}
 

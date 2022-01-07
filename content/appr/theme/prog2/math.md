@@ -214,6 +214,36 @@ graph(atan, 'red', 'atan')
 graph(cos, 'blue', 'cos')
 ```
 
+## Equation de 2e degré
+
+```{codeplay}
+from turtle import *
+
+def axes():
+    back(280)
+    forward(560)
+    stamp()
+    back(280)
+    left(90)
+    back(180)
+    forward(360)
+    stamp()
+    up()
+
+def f(x): 
+    return 3 * x ** 2 - 5 * x - 40
+
+def tracer():
+    color('red')    
+    for x in range(-5, 6):
+        goto(50 * x, 2 * f(x))
+        down()
+        dot()
+        
+axes()
+tracer()
+```
+
 ```{codeplay}
 
 ```

@@ -1,6 +1,6 @@
 # Compter - `bin`
 
-Compter est l'opération utilisé pour savoir combien d'objets il y a dans un ensemble de taille fini. On utilise alors les nombres naturelles, aussi appelé les entiers non-négifs.
+Compter est l'opération utilisée pour savoir combien d'objets il y a dans un ensemble de taille fini. On utilise alors les nombres naturels, aussi appelé les entiers non-négatifs.
 
 Les humains ont 10 doigts, c'est la raison que nous avons adopté le système décimal. Un ordinateur par contre représente les nombre en système binaire.
 
@@ -8,7 +8,7 @@ Les humains ont 10 doigts, c'est la raison que nous avons adopté le système d�
 - la fonction `oct(d)` retourne un code octale
 - la fonction `hex(d)` retourne un code hexadécimale
 
-## Le système décimal 
+## Le système décimal
 
 Voici les nombres entiers de 0 à 99.
 
@@ -182,8 +182,7 @@ goto(0, 120)
 
 right(360/32)
 for i in range(16):
-    dot()
-    write(i, font=('Courier', 14))
+    write(i, font=('Courier', 14), align='center')
     sety(ycor() - 15)
     write(f'{i:04b}', font=('Courier', 8), align='center')
     sety(ycor() + 15)
@@ -204,12 +203,11 @@ goto(0, 120)
 
 right(360/32)
 for i in range(16):
-    if i <=8: 
-        write(i, font=('Courier', 14))
+    if i < 8: 
+        write(i, font=('Courier', 14), align='center')
     else:
         color('red')
-        write(i-16, font=('Courier', 14))
-    dot()
+        write(i-16, font=('Courier', 14), align='center')
     sety(ycor() - 15)
     write(f'{i:04b}', font=('Courier', 8), align='center')
     sety(ycor() + 15)

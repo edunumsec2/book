@@ -226,43 +226,6 @@ for x in range(-x0, x0+1, 20):
     sleep(0.2)
 ```
 
-## Fonction `onclick`
-
-```{codeplay}
-from turtle import *
-hideturtle()
-speed(0)
-up()
-
-def f(x, y):
-    print('click at', x, y)
-    goto(x, y)
-    dot()
-    
-getscreen().onclick(f)
-getscreen().listen()
-```
-
-## Dessiner une forme
-
-```{codeplay}
-from turtle import *
-hideturtle()
-speed(0)
-up()
-
-def ligne(x, y):
-    goto(x, y)
-    down()
-    dot()
-    
-getscreen().onkey(up, 'u')
-getscreen().onkey(clear, 'c')
-    
-getscreen().onclick(ligne)
-getscreen().listen()
-```
-
 ## Narration
 
 ```{codeplay}
@@ -343,6 +306,107 @@ print(len(a))
 ```{codeplay}
 import re
 print(dir(re))
+```
+
+## Mitsubishi
+
+Le nom Mitsubishi (三菱) signifie *trois losanges* ou *trois diamants* ce qui est réfléchi dans son logo.
+
+```{codeplay}
+from turtle import *
+color('red')
+hideturtle()
+
+def losange():
+    for i in range(2):
+        forward(100)
+        left(60)
+        forward(100)
+        left(120)
+
+left(60)
+for i in range(3):
+    begin_fill()
+    losange()
+    end_fill()
+    left(120)
+```
+
+## ontimer
+
+```{codeplay}
+from turtle import *
+
+up()
+goto(0, 150)
+hideturtle()
+n = 0
+
+def f():
+    global n
+    dot(10)
+    forward(15)
+    right(6)
+    n += 1
+    if n < 60:
+        getscreen().ontimer(f, 1000)
+        
+f()
+```
+
+## Echéquier
+
+```{codeplay}
+from turtle import *
+hideturtle()
+speed(0)
+up()
+
+x0, dx, nx = -160, 40, 10
+y0, dy, ny = -160, 40, 8
+x1 = x0 + nx * dx
+y1 = y0 + ny * dy
+
+for i in range(ny + 1):
+    y = y0 + i * dy
+    goto(x0, y)
+    down()
+    goto(x0 + nx * dx, y)
+    up()
+    
+for i in range(nx + 1):
+    x = x0 + i * dx
+    goto(x, y0)
+    down()
+    goto(x, y0 + ny * dy)
+    up()
+
+def f(x, y):
+    if x0 < x < x1:
+        i = (x - x0) // dx
+    if y0 < y < y1:
+        j = (y - y0) // dy
+
+    x = x0 + i * dx + dx/2
+    y = y0 + j * dy + dy/2
+    
+    goto(x, y)
+    dot(dx)
+    
+getscreen().onclick(f)
+getscreen().listen()
+```
+
+```{codeplay}
+ 
+```
+
+```{codeplay}
+ 
+```
+
+```{codeplay}
+ 
 ```
 
 ```{codeplay}

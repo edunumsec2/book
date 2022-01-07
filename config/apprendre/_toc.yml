@@ -94,12 +94,12 @@ parts:
       - file: content/appr/theme/prog2/bitwise
       - file: content/appr/theme/prog2/recursif
       - file: content/appr/theme/prog2/poo
+      - file: content/appr/theme/prog2/cliquer
       - file: content/appr/theme/prog2/idees
       - file: content/appr/theme/prog2/quiz
       
   - file: content/appr/theme/projets/eleve
   - file: content/appr/theme/reseaux/eleve
-
 
 - caption: Glossaire
   numbered: false
