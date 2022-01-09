@@ -483,6 +483,124 @@ getscreen().onclick(f)
 getscreen().listen()
 ```
 
+## Classe Rect
+
+```{codeplay}
+from turtle import *
+up()
+
+class Rect:
+    def __init__(self, x=0, y=0, w=100, h=50, col='yellow'):
+        self.x = x
+        self.y = y
+        self.w = w
+        self.h = h
+        self.col = col
+        self.draw()
+        
+    def draw(self):
+        goto(self.x, self.y)
+        down()
+        seth(0)
+        fillcolor(self.col)
+        begin_fill()
+        for i in range(2):
+            forward(self.w)
+            left(90)
+            forward(self.h)
+            left(90)
+        end_fill()
+        up()
+    
+Rect()
+Rect(100, -100, col='lime')
+```
+
+## Classe Card
+
+```{codeplay}
+from turtle import *
+up()
+
+class Card:
+    couleur = '♥️♦️'
+
+    def __init__(self, pos=(0, 0), size=(50, 100), r=10, fill='white'):
+        self.pos = pos
+        self.size = size
+        self.r = r
+        self.fill = fill
+        self.show()
+        
+    def outline(self):
+        down()
+        for d in self.size * 2:
+            forward(d)
+            circle(self.r, 90)
+        up()
+        
+    def show(self):
+        goto(self.pos)
+        fillcolor(self.fill)
+        begin_fill()
+        self.outline()
+        end_fill()
+        write('♥️', font=(None, 40))
+        
+Card()
+Card((50, 20), fill='pink')
+Card((100, -120), (100, 50), r=20, fill='lime')
+```
+
+## N-uplet - `tuple`
+
+Un **n-uplet** (tuple) est une séquence d'objets. Ce sont :
+
+- multiple valeurs séparé par une virgule,
+- une seule valeur terminé par une virgule,
+- des parenthèses vides pour le tuple vide.
+
+```{codeplay}
+x = 1, 2
+y = 1,
+z = ()
+
+print(x)
+print(y)
+print(z)
+print(type(x))
+```
+
+Un tuple est le forme idéale pour représenter les deux coordonnées `(x, y)` d'une position, ou longueur et hauteur `(w, h)` d'une taille.
+
+```{codeplay}
+from turtle import *
+up()
+
+pos = 100, -20
+size = 100, 70
+
+print('pos =', pos)
+print('x =', pos[0])
+print('y =', pos[1])
+
+print('size =', size)
+print('w =', size[0])
+print('h =', size[1])
+print('size * 2 =', size * 2)
+
+goto(pos)
+down()
+for d in size * 2:
+    forward(d)
+    left(90)
+```
+
+
+
+```{codeplay}
+
+```
 ```{codeplay}
 
 ```
@@ -490,7 +608,13 @@ getscreen().listen()
 ```{codeplay}
 
 ```
+```{codeplay}
 
+```
+
+```{codeplay}
+
+```
 ```{codeplay}
 
 ```

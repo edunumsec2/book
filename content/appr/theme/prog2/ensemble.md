@@ -1,162 +1,312 @@
 # Ensemble - `set`
 
-## Chercher un élément
+Dans ce chapitre nous découvrons les ensembles. Comme la liste, l'ensemble est une collection d'objets. Mais ses éléments sont uniques et il n'y a pas le concept d'ordre. Nous allons voir que
 
-La fonction cherche un élément dans une liste
+- `set()` est l'ensemble vide,
+- l'ensemble `{1, 3, 2}` comporte 3 éléments,
+- `union()`, `intersection()` et `difference()` sont des opérations sur des ensembles.
 
-```{codeplay}
-from random import *
- 
-a = []
-for i in range(100):
-    x = randint(1, 999)
-    a.append(x)
+## Un ensemble
 
-print(a)
-a.sort()
-print(a)
-```
+Un **ensemble** est une collection d'objets ayant une propriété commune.
 
-L'expression `x in liste` retourne une valeur booléene qui indique si x fait partie de la liste.
+Dans l'exemple suivant nous dessinons d'abord un cercle de rayon `r`.
+Ensuite nous définissons une liste de 10 points à l'aide d'une compréhension de liste.
+Chaque points est désigné par son indice qui va de 0 à 9.
 
-```{codeplay}
-a = [121, 939, 19, 143, 471, 273, 480, 852, 672, 321, 885, 628, 648, 374, 376, 555, 156, 239, 741, 348, 139, 665, 600, 801, 500, 320, 216, 396, 81, 965, 568, 45, 494, 723, 392, 704, 413, 879, 529, 468, 683, 479, 720, 959, 57, 207, 302, 931, 878, 681, 145, 462, 180, 318, 417, 337, 159, 800, 237, 898, 964, 907, 295, 669, 570, 474, 30, 111, 159, 777, 615, 516, 429, 973, 696, 209, 872, 147, 180, 142, 905, 415, 573, 512, 816, 814, 329, 598, 216, 131, 830, 134, 478, 313, 832, 470, 244, 480, 662, 855]
-
-print(855 in a)
-print(856 in a)
-```
+Nous définissons comme ensemble `A` les points qui se trouvent à l'intérieur du cercle et nous les affichons en rouge.
+Les points qui ne font pas partie de l'ensemble `A` sont affichés en bleu.
+Nous commençons avec un ensemble vide `A = set()` et nous ajoutons des éléments avec l'instruction `A.add(i)`.
 
 ```{codeplay}
-a = [121, 939, 19, 143, 471, 273, 480, 852, 672, 321, 885, 628, 648, 374, 376, 555, 156, 239, 741, 348, 139, 665, 600, 801, 500, 320, 216, 396, 81, 965, 568, 45, 494, 723, 392, 704, 413, 879, 529, 468, 683, 479, 720, 959, 57, 207, 302, 931, 878, 681, 145, 462, 180, 318, 417, 337, 159, 800, 237, 898, 964, 907, 295, 669, 570, 474, 30, 111, 159, 777, 615, 516, 429, 973, 696, 209, 872, 147, 180, 142, 905, 415, 573, 512, 816, 814, 329, 598, 216, 131, 830, 134, 478, 313, 832, 470, 244, 480, 662, 855]
-===
-x = 855
-print(x)
-for val in a:
-    if x == val:
-        print(True)
-        break
-
-x = 856
-print(x)
-for val in a:
-    if x == val:
-        print('True')
-        break
-print(False)
 from turtle import *
-n = len(a)
-speed(0)
+from random import *
 
-x = -300
-for y in a:
-    goto(x, y/5)
-    dot()
-    x += 6
-    
-color('red')
-a.sort()
-x = -300
-for y in a:
-    goto(x, y/5)
-    dot()
-    x += 6         
-```
+r = 160
+up()
+goto(0, r)
+down()
+write('A', font=(None, 24), align='center')
+circle(-r)
 
-## Une liste est-elle triée ?
+points = [(randint(-300, 280), randint(-200, 180)) for i in range(10)]
 
-```{codeplay}
-a = [570, 562, 87, 609, 411, 833, 825, 852, 390, 892, 417, 55, 632, 496, 902, 893, 222, 796, 179, 766, 793, 354, 793, 186, 254, 72, 995, 45, 362, 762, 118, 650, 19, 429, 504, 763, 111, 474, 167, 754, 344, 299, 13, 404, 703, 684, 760, 621, 674, 327, 836, 930, 390, 821, 51, 990, 416, 297, 553, 183, 307, 221, 350, 841, 762, 728, 341, 548, 798, 432, 103, 759, 525, 972, 174, 844, 566, 199, 76, 164, 383, 929, 480, 49, 798, 23, 976, 991, 570, 833, 336, 117, 953, 345, 635, 798, 510, 69, 725, 171]
-b = [13, 19, 23, 45, 49, 51, 55, 69, 72, 76, 87, 103, 111, 117, 118, 164, 167, 171, 174, 179, 183, 186, 199, 221, 222, 254, 297, 299, 307, 327, 336, 341, 344, 345, 350, 354, 362, 383, 390, 390, 404, 411, 416, 417, 429, 432, 474, 480, 496, 504, 510, 525, 548, 553, 562, 566, 570, 570, 609, 621, 632, 635, 650, 674, 684, 703, 725, 728, 754, 759, 760, 762, 762, 763, 766, 793, 793, 796, 798, 798, 798, 821, 825, 833, 833, 836, 841, 844, 852, 892, 893, 902, 929, 930, 953, 972, 976, 990, 991, 995]
+A = set()
+i = 0
 
-def is_sorted(a):
-    n = len(a)
-    for i in range(1, n):
-        if a[i-1] > a[i]:
-            return False
-    return True
-
-print(is_sorted(a))
-print(is_sorted(b))
-```
-
-## Recherche binaire
-
-```{codeplay}
-liste = [13, 19, 23, 45, 49, 51, 55, 69, 72, 76, 87, 103, 111, 117, 118, 164, 167, 171, 174, 179, 183, 186, 199, 221, 222, 254, 297, 299, 307, 327, 336, 341, 344, 345, 350, 354, 362, 383, 390, 390, 404, 411, 416, 417, 429, 432, 474, 480, 496, 504, 510, 525, 548, 553, 562, 566, 570, 570, 609, 621, 632, 635, 650, 674, 684, 703, 725, 728, 754, 759, 760, 762, 762, 763, 766, 793, 793, 796, 798, 798, 798, 821, 825, 833, 833, 836, 841, 844, 852, 892, 893, 902, 929, 930, 953, 972, 976, 990, 991, 995]
-
-a = 0
-b = len(liste)
-x = 995
-
-while b - a > 0:
-    m = (a + b) // 2
-    print(a, m, b, liste[m])
-    
-    if x == liste[m]:
-        break
-    elif x < liste[m]:
-        b = m
+up()
+for point in points:
+    goto(point)
+    if point[0]**2 + point[1]**2 < r**2:
+        color('red')
+        A.add(i)
     else:
-        a = m + 1
-    
-print(liste[m] == x)
+        color('blue')
+    dot(10)
+    write(f'   {i}', font=(None, 12))
+    i += 1
+hideturtle()
+
+print('A =', A)
 ```
 
+**Exercice** : Doublez le nombre des points.
 
-## Noeuds aléatoires d'un graphe
+## Diagramme de Venn
+
+Un **diagramme de Venn** montre graphiquement la relation entre différents ensembles.
+
+Dans l'exemple suivant nous montrons les 3 situations :
+
+- les deux ensembles A et B sont disjoints,
+- les deux ensembles A et B ont une intersection non vide,
+- l'ensemble B est totalement inclus dans l'ensemble A.
 
 ```{codeplay}
 from turtle import *
-from random import *
 up()
 
-pos = []
-for i in range(10):
-    x = randint(-280, 280)
-    y = randint(-180, 180)
-    pos.append((x, y))
-    goto(x, y)
-    dot(10)
-    write(i, font=(None, 18))
-````
+def ensemble(x, texte, d=80):
+    goto(x, 0)
+    color(1, 0, 0, 0.5)
+    dot(d)
+    color('black')
+    write(texte, font=(None, 14), align='center')
+    
+def etiquette(x, texte):
+    goto(x, 100)
+    write(texte, font=(None, 14), align='center')
+    
+    
+etiquette(-175, 'ensembles disjoints')
+ensemble(-220, 'A')
+ensemble(-130, 'B')
 
-## Attributs
+etiquette(25, 'intersection')
+ensemble(0, 'A')
+ensemble(50, 'B')
 
-beau - laid
-riche - pauvre
-intélligent - stupid
-grand - petit
-gros - maigre
-généreux - avare
-courageux - timide
-extroverti - introverti
-sportif - sédentaire
+etiquette(200, 'inclusion')
+ensemble(200, 'A')
+ensemble(220, 'B', 40)
+hideturtle()
+```
 
-```{codeplay}
-Toni = {'beau':True, 'riche':True, 'grand':True}
-print(Toni['beau'])
-print(Toni['grand'])
-````
+**Exercice** : Changez la couleur des diagrammes en vert.
 
-## Ordre du tri par séléction
+## Des éléments uniques
 
-Quel est la somme de 1 + 2 + 3 + ... n ?  
-Graphiquement ceci nous donne la surface d'un triangle.
-Si nous affichons
-- `x` sur la première ligne
-- `xx` sur la deuxième ligne
-- n fois `x` sur la dernière ligne
-
-la réponse à la formule est la somme des x.
-Nous pouvons ajouter un triangle identique (cette fois dessiné avec des traits (`-`)), ce qui nous donne un rectangle de taille `(n) * (n+1)`.
-La taille du triangle est donc  `(n) * (n+1) / 2`.
+Les éléments d'un ensemble sont uniques. Chaque élément apparait seulement une fois.
+Le comportement est différent de celui d'une liste, ou des éléments peuvent apparaitre multiple fois.
 
 ```{codeplay}
-n = 10
-for i in range(n+1):
-    print('x' * i + '-' * (n-i))
+liste = [1, 2, 4, 2, 1, 3, 1]
+ensemble = {1, 2, 4, 2, 1, 3, 1}
 
-print(n * (n+1) // 2)
+print('liste =', liste)
+print('ensemble =', ensemble)
+```
+
+**Exercice** : Affichez la longueur de la liste et de l'ensemble.
+
+## Les méthodes `set`
+
+Voici toutes les méthodes définis pour le type `set`.
+
+```{codeplay}
+print(dir(set()))
+```
+
+A l'aide d'une liste de compréhension nous allons afficher seulement les méthodes qui ne commencent pas avec un tiret bas.
+
+
+```{codeplay}
+print('set :')
+print([x for x in dir(set()) if not x.startswith('_')])
+
+print('\nlist :')
+print([x for x in dir(list()) if not x.startswith('_')])
+```
+
+**Exercice** : Affichez aussi les méthodes pour le type `dict`.
+
+## L'union
+
+L'union de deux ensemble est l'ensemble des éléments qui fait partie des deux.
+
+```{codeplay}
+A = {1, 2, 3, 4}
+B = {3, 4, 5}
+
+print('union =', A.union(B))
+```
+
+Avec un diagramme de Venn nous représentons l'union des deux ensembles A et B avec la région rose.
+
+```{codeplay}
+from turtle import *
+up()
+
+color(1, 0, 0, 0.5)
+d = 200
+
+goto(-70, 0)
+dot(d)
+write('A', font=(None, 24), align='center')
+
+goto(70, 0)
+dot(d)
+write('B', font=(None, 24), align='center')
+
+hideturtle()
+```
+
+**Exercice** : Ajoutez un ensemble `C` qui a une intersection non-vide avec `A` et `B`.
+
+## L'intersection
+
+L'ensemble des éléments qui sont à la fois dans `A` et dans `B` constituent l'**intersection** de `A` et `B`.
+
+```{codeplay}
+from turtle import *
+
+r = 120
+fillcolor(1, 0, 0, 0.5)
+
+up()
+goto(0, 0.8 * r)
+down()
+
+left(150)
+circle(r, 240)
+right(60)
+circle(r, 240)
+
+begin_fill()
+circle(r, 120)
+left(60)
+circle(r, 120)
+end_fill()
+```
+
+Dans l'exemple suivant, nous créons une classe `Ensemble` qui permet de dessiner un diagramme de Venn avec :
+
+- position x, y
+- rayon r
+- étiquette
+
+La méthode `inside(x, y)` permet de déterminer si un point `(x, y)` fait partie de l'ensemble.
+
+Ensuite nous créons des points aléatoires dans toutes la surface du canevas.
+Avec `A.inside(x, y) and B.inside(x, y)` nous sélectionnons la réunion.
+
+```{codeplay}
+from turtle import *
+from random import *
+
+hideturtle()
+speed(0)
+up()
+
+class Ensemble:
+    def __init__(self, x, y, r, label):
+        self.x = x
+        self.y = y
+        self.r = r
+        self.label = label
+        self.draw()
+    
+    def inside(self, x, y):
+        return (x-self.x)**2 + (y-self.y)**2 < self.r**2
+    
+    def draw(self):
+        color(1, 0, 0, 0.3)
+        goto(self.x, self.y)
+        dot(self.r * 2)
+        color('red')
+        write(self.label, font=(None, 24))
+        
+A = Ensemble(-100, 0, 150, 'A')
+B = Ensemble(100, 0, 150, 'B')
+
+color(1, 0, 0, 0.5)
+i = 0
+while i < 50:
+    x = randint(-300, 300)
+    y = randint(-200, 200)
+    if A.inside(x, y) and B.inside(x, y):      
+        goto(x, y)
+        dot(10)
+        i += 1
+```
+
+**Exercice** : Placez les points dans la réunion de A et B.
+
+## La différence
+
+La différence entre deux ensembles `A` et `B` sont tous les éléments de `A` sans ceux de `B`. En Python, la différence d'ensemble peut être exprimé par la méthode `difference()` ou bien par l'opérateur `-` comme montré dans l'exemple suivant.
+
+```{codeplay}
+A = {0, 1, 2, 3}
+B = {2, 3, 4, 5}
+
+print('A =', A)
+print('B =', B)
+print()
+
+print('A - B =', A.difference(B))
+print('A - B =', A - B)
+print('B - A =', B - A)
+```
+
+Il existe aussi une différence symétrique.
+
+```{codeplay}
+A = {0, 1, 2, 3}
+B = {2, 3, 4, 5}
+
+print('A =', A)
+print('B =', B)
+print('différence symétrique =', A.symmetric_difference(B))
+```
+
+## Un sous-ensemble
+
+Un ensemble A est inclus dans un ensemble B si tous les éléments de A sont aussi éléments de B. On dit dans ce cas que A est un **sous-ensemble** ou une partie de B, ou encore que B est **sur-ensemble** de A.
+
+```{codeplay}
+A = {0, 1}
+B = {0, 1, 2, 3}
+
+print('A =', A)
+print('B =', B)
+print()
+
+print('A est sous-ensemble de B =', A.issubset(B))
+print('A est  sur-ensemble de B =', A.issuperset(B))
+```
+
+## Les opérateurs
+
+En Python, les méthodes pour les ensembles ont des opérateurs plus court :
+
+- union (`|`)
+- intersection (`&`)
+- différence symétrique (`^`)
+
+```{codeplay}
+A = {0, 1, 2}
+B = {1, 2, 3}
+
+print('A =', A)
+print('B =', B)
+print()
+
+print('union =', A | B)
+print('intersection =', A & B)
+print('différence A-B =', A - B)
+print('différence B-A =', B - A)
+print('difference symétrique =', A ^ B)
 ```
 
 ```{codeplay}

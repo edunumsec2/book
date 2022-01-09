@@ -95,6 +95,9 @@ parts:
       - file: content/appr/theme/prog2/recursif
       - file: content/appr/theme/prog2/poo
       - file: content/appr/theme/prog2/cliquer
+      - file: content/appr/theme/prog2/tic_tac_toe
+      - file: content/appr/theme/prog2/puissance4
+      - file: content/appr/theme/prog2/cartes
       - file: content/appr/theme/prog2/idees
       - file: content/appr/theme/prog2/quiz
       

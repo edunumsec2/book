@@ -342,13 +342,12 @@ Le nom Modulo fait référence à l'opérateur **modulo** en mathématique `%` e
 
 ```{codeplay}
 from turtle import *
-from time import *
 
 up()
 d = 60
 color('rebeccapurple')
 for c in 'modulo':
-    write(c, font=(None, d), move=True)
+    write(c, font=(None, d, 'bold'), move=True)
     
 goto(-2*d, d)
 dot(0.8*d)

@@ -179,7 +179,7 @@ dot(d)
 ## Intensité des couleurs
 
 ```{codeplay}
- from turtle import *
+from turtle import *
 up()
 
 d = 50
