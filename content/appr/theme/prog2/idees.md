@@ -477,8 +477,27 @@ for i in range(n+1):
 print(n * (n+1) // 2)
 ```
 
+## Tortues multiples
+
 ```{codeplay}
- 
+ from turtle import *
+
+a = Turtle()
+a.color('red')
+a.shape('turtle')
+a.forward(100)
+
+b = Turtle()
+b.color('blue')
+b.shape('turtle')
+b.left(90)
+b.forward(100)
+
+c = Turtle()
+c.color('lime')
+c.shape('turtle')
+c.left(45)
+c.forward(100)
 ```
 
 ```{codeplay}

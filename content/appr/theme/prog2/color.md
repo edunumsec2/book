@@ -111,36 +111,6 @@ dot(80)
 
 **Exercice** : Faites un dégradé pour la couleur bleu.
 
-## Mélanger vert et rouge
-
-```{codeplay}
-from turtle import *
-
-goto(0, -80)
-right(30)
-fillcolor('red')
-begin_fill()
-circle(100, 240)
-left(120)
-circle(-100, 120)
-end_fill()
-
-right(60)
-fillcolor('yellow')
-begin_fill()
-circle(-100, 120)
-right(60)
-circle(-100, 120)
-end_fill()
-
-fillcolor('lime')
-begin_fill()
-circle(-100, 240)
-right(120)
-circle(100, 120)
-end_fill()
-```
-
 ## Mélanger RVB
 
 ```{codeplay}
@@ -178,22 +148,27 @@ dot(d)
 
 ## Intensité des couleurs
 
+Dans l'exemple ci-dessous nous agissons sur la cou
+
 ```{codeplay}
 from turtle import *
 up()
 
+goto(-150, -150)
+left(90)
 d = 50
 
 for x in [0, 0.2, 0.4, 0.6, 0.8, 1]:
     c = (x, 0, 0)
-    color((x, 0, 0))
+    color(c)
     dot(d)
-    sety(ycor() + d)
-    write(c, font=(None, 8), align='center')
-    sety(ycor() - d)
-    forward(d)
+    setx(xcor() + 40)
+    write(c, font=(None, 18))
+    setx(xcor() - 40)
+    forward(d + 10) 
 ```
 
+**Exercice** : Dessiner un dégradé pour vert, bleu, magenta, cyan
 ## Matrice des couleurs
 
 Dans ce programme les axes x et y correspondent à une des couleurs RVG.
@@ -218,29 +193,119 @@ for y in range(0, 255, d):
 
 ## Cube des couleurs
 
+Dans l'exemple suivant nous dessinons les 3 axes
+
+- rouge
+- vert
+- bleu
+
+Ensuite nous dessinons un cube de couleurs.
+Voici les 8 sommets du cube :
+
+- noir - (0, 0, 0)
+- rouge - (1, 0, 0)
+- vert - (0, 1, 0)
+- bleu - (0, 0, 1)
+- jaune - (1, 1, 0)
+- cyan - (0, 1, 1)
+- magenta - (1, 0, 1)
+- blanc - (1, 1, 1)
+
 ```{codeplay}
 from turtle import *
 
+def axe(angle, couleur):
+    left(angle)
+    forward(180)
+    stamp()
+    write('  '+couleur, font=(None, 18))
+    back(180)
+    
 getscreen().bgcolor('black')
-colormode(255)
+color('white')
+axe(0, 'red')
+axe(90, 'green')
+axe(135, 'blue')
 speed(0)
 up()
 
-d = 30
-for z in range(0, 255, d):
-    for y in range(0, 255, d):
-        for x in range(0, 255, d):
-            goto(x-64-z/2, y-64-z/2)
-            color((x, y, z))
+n = 8
+d = 150/n
+for z in range(n):
+    for y in range(n):
+        for x in range(n):
+            goto(d*(x-z/2), d*(y-z/2))
+            color((x/(n-1), y/(n-1), z/(n-1)))
             dot(d)
 ```
 
-```{codeplay}
+## Synthèse additive
 
+La **synthèse additive** des couleurs est le procédé consistant à combiner trois lumières colorées dans le but d'obtenir une lumière colorée quelconque.
+
+Dans un écran d'ordinateur (ou smartphone) on utilise les couleurs rouge, vert, et bleu, d'ou l'acronyme **RVB**. Le mélange de :
+
+- rouge et bleu donne magenta,
+- rouge et vert donne jaune,
+- vert et bleu donne cyan.
+
+La combinaison de toutes les trois couleurs de base donne blanc.
+
+```{codeplay}
+from turtle import *
+getscreen().bgcolor('black')
+r = 120
+goto(-50, -50)
+
+for x in ('red', 'lime', 'blue'):
+    dot(2 * r, x)
+    forward(r)
+    left(120)
+
+left(30)
+for x in ('magenta', 'cyan', 'yellow', 'white'):
+    color(x)
+    begin_fill()
+    for i in range(4):
+        circle(r, 60)
+        left(60)
+    end_fill()
+    left(60 if x == 'yellow' else 120) 
 ````
 
-```{codeplay}
+## Synthèse soustractive
 
+La **synthèse soustractive** des couleurs et le procédé consistant à combiner l'absorption de trois colorant pour obtenir les nuances des couleurs.
+
+Les trois colorant généralement utilisé en impression sont cyan, jaune et magenta, d'ou le terme CJM.
+
+Le mélange de :
+
+- jaune et cyan donne vert,
+- jaune et magenta donne rouge,
+- cyan et magenta donne bleu.
+
+La combinaison de toutes les trois couleurs de base donne noir.
+
+```{codeplay}
+from turtle import *
+r = 120
+goto(-50, -50)
+
+for x in ('cyan', 'magenta', 'yellow'):
+    dot(2 * r, x)
+    forward(r)
+    left(120)
+
+left(30)
+for x in ('lime', 'red', 'blue', 'black'):
+    color(x)
+    begin_fill()
+    for i in range(4):
+        circle(r, 60)
+        left(60)
+    end_fill()
+    left(60 if x == 'blue' else 120)  
 ````
 
 ```{codeplay}

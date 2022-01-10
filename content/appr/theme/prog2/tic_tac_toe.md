@@ -65,7 +65,7 @@ x = input('Choisissez votre case: ')
 
 ## Jouer un tour
 
-Ensuite faisons deux tours de jeu avec le jouer 1 et joueur 2.
+Ensuite faisons deux tours de jeu avec le joueur 1 et joueur 2.
 
 ```{codeplay}
 state = [[0, 0, 0],

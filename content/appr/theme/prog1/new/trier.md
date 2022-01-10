@@ -353,7 +353,13 @@ for i in range(n-1):
 
 ## Tri par sélection
 
-L’algorithme du tri par sélection commence par rechercher le plus petit élément de la liste et l’échange avec le premier élément de la liste.
+L’algorithme du **tri par sélection** commence par rechercher le plus petit élément de la liste et l’échange avec le premier élément de la liste.
+
+```{image} media/tri_selection.jpg
+:width: 200px
+```
+
+ Il recherche ensuite le plus petit élément de la liste restante. Il sélectionne ainsi le deuxième plus petit élément de la liste et l’échange avec le deuxième élément de la liste. Et ainsi de suite.
 
 ```{codeplay}
 liste = [3, 4, 1, 2, 6, 5]
@@ -383,13 +389,13 @@ def tri_selection(liste):
     for i in range(0,len(liste)-1):
         i_min = liste.index(min(liste[i:]))
         liste[i], liste[i_min] = liste[i_min], liste[i]
+        print(liste)
 
 print(liste)
 tri_selection(liste)
-print(liste)
 ```
 
-Voici une visualisation du tri par séléction.
+Voici une visualisation du tri par sélection.
 
 ```{codeplay}
 from turtle import *
@@ -447,14 +453,16 @@ show()
 
 ## Tri par insertion
 
-Le **tri par insertion** est un algorithme de tri utilisé par la plupart des personnes pour trier des cartes à jouer.
+L'algorithme du **tri par insertion** est utilisé par la plupart des personnes pour trier des cartes à jouer. On prends les cartes non-triées depuis la table, et on les insère à l'endroit correcte dans sa main.
 
-Ci-dessous mous trions une liste en ordre décroissante, ce qui permet de bien voir ce qui se passe.
-On peut alors observer comment le `4` descend vers le bas, ensuite c'est le tour du `3` de descendre vers le bas, et ainsi de suite.
+```{image} media/tri_insertion.jpg
+:width: 200px
+```
+
+L’algorithme du tri par insertion parcourt la liste d’éléments à trier du deuxième au dernier élément. Pour chaque nouvel élément considéré, il l’insère à l’emplacement correct dans la liste déjà parcourue.
 
 ```{codeplay}
-y = [5, 4, 3, 2, 1]
-print(y)
+y = [3, 4, 1, 2, 6, 5]
 
 n = len(y)
 for i in range(1, n):
@@ -463,10 +471,10 @@ for i in range(1, n):
             y[j], y[j-1] = y[j-1], y[j]
         else:
             break
-        print(y)
+    print(y)
 ```
 
-Voici une visualisation du tri par insértion.
+Voici une visualisation du tri par insertion.
 
 ```{codeplay}
 from turtle import *
@@ -520,13 +528,16 @@ show()
 
 ## Tri à bulles
 
-L’algorithme du tri à bulles compare les éléments voisins, deux par deux, et les met dans le bon ordre.
-Ci-dessous mous trions une liste en ordre décroissante, ce qui permet de bien voir ce qui se passe.
+L’algorithme du **tri à bulles** compare les éléments voisins, deux par deux, et les met dans le bon ordre. Le mot 'bulles' fait références aux bulles dans une boissons qui montent à la surface.
 
-On peut alors observer comment le `5` flotte vers le haut, ensuite c'est le tour du `4` monte vers la surface, comme des bulles dans l'eau.
+```{image} media/tri_bulles.jpg
+:width: 200px
+```
+
+On peut voir comment le `4` flotte vers le haut, jusqu'à c'qu'il rencontre le le `6` qui monte alors tout vers la surface, comme des bulles dans une boisson.
 
 ```{codeplay}
-y = [5, 4, 3, 2, 1]
+y = [3, 4, 1, 2, 6, 5]
 print(y)
 
 n = len(y)

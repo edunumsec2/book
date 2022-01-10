@@ -100,7 +100,9 @@ for phrase in texte.split('\n'):
 
 Le code Morse est composé de points et de traits. Il associe à chaque lettre de l'alphabet un code.
 
-![code](media/Morse.jpg)
+```{image} media/Morse.jpg
+:width: 400px
+```
 
 Un autre exemple pour un dictionnaire est la table du code Morse.
 
