@@ -37,31 +37,31 @@ forward(150)
 left(120)
 ```
 
-**Exercice** : Transformez le dessin en rectangle avec 4 couleurs différentes.
+**Exercice** : Modifiez les 3 couleurs en vous inspirant de la liste.
 
 ## Couleur de point
 
-Nous pouvons afficher des points à chaque sommet.
-La fonction `dot(d)` dessine un disque d'un diamètre `d`.
+Nous pouvons afficher des points à chaque sommet :
+
+- la fonction `dot()` dessine un point standard,
+- la fonction `dot(d)` dessine un disque d'un diamètre `d`,
+- la fonction `dot(d, couleur)` dessine un disque dans la couleur spécifiée.
 
 ```{codeplay}
 from turtle import *
 up()
 
-color('red')
-dot(40)
+dot(40, 'red')
 forward(150)
 
-color('lime')
-dot(40)
+dot(60, 'lime')
 left(120)
 forward(150)
 
-color('blue')
-dot(40)
+dot(80, 'blue')
 ```
 
-**Exercice** : Ajoutez un 4e point d'une couleur différente.
+**Exercice** : Modifiez la taille et la couleurs des 3 points.
 
 ## Couleur de forme
 
@@ -142,9 +142,7 @@ from turtle import *
 
 getscreen().bgcolor('linen')
 up()
-
-color('yellow')
-dot(300)
+dot(300, 'yellow')
 
 color('black')
 goto(50, 40)
@@ -165,9 +163,7 @@ from turtle import *
 
 getscreen().bgcolor('linen')
 up()
-
-color('yellow')
-dot(300)
+dot(300, 'yellow')
 
 color('black')
 goto(50, 40)
@@ -181,25 +177,38 @@ dot(80)
 
 **Exercice** : Dessinez encore un autre smiley.
 
-## Itérer dans un liste
+## Itérer dans un séquence
 
-Pour dessiner multiples couleurs, nous pouvons définir une liste de couleurs et itérer sur cette liste.
-En Python une liste est délimitée par des crochets `[]` et les éléments sont séparé par une virgule.
+Pour dessiner multiples couleurs, nous pouvons définir une séquence (tuple) de couleurs et itérer sur cette séquence.
+En Python une séquence est délimitée par des parenthèses `()` et les éléments sont séparé par une virgule.
 
-Dans l'expression `for x in [...]` la variable `x` va prendre à tour de rôle les valeurs dans la liste. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'blue'`, `'cyan'`, `'red'`, etc.
+Dans l'expression `for x in (...)` la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'blue'`, `'cyan'`, `'red'`, etc.
 
 ```{codeplay}
 from turtle import *
 up()
 
 back(200)
-for x in ['blue', 'cyan', 'red', 'magenta', 'pink', 'lime']:
-    color(x)
-    dot(80)
+for x in ('blue', 'cyan', 'red', 'magenta', 'pink', 'lime'):
+    dot(80, x)
     forward(80)
 ```
 
-**Exercice** : Modifiez la liste des couleurs.
+**Exercice** : Modifiez la séquence des couleurs.
+
+Nous pouvons également itérer dans une séquence numérique et spécifier l'épaisseur.
+
+```{codeplay}
+from turtle import *
+up()
+
+back(220)
+for x in (20, 40, 60, 80, 100):
+    dot(x, 'red')
+    forward(x + 40)
+```
+
+**Exercice** : Modifiez la séquence des diamètres.
 
 ## Dessiner une croix
 

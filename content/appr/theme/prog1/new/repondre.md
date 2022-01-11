@@ -121,3 +121,40 @@ while x:
     forward(80)
     x = input('Entrez une couleur: ')
 ```
+
+## Erreurs
+
+Il est important de bien comprendre les messages d'erreurs.
+Dans cette section vous allez découvrir les différentes catégories d'erreur et comment les corriger.
+
+### SyntaxError
+
+Cette erreur est produite quand vous utilisez des accents dans des noms de fonctions ou de variables.
+
+```{codeplay}
+from turtle import *
+
+def carré():
+    for à in range(4):
+        forward(100)
+        left(90)
+        
+carré()
+```
+
+**Exercice** : Corrigez les 3 erreurs de syntaxe'.
+
+### SyntaxError: EOF 
+
+Cette erreur est produite quand vous oubliez de fermer une parenthèse.
+
+```{codeplay}
+from turtle import *
+
+forward(100)  
+left(90)
+forward(100
+```
+
+**Exercice** : Corrigez l'erreur de syntaxe'.
+
