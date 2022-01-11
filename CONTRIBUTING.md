@@ -14,10 +14,10 @@
   - [Critiques](#critiques)
     - [Discord](#discord)
     - [Mail](#mail)
-  - [Partage](#partage)
-  - [Lire la documentation](#lire-la-documentation)
- - [Good first issue](#good-first-issue)
-- [Workflow](#workflow)
+  - [Partage de vos contenus](#partage-de-vos-contenus)
+  - [Transmission du projet](#transmission-du-projet)
+- [Participation via GitHub](#paricipation-via-GitHub)
+  - [Good first issue](#good-first-issue)
   - [Fork](#fork)
   - [Branche](#branche)
   - [Commit](#commit)
@@ -46,8 +46,38 @@ Peut contribuer au projet modulo toute personne ayant pris connaissance des docu
 
 ### Relectures 
 
-Une **première étape** consiste à lire les [contenus actuellement en ligne](https://github.com/edunumsec2/book/blob/master/README.md#liens). Sans même entrer dans les détails de l'utilisation de GitHub comme plateforme de contribution, vous pouvez nous signaler tout défaut ou problème rencontré à modulo-team@epfl.ch
+Une **première étape** consiste à lire les [contenus actuellement en ligne](https://github.com/edunumsec2/book/blob/master/README.md#liens). Sans même entrer dans les détails de l'utilisation de GitHub comme plateforme de contribution, vous pouvez nous signaler tout défaut ou problème rencontré à modulo-team@epfl.ch.
 
-## Partage 
+### Tests 
+
+Dans un **second temps**, il peut-être utile de participer au enquêtes et sondages décrits [ici au point 1](https://github.com/edunumsec2/book#utilisation), qui nous permettent d'avoir un feedback sur l'appréciation des contenus créés. 
+
+### Critiques
+
+**Par la suite**, et quand vous vous serez familiarisé avec les différents aspects du projet mentionnés dans la documentation présentée ci-dessus, sentez-vous libres de nous adresser n'importe quel retour, positif ou négatif, via les canaux de communication suivants, ou n'importe quel autre que vous jugerez opportun. Il est important de comprendre qu'il est préférable de vous adresser aux personnes [responsables de la thématique](https://github.com/edunumsec2/book#comit%C3%A9-de-r%C3%A9daction) sur laquelle porte votre retour. 
+
+#### Discord
+
+Le lien suivant vous donne accès à un channel Discord : https://discord.com/invite/b8qu79t6HQ. Nous l'utilisons comme outil de communication rapide et publique. Il faut garder à l'esprit que le channel est accessible à n'importe qui (nous n'opérons pas de modération des accès). 
+
+#### Mail
+
+Les adresses suivantes sont celles des [responsables de thématiques](https://github.com/edunumsec2/book#comit%C3%A9-de-r%C3%A9daction).
+
+L'adresse générale pour nous atteindre est modulo-team@epfl.ch. Elle est relevée par l'équipe LEARN chargée de la gestion du projet modulo. 
+
+### Partage de vos contenus
+
+Si vous possédez déjà du matériel d'enseignement que vous seriez d'accord de partager en l'état, vous êtes les bienvenus à nous transmettre, via le lien pour notre dropbox Kdrive ci-dessous, tout ce que vous jugeriez approprié. 
+
+À ce stade, le partage de vos contenus n'est pas censé respecter de charte, ou de règlement particulier au niveau du contenu autant que de la forme. Le but ici est simplement de nous donner accès à du matériel que vous jugez pertinent, en nous laissant le soin de voir si nous pouvez le mettre en forme pour l'intégrer à nos contenus. Nous parlons ici d'activités, de séries d'exercices, d'éléments de théorie, de planifications de cours, d'indications pédagogiques sur des notions particulières, de glossaires, enfin de tout contenu que vous utilisez et jugez pertinent dans cadre du [plan d'études](https://github.com/edunumsec2/book#documents-importants) de la branche en question. 
+
+Il est important de comprendre qu'en déposant des fichiers sur notre dropbox ci-dessous, vous nous donnez tacitement la possibilité de modifier et de transformer vos ressources pour les adapter au projet ci-contre. Bien sûr, une mention sera toujours faite de l'origine du document, et vous serez consulté avant la moindre publication ou le moindre partage plus loin. 
 
 Dropbox Kdrive : https://drive.infomaniak.com/app/collaborate/392255/1cc7e2a1-2d3f-4e70-ab7e-c297d9bdb4eb
+
+### Transmission du projet 
+
+Une [charte](https://files.modulo-info.ch/charte), ainsi qu'une [convention](https://files.modulo-info.ch/convention) fixent les limites dans lesquelles le projet est susceptible d'être patagé. Il va de soi que le contrôle total étant impossible, nous demandons ici du fair-play de votre part. 
+
+## Participation via GitHub
