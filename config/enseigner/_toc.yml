@@ -57,18 +57,18 @@ parts:
 - caption: Enjeux sociaux
   numbered: false
   chapters:
-  - file: content/ens/enjeux/intro-enjeux
-  - file: content/ens/enjeux/grandes-thematiques/grandes-thematiques
+  - file: content/ens/theme/enjeux/intro-enjeux
+  - file: content/ens/theme/enjeux/grandes-thematiques/grandes-thematiques
     sections:
-    - file: content/ens/enjeux/grandes-thematiques/economie-numerique/economie-numerique
-    - file: content/ens/enjeux/grandes-thematiques/surveillance/surveillance
-  - file: content/ens/enjeux/fiches-complementaires/fiches-complementaires
+    - file: content/ens/theme/enjeux/grandes-thematiques/economie-numerique/economie-numerique
+    - file: content/ens/theme/enjeux/grandes-thematiques/surveillance/surveillance
+  - file: content/ens/theme/enjeux/fiches-complementaires/fiches-complementaires
     sections:
-    - file: content/ens/enjeux/fiches-complementaires/digital-labor/digital-labor
-    - file: content/ens/enjeux/fiches-complementaires/wikipedia/wikipedia
-    - file: content/ens/enjeux/fiches-complementaires/affaire-snowden/affaire-snowden
-    - file: content/ens/enjeux/fiches-complementaires/genre-numerique/genre-numerique
-  - file: content/ens/enjeux/bibliographie
+    - file: content/ens/theme/enjeux/fiches-complementaires/digital-labor/digital-labor
+    - file: content/ens/theme/enjeux/fiches-complementaires/wikipedia/wikipedia
+    - file: content/ens/theme/enjeux/fiches-complementaires/affaire-snowden/affaire-snowden
+    - file: content/ens/theme/enjeux/fiches-complementaires/genre-numerique/genre-numerique
+  - file: content/ens/theme/enjeux/bibliographie
 
 ## Annexes
 - caption: Annexes
