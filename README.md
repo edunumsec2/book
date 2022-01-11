@@ -6,7 +6,7 @@ Des moyens d'enseignement pour l'informatique en discipline obligatoire au nivea
 
 En accord avec la DGEP, une partie de ce matériel est déjà mise à disposition des enseignant·e·s vaudois·e·s pour une première phase pilote.
 
-Les ressources sont accessibles via le [site web](https://modulo-info.ch) (Username : edunum, Password : Edunumsecondaire2). Elles peuvent être utilisées telles quelles ou modifiées via un [dépôt GitHub](https://github.com/edunumsec2/book).
+Les ressources sont accessibles via le [site web](https://modulo-info.ch) (Pour la version "enseigner", Username : edunum, Password : Edunumsecondaire2). Elles peuvent être utilisées telles quelles ou modifiées via un [dépôt GitHub](https://github.com/edunumsec2/book).
 
 ## Table des matières
 
@@ -63,6 +63,8 @@ Après la phase **pilote**, les enseignant.es pourront en outre :
 8. Utiliser l'environnement [Jupyter-book](#installation) pour tester ses améliorations en local sur sa propre machine. 
 
 ## Liens
+
+*Attention : Pour la version "enseigner", Username : edunum, Password : Edunumsecondaire2*
 
 **Version actuelle des ressources**
 
