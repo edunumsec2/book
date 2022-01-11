@@ -21,13 +21,11 @@ Nous commençons avec un ensemble vide `A = set()` et nous ajoutons des élémen
 ```{codeplay}
 from turtle import *
 from random import *
+getscreen().bgcolor('azure')
 
 r = 160
-up()
-goto(0, r)
-down()
+dot(2 * r, (1, 0, 0, 0.3))
 write('A', font=(None, 24), align='center')
-circle(-r)
 
 points = [(randint(-300, 280), randint(-200, 180)) for i in range(10)]
 
@@ -64,20 +62,18 @@ Dans l'exemple suivant nous montrons les 3 situations :
 
 ```{codeplay}
 from turtle import *
+getscreen().bgcolor('azure')
 up()
 
 def ensemble(x, texte, d=80):
     goto(x, 0)
-    color(1, 0, 0, 0.5)
-    dot(d)
-    color('black')
+    dot(d, (1, 0, 0, 0.5))
     write(texte, font=(None, 14), align='center')
     
 def etiquette(x, texte):
     goto(x, 100)
     write(texte, font=(None, 14), align='center')
-    
-    
+
 etiquette(-175, 'ensembles disjoints')
 ensemble(-220, 'A')
 ensemble(-130, 'B')
@@ -146,16 +142,14 @@ Avec un diagramme de Venn nous représentons l'union des deux ensembles A et B a
 ```{codeplay}
 from turtle import *
 up()
-
-color(1, 0, 0, 0.5)
 d = 200
 
 goto(-70, 0)
-dot(d)
+dot(d, (1, 0, 0, 0.5))
 write('A', font=(None, 24), align='center')
 
 goto(70, 0)
-dot(d)
+dot(d, (1, 0, 0, 0.5))
 write('B', font=(None, 24), align='center')
 
 hideturtle()
@@ -220,23 +214,20 @@ class Ensemble:
         return (x-self.x)**2 + (y-self.y)**2 < self.r**2
     
     def draw(self):
-        color(1, 0, 0, 0.3)
         goto(self.x, self.y)
-        dot(self.r * 2)
-        color('red')
+        dot(self.r * 2, (1, 0, 0, 0.3))
         write(self.label, font=(None, 24))
         
 A = Ensemble(-100, 0, 150, 'A')
 B = Ensemble(100, 0, 150, 'B')
 
-color(1, 0, 0, 0.5)
 i = 0
 while i < 50:
     x = randint(-300, 300)
     y = randint(-200, 200)
     if A.inside(x, y) and B.inside(x, y):      
         goto(x, y)
-        dot(10)
+        dot(10, (1, 0, 0, 0.5))
         i += 1
 ```
 
@@ -302,12 +293,14 @@ print('A =', A)
 print('B =', B)
 print()
 
-print('union =', A | B)
-print('intersection =', A & B)
-print('différence A-B =', A - B)
-print('différence B-A =', B - A)
-print('difference symétrique =', A ^ B)
+print('A | B (union) =', A | B)
+print('A & B (intersection) =', A & B)
+print('A - B (différence) =', A - B)
+print('B - A (différence) =', B - A)
+print('A ^ B (difference symétrique) =', A ^ B)
 ```
+
+**Exercice** : Modifiez les ensemble A et B et re-évaluez.
 
 ```{codeplay}
 
