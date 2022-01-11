@@ -16,4 +16,3 @@ Attention, le document présenté ici ne représente qu'une **étape intermédia
 <span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 1<sup>er</sup> janvier 2022</span>
 ````
 
-Test Netlify
