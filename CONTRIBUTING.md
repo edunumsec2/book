@@ -1,3 +1,5 @@
+:construction: Ce document est en cours de rédaction. 
+
 # Contribuer au projet
 
 ## Table des matières
@@ -45,8 +47,6 @@ Peut contribuer au projet modulo toute personne ayant pris connaissance des docu
 ### Relectures 
 
 Une **première étape** consiste à lire les [contenus actuellement en ligne](https://github.com/edunumsec2/book/blob/master/README.md#liens). Sans même entrer dans les détails de l'utilisation de GitHub comme plateforme de contribution, vous pouvez nous signaler tout défaut ou problème rencontré à modulo-team@epfl.ch
-
-(la suite est en cours de rédaction)
 
 ## Partage 
 
