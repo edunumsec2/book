@@ -14,6 +14,7 @@ Les ressources sont accessibles via le [site web](https://modulo-info.ch) (Usern
 
 - [Introduction](#introduction)
 - [Utilisation](#utilisation)
+- [Liens](#liens)
 - [Documents importants](#documents-importants)
 - [Chapitrage du livre](#chapitrage)
 - [Structure du dépôt GitHub](#structure-dépôt-GitHub)
@@ -60,6 +61,31 @@ Après la phase **pilote**, les enseignant.es pourront en outre :
 6. Proposer et rédiger des modifications via la création d'une [branche](https://github.com/edunumsec2/book/branches). 
 7. Forker le dépôt pour en faire un clone indépendant via le mécanisme de [fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo). 
 8. Utiliser l'environnement [Jupyter-book](#installation) pour tester ses améliorations en local sur sa propre machine. 
+
+## Liens
+
+**Version actuelle des ressources**
+
+* apprendre : https://apprendre.modulo-info.ch/
+* enseigner : https://enseigner.modulo-info.ch/
+
+(Actualisation annuelle)
+
+**Version en développement**
+
+* apprendre : https://dev-apprendre.modulo-info.ch/
+* enseigner : https://dev-enseigner.modulo-info.ch/
+
+(Actualisation continue)
+
+**Archive des versions antérieures**
+
+* apprendre : https://old-apprendre.modulo-info.ch/
+* enseigner : https://old-enseigner.modulo-info.ch/
+
+(Archive de la version de l'année précédente)
+
+*Avertissement : le projet étant encore dans une phase de construction, il est possible que la version actuelle soit mise à jour plus rapidement qu'à l'échéance d'une année. Tout changement de version majeur est signalé aux enseignant·e·s participant au projet.*
 
 ## Documents importants
 
