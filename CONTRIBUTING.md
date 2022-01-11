@@ -12,7 +12,8 @@
   - [Critiques](#critiques)
     - [Discord](#discord)
     - [Mail](#mail)
- - [Lire la documentation](#lire-la-documentation)
+  - [Partage](#partage)
+  - [Lire la documentation](#lire-la-documentation)
  - [Good first issue](#good-first-issue)
 - [Workflow](#workflow)
   - [Fork](#fork)
@@ -23,3 +24,8 @@
   - [Descriptions](#descriptions)
   - [Exemples](#exemples)
 - [Conclusion](#conclusion)
+
+
+## Partage 
+
+Dropbox Kdrive : https://drive.infomaniak.com/app/collaborate/392255/1cc7e2a1-2d3f-4e70-ab7e-c297d9bdb4eb
