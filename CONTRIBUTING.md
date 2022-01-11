@@ -1,4 +1,4 @@
-# Contribuer au projet
+# Contribuer au projet
 
 ## Table des matières
 
