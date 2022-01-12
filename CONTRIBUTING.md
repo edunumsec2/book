@@ -25,6 +25,10 @@
   - [Usages](#usages)
   - [Descriptions](#descriptions)
   - [Exemples](#exemples)
+- [Processus de validation](#processus-de-validation)
+  - [Branches protégées](#branches-protegees)
+  - [Responsables de thématiques](#responsables-de-thematiques)
+  - [Reviews](#reviews)
 - [Conclusion](#conclusion)
 
 
