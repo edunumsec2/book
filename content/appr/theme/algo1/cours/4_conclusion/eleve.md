@@ -37,18 +37,24 @@ Grâce aux algorithmes, la machine a pu remplacer l’homme dans de nombreuses t
 
 
 
-```{image} media/Usine_avant.jpeg
-:width: 500
-:height: 300
-```
+```{figure} media/Usine_avant.jpeg
+---
+alt: Usine du début du siècle dernier
+width: 100%
+---
+
 **Usine du début du siècle dernier.** Les machines dans cette usine de métallurgie à Vallorbe dans le canton de Vaud sont au service des ouvriers. Source : https://wikivaud.ch/metallurgie-vaudoise/
-
-
-```{image} media/Usine_après.jpeg
-:width: 500
-:height: 300
 ```
+
+
+```{figure} media/Usine_après.jpeg
+---
+alt: Usine du début du siècle dernier
+width: 100%
+---
+
 **Usine du début de ce siècle.** Les machines dans cette usine de montage Mistubishi en Chine ont remplacé les ouvriers. Source : https://www.lemonde.fr/blog/fredericjoignot/2015/12/25/robotisation-generale/
+```
 
 
 Selon un rapport publié en 2017 par DELL et le Think Tank californien « L’institut du futur », cité par la chasseuse de têtes Isabelle Rouhan dans sans livre « Les métiers du futur », ***<span style="color:rgb(13, 204, 166)">85% des métiers</span>*** qui seront exercés en 2030 par les écoliers d’aujourd’hui n’ont pas encore été inventés.

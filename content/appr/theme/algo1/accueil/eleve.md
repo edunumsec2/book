@@ -4,7 +4,7 @@ Algorithmique I
 
 Nous avons tous entendu parler des ALGORITHMES. Normal, c’est le mot à la mode et que tout le monde utilise sans vraiment le comprendre. Ils sont partout, ils font toutes sortes de choses, ils nous manipulent : pourquoi en parle-t-on de la même manière que des extraterrestres ? Dans ce cours, nous allons tenter de revenir sur terre, parce que les algorithmes ce n’est pas si compliqué que ça. On apprendra à les définir, à les faire fonctionner et surtout à reconnaître la différence entre un « bon » et un « mauvais » algorithme…
 
-Bienvenue dans le monde fascinant des algorithmes...
+
 
 <!-- Le terme d'algorithme s'est progressivement diffusé dans toutes les facettes de la société actuelle, pour dépasser le cadre de l'utilisation par les seuls experts en informatique. Ils sont partout, de la plus petite application pour smartphone au système d'intelligence artificielle le plus complexe et ont largement investi la sphère médiatique et nos espaces de communication. Ils font toutes sortes de choses... Mais, qu'est ce qu'un algorithme réellement ? Comment ça marche ? Comment faire la différence entre un bon et un mauvais algorithme ? Quelles sont ses spécificités, ses caractéristiques ? Tant de questions qui tenteront de s'éclaircir au cours des chapitres qui suivent.
 
@@ -19,7 +19,7 @@ Bienvenue dans le monde fascinant des algorithmes... -->
 
 ## Objectifs de la thématique
 
-A la fin de ce chapitre, vous saurez ce qu'est un algorithme et vous serez capable de transcrire des algorithmes en programmes. Vous saurez résoudre des problèmes, en décomposant leur solution en étapes à suivre. Vous verrez également que pour un même problème, on peut avoir plusieurs solutions avec différents propriétés, avantages et désavantages. 
+A la fin de ce chapitre, vous saurez ce qu'est un algorithme et vous serez capable de transcrire des algorithmes en programmes. Vous saurez résoudre des problèmes, en décomposant leur solution en étapes à suivre. Vous verrez également que pour un même problème, on peut avoir plusieurs solutions avec des propriétés, avantages et désavantages différents. 
 
 {fa}`check, text-success mr-1`Se familiariser avec la notion d’algorithme.
 
@@ -28,6 +28,8 @@ A la fin de ce chapitre, vous saurez ce qu'est un algorithme et vous serez capab
 {fa}`check, text-success mr-1`Savoir que pour un même problème, on peut avoir plusieurs solutions avec différents propriétés, avantages et désavantages.
 
 {fa}`check, text-success mr-1`Être capable de transcrire un algorithme dans un programme.
+
+Bienvenue dans le monde fascinant des algorithmes...
 
 
 ## Personnages-clés

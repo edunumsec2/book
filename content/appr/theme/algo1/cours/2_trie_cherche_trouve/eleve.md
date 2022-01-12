@@ -1,12 +1,10 @@
 
-````{admonition} Matière à réfléchir. La bibliothèque inutile
+````{admonition} Matière à réfléchir. Bibliothèque inutile
 :class: attention
 
 Imaginez une bibliothèque scolaire un peu spéciale : les livres n’y sont pas rangés par ordre alphabétique ! Ils sont bien rangés sur des étagères, mais sans aucune logique particulière. Vous entrez dans cette bibliothèque un peu spéciale et vous vous mettez à chercher l’ouvrage ***<span style="color:rgb(13, 204, 166)">Le Guide du voyageur galactique.</span>***
 
-Pensez-vous pouvoir retrouver ce livre ?
-
-Combien de temps cela vous prendra-t-il ? 
+Pensez-vous pouvoir retrouver ce livre ? Combien de temps cela vous prendra-t-il ? 
 
 Y a-t-il des objets chez vous, que vous rangez dans un ordre bien particulier ?
 
@@ -33,7 +31,7 @@ alt: Problème du tri.
 width: 50%
 ---
 
-**Problème du tri.** Des objets peuvent être triés selon une relation d’ordre, en lien avec une propriété. Sur la ligne du haut, les rectangles sont organisés selon leur couleur (de la plus sombre à la plus claire), alors que sur la ligne du bas, ils sont triés selon leur taille (du plus petit au plus grand).
+**Problème du tri.** Des objets sont triés selon une relation d’ordre, en lien avec une propriété. Sur la ligne du haut, les rectangles sont organisés selon leur couleur (de la plus sombre à la plus claire), alors que sur la ligne du bas, ils sont triés selon leur taille (du plus petit au plus grand).
 
 ```
 
@@ -77,7 +75,7 @@ Les types d'opérations que vous avez effectuées sont des comparaisons de la ta
 
 <br>
 
-Nous allons exposer ici trois algorithmes de tri simple, que l'on pourrait utiliser pour trier des objets dans la vie de tous les jours.
+Nous allons exposer ici **trois algorithmes de tri simple**, que l'on pourrait utiliser pour trier des objets dans la vie de tous les jours.
 
 ## Tri par insertion
 
@@ -199,7 +197,7 @@ Le décompte des opérations effectuées, en se référant à la <a href="#fig-a
 
 **<span style="color:rgb(89, 51, 209)">Tri à bulles</span>** : 9 comparaisons deux par deux (lignes en dessous) et 5 déplacements deux par deux (flèches rouges). 
 
-Si ce qui prend beaucoup de temps est la comparaison de la taille de deux rectangles il ne faudrait pas utiliser le tri par sélection, car il comporte le plus grand nombre de compraisons et il serait le plus lent. Si c’est le déplacement de deux rectangles qui coûte beaucoup de temps, cette fois-ci le tri par sélection serait le plus rapide (avec 3 rectangles qui échangent leur position). Donc, selon l'implémentation sur la machine, le tri par sélection serait le plus lent ou le plus rapide des trois algorithmes.
+Si ce qui prend beaucoup de temps est la comparaison de la taille de deux rectangles, il ne faudrait pas utiliser le tri par sélection, car il comporte le plus grand nombre de comparaisons et il serait le plus lent. Si c’est le déplacement de deux rectangles qui coûte beaucoup de temps, cette fois-ci le tri par sélection serait le plus rapide (avec 3 rectangles qui échangent leur position). Donc, selon l'implémentation sur la machine, le tri par sélection serait le plus lent ou le plus rapide des trois algorithmes.
 
 Ces résultats sont valables pour cette configuration en particulier. Si on trie un autre tableau, la performance des trois algorithmes pourrait changer. Le choix du meilleur algorithme dépend donc de l’implémentation et de la situation initiale. Notez finalement qu’il existe des algorithmes de tri bien plus rapides que les trois algorithmes considérés ici.
 ```
@@ -210,7 +208,7 @@ Ces résultats sont valables pour cette configuration en particulier. Si on trie
 ````{admonition} Le saviez-vous ? Tri stupide
 :class: hint
 
-Il existe un algorithme, Tri de Bogo (ou *Bogosort*), aussi nommé le *tri lent* ou encore le *tri stupide*. C’est un tri qui génère différentes permutations des éléments de la liste et s’arrête lorsque la configuration obtenue par hasard est triée. A votre avis, combien d’opérations prend cet algorithme en moyenne ?
+Il existe un algorithme, **Tri de Bogo** (ou *Bogosort*), aussi nommé le *tri lent* ou encore le *tri stupide*. C’est un tri qui génère différentes permutations des éléments de la liste et s’arrête lorsque la configuration obtenue par hasard est triée. A votre avis, combien d’opérations prend cet algorithme en moyenne ?
 
 ````
 
@@ -231,7 +229,7 @@ Pour trier 1 million d’éléments, selon l’algorithme choisi, cela peut pren
 ````
 
 
-````{admonition} Aller plus loin
+````{admonition} Pour aller plus loin
 :class: note
 
 Imaginer que les quatre éléments d’une liste sont triés dans le sens inverse de ce que l’on souhaite (ils sont placés du plus grand au plus petit). Trier la liste selon les trois algorithmes de tri vus précédemment : le tri par insertion, le tri par sélection et le tri à bulles. 
@@ -253,6 +251,15 @@ Dans cette configuration précise, quel algorithme est le plus rapide  (présent
 Réfléchir à votre journée : y a-t-il des actions qui se retrouvent chaque jour ouvrable ? Arrivez-vous à esquisser un algorithme que vous suivez sans que vous en ayez conscience ?
 
 ````
+
+````{admonition} Exercice 5 : trois algorithmes de tri
+:class: note
+
+
+Trier la liste [2, 5, 3, 4, 7, 1, 6] en utilisant les trois algorithmes de tri vus dans le cours. Représenter l’état de la liste après chaque étape.
+
+````
+
 <!-- 
 `````{admonition} Solution 4. L'algorithme de votre journée
 :class: hint
@@ -288,13 +295,9 @@ Se coucher
 ````` -->
 
 
-````{admonition} Exercice 5 : trois algorithmes de tri
-:class: note
 
 
-Trier la liste [2,5,3,4,7,1,6] en utilisant les trois algorithmes de tri vus dans le cours. Représenter l’état de la liste après chaque étape.
 
-````
 <!-- 
 `````{admonition} Solution 5. Trois algorithmes de tri
 :class: hint
