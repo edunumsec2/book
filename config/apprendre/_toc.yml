@@ -103,6 +103,12 @@ parts:
       
   - file: content/appr/theme/projets/eleve
   - file: content/appr/theme/reseaux/eleve
+    sections:
+      - file: content/appr/theme/reseaux/cours/intro/eleve
+      - file: content/appr/theme/reseaux/cours/adressage/eleve
+      - file: content/appr/theme/reseaux/cours/routage/eleve
+      - file: content/appr/theme/reseaux/cours/tcp-ip/eleve
+      - file: content/appr/theme/reseaux/cours/web/eleve    
 
 - caption: Glossaire
   numbered: false
