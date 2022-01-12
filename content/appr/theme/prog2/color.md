@@ -263,14 +263,14 @@ for x in ('red', 'lime', 'blue'):
     left(120)
 
 left(30)
-for x in ('magenta', 'cyan', 'yellow', 'white'):
+for x in ('yellow', 'cyan', 'magenta', 'white'):
     color(x)
     begin_fill()
     for i in range(4):
-        circle(r, 60)
-        left(60)
+        circle(-r, 60)
+        right(60)
     end_fill()
-    left(60 if x == 'yellow' else 120) 
+    right(60 if x == 'magenta' else 120) 
 ````
 
 ## Synthèse soustractive
@@ -298,14 +298,14 @@ for x in ('cyan', 'magenta', 'yellow'):
     left(120)
 
 left(30)
-for x in ('lime', 'red', 'blue', 'black'):
+for x in ('blue', 'red', 'lime', 'black'):
     color(x)
     begin_fill()
     for i in range(4):
-        circle(r, 60)
-        left(60)
+        circle(-r, 60)
+        right(60)
     end_fill()
-    left(60 if x == 'blue' else 120)  
+    right(60 if x == 'lime' else 120)  
 ````
 
 ```{codeplay}

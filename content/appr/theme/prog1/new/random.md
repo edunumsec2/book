@@ -1,6 +1,6 @@
-# Subir - `random`
+# Randomiser - `random`
 
-Dans ce chapitre nous verrons comment un programme peux 'subir' des influences aléatoires. Ceci est très important pour programmer certains jeux. Nous allons voir que
+Dans ce chapitre nous verrons comment un programme peut introduire un élément aléatoire dans un calcul ou dans un raisonnement. Ceci est très important pour programmer certains jeux. Nous allons voir que
 
 - la fonction `random()` retourne une valeur aléatoire dans l'intervalle [0, 1],
 - la fonction `randint(a, b)` retourne un entier aléatoire dans l'intervalle [a, b],
@@ -143,4 +143,42 @@ for i in range(1000):
     y = gauss(0, 50)
     goto(x, y)
     dot(10)
+```
+
+## Rouler un dé
+
+```{codeplay}
+from turtle import *
+from random import *
+from time import *
+
+speed(5)
+up()
+
+a = 80
+d = 50
+
+for n in range(1, 7):
+    print(n)
+    if n % 2 == 1:
+        dot(d)
+    if n % 2 == 0:
+        goto(-a, a)
+        dot(d)
+        goto(a, -a)
+        dot(d)
+    if n >= 4:
+        goto(-a, -a)
+        dot(d)
+        goto(a, a)
+        dot(d)
+    if n == 6: 
+        goto(-a, 0)
+        dot(d)
+        goto(a, 0)
+        dot(d)
+        
+    sleep(1)
+    clear()
+    sleep(1)
 ```

@@ -89,6 +89,7 @@ parts:
       - file: content/appr/theme/prog2/compter
       - file: content/appr/theme/prog2/math
       - file: content/appr/theme/prog2/color
+      - file: content/appr/theme/prog2/tuple
       - file: content/appr/theme/prog2/ensemble
       - file: content/appr/theme/prog2/logique
       - file: content/appr/theme/prog2/bitwise
