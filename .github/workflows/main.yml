@@ -35,4 +35,5 @@ jobs:
         server: 31826.ftp.infomaniak.com
         username: 31826_elliot
         password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./_build/html
         server-dir: sites/dev-apprendre.modulo-info.ch/
