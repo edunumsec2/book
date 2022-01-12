@@ -155,19 +155,21 @@ Similaire à notre fonction pour dessiner un carré nous allons définir une fon
 ```{codeplay}
 from turtle import *
 
-def pixel(taille, couleur):
-    fillcolor(couleur)
-    begin_fill()
+def carre(taille):
     for i in range(4):
         forward(taille)
         left(90)
+        
+def pixel(taille, couleur):
+    fillcolor(couleur)
+    begin_fill()
+    carre(taille)
     end_fill()
     forward(taille)
 
-back(100)
-pixel(100, 'yellow')
-pixel(100, 'orange')
-pixel(100, 'red')
+back(200)
+for x in ('yellow', 'orange', 'red'):
+    pixel(100, x)
 ```
 
 ## Dessiner Pikachu

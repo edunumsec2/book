@@ -17,7 +17,16 @@ print(dir(random))
 
 ## Nombre aléatoire
 
-La fonction `random()` retourne une valeur aléatoire dans la plage [0, 1].
+La fonction `random()` retourne un nombre aléatoire dans l'intervalle [0, 1].
+
+```{codeplay}
+from random import random
+    
+for i in range(3):
+    print(random())
+```
+
+Nous pouvons visualiser ceci dans un graphique.
 
 ```{codeplay}
 from turtle import *
@@ -39,7 +48,17 @@ for i in range(n):
 
 ## Entier aléatoire
 
-La fonction `random.randint(a, b)` retourne une valeur aléatoire dans la plage [a, b].
+La fonction `randint(a, b)` retourne un entier aléatoire dans l'intervalle [a, b].
+
+```{codeplay}
+from random import randint
+    
+print('randint - random integer')
+for i in range(15):
+    print(randint(0, 9), end=' ')
+```
+
+Nous pouvons visualiser ceci dans un graphique.
 
 ```{codeplay}
 from turtle import *
@@ -64,43 +83,32 @@ Dans l'exemple suivant nous choisissons entre 5 couleurs.
 ```{codeplay}
 from turtle import *
 from random import *
+getscreen().bgcolor('black')
 
+colors = ['red', 'lime', 'pink', 'yellow', 'cyan']
 up()
 n = 60
 for y in range(200-n, -200, -n):
     for x in range(-300+n, 300, n):
         setpos(x, y)
-        color(choice(['red', 'lime', 'pink', 'yellow', 'cyan']))
-        dot(n)
+        dot(n, choice(colors))
 ```
 
-Dans l'exemple suivant nous choisissons entre 3 chaînes de texte.
+Nous pouvons aussi choisir aléatoirement d'une liste numérique, avec la taille du points.
 
 ```{codeplay}
-from random import choice
+from turtle import *
+from random import *
+getscreen().bgcolor('black')
 
-for i in range(5):
-    c = choice(['gagné', 'perdu', 'match nul'])
-    print(c)
-```
-
-La fonction `random()` retourne un nombre aléatoire dans l'intervalle [0, 1].
-
-```{codeplay}
-from random import random
-    
-for i in range(3):
-    print(random())
-```
-
-La fonction `randint(a, b)` retourne un entier aléatoire dans l'intervalle [a, b].
-
-```{codeplay}
-from random import randint
-    
-print('randint - random integer')
-for i in range(15):
-    print(randint(0, 9), end=' ')
+colors = ['red', 'lime', 'pink', 'yellow', 'cyan']
+size = [20, 30, 40, 50, 60]
+up()
+n = 60
+for y in range(200-n, -200, -n):
+    for x in range(-300+n, 300, n):
+        setpos(x, y)
+        dot(choice(size), choice(colors))
 ```
 
 ## Permuter

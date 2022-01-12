@@ -89,9 +89,11 @@ print('=' * len(x))
 
 ## Le code ASCII
 
-Le code ASCII  (American Standard Code for Information Interchange) définit un ensemble de lettres, chiffres, symboles et ponctuations et y associe un code.
+Le code ASCII  (American Standard Code for Information Interchange) était un des premiers standards utilisé pour représenter des symboles dans un ordinateur. Avec initialement 7 et plus tard 8 bits il désigne un ensemble de lettres, chiffres, symboles et ponctuations.
 
-La fonction `ord(c)` retourne le code ASCII qui est associé au caractère `c`.
+Aujourd'hui le standard Unicode permet d'encoder la totalité des symboles utilisé dans les différents langages du monde.
+
+La fonction `ord(c)` retourne le code ASCII (Unicode) qui est associé au caractère `c`.
 
 ```{codeplay}
 print('A =', ord('A'))

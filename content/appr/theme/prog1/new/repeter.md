@@ -272,6 +272,6 @@ up()
 for y in range(100, -150, -50):
     for x in range(-200, 300, 100):
         goto(x, y)
-        dot()
-        write(f'  {x}, {y}')
+        dot(3)
+        write((x, y))
 ````

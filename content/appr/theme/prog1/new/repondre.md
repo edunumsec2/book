@@ -101,6 +101,8 @@ for i in range(4):
 end_fill()
 ```
 
+**Exercice** : Ajoutez une 4e question pour demander la couleur des points (dot) et ajoutez un point colorié dans chaque sommet.
+
 ## Demander en boucle
 
 La boucle `while` permet de répéter les instructions qui se trouvent dans son bloc indenté.
@@ -116,8 +118,7 @@ up()
 back(200)
 x = input('Entrez une couleur: ')
 while x:
-    color(x)
-    dot(80)
+    dot(80, x)
     forward(80)
     x = input('Entrez une couleur: ')
 ```
@@ -144,7 +145,7 @@ carré()
 
 **Exercice** : Corrigez les 3 erreurs de syntaxe'.
 
-### SyntaxError: EOF 
+### SyntaxError: EOF
 
 Cette erreur est produite quand vous oubliez de fermer une parenthèse.
 
@@ -158,3 +159,12 @@ forward(100
 
 **Exercice** : Corrigez l'erreur de syntaxe'.
 
+### ValueErreor
+
+Cette erreur est produite quand la valeur numérique est trop grande pour donner un Unicoe
+
+```{codeplay}
+print(chr(10000000))
+```
+
+**Exercice** : Corrigez l'erreur de valeur'.

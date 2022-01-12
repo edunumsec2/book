@@ -96,7 +96,7 @@ from turtle import *
 
 getscreen().bgcolor('skyblue')
 color('navy')
-width(5)
+width(2)
 left(90)
 
 begin_fill()
@@ -105,6 +105,13 @@ circle(50, 180)
 circle(100, 180)
 end_fill()
 circle(100, 180)
+
+up()
+left(90)
+forward(50)
+dot(30, 'skyblue')
+forward(100)
+dot(30, 'navy')
 ```
 
 ## Soleil
@@ -203,7 +210,6 @@ from turtle import *
 from random import *
 
 getscreen().bgcolor('lavender')
-color('fuchsia')
 up()
 
 n = 60
@@ -211,7 +217,7 @@ for i in range(20):
     x = randrange(-300+n, 300, n)
     y = randrange(-200+n, 200, n)
     goto(x, y)
-    dot(n) 
+    dot(n, 'fuchsia') 
 ```
 
 ## Oeillet
@@ -351,16 +357,12 @@ for c in 'modulo':
     
 goto(-2*d, d)
 dot(0.8*d)
-
-color('turquoise')
 goto(-d, 0)
-dot(0.8*d)
-
-color('lightgray')
+dot(0.8*d, 'turquoise')
 goto(-2*d, 0)
-dot(d/2)
+dot(d/2, 'lightgray')
 goto(-d, d)
-dot(d/2)
+dot(d/2, 'lightgray')
 ```
 
 ```{codeplay}

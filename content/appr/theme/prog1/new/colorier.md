@@ -144,7 +144,6 @@ getscreen().bgcolor('linen')
 up()
 dot(300, 'yellow')
 
-color('black')
 goto(50, 40)
 dot(40)
 goto(-50, 40)
@@ -165,7 +164,6 @@ getscreen().bgcolor('linen')
 up()
 dot(300, 'yellow')
 
-color('black')
 goto(50, 40)
 dot(40)
 goto(-50, 40)
@@ -250,26 +248,29 @@ getscreen().bgcolor('lightgreen')
 up()
 
 def carre():
-    fillcolor('yellow')
-    begin_fill()
+    down()
     for i in range(4):
         forward(100)
         right(90)
-    end_fill()
-        
+    up()
+    
 def triangle():
-    fillcolor('red')
-    begin_fill()
+    down()
     for i in range(3):
         forward(100)
         left(120)
+    up()
+    
+def maison():    
+    fillcolor('yellow')
+    begin_fill()
+    carre()
     end_fill()
     
-def maison():
-    down()
-    carre()
+    fillcolor('red')
+    begin_fill()
     triangle()
-    up()
+    end_fill()
     
 back(200)
 for i in range(3):
