@@ -36,6 +36,7 @@ parts:
 
       - file: content/appr/theme/prog1/new/dessiner
       - file: content/appr/theme/prog1/new/colorier
+      - file: content/appr/theme/prog1/new/repondre
       - file: content/appr/theme/prog1/new/ecrire
       - file: content/appr/theme/prog1/new/calculer
       - file: content/appr/theme/prog1/new/repeter
@@ -45,9 +46,7 @@ parts:
       - file: content/appr/theme/prog1/new/grouper 
       - file: content/appr/theme/prog1/new/random
       - file: content/appr/theme/prog1/new/trier
-      - file: content/appr/theme/prog1/new/math
       - file: content/appr/theme/prog1/new/turtleart
-      - file: content/appr/theme/prog1/new/quiz
       
 #     - file: content/appr/theme/prog1/cours/9_app/app 
 #     - file: content/appr/theme/prog1/cours/10_conclusion/concl 
@@ -84,14 +83,26 @@ parts:
       - file: content/appr/theme/algo2/cours/heuristiques/eleve
       - file: content/appr/theme/algo2/cours/recursivite/eleve
       - file: content/appr/theme/algo2/cours/conclusion/eleve
-  - file: content/appr/theme/prog2/eleve
+  - file: content/appr/theme/prog2/intro
     sections:
-      - file: content/appr/theme/prog2/intro
       - file: content/appr/theme/prog2/dict
+      - file: content/appr/theme/prog2/compter
+      - file: content/appr/theme/prog2/math
+      - file: content/appr/theme/prog2/color
+      - file: content/appr/theme/prog2/ensemble
+      - file: content/appr/theme/prog2/logique
+      - file: content/appr/theme/prog2/bitwise
+      - file: content/appr/theme/prog2/recursif
+      - file: content/appr/theme/prog2/poo
+      - file: content/appr/theme/prog2/cliquer
+      - file: content/appr/theme/prog2/tic_tac_toe
+      - file: content/appr/theme/prog2/puissance4
+      - file: content/appr/theme/prog2/cartes
+      - file: content/appr/theme/prog2/idees
+      - file: content/appr/theme/prog2/quiz
       
   - file: content/appr/theme/projets/eleve
   - file: content/appr/theme/reseaux/eleve
-
 
 - caption: Glossaire
   numbered: false

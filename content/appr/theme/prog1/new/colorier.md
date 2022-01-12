@@ -1,76 +1,77 @@
 # Colorier - `color`
 
-Dans ce chapitre nous explorons ce que c'est la couleur. 
-Les lignes peuvent être colorié et les formes être remplis de couleurs.
+Dans ce chapitre nous continuons à dessiner et nous introduisons la couleur.
+Une couleur peut être appliquée à une ligne, à un point, à une forme ou à l'arrière-fond. Nous allons voir que
 
-- une couleur est définie avec trois nombres
-- Le système RVB (Rouge Vert Bleu) définit les couleurs de base
+- la fonction `color()` permet de choisir une couleur,
+- la fonction `dot(d)` dessine un disque de diamètre `d`,
+- la structure `['red', 'pink']` représente une liste.
 
-Mais avant de passer aux couleurs, nous allons voir l'épaisseur de ligne.
+## Liste de couleurs
 
-## Epaisseur de ligne
+Voici une liste des couleurs disponibles. Pour les utiliser vous devez les écrire entre des apostrophes, comme par exemple `'pink'` ou `'hotpink'`.
 
-La fonction `width()` permet de définir l'épaisseur de ligne. 
-Les deux extrémités de ligne sont arrondies.
-
-Pour démontrer différents épaisseurs, nous allons itérer sur une liste des épaisseurs.
-
-Ici nous utilisons 3 nouvelles fonctions:
-
-- `write(d)` affiche d à la position actuelle
-- `setpos(x, y)`définit une nouvelle position de tortue
-- `xcor()` retourne la coordonnée x
-
-```{codeplay}
-from turtle import *
-
-up()
-back(100)
-left(90)
-
-for d in [1, 2, 5, 10, 20, 30]: 
-    width(d)
-    write(d)
-    forward(30)
-    down()
-    forward(100)
-    up()
-    setpos(xcor() + 50, 0)
-```
+![couleurs](media/colors.png)
 
 ## Couleur de ligne
 
-La fonction `color()` définit deux couleurs:
-- la couleur de ligne
-- la couleur de remplissage (intérieur de la tortue)
+La fonction `color()` permet de définir la couleur de ligne.
+Entre les parenthèses de la fonction vous devez écrire le nom d'une couleur, entouré d'apostrophes, par exemple `color('red')` pour dessiner une ligne rouge.
+
+Voici un triangle avec 3 segments de couleurs différentes.
 
 ```{codeplay}
 from turtle import *
-shape('turtle')
+width(10)
 
-color('red', 'yellow')
+color('red')
 forward(150)
+left(120)
 
-print(pencolor())
-print(fillcolor())
-print(color())
+color('lime')
+forward(150)
+left(120)
+
+color('blue')
+forward(150)
+left(120)
 ```
 
-Les 3 fonctions permettent de définir ou lire les couleurs :
+**Exercice** : Modifiez les 3 couleurs en vous inspirant de la liste.
 
-- `pencolor()` retourne la couleur du stylo
-- `fillcolor()` retourne la couleur de remplissage
-- `color()` retourne un tuple avec les deux couleurs
+## Couleur de point
 
+Nous pouvons afficher des points à chaque sommet :
 
-## Couleur de remplissage
+- la fonction `dot()` dessine un point standard,
+- la fonction `dot(d)` dessine un disque d'un diamètre `d`,
+- la fonction `dot(d, couleur)` dessine un disque dans la couleur spécifiée.
 
-Avec la fonction `fill_color()` nous pouvons définir une couleur de remplissage.
-Pour remplir une forme avec une couleur, nous devons ajouter les deux fonctions :
+```{codeplay}
+from turtle import *
+up()
+
+dot(40, 'red')
+forward(150)
+
+dot(60, 'lime')
+left(120)
+forward(150)
+
+dot(80, 'blue')
+```
+
+**Exercice** : Modifiez la taille et la couleurs des 3 points.
+
+## Couleur de forme
+
+Avec la fonction `fillcolor()` nous pouvons définir une couleur de remplissage de forme. Pour remplir une forme avec une couleur, nous devons ajouter les deux fonctions :
 
 - `begin_fill()` au début de la forme,
 - `end_fill()` à la fin de la forme.
 
+Par exemple ce programme-ci dessine un carré jaune.
+
 ```{codeplay}
 from turtle import *
 
@@ -82,18 +83,19 @@ for i in range(4):
 end_fill()
 ```
 
+**Exercice** : Ajoutez un triangle d'une couleur différente.
+
 ## Couleur d'arrière-fond
 
-Le fonction `getscreen()` retourne un objet `Screen`. Celui ci possède une méthode `bgcolor()`.
-L'objet qui appelle sa méthode permet de changer la couleur de l'arrière-fond.
+Le fonction `getscreen()` retourne un objet `Screen`. Cet objet possède une méthode `bgcolor()`.
+Tout ce qu'il faut retenir en ce moment c'est que la combinaison `getscreen().bgcolor()` permet de définir la couleur d'arrière-fond (bg = background).
 
-Dans l'exemple suivant, nous commençons avec un fond limette et changeons en pink une fois le carré dessiné.
-
+Dans l'exemple suivant, nous dessinons un carré jaune sur un arrière-fond rose.
 
 ```{codeplay}
 from turtle import *
 
-getscreen().bgcolor('lime')
+getscreen().bgcolor('pink')
 fillcolor('yellow')
 
 begin_fill()
@@ -101,18 +103,17 @@ for i in range(4):
     forward(100)
     left(90)
 end_fill()
-
-getscreen().bgcolor('pink')
 ```
 
 ## Forme ouverte
 
 La forme ne doit pas nécessairement être fermée pour être remplie d'une couleur.
 Dans l'exemple suivant nous dessinons une forme ouverte avec seulement deux lignes.
-Le résultat est un triangle.
+Le résultat est un triangle avec deux bordures et un troisième segment sans bordure.
 
 ```{codeplay}
 from turtle import *
+getscreen().bgcolor('azure')
 
 fillcolor('yellow')
 begin_fill()
@@ -129,218 +130,249 @@ for i in range(2):
 end_fill()
 ```
 
-**Exercice** : Dessiner un drapeau bi-colore.
+**Exercice** : Dessinez un drapeau bi-colore.
 
-## Dessiner un pixel
+## Smiley
 
-Comme avant nous allons définir une fonction `square()`.
-Cette fois elle a deux arguments :
-
-- `a` pour la taille du carré,
-- `color` pour la couleur du carré.
+Avec des cercles `dot(d)` de taille différentes nous pouvons dessiner un smiley.
+Voici un smiley qui exprime l'indifférence.
 
 ```{codeplay}
 from turtle import *
 
-def square(a, color):
-    fillcolor(color)
-    begin_fill()
-    for i in range(4):
-        forward(a)
-        left(90)
-    end_fill()
-    forward(a)
+getscreen().bgcolor('linen')
+up()
+dot(300, 'yellow')
 
-back(100)
-square(100, 'yellow')
-square(100, 'orange')
-square(100, 'red')
+goto(50, 40)
+dot(40)
+goto(-50, 40)
+dot(40)
+
+goto(-50, -50)
+width(10)
+down()
+forward(100)
 ```
 
-## Rouge-Vert-Bleu (RGB)
-
-Dans un ordinateur les couleurs sont exprimé par un triplet de nombres.
-Ces nombres indiquent l'intensité des trois couleurs de base : rouge-vert-bleu (RVB)
-
-L'intensité de couleur est exprimé soit :
-
-- en virgule flottante sur dans une plage de 0.0 ... 1.0
-- en entiers sur une plage de 0 ... 255
-
-En utilisant la définition précédente nous pouvons exprimer les couleurs aussi avec un triplet.
+Voici un autre smiley qui exprime la surprise.
 
 ```{codeplay}
 from turtle import *
 
-def square(a, color):
-    fillcolor(color)
-    begin_fill()
-    for i in range(4):
-        forward(a)
-        left(90)
-    end_fill()
-    forward(a)
-===
-back(200)
-square(50, (0, 0, 0))   # black
-square(50, (1, 0, 0))   # red
-square(50, (0, 1, 0))   # green
-square(50, (0, 0, 1))   # blue
-square(50, (1, 1, 0))   # yellow
-square(50, (0, 1, 1))   # cyan
-square(50, (1, 0, 1))   # magenta
-square(50, (1, 1, 1))   # white
+getscreen().bgcolor('linen')
+up()
+dot(300, 'yellow')
+
+goto(50, 40)
+dot(40)
+goto(-50, 40)
+dot(40)
+
+goto(0, -50)
+dot(80)
 ```
 
-## Mode couleur
+**Exercice** : Dessinez encore un autre smiley.
 
-Il a deux façon d'exprimer les 3 composantes RVB :
+## Itérer dans un séquence
 
-- avec un nombre à virgule flottante dans l'intervalle [0, 1]
-- avec un entier dans l'intervalle [0, 255]
+Pour dessiner multiples couleurs, nous pouvons définir une séquence (tuple) de couleurs et itérer sur cette séquence.
+En Python une séquence est délimitée par des parenthèses `()` et les éléments sont séparé par une virgule.
 
-La fonction `colormode()` retourne le mode actuelle si utilisé sans argument. Si un argument est fourni (1 ou 255), ce mode est activé.
-
-```{codeplay}
-from turtle import *
-print(colormode())
-
-colormode(255)
-print(colormode(1))
-```
-
-## Intensité
-
-Voici un programme qui affiche les intensité pour rouge et vert de 0 à 1.
+Dans l'expression `for x in (...)` la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'blue'`, `'cyan'`, `'red'`, etc.
 
 ```{codeplay}
 from turtle import *
 up()
-n = 11
-
-goto(-200, 0)
-for i in range(n):
-    color((i/(n-1), 0, 0))
-    dot(30)
-    forward(400/n)
-write('rouge', font=(None, 18))
-
-goto(-200, 50)
-for i in range(n):
-    color((0, i/(n-1), 0))
-    dot(30)
-    forward(400/n)
-write('vert', font=(None, 18)) 
-```
-
-**Exercice** : Ajoutez une ligne de points pour la couleur bleue.
-
-## Liste de couleurs
-
-Voici une liste des couleurs disponibles.
-
-![couleurs](media/colors.png)
-
-```{codeplay}
-from turtle import *
-
-color = input('Enter a color: ')
-while color:
-    getscreen().bgcolor(color)
-    color = input('Enter a color: ')
-```
-
-## Itérer dans un liste
-
-Pour dessiner de multiples couleurs, nous pouvons définir une liste de couleurs et itérer sur cette liste.
-
-```{codeplay}
-from turtle import *
-
-def square(a, color):
-    fillcolor(color)
-    begin_fill()
-    for i in range(4):
-        forward(a)
-        left(90)
-    end_fill()
-    forward(a)
-
-colors = ['blue', 'cyan', 'red', 'magenta', 'pink', 'lime', 'yellow']
 
 back(200)
-for color in colors:
-    square(50, color)
+for x in ('blue', 'cyan', 'red', 'magenta', 'pink', 'lime'):
+    dot(80, x)
+    forward(80)
 ```
 
-## Couleur interactive
+**Exercice** : Modifiez la séquence des couleurs.
 
-Nous pouvons aussi utiliser une entrée interactive avec la fonction `input()`
-et demander à l'utilisateur d'entrer une couleur valide.
+Nous pouvons également itérer dans une séquence numérique et spécifier l'épaisseur.
+
+```{codeplay}
+from turtle import *
+up()
+
+back(220)
+for x in (20, 40, 60, 80, 100):
+    dot(x, 'red')
+    forward(x + 40)
+```
+
+**Exercice** : Modifiez la séquence des diamètres.
+
+## Dessiner une croix
+
+La fonction `boite()` dessine les 3 cotés d'un carré.
+Répété 4 fois, ceci donne la forme d'une croix.
 
 ```{codeplay}
 from turtle import *
 
-def square(a, color):
-    fillcolor(color)
-    begin_fill()
-    for i in range(4):
-        forward(a)
-        left(90)
-    end_fill()
-    forward(a)
+getscreen().bgcolor('red')
 
-back(200)
-color = input('Enter a color: ')
-while color:
-    square(100, color)
-    color = input('Enter a color: ')
+def boite():
+    forward(60)
+    left(90)
+    forward(60)
+    left(90)
+    forward(60)
+    right(90)
+    
+fillcolor('white')
+begin_fill()
+boite()
+boite()
+boite()
+boite()
+end_fill()
 ```
 
-## Dessiner Pikachu
+**Exercice** : Faites ce programme plus court en utilisant une boucle.
 
-De nouveaux nous définissons une fonction `line()` pour dessiner une liste de couleurs.
-En fin de liste, la tortue est placée à la position prête pour dessiner la ligne suivante.
+## Dessiner une maison
+
+Nous reprenons l'exemple du chapitre précédent et ajoutons de la couleur pour dessiner des maisons jaunes avec un toit rouge.
 
 ```{codeplay}
 from turtle import *
 
-def square(a, color):
-    fillcolor(color)
-    begin_fill()
-    for i in range(4):
-        forward(a)
-        left(90)
-    end_fill()
-    forward(a)
+getscreen().bgcolor('lightgreen')
+up()
 
-a = 50
-
-def line(colors):
-    for color in colors:
-        square(a, color)
-    back(len(colors) * a)
-    up()
-    sety(ycor() - a)
+def carre():
     down()
-
-back(2 * a)
-line(['black', 'yellow', 'yellow', 'black'])
-line(['white', 'red', 'yellow', 'white'])
-line(['yellow', 'yellow', 'yellow', 'yellow'])
-line(['yellow', 'yellow', 'yellow', 'white'])
+    for i in range(4):
+        forward(100)
+        right(90)
+    up()
+    
+def triangle():
+    down()
+    for i in range(3):
+        forward(100)
+        left(120)
+    up()
+    
+def maison():    
+    fillcolor('yellow')
+    begin_fill()
+    carre()
+    end_fill()
+    
+    fillcolor('red')
+    begin_fill()
+    triangle()
+    end_fill()
+    
+back(200)
+for i in range(3):
+    maison()
+    forward(150)
 ```
 
-**Exercice** : Dessinez un autre Pokemon.
+## Dessiner une fleur
+
+Ci-dessous nous dessinons un losange 6 fois pour obtenir une fleur.
+Avec une boucle `for` nous alternons entre deux couleurs de pétale.
 
 ```{codeplay}
+from turtle import *
 
+getscreen().bgcolor('azure')
+
+def losange():
+    begin_fill()
+    for i in range(2):
+        forward(100)
+        left(60)
+        forward(100)
+        left(120)
+    end_fill()
+
+for i in range(3):
+    for x in ['pink', 'hotpink']:
+        fillcolor(x)
+        losange()
+        left(60)
 ```
+
+**Exercice** : Changez le nombre de pétales.
+
+## Erreurs
+
+Il est important de bien comprendre les messages d'erreurs.
+Dans cette section vous allez découvrir les différentes catégories d'erreur et comment les corriger.
+
+### ImportError
+
+Cette erreur est produite si vous essayez d'importer un module qui n'existe pas.
 
 ```{codeplay}
+from turtl import *
 
+for i in range(3):
+    forward(100)
+    left(120)
 ```
+
+**Exercice** : Corrigez l'erreur d'importation.
+
+### SyntaxError
+
+Cette erreur est produite quand vous écrivez mal un mot-clé, ou si vous oubliez une ponctuation. Dans ce cas le mot-clé mal écrit n'est pas reconnu et il n'est pas colorié.
 
 ```{codeplay}
+fro turtle import *
 
+fore i in range(3)
+    forward(100)
+    left(120)
 ```
+
+**Exercice** : Corrigez les 3 erreurs de syntaxe.
+
+### NameError
+
+Cette erreur est produite quand vous écrivez mal le nom d'une variable ou fonction.
+
+```{codeplay}
+from turtle import *
+
+for i in range(n):
+    forwarde(100)
+    lefft(120)
+```
+
+**Exercice** : Corrigez les 3 erreurs de nom.
+
+### TypeError
+
+Cette erreur est produite si vous ne mettez pas le nombre d'arguments correcte pour une fonction.
+
+```{codeplay}
+from turtle import *
+
+for i in 3:
+    forward()
+    left(100, 120)
+```
+
+**Exercice** : Corrigez les 3 erreurs de type.
+
+## Exercices
+
+Dans tous les exercices suivants commencez par définir une couleur d'arrière-fond appropriée.
+
+1. Dessinez et coloriez un sapin de Noël. Définissez des fonctions pour des boules et des étoiles.
+1. Dessinez et coloriez une ville. Définissez des fonctions pour des maisons et des immeubles.
+1. Dessinez et coloriez un paysage. Définissez des fonctions pour des montagnes et des sapins.
+1. Dessinez et coloriez un jardin. Définissez des fonctions pour les feuilles, les pétales et les fleurs.
+1. Dessinez et coloriez un aquarium. Définissez des fonctions pour les poissons, l'herbe, et les bulles.

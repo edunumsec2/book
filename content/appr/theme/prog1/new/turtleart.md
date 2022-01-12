@@ -1,7 +1,8 @@
-# TurtleArt
+# Créer - `turtle`
 
-Ce chapitre vous donne des idées artistiques, inspirées du travail de Artemis Papert, présenté sur le site [TurtleArt](https://turtleart.org).
+Dans ce chapitre nous présentons toute une série d'idées artistiques, inspirées du travail d'Artemis Papert que vous trouvez sur le site [TurtleArt](https://turtleart.org).
 
+Explorez, modifiez, créez !
 ## Etoile
 
 Une **étoile** est un point lumineux dans le ciel nocturne, et par extension, une figure géométrique représentant des rayons partant du centre.
@@ -95,12 +96,22 @@ from turtle import *
 
 getscreen().bgcolor('skyblue')
 color('navy')
-width(5)
+width(2)
 left(90)
 
+begin_fill()
 circle(-50, 180)
 circle(50, 180)
-circle(100)
+circle(100, 180)
+end_fill()
+circle(100, 180)
+
+up()
+left(90)
+forward(50)
+dot(30, 'skyblue')
+forward(100)
+dot(30, 'navy')
 ```
 
 ## Soleil
@@ -199,7 +210,6 @@ from turtle import *
 from random import *
 
 getscreen().bgcolor('lavender')
-color('fuchsia')
 up()
 
 n = 60
@@ -207,7 +217,7 @@ for i in range(20):
     x = randrange(-300+n, 300, n)
     y = randrange(-200+n, 200, n)
     goto(x, y)
-    dot(n) 
+    dot(n, 'fuchsia') 
 ```
 
 ## Oeillet
@@ -261,10 +271,98 @@ forward(2 * r)
 end_fill()
 ```
 
-**Exercice** : Définissez une fonction `coeur()` et dessinez pleins de coeurs.
+## Bulle comics
+
+Un **phylactère**, également appelé bulle ou ballon, est un élément graphique permettant de placer le texte d'un dialogue dans une bande dessinée. 
 
 ```{codeplay}
+from turtle import *
 
+getscreen().bgcolor('skyblue')
+fillcolor('white')
+
+begin_fill()
+left(50)
+forward(50)
+right(50)
+forward(170)
+circle(40, 180)
+forward(200)
+circle(40, 180)
+goto(0, 0)
+end_fill()
+
+up()
+goto(30, 60)
+color('black')
+write('hello', font=('Courier', 32))
+```
+
+## Arbre recursif
+
+La **récursivité** est une démarche dont la description mène à la répétition d'une même règle.
+
+```{codeplay}
+from turtle import *
+
+getscreen().bgcolor('lightgreen')
+color('brown')
+
+def branche(d, n, angle=50):
+    width(n)
+    forward(d)
+    if n > 1:
+        left(angle)
+        branche(d-10, n-1)
+        right(2 * angle)
+        branche(d-10, n-1)
+        left(angle)
+    back(d)
+
+left(90)
+back(70)
+branche(70, 6, 60)
+```
+
+## Bulles de savon
+
+Les bulles de savons sont des cercles colorés, qui utilisent une transparence de 70%, ce qui permet de voir à travers.
+
+```{codeplay}
+from turtle import *
+from random import *
+up()
+
+for i in range(100):
+    x = randint(-300, 300)
+    y = randint(-200, 200)
+    s = randint(20, 100)
+    goto(x, y)
+    color((random(), random(), random(), 0.7))
+    dot(s)
+```
+
+## Modulo
+
+Le nom Modulo fait référence à l'opérateur **modulo** en mathématique `%` et à la structure **modulaire** du cour.
+
+```{codeplay}
+from turtle import *
+
+up()
+d = 60
+color('rebeccapurple')
+for c in 'modulo':
+    write(c, font=(None, d, 'bold'), move=True)
+    
+goto(-2*d, d)
+dot(0.8*d)
+goto(-d, 0)
+dot(0.8*d, 'turquoise')
+goto(-2*d, 0)
+dot(d/2, 'lightgray')
+goto(-d, d)
+dot(d/2, 'lightgray')
 ```
 
 ```{codeplay}

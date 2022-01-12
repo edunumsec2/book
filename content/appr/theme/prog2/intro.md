@@ -1,17 +1,35 @@
-# Introduction
+(programmation)=
+# Programmation II
 
-Dans cette partie nous allons approfondir nos connaissances en programmation.
+Programmer peut être simple. Si vous savez dessiner, écrire et calculer, alors vous savez aussi programmer.
 
-- dictionnaires (`dict`)
-- ensembles (`set`)
-- opérations booléennes (`not`, `and`, `or`)
-- opérations par bit (`&`, `|`, `^`)
-- fonction `lambda`
-- récursivité
+Dans cette deuxième partie nous allons découvrir les dictionnaires, la logique élémentaire et la programmation orientée objet. Nous faisons ceci toujours en étant le plus visuel que possible.
+## Objectifs
 
-Programmation orientée objet (POO) :
+{fa}`check, text-success mr-1` Continuer à découvrir le langage Python
 
-- classe
-- attribut
-- méthode
-- héritage
+{fa}`check, text-success mr-1` Raisonner et comprendre la logique élémentaire
+
+{fa}`check, text-success mr-1`  Découvrir la programmation orientée objet
+
+## Personnages-clés
+
+````{panels}
+
+:img-top: media/mary.png
+
+Mary Kenneth Keller 🇺🇸
+^^^^^
+***1913-1985***
+
+Soeur [**Mary Kenneth Keller**](https://fr.wikipedia.org/wiki/Mary_Kenneth_Keller) est la première femme à obtenir un doctorat en informatique aux États-Unis. Elle participe - avec une douzaine d'autres d'étudiants - au développement du **BASIC** une des premières langages de haut niveau.
+
+----
+:img-top: media/urban.png
+
+Urban Müller 🇨🇭
+^^^^^
+***Né en 1969***
+
+L'étudiant physicien Suisse [**Urban Müller**](https://fr.wikipedia.org/wiki/Brainfuck), est le créateur de **Brainfuck**. Ce langage exotique tire son nom de l’union de brain (cerveau) et fuck (niquer), est volontairement simpliste et met le cerveau dans un état de confusion par sa complexité apparente.
+````

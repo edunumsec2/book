@@ -1,7 +1,10 @@
 # Attendre - `while`
 
-La boucle `while` est souvent utilisé pour attendre quelque chose.
-Elle répète un bloc tant qu'une condition est vraie.
+Dans ce chapitre nous découvrons un deuxième type de boucle, la boucle `while`, qui est souvent utilisé pour attendre quelque chose. Nous allons voir que
+
+- la boucle `while` répète aussi longtemps qu'une condition est vraie,
+- la fonction `sleep()` permet d'attendre et ralentir le programme,
+- le mot-clé `break` permet de sortir de la boucle.
 
 ## Compteur à rebours
 
@@ -42,7 +45,7 @@ print(noms)
 
 ## Faire une somme
 
-Nous utilisons une boucle `while` pour demander des nombres à l'utilisateur. 
+Nous utilisons une boucle `while` pour demander des nombres à l'utilisateur.
 On ne peut pas savoir à l'avance combien de nombres il y aura, et donc nous ne pouvons pas utiliser la boucle `for`. Nous prenons comme condition de terminaison une réponse avec une chaîne vide (`''`).
 
 Au lieu d'écrire `while x != '':` nous pouvons simplifier vers  `while x:`. 
@@ -63,7 +66,7 @@ print('somme =', somme)
 
 ## Faire une moyenne
 
-Nous utilisons une boucle `while` pour demander des nombres à l'utilisateur. 
+Nous utilisons une boucle `while` pour demander des nombres à l'utilisateur.
 On ne peut pas savoir à l'avance combien de nombres il y aura, et donc nous ne pouvons pas utiliser la boucle `for`.  Nous prenons comme condition de terminaison une réponse avec une chaîne vide (`''`).
 
 ```{codeplay}
@@ -83,12 +86,12 @@ print('moyenne =', somme/n)
 
 ## Deviner un nombre
 
-On peut aussi l'utiliser pour deviner un nombre.
+On peut aussi l'utiliser une boucle `while` pour deviner un nombre.
 Ici on importe la fonction `randint()` du module `random`.
 Elle fournit un nombre entier aléatoire entre deux bornes (1, 99).
 
-La fonction `input()` ne retourne que le type `string`.
-La fonction `int()` transforme le type string (chaine) en entier (integer).
+La fonction `input()` ne retourne que le type `str`.
+La fonction `int()` transforme le type string (chaîne) en entier (integer).
 
 ```{codeplay}
 from random import randint
@@ -107,33 +110,32 @@ while x !=  n:
 print('\nBravo. Vous avez réussi!')
 ```
 
-**Exercice** : Quel est la meilleure stratégie pour deviner un nombre ?
-
+**Exercice** : Quelle est la meilleure stratégie pour deviner un nombre ?
 
 ## Indentation
 
-On appelle **bloc** une ou plusieurs instructions qui forment un ensemble.
-En C ou JavaScript un bloc est délimité avec des accolades `{...}`.
-L'indentation est encouragé mais reste optionnelle.
+On appelle **bloc** une ou plusieurs lignes d'instructions qui forment un ensemble.
+Dans les langages C ou JavaScript un bloc est délimité avec des accolades `{...}`.
+L'indentation est encouragée mais reste optionnelle.
 
-En Python l'indentation est obligatoire. C'est la façon officielle de designer un bloc.
+En Python, l'indentation est obligatoire. C'est la façon officielle de designer un bloc.
 Ceci présente deux avantages :
 
-- pas besoin d'accolades pour délimiter une bloc,
+- plus besoin d'accolades pour délimiter une bloc,
 - la structure des blocs est claire et visuelle.
 
 Une **indentation** est un retrait du code par rapport à la marge gauche de 4 caractères.
 Elle peut être insérée avec la touche tabulateur **TAB** (symbolisée par une flèche à gauche du clavier).
 
 Une suite d'instructions indentées de la même manière forme un bloc.
-Ces blocs se trouvent dans :
+Des blocs indentés se trouvent dans :
 
 - la définition de fonction (`def`),
 - l'instruction conditionnelle (`if-else`),
 - la boucles (`for`, `while`).
 
-En Python le symbole `:` en fin de ligne introduit un sous-bloc qui doit être indenté.
-Voici 5 sous-blocs à la suite des 5 mot-clés `def`, `if`, `elif`, `else`, `for` :
+En Python, le symbole `:` en fin de ligne introduit un sous-bloc qui doit être indenté.
+Voici 5 sous-blocs à la suite des mot-clés `def`, `if`, `elif`, `else`, `for` :
 
 ```{codeplay}
 def f(x):
@@ -158,3 +160,20 @@ for i in range(3):
 ```
 
 **Exercice** : Enlevez l'indentation de l'instructions `print('-' * 11)`.
+
+## Sortir avec `break`
+
+Le mot-clé `break`, seul sur une ligne, permet de sortir d'une boucle.
+Souvent cette méthode est utilisé pour sortir d'une boucle infinie.
+
+```{codeplay}
+noms = []
+
+while True:
+    nom = input('Entrez un nom: ')
+    if nom == '':
+        break
+    noms.append(nom)
+    
+print(noms)
+```

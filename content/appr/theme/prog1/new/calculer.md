@@ -1,12 +1,17 @@
 # Calculer - `int`
 
-Nous avons déjà vu qu'un programme informatique peut manipuler ces différents catégories d’objet :
+Dans ce chapitre nous allons voir comment un programme peut calculer avec des nombres.
+Ceci est utilisé dans une calculatrice ou un programme de tableur.
 
-- image
-- texte
-- nombre
+Les nombres entiers forment une catégorie très importantes. En anglais un entier est appelé **integer** (`int`). Nous allons voir que
 
-Dans ce chapitre nous allons explorer comment nous pouvons calculer avec des nombres. Voici un exemple qui affiche texte et nombre :
+- les opérateurs de base sont `+-*/`,
+- les nombres sont du type `int` ou `float`,
+- un texte est du type `str`.
+
+## Un calcul simple
+
+Dans ce chapitre nous allons explorer comment nous pouvons calculer avec des nombres. Voici un exemple qui affiche dans une première ligne sous forme de texte une expression mathématique, et dans une deuxième ligne une expression mathématique qui sera évalué vers son résultat numérique.
 
 ```{codeplay}
 print('2 à la puissance 32 =')
@@ -15,7 +20,7 @@ print(2 ** 32)
 
 ## Les opérations de base
 
-Nous retrouvons les 4 opérations arithmétiques de base :
+En Python, nous retrouvons les 4 opérations arithmétiques de base :
 
 - addition (`+`)
 - soustraction (`-`)
@@ -34,11 +39,11 @@ print('3 / 4 =', 3 / 4)
 
 ## Les opérations supplémentaires
 
-Dans Python nous avons 3 opérateurs supplémentaires :
+En Python, nous avons également 3 opérateurs supplémentaires :
 
-- puissance (`**`)
-- division entière (`//`)
-- reste de la division entière ou modulo (`%`)
+- puissance (`**`),
+- division entière (`//`),
+- reste de la division entière ou modulo (`%`).
 
 ```{codeplay}
 print('7 ** 3 =', 7 ** 3)
@@ -50,9 +55,9 @@ print('7 % 3 =', 7 % 3)
 
 ## Une variable
 
-Une **variable** est une manière de designer une valeur par un nom. Le terme technique est **affectation** et elle utilise le symbole `=` (égal).
+Une **variable** est une manière de designer une valeur par un nom. Le terme technique pour associer une valeur à une variable est **affectation** et elle utilise le symbole `=` (égal).
 
-Mais faites attention ! Il ne s'agit pas d'une équation dans le sens mathématique. La variable dois toujours figurer seul à gauche. 
+Mais faites attention ! Il ne s'agit pas d'une équation dans le sens mathématique. La variable dois toujours figurer seul à gauche.
 La forme générique d'une affectation est `var = expression`.
  
 ```{codeplay}
@@ -65,29 +70,29 @@ print('circonférence =', pi * 2 * r)
 ```
 **Exercice** : Ajoutez le calcul de la surface du cercle.
 
-Pour nommer une variable vous pouvez utiliser : 
+Pour nommer une variable vous pouvez utiliser :
 
-- lettres (`a...z` et `A...Z`)
-- chiffres (`0...9`)
-- le tiret bas (`_`)
+- lettres (`a...z` et `A...Z`),
+- chiffres (`0...9`),
+- le tiret bas (`_`).
 
 Le nom de variable :
 
-- est sensible aux majuscules/minuscules
-- ne peut pas commencer avec un chiffre
-- ne dois pas consister d'un mot-clé (`if`, `else`, `for`)
-- ne dois pas contenir d'autre caractère spécial (`* + % & $ - / ?`).
+- est sensible aux majuscules/minuscules,
+- ne peut pas commencer avec un chiffre,
+- ne dois pas consister d'un mot-clé (`if`, `else`, `for`),
+- ne dois pas contenir un caractère spécial (`* + % & $ - / ?`).
 
 Ces noms de variables sont donc valides : `a2`, `_a`, `speed`, `pos_x`, `POS_X`
 
-Ceux-ci ne sont pas valides :
+Ceux-ci ne sont pas valides :
 
 - `2var` (commence avec un chiffre),
 - `if` (correspond à un mot-clé),
 - `var$2` (contient un caractère spécial),
 - `mon nom` (contient une espace et est interprété comme deux noms de variables).
 
-Voici un autre calcul où `a`  et `b` désignent largeur et hauteur d'un rectangle.
+Voici un autre calcul où `a` et `b` désignent largeur et hauteur d'un rectangle.
 
 ```{codeplay}
 a = 3
@@ -114,17 +119,17 @@ print(type(123))
 print(type(3.14))
 ```
 
-- `str` (string) désigne des chaînes de caractères
-- `int` (integer) désigne des nombres entiers
-- `float` (floating point) désigne des nombres à virgule flottante
-
 **Exercice** : Trouvez encore d'autres types.
 
+L'exemple ci-dessus nous montre que
 
+- `str` (string) désigne des chaînes de caractères,
+- `int` (integer) désigne des nombres entiers,
+- `float` (floating point) désigne des nombres à virgule flottante.
 
 ## Conversion de type
 
-Les trois fonctions `str()`, `int()` et `float()` permettent de transformer d'un type à un autre. 
+Les trois fonctions `str()`, `int()` et `float()` permettent de transformer d'un type à un autre.
 
 Par exemple la chaîne `'123'` peut être transformé soit en entier, soit en nombre à virgule flottante.
 
@@ -157,7 +162,7 @@ print('surface =')
 
 **Exercice** : Complétez le programme pour afficher la surface du cercle.
 
-Nous pouvons également créer des programmes ou nous demandons plusieurs valeurs à l'utilisateur. Cette fois nous permettons que l'utilisation d'entiers, et donc transformons la chaine obtenu avec `int()` en nombre entier.
+Nous pouvons également créer des programmes ou nous demandons plusieurs valeurs à l'utilisateur. Cette fois nous permettons seulement l'utilisation de nombres entiers, et donc transformons la chaine obtenu avec `int()` en nombre entier.
 
 ```{codeplay}
 a = int(input('Entrez la largeur: '))
@@ -168,7 +173,7 @@ print('périmètre =')
 print('diagonale =')
 ```
 
-**Exercice** : Complétez le programme pour afficher périmètre et la diagonale.
+**Exercice** : Complétez le programme pour afficher le périmètre et la diagonale.
 
 ## Affectation multiple
 
@@ -190,36 +195,7 @@ x, y = y, x
 print(x, y)
 ```
 
-**Exercice** : Ajoutez une 3e variable et faites un permutation cyclique.
-
-## Compter en binaire
-
-Si nous utilisons le code binaire pour compter avec nos doigts, alors nous pouvons représenter les codes binaires `00000` à `11111`.
-
-Voici un programme qui affiche le code binaire et dessine les doigts.
-
-```{codeplay}
-from turtle import *
-
-def finger(x):
-    forward(x)
-    circle(-20, 180)
-    forward(x)
-    left(180)
-
-def binaire(code):
-    left(90)
-    for c in code :
-        write(c, font=('Arial', 24))
-        if c == '1':
-            finger(120)
-        else :
-            finger(30)
-              
-binaire('00110')
-```
-
-**Exercice** : modifier le programme pour compter de 0 à 31.
+**Exercice** : Ajoutez une 3e variable et faites une permutation cyclique.
 
 ## Quiz
 
@@ -252,4 +228,60 @@ Quel est le résultat de l'expression `'1 + 2 * 3'` ?
 {f}`6`
 {v}`7`
 {f}`9`
+```
+
+## Erreurs
+
+Pour bien programmer vous devez savoir interpréter les messages d'erreurs. Ces messages vous indiquent sur quelle ligne du programme il y a quel type d'erreur.
+
+### SyntaxError
+
+Cette erreur se produit quand vous oubliez un signe de ponctuation (parenthèse, virgule, apostrophe).
+
+```{codeplay}
+print('hello'
+print(12 34)
+print('bonjour)
+```
+
+**Exercice** : Corrigez les 3 erreurs de syntaxe.
+
+### TypeError
+
+Cette erreur se produit quand vous mettez des opérandes dont le type n'est pas approprié pour l'opérateur.
+
+```{codeplay}
+print('10' > 0)
+print('10' * '10')
+print('10' + 10)
+```
+
+**Exercice** : Corrigez les 3 erreurs de type.
+
+### ZeroDivisionError
+
+Cette erreur se produit quand vous essayez de diviser par zéro.
+
+```{codeplay}
+print(10 / 0)
+print(10 // 0)
+print(10 % 0)
+```
+**Exercice** : Corrigez les 3 erreurs de division par zéro.
+
+### RangeError
+
+Cette erreur se produit quand une fonction récursive s'appelle trop.
+
+```{codeplay}
+def f(x):
+    if x == 1:
+        return 1
+    else: 
+        return 1 + f(x-1)
+
+print(f(100))
+print(f(1000))
+print(f(10000))
+print(f(20000))
 ```

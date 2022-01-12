@@ -1,12 +1,13 @@
 # Répéter - `for`
 
-Un programme exécute souvent certaines instructions multiples fois. Dans ce cas une boucle permet de rendre le code plus court et mieux structuré.
-Une boucle ne représente pas seulement une économie de lignes de code, mais donne en plus la possibilité de contrôler facilement le nombre de répétitions.
+Dans ce chapitre nous allons voir de près comment un programme peut exécuter certaines instructions multiples fois.
 
-En Python nous avons deux types de boucle :
+Une boucle permet de rendre le code plus court et mieux structuré.
+Une boucle ne représente pas seulement une économie de lignes de code, mais donne aussi la possibilité de contrôler le nombre de répétitions. Nous allons voir que
 
-- la boucle `for` pour parcourir un ensemble de valeurs,
-- la boucle `while` pour répéter pendant qu'une condition est vraie.
+- la boucle `for` répète du code pour un ensemble de valeurs données,
+- la variable d'itération `i` prend une autre valeur à chaque tour,
+- on peut itérer sur des plages numériques, du texte, et des listes.
 
 ## Répéter x fois
 
@@ -23,15 +24,15 @@ for i in range(x):
     left(360/x)
 ```
 
-**Exercice** : Testez avec des nombres différents entre 3 et 13.
+**Exercice** : Testez avec des nombres différents entre 3 et 13.
 
 ## Itérer x fois
 
-Le mot **itérer** veut dire parcourir un ensemble un par un. Dans la boucle `for` une variable d'itération va parcourir un ensemble qui peut être :
+Le mot **itérer** veut dire parcourir un ensemble un par un. Dans la boucle `for` une variable d'itération va parcourir un ensemble qui peut être :
 
-- une plage numérique avec `range()`
-- une chaîne de caractères
-- une liste
+- une plage numérique avec `range()`,
+- une chaîne de caractères,
+- une liste.
 
 La **variable d'itération** prend successivement les valeurs 0 à x-1.
 Quand la variable d'itération est de type entier (`int`) on l'appelle souvent `i`.
@@ -51,17 +52,19 @@ for i in range(x):
     write(i, font=(None, 12))
 ```
 
-**Exercice** : Testez avec des nombres différents entre 5 et 13.
+**Exercice** : Testez avec des nombres différents entre 5 et 13.
 
 ## Itérer avec `range()`
 
 La fonction `range(start, stop, step)` permet de produire une séquence linéaire d'entiers. Les entiers se trouvent dans l'intervalle semi-fermé `[start, stop[` avec un incrément de `step`.
 
-Le sens des paramètres :
+Le sens des paramètres :
 
-- `start` est la valeur de départ
-- `stop` est la valeur finale, mais sans l'inclure
-- `step` est l'incrément
+- `start` est la valeur de départ,
+- `stop` est la valeur finale, mais sans l'inclure,
+- `step` est l'incrément.
+
+La fonction `print()` utilise le paramètre optionnel `end` pour ne pas terminer avec un retour à la ligne mais par une simple espace.
 
 ```{codeplay}
 start = int(input('start = '))
@@ -72,18 +75,18 @@ for i in range(start, stop, step):
     print(i, end=' ')
 ```
 
-**Exercice** : Affichez les entiers entre 100 et 200 avec un incrément de 3.
+**Exercice** : Affichez les entiers entre 100 et 200 avec un incrément de 3.
 
-La fonction range fonctionne aussi dans l'ordre décroissant. Dans ce cas il faut choisir pour `step` une valeur négative.
+La fonction `range()` fonctionne aussi dans l'ordre décroissant. Dans ce cas il faut choisir pour `step` une valeur négative.
 
 ```{codeplay}
 for i in range(-100, -200, -3):
     print(i, end=' ')
 ```
 
-**Exercice** : Affichez les entiers de +10 à -10.
+**Exercice** : Affichez les entiers de +10 à -10.
 
-La fonction `range()` peut fonctionner avec 1, 2 ou 3 paramètres. Les valeur par défaut sont :
+La fonction `range()` peut fonctionner avec 1, 2 ou 3 paramètres. Les valeur par défaut sont :
 
 - 0 pour `start`,
 - 1 pour `step`.
@@ -121,7 +124,7 @@ for c in mot:
     sleep(0.1)
 ```
 
-**Exercice** : Testez avec différents textes.
+**Exercice** : Testez avec des textes différents.
 
 ## Itérer sur une liste
 
@@ -142,7 +145,7 @@ for color in colors:
     forward(50)
 ```
 
-**Exercice** : Ajoutez d'autres couleurs à la liste.
+**Exercice** : Ajoutez d'autres couleurs à la liste.
 
 ## Dessiner une spirale
 
@@ -175,7 +178,7 @@ polygon(36, 10)
 ## La fonction `circle(r)`
 
 La fonction `circle(r)` dessine un cercle de rayon `r`.
-Le cercle est dessiné :
+Le cercle est dessiné :
 
 - vers la gauche si r est positif,
 - vers la droite si r est négatif.
@@ -190,11 +193,11 @@ circle(-30)
 forward(100)
 ```
 
-**Exercice** : Inversez le signe du rayon.
+**Exercice** : Inversez le signe du rayon.
 
 Cette fonction peut avoir un deuxième paramètre sous la forme `circle(r, angle)`
-ou `angle` représente l'angle du cercle dessiné.
-Par défaut c'est 360°, donc un cercle entier.
+ou `angle` représente l'angle de l'arc de cercle dessiné.
+Par défaut l'angle est de 360°, donc un cercle entier.
 
 Voici un exemple qui utilise deux demi-cercles de 180°.
 
@@ -209,7 +212,7 @@ forward(50)
 circle(40, 180)
 ```
 
-**Exercice** : Dessinez un bonhomme de neige et utilisez `dot()` pour les yeux.
+**Exercice** : Dessinez un bonhomme de neige et utilisez `dot()` pour les yeux.
 
 ## Dessiner une fleur
 
@@ -233,14 +236,14 @@ for r in range(20, 100, 20):
     circle(r)
 ```
 
-**Exercice** : Dessinez les cercles empilés les uns sur les autres.
+**Exercice** : Dessinez les cercles empilés les uns sur les autres.
 
 ## Deux boucles imbriquées
 
 Dans Excel, les cellules sont désignées avec une lettre et un nombre. 
 Pour recréer les noms de cellule nous itérons dans une chaîne de chiffres et une deuxième fois dans une chaîne de lettres.
 
-On appelle la première boucle avec `y` la **boucle extérieure** et la deuxième boucle avec `x` **la boucle intérieure**. 
+On appelle la première boucle avec `y` la **boucle extérieure** et la deuxième boucle avec `x` **la boucle intérieure**.
 
 Nous concaténons les deux éléments lettre et nombre (`x + y`) et nous ajoutons l'option `end=' '` pour remplacer le retour à la ligne par une espace.
 
@@ -256,4 +259,19 @@ for y in '1234567':
     print()
 ```
 
-**Exercice** : Transformez le code pour afficher 20 colonnes de cellules.
+**Exercice** : Transformez le code pour afficher 20 colonnes de cellules.
+
+## Itérer sur x et y
+
+Deux boucles imbriquées peuvent itérer dans les directions x et y. Ceci permet d'afficher les coordonnées de la tortue.
+
+```{codeplay}
+from turtle import *
+up()
+
+for y in range(100, -150, -50):
+    for x in range(-200, 300, 100):
+        goto(x, y)
+        dot(3)
+        write((x, y))
+````

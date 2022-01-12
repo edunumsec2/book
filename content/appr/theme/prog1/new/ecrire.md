@@ -1,32 +1,16 @@
 # Ecrire - `str`
 
-Un programme informatique peut manipuler ces différents catégories d'objets :
+Dans ce chapitre nous allons regarder de plus près ce que c'est le texte. Le texte est une catégorie d'information qui est essentiel dans beaucoup de programmes, tel une application messager ou un programme de traitement de texte.
 
-- image
-- texte
-- nombre
+Techniquement un texte est appelé une **chaîne de caractères**, ou string en anglais (`str`). Nous allons voir que
 
-Les activités, ou verbes, qui y sont associés sont :
-
-- dessiner
-- écrire
-- calculer
-
-Dans ce chapitre nous explorons ce que c'est le texte, et comment un programme peut écrire.
-
-## Dire bonjour
-
-Nous commençons par le grand classique des livres d'introduction à la programmation.
-
-```{codeplay}
-print('hello world.')
-```
-
-**Exercice** : Affichez des lignes de texte supplémentaires.
+- un texte est délimité par un apostrophe `'` ou un guillemet double `"`,
+- l'opérateur `*` répète un texte,
+- la fonction `ord(c)` retourne le code pour représenter un caractère.
 
 ## Délimiter un texte
 
-Toute caractère imprimable peux être utilisé pour créer un texte :
+Tout caractère imprimable peux être utilisé pour créer un texte :
 
 - lettres (`a...z` et `A...Z`)
 - chiffres (`0...9`)
@@ -38,7 +22,7 @@ Pour différencier un morceau de texte du reste d'un programme, il doit être d�
 
 - apostrophe (`'`)
 - guillemets doubles (`"`)
-- trois guillemets (`"""`)
+- trois guillemets doubles (`"""`)
 
 ```{codeplay}
 print('apostrophe')
@@ -49,7 +33,7 @@ le texte peut s'étaler sur plusieurs lignes.
 """)
 ```
 
-**Exercice** : Ajoutez du texte sur les deux lignes qui contiennent  `"""`.
+**Exercice** : Ajoutez des lignes supplémentaires au texte qui est délimité par `"""`.
 
 ## Répéter un texte
 
@@ -61,14 +45,14 @@ print('=' * 20)
 print('hello ' * 3)
 ```
 
-**Exercice** : Répétez une chaines plus longue.
+**Exercice** : Répétez une chaîne plus longue.
 
 ## Concaténer un texte
 
 Le mot **concaténer** veut dire enchaîner ou coller ensemble.
 
 L'opérateur `+` permet de concaténer deux chaînes de texte.
-Mais juxtaposer deux chaines de texte et les séparer par zéro ou plusieurs espaces va aussi concaténer la chaîne.
+Mais juxtaposer deux chaînes de texte et les séparer par zéro ou plusieurs espaces va aussi concaténer la chaîne.
 
 ```{codeplay}
 print('bon'    'jour')
@@ -76,35 +60,10 @@ print('bon''jour')
 print('bon' + 'jour')
 ```
 
-## La fonction `input()`
+## La longueur d'une chaîne
 
-La fonction `input('question')` permet de demander une entrée (input) à l'utilisateur.
-L'utilisateur voit `question` affiché à la console et doit répondre à cette question. Il termine son entrée avec la touche Enter.
-
-La réponse de l'utilisateur est ensuite mémorisée dans une variable que nous appelons `x` dans cet exemple. 
-Ensuite nous pouvons utiliser cette variable `x` dans la suite du programme, par exemple dans une expression `print()`.
-
-```{codeplay}
-x = input('Entrez votre nom: ')
-print('Bonjour', x)
-```
-
-Vous êtes complètement libre dans le choix des noms pour les variables, mais c'est recommandé de choisir des noms qui sont le plus explicite possible. C'est mieux d'utiliser des variables parlant, comme `'nom'` et `'age'`,  bien qu'on aurait pu utiliser `'x'` et `'y'`.  
-
-```{codeplay}
-nom = input('Entrez votre nom: ')
-print('Bonjour', nom)
-
-age = input('Entrez votre age: ')
-print('Trés bien', nom, 'vous avez', age, 'ans')
-```
-
-**Exercice** : Ajoutez une 3e question.
-
-## La longueur d'une chaine
-
-La fonction `len()` retourne la longueur d'une chaine.
-La chaine vide (`""`) a une longueur de 0.
+La fonction `len()` retourne la longueur d'une chaîne.
+La chaîne vide (`""`) a une longueur de 0.
 
 ```{codeplay}
 print(len('bonjour'))
@@ -124,6 +83,40 @@ x = input('Entrez une phrase: ')
 print('=' * len(x))
 print(x)
 print('=' * len(x))
+```
+
+**Exercice** : Entourez votre texte d'un autre symbole.
+
+## Le code ASCII
+
+Le code ASCII  (American Standard Code for Information Interchange) était un des premiers standards utilisé pour représenter des symboles dans un ordinateur. Avec initialement 7 et plus tard 8 bits il désigne un ensemble de lettres, chiffres, symboles et ponctuations.
+
+Aujourd'hui le standard Unicode permet d'encoder la totalité des symboles utilisé dans les différents langages du monde.
+
+La fonction `ord(c)` retourne le code ASCII (Unicode) qui est associé au caractère `c`.
+
+```{codeplay}
+print('A =', ord('A'))
+print('B =', ord('B'))
+print('a =', ord('a'))
+```
+
+Nous constatons que :
+
+- le code ASCII pour la lettre A est 65,
+- les codes suivent l'ordre de l'alphabet,
+- les codes des minuscules ont un écart de 32 par rapport au code des majuscules.
+
+```{codeplay}
+for c in 'Python':
+    print(c, '=', ord(c))
+```
+
+La fonction `chr(i)` retourne le caractère qui correspond au code `i`.
+
+```{codeplay}
+for i in range(65, 75):
+    print(i, '=', chr(i))
 ```
 
 ## L'art ASCII
@@ -185,37 +178,61 @@ print('4\tsouris\t15.95')
 print('12\tclavier\t25.95')
 ```
 
-## Le code ASCII
+## Les emojis
 
-La fonction `ord(c)` retourne le code ASCII qui est associé au caractère `c`.
+Un émoji est une petite image qui peut être utilisée comme un caractère à l'intérieur d'un texte.
+Nous pouvons les répéter avec l'opérateur `*` et obtenir leur **Unicode** avec la fonction `ord(c)`.
 
 ```{codeplay}
-print('A', ord('A'))
-print('B', ord('B'))
-print('a', ord('a'))
+print('😀' * 10)
+
+print(ord('🍎'))
+print(ord('😀'))
 ```
 
-Nous constatons que :
-
-- le code ASCII pour la lettre A est 65
-- les codes suivent l'ordre de l'alphabet
-- les codes des minuscules ont un écart de 32 par rapport au code des majuscules
+Avec la fonction `chr(i)` nous pouvons afficher les 10 caractères qui suivent l'émoji de pomme.
 
 ```{codeplay}
-for c in 'Python':
+for i in range(10):
+    print(chr(i + 127822))
+```
+
+**Exercice** : Affichez les 10 emojis qui suivent 😀.
+
+## Les kanji
+
+Le japonais est écrit avec des pictogrammes qui s'appellent des kanjis.
+Avec la fonction `ord(c)` nous pouvons obtenir leur **Unicode**.
+
+```{codeplay}
+print('日本語')
+print('nihongo')
+print('japonais\n')
+
+for c in  '日本語': 
     print(c, ord(c))
 ```
 
+Avec la fonction `chr(i)` nous pouvons afficher les 10 kanjis qui suivent le kanji 日 qui signifie soleil. Si vous regardez bien, vous remarquez qu'ils contiennent tous le radical pour soleil.
+
+```{codeplay}
+n = ord('日')
+for i in  range(n, n + 10): 
+    print(i, chr(i))
+```
+
+Exercice : Affichez les 10 kanjis qui suivent 語 (langage).
+
 ## Les commentaires
 
-Un commentaire en Python est un bout de code qui est ignoré par Python.
+En Python, un commentaire est un bout de code qui est ignoré par Python.
 Un commentaire commence par le symbole hashtag (`#`).
 
 Les commentaires sont utilisés pour ajouter à un programme des informations supplémentaires :
 
-- explications
-- nom de l'auteur
-- révisions
+- explications,
+- nom de l'auteur,
+- révision.
 
 Parfois un commentaire est utilisé pour désactiver une ligne de code.
 La plupart des éditeurs marquent les commentaires en couleur grisée.
@@ -223,14 +240,14 @@ La plupart des éditeurs marquent les commentaires en couleur grisée.
 ```{codeplay}
 # commentaire sur une ligne
 
-print('bonjour')  # commentaire en fin de ligne
+print('bonjour')  # commentaire en fin de ligne
 print("# ceci n'est pas un commentaire")
 # print('au revoir')
 
 """
 Ceci est 
 un long commentaire
-sur plusieur lignes.
+sur plusieurs lignes.
 """
 ```
 
@@ -238,7 +255,7 @@ sur plusieur lignes.
 
 ## La fonction `write()`
 
-Dans le module `turtle` nous avons fonction `write()` qui permet d'afficher du texte à l'intérieur d'un dessin. Cette fonction permet de spécifier la police sous forme de tuple (police, taille).
+Dans le module `turtle` nous avons la fonction `write()` qui permet d'afficher du texte à l'intérieur d'un dessin. Cette fonction permet de spécifier la police sous forme de paire (police, taille).
 
 ```{codeplay}
 from turtle import *
@@ -255,6 +272,3 @@ forward(40)
 write('Arial 36', font=('Arial', 36))
 ```
 
-```{codeplay}
-
-```
