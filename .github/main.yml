@@ -1,0 +1,40 @@
+name: deploy-book
+
+# Only run this when the master branch changes
+on: 
+  push:
+    branches: 
+      - dev
+
+# This job installs dependencies, builds the book, and pushes it to `gh-pages`
+jobs:
+  deploy-book:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      working-directory: ./config/apprendre
+
+    # Install dependencies
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      working-directory: ./config/apprendre
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+      working-directory: ./config/apprendre
+    # Build the book
+    - name: Build the book
+      run: |
+        jupyter-book build .
+      working-directory: ./config/apprendre
+    # Push the book's HTML to Infomaniak FTP
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      with:
+        server: 31826.ftp.infomaniak.com
+        username: 31826_elliot
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: sites/dev-apprendre.modulo-info.ch/
