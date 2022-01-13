@@ -157,7 +157,7 @@ Dans un premier temps on vérifie que l'utilisateur existe avec `user in passwor
 Dans un deuxième temps on vérifie si c'est le bon mot de passe avec `pw == passwords[user]`.
 
 ```{codeplay}
-passwords = {'mark':'1234', 'steve':'abQF$12', 'bill':'password'}
+passwords = {'mark':'1234', 'steve':'abQF$12', 'sarah':'01[+]a.'}
 
 while True:
     user = input('login: ')

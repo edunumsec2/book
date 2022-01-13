@@ -140,17 +140,40 @@ L'expression `left(90)` est équivalent à deux autres expressions
 ## Donner du sens
 
 Une fonction ne permet pas seulement d'économiser des lignes de code.
-Elle permet aussi de structurer notre code et de lui donner un sens.
-Dans l'exemple ci-dessus nous dessinons deux fois un rectangle. 
-Mais une fois nous lui donnons le sens de bâtiment, la deuxième fois de porte.
+Elle permet aussi de structurer le code et de lui donner un sens. Prenez par exemple ce code-ci. C'est presque impossible de comprendre ce que fait le programme en regardant les 17 lignes de code.
 
-Vous voyez tout de suite que les 3 lignes
+```{codeplay}
+from turtle import *
+
+forward(200)
+left(90)
+forward(100)
+left(90)
+forward(200)
+left(90)
+forward(100)
+left(90)
+forward(30)
+forward(30)
+left(90)
+forward(50)
+left(90)
+forward(30)
+left(90)
+forward(50)
+left(90)
+```
+
+Si nous observons la tortue, nous comprenons finalement qu'elle dessine deux fois un rectangle. Nous pouvons même interprêter cette image et donner le sens de bâtiment au premier, et de porte au deuxième rectangle.
+
+Essayons maintenant de découper le code en **sous-problèmes** en utilisant deux fonctions `batiment()` et `porte()`.
+En regardant ces 3 lignes de code, on comprend immédiatement le sens du programme.
 
     batiment()
     forward(30)
     porte()
 
-font beaucoup plus de sens que les 16 lignes `forward()` et `left()`.
+La définition d'une fonction permet d'ajouter des nouveaux mots à un langage de programmation. Contrairement aux commandes natives de Python qui sont tous en anglais, nous sommes libre de les choisir en français.
 
 ```{codeplay}
 from turtle import *
@@ -445,26 +468,23 @@ Ceci nous permet de dessiner des formes disjoints.
 
 ```{codeplay}
 from turtle import *
-up()
 
 def fenetre():
-    down()
     for i in range(4):
         forward(30)
         left(90)
-    up()
         
 def batiment():
-    down()
     for i in range(2):
         forward(200)
         left(90)
         forward(100)
         left(90)
-    up()
 
 fenetre()
+up()
 forward(70)
+down()
 batiment()
 ```
 
