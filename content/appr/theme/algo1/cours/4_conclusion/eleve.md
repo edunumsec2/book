@@ -13,15 +13,15 @@ Comprendre le fonctionnement de base des algorithmes permet de mieux appréhende
 ````{admonition} À retenir
 :class: attention
 
-Un algorithme est une suite d’instructions dans un ordre bien précis qui permet de résoudre un problème. L’algorithme va produire un résultat en sortie, en fonction de données reçues en entrée.
+Un algorithme est **une suite d’instructions dans un ordre bien précis** qui permet de résoudre un problème. L’algorithme va produire un résultat en sortie, en fonction de données reçues en entrée.
 
-Pour arriver à résoudre un problème, il faut le décomposer en sous-problèmes.
+Pour arriver à résoudre un problème, il faut commencer par le **décomposer en sous-problèmes**.
 
-Afin de pouvoir rechercher de manière efficace, les données doivent impérativement être triées.
+Afin de pouvoir rechercher de manière efficace, **les données doivent impérativement être triées** en utilisant un algorithme de tri.
 
-Il existe de multiples manières de résoudre un problème. Toutes ces manières ne se valent pas. Il faut choisir l’algorithme en fonction de ce qui doit être optimisé : le temps de résolution, l’espace de stockage, la consommation d'énergie, la précision de la solution, etc.
+Il existe de multiples manières de résoudre un problème, par exemple différents algorithmes de tris. Toutes ces manières ne se valent pas. Il faut **choisir l’algorithme en fonction de ce qui doit être optimisé** : le temps de résolution, l’espace de stockage, la consommation d’énergie, la précision de la solution, etc.
 
-L’algorithme n’est pas un programme. Pour être exécuté sur un système informatique, l'algorithme doit être transcrit en un programme, pour résoudre le problème concrètement et de manière automatisée.     
+**L’algorithme n’est pas un programme.** Pour être exécuté sur un système informatique, l’algorithme doit être transcrit en un programme, pour résoudre le problème concrètement et de manière automatisée.    
 
 ````
 
