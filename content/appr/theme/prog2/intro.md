@@ -25,7 +25,7 @@ Mary Kenneth Keller 🇺🇸
 Soeur [**Mary Kenneth Keller**](https://fr.wikipedia.org/wiki/Mary_Kenneth_Keller) est la première femme à obtenir un doctorat en informatique aux États-Unis. Elle participe - avec une douzaine d'autres d'étudiants - au développement du **BASIC** une des premières langages de haut niveau.
 
 ----
-:img-top: media/urban.png
+:img-top: media/urban.jpg
 
 Urban Müller 🇨🇭
 ^^^^^
