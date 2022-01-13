@@ -80,7 +80,7 @@ Le code
 
     forward(100)
     left(90)
-    back(-20)
+    back(20)
 
 place la tortue à la position
 {f}`(0, 0)` 
@@ -203,13 +203,13 @@ Nous avons maintenant tout ce qui est nécessaire pour définir deux nouvelles c
 from turtle import *
 
 def porte():
-    forward(30)
+    forward(20)
     left(90)
-    forward(50)
+    forward(40)
     left(90)
-    forward(30)
+    forward(20)
     left(90)
-    forward(50)
+    forward(40)
     left(90)
 
 def maison():
@@ -450,7 +450,7 @@ up()
 def fenetre():
     down()
     for i in range(4):
-        forward(40)
+        forward(30)
         left(90)
     up()
         

@@ -182,18 +182,18 @@ Nous pouvons utiliser un dictionnaire `RVB` pour associer des nom de couleurs à
 
 ```{codeplay}
 from turtle import *
+up()
 
 RVB = {'rouge':(1, 0, 0), 'vert':(0, 1, 0), 'bleu':(0, 0, 1),
       'jaune':(1, 1, 0), 'cyan':(0, 1, 1), 'magenta':(1, 0, 1),
       'orange':(1, 0.5, 0)}
 
-couleurs = ['rouge', 'orange', 'jaune', 'vert', 'magenta', 'bleu']
+couleurs = 'rouge', 'orange', 'jaune', 'vert', 'magenta', 'bleu'
 
 d = 50
 back(200)
 for x in couleurs:
-    color(RVB[x])
-    dot(d)
+    dot(d, RVB[x])
     forward(d)
 ```
 

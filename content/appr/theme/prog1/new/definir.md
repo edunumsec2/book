@@ -145,6 +145,36 @@ print(x, 'est', signe(x))
 
 **Exercice** : Testez avec -2, 0 et 3.
 
+## Squid Game logo
+
+Squid Game, ou Le Jeu du calmar, est une série télévisée dramatique de survie sud-coréenne de 9 épisodes, diffusée dans le monde entier en 2021 sur Netflix.
+La série raconte l'histoire d'un groupe de personnes, fortement endettées, voire ruinées, qui risquent leur vie dans un jeu de survie mystérieux avec comme récompense une somme énorme.
+
+Nous définissons une fonction `polygone(a, n)` pour dessiner le cercle, le triangle et le carré du logo.
+
+```{codeplay}
+from turtle import *
+getscreen().bgcolor('peru')
+width(5)
+up()
+
+def polygone(a, n):
+    down()
+    for i in range(n):
+        forward(a)
+        left(360/n)
+    up()
+    
+back(150)
+polygone(10, 36)
+forward(100)
+polygone(120, 3)
+forward(170)
+polygone(100, 4)
+```
+
+**Exercice** : Ajoutez votre nom et vos coordonnées à la carte de visite en utilisant la fonction `write()`.
+
 ## Dessiner un pixel
 
 Similaire à notre fonction pour dessiner un carré nous allons définir une fonction `pixel()`, mais cette fois nous ajoutons un deuxième argument :

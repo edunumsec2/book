@@ -263,3 +263,6 @@ jupyter-book clean .
 - Plateforme : Romain Edelmann (romain.edelmann@epfl.ch) - EPFL & Grégoire Gavin (gregoire.gavin@epfl.ch) - EPFL
 - Charte éditoriale, plateforme, rédaction : Elliot Vaucher (elliot.vaucher@epfl.ch) - EPFL
 - Coordination : Nathalie Farenc (nathalie.farenc@epfl.ch) - EPFL
+
+
+Test actions
