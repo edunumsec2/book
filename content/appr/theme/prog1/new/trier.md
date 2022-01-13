@@ -9,6 +9,12 @@ Nous allons voir que
 - la fonction `max(liste)` retourne le maximum,
 - la méthode `liste.sort()` trie une liste.
 
+Lorsque vous jouez aux cartes, vous triez vos cartes par valeur et dans ce cas, vous utilisez sans le savoir un algorithme de tri.
+
+```{image} media/cartes.webp
+:width: 300px
+```
+
 ## Fonction `min` et `max`
 
 Les fonctions `min()` et `max()` retournent le minimum et le maximum d'une liste à l'aide d'un algorithme.  
@@ -530,11 +536,15 @@ show()
 
 L’algorithme du **tri à bulles** compare les éléments voisins, deux par deux, et les met dans le bon ordre. Le mot 'bulles' fait références aux bulles dans une boissons qui montent à la surface.
 
+```{image} media/bulles.jpg
+:width: 300px
+```
+
+Dans l'exemple suivant, nous pouvons voir comment le `4` flotte vers le haut, jusqu'à c'qu'il rencontre le le `6` qui monte alors tout vers la surface, comme des bulles dans une boisson.
+
 ```{image} media/tri_bulles.jpg
 :width: 200px
 ```
-
-On peut voir comment le `4` flotte vers le haut, jusqu'à c'qu'il rencontre le le `6` qui monte alors tout vers la surface, comme des bulles dans une boisson.
 
 ```{codeplay}
 y = [3, 4, 1, 2, 6, 5]
