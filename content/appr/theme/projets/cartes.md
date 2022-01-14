@@ -1,6 +1,8 @@
-# Jeux de cartes
+# Poker
 
-## Poker
+Le poker est une famille de jeux de cartes comprenant de nombreuses formules et variantes. Il se pratique à plusieurs joueurs avec un jeu généralement de cinquante-deux cartes et des jetons représentant les sommes misées.
+
+## Les cartes
 
 ```{codeplay}
 from turtle import *
