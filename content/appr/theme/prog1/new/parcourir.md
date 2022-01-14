@@ -43,7 +43,7 @@ for x in (20, 40, 60, 80, 100):
 
 ## Parcourir des distances
 
-Nous allons reprendre nos fonctions `batiment()` et `porte()` et avec l'aide d'une séquece nous pouvons l'écrire bien plus compacte.
+Nous allons reprendre nos fonctions `batiment()` et `porte()` et avec l'aide d'une séquence nous pouvons l'écrire bien plus compacte.
 
 ```{codeplay}
 from turtle import *
@@ -63,11 +63,11 @@ forward(50)
 batiment()
 ```
 
-**Exercice** : Placez la porte à l'intérieur du batiment et coloriez-la en rouge.
+**Exercice** : Placez la porte à l'intérieur du bâtiment et coloriez-la en rouge.
 
 ## Parcourir des angles
 
-Nous allons reprendre nos fonctions `maison()` et avec l'aide d'une séquece nous pouvons l'écrire bien plus compacte. Cette fois-ci la séquence représente des angles, a nous appelons la variable `a` pour nous rappeler que c'est des angles.
+Nous allons reprendre nos fonctions `maison()` et avec l'aide d'une séquence nous pouvons l'écrire bien plus compacte. Cette fois-ci la séquence représente des angles, a nous appelons la variable `a` pour nous rappeler que c'est des angles.
 
 ```{codeplay}
 from turtle import *
@@ -116,7 +116,7 @@ for c in ('red', 'yellow', 'pink', 'lightblue', 'lightgreen'):
 
 ## Dessiner une fleur
 
-Ci-dessous nous dessinons 6 fois un losagne pour obtenir une fleur.
+Ci-dessous nous dessinons 6 fois un losange pour obtenir une fleur.
 Avec une boucle `for` nous parcourons une séquence de 6 couleurs alternés.
 
 ```{codeplay}
@@ -140,7 +140,7 @@ for c in ('pink', 'red', 'pink', 'red', 'pink'):
 
 ## Sourire
 
-Dans cet exemple nous allons parcourir différents épaisseurs et nous appelons notre variable `w` (width). Voici quatre smiley avec diffents formes de bouche.
+Dans cet exemple nous allons parcourir différents épaisseurs et nous appelons notre variable `w` (width). Voici quatre smiley avec différents formes de bouche.
 
 ```{codeplay}
 from turtle import *
@@ -173,7 +173,7 @@ for w in (1, 5, 10, 20):
     left(5)
 ```
 
-**Exercice** : Faites varier un autre paramètres, par exemple la distance des yeux, ou la taille d'un oeuil.
+**Exercice** : Faites varier un autre paramètres, par exemple la distance des yeux, ou la taille d'un oeil.
 
 ## Etonnement
 
@@ -205,4 +205,3 @@ for d in (10, 20, 30, 40):
     forward(120)
     left(5)
 ```
-

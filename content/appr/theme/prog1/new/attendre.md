@@ -127,14 +127,14 @@ Ceci présente deux avantages :
 Une **indentation** est un retrait du code par rapport à la marge gauche de 4 caractères.
 Elle peut être insérée avec la touche tabulateur **TAB** (symbolisée par une flèche à gauche du clavier).
 
-Une suite d'instructions indentées de la même manière forme un bloc.
-Des blocs indentés se trouvent dans :
+Un bloc est défini par l'entendu de la même indentation.
+Des blocs marqué par une indentation se trouvent après les mots-clés pour :
 
 - la définition de fonction (`def`),
-- l'instruction conditionnelle (`if-else`),
-- la boucles (`for`, `while`).
+- l'instruction conditionnelle (`if-elif-else`),
+- la boucle (`for/while`).
 
-En Python, le symbole `:` en fin de ligne introduit un sous-bloc qui doit être indenté.
+En Python, le symbole `:` en fin de ligne introduit un sous-bloc qui doit être en indentation.
 Voici 5 sous-blocs à la suite des mot-clés `def`, `if`, `elif`, `else`, `for` :
 
 ```{codeplay}

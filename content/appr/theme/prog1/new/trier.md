@@ -1,6 +1,6 @@
 # Trier - `sort`
 
-Dans ce chapitre nous allons découvrir quelques algorithmes de tri. 
+Dans ce chapitre nous allons découvrir quelques algorithmes de tri.
 Pouvoir trier les éléments d'une liste est une fonctionnalité fondamentale dans l'informatique. Le succès énorme de Google est basé sur un tri efficace de l'information, car dans une liste triée on peux trouver un élément **beaucoup** plus vite.
 
 Nous allons voir que
@@ -162,7 +162,7 @@ for i in range(n):
 ## L'indice du minimum
 
 Souvent on ne doit pas seulement trouver la valeur minimum, mais aussi son indice dans la liste.
-Différent au cas précédent, nous itérons pas sur les valeurs, mais sur les indices.
+Différent au cas précédent, nous ne parcourons pas les valeurs, mais les indices.
 
 ```{codeplay}
 liste = [3, 4, 1, 2, 6, 5]

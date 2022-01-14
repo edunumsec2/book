@@ -126,11 +126,11 @@ for c in mot:
 
 **Exercice** : Testez avec des textes différents.
 
-## Itérer sur une liste
+## Parcourir une liste
 
 La ligne de code `for color in colors:` signifie que la variable `color` va prendre à chaque répétition un élément différent de la liste `colors`.
 
-Quand on itère sur une liste la convention est d'utiliser un mot au pluriel pour la liste (`colors`) et le même mot en singulier pour la variable d'itération (`color`).
+Quand on parcourt une liste la convention est d'utiliser un mot au pluriel pour la liste (`colors`) et le même mot en singulier pour la variable d'itération (`color`).
 
 ```{codeplay}
 from turtle import *
@@ -240,8 +240,8 @@ for r in range(20, 100, 20):
 
 ## Deux boucles imbriquées
 
-Dans Excel, les cellules sont désignées avec une lettre et un nombre. 
-Pour recréer les noms de cellule nous itérons dans une chaîne de chiffres et une deuxième fois dans une chaîne de lettres.
+Dans Excel, les cellules sont désignées avec une lettre et un nombre.
+Pour recréer les noms de cellule nous parcourons une chaîne de chiffres et une deuxième fois dans une chaîne de lettres.
 
 On appelle la première boucle avec `y` la **boucle extérieure** et la deuxième boucle avec `x` **la boucle intérieure**.
 

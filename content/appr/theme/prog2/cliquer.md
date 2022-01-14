@@ -62,7 +62,7 @@ getscreen().listen()
 
 **Exercice** : Dessinez une maison.
 
-## Echéquier
+## Echiquier
 
 Ici nous dessinons d'abord un tableau de jeu. Ensuite nous détectons la case dans laquelle le clic a eu lieu et y ajoutons un disque noir.
 

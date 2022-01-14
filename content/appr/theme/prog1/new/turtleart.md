@@ -298,7 +298,7 @@ color('black')
 write('hello', font=('Courier', 32))
 ```
 
-## Arbre recursif
+## Arbre récursif
 
 La **récursivité** est une démarche dont la description mène à la répétition d'une même règle.
 

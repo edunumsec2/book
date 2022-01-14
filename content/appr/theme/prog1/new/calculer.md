@@ -68,6 +68,7 @@ print('rayon =', r)
 print('diamètre =', 2 * r)
 print('circonférence =', pi * 2 * r)
 ```
+
 **Exercice** : Ajoutez le calcul de la surface du cercle.
 
 Pour nommer une variable vous pouvez utiliser :
@@ -267,6 +268,7 @@ print(10 / 0)
 print(10 // 0)
 print(10 % 0)
 ```
+
 **Exercice** : Corrigez les 3 erreurs de division par zéro.
 
 ### RangeError

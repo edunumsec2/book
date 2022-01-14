@@ -64,7 +64,6 @@ print('Trés bien', nom, 'vous avez', age, 'ans')
 
 **Exercice** : Ajoutez une 3e question.
 
-
 ## Demander une couleur
 
 Nous pouvons utiliser une entrée interactive avec la fonction `input()`
@@ -105,8 +104,8 @@ end_fill()
 
 ## Demander en boucle
 
-La boucle `while` permet de répéter les instructions qui se trouvent dans son bloc indenté.
-Dans la dernière ligne du bloc indenté nous reposons la question.
+La boucle `while` permet de répéter les instructions qui se trouvent dans son bloc en indentation.
+Dans la dernière ligne du bloc en indentation nous reposons la question.
 
 Cette boucle répète aussi longtemps que la variable `x` contient une valeur, c'est à dire qu'elle n'est pas vide.
 Si vous appuyez sur **Enter** sans entrer quelque chose, la boucle s'arrête.
@@ -161,7 +160,7 @@ forward(100
 
 ### ValueErreor
 
-Cette erreur est produite quand la valeur numérique est trop grande pour donner un Unicoe
+Cette erreur est produite quand la valeur numérique est trop grande pour correspondre à un Unicode.
 
 ```{codeplay}
 print(chr(10000000))

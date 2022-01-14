@@ -2,7 +2,6 @@
 
 Les programmes de ce chapitres sont des idées sous construction, à développer et à placer à leur endroit approprié.
 
-
 ## Arbre
 
 ```{codeplay}

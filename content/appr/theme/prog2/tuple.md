@@ -155,7 +155,7 @@ print('abs(a) =', abs(a))
 print('abs(b) =', abs(b))
 ```
 
-## Visualize Vect2D
+## Visualiser Vect2D
 
 ```{codeplay}
 from turtle import *

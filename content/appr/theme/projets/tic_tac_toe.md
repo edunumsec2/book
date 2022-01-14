@@ -102,7 +102,7 @@ show()
 
 ## Alterner les tours
 
-Nous désignons les joueurs avec 1 et 2 et utilisons une boucle `while` pour alterner entre les deux jouers.
+Nous désignons les joueurs avec 1 et 2 et utilisons une boucle `while` pour alterner entre les deux joueurs.
 
 ```{codeplay}
 state = [[0, 0, 0],

@@ -24,7 +24,7 @@ print(type(p))
 A partir d'une class, nous pouvons créer autant d'objets que nous voulons.
 Une classe est comme un moule qui nous permet de créer des copies, ou clones à partir d'une définition de classe.
 
-On appelle ces objets des **instances** de la classe, et l'action de créer des objets est appelé **instantier**.
+On appelle ces objets des **instances** de la classe, et l'action de créer des objets est appelé **instancier**.
 
 ```{codeplay}
 class Point():
@@ -37,7 +37,7 @@ p2 = Point()
 print(p0, p1, p2)
 ```
 
-**Exercice** : Instantie des autres objets de la classe `Point`,
+**Exercice** : Instanciez des autres objets de la classe `Point`,
 
 ## Définir des attributs
 
@@ -156,7 +156,7 @@ print(p2)
 ```
 
 
-## Dot clickable
+## Dot cliquable
 
 ```{codeplay}
 from turtle import *
@@ -208,7 +208,7 @@ getscreen().listen()
 ```
 
 
-## Dot clickable
+## Dot cliqable
 
 ```{codeplay}
 from turtle import *

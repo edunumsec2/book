@@ -1,8 +1,8 @@
 # Projets
 
-Aujourd'hui, tout le monde peut créer un produit révolutionnaire, avec rien d'autre qu'un ordinateur comme investissement initial.
+Aujourd'hui, tout le monde peut créer un produit informatique révolutionnaire, avec rien d'autre qu'un ordinateur comme investissement initial.
 
-Marc Zuckerberg avait 19 ans quand il lançait le projet Facebook depuis son dortoire à l'université de Harvard. 
+Marc Zuckerberg avait 19 ans quand il lançait le projet Facebook depuis son dortoir à l'université de Harvard. 
 Dans cette partie vous allez, tout seule ou en groupe, mettre en pratique vos connaissances de l'informatique pour créer un projet plus conséquent. Et qui sait, vous serez peut-être le prochain Mark Zuckerberg.
 
 ## Objectifs

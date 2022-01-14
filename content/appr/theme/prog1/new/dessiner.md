@@ -164,7 +164,7 @@ forward(50)
 left(90)
 ```
 
-Si nous observons la tortue, nous comprenons finalement qu'elle dessine deux fois un rectangle. Nous pouvons même interprêter cette image et donner le sens de bâtiment au premier, et de porte au deuxième rectangle.
+Si nous observons la tortue, nous comprenons finalement qu'elle dessine deux fois un rectangle. Nous pouvons même interpréter cette image et donner le sens de bâtiment au premier, et de porte au deuxième rectangle.
 
 Essayons maintenant de découper le code en **sous-problèmes** en utilisant deux fonctions `batiment()` et `porte()`.
 En regardant ces 3 lignes de code, on comprend immédiatement le sens du programme.
@@ -213,9 +213,9 @@ Le fait de donner un nom à une séquence d'instructions est appelé **définir 
 1. le nom de la fonction (`batiment/porte`),
 1. les parenthèses `()`,
 1. le deux-points `:`,
-1. un bloc indenté.
+1. un bloc en indentation.
 
-C'est quoi un bloc indenté, ou une indentation ?
+C'est quoi un bloc en indentation ?
 C'est un bloc de texte qui comporte des espaces vides à gauche. En Python, ces espaces apparaissent en multiples de 4.
 
 L'indentation est très importante en Python. C'est l'indentation qui indique l'étendu des instructions qui font partie de la fonction.
@@ -318,7 +318,7 @@ left(90)
 ```
 
 Ne serait-il pas pratique de pouvoir dire à la tortue de répéter ces instructions 4 fois ?  
-Ceci est possible avec une boucle `for`. La ligne `for i in range(x):` va répéter `x` fois le bloc indenté qui suit.
+Ceci est possible avec une boucle `for`. La ligne `for i in range(x):` va répéter `x` fois le bloc en indentation qui suit.
 
 ```{codeplay}
 from turtle import *
@@ -442,7 +442,7 @@ for i in range(3):
 ## Lever/baisser le stylo
 
 Les deux commandes `up()` et `down()` permettent de lever et baisser le stylo.
-Ceci nous permet dessiner des lignes séparées, comme cette ligne en traitillé.
+Ceci nous permet dessiner des formes séparées, ou ce trait discontinu.
 
 ```{codeplay}
 from turtle import *
@@ -540,7 +540,7 @@ for i in range(6):
 
 ## Editeur de Python
 
-Jusqu'à maintenant nous avons exécuté nos petits programmes ici dans cette page web. Malheureuesement ces programmes disparaissent quand nous rechargeons la page. Pour pouvoir les sauvegarder et programmer indépendammant de ce site web, nous avons besoin d'un éditeur de Python externe.
+Jusqu'à maintenant nous avons exécuté nos petits programmes ici dans cette page web. Malheureusement ces programmes disparaissent quand nous rechargeons la page. Pour pouvoir les sauvegarder et programmer indépendamment de ce site web, nous avons besoin d'un éditeur de Python externe.
 
 Nous vous proposons d'utiliser [Thonny](https://thonny.org), qui est un logiciel libre, facile à installer, et un excellent éditeur pour débuter avec Python. Essayez de faire ceci :
 
@@ -548,7 +548,7 @@ Nous vous proposons d'utiliser [Thonny](https://thonny.org), qui est un logiciel
 1. Définissez la fonction `maison()`
 1. Appelez la fonction
 1. Sauvegardez le programme sous `maison.py`
-1. Executez le programme
+1. Exécutez le programme
 
 ```{image} media/thonny.png
 ```

@@ -1,4 +1,3 @@
-(programmation)=
 # Programmation II
 
 Programmer peut être simple. Si vous savez dessiner, écrire et calculer, alors vous savez aussi programmer.
