@@ -106,6 +106,7 @@ parts:
       - file: content/appr/theme/projets/puissance4
       - file: content/appr/theme/projets/game_of_life
       - file: content/appr/theme/projets/cartes
+      - file: content/appr/theme/projets/microbit/microbit
       
   - file: content/appr/theme/reseaux/eleve
 
