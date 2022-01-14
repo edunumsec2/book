@@ -48,7 +48,7 @@ for val in liste[1:]:
 print(min)
 ```
 
-**Exercice** : Modifiez l'algorithme pour trouver le maximum.
+**Exercice** : Modifiez l'algorithme pour trouver le minimum ET le maximum.
 
 ## Créer une liste
 
@@ -157,7 +157,7 @@ for i in range(n):
     dot(d/2)
 ```
 
-**Exercice** : Modifiez l'algorithme pour trouver le maximum.
+**Exercice** : Modifiez l'algorithme pour visualiser le minimum ET le maximum.
 
 ## L'indice du minimum
 
@@ -179,7 +179,7 @@ for i in range(1, n):
 print(i_min)
 ```
 
-**Exercice** : Modifiez l'algorithme pour trouver l'indice du maximum.
+**Exercice** : Modifiez l'algorithme pour trouver l'indice du minimum ET maximum.
 
 ## Echanger deux éléments
 

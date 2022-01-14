@@ -143,7 +143,6 @@ for c in phrase:
         print(Morse[c], end='  ')
 ```
 
-
 **Exercice** : Ecrivez votre nom en Morse.
 
 ## Système de login
@@ -205,7 +204,7 @@ Avec un dictionnaire nous pouvons facilement compter les lettres dans un texte.
 Compter le nombre d'occurence de quelque chose est appelé faire un histogram.
 
 Notre dictionnaire s'appelle `histogram` et au début il est vide.
-Les clés du histogramme sont des caractères que nous désignons par `c`. 
+Les clés du histogramme sont des caractères que nous désignons par `c`.
 
 Si le caractère `c` fait déjà partie du histogramme, alors on ajoute 1 au compte, sinon on met le compte à 1.
 
@@ -313,7 +312,7 @@ anglais = {'maison':'house'}
 print(anglais['voiture'])
 ```
 
-La méthode `get(clé, val_défaut)` permet d'obtenir une valeur par défaut et d'éviter une erreur si la clé n'existe pas encore dans le dictionnaire. 
+La méthode `get(clé, val_défaut)` permet d'obtenir une valeur par défaut et d'éviter une erreur si la clé n'existe pas encore dans le dictionnaire.
 
 ```{codeplay}
 anglais = {'maison':'house'}

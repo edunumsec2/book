@@ -2,8 +2,8 @@
 
 Dans ce chapitre nous découvrons une nouvelle structure de données - les listes. Nous allons voir que
 
-- une liste est un séquence d'objets entre crochets tel que `[2, 3, 5]`, 
-- la notation d'index `liste[i]` permet d'accéder au i-ème élément de la liste, 
+- une liste est un séquence d'objets entre crochets tel que `[2, 3, 5]`,
+- la notation d'index `liste[i]` permet d'accéder au i-ème élément de la liste,
 - la notation de tranche `liste[i:j]` permet d'accéder à une sous-liste.
 
 ## Des groupes d'objets
@@ -94,6 +94,15 @@ print(noms[1::2])  # chaque 2e élément
 
 **Exercice** : Modifiez l'expression de tranche et exécutez de nouveau.
 
+```{question}
+Quel est le résultat de l'expression `'python'[:2]` ?
+
+{f}`thon`
+{f}`y`
+{f}`p`
+{v}`py`
+```
+
 ## Itérer sur une liste
 
 La boucle `for` peut itérer sur les éléments d’une liste. La variable d’itération prend successivement la valeur de chaque élément de la liste.
@@ -103,6 +112,16 @@ La pratique est d'utiliser pour la liste un nom de variable au pluriel (`noms`) 
 noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
 for nom in noms:
     print(nom)
+```
+
+
+```{question}
+Quel est le résultat de l'expression `'pikachu'[-3:]` ?
+
+{f}`pik`
+{v}`chu`
+{f}`p`
+{f}`pika`
 ```
 
 ## Concaténation
@@ -129,7 +148,7 @@ print(5 * [1])
 
 ## Ajouter des éléments
 
-Une **méthode** fonctionne comme une fonction, mais est rattachée à une liste avec la notation (`.`). 
+Une **méthode** fonctionne comme une fonction, mais est rattachée à une liste avec la notation (`.`).
 Par exemple si `a` désigne une liste, on peux ajouter un élément `x` à la fin de cette liste avec l'expression `a.append(x)`.
 
 Ces trois méthodes permettent tous d’ajouter des éléments à une liste existante :
@@ -153,7 +172,7 @@ a.extend('abc')
 print(a)
 ```
 
-La méthode `insert(i, x)` insère un nouvel élément `x` à la i<sup>ème</sup> position.
+La méthode `insert(i, x)` insère un nouvel élément `x` à la position `i`.
 
 ```{codeplay}
 a = [1, 2, 3]
@@ -185,7 +204,7 @@ a.pop()
 print(a)
 ```
 
-La méthode `pop(i)` enlève le i<sup>ème</sup> élément.
+La méthode `pop(i)` enlève l'élément avec l'index `i`.
 
 ```{codeplay}
 a = [1, 2, 3, 4]
@@ -212,7 +231,7 @@ Les listes disposent aussi de méthodes avec notation dotée :
 ### Trier une liste
 
 La méthode `sort()` trie la liste dans l'ordre croissant (pour les caractères, on se réfère au code ASCII ou UTF utilisé).
-Cette méthode fonctionne uniquement si tous les éléments sont évidemment du même type (nombre, texte) et peuvent être comparés. 
+Cette méthode fonctionne uniquement si tous les éléments sont évidemment du même type (nombre, texte) et peuvent être comparés.
 
 ```{codeplay}
 a = [23, 10, -89, -54, 99, 2, 13]

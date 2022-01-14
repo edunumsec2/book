@@ -3,6 +3,7 @@
 Dans ce chapitre nous présentons toute une série d'idées artistiques, inspirées du travail d'Artemis Papert que vous trouvez sur le site [TurtleArt](https://turtleart.org).
 
 Explorez, modifiez, créez !
+
 ## Etoile
 
 Une **étoile** est un point lumineux dans le ciel nocturne, et par extension, une figure géométrique représentant des rayons partant du centre.
@@ -273,7 +274,7 @@ end_fill()
 
 ## Bulle comics
 
-Un **phylactère**, également appelé bulle ou ballon, est un élément graphique permettant de placer le texte d'un dialogue dans une bande dessinée. 
+Un **phylactère**, également appelé bulle ou ballon, est un élément graphique permettant de placer le texte d'un dialogue dans une bande dessinée.
 
 ```{codeplay}
 from turtle import *

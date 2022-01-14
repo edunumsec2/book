@@ -36,6 +36,13 @@ print('3 / 4 =', 3 / 4)
 
 **Exercice** : Modifiez les 4 calculs et exécutez de nouveau.
 
+```{question}
+Quel est le résultat de l'expression `'12' + '12'` ?  
+{f}`12`  
+{f}`24`  
+{v}`1212`  
+{f}`1221`  
+```
 
 ## Les opérations supplémentaires
 
@@ -53,13 +60,24 @@ print('7 % 3 =', 7 % 3)
 
 **Exercice** : Modifiez les 3 calculs et exécutez de nouveau.
 
+```{question}
+Quel est le résultat de l'expression `1 + 2 * 3` ?
+
+{f}`1`
+{f}`2`
+{f}`3`
+{f}`6`
+{v}`7`
+{f}`9`
+```
+
 ## Une variable
 
 Une **variable** est une manière de designer une valeur par un nom. Le terme technique pour associer une valeur à une variable est **affectation** et elle utilise le symbole `=` (égal).
 
 Mais faites attention ! Il ne s'agit pas d'une équation dans le sens mathématique. La variable dois toujours figurer seul à gauche.
 La forme générique d'une affectation est `var = expression`.
- 
+
 ```{codeplay}
 r = 2
 pi = 3.14
@@ -93,6 +111,16 @@ Ceux-ci ne sont pas valides :
 - `var$2` (contient un caractère spécial),
 - `mon nom` (contient une espace et est interprété comme deux noms de variables).
 
+```{question}
+Lesquels des noms de variable sont valides ?
+
+{f}`var 2`  
+{v}`var2`  
+{f}`2var`  
+{f}`if`  
+{v}`IF_VAR`
+```
+
 Voici un autre calcul où `a` et `b` désignent largeur et hauteur d'un rectangle.
 
 ```{codeplay}
@@ -107,6 +135,16 @@ print('diagonale =')
 ```
 
 **Exercice** : Complétez le calcul du périmètre et de la diagonale.
+
+```{question}
+Quels noms de variable sont valides ?
+
+{f}`if`  
+{v}`VAR_2`  
+{v}`_if`  
+{v}`elseif`  
+{f}`var$2`
+```
 
 ## Les types
 
@@ -197,39 +235,6 @@ print(x, y)
 ```
 
 **Exercice** : Ajoutez une 3e variable et faites une permutation cyclique.
-
-## Quiz
-
-```{question} Variable
-Lesquels des noms de variable sont valides ?
-
-{f}`var 2`  
-{v}`var2`  
-{f}`2var`  
-{f}`if`  
-{v}`IF_VAR`
-```
-
-```{question} Variable
-Quels noms de variable sont valides ?
-
-{f}`if`  
-{v}`VAR_2`  
-{v}`_if`  
-{v}`elseif`  
-{f}`var$2`
-```
-
-```{question} Expression
-Quel est le résultat de l'expression `'1 + 2 * 3'` ?
-
-{f}`1`
-{f}`2`
-{f}`3`
-{f}`6`
-{v}`7`
-{f}`9`
-```
 
 ## Erreurs
 

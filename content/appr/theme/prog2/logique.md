@@ -84,7 +84,7 @@ for p in (False, True):
 `False or False =` {bl}`>False|True`  
 `False or True  =` {bl}`False|>True`  
 `True  or False =` {bl}`False|>True`  
-`True  or True  =` {bl}`False|>True` 
+`True  or True  =` {bl}`False|>True`
 
 ## Exclusive ou
 
@@ -98,7 +98,7 @@ p   | q   | p xor q
 `False xor False =` {bl}`>False|True`  
 `False xor True  =` {bl}`False|>True`  
 `True  xor False =` {bl}`False|>True`  
-`True  xor True  =` {bl}`>False|True` 
+`True  xor True  =` {bl}`>False|True`
 
 ```{codeplay}
 print('p', 'q', 'p ^ q', sep='\t')

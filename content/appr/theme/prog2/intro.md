@@ -21,7 +21,7 @@ Mary Kenneth Keller 🇺🇸
 ^^^^^
 ***1913-1985***
 
-Soeur [**Mary Kenneth Keller**](https://fr.wikipedia.org/wiki/Mary_Kenneth_Keller) est la première femme à obtenir un doctorat en informatique aux États-Unis. Elle participe - avec une douzaine d'autres d'étudiants - au développement du **BASIC** une des premières langages de haut niveau.
+Soeur [**Mary Kenneth Keller**](https://fr.wikipedia.org/wiki/Mary_Kenneth_Keller) est la première femme à obtenir un doctorat en informatique aux États-Unis. Elle participe - avec une douzaine d'autres d'étudiants - au développement du [BASIC](https://fr.wikipedia.org/wiki/Basic_(langage)) une des premières langages de haut niveau.
 
 ----
 :img-top: media/urban.jpg
@@ -30,5 +30,5 @@ Urban Müller 🇨🇭
 ^^^^^
 ***Né en 1969***
 
-L'étudiant physicien Suisse [**Urban Müller**](https://fr.wikipedia.org/wiki/Brainfuck), est le créateur de **Brainfuck**. Ce langage exotique tire son nom de l’union de brain (cerveau) et fuck (niquer), est volontairement simpliste et met le cerveau dans un état de confusion par sa complexité apparente.
+L'étudiant physicien [**Urban Müller**](https://fr.wikipedia.org/wiki/Brainfuck), est le créateur de [Brainfuck](https://fr.wikipedia.org/wiki/Brainfuck). Ce langage exotique tire son nom de l’union de brain (cerveau) et fuck (niquer), est volontairement simpliste et met le cerveau dans un état de confusion par sa complexité apparente.
 ````

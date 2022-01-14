@@ -202,7 +202,6 @@ for x in range(-x0, x0+1, 20):
 
 Animation en utilisant la couleur `white` pour effacer la dernière position.
 
-
 ```{codeplay}
 from turtle import *
 from time import *
@@ -252,7 +251,7 @@ for line in histoire.split('\n'):
 
 ## Events
 
-La tortue a trois événements qui y sont associés : 
+La tortue a trois événements qui y sont associés :
 
 - cliquer
 - tirer
@@ -317,11 +316,9 @@ color('red')
 hideturtle()
 
 def losange():
-    for i in range(2):
+    for a in (60, 120, 60, 120):
         forward(100)
-        left(60)
-        forward(100)
-        left(120)
+        left(a)
 
 left(60)
 for i in range(3):
@@ -460,6 +457,7 @@ print(liste[m] == x)
 Quel est la somme de 1 + 2 + 3 + ... n ?  
 Graphiquement ceci nous donne la surface d'un triangle.
 Si nous affichons
+
 - `x` sur la première ligne
 - `xx` sur la deuxième ligne
 - n fois `x` sur la dernière ligne

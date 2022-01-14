@@ -1,35 +1,5 @@
 # Quiz
 
-## Expression
-
-```{question} Expression
-Quel est le résultat de l'expression `'12' + '12'` ?  
-{f}`12`  
-{f}`24`  
-{v}`1212`  
-{f}`1221`  
-```
-
-## Tranche
-
-```{question} Tranche
-Quel est le résultat de l'expression `'python'[:2]` ?
-
-{f}`thon`
-{f}`y`
-{f}`p`
-{v}`py`
-```
-
-```{question} Tranche
-Quel est le résultat de l'expression `'pikachu'[-3:]` ?
-
-{f}`pik`
-{v}`chu`
-{f}`p`
-{f}`pika`
-```
-
 ## Taille image
 
 ```{codeplay}
@@ -145,17 +115,6 @@ if solution == liste[-2:]:
 else:
   print(solution)
   print('Essaye encore une fois')
-```
-
-## Dessiner
-
-```{codeplay}
-# dessine un pentagone !
-
-from turtle import *
-for i in range(3):
-  forward(120)
-  left(120)
 ```
 
 ## Code binaire

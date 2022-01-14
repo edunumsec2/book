@@ -169,6 +169,7 @@ for x in [0, 0.2, 0.4, 0.6, 0.8, 1]:
 ```
 
 **Exercice** : Dessiner un dégradé pour vert, bleu, magenta, cyan
+
 ## Matrice des couleurs
 
 Dans ce programme les axes x et y correspondent à une des couleurs RVG.

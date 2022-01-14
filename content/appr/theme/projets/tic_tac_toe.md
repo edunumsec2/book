@@ -4,7 +4,7 @@ Le tic-tac-toe, aussi appelé *morpion*, est un jeu de réflexion se pratiquant 
 
 Voici une partie gagnante pour le joueur X.
 
-![](media/tic_tac_toe.png)
+![tic-tac-toe](media/tic_tac_toe.png)
 
 ## Représenter le tableau
 
@@ -137,7 +137,7 @@ print('fin')
 
 ## Afficher lignes et colonnes
 
-Pour vérifier une situation gagnante nous devons accéder aux 
+Pour vérifier une situation gagnante nous devons accéder aux :
 
 - 3 lignes
 - 3 colonnes

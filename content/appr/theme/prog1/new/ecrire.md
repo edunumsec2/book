@@ -125,7 +125,7 @@ L’**art ASCII** consiste à réaliser des images uniquement à l'aide des lett
 
 Voici un exemple :
 
-![](media/ascii-art.jpeg)
+![rabbit](media/ascii-art.jpeg)
 
 ```{codeplay}
 print("""

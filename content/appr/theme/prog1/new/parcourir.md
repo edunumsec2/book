@@ -67,7 +67,7 @@ batiment()
 
 ## Parcourir des angles
 
-Nous allons reprendre nos fonctions `maison()` et avec l'aide d'une séquence nous pouvons l'écrire bien plus compacte. Cette fois-ci la séquence représente des angles, a nous appelons la variable `a` pour nous rappeler que c'est des angles.
+Nous allons reprendre nos fonctions `maison()` et avec l'aide d'une séquence nous pouvons l'écrire bien plus compacte. Cette fois-ci la séquence représente des angles, a nous appelons la variable `a` pour nous rappeler que c'est un angle.
 
 ```{codeplay}
 from turtle import *
@@ -117,7 +117,7 @@ for c in ('red', 'yellow', 'pink', 'lightblue', 'lightgreen'):
 ## Dessiner une fleur
 
 Ci-dessous nous dessinons 6 fois un losange pour obtenir une fleur.
-Avec une boucle `for` nous parcourons une séquence de 6 couleurs alternés.
+Avec une boucle `for` nous parcourons une séquence de 6 couleurs alternantes.
 
 ```{codeplay}
 from turtle import *
@@ -205,3 +205,23 @@ for d in (10, 20, 30, 40):
     forward(120)
     left(5)
 ```
+
+## Une séquence dans une séquence
+
+Il est aussi possible de mettre une séquence dans une séquence, un tuple dans un tuple.
+Ceci nous permet par exemple de spécifier dans une séquences deux valeurs : un angle et une couleur `(a, c)`.
+
+```{codeplay}
+from turtle import *
+
+getscreen().bgcolor('skyblue')
+up()
+
+dot(40, 'blue')
+for (a, c) in ((45, 'pink'), (-10, 'lime'), (-30, 'red'), (-60, 'white')):
+    left(a)
+    forward(50)
+    dot(40, c)
+```
+
+**Exercice** : Ajouter un angle et une couleur supplémentaire.

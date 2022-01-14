@@ -78,7 +78,6 @@ print(p1)
 
 ## Le descripteur `__str__()`
 
-
 ```{codeplay}
 class Point():
     def __init__(self, x=0, y=0):
@@ -155,7 +154,6 @@ print(p1)
 print(p2)
 ```
 
-
 ## Dot cliquable
 
 ```{codeplay}
@@ -206,7 +204,6 @@ def f(x, y):
 getscreen().onclick(f)
 getscreen().listen()
 ```
-
 
 ## Dot cliqable
 
@@ -596,11 +593,6 @@ for d in size * 2:
     left(90)
 ```
 
-
-
-```{codeplay}
-
-```
 ```{codeplay}
 
 ```
@@ -608,6 +600,11 @@ for d in size * 2:
 ```{codeplay}
 
 ```
+
+```{codeplay}
+
+```
+
 ```{codeplay}
 
 ```
@@ -615,6 +612,7 @@ for d in size * 2:
 ```{codeplay}
 
 ```
+
 ```{codeplay}
 
 ```

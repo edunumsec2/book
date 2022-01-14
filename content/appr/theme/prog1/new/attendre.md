@@ -48,7 +48,7 @@ print(noms)
 Nous utilisons une boucle `while` pour demander des nombres à l'utilisateur.
 On ne peut pas savoir à l'avance combien de nombres il y aura, et donc nous ne pouvons pas utiliser la boucle `for`. Nous prenons comme condition de terminaison une réponse avec une chaîne vide (`''`).
 
-Au lieu d'écrire `while x != '':` nous pouvons simplifier vers  `while x:`. 
+Au lieu d'écrire `while x != '':` nous pouvons simplifier vers  `while x:`.
 La raison est que la chaîne vide est associée à `False` et toute autre chaîne non-vide est associée à `True`.
 
 ```{codeplay}

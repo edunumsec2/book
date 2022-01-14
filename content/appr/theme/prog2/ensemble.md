@@ -115,7 +115,6 @@ print(dir(set()))
 
 A l'aide d'une liste de compréhension nous allons afficher seulement les méthodes qui ne commencent pas avec un tiret bas.
 
-
 ```{codeplay}
 print('set :')
 print([x for x in dir(set()) if not x.startswith('_')])

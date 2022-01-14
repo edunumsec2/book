@@ -6,7 +6,7 @@ Cliquer (ou toucher) est la méthode principale pour interagir avec un smartphon
 - la méthode `onclick(f)` permet de définir une fonction qui réagit à un clic,
 - la fonction `f(x, y)` est appelé lors d'un clic, avec les coordonnés x et y,
 - la méthode `listen()` met en marche les événements interactifs.
- 
+
 ## Fonction `onclick`
 
 La méthode `onclick(f)` permet de définir une fonction `f` qui est alors appelé à chaque fois quand on clique avec la souris dans le canevas.
@@ -34,7 +34,7 @@ getscreen().listen()
 
 ## Dessiner une forme
 
-Dans ce programme nous dessinons une ligne entre les clics successifs. 
+Dans ce programme nous dessinons une ligne entre les clics successifs.
 C'est pour cette raison nous appelons la fonction `ligne(x, y)` au lieu de `f(x, y)`.
 
 Nous réagissons également à deus touches du clavier :
@@ -110,7 +110,6 @@ getscreen().listen()
 **Exercice** : Cliquez dans chaque deuxième case.
 
 ## Héritage
-
 
 ```{codeplay}
 from turtle import *

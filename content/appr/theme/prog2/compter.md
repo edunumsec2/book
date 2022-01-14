@@ -88,7 +88,7 @@ binaire('00110')
 
 ## Système binaire
 
-La fonction `bin(i)` retourne le code binaire du nombre entier `i` précédé de `0b`. 
+La fonction `bin(i)` retourne le code binaire du nombre entier `i` précédé de `0b`.
 
 ```{codeplay}
 for i in range(16):
@@ -96,7 +96,7 @@ for i in range(16):
 ````
 
 La chaîne formaté (f-string) '{i:4b}' à l'intérieur de la fonction `print()` affiche le code binaire sur 4 positions.
- 
+
 ```{codeplay}
 for i in range(16):
     print(f'{i:2} = {i:4b}')
@@ -230,5 +230,3 @@ for i in range(16):
 ```{codeplay}
 
 ````
-
-

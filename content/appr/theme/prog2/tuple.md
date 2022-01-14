@@ -23,7 +23,7 @@ for x in sequence:
 
 ## Un tuple dans un tuple
 
-Un tuple peut être imbriqué dans un autre tuple. 
+Un tuple peut être imbriqué dans un autre tuple.
 
 ```{codeplay}
 x = 1, 2
@@ -48,6 +48,7 @@ for p in maison:
 ```
 
 Nous pouvons utiliser un tuple pour une séquence de couleurs.
+
 ```{codeplay}
 from turtle import *
 up()
@@ -79,7 +80,7 @@ print('tranche:', maison[-3:])
 print(dir(tuple()))
 ```
 
-En Python, des noms de méthodes qui commencent et terminent par `__` (2 tirets bas) sont des méthodes spéciales. Ce sont ces méthodes qui font fonctionner les opérateurs tel que `+` ou `*`: 
+En Python, des noms de méthodes qui commencent et terminent par `__` (2 tirets bas) sont des méthodes spéciales. Ce sont ces méthodes qui font fonctionner les opérateurs tel que `+` ou `*`:
 
 Ces opérations 'surchargent' les opérateurs standards. Les opérateurs standard (`+`, `*`) vont acquérir une nouvelle signification pour des objets de cette classe.
 
