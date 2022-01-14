@@ -36,6 +36,7 @@ parts:
 
       - file: content/appr/theme/prog1/new/dessiner
       - file: content/appr/theme/prog1/new/colorier
+      - file: content/appr/theme/prog1/new/parcourir
       - file: content/appr/theme/prog1/new/repondre
       - file: content/appr/theme/prog1/new/ecrire
       - file: content/appr/theme/prog1/new/calculer

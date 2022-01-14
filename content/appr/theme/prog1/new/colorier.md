@@ -5,7 +5,7 @@ Une couleur peut être appliquée à une ligne, à un point, à une forme ou à 
 
 - la fonction `color()` permet de choisir une couleur,
 - la fonction `dot(d)` dessine un disque de diamètre `d`,
-- la structure `['red', 'pink']` représente une liste.
+- la fonction `begin_fill()/end_fill()` permet le remplissage.
 
 ## Liste de couleurs
 
@@ -144,12 +144,17 @@ getscreen().bgcolor('linen')
 up()
 dot(300, 'yellow')
 
-goto(50, 40)
-dot(40)
-goto(-50, 40)
+left(45)
+forward(60)
 dot(40)
 
-goto(-50, -50)
+right(45)
+back(90)
+dot(40)
+
+right(90)
+forward(100)
+left(90)
 width(10)
 down()
 forward(100)
@@ -164,49 +169,20 @@ getscreen().bgcolor('linen')
 up()
 dot(300, 'yellow')
 
-goto(50, 40)
-dot(40)
-goto(-50, 40)
+left(45)
+forward(60)
 dot(40)
 
-goto(0, -50)
+right(45)
+back(90)
+dot(40)
+
+right(60)
+forward(100)
 dot(80)
 ```
 
 **Exercice** : Dessinez encore un autre smiley.
-
-## Itérer dans un séquence
-
-Pour dessiner multiples couleurs, nous pouvons définir une séquence (tuple) de couleurs et itérer sur cette séquence.
-En Python une séquence est délimitée par des parenthèses `()` et les éléments sont séparé par une virgule.
-
-Dans l'expression `for x in (...)` la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'blue'`, `'cyan'`, `'red'`, etc.
-
-```{codeplay}
-from turtle import *
-up()
-
-back(200)
-for x in ('blue', 'cyan', 'red', 'magenta', 'pink', 'lime'):
-    dot(80, x)
-    forward(80)
-```
-
-**Exercice** : Modifiez la séquence des couleurs.
-
-Nous pouvons également itérer dans une séquence numérique et spécifier l'épaisseur.
-
-```{codeplay}
-from turtle import *
-up()
-
-back(220)
-for x in (20, 40, 60, 80, 100):
-    dot(x, 'red')
-    forward(x + 40)
-```
-
-**Exercice** : Modifiez la séquence des diamètres.
 
 ## Dessiner une croix
 
@@ -277,34 +253,6 @@ for i in range(3):
     maison()
     forward(150)
 ```
-
-## Dessiner une fleur
-
-Ci-dessous nous dessinons un losange 6 fois pour obtenir une fleur.
-Avec une boucle `for` nous alternons entre deux couleurs de pétale.
-
-```{codeplay}
-from turtle import *
-
-getscreen().bgcolor('azure')
-
-def losange():
-    begin_fill()
-    for i in range(2):
-        forward(100)
-        left(60)
-        forward(100)
-        left(120)
-    end_fill()
-
-for i in range(3):
-    for x in ['pink', 'hotpink']:
-        fillcolor(x)
-        losange()
-        left(60)
-```
-
-**Exercice** : Changez le nombre de pétales.
 
 ## Erreurs
 
