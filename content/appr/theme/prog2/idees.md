@@ -50,39 +50,6 @@ back(50)
 branche8()
 ```
 
-## Etat de la tortue
-
-Plusieurs fonctions nous renseignent sur l'état de la tortue :
-
-- couleur
-- tortue
-- position
-- fenêtre
-
-```{codeplay}
-from turtle import *
-
-color('red', 'lime')
-forward(50)
-left(45)
-
-print('Couleur:')
-print('color =', color())
-print('pen =', pencolor())
-print('fill =', fillcolor())
-print('mode =', colormode())
-
-print('\nPosition:')
-print('h =', heading())
-print('x =', xcor())
-print('y =', ycor())
-print('pos =', pos())
-
-print('\nFenêtre:')
-print('h =', window_height())
-print('w =', window_width())
-```
-
 ## Les méthodes `Turtle`
 
 Affiche tous les méthodes et attributs de `Turtle`.

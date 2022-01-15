@@ -6,9 +6,49 @@ En fait, la fonction est peut-être le concept le plus important dans la program
 C'est un moyen puissant pour inventer des nouvelles commandes dans un langage de programmation. Nous allons voir que
 
 - le mot-clé `def` permet de définir une fonction,
-- le mot-clé `return` permet de retourner une valeur,
 - un paramètre `f(param0, ...)` est une variable dans la définition de fonction,
 - un argument `f(arg0, ...)` est une valeur dans l'appel de fonction.
+
+## Fonction
+
+```{codeplay}
+from turtle import *
+
+def maison():
+    forward (70)
+    for a in (90, 45, 90, 45):
+        left(a)
+        forward(50)
+    left(90)
+
+back(200)        
+maison()
+forward(100)
+maison()
+```
+
+```{codeplay}
+from turtle import *
+getscreen().bgcolor('lightgreen')
+fillcolor('yellow')
+
+def maison(x, y):
+    goto(x, y)
+    down()
+    begin_fill()
+    forward (70)
+    for a in (90, 45, 90, 45):
+        left(a)
+        forward(50)
+    left(90)
+    end_fill()
+    up()
+
+maison(0, 0)
+maison(-200, 20)
+maison(120, 40)
+```
+
 
 ## Un fonction simple
 
@@ -87,63 +127,6 @@ for x in range(30, 180, 30):
 
 **Exercice** : Ecartez les carrés de 20 pixels.
 
-## Fonctions natives
-
-Voici quelques fonctions natives, c'est à dire des fonctions standards qui font partie de Python :
-
-- la fonction `pow(m, e)` retourne la puissance de ses deux arguments ($m^e$),
-- la fonction `len()` retourne la longueur d'une chaine de caractères ou d'une liste,
-- la fonction `round()` retourne l'arrondi d'une valeur numérique.
-
-```{codeplay}
-print(pow(3, 5))
-print(len("Bonjour"))
-print((round(333.76)))
-```
-
-**Exercice** : Ajoutez une ligne de code avec la fonction `min` qui retourne la valeur minimale des arguments qu'on lui fournit.
-
-## Valeur de retour
-
-L'instruction `return` permet de retourner une valeur.
-Le grand intérêt d'une valeur de retour est qu'on peut l'utiliser de nouveau dans des expression.
-
-Par exemple nous pouvons créer une expression comme celle-ci : `square(x) + cube(x)`
-
-```{codeplay}
-def carre(x):
-    return x ** 2
-
-def cube(x):
-    return x ** 3
-
-x = input('Entrez un nombre: ')
-x = int(x)
-print('carré =', carre(x))
-print('cube =', cube(x))
-print('carré + cube =', carre(x) + cube(x))
-```
-
-## Points de sortie
-
-Une fonction peut avoir plusieurs points de sortie. En fait quand une ligne avec `return` est exécutée, toutes les lignes qui suivent ne sont plus exécutées.
-
-La fonction `signe()` possède 3 points de sortie.
-
-```{codeplay}
-def signe(x):
-    if x > 0:
-        return 'positif'
-    elif x < 0:
-        return 'négatif'
-    else:
-        return 'zéro'
-
-x = int(input('Entrez un nombre: '))
-print(x, 'est', signe(x))
-```
-
-**Exercice** : Testez avec -2, 0 et 3.
 
 ## Squid Game logo
 

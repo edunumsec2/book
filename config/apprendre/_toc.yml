@@ -44,6 +44,7 @@ parts:
       - file: content/appr/theme/prog1/new/attendre
       - file: content/appr/theme/prog1/new/decider
       - file: content/appr/theme/prog1/new/definir
+      - file: content/appr/theme/prog1/new/renvoyer
       - file: content/appr/theme/prog1/new/grouper 
       - file: content/appr/theme/prog1/new/random
       - file: content/appr/theme/prog1/new/trier
@@ -107,7 +108,7 @@ parts:
       - file: content/appr/theme/projets/game_of_life
       - file: content/appr/theme/projets/cartes
       - file: content/appr/theme/projets/microbit/microbit
-      
+
   - file: content/appr/theme/reseaux/eleve
 
 - caption: Glossaire
