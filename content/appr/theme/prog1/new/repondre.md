@@ -64,6 +64,31 @@ print('Trés bien', nom, 'vous avez', age, 'ans')
 
 **Exercice** : Ajoutez une 3e question.
 
+## Convention
+
+Normalement c'est conseillé d'utiliser des variables très explicite, comme `age`, `prenom`, `nom`, `longuer`, `hauteur`, etc.
+
+Mais dans des boucles et dans un contexte local, nous adoptons la convention suivante d'utiliser des variables courte d'une seule lettre.
+
+- `a` pour une longueur ou distance
+- `c` pour un caractère dans une boucle
+- `d` pour un diamètre
+- `i` pour un entier dans une boucle
+- `j` pour un deuxième entier
+- `n` pour un nombre donné
+- `r` pour un rayon
+- `x` pour une coordonnée en direction x
+- `y` pour une coordonnée en direction y
+
+```{question}
+La variable `i` désigne normalement
+
+{f}`une longeur`  
+{f}`un caractère`  
+{v}`un entier`  
+{f}`une coordonné`
+```
+
 ## Demander une couleur
 
 Nous pouvons utiliser une entrée interactive avec la fonction `input()`

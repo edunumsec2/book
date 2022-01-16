@@ -105,6 +105,7 @@ parts:
     sections:
       - file: content/appr/theme/projets/tic_tac_toe
       - file: content/appr/theme/projets/puissance4
+      - file: content/appr/theme/projets/snake
       - file: content/appr/theme/projets/game_of_life
       - file: content/appr/theme/projets/cartes
       - file: content/appr/theme/projets/microbit/microbit

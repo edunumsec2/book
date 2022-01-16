@@ -175,6 +175,8 @@ En regardant ces 3 lignes de code, on comprend immédiatement le sens du program
 
 La définition d'une fonction permet d'ajouter des nouveaux mots à un langage de programmation. Contrairement aux commandes natives de Python qui sont tous en anglais, nous sommes libre de les choisir en français.
 
+**Attention** : Ecrivez les fonctions sans accents et sans circonflexes : `batiment()`, `carre()`, `boite()`.
+
 ```{codeplay}
 from turtle import *
 

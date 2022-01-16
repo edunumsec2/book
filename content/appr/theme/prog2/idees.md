@@ -83,6 +83,161 @@ print('speed =', speed())
 print('delay =', delay())
 ```
 
+## La fonction `shape()`
+
+```{codeplay}
+from turtle import *
+
+shapes = getscreen().getshapes()
+print('shapes =', shapes)
+
+left(90)
+up()
+back(120)
+
+for s in shapes:
+    write(s + '   ', align='right', font=(None, 18))
+    shape(s)
+    stamp()
+    forward(50)
+    
+hideturtle()
+```
+
+La taille des 3 formes géométriques `square`,  `triangle` et `circle` est de 20 pixels. Ces formes peuvent être utilisés dans des animations ou des jeux vidéos.
+
+```{codeplay}
+from turtle import *
+up()
+
+shape('square')
+for i in range(10):
+    stamp()
+    forward(22)
+    
+goto(0, 30)
+shape('circle')
+for i in range(10):
+    stamp()
+    forward(22) 
+
+goto(0, 60)
+shape('triangle')
+for i in range(10):
+    stamp()
+    forward(22)
+    
+hideturtle()
+```
+
+## La fonction `delay()`
+
+```{codeplay}
+from turtle import *
+
+print('delay =', delay()) # 33 milisecondes = 60 fps
+delay(500)
+
+left(50)    # delai tous les 5 degrees 
+forward(50) # delai tous les 5 pixels
+```
+
+## La fonction `tracer()`
+
+La fonction `tracer(0/1)` (traceur) active ou désactive les animations des tortues.
+Lorsque le traceur est désactivé vous devez utiliser la fonction `update()` pour mettre à jour le dessin sur l'écran.
+
+```{codeplay}
+from turtle import *
+
+def etoile(n, m):
+    for i in range(n):
+        forward(100)
+        left(360/n*m)
+
+back(200)
+print('tracer =', tracer())
+etoile(7, 3)
+
+forward(150)
+tracer(0)
+print('tracer =', tracer())
+etoile(7, 3)
+update()
+
+forward(150)
+etoile(9, 4)
+update()
+```
+
+
+La fonction `tracer(n)` contrôle la fréquence des mises à jour du dessin. Seulement les n-ièmes mises à jours régulières de l'écran seront vraiment effectuées. Cette fonction peut être utilisé pour accélérer le dessin de graphiques complexes. Lorsqu'appelé sans arguments, elle renvoie la valeur actuelle de n.
+
+```{codeplay}
+from turtle import *
+delay(200)
+
+tracer(2)
+print('tracer() =', tracer())
+write('tracer(2)', align='right', font=(None, 16))
+forward(200)
+
+up()
+goto(0, 50)
+down()
+
+tracer(5)
+print('tracer() =', tracer())
+write('tracer(5)', align='right', font=(None, 16))
+forward(200)
+```
+
+## La fonction `speed()`
+
+La vitesse de la tortue peut varier entre 1 et 1000. 
+Une vitesse de 0 représente la vitesse maximum. La vitesse par défaut est 3.
+
+```{codeplay}
+from turtle import *
+
+print('speed =', speed())
+
+for s in range(2, 10):
+    reset()
+    speed(s)
+    write(f'speed({s})  ', font=(None, 18), align='right')
+    for i in range(4):
+        forward(100)
+        left(90)
+```
+
+
+
+## Deux tortues
+
+```{codeplay}
+from turtle import *
+
+alice = Turtle()
+alice.name = 'alice'
+alice.color('red')
+alice.shape('turtle')
+alice.speed(1)
+
+bob = Turtle()
+bob.name = 'bob'
+bob.up()
+bob.goto(0, 100)
+bob.down()
+bob.color('blue')
+bob.shape('turtle')
+
+for t in Screen().turtles():
+    print(t, t.name, t.pos(), t.color())
+    
+alice.forward(200)
+```
+
 ## Key events
 
 ```{codeplay}

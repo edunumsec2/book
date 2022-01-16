@@ -75,6 +75,76 @@ for i in range(n):
     sety(0)
 ```
 
+## Sous la belle étoile
+
+Les étoiles dans le ciel apparaissent à des positions plus au moins aléatoires. 
+Nous calculons `x` et `y` comme des entiers aléatoires, choisi dans l'intervalle de la largeur et de la hauteur de la fenêtre.
+
+Nous choisissons la taille `d` avec une distribution normale (Gaussiènne) avec une moyenne de 3 et un sigma de 2.
+
+```{codeplay}
+from turtle import *
+from random import *
+getscreen().bgcolor('black')
+speed(0)
+up()
+
+for i in range(200):
+    x = randint(-300, 300)
+    y = randint(-200, 300)
+    d = gauss(3, 2)
+    goto(x, y)
+    dot(d, 'white')
+```
+
+## La voie lacté
+
+Pour arranger les étoiles plus dans une bande horizontale, comme dans la voie lacté, nous utilisons pour la variable `y` une distribution normale (gauss) avec une moyenne de 0 et un sigma de 50.
+
+```{codeplay}
+from turtle import *
+from random import *
+getscreen().bgcolor('black')
+speed(0)
+up()
+
+for i in range(500):
+    x = randint(-300, 300)
+    y = gauss(0, 50)
+    d = gauss(2, 2)
+    goto(x, y)
+    dot(d, 'white')
+```
+
+## Fleurs dans un champs
+
+Dans l'exemple suivant nous plaçons des fleurs à des positions aléatoires dans un champs.
+
+```{codeplay}
+from turtle import *
+from random import *
+getscreen().bgcolor('green')
+speed(0)
+up()
+
+def fleur(x, y, d):
+    for i in range(5):
+        dot(d, 'lightyellow')
+        forward(d*0.8)
+        left(72)
+    left(60)
+    forward(d*0.7)
+    dot(d*0.7, 'gold')
+
+for i in range(10):
+    x = randint(-300, 300)
+    y = randint(-200, 200)
+    d = gauss(30, 10)
+    seth(0)
+    goto(x, y)
+    fleur(x, y, d)
+```
+
 ## Choisir dans une liste
 
 La fonction `choice(liste)` retourne un élément aléatoire d'une liste.
@@ -111,20 +181,6 @@ for y in range(200-n, -200, -n):
         dot(choice(size), choice(colors))
 ```
 
-## Permuter
-
-La fonction `shuffle()` permet de permuter les éléments d'une liste. Ceci est l'équivalent de ce qu'on fait avec des cartes de jeux, quand on les mélange.
-
-```{codeplay}
-from random import *
-
-a = list(range(10))
-print(a)
-
-for i in range(3):
-    shuffle(a)
-    print(a)
-```
 
 ## Distribution normale
 
@@ -145,6 +201,80 @@ for i in range(1000):
     dot(10)
 ```
 
+## Zoo
+
+Pour simuler la perspectives, nous dessinons les animaux proches plus grand.
+
+```{codeplay}
+from turtle import *
+from random import *
+getscreen().bgcolor('lightgreen')
+up()
+
+animals = list('🐑🦧🐫🐆🦓')
+
+for i in range(30):
+    x = randint(-300, 300)
+    y = randint(-200, 200)
+    d = gauss(30, 5) * (250-y)/400
+    goto(x, y)
+    animal = choice(animals)
+    write(animal, font=(None, int(d)))
+hideturtle()
+```
+
+## Champs de fleurs
+
+Pour simuler la perspectives, nous dessinons les fleurs proches plus grand.
+
+```{codeplay}
+from turtle import *
+from random import *
+getscreen().bgcolor('lightgreen')
+up()
+
+fleurs = list('🌸🌺🌷🌻🌼')
+
+for i in range(30):
+    x = randint(-300, 300)
+    y = randint(-200, 200)
+    d = gauss(40, 5) * (250-y)/400
+    goto(x, y)
+    fleur = choice(fleurs)
+    write(fleur, font=(None, int(d)))
+hideturtle()
+```
+
+## Aquarium
+
+Nous ajoutons des feuillages en bas de l'aquarium et intercalons les poissons avec les plantes.
+
+```{codeplay}
+from turtle import *
+from random import *
+getscreen().bgcolor('lightblue')
+up()
+
+poissons = list('🐠🐟🐡🦀🐠')
+print(poissons)
+plantes = list('🌿🌱')
+print(plantes)
+
+for i in range(10):
+    x = randint(-300, 260)
+    y = randint(-200, 160)
+    d = gauss(40, 5)
+    goto(x, y)
+    poisson = choice(poissons)
+    write(poisson, font=(None, int(d)))
+    
+    plante = choice(plantes)
+    goto(randint(-300, 250), -180)
+    write(plante, font=(None, int(gauss(50, 20))))
+    
+hideturtle()
+```
+
 ## Rouler un dé
 
 ```{codeplay}
@@ -159,10 +289,10 @@ a = 80
 d = 50
 
 for n in range(1, 7):
-    print(n)
     if n % 2 == 1:
+        home()
         dot(d)
-    if n % 2 == 0:
+    if n >= 2:
         goto(-a, a)
         dot(d)
         goto(a, -a)
@@ -180,5 +310,59 @@ for n in range(1, 7):
         
     sleep(1)
     clear()
-    sleep(1)
+```
+
+**Exercice** : Modifiez le code pour afficher avec le dé avec un nombre aléatoire entre 1 et 6.
+
+## Permuter
+
+La fonction `shuffle()` permet de permuter les éléments d'une liste. Ceci est l'équivalent de ce qu'on fait avec des cartes de jeux, quand on les mélange.
+
+```{codeplay}
+from random import *
+
+a = list(range(10))
+print(a)
+
+for i in range(3):
+    shuffle(a)
+    print(a)
+```
+
+## Mélanger des cartes
+
+La fonction `shuffle()` permet de mélanger ou permuter aléatoirement une liste. Nous l'utilisons pour mélanger nos cartes de jeu.
+
+
+```{codeplay}
+from turtle import *
+from random import *
+getscreen().bgcolor('green')
+up()
+speed(0)
+w = 20
+width(w)
+
+def card(c):
+    down()
+    color('white')
+    for d in (w, 1.6 * w) * 2:
+        forward(d)
+        left(90)
+    color('red')
+    write(c, font=(None, w))
+    up()
+    forward(2 * w + 5)
+
+cartes = list('A23456789JQK')
+print(cartes)
+goto(-260, 100)
+for c in cartes:
+    card(c)
+
+shuffle(cartes)
+print(cartes)
+goto(-260, 0)
+for c in cartes:
+    card(c)
 ```

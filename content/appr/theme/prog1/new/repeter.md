@@ -7,7 +7,7 @@ Une boucle ne représente pas seulement une économie de lignes de code, mais do
 
 - la boucle `for` répète du code pour un ensemble de valeurs données,
 - la variable d'itération `i` prend une autre valeur à chaque tour,
-- on peut itérer sur des plages numériques, du texte, et des listes.
+- on peut parcourir des plages numériques, du texte, et des listes.
 
 ## Répéter x fois
 
@@ -26,9 +26,9 @@ for i in range(x):
 
 **Exercice** : Testez avec des nombres différents entre 3 et 13.
 
-## Itérer x fois
+## Parcourir une séquence
 
-Le mot **itérer** veut dire parcourir un ensemble un par un. Dans la boucle `for` une variable d'itération va parcourir un ensemble qui peut être :
+Dans la boucle `for` une variable d'itération va parcourir une valeur après l'autre d'une séquence d'objets.  Cette séquence peut être :
 
 - une plage numérique avec `range()`,
 - une chaîne de caractères,
@@ -109,7 +109,7 @@ for i in range(10, 100, 7):
     sleep(0.1)
 ```
 
-## Itérer sur une chaîne
+## Parcourir une chaîne
 
 La ligne de code `for c in mot:` signifie que la variable `c` va prendre à chaque répétition un caractère différent de la chaîne `mot`.
 
