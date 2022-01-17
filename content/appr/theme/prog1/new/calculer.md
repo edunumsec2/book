@@ -3,7 +3,7 @@
 Dans ce chapitre nous allons voir comment un programme peut calculer avec des nombres.
 Ceci est utilisé dans une calculatrice ou un programme de tableur.
 
-Les nombres entiers forment une catégorie très importantes. En anglais un entier est appelé **integer** (`int`). Nous allons voir que
+Les nombres entiers forment une catégorie très importante. En anglais un entier est appelé **integer** (`int`). Nous allons voir que
 
 - les opérateurs de base sont `+-*/`,
 - les nombres sont du type `int` ou `float`,
@@ -11,7 +11,7 @@ Les nombres entiers forment une catégorie très importantes. En anglais un enti
 
 ## Un calcul simple
 
-Dans ce chapitre nous allons explorer comment nous pouvons calculer avec des nombres. Voici un exemple qui affiche dans une première ligne sous forme de texte une expression mathématique, et dans une deuxième ligne une expression mathématique qui sera évalué vers son résultat numérique.
+Dans ce chapitre nous allons explorer comment nous pouvons calculer avec des nombres. Voici un exemple qui affiche dans une première ligne sous forme de texte une expression mathématique, et dans une deuxième ligne une expression mathématique qui sera évaluée vers son résultat numérique.
 
 ```{codeplay}
 print('2 à la puissance 32 =')
@@ -75,7 +75,7 @@ Quel est le résultat de l'expression `1 + 2 * 3` ?
 
 Une **variable** est une manière de designer une valeur par un nom. Le terme technique pour associer une valeur à une variable est **affectation** et elle utilise le symbole `=` (égal).
 
-Mais faites attention ! Il ne s'agit pas d'une équation dans le sens mathématique. La variable dois toujours figurer seul à gauche.
+Mais faites attention ! Il ne s'agit pas d'une équation dans le sens mathématique. La variable doit toujours figurer seule à gauche.
 La forme générique d'une affectation est `var = expression`.
 
 ```{codeplay}
@@ -99,12 +99,12 @@ Le nom de variable :
 
 - est sensible aux majuscules/minuscules,
 - ne peut pas commencer avec un chiffre,
-- ne dois pas consister d'un mot-clé (`if`, `else`, `for`),
-- ne dois pas contenir un caractère spécial (`* + % & $ - / ?`).
+- ne doit pas consister d'un mot-clé (`if`, `else`, `for`),
+- ne doit pas contenir un caractère spécial (`* + % & $ - / ?`).
 
 Ces noms de variables sont donc valides : `a2`, `_a`, `speed`, `pos_x`, `POS_X`
 
-Ceux-ci ne sont pas valides :
+Ceux-ci sont invalides :
 
 - `2var` (commence avec un chiffre),
 - `if` (correspond à un mot-clé),
@@ -148,7 +148,7 @@ Quels noms de variable sont valides ?
 
 ## Les types
 
-Un ordinateur peut manipuler différents catégories d'objet tel que image, texte, nombre. On parle alors du type de ces données.
+Un ordinateur peut manipuler différentes catégories d'objets telles que image, texte, nombre. On parle alors du type de ces données.
 
 La fonction `type()` retourne le type d'un objet.
 
@@ -170,7 +170,7 @@ L'exemple ci-dessus nous montre que
 
 Les trois fonctions `str()`, `int()` et `float()` permettent de transformer d'un type à un autre.
 
-Par exemple la chaîne `'123'` peut être transformé soit en entier, soit en nombre à virgule flottante.
+Par exemple la chaîne `'123'` peut être transformée soit en entier, soit en nombre à virgule flottante.
 
 ```{codeplay}
 a = '123'
@@ -183,11 +183,11 @@ print(type(b))
 print(type(c))
 ```
 
-Nous reconnaissons la différence entre en entier (`int`) et un nombre à virgule flottante (`float`) par la présence du point décimal (`123.0`).
+Nous reconnaissons la différence entre un entier (`int`) et un nombre à virgule flottante (`float`) par la présence du point décimal (`123.0`).
 
 ## La fonction `input()`
 
-La fonction `input()` permet d'obtenir une entrée de l'utilisateur. La valeur retourné est une chaine de caractères. Pour pouvoir l'utiliser dans un calcul nous devons la transformer en virgule flottante avec la fonction de conversion `float()`.
+La fonction `input()` permet d'obtenir une entrée de l'utilisateur. La valeur retournée est une chaine de caractères. Pour pouvoir l'utiliser dans un calcul nous devons la transformer en virgule flottante avec la fonction de conversion `float()`.
 
 ```{codeplay}
 r = float(input('Entrez le rayon: '))
@@ -201,7 +201,7 @@ print('surface =')
 
 **Exercice** : Complétez le programme pour afficher la surface du cercle.
 
-Nous pouvons également créer des programmes ou nous demandons plusieurs valeurs à l'utilisateur. Cette fois nous permettons seulement l'utilisation de nombres entiers, et donc transformons la chaine obtenu avec `int()` en nombre entier.
+Nous pouvons également créer des programmes où nous demandons plusieurs valeurs à l'utilisateur. Cette fois nous permettons seulement l'utilisation de nombres entiers, et donc transformons la chaine obtenu avec `int()` en nombre entier.
 
 ```{codeplay}
 a = int(input('Entrez la largeur: '))
@@ -278,7 +278,7 @@ print(10 % 0)
 
 ### RangeError
 
-Cette erreur se produit quand une fonction récursive s'appelle trop.
+Cette erreur se produit quand une fonction récursive s'appelle elle-même un trop grand nombre de fois.
 
 ```{codeplay}
 def f(x):
