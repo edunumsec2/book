@@ -88,7 +88,7 @@ end_fill()
 ## Couleur d'arrière-fond
 
 Le fonction `getscreen()` retourne un objet `Screen`. Cet objet possède une méthode `bgcolor()`.
-Tout ce qu'il faut retenir en ce moment c'est que la combinaison `getscreen().bgcolor()` permet de définir la couleur d'arrière-fond (bg = background).
+Tout ce qu'il faut retenir pour l'instant c'est que la combinaison `getscreen().bgcolor()` permet de définir la couleur d'arrière-fond (bg = background).
 
 Dans l'exemple suivant, nous dessinons un carré jaune sur un arrière-fond rose.
 
@@ -134,7 +134,7 @@ end_fill()
 
 ## Smiley
 
-Avec des cercles `dot(d)` de taille différentes nous pouvons dessiner un smiley.
+Avec des cercles `dot(d)` de tailles différentes nous pouvons dessiner un smiley.
 Voici un smiley qui exprime l'indifférence.
 
 ```{codeplay}
@@ -186,7 +186,7 @@ dot(80)
 
 ## Dessiner une croix
 
-La fonction `boite()` dessine les 3 cotés d'un carré.
+La fonction `boite()` dessine les 3 côtés d'un carré.
 Répété 4 fois, ceci donne la forme d'une croix.
 
 ```{codeplay}
@@ -211,7 +211,7 @@ boite()
 end_fill()
 ```
 
-**Exercice** : Faites ce programme plus court en utilisant une boucle.
+**Exercice** : Rendez ce programme plus court en utilisant une boucle.
 
 ## Dessiner une maison
 
