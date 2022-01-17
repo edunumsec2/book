@@ -1,277 +1,228 @@
 # Répéter - `for`
 
-Dans ce chapitre nous allons voir de près comment un programme peut exécuter certaines instructions multiples fois.
+Dans ce chapitre nous découvrons comment utiliser une boucle `for` pour répéter un bloc d'instructions un certain nombre de fois.
 
-Une boucle permet de rendre le code plus court et mieux structuré.
-Une boucle ne représente pas seulement une économie de lignes de code, mais donne aussi la possibilité de contrôler le nombre de répétitions. Nous allons voir que
+- une boucle `for` permet de répéter des instructions,
+- la structure `for i in range(x):` permet de répéter un bloc x fois,
+- le deux-points `:` est toujours suivi d'un bloc en indentation.
 
-- la boucle `for` répète du code pour un ensemble de valeurs données,
-- la variable d'itération `i` prend une autre valeur à chaque tour,
-- on peut parcourir des plages numériques, du texte, et des listes.
+## La répétition
 
-## Répéter x fois
+Revenons vers un exemple simple : dessiner un carré.
 
-Le programme suivant demande comme entrée le nombre `x` de sommets, et dessine alors un polygone régulier. C'est un cas ou il faut **répéter x fois**.
+Si nous regardons le code de près, nous pouvons voir que nous répétons 4 fois les mêmes deux instruction `forward()` et `left()`.
 
 ```{codeplay}
 from turtle import *
 
-x = input('Nombre de sommets: ')
-x = int(x)
+forward(100)
+left(90)
+forward(100)
+left(90)
+forward(100)
+left(90)
+forward(100)
+left(90)
+```
 
-for i in range(x):
+Ne serait-il pas pratique de pouvoir dire à la tortue de répéter ces instructions 4 fois ?  
+Ceci est possible avec une boucle `for`. La ligne `for i in range(x):` va répéter `x` fois le bloc en indentation qui suit.
+
+```{codeplay}
+from turtle import *
+
+for i in range(4):
+    forward(100)
+    left(90)
+```
+
+**Exercice** : Transformez le rectangle en triangle.
+
+## Des polygones
+
+Avec une boucle `for` nous pouvons simplifier le dessins des formes symétriques.
+
+```{codeplay}
+from turtle import *
+
+def triangle():
+    for i in range(3):
+        forward(100)
+        left(120)
+
+def carre():
+    for i in range(4):
+        forward(100)
+        left(90)
+
+def pentagone():
+    for i in range(5):
+        forward(100)
+        left(72)
+
+triangle()
+carre()
+pentagone()
+```
+
+**Exercice** : Définissez la fonction `hexagone()` pour dessiner un hexagone.
+
+## Un escalier
+
+Pour dessiner un escalier, il faut simplement répéter dans une boucle le dessin pour une seule marche.
+
+```{codeplay}
+from turtle import *
+
+for i in range(5):
+    forward(20)
+    left(90)
+    forward(20)
+    right(90)
+
+forward(100)
+```
+
+## Des dents de scie
+
+Pour dessiner des dents de scie, il faut simplement répéter dans une boucle le dessin pour une seule dent.
+
+```{codeplay}
+from turtle import *
+
+for i in range(4):
+    left(45)
+    forward(71)
+    right(135)
     forward(50)
-    left(360/x)
+    left(90)
+
+forward(80)
 ```
 
-**Exercice** : Testez avec des nombres différents entre 3 et 13.
+**Exercice** : Dessinez une usine avec un toit en dents de scie.
 
-## Parcourir une séquence
+## Un éventail
 
-Dans la boucle `for` une variable d'itération va parcourir une valeur après l'autre d'une séquence d'objets.  Cette séquence peut être :
-
-- une plage numérique avec `range()`,
-- une chaîne de caractères,
-- une liste.
-
-La **variable d'itération** prend successivement les valeurs 0 à x-1.
-Quand la variable d'itération est de type entier (`int`) on l'appelle souvent `i`.
-
-Nous reprenons l'exemple précédent du polygone, mais cette fois nous dessinons pas les segments mais seulement les sommets. La valeur de la variable d'itération `i` est affichée à chaque sommet du polygone.
+Que se passe-t-il si nous dessinons une ligne (`forward/back`) et tournons d'un petit angle à chaque fois ?
+C'est un peu comme un éventail qui s'ouvre.
 
 ```{codeplay}
 from turtle import *
 
-x = int(input('Nombre de sommets: '))
-up()
-
-for i in range(x):
-    forward(50)
-    left(360/x)
-    dot()
-    write(i, font=(None, 12))
+for i in range(18):
+    forward(100)
+    back(100)
+    left(10)
 ```
 
-**Exercice** : Testez avec des nombres différents entre 5 et 13.
+**Exercice** : Doublez l'angle de rotation dans `left()`.
 
-## Itérer avec `range()`
+## Un diaphragme
 
-La fonction `range(start, stop, step)` permet de produire une séquence linéaire d'entiers. Les entiers se trouvent dans l'intervalle semi-fermé `[start, stop[` avec un incrément de `step`.
-
-Le sens des paramètres :
-
-- `start` est la valeur de départ,
-- `stop` est la valeur finale, mais sans l'inclure,
-- `step` est l'incrément.
-
-La fonction `print()` utilise le paramètre optionnel `end` pour ne pas terminer avec un retour à la ligne mais par une simple espace.
-
-```{codeplay}
-start = int(input('start = '))
-stop = int(input('stop = '))
-step = int(input('step = '))
-
-for i in range(start, stop, step):
-    print(i, end=' ')
-```
-
-**Exercice** : Affichez les entiers entre 100 et 200 avec un incrément de 3.
-
-La fonction `range()` fonctionne aussi dans l'ordre décroissant. Dans ce cas il faut choisir pour `step` une valeur négative.
-
-```{codeplay}
-for i in range(-100, -200, -3):
-    print(i, end=' ')
-```
-
-**Exercice** : Affichez les entiers de +10 à -10.
-
-La fonction `range()` peut fonctionner avec 1, 2 ou 3 paramètres. Les valeur par défaut sont :
-
-- 0 pour `start`,
-- 1 pour `step`.
-
-```{codeplay}
-from time import sleep
-
-for i in range(10):
-    print(i, end=' ')
-    sleep(0.1)
-print()
-
-for i in range(10, 20):
-    print(i, end=' ')
-    sleep(0.1)
-print()
-
-for i in range(10, 100, 7):
-    print(i, end=' ')
-    sleep(0.1)
-```
-
-## Parcourir une chaîne
-
-La ligne de code `for c in mot:` signifie que la variable `c` va prendre à chaque répétition un caractère différent de la chaîne `mot`.
-
-Quand la variable d'itération est un caractère on l'appelle souvent `c`.
-
-```{codeplay}
-from time import sleep
-mot = input('Entrez un mot: ')
-
-for c in mot:
-    print(c)
-    sleep(0.1)
-```
-
-**Exercice** : Testez avec des textes différents.
-
-## Parcourir une liste
-
-La ligne de code `for color in colors:` signifie que la variable `color` va prendre à chaque répétition un élément différent de la liste `colors`.
-
-Quand on parcourt une liste la convention est d'utiliser un mot au pluriel pour la liste (`colors`) et le même mot en singulier pour la variable d'itération (`color`).
+Que se passe-t-il si nous avançons plus que nous reculons ?
+Une toute petite modification du programme peut faire une chouette différence.
 
 ```{codeplay}
 from turtle import *
 
-colors = ['hotpink', 'lime', 'beige', 'pink']
+for i in range(18):
+    forward(100)
+    back(90)
+    left(20)
+```
+
+**Exercice** : Modifiez les valeurs dans `forward()` et `back()`.
+
+## Une étoile
+
+Une autre façon de toujours avancer, mais tourner à chaque fois d'un angle un peu plus petit que 180°.
+Essayons !
+
+```{codeplay}
+from turtle import *
+
+for i in range(9):
+    forward(200)
+    left(160)
+```
+
+**Exercice** : Changez le nombre de pics de l'étoile.
+
+## Un losange
+
+Si nous déformons les angles d'un carré, nous obtenons un losange (diamant).
+Quelle forme obtenons-nous en dessinant un carré et deux losanges ?
+
+```{codeplay}
+from turtle import *
+
+def carre():
+    for i in range(4):
+        right(90)
+        forward(100)
+
+def losange():
+    for i in range(2):
+        forward(100)
+        left(120)
+        forward(100)
+        left(60)
+        
+carre()
+right(90)
+losange()
 left(120)
-speed(1)
-
-for color in colors:
-    getscreen().bgcolor(color)
-    write(color, font=(None, 18))
-    forward(50)
+losange()
 ```
 
-**Exercice** : Ajoutez d'autres couleurs à la liste.
+## Une fleur
 
-## Dessiner une spirale
-
-Si nous dessinons un polygone mais augmentons la longueur de chaque segment successif en utilisant la variable d'itération `i`, nous obtenons une spirale.
+Si nous dessinons un losange 6 fois, nous obtenons une jolie fleur.
 
 ```{codeplay}
 from turtle import *
 
-for i in range(100):
-    forward(i)
-    left(30)
+def losange():
+    for i in range(2):
+        forward(100)
+        left(60)
+        forward(100)
+        left(120)
+
+for i in range(6):
+    losange()
+    left(60)
 ```
 
-## Du polygone au cercle
+**Exercice** : Tournez un angle plus petit que 60°
 
-Plus que le polygone régulier a de sommets, plus il ressemble à un cercle.
-Avec 36 sommets, il ressemble déjà raisonnablement à un cercle.
 
-```{codeplay}
-from turtle import *
+## Exporter vers un fichier
 
-def polygon(n, a):
-    for i in range(n):
-        forward(a)
-        left(360/n)
+Pour sauvegarder votre dessin vers un fichier copiez le code du dessin dans l'éditeur Thonny. Ensuite copiez les deux lignes de code ci-dessous à la fin de de votre fichier.
 
-polygon(36, 10)
+```{code-block} python
+from tkinter import *
+getscreen().getcanvas().postscript(file='file.eps')
 ```
 
-## La fonction `circle(r)`
+Votre image va être exporté vers un fichier qui s'appelle `file.eps` et qui se trouve dans le même dossier ou se trouve votre fichier Python.
+Vous pouvez changer le nom du fichier, mais vous devez garder l'extension `.eps`.
 
-La fonction `circle(r)` dessine un cercle de rayon `r`.
-Le cercle est dessiné :
+Sur un Mac, vous pouvez ouvrir un fichier `.eps` avec l'application **Aperçu** et ensuite exporter l'image vers le format PDF, JPG ou PNG.
 
-- vers la gauche si r est positif,
-- vers la droite si r est négatif.
+## Exporter en PNG/JPG
 
-```{codeplay}
-from turtle import *
+Pour directement sauvegarder votre dessin en format PNG, ajoutez les 6 lignes de code à la fin de votre dessin.
 
-forward(50)
-circle(40)
-forward(100)
-circle(-30)
-forward(100)
+```{code-block} python
+from tkinter import *
+from PIL import Image
+import io
+ps = getscreen().getcanvas().postscript(colormode = 'color')
+img = Image.open(io.BytesIO(ps.encode('utf-8')))
+img.save('file.png')
 ```
 
-**Exercice** : Inversez le signe du rayon.
-
-Cette fonction peut avoir un deuxième paramètre sous la forme `circle(r, angle)`
-ou `angle` représente l'angle de l'arc de cercle dessiné.
-Par défaut l'angle est de 360°, donc un cercle entier.
-
-Voici un exemple qui utilise deux demi-cercles de 180°.
-
-```{codeplay}
-from turtle import *
-
-forward(100)
-circle(40, 180)
-forward(50)
-circle(-30)
-forward(50)
-circle(40, 180)
-```
-
-**Exercice** : Dessinez un bonhomme de neige et utilisez `dot()` pour les yeux.
-
-## Dessiner une fleur
-
-Dessinons des cercles dans une boucle, et tournons à chaque fois.
-
-```{codeplay}
-from turtle import *
-
-n = 6
-for i in range(n):
-    circle(50)
-    left(360/n)
-```
-
-Il est également possible d'imbriquer des cercles en faisant varier le rayon dans une boucle `for` avec une expression `range()`.
-
-```{codeplay}
-from turtle import *
-
-for r in range(20, 100, 20):
-    circle(r)
-```
-
-**Exercice** : Dessinez les cercles empilés les uns sur les autres.
-
-## Deux boucles imbriquées
-
-Dans Excel, les cellules sont désignées avec une lettre et un nombre.
-Pour recréer les noms de cellule nous parcourons une chaîne de chiffres et une deuxième fois dans une chaîne de lettres.
-
-On appelle la première boucle avec `y` la **boucle extérieure** et la deuxième boucle avec `x` **la boucle intérieure**.
-
-Nous concaténons les deux éléments lettre et nombre (`x + y`) et nous ajoutons l'option `end=' '` pour remplacer le retour à la ligne par une espace.
-
-Pour bien montrer l'ordre consécutif nous importons la fonction `sleep()` du module `time` pour ralentir le parcours de la boucle.
-
-```{codeplay}
-from time import sleep
-
-for y in '1234567':
-    for x in 'ABCDEFG':
-        print(x + y, end=' ')
-        sleep(0.1)
-    print()
-```
-
-**Exercice** : Transformez le code pour afficher 20 colonnes de cellules.
-
-## Itérer sur x et y
-
-Deux boucles imbriquées peuvent itérer dans les directions x et y. Ceci permet d'afficher les coordonnées de la tortue.
-
-```{codeplay}
-from turtle import *
-up()
-
-for y in range(100, -150, -50):
-    for x in range(-200, 300, 100):
-        goto(x, y)
-        dot(3)
-        write((x, y))
-````
+Pour sauvegarder en format JPG utilisez tout simple l'extension `.jpg`.

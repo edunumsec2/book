@@ -1,14 +1,14 @@
 # Dessiner - `forward`
 
 Dans ce chapitre nous explorons ce que c'est un programme et nous prenons
-ici la métaphore du dessin. Un dessin est une séquence de lignes qui forment une image.
+ la métaphore du dessin. Ici, un programme est une séquence d'instructions pour dessiner une image.
 
 Allons-y en avant (forward) avec la programmation. Nous allons voir que
 
-- un programme est une séquence d'instructions,
 - les instructions `forward()`, `back()`, `left()`, `right()` permettent de dessiner,
 - le mot-clé `def` permet de nommer (définir) une séquence,
-- une boucle `for` permet de répéter des instructions.
+- la fonction `width(d)` permet de choisir l'épaisseur,
+- les fonctions `up()/down()` permettent de lever et baisser le stylo.
 
 ## Le module tortue
 
@@ -273,13 +273,7 @@ Une stratégie importante dans la programmation est de reconnaitre des structure
 vous devez repérer la partie qui est répétée et en créer une fonction.
 
 Ensuite il suffit d'**appeler** cette fonction.
-Rappelez vous ceci:
-
-- on définit une fonction une seule fois,
-- on peut appeler une fonction autant de fois que l'on veut.
-
-De nouveau nous réduisons les lignes de code nécessaires.
-Avec la fonction `boite()`, au lieu d'écrire 6 lignes, nous écrivons que 1 ligne de code.
+En appelant la fonction `boite()`, au lieu d'écrire 6 lignes, nous écrivons que 1 ligne de code.
 
 ```{codeplay}
 from turtle import *
@@ -300,97 +294,7 @@ boite()
 
 **Exercice** : Allongez la boite à 120 pas.
 
-## Répéter une séquence
 
-Revenons vers un exemple simple : dessiner un carré.
-
-Si nous regardons le code de près, nous pouvons voir que nous répétons 4 fois les mêmes deux instruction `forward()` et `left()`.
-
-```{codeplay}
-from turtle import *
-
-forward(100)
-left(90)
-forward(100)
-left(90)
-forward(100)
-left(90)
-forward(100)
-left(90)
-```
-
-Ne serait-il pas pratique de pouvoir dire à la tortue de répéter ces instructions 4 fois ?  
-Ceci est possible avec une boucle `for`. La ligne `for i in range(x):` va répéter `x` fois le bloc en indentation qui suit.
-
-```{codeplay}
-from turtle import *
-
-for i in range(4):
-    forward(100)
-    left(90)
-```
-
-**Exercice** : Transformez le rectangle en triangle.
-
-## Dessiner des polygones
-
-Avec une boucle `for` nous pouvons simplifier le dessins des formes symétriques.
-
-```{codeplay}
-from turtle import *
-
-def triangle():
-    for i in range(3):
-        forward(100)
-        left(120)
-
-def carre():
-    for i in range(4):
-        forward(100)
-        left(90)
-
-def pentagone():
-    for i in range(5):
-        forward(100)
-        left(72)
-
-triangle()
-carre()
-pentagone()
-```
-
-**Exercice** : Définissez la fonction `hexagone()` pour dessiner un hexagone.
-
-## Dessiner un éventail
-
-Que se passe-t-il si nous dessinons une ligne (`forward/back`) et tournons d'un petit angle à chaque fois ?
-C'est un peu comme un éventail qui s'ouvre.
-
-```{codeplay}
-from turtle import *
-
-for i in range(18):
-    forward(100)
-    back(100)
-    left(10)
-```
-
-**Exercice** : Utilisez cette méthode pour dessiner les rayons du soleil sur 360°.
-
-## Dessiner une étoile
-
-Une autre façon de toujours avancer, mais tourner à chaque fois d'un angle un peu plus petit que 180°.
-Essayons !
-
-```{codeplay}
-from turtle import *
-
-for i in range(9):
-    forward(200)
-    left(160)
-```
-
-**Exercice** : Changez le nombre de pics de l'étoile.
 
 ## Epaisseur de ligne
 
@@ -434,9 +338,11 @@ def maison():
     left(90)
 
 back(200)
-for i in range(3):
-    maison()
-    forward(150)
+maison()
+forward(150)
+maison()
+forward(150)
+maison()
 ```
 
 **Exercice** : Modifiez l'épaisseur du toit.
@@ -449,24 +355,18 @@ Ceci nous permet dessiner des formes séparées, ou ce trait discontinu.
 ```{codeplay}
 from turtle import *
 
-for i in range(7):
-    down()
-    forward(20)
-    up()
-    forward(10)
+forward(100)
+up()
+forward(50)
+down()
+forward(100)
 ```
 
 **Exercice** : Définissez une fonction `ligne()` et utilisez-la pour dessiner un triangle.
 
 ## Bâtiment avec fenêtre
 
-Dans le programme ci-dessous nous dessinons de nouveau un bâtiment avec cette fois-ci une fenêtre. Mais vous remarquerez une différence :
-
-- au début du programme le stylo est levé,
-- au début de chaque forme le stylo est baissé,
-- à la fin de chaque forme le stylo est de nouveau levé.
-
-Ceci nous permet de dessiner des formes disjoints.
+Dans le programme ci-dessous nous dessinons de nouveau un bâtiment avec cette fois-ci une fenêtre. Les fonctions `up()/down()` nous permettent de dessiner des formes disjoints.
 
 ```{codeplay}
 from turtle import *
@@ -483,62 +383,52 @@ def batiment():
         forward(100)
         left(90)
 
-fenetre()
-up()
-forward(70)
-down()
 batiment()
+up()
+forward(230)
+down()
+fenetre()
 ```
 
-**Exercice** : Modifiez le programme pour que la fenêtre soit dessiné à l'intérieur du bâtiment.
+**Exercice** : Modifiez le programme pour que la fenêtre soit dessinée à l'intérieur du bâtiment.
 
-## Dessiner un losange
+## Décomposer en sous-problèmes
 
-Si nous déformons les angles d'un carré, nous obtenons un losange (diamant).
-Quelle forme obtenons-nous en dessinant un carré et deux losanges ?
+Les fonctions nous permettent de décomposer un problème en sous-problèmes.
+
+Ici nous avons une construction hiérarchique :
+
+- la fonction `fenetre()` appelle deux fois la fonction `carre2()`
+- la fonction `carre2()` appelle deux fois la fonction `carre()`
+- la fonction `carre()` appelle deux fois la fonction `cote2()`
+- la fonction `cote2()` appelle deux fois la fonction `cote()`
 
 ```{codeplay}
 from turtle import *
+
+def cote():
+    forward(100)
+    left(90)
+
+def cote2():
+    cote()
+    cote()
 
 def carre():
-    for i in range(4):
-        right(90)
-        forward(100)
+    cote2()
+    cote2()
+    left(90)
 
-def losange():
-    for i in range(2):
-        forward(100)
-        left(120)
-        forward(100)
-        left(60)
-        
-carre()
-right(90)
-losange()
-left(120)
-losange()
+def carre2():
+    carre()
+    carre()
+
+def fenetre():
+    carre2()
+    carre2()
+
+fenetre()
 ```
-
-## Dessiner une fleur
-
-Si nous dessinons un losange 6 fois, nous obtenons une jolie fleur.
-
-```{codeplay}
-from turtle import *
-
-def losange():
-    for i in range(2):
-        forward(100)
-        left(60)
-        forward(100)
-        left(120)
-
-for i in range(6):
-    losange()
-    left(60)
-```
-
-**Exercice** : Tournez un angle plus petit que 60°
 
 ## Editeur de Python
 
