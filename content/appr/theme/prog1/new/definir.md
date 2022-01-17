@@ -3,7 +3,7 @@
 Dans ce chapitre nous allons voir de plus près le concept de la fonction, concept que nous avons vu dès le premier chapitre comme façon de donner un nom à une séquence d'instructions.
 
 En fait, la fonction est peut-être le concept le plus important dans la programmation.
-C'est un moyen puissant pour inventer des nouvelles commandes dans un langage de programmation. Nous allons voir que
+C'est un moyen puissant pour inventer des nouvelles commandes dans un langage de programmation. Nous allons voir que : 
 
 - le mot-clé `def` permet de définir une fonction,
 - un paramètre `f(param0, ...)` est une variable dans la définition de fonction,
@@ -12,13 +12,13 @@ C'est un moyen puissant pour inventer des nouvelles commandes dans un langage de
 ## Paramétrer la fonction
 
 Jusqu'à maintenant notre carré a toujours eu la même taille.
-Il serait très utile si notre nouvelle commande `carre(longueur)` pouvait dessiner des carrés de taille différentes.
+Il serait très utile si notre nouvelle commande `carre(longueur)` pouvait dessiner des carrés de tailles différentes.
 C'est possible en spécifiant un paramètre pour la fonction.
-Le paramètre de la fonction est une variable locale qui est utilisé dans sa définition.
+Le paramètre de la fonction est une variable locale qui est utilisée dans sa définition.
 
 Lors de l'appel de la fonction nous donnons une valeur à la fonction.
 Cette valeur placée entre parenthèses s'appelle l'**argument** de la fonction.
-Ici, la fonction `carre()` est appelé successivement avec les valeurs 50, 100 et 150.
+Ici, la fonction `carre()` est appelée successivement avec les valeurs 50, 100 et 150.
 
 ```{codeplay}
 from turtle import *
@@ -114,7 +114,7 @@ maison(120, 40)
 
 ## Taille de la maison
 
-Maintenant nous modifions la fonction pour inclure pas seulement la position mais aussi la taille de la maison comme paramètre.
+Maintenant nous modifions la fonction pour inclure non seulement la position mais aussi la taille de la maison comme paramètres.
 
 ```{codeplay}
 from turtle import *
@@ -138,7 +138,7 @@ maison(120, 40, 40)
 
 ## Couleur de la maison
 
-Maintenant nous modifions la fonction pour inclure pas seulement la position mais aussi la taille de la maison comme paramètre.
+Maintenant nous modifions la fonction pour inclure non seulement la position, la taille mais également la couleur de la maison comme paramètres.
 
 ```{codeplay}
 from turtle import *
@@ -165,7 +165,7 @@ maison(120, 40, 40, 'pink')
 
 ## Maison avec porte
 
-Maintenant nous modifions la fonction pour inclure pas seulement la position mais aussi la taille de la maison comme paramètre.
+Maintenant nous modifions la fonction pour inclure non seulement la position, la taille, la couleur de la maison comme paramètres, mais nous y ajoutons aussi une porte. 
 
 ```{codeplay}
 from turtle import *
