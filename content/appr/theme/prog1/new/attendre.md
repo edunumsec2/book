@@ -1,6 +1,6 @@
 # Attendre - `while`
 
-Dans ce chapitre nous découvrons un deuxième type de boucle, la boucle `while`, qui est souvent utilisé pour attendre quelque chose. Nous allons voir que
+Dans ce chapitre nous découvrons un deuxième type de boucle, la boucle `while`, qui est souvent utilisée pour attendre quelque chose. Nous allons voir que : 
 
 - la boucle `while` répète aussi longtemps qu'une condition est vraie,
 - la fonction `sleep()` permet d'attendre et ralentir le programme,
@@ -86,7 +86,7 @@ print('moyenne =', somme/n)
 
 ## Deviner un nombre
 
-On peut aussi l'utiliser une boucle `while` pour deviner un nombre.
+On peut aussi utiliser une boucle `while` pour deviner un nombre.
 Ici on importe la fonction `randint()` du module `random`.
 Elle fournit un nombre entier aléatoire entre deux bornes (1, 99).
 
@@ -121,20 +121,20 @@ L'indentation est encouragée mais reste optionnelle.
 En Python, l'indentation est obligatoire. C'est la façon officielle de designer un bloc.
 Ceci présente deux avantages :
 
-- plus besoin d'accolades pour délimiter une bloc,
+- plus besoin d'accolades pour délimiter un bloc,
 - la structure des blocs est claire et visuelle.
 
 Une **indentation** est un retrait du code par rapport à la marge gauche de 4 caractères.
 Elle peut être insérée avec la touche tabulateur **TAB** (symbolisée par une flèche à gauche du clavier).
 
-Un bloc est défini par l'entendu de la même indentation.
-Des blocs marqué par une indentation se trouvent après les mots-clés pour :
+Un bloc est défini comme un ensemble de lignes de même indentation. 
+Des blocs marqués par une indentation se trouvent après les mots-clés pour :
 
 - la définition de fonction (`def`),
 - l'instruction conditionnelle (`if-elif-else`),
 - la boucle (`for/while`).
 
-En Python, le symbole `:` en fin de ligne introduit un sous-bloc qui doit être en indentation.
+En Python, le symbole `:` en fin de ligne introduit un sous-bloc qui doit être indenté.
 Voici 5 sous-blocs à la suite des mot-clés `def`, `if`, `elif`, `else`, `for` :
 
 ```{codeplay}
@@ -159,12 +159,12 @@ for i in range(3):
     print('-' * 11)
 ```
 
-**Exercice** : Enlevez l'indentation de l'instructions `print('-' * 11)`.
+**Exercice** : Enlevez l'indentation de l'instruction `print('-' * 11)`.
 
 ## Sortir avec `break`
 
 Le mot-clé `break`, seul sur une ligne, permet de sortir d'une boucle.
-Souvent cette méthode est utilisé pour sortir d'une boucle infinie.
+Souvent cette méthode est utilisée pour sortir d'une boucle infinie.
 
 ```{codeplay}
 noms = []
