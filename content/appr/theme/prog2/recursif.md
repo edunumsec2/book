@@ -51,7 +51,7 @@ def f(n):
 f(100)
 ```
 
-Le comportement est différent. Nous constatons que la fonction s'arrête après environs 1300 appels récursifs. C'est une limite qui peut être défini dans le compilateur Python.
+Le comportement est différent. Nous constatons que la fonction s'arrête après quelques centaines d'appels récursifs. C'est une limite qui peut être défini dans le compilateur Python.
 
 ## Condition de terminaison
 
