@@ -10,7 +10,16 @@ Allons-y en avant (forward) avec la programmation. Nous allons voir que
 - la fonction `width(d)` permet de choisir l'épaisseur,
 - les fonctions `up()/down()` permettent de lever et baisser le stylo.
 
-## Le module tortue
+```{question}
+Un programme informatique est
+
+{f}`une instruction de séquence`  
+{v}`séquence d'instructions`  
+{f}`un algorithme`  
+{f}`une recette de cuisine`
+```
+
+## Le module `turtle`
 
 Dans le langage de programmation Python, le module `turtle` (tortue en anglais) présente une façon sympathique pour faire des dessins. Ce pour cela que nous commençons notre aventure de programmation avec cet animal qui avance tout doucement à son propre rythme à lui.
 
@@ -31,6 +40,17 @@ forward(150)
 
 **Exercice** : Ajoutez d'autre fonctions tel que `back()`, `left()`, `right()` pour faire un dessin.
 
+```{question}
+En Python `turtle` est
+
+{v}`un module standard`  
+{f}`un éditeur de dessin`  
+{f}`une tortue`  
+{f}`une commande`
+```
+
+## La tortue
+
 La tortue peut se déplacer et dessiner une trace avec les 4 fonctions:
 
 - `forward(d)` pour avancer d'une distance `d` (en pixels)
@@ -45,14 +65,29 @@ Ce rectangle a les propriétés suivantes :
 - l'axe x s'étend de -300 à +300,
 - l'axe y s'étend de -200 à +200.
 
+
+```{codeplay}
+from turtle import *
+
+shape('turtle')
+
+forward(300)
+back(600)
+forward(300)
+
+left(90)
+forward(200)
+right(180)
+forward(400)
+```
+
 ```{question}
-La largeur de la zone de dessin de la tortue est de
-{f}`200`,
-{f}`300`,
-{f}`400`,
-{v}`600` ou
-{f}`800`
-pixels.
+La largeur de la zone de dessin de la tortue est
+
+{f}`200 pixels`   
+{f}`400 pixels`  
+{v}`600 pixels`  
+{f}`800 pixels`  
 ```
 
 ## Une séquence
@@ -75,19 +110,43 @@ left(90)
 **Exercice** : Modifiez ce code pour faire le rectangle plus long.
 
 ```{question}
+La hauteur de la zone de dessin de la tortue est
 
-Le code
+{f}`200 pixels`   
+{v}`400 pixels`  
+{f}`600 pixels`  
+{f}`800 pixels`  
+```
 
-    forward(100)
-    left(90)
-    back(20)
+## Redondance
 
-place la tortue à la position
-{f}`(0, 0)` 
-{f}`(100, 0)`
-{v}`(100, -20)`
-{f}`(100, 20)`
-{f}`(20, 100)`
+La tortue possède 4 fonctions de déplacement, mais strictement parlé, on pourrait s'en sortir avec seulement deux fonctions, `forward()` et `left()`, car : 
+
+- `back(d)` est équivalent à `forward(-d)`
+- `right(a)` est équivalent à `left(-a)`
+ 
+En plus la rotation est cyclique, 
+
+```{codeplay}
+from turtle import *
+
+forward(160)
+left(90)
+forward(100)
+right(-90)
+back(-160)
+left(-270)
+forward(100)
+right(270)
+```
+
+```{question}
+L'expression `left(90)` est équivalent à
+
+{v}`right(-90)`  
+{f}`right(180)`  
+{f}`left(180)`  
+{f}`left(270)`  
 ```
 
 ## Nommer une séquence
@@ -128,13 +187,12 @@ rectangle()
 **Exercice** : Dessinez encore d'autres rectangles en appelant la nouvelle fonction `rectangle()`.
 
 ```{question}
-L'expression `left(90)` est équivalent à deux autres expressions
+L'expression `left(90)` est équivalent à
 
-{v}`right(-90)`
-{f}`right(180)`
-{f}`left(180)`
-{f}`left(270)`
-{v}`right(270)`
+{f}`right(180)`  
+{f}`left(180)`  
+{f}`left(270)`  
+{v}`right(270)`  
 ```
 
 ## Donner du sens
@@ -207,6 +265,15 @@ porte()
 
 **Exercice** : Ajoutez une deuxième porte au bâtiment.
 
+```{question}
+La fonction `porte())` est équivalent à combien de code
+
+{f}`1 ligne`  
+{f}`2 lignes`  
+{v}`8 lignes)`  
+{f}`17 lignes`  
+```
+
 ## Définir une fonction
 
 Le fait de donner un nom à une séquence d'instructions est appelé **définir un fonction**. Une **définition de fonction** comporte :
@@ -258,13 +325,12 @@ maison()
 **Exercice** : Intégrez la porte dans la définition da la maison, et dessinez 2 fois la nouvelle maison avec porte.
 
 ```{question}
-La définition de la fonction `maison()` comporte :
-{f}`5`,
-{f}`8`, 
-{v}`10`,
-{f}`11` ou
-{f}`12`
-lignes de code.
+Laquelle est une définition de fonction correcte ?
+
+{f}`def() rectangle:`  
+{f}`def: rectangle`  
+{v}`def rectangle():`  
+{f}`def(rectangle):`  
 ```
 
 ## Appeler une fonction
