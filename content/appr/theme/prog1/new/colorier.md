@@ -22,7 +22,7 @@ Voici un triangle avec 3 segments de couleurs différentes.
 
 ```{codeplay}
 from turtle import *
-width(10)
+width(20)
 
 color('red')
 forward(150)
@@ -51,10 +51,10 @@ Nous pouvons afficher des points à chaque sommet :
 from turtle import *
 up()
 
-dot(40, 'red')
+dot(300, 'red')
 forward(150)
 
-dot(60, 'lime')
+dot(160, 'lime')
 left(120)
 forward(150)
 
@@ -160,9 +160,7 @@ Voici un smiley qui exprime l'indifférence.
 
 ```{codeplay}
 from turtle import *
-
 getscreen().bgcolor('linen')
-up()
 dot(300, 'yellow')
 
 left(45)
@@ -170,16 +168,17 @@ forward(60)
 dot(40)
 
 right(45)
-back(90)
+back(100)
 dot(40)
 
 right(90)
 forward(100)
 left(90)
-width(10)
-down()
+width(20)
 forward(100)
 ```
+
+**Exercice** : Ajoutez `up()` au début du programme pour ne plus montrer la trajectoire de la tortue.
 
 Voici un autre smiley qui exprime la surprise.
 
@@ -187,7 +186,6 @@ Voici un autre smiley qui exprime la surprise.
 from turtle import *
 
 getscreen().bgcolor('azure')
-up()
 dot(300, 'palegreen')
 
 left(45)
@@ -235,7 +233,7 @@ croix()
 end_fill()
 ```
 
-**Exercice** : Rendez ce programme plus court en utilisant une boucle.
+**Exercice** : Inversez les couleurs pour trouver le drapeau de la Croix-Rouge.
 
 ## Maison
 
@@ -243,9 +241,7 @@ Nous reprenons l'exemple du chapitre précédent de la fonction `maison()`. Cett
 
 ```{codeplay}
 from turtle import *
-
 getscreen().bgcolor('lightgreen')
-up()
 
 def maison():
     begin_fill()
@@ -262,13 +258,14 @@ def maison():
     end_fill()
     
 back(200)
-fillcolor('pink)
+fillcolor('pink')
 maison()
 forward(150)
-fillcolor('chartreuse')
+fillcolor('lightblue')
 maison()
 ```
 
+**Exercice** : Ajoutez encore une maison dans une autre couleur.
 ## Erreurs
 
 Il est important de bien comprendre les messages d'erreurs.

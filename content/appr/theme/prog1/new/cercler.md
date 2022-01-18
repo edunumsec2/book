@@ -41,7 +41,7 @@ La valeur numérique du rayon est
 
 $$ r = 360 / 6.28 = 57 $$
 
-La fonction `circle(57` dessine un cercle dont le rayon est 57.
+La fonction `circle(57)` dessine un cercle dont le rayon est 57. L'expérience montre que le polygone et le cercle ont effectivement la même taille.
 
 ```{codeplay}
 from turtle import *
@@ -59,8 +59,8 @@ circle(57)
 La fonction `circle(r)` dessine un cercle de rayon `r`.
 Le cercle est dessiné :
 
-- vers la gauche si r est positif,
-- vers la droite si r est négatif.
+- vers la gauche si `r` est positif,
+- vers la droite si `r` est négatif.
 
 ```{codeplay}
 from turtle import *
@@ -79,13 +79,12 @@ Dessinons des cercles dans une boucle, et tournons à chaque fois.
 ```{codeplay}
 from turtle import *
 
-n = 6
-for i in range(n):
+for i in range(6):
     circle(50)
-    left(360/n)
+    left(60)
 ```
 
-**Exercice** : Inversez le signe du rayon.
+**Exercice** : Modifier l'angle le nombre de répétitions et l'angle de rotation.
 
 ## Arc de cercle
 
@@ -124,6 +123,8 @@ for i in range(4):
 
 ## Coeur
 
+Le cœur est le symbole de l'amour : on donne de façon métaphorique son cœur à la personne que l'on aime pour lui signifier qu'on lui confie sa vie.
+
 ```{codeplay}
 from turtle import *
 width(10)
@@ -135,6 +136,8 @@ left(90)
 forward(120)
 circle(50, 225)
 ```
+
+**Exercice** : Coloriez le coeur en rouge, ajoutez une flèche.
 
 ## Infini - ∞
 
@@ -171,6 +174,8 @@ for i in range(4):
 
 ## Lettres
 
+Les lettres sont des signes graphiques qui formant un alphabet et servant à transcrire une langue.
+
 ```{codeplay}
 from turtle import *
 width(10)
@@ -200,7 +205,11 @@ o()
 n()
 ```
 
+**Exercice** : Ajoutez und fonction `m()` pour écrire le mot `nom`. Ajoutez ensuite les lettres pour écrire votre prénom.
+
 ## Pétales
+
+Un pétale est formé de deux arcs de cercle.
 
 ```{codeplay}
 from turtle import *
@@ -213,4 +222,6 @@ def petale():
 for i in range(6):
     petale()
     left(60)
-````
+```
+
+**Exercice** : Coloriez la fleur.

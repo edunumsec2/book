@@ -271,3 +271,5 @@ fillcolor('blue')
 forward(40)
 write('Arial 36', font=('Arial', 36))
 ```
+
+**Exercice** : Essayez d'autres tailles et polices.

@@ -227,9 +227,11 @@ Si nous observons la tortue, nous comprenons finalement qu'elle dessine deux foi
 Essayons maintenant de découper le code en **sous-problèmes** en utilisant deux fonctions `batiment()` et `porte()`.
 En regardant ces 3 lignes de code, on comprend immédiatement le sens du programme.
 
-    batiment()
-    forward(30)
-    porte()
+```{code-block} python
+batiment()
+forward(30)
+porte()
+```
 
 La définition d'une fonction permet d'ajouter des nouveaux mots à un langage de programmation. Contrairement aux commandes natives de Python qui sont tous en anglais, nous sommes libre de les choisir en français.
 
@@ -289,7 +291,20 @@ C'est un bloc de texte qui comporte des espaces vides à gauche. En Python, ces 
 
 L'indentation est très importante en Python. C'est l'indentation qui indique l'étendu des instructions qui font partie de la fonction.
 
-Nous avons maintenant tout ce qui est nécessaire pour définir deux nouvelles commande : une pour dessiner une porte une autre pour dessiner une maison.
+```{question}
+Laquelle est une définition de fonction correcte ?
+
+{f}`def() rectangle:`  
+{f}`def: rectangle`  
+{v}`def rectangle():`  
+{f}`def(rectangle):`  
+```
+
+## Maison avec porte
+
+Une fois une fonction est définie, elle peut être utilisé partout, même dans la définition d'une autre fonction.
+
+Ici nous avons une fonction `porte()` qui est utilisé à l'intérieur d'une deuxième fonction `maison()`. Pour que ceci est possible, la définition de porte doit être placé avant la définition de `maison()`.
 
 ```{codeplay}
 from turtle import *
@@ -315,52 +330,12 @@ def maison():
     left(45)
     forward(60)
     left(90)
+    porte()
 
-forward(30)
-porte()
-forward(70)
 maison()
 ```
 
-**Exercice** : Intégrez la porte dans la définition da la maison, et dessinez 2 fois la nouvelle maison avec porte.
-
-```{question}
-Laquelle est une définition de fonction correcte ?
-
-{f}`def() rectangle:`  
-{f}`def: rectangle`  
-{v}`def rectangle():`  
-{f}`def(rectangle):`  
-```
-
-## Appeler une fonction
-
-Une stratégie importante dans la programmation est de reconnaitre des structure identiques. Par exemple quand vous voyez une symétrie dans un dessin,
-vous devez repérer la partie qui est répétée et en créer une fonction.
-
-Ensuite il suffit d'**appeler** cette fonction.
-En appelant la fonction `boite()`, au lieu d'écrire 6 lignes, nous écrivons que 1 ligne de code.
-
-```{codeplay}
-from turtle import *
-
-def boite():
-    forward(60)
-    left(90)
-    forward(60)
-    left(90)
-    forward(60)
-    right(90)
-    
-boite()
-boite()
-boite()
-boite()
-```
-
-**Exercice** : Allongez la boite à 120 pas.
-
-
+**Exercice** : Mettez la porte au milieu de la maison, et dessinez une deuxième maison.
 
 ## Epaisseur de ligne
 
@@ -383,6 +358,8 @@ left(120)
 ```
 
 **Exercice** : Explorez les différents épaisseurs de ligne.
+
+## Maison avec toit
 
 Nous reprenons l'exemple de la maison et dessinons le toit plus épais.
 
@@ -416,84 +393,139 @@ maison()
 ## Lever/baisser le stylo
 
 Les deux commandes `up()` et `down()` permettent de lever et baisser le stylo.
-Ceci nous permet dessiner des formes séparées, ou ce trait discontinu.
+Ceci nous permet dessiner des formes séparées, comme ces deux triangles.
 
 ```{codeplay}
 from turtle import *
 
-forward(100)
+def triangle():
+    forward(100)
+    left(120)
+    forward(100)
+    left(120)
+    forward(100)
+    left(120)
+    
+triangle()
 up()
-forward(50)
+forward(150)
 down()
-forward(100)
+triangle()
 ```
 
-**Exercice** : Définissez une fonction `ligne()` et utilisez-la pour dessiner un triangle.
+**Exercice** : Ajoutez encore un triangle disjoint.
 
-## Bâtiment avec fenêtre
+## Maison avec fenêtre
 
-Dans le programme ci-dessous nous dessinons de nouveau un bâtiment avec cette fois-ci une fenêtre. Les fonctions `up()/down()` nous permettent de dessiner des formes disjoints.
+Dans le programme ci-dessous nous dessinons de nouveau une maison avec cette fois-ci une fenêtre. Les fonctions `up()/down()` nous permettent de dessiner des formes disjointes, telle qu'une fenêtre à l'intérieur de la maison.
 
 ```{codeplay}
 from turtle import *
 
 def fenetre():
-    for i in range(4):
-        forward(30)
-        left(90)
-        
-def batiment():
-    for i in range(2):
-        forward(200)
-        left(90)
-        forward(100)
-        left(90)
+    forward(20)
+    left(90)
+    forward(20)
+    left(90)
+    forward(20)
+    left(90)
+    forward(20)
+    left(90)
 
-batiment()
-up()
-forward(230)
-down()
-fenetre()
+def maison():
+    forward(100)
+    left(90)
+    forward(60)
+    left(45)
+    forward(71)
+    left(90)
+    forward(71)
+    left(45)
+    forward(60)
+    left(90)
+
+    fenetre()
+
+maison()
 ```
 
-**Exercice** : Modifiez le programme pour que la fenêtre soit dessinée à l'intérieur du bâtiment.
+**Exercice** : Modifiez le programme pour que la fenêtre soit dessinée à l'intérieur de la maison. Dessinez une deuxième maison.
 
-## Décomposer en sous-problèmes
+## Trouver la symétrie
 
-Les fonctions nous permettent de décomposer un problème en sous-problèmes.
+Une stratégie importante dans la programmation est de **reconnaitre des structure identiques**. Par exemple quand vous voyez une symétrie dans un dessin,
+vous devez repérer la partie qui est répétée et en créer une fonction.
 
-Ici nous avons une construction hiérarchique :
-
-- la fonction `fenetre()` appelle deux fois la fonction `carre2()`
-- la fonction `carre2()` appelle deux fois la fonction `carre()`
-- la fonction `carre()` appelle deux fois la fonction `cote2()`
-- la fonction `cote2()` appelle deux fois la fonction `cote()`
+Ensuite il suffit d'**appeler** cette fonction.
+En appelant la fonction `bras()`, au lieu d'écrire 6 lignes, nous écrivons que 1 ligne de code.
 
 ```{codeplay}
 from turtle import *
 
-def cote():
+def bras():
+    forward(60)
+    left(90)
+    forward(60)
+    left(90)
+    forward(60)
+    right(90)
+    
+def croix():
+    bras()
+    bras()
+    bras()
+    bras()
+
+croix()
+```
+
+**Exercice** : Allongez le bras à 120 pas. Faites le bras plus mince.
+
+## Décomposer
+
+Une stratégie importante en programmation est de **décomposer un problème en sous-problèmes**. Les fonctions nous permettent de structurer un problèmes en objets de plus en plus simple.
+
+Ici nous dessinons une fenêtre composé de 4 carreau. Nous pouvons décomposer ce problème en une construction hiérarchique :
+
+- la fonction `fenetre()` appelle deux fois la fonction `demi_fenetre()`,
+- la fonction `demi_fenetre()` appelle deux fois la fonction `carreau()`,
+- la fonction `carreau()` appelle deux fois la fonction `equerre()`,
+- la fonction `equerre()` appelle deux fois la fonction `ligne()`.
+
+```{codeplay}
+from turtle import *
+
+def ligne():
     forward(100)
     left(90)
 
-def cote2():
-    cote()
-    cote()
+def equerre():
+    ligne()
+    ligne()
 
-def carre():
-    cote2()
-    cote2()
+def carreau():
+    equerre()
+    equerre()
     left(90)
 
-def carre2():
-    carre()
-    carre()
+def demi_fenetre():
+    carreau()
+    carreau()
 
 def fenetre():
-    carre2()
-    carre2()
+    demi_fenetre()
+    demi_fenetre()
 
 fenetre()
+```
+
+```{question}
+Combien de lignes de code sont exécutées par la fonction `fenetre()`?
+
+{f}`16`  
+{f}`32`  
+{v}`36`  
+{f}`40`  
 ```
 
 ## Editeur de Python
@@ -510,6 +542,8 @@ Nous vous proposons d'utiliser [Thonny](https://thonny.org), qui est un logiciel
 
 ```{image} media/thonny.png
 ```
+
+Quand vous utilisez le module `turtle()` avec Thonny, ajoutez toujours la fonction `done()` comme dernière ligne de code, pour que vous puissiez quitter le programme.
 
 ## Exercices
 

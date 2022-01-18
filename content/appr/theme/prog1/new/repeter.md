@@ -38,7 +38,7 @@ for i in range(4):
 
 **Exercice** : Transformez le rectangle en triangle.
 
-## Un polygone régulier
+## Polygone régulier
 
 Avec une boucle `for` nous pouvons simplifier le dessins des formes symétriques.
 
@@ -67,7 +67,7 @@ pentagone()
 
 **Exercice** : Définissez la fonction `hexagone()` pour dessiner un hexagone.
 
-## Un escalier
+## Escalier
 
 Pour dessiner un escalier, il faut simplement répéter dans une boucle le dessin pour une seule marche.
 
@@ -83,7 +83,7 @@ for i in range(5):
 forward(100)
 ```
 
-## Des dents de scie
+## Dents de scie
 
 Pour dessiner des dents de scie, il faut simplement répéter dans une boucle le dessin pour une seule dent.
 
@@ -102,7 +102,7 @@ forward(80)
 
 **Exercice** : Dessinez une usine avec un toit en dents de scie.
 
-## Un éventail
+## Eventail
 
 Que se passe-t-il si nous dessinons une ligne (`forward/back`) et tournons d'un petit angle à chaque fois ?
 C'est un peu comme un éventail qui s'ouvre.
@@ -118,7 +118,7 @@ for i in range(18):
 
 **Exercice** : Doublez l'angle de rotation dans `left()`.
 
-## Un diaphragme
+## Diaphragme
 
 Que se passe-t-il si nous avançons plus que nous reculons ?
 Une toute petite modification du programme peut faire une chouette différence.
@@ -134,9 +134,9 @@ for i in range(18):
 
 **Exercice** : Modifiez les valeurs dans `forward()` et `back()`.
 
-## Une étoile
+## Etoile
 
-Une autre façon de toujours avancer, mais tourner à chaque fois d'un angle un peu plus petit que 180°.
+Voici une autre façon de toujours avancer, mais tourner à chaque fois d'un angle un peu plus petit que 180°.
 Essayons !
 
 ```{codeplay}
@@ -149,7 +149,7 @@ for i in range(9):
 
 **Exercice** : Changez le nombre de pics de l'étoile.
 
-## Un losange
+## Losange
 
 Si nous déformons les angles d'un carré, nous obtenons un losange (diamant).
 Quelle forme obtenons-nous en dessinant un carré et deux losanges ?
@@ -176,7 +176,7 @@ left(120)
 losange()
 ```
 
-## Une fleur
+## Fleur
 
 Si nous dessinons un losange 6 fois, nous obtenons une jolie fleur.
 
@@ -197,13 +197,14 @@ for i in range(6):
 
 **Exercice** : Tournez un angle plus petit que 60°
 
-## Exporter vers un fichier
+## Export vers un fichier
 
-Pour sauvegarder votre dessin vers un fichier copiez le code du dessin dans l'éditeur Thonny. Ensuite copiez les deux lignes de code ci-dessous à la fin de de votre fichier.
+Pour sauvegarder votre dessin vers un fichier copiez le code du dessin dans l'éditeur Thonny. Ensuite copiez ces lignes de code ci-dessous à la fin de de votre fichier.
 
 ```{code-block} python
-from tkinter import *
-getscreen().getcanvas().postscript(file='file.eps')
+from tkinter import * 
+cn = getscreen().getcanvas()
+cn.postscript(file='file.eps')
 ```
 
 Votre image va être exporté vers un fichier qui s'appelle `file.eps` et qui se trouve dans le même dossier ou se trouve votre fichier Python.
@@ -211,17 +212,20 @@ Vous pouvez changer le nom du fichier, mais vous devez garder l'extension `.eps`
 
 Sur un Mac, vous pouvez ouvrir un fichier `.eps` avec l'application **Aperçu** et ensuite exporter l'image vers le format PDF, JPG ou PNG.
 
-## Exporter en PNG/JPG
+## Export en PNG/JPG
 
-Pour directement sauvegarder votre dessin en format PNG, ajoutez les 6 lignes de code à la fin de votre dessin.
+Pour directement sauvegarder votre dessin en format PNG, ajoutez ces lignes de code à la fin de votre dessin.
 
 ```{code-block} python
 from tkinter import *
 from PIL import Image
 import io
-ps = getscreen().getcanvas().postscript(colormode = 'color')
-img = Image.open(io.BytesIO(ps.encode('utf-8')))
+
+cn = getscreen().getcanvas()
+ps = cn.postscript(colormode='color')
+file = io.BytesIO(ps.encode('utf-8'))
+img = Image.open(file)
 img.save('file.png')
 ```
 
-Pour sauvegarder en format JPG utilisez tout simple l'extension `.jpg`.
+Pour sauvegarder en format JPG utilisez tout simplement l'extension `.jpg`.

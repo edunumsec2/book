@@ -265,10 +265,11 @@ up()
 def corona(a=10, d=20, n=24):
     down()
     for i in range(n):
+        left(90  - 180/n)
         forward(d)
         dot()
         backward(d)
-        left(360/n)
+        right(90 + 180/n)
         forward(a)
     up()
 

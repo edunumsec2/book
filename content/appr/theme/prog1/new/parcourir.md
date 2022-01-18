@@ -87,7 +87,7 @@ maison()
 
 **Exercice** : Ajoutez une porte et une fenêtre à la maison.
 
-## Des maisons en couleurs
+## Maisons en couleurs
 
 Dans l'exemple nous allons parcourir d'abord une séquence d'angles avec une variable d'itération `a` pour dessiner une maison.
 
@@ -114,7 +114,7 @@ for c in ('red', 'yellow', 'pink', 'lightblue', 'lightgreen'):
 
 **Exercice** : Changez la couleurs des maisons.
 
-## Dessiner une fleur
+## Fleur
 
 Ci-dessous nous dessinons 6 fois un losange pour obtenir une fleur.
 Avec une boucle `for` nous parcourons une séquence de 6 couleurs alternantes.
