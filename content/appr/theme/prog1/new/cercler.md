@@ -2,23 +2,28 @@
 
 Dans ce chapitre nous explorons les cercles et les arcs de cercle. Nous allons voir que
 
-- la fonction `circle(r)` dessine un cercle de rayon `r`, 
-- la fonction `circle(r, a)` dessine un arc de cercle d'angle `a`.
+- un cercle est approximé par un polygone,
+- la fonction `circle(r)` dessine un cercle de rayon `r`,
+- la fonction `circle(r, a)` dessine un arc de cercle d'un angle `a`.
 
 ## Du polygone au cercle
 
 Plus que le polygone régulier a de sommets, plus il ressemble à un cercle.
-Avec 36 sommets, il ressemble déjà raisonnablement à un cercle.
+Tandis qu'avec 9 sommets il ressemble clairement à un polygone,
+avec 36 sommets, il ressemble déjà raisonnablement à un cercle.
 
 ```{codeplay}
 from turtle import *
 
-def polygon(n, a):
-    for i in range(n):
-        forward(a)
-        left(360/n)
+for i in range(9):
+    forward(40)
+    left(40)
+    
+right(15)
 
-polygon(36, 10)
+for i in range(36):
+    forward(10)
+    left(10)
 ```
 
 ## Périmètre et rayon
@@ -28,26 +33,28 @@ Nous pouvons le trouver à partir du périmètre avec la relation suivante :
 
 $$ p = 2r \pi $$
 
+Donc
+
+$$ r = p / (2 \pi) $$
+
+La valeur numérique du rayon est
+
+$$ r = 360 / 6.28 = 57 $$
+
+La fonction `circle(57` dessine un cercle dont le rayon est 57.
+
 ```{codeplay}
 from turtle import *
 
-def polygone(n, a):
-    for i in range(n):
-        forward(a)
-        left(360/n)
+for i in range(36):
+    forward(10)
+    left(10)
 
-n = 36
-a = 10
-p = n * a
-r = p / (2 * 3.14)
-
-print('périmètre =', p)
-print('diamètre =', r)
-polygone(n, a)
-circle(r)
+right(5)
+circle(57)
 ```
 
-## La fonction `circle(r)`
+## Fonction `circle()`
 
 La fonction `circle(r)` dessine un cercle de rayon `r`.
 Le cercle est dessiné :
@@ -80,17 +87,7 @@ for i in range(n):
 
 **Exercice** : Inversez le signe du rayon.
 
-## Cercle dans in cercle
-Il est également possible d'imbriquer des cercles en faisant varier le rayon dans une boucle `for` avec une expression `range()`.
-
-```{codeplay}
-from turtle import *
-
-for r in range(20, 100, 20):
-    circle(r)
-```
-
-**Exercice** : Dessinez les cercles empilés les uns sur les autres.
+## Arc de cercle
 
 Cette fonction peut avoir un deuxième paramètre sous la forme `circle(r, angle)`
 ou `angle` représente l'angle de l'arc de cercle dessiné.
@@ -110,6 +107,20 @@ circle(40, 180)
 ```
 
 **Exercice** : Dessinez un bonhomme de neige et utilisez `dot()` pour les yeux.
+
+## Carré arrondi
+
+Avec la fonction `circle()` il est maintenant possible de dessiner un carré arrondie.
+
+```{codeplay}
+from turtle import *
+
+for i in range(4):
+    forward(100)
+    circle(20, 90)
+```
+
+**Exercice** : Dessinez un rectangle arrondi.
 
 ## Coeur
 
@@ -141,9 +152,9 @@ circle(-100, 270)
 forward(100)
 ```
 
-## Pretzel - ⌘
+## Bretzel - ⌘
 
-Le pictogramme ⌘ (Unicode 2318), parfois appelé *Gordon loop* ou *pretzel*, a été dessiné par Susan Kare lors de la création du premier Macintosh pour sa touche de commande. Elle sert de préfixe à d'autres touches pour construire des raccourcis tel que :
+Le pictogramme ⌘ (Unicode 2318), parfois appelé *Gordon loop* ou *bretzel*, a été dessiné par Susan Kare lors de la création du premier Macintosh pour sa touche de commande. Elle sert de préfixe à d'autres touches pour construire des raccourcis tel que :
 
 - cmd+X pour couper
 - cmd+C pour Copier

@@ -25,7 +25,7 @@ Dans les options, il faut choisir MicroPython (BBC micro:bit). Eventuellement il
 
 Avec un navigateur basé sur Chrome, vous pouvez programmer le micro:bit depuis le site:
 
-https://python.microbit.org/v/2
+<https://python.microbit.org/v/2>
 
 ## Détails de version
 
@@ -107,7 +107,7 @@ Dans la console de Thonny écrivez le code suivant
 ## Le module
 
 La fonction `dir()` permet d'afficher les attributs et méthodes d'une objet.
-Regardez les attributs qui font partie de 
+Regardez les attributs qui font partie de
 
     >>> import microbit
     >>> dir(microbit)

@@ -75,17 +75,23 @@ Par exemple ce programme-ci dessine un carré jaune.
 ```{codeplay}
 from turtle import *
 
-fillcolor('yellow')
-begin_fill()
-for i in range(4):
+def triangle():
     forward(100)
-    left(90)
+    left(120)
+    forward(100)
+    left(120)
+    forward(100)
+    left(120)
+
+fillcolor('chartreuse')
+begin_fill()
+triangle()
 end_fill()
 ```
 
 **Exercice** : Ajoutez un triangle d'une couleur différente.
 
-## Couleur d'arrière-fond
+## Couleur de fond
 
 Le fonction `getscreen()` retourne un objet `Screen`. Cet objet possède une méthode `bgcolor()`.
 Tout ce qu'il faut retenir pour l'instant c'est que la combinaison `getscreen().bgcolor()` permet de définir la couleur d'arrière-fond (bg = background).
@@ -95,13 +101,19 @@ Dans l'exemple suivant, nous dessinons un carré jaune sur un arrière-fond rose
 ```{codeplay}
 from turtle import *
 
-getscreen().bgcolor('pink')
-fillcolor('yellow')
+def triangle():
+    forward(150)
+    left(120)
+    forward(150)
+    left(120)
+    forward(150)
+    left(120)
+
+getscreen().bgcolor('tan')
+fillcolor('gold')
 
 begin_fill()
-for i in range(4):
-    forward(100)
-    left(90)
+triangle()
 end_fill()
 ```
 
@@ -111,26 +123,35 @@ La forme ne doit pas nécessairement être fermée pour être remplie d'une coul
 Dans l'exemple suivant nous dessinons une forme ouverte avec seulement deux lignes.
 Le résultat est un triangle avec deux bordures et un troisième segment sans bordure.
 
+
+Une équerre est un instrument formé de deux pièces ajustées à angle droit. l'équerre est utilisée soit pour vérifier des angles dièdres droits, soit pour tracer des angles plans droits.
+
 ```{codeplay}
 from turtle import *
-getscreen().bgcolor('azure')
+getscreen().bgcolor('moccasin')
 
-fillcolor('yellow')
-begin_fill()
-for i in range(2):
+def equerre():
+    forward(150)
+    left(90)
     forward(100)
     left(90)
+
+fillcolor('sienna')
+begin_fill()
+equerre()
 end_fill()
 
-fillcolor('lime')
+up()
+forward(50)
+down()
+
+fillcolor('gold')
 begin_fill()
-for i in range(2):
-    forward(100)
-    left(90)
+equerre()
 end_fill()
 ```
 
-**Exercice** : Dessinez un drapeau bi-colore.
+**Exercice** : Dessinez le drapeau bi-colore du canton de Zurich.
 
 ## Smiley
 
@@ -165,9 +186,9 @@ Voici un autre smiley qui exprime la surprise.
 ```{codeplay}
 from turtle import *
 
-getscreen().bgcolor('linen')
+getscreen().bgcolor('azure')
 up()
-dot(300, 'yellow')
+dot(300, 'palegreen')
 
 left(45)
 forward(60)
@@ -184,7 +205,7 @@ dot(80)
 
 **Exercice** : Dessinez encore un autre smiley.
 
-## Dessiner une croix
+## Croix
 
 La fonction `boite()` dessine les 3 côtés d'un carré.
 Répété 4 fois, ceci donne la forme d'une croix.
@@ -201,21 +222,24 @@ def boite():
     left(90)
     forward(60)
     right(90)
+
+def croix():
+    boite()
+    boite()
+    boite()
+    boite()
     
 fillcolor('white')
 begin_fill()
-boite()
-boite()
-boite()
-boite()
+croix()
 end_fill()
 ```
 
 **Exercice** : Rendez ce programme plus court en utilisant une boucle.
 
-## Dessiner une maison
+## Maison
 
-Nous reprenons l'exemple du chapitre précédent et ajoutons de la couleur pour dessiner des maisons jaunes avec un toit rouge.
+Nous reprenons l'exemple du chapitre précédent de la fonction `maison()`. Cette fois noy y intégrons `begin_fill()` et `end_fill()` pour pouvoir les colorier..
 
 ```{codeplay}
 from turtle import *
@@ -223,35 +247,26 @@ from turtle import *
 getscreen().bgcolor('lightgreen')
 up()
 
-def carre():
-    down()
-    for i in range(4):
-        forward(100)
-        right(90)
-    up()
-    
-def triangle():
-    down()
-    for i in range(3):
-        forward(100)
-        left(120)
-    up()
-    
-def maison():    
-    fillcolor('yellow')
+def maison():
     begin_fill()
-    carre()
-    end_fill()
-    
-    fillcolor('red')
-    begin_fill()
-    triangle()
+    forward(100)
+    left(90)
+    forward(60)
+    left(45)
+    forward(71)
+    left(90)
+    forward(71)
+    left(45)
+    forward(60)
+    left(90)
     end_fill()
     
 back(200)
-for i in range(3):
-    maison()
-    forward(150)
+fillcolor('pink)
+maison()
+forward(150)
+fillcolor('chartreuse')
+maison()
 ```
 
 ## Erreurs

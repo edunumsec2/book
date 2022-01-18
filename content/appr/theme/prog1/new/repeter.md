@@ -38,7 +38,7 @@ for i in range(4):
 
 **Exercice** : Transformez le rectangle en triangle.
 
-## Des polygones
+## Un polygone régulier
 
 Avec une boucle `for` nous pouvons simplifier le dessins des formes symétriques.
 
@@ -196,7 +196,6 @@ for i in range(6):
 ```
 
 **Exercice** : Tournez un angle plus petit que 60°
-
 
 ## Exporter vers un fichier
 

@@ -3,7 +3,7 @@
 Dans ce chapitre nous allons voir de plus près le concept de la fonction, concept que nous avons vu dès le premier chapitre comme façon de donner un nom à une séquence d'instructions.
 
 En fait, la fonction est peut-être le concept le plus important dans la programmation.
-C'est un moyen puissant pour inventer des nouvelles commandes dans un langage de programmation. Nous allons voir que : 
+C'est un moyen puissant pour inventer des nouvelles commandes dans un langage de programmation. Nous allons voir que :
 
 - le mot-clé `def` permet de définir une fonction,
 - un paramètre `f(param0, ...)` est une variable dans la définition de fonction,
@@ -68,6 +68,7 @@ for x in range(30, 180, 30):
 ```
 
 **Exercice** : Ecartez les carrés de 20 pixels.
+
 ## Dessiner une maison
 
 Nous revenons à notre fonction pour dessiner une maison.
@@ -165,7 +166,7 @@ maison(120, 40, 40, 'pink')
 
 ## Maison avec porte
 
-Maintenant nous modifions la fonction pour inclure non seulement la position, la taille, la couleur de la maison comme paramètres, mais nous y ajoutons aussi une porte. 
+Maintenant nous modifions la fonction pour inclure non seulement la position, la taille, la couleur de la maison comme paramètres, mais nous y ajoutons aussi une porte.
 
 ```{codeplay}
 from turtle import *

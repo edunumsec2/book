@@ -114,7 +114,6 @@ for nom in noms:
     print(nom)
 ```
 
-
 ```{question}
 Quel est le résultat de l'expression `'pikachu'[-3:]` ?
 
@@ -163,7 +162,7 @@ a.append(99)
 print(a)
 ```
 
-La méthode `extend(iterable)` ajoute plusieurs éléments. Un **itérable** est une séquence telle qu'une liste ou une chaîne de caractères (texte),  c'est à dire un objet qui permet d'itérer sur ses éléments.
+La méthode `extend(sequence)` ajoute plusieurs éléments d'une **séquence** telle qu'une liste ou une chaîne de caractères (texte).
 
 ```{codeplay}
 a = [1, 2, 3]

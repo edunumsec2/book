@@ -77,7 +77,7 @@ for i in range(n):
 
 ## Sous la belle étoile
 
-Les étoiles dans le ciel apparaissent à des positions plus au moins aléatoires. 
+Les étoiles dans le ciel apparaissent à des positions plus au moins aléatoires.
 Nous calculons `x` et `y` comme des entiers aléatoires, choisi dans l'intervalle de la largeur et de la hauteur de la fenêtre.
 
 Nous choisissons la taille `d` avec une distribution normale (Gaussiènne) avec une moyenne de 3 et un sigma de 2.
@@ -180,7 +180,6 @@ for y in range(200-n, -200, -n):
         setpos(x, y)
         dot(choice(size), choice(colors))
 ```
-
 
 ## Distribution normale
 
@@ -332,7 +331,6 @@ for i in range(3):
 ## Mélanger des cartes
 
 La fonction `shuffle()` permet de mélanger ou permuter aléatoirement une liste. Nous l'utilisons pour mélanger nos cartes de jeu.
-
 
 ```{codeplay}
 from turtle import *

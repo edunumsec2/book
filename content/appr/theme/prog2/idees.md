@@ -170,7 +170,6 @@ etoile(9, 4)
 update()
 ```
 
-
 La fonction `tracer(n)` contrôle la fréquence des mises à jour du dessin. Seulement les n-ièmes mises à jours régulières de l'écran seront vraiment effectuées. Cette fonction peut être utilisé pour accélérer le dessin de graphiques complexes. Lorsqu'appelé sans arguments, elle renvoie la valeur actuelle de n.
 
 ```{codeplay}
@@ -194,7 +193,7 @@ forward(200)
 
 ## La fonction `speed()`
 
-La vitesse de la tortue peut varier entre 1 et 1000. 
+La vitesse de la tortue peut varier entre 1 et 1000.
 Une vitesse de 0 représente la vitesse maximum. La vitesse par défaut est 3.
 
 ```{codeplay}
@@ -210,8 +209,6 @@ for s in range(2, 10):
         forward(100)
         left(90)
 ```
-
-
 
 ## Deux tortues
 
@@ -450,7 +447,7 @@ for i in range(3):
     left(120)
 ```
 
-## ontimer
+## Fonction `ontimer`
 
 ```{codeplay}
 from turtle import *
