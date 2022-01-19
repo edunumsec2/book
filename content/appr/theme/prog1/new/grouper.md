@@ -393,7 +393,7 @@ Nous pouvons alors écrire la formation de cette liste en une seule ligne.
 print([i**2 for i in range(10) if i % 2 == 1])
 ```
 
-## <span commented>La pile</span><!-- REVIEW/JPP: je pense qu'on a besoin de faire maintenant pas mal d'exercices sur les listes avant de pouvoir comprendre le reste. Je ne trouve pas super clair dans la présentation actuelle le parallèle entre list et stack. On vient d'apprendre à manier des listes en Python avec leurs primitives, bien; mais maintenant, on a l'impression qu'on va apprendre d'autres structures de données (pile et tampon) et on ne sait pas si c'est différent des listes ou pas. Il faudrait que ce soit vraiment clair, et que les exemples sont plus concrets, parce que ces valeurs numériques ne veulent pas dire grand-chose ou ne représente pas un problème ou une situation de la vie réelle. Pour moi, on n'a simplement pas besoin de parler de stack ou queue ici, mais on peut mettre en pratique des listes dans des exercices où elles ont ce genre de fonctionnement -->
+## La pile
 
 Une **pile** est une structure de données qui permet de gérer l'arrivée et le départ des éléments. Dans une pile d'assiettes ou de magazines, le dernier élément ajouté est le premier à être enlevé.
 

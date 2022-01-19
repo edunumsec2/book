@@ -138,7 +138,8 @@ print("""
 """)
 
 ```
-**Exercice** : Le site https://www.asciiart.eu contient beaucoup d'exemples d'art ASCII. Trouvez-en un et copiez-le dans un programme Python.
+
+**Exercice** : Le site [asciiart.eu](https://www.asciiart.eu) contient beaucoup d'exemples d'art ASCII. Trouvez-en un et copiez-le dans un programme Python.
 
 ## Echapper un caractère
 

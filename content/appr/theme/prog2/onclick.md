@@ -1,4 +1,4 @@
-# Cliquer - `onclick`
+# Souris - `onclick`
 
 Dans ce chapitre nous explorons comment un programme peux détecter un clic de souris et y réagir.
 Cliquer (ou toucher) est la méthode principale pour interagir avec un smartphone : on touche avec le droit une certaine position de l'écran et le programme y réagit. Nous allons voir que
@@ -31,6 +31,30 @@ getscreen().listen()
 ```
 
 **Exercice** : Cliquez dans les 4 coins et au centre.
+
+## Tortue ou écran
+
+Une fonction `onclick()` existe pour l'écran et pour chaque tortue.
+
+```{codeplay}
+from turtle import *
+shape('turtle')
+
+def f(x, y):
+    print('screen click at', x, y)
+    
+def g(x, y):
+    print('turtle click at', x, y)
+    
+t = getturtle()
+s = getscreen()
+
+s.onclick(f)
+t.onclick(g)
+s.listen()
+```
+
+**Exercice** : Cliquez dans dans la tortue et à côté.
 
 ## Dessiner une forme
 
@@ -210,9 +234,60 @@ getscreen().listen()
 ```
 
 ```{codeplay}
- 
+ from turtle import *
+shape('turtle')
+
+def f(x, y):
+    print('screen click at', x, y)
+    
+def g(x, y):
+    print('turtle click at', x, y)
+    
+def h(x, y):
+    print('drag', x, y)
+
+def k(x, y, b):
+    print('release', x, y)
+
+t = getturtle()
+s = getscreen()
+
+s.onclick(f)
+t.onclick(g)
+#t.ondrag(h)
+t.onrelease(k, 1)
+s.listen()
 ```
 
+## ondrag-onrelease
+
+Le programme suivant permet de déplacer la tortue avec la souris
+
+- `onclick` la tortue devient rouge
+- `ondrag` la tortue devient orange et suit la souris
+- `onrelease` la tortue devient vert et s'arrête
+
+**Note** La fonction on `onrelease` ne fonction pas ici, mais elle fonctionne dans l'éditeur externe Thonny.
+
 ```{codeplay}
- 
+from turtle import *
+shape('turtle')
+speed(0)
+
+def f(x, y):
+    fillcolor('red')
+    print('click at', x, y)
+    
+def g(x, y):
+    fillcolor('orange')
+    print('drag')
+    goto(x, y)
+      
+def h(x, y):
+    fillcolor('green')
+    print('release at', x, y)
+
+onclick(f)
+ondrag(g)
+onrelease(h)
 ```

@@ -185,12 +185,14 @@ print('score =', score, '/ 8')
 
 Petit rappel:
 
-    a = 1010
-    b = 1011
-    c = 1100
-    d = 1101
-    e = 1110
-    f = 1111
+```python
+a = 1010
+b = 1011
+c = 1100
+d = 1101
+e = 1110
+f = 1111
+```
 
 ```{codeplay}
 from random import shuffle
@@ -313,10 +315,12 @@ print(f'score = {score}/{n}')
 
 Rappel
 
-    0 & 0 = 0
-    0 & 1 = 0
-    1 & 0 = 0
-    1 & 1 = 1
+```python
+0 & 0 = 0
+0 & 1 = 0
+1 & 0 = 0
+1 & 1 = 1
+```
 
 ```{codeplay}
 from random import randint
@@ -346,10 +350,12 @@ print(f'score = {score}/{n}')
 
 Rappel
 
-    0 | 0 = 0
-    0 | 1 = 1
-    1 | 0 = 1
-    1 | 1 = 1
+```python
+0 | 0 = 0
+0 | 1 = 1
+1 | 0 = 1
+1 | 1 = 1
+```
 
 ```{codeplay}
 from random import randint
@@ -379,10 +385,12 @@ print(f'score = {score}/{n}')
 
 Rappel
 
-    0 ^ 0 = 0
-    0 ^ 1 = 1
-    1 ^ 0 = 1
-    1 ^ 1 = 0
+```python
+0 ^ 0 = 0
+0 ^ 1 = 1
+1 ^ 0 = 1
+1 ^ 1 = 0
+```
 
 ```{codeplay}
 from random import randint

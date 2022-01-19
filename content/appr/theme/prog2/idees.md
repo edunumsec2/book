@@ -1,8 +1,10 @@
 # Idées
 
-Les programmes de ce chapitres sont des idées sous construction, à développer et à placer à leur endroit approprié.
+Les programmes de ce chapitre sont des idées sous construction, à développer et à placer à leur endroit approprié.
 
 ## Arbre
+
+Cet exemple montre la construction hiérarchique d'un arbre, a partir d'une simple branche.
 
 ```{codeplay}
 from turtle import *
@@ -20,7 +22,7 @@ def branche2():
     forward(40)
     left(50)
     branche()
-    right(50+50)
+    right(100)
     branche()
     left(50)
     back(40)
@@ -28,11 +30,11 @@ def branche2():
 def branche4():
     width(4)
     forward(50)
-    left(40)
+    left(50)
     branche2()
-    right(40+40)
+    right(100)
     branche2()
-    left(40)
+    left(50)
     back(50)
     
 def branche8():
@@ -40,7 +42,7 @@ def branche8():
     forward(50)
     left(50)
     branche4()
-    right(50+50)
+    right(100)
     branche4()
     left(50)
     back(50)
@@ -60,9 +62,38 @@ from turtle import *
 print(dir(Turtle))
 ```
 
+Les 6 comparaisons
+
+```{codeplay}
+from turtle import *
+
+print('__eq__ =', Turtle.__eq__)
+print('__ge__ =', Turtle.__ge__)
+print('__gt__ =', Turtle.__gt__)
+print('__le__ =', Turtle.__le__)
+print('__lt__ =', Turtle.__lt__)
+print('__ne__ =', Turtle.__ne__)
+```
+
+Les 9 autres méthodes privées.
+
+```{codeplay}
+from turtle import *
+
+print('__format__ =', Turtle.__format__)
+print('__getattribute__ =', Turtle.__getattribute__)
+print('__hash__ =', Turtle.__hash__)
+print('__init__ =', Turtle.__init__)
+print('__module__ =', Turtle.__module__)
+print('__new__ =', Turtle.__new__)
+print('__repr__ =', Turtle.__repr__)
+print('__setattr__ =', Turtle.__setattr__)
+print('__str__ =', Turtle.__str__)
+```
+
 ## Les méthodes `Screen`
 
-Affiche tous les méthodes et attributs de `Screen`.
+Affiche tous les méthodes et attributs de `Screen`. Nous constatons les mêmes 15 méthodes spéciales que pour `Turtle`.
 
 ```{codeplay}
 from turtle import *
@@ -235,112 +266,21 @@ for t in Screen().turtles():
 alice.forward(200)
 ```
 
-## Key events
-
-```{codeplay}
-from turtle import *
-speed(0)
-
-def left():
-    setheading(0)
-    forward(50)
-    
-def up():
-    setheading(90)
-    forward(50)
-
-def right():
-    setheading(180)
-    forward(50)
-
-def down():
-    setheading(270)
-    forward(50)
-
-getscreen().onkey(up, 'w')
-getscreen().onkey(right, 'a')
-getscreen().onkey(down, 's')
-getscreen().onkey(left, 'd')
-getscreen().listen()
-
-print("Cliquez dans la fenêtre pour l'activer.")
-print("Utilisez les touches WASD pour bouger la tortue.")
-```
-
-## Key events `lambda`
-
-```{codeplay}
-from turtle import *
-speed(0)
-
-getscreen().onkey(home, 'h')
-getscreen().onkey(clear, 'c')
-getscreen().onkey(reset, 'r')
-
-getscreen().onkey(up, 'u')
-getscreen().onkey(down, 'd')
-
-getscreen().onkey(lambda : forward(50), 'space')
-getscreen().onkey(lambda : seth(0), 'right')
-getscreen().onkey(lambda : seth(90), 'up')
-getscreen().onkey(lambda : seth(180), 'left')
-getscreen().onkey(lambda : seth(-90), 'down')
-getscreen().listen()
-
-print("Cliquez dans la fenêtre pour l'activer.")
-print("Utilisez les touches de direction pour orienter la tortue.")
-print("Utilisez espace pour avancer.")
-print("Utilisez U/D pour up/down.")
-print("Utilisez H/C/R pour home/clear/reset.")
-```
-
 ## Animer un point
 
-Animation en utilisant la fonction `undo()` pour effacer la dernière position.
+Animation en utilisant la fonction `tracer(0)` et `update()`.
 
 ```{codeplay}
 from turtle import *
-from time import *
-
-getscreen().bgcolor('azure')
-setundobuffer(1)
 hideturtle()
-speed(0)
-up()
-color('red')
-
-d = 40
-x0 = 300 - d//2
-
-for x in range(-x0, x0+1, 20):
-    undo()
-    setx(x)
-    dot(d)
-    sleep(0.2)
-```
-
-Animation en utilisant la couleur `white` pour effacer la dernière position.
-
-```{codeplay}
-from turtle import *
-from time import *
-
-hideturtle()
-speed(0)
+tracer(0)
 up()
 
-d = 40
-x0 = 300 - d//2
-
-for x in range(-x0, x0+1, 20):
-    color('white')
-    dot(d)
-    
+for x in range(-300, 300, 10):
+    clear()
     setx(x)
-    color('red')
-    dot(d)
-    
-    sleep(0.2)
+    dot(40, 'red')
+    update()
 ```
 
 ## Narration
@@ -486,7 +426,7 @@ a.sort()
 print(a)
 ```
 
-L'expression `x in liste` retourne une valeur booléene qui indique si x fait partie de la liste.
+L'expression `x in liste` retourne une valeur booléenne qui indique si x fait partie de la liste.
 
 ```{codeplay}
 a = [121, 939, 19, 143, 471, 273, 480, 852, 672, 321, 885, 628, 648, 374, 376, 555, 156, 239, 741, 348, 139, 665, 600, 801, 500, 320, 216, 396, 81, 965, 568, 45, 494, 723, 392, 704, 413, 879, 529, 468, 683, 479, 720, 959, 57, 207, 302, 931, 878, 681, 145, 462, 180, 318, 417, 337, 159, 800, 237, 898, 964, 907, 295, 669, 570, 474, 30, 111, 159, 777, 615, 516, 429, 973, 696, 209, 872, 147, 180, 142, 905, 415, 573, 512, 816, 814, 329, 598, 216, 131, 830, 134, 478, 313, 832, 470, 244, 480, 662, 855]
@@ -571,7 +511,7 @@ while b - a > 0:
 print(liste[m] == x)
 ```
 
-## Ordre du tri par séléction
+## Ordre du tri par sélection
 
 Quel est la somme de 1 + 2 + 3 + ... n ?  
 Graphiquement ceci nous donne la surface d'un triangle.
@@ -596,7 +536,7 @@ print(n * (n+1) // 2)
 ## Tortues multiples
 
 ```{codeplay}
- from turtle import *
+from turtle import *
 
 a = Turtle()
 a.color('red')
@@ -616,22 +556,133 @@ c.left(45)
 c.forward(100)
 ```
 
+## Chronométrer
+
 ```{codeplay}
- 
+from turtle import *
+from time import *
+import time
+
+print(dir(time))
+print('clock =', clock())
+print('ctime =', ctime())
+print('time =', time.time())
 ```
 
 ```{codeplay}
- 
+from turtle import *
+from time import *
+from random import *
+
+# speed(3) : 80 seconds
+# speed(0) : 20 secondes
+# tracer(0) : 0.04 secondes
+
+up()
+speed(0)
+tracer(0)
+
+t0 = time()
+d = 20
+x0 = 300 - d//2
+y0 = 200 - d//2
+
+for y in range(y0, -y0-d, -d):
+    for x in range(-x0, x0+d, d):
+        goto(x, y)
+        r = random()
+        dot(d, (r, r, r))
+update()
+t1 = time()
+print(t1-t0)
+```
+
+## Snow Crash
+
+```{codeplay}
+from turtle import *
+from random import *
+up()
+tracer(0)
+
+d = 20
+x0 = 300 - d//2
+y0 = 200 - d//2
+
+while True:
+    for y in range(y0, -y0-d, -d):
+        for x in range(-x0, x0+d, d):
+            goto(x, y)
+            r = random()
+            dot(d, (r, r, r))
+    update()
 ```
 
 ```{codeplay}
- 
+from turtle import *
+from random import *
+up()
+tracer(0)
+
+d = 20
+x0 = 300 - d//2
+y0 = 200 - d//2
+
+while True:
+    for y in range(y0, -y0-d, -d):
+        for x in range(-x0, x0+d, d):
+            goto(x, y)
+            r = random()
+            g = random()
+            b = random()
+            dot(d, (r, g, b))
+    update()
 ```
 
-```{codeplay}
- 
-```
+## Une tortue par pixel
 
 ```{codeplay}
- 
+from turtle import *
+from time import *
+from random import *
+
+tracer(0)
+t0 = time()
+d = 20
+x0 = 300 - d//2
+y0 = 200 - d//2
+tortues = []
+
+for y in range(y0, -y0-d, -d):
+    for x in range(-x0, x0+d, d):
+        t = Turtle()
+        t.up()
+        t.hideturtle()
+        t.goto(x, y)
+        r = random()
+        t.dot(d, (r, r, r))
+        tortues.append(t)
+
+update()
+t1 = time()
+print('time =', t1-t0)
+print('obejcts =', len(tortues))
+```
+
+## Heading
+
+```{codeplay}
+from turtle import *
+
+for i in range(12):
+    down()
+    forward(100)
+    stamp()
+    up()
+    forward(10)
+    write(heading(), align='center')
+    backward(110)
+    left(30)
+
+hideturtle()
 ```

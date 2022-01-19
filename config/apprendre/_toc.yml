@@ -89,6 +89,7 @@ parts:
       - file: content/appr/theme/algo2/cours/conclusion/eleve
   - file: content/appr/theme/prog2/intro
     sections:
+      - file: content/appr/theme/prog2/turtle
       - file: content/appr/theme/prog2/dict
       - file: content/appr/theme/prog2/compter
       - file: content/appr/theme/prog2/math
@@ -99,7 +100,8 @@ parts:
       - file: content/appr/theme/prog2/bitwise
       - file: content/appr/theme/prog2/recursif
       - file: content/appr/theme/prog2/poo
-      - file: content/appr/theme/prog2/cliquer
+      - file: content/appr/theme/prog2/onkey
+      - file: content/appr/theme/prog2/onclick
       - file: content/appr/theme/prog2/idees
       - file: content/appr/theme/prog2/quiz
       

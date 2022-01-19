@@ -123,7 +123,6 @@ La forme ne doit pas nécessairement être fermée pour être remplie d'une coul
 Dans l'exemple suivant nous dessinons une forme ouverte avec seulement deux lignes.
 Le résultat est un triangle avec deux bordures et un troisième segment sans bordure.
 
-
 Une équerre est un instrument formé de deux pièces ajustées à angle droit. l'équerre est utilisée soit pour vérifier des angles dièdres droits, soit pour tracer des angles plans droits.
 
 ```{codeplay}
@@ -237,7 +236,7 @@ end_fill()
 
 ## Maison
 
-Nous reprenons l'exemple du chapitre précédent de la fonction `maison()`. Cette fois noy y intégrons `begin_fill()` et `end_fill()` pour pouvoir les colorier..
+Nous reprenons l'exemple du chapitre précédent de la fonction `maison()`. Cette fois nous y intégrons `begin_fill()` et `end_fill()` pour pouvoir les colorier..
 
 ```{codeplay}
 from turtle import *
@@ -266,66 +265,67 @@ maison()
 ```
 
 **Exercice** : Ajoutez encore une maison dans une autre couleur.
-## Erreurs
 
-Il est important de bien comprendre les messages d'erreurs.
-Dans cette section vous allez découvrir les différentes catégories d'erreur et comment les corriger.
+## Export vers un fichier
 
-### ImportError
+Pour sauvegarder votre dessin vers un fichier copiez le code du dessin dans l'éditeur Thonny. Ensuite copiez ces lignes de code ci-dessous à la fin de de votre fichier.
 
-Cette erreur est produite si vous essayez d'importer un module qui n'existe pas.
-
-```{codeplay}
-from turtl import *
-
-for i in range(3):
-    forward(100)
-    left(120)
+```{code-block} python
+from tkinter import * 
+cn = getscreen().getcanvas()
+cn.postscript(file='file.eps')
 ```
 
-**Exercice** : Corrigez l'erreur d'importation.
+Votre image va être exporté vers un fichier qui s'appelle `file.eps` et qui se trouve dans le même dossier ou se trouve votre fichier Python.
+Vous pouvez changer le nom du fichier, mais vous devez garder l'extension `.eps`.
 
-### SyntaxError
+Sur un Mac, vous pouvez ouvrir un fichier `.eps` avec l'application **Aperçu** et ensuite exporter l'image vers le format PDF, JPG ou PNG.
 
-Cette erreur est produite quand vous écrivez mal un mot-clé, ou si vous oubliez une ponctuation. Dans ce cas le mot-clé mal écrit n'est pas reconnu et il n'est pas colorié.
+**Exercice**  
+Copiez le code suivant dans Thonny, sauvegardez-le avec le nom `smiley.py`, exécutez le code et retrouvez le fichier `smiley.eps` dans le même dossier où vous avez enregistré votre programme.
 
-```{codeplay}
-fro turtle import *
-
-fore i in range(3)
-    forward(100)
-    left(120)
-```
-
-**Exercice** : Corrigez les 3 erreurs de syntaxe.
-
-### NameError
-
-Cette erreur est produite quand vous écrivez mal le nom d'une variable ou fonction.
-
-```{codeplay}
+```python
 from turtle import *
+getscreen().bgcolor('azure')
+dot(1000, 'azure')
 
-for i in range(n):
-    forwarde(100)
-    lefft(120)
+dot(300, 'palegreen')
+up()
+
+left(45)
+forward(60)
+dot(40)
+
+right(45)
+back(90)
+dot(40)
+
+right(60)
+forward(100)
+dot(100)
+
+from tkinter import * 
+cn = getscreen().getcanvas()
+cn.postscript(file='smiley.eps')
 ```
 
-**Exercice** : Corrigez les 3 erreurs de nom.
+## Export en PNG/JPG
 
-### TypeError
+Pour directement sauvegarder votre dessin en format PNG, ajoutez ces lignes de code à la fin de votre dessin.
 
-Cette erreur est produite si vous ne mettez pas le nombre d'arguments correcte pour une fonction.
+```{code-block} python
+from tkinter import *
+from PIL import Image
+import io
 
-```{codeplay}
-from turtle import *
-
-for i in 3:
-    forward()
-    left(100, 120)
+cn = getscreen().getcanvas()
+ps = cn.postscript(colormode='color')
+file = io.BytesIO(ps.encode('utf-8'))
+img = Image.open(file)
+img.save('file.png')
 ```
 
-**Exercice** : Corrigez les 3 erreurs de type.
+Pour sauvegarder en format JPG utilisez tout simplement l'extension `.jpg`.
 
 ## Exercices
 

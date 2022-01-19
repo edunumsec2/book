@@ -197,35 +197,63 @@ for i in range(6):
 
 **Exercice** : Tournez un angle plus petit que 60°
 
-## Export vers un fichier
+## Erreurs
 
-Pour sauvegarder votre dessin vers un fichier copiez le code du dessin dans l'éditeur Thonny. Ensuite copiez ces lignes de code ci-dessous à la fin de de votre fichier.
+Il est important de bien comprendre les messages d'erreurs.
+Dans cette section vous allez découvrir les différentes catégories d'erreur et comment les corriger.
 
-```{code-block} python
-from tkinter import * 
-cn = getscreen().getcanvas()
-cn.postscript(file='file.eps')
+### ImportError
+
+Cette erreur est produite si vous essayez d'importer un module qui n'existe pas.
+
+```{codeplay}
+from turtl import *
+
+for i in range(3):
+    forward(100)
+    left(120)
 ```
 
-Votre image va être exporté vers un fichier qui s'appelle `file.eps` et qui se trouve dans le même dossier ou se trouve votre fichier Python.
-Vous pouvez changer le nom du fichier, mais vous devez garder l'extension `.eps`.
+**Exercice** : Corrigez l'erreur d'importation.
 
-Sur un Mac, vous pouvez ouvrir un fichier `.eps` avec l'application **Aperçu** et ensuite exporter l'image vers le format PDF, JPG ou PNG.
+### SyntaxError
 
-## Export en PNG/JPG
+Cette erreur est produite quand vous écrivez mal un mot-clé, ou si vous oubliez une ponctuation. Dans ce cas le mot-clé mal écrit n'est pas reconnu et il n'est pas colorié.
 
-Pour directement sauvegarder votre dessin en format PNG, ajoutez ces lignes de code à la fin de votre dessin.
+```{codeplay}
+fro turtle import *
 
-```{code-block} python
-from tkinter import *
-from PIL import Image
-import io
-
-cn = getscreen().getcanvas()
-ps = cn.postscript(colormode='color')
-file = io.BytesIO(ps.encode('utf-8'))
-img = Image.open(file)
-img.save('file.png')
+fore i in range(3)
+    forward(100)
+    left(120)
 ```
 
-Pour sauvegarder en format JPG utilisez tout simplement l'extension `.jpg`.
+**Exercice** : Corrigez les 3 erreurs de syntaxe.
+
+### NameError
+
+Cette erreur est produite quand vous écrivez mal le nom d'une variable ou fonction.
+
+```{codeplay}
+from turtle import *
+
+for i in range(n):
+    forwarde(100)
+    lefft(120)
+```
+
+**Exercice** : Corrigez les 3 erreurs de nom.
+
+### TypeError
+
+Cette erreur est produite si vous ne mettez pas le nombre d'arguments correcte pour une fonction.
+
+```{codeplay}
+from turtle import *
+
+for i in 3:
+    forward()
+    left(100, 120)
+```
+
+**Exercice** : Corrigez les 3 erreurs de type.

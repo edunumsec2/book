@@ -1,6 +1,6 @@
 # Micro:bit
 
-Le **micro:bit**  est un ordinateur monocarte (single-board computer) est un ordinateur pour un usage éducatif.
+Le **micro:bit**  est un ordinateur mono-carte (single-board computer) est un ordinateur pour un usage éducatif.
 
 La platine 4 x 5 cm contient:
 
@@ -38,99 +38,119 @@ Dedans vous trouvez deux documents:
 
 Le document DETAILS.TXT contient des informations sur la version:
 
-    # DAPLink Firmware - see https://mbed.com/daplink
-    Unique ID: 9900000049734e45004580160000005b0000000097969901
-    HIC ID: 97969901
-    Auto Reset: 1
-    Automation allowed: 0
-    Daplink Mode: Interface
-    Interface Version: 0241
-    Git SHA: fa4132987102c51c110751d8bdb8a74aeb7b071b
-    Local Mods: 1
-    USB Interfaces: MSD, CDC, HID
-    Interface CRC: 0xe369fb16
+```text
+# DAPLink Firmware - see https://mbed.com/daplink
+Unique ID: 9900000049734e45004580160000005b0000000097969901
+HIC ID: 97969901
+Auto Reset: 1
+Automation allowed: 0
+Daplink Mode: Interface
+Interface Version: 0241
+Git SHA: fa4132987102c51c110751d8bdb8a74aeb7b071b
+Local Mods: 1
+USB Interfaces: MSD, CDC, HID
+Interface CRC: 0xe369fb16
+```
 
 ## La console du micro:bit
 
-Quand le micro:bit est connecté à Thonny, il est possible d'exécuter des commandes Python par l'interpréte MicroPython qui est installé dans le micro:bit.
+Quand le micro:bit est connecté à Thonny, il est possible d'exécuter des commandes Python par l'interprète MicroPython qui est installé dans le micro:bit.
 
 La console affiche la version qui est actuellement installé.
 
-    MicroPython v1.9.2-34-gd64154c73 on 2017-09-01; micro:bit v1.0.1 with nRF51822
-    Type "help()" for more information.
+```bash
+MicroPython v1.9.2-34-gd64154c73 on 2017-09-01; micro:bit v1.0.1 with nRF51822
+Type "help()" for more information.
+```
 
 Comme indiquez, entrons la commande help() pour obtenir:
 
-    Welcome to MicroPython on the micro:bit!
+```bash
+Welcome to MicroPython on the micro:bit!
 
-    Try these commands:
-    display.scroll('Hello')
-    running_time()
-    sleep(1000)
-    button_a.is_pressed()
-    What do these commands do? Can you improve them? HINT: use the up and down
-    arrow keys to get your command history. Press the TAB key to auto-complete
-    unfinished words (so 'di' becomes 'display' after you press TAB). These
-    tricks save a lot of typing and look cool!
+Try these commands:
+display.scroll('Hello')
+running_time()
+sleep(1000)
+button_a.is_pressed()
+What do these commands do? Can you improve them? HINT: use the up and down
+arrow keys to get your command history. Press the TAB key to auto-complete
+unfinished words (so 'di' becomes 'display' after you press TAB). These
+tricks save a lot of typing and look cool!
 
-    Explore:
-    Type 'help(something)' to find out about it. Type 'dir(something)' to see what
-    it can do. Type 'dir()' to see what stuff is available. For goodness sake,
-    don't type 'import this'.
+Explore:
+Type 'help(something)' to find out about it. Type 'dir(something)' to see what
+it can do. Type 'dir()' to see what stuff is available. For goodness sake,
+don't type 'import this'.
 
-    Control commands:
-    CTRL-C        -- stop a running program
-    CTRL-D        -- on a blank line, do a soft reset of the micro:bit
-    CTRL-E        -- enter paste mode, turning off auto-indent
+Control commands:
+CTRL-C        -- stop a running program
+CTRL-D        -- on a blank line, do a soft reset of the micro:bit
+CTRL-E        -- enter paste mode, turning off auto-indent
 
-    For a list of available modules, type help('modules')
+For a list of available modules, type help('modules')
 
-    For more information about Python, visit: http://python.org/
-    To find out about MicroPython, visit: http://micropython.org/
-    Python/micro:bit documentation is here: https://microbit-micropython.readthedocs.io/
+For more information about Python, visit: http://python.org/
+To find out about MicroPython, visit: http://micropython.org/
+Python/micro:bit documentation is here: https://microbit-micropython.readthedocs.io/
+```
 
 Les expressions que vous tapez maintenant dans la console sont maintenant exécuté dans le processeur du micro:bit et affiché dans la console de Thonny.
 
-    >>> 1 + 2
-    3
+```python
+>>> 1 + 2
+3
+```
 
 Ou même un calcul plus conséquent
 
-    >>> 12 ** 34
-    4922235242952026704037113243122008064
+```python
+>>> 12 ** 34
+4922235242952026704037113243122008064
+```
 
 Dans la console de Thonny écrivez le code suivant
 
-    >>> import microbit
-    >>> microbit.display.scroll('hello')
+```python
+>>> import microbit
+>>> microbit.display.scroll('hello')
+```
 
 ## Le module
 
 La fonction `dir()` permet d'afficher les attributs et méthodes d'une objet.
 Regardez les attributs qui font partie de
 
-    >>> import microbit
-    >>> dir(microbit)
-    ['__name__', 'Image', 'display', 'button_a', 'button_b', 'accelerometer', 'compass', 'i2c', 'uart', 'spi', 'reset', 'sleep', 'running_time', 'panic', 'temperature', 'pin0', 'pin1', 'pin2', 'pin3', 'pin4', 'pin5', 'pin6', 'pin7', 'pin8', 'pin9', 'pin10', 'pin11', 'pin12', 'pin13', 'pin14', 'pin15', 'pin16', 'pin19', 'pin20']
+```python
+>>> import microbit
+>>> dir(microbit)
+['__name__', 'Image', 'display', 'button_a', 'button_b', 'accelerometer', 'compass', 'i2c', 'uart', 'spi', 'reset', 'sleep', 'running_time', 'panic', 'temperature', 'pin0', 'pin1', 'pin2', 'pin3', 'pin4', 'pin5', 'pin6', 'pin7', 'pin8', 'pin9', 'pin10', 'pin11', 'pin12', 'pin13', 'pin14', 'pin15', 'pin16', 'pin19', 'pin20']
+```
 
 Nous pouvons afficher les méthodes de `microbit.display`
 
-    >>> dir(microbit.display)
-    ['get_pixel', 'set_pixel', 'show', 'scroll', 'clear', 'on', 'off', 'is_on', 'read_light_level']
+```python
+>>> dir(microbit.display)
+['get_pixel', 'set_pixel', 'show', 'scroll', 'clear', 'on', 'off', 'is_on', 'read_light_level']
+```
 
 ## Premier programme
 
 Dans l'éditeur Thonny, vous pouvez écrire
 
-    import microbit
-    microbit.display.scroll('hello')
+```python
+import microbit
+microbit.display.scroll('hello')
+```
 
 Avec cette façon d'importer le module, vous devez précéder toutes les éléments importé depuis le module `microbit` avec la notation `microbit.`.
 
 Une autre façon vous permet d'importer toutes les éléments et de pouvoir les appeler tel quel.
 
-    from microbit import *
-    display.scroll('Hello, World!')
+```python
+from microbit import *
+display.scroll('Hello, World!')
+```
 
 ```{image} scroll-hello1.gif
 :width: 300px
@@ -143,12 +163,16 @@ Pour faciliter l'affichage, toute une série d'images simple sont prédéfinis.
 
 Vous les trouvez avec
 
-    dir(Image)
+```python
+dir(Image)
+````
 
 Le programme suivant affiche un smiley
 
-    from microbit import *
-    display.show(Image.HAPPY)
+```python
+from microbit import *
+display.show(Image.HAPPY)
+```
 
 ```{image} happy.png
 :width: 300px
@@ -156,16 +180,20 @@ Le programme suivant affiche un smiley
 
 Vous pouvez également créer vos propres image avec le constructeur de classe `Image`, en indiquant la valeur des 25 pixels. L'intensité de la lumière est donnée par une valeur de 0 (noir) à 9 (maximum).
 
-    from microbit import *
+```python
+from microbit import *
 
-    maison = Image('00500:'
-                '05050:'
-                '50005:'
-                '50705:'
-                '55755')
+maison = Image('00500:'
+            '05050:'
+            '50005:'
+            '50705:'
+            '55755')
 
-    display.show(maison)
+display.show(maison)
+```
 
 Essayez de créer autre image
 
-    pomme = Image('05050:50505:50005:50005:05550')
+```python
+pomme = Image('05050:50505:50005:50005:05550')
+```

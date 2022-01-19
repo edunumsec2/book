@@ -80,7 +80,7 @@ for i in range(n):
 Les étoiles dans le ciel apparaissent à des positions plus au moins aléatoires.
 Nous calculons `x` et `y` comme des entiers aléatoires, choisi dans l'intervalle de la largeur et de la hauteur de la fenêtre.
 
-Nous choisissons la taille `d` avec une distribution normale (Gaussiènne) avec une moyenne de 3 et un sigma de 2.
+Nous choisissons la taille `d` avec une distribution normale (de Gauss) avec une moyenne de 3 et un sigma de 2.
 
 ```{codeplay}
 from turtle import *

@@ -65,7 +65,6 @@ Ce rectangle a les propriétés suivantes :
 - l'axe x s'étend de -300 à +300,
 - l'axe y s'étend de -200 à +200.
 
-
 ```{codeplay}
 from turtle import *
 
@@ -120,12 +119,12 @@ La hauteur de la zone de dessin de la tortue est
 
 ## Redondance
 
-La tortue possède 4 fonctions de déplacement, mais strictement parlé, on pourrait s'en sortir avec seulement deux fonctions, `forward()` et `left()`, car : 
+La tortue possède 4 fonctions de déplacement, mais strictement parlé, on pourrait s'en sortir avec seulement deux fonctions, `forward()` et `left()`, car :
 
 - `back(d)` est équivalent à `forward(-d)`
 - `right(a)` est équivalent à `left(-a)`
- 
-En plus la rotation est cyclique, 
+
+En plus la rotation est cyclique,
 
 ```{codeplay}
 from turtle import *
