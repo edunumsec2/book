@@ -1,10 +1,19 @@
 # Ecrire - `str`
 
-Dans ce chapitre nous allons regarder de plus près ce que c'est le texte. Le texte est une catégorie d'information qui est essentiel dans beaucoup de programmes, tel une application messager ou un programme de traitement de texte.
+Dans ce chapitre nous allons nous intéresser au texte. Le texte est une catégorie d'information qui est essentiel dans beaucoup de programmes, tel qu'une application de messagerie ou un programme de traitement de texte.
 
-Techniquement un texte est appelé une **chaîne de caractères**, ou string en anglais (`str`). Nous allons voir que
+<!-- ![text-based](media/text_game.jpg)
 
-- un texte est délimité par un apostrophe `'` ou un guillemet double `"`,
+```{admonition} Le saviez-vous ?
+:class: hint
+Les tout premiers jeux vidéos sur ordinateur utilisaient presque exclusivement du texte, et quelques dessins en ASCII art, pour plonger le joueur dans un univers d'aventure et de découvertes. Dans l'image ci-dessus, le texte dit "Vous êtes maintenant à la fin d'une route, en face d'un petit bâtiment en briques. Autour de vous il y a une forêt. Un ruisseau sort du bâtiment et s'écoule dans une rigole. - *Entrer dans le bâtiment*. Vous êtes à l'intérieur du bâtiment (...)"
+Ce qui est intéressant ici, c'est que c'est le joueur qui a dû trouver la commande lui permettant de réaliser une action qui l'a fait avancer dans le jeu. "Colossal Cave Adventure", dont l'extrait est issu, est un jeu de 1975, qui a fasciné une génération entière d'informaticiens qui ont cherché à résoudre les énigmes posées par le jeu pour arriver au bout de l'aventure. Aujourd'hui, il existe de nombreux outils en ligne vous permettant d'écrire des histoires interactives où vos lecteurs peuvent prendre des décisions sur la suite de l'aventure. 
+``` 
+-->
+
+Techniquement un texte est appelé une **chaîne de caractères**, ou string en anglais (`str`). Nous allons voir que :
+
+- un texte est délimité par une apostrophe `'` ou un guillemet double `"`,
 - l'opérateur `*` répète un texte,
 - la fonction `ord(c)` retourne le code pour représenter un caractère.
 
@@ -76,7 +85,7 @@ le texte peut s'étaler sur plusieurs lignes.
 
 **Exercice** : Ajoutez quelques caractères et re-exécutez le code.
 
-Pour savoir combien de fois il faut répéter un symbole, pour obtenir la même longueur qu'un texte donné,  nous pouvons utiliser la fonction `len()` et ainsi créer des lignes qui ont la même longueur qu'un texte.
+Pour savoir combien de fois il faut répéter un symbole dans le but d'obtenir la même longueur qu'un texte donné, nous pouvons utiliser la fonction `len()` et ainsi créer des lignes qui ont la même longueur qu'un texte.
 
 ```{codeplay}
 x = input('Entrez une phrase: ')
@@ -91,7 +100,7 @@ print('=' * len(x))
 
 Le code ASCII  (American Standard Code for Information Interchange) était un des premiers standards utilisé pour représenter des symboles dans un ordinateur. Avec initialement 7 et plus tard 8 bits il désigne un ensemble de lettres, chiffres, symboles et ponctuations.
 
-Aujourd'hui le standard Unicode permet d'encoder la totalité des symboles utilisé dans les différents langages du monde.
+Aujourd'hui le standard Unicode permet d'encoder la totalité des symboles utilisés dans les différents langages du monde.
 
 La fonction `ord(c)` retourne le code ASCII (Unicode) qui est associé au caractère `c`.
 
@@ -159,7 +168,7 @@ print('c\'est la \\barre oblique\\ en arière.')
 
 ## Retour à la ligne
 
-Chaque commande `print()` termine avec un retour à la ligne.
+Chaque commande `print()` se termine avec un retour à la ligne.
 Pour insérer un retour à la ligne à l'intérieur d'une chaîne de caractères nous utilisons la séquences d'échappement `\n` (newline).
 
 ```{codeplay}
@@ -222,7 +231,7 @@ for i in  range(n, n + 10):
     print(i, chr(i))
 ```
 
-Exercice : Affichez les 10 kanjis qui suivent 語 (langage).
+**Exercice** : Affichez les 10 kanjis qui suivent 語 (langage).
 
 ## Les commentaires
 
