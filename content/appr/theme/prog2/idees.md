@@ -124,15 +124,13 @@ print('shapes =', shapes)
 
 left(90)
 up()
-back(120)
+back(180)
 
 for s in shapes:
+    forward(50)
     write(s + '   ', align='right', font=(None, 18))
     shape(s)
     stamp()
-    forward(50)
-    
-hideturtle()
 ```
 
 La taille des 3 formes géométriques `square`,  `triangle` et `circle` est de 20 pixels. Ces formes peuvent être utilisés dans des animations ou des jeux vidéos.
@@ -239,31 +237,6 @@ for s in range(2, 10):
     for i in range(4):
         forward(100)
         left(90)
-```
-
-## Deux tortues
-
-```{codeplay}
-from turtle import *
-
-alice = Turtle()
-alice.name = 'alice'
-alice.color('red')
-alice.shape('turtle')
-alice.speed(1)
-
-bob = Turtle()
-bob.name = 'bob'
-bob.up()
-bob.goto(0, 100)
-bob.down()
-bob.color('blue')
-bob.shape('turtle')
-
-for t in Screen().turtles():
-    print(t, t.name, t.pos(), t.color())
-    
-alice.forward(200)
 ```
 
 ## Animer un point

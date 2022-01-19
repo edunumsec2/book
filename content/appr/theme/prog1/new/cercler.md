@@ -35,11 +35,11 @@ $$ p = 2r \pi $$
 
 Donc
 
-$$ r = p / (2 \pi) $$
+$$ r = \frac{p}{2 \pi} $$
 
 La valeur numérique du rayon est
 
-$$ r = 360 / 6.28 = 57 $$
+$$ r = \frac{360}{6.28} = 57 $$
 
 La fonction `circle(57)` dessine un cercle dont le rayon est 57. L'expérience montre que le polygone et le cercle ont effectivement la même taille.
 
@@ -71,6 +71,8 @@ forward(100)
 circle(-30)
 forward(100)
 ```
+
+**Exercice** : Inverser le signe du rayon dans la fonction `circle()`.
 
 ## Fleur
 

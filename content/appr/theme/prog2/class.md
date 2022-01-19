@@ -1,6 +1,10 @@
-# Objet - `class`
+# Mouler - `class`
 
-La programmation orientée objet (POO) considère les éléments d'un programme comme des objets. Ces objets peuvent appartenir à différents catégories ou classes.
+La programmation orientée objet (POO) considère les éléments d'un programme comme des objets qui sont *moulés* d'après une référence qu'on appelle class. Nous allons voir que
+
+- le mot-clé `class Point` permet de définir une nouvelle class d'objets,
+- les classes se distinguent des objets d'une majuscule,
+- l'expression `point = Point(1, 2)` crée une nouvelle instance et initialise avec des valeurs.
 
 ## Définir une classe
 
