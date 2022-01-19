@@ -1,14 +1,14 @@
 # Grouper - `list`
 
-Dans ce chapitre nous découvrons une nouvelle structure de données - les listes. Nous allons voir que
+Dans ce chapitre nous découvrons une nouvelle structure de données - les listes. Nous allons voir que : 
 
-- une liste est un séquence d'objets entre crochets tel que `[2, 3, 5]`,
+- une liste est une séquence d'objets entre crochets tels que `[2, 3, 5]`,
 - la notation d'index `liste[i]` permet d'accéder au i-ème élément de la liste,
 - la notation de tranche `liste[i:j]` permet d'accéder à une sous-liste.
 
 ## Des groupes d'objets
 
-Une liste permet de manipuler des groupes d'objets tel que :
+Une liste permet de manipuler des groupes d'objets tels que :
 
 - noms d'élèves
 - notes d'un cours
@@ -46,7 +46,7 @@ print(len(notes))
 
 ## La fonction `list()`
 
-La fonction `list()` peut transformer une chaîne de caractère ou une plage numérique en liste.
+La fonction `list()` peut transformer une chaîne de caractères ou une plage numérique en liste.
 
 ```{codeplay}
 print(list('Python'))
@@ -68,7 +68,7 @@ print(noms[-2])
 
 Un index négatif désigne un élément d'une liste pris depuis la fin de la liste.
 
-Les chaînes de caractères (`str`) peuvent aussi être indexé.
+Les chaînes de caractères (`str`) peuvent aussi être indexées.
 
 ```{codeplay}
 noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
@@ -79,7 +79,7 @@ print(noms[-1][2])
 
 ## Tranche `[i:j]`
 
-La notation `[i:j]`, après le nom d'une variable qui contient une liste, permet d'extraire une sous-liste de la liste. Cette sous-liste, aussi appelé **tranche**, est une partie de la liste identifiée par les deux index `i` et `j`.
+La notation `[i:j]`, après le nom d'une variable qui contient une liste, permet d'extraire une sous-liste de la liste. Cette sous-liste, aussi appelée **tranche**, est une partie de la liste identifiée par les deux index `i` et `j`.
 
 ```{codeplay}
 noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
@@ -150,7 +150,9 @@ print(5 * [1])
 Une **méthode** fonctionne comme une fonction, mais est rattachée à une liste avec la notation (`.`).
 Par exemple si `a` désigne une liste, on peux ajouter un élément `x` à la fin de cette liste avec l'expression `a.append(x)`.
 
-Ces trois méthodes permettent tous d’ajouter des éléments à une liste existante :
+<!-- Ne devrait-on pas préciser qu'une méthode peut-être utilisée avec d'autres objets Python que des listes ?  -->
+
+Ces trois méthodes permettent toutes d’ajouter des éléments à une liste existante :
 
 - `append(x)`,
 - `extend(iterable)`,
@@ -230,7 +232,7 @@ Les listes disposent aussi de méthodes avec notation dotée :
 ### Trier une liste
 
 La méthode `sort()` trie la liste dans l'ordre croissant (pour les caractères, on se réfère au code ASCII ou UTF utilisé).
-Cette méthode fonctionne uniquement si tous les éléments sont évidemment du même type (nombre, texte) et peuvent être comparés.
+Cette méthode fonctionne uniquement si tous les éléments sont du même type (nombre, texte) et peuvent être comparés.
 
 ```{codeplay}
 a = [23, 10, -89, -54, 99, 2, 13]
@@ -400,7 +402,7 @@ Une **pile** est une structure de données qui permet de gérer l'arrivée et le
 En anglais cette structure s'appelle **stack** ou **LIFO** (last in first out).
 
 L'exemple suivant est une pile qui accumule des entiers.
-Si répondez avec une chaîne vide, ceci enlève le dernier élément mis sur la pile, jusqu'à ce que la pile est vide.
+Si répondez avec une chaîne vide, ceci enlève le dernier élément mis sur la pile, jusqu'à ce que la pile soit vide.
 
 ```{codeplay}
 x = input('[] < ')
@@ -427,7 +429,7 @@ Dans une file d'attente devant un guichet, la première personne arrivée est la
 En anglais cette structure s'appelle **buffer** ou encore **FIFO** (first in first out).
 
 L'exemple suivant est une file d'attente pour des entiers.
-Si vous répondez avec une chaîne vide, ceci enlève le plus ancien élément de la file, jusqu'à ce que la file est vide.
+Si vous répondez avec une chaîne vide, ceci enlève le plus ancien élément de la file, jusqu'à ce que la file soit vide.
 
 ```{codeplay}
 x = input('[] < ')
