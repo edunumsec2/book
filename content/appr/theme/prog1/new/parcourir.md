@@ -1,6 +1,6 @@
 # Parcourir - `tuple`
 
-Dans ce chapitre nous allons découvrir le concept très important de la séquence. Ce concept s'appelle `tuple` en langage Python ou **n-uplet** en français. Une séquence est une groupement d'objets, par exemple de couleurs, de distances ou d'angles. Ce qui est très intéressant, nous pouvons parcourir les valeurs d'une séquence une après l'autre. Nous allons voir que
+Dans ce chapitre nous allons découvrir le concept très important de la séquence. Ce concept s'appelle `tuple` en langage Python ou **n-uplet** en français. Une séquence est un groupement d'objets, par exemple de couleurs, de distances ou d'angles. Ce qui est très intéressant c'est que nous pouvons parcourir les valeurs d'une séquence l'une après l'autre. Nous allons voir que : 
 
 - la structure `(10, 20, 10)` représente une séquence (`tuple`),
 - dans `for x in (10, 20, 10):` la variable x parcourt des nombres,
@@ -8,7 +8,7 @@ Dans ce chapitre nous allons découvrir le concept très important de la séquen
 
 ## Parcourir des couleurs
 
-Pour dessiner multiples couleurs, nous pouvons définir une séquence (tuple) de couleurs et parcourir cette séquence.
+Pour dessiner de multiples couleurs, nous pouvons définir une séquence (tuple) de couleurs et parcourir cette séquence.
 En Python une séquence est délimitée par des parenthèses `()` et les éléments sont séparé par une virgule.
 
 Dans l'expression `for x in (...)` la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'blue'`, `'cyan'`, `'red'`, etc.
@@ -43,7 +43,7 @@ for x in (20, 40, 60, 80, 100):
 
 ## Parcourir des distances
 
-Nous allons reprendre nos fonctions `batiment()` et `porte()` et avec l'aide d'une séquence nous pouvons l'écrire bien plus compacte.
+Nous allons reprendre nos fonctions `batiment()` et `porte()` et avec l'aide d'une séquence nous pouvons l'écrire de manière bien plus compacte.
 
 ```{codeplay}
 from turtle import *
@@ -67,7 +67,7 @@ batiment()
 
 ## Parcourir des angles
 
-Nous allons reprendre nos fonctions `maison()` et avec l'aide d'une séquence nous pouvons l'écrire bien plus compacte. Cette fois-ci la séquence représente des angles, a nous appelons la variable `a` pour nous rappeler que c'est un angle.
+Nous allons reprendre nos fonctions `maison()` et avec l'aide d'une séquence nous pouvons l'écrire de manière bien plus compacte. Cette fois-ci la séquence représente des angles, donc nous nommons notre variable `a` pour nous rappeler que c'est un angle.
 
 ```{codeplay}
 from turtle import *
@@ -89,7 +89,7 @@ maison()
 
 ## Maisons en couleurs
 
-Dans l'exemple nous allons parcourir d'abord une séquence d'angles avec une variable d'itération `a` pour dessiner une maison.
+Dans l'exemple nous allons d'abord parcourir une séquence d'angles avec une variable d'itération `a` pour dessiner une maison.
 
 Ensuite nous allons parcourir une séquence de couleurs avec une variable `c` pour dessiner des maisons en différentes couleurs.
 
@@ -140,7 +140,7 @@ for c in ('pink', 'red', 'pink', 'red', 'pink'):
 
 ## Sourire
 
-Dans cet exemple nous allons parcourir différents épaisseurs et nous appelons notre variable `w` (width). Voici quatre smiley avec différents formes de bouche.
+Dans cet exemple nous allons parcourir différentes épaisseurs et nous appelons notre variable `w` (width). Voici quatre smiley avec différentes formes de bouche.
 
 ```{codeplay}
 from turtle import *
@@ -224,4 +224,4 @@ for (a, c) in ((45, 'pink'), (-10, 'lime'), (-30, 'red'), (-60, 'white')):
     dot(40, c)
 ```
 
-**Exercice** : Ajouter un angle et une couleur supplémentaire.
+**Exercice** : Ajoutez un angle et une couleur supplémentaire.
