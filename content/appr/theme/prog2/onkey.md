@@ -23,7 +23,7 @@ En informatique, une fonction de rappel (**callback** en anglais) ou fonction de
 
 Le programme suivant fait avancer la tortue à l'aide de la touche `a` du clavier.
 
-La variable `s` fait référence à l'objet `Screen` qui possède les deux méthodes : 
+La variable `s` fait référence à l'objet `Screen` qui possède les deux méthodes :
 
 - `onkey(f, 'a')` pour installer une fonction de rappel `f()` pour la touche `'a'`,
 - `listen()` pour commencer à *écouter* les événements du clavier.
@@ -275,7 +275,7 @@ s.listen()
 
 ## Bouger avec `lambda`
 
-Avec la fonction lambda notre programme devient très compacte. Nous utilisons les fonctions 
+Avec la fonction lambda notre programme devient très compacte. Nous utilisons les fonctions
 
 - `xcor()` pour lire la position actuelle de la coordonnée `x`.
 - `setx()` pour assigner une nouvelle valeur à la coordonnée `x`.

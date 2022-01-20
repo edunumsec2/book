@@ -13,6 +13,7 @@ Revenons vers un exemple simple : dessiner un carré.
 Si nous regardons le code de près, nous pouvons voir que nous répétons 4 fois les mêmes deux instruction `forward()` et `left()`.
 
 ```{codeplay}
+:file: for1.py
 from turtle import *
 
 forward(100)
@@ -29,6 +30,7 @@ Ne serait-il pas pratique de pouvoir dire à la tortue de répéter ces instruct
 Ceci est possible avec une boucle `for`. La ligne `for i in range(x):` va répéter `x` fois le bloc en indentation qui suit.
 
 ```{codeplay}
+:file: for2.py
 from turtle import *
 
 for i in range(4):
@@ -43,6 +45,7 @@ for i in range(4):
 Avec une boucle `for` nous pouvons simplifier le dessins des formes symétriques.
 
 ```{codeplay}
+:file: for3.py
 from turtle import *
 
 def triangle():
@@ -72,6 +75,7 @@ pentagone()
 Pour dessiner un escalier, il faut simplement répéter dans une boucle le dessin pour une seule marche.
 
 ```{codeplay}
+:file: for4.py
 from turtle import *
 
 for i in range(5):
@@ -88,6 +92,7 @@ forward(100)
 Pour dessiner des dents de scie, il faut simplement répéter dans une boucle le dessin pour une seule dent.
 
 ```{codeplay}
+:file: for5.py
 from turtle import *
 
 for i in range(4):
@@ -108,6 +113,7 @@ Que se passe-t-il si nous dessinons une ligne (`forward/back`) et tournons d'un 
 C'est un peu comme un éventail qui s'ouvre.
 
 ```{codeplay}
+:file: for6.py
 from turtle import *
 
 for i in range(18):
@@ -124,6 +130,7 @@ Que se passe-t-il si nous avançons plus que nous reculons ?
 Une toute petite modification du programme peut faire une chouette différence.
 
 ```{codeplay}
+:file: for7.py
 from turtle import *
 
 for i in range(18):
@@ -140,6 +147,7 @@ Voici une autre façon de toujours avancer, mais tourner à chaque fois d'un ang
 Essayons !
 
 ```{codeplay}
+:file: for8.py
 from turtle import *
 
 for i in range(9):
@@ -155,6 +163,7 @@ Si nous déformons les angles d'un carré, nous obtenons un losange (diamant).
 Quelle forme obtenons-nous en dessinant un carré et deux losanges ?
 
 ```{codeplay}
+:file: for9.py
 from turtle import *
 
 def carre():
@@ -181,6 +190,7 @@ losange()
 Si nous dessinons un losange 6 fois, nous obtenons une jolie fleur.
 
 ```{codeplay}
+:file: for10.py
 from turtle import *
 
 def losange():

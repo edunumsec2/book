@@ -111,7 +111,6 @@ Nous réagissons également à deus touches du clavier :
 - `b` (begin fill)
 - `e` (end fill)
 
-
 ```{codeplay}
 from turtle import *
 hideturtle()
@@ -184,7 +183,7 @@ getscreen().listen()
 
 ## Héritage
 
-Dans l'exemple suivant nous définissons une classe parent `Object`. Elle possède les méthodes 
+Dans l'exemple suivant nous définissons une classe parent `Object`. Elle possède les méthodes
 
 - `draw_box()` pour dessiner un contour rectangulaire
 - `fill_box()` pour dessiner un rectangle rempli

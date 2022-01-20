@@ -1,6 +1,6 @@
 # Tracer - `math`
 
-Dans ce chapitre nous allons découvrir comment nous pouvons tracer des fonctions mathématiques pour les visualiser. Le module `math` met à disposition toute une série de constantes et fonctions mathématiques. Vous allez découvrir 
+Dans ce chapitre nous allons découvrir comment nous pouvons tracer des fonctions mathématiques pour les visualiser. Le module `math` met à disposition toute une série de constantes et fonctions mathématiques. Vous allez découvrir
 
 - les fonctions trigonométriques `sin()`, `cos()` et `tan()`,
 - la fonction exponentielle `exp()`,
@@ -81,10 +81,10 @@ Ceci nous permet de directement accéder à l'objet sans ajouter le nom du modul
 
 Le module `math` contient 5 constantes:
 
-- `e  ` base des logarithmes naturels (nombre d'Euler)
+- `e` base des logarithmes naturels (nombre d'Euler)
 - `inf` symbole pour infinité
 - `nan` symbole pour *not a number*
-- `pi ` rapport de la circonférence d'un cercle à son diamètre
+- `pi` rapport de la circonférence d'un cercle à son diamètre
 - `tau` rapport de la circonférence d'un cercle à son rayon
 
 ```{codeplay}

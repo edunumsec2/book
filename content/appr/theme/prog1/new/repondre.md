@@ -13,6 +13,7 @@ La fonction `print()` permet d'écrire du texte vers la console.
 Ici, la console est la région de texte qui suit le programme interactive.
 
 ```{codeplay}
+:file: inp0.py
 print('hello world.')
 ```
 
@@ -25,6 +26,7 @@ Le texte apparait dans la console qui apparait directement après le programme.
 Le dessin apparait dans une fenêtre spéciale après la console.
 
 ```{codeplay}
+:file: inp1.py
 from turtle import *
 
 print('ce programme dessine un carré')
@@ -45,6 +47,7 @@ La réponse de l'utilisateur est ensuite mémorisée dans une variable que nous 
 Ensuite nous pouvons utiliser cette variable `x` dans la suite du programme, par exemple dans une expression `print()`.
 
 ```{codeplay}
+:file: inp2.py
 x = input('Entrez votre nom: ')
 print('Bonjour', x)
 ```
@@ -55,6 +58,7 @@ Une variable est une place en mémoire pour stocker de l'information.
 Vous êtes complètement libre dans le choix des noms pour les variables, mais c'est recommandé de choisir des noms qui sont le plus explicite possible. C'est mieux d'utiliser des noms de variable parlants, comme `'nom'` et `'age'`,  bien qu'on aurait pu utiliser `'x'` et `'y'`.  
 
 ```{codeplay}
+:file: inp3.py
 nom = input('Entrez votre nom: ')
 print('Bonjour', nom)
 
@@ -95,6 +99,7 @@ Nous pouvons utiliser une entrée interactive avec la fonction `input()`
 et demander à l'utilisateur d'entrer une couleur valide pour l'arrière-fond.
 
 ```{codeplay}
+:file: inp4.py
 from turtle import *
 
 x = input('Entrez une couleur: ')
@@ -106,6 +111,7 @@ getscreen().bgcolor(x)
 Nous pouvons continuer les questions avec une couleur de ligne et une couleur de remplissage, pour dessiner un rectangle.
 
 ```{codeplay}
+:file: inp5.py
 from turtle import *
 
 x = input('Entrez une couleur de arrière-fond: ')
@@ -136,6 +142,7 @@ Cette boucle répète aussi longtemps que la variable `x` contient une valeur, c
 Si vous appuyez sur **Enter** sans entrer quelque chose, la boucle s'arrête.
 
 ```{codeplay}
+:file: inp6.py
 from turtle import *
 up()
 

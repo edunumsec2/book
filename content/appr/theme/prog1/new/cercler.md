@@ -13,6 +13,7 @@ Tandis qu'avec 9 sommets il ressemble clairement à un polygone,
 avec 36 sommets, il ressemble déjà raisonnablement à un cercle.
 
 ```{codeplay}
+:file: cir1.py
 from turtle import *
 
 for i in range(9):
@@ -44,6 +45,7 @@ $$ r = \frac{360}{6.28} = 57 $$
 La fonction `circle(57)` dessine un cercle dont le rayon est 57. L'expérience montre que le polygone et le cercle ont effectivement la même taille.
 
 ```{codeplay}
+:file: cir2.py
 from turtle import *
 
 for i in range(36):
@@ -79,6 +81,7 @@ forward(100)
 Dessinons des cercles dans une boucle, et tournons à chaque fois.
 
 ```{codeplay}
+:file: cir3.py
 from turtle import *
 
 for i in range(6):
@@ -97,6 +100,7 @@ Par défaut l'angle est de 360°, donc un cercle entier.
 Voici un exemple qui utilise deux demi-cercles de 180°.
 
 ```{codeplay}
+:file: cir4.py
 from turtle import *
 
 forward(100)
@@ -114,6 +118,7 @@ circle(40, 180)
 Avec la fonction `circle()` il est maintenant possible de dessiner un carré arrondie.
 
 ```{codeplay}
+:file: cir5.py
 from turtle import *
 
 for i in range(4):
@@ -128,8 +133,8 @@ for i in range(4):
 Le cœur est le symbole de l'amour : on donne de façon métaphorique son cœur à la personne que l'on aime pour lui signifier qu'on lui confie sa vie.
 
 ```{codeplay}
+:file: cir6.py
 from turtle import *
-width(10)
 
 left(90)
 circle(50, 225)
@@ -146,8 +151,8 @@ circle(50, 225)
 Le mot **infini** (du latin in-, préfixe négatif, et finitus, *limité*) est un adjectif servant à qualifier quelque chose qui n'a pas de limite en nombre ou en taille. L'infini est représenté par le symbole ∞.
 
 ```{codeplay}
+:file: cir7.py
 from turtle import *
-width(10)
 
 right(45)
 forward(100)
@@ -156,6 +161,8 @@ forward(200)
 circle(-100, 270)
 forward(100)
 ```
+
+**Exercice** : Augmentez l'épaisseur de la ligne.
 
 ## Bretzel - ⌘
 
@@ -166,19 +173,22 @@ Le pictogramme ⌘ (Unicode 2318), parfois appelé *Gordon loop* ou *bretzel*, a
 - cmd+V pour Coller
 
 ```{codeplay}
+:file: cir8.py
 from turtle import *
-width(10)
 
 for i in range(4):
     circle(50, 270)
     forward(150)
 ```
 
+**Exercice** : Augmentez l'épaisseur de la ligne.
+
 ## Lettres
 
 Les lettres sont des signes graphiques qui formant un alphabet et servant à transcrire une langue.
 
 ```{codeplay}
+:file: cir9.py
 from turtle import *
 width(10)
 
@@ -214,6 +224,7 @@ n()
 Un pétale est formé de deux arcs de cercle.
 
 ```{codeplay}
+:file: cir10.py
 from turtle import *
 
 def petale():
@@ -226,4 +237,4 @@ for i in range(6):
     left(60)
 ```
 
-**Exercice** : Coloriez la fleur.
+**Exercice** : Coloriez la fleur.

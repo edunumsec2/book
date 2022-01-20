@@ -32,6 +32,7 @@ Ci-dessus vous trouvez notre premier programme de trois ligne :
 - avec `forward(150)` nous faisons avancer la tortue de 150 pixels.
 
 ```{codeplay}
+:file: fwd1.py
 from turtle import *
 
 shape('turtle')
@@ -66,6 +67,7 @@ Ce rectangle a les propriétés suivantes :
 - l'axe y s'étend de -200 à +200.
 
 ```{codeplay}
+:file: fwd2.py
 from turtle import *
 
 shape('turtle')
@@ -94,6 +96,7 @@ La largeur de la zone de dessin de la tortue est
 Un programme est une séquence d'instructions. Le bloc des 8 instructions ci-dessous indique comment dessiner un carré. La tortue doit avancer, tourner, avancer, tourner etc.
 
 ```{codeplay}
+:file: fwd3.py
 from turtle import *
 
 forward(160)
@@ -127,6 +130,7 @@ La tortue possède 4 fonctions de déplacement, mais strictement parlé, on pour
 En plus la rotation est cyclique,
 
 ```{codeplay}
+:file: fwd4.py
 from turtle import *
 
 forward(160)
@@ -166,6 +170,7 @@ A chaque fois que nous utilisons `rectangle()`,
 au lieu d'écrire 8 lignes, nous écrivons seulement 1 ligne de code.
 
 ```{codeplay}
+:file: fwd5.py
 from turtle import *
 
 def rectangle():
@@ -200,6 +205,7 @@ Une fonction ne permet pas seulement d'économiser des lignes de code.
 Elle permet aussi de structurer le code et de lui donner un sens. Prenez par exemple ce code-ci. C'est presque impossible de comprendre ce que fait le programme en regardant les 17 lignes de code.
 
 ```{codeplay}
+:file: fwd6.py
 from turtle import *
 
 forward(200)
@@ -226,7 +232,7 @@ Si nous observons la tortue, nous comprenons finalement qu'elle dessine deux foi
 Essayons maintenant de découper le code en **sous-problèmes** en utilisant deux fonctions `batiment()` et `porte()`.
 En regardant ces 3 lignes de code, on comprend immédiatement le sens du programme.
 
-```{code-block} python
+``` python
 batiment()
 forward(30)
 porte()
@@ -237,6 +243,7 @@ La définition d'une fonction permet d'ajouter des nouveaux mots à un langage d
 **Attention** : Ecrivez les fonctions sans accents et sans circonflexes : `batiment()`, `carre()`, `boite()`.
 
 ```{codeplay}
+:file: fwd7.py
 from turtle import *
 
 def batiment():
@@ -306,6 +313,7 @@ Une fois une fonction est définie, elle peut être utilisé partout, même dans
 Ici nous avons une fonction `porte()` qui est utilisé à l'intérieur d'une deuxième fonction `maison()`. Pour que ceci est possible, la définition de porte doit être placé avant la définition de `maison()`.
 
 ```{codeplay}
+:file: fwd8.py
 from turtle import *
 
 def porte():
@@ -342,6 +350,7 @@ La fonction `width(d)` (épaisseur en anglais) permet de définir l'épaisseur d
 Voici un triangle ou chaque côté a une épaisseur différente.
 
 ```{codeplay}
+:file: fwd9.py
 from turtle import *
 
 forward(200)
@@ -363,6 +372,7 @@ left(120)
 Nous reprenons l'exemple de la maison et dessinons le toit plus épais.
 
 ```{codeplay}
+:file: fwd10.py
 from turtle import *
 
 def maison():
@@ -395,6 +405,7 @@ Les deux commandes `up()` et `down()` permettent de lever et baisser le stylo.
 Ceci nous permet dessiner des formes séparées, comme ces deux triangles.
 
 ```{codeplay}
+:file: fwd11.py
 from turtle import *
 
 def triangle():
@@ -419,6 +430,7 @@ triangle()
 Dans le programme ci-dessous nous dessinons de nouveau une maison avec cette fois-ci une fenêtre. Les fonctions `up()/down()` nous permettent de dessiner des formes disjointes, telle qu'une fenêtre à l'intérieur de la maison.
 
 ```{codeplay}
+:file: fwd12.py
 from turtle import *
 
 def fenetre():
@@ -459,6 +471,7 @@ Ensuite il suffit d'**appeler** cette fonction.
 En appelant la fonction `bras()`, au lieu d'écrire 6 lignes, nous écrivons que 1 ligne de code.
 
 ```{codeplay}
+:file: fwd13.py
 from turtle import *
 
 def bras():
@@ -492,6 +505,7 @@ Ici nous dessinons une fenêtre composé de 4 carreau. Nous pouvons décomposer 
 - la fonction `equerre()` appelle deux fois la fonction `ligne()`.
 
 ```{codeplay}
+:file: fwd14.py
 from turtle import *
 
 def ligne():
