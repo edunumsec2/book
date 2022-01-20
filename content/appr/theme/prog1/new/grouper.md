@@ -6,6 +6,16 @@ Dans ce chapitre nous découvrons une nouvelle structure de données - les liste
 - la notation d'index `liste[i]` permet d'accéder au i-ème élément de la liste,
 - la notation de tranche `liste[i:j]` permet d'accéder à une sous-liste.
 
+
+```{question}
+En informatique une liste est
+
+{v}`ordonnée`  
+{f}`jamais vide`  
+{f}`toujours hétérogène`  
+{f}`un ensemble mathématique`
+```
+
 ## Des groupes d'objets
 
 Une liste permet de manipuler des groupes d'objets tels que :

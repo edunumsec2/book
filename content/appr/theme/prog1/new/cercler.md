@@ -6,6 +6,15 @@ Dans ce chapitre nous explorons les cercles et les arcs de cercle. Nous allons v
 - la fonction `circle(r)` dessine un cercle de rayon `r`,
 - la fonction `circle(r, a)` dessine un arc de cercle d'un angle `a`.
 
+```{question}
+Un cercle affiché sur un écran d'ordinateur est créé par
+
+{f}`une rotation de lumière`  
+{f}`un agrandissement d'un point`  
+{v}`un polygone régulier d'ordre élevé`  
+{f}`une boucle refermée`
+```
+
 ## Du polygone au cercle
 
 Plus que le polygone régulier a de sommets, plus il ressemble à un cercle.

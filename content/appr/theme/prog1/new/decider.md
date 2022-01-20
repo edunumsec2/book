@@ -6,6 +6,16 @@ Dans ce chapitre nous allons voir comment un programme peut faire des choix, et 
 - les mot-clés `if-else` permettent de choisir entre deux alternatives,
 - le mot-clé `elif` (else if) permet d'ajouter différentes conditions.
 
+
+```{question}
+En Python `if` est suivi
+
+{f}`d'un bloc`  
+{v}`d'une condition`  
+{f}`de parenthèses`  
+{f}`d'un deux-points`
+```
+
 ## Êtes-vous majeur ?
 
 Basé sur votre âge, le programme décide si vous êtes majeur ou pas.

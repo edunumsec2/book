@@ -6,6 +6,15 @@ Dans ce chapitre nous introduisons une façon pour que le programme puisse poser
 - la fonction `input('question')` demande une information,
 - une variable `x` mémorise une information.
 
+```{question}
+Une variable informatique est
+
+{v}`une place en mémoire`  
+{v}`une étiquette pour un objet`  
+{v}`un endroit spécific de stockage`  
+{v}`un nom pour une valeur`
+```
+
 ## Dire bonjour
 
 Nous commençons par le grand classique des livres d'introduction à la programmation : afficher la fameuse phrase *hello world.*.

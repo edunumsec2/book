@@ -6,6 +6,15 @@ Dans ce chapitre nous allons découvrir le concept très important de la séquen
 - dans `for x in (10, 20, 10):` la variable x parcourt des nombres,
 - dans `for x in ('red', 'blue'):` la variable x parcourt des couleurs.
 
+```{question}
+En informatique un `tuple` est 
+
+{v}`une séquence d'objets`  
+{f}`une liste numérique`  
+{f}`un ensemble mathématique`  
+{f}`une chaîne de caractères`
+```
+
 ## Parcourir des couleurs
 
 Pour dessiner de multiples couleurs, nous pouvons définir une séquence (tuple) de couleurs et parcourir cette séquence.

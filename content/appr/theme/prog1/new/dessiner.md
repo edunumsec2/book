@@ -14,7 +14,7 @@ Allons-y en avant (forward) avec la programmation. Nous allons voir que
 Un programme informatique est
 
 {f}`une instruction de séquence`  
-{v}`séquence d'instructions`  
+{v}`une séquence d'instructions`  
 {f}`un algorithme`  
 {f}`une recette de cuisine`
 ```

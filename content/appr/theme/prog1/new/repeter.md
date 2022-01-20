@@ -6,6 +6,15 @@ Dans ce chapitre nous découvrons comment utiliser une boucle `for` pour répét
 - la structure `for i in range(x):` permet de répéter un bloc x fois,
 - le deux-points `:` est toujours suivi d'un bloc en indentation.
 
+```{question}
+Une boucle informatique est
+
+{f}`une instruction`  
+{f}`un passage ondulé`  
+{v}`une section de code répétée`  
+{f}`une protéction thérmique`
+```
+
 ## La répétition
 
 Revenons vers un exemple simple : dessiner un carré.

@@ -17,6 +17,15 @@ Techniquement un texte est appelé une **chaîne de caractères**, ou string en 
 - l'opérateur `*` répète un texte,
 - la fonction `ord(c)` retourne le code pour représenter un caractère.
 
+```{question}
+Un string informatique est
+
+{f}`un sous-vêtement pour informaticien`  
+{f}`une ficelle de données`  
+{v}`un enchaînement de lettres`  
+{f}`un instrument de musique`
+```
+
 ## Délimiter un texte
 
 Tout caractère imprimable peux être utilisé pour créer un texte :

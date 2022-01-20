@@ -6,6 +6,15 @@ Dans ce chapitre nous découvrons un deuxième type de boucle, la boucle `while`
 - la fonction `sleep()` permet d'attendre et ralentir le programme,
 - le mot-clé `break` permet de sortir de la boucle.
 
+```{question}
+En Python `while` est
+
+{f}`une fonction`  
+{f}`une condition`  
+{f}`une boucle`  
+{v}`un mot-clé`
+```
+
 ## Compteur à rebours
 
 On peut utiliser la boucle `while` pour créer un compteur à rebours.

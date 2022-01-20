@@ -9,6 +9,15 @@ Une boucle ne représente pas seulement une économie de lignes de code, mais do
 - la variable d'itération `i` prend une autre valeur à chaque tour,
 - on peut parcourir des plages numériques, du texte, et des listes.
 
+```{question}
+En informatique itérer c'est
+
+{v}`parcourir`  
+{f}`bifurquer`  
+{f}`appeler`  
+{v}`répéter`
+```
+
 ## Répéter x fois
 
 Le programme suivant demande comme entrée le nombre `x` de sommets, et dessine alors un polygone régulier. C'est un cas ou il faut **répéter x fois**.

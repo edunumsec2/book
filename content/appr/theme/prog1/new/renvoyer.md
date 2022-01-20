@@ -5,6 +5,15 @@ Dans ce chaptire nous allons voir comment une fonction peut renvoyer une valeur.
 - le mot-clé `return` permet de renvoyer une valeur,
 - une fonction qui ne renvoie rien renvoie `None`
 
+```{question}
+En informatique le mot-clé `return` est utilisé pour
+
+{f}`changer de direction`  
+{v}`renvoier une valeur`  
+{f}`répèter encore une fois`  
+{f}`rentrer au début`
+```
+
 ## Valeur de retour
 
 L'instruction `return` permet de retourner une valeur.

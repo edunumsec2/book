@@ -6,6 +6,16 @@ Dans ce chapitre nous verrons comment un programme peut introduire un élément 
 - la fonction `randint(a, b)` retourne un entier aléatoire dans l'intervalle [a, b],
 - la fonction `shuffle(liste)` fait une permutation aléatoire des éléments d'une liste.
 
+
+```{question}
+En Python `random` est
+
+{v}`un module`  
+{f}`une condition`  
+{f}`une variable aléatoire`  
+{f}`un mot-clé`
+```
+
 ## Le contenu du module
 
 Le module `random` permet de créer des nombres pseudo-aléatoires. Il met à disposition 13 fonctions.

@@ -7,6 +7,15 @@ Une couleur peut être appliquée à une ligne, à un point, à une forme ou à 
 - la fonction `dot(d)` dessine un disque de diamètre `d`,
 - la fonction `begin_fill()/end_fill()` permet le remplissage.
 
+```{question}
+Une couleur sur un écran d'ordinateur est produite par
+
+{f}`des pigments`  
+{f}`du mouvement rapide`  
+{f}`un liquide colorié`  
+{v}`la combinaison de trois lumières`
+```
+
 ## Liste de couleurs
 
 Voici une liste des couleurs disponibles. Pour les utiliser vous devez les écrire entre des apostrophes, comme par exemple `'pink'` ou `'hotpink'`.

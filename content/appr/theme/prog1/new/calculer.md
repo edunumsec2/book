@@ -9,6 +9,15 @@ Les nombres entiers forment une catégorie très importante. En anglais un entie
 - les nombres sont du type `int` ou `float`,
 - un texte est du type `str`.
 
+```{question}
+En informatique `int` est l'abbréviation pour
+
+{f}`international`  
+{v}`entier`  
+{f}`interne`  
+{f}`intélligent`
+```
+
 ## Un calcul simple
 
 Dans ce chapitre nous allons explorer comment nous pouvons calculer avec des nombres. Voici un exemple qui affiche dans une première ligne sous forme de texte une expression mathématique, et dans une deuxième ligne une expression mathématique qui sera évaluée vers son résultat numérique.

@@ -9,6 +9,15 @@ C'est un moyen puissant pour inventer des nouvelles commandes dans un langage de
 - un paramètre `f(param0, ...)` est une variable dans la définition de fonction,
 - un argument `f(arg0, ...)` est une valeur dans l'appel de fonction.
 
+```{question}
+En Python `def` est un raccourci pour
+
+{f}`defoncé`  
+{f}`defilé`  
+{v}`définition`  
+{f}`défavorisé`
+```
+
 ## Paramétrer la fonction
 
 Jusqu'à maintenant notre carré a toujours eu la même taille.
