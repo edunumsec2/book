@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const copyBtn = document.getElementById("copy");
   const executeBtn = document.getElementById("execute");
   const interruptBtn = document.getElementById("interrupt");
+  const downloadBtn = document.getElementById("download");
   const hintsBtn = document.getElementById("hints");
   const hintsArea = document.getElementById("tooltip");
   const hintsElem = document.getElementById("tooltip-content");
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const outputElem = document.getElementById("output");
   const outputDefaultMessage = document.getElementById("output-message");
 
+  var downloadFileName = "code.py";
   var prelude = "";
   var preludeLines = 0;
   var afterword = "";
@@ -267,6 +269,28 @@ document.addEventListener("DOMContentLoaded", function() {
   executeBtn.addEventListener("click", runInterpreter);
   document.getElementById("execute-keyword").addEventListener("click", runInterpreter);
 
+  // Courtesy of https://stackoverflow.com/a/33542499
+  function saveFile(filename, data) {
+    const blob = new Blob([data], {type: 'text/x-python'});
+    if(window.navigator.msSaveOrOpenBlob) {
+      window.navigator.msSaveBlob(blob, filename);
+    }
+    else{
+      const elem = window.document.createElement('a');
+      elem.href = window.URL.createObjectURL(blob);
+      elem.download = filename;        
+      document.body.appendChild(elem);
+      elem.click();        
+      document.body.removeChild(elem);
+      window.URL.revokeObjectURL(elem.href);
+    }
+  }
+
+  downloadBtn.addEventListener("click", function() {
+    const data = codeElem.getValue();
+    saveFile(downloadFileName, data);
+  });
+
   function resized() {
     if (parent && parent.frameResized) {
       parent.frameResized(self);
@@ -367,6 +391,9 @@ document.addEventListener("DOMContentLoaded", function() {
       if (frame.hasAttribute("data-static")) {
         codeElem.setOption("readOnly", true);
         readOnly = true;
+      }
+      if (frame.hasAttribute("data-file")) {
+        downloadFileName = b64DecodeUnicode(frame.dataset.file);
       }
 
       resized();

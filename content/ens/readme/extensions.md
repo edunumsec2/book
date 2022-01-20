@@ -301,6 +301,32 @@ print(double(int(input("x = "))))
 
 ### Options
 
+#### Choix du nom de fichier à télécharger
+
+Via l'option `:file:`, le nom du fichier téléchargé peut être spécifié.
+
+`````{tabbed} Aperçu
+```{codeplay}
+:file: nom-du-fichier.py
+def double(x):
+    return x + x
+
+print(double(int(input("x = "))))
+```
+`````
+
+`````{tabbed} Code
+````{code-block} text
+```{codeplay}
+:file: nom-du-fichier.py
+def double(x):
+    return x + x
+
+print(double(int(input("x = "))))
+```
+````
+`````
+
 #### Execution immediate
 
 Via l'option `:exec:`, le code est exécuté dès le chargement de la page.

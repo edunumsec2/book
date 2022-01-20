@@ -31,6 +31,7 @@ def visit_interactive_code_html(self, node):
     self.body.append('<iframe src="' + node["codeplay_path"] + '" ' +
       prelude_attr + afterword_attr + hints_attr +
       'data-code="' + b64encode(node["code"].encode("UTF-8")).decode("UTF-8") + '" ' +
+      'data-file="' + b64encode(node["file"].encode("UTF-8")).decode("UTF-8") + '" ' +
       'scrolling="no" ' + 
       ('data-run="true" ' if node["exec"] else '') +
       ('data-static="true" ' if node["static"] else '') +
@@ -51,7 +52,8 @@ class InteractiveCode(SphinxDirective):
         "noprelude": directives.flag,
         "static": directives.flag,
         "nocontrols": directives.flag,
-        "hints": directives.unchanged
+        "hints": directives.unchanged,
+        "file": directives.unchanged
     }
     has_content = True
 
@@ -118,7 +120,8 @@ class InteractiveCode(SphinxDirective):
           static="static" in self.options,
           nocontrols="nocontrols" in self.options,
           codeplay_path=relative_path,
-          exec="exec" in self.options)
+          exec="exec" in self.options,
+          file=self.options["file"] if "file" in self.options else "code.py")
         self.set_source_info(container)
 
         return [container]
