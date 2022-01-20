@@ -1,6 +1,6 @@
 # Randomiser - `random`
 
-Dans ce chapitre nous verrons comment un programme peut introduire un élément aléatoire dans un calcul ou dans un raisonnement. Ceci est très important pour programmer certains jeux. Nous allons voir que
+Dans ce chapitre nous verrons comment un programme peut introduire un élément aléatoire dans un calcul ou dans un raisonnement. Ceci est très important pour programmer certains jeux. Nous allons voir que : 
 
 - la fonction `random()` retourne une valeur aléatoire dans l'intervalle [0, 1],
 - la fonction `randint(a, b)` retourne un entier aléatoire dans l'intervalle [a, b],
@@ -78,7 +78,7 @@ for i in range(n):
 ## Sous la belle étoile
 
 Les étoiles dans le ciel apparaissent à des positions plus au moins aléatoires.
-Nous calculons `x` et `y` comme des entiers aléatoires, choisi dans l'intervalle de la largeur et de la hauteur de la fenêtre.
+Nous calculons `x` et `y` comme des entiers aléatoires, choisis dans l'intervalle de la largeur et de la hauteur de la fenêtre.
 
 Nous choisissons la taille `d` avec une distribution normale (de Gauss) avec une moyenne de 3 et un sigma de 2.
 
@@ -97,9 +97,9 @@ for i in range(200):
     dot(d, 'white')
 ```
 
-## La voie lacté
+## La voie lactée
 
-Pour arranger les étoiles plus dans une bande horizontale, comme dans la voie lacté, nous utilisons pour la variable `y` une distribution normale (gauss) avec une moyenne de 0 et un sigma de 50.
+Pour arranger les étoiles plus dans une bande horizontale, comme dans la voie lactée, nous utilisons pour la variable `y` une distribution normale (gauss) avec une moyenne de 0 et un sigma de 50.
 
 ```{codeplay}
 from turtle import *
@@ -118,7 +118,7 @@ for i in range(500):
 
 ## Fleurs dans un champs
 
-Dans l'exemple suivant nous plaçons des fleurs à des positions aléatoires dans un champs.
+Dans l'exemple suivant nous plaçons des fleurs à des positions aléatoires dans un champ.
 
 ```{codeplay}
 from turtle import *
@@ -148,7 +148,7 @@ for i in range(10):
 ## Choisir dans une liste
 
 La fonction `choice(liste)` retourne un élément aléatoire d'une liste.
-Dans l'exemple suivant nous choisissons entre 5 couleurs.
+Dans l'exemple suivant nous choisissons parmis 5 couleurs.
 
 ```{codeplay}
 from turtle import *
@@ -164,7 +164,7 @@ for y in range(200-n, -200, -n):
         dot(n, choice(colors))
 ```
 
-Nous pouvons aussi choisir aléatoirement d'une liste numérique, avec la taille du points.
+Nous pouvons aussi choisir aléatoirement dans une liste numérique, avec différentes tailles de points, par exemple.
 
 ```{codeplay}
 from turtle import *
@@ -224,7 +224,7 @@ hideturtle()
 
 ## Champs de fleurs
 
-Pour simuler la perspectives, nous dessinons les fleurs proches plus grand.
+Pour simuler la perspectives, nous dessinons les fleurs proches plus grandes.
 
 ```{codeplay}
 from turtle import *
