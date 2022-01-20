@@ -2,8 +2,8 @@
 
 Dans ce chapitre nous allons voir de près comment une variable peut parcourir ou itérer une plage numérique.
 
-Une boucle permet de rendre le code plus court et mieux structuré.
-Une boucle ne représente pas seulement une économie de lignes de code, mais donne aussi la possibilité de contrôler le nombre de répétitions. Nous allons voir que
+Une boucle permet de raccourcir le code et de mieux le structurer. 
+Une boucle ne représente pas seulement une économie de lignes de code, mais donne aussi la possibilité de contrôler le nombre de répétitions. Nous allons voir que : 
 
 - la boucle `for` répète du code pour un ensemble de valeurs données,
 - la variable d'itération `i` prend une autre valeur à chaque tour,
@@ -28,7 +28,7 @@ for i in range(x):
 
 ## Parcourir une séquence
 
-Dans la boucle `for` une variable d'itération va parcourir une valeur après l'autre d'une séquence d'objets.  Cette séquence peut être :
+Dans la boucle `for` une variable d'itération va parcourir une valeur après l'autre d'une séquence d'objets. Cette séquence peut être :
 
 - une plage numérique avec `range()`,
 - une chaîne de caractères,
@@ -37,7 +37,7 @@ Dans la boucle `for` une variable d'itération va parcourir une valeur après l'
 La **variable d'itération** prend successivement les valeurs 0 à x-1.
 Quand la variable d'itération est de type entier (`int`) on l'appelle souvent `i`.
 
-Nous reprenons l'exemple précédent du polygone, mais cette fois nous dessinons pas les segments mais seulement les sommets. La valeur de la variable d'itération `i` est affichée à chaque sommet du polygone.
+Nous reprenons l'exemple précédent du polygone, mais cette fois nous ne dessinons pas les segments mais seulement les sommets. La valeur de la variable d'itération `i` est affichée à chaque sommet du polygone.
 
 ```{codeplay}
 from turtle import *
@@ -86,7 +86,7 @@ for i in range(-100, -200, -3):
 
 **Exercice** : Affichez les entiers de +10 à -10.
 
-La fonction `range()` peut fonctionner avec 1, 2 ou 3 paramètres. Les valeur par défaut sont :
+La fonction `range()` peut fonctionner avec 1, 2 ou 3 paramètres. Les valeurs par défaut sont :
 
 - 0 pour `start`,
 - 1 pour `step`.
@@ -166,7 +166,7 @@ Pour recréer les noms de cellule nous parcourons une chaîne de chiffres et une
 
 On appelle la première boucle avec `y` la **boucle extérieure** et la deuxième boucle avec `x` **la boucle intérieure**.
 
-Nous concaténons les deux éléments lettre et nombre (`x + y`) et nous ajoutons l'option `end=' '` pour remplacer le retour à la ligne par une espace.
+Nous concaténons les deux éléments lettre et nombre (`x + y`) et nous ajoutons l'option `end=' '` pour remplacer le retour à la ligne par un espace.
 
 Pour bien montrer l'ordre consécutif nous importons la fonction `sleep()` du module `time` pour ralentir le parcours de la boucle.
 
