@@ -1,22 +1,31 @@
-# Souris - `onclick`
+# Cliquer - `onclick`
 
 Dans ce chapitre nous explorons comment un programme peux détecter un clic de souris et y réagir.
-Cliquer (ou toucher) est la méthode principale pour interagir avec un smartphone : on touche avec le droit une certaine position de l'écran et le programme y réagit. Nous allons voir que
+Cliquer (ou toucher) est la méthode principale pour interagir avec un smartphone : on touche avec le doigt une certaine position de l'écran et le programme y réagit. Nous allons voir que
 
-- la méthode `onclick(f)` permet de définir une fonction qui réagit à un clic,
-- la fonction `f(x, y)` est appelé lors d'un clic, avec les coordonnés x et y,
+- la méthode `onclick(f)` permet de définir une fonction de rappel,
+- la fonction de rappel `f(x, y)` est appelée lors d'un clic de souris,
 - la méthode `listen()` met en marche les événements interactifs.
+
+## Fonction de rappel
+
+En informatique, une fonction de rappel (**callback** en anglais) ou fonction de post-traitement est une fonction qui est passée en argument à une autre fonction. Cette dernière peut alors faire usage de cette fonction de rappel comme de n'importe quelle autre fonction, alors qu'elle ne la connaît pas par avance.
 
 ## Fonction `onclick`
 
-La méthode `onclick(f)` permet de définir une fonction `f` qui est alors appelé à chaque fois quand on clique avec la souris dans le canevas.
+La méthode `onclick(f)` permet de définir une fonction `f` qui est alors appelé à chaque fois quand on clique avec la souris dans le canevas. A ce moment la fonction `f` est appelé avec les coordonnés `(x, y)` de la souris au moment du clic.
 
-A ce moment la fonction `f` est appelé avec les coordonnés `(x, y)` du clic de la souris.
+La variable `s` fait référence à l’objet `Screen` qui possède les deux méthodes :
+
+- `onclick(f)` pour installer une fonction de rappel f() pour un clic de sours,
+- `listen()` pour commencer à *écouter* les événements de la souris.
 
 Le programme suivant dessine un point à la position du clic et affiche les coordonnées dans la console.
 
 ```{codeplay}
 from turtle import *
+s = getscreen()
+
 hideturtle()
 speed(0)
 up()
@@ -25,9 +34,9 @@ def f(x, y):
     print('clic à', x, y)
     goto(x, y)
     dot()
-    
-getscreen().onclick(f)
-getscreen().listen()
+
+s.onclick(f)
+s.listen()
 ```
 
 **Exercice** : Cliquez dans les 4 coins et au centre.
@@ -35,26 +44,30 @@ getscreen().listen()
 ## Tortue ou écran
 
 Une fonction `onclick()` existe pour l'écran et pour chaque tortue.
+Donc nous avons deux fonctions de rappel. Une pour des clics dans tout l'écran, l'autre que pour des clics dans la tortue.
+
+Quand nous cliquons dans la tortue, la position est écrit dans la console et la tortue avance de 20 pixels.
 
 ```{codeplay}
 from turtle import *
 shape('turtle')
 
 def f(x, y):
-    print('screen click at', x, y)
+    print('écran à ', x, y)
     
 def g(x, y):
-    print('turtle click at', x, y)
-    
+    print('tortue à', x, y)
+    forward(20)
+
 t = getturtle()
 s = getscreen()
 
-s.onclick(f)
 t.onclick(g)
+s.onclick(f)
 s.listen()
 ```
 
-**Exercice** : Cliquez dans dans la tortue et à côté.
+**Exercice** : Cliquez dans dans la tortue et à côté et observez la différence.
 
 ## Dessiner une forme
 
@@ -84,7 +97,43 @@ getscreen().onclick(ligne)
 getscreen().listen()
 ```
 
-**Exercice** : Dessinez une maison.
+**Exercice** : Dessinez une maison. Utilisez la touche `u` (up) pour dessiner une forme disjointe, par exemple la fenêtre.
+
+## Remplir une forme
+
+Dans ce programme nous dessinons une ligne entre les clics successifs.
+C'est pour cette raison nous appelons la fonction `ligne(x, y)` au lieu de `f(x, y)`.
+
+Nous réagissons également à deus touches du clavier :
+
+- `u` (up) pour lever le stylo
+- `c` (clear) pour effacer le canevas
+- `b` (begin fill)
+- `e` (end fill)
+
+
+```{codeplay}
+from turtle import *
+hideturtle()
+fillcolor('pink')
+speed(0)
+up()
+
+def ligne(x, y):
+    goto(x, y)
+    down()
+    dot()
+    
+getscreen().onkey(up, 'u')
+getscreen().onkey(clear, 'c')
+getscreen().onkey(begin_fill, 'b')
+getscreen().onkey(end_fill, 'e')
+    
+getscreen().onclick(ligne)
+getscreen().listen()
+```
+
+**Exercice** : Dessinez une maison. Utilisez la touche `b` (begin) pour commencer le remplissage et la touche `e` (end) pour terminer le remplissage.
 
 ## Echiquier
 
@@ -101,19 +150,19 @@ y0, dy, ny = -160, 40, 8
 x1 = x0 + nx * dx
 y1 = y0 + ny * dy
 
+def ligne(x0, y0, x1, y1):
+    goto(x0, y0)
+    down()
+    goto(x1, y1)
+    up()
+
 for i in range(ny + 1):
     y = y0 + i * dy
-    goto(x0, y)
-    down()
-    goto(x0 + nx * dx, y)
-    up()
+    ligne(x0, y, x1, y)
     
 for i in range(nx + 1):
     x = x0 + i * dx
-    goto(x, y0)
-    down()
-    goto(x, y0 + ny * dy)
-    up()
+    ligne(x, y0, x, y1)
 
 def f(x, y):
     if x0 < x < x1:
@@ -134,6 +183,14 @@ getscreen().listen()
 **Exercice** : Cliquez dans chaque deuxième case.
 
 ## Héritage
+
+Dans l'exemple suivant nous définissons une classe parent `Object`. Elle possède les méthodes 
+
+- `draw_box()` pour dessiner un contour rectangulaire
+- `fill_box()` pour dessiner un rectangle rempli
+- `inside(x, y)` pour tester si le point `(x, y)` se trouve dans le rectangle
+
+Les trois fonctions `Dot`, `Rect` et `Text` héritent tous les méthodes de la classe parent `Object`.
 
 ```{codeplay}
 from turtle import *
@@ -233,39 +290,15 @@ getscreen().onclick(f)
 getscreen().listen()
 ```
 
-```{codeplay}
- from turtle import *
-shape('turtle')
-
-def f(x, y):
-    print('screen click at', x, y)
-    
-def g(x, y):
-    print('turtle click at', x, y)
-    
-def h(x, y):
-    print('drag', x, y)
-
-def k(x, y, b):
-    print('release', x, y)
-
-t = getturtle()
-s = getscreen()
-
-s.onclick(f)
-t.onclick(g)
-#t.ondrag(h)
-t.onrelease(k, 1)
-s.listen()
-```
+**Exercice** : Clickez dans tout les objets et observez les info affichés dans la console.
 
 ## ondrag-onrelease
 
 Le programme suivant permet de déplacer la tortue avec la souris
 
-- `onclick` la tortue devient rouge
-- `ondrag` la tortue devient orange et suit la souris
-- `onrelease` la tortue devient vert et s'arrête
+- `onclick` la tortue devient rouge,
+- `ondrag` la tortue devient orange et suit la souris,
+- `onrelease` la tortue devient vert et s'arrête,
 
 **Note** La fonction on `onrelease` ne fonction pas ici, mais elle fonctionne dans l'éditeur externe Thonny.
 
@@ -291,3 +324,5 @@ onclick(f)
 ondrag(g)
 onrelease(h)
 ```
+
+**Exercice** : Essayez de tirez la tortue lentement avec la souris.

@@ -1,4 +1,10 @@
-# Couleur - `dot`
+# Nuancer - `color`
+
+Dans ce chapitre nous allons voir les couleurs dans toutes leurs nuances. En informatique les couleurs sont basées sur les couleurs primaires **rouge**, **vert** et **bleu**. Leur combinaison respective permet de créer tout le spectre des couleurs visibles. Nous allons voir que
+
+- la fonction `color(r, v, b)` représente une couleur avec des nombres,
+- la fonction `color('#rvb')` représente une couleur avec un hexadécimal,
+- la fonction `color(r, v, b, a)` ajoute la transparence `a` (alpha).
 
 ## Rouge-Vert-Bleu (RVB)
 

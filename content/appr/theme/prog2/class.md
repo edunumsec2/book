@@ -2,7 +2,7 @@
 
 La programmation orientée objet (POO) considère les éléments d'un programme comme des objets qui sont *moulés* d'après une référence qu'on appelle class. Nous allons voir que
 
-- le mot-clé `class Point` permet de définir une nouvelle class d'objets,
+- le mot-clé `class` permet de définir une nouvelle classe d'objets,
 - les classes se distinguent des objets d'une majuscule,
 - l'expression `point = Point(1, 2)` crée une nouvelle instance et initialise avec des valeurs.
 
@@ -12,7 +12,7 @@ Le mot-clé `class` permet de définir une classe.
 Le nom des classe est écrit avec une majuscule.
 
 ```{codeplay}
-class Point():
+class Point:
     pass
 
 p = Point()

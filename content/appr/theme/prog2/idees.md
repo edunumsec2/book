@@ -281,35 +281,6 @@ for line in histoire.split('\n'):
     print()
 ```
 
-## Events
-
-La tortue a trois événements qui y sont associés :
-
-- cliquer
-- tirer
-- relâcher
-
-```{codeplay}
-from turtle import *
-
-shape('turtle')
-forward(100)
-
-def click(x, y):
-    print('click', x, y)
-    
-def drag(x, y):
-    print('drag', x, y)
-    
-def release(x, y):
-    print('release', x, y)
-    
-getturtle().onclick(click)
-getturtle().ondrag(drag)
-getturtle().onrelease(release)
-getscreen().listen()
-```
-
 ## Le Zen de Python
 
 Le Zen de Python est un ensemble de 19 principes qui influencent la conception du langage de programmation Python, et sont utiles pour comprendre et utiliser le langage.
@@ -336,28 +307,6 @@ print(len(a))
 ```{codeplay}
 import re
 print(dir(re))
-```
-
-## Mitsubishi
-
-Le nom Mitsubishi (三菱) signifie *trois losanges* ou *trois diamants* ce qui est réfléchi dans son logo.
-
-```{codeplay}
-from turtle import *
-color('red')
-hideturtle()
-
-def losange():
-    for a in (60, 120, 60, 120):
-        forward(100)
-        left(a)
-
-left(60)
-for i in range(3):
-    begin_fill()
-    losange()
-    end_fill()
-    left(120)
 ```
 
 ## Fonction `ontimer`
@@ -572,6 +521,14 @@ print(t1-t0)
 
 ## Snow Crash
 
+Le [Samouraï virtuel](https://fr.wikipedia.org/wiki/Le_Samouraï_virtuel) (titre anglais : Snow Crash) est un roman de Neal Stephenson, paru en 1992, se déroulant dans un univers futuriste parfois qualifié de cyberpunk ou, plus précisément, de postcyberpunk.
+
+Snow crash est un virus transmis de façon visuelle et qui s'attaquerait directement au « système opératoire » du cerveau des programmeurs par affichage sur écran de symboles apparemment indéchiffrables (d'où le titre original Snow crash).
+
+```{warning}
+Ne cliquez pas sur **Exécuter** ! Ce code sert uniquement d'illustration ! Les risques pour votre cerveau seront imprévisibles.
+```
+
 ```{codeplay}
 from turtle import *
 from random import *
@@ -589,6 +546,10 @@ while True:
             r = random()
             dot(d, (r, r, r))
     update()
+```
+
+```{danger}
+Ne cliquez pas sur **Exécuter** ! Ce code sert uniquement d'illustration ! Ce code illustre une version du **virus Snow crash** avec des pixels en couleurs.
 ```
 
 ```{codeplay}

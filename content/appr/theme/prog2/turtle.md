@@ -9,7 +9,7 @@ Mais les tortues sont des objets dérivés de la classe `Turtle`. Vous allez voi
 - la fonction `dir()` permet d'afficher ses méthodes,
 - la forme `bob = Turtle()` crée une nouvelle tortue.
 
-## Créer des petites tortues
+## Créer des tortues
 
 Dans la première partie, nous avons utilisé une seule tortue. Mais nous pouvons en créer autant que nous voulons. Chaque tortue garde sa couleur, sa position, et son orientation personnelle. Dans le programme suivant nous créons une tortue `ana` et une tortue `bob`.
 
@@ -80,7 +80,105 @@ s.onkey(lambda : bouger(bob, 270), 's')
 s.listen()
 ```
 
+## Afficher un score
+
+Nous pouvons aussi créer une tortue juste pour afficher du texte. Elle restera alors toujours au même endroit.
+
+Nous créons une tortue `score` et nous la positionnons ne haut à gauche. Elle va afficher le texte **score = n**. 
+
+Ici, à chaque fois que nous bougons la tortue, le score augmente. Avant d'écrire le nouveau score, nous devons effacer l'ancien score. Une écriture se présente donc comme :
+
+- effacer l'ancien score avec `score.clear()`
+- afficher le nouveau score avec `score.write()`
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+
+ana = getturtle()
+ana.shape('turtle')
+ana.speed(0)
+ana.color('red')
+
+n = 0
+score = Turtle()
+score.up()
+score.speed(0)
+score.hideturtle()
+score.goto(-280, 160)
+score.write(f'score = {n}', font=(None, 18))
+
+def bouger(tortue, dir):
+    global n
+    tortue.seth(dir)
+    tortue.forward(20)
+    n += 1
+    score.clear()
+    score.write(f'score = {n}', font=(None, 18))
+    
+s.onkey(lambda : bouger(ana, 0), 'right')
+s.onkey(lambda : bouger(ana, 90), 'up')
+s.onkey(lambda : bouger(ana, 180), 'left')
+s.onkey(lambda : bouger(ana, 270), 'down')
+s.listen()
+```
+
+## Trouver de la nourriture
+
+Dans cet exemple nous créons 3 tortues :
+
+- `player` sous forme de tortue bleue
+- `food` sous forme de cercle rouge (pomme)
+- `score` sans tortue et immobile pour afficher le score
+
+La pomme rouge apparait a une position aléatoire.
+Quand la tortue attrape la pomme, le score augmente et la pomme réapparait à une nouvelle position aléatoire.
+
+```{codeplay}
+from turtle import *
+from random import *
+s = getscreen()
+
+player = getturtle()
+player.shape('turtle')
+player.speed(0)
+player.color('blue')
+
+food = Turtle()
+food.shape('circle')
+food.color('red')
+food.speed(0)
+food.up()
+food.goto(randint(-300, 300), randint(-200, 200))
+
+n = 0
+score = Turtle()
+score.up()
+score.speed(0)
+score.hideturtle()
+score.goto(-280, 160)
+score.write(f'score = {n}', font=(None, 18))
+
+def bouger(tortue, dir):
+    global n
+    tortue.seth(dir)
+    tortue.forward(20)
+    if player.distance(food) < 20:
+        n += 1
+        score.clear()
+        score.write(f'score = {n}', font=(None, 18))
+        food.goto(randint(-300, 300), randint(-200, 200))
+    
+s.onkey(lambda : bouger(player, 0), 'right')
+s.onkey(lambda : bouger(player, 90), 'up')
+s.onkey(lambda : bouger(player, 180), 'left')
+s.onkey(lambda : bouger(player, 270), 'down')
+s.listen()
+```
+
 ## Créer beaucoup de tortues
+
+Dans l'exemple suivant nous créons toute une liste de tortues.
 
 ```{codeplay}
 from turtle import *
@@ -112,15 +210,4 @@ def move():
     s.ontimer(move, 100)
         
 move()
-```
-
-## Distance
-
-
-```{codeplay}
-from turtle import *
-
-goto(200, 100)
-print('distance =', distance(0, 0))
-print('toward =', toward(0, 0))
 ```

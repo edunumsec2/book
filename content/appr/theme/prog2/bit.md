@@ -1,10 +1,12 @@
-# Logique par bit - `&`
+# Manipuler - `&`
 
-Dans ce chapitre nous allons explorer des opérateurs logiques qui opèrent sur chaque bit d'une opérande séparément.
+La [manipulation de bits](https://fr.wikipedia.org/wiki/Manipulation_de_bits) consiste à agir sur des données au niveau d'un bit ou d'un ensemble de bits à l'aide d'opérations booléennes. En informatique, cette technique est notamment utilisée pour des opérations de bas niveau comme le contrôle des périphériques, ou encore dans certains algorithmes comme la détection et la correction d'erreur ou le chiffrement, ainsi que pour l'optimisation.
 
-- l'opérateur `&` effectue un **and** par bit
-- l'opérateur `|` effectue un **or** par bit
-- l'opérateur `^` effectue un **xor** par bit
+Dans ce chapitre nous allons explorer des opérateurs logiques qui opèrent sur un nombre au niveau d'un bit :
+
+- l'opérateur `&` effectue un **and** par bit,
+- l'opérateur `|` effectue un **or** par bit,
+- l'opérateur `^` effectue un **xor** par bit.
 
 ## Bitwise and (`&`)
 

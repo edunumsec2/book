@@ -1,22 +1,67 @@
 # Tracer - `math`
 
-Le module `math` permet d'importer toute une série de constantes et fonctions mathématiques.
+Dans ce chapitre nous allons découvrir comment nous pouvons tracer des fonctions mathématiques pour les visualiser. Le module `math` met à disposition toute une série de constantes et fonctions mathématiques. Vous allez découvrir 
+
+- les fonctions trigonométriques `sin()`, `cos()` et `tan()`,
+- la fonction exponentielle `exp()`,
+- la fonction logarithmique `log()`.
+
+## Tracer une fonction
+
+Pour donner une idée de ce que nous allons faire, voici tout de suite un exemple de comment tracer les deux fonctions trigonométriques `sin()` et `cos()`.
+
+Au début du programme nous importons le module `math`. Par la suite nous pouvons accéder aux nouvelles fonctions importées `math.sin()` et `math.cos()`.
+
+Dans l'intervalle [-300, 300] nous prenons une valeur tous les 10, ce qui nous fait 60 valeurs.
+
+Pour adapter la fonction à l'échelle de la tortue nous changeons :
+
+- `x` par un facteur de 50,
+- `y` par un facteur de 100.
+
+```{codeplay}
+from turtle import *
+import math
+up()
+
+color('red')
+for x in range(-300, 300, 10):
+    y = 100 * math.sin(x/50)
+    setpos(x, y)
+    down()
+    dot()
+    
+up()
+color('blue')
+for x in range(-300, 300, 10):
+    y = 100 * math.cos(x/50)
+    setpos(x, y)
+    down()
+    dot()
+```
+
+**Exercice** : Modifiez couleur, amplitude, fréquence ou nombre de points de la courbe.
 
 ## Importer un module
 
-Le mot-clé `import` permet d'importer un module. La fonction `dir()` permet de voir le contenu du module.
-Normalement c'est dans la première ligne d'un programme qu'on importe un module.
+Le mot-clé `import` permet d'importer un module. Normalement c'est dans la première ligne d'un programme qu'on importe un module. La fonction `dir()` permet de voir le contenu du module.
 
 ```{codeplay}
 import math
 print(dir(math))
 ```
 
-**Exercice :** importez le module `random` et affichez son contenu avec `dir`.
+**Exercice** : Importez le module `random` et affichez son contenu avec `dir`.
 
 ## Format `module.objet`
 
-Pour utiliser un objet du module importé, il faut faire précéder le nom de l'objet par le nom du module, séparé d'un point, par exemple `math.pi` pour la constante $\pi$.
+Pour utiliser un objet d'un module importé, il faut écrire de façon `module.objet`
+
+- le nom du module
+- le point `.` (dot)
+- le nom de l'objet
+
+comme par exemple `math.pi` pour la constante $\pi$. Voici quelques exemples.
 
 ```{codeplay}
 import math
@@ -26,20 +71,15 @@ print('pi =', math.pi)
 print('fact(7) =', math.factorial(7))
 ```
 
-**Exercice :** utilisez la fonction `pow()` (power = puissance) et affichez le résultat.
-
-On retrouve dans le module `math` des fonctions :
-
-- arithmétiques,
-- logarithmiques et exponentielles,
-- trigonométriques.
+**Exercice** : Essayez la fonction `pow()` (puissance) et affichez le résultat.
 
 ## Constantes
 
-Nous pouvons explicitement importer des objets avec les mots-clés `from x import y`. 
-Ceci nous permet de directement accéder au nom de l'objet sans ajouter le nom du module. Nous pouvons donc écrire directement `pi` au lieu de `math.pi`.
+Avec l'expression `from module import obj1, obj2` nous pouvons explicitement importer des objets par nom.
 
-Parmi ces objets il y en a 5 qui sont des constantes:
+Ceci nous permet de directement accéder à l'objet sans ajouter le nom du module. Nous pouvons donc écrire directement `pi` au lieu de `math.pi`.
+
+Le module `math` contient 5 constantes:
 
 - `e  ` base des logarithmes naturels (nombre d'Euler)
 - `inf` symbole pour infinité
@@ -58,7 +98,9 @@ print('pi  =', pi)
 print('tau =', tau)
 ```
 
-## Fonctions trigonométriques
+**Exercice** : Vérifiez de façon numérique que $2\pi = \tau$.
+
+## Fonction trigo
 
 Voici les fonctions trigonométriques:
 
@@ -73,8 +115,7 @@ Et leurs fonctions inverses (arc):
 - `acos/acosh`
 - `atan/atanh`
 
-Dorénavant nous utilisons l'expression `from math import *` pour importer tous les objets du module `math`. Le symbole `*` signifie tout.
-Affichons donc les fonctions `sin()` et `cos()` avec deux couleurs différentes.
+Dorénavant nous utilisons l'expression `from math import *` pour importer tous les objets du module `math`. Le symbole `*` représente tous les objets.
 
 ```{codeplay}
 from turtle import *
@@ -87,19 +128,13 @@ for x in range(-300, 300, 10):
     setpos(x, y)
     down()
     dot()
-    
-up()
-color('blue')
-for x in range(-300, 300, 10):
-    y = 100 * cos(x/50)
-    setpos(x, y)
-    down()
-    dot()
 ```
+
+**Exercice** : Ajoutez et tracez une deuxième fonction trigonométrique dans une autre couleur.
 
 ## Afficher les axes
 
-Dessinons aussi des axes :
+Dessinons aussi des axes, nous allons utiliser la fonction `stamp` pour dessiner la flèche de l'axe.
 
 ```{codeplay}
 from turtle import *
@@ -120,37 +155,29 @@ stamp()
 up()
 ```
 
-```{codeplay}
-import math
-from turtle import *
+Nous pouvons re-écrire le code de façon plus court et plus lisible en définissant une fonction `axe()`.
 
-for x in range(-6, 7, 1):
-    setx(x * 50)
-    dot()
-    write(' ' + str(x))
-```
-
-## Fonction exponentielle
+Cette fonction utilise deux paramètres `p` et `q` qui sont un tuple qui représente^ les coordonnées du point de départ et du point d'arrivée.
 
 ```{codeplay}
 from turtle import *
-from math import *
-
-for x in range(-5, 6):
-    goto(x * 50, 0)
-    dot()
-    write(x)
-    
 up()
 
-for x in range(-5, 6):
-    y = exp(x)
-    goto(x * 50, y * 50)
+def axe(p, q):
+    goto(p)
     down()
-    dot()
+    seth(towards(q))
+    goto(q)
+    stamp()
+    up()
+    
+axe((-280, 0), (280, 0))
+axe((0, -180), (0, 180))
 ```
 
 ## Afficher une grille
+
+Avec multiples lignes horizontales et verticales nous dessinons une grille.
 
 ```{codeplay}
 from turtle import *
@@ -172,25 +199,91 @@ for y in range(-180, 180+1, d):
     up()
 ```
 
-## Grapher des fonctions
+En définissant la fonction `ligne()` nous pouvons rendre le programme plus lisible.
+
+```{codeplay}
+from turtle import *
+speed(0)
+up()
+d = 40
+
+def ligne(p, q):
+    goto(p)
+    down()
+    goto(q)
+    up()
+
+for x in range(-280, 280+1, d):
+    ligne((x, -180), (x, 180))
+    
+for y in range(-180, 180+1, d):
+    ligne((-280, y), (280, y))
+```
+
+**Exercice** : Mettez la distance `d` à 20 et à 10 et ré-exécutez le programme.
+
+## Echèlle
+
+```{codeplay}
+import math
+from turtle import *
+up()
+
+n = 60
+plage = -3, 6
+d = plage[1] - plage[0]
+
+for i in range(n):
+    x = -300 + i * 600/n
+    x_ = plage[0] + i * d/n
+    goto(x, 0)
+    if i % 10 == 0:
+        dot()
+        write(f'{x_:.1}')
+```
+
+## Tracer des fonctions
+
+```{codeplay}
+from turtle import *
+from math import *
+up()
+color('red')
+n = 60
+plage = -3, 6
+d = plage[1] - plage[0]
+
+for i in range(n):
+    x = -300 + i * 600/n
+    x_ = plage[0] + i * d/n
+    y_ = sin(x_)
+    y = 200/2 * sin(x_)
+    goto(x, y)
+    down()
+    if i % 5 == 0:
+        dot()
+        write(f'{x_:.2}, {y_:.2}')
+```
+
+## Tracer une fonction
 
 ```{codeplay}
 from turtle import *
 from math import *
 up()
     
-def graph(f, col, name):
-    color(col)
+def tracer(f, couleur='red', nom='f'):
+    color(couleur)
     for x in range(-300, 250, 10):
         y = 100 * f(x/50)
         goto(x, y)
         down()
         dot()
     up()
-    write(' ' + name, font=(None, 18))
+    write(' ' + nom, font=(None, 18))
 
-graph(sin, 'green', 'sin')
-graph(cos, 'red', 'cos')
+tracer(sin, 'green', 'sin')
+tracer(cos)
 ```
 
 ## arc tangente

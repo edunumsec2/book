@@ -1,6 +1,6 @@
-# Logique - `and`
+# Raisonner - `bool`
 
-La logique analyse de façon rigoureux des propositions qui sont soit vrai soit faux.
+Raisonner c'est lier logiquement entre elles des propositions pour aboutir à une proposition nouvelle, à une conclusion. La logique analyse de façon rigoureux des propositions qui sont soit vrai soit faux. On parle de la logique booléenne.
 
 - Les deux valeurs logiques sont `True` et `False`
 - L'opération de négation `not` donne l'inverse

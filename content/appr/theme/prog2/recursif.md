@@ -1,6 +1,6 @@
-# Récursif - `f(n)`
+# Revenir - `f(n)`
 
-La définition d'une fonction `f(n)` qui contient à l'intérieur de sa définition le terme `f(n-1)` représente une **fonction récursive**, c'est à dire une fonction qui s'appelle soi-même. Elle s'appelle souvent soi-même avec une valeur plus simple.
+La définition d'une fonction `f(n)` qui contient à l'intérieur de sa définition le terme `f(n-1)` représente une **fonction récursive**, c'est à dire une fonction qui s'appelle elle-même, ou qui revient vers elle-même. Elle s'appelle souvent avec une valeur plus simple, par exemple `n-1` au lieu de `n`.
 
 ## Boucle infinie
 

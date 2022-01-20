@@ -343,6 +343,28 @@ for i in range(100):
     dot(s)
 ```
 
+## Mitsubishi
+
+Le nom Mitsubishi (三菱) signifie *trois losanges* ou *trois diamants* ce qui est représenté dans son logo.
+
+```{codeplay}
+from turtle import *
+color('red')
+hideturtle()
+
+def losange():
+    for a in (60, 120, 60, 120):
+        forward(100)
+        left(a)
+
+left(60)
+for i in range(3):
+    begin_fill()
+    losange()
+    end_fill()
+    left(120)
+```
+
 ## Modulo
 
 Le nom Modulo fait référence à l'opérateur **modulo** en mathématique `%` et à la structure **modulaire** du cour.
