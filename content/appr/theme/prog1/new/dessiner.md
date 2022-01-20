@@ -344,13 +344,36 @@ maison()
 
 **Exercice** : Mettez la porte au milieu de la maison, et dessinez une deuxième maison.
 
+## Chaise et table
+
+Essayez maintenant vous-même de définir deux fonctions. Dessinez une chaise en forme de la lettre h et une table en forme de la lettre T.
+
+Vous devez d'abord les définir, ensuite vous pouvez les appeler.
+
+```{codeplay}
+:file: fwd9.py
+from turtle import *
+
+def chaise():
+    # mettez votre code ici
+    ...
+
+def table():
+    # mettez votre code ici
+    ...
+
+chaise()
+forward(100)
+table()
+```
+
 ## Epaisseur de ligne
 
 La fonction `width(d)` (épaisseur en anglais) permet de définir l'épaisseur de la ligne.
 Voici un triangle ou chaque côté a une épaisseur différente.
 
 ```{codeplay}
-:file: fwd9.py
+:file: fwd10.py
 from turtle import *
 
 forward(200)
@@ -372,7 +395,7 @@ left(120)
 Nous reprenons l'exemple de la maison et dessinons le toit plus épais.
 
 ```{codeplay}
-:file: fwd10.py
+:file: fwd11.py
 from turtle import *
 
 def maison():
@@ -405,7 +428,7 @@ Les deux commandes `up()` et `down()` permettent de lever et baisser le stylo.
 Ceci nous permet dessiner des formes séparées, comme ces deux triangles.
 
 ```{codeplay}
-:file: fwd11.py
+:file: fwd12.py
 from turtle import *
 
 def triangle():
@@ -425,12 +448,16 @@ triangle()
 
 **Exercice** : Ajoutez encore un triangle disjoint.
 
+```{caution}
+Contrairement aux fonctions `forward(d)` et `back(d)` qui nécessitent un argument, les fonctions `up()` et `down()` ne nécessitent pas d'argument.
+```
+
 ## Maison avec fenêtre
 
 Dans le programme ci-dessous nous dessinons de nouveau une maison avec cette fois-ci une fenêtre. Les fonctions `up()/down()` nous permettent de dessiner des formes disjointes, telle qu'une fenêtre à l'intérieur de la maison.
 
 ```{codeplay}
-:file: fwd12.py
+:file: fwd13.py
 from turtle import *
 
 def fenetre():
@@ -471,7 +498,7 @@ Ensuite il suffit d'**appeler** cette fonction.
 En appelant la fonction `bras()`, au lieu d'écrire 6 lignes, nous écrivons que 1 ligne de code.
 
 ```{codeplay}
-:file: fwd13.py
+:file: fwd14.py
 from turtle import *
 
 def bras():
@@ -505,7 +532,7 @@ Ici nous dessinons une fenêtre composé de 4 carreau. Nous pouvons décomposer 
 - la fonction `equerre()` appelle deux fois la fonction `ligne()`.
 
 ```{codeplay}
-:file: fwd14.py
+:file: fwd15.py
 from turtle import *
 
 def ligne():
