@@ -39,7 +39,7 @@ parts:
       - file: content/appr/theme/prog1/new/repeter
       - file: content/appr/theme/prog1/new/cercler
       - file: content/appr/theme/prog1/new/parcourir
-      - file: content/appr/theme/prog1/new/repondre
+      - file: content/appr/theme/prog1/new/questionner
       - file: content/appr/theme/prog1/new/ecrire
       - file: content/appr/theme/prog1/new/calculer
       - file: content/appr/theme/prog1/new/iterer
