@@ -284,9 +284,9 @@ maison()
 
 **Exercice** : Ajoutez encore une maison dans une autre couleur.
 
-## Export vers un fichier
+## Exporter une image
 
-Pour sauvegarder votre dessin vers un fichier copiez le code du dessin dans l'éditeur Thonny. Ensuite copiez ces lignes de code ci-dessous à la fin de de votre fichier.
+Pour enregistrer votre dessin vers un fichier image copiez le code du dessin dans l'éditeur Thonny. Ensuite copiez ces lignes de code ci-dessous à la fin de de votre fichier.
 
 ```  python
 from tkinter import * 
@@ -294,7 +294,7 @@ cn = getscreen().getcanvas()
 cn.postscript(file='file.eps')
 ```
 
-Votre image va être exporté vers un fichier qui s'appelle `file.eps` et qui se trouve dans le même dossier ou se trouve votre fichier Python.
+Votre image va être exporté vers un fichier qui s'appelle `file.eps` et qui se trouve dans le même dossier ou se trouve votre programme Python.
 Vous pouvez changer le nom du fichier, mais vous devez garder l'extension `.eps`.
 
 Sur un Mac, vous pouvez ouvrir un fichier `.eps` avec l'application **Aperçu** et ensuite exporter l'image vers le format PDF, JPG ou PNG.
@@ -326,24 +326,6 @@ from tkinter import *
 cn = getscreen().getcanvas()
 cn.postscript(file='smiley.eps')
 ```
-
-## Export en PNG/JPG
-
-Pour directement sauvegarder votre dessin en format PNG, ajoutez ces lignes de code à la fin de votre dessin.
-
-``` python
-from tkinter import *
-from PIL import Image
-import io
-
-cn = getscreen().getcanvas()
-ps = cn.postscript(colormode='color')
-file = io.BytesIO(ps.encode('utf-8'))
-img = Image.open(file)
-img.save('file.png')
-```
-
-Pour sauvegarder en format JPG utilisez tout simplement l'extension `.jpg`.
 
 ## Exercices
 

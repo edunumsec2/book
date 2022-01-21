@@ -216,6 +216,82 @@ for i in range(6):
 
 **Exercice** : Tournez un angle plus petit que 60°
 
+## Estamper la tortue
+
+Vous pouvez laisser une impression de la tortue à sa position actuelle avec la fonction `stamp()`.
+
+```{codeplay}
+:file: for11.py
+from turtle import *
+shape('turtle')
+
+for i in range(6):
+    forward(100)
+    left(60)
+    stamp()
+```
+
+**Exercice** : Modifiez le programme pour estamper seulement à chaque deuxième sommet.
+
+## Forme
+
+Vous pouvez changer la forme de votre tortue avec la fonction `shape()`.
+
+```{codeplay}
+:file: for12.py
+from turtle import *
+back(200)
+
+stamp()
+shape('turtle')
+forward(100)
+
+stamp()
+shape('circle')
+forward(100)
+
+stamp()
+shape('square')
+forward(100)
+```
+
+**Exercice** : Essayez les formes `triangle` et `arrow`.
+
+## Vitesse
+
+Vous pouvez changer la vitesse de la tortue avec la fonction `speed(s)`.
+Le paramètre vitesse `s` peut varier entre 1 (le plus lent) et 1000 (le plus rapide). Sa vitesse par défaut est de 3. Mettre la vitesse à 0 choisit automatiquement la vitesse maximum.
+
+```{codeplay}
+:file: for13.py
+from turtle import *
+speed(2)
+
+for i in range(36):
+    forward(280)
+    left(170)
+```
+
+**Exercice** : Augmentez graduellement la vitesse de la tortue.
+
+## Exporter en PNG/JPG
+
+Pour directement sauvegarder votre dessin en format PNG, ajoutez ces lignes de code à la fin de votre dessin.
+
+``` python
+from tkinter import *
+from PIL import Image
+import io
+
+cn = getscreen().getcanvas()
+ps = cn.postscript(colormode='color')
+file = io.BytesIO(ps.encode('utf-8'))
+img = Image.open(file)
+img.save('file.png')
+```
+
+Pour sauvegarder en format JPG appelez tout simplement votre fichier `file.jpg`.
+
 ## Erreurs
 
 Il est important de bien comprendre les messages d'erreurs.

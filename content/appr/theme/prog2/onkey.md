@@ -1,4 +1,4 @@
-# Avancer - `onkey`
+# Déclencher - `onkey`
 
 Dans cette deuxième partie nous allons avancer plus vite. Tout d'abord nous allons faire *avancer* la tortue à l'aide des touches du clavier. C'est une technique que nous allons utiliser plus tard pour les jeux vidéos. Nous allons découvrir également le concept *avancé* de la fonction lambda.
 

@@ -21,7 +21,7 @@ Un programme informatique est
 
 ## Le module `turtle`
 
-Dans le langage de programmation Python, le module `turtle` (tortue en anglais) présente une façon sympathique pour faire des dessins. Ce pour cela que nous commençons notre aventure de programmation avec cet animal qui avance tout doucement à son propre rythme à lui.
+Dans le langage de programmation Python, le module `turtle` (tortue en anglais) présente une façon sympathique pour faire des dessins. C'est pour cela que nous commençons notre aventure de programmation avec cet animal qui avance tout doucement à son propre rythme à lui.
 
 On s'imagine une tortue qui se déplace sur un canevas et laisse une trace.
 
@@ -583,7 +583,7 @@ Nous vous proposons d'utiliser [Thonny](https://thonny.org), qui est un logiciel
 ```{image} media/thonny.png
 ```
 
-Quand vous utilisez le module `turtle()` avec Thonny, ajoutez toujours la fonction `done()` comme dernière ligne de code, pour que vous puissiez quitter le programme.
+Quand vous utilisez le module `turtle` avec Thonny, ajoutez toujours la fonction `done()` comme dernière ligne de code, pour que vous puissiez quitter le programme.
 
 ## Exercices
 
