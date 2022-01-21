@@ -1,15 +1,16 @@
 # Programmation II
 
-Programmer peut être simple. Si vous savez dessiner, écrire et calculer, alors vous savez aussi programmer.
+Dans la première partie nous avons appris les bases de la programmation en Python. Nous avons vu comment une tortue peux dessiner, colorier, répéter, parcourir et faire plein d'autres choses.
 
-Dans cette deuxième partie nous allons découvrir les dictionnaires, la logique élémentaire et la programmation orientée objet. Nous faisons ceci toujours en étant le plus visuel que possible.
+Dans la deuxième partie nous allons découvrir la programmation orienté objet. Maintenant nous pouvons créer autant de tortues que nous voulons. Nos tortues deviennent également interactifs et elles réagissent aux touches du clavier et aux clics de la souris.
+
 ## Objectifs
 
-{fa}`check, text-success mr-1` Continuer à découvrir le langage Python
+{fa}`check, text-success mr-1` Découvrir la programmation orientée objet
 
-{fa}`check, text-success mr-1` Raisonner et comprendre la logique élémentaire
+{fa}`check, text-success mr-1` Réagir à la souris et au clavier
 
-{fa}`check, text-success mr-1`  Découvrir la programmation orientée objet
+{fa}`check, text-success mr-1` Explorer les sujets avancés de Python
 
 ## Personnages-clés
 
