@@ -3,11 +3,11 @@
 Dans ce chapitre nous explorons ce que c'est un programme et nous prenons
  la métaphore du dessin. Ici, un programme est une séquence d'instructions pour dessiner une image.
 
-Allons-y en avant (forward) avec la programmation. Nous allons voir que
+Allons-y en avant (forward) avec la programmation. Nous allons voir que :
 
 - les instructions `forward()`, `back()`, `left()`, `right()` permettent de dessiner,
 - le mot-clé `def` permet de nommer (définir) une séquence,
-- la fonction `width(d)` permet de choisir l'épaisseur,
+- la fonction `width()` permet de choisir l'épaisseur,
 - les fonctions `up()/down()` permettent de lever et baisser le stylo.
 
 ```{question}

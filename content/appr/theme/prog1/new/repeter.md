@@ -1,8 +1,8 @@
 # Répéter - `for`
 
-Dans ce chapitre nous découvrons comment utiliser une boucle `for` pour répéter un bloc d'instructions un certain nombre de fois.
+Dans ce chapitre nous découvrons comment utiliser une boucle `for` pour répéter un bloc d'instructions un certain nombre de fois. Nous allons voir que :
 
-- une boucle `for` permet de répéter des instructions,
+- la boucle `for` permet de répéter des instructions,
 - la structure `for i in range(x):` permet de répéter un bloc x fois,
 - le deux-points `:` est toujours suivi d'un bloc en indentation.
 

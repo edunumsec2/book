@@ -1,6 +1,6 @@
 # Attendre - `while`
 
-Dans ce chapitre nous découvrons un deuxième type de boucle, la boucle `while`, qui est souvent utilisée pour attendre quelque chose. Nous allons voir que : 
+Dans ce chapitre nous découvrons un deuxième type de boucle, la boucle `while`. Elle est souvent utilisée pour attendre quelque chose. Nous allons voir que :
 
 - la boucle `while` répète aussi longtemps qu'une condition est vraie,
 - la fonction `sleep()` permet d'attendre et ralentir le programme,
@@ -21,6 +21,7 @@ On peut utiliser la boucle `while` pour créer un compteur à rebours.
 Pour attendre une seconde, la fonction `sleep()` du module `time` est importée.
 
 ```{codeplay}
+:file: whi1.py
 from time import sleep
 
 n = int(input('Entrez un entier: '))
@@ -40,6 +41,7 @@ On ne peut pas savoir à l'avance combien de noms il y aura, donc ici nous ne po
 La convention est d'utiliser des noms au pluriel (`noms`) pour désigner la liste et le même nom au singulier (`nom`) pour désigner un de ses éléments.
 
 ```{codeplay}
+:file: whi2.py
 noms = []
 nom = input('Entrez un nom: ')
 
@@ -61,6 +63,7 @@ Au lieu d'écrire `while x != '':` nous pouvons simplifier vers  `while x:`.
 La raison est que la chaîne vide est associée à `False` et toute autre chaîne non-vide est associée à `True`.
 
 ```{codeplay}
+:file: whi3.py
 somme = 0
 x = input('Entrez un nombre: ')
 
@@ -79,6 +82,7 @@ Nous utilisons une boucle `while` pour demander des nombres à l'utilisateur.
 On ne peut pas savoir à l'avance combien de nombres il y aura, et donc nous ne pouvons pas utiliser la boucle `for`.  Nous prenons comme condition de terminaison une réponse avec une chaîne vide (`''`).
 
 ```{codeplay}
+:file: whi4.py
 somme = 0
 n = 0
 x = input('Entrez un nombre: ')
@@ -103,6 +107,7 @@ La fonction `input()` ne retourne que le type `str`.
 La fonction `int()` transforme le type string (chaîne) en entier (integer).
 
 ```{codeplay}
+:file: whi5.py
 from random import randint
 
 n = randint(1, 99)
@@ -147,6 +152,7 @@ En Python, le symbole `:` en fin de ligne introduit un sous-bloc qui doit être 
 Voici 5 sous-blocs à la suite des mot-clés `def`, `if`, `elif`, `else`, `for` :
 
 ```{codeplay}
+:file: whi6.py
 def f(x):
     if x > 0:
         return 'positif'
@@ -163,6 +169,7 @@ Dans l'exemple suivant nous avons une boucle qui fait trois itérations.
 Les deux instructions `print()` font partie du bloc de la boucle.
 
 ```{codeplay}
+:file: whi7.py
 for i in range(3):
     print('itération', i)
     print('-' * 11)
@@ -176,6 +183,7 @@ Le mot-clé `break`, seul sur une ligne, permet de sortir d'une boucle.
 Souvent cette méthode est utilisée pour sortir d'une boucle infinie.
 
 ```{codeplay}
+:file: whi8.py
 noms = []
 
 while True:

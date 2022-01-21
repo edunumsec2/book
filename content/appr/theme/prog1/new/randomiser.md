@@ -1,11 +1,10 @@
 # Randomiser - `random`
 
-Dans ce chapitre nous verrons comment un programme peut introduire un élément aléatoire dans un calcul ou dans un raisonnement. Ceci est très important pour programmer certains jeux. Nous allons voir que : 
+Dans ce chapitre nous verrons comment un programme peut introduire un élément aléatoire dans un calcul ou dans un raisonnement. Ceci est très important pour programmer certains jeux. Nous allons voir que :
 
-- la fonction `random()` retourne une valeur aléatoire dans l'intervalle [0, 1],
-- la fonction `randint(a, b)` retourne un entier aléatoire dans l'intervalle [a, b],
+- la fonction `random()` renvoie une valeur aléatoire dans l'intervalle [0, 1],
+- la fonction `randint(a, b)` renvoie un entier aléatoire dans l'intervalle [a, b],
 - la fonction `shuffle(liste)` fait une permutation aléatoire des éléments d'une liste.
-
 
 ```{question}
 En Python `random` est
@@ -21,6 +20,7 @@ En Python `random` est
 Le module `random` permet de créer des nombres pseudo-aléatoires. Il met à disposition 13 fonctions.
 
 ```{codeplay}
+:file: rand1.py
 import random
 print(dir(random))
 ```
@@ -30,6 +30,7 @@ print(dir(random))
 La fonction `random()` retourne un nombre aléatoire dans l'intervalle [0, 1].
 
 ```{codeplay}
+:file: rand2.py
 from random import random
     
 for i in range(3):
@@ -39,6 +40,7 @@ for i in range(3):
 Nous pouvons visualiser ceci dans un graphique.
 
 ```{codeplay}
+:file: rand3.py
 from turtle import *
 from random import *
 up()
@@ -61,6 +63,7 @@ for i in range(n):
 La fonction `randint(a, b)` retourne un entier aléatoire dans l'intervalle [a, b].
 
 ```{codeplay}
+:file: rand4.py
 from random import randint
     
 print('randint - random integer')
@@ -71,6 +74,7 @@ for i in range(15):
 Nous pouvons visualiser ceci dans un graphique.
 
 ```{codeplay}
+:file: rand5.py
 from turtle import *
 from random import *
 
@@ -93,6 +97,7 @@ Nous calculons `x` et `y` comme des entiers aléatoires, choisis dans l'interval
 Nous choisissons la taille `d` avec une distribution normale (de Gauss) avec une moyenne de 3 et un sigma de 2.
 
 ```{codeplay}
+:file: rand6.py
 from turtle import *
 from random import *
 getscreen().bgcolor('black')
@@ -102,7 +107,7 @@ up()
 for i in range(200):
     x = randint(-300, 300)
     y = randint(-200, 300)
-    d = gauss(3, 2)
+    d = abs(gauss(3, 2))
     goto(x, y)
     dot(d, 'white')
 ```
@@ -112,6 +117,7 @@ for i in range(200):
 Pour arranger les étoiles plus dans une bande horizontale, comme dans la voie lactée, nous utilisons pour la variable `y` une distribution normale (gauss) avec une moyenne de 0 et un sigma de 50.
 
 ```{codeplay}
+:file: rand7.py
 from turtle import *
 from random import *
 getscreen().bgcolor('black')
@@ -121,7 +127,7 @@ up()
 for i in range(500):
     x = randint(-300, 300)
     y = gauss(0, 50)
-    d = gauss(2, 2)
+    d = abs(gauss(2, 2))
     goto(x, y)
     dot(d, 'white')
 ```
@@ -131,6 +137,7 @@ for i in range(500):
 Dans l'exemple suivant nous plaçons des fleurs à des positions aléatoires dans un champ.
 
 ```{codeplay}
+:file: rand8.py
 from turtle import *
 from random import *
 getscreen().bgcolor('green')
@@ -161,6 +168,7 @@ La fonction `choice(liste)` retourne un élément aléatoire d'une liste.
 Dans l'exemple suivant nous choisissons parmis 5 couleurs.
 
 ```{codeplay}
+:file: rand9.py
 from turtle import *
 from random import *
 getscreen().bgcolor('black')
@@ -177,6 +185,7 @@ for y in range(200-n, -200, -n):
 Nous pouvons aussi choisir aléatoirement dans une liste numérique, avec différentes tailles de points, par exemple.
 
 ```{codeplay}
+:file: rand10.py
 from turtle import *
 from random import *
 getscreen().bgcolor('black')
@@ -196,11 +205,11 @@ for y in range(200-n, -200, -n):
 Dans l'exemple suivant les variables x e y suivent une distribution normale avec mu=0 et sigma=50.
 
 ```{codeplay}
+:file: rand11.py
 from turtle import *
 from random import *
 
 speed(0)
-color(0, 0, 0, 0.5)
 up()
 
 for i in range(1000):
@@ -215,6 +224,7 @@ for i in range(1000):
 Pour simuler la perspectives, nous dessinons les animaux proches plus grand.
 
 ```{codeplay}
+:file: rand12.py
 from turtle import *
 from random import *
 getscreen().bgcolor('lightgreen')
@@ -237,6 +247,7 @@ hideturtle()
 Pour simuler la perspectives, nous dessinons les fleurs proches plus grandes.
 
 ```{codeplay}
+:file: rand13.py
 from turtle import *
 from random import *
 getscreen().bgcolor('lightgreen')
@@ -259,6 +270,7 @@ hideturtle()
 Nous ajoutons des feuillages en bas de l'aquarium et intercalons les poissons avec les plantes.
 
 ```{codeplay}
+:file: rand14.py
 from turtle import *
 from random import *
 getscreen().bgcolor('lightblue')
@@ -287,6 +299,7 @@ hideturtle()
 ## Rouler un dé
 
 ```{codeplay}
+:file: rand15.py
 from turtle import *
 from random import *
 from time import *
@@ -328,6 +341,7 @@ for n in range(1, 7):
 La fonction `shuffle()` permet de permuter les éléments d'une liste. Ceci est l'équivalent de ce qu'on fait avec des cartes de jeux, quand on les mélange.
 
 ```{codeplay}
+:file: rand16.py
 from random import *
 
 a = list(range(10))
@@ -343,6 +357,7 @@ for i in range(3):
 La fonction `shuffle()` permet de mélanger ou permuter aléatoirement une liste. Nous l'utilisons pour mélanger nos cartes de jeu.
 
 ```{codeplay}
+:file: rand17.py
 from turtle import *
 from random import *
 getscreen().bgcolor('green')

@@ -1,8 +1,8 @@
 # Cercler - `circle`
 
-Dans ce chapitre nous explorons les cercles et les arcs de cercle. Nous allons voir que
+Dans ce chapitre nous explorons les cercles et les arcs de cercle. Nous allons voir que :
 
-- un cercle est approximé par un polygone,
+- le cercle est approximé par un polygone,
 - la fonction `circle(r)` dessine un cercle de rayon `r`,
 - la fonction `circle(r, a)` dessine un arc de cercle d'un angle `a`.
 

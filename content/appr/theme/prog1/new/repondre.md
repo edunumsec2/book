@@ -1,10 +1,10 @@
 # Répondre - `input`
 
-Dans ce chapitre nous introduisons une façon pour que le programme puisse poser des questions. L'utilisateur du programme peut alors répondre et entrer une information. La réponse sera mémorisé dans une variable. Nous allons apprendre que
+Dans ce chapitre nous introduisons une façon pour que le programme puisse poser une question. L'utilisateur du programme peut alors répondre et entrer une information. La réponse sera mémorisée dans une variable. Nous allons voir que :
 
 - la fonction `print()` affiche un texte,
 - la fonction `input('question')` demande une information,
-- une variable `x` mémorise une information.
+- la variable `x` mémorise une information.
 
 ```{question}
 Une variable informatique est

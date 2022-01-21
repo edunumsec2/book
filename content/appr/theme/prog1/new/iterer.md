@@ -1,13 +1,13 @@
 # Itérer - `range`
 
-Dans ce chapitre nous allons voir de près comment une variable peut parcourir ou itérer une plage numérique.
+Dans ce chapitre nous allons voir de près comment une variable peut parcourir ou itérer sur une plage numérique.
 
 Une boucle permet de raccourcir le code et de mieux le structurer. 
-Une boucle ne représente pas seulement une économie de lignes de code, mais donne aussi la possibilité de contrôler le nombre de répétitions. Nous allons voir que : 
+Une boucle ne représente pas seulement une économie de lignes de code, mais donne aussi la possibilité de contrôler le nombre de répétitions. Nous allons voir que :
 
 - la boucle `for` répète du code pour un ensemble de valeurs données,
 - la variable d'itération `i` prend une autre valeur à chaque tour,
-- on peut parcourir des plages numériques, du texte, et des listes.
+- le parcours est possible sur des plages numériques, du texte, et des listes.
 
 ```{question}
 En informatique itérer c'est
@@ -23,6 +23,7 @@ En informatique itérer c'est
 Le programme suivant demande comme entrée le nombre `x` de sommets, et dessine alors un polygone régulier. C'est un cas ou il faut **répéter x fois**.
 
 ```{codeplay}
+:file: ran1.py
 from turtle import *
 
 x = input('Nombre de sommets: ')
@@ -49,6 +50,7 @@ Quand la variable d'itération est de type entier (`int`) on l'appelle souvent `
 Nous reprenons l'exemple précédent du polygone, mais cette fois nous ne dessinons pas les segments mais seulement les sommets. La valeur de la variable d'itération `i` est affichée à chaque sommet du polygone.
 
 ```{codeplay}
+:file: ran2.py
 from turtle import *
 
 x = int(input('Nombre de sommets: '))
@@ -76,6 +78,7 @@ Le sens des paramètres :
 La fonction `print()` utilise le paramètre optionnel `end` pour ne pas terminer avec un retour à la ligne mais par une simple espace.
 
 ```{codeplay}
+:file: ran3.py
 start = int(input('start = '))
 stop = int(input('stop = '))
 step = int(input('step = '))
@@ -89,6 +92,7 @@ for i in range(start, stop, step):
 La fonction `range()` fonctionne aussi dans l'ordre décroissant. Dans ce cas il faut choisir pour `step` une valeur négative.
 
 ```{codeplay}
+:file: ran4.py
 for i in range(-100, -200, -3):
     print(i, end=' ')
 ```
@@ -101,6 +105,7 @@ La fonction `range()` peut fonctionner avec 1, 2 ou 3 paramètres. Les valeurs p
 - 1 pour `step`.
 
 ```{codeplay}
+:file: ran5.py
 from time import sleep
 
 for i in range(10):
@@ -125,6 +130,7 @@ La ligne de code `for c in mot:` signifie que la variable `c` va prendre à chaq
 Quand la variable d'itération est un caractère on l'appelle souvent `c`.
 
 ```{codeplay}
+:file: ran6.py
 from time import sleep
 mot = input('Entrez un mot: ')
 
@@ -142,6 +148,7 @@ La ligne de code `for color in colors:` signifie que la variable `color` va pren
 Quand on parcourt une liste la convention est d'utiliser un mot au pluriel pour la liste (`colors`) et le même mot en singulier pour la variable d'itération (`color`).
 
 ```{codeplay}
+:file: ran7.py
 from turtle import *
 
 colors = ['hotpink', 'lime', 'beige', 'pink']
@@ -161,6 +168,7 @@ for color in colors:
 Si nous dessinons un polygone mais augmentons la longueur de chaque segment successif en utilisant la variable d'itération `i`, nous obtenons une spirale.
 
 ```{codeplay}
+:file: ran8.py
 from turtle import *
 
 for i in range(100):
@@ -180,6 +188,7 @@ Nous concaténons les deux éléments lettre et nombre (`x + y`) et nous ajouton
 Pour bien montrer l'ordre consécutif nous importons la fonction `sleep()` du module `time` pour ralentir le parcours de la boucle.
 
 ```{codeplay}
+:file: ran9.py
 from time import sleep
 
 for y in '1234567':
@@ -196,6 +205,7 @@ for y in '1234567':
 Deux boucles imbriquées peuvent itérer dans les directions x et y. Ceci permet d'afficher les coordonnées de la tortue.
 
 ```{codeplay}
+:file: ran10.py
 from turtle import *
 up()
 

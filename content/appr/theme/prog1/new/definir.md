@@ -2,18 +2,17 @@
 
 Dans ce chapitre nous allons voir de plus près le concept de la fonction, concept que nous avons vu dès le premier chapitre comme façon de donner un nom à une séquence d'instructions.
 
-En fait, la fonction est peut-être le concept le plus important dans la programmation.
-C'est un moyen puissant pour inventer des nouvelles commandes dans un langage de programmation. Nous allons voir que :
+La fonction est probablement le concept le plus important dans la programmation. C'est le moyen pour inventer des *nouveaux mots* dans un langage de programmation. Nous allons voir que :
 
 - le mot-clé `def` permet de définir une fonction,
-- un paramètre `f(param0, ...)` est une variable dans la définition de fonction,
-- un argument `f(arg0, ...)` est une valeur dans l'appel de fonction.
+- un paramètre `f(par)` est une variable dans la définition de fonction,
+- un argument `f(arg)` est une valeur dans l'appel de fonction.
 
 ```{question}
 En Python `def` est un raccourci pour
 
-{f}`defoncé`  
-{f}`defilé`  
+{f}`défoncé`  
+{f}`défilé`  
 {v}`définition`  
 {f}`défavorisé`
 ```
@@ -30,6 +29,7 @@ Cette valeur placée entre parenthèses s'appelle l'**argument** de la fonction.
 Ici, la fonction `carre()` est appelée successivement avec les valeurs 50, 100 et 150.
 
 ```{codeplay}
+:file: def1.py
 from turtle import *
 
 def carre(longueur):
@@ -45,6 +45,7 @@ carre(150)
 Une fonction peut être appelée avec une valeur numérique directe tel que `carre(50)`, mais aussi avec une valeur numérique donnée par une variable tel que `carre(x)`, obtenu par une variable d'itération sur une plage numérique donnée avec `range(start, stop, step)`.
 
 ```{codeplay}
+:file: def2.py
 from turtle import *
 
 def carre(a):
@@ -60,6 +61,7 @@ Au lieu d'imbriquer les carrés, nous pouvons aussi les dessiner les uns après 
 Le terme technique est de les **juxtaposer**.
 
 ```{codeplay}
+:file: def3.py
 from turtle import *
 
 def carre(a):
@@ -83,6 +85,7 @@ for x in range(30, 180, 30):
 Nous revenons à notre fonction pour dessiner une maison.
 
 ```{codeplay}
+:file: def4.py
 from turtle import *
 
 def maison():
@@ -103,6 +106,7 @@ maison()
 Maintenant nous modifions la fonction pour inclure la position de la maison comme paramètre.
 
 ```{codeplay}
+:file: def5.py
 from turtle import *
 getscreen().bgcolor('lightgreen')
 up()
@@ -127,6 +131,7 @@ maison(120, 40)
 Maintenant nous modifions la fonction pour inclure non seulement la position mais aussi la taille de la maison comme paramètres.
 
 ```{codeplay}
+:file: def6.py
 from turtle import *
 getscreen().bgcolor('lightgreen')
 up()
@@ -151,6 +156,7 @@ maison(120, 40, 40)
 Maintenant nous modifions la fonction pour inclure non seulement la position, la taille mais également la couleur de la maison comme paramètres.
 
 ```{codeplay}
+:file: def7.py
 from turtle import *
 getscreen().bgcolor('lightgreen')
 up()
@@ -178,6 +184,7 @@ maison(120, 40, 40, 'pink')
 Maintenant nous modifions la fonction pour inclure non seulement la position, la taille, la couleur de la maison comme paramètres, mais nous y ajoutons aussi une porte.
 
 ```{codeplay}
+:file: def8.py
 from turtle import *
 getscreen().bgcolor('lightgreen')
 up()
@@ -219,6 +226,7 @@ maison(120, 40, 40, 'pink', 'violet')
 Nous pouvons spécifier des valeurs par défaut.
 
 ```{codeplay}
+:file: def9.py
 from turtle import *
 getscreen().bgcolor('lightgreen')
 up()
@@ -267,6 +275,7 @@ Dans la fonction `corona()` les paramètres sont :
 - le nombre de projections `n`
 
 ```{codeplay}
+:file: def10.py
 from turtle import *
 getscreen().bgcolor('azure')
 up()
@@ -295,6 +304,7 @@ La série raconte l'histoire d'un groupe de personnes, fortement endettées, voi
 Nous définissons une fonction `polygone(a, n)` pour dessiner le cercle, le triangle et le carré du logo.
 
 ```{codeplay}
+:file: def11.py
 from turtle import *
 getscreen().bgcolor('peru')
 width(5)
@@ -325,6 +335,7 @@ Similaire à notre fonction pour dessiner un carré nous allons définir une fon
 - `couleur` pour la couleur du carré.
 
 ```{codeplay}
+:file: def12.py
 from turtle import *
 
 def carre(taille):
@@ -350,6 +361,7 @@ Nous définissons une nouvelle fonction `ligne(couleurs)` pour dessiner une sér
 Quand le dernier pixel de la ligne est dessiné, la tortue est retournée à la position prête pour dessiner la ligne suivante.
 
 ```{codeplay}
+:file: def13.py
 from turtle import *
 
 def pixel(taille, couleur):

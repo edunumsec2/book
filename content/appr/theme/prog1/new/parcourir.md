@@ -1,10 +1,10 @@
 # Parcourir - `tuple`
 
-Dans ce chapitre nous allons découvrir le concept très important de la séquence. Ce concept s'appelle `tuple` en langage Python ou **n-uplet** en français. Une séquence est un groupement d'objets, par exemple de couleurs, de distances ou d'angles. Ce qui est très intéressant c'est que nous pouvons parcourir les valeurs d'une séquence l'une après l'autre. Nous allons voir que : 
+Dans ce chapitre nous allons découvrir le concept très important de la séquence. Ce concept s'appelle `tuple` en langage Python ou **n-uplet** en français. Une séquence est un groupement d'objets, par exemple de couleurs, de distances ou d'angles. Ce qui est très intéressant c'est que nous pouvons parcourir les valeurs d'une séquence l'une après l'autre. Nous allons voir que :
 
 - la structure `(10, 20, 10)` représente une séquence (`tuple`),
-- dans `for x in (10, 20, 10):` la variable x parcourt des nombres,
-- dans `for x in ('red', 'blue'):` la variable x parcourt des couleurs.
+- dans `for x in (10, 20, 10):` la variable `x` parcourt des nombres,
+- dans `for x in ('red', 'blue'):` la variable `x` parcourt des couleurs.
 
 ```{question}
 En informatique un `tuple` est 
