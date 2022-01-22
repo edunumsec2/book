@@ -1,8 +1,8 @@
 # Programmation II
 
-Dans la première partie nous avons appris les bases de la programmation en Python. Nous avons vu comment une tortue peux dessiner, colorier, répéter, parcourir et faire plein d'autres choses.
+Dans la première partie nous avons appris les bases de la programmation en Python. Nous avons vu comment une tortue peut dessiner, colorier, répéter, parcourir et faire plein d'autres choses.
 
-Dans la deuxième partie nous allons découvrir la programmation orienté objet. Maintenant nous pouvons créer autant de tortues que nous voulons. Nos tortues deviennent également interactifs et elles réagissent aux touches du clavier et aux clics de la souris.
+Dans la deuxième partie nous allons découvrir la programmation orientée objet. Maintenant nous pouvons créer autant de tortues que nous voulons. Nos tortues deviennent également interactifs et elles réagissent aux touches du clavier et aux clics de la souris.
 
 ## Objectifs
 

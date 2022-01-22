@@ -1,11 +1,20 @@
 # Cliquer - `onclick`
 
 Dans ce chapitre nous explorons comment un programme peux détecter un clic de souris et y réagir.
-Cliquer (ou toucher) est la méthode principale pour interagir avec un smartphone : on touche avec le doigt une certaine position de l'écran et le programme y réagit. Nous allons voir que
+Cliquer (ou toucher) est la méthode principale pour interagir avec un smartphone : on touche avec le doigt une certaine position de l'écran et le programme y réagit. Nous allons voir que :
 
 - la méthode `onclick(f)` permet de définir une fonction de rappel,
 - la fonction de rappel `f(x, y)` est appelée lors d'un clic de souris,
-- la méthode `listen()` met en marche les événements interactifs.
+- la méthode `listen()` met en marche l'écoute des événements interactifs.
+
+```{question}
+La méthode `onclick()` installe une fonction de rappel
+
+{f}`sans paramètres`  
+{f}`avec un paramètre`  
+{v}`avec deux paramètres`  
+{f}`qui doit être anonyme`
+```
 
 ## Fonction de rappel
 
@@ -41,15 +50,67 @@ s.listen()
 
 **Exercice** : Cliquez dans les 4 coins et au centre.
 
-## Tortue ou écran
+## Les coordonnées
 
-Une fonction `onclick()` existe pour l'écran et pour chaque tortue.
-Donc nous avons deux fonctions de rappel. Une pour des clics dans tout l'écran, l'autre que pour des clics dans la tortue.
-
-Quand nous cliquons dans la tortue, la position est écrit dans la console et la tortue avance de 20 pixels.
+Nous pouvons ajouter les coordonnées.
 
 ```{codeplay}
 from turtle import *
+s = getscreen()
+
+hideturtle()
+speed(0)
+up()
+
+def f(x, y):
+    goto(x, y)
+    dot()
+    write((x, y))
+
+s.onclick(f)
+s.listen()
+```
+
+## Clics numérotés
+
+Nous pouvons numéroter les clics.
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+
+hideturtle()
+speed(0)
+up()
+n = 0
+
+def f(x, y):
+    global n
+    goto(x, y)
+    dot(20, 'pink')
+    write(n, align='center')
+    n += 1
+
+s.onclick(f)
+s.listen()
+```
+
+## Tortue ou écran
+
+Une fonction `onclick()` existe pour l'écran et pour chaque tortue.
+Donc nous avons deux fonctions de rappel différents: une pour des clics dans l'écran en générale, et une que pour des clics dans la tortue.
+
+La fonction de rappel …
+
+- `f` est appelé quand nous cliquons dans l'écran
+- `g` est appelé quand nous cliquons dans la tortue
+
+La fonction de rappel de la tortue fait avancer la tortue de 20 pixels.
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+t = getturtle()
 shape('turtle')
 
 def f(x, y):
@@ -58,9 +119,6 @@ def f(x, y):
 def g(x, y):
     print('tortue à', x, y)
     forward(20)
-
-t = getturtle()
-s = getscreen()
 
 t.onclick(g)
 s.onclick(f)
@@ -81,6 +139,7 @@ Nous réagissons également à deus touches du clavier :
 
 ```{codeplay}
 from turtle import *
+s = getscreen()
 hideturtle()
 speed(0)
 up()
@@ -88,13 +147,12 @@ up()
 def ligne(x, y):
     goto(x, y)
     down()
-    dot()
+    dot(20, 'pink')
     
-getscreen().onkey(up, 'u')
-getscreen().onkey(clear, 'c')
-    
-getscreen().onclick(ligne)
-getscreen().listen()
+s.onkey(up, 'u')
+s.onkey(clear, 'c')
+s.onclick(ligne)
+s.listen()
 ```
 
 **Exercice** : Dessinez une maison. Utilisez la touche `u` (up) pour dessiner une forme disjointe, par exemple la fenêtre.
@@ -113,6 +171,7 @@ Nous réagissons également à deus touches du clavier :
 
 ```{codeplay}
 from turtle import *
+s = getscreen()
 hideturtle()
 fillcolor('pink')
 speed(0)
@@ -123,16 +182,96 @@ def ligne(x, y):
     down()
     dot()
     
-getscreen().onkey(up, 'u')
-getscreen().onkey(clear, 'c')
-getscreen().onkey(begin_fill, 'b')
-getscreen().onkey(end_fill, 'e')
+s.onkey(up, 'u')
+s.onkey(clear, 'c')
+s.onkey(begin_fill, 'b')
+s.onkey(end_fill, 'e')
     
-getscreen().onclick(ligne)
-getscreen().listen()
+s.onclick(ligne)
+s.listen()
 ```
 
 **Exercice** : Dessinez une maison. Utilisez la touche `b` (begin) pour commencer le remplissage et la touche `e` (end) pour terminer le remplissage.
+
+## Placer en grille
+
+Nous pouvons arranger les disques en grille.
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+hideturtle()
+fillcolor('pink')
+speed(0)
+up()
+d = 40
+
+def f(x, y):
+    x = x//d * d + d//2
+    y = y//d * d + d//2
+    goto(x, y)
+    dot(d) 
+
+s.onclick(f)
+s.listen
+```
+
+## Points aimantés
+
+Nous pouvons faire en sorte que les points tombent sur les intersections d'une
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+hideturtle()
+fillcolor('pink')
+speed(0)
+d = 40
+
+def f(x, y):
+    x = x//d * d + d//2
+    y = y//d * d + d//2
+    goto(x, y)
+    dot(d/4, 'red') 
+
+s.onclick(f)
+s.listen
+```
+
+## Dessiner une grille
+
+Ici nous dessinons d'abord un tableau de jeu. Ensuite nous détectons la case dans laquelle le clic a eu lieu et y ajoutons un disque.
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+hideturtle()
+speed(0)
+up()
+
+x0, y0, d = 240, 160, 40
+
+def ligne(p, q):
+    goto(p)
+    down()
+    goto(q)
+    up()
+
+for x in range(-x0, x0+1, d):
+    ligne((x, -y0), (x, y0))
+
+for y in range(-y0, y0+1, d):
+    ligne((-x0, y), (x0, y))
+
+def f(x, y):
+    x = x//d * d + d//2
+    y = y//d * d + d//2
+    goto(x, y)
+    dot(d, 'red') 
+    
+s.onclick(f)
+s.listen()
+```
 
 ## Echiquier
 
@@ -140,166 +279,47 @@ Ici nous dessinons d'abord un tableau de jeu. Ensuite nous détectons la case da
 
 ```{codeplay}
 from turtle import *
+s = getscreen()
 hideturtle()
 speed(0)
 up()
 
-x0, dx, nx = -160, 40, 10
-y0, dy, ny = -160, 40, 8
-x1 = x0 + nx * dx
-y1 = y0 + ny * dy
+x0, y0, d = 160, 160, 40
 
-def ligne(x0, y0, x1, y1):
-    goto(x0, y0)
+def ligne(p, q):
+    goto(p)
     down()
-    goto(x1, y1)
+    goto(q)
     up()
 
-for i in range(ny + 1):
-    y = y0 + i * dy
-    ligne(x0, y, x1, y)
-    
-for i in range(nx + 1):
-    x = x0 + i * dx
-    ligne(x, y0, x, y1)
+for x in range(-x0, x0+1, d):
+    ligne((x, -y0), (x, y0))
+
+for y in range(-y0, y0+1, d):
+    ligne((-x0, y), (x0, y))
 
 def f(x, y):
-    if x0 < x < x1:
-        i = (x - x0) // dx
-    if y0 < y < y1:
-        j = (y - y0) // dy
-
-    x = x0 + i * dx + dx/2
-    y = y0 + j * dy + dy/2
+    if -x0 < x < x0 and -y0 < y < y0:
+        x = x//d * d + d//2
+        y = y//d * d + d//2
+        goto(x, y)
+        dot(d) 
     
-    goto(x, y)
-    dot(dx)
-    
-getscreen().onclick(f)
-getscreen().listen()
+s.onclick(f)
+s.listen()
 ```
 
-**Exercice** : Cliquez dans chaque deuxième case.
+## Tirer la tortue
 
-## Héritage
-
-Dans l'exemple suivant nous définissons une classe parent `Object`. Elle possède les méthodes
-
-- `draw_box()` pour dessiner un contour rectangulaire
-- `fill_box()` pour dessiner un rectangle rempli
-- `inside(x, y)` pour tester si le point `(x, y)` se trouve dans le rectangle
-
-Les trois fonctions `Dot`, `Rect` et `Text` héritent tous les méthodes de la classe parent `Object`.
-
-```{codeplay}
-from turtle import *
-up()
-speed(0)
-hideturtle()
-getscreen().bgcolor('lightgray')
-
-class Object:
-        
-    def draw_box(self):
-        goto(self.pos)
-        down()
-        for d in self.size * 2:
-            forward(d)
-            left(90)
-        up()
-        
-    def fill_box(self):
-        goto(self.pos)
-        color(*self.col)
-        width(self.width)
-        begin_fill()
-        self.draw_box()
-        end_fill()
-        width(1)
-
-    def inside(self, x, y):
-        x0, y0 = self.pos
-        x1 = x0 + self.size[0]
-        y1 = y0 + self.size[1]
-        return x0 < x < x1 and y0 < y < y1
-        
-    def __str__(self):
-        return f'{self.__class__.__name__}({self.pos}, {self.size})'
-
-class Dot(Object):
-    def __init__(self, pos, d=20, col='red'):
-        self.pos = pos
-        self.size = d, d
-        self.col = col
-        self.draw()
-        
-    def draw(self):
-        r = self.size[0] / 2
-        goto(self.pos[0]+r, self.pos[1]+r)
-        pencolor(self.col)
-        dot(self.size[0])
-        self.draw_box()
-    
-class Rect(Object):
-    def __init__(self, pos, size, width=1, col=('black', 'white')):
-        self.pos = pos
-        self.size = size
-        self.width = width
-        self.col = col
-        self.draw()
-        
-    def draw(self):
-        self.fill_box()        
-             
-class Text(Object):
-    def __init__(self, pos, text, col='red', font=(None, 12, 'normal'), align='left'):
-        super()
-        self.text = text
-        self.pos = pos
-        self.col = col
-        self.font = font
-        self.align = align
-        self.draw()
-        
-    def draw(self):
-        goto(self.pos)
-        color(self.col)
-        x0 = xcor()
-        write(self.text, font=self.font, align=self.align, move=True)
-        self.size = xcor() - x0, self.font[1]
-        self.draw_box()
-        
-d0 = Dot((0, 0))
-d1 = Dot((100, 20), 50, 'lime')
-
-t0 = Text((0, 50), 'origin', font=(None, 18, 'bold'))
-t1 = Text((0, 100), 'pad', font=(None, 80), col='blue')
-t2 = Text((-100, 100), '夢', font=(None, 60), col='blue')
-t3 = Text((-200, 100), '📺', font=(None, 60), col='blue')
-
-r0 = Rect((-100, 0), (50, 80))
-r1 = Rect((-150, -20), (60, 80), width=5, col=('black', 'pink'))
-
-def f(x, y):
-    for obj in (d0, d1, t0, t1, t2, t3, r0, r1):
-        if obj.inside(x, y):
-            print('clicked in', obj)
-    
-getscreen().onclick(f)
-getscreen().listen()
-```
-
-**Exercice** : Clickez dans tout les objets et observez les info affichés dans la console.
-
-## ondrag-onrelease
-
-Le programme suivant permet de déplacer la tortue avec la souris
+Le programme suivant permet de déplacer la tortue avec la souris.
 
 - `onclick` la tortue devient rouge,
 - `ondrag` la tortue devient orange et suit la souris,
-- `onrelease` la tortue devient vert et s'arrête,
+- `onrelease` la tortue devient verte et s'arrête.
 
-**Note** La fonction on `onrelease` ne fonction pas ici, mais elle fonctionne dans l'éditeur externe Thonny.
+```{caution}
+La fonction on `onrelease` ne fonction pas dans ce site; la tortue ne devient jamais verte. Par contre ce programme fonctionne dans l'éditeur externe Thonny.
+```
 
 ```{codeplay}
 from turtle import *
@@ -308,11 +328,9 @@ speed(0)
 
 def f(x, y):
     fillcolor('red')
-    print('click at', x, y)
     
 def g(x, y):
     fillcolor('orange')
-    print('drag')
     goto(x, y)
       
 def h(x, y):

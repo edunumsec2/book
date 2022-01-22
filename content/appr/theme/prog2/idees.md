@@ -309,28 +309,6 @@ import re
 print(dir(re))
 ```
 
-## Fonction `ontimer`
-
-```{codeplay}
-from turtle import *
-
-up()
-goto(0, 150)
-hideturtle()
-n = 0
-
-def f():
-    global n
-    dot(10)
-    forward(15)
-    right(6)
-    n += 1
-    if n < 60:
-        getscreen().ontimer(f, 1000)
-        
-f()
-```
-
 ## Chercher un élément
 
 La fonction cherche un élément dans une liste
@@ -476,47 +454,6 @@ c.color('lime')
 c.shape('turtle')
 c.left(45)
 c.forward(100)
-```
-
-## Chronométrer
-
-```{codeplay}
-from turtle import *
-from time import *
-import time
-
-print(dir(time))
-print('clock =', clock())
-print('ctime =', ctime())
-print('time =', time.time())
-```
-
-```{codeplay}
-from turtle import *
-from time import *
-from random import *
-
-# speed(3) : 80 seconds
-# speed(0) : 20 secondes
-# tracer(0) : 0.04 secondes
-
-up()
-speed(0)
-tracer(0)
-
-t0 = time()
-d = 20
-x0 = 300 - d//2
-y0 = 200 - d//2
-
-for y in range(y0, -y0-d, -d):
-    for x in range(-x0, x0+d, d):
-        goto(x, y)
-        r = random()
-        dot(d, (r, r, r))
-update()
-t1 = time()
-print(t1-t0)
 ```
 
 ## Snow Crash

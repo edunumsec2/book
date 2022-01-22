@@ -89,11 +89,15 @@ parts:
       - file: content/appr/theme/algo2/cours/conclusion/eleve
   - file: content/appr/theme/prog2/intro
     sections:
-      - file: content/appr/theme/prog2/onkey    
-      - file: content/appr/theme/prog2/turtle
+      - file: content/appr/theme/prog2/onkey
+      - file: content/appr/theme/prog2/lambda
       - file: content/appr/theme/prog2/onclick
+      - file: content/appr/theme/prog2/ontimer
+      - file: content/appr/theme/prog2/turtle
       - file: content/appr/theme/prog2/class
+      - file: content/appr/theme/prog2/inherit
       - file: content/appr/theme/prog2/math
+      - file: content/appr/theme/prog2/time
       - file: content/appr/theme/prog2/dict
       - file: content/appr/theme/prog2/compter
       - file: content/appr/theme/prog2/color
@@ -109,6 +113,7 @@ parts:
     sections:
       - file: content/appr/theme/projets/tic_tac_toe
       - file: content/appr/theme/projets/puissance4
+      - file: content/appr/theme/projets/mines
       - file: content/appr/theme/projets/snake
       - file: content/appr/theme/projets/game_of_life
       - file: content/appr/theme/projets/cartes
