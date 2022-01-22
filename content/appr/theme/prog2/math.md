@@ -1,10 +1,19 @@
 # Tracer - `math`
 
-Dans ce chapitre nous allons découvrir comment nous pouvons tracer des fonctions mathématiques pour les visualiser. Le module `math` met à disposition toute une série de constantes et fonctions mathématiques. Vous allez découvrir
+Dans ce chapitre nous allons découvrir comment nous pouvons tracer des fonctions mathématiques pour les visualiser. Le module `math` met à disposition toute une série de constantes et fonctions mathématiques. Nous allons explorer :
 
 - les fonctions trigonométriques `sin()`, `cos()` et `tan()`,
 - la fonction exponentielle `exp()`,
 - la fonction logarithmique `log()`.
+
+```{question}
+Le module `math` met à disposition
+
+{f}`des nouveaux opérateurs mathématiques`  
+{v}`des constantes`  
+{f}`des fonctions matricielles`  
+{f}`des fonctions statistiques`
+```
 
 ## Tracer une fonction
 
@@ -48,7 +57,9 @@ Le mot-clé `import` permet d'importer un module. Normalement c'est dans la prem
 
 ```{codeplay}
 import math
-print(dir(math))
+m = [x for x in dir(math) if not x.startswith('_')]
+print(m)
+print(len(m))
 ```
 
 **Exercice** : Importez le module `random` et affichez son contenu avec `dir`.

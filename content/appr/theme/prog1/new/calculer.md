@@ -256,6 +256,53 @@ print(x, y)
 
 **Exercice** : Ajoutez une 3e variable et faites une permutation cyclique.
 
+## Revisiter le `tuple`
+
+L'affectation multpile utilise le format du tuple.
+Un **n-uplet** (tuple) est une séquence d'objets. Ce sont :
+
+- multiple valeurs séparé par une virgule,
+- une seule valeur terminé par une virgule,
+- des parenthèses vides pour le tuple vide.
+
+```{codeplay}
+x = 1, 2    # deux valeurs
+y = 1,      # une seul valeur (virgule !)
+z = ()      # tuple vide
+
+print(x)
+print(y)    
+print(z)
+print(type(x))
+```
+
+## Position et taille
+
+Un tuple est la forme idéale pour représenter les deux coordonnées `(x, y)` d'une position, ou longueur et hauteur `(w, h)` d'une taille.
+
+```{codeplay}
+from turtle import *
+up()
+
+pos = 100, -20
+size = 100, 70
+
+print('pos =', pos)
+print('x =', pos[0])
+print('y =', pos[1])
+
+print('size =', size)
+print('w =', size[0])
+print('h =', size[1])
+print('size * 2 =', size * 2)
+
+goto(pos)
+down()
+for d in size * 2:
+    forward(d)
+    left(90)
+```
+
 ## Erreurs
 
 Pour bien programmer vous devez savoir interpréter les messages d'erreurs. Ces messages vous indiquent sur quelle ligne du programme il y a quel type d'erreur.

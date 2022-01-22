@@ -2,11 +2,20 @@
 
 Compter est l'opération utilisée pour savoir combien d'objets il y a dans un ensemble de taille fini. On utilise alors les nombres naturels, aussi appelé les entiers non-négatifs.
 
-Les humains ont 10 doigts, c'est la raison que nous avons adopté le système décimal. Un ordinateur par contre représente les nombre en système binaire.
+Les humains ont 10 doigts, c'est la raison que nous avons adopté le système décimal. Un ordinateur par contre représente les nombre en système binaire. Nous allons voir que :
 
-- la fonction `bin(d)` retourne un code binaire
-- la fonction `oct(d)` retourne un code octale
-- la fonction `hex(d)` retourne un code hexadécimale
+- la fonction `bin(d)` retourne un code binaire,
+- la fonction `oct(d)` retourne un code octale,
+- la fonction `hex(d)` retourne un code hexadécimale.
+
+```{question}
+La fonction `bin()` renvoie une valeur de type
+
+{f}`int`  
+{f}`bin`  
+{f}`bool`  
+{v}`str`
+```
 
 ## Le système décimal
 
@@ -167,9 +176,11 @@ for i in range(32):
     write(i, font=('Courier', 100), align='right')
     hand(i)
     sleep(2)
-````
+```
 
 ## Entier naturel sur 4 bits
+
+Cette visualisation montre le cercle des entiers naturels encodé sur 4 bits.
 
 ```{codeplay}
 from turtle import *
@@ -188,9 +199,11 @@ for i in range(16):
     sety(ycor() + 15)
     forward(50)
     right(360/16)
-````
+```
 
 ## Entier relatif sur 4 bits
+
+Cette visualisation montre le cercle des entiers relatifs encodé sur 4 bits.
 
 ```{codeplay}
 from turtle import *

@@ -1,4 +1,20 @@
-# Héritage - E(P)
+# Hériter - `E(P)`
+
+Dans ce chapitre nous découvrons comment une classe peut hériter des attributs et des méthodes d'une classe parents. Nous allons voir que : 
+
+- l'expression `class Enfant(Parent):` implique un héritage de la classe `Parent`,
+- avec la fonction `super().__init__()` le constructeur de la classe parent est appelé.
+
+```{question}
+La la classe `P` dans `E(P)` est appelé
+
+{v}`la classe parent`  
+{f}`la classe enfant`  
+{f}`la classe primaire`  
+{f}`la classe principale`
+```
+
+## Classe Dot, Rect, Text
 
 Dans l'exemple suivant nous définissons une classe parent `Object`. Elle possède les méthodes
 

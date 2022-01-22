@@ -1,25 +1,25 @@
-# Reproduire - `Turtle`
+# Cloner - `Turtle`
 
-Dans **Programmation I** nous avons fait connaissance avec un style de programmation que nous appelons **programmation procédurale**. Dans cette deuxième partie nous allons découvrir un nouveau style de programmation qui s'appelle **programmation orientée objet**.
+Dans **Programmation I** nous avons fait connaissance avec un style de programmation que nous appelons **programmation procédurale**. Dans cette deuxième partie nous allons découvrir un nouveau style de programmation qui s'appelle **programmation orientée objet** (POO).
 
-Le premier changement que nous allons voir est que nous pouvons créer des objets à volonté. Jusqu'à maintenant nous avons travaillé avec une seule tortue. Mais dès maintenant vous pouvez créer autant de tortues que vous voulez. Les tortues sont des objets dérivés de la classe `Turtle`. Vous allez voir que :
+Le premier changement que nous allons voir est que nous pouvons créer des tortues à volonté. Jusqu'à maintenant nous avons travaillé avec une seule tortue. Dès maintenant nous allons créer autant de tortues que nous voulons. Les tortues sont des objets dérivés de la classe `Turtle`. Nous allons voir que :
 
-- la classe `Turtle` permet de produire plein de tortues,
-- la fonction `dir()` permet d'afficher ses méthodes,
-- la forme `bob = Turtle()` crée une nouvelle tortue.
+- la classe `Turtle` permet de produire multiples tortues,
+- la ligne de code `bob = Turtle()` crée une nouvelle tortue appelé `bob`,
+- la méthode `bob.clone()` crée un clone de la tortue `bob`.
 
 ```{question}
-En programmation orientée objet une classe est
+La expression `ana = bob.clone()` crée
 
-{f}`un objet`  
-{v}`un prototype pour faire des objets`  
-{f}`quelque chose de très chic`  
-{f}`un niveau d'abstraction`
+{f}`un clone de ana`  
+{v}`une copie identique de bob`  
+{f}`une nouvelle tortue avec les valeurs par défaut`  
+{f}`une référence vers l'objet bob`
 ```
 
 ## Reproduire des tortues
 
-Dans la première partie, nous avons utilisé une seule tortue. Mais nous pouvons en créer autant que nous voulons. Chaque tortue garde sa couleur, sa position, et son orientation personnelle. Dans le programme suivant nous créons une tortue `ana` et une tortue `bob`.
+Jusqu'à maintenant, nous avons utilisé une seule tortue. Mais nous pouvons en créer autant que nous voulons. Chaque tortue possède sa couleur, sa position, sa orientation, sa vitesse, sa forme, etc.  Dans le programme suivant nous créons une tortue `ana`, une tortue `bob` et une tortue `mia`.
 
 ```{codeplay}
 from turtle import *
@@ -60,7 +60,7 @@ print(len(methodes))
 
 Nous pouvons utiliser des fonctions de rappel pour faire bouger les deux tortues à l'aide des touches du clavier.
 
-La fonction `clone()` permet de cloner la tortue `ana`. La nouvelle tortue est un objet séparé qui sera initialisé avec les bonnes valeurs pour forme et vitesse. Pour `bob` il faudra juste changer sa couleur en bleu.
+La fonction `clone()` permet de cloner la tortue `ana`. La nouvelle tortue est un objet séparé qui sera initialisé avec les bonnes valeurs pour la forme et la vitesse. Pour `bob` il faudra juste changer sa couleur en bleu.
 
 ```{codeplay}
 from turtle import *

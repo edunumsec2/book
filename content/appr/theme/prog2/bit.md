@@ -2,11 +2,20 @@
 
 La [manipulation de bits](https://fr.wikipedia.org/wiki/Manipulation_de_bits) consiste à agir sur des données au niveau d'un bit ou d'un ensemble de bits à l'aide d'opérations booléennes. En informatique, cette technique est notamment utilisée pour des opérations de bas niveau comme le contrôle des périphériques, ou encore dans certains algorithmes comme la détection et la correction d'erreur ou le chiffrement, ainsi que pour l'optimisation.
 
-Dans ce chapitre nous allons explorer des opérateurs logiques qui opèrent sur un nombre au niveau d'un bit :
+Dans ce chapitre nous allons explorer des opérateurs logiques qui opèrent sur un nombre au niveau d'un bit (bitwise operation). Nous allons voir que :
 
 - l'opérateur `&` effectue un **and** par bit,
 - l'opérateur `|` effectue un **or** par bit,
 - l'opérateur `^` effectue un **xor** par bit.
+
+```{question}
+L'expression `2 & 3` donne comme résultat
+
+{f}`0`  
+{f}`1`  
+{v}`2`  
+{f}`3`
+```
 
 ## Bitwise and (`&`)
 
