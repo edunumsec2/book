@@ -1,12 +1,12 @@
 # Manipuler - `&`
 
-La [manipulation de bits](https://fr.wikipedia.org/wiki/Manipulation_de_bits) consiste à agir sur des données au niveau d'un bit ou d'un ensemble de bits à l'aide d'opérations booléennes. En informatique, cette technique est notamment utilisée pour des opérations de bas niveau comme le contrôle des périphériques, ou encore dans certains algorithmes comme la détection et la correction d'erreur ou le chiffrement, ainsi que pour l'optimisation.
+La [manipulation de bits](https://fr.wikipedia.org/wiki/Manipulation_de_bits) consiste à agir sur des données au niveau d'un bit à l'aide d'opérations booléennes. Cette technique est utilisée pour des opérations de bas niveau comme le contrôle des périphériques, la détection et la correction d'erreur, le chiffrement, ainsi que pour l'optimisation.
 
-Dans ce chapitre nous allons explorer des opérateurs logiques qui opèrent sur un nombre au niveau d'un bit (bitwise operation). Nous allons voir que :
+Dans ce chapitre nous allons explorer des opérateurs qui manipulent un nombre au niveau de ses bits (bitwise operation). Nous allons voir que :
 
-- l'opérateur `&` effectue un **and** par bit,
-- l'opérateur `|` effectue un **or** par bit,
-- l'opérateur `^` effectue un **xor** par bit.
+- l'opérateur `&` effectue une opération **and** par bit,
+- l'opérateur `|` effectue une opération **or** par bit,
+- l'opérateur `^` effectue une opération **xor** par bit.
 
 ```{question}
 L'expression `2 & 3` donne comme résultat
@@ -230,4 +230,110 @@ ligne(7 ^ 1)
 ligne(4 ^ 1)
 ligne(4 ^ 1)
 ligne(7 ^ 1)
+```
+## Quiz
+
+### AND logique
+
+Rappel
+
+```python
+0 & 0 = 0
+0 & 1 = 0
+1 & 0 = 0
+1 & 1 = 1
+```
+
+```{codeplay}
+from random import randint
+score = 0
+n = 3
+
+for i in range(n):
+    a = randint(1, 15)
+    b = randint(1, 15)
+
+    print(f'  {a:04b}')
+    print(f'& {b:04b}')
+    reponse = input('= ')
+    solution = f'{a & b:04b}'
+
+    if reponse == solution:
+        score += 1
+    else:
+        print(f'faux! Réponse correcte = {solution}')
+    print()
+print(f'score = {score}/{n}')
+===
+# Appliquez l'opération logique AND aux 2 nombres en code binaire
+```
+
+### OR logique
+
+Rappel
+
+```python
+0 | 0 = 0
+0 | 1 = 1
+1 | 0 = 1
+1 | 1 = 1
+```
+
+```{codeplay}
+from random import randint
+score = 0
+n = 3
+
+for i in range(n):
+    a = randint(1, 15)
+    b = randint(1, 15)
+
+    print(f'  {a:04b}')
+    print(f'| {b:04b}')
+    reponse = input('= ')
+    solution = f'{a | b:04b}'
+
+    if reponse == solution:
+        score += 1
+    else:
+        print(f'faux! Réponse correcte = {solution}')
+    print()
+print(f'score = {score}/{n}')
+===
+# Appliquez l'opération logique OR aux 2 nombres en code binaire
+```
+
+### XOR logique
+
+Rappel
+
+```python
+0 ^ 0 = 0
+0 ^ 1 = 1
+1 ^ 0 = 1
+1 ^ 1 = 0
+```
+
+```{codeplay}
+from random import randint
+score = 0
+n = 3
+
+for i in range(n):
+    a = randint(1, 15)
+    b = randint(1, 15)
+
+    print(f'  {a:04b}')
+    print(f'^ {b:04b}')
+    reponse = input('= ')
+    solution = f'{a ^ b:04b}'
+
+    if reponse == solution:
+        score += 1
+    else:
+        print(f'faux! Réponse correcte = {solution}')
+    print()
+print(f'score = {score}/{n}')
+===
+# Appliquez l'opération logique XOR aux 2 nombres en code binaire
 ```

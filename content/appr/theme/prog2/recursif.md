@@ -1,6 +1,19 @@
 # Revenir - `f(n)`
 
-La définition d'une fonction `f(n)` qui contient à l'intérieur de sa définition le terme `f(n-1)` représente une **fonction récursive**, c'est à dire une fonction qui s'appelle elle-même, ou qui revient vers elle-même. Elle s'appelle souvent avec une valeur plus simple, par exemple `n-1` au lieu de `n`.
+Dans ce chapitre nous allons découvrir la **récursivité**. La définition d'une fonction `f(n)` qui contient à l'intérieur de sa définition le terme `f(n-1)` représente une **fonction récursive**, c'est-à-dire une fonction qui revient vers elle-même. Elle s'auto-appelle souvent avec une valeur plus simple, par exemple `n-1` au lieu de `n`. Vous allez voir que :
+
+- une boucle `while True:` donne une boucle infinie,
+- le nombre de fois une fonction peut s'appeler soi-même est limité,
+- une condition de terminaison permet à une fonction récursive de finir.
+
+```{question}
+Une fonction récursive est souvent choisie parce qu'elle
+
+{f}`est plus rapide`  
+{f}`utilise moins de mémoire intérmédiaire`  
+{v}`est plus facile à comprendre`  
+{v}`est plus facile à écrire`
+```
 
 ## Boucle infinie
 

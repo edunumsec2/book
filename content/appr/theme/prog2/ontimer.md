@@ -1,10 +1,10 @@
 # Interrompre - `ontimer`
 
-Dans ce chapitre nous allons voir comment un programme peut planifier d'appeler une fonction dans le future. Cette fonctionnalité est importante pour programmer des simulations, des animations, des jeux-vidéos, des horloges etc. Nous allons voir que :
+Dans ce chapitre nous allons voir comment un programme peut planifier d'appeler une fonction dans le future. Cette fonctionnalité est importante pour programmer des simulations, des animations, des jeux-vidéos, des horloges, etc. Nous allons voir que :
 
-- la fonction `ontimer(f, t)` installe une fonction qui va être appelée après `t` millisecondes,
-- après `t` millisecondes le programme actuel est interrompue pour exécuter la fonction `f()`,
-- le module `time` met a disposition des fonctions de date et temps.
+- la fonction `ontimer(f, t)` installe une fonction qui va être appelée après `t` ms,
+- après `t` ms le programme actuel s'interrompt pour exécuter la fonction `f()`,
+- le module `time` met a disposition des fonctions de date et de temps.
 
 ```{question}
 La méthode `ontimer()` installe une fonction de rappel qui
@@ -14,6 +14,10 @@ La méthode `ontimer()` installe une fonction de rappel qui
 {v}`s'exécute dans le futur`  
 {f}`affiche le retard`
 ```
+
+## Fonction de rappel
+
+En informatique, une fonction de rappel (**callback** en anglais) ou fonction de post-traitement est une fonction qui est passée en argument à une autre fonction. Cette dernière peut alors faire usage de cette fonction de rappel comme de n'importe quelle autre fonction, alors qu'elle ne la connaît pas par avance.
 
 ## Fonction `ontimer`
 

@@ -1,6 +1,6 @@
 # Appartenir - `set`
 
-La [théorie des ensembles](https://fr.wikipedia.org/wiki/Théorie_des_ensembles) est une théorie de l'appartenance. Un élément d'un ensemble est dit « appartenir » à cet ensemble. En Python, l'ensemble est une collection d'objets. Mais contrairement à une liste, ses éléments sont uniques et il n'y a pas le concept d'ordre. Nous allons voir que :
+La [théorie des ensembles](https://fr.wikipedia.org/wiki/Théorie_des_ensembles) est une théorie de l'appartenance. Un élément d'un ensemble est dit **appartenir** à cet ensemble. En Python, l'ensemble est une collection d'objets. Mais contrairement à une liste, ses éléments sont uniques et il n'y a pas le concept d'ordre. Nous allons voir que :
 
 - l'expression `set()` est l'ensemble vide,
 - l'ensemble `{1, 3, 2}` comporte 3 éléments,

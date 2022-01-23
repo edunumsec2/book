@@ -1,12 +1,13 @@
 # Compter - `bin`
 
-Compter est l'opération utilisée pour savoir combien d'objets il y a dans un ensemble de taille fini. On utilise alors les nombres naturels, aussi appelé les entiers non-négatifs.
+Compter est l'opération utilisée pour savoir combien d'objets il y a dans un ensemble de taille fini. Nous utilisons alors les nombres naturels, aussi appelés les entiers non-négatifs.
+Le fait que nous humains avons dix doigts nous a mené à adopter le système décimal (base 10).
 
-Les humains ont 10 doigts, c'est la raison que nous avons adopté le système décimal. Un ordinateur par contre représente les nombre en système binaire. Nous allons voir que :
+Un ordinateur par contre représente les nombres en système binaire (base 2). Une des principales raisons est l'extrême simplicité de représentation de l'information dans un système matériel avec seulement 2 états (électrique, magnétique ou optique). Nous allons voir que :
 
-- la fonction `bin(d)` retourne un code binaire,
-- la fonction `oct(d)` retourne un code octale,
-- la fonction `hex(d)` retourne un code hexadécimale.
+- la fonction `bin(d)` retourne un code binaire (précédé par `0b`),
+- la fonction `oct(d)` retourne un code octale (précédé par `0o`),
+- la fonction `hex(d)` retourne un code hexadécimale (précédé par `0x`).
 
 ```{question}
 La fonction `bin()` renvoie une valeur de type
@@ -30,6 +31,23 @@ print('\nbinaire')
 for i in range(16):
     print(bin(i), end=' ')
 ```
+
+En informatique nous utilisons fréquemment trois autres représentations :
+
+- binaire (base 2)
+- octale (base 8)
+- hexadécimale (base 16)
+
+```{codeplay}
+n = 123
+
+print('décimal =', n)
+print('binaire =', bin(n))
+print('octal =', oct(n))
+print('hexadécimal =', hex(n))
+```
+
+**Exercice** : Modifier le nombre `n` et ré-executez le code.
 
 ## Compter avec les doigts
 
@@ -226,20 +244,240 @@ for i in range(16):
     sety(ycor() + 15)
     forward(50)
     right(360/16)
-````
+```
+
+## Quiz
+
+### Compter avec la main
 
 ```{codeplay}
+:nocontrols:
 
-````
+def quiz(question, solution):
+    answer = 0
+    print(question)
+    while answer != solution:
+      answer = int(input())
+      if answer > solution:
+          print('trop grand')
+      elif answer < solution:
+          print('trop petit')
+      else:
+          print('Bravo')
+
+quiz('Quel est le plus grand nombre binaire représentable avec UNE main', 2 ** 5 - 1)
+===
+# UNE main
+```
 
 ```{codeplay}
+:nocontrols:
 
-````
+def quiz(question, solution):
+    answer = 0
+    print(question)
+    while answer != solution:
+      answer = int(input())
+      if answer > solution:
+          print('trop grand')
+      elif answer < solution:
+          print('trop petit')
+      else:
+          print('Bravo')
+
+quiz('Quel est le plus grand nombre binaire représentable avec DEUX mains', 2 ** 10 - 1)
+===
+# DEUX mains
+```
+
+Utilisez vos doigts pour compter en binaire.
 
 ```{codeplay}
+from random import shuffle
+a = 5
 
-````
+nombres = list(range(2 ** a))
+shuffle(nombres)
+score = 0
+
+for n in nombres[:8]:
+    reponse = int(input(f'{n:05b} = '))
+    if reponse == n:
+        score += 1
+    else:
+        print('faux! Réponse correcte:', n)
+     
+print('score =', score, '/ 8')
+===
+# Transformez 8 codes binaires avec 5 digits en décimal
+```
+
+### Code binaire
 
 ```{codeplay}
+from random import shuffle
 
-````
+nombres = list(range(8))
+shuffle(nombres)
+score = 0
+
+for n in nombres:
+    reponse = int(input(f'{n:03b} = '))
+    if reponse == n:
+        score += 1
+    else:
+        print('faux! Réponse correcte:', n)
+     
+print('score =', score, '/ 8')
+===
+# Transformez 8 codes binaires avec 3 digits en décimal
+```
+
+```{codeplay}
+from random import shuffle
+
+nombres = list(range(16))
+shuffle(nombres)
+score = 0
+
+for n in nombres[:8]:
+    reponse = int(input(f'{n:04b} = '))
+    if reponse == n:
+        score += 1
+    else:
+        print('faux! Réponse correcte:', n)
+     
+print('score =', score, '/ 8')
+===
+# Transformez 8 codes binaires avec 4 digits en décimal
+```
+
+### Code hexadécimal
+
+Petit rappel:
+
+```python
+a = 1010
+b = 1011
+c = 1100
+d = 1101
+e = 1110
+f = 1111
+```
+
+```{codeplay}
+from random import shuffle
+a = 4
+
+nombres = list(range(2 ** a))
+shuffle(nombres)
+score = 0
+
+for n in nombres[:8]:
+    reponse = input(f'{n:01x} = ')
+    if reponse == f'{n:04b}':
+        score += 1
+    else:
+        print(f'faux! Réponse correcte = {n:04b}')
+     
+print(f'score = {score}/8')
+===
+# Transformez 8 codes hexa en code binaire à 4 bits
+```
+
+```{codeplay}
+from random import shuffle
+a = 8
+nombres = list(range(2 ** a))
+shuffle(nombres)
+score = 0
+
+for n in nombres[:8]:
+    reponse = input(f'{n:02x} = ')
+    if reponse == f'{n:08b}':
+        score += 1
+    else:
+        print(f'faux! Réponse correcte = {n:08b}')
+     
+print(f'score = {score}/8')
+===
+# Transformez 8 codes hexa en code binaire à 8 bits
+```
+
+### Incrémentation
+
+Le mot en informatique pour *additionner 1* est incrémentation.
+
+```{codeplay}
+from random import shuffle
+a = 4
+nombres = list(range(2 ** a))
+shuffle(nombres)
+score = 0
+n = 3
+
+for i in nombres[:n]:
+    print(f'{n:04b} + 1')
+    reponse = input()
+    solution = f'{n+1:04b}'
+    if reponse == solution:
+        score += 1
+    else:
+        print(f'faux! Réponse correcte = {solution}')
+    print()
+print(f'score = {score}/{n}')
+===
+# Additionnez 1 au code binaire
+```
+
+### Addition
+
+```{codeplay}
+from random import randint
+score = 0
+n = 3
+
+for i in range(n):
+    a = randint(1, 7)
+    b = randint(1, 7)
+
+    print(f'  {a:04b}')
+    print(f'+ {b:04b}')
+    reponse = input('= ')
+    solution = f'{a + b:04b}'
+
+    if reponse == solution:
+        score += 1
+    else:
+        print(f'faux! Réponse correcte = {solution}')
+    print()
+print(f'score = {score}/{n}')
+===
+# Additionnez 2 nombres en code binaire
+```
+
+### Soustraction
+
+```{codeplay}
+from random import randint
+score = 0
+n = 3
+
+for i in range(n):
+    a = randint(7, 15)
+    b = randint(1, 7)
+
+    print(f'  {a:04b}')
+    print(f'- {b:04b}')
+    reponse = input('= ')
+    solution = f'{a - b:04b}'
+
+    if reponse == solution:
+        score += 1
+    else:
+        print(f'faux! Réponse correcte = {solution}')
+    print()
+print(f'score = {score}/{n}')
+===
+# Soustrayez 2 nombres en code binaire
+```

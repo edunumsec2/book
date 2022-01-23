@@ -101,13 +101,11 @@ parts:
       - file: content/appr/theme/prog2/dict
       - file: content/appr/theme/prog2/compter
       - file: content/appr/theme/prog2/color
-      - file: content/appr/theme/prog2/tuple
       - file: content/appr/theme/prog2/set
       - file: content/appr/theme/prog2/bool
       - file: content/appr/theme/prog2/bit
       - file: content/appr/theme/prog2/recursif
       - file: content/appr/theme/prog2/idees
-      - file: content/appr/theme/prog2/quiz
       
   - file: content/appr/theme/projets/intro
     sections:

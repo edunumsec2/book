@@ -1,6 +1,6 @@
 # Cloner - `Turtle`
 
-Dans **Programmation I** nous avons fait connaissance avec un style de programmation que nous appelons **programmation procédurale**. Dans cette deuxième partie nous allons découvrir un nouveau style de programmation qui s'appelle **programmation orientée objet** (POO).
+Dans **Programmation I** nous avons fait connaissance avec un style de programmation que nous appelons **programmation procédurale**. Dans cette deuxième partie nous allons découvrir un nouveau style de programmation qui s'appelle **programmation orientée objet**.
 
 Le premier changement que nous allons voir est que nous pouvons créer des tortues à volonté. Jusqu'à maintenant nous avons travaillé avec une seule tortue. Dès maintenant nous allons créer autant de tortues que nous voulons. Les tortues sont des objets dérivés de la classe `Turtle`. Nous allons voir que :
 
@@ -9,7 +9,7 @@ Le premier changement que nous allons voir est que nous pouvons créer des tortu
 - la méthode `bob.clone()` crée un clone de la tortue `bob`.
 
 ```{question}
-La expression `ana = bob.clone()` crée
+L'expression `ana = bob.clone()` crée
 
 {f}`un clone de ana`  
 {v}`une copie identique de bob`  

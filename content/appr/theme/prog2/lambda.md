@@ -1,9 +1,10 @@
 # Formaliser - `lambda`
 
-Dans ce chapitre nous découvrons la fonction `lambda`. C'est une façon de créer une fonction anonyme (sans nom). Nous allons voir que :
+Dans ce chapitre nous découvrons la fonction `lambda`. C'est une façon de créer une fonction anonyme (sans nom). Une fonction lambda est composée d'un certain nombre de variables, suivi d'une expression qui utilise ces variables. Nous allons voir que :
 
 - le mot-clé `lambda` permet de définir une fonction anonyme,
-- l'expression `lambda x : expression` produit une fonction.
+- l'expression `lambda x : expression` produit une fonction,
+- la fonction `lambda` peut comporter zéro ou plusieurs variables.
 
 ```{question}
 En Python `lambda` est
@@ -17,6 +18,7 @@ En Python `lambda` est
 Nous allons également voir que :
 
 - la fonction `xcor()` renvoie la coordonnée x de la tortue,
+- la fonction `pos()` renvoie les deux coordonnées x et y de la tortue,
 - la fonction `setx(val)` assigne une nouvelle valeur la coordonnée x.
 
 ## Fonction lambda

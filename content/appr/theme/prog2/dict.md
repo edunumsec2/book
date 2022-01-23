@@ -1,6 +1,6 @@
 # Associer - `dict`
 
-En Python, un _dictionnaire_ est une structure de données qui, comme une liste, contient plusieurs éléments, mais qui est plus puissante. Dans une liste les indices sont des entiers. Dans un dictionnaire les indices peuvent être de n'importe quel type immuable (entier, nombre, texte). Nous allons voir que :
+Un **dictionnaire** est une structure de données qui, comme une liste, contient plusieurs éléments, mais qui est plus puissante. Dans une liste les indices sont des entiers. Dans un dictionnaire les indices peuvent être de n'importe quel type immuable (entier, nombre, texte). Nous allons voir que :
 
 - un dictionnaire est composé de paires `clé:valeur`,
 - l'expression `dico[clé]` renvoie la valeur associée à la clé,

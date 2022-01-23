@@ -1,6 +1,6 @@
 # Tracer - `math`
 
-Dans ce chapitre nous allons découvrir comment nous pouvons tracer des fonctions mathématiques pour les visualiser. Le module `math` met à disposition toute une série de constantes et fonctions mathématiques. Nous allons explorer :
+Dans ce chapitre nous allons découvrir comment nous pouvons tracer des fonctions mathématiques pour les visualiser. Le module `math` met à disposition toute une série de constantes et de fonctions mathématiques. Nous allons explorer :
 
 - les fonctions trigonométriques `sin()`, `cos()` et `tan()`,
 - la fonction exponentielle `exp()`,

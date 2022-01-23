@@ -30,9 +30,8 @@ En informatique, une fonction de rappel (**callback** en anglais) ou fonction de
 
 ## Avancer la tortue
 
-Le programme suivant fait avancer la tortue à l'aide de la touche `a` du clavier.
-
-La variable `s` fait référence à l'objet `Screen` qui possède les deux méthodes :
+Le programme suivant fait avancer la tortue à l'aide de la touche `a` du clavier qui appelle une fonction de rappel. 
+La variable `s` fait référence à l'objet `Screen` qui possède les deux méthodes :
 
 - `onkey(f, 'a')` pour installer une fonction de rappel `f()` pour la touche `'a'`,
 - `listen()` pour commencer à *écouter* les événements du clavier.

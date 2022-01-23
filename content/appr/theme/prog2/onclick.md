@@ -1,7 +1,7 @@
 # Cliquer - `onclick`
 
 Dans ce chapitre nous explorons comment un programme peux détecter un clic de souris et y réagir.
-Cliquer (ou toucher) est la méthode principale pour interagir avec un smartphone : on touche avec le doigt une certaine position de l'écran et le programme y réagit. Nous allons voir que :
+Cliquer (toucher) est la méthode principale pour interagir avec un smartphone : quand le doigt touche une certaine position de l'écran le programme y réagit. Nous allons voir que :
 
 - la méthode `onclick(f)` permet de définir une fonction de rappel,
 - la fonction de rappel `f(x, y)` est appelée lors d'un clic de souris,

@@ -1,8 +1,8 @@
 # Nuancer - `color`
 
-Dans ce chapitre nous allons voir les couleurs dans toutes leurs nuances. En informatique les couleurs sont basées sur les couleurs primaires **rouge**, **vert** et **bleu**. Leur combinaison respective permet de créer tout le spectre des couleurs visibles. Nous allons voir que :
+Dans ce chapitre nous allons voir les couleurs dans toutes leurs nuances. En informatique les couleurs sont basées sur les trois couleurs primaires **rouge**, **vert** et **bleu**. Leur combinaison respective permet de créer tout le spectre des couleurs visibles. Nous allons voir que :
 
-- la fonction `color(r, v, b)` représente une couleur avec des nombres,
+- la fonction `color(r, v, b)` représente une couleur avec trois nombres,
 - la fonction `color('#rvb')` représente une couleur avec un hexadécimal,
 - la fonction `color(r, v, b, a)` ajoute la transparence `a` (alpha).
 
@@ -322,12 +322,66 @@ for x in ('blue', 'red', 'lime', 'black'):
         right(60)
     end_fill()
     right(60 if x == 'lime' else 120)  
-````
+```
+
+## Quiz
+
+### Taille image
 
 ```{codeplay}
-
-````
+solution = 640 * 480 * 3
+reponse = 0
+===
+print("Quelle est taille d'une image couleur de 640 x 480 pixels ?")
+while reponse != solution:
+  reponse = int(input())
+print('Bravo')
+```
 
 ```{codeplay}
+solution = 2 ** 8
+reponse = 0
+===
+while reponse != solution:
+    reponse = int(input('nombre de combinaisons dans un octet: '))
+print('Bravo')
+```
 
-````
+### Octets, Ko/Mo/Go
+
+```{codeplay}
+def quiz(question, solution):
+  print(question)
+  answer = ''
+  while answer != solution:
+    answer = int(input())
+  print('Bravo')
+
+quiz('Quel est le nombre de combinaison dans un octet?', 2**8)
+===
+# octet
+```
+
+```{codeplay}
+def quiz(question, solution):
+  print(question)
+  answer = ''
+  while answer != solution:
+    answer = int(input())
+  print('Bravo')
+
+quiz("Quel est le nombre d'octets dans 1 ko?", 2**10)
+===
+# kilo-octet
+```
+
+```{codeplay}
+def quiz(question, solution):
+  answer = ''
+  while answer != solution:
+    answer = int(input(question))
+  print('Bravo')
+quiz("Quel est le nombre d'octets dans 1 Mo:", 2**20)
+===
+# méga-octet
+```

@@ -2,7 +2,7 @@
 
 La programmation orientée objet met au centre de la programmation la notion d'objet. Des objets individuels sont créés à partir d'un modèle qu'on appelle classe.
 
-Un objet est caractérisé par ses attributs (variables) et méthodes (fonctions). La programmation orientée objet attache les attributs et méthodes à l'objet-même et permet de cette façon un code très structuré et facilement extensible.  Nous allons voir que :
+Un objet est caractérisé par ses **attributs** (variables) et **méthodes** (fonctions). La programmation orientée objet attache les attributs et méthodes à l'objet-même et permet de cette façon un code très structuré et facilement extensible.  Nous allons voir que :
 
 - le mot-clé `class` permet de définir un modèle pour créer des objets,
 - l'expression `point = Point()` crée un nouveau objet à partir d'une classe,
