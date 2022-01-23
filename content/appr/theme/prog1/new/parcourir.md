@@ -23,7 +23,7 @@ En Python une séquence est délimitée par des parenthèses `()` et les éléme
 Dans l'expression `for x in (...)` la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'blue'`, `'cyan'`, `'red'`, etc.
 
 ```{codeplay}
-:file: tup1.py
+:file: tuple1.py
 from turtle import *
 up()
 
@@ -40,7 +40,7 @@ for x in ('blue', 'cyan', 'red', 'magenta', 'pink', 'lime'):
 Nous pouvons également itérer dans une séquence numérique et spécifier le diamètre d'un disque.
 
 ```{codeplay}
-:file: tup2.py
+:file: tuple2.py
 from turtle import *
 up()
 
@@ -57,7 +57,7 @@ for x in (20, 40, 60, 80, 100):
 Nous allons reprendre nos fonctions `batiment()` et `porte()` et avec l'aide d'une séquence nous pouvons l'écrire de manière bien plus compacte.
 
 ```{codeplay}
-:file: tup3.py
+:file: tuple3.py
 from turtle import *
 
 def batiment():
@@ -82,7 +82,7 @@ batiment()
 Nous allons reprendre nos fonctions `maison()` et avec l'aide d'une séquence nous pouvons l'écrire de manière bien plus compacte. Cette fois-ci la séquence représente des angles, donc nous nommons notre variable `a` pour nous rappeler que c'est un angle.
 
 ```{codeplay}
-:file: tup4.py
+:file: tuple4.py
 from turtle import *
 
 def maison():
@@ -107,7 +107,7 @@ Dans l'exemple nous allons d'abord parcourir une séquence d'angles avec une var
 Ensuite nous allons parcourir une séquence de couleurs avec une variable `c` pour dessiner des maisons en différentes couleurs.
 
 ```{codeplay}
-:file: tup5.py
+:file: tuple5.py
 from turtle import *
 
 def maison():
@@ -134,7 +134,7 @@ Ci-dessous nous dessinons 6 fois un losange pour obtenir une fleur.
 Avec une boucle `for` nous parcourons une séquence de 6 couleurs alternantes.
 
 ```{codeplay}
-:file: tup6.py
+:file: tuple6.py
 from turtle import *
 getscreen().bgcolor('lightgreen')
 
@@ -158,7 +158,7 @@ for c in ('pink', 'red', 'pink', 'red', 'pink'):
 Dans cet exemple nous allons parcourir différentes épaisseurs et nous appelons notre variable `w` (width). Voici quatre smiley avec différentes formes de bouche.
 
 ```{codeplay}
-:file: tup7.py
+:file: tuple7.py
 from turtle import *
 getscreen().bgcolor('lightgreen')
 up()
@@ -196,7 +196,7 @@ for w in (1, 5, 10, 20):
 Cette fois nous faisons varier le diamètre de la bouche.
 
 ```{codeplay}
-:file: tup8.py
+:file: tuple8.py
 from turtle import *
 
 getscreen().bgcolor('skyblue')
@@ -229,7 +229,7 @@ Il est aussi possible de mettre une séquence dans une séquence, un tuple dans 
 Ceci nous permet par exemple de spécifier dans une séquences deux valeurs : un angle et une couleur `(a, c)`.
 
 ```{codeplay}
-:file: tup9.py
+:file: tuple9.py
 from turtle import *
 
 getscreen().bgcolor('skyblue')

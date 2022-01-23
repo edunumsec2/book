@@ -23,7 +23,7 @@ Le grand intérêt d'une valeur de retour est qu'on peut l'utiliser de nouveau d
 Par exemple nous pouvons créer une expression comme celle-ci : `square(x) + cube(x)`
 
 ```{codeplay}
-:file: ret1.py
+:file: return1.py
 def carre(x):
     return x ** 2
 
@@ -44,7 +44,7 @@ Une fonction peut avoir plusieurs points de sortie. En fait quand une ligne avec
 La fonction `signe()` possède 3 points de sortie.
 
 ```{codeplay}
-:file: ret2.py
+:file: return2.py
 def signe(x):
     if x > 0:
         return 'positif'
@@ -71,7 +71,7 @@ Plusieurs fonctions nous renseignent sur l'état de la tortue :
 
 
 ```{codeplay}
-:file: ret3.py
+:file: return3.py
 from turtle import *
 
 color('red', 'lime')
@@ -107,7 +107,7 @@ Avec un argument, ces fonctions permettent de définir une couleur de la tortue 
 Sans un argument ces fonctions renvoyent la couleur actuelle.
 
 ```{codeplay}
-:file: ret4.py
+:file: return4.py
 from turtle import *
 
 width(10)
@@ -135,7 +135,7 @@ Ces fonctions permettent de lire la position actuelle de la tortue et renvoient 
 Les fonctions `seth(a)` et `geth()` permettent de définir ou renvoyer l'orientation actuelle (heading) de la tortue.
 
 ```{codeplay}
-:file: ret5.py
+:file: return5.py
 from turtle import *
 
 width(5)
@@ -163,7 +163,7 @@ print('hex =', hex(n))
 Ces fonctions renvoient la valeur absolue, la puissance et la valeur arrondie.
 
 ```{codeplay}
-:file: ret7.py
+:file: return7.py
 n = -3.1415
 print(n)
 print('abs =', abs(n))
@@ -174,7 +174,7 @@ print('round =', round(n, 2))
 Ces fonctions renvoient le minimum, le maximum et la somme d'une séquence de nombres.
 
 ```{codeplay}
-:file: ret8.py
+:file: return8.py
 seq = (1, 3, 99, 9)
 print(seq)
 print('max =', max(seq))
@@ -185,7 +185,7 @@ print('sum =', sum(seq))
 Ces fonctions renvoient la longueur d'une chaine, l'entier du code Unicode, et le symbole Unicode associé à un entier.
 
 ```{codeplay}
-:file: ret9.py
+:file: return9.py
 print(len('hello'))
 print(ord('😀'))
 print(chr(128522))

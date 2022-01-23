@@ -30,7 +30,7 @@ Entre les parenthèses de la fonction vous devez écrire le nom d'une couleur, e
 Voici un triangle avec 3 segments de couleurs différentes.
 
 ```{codeplay}
-:file: col1.py
+:file: color1.py
 from turtle import *
 width(20)
 
@@ -58,7 +58,7 @@ Nous pouvons afficher des points à chaque sommet :
 - la fonction `dot(d, couleur)` dessine un disque dans la couleur spécifiée.
 
 ```{codeplay}
-:file: col2.py
+:file: color2.py
 from turtle import *
 up()
 
@@ -84,7 +84,7 @@ Avec la fonction `fillcolor()` nous pouvons définir une couleur de remplissage 
 Par exemple ce programme-ci dessine un carré jaune.
 
 ```{codeplay}
-:file: col3.py
+:file: color3.py
 from turtle import *
 
 def triangle():
@@ -111,7 +111,7 @@ Tout ce qu'il faut retenir pour l'instant c'est que la combinaison `getscreen().
 Dans l'exemple suivant, nous dessinons un carré jaune sur un arrière-fond rose.
 
 ```{codeplay}
-:file: col4.py
+:file: color4.py
 from turtle import *
 
 def triangle():
@@ -139,7 +139,7 @@ Le résultat est un triangle avec deux bordures et un troisième segment sans bo
 Une équerre est un instrument formé de deux pièces ajustées à angle droit. l'équerre est utilisée soit pour vérifier des angles dièdres droits, soit pour tracer des angles plans droits.
 
 ```{codeplay}
-:file: col5.py
+:file: color5.py
 from turtle import *
 getscreen().bgcolor('moccasin')
 
@@ -172,7 +172,7 @@ Avec des cercles `dot(d)` de tailles différentes nous pouvons dessiner un smile
 Voici un smiley qui exprime l'indifférence.
 
 ```{codeplay}
-:file: col6.py
+:file: color6.py
 from turtle import *
 getscreen().bgcolor('linen')
 dot(300, 'yellow')
@@ -197,7 +197,7 @@ forward(100)
 Voici un autre smiley qui exprime la surprise.
 
 ```{codeplay}
-:file: col7.py
+:file: color7.py
 from turtle import *
 
 getscreen().bgcolor('azure')
@@ -224,7 +224,7 @@ La fonction `boite()` dessine les 3 côtés d'un carré.
 Répété 4 fois, ceci donne la forme d'une croix.
 
 ```{codeplay}
-:file: col8.py
+:file: color8.py
 from turtle import *
 
 getscreen().bgcolor('red')
@@ -256,7 +256,7 @@ end_fill()
 Nous reprenons l'exemple du chapitre précédent de la fonction `maison()`. Cette fois nous y intégrons `begin_fill()` et `end_fill()` pour pouvoir les colorier..
 
 ```{codeplay}
-:file: col9.py
+:file: color9.py
 from turtle import *
 getscreen().bgcolor('lightgreen')
 
