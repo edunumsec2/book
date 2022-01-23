@@ -26,12 +26,13 @@ La méthode `onclick(f)` permet de définir une fonction `f` qui est alors appel
 
 La variable `s` fait référence à l’objet `Screen` qui possède les deux méthodes :
 
-- `onclick(f)` pour installer une fonction de rappel f() pour un clic de sours,
+- `onclick(f)` pour installer une fonction de rappel f() pour un clic de souris,
 - `listen()` pour commencer à *écouter* les événements de la souris.
 
 Le programme suivant dessine un point à la position du clic et affiche les coordonnées dans la console.
 
 ```{codeplay}
+:file: onclick1.py
 from turtle import *
 s = getscreen()
 
@@ -55,6 +56,7 @@ s.listen()
 Nous pouvons ajouter les coordonnées.
 
 ```{codeplay}
+:file: onclick2.py
 from turtle import *
 s = getscreen()
 
@@ -76,6 +78,7 @@ s.listen()
 Nous pouvons numéroter les clics.
 
 ```{codeplay}
+:file: onclick3.py
 from turtle import *
 s = getscreen()
 
@@ -108,6 +111,7 @@ La fonction de rappel …
 La fonction de rappel de la tortue fait avancer la tortue de 20 pixels.
 
 ```{codeplay}
+:file: onclick4.py
 from turtle import *
 s = getscreen()
 t = getturtle()
@@ -138,6 +142,7 @@ Nous réagissons également à deus touches du clavier :
 - `c` (clear) pour effacer le canevas
 
 ```{codeplay}
+:file: onclick5.py
 from turtle import *
 s = getscreen()
 hideturtle()
@@ -170,6 +175,7 @@ Nous réagissons également à deus touches du clavier :
 - `e` (end fill)
 
 ```{codeplay}
+:file: onclick6.py
 from turtle import *
 s = getscreen()
 hideturtle()
@@ -193,22 +199,44 @@ s.listen()
 
 **Exercice** : Dessinez une maison. Utilisez la touche `b` (begin) pour commencer le remplissage et la touche `e` (end) pour terminer le remplissage.
 
+## Une grille
+
+Par la suite nous allons places les points sur une grille. Voici comment indiquer les positions de la grille.
+
+```{codeplay}
+:file: onclick7.py
+from turtle import *
+speed(0)
+up()
+d = 80
+
+for y in range(-160, 200, d):
+    for x in range(-240, 300, d):
+        goto(x, y)
+        dot()
+```
+
 ## Placer en grille
 
 Nous pouvons arranger les disques en grille.
 
 ```{codeplay}
+:file: onclick8.py
 from turtle import *
 s = getscreen()
 hideturtle()
-fillcolor('pink')
 speed(0)
 up()
-d = 40
+d = 80
+
+for y in range(-160, 200, d):
+    for x in range(-240, 300, d):
+        goto(x, y)
+        dot()
 
 def f(x, y):
-    x = x//d * d + d//2
-    y = y//d * d + d//2
+    x = (x + d/2) // d * d
+    y = (y + d/2) // d * d
     goto(x, y)
     dot(d) 
 
@@ -221,17 +249,24 @@ s.listen
 Nous pouvons faire en sorte que les points tombent sur les intersections d'une
 
 ```{codeplay}
+:file: onclick9.py
 from turtle import *
 s = getscreen()
 hideturtle()
-fillcolor('pink')
 speed(0)
-d = 40
+up()
+d = 80
+
+for y in range(-160, 200, d):
+    for x in range(-240, 300, d):
+        goto(x, y)
+        dot()
 
 def f(x, y):
-    x = x//d * d + d//2
-    y = y//d * d + d//2
+    x = (x + d/2) // d * d
+    y = (y + d/2) // d * d
     goto(x, y)
+    down()
     dot(d/4, 'red') 
 
 s.onclick(f)
@@ -243,6 +278,7 @@ s.listen
 Ici nous dessinons d'abord un tableau de jeu. Ensuite nous détectons la case dans laquelle le clic a eu lieu et y ajoutons un disque.
 
 ```{codeplay}
+:file: onclick10.py
 from turtle import *
 s = getscreen()
 hideturtle()
@@ -278,6 +314,7 @@ s.listen()
 Ici nous dessinons d'abord un tableau de jeu. Ensuite nous détectons la case dans laquelle le clic a eu lieu et y ajoutons un disque noir.
 
 ```{codeplay}
+:file: onclick11.py
 from turtle import *
 s = getscreen()
 hideturtle()
@@ -322,6 +359,7 @@ La fonction on `onrelease` ne fonction pas dans ce site; la tortue ne devient ja
 ```
 
 ```{codeplay}
+:file: onclick12.py
 from turtle import *
 shape('turtle')
 speed(0)

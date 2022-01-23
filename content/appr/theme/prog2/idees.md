@@ -165,7 +165,7 @@ hideturtle()
 
 ## Fonction `delay()`
 
-La fonction `delay(d)` permet de contrôler l'intervalle (exprimé en millisecondes) entre deux mises à jour (update) de l'écran (canevas). 
+La fonction `delay(d)` permet de contrôler l'intervalle (exprimé en millisecondes) entre deux mises à jour (update) de l'écran (canevas).
 
 ```{codeplay}
 from turtle import *
@@ -321,7 +321,7 @@ import this
 
 ## Mot-clés
 
-Ce module contient la liste de tous des mot-clés de Python. Le nombre des mots-clés est relativement limité. Nous en avons seulement une trentaine. Ces mots-clé concernent : 
+Ce module contient la liste de tous des mot-clés de Python. Le nombre des mots-clés est relativement limité. Nous en avons seulement une trentaine. Ces mots-clé concernent :
 
 - les opérateurs logiques : and, or, not
 - les boucles : for, in, while, break, continue
@@ -564,4 +564,3 @@ update()
 print('time =', time() - t0)
 print('objets =', len(tortues))
 ```
-

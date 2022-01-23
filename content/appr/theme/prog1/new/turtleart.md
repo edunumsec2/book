@@ -401,7 +401,7 @@ from turtle import *
 
 up()
 d = 60
-color('purple')
+color('indigo')
 for c in 'modulo':
     write(c, font=(None, d, 'bold'), move=True)
     
@@ -413,16 +413,4 @@ goto(-2*d, 0)
 dot(d/2, 'lightgray')
 goto(-d, d)
 dot(d/2, 'lightgray')
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
 ```

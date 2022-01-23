@@ -24,6 +24,7 @@ De façon générale, un dictionnaire associe une série de **clés** à une aut
 Toutes les clés d'un dictionnaire sont uniques.
 
 ```{codeplay}
+:file: dict1.py
 anglais = {'maison':'house', 'voiture':'car', 'ordinateur':'computer'}
 
 print('dictionnaire =', anglais)
@@ -33,6 +34,7 @@ print(anglais['maison'])
 Nous pouvons très bien définir un deuxième dictionnaire.
 
 ```{codeplay}
+:file: dict2.py
 anglais = {'maison':'house', 'voiture':'car', 'ordinateur':'computer'}
 allemand = {'maison':'House', 'voiture':'Auto', 'ordinateur':'Rechner'}
 
@@ -52,6 +54,7 @@ Pour pouvoir accéder à chaque mot d'une phrase, nous allons découper la phras
 Nous obtenons alors une liste qui contient les mots de la phrase.
 
 ```{codeplay}
+:file: dict3.py
 phrase = 'la maison est grande'
 print('phrase =', phrase)
 print('liste =', phrase.split())
@@ -60,6 +63,7 @@ print('liste =', phrase.split())
 A l'aide d'une boucle `for` nous pouvons traduire la phrase entière.
 
 ```{codeplay}
+:file: dict4.py
 anglais = {'la':'the', 'maison':'house', 'est':'is', 'rouge':'red', 
            'et':'and', 'grande':'big', 'voiture':'car', 'rapide':'fast', 
            'très':'very', 'sympa':'nice'}
@@ -79,6 +83,7 @@ Un texte est constitué de plusieurs lignes. Pour découper un texte multi-ligne
 nous utilisons de nouveau la méthode `split('\')`, mais cette fois avec un séparateur (newline).
 
 ```{codeplay}
+:file: dict5.py
 texte = """la maison est grande
 la voiture est rapide
 la voiture et la maison est très sympa"""
@@ -89,6 +94,7 @@ print(texte.split('\n'))
 Nous pouvons maintenant traduire un texte de plusieurs lignes.
 
 ```{codeplay}
+:file: dict6.py
 anglais = {'la':'the', 'maison':'house', 'est':'is', 'rouge':'red', 
            'et':'and', 'grande':'big', 'voiture':'car', 'rapide':'fast', 
            'très':'very', 'sympa':'nice'}
@@ -117,6 +123,7 @@ Le code Morse est composé de points et de traits. Il associe à chaque lettre d
 Un autre exemple pour un dictionnaire est la table du code Morse.
 
 ```{codeplay}
+:file: dict7.py
 Morse = {'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'.--', 'e':'.', 'f':'..-.', 
          'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 
          'm':'--', 'n':'-.', 'o':'---', 'p':'.--.', 'q':'--.-', 'r':'.-.', 
@@ -137,6 +144,7 @@ Maintenant nous pouvons traduire une phrase entière. Ici nous devons faire atte
 - les mots sont séparés par 4 espaces.
 
 ```{codeplay}
+:file: dict8.py
 Morse = {'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'.--', 'e':'.', 'f':'..-.', 
          'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 
          'm':'--', 'n':'-.', 'o':'---', 'p':'.--.', 'q':'--.-', 'r':'.-.', 
@@ -166,6 +174,7 @@ Dans un premier temps on vérifie que l'utilisateur existe avec `user in passwor
 Dans un deuxième temps on vérifie si c'est le bon mot de passe avec `pw == passwords[user]`.
 
 ```{codeplay}
+:file: dict9.py
 passwords = {'mark':'1234', 'steve':'abQF$12', 'sarah':'01[+]a.'}
 
 while True:
@@ -190,6 +199,7 @@ Un spécialiste de la publication, de la mode, ou du web, utilise une centaine d
 Nous pouvons utiliser un dictionnaire `RVB` pour associer des nom de couleurs à des triplets de nombres qui indiquent les 3 composantes RVB.
 
 ```{codeplay}
+:file: dict10.py
 from turtle import *
 up()
 
@@ -219,6 +229,7 @@ Les clés du histogramme sont des caractères que nous désignons par `c`.
 Si le caractère `c` fait déjà partie du histogramme, alors on ajoute 1 au compte, sinon on met le compte à 1.
 
 ```{codeplay}
+:file: dict11.py
 phrase = 'hello world'
 histogram = {}
 
@@ -238,6 +249,7 @@ Nous constatons que la lettre `l` apparait 3 fois.
 Nous pouvons maintenant établir un histogramme sur un texte de plus grande taille.
 
 ```{codeplay}
+:file: dict12.py
 texte = """Le monde numérique est extrêmement vaste. 
 Au moyen d’applications dédiées, il est possible d’y travailler sur 
 une certaine représentation du réel. Des textes, des images, 
@@ -268,6 +280,7 @@ print(histogram)
 Pour visualiser cet histogramme nous allons dessiner un diagramme de barres.
 
 ```{codeplay}
+:file: dict13.py
 texte = """
 Le monde numérique est extrêmement vaste. 
 Au moyen d’applications dédiées, il est possible d’y travailler sur 
@@ -318,13 +331,15 @@ for c in histogram:
 Adresser une clé qui n'existe pas dans un dictionnaire produit une erreur de type `KeyError`.
 
 ```{codeplay}
+:file: dict14.py
 anglais = {'maison':'house'}
-print(anglais['voiture'])
+print(anglais['voiture'])       # KeyError: 'voiture'
 ```
 
 La méthode `get(clé, val_défaut)` permet d'obtenir une valeur par défaut et d'éviter une erreur si la clé n'existe pas encore dans le dictionnaire.
 
 ```{codeplay}
+:file: dict15.py
 anglais = {'maison':'house'}
 print('maison =', anglais.get('maison', 'not defined'))
 print('voiture =', anglais.get('voiture', 'not defined'))
@@ -333,6 +348,7 @@ print('voiture =', anglais.get('voiture', 'not defined'))
 Ceci nous permet de compacter encore davantage le programme de l'histogramme.
 
 ```{codeplay}
+:file: dict16.py
 phrase = 'hello world'
 
 histogram = {}

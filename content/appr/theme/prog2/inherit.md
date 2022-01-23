@@ -20,6 +20,7 @@ La la classe `P` dans `E(P)` est appelé
 Des le tout premier chapitre nous avons vu qu'un programme est une séquence d'instructions. Un tuple est une séquence d'objets.
 
 ```{codeplay}
+:file: ep1.py
 a = 1, 2, 3
 print(a)
 print()
@@ -37,6 +38,7 @@ for x in sequence:
 Un tuple peut être imbriqué dans un autre tuple.
 
 ```{codeplay}
+:file: ep2.py
 x = 1, 2
 print(x)
 
@@ -50,6 +52,7 @@ print(a)
 Nous pouvons utiliser un tuple pour une séquence de coordonnées qui représente une forme.
 
 ```{codeplay}
+:file: ep3.py
 from turtle import *
 
 maison = (0, 0), (200,0), (200, 100), (100, 150), (0, 100), (0, 0)
@@ -61,6 +64,7 @@ for p in maison:
 Nous pouvons utiliser un tuple pour une séquence de couleurs.
 
 ```{codeplay}
+:file: ep4.py
 from turtle import *
 up()
 
@@ -78,6 +82,7 @@ Un index `[i]` permet d'extraire un élément.
 L'opérateur de tranche `[i:j]` permet d'extraire un sous-tuple.
 
 ```{codeplay}
+:file: ep5.py
 maison = (0, 0), (200,0), (200, 100), (100, 150), (0, 100), (0, 0)
 
 print('simple index:', maison[2])
@@ -100,6 +105,7 @@ Ces opérations 'surchargent' les opérateurs standards. Les opérateurs standar
 - `__len__   len`
 
 ```{codeplay}
+:file: ep6.py
 a = (1, 2, 1)
 b = (3, 4)
 
@@ -111,6 +117,7 @@ print('2 in a =', a.__contains__(2))
 Et nous retrouvons ces 3 méthodes-ci qui existent aussi pour les listes.
 
 ```{codeplay}
+:file: ep7.py
 a = (1, 2, 1)
 
 print('a =', a)
@@ -128,6 +135,7 @@ La classe `Vec2D` définit des vecteurs 2D. Elle définit les opérations
 - multiplication
 
 ```{codeplay}
+:file: ep8.py
 class Vec2D:
     def __init__(self, x, y):
         self.x = x
@@ -170,6 +178,7 @@ print('abs(b) =', abs(b))
 ## Visualiser Vect2D
 
 ```{codeplay}
+:file: ep9.py
 from turtle import *
 up()
 
@@ -210,6 +219,7 @@ Dans l'exemple suivant nous définissons une classe parent `Object`. Elle possè
 Les trois fonctions `Dot`, `Rect` et `Text` héritent tous les méthodes de la classe parent `Object`.
 
 ```{codeplay}
+:file: ep10.py
 from turtle import *
 up()
 speed(0)
@@ -307,4 +317,4 @@ getscreen().onclick(f)
 getscreen().listen()
 ```
 
-**Exercice** : Clickez dans tout les objets et observez les info affichés dans la console.
+**Exercice** : Cliquez dans tout les objets et observez les info affichés dans la console.

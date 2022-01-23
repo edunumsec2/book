@@ -20,6 +20,7 @@ L'expression `2 & 3` donne comme résultat
 ## Bitwise and (`&`)
 
 ```{codeplay}
+:file: bit1.py
 a = 0b11110000
 b = 0b10110111
 
@@ -31,6 +32,7 @@ print('a&b =', bin(a & b))
 ## Bitwise or (`|`)
 
 ```{codeplay}
+:file: bit2.py
 a = 0b11110000
 b = 0b10110111
 
@@ -42,6 +44,7 @@ print('a|b =', bin(a | b))
 ## Bitwise xor (`^`)
 
 ```{codeplay}
+:file: bit3.py
 a = 0b11110000
 b = 0b10110111
 
@@ -53,6 +56,7 @@ print(f'a^b = {a ^ b:08b}')
 ## Bitwise inversion (`~`)
 
 ```{codeplay}
+:file: bit4.py
 a = 0b11110010
 
 print(f'a  = {a:08b}')
@@ -67,6 +71,7 @@ Par la suite nous affichons les pixels comme une image noir est blanc:
 - 1 = pixel noir
 
 ```{codeplay}
+:file: bit5.py
 from turtle import *
 
 up()
@@ -88,6 +93,7 @@ for i in range(8):
 ## Code binaire et hex
 
 ```{codeplay}
+:file: bit6.py
 from turtle import *
 
 up()
@@ -115,6 +121,7 @@ L'opérateur `&` effectue l'opération logique `and` pour chaque bit d'un nombre
 Dans une image noir et blanc, ceci correspond à l'intersection des pixels des deux images.
 
 ```{codeplay}
+:file: bit7.py
 from turtle import *
 
 up()
@@ -156,6 +163,7 @@ L'opérateur `|` effectue l'opération logique `or` pour chaque bit d'un nombre.
 Dans une image noir et blanc, ceci correspond à l'union des pixels des deux images.
 
 ```{codeplay}
+:file: bit8.py
 from turtle import *
 
 up()
@@ -197,6 +205,7 @@ L'opérateur `^` effectue l'opération **ou exclusif** pour chaque bit du nombre
 Dans une image noir et blanc, ceci correspond à inverser les pixels de la première image qui sont indiqué par la deuxième image.
 
 ```{codeplay}
+:file: bit9.py
 from turtle import *
 
 up()

@@ -22,6 +22,7 @@ L'expression `ana = bob.clone()` crée
 Jusqu'à maintenant, nous avons utilisé une seule tortue. Mais nous pouvons en créer autant que nous voulons. Chaque tortue possède sa couleur, sa position, sa orientation, sa vitesse, sa forme, etc.  Dans le programme suivant nous créons une tortue `ana`, une tortue `bob` et une tortue `mia`.
 
 ```{codeplay}
+:file: turtle1.py
 from turtle import *
 
 ana = Turtle()
@@ -49,11 +50,19 @@ mia.forward(100)
 La fonction `dir()` permet d'afficher toutes les méthodes que possède la classe `Turtle`. Il y en a environ 87 et vous en connaissez déjà une grande partie.
 
 ```{codeplay}
+:file: turtle2.py
 from turtle import *
 
 methodes = dir(Turtle)
 print(methodes)
 print(len(methodes))
+```
+
+```{caution}
+Si vous exécutez ce code directement en Python avec un éditeur externe comme Thonny, vous constatez un nombre bien plus élévé d'objets (plus que 130).
+
+Ceci est dû au fait que dans ce site votre code est traduit en JavaScript et exécuté par [Skulpt](https://skulpt.org) directement dans votre navigateur.
+Le module en JavaScript ne traduit pas tous les objets, mais les méthodes essentielles sont tous présentes.
 ```
 
 ## Bouger deux tortues
@@ -63,6 +72,7 @@ Nous pouvons utiliser des fonctions de rappel pour faire bouger les deux tortues
 La fonction `clone()` permet de cloner la tortue `ana`. La nouvelle tortue est un objet séparé qui sera initialisé avec les bonnes valeurs pour la forme et la vitesse. Pour `bob` il faudra juste changer sa couleur en bleu.
 
 ```{codeplay}
+:file: turtle3.py
 from turtle import *
 s = getscreen()
 
@@ -78,10 +88,10 @@ def bouger(tortue, dir):
     tortue.seth(dir)
     tortue.forward(50)
     
-s.onkey(lambda : bouger(ana, 0), 'right')
-s.onkey(lambda : bouger(ana, 90), 'up')
-s.onkey(lambda : bouger(ana, 180), 'left')
-s.onkey(lambda : bouger(ana, 270), 'down')
+s.onkey(lambda : bouger(ana, 0), 'Right')
+s.onkey(lambda : bouger(ana, 90), 'Up')
+s.onkey(lambda : bouger(ana, 180), 'Left')
+s.onkey(lambda : bouger(ana, 270), 'Down')
 
 s.onkey(lambda : bouger(bob, 0), 'd')
 s.onkey(lambda : bouger(bob, 90), 'w')
@@ -95,6 +105,7 @@ s.listen()
 Dans l'exemple suivant nous allons créer 10 tortues à des positions aléatoires, avec des couleurs aléatoires.
 
 ```{codeplay}
+:file: turtle4.py
 from turtle import *
 from random import *
 s = getscreen()
@@ -128,6 +139,7 @@ La stratégie adopte est de crée une première tortue caché au centre qui a le
 A chaque clique de souris cette tortue invisible au centre est cloné. Il suffit alors de la colorier, placer, orienter et montrer.
 
 ```{codeplay}
+:file: turtle5.py
 from turtle import *
 from random import *
 s = getscreen()
@@ -154,6 +166,7 @@ s.listen()
 Cliquez sur une tortue pour la sélectionner, ensuite utiliser les touches flèches pour la déplacer.
 
 ```{codeplay}
+:file: turtle6.py
 from turtle import *
 from random import *
 s = getscreen()
@@ -178,16 +191,17 @@ ana.onclick(lambda x, y:f(ana, x, y))
 bob.onclick(lambda x, y:f(bob, x, y))
 lea.onclick(lambda x, y:f(lea, x, y))
 
-s.onkey(lambda : t.setx(t.xcor() + d), 'right')
-s.onkey(lambda : t.setx(t.xcor() - d), 'left')
-s.onkey(lambda : t.sety(t.ycor() + d), 'up')
-s.onkey(lambda : t.sety(t.ycor() - d), 'down')
+s.onkey(lambda : t.setx(t.xcor() + d), 'Right')
+s.onkey(lambda : t.setx(t.xcor() - d), 'Left')
+s.onkey(lambda : t.sety(t.ycor() + d), 'Up')
+s.onkey(lambda : t.sety(t.ycor() - d), 'Down')
 s.listen()
 ```
 
 ## Une tortue parmi 10
 
 ```{codeplay}
+:file: turtle7.py
 from turtle import *
 from random import *
 s = getscreen()
@@ -219,9 +233,9 @@ for i in range(10):
     t.down()
     t.onclick(lambda x, y : f(t, x, y))
 
-s.onkey(lambda : t.setx(t.xcor() + d), 'right')
-s.onkey(lambda : t.setx(t.xcor() - d), 'left')
-s.onkey(lambda : t.sety(t.ycor() + d), 'up')
-s.onkey(lambda : t.sety(t.ycor() - d), 'down')
+s.onkey(lambda : t.setx(t.xcor() + d), 'Right')
+s.onkey(lambda : t.setx(t.xcor() - d), 'Left')
+s.onkey(lambda : t.sety(t.ycor() + d), 'Up')
+s.onkey(lambda : t.sety(t.ycor() - d), 'Down')
 s.listen()
 ````

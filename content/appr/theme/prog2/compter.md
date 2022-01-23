@@ -23,6 +23,7 @@ La fonction `bin()` renvoie une valeur de type
 Voici les nombres entiers de 0 à 99.
 
 ```{codeplay}
+:file: bin1.py
 print('décimal')
 for i in range(100):
     print(i, end=' ')
@@ -39,6 +40,7 @@ En informatique nous utilisons fréquemment trois autres représentations :
 - hexadécimale (base 16)
 
 ```{codeplay}
+:file: bin2.py
 n = 123
 
 print('décimal =', n)
@@ -47,7 +49,7 @@ print('octal =', oct(n))
 print('hexadécimal =', hex(n))
 ```
 
-**Exercice** : Modifier le nombre `n` et ré-executez le code.
+**Exercice** : Modifier le nombre `n` et ré-exécutez le code.
 
 ## Compter avec les doigts
 
@@ -57,6 +59,7 @@ Le système le plus simple est le système **unaire**, ou chaque nombre est repr
 Le petit programme ci-dessous dessine les 5 doigts d'une main pour créer une animation qui montre comment compter avec les doigts de 0 à 5.
 
 ```{codeplay}
+:file: bin3.py
 from turtle import *
 from time import *
 
@@ -84,40 +87,12 @@ for i in range(6):
     sleep(2)
 ```
 
-## Compter en binaire
-
-Si nous utilisons le code binaire pour compter avec nos doigts, alors nous pouvons représenter les codes binaires `00000` à `11111`.
-
-Voici un programme qui affiche le code binaire et dessine les doigts.
-
-```{codeplay}
-from turtle import *
-
-def finger(x):
-    forward(x)
-    circle(-20, 180)
-    forward(x)
-    left(180)
-
-def binaire(code):
-    left(90)
-    for c in code :
-        write(c, font=('Arial', 24))
-        if c == '1':
-            finger(120)
-        else :
-            finger(30)
-              
-binaire('00110')
-```
-
-**Exercice** : modifier le programme pour compter de 0 à 31.
-
 ## Système binaire
 
 La fonction `bin(i)` retourne le code binaire du nombre entier `i` précédé de `0b`.
 
 ```{codeplay}
+:file: bin4.py
 for i in range(16):
     print(i, '=', bin(i))
 ````
@@ -125,16 +100,19 @@ for i in range(16):
 La chaîne formaté (f-string) '{i:4b}' à l'intérieur de la fonction `print()` affiche le code binaire sur 4 positions.
 
 ```{codeplay}
+:file: bin5.py
 for i in range(16):
     print(f'{i:2} = {i:4b}')
 ```
 
 ```{codeplay}
+:file: bin6.py
 for i in range(100, 105):
     print(f'{i:2} = b{i:08b} = x{i:2x}')
 ```
 
 ```{codeplay}
+:file: bin7.py
 from random import *
 
 n = 10
@@ -152,6 +130,7 @@ print('score =', score, '/', n)
 ```
 
 ```{codeplay}
+:file: bin8.py
 for i in range(100):
     print(f'{i}={i:x}', end=' ')
 ```
@@ -161,6 +140,7 @@ for i in range(100):
 Si nous utilisons le système binaire, nous pouvons compter de 0 à 31 avec les 5 doigts d'une main. Voici une animation qui fait la démonstration.
 
 ```{codeplay}
+:file: bin9.py
 from turtle import *
 from time import *
 
@@ -201,6 +181,7 @@ for i in range(32):
 Cette visualisation montre le cercle des entiers naturels encodé sur 4 bits.
 
 ```{codeplay}
+:file: bin10.py
 from turtle import *
 from time import *
 
@@ -224,6 +205,7 @@ for i in range(16):
 Cette visualisation montre le cercle des entiers relatifs encodé sur 4 bits.
 
 ```{codeplay}
+:file: bin11.py
 from turtle import *
 from time import *
 

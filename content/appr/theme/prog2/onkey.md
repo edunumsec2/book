@@ -30,7 +30,7 @@ En informatique, une fonction de rappel (**callback** en anglais) ou fonction de
 
 ## Avancer la tortue
 
-Le programme suivant fait avancer la tortue à l'aide de la touche `a` du clavier qui appelle une fonction de rappel. 
+Le programme suivant fait avancer la tortue à l'aide de la touche `a` du clavier qui appelle une fonction de rappel.
 La variable `s` fait référence à l'objet `Screen` qui possède les deux méthodes :
 
 - `onkey(f, 'a')` pour installer une fonction de rappel `f()` pour la touche `'a'`,
@@ -39,6 +39,7 @@ La variable `s` fait référence à l'objet `Screen` qui possède les deux méth
 Deux lignes de texte sont affichées au début, pour que l'utilisateur sache qu'il doit d'abord cliquer dans la fenêtre de la tortue pour l'activer.
 
 ```{codeplay}
+:file: onkey1.py
 from turtle import *
 shape('turtle')
 color('red')
@@ -61,6 +62,7 @@ print("Appuyez sur la touche 'a' pour avancer.")
 La fonction `home()` ramène la tortue à son origine. Nous avons changé le nom de la fonction de rappel `f()` en `avancer()`. C'est plus clair. La fonction `home()` existe déjà, donc nous n'avons pas besoin de la définir.
 
 ```{codeplay}
+:file: onkey2.py
 from turtle import *
 shape('turtle')
 color('red')
@@ -88,6 +90,7 @@ Dans le prochain programme nous ajoutons des touches supplémentaires pour les f
 - `r` pour effacer la trace et ramener la tortue à l'origine avec `reset()`.
 
 ```{codeplay}
+:file: onkey3.py
 from turtle import *
 shape('turtle')
 color('red')
@@ -115,6 +118,7 @@ Le programme suivant fait bouger la tortue à l'aide de 3 touches du clavier :
 - `g` pour tourner à gauche
 
 ```{codeplay}
+:file: onkey4.py
 from turtle import *
 shape('turtle')
 color('red')
@@ -144,7 +148,7 @@ print("h:home     c:clear   r:reset")
 
 ## Les flèches
 
-Les touches de flèche portent les nom `left`, `right`, `up` et `down`.
+Les touches de flèche portent les nom `Left`, `Right`, `Up` et `Down`.
 Nous pouvons utiliser les 4 flèches pour faire bouger la tortue.
 
 - `↑` pour avancer
@@ -155,6 +159,7 @@ Nous pouvons utiliser les 4 flèches pour faire bouger la tortue.
 Le référentiel utilisé se rapporte à la tortue. Quand la tortue est en face de nous, c'est difficile de la contrôler, car nous devons inverser les directions dans notre tête.
 
 ```{codeplay}
+:file: onkey5.py
 from turtle import *
 shape('turtle')
 color('red')
@@ -172,10 +177,10 @@ def droite():
     right(30)
 
 s = getscreen()
-s.onkey(avancer, 'up')
-s.onkey(reculer, 'down')
-s.onkey(gauche, 'left')
-s.onkey(droite, 'right')
+s.onkey(avancer, 'Up')
+s.onkey(reculer, 'Down')
+s.onkey(gauche, 'Left')
+s.onkey(droite, 'Right')
 s.onkey(home, 'h')
 s.onkey(clear, 'c')
 s.onkey(reset, 'r')
@@ -198,6 +203,7 @@ Les jeux vidéos utilisent souvent les touches WASD pour déplacer le personnage
 Cette fois nous utilisons un référentiel absolu, fixé au canevas. La tortue peut se déplacer dans les 4 directions haut, bas, gauche et droite.
 
 ```{codeplay}
+:file: onkey6.py
 from turtle import *
 shape('turtle')
 color('blue')
@@ -231,12 +237,12 @@ print("Utilisez les touches WASD pour bouger la tortue.")
 
 **Exercice** : Ajoutez les fonctions de rappel `home()`, `clean()` et `reset()` pour effacer la trace et ramener la tortue à l'origine.
 
-
 ## Dessiner un cercle
 
 Appuyer sur la touche `c` va dessiner un cercle.
 
 ```{codeplay}
+:file: onkey7.py
 from turtle import *
 shape('turtle')
 
@@ -258,6 +264,7 @@ print("a:avancer  c:cercle")
 Appuyer sur la touche `m` va dessiner un maison.
 
 ```{codeplay}
+:file: onkey8.py
 from turtle import *
 shape('turtle')
 
@@ -286,6 +293,7 @@ Nous allons utiliser les touches `u` et `d` pour les fonctions
 - `d` pour baisser le stylo avec `down()`.
 
 ```{codeplay}
+:file: onkey9.py
 from turtle import *
 shape('turtle')
 
@@ -294,7 +302,7 @@ def avancer():
     
 def maison():
     down()
-    forward(1.4 * d)
+    forward(70)
     for a in (90, 45, 90, 45):
         left(a)
         forward(50)
@@ -317,6 +325,7 @@ Nous allons introduire des touches pour choisir l'épaisseur du trait.
 - `3` pour un trait épais.
 
 ```{codeplay}
+:file: onkey10.py
 from turtle import *
 shape('turtle')
 
@@ -355,6 +364,7 @@ Nous allons introduire des touches pour choisir l'épaisseur du trait.
 - `b` pour un trait bleu.
 
 ```{codeplay}
+:file: onkey11.py
 from turtle import *
 shape('turtle')
 width(3)
@@ -390,6 +400,7 @@ print("a:avancer, t:tourner, r:rouge, v:vert, b:bleu")
 Nous pouvons aussi utiliser les touches pour écrire dans le canevas de la tortue. Pour avancer la tortue avec la lettre nous choisissons l'option `move=True`
 
 ```{codeplay}
+:file: onkey12.py
 from turtle import *
 
 def x():

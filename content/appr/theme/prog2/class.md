@@ -47,6 +47,7 @@ Pour créer une instance on utilise le nom de la classe suivi de parenthèses. P
 Une classe est comme un moule qui nous permet de créer des copies, à partir d'une définition de classe.
 
 ```{codeplay}
+:file: class1.py
 class Point():
     "Definition d'un point géométrique"
 
@@ -67,6 +68,7 @@ Il pourrait avoir une couleur, une épaisseur, etc.
 La fonction `dir()` affiche les attributs d'un objet.
 
 ```{codeplay}
+:file: class2.py
 class Point():
     pass
 
@@ -84,6 +86,7 @@ print(dir(p))
 Chaque classe possède une méthode spéciale `__init__()` que nous appelons **constructeur**. Cette méthode est appelé lors de la création de l'objet. Son premier paramètres est toujours `self`, qui représente l'objet lui-même. Cette fonction est utilisé pour initialiser les attributs avec les valeurs intiales.
 
 ```{codeplay}
+:file: class3.py
 class Point():
     def __init__(self, x=0, y=0):
         self.x = x
@@ -102,6 +105,7 @@ Toutes les classes possède aussi une méthode spéciale `__str__()` qui retourn
 Souvent la représentation d'un objet sous forme de texte ressemble à son constructeur, et affiche le nom de la classe et quelques attributs essentiels.
 
 ```{codeplay}
+:file: class4.py
 class Point():
     def __init__(self, x=0, y=0):
         self.x = x
@@ -121,6 +125,7 @@ print(p1)
 Dans la définition de classe, nous pouvons définir des méthodes supplémentaires. Le premier paramètres de toute méthode est `self`, la variable qui représente l'objet lui-même.
 
 ```{codeplay}
+:file: class5.py
 class Point():
     def __init__(self, x=0, y=0):
         self.x = x
@@ -153,12 +158,13 @@ et les méthodes
 - `draw()` pour dessiner l'objet
 
 ```{codeplay}
+:file: class6.py
 from turtle import *
 hideturtle()
 speed(0)
 up()
 
-class Dot(): 
+class Dot():
     def __init__(self, pos=(0, 0), d=40, color='red'):
         self.pos = pos
         self.d = d
@@ -186,6 +192,7 @@ p3 = Dot((100, 100), 100, 'yellow')
 Nous ajoutons maintenant une fonction de rappel pour basculer la couleur du disque quand on y clique avec la souris.
 
 ```{codeplay}
+:file: class7.py
 from turtle import *
 hideturtle()
 speed(0)
@@ -231,16 +238,17 @@ getscreen().listen()
 
 ## Dot cliquable
 
-Dans l'exemple suivant nous avons deux points `p0` et `p1` qui 
+Dans l'exemple suivant nous avons deux points `p0` et `p1` qui
 
 - basculent d'état quand on y clique.
 - montrent leur état 0 ou 1,
 - changent de couleur entre gris et jaune.
 
-Le troisième point `p2` tient son état à partir de la relation logique 
+Le troisième point `p2` tient son état à partir de la relation logique
 `p0 and p1`.
 
 ```{codeplay}
+:file: class8.py
 from turtle import *
 hideturtle()
 speed(0)
@@ -293,6 +301,7 @@ Le programme suivant définit une classe `Bin4`. Elle:
 - incrémente le nombre
 
 ```{codeplay}
+:file: class9.py
 from turtle import *
 hideturtle()
 speed(0)
@@ -343,6 +352,7 @@ getscreen().listen()
 L'unité arithmétique et logique (en anglais arithmetic–logic unit, ALU), est la partie de l'ordinateur chargé d'effectuer les calculs.
 
 ```{codeplay}
+:file: class10.py
 from turtle import *
 
 def alu():
@@ -382,6 +392,7 @@ line(0, -90)
 Dans cette ALU (en anglais arithmetic–logic unit, ALU), nous allons simuler une addition de deux opérandes de 4 bits. En cliquant avec la souris sur une des opérandes d'entrée, la valeur est incrémenté de 1. Les valeurs peuvent aller de 0 à 15.
 
 ```{codeplay}
+:file: class11.py
 from turtle import *
 
 def alu():
@@ -461,9 +472,10 @@ getscreen().listen()
 
 ## Classe Card
 
-Les cartes de jeux sont représentées avec un rectangle arrondi et un des 4 symboles (coeur, piq, carreau, trèfle).
+Les cartes de jeux sont représentées avec un rectangle arrondi et un des 4 symboles (coeur, pique, carreau, trèfle).
 
 ```{codeplay}
+:file: class12.py
 from turtle import *
 up()
 
@@ -497,32 +509,4 @@ class Card:
 Card()
 Card((50, 20), fill='pink')
 Card((100, -120), fill='azure')
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
 ```

@@ -29,6 +29,7 @@ Pour adapter la fonction à l'échelle de la tortue nous changeons :
 - `y` par un facteur de 100.
 
 ```{codeplay}
+:file: math1.py
 from turtle import *
 import math
 up()
@@ -56,6 +57,7 @@ for x in range(-300, 300, 10):
 Le mot-clé `import` permet d'importer un module. Normalement c'est dans la première ligne d'un programme qu'on importe un module. La fonction `dir()` permet de voir le contenu du module.
 
 ```{codeplay}
+:file: math2.py
 import math
 m = [x for x in dir(math) if not x.startswith('_')]
 print(m)
@@ -75,6 +77,7 @@ Pour utiliser un objet d'un module importé, il faut écrire de façon `module.o
 comme par exemple `math.pi` pour la constante $\pi$. Voici quelques exemples.
 
 ```{codeplay}
+:file: math3.py
 import math
 
 print('e =', math.e)
@@ -99,6 +102,7 @@ Le module `math` contient 5 constantes:
 - `tau` rapport de la circonférence d'un cercle à son rayon
 
 ```{codeplay}
+:file: math4.py
 from math import e, inf, nan, pi, tau
 
 print('Constantes:')
@@ -129,6 +133,7 @@ Et leurs fonctions inverses (arc):
 Dorénavant nous utilisons l'expression `from math import *` pour importer tous les objets du module `math`. Le symbole `*` représente tous les objets.
 
 ```{codeplay}
+:file: math5.py
 from turtle import *
 from math import *
 up()
@@ -148,6 +153,7 @@ for x in range(-300, 300, 10):
 Dessinons aussi des axes, nous allons utiliser la fonction `stamp` pour dessiner la flèche de l'axe.
 
 ```{codeplay}
+:file: math6.py
 from turtle import *
 width(1)
 up()
@@ -171,6 +177,7 @@ Nous pouvons re-écrire le code de façon plus court et plus lisible en définis
 Cette fonction utilise deux paramètres `p` et `q` qui sont un tuple qui représente^ les coordonnées du point de départ et du point d'arrivée.
 
 ```{codeplay}
+:file: math7.py
 from turtle import *
 up()
 
@@ -191,6 +198,7 @@ axe((0, -180), (0, 180))
 Avec multiples lignes horizontales et verticales nous dessinons une grille.
 
 ```{codeplay}
+:file: math8.py
 from turtle import *
 width(1)
 speed(0)
@@ -213,6 +221,7 @@ for y in range(-180, 180+1, d):
 En définissant la fonction `ligne()` nous pouvons rendre le programme plus lisible.
 
 ```{codeplay}
+:file: math9.py
 from turtle import *
 speed(0)
 up()
@@ -233,9 +242,10 @@ for y in range(-180, 180+1, d):
 
 **Exercice** : Mettez la distance `d` à 20 et à 10 et ré-exécutez le programme.
 
-## Echèlle
+## Echelle
 
 ```{codeplay}
+:file: math10.py
 import math
 from turtle import *
 up()
@@ -256,6 +266,29 @@ for i in range(n):
 ## Tracer des fonctions
 
 ```{codeplay}
+:file: math11.py
+from turtle import *
+from math import *
+up()
+    
+def tracer(f, couleur='red', nom='f'):
+    color(couleur)
+    for x in range(-300, 250, 10):
+        y = 100 * f(x/50)
+        goto(x, y)
+        down()
+        dot()
+    up()
+    write(' ' + nom, font=(None, 18))
+
+tracer(sin, 'green', 'sin')
+tracer(cos)
+```
+
+Voici du code à développer.
+
+```{codeplay}
+:file: math12.py
 from turtle import *
 from math import *
 up()
@@ -276,30 +309,10 @@ for i in range(n):
         write(f'{x_:.2}, {y_:.2}')
 ```
 
-## Tracer une fonction
-
-```{codeplay}
-from turtle import *
-from math import *
-up()
-    
-def tracer(f, couleur='red', nom='f'):
-    color(couleur)
-    for x in range(-300, 250, 10):
-        y = 100 * f(x/50)
-        goto(x, y)
-        down()
-        dot()
-    up()
-    write(' ' + nom, font=(None, 18))
-
-tracer(sin, 'green', 'sin')
-tracer(cos)
-```
-
 ## arc tangente
 
 ```{codeplay}
+:file: math13.py
 from turtle import *
 from math import *
 up()
@@ -321,6 +334,7 @@ graph(cos, 'blue', 'cos')
 ## Equation de 2e degré
 
 ```{codeplay}
+:file: math14.py
 from turtle import *
 
 def axes():
@@ -346,32 +360,4 @@ def tracer():
         
 axes()
 tracer()
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
 ```

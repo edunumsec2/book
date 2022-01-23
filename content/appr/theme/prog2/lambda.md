@@ -26,6 +26,7 @@ Nous allons également voir que :
 Parfois nous avons besoin d'une petite fonction, sans que ça vaut la peine de la définir de façon explicite avec le mot clé `def` et un nom de fonction.
 
 ```{codeplay}
+:file: lambda1.py
 def cube(x):
     return x ** 3
 
@@ -37,6 +38,7 @@ print(cube(5))
 Parfois nous avons juste besoin d'une fonction anonyme (sans nom). Une telle fonction s'appelle une fonction **lambda**. Voici le même exemple cette fois avec une fonction anonyme.
 
 ```{codeplay}
+:file: lambda2.py
 print((lambda x : x ** 3)(2))
 print((lambda x : x ** 3)(5))
 ```
@@ -44,6 +46,7 @@ print((lambda x : x ** 3)(5))
 La fonction **lambda** en tant qu'objet, peut être affectée à une variable.
 
 ```{codeplay}
+:file: lambda3.py
 f = lambda x : x ** 3
 
 print(f)
@@ -60,6 +63,7 @@ Jusqu'à maintenant les arguments de nos fonctions étaient des valeurs tel que:
 Avoir une fonction comme argument est nouveau. Pour montrer ce nouveau principe nous allons définir la fonction `tracer()`. Elle prend comme argument une fonction `f` qu'elle va évaluer dans un intervalle [-300, 300].
 
 ```{codeplay}
+:file: lambda4.py
 from turtle import *
 up()
 
@@ -84,6 +88,7 @@ Voici encore 3 exemples de fonctions
 - la fonction modulo renvoie une trace en dent de scie
 
 ```{codeplay}
+:file: lambda5.py
 from turtle import *
 up()
 
@@ -104,6 +109,7 @@ tracer(lambda x : x % 50, 'lime')   # fonction modulo
 La fonction `tracer()` permet de tracer une fonction `f()` dans un intervalle [-300, 300]. Nous traçons deux équations quadratiques.
 
 ```{codeplay}
+:file: lambda6.py
 from turtle import *
 speed(0)
 up()
@@ -124,17 +130,19 @@ tracer(lambda x : 0.005 * x ** 2 - x - 100, 'blue')
 Revenons vers notre tout premier programme avec la fonction `onkey()`. Nous voulons faire avancer la tortue quand la touche `a` est appuyée. Nous sommes tenté de simplifier le programme et d'écrire ceci. Essayez-le, mais malheureusement ça ne fonctionne pas.
 
 ```{codeplay}
+:file: lambda7.py
 from turtle import *
 shape('turtle')
 
 s = getscreen()
-s.onkey(forward(50), 'a')
+s.onkey(forward(50), 'a')       # erreur
 s.listen()
 ```
 
 C'est ici que la fonction `lambda` est très pratique. Nous pouvons créer une fonction anonyme (sans nom) et la passer comme argument directement dans `onkey()`.
 
 ```{codeplay}
+:file: lambda8.py
 from turtle import *
 shape('turtle')
 
@@ -155,16 +163,17 @@ Avec la fonction lambda notre programme de définition des fonctions de rappel d
 Comme cette dernière fonction n'agit pas sur l'orientation de la souris, nous choisissons le disque (`circle`) comme forme pour la tortue.
 
 ```{codeplay}
+:file: lambda9.py
 from turtle import *
 shape('circle')
 speed(0)
 d = 50
 
 s = getscreen()
-s.onkey(lambda : setx(xcor() + d), 'right')
-s.onkey(lambda : setx(xcor() - d), 'left')
-s.onkey(lambda : sety(ycor() + d), 'up')
-s.onkey(lambda : sety(ycor() - d), 'down')
+s.onkey(lambda : setx(xcor() + d), 'Right')
+s.onkey(lambda : setx(xcor() - d), 'Left')
+s.onkey(lambda : sety(ycor() + d), 'Up')
+s.onkey(lambda : sety(ycor() - d), 'Down')
 s.listen()
 ```
 
@@ -173,16 +182,17 @@ s.listen()
 Faisons maintenant un programme qui met ensemble tout ce que nous avons vu dans le chapitre précédent dans un seul programme.
 
 ```{codeplay}
+:file: lambda10.py
 from turtle import *
 shape('circle')
 speed(0)
 d = 50
 
 s = getscreen()
-s.onkey(lambda : setx(xcor() + d), 'right')
-s.onkey(lambda : setx(xcor() - d), 'left')
-s.onkey(lambda : sety(ycor() + d), 'up')
-s.onkey(lambda : sety(ycor() - d), 'down')
+s.onkey(lambda : setx(xcor() + d), 'Right')
+s.onkey(lambda : setx(xcor() - d), 'Left')
+s.onkey(lambda : sety(ycor() + d), 'Up')
+s.onkey(lambda : sety(ycor() - d), 'Down')
 s.onkey(up, 'u')
 s.onkey(down, 'd')
 s.onkey(home, 'h')
@@ -204,6 +214,7 @@ Nous pouvons utiliser les touches pour écrire dans le canevas de la tortue. Pou
 Il est nécessaire de définir une fonction de rappel pour chaque touche du clavier que nous voulons utiliser.
 
 ```{codeplay}
+:file: lambda11.py
 from turtle import *
 
 def ecrire(x):

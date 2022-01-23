@@ -28,6 +28,7 @@ L'intensité de couleur est exprimé soit :
 En utilisant la définition précédente nous pouvons exprimer les couleurs aussi avec un triplet.
 
 ```{codeplay}
+:file: color1.py
 from turtle import *
 up()
 
@@ -62,6 +63,7 @@ Il a deux façon d'exprimer les 3 composantes RVB :
 La fonction `colormode()` retourne le mode actuelle si utilisé sans argument. Si un argument est fourni (1 ou 255), ce mode est activé.
 
 ```{codeplay}
+:file: color2.py
 from turtle import *
 print(colormode())
 
@@ -100,6 +102,7 @@ dot(80)
 Voici un programme qui affiche les intensité pour rouge en incréments de 25%.
 
 ```{codeplay}
+:file: color3.py
 from turtle import *
 up()
 
@@ -129,6 +132,7 @@ dot(80)
 ## Mélanger RVB
 
 ```{codeplay}
+:file: color4.py
 from turtle import *
 
 d = 120
@@ -166,6 +170,7 @@ dot(d)
 Dans l'exemple ci-dessous nous agissons sur la cou
 
 ```{codeplay}
+:file: color5.py
 from turtle import *
 up()
 
@@ -190,6 +195,7 @@ for x in [0, 0.2, 0.4, 0.6, 0.8, 1]:
 Dans ce programme les axes x et y correspondent à une des couleurs RVG.
 
 ```{codeplay}
+:file: color6.py
 from turtle import *
 
 getscreen().bgcolor('gray')
@@ -228,6 +234,7 @@ Voici les 8 sommets du cube :
 - blanc - (1, 1, 1)
 
 ```{codeplay}
+:file: color7.py
 from turtle import *
 
 def axe(angle, couleur):
@@ -239,9 +246,9 @@ def axe(angle, couleur):
     
 getscreen().bgcolor('black')
 color('white')
-axe(0, 'red')
-axe(90, 'green')
-axe(135, 'blue')
+axe(0, 'rouge')
+axe(90, 'vert')
+axe(135, 'bleu')
 speed(0)
 up()
 
@@ -268,6 +275,7 @@ Dans un écran d'ordinateur (ou smartphone) on utilise les couleurs rouge, vert,
 La combinaison de toutes les trois couleurs de base donne blanc.
 
 ```{codeplay}
+:file: color8.py
 from turtle import *
 getscreen().bgcolor('black')
 r = 120
@@ -285,7 +293,8 @@ for x in ('yellow', 'cyan', 'magenta', 'white'):
     for i in range(4):
         circle(-r, 60)
         right(60)
-    end_fill()
+        if i == 2:
+            end_fill()
     right(60 if x == 'magenta' else 120) 
 ````
 
@@ -304,6 +313,7 @@ Le mélange de :
 La combinaison de toutes les trois couleurs de base donne noir.
 
 ```{codeplay}
+:file: color9.py
 from turtle import *
 r = 120
 goto(-50, -50)
@@ -320,7 +330,8 @@ for x in ('blue', 'red', 'lime', 'black'):
     for i in range(4):
         circle(-r, 60)
         right(60)
-    end_fill()
+        if i == 2:
+            end_fill()
     right(60 if x == 'lime' else 120)  
 ```
 
@@ -384,4 +395,3 @@ def quiz(question, solution):
 quiz("Quel est le nombre d'octets dans 1 Mo:", 2**20)
 ===
 # méga-octet
-```

@@ -36,6 +36,7 @@ False |True
 True  |False
 
 ```{codeplay}
+:file: bool1.py
 print('p', 'not p', sep='\t| ')
 print('--------' * 2)
 for p in (False, True):
@@ -57,6 +58,7 @@ True  | False | False
 True  | True  | True
 
 ```{codeplay}
+:file: bool2.py
 print('p', 'q', 'p and q', sep='\t| ')
 print('--------' * 3)
 for p in (False, True):
@@ -81,6 +83,7 @@ p   | q   | p and q
 1   | 1   | 1
 
 ```{codeplay}
+:file: bool3.py
 print('p', 'q', 'p or q', sep='\t| ')
 print('-------------------------')
 for p in (False, True):
@@ -108,6 +111,7 @@ p   | q   | p xor q
 `True  xor True  =` {bl}`>False|True`
 
 ```{codeplay}
+:file: bool4.py
 print('p', 'q', 'p ^ q', sep='\t')
 print('---------------------')
 for p in (False, True):
@@ -118,6 +122,7 @@ for p in (False, True):
 ## Dessiner une porte AND
 
 ```{codeplay}
+:file: bool5.py
 from turtle import *
 
 up()
@@ -152,6 +157,7 @@ forward(100)
 Dans la porte AND ci-dessous nous ajoutons 3 objets de la classe `Dot` et nous rendons la porte interactive. Avec la souris nous pouvons cliquer sur les 2 terminaux d'entrée et la sortie va afficher la logique de la porte.
 
 ```{codeplay}
+:file: bool6.py
 from turtle import *
 
 def line(x, y, d):
@@ -223,6 +229,7 @@ getscreen().listen()
 ## Dessiner une porte OR
 
 ```{codeplay}
+:file: bool7.py
 from turtle import *
 
 def line(x, y, d):
@@ -253,6 +260,7 @@ Dans la porte OR ci-dessous nous ajoutons 3 objets de la classe `Dot` et nous re
 La classe `Dot` est toujours définie, mais elle n'est plus affichée.
 
 ```{codeplay}
+:file: bool8.py
 class Dot(): 
     def __init__(self, x, y):
         self.x = x
@@ -324,6 +332,7 @@ getscreen().listen()
 ## Dessiner une porte XOR
 
 ```{codeplay}
+:file: bool9.py
 from turtle import *
 
 def line(x, y, d):
@@ -358,6 +367,7 @@ line(100, 0, 100)
 Dans la porte XOR ci-dessous nous ajoutons 3 objets de la classe `Dot` et nous rendons la porte interactive. Avec la souris nous pouvons cliquer sur les 2 terminaux d'entrée et la sortie va afficher la logique de la porte.
 
 ```{codeplay}
+:file: bool10.py
 class Dot(): 
     def __init__(self, x, y):
         self.x = x
@@ -435,6 +445,7 @@ getscreen().listen()
 ## Dessiner une porte EQ
 
 ```{codeplay}
+:file: bool11.py
 from turtle import *
 
 def line(x, y, d):
@@ -458,6 +469,7 @@ line(70, 0, 100)
 ## Dessiner une porte NOT
 
 ```{codeplay}
+:file: bool12.py
 from turtle import *
 
 def line(x, y, d):

@@ -24,6 +24,7 @@ En informatique, une fonction de rappel (**callback** en anglais) ou fonction de
 La fonction  `ontimer(f, t)` permet d'appeler une fonction dans le futur, après `t` millisecondes. Nous l'utilisons dans l'exemple suivant pour afficher pendant 60 secondes un point qui fait le tour du cadran d'une horloge.
 
 ```{codeplay}
+:file: ontimer1.py
 from turtle import *
 
 up()
@@ -48,6 +49,7 @@ f()
 Le module `time` comporte 17 méthodes et attributs.
 
 ```{codeplay}
+:file: ontimer2.py
 import time
 
 a = [x for x in dir(time) if not x.startswith('_')]
@@ -59,21 +61,40 @@ print(len(a))
 
 L'**epoch** est le point de départ du temps et dépend de la plateforme. Pour Unix l'epoch est le 1. janvier 1970.
 
-- `clock()` renvoie le nombre de secondes depuis la première exécution
-- `time()` renvoie le nombre de secondes depuis l'époque (1970)
-
+- `timezone()` renvoie le décalage horaire (exprimé en secondes)
+- `time()` renvoie le nombre de secondes depuis l'époque (1970),
+- `asctime()` renvoie le temps et la date sous forme de chaîne de texte.
 
 ```{codeplay}
+:file: ontimer3.py
 from time import *
 
-print('altzone =', altzone)
 print('timezone =', timezone)
-
-print('asctime =', asctime())
-print('gmtime =', gmtime())
-
 print('time =', time())
-print('clock =', clock())
+print('asctime =', asctime())
+```
+
+## Structure temps
+
+La fonction `gmtime()` renvoie une séquence de valeurs temporelles. Ses valeurs sont accessibles par index et par nom d’attribut. Voici les index, les attributs et leur signification :
+
+- 0 - `tm_year` - année
+- 1 - `tm_mon` - mois
+- 2 - `tm_day` - jour
+- 3 - `tm_hour` - heur
+- 4 - `tm_min` - minute
+- 5 - `tm_sec` - seconde
+- 6 - `tm_wday` - jour de la semaine
+- 7 - `tm_yday` - jour de l'année
+
+```{codeplay}
+:file: ontimer4.py
+from time import *
+
+print('gmtime =', gmtime())
+print()
+for t in gmtime():
+    print(t)
 ```
 
 ## Date et temps
@@ -81,6 +102,7 @@ print('clock =', clock())
 La fonction `asctime()` retourne une chaine avec date et temps. Nous pouvons la découper avec l'opérateur de tranche.
 
 ```{codeplay}
+:file: ontimer5.py
 from time import *
 
 print('asctime =', asctime())
@@ -93,6 +115,7 @@ print('temps =', temps)
 Une tortue peut écrire temps et date en grandes lettre sur le canevas.
 
 ```{codeplay}
+:file: ontimer6.py
 from turtle import *
 from time import *
 up()
@@ -113,6 +136,7 @@ La fonction `horloge()` affiche le temps et la date.
 Comme dernière instructions nous installons une fonction de rappel, cette même fonction, qui sera appelé de nouveau dans 1000 ms.
 
 ```{codeplay}
+:file: ontimer7.py
 from turtle import *
 from time import *
 hideturtle()
@@ -131,10 +155,11 @@ horloge()
 Pour avoir une idée du temps d'exécutions d'une itération, nous mesurons le temps pour `n` itérations et nous calculons la durée d'une itération en micro-secondes (um).
 
 ```{codeplay}
+:file: ontimer8.py
 from time import *
 
 t0 = time()
-n = int(1e4)
+n = int(1e5)
 a = 1.0
 
 def chrono(msg):
@@ -157,11 +182,19 @@ for i in range(n):
 chrono('multiplication')
 ```
 
+```{caution}
+Sur ce site votre code Python est traduit en JavaScript et exécuté par [Skulpt](https://skulpt.org) directement dans votre navigateur.
+Une instruction de base prends environs 10 µs. 
+
+Si vous téléchargez le fichier et exécutez votre code directement en Python avec un éditeur externe comme Thonny, les instructions de base exécutent 100 fois plus vite (environs 0.1 µs). Par contre pour ce qui concerne l'affichage, les vitesses sont très comparable, ce que vous pouvez constater danas l'exemple suivant.
+```
+
 ## Vitesse d'affichage
 
 Nous allons mesurer le temps nécessaire pour écrire 600 pixels sur tout l'écran.
 
 ```{codeplay}
+:file: ontimer9.py
 from turtle import *
 from time import *
 from random import *
