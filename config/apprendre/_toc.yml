@@ -109,6 +109,7 @@ parts:
       - file: content/appr/theme/reseaux/cours/routage/eleve
       - file: content/appr/theme/reseaux/cours/tcp-ip/eleve
       - file: content/appr/theme/reseaux/cours/web/eleve    
+      - file: content/appr/theme/reseaux/cours/couches/eleve    
 
 - caption: Glossaire
   numbered: false

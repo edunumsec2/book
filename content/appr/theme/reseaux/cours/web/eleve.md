@@ -84,7 +84,7 @@ page web contenant le nom d'un champignons ainsi qu'une photo de celui-ci. Une m
 </body>
 </html>
 ```
-Les éléments de cette page sont indiqués par des *balises* indiquées par des crochets pointus (`<>`) et peuvent être imbriqués les uns dans les autres. Ainsi la page (entre `<body>` et </body>) contient un titre (entre <h1> et </h1>) de couleur rouge, un paragraphe de texte (entre `<p>` et </p>) ainsi qu'une image (<img>) disponible dans le fichier `photo.jpg` et de hauteur 300 pixels. Cette page pourra ainsi être affichée de la manière suivante dans le navigateur web. 
+Les éléments de cette page sont indiqués par des *balises* indiquées par des crochets pointus (`<>`) et peuvent être imbriqués les uns dans les autres. Ainsi la page (entre `<body>` et `</body>`) contient un titre (entre `<h1>` et `</h1>`) de couleur rouge, un paragraphe de texte (entre `<p>` et `</p>`) ainsi qu'une image (`<img>`) disponible dans le fichier `photo.jpg` et de hauteur 300 pixels. Cette page pourra ainsi être affichée de la manière suivante dans le navigateur web. 
  
 [inclure une image] 
 
