@@ -24,7 +24,8 @@ des paquets, etc.) lorsqu'on définit un protocole de plus haut niveau.
 
 ## Planification
 
-La planification minimale suivante en 8 semaines peut être envisagée.
+Dans un scénario avec des cours hebdomadaires en débranché de 45 minutes et des labo en demi-classe de 1h30, la planification
+suivante en 8 semaines peut être envisagée. 
 
 | Semaine | Cours | Labo |
 |---------|-------|------|
@@ -34,7 +35,7 @@ La planification minimale suivante en 8 semaines peut être envisagée.
 |4        | Protocoles TCP/IP | Activité administration réseau (B)|
 |5        | Web | Activité HTML (A)|
 |6        | Modèle en couche | Activité HTML (B)|
-|7        | Récapitulation | Activité tracking ou enchères|
+|7        | Récapitulation | |
 |8        | Test | |
 
  Bien sûr, des développements sont possibles si le temps est suffisant. Par exemple, il serait possible de proposer la création d'un site web en HTML+CSS en une ou deux séances
