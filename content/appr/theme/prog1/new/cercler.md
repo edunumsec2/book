@@ -136,7 +136,28 @@ for i in range(4):
     circle(20, 90)
 ```
 
-**Exercice** : Dessinez un rectangle arrondi.
+**Exercice** : Dessinez maintenant un **rectangle** arrondi.
+
+## Pac-Man
+
+Pac-Man est un jeu vidéo créé par l’entreprise japonaise Namco, sorti au Japon en 1980. Le jeu consiste à déplacer Pac-Man, un personnage qui ressemble à un diagramme circulaire à l’intérieur d’un labyrinthe, afin de lui faire manger toutes les pac-gommes qui s’y trouvent en évitant d’être touché par des fantômes.
+
+```{codeplay}
+:file: circle6.py
+from turtle import *
+
+fillcolor('yellow')
+begin_fill()
+left(30)
+forward(100)
+left(90)
+circle(100, 300)
+left(90)
+forward(100)
+end_fill()
+```
+
+**Exercice** : Ajoutez l'oeil de Pac-Man.
 
 ## Coeur
 
@@ -160,16 +181,21 @@ circle(50, 225)
 
 Le mot **infini** (du latin in-, préfixe négatif, et finitus, *limité*) est un adjectif servant à qualifier quelque chose qui n'a pas de limite en nombre ou en taille. L'infini est représenté par le symbole ∞.
 
+Observez l'effet de croisement obtenu en ne pas dessinant un petit bout de l'intersection.
+
 ```{codeplay}
 :file: circle8.py
 from turtle import *
 
 right(45)
-forward(100)
+up()
+forward(15)
+down()
+forward(85)
 circle(100, 270)
 forward(200)
 circle(-100, 270)
-forward(100)
+forward(90)
 ```
 
 **Exercice** : Augmentez l'épaisseur de la ligne.
@@ -191,7 +217,7 @@ for i in range(4):
     forward(150)
 ```
 
-**Exercice** : Augmentez l'épaisseur de la ligne.
+**Exercice** : Modifiez le programme pour obtenir le même effet de croisement comme avec le symbole infini ∞.
 
 ## Lettres
 
@@ -248,3 +274,27 @@ for i in range(6):
 ```
 
 **Exercice** : Coloriez la fleur.
+
+## Exercices
+
+### LGBTQ+
+
+On vous demande de dessiner des logos pour les toilettes avec le symbole traditionnel ♂ et ♀. La communauté LGBTQ+ vous demande d'y ajouter un troisième logo.
+
+```{codeplay}
+:file: LGBTQ.py
+from turtle import *
+# Votre prénom, nom, classe
+
+left(135)
+circle(50)
+right(90)
+forward(50)
+...
+```
+
+1. Dessinez un sapin de Noël. Définissez des fonctions pour des boules et des étoiles.
+1. Dessinez une ville. Définissez des fonctions pour des maisons et des immeubles.
+1. Dessinez un paysage. Définissez des fonctions pour des montagnes et des sapins.
+1. Dessinez un jardin. Définissez des fonctions pour les feuilles, les pétales et les fleurs.
+1. Dessinez un aquarium. Définissez des fonctions pour les poissons, l'herbe, et les bulles.

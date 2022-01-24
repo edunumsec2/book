@@ -38,6 +38,8 @@ left(90)
 Ne serait-il pas pratique de pouvoir dire à la tortue de répéter ces instructions 4 fois ?  
 Ceci est possible avec une boucle `for`. La ligne `for i in range(x):` va répéter `x` fois le bloc en indentation qui suit.
 
+Par rapport à l'exemple précédent nous avons rajouté un `dot()` à chaque sommet, et nous cachons la tortue à la fin avec la fonction `hideturtle()`.
+
 ```{codeplay}
 :file: for2.py
 from turtle import *
@@ -45,6 +47,9 @@ from turtle import *
 for i in range(4):
     forward(100)
     left(90)
+    dot()
+    
+hideturtle()
 ```
 
 **Exercice** : Transformez le rectangle en triangle.

@@ -494,7 +494,8 @@ maison()
 Une stratégie importante dans la programmation est de **reconnaitre des structure identiques**. Par exemple quand vous voyez une symétrie dans un dessin,
 vous devez repérer la partie qui est répétée et en créer une fonction.
 
-Ensuite il suffit d'**appeler** cette fonction.
+La fonction `bras()` dessine les 3 côtés d'un carré et tourne de 90° dans le contre-sens.
+Ensuite il suffit d'**appeler** 4 fois cette fonction.
 En appelant la fonction `bras()`, au lieu d'écrire 6 lignes, nous écrivons que 1 ligne de code.
 
 ```{codeplay}
@@ -587,10 +588,119 @@ Quand vous utilisez le module `turtle` avec Thonny, ajoutez toujours la fonction
 
 ## Exercices
 
-1. On vous demande de dessiner des logos pour les toilettes avec le symbole traditionnel ♂ et ♀.
-1. La communauté LGBTQ+ vous demande d'y ajouter un troisième logo.
-1. Dessinez un sapin de Noël. Définissez des fonctions pour des boules et des étoiles.
-1. Dessinez une ville. Définissez des fonctions pour des maisons et des immeubles.
-1. Dessinez un paysage. Définissez des fonctions pour des montagnes et des sapins.
-1. Dessinez un jardin. Définissez des fonctions pour les feuilles, les pétales et les fleurs.
-1. Dessinez un aquarium. Définissez des fonctions pour les poissons, l'herbe, et les bulles.
+- Téléchargez un exercice.
+- Editez-le dans un éditeur externe tel que Thonny.
+- Déposez-le sur Moodle (ou plateforme équivalente de votre école).
+
+### La chambre
+
+Dessinez une chambre avec des meubles que vous définissez comme une fonction. Vous êtes libre d'inventer d'autres meubles, de les arranger différemment et de les utiliser multiples fois.
+
+```{codeplay}
+:file: chambre.py
+from turtle import *
+# Votre prénom, nom, classe
+
+def chaise():
+    ...
+
+def table():
+    ...
+
+def lit():
+    ...
+
+chaise()
+table()
+lit()
+```
+
+### Jeu du moulin
+
+Le [jeu du moulin](https://fr.wikipedia.org/wiki/Jeu_du_moulin) est un jeu de société traditionnel en Europe. Le tablier de jeu existait déjà dans la Rome antique. Aussi appelé **jeu du charret** (en Suisse), certains lui donnent le nom médiéval de jeu de mérelles, voire de marelle.
+
+```{image} media/moulin.png
+:width: 200
+```
+
+Pour les points d'intersection utilisez la fonction `dot()` que vous allez découvrir plus en détail dans le chapitre suivant. La distance entre lignes est de 50 pixels.  
+Vous constatez aussi une symétrie par 4. Donc avec un choix intelligent d'une fonction vous pouvez réduire le nombre de lignes de code par 4.
+
+```{codeplay}
+:file: moulin.py
+from turtle import *
+# Votre prénom, nom, classe
+
+width(8)
+up()
+forward(50)
+down()
+dot()
+forward(50)
+dot()
+forward(50)
+dot()
+...
+```
+
+### Tetris
+
+Le jeu vidéo [Tetris](https://fr.wikipedia.org/wiki/Tetris) est un puzzle conçu par l'informaticien russe Alekseï Pajitnov en 1984.
+Tetris met le joueur au défi de réaliser des lignes complètes en déplaçant des pièces de formes différentes, les tétrominos, qui défilent depuis le haut jusqu'au bas de l'écran.
+
+```{image} media/tetris.png
+```
+
+L'éléments de base du tétronimo mesurent 20 x 20 pixels. Il en existent 7 formes de tétronimo qui sont nommé d'après les lettres auxquels ils ressemblent :
+
+- I (bâton)
+- O (carré)
+- T
+- L
+- J
+- Z
+- S
+
+```{codeplay}
+:file: tetris.py
+from turtle import *
+# Votre prénom, nom, classe
+
+def I():
+    down()
+    forward(20)
+    left(90)
+    forward(80)
+    left(90)
+    forward(20)
+    left(90)
+    forward(80)
+    left(90)
+    up()
+
+def O():
+    ...
+
+def T():
+    ...
+
+def L():
+    ...
+
+def J():
+    ...
+
+def Z():
+    ...
+
+def S():
+    ...
+
+up()
+back(250)
+I()
+forward(40)
+O()
+T()
+L()
+```
