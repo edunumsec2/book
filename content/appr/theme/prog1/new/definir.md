@@ -1,393 +1,531 @@
 # Définir - `def`
 
-Dans ce chapitre nous allons voir de plus près le concept de la fonction, concept que nous avons vu dès le premier chapitre comme façon de donner un nom à une séquence d'instructions.
+Dans ce chapitre nous découvrons comment augmenter le vocabulaire de notre langage de programmation en définissant des nouvelles instructions. Ceci permet de rendre notre code plus compact mais surtout plus lisible. Nous allons voir que :
 
-La fonction est probablement le concept le plus important dans la programmation. C'est le moyen pour inventer des *nouveaux mots* dans un langage de programmation. Nous allons voir que :
-
-- le mot-clé `def` permet de définir une fonction,
-- un paramètre `f(par)` est une variable dans la définition de fonction,
-- un argument `f(arg)` est une valeur dans l'appel de fonction.
+- le mot-clé `def` permet de nommer (définir) une séquence,
+- le bloc qui suit doit être en **indentation** (décalé à droite),
+- les fonctions `up()/down()` permettent de lever et baisser le stylo.
 
 ```{question}
-En Python `def` est un raccourci pour
+Une fonction permet de
 
-{f}`défoncé`  
-{f}`défilé`  
-{v}`définition`  
-{f}`défavorisé`
+{v}`donner un nom à une séquence`  
+{f}`nous dire si ça fonctionne`  
+{v}`augmenter le vocabulaire du langage de programmation`  
+{v}`rendre un programme plus lisible`
 ```
 
-## Paramétrer la fonction
+## Nommer une séquence
 
-Jusqu'à maintenant notre carré a toujours eu la même taille.
-Il serait très utile si notre nouvelle commande `carre(longueur)` pouvait dessiner des carrés de tailles différentes.
-C'est possible en spécifiant un paramètre pour la fonction.
-Le paramètre de la fonction est une variable locale qui est utilisée dans sa définition.
+Dessiner un rectangle est assez utile. C'est une forme qu'on pourra réutiliser certainement souvent. Il serait pratique de définir un nom pour ces 8 lignes de code. Pouvons nous définir des nouvelles commandes ?
 
-Lors de l'appel de la fonction nous donnons une valeur à la fonction.
-Cette valeur placée entre parenthèses s'appelle l'**argument** de la fonction.
-Ici, la fonction `carre()` est appelée successivement avec les valeurs 50, 100 et 150.
+```python
+forward(160)
+left(90)
+forward(100)
+left(90)
+forward(160)
+left(90)
+forward(100)
+left(90)
+```
+
+Oui, c'est possible. Avec le mot-clé `def` nous pouvons définir une nouvelle commande que nous pouvons par exemple l'appeler `rectangle()`.
+Cette façon de créer un raccourci est appelé **définir** une fonction.
+
+Ensuite il suffit d'écrire `rectangle()` pour dessiner un rectangle. On appelle ceci **appeler** une fonction.
+Rappelez vous ceci:
+
+- on définit une fonction une seule fois,
+- on appelle une fonction autant de fois que l'on veut.
+
+Définir une fonction nous permet de réduire les lignes de code nécessaire.
+A chaque fois que nous utilisons `rectangle()`,
+au lieu d'écrire 8 lignes, nous écrivons seulement 1 ligne de code.
 
 ```{codeplay}
 :file: def1.py
 from turtle import *
 
-def carre(longueur):
-    for i in range(4):
-        forward(longueur)
-        left(90)
+def rectangle():
+    forward(160)
+    left(90)
+    forward(100)
+    left(90)
+    forward(160)
+    left(90)
+    forward(100)
+    left(90)
         
-carre(50)
-carre(100)
-carre(150)
+rectangle()
+left(90)
+rectangle()
 ```
 
-Une fonction peut être appelée avec une valeur numérique directe tel que `carre(50)`, mais aussi avec une valeur numérique donnée par une variable tel que `carre(x)`, obtenu par une variable d'itération sur une plage numérique donnée avec `range(start, stop, step)`.
+**Exercice** : Dessinez encore d'autres rectangles en appelant la nouvelle fonction `rectangle()`.
+
+```{question}
+Une **indentation** de texte est 
+
+{f}`un décalage vers la gauche`  
+{v}`un décalage vers la droite`  
+{f}`une mise en paragraphe`  
+{f}`une mise en sous-section`  
+```
+
+## Donner du sens
+
+Une fonction ne permet pas seulement d'économiser des lignes de code.
+Elle permet aussi de structurer le code et de lui donner un sens. Prenez par exemple ce code-ci. C'est presque impossible de comprendre ce que fait le programme en regardant les 17 lignes de code.
 
 ```{codeplay}
 :file: def2.py
 from turtle import *
 
-def carre(a):
-    for i in range(4):
-        forward(a)
-        left(90)
-
-for x in range(30, 180, 30):
-    carre(x)
+forward(200)
+left(90)
+forward(100)
+left(90)
+forward(200)
+left(90)
+forward(100)
+left(90)
+forward(30)
+forward(30)
+left(90)
+forward(50)
+left(90)
+forward(30)
+left(90)
+forward(50)
+left(90)
 ```
 
-Au lieu d'imbriquer les carrés, nous pouvons aussi les dessiner les uns après les autres.
-Le terme technique est de les **juxtaposer**.
+Si nous observons la tortue, nous comprenons finalement qu'elle dessine deux fois un rectangle. Nous pouvons même interpréter cette image et donner le sens de bâtiment au premier, et de porte au deuxième rectangle.
+
+Essayons maintenant de découper le code en **sous-problèmes** en utilisant deux fonctions `batiment()` et `porte()`.
+En regardant ces 3 lignes de code, on comprend immédiatement le sens du programme.
+
+``` python
+batiment()
+forward(30)
+porte()
+```
+
+La définition d'une fonction permet d'ajouter des nouveaux mots à un langage de programmation. Contrairement aux commandes natives de Python qui sont tous en anglais, nous sommes libre de les choisir en français.
+
+**Attention** : Ecrivez les fonctions sans accents et sans circonflexes : `batiment()`, `carre()`, `boite()`.
 
 ```{codeplay}
 :file: def3.py
 from turtle import *
 
-def carre(a):
-    down()
-    for i in range(4):
-        forward(a)
-        left(90)
-    up()
+def batiment():
+    forward(200)
+    left(90)
+    forward(100)
+    left(90)
+    forward(200)
+    left(90)
+    forward(100)
+    left(90)
 
-up()
-back(250)
-for x in range(30, 180, 30):
-    carre(x)
-    forward(x)
+def porte():
+    forward(30)
+    left(90)
+    forward(50)
+    left(90)
+    forward(30)
+    left(90)
+    forward(50)
+    left(90)
+
+batiment()
+forward(30)
+porte()
 ```
 
-**Exercice** : Ecartez les carrés de 20 pixels.
+**Exercice** : Ajoutez une deuxième porte au bâtiment.
 
-## Dessiner une maison
+```{question}
+La fonction `porte())` est équivalent à combien de code
 
-Nous revenons à notre fonction pour dessiner une maison.
+{f}`1 ligne`  
+{f}`2 lignes`  
+{v}`8 lignes)`  
+{f}`17 lignes`  
+```
+
+## Définir une fonction
+
+Le fait de donner un nom à une séquence d'instructions est appelé **définir un fonction**. Une **définition de fonction** comporte :
+
+1. le mot-clé `def` (définir),
+1. le nom de la fonction (`batiment/porte`),
+1. les parenthèses `()`,
+1. le deux-points `:`,
+1. un bloc en indentation.
+
+C'est quoi un bloc en indentation ?
+C'est un bloc de texte qui comporte des espaces vides à gauche. En Python, ces espaces apparaissent en multiples de 4.
+
+L'indentation est très importante en Python. C'est l'indentation qui indique l'étendu des instructions qui font partie de la fonction.
+
+```{question}
+Laquelle est une définition de fonction correcte ?
+
+{f}`def() rectangle:`  
+{f}`def: rectangle`  
+{v}`def rectangle():`  
+{f}`def(rectangle):`  
+```
+
+## Raccourci
+
+Comme l'indentation est tellement important en Python il en existe un raccourci.
+Il faut d'abord sélectionner les lignes de code dont vous voulez changer l'indentation.
+Ensuite vous appuyez sur :
+
+- la touche **tab** pour augmenter l'indentation
+- la touche **maj+tab** pour diminuer l'indentation
+
+Essayez ces raccourcis dans le code ci-dessous. Transformez le code en deux fonctions `batiment()` et `porte()` que vous appelez ensuite.
+
+```{codeplay}
+:file: def2.py
+from turtle import *
+
+forward(200)
+left(90)
+forward(100)
+left(90)
+forward(200)
+left(90)
+forward(100)
+left(90)
+forward(30)
+forward(30)
+left(90)
+forward(50)
+left(90)
+forward(30)
+left(90)
+forward(50)
+left(90)
+```
+
+Voici encore un raccourci très utile : **cmd+Enter** pour exécuter le code.
+
+## Maison avec porte
+
+Une fois une fonction est définie, elle peut être utilisé partout, même dans la définition d'une autre fonction.
+
+Ici nous avons une fonction `porte()` qui est utilisé à l'intérieur d'une deuxième fonction `maison()`. Pour que ceci est possible, la définition de porte doit être placé avant la définition de `maison()`.
 
 ```{codeplay}
 :file: def4.py
 from turtle import *
 
+def porte():
+    forward(20)
+    left(90)
+    forward(40)
+    left(90)
+    forward(20)
+    left(90)
+    forward(40)
+    left(90)
+
 def maison():
-    forward (70)
-    for a in (90, 45, 90, 45):
-        left(a)
-        forward(50)
+    forward(100)
     left(90)
+    forward(60)
+    left(45)
+    forward(71)
+    left(90)
+    forward(71)
+    left(45)
+    forward(60)
+    left(90)
+    porte()
 
-back(200)        
-maison()
-forward(100)
 maison()
 ```
 
-## Position de la maison
+**Exercice** : Mettez la porte au milieu de la maison, et dessinez une deuxième maison.
 
-Maintenant nous modifions la fonction pour inclure la position de la maison comme paramètre.
+## Lever le stylo
 
-```{codeplay}
-:file: def5.py
-from turtle import *
-getscreen().bgcolor('lightgreen')
-up()
-
-def maison(x, y):
-    goto(x, y)
-    down()
-    forward (70)
-    for a in (90, 45, 90, 45):
-        left(a)
-        forward(50)
-    left(90)
-    up()
-
-maison(0, -80)
-maison(-200, 20)
-maison(120, 40)
-```
-
-## Taille de la maison
-
-Maintenant nous modifions la fonction pour inclure non seulement la position mais aussi la taille de la maison comme paramètres.
+Les deux commandes `up()` et `down()` permettent de lever et baisser le stylo.
+Ceci nous permet dessiner des formes séparées, comme ces deux triangles.
 
 ```{codeplay}
 :file: def6.py
 from turtle import *
-getscreen().bgcolor('lightgreen')
+
+def triangle():
+    forward(100)
+    left(120)
+    forward(100)
+    left(120)
+    forward(100)
+    left(120)
+    
+triangle()
 up()
-
-def maison(x, y, d):
-    goto(x, y)
-    down()
-    forward (1.4 * d)
-    for a in (90, 45, 90, 45):
-        left(a)
-        forward(d)
-    left(90)
-    up()
-
-maison(-20, -80, 70)
-maison(-200, 20, 50)
-maison(120, 40, 40)
+forward(150)
+down()
+triangle()
 ```
 
-## Couleur de la maison
+**Exercice** : Ajoutez encore un triangle disjoint.
 
-Maintenant nous modifions la fonction pour inclure non seulement la position, la taille mais également la couleur de la maison comme paramètres.
+```{caution}
+Contrairement aux fonctions `forward(d)` et `back(d)` qui nécessitent un argument, les fonctions `up()` et `down()` ne nécessitent pas d'argument.
+```
+
+## Maison avec fenêtre
+
+Dans le programme ci-dessous nous dessinons de nouveau une maison avec cette fois-ci une fenêtre. Les fonctions `up()/down()` nous permettent de dessiner des formes disjointes, telle qu'une fenêtre à l'intérieur de la maison.
 
 ```{codeplay}
 :file: def7.py
 from turtle import *
-getscreen().bgcolor('lightgreen')
-up()
 
-def maison(x, y, d, couleur):
-    goto(x, y)
-    down()
-    fillcolor(couleur)
-    begin_fill()
-    forward (1.4 * d)
-    for a in (90, 45, 90, 45):
-        left(a)
-        forward(d)
+def fenetre():
+    forward(20)
     left(90)
-    end_fill()
-    up()
+    forward(20)
+    left(90)
+    forward(20)
+    left(90)
+    forward(20)
+    left(90)
 
-maison(-20, -80, 70, 'lightblue')
-maison(-200, 20, 50, 'yellow')
-maison(120, 40, 40, 'pink')
+def maison():
+    forward(100)
+    left(90)
+    forward(60)
+    left(45)
+    forward(71)
+    left(90)
+    forward(71)
+    left(45)
+    forward(60)
+    left(90)
+
+    fenetre()
+
+maison()
 ```
 
-## Maison avec porte
+**Exercice** : Modifiez le programme pour que la fenêtre soit dessinée à l'intérieur de la maison. Dessinez une deuxième maison.
 
-Maintenant nous modifions la fonction pour inclure non seulement la position, la taille, la couleur de la maison comme paramètres, mais nous y ajoutons aussi une porte.
+## Trouver la symétrie
+
+Une stratégie importante dans la programmation est de **reconnaitre des structures identiques**. Par exemple quand vous voyez une symétrie dans un dessin,
+vous devez repérer la partie qui est répétée et en créer une fonction.
+
+La fonction `bras()` dessine les 3 côtés d'un carré et tourne de 90° dans le contre-sens.
+Ensuite il suffit d'**appeler** 4 fois cette fonction pour dessiner une croix.
+En appelant la fonction `bras()`, au lieu d'écrire 6 lignes, nous écrivons que 1 ligne de code.
 
 ```{codeplay}
 :file: def8.py
 from turtle import *
-getscreen().bgcolor('lightgreen')
-up()
 
-def porte(d):
-    for x in (1, 1.6, 1, 1.6):
-        forward(d * x)
-        left(90)
-
-def mur(d):
-    forward (1.4 * d)
-    for a in (90, 45, 90, 45):
-        left(a)
-        forward(d)
+def bras():
+    forward(60)
     left(90)
+    forward(60)
+    left(90)
+    forward(60)
+    right(90)
+    
+def croix():
+    bras()
+    bras()
+    bras()
+    bras()
 
-def maison(x, y, d, col1, col2):
-    goto(x, y)
-    down()
-    fillcolor(col1)
-    begin_fill()
-    mur(d)
-    end_fill()
-
-    forward(d/3)
-    fillcolor(col2)
-    begin_fill()
-    porte(d/3)
-    end_fill()
-    up()
-
-maison(-20, -80, 70, 'lightblue', 'red')
-maison(-200, 20, 50, 'yellow', 'blue')
-maison(120, 40, 40, 'pink', 'violet')
+croix()
 ```
 
-## Valeurs par défaut
+**Exercice** : Allongez le bras à 120 pas. Faites le bras plus mince.
 
-Nous pouvons spécifier des valeurs par défaut.
+## Décomposer
+
+Une stratégie importante en programmation est de **décomposer un problème en sous-problèmes**. Les fonctions nous permettent de structurer un problèmes en objets de plus en plus simple.
+
+Ici nous dessinons une fenêtre composé de 4 carreau. Nous pouvons décomposer ce problème en une construction hiérarchique :
+
+- la fonction `fenetre()` appelle deux fois la fonction `demi_fenetre()`,
+- la fonction `demi_fenetre()` appelle deux fois la fonction `carreau()`,
+- la fonction `carreau()` appelle deux fois la fonction `equerre()`,
+- la fonction `equerre()` appelle deux fois la fonction `ligne()`.
 
 ```{codeplay}
 :file: def9.py
 from turtle import *
-getscreen().bgcolor('lightgreen')
-up()
 
-def porte(d):
-    for x in (1, 1.6, 1, 1.6):
-        forward(d * x)
-        left(90)
-
-def mur(d):
-    forward (1.4 * d)
-    for a in (90, 45, 90, 45):
-        left(a)
-        forward(d)
+def ligne():
+    forward(100)
     left(90)
 
-def maison(x, y, d=50, col1='yellow', col2='blue'):
-    goto(x, y)
-    down()
-    fillcolor(col1)
-    begin_fill()
-    mur(d)
-    end_fill()
+def equerre():
+    ligne()
+    ligne()
 
-    forward(d/3)
-    fillcolor(col2)
-    begin_fill()
-    porte(d/3)
-    end_fill()
-    up()
+def carreau():
+    equerre()
+    equerre()
+    left(90)
 
-maison(-20, -80)
-maison(-200, 20, col1='lime')
-maison(120, 40, col2='red')
-maison(-170, -140, d=80)
+def demi_fenetre():
+    carreau()
+    carreau()
+
+def fenetre():
+    demi_fenetre()
+    demi_fenetre()
+
+fenetre()
 ```
 
-## Le coronavirus
+```{question}
+Combien de lignes de code sont exécutées par la fonction `fenetre()`?
 
-Le nom « coronavirus » vient du latin et signifie « virus à couronne ». Son apparence sous un microscope électronique montre une frange de grandes projections bulbeuses qui évoquent une couronne solaire.
+{f}`16`  
+{f}`32`  
+{v}`36`  
+{f}`40`  
+```
 
-Dans la fonction `corona()` les paramètres sont :
+## Exercices
 
-- la distance entre projections `a`
-- la longueur de la projection `d`
-- le nombre de projections `n`
+- Téléchargez un exercice.
+- Ouvrez-le dans un éditeur externe (tel que Thonny).
+- Mettez votre prénom, nom et classe.
+- Remplacez `...` par votre code.
+- Déposez votre exercice sur Moodle (ou plateforme équivalente).
+
+### La chambre
+
+Dessinez une chambre avec des meubles que vous définissez comme une fonction. Vous êtes libre d'inventer d'autres meubles, de les arranger différemment et de les utiliser multiples fois.
 
 ```{codeplay}
-:file: def10.py
+:file: chambre.py
 from turtle import *
-getscreen().bgcolor('azure')
+
+def chaise():
+    left(90)
+    forward(100)
+    back(50)
+    right(90)
+    forward(50)
+    right(90)
+    forward(50)
+    left(90)
+
+def table():
+    ...
+
+def lit():
+    ...
+
+chaise()
+table()
+lit()
+done()
+```
+
+### Jeu du moulin
+
+Le [jeu du moulin](https://fr.wikipedia.org/wiki/Jeu_du_moulin) est un jeu de société traditionnel en Europe. Le tablier de jeu existait déjà dans la Rome antique. Aussi appelé **jeu du charret** (en Suisse), certains lui donnent le nom médiéval de jeu de mérelles, voire de marelle.
+
+```{image} media/moulin.png
+:width: 200
+```
+
+Pour les points d'intersection utilisez la fonction `dot()` que vous allez découvrir plus en détail dans le chapitre suivant. La distance entre lignes est de 50 pixels.  
+Vous constatez aussi une symétrie par 4. Donc avec un choix intelligent d'une fonction vous pouvez réduire le nombre de lignes de code par 4.
+
+```{codeplay}
+:file: moulin.py
+from turtle import *
+# Votre prénom, nom, classe
+
+width(8)
 up()
-
-def corona(a=10, d=20, n=24):
-    down()
-    for i in range(n):
-        left(90  - 180/n)
-        forward(d)
-        dot()
-        backward(d)
-        right(90 + 180/n)
-        forward(a)
-    up()
-
-corona()
+forward(50)
+down()
+dot()
+forward(50)
+dot()
+forward(50)
+dot()
+...
+done()
 ```
 
-**Exercice** : Ajoutez 3 autres virus avec d'autres valeurs pour `a`, `d` et `n`.
+### Tetris
 
-## Squid Game logo
+Le jeu vidéo [Tetris](https://fr.wikipedia.org/wiki/Tetris) est un puzzle conçu par l'informaticien russe Alekseï Pajitnov en 1984.
+Tetris met le joueur au défi de réaliser des lignes complètes en déplaçant des pièces de formes différentes, les tétrominos, qui défilent depuis le haut jusqu'au bas de l'écran.
 
-Squid Game, ou Le Jeu du calmar, est une série télévisée dramatique de survie sud-coréenne de 9 épisodes, diffusée dans le monde entier en 2021 sur Netflix.
-La série raconte l'histoire d'un groupe de personnes, fortement endettées, voire ruinées, qui risquent leur vie dans un jeu de survie mystérieux avec comme récompense une somme énorme.
+```{image} media/tetris.png
+```
 
-Nous définissons une fonction `polygone(a, n)` pour dessiner le cercle, le triangle et le carré du logo.
+L'éléments de base du tétronimo mesurent 20 x 20 pixels. Il en existent 7 formes de tétronimo qui sont nommé d'après les lettres auxquels ils ressemblent :
+
+- I (bâton)
+- O (carré)
+- T
+- L
+- J
+- Z
+- S
 
 ```{codeplay}
-:file: def11.py
+:file: tetris.py
 from turtle import *
-getscreen().bgcolor('peru')
-width(5)
+# Votre prénom, nom, classe
+
+def I():
+    down()
+    forward(20)
+    left(90)
+    forward(80)
+    left(90)
+    forward(20)
+    left(90)
+    forward(80)
+    left(90)
+    up()
+
+def O():
+    ...
+
+def T():
+    ...
+
+def L():
+    ...
+
+def J():
+    ...
+
+def Z():
+    ...
+
+def S():
+    ...
+
 up()
-
-def polygone(a, n):
-    down()
-    for i in range(n):
-        forward(a)
-        left(360/n)
-    up()
-    
-back(150)
-polygone(10, 36)
-forward(100)
-polygone(120, 3)
-forward(170)
-polygone(100, 4)
+back(250)
+I()
+forward(40)
+O()
+...
+done()
 ```
-
-**Exercice** : Ajoutez votre nom et vos coordonnées à la carte de visite en utilisant la fonction `write()`.
-
-## Dessiner un pixel
-
-Similaire à notre fonction pour dessiner un carré nous allons définir une fonction `pixel()`, mais cette fois nous ajoutons un deuxième argument :
-
-- `taille` pour la taille du carré,
-- `couleur` pour la couleur du carré.
-
-```{codeplay}
-:file: def12.py
-from turtle import *
-
-def carre(taille):
-    for i in range(4):
-        forward(taille)
-        left(90)
-        
-def pixel(taille, couleur):
-    fillcolor(couleur)
-    begin_fill()
-    carre(taille)
-    end_fill()
-    forward(taille)
-
-back(200)
-for x in ('yellow', 'orange', 'red'):
-    pixel(100, x)
-```
-
-## Dessiner Pikachu
-
-Nous définissons une nouvelle fonction `ligne(couleurs)` pour dessiner une série de pixels, qui sont donnés par une liste de couleurs.
-Quand le dernier pixel de la ligne est dessiné, la tortue est retournée à la position prête pour dessiner la ligne suivante.
-
-```{codeplay}
-:file: def13.py
-from turtle import *
-
-def pixel(taille, couleur):
-    fillcolor(couleur)
-    begin_fill()
-    for i in range(4):
-        forward(taille)
-        left(90)
-    end_fill()
-    forward(taille)
-
-taille = 50
-
-def ligne(couleurs):
-    for couleur in couleurs:
-        pixel(taille, couleur)
-    back(len(couleurs) * taille)
-    up()
-    sety(ycor() - taille)
-    down()
-
-back(2 * taille)
-ligne(('black', 'yellow', 'yellow', 'black'))
-ligne(('white', 'red', 'yellow', 'white'))
-ligne(('yellow', 'yellow', 'yellow', 'yellow'))
-ligne(('yellow', 'yellow', 'yellow', 'white'))
-```
-
-**Exercice** : Dessinez un autre Pokemon.

@@ -35,6 +35,7 @@ parts:
 #      - file: content/appr/theme/prog1/cours/8_mod/mod
 
       - file: content/appr/theme/prog1/new/dessiner
+      - file: content/appr/theme/prog1/new/definir
       - file: content/appr/theme/prog1/new/colorier
       - file: content/appr/theme/prog1/new/repeter
       - file: content/appr/theme/prog1/new/cercler
@@ -45,7 +46,7 @@ parts:
       - file: content/appr/theme/prog1/new/iterer
       - file: content/appr/theme/prog1/new/attendre
       - file: content/appr/theme/prog1/new/decider
-      - file: content/appr/theme/prog1/new/definir
+      - file: content/appr/theme/prog1/new/parametrer
       - file: content/appr/theme/prog1/new/renvoyer
       - file: content/appr/theme/prog1/new/grouper 
       - file: content/appr/theme/prog1/new/randomiser

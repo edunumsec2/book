@@ -126,6 +126,8 @@ for c in ('red', 'yellow', 'pink', 'lightblue', 'lightgreen'):
     forward(100)
 ```
 
+**Exercice** : Changez la couleurs des maisons.
+
 ## Drapeau LGBT
 
 Le drapeau arc-en-ciel, ou également appelé le drapeau de la paix, est un drapeau représentant plusieurs bandes ayant les couleurs d'un arc-en-ciel. L'usage du drapeau arc-en-ciel est une ancienne tradition commune à de nombreuses cultures. Il évoque généralement la paix, la diversité sexuelle et de genre, ainsi que l'harmonie entre les individus dans le monde entier.
@@ -150,8 +152,6 @@ for x in ('red', 'orange', 'yellow', 'green', 'blue', 'purple'):
     forward(67)
     left(90)
 ```
-
-**Exercice** : Changez la couleurs des maisons.
 
 ## Fleur
 
