@@ -173,6 +173,7 @@ s.listen()
 
 ```{codeplay}
 from turtle import *
+from math import *
 s = getscreen()
 speed(0)
 up()
@@ -197,6 +198,43 @@ def f(x, y):
 
 s.onclick(f)
 s.listen()
+```
+
+## Faire défiler un texte
+
+```{codeplay}
+from turtle import *
+from time import *
+speed(0)
+tracer(0)
+
+t = 'very longue line of texte'
+
+for x in range(300, -2000, -10):
+    goto(x, 0)
+    clear()
+    write(t, font=(None, 150))
+    update()
+```
+
+## Texte qui vibre
+
+```{codeplay}
+from turtle import *
+from random import *
+speed(0)
+up()
+
+texte = 'very longue line'
+
+while True:
+    clear()
+    goto(-200, 0)
+    for c in texte:
+        y = randint(-3, 3)
+        sety(y)
+        write(c, font=(None, 24), move=True)
+        update()
 ```
 
 ## Colors
