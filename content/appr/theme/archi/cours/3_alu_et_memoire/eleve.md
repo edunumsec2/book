@@ -438,7 +438,7 @@ Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effec
 
 ```{logic}
 :height: 400
-:showonly: in out out.nibble
+:showonly: in in.nibble out out.nibble
 
 {
   "v": 1,
@@ -1058,7 +1058,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 
 
 `````{admonition} Exercice 8 : jeu de fréquences
-Observez le circuit ci-dessous. L'horloge principale $A$ fonctionne ici toute seule et produit un coup d'horloge par seconde (elle a donc une fréquence d'un hertz — 1 Hz). Que pouvez-vous dire des signaux $B$ et $C$ par rapport au signal $A$ ? Comment expliquer cela avec ce que vous savez des bascules ?
+Observez le circuit ci-dessous. L'horloge principale $A$ fonctionne ici toute seule et produit un coup d'horloge par seconde (elle a donc une fréquence d'un hertz — 1 Hz). Que pouvez-vous dire des signaux $B$ et $C$ par rapport au signal $A$ ? Comment expliquer cela avec ce que vous savez des bascules ? (Pour simplifier, le délai de propagation est ici presque nul.)
 
 Vous pouvez mettre l'animation en pause et exécuter chaque transition pas à pas pour mieux comprendre ce qui se passe.
 
@@ -1068,6 +1068,7 @@ Vous pouvez mettre l'animation en pause et exécuter chaque transition pas à pa
 
 {
   "v": 1,
+  "opts": {"propagationDelay": 0},
   "in": [{"type": "clock", "pos": [40, 30], "id": 30, "period": 1000}],
   "out": [
     {"pos": [380, 30], "id": 7, "name": "A"},
