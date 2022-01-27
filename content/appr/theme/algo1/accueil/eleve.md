@@ -46,7 +46,7 @@
 </html>
 
 <div align="right"> 
-    <a href="http://files.edunumsec2.ch/algo.pdf" class="round-button">
+    <a href="http://files.edunumsec2.ch/algo.pdf" target="_blank" class="round-button">
          <font color=white id="demo">Voir <br>dossier</font>
     </a>
 </div>
