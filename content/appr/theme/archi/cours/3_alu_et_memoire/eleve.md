@@ -438,7 +438,7 @@ Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effec
 
 ```{logic}
 :height: 400
-:showonly: LogicInput LogicOutput DisplayNibble
+:showonly: in out out.nibble
 
 {
   "v": 1,
@@ -529,7 +529,7 @@ Ce qui nous intéresse spécialement, c'est la comparaison à la ligne 3. Cette 
 
 ```{logic}
 :height: 330
-:showonly: ALU LogicInput LogicOutput NOT OR AND XOR
+:showonly: ALU in out NOT OR AND XOR
 
 {
   "v": 1,
@@ -936,7 +936,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 
 ```{logic}
 :height: 400
-:showonly: AND OR NOT XOR FlipflopD
+:showonly: AND OR NOT XOR Flipflop-D
 
 {
   "v": 1,
@@ -1015,7 +1015,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 
 ```{logic}
 :height: 300
-:showonly: AND OR NOT XOR FlipflopD
+:showonly: AND OR NOT XOR Flipflop-D
 
 {
   "v": 1,
