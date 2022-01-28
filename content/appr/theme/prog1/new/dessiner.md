@@ -1,9 +1,9 @@
 # Dessiner - `forward`
 
-Dans ce chapitre nous explorons ce que c'est un programme et nous prenons
+Dans ce chapitre, nous explorons ce que c'est un programme et nous prenons
  la métaphore du dessin. Ici, un programme est une séquence d'instructions pour dessiner une image.
 
-Allons-y en avant (forward) avec la programmation. Nous allons voir que :
+Allons de l'avant (forward) avec la programmation. Nous allons voir que :
 
 - l'expression `from turtle import *` met a disposition les fonctions de dessin,
 - les instructions `forward()`, `back()`, `left()`, `right()` permettent de dessiner,
@@ -20,11 +20,11 @@ Un programme informatique est
 
 ## Le module `turtle`
 
-Dans le langage de programmation Python, le module `turtle` (tortue en anglais) présente une façon sympathique pour faire des dessins. C'est pour cela que nous commençons notre aventure de programmation avec cet animal qui avance tout doucement à son propre rythme à lui.
+Dans le langage de programmation Python, le module `turtle` (tortue en anglais) présente une façon sympathique pour faire des dessins. C'est pour cela que nous commençons notre aventure de programmation avec cet animal qui avance tout doucement à son propre rythme.
 
 On s'imagine une tortue qui se déplace sur un canevas et laisse une trace.
 
-Ci-dessus vous trouvez notre premier programme de trois lignes :
+Ci-dessus, vous trouvez notre premier programme de trois lignes :
 
 - dans la première ligne nous importons toutes (`*`) les fonctions du module `turtle`,
 - avec `shape('turtle')` nous affichons une tortue (au lieu de la flèche),
@@ -38,7 +38,7 @@ shape('turtle')
 forward(150)
 ```
 
-**Exercice** : Ajoutez d'autres fonctions tel que `back()`, `left()`, et `right()` pour faire un dessin.
+**Exercice** : Ajoutez d'autres fonctions telles que `back()`, `left()`, et `right()` pour faire un dessin.
 
 ```{question}
 En Python `turtle` est
@@ -122,7 +122,7 @@ La hauteur de la zone de dessin de la tortue est
 
 ## Redondance
 
-La tortue possède 4 fonctions de déplacement, mais strictement parlé, on pourrait s'en sortir avec seulement deux fonctions, `forward()` et `left()`, car :
+La tortue possède 4 fonctions de déplacement, mais à strictement parler, on pourrait s'en sortir avec seulement deux fonctions, `forward()` et `left()`, car :
 
 - `back(d)` est équivalent à `forward(-d)`
 - `right(a)` est équivalent à `left(-a)`
@@ -156,7 +156,7 @@ L'expression `left(90)` est équivalent à
 ## Epaisseur de ligne
 
 La fonction `width(d)` (épaisseur en anglais) permet de définir l'épaisseur de la ligne.
-Voici un triangle ou chaque côté a une épaisseur différente.
+Voici un triangle où chaque côté a une épaisseur différente.
 
 ```{codeplay}
 :file: forward5.py
@@ -200,7 +200,7 @@ left(90)
 
 **Exercice** : Modifiez l'épaisseur du toit.
 
-## Raquette pingpong
+## Raquette de ping-pong
 
 L'épaisseur de ligne est très utile dans le dessin.
 
@@ -214,11 +214,11 @@ width(80)
 forward(20)
 ```
 
-**Exercice** : Transformez la raquette de pingpong en haltères de musculation.
+**Exercice** : Transformez la raquette de ping-pong en haltères de musculation.
 
 ## Lunettes de soleil
 
-Voici encore un exemple ou avec un simple changement d'épaisseur vous obtenez un effet très intéressant.
+Voici encore un exemple où avec un simple changement d'épaisseur, vous obtenez un effet très intéressant.
 
 ```{codeplay}
 :file: forward8.py
@@ -240,7 +240,7 @@ forward(60)
 
 ## Editeur de Python
 
-Jusqu'à maintenant nous avons exécuté nos petits programmes ici dans cette page web. Malheureusement ces programmes disparaissent quand nous rechargeons la page. Pour pouvoir les sauvegarder et programmer indépendamment de ce site web, nous avons besoin d'un éditeur de Python externe.
+Jusqu'à maintenant, nous avons exécuté nos petits programmes ici dans cette page web. Malheureusement, ces programmes disparaissent quand nous rechargeons la page. Pour pouvoir les sauvegarder et programmer indépendamment de ce site web, nous avons besoin d'un éditeur de Python externe.
 
 Nous vous proposons d'utiliser [Thonny](https://thonny.org), qui est un logiciel libre, facile à installer, et un excellent éditeur pour débuter avec Python. Essayez de faire ceci :
 
@@ -292,6 +292,7 @@ done()
 ```
 
 ### Hexagone
+
 Dessinez un hexagone.
 
 ```{codeplay}
@@ -348,7 +349,7 @@ done()
 
 ### Lit
 
-Dessinez une table.
+Dessinez un lit.
 
 ```{codeplay}
 :file: lit.py
