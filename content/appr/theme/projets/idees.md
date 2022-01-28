@@ -49,6 +49,21 @@ def f(x, y):
 s.onclick(f)
 ```
 
+## Colors
+
+```{codeplay}
+from turtle import *
+colormode(255)
+up()
+
+back(250)
+for x in range(0, 255, 20):
+    dot(40, (x, x, x))
+    color('white' if x < 128 else 'black')
+    write(x, font=(None, 10), align='center')
+    forward(40)
+```
+
 ```{codeplay}
 from turtle import *
 s = getscreen()
@@ -237,19 +252,40 @@ while True:
         update()
 ```
 
-## Colors
+## Texte en escalier
 
 ```{codeplay}
 from turtle import *
-colormode(255)
+
+phrase = 'des mots en escalier'
+
+left(80)
+for mot in phrase.split():
+    write(mot, font=(None, 16), move=True)
+    forward(30)
+```
+
+**Exercice** : Changez l'angle de rotation dans `left()`.
+
+## Un mot par clic
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+speed(0)
 up()
 
-back(250)
-for x in range(0, 255, 20):
-    dot(40, (x, x, x))
-    color('white' if x < 128 else 'black')
-    write(x, font=(None, 10), align='center')
-    forward(40)
+phrase = 'un mot par clic'.split()
+i = 0
+
+def f(x, y):
+    global i, phrase
+    goto(x, y)
+    write(phrase[i], font=(None, 24))
+    i = (i + 1) % len(phrase)
+
+s.onclick(f)
+s.listen()
 ```
 
 ## onkey - lettres
@@ -284,6 +320,65 @@ for c in '0123456789':
     
 s.listen()
 done()
+```
+
+## onkey - couleurs
+
+```{codeplay}
+from turtle import *
+from random import *
+s = getscreen()
+speed(0)
+
+d = 60
+goto(-300+d/2, 200-d/2)
+
+def f(x):
+    dot(d, (random(), random(), random()))
+    if xcor() < 300:
+        forward(d)
+    else:
+        goto(-300+d/2, ycor()-d)
+
+for c in 'abcdefghijklmnopqrstuvwxyz':
+    s.onkey(lambda x=c: f(x), c)
+    
+s.listen()
+```
+
+```{codeplay}
+from turtle import *
+from random import *
+s = getscreen()
+speed(0)
+
+d = 60
+goto(-300+d/2, 200-d/2)
+
+couleurs = dict()
+couleurs['r'] = 'red'
+couleurs['g'] = 'green'
+couleurs['b'] = 'blue'
+couleurs['y'] = 'yellow'
+couleurs['k'] = 'black'
+couleurs['w'] = 'white'
+couleurs['p'] = 'pink'
+couleurs['o'] = 'orange'
+couleurs['l'] = 'lime'
+couleurs['v'] = 'violet'
+
+def f(x):
+    col = couleurs.get(x, 'lightgray')
+    dot(d, col)
+    if xcor() < 300:
+        forward(d)
+    else:
+        goto(-300+d/2, ycor()-d)
+
+for c in 'abcdefghijklmnopqrstuvwxyz':
+    s.onkey(lambda x=c: f(x), c)
+    
+s.listen()
 ```
 
 ## module `string`

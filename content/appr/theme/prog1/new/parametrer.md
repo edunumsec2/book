@@ -1,10 +1,8 @@
 # Paramétrer - `f(x)`
 
-Dans ce chapitre nous allons voir de plus près le concept de la fonction, concept que nous avons vu dès le premier chapitre comme façon de donner un nom à une séquence d'instructions.
+Dans ce chapitre nous allons voir de plus près le concept de la fonction, concept que nous avons vu dès le deuxième chapitre comme façon de donner un nom à une séquence d'instructions. Ici nous allons voir comment nous pouvons ajouter un ou plusieurs paramètres à une fonction. Nous allons voir que :
 
-La fonction est probablement le concept le plus important dans la programmation. C'est le moyen pour inventer des *nouveaux mots* dans un langage de programmation. Nous allons voir que :
-
-- le mot-clé `def` permet de définir une fonction,
+- l'expression `def f(x):` permet de définir une fonction,
 - un paramètre `f(par)` est une variable dans la définition de fonction,
 - un argument `f(arg)` est une valeur dans l'appel de fonction.
 
