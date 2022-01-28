@@ -1,6 +1,6 @@
 # Définir - `def`
 
-Dans ce chapitre, nous allons découvrir comment augmenter le vocabulaire de notre langage de programmation en définissant de nouvelles instructions. Ceci permet de rendre notre code plus compact, mais surtout plus lisible. Nous allons voir que :
+Dans ce chapitre, nous allons découvrir comment augmenter le vocabulaire de notre langage de programmation en définissant de nouvelles instructions. Ceci permet de rendre un code plus compact, mais surtout plus lisible. Nous allons voir que :
 
 - le mot-clé `def` permet de nommer (définir) une séquence,
 - le bloc qui suit doit être en **indentation** (décalé à droite),
@@ -30,18 +30,18 @@ forward(100)
 left(90)
 ```
 
-Oui, c'est possible. Avec le mot-clé `def`, nous pouvons définir une nouvelle commande que nous pouvons par exemple l'appeler `rectangle()`.
+Oui, c'est possible. Avec le mot-clé `def`, nous pouvons définir une nouvelle commande que nous pouvons par exemple appeler `rectangle()`.
 Cette façon de créer un raccourci est appelée **définir** une fonction.
 
-Ensuite il suffit d'écrire `rectangle()` pour dessiner un rectangle. On appelle ceci **appeler** une fonction.
-Rappelez vous ceci:
+Ensuite, il suffit d'écrire `rectangle()` pour dessiner un rectangle. On appelle ceci **appeler** une fonction.
+Rappelez-vous de ceci:
 
-- on définit une fonction une seule fois,
+- on définit une fonction une seule fois;
 - on appelle une fonction autant de fois que l'on veut.
 
-Définir une fonction nous permet de réduire le nombre de lignes de code nécessaire.
+Définir une fonction nous permet de réduire le nombre de lignes de code nécessaires.
 A chaque fois que nous utilisons `rectangle()`,
-au lieu d'écrire 8 lignes, nous écrivons seulement 1 ligne de code.
+au lieu d'écrire 8 lignes, nous écrivons seulement une ligne de code.
 
 ```{codeplay}
 :file: def1.py
@@ -76,7 +76,7 @@ Une **indentation** de texte est
 ## Donner du sens
 
 Une fonction ne permet pas seulement d'économiser des lignes de code.
-Elle permet aussi de structurer le code et de lui donner un sens. Considérez par exemple ce code ci-dessous. Il est presque impossible de comprendre ce que fait le programme en regardant les 17 lignes de code.
+Elle permet aussi de structurer le code et de lui donner un sens. Considérez par exemple le code ci-dessous. Il est presque impossible de comprendre ce que fait le programme en regardant les 17 lignes de code.
 
 ```{codeplay}
 :file: def2.py
@@ -101,7 +101,7 @@ forward(50)
 left(90)
 ```
 
-Si nous observons la tortue, nous comprenons finalement qu'elle dessine deux fois un rectangle. Nous pouvons même interpréter cette image et donner le sens de bâtiment au premier rectnagle, et de porte au second.
+Si nous observons la tortue, nous comprenons finalement qu'elle dessine deux fois un rectangle. Nous pouvons même interpréter cette image et donner le sens de bâtiment au premier rectangle, et de porte au second.
 
 Essayons maintenant de découper le code en **sous-problèmes** en utilisant deux fonctions `batiment()` et `porte()`.
 En regardant ces 3 lignes de code, on comprend immédiatement le sens du programme.
