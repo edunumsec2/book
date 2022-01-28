@@ -1,10 +1,19 @@
 # Attendre - `while`
 
-Dans ce chapitre nous découvrons un deuxième type de boucle, la boucle `while`, qui est souvent utilisé pour attendre quelque chose. Nous allons voir que
+Dans ce chapitre nous découvrons un deuxième type de boucle, la boucle `while`. Elle est souvent utilisée pour attendre quelque chose. Nous allons voir que :
 
 - la boucle `while` répète aussi longtemps qu'une condition est vraie,
 - la fonction `sleep()` permet d'attendre et ralentir le programme,
 - le mot-clé `break` permet de sortir de la boucle.
+
+```{question}
+En Python `while` est
+
+{f}`une fonction`  
+{f}`une condition`  
+{f}`une boucle`  
+{v}`un mot-clé`
+```
 
 ## Compteur à rebours
 
@@ -12,6 +21,7 @@ On peut utiliser la boucle `while` pour créer un compteur à rebours.
 Pour attendre une seconde, la fonction `sleep()` du module `time` est importée.
 
 ```{codeplay}
+:file: while1.py
 from time import sleep
 
 n = int(input('Entrez un entier: '))
@@ -31,6 +41,7 @@ On ne peut pas savoir à l'avance combien de noms il y aura, donc ici nous ne po
 La convention est d'utiliser des noms au pluriel (`noms`) pour désigner la liste et le même nom au singulier (`nom`) pour désigner un de ses éléments.
 
 ```{codeplay}
+:file: while2.py
 noms = []
 nom = input('Entrez un nom: ')
 
@@ -48,10 +59,11 @@ print(noms)
 Nous utilisons une boucle `while` pour demander des nombres à l'utilisateur.
 On ne peut pas savoir à l'avance combien de nombres il y aura, et donc nous ne pouvons pas utiliser la boucle `for`. Nous prenons comme condition de terminaison une réponse avec une chaîne vide (`''`).
 
-Au lieu d'écrire `while x != '':` nous pouvons simplifier vers  `while x:`. 
+Au lieu d'écrire `while x != '':` nous pouvons simplifier vers  `while x:`.
 La raison est que la chaîne vide est associée à `False` et toute autre chaîne non-vide est associée à `True`.
 
 ```{codeplay}
+:file: while3.py
 somme = 0
 x = input('Entrez un nombre: ')
 
@@ -70,6 +82,7 @@ Nous utilisons une boucle `while` pour demander des nombres à l'utilisateur.
 On ne peut pas savoir à l'avance combien de nombres il y aura, et donc nous ne pouvons pas utiliser la boucle `for`.  Nous prenons comme condition de terminaison une réponse avec une chaîne vide (`''`).
 
 ```{codeplay}
+:file: while4.py
 somme = 0
 n = 0
 x = input('Entrez un nombre: ')
@@ -86,7 +99,7 @@ print('moyenne =', somme/n)
 
 ## Deviner un nombre
 
-On peut aussi l'utiliser une boucle `while` pour deviner un nombre.
+On peut aussi utiliser une boucle `while` pour deviner un nombre.
 Ici on importe la fonction `randint()` du module `random`.
 Elle fournit un nombre entier aléatoire entre deux bornes (1, 99).
 
@@ -94,6 +107,7 @@ La fonction `input()` ne retourne que le type `str`.
 La fonction `int()` transforme le type string (chaîne) en entier (integer).
 
 ```{codeplay}
+:file: while5.py
 from random import randint
 
 n = randint(1, 99)
@@ -121,23 +135,24 @@ L'indentation est encouragée mais reste optionnelle.
 En Python, l'indentation est obligatoire. C'est la façon officielle de designer un bloc.
 Ceci présente deux avantages :
 
-- plus besoin d'accolades pour délimiter une bloc,
+- plus besoin d'accolades pour délimiter un bloc,
 - la structure des blocs est claire et visuelle.
 
 Une **indentation** est un retrait du code par rapport à la marge gauche de 4 caractères.
 Elle peut être insérée avec la touche tabulateur **TAB** (symbolisée par une flèche à gauche du clavier).
 
-Une suite d'instructions indentées de la même manière forme un bloc.
-Des blocs indentés se trouvent dans :
+Un bloc est défini comme un ensemble de lignes de même indentation. 
+Des blocs marqués par une indentation se trouvent après les mots-clés pour :
 
 - la définition de fonction (`def`),
-- l'instruction conditionnelle (`if-else`),
-- la boucles (`for`, `while`).
+- l'instruction conditionnelle (`if-elif-else`),
+- la boucle (`for/while`).
 
 En Python, le symbole `:` en fin de ligne introduit un sous-bloc qui doit être indenté.
 Voici 5 sous-blocs à la suite des mot-clés `def`, `if`, `elif`, `else`, `for` :
 
 ```{codeplay}
+:file: while6.py
 def f(x):
     if x > 0:
         return 'positif'
@@ -154,19 +169,21 @@ Dans l'exemple suivant nous avons une boucle qui fait trois itérations.
 Les deux instructions `print()` font partie du bloc de la boucle.
 
 ```{codeplay}
+:file: while7.py
 for i in range(3):
     print('itération', i)
     print('-' * 11)
 ```
 
-**Exercice** : Enlevez l'indentation de l'instructions `print('-' * 11)`.
+**Exercice** : Enlevez l'indentation de l'instruction `print('-' * 11)`.
 
 ## Sortir avec `break`
 
 Le mot-clé `break`, seul sur une ligne, permet de sortir d'une boucle.
-Souvent cette méthode est utilisé pour sortir d'une boucle infinie.
+Souvent cette méthode est utilisée pour sortir d'une boucle infinie.
 
 ```{codeplay}
+:file: while8.py
 noms = []
 
 while True:

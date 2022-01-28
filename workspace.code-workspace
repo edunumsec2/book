@@ -31,6 +31,13 @@
 			"loadNpmCommands": false,
 			"commands": [
 				{
+					"name": "Init venv",
+					"color": "#faa",
+					"command": "test -d venv && echo 'Python virtual environment seems to already exist in folder venv' || python3 -m venv venv; source venv/bin/activate",
+					"cwd": "${workspaceFolder}",
+					"singleInstance": false,
+				},
+				{
 					"name": "Build “apprendre”",
 					"color": "#cfc",
 					"command": "test -f venv/bin/activate && source venv/bin/activate; (cd config/apprendre && jupyter-book build . && (cd _build/html; kill $(lsof -t -i:8000) 2>/dev/null; python3 -m http.server 8000 &)) && open http://localhost:8000",
@@ -68,10 +75,10 @@
 				{
 					"name": "Update jupyter-book",
 					"color": "#ccf",
-					"command": "pip3 install -U jupyter-book",
+					"command": "test -f venv/bin/activate && source venv/bin/activate; pip3 install -U jupyter-book",
 					"cwd": "${workspaceFolder}",
 					"singleInstance": false,
-				},
+				}
 			]
 		},
 		"files.watcherExclude": {

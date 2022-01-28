@@ -1,4 +1,19 @@
-# Couleur - `dot`
+# Nuancer - `color`
+
+Dans ce chapitre nous allons voir les couleurs dans toutes leurs nuances. En informatique les couleurs sont basées sur les trois couleurs primaires **rouge**, **vert** et **bleu**. Leur combinaison respective permet de créer tout le spectre des couleurs visibles. Nous allons voir que :
+
+- la fonction `color(r, v, b)` représente une couleur avec trois nombres,
+- la fonction `color('#rvb')` représente une couleur avec un hexadécimal,
+- la fonction `color(r, v, b, a)` ajoute la transparence `a` (alpha).
+
+```{question}
+L'expression `color('#facc00')` represente une couleur
+
+{f}`bleu`  
+{f}`très sombre`  
+{v}`orange`  
+{f}`grise`
+```
 
 ## Rouge-Vert-Bleu (RVB)
 
@@ -13,6 +28,7 @@ L'intensité de couleur est exprimé soit :
 En utilisant la définition précédente nous pouvons exprimer les couleurs aussi avec un triplet.
 
 ```{codeplay}
+:file: color1.py
 from turtle import *
 up()
 
@@ -47,6 +63,7 @@ Il a deux façon d'exprimer les 3 composantes RVB :
 La fonction `colormode()` retourne le mode actuelle si utilisé sans argument. Si un argument est fourni (1 ou 255), ce mode est activé.
 
 ```{codeplay}
+:file: color2.py
 from turtle import *
 print(colormode())
 
@@ -85,6 +102,7 @@ dot(80)
 Voici un programme qui affiche les intensité pour rouge en incréments de 25%.
 
 ```{codeplay}
+:file: color3.py
 from turtle import *
 up()
 
@@ -114,6 +132,7 @@ dot(80)
 ## Mélanger RVB
 
 ```{codeplay}
+:file: color4.py
 from turtle import *
 
 d = 120
@@ -151,6 +170,7 @@ dot(d)
 Dans l'exemple ci-dessous nous agissons sur la cou
 
 ```{codeplay}
+:file: color5.py
 from turtle import *
 up()
 
@@ -169,11 +189,13 @@ for x in [0, 0.2, 0.4, 0.6, 0.8, 1]:
 ```
 
 **Exercice** : Dessiner un dégradé pour vert, bleu, magenta, cyan
+
 ## Matrice des couleurs
 
 Dans ce programme les axes x et y correspondent à une des couleurs RVG.
 
 ```{codeplay}
+:file: color6.py
 from turtle import *
 
 getscreen().bgcolor('gray')
@@ -212,6 +234,7 @@ Voici les 8 sommets du cube :
 - blanc - (1, 1, 1)
 
 ```{codeplay}
+:file: color7.py
 from turtle import *
 
 def axe(angle, couleur):
@@ -223,9 +246,9 @@ def axe(angle, couleur):
     
 getscreen().bgcolor('black')
 color('white')
-axe(0, 'red')
-axe(90, 'green')
-axe(135, 'blue')
+axe(0, 'rouge')
+axe(90, 'vert')
+axe(135, 'bleu')
 speed(0)
 up()
 
@@ -252,6 +275,7 @@ Dans un écran d'ordinateur (ou smartphone) on utilise les couleurs rouge, vert,
 La combinaison de toutes les trois couleurs de base donne blanc.
 
 ```{codeplay}
+:file: color8.py
 from turtle import *
 getscreen().bgcolor('black')
 r = 120
@@ -263,14 +287,15 @@ for x in ('red', 'lime', 'blue'):
     left(120)
 
 left(30)
-for x in ('magenta', 'cyan', 'yellow', 'white'):
+for x in ('yellow', 'cyan', 'magenta', 'white'):
     color(x)
     begin_fill()
     for i in range(4):
-        circle(r, 60)
-        left(60)
-    end_fill()
-    left(60 if x == 'yellow' else 120) 
+        circle(-r, 60)
+        right(60)
+        if i == 2:
+            end_fill()
+    right(60 if x == 'magenta' else 120) 
 ````
 
 ## Synthèse soustractive
@@ -288,6 +313,7 @@ Le mélange de :
 La combinaison de toutes les trois couleurs de base donne noir.
 
 ```{codeplay}
+:file: color9.py
 from turtle import *
 r = 120
 goto(-50, -50)
@@ -298,20 +324,74 @@ for x in ('cyan', 'magenta', 'yellow'):
     left(120)
 
 left(30)
-for x in ('lime', 'red', 'blue', 'black'):
+for x in ('blue', 'red', 'lime', 'black'):
     color(x)
     begin_fill()
     for i in range(4):
-        circle(r, 60)
-        left(60)
-    end_fill()
-    left(60 if x == 'blue' else 120)  
-````
+        circle(-r, 60)
+        right(60)
+        if i == 2:
+            end_fill()
+    right(60 if x == 'lime' else 120)  
+```
+
+## Quiz
+
+### Taille image
 
 ```{codeplay}
-
-````
+solution = 640 * 480 * 3
+reponse = 0
+===
+print("Quelle est taille d'une image couleur de 640 x 480 pixels ?")
+while reponse != solution:
+  reponse = int(input())
+print('Bravo')
+```
 
 ```{codeplay}
+solution = 2 ** 8
+reponse = 0
+===
+while reponse != solution:
+    reponse = int(input('nombre de combinaisons dans un octet: '))
+print('Bravo')
+```
 
-````
+### Octets, Ko/Mo/Go
+
+```{codeplay}
+def quiz(question, solution):
+  print(question)
+  answer = ''
+  while answer != solution:
+    answer = int(input())
+  print('Bravo')
+
+quiz('Quel est le nombre de combinaison dans un octet?', 2**8)
+===
+# octet
+```
+
+```{codeplay}
+def quiz(question, solution):
+  print(question)
+  answer = ''
+  while answer != solution:
+    answer = int(input())
+  print('Bravo')
+
+quiz("Quel est le nombre d'octets dans 1 ko?", 2**10)
+===
+# kilo-octet
+```
+
+```{codeplay}
+def quiz(question, solution):
+  answer = ''
+  while answer != solution:
+    answer = int(input(question))
+  print('Bravo')
+quiz("Quel est le nombre d'octets dans 1 Mo:", 2**20)
+===
+# méga-octet

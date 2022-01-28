@@ -1,12 +1,19 @@
-# Logique - `and`
+# Raisonner - `bool`
 
-La logique analyse de façon rigoureux des propositions qui sont soit vrai soit faux.
+Raisonner c'est lier logiquement entre elles des propositions pour aboutir à une proposition nouvelle, à une conclusion. La logique analyse de façon rigoureux des propositions qui sont soit vrai soit faux. On parle de la logique booléenne. Nous allons voir que :
 
-- Les deux valeurs logiques sont `True` et `False`
-- L'opération de négation `not` donne l'inverse
-- L'opérateur `and` est le **et** logique
-- L'opérateur `or` est le **ou** logique
-- L'opérateur `xor` est le **ou exclusif** logique
+- les deux valeurs logiques sont `True` et `False`,
+- l'opération de négation `not` donne l'inverse,
+- les mots-clés `and` et `or`  sont des opérations logiques.
+
+```{question}
+Une porte logique est
+
+{f}`un port d'entrée`  
+{f}`une table de vérité`  
+{v}`un circuit électronique`  
+{f}`une opération booléénne`
+```
 
 ## Table de vérité
 
@@ -29,6 +36,7 @@ False |True
 True  |False
 
 ```{codeplay}
+:file: bool1.py
 print('p', 'not p', sep='\t| ')
 print('--------' * 2)
 for p in (False, True):
@@ -50,6 +58,7 @@ True  | False | False
 True  | True  | True
 
 ```{codeplay}
+:file: bool2.py
 print('p', 'q', 'p and q', sep='\t| ')
 print('--------' * 3)
 for p in (False, True):
@@ -74,6 +83,7 @@ p   | q   | p and q
 1   | 1   | 1
 
 ```{codeplay}
+:file: bool3.py
 print('p', 'q', 'p or q', sep='\t| ')
 print('-------------------------')
 for p in (False, True):
@@ -84,7 +94,7 @@ for p in (False, True):
 `False or False =` {bl}`>False|True`  
 `False or True  =` {bl}`False|>True`  
 `True  or False =` {bl}`False|>True`  
-`True  or True  =` {bl}`False|>True` 
+`True  or True  =` {bl}`False|>True`
 
 ## Exclusive ou
 
@@ -98,10 +108,10 @@ p   | q   | p xor q
 `False xor False =` {bl}`>False|True`  
 `False xor True  =` {bl}`False|>True`  
 `True  xor False =` {bl}`False|>True`  
-`True  xor True  =` {bl}`>False|True` 
-
+`True  xor True  =` {bl}`>False|True`
 
 ```{codeplay}
+:file: bool4.py
 print('p', 'q', 'p ^ q', sep='\t')
 print('---------------------')
 for p in (False, True):
@@ -109,10 +119,10 @@ for p in (False, True):
         print(p, q, p ^ q, sep='\t')
 ```
 
-
 ## Dessiner une porte AND
 
 ```{codeplay}
+:file: bool5.py
 from turtle import *
 
 up()
@@ -147,6 +157,7 @@ forward(100)
 Dans la porte AND ci-dessous nous ajoutons 3 objets de la classe `Dot` et nous rendons la porte interactive. Avec la souris nous pouvons cliquer sur les 2 terminaux d'entrée et la sortie va afficher la logique de la porte.
 
 ```{codeplay}
+:file: bool6.py
 from turtle import *
 
 def line(x, y, d):
@@ -218,6 +229,7 @@ getscreen().listen()
 ## Dessiner une porte OR
 
 ```{codeplay}
+:file: bool7.py
 from turtle import *
 
 def line(x, y, d):
@@ -248,6 +260,7 @@ Dans la porte OR ci-dessous nous ajoutons 3 objets de la classe `Dot` et nous re
 La classe `Dot` est toujours définie, mais elle n'est plus affichée.
 
 ```{codeplay}
+:file: bool8.py
 class Dot(): 
     def __init__(self, x, y):
         self.x = x
@@ -319,6 +332,7 @@ getscreen().listen()
 ## Dessiner une porte XOR
 
 ```{codeplay}
+:file: bool9.py
 from turtle import *
 
 def line(x, y, d):
@@ -353,6 +367,7 @@ line(100, 0, 100)
 Dans la porte XOR ci-dessous nous ajoutons 3 objets de la classe `Dot` et nous rendons la porte interactive. Avec la souris nous pouvons cliquer sur les 2 terminaux d'entrée et la sortie va afficher la logique de la porte.
 
 ```{codeplay}
+:file: bool10.py
 class Dot(): 
     def __init__(self, x, y):
         self.x = x
@@ -430,6 +445,7 @@ getscreen().listen()
 ## Dessiner une porte EQ
 
 ```{codeplay}
+:file: bool11.py
 from turtle import *
 
 def line(x, y, d):
@@ -453,6 +469,7 @@ line(70, 0, 100)
 ## Dessiner une porte NOT
 
 ```{codeplay}
+:file: bool12.py
 from turtle import *
 
 def line(x, y, d):

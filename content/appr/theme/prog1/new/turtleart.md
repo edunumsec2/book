@@ -2,12 +2,24 @@
 
 Dans ce chapitre nous présentons toute une série d'idées artistiques, inspirées du travail d'Artemis Papert que vous trouvez sur le site [TurtleArt](https://turtleart.org).
 
-Explorez, modifiez, créez !
+*La créativité, c'est l'intelligence qui s'amuse.*  
+– Albert Einstein
+
+```{question}
+Quand vous programmez vous pouvez
+
+{v}`créer`  
+{v}`inventer`  
+{v}`explorer`  
+{v}`comprendre`
+```
+
 ## Etoile
 
 Une **étoile** est un point lumineux dans le ciel nocturne, et par extension, une figure géométrique représentant des rayons partant du centre.
 
 ```{codeplay}
+:file: art1.py
 from turtle import *
 
 getscreen().bgcolor('midnightblue')
@@ -26,6 +38,7 @@ for i in range(n):
 Un **diaphragme** est un élément mécanique sur le trajet lumineux d'un appareil photo pour régler la quantité de lumière.
 
 ```{codeplay}
+:file: art2.py
 from turtle import *
 
 getscreen().bgcolor('beige')
@@ -44,6 +57,7 @@ for i in range(n):
 Les **fleurs** ont souvent inspiré les artistes, peintres, poètes, sculpteurs et décorateurs.
 
 ```{codeplay}
+:file: art3.py
 from turtle import *
 
 getscreen().bgcolor('pink')
@@ -66,6 +80,7 @@ for i in range(n):
 Le **laser** est un système photonique qui produit un rayonnement lumineux spatialement et temporellement cohérent.
 
 ```{codeplay}
+:file: art4.py
 from turtle import *
 
 getscreen().bgcolor('yellow')
@@ -87,11 +102,12 @@ for i in range(n):
     left(360/n)
 ```
 
-## Yin Yang
+## Yin et yang
 
 Dans la philosophie chinoise, le **yin** et le **yang** sont deux catégories complémentaires qui sont utilisées dans l'analyse de tous les phénomènes de la vie et du cosmos.
 
 ```{codeplay}
+:file: art5.py
 from turtle import *
 
 getscreen().bgcolor('skyblue')
@@ -119,6 +135,7 @@ dot(30, 'navy')
 Le **Soleil** est l’étoile de notre système solaire.
 
 ```{codeplay}
+:file: art6.py
 from turtle import *
 
 getscreen().bgcolor('orange')
@@ -144,6 +161,7 @@ for i in range(n):
 Un **carré** est un quadrilatère isométrique avec quatre angles droits.
 
 ```{codeplay}
+:file: art7.py
 from turtle import *
 
 getscreen().bgcolor('honeydew')
@@ -164,6 +182,7 @@ for x in range(20, 160, 20):
 Une **spirale** est une courbe qui commence en un point central puis s'en éloigne de plus en plus, en même temps qu'elle tourne autour.
 
 ```{codeplay}
+:file: art8.py
 from turtle import *
 
 getscreen().bgcolor('teal')
@@ -175,11 +194,12 @@ for x in range(10, 300, 10):
     right(91)
 ```
 
-## Moulin à vent
+## Moulin
 
 Un **moulin à vent** est un jouet composé d'une roue munie de pales en papier dont la forme lui permet de tourner quand on souffle dessus.
 
 ```{codeplay}
+:file: art9.py
 from turtle import *
 
 getscreen().bgcolor('azure')
@@ -206,6 +226,7 @@ for i in range(n):
 Un **disque** est un objet plat circulaire.
 
 ```{codeplay}
+:file: art10.py
 from turtle import *
 from random import *
 
@@ -225,6 +246,7 @@ for i in range(20):
 L'**oeillet** rouge est un des symboles du mouvement ouvrier. En France tout particulièrement, on porte un oeillet rouge à la boutonnière pour la fête du Travail.
 
 ```{codeplay}
+:file: art11.py
 from turtle import *
 
 getscreen().bgcolor('aliceblue')
@@ -255,6 +277,7 @@ for i in range(n):
 Le **coeur** est un organe musculaire qui assure la circulation du sang dans le corps à travers des contractions rythmiques.
 
 ```{codeplay}
+:file: art12.py
 from turtle import *
 getscreen().bgcolor('pink')
 
@@ -271,11 +294,12 @@ forward(2 * r)
 end_fill()
 ```
 
-## Bulle comics
+## Comics
 
-Un **phylactère**, également appelé bulle ou ballon, est un élément graphique permettant de placer le texte d'un dialogue dans une bande dessinée. 
+Un **phylactère**, également appelé bulle ou ballon, est un élément graphique permettant de placer le texte d'un dialogue dans une bande dessinée.
 
 ```{codeplay}
+:file: art13.py
 from turtle import *
 
 getscreen().bgcolor('skyblue')
@@ -298,11 +322,12 @@ color('black')
 write('hello', font=('Courier', 32))
 ```
 
-## Arbre recursif
+## Arbre
 
 La **récursivité** est une démarche dont la description mène à la répétition d'une même règle.
 
 ```{codeplay}
+:file: art14.py
 from turtle import *
 
 getscreen().bgcolor('lightgreen')
@@ -324,11 +349,12 @@ back(70)
 branche(70, 6, 60)
 ```
 
-## Bulles de savon
+## Bulles
 
 Les bulles de savons sont des cercles colorés, qui utilisent une transparence de 70%, ce qui permet de voir à travers.
 
 ```{codeplay}
+:file: art15.py
 from turtle import *
 from random import *
 up()
@@ -342,16 +368,40 @@ for i in range(100):
     dot(s)
 ```
 
+## Mitsubishi
+
+Le nom Mitsubishi (三菱) signifie *trois losanges* ou *trois diamants* ce qui est représenté dans son logo.
+
+```{codeplay}
+:file: art16.py
+from turtle import *
+color('red')
+hideturtle()
+
+def losange():
+    for a in (60, 120, 60, 120):
+        forward(100)
+        left(a)
+
+left(60)
+for i in range(3):
+    begin_fill()
+    losange()
+    end_fill()
+    left(120)
+```
+
 ## Modulo
 
 Le nom Modulo fait référence à l'opérateur **modulo** en mathématique `%` et à la structure **modulaire** du cour.
 
 ```{codeplay}
+:file: art17.py
 from turtle import *
 
 up()
 d = 60
-color('rebeccapurple')
+color('indigo')
 for c in 'modulo':
     write(c, font=(None, d, 'bold'), move=True)
     
@@ -363,16 +413,4 @@ goto(-2*d, 0)
 dot(d/2, 'lightgray')
 goto(-d, d)
 dot(d/2, 'lightgray')
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
 ```

@@ -1,16 +1,27 @@
 # Décider - `if`
 
-Dans ce chapitre nous allons voir comment un programme peut faire des choix, et comment il peut exécuter du code de façon sélective. Nous allons voir que
+Dans ce chapitre nous allons voir comment un programme peut faire des choix, et comment il peut exécuter du code de façon sélective. Nous allons voir que :
 
 - le mot-clé `if` permet une exécution conditionnelle,
 - les mot-clés `if-else` permettent de choisir entre deux alternatives,
 - le mot-clé `elif` (else if) permet d'ajouter différentes conditions.
 
-## Etes-vous majeur ?
+
+```{question}
+En Python `if` est suivi
+
+{f}`d'un bloc`  
+{v}`d'une condition`  
+{f}`de parenthèses`  
+{f}`d'un deux-points`
+```
+
+## Êtes-vous majeur ?
 
 Basé sur votre âge, le programme décide si vous êtes majeur ou pas.
 
 ```{codeplay}
+:file: if1.py
 age = input('Entrez votre age: ')
 
 if int(age) < 18:
@@ -36,6 +47,7 @@ Le résultat d'une comparaison est une valeur booléenne, soit `True` soit `Fals
 Voici quelques exemples :
 
 ```{codeplay}
+:file: if2.py
 x = 3
 print(x > 2)
 print(x < 2)
@@ -45,6 +57,7 @@ print(x != 2)
 **Attention** : Il ne faut pas confondre l'opérateur d'affectation (`=`) avec l'opérateur de comparaison (`==`).
 
 ```{codeplay}
+:file: if3.py
 a = 2           # affectation
 print(a)
 print(a == 2)   # comparaison
@@ -55,6 +68,7 @@ print(a == 2)   # comparaison
 Trouvez le signe d'un nombre.
 
 ```{codeplay}
+:file: if4.py
 n = input('Entrez un nombre: ')
 n = int(n)
 
@@ -73,6 +87,7 @@ else:
 Le programme vous dit si le nombre que vous entrez est pair ou impair.
 
 ```{codeplay}
+:file: if5.py
 x = input('Entrez un entier: ')
 
 if int(x) % 2 == 0:
@@ -86,6 +101,7 @@ else:
 Le programme va factoriser le nombre que vous entrez
 
 ```{codeplay}
+:file: if6.py
 n = int(input('Entrez un entier: '))
 i = 2
 
@@ -104,6 +120,7 @@ print(n)
 Le programme transforme l'entier en code binaire.
 
 ```{codeplay}
+:file: if7.py
 n = int(input('Entrez un entier: '))
 
 code = ''
@@ -119,7 +136,7 @@ print(code)
 
 ## Décrire un chemin
 
-Un programme de dessin avec la tortue est une séquence d'instructions. Si la tortue se déplace que sur les lignes d'une grille, nous pouvons représenter un chemin par une séquence d'actions ou chaque action peut être représenter avec une seule lettre :
+Un programme de dessin avec la tortue est une séquence d'instructions. Si la tortue ne se déplace que sur les lignes d'une grille, nous pouvons représenter un chemin par une séquence d'actions où chaque action peut être représentée avec une seule lettre :
 
 - `f` = avancer
 - `l` = tourner à gauche
@@ -129,6 +146,7 @@ Un programme de dessin avec la tortue est une séquence d'instructions. Si la to
 On voit que le contour de la lettre E contient 24 segments de  base.
 
 ```{codeplay}
+:file: if8.py
 from turtle import *
 
 d = 20
@@ -154,15 +172,16 @@ walk(E)
 
 ## Opérations logiques
 
-Les opérateurs logiques permettent de combiner des valeurs logiques. En Python nous avons
+Les opérateurs logiques permettent de combiner des valeurs logiques. En Python nous avons : 
 
-- et logique (`and`),
-- ou logique (`or`),
+- *et* logique (`and`),
+- *ou* logique (`or`),
 - négation (`not`).
 
 Pour tester si un nombre x est dans l'intervalle (a, b) il faut combiner deux comparaisons avec une opération logique.
 
 ```{codeplay}
+:file: if9.py
 a = 5
 b = 10
 
@@ -185,6 +204,7 @@ Une double inversion revient à l'identité.
 Dans l'exemple suivant, essayez de changer la valeur de `p`.
 
 ```{codeplay}
+:file: if10.py
 p = True
 
 print('p =', p)
@@ -197,6 +217,7 @@ print('not not p =', not not p)
 Python permet de remplacer `(a < x) and (x < b)` par l'expression plus compacte `a < x < b`.
 
 ```{codeplay}
+:file: if11.py
 a = 5
 b = 10
 

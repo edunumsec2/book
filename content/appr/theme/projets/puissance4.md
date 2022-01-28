@@ -4,7 +4,7 @@ Puissance 4 est un jeu de stratégie combinatoire abstrait, commercialisé pour 
 
 Le but du jeu est d'aligner une suite de 4 pions de même couleur sur une grille comptant 6 rangées et 7 colonnes.
 
-![](media/puissance4.png)
+![puissance4](media/puissance4.png)
 
 Tour à tour, les deux joueurs placent un pion dans la colonne de leur choix, le pion coulisse alors jusqu'à la position la plus basse possible dans la dite colonne à la suite de quoi c'est à l'adversaire de jouer. Le vainqueur est le joueur qui réalise le premier un alignement (horizontal, vertical ou diagonal) consécutif d'au moins quatre pions de sa couleur.
 

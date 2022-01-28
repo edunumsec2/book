@@ -1,13 +1,17 @@
 # Trier - `sort`
 
-Dans ce chapitre nous allons découvrir quelques algorithmes de tri. 
-Pouvoir trier les éléments d'une liste est une fonctionnalité fondamentale dans l'informatique. Le succès énorme de Google est basé sur un tri efficace de l'information, car dans une liste triée on peux trouver un élément **beaucoup** plus vite.
-
-Nous allons voir que
+Dans ce chapitre nous allons découvrir quelques algorithmes de tri.
+Pouvoir trier les éléments d'une liste est une fonctionnalité fondamentale dans l'informatique. Le succès énorme de Google est basé sur un tri efficace de l'information, car dans une liste triée on peux trouver un élément **beaucoup** plus vite. Nous allons voir que :
 
 - la fonction `min(liste)` retourne le minimum,
 - la fonction `max(liste)` retourne le maximum,
 - la méthode `liste.sort()` trie une liste.
+
+Lorsque vous jouez aux cartes, vous triez vos cartes par valeur et dans ce cas, vous utilisez sans le savoir un algorithme de tri.
+
+```{image} media/cartes.webp
+:width: 300px
+```
 
 ## Fonction `min` et `max`
 
@@ -15,6 +19,7 @@ Les fonctions `min()` et `max()` retournent le minimum et le maximum d'une liste
 Mais comment fonctionne cet algorithme ?
 
 ```{codeplay}
+:file: sort1.py
 liste = [3, 4, 1, 2, 6, 5]
 
 print(min(liste))
@@ -32,6 +37,7 @@ Pour trouver le minimum dans une liste il faut :
 - garder la valeur comme nouveau minimum si elle est plus petite.
 
 ```{codeplay}
+:file: sort2.py
 liste = [3, 4, 1, 2, 6, 5]
 
 min = liste[0]
@@ -42,7 +48,7 @@ for val in liste[1:]:
 print(min)
 ```
 
-**Exercice** : Modifiez l'algorithme pour trouver le maximum.
+**Exercice** : Modifiez l'algorithme pour trouver le minimum ET le maximum.
 
 ## Créer une liste
 
@@ -55,6 +61,7 @@ Avec une compréhension nous allons créer :
 - une liste `y` avec des valeurs aléatoires dans l'intervalle [-200, 200]
 
 ```{codeplay}
+:file: sort3.py
 from random import *
 
 n = 10
@@ -75,6 +82,7 @@ print('y =', y)
 Nous utilisons les listes `x` et `y` pour afficher des points et visualiser la liste `y`.
 
 ```{codeplay}
+:file: sort4.py
 from turtle import *
 from random import *
 
@@ -113,6 +121,7 @@ Cet algorithme :
 - garde la valeur comme nouveau minimum si elle est plus petite.
 
 ```{codeplay}
+:file: sort5.py
 from turtle import *
 from random import *
 
@@ -151,14 +160,15 @@ for i in range(n):
     dot(d/2)
 ```
 
-**Exercice** : Modifiez l'algorithme pour trouver le maximum.
+**Exercice** : Modifiez l'algorithme pour visualiser le minimum ET le maximum.
 
 ## L'indice du minimum
 
 Souvent on ne doit pas seulement trouver la valeur minimum, mais aussi son indice dans la liste.
-Différent au cas précédent, nous itérons pas sur les valeurs, mais sur les indices.
+Différent au cas précédent, nous ne parcourons pas les valeurs, mais les indices.
 
 ```{codeplay}
+:file: sort6.py
 liste = [3, 4, 1, 2, 6, 5]
 
 min = liste[0]
@@ -173,7 +183,7 @@ for i in range(1, n):
 print(i_min)
 ```
 
-**Exercice** : Modifiez l'algorithme pour trouver l'indice du maximum.
+**Exercice** : Modifiez l'algorithme pour trouver l'indice du minimum ET maximum.
 
 ## Echanger deux éléments
 
@@ -181,6 +191,7 @@ Pour échanger deux éléments d'une liste nous utilisons une affectation multip
 Ici nous échangeons les deux premiers éléments, donc les éléments avec les indices 0 et 1.
 
 ```{codeplay}
+:file: sort7.py
 liste = [3, 4, 1, 2, 6, 5]
 
 print(liste)
@@ -191,6 +202,7 @@ print(liste)
 Le programme devient plus lisible si nous définissons une fonction `echange()`.
 
 ```{codeplay}
+:file: sort8.py
 liste = [3, 4, 1, 2, 6, 5]
 
 def echange(liste, i, j):
@@ -206,6 +218,7 @@ print(liste)
 Pour visualiser le déplacement d'un point de l'indice `i` vers l'indice `j` nous effaçons le premier point en le dessinant en blanc, et nous indiquons avec une ligne le déplacement vers la nouvelle position.
 
 ```{codeplay}
+:file: sort9.py
 from turtle import *
 from random import *
 
@@ -254,6 +267,7 @@ Pour échanger deux points, il faut :
 - échanger les deux éléments dans la liste
 
 ```{codeplay}
+:file: sort10.py
 from turtle import *
 from random import *
 
@@ -306,6 +320,7 @@ Dans l'exemple suivant nous échangeons deux points successives pour toute la li
 - tous les autres points reculent d'une position
 
 ```{codeplay}
+:file: sort11.py
 from turtle import *
 from random import *
 
@@ -362,6 +377,7 @@ L’algorithme du **tri par sélection** commence par rechercher le plus petit �
  Il recherche ensuite le plus petit élément de la liste restante. Il sélectionne ainsi le deuxième plus petit élément de la liste et l’échange avec le deuxième élément de la liste. Et ainsi de suite.
 
 ```{codeplay}
+:file: sort12.py
 liste = [3, 4, 1, 2, 6, 5]
 print(liste)
 
@@ -383,6 +399,7 @@ for i in range(n-1):
 Avec les fonctions `min()` et `index()` nous pouvons écrire cet algorithme de façon encore plus compact.
 
 ```{codeplay}
+:file: sort13.py
 liste = [3, 4, 1, 2, 6, 5]
 
 def tri_selection(liste):
@@ -398,6 +415,7 @@ tri_selection(liste)
 Voici une visualisation du tri par sélection.
 
 ```{codeplay}
+:file: sort14.py
 from turtle import *
 from random import *
 
@@ -462,6 +480,7 @@ L'algorithme du **tri par insertion** est utilisé par la plupart des personnes 
 L’algorithme du tri par insertion parcourt la liste d’éléments à trier du deuxième au dernier élément. Pour chaque nouvel élément considéré, il l’insère à l’emplacement correct dans la liste déjà parcourue.
 
 ```{codeplay}
+:file: sort15.py
 y = [3, 4, 1, 2, 6, 5]
 
 n = len(y)
@@ -477,6 +496,7 @@ for i in range(1, n):
 Voici une visualisation du tri par insertion.
 
 ```{codeplay}
+:file: sort16.py
 from turtle import *
 from random import *
 
@@ -530,13 +550,18 @@ show()
 
 L’algorithme du **tri à bulles** compare les éléments voisins, deux par deux, et les met dans le bon ordre. Le mot 'bulles' fait références aux bulles dans une boissons qui montent à la surface.
 
+```{image} media/bulles.jpg
+:width: 300px
+```
+
+Dans l'exemple suivant, nous pouvons voir comment le `4` flotte vers le haut, jusqu'à c'qu'il rencontre le le `6` qui monte alors tout vers la surface, comme des bulles dans une boisson.
+
 ```{image} media/tri_bulles.jpg
 :width: 200px
 ```
 
-On peut voir comment le `4` flotte vers le haut, jusqu'à c'qu'il rencontre le le `6` qui monte alors tout vers la surface, comme des bulles dans une boisson.
-
 ```{codeplay}
+:file: sort17.py
 y = [3, 4, 1, 2, 6, 5]
 print(y)
 
@@ -551,6 +576,7 @@ for i in range(n-1):
 Voici une visualisation du tri à bulles.
 
 ```{codeplay}
+:file: sort18.py
 from turtle import *
 from random import *
 

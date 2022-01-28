@@ -1,8 +1,9 @@
 (programmation)=
+
 # Programmation I
 
-Programmer est simple. Si vous savez dessiner, écrire et calculer, alors vous savez aussi programmer. 
-Quand vous envoyez un message avec WhatsApp, postez une image sur Instagram ou parlez à Siri, vous interagissez avec votre smartphone ou ordinateur. Vous communiquez avec cet machine.
+Programmer, c'est facile. Si vous savez dessiner, écrire et calculer, alors vous savez aussi programmer.
+Quand vous envoyez un message avec WhatsApp, postez une image sur Instagram ou parlez à Siri, vous interagissez avec votre smartphone ou votre ordinateur. Vous communiquez avec cette machine.
 
 C'est le programme qui dit à votre ordinateur comment manipuler une image, un texte ou le son de votre voix. Mais quelque part, un humain a écrit ce programme.
 
@@ -12,7 +13,7 @@ C'est le programme qui dit à votre ordinateur comment manipuler une image, un t
 
 {fa}`check, text-success mr-1` Dessiner, écrire et calculer en utilisant un ordinateur
 
-{fa}`check, text-success mr-1`  Comprendre la logique d'un programme
+{fa}`check, text-success mr-1` Comprendre la logique d'un programme
 
 ## Personnages-clés
 

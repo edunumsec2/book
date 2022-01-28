@@ -1,9 +1,10 @@
 # Idées
 
-Les programmes de ce chapitres sont des idées sous construction, à développer et à placer à leur endroit approprié.
-
+Les programmes de ce chapitre sont des idées sous construction, à développer et à placer à leur endroit approprié.
 
 ## Arbre
+
+Cet exemple montre la construction hiérarchique d'un arbre, a partir d'une simple branche.
 
 ```{codeplay}
 from turtle import *
@@ -21,7 +22,7 @@ def branche2():
     forward(40)
     left(50)
     branche()
-    right(50+50)
+    right(100)
     branche()
     left(50)
     back(40)
@@ -29,11 +30,11 @@ def branche2():
 def branche4():
     width(4)
     forward(50)
-    left(40)
+    left(50)
     branche2()
-    right(40+40)
+    right(100)
     branche2()
-    left(40)
+    left(50)
     back(50)
     
 def branche8():
@@ -41,7 +42,7 @@ def branche8():
     forward(50)
     left(50)
     branche4()
-    right(50+50)
+    right(100)
     branche4()
     left(50)
     back(50)
@@ -51,42 +52,9 @@ back(50)
 branche8()
 ```
 
-## Etat de la tortue
+## Méthodes `Turtle`
 
-Plusieurs fonctions nous renseignent sur l'état de la tortue :
-
-- couleur
-- tortue
-- position
-- fenêtre
-
-```{codeplay}
-from turtle import *
-
-color('red', 'lime')
-forward(50)
-left(45)
-
-print('Couleur:')
-print('color =', color())
-print('pen =', pencolor())
-print('fill =', fillcolor())
-print('mode =', colormode())
-
-print('\nPosition:')
-print('h =', heading())
-print('x =', xcor())
-print('y =', ycor())
-print('pos =', pos())
-
-print('\nFenêtre:')
-print('h =', window_height())
-print('w =', window_width())
-```
-
-## Les méthodes `Turtle`
-
-Affiche tous les méthodes et attributs de `Turtle`.
+Ce code affiche tous les méthodes et attributs de la classe `Turtle`.
 
 ```{codeplay}
 from turtle import *
@@ -94,15 +62,46 @@ from turtle import *
 print(dir(Turtle))
 ```
 
-## Les méthodes `Screen`
+On y retrouve les 6 comparaisons standard.
 
-Affiche tous les méthodes et attributs de `Screen`.
+```{codeplay}
+from turtle import *
+
+print('__eq__ =', Turtle.__eq__)
+print('__ge__ =', Turtle.__ge__)
+print('__gt__ =', Turtle.__gt__)
+print('__le__ =', Turtle.__le__)
+print('__lt__ =', Turtle.__lt__)
+print('__ne__ =', Turtle.__ne__)
+```
+
+On y retrouve également 9 autres méthodes privées.
+
+```{codeplay}
+from turtle import *
+
+print('__format__ =', Turtle.__format__)
+print('__getattribute__ =', Turtle.__getattribute__)
+print('__hash__ =', Turtle.__hash__)
+print('__init__ =', Turtle.__init__)
+print('__module__ =', Turtle.__module__)
+print('__new__ =', Turtle.__new__)
+print('__repr__ =', Turtle.__repr__)
+print('__setattr__ =', Turtle.__setattr__)
+print('__str__ =', Turtle.__str__)
+```
+
+## Méthodes `Screen`
+
+Cet exemple de code affiche tous les méthodes et attributs de la classe `Screen`. Nous constatons la présence des 15 mêmes méthodes spéciales que nous avons vues dans la classe `Turtle`.
 
 ```{codeplay}
 from turtle import *
 
 print(dir(Screen))
 ```
+
+Voici quelques fonctions qui renvoient l'état.
 
 ```{codeplay}
 from turtle import *
@@ -117,116 +116,175 @@ print('speed =', speed())
 print('delay =', delay())
 ```
 
-## Key events
+## Fonction `shape()`
+
+Voici les 6 formes de tortue.
 
 ```{codeplay}
 from turtle import *
-speed(0)
 
-def left():
-    setheading(0)
+shapes = getscreen().getshapes()
+print('shapes =', shapes)
+
+left(90)
+up()
+back(180)
+
+for s in shapes:
     forward(50)
-    
-def up():
-    setheading(90)
-    forward(50)
-
-def right():
-    setheading(180)
-    forward(50)
-
-def down():
-    setheading(270)
-    forward(50)
-
-getscreen().onkey(up, 'w')
-getscreen().onkey(right, 'a')
-getscreen().onkey(down, 's')
-getscreen().onkey(left, 'd')
-getscreen().listen()
-
-print("Cliquez dans la fenêtre pour l'activer.")
-print("Utilisez les touches WASD pour bouger la tortue.")
+    write(s + '   ', align='right', font=(None, 18))
+    shape(s)
+    stamp()
 ```
 
-## Key events `lambda`
+La taille des 3 formes géométriques `square`,  `triangle` et `circle` est de 20 pixels. Ces formes peuvent être utilisés dans des animations ou des jeux vidéos.
 
 ```{codeplay}
 from turtle import *
-speed(0)
+up()
 
-getscreen().onkey(home, 'h')
-getscreen().onkey(clear, 'c')
-getscreen().onkey(reset, 'r')
+shape('square')
+for i in range(10):
+    stamp()
+    forward(22)
+    
+goto(0, 30)
+shape('circle')
+for i in range(10):
+    stamp()
+    forward(22) 
 
-getscreen().onkey(up, 'u')
-getscreen().onkey(down, 'd')
+goto(0, 60)
+shape('triangle')
+for i in range(10):
+    stamp()
+    forward(22)
+    
+hideturtle()
+```
 
-getscreen().onkey(lambda : forward(50), 'space')
-getscreen().onkey(lambda : seth(0), 'right')
-getscreen().onkey(lambda : seth(90), 'up')
-getscreen().onkey(lambda : seth(180), 'left')
-getscreen().onkey(lambda : seth(-90), 'down')
-getscreen().listen()
+## Fonction `delay()`
 
-print("Cliquez dans la fenêtre pour l'activer.")
-print("Utilisez les touches de direction pour orienter la tortue.")
-print("Utilisez espace pour avancer.")
-print("Utilisez U/D pour up/down.")
-print("Utilisez H/C/R pour home/clear/reset.")
+La fonction `delay(d)` permet de contrôler l'intervalle (exprimé en millisecondes) entre deux mises à jour (update) de l'écran (canevas).
+
+```{codeplay}
+from turtle import *
+
+print('delay =', delay()) # 33 milisecondes = 60 fps
+delay(500)  # exprimé en millisecondes (ms)
+
+left(50)    # delai de 500 ms tous les 5 degrees 
+forward(50) # delai de 500 ms tous les 5 pixels
+```
+
+## Fonction `tracer()`
+
+La fonction `tracer(0/1)` active ou désactive les animations des tortues.
+Lorsque le traceur est désactivé vous devez utiliser la fonction `update()` pour mettre à jour le dessin sur l'écran.
+
+```{codeplay}
+from turtle import *
+
+def etoile(n, m):
+    for i in range(n):
+        forward(100)
+        left(360/n*m)
+
+back(200)
+print('tracer =', tracer())
+etoile(7, 3)
+
+forward(150)
+tracer(0)
+print('tracer =', tracer())
+etoile(7, 3)
+update()
+
+forward(150)
+etoile(9, 4)
+update()
+```
+
+La fonction `tracer(n)` contrôle la fréquence des mises à jour du dessin. Seulement les n-ièmes mises à jours régulières de l'écran seront vraiment effectuées. Cette fonction peut être utilisé pour accélérer le dessin de graphiques complexes. Lorsqu'appelé sans arguments, elle renvoie la valeur actuelle de n.
+
+```{codeplay}
+from turtle import *
+delay(200)
+
+tracer(2)
+print('tracer() =', tracer())
+write('tracer(2)', align='right', font=(None, 16))
+forward(200)
+
+up()
+goto(0, 50)
+down()
+
+tracer(5)
+print('tracer() =', tracer())
+write('tracer(5)', align='right', font=(None, 16))
+forward(200)
+```
+
+## Fonction `speed()`
+
+La vitesse de la tortue peut varier entre 1 et 1000.
+Une vitesse de 0 représente la vitesse maximum. La vitesse par défaut est 3.
+
+```{codeplay}
+from turtle import *
+
+print('speed =', speed())
+
+for s in range(2, 10):
+    reset()
+    speed(s)
+    write(f'speed({s})  ', font=(None, 18), align='right')
+    for i in range(4):
+        forward(100)
+        left(90)
+```
+
+## Fonction `heading()`
+
+Voici une visualisation de la direction de la tortue, angle exprimé par la fonction `heading()`
+
+```{codeplay}
+from turtle import *
+
+for i in range(12):
+    down()
+    forward(100)
+    stamp()
+    up()
+    forward(10)
+    write(heading(), align='center')
+    backward(110)
+    left(30)
+
+hideturtle()
 ```
 
 ## Animer un point
 
-Animation en utilisant la fonction `undo()` pour effacer la dernière position.
+Animation en utilisant la fonction `tracer(0)` et `update()`.
 
 ```{codeplay}
 from turtle import *
-from time import *
-
-getscreen().bgcolor('azure')
-setundobuffer(1)
 hideturtle()
-speed(0)
-up()
-color('red')
-
-d = 40
-x0 = 300 - d//2
-
-for x in range(-x0, x0+1, 20):
-    undo()
-    setx(x)
-    dot(d)
-    sleep(0.2)
-```
-
-Animation en utilisant la couleur `white` pour effacer la dernière position.
-
-
-```{codeplay}
-from turtle import *
-from time import *
-
-hideturtle()
-speed(0)
+tracer(0)
 up()
 
-d = 40
-x0 = 300 - d//2
-
-for x in range(-x0, x0+1, 20):
-    color('white')
-    dot(d)
-    
+for x in range(-300, 300, 10):
+    clear()
     setx(x)
-    color('red')
-    dot(d)
-    
-    sleep(0.2)
+    dot(40, 'red')
+    update()
 ```
 
 ## Narration
+
+Voici un exemple qui affiche une conversation entre deux personnes, affiché en ralenti, lettre par lettre, pour simuler une sorte de communication chat en ligne.
 
 ```{codeplay}
 from time import sleep
@@ -251,48 +309,30 @@ for line in histoire.split('\n'):
     print()
 ```
 
-## Events
-
-La tortue a trois événements qui y sont associés : 
-
-- cliquer
-- tirer
-- relâcher
-
-```{codeplay}
-from turtle import *
-
-shape('turtle')
-forward(100)
-
-def click(x, y):
-    print('click', x, y)
-    
-def drag(x, y):
-    print('drag', x, y)
-    
-def release(x, y):
-    print('release', x, y)
-    
-getturtle().onclick(click)
-getturtle().ondrag(drag)
-getturtle().onrelease(release)
-getscreen().listen()
-```
-
 ## Le Zen de Python
 
 Le Zen de Python est un ensemble de 19 principes qui influencent la conception du langage de programmation Python, et sont utiles pour comprendre et utiliser le langage.
 
-Il est aussi inclus comme "Easter egg" dans Python, et apparait quand on tape la commande `import this`.
+Il est aussi inclus comme **Easter egg** dans Python, et apparait quand on tape la commande `import this`.
 
 ```{codeplay}
 import this
 ```
 
-## Mot-clés de Python
+## Mot-clés
 
-Ce module contient la liste de tous les mot-clés de Python.
+Ce module contient la liste de tous des mot-clés de Python. Le nombre des mots-clés est relativement limité. Nous en avons seulement une trentaine. Ces mots-clé concernent :
+
+- les opérateurs logiques : and, or, not
+- les boucles : for, in, while, break, continue
+- l'exécution conditionnelle : if, elif, else
+- les fonctions : def, return, lambda
+- l'importation : import, from
+- les classes : class
+- les variables : global
+
+Les mots-clés que nous avons pas encore vus sont :  
+as, assert, del, except, exec, finally, is, pass, raise, try, with, yield
 
 ```{codeplay}
 import keyword
@@ -301,62 +341,18 @@ print(a)
 print(len(a)) 
 ```
 
-## Expression réguliers
+## Expression rationnelle
+
+Une expression rationnelle (regular expression ou RE) spécifie un ensemble de chaînes de caractères qui lui correspondent ; les fonctions de ce module vous permettent de vérifier si une chaîne particulière correspond à une expression rationnelle donnée (ou si une expression rationnelle donnée correspond à une chaîne particulière, ce qui revient à la même chose).
 
 ```{codeplay}
 import re
 print(dir(re))
 ```
 
-## Mitsubishi
-
-Le nom Mitsubishi (三菱) signifie *trois losanges* ou *trois diamants* ce qui est réfléchi dans son logo.
-
-```{codeplay}
-from turtle import *
-color('red')
-hideturtle()
-
-def losange():
-    for i in range(2):
-        forward(100)
-        left(60)
-        forward(100)
-        left(120)
-
-left(60)
-for i in range(3):
-    begin_fill()
-    losange()
-    end_fill()
-    left(120)
-```
-
-## ontimer
-
-```{codeplay}
-from turtle import *
-
-up()
-goto(0, 150)
-hideturtle()
-n = 0
-
-def f():
-    global n
-    dot(10)
-    forward(15)
-    right(6)
-    n += 1
-    if n < 60:
-        getscreen().ontimer(f, 1000)
-        
-f()
-```
-
 ## Chercher un élément
 
-La fonction cherche un élément dans une liste
+Ce programme crée une liste avec 100 entiers aléatoires.
 
 ```{codeplay}
 from random import *
@@ -371,7 +367,7 @@ a.sort()
 print(a)
 ```
 
-L'expression `x in liste` retourne une valeur booléene qui indique si x fait partie de la liste.
+L'expression `x in liste` retourne une valeur booléenne qui indique si x fait partie de la liste.
 
 ```{codeplay}
 a = [121, 939, 19, 143, 471, 273, 480, 852, 672, 321, 885, 628, 648, 374, 376, 555, 156, 239, 741, 348, 139, 665, 600, 801, 500, 320, 216, 396, 81, 965, 568, 45, 494, 723, 392, 704, 413, 879, 529, 468, 683, 479, 720, 959, 57, 207, 302, 931, 878, 681, 145, 462, 180, 318, 417, 337, 159, 800, 237, 898, 964, 907, 295, 669, 570, 474, 30, 111, 159, 777, 615, 516, 429, 973, 696, 209, 872, 147, 180, 142, 905, 415, 573, 512, 816, 814, 329, 598, 216, 131, 830, 134, 478, 313, 832, 470, 244, 480, 662, 855]
@@ -379,6 +375,8 @@ a = [121, 939, 19, 143, 471, 273, 480, 852, 672, 321, 885, 628, 648, 374, 376, 5
 print(855 in a)
 print(856 in a)
 ```
+
+Ce programme vérifie si une valeur `x` se trouve dans la liste `a`.
 
 ```{codeplay}
 a = [121, 939, 19, 143, 471, 273, 480, 852, 672, 321, 885, 628, 648, 374, 376, 555, 156, 239, 741, 348, 139, 665, 600, 801, 500, 320, 216, 396, 81, 965, 568, 45, 494, 723, 392, 704, 413, 879, 529, 468, 683, 479, 720, 959, 57, 207, 302, 931, 878, 681, 145, 462, 180, 318, 417, 337, 159, 800, 237, 898, 964, 907, 295, 669, 570, 474, 30, 111, 159, 777, 615, 516, 429, 973, 696, 209, 872, 147, 180, 142, 905, 415, 573, 512, 816, 814, 329, 598, 216, 131, 830, 134, 478, 313, 832, 470, 244, 480, 662, 855]
@@ -416,7 +414,9 @@ for y in a:
     x += 6         
 ```
 
-## Une liste est-elle triée ?
+## Trié ou pas ?
+
+La fonction `is_sorted()` vérifie si une liste est triée.
 
 ```{codeplay}
 a = [570, 562, 87, 609, 411, 833, 825, 852, 390, 892, 417, 55, 632, 496, 902, 893, 222, 796, 179, 766, 793, 354, 793, 186, 254, 72, 995, 45, 362, 762, 118, 650, 19, 429, 504, 763, 111, 474, 167, 754, 344, 299, 13, 404, 703, 684, 760, 621, 674, 327, 836, 930, 390, 821, 51, 990, 416, 297, 553, 183, 307, 221, 350, 841, 762, 728, 341, 548, 798, 432, 103, 759, 525, 972, 174, 844, 566, 199, 76, 164, 383, 929, 480, 49, 798, 23, 976, 991, 570, 833, 336, 117, 953, 345, 635, 798, 510, 69, 725, 171]
@@ -434,6 +434,8 @@ print(is_sorted(b))
 ```
 
 ## Recherche binaire
+
+Voici comment faire une recherche binaire dans une liste triée.
 
 ```{codeplay}
 liste = [13, 19, 23, 45, 49, 51, 55, 69, 72, 76, 87, 103, 111, 117, 118, 164, 167, 171, 174, 179, 183, 186, 199, 221, 222, 254, 297, 299, 307, 327, 336, 341, 344, 345, 350, 354, 362, 383, 390, 390, 404, 411, 416, 417, 429, 432, 474, 480, 496, 504, 510, 525, 548, 553, 562, 566, 570, 570, 609, 621, 632, 635, 650, 674, 684, 703, 725, 728, 754, 759, 760, 762, 762, 763, 766, 793, 793, 796, 798, 798, 798, 821, 825, 833, 833, 836, 841, 844, 852, 892, 893, 902, 929, 930, 953, 972, 976, 990, 991, 995]
@@ -456,11 +458,12 @@ while b - a > 0:
 print(liste[m] == x)
 ```
 
-## Ordre du tri par séléction
+## Ordre du tri
 
 Quel est la somme de 1 + 2 + 3 + ... n ?  
 Graphiquement ceci nous donne la surface d'un triangle.
 Si nous affichons
+
 - `x` sur la première ligne
 - `xx` sur la deuxième ligne
 - n fois `x` sur la dernière ligne
@@ -477,45 +480,87 @@ for i in range(n+1):
 print(n * (n+1) // 2)
 ```
 
-## Tortues multiples
+## Snow Crash
 
-```{codeplay}
- from turtle import *
+Le [Samouraï virtuel](https://fr.wikipedia.org/wiki/Le_Samouraï_virtuel) (titre anglais : Snow Crash) est un roman de Neal Stephenson, paru en 1992, se déroulant dans un univers futuriste parfois qualifié de cyberpunk ou, plus précisément, de postcyberpunk.
 
-a = Turtle()
-a.color('red')
-a.shape('turtle')
-a.forward(100)
+Snow crash est un virus transmis de façon visuelle et qui s'attaquerait directement au « système opératoire » du cerveau des programmeurs par affichage sur écran de symboles apparemment indéchiffrables (d'où le titre original Snow crash).
 
-b = Turtle()
-b.color('blue')
-b.shape('turtle')
-b.left(90)
-b.forward(100)
-
-c = Turtle()
-c.color('lime')
-c.shape('turtle')
-c.left(45)
-c.forward(100)
+```{warning}
+Ne cliquez pas sur **Exécuter** ! Ce code sert uniquement d'illustration ! Les risques pour votre cerveau seront imprévisibles.
 ```
 
 ```{codeplay}
- 
+from turtle import *
+from random import *
+up()
+tracer(0)
+
+d = 20
+x0 = 300 - d//2
+y0 = 200 - d//2
+
+while True:
+    for y in range(y0, -y0-d, -d):
+        for x in range(-x0, x0+d, d):
+            goto(x, y)
+            r = random()
+            dot(d, (r, r, r))
+    update()
+```
+
+```{danger}
+Ne cliquez pas sur **Exécuter** ! Ce code sert uniquement d'illustration ! Ce code illustre une version du **virus Snow crash** avec des pixels en couleurs.
 ```
 
 ```{codeplay}
- 
+from turtle import *
+from random import *
+up()
+tracer(0)
+
+d = 20
+x0 = 300 - d//2
+y0 = 200 - d//2
+
+while True:
+    for y in range(y0, -y0-d, -d):
+        for x in range(-x0, x0+d, d):
+            goto(x, y)
+            r = random()
+            g = random()
+            b = random()
+            dot(d, (r, g, b))
+    update()
 ```
 
-```{codeplay}
- 
-```
+## Tortue par pixel
+
+Est-ce que le programme est beaucoup ralenti si nous créons une nouvelle tortue pour chaque pixel ?
 
 ```{codeplay}
- 
-```
+from turtle import *
+from time import *
+from random import *
 
-```{codeplay}
- 
+tracer(0)
+t0 = time()
+d = 20
+x0 = 300 - d//2
+y0 = 200 - d//2
+tortues = []
+
+for y in range(y0, -y0-d, -d):
+    for x in range(-x0, x0+d, d):
+        t = Turtle()
+        t.up()
+        t.hideturtle()
+        t.goto(x, y)
+        r = random()
+        t.dot(d, (r, r, r))
+        tortues.append(t)
+
+update()
+print('time =', time() - t0)
+print('objets =', len(tortues))
 ```

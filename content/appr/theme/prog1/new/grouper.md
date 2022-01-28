@@ -1,14 +1,23 @@
 # Grouper - `list`
 
-Dans ce chapitre nous découvrons une nouvelle structure de données - les listes. Nous allons voir que
+Dans ce chapitre nous découvrons une nouvelle structure de données - la liste. C'est une séquence ordonnée d'objets quelconques. Contrairement au `tuple` qui est immuable, la liste est *muable*, c'est à dire que nous pouvons réassigner ces éléments. Nous allons voir que :
 
-- une liste est un séquence d'objets entre crochets tel que `[2, 3, 5]`, 
-- la notation d'index `liste[i]` permet d'accéder au i-ème élément de la liste, 
-- la notation de tranche `liste[i:j]` permet d'accéder à une sous-liste.
+- la liste est une séquence d'objets entre crochets tels que `[2, 3, 5]`,
+- la notion d'index `liste[i]` permet d'accéder au i-ème élément de la liste,
+- la notion de tranche `liste[i:j]` permet d'accéder à une sous-liste.
+
+```{question}
+En informatique une liste est
+
+{v}`ordonnée`  
+{f}`jamais vide`  
+{f}`toujours hétérogène`  
+{f}`un ensemble mathématique`
+```
 
 ## Des groupes d'objets
 
-Une liste permet de manipuler des groupes d'objets tel que :
+Une liste permet de manipuler des groupes d'objets tels que :
 
 - noms d'élèves
 - notes d'un cours
@@ -17,6 +26,7 @@ Une liste permet de manipuler des groupes d'objets tel que :
 En Python, on peut grouper des objets divers dans une liste. Une liste est ordonnée, ce qui veut dire qu'il y a un premier objet et un dernier objet.
 
 ```{codeplay}
+:file: list1.py
 noms = ['Tim', 'Kim', 'Anna', 'Cindy']
 notes = [4, 5, 4, 5.5, 6, 3.5]
 couleurs = ['fuchsia', 'pink', 'orange']
@@ -34,6 +44,7 @@ En Python, une liste est délimitée par des crochets `[]` et ses éléments son
 La fonction `len()` retourne la longueur d'une liste, c'est à dire le nombre d'éléments qu'elle contient.
 
 ```{codeplay}
+:file: list2.py
 noms = ['Tim', 'Kim', 'Anna', 'Cindy']
 notes = [4, 5, 4, 5.5, 6, 3.5]
 couleurs = ['fuchsia', 'pink', 'orange']
@@ -46,9 +57,10 @@ print(len(notes))
 
 ## La fonction `list()`
 
-La fonction `list()` peut transformer une chaîne de caractère ou une plage numérique en liste.
+La fonction `list()` peut transformer une chaîne de caractères ou une plage numérique en liste.
 
 ```{codeplay}
+:file: list3.py
 print(list('Python'))
 print(list(range(10)))
 print(list(range(100, 150, 7)))
@@ -59,6 +71,7 @@ print(list(range(100, 150, 7)))
 Nous pouvons accéder à un élément de la liste en utilisant un numéro entre crochets `[]`, appelé **index**. L'index d'un élément est toujours un nombre entier. En Python, comme dans beaucoup de langages de programmation, l'index pour le premier élément de la liste est 0 et non pas 1. Ainsi, les éléments d'une liste de longueur `n` auront comme premier index 0 et comme dernier index `n - 1`.
 
 ```{codeplay}
+:file: list4.py
 noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
 print(noms[0])
 print(noms[2])
@@ -68,9 +81,10 @@ print(noms[-2])
 
 Un index négatif désigne un élément d'une liste pris depuis la fin de la liste.
 
-Les chaînes de caractères (`str`) peuvent aussi être indexé.
+Les chaînes de caractères (`str`) peuvent aussi être indexées.
 
 ```{codeplay}
+:file: list5.py
 noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
 print(noms[0][0])
 print(noms[2][1])
@@ -79,9 +93,10 @@ print(noms[-1][2])
 
 ## Tranche `[i:j]`
 
-La notation `[i:j]`, après le nom d'une variable qui contient une liste, permet d'extraire une sous-liste de la liste. Cette sous-liste, aussi appelé **tranche**, est une partie de la liste identifiée par les deux index `i` et `j`.
+La notation `[i:j]`, après le nom d'une variable qui contient une liste, permet d'extraire une sous-liste de la liste. Cette sous-liste, aussi appelée **tranche**, est une partie de la liste identifiée par les deux index `i` et `j`.
 
 ```{codeplay}
+:file: list6.py
 noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
 
 print(noms[:2])    # élément 0 et 1
@@ -94,15 +109,34 @@ print(noms[1::2])  # chaque 2e élément
 
 **Exercice** : Modifiez l'expression de tranche et exécutez de nouveau.
 
+```{question}
+Quel est le résultat de l'expression `'python'[:2]` ?
+
+{f}`thon`
+{f}`y`
+{f}`p`
+{v}`py`
+```
+
 ## Itérer sur une liste
 
 La boucle `for` peut itérer sur les éléments d’une liste. La variable d’itération prend successivement la valeur de chaque élément de la liste.
-La pratique est d'utiliser pour la liste un nom de variable au pluriel (`noms`) et pour l'itérateur le même nom au singulier (`nom`).
+La pratique est d'utiliser pour la liste un nom de variable au pluriel (`noms`) et pour la variable d'itération le même nom au singulier (`nom`).
 
 ```{codeplay}
+:file: list7.py
 noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
 for nom in noms:
     print(nom)
+```
+
+```{question}
+Quel est le résultat de l'expression `'pikachu'[-3:]` ?
+
+{f}`pik`
+{v}`chu`
+{f}`p`
+{f}`pika`
 ```
 
 ## Concaténation
@@ -110,6 +144,7 @@ for nom in noms:
 L'opérateur `+` permet de concaténer (mettre bout à bout) deux listes.
 
 ```{codeplay}
+:file: list8.py
 noms = ['Kim', 'Wendy']
 
 print([1, 2, 3] + [5, 4, 99])
@@ -121,6 +156,7 @@ print(noms + ['George'])
 L'opérateur `*` permet de répéter une liste.
 
 ```{codeplay}
+:file: list9.py
 noms = ['Kim', 'Ada'] * 2
 print(noms)
 print([0] * 6)
@@ -129,33 +165,38 @@ print(5 * [1])
 
 ## Ajouter des éléments
 
-Une **méthode** fonctionne comme une fonction, mais est rattachée à une liste avec la notation (`.`). 
+Une **méthode** fonctionne comme une fonction, mais est rattachée à une liste avec la notation (`.`).
 Par exemple si `a` désigne une liste, on peux ajouter un élément `x` à la fin de cette liste avec l'expression `a.append(x)`.
 
-Ces trois méthodes permettent tous d’ajouter des éléments à une liste existante :
+<!-- Ne devrait-on pas préciser qu'une méthode peut-être utilisée avec d'autres objets Python que des listes ?  -->
+
+Ces trois méthodes permettent toutes d’ajouter des éléments à une liste existante :
 
 - `append(x)`,
 - `extend(iterable)`,
 - `insert(i, x)`.
 
 ```{codeplay}
+:file: list10.py
 a = [1, 2, 3]
 a.append(99)
 print(a)
 ```
 
-La méthode `extend(iterable)` ajoute plusieurs éléments. Un **itérable** est une séquence telle qu'une liste ou une chaîne de caractères (texte),  c'est à dire un objet qui permet d'itérer sur ses éléments.
+La méthode `extend(sequence)` ajoute plusieurs éléments d'une **séquence** telle qu'une liste ou une chaîne de caractères (texte).
 
 ```{codeplay}
+:file: list11.py
 a = [1, 2, 3]
 a.extend([10, 11])
 a.extend('abc')
 print(a)
 ```
 
-La méthode `insert(i, x)` insère un nouvel élément `x` à la i<sup>ème</sup> position.
+La méthode `insert(i, x)` insère un nouvel élément `x` à la position `i`.
 
 ```{codeplay}
+:file: list12.py
 a = [1, 2, 3]
 a.insert(2, 999)
 print(a)
@@ -172,6 +213,7 @@ Les méthodes suivantes permettent d'enlever des éléments à une liste :
 La méthode `remove(x)` enlève l'élément `x` s'il existe, et donne une erreur autrement.
 
 ```{codeplay}
+:file: list13.py
 a = [1, 2, 3, 4]
 a.remove(3)
 print(a)
@@ -180,14 +222,16 @@ print(a)
 La méthode `pop()` enlève le dernier élément.
 
 ```{codeplay}
+:file: list14.py
 a = [1, 2, 3, 4]
 a.pop()
 print(a)
 ```
 
-La méthode `pop(i)` enlève le i<sup>ème</sup> élément.
+La méthode `pop(i)` enlève l'élément avec l'index `i`.
 
 ```{codeplay}
+:file: list15.py
 a = [1, 2, 3, 4]
 a.pop(1)
 print(a)
@@ -196,6 +240,7 @@ print(a)
 La méthode `clear()` enlève tous les éléments.
 
 ```{codeplay}
+:file: list16.py
 a = [1, 2, 3, 4]
 a.clear()
 print(a)
@@ -212,9 +257,10 @@ Les listes disposent aussi de méthodes avec notation dotée :
 ### Trier une liste
 
 La méthode `sort()` trie la liste dans l'ordre croissant (pour les caractères, on se réfère au code ASCII ou UTF utilisé).
-Cette méthode fonctionne uniquement si tous les éléments sont évidemment du même type (nombre, texte) et peuvent être comparés. 
+Cette méthode fonctionne uniquement si tous les éléments sont du même type (nombre, texte) et peuvent être comparés.
 
 ```{codeplay}
+ :file: list17.py
 a = [23, 10, -89, -54, 99, 2, 13]
 a.sort()
 print('trié', a)
@@ -223,6 +269,7 @@ print('trié', a)
 Le programme suivant montre le même tri de liste sous forme graphique.
 
 ```{codeplay}
+:file: list18.py
 from turtle import *
 up()
 
@@ -251,6 +298,7 @@ hideturtle()
 La méthode `reverse()` inverse l'ordre de la liste.
 
 ```{codeplay}
+:file: list19.py
 a = [1, 23, 10, -89, -54, 99]
 a.reverse()
 print('inversé', a)
@@ -259,6 +307,7 @@ print('inversé', a)
 De nouveau nous donnons un exemple graphique.
 
 ```{codeplay}
+:file: list20.py
 from turtle import *
 up()
 
@@ -285,6 +334,7 @@ hideturtle()
 La méthode `count(x)` compte le nombre d'occurrences de l'élément `x`.
 
 ```{codeplay}
+:file: list21.py
 m = list('Monty Python')
 print(m.count('y'))
 ```
@@ -295,6 +345,7 @@ Une liste peut représenter un vecteur.
 Pour calculer la **norme d'un vecteur** nous additionnons les carrés des éléments et prenons la racine carrée.
 
 ```{codeplay}
+:file: list22.py
 a = [1, 4, 7]
 norm = 0
 for i in a:
@@ -307,6 +358,7 @@ print(norm)
 Pour **additionner deux vecteurs**, il faut additionner chacun de leurs éléments.
 
 ```{codeplay}
+:file: list23.py
 a = [1, 4, 7]
 b = [2, 1, 2]
 result = [0, 0, 0]
@@ -318,6 +370,7 @@ print(result)
 Pour multiplier un vecteur avec un **scalaire k**, il faut multiplier chaque élément avec ce scalaire.
 
 ```{codeplay}
+:file: list24.py
 a = [1, 4, 7]
 result = [0, 0, 0]
 k = 2
@@ -329,6 +382,7 @@ print(result)
 Pour calculer le **produit scalaire** de deux vecteurs, il faut additionner le produit des éléments des vecteurs.
 
 ```{codeplay}
+:file: list25.py
 a = [1, 4, 7]
 b = [2, 1, 2]
 s = 0
@@ -338,11 +392,13 @@ print(s)
 ```
 
 ## Compréhension de liste
+
 Une **compréhension de liste** est une spécificité «élégante» du langage Python qui permet de construire de manière compacte des listes sur une seule ligne.
 
 Voici un exemple de construction «traditionnelle» d'une liste où on ajoute un élément après l'autre avec une boucle.
 
 ```{codeplay}
+:file: list26.py
 cubes = []
 for i in range(10):
     cubes.append(i ** 3)
@@ -352,6 +408,7 @@ print(cubes)
 En utilisant la compréhension de liste, on peut construire la même liste sur une seule ligne.
 
 ```{codeplay}
+:file: list27.py
 print([i ** 3 for i in range(10)])
 ```
 
@@ -361,6 +418,7 @@ Une condition peut être ajoutée dans la compréhension (par exemple, pour n'aj
 L'opérateur `%` est l'opérateur modulo qui renvoie le reste de la division.
 
 ```{codeplay}
+:file: list28.py
 a = []
 for i in range(10):
     if i % 2 == 1:
@@ -371,19 +429,21 @@ print(a)
 Nous pouvons alors écrire la formation de cette liste en une seule ligne.
 
 ```{codeplay}
+:file: list29.py
 print([i**2 for i in range(10) if i % 2 == 1])
 ```
 
-## <span commented>La pile</span><!-- REVIEW/JPP: je pense qu'on a besoin de faire maintenant pas mal d'exercices sur les listes avant de pouvoir comprendre le reste. Je ne trouve pas super clair dans la présentation actuelle le parallèle entre list et stack. On vient d'apprendre à manier des listes en Python avec leurs primitives, bien; mais maintenant, on a l'impression qu'on va aprrendre d'autres structures de données (pile et tampon) et on ne sait pas si c'est différent des listes ou pas. Il faudrait que ce soit vraiment clair, et que les exemples sont plus concrets, parce que ces valeurs numériques ne veulent pas dire grand-chose ou ne représente pas un problème ou une situation de la vie réelle. Pour moi, on n'a simplement pas besoin de parler de stack ou queue ici, mais on peut mettre en pratique des listes dans des exercices où elles ont ce genre de fonctionnement -->
+## La pile
 
 Une **pile** est une structure de données qui permet de gérer l'arrivée et le départ des éléments. Dans une pile d'assiettes ou de magazines, le dernier élément ajouté est le premier à être enlevé.
 
 En anglais cette structure s'appelle **stack** ou **LIFO** (last in first out).
 
 L'exemple suivant est une pile qui accumule des entiers.
-Si répondez avec une chaîne vide, ceci enlève le dernier élément mis sur la pile, jusqu'à ce que la pile est vide.
+Si répondez avec une chaîne vide, ceci enlève le dernier élément mis sur la pile, jusqu'à ce que la pile soit vide.
 
 ```{codeplay}
+:file: list30.py
 x = input('[] < ')
 pile = []
 
@@ -408,9 +468,10 @@ Dans une file d'attente devant un guichet, la première personne arrivée est la
 En anglais cette structure s'appelle **buffer** ou encore **FIFO** (first in first out).
 
 L'exemple suivant est une file d'attente pour des entiers.
-Si vous répondez avec une chaîne vide, ceci enlève le plus ancien élément de la file, jusqu'à ce que la file est vide.
+Si vous répondez avec une chaîne vide, ceci enlève le plus ancien élément de la file, jusqu'à ce que la file soit vide.
 
 ```{codeplay}
+:file: list31.py
 x = input('[] < ')
 file = []
 

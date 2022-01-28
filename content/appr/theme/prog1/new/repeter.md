@@ -1,277 +1,359 @@
 # Répéter - `for`
 
-Dans ce chapitre nous allons voir de près comment un programme peut exécuter certaines instructions multiples fois.
+Dans ce chapitre nous découvrons comment utiliser une boucle `for` pour répéter un bloc d'instructions un certain nombre de fois. Nous allons voir que :
 
-Une boucle permet de rendre le code plus court et mieux structuré.
-Une boucle ne représente pas seulement une économie de lignes de code, mais donne aussi la possibilité de contrôler le nombre de répétitions. Nous allons voir que
+- la boucle `for` permet de répéter des instructions,
+- la structure `for i in range(x):` permet de répéter un bloc x fois,
+- le deux-points `:` est toujours suivi d'un bloc en indentation.
 
-- la boucle `for` répète du code pour un ensemble de valeurs données,
-- la variable d'itération `i` prend une autre valeur à chaque tour,
-- on peut itérer sur des plages numériques, du texte, et des listes.
+```{question}
+Une boucle informatique est
 
-## Répéter x fois
-
-Le programme suivant demande comme entrée le nombre `x` de sommets, et dessine alors un polygone régulier. C'est un cas ou il faut **répéter x fois**.
-
-```{codeplay}
-from turtle import *
-
-x = input('Nombre de sommets: ')
-x = int(x)
-
-for i in range(x):
-    forward(50)
-    left(360/x)
+{f}`une instruction`  
+{f}`un passage ondulé`  
+{v}`une section de code répétée`  
+{f}`une protéction thérmique`
 ```
 
-**Exercice** : Testez avec des nombres différents entre 3 et 13.
+## La répétition
 
-## Itérer x fois
+Revenons vers un exemple simple : dessiner un carré.
 
-Le mot **itérer** veut dire parcourir un ensemble un par un. Dans la boucle `for` une variable d'itération va parcourir un ensemble qui peut être :
-
-- une plage numérique avec `range()`,
-- une chaîne de caractères,
-- une liste.
-
-La **variable d'itération** prend successivement les valeurs 0 à x-1.
-Quand la variable d'itération est de type entier (`int`) on l'appelle souvent `i`.
-
-Nous reprenons l'exemple précédent du polygone, mais cette fois nous dessinons pas les segments mais seulement les sommets. La valeur de la variable d'itération `i` est affichée à chaque sommet du polygone.
+Si nous regardons le code de près, nous pouvons voir que nous répétons 4 fois les mêmes deux instruction `forward()` et `left()`.
 
 ```{codeplay}
+:file: for1.py
 from turtle import *
 
-x = int(input('Nombre de sommets: '))
-up()
+forward(100)
+left(90)
+forward(100)
+left(90)
+forward(100)
+left(90)
+forward(100)
+left(90)
+```
 
-for i in range(x):
-    forward(50)
-    left(360/x)
+Ne serait-il pas pratique de pouvoir dire à la tortue de répéter ces instructions 4 fois ?  
+Ceci est possible avec une boucle `for`. La ligne `for i in range(x):` va répéter `x` fois le bloc en indentation qui suit.
+
+Par rapport à l'exemple précédent nous avons rajouté un `dot()` à chaque sommet, et nous cachons la tortue à la fin avec la fonction `hideturtle()`.
+
+```{codeplay}
+:file: for2.py
+from turtle import *
+
+for i in range(4):
+    forward(100)
+    left(90)
     dot()
-    write(i, font=(None, 12))
+    
+hideturtle()
 ```
 
-**Exercice** : Testez avec des nombres différents entre 5 et 13.
+**Exercice** : Transformez le rectangle en triangle.
 
-## Itérer avec `range()`
+## Polygone régulier
 
-La fonction `range(start, stop, step)` permet de produire une séquence linéaire d'entiers. Les entiers se trouvent dans l'intervalle semi-fermé `[start, stop[` avec un incrément de `step`.
-
-Le sens des paramètres :
-
-- `start` est la valeur de départ,
-- `stop` est la valeur finale, mais sans l'inclure,
-- `step` est l'incrément.
-
-La fonction `print()` utilise le paramètre optionnel `end` pour ne pas terminer avec un retour à la ligne mais par une simple espace.
+Avec une boucle `for` nous pouvons simplifier le dessins des formes symétriques.
 
 ```{codeplay}
-start = int(input('start = '))
-stop = int(input('stop = '))
-step = int(input('step = '))
-
-for i in range(start, stop, step):
-    print(i, end=' ')
-```
-
-**Exercice** : Affichez les entiers entre 100 et 200 avec un incrément de 3.
-
-La fonction `range()` fonctionne aussi dans l'ordre décroissant. Dans ce cas il faut choisir pour `step` une valeur négative.
-
-```{codeplay}
-for i in range(-100, -200, -3):
-    print(i, end=' ')
-```
-
-**Exercice** : Affichez les entiers de +10 à -10.
-
-La fonction `range()` peut fonctionner avec 1, 2 ou 3 paramètres. Les valeur par défaut sont :
-
-- 0 pour `start`,
-- 1 pour `step`.
-
-```{codeplay}
-from time import sleep
-
-for i in range(10):
-    print(i, end=' ')
-    sleep(0.1)
-print()
-
-for i in range(10, 20):
-    print(i, end=' ')
-    sleep(0.1)
-print()
-
-for i in range(10, 100, 7):
-    print(i, end=' ')
-    sleep(0.1)
-```
-
-## Itérer sur une chaîne
-
-La ligne de code `for c in mot:` signifie que la variable `c` va prendre à chaque répétition un caractère différent de la chaîne `mot`.
-
-Quand la variable d'itération est un caractère on l'appelle souvent `c`.
-
-```{codeplay}
-from time import sleep
-mot = input('Entrez un mot: ')
-
-for c in mot:
-    print(c)
-    sleep(0.1)
-```
-
-**Exercice** : Testez avec des textes différents.
-
-## Itérer sur une liste
-
-La ligne de code `for color in colors:` signifie que la variable `color` va prendre à chaque répétition un élément différent de la liste `colors`.
-
-Quand on itère sur une liste la convention est d'utiliser un mot au pluriel pour la liste (`colors`) et le même mot en singulier pour la variable d'itération (`color`).
-
-```{codeplay}
+:file: for3.py
 from turtle import *
 
-colors = ['hotpink', 'lime', 'beige', 'pink']
-left(120)
-speed(1)
+def triangle():
+    for i in range(3):
+        forward(100)
+        left(120)
 
-for color in colors:
-    getscreen().bgcolor(color)
-    write(color, font=(None, 18))
+def carre():
+    for i in range(4):
+        forward(100)
+        left(90)
+
+def pentagone():
+    for i in range(5):
+        forward(100)
+        left(72)
+
+triangle()
+carre()
+pentagone()
+```
+
+**Exercice** : Définissez la fonction `hexagone()` pour dessiner un hexagone.
+
+## Escalier
+
+Pour dessiner un escalier, il faut simplement répéter dans une boucle le dessin pour une seule marche.
+
+```{codeplay}
+:file: for4.py
+from turtle import *
+
+for i in range(5):
+    forward(20)
+    left(90)
+    forward(20)
+    right(90)
+
+forward(100)
+```
+
+## Dents de scie
+
+Pour dessiner des dents de scie, il faut simplement répéter dans une boucle le dessin pour une seule dent.
+
+```{codeplay}
+:file: for5.py
+from turtle import *
+
+for i in range(4):
+    left(45)
+    forward(71)
+    right(135)
     forward(50)
+    left(90)
+
+forward(80)
 ```
 
-**Exercice** : Ajoutez d'autres couleurs à la liste.
+**Exercice** : Dessinez une usine avec un toit en dents de scie.
 
-## Dessiner une spirale
+## Eventail
 
-Si nous dessinons un polygone mais augmentons la longueur de chaque segment successif en utilisant la variable d'itération `i`, nous obtenons une spirale.
+Que se passe-t-il si nous dessinons une ligne (`forward/back`) et tournons d'un petit angle à chaque fois ?
+C'est un peu comme un éventail qui s'ouvre.
 
 ```{codeplay}
+:file: for6.py
 from turtle import *
 
-for i in range(100):
-    forward(i)
-    left(30)
+for i in range(18):
+    forward(100)
+    back(100)
+    left(10)
 ```
 
-## Du polygone au cercle
+**Exercice** : Doublez l'angle de rotation dans `left()`.
 
-Plus que le polygone régulier a de sommets, plus il ressemble à un cercle.
-Avec 36 sommets, il ressemble déjà raisonnablement à un cercle.
+## Diaphragme
+
+Que se passe-t-il si nous avançons plus que nous reculons ?
+Une toute petite modification du programme peut faire une chouette différence.
 
 ```{codeplay}
+:file: for7.py
 from turtle import *
 
-def polygon(n, a):
-    for i in range(n):
-        forward(a)
-        left(360/n)
-
-polygon(36, 10)
+for i in range(18):
+    forward(100)
+    back(90)
+    left(20)
 ```
 
-## La fonction `circle(r)`
+**Exercice** : Modifiez les valeurs dans `forward()` et `back()`.
 
-La fonction `circle(r)` dessine un cercle de rayon `r`.
-Le cercle est dessiné :
+## Etoile
 
-- vers la gauche si r est positif,
-- vers la droite si r est négatif.
+Voici une autre façon de toujours avancer, mais tourner à chaque fois d'un angle un peu plus petit que 180°.
+Essayons !
 
 ```{codeplay}
+:file: for8.py
 from turtle import *
 
-forward(50)
-circle(40)
+for i in range(9):
+    forward(200)
+    left(160)
+```
+
+**Exercice** : Changez le nombre de pics de l'étoile.
+
+## Losange
+
+Si nous déformons les angles d'un carré, nous obtenons un losange (diamant).
+Quelle forme obtenons-nous en dessinant un carré et deux losanges ?
+
+```{codeplay}
+:file: for9.py
+from turtle import *
+
+def carre():
+    for i in range(4):
+        right(90)
+        forward(100)
+
+def losange():
+    for i in range(2):
+        forward(100)
+        left(120)
+        forward(100)
+        left(60)
+        
+carre()
+right(90)
+losange()
+left(120)
+losange()
+```
+
+## Fleur
+
+Si nous dessinons un losange 6 fois, nous obtenons une jolie fleur.
+
+```{codeplay}
+:file: for10.py
+from turtle import *
+
+def losange():
+    for i in range(2):
+        forward(100)
+        left(60)
+        forward(100)
+        left(120)
+
+for i in range(6):
+    losange()
+    left(60)
+```
+
+**Exercice** : Tournez un angle plus petit que 60°
+
+## Estamper la tortue
+
+Vous pouvez laisser une impression de la tortue à sa position actuelle avec la fonction `stamp()`.
+
+```{codeplay}
+:file: for11.py
+from turtle import *
+shape('turtle')
+
+for i in range(6):
+    forward(100)
+    left(60)
+    stamp()
+```
+
+**Exercice** : Modifiez le programme pour estamper seulement à chaque deuxième sommet.
+
+## Forme
+
+Vous pouvez changer la forme de votre tortue avec la fonction `shape()`.
+
+```{codeplay}
+:file: for12.py
+from turtle import *
+back(200)
+
+stamp()
+shape('turtle')
 forward(100)
-circle(-30)
+
+stamp()
+shape('circle')
+forward(100)
+
+stamp()
+shape('square')
 forward(100)
 ```
 
-**Exercice** : Inversez le signe du rayon.
+**Exercice** : Essayez les formes `triangle` et `arrow`.
 
-Cette fonction peut avoir un deuxième paramètre sous la forme `circle(r, angle)`
-ou `angle` représente l'angle de l'arc de cercle dessiné.
-Par défaut l'angle est de 360°, donc un cercle entier.
+## Vitesse
 
-Voici un exemple qui utilise deux demi-cercles de 180°.
+Vous pouvez changer la vitesse de la tortue avec la fonction `speed(s)`.
+Le paramètre vitesse `s` peut varier entre 1 (le plus lent) et 1000 (le plus rapide). Sa vitesse par défaut est de 3. Mettre la vitesse à 0 choisit automatiquement la vitesse maximum.
+
+```{codeplay}
+:file: for13.py
+from turtle import *
+speed(2)
+
+for i in range(36):
+    forward(280)
+    left(170)
+```
+
+**Exercice** : Augmentez graduellement la vitesse de la tortue.
+
+## Exporter en PNG/JPG
+
+Pour directement sauvegarder votre dessin en format PNG, ajoutez ces lignes de code à la fin de votre dessin.
+
+``` python
+from tkinter import *
+from PIL import Image
+import io
+
+cn = getscreen().getcanvas()
+ps = cn.postscript(colormode='color')
+file = io.BytesIO(ps.encode('utf-8'))
+img = Image.open(file)
+img.save('file.png')
+```
+
+Pour sauvegarder en format JPG appelez tout simplement votre fichier `file.jpg`.
+
+## Erreurs
+
+Il est important de bien comprendre les messages d'erreurs.
+Dans cette section vous allez découvrir les différentes catégories d'erreur et comment les corriger.
+
+### ImportError
+
+Cette erreur est produite si vous essayez d'importer un module qui n'existe pas.
+
+```{codeplay}
+from turtl import *
+
+for i in range(3):
+    forward(100)
+    left(120)
+```
+
+**Exercice** : Corrigez l'erreur d'importation.
+
+### SyntaxError
+
+Cette erreur est produite quand vous écrivez mal un mot-clé, ou si vous oubliez une ponctuation. Dans ce cas le mot-clé mal écrit n'est pas reconnu et il n'est pas colorié.
+
+```{codeplay}
+fro turtle import *
+
+fore i in range(3)
+    forward(100)
+    left(120)
+```
+
+**Exercice** : Corrigez les 3 erreurs de syntaxe.
+
+### NameError
+
+Cette erreur est produite quand vous écrivez mal le nom d'une variable ou fonction.
 
 ```{codeplay}
 from turtle import *
 
-forward(100)
-circle(40, 180)
-forward(50)
-circle(-30)
-forward(50)
-circle(40, 180)
-```
-
-**Exercice** : Dessinez un bonhomme de neige et utilisez `dot()` pour les yeux.
-
-## Dessiner une fleur
-
-Dessinons des cercles dans une boucle, et tournons à chaque fois.
-
-```{codeplay}
-from turtle import *
-
-n = 6
 for i in range(n):
-    circle(50)
-    left(360/n)
+    forwarde(100)
+    lefft(120)
 ```
 
-Il est également possible d'imbriquer des cercles en faisant varier le rayon dans une boucle `for` avec une expression `range()`.
+**Exercice** : Corrigez les 3 erreurs de nom.
+
+### TypeError
+
+Cette erreur est produite si vous ne mettez pas le nombre d'arguments correcte pour une fonction.
 
 ```{codeplay}
 from turtle import *
 
-for r in range(20, 100, 20):
-    circle(r)
+for i in 3:
+    forward()
+    left(100, 120)
 ```
 
-**Exercice** : Dessinez les cercles empilés les uns sur les autres.
-
-## Deux boucles imbriquées
-
-Dans Excel, les cellules sont désignées avec une lettre et un nombre. 
-Pour recréer les noms de cellule nous itérons dans une chaîne de chiffres et une deuxième fois dans une chaîne de lettres.
-
-On appelle la première boucle avec `y` la **boucle extérieure** et la deuxième boucle avec `x` **la boucle intérieure**.
-
-Nous concaténons les deux éléments lettre et nombre (`x + y`) et nous ajoutons l'option `end=' '` pour remplacer le retour à la ligne par une espace.
-
-Pour bien montrer l'ordre consécutif nous importons la fonction `sleep()` du module `time` pour ralentir le parcours de la boucle.
-
-```{codeplay}
-from time import sleep
-
-for y in '1234567':
-    for x in 'ABCDEFG':
-        print(x + y, end=' ')
-        sleep(0.1)
-    print()
-```
-
-**Exercice** : Transformez le code pour afficher 20 colonnes de cellules.
-
-## Itérer sur x et y
-
-Deux boucles imbriquées peuvent itérer dans les directions x et y. Ceci permet d'afficher les coordonnées de la tortue.
-
-```{codeplay}
-from turtle import *
-up()
-
-for y in range(100, -150, -50):
-    for x in range(-200, 300, 100):
-        goto(x, y)
-        dot(3)
-        write((x, y))
-````
+**Exercice** : Corrigez les 3 erreurs de type.

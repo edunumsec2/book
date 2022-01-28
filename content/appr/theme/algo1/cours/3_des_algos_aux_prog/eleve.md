@@ -22,15 +22,19 @@ Cet {glo}`algo|algorithme` consiste à parcourir la liste à trier plusieurs foi
 Tout d’abord, il faut représenter la taille des rectangles par des nombres. On peut par exemple représenter l’ordre des rectangles de la première ligne de la <a href="../algorithmes-classiques/eleve.html#fig-trier">Figure **Trier**</a> en fonction de leur taille, dans une liste nommée `rect` :
 
 ```
-rect = [3,4,1,2,6,5]
+rect = [3, 4, 1, 2, 6, 5]
 ```
 
-On doit ensuite ***<span style="color:rgb(13, 204, 166)">parcourir la liste</span>*** pour trouver le plus petit élément de la liste, qui correspond au rectangle le plus court. Nous allons commencer par  ***<span style="color:rgb(13, 204, 166)">déclarer une {glo}`variable|variable`</span>***, nommée `indice_min`, qui va se souvenir de la position du plus petit élément de la liste (équivalent à l'indice de l'élément à l’intérieur de la liste). Pour commencer, nous supposons que le plus petit élément de la liste est le premier élément, et nous initialisons la {glo}`variable|variable` nommée `indice_min` à 0. Nous allons ensuite parcourir la liste à partir du deuxième élément. Pour chaque nouvel élément, nous allons tester s’il est plus petit ou plus grand que le plus petit élément connu jusqu’alors. Si le nouvel élément est plus petit que l'élément désigné par `indice_min`, c'est l'indice du nouvel élément qui sera stocké dans `indice_min` à la place de l'ancien :
+On doit ensuite ***<span style="color:rgb(13, 204, 166)">parcourir la liste</span>*** pour trouver le plus petit élément de la liste, qui correspond au rectangle le plus court. Nous allons commencer par  ***<span style="color:rgb(13, 204, 166)">déclarer une {glo}`variable|variable`</span>***, nommée `indice_min`, qui va se souvenir de la position du plus petit élément de la liste (équivalent à l'indice de l'élément à l’intérieur de la liste). Pour commencer, nous supposons que le plus petit élément de la liste est le premier élément, et nous initialisons la {glo}`variable|variable` nommée `indice_min` à 0. 
 
 ```
 # initialise une variable qui va se souvenir du plus petit rectangle de la liste
 indice_min = 0 
+```
 
+Nous allons ensuite parcourir la liste à partir du deuxième élément. Pour chaque nouvel élément, nous allons tester s’il est plus petit ou plus grand que le plus petit élément connu jusqu’alors. Si le nouvel élément est plus petit que l'élément désigné par `indice_min`, c'est l'indice du nouvel élément qui sera stocké dans `indice_min` à la place de l'ancien :
+
+```
 # for permet de parcourir la liste rect
 for i in range(1,len(rect)):  # len(rect) donne la longueur de la liste rect
     # identifie l'indice du plus petit élément de la liste
@@ -45,7 +49,7 @@ Pour faire plus simple, nous pouvons également utiliser la {glo}`fonction|fonct
 indice_min = rect.index(min(rect))
 ```
 
-Grâce aux fonctions Python préexistantes, nous avons remplacé les 3 lignes du code au-dessus par une seule ligne de code. Après cette opération, `indice_min` contient l’indice du plus petit élément de la liste. On doit à ce stade, échanger cet élément et le premier élément. Comme nous avons pu le voir <a href="../decomposition-probleme/eleve.html#exercice-echange">avant</a>, pour échanger les valeurs de deux {glo}`variable|variables`, nous avons besoin d'une ***<span style="color:rgb(13, 204, 166)">{glo}`variable|variable` temporaire</span>***. En effet, si on met la valeur du plus petit élément directement à la position 0, nous perdons la valeur contenue à la position 0 à ce moment-là. Il faut donc la stocker temporairement dans une autre {glo}`variable|variable` :
+Grâce à ces fonctions Python préexistantes, nous avons remplacé les 3 lignes du code au-dessus par une seule ligne de code. Après cette opération, `indice_min` contient l’indice du plus petit élément de la liste. On doit à ce stade, échanger cet élément et le premier élément. Comme nous avons pu le voir <a href="../decomposition-probleme/eleve.html#exercice-echange">avant</a>, pour échanger les valeurs de deux {glo}`variable|variables`, nous avons besoin d'une ***<span style="color:rgb(13, 204, 166)">{glo}`variable|variable` temporaire</span>***. En effet, si on met la valeur du plus petit élément directement à la position 0, nous perdons la valeur contenue à la position 0 à ce moment-là. Il faut donc la stocker temporairement dans une autre {glo}`variable|variable` :
 
 ```
 # échange le plus petit élément avec le premier élément
@@ -98,7 +102,7 @@ for j in range(0,len(rect)-1):
 
 Le principal avantage de cette **<span style="color:rgb(89, 51, 209)">factorisation</span>** (réécriture) est que maintenant notre code fonctionne pour toutes les longueurs de listes. Nous n’avons plus besoin de savoir à l’avance combien d’éléments sont contenus dans la liste (combien de fois répéter les opérations). Au lieu de répéter le code un nombre prédéterminé de fois, le code s’exécute autant de fois qu’il y a d’éléments dans la liste (moins 1, car on compare toujours 2 éléments).
 
-L’étape suivante consiste à encapsuler tout le code dans une **<span style="color:rgb(89, 51, 209)">{glo}`fonction|fonction`</span>** qui reçoit la liste comme **<span style="color:rgb(89, 51, 209)">{glo}`parametre|paramètre`</span>**, afin de le rendre utilisable par différents {glo}`programme|programmes` sans avoir à copier-coller le code. Cela permet aussi en cas d’erreur de facilement corriger la {glo}`fonction|fonction`, plutôt que de corriger le code partout il a été copié-collé.
+L’étape suivante consiste à encapsuler tout le code dans une **<span style="color:rgb(89, 51, 209)">{glo}`fonction|fonction`</span>** qui reçoit la liste comme **<span style="color:rgb(89, 51, 209)">{glo}`parametre|paramètre`</span>**, afin de le rendre utilisable par d'autres {glo}`programme|programmes` sans avoir à copier-coller le code. Cela permet aussi en cas d’erreur de facilement corriger la {glo}`fonction|fonction`, plutôt que de corriger le code partout il a été copié-collé.
 
 ```
 # Tri par sélection

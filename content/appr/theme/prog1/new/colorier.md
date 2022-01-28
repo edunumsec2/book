@@ -1,11 +1,20 @@
 # Colorier - `color`
 
 Dans ce chapitre nous continuons à dessiner et nous introduisons la couleur.
-Une couleur peut être appliquée à une ligne, à un point, à une forme ou à l'arrière-fond. Nous allons voir que
+Une couleur peut être appliquée à une ligne, à un point, à une forme ou à l'arrière-fond. Nous allons voir que :
 
 - la fonction `color()` permet de choisir une couleur,
 - la fonction `dot(d)` dessine un disque de diamètre `d`,
-- la structure `['red', 'pink']` représente une liste.
+- la fonction `begin_fill()/end_fill()` permet le remplissage.
+
+```{question}
+Une couleur sur un écran d'ordinateur est produite par
+
+{f}`des pigments`  
+{f}`du mouvement rapide`  
+{f}`un liquide colorié`  
+{v}`la combinaison de trois lumières`
+```
 
 ## Liste de couleurs
 
@@ -21,8 +30,9 @@ Entre les parenthèses de la fonction vous devez écrire le nom d'une couleur, e
 Voici un triangle avec 3 segments de couleurs différentes.
 
 ```{codeplay}
+:file: color1.py
 from turtle import *
-width(10)
+width(20)
 
 color('red')
 forward(150)
@@ -48,13 +58,14 @@ Nous pouvons afficher des points à chaque sommet :
 - la fonction `dot(d, couleur)` dessine un disque dans la couleur spécifiée.
 
 ```{codeplay}
+:file: color2.py
 from turtle import *
 up()
 
-dot(40, 'red')
+dot(300, 'red')
 forward(150)
 
-dot(60, 'lime')
+dot(160, 'lime')
 left(120)
 forward(150)
 
@@ -62,6 +73,63 @@ dot(80, 'blue')
 ```
 
 **Exercice** : Modifiez la taille et la couleurs des 3 points.
+
+### Drapeau du Japon
+
+Le drapeau du Japon est un drapeau blanc avec un grand disque rouge en son centre. Ce disque représente le soleil, plus précisément la déesse shinto du soleil Amaterasu.
+
+Le rapport entre la hauteur et la largeur du drapeau est de 2:3, et le diamètre du disque est trois cinquièmes de la hauteur du drapeau.
+
+```{codeplay}
+from turtle import *
+dot(240, 'red')
+hideturtle()
+```
+
+**Exercice** : Enlevez la fonction `hideturtle()`. Quelle est sa fonction ?
+
+### Lignes et points
+
+La fonction `dot()` sans argument de taille, va automatiquement choisir une taille qui est environ le double de l'épaisseur du trait.
+
+```{codeplay}
+from turtle import *
+
+forward(100)
+left(120)
+dot()
+
+forward(100)
+left(120)
+dot()
+
+forward(100)
+left(120)
+dot()
+```
+
+**Exercice** : Augmentez l'épaisseur de la ligne à 10 pour vérifier que la taille des points change en conséquence.
+
+### Points et couleurs
+
+Il est possible de colorier les points différemment de la ligne. Dans ce cas il faut spécifier taille et couleur dans la fonction `dot()`.
+
+```{codeplay}
+from turtle import *
+pencolor('blue')
+
+forward(100)
+left(120)
+dot(10, 'red')
+
+forward(100)
+left(120)
+dot(10, 'red')
+
+forward(100)
+left(120)
+dot(10, 'red')
+```
 
 ## Couleur de forme
 
@@ -73,36 +141,60 @@ Avec la fonction `fillcolor()` nous pouvons définir une couleur de remplissage 
 Par exemple ce programme-ci dessine un carré jaune.
 
 ```{codeplay}
+:file: color3.py
 from turtle import *
 
-fillcolor('yellow')
-begin_fill()
-for i in range(4):
+def triangle():
     forward(100)
-    left(90)
+    left(120)
+    forward(100)
+    left(120)
+    forward(100)
+    left(120)
+
+fillcolor('chartreuse')
+begin_fill()
+triangle()
 end_fill()
 ```
 
 **Exercice** : Ajoutez un triangle d'une couleur différente.
 
-## Couleur d'arrière-fond
+## Couleur de fond
 
-Le fonction `getscreen()` retourne un objet `Screen`. Cet objet possède une méthode `bgcolor()`.
-Tout ce qu'il faut retenir en ce moment c'est que la combinaison `getscreen().bgcolor()` permet de définir la couleur d'arrière-fond (bg = background).
+Le fonction `getscreen()` retourne un objet `Screen`. Cet objet possède une méthode `bgcolor()`. La combinaison `getscreen().bgcolor()` permet de définir la couleur d'arrière-fond (bg = background).
 
-Dans l'exemple suivant, nous dessinons un carré jaune sur un arrière-fond rose.
+Dans l'exemple suivant, nous dessinons le drapeau du Bangladesh. Il est vert frappé d'un disque rouge.
 
 ```{codeplay}
+:file: color4.py
 from turtle import *
+getscreen().bgcolor('green')
 
-getscreen().bgcolor('pink')
-fillcolor('yellow')
+back(30)
+dot(266, 'red')
+hideturtle()
+```
 
-begin_fill()
-for i in range(4):
-    forward(100)
-    left(90)
-end_fill()
+Le drapeau au soleil rouge a été utilisé pour la première fois en 1971. Le rouge symbolise le sang des Bangladais tués depuis 1947 lors des affrontements avec le Pakistan. Le vert symbolise la vitalité, la jeunesse et les terres agricoles.
+
+```{caution}
+La fonction `bgcolor()` ne fonctionne pas pour l'exportation vers un fichier image au format `.eps`. 
+
+Pour remédier à ce problème nous utilisons une solution simpliste.
+A la place de `bgcolor()` nous utilisons tout simplement un très grand disque `dot()` qui dépasse les bornes de l'image.
+```
+
+Le disque est décentré, légèrement décalé vers la fixation, de manière à apparaître centré lorsque le drapeau flotte dans le vent.
+
+```{codeplay}
+:file: color4.py
+from turtle import *
+dot(1000, 'green')  # background
+
+back(30)
+dot(266, 'red')
+hideturtle()
 ```
 
 ## Forme ouverte
@@ -111,268 +203,274 @@ La forme ne doit pas nécessairement être fermée pour être remplie d'une coul
 Dans l'exemple suivant nous dessinons une forme ouverte avec seulement deux lignes.
 Le résultat est un triangle avec deux bordures et un troisième segment sans bordure.
 
-```{codeplay}
-from turtle import *
-getscreen().bgcolor('azure')
+Une équerre est un instrument formé de deux pièces ajustées à angle droit. l'équerre est utilisée soit pour vérifier des angles dièdres droits, soit pour tracer des angles plans droits.
 
-fillcolor('yellow')
-begin_fill()
-for i in range(2):
+```{codeplay}
+:file: color5.py
+from turtle import *
+dot(1000, 'moccasin')  # background
+
+def equerre():
+    forward(150)
+    left(90)
     forward(100)
     left(90)
+
+fillcolor('sienna')
+begin_fill()
+equerre()
 end_fill()
 
-fillcolor('lime')
+up()
+forward(50)
+down()
+
+fillcolor('gold')
 begin_fill()
-for i in range(2):
-    forward(100)
-    left(90)
+equerre()
 end_fill()
 ```
 
-**Exercice** : Dessinez un drapeau bi-colore.
+**Exercice** : Dessinez le drapeau bi-colore du canton de Zurich.
 
 ## Smiley
 
-Avec des cercles `dot(d)` de taille différentes nous pouvons dessiner un smiley.
+Avec des cercles `dot(d)` de tailles différentes nous pouvons dessiner un smiley.
 Voici un smiley qui exprime l'indifférence.
 
 ```{codeplay}
+:file: color6.py
 from turtle import *
+dot(1000, 'linen')  # background
 
-getscreen().bgcolor('linen')
-up()
 dot(300, 'yellow')
 
-goto(50, 40)
-dot(40)
-goto(-50, 40)
+left(45)
+forward(60)
 dot(40)
 
-goto(-50, -50)
-width(10)
-down()
+right(45)
+back(100)
+dot(40)
+
+right(90)
+forward(100)
+left(90)
+width(20)
 forward(100)
 ```
+
+**Exercice** : Ajoutez `up()` au début du programme pour ne plus montrer la trajectoire de la tortue.
 
 Voici un autre smiley qui exprime la surprise.
 
 ```{codeplay}
+:file: color7.py
 from turtle import *
+dot(1000, 'azure')  # background
 
-getscreen().bgcolor('linen')
-up()
-dot(300, 'yellow')
+dot(300, 'palegreen')
 
-goto(50, 40)
-dot(40)
-goto(-50, 40)
+left(45)
+forward(60)
 dot(40)
 
-goto(0, -50)
+right(45)
+back(90)
+dot(40)
+
+right(60)
+forward(100)
 dot(80)
 ```
 
 **Exercice** : Dessinez encore un autre smiley.
 
-## Itérer dans un séquence
+## Croix
 
-Pour dessiner multiples couleurs, nous pouvons définir une séquence (tuple) de couleurs et itérer sur cette séquence.
-En Python une séquence est délimitée par des parenthèses `()` et les éléments sont séparé par une virgule.
-
-Dans l'expression `for x in (...)` la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'blue'`, `'cyan'`, `'red'`, etc.
-
-```{codeplay}
-from turtle import *
-up()
-
-back(200)
-for x in ('blue', 'cyan', 'red', 'magenta', 'pink', 'lime'):
-    dot(80, x)
-    forward(80)
-```
-
-**Exercice** : Modifiez la séquence des couleurs.
-
-Nous pouvons également itérer dans une séquence numérique et spécifier l'épaisseur.
-
-```{codeplay}
-from turtle import *
-up()
-
-back(220)
-for x in (20, 40, 60, 80, 100):
-    dot(x, 'red')
-    forward(x + 40)
-```
-
-**Exercice** : Modifiez la séquence des diamètres.
-
-## Dessiner une croix
-
-La fonction `boite()` dessine les 3 cotés d'un carré.
+La fonction `bras()` dessine les 3 côtés d'un carré et tourne de 90° dans le contre-sens.
 Répété 4 fois, ceci donne la forme d'une croix.
 
 ```{codeplay}
+:file: color8.py
 from turtle import *
+dot(1000, 'red')  # background
 
-getscreen().bgcolor('red')
-
-def boite():
+def bras():
     forward(60)
     left(90)
     forward(60)
     left(90)
     forward(60)
     right(90)
+
+def croix():
+    bras()
+    bras()
+    bras()
+    bras()
     
 fillcolor('white')
 begin_fill()
-boite()
-boite()
-boite()
-boite()
+croix()
 end_fill()
 ```
 
-**Exercice** : Faites ce programme plus court en utilisant une boucle.
+**Exercice** : Inversez les couleurs pour trouver le drapeau de la Croix-Rouge.
 
-## Dessiner une maison
+## Maison
 
-Nous reprenons l'exemple du chapitre précédent et ajoutons de la couleur pour dessiner des maisons jaunes avec un toit rouge.
+Nous reprenons l'exemple du chapitre précédent de la fonction `maison()`. Cette fois nous y intégrons `begin_fill()` et `end_fill()` pour pouvoir les colorier..
 
 ```{codeplay}
+:file: color9.py
 from turtle import *
+dot(1000, 'lightgreen')  # background
 
-getscreen().bgcolor('lightgreen')
-up()
-
-def carre():
-    down()
-    for i in range(4):
-        forward(100)
-        right(90)
-    up()
-    
-def triangle():
-    down()
-    for i in range(3):
-        forward(100)
-        left(120)
-    up()
-    
-def maison():    
-    fillcolor('yellow')
+def maison():
     begin_fill()
-    carre()
-    end_fill()
-    
-    fillcolor('red')
-    begin_fill()
-    triangle()
+    forward(100)
+    left(90)
+    forward(60)
+    left(45)
+    forward(71)
+    left(90)
+    forward(71)
+    left(45)
+    forward(60)
+    left(90)
     end_fill()
     
 back(200)
-for i in range(3):
-    maison()
-    forward(150)
+fillcolor('pink')
+maison()
+forward(150)
+fillcolor('lightblue')
+maison()
 ```
 
-## Dessiner une fleur
+**Exercice** : Ajoutez encore une maison dans une autre couleur.
 
-Ci-dessous nous dessinons un losange 6 fois pour obtenir une fleur.
-Avec une boucle `for` nous alternons entre deux couleurs de pétale.
+## Exporter une image
+
+Pour enregistrer votre dessin vers un fichier image faites ceci :
+
+- téléchargez le code,
+- ouvrez-le avec un éditeur externe,
+- ajoutez les 3 lignes de code à la fin,
+- exécutez votre code.
+
+```  python
+if len(dir(Turtle)) > 100:
+    from tkinter import * 
+    Screen().getcanvas().postscript(file='file.eps')
+```
+
+Votre image est exporté vers un fichier `file.eps` et qui se trouve dans le même dossier que votre code.
+Vous pouvez changer le nom du fichier, mais vous devez garder l'extension `.eps`.
+
+Sur un Mac, vous pouvez ouvrir un fichier `.eps` avec l'application **Aperçu** et ensuite exporter l'image vers le format PDF, JPG ou PNG.
+
+**Exercice**
+
+- Téléchargez le code
+- Ouvrez-le avec Thonny
+- Exécutez le code
+- Ouvrez le ficher image `japon.eps`
 
 ```{codeplay}
+:file: japon.py
 from turtle import *
+dot(240, 'red')
+hideturtle()
 
-getscreen().bgcolor('azure')
-
-def losange():
-    begin_fill()
-    for i in range(2):
-        forward(100)
-        left(60)
-        forward(100)
-        left(120)
-    end_fill()
-
-for i in range(3):
-    for x in ['pink', 'hotpink']:
-        fillcolor(x)
-        losange()
-        left(60)
+if len(dir(Turtle)) > 100:
+    from tkinter import * 
+    Screen().getcanvas().postscript(file='japon.eps')
 ```
-
-**Exercice** : Changez le nombre de pétales.
-
-## Erreurs
-
-Il est important de bien comprendre les messages d'erreurs.
-Dans cette section vous allez découvrir les différentes catégories d'erreur et comment les corriger.
-
-### ImportError
-
-Cette erreur est produite si vous essayez d'importer un module qui n'existe pas.
-
-```{codeplay}
-from turtl import *
-
-for i in range(3):
-    forward(100)
-    left(120)
-```
-
-**Exercice** : Corrigez l'erreur d'importation.
-
-### SyntaxError
-
-Cette erreur est produite quand vous écrivez mal un mot-clé, ou si vous oubliez une ponctuation. Dans ce cas le mot-clé mal écrit n'est pas reconnu et il n'est pas colorié.
-
-```{codeplay}
-fro turtle import *
-
-fore i in range(3)
-    forward(100)
-    left(120)
-```
-
-**Exercice** : Corrigez les 3 erreurs de syntaxe.
-
-### NameError
-
-Cette erreur est produite quand vous écrivez mal le nom d'une variable ou fonction.
-
-```{codeplay}
-from turtle import *
-
-for i in range(n):
-    forwarde(100)
-    lefft(120)
-```
-
-**Exercice** : Corrigez les 3 erreurs de nom.
-
-### TypeError
-
-Cette erreur est produite si vous ne mettez pas le nombre d'arguments correcte pour une fonction.
-
-```{codeplay}
-from turtle import *
-
-for i in 3:
-    forward()
-    left(100, 120)
-```
-
-**Exercice** : Corrigez les 3 erreurs de type.
 
 ## Exercices
 
-Dans tous les exercices suivants commencez par définir une couleur d'arrière-fond appropriée.
+- Téléchargez un exercice.
+- Editez-le dans un éditeur externe tel que Thonny.
+- Déposez-le sur Moodle (ou plateforme équivalente de votre école).
 
-1. Dessinez et coloriez un sapin de Noël. Définissez des fonctions pour des boules et des étoiles.
-1. Dessinez et coloriez une ville. Définissez des fonctions pour des maisons et des immeubles.
-1. Dessinez et coloriez un paysage. Définissez des fonctions pour des montagnes et des sapins.
-1. Dessinez et coloriez un jardin. Définissez des fonctions pour les feuilles, les pétales et les fleurs.
-1. Dessinez et coloriez un aquarium. Définissez des fonctions pour les poissons, l'herbe, et les bulles.
+### Sapin de Noël
+
+Dessinez et coloriez un sapin de Noël. Définissez des fonctions pour des boules et des étoiles.
+
+```{codeplay}
+:file: sapin.py
+from turtle import *
+# Votre prénom, nom, classe
+
+def sapin():
+    ...
+
+def boule():
+    ...
+
+def etoile():
+    ...
+
+sapin()
+forward(100)
+boule()
+
+if len(dir(Turtle)) > 100:
+    from tkinter import * 
+    Screen().getcanvas().postscript(file='sapin.eps')
+```
+
+### Une ville
+
+ Dessinez et coloriez une ville. Définissez des fonctions pour des maisons et des immeubles.
+
+```{codeplay}
+:file: ville.py
+from turtle import *
+# Votre prénom, nom, classe
+
+dot(1000, 'skyblue')  # background
+
+def maison():
+    ...
+
+def immeuble():
+    ...
+
+maison()
+forward(100)
+immeuble()
+
+if len(dir(Turtle)) > 100:
+    from tkinter import * 
+    Screen().getcanvas().postscript(file='ville.eps')
+```
+
+### Un jardin
+
+```{codeplay}
+:file: jardin.py
+from turtle import *
+# Votre prénom, nom, classe
+
+dot(1000, 'lightgreen')  # background
+
+def petale():
+    ...
+
+def feuille():
+    ...
+
+def fleur():
+    dot(50, 'red')
+
+feuille()
+forward(200)
+fleur()
+
+if len(dir(Turtle)) > 100:
+    from tkinter import * 
+    Screen().getcanvas().postscript(file='jardin.eps')
+```

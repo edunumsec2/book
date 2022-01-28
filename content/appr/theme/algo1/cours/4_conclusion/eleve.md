@@ -13,15 +13,15 @@ Comprendre le fonctionnement de base des algorithmes permet de mieux appréhende
 ````{admonition} À retenir
 :class: attention
 
-Un algorithme est une suite d’instructions dans un ordre bien précis qui permet de résoudre un problème. L’algorithme va produire un résultat en sortie, en fonction de données reçues en entrée.
+Un algorithme est **une suite d’instructions dans un ordre bien précis** qui permet de résoudre un problème. L’algorithme va produire un résultat en sortie, en fonction de données reçues en entrée.
 
-Pour arriver à résoudre un problème, il faut le décomposer en sous-problèmes.
+Pour arriver à résoudre un problème, il faut commencer par le **décomposer en sous-problèmes**.
 
-Afin de pouvoir rechercher de manière efficace, les données doivent impérativement être triées.
+Afin de pouvoir rechercher de manière efficace, **les données doivent impérativement être triées** en utilisant un algorithme de tri.
 
-Il existe de multiples manières de résoudre un problème. Toutes ces manières ne se valent pas. Il faut choisir l’algorithme en fonction de ce qui doit être optimisé : le temps de résolution, l’espace de stockage, la consommation d'énergie, la précision de la solution, etc.
+Il existe de multiples manières de résoudre un problème, par exemple différents algorithmes de tris. Toutes ces manières ne se valent pas. Il faut **choisir l’algorithme en fonction de ce qui doit être optimisé** : le temps de résolution, l’espace de stockage, la consommation d’énergie, la précision de la solution, etc.
 
-L’algorithme n’est pas un programme. Pour être exécuté sur un système informatique, l'algorithme doit être transcrit en un programme, pour résoudre le problème concrètement et de manière automatisée.     
+**L’algorithme n’est pas un programme.** Pour être exécuté sur un système informatique, l’algorithme doit être transcrit en un programme, pour résoudre le problème concrètement et de manière automatisée.    
 
 ````
 
@@ -37,18 +37,24 @@ Grâce aux algorithmes, la machine a pu remplacer l’homme dans de nombreuses t
 
 
 
-```{image} media/Usine_avant.jpeg
-:width: 500
-:height: 300
-```
+```{figure} media/Usine_avant.jpeg
+---
+alt: Usine du début du siècle dernier
+width: 100%
+---
+
 **Usine du début du siècle dernier.** Les machines dans cette usine de métallurgie à Vallorbe dans le canton de Vaud sont au service des ouvriers. Source : https://wikivaud.ch/metallurgie-vaudoise/
-
-
-```{image} media/Usine_après.jpeg
-:width: 500
-:height: 300
 ```
+
+
+```{figure} media/Usine_après.jpeg
+---
+alt: Usine du début du siècle dernier
+width: 100%
+---
+
 **Usine du début de ce siècle.** Les machines dans cette usine de montage Mistubishi en Chine ont remplacé les ouvriers. Source : https://www.lemonde.fr/blog/fredericjoignot/2015/12/25/robotisation-generale/
+```
 
 
 Selon un rapport publié en 2017 par DELL et le Think Tank californien « L’institut du futur », cité par la chasseuse de têtes Isabelle Rouhan dans sans livre « Les métiers du futur », ***<span style="color:rgb(13, 204, 166)">85% des métiers</span>*** qui seront exercés en 2030 par les écoliers d’aujourd’hui n’ont pas encore été inventés.

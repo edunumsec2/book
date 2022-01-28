@@ -1,10 +1,19 @@
-# Ensemble - `set`
+# Appartenir - `set`
 
-Dans ce chapitre nous découvrons les ensembles. Comme la liste, l'ensemble est une collection d'objets. Mais ses éléments sont uniques et il n'y a pas le concept d'ordre. Nous allons voir que
+La [théorie des ensembles](https://fr.wikipedia.org/wiki/Théorie_des_ensembles) est une théorie de l'appartenance. Un élément d'un ensemble est dit **appartenir** à cet ensemble. En Python, l'ensemble est une collection d'objets. Mais contrairement à une liste, ses éléments sont uniques et il n'y a pas le concept d'ordre. Nous allons voir que :
 
-- `set()` est l'ensemble vide,
+- l'expression `set()` est l'ensemble vide,
 - l'ensemble `{1, 3, 2}` comporte 3 éléments,
 - `union()`, `intersection()` et `difference()` sont des opérations sur des ensembles.
+
+```{question}
+L'expression `set('belle')` contient
+
+{f}`1 élément`  
+{f}`2 éléments`  
+{v}`3 éléments`  
+{f}`5 éléments`
+```
 
 ## Un ensemble
 
@@ -19,12 +28,13 @@ Les points qui ne font pas partie de l'ensemble `A` sont affichés en bleu.
 Nous commençons avec un ensemble vide `A = set()` et nous ajoutons des éléments avec l'instruction `A.add(i)`.
 
 ```{codeplay}
+:file: set1.py
 from turtle import *
 from random import *
 getscreen().bgcolor('azure')
 
 r = 160
-dot(2 * r, (1, 0, 0, 0.3))
+dot(2 * r, 'pink')
 write('A', font=(None, 24), align='center')
 
 points = [(randint(-300, 280), randint(-200, 180)) for i in range(10)]
@@ -61,14 +71,18 @@ Dans l'exemple suivant nous montrons les 3 situations :
 - l'ensemble B est totalement inclus dans l'ensemble A.
 
 ```{codeplay}
+:file: set2.py
 from turtle import *
-getscreen().bgcolor('azure')
 up()
 
 def ensemble(x, texte, d=80):
     goto(x, 0)
-    dot(d, (1, 0, 0, 0.5))
-    write(texte, font=(None, 14), align='center')
+    write(texte, font=(None, 12), align='center')
+    forward(d/2)
+    left(90)
+    down()
+    circle(d/2)
+    up()
     
 def etiquette(x, texte):
     goto(x, 100)
@@ -83,12 +97,12 @@ ensemble(0, 'A')
 ensemble(50, 'B')
 
 etiquette(200, 'inclusion')
-ensemble(200, 'A')
-ensemble(220, 'B', 40)
+ensemble(200, 'A', 100)
+ensemble(230, 'B', 30)
 hideturtle()
 ```
 
-**Exercice** : Changez la couleur des diagrammes en vert.
+**Exercice** : Ajoutez un ensemble C.
 
 ## Des éléments uniques
 
@@ -96,6 +110,7 @@ Les éléments d'un ensemble sont uniques. Chaque élément apparait seulement u
 Le comportement est différent de celui d'une liste, ou des éléments peuvent apparaitre multiple fois.
 
 ```{codeplay}
+:file: set3.py
 liste = [1, 2, 4, 2, 1, 3, 1]
 ensemble = {1, 2, 4, 2, 1, 3, 1}
 
@@ -115,8 +130,8 @@ print(dir(set()))
 
 A l'aide d'une liste de compréhension nous allons afficher seulement les méthodes qui ne commencent pas avec un tiret bas.
 
-
 ```{codeplay}
+:file: set3.py
 print('set :')
 print([x for x in dir(set()) if not x.startswith('_')])
 
@@ -131,6 +146,7 @@ print([x for x in dir(list()) if not x.startswith('_')])
 L'union de deux ensemble est l'ensemble des éléments qui fait partie des deux.
 
 ```{codeplay}
+:file: set4.py
 A = {1, 2, 3, 4}
 B = {3, 4, 5}
 
@@ -140,19 +156,25 @@ print('union =', A.union(B))
 Avec un diagramme de Venn nous représentons l'union des deux ensembles A et B avec la région rose.
 
 ```{codeplay}
+:file: set5.py
 from turtle import *
+fillcolor('pink')
+r = 120
+
 up()
-d = 200
+goto(0, 0.8 * r)
+down()
 
-goto(-70, 0)
-dot(d, (1, 0, 0, 0.5))
-write('A', font=(None, 24), align='center')
+begin_fill()
+left(150)
+circle(r, 240)
+right(60)
+circle(r, 240)
+end_fill()
 
-goto(70, 0)
-dot(d, (1, 0, 0, 0.5))
-write('B', font=(None, 24), align='center')
-
-hideturtle()
+circle(r, 120)
+left(60)
+circle(r, 120)
 ```
 
 **Exercice** : Ajoutez un ensemble `C` qui a une intersection non-vide avec `A` et `B`.
@@ -162,10 +184,10 @@ hideturtle()
 L'ensemble des éléments qui sont à la fois dans `A` et dans `B` constituent l'**intersection** de `A` et `B`.
 
 ```{codeplay}
+:file: set6.py
 from turtle import *
-
+fillcolor('pink')
 r = 120
-fillcolor(1, 0, 0, 0.5)
 
 up()
 goto(0, 0.8 * r)
@@ -195,6 +217,7 @@ Ensuite nous créons des points aléatoires dans toutes la surface du canevas.
 Avec `A.inside(x, y) and B.inside(x, y)` nous sélectionnons la réunion.
 
 ```{codeplay}
+:file: set7.py
 from turtle import *
 from random import *
 
@@ -215,19 +238,19 @@ class Ensemble:
     
     def draw(self):
         goto(self.x, self.y)
-        dot(self.r * 2, (1, 0, 0, 0.3))
+        dot(self.r * 2, 'pink')
         write(self.label, font=(None, 24))
         
 A = Ensemble(-100, 0, 150, 'A')
 B = Ensemble(100, 0, 150, 'B')
 
 i = 0
-while i < 50:
+while i < 200:
     x = randint(-300, 300)
     y = randint(-200, 200)
     if A.inside(x, y) and B.inside(x, y):      
         goto(x, y)
-        dot(10, (1, 0, 0, 0.5))
+        dot(10, 'red')
         i += 1
 ```
 
@@ -238,6 +261,7 @@ while i < 50:
 La différence entre deux ensembles `A` et `B` sont tous les éléments de `A` sans ceux de `B`. En Python, la différence d'ensemble peut être exprimé par la méthode `difference()` ou bien par l'opérateur `-` comme montré dans l'exemple suivant.
 
 ```{codeplay}
+:file: set8.py
 A = {0, 1, 2, 3}
 B = {2, 3, 4, 5}
 
@@ -253,6 +277,7 @@ print('B - A =', B - A)
 Il existe aussi une différence symétrique.
 
 ```{codeplay}
+:file: set9.py
 A = {0, 1, 2, 3}
 B = {2, 3, 4, 5}
 
@@ -266,6 +291,7 @@ print('différence symétrique =', A.symmetric_difference(B))
 Un ensemble A est inclus dans un ensemble B si tous les éléments de A sont aussi éléments de B. On dit dans ce cas que A est un **sous-ensemble** ou une partie de B, ou encore que B est **sur-ensemble** de A.
 
 ```{codeplay}
+:file: set10.py
 A = {0, 1}
 B = {0, 1, 2, 3}
 
@@ -286,6 +312,7 @@ En Python, les méthodes pour les ensembles ont des opérateurs plus court :
 - différence symétrique (`^`)
 
 ```{codeplay}
+:file: set11.py
 A = {0, 1, 2}
 B = {1, 2, 3}
 
@@ -301,15 +328,3 @@ print('A ^ B (difference symétrique) =', A ^ B)
 ```
 
 **Exercice** : Modifiez les ensemble A et B et re-évaluez.
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
-```
-
-```{codeplay}
-
-```
