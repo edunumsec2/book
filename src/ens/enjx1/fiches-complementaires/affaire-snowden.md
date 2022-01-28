@@ -139,7 +139,7 @@ Depuis ce scandale, un tel fichage de la population n’existe plus. Cependant, 
 *  [Un article](https://www.lemonde.fr/pixels/article/2019/09/13/ce-que-les-revelations-snowden-ont-change-depuis-2013_5509864_4408996.html) sur ce que les révélations d’Edward Snowden ont changé (Le Monde)
 * [Un petit guide](https://www.amnesty.org/fr/latest/campaigns/2015/03/easy-guide-to-mass-surveillance/) sur la surveillance de masse (Amnesty International)
 * ​[Un article](https://www.cairn.info/revue-hermes-la-revue-2015-3-page-209.htm) de la chercheuse Francesca Musiani sur les enjeux autour de ces révélations
-* [Une conférence](https://www.ted.com/talks/glenn_greenwald_why_privacy_matters?language=en) de Glenn Greenwald, l’un des premiers journalistes qui publia les révélations deSnowden (sous-titres disponibles en français)
+* [Une conférence](https://www.ted.com/talks/glenn_greenwald_why_privacy_matters?language=en) de Glenn Greenwald, l’un des premiers journalistes qui publia les révélations de Snowden (sous-titres disponibles en français)
 
 
 ## Glossaire
