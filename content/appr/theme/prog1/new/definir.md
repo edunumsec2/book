@@ -1,6 +1,6 @@
 # Définir - `def`
 
-Dans ce chapitre nous découvrons comment augmenter le vocabulaire de notre langage de programmation en définissant des nouvelles instructions. Ceci permet de rendre notre code plus compact mais surtout plus lisible. Nous allons voir que :
+Dans ce chapitre, nous allons découvrir comment augmenter le vocabulaire de notre langage de programmation en définissant de nouvelles instructions. Ceci permet de rendre notre code plus compact, mais surtout plus lisible. Nous allons voir que :
 
 - le mot-clé `def` permet de nommer (définir) une séquence,
 - le bloc qui suit doit être en **indentation** (décalé à droite),
@@ -17,7 +17,7 @@ Une fonction permet de
 
 ## Nommer une séquence
 
-Dessiner un rectangle est assez utile. C'est une forme qu'on pourra réutiliser certainement souvent. Il serait pratique de définir un nom pour ces 8 lignes de code. Pouvons nous définir des nouvelles commandes ?
+Dessiner un rectangle est assez utile. C'est une forme qu'on pourra réutiliser certainement souvent. Il serait pratique de définir un nom pour ces 8 lignes de code. Pouvons-nous définir des nouvelles commandes ?
 
 ```python
 forward(160)
@@ -30,8 +30,8 @@ forward(100)
 left(90)
 ```
 
-Oui, c'est possible. Avec le mot-clé `def` nous pouvons définir une nouvelle commande que nous pouvons par exemple l'appeler `rectangle()`.
-Cette façon de créer un raccourci est appelé **définir** une fonction.
+Oui, c'est possible. Avec le mot-clé `def`, nous pouvons définir une nouvelle commande que nous pouvons par exemple l'appeler `rectangle()`.
+Cette façon de créer un raccourci est appelée **définir** une fonction.
 
 Ensuite il suffit d'écrire `rectangle()` pour dessiner un rectangle. On appelle ceci **appeler** une fonction.
 Rappelez vous ceci:
@@ -39,7 +39,7 @@ Rappelez vous ceci:
 - on définit une fonction une seule fois,
 - on appelle une fonction autant de fois que l'on veut.
 
-Définir une fonction nous permet de réduire les lignes de code nécessaire.
+Définir une fonction nous permet de réduire le nombre de lignes de code nécessaire.
 A chaque fois que nous utilisons `rectangle()`,
 au lieu d'écrire 8 lignes, nous écrivons seulement 1 ligne de code.
 
@@ -76,7 +76,7 @@ Une **indentation** de texte est
 ## Donner du sens
 
 Une fonction ne permet pas seulement d'économiser des lignes de code.
-Elle permet aussi de structurer le code et de lui donner un sens. Prenez par exemple ce code-ci. C'est presque impossible de comprendre ce que fait le programme en regardant les 17 lignes de code.
+Elle permet aussi de structurer le code et de lui donner un sens. Considérez par exemple ce code ci-dessous. Il est presque impossible de comprendre ce que fait le programme en regardant les 17 lignes de code.
 
 ```{codeplay}
 :file: def2.py
@@ -101,7 +101,7 @@ forward(50)
 left(90)
 ```
 
-Si nous observons la tortue, nous comprenons finalement qu'elle dessine deux fois un rectangle. Nous pouvons même interpréter cette image et donner le sens de bâtiment au premier, et de porte au deuxième rectangle.
+Si nous observons la tortue, nous comprenons finalement qu'elle dessine deux fois un rectangle. Nous pouvons même interpréter cette image et donner le sens de bâtiment au premier rectnagle, et de porte au second.
 
 Essayons maintenant de découper le code en **sous-problèmes** en utilisant deux fonctions `batiment()` et `porte()`.
 En regardant ces 3 lignes de code, on comprend immédiatement le sens du programme.
@@ -112,7 +112,7 @@ forward(30)
 porte()
 ```
 
-La définition d'une fonction permet d'ajouter des nouveaux mots à un langage de programmation. Contrairement aux commandes natives de Python qui sont tous en anglais, nous sommes libre de les choisir en français.
+La définition d'une fonction permet d'ajouter des nouveaux mots à un langage de programmation. Contrairement aux commandes natives de Python qui sont toutes en anglais, nous sommes libres de les choisir en français.
 
 **Attention** : Ecrivez les fonctions sans accents et sans circonflexes : `batiment()`, `carre()`, `boite()`.
 
@@ -148,11 +148,11 @@ porte()
 **Exercice** : Ajoutez une deuxième porte au bâtiment.
 
 ```{question}
-La fonction `porte())` est équivalent à combien de code
+La fonction `porte()` est équivalente à combien de lignes de code ?
 
 {f}`1 ligne`  
 {f}`2 lignes`  
-{v}`8 lignes)`  
+{v}`8 lignes`  
 {f}`17 lignes`  
 ```
 
@@ -166,13 +166,13 @@ Le fait de donner un nom à une séquence d'instructions est appelé **définir 
 1. le deux-points `:`,
 1. un bloc en indentation.
 
-C'est quoi un bloc en indentation ?
+Qu'est-ce qu'un bloc en indentation ?
 C'est un bloc de texte qui comporte des espaces vides à gauche. En Python, ces espaces apparaissent en multiples de 4.
 
-L'indentation est très importante en Python. C'est l'indentation qui indique l'étendu des instructions qui font partie de la fonction.
+L'indentation est très importante en Python. C'est l'indentation qui indique l'étendue des instructions qui font partie de la fonction.
 
 ```{question}
-Laquelle est une définition de fonction correcte ?
+Parmi les 4 définitions de fonction ci-dessous, laquelle est correcte ?
 
 {f}`def() rectangle:`  
 {f}`def: rectangle`  
@@ -182,14 +182,14 @@ Laquelle est une définition de fonction correcte ?
 
 ## Raccourci
 
-Comme l'indentation est tellement important en Python il en existe un raccourci.
+Comme l'indentation est tellement importante en Python, il en existe un raccourci.
 Il faut d'abord sélectionner les lignes de code dont vous voulez changer l'indentation.
-Ensuite vous appuyez sur :
+Ensuite, vous appuyez sur :
 
 - la touche **tab** pour augmenter l'indentation
 - la touche **maj+tab** pour diminuer l'indentation
 
-Essayez ces raccourcis dans le code ci-dessous. Transformez le code en deux fonctions `batiment()` et `porte()` que vous appelez ensuite.
+Essayez ces raccourcis dans le code ci-dessous. Transformez le code en deux fonctions `batiment()` et `porte()`, que vous appelez ensuite.
 
 ```{codeplay}
 :file: def2.py
@@ -218,9 +218,9 @@ Voici encore un raccourci très utile : **cmd+Enter** pour exécuter le code.
 
 ## Maison avec porte
 
-Une fois une fonction est définie, elle peut être utilisé partout, même dans la définition d'une autre fonction.
+Une fois qu'une fonction est définie, elle peut être utilisée partout, même dans la définition d'une autre fonction.
 
-Ici nous avons une fonction `porte()` qui est utilisé à l'intérieur d'une deuxième fonction `maison()`. Pour que ceci est possible, la définition de porte doit être placé avant la définition de `maison()`.
+Ici, nous avons une fonction `porte()`, qui est utilisée à l'intérieur d'une deuxième fonction `maison()`. Pour que ceci soit possible, la définition de porte doit être placée avant la définition de `maison()`.
 
 ```{codeplay}
 :file: def4.py
@@ -256,7 +256,7 @@ maison()
 
 ## Lever le stylo
 
-Les deux commandes `up()` et `down()` permettent de lever et baisser le stylo.
+Les deux commandes `up()` et `down()` permettent de lever et de baisser le stylo.
 Ceci nous permet dessiner des formes séparées, comme ces deux triangles.
 
 ```{codeplay}
@@ -286,7 +286,7 @@ Contrairement aux fonctions `forward(d)` et `back(d)` qui nécessitent un argume
 
 ## Maison avec fenêtre
 
-Dans le programme ci-dessous nous dessinons de nouveau une maison avec cette fois-ci une fenêtre. Les fonctions `up()/down()` nous permettent de dessiner des formes disjointes, telle qu'une fenêtre à l'intérieur de la maison.
+Dans le programme ci-dessous, nous allons dessiner de nouveau une maison, mais avec une fenêtre cette fois-ci. Les fonctions `up()/down()` nous permettent de dessiner des formes disjointes, telle qu'une fenêtre à l'intérieur de la maison.
 
 ```{codeplay}
 :file: def7.py
@@ -323,12 +323,12 @@ maison()
 
 ## Trouver la symétrie
 
-Une stratégie importante dans la programmation est de **reconnaitre des structures identiques**. Par exemple quand vous voyez une symétrie dans un dessin,
+Une stratégie importante dans la programmation est de **reconnaître des structures identiques**. Par exemple, quand vous voyez une symétrie dans un dessin,
 vous devez repérer la partie qui est répétée et en créer une fonction.
 
 La fonction `bras()` dessine les 3 côtés d'un carré et tourne de 90° dans le contre-sens.
 Ensuite il suffit d'**appeler** 4 fois cette fonction pour dessiner une croix.
-En appelant la fonction `bras()`, au lieu d'écrire 6 lignes, nous écrivons que 1 ligne de code.
+En appelant la fonction `bras()`, au lieu d'écrire 6 lignes, nous n'écrivons qu'une ligne de code.
 
 ```{codeplay}
 :file: def8.py
@@ -351,13 +351,13 @@ def croix():
 croix()
 ```
 
-**Exercice** : Allongez le bras à 120 pas. Faites le bras plus mince.
+**Exercice** : Allongez le bras à 120 pas, et rendez-le plus mince.
 
 ## Décomposer
 
-Une stratégie importante en programmation est de **décomposer un problème en sous-problèmes**. Les fonctions nous permettent de structurer un problèmes en objets de plus en plus simple.
+Une stratégie importante en programmation est de **décomposer un problème en sous-problèmes**. Les fonctions nous permettent de structurer un problème en objets de plus en plus simples.
 
-Ici nous dessinons une fenêtre composé de 4 carreau. Nous pouvons décomposer ce problème en une construction hiérarchique :
+Ici, nous dessinons une fenêtre composée de 4 carreaux. Nous pouvons décomposer ce problème en une construction hiérarchique :
 
 - la fonction `fenetre()` appelle deux fois la fonction `demi_fenetre()`,
 - la fonction `demi_fenetre()` appelle deux fois la fonction `carreau()`,
@@ -411,7 +411,7 @@ Combien de lignes de code sont exécutées par la fonction `fenetre()`?
 
 ### La chambre
 
-Dessinez une chambre avec des meubles que vous définissez comme une fonction. Vous êtes libre d'inventer d'autres meubles, de les arranger différemment et de les utiliser multiples fois.
+Dessinez une chambre avec des meubles, que vous définissez chacun par une fonction. Vous êtes libre d'inventer d'autres meubles, de les arranger différemment et de les utiliser de multiples fois.
 
 ```{codeplay}
 :file: chambre.py
@@ -447,8 +447,8 @@ Le [jeu du moulin](https://fr.wikipedia.org/wiki/Jeu_du_moulin) est un jeu de so
 :width: 200
 ```
 
-Pour les points d'intersection utilisez la fonction `dot()` que vous allez découvrir plus en détail dans le chapitre suivant. La distance entre lignes est de 50 pixels.  
-Vous constatez aussi une symétrie par 4. Donc avec un choix intelligent d'une fonction vous pouvez réduire le nombre de lignes de code par 4.
+Pour les points d'intersection, utilisez la fonction `dot()` que vous allez découvrir plus en détail dans le chapitre suivant. La distance entre les lignes est de 50 pixels.  
+Vous constatez aussi une symétrie par 4. Donc avec un choix intelligent de fonction, vous pouvez réduire le nombre de lignes de code par 4.
 
 ```{codeplay}
 :file: moulin.py
@@ -471,12 +471,12 @@ done()
 ### Tetris
 
 Le jeu vidéo [Tetris](https://fr.wikipedia.org/wiki/Tetris) est un puzzle conçu par l'informaticien russe Alekseï Pajitnov en 1984.
-Tetris met le joueur au défi de réaliser des lignes complètes en déplaçant des pièces de formes différentes, les tétrominos, qui défilent depuis le haut jusqu'au bas de l'écran.
+Tetris met le joueur au défi de réaliser des lignes complètes en déplaçant des pièces de formes différentes, les tétrominos, qui défilent du haut jusqu'au bas de l'écran.
 
 ```{image} media/tetris.png
 ```
 
-L'éléments de base du tétronimo mesurent 20 x 20 pixels. Il en existent 7 formes de tétronimo qui sont nommé d'après les lettres auxquels ils ressemblent :
+Les éléments de base d'un tétromino mesurent 20 x 20 pixels. Il existe 7 formes de tétrominos, qui sont nommés d'après les lettres auxquels ils ressemblent :
 
 - I (bâton)
 - O (carré)
