@@ -56,8 +56,6 @@
 </html>
 
 <!-- Fin du test de mise en page -->
-<br>
-
 
 <div align="right"> 
     <a href="http://files.edunumsec2.ch/enjeux-sociaux/affaire-snowden/affaire-snowden.pdf" class="round-button">
