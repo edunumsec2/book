@@ -24,7 +24,7 @@ Dans le langage de programmation Python, le module `turtle` (tortue en anglais) 
 
 On s'imagine une tortue qui se déplace sur un canevas et laisse une trace.
 
-Ci-dessus vous trouvez notre premier programme de trois ligne :
+Ci-dessus vous trouvez notre premier programme de trois lignes :
 
 - dans la première ligne nous importons toutes (`*`) les fonctions du module `turtle`,
 - avec `shape('turtle')` nous affichons une tortue (au lieu de la flèche),
