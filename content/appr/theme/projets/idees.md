@@ -2,7 +2,13 @@
 
 Les programmes de ce chapitre sont des idées sous construction, à développer et à placer à leur endroit approprié.
 
-## `processing.py`
+## Processing
+L'environnement [Processing](https://processing.org) est une plateforme de programmation conçu par des artistes pour la création graphique interactive. Le principe majeur de Processing est de simplifier au maximum la mise en œuvre des programmes. Il existe aussi une impémantation en 
+
+- JavaScript ([p5.js](https://p5js.org)),
+- Pyton ([Processing.py](https://py.processing.org)).
+
+Le programme suivant place des disques noirs quand on clique avec la souris.
 
 ```{codeplay}
 from turtle import *
@@ -21,6 +27,8 @@ s.listen()
 
 ## Hello world
 
+Ceci est l'équivalent du *hello world* dans Processing - dessiner une ligne.
+
 ```{codeplay}
 from turtle import *
 dot(1000, (0.75, 0.25, 0))
@@ -31,6 +39,8 @@ forward(200)
 ```
 
 ## Hello mouse
+
+Ce programme interactive dessine une ligne qui commence au centre et va vers l'endroit du clic de la souris.
 
 ```{codeplay}
 from turtle import *
@@ -49,20 +59,9 @@ def f(x, y):
 s.onclick(f)
 ```
 
-## Colors
+## Astérisque
 
-```{codeplay}
-from turtle import *
-colormode(255)
-up()
-
-back(250)
-for x in range(0, 255, 20):
-    dot(40, (x, x, x))
-    color('white' if x < 128 else 'black')
-    write(x, font=(None, 10), align='center')
-    forward(40)
-```
+Ce programme interactive dessine une astérisque avec des lignes qui commencent tous au centre et vont vers le clic de la souris.
 
 ```{codeplay}
 from turtle import *
@@ -82,13 +81,32 @@ def f(x, y):
 s.onclick(f)
 ```
 
-## Shapes
+## Niveau de gris
 
-Add 
+Dans le `colormode(255)` les niveau de gris sont représenté par des entiers allant de 0 (noir) à 255 (blanc).
 
-- Position mode `rectangle(p, size)`
-- Center mode `rectangle(c, size)`
-- Corner mode `rectangle(p0, p1)`
+```{codeplay}
+from turtle import *
+colormode(255)
+up()
+
+back(250)
+for x in range(0, 255, 20):
+    dot(40, (x, x, x))
+    color('white' if x < 128 else 'black')
+    write(x, font=(None, 10), align='center')
+    forward(40)
+```
+
+
+## Formes
+
+Le programme suivant definis 4 fonctions pour dessiner des formes géométriques de base :
+
+- `point(p)` pour dessiner un point à la position `p`,
+- `ligne(p, q)` pour dessiner une ligne entre deux points,
+- `rectangle(p, taille)` pour dessiner un rectangle à la position `p`,
+- `ellipse(p, taille)` pour dessiner une ellipse.
 
 ```{codeplay}
 from turtle import *
@@ -110,18 +128,18 @@ def ligne(p, q):
     goto(q)
     up()
 
-def rectangle(p, size):
+def rectangle(p, taille):
     goto(p)
     down()
-    for x in size * 2:
+    for x in taille * 2:
         forward(x)
         left(90)
     up()
 
-def ellipse(p, size):
+def ellipse(p, taille):
     for i in range(37):
-        x = p[0] + size[0]/2 * sin(pi * i / 18)
-        y = p[1] + size[1]/2 * cos(pi * i / 18)
+        x = p[0] + taille[0]/2 * sin(pi * i / 18)
+        y = p[1] + taille[1]/2 * cos(pi * i / 18)
         goto(x, y)
         down()
     up()
@@ -132,7 +150,15 @@ rectangle((0, 0), (80, 120))
 ellipse((200, 0), (80, 120))
 ```
 
+A ajouter : 
+
+- Position mode `rectangle(p, size)`
+- Center mode `rectangle(c, size)`
+- Corner mode `rectangle(p0, p1)`
+
 ## Dessine ligne
+
+Ce programme interactive dessine une ligne avec deux clics de souris.
 
 ```{codeplay}
 from turtle import *
@@ -155,6 +181,8 @@ s.listen()
 ```
 
 ## Dessine rectangle
+
+Ce programme interactive dessine un rectangle avec deux clics de souris.
 
 ```{codeplay}
 from turtle import *
@@ -185,6 +213,8 @@ s.listen()
 ```
 
 ## Dessine ellipse
+
+Ce programme interactive dessine une ellipse avec deux clics de souris.
 
 ```{codeplay}
 from turtle import *
@@ -217,15 +247,17 @@ s.listen()
 
 ## Faire défiler un texte
 
+Ce programme fait défiler un texte.
+
 ```{codeplay}
 from turtle import *
 from time import *
 speed(0)
 tracer(0)
 
-t = 'very longue line of texte'
+t = 'ceci est une phrase très longue'
 
-for x in range(300, -2000, -10):
+for x in range(300, -3100, -10):
     goto(x, 0)
     clear()
     write(t, font=(None, 150))
@@ -234,13 +266,15 @@ for x in range(300, -2000, -10):
 
 ## Texte qui vibre
 
+Ce programme déplace chaque lettre aléatoirement dans la direction verticale.
+
 ```{codeplay}
 from turtle import *
 from random import *
 speed(0)
 up()
 
-texte = 'very longue line'
+texte = 'cette phrase vibre'
 
 while True:
     clear()
@@ -253,6 +287,8 @@ while True:
 ```
 
 ## Texte en escalier
+
+Ce programme place chaque mot en escalier.
 
 ```{codeplay}
 from turtle import *
@@ -269,13 +305,15 @@ for mot in phrase.split():
 
 ## Un mot par clic
 
+Ce programe pose un mot d'une phrase à chaque clic de la souris.
+
 ```{codeplay}
 from turtle import *
 s = getscreen()
 speed(0)
 up()
 
-phrase = 'un mot par clic'.split()
+phrase = 'un mot par clic de la souris'.split()
 i = 0
 
 def f(x, y):
@@ -289,6 +327,8 @@ s.listen()
 ```
 
 ## onkey - lettres
+
+Ce programme interactive permet d'utiliser les 26 lettres pour écrire un mot.
 
 ```{codeplay}
 from turtle import *
@@ -307,6 +347,8 @@ done()
 
 ## onkey - nombres
 
+Ce programme interactive permet d'utiliser les 10 chiffres pour écrire un nombre.
+
 ```{codeplay}
 from turtle import *
 s = getscreen()
@@ -323,6 +365,8 @@ done()
 ```
 
 ## onkey - couleurs
+
+Ce programme permet d'utiliser les 26 touches de l'alphabet pour écrire des pixels avec des couleurs aléatoires.
 
 ```{codeplay}
 from turtle import *
@@ -346,6 +390,10 @@ for c in 'abcdefghijklmnopqrstuvwxyz':
 s.listen()
 ```
 
+## Color typewriter
+
+Ce programme interactive permet d'écrire une image ligne par ligne en utilisant les 26 touches du clavier.
+
 ```{codeplay}
 from turtle import *
 from random import *
@@ -356,24 +404,36 @@ d = 60
 goto(-300+d/2, 200-d/2)
 
 couleurs = dict()
-couleurs['r'] = 'red'
-couleurs['g'] = 'green'
+
+couleurs['a'] = 'aqua'
 couleurs['b'] = 'blue'
-couleurs['y'] = 'yellow'
+couleurs['c'] = 'chocolate'
+couleurs['d'] = 'dodgerblue'
+couleurs['f'] = 'fuchsia'
+couleurs['g'] = 'green'
 couleurs['k'] = 'black'
-couleurs['w'] = 'white'
-couleurs['p'] = 'pink'
-couleurs['o'] = 'orange'
 couleurs['l'] = 'lime'
+couleurs['i'] = 'indigo'
+couleurs['m'] = 'magenta'
+couleurs['n'] = 'navy'
+couleurs['o'] = 'orange'
+couleurs['p'] = 'pink'
+couleurs['r'] = 'red'
+couleurs['s'] = 'silver'
+couleurs['t'] = 'tan'
 couleurs['v'] = 'violet'
+couleurs['w'] = 'white'
+couleurs['y'] = 'yellow'
 
 def f(x):
     col = couleurs.get(x, 'lightgray')
     dot(d, col)
+    write(col, align='center')
     if xcor() < 300:
         forward(d)
     else:
         goto(-300+d/2, ycor()-d)
+
 
 for c in 'abcdefghijklmnopqrstuvwxyz':
     s.onkey(lambda x=c: f(x), c)
@@ -382,6 +442,11 @@ s.listen()
 ```
 
 ## module `string`
+Le module `string` met à disposition des ensembles de caractères, ainsi que quelque méthodes de transformation typographique.
+
+- lettres
+- chiffres
+- ponctuation
 
 ```{codeplay}
 import string
@@ -391,6 +456,11 @@ print(a)
 print(len(a))
 ```
 
+Le module `string` met à disposition des ensembles de caractères tel que : 
+
+- lettres
+- chiffres
+- ponctuation
 
 ```{codeplay}
 from string import *
@@ -407,18 +477,27 @@ print('punctuation =', punctuation)
 print('whitespace =', whitespace, len(whitespace))
 ```
 
+Le module dispose aussi de fonctions pour mettre en majuscules la première lettre :
+
+- d'une phrase (`capitalize()`), 
+- de tous les mots d'une phrase (`capwords()`).
+
 ```{codeplay}
 from string import *
 
 s = 'heLLo YoU'
 print('s =', s)
-print('capitalize =', capitalize(s))
-print('capwords =', capwords(s))
-print('capitalize =', capitalize(s))
-print('capwords =', capwords(s))
+print('capitalize(s) =', capitalize(s))
+print('capwords(s) =', capwords(s))
+print('s.upper() =', s.upper())
+print('s.lower() =', s.lower())
 ```
 
 ## `split()` et `join()`
+
+La méthode `split()` permet de découper une `phrase` en mots, basé sur les espaces, et de renvoyer une liste de mots.
+
+La méthode `join()` fait l'opposé. Elle permet de joindre des mots d'une `liste` en utilisant un ou plusieures caractères de jonction (`##`).
 
 ```{codeplay}
 phrase = 'hello how are you'
@@ -432,6 +511,8 @@ print(phrase2)
 ```
 
 ## Glissière
+
+La glissière (slider en anglais) est un élément de l'interface utilisateur (UI = user interface) qui permet de choisir une valeur numérique à l'aide d'un ouvement de souris.
 
 ```{codeplay}
 from turtle import *
@@ -452,4 +533,73 @@ def f(x, y):
     update()
     
 ondrag(f)
+```
+
+Voici la version amélioré qui permet de cliquer également dans la région de la glissière, pour faire sauter directement à l'endroit du click.
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+
+width(5)
+speed(0)
+shape('square')
+forward(255)
+tracer(0)
+
+def f(x, y):
+    if -20 < x < 275 and -20 < y < 20:
+        x = max(0, x)
+        x = min(x, 255)
+        clear()
+        goto(0, 0)
+        forward(255)
+        write(x, font=(None, 18))
+        goto(x, 0)
+        update()
+    
+ondrag(f)
+s.onclick(f)
+#s.listen()
+```
+
+## Horloge
+
+```{codeplay}
+from turtle import *
+from time import *
+from math import *
+r = 150
+
+def cadran():
+    up()
+    home()
+    dot(2.3 * r, 'silver')
+    for i in range(12):
+        x = r * sin(2 * pi * i / 12)
+        y = r * cos(2 * pi * i / 12)
+        goto(x, y)
+        dot()
+
+def aiguille(d, r, angle):
+    home()
+    down()
+    width(d)
+    x = r * sin(2 * pi * angle)
+    y = r * cos(2 * pi * angle)
+    goto(x, y)
+
+def horloge():
+    clear()
+    cadran()
+    h, m, s = localtime()[3:6]
+    aiguille(5, 0.6 * r, h/12)
+    aiguille(3, 0.8 * r, m/60)
+    aiguille(1, 0.9 * r, s/60)
+    hideturtle()
+    tracer(0)
+    update()
+    Screen().ontimer(horloge, 1000)
+    
+horloge()
 ```
