@@ -103,7 +103,7 @@ left(90)
 
 Si nous observons la tortue, nous comprenons finalement qu'elle dessine deux fois un rectangle. Nous pouvons même interpréter cette image et donner le sens de bâtiment au premier rectangle, et de porte au second.
 
-Essayons maintenant de découper le code en **sous-problèmes** en utilisant deux fonctions `batiment()` et `porte()`.
+Essayons maintenant de découper le code en **sous-programmes** en utilisant deux fonctions `batiment()` et `porte()`.
 En regardant ces 3 lignes de code, on comprend immédiatement le sens du programme.
 
 ``` python
@@ -355,12 +355,11 @@ croix()
 
 ## Décomposer
 
-Une stratégie importante en programmation est de **décomposer un problème en sous-problèmes**. Les fonctions nous permettent de structurer un problème en objets de plus en plus simples.
+Une stratégie importante en programmation est de **décomposer un programme en sous-programmes**. Les fonctions nous permettent de structurer un problème en objets de plus en plus simples.
 
 Ici, nous dessinons une fenêtre composée de 4 carreaux. Nous pouvons décomposer ce problème en une construction hiérarchique :
 
-- la fonction `fenetre()` appelle deux fois la fonction `demi_fenetre()`,
-- la fonction `demi_fenetre()` appelle deux fois la fonction `carreau()`,
+- la fonction `fenetre()` appelle quatre fois la fonction  `carreau()`,
 - la fonction `carreau()` appelle deux fois la fonction `equerre()`,
 - la fonction `equerre()` appelle deux fois la fonction `ligne()`.
 
@@ -381,13 +380,11 @@ def carreau():
     equerre()
     left(90)
 
-def demi_fenetre():
-    carreau()
-    carreau()
-
 def fenetre():
-    demi_fenetre()
-    demi_fenetre()
+    carreau()
+    carreau()
+    carreau()
+    carreau()
 
 fenetre()
 ```
@@ -471,20 +468,20 @@ done()
 ### Tetris
 
 Le jeu vidéo [Tetris](https://fr.wikipedia.org/wiki/Tetris) est un puzzle conçu par l'informaticien russe Alekseï Pajitnov en 1984.
-Tetris met le joueur au défi de réaliser des lignes complètes en déplaçant des pièces de formes différentes, les tétrominos, qui défilent du haut jusqu'au bas de l'écran.
+Tetris met le joueur au défi de réaliser des lignes complètes en déplaçant des pièces de formes différentes, les [tétrominos](https://fr.wikipedia.org/wiki/Tétromino), qui défilent du haut jusqu'au bas de l'écran.
 
 ```{image} media/tetris.png
 ```
 
 Les éléments de base d'un tétromino mesurent 20 x 20 pixels. Il existe 7 formes de tétrominos, qui sont nommés d'après les lettres auxquels ils ressemblent :
 
-- I (bâton)
-- O (carré)
-- T
-- L
-- J
-- Z
 - S
+- L
+- O (carré)
+- Z
+- I (bâton)
+- J
+- T
 
 ```{codeplay}
 :file: tetris.py

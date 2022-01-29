@@ -99,28 +99,28 @@ Un programme est une séquence d'instructions. Le bloc des 8 instructions ci-des
 :file: forward3.py
 from turtle import *
 
-forward(160)
+forward(100)
 left(90)
 forward(100)
 left(90)
-forward(160)
+forward(100)
 left(90)
 forward(100)
 left(90)
 ```
 
-**Exercice** : Modifiez ce code pour faire le rectangle plus long.
+**Exercice** : Modifiez ce code pour en faire un rectangle.
 
 ```{question}
-La hauteur de la zone de dessin de la tortue est
+Une séquence d'instructions d'un bloc est exécutée
 
-{f}`200 pixels`   
-{v}`400 pixels`  
-{f}`600 pixels`  
-{f}`800 pixels`  
+{f}`selon la priorité`  
+{f}`simultanément`  
+{v}`dans l'ordre`  
+{f}`aléatoirement`   
 ```
 
-## Redondance
+## Equivalence
 
 La tortue possède 4 fonctions de déplacement, mais à strictement parler, on pourrait s'en sortir avec seulement deux fonctions, `forward()` et `left()`, car :
 
@@ -138,8 +138,8 @@ left(90)
 forward(100)
 left(90)
 
-back(-160)
-right(-90)
+back(-160)  # équivalent à forward(160)
+right(-90)  # équivalent à left(90)
 back(-100)
 right(-90)
 ```
