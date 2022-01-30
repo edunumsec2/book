@@ -602,4 +602,84 @@ def horloge():
     Screen().ontimer(horloge, 1000)
     
 horloge()
+done()
+```
+## Dégradé radial
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+
+for x in range(255):
+    dot(255-x, (x, x, x))
+```
+
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+
+for x in range(0, 255, 5):
+    dot(255-x, (x, x, x))
+    forward(0.5)
+```
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+
+for x in range(0, 255, 5):
+    dot(255-x, (x, x, 0))
+    forward(0.5)
+```
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+
+for x in range(0, 255, 5):
+    dot(255-x, (x, 0, 0))
+    forward(0.5)
+```
+
+## Dégradé linaire
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+speed(0)
+
+def ligne(p, q):
+    goto(p)
+    down()
+    goto(q)
+    up()
+
+for x in range(255):
+    color(x, x, x)
+    ligne((x, -200), (x, 200))
+```
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+left(90)
+width(7)
+speed(0)
+
+def ligne(p, q):
+    goto(p)
+    down()
+    goto(q)
+    up()
+
+for x in range(0, 255, 5):
+    color(x, x, x)
+    ligne((x, -200), (x, 200))
 ```
