@@ -268,3 +268,64 @@ for (a, c) in ((45, 'pink'), (-10, 'lime'), (-30, 'red'), (-60, 'white')):
 ```
 
 **Exercice** : Ajoutez un angle et une couleur supplémentaire.
+
+**Exercice** : Coloriez la fleur.
+
+## Exercices
+
+- Téléchargez un exercice.
+- Editez-le dans un éditeur.
+- Déposez-le sur Moodle.
+
+### Tetris
+
+Le jeu vidéo [Tetris](https://fr.wikipedia.org/wiki/Tetris) est un puzzle conçu par l'informaticien russe Alekseï Pajitnov en 1984.
+Tetris met le joueur au défi de réaliser des lignes complètes en déplaçant des pièces de formes différentes, les [tétrominos](https://fr.wikipedia.org/wiki/Tétromino), qui défilent du haut jusqu'au bas de l'écran.
+
+```{image} media/tetris.png
+```
+
+Les éléments de base d'un tétromino mesurent 20 x 20 pixels. Il existe 7 formes de tétrominos, qui sont nommés d'après les lettres auxquels ils ressemblent :
+
+- S
+- L
+- O (carré)
+- Z
+- I (bâton)
+- J
+- T
+
+Cette fois, utilisez :
+
+- une séquence d'angles pour définir un tétromino,
+- un point (dot) pour marquer l'origine du tétromino,
+- une séquence de fonctions pour parcourir les tétronimos.
+
+```{codeplay}
+:file: tetris.py
+from turtle import *
+# Votre prénom, nom, classe
+
+def S():
+    for a in (-90, 90, 0, 90, 90, -90, 90, 0, 90, 90):
+        forward(20)
+        left(a)
+    
+def L():
+    ...
+
+def O():
+    ...
+
+up()
+back(250)
+
+for f in (S, L, O):
+    down()
+    dot()
+    f()
+    up()
+    forward(80)
+
+done()
+```

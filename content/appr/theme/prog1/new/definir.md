@@ -413,6 +413,7 @@ Dessinez une chambre avec des meubles, que vous définissez chacun par une fonct
 ```{codeplay}
 :file: chambre.py
 from turtle import *
+# Prénom, nom, classe
 
 def chaise():
     left(90)

@@ -41,8 +41,8 @@ parts:
       - file: content/appr/theme/prog1/new/cercler
       - file: content/appr/theme/prog1/new/parcourir
       - file: content/appr/theme/prog1/new/questionner
-      - file: content/appr/theme/prog1/new/ecrire
       - file: content/appr/theme/prog1/new/calculer
+      - file: content/appr/theme/prog1/new/ecrire
       - file: content/appr/theme/prog1/new/iterer
       - file: content/appr/theme/prog1/new/attendre
       - file: content/appr/theme/prog1/new/decider

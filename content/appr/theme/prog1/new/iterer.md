@@ -214,4 +214,34 @@ for y in range(100, -150, -50):
         goto(x, y)
         dot(3)
         write((x, y))
-````
+```
+
+## Exercices
+
+- Téléchargez un exercice.
+- Editez-le dans un éditeur.
+- Déposez-le sur Moodle.
+
+### Drapeau EU
+
+Le drapeau européen est un drapeau décoré de douze étoiles d'or à cinq branches, l'une des branches pointée vers le haut, disposées à distance égale en cercle sur champ d'azur. Il représente la solidarité et l’union entre les peuples d’Europe.
+
+```{image} media/EU.png
+:width: 300
+```
+
+Rappelez-vous comment dessiner un polygone régulier.
+
+```{codeplay}
+:file: EU.py
+from turtle import *
+# Prénom, nom, classe
+
+def etoile():
+    ...
+
+for i in range(12):
+    etoile()
+
+forward(100)
+```

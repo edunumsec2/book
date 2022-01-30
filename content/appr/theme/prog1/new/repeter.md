@@ -221,6 +221,33 @@ for i in range(6):
 
 **Exercice** : Tournez un angle plus petit que 60°
 
+## Paquebot
+
+Une boucle `for` est utilisé dans l'exemple suivant pour dessiner les hublots d'un paquebot.
+
+```{codeplay}
+from turtle import *
+
+forward(200)
+left(80)
+forward(60)
+left(100)
+forward(220)
+left(100)
+forward(60)
+
+up()
+left(125)
+forward(40)
+right(45)
+
+for i in range(6):
+    dot(20)  
+    forward(30)
+```
+
+**Exercice** : Créez une fonction 'paquebot()' et dessinez-en un deuxième.
+
 ## Estamper la tortue
 
 Vous pouvez laisser une impression de la tortue à sa position actuelle avec la fonction `stamp()`.
@@ -357,3 +384,60 @@ for i in 3:
 ```
 
 **Exercice** : Corrigez les 3 erreurs de type.
+
+## Exercice
+
+- Téléchargez un exercice.
+- Editez-le dans un éditeur externe.
+- Déposez-le sur Moodle.
+
+### Pellicule
+
+Dessiner la pellicule d'un film
+
+### Chemin de fer
+
+Dessinez les rails d'un chemin de fer. Utilisez une boucle `for` pour la répétition des traverses.
+
+```{codeplay}
+:file: chemin_de_fer.py
+from turtle import *
+# Prénom, nom, classe
+
+def traverse():
+    ...
+
+forward(200)
+```
+
+### Wagon de métro
+
+Dessinez un wagon de métro. Utilisez une boucle `for` pour les fenêtres. Utilisez la fonction `dot()` pour les roues.
+
+```{codeplay}
+:file: metro.py
+from turtle import *
+# Prénom, nom, classe
+
+def wagon():
+    ...
+
+forward(200)
+```
+
+### Gratte-ciel
+
+Dessinez un gratte-ciel avec $n \times m$ fenêtres. Pour ceci utilisez deux boucles imbriquées.
+
+```{codeplay}
+:file: gratte_ciel.py
+from turtle import *
+# Prénom, nom, classe
+
+def fenetre():
+    ...
+
+forward(200)
+```
+
+

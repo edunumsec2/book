@@ -277,6 +277,10 @@ for i in range(6):
 
 ## Exercices
 
+- Téléchargez un exercice.
+- Editez-le dans un éditeur.
+- Déposez-le sur Moodle.
+
 ### LGBTQ+
 
 On vous demande de dessiner des logos pour les toilettes avec le symbole traditionnel ♂ et ♀. La communauté LGBTQ+ vous demande d'y ajouter un troisième logo.
@@ -293,8 +297,79 @@ forward(50)
 ...
 ```
 
-1. Dessinez un sapin de Noël. Définissez des fonctions pour des boules et des étoiles.
-1. Dessinez une ville. Définissez des fonctions pour des maisons et des immeubles.
-1. Dessinez un paysage. Définissez des fonctions pour des montagnes et des sapins.
-1. Dessinez un jardin. Définissez des fonctions pour les feuilles, les pétales et les fleurs.
-1. Dessinez un aquarium. Définissez des fonctions pour les poissons, l'herbe, et les bulles.
+### Anneaux olympiques
+
+Les cinq anneaux imbriqués, colorés en bleu, jaune, noir, vert et rouge sur un fond blanc, sont appelés «anneaux olympiques ». Le symbole est créé à l'origine en 1913 par Pierre Coubertin. Il semble avoir voulu que les anneaux représentent les cinq continents : Europe, Asie, Afrique, Amérique et Océanie.
+
+C'est un défi particulier, de dessiner les anneaux imbriqués.
+
+```{image} media/olympic_rings.png
+:width: 300
+```
+
+```{codeplay}
+:file: olympique.py
+from turtle import *
+# Prénom, nom, classe
+
+circle(50)
+```
+
+### Chemin de fer
+
+Avec des rails de chemin de fer dessinez un circuit en forme d'un rond (deux rails avec les traverses).
+
+```{codeplay}
+:file: chemin_de_fer.py
+from turtle import *
+# Prénom, nom, classe
+
+def traverse():
+    ...
+
+forward(200)
+```
+
+### Circuit en huit
+
+Avec des rails de chemin de fer dessinez un circuit en forme de huit (deux rails avec les traverses). Découpez en sous-programmes.
+
+```{codeplay}
+:file: chemin_de_fer.py
+from turtle import *
+# Prénom, nom, classe
+
+def traverse():
+    ...
+
+forward(200)
+```
+
+### Un jardin
+
+Dessinez et coloriez un jardin. Définissez des fonctions pour des pétales, feuilles et fleurs.
+
+```{codeplay}
+:file: jardin.py
+from turtle import *
+# Votre prénom, nom, classe
+
+dot(1000, 'lightgreen')  # background
+
+def petale():
+    ...
+
+def feuille():
+    ...
+
+def fleur():
+    dot(50, 'red')
+
+feuille()
+forward(200)
+fleur()
+
+if len(dir(Turtle)) > 100:
+    from tkinter import * 
+    Screen().getcanvas().postscript(file='jardin.eps')
+```

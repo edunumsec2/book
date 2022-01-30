@@ -208,3 +208,23 @@ print(chr(10000000))
 ```
 
 **Exercice** : Corrigez l'erreur de valeur'.
+
+## Exercices
+
+### Maison
+
+Créez un programme qui dessine une maison et demande :
+
+- la couleur de la maison
+- la couleur de la porte
+- la couleur de la fenêtre
+
+Comme nous devons indiquer les nos des couleurs en anglais, nous allons écrire ce programme en anglais.
+
+```{codeplay}
+:file: maison.py
+from turtle import *
+
+col_maison = input('Color of the house: ')
+...
+```

@@ -395,6 +395,18 @@ if len(dir(Turtle)) > 100:
 - Editez-le dans un éditeur externe tel que Thonny.
 - Déposez-le sur Moodle (ou plateforme équivalente de votre école).
 
+### Un arc-en-ciel
+
+Dessinez un arc-en-ciel avec des disques de rayon et de couleurs différents.
+
+```{codeplay}
+:file: arc_en_ciel.py
+from turtle import *
+# Votre prénom, nom, classe
+
+dot(100)
+```
+
 ### Sapin de Noël
 
 Dessinez et coloriez un sapin de Noël. Définissez des fonctions pour des boules et des étoiles.
@@ -424,7 +436,7 @@ if len(dir(Turtle)) > 100:
 
 ### Une ville
 
- Dessinez et coloriez une ville. Définissez des fonctions pour des maisons et des immeubles.
+Dessinez et coloriez une ville. Définissez des fonctions pour des maisons et des immeubles.
 
 ```{codeplay}
 :file: ville.py
@@ -446,31 +458,4 @@ immeuble()
 if len(dir(Turtle)) > 100:
     from tkinter import * 
     Screen().getcanvas().postscript(file='ville.eps')
-```
-
-### Un jardin
-
-```{codeplay}
-:file: jardin.py
-from turtle import *
-# Votre prénom, nom, classe
-
-dot(1000, 'lightgreen')  # background
-
-def petale():
-    ...
-
-def feuille():
-    ...
-
-def fleur():
-    dot(50, 'red')
-
-feuille()
-forward(200)
-fleur()
-
-if len(dir(Turtle)) > 100:
-    from tkinter import * 
-    Screen().getcanvas().postscript(file='jardin.eps')
 ```
