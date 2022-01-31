@@ -299,7 +299,7 @@ forward(50)
 
 ### Anneaux olympiques
 
-Les cinq anneaux imbriqués, colorés en bleu, jaune, noir, vert et rouge sur un fond blanc, sont appelés «anneaux olympiques ». Le symbole est créé à l'origine en 1913 par Pierre Coubertin. Il semble avoir voulu que les anneaux représentent les cinq continents : Europe, Asie, Afrique, Amérique et Océanie.
+Les cinq anneaux imbriqués, colorés en bleu, jaune, noir, vert et rouge sur un fond blanc, sont appelés *anneaux olympiques*. Le symbole est créé à l'origine en 1913 par Pierre Coubertin. Il semble avoir voulu que les anneaux représentent les cinq continents : Europe, Asie, Afrique, Amérique et Océanie.
 
 C'est un défi particulier, de dessiner les anneaux imbriqués.
 
@@ -320,7 +320,7 @@ circle(50)
 Avec des rails de chemin de fer dessinez un circuit en forme d'un rond (deux rails avec les traverses).
 
 ```{codeplay}
-:file: chemin_de_fer.py
+:file: circuit_rond.py
 from turtle import *
 # Prénom, nom, classe
 
@@ -335,7 +335,7 @@ forward(200)
 Avec des rails de chemin de fer dessinez un circuit en forme de huit (deux rails avec les traverses). Découpez en sous-programmes.
 
 ```{codeplay}
-:file: chemin_de_fer.py
+:file: circuit_huit.py
 from turtle import *
 # Prénom, nom, classe
 
@@ -358,18 +358,12 @@ dot(1000, 'lightgreen')  # background
 
 def petale():
     ...
-
 def feuille():
     ...
-
 def fleur():
     dot(50, 'red')
 
 feuille()
 forward(200)
 fleur()
-
-if len(dir(Turtle)) > 100:
-    from tkinter import * 
-    Screen().getcanvas().postscript(file='jardin.eps')
 ```

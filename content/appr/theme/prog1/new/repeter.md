@@ -393,14 +393,27 @@ for i in 3:
 
 ### Pellicule
 
-Dessiner la pellicule d'un film
+Une pellicule photographique est un support souple recouvert d'une émulsion contenant des composés sensibles à la lumière.
+Dessinez une pellicule photographique. Utilisez une boucle `for` pour créer 4 trous de perforation. Utilisez une deuxième boucle pour répéter une trame.
+
+```{image} media/pellicule.jpg
+:width: 200
+```
+
+```{codeplay}
+:file: pellicule.py
+from turtle import *
+# Prénom, nom, classe
+
+forward(200)
+```
 
 ### Chemin de fer
 
 Dessinez les rails d'un chemin de fer. Utilisez une boucle `for` pour la répétition des traverses.
 
 ```{codeplay}
-:file: chemin_de_fer.py
+:file: rails.py
 from turtle import *
 # Prénom, nom, classe
 
@@ -440,4 +453,29 @@ def fenetre():
 forward(200)
 ```
 
+### Jeu du moulin
+Le [jeu du moulin](https://fr.wikipedia.org/wiki/Jeu_du_moulin) est un jeu de société traditionnel en Europe. Le tablier de jeu existait déjà dans la Rome antique. Aussi appelé **jeu du charret** (en Suisse), certains lui donnent le nom médiéval de jeu de mérelles, voire de marelle.
 
+```{image} media/moulin.png
+:width: 200
+```
+
+Pour les points d'intersection, utilisez la fonction `dot()` que vous allez découvrir plus en détail dans le chapitre suivant. La distance entre les lignes est de 50 pixels.  
+Vous constatez aussi une symétrie par 4. Donc avec un choix intelligent de fonction et de boucle `for`, vous pouvez réduire le nombre de lignes de code considérablement.
+
+```{codeplay}
+:file: moulin.py
+from turtle import *
+# Votre prénom, nom, classe
+width(8)
+up()
+forward(50)
+down()
+dot()
+forward(50)
+dot()
+forward(50)
+dot()
+...
+done()
+```

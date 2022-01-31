@@ -406,13 +406,13 @@ Combien de lignes de code sont exécutées par la fonction `fenetre()`?
 - Remplacez `...` par votre code.
 - Déposez votre exercice sur Moodle (ou plateforme équivalente).
 
-### Rectangle
+### Rectangles
 
 Définissez une fonction pour dessiner un rectangle. 
-Ensuite dessinez 3 rectangles à des endroits différents.
+Ensuite dessinez 3 rectangles qui ne se touchent pas, à des endroits différents.
 
 ```{codeplay}
-:file: rectangle.py
+:file: rectangles.py
 from turtle import *
 # Prénom, nom, classe
 
@@ -424,49 +424,13 @@ rectangle()
 done()
 ```
 
-### Triangle
-
-Définissez une fonction pour dessiner un triangle. 
-Ensuite dessinez 3 triangles à des endroits différents.
-
-```{codeplay}
-:file: triangle.py
-from turtle import *
-# Prénom, nom, classe
-
-def triangle():
-    ...
-
-triangle()
-...
-done()
-```
-
-### Hexagone
-
-Définissez une fonction pour dessiner un hexagone. 
-Ensuite dessinez 3 hexagones à des endroits différents.
-
-```{codeplay}
-:file: hexagone.py
-from turtle import *
-# Prénom, nom, classe
-
-def hexagone():
-    ...
-
-hexagone()
-...
-done()
-```
-
-### Maison
+### Maisons
 
 Définissez une fonction pour dessiner une maison. 
-Ensuite dessinez 3 maisons à des endroits différents.
+Ensuite dessinez 3 maisons qui ne sont pas connectées, à des endroits différents.
 
 ```{codeplay}
-:file: maison.py
+:file: maisons.py
 from turtle import *
 # Prénom, nom, classe
 
@@ -479,13 +443,13 @@ maison()
 done()
 ```
 
-### Chaise
+### Chaises
 
-Définissez une fonction pour dessiner une chaise. 
-Ensuite dessinez 3 rectangles à des endroits différents.
+Définissez une fonction pour dessiner une chaise.
+Ensuite dessinez 3 chaises à des endroits différents.
 
 ```{codeplay}
-:file: chaise.py
+:file: chaises.py
 from turtle import *
 # Prénom, nom, classe
 
@@ -497,13 +461,13 @@ chaise()
 done()
 ```
 
-### Table
+### Tables
 
 Définissez une fonction pour dessiner une table. 
 Ensuite dessinez 3 tables à des endroits différents.
 
 ```{codeplay}
-:file: table.py
+:file: tables.py
 from turtle import *
 # Prénom, nom, classe
 
@@ -515,13 +479,13 @@ table()
 done()
 ```
 
-### Lit
+### Lits
 
-Définissez une fonction pour dessiner un lit. 
+Définissez une fonction pour dessiner un lit.
 Ensuite dessinez 3 lits à des endroits différents.
 
 ```{codeplay}
-:file: lit.py
+:file: lits.py
 from turtle import *
 # Prénom, nom, classe
 
@@ -529,6 +493,62 @@ def lit():
     ...
 
 lit()
+...
+done()
+```
+
+### Tetris
+
+Le jeu vidéo [Tetris](https://fr.wikipedia.org/wiki/Tetris) est un puzzle conçu par l'informaticien russe Alekseï Pajitnov en 1984.
+Tetris met le joueur au défi de réaliser des lignes complètes en déplaçant des pièces de formes différentes, les [tétrominos](https://fr.wikipedia.org/wiki/Tétromino), qui défilent du haut jusqu'au bas de l'écran.
+
+```{image} media/tetris.png
+```
+
+Les carrés de base d'un tétromino mesurent 20 x 20 pixels. Il y en a 7 formes différentes, qui sont nommées d'après les lettres auxquelles elles ressemblent :
+
+- S
+- L
+- O (carré)
+- Z
+- I (bâton)
+- J
+- T
+
+```{codeplay}
+:file: tetris.py
+from turtle import *
+# Votre prénom, nom, classe
+def I():
+    down()
+    forward(20)
+    left(90)
+    forward(80)
+    left(90)
+    forward(20)
+    left(90)
+    forward(80)
+    left(90)
+    up()
+
+def O():
+    ...
+def T():
+    ...
+def L():
+    ...
+def J():
+    ...
+def Z():
+    ...
+def S():
+    ...
+
+up()
+back(250)
+I()
+forward(40)
+O()
 ...
 done()
 ```

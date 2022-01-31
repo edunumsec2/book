@@ -248,28 +248,80 @@ for d in (10, 20, 30, 40):
     left(5)
 ```
 
-## Une séquence dans une séquence
+## Cube 3D
 
-Il est aussi possible de mettre une séquence dans une séquence, un tuple dans un tuple.
-Ceci nous permet par exemple de spécifier dans une séquences deux valeurs : un angle et une couleur `(a, c)`.
+Avec trois losanges nous pouvons dessiner un cube en 3D.
 
 ```{codeplay}
-:file: tuple9.py
 from turtle import *
 
-getscreen().bgcolor('skyblue')
-up()
-
-dot(40, 'blue')
-for (a, c) in ((45, 'pink'), (-10, 'lime'), (-30, 'red'), (-60, 'white')):
-    left(a)
-    forward(50)
-    dot(40, c)
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(100)
+        left(a)
+        
+for i in range(3):
+    losange()
+    left(120)
 ```
 
-**Exercice** : Ajoutez un angle et une couleur supplémentaire.
+## Cube en couleur
 
-**Exercice** : Coloriez la fleur.
+Avec l'utilisation de trois couleurs, l'effet 3D est accentué.
+Nous choisissons des couleurs clair pour les surfaces du haut, et des couleurs sombres pour les surfaces vers le bas.
+
+```{codeplay}
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(100)
+        left(a)
+        
+for c in ('pink', 'violet', 'darkviolet'):
+    fillcolor(c)
+    begin_fill()
+    losange()
+    end_fill()
+    left(120)
+```
+
+**Exercice** : Tournez le cube de 30°.
+
+## Minecraft
+
+[Minecraft](https://fr.wikipedia.org/wiki/Minecraft) est un jeu vidéo de type aventure *bac à sable* développé par le Suédois Markus Persson, puis par la société Mojang Studios, sortie en 2011. Il s'agit d'un univers composé de voxels.
+
+Le voxel (mot créé en contractant *volume* et *element*) est à la 3D ce que le pixel est à la 2D.
+
+```{codeplay}
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+
+def cube():      
+    for c in ('lime', 'peru', 'sienna'):
+        fillcolor(c)
+        begin_fill()
+        losange()
+        end_fill()
+        left(120)
+
+speed(5)
+left(30)
+for i in range(3):
+    cube()
+    forward(-50)
+    
+for i in range(4):
+    cube()
+    left(60)
+    forward(50)
+    right(60)
+```
 
 ## Exercices
 
@@ -313,7 +365,6 @@ def S():
     
 def L():
     ...
-
 def O():
     ...
 

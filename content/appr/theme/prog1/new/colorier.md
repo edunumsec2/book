@@ -395,16 +395,18 @@ if len(dir(Turtle)) > 100:
 - Editez-le dans un éditeur externe tel que Thonny.
 - Déposez-le sur Moodle (ou plateforme équivalente de votre école).
 
-### Un arc-en-ciel
+### Arc-en-ciel
 
-Dessinez un arc-en-ciel avec des disques de rayon et de couleurs différents.
+Dessinez un arc-en-ciel avec des disques de rayon et de couleur approprié.
 
 ```{codeplay}
 :file: arc_en_ciel.py
 from turtle import *
 # Votre prénom, nom, classe
 
-dot(100)
+left(90)
+back(300)
+dot(800, 'red')
 ```
 
 ### Sapin de Noël
@@ -418,23 +420,18 @@ from turtle import *
 
 def sapin():
     ...
-
 def boule():
     ...
-
 def etoile():
     ...
 
 sapin()
 forward(100)
 boule()
-
-if len(dir(Turtle)) > 100:
-    from tkinter import * 
-    Screen().getcanvas().postscript(file='sapin.eps')
+done()
 ```
 
-### Une ville
+### Ville
 
 Dessinez et coloriez une ville. Définissez des fonctions pour des maisons et des immeubles.
 
@@ -447,15 +444,91 @@ dot(1000, 'skyblue')  # background
 
 def maison():
     ...
-
 def immeuble():
     ...
 
 maison()
 forward(100)
 immeuble()
+done()
+```
 
-if len(dir(Turtle)) > 100:
-    from tkinter import * 
-    Screen().getcanvas().postscript(file='ville.eps')
+### Chambre
+
+Dessinez une chambre avec des meubles en couleurs, que vous définissez chacun par une fonction. Vous êtes libre d'inventer d'autres meubles, de les arranger différemment et de les utiliser de multiples fois.
+
+```{codeplay}
+:file: chambre.py
+from turtle import *
+# Prénom, nom, classe
+
+def chaise():    
+    left(90)
+    forward(100)
+    back(50)
+    right(90)
+    forward(50)
+    right(90)
+    forward(50)
+    left(90)
+
+def table():
+    ...
+def lit():
+    ...
+
+chaise()
+table()
+lit()
+done()
+```
+
+### Tetris
+
+Les carrés de base d'un tétromino mesurent 40 x 40 pixels. Ils en existent 7 formes, qui sont nommés d'après les lettres auxquels ils ressemblent et qui ont des couleurs standard :
+
+```{image} media/tetromino.png
+```
+
+Créez des fonctions pour dessiner les 7 tétrominos avec leur couleur appropriée et composez la forme ci-dessous.
+
+```{image} media/tetris2.png
+```
+
+```{codeplay}
+:file: tetris2.py
+from turtle import *
+# Votre prénom, nom, classe
+
+def O():
+    fillcolor('yellow')
+    begin_fill()
+    forward(80)
+    left(90)
+    forward(80)
+    left(90)
+    forward(80)
+    left(90)
+    forward(80)
+    left(90)
+    end_fill()
+
+def I():
+    ...
+def T():
+    ...
+def L():
+    ...
+def J():
+    ...
+def Z():
+    ...
+def S():
+    ...
+
+back(200)
+width(3)
+O()
+...
+done()
 ```

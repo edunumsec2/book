@@ -6,8 +6,8 @@ Dans ce chapitre, nous explorons ce que c'est un programme et nous prenons
 Allons de l'avant (forward) avec la programmation. Nous allons voir que :
 
 - l'expression `from turtle import *` met a disposition les fonctions de dessin,
-- les instructions `forward()`, `backward()`, `left()`, `right()` permettent de dessiner,
-- la fonction `width()` permet de choisir l'épaisseur,
+- les instructions `forward()`, `backward()` permettent de tracer une ligne,
+- les instructions `left()`, `right()` permettent de changer de direction.
 
 ```{question}
 Un programme informatique est
@@ -329,6 +329,7 @@ from turtle import *
 # Prénom, nom, classe
 
 left(90)
+forward(100)
 ...
 done()
 ```
@@ -343,6 +344,7 @@ from turtle import *
 # Prénom, nom, classe
 
 left(90)
+forward(100)
 ...
 done()
 ```
@@ -357,6 +359,7 @@ from turtle import *
 # Prénom, nom, classe
 
 left(90)
+forward(100)
 ...
 done()
 ```
