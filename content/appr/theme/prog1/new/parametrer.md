@@ -70,7 +70,7 @@ def carre(a):
     up()
 
 up()
-back(250)
+backward(250)
 for x in range(30, 180, 30):
     carre(x)
     forward(x)
@@ -93,7 +93,7 @@ def maison():
         forward(50)
     left(90)
 
-back(200)        
+backward(200)        
 maison()
 forward(100)
 maison()
@@ -315,7 +315,7 @@ def polygone(a, n):
         left(360/n)
     up()
     
-back(150)
+backward(150)
 polygone(10, 36)
 forward(100)
 polygone(120, 3)
@@ -348,7 +348,7 @@ def pixel(taille, couleur):
     end_fill()
     forward(taille)
 
-back(200)
+backward(200)
 for x in ('yellow', 'orange', 'red'):
     pixel(100, x)
 ```
@@ -376,12 +376,12 @@ taille = 50
 def ligne(couleurs):
     for couleur in couleurs:
         pixel(taille, couleur)
-    back(len(couleurs) * taille)
+    backward(len(couleurs) * taille)
     up()
     sety(ycor() - taille)
     down()
 
-back(2 * taille)
+backward(2 * taille)
 ligne(('black', 'yellow', 'yellow', 'black'))
 ligne(('white', 'red', 'yellow', 'white'))
 ligne(('yellow', 'yellow', 'yellow', 'yellow'))

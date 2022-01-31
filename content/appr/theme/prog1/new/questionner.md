@@ -155,7 +155,7 @@ Si vous appuyez sur **Enter** sans entrer quelque chose, la boucle s'arrête.
 from turtle import *
 up()
 
-back(200)
+backward(200)
 x = input('Entrez une couleur: ')
 while x:
     dot(80, x)

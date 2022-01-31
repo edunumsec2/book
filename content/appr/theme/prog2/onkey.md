@@ -168,7 +168,7 @@ def avancer():
     forward(50)
 
 def reculer():
-    back(50)
+    backward(50)
 
 def gauche():
     left(30)

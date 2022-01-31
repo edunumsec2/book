@@ -90,7 +90,7 @@ from turtle import *
 colormode(255)
 up()
 
-back(250)
+backward(250)
 for x in range(0, 255, 20):
     dot(40, (x, x, x))
     color('white' if x < 128 else 'black')

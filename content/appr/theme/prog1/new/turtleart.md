@@ -29,7 +29,7 @@ width(1)
 n = 10
 for i in range(n):
     forward(150)
-    back(150)
+    backward(150)
     left(360/n)
 ```
 
@@ -48,7 +48,7 @@ width(3)
 n = 10
 for i in range(n):
     forward(150)
-    back(130)
+    backward(130)
     left(360/n)
 ```
 
@@ -217,7 +217,7 @@ n = 10
 for i in range(n):
     forward(90)
     triangle(90)
-    back(90)
+    backward(90)
     right(360/n)    
 ```
 
@@ -342,10 +342,10 @@ def branche(d, n, angle=50):
         right(2 * angle)
         branche(d-10, n-1)
         left(angle)
-    back(d)
+    backward(d)
 
 left(90)
-back(70)
+backward(70)
 branche(70, 6, 60)
 ```
 

@@ -15,7 +15,7 @@ color('brown')
 def branche():
     width(1)
     forward(30)
-    back(30)
+    backward(30)
 
 def branche2():
     width(2)
@@ -25,7 +25,7 @@ def branche2():
     right(100)
     branche()
     left(50)
-    back(40)
+    backward(40)
     
 def branche4():
     width(4)
@@ -35,7 +35,7 @@ def branche4():
     right(100)
     branche2()
     left(50)
-    back(50)
+    backward(50)
     
 def branche8():
     width(8)
@@ -45,10 +45,10 @@ def branche8():
     right(100)
     branche4()
     left(50)
-    back(50)
+    backward(50)
 
 left(90)
-back(50)
+backward(50)
 branche8()
 ```
 
@@ -128,7 +128,7 @@ print('shapes =', shapes)
 
 left(90)
 up()
-back(180)
+backward(180)
 
 for s in shapes:
     forward(50)
@@ -190,7 +190,7 @@ def etoile(n, m):
         forward(100)
         left(360/n*m)
 
-back(200)
+backward(200)
 print('tracer =', tracer())
 etoile(7, 3)
 

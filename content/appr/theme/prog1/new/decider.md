@@ -161,7 +161,7 @@ def walk(path):
             right(90)
             forward(d)
         elif c == 'b':
-            back(d)
+            backward(d)
 
 E = 'lffffrffrrfllfrrfllfrrff'
 print(len(E)) 

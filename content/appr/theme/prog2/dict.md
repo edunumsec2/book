@@ -210,7 +210,7 @@ RVB = {'rouge':(1, 0, 0), 'vert':(0, 1, 0), 'bleu':(0, 0, 1),
 couleurs = 'rouge', 'orange', 'jaune', 'vert', 'magenta', 'bleu'
 
 d = 50
-back(200)
+backward(200)
 for x in couleurs:
     dot(d, RVB[x])
     forward(d)
@@ -322,7 +322,7 @@ for c in histogram:
     up()
     forward(10)
     write(d, font=(None, 12), align='center')
-    back(d + 30)
+    backward(d + 30)
     setx(xcor() + 25)
 ```
 

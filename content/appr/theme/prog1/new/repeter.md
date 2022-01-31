@@ -123,7 +123,7 @@ forward(80)
 
 ## Eventail
 
-Que se passe-t-il si nous dessinons une ligne (`forward/back`) et tournons d'un petit angle à chaque fois ?
+Que se passe-t-il si nous dessinons une ligne (`forward/backward`) et tournons d'un petit angle à chaque fois ?
 C'est un peu comme un éventail qui s'ouvre.
 
 ```{codeplay}
@@ -132,7 +132,7 @@ from turtle import *
 
 for i in range(18):
     forward(100)
-    back(100)
+    backward(100)
     left(10)
 ```
 
@@ -149,11 +149,11 @@ from turtle import *
 
 for i in range(18):
     forward(100)
-    back(90)
+    backward(90)
     left(20)
 ```
 
-**Exercice** : Modifiez les valeurs dans `forward()` et `back()`.
+**Exercice** : Modifiez les valeurs dans `forward()` et `backward()`.
 
 ## Etoile
 
@@ -272,7 +272,7 @@ Vous pouvez changer la forme de votre tortue avec la fonction `shape()`.
 ```{codeplay}
 :file: for12.py
 from turtle import *
-back(200)
+backward(200)
 
 stamp()
 shape('turtle')

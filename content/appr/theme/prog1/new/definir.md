@@ -281,7 +281,7 @@ triangle()
 **Exercice** : Ajoutez encore un triangle disjoint.
 
 ```{caution}
-Contrairement aux fonctions `forward(d)` et `back(d)` qui nécessitent un argument, les fonctions `up()` et `down()` ne nécessitent pas d'argument.
+Contrairement aux fonctions `forward(d)` et `backward(d)` qui nécessitent un argument, les fonctions `up()` et `down()` ne nécessitent pas d'argument.
 ```
 
 ## Maison avec fenêtre

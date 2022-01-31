@@ -338,12 +338,12 @@ graph(cos, 'blue', 'cos')
 from turtle import *
 
 def axes():
-    back(280)
+    backward(280)
     forward(560)
     stamp()
-    back(280)
+    backward(280)
     left(90)
-    back(180)
+    backward(180)
     forward(360)
     stamp()
     up()

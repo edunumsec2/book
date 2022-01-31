@@ -236,7 +236,7 @@ def espace():
 def n():
     left(90)
     forward(80)
-    back(40)
+    backward(40)
     circle(-40, 180)
     forward(40)
     left(90)

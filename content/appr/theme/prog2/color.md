@@ -33,7 +33,7 @@ from turtle import *
 up()
 
 color(1, 0, 0)  # rouge
-back(200)
+backward(200)
 dot(80)
 
 color(1, 1, 0)  # jaune
@@ -77,7 +77,7 @@ colormode(255)
 up()
 
 color(255, 0, 0)  # rouge
-back(200)
+backward(200)
 dot(80)
 
 color(255, 255, 0)  # jaune
@@ -107,7 +107,7 @@ from turtle import *
 up()
 
 color(0, 0, 0)  # 0%
-back(200)
+backward(200)
 dot(80)
 
 color(0.25, 0, 0)  # 25%
@@ -242,7 +242,7 @@ def axe(angle, couleur):
     forward(180)
     stamp()
     write('  '+couleur, font=(None, 18))
-    back(180)
+    backward(180)
     
 getscreen().bgcolor('black')
 color('white')

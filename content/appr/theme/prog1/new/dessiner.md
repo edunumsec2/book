@@ -6,7 +6,7 @@ Dans ce chapitre, nous explorons ce que c'est un programme et nous prenons
 Allons de l'avant (forward) avec la programmation. Nous allons voir que :
 
 - l'expression `from turtle import *` met a disposition les fonctions de dessin,
-- les instructions `forward()`, `back()`, `left()`, `right()` permettent de dessiner,
+- les instructions `forward()`, `backward()`, `left()`, `right()` permettent de dessiner,
 - la fonction `width()` permet de choisir l'épaisseur,
 
 ```{question}
@@ -38,7 +38,7 @@ shape('turtle')
 forward(150)
 ```
 
-**Exercice** : Ajoutez d'autres fonctions telles que `back()`, `left()`, et `right()` pour faire un dessin.
+**Exercice** : Ajoutez d'autres fonctions telles que `backward()`, `left()`, et `right()` pour faire un dessin.
 
 ```{question}
 En Python `turtle` est
@@ -54,7 +54,7 @@ En Python `turtle` est
 La tortue peut se déplacer et dessiner une trace avec les 4 fonctions:
 
 - `forward(d)` pour avancer d'une distance `d` (en pixels)
-- `back(d)` pour reculer
+- `backward(d)` pour reculer
 - `left(a)` pour tourner à gauche d'un angle `a` (en degrés)
 - `right(a)` pour tourner à droite
 
@@ -72,7 +72,7 @@ from turtle import *
 
 shape('turtle')
 forward(300)
-back(600)
+backward(600)
 forward(300)
 
 left(90)
@@ -124,7 +124,7 @@ Une séquence d'instructions d'un bloc est exécutée
 
 La tortue possède 4 fonctions de déplacement, mais à strictement parler, on pourrait s'en sortir avec seulement deux fonctions, `forward()` et `left()`, car :
 
-- `back(d)` est équivalent à `forward(-d)`
+- `backward(d)` est équivalent à `forward(-d)`
 - `right(a)` est équivalent à `left(-a)`
 
 Dans le programme ci-dessous, les 4 lignes du deuxième bloc sont équivalentes aux 4 instructions du premier bloc et donnent un résultat identique.
@@ -138,9 +138,9 @@ left(90)
 forward(100)
 left(90)
 
-back(-160)  # équivalent à forward(160)
+backward(-160)  # équivalent à forward(160)
 right(-90)  # équivalent à left(90)
-back(-100)
+backward(-100)
 right(-90)
 ```
 

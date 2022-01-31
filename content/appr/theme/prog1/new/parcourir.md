@@ -27,7 +27,7 @@ Dans l'expression `for x in (...)` la variable `x` va prendre à tour de rôle l
 from turtle import *
 up()
 
-back(200)
+backward(200)
 for x in ('blue', 'cyan', 'red', 'magenta', 'pink', 'lime'):
     dot(80, x)
     forward(80)
@@ -44,7 +44,7 @@ Nous pouvons également itérer dans une séquence numérique et spécifier le d
 from turtle import *
 up()
 
-back(220)
+backward(220)
 for x in (20, 40, 60, 80, 100):
     dot(x, 'red')
     forward(x + 40)
@@ -92,7 +92,7 @@ def maison():
         forward(50)
     left(90)
 
-back(200)        
+backward(200)        
 maison()
 forward(100)
 maison()
@@ -117,7 +117,7 @@ def maison():
         forward(50)
     left(90)
 
-back(250)
+backward(250)
 for c in ('red', 'yellow', 'pink', 'lightblue', 'lightgreen'):
     fillcolor(c)
     begin_fill()       
@@ -138,7 +138,7 @@ Aujourd'hui, le drapeau arc-en-ciel est majoritairement connu comme celui de la 
 :file: LGBT.py
 from turtle import *
 
-back(300)
+backward(300)
 left(90)
 forward(167)
 right(90)
@@ -147,7 +147,7 @@ width(67)
 for x in ('red', 'orange', 'yellow', 'green', 'blue', 'purple'):
     pencolor(x)
     forward(600)
-    back(600)
+    backward((600)
     right(90)
     forward(67)
     left(90)
@@ -196,7 +196,7 @@ def smiley():
     dot(15)
 
     right(45)
-    back(30)
+    backward(30)
     dot(15)
 
     right(90)
@@ -206,7 +206,7 @@ def smiley():
     forward(30)
     up()
 
-back(200)
+backward(200)
 for w in (1, 5, 10, 20):
     width(w)
     smiley()
@@ -227,7 +227,7 @@ from turtle import *
 getscreen().bgcolor('skyblue')
 up()
 
-back(200)
+backward(200)
 for d in (10, 20, 30, 40):
     dot(100, 'yellow')
 
@@ -236,7 +236,7 @@ for d in (10, 20, 30, 40):
     dot(15)
 
     right(45)
-    back(30)
+    backward(30)
     dot(15)
 
     right(60)
@@ -318,7 +318,7 @@ def O():
     ...
 
 up()
-back(250)
+backward(250)
 
 for f in (S, L, O):
     down()

@@ -171,7 +171,7 @@ Dans l'exemple suivant, nous dessinons le drapeau du Bangladesh. Il est vert fra
 from turtle import *
 getscreen().bgcolor('green')
 
-back(30)
+backward()
 dot(266, 'red')
 hideturtle()
 ```
@@ -192,7 +192,7 @@ Le disque est décentré, légèrement décalé vers la fixation, de manière à
 from turtle import *
 dot(1000, 'green')  # background
 
-back(30)
+backward()
 dot(266, 'red')
 hideturtle()
 ```
@@ -250,7 +250,7 @@ forward(60)
 dot(40)
 
 right(45)
-back(100)
+backward(0)
 dot(40)
 
 right(90)
@@ -276,7 +276,7 @@ forward(60)
 dot(40)
 
 right(45)
-back(90)
+backward()
 dot(40)
 
 right(60)
@@ -341,7 +341,7 @@ def maison():
     left(90)
     end_fill()
     
-back(200)
+backward(0)
 fillcolor('pink')
 maison()
 forward(150)
