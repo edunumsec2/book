@@ -1,6 +1,6 @@
 # Cercler - `circle`
 
-Dans ce chapitre nous explorons les cercles et les arcs de cercle. Nous allons voir que :
+Dans ce chapitre, nous explorons les cercles et les arcs de cercle. Nous allons voir que :
 
 - le cercle est approximé par un polygone,
 - la fonction `circle(r)` dessine un cercle de rayon `r`,
@@ -38,8 +38,8 @@ for i in range(36):
 
 ## Périmètre et rayon
 
-Quel est le rayon `r` du cercle approximé par par le polygone ?
-Nous pouvons le trouver à partir du périmètre avec la relation suivante :
+Quel est le rayon `r` du cercle approximé par par le polygone ?
+Nous pouvons le trouver à partir du périmètre avec la relation suivante :
 
 $$ p = 2r \pi $$
 
@@ -68,7 +68,7 @@ circle(57)
 ## Fonction `circle()`
 
 La fonction `circle(r)` dessine un cercle de rayon `r`.
-Le cercle est dessiné :
+Le cercle est dessiné :
 
 - vers la gauche si `r` est positif,
 - vers la droite si `r` est négatif.
@@ -121,7 +121,7 @@ forward(50)
 circle(40, 180)
 ```
 
-**Exercice** : Dessinez un bonhomme de neige et utilisez `dot()` pour les yeux.
+**Exercice** : Dessinez un bonhomme de neige et utilisez `dot()` pour les yeux.
 
 ## Carré arrondi
 
@@ -198,11 +198,11 @@ circle(-100, 270)
 forward(90)
 ```
 
-**Exercice** : Augmentez l'épaisseur de la ligne.
+**Exercice** : Augmentez l'épaisseur de la ligne.
 
 ## Bretzel - ⌘
 
-Le pictogramme ⌘ (Unicode 2318), parfois appelé *Gordon loop* ou *bretzel*, a été dessiné par Susan Kare lors de la création du premier Macintosh pour sa touche de commande. Elle sert de préfixe à d'autres touches pour construire des raccourcis tel que :
+Le pictogramme ⌘ (Unicode 2318), parfois appelé *Gordon loop* ou *bretzel*, a été dessiné par Susan Kare lors de la création du premier Macintosh pour sa touche de commande. Elle sert de préfixe à d'autres touches pour construire des raccourcis tel que :
 
 - cmd+X pour couper
 - cmd+C pour Copier
@@ -217,7 +217,7 @@ for i in range(4):
     forward(150)
 ```
 
-**Exercice** : Modifiez le programme pour obtenir le même effet de croisement comme avec le symbole infini ∞.
+**Exercice** : Modifiez le programme pour obtenir le même effet de croisement comme avec le symbole infini ∞.
 
 ## Lettres
 
@@ -253,7 +253,7 @@ o()
 n()
 ```
 
-**Exercice** : Ajoutez und fonction `m()` pour écrire le mot `nom`. Ajoutez ensuite les lettres pour écrire votre prénom.
+**Exercice** : Ajoutez und fonction `m()` pour écrire le mot `nom`. Ajoutez ensuite les lettres pour écrire votre prénom.
 
 ## Pétales
 
@@ -273,7 +273,7 @@ for i in range(6):
     left(60)
 ```
 
-**Exercice** : Coloriez la fleur.
+**Exercice** : Coloriez la fleur.
 
 ## Exercices
 
@@ -299,7 +299,7 @@ forward(50)
 
 ### Anneaux olympiques
 
-Les cinq anneaux imbriqués, colorés en bleu, jaune, noir, vert et rouge sur un fond blanc, sont appelés *anneaux olympiques*. Le symbole est créé à l'origine en 1913 par Pierre Coubertin. Il semble avoir voulu que les anneaux représentent les cinq continents : Europe, Asie, Afrique, Amérique et Océanie.
+Les cinq anneaux imbriqués, colorés en bleu, jaune, noir, vert et rouge sur un fond blanc, sont appelés *anneaux olympiques*. Le symbole est créé à l'origine en 1913 par Pierre Coubertin. Il semble avoir voulu que les anneaux représentent les cinq continents : Europe, Asie, Afrique, Amérique et Océanie.
 
 C'est un défi particulier, de dessiner les anneaux imbriqués.
 

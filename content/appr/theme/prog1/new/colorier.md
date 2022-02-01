@@ -1,7 +1,7 @@
 # Colorier - `color`
 
 Dans ce chapitre, nous continuons à dessiner et nous introduisons la couleur.
-Une couleur peut être appliquée à une ligne, à un point, à une forme ou à l'arrière-fond. Nous allons voir que :
+Une couleur peut être appliquée à une ligne, à un point, à une forme ou à l'arrière-fond. Nous allons voir que :
 
 - la fonction `color()` permet de choisir une couleur,
 - la fonction `dot(d)` dessine un disque de diamètre `d`,
@@ -47,7 +47,7 @@ forward(150)
 left(120)
 ```
 
-**Exercice** : Modifiez les 3 couleurs en vous inspirant de la liste.
+**Exercice** : Modifiez les 3 couleurs en vous inspirant de la liste.
 
 ## Couleur de point
 
@@ -72,7 +72,7 @@ forward(150)
 dot(80, 'blue')
 ```
 
-**Exercice** : Modifiez la taille et la couleurs des 3 points.
+**Exercice** : Modifiez la taille et la couleurs des 3 points.
 
 ### Drapeau du Japon
 
@@ -86,7 +86,7 @@ dot(240, 'red')
 hideturtle()
 ```
 
-**Exercice** : Supprimez l'appel de la fonction `hideturtle()`. À quoi sert cette fonction ?
+**Exercice** : Supprimez l'appel de la fonction `hideturtle()`. À quoi sert cette fonction ?
 
 ### Lignes et points
 
@@ -158,7 +158,7 @@ triangle()
 end_fill()
 ```
 
-**Exercice** : Ajoutez un triangle d'une couleur différente.
+**Exercice** : Ajoutez un triangle d'une couleur différente.
 
 ## Couleur de fond
 
@@ -231,7 +231,7 @@ equerre()
 end_fill()
 ```
 
-**Exercice** : Dessinez le drapeau bi-colore du canton de Zurich.
+**Exercice** : Dessinez le drapeau bi-colore du canton de Zurich.
 
 ## Smiley
 
@@ -284,7 +284,7 @@ forward(100)
 dot(80)
 ```
 
-**Exercice** : Dessinez encore un autre smiley.
+**Exercice** : Dessinez encore un autre smiley.
 
 ## Croix
 
@@ -316,7 +316,7 @@ croix()
 end_fill()
 ```
 
-**Exercice** : Inversez les couleurs pour trouver le drapeau de la Croix-Rouge.
+**Exercice** : Inversez les couleurs pour trouver le drapeau de la Croix-Rouge.
 
 ## Maison
 
@@ -353,7 +353,7 @@ maison()
 
 ## Exporter une image
 
-Pour enregistrer votre dessin vers un fichier image, faites ceci :
+Pour enregistrer votre dessin vers un fichier image, faites ceci :
 
 - téléchargez le code,
 - ouvrez-le avec un éditeur externe,

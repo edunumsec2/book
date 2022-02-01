@@ -62,7 +62,7 @@ left(90)
 rectangle()
 ```
 
-**Exercice** : dessinez encore d'autres rectangles en appelant la nouvelle fonction `rectangle()`.
+**Exercice** : dessinez encore d'autres rectangles en appelant la nouvelle fonction `rectangle()`.
 
 ```{question}
 Une **indentation** de texte est 
@@ -114,7 +114,7 @@ porte()
 
 La définition d'une fonction permet d'ajouter des nouveaux mots à un langage de programmation. Contrairement aux commandes natives de Python qui sont toutes en anglais, nous sommes libres de les choisir en français.
 
-**Attention** : écrivez les fonctions sans accents et sans circonflexes : `batiment()`, `carre()`, `boite()`.
+**Attention** : écrivez les fonctions sans accents et sans circonflexes : `batiment()`, `carre()`, `boite()`.
 
 ```{codeplay}
 :file: def3.py
@@ -158,7 +158,7 @@ porte()
 
 ## Définir une fonction
 
-Le fait de donner un nom à une séquence d'instructions est appelé **définir un fonction**. Une **définition de fonction** comporte :
+Le fait de donner un nom à une séquence d'instructions est appelé **définir un fonction**. Une **définition de fonction** comporte :
 
 1. le mot-clé `def` (définir),
 1. le nom de la fonction (`batiment/porte`),
@@ -166,7 +166,7 @@ Le fait de donner un nom à une séquence d'instructions est appelé **définir 
 1. le deux-points `:`,
 1. un bloc en indentation.
 
-Qu'est-ce qu'un bloc en indentation ?
+Qu'est-ce qu'un bloc en indentation ?
 C'est un bloc de texte qui comporte des espaces vides à gauche. En Python, ces espaces apparaissent en multiples de 4.
 
 L'indentation est très importante en Python. C'est l'indentation qui indique l'étendue des instructions qui font partie de la fonction.
@@ -184,7 +184,7 @@ Parmi les 4 définitions de fonction ci-dessous, laquelle est correcte ?
 
 Comme l'indentation est tellement importante en Python, il en existe un raccourci.
 Il faut d'abord sélectionner les lignes de code dont vous voulez changer l'indentation.
-Ensuite, vous appuyez sur :
+Ensuite, vous appuyez sur :
 
 - la touche **tab** pour augmenter l'indentation
 - la touche **maj+tab** pour diminuer l'indentation
@@ -252,7 +252,7 @@ def maison():
 maison()
 ```
 
-**Exercice** : Mettez la porte au milieu de la maison, et dessinez une deuxième maison.
+**Exercice** : Mettez la porte au milieu de la maison, et dessinez une deuxième maison.
 
 ## Lever le stylo
 
@@ -505,7 +505,7 @@ Tetris met le joueur au défi de réaliser des lignes complètes en déplaçant 
 ```{image} media/tetris.png
 ```
 
-Les carrés de base d'un tétromino mesurent 20 × 20 pixels. Il y en a 7 formes différentes, qui sont nommées d'après les lettres auxquelles elles ressemblent :
+Les carrés de base d'un tétromino mesurent 20 × 20 pixels. Il y en a 7 formes différentes, qui sont nommées d'après les lettres auxquelles elles ressemblent :
 
 - S
 - L

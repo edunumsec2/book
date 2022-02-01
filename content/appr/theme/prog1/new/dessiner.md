@@ -3,7 +3,7 @@
 Dans ce chapitre, nous explorons ce que c'est un programme et nous prenons
  la métaphore du dessin. Ici, un programme est une séquence d'instructions pour dessiner une image.
 
-Allons de l'avant (forward) avec la programmation. Nous allons voir que :
+Allons de l'avant (forward) avec la programmation. Nous allons voir que :
 
 - l'expression `from turtle import *` met a disposition les fonctions de dessin,
 - les instructions `forward()`, `backward()` permettent de tracer une ligne,
@@ -63,7 +63,7 @@ La tortue peut se déplacer et dessiner une trace avec les 4 fonctions:
 
 ## Le canevas
 
-Au début, la tortue se trouve au centre d'une zone rectangulaire appelée _canevas_.  Ce rectangle a les propriétés suivantes :
+Au début, la tortue se trouve au centre d'une zone rectangulaire appelée _canevas_.  Ce rectangle a les propriétés suivantes :
 
 - l'origine (0, 0) se trouve au centre,
 - l'axe X, horizontal, s'étend de -300 (tout à gauche) à +300 (tout à droite),
@@ -112,7 +112,7 @@ forward(100)
 left(90)
 ```
 
-**Exercice** : Modifiez ce code pour en faire un rectangle.
+**Exercice** : Modifiez ce code pour en faire un rectangle.
 
 ```{question}
 Une séquence d'instructions d'un bloc est exécutée
@@ -177,7 +177,7 @@ forward(200)
 left(120)
 ```
 
-**Exercice** : Explorez différentes épaisseurs de ligne.
+**Exercice** : Explorez différentes épaisseurs de ligne.
 
 ## Maison avec toit
 
