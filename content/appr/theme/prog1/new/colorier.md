@@ -25,7 +25,7 @@ Voici une liste des couleurs disponibles. Pour les utiliser vous devez les écri
 ## Couleur de ligne
 
 La fonction `color()` permet de définir la couleur de ligne.
-Entre les parenthèses de la fonction vous devez écrire le nom d'une couleur, entouré d'apostrophes, par exemple `color('red')` pour dessiner une ligne rouge.
+Entre les parenthèses de la fonction, vous devez écrire le nom d'une couleur, entouré d'apostrophes — par exemple `color('red')` pour dessiner une ligne rouge.
 
 Voici un triangle avec 3 segments de couleurs différentes.
 
@@ -51,7 +51,7 @@ left(120)
 
 ## Couleur de point
 
-Nous pouvons afficher des points à chaque sommet :
+Nous pouvons afficher des points à chaque sommet :
 
 - la fonction `dot()` dessine un point standard,
 - la fonction `dot(d)` dessine un disque d'un diamètre `d`,
@@ -78,7 +78,7 @@ dot(80, 'blue')
 
 Le drapeau du Japon est un drapeau blanc avec un grand disque rouge en son centre. Ce disque représente le soleil, plus précisément la déesse shinto du soleil Amaterasu.
 
-Le rapport entre la hauteur et la largeur du drapeau est de 2:3, et le diamètre du disque est trois cinquièmes de la hauteur du drapeau.
+Le rapport entre la hauteur et la largeur du drapeau est de 2:3, et le diamètre du disque est $\frac{3}{5}$ de la hauteur du drapeau.
 
 ```{codeplay}
 from turtle import *
@@ -86,7 +86,7 @@ dot(240, 'red')
 hideturtle()
 ```
 
-**Exercice** : Enlevez la fonction `hideturtle()`. Quelle est sa fonction ?
+**Exercice** : Supprimez l'appel de la fonction `hideturtle()`. À quoi sert cette fonction ?
 
 ### Lignes et points
 
@@ -108,11 +108,11 @@ left(120)
 dot()
 ```
 
-**Exercice** : Augmentez l'épaisseur de la ligne à 10 pour vérifier que la taille des points change en conséquence.
+**Exercice** : Augmentez l'épaisseur de la ligne à 10 pour vérifier que la taille des points change en conséquence.
 
 ### Points et couleurs
 
-Il est possible de colorier les points différemment de la ligne. Dans ce cas il faut spécifier taille et couleur dans la fonction `dot()`.
+Il est possible de colorier les points différemment de la ligne. Dans ce cas, il faut spécifier la taille _et_ la couleur dans la fonction `dot()`.
 
 ```{codeplay}
 from turtle import *
@@ -133,12 +133,12 @@ dot(10, 'red')
 
 ## Couleur de forme
 
-Avec la fonction `fillcolor()` nous pouvons définir une couleur de remplissage de forme. Pour remplir une forme avec une couleur, nous devons ajouter les deux fonctions :
+Avec la fonction `fillcolor()`, nous pouvons définir une couleur de remplissage pour une forme quelconque que nous voulons dessiner. Pour remplir une forme avec une couleur, nous devons ajouter les deux fonctions :
 
 - `begin_fill()` au début de la forme,
 - `end_fill()` à la fin de la forme.
 
-Par exemple ce programme-ci dessine un carré jaune.
+Par exemple, ce programme-ci dessine un carré jaune.
 
 ```{codeplay}
 :file: color3.py
@@ -235,7 +235,7 @@ end_fill()
 
 ## Smiley
 
-Avec des cercles `dot(d)` de tailles différentes nous pouvons dessiner un smiley.
+Avec des cercles de tailles différentes dessinées avec `dot(d)`, nous pouvons dessiner un smiley.
 Voici un smiley qui exprime l'indifférence.
 
 ```{codeplay}
@@ -260,7 +260,7 @@ width(20)
 forward(100)
 ```
 
-**Exercice** : Ajoutez `up()` au début du programme pour ne plus montrer la trajectoire de la tortue.
+**Exercice** : Ajoutez `up()` au début du programme pour ne plus montrer la trajectoire de la tortue.
 
 Voici un autre smiley qui exprime la surprise.
 
@@ -288,7 +288,7 @@ dot(80)
 
 ## Croix
 
-La fonction `bras()` dessine les 3 côtés d'un carré et tourne de 90° dans le contre-sens.
+La fonction `bras()` dessine les 3 côtés d'un carré et tourne de 90° dans le sens contraire des aiguilles d'une montre.
 Répété 4 fois, ceci donne la forme d'une croix.
 
 ```{codeplay}
@@ -320,7 +320,7 @@ end_fill()
 
 ## Maison
 
-Nous reprenons l'exemple du chapitre précédent de la fonction `maison()`. Cette fois nous y intégrons `begin_fill()` et `end_fill()` pour pouvoir les colorier..
+Nous reprenons l'exemple du chapitre précédent de la fonction `maison()`. Cette fois, nous y intégrons `begin_fill()` et `end_fill()` pour pouvoir les colorier..
 
 ```{codeplay}
 :file: color9.py
@@ -349,11 +349,11 @@ fillcolor('lightblue')
 maison()
 ```
 
-**Exercice** : Ajoutez encore une maison dans une autre couleur.
+**Exercice** : Ajoutez encore une maison dans une autre couleur.
 
 ## Exporter une image
 
-Pour enregistrer votre dessin vers un fichier image faites ceci :
+Pour enregistrer votre dessin vers un fichier image, faites ceci :
 
 - téléchargez le code,
 - ouvrez-le avec un éditeur externe,
@@ -397,7 +397,7 @@ if len(dir(Turtle)) > 100:
 
 ### Arc-en-ciel
 
-Dessinez un arc-en-ciel avec des disques de rayon et de couleur approprié.
+Dessinez un arc-en-ciel avec des disques de rayons et de couleurs appropriés.
 
 ```{codeplay}
 :file: arc_en_ciel.py
@@ -455,7 +455,7 @@ done()
 
 ### Chambre
 
-Dessinez une chambre avec des meubles en couleurs, que vous définissez chacun par une fonction. Vous êtes libre d'inventer d'autres meubles, de les arranger différemment et de les utiliser de multiples fois.
+Dessinez une chambre avec des meubles en couleurs, que vous définissez chacun par une fonction. Vous êtes libre d'inventer d'autres meubles, de les arranger différemment et de les utiliser plusieurs fois.
 
 ```{codeplay}
 :file: chambre.py
@@ -485,12 +485,12 @@ done()
 
 ### Tetris
 
-Les carrés de base d'un tétromino mesurent 40 x 40 pixels. Ils en existent 7 formes, qui sont nommés d'après les lettres auxquels ils ressemblent et qui ont des couleurs standard :
+Les carrés de base d'un tétromino mesurent 40 × 40 pixels. Il y en a 7 formes différentes, qui sont nommées d'après les lettres auxquelles ils ressemblent et qui ont des couleurs standard :
 
 ```{image} media/tetromino.png
 ```
 
-Créez des fonctions pour dessiner les 7 tétrominos avec leur couleur appropriée et composez la forme ci-dessous.
+Créez des fonctions pour dessiner les 7 tétrominos avec leurs couleurs appropriées et composez la forme ci-dessous.
 
 ```{image} media/tetris2.png
 ```
