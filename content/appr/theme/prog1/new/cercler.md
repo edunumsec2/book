@@ -17,9 +17,9 @@ Un cercle affiché sur un écran d'ordinateur est créé par
 
 ## Du polygone au cercle
 
-Plus que le polygone régulier a de sommets, plus il ressemble à un cercle.
-Tandis qu'avec 9 sommets il ressemble clairement à un polygone,
-avec 36 sommets, il ressemble déjà raisonnablement à un cercle.
+Plus un polygone régulier a de côtés, plus il ressemble à un cercle.
+Tandis qu'avec 9 côtés, il ressemble clairement à un polygone,
+avec 36 côtés, il ressemble déjà raisonnablement à un cercle.
 
 ```{codeplay}
 :file: circle1.py
@@ -84,11 +84,11 @@ circle(-30)
 forward(100)
 ```
 
-**Exercice** : Inverser le signe du rayon dans la fonction `circle()`.
+**Exercice** : Inversez le signe du rayon dans la fonction `circle()`.
 
 ## Fleur
 
-Dessinons des cercles dans une boucle, et tournons à chaque fois.
+Dessinons des cercles dans une boucle, et tournons chaque fois.
 
 ```{codeplay}
 :file: circle4.py
@@ -99,13 +99,13 @@ for i in range(6):
     left(60)
 ```
 
-**Exercice** : Modifier l'angle le nombre de répétitions et l'angle de rotation.
+**Exercice** : Modifiez l'angle le nombre de répétitions et l'angle de rotation.
 
 ## Arc de cercle
 
-Cette fonction peut avoir un deuxième paramètre sous la forme `circle(r, angle)`
-ou `angle` représente l'angle de l'arc de cercle dessiné.
-Par défaut l'angle est de 360°, donc un cercle entier.
+Cette fonction peut avoir un deuxième paramètre sous la forme `circle(r, angle)`,
+où `angle` représente l'angle de l'arc de cercle dessiné.
+Par défaut, l'angle est de 360°, donc un cercle entier.
 
 Voici un exemple qui utilise deux demi-cercles de 180°.
 
@@ -125,7 +125,7 @@ circle(40, 180)
 
 ## Carré arrondi
 
-Avec la fonction `circle()` il est maintenant possible de dessiner un carré arrondie.
+Avec la fonction `circle()`, il est maintenant possible de dessiner un carré dont les coins sont arrondis.
 
 ```{codeplay}
 :file: circle6.py
@@ -136,7 +136,7 @@ for i in range(4):
     circle(20, 90)
 ```
 
-**Exercice** : Dessinez maintenant un **rectangle** arrondi.
+**Exercice** : Dessinez maintenant un rectangle avec des coins arrondis.
 
 ## Pac-Man
 
@@ -157,11 +157,11 @@ forward(100)
 end_fill()
 ```
 
-**Exercice** : Ajoutez l'oeil de Pac-Man.
+**Exercice** : Ajoutez l'œil de Pac-Man.
 
-## Coeur
+## Cœur
 
-Le cœur est le symbole de l'amour : on donne de façon métaphorique son cœur à la personne que l'on aime pour lui signifier qu'on lui confie sa vie.
+Le cœur est le symbole de l'amour : on donne de façon métaphorique son cœur à la personne que l'on aime pour lui signifier qu'on lui confie sa vie.
 
 ```{codeplay}
 :file: circle7.py
@@ -175,13 +175,14 @@ forward(120)
 circle(50, 225)
 ```
 
-**Exercice** : Coloriez le coeur en rouge, ajoutez une flèche.
+**Exercice** : Coloriez le cœur en rouge, ajoutez une flèche.
 
-## Infini - ∞
 
-Le mot **infini** (du latin in-, préfixe négatif, et finitus, *limité*) est un adjectif servant à qualifier quelque chose qui n'a pas de limite en nombre ou en taille. L'infini est représenté par le symbole ∞.
+## Infini — ∞
 
-Observez l'effet de croisement obtenu en ne pas dessinant un petit bout de l'intersection.
+Le mot **infini** (du latin in-, préfixe négatif, et finitus, *limité*) est un adjectif servant à qualifier quelque chose qui n'a pas de limite en nombre ou en taille. L'infini est représenté par le symbole ∞. Nous allons le dessiner.
+
+Observez l'effet de croisement obtenu lorsqu'on omet de dessiner un petit bout de trait à l'intersection.
 
 ```{codeplay}
 :file: circle8.py
@@ -202,11 +203,11 @@ forward(90)
 
 ## Bretzel - ⌘
 
-Le pictogramme ⌘ (Unicode 2318), parfois appelé *Gordon loop* ou *bretzel*, a été dessiné par Susan Kare lors de la création du premier Macintosh pour sa touche de commande. Elle sert de préfixe à d'autres touches pour construire des raccourcis tel que :
+Le pictogramme ⌘ (Unicode 2318), parfois appelé *Gordon loop* ou *bretzel*, a été dessiné par Susan Kare lors de la création du premier Macintosh pour sa touche de commande. Il sert de préfixe à d'autres touches pour construire des raccourcis tels que :
 
 - cmd+X pour couper
-- cmd+C pour Copier
-- cmd+V pour Coller
+- cmd+C pour copier
+- cmd+V pour coller
 
 ```{codeplay}
 :file: circle9.py
@@ -221,7 +222,7 @@ for i in range(4):
 
 ## Lettres
 
-Les lettres sont des signes graphiques qui formant un alphabet et servant à transcrire une langue.
+Les lettres sont des signes graphiques qui forment un alphabet et servent à transcrire une langue.
 
 ```{codeplay}
 :file: circle10.py
@@ -253,7 +254,7 @@ o()
 n()
 ```
 
-**Exercice** : Ajoutez und fonction `m()` pour écrire le mot `nom`. Ajoutez ensuite les lettres pour écrire votre prénom.
+**Exercice** : Ajoutez une fonction `m()` pour écrire le mot `nom`. Ajoutez ensuite des fonctions qui dessinent les lettres qui vous permettront d'écrire votre prénom.
 
 ## Pétales
 
@@ -301,7 +302,7 @@ forward(50)
 
 Les cinq anneaux imbriqués, colorés en bleu, jaune, noir, vert et rouge sur un fond blanc, sont appelés *anneaux olympiques*. Le symbole est créé à l'origine en 1913 par Pierre Coubertin. Il semble avoir voulu que les anneaux représentent les cinq continents : Europe, Asie, Afrique, Amérique et Océanie.
 
-C'est un défi particulier, de dessiner les anneaux imbriqués.
+C'est un défi particulier de dessiner les anneaux imbriqués. Observez bien les points d'intersection.
 
 ```{image} media/olympic_rings.png
 :width: 300
@@ -317,7 +318,7 @@ circle(50)
 
 ### Chemin de fer
 
-Avec des rails de chemin de fer dessinez un circuit en forme d'un rond (deux rails avec les traverses).
+Avec des rails de chemin de fer, dessinez un circuit en forme d'un rond (deux rails avec les traverses).
 
 ```{codeplay}
 :file: circuit_rond.py
@@ -332,7 +333,7 @@ forward(200)
 
 ### Circuit en huit
 
-Avec des rails de chemin de fer dessinez un circuit en forme de huit (deux rails avec les traverses). Découpez en sous-programmes.
+Avec des rails de chemin de fer, dessinez un circuit en forme de huit (deux rails avec les traverses). Découpez votre code en sous-programmes.
 
 ```{codeplay}
 :file: circuit_huit.py
