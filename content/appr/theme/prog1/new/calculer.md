@@ -1,9 +1,9 @@
 # Calculer - `int`
 
-Dans ce chapitre nous allons voir comment un programme peut calculer avec des nombres.
+Dans ce chapitre, nous allons voir comment un programme peut calculer avec des nombres.
 Ceci est utilisé dans une calculatrice ou un programme de tableur.
 
-Les nombres entiers forment une catégorie très importante. En anglais un entier est appelé **integer** (`int`). Nous allons voir que :
+Les nombres entiers forment une catégorie très importante. En anglais un entier est appelé **integer** (`int`). Nous allons voir que :
 
 - les opérateurs de base sont `+-*/`,
 - les nombres sont du type `int` ou `float`,
@@ -20,7 +20,7 @@ En informatique `int` est l'abbréviation pour
 
 ## Un calcul simple
 
-Dans ce chapitre nous allons explorer comment nous pouvons calculer avec des nombres. Voici un exemple qui affiche dans une première ligne sous forme de texte une expression mathématique, et dans une deuxième ligne une expression mathématique qui sera évaluée vers son résultat numérique.
+Dans ce chapitre, nous allons explorer comment nous pouvons calculer avec des nombres. Voici un exemple qui affiche dans une première ligne sous forme de texte une expression mathématique, et dans une deuxième ligne une expression mathématique qui sera évaluée vers son résultat numérique.
 
 ```{codeplay}
 :file: int0.py
@@ -30,7 +30,7 @@ print(2 ** 32)
 
 ## Les opérations de base
 
-En Python, nous retrouvons les 4 opérations arithmétiques de base :
+En Python, nous retrouvons les 4 opérations arithmétiques de base :
 
 - addition (`+`)
 - soustraction (`-`)
@@ -45,10 +45,10 @@ print('3 * 4 =', 3 * 4)
 print('3 / 4 =', 3 / 4)
 ```
 
-**Exercice** : Modifiez les 4 calculs et exécutez de nouveau.
+**Exercice** : Modifiez les 4 calculs et exécutez de nouveau.
 
 ```{question}
-Quel est le résultat de l'expression `'12' + '12'` ?  
+Quel est le résultat de l'expression `'12' + '12'` ?  
 {f}`12`  
 {f}`24`  
 {v}`1212`  
@@ -57,7 +57,7 @@ Quel est le résultat de l'expression `'12' + '12'` ?
 
 ## Les opérations supplémentaires
 
-En Python, nous avons également 3 opérateurs supplémentaires :
+En Python, nous avons également 3 opérateurs supplémentaires :
 
 - puissance (`**`),
 - division entière (`//`),
@@ -70,10 +70,10 @@ print('7 // 3 =', 7 // 3)
 print('7 % 3 =', 7 % 3)
 ```
 
-**Exercice** : Modifiez les 3 calculs et exécutez de nouveau.
+**Exercice** : Modifiez les 3 calculs et exécutez de nouveau.
 
 ```{question}
-Quel est le résultat de l'expression `1 + 2 * 3` ?
+Quel est le résultat de l'expression `1 + 2 * 3` ?
 
 {f}`1`
 {f}`2`
@@ -87,7 +87,7 @@ Quel est le résultat de l'expression `1 + 2 * 3` ?
 
 Une **variable** est une manière de designer une valeur par un nom. Le terme technique pour associer une valeur à une variable est **affectation** et elle utilise le symbole `=` (égal).
 
-Mais faites attention ! Il ne s'agit pas d'une équation dans le sens mathématique. La variable doit toujours figurer seule à gauche.
+Mais faites attention ! Il ne s'agit pas d'une équation dans le sens mathématique. La variable doit toujours figurer seule à gauche.
 La forme générique d'une affectation est `var = expression`.
 
 ```{codeplay}
@@ -100,24 +100,24 @@ print('diamètre =', 2 * r)
 print('circonférence =', pi * 2 * r)
 ```
 
-**Exercice** : Ajoutez le calcul de la surface du cercle.
+**Exercice** : Ajoutez le calcul de la surface du cercle.
 
-Pour nommer une variable vous pouvez utiliser :
+Pour nommer une variable vous pouvez utiliser :
 
 - lettres (`a...z` et `A...Z`),
 - chiffres (`0...9`),
 - le tiret bas (`_`).
 
-Le nom de variable :
+Le nom de variable :
 
 - est sensible aux majuscules/minuscules,
 - ne peut pas commencer avec un chiffre,
 - ne doit pas consister d'un mot-clé (`if`, `else`, `for`),
 - ne doit pas contenir un caractère spécial (`* + % & $ - / ?`).
 
-Ces noms de variables sont donc valides : `a2`, `_a`, `speed`, `pos_x`, `POS_X`
+Ces noms de variables sont donc valides : `a2`, `_a`, `speed`, `pos_x`, `POS_X`
 
-Ceux-ci sont invalides :
+Ceux-ci sont invalides :
 
 - `2var` (commence avec un chiffre),
 - `if` (correspond à un mot-clé),
@@ -125,7 +125,7 @@ Ceux-ci sont invalides :
 - `mon nom` (contient une espace et est interprété comme deux noms de variables).
 
 ```{question}
-Lesquels des noms de variable sont valides ?
+Lesquels des noms de variable sont valides ?
 
 {f}`var 2`  
 {v}`var2`  
@@ -148,10 +148,10 @@ print('périmètre =')
 print('diagonale =')
 ```
 
-**Exercice** : Complétez le calcul du périmètre et de la diagonale.
+**Exercice** : Complétez le calcul du périmètre et de la diagonale.
 
 ```{question}
-Quels noms de variable sont valides ?
+Quels noms de variable sont valides ?
 
 {f}`if`  
 {v}`VAR_2`  
@@ -173,7 +173,7 @@ print(type(123))
 print(type(3.14))
 ```
 
-**Exercice** : Trouvez encore d'autres types.
+**Exercice** : Trouvez encore d'autres types.
 
 L'exemple ci-dessus nous montre que
 
@@ -185,7 +185,7 @@ L'exemple ci-dessus nous montre que
 
 Les trois fonctions `str()`, `int()` et `float()` permettent de transformer d'un type à un autre.
 
-Par exemple la chaîne `'123'` peut être transformée soit en entier, soit en nombre à virgule flottante.
+Par exemple, la chaîne `'123'` peut être transformée soit en entier, soit en nombre à virgule flottante.
 
 ```{codeplay}
 :file: int6.py
@@ -216,9 +216,9 @@ print('circonférence =', pi * 2 * r)
 print('surface =')
 ```
 
-**Exercice** : Complétez le programme pour afficher la surface du cercle.
+**Exercice** : Complétez le programme pour afficher la surface du cercle.
 
-Nous pouvons également créer des programmes où nous demandons plusieurs valeurs à l'utilisateur. Cette fois nous permettons seulement l'utilisation de nombres entiers, et donc transformons la chaine obtenu avec `int()` en nombre entier.
+Nous pouvons également créer des programmes où nous demandons plusieurs valeurs à l'utilisateur. Cette fois, nous permettons seulement l'utilisation de nombres entiers, et donc transformons la chaine obtenu avec `int()` en nombre entier.
 
 ```{codeplay}
 :file: int8.py
@@ -230,7 +230,7 @@ print('périmètre =')
 print('diagonale =')
 ```
 
-**Exercice** : Complétez le programme pour afficher le périmètre et la diagonale.
+**Exercice** : Complétez le programme pour afficher le périmètre et la diagonale.
 
 ## Affectation multiple
 
@@ -254,12 +254,12 @@ x, y = y, x
 print(x, y)
 ```
 
-**Exercice** : Ajoutez une 3e variable et faites une permutation cyclique.
+**Exercice** : Ajoutez une 3e variable et faites une permutation cyclique.
 
 ## Revisiter le `tuple`
 
 L'affectation multpile utilise le format du tuple.
-Un **n-uplet** (tuple) est une séquence d'objets. Ce sont :
+Un **n-uplet** (tuple) est une séquence d'objets. Ce sont :
 
 - multiple valeurs séparé par une virgule,
 - une seule valeur terminé par une virgule,
@@ -305,7 +305,7 @@ for d in size * 2:
 
 ## Erreurs
 
-Pour bien programmer vous devez savoir interpréter les messages d'erreurs. Ces messages vous indiquent sur quelle ligne du programme il y a quel type d'erreur.
+Pour bien programmer vous devez savoir interpréter les messages d'erreur. Ces messages vous indiquent sur quelle ligne du programme il y a quel type d'erreur.
 
 ### SyntaxError
 
@@ -317,7 +317,7 @@ print(12 34)
 print('bonjour)
 ```
 
-**Exercice** : Corrigez les 3 erreurs de syntaxe.
+**Exercice** : Corrigez les 3 erreurs de syntaxe.
 
 ### TypeError
 
@@ -329,7 +329,7 @@ print('10' * '10')
 print('10' + 10)
 ```
 
-**Exercice** : Corrigez les 3 erreurs de type.
+**Exercice** : Corrigez les 3 erreurs de type.
 
 ### ZeroDivisionError
 
@@ -341,7 +341,7 @@ print(10 // 0)
 print(10 % 0)
 ```
 
-**Exercice** : Corrigez les 3 erreurs de division par zéro.
+**Exercice** : Corrigez les 3 erreurs de division par zéro.
 
 ### RangeError
 

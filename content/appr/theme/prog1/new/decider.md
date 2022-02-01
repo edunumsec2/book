@@ -1,6 +1,6 @@
 # Décider - `if`
 
-Dans ce chapitre nous allons voir comment un programme peut faire des choix, et comment il peut exécuter du code de façon sélective. Nous allons voir que :
+Dans ce chapitre, nous allons voir comment un programme peut faire des choix, et comment il peut exécuter du code de façon sélective. Nous allons voir que :
 
 - le mot-clé `if` permet une exécution conditionnelle,
 - les mot-clés `if-else` permettent de choisir entre deux alternatives,
@@ -8,7 +8,7 @@ Dans ce chapitre nous allons voir comment un programme peut faire des choix, et 
 
 
 ```{question}
-En Python `if` est suivi
+En Python, `if` est suivi
 
 {f}`d'un bloc`  
 {v}`d'une condition`  
@@ -16,7 +16,7 @@ En Python `if` est suivi
 {f}`d'un deux-points`
 ```
 
-## Êtes-vous majeur ?
+## Êtes-vous majeur ?
 
 Basé sur votre âge, le programme décide si vous êtes majeur ou pas.
 
@@ -54,7 +54,7 @@ print(x < 2)
 print(x != 2)
 ```
 
-**Attention** : Il ne faut pas confondre l'opérateur d'affectation (`=`) avec l'opérateur de comparaison (`==`).
+**Attention** : il ne faut pas confondre l'opérateur d'affectation (`=`) avec l'opérateur de comparaison (`==`).
 
 ```{codeplay}
 :file: if3.py
@@ -80,9 +80,9 @@ else:
     print('zéro')
 ```
 
-**Exercice** : Testez le programme avec -2, 0, 3.
+**Exercice** : Testez le programme avec -2, 0, 3.
 
-## Pair ou impair ?
+## Pair ou impair ?
 
 Le programme vous dit si le nombre que vous entrez est pair ou impair.
 
@@ -136,7 +136,7 @@ print(code)
 
 ## Décrire un chemin
 
-Un programme de dessin avec la tortue est une séquence d'instructions. Si la tortue ne se déplace que sur les lignes d'une grille, nous pouvons représenter un chemin par une séquence d'actions où chaque action peut être représentée avec une seule lettre :
+Un programme de dessin avec la tortue est une séquence d'instructions. Si la tortue ne se déplace que sur les lignes d'une grille, nous pouvons représenter un chemin par une séquence d'actions où chaque action peut être représentée avec une seule lettre :
 
 - `f` = avancer
 - `l` = tourner à gauche
@@ -168,11 +168,11 @@ print(len(E))
 walk(E)
 ```
 
-**Exercice** : Dessinez la lettre F.
+**Exercice** : Dessinez la lettre F.
 
 ## Opérations logiques
 
-Les opérateurs logiques permettent de combiner des valeurs logiques. En Python nous avons : 
+Les opérateurs logiques permettent de combiner des valeurs logiques. En Python, nous avons : 
 
 - *et* logique (`and`),
 - *ou* logique (`or`),
@@ -194,7 +194,7 @@ if (x < a) or (b < x):
     print(x, "est dehors l'interval (", a, '...', b, ')')
 ```
 
-L'opérateur `not` inverse la valeur logique :
+L'opérateur `not` inverse la valeur logique :
 
 - `True` devient `False`,
 - `False` devient `True`.
@@ -212,7 +212,7 @@ print('not p =', not p)
 print('not not p =', not not p)
 ```
 
-## Dans une intervalle ?
+## Dans une intervalle ?
 
 Python permet de remplacer `(a < x) and (x < b)` par l'expression plus compacte `a < x < b`.
 

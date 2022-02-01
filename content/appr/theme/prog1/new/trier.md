@@ -1,7 +1,7 @@
 # Trier - `sort`
 
-Dans ce chapitre nous allons découvrir quelques algorithmes de tri.
-Pouvoir trier les éléments d'une liste est une fonctionnalité fondamentale dans l'informatique. Le succès énorme de Google est basé sur un tri efficace de l'information, car dans une liste triée on peux trouver un élément **beaucoup** plus vite. Nous allons voir que :
+Dans ce chapitre, nous allons découvrir quelques algorithmes de tri.
+Pouvoir trier les éléments d'une liste est une fonctionnalité fondamentale dans l'informatique. Le succès énorme de Google est basé sur un tri efficace de l'information, car dans une liste triée on peux trouver un élément **beaucoup** plus vite. Nous allons voir que :
 
 - la fonction `min(liste)` retourne le minimum,
 - la fonction `max(liste)` retourne le maximum,
@@ -16,7 +16,7 @@ Lorsque vous jouez aux cartes, vous triez vos cartes par valeur et dans ce cas, 
 ## Fonction `min` et `max`
 
 Les fonctions `min()` et `max()` retournent le minimum et le maximum d'une liste à l'aide d'un algorithme.  
-Mais comment fonctionne cet algorithme ?
+Mais comment fonctionne cet algorithme ?
 
 ```{codeplay}
 :file: sort1.py
@@ -26,11 +26,11 @@ print(min(liste))
 print(max(liste))
 ```
 
-**Exercice** : Modifiez la liste avec des nouvelles valeurs et essayez de nouveau.
+**Exercice** : Modifiez la liste avec des nouvelles valeurs et essayez de nouveau.
 
 ## Trouver le minimum
 
-Pour trouver le minimum dans une liste il faut :
+Pour trouver le minimum dans une liste il faut :
 
 - prendre la première valeur comme minimum courant,
 - parcourir le reste de la liste,
@@ -48,14 +48,14 @@ for val in liste[1:]:
 print(min)
 ```
 
-**Exercice** : Modifiez l'algorithme pour trouver le minimum ET le maximum.
+**Exercice** : Modifiez l'algorithme pour trouver le minimum ET le maximum.
 
 ## Créer une liste
 
 Pour visualiser les algorithmes que nous allons rencontrer dans ce chapitre,
 nous allons créer des listes avec des nombres aléatoires.
 
-Avec une compréhension nous allons créer :
+Avec une compréhension nous allons créer :
 
 - une liste `x` avec des valeurs équidistantes dans l'intervalle [-300, 300]
 - une liste `y` avec des valeurs aléatoires dans l'intervalle [-200, 200]
@@ -75,7 +75,7 @@ print('x =', x)
 print('y =', y)
 ```
 
-**Exercice** : Modifiez `n` à 14.
+**Exercice** : Modifiez `n` à 14.
 
 ## Visualiser une liste
 
@@ -114,7 +114,7 @@ show()
 ## Visualiser un algorithme
 
 Pour visualiser l'algorithme du minimum nous dessinons en rouge les valeurs du minimum courant.
-Cet algorithme :
+Cet algorithme :
 
 - prend la première valeur comme minimum courant,
 - parcourt le reste de la liste,
@@ -160,7 +160,7 @@ for i in range(n):
     dot(d/2)
 ```
 
-**Exercice** : Modifiez l'algorithme pour visualiser le minimum ET le maximum.
+**Exercice** : Modifiez l'algorithme pour visualiser le minimum ET le maximum.
 
 ## L'indice du minimum
 
@@ -183,7 +183,7 @@ for i in range(1, n):
 print(i_min)
 ```
 
-**Exercice** : Modifiez l'algorithme pour trouver l'indice du minimum ET maximum.
+**Exercice** : Modifiez l'algorithme pour trouver l'indice du minimum ET maximum.
 
 ## Echanger deux éléments
 
@@ -260,7 +260,7 @@ move(3, 13)
 
 ## Echanger deux points
 
-Pour échanger deux points, il faut :
+Pour échanger deux points, il faut :
 
 - déplacer point `i` vers `j`
 - déplacer point `j` vers `i`
@@ -314,7 +314,7 @@ swap(3, 13)
 
 ## Echanger tous les points
 
-Dans l'exemple suivant nous échangeons deux points successives pour toute la liste. Nous observons que :
+Dans l'exemple suivant nous échangeons deux points successives pour toute la liste. Nous observons que :
 
 - le premier point avance complètement de gauche à droite
 - tous les autres points reculent d'une position
@@ -467,7 +467,7 @@ for i in range(n-1):
 show()
 ```
 
-**Exercice** : Modifiez la taille de la liste.
+**Exercice** : Modifiez la taille de la liste.
 
 ## Tri par insertion
 
@@ -544,7 +544,7 @@ for i in range(1, n):
 show()
 ```
 
-**Exercice** : Modifiez la taille de la liste.
+**Exercice** : Modifiez la taille de la liste.
 
 ## Tri à bulles
 
@@ -624,4 +624,4 @@ for i in range(n-1):
 show()
 ```
 
-**Exercice** : Modifiez la taille de la liste.
+**Exercice** : Modifiez la taille de la liste.

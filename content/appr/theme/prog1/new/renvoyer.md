@@ -1,13 +1,13 @@
 # Renvoyer - `return`
 
-Dans ce chapitre nous allons voir comment une fonction peut renvoyer une valeur. Ceci est très important pour pouvoir utiliser une fonction dans une expression mathématique. Nous allons voir que :
+Dans ce chapitre, nous allons voir comment une fonction peut renvoyer une valeur. Ceci est très important pour pouvoir utiliser une fonction dans une expression mathématique. Nous allons voir que :
 
 - le mot-clé `return` permet de renvoyer une valeur,
 - la fonction qui ne renvoie rien renvoie `None`,
 - l'expression `return x, y` renvoie un tuple.
 
 ```{question}
-En informatique le mot-clé `return` est utilisé pour
+En informatique, le mot-clé `return` est utilisé pour
 
 {f}`changer de direction`  
 {v}`renvoier une valeur`  
@@ -20,7 +20,7 @@ En informatique le mot-clé `return` est utilisé pour
 L'instruction `return` permet de retourner une valeur.
 Le grand intérêt d'une valeur de retour est qu'on peut l'utiliser de nouveau dans des expression.
 
-Par exemple nous pouvons créer une expression comme celle-ci : `square(x) + cube(x)`
+Par exemple, nous pouvons créer une expression comme celle-ci : `square(x) + cube(x)`
 
 ```{codeplay}
 :file: return1.py
@@ -57,11 +57,11 @@ x = int(input('Entrez un nombre: '))
 print(x, 'est', signe(x))
 ```
 
-**Exercice** : Testez avec -2, 0 et 3.
+**Exercice** : Testez avec -2, 0 et 3.
 
 ## Etat de la tortue
 
-Plusieurs fonctions nous renseignent sur l'état de la tortue :
+Plusieurs fonctions nous renseignent sur l'état de la tortue :
 
 - couleur
 - tortue

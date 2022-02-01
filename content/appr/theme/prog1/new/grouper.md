@@ -1,6 +1,6 @@
 # Grouper - `list`
 
-Dans ce chapitre nous découvrons une nouvelle structure de données - la liste. C'est une séquence ordonnée d'objets quelconques. Contrairement au `tuple` qui est immuable, la liste est *muable*, c'est à dire que nous pouvons réassigner ces éléments. Nous allons voir que :
+Dans ce chapitre, nous découvrons une nouvelle structure de données - la liste. C'est une séquence ordonnée d'objets quelconques. Contrairement au `tuple` qui est immuable, la liste est *muable*, c'est à dire que nous pouvons réassigner ces éléments. Nous allons voir que :
 
 - la liste est une séquence d'objets entre crochets tels que `[2, 3, 5]`,
 - la notion d'index `liste[i]` permet d'accéder au i-ème élément de la liste,
@@ -17,7 +17,7 @@ En informatique une liste est
 
 ## Des groupes d'objets
 
-Une liste permet de manipuler des groupes d'objets tels que :
+Une liste permet de manipuler des groupes d'objets tels que :
 
 - noms d'élèves
 - notes d'un cours
@@ -35,7 +35,7 @@ print(noms)
 print(notes)
 ```
 
-**Exercice** : Ajoutez une nouvelle liste et affichez-la.
+**Exercice** : Ajoutez une nouvelle liste et affichez-la.
 
 En Python, une liste est délimitée par des crochets `[]` et ses éléments sont séparés par des virgules `,`.
 
@@ -53,7 +53,7 @@ print(len(noms))
 print(len(notes))
 ```
 
-**Exercice** : Ajoutez des éléments à une liste at affichez de nouveau sa longueur.
+**Exercice** : Ajoutez des éléments à une liste at affichez de nouveau sa longueur.
 
 ## La fonction `list()`
 
@@ -107,10 +107,10 @@ print(noms[::2])   # chaque 2e élément
 print(noms[1::2])  # chaque 2e élément
 ```
 
-**Exercice** : Modifiez l'expression de tranche et exécutez de nouveau.
+**Exercice** : Modifiez l'expression de tranche et exécutez de nouveau.
 
 ```{question}
-Quel est le résultat de l'expression `'python'[:2]` ?
+Quel est le résultat de l'expression `'python'[:2]` ?
 
 {f}`thon`
 {f}`y`
@@ -131,7 +131,7 @@ for nom in noms:
 ```
 
 ```{question}
-Quel est le résultat de l'expression `'pikachu'[-3:]` ?
+Quel est le résultat de l'expression `'pikachu'[-3:]` ?
 
 {f}`pik`
 {v}`chu`
@@ -166,7 +166,7 @@ print(5 * [1])
 ## Ajouter des éléments
 
 Une **méthode** fonctionne comme une fonction, mais est rattachée à une liste avec la notation (`.`).
-Par exemple si `a` désigne une liste, on peux ajouter un élément `x` à la fin de cette liste avec l'expression `a.append(x)`.
+Par exemple, si `a` désigne une liste, on peux ajouter un élément `x` à la fin de cette liste avec l'expression `a.append(x)`.
 
 <!-- Ne devrait-on pas préciser qu'une méthode peut-être utilisée avec d'autres objets Python que des listes ?  -->
 
@@ -204,7 +204,7 @@ print(a)
 
 ## Enlever des éléments
 
-Les méthodes suivantes permettent d'enlever des éléments à une liste :
+Les méthodes suivantes permettent d'enlever des éléments à une liste :
 
 - `remove(x)`,
 - `pop(i)`,
@@ -248,7 +248,7 @@ print(a)
 
 ## Opérations
 
-Les listes disposent aussi de méthodes avec notation dotée :
+Les listes disposent aussi de méthodes avec notation dotée :
 
 - `liste.sort()` pour trier une liste,
 - `liste.reverse()` pour inverser l'ordre des éléments,
@@ -260,7 +260,7 @@ La méthode `sort()` trie la liste dans l'ordre croissant (pour les caractères,
 Cette méthode fonctionne uniquement si tous les éléments sont du même type (nombre, texte) et peuvent être comparés.
 
 ```{codeplay}
- :file: list17.py
+:file: list17.py
 a = [23, 10, -89, -54, 99, 2, 13]
 a.sort()
 print('trié', a)
@@ -291,7 +291,7 @@ affiche(a, 'red', 'triée')
 hideturtle()
 ```
 
-**Exercice** : Ajoutez 5 éléments en plus.
+**Exercice** : Ajoutez 5 éléments en plus.
 
 ### Inverser une liste
 
@@ -457,7 +457,7 @@ while x or len(pile):
 print('fin')
 ```
 
-**Exercice** : Ajoutez des objets (nombres, texte) sur la pile. Enlevez un élément avec *Enter*.
+**Exercice** : Ajoutez des objets (nombres, texte) sur la pile. Enlevez un élément avec *Enter*.
 
 ## La file d'attente
 
@@ -485,4 +485,4 @@ while x or len(file):
 print('fin')
 ```
 
-**Exercice** : Ajoutez des objets (nombres, texte) à la file. Enlevez avec *Enter*.
+**Exercice** : Ajoutez des objets (nombres, texte) à la file. Enlevez avec *Enter*.

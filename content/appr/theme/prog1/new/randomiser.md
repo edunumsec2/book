@@ -1,13 +1,13 @@
 # Randomiser - `random`
 
-Dans ce chapitre nous verrons comment un programme peut introduire un élément aléatoire dans un calcul ou dans un raisonnement. Ceci est très important pour programmer certains jeux. Nous allons voir que :
+Dans ce chapitre, nous verrons comment un programme peut introduire un élément aléatoire dans un calcul ou dans un raisonnement. Ceci est très important pour programmer certains jeux. Nous allons voir que :
 
 - la fonction `random()` renvoie une valeur aléatoire dans l'intervalle [0, 1],
 - la fonction `randint(a, b)` renvoie un entier aléatoire dans l'intervalle [a, b],
 - la fonction `shuffle(liste)` fait une permutation aléatoire des éléments d'une liste.
 
 ```{question}
-En Python `random` est
+En Python, `random` est
 
 {v}`un module`  
 {f}`une condition`  
@@ -334,7 +334,7 @@ for n in range(1, 7):
     clear()
 ```
 
-**Exercice** : Modifiez le code pour afficher avec le dé avec un nombre aléatoire entre 1 et 6.
+**Exercice** : Modifiez le code pour afficher avec le dé avec un nombre aléatoire entre 1 et 6.
 
 ## Permuter
 

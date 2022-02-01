@@ -1,6 +1,6 @@
 # Parcourir - `tuple`
 
-Dans ce chapitre nous allons découvrir le concept très important de la séquence. Ce concept s'appelle `tuple` en langage Python ou **n-uplet** en français. Une séquence est un groupement d'objets, par exemple de couleurs, de distances ou d'angles. Ce qui est très intéressant c'est que nous pouvons parcourir les valeurs d'une séquence l'une après l'autre. Nous allons voir que :
+Dans ce chapitre, nous allons découvrir le concept très important de la séquence. Ce concept s'appelle `tuple` en langage Python ou **n-uplet** en français. Une séquence est un groupement d'objets, par exemple de couleurs, de distances ou d'angles. Ce qui est très intéressant c'est que nous pouvons parcourir les valeurs d'une séquence l'une après l'autre. Nous allons voir que :
 
 - la structure `(10, 20, 10)` représente une séquence (`tuple`),
 - dans `for x in (10, 20, 10):` la variable `x` parcourt des nombres,
@@ -18,9 +18,9 @@ En informatique un `tuple` est
 ## Parcourir des couleurs
 
 Pour dessiner de multiples couleurs, nous pouvons définir une séquence (tuple) de couleurs et parcourir cette séquence.
-En Python une séquence est délimitée par des parenthèses `()` et les éléments sont séparé par une virgule.
+En Python, une séquence est délimitée par des parenthèses `()` et les éléments sont séparé par une virgule.
 
-Dans l'expression `for x in (...)` la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'blue'`, `'cyan'`, `'red'`, etc.
+Dans l'expression `for x in (...)` la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'blue'`, `'cyan'`, `'red'`, etc.
 
 ```{codeplay}
 :file: tuple1.py
@@ -33,7 +33,7 @@ for x in ('blue', 'cyan', 'red', 'magenta', 'pink', 'lime'):
     forward(80)
 ```
 
-**Exercice** : Modifiez la séquence des couleurs.
+**Exercice** : Modifiez la séquence des couleurs.
 
 ## Parcourir des diamètres
 
@@ -50,7 +50,7 @@ for x in (20, 40, 60, 80, 100):
     forward(x + 40)
 ```
 
-**Exercice** : Modifiez la séquence des diamètres.
+**Exercice** : Modifiez la séquence des diamètres.
 
 ## Parcourir des distances
 
@@ -75,11 +75,11 @@ forward(50)
 batiment()
 ```
 
-**Exercice** : Placez la porte à l'intérieur du bâtiment et coloriez-la en rouge.
+**Exercice** : Placez la porte à l'intérieur du bâtiment et coloriez-la en rouge.
 
 ## Parcourir des angles
 
-Nous allons reprendre nos fonctions `maison()` et avec l'aide d'une séquence nous pouvons l'écrire de manière bien plus compacte. Cette fois-ci la séquence représente des angles, donc nous nommons notre variable `a` pour nous rappeler que c'est un angle.
+Nous allons reprendre nos fonctions `maison()` et avec l'aide d'une séquence nous pouvons l'écrire de manière bien plus compacte. Cette fois-ci, la séquence représente des angles, donc nous nommons notre variable `a` pour nous rappeler que c'est un angle.
 
 ```{codeplay}
 :file: tuple4.py
@@ -98,13 +98,13 @@ forward(100)
 maison()
 ```
 
-**Exercice** : Ajoutez une porte et une fenêtre à la maison.
+**Exercice** : Ajoutez une porte et une fenêtre à la maison.
 
 ## Maisons en couleurs
 
 Dans l'exemple nous allons d'abord parcourir une séquence d'angles avec une variable d'itération `a` pour dessiner une maison.
 
-Ensuite nous allons parcourir une séquence de couleurs avec une variable `c` pour dessiner des maisons en différentes couleurs.
+Ensuite, nous allons parcourir une séquence de couleurs avec une variable `c` pour dessiner des maisons en différentes couleurs.
 
 ```{codeplay}
 :file: tuple5.py
@@ -126,13 +126,13 @@ for c in ('red', 'yellow', 'pink', 'lightblue', 'lightgreen'):
     forward(100)
 ```
 
-**Exercice** : Changez la couleurs des maisons.
+**Exercice** : Changez la couleurs des maisons.
 
 ## Drapeau LGBT
 
 Le drapeau arc-en-ciel, ou également appelé le drapeau de la paix, est un drapeau représentant plusieurs bandes ayant les couleurs d'un arc-en-ciel. L'usage du drapeau arc-en-ciel est une ancienne tradition commune à de nombreuses cultures. Il évoque généralement la paix, la diversité sexuelle et de genre, ainsi que l'harmonie entre les individus dans le monde entier.
 
-Aujourd'hui, le drapeau arc-en-ciel est majoritairement connu comme celui de la communauté lesbienne, gay, bisexuelle, transgenre, (abréviation : LGBT), depuis 1978.
+Aujourd'hui, le drapeau arc-en-ciel est majoritairement connu comme celui de la communauté lesbienne, gay, bisexuelle, transgenre, (abréviation : LGBT), depuis 1978.
 
 ```{codeplay}
 :file: LGBT.py
@@ -176,7 +176,7 @@ for c in ('pink', 'red', 'pink', 'red', 'pink'):
     left(60)
 ```
 
-**Exercice** : Il manque une pétale, corrigez le programme.
+**Exercice** : Il manque une pétale, corrigez le programme.
 
 ## Sourire
 
@@ -214,11 +214,11 @@ for w in (1, 5, 10, 20):
     left(5)
 ```
 
-**Exercice** : Faites varier un autre paramètres, par exemple la distance des yeux, ou la taille d'un oeil.
+**Exercice** : Faites varier un autre paramètres, par exemple la distance des yeux, ou la taille d'un œil.
 
 ## Etonnement
 
-Cette fois nous faisons varier le diamètre de la bouche.
+Cette fois, nous faisons varier le diamètre de la bouche.
 
 ```{codeplay}
 :file: tuple8.py
@@ -286,7 +286,7 @@ for c in ('pink', 'violet', 'darkviolet'):
     left(120)
 ```
 
-**Exercice** : Tournez le cube de 30°.
+**Exercice** : Tournez le cube de 30°.
 
 ## Minecraft
 
@@ -337,7 +337,7 @@ Tetris met le joueur au défi de réaliser des lignes complètes en déplaçant 
 ```{image} media/tetris.png
 ```
 
-Les éléments de base d'un tétromino mesurent 20 x 20 pixels. Il existe 7 formes de tétrominos, qui sont nommés d'après les lettres auxquels ils ressemblent :
+Les éléments de base d'un tétromino mesurent 20 × 20 pixels. Il existe 7 formes de tétrominos, qui sont nommés d'après les lettres auxquels ils ressemblent :
 
 - S
 - L
@@ -347,11 +347,11 @@ Les éléments de base d'un tétromino mesurent 20 x 20 pixels. Il existe 7 form
 - J
 - T
 
-Cette fois, utilisez :
+Cette fois, utilisez :
 
 - une séquence d'angles pour définir un tétromino,
 - un point (dot) pour marquer l'origine du tétromino,
-- une séquence de fonctions pour parcourir les tétronimos.
+- une séquence de fonctions pour parcourir les tétrominos.
 
 ```{codeplay}
 :file: tetris.py

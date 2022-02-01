@@ -1,6 +1,6 @@
 # Créer - `turtle`
 
-Dans ce chapitre nous présentons toute une série d'idées artistiques, inspirées du travail d'Artemis Papert que vous trouvez sur le site [TurtleArt](https://turtleart.org).
+Dans ce chapitre, nous présentons toute une série d'idées artistiques, inspirées du travail d'Artemis Papert que vous trouvez sur le site [TurtleArt](https://turtleart.org).
 
 *La créativité, c'est l'intelligence qui s'amuse.*  
 – Albert Einstein
@@ -241,9 +241,9 @@ for i in range(20):
     dot(n, 'fuchsia') 
 ```
 
-## Oeillet
+## Œillet
 
-L'**oeillet** rouge est un des symboles du mouvement ouvrier. En France tout particulièrement, on porte un oeillet rouge à la boutonnière pour la fête du Travail.
+L'**œillet** rouge est un des symboles du mouvement ouvrier. En France tout particulièrement, on porte un œillet rouge à la boutonnière pour la fête du Travail.
 
 ```{codeplay}
 :file: art11.py
@@ -272,9 +272,9 @@ for i in range(n):
     left(360/n)
 ```
 
-## Coeur
+## Cœur
 
-Le **coeur** est un organe musculaire qui assure la circulation du sang dans le corps à travers des contractions rythmiques.
+Le **cœur** est un organe musculaire qui assure la circulation du sang dans le corps à travers des contractions rythmiques.
 
 ```{codeplay}
 :file: art12.py

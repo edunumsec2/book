@@ -1,17 +1,17 @@
 # Ecrire - `str`
 
-Dans ce chapitre nous allons nous intéresser au texte. Le texte est une catégorie d'information qui est essentiel dans beaucoup de programmes, tel qu'une application de messagerie ou un programme de traitement de texte.
+Dans ce chapitre, nous allons nous intéresser au texte. Le texte est une catégorie d'information qui est essentiel dans beaucoup de programmes, tel qu'une application de messagerie ou un programme de traitement de texte.
 
 <!-- ![text-based](media/text_game.jpg)
 
-```{admonition} Le saviez-vous ?
+```{admonition} Le saviez-vous ?
 :class: hint
 Les tout premiers jeux vidéos sur ordinateur utilisaient presque exclusivement du texte, et quelques dessins en ASCII art, pour plonger le joueur dans un univers d'aventure et de découvertes. Dans l'image ci-dessus, le texte dit "Vous êtes maintenant à la fin d'une route, en face d'un petit bâtiment en briques. Autour de vous il y a une forêt. Un ruisseau sort du bâtiment et s'écoule dans une rigole. - *Entrer dans le bâtiment*. Vous êtes à l'intérieur du bâtiment (...)"
 Ce qui est intéressant ici, c'est que c'est le joueur qui a dû trouver la commande lui permettant de réaliser une action qui l'a fait avancer dans le jeu. "Colossal Cave Adventure", dont l'extrait est issu, est un jeu de 1975, qui a fasciné une génération entière d'informaticiens qui ont cherché à résoudre les énigmes posées par le jeu pour arriver au bout de l'aventure. Aujourd'hui, il existe de nombreux outils en ligne vous permettant d'écrire des histoires interactives où vos lecteurs peuvent prendre des décisions sur la suite de l'aventure. 
 ``` 
 -->
 
-Techniquement un texte est appelé une **chaîne de caractères**, ou string en anglais (`str`). Nous allons voir que :
+Techniquement un texte est appelé une **chaîne de caractères**, ou string en anglais (`str`). Nous allons voir que :
 
 - un texte est délimité par une apostrophe `'` ou un guillemet double `"`,
 - l'opérateur `*` répète un texte,
@@ -28,7 +28,7 @@ Un string informatique est
 
 ## Délimiter un texte
 
-Tout caractère imprimable peux être utilisé pour créer un texte :
+Tout caractère imprimable peux être utilisé pour créer un texte :
 
 - lettres (`a...z` et `A...Z`)
 - chiffres (`0...9`)
@@ -36,7 +36,7 @@ Tout caractère imprimable peux être utilisé pour créer un texte :
 - parenthèses (`[]{}<>`)
 - symboles (`$*#...`)
 
-Pour différencier un morceau de texte du reste d'un programme, il doit être délimité par des symboles spéciaux qui sont :
+Pour différencier un morceau de texte du reste d'un programme, il doit être délimité par des symboles spéciaux qui sont :
 
 - apostrophe (`'`)
 - guillemets doubles (`"`)
@@ -52,7 +52,7 @@ le texte peut s'étaler sur plusieurs lignes.
 """)
 ```
 
-**Exercice** : Ajoutez des lignes supplémentaires au texte qui est délimité par `"""`.
+**Exercice** : Ajoutez des lignes supplémentaires au texte qui est délimité par `"""`.
 
 ## Répéter un texte
 
@@ -65,7 +65,7 @@ print('=' * 20)
 print('hello ' * 3)
 ```
 
-**Exercice** : Répétez une chaîne plus longue.
+**Exercice** : Répétez une chaîne plus longue.
 
 ## Concaténer un texte
 
@@ -96,7 +96,7 @@ le texte peut s'étaler sur plusieurs lignes.
 """))
 ```
 
-**Exercice** : Ajoutez quelques caractères et re-exécutez le code.
+**Exercice** : Ajoutez quelques caractères et re-exécutez le code.
 
 Pour savoir combien de fois il faut répéter un symbole dans le but d'obtenir la même longueur qu'un texte donné, nous pouvons utiliser la fonction `len()` et ainsi créer des lignes qui ont la même longueur qu'un texte.
 
@@ -108,7 +108,7 @@ print(x)
 print('=' * len(x))
 ```
 
-**Exercice** : Entourez votre texte d'un autre symbole.
+**Exercice** : Entourez votre texte d'un autre symbole.
 
 ## Le code ASCII
 
@@ -125,7 +125,7 @@ print('B =', ord('B'))
 print('a =', ord('a'))
 ```
 
-Nous constatons que :
+Nous constatons que :
 
 - le code ASCII pour la lettre A est 65,
 - les codes suivent l'ordre de l'alphabet,
@@ -151,7 +151,7 @@ L’**art ASCII** consiste à réaliser des images uniquement à l'aide des lett
 
 Précéder la chaîne de caractères avec `r` permet de ne pas tenir compte des symboles d'échappement (barre oblique en arrière `\`).
 
-Voici un exemple :
+Voici un exemple :
 
 ![rabbit](media/ascii-art.jpeg)
 
@@ -168,7 +168,7 @@ print(r"""
 
 ```
 
-**Exercice** : Le site [asciiart.eu](https://www.asciiart.eu) contient beaucoup d'exemples d'art ASCII. Trouvez-en un et copiez-le dans un programme Python.
+**Exercice** : Le site [asciiart.eu](https://www.asciiart.eu) contient beaucoup d'exemples d'art ASCII. Trouvez-en un et copiez-le dans un programme Python.
 
 ## Echapper un caractère
 
@@ -210,7 +210,7 @@ print('chaque\nmot\nsur\nune\nligne')
 print('\nhello world' * 5)
 ```
 
-**Exercice** : Ajoutez une nouvelle ligne de code qui contient des `\n`.
+**Exercice** : Ajoutez une nouvelle ligne de code qui contient des `\n`.
 
 ## Aligner en colonnes
 
@@ -227,7 +227,7 @@ print('12\tclavier\t25.95')
 
 Un  émoji (絵文字), est un terme issu du japonais pour désigner les pictogrammes utilisés dans les messages électroniques et les pages web japonaises, qui se sont répandus dans le monde entier.
 
-Le mot emoji signifie littéralement « image » (e) + « lettre » (moji) ; la ressemblance avec « émotion » est un jeu de mot interculturel.
+Le mot emoji signifie littéralement « image » (e) + « lettre » (moji) ; la ressemblance avec « émotion » est un jeu de mot interculturel.
 
 Un émoji peut être utilisée comme un caractère à l'intérieur d'un texte.
 Nous pouvons le répéter avec l'opérateur `*` et obtenir son code **Unicode** avec la fonction `ord(c)`.
@@ -248,10 +248,10 @@ for i in range(10):
     print(chr(i + 127822))
 ```
 
-**Exercice** : Affichez les 10 emojis qui suivent 😀.
+**Exercice** : Affichez les 10 emojis qui suivent 😀.
 
 ```{warning}
-Utiliser des émojis dans Thonny ne fonctionne pas. Ceci fait planter Thonny !  
+Utiliser des émojis dans Thonny ne fonctionne pas. Ceci fait planter Thonny !  
 Le module graphique utilisé actuellement (Tk 8.6.8) ne supporte pas des émojis.
 Ce bug sera corrigé avec Thonny 4.0 qui utilisera la version Tk 8.6.12.
 ```
@@ -292,14 +292,14 @@ for i in  range(n, n + 10):
     print(i, chr(i))
 ```
 
-**Exercice** : Affichez les 10 kanjis qui suivent 語 (langage).
+**Exercice** : Affichez les 10 kanjis qui suivent 語 (langage).
 
 ## Les commentaires
 
 En Python, un commentaire est un bout de code qui est ignoré par Python.
 Un commentaire commence par le symbole hashtag (`#`).
 
-Les commentaires sont utilisés pour ajouter à un programme des informations supplémentaires :
+Les commentaires sont utilisés pour ajouter à un programme des informations supplémentaires :
 
 - explications,
 - nom de l'auteur,
@@ -323,7 +323,7 @@ sur plusieurs lignes.
 """
 ```
 
-**Exercice** : Enlever le # devant `print('au revoir')` pour l'exécuter.
+**Exercice** : Enlever le # devant `print('au revoir')` pour l'exécuter.
 
 ## La fonction `write()`
 
@@ -347,4 +347,4 @@ write('Arial 36', font=('Arial', 36))
 hideturtle()
 ```
 
-**Exercice** : Essayez d'autres tailles et polices.
+**Exercice** : Essayez d'autres tailles et polices.

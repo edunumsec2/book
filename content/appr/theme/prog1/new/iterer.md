@@ -1,9 +1,9 @@
 # Itérer - `range`
 
-Dans ce chapitre nous allons voir de près comment une variable peut parcourir ou itérer sur une plage numérique.
+Dans ce chapitre, nous allons voir de près comment une variable peut parcourir ou itérer sur une plage numérique.
 
 Une boucle permet de raccourcir le code et de mieux le structurer. 
-Une boucle ne représente pas seulement une économie de lignes de code, mais donne aussi la possibilité de contrôler le nombre de répétitions. Nous allons voir que :
+Une boucle ne représente pas seulement une économie de lignes de code, mais donne aussi la possibilité de contrôler le nombre de répétitions. Nous allons voir que :
 
 - la boucle `for` répète du code pour un ensemble de valeurs données,
 - la variable d'itération `i` prend une autre valeur à chaque tour,
@@ -34,11 +34,11 @@ for i in range(x):
     left(360/x)
 ```
 
-**Exercice** : Testez avec des nombres différents entre 3 et 13.
+**Exercice** : Testez avec des nombres différents entre 3 et 13.
 
 ## Parcourir une séquence
 
-Dans la boucle `for` une variable d'itération va parcourir une valeur après l'autre d'une séquence d'objets. Cette séquence peut être :
+Dans la boucle `for` une variable d'itération va parcourir une valeur après l'autre d'une séquence d'objets. Cette séquence peut être :
 
 - une plage numérique avec `range()`,
 - une chaîne de caractères,
@@ -63,13 +63,13 @@ for i in range(x):
     write(i, font=(None, 12))
 ```
 
-**Exercice** : Testez avec des nombres différents entre 5 et 13.
+**Exercice** : Testez avec des nombres différents entre 5 et 13.
 
 ## Itérer avec `range()`
 
 La fonction `range(start, stop, step)` permet de produire une séquence linéaire d'entiers. Les entiers se trouvent dans l'intervalle semi-fermé `[start, stop[` avec un incrément de `step`.
 
-Le sens des paramètres :
+Le sens des paramètres :
 
 - `start` est la valeur de départ,
 - `stop` est la valeur finale, mais sans l'inclure,
@@ -87,9 +87,9 @@ for i in range(start, stop, step):
     print(i, end=' ')
 ```
 
-**Exercice** : Affichez les entiers entre 100 et 200 avec un incrément de 3.
+**Exercice** : Affichez les entiers entre 100 et 200 avec un incrément de 3.
 
-La fonction `range()` fonctionne aussi dans l'ordre décroissant. Dans ce cas il faut choisir pour `step` une valeur négative.
+La fonction `range()` fonctionne aussi dans l'ordre décroissant. Dans ce cas, il faut choisir pour `step` une valeur négative.
 
 ```{codeplay}
 :file: range4.py
@@ -97,9 +97,9 @@ for i in range(-100, -200, -3):
     print(i, end=' ')
 ```
 
-**Exercice** : Affichez les entiers de +10 à -10.
+**Exercice** : Affichez les entiers de +10 à -10.
 
-La fonction `range()` peut fonctionner avec 1, 2 ou 3 paramètres. Les valeurs par défaut sont :
+La fonction `range()` peut fonctionner avec 1, 2 ou 3 paramètres. Les valeurs par défaut sont :
 
 - 0 pour `start`,
 - 1 pour `step`.
@@ -139,7 +139,7 @@ for c in mot:
     sleep(0.1)
 ```
 
-**Exercice** : Testez avec des textes différents.
+**Exercice** : Testez avec des textes différents.
 
 ## Parcourir une liste
 
@@ -161,7 +161,7 @@ for color in colors:
     forward(50)
 ```
 
-**Exercice** : Ajoutez d'autres couleurs à la liste.
+**Exercice** : Ajoutez d'autres couleurs à la liste.
 
 ## Dessiner une spirale
 
@@ -198,7 +198,7 @@ for y in '1234567':
     print()
 ```
 
-**Exercice** : Transformez le code pour afficher 20 colonnes de cellules.
+**Exercice** : Transformez le code pour afficher 20 colonnes de cellules.
 
 ## Itérer sur x et y
 

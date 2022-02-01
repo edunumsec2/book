@@ -1,6 +1,6 @@
 ### La chambre
 
- Dessinez une chambre avec des meubles, que vous définissez chacun par une fonction. Vous êtes libre d'inventer d'autres meubles, de les arranger différemment et de les utiliser de multiples fois.
+ Dessinez une chambre avec des meubles, que vous définissez chacun par une fonction. Vous êtes libre d'inventer d'autres meubles, de les arranger différemment et de les utiliser plusieurs fois.
 
  ```{codeplay}
  :file: chambre.py
@@ -59,7 +59,7 @@
  ```{image} media/tetris.png
  ```
 
- Les éléments de base d'un tétromino mesurent 20 x 20 pixels. Il existe 7 formes de tétrominos, qui sont nommés d'après les lettres auxquels ils ressemblent :
+ Les éléments de base d'un tétromino mesurent 20 × 20 pixels. Il existe 7 formes de tétrominos, qui sont nommés d'après les lettres auxquels ils ressemblent :
 
  - S
  - L

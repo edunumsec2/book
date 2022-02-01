@@ -1,13 +1,13 @@
 # Attendre - `while`
 
-Dans ce chapitre nous découvrons un deuxième type de boucle, la boucle `while`. Elle est souvent utilisée pour attendre quelque chose. Nous allons voir que :
+Dans ce chapitre, nous découvrons un deuxième type de boucle, la boucle `while`. Elle est souvent utilisée pour attendre quelque chose. Nous allons voir que :
 
 - la boucle `while` répète aussi longtemps qu'une condition est vraie,
 - la fonction `sleep()` permet d'attendre et ralentir le programme,
 - le mot-clé `break` permet de sortir de la boucle.
 
 ```{question}
-En Python `while` est
+En Python, `while` est
 
 {f}`une fonction`  
 {f}`une condition`  
@@ -52,7 +52,7 @@ while nom != '':
 print(noms)
 ```
 
-**Exercice** : Entrez les noms de 3-4 de vos amis.
+**Exercice** : Entrez les noms de 3-4 de vos amis.
 
 ## Faire une somme
 
@@ -74,7 +74,7 @@ while x:
 print('somme =', somme)
 ```
 
-**Exercice** : Entrez les frais de vos 3 derniers achats.
+**Exercice** : Entrez les frais de vos 3 derniers achats.
 
 ## Faire une moyenne
 
@@ -95,7 +95,7 @@ while x:
 print('moyenne =', somme/n)
 ```
 
-**Exercice** : Entrez vos notes de français.
+**Exercice** : Entrez vos notes de français.
 
 ## Deviner un nombre
 
@@ -124,7 +124,7 @@ while x !=  n:
 print('\nBravo. Vous avez réussi!')
 ```
 
-**Exercice** : Quelle est la meilleure stratégie pour deviner un nombre ?
+**Exercice** : Quelle est la meilleure stratégie pour deviner un nombre ?
 
 ## Indentation
 
@@ -175,7 +175,7 @@ for i in range(3):
     print('-' * 11)
 ```
 
-**Exercice** : Enlevez l'indentation de l'instruction `print('-' * 11)`.
+**Exercice** : Enlevez l'indentation de l'instruction `print('-' * 11)`.
 
 ## Sortir avec `break`
 

@@ -1,6 +1,6 @@
 # Questionner - `input`
 
-Dans ce chapitre nous introduisons une façon pour que le programme puisse poser une question. L'utilisateur du programme peut alors répondre et entrer une information. La réponse sera mémorisée dans une variable. Un traitement de l'information peut être fait, et le résultat peut être affiché. Nous allons voir que :
+Dans ce chapitre, nous introduisons une façon pour que le programme puisse poser une question. L'utilisateur du programme peut alors répondre et entrer une information. La réponse sera mémorisée dans une variable. Un traitement de l'information peut être fait, et le résultat peut être affiché. Nous allons voir que :
 
 - la fonction `input('question')` demande une information,
 - la variable `x` mémorise une information,
@@ -17,7 +17,7 @@ Une variable informatique est
 
 ## Dire bonjour
 
-Nous commençons par le grand classique des livres d'introduction à la programmation : afficher la fameuse phrase *hello world.*.
+Nous commençons par le grand classique des livres d'introduction à la programmation : afficher la fameuse phrase *hello world.*.
 La fonction `print()` permet d'écrire du texte vers la console.
 Ici, la console est la région de texte qui suit le programme interactive.
 
@@ -26,7 +26,7 @@ Ici, la console est la région de texte qui suit le programme interactive.
 print('hello world.')
 ```
 
-**Exercice** : Affichez encore 2-3 lignes de texte en plus avec la fonction `print()`.
+**Exercice** : Affichez encore 2-3 lignes de texte en plus avec la fonction `print()`.
 
 ## Ecrire et dessiner
 
@@ -45,7 +45,7 @@ for i in range(4):
     left(90)
 ```
 
-**Exercice** : Ajoutez en plus du code pour dessiner un triangle, et annoncez-le dans le texte.
+**Exercice** : Ajoutez en plus du code pour dessiner un triangle, et annoncez-le dans le texte.
 
 ## La fonction `input()`
 
@@ -53,7 +53,7 @@ La fonction `input('question')` permet de demander une entrée (input) à l'util
 L'utilisateur voit le texte `question` affiché à la console et doit répondre à cette question. Il termine son entrée avec la touche Enter.
 
 La réponse de l'utilisateur est ensuite mémorisée dans une variable que nous appelons `x` dans cet exemple.
-Ensuite nous pouvons utiliser cette variable `x` dans la suite du programme, par exemple dans une expression `print()`.
+Ensuite, nous pouvons utiliser cette variable `x` dans la suite du programme, par exemple dans une expression `print()`.
 
 ```{codeplay}
 :file: input2.py
@@ -75,7 +75,7 @@ age = input('Entrez votre age: ')
 print('Trés bien', nom, 'vous avez', age, 'ans')
 ```
 
-**Exercice** : Ajoutez une 3e question.
+**Exercice** : Ajoutez une 3e question.
 
 ## Convention
 
@@ -115,7 +115,7 @@ x = input('Entrez une couleur: ')
 getscreen().bgcolor(x)
 ```
 
-**Exercice** : Entrez différentes couleurs valides.
+**Exercice** : Entrez différentes couleurs valides.
 
 Nous pouvons continuer les questions avec une couleur de ligne et une couleur de remplissage, pour dessiner un rectangle.
 
@@ -140,7 +140,7 @@ for i in range(4):
 end_fill()
 ```
 
-**Exercice** : Ajoutez une 4e question pour demander la couleur des points (dot) et ajoutez un point colorié dans chaque sommet.
+**Exercice** : Ajoutez une 4e question pour demander la couleur des points (dot) et ajoutez un point colorié dans chaque sommet.
 
 ## Demander en boucle
 
@@ -165,8 +165,8 @@ while x:
 
 ## Erreurs
 
-Il est important de bien comprendre les messages d'erreurs.
-Dans cette section vous allez découvrir les différentes catégories d'erreur et comment les corriger.
+Il est important de bien comprendre les messages d'erreur.
+Dans cette section, vous allez découvrir les différentes catégories d'erreur et comment les corriger.
 
 ### SyntaxError
 
@@ -183,7 +183,7 @@ def carré():
 carré()
 ```
 
-**Exercice** : Corrigez les 3 erreurs de syntaxe'.
+**Exercice** : Corrigez les 3 erreurs de syntaxe'.
 
 ### SyntaxError: EOF
 
@@ -197,7 +197,7 @@ left(90)
 forward(100
 ```
 
-**Exercice** : Corrigez l'erreur de syntaxe'.
+**Exercice** : Corrigez l'erreur de syntaxe'.
 
 ### ValueErreor
 
@@ -207,13 +207,13 @@ Cette erreur est produite quand la valeur numérique est trop grande pour corres
 print(chr(10000000))
 ```
 
-**Exercice** : Corrigez l'erreur de valeur'.
+**Exercice** : Corrigez l'erreur de valeur'.
 
 ## Exercices
 
 ### Maison
 
-Créez un programme qui dessine une maison et demande :
+Créez un programme qui dessine une maison et demande :
 
 - la couleur de la maison
 - la couleur de la porte

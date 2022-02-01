@@ -1,13 +1,13 @@
 # Paramétrer - `f(x)`
 
-Dans ce chapitre nous allons voir de plus près le concept de la fonction, concept que nous avons vu dès le deuxième chapitre comme façon de donner un nom à une séquence d'instructions. Ici nous allons voir comment nous pouvons ajouter un ou plusieurs paramètres à une fonction. Nous allons voir que :
+Dans ce chapitre, nous allons voir de plus près le concept de la fonction, concept que nous avons vu dès le deuxième chapitre comme façon de donner un nom à une séquence d'instructions. Ici nous allons voir comment nous pouvons ajouter un ou plusieurs paramètres à une fonction. Nous allons voir que :
 
 - l'expression `def f(x):` permet de définir une fonction,
 - un paramètre `f(par)` est une variable dans la définition de fonction,
 - un argument `f(arg)` est une valeur dans l'appel de fonction.
 
 ```{question}
-En Python `def` est un raccourci pour
+En Python, `def` est un raccourci pour
 
 {f}`défoncé`  
 {f}`défilé`  
@@ -17,7 +17,7 @@ En Python `def` est un raccourci pour
 
 ## Paramétrer la fonction
 
-Jusqu'à maintenant notre carré a toujours eu la même taille.
+Jusqu'à maintenant, notre carré a toujours eu la même taille.
 Il serait très utile si notre nouvelle commande `carre(longueur)` pouvait dessiner des carrés de tailles différentes.
 C'est possible en spécifiant un paramètre pour la fonction.
 Le paramètre de la fonction est une variable locale qui est utilisée dans sa définition.
@@ -76,7 +76,7 @@ for x in range(30, 180, 30):
     forward(x)
 ```
 
-**Exercice** : Ecartez les carrés de 20 pixels.
+**Exercice** : Ecartez les carrés de 20 pixels.
 
 ## Dessiner une maison
 
@@ -264,9 +264,9 @@ maison(-170, -140, d=80)
 
 ## Le coronavirus
 
-Le nom « coronavirus » vient du latin et signifie « virus à couronne ». Son apparence sous un microscope électronique montre une frange de grandes projections bulbeuses qui évoquent une couronne solaire.
+Le nom « coronavirus » vient du latin et signifie « virus à couronne ». Son apparence sous un microscope électronique montre une frange de grandes projections bulbeuses qui évoquent une couronne solaire.
 
-Dans la fonction `corona()` les paramètres sont :
+Dans la fonction `corona()` les paramètres sont :
 
 - la distance entre projections `a`
 - la longueur de la projection `d`
@@ -292,7 +292,7 @@ def corona(a=10, d=20, n=24):
 corona()
 ```
 
-**Exercice** : Ajoutez 3 autres virus avec d'autres valeurs pour `a`, `d` et `n`.
+**Exercice** : Ajoutez 3 autres virus avec d'autres valeurs pour `a`, `d` et `n`.
 
 ## Squid Game logo
 
@@ -323,7 +323,7 @@ forward(170)
 polygone(100, 4)
 ```
 
-**Exercice** : Ajoutez votre nom et vos coordonnées à la carte de visite en utilisant la fonction `write()`.
+**Exercice** : Ajoutez votre nom et vos coordonnées à la carte de visite en utilisant la fonction `write()`.
 
 ## Dessiner un pixel
 
@@ -388,4 +388,4 @@ ligne(('yellow', 'yellow', 'yellow', 'yellow'))
 ligne(('yellow', 'yellow', 'yellow', 'white'))
 ```
 
-**Exercice** : Dessinez un autre Pokemon.
+**Exercice** : Dessinez un autre Pokemon.
