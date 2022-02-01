@@ -1,6 +1,6 @@
 # Répéter - `for`
 
-Dans ce chapitre nous découvrons comment utiliser une boucle `for` pour répéter un bloc d'instructions un certain nombre de fois. Nous allons voir que :
+Dans ce chapitre, nous découvrons comment utiliser une boucle `for` pour répéter un bloc d'instructions un certain nombre de fois. Nous allons voir que :
 
 - la boucle `for` permet de répéter des instructions,
 - la structure `for i in range(x):` permet de répéter un bloc x fois,
@@ -17,9 +17,9 @@ Une boucle informatique est
 
 ## La répétition
 
-Revenons vers un exemple simple : dessiner un carré.
+Revenons vers un exemple simple : dessiner un carré.
 
-Si nous regardons le code de près, nous pouvons voir que nous répétons 4 fois les mêmes deux instruction `forward()` et `left()`.
+Si nous regardons le code de près, nous pouvons voir que nous répétons 4 fois les mêmes deux instructions `forward()` et `left()`.
 
 ```{codeplay}
 :file: for1.py
@@ -35,10 +35,10 @@ forward(100)
 left(90)
 ```
 
-Ne serait-il pas pratique de pouvoir dire à la tortue de répéter ces instructions 4 fois ?  
+Ne serait-ce pas pratique de pouvoir dire à la tortue de répéter ces instructions 4 fois ? 
 Ceci est possible avec une boucle `for`. La ligne `for i in range(x):` va répéter `x` fois le bloc en indentation qui suit.
 
-Par rapport à l'exemple précédent nous avons rajouté un `dot()` à chaque sommet, et nous cachons la tortue à la fin avec la fonction `hideturtle()`.
+Par rapport à l'exemple précédent, nous avons rajouté un `dot()` à chaque sommet, et nous cachons la tortue à la fin avec la fonction `hideturtle()`.
 
 ```{codeplay}
 :file: for2.py
@@ -52,11 +52,11 @@ for i in range(4):
 hideturtle()
 ```
 
-**Exercice** : Transformez le rectangle en triangle.
+**Exercice** : Transformez le rectangle en triangle.
 
 ## Polygone régulier
 
-Avec une boucle `for` nous pouvons simplifier le dessins des formes symétriques.
+Avec une boucle `for`, nous pouvons simplifier le dessins des formes symétriques.
 
 ```{codeplay}
 :file: for3.py
@@ -82,7 +82,7 @@ carre()
 pentagone()
 ```
 
-**Exercice** : Définissez la fonction `hexagone()` pour dessiner un hexagone.
+**Exercice** : Définissez la fonction `hexagone()` pour dessiner un hexagone.
 
 ## Escalier
 
@@ -119,11 +119,11 @@ for i in range(4):
 forward(80)
 ```
 
-**Exercice** : Dessinez une usine avec un toit en dents de scie.
+**Exercice** : Dessinez une usine avec un toit en dents de scie.
 
 ## Eventail
 
-Que se passe-t-il si nous dessinons une ligne (`forward/backward`) et tournons d'un petit angle à chaque fois ?
+Que se passe-t-il si nous dessinons une ligne (`forward()`/`backward()`) et tournons chaque fois d'un petit angle ?
 C'est un peu comme un éventail qui s'ouvre.
 
 ```{codeplay}
@@ -136,11 +136,11 @@ for i in range(18):
     left(10)
 ```
 
-**Exercice** : Doublez l'angle de rotation dans `left()`.
+**Exercice** : Doublez l'angle de rotation dans `left()`.
 
 ## Diaphragme
 
-Que se passe-t-il si nous avançons plus que nous reculons ?
+Que se passe-t-il si nous avançons plus que nous reculons ?
 Une toute petite modification du programme peut faire une chouette différence.
 
 ```{codeplay}
@@ -153,11 +153,11 @@ for i in range(18):
     left(20)
 ```
 
-**Exercice** : Modifiez les valeurs dans `forward()` et `backward()`.
+**Exercice** : Modifiez les valeurs dans `forward()` et `backward()`.
 
 ## Etoile
 
-Voici une autre façon de toujours avancer, mais tourner à chaque fois d'un angle un peu plus petit que 180°.
+Voici une autre façon de toujours avancer, mais en tournant chaque fois d'un angle un peu plus petit que 180°.
 Essayons !
 
 ```{codeplay}
@@ -169,12 +169,12 @@ for i in range(9):
     left(160)
 ```
 
-**Exercice** : Changez le nombre de pics de l'étoile.
+**Exercice** : Changez le nombre de pics de l'étoile.
 
 ## Losange
 
 Si nous déformons les angles d'un carré, nous obtenons un losange (diamant).
-Quelle forme obtenons-nous en dessinant un carré et deux losanges ?
+Quelle forme obtenons-nous en dessinant un carré et deux losanges ?
 
 ```{codeplay}
 :file: for9.py
@@ -219,7 +219,7 @@ for i in range(6):
     left(60)
 ```
 
-**Exercice** : Tournez un angle plus petit que 60°
+**Exercice** : Tournez un angle plus petit que 60°
 
 ## Paquebot
 
@@ -246,7 +246,7 @@ for i in range(6):
     forward(30)
 ```
 
-**Exercice** : Créez une fonction 'paquebot()' et dessinez-en un deuxième.
+**Exercice** : Créez une fonction `paquebot()` et dessinez-en un deuxième.
 
 ## Estamper la tortue
 
@@ -263,7 +263,7 @@ for i in range(6):
     stamp()
 ```
 
-**Exercice** : Modifiez le programme pour estamper seulement à chaque deuxième sommet.
+**Exercice** : Modifiez le programme pour estamper seulement un sommet sur deux.
 
 ## Forme
 
@@ -287,7 +287,7 @@ shape('square')
 forward(100)
 ```
 
-**Exercice** : Essayez les formes `triangle` et `arrow`.
+**Exercice** : Essayez les formes `'triangle'` et `'arrow'`.
 
 ## Vitesse
 
@@ -304,7 +304,7 @@ for i in range(36):
     left(170)
 ```
 
-**Exercice** : Augmentez graduellement la vitesse de la tortue.
+**Exercice** : Augmentez graduellement la vitesse de la tortue.
 
 ## Exporter en PNG/JPG
 
@@ -322,16 +322,16 @@ img = Image.open(file)
 img.save('file.png')
 ```
 
-Pour sauvegarder en format JPG appelez tout simplement votre fichier `file.jpg`.
+Pour sauvegarder en format JPG appelez tout simplement votre fichier `'file.jpg'` plutôt que `'file.png'`.
 
 ## Erreurs
 
-Il est important de bien comprendre les messages d'erreurs.
-Dans cette section vous allez découvrir les différentes catégories d'erreur et comment les corriger.
+Il est important de bien comprendre les messages d'erreur.
+Dans cette section, vous allez découvrir les différentes catégories d'erreur et comment les corriger.
 
 ### ImportError
 
-Cette erreur est produite si vous essayez d'importer un module qui n'existe pas.
+Cette erreur survient lorsque vous essayez d'importer un module qui n'existe pas.
 
 ```{codeplay}
 from turtl import *
@@ -341,11 +341,11 @@ for i in range(3):
     left(120)
 ```
 
-**Exercice** : Corrigez l'erreur d'importation.
+**Exercice** : Corrigez l'erreur d'importation.
 
 ### SyntaxError
 
-Cette erreur est produite quand vous écrivez mal un mot-clé, ou si vous oubliez une ponctuation. Dans ce cas le mot-clé mal écrit n'est pas reconnu et il n'est pas colorié.
+Cette erreur survient lorsque vous écrivez mal un mot-clé, ou si vous oubliez une ponctuation. Dans ce cas, le mot-clé mal écrit n'est pas reconnu et il n'est la plupart du temps pas stylisé correctement dans votre code.
 
 ```{codeplay}
 fro turtle import *
@@ -355,11 +355,11 @@ fore i in range(3)
     left(120)
 ```
 
-**Exercice** : Corrigez les 3 erreurs de syntaxe.
+**Exercice** : Corrigez les 3 erreurs de syntaxe et remarquez les éventuelles différences de stylisation.
 
 ### NameError
 
-Cette erreur est produite quand vous écrivez mal le nom d'une variable ou fonction.
+Cette erreur survient lorsque vous écrivez mal le nom d'une variable ou fonction.
 
 ```{codeplay}
 from turtle import *
@@ -369,11 +369,11 @@ for i in range(n):
     lefft(120)
 ```
 
-**Exercice** : Corrigez les 3 erreurs de nom.
+**Exercice** : Corrigez les 3 erreurs de nom.
 
 ### TypeError
 
-Cette erreur est produite si vous ne mettez pas le nombre d'arguments correcte pour une fonction.
+Cette erreur survient lorsque vous ne mettez pas le nombre d'arguments correct pour une fonction.
 
 ```{codeplay}
 from turtle import *
@@ -383,7 +383,7 @@ for i in 3:
     left(100, 120)
 ```
 
-**Exercice** : Corrigez les 3 erreurs de type.
+**Exercice** : Corrigez les 3 erreurs de type.
 
 ## Exercice
 
@@ -440,7 +440,7 @@ forward(200)
 
 ### Gratte-ciel
 
-Dessinez un gratte-ciel avec $n \times m$ fenêtres. Pour ceci utilisez deux boucles imbriquées.
+Dessinez un gratte-ciel avec $n \times m$ fenêtres. Pour ceci, utilisez deux boucles imbriquées.
 
 ```{codeplay}
 :file: gratte_ciel.py
@@ -460,7 +460,8 @@ Le [jeu du moulin](https://fr.wikipedia.org/wiki/Jeu_du_moulin) est un jeu de so
 :width: 200
 ```
 
-Pour les points d'intersection, utilisez la fonction `dot()` que vous allez découvrir plus en détail dans le chapitre suivant. La distance entre les lignes est de 50 pixels.  
+Pour les points d'intersection, utilisez la fonction `dot()` que vous allez découvrir plus en détail dans le chapitre suivant. La distance entre les lignes est de 50 pixels.
+
 Vous constatez aussi une symétrie par 4. Donc avec un choix intelligent de fonction et de boucle `for`, vous pouvez réduire le nombre de lignes de code considérablement.
 
 ```{codeplay}
