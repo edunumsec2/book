@@ -32,6 +32,7 @@ left(90)
 
 Oui, c'est possible. Avec le mot-clé `def`, nous pouvons définir une nouvelle commande que nous pouvons par exemple appeler `rectangle()`.
 Cette façon de créer un raccourci est appelée **définir** une fonction.
+Le code à exécuter suit l'expression `def rectangle():` et se trouve en **indentation** (décalé vers la droite).
 
 Ensuite, il suffit d'écrire `rectangle()` pour dessiner un rectangle. On appelle ceci **appeler** une fonction.
 Rappelez-vous ceci :
@@ -321,12 +322,11 @@ maison()
 
 **Exercice** : Modifiez le programme pour que la fenêtre soit dessinée à l'intérieur de la maison. Dessinez une deuxième maison.
 
-## Trouver la symétrie
+## Trouver des motifs
 
-Une stratégie importante dans la programmation est de **reconnaître des structures identiques**. Par exemple, quand vous voyez une symétrie dans un dessin,
-vous devez repérer la partie qui est répétée et en créer une fonction.
+Une stratégie importante dans la programmation est de **reconnaître des structures identiques**. Par exemple, quand vous voyez un motif répété dans un dessin, vous devez repérer la partie qui est répétée et en créer une fonction.
 
-La fonction `bras()` dessine les 3 côtés d'un carré et tourne de 90° dans le sens contraire des aiguilles d'une montre.
+La fonction `bras()` dessine les 3 côtés d'un carré et tourne, à la fin, dans le sens approprié pour la suite.
 Ensuite, il suffit d'**appeler** 4 fois cette fonction pour dessiner une croix.
 En appelant la fonction `bras()`, au lieu d'écrire 6 lignes, nous n'écrivons qu'une ligne de code.
 

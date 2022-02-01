@@ -18,21 +18,21 @@ Un cercle affiché sur un écran d'ordinateur est créé par
 ## Du polygone au cercle
 
 Plus un polygone régulier a de côtés, plus il ressemble à un cercle.
-Tandis qu'avec 9 côtés, il ressemble clairement à un polygone,
-avec 36 côtés, il ressemble déjà raisonnablement à un cercle.
+Tandis qu'avec 9 côtés (noir), il ressemble clairement à un polygone,
+avec 36 côtés (rouge), il ressemble déjà raisonnablement à un cercle.
 
 ```{codeplay}
 :file: circle1.py
 from turtle import *
 
 for i in range(9):
-    forward(40)
+    forward(60)
     left(40)
-    
-right(15)
 
+right(15)
+color('red')
 for i in range(36):
-    forward(10)
+    forward(15)
     left(10)
 ```
 
@@ -49,20 +49,21 @@ $$ r = \frac{p}{2 \pi} $$
 
 La valeur numérique du rayon est
 
-$$ r = \frac{360}{6.28} = 57 $$
+$$ r = \frac{36 \times 15}{6.28} = 86 $$
 
-La fonction `circle(57)` dessine un cercle dont le rayon est 57. L'expérience montre que le polygone et le cercle ont effectivement la même taille.
+La fonction `circle(86)` dessine un cercle dont le rayon est 86. L'expérience montre que le polygone (noir) et le cercle (rouge) ont effectivement la même taille.
 
 ```{codeplay}
 :file: circle2.py
 from turtle import *
 
 for i in range(36):
-    forward(10)
+    forward(15)
     left(10)
 
 right(5)
-circle(57)
+color('red')
+circle(86)
 ```
 
 ## Fonction `circle()`
@@ -205,9 +206,9 @@ forward(90)
 
 Le pictogramme ⌘ (Unicode 2318), parfois appelé *Gordon loop* ou *bretzel*, a été dessiné par Susan Kare lors de la création du premier Macintosh pour sa touche de commande. Il sert de préfixe à d'autres touches pour construire des raccourcis tels que :
 
-- cmd+X pour couper
-- cmd+C pour copier
-- cmd+V pour coller
+- ⌘-X pour couper
+- ⌘-C pour copier
+- ⌘-V pour coller
 
 ```{codeplay}
 :file: circle9.py
@@ -284,7 +285,7 @@ for i in range(6):
 
 ### LGBTQ+
 
-On vous demande de dessiner des logos pour les toilettes avec le symbole traditionnel ♂ et ♀. La communauté LGBTQ+ vous demande d'y ajouter un troisième logo.
+On vous demande de dessiner des logos pour les toilettes avec le symbole traditionnel ♂ et ♀. La communauté [LGBT](https://fr.wikipedia.org/wiki/Mouvement_LGBT) vous demande d'y ajouter un troisième logo.
 
 ```{codeplay}
 :file: LGBTQ.py

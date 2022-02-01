@@ -58,6 +58,13 @@ hideturtle()
 
 Avec une boucle `for`, nous pouvons simplifier le dessins des formes symétriques.
 
+Observez bien la double indentation :
+
+- la première pour `def`
+- la deuxième pour `for`
+
+Dans les deux cas un `:` est suivi d'un bloc en indentation. En Python vous pouvez avoir multiples niveaux d'indentation.
+
 ```{codeplay}
 :file: for3.py
 from turtle import *
@@ -248,7 +255,43 @@ for i in range(6):
 
 **Exercice** : Créez une fonction `paquebot()` et dessinez-en un deuxième.
 
-## Estamper la tortue
+## Cube de Rubik
+
+Le [Cube de Rubik](https://fr.wikipedia.org/wiki/Rubik%27s_Cube) est un casse-tête inventé par Ernő Rubik en 1974, et qui s’est rapidement répandu sur toute la planète au cours des années 1980.
+
+Pour dessiner la face rouge, nous utilisons deux boucles imbriqués:
+
+- la boucle extérieure (`i`), pour le déplacent en verticale,
+- la boucle intérieur (`j`), pour le déplacement horizontale.
+
+Le les 2 instructions du bloc intérieur ont une double indentation.
+
+```{codeplay}
+from turtle import *
+
+def carre():
+    begin_fill()
+    for i in range(4):
+        forward(50)
+        left(90)
+    end_fill()
+    
+fillcolor('red')
+for i in range(3):
+    for j in range(3):
+        carre()
+        forward(50)
+    backward(150)
+    left(90)
+    forward(50)
+    right(90)
+```
+
+## La tortue
+
+Voici quelques fonctions de la tortue.
+
+### Estampe
 
 Vous pouvez laisser une impression de la tortue à sa position actuelle avec la fonction `stamp()`.
 
@@ -265,7 +308,7 @@ for i in range(6):
 
 **Exercice** : Modifiez le programme pour estamper seulement un sommet sur deux.
 
-## Forme
+### Forme
 
 Vous pouvez changer la forme de votre tortue avec la fonction `shape()`.
 
@@ -289,7 +332,7 @@ forward(100)
 
 **Exercice** : Essayez les formes `'triangle'` et `'arrow'`.
 
-## Vitesse
+### Vitesse
 
 Vous pouvez changer la vitesse de la tortue avec la fonction `speed(s)`.
 Le paramètre vitesse `s` peut varier entre 1 (le plus lent) et 1000 (le plus rapide). Sa vitesse par défaut est de 3. Mettre la vitesse à 0 choisit automatiquement la vitesse maximum.
@@ -378,7 +421,7 @@ Cette erreur survient lorsque vous ne mettez pas le nombre d'arguments correct p
 ```{codeplay}
 from turtle import *
 
-for i in 3:
+for i in range():
     forward()
     left(100, 120)
 ```
@@ -460,7 +503,7 @@ Le [jeu du moulin](https://fr.wikipedia.org/wiki/Jeu_du_moulin) est un jeu de so
 :width: 200
 ```
 
-Pour les points d'intersection, utilisez la fonction `dot()` que vous allez découvrir plus en détail dans le chapitre suivant. La distance entre les lignes est de 50 pixels.
+Pour les points d'intersection, utilisez la fonction `dot()`. La distance entre les lignes est de 50 pixels.
 
 Vous constatez aussi une symétrie par 4. Donc avec un choix intelligent de fonction et de boucle `for`, vous pouvez réduire le nombre de lignes de code considérablement.
 

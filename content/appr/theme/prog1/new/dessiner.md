@@ -248,8 +248,7 @@ Jusqu'à maintenant, nous avons exécuté nos petits programmes ici dans cette p
 Nous vous proposons d'utiliser [Thonny](https://thonny.org), qui est un logiciel libre, facile à installer, et un excellent éditeur pour débuter avec Python. Essayez de faire ceci :
 
 1. Ouvrez l'éditeur Thonny
-1. Définissez la fonction `maison()`
-1. Appelez la fonction
+1. Ecrivez le code pour dessiner une maison
 1. Sauvegardez le programme sous `maison.py`
 1. Exécutez le programme
 

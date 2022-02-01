@@ -131,14 +131,14 @@ left(120)
 dot(10, 'red')
 ```
 
-## Couleur de forme
+## Couleur de remplissage
 
 Avec la fonction `fillcolor()`, nous pouvons définir une couleur de remplissage pour une forme quelconque que nous voulons dessiner. Pour remplir une forme avec une couleur, nous devons ajouter les deux fonctions :
 
 - `begin_fill()` au début de la forme,
 - `end_fill()` à la fin de la forme.
 
-Par exemple, ce programme-ci dessine un carré jaune.
+Par exemple, ce programme-ci dessine un triangle vert.
 
 ```{codeplay}
 :file: color3.py
@@ -160,9 +160,32 @@ end_fill()
 
 **Exercice** : Ajoutez un triangle d'une couleur différente.
 
+On aurait pu inclure les deux fonctions qui indiquent le remplissage directement dans la fonction `triangle()`. Ceci simplifie le code quand on dessine plusieurs triangles.
+
+```{codeplay}
+:file: color3b.py
+from turtle import *
+
+def triangle():
+    begin_fill()
+    forward(100)
+    left(120)
+    forward(100)
+    left(120)
+    forward(100)
+    left(120)
+    end_fill()
+
+fillcolor('chartreuse')
+triangle()
+left(60)
+fillcolor('cyan')
+triangle()
+```
+
 ## Couleur de fond
 
-Le fonction `getscreen()` retourne un objet `Screen`. Cet objet possède une méthode `bgcolor()`. La combinaison `getscreen().bgcolor()` permet de définir la couleur d'arrière-fond (bg = background).
+La combinaison `getscreen().bgcolor()` permet de définir la couleur d'arrière-fond (bg = background).
 
 Dans l'exemple suivant, nous dessinons le drapeau du Bangladesh. Il est vert frappé d'un disque rouge.
 
@@ -190,7 +213,7 @@ Le disque est décentré, légèrement décalé vers la fixation, de manière à
 ```{codeplay}
 :file: color4.py
 from turtle import *
-dot(1000, 'green')  # background
+dot(1000, 'green')  # astuce pour changer le background
 
 backward(30)
 dot(266, 'red')
@@ -208,7 +231,7 @@ Une équerre est un instrument formé de deux pièces ajustées à angle droit. 
 ```{codeplay}
 :file: color5.py
 from turtle import *
-dot(1000, 'moccasin')  # background
+dot(1000, 'moccasin')
 
 def equerre():
     forward(150)
@@ -241,7 +264,7 @@ Voici un smiley qui exprime l'indifférence.
 ```{codeplay}
 :file: color6.py
 from turtle import *
-dot(1000, 'linen')  # background
+dot(1000, 'linen')
 
 dot(300, 'yellow')
 
@@ -267,7 +290,7 @@ Voici un autre smiley qui exprime la surprise.
 ```{codeplay}
 :file: color7.py
 from turtle import *
-dot(1000, 'azure')  # background
+dot(1000, 'azure')
 
 dot(300, 'palegreen')
 
@@ -294,7 +317,7 @@ Répété 4 fois, ceci donne la forme d'une croix.
 ```{codeplay}
 :file: color8.py
 from turtle import *
-dot(1000, 'red')  # background
+dot(1000, 'red')
 
 def bras():
     forward(60)
@@ -325,7 +348,7 @@ Nous reprenons l'exemple du chapitre précédent de la fonction `maison()`. Cett
 ```{codeplay}
 :file: color9.py
 from turtle import *
-dot(1000, 'lightgreen')  # background
+dot(1000, 'lightgreen')
 
 def maison():
     begin_fill()
