@@ -38,7 +38,10 @@ shape('turtle')
 forward(150)
 ```
 
-**Exercice** : Ajoutez d'autres instructions telles que `backward()`, `left()`, et `right()` pour faire un dessin.
+```{admonition} Exercice
+:class: question
+Ajoutez d'autres instructions telles que `backward()`, `left()`, et `right()` pour faire un dessin.
+```
 
 ```{question}
 En Python, `turtle` est
