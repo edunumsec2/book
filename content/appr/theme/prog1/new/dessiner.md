@@ -20,15 +20,15 @@ Un programme informatique est
 
 ## Le module `turtle`
 
-Dans le langage de programmation Python, le module `turtle` (tortue en anglais) présente une façon sympathique pour faire des dessins. C'est pour cela que nous commençons notre aventure de programmation avec cet animal qui avance tout doucement à son propre rythme.
+Dans le langage de programmation Python, le module `turtle` (« tortue » en anglais) présente une façon sympathique pour faire des dessins. C'est pour cela que nous commençons notre aventure de programmation avec cet animal qui avance tout doucement à son propre rythme.
 
 On s'imagine une tortue qui se déplace sur un canevas et laisse une trace.
 
-Ci-dessus, vous trouvez notre premier programme de trois lignes :
+Ci-dessus, vous trouvez notre premier programme de trois lignes :
 
-- dans la première ligne nous importons toutes (`*`) les fonctions du module `turtle`,
-- avec `shape('turtle')` nous affichons une tortue (au lieu de la flèche),
-- avec `forward(150)` nous faisons avancer la tortue de 150 pixels.
+- dans la première ligne, nous importons toutes (`*`) les fonctions du module `turtle`,
+- avec `shape('turtle')`, nous affichons une tortue (au lieu de la flèche),
+- avec `forward(150)`, nous faisons avancer la tortue de 150 pixels.
 
 ```{codeplay}
 :file: forward1.py
@@ -38,10 +38,10 @@ shape('turtle')
 forward(150)
 ```
 
-**Exercice** : Ajoutez d'autres fonctions telles que `backward()`, `left()`, et `right()` pour faire un dessin.
+**Exercice** : Ajoutez d'autres instructions telles que `backward()`, `left()`, et `right()` pour faire un dessin.
 
 ```{question}
-En Python `turtle` est
+En Python, `turtle` est
 
 {v}`un module standard`  
 {f}`un éditeur de dessin`  
@@ -60,11 +60,11 @@ La tortue peut se déplacer et dessiner une trace avec les 4 fonctions:
 
 ## Le canevas
 
-Au début, la tortue se trouve au centre d'une zone rectangulaire appelé le canevas.  Ce rectangle a les propriétés suivantes :
+Au début, la tortue se trouve au centre d'une zone rectangulaire appelée _canevas_.  Ce rectangle a les propriétés suivantes :
 
 - l'origine (0, 0) se trouve au centre,
-- l'axe x s'étend de -300 à +300,
-- l'axe y s'étend de -200 à +200.
+- l'axe X, horizontal, s'étend de -300 (tout à gauche) à +300 (tout à droite),
+- l'axe Y, vertical, s'étend de -200 (tout en bas) à +200 (tout en haut).
 
 ```{codeplay}
 :file: forward2.py
@@ -80,7 +80,7 @@ forward(200)
 right(180)
 ```
 
-**Exercice** : Ajoutez une instruction pour aller tout en bas.
+**Exercice** : Ajoutez une instruction dans le code ci-dessus pour mener la tortue tout en bas du canevas.
 
 ```{question}
 La largeur de la zone de dessin de la tortue est
@@ -93,7 +93,7 @@ La largeur de la zone de dessin de la tortue est
 
 ## Une séquence
 
-Un programme est une séquence d'instructions. Le bloc des 8 instructions ci-dessous indique comment dessiner un carré. La tortue doit avancer, tourner, avancer, tourner etc.
+Un programme est une séquence d'instructions. Le bloc de 8 instructions ci-dessous indique comment dessiner un carré. La tortue doit avancer, tourner, avancer, tourner etc.
 
 ```{codeplay}
 :file: forward3.py
@@ -122,7 +122,7 @@ Une séquence d'instructions d'un bloc est exécutée
 
 ## Equivalence
 
-La tortue possède 4 fonctions de déplacement, mais à strictement parler, on pourrait s'en sortir avec seulement deux fonctions, `forward()` et `left()`, car :
+La tortue possède 4 fonctions de déplacement, mais à strictement parler, on pourrait s'en sortir avec seulement deux fonctions, `forward()` et `left()`, car :
 
 - `backward(d)` est équivalent à `forward(-d)`
 - `right(a)` est équivalent à `left(-a)`
@@ -198,7 +198,7 @@ forward(60)
 left(90)
 ```
 
-**Exercice** : Modifiez l'épaisseur du toit.
+**Exercice** : Modifiez l'épaisseur du toit.
 
 ## Raquette de ping-pong
 
@@ -214,11 +214,11 @@ width(80)
 forward(20)
 ```
 
-**Exercice** : Transformez la raquette de ping-pong en haltères de musculation.
+**Exercice** : Transformez la raquette de ping-pong en haltères de musculation.
 
 ## Lunettes de soleil
 
-Voici encore un exemple où avec un simple changement d'épaisseur, vous obtenez un effet très intéressant.
+Voici encore un exemple où, avec un simple changement d'épaisseur, vous obtenez un effet très intéressant.
 
 ```{codeplay}
 :file: forward8.py
@@ -236,13 +236,13 @@ left(45)
 forward(60)
 ```
 
-**Exercice** : Ajoutez la première branche qui manque.
+**Exercice** : Ajoutez la première branche qui manque.
 
 ## Editeur de Python
 
 Jusqu'à maintenant, nous avons exécuté nos petits programmes ici dans cette page web. Malheureusement, ces programmes disparaissent quand nous rechargeons la page. Pour pouvoir les sauvegarder et programmer indépendamment de ce site web, nous avons besoin d'un éditeur de Python externe.
 
-Nous vous proposons d'utiliser [Thonny](https://thonny.org), qui est un logiciel libre, facile à installer, et un excellent éditeur pour débuter avec Python. Essayez de faire ceci :
+Nous vous proposons d'utiliser [Thonny](https://thonny.org), qui est un logiciel libre, facile à installer, et un excellent éditeur pour débuter avec Python. Essayez de faire ceci :
 
 1. Ouvrez l'éditeur Thonny
 1. Définissez la fonction `maison()`
