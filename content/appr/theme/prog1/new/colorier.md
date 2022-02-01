@@ -1,6 +1,6 @@
 # Colorier - `color`
 
-Dans ce chapitre nous continuons à dessiner et nous introduisons la couleur.
+Dans ce chapitre, nous continuons à dessiner et nous introduisons la couleur.
 Une couleur peut être appliquée à une ligne, à un point, à une forme ou à l'arrière-fond. Nous allons voir que :
 
 - la fonction `color()` permet de choisir une couleur,

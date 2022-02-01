@@ -1,6 +1,6 @@
 # Définir - `def`
 
-Dans ce chapitre, nous allons découvrir comment augmenter le vocabulaire de notre langage de programmation en définissant de nouvelles instructions. Ceci permet de rendre un code plus compact, mais surtout plus lisible. Nous allons voir que :
+Dans ce chapitre, nous allons découvrir comment augmenter le vocabulaire de notre langage de programmation en définissant de nouvelles instructions. Ceci permet de rendre un code plus compact, mais surtout plus lisible. Nous allons voir que :
 
 - le mot-clé `def` permet de nommer (définir) une séquence,
 - le bloc qui suit doit être en **indentation** (décalé à droite),
@@ -17,8 +17,8 @@ Une fonction permet de
 
 ## Nommer une séquence
 
-Dessiner un rectangle est assez utile. C'est une forme qu'on pourra réutiliser certainement souvent. Il serait pratique de définir un nom pour ces 8 lignes de code. Pouvons-nous définir des nouvelles commandes ?
-
+Dessiner un rectangle est assez utile. C'est une forme qu'on pourra réutiliser certainement souvent. Il serait pratique de définir un nom pour ces 8 lignes de code. Pouvons-nous définir des nouvelles commandes ?
+<!--  -->
 ```python
 forward(160)
 left(90)
@@ -34,13 +34,13 @@ Oui, c'est possible. Avec le mot-clé `def`, nous pouvons définir une nouvelle 
 Cette façon de créer un raccourci est appelée **définir** une fonction.
 
 Ensuite, il suffit d'écrire `rectangle()` pour dessiner un rectangle. On appelle ceci **appeler** une fonction.
-Rappelez-vous de ceci:
+Rappelez-vous ceci :
 
-- on définit une fonction une seule fois;
+- on définit une fonction une seule fois ;
 - on appelle une fonction autant de fois que l'on veut.
 
 Définir une fonction nous permet de réduire le nombre de lignes de code nécessaires.
-A chaque fois que nous utilisons `rectangle()`,
+Chaque fois que nous utilisons `rectangle()`,
 au lieu d'écrire 8 lignes, nous écrivons seulement une ligne de code.
 
 ```{codeplay}
@@ -62,7 +62,7 @@ left(90)
 rectangle()
 ```
 
-**Exercice** : Dessinez encore d'autres rectangles en appelant la nouvelle fonction `rectangle()`.
+**Exercice** : dessinez encore d'autres rectangles en appelant la nouvelle fonction `rectangle()`.
 
 ```{question}
 Une **indentation** de texte est 
@@ -114,7 +114,7 @@ porte()
 
 La définition d'une fonction permet d'ajouter des nouveaux mots à un langage de programmation. Contrairement aux commandes natives de Python qui sont toutes en anglais, nous sommes libres de les choisir en français.
 
-**Attention** : Ecrivez les fonctions sans accents et sans circonflexes : `batiment()`, `carre()`, `boite()`.
+**Attention** : écrivez les fonctions sans accents et sans circonflexes : `batiment()`, `carre()`, `boite()`.
 
 ```{codeplay}
 :file: def3.py
@@ -145,10 +145,10 @@ forward(30)
 porte()
 ```
 
-**Exercice** : Ajoutez une deuxième porte au bâtiment.
+**Exercice** : Ajoutez une deuxième porte au bâtiment.
 
 ```{question}
-La fonction `porte()` est équivalente à combien de lignes de code ?
+À combien de lignes de code la fonction `porte()` est-elle équivalente ?
 
 {f}`1 ligne`  
 {f}`2 lignes`  
@@ -172,7 +172,7 @@ C'est un bloc de texte qui comporte des espaces vides à gauche. En Python, ces 
 L'indentation est très importante en Python. C'est l'indentation qui indique l'étendue des instructions qui font partie de la fonction.
 
 ```{question}
-Parmi les 4 définitions de fonction ci-dessous, laquelle est correcte ?
+Parmi les 4 définitions de fonction ci-dessous, laquelle est correcte ?
 
 {f}`def() rectangle:`  
 {f}`def: rectangle`  
@@ -214,7 +214,7 @@ forward(50)
 left(90)
 ```
 
-Voici encore un raccourci très utile : **cmd+Enter** pour exécuter le code.
+Voici encore un raccourci très utile : **cmd+Enter** pour exécuter le code.
 
 ## Maison avec porte
 
@@ -257,7 +257,7 @@ maison()
 ## Lever le stylo
 
 Les deux commandes `up()` et `down()` permettent de lever et de baisser le stylo.
-Ceci nous permet dessiner des formes séparées, comme ces deux triangles.
+Ceci nous permet de dessiner des formes séparées, comme ces deux triangles, car nous nous déplaçons sans laisser de trait derrière nous lorsque le stylo est levé.
 
 ```{codeplay}
 :file: def6.py
@@ -278,7 +278,7 @@ down()
 triangle()
 ```
 
-**Exercice** : Ajoutez encore un triangle disjoint.
+**Exercice** : Ajoutez encore un triangle disjoint.
 
 ```{caution}
 Contrairement aux fonctions `forward(d)` et `backward(d)` qui nécessitent un argument, les fonctions `up()` et `down()` ne nécessitent pas d'argument.
@@ -286,7 +286,7 @@ Contrairement aux fonctions `forward(d)` et `backward(d)` qui nécessitent un ar
 
 ## Maison avec fenêtre
 
-Dans le programme ci-dessous, nous allons dessiner de nouveau une maison, mais avec une fenêtre cette fois-ci. Les fonctions `up()/down()` nous permettent de dessiner des formes disjointes, telle qu'une fenêtre à l'intérieur de la maison.
+Dans le programme ci-dessous, nous allons dessiner de nouveau une maison, mais avec une fenêtre cette fois-ci. Les fonctions `up()`/`down()` nous permettent de dessiner des formes disjointes, telle qu'une fenêtre à l'intérieur de la maison.
 
 ```{codeplay}
 :file: def7.py
@@ -319,15 +319,15 @@ def maison():
 maison()
 ```
 
-**Exercice** : Modifiez le programme pour que la fenêtre soit dessinée à l'intérieur de la maison. Dessinez une deuxième maison.
+**Exercice** : Modifiez le programme pour que la fenêtre soit dessinée à l'intérieur de la maison. Dessinez une deuxième maison.
 
 ## Trouver la symétrie
 
 Une stratégie importante dans la programmation est de **reconnaître des structures identiques**. Par exemple, quand vous voyez une symétrie dans un dessin,
 vous devez repérer la partie qui est répétée et en créer une fonction.
 
-La fonction `bras()` dessine les 3 côtés d'un carré et tourne de 90° dans le contre-sens.
-Ensuite il suffit d'**appeler** 4 fois cette fonction pour dessiner une croix.
+La fonction `bras()` dessine les 3 côtés d'un carré et tourne de 90° dans le sens contraire des aiguilles d'une montre.
+Ensuite, il suffit d'**appeler** 4 fois cette fonction pour dessiner une croix.
 En appelant la fonction `bras()`, au lieu d'écrire 6 lignes, nous n'écrivons qu'une ligne de code.
 
 ```{codeplay}
@@ -351,13 +351,13 @@ def croix():
 croix()
 ```
 
-**Exercice** : Allongez le bras à 120 pas, et rendez-le plus mince.
+**Exercice** : Allongez le bras à 120 pas, et rendez-le plus mince.
 
 ## Décomposer
 
 Une stratégie importante en programmation est de **décomposer un programme en sous-programmes**. Les fonctions nous permettent de structurer un problème en objets de plus en plus simples.
 
-Ici, nous dessinons une fenêtre composée de 4 carreaux. Nous pouvons décomposer ce problème en une construction hiérarchique :
+Ici, nous dessinons une fenêtre composée de 4 carreaux. Nous pouvons décomposer ce problème en une construction hiérarchique :
 
 - la fonction `fenetre()` appelle quatre fois la fonction  `carreau()`,
 - la fonction `carreau()` appelle deux fois la fonction `equerre()`,
@@ -409,7 +409,7 @@ Combien de lignes de code sont exécutées par la fonction `fenetre()`?
 ### Rectangles
 
 Définissez une fonction pour dessiner un rectangle. 
-Ensuite dessinez 3 rectangles qui ne se touchent pas, à des endroits différents.
+Ensuite, dessinez 3 rectangles qui ne se touchent pas, à des endroits différents.
 
 ```{codeplay}
 :file: rectangles.py
@@ -427,7 +427,7 @@ done()
 ### Maisons
 
 Définissez une fonction pour dessiner une maison. 
-Ensuite dessinez 3 maisons qui ne sont pas connectées, à des endroits différents.
+Ensuite, dessinez 3 maisons qui ne sont pas connectées, à des endroits différents.
 
 ```{codeplay}
 :file: maisons.py
@@ -446,7 +446,7 @@ done()
 ### Chaises
 
 Définissez une fonction pour dessiner une chaise.
-Ensuite dessinez 3 chaises à des endroits différents.
+Ensuite, dessinez 3 chaises à des endroits différents.
 
 ```{codeplay}
 :file: chaises.py
@@ -464,7 +464,7 @@ done()
 ### Tables
 
 Définissez une fonction pour dessiner une table. 
-Ensuite dessinez 3 tables à des endroits différents.
+Ensuite, dessinez 3 tables à des endroits différents.
 
 ```{codeplay}
 :file: tables.py
@@ -482,7 +482,7 @@ done()
 ### Lits
 
 Définissez une fonction pour dessiner un lit.
-Ensuite dessinez 3 lits à des endroits différents.
+Ensuite, dessinez 3 lits à des endroits différents.
 
 ```{codeplay}
 :file: lits.py
@@ -505,7 +505,7 @@ Tetris met le joueur au défi de réaliser des lignes complètes en déplaçant 
 ```{image} media/tetris.png
 ```
 
-Les carrés de base d'un tétromino mesurent 20 x 20 pixels. Il y en a 7 formes différentes, qui sont nommées d'après les lettres auxquelles elles ressemblent :
+Les carrés de base d'un tétromino mesurent 20 × 20 pixels. Il y en a 7 formes différentes, qui sont nommées d'après les lettres auxquelles elles ressemblent :
 
 - S
 - L
