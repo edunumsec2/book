@@ -116,6 +116,7 @@ parts:
       - file: content/appr/theme/projets/snake
       - file: content/appr/theme/projets/game_of_life
       - file: content/appr/theme/projets/cartes
+      - file: content/appr/theme/projets/tetris
       - file: content/appr/theme/projets/art_absurde
       - file: content/appr/theme/projets/microbit/microbit
       - file: content/appr/theme/projets/idees

@@ -30,17 +30,17 @@ Ci-dessus, vous trouvez notre premier programme de trois lignes :
 - avec `shape('turtle')`, nous affichons une tortue (au lieu de la flèche),
 - avec `forward(150)`, nous faisons avancer la tortue de 150 pixels.
 
+```{admonition} Exercice
+:class: note
+Ajoutez d'autres instructions telles que `backward()`, `left()`, et `right()` pour faire un dessin.
+```
+
 ```{codeplay}
 :file: forward1.py
 from turtle import *
 
 shape('turtle')
 forward(150)
-```
-
-```{admonition} Exercice
-:class: question
-Ajoutez d'autres instructions telles que `backward()`, `left()`, et `right()` pour faire un dessin.
 ```
 
 ```{question}
@@ -69,6 +69,11 @@ Au début, la tortue se trouve au centre d'une zone rectangulaire appelée _cane
 - l'axe X, horizontal, s'étend de -300 (tout à gauche) à +300 (tout à droite),
 - l'axe Y, vertical, s'étend de -200 (tout en bas) à +200 (tout en haut).
 
+```{admonition} Exercice
+:class: note
+Ajoutez une instruction dans le code ci-dessous pour mener la tortue tout en bas du canevas.
+```
+
 ```{codeplay}
 :file: forward2.py
 from turtle import *
@@ -83,8 +88,6 @@ forward(200)
 right(180)
 ```
 
-**Exercice** : Ajoutez une instruction dans le code ci-dessus pour mener la tortue tout en bas du canevas.
-
 ```{question}
 La largeur de la zone de dessin de la tortue est
 
@@ -97,6 +100,11 @@ La largeur de la zone de dessin de la tortue est
 ## Une séquence
 
 Un programme est une séquence d'instructions. Le bloc de 8 instructions ci-dessous indique comment dessiner un carré. La tortue doit avancer, tourner, avancer, tourner etc.
+
+```{admonition} Exercice
+:class: note
+Modifiez ce code pour en faire un rectangle.
+```
 
 ```{codeplay}
 :file: forward3.py
@@ -111,8 +119,6 @@ left(90)
 forward(100)
 left(90)
 ```
-
-**Exercice** : Modifiez ce code pour en faire un rectangle.
 
 ```{question}
 Une séquence d'instructions d'un bloc est exécutée
@@ -161,6 +167,11 @@ L'expression `left(90)` est équivalent à
 La fonction `width(d)` (épaisseur en anglais) permet de définir l'épaisseur de la ligne.
 Voici un triangle où chaque côté a une épaisseur différente.
 
+```{admonition} Exercice
+:class: note
+Explorez différentes épaisseurs de ligne.
+```
+
 ```{codeplay}
 :file: forward5.py
 from turtle import *
@@ -177,11 +188,14 @@ forward(200)
 left(120)
 ```
 
-**Exercice** : Explorez différentes épaisseurs de ligne.
-
 ## Maison avec toit
 
 Nous dessinons une maison et marquons le toit par une ligne plus épaisse.
+
+```{admonition} Exercice
+:class: note
+Modifiez l'épaisseur du toit.
+```
 
 ```{codeplay}
 :file: forward6.py
@@ -201,11 +215,14 @@ forward(60)
 left(90)
 ```
 
-**Exercice** : Modifiez l'épaisseur du toit.
-
 ## Raquette de ping-pong
 
 L'épaisseur de ligne est très utile dans le dessin.
+
+```{admonition} Exercice
+:class: note
+Transformez la raquette de ping-pong en haltères de musculation.
+```
 
 ```{codeplay}
 :file: forward7.py
@@ -217,11 +234,14 @@ width(80)
 forward(20)
 ```
 
-**Exercice** : Transformez la raquette de ping-pong en haltères de musculation.
-
 ## Lunettes de soleil
 
 Voici encore un exemple où, avec un simple changement d'épaisseur, vous obtenez un effet très intéressant.
+
+```{admonition} Exercice
+:class: note
+Ajoutez la première branche qui manque.
+```
 
 ```{codeplay}
 :file: forward8.py
@@ -238,8 +258,6 @@ forward(40)
 left(45)
 forward(60)
 ```
-
-**Exercice** : Ajoutez la première branche qui manque.
 
 ## Editeur de Python
 
@@ -352,7 +370,6 @@ done()
 ```
 
 ### Lit
-
 Dessinez un lit.
 
 ```{codeplay}

@@ -311,8 +311,10 @@ dot(80)
 
 ## Croix
 
-La fonction `bras()` dessine les 3 côtés d'un carré et tourne de 90° dans le sens contraire des aiguilles d'une montre.
+La fonction `bras()` dessine les 3 côtés d'un carré et tourne, à la fin, dans le sens approprié pour la suite.
 Répété 4 fois, ceci donne la forme d'une croix.
+
+Ici nous utilisons la fonction `color('white')` pour changer simultanément la couleur de ligne *et* la couleur de remplissage en blanc.
 
 ```{codeplay}
 :file: color8.py
@@ -333,7 +335,7 @@ def croix():
     bras()
     bras()
     
-fillcolor('white')
+color('white')
 begin_fill()
 croix()
 end_fill()

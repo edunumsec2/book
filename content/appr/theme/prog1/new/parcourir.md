@@ -288,6 +288,38 @@ for c in ('pink', 'violet', 'darkviolet'):
 
 **Exercice** : Tournez le cube de 30°.
 
+## Cube de Rubik
+
+Pour dessiner un cube de Rubik nous dessinons 3x3 losanges pour obtenir la surface du cube. Ceci nécessite une boucle impriquées avec les deux variables d'itération distinctes `i` et `j`.
+
+```{codeplay}
+from turtle import *
+speed(8)
+
+def losange():
+    begin_fill()
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+    end_fill()
+
+def surface():
+    for j in range(3):
+        for i in range(3):
+            losange()
+            forward(50)
+        backward(150)
+        left(120)
+        forward(50)
+        right(120)
+    left(120)
+    backward(150)
+    
+for c in ('red', 'green', 'blue'):
+    fillcolor(c)
+    surface()
+```
+
 ## Minecraft
 
 [Minecraft](https://fr.wikipedia.org/wiki/Minecraft) est un jeu vidéo de type aventure *bac à sable* développé par le Suédois Markus Persson, puis par la société Mojang Studios, sortie en 2011. Il s'agit d'un univers composé de voxels.

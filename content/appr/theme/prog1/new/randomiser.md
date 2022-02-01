@@ -200,6 +200,40 @@ for y in range(200-n, -200, -n):
         dot(choice(size), choice(colors))
 ```
 
+## Cube de Rubik
+
+Depuis une liste avec les 6 couleurs du cube de Rubik nous choisissons une aléatoirement, pour en dessiner un cube dans son état défait.
+
+```{codeplay}
+from turtle import *
+from random import *
+speed(8)
+couleurs = 'red', 'green', 'blue', 'yellow', 'orange', 'white'
+
+def losange():
+    fillcolor(choice(couleurs))
+    begin_fill()
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+    end_fill()
+
+def surface():
+    for j in range(3):
+        for i in range(3):
+            losange()
+            forward(50)
+        backward(150)
+        left(120)
+        forward(50)
+        right(120)
+    left(120)
+    backward(150)
+    
+for i in range(3):
+    surface()
+```
+
 ## Distribution normale
 
 Dans l'exemple suivant les variables x e y suivent une distribution normale avec mu=0 et sigma=50.
