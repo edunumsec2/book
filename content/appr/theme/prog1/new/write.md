@@ -126,6 +126,125 @@ for c in ('red', 'blue', 'lime', 'indigo'):
 Si vous exécutez `write()` dans ce site avec [Skulpt](https://skulpt.org), la couleur du texte est définie par `fillcolor()`. Quand vous exécutez `write()` dans un éditeur externe avec Python standard, la couleur du texte est défini par `pencolor()`.
 ```
 
+## Aligner des mots
+
+Le texte suivant est un extrait du *Petit Prince* d'Antoine de Saint-Exupéry. Pour ne pas introduire des retours à la ligne, la phrase est défini avec le symbole `\` en fin de ligne.
+
+Les mots sont aligné à gauche, au centre et à droite.
+
+```{codeplay}
+from turtle import *
+
+texte = """Les grandes personnes aiment les chiffres. \
+Quand vous leur parlez d'un nouvel ami, elles ne vous questionnent \
+jamais sur l'essentiel. Elles ne vous disent jamais : \
+"Quel est le son de sa voix ? Quels sont les jeux qu'il préfère ?
+"""
+
+mots = texte.split(' ')
+print('caractères: ', len(texte))
+print('mots: ', len(mots))
+
+up()
+goto(-200, 180)
+for t in mots:
+    write(t)
+    goto(-200, ycor()-10) 
+
+goto(0, 180)
+for t in mots:
+    write(t, align='center')
+    goto(0, ycor()-10) 
+
+goto(200, 180)
+for t in mots:
+    write(t, align='right')
+    goto(200, ycor()-10) 
+```
+
+## Aligner des phrases
+
+Ici, plusieurs mots sont affiché, jusqu'à ce que la position finale dépasse une limite.
+
+Chaque ligne est ajouté à la liste `lignes`. Cette liste est utilisé pour afficher le texte avec un alignement à droite.
+
+```{codeplay}
+from turtle import *
+
+texte = """Les grandes personnes aiment les chiffres. \
+Quand vous leur parlez d'un nouvel ami, elles ne vous questionnent \
+jamais sur l'essentiel. Elles ne vous disent jamais : \
+"Quel est le son de sa voix ? Quels sont les jeux qu'il préfère ? \
+Est-ce qu'il collectionne les papillons ?" \
+Elles vous demandent : "Quel âge a-t-il ? Combien a-t-il de frères ? \
+Combien pèse-t-il ? Combien gagne son père ?"
+"""
+
+speed(5)
+mots = texte.split(' ')
+lignes = []
+ligne = ''
+up()
+goto(-220, 175)
+for t in mots:
+    write(t + ' ', move=True, font=('Arial', 12))
+    ligne += t + ' '
+    if xcor() > -100:
+        goto(-220, ycor()-20)
+        lignes.append(ligne)
+        ligne = ''
+
+goto(220, 175)
+right(90)
+for t in lignes:
+    write(t, align='right', font=('Arial', 12))
+    forward(20)
+```
+
+## Ajuster un texte
+
+Pour ajuster un texte, il faut connaitre la longueur des mots. On ajuste alors les espaces entre les mots, pour faire aligner un ligne de texte des deux cotés.
+
+```{codeplay}
+from turtle import *
+
+texte = """Les grandes personnes aiment les chiffres. \
+Quand vous leur parlez d'un nouvel ami, elles ne vous questionnent \
+jamais sur l'essentiel. Elles ne vous disent jamais : \
+"Quel est le son de sa voix ? Quels sont les jeux qu'il préfère ? \
+Est-ce qu'il collectionne les papillons ?" \
+Elles vous demandent : "Quel âge a-t-il ? Combien a-t-il de frères ? \
+Combien pèse-t-il ? Combien gagne son père ?"
+"""
+
+longueurs = []
+up()
+goto(-200, 180)
+for t in texte.split(' '):
+    x0 = xcor()
+    write(t, move=True, font=('Arial', 12))
+    x1 = xcor()
+    write(' ', move=True, font=('Arial', 12))
+    longueurs.append(x1-x0)
+    x0 = x1
+    if xcor() > -100:
+        goto(-200, ycor()-20)
+
+goto(0, 180)
+for i in range(len(mots)):
+    l = 0
+    if 
+    while l < 200:
+        l += longeurs[0]
+for t in texte.split(' '):
+    write(' ' + t, move=True, align='right', font=('Arial', 12))
+    if xcor() < 100:
+        goto(200, ycor()-20)
+
+print(longueurs)
+```
+
+
 ## Sudoku
 
 Le sudoku est un jeu en forme de grille 9x9. Le but du jeu est de remplir la grille avec une série de chiffres, tous différents, qui ne se trouvent jamais plus d’une fois sur une même ligne, dans une même colonne ou dans une même région 3x3, appelé bloc.

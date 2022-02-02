@@ -324,3 +324,32 @@ sur plusieurs lignes.
 ```
 
 **Exercice** : Enlever le # devant `print('au revoir')` pour l'exécuter.
+
+## Narration
+
+Voici un exemple qui affiche une conversation entre deux personnes, affiché en ralenti, lettre par lettre, pour simuler une sorte de communication chat en ligne.
+
+La méthode `split('\n')` découpe la chaine `histoire` en lignes séparées, et retourne une liste.
+
+```{codeplay}
+from time import sleep
+
+histoire = """
+Une histoire d'aventure
+-----------------------
+A: comment vas-tu ?
+B: très bien !
+A: veux-tu faire un voyage ?
+B: oui, vers où ?
+A: à Rio de Janeiro.
+B: choutte, on part quand ?
+A: il y a un vol ce soir.
+"""
+
+for line in histoire.split('\n'):
+    for c in line:
+        print(c, end='')
+        sleep(0.1)
+    sleep(1)
+    print()
+```

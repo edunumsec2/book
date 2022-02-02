@@ -44,6 +44,11 @@ Définir une fonction nous permet de réduire le nombre de lignes de code néces
 Chaque fois que nous utilisons `rectangle()`,
 au lieu d'écrire 8 lignes, nous écrivons seulement une ligne de code.
 
+```{admonition} Exercice
+:class: note
+Dessinez encore d'autres rectangles en appelant la nouvelle fonction `rectangle()`.
+```
+
 ```{codeplay}
 :file: def1.py
 from turtle import *
@@ -62,8 +67,6 @@ rectangle()
 left(90)
 rectangle()
 ```
-
-**Exercice** : dessinez encore d'autres rectangles en appelant la nouvelle fonction `rectangle()`.
 
 ```{question}
 Une **indentation** de texte est 
@@ -117,6 +120,11 @@ La définition d'une fonction permet d'ajouter des nouveaux mots à un langage d
 
 **Attention** : écrivez les fonctions sans accents et sans circonflexes : `batiment()`, `carre()`, `boite()`.
 
+```{admonition} Exercice
+:class: note
+Ajoutez une deuxième porte au bâtiment.
+````
+
 ```{codeplay}
 :file: def3.py
 from turtle import *
@@ -145,8 +153,6 @@ batiment()
 forward(30)
 porte()
 ```
-
-**Exercice** : Ajoutez une deuxième porte au bâtiment.
 
 ```{question}
 À combien de lignes de code la fonction `porte()` est-elle équivalente ?
@@ -190,7 +196,10 @@ Ensuite, vous appuyez sur :
 - la touche **tab** pour augmenter l'indentation
 - la touche **maj+tab** pour diminuer l'indentation
 
+```{admonition} Exercice
+:class: note
 Essayez ces raccourcis dans le code ci-dessous. Transformez le code en deux fonctions `batiment()` et `porte()`, que vous appelez ensuite.
+```
 
 ```{codeplay}
 :file: def2.py
@@ -223,6 +232,11 @@ Une fois qu'une fonction est définie, elle peut être utilisée partout, même 
 
 Ici, nous avons une fonction `porte()`, qui est utilisée à l'intérieur d'une deuxième fonction `maison()`. Pour que ceci soit possible, la définition de porte doit être placée avant la définition de `maison()`.
 
+```{admonition} Exercice
+:class: note
+Mettez la porte au milieu de la maison, et dessinez une deuxième maison.
+```
+
 ```{codeplay}
 :file: def4.py
 from turtle import *
@@ -253,12 +267,15 @@ def maison():
 maison()
 ```
 
-**Exercice** : Mettez la porte au milieu de la maison, et dessinez une deuxième maison.
-
 ## Lever le stylo
 
 Les deux commandes `up()` et `down()` permettent de lever et de baisser le stylo.
 Ceci nous permet de dessiner des formes séparées, comme ces deux triangles, car nous nous déplaçons sans laisser de trait derrière nous lorsque le stylo est levé.
+
+```{admonition} Exercice
+:class: note
+Ajoutez encore un triangle disjoint,  mais pas à la même hauteur.
+```
 
 ```{codeplay}
 :file: def6.py
@@ -279,8 +296,6 @@ down()
 triangle()
 ```
 
-**Exercice** : Ajoutez encore un triangle disjoint.
-
 ```{caution}
 Contrairement aux fonctions `forward(d)` et `backward(d)` qui nécessitent un argument, les fonctions `up()` et `down()` ne nécessitent pas d'argument.
 ```
@@ -288,6 +303,11 @@ Contrairement aux fonctions `forward(d)` et `backward(d)` qui nécessitent un ar
 ## Maison avec fenêtre
 
 Dans le programme ci-dessous, nous allons dessiner de nouveau une maison, mais avec une fenêtre cette fois-ci. Les fonctions `up()`/`down()` nous permettent de dessiner des formes disjointes, telle qu'une fenêtre à l'intérieur de la maison.
+
+```{admonition} Exercice
+:class: note
+Modifiez le programme pour que la fenêtre soit dessinée à l'intérieur de la maison. Dessinez une deuxième maison.
+```
 
 ```{codeplay}
 :file: def7.py
@@ -320,8 +340,6 @@ def maison():
 maison()
 ```
 
-**Exercice** : Modifiez le programme pour que la fenêtre soit dessinée à l'intérieur de la maison. Dessinez une deuxième maison.
-
 ## Trouver des motifs
 
 Une stratégie importante dans la programmation est de **reconnaître des structures identiques**. Par exemple, quand vous voyez un motif répété dans un dessin, vous devez repérer la partie qui est répétée et en créer une fonction.
@@ -329,6 +347,11 @@ Une stratégie importante dans la programmation est de **reconnaître des struct
 La fonction `bras()` dessine les 3 côtés d'un carré et tourne, à la fin, dans le sens approprié pour la suite.
 Ensuite, il suffit d'**appeler** 4 fois cette fonction pour dessiner une croix.
 En appelant la fonction `bras()`, au lieu d'écrire 6 lignes, nous n'écrivons qu'une ligne de code.
+
+```{admonition} Exercice
+:class: note
+Allongez le bras de la croix à 120 pixels, et diminuez son épaisseur à 30 pixels.
+```
 
 ```{codeplay}
 :file: def8.py
@@ -350,8 +373,6 @@ def croix():
 
 croix()
 ```
-
-**Exercice** : Allongez le bras à 120 pas, et rendez-le plus mince.
 
 ## Décomposer
 
