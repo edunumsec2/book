@@ -286,23 +286,6 @@ while True:
         update()
 ```
 
-## Texte en escalier
-
-Ce programme place chaque mot en escalier.
-
-```{codeplay}
-from turtle import *
-
-phrase = 'des mots en escalier'
-
-left(80)
-for mot in phrase.split():
-    write(mot, font=(None, 16), move=True)
-    forward(30)
-```
-
-**Exercice** : Changez l'angle de rotation dans `left()`.
-
 ## Un mot par clic
 
 Ce programe pose un mot d'une phrase à chaque clic de la souris.

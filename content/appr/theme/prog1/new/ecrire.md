@@ -324,27 +324,3 @@ sur plusieurs lignes.
 ```
 
 **Exercice** : Enlever le # devant `print('au revoir')` pour l'exécuter.
-
-## La fonction `write()`
-
-Dans le module `turtle` nous avons la fonction `write()` qui permet d'afficher du texte à l'intérieur d'un dessin. Cette fonction permet de spécifier la police sous forme de paire (police, taille).
-
-```{codeplay}
-:file: str21.py
-from turtle import *
-
-up()
-left(90)
-write('texte par défaut')
-
-color('red')
-forward(30)
-write('Courier 24', font=('Courier', 24))
-
-color('blue')
-forward(40)
-write('Arial 36', font=('Arial', 36))
-hideturtle()
-```
-
-**Exercice** : Essayez d'autres tailles et polices.
