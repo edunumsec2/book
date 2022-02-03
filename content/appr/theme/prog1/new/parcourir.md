@@ -1,13 +1,13 @@
 # Parcourir - `tuple`
 
-Dans ce chapitre, nous allons découvrir le concept très important de la séquence. Ce concept s'appelle `tuple` en langage Python ou **n-uplet** en français. Une séquence est un groupement d'objets, par exemple de couleurs, de distances ou d'angles. Ce qui est très intéressant c'est que nous pouvons parcourir les valeurs d'une séquence l'une après l'autre. Nous allons voir que :
+Dans ce chapitre, nous allons découvrir le concept très important de la séquence. Ce concept s'appelle `tuple` en langage Python ou **n-uplet** en français. Une séquence est un regroupement d'objets, par exemple de couleurs, de distances ou d'angles. Ce qui est très intéressant, c'est que nous pouvons parcourir les valeurs d'une séquence l'une après l'autre avec une boucle. Nous allons voir que :
 
 - la structure `(10, 20, 10)` représente une séquence (`tuple`),
-- dans `for x in (10, 20, 10):` la variable `x` parcourt des nombres,
-- dans `for x in ('red', 'blue'):` la variable `x` parcourt des couleurs.
+- dans la boucle `for x in (10, 20, 10):` la variable `x` parcourt des nombres,
+- dans la boucle `for x in ('red', 'blue'):` la variable `x` parcourt des couleurs.
 
 ```{question}
-En informatique un `tuple` est 
+En informatique, un `tuple` est 
 
 {v}`une séquence d'objets`  
 {f}`une liste numérique`  
@@ -20,7 +20,7 @@ En informatique un `tuple` est
 Pour dessiner de multiples couleurs, nous pouvons définir une séquence (tuple) de couleurs et parcourir cette séquence.
 En Python, une séquence est délimitée par des parenthèses `()` et les éléments sont séparé par une virgule.
 
-Dans l'expression `for x in (...)` la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'blue'`, `'cyan'`, `'red'`, etc.
+Dans l'expression `for x in (...)`, la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'blue'`, `'cyan'`, `'red'`, etc. Le bloc indenté qui suit la ligne `for` sera répété autant de fois que la séquence contient d'éléments.
 
 ```{codeplay}
 :file: tuple1.py
@@ -37,7 +37,7 @@ for x in ('blue', 'cyan', 'red', 'magenta', 'pink', 'lime'):
 
 ## Parcourir des diamètres
 
-Nous pouvons également itérer dans une séquence numérique et spécifier le diamètre d'un disque.
+Nous pouvons également parcourir une séquence de nombres et ainsi, par exemple, spécifier une série de diamètres de disques.
 
 ```{codeplay}
 :file: tuple2.py
@@ -54,7 +54,7 @@ for x in (20, 40, 60, 80, 100):
 
 ## Parcourir des distances
 
-Nous allons reprendre nos fonctions `batiment()` et `porte()` et avec l'aide d'une séquence nous pouvons l'écrire de manière bien plus compacte.
+Nous allons reprendre nos fonctions `batiment()` et `porte()` et, avec l'aide d'une séquence, nous pouvons l'écrire de manière bien plus compacte.
 
 ```{codeplay}
 :file: tuple3.py
@@ -79,7 +79,7 @@ batiment()
 
 ## Parcourir des angles
 
-Nous allons reprendre nos fonctions `maison()` et avec l'aide d'une séquence nous pouvons l'écrire de manière bien plus compacte. Cette fois-ci, la séquence représente des angles, donc nous nommons notre variable `a` pour nous rappeler que c'est un angle.
+Nous allons reprendre nos fonctions `maison()` et, à l'aide d'une séquence, nous pouvons l'écrire de manière bien plus compacte. Cette fois-ci, la séquence représente des angles, donc nous nommons notre variable `a` pour nous rappeler que c'est un angle.
 
 ```{codeplay}
 :file: tuple4.py
@@ -104,7 +104,7 @@ maison()
 
 Dans l'exemple nous allons d'abord parcourir une séquence d'angles avec une variable d'itération `a` pour dessiner une maison.
 
-Ensuite, nous allons parcourir une séquence de couleurs avec une variable `c` pour dessiner des maisons en différentes couleurs.
+Ensuite, nous allons parcourir une séquence de couleurs avec une variable `c` pour dessiner des maisons de différentes couleurs.
 
 ```{codeplay}
 :file: tuple5.py
@@ -126,7 +126,7 @@ for c in ('red', 'yellow', 'pink', 'lightblue', 'lightgreen'):
     forward(100)
 ```
 
-**Exercice** : Changez la couleurs des maisons.
+**Exercice** : Changez les couleurs des maisons.
 
 ## Drapeau LGBT
 
@@ -176,11 +176,11 @@ for c in ('pink', 'red', 'pink', 'red', 'pink'):
     left(60)
 ```
 
-**Exercice** : Il manque une pétale, corrigez le programme.
+**Exercice** : Il manque un pétale, corrigez le programme.
 
 ## Sourire
 
-Dans cet exemple nous allons parcourir différentes épaisseurs et nous appelons notre variable `w` (width). Voici quatre smiley avec différentes formes de bouche.
+Dans cet exemple nous allons parcourir différentes épaisseurs et nous appelons notre variable `w` (width). Voici quatre smileys avec différentes formes de bouche.
 
 ```{codeplay}
 :file: tuple7.py
@@ -250,7 +250,7 @@ for d in (10, 20, 30, 40):
 
 ## Cube 3D
 
-Avec trois losanges nous pouvons dessiner un cube en 3D.
+Avec trois losanges, nous pouvons dessiner un cube en 3D.
 
 ```{codeplay}
 from turtle import *
@@ -290,7 +290,7 @@ for c in ('pink', 'violet', 'darkviolet'):
 
 ## Cube de Rubik
 
-Pour dessiner un cube de Rubik nous dessinons 3x3 losanges pour obtenir la surface du cube. Ceci nécessite une boucle impriquées avec les deux variables d'itération distinctes `i` et `j`.
+Pour dessiner un cube de Rubik, nous dessinons 3 × 3 losanges pour obtenir la surface du cube. Ceci nécessite deux boucles imbriquées avec les deux variables d'itération distinctes `i` et `j`.
 
 ```{codeplay}
 from turtle import *
