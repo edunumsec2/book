@@ -19,9 +19,19 @@
   border: solid 0.5px;
 }
 
-.question .admonition-title:before {
-  color:#05245e;
+.show-answers .correct {
+  font-weight: bold;
 }
+
+.question .question-feedback {
+  margin-top: 15px;
+  display: none;
+  border-left: 3px solid rgb(66, 125, 189);
+  margin-left: 22px;
+  padding-left: 10px;
+}
+
+
 
 
 /* Next, settings for light theme: */
