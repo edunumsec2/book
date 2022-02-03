@@ -105,9 +105,11 @@ document.addEventListener("DOMContentLoaded", function() {
     return Sk.builtinFiles["files"][x];
   }
 
+  var isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
   var codeElem = CodeMirror.fromTextArea(document.getElementById("code"), {
     lineNumbers: true,
-    theme: "idea",
+    theme: isDarkMode ? "monokai" : "idea",
     indentUnit: 4,
     indentWithTabs: false,
     smartIndent: true,
@@ -128,6 +130,11 @@ document.addEventListener("DOMContentLoaded", function() {
       },
       'Shift-Tab': function(cm) { cm.execCommand('indentLess'); }
     },
+  });
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(event){
+    isDarkMode = event.matches;
+    codeElem.setOption('theme', isDarkMode ? "monokai" : "idea");
   });
 
   codeElem.on("change", resized);

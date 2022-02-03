@@ -180,3 +180,49 @@ div#canvas {
 #tooltip[data-popper-placement^='right'] > #tooltip-arrow {
   left: -4px;
 }
+
+/** Definitions for dark theme **/
+
+:root {
+  /* Inform browsers we support both themes */
+  /* See: https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#handling-user-agent-styles */
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  div#editor-area {
+    border: 1px solid rgb(32, 32, 32);
+  }
+  
+  div#output-area {
+    background-color: rgb(85, 85, 85);
+    color: rgb(44, 44, 44);
+    border: 1px solid rgb(92, 92, 92);
+  }
+  
+  div#output-area div#output-message {
+    color:rgb(169, 169, 169);
+  }
+  
+  div#output-area pre {
+    color:rgb(238, 238, 238);
+  }
+  
+  div#output-area input {
+    color:rgb(238, 238, 238);
+  }
+  
+  div#output-area .user-input {
+    color:rgb(196, 196, 196);
+  }
+  
+  div#canvas-area {
+    border: 1px solid rgb(37, 37, 37);
+    background-color: transparent;
+  }
+  
+  div#canvas {
+    border: 3px inset rgb(44, 44, 44);
+    background-color: white;
+  }
+}
