@@ -5,8 +5,7 @@
 Ceci est une marche à suivre pour suggérer des modifications des ressources en créant des *issues* Github, directement dans VScode.
 ````
 
-(sidentifier)=
-## S'identifier avec son compte GitHub dans VScode
+(sidentifier)=id## S'identifier avec son compte GitHub dans VScode
 
 ```{image} media/relectures/0.png
 ```

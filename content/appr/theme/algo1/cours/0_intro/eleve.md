@@ -1,3 +1,54 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+.button {
+  background-color: white;
+  border: 1px solid;
+  border-color: black;
+  font-family:"Lato",sans-serif;
+  font-weight:350;
+  color: black!important;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button:hover {
+  text-decoration:none;
+  background-color: black; 
+  color: white!important;
+}
+.round-button {
+    display:block;
+    width:100px;
+    height:100px;
+    line-height:17px;
+    border:0px ;
+    border-radius: 50%;
+    color:#6069db;
+    text-align:center;
+    text-decoration:none;
+    display: table-cell;
+    vertical-align: middle;
+    background: #6069db;
+    box-shadow: 0 0 0px gray;
+    font-size:14px;
+    font-weight:bold;
+    }
+
+</style>
+</head>
+</html>
+
+<div align="right"> 
+    <a href="http://files.edunumsec2.ch/algo.pdf" target="_blank" class="round-button">
+         <font color=white id="demo">Voir <br>dossier</font>
+    </a>
+</div>
 
 # Introduction
 
@@ -8,6 +59,7 @@ Il y a de fortes chances que vous ayez déjà entendu parler d'{glo}`algo|algori
 ## Pourquoi ?
 
 Les algorithmes existent depuis des millénaires. On doit le nom d'algorithme à Al-Khwârizmî, mathématicien perse né en l'an 780 dont les ouvrages ont contribué à la popularisation des chiffres arabes en Europe, ainsi que la classification de plusieurs algorithmes connus à ce moment. D'ailleurs l'algorithme le plus connu, l'algorithme d'Euclide, date environ de l'an 300 av J.-C. et permet de calculer le plus grand diviseur commun de deux nombres. Si Euclide a bien laissé des traces écrites de cet algorithme, il est vraisemblable qu'il ait puisé cette connaissance auprès de disciples de Pythagore lui-même. 
+
 Les algorithmes sont devenus très populaires aujourd'hui grâce à la machine qui a permis de les automatiser. Que ce soit dans votre smartphone, sur un ordinateur ou dans un système embarqué, ils permettent de résoudre une quantité de problèmes, facilement et avec une rapidité impressionnante.
 
 ## Comment ?

@@ -1,0 +1,424 @@
+p {
+    /* font-family: 'Poppins', sans-serif; */
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 350;
+    line-height: 1.5;
+}
+
+/* a.reference.internal {
+    color: #5933d1 !important;
+} */
+
+strong {
+    font-weight: 500;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    font-style: italic;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+div.attention.admonition {
+    border-radius: 10px;
+    border: solid 0.5px;
+}
+
+div.note.admonition {
+    border-radius: 10px;
+    border: solid 0.5px;
+}
+
+div.hint.admonition {
+    border-radius: 10px;
+    border: solid 0.5px;
+}
+
+details.dropdown .summary-title {
+    margin: 0 -1.3rem;
+    padding-left: 2.65rem;
+}
+
+@media (min-width: 768px) {
+    button.toggle-button.toggle-button-hidden:before {
+        content: "Afficher";
+        position: absolute;
+        font-size: .9em;
+        left: -4.5em;
+        bottom: .4em;
+    }
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("poppins-regular-webfont.woff2") format("woff2"), url("poppins-regular-webfont.woff") format("woff");
+    font-weight: 100 500;
+    font-style: normal;
+}
+
+.codeframe {
+    height: 250px;
+    width: 100%;
+    overflow: scroll;
+}
+
+.logic_diagram {
+    width: 100%;
+    margin: -1rem 0 1rem 0;
+}
+
+.logic_diagram > iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/** Custom NAV settings. */
+
+nav {
+    font-family: "Poppins", sans-serif !important;
+}
+
+nav p.caption {
+    margin-bottom: 10px !important;
+}
+
+nav .caption-text {
+    text-transform: none !important;
+    font-weight: bold !important;
+}
+
+nav li {
+    margin-left: 10px;
+}
+
+/** Adaptations for tables */
+
+.table p {
+    margin-bottom: 0
+}
+
+.table p+p {
+    margin-top: 1ex;
+}
+
+.table td, .table th {
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
+
+.table th p {
+    font-weight: 500;
+}
+
+.prev-next-bottom a.left-prev, .prev-next-bottom a.right-next {
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    max-width: 45%;
+    overflow-x: hidden;
+    border-radius: 10px !important;
+}
+
+/** Definitions for light theme **/
+
+p, h1, h2, h3 {
+    color: #000
+}
+
+h4 {
+    color: #474747;
+}
+
+.attention.admonition p {
+    color: gray;
+}
+
+.attention.admonition p.admonition-title {
+    background: #f2f2f2;
+    color: gray;
+}
+
+.attention.admonition p.admonition-title::before {
+    color: gray;
+}
+
+div.attention.admonition {
+    background-color: white;
+    border-color: gray;
+}
+
+div.note.admonition {
+    background-color: white;
+    border-color: #5933d1;
+}
+
+.note.admonition p.admonition-title {
+    color: #a489fb;
+    background: #f7f4ff;
+}
+
+.note.admonition p.admonition-title::before {
+    color: #a489fb;
+}
+
+.note.admonition p {
+    color: gray;
+}
+
+div.hint.admonition {
+    background-color: white;
+    border-color: #0dcca7;
+}
+
+.hint.admonition p.admonition-title {
+    color: #0dcca7;
+    background: #eefcfa;
+}
+
+.hint.admonition p.admonition-title::before {
+    color: #70d6c2;
+}
+
+.hint.admonition p {
+    color: gray;
+}
+
+nav .caption-text {
+    color: #808080;
+}
+
+nav a.reference {
+    color: #202020 !important;
+}
+
+nav a.reference.current {
+    color: #0dcca7 !important;
+}
+
+nav a.reference:visited {
+    color: inherit !important;
+}
+
+nav a.reference:hover {
+    color: #0dcca7 !important;
+}
+
+nav li.active > a.active {
+    border-left: 2px solid #0dcca7 !important;
+}
+
+.prev-next-bottom a.left-prev, .prev-next-bottom a.right-next {
+    border-color: rgba(0, 0, 0, .2);
+    color: rgba(0, 0, 0, .65);
+}
+
+/** Definitions for dark theme **/
+
+:root {
+    /* Inform browsers we support both themes */
+    /* See: https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#handling-user-agent-styles */
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --inf-offwhite: 226, 226, 226;
+        --inf-offblack: 43, 43, 43;
+        --inf-darkgrey: 59, 59, 59;
+        --inf-lightgrey: 185, 185, 185;
+        --inf-linkcolor: 87, 165, 217;
+    }
+    img {
+        background-color: rgb(var(--inf-offwhite));
+        filter: brightness(.8) contrast(1.2);
+    }
+    body, .site-navigation {
+        background-color: rgb(var(--inf-offblack));
+    }
+    p, h1, h2, h3 {
+        color: rgb(var(--inf-offwhite));
+    }
+    h4 {
+        color: #B8B8B8;
+    }
+    .attention.admonition p {
+        color: rgb(var(--inf-lightgrey));
+    }
+    .attention.admonition p.admonition-title {
+        background: rgb(var(--inf-darkgrey));
+        color: rgb(var(--inf-lightgrey));
+    }
+    .attention.admonition p.admonition-title::before {
+        color: rgb(var(--inf-lightgrey));
+    }
+    div.attention.admonition {
+        background-color: rgb(var(--inf-offblack));
+        border-color: rgb(var(--inf-lightgrey));
+    }
+    div.note.admonition {
+        background-color: rgb(var(--inf-offblack));
+        border-color: #5933d1;
+    }
+    .note.admonition p.admonition-title {
+        color: #a489fb;
+        background: rgb(var(--inf-darkgrey));
+    }
+    .note.admonition p.admonition-title::before {
+        color: #a489fb;
+    }
+    .note.admonition p {
+        color: rgb(var(--inf-lightgrey));
+    }
+    div.hint.admonition {
+        background-color: rgb(var(--inf-offblack));
+        border-color: #0dcca7;
+    }
+    .hint.admonition p.admonition-title {
+        color: #0dcca7;
+        background: rgb(var(--inf-darkgrey));
+    }
+    .hint.admonition p.admonition-title::before {
+        color: #70d6c2;
+    }
+    .hint.admonition p {
+        color: rgb(var(--inf-lightgrey));
+    }
+    nav .caption-text {
+        text-transform: none !important;
+        font-weight: bold !important;
+        color: #aaaaaa;
+    }
+    nav a.reference {
+        color: #d8d8d8 !important;
+    }
+    nav a.reference.current {
+        color: #0dcca7 !important;
+    }
+    nav a.reference:visited {
+        color: #c0c0c0 !important;
+    }
+    nav a.reference:hover {
+        color: #0dcca7 !important;
+    }
+    nav li.active > a.active {
+        border-left-color: #0dcca7 !important;
+    }
+    .prev-next-bottom a.left-prev, .prev-next-bottom a.right-next {
+        border-color: rgba(230, 230, 230, .2);
+        color: rgba(230, 230, 230, .65);
+    }
+}
+
+/** Dark theme overrides from sphinx-book-theme.css **/
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: rgb(var(--inf-offwhite));
+    }
+    #site-navigation h1.site-logo {
+        color: rgb(var(--inf-offwhite));
+    }
+    .form-control, .form-control:focus {
+        background-color: rgb(var(--inf-offblack));
+        color: rgb(var(--inf-lightgrey));
+    }
+    .admonition {
+        background-color: rgb(var(--inf-darkgrey));
+    }
+    .topbar {
+        background-color: rgb(var(--inf-offblack));
+    }
+    .topbar .topbar-main button.topbarbtn {
+        background-color: rgb(var(--inf-offblack));
+    }
+    .bd-toc nav {
+        background: rgb(var(--inf-offblack));
+    }
+    .bd-toc nav::-webkit-scrollbar {
+        background: rgb(var(--inf-offblack));
+    }
+    .bd-toc nav::-webkit-scrollbar-thumb {
+        background: rgb(var(--inf-darkgrey));
+    }
+    .bd-toc nav::-webkit-scrollbar-thumb:hover {
+        background: rgb(80, 80, 80);
+    }
+    @media (min-width: 992px) {
+        .bd-toc nav:not(:hover) {
+            -ms-overflow-style: none
+        }
+        .bd-toc nav:not(:hover)::-webkit-scrollbar {
+            background: rgb(var(--inf-offblack));
+        }
+        .bd-toc nav:not(:hover)::-webkit-scrollbar-thumb {
+            background: rgb(var(--inf-offblack));
+        }
+    }
+    #site-navigation {
+        background: rgb(var(--inf-offblack));
+    }
+    #site-navigation::-webkit-scrollbar {
+        background: rgb(var(--inf-offblack));
+    }
+    #site-navigation::-webkit-scrollbar-thumb {
+        background: rgb(var(--inf-darkgrey));
+    }
+    #site-navigation::-webkit-scrollbar-thumb:hover {
+        background: rgb(80, 80, 80);
+    }
+    @media (min-width: 992px) {
+        #site-navigation:not(:hover) {
+            -ms-overflow-style: none
+        }
+        #site-navigation:not(:hover)::-webkit-scrollbar {
+            background: rgb(var(--inf-offblack));
+        }
+        #site-navigation:not(:hover)::-webkit-scrollbar-thumb {
+            background: rgb(var(--inf-offblack));
+        }
+    }
+    div.dropdown-buttons-trigger div.dropdown-buttons button.topbarbtn {
+        border-color: #1E1E1E !important;
+        background-color: #a5a5a5;
+        color: #1E1E1E;
+    }
+    #navbar-toggler {
+        color: #a5a5a5;
+    }
+    main.bd-content #main-content h1, main.bd-content #main-content h2, main.bd-content #main-content h3, main.bd-content #main-content h4, main.bd-content #main-content h5 {
+        color: rgb(var(--inf-offwhite));
+    }
+    main.bd-content #main-content a, main.bd-content #main-content a:visited {
+        color: rgba(var(--inf-linkcolor), 1)
+    }
+    .bd-toc div.onthispage, .bd-toc .toc-entry a {
+        color: #acacac;
+    }
+    .card {
+        background-color: rgb(var(--inf-darkgrey));
+    }
+}

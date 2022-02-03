@@ -2,6 +2,7 @@
 div#editor-area {
   position: relative;
   border: 1px solid rgb(194, 194, 194);
+  border-radius: 5px 5px 0 0;
 }
 
 div#output-area {
@@ -13,6 +14,7 @@ div#output-area {
   padding-bottom: 5px;
   color: rgb(10, 10, 10);
   border: 1px solid rgb(194, 194, 194);
+  border-radius: 0 0 5px 5px;
   border-top: 0;
   font-size: 12pt;
 }
@@ -118,7 +120,8 @@ div#canvas {
 
 .CodeMirror {
   height: auto;
-  font-size: 12pt;
+  font-size: 11pt;
+  line-height: 1.6em;
 }
 
 @keyframes shine {

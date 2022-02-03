@@ -51,8 +51,8 @@ def depart_question_html(self, node):
 def visit_check_buttons_html(self, node):
     tag = self.starttag(node, "div", CLASS="controls")
     self.body.append(tag.strip())
-    self.body.append("<input type=\"button\" class=\"check btn btn-primary\" value=\"Vérifier ma réponse\" />")
-    self.body.append("<input type=\"button\" class=\"show btn btn-secondary\" value=\"Afficher la réponse\" />")
+    self.body.append("<input type=\"button\" class=\"show btn btn-secondary\" value=\"Dévoiler\" />")
+    self.body.append("<input type=\"button\" class=\"check btn btn-primary\" value=\"Vérifier\" />")
 
 def depart_check_buttons_html(self, node):
     self.body.append("</div>")

@@ -22,15 +22,19 @@ Cet {glo}`algo|algorithme` consiste à parcourir la liste à trier plusieurs foi
 Tout d’abord, il faut représenter la taille des rectangles par des nombres. On peut par exemple représenter l’ordre des rectangles de la première ligne de la <a href="../algorithmes-classiques/eleve.html#fig-trier">Figure **Trier**</a> en fonction de leur taille, dans une liste nommée `rect` :
 
 ```
-rect = [3,4,1,2,6,5]
+rect = [3, 4, 1, 2, 6, 5]
 ```
 
-On doit ensuite ***<span style="color:rgb(13, 204, 166)">parcourir la liste</span>*** pour trouver le plus petit élément de la liste, qui correspond au rectangle le plus court. Nous allons commencer par  ***<span style="color:rgb(13, 204, 166)">déclarer une {glo}`variable|variable`</span>***, nommée `indice_min`, qui va se souvenir de la position du plus petit élément de la liste (équivalent à l'indice de l'élément à l’intérieur de la liste). Pour commencer, nous supposons que le plus petit élément de la liste est le premier élément, et nous initialisons la {glo}`variable|variable` nommée `indice_min` à 0. Nous allons ensuite parcourir la liste à partir du deuxième élément. Pour chaque nouvel élément nous allons tester s’il est plus petit ou plus grand que le plus petit élément connu jusqu’alors. Si le nouvel élément est plus petit que l'élément désigné par `indice_min`, c'est l'indice du nouvel élément qui sera stocké dans `indice_min` à la place de l'ancien :
+On doit ensuite ***<span style="color:rgb(13, 204, 166)">parcourir la liste</span>*** pour trouver le plus petit élément de la liste, qui correspond au rectangle le plus court. Nous allons commencer par  ***<span style="color:rgb(13, 204, 166)">déclarer une {glo}`variable|variable`</span>***, nommée `indice_min`, qui va se souvenir de la position du plus petit élément de la liste (équivalent à l'indice de l'élément à l’intérieur de la liste). Pour commencer, nous supposons que le plus petit élément de la liste est le premier élément, et nous initialisons la {glo}`variable|variable` nommée `indice_min` à 0. 
 
 ```
-# initialise ine variable qui va se souvenir du plus petit rectangle de la liste
+# initialise une variable qui va se souvenir du plus petit rectangle de la liste
 indice_min = 0 
+```
 
+Nous allons ensuite parcourir la liste à partir du deuxième élément. Pour chaque nouvel élément, nous allons tester s’il est plus petit ou plus grand que le plus petit élément connu jusqu’alors. Si le nouvel élément est plus petit que l'élément désigné par `indice_min`, c'est l'indice du nouvel élément qui sera stocké dans `indice_min` à la place de l'ancien :
+
+```
 # for permet de parcourir la liste rect
 for i in range(1,len(rect)):  # len(rect) donne la longueur de la liste rect
     # identifie l'indice du plus petit élément de la liste
@@ -45,7 +49,7 @@ Pour faire plus simple, nous pouvons également utiliser la {glo}`fonction|fonct
 indice_min = rect.index(min(rect))
 ```
 
-Grâce aux fonctions Python pré-existantes, nous avons remplacé les 3 lignes du code au-dessus par une seule ligne de code. Après cette opération, `indice_min` contient l’indice du plus petit élément de la liste. On doit à ce stade, échanger cet élément et le premier élément. Comme nous avons pu le voir <a href="../decomposition-probleme/eleve.html#exercice-echange">avant</a>, pour échanger les valeurs de deux {glo}`variable|variables`, nous avons besoin d'une ***<span style="color:rgb(13, 204, 166)">{glo}`variable|variable` temporaire</span>***. En effet, si on met la valeur du plus petit élément directement à la position 0, nous perdons la valeur contenue à la position 0 à ce moment-là. Il faut donc la stocker temporairement dans une autre {glo}`variable|variable` :
+Grâce à ces fonctions Python préexistantes, nous avons remplacé les 3 lignes du code au-dessus par une seule ligne de code. Après cette opération, `indice_min` contient l’indice du plus petit élément de la liste. On doit à ce stade, échanger cet élément et le premier élément. Comme nous avons pu le voir <a href="../decomposition-probleme/eleve.html#exercice-echange">avant</a>, pour échanger les valeurs de deux {glo}`variable|variables`, nous avons besoin d'une ***<span style="color:rgb(13, 204, 166)">{glo}`variable|variable` temporaire</span>***. En effet, si on met la valeur du plus petit élément directement à la position 0, nous perdons la valeur contenue à la position 0 à ce moment-là. Il faut donc la stocker temporairement dans une autre {glo}`variable|variable` :
 
 ```
 # échange le plus petit élément avec le premier élément
@@ -73,7 +77,7 @@ indice_min = rect.index(min(rect[1:]))
 rect[1], rect[indice_min] = rect[indice_min], rect[1]
 ```
 
-La suite de l’{glo}`algo|algorithme` consiste à nouveau à rechercher le plus petit élément de la liste restante (en excluant cette fois-ci le premier et deuxième élément qui sont bien triés) et l’échanger avec le troisième élément (premier élément non trié). À nouveau on peut reprendre le même code, mais on incrémente tous les indices de 1 :
+La suite de l’{glo}`algo|algorithme` consiste à nouveau à rechercher le plus petit élément de la liste restante (en excluant cette fois-ci le premier et deuxième élément, qui sont bien triés) et l’échanger avec le troisième élément (premier élément non trié). À nouveau on peut reprendre le même code, mais on incrémente tous les indices de 1 :
 
 ```
 # trouve le rectangle le plus petit de la liste rect[2:] (à partir du 3e élément)
@@ -98,7 +102,7 @@ for j in range(0,len(rect)-1):
 
 Le principal avantage de cette **<span style="color:rgb(89, 51, 209)">factorisation</span>** (réécriture) est que maintenant notre code fonctionne pour toutes les longueurs de listes. Nous n’avons plus besoin de savoir à l’avance combien d’éléments sont contenus dans la liste (combien de fois répéter les opérations). Au lieu de répéter le code un nombre prédéterminé de fois, le code s’exécute autant de fois qu’il y a d’éléments dans la liste (moins 1, car on compare toujours 2 éléments).
 
-L’étape suivante consiste à encapsuler tout le code dans une **<span style="color:rgb(89, 51, 209)">{glo}`fonction|fonction`</span>** qui reçoit la liste comme **<span style="color:rgb(89, 51, 209)">{glo}`parametre|paramètre`</span>**, afin de le rendre utilisable par différents {glo}`programme|programmes` sans avoir à copier-coller le code. Cela permet aussi en cas d’erreur de facilement corriger la {glo}`fonction|fonction`, plutôt que de corriger le code partout il a été copié-collé.
+L’étape suivante consiste à encapsuler tout le code dans une **<span style="color:rgb(89, 51, 209)">{glo}`fonction|fonction`</span>** qui reçoit la liste comme **<span style="color:rgb(89, 51, 209)">{glo}`parametre|paramètre`</span>**, afin de le rendre utilisable par d'autres {glo}`programme|programmes` sans avoir à copier-coller le code. Cela permet aussi en cas d’erreur de facilement corriger la {glo}`fonction|fonction`, plutôt que de corriger le code partout il a été copié-collé.
 
 ```
 # Tri par sélection
@@ -134,7 +138,7 @@ def fonction tri_selection(liste) :
 Pour trier la liste `rect` définie au tout début, il suffit d’appeler la {glo}`fonction|fonction` `tri_selection` avec la liste `rect` en {glo}`argument|argument`. La fonction **<span style="color:rgb(89, 51, 209)">print()</span>** permet d'afficher la liste triée :
 
 ```
-# Trier la liste de rectangles par sélection
+# trier la liste de rectangles par sélection
 rect = [3,4,1,2,6,5]
 print(tri_selection(rect))
 ```
@@ -155,16 +159,16 @@ Mais est-ce que derrière chaque programme se cache un algorithme ?
 
 ## Exercices
 
-````{admonition} Exercice 1 : jeu de la devinette 🔌
+````{admonition} Exercice 0. Jeu de la devinette 🔌
 :class: note
 
-Ecrire le programme suivant : le programme pense à un nombre au hasard. Lorsque vous lui proposez un nombre, il vous dit si « c'est plus » ou si « c'est moins» jusqu'à ce que vous ayez trouvé. Conseil : utiliser le module Python *random*.
+Ecrire le programme suivant : le programme pense à un nombre au hasard. Lorsque vous lui proposez un nombre, il vous dit si « c'est plus » ou si « c'est moins » jusqu'à ce que vous trouvez le bon nombre. Conseil : utiliser le module Python *random*.
 
 Y a-t-il une stratégie gagnante ?
  
 ````
 
-````{admonition} Exercice 2 : plus petit nombre 🔌
+````{admonition} Exercice 1. Plus petit nombre 🔌
 :class: note
 
 Transcrire l’algorithme de l’exercice qui permet de déterminer le plus petit nombre d’une liste, en un programme Python.
@@ -172,7 +176,7 @@ Transcrire l’algorithme de l’exercice qui permet de déterminer le plus peti
 ````
 
 
-````{admonition} Exercice 3 : programmes de tri 🔌
+````{admonition} Exercice 2. Programmes de tri 🔌
 :class: note
 
 Implémenter le tri à bulles et/ou le tri par insertion vus au cours.
@@ -181,13 +185,13 @@ Créer une liste qui contient les valeurs de 1 à n dans un ordre aléatoire, o�
 
 *Pour aller plus loin.*
 
-A l’aide du module time et de sa fonction time(), chronométrez le temps prend le tri d'une liste de 100, 500, 1000, 10000, 20000, 30000, 40000 puis 50000 nombres. 
+A l’aide du module time et de sa fonction time(), chronométrer le temps prend le tri d'une liste de 100, 500, 1000, 10000, 20000, 30000, 40000 puis 50000 nombres. 
 
-Noter les temps obtenus et affichez-les sous forme de courbe dans un tableur. Ce graphique permet de visualiser le temps d’exécution du tri en fonction de la taille de la liste. Que constatez‑vous ?
+Noter les temps obtenus et les afficher sous forme de courbe dans un tableur. Ce graphique permet de visualiser le temps d’exécution du tri en fonction de la taille de la liste. Que constatez‑vous ?
 
 Sur la base de ces mesures, pouvez-vous estimer le temps que prendrait le tri de 100000 éléments ?
 
-Lancer votre programme avec 100000 éléments et comparez le temps obtenu avec votre estimation.
+Lancer le programme avec 100000 éléments et comparer le temps obtenu avec votre estimation.
 
 ````
 
@@ -211,33 +215,33 @@ Lancer votre programme avec 100000 éléments et comparez le temps obtenu avec v
 ````
 -->
 
-````{admonition} Exercice 4 : tri de Bogo🔌
+````{admonition} Exercice 3. Tri de Bogo🔌
 :class: note
 
 Coder l’algorithme du tri de Bogo en Python (voir chapitre 2 : Le saviez-vous ?). 
 
-Relancer l'algorithme plusieurs fois, en notant le nombre d'itération nécessaires pour qu'il termine.
+Relancer l'algorithme plusieurs fois, en notant le nombre d'itérations nécessaires pour qu'il termine.
 
 A partir de quelle taille de liste cet algorithme est-il inutilisable ?
  
 ````
 
 
-````{admonition} Exercice 5 : Fibonacci 🔌
+````{admonition} Exercice 4. Fibonacci 🔌
 :class: note
 
-Ecrivez un algorithme qui calcule la suite des nombres de Fibonacci. 
+Ecrire un algorithme qui calcule la suite des nombres de Fibonacci. 
 
-Traduisez l’algorithme en une fonction Python. 
+Traduire l’algorithme en une fonction Python. 
 
-Comparez avec les solutions trouvées par vos camarades de classe.
+Comparer avec les solutions trouvées par vos camarades de classe.
 ````
 
 
 ````{admonition} Ai-je compris ?
 :class: attention
 
-1. Je sais lire et appliquer un algorithme, c’est-à dire que je peux déduire le résultat que me donnera un algorithme à partir d’un jeu de données particulier.
+1. Je sais lire et appliquer un algorithme, c’est-à-dire que je peux déduire le résultat que me donnera un algorithme à partir d’un jeu de données particulier.
 
 2. Je sais retranscrire un algorithme en un programme, je sais traduire les opérations d’un algorithme en instructions élémentaires if, else, while et for.
 

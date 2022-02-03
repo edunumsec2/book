@@ -162,7 +162,7 @@ Les entrées sont déjà disposées. Glissez autant d'additionneurs et de bits d
 
 ```{logic}
 :height: 500
-:showonly: LogicOutput Adder
+:showonly: out adder
 
 {
   "v": 1,

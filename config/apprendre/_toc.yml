@@ -21,18 +21,41 @@ parts:
       - file: content/appr/theme/rep-info/cours/conclusion/eleve
 
   ### Programmation    
-  - file: content/appr/theme/prog1/accueil/elevenew
+#  - file: content/appr/theme/prog1/accueil/elevenew
+  - file: content/appr/theme/prog1/new/intro
+
     sections:
-      - file: content/appr/theme/prog1/cours/1_intro/intro 
-      - file: content/appr/theme/prog1/cours/2_pyth/pyth
-      - file: content/appr/theme/prog1/cours/3_var/var
-      - file: content/appr/theme/prog1/cours/4_flux/flux
-      - file: content/appr/theme/prog1/cours/5_list/list
-      - file: content/appr/theme/prog1/cours/6_dict/dict
-      - file: content/appr/theme/prog1/cours/7_fonc/fonc
-      - file: content/appr/theme/prog1/cours/8_mod/mod
+#      - file: content/appr/theme/prog1/cours/1_intro/intro 
+#      - file: content/appr/theme/prog1/cours/2_pyth/pyth
+#      - file: content/appr/theme/prog1/cours/3_var/var
+#      - file: content/appr/theme/prog1/cours/4_flux/flux
+#      - file: content/appr/theme/prog1/cours/5_list/list
+#      - file: content/appr/theme/prog1/cours/6_dict/dict
+#      - file: content/appr/theme/prog1/cours/7_fonc/fonc
+#      - file: content/appr/theme/prog1/cours/8_mod/mod
+
+      - file: content/appr/theme/prog1/new/dessiner
+      - file: content/appr/theme/prog1/new/definir
+      - file: content/appr/theme/prog1/new/colorier
+      - file: content/appr/theme/prog1/new/repeter
+      - file: content/appr/theme/prog1/new/cercler
+      - file: content/appr/theme/prog1/new/parcourir
+      - file: content/appr/theme/prog1/new/questionner
+      - file: content/appr/theme/prog1/new/calculer
+      - file: content/appr/theme/prog1/new/ecrire
+      - file: content/appr/theme/prog1/new/write
+      - file: content/appr/theme/prog1/new/iterer
+      - file: content/appr/theme/prog1/new/attendre
+      - file: content/appr/theme/prog1/new/decider
+      - file: content/appr/theme/prog1/new/parametrer
+      - file: content/appr/theme/prog1/new/renvoyer
+      - file: content/appr/theme/prog1/new/grouper 
+      - file: content/appr/theme/prog1/new/randomiser
+      - file: content/appr/theme/prog1/new/trier
+      - file: content/appr/theme/prog1/new/turtleart
+      
 #     - file: content/appr/theme/prog1/cours/9_app/app 
-      - file: content/appr/theme/prog1/cours/10_conclusion/concl 
+#     - file: content/appr/theme/prog1/cours/10_conclusion/concl 
 
   ### Algorithmique         
   - file: content/appr/theme/algo1/accueil/eleve
@@ -66,10 +89,40 @@ parts:
       - file: content/appr/theme/algo2/cours/heuristiques/eleve
       - file: content/appr/theme/algo2/cours/recursivite/eleve
       - file: content/appr/theme/algo2/cours/conclusion/eleve
-  - file: content/appr/theme/prog2/eleve
-  - file: content/appr/theme/projets/eleve
-  - file: content/appr/theme/reseaux/eleve
+  - file: content/appr/theme/prog2/intro
+    sections:
+      - file: content/appr/theme/prog2/onkey
+      - file: content/appr/theme/prog2/lambda
+      - file: content/appr/theme/prog2/onclick
+      - file: content/appr/theme/prog2/ontimer
+      - file: content/appr/theme/prog2/turtle
+      - file: content/appr/theme/prog2/class
+      - file: content/appr/theme/prog2/inherit
+      - file: content/appr/theme/prog2/math
+      - file: content/appr/theme/prog2/time
+      - file: content/appr/theme/prog2/dict
+      - file: content/appr/theme/prog2/compter
+      - file: content/appr/theme/prog2/color
+      - file: content/appr/theme/prog2/set
+      - file: content/appr/theme/prog2/bool
+      - file: content/appr/theme/prog2/bit
+      - file: content/appr/theme/prog2/recursif
+      - file: content/appr/theme/prog2/idees
+      
+  - file: content/appr/theme/projets/intro
+    sections:
+      - file: content/appr/theme/projets/tic_tac_toe
+      - file: content/appr/theme/projets/puissance4
+      - file: content/appr/theme/projets/mines
+      - file: content/appr/theme/projets/snake
+      - file: content/appr/theme/projets/game_of_life
+      - file: content/appr/theme/projets/cartes
+      - file: content/appr/theme/projets/tetris
+      - file: content/appr/theme/projets/art_absurde
+      - file: content/appr/theme/projets/microbit/microbit
+      - file: content/appr/theme/projets/idees
 
+  - file: content/appr/theme/reseaux/eleve
 
 - caption: Glossaire
   numbered: false

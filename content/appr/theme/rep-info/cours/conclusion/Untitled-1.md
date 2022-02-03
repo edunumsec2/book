@@ -16,7 +16,7 @@ Ce n'est pas l'{glo}`algo|algorithme` qui est exécuté sur une machine pour nou
 
 ## Résolution d'un problème par étapes
 
-Un mode d’emploi, ou une recette, décrit les **<span style="color:rgb(89, 51, 209)">étapes</span>** à suivre pour arriver à une solution. Dans le cas d'une recette de cuisine, la préparation des ingrédients, leur cuisson et leur présentation sont différentes étapes que l'on peut suivre pour réaliser un plat. Prenons un cas précis : *<span style="color:rgb(13, 204, 166)">faire une omelette</span>*. Pour chaque étape de la préparation de l’omelette, il faut prévoir une marche à suivre suffisamment détaillée, afin que la personne qui suit la recette arrive au résultat souhaité. Dans le cas de l’omelette, les opérations pourraient être (voir figure ci-dessous) : 
+Un mode d’emploi, ou une recette décrit les **<span style="color:rgb(89, 51, 209)">étapes</span>** à suivre pour arriver à une solution. Dans le cas d'une recette de cuisine, la préparation des ingrédients, leur cuisson et leur présentation sont différentes étapes que l'on peut suivre pour réaliser un plat. Prenons un cas précis : *<span style="color:rgb(13, 204, 166)">faire une omelette</span>*. Pour chaque étape de la préparation de l’omelette, il faut prévoir une marche à suivre suffisamment détaillée, afin que la personne qui suit la recette arrive au résultat souhaité. Dans le cas de l’omelette, les opérations pourraient être (voir figure ci-dessous) : 
 
 1. Casser les œufs dans un bol. 
 2. Mélanger les œufs jusqu’à obtenir un mélange homogène.
@@ -31,9 +31,9 @@ Un mode d’emploi, ou une recette, décrit les **<span style="color:rgb(89, 51,
 **Un algorithme est un peu comme une recette de cuisine.** Cet exemple illustre les opérations à suivre pour la réalisation d’une omelette.
 
 
-Dans le cas de la recette d'une omelette, nous avons décomposé la marche à suivre en étapes à réaliser dans un certain ordre. Il en est de même pour un {glo}`algo|algorithme`. Pour résoudre un problème, il faut d'abord **<span style="color:rgb(89, 51, 209)">décomposer le problème en sous-problèmes</span>** que l'on *sait résoudre*. La solution de chaque sous-problème donne lieu à une étape qu'il faudra exécuter pour arriver à un résultat. Voici les sous-problèmes que certaines étapes ci-dessus permettent de résoudre. Afin d'extraire le contenu édible de l'œuf, il faut casser les œufs. Pour que l'omelette ait une jolie couleur uniforme, il faut mélanger le jaune et le blanc d'œuf. Cette dernière étape ne serait pas du tout pertinente si le problème que l'on essaie de résoudre est la préparation d'un œuf au plat. *<span style="color:rgb(13, 204, 166)">L’{glo}`algo|algorithme` décrit donc toutes les opérations qu'il faut effectuer pour arriver à ce résultat</span>*. Nous allons ainsi définir l’{glo}`algo|algorithme` comme **<span style="color:rgb(89, 51, 209)">une suite d’opérations qui permettent de résoudre un problème</span>**. 
+Dans le cas de la recette d'une omelette, nous avons décomposé la marche à suivre en étapes à réaliser dans un certain ordre. Il en est de même pour un {glo}`algo|algorithme`. Pour résoudre un problème, il faut d'abord **<span style="color:rgb(89, 51, 209)">décomposer le problème en sous-problèmes</span>** que l'on *sait résoudre*. La solution de chaque sous-problème donne lieu à une étape qu'il faudra exécuter pour arriver à un résultat. Voici les sous-problèmes que certaines étapes ci-dessus permettent de résoudre. Afin d'extraire le contenu comestible de l'œuf, il faut casser les œufs. Pour que l'omelette ait une jolie couleur uniforme, il faut mélanger le jaune et le blanc d'œuf. Cette dernière étape ne serait pas du tout pertinente si le problème que l'on essaie de résoudre est la préparation d'un œuf au plat. *<span style="color:rgb(13, 204, 166)">L’{glo}`algo|algorithme` décrit donc toutes les opérations qu'il faut effectuer pour arriver à ce résultat</span>*. Nous allons ainsi définir l’{glo}`algo|algorithme` comme **<span style="color:rgb(89, 51, 209)">une suite d’opérations qui permettent de résoudre un problème</span>**. 
 
-Le langage utilisé pour écrire un programme doit être extrêment précis, sans quoi une machine ne pourrait pas le comprendre. Nous avons vu qu'un algorithme n'a pas besoin d'être compris par une machine, mais seulement par les humains. Ainsi, le langage que l'on va utiliser pour exprimer un algorithme sera plus libre que celui utilisé pour coder un programme. Ce langage **peut varier d'une personne à l'autre** et se rapproche dans notre cas de la langue française, comme le montre cet exemple :
+Le langage utilisé pour écrire un programme doit être extrêmement précis, sans quoi une machine ne pourrait pas le comprendre. Nous avons vu qu'un algorithme n'a pas besoin d'être compris par une machine, mais seulement par les humains. Ainsi, le langage que l'on va utiliser pour exprimer un algorithme sera plus libre que celui utilisé pour coder un programme. Ce langage **peut varier d'une personne à l'autre** et se rapproche dans notre cas de la langue française, comme le montre cet exemple :
 
 <!-- ```
 Tableau Nombres : numérique
@@ -55,7 +55,7 @@ Résultat ← 0            # la variable Résultat contient 0 pour commencer
 
 Répéter Pour i ← 1 à n  # i prend la valeur de 1, puis 2, puis 3, jusqu'à n    
     Résultat ← Résultat + Nombres[i]
-                        # Résultat vaut la somme de lui-même avec l'i-ème élément de Nombres
+                        # Résultat vaut la somme de lui-même avec le i-ème élément de Nombres
 Fin Pour                # quand i vaut n l'algorithme se termine
 
 Retourner Résultat
@@ -85,7 +85,7 @@ width: 50%
 
 
 
-Lorsque l'on dit que i ← 1, ou que i = 1 en Python, cela veut tout simplement dire que la variable *i* vaut maintenant 1. Cette opération signifie que l'on va prendre le tiroir avec étiquette *i* dans la commode (s'il n'existe pas encore on va noter *i* sur l'étiquette d'un tiroir disponible) et on va mettre la valeur 1 dedans. Ce qui se trouvait dans le tiroir avant la valeur 1 ne s'y trouve plus, on dit que *la valeur précédente est écrasée*. A chaque fois que nous utilisons *i* dans l'algorithme ou dans le code, nous faisons référence à la valeur stockée dans le tiroir.
+Lorsque l'on dit que i ← 1, ou que i = 1 en Python, cela veut tout simplement dire que la variable *i* vaut maintenant 1. Cette opération signifie que l'on va prendre le tiroir avec étiquette *i* dans la commode (s'il n'existe pas encore, on va noter *i* sur l'étiquette d'un tiroir disponible) et on va mettre la valeur 1 dedans. Ce qui se trouvait dans le tiroir avant la valeur 1 ne s'y trouve plus, on dit que *la valeur précédente est écrasée*. A chaque fois que nous utilisons *i* dans l'algorithme ou dans le code, nous faisons référence à la valeur stockée dans le tiroir.
 
 
 ````{admonition} Exercice 0 : algorithme mystère
@@ -124,7 +124,7 @@ Cet algorithme permet de calculer la somme des nombres contenus dans une liste (
 ````
 `````
 
-Pour comprendre ce que fait l'algorithme ci-dessus, il faut se mettre à la place de la machine. On parle de *<span style="color:rgb(13, 204, 166)">simuler</span>* un algorithme, de faire comme si l'algorithme s'exécutait sur une machine. Pour que ce soit plus concret, on peut imaginer des valeurs fictives pour les variables telles que *Nombres*. Dans la vie réelle, *Nombres* pourra contenir tous les nombres possibles, mais cela ne nous aide pas à comprendre. On imagine alors des nombres précis que *Nombres* pourrait contenir, comme par exemple 4, 5 et 6. Lorsqu'on exécute les opérations de l'algorithme l'une après l'autre, avec des valeurs concrètes, on comprend mieux quel effet ces opérations ont sur les valeurs contenues dans les variables. La {glo}`algo|simulation` de l'algorithme nous permet de saisir **<span style="color:rgb(89, 51, 209)">les calculs</span>** réalisés par cet algorithme, ici une simple somme.
+Pour comprendre ce que fait l'algorithme ci-dessus, il faut se mettre à la place de la machine. On parle de *<span style="color:rgb(13, 204, 166)">simuler</span>* un algorithme, de faire comme si l'algorithme s'exécutait sur une machine. Pour que ce soit plus concret, on peut imaginer des valeurs fictives pour les variables telles que *Nombres*. Dans la vie réelle, *Nombres* pourra contenir tous les nombres possibles, mais cela ne nous aide pas à comprendre. On imagine alors des nombres précis que *Nombres* pourrait contenir, par exemple 4, 5 et 6. Lorsqu'on exécute les opérations de l'algorithme l'une après l'autre, avec des valeurs concrètes, on comprend mieux quel effet ces opérations ont sur les valeurs contenues dans les variables. La {glo}`algo|simulation` de l'algorithme nous permet de saisir **<span style="color:rgb(89, 51, 209)">les calculs</span>** réalisés par cet algorithme, ici une simple somme.
 
 
 ````{admonition} Exercice 1 : machine mystère
@@ -168,9 +168,9 @@ Lorsqu'on sauve un fichier dans un ordinateur, il est stocké dans une mémoire.
 
 L’objectif d’un {glo}`algo|algorithme` est de décrire la solution à un problème donné. Concrètement, pour résoudre un problème, l’{glo}`algo|algorithme` va utiliser des **<span style="color:rgb(89, 51, 209)">données</span>** qu’il reçoit ***<span style="color:rgb(13, 204, 166)">en entrée</span>*** et va retourner un **<span style="color:rgb(89, 51, 209)">résultat</span>** ***<span style="color:rgb(13, 204, 166)">en sortie</span>***. Le résultat en sortie va être la solution au problème sur la base des calculs effectués sur les données en entrée. Un exemple d'{glo}`algo|algorithme` qui détecte les visages reçoit en {glo}`input|entrée` une image (ce sont les {glo}`data|données`) et retourne en sortie "oui" ou "non" (c'est le résultat) selon si l’image contient un visage ou pas. Les {glo}`data|données` en {glo}`input|entrée` d’un {glo}`algo|algorithme` qui traduit pourraient être le mot à traduire et un dictionnaire. L’{glo}`algo|algorithme` traiterait ces {glo}`data|données` pour retourner en {glo}`output|sortie` la traduction du mot dans une autre langue.
 
-Entre l’{glo}`input|entrée` et la {glo}`output|sortie`, l’{glo}`algo|algorithme` précise les **<span style="color:rgb(89, 51, 209)">opérations</span>** qu'il faut exécuter sur les données en entrée. Les opérations que l’on peut demander à un humain sont très différentes de celles que l'on peut demander à une machine. On peut demander à un humain de casser des œufs, mais un ordinateur ne peut pas comprendre et réaliser cette opération. Par contre on peut demander à un ordinateur de se souvenir de milliers de valeurs stockées dans des variables et de comparer les valeurs de toutes ces variables entre elles sans faire d'erreur. Pour résoudre un problème, l'humain cherche une solution sur la base des données à disposition, et la décrit sous la forme d'opérations dans un algorithme. Dans un deuxième temps, ces opérations sont retranscrites en une suite d’instructions élémentaires dans un programme informatique, exécutables par une machine. Dans un troisième temps on vérifie si la solution obtenue est correcte, et si besoin on corrige l'algorithme.
+Entre l’{glo}`input|entrée` et la {glo}`output|sortie`, l’{glo}`algo|algorithme` précise les **<span style="color:rgb(89, 51, 209)">opérations</span>** qu'il faut exécuter sur les données en entrée. Les opérations que l’on peut demander à un humain sont très différentes de celles que l'on peut demander à une machine. On peut demander à un humain de casser des œufs, mais un ordinateur ne peut pas comprendre et réaliser cette opération. Par contre on peut demander à un ordinateur de se souvenir de milliers de valeurs stockées dans des variables et de comparer les valeurs de toutes ces variables entre elles sans faire d'erreur. Pour résoudre un problème, l'humain cherche une solution sur la base des données à disposition, et la décrit sous la forme d'opérations dans un algorithme. Dans un deuxième temps, ces opérations sont retranscrites en une suite d’instructions élémentaires dans un programme informatique, exécutables par une machine. Dans un troisième temps, on vérifie si la solution obtenue est correcte, et si besoin on corrige l'algorithme.
 
-Le dernier ingrédient de l'{glo}`algo|algorithme`, mais tout aussi important, est l’**<span style="color:rgb(89, 51, 209)">ordre des opérations</span>**. Dans l’exemple de l’omelette, on ne peut cuire les œufs avant de les avoir cassés, sans quoi on obtiendrait des œufs durs. De même, l’ordinateur a besoin de recevoir les instructions élémentaires à exécuter dans le bon ordre. Pour résumer, les ingrédients pour concevoir un {glo}`algo|algorithme` sont les suivants : 
+Le dernier ingrédient de l'{glo}`algo|algorithme`, mais tout aussi important est l’**<span style="color:rgb(89, 51, 209)">ordre des opérations</span>**. Dans l’exemple de l’omelette, on ne peut cuire les œufs avant de les avoir cassés, sans quoi on obtiendrait des œufs durs. De même, l’ordinateur a besoin de recevoir les instructions élémentaires à exécuter dans le bon ordre. Pour résumer, les ingrédients pour concevoir un {glo}`algo|algorithme` sont les suivants : 
 
 1. Des {glo}`data|données` en {glo}`input|entrée`.
 2. Des opérations, dans un ordre précis.
@@ -218,7 +218,7 @@ A quoi correspondent les ingrédients d’un algorithme dans l’exemple de la r
 
 Ecrire un algorithme qui échange les valeurs de deux variables. Par exemple, si la première variable X contient 1 et la deuxième variable Y contient 2, à la fin de l'algorithme X contient 2 et Y contient 1. Pour rappel, une variable peut contenir une seule valeur à la fois. 
 
-Conseil : mettez-vous à la place de la machine et représentez le contenu de chaque variable sous la forme d'un tiroir, dessinez le tiroir avec l'étiquette et son contenu *après chaque opération de votre algorithme*.
+Conseil : cela peut être utile de vous mettre à la place de la machine et de représenter le contenu de chaque variable sous la forme d'un tiroir, en dessinant son étiquette et son contenu *après chaque opération de votre algorithme*.
 
 ````
 
@@ -318,9 +318,9 @@ Un hexagone. Pour vérifier, exécuter le code ci-dessus. On pourrait croire que
 
 Ecrire un algorithme qui permet de trouver le plus petit nombre d’une liste. Penser à décomposer la solution en différentes étapes.
 
-Appliquer votre algorithme à la liste [3, 6, 2, 8, 1, 9, 7, 5].
+Appliquer l'algorithme que vous avez écrit à la liste [3, 6, 2, 8, 1, 9, 7, 5].
 
-L'algorithme trouve-t-il la bonne solution ? Sinon, modifier votre algorithme afin qu’il trouve la bonne solution.
+L'algorithme trouve-t-il la bonne solution ? Sinon, modifier l'algorithme afin qu’il trouve la bonne solution.
 
 ````
 <!-- 
@@ -440,7 +440,7 @@ Oui, un ordinateur peut exécuter ces opérations, mais elles doivent être déc
 
 Écrire un algorithme qui effectue la permutation circulaire des variables X, Y et Z : à la fin de l’algorithme, X contient la valeur de Z, Y la valeur de X et Z la valeur de Y. Pour rappel, une variable ne peut contenir qu'une valeur à la fois.
 
-Conseil : mettez-vous à la place de la machine et représentez le contenu de chaque variable sous la forme d'un tiroir, dessinez le tiroir avec l'étiquette et son contenu *après chaque opération de votre algorithme*. Est-ce que votre algorithme donne le résultat attendu ? Si non, modifiez votre algorithme pour qu’il résolve le problème correctement.
+Conseil : il peut être utile de vous mettre à la place de la machine et de représenter le contenu de chaque variable sous la forme d'un tiroir, en dessinant son étiquette et son contenu *après chaque opération de votre algorithme*. Est-ce que votre algorithme donne le résultat attendu ? Si non, modifier l'algorithme pour qu’il résolve le problème correctement.
 
 ````
 
@@ -476,7 +476,7 @@ Nous avons donc la confirmation que la solution obtenue résout correctement not
 
 Quel est le résultat de la suite des trois affectations suivantes ? 
 
-Vérifier votre solution en représentant chaque variable et en y mettant des valeurs fictives. Suivre les opérations dans l’ordre et dessiner le contenu des variables après chaque étape.
+Vérifier la solution que vous avez trouvé en représentant chaque variable et en y mettant des valeurs fictives. Suivre les opérations dans l’ordre et dessiner le contenu des variables après chaque étape.
 
 ```
 X ← X + Y

@@ -135,18 +135,26 @@ Pour ceux et celles qui souhaitent utiliser l'environnement Jupyter Book pour te
     * [Téléchargement](https://www.python.org/downloads/)
       * Pour macOS, un excellent tuto si l'installation pose problème (mais il faut bien lire la deuxième partie): [Tuto](https://opensource.com/article/19/5/python-3-default-mac#what-to-do)<sup>1</sup>
 
- 4. Installer [Jupyter Book](https://jupyterbook.org).  Ceci **met aussi à jour** Jupyter Book lorsqu'une nouvelle version est disponible. Si l'équipe de rédaction utilise de nouvelles fonctions de Jupyter Book, il faut faire retourner ceci pour l'obtenir.
-    * Avec Python 3.9:
+ 4. (Optionnel) Créer un environnement virtuel pour que les autres installs de Python n'interfèrent pas avec celle utilisée ici:
+    * Avec Python 3, depuis de dossier `book`:
       ```bash
-      pip3.9 install -U jupyter-book
+      python3 -m venv venv
+      ```
+      Bien utiliser le nom `venv` (pas `.env` ou `.venv`); c'est celui qui sera reconnu par les scripts de compilation.
+
+ 5. Installer [Jupyter Book](https://jupyterbook.org).  Ceci **met aussi à jour** Jupyter Book lorsqu'une nouvelle version est disponible. Si l'équipe de rédaction utilise de nouvelles fonctions de Jupyter Book, il faut faire retourner ceci pour l'obtenir.
+    * Avec Python 3, depuis de dossier `book`:
+      ```bash
+      source venv/bin/activate # si vous utilisez un environnement virtuel (recommandé), sinon à sauter
+      pip3 install -U jupyter-book
       ```
       * [Instructions complètes](https://jupyterbook.org/intro.html#install-jupyter-book) si la version ci-dessus ne marche pas
 
- 5. Installer [Visual Studio Code](https://code.visualstudio.com) 
+ 6. Installer [Visual Studio Code](https://code.visualstudio.com) 
     * Permer d'éditer le Markdown et le format Jupyter (et le format YAML pour la config, si nécessaire)
     * Fournit des boutons pour produire l'output sans passer par le terminal
 
- 6. Ouvrir le fichier `workspace.code-workspace` dans VS Code
+ 7. Ouvrir le fichier `workspace.code-workspace` dans VS Code
     * L'installation des extensions suivantes de VS Code sera proposée:
       * `ms-python.python` pour avoir un éditeur/linter Python
       * `ms-toolsai.jupyter` pour ouvrir et éditer des fichier Jupyter `*.ipynb`
@@ -263,3 +271,6 @@ jupyter-book clean .
 - Plateforme : Romain Edelmann (romain.edelmann@epfl.ch) - EPFL & Grégoire Gavin (gregoire.gavin@epfl.ch) - EPFL
 - Charte éditoriale, plateforme, rédaction : Elliot Vaucher (elliot.vaucher@epfl.ch) - EPFL
 - Coordination : Nathalie Farenc (nathalie.farenc@epfl.ch) - EPFL
+
+
+Test actions
