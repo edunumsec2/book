@@ -33,6 +33,10 @@ function questions_ready() {
     for (const show_button of show_buttons) {
       show_button.addEventListener("click", show_listener(correct_boxes, incorrect_boxes))
     }
+    var reset_buttons = question.getElementsByClassName("reset");
+    for (const reset_button of reset_buttons) {
+      reset_button.addEventListener("click", reset_listener(correct_boxes, incorrect_boxes))
+    }
   }
 }
 
@@ -62,6 +66,17 @@ function show_listener(correct_boxes, incorrect_boxes) {
   return function(event) {
     for (const box of correct_boxes) {
       box.checked = true;
+    }
+    for (const box of incorrect_boxes) {
+      box.checked = false;
+    }
+  };
+}
+
+function reset_listener(correct_boxes, incorrect_boxes) {
+  return function(event) {
+    for (const box of correct_boxes) {
+      box.checked = false;
     }
     for (const box of incorrect_boxes) {
       box.checked = false;
