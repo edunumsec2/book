@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!alwaysShowOutput) {
           outputArea.style.display = "none";
         }
-        resized();
+        resizeCanvas();
         break;
     }
   }
@@ -172,6 +172,27 @@ document.addEventListener("DOMContentLoaded", function() {
   Sk.TurtleGraphics.height = 400;
   canvasElem.style.width = "600px";
   canvasElem.style.height = "400px";
+
+  function resizeCanvas() {
+    const availableWidth = canvasArea.clientWidth - 26;
+    if (availableWidth < 0) {
+      return;
+    }
+    const targetWidth = 600;
+    const targetHeight = 400;
+
+    if (availableWidth < targetWidth) {
+      const ratio = availableWidth / targetWidth;
+      canvasElem.style.transform = "scale(" + ratio + ")";
+      canvasArea.style.height = (targetHeight * ratio + 6) + "px";
+    }
+    else {
+      canvasArea.style.height = (targetHeight + 6) + "px";
+    }
+    resized();
+  }
+
+  window.addEventListener("resize", resizeCanvas);
 
   function errorToString(err) {
     var msg = err.tp$name + ": " + err.tp$str().v;
