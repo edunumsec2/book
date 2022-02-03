@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const canvasArea = document.getElementById("canvas-area");
   const canvasElem = document.getElementById("canvas");
   const outputElem = document.getElementById("output");
+  const outputArea = document.getElementById("output-area");
   const outputDefaultMessage = document.getElementById("output-message");
 
   var downloadFileName = "code.py";
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var rejectInput = null;
 
   function outputElement(elem) {
+    outputArea.style.display = "block";
     outputDefaultMessage.style.display = "none";
     const atBottom = outputElem.scrollTop + output.clientHeight >= outputElem.scrollHeight;
     outputElem.appendChild(elem);
@@ -143,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function() {
     switch(library) {
       case 'turtle':
         canvasArea.style.display = "block";
+        outputArea.style.display = "none";
         resized();
         break;
     }
