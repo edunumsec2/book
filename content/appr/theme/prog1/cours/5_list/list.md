@@ -21,6 +21,7 @@ print(len(fruits))
 
 La fonction `print` peut imprimer une liste. 
 ```{codeplay}
+fruits = ['banane', 'pomme', 'orange']
 print(fruits)
 ````
 
@@ -345,10 +346,57 @@ print(tampon)
 
 ## Exercices
 
-````{admonition} Exercice 1 : 
+````{admonition} Exercice 1 : semaine permutée
 :class: note
-......
+Écrivez un programme qui créé une liste *semaine* comprenant tous les jours de la semaine, puis successivement effectuez les actions suivantes :
+
+1 - affichez la liste *semaine*
+
+2 - affichez le 3ème jour de la semaine
+
+3 - permutez le 2ème et le 4ème jour de la semaine en utilisant la valeur d'index -1
+
+4 - affichez à nouveau la liste *semaine* ; que constatez-vous ?
+
+4 - affichez 7 fois la valeur du dernier terme de la liste
+
 ```` 
+
+
+````{admonition} Solution
+:class: hint
+
+```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+
+semaine = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 
+           'samedi', 'dimanche']
+
+print(semaine)
+
+<br>
+
+print(semaine[2])
+
+<br>
+
+semaine[-1] = semaine[1]
+
+semaine[1] = semaine[3]
+
+semaine[3] = semaine[-1]
+
+<br>
+
+print(semaine)
+
+<br>
+
+print(7*semaine[len(semaine)-1])
+
+```
+````
+
 
 ````{admonition} Exercice 2 : 
 :class: note
