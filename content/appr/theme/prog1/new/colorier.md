@@ -18,7 +18,7 @@ Une couleur sur un écran d'ordinateur est produite par
 
 ## Liste de couleurs
 
-Voici une liste des couleurs disponibles. Pour les utiliser vous devez les écrire entre des apostrophes, comme par exemple `'pink'` ou `'hotpink'`.
+Voici une liste des couleurs disponibles. Pour les utiliser vous devez les écrire entre apostrophes, comme par exemple `'pink'` ou `'hotpink'`.
 
 ![couleurs](media/colors.png)
 
@@ -223,10 +223,10 @@ hideturtle()
 ## Forme ouverte
 
 La forme ne doit pas nécessairement être fermée pour être remplie d'une couleur.
-Dans l'exemple suivant nous dessinons une forme ouverte avec seulement deux lignes.
+Dans l'exemple suivant, nous dessinons une forme ouverte avec seulement deux lignes.
 Le résultat est un triangle avec deux bordures et un troisième segment sans bordure.
 
-Une équerre est un instrument formé de deux pièces ajustées à angle droit. l'équerre est utilisée soit pour vérifier des angles dièdres droits, soit pour tracer des angles plans droits.
+Une équerre est un instrument formé de deux pièces ajustées à angle droit. L'équerre est utilisée soit pour vérifier des angles dièdres droits, soit pour tracer des angles plans droits.
 
 ```{codeplay}
 :file: color5.py
@@ -314,7 +314,7 @@ dot(80)
 La fonction `bras()` dessine les 3 côtés d'un carré et tourne, à la fin, dans le sens approprié pour la suite.
 Répété 4 fois, ceci donne la forme d'une croix.
 
-Ici nous utilisons la fonction `color('white')` pour changer simultanément la couleur de ligne *et* la couleur de remplissage en blanc.
+Ici, nous utilisons la fonction `color('white')` pour changer simultanément la couleur de ligne *et* la couleur de remplissage en blanc.
 
 ```{codeplay}
 :file: color8.py
@@ -374,16 +374,16 @@ fillcolor('lightblue')
 maison()
 ```
 
-**Exercice** : Ajoutez encore une maison dans une autre couleur.
+**Exercice** : Ajoutez encore une maison d'une autre couleur.
 
 ## Exporter une image
 
 Pour enregistrer votre dessin vers un fichier image, faites ceci :
 
-- téléchargez le code,
-- ouvrez-le avec un éditeur externe,
-- ajoutez les 3 lignes de code à la fin,
-- exécutez votre code.
+- Téléchargez le code.
+- Ouvrez-le avec un éditeur externe.
+- Ajoutez les 3 lignes de code à la fin.
+- Exécutez votre code.
 
 ```  python
 if len(dir(Turtle)) > 100:
@@ -391,17 +391,17 @@ if len(dir(Turtle)) > 100:
     Screen().getcanvas().postscript(file='file.eps')
 ```
 
-Votre image est exporté vers un fichier `file.eps` et qui se trouve dans le même dossier que votre code.
-Vous pouvez changer le nom du fichier, mais vous devez garder l'extension `.eps`.
+Votre image est exportée vers un fichier `file.eps`, qui se trouve dans le même dossier que votre code.
+Vous pouvez changer le nom du fichier, mais devez garder l'extension `.eps`.
 
 Sur un Mac, vous pouvez ouvrir un fichier `.eps` avec l'application **Aperçu** et ensuite exporter l'image vers le format PDF, JPG ou PNG.
 
 **Exercice**
 
-- Téléchargez le code
-- Ouvrez-le avec Thonny
-- Exécutez le code
-- Ouvrez le ficher image `japon.eps`
+- Téléchargez le code.
+- Ouvrez-le avec Thonny.
+- Exécutez le code.
+- Ouvrez le ficher image `japon.eps`.
 
 ```{codeplay}
 :file: japon.py
@@ -418,7 +418,7 @@ if len(dir(Turtle)) > 100:
 
 - Téléchargez un exercice.
 - Editez-le dans un éditeur externe tel que Thonny.
-- Déposez-le sur Moodle (ou plateforme équivalente de votre école).
+- Déposez-le sur Moodle (ou une plateforme équivalente dans votre école).
 
 ### Arc-en-ciel
 
@@ -510,12 +510,12 @@ done()
 
 ### Tetris
 
-Les carrés de base d'un tétromino mesurent 40 × 40 pixels. Il y en a 7 formes différentes, qui sont nommées d'après les lettres auxquelles ils ressemblent et qui ont des couleurs standard :
+Les carrés de base d'un tétromino mesurent 40 × 40 pixels. Il y a 7 formes différentes de tétrominos, qui sont nommés d'après les lettres auxquelles ils ressemblent et qui ont des couleurs standard :
 
 ```{image} media/tetromino.png
 ```
 
-Créez des fonctions pour dessiner les 7 tétrominos avec leurs couleurs appropriées et composez la forme ci-dessous.
+Créez des fonctions pour dessiner les 7 tétrominos avec leurs couleurs appropriées, et composez la forme ci-dessous.
 
 ```{image} media/tetris2.png
 ```
