@@ -54,6 +54,10 @@ parts:
 #      - file: content/ens/theme/archi/informatique-embarquee/maitre
 #      - file: content/ens/theme/archi/histoire-informatique/maitre
 
+- caption: Deuxième année
+  numbered: false
+  chapters: 
+  - file: content/ens/theme/reseaux/maitre
 - caption: Enjeux sociaux
   numbered: false
   chapters:
@@ -69,6 +73,8 @@ parts:
     - file: content/ens/theme/enjeux/fiches-complementaires/affaire-snowden/affaire-snowden
     - file: content/ens/theme/enjeux/fiches-complementaires/genre-numerique/genre-numerique
   - file: content/ens/theme/enjeux/bibliographie
+
+
 
 ## Annexes
 - caption: Annexes
