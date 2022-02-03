@@ -36,11 +36,15 @@ document.addEventListener("DOMContentLoaded", function() {
   var codeLines = 0;
   var hints = [];
   var readOnly = false;
+  var alwaysShowOutput = false;
+  var alwaysHideOutput = false;
 
   var rejectInput = null;
 
   function outputElement(elem) {
-    outputArea.style.display = "block";
+    if (!alwaysHideOutput) {
+      outputArea.style.display = "block";
+    }
     outputDefaultMessage.style.display = "none";
     const atBottom = outputElem.scrollTop + output.clientHeight >= outputElem.scrollHeight;
     outputElem.appendChild(elem);
@@ -145,7 +149,9 @@ document.addEventListener("DOMContentLoaded", function() {
     switch(library) {
       case 'turtle':
         canvasArea.style.display = "block";
-        outputArea.style.display = "none";
+        if (!alwaysShowOutput) {
+          outputArea.style.display = "none";
+        }
         resized();
         break;
     }
@@ -397,6 +403,21 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       if (frame.hasAttribute("data-file")) {
         downloadFileName = b64DecodeUnicode(frame.dataset.file);
+      }
+      if (frame.hasAttribute("data-output-min-lines")) {
+        const minLines = parseInt(frame.dataset.outputMinLines);
+        outputArea.style.minHeight = (minLines * 1.3 + 2) + "em";
+        if (minLines > 0) {
+          alwaysShowOutput = true;
+        }
+      }
+      if (frame.hasAttribute("data-output-max-lines")) {
+        const maxLines = parseInt(frame.dataset.outputMaxLines);
+        outputArea.style.maxHeight = (maxLines * 1.3 + 2) + "em";
+        if (maxLines === 0) {
+          alwaysHideOutput = true;
+          outputArea.style.display = "none";
+        }
       }
 
       resized();
