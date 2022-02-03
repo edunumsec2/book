@@ -1,13 +1,13 @@
 # Questionner - `input`
 
-Dans ce chapitre, nous introduisons une façon pour que le programme puisse poser une question. L'utilisateur du programme peut alors répondre et entrer une information. La réponse sera mémorisée dans une variable. Un traitement de l'information peut être fait, et le résultat peut être affiché. Nous allons voir que :
+Dans ce chapitre, nous découvrons comment un programme peut poser une question lors de son exécution. L'utilisateur du programme peut alors répondre et entrer une information. La réponse sera stockée dans la mémoire de l'ordinateur et associé à une variable. Grâce à cette variable, le programme peut traiter la réponse fournie, et le résultat peut être affiché. Nous allons voir que :
 
 - la fonction `input('question')` demande une information,
-- la variable `x` mémorise une information,
+- une variable, par exemple `x`, mémorise une information,
 - la fonction `print()` affiche un texte (une réponse).
 
 ```{question}
-Une variable informatique est
+En informatique, une variable est
 
 {v}`une place en mémoire`  
 {v}`une étiquette pour un objet`  
@@ -17,9 +17,9 @@ Une variable informatique est
 
 ## Dire bonjour
 
-Nous commençons par le grand classique des livres d'introduction à la programmation : afficher la fameuse phrase *hello world.*.
+Nous commençons par le grand classique des livres d'introduction à la programmation : afficher la fameuse phrase *hello world*.
 La fonction `print()` permet d'écrire du texte vers la console.
-Ici, la console est la région de texte qui suit le programme interactive.
+Ici, la console est la zone rectangulaire qui s'affiche sous le code du programme.
 
 ```{codeplay}
 :file: input0.py
@@ -30,8 +30,8 @@ print('hello world.')
 
 ## Ecrire et dessiner
 
-Votre programme peut faire les deux choses dans un même programme: dessiner une image et écrire un texte.
-Le texte apparait dans la console qui apparait directement après le programme.
+Votre programme peut faire les deux choses dans un même programme : dessiner une image et écrire un texte.
+Le texte apparait dans la console, qui apparait directement après le programme.
 Le dessin apparait dans une fenêtre spéciale après la console.
 
 ```{codeplay}
@@ -45,7 +45,7 @@ for i in range(4):
     left(90)
 ```
 
-**Exercice** : Ajoutez en plus du code pour dessiner un triangle, et annoncez-le dans le texte.
+**Exercice** : Ajoutez du code pour dessiner un triangle, et annoncez-le dans le texte.
 
 ## La fonction `input()`
 
@@ -64,7 +64,7 @@ print('Bonjour', x)
 ## Les variables
 
 Une variable est une place en mémoire pour stocker de l'information.
-Vous êtes complètement libre dans le choix des noms pour les variables, mais c'est recommandé de choisir des noms qui sont le plus explicite possible. C'est mieux d'utiliser des noms de variable parlants, comme `'nom'` et `'age'`,  bien qu'on aurait pu utiliser `'x'` et `'y'`.  
+Vous êtes complètement libre dans le choix des noms pour les variables, mais c'est recommandé de choisir des noms qui sont le plus explicite possible. C'est mieux d'utiliser des noms de variable parlants, comme `nom` et `age`, même si on aurait pu utiliser `x` et `y`.  
 
 ```{codeplay}
 :file: input3.py
@@ -72,18 +72,18 @@ nom = input('Entrez votre nom: ')
 print('Bonjour', nom)
 
 age = input('Entrez votre age: ')
-print('Trés bien', nom, 'vous avez', age, 'ans')
+print('Très bien', nom, 'vous avez', age, 'ans')
 ```
 
-**Exercice** : Ajoutez une 3e question.
+**Exercice** : Ajoutez une trosième question et utilisez la réponse dans un `print()`.
 
 ## Convention
 
-Normalement c'est conseillé d'utiliser des variables très explicite, comme `age`, `prenom`, `nom`, `longuer`, `hauteur`, etc.
+Normalement, c'est conseillé d'utiliser des variables très explicite, comme `age`, `prenom`, `nom`, `longuer`, `hauteur`, etc. Cela aide à la compréhension du code.
 
 Mais dans des boucles et dans un contexte local, nous adoptons la convention suivante d'utiliser des variables courte d'une seule lettre.
 
-- `a` pour une longueur ou distance
+- `a` pour une longueur, une distance ou un angle
 - `c` pour un caractère dans une boucle
 - `d` pour un diamètre
 - `i` pour un entier dans une boucle
@@ -105,7 +105,7 @@ La variable `i` désigne normalement
 ## Demander une couleur
 
 Nous pouvons utiliser une entrée interactive avec la fonction `input()`
-et demander à l'utilisateur d'entrer une couleur valide pour l'arrière-fond.
+et demander à l'utilisateur d'entrer une couleur valide pour l'arrière-plan.
 
 ```{codeplay}
 :file: input4.py
@@ -140,7 +140,7 @@ for i in range(4):
 end_fill()
 ```
 
-**Exercice** : Ajoutez une 4e question pour demander la couleur des points (dot) et ajoutez un point colorié dans chaque sommet.
+**Exercice** : Ajoutez une quatrième question pour demander la couleur des points (dot) et ajoutez un point colorié à chaque sommet du carré.
 
 ## Demander en boucle
 
@@ -170,7 +170,7 @@ Dans cette section, vous allez découvrir les différentes catégories d'erreur 
 
 ### SyntaxError
 
-Cette erreur est produite quand vous utilisez des accents dans des noms de fonctions ou de variables.
+Cette erreur survient lorsque vous utilisez des accents dans des noms de fonctions ou de variables.
 
 ```{codeplay}
 from turtle import *
@@ -183,11 +183,11 @@ def carré():
 carré()
 ```
 
-**Exercice** : Corrigez les 3 erreurs de syntaxe'.
+**Exercice** : Corrigez les trois erreurs de syntaxe'.
 
 ### SyntaxError: EOF
 
-Cette erreur est produite quand vous oubliez de fermer une parenthèse.
+Cette erreur survient lorsque vous oubliez de fermer une parenthèse.
 
 ```{codeplay}
 from turtle import *
@@ -197,17 +197,17 @@ left(90)
 forward(100
 ```
 
-**Exercice** : Corrigez l'erreur de syntaxe'.
+**Exercice** : Corrigez l'erreur de syntaxe.
 
-### ValueErreor
+### ValueError
 
-Cette erreur est produite quand la valeur numérique est trop grande pour correspondre à un Unicode.
+Cette erreur survient lorsque la valeur numérique est trop grande pour correspondre à un Unicode.
 
 ```{codeplay}
 print(chr(10000000))
 ```
 
-**Exercice** : Corrigez l'erreur de valeur'.
+**Exercice** : Corrigez l'erreur de valeur.
 
 ## Exercices
 
@@ -219,12 +219,12 @@ Créez un programme qui dessine une maison et demande :
 - la couleur de la porte
 - la couleur de la fenêtre
 
-Comme nous devons indiquer les nos des couleurs en anglais, nous allons écrire ce programme en anglais.
+Comme nous devons indiquer les noms des couleurs en anglais, nous allons écrire ce programme en anglais.
 
 ```{codeplay}
 :file: maison.py
 from turtle import *
 
-col_maison = input('Color of the house: ')
+col_house = input('Color of the house: ')
 ...
 ```

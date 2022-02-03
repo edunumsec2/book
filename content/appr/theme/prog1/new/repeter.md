@@ -398,7 +398,7 @@ fore i in range(3)
     left(120)
 ```
 
-**Exercice** : Corrigez les 3 erreurs de syntaxe et remarquez les éventuelles différences de stylisation.
+**Exercice** : Corrigez les trois erreurs de syntaxe et remarquez les éventuelles différences de stylisation.
 
 ### NameError
 
@@ -412,7 +412,7 @@ for i in range(n):
     lefft(120)
 ```
 
-**Exercice** : Corrigez les 3 erreurs de nom.
+**Exercice** : Corrigez les trois erreurs de nom.
 
 ### TypeError
 
@@ -426,7 +426,7 @@ for i in range():
     left(100, 120)
 ```
 
-**Exercice** : Corrigez les 3 erreurs de type.
+**Exercice** : Corrigez les trois erreurs de type.
 
 ## Exercice
 
