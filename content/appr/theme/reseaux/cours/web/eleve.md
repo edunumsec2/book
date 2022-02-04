@@ -27,7 +27,7 @@ Ces trois technologies sont rassemblées dans un *navigateur web*, un programme 
 1. afficher le contenu de la page web (décrite au format HTML), y compris les liens cliquables permettant d'afficher d'autres pages web. 
 
 
-### URL
+### URL
 L'URL (*Uniform Resource Locator*) est une manière de spécifier la localisation d'un document disponible sur Internet.
 Une exemple d'URL peut être par exemple "https://www.champignons.ch/fichiers/fr/contact.html". 
 
