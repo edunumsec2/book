@@ -15,6 +15,8 @@ En informatique, un `tuple` est
 {f}`une chaîne de caractères`
 ```
 
+Auparavant nous avons vu la boucle `for` comme une simple répétition. Nous avons répété x fois exactement les mêmes instructions pour chaque tour. Dans ce chapitre la boucle `for` est différente dans le sens que nous parcourons une séquence et nous utilisons une valeur différente pour chaque tour. En Python, cette idée de *parcourir une séquence* et d'utiliser une *valeur successive* à chaque tour, est un concept fondamental.
+
 ## Parcourir des couleurs
 
 Pour dessiner de multiples couleurs, nous pouvons définir une séquence (tuple) de couleurs et parcourir cette séquence.
@@ -54,7 +56,38 @@ for x in (20, 40, 60, 80, 100):
 
 ## Parcourir des distances
 
-Nous allons reprendre nos fonctions `batiment()` et `porte()` et, avec l'aide d'une séquence, nous pouvons l'écrire de manière bien plus compacte.
+Dans le chapitre **Definir** nous avons vu les fonctions `batiment()` et `porte()` avec 8 lignes pour chaque défintion de fonction.
+
+```{codeplay}
+:file: def3.py
+from turtle import *
+
+def batiment():
+    forward(200)
+    left(90)
+    forward(100)
+    left(90)
+    forward(200)
+    left(90)
+    forward(100)
+    left(90)
+
+def porte():
+    forward(30)
+    left(90)
+    forward(50)
+    left(90)
+    forward(30)
+    left(90)
+    forward(50)
+    left(90)
+
+batiment()
+forward(30)
+porte()
+```
+
+A l'aide d'une séquence, nous pouvons l'écrire ces fonctions de manière bien plus compacte.
 
 ```{codeplay}
 :file: tuple3.py
@@ -147,7 +180,7 @@ width(67)
 for x in ('red', 'orange', 'yellow', 'green', 'blue', 'purple'):
     pencolor(x)
     forward(600)
-    backward((600)
+    backward(600)
     right(90)
     forward(67)
     left(90)
@@ -277,16 +310,46 @@ def losange():
     for a in (120, 60, 120, 60):
         forward(100)
         left(a)
-        
-for c in ('pink', 'violet', 'darkviolet'):
-    fillcolor(c)
-    begin_fill()
-    losange()
-    end_fill()
-    left(120)
+
+def cube():      
+    for c in ('pink', 'violet', 'darkviolet'):
+        fillcolor(c)
+        begin_fill()
+        losange()
+        end_fill()
+        left(120)
+
+cube()
 ```
 
 **Exercice** : Tournez le cube de 30°.
+
+## Pavage du plan
+
+Un pavage du plan est un ensemble de portions du plan, par exemple des polygones, dont l'union est le plan tout entier, sans recouvrement.
+
+```{codeplay}
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(100)
+        left(a)
+        
+def cube():
+    for c in ('pink', 'violet', 'darkviolet'):
+        fillcolor(c)
+        begin_fill()
+        losange()
+        end_fill()
+        left(120)
+
+for i in range(3):
+    backward(100)
+    cube()
+    forward(100)
+    left(120)
+```
 
 ## Cube de Rubik
 
@@ -303,12 +366,15 @@ def losange():
         left(a)
     end_fill()
 
+def ligne():
+    for i in range(3):
+        losange()
+        forward(50)
+    backward(150)
+
 def surface():
-    for j in range(3):
-        for i in range(3):
-            losange()
-            forward(50)
-        backward(150)
+    for i in range(3):
+        ligne()
         left(120)
         forward(50)
         right(120)
@@ -325,6 +391,8 @@ for c in ('red', 'green', 'blue'):
 [Minecraft](https://fr.wikipedia.org/wiki/Minecraft) est un jeu vidéo de type aventure *bac à sable* développé par le Suédois Markus Persson, puis par la société Mojang Studios, sortie en 2011. Il s'agit d'un univers composé de voxels.
 
 Le voxel (mot créé en contractant *volume* et *element*) est à la 3D ce que le pixel est à la 2D.
+
+Le programme suivant aligne 3 blocs pour former une rangée.
 
 ```{codeplay}
 from turtle import *
@@ -347,8 +415,29 @@ left(30)
 for i in range(3):
     cube()
     forward(-50)
-    
-for i in range(4):
+```
+
+Ce programme empile 3 blocs pour former une colonne.
+
+```{codeplay}
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+
+def cube():      
+    for c in ('lime', 'peru', 'sienna'):
+        fillcolor(c)
+        begin_fill()
+        losange()
+        end_fill()
+        left(120)
+
+speed(5)
+left(30)
+for i in range(3):
     cube()
     left(60)
     forward(50)
