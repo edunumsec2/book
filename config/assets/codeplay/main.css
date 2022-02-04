@@ -77,7 +77,7 @@ div#control-area {
   text-align: right;
   margin-right: 10px;
   white-space: nowrap;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 div#control-area button {
