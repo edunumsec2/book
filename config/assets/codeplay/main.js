@@ -434,6 +434,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       if (frame.hasAttribute("data-output-min-lines")) {
         const minLines = parseInt(frame.dataset.outputMinLines);
+        outputElem.style.minHeight = minLines * 1.3 + "em";
         outputArea.style.minHeight = (minLines * 1.3 + 2) + "em";
         if (minLines > 0) {
           alwaysShowOutput = true;
@@ -441,6 +442,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       if (frame.hasAttribute("data-output-max-lines")) {
         const maxLines = parseInt(frame.dataset.outputMaxLines);
+        outputElem.style.maxHeight = maxLines * 1.3 + "em";
         outputArea.style.maxHeight = (maxLines * 1.3 + 2) + "em";
         if (maxLines === 0) {
           alwaysHideOutput = true;

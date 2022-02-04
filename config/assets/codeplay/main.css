@@ -35,7 +35,7 @@ div#output-area div#output-message span#execute-keyword {
   cursor: pointer;
 }
 
-div#output-area pre {
+pre#output {
   height: auto;
   min-height: 25px;
   max-height: 300px;
