@@ -42,6 +42,7 @@ parts:
       - file: content/appr/theme/prog1/new/parcourir
       - file: content/appr/theme/prog1/new/questionner
       - file: content/appr/theme/prog1/new/calculer
+      - file: content/appr/theme/prog1/new/jouer
       - file: content/appr/theme/prog1/new/ecrire
       - file: content/appr/theme/prog1/new/write
       - file: content/appr/theme/prog1/new/iterer
@@ -99,7 +100,6 @@ parts:
       - file: content/appr/theme/prog2/class
       - file: content/appr/theme/prog2/inherit
       - file: content/appr/theme/prog2/math
-      - file: content/appr/theme/prog2/time
       - file: content/appr/theme/prog2/dict
       - file: content/appr/theme/prog2/compter
       - file: content/appr/theme/prog2/color

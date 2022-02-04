@@ -1,5 +1,4 @@
-Une (brève) histoire de l'informatique
-======================================
+# Une (brève) histoire de l'informatique
 
 Si l'histoire de l'informatique prend ses racines loin dans notre
 histoire, cette science, encore très jeune, trouve sa place au milieu du
@@ -17,8 +16,7 @@ science*.
 
 ![image](media/infographies/chronos/Chronos.001.png)
 
-Préinformatique
----------------
+## Préinformatique
 
 Les premiers dispositifs de calcul utilisent des petits cailloux
 (*calculus* en latin). Cet artifice était également utiliser pour
@@ -75,8 +73,7 @@ Avec les notions de variables et de sous-programme, on trouve esquissés
 dans cette machine quasiment tous les éléments de l'architecture des
 ordinateurs modernes.
 
-Éclosion
---------
+## Éclosion
 
 La Deuxième guerre mondiale participe à des développements sans
 précédent dans les sciences. On voit ainsi apparaître le spatial, le
@@ -221,8 +218,7 @@ travailler en ternaire et non en binaire.
 ![Ordinateur Cora exposé à l'EPFL au musée Bolo, avec son
 créateur](media/machines/cora.jpeg)
 
-Académisation et apparition de la science informatique
-------------------------------------------------------
+## Académisation et apparition de la science informatique
 
 ### Matériel et logiciels
 
@@ -359,8 +355,7 @@ Dès les années septante, les langages suivant apparaissent :
     aujourd'hui dans l'extraction d'information dans la plupart des
     bases de données.
 
-Apparition de la micro-informatique : "Small is beautifull"
--------------------------------------------------------------
+## Apparition de la micro-informatique : "Small is beautifull"
 
 En 1973 apparaissent les premiers *micro-ordinateurs* qui sont destinés
 à un usage personnel (simultanément en France et en Allemagne). Les
@@ -377,7 +372,7 @@ PET (figure [0.2](#PET){reference-type="ref" reference="PET"}).
 ![Commodore PET 2001, commercialisé en
 1977](media/machines/520px-Commodore_2001_Series-IMG_0448b.jpeg)
 
-#### Langages de programmation
+### Langages de programmation
 
 Avec l'extension de l'informatique à de nombreux domaines, une nouvelle
 discipline voit le jour dans les année huitante : le génie logiciel ou
@@ -436,8 +431,7 @@ souvent les premiers *hackers* qui se lancent des défis pour concevoir
 sur ces machines à petit budgets des animations souvent
 impressionnantes.
 
-Internet
---------
+## Internet
 
 Internet, le réseau des réseaux, est d'abord un projet de l'armée
 américaine pour mettre en place un réseau décentralisé capable de
@@ -471,8 +465,7 @@ seconde. Les USENET sont des forums d'échanges où les premières
 communautés de *Hackers* partagent des programmes, des démos et des
 astuces.
 
-Le logiciel libre
------------------
+## Le logiciel libre
 
 Alors que le monde industriel s'organise au début des années huitante
 pour protéger la propriété intellectuelle liée à la conception de
@@ -496,15 +489,13 @@ Son idée de logiciel libre va durablement modifier le paysage du
 logiciel informatique et concerne encore aujourd'hui des millions de
 produits.
 
-Le World Wide Web
------------------
+## Le World Wide Web
 
 invention en Suisse, CERN
 
 Web 2.0
 
-Ubiquité
---------
+## Ubiquité
 
 Le réseau devient sans fil au milieu des années nonante. D'abord une
 solution marginale, la bande passante disponible évolue de manière
@@ -516,7 +507,7 @@ fonctionnalités et en particulier la capacité de communiquer par ondes
 radio permet d'envisager des dispositifs intelligents disséminés un peu
 partout, on parle d'*ubiquité* du réseau.
 
-#### Les smartphones
+### Les smartphones
 
 L'iPhone a été présenté pour la première fois en juin 2007 par Steve
 Jobs. Ce n'est pas le premier smartphone commercialisé, puisque
@@ -524,7 +515,7 @@ Blackberry et Treo proposaient déjà des téléphones portables avec des
 caractéristiques d'ordinateurs dès 1999 pour le premier et 2002 pour le
 second.
 
-#### l'IoT
+### l'IoT
 
 Alors que le marché de la téléphonie mobile explose dès la fin des
 années nonante, il trouve rapidement sa place dans les applications
@@ -536,8 +527,7 @@ voiture, la cafetière et même la machine à laver le linge voient leurs
 possibilités décuplées par l'adjonction de puces électroniques
 connectées.
 
-Futur
------
+## Futur
 
 Dans une science qui évolue vite, en perpétuel changement, il est
 difficile de prédire le futur sans prendre le risque de la boule de
@@ -565,6 +555,7 @@ serait compromise.
 
 cf étude du JPL : https://youtu.be/efrNLTVrpwg?t=397
 
+<!-- 
 Portraits
 =========
 
@@ -597,6 +588,8 @@ IBM, Dec, SUN, Oracle, Microsoft, Netscape, Google, Apple, Facebook
 
 Une (encore plus brève) histoire du jeu vidéo
 =============================================
+
+-->
 
 [^1]: Souvent décrit comme la première tentative de robotisation, mais
     son comportement ne suit qu'un automatisme pré-établi
