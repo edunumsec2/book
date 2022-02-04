@@ -58,7 +58,8 @@ parts:
   numbered: false
   chapters: 
   - file: content/ens/theme/reseaux/maitre
-    sections: 
+    sections:
+    - file: content/ens/theme/reseaux/activ/diffie-hellman/diffie-hellman
     - file: content/ens/theme/reseaux/faq/maitre
 - caption: Enjeux sociaux
   numbered: false
