@@ -76,32 +76,24 @@ div#control-area {
   width: auto;
   text-align: right;
   margin-right: 10px;
+  white-space: nowrap;
+  overflow: scroll;
 }
 
 div#control-area button {
   margin-left: 5px;
   line-height: 0.9em;
-  width: 130px;
+  width: 140px;
   border-radius: 10px 10px 0 0;
+  cursor: hand;
 }
 
 div#control-area button:disabled {
   display: none;
 }
 
-div#control-area button#execute::before {
-  content: "▶";
-  margin-right: 10px;
-}
-
-div#control-area button#interrupt::before {
-  content: "◼";
-  margin-right: 10px;
-}
-
-div#control-area button#hints::before {
-  content: "★";
-  margin-right: 10px;
+div#control-area button i {
+  margin-right: 5px;
 }
 
 div#canvas-area {
@@ -227,3 +219,22 @@ div#canvas {
     background-color: white;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  div#control-area button {
+    width: 40px;
+    height: 30px;
+    color: transparent;
+    padding: 0;
+    text-align: center;
+  }
+
+  div#control-area button i {
+    width: 40px;
+    height: 30px;
+    color: white;
+    margin-top: 7px;
+    margin-right: 0;
+  }
+}
+
