@@ -40,9 +40,3 @@ Dans les autres documents de ce Wiki vous trouverez tout ce dont vous avez besoi
 Contactez-nous pour toute question urgente directement à l'adresse : nathalie.farenc@epfl.ch
 
 Si vous avez une suggestion ou un commentaire moins pressant, utilisez la rubrique "Q&A" des [Discussions](https://github.com/edunumsec2/book/discussions/categories/q-a). 
-
-
-## Activité 3 
-
-- Nom, prénom. 
-- Petreska, Biljana.
