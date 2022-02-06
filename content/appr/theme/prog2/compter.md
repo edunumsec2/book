@@ -76,7 +76,7 @@ def finger(x):
 for i in range(6):
     reset()
     speed(0)
-    back(40)
+    backward(40)
     write(i, font=('Courier', 100), align='right')
     left(90)
     fillcolor('pink')

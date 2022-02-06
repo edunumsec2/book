@@ -33,6 +33,7 @@ Le programme suivant dessine un point à la position du clic et affiche les coor
 
 ```{codeplay}
 :file: onclick1.py
+:output_lines: 3
 from turtle import *
 s = getscreen()
 
@@ -90,9 +91,32 @@ n = 0
 def f(x, y):
     global n
     goto(x, y)
-    dot(20, 'pink')
-    write(n, align='center')
+    dot()
+    write('  ' + str(n))
     n += 1
+
+s.onclick(f)
+s.listen()
+```
+
+## Un mot par clic
+
+Ce programme pose un mot d'une phrase à chaque clic de la souris.
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+speed(0)
+up()
+
+phrase = 'un mot par clic de la souris'.split()
+i = 0
+
+def f(x, y):
+    global i, phrase
+    goto(x, y)
+    write(phrase[i], font=(None, 24))
+    i = (i + 1) % len(phrase)
 
 s.onclick(f)
 s.listen()

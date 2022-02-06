@@ -77,7 +77,7 @@ from turtle import *
 up()
 a = 0b11011001
 d = 50
-back(200)
+backward(200)
 write(f'{a:08b} = {a:02x}', font=('Courier', 24))
 
 goto(-200, -50)

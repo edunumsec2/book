@@ -210,7 +210,7 @@ RVB = {'rouge':(1, 0, 0), 'vert':(0, 1, 0), 'bleu':(0, 0, 1),
 couleurs = 'rouge', 'orange', 'jaune', 'vert', 'magenta', 'bleu'
 
 d = 50
-back(200)
+backward(200)
 for x in couleurs:
     dot(d, RVB[x])
     forward(d)
@@ -322,7 +322,7 @@ for c in histogram:
     up()
     forward(10)
     write(d, font=(None, 12), align='center')
-    back(d + 30)
+    backward(d + 30)
     setx(xcor() + 25)
 ```
 
@@ -356,4 +356,54 @@ for c in phrase:
     histogram[c] = histogram.get(c, 0) + 1
 
 print(histogram)
+```
+
+## Color typewriter
+
+Ce programme interactive permet d'écrire une image ligne par ligne en utilisant les 26 touches du clavier, comme une machine à écrire (typewriter).
+
+Nous utilisons ici un dictionnaire pour associer une lettre à une couleur.
+
+```{codeplay}
+from turtle import *
+from random import *
+s = getscreen()
+speed(0)
+d = 60
+goto(-300+d/2, 200-d/2)
+
+couleurs = dict()
+couleurs['a'] = 'aqua'
+couleurs['b'] = 'blue'
+couleurs['c'] = 'chocolate'
+couleurs['d'] = 'dodgerblue'
+couleurs['f'] = 'fuchsia'
+couleurs['g'] = 'green'
+couleurs['k'] = 'black'
+couleurs['l'] = 'lime'
+couleurs['i'] = 'indigo'
+couleurs['m'] = 'mistyrose'
+couleurs['n'] = 'navy'
+couleurs['o'] = 'orange'
+couleurs['p'] = 'pink'
+couleurs['r'] = 'red'
+couleurs['s'] = 'silver'
+couleurs['t'] = 'tan'
+couleurs['v'] = 'violet'
+couleurs['w'] = 'white'
+couleurs['y'] = 'yellow'
+
+def f(x):
+    col = couleurs.get(x, 'lightgray')
+    dot(d, col)
+    write(col, align='center')
+    if xcor() < 300 - d/2:
+        forward(d)
+    else:
+        goto(-300+d/2, ycor()-d)
+
+for c in 'abcdefghijklmnopqrstuvwxyz':
+    s.onkey(lambda x=c: f(x), c)
+    
+s.listen()
 ```

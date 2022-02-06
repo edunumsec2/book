@@ -214,3 +214,45 @@ print(time()-t0)
 ```
 
 **Exercice** : Diminuez le diamètre `d` des pixels à 5.
+
+## Horloge
+
+```{codeplay}
+from turtle import *
+from time import *
+from math import *
+r = 150
+
+def cadran():
+    up()
+    home()
+    dot(2.3 * r, 'silver')
+    for i in range(12):
+        x = r * sin(2 * pi * i / 12)
+        y = r * cos(2 * pi * i / 12)
+        goto(x, y)
+        dot()
+
+def aiguille(d, r, angle):
+    home()
+    down()
+    width(d)
+    x = r * sin(2 * pi * angle)
+    y = r * cos(2 * pi * angle)
+    goto(x, y)
+
+def horloge():
+    clear()
+    cadran()
+    h, m, s = localtime()[3:6]
+    aiguille(5, 0.6 * r, h/12)
+    aiguille(3, 0.8 * r, m/60)
+    aiguille(1, 0.9 * r, s/60)
+    hideturtle()
+    tracer(0)
+    update()
+    Screen().ontimer(horloge, 1000)
+    
+horloge()
+done()
+```

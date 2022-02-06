@@ -12,6 +12,11 @@ function questions_ready() {
     var correct_boxes = [];
     var incorrect_boxes = [];
     var answers = question.getElementsByClassName("answer");
+    var feedbacks = question.getElementsByClassName("question-feedback");
+    var check_buttons = question.getElementsByClassName("check");
+    var show_buttons = question.getElementsByClassName("show");
+    var reset_buttons = question.getElementsByClassName("reset");
+
     for (const answer of answers) {
       var correct = answer.classList.contains("correct");
       var box = answer.getElementsByTagName("input").item(0);
@@ -25,18 +30,20 @@ function questions_ready() {
         box.addEventListener("click", mono_click_listener(answers));
       }
     }
-    var check_buttons = question.getElementsByClassName("check");
+
     for (const check_button of check_buttons) {
-      check_button.addEventListener("click", check_listener(correct_boxes, incorrect_boxes))
+      check_button.addEventListener("click", check_listener(correct_boxes, incorrect_boxes, check_buttons, feedbacks, question));
     }
-    var show_buttons = question.getElementsByClassName("show");
     for (const show_button of show_buttons) {
-      show_button.addEventListener("click", show_listener(correct_boxes, incorrect_boxes))
+      show_button.addEventListener("click", show_listener(correct_boxes, incorrect_boxes, check_buttons, feedbacks, question));
+    }
+    for (const reset_button of reset_buttons) {
+      reset_button.addEventListener("click", reset_listener(correct_boxes, incorrect_boxes, check_buttons, feedbacks, question));
     }
   }
 }
 
-function check_listener(correct_boxes, incorrect_boxes) {
+function check_listener(correct_boxes, incorrect_boxes, check_buttons, feedbacks, question) {
   return function(event) {
     var correct = true;
     for (const box of correct_boxes) {
@@ -51,21 +58,66 @@ function check_listener(correct_boxes, incorrect_boxes) {
     }
     if (correct) {
       create_reaction("good");
+      for (const feedback of feedbacks) {
+        feedback.style.display = "none";
+      }
+      for (const button of check_buttons) {
+        button.disabled = true;
+      }
+      for (const box of correct_boxes) {
+        box.disabled = true;
+      }
+      for (const box of incorrect_boxes) {
+        box.disabled = true;
+      }
+      question.classList.add("show-answers");
     }
     else {
       create_reaction("bad");
+      for (const feedback of feedbacks) {
+        feedback.style.display = "block";
+      }
     }
   };
 }
 
-function show_listener(correct_boxes, incorrect_boxes) {
+function show_listener(correct_boxes, incorrect_boxes, check_buttons, feedbacks, question) {
   return function(event) {
+    for (const button of check_buttons) {
+      button.disabled = true;
+    }
     for (const box of correct_boxes) {
       box.checked = true;
+      box.disabled = true;
     }
     for (const box of incorrect_boxes) {
       box.checked = false;
+      box.disabled = true;
     }
+    for (const feedback of feedbacks) {
+      feedback.style.display = "block";
+    }
+    question.classList.add("show-answers");
+  };
+}
+
+function reset_listener(correct_boxes, incorrect_boxes, check_buttons, feedbacks, question) {
+  return function(event) {
+    for (const button of check_buttons) {
+      button.disabled = false;
+    }
+    for (const box of correct_boxes) {
+      box.checked = false;
+      box.disabled = false;
+    }
+    for (const box of incorrect_boxes) {
+      box.checked = false;
+      box.disabled = false;
+    }
+    for (const feedback of feedbacks) {
+      feedback.style.display = "none";
+    }
+    question.classList.remove("show-answers");
   };
 }
 
