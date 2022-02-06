@@ -126,6 +126,44 @@ print('\nBravo. Vous avez réussi!')
 
 **Exercice** : Quelle est la meilleure stratégie pour deviner un nombre ?
 
+## Factoriser
+
+Le programme va factoriser le nombre que vous entrez
+
+```{codeplay}
+:file: if6.py
+n = int(input('Entrez un entier: '))
+i = 2
+
+while i < n:
+    if n % i == 0:
+        print(i)
+        n = n // i 
+    else:
+        i = i + 1
+
+print(n)
+```
+
+## En code binaire
+
+Le programme transforme l'entier en code binaire.
+
+```{codeplay}
+:file: if7.py
+n = int(input('Entrez un entier: '))
+
+code = ''
+while n > 0:
+    if n % 2 == 1:
+        code = '1' + code
+    else:
+        code = '0' + code
+    n = n // 2
+
+print(code)
+```
+
 ## Indentation
 
 On appelle **bloc** une ou plusieurs lignes d'instructions qui forment un ensemble.

@@ -1,6 +1,6 @@
 # Questionner - `input`
 
-Dans ce chapitre, nous découvrons comment un programme peut poser une question lors de son exécution. L'utilisateur du programme peut alors répondre et entrer une information. La réponse sera stockée dans la mémoire de l'ordinateur et associé à une variable. Grâce à cette variable, le programme peut traiter la réponse fournie, et le résultat peut être affiché. Nous allons voir que :
+Dans ce chapitre, nous découvrons comment un programme peut poser une question lors de son exécution. L'utilisateur du programme peut alors répondre et entrer une information. La réponse sera stockée dans la mémoire de l'ordinateur et sera associée à une variable. Grâce à cette variable, le programme peut traiter la réponse fournie, et le résultat peut être affiché. Nous allons voir que :
 
 - la fonction `input('question')` demande une information,
 - une variable, par exemple `x`, mémorise une information,
@@ -61,7 +61,23 @@ x = input('Entrez votre nom: ')
 print('Bonjour', x)
 ```
 
-## Les variables
+## La fonction `print()`
+
+Le fonction `print()` peut accepter un ou plusieurs arguments, séparé par une virgule. Un espace est inséré à la place de la virgule.
+Appeler la fonction `print()` sans argument insère une ligne vide.
+
+```{codeplay}
+:file: input3.py
+x = input('Entrez votre nom: ')
+print()                 # sans argument - ligne vide
+print('Hello')          # un argument
+print('Bonjour', x)     # deux arguments
+print(x, 'comment vas-tu?')
+print(x, 'restera toujours', x)     # trois arguments
+print(x, 'voit', x, 'qui voit', x)  # cinq arguments
+```
+
+## La variable
 
 Une variable est une place en mémoire pour stocker de l'information.
 Vous êtes complètement libre dans le choix des noms pour les variables, mais c'est recommandé de choisir des noms qui sont le plus explicite possible. C'est mieux d'utiliser des noms de variable parlants, comme `nom` et `age`, même si on aurait pu utiliser `x` et `y`.  
@@ -75,17 +91,17 @@ age = input('Entrez votre age: ')
 print('Très bien', nom, 'vous avez', age, 'ans')
 ```
 
-**Exercice** : Ajoutez une trosième question et utilisez la réponse dans un `print()`.
+**Exercice** : Ajoutez une troisième question et utilisez la réponse dans un `print()`.
 
-## Convention
+## Nommer une variable
 
-Normalement, c'est conseillé d'utiliser des variables très explicite, comme `age`, `prenom`, `nom`, `longuer`, `hauteur`, etc. Cela aide à la compréhension du code.
+Normalement, c'est conseillé d'utiliser des variables très explicites, comme `age`, `prenom`, `nom`, `longuer`, `hauteur`, etc. Cela aide à la compréhension du code.
 
 Mais dans des boucles et dans un contexte local, nous adoptons la convention suivante d'utiliser des variables courte d'une seule lettre.
 
-- `a` pour une longueur, une distance ou un angle
-- `c` pour un caractère dans une boucle
-- `d` pour un diamètre
+- `a` pour un angle, ou une longueur
+- `c` pour un caractère, ou une couleur
+- `d` pour un diamètre, ou une distance
 - `i` pour un entier dans une boucle
 - `j` pour un deuxième entier
 - `n` pour un nombre donné
@@ -104,8 +120,7 @@ La variable `i` désigne normalement
 
 ## Demander une couleur
 
-Nous pouvons utiliser une entrée interactive avec la fonction `input()`
-et demander à l'utilisateur d'entrer une couleur valide pour l'arrière-plan.
+Nous pouvons utiliser la fonction `input()` pour créer une entrée interactive qui demande à l'utilisateur d'entrer une couleur pour l'arrière-plan.
 
 ```{codeplay}
 :file: input4.py
@@ -117,7 +132,7 @@ getscreen().bgcolor(x)
 
 **Exercice** : Entrez différentes couleurs valides.
 
-Nous pouvons continuer les questions avec une couleur de ligne et une couleur de remplissage, pour dessiner un rectangle.
+Nous pouvons continuer les questions avec une couleur de ligne et une couleur de remplissage, pour dessiner un carré.
 
 ```{codeplay}
 :file: input5.py
@@ -144,11 +159,8 @@ end_fill()
 
 ## Demander en boucle
 
-La boucle `while` permet de répéter les instructions qui se trouvent dans son bloc en indentation.
-Dans la dernière ligne du bloc en indentation nous reposons la question.
-
-Cette boucle répète aussi longtemps que la variable `x` contient une valeur, c'est à dire qu'elle n'est pas vide.
-Si vous appuyez sur **Enter** sans entrer quelque chose, la boucle s'arrête.
+La boucle `for` permet de répéter les instructions qui se trouvent dans son bloc en indentation.
+A chaque tour nous demandons une couleur et nous dessinons une disque colorié avec cette couleur. Si la couleur ne correspond pas à un nom de couleur standard, alors le disque est noire la première fois, et répète la couleur précédente pour les cas suivants.
 
 ```{codeplay}
 :file: input6.py
@@ -156,15 +168,134 @@ from turtle import *
 up()
 
 backward(200)
-x = input('Entrez une couleur: ')
-while x:
+for i in range(6):
+    x = input('Entrez une couleur: ')
     dot(80, x)
     forward(80)
-    x = input('Entrez une couleur: ')
+print('fini')
+```
+
+## Dessiner un drapeau
+
+Nous reprenons l'exemple des formes ouvertes, avec les deux équerres colories. 
+
+```{codeplay}
+from turtle import *
+
+def equerre():
+    begin_fill()
+    for i in range(2):
+        forward(80)
+        left(90)
+    end_fill()
+
+def drapeau():
+    for i in range(2):
+        x = input('Couleur: ')
+        fillcolor(x)
+        equerre()
+    
+drapeau()
+```
+
+Maintenant nous l'affichons en boucle
+
+```{codeplay}
+from turtle import *
+
+def equerre():
+    begin_fill()
+    for i in range(2):
+        forward(80)
+        left(90)
+    end_fill()
+
+def drapeau():
+    for i in range(2):
+        x = input('Couleur: ')
+        fillcolor(x)
+        equerre()
+    
+for i in range(3):
+    drapeau()
+    print()
+    up()
+    forward(100)
+    down()
+```
+
+## Créer un quiz
+
+Pour faire des petits quiz nous créons des paires de mots qui vont ensemble. Par exemple pays et capitale dans un cours de géographie, ou une liste de vocabulaire en deux langues, pour un cours de langue.
+
+### Séquence de questions
+
+Nous mettons les deux valeurs `question` et `solution` dans un tuple et nous regroupons ces paires dans un deuxième tuple que nous appelons `quiz`
+
+Quand nous parcourons `quiz` avec une boucle `for` nous pouvons utiliser une seule variable, par exemple `x` et lui affecter le tuple `(question, solution)`
+
+Nous pouvons aussi parcourir le quiz avec un tuple de deux variables `(q, s)` et associer les deux valeurs séparément à chaque variable : donc
+`q = question` et `s = solution`.
+
+```{codeplay}
+
+quiz = (('France', 'Paris'),
+        ('Allemagne', 'Berlin'),
+        ('Suisse', 'Berne'))
+
+print('parcourir avec x')
+for x in quiz:
+    print('x =', x)
+   
+print()
+print('parcourir avec (q, s)')
+for (q, s) in quiz:
+    print('q =', q, '   s =', s)
+```
+
+### Poser une question
+
+Nous pouvons maintenant extraire la question et les poser tous dans une boucle `for`. Avec `input()` nous demandons la réponse. Nous séparons les questions avec un `print()` sans argument pour insérer une ligne vide entre les questions.
+
+```{codeplay}
+
+quiz = (('France', 'Paris'),
+        ('Allemagne', 'Berlin'),
+        ('Suisse', 'Berne'))
+
+for (q, s) in quiz:
+    print('Quelle est la capitale de', q)
+    reponse = input('Votre réponse: ')
+    print()
+```
+
+### Evaluer une réponse
+
+Nous introduisons ici déjà la structure `if-else` que nous allons voir en détail plus tard.
+
+Le mot-clé `if` est suivi d'une condition. Ici nous comparons la réponse donnée par l'utilisateur avec la solution connue par le programme.
+
+L'expression `reponse == solution` renvoie comme valeur `True` ou `False`. Selon cette valeur, un des deux blocs est exécuté.
+
+```{codeplay}
+
+quiz = (('France', 'Paris'),
+        ('Allemagne', 'Berlin'),
+        ('Suisse', 'Berne'))
+
+for (question, solution) in quiz:
+    print('Quelle est la capitale de', question)
+    reponse = input('Votre réponse: ')
+    if reponse == solution:
+        print('correct')
+    else:
+        print('FAUX! La bonne réponse est', solution)
+    print()
 ```
 
 ## Erreurs
 
+Dans des chapitres précédent nous avons déjà vu quelques messages d'erreurs. Mais il y en a d'autres que nous allons voir ici.
 Il est important de bien comprendre les messages d'erreur.
 Dans cette section, vous allez découvrir les différentes catégories d'erreur et comment les corriger.
 
@@ -227,4 +358,60 @@ from turtle import *
 
 col_house = input('Color of the house: ')
 ...
+```
+
+### Tricolore
+
+Créez un programme qui demande trois couleurs et dessine ensuite un drapeau tricolore. 
+
+```{codeplay}
+:file: tricolore.py
+from turtle import *
+
+def rectangle():
+    ...
+
+for i in range(3): 
+    c = input('Couleur du rectangle: ')
+...
+```
+
+### Smileys
+
+Créez un programme qui demande les couleurs d'un smiley.
+
+- visage
+- yeux
+- bouche
+
+```{codeplay}
+:file: smiley.py
+from turtle import *
+
+def smiley():
+    ...
+
+for i in range(3): 
+    c = input('Couleur : ')
+...
+```
+
+### Quiz
+
+Faites un quiz avec 10 questions. Pour chaque question vérifiez si la réponse est correcte.
+
+
+```{codeplay}
+:file: quiz.py
+quiz = (('question1', 'solution1'),
+        ('question2', 'solution2'))
+
+for (question, solution) in quiz:
+    print(question)
+    reponse = input('Votre réponse: ')
+    if reponse == solution:
+        print('correct')
+    else:
+        print('FAUX! La bonne réponse est', solution)
+    print()
 ```

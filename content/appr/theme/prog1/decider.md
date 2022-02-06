@@ -18,7 +18,7 @@ En Python, `if` est suivi
 
 ## Êtes-vous majeur ?
 
-Basé sur votre âge, le programme décide si vous êtes majeur ou pas.
+Basé sur votre âge, le programme exécute soit le premier bloc (`if`) soit le  deuxième bloc (`else`).  Il affiche si vous vous êtes majeur ou pas.
 
 ```{codeplay}
 :file: if1.py
@@ -49,22 +49,19 @@ Voici quelques exemples :
 ```{codeplay}
 :file: if2.py
 x = 3
-print(x > 2)
-print(x < 2)
-print(x != 2)
+print('x =', x)
+print('(x > 2) =', x > 2)
+print('(x < 2) =', x < 2)
+print('(x == 2) =', x == 2)
 ```
 
-**Attention** : il ne faut pas confondre l'opérateur d'affectation (`=`) avec l'opérateur de comparaison (`==`).
-
-```{codeplay}
-:file: if3.py
-a = 2           # affectation
-print(a)
-print(a == 2)   # comparaison
+```{caution}
+Il ne faut pas confondre l'opérateur d'affectation (`x = 3`) avec l'opérateur de comparaison (`x == 2`).
 ```
 
 ## Le signe d'un nombre
 
+Le mot-clé `elif` est une contraction de **else if** et permet de continuer à tester d'autres conditions.
 Trouvez le signe d'un nombre.
 
 ```{codeplay}
@@ -80,58 +77,151 @@ else:
     print('zéro')
 ```
 
+Sans le mot-clé `elif` nous devrions mettre le bloc `if` à l'intérieur du bloc  `else` en indentation.
+Avec multiples conditions, les blocs se décalent de plus en plus et rendent le programme illisible.
+
+```{codeplay}
+:file: if4.py
+n = input('Entrez un nombre: ')
+n = int(n)
+
+if n > 0:
+    print('positif')
+else:
+    if n < 0:
+        print('négatif')
+    else:
+        print('zéro')
+```
+
+
 **Exercice** : Testez le programme avec -2, 0, 3.
 
 ## Pair ou impair ?
 
-Le programme vous dit si le nombre que vous entrez est pair ou impair.
+La fonction modulo `(x % 2)` permet de décider si un nombre est pair ou impair. Le programme suivant affiche si le nombre que vous entrez est pair ou impair.
 
 ```{codeplay}
 :file: if5.py
-x = input('Entrez un entier: ')
+x = int(input('Entrez un entier: '))
 
-if int(x) % 2 == 0:
+if (x % 2) == 0:
     print('pair')
 else:
     print('impair')
 ```
 
-## Factoriser
+## Pierre-papier-ciseaux
 
-Le programme va factoriser le nombre que vous entrez
+Le jeu [pierre-papier-ciseaux](https://fr.wikipedia.org/wiki/Pierre-papier-ciseaux) est effectué avec les mains et oppose deux joueurs. Il possède de nombreux noms alternatifs, notamment en remplaçant certains mots comme « papier » par « feuille » ou « pierre » par « caillou ». Le terme **chifoumi** est également une appellation courante.
+
+Pour le choix du jouer on pourrait lui faire entrer les mots `pierre`, `papier`, et `ciseaux`. Mais c'est plus simple si nous utilisons juste un nombre entier pour choisir un des trois options.
+
+En interne, nous utilisons 1, 2, et 3 pour désigner les 3 choix. Dans un programme informatique c'est plus efficace d'utiliser des entiers pour designer des choses. Pour l'utilisateur humain par contre, des mots sont plus compréhensibles. Nous utilisons un tuple pour faire la conversion d'un entier vers un mot. Comme l'indexage en Python commence toujours avec 0, nous devons décaler l'index de un avec l'expression `[i-1]`.
+
+Un grand avantage de séparer la logique abstraite du jeu, et les mots concrets, c'est qu'il devient très facile de traduire le jeux dans une autre langue. Par exemple, il suffit de changer le tuple `objets` en `('rock', 'paper', 'cissors')` pour traduire en anglais, ou `('Stein', 'Papier', 'Schere')` pour le traduire en allemand.
 
 ```{codeplay}
-:file: if6.py
-n = int(input('Entrez un entier: '))
-i = 2
+objets = ('pierre', 'papier', 'ciseaux')
 
-while i < n:
-    if n % i == 0:
-        print(i)
-        n = n // i 
-    else:
-        i = i + 1
-
-print(n)
+i = int(input('1=pierre, 2=papier, 3=ciseaux : '))
+print('vous avez choisi: ', objets[i-1])
 ```
 
-## En code binaire
+### Tour de l'ordi
 
-Le programme transforme l'entier en code binaire.
+Pour jouer contre un ordinateur, nous avons besoin d'une fonction qui fait un choix aléatoire. Les fonctions aléatoires se trouvent dans le module `random` que nous importons au début. La fonction `randint(a, b)` renvoie un entier aléatoire dans l'intervalle [a, b].
+
+Psychologiquement, le jeu se présente mieux quand il y a un petit délai entre notre réponse et la réponse de l'ordinateur. Nous utilisons la fonction `sleep()` du module `time` pour insérer un délai d'une seconde.
 
 ```{codeplay}
-:file: if7.py
-n = int(input('Entrez un entier: '))
+from random import *
+from time import *
 
-code = ''
-while n > 0:
-    if n % 2 == 1:
-        code = '1' + code
+objets = ('pierre', 'papier', 'ciseaux')
+
+i = int(input('1=pierre, 2=papier, 3=ciseaux : '))
+print('vous avez choisi: ', objets[i-1])
+sleep(1)
+
+j = randint(1, 3)
+print('ordinateur choisit: ', objets[j-1])
+```
+
+### Décider qui gagne
+
+Une fois le choix est fait par les deux joueurs (humain et ordinateur) nous devons décider qui va gagner. Nous pouvons représenter la situation pour l'humain avec ce tableaux.
+
+|               | humain| pierre        | papier    | ciseaux   |
+| ---           |---    |---            |---        |---        |
+| ordinateur    |       | 1             | 2         | 3         |
+| pierre        | 1     | match nul     | gagne     | perd      |
+| papier        | 2     | perd          | match nul | gagne     |
+| ciseaux       | 3     | gagne         | perd      | match nul |
+
+Avec les instruction conditionnelles `if-elif-else` nous pouvons décider alors qui gagne pour une combinaison donnée. Avec un choix judicieux, nous pouvons décider avec seulement 4 tests les 9 combinaisons différentes.
+
+```{codeplay}
+from random import *
+from time import *
+
+objets = ('pierre', 'papier', 'ciseaux')
+
+i = int(input('1=pierre, 2=papier, 3=ciseaux : '))
+print('vous avez choisi: ', objets[i-1])
+sleep(1)
+
+j = randint(1, 3)
+print('ordinateur choisit: ', objets[j-1])
+sleep(1)
+
+if i == j:
+    print('match nul')
+elif (i == 1 and j == 3):
+    print('gagné')
+elif (i == 2 and j == 1):
+    print('gagné')
+elif (i == 3 and j == 2):
+    print('gagné')
+else:
+    print('perdu')
+```
+
+### Jouer en boucle
+
+Maintenant nous pouvons tous mettre dans une boucle pour jouer multiples fois.
+Dans la première ligne nous indiquons le tour. Comme pour l'indexage des objets, quand nous affichons le nombre du tour, nous le décalons de un avec l'expression `n+1`.
+
+```{codeplay}
+from random import *
+from time import *
+
+objets = ('pierre', 'papier', 'ciseaux')
+
+for n in range(3):
+    print('tour', n+1)
+
+    i = int(input('1=pierre, 2=papier, 3=ciseaux : '))
+    print('vous avez choisi: ', objets[i-1])
+    sleep(1)
+
+    j = randint(1, 3)
+    print('ordinateur choisit: ', objets[j-1])
+    sleep(1)
+
+    if i == j:
+        print('match nul')
+    elif (i == 1 and j == 3):
+        print('gagné')
+    elif (i == 2 and j == 1):
+        print('gagné')
+    elif (i == 3 and j == 2):
+        print('gagné')
     else:
-        code = '0' + code
-    n = n // 2
+        print('perdu')
+    print()
 
-print(code)
+print('fini')
 ```
 
 ## Décrire un chemin
@@ -141,17 +231,16 @@ Un programme de dessin avec la tortue est une séquence d'instructions. Si la to
 - `f` = avancer
 - `l` = tourner à gauche
 - `r` = tourner à droite
-- `b` = reculer
 
-On voit que le contour de la lettre E contient 24 segments de  base.
+Nous pouvons insérer des espaces dans `chemin` pour rendre la description plus lisible. Lors de l'exécution ils ne sont pas pris en considération.
 
 ```{codeplay}
 :file: if8.py
 from turtle import *
 
 d = 20
-def walk(path):
-    for c in path:
+def dessiner(chemin):
+    for c in chemin:
         if c == 'f':
             forward(d)
         elif c == 'l':
@@ -160,15 +249,12 @@ def walk(path):
         elif c == 'r':
             right(90)
             forward(d)
-        elif c == 'b':
-            backward(d)
 
-E = 'lffffrffrrfllfrrfllfrrff'
-print(len(E)) 
-walk(E)
+E = 'lffff rff rrfllf rrfllf rrff'
+dessiner(E)
 ```
 
-**Exercice** : Dessinez la lettre F.
+**Exercice** : Définissez et dessinez la lettre F.
 
 ## Opérations logiques
 
@@ -228,4 +314,28 @@ if a < x < b:
 
 if not (a < x < b):
     print(x, "est dehors l'interval (", a, '...', b, ')')
+```
+
+## Exercices
+
+### Jeu multi-langue
+
+Adaptez le jeux `pierre-papier-ciseaux` pour qu'on puisse choisir la langue du jeu entre :
+
+- Français
+- Anglais
+- Allemand
+
+```{codeplay}
+
+langue = input('1=Français, 2=Anglais, 3=Allemand: ')
+```
+
+### Big Bang Theory
+
+Une nouvelle variante de pierre-papier-ciseaux a été popularisée par la série américaine The Big Bang Theory. Il s'agit de **Pierre-Papier-Ciseaux-Lézard-Spock**. Ici, les règles classiques s'appliquent, mais il faut ajouter que le lézard mange le papier, empoisonne Spock, est écrasé par la pierre et est décapité par les ciseaux. Spock vaporise la pierre, casse les ciseaux, et est discrédité par le papier. Cette variante augmente le nombre de combinaisons de 3 à 10, et est censée réduire le nombre d'égalités entre deux joueurs qui se connaissent (bien qu'entre les personnages de la série, cette variante amène systématiquement à une égalité Spock vs. Spock).
+
+```{codeplay}
+
+objets = ('pierre', 'papier', 'ciseaux', 'lézard', 'Spock')
 ```
