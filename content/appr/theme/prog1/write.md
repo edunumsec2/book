@@ -6,9 +6,6 @@ Dans ce chapitre, nous allons voir la **composition typographique** d'un texte d
 - l'option `font=(police, taille, style)` permet de choisir son style,
 - l'option `align='center'` permet de choisir son alignement.
 
-```{codeplay}
-````
-
 ## La fonction `write()`
 
 La fonction `write()` permet d'afficher un texte à la position de la tortue.
@@ -74,12 +71,11 @@ for s in ('normal', 'italic', 'bold', 'bold italic'):
 
 ## Alignement
 
-Le paramètre optionnel `align` permet de choisir parmi 3 types d'alignements : 
+Le paramètre optionnel `align` permet de choisir parmi 3 types d'alignements :
 
 - gauche (`'left'`)
 - centre (`'center'`)
 - droite (`'right'`)
-
 
 ```{codeplay}
 from turtle import *
@@ -244,7 +240,6 @@ for t in texte.split(' '):
 print(longueurs)
 ```
 
-
 ## Sudoku
 
 Le sudoku est un jeu en forme de grille 9x9. Le but du jeu est de remplir la grille avec une série de chiffres, tous différents, qui ne se trouvent jamais plus d’une fois sur une même ligne, dans une même colonne ou dans une même région 3x3, appelé bloc.
@@ -303,12 +298,9 @@ for c in 'SCRABBLE':
     case(c)
 ```
 
-```{codeplay}
-```
-
 ## Exercice
 
-### Sudoku
+### Sudoku - tableau
 
 Reproduisez l'image ci dessous
 

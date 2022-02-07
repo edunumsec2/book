@@ -45,6 +45,36 @@ mia.forward(100)
 
 **Exercice** : Créez encore une autre tortue, choisissez sa couleur et faites la bouger quelque part.
 
+## La course des tortues
+
+Dans le programme ci-dessous deux tortues, Ana et Bob, font la course. Pour les faire bouger d'un pixel vous devez appuyer sur les touches `a` et `b`.
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+
+ana = getturtle()
+ana.shape('turtle')
+ana.speed(0)
+ana.color('red')
+ana.width(5)
+
+bob = ana.clone()
+bob.color('blue')
+bob.sety(20)
+bob.clear()
+
+def a():
+    ana.forward(1)
+
+def b():
+    bob.forward(1)
+    
+s.onkey(a, 'a')
+s.onkey(b, 'b')
+s.listen()
+```
+
 ## Les méthodes
 
 La fonction `dir()` permet d'afficher toutes les méthodes que possède la classe `Turtle`. Il y en a environ 87 et vous en connaissez déjà une grande partie.
@@ -238,4 +268,32 @@ s.onkey(lambda : t.setx(t.xcor() - d), 'Left')
 s.onkey(lambda : t.sety(t.ycor() + d), 'Up')
 s.onkey(lambda : t.sety(t.ycor() - d), 'Down')
 s.listen()
-````
+```
+
+## Exercice
+
+### La course
+
+Dans la course des tortues : 
+
+- ajoutez une ligne de départ une ligne d'arrivé,
+- affichez le nom du gagnant,
+- affichez le temps utilisé,
+- affichez les clics par seconde
+
+```{codeplay}
+:file: course.py
+from turtle import *
+s = getscreen()
+
+ana = getturtle()
+ana.shape('turtle')
+ana.speed(0)
+ana.color('red')
+ana.width(5)
+
+bob = ana.clone()
+bob.color('blue')
+bob.sety(20)
+bob.clear()
+```

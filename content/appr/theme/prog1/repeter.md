@@ -259,12 +259,7 @@ for i in range(6):
 
 Le [Cube de Rubik](https://fr.wikipedia.org/wiki/Rubik%27s_Cube) est un casse-tête inventé par Ernő Rubik en 1974, et qui s’est rapidement répandu sur toute la planète au cours des années 1980.
 
-Pour dessiner la face rouge, nous utilisons deux boucles imbriqués:
-
-- la boucle extérieure (`i`), pour le déplacent en verticale,
-- la boucle intérieur (`j`), pour le déplacement horizontale.
-
-Le les 2 instructions du bloc intérieur ont une double indentation.
+Pour dessiner la face rouge, nous dessinons d'abord une ligne, en répétant 3 fois un carré. Ensuite nous répétons 3 fois une ligne pour dessiner une surface.
 
 ```{codeplay}
 from turtle import *
@@ -275,13 +270,16 @@ def carre():
         forward(50)
         left(90)
     end_fill()
-    
-fillcolor('red')
-for i in range(3):
-    for j in range(3):
+
+def ligne():
+    fillcolor('red')
+    for i in range(3):
         carre()
         forward(50)
     backward(150)
+
+for i in range(3):
+    ligne()
     left(90)
     forward(50)
     right(90)
@@ -497,7 +495,7 @@ forward(200)
 ```
 
 ### Jeu du moulin
-Le [jeu du moulin](https://fr.wikipedia.org/wiki/Jeu_du_moulin) est un jeu de société traditionnel en Europe. Le tablier de jeu existait déjà dans la Rome antique. Aussi appelé **jeu du charret** (en Suisse), certains lui donnent le nom médiéval de jeu de mérelles, voire de marelle.
+Le [jeu du moulin](https://fr.wikipedia.org/wiki/Jeu_du_moulin) est un jeu de société traditionnel en Europe. Le plateau de jeu existait déjà dans la Rome antique. Aussi appelé **jeu du charret** (en Suisse), certains lui donnent le nom médiéval de jeu de mérelles, voire de marelle.
 
 ```{image} media/moulin.png
 :width: 200
