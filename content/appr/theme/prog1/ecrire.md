@@ -256,7 +256,7 @@ Le module graphique utilisé actuellement (Tk 8.6.8) ne supporte pas des émojis
 Ce bug sera corrigé avec Thonny 4.0 qui utilisera la version Tk 8.6.12.
 ```
 
-Vous pouvez utilisez dans Thonny sans problème les anciens pictogrammes en noir et blanc. Voici les codes Unicode de 
+Vous pouvez utilisez dans Thonny sans problème les anciens pictogrammes en noir et blanc. Voici les codes Unicode de
 [symboles divers](https://fr.wikipedia.org/wiki/Table_des_caractères_Unicode_(2000-2FFF)#Symboles_divers).
 
 ```{codeplay}
@@ -325,6 +325,24 @@ sur plusieurs lignes.
 
 **Exercice** : Enlever le # devant `print('au revoir')` pour l'exécuter.
 
+## Parcourir une chaîne
+
+La ligne de code `for c in mot:` signifie que la variable `c` va prendre à chaque répétition un caractère différent de la chaîne `mot`.
+
+Quand la variable d'itération est un caractère on l'appelle souvent `c`.
+
+```{codeplay}
+:file: str21.py
+from time import sleep
+mot = input('Entrez un mot: ')
+
+for c in mot:
+    print(c)
+    sleep(0.1)
+```
+
+**Exercice** : Testez avec des textes différents.
+
 ## Narration
 
 Voici un exemple qui affiche une conversation entre deux personnes, affiché en ralenti, lettre par lettre, pour simuler une sorte de communication chat en ligne.
@@ -332,6 +350,7 @@ Voici un exemple qui affiche une conversation entre deux personnes, affiché en 
 La méthode `split('\n')` découpe la chaine `histoire` en lignes séparées, et retourne une liste.
 
 ```{codeplay}
+:file: narration.py
 from time import sleep
 
 histoire = """
@@ -590,3 +609,17 @@ for i in range(10):
 ```
 
 ## Exercices
+
+### Le pendu
+
+Créez le jeu du pendu avec un répertoire de 50 mots dans un tuple. Votre programme choisi un de ces mots aléatoirement avec la fonction `choice()` du module `random`, comme montré ci-dessous.
+
+```{codeplay}
+from random import *
+
+mots = ('informatique', 'ordinateur', 'calculatrice', 'machine',
+        'processeur', 'mémoire', 'algorithme', 'binaire')
+
+mot = choice(mots)
+print(mot)
+```
