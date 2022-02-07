@@ -6,7 +6,7 @@ Quand on parle de {glo}`portelogique|portes` et de {glo}`syslogique|circuits log
 
 Les {glo}`portelogique|portes` logiques sont des composants électroniques (elles-même constituées en général de {glo}`transistor|transistors` et {glo}`resistance|résistances`) qui ont une ou plusieurs entrées et qui combinent ces entrées pour produire une sortie donnée. La manière dont la sortie est calculée dépend du type de la porte. On se propose à présent d'étudier en détails l'ensemble de ces portes.
 
-<font size="6"> Portes ET </font>
+<font size="6"> Porte ET </font>
 
 Une de ces portes est la porte **ET**. Elle a deux entrées, qu'on appellera $X$ et $Y$, et une sortie $Z$. $Z$ sera $1$ si et seulement si aussi bien $X$ que $Y$ valent $1$. D'où son nom : il faut que $X$ **_et_** $Y$ soient à 1 pour obtenir un 1 sur la sortie.
 
@@ -63,7 +63,7 @@ Ici, les deux transistors sont les composants symbolisés par un cercle. Rappelo
 
 
 
-<font size="6"> Portes OU </font>
+<font size="6"> Porte OU </font>
 
 Pour que la sortie de la porte **OU** vaille 1, il suffit que l'une des deux entrées $X$ ou $Y$ vaille 1.
 
@@ -95,7 +95,7 @@ Essayez la porte **OU** :
 }
 ```
 
-<font size="6"> Portes NON </font>
+<font size="6"> Porte NON </font>
 
 Cette porte est plus simple : elle n'a qu'une entrée, et sa sortie se contente d'inverser la valeur en entrée. On l'appelle d'ailleurs aussi un _inverseur_.
 
