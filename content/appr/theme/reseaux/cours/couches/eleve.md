@@ -26,4 +26,6 @@ de paquets, ce qui permettra à ce nouveau support de s'intégrer sans difficult
 
 
 
-## La neutralité du net
+## La neutralité d'Internet
+
+## L'universalité d'Internet en question
