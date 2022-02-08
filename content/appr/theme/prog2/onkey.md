@@ -7,7 +7,8 @@ Dans ce chapitre nous allons voir une autre façon d'utiliser les touches du cla
 Dans ce chapitre nous découvrons comment utiliser le clavier de l'ordinateur pour interagir avec un programme. Nous allons voir que :
 
 - la fonction `onkey(f, 'a')` installe une fonction de rappel `f()`,
-- la fonction `f()` est appelée à chaque fois que la touche `a` est appuyée.
+- la fonction `f()` est appelée à chaque fois que la touche `a` est appuyée,
+- la fonction `listen()` démarre l'*écoute* des événements du clavier.
 
 ```{question}
 Une fonction de rappel
@@ -17,12 +18,6 @@ Une fonction de rappel
 {f}`renforce la mémoire`  
 {v}`réagit à un événement`
 ```
-
-Nous allons également voir que :
-
-- la fonction `home()` ramène la tortue à l'origine,
-- la fonction `clear()` efface les traces de la tortue,
-- la fonction `reset()` met la tortue à l'état d'origine
 
 ## Fonction de rappel
 
@@ -61,9 +56,17 @@ print("Appuyez sur la touche 'a' pour avancer.")
 
 La fonction `home()` ramène la tortue à son origine. Nous avons changé le nom de la fonction de rappel `f()` en `avancer()`. C'est plus clair. La fonction `home()` existe déjà, donc nous n'avons pas besoin de la définir.
 
+Au lieu d'écrire les explications dans la console, nous allons les écrire directement dans la fenêtre de la tortue.
+
 ```{codeplay}
 :file: onkey2.py
 from turtle import *
+up()
+goto(-290, 180)
+write('a–avancer  h–home', font=('Arial', 14))
+
+home()
+down()
 shape('turtle')
 color('red')
 
@@ -74,9 +77,6 @@ s = getscreen()
 s.onkey(avancer, 'a')
 s.onkey(home, 'h')
 s.listen()
-
-print("Appuyez sur la touche 'a' pour avancer.")
-print("Appuyez sur la touche 'h' pour home.")
 ```
 
 **Exercice** Ajoutez une fonction de rappel pour faire reculer la tortue.
@@ -89,9 +89,16 @@ Dans le prochain programme nous ajoutons des touches supplémentaires pour les f
 - `c` pour effacer la trace avec `clear()`,
 - `r` pour effacer la trace et ramener la tortue à l'origine avec `reset()`.
 
+Le désavantage de ce programme, c'est que `clear()` va aussi effacer le texte explicatif. Ca serait bien si ce texte serait indépendant de la tortue qui bouge.
+
 ```{codeplay}
 :file: onkey3.py
 from turtle import *
+up()
+goto(-290, 180)
+write('a–avancer  h–home  c–clear', font=('Arial', 14))
+home()
+down()
 shape('turtle')
 color('red')
 
@@ -102,9 +109,33 @@ s = getscreen()
 s.onkey(avancer, 'a')
 s.onkey(home, 'h')
 s.onkey(clear, 'c')
-s.onkey(reset, 'r')
 s.listen()
-print("a:avancer  h:home  c:clear  r:reset")
+```
+
+## Une tortue texte
+
+Nous allons maintenant introduire une deuxième tortue qui sera responsable uniquement pour écrire du texte. L'expression `text = Turtle()` crée une nouvelle tortue appelé `text`. Pour appeler des méthodes sur cette nouvelle tortue nous devons utiliser la méthode doté, donc précéder les instructions par `text.`
+
+```{codeplay}
+:file: onkey3.py
+from turtle import *
+text = Turtle()
+text.up()
+text.hideturtle()
+text.goto(-290, 180)
+text.write('a–avancer  h–home  c–clear', font=('Arial', 14))
+
+shape('turtle')
+color('red')
+
+def avancer():
+    forward(20)
+
+s = getscreen()
+s.onkey(avancer, 'a')
+s.onkey(home, 'h')
+s.onkey(clear, 'c')
+s.listen()
 ```
 
 **Exercice** : Ajoutez une fonction de rappel pour faire tourner la tortue.

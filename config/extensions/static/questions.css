@@ -2,16 +2,19 @@
   margin-right: 5px;
 }
 
-.controls {
-  margin-top: 5px;
+.question .controls {
+  margin-top: 10px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.controls input {
+.question .controls button {
   margin-left: 10px;
 }
 
-.question .controls {
-  text-align: right;
+.question .controls button i {
+  margin-right: 5px;
 }
 
 .question .admonition {
@@ -19,9 +22,30 @@
   border: solid 0.5px;
 }
 
-.question .admonition-title:before {
-  color:#05245e;
+.show-answers .correct {
+  font-weight: bold;
 }
+
+.question .question-feedback {
+  margin-top: 15px;
+  display: none;
+  border-left: 3px solid rgb(66, 125, 189);
+  margin-left: 22px;
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 870px) {
+  .question .controls button {
+    font-size: 0;
+  }
+
+  .question .controls button i {
+    font-size: initial;
+    margin-left: 5px;
+  }
+}
+
+
 
 
 /* Next, settings for light theme: */

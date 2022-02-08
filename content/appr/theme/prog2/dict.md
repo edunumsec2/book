@@ -357,3 +357,53 @@ for c in phrase:
 
 print(histogram)
 ```
+
+## Color typewriter
+
+Ce programme interactive permet d'écrire une image ligne par ligne en utilisant les 26 touches du clavier, comme une machine à écrire (typewriter).
+
+Nous utilisons ici un dictionnaire pour associer une lettre à une couleur.
+
+```{codeplay}
+from turtle import *
+from random import *
+s = getscreen()
+speed(0)
+d = 60
+goto(-300+d/2, 200-d/2)
+
+couleurs = dict()
+couleurs['a'] = 'aqua'
+couleurs['b'] = 'blue'
+couleurs['c'] = 'chocolate'
+couleurs['d'] = 'dodgerblue'
+couleurs['f'] = 'fuchsia'
+couleurs['g'] = 'green'
+couleurs['k'] = 'black'
+couleurs['l'] = 'lime'
+couleurs['i'] = 'indigo'
+couleurs['m'] = 'mistyrose'
+couleurs['n'] = 'navy'
+couleurs['o'] = 'orange'
+couleurs['p'] = 'pink'
+couleurs['r'] = 'red'
+couleurs['s'] = 'silver'
+couleurs['t'] = 'tan'
+couleurs['v'] = 'violet'
+couleurs['w'] = 'white'
+couleurs['y'] = 'yellow'
+
+def f(x):
+    col = couleurs.get(x, 'lightgray')
+    dot(d, col)
+    write(col, align='center')
+    if xcor() < 300 - d/2:
+        forward(d)
+    else:
+        goto(-300+d/2, ycor()-d)
+
+for c in 'abcdefghijklmnopqrstuvwxyz':
+    s.onkey(lambda x=c: f(x), c)
+    
+s.listen()
+```

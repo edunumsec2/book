@@ -282,33 +282,6 @@ for x in range(-300, 300, 10):
     update()
 ```
 
-## Narration
-
-Voici un exemple qui affiche une conversation entre deux personnes, affiché en ralenti, lettre par lettre, pour simuler une sorte de communication chat en ligne.
-
-```{codeplay}
-from time import sleep
-
-histoire = """
-Une histoire d'aventure
------------------------
-A: comment vas-tu ?
-B: très bien !
-A: veux-tu faire un voyage ?
-B: oui, vers où ?
-A: à Rio de Janeiro.
-B: choutte, on part quand ?
-A: il y a un vol ce soir.
-"""
-
-for line in histoire.split('\n'):
-    for c in line:
-        print(c, end='')
-        sleep(0.1)
-    sleep(1)
-    print()
-```
-
 ## Le Zen de Python
 
 Le Zen de Python est un ensemble de 19 principes qui influencent la conception du langage de programmation Python, et sont utiles pour comprendre et utiliser le langage.
