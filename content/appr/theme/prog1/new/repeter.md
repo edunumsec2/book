@@ -12,7 +12,7 @@ Une boucle informatique est
 {f}`une instruction`  
 {f}`un passage ondulé`  
 {v}`une section de code répétée`  
-{f}`une protéction thérmique`
+{f}`une protection thermique`
 ```
 
 ## La répétition
