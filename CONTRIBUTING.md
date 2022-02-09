@@ -89,6 +89,8 @@ Une [charte](https://files.modulo-info.ch/charte), ainsi qu'une [convention](htt
 
 Tout enseignant·e souhaitant contribuer activement au projet est cordialement invité·e à le faire. Celles et ceux qui sont familiers avec GitHub peuvent immédiatement aller au chapitre [installation](https://github.com/edunumsec2/book/blob/master/README.md#installation). Pour les autres, la lecture de ce qui suit est primordiale. 
 
+Les chapitres qui suivent ont pour vocation d'expliquer *comment* utiliser les différents outils offerts par GitHub, et non de les *décrire*. Pour cela, il convient de se référer au [Wiki](https://github.com/edunumsec2/book/wiki).
+
 ### Good First Issue
 
 Les ["Good First Issue"](https://github.com/edunumsec2/book/issues) sont, dans la nomenclature traditionnelle des dépôts GitHub, des "problèmes faciles à résoudre" auxquels peuvent s'attaquer des utilisateurs·trices novices. 
