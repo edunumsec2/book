@@ -42,7 +42,8 @@ parts:
       - file: content/appr/theme/prog1/randomiser
       - file: content/appr/theme/prog1/trier
       - file: content/appr/theme/prog1/turtleart
-
+      - file: content/appr/theme/prog1/annexe
+      
   ### Algorithmique         
   - file: content/appr/theme/algo1/accueil/eleve
     sections:
@@ -105,6 +106,7 @@ parts:
       - file: content/appr/theme/projets/tetris
       - file: content/appr/theme/projets/art_absurde
       - file: content/appr/theme/projets/microbit/microbit
+      - file: content/appr/theme/projets/crypto
       - file: content/appr/theme/projets/idees
 
   - file: content/appr/theme/reseaux/eleve

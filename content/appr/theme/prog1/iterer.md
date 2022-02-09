@@ -2,7 +2,7 @@
 
 Dans ce chapitre, nous allons voir de près comment une variable peut parcourir ou itérer sur une plage numérique.
 
-Une boucle permet de raccourcir le code et de mieux le structurer. 
+Une boucle permet de raccourcir le code et de mieux le structurer.
 Une boucle ne représente pas seulement une économie de lignes de code, mais donne aussi la possibilité de contrôler le nombre de répétitions. Nous allons voir que :
 
 - la boucle `for` répète du code pour un ensemble de valeurs données,

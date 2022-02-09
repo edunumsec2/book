@@ -512,13 +512,11 @@ done()
 
 Les carrés de base d'un tétromino mesurent 40 × 40 pixels. Il y a 7 formes différentes de tétrominos, qui sont nommés d'après les lettres auxquelles ils ressemblent et qui ont des couleurs standard :
 
-```{image} media/tetromino.png
-```
+![](media/tetromino.png)
 
 Créez des fonctions pour dessiner les 7 tétrominos avec leurs couleurs appropriées, et composez la forme ci-dessous.
 
-```{image} media/tetris2.png
-```
+![](media/tetris2.png)
 
 ```{codeplay}
 :file: tetris2.py
