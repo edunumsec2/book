@@ -25,9 +25,9 @@
   - [Pull request](#pull-request)
   - [Processus de validation](#processus-de-validation)
     - [Branches protégées](#branches-protegees)
-    - [Responsables de thématiques](#responsables-de-thematiques)
     - [Reviews](#reviews)
-- [Conclusion](#conclusion)
+  - [Charte](#charte)
+ - [Conclusion](#conclusion)
 
 
 ## Introduction
@@ -150,8 +150,20 @@ Lorsqu'il est proposé le pull request est l'objet d'un processus de validation 
 
 GitHub permet d'ajouter des routines de protection des branches, qui consistent en droits d'écriture pour des utilisateurs particuliers, ou des groupes. 
 
+<img width="1276" alt="Screenshot 2022-02-10 at 09 58 35" src="https://user-images.githubusercontent.com/67040832/153372663-dbf76fc8-97e1-453e-864b-2d69e71debb5.png">
+
 #### Branches protégées
 
+Dans ce dépôt, les branches protégées sont les [branches spéciales](https://github.com/edunumsec2/book/blob/master/CONTRIBUTING.md#branches-sp%C3%A9ciales). Sur ces branches, seul le [comité de rédaction](https://github.com/orgs/edunumsec2/teams/comite-de-redaction/members) peut effectuer des commits ne nécessitant pas d'être validés par des pairs. 
 
+Pour les autres utilisateurs, toute modification des sources passe par une relecture et une acceptation. 
 
+#### Reviews
+
+Pour chaque thématique présente dans les ressources, il existe un certain nombre de [responsables de thématiques](https://github.com/edunumsec2/book#comit%C3%A9-de-r%C3%A9daction) qui seront les interlocuteurs privilégiés pour des modifications apportées aux sources en question. Ce sont eux qui observeront les modifications apportées et les valideront si elles sont acceptées. Dans le jargon, ce sont les reviewers des pull request qui concernent leur thématique. 
+
+#### Charte
+
+TODO
+Une charte d'écriture est proposée, qui contient des règles à suivre pour la contribution et/ou l'écriture de nouveaux documents. 
 
