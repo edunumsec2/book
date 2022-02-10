@@ -1,5 +1,3 @@
-:construction: Ce document est en cours de rédaction. 
-
 # Contribuer au projet
 
 ## Table des matières
