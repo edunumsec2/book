@@ -97,22 +97,26 @@ Les ["Good First Issue"](https://github.com/edunumsec2/book/issues) sont, dans l
 
 ### Fork 
 
+[Un fork](https://github.com/edunumsec2/book/wiki/Fork) est une copie non-linkée des fichiers sources du dépôt. Il permet à quiconque de dupliquer toutes les sources et les aménager à sa guise sans qu'un suivi soit efectué depuis le dépôt source. 
+
 Une des utilisations possibles de ces ressources via GitHub consiste simplement à les "forker", c'est à dire les dupliquer mais sans conserver la "parentalité" du dépôt source (a contrario du processus appelé "clône", qui conserve les attaches entre les sources et le clone, cf : ci-dessous). 
 
 ![clonevsfork](https://cdn.ttgtmedia.com/rms/onlineimages/cdo-git_clone_vs_fork-f.png)
 
-Un fork permet donc à quiconque de dupliquer toutes les sources et les aménager à sa guise. N'oubliez simplement pas de faire mention de la [licence](https://github.com/edunumsec2/book/blob/master/LICENCE.md) sous laquelle ces ressources sont publiées. 
+N'oubliez simplement pas de faire mention de la [licence](https://github.com/edunumsec2/book/blob/master/LICENCE.md) sous laquelle ces ressources sont publiées. 
 
 ### Clone
 
-Un clône est une copie "linkée" des ressources, qui conserve les liens de parentalité et donc d'interation entre source et clône. Un clône comprend les différentes branches du dépôt source. 
+[Un clône](https://github.com/edunumsec2/book/wiki/Clones) est une copie "linkée" des ressources, qui conserve les liens de parentalité et donc d'interation entre source et clône. Un clône comprend les différentes branches du dépôt source. 
 
 <img width="1280" alt="Screenshot 2022-02-09 at 09 49 56" src="https://user-images.githubusercontent.com/67040832/153159315-ac344fde-1d3f-4ea0-ab14-3778569afa5f.png">
 
 ### Branche
 
-Une branche est un duplicata des fichiers sources à un moment donné, qui permet de travailler sur l'un ou l'autre aspect des sources sans affecter la version "principale" (appelée ici "master", aussi appelée parfois "main"). 
+[Une branche](https://github.com/edunumsec2/book/wiki/Branches) est un duplicata des fichiers sources à un moment donné, qui permet de travailler sur l'un ou l'autre aspect des sources sans affecter la version "principale" (appelée ici "master", aussi appelée parfois "main"). 
 
 :warning: Attention : contrairement aux forks et aux clones, qui ne sont encore que des duplicata "inopérants", les branches doivent être utilisées pour travailler sur des problèmes ou des améliorations **précises** et **spécifiques** des ressources. La raison en est simple. L'idée d'une branche est, à terme, de pouvoir la refondre dans le master, et donc faire profiter aux autres des améliorations effectuées. Or, si la branche a été travaillée sur du long terme, si elle s'est étalée sur différentes parties des ressources, si elle a cherché à apporter trop de corrections à la fois, elle risque d'entrer en conflit avec des versions différentes des ressources au moment de la refonte dans le master. Spontanément, nous avons envie face à un dépôt de créer "notre branche" et de commencer à travailler dans son coin à certaines améliroations. C'est la **mauvaise façon de procéder**. La **bonne façon de procéder** consiste à attendre d'avoir une problème spécifique et précis à résoudre pour créer une branche et traailler à l'amélioration de cet aspect. 
 
+### Commit
 
+Un commit est une 
