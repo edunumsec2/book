@@ -119,4 +119,26 @@ N'oubliez simplement pas de faire mention de la [licence](https://github.com/edu
 
 ### Commit
 
-Un commit est une 
+Un commit est l'équivalent d'une "sauvegarde" sur une branche d'un dépôt GitHub. L'utilisateur qui modifie un fichier doit ensuite *soumettre* (commit) sa modification pour que les autres utilisateurs puissent la voir. 
+
+Dans l'exemple ci-dessous, les modifications que je fais au document ci-contre doivent être *soumises* (commit changes) pour être rendues effectives. 
+<img width="1197" alt="Screenshot 2022-02-10 at 09 01 40" src="https://user-images.githubusercontent.com/67040832/153363243-bdf893c4-8728-41be-8b9b-742c7a7b6a34.png">
+
+Dans la pratique, il convient d'utiliser l'option "create a new branch for this commit and start a pull request". 
+<img width="1280" alt="Screenshot 2022-02-10 at 09 02 49" src="https://user-images.githubusercontent.com/67040832/153363561-dcac4151-0ded-4ed8-9b06-485765d48383.png">
+
+Si on décortique les étapes d'une telle fonction, on a : 
+
+* Création d'une branche
+* Ajout d'un commit sur cette nouvelle branche
+* Demande au master de "pull" (c'est à dire tirer à vers soi) cette nouvelle branche pour que la modification soit effective
+
+Concrètement, ces étapes permettent aux modérateurs du dépôt de traiter le nouveau commit comme si c'était une branche qui souhaitait *merger* les nouvelles modifications apportées dans le master. 
+
+### Pull request 
+
+Un pull request 
+
+#### Usages 
+
+
