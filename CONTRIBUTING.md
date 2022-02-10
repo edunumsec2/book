@@ -23,9 +23,6 @@
   - [Branche](#branche)
   - [Commit](#commit)
   - [Pull request](#pull-request)
-    - [Usages](#usages)
-    - [Descriptions](#descriptions)
-    - [Exemples](#exemples)
   - [Processus de validation](#processus-de-validation)
     - [Branches protégées](#branches-protegees)
     - [Responsables de thématiques](#responsables-de-thematiques)
@@ -115,6 +112,14 @@ N'oubliez simplement pas de faire mention de la [licence](https://github.com/edu
 
 [Une branche](https://github.com/edunumsec2/book/wiki/Branches) est un duplicata des fichiers sources à un moment donné, qui permet de travailler sur l'un ou l'autre aspect des sources sans affecter la version "principale" (appelée ici "master", aussi appelée parfois "main"). 
 
+#### Branches spéciales
+
+Dans ce dépôt, les branches spéciales sont : 
+
+* master : c'est la branche par défaut, celle sur laquelle sont stockées les sources générant la [version actuelle des ressources](https://github.com/edunumsec2/book#liens). 
+* dev : c'est la branche en développement, celle sur laquelle les nouvelles versions sont stockées, servant à générant la [version en développement des ressources](https://github.com/edunumsec2/book#liens)
+* old-master : c'est la branche d'archive, celle sur laquelle est stockée la [version antérieure des ressources](https://github.com/edunumsec2/book#liens). 
+
 :warning: Attention : contrairement aux forks et aux clones, qui ne sont encore que des duplicata "inopérants", les branches doivent être utilisées pour travailler sur des problèmes ou des améliorations **précises** et **spécifiques** des ressources. La raison en est simple. L'idée d'une branche est, à terme, de pouvoir la refondre dans le master, et donc faire profiter aux autres des améliorations effectuées. Or, si la branche a été travaillée sur du long terme, si elle s'est étalée sur différentes parties des ressources, si elle a cherché à apporter trop de corrections à la fois, elle risque d'entrer en conflit avec des versions différentes des ressources au moment de la refonte dans le master. Spontanément, nous avons envie face à un dépôt de créer "notre branche" et de commencer à travailler dans son coin à certaines améliroations. C'est la **mauvaise façon de procéder**. La **bonne façon de procéder** consiste à attendre d'avoir une problème spécifique et précis à résoudre pour créer une branche et traailler à l'amélioration de cet aspect. 
 
 ### Commit
@@ -137,8 +142,16 @@ Concrètement, ces étapes permettent aux modérateurs du dépôt de traiter le 
 
 ### Pull request 
 
-Un pull request 
+[Un pull request](https://github.com/edunumsec2/book/wiki/Pull-Request) est une requête dont le destinateur est la branche qui souhaite amener une modification, et le destinataire est la branche sur laquelle on souhaite que cette modification soit apportée. En d'autres termes, c'est une demande que l'utilisateur d'une branche adresse à l'administrateur d'une autre branche pour que celle-ci "tire vers soi", un certain nombre de modifications contenues dans la branche.
 
-#### Usages 
+Lorsqu'il est proposé le pull request est l'objet d'un processus de validation décrit ci-dessous. 
+
+### Processus de validation 
+
+GitHub permet d'ajouter des routines de protection des branches, qui consistent en droits d'écriture pour des utilisateurs particuliers, ou des groupes. 
+
+#### Branches protégées
+
+
 
 
