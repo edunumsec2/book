@@ -488,27 +488,28 @@ width: 100%
 
 
 3ème phase 
-L'enseignant propose aux élèves d'écouter le morceau de musique choisi aux différentes fréquences proposées par Audacity :
+L'enseignant propose aux élèves d'écouter une partie du morceau de musique choisi aux différentes fréquences proposées par Audacity, de 8000 à 384000 Hz. 
 
 ```{figure} png/Im55.png
 ---
 alt:
 width: 100%
 ---
+**Ecoute à différentes fréquences d'échantillonnage sous Audacity.**
 ```
 
-
-Détection apparente de la fréquence maximale (proche de 15kHz). Echantillonnage d'un même morceau à cinq fréquences différentes : 5kHz, 15kHz, 30kHz, 50kHz et 60kHz. Deuxième séance - <span style="color:violet">20-25mn</span>
-</br>4. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, interprétation. Interprétation du visuel de la courbe sonore dilatée temporellement : la discrétisation numérique est mise en évidence. L'enseignant recueille de manière guidée les appréciations des élèves sur la qualité des morceaux échantillonnés à différentes fréquences : cela peut être via un tableau où figurent en première ligne les cinq fréquences, et dans la ligne suivante la qualité perçue par les élèves : Médiocre / Convenable / Très bonne ; l'enseignant inscrit un segment (représentation au tableau) pour chaque choix de chaque qualité associée, ou travaille directement sur un tableau excel. Deuxième séance - <span style="color:violet">15-20mn</span>
+Après 5 à 10 mn d'écoute autonome, il les questionne sur ce qu'ils ont écouté et sur leur interprétation des fréquences indiquées. Deuxième séance - <span style="color:violet">20-25mn</span>
+</br>
+4. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, interprétation. Interprétation du visuel de la courbe sonore dilatée temporellement : la *discrétisation numérique* est mise en évidence. L'enseignant recueille de manière guidée les appréciations des élèves sur la qualité du morceau de musique écouté à différentes *fréquences d'échantillonnage*. Cette notion est simplement posée à ce stade, elle sera reprise et développé dans le temps suivant. Le recueil des appréciations concernant la qualité sonore peut être réalisée via un tableau où figurent en première ligne par exemple cinq fréquences autour de la fréquence médiane 48000 Hz, et dans la ligne suivante la qualité perçue par les élèves : Médiocre / Convenable / Bonne ; l'enseignant inscrit un segment (représentation au tableau) pour chaque choix de chaque qualité associée, ou travaille directement sur un [tableau excel] (/tab/appqualson.ods). Deuxième séance - <span style="color:violet">15-20mn</span>
 
 <br> <br>
 
 ```{figure} png/tabexcel.png
 ---
-alt: Exemple de tableau excel enseignant récoltant les appréciations des élèves concernant la qualité sonore de l'échantillon.
+alt: Exemple de tableau excel enseignant récoltant les appréciations par les élèves de la qualité sonore de l'échantillon.
 width: 100%
 ---
-**Exemple de tableau excel enseignant récoltant les appréciations des élèves concernant la qualité sonore de l'échantillon.**
+**Exemple de tableau excel enseignant récoltant les appréciations par les élèves de la qualité sonore de l'échantillon.**
 ```
 
 </br>5. Travail sur la technique : les élèves sont laissés en autonomie une bonne partie du temps sur leurs postes de travail, expérimentent les outils et concepts institutionnalisés en manipulant les paramètres d'Audacity. Deuxième séance - <span style="color:violet">25-30mn</span>
