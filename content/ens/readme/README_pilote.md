@@ -47,6 +47,3 @@ Toute personne qui réutilise les ressources est priée de le faire de la façon
 * Plateforme : Romain Edelmann - EPFL & Grégoire Gavin - EPFL
 * Charte éditoriale, plateforme, rédaction : Christophe Dumas - EPFL & Elliot Vaucher - EPFL
 * Coordination : Nathalie Farenc - EPFL
-
-
-test
