@@ -525,8 +525,6 @@ width: 100%
 ```
 
 
-
-
 Deuxième séance - <span style="color:violet">15-20mn</span>
 
 
