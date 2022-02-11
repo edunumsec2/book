@@ -375,9 +375,9 @@ Devoir maison : évaluation
 
 </br>
     Moments didactiques :
-</br>1. Mise en situation - Première séance (cours) - <span style="color:violet">45mn</span>
-</br>2. Exploration individuelle : chaque élève prend possession du matériel, des outils : ordinateur, environnement de travail, logiciel Audacity, matériel audio - Deuxième séance (activité proprement dite) - <span style="color:violet">5-10mn</span>
-</br>3. Moment technique et technologique : les élèves manipulent le programme Audacity, lancent les exécutions, manipulent les fenêtres graphiques (interfaces), observent les graphes et écoutent différentes portions de morceaux de musique (3 maximum). 
+</br>1er moment didactique. Mise en situation - Première séance (cours) - <span style="color:violet">45mn</span>
+</br>2ème moment didactique. Exploration individuelle : chaque élève prend possession du matériel, des outils : ordinateur, environnement de travail, logiciel Audacity, matériel audio - Deuxième séance (activité proprement dite) - <span style="color:violet">5-10mn</span>
+</br>3ème moment didactique. Moment technique et technologique : les élèves manipulent le programme Audacity, lancent les exécutions, manipulent les fenêtres graphiques (interfaces), observent les graphes et écoutent différentes portions de morceaux de musique (3 maximum). 
 
 </br>
 <center> 
@@ -416,7 +416,7 @@ width: 100%
     <body>
         <div id="player">
         <video width="500" height="300" controls>
-        <source src="https://enseigner.modulo-info.ch/content/ens/theme/rep-info/support/son/mov/Util_Audacity.mov" type="video/quicktime">
+        <source src="https://maitre.edunumsec2.ch/_videos/Util_Audacity.mov" type="video/quicktime">
         </audio> 
         </div>
     </body> 
@@ -461,12 +461,12 @@ width: 100%
 alt:
 width: 100%
 ---
-**Zoom sur une partie du morceau visualisé sous Audacity  dilatation temporelle, composition fréquentielle.**
+**Zoom sur une partie du morceau visualisé sous Audacity : dilatation temporelle, composition fréquentielle.**
 ```
-1ère phase
+1ère phase.
 L'enseignant s'assure ensuite de la bonne compréhension des phénomènes : notions d'amplitude et de fréquence, dilatation temporelle, fréquences "visibles" des composantes du signal. En particulier, sur la dernière visualisation, on observe qu'on peut mettre en évidence une "quasi-période" entre les instants 0,8320 et 0,8345. Le calcul de la période donne donc 0,8345-0,8320 = 0,0025s, soit une fréquence de 1/0,0025 = 400Hz. L'enseignant questionne les élèves sur cette fréquence : est-elle basse ? haute ? L'enseignant s'appuie ensuite sur la génération d'un son "pur" à 400Hz, via les programmes python tracesinus.py, listensinus.py ou encore puresignalssum.py (description dans les activités 1 & 2). Par la visualisation et l'écoute, les élèves peuvent se représenter l'information extraite du fichier audio (composante de fréquence ~ 400Hz).
 
-2ème phase
+2ème phase.
 L'enseignant poursuit le zoom sur le signal et questionne les élèves sur l'interprétation de ce qu'ils voient. Il les amène progressivement à la compréhension de la notion de *discrétisation*, résulttat du passage d'une représentation continue *apparente* correspondant à la réalité physique à une représentation discrète *réelle* correspondant à la **réalité numérique**.
 
 
@@ -487,7 +487,7 @@ width: 100%
 ```
 
 
-3ème phase 
+3ème phase. 
 L'enseignant propose aux élèves d'écouter une partie du morceau de musique choisi aux différentes fréquences proposées par Audacity, de 8000 à 384000 Hz. 
 
 ```{figure} png/Im55.png
@@ -500,7 +500,7 @@ width: 100%
 
 Après 5 à 10 mn d'écoute autonome, il les questionne sur ce qu'ils ont écouté et sur leur interprétation des fréquences indiquées. Deuxième séance - <span style="color:violet">20-25mn</span>
 </br>
-4. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, interprétation. Interprétation du visuel de la courbe sonore dilatée temporellement : la *discrétisation numérique* est mise en évidence. L'enseignant recueille de manière guidée les appréciations des élèves sur la qualité du morceau de musique écouté à différentes *fréquences d'échantillonnage*. Cette notion est simplement posée à ce stade, elle sera reprise et développée dans le temps suivant. Le recueil des appréciations concernant la qualité sonore peut être réalisée via un tableau où figurent en première ligne toutes les fréquences autour de la fréquence médiane 48000 Hz, et dans la ligne suivante la qualité perçue par les élèves : Mauvaise / Convenable / Bonne ; l'enseignant inscrit un segment (représentation au tableau) pour chaque choix de chaque qualité associée, ou travaille de préférence directement sur un [tableau excel] (/tab/appqualson.ods) complété avec les retours élèves. 
+4ème moment didactique. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, interprétation. Interprétation du visuel de la courbe sonore dilatée temporellement : la *discrétisation numérique* est mise en évidence. L'enseignant recueille de manière guidée les appréciations des élèves sur la qualité du morceau de musique écouté à différentes *fréquences d'échantillonnage*. Cette notion est simplement posée à ce stade, elle sera reprise et développée dans le temps suivant. Le recueil des appréciations concernant la qualité sonore peut être réalisée via un tableau où figurent en première ligne toutes les fréquences autour de la fréquence médiane 48000 Hz, et dans la ligne suivante la qualité perçue par les élèves : Mauvaise / Convenable / Bonne ; l'enseignant inscrit un segment (représentation au tableau) pour chaque choix de chaque qualité associée, ou travaille de préférence directement sur un [tableau excel] (/tab/appqualson.ods) complété avec les retours élèves. 
 Le tableau complété, il est projeté au tableau : l'enseignant questionne les élèves
 Deuxième séance - <span style="color:violet">15-20mn</span>
 
@@ -514,8 +514,8 @@ width: 100%
 **Exemple de tableau excel enseignant récoltant les appréciations par les élèves de la qualité sonore de l'échantillon.**
 ```
 
-</br>5. Travail sur la technique : les élèves sont laissés en autonomie une bonne partie du temps sur leurs postes de travail, expérimentent les outils et concepts institutionnalisés en manipulant les paramètres d'Audacity. Deuxième séance - <span style="color:violet">25-30mn</span>
-</br>6. Evaluation. Devoir maison - <span style="color:violet">30mn</span>
+</br>5ème moment didactique. Travail sur la technique : les élèves sont laissés en autonomie une bonne partie du temps sur leurs postes de travail, expérimentent les outils et concepts institutionnalisés en manipulant les paramètres d'Audacity. Deuxième séance - <span style="color:violet">25-30mn</span>
+</br>6ème moment didactique. Evaluation. Devoir maison - <span style="color:violet">30mn</span>
 </br> </br>
 
 Supports didactiques : 
