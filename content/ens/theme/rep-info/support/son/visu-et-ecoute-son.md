@@ -375,11 +375,11 @@ Devoir maison : évaluation
 
 </br>
     Moments didactiques :
-</br>1er moment didactique. Mise en situation - Première séance (cours) - <span style="color:violet">45mn</span>
-</br>2ème moment didactique. Exploration individuelle : chaque élève prend possession du matériel, des outils : ordinateur, environnement de travail, logiciel Audacity, matériel audio - Deuxième séance (activité proprement dite) - <span style="color:violet">5-10mn</span>
-</br>3ème moment didactique. Moment technique et technologique : les élèves manipulent le programme Audacity, lancent les exécutions, manipulent les fenêtres graphiques (interfaces), observent les graphes et écoutent différentes portions de morceaux de musique (3 maximum). 
+</br> </br> 1er moment didactique. Mise en situation - Première séance (cours) - <span style="color:violet">45mn</span>
+</br> </br> 2ème moment didactique. Exploration individuelle : chaque élève prend possession du matériel, des outils : ordinateur, environnement de travail, logiciel Audacity, matériel audio - Deuxième séance (activité proprement dite) - <span style="color:violet">5-10mn</span>
+</br> </br> 3ème moment didactique. Moment technique et technologique : les élèves manipulent le programme Audacity, lancent les exécutions, manipulent les fenêtres graphiques (interfaces), observent les graphes et écoutent différentes portions de morceaux de musique (3 maximum). 
 
-</br>
+</br> </br>
 <center> 
 <html>
     <head>
@@ -388,7 +388,7 @@ Devoir maison : évaluation
     <body>
         <div id="player">
         <audio controls>
-        <source src="https://enseigner.modulo-info.ch/content/ens/theme/rep-info/support/son/mp3/audio1.mp3" type="audio/mpeg">
+        <source src="https://maitre.edunumsec2.ch/_videos/Audio1.mp3" type="audio/mpeg">
         </audio> 
         </div>
     </body> 
@@ -407,7 +407,7 @@ width: 100%
 ```
 
 <center> 
-
+</br>
 <center> 
 <html>
     <head>
@@ -433,7 +433,7 @@ width: 100%
 
 Les élèves travaillent de manière autonome, au casque individuel, les échanges sont limités. L'enseignant circule dans la classe et s'assure de l'appropriation des outils. Il revient au tableau régulièrement afin de dérouler les consignes : lancement d'Audacity, manipulation, écoute des différents morceaux, zoom. 
 
-<br> <br>
+<br>
 
 ```{figure} png/Im38.png
 ---
@@ -498,13 +498,9 @@ width: 100%
 **Ecoute à différentes fréquences d'échantillonnage sous Audacity.**
 ```
 
-Après 5 à 10 mn d'écoute autonome, il les questionne sur ce qu'ils ont écouté et sur leur interprétation des fréquences indiquées. Deuxième séance - <span style="color:violet">20-25mn</span>
-</br>
+Après 5 à 10 mn d'écoute autonome, l'enseignant questionne les élèves sur ce qu'ils ont écouté et sur leur interprétation des fréquences indiquées. Deuxième séance - <span style="color:violet">20-25mn</span>
+</br> </br>
 4ème moment didactique. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, interprétation. Interprétation du visuel de la courbe sonore dilatée temporellement : la *discrétisation numérique* est mise en évidence. L'enseignant recueille de manière guidée les appréciations des élèves sur la qualité du morceau de musique écouté à différentes *fréquences d'échantillonnage*. Cette notion est simplement posée à ce stade, elle sera reprise et développée dans le temps suivant. Le recueil des appréciations concernant la qualité sonore peut être réalisée via un tableau où figurent en première ligne toutes les fréquences autour de la fréquence médiane 48000 Hz, et dans la ligne suivante la qualité perçue par les élèves : Mauvaise / Convenable / Bonne ; l'enseignant inscrit un segment (représentation au tableau) pour chaque choix de chaque qualité associée, ou travaille de préférence directement sur un [tableau excel] (/tab/appqualson.ods) complété avec les retours élèves. 
-Le tableau complété, il est projeté au tableau : l'enseignant questionne les élèves
-Deuxième séance - <span style="color:violet">15-20mn</span>
-
-<br> <br>
 
 ```{figure} png/tabexcel.png
 ---
@@ -514,8 +510,29 @@ width: 100%
 **Exemple de tableau excel enseignant récoltant les appréciations par les élèves de la qualité sonore de l'échantillon.**
 ```
 
-</br>5ème moment didactique. Travail sur la technique : les élèves sont laissés en autonomie une bonne partie du temps sur leurs postes de travail, expérimentent les outils et concepts institutionnalisés en manipulant les paramètres d'Audacity. Deuxième séance - <span style="color:violet">25-30mn</span>
-</br>6ème moment didactique. Evaluation. Devoir maison - <span style="color:violet">30mn</span>
+
+Une fois le tableau complété, il est projeté : l'enseignant questionne les élèves sur l'interprétation qu'ils peuvent donner des graphes issus du tableau de données. Il doit faire ainsi ressortir la qualité perçue à partie de la fréquence d'échantillonnage de 44100Hz. La nécessité d'une *fréquence d'échantillonnage minimale* doit ici apparaître.
+Dans un deuxième temps, l'enseignant interroge sur les résultats pour les fréquences supérieures. L'inutilité d'aller au-delà d'une certaine fréquence (en l'occurence 44100 Hz) doit ressortir.
+L'étape suivante consiste à identifier cette valeur de 44100 Hz : à quoi correspond-elle ? L'enseignant revient sur le champ audible par l'oreille humaine : 20Hz - 20000Hz... Il situe alors 44100z par rapport à la fréquence la plus élevée que peut percevoir l'oreille humaine, 20000Hz... La fréquence d'échantillonnage apparaît comme devant être au moins égale au double de de cette fréquence de 20000Hz.
+En dernier lieu, l'enseignant revient sur la notion même de fréquence d'échantillonnage. Que signifie-t-elle ? C'est le nombre d'échantillons pris par unité de temps. L'enseignant illustre son propos par le dernier visuel de la figure 4 : entre les temps 6,8310s et 6,8315s, on dénombre à peu près 23 échantillons, soit 23/0,0005 = 46000Hz. On retrouve quasiment la fréquence 44100 Hz apparaissant en bas à gauche de la fenêtre Audacity.
+
+```{figure} png/Im41.png
+---
+alt:
+width: 100%
+---
+**Identification de la fréquence d'échantillonnage (ici 44100Hz).**
+```
+
+
+
+
+Deuxième séance - <span style="color:violet">15-20mn</span>
+
+
+
+</br> 5ème moment didactique. Travail sur la technique : les élèves sont laissés en autonomie une bonne partie du temps sur leurs postes de travail, expérimentent les outils et concepts institutionnalisés en manipulant les paramètres d'Audacity. Deuxième séance - <span style="color:violet">25-30mn</span>
+</br> </br> 6ème moment didactique. Evaluation. Devoir maison - <span style="color:violet">30mn</span>
 </br> </br>
 
 Supports didactiques : 
