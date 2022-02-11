@@ -9,11 +9,11 @@
         * [1.1.1. Onde de pression](#Section1.1.1)
         * [1.1.2. L'oreille comme capteur](#Section1.1.2)
         * [1.1.3. Vibration et fréquence](#Section1.1.3)
-    * [1.2. Contenu fréquentiel (analyse spectrale)](#Section1.2)
+    * [1.2. Contenu fréquentiel (analyse spectrale)](#Section1.2) <span style="color:white"> ____ </span> [<span style="color:red"> <B> Activité 0 </B> </span>](#activite-0)
         * [1.2.1. Signal pur](#Section1.2.1)
-        * [1.2.2. Signal complexe (à contenu fréquentiel)](#Section1.2.2) <span style="color:white"> ____ </span> [<span style="color:red"> Activité 1 </span>](#activite-1) <span style="color:white">____</span> [<span style="color:red"> Activité 2 </span>](#activite-2)
+        * [1.2.2. Signal complexe (à contenu fréquentiel)](#Section1.2.2) <span style="color:white"> ____ </span> [<span style="color:orange"> Activité 1 </span>](#activite-1) <span style="color:white">____</span> [<span style="color:orange"> Activité 2 </span>](#activite-2)
     * [1.3. Signal sonore et musique](#Section1.3)       
-        * [1.3.1. Le timbre : caractéristique d'un signal sonore](#Section1.3.1) <span style="color:white"> __ </span> [<span style="color:red"> Activité 3 </span>](#activite-3) <span style="color:white"> __ </span> [<span style="color:red"> Activité 4 </span>](#activite-4) <span style="color:white">__</span> [<span style="color:red"> Activité 5 </span>](#activite-5)
+        * [1.3.1. Le timbre : caractéristique d'un signal sonore](#Section1.3.1) <span style="color:white"> __ </span> [<span style="color:orange"> Activité 3 </span>](#activite-3) <span style="color:white"> __ </span> [<span style="color:orange"> Activité 4 </span>](#activite-4) <span style="color:white">__</span> [<span style="color:orange"> Activité 5 </span>](#activite-5)
         * [1.3.2. La musique comme « organisation » de timbres sonores](#Section1.3.2)    
 * [2. Génération et enregistrement sonores](#Chapter2)
     * [2.1. Générer et enregistrer un son analogique](#Section2.1)
@@ -306,6 +306,223 @@ Un signal complexe est un signal à contenu fréquentiel multiple. Il correspond
 </center> 
 <center> Fig. 6 - Composition spectrale d’un signal </center>
 <br/>
+<br/>
+<br/>
+
+
+
+# Activité 0
+**Echantillonnage** 
+
+Classe : 1M, 2M
+
+<span style="color:green">Difficulté : basique </span> 
+<sup> [1](#myfootnote1)</sup>
+    
+
+Objectif informatique : le premier objet de cette activité est de permettre à l'élève d'appréhender la problématique de la représentation de l'information au sens large, comme le passage d'un univers symbolique à un autre.
+    Il s'agit tout d'abord de passer d'un espace physique sensoriel (l'audition) à un autre espace sensoriel (la vue) et à la modélisation mathématique permettant de représenter ce phénomène acoustique : la représentation pseudo-sinusoïdale continue d'une onde sonore théorique, puis sa représentation numérique discrète. Ce premier travail intellectuel doit permettre aux élèves d'une part de se familiariser avec le matériau servant de support aux activités suivantes (les éléments relatifs au son), et d'autre part de faciliter leur compréhension du changement de paradigme ultérieur entre l'espace physique (plutôt que mathématique) et l'espace numérique et le codage binaire de l'information.
+Le second objet de cette activité est de permettre aux élèves de se familiariser avec l'outil Audacity, ses fonctionnalités de visualisation graphique et de reproduction sonore, offrant deux modes de représentation du son. 
+    En particulier la notion de fréquence d'échantillonnage et le critère de Shannon, essentiel en traitement du signal, est perçue visuellement et auditivement (découpage de l'onde sonore en une multitude de points et perception des effets de la fréquence d'échantillonnage sur la qualité du rendu ).
+    
+</br>
+    
+</br>
+
+Objectif mathématique et physique (transversal) :
+l'activité permet de réactiver, confirmer ou s'appuyer sur des savoirs mathématiques relatifs aux relations fonctionnelles,  aux représentations dans le plan et à la trigonométrie.
+L'activité permet de réactiver, confirmer ou s'appuyer sur savoirs mécaniques et physiques relativement aux ondes, à la notion de milieu de propagation, de période et de fréquence.
+
+</br>
+
+Mode : branché / débranché
+
+<br/>
+Pré-requis : 
+
+- informatique :
+        <span style="color:green">utilisation de l'ordinateur et environnement
+        </span> 
+        
+    
+- mathématique :
+        <span style="color:orange">fonctions</span>
+        <span style="color:orange">fonctions trigonométriques simples</span> 
+        <span style="color:orange">notions d'amplitude, période et fréquence</span> 
+        <span style="color:green">représentation sur un repère plan</span> 
+        <span style="color:green">notion d'espace continu / discret</span> 
+        
+    
+- physique :
+        <span style="color:orange">notion d'onde mécanique (pression, compression-dilatation) et sa représentation</span>    
+</br>
+
+Durée : la séquence d'enseignement se découpe en deux séances de 45mn. 
+        
+1ère séance : éléments de cours sur l'information et le son en particulier.
+
+Cette première séance doit être vue comme une introduction à la problématique traitée par l'activité proprement dite. Elle est l'occasion de travailler la transdisciplinarité avec d'autres disciplines fondamentales (mathématiques, physique) mais également une discipline artistique, la musique.
+Elle peut donc s'effectuer en parallèle d'un de ces enseignements, en coordination avec un enseignant de ces disciplines : mathématiques, physique, ou musique.
+Les éléments mathématiques et physiques théoriques suffisants sont présentés dans cet ouvrage à la section 1.1 : Signal analogique (physique) temporel. L'enseignant peut également s'appuyer sur certains éléments de la section 1.2 Contenu fréquentiel (analyse spectrale).
+Une introduction sous l'angle de la musique pourra s'appuyer sur une approche instrumentale mettant en évidence les notions de hauteur (fréquence), de timbre (richesse harmonique), d'onde de pression transmise dans un espace matériel : ceci devra être fait en collaboration avec un enseignant de musique, avec le concours d'instruments divers : piano, flute, cordes, cuivres ou vents...
+
+*Problématique de la représentation :* fonction sinus, amplitude, fréquence, période. Rappels mathématiques et physiques sur les notions abordées : notion d'onde de pression, compression-dilatation, compréhension de la représentation graphique (sinus). L'enseignant traite rapidement la notion d'onde sonore comme la somme de "sons élémentaires" - il peut utiliser à ce titre un des outils (programmes python) présentés dans les activités de 1 à 4.
+Cette séance n'étant pas concentrée sur des éléments liés à la science informatique, on peut imaginer une activité propre permettant de mettre en évidence ces notions mathématiques et physiques fondamentales (activités 1 et 2).
+
+2ème séance : activité proprement dite.
+
+Devoir maison : évaluation
+
+</br>
+    Moments didactiques :
+</br>1. Mise en situation - Première séance (cours) - <span style="color:violet">45mn</span>
+</br>2. Exploration individuelle : chaque élève prend possession du matériel, des outils : ordinateur, environnement de travail, logiciel Audacity, matériel audio - Deuxième séance (activité proprement dite) - <span style="color:violet">5-10mn</span>
+</br>3. Moment technique et technologique : les élèves manipulent le programme Audacity, lancent les exécutions, manipulent les fenêtres graphiques (interfaces), observent les graphes et écoutent différentes portions de morceaux de musique (3 maximum). 
+
+</br>
+<center> 
+<html>
+    <head>
+        <title> audio1.mp3 </title>
+    </head>
+    <body>
+        <div id="player">
+        <audio controls>
+        <source src="https://enseigner.modulo-info.ch/content/ens/theme/rep-info/support/son/mp3/audio1.mp3" type="audio/mpeg">
+        </audio> 
+        </div>
+    </body> 
+</html>     
+</br>
+</br>
+</center> 
+
+
+```{figure} png/Im39.png
+---
+alt:
+width: 100%
+---
+**Visualisation d'un morceau de musique sur Audacity**
+```
+
+<center> 
+
+<center> 
+<html>
+    <head>
+        <title> Util_Audacity.mov </title>
+    </head>
+    <body>
+        <div id="player">
+        <video width="500" height="300" controls>
+        <source src="https://enseigner.modulo-info.ch/content/ens/theme/rep-info/support/son/mov/Util_Audacity.mov" type="video/quicktime">
+        </audio> 
+        </div>
+    </body> 
+</html>     
+
+```{figure} png/
+---
+alt:
+width: 100%
+---
+**Manipulation d'un morceau de musique sur Audacity**
+```
+
+
+Les élèves travaillent de manière autonome, au casque individuel, les échanges sont limités. L'enseignant circule dans la classe et s'assure de l'appropriation des outils. Il revient au tableau régulièrement afin de dérouler les consignes : lancement d'Audacity, manipulation, écoute des différents morceaux, zoom. 
+
+<br> <br>
+
+```{figure} png/Im38.png
+---
+alt:
+width: 100%
+---
+```
+
+```{figure} png/Im37.png 
+---
+alt:
+width: 100%
+---
+```
+
+```{figure} png/Im36.png
+---
+alt:
+width: 100%
+---
+```
+
+```{figure} png/Im35.png
+---
+alt:
+width: 100%
+---
+**Zoom sur une partie du morceau visualisé sous Audacity  dilatation temporelle, composition fréquentielle.**
+```
+1ère phase
+L'enseignant s'assure ensuite de la bonne compréhension des phénomènes : notions d'amplitude et de fréquence, dilatation temporelle, fréquences "visibles" des composantes du signal. En particulier, sur la dernière visualisation, on observe qu'on peut mettre en évidence une "quasi-période" entre les instants 0,8320 et 0,8345. Le calcul de la période donne donc 0,8345-0,8320 = 0,0025s, soit une fréquence de 1/0,0025 = 400Hz. L'enseignant questionne les élèves sur cette fréquence : est-elle basse ? haute ? L'enseignant s'appuie ensuite sur la génération d'un son "pur" à 400Hz, via les programmes python tracesinus.py, listensinus.py ou encore puresignalssum.py (description dans les activités 1 & 2). Par la visualisation et l'écoute, les élèves peuvent se représenter l'information extraite du fichier audio (composante de fréquence ~ 400Hz).
+
+2ème phase
+L'enseignant poursuit le zoom sur le signal et questionne les élèves sur l'interprétation de ce qu'ils voient. Il les amène progressivement à la compréhension de la notion de *discrétisation*, résulttat du passage d'une représentation continue *apparente* correspondant à la réalité physique à une représentation discrète *réelle* correspondant à la **réalité numérique**.
+
+
+
+```{figure} png/Im40.png
+---
+alt:
+width: 100%
+---
+```
+
+```{figure} png/Im41.png
+---
+alt:
+width: 100%
+---
+**Zoom sur une partie du morceau visualisé sous Audacity : mise en évidence de la discrétisation.**
+```
+
+
+3ème phase 
+L'enseignant propose aux élèves d'écouter le morceau de musique choisi aux différentes fréquences proposées par Audacity :
+
+```{figure} png/Im55.png
+---
+alt:
+width: 100%
+---
+```
+
+
+Détection apparente de la fréquence maximale (proche de 15kHz). Echantillonnage d'un même morceau à cinq fréquences différentes : 5kHz, 15kHz, 30kHz, 50kHz et 60kHz. Deuxième séance - <span style="color:violet">20-25mn</span>
+</br>4. Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, interprétation. Interprétation du visuel de la courbe sonore dilatée temporellement : la discrétisation numérique est mise en évidence. L'enseignant recueille de manière guidée les appréciations des élèves sur la qualité des morceaux échantillonnés à différentes fréquences : cela peut être via un tableau où figurent en première ligne les cinq fréquences, et dans la ligne suivante la qualité perçue par les élèves : Médiocre / Convenable / Très bonne ; l'enseignant inscrit un segment (représentation au tableau) pour chaque choix de chaque qualité associée, ou travaille directement sur un tableau excel. Deuxième séance - <span style="color:violet">15-20mn</span>
+
+<br> <br>
+
+```{figure} png/tabexcel.png
+---
+alt: Exemple de tableau excel enseignant récoltant les appréciations des élèves concernant la qualité sonore de l'échantillon.
+width: 100%
+---
+**Exemple de tableau excel enseignant récoltant les appréciations des élèves concernant la qualité sonore de l'échantillon.**
+```
+
+</br>5. Travail sur la technique : les élèves sont laissés en autonomie une bonne partie du temps sur leurs postes de travail, expérimentent les outils et concepts institutionnalisés en manipulant les paramètres d'Audacity. Deuxième séance - <span style="color:violet">25-30mn</span>
+</br>6. Evaluation. Devoir maison - <span style="color:violet">30mn</span>
+</br> </br>
+
+Supports didactiques : 
+    
+ordinateur individuel, logiciel Audacity, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
+
+<br/>
+<br/>
+<br/>
+
 
 # Activité 1
 **Signaux sonores élémentaires** 
