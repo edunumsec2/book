@@ -113,3 +113,4 @@ Les ressources sont affichées sous la forme du site statique ici-présent par l
 
 ````{image} media/presentation/code.gif
 ```` 
+test
