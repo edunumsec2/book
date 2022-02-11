@@ -166,3 +166,50 @@ for i in range(1, 100):
     if est_premier(fermat(i)):
         print(i)
 ```
+
+## Chiffrement de César
+
+```{codeplay}
+from math import *
+
+print(factorial(26))
+```
+
+## Message secret
+
+```{codeplay}
+msg = 'ce message est secret'
+
+for c in msg:
+    print(c, chr(ord(c)+3))
+```
+
+## Message encodé
+
+```{codeplay}
+msg = 'ce message est secret'
+
+for c in msg:
+    print(c, chr(ord(c)+3))
+```
+
+## Code ASCII de A-Z
+
+Dans les deux exemples notez bien la distinction entre `i` et `c`. La variable d'itération 
+
+- `i` est un entier,
+- `c` est un caractère.
+
+```{codeplay}
+:max_output_lines: 26
+for i in range(ord('A'), ord('Z')+1):
+    print(i, '=', chr(i), end='\t')
+```
+
+Une autre façon est celle-ci.
+
+```{codeplay}
+:max_output_lines: 26
+for c in 'ABCDEFGHIJKLMNOPQRSTUVWYYZ':
+    print(c, '=', ord(c), end='\t')
+```
