@@ -256,7 +256,7 @@ Le module graphique utilisé actuellement (Tk 8.6.8) ne supporte pas des émojis
 Ce bug sera corrigé avec Thonny 4.0 qui utilisera la version Tk 8.6.12.
 ```
 
-Vous pouvez utilisez dans Thonny sans problème les anciens pictogrammes en noir et blanc. Voici les codes Unicode de 
+Vous pouvez utilisez dans Thonny sans problème les anciens pictogrammes en noir et blanc. Voici les codes Unicode de
 [symboles divers](https://fr.wikipedia.org/wiki/Table_des_caractères_Unicode_(2000-2FFF)#Symboles_divers).
 
 ```{codeplay}
@@ -325,6 +325,24 @@ sur plusieurs lignes.
 
 **Exercice** : Enlever le # devant `print('au revoir')` pour l'exécuter.
 
+## Parcourir une chaîne
+
+La ligne de code `for c in mot:` signifie que la variable `c` va prendre à chaque répétition un caractère différent de la chaîne `mot`.
+
+Quand la variable d'itération est un caractère on l'appelle souvent `c`.
+
+```{codeplay}
+:file: str21.py
+from time import sleep
+mot = input('Entrez un mot: ')
+
+for c in mot:
+    print(c)
+    sleep(0.1)
+```
+
+**Exercice** : Testez avec des textes différents.
+
 ## Narration
 
 Voici un exemple qui affiche une conversation entre deux personnes, affiché en ralenti, lettre par lettre, pour simuler une sorte de communication chat en ligne.
@@ -332,6 +350,7 @@ Voici un exemple qui affiche une conversation entre deux personnes, affiché en 
 La méthode `split('\n')` découpe la chaine `histoire` en lignes séparées, et retourne une liste.
 
 ```{codeplay}
+:file: narration.py
 from time import sleep
 
 histoire = """
@@ -352,4 +371,255 @@ for line in histoire.split('\n'):
         sleep(0.1)
     sleep(1)
     print()
+```
+
+## Le pendu
+
+Le jeu du [pendu](https://fr.wikipedia.org/wiki/Pendu_(jeu)) consiste à trouver un mot en devinant les lettres qui le composent. Le jeu se joue traditionnellement à deux, avec un papier et un crayon, avec le dessin d'une potence, dans lequel pour chaque erreur un trait d'un bonhomme allumette est ajouté.
+
+### Dévoiler un mot
+
+Dans le jeu du pendu un mot est affiché avec des traits au début `_ _ _ _ _`
+
+```{codeplay}
+mot = 'potiron'
+lettres = 'abctin'
+
+mot2 = ''
+for c in mot:
+    if c in lettres:
+        mot2 += c
+    else:
+        mot2 += '_'
+    mot2 += ' '
+
+print(mot2)
+```
+
+Nous pouvons écrire ce code plus compacte en utilisant l'expression
+`valeur1 if condition else valeur2`
+
+```{codeplay}
+mot = 'potiron'
+lettres = 'abctin'
+
+mot2 = ''
+for c in mot:
+    mot2 += c if c in lettres else '_'
+    mot2 += ' '
+
+print(mot2)
+```
+
+### Jouer en boucle
+
+```{codeplay}
+mot = 'potiron'
+lettres = ''
+n = 0
+
+for i in range(10):
+    mot2 = ''
+    for c in mot:
+        mot2 += c if c in lettres else '_'
+        mot2 += ' '
+
+    x = input(mot2 + '  lettre: ')
+    if x in mot:
+        lettres += x
+    else:
+        n = n + 1
+```
+
+### Dessin du pendu
+
+Une première approche pour dessiner la potence avec le pendu pourrait être d'enchaîner les instructions de dessin sans aucune structure.
+
+```{codeplay}
+from turtle import *
+
+a = 40
+forward(100)
+backward(50)
+left(90)
+forward(180)
+right(90)
+forward(40)
+left(45)
+backward(56)
+forward(56)
+right(45)
+forward(50)
+right(90)
+forward(40)
+dot(20)
+forward(20)
+right(45)
+forward(a)
+backward(a)
+left(90)
+forward(a)
+backward(a)
+right(45)
+forward(a)
+right(45)
+forward(a)
+backward(a)
+left(90)
+forward(a)
+backward(a)
+right(45)
+hideturtle()
+```
+
+### Structurer le code
+
+Nous découpons le programme en sous-programme que nous nommons avec des noms descriptifs. Ensuite nous appelons tous les fonctions pour dessiner la potence avec le pendu.
+
+```{codeplay}
+from turtle import *
+
+a = 40
+def potence():
+    forward(100)
+    backward(50)
+    left(90)
+    forward(180)
+    right(90)
+    forward(40)
+    left(45)
+    backward(56)
+    forward(56)
+    right(45)
+    forward(50)
+    right(90)
+    forward(40)
+
+def tete():
+    dot(20)
+    forward(20)
+
+def bras1():
+    right(45)
+    forward(a)
+    backward(a)
+
+def bras2():
+    left(90)
+    forward(a)
+    backward(a)
+
+def torse():
+    right(45)
+    forward(a)
+
+def jambe1():
+    right(45)
+    forward(a)
+    backward(a)
+
+def jambe2():
+    left(90)
+    forward(a)
+    backward(a)
+    hideturtle()
+
+potence()
+tete()
+bras1()
+bras2()
+torse()
+jambe1()
+jambe2()
+```
+
+### Jeu final
+
+Pour pouvoir exécuter les fonctions du pendu au bon moment, nous placeons les fonctions dans un tuple. Nous allons accéder la fonction avec un indice.
+
+```{codeplay}
+:output_lines: 5
+from turtle import *
+
+a = 40
+def potence():
+    forward(100)
+    backward(50)
+    left(90)
+    forward(180)
+    right(90)
+    forward(40)
+    left(45)
+    backward(56)
+    forward(56)
+    right(45)
+    forward(50)
+    right(90)
+    forward(40)
+
+def tete():
+    dot(20)
+    forward(20)
+
+def bras1():
+    right(45)
+    forward(a)
+    backward(a)
+
+def bras2():
+    left(90)
+    forward(a)
+    backward(a)
+
+def torse():
+    right(45)
+    forward(a)
+
+def jambe1():
+    right(45)
+    forward(a)
+    backward(a)
+
+def jambe2():
+    left(90)
+    forward(a)
+    backward(a)
+    hideturtle()
+
+potence()
+===
+dessin = (tete, bras1, bras2, torse, jambe1, jambe2)
+
+mot = 'potiron'
+lettres = ''
+n = 0
+
+for i in range(10):
+    mot2 = ''
+    for c in mot:
+        mot2 += c if c in lettres else '_'
+        mot2 += ' '
+
+    x = input(mot2 + '  lettre: ')
+    if x in mot:
+        lettres += x
+    else:
+        dessin[n]()
+        n = n + 1
+```
+
+## Exercices
+
+### Le pendu
+
+Créez le jeu du pendu avec un répertoire de 50 mots dans un tuple. Votre programme choisi un de ces mots aléatoirement avec la fonction `choice()` du module `random`, comme montré ci-dessous.
+
+```{codeplay}
+from random import *
+
+mots = ('informatique', 'ordinateur', 'calculatrice', 'machine',
+        'processeur', 'mémoire', 'algorithme', 'binaire')
+
+mot = choice(mots)
+print(mot)
 ```

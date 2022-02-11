@@ -1,9 +1,10 @@
-## Idées
+# Idées
 
 Les programmes de ce chapitre sont des idées sous construction, à développer et à placer à leur endroit approprié.
 
 ## Processing
-L'environnement [Processing](https://processing.org) est une plateforme de programmation conçu par des artistes pour la création graphique interactive. Le principe majeur de Processing est de simplifier au maximum la mise en œuvre des programmes. Il existe aussi une impémantation en 
+
+L'environnement [Processing](https://processing.org) est une plateforme de programmation conçu par des artistes pour la création graphique interactive. Le principe majeur de Processing est de simplifier au maximum la mise en œuvre des programmes. Il existe aussi une impémantation en
 
 - JavaScript ([p5.js](https://p5js.org)),
 - Pyton ([Processing.py](https://py.processing.org)).
@@ -98,7 +99,6 @@ for x in range(0, 255, 20):
     forward(40)
 ```
 
-
 ## Formes
 
 Le programme suivant definis 4 fonctions pour dessiner des formes géométriques de base :
@@ -150,7 +150,7 @@ rectangle((0, 0), (80, 120))
 ellipse((200, 0), (80, 120))
 ```
 
-A ajouter : 
+A ajouter :
 
 - Position mode `rectangle(p, size)`
 - Center mode `rectangle(c, size)`
@@ -287,6 +287,7 @@ while True:
 ```
 
 ## module `string`
+
 Le module `string` met à disposition des ensembles de caractères, ainsi que quelque méthodes de transformation typographique.
 
 - lettres
@@ -301,7 +302,7 @@ print(a)
 print(len(a))
 ```
 
-Le module `string` met à disposition des ensembles de caractères tel que : 
+Le module `string` met à disposition des ensembles de caractères tel que :
 
 - lettres
 - chiffres
@@ -324,7 +325,7 @@ print('whitespace =', whitespace, len(whitespace))
 
 Le module dispose aussi de fonctions pour mettre en majuscules la première lettre :
 
-- d'une phrase (`capitalize()`), 
+- d'une phrase (`capitalize()`),
 - de tous les mots d'une phrase (`capwords()`).
 
 ```{codeplay}
@@ -407,4 +408,3 @@ ondrag(f)
 s.onclick(f)
 #s.listen()
 ```
-

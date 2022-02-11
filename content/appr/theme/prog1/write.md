@@ -6,9 +6,6 @@ Dans ce chapitre, nous allons voir la **composition typographique** d'un texte d
 - l'option `font=(police, taille, style)` permet de choisir son style,
 - l'option `align='center'` permet de choisir son alignement.
 
-```{codeplay}
-````
-
 ## La fonction `write()`
 
 La fonction `write()` permet d'afficher un texte à la position de la tortue.
@@ -22,7 +19,7 @@ write('ceci est une phrase écrit par la tortue.')
 ## Taille
 
 La fonction `write()` possède un paramètres optionnel `font` pour indiquer la police, la taille et le style.
-La valeur par defaut est `('Arial', 8, 'normal')`
+La valeur par défaut est `('Arial', 8, 'normal')`
 
 ```{codeplay}
 from turtle import *
@@ -74,12 +71,11 @@ for s in ('normal', 'italic', 'bold', 'bold italic'):
 
 ## Alignement
 
-Le paramètre optionnel `align` permet de choisir parmi 3 types d'alignements : 
+Le paramètre optionnel `align` permet de choisir parmi 3 types d'alignements :
 
 - gauche (`'left'`)
 - centre (`'center'`)
 - droite (`'right'`)
-
 
 ```{codeplay}
 from turtle import *
@@ -244,7 +240,6 @@ for t in texte.split(' '):
 print(longueurs)
 ```
 
-
 ## Sudoku
 
 Le sudoku est un jeu en forme de grille 9x9. Le but du jeu est de remplir la grille avec une série de chiffres, tous différents, qui ne se trouvent jamais plus d’une fois sur une même ligne, dans une même colonne ou dans une même région 3x3, appelé bloc.
@@ -303,7 +298,52 @@ for c in 'SCRABBLE':
     case(c)
 ```
 
+## WhatsApp
+
+L'application [WhatsApp](https://fr.wikipedia.org/wiki/WhatsApp) fournit un système de messagerie instantanée chiffrée de bout en bout aussi bien via les réseaux de téléphonie mobiles que par Internet.
+
+WhatsApp a remporté un grand succès au tournant des années 2010. L'application est créée en 2009 par Jan Koum et Brian Acton, deux anciens employés de la société américaine Yahoo! avec pour objectif de remplacer le SMS. Elle est utilisée par plus de deux milliards de personnes en 2020.
+
+En 2014, WhatsApp est acquis par Facebook pour un montant d'environ 22 milliards soit environ 350 millions de dollars par employé ou 40 dollars par utilisateur.
+
+Dans le programme ci-dessous nous allons afficher une conversation entre deux personnes dans le style d'une application messager.
+
 ```{codeplay}
+from turtle import *
+
+texte = """Comment-vas tu?
+Bien
+Et toi ?
+Très bien.
+Moi aussi.
+Super."""
+
+lignes = texte.split('\n')
+d = 50
+gauche = True
+width(d)
+up()
+goto(-280, 200-d)
+
+for ligne in lignes:
+    if gauche:
+        pencolor('lime')
+        down()
+        write(ligne, font=('Arial', d/2), move=True)
+        up()
+        write(ligne, font=('Arial', d/2), align='right')
+        goto(280, ycor()-d)
+    else:
+        pencolor('skyblue')
+        x0 = xcor()
+        write(ligne, font=('Arial', d/2), move=True)
+        a = xcor() - x0
+        down()
+        backward(2 * a)
+        up()
+        write(ligne, font=('Arial', d/2))
+        goto(-280, ycor()-d)
+    gauche = not gauche
 ```
 
 ## Exercice
@@ -317,9 +357,45 @@ Reproduisez l'image ci dessous
 ```
 
 ```{codeplay}
+:file: sudoku.py
 from turtle import *
 
 ligne1 = (5, 3, 0, 0, 7, 0, 0, 0, 0)
 ligne2 = (6, 0, 0, 1, 9, 5, 0, 0, 0)
+...
+```
+
+### WhatsApp
+
+Créez une conversation WhatsApp fictive. D'abord en mode claire, ensuite en mode sombre (dark mode).
+
+```{codeplay}
+:file: whatsapp.py
+from turtle import *
+
+...
+```
+
+### Scrabble
+
+Affichez deux mots qui ont une lettre en commun. Un mot en horizontale, le deuxième mot en verticale.
+
+```{codeplay}
+:file: scrabble.py
+from turtle import *
+
+...
+```
+
+### Nuage de mots-clés
+
+Le [nuage de mots-clés](https://fr.wikipedia.org/wiki/Nuage_de_mots-clés), ou nuage de tags (en anglais **tag cloud**) est une représentation visuelle des mots-clés (tags) les plus utilisés sur un site web. Généralement, les mots s'affichent dans des tailles et graisses de caractères d'autant plus visibles qu'ils sont utilisés ou populaires.
+
+Choisissez 10 mots et affichez-les avec 10 tailles différentes. La taille la plus grande doit apparaitre au milieu. Les mots ne doivent pas se superposer. Utilisez des tuples avec 10 mots, 10 tailles et 10 positions.
+
+```{codeplay}
+:file: nuage_mots.py
+from turtle import *
+
 ...
 ```

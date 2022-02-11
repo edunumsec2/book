@@ -33,6 +33,7 @@ Le programme suivant dessine un point à la position du clic et affiche les coor
 
 ```{codeplay}
 :file: onclick1.py
+:max_output_lines: 3
 from turtle import *
 s = getscreen()
 

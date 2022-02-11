@@ -2,7 +2,7 @@
 
 Dans ce chapitre, nous allons voir de près comment une variable peut parcourir ou itérer sur une plage numérique.
 
-Une boucle permet de raccourcir le code et de mieux le structurer. 
+Une boucle permet de raccourcir le code et de mieux le structurer.
 Une boucle ne représente pas seulement une économie de lignes de code, mais donne aussi la possibilité de contrôler le nombre de répétitions. Nous allons voir que :
 
 - la boucle `for` répète du code pour un ensemble de valeurs données,
@@ -17,24 +17,6 @@ En informatique itérer c'est
 {f}`appeler`  
 {v}`répéter`
 ```
-
-## Répéter x fois
-
-Le programme suivant demande comme entrée le nombre `x` de sommets, et dessine alors un polygone régulier. C'est un cas ou il faut **répéter x fois**.
-
-```{codeplay}
-:file: range1.py
-from turtle import *
-
-x = input('Nombre de sommets: ')
-x = int(x)
-
-for i in range(x):
-    forward(50)
-    left(360/x)
-```
-
-**Exercice** : Testez avec des nombres différents entre 3 et 13.
 
 ## Parcourir une séquence
 
@@ -55,12 +37,14 @@ from turtle import *
 
 x = int(input('Nombre de sommets: '))
 up()
+forward(200)
+left(90)
 
 for i in range(x):
-    forward(50)
+    forward(1000/x)
     left(360/x)
-    dot()
-    write(i, font=(None, 12))
+    dot(20, 'pink')
+    write(i, align='center')
 ```
 
 **Exercice** : Testez avec des nombres différents entre 5 et 13.
@@ -123,46 +107,6 @@ for i in range(10, 100, 7):
     sleep(0.1)
 ```
 
-## Parcourir une chaîne
-
-La ligne de code `for c in mot:` signifie que la variable `c` va prendre à chaque répétition un caractère différent de la chaîne `mot`.
-
-Quand la variable d'itération est un caractère on l'appelle souvent `c`.
-
-```{codeplay}
-:file: range6.py
-from time import sleep
-mot = input('Entrez un mot: ')
-
-for c in mot:
-    print(c)
-    sleep(0.1)
-```
-
-**Exercice** : Testez avec des textes différents.
-
-## Parcourir une liste
-
-La ligne de code `for color in colors:` signifie que la variable `color` va prendre à chaque répétition un élément différent de la liste `colors`.
-
-Quand on parcourt une liste la convention est d'utiliser un mot au pluriel pour la liste (`colors`) et le même mot en singulier pour la variable d'itération (`color`).
-
-```{codeplay}
-:file: range7.py
-from turtle import *
-
-colors = ['hotpink', 'lime', 'beige', 'pink']
-left(120)
-speed(1)
-
-for color in colors:
-    getscreen().bgcolor(color)
-    write(color, font=(None, 18))
-    forward(50)
-```
-
-**Exercice** : Ajoutez d'autres couleurs à la liste.
-
 ## Dessiner une spirale
 
 Si nous dessinons un polygone mais augmentons la longueur de chaque segment successif en utilisant la variable d'itération `i`, nous obtenons une spirale.
@@ -212,8 +156,184 @@ up()
 for y in range(100, -150, -50):
     for x in range(-200, 300, 100):
         goto(x, y)
-        dot(3)
+        dot(30, 'silver')
         write((x, y))
+```
+
+## Grille de points
+
+Le programme suivant dessine des points sur une grilles régulières avec une distance `d` entre les points. Nous utilisons deux boucles imbriquées avec les variables d'itération `x` et `y`.
+
+```{codeplay}
+from turtle import *
+up()
+
+x0 = 180
+d = 40
+
+for y in range(-x0, x0+1, d):
+    for x in range(-x0, x0+1, d):
+        goto(x, y)
+        dot()
+```
+
+## Grille de lignes
+
+Le programme suivant dessine une grille de lignes qui sont à une distance `d` les unes des autres. Nous utilisons deux boucles séparées avec les variables d'itération `x` et `y`.
+
+```{codeplay}
+from turtle import *
+up()
+
+x0 = 180
+d = 40
+
+def ligne(p, q):
+    goto(p)
+    down()
+    goto(q)
+    up()
+
+for y in range(-x0, x0+1, d):
+    ligne((-x0, y), (x0, y))
+
+for x in range(-x0, x0+1, d):
+    ligne((x, -x0), (x, x0))
+```
+
+## Grille de Sudoku
+
+Le programme suivant dessine une grille de Sudoku 3x3 avec une distance `d` entre les lignes. La particularité de la grille Sudoku est que chaque 3e ligne est accentué. Nous utilisons la condition modulo `i%3` pour ceci.
+
+```{codeplay}
+from turtle import *
+up()
+
+x0 = 180
+d = 40
+
+def ligne(p, q):
+    goto(p)
+    down()
+    goto(q)
+    up()
+
+for y in range(-x0, x0+1, d):
+    width(3 if y%3 == 0 else 1)
+    ligne((-x0, y), (x0, y))
+
+for x in range(-x0, x0+1, d):
+    width(3 if x%3 == 0 else 1)
+    ligne((x, -x0), (x, x0))
+```
+
+## Grille de tic-tac-toe
+
+La grille du jeu tic-tac-toe est une grille 3x3. Nous ajoutons des étiquette a-c pour les colonnes et 1-3 pour les lignes.
+
+```{codeplay}
+from turtle import *
+up()
+
+speed(10)
+x0 = 150
+d = 100
+
+def ligne(p, q):
+    goto(p)
+    down()
+    goto(q)
+    up()
+
+for y in range(-x0, x0+1, d):
+    ligne((-x0, y), (x0, y))
+
+for x in range(-x0, x0+1, d):
+    ligne((x, -x0), (x, x0))
+
+goto(-x0 + d/2, x0+10)
+for c in 'abc':
+    write(c, font=('Arial', 24))
+    forward(d)
+    
+goto(-x0-10, x0 - d/2 - 12)
+seth(-90)
+for c in '123':
+    write(c, font=('Arial', 24), align='right')
+    forward(d)
+```
+
+## Jouer au tic-tac-toe
+
+Pour jouer au tic-tac-toe nous devons déchiffrer les noms des cellules qui sont constitué d'une lettre (a-c) et d'un chiffre (1-3). En alternance nous plaçons une croix et un cercle.
+
+```{codeplay}
+:output_lines: 5
+from turtle import *
+up()
+
+speed(10)
+x0 = 150
+d = 100
+
+def ligne(p, q):
+    goto(p)
+    down()
+    goto(q)
+    up()
+
+for y in range(-x0, x0+1, d):
+    ligne((-x0, y), (x0, y))
+
+for x in range(-x0, x0+1, d):
+    ligne((x, -x0), (x, x0))
+
+goto(-x0 + d/2, x0+10)
+for c in 'abc':
+    write(c, font=('Arial', 24))
+    forward(d)
+    
+goto(-x0-10, x0 - d/2 - 12)
+seth(-90)
+for c in '123':
+    write(c, font=('Arial', 24), align='right')
+    forward(d)
+
+hideturtle()
+for i in range(9):
+    p = input('Entrez coordonné: ')
+    x = -x0 + (ord(p[0]) - ord('a') + 0.5) * d
+    y =  x0 - (int(p[1]) - 0.1) * d
+    goto(x, y)
+    write('×○'[i%2], font=('Arial', d), align='center')
+```
+
+## Plateau d'échec
+
+Le plateau d'échec est constitué de 64 carrés qui sont alternativement noir et blancs.
+
+```{codeplay}
+from turtle import *
+
+speed(0)
+x0 = 160
+d = 40
+up()
+
+def case():
+    begin_fill()
+    down()
+    for i in range(4):
+        forward(d)
+        left(90)
+    up()
+    end_fill()
+
+for i in range(8):
+    for j in range(8):
+        goto(-x0 + j*d, -x0 + i*d)
+        fillcolor('white' if (i+j)%2 else 'black')
+        case()
 ```
 
 ## Exercices
@@ -222,26 +342,35 @@ for y in range(100, -150, -50):
 - Editez-le dans un éditeur.
 - Déposez-le sur Moodle.
 
-### Drapeau EU
+### Cadran
 
-Le drapeau européen est un drapeau décoré de douze étoiles d'or à cinq branches, l'une des branches pointée vers le haut, disposées à distance égale en cercle sur champ d'azur. Il représente la solidarité et l’union entre les peuples d’Europe.
-
-```{image} media/EU.png
-:width: 300
-```
-
-Rappelez-vous comment dessiner un polygone régulier.
+Dessinez le cadran d'une montre avec 60 petits points pour les minutes et secondes et 12 grands points pour les heures. Utilisez la fonction modulo `i%5` pour faire la différence entre les petits et les grands points.
 
 ```{codeplay}
-:file: EU.py
+:file: cadran.py
 from turtle import *
 # Prénom, nom, classe
 
-def etoile():
+for i in range(60):
     ...
+```
 
-for i in range(12):
-    etoile()
+### Plateau d'échec
 
-forward(100)
+Dessiner un chéquier, numérotez les lignes 1-8 et les colonnes a-h, et placez les pions noirs et blancs aux positions de départ.
+
+```{codeplay}
+from turtle import *
+
+speed(0)
+x0 = 160
+d = 40
+up()
+
+blancs = '♖♘♗♔♕♗♘♖'
+
+goto(-x0, -x0)
+for c in blancs:
+    write(c, font=(None, d))
+    forward(d)
 ```

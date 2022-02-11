@@ -28,7 +28,7 @@ print('2 à la puissance 32 =')
 print(2 ** 32)
 ```
 
-## Les opérations de base
+## Opérateurs de base
 
 En Python, nous retrouvons les 4 opérations arithmétiques de base :
 
@@ -55,7 +55,7 @@ Quel est le résultat de l'expression `'12' + '12'` ?
 {f}`1221`  
 ```
 
-## Les opérations supplémentaires
+## Opérateurs avancés
 
 En Python, nous avons également 3 opérateurs supplémentaires :
 
@@ -83,7 +83,7 @@ Quel est le résultat de l'expression `1 + 2 * 3` ?
 {f}`9`
 ```
 
-## Une variable
+## Les variables
 
 Une **variable** est une manière de designer une valeur par un nom. Le terme technique pour associer une valeur à une variable est **affectation** et elle utilise le symbole `=` (égal).
 
@@ -201,7 +201,7 @@ print(type(c))
 
 Nous reconnaissons la différence entre un entier (`int`) et un nombre à virgule flottante (`float`) par la présence du point décimal (`123.0`).
 
-## La fonction `input()`
+## Obtenir un nombre
 
 La fonction `input()` permet d'obtenir une entrée de l'utilisateur. La valeur retournée est une chaine de caractères. Pour pouvoir l'utiliser dans un calcul nous devons la transformer en virgule flottante avec la fonction de conversion `float()`.
 
@@ -258,7 +258,7 @@ print(x, y)
 
 ## Revisiter le `tuple`
 
-L'affectation multpile utilise le format du tuple.
+L'affectation multiple utilise le format du tuple.
 Un **n-uplet** (tuple) est une séquence d'objets. Ce sont :
 
 - multiple valeurs séparé par une virgule,
@@ -276,36 +276,104 @@ print(z)
 print(type(x))
 ```
 
-## Position et taille
+## Position `(x, y)`
 
-Un tuple est la forme idéale pour représenter les deux coordonnées `(x, y)` d'une position, ou longueur et hauteur `(w, h)` d'une taille.
+Un tuple est la forme idéale pour représenter les deux coordonnées `(x, y)` d'un point. Nous allons dorénavant utiliser la lettre `p` pour point (ou position). Si deux points sont nécessaire, nous les appellerons `p` et `q`.
+
+Pour accéder aux coordonnées `x` et `y` du point `p` nous utilisons un indice (un entier entre crochets) :
+
+- `x = p[0]`
+- `y = p[1]`
+
+La fonction `goto()` accepte :
+
+- deux coordonnées séparés `goto(x, y)`
+- deux coordonnées dans un tuple `goto(p)`
+
+Nous pouvons maintenant définir une fonction compacte et élégante pour dessiner une ligne entre deux points `p` et `q`.
 
 ```{codeplay}
 from turtle import *
 up()
 
-pos = 100, -20
-size = 100, 70
+p = (100, -120)
 
-print('pos =', pos)
-print('x =', pos[0])
-print('y =', pos[1])
+print('p =', p)
+print('x =', p[0])
+print('y =', p[1])
 
-print('size =', size)
-print('w =', size[0])
-print('h =', size[1])
-print('size * 2 =', size * 2)
+def ligne(p, q):
+    goto(p)
+    down()
+    goto(q)
+    up()
 
-goto(pos)
-down()
-for d in size * 2:
-    forward(d)
-    left(90)
+ligne(p, (0, 100))
+ligne((-300, 0), (300, 0))
+```
+
+## Créer un quiz
+
+Nous continuons ici avec nos quiz. D'abord nous allons ajouter un score. Ensuite nous allons voir comment créer  des quiz mathématiques.
+
+### Ajouter un score
+
+Nous reprenons l'exemple du chapitre précédent et nous ajoutons le calcul du score
+
+```{codeplay}
+score = 0
+quiz = (('France', 'Paris'),
+        ('Allemagne', 'Berlin'),
+        ('Suisse', 'Berne'))
+
+for (question, solution) in quiz:
+    print('Quelle est la capitale de', question)
+    reponse = input('Votre réponse: ')
+    if reponse == solution:
+        print('correct')
+        score = score + 1
+    else:
+        print('FAUX! La bonne réponse est', solution)
+    print()
+
+print('Votre score: ', score, 'sur', len(quiz))
+```
+
+### Valeurs aléatoires
+
+Pour les exercices mathématiques il serait pratique d'avoir des valeurs aléatoire. 
+Nous allons utiliser la fonction `randint(a, b)` du module `random` qui renvoie un entier aléatoire du l'intervalle [a, b].
+
+```{codeplay}
+from random import *
+
+for i in range(10):
+    print(randint(10, 99))
+```
+
+### Quiz mathématique
+
+Nous utilisons deux valeurs aléatoires pour faire un quiz d'addition.
+
+```{codeplay}
+from random import *
+
+print('Quiz addition')
+for i in range(3):
+    a = randint(10, 50)
+    b = randint(10, 50)
+    print(a, '+', b, '=')
+    reponse = int(input())
+    if reponse == a + b:
+        print('correct')
+    else:
+        print('FAUX. La bonne réponse est', a + b)
+    print()
 ```
 
 ## Erreurs
 
-Pour bien programmer vous devez savoir interpréter les messages d'erreur. Ces messages vous indiquent sur quelle ligne du programme il y a quel type d'erreur.
+En utilisant les calculs, nous allons rencontrer encore d'autres types d'erreurs. Pour bien programmer vous devez savoir interpréter les messages d'erreur. Ces messages vous indiquent sur quelle ligne du programme il y a quel type d'erreur.
 
 ### SyntaxError
 
@@ -358,4 +426,20 @@ print(f(100))
 print(f(1000))
 print(f(10000))
 print(f(20000))
+```
+
+## Exercices
+
+### Kahoot
+
+La plate-forme d'apprentissage ludique [Kahoot!](https://fr.wikipedia.org/wiki/Kahoot!) est utilisée comme technologie éducative dans les écoles et autres établissements d'enseignement.
+
+Ses jeux d’apprentissage, *Kahoots*, sont des questionnaires à choix multiples qui permettent à plusieurs utilisateurs de jouer simultanément. Le site est accessible via un navigateur Web mais aussi téléchargable sur smartphone.
+
+Créez un quiz avec des question sur un sujet de culture générale, dans le style des quiz sur le site Kahoot.
+
+```{codeplay}
+:file: kahoot.py
+
+print('Quiz Kahoot')
 ```

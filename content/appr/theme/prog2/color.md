@@ -346,7 +346,6 @@ for x in range(255):
     dot(255-x, (x, x, x))
 ```
 
-
 ```{codeplay}
 from turtle import *
 colormode(255)

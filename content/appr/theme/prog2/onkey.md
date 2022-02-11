@@ -10,7 +10,6 @@ Dans ce chapitre nous découvrons comment utiliser le clavier de l'ordinateur po
 - la fonction `f()` est appelée à chaque fois que la touche `a` est appuyée,
 - la fonction `listen()` démarre l'*écoute* des événements du clavier.
 
-
 ```{question}
 Une fonction de rappel
 

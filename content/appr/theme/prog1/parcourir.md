@@ -1,13 +1,13 @@
 # Parcourir - `tuple`
 
-Dans ce chapitre, nous allons découvrir le concept très important de la séquence. Ce concept s'appelle `tuple` en langage Python ou **n-uplet** en français. Une séquence est un groupement d'objets, par exemple de couleurs, de distances ou d'angles. Ce qui est très intéressant c'est que nous pouvons parcourir les valeurs d'une séquence l'une après l'autre. Nous allons voir que :
+Dans ce chapitre, nous allons découvrir le concept très important de la séquence. Ce concept s'appelle `tuple` en langage Python ou **n-uplet** en français. Une séquence est un regroupement d'objets, par exemple de couleurs, de distances ou d'angles. Ce qui est très intéressant, c'est que nous pouvons parcourir les valeurs d'une séquence l'une après l'autre avec une boucle. Nous allons voir que :
 
 - la structure `(10, 20, 10)` représente une séquence (`tuple`),
-- dans `for x in (10, 20, 10):` la variable `x` parcourt des nombres,
-- dans `for x in ('red', 'blue'):` la variable `x` parcourt des couleurs.
+- dans la boucle `for x in (10, 20, 10):` la variable `x` parcourt des nombres,
+- dans la boucle `for x in ('red', 'blue'):` la variable `x` parcourt des couleurs.
 
 ```{question}
-En informatique un `tuple` est 
+En informatique, un `tuple` est 
 
 {v}`une séquence d'objets`  
 {f}`une liste numérique`  
@@ -15,12 +15,14 @@ En informatique un `tuple` est
 {f}`une chaîne de caractères`
 ```
 
+Auparavant nous avons vu la boucle `for` comme une simple répétition. Nous avons répété x fois exactement les mêmes instructions pour chaque tour. Dans ce chapitre la boucle `for` est différente dans le sens que nous parcourons une séquence et nous utilisons une valeur différente pour chaque tour. En Python, cette idée de *parcourir une séquence* et d'utiliser une *valeur successive* à chaque tour, est un concept fondamental.
+
 ## Parcourir des couleurs
 
 Pour dessiner de multiples couleurs, nous pouvons définir une séquence (tuple) de couleurs et parcourir cette séquence.
 En Python, une séquence est délimitée par des parenthèses `()` et les éléments sont séparé par une virgule.
 
-Dans l'expression `for x in (...)` la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'blue'`, `'cyan'`, `'red'`, etc.
+Dans l'expression `for x in (...)`, la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'blue'`, `'cyan'`, `'red'`, etc. Le bloc indenté qui suit la ligne `for` sera répété autant de fois que la séquence contient d'éléments.
 
 ```{codeplay}
 :file: tuple1.py
@@ -37,7 +39,7 @@ for x in ('blue', 'cyan', 'red', 'magenta', 'pink', 'lime'):
 
 ## Parcourir des diamètres
 
-Nous pouvons également itérer dans une séquence numérique et spécifier le diamètre d'un disque.
+Nous pouvons également parcourir une séquence de nombres et ainsi, par exemple, spécifier une série de diamètres de disques.
 
 ```{codeplay}
 :file: tuple2.py
@@ -54,7 +56,38 @@ for x in (20, 40, 60, 80, 100):
 
 ## Parcourir des distances
 
-Nous allons reprendre nos fonctions `batiment()` et `porte()` et avec l'aide d'une séquence nous pouvons l'écrire de manière bien plus compacte.
+Dans le chapitre **Definir** nous avons vu les fonctions `batiment()` et `porte()` avec 8 lignes pour chaque défintion de fonction.
+
+```{codeplay}
+:file: def3.py
+from turtle import *
+
+def batiment():
+    forward(200)
+    left(90)
+    forward(100)
+    left(90)
+    forward(200)
+    left(90)
+    forward(100)
+    left(90)
+
+def porte():
+    forward(30)
+    left(90)
+    forward(50)
+    left(90)
+    forward(30)
+    left(90)
+    forward(50)
+    left(90)
+
+batiment()
+forward(30)
+porte()
+```
+
+A l'aide d'une séquence, nous pouvons l'écrire ces fonctions de manière bien plus compacte.
 
 ```{codeplay}
 :file: tuple3.py
@@ -79,7 +112,7 @@ batiment()
 
 ## Parcourir des angles
 
-Nous allons reprendre nos fonctions `maison()` et avec l'aide d'une séquence nous pouvons l'écrire de manière bien plus compacte. Cette fois-ci, la séquence représente des angles, donc nous nommons notre variable `a` pour nous rappeler que c'est un angle.
+Nous allons reprendre nos fonctions `maison()` et, à l'aide d'une séquence, nous pouvons l'écrire de manière bien plus compacte. Cette fois-ci, la séquence représente des angles, donc nous nommons notre variable `a` pour nous rappeler que c'est un angle.
 
 ```{codeplay}
 :file: tuple4.py
@@ -104,7 +137,7 @@ maison()
 
 Dans l'exemple nous allons d'abord parcourir une séquence d'angles avec une variable d'itération `a` pour dessiner une maison.
 
-Ensuite, nous allons parcourir une séquence de couleurs avec une variable `c` pour dessiner des maisons en différentes couleurs.
+Ensuite, nous allons parcourir une séquence de couleurs avec une variable `c` pour dessiner des maisons de différentes couleurs.
 
 ```{codeplay}
 :file: tuple5.py
@@ -126,7 +159,7 @@ for c in ('red', 'yellow', 'pink', 'lightblue', 'lightgreen'):
     forward(100)
 ```
 
-**Exercice** : Changez la couleurs des maisons.
+**Exercice** : Changez les couleurs des maisons.
 
 ## Drapeau LGBT
 
@@ -147,7 +180,7 @@ width(67)
 for x in ('red', 'orange', 'yellow', 'green', 'blue', 'purple'):
     pencolor(x)
     forward(600)
-    backward((600)
+    backward(600)
     right(90)
     forward(67)
     left(90)
@@ -176,11 +209,11 @@ for c in ('pink', 'red', 'pink', 'red', 'pink'):
     left(60)
 ```
 
-**Exercice** : Il manque une pétale, corrigez le programme.
+**Exercice** : Il manque un pétale, corrigez le programme.
 
 ## Sourire
 
-Dans cet exemple nous allons parcourir différentes épaisseurs et nous appelons notre variable `w` (width). Voici quatre smiley avec différentes formes de bouche.
+Dans cet exemple nous allons parcourir différentes épaisseurs et nous appelons notre variable `w` (width). Voici quatre smileys avec différentes formes de bouche.
 
 ```{codeplay}
 :file: tuple7.py
@@ -250,7 +283,7 @@ for d in (10, 20, 30, 40):
 
 ## Cube 3D
 
-Avec trois losanges nous pouvons dessiner un cube en 3D.
+Avec trois losanges, nous pouvons dessiner un cube en 3D.
 
 ```{codeplay}
 from turtle import *
@@ -277,20 +310,50 @@ def losange():
     for a in (120, 60, 120, 60):
         forward(100)
         left(a)
-        
-for c in ('pink', 'violet', 'darkviolet'):
-    fillcolor(c)
-    begin_fill()
-    losange()
-    end_fill()
-    left(120)
+
+def cube():      
+    for c in ('pink', 'violet', 'darkviolet'):
+        fillcolor(c)
+        begin_fill()
+        losange()
+        end_fill()
+        left(120)
+
+cube()
 ```
 
 **Exercice** : Tournez le cube de 30°.
 
+## Pavage du plan
+
+Un pavage du plan est un ensemble de portions du plan, par exemple des polygones, dont l'union est le plan tout entier, sans recouvrement.
+
+```{codeplay}
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(100)
+        left(a)
+        
+def cube():
+    for c in ('pink', 'violet', 'darkviolet'):
+        fillcolor(c)
+        begin_fill()
+        losange()
+        end_fill()
+        left(120)
+
+for i in range(3):
+    backward(100)
+    cube()
+    forward(100)
+    left(120)
+```
+
 ## Cube de Rubik
 
-Pour dessiner un cube de Rubik nous dessinons 3x3 losanges pour obtenir la surface du cube. Ceci nécessite une boucle impriquées avec les deux variables d'itération distinctes `i` et `j`.
+Pour dessiner un cube de Rubik, nous dessinons 3 × 3 losanges pour obtenir la surface du cube. Ceci nécessite deux boucles imbriquées avec les deux variables d'itération distinctes `i` et `j`.
 
 ```{codeplay}
 from turtle import *
@@ -303,12 +366,15 @@ def losange():
         left(a)
     end_fill()
 
+def ligne():
+    for i in range(3):
+        losange()
+        forward(50)
+    backward(150)
+
 def surface():
-    for j in range(3):
-        for i in range(3):
-            losange()
-            forward(50)
-        backward(150)
+    for i in range(3):
+        ligne()
         left(120)
         forward(50)
         right(120)
@@ -325,6 +391,8 @@ for c in ('red', 'green', 'blue'):
 [Minecraft](https://fr.wikipedia.org/wiki/Minecraft) est un jeu vidéo de type aventure *bac à sable* développé par le Suédois Markus Persson, puis par la société Mojang Studios, sortie en 2011. Il s'agit d'un univers composé de voxels.
 
 Le voxel (mot créé en contractant *volume* et *element*) est à la 3D ce que le pixel est à la 2D.
+
+Le programme suivant aligne 3 blocs pour former une rangée.
 
 ```{codeplay}
 from turtle import *
@@ -347,8 +415,29 @@ left(30)
 for i in range(3):
     cube()
     forward(-50)
-    
-for i in range(4):
+```
+
+Ce programme empile 3 blocs pour former une colonne.
+
+```{codeplay}
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+
+def cube():      
+    for c in ('lime', 'peru', 'sienna'):
+        fillcolor(c)
+        begin_fill()
+        losange()
+        end_fill()
+        left(120)
+
+speed(5)
+left(30)
+for i in range(3):
     cube()
     left(60)
     forward(50)

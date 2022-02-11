@@ -197,7 +197,7 @@ liste = [3, 4, 1, 2, 6, 5]
 print(liste)
 liste[0], liste[1] = liste[1], liste[0]
 print(liste)
-````
+```
 
 Le programme devient plus lisible si nous définissons une fonction `echange()`.
 
