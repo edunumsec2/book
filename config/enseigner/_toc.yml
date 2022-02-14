@@ -59,6 +59,7 @@ parts:
   chapters: 
   - file: content/ens/theme/reseaux/maitre
     sections:
+    - file: content/ens/theme/reseaux/activ/routage_paquets/routage_paquets
     - file: content/ens/theme/reseaux/activ/diffie-hellman/diffie-hellman
     - file: content/ens/theme/reseaux/faq/maitre
 - caption: Enjeux sociaux
