@@ -62,9 +62,6 @@ avec son téléphone portable un site web spécialisé dans les champigons de no
  Que se passe-t-il réellement entre derrière l'écran de son téléphone?
  C'est ce que nous allons découvrir dans ce chapitre. 
 
-# Le modèle en couches
-## Introduction
-## Exemples
 
 
 

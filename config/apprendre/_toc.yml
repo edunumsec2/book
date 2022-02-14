@@ -21,19 +21,8 @@ parts:
       - file: content/appr/theme/rep-info/cours/conclusion/eleve
 
   ### Programmation    
-#  - file: content/appr/theme/prog1/accueil/elevenew
-  - file: content/appr/theme/prog1/new/intro
-
+  - file: content/appr/theme/prog1/accueil/elevenew
     sections:
-#      - file: content/appr/theme/prog1/cours/1_intro/intro 
-#      - file: content/appr/theme/prog1/cours/2_pyth/pyth
-#      - file: content/appr/theme/prog1/cours/3_var/var
-#      - file: content/appr/theme/prog1/cours/4_flux/flux
-#      - file: content/appr/theme/prog1/cours/5_list/list
-#      - file: content/appr/theme/prog1/cours/6_dict/dict
-#      - file: content/appr/theme/prog1/cours/7_fonc/fonc
-#      - file: content/appr/theme/prog1/cours/8_mod/mod
-
       - file: content/appr/theme/prog1/new/dessiner
       - file: content/appr/theme/prog1/new/definir
       - file: content/appr/theme/prog1/new/colorier
@@ -52,9 +41,8 @@ parts:
       - file: content/appr/theme/prog1/new/randomiser
       - file: content/appr/theme/prog1/new/trier
       - file: content/appr/theme/prog1/new/turtleart
-      
 #     - file: content/appr/theme/prog1/cours/9_app/app 
-#     - file: content/appr/theme/prog1/cours/10_conclusion/concl 
+      - file: content/appr/theme/prog1/cours/10_conclusion/concl 
 
   ### Algorithmique         
   - file: content/appr/theme/algo1/accueil/eleve
@@ -106,8 +94,7 @@ parts:
       - file: content/appr/theme/prog2/bool
       - file: content/appr/theme/prog2/bit
       - file: content/appr/theme/prog2/recursif
-      - file: content/appr/theme/prog2/idees
-      
+      - file: content/appr/theme/prog2/idees      
   - file: content/appr/theme/projets/intro
     sections:
       - file: content/appr/theme/projets/tic_tac_toe
@@ -119,13 +106,12 @@ parts:
       - file: content/appr/theme/projets/art_absurde
       - file: content/appr/theme/projets/microbit/microbit
       - file: content/appr/theme/projets/idees
-
   - file: content/appr/theme/reseaux/eleve
     sections:
       - file: content/appr/theme/reseaux/cours/intro/eleve
       - file: content/appr/theme/reseaux/cours/adressage/eleve
-      - file: content/appr/theme/reseaux/cours/routage/eleve
       - file: content/appr/theme/reseaux/cours/tcp-ip/eleve
+      - file: content/appr/theme/reseaux/cours/routage/eleve
       - file: content/appr/theme/reseaux/cours/web/eleve    
       - file: content/appr/theme/reseaux/cours/couches/eleve    
 

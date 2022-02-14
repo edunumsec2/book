@@ -1,7 +1,4 @@
- ````{image} modulo_banner3.svg
-````
-
-# Informatique au Gymnase / Pilote
+# Informatique au Gymnase
 
 ## Introduction
 
@@ -9,7 +6,7 @@ Des moyens d'enseignement pour l'informatique en discipline obligatoire au nivea
 
 En accord avec la DGEP, une partie de ce matériel est déjà mise à disposition des enseignant·e·s vaudois·e·s pour une première phase pilote.
 
-Les ressources sont accessibles via le [site web](https://edunumsec2.ch) (Username : edunum, Password : Edunumsecondaire2). Elles peuvent être utilisées telles quelles ou modifiées via un [dépôt GitHub](https://github.com/edunumsec2/book).
+Les ressources sont accessibles via le [site web](https://modulo-info.ch) (Pour la version "enseigner", Username : edunum, Password : Edunumsecondaire2). Elles peuvent être utilisées telles quelles ou modifiées via un [dépôt GitHub](https://github.com/edunumsec2/book).
 
 ## Table des matières
 
@@ -17,6 +14,7 @@ Les ressources sont accessibles via le [site web](https://edunumsec2.ch) (Userna
 
 - [Introduction](#introduction)
 - [Utilisation](#utilisation)
+- [Liens](#liens)
 - [Documents importants](#documents-importants)
 - [Chapitrage du livre](#chapitrage)
 - [Structure du dépôt GitHub](#structure-dépôt-GitHub)
@@ -40,7 +38,7 @@ En tant que membre du projet pilote, nous vous remercions par avance pour votre 
 
 ## Utilisation
 
-L'utilisation **standard** des ressources ne requiert pas d'installation particulière et peut-être effectuée immédiatement à l'adresse https://edunumsec2.ch. 
+L'utilisation **standard** des ressources ne requiert pas d'installation particulière et peut-être effectuée immédiatement à l'adresse https://modulo-info.ch. 
 
 Dans le cadre du projet pilote, nous vous saurions gré de suivre le protocole minimal décrit ci-dessous :  
 
@@ -64,6 +62,33 @@ Après la phase **pilote**, les enseignant.es pourront en outre :
 7. Forker le dépôt pour en faire un clone indépendant via le mécanisme de [fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo). 
 8. Utiliser l'environnement [Jupyter-book](#installation) pour tester ses améliorations en local sur sa propre machine. 
 
+## Liens
+
+*Attention : Pour la version "enseigner", Username : edunum, Password : Edunumsecondaire2*
+
+**Version actuelle des ressources**
+
+* apprendre : https://apprendre.modulo-info.ch/
+* enseigner : https://enseigner.modulo-info.ch/
+
+(Actualisation annuelle)
+
+**Version en développement**
+
+* apprendre : https://dev-apprendre.modulo-info.ch/
+* enseigner : https://dev-enseigner.modulo-info.ch/
+
+(Actualisation continue)
+
+**Archive des versions antérieures**
+
+* apprendre : https://old-apprendre.modulo-info.ch/
+* enseigner : https://old-enseigner.modulo-info.ch/
+
+(Archive de la version de l'année précédente)
+
+*Avertissement : le projet étant encore dans une phase de construction, il est possible que la version actuelle soit mise à jour plus rapidement qu'à l'échéance d'une année. Tout changement de version majeur est signalé aux enseignant·e·s participant au projet.*
+
 ## Documents importants
 
 * [Livret de cours](https://files.edunumsec2.ch/livret.pdf) décrivant le découpage du plan d'études dans le détail. 
@@ -77,23 +102,23 @@ Après la phase **pilote**, les enseignant.es pourront en outre :
 
 Les ressources sont découpées selon un chapitrage qui correspond au plan d'études romand (voir ci-dessus). Elles sont divisées en quatre parties, dont nulle n'a de préséance sur les autres. Il appartient à l'enseignante ou l'enseignant de choisir l'ordre dans lequel les contenus sont abordés. Le fait que les chapitres soient successifs est le résultat des limitations de l'affichage. Pour atténuer quelque peu ce problème, nous avons choisi de renoncer à une numérotation des chapitres. 
 
-[Représentation de l'information](https://eleve.edunumsec2.ch/content/theme/representation-information/accueil/eleve.html)
+[Représentation de l'information](https://apprendre.modulo-info.ch/content/appr/theme/rep-info/accueil/eleve.html)
 : Où il est question du passage du système décimal au *système binaire*, ainsi que des problématiques de traitement des données telles que *l'encodage*, *la compression*, *l'échantillonnage*, *le cryptage*, et la *représentation des caractères, des images et des sons* sous forme de bits. 
 
-[Algorithmique I](https://eleve.edunumsec2.ch/content/theme/introduction-algorithmique/accueil/eleve.html)
+[Algorithmique I](https://apprendre.modulo-info.ch/content/appr/theme/algo1/accueil/eleve.html)
 : Ce chapitre propose une *définition générale de l'algorithmique*, ainsi qu'une présentation de certains *algorithmes classiques*. 
 
-[Programmation I](https://eleve.edunumsec2.ch/content/theme/programmation/accueil/eleve.html)
+[Programmation I](https://apprendre.modulo-info.ch/content/appr/theme/prog1/accueil/elevenew.html)
 : Après avoir présenté un échantillon de langages de programmation et leurs différences respectives, ce chapitre *pose les bases du langage Python*. 
 
-[Architecture des ordinateurs](https://eleve.edunumsec2.ch/content/theme/architecture-ordinateurs/accueil/eleve.html)
+[Architecture des ordinateurs](https://apprendre.modulo-info.ch/content/appr/theme/archi/accueil/eleve.html)
 : Il est question ici de notions telles que *les portes logiques*, *les transistors*, *l'architecture de Von Neumann*, et autres concepts essentiels à la compréhension de ce qui se passe au niveau physique et électronique dans un ordinateur.
 
 ## Structure dépôt GitHub
 
 * [config](https://github.com/edunumsec2/book/tree/master/config) contient essentiellement les documents .yml et .py qui servent à générer la version html statique de la documentation. Ce qui est présent dans ce dossier tire sa source dans la documentation [Sphinx](https://www.sphinx-doc.org/en/master/index.html), ainsi que la documentation [jupyter-book](https://jupyterbook.org/intro.html). 
-* [content](https://github.com/edunumsec2/book/tree/master/content) contient le contenu du cours, découpé en *annexes*, *enjeux* (pour enjeux de société), *readme*, *theme*. C'est dans le dossier *theme* que vous trouverez les documents sources des différentes thématiques. Dans les documents sources, il existe deux extensions : les documents .md, et les .ipynb. Les documents .md sont rédigés dans une sytanxe Mardown étendue, le [MyST](https://myst-parser.readthedocs.io/en/latest/). Les documents .ipynb sont à l'origine des documents créés pour [jupyter notebook](https://jupyter.org/). Les deux syntaxes sont tolérées pour la génération du site html statique via l'outil [jupyter-book](https://jupyterbook.org/intro.html). 
-* [docs](https://github.com/edunumsec2/book/tree/master/docs) contient les *archives* de la documentation, à savoir des fichiers qui ne sont plus utilisés dans la version actuelle du livre. Le dossier *landing*, contient le .html qui génère la [page d'accueil](https://edunumsec2.ch/). *media*, comme d'ailleurs tous les autres dossiers portant ce nom, contient les media utilisés dans le dossier parent en question. *palette* contient des indications relatives à la palette graphique du projet. *wiki* contient les tutoriels nécessaires à l'utilisation du dépôt GitHub. 
+* [content](https://github.com/edunumsec2/book/tree/master/content) contient le contenu du cours, découpé en *appr* (apprendre), *ens* (enseigner), *histoire*, *theme*. Dans le dossier *appr*, vous trouverez les documents sources des différentes thématiques qui constituent la partie "apprendre" du site web, respectivement sous *ens*, vous trouverez les sources de la partie "enseigner" du site web. Dans les documents sources, il existe deux extensions : les documents .md, et les .ipynb. Les documents .md sont rédigés dans une sytanxe Mardown étendue, le [MyST](https://myst-parser.readthedocs.io/en/latest/). Les documents .ipynb sont à l'origine des documents créés pour [jupyter notebook](https://jupyter.org/). Les deux syntaxes sont tolérées pour la génération du site html statique via l'outil [jupyter-book](https://jupyterbook.org/intro.html). 
+* [docs](https://github.com/edunumsec2/book/tree/master/docs) contient les *archives* de la documentation, à savoir des fichiers qui ne sont plus utilisés dans la version actuelle du livre. *Media*, comme d'ailleurs tous les autres dossiers portant ce nom, contient les media utilisés dans le dossier en question. *Palette* contient des indications relatives à la palette graphique du projet. *Wiki* contient les tutoriels nécessaires à l'utilisation du dépôt GitHub. 
 
 
 ## Licence du projet
@@ -239,7 +264,7 @@ jupyter-book clean .
 
 ### Utilisation en ligne
 
-1. Je me rends sur https://edunumsec2.ch
+1. Je me rends sur https://modulo-info.ch
 2. Je navigue à travers les différents chapitres du cours. 
 3. Si une information m'intéresse, par exemple une anecdote historique, un angle d'attaque pour une notion, un exemple particulier, voire même une séquence entière de cours théorique, je prends des notes et la réutilise à souhait dans mes leçons. 
 4. Je parcours les idées d'activité et je choisis celles qui m'intéressent. 
@@ -269,8 +294,8 @@ jupyter-book clean .
 - Architecture des ordinateurs : Philippe Rochat (philippe.rochat@fileinformatique.ch) - Gymnase de Morges & Jean-Philippe Pellet (jean-philippe.pellet@fileinformatique.ch) - HEP
 - Enjeux sociaux : Lucile Berset (lucile.berset@epfl.ch) - EPFL ;  Virginia Haussauer (virginia.haussauer@epfl.ch) - EPFL;  Frank Dayen (frank.dayen@eduvaud.ch) - Gymnase de Morges & Boris Beaude (boris.beaude@unil.ch) - UNIL
 - Plateforme : Romain Edelmann (romain.edelmann@epfl.ch) - EPFL & Grégoire Gavin (gregoire.gavin@epfl.ch) - EPFL
-- Charte éditoriale, plateforme, rédaction : Elliot Vaucher (elliot.vaucher@epfl.ch) - EPFL
+- Charte éditoriale, plateforme, rédaction : Elliot Vaucher (elliot.vaucher@epfl.ch) - EPFL, Christophe Dumas (christophe.dumas@epfl.ch) - EPFL
 - Coordination : Nathalie Farenc (nathalie.farenc@epfl.ch) - EPFL
 
-
 Test actions
+

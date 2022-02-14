@@ -27,7 +27,7 @@ Ces trois technologies sont rassemblées dans un *navigateur web*, un programme 
 1. afficher le contenu de la page web (décrite au format HTML), y compris les liens cliquables permettant d'afficher d'autres pages web. 
 
 
-### URL
+### URL
 L'URL (*Uniform Resource Locator*) est une manière de spécifier la localisation d'un document disponible sur Internet.
 Une exemple d'URL peut être par exemple "https://www.champignons.ch/fichiers/fr/contact.html". 
 
@@ -90,3 +90,7 @@ Les éléments de cette page sont indiqués par des *balises* indiquées par des
 
 La plupart des navigateurs web permettent de visualiser le *code  HTML* des pages visitées. Un aspect important de la création de site web consiste à écrire du code HTML qui sera mis sur le serveur pour être transmis au visiteur du site web. Cela peut se faire en écrivant directement du code html dans un fichier texte, ou à l'aide d'un outil de création de site web qui se charge d'écrire le code HTML selon les indications données par la personne concevant le site. 
 
+
+### Le Web 2.0
+
+[brève description]

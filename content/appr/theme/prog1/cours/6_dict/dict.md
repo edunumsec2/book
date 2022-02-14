@@ -1,8 +1,10 @@
-# Associer - `dict`
+# 5. Dictionnaires
 
 Un **dictionnaire** est une structure de données qui, comme une liste, contient plusieurs éléments, mais qui est plus puissante. Dans une liste les indices sont des entiers. Dans un dictionnaire les indices peuvent être de n'importe quel type immuable (entier, nombre, texte). Nous allons voir que :
 
+<<<<<<< HEAD:content/appr/theme/prog2/dict.md
 - un dictionnaire est composé de paires `clé:valeur`,
+<<<<<<< HEAD:content/appr/theme/prog2/dict.md
 - l'expression `dico[clé]` renvoie la valeur associée à la clé,
 - la méthode `dico.get(clé, défaut)` renvoie la valeur ou son défaut.
 
@@ -14,6 +16,12 @@ L'expression `dict([(1, 2)])` est un dictionnaire
 {v}`avec une entrée`  
 {f}`avec deux entrées`
 ```
+=======
+- l'expression `dico[clé]` permet d'accéder à la valeur qui est associée à la clé.
+=======
+![](dict.jpg)
+>>>>>>> edbb566532d45540acd0611447d01b2de9a70831:content/appr/theme/prog1/cours/6_dict/dict.md
+>>>>>>> af2a2dec6e9cfe97bfba511a2ebcf73673993b83:content/appr/theme/prog1/cours/6_dict/dict.md
 
 ## Un dictionnaire de mots
 
