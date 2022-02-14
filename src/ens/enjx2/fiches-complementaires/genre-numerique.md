@@ -167,7 +167,7 @@ Note : Pour une analyse plus complète de la communication autour des premiers m
 c) Qu’en est-il aujourd’hui?
 
 ````{dropdown} Réponse
-Si les femmes font un usage aussi fréquent de l’informatique que les hommes, celles-ci sont toujours peu nombreuses dans les filières de formation technique et les professions du numérique. Cela peut s’expliquer par la construction de représentations masculines associées à ce domaine depuis les années 1980 (voir p.1), une période où émerge également, avec l’ordinateur personnel et les jeux vidéo, la figure du «geek» qui renforce encore l’image d’une informatique essentiellement masculine. Dès 1985, la proportion de femmes dans les filières d’informatique commence à décroitre (voir graphe ci-dessous) et stagne aujourd’hui autour de 15-20% en Europe (les femmes représentent 15% des étudiant·e·s en Master d’informatique à l’EPFL en 2019).
+Si les femmes font un usage aussi fréquent de l’informatique que les hommes, celles-ci sont toujours peu nombreuses dans les filières de formation technique et les professions du numérique. Cela peut s’expliquer par la construction de représentations masculines associées à ce domaine depuis les années 1980, une période où émerge également, avec l’ordinateur personnel et les jeux vidéo, la figure du «geek» qui renforce encore l’image d’une informatique essentiellement masculine. Dès 1985, la proportion de femmes dans les filières d’informatique commence à décroitre (voir graphe ci-dessous) et stagne aujourd’hui autour de 15-20% en Europe (les femmes représentent 15% des étudiant·e·s en Master d’informatique à l’EPFL en 2019).
 ````
 <br>
 
