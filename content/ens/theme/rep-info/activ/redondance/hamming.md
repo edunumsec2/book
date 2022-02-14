@@ -33,3 +33,28 @@ Les expéditeurs définissent le message, l'encode en positionnant les jetons su
 
 #### Déroulement
 
+Commencer par définir les mots qui vont être utilisés pour écrire les messages, on peut par exemple utiliser 4 phrases ayant la même structure.
+Ainsi, il sera possible de générer des erreurs qui rendront la phrase transmise incompréhensible, ou pas.
+
+Exemple :
+1. Mathilde mange des tacos salés
+2. Dan joue du violon anglais
+3. Anastasia imagine un roman épique
+4. Tim écrit un programme compliqué
+
+Il faut ensuite associer un code binaire à chaque mot/morceau de phrase. Il peut être intéressant de la faire de manière réfléchie pour pouvoir maîtriser le résultat de l'erreur introduite.
+
+| |00 | 10 | 01 | 11 |
+|:---| :--: | :--: | :--: | :--: |
+| 00 | Mathilde | Dan | Anastasia | Tim |
+| 10 | mange | joue | écrit | imagine |
+| 01 | des nems | du violon | un programme | un roman |
+| 11 | végétarien | anglais | compliqué | épique |
+
+De cette manière, tous les sujet commence par 00, tous les verbes par 10, etc. On peut donc facilement décider d'introduire une erreur en restant dans la même catégorie (on change 1 des 2 derniers bits) ou pas.
+
+Maintenant, le groupe expéditeur choisi une phrase et l'encode sur 4 support distincts, 1 pour chaque morceau de phrase :
+
+|Mathilde | joue un | roman | anglais |
+| :--: | :--: | :--: | :--: |
+| 0000 | 1010 | 0111 | 1110 |
