@@ -93,6 +93,7 @@ parts:
       - file: content/appr/theme/prog2/bool
       - file: content/appr/theme/prog2/bit
       - file: content/appr/theme/prog2/recursif
+      - file: content/appr/theme/prog2/vector
       - file: content/appr/theme/prog2/idees
       
   - file: content/appr/theme/projets/intro

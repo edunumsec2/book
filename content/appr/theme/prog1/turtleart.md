@@ -22,7 +22,7 @@ Une **étoile** est un point lumineux dans le ciel nocturne, et par extension, u
 :file: art1.py
 from turtle import *
 
-getscreen().bgcolor('midnightblue')
+_dot(1000, 'midnightblue')
 color('white')
 width(1)
 
@@ -41,7 +41,7 @@ Un **diaphragme** est un élément mécanique sur le trajet lumineux d'un appare
 :file: art2.py
 from turtle import *
 
-getscreen().bgcolor('beige')
+dot(1000, 'beige')
 color('brown')
 width(3)
 
@@ -60,7 +60,7 @@ Les **fleurs** ont souvent inspiré les artistes, peintres, poètes, sculpteurs 
 :file: art3.py
 from turtle import *
 
-getscreen().bgcolor('pink')
+dot(1000, 'pink')
 color('crimson')
 width(3)
 
@@ -83,7 +83,7 @@ Le **laser** est un système photonique qui produit un rayonnement lumineux spat
 :file: art4.py
 from turtle import *
 
-getscreen().bgcolor('yellow')
+dot(1000, 'yellow')
 color('red')
 width(1)
 up()
@@ -110,7 +110,7 @@ Dans la philosophie chinoise, le **yin** et le **yang** sont deux catégories co
 :file: art5.py
 from turtle import *
 
-getscreen().bgcolor('skyblue')
+dot(1000, 'skyblue')
 color('navy')
 width(2)
 left(90)
@@ -138,7 +138,7 @@ Le **Soleil** est l’étoile de notre système solaire.
 :file: art6.py
 from turtle import *
 
-getscreen().bgcolor('orange')
+dot(1000, 'orange')
 color('yellow')
 width(3)
 
@@ -164,7 +164,7 @@ Un **carré** est un quadrilatère isométrique avec quatre angles droits.
 :file: art7.py
 from turtle import *
 
-getscreen().bgcolor('honeydew')
+dot(1000, 'honeydew')
 color('teal')
 width(3)
 
@@ -185,7 +185,7 @@ Une **spirale** est une courbe qui commence en un point central puis s'en éloig
 :file: art8.py
 from turtle import *
 
-getscreen().bgcolor('teal')
+dot(1000, 'teal')
 color('yellow')
 width(2)
     
@@ -202,7 +202,7 @@ Un **moulin à vent** est un jouet composé d'une roue munie de pales en papier 
 :file: art9.py
 from turtle import *
 
-getscreen().bgcolor('azure')
+dot(1000, 'azure')
 color('red', 'pink')
 width(3)
 
@@ -230,7 +230,7 @@ Un **disque** est un objet plat circulaire.
 from turtle import *
 from random import *
 
-getscreen().bgcolor('lavender')
+dot(1000, 'lavender')
 up()
 
 n = 60
@@ -249,7 +249,7 @@ L'**œillet** rouge est un des symboles du mouvement ouvrier. En France tout par
 :file: art11.py
 from turtle import *
 
-getscreen().bgcolor('aliceblue')
+dot(1000, 'aliceblue')
 width(2)
 
 def petale(a):
@@ -279,7 +279,7 @@ Le **cœur** est un organe musculaire qui assure la circulation du sang dans le 
 ```{codeplay}
 :file: art12.py
 from turtle import *
-getscreen().bgcolor('pink')
+dot(1000, 'pink')
 
 r = 40
 left(45)
@@ -302,7 +302,7 @@ Un **phylactère**, également appelé bulle ou ballon, est un élément graphiq
 :file: art13.py
 from turtle import *
 
-getscreen().bgcolor('skyblue')
+dot(1000, 'skyblue')
 fillcolor('white')
 
 begin_fill()
@@ -330,7 +330,7 @@ La **récursivité** est une démarche dont la description mène à la répétit
 :file: art14.py
 from turtle import *
 
-getscreen().bgcolor('lightgreen')
+dot(1000, 'lightgreen')
 color('brown')
 
 def branche(d, n, angle=50):
@@ -351,7 +351,7 @@ branche(70, 6, 60)
 
 ## Bulles
 
-Les bulles de savons sont des cercles colorés, qui utilisent une transparence de 70%, ce qui permet de voir à travers.
+Les bulles de savon sont des cercles multi-colores.
 
 ```{codeplay}
 :file: art15.py
@@ -364,7 +364,7 @@ for i in range(100):
     y = randint(-200, 200)
     s = randint(20, 100)
     goto(x, y)
-    color((random(), random(), random(), 0.7))
+    color(random(), random(), random())
     dot(s)
 ```
 
@@ -403,7 +403,7 @@ up()
 d = 60
 color('indigo')
 for c in 'modulo':
-    write(c, font=(None, d, 'bold'), move=True)
+    write(c, font=('Arial', d, 'bold'), move=True)
     
 goto(-2*d, d)
 dot(0.8*d)
