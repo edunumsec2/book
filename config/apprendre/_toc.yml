@@ -63,7 +63,13 @@ parts:
       - file: content/appr/theme/archi/cours/4_archi_gen_comp/eleve
       - file: content/appr/theme/archi/cours/5_micropro/eleve
       - file: content/appr/theme/archi/cours/6_conclusion/eleve
-      
+
+
+
+  ### Histoire de l'informatique  
+  - file: content/appr/theme/hist/eleve
+    sections:
+      - file: content/appr/theme/hist/main1
 
 - caption: Deuxième année
   numbered: false
@@ -93,6 +99,7 @@ parts:
       - file: content/appr/theme/prog2/bool
       - file: content/appr/theme/prog2/bit
       - file: content/appr/theme/prog2/recursif
+      - file: content/appr/theme/prog2/vector
       - file: content/appr/theme/prog2/idees
       
   - file: content/appr/theme/projets/intro

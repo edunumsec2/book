@@ -81,6 +81,7 @@ Le drapeau du Japon est un drapeau blanc avec un grand disque rouge en son centr
 Le rapport entre la hauteur et la largeur du drapeau est de 2:3, et le diamètre du disque est $\frac{3}{5}$ de la hauteur du drapeau.
 
 ```{codeplay}
+:file: color3.py
 from turtle import *
 dot(240, 'red')
 hideturtle()
@@ -93,6 +94,7 @@ hideturtle()
 La fonction `dot()` sans argument de taille, va automatiquement choisir une taille qui est environ le double de l'épaisseur du trait.
 
 ```{codeplay}
+:file: color4.py
 from turtle import *
 
 forward(100)
@@ -115,6 +117,7 @@ dot()
 Il est possible de colorier les points différemment de la ligne. Dans ce cas, il faut spécifier la taille _et_ la couleur dans la fonction `dot()`.
 
 ```{codeplay}
+:file: color5.py
 from turtle import *
 pencolor('blue')
 
@@ -141,7 +144,7 @@ Avec la fonction `fillcolor()`, nous pouvons définir une couleur de remplissage
 Par exemple, ce programme-ci dessine un triangle vert.
 
 ```{codeplay}
-:file: color3.py
+:file: color6.py
 from turtle import *
 
 def triangle():
@@ -163,7 +166,7 @@ end_fill()
 On aurait pu inclure les deux fonctions qui indiquent le remplissage directement dans la fonction `triangle()`. Ceci simplifie le code quand on dessine plusieurs triangles.
 
 ```{codeplay}
-:file: color3b.py
+:file: color7.py
 from turtle import *
 
 def triangle():
@@ -190,7 +193,7 @@ La combinaison `getscreen().bgcolor()` permet de définir la couleur d'arrière-
 Dans l'exemple suivant, nous dessinons le drapeau du Bangladesh. Il est vert frappé d'un disque rouge.
 
 ```{codeplay}
-:file: color4.py
+:file: color8.py
 from turtle import *
 getscreen().bgcolor('green')
 
@@ -211,7 +214,7 @@ A la place de `bgcolor()` nous utilisons tout simplement un très grand disque `
 Le disque est décentré, légèrement décalé vers la fixation, de manière à apparaître centré lorsque le drapeau flotte dans le vent.
 
 ```{codeplay}
-:file: color4.py
+:file: color9.py
 from turtle import *
 dot(1000, 'green')  # astuce pour changer le background
 
@@ -229,7 +232,7 @@ Le résultat est un triangle avec deux bordures et un troisième segment sans bo
 Une équerre est un instrument formé de deux pièces ajustées à angle droit. L'équerre est utilisée soit pour vérifier des angles dièdres droits, soit pour tracer des angles plans droits.
 
 ```{codeplay}
-:file: color5.py
+:file: color10.py
 from turtle import *
 dot(1000, 'moccasin')
 
@@ -262,7 +265,7 @@ Avec des cercles de tailles différentes dessinées avec `dot(d)`, nous pouvons 
 Voici un smiley qui exprime l'indifférence.
 
 ```{codeplay}
-:file: color6.py
+:file: color11.py
 from turtle import *
 dot(1000, 'linen')
 
@@ -288,7 +291,7 @@ forward(100)
 Voici un autre smiley qui exprime la surprise.
 
 ```{codeplay}
-:file: color7.py
+:file: color12.py
 from turtle import *
 dot(1000, 'azure')
 
@@ -317,7 +320,7 @@ Répété 4 fois, ceci donne la forme d'une croix.
 Ici, nous utilisons la fonction `color('white')` pour changer simultanément la couleur de ligne *et* la couleur de remplissage en blanc.
 
 ```{codeplay}
-:file: color8.py
+:file: color13.py
 from turtle import *
 dot(1000, 'red')
 

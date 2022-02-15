@@ -374,6 +374,7 @@ done()
 ```
 
 ### Lit
+
 Dessinez un lit.
 
 ```{codeplay}
