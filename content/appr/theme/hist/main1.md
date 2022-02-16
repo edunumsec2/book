@@ -10,11 +10,11 @@ histoire, cette science, encore très jeune, trouve sa place au milieu du
 XX siècle. L'éclosion de l'informatique se situe en 1940,
 à la croisée d'opportunités technologiques, d'enjeux stratégiques et de
 contributions d'autres branches. C'est ainsi au coeur des conflits de la
-Deuxième guerre mondiale que l'importance de calculateurs programmables
+deuxième guerre mondiale que l'importance de calculateurs programmables
 se fait sentir.
 
-Le terme "informatik" apparaît en 1957 pour le "traitement
-automatique de l'information" dans un article de Karl Steinbuch. Il est
+Le terme "informatik" apparaît en 1957 pour le «traitement
+automatique de l'information» dans un article de Karl Steinbuch. Il est
 officialisé en Français en 1962 par Philippe Dreyfus. En Anglais, pour
 des questions de droits des marques, le terme restera *computer
 science*.
@@ -24,12 +24,12 @@ science*.
 ## Préinformatique
 
 Les premiers dispositifs de calcul utilisent des petits cailloux
-(*calculus* en latin). Cet artifice était également utiliser pour
-compter les bêtes du troupeau par les bergers.
+(*calculus* en latin). Cet artifice était également utilisé pour
+compter les bêtes d'un troupeau par les bergers.
 
 ### Les machines mécaniques
 
-r0.5 ![image](media/machines/Anticythere.jpeg)
+![image](media/machines/Anticythere.jpeg)
 
 La machine d'Anticythère, plus de 100 ans av. J.-C., propose une
 représentation mécanique des mouvements astronomiques. En 1642, Blaise
@@ -46,8 +46,7 @@ calculettes électroniques, fabriquée au Lichtenstein et vendue à plus de
 ![Calculatrice
 Curta](media/machines/Curta_II_Mechanical_Calculator.jpeg)
 
-Au début XX siècle, la machine *enigma*, utilisée par les
-Nazis pendant la Deuxième guerre mondiale, est une machine
+Au début XXème siècle, la machine *enigma*, utilisée par l'allemagne nazie pendant la deuxième guerre mondiale, est une machine
 électromécanique qui lance la transition entre les dispositifs
 mécaniques et les systèmes électroniques. Elle joue également le rôle de
 catalyseur pour une partie des travaux d'Alan Turing.
@@ -55,17 +54,17 @@ catalyseur pour une partie des travaux d'Alan Turing.
 ### Du simple calcul à la séquence
 
 Le mot algorithme découle de la latinisaton du nom de Muhammad Ibn Mūsā
-al-Khuwārizmī au VIII et IX siècles. Les
+al-Khuwārizmī au VIIIème et IXème siècles. Les
 boites à musique utilisent par la suite un cylindre hérissé de picots,
 tout comme les automates, à l'instar du canard de Vaucanson[^1] (1734).
 Ces cylindres deviennent par la suite des bandes ou cartes perforées
 comme dans les métiers de Jacquard ou les orgues de barbarie. Au début
-du IX siècle, Georges Boole formalise la logique moderne
+du IXème siècle, Georges Boole formalise la logique moderne
 et ce qu'on appelle aujourd'hui en son honneur l'algèbre de Boole. Cet
 algèbre est repris plus tard dans la construction des systèmes logiques
 à la base du fonctionnement des ordinateurs.
 
-r0.4 ![image](media/machines/Babbage-1-450x355.png)
+![image](media/machines/Babbage-1-450x355.png)
 
 En 1837, Charles Babbage propose une machine analytique à l'architecture
 très innovante. On y trouve une mémoire, une unité arithmétique et
@@ -80,7 +79,7 @@ ordinateurs modernes.
 
 ## Éclosion
 
-La Deuxième guerre mondiale participe à des développements sans
+La deuxième guerre mondiale participe à des développements sans
 précédent dans les sciences. On voit ainsi apparaître le spatial, le
 nucléaire et l'informatique. Ces trois domaines répondent à des enjeux
 stratégiques et reçoivent un soutien considérable. C'est le cas d'Alan
@@ -89,32 +88,32 @@ décrypter les messages des nazis.
 
 L'informatique prend son essor à la croisée de trois enjeux majeurs :
 les développements de l'électronique, la cryptologie et les besoins en
-calculs paramétriques et automatiques notamment liées à la balistique.
+calculs paramétriques et automatiques notamment liés à la balistique.
 
 ### Développement de l'électronique
 
-r0.5 ![image](media/machines/tube.jpeg)
+![image](media/machines/tube.jpeg)
 
 Le radar constitue un dispositif plus que stratégique pendant la
-Deuxième guerre mondiale pour prévenir les raid aériens de l'Allemagne
+deuxième guerre mondiale pour prévenir les raids aériens de l'Allemagne
 nazie. La RAF (Royal Air Force) défend jalousement cette technologie et
 l'entoure du secret le plus absolu. Pour justifier les interventions au
 bon endroit et au bon moment de ses forces aériennes, la propagande
 diffusera largement l'idée fausse que les aviateurs de la RAF voyaient
-mieux la nuit parce qu'il mangeaient beaucoup de carottes. D'ailleurs,
-ce boniment a encore cours aujourd'hui pour convaincre les enfants. Les
+mieux la nuit parce qu'il mangeaient beaucoup de carottes ! D'ailleurs,
+ce boniment a encore cours aujourd'hui pour convaincre les enfants... Les
 radio-communications représentent aussi un outil stratégique largement
 développé en particulier dans la résistance française. Des entreprises
 suisses comme Kudelski y trouvent leurs racines. L'usage du *tube
 électronique* ou *tube à vide* ou encore *lampe* développée au début du
-XX siècle constitue un appui essentiel à ses
+XX siècle constitue un appui essentiel à ces
 développements, en particulier pour le radar. On retrouve également
 cette technologie utilisée à large échelle dans les premiers ordinateurs
 qui apparaissent au sortir de la guerre.
 
 ### Balistique et projet Manhattan
 
-r0.4 ![image](media/machines/eniac-femmes.jpeg)
+![image](media/machines/eniac-femmes.jpeg)
 
 L'équation bien connue $ax^2 + bx + c = 0$ est à la base des premiers
 calculs balistiques. Mais la prise en compte de paramètres
@@ -136,7 +135,7 @@ encore cours aujourd'hui dans les ordinateurs modernes.
 
 ### Cryptologie
 
-r0.5 ![image](media/machines/bombe.jpeg)
+![image](media/machines/bombe.jpeg)
 
 Les *U-Boot*[^3], sous-marins de l'Allemagne nazie, font des ravages en
 mer du nord et dans l'atlantique nord. Ainsi, durant le premier semestre
@@ -144,7 +143,7 @@ mer du nord et dans l'atlantique nord. Ainsi, durant le premier semestre
 à destination du Royaume-Uni, qui sont envoyés par le fond. L'essentiel
 de la stratégie des U-Boot reposait sur l'envoi de communications
 cryptées au moyen d'une version sophistiquée de la machine *(*Enigma)
-réputée inviolable. Â Bletchley Park, principal site de decryptage du
+réputée inviolable. Â Bletchley Park, principal site de décryptage du
 Royaume Uni, Alan Turing, avec le soutien du premier ministre Winston
 Churchill, met au point une machine électro-mécanique capable de
 déchiffrer les message cryptés en une vingtaine de minutes, alors que
@@ -155,7 +154,7 @@ possibilités et les contraintes posées par la machine *Enigma*.
 Histoire moderne de l'informatique
 ----------------------------------
 
-À la fin de la Deuxième guerre mondiale, les universités, qui ont reçu
+À la fin de la deuxième guerre mondiale, les universités, qui ont reçu
 l'appui de l'armée, se retrouvent donc avec des ordinateurs, à l'époque
 de gigantesques machines, relativement lentes (quelques dizaines
 d'opérations par seconde).
@@ -204,7 +203,7 @@ I](media/machines/Harvard_Mark_I_program_tape.agr.jpg)
 
 L'histoire des développements informatiques en Russie à cette époque
 n'est pas très claire. Les États-Unis interdisent jusque dans les années
-notante l'exportation de tout matériel de calcul sensible, en
+notantes l'exportation de tout matériel de calcul sensible, en
 particulier au niveau des puces électroniques. Les Russes développent
 leurs propres architectures comme par exemple l'ordinateur **Setun** à
 l'*Université d'État de Moscou* en 1958, le tout premier ordinateur à
@@ -236,16 +235,16 @@ distincts : le matériel et les logiciels (en anglais *Hardware* et
 Les premiers ordinateurs sont difficiles à programmer et à utiliser. On
 se consacre alors essentiellement à des travaux de calcul. Dans le monde
 académique, on réalise cependant rapidement tout le potentiel de ces
-machines programmables dans le monde académique. Mais un traitement plus
+machines programmables. Mais un traitement plus
 conceptuel de l'information demande des outils et notions plus
-abstraites. La planète informatique s'enrichit alors de plusieurs
+abstraits. La planète informatique incorpore alors plusieurs
 domaines avec un enrichissement de la partie logicielle qui se construit
-sur du matériel de plus en plus complet et performant.
+sur du matériel de plus en plus complexe et performant.
 
 ![image](media/infographies/planeteInfo.png)
 
 On réalise donc rapidement que le logiciel représente un élément
-essentiel, un logiciel en particulier : le système d'exploitation. Pour
+essentiel, et un logiciel en particulier : le système d'exploitation. Pour
 concevoir les logiciels, il devient également important de disposer de
 langages de plus haut niveau que le langage compris par la machine
 elle-même (le *langage machine*).
@@ -273,7 +272,7 @@ Lovelace vers 1940. On trouve ensuite Alan Turing avec sa machine
 Le premier véritable langage informatique qui s'éxécute sur une machine
 électromécanique revient à nouveau à une femme avec le langage *A-0
 System* mis au point par Grace Hopper en 1951. On trouve ensuite les
-langages suivants qui ont presque disparu, mais qui existent encore pour
+langages suivants qui ont pour certains presque disparu, mais qui existent encore pour
 certaines applications :
 
 -   1954, **FORTRAN**.
@@ -292,7 +291,7 @@ nouvelle technologie.
 
 #### Nouvelle génération de langages de programmation
 
-Les langages de programmation suivants font leur apparition:
+Les langages de programmation suivants font leur apparition :
 
 -   1960, **Cobol**.
 
@@ -311,15 +310,15 @@ Les circuits intégrés sont inventés par Jack Kilby en 1958. C'est le
 début de l'intégration de quantités phénoménales de transistors dans de
 toutes petites puces électroniques proposant des fonctions de calcul de
 plus en plus rapides et complexes. C'est le début d'une nouvelle
-croissance dans le cadre de ce que l'on appelle la troisième vague
+croissance dans le cadre de ce qu'on appelle la troisième vague
 d'ordinateurs. On peut désormais envisager embarquer des unités de
-calculs programmable dans des dispositifs comme les fusées du programme
+calculs programmables dans des dispositifs comme les fusées du programme
 Apollo de la NASA ou les missiles balistiques intercontinentaux dès le
 milieu des années soixante. Les ordinateurs commercialisés par IBM puis
-DEC et enfin Hewlett Paccard ne sont plus des machines spécialisées pour
+DEC et enfin Hewlett Packard ne sont plus des machines spécialisées pour
 un domaine mais couvrent l'ensemble des domaines commerciaux et
-scientifiques. Cette génération d'ordinateur fonctionnent avec une
-fréquence d'horloge aux alentours de 1MHz et effectuent une centaine de
+scientifiques. Cette génération d'ordinateurs fonctionne avec une
+fréquence d'horloge voisine de 1MHz et effectue une centaine de
 milliers d'opérations par seconde.
 
 #### Loi de Moore
@@ -334,7 +333,7 @@ dépassent 80 million de transistors.
 ### Du mini au micro
 
 Au début des années septante, apparaît la dénomination *miniordinateur*
-pour marquer une diffusion plus large de ces "machines" désormais
+pour marquer une diffusion plus large de ces «machines» désormais
 moins encombrantes dans tous les domaines. En 1971, le microprocesseur
 est inventé par Marcian Hoff (société Intel) et Federico Faggin. Le
 premier microprocesseur Intel est présenté la même année. On parle de
@@ -348,7 +347,7 @@ Dès les années septante, les langages suivant apparaissent :
 -   1971, **Pascal**, inventé par Niklaus Wirth, professeur à l'école
     Polytechnique de Zurich.
 
--   1972, **Smalltalk**, premier langage pure objet et qui marque avec
+-   1972, **Smalltalk**, premier langage pur objet et qui marque avec
     ce nouveau paradigme le début d'une nouvelle ère dans la
     programmation.
 
@@ -357,16 +356,16 @@ Dès les années septante, les langages suivant apparaissent :
     plupart des développements autour du système Linux.
 
 -   1974, **SQL**, un langage de requêtes utilisé encore utilisé
-    aujourd'hui dans l'extraction d'information dans la plupart des
+    aujourd'hui pour l'extraction d'information dans la plupart des
     bases de données.
 
-## Apparition de la micro-informatique : "Small is beautifull"
+## Apparition de la micro-informatique : «Small is beautifull»
 
 En 1973 apparaissent les premiers *micro-ordinateurs* qui sont destinés
 à un usage personnel (simultanément en France et en Allemagne). Les
-mini-ordinateurs propose des prix prohibitifs pour certaines sociétés et
+mini-ordinateurs proposent des prix prohibitifs pour certaines sociétés et
 champs d'applications, la micro-informatique permet une diffusion encore
-plus large de la technologie informatique. Citons parmi ces pionner
+plus large de la technologie informatique. Citons parmi ces pionniers
 l'Apple I de Steve Jobs et Steve Vosniak (figure
 [0.1](#AppleI){reference-type="ref" reference="AppleI"}), le commodore
 PET (figure [0.2](#PET){reference-type="ref" reference="PET"}).
@@ -387,14 +386,14 @@ programmes sous pression alors que les besoins en fiabilités deviennent
 de plus en plus cruciaux.
 
 -   1983, **Ada**, projet du DoD[^5] pour répondre au besoin de mettre
-    en place des projets informatique plus fiables.
+    en place des projets informatiques plus fiables.
 
 -   1983, **C++**, une évolution du C dans un langage objet.
 
 -   1985, **Postscript**, un langage permettant de composer des
     documents et qui puisse être interprété par une imprimante.
 
--   1991, **Python**, langage d'abord "confidentiel" qui a connu par
+-   1991, **Python**, langage d'abord «confidentiel» qui a connu par
     la suite un essort considérable avec son adoption dans de nombreux
     développements de Google.
 
@@ -422,7 +421,7 @@ modèles différents.
 
 Il est précédé du VIC-20 de la même marque et de nombreuses autres
 propositions d'ordinateurs extrêmement bon marchés et souvent vendus
-comme des consoles de jeu "intelligentes". Dans les plus connus on
+comme des consoles de jeu «intelligentes». Dans les plus connus on
 trouve ainsi le ZX80 (figure [0.4](#zx80){reference-type="ref"
 reference="zx80"} ou le micro de la BBC.
 
@@ -431,9 +430,9 @@ width="40%"}
 
 Les ordinateurs ne sont pas encore connectés, mais les utilisateurs,
 souvent très jeunes, fondent des clubs, se réunissent et échangent des
-programment de démonstration. C'est dans ces communautés que naissent
+programmes de démonstration. C'est dans ces communautés que naissent
 souvent les premiers *hackers* qui se lancent des défis pour concevoir
-sur ces machines à petit budgets des animations souvent
+sur ces machines à petit budget des animations souvent
 impressionnantes.
 
 ## Internet
@@ -446,7 +445,7 @@ central (téléphonique) au centre, central dont la destruction entraîne
 la mise hors service de l'ensemble du réseau.
 
 Le réseau ARPANET[^7] est opérationnel pour la première fois en
-septembre 1969. Il connecte d'abord quelques universités amécicaines,
+septembre 1969. Il connecte d'abord quelques universités américaines,
 comme on peut le voir sur la carte figure
 [0.5](#arpanet){reference-type="ref" reference="arpanet"}.
 
@@ -459,12 +458,12 @@ officiellement le terme Arpanet en 1983.
 
 Comme pour les premiers ordinateurs, on retrouve dans le développement
 d'Internet une impulsion de départ dans les enjeux militaires qui ont
-suivit la Deuxième guerre mondiale, puis une diffusion dans le monde
+suivi la deuxième guerre mondiale, puis une diffusion dans le monde
 académique associé aux projets de recherche de l'armée américaine.
 
 ### USENET et modem
 
-Les connexions au réseau Internet se fond souvent avec des MODEM qui
+Les connexions au réseau Internet se font souvent avec des MODEM qui
 permettent des transmissions de quelques centaines de caractères par
 seconde. Les USENET sont des forums d'échanges où les premières
 communautés de *Hackers* partagent des programmes, des démos et des
@@ -476,8 +475,8 @@ Alors que le monde industriel s'organise au début des années huitante
 pour protéger la propriété intellectuelle liée à la conception de
 programme, Richard Stallman, chercheur au laboratoire d'intelligence
 artificielle du MIT[^8] s'irrite de cette opacité. L'anecdote rapporte
-qu'il aurait été particulièrement agacé lorsqu'un de ces anciens
-collègues aurait refusé de lui confié le code source d'un pilote
+qu'il aurait été particulièrement agacé lorsqu'un de ses anciens
+collègues aurait refusé de lui confier le code source d'un pilote
 d'imprimante *buggé*. Il aurait alors ré-écrit complètement le pilote en
 question et ce serait ensuite interrogé sur la meilleure façon de
 protéger la diffusion libre du programme en question.
@@ -485,7 +484,7 @@ protéger la diffusion libre du programme en question.
 ![Richard Stallman, fondateur du Mouvement du logiciel
 libre](media/portraits/440px-Richard_Matthew_Stallman.jpeg)
 
-Il invente alors la notion de *CopyLeft*, par opposition au *CopyRight*,
+Il invente alors la notion de *CopyLeft*, par opposition au *CopyRight* :
 cette notion garantit la libre distribution et l'impossibilité d'aliéner
 ce droit. En 1984 il crée le projet GNU[^9] et fonde la *Free Software
 Foundation*.
@@ -496,7 +495,7 @@ produits.
 
 ## Le World Wide Web
 
-invention en Suisse, CERN
+Invention en Suisse, CERN
 
 Web 2.0
 
@@ -526,8 +525,8 @@ Alors que le marché de la téléphonie mobile explose dès la fin des
 années nonante, il trouve rapidement sa place dans les applications
 industrielles avec la mise en place de réseaux de capteurs et de
 commandes distantes. Avec le développement des smartphones et l'accès au
-réseau Internet, se développement connaît un second souffle sous
-l'appellation *Internet of Things (IoT)*, Internet de Objets. La
+réseau Internet, ce développement connaît un second souffle sous
+l'appellation *Internet of Things (IoT)*, Internet des Objets. La
 voiture, la cafetière et même la machine à laver le linge voient leurs
 possibilités décuplées par l'adjonction de puces électroniques
 connectées.
@@ -542,16 +541,16 @@ crystal.
 
 En octobre 2019, Google a annoncé avoir mis au point un ordinateur
 quantique capable de faire mieux que les meilleurs super-calculateurs
-"traditionnels". Alors qu'un ordinateur classique manipule des
+«traditionnels». Alors qu'un ordinateur classique manipule des
 informations élémentaires faites de $0$ et de $1$ (des bits), un
 ordinateur quantique manipule des q-bits. Ces derniers stockent de
 l'information comme une superposition de $0$ et de $1$ avec une
-proportion variable. La quantité d'information ainsi stockée et traitée
+proportion variable. La quantité d'informations ainsi stockée et traitée
 s'accroît de manière exponentielle. Deux algorithmes sont réputés dans
 le domaine de l'informatique quantique : l'algorithme de Glover et
 l'algorithme de Shor. Le premier permet une recherche beaucoup plus
-efficace dans un indexe et le deuxième permet une décomposition beaucoup
-plus efficace en nombre premier et donne la possibilité de *casser* les
+efficace dans un index et le deuxième permet une décomposition beaucoup
+plus efficace en nombres premiers et donne la possibilité de *casser* les
 codes utilisés couramment aujourd'hui très rapidement. Cela signifierait
 que la sécurité de bon nombre de communications et de transactions
 serait compromise.
