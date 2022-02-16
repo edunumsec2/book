@@ -100,6 +100,7 @@ parts:
       - file: content/appr/theme/prog2/bit
       - file: content/appr/theme/prog2/recursif
       - file: content/appr/theme/prog2/vector
+      - file: content/appr/theme/prog2/force
       - file: content/appr/theme/prog2/idees
       
   - file: content/appr/theme/projets/intro
