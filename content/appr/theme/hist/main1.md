@@ -1,4 +1,9 @@
-# Une (brève) histoire de l'informatique
+# Histoire de l'informatique
+
+```{admonition} Attention
+:class: note
+Ce document est en cours de rédaction.
+```
 
 Si l'histoire de l'informatique prend ses racines loin dans notre
 histoire, cette science, encore très jeune, trouve sa place au milieu du

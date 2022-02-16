@@ -152,6 +152,7 @@ répéter tant qu'il y des tas avec au moins deux cartes:
     disposer(seule,courant)
     déplacer le marqueur vers le tas avec au moins 2 cartes le plus à droite
 superposer tous les tas de gauche à droite.
+````
 
 ### Remarque
 Le tri par sélection n'est pas vraiment adaptés à ce dispositif physique basé sur les
