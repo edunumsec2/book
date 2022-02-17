@@ -129,7 +129,7 @@ La magie qui permet de lire la séquence de gauche à droite vient du fait que p
 
 ### Faut-il toujours recalculer un dictionnaire pour compresser chaque nouvelle séquence de lettres ?
 
-Clairement, non. Si on a affaire à un texte écrit en français, par exemple, on peut se baser sur un dictionnaire établi une fois par toutes pour un texte "standard" (tel que la déclaration des droits de l'homme), en supposant souvent à raison que les fréquences d'apparition des lettres restent similaire d'un texte à l'autre.
+Clairement, non. Si on a affaire à un texte écrit en français, par exemple, on peut se baser sur un dictionnaire établi une fois par toutes pour un texte "standard" (tel que la déclaration des droits de l'homme), en supposant souvent à raison que les fréquences d'apparition des lettres restent similaires d'un texte à l'autre.
 
 ### Compresser des fichiers binaires ?
 
