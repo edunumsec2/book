@@ -77,11 +77,38 @@ lettre               | I | N | G | S | T | H | E | R | A |
 nombre d'apparitions | 4 | 4 | 2 | 1 | 1 | 1 | 1 | 1 | 1 |
 nombre de questions  | 2 | 2 | 3 | 4 | 4 | 4 | 4 | 4 | 4 |
 
-On voit que plus une lettre est fréquente, moins elle nécessite de questions.
+On voit notamment que plus une lettre est fréquente, moins elle nécessite de questions.
 
 ### Et la compression, dans tout ça?
 
-TBD
+Tout ceci semble a priori quelque peu éloigné du sujet, mais en fait, le lien avec l'algorithme de compression de Huffman est presque immédiat ! Voici plus précisément comment établir ce lien.
+
+Pour encoder les 16 lettres ABCDEFGHIJKLMNOP du premier jeu sous la forme d'une séquence de bits, il n'y a pas d'autre choix que d'utiliser 4 bits par lettre, vu que celles-ci sont toutes différentes. Ainsi, on encode par exemple A par 0000, B par 0001, C par 0010, etc., et le nombre total de bits nécessaires pour encoder la séquence  ABCDEFGHIJKLMNOP vaut donc $16 \times 4=64$.
+
+Il est bien sûr possible de refaire exactement la même chose pour encoder la séquence SINGING IN THE RAIN (en oubliant encore une fois les espaces), mais ce serait ignorer le fait que certaines lettres se répètent. Pour être plus précis, il n'y a que... 9 lettres différentes dans cette séquence ; malheureusement une de trop pour pouvoir représenter chaque lettre avec 3 bits ! Donc il semble a priori qu'on ne gagne rien ici. Cependant, si on utilise l'information additionnelle liée au nombre d'apparitions de chaque lettre, alors on peut faire mieux ! Et c'est là que le second jeu vient en aide pour définir un schéma d'encodage efficace, suivant les deux règles suivantes :
+
+1. Chaque lettre est encodée avec un nombre de bits égal au nombre de questions binaires nécessaires pour deviner la lettre.
+2. Le mot de code associé à chaque lettre est la séquence de bits correspondant à la séquence de réponses obtenues lors du jeu (avec la correspondance oui=1 et non=0, par exemple).
+
+Ainsi, les mots de code suivants sont obtenus pour la séquence SINGING IN THE RAIN :
+
+lettre                    | I | N | G | S | T | H | E | R | A |
+--------------------------|---|---|---|---|---|---|---|---|---|
+nombre d'apparitions      | 4 | 4 | 2 | 1 | 1 | 1 | 1 | 1 | 1 |
+nombre de questions/bits  | 2 | 2 | 3 | 4 | 4 | 4 | 4 | 4 | 4 |
+mot de code correspondant | 11 | 10 | 011 | 0101 | 0100 | 0011 | 0010 | 0001 | 0000 |
+
+Ce système d'encodage, ou *dictionnaire*, est clairement plus économe en bits que le système d'encodage classique décrit plus haut, utilisant 4 bits par lettre. Faisons le compte du nombre total de bits utilisés avec ce nouvel encodage : 
+
+$8 \times 2 + 2 \times 3 + 6 \times 4 = 16 + 6 + 24 = 46$ bits
+
+L'économie de place réalisée est donc de l'ordre de $\frac{64-46}{64} = \frac{18}{64} \simeq 28\%$ ; un taux de compression à peu près équivalent à celui obtenu lors de la compression de fichiers de données informatiques avec le format ZIP.
+
+Pour autant, une question importante reste en suspens : quand on encode chaque lettre avec le même nombre de bits, il est trivial de décoder la séquence de bits pour retrouver la séquence de lettres correspondante, en lisant simplement les bits 4 par 4 dans l'exemple vu plus haut. Mais qu'en est-il ici où des lettres d'une même séquence sont encodées avec des nombres de bits différents ? Avec l'encodage ci-dessus, la séquence SINGING IN THE RAIN s'écrit :
+
+010111100111110011...
+
+A priori, il peut sembler sans espoir de retrouver le message d'origine... Mais il se trouve si on lit cette séquence *de gauche à droite*, alors muni du dictionnaire ci-dessus, le décodage de la séquence est très facile: il suffit de rechercher à quelle lettre peuvent correspondre les premiers bits de la séquence : en essayant avec les deux premiers, on voit que le mot de code 01 n'est pas listé dans le dictionnaire ; en essayant avec les trois premiers, on voit que 010 ne fait pas non plus partie du dictionnaire ; donc la première lettre est forcément celle encodée par les quatre premiers bits 0101, à savoir un S. Puis on refait la même chose avec le reste de la séquence de bits 11100111110011... : ici, on voit que les deux premiers bits forment le mot de code 11 correspondant à la lettre I ; et ainsi de suite... Le message d'origine peut ainsi être entièrement décodé ; il est donc bien vrai qu'aucune information n'est perdue !
 
 ## Développements
 
