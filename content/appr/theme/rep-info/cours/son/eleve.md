@@ -1,6 +1,6 @@
-# 4. Le son
+# 4 Le son
 
-## Numérisation
+## 4.1 Numérisation
 
 
 La conversion
@@ -56,23 +56,24 @@ par un microphone.
 
 
 
-<!---
+
 
 ```{figure} media/soncontinu.png
 ---
 height: 16em
 name: fig-repr-num-sig
+align: left
 ---
 Signal continu à numériser, par exemple un son.
 ```
--->
+</br> </br>
 
-
+<!---
 <img src="media/soncontinu.png" height="350" width="500"/>
 
 **Signal continu à numériser, par exemple un son**
 <br> <br>
-
+-->
 
 
 ````{admonition} Le saviez-vous ?
@@ -113,7 +114,7 @@ d'un signal numérisé.
 
 
 
-## Échantillonnage
+## 4.2 Échantillonnage
 
 L'intervalle temporel
 entre deux mesures est appelé
@@ -139,7 +140,7 @@ d'avoir une représentation complète
 d'un processus complexe,
 tout au mieux
 une représentation suffisante.
-Comme toute activité ingénieuriale,
+Comme toute activité d'ingénierie,
 la solution retenue 
 résulte d'une pesée d'intérêts 
 et non d'une évidence 
@@ -148,17 +149,18 @@ vers une solution unique.
 
 
 
+</br> </br>
 
-<!---
 ```{figure} media/numerisation-01.png
 ---
 height: 16em
 name: fig-repr-num-freq
+align: left
 ---
 Effet de la fréquence d'échantillonnage
 (sampling rate : 100, 200 et 400 Hz)
 sur la représentation
-obtenue par numérisation.
+obtenue par numérisation. </br> 
 Plus la fréquence est élevée,
 plus la quantité
 d'information collectée
@@ -171,9 +173,9 @@ entre les échantillonnages
 sont perdus.
 
 ```
--->
+</br> </br>
 
-
+<!---
 <img src="media/numerisation-01.png" height="270" width="800"/>
 
 **Effet de la fréquence d'échantillonnage
@@ -194,7 +196,7 @@ qui se déroulent
 entre les échantillonnages
 sont perdus
 
-
+-->
 
 
 Sachant que l’oreille humaine
@@ -355,7 +357,7 @@ bénéfices
 
 
 
-## Quantification
+## 4.3 Quantification
 
 La quantification
 d'une valeur échantillonnée
@@ -377,16 +379,17 @@ est importante,
 plus la quantité d'information générée
 est importante.
 
+</br> </br>
 
-<!---
 ```{figure} media/numerisation-02.png
 ---
 height: 16em
 name: fig-repr-num-depth
+align : left
 ---
 Effet de la profondeur de l'échantillonnage
 (bit depth : 3, 4 et 5 bits)
-sur la représentation obtenue par numérisation.
+sur la représentation obtenue par numérisation. </br> 
 Plus la profondeur est importante,
 plus la discrimination du signal et
 la différence entre les basses et
@@ -395,9 +398,10 @@ La quantité d'information générée
 (le nombre de 0 et de 1) devient
 également plus importante.
 ```
--->
 
+</br> </br>
 
+<!---
 <img src="media/numerisation-02.png" height="300" width="800"/>
 
 **Effet de la profondeur de l'échantillonnage
@@ -412,7 +416,7 @@ les hautes intensités est importante.
 La quantité d'information générée
 (le nombre de 0 et de 1) devient
 également plus importante.
-
+-->
 
 Lorsque l'ensemble
 de la plage des valeurs possibles
@@ -500,17 +504,19 @@ par la suite
 sans détériorer
 la qualité du signal.
 
-<!---
+
+</br> </br>
 
 ```{figure} media/numerisation-04.png
 ---
 height: 16em
 name: fig-repr-num-dist
+align : left
 ---
 Effet du gain (trop haut, correct, trop bas)
 sur la représentation obtenue par numérisation.
 La distorsion résulte de valeurs très différentes
-de celles du signal original.
+de celles du signal original. </br> 
 Cette aberration du processus de numérisation
 ne peut plus être corrigée,
 car de l'information a été perdue au passage.
@@ -526,9 +532,10 @@ Il en résulte
 une perte
 de précision.
 ```
--->
 
+</br> </br>
 
+<!---
 <img src="media/numerisation-02.png" height="300" width="800"/>
 
 **Effet du gain (trop haut, correct, trop bas)
@@ -552,7 +559,7 @@ Il en résulte
 une perte
 de précision.
 
-
+-->
 
 
 
@@ -576,11 +583,13 @@ d'échantillonnage supérieure.
 La qualité du résultat
 n'est pas améliorée.
 
-<!---
+</br> </br>
+
 ```{figure} media/numerisation-03.png
 ---
 height: 16em
 name: fig-repr-num-bal
+align: left
 ---
 Effet de la fréquence d'échantillonnage
 (sampling rate : 400, 200 et 100 Hz)
@@ -590,9 +599,10 @@ Une importante profondeur d'échantillonnage ne compense pas
 une fréquence d'échantillonnage insuffisante.
 ```
 
--->
+</br> </br>
 
 
+<!---
 <img src="media/numerisation-03.png" height="300" width="800"/>
 
 **Effet de la fréquence d'échantillonnage
@@ -602,7 +612,7 @@ sur la représentation obtenue par numérisation
 <br> <br>
 Une importante profondeur d'échantillonnage ne compense pas
 une fréquence d'échantillonnage insuffisante.
-
+-->
 
 Les dispositifs électroniques
 dont la fonction
@@ -619,7 +629,7 @@ en anglais.
 
 
 
-## Encodage
+## 4.4 Encodage
 
 L'encodage de l'information numérisée
 se fait dans des formats
@@ -695,7 +705,7 @@ d'un tableau de Monnet...
 
 
 
-## Reconstruction
+## 4.5 Reconstruction
 
 
 On appelle **reconstruction**
@@ -725,33 +735,33 @@ du signal.
 
 <br>
 
-## Exercices
+## 4.6 Exercices
 
-````{admonition} Exercice 1 : ???
+````{admonition} Exercice 4.6.1 - ???
 :class: note
 
 ......
 
 ````
-````{admonition} Exercice 2 : ???
+````{admonition} Exercice 4.6.2 - ???
 :class: note
 
 ......
 
 ````
-````{admonition} Exercice 3 : ???
+````{admonition} Exercice 4.6.3 - ???
 :class: note
 
 ......
 
 ````
-````{admonition} Exercice 4 : ???
+````{admonition} Exercice 4.6.4 - ???
 :class: note
 
 ......
 
 ````
-````{admonition} Exercice 5 : ???
+````{admonition} Exercice 4.6.5 - ???
 :class: note
 
 ......
