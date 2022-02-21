@@ -41,6 +41,7 @@ Grâce aux algorithmes, la machine a pu remplacer l’homme dans de nombreuses t
 ---
 alt: Usine du début du siècle dernier
 width: 100%
+align: left
 ---
 
 **Usine du début du siècle dernier.** Les machines dans cette usine de métallurgie à Vallorbe dans le canton de Vaud sont au service des ouvriers. Source : https://wikivaud.ch/metallurgie-vaudoise/
@@ -51,6 +52,7 @@ width: 100%
 ---
 alt: Usine du début du siècle dernier
 width: 100%
+align: left
 ---
 
 **Usine du début de ce siècle.** Les machines dans cette usine de montage Mistubishi en Chine ont remplacé les ouvriers. Source : https://www.lemonde.fr/blog/fredericjoignot/2015/12/25/robotisation-generale/

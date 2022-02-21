@@ -1,6 +1,6 @@
-# 4 Le son
+# 4. Le son
 
-## 4.1 Numérisation
+## 4.1. Numérisation
 
 
 La conversion
@@ -114,7 +114,7 @@ d'un signal numérisé.
 
 
 
-## 4.2 Échantillonnage
+## 4.2. Échantillonnage
 
 L'intervalle temporel
 entre deux mesures est appelé
@@ -357,7 +357,7 @@ bénéfices
 
 
 
-## 4.3 Quantification
+## 4.3. Quantification
 
 La quantification
 d'une valeur échantillonnée
@@ -629,7 +629,7 @@ en anglais.
 
 
 
-## 4.4 Encodage
+## 4.4. Encodage
 
 L'encodage de l'information numérisée
 se fait dans des formats
@@ -705,7 +705,7 @@ d'un tableau de Monnet...
 
 
 
-## 4.5 Reconstruction
+## 4.5. Reconstruction
 
 
 On appelle **reconstruction**
@@ -735,33 +735,33 @@ du signal.
 
 <br>
 
-## 4.6 Exercices
+## 4.6. Exercices
 
-````{admonition} Exercice 4.6.1 - ???
+````{admonition} Exercice 4.6.1. - ???
 :class: note
 
 ......
 
 ````
-````{admonition} Exercice 4.6.2 - ???
+````{admonition} Exercice 4.6.2. - ???
 :class: note
 
 ......
 
 ````
-````{admonition} Exercice 4.6.3 - ???
+````{admonition} Exercice 4.6.3. - ???
 :class: note
 
 ......
 
 ````
-````{admonition} Exercice 4.6.4 - ???
+````{admonition} Exercice 4.6.4. - ???
 :class: note
 
 ......
 
 ````
-````{admonition} Exercice 4.6.5 - ???
+````{admonition} Exercice 4.6.5. - ???
 :class: note
 
 ......

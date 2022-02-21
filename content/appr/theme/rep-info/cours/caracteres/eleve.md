@@ -1,11 +1,11 @@
-# 2 Les caractères
+# 2. Les caractères
 
 Toute l'information est représentée dans un ordinateur par des nombres
 encodés sous forme binaire par des 0 et des 1. Se pose alors la question
 de la représentation des caractères, ne serait-ce que parce que la communication
 entre les utilisateurs et les ordinateurs s'opère essentiellement sous forme textuelle. 
 
-## 2.1 Principe
+## 2.1. Principe
 
 La solution est simple : on associe chaque caractère à un code binaire.
 
@@ -100,7 +100,7 @@ En réalité, il n'existe pas une table de conversion unique, mais des dizaines
 de tables de conversion. Certaines tables ont été proposées à l'origine
 par des constructeurs d'ordinateurs ou des éditeurs de systèmes d'exploitation.
 
-## 2.2 Table ASCII
+## 2.2. Table ASCII
 
 Le code américain normalisé pour l’échange d’information ASCII (pour American Standard Code for Information Interchange) est apparu dans les année 1960.
 Malgré sa large acceptation, avec ses **7 bits par caractère**,
@@ -185,7 +185,7 @@ intégrant le contenu de toutes les tables existantes, via le standard UTF.
 
 
 
-## 2.3 Standard UTF
+## 2.3. Standard UTF
 
 Le [standard Unicode](https://home.unicode.org/) UTF (Universal Character Set Transformation Format)
 s'est imposé pour l'échange, car il permet d'agréger sur 8 bits, 16 bits ou 32 bits par caractère la totalité des caractères utilisés dans toutes les langues humaines… et même extraterrestres,
@@ -299,9 +299,9 @@ width: 750px
 **Tab. 4** Extrait de la table de représentation UTF-8
 
 
-## 2.4 Exercices
+## 2.4. Exercices
 
-````{admonition} Exercice 2.4.1 - Utilisation de la table ASCII ✏️📒
+````{admonition} Exercice 2.4.1. - Utilisation de la table ASCII ✏️📒
 :class: note 
 <!--- <span style="color:orange">Niveau intermédiaire</span> -->
 
@@ -315,7 +315,7 @@ width: 750px
 ````
 
 
-`````{admonition} Exercice 2.4.2 - Activité codage et internet 🔌
+`````{admonition} Exercice 2.4.2. - Activité codage et internet 🔌
 :class: note
 <!--- <span style="color:green">Niveau débutant</span> -->
 
@@ -347,7 +347,7 @@ En allant dans «Outils», «Informations sur la page», on voit que cette page 
 
 
 
-````{admonition} Exercice 2.4.3 - Coder en UTF-8 ✏️📒
+````{admonition} Exercice 2.4.3. - Coder en UTF-8 ✏️📒
 :class: note
 <!--- <span style="color:orange">Niveau intermédiaire</span> -->
 
@@ -364,7 +364,7 @@ Le symbole Ø correspond à la valeur décimale 8709.
 
 
 
-````{admonition} Exercice 2.4.4 - Activité Hexadécimal ✏️📒
+````{admonition} Exercice 2.4.4. - Activité Hexadécimal ✏️📒
 :class: note
 <!--- <span style="color:red">Niveau avancé</span> -->
 

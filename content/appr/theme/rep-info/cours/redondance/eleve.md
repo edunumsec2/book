@@ -1,4 +1,4 @@
-# 5 Redondance
+# 5. Redondance
 
 Pourrait-on
 construire
@@ -102,7 +102,7 @@ de l'information.
 
 
 
-## 5.1 Somme de contrôle (checksum)
+## 5.1. Somme de contrôle (checksum)
 
 Pour s'assurer
 qu'une information
@@ -385,7 +385,7 @@ plus élevé.
 
 
 
-## 5.2 Fonction de hachage
+## 5.2. Fonction de hachage
 
 
 L'exemple de
@@ -697,7 +697,7 @@ authentification (stockage et vérification des mots de passe)…
 
 
 
-## 5.3 Disques RAID
+## 5.3. Disques RAID
 
 
 
@@ -836,7 +836,7 @@ sont sensibles.
 
 
 
-## 5.4 Cloud computing
+## 5.4. Cloud computing
 
 
 Les systèmes
@@ -874,33 +874,33 @@ en contribuant
 
 <br>
 
-## 5.5 Exercices
+## 5.5. Exercices
 
-````{admonition} Exercice 5.5.1 - ???
+````{admonition} Exercice 5.5.1. - ???
 :class: note
 
 ......
 
 ````
-````{admonition} Exercice 5.5.2 - ???
+````{admonition} Exercice 5.5.2. - ???
 :class: note
 
 ......
 
 ````
-````{admonition} Exercice 5.5.3 - ???
+````{admonition} Exercice 5.5.3. - ???
 :class: note
 
 ......
 
 ````
-````{admonition} Exercice 5.5.4 - ???
+````{admonition} Exercice 5.5.4. - ???
 :class: note
 
 ......
 
 ````
-````{admonition} Exercice 5.5.5 - ???
+````{admonition} Exercice 5.5.5. - ???
 :class: note
 
 ......
