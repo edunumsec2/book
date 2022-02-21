@@ -409,3 +409,38 @@ for s in ('MUSÉE', "D'ART", "D'HISTOIRE"):
 ```
 
 Créez 3 autres lettres dans le même style pour un autre musée dans une autre ville. Changez texte et couleur.
+
+### Logo de l'EPFL
+
+En mars 2019, l’[EPFL](https://www.epfl.ch/fr/) profite de son anniversaire de 50 ans pour renouveler son logo. Tout en maintenant la couleur du drapeau helvétique, l’agence [Moser Design](https://moserdesign.ch) utilise une police de caractères suisse, l’Helvetica Neue. Les lettres ont été remaniées à la manière de pixels pour laisser transparaître la dimension numérique de l’école. On peut percevoir dans le négatif des lettres E et F deux croix helvétiques.
+
+```{codeplay}
+from turtle import *
+shape('arrow')
+
+def pixel():
+    color('white')
+    begin_fill()
+    down()
+    for x in (21, 16) * 2:
+        forward(x)
+        left(90)
+    up()
+    end_fill()
+
+up()
+color('red')
+speed(2)
+goto(-200, -50)
+
+for c in 'EPFL':
+    write(c, font=('Helvetica Neue', 100, 'bold'), move=True)
+    
+goto(-191, -9)
+pixel()
+goto(-17, -9)
+pixel()
+hideturtle()
+```
+
+Selon le même schéma, créez un logo pour une autre institution. Justifiez le choix de la couleur.

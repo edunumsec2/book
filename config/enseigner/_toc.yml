@@ -22,6 +22,7 @@ parts:
           - file: content/ens/theme/rep-info/activ/images/EncoderImages/EncoderImages
           - file: content/ens/theme/rep-info/activ/son/echantillonage
           - file: content/ens/theme/rep-info/activ/redondance/hamming
+          - file: content/ens/theme/rep-info/activ/compression/huffman
 
   - file: content/ens/theme/prog1/maitre
     sections:
