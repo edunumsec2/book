@@ -135,9 +135,17 @@ Clairement, non. Si on a affaire à un texte écrit en français, par exemple, o
 
 Si la séquence qu'on désire compresser est elle-même une séquence de 0 et de 1 (c'est-à-dire, n'importe fichier de données numériques), que faire ? Dans ce cas, on peut simplement regrouper par 8 les bits de la séquence pour former des séquences de symboles (avec le code ASCII, par exemple), puis appliquer la méthode décrite ci-dessus.
 
-### Codage de Huffman ?
+### Codages de Huffman de de Shannon-Fano
 
 Le système d'encodage présenté ci-dessus n'est à proprement parler pas exactement le codage de Huffman, mais plutôt le codage de Shannon-Fano. Ceci dit, dans l'exemple de la séquence SINGING IN THE RAIN, les deux systèmes d'encodage coïncident parfaitement. On observe par contre des différences mineures de performance entre les deux systèmes d'encodage (avec un avantage systématique à Huffman) dans des situations moins idéales où les nombres d'apparitions des lettres dans la séquence sont plus irréguliers.
+
+Pour plus d'informations sur le sujet, voici des liens vers des vidéos expliquant la notion d'entropie, ainsi que les codages de Shannon-Fano et de Huffman :
+
+entropie : https://www.youtube.com/watch?v=nAA7UyiCIOE
+
+codage de Shannon-Fano : https://www.youtube.com/watch?v=DSdTiFc3Aws
+
+codage de Huffman : https://www.youtube.com/watch?v=UAY-wpHZCs4
 
 ### Autres algorithmes de compression
 
