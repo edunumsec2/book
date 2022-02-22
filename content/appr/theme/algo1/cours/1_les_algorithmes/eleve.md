@@ -11,8 +11,9 @@ Ce n'est pas l'{glo}`algo|algorithme` qui est exécuté sur une machine pour nou
 ---
 alt: Différence entre un algorithme et un programme.
 width: 65%
+align: left
 ---
-**Différence entre un algorithme et un programme.** Un algorithme doit être compréhensible par un humain, alors qu'un programme est écrit de façon à ce qu'il soit compréhensible par une machine.
+**Différence entre un algorithme et un programme.** </br> Un algorithme doit être compréhensible par un humain, alors qu'un programme est écrit de façon à ce qu'il soit compréhensible par une machine.
 ```
 
 <!-- ```{image} media/algoprog.png
@@ -21,7 +22,7 @@ width: 65%
 ```
 **Différence entre un algorithme et un programme.** Un algorithme doit être compréhensible par un humain, alors qu'un programme est écrit de façon à ce qu'il soit compréhensible par une machine. -->
 
-## Résolution d'un problème par étapes
+## 1.1. Résolution d'un problème par étapes
 
 Un mode d’emploi, ou une recette, décrit les **<span style="color:rgb(89, 51, 209)">étapes</span>** à suivre pour arriver à une solution. Dans le cas d'une recette de cuisine, la préparation des ingrédients, leur cuisson et leur présentation sont différentes étapes que l'on peut suivre pour réaliser un plat. Prenons un cas précis : *<span style="color:rgb(13, 204, 166)">faire une omelette</span>*. Pour chaque étape de la préparation de l’omelette, il faut prévoir une marche à suivre suffisamment détaillée, afin que la personne qui suit la recette arrive au résultat souhaité. Dans le cas de l’omelette, les opérations pourraient être (voir figure ci-dessous) : 
 
@@ -35,6 +36,7 @@ Un mode d’emploi, ou une recette, décrit les **<span style="color:rgb(89, 51,
 ---
 alt: Un algorithme est un peu comme une recette de cuisine.
 width: 100%
+align: left
 ---
 
 **Un algorithme est un peu comme une recette de cuisine.** Cet exemple illustre les opérations à suivre pour la réalisation d’une omelette.
@@ -88,9 +90,10 @@ Pour mieux vous représenter une variable, imaginez un grand meuble avec des tir
 ---
 alt: Une variable est un tiroir avec une étiquette.
 width: 50%
+align: left
 ---
 
-**Une variable est un tiroir avec une étiquette.** Cela peut être utile de voir la variable comme un tiroir qui permet de stocker une valeur (contenu du tiroir) sous un nom (étiquette du tiroir). Attention, le tiroir est petit et ne peut contenir qu'une chose (valeur) à la fois. Deux tiroirs différents ne peuvent porter la même étiquette.
+**Une variable est un tiroir avec une étiquette.** </br> Cela peut être utile de voir la variable comme un tiroir qui permet de stocker une valeur (contenu du tiroir) sous un nom (étiquette du tiroir). Attention, le tiroir est petit et ne peut contenir qu'une chose (valeur) à la fois. Deux tiroirs différents ne peuvent porter la même étiquette.
 
 ```
 
@@ -130,6 +133,7 @@ Il est plus facile de se représenter ces valeurs sous forme de tableau :
 ---
 alt: Valeurs des variables de l'algorithme pour le cas où Nombres contient 1, 2 et 3.
 width: 70%
+align: left
 ---
 
 ```
@@ -179,7 +183,7 @@ Lorsqu'on sauve un fichier dans un ordinateur, il est stocké dans une mémoire.
 
 ````
 
-## Les ingrédients d’un algorithme
+## 1.2. Les ingrédients d’un algorithme
 
 L’objectif d’un {glo}`algo|algorithme` est de décrire la solution à un problème donné. Concrètement, pour résoudre un problème, l’{glo}`algo|algorithme` va utiliser des **<span style="color:rgb(89, 51, 209)">données</span>** qu’il reçoit ***<span style="color:rgb(13, 204, 166)">en entrée</span>*** et va retourner un **<span style="color:rgb(89, 51, 209)">résultat</span>** ***<span style="color:rgb(13, 204, 166)">en sortie</span>***. Le résultat en sortie va être la solution au problème sur la base des calculs effectués sur les données en entrée. Un exemple d'{glo}`algo|algorithme` qui détecte les visages reçoit en {glo}`input|entrée` une image (ce sont les {glo}`data|données`) et retourne en sortie «oui» ou «non» (c'est le résultat) selon si l’image contient un visage ou pas. Les {glo}`data|données` en {glo}`input|entrée` d’un {glo}`algo|algorithme` qui traduit pourraient être le mot à traduire et un dictionnaire. L’{glo}`algo|algorithme` traiterait ces {glo}`data|données` pour retourner en {glo}`output|sortie` la traduction du mot dans une autre langue.
 
@@ -192,22 +196,23 @@ Le dernier ingrédient de l'{glo}`algo|algorithme`, mais tout aussi important, e
 3. Un résultat en {glo}`output|sortie`.
 
 
-````{figure} media/Diagramme_algorithme.png 
 
+```{figure} media/Diagramme_algorithme.png
 ---
 alt: Schéma des ingrédients d'un algorithme.
 width: 70%
+align: left
 ---
-
 **Schéma des ingrédients d'un algorithme.** Un algorithme reçoit des données en entrée, qu'il traite selon des opérations dans un ordre précis, dans le but de produire un résultat en sortie. Ce résultat représente la solution à un problème donné.
 
-````
+```
 
 <!-- ```{image} media/Diagramme_algorithme.png 
 :width: 600
 :height: 400
 ```
 **Schéma des ingrédients d'un algorithme.** Un algorithme reçoit des données en entrée, qu'il traite selon des opérations dans un ordre précis, dans le but de produire un résultat en sortie. Ce résultat représente la solution à un problème donné. -->
+
 
 
 Notez que les opérations d’un {glo}`algo|algorithme` doivent être précises et ***<span style="color:rgb(13, 204, 166)">non ambigües</span>***. Il doit y avoir une seule interprétation possible de l’{glo}`algo|algorithme`. Une recette de cuisine ne serait pas assez précise pour une machine, par exemple, il faudrait indiquer clairement ce que température moyenne et mélange homogène veulent dire. Les êtres humains peuvent interpréter, deviner et supposer, mais pas les machines (pour l'instant).
@@ -291,9 +296,9 @@ Nous avons donc la confirmation que la solution obtenue résout correctement not
 `````
 
 
-## Exercices
+## 1.3. Exercices
 
-````{admonition} Exercice 4. Forme mystère
+````{admonition} Exercice 1.3.1. Forme mystère
 :class: note
 
 L’algorithme suivant contrôle un crayon. Quelle forme dessine-t-il ?
@@ -304,7 +309,7 @@ Répéter 8 fois :
 ```
 ````
 
-<!-- `````{admonition} Solution 4 : forme mystère
+<!-- `````{admonition} Solution 1.3.1 : forme mystère
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -340,7 +345,7 @@ Un hexagone. Pour vérifier, exécuter le code ci-dessus. On pourrait croire que
 `````
  -->
 
-````{admonition} Exercice 5. Nombre minimum
+````{admonition} Exercice 1.3.2. Nombre minimum
 :class: note
 
 Ecrire un algorithme qui permet de trouver le plus petit nombre d’une liste. Penser à décomposer la solution en différentes étapes.
@@ -351,7 +356,7 @@ L'algorithme trouve-t-il la bonne solution ? Si non, modifier l'algorithme afin 
 
 ````
 <!-- 
-`````{admonition} Solution 5 : nombre minimum
+`````{admonition} Solution 1.3.2. : nombre minimum
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -431,7 +436,7 @@ Le résultat obtenu est bien le résultat attendu, l'algorithme a trouvé la plu
 
 
 
-````{admonition} Exercice 6. Le prochain anniversaire
+````{admonition} Exercice 1.3.3. Le prochain anniversaire
 :class: note
 
 On souhaite déterminer l’élève dont la date d’anniversaire est la plus proche de la date d’aujourd’hui, dans le futur. Ecrivez un algorithme qui permet de trouver cet élève (utilisez un langage familier). Pensez à décomposer le problème en sous-problèmes. 
@@ -442,7 +447,7 @@ Un ordinateur peut-il réaliser les opérations décrites par votre algorithme�
 
 ````
 <!-- 
-`````{admonition} Solution 6 : le prochain anniversaire
+`````{admonition} Solution 1.3.3. : le prochain anniversaire
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -463,7 +468,7 @@ Oui, un ordinateur peut exécuter ces opérations, mais elles doivent être déc
  -->
 
 
-````{admonition} Exercice 7. Echange de trois variables
+````{admonition} Exercice 1.3.4. Echange de trois variables
 :class: note
 
 Écrire un algorithme qui effectue la permutation circulaire des variables X, Y et Z : à la fin de l’algorithme, X contient la valeur de Z, Y la valeur de X et Z la valeur de Y. Pour rappel, une variable ne peut contenir qu'une valeur à la fois.
@@ -472,7 +477,7 @@ Conseil : il est très utile de se mettre à la place de la machine et de repr
 
 ````
 
-<!-- `````{admonition} Solution 7 : échange de trois variables
+<!-- `````{admonition} Solution 1.3.4. : échange de trois variables
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -499,7 +504,7 @@ Nous avons donc la confirmation que la solution obtenue résout correctement not
 
 
 
-````{admonition} Exercice 8. Affectations
+````{admonition} Exercice 1.3.5. Affectations
 :class: note
 
 Quel est le résultat de la suite des trois affectations suivantes ? On parle d'*affectation* lorsqu'on attribue une valeur à une variable.
@@ -516,7 +521,7 @@ Vérifier la solution que vous avez trouvée en représentant chaque variable av
 ````
 
 
-<!-- `````{admonition} Solution 8 : affectations
+<!-- `````{admonition} Solution 1.3.5. : affectations
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>

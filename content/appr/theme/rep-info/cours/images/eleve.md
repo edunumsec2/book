@@ -14,32 +14,36 @@ Voilà un déroulé de cours pour cette section représentation des images :
 ```` 
 -->
 
-## Les images matricielles
+## 3.1. Les images matricielles
 
 Depuis des siècles les humains gardent des traces de leur environnement sous forme d'images. Plus le temps passe, plus ces traces sont fidèles. On découvre par exemple la perspective autour du XV<sup>e</sup> siècle, les progrès en optique et en chimie permettent ensuite la création de la camera obscura et de la photographie argentique. Enfin l'informatique se développe permettant l'invention de la photographie numérique.
 
-<!---
+
 ```{figure} media/camera_obscura.jpg
 ---
 height: 16em
-name: fig-repr-img-obscur1
+align: left
+name: camera_obscura
 ---
 ```
 
 ```{figure} media/camobscura.png
 ---
 height: 16em
-name: fig-repr-img-obscur2
+align: left
+name: camobscura
 ---
 La caméra obscura.
 ```
--->
 
+
+<!---
 
 <img src="media/camera_obscura.jpg" height="300" width="400"/> <img src="media/camobscura.png" height="300" width="400"/>
 
 La caméra obscura
 
+--->
 
 ### De la camera obscura à la caméra numérique
 
@@ -51,24 +55,24 @@ La différence est que dans un appareil photo numérique cette paroi, le capteur
 
 L'image numérique ne sera alors rien d'autre que la collection des mesures de tous les capteurs à un temps précis. Comme ces mesures sont organisées sous forme de tableau (grille), on parle souvent d'images matricielles. Plus le nombre de capteurs est grand, plus la résolution de cette image le sera aussi. 
 
-<!---
+
 ```{figure} media/captimage.png
 ---
 height: 16em
+align: left
 name: fig-repr-img-obscur3
 ---
 Principe de la capture numérique d'une image.
 ```
---->
-
+<!---
 <img src="media/captimage.png" height="300" width="400"/> 
 
 Principe de la capture numérique d'une image
+--->
 
 
 
-
-## Représentation d'une image en noir et blanc
+## 3.2. Représentation d'une image en noir et blanc
 
 ````{tabbed} Image
 ```{image} media/thuglife.png
@@ -90,22 +94,26 @@ Voilà une [activité débranchée](https://maitre.edunumsec2.ch/content/theme/r
 ```
 ````
 
-<!---
+
 ```{figure} media/bitmap1.png
 ---
 name: fig-bitmap-1
+align: left
 height: 250px
 width: 250px
 ---
 Tous les pixels marqués d'un 1 s'affichent en blanc, tous ceux marqués d'un 0 s'affichent en noir. 
+Ceci nous permet de construire des images simples, dessinées seulement en noir et blanc.
 ```
--->
 
+<!--
 <img src="media/bitmap1.png" height="300" width="400"/> 
 
 Tous les pixels marqués d'un 1 s'affichent en blanc, tous ceux marqués d'un 0 s'affichent en noir
 
-Ceci nous permet de construire des images simples, dessinées seulement en noir et blanc.
+-->
+
+
 
 ```{codeplay}
 import turtle
@@ -181,19 +189,20 @@ Un {glo}`pixel|pixel`, de l'anglais "**pic**ture **el**ement", est le composant 
 
 
 
-## Représentation d'une image en niveaux de gris
+## 3.3. Représentation d'une image en niveaux de gris
 
 Dans ce type d’image seul le niveau de l'intensité est codé sur un octet (256 valeurs). Par convention, la valeur 0 représente le noir (intensité lumineuse nulle) et la valeur 255 le blanc (intensité lumineuse maximale) :
 
-<!---
+
 ```{figure} media/Niveaux_gris.png
 ---
 name: fig-repr-img-pixel1
+align: left
 ---
 Niveaux de gris, codage sur 8 bits.
 ```
--->
 
+<!---
 <img src="media/Niveaux_gris.png" height="100" width="600"/>
 
 Niveaux de gris, codage sur 8 bits
@@ -208,22 +217,26 @@ Niveaux de gris, codage sur 8 bits
 :width: 300px
 ```
 ````
+-->
+
 
 En général, les images sont représentées sous forme de tableau numérique, aussi appelé format {glo}`matrice|matriciel`. Une image en niveau de gris sera ainsi représentée par un tableau de valeurs correspondant à la {glo}`luminance|luminance` de chaque pixel. Les valeurs de luminance sont des nombres allant de 0 (noir) à 255 (blanc). Pour encoder une image en niveaux de gris, chaque pixel nécessite donc 8 bits. 
 
-<!---
+
 ```{figure} media/image_et_pixels.svg
 ---
 name: fig-repr-img-pixel2
+align: left
 ---
 Image monochrome, pixels et luminance.
 ```
--->
+
+<!---
 
 <img src="media/image_et_pixels.svg" height="200" width="450"/>
 
 Image monochrome, pixels et luminance
-
+-->
 
 Pour accéder à un pixel particulier, il faut indiquer à quelle ligne et à quelle colonne de l'image ce pixel se trouve. Le pixel (0,0) correspondra normalement au pixel de la première ligne et de la première colonne.
 
@@ -232,7 +245,7 @@ Pour accéder à un pixel particulier, il faut indiquer à quelle ligne et à qu
 Ce mode de fonctionnement est similaire à celui des tableurs pour lesquels il est possible d'accéder à la valeur d'une case en utilisant sa référence. On pourrait d'ailleurs utiliser le formatage conditionnel pour transformer un tableau de valeurs dans un tableur en image matricielle.
 ```
 
-## Représentation d'une image en couleurs
+## 3.4. Représentation d'une image en couleurs
 
 ````{admonition} Anecdote
 :class: hint
@@ -267,19 +280,21 @@ En peinture, pour obtenir toutes les couleurs de l'arc-en-ciel, on utilise un m�
 
 Pour faire la même chose sur un écran, on utilisera également trois couleurs, mais celles-ci seront le rouge, le vert et le bleu (couleurs primaires). Cela correspond à la {glo}`synthadditive|synthèse additive` : en allumant une LED rouge par exemple, on ajoute de la lumière sur la partie du spectre lumineux correspondant.
 
-<!---
+
 ```{figure} media/SyntheseAdd_pixels.svg
 ---
 name: fig-repr-img-sys-pixel
+align: left
 ---
 Système additif et écran au microscope.
 ```
--->
 
+<!---
 <img src="media/SyntheseAdd_pixels.svg" height="200" width="400"/>
 
 Système additif et écran au microscope
 </br>
+-->
 
 Chaque couleur est donc représentée comme un mélange de ces trois couleurs et donc sous forme de trois entiers (triplet). Comme pour les images en niveaux de gris, ces entiers sont généralement représentés sur 8 bits ; les valeurs de luminance sont chacune déclarées comme un nombre allant de 0 (intensité nulle) à 255 (intensité maximale). Pour représenter une image en couleurs il faut donc 8 bits pour le niveau de rouge, 8 bits pour le niveau de vert, et 8 bits pour le niveau de bleu, soit 24 bits. 
 
@@ -512,28 +527,30 @@ La compression peut être réalisée avec ou sans perte :
 
 
 
-## Les images vectorielles
+## 3.5. Les images vectorielles
 
 
 Pour reproduire une image sur une feuille, on peut la diviser en grille et définir un niveau de gris pour chaque case, mais on peut aussi tout simplement dessiner une figure, par exemple un trait d'un millimètre d'épaisseur allant d'un point A à un point B de l'image. De la même manière, en informatique, il est possible de représenter des images sous forme de grilles de pixels, comme nous l'avons vu, mais il est en effet également possible de définir une image comme une collection d'objets graphiques élémentaires (un segment, un carré, une ellipse...) sur un espace plan : c'est le principe des images vectorielles.
 
 L'image vectorielle est dépourvue de matrice. Elle est en fait créée à partir d'équations mathématiques. Cette image numérique est composée d'objets géométriques individuels, des *primitives géométriques* (segments de droite, arcs de cercle, polygones, etc.), définies chacunes par différents attributs (forme, position, couleur, remplissage, visibilité, etc.) et auxquels on peut appliquer différentes transformations (rotations, écrasement, mise à l'échelle, inclinaison, effet miroir, symétrie, translation, et bien d'autres ...).
 
-<!---
+
 ```{figure} media/matvect.png
 ---
 name: fig-bitmap-2
+align: left
 height: 250px
 width: 400px
 ---
 Un même cercle en représentation matricielle et vectorielle. 
 ```
--->
 
 
+<!---
 <img src="media/matvect.png" height="300" width="500"/>
 
 Un même cercle en représentation matricielle et vectorielle
+-->
 <br>
 
 À l'inverse de l'image matricielle composée de pixels, l'image vectorielle peut être **redimensionnée** sans pour autant perdre en qualité. Elle est contenue dans un **fichier beaucoup plus léger** qu'une image pixelisée, indépendamment de sa taille et de sa résolution.
@@ -560,16 +577,16 @@ Modifier le fichier afin de dessiner quatre carrés différents.
 Identifiez et listez les avantages et les inconvénients du format vectoriel en comparaison avec le système matriciel.
 ```
 
-## Bonus
+## 3.6. Bonus
 
 [Une œuvre d'art numérique signée Andreas Gysin ...](https://play.ertdfgcvb.xyz/#/src/demos/doom_flame_full_color)
 
 <br>
 <br>
 
-## Exercices
+## 3.7. Exercices
 
-````{admonition} Exercice 1 : définition ✏️📒
+````{admonition} Exercice 3.7.1. - Définition ✏️📒
 :class: note
 <!--- <span style="color:green">Niveau débutant</span> -->
 
@@ -579,7 +596,7 @@ Quelle est la définition d’une feuille scannée de largeur 6,5 pouces, de h
 ````
 
 
-````{admonition} Exercice 2 : carte graphique ✏️📒
+````{admonition} Exercice 3.7.2. - Carte graphique ✏️📒
 :class: note
 <!--- <span style="color:orange">Niveau intermédiaire</span> -->
 
@@ -614,7 +631,7 @@ C'est la quantité de mémoire vive minimale que nécessite la carte graphique (
 ````
 
 
-````{admonition} Exercice 3 : compression ✏️📒
+````{admonition} Exercice 3.7.3. - Compression ✏️📒
 :class: note
 <!--- <span style="color:orange">Niveau intermédiaire</span> -->
 
@@ -636,7 +653,7 @@ Comme le taux de compression est 50, on divise par 2 : 1048576/2 = 524288 octets
 ````
 
 
-````{admonition} Exercice 4 : appareil photo ✏️📒
+````{admonition} Exercice 3.7.4. - Appareil photo ✏️📒
 :class: note
 <!--- <span style="color:orange">Niveau intermédiaire</span> -->
 
@@ -649,7 +666,7 @@ Calculez pour chaque type de résolution la taille de l’image non-compressée.
 ......
 
 ````
-````{admonition} Exercice 5 : pixelisation ✏️📒
+````{admonition} Exercice 3.7.5. - Pixelisation ✏️📒
 :class: note
 <!--- <span style="color:red">Niveau avancé</span> -->
 

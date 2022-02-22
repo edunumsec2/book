@@ -91,26 +91,27 @@ suffisamment grand pour être identifiables à longue distance. Une torche pouva
 5, représentait la ligne d'un tableau de décodage, le nombre de torches allumées
 à droite représentait la colonne de ce même tableau.
 
-<!--
-<center>
+
 ````{figure} media/polybe.png
 ---
 height: 400px
-width: 300px
+width: 500px
 name: fig-polybe
+align: left
 ---
-Le codage de la lettre "s" dans le carré de Polybe est quatre torches à gauche, trois torches à droite. 
+Le codage de la lettre «s» dans le carré de Polybe est quatre torches à gauche, trois torches à droite. 
 
 ````
 </center>
--->
 
+<!---
 
 ```{image} media/polybe.png
 :width: 400px
 :height: 300px
 ```
 Le codage de la lettre «s» dans le carré de Polybe est quatre torches à gauche, trois torches à droite 
+-->
 
 
 ````{admonition} Anecdote
@@ -124,25 +125,27 @@ Grâce à l'invention du [télescope](https://fr.wikipedia.org/wiki/T%C3%A9lesco
 
 [Claude Chappe](https://fr.wikipedia.org/wiki/Claude_Chappe), inventeur français, développe en 1794 un {glo}`telegraphe|télégraphe` capable de relier des villes entre elles sur plusieurs dizaines de kilomètres grâce à un système de bras mobiles, qui ressemblent aux signaux que pourrait faire un être humain sur le tarmac d'un aéroport. 
 
-<!--
-<center>
+
 
 ````{figure} media/chappe.jpeg
 ---
-height: 300px
-width: 300px
+height: 400px
+width: 500px
 name: fig-chappe
+align: left
 ---
 Le télégraphe de Chappe émet des signaux ressemblant aux bras d'un être humain. 
 ````
 </center>
--->
+
+<!---
 
 ```{image} media/chappe.jpeg
 :width: 400px
 :height: 300px
 ```
 Le télégraphe de Chappe émet des signaux ressemblant aux bras d'un être humain
+-->
 
 
 ````{admonition} Anecdote
@@ -162,23 +165,26 @@ Bien sûr, le Morse peut être utilisé aussi avec des signaux lumineux, ou sono
 [Vous trouverez ici](https://morsedecoder.com/) un traducteur du langage naturel vers le Morse.
 
 
-<!--
+
 ````{figure} media/morse.png
 ---
-height: 500px
-width: 350px
+height: 550px
+width: 450px
 name: fig-morse
+align: left
 ---
 Le code Morse est le système de représentation de l'information qui se rapproche le plus du langage binaire de l'informatique moderne. 
 ````
--->
+
+
+<!---
 
 ```{image} media/morse.png
 :width: 500
 :height: 500
 ```
 Le code Morse est le système de représentation de l'information qui se rapproche le plus du langage binaire de l'informatique moderne
-
+-->
 
 
 ````{admonition} Micro-activité
@@ -188,25 +194,15 @@ Amusez-vous avec votre assistant vocal en lui demandant par exemple : «Salut Si
 
 Si vous observez le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), vous remarquerez que les signaux utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet, puisqu'il est plus économique de coder les lettres les plus fréquentes avec les codes les plus courts.
 
-
+<!---
 ```{image} media/letterdistribution.png
 :width: 500
 :height: 350
 ```
 Ceci est une représentation de la fréquence moyenne de distribution des lettres dans la langue anglaise
-
-
-
-<!--
-```{figure} media/letterdistribution.png
----
-height: 350px
-width: 300px
-name: fig-distribution
----
-Ceci est une représentation de la fréquence moyenne de distribution des lettres dans la langue anglaise 
-```
 -->
+
+
 
 
 ````{admonition} Le saviez-vous ? 
@@ -224,16 +220,17 @@ La réponse à cette question est l'apport le plus essentiel de l'introduction d
 ````
 
 
-<!--
+
 ```{figure} media/letterdistribution.png
 ---
-height: 350px
-width: 300px
+height: 400px
+width: 450px
 name: fig-distribution
+align: left
 ---
 Ceci est une représentation de la fréquence moyenne de distribution des lettres dans la langue anglaise. 
 ```
--->
+
 
 
 
