@@ -10,6 +10,7 @@ parts:
       - file: content/ens/theme/rep-info/support/presentation
         sections:
           - file: content/ens/theme/rep-info/support/son/visu-et-ecoute-son
+          - file: content/ens/theme/rep-info/support/redondance/shannon2
       - file: content/ens/theme/rep-info/exo/presentation
         sections:
           - file: content/ens/theme/rep-info/exo/caracteres/carte-perforee/exercice
