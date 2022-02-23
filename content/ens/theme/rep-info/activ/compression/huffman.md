@@ -1,6 +1,6 @@
-# Compression et codage de Huffman
+# 5. Compression et codage de Huffman
 
-## Informations
+## 5.1. Informations
 
 Durée : 1 période de cours en classe
 
@@ -12,7 +12,7 @@ Objectifs : Faire comprendre aux élèves le principe de base derrière la compr
 
 Matériel (optionnel) : Quelques dés pour tirer une lettre (uniformément) au hasard parmi 16
 
-## Accroche(s)
+## 5.2. Accroche(s)
 
 Aussi étrange que cela puisse paraître, il est très souvent possible d'enregistrer un fichier de données d'une certaine taille en utilisant moins de place en mémoire que la taille initiale du fichier, et ceci sans perdre aucune information ! Ce sont les techniques de compression de données qui permettent de réaliser ça : l'activité qui suit permet de comprendre le principe de base de la compression de données à travers un jeu interactif avec les élèves.
 
@@ -20,9 +20,9 @@ Pour introduire le sujet, on peut parler également de manière générale du fa
 
 Une autre accroche possible est de parler du code Morse qui utilise un seul point pour la lettre E qui revient très souvent en français ou en anglais, tandis que la lettre X, beaucoup moins fréquente, est encodée par un trait, deux points, un trait.
 
-## Déroulement
+## 5.3. Déroulement
 
-### Premier jeu
+### 5.3.1. Premier jeu
 
 Ecrire au tableau la séquence de lettres : "ABCDEFGHIJKLMNOP", choisir une lettre (éventuellement au hasard, mais ce n'est pas nécessaire), la noter sur une feuille de papier, et demander à un·e volontaire de participer au jeu. Expliquer ensuite la règle du jeu :
 
@@ -46,7 +46,7 @@ Ce premier jeu sert d'introduction au sujet et ne traite pas directement de comp
 Il peut être également utile de mentionner que la séquence de questions optimales à poser n'est rien d'autre qu'une mise en oeuvre de l'algorithme de dichotomie. Pour donner une idée de son efficacité, on peut ajouter que ce même algorithme trouverait en 10 questions une lettre choisie au hasard parmi mille et en 20 questions une lettre choisie au hasard parmi un million. En comparaison, un algorithme consistant à essayer à chaque fois de deviner la lettre choisie ("Est-ce un A ?", "Est-ce un B ?", etc.) serait bien moins performant, à moins d'un heureux hasard !
 ```
 
-### Second jeu
+### 5.3.2. Second jeu
 
 Demander ensuite à un·e autre volontaire de participer à un second jeu, et écrire la phrase "SINGING IN THE RAIN" au tableau, composée de 16 lettres (sans les espaces, qu'on laisse de côté). Puis choisir une de ces 16 lettres (éventuellement au hasard, mais ça n'est pas absolument nécessaire) et la noter sur un bout de papier. Expliquer enfin que la règle du jeu reste la même: l'élève doit trouver la lettre choisie en posant un nombre minimum de questions binaires, mais noter qu'ici plusieurs lettres se répètent, et qu'il n'y a pas besoin de deviner la position précise de la lettre, mais juste la valeur de celle-ci, c'est-à-dire "S", "I", "N", etc.
 
@@ -79,7 +79,7 @@ nombre de questions  | 2 | 2 | 3 | 4 | 4 | 4 | 4 | 4 | 4 |
 
 On voit notamment que plus une lettre est fréquente, moins elle nécessite de questions.
 
-### Et la compression, dans tout ça?
+### 5.3.3. Et la compression, dans tout ça?
 
 Tout ceci semble a priori quelque peu éloigné du sujet, mais en fait, le lien avec l'algorithme de compression de Huffman est presque immédiat ! Voici plus précisément comment établir ce lien.
 
@@ -110,11 +110,11 @@ Pour autant, une question importante reste en suspens : quand on encode chaque l
 
 A priori, il peut sembler sans espoir de retrouver le message d'origine... Mais il se trouve que si on lit cette séquence *de gauche à droite*, alors muni du dictionnaire ci-dessus, le décodage de la séquence est très facile: il suffit de rechercher à quelle lettre peuvent correspondre les premiers bits de la séquence : en essayant avec les deux premiers, on voit que le mot de code 01 n'est pas listé dans le dictionnaire ; en essayant avec les trois premiers, on voit que 010 ne fait pas non plus partie du dictionnaire ; donc la première lettre est forcément celle encodée par les quatre premiers bits 0101, à savoir un S. Puis on refait la même chose avec le reste de la séquence de bits 11100111110011... : ici, on voit que les deux premiers bits forment le mot de code 11 correspondant à la lettre I ; et ainsi de suite... Le message d'origine peut ainsi être entièrement décodé ; il est donc bien vrai qu'aucune information n'est perdue !
 
-## Développements
+## 5.4. Développements
 
 Plusieurs remarques méritent d'être faites ici pour compléter la description de cette activité.
 
-### Utilisation du hasard dans le jeu
+### 5.4.1. Utilisation du hasard dans le jeu
 
 Si on tire uniformément la lettre à deviner parmi les 16 lettres qui composent la séquence (ce qui peut se faire en combinant les résultats de deux dés à 4 faces, par exemple), alors on peut estimer le *nombre moyen* de questions que posera l'élève suivant une stratégie optimale :
 
@@ -122,20 +122,20 @@ $\frac{8}{16} \times 2 + \frac{2}{16} \times 3 + \frac{6}{16} \times 4 = \frac{1
 
 Par définition, ce nombre est aussi égal au nombre moyen de bits utilisés par lettre par le codage de Huffman, et dans cet exemple précis, il correspond aussi à l'*entropie* de la séquence SINGING IN THE RAIN. Le premier théorème de Shannon stipule que pour n'importe quel système d'encodage qui permet un décodage sans ambiguïté (comme vu ci-dessus), le nombre moyen de bits utilisés par lettre ne peut jamais descendre en dessous de l'entropie de la séquence de lettres (noter cependant que la définition générale de l'entropie d'une séquence de lettres fait intervenir la notion de logarithme et dépasse donc les connaissances des élèves en première année de gymnase).
 
-### Dictionnaire sans préfixe
+### 5.4.2. Dictionnaire sans préfixe
 
 La magie qui permet de lire la séquence de gauche à droite vient du fait que par construction, aucun mot du dictionnaire construit avec ce système n'est le *préfixe* d'un autre. Par exemple, on trouve dans le dictionnaire les mots de code 110 et 0101, mais pas 110 et 1101, ni encore 010 et 0101. De cette façon, il n'y a aucune ambiguïté
 à décoder la séquence de gauche à droite.
 
-### Faut-il toujours recalculer un dictionnaire pour compresser chaque nouvelle séquence de lettres ?
+### 5.4.3. Faut-il toujours recalculer un dictionnaire pour compresser chaque nouvelle séquence de lettres ?
 
 Clairement, non. Si on a affaire à un texte écrit en français, par exemple, on peut se baser sur un dictionnaire établi une fois par toutes pour un texte "standard" (tel que la déclaration des droits de l'homme), en supposant souvent à raison que les fréquences d'apparition des lettres restent similaires d'un texte à l'autre.
 
-### Compresser des fichiers binaires ?
+### 5.4.4. Compresser des fichiers binaires ?
 
 Si la séquence qu'on désire compresser est elle-même une séquence de 0 et de 1 (c'est-à-dire, n'importe fichier de données numériques), que faire ? Dans ce cas, on peut simplement regrouper par 8 les bits de la séquence pour former des séquences de symboles (avec le code ASCII, par exemple), puis appliquer la méthode décrite ci-dessus.
 
-### Codages de Huffman de de Shannon-Fano
+### 5.4.5. Codages de Huffman de de Shannon-Fano
 
 Le système d'encodage présenté ci-dessus n'est à proprement parler pas exactement le codage de Huffman, mais plutôt le codage de Shannon-Fano. Ceci dit, dans l'exemple de la séquence SINGING IN THE RAIN, les deux systèmes d'encodage coïncident parfaitement. On observe par contre des différences mineures de performance entre les deux systèmes d'encodage (avec un avantage systématique à Huffman) dans des situations moins idéales où les nombres d'apparitions des lettres dans la séquence sont plus irréguliers.
 
@@ -147,7 +147,7 @@ codage de Shannon-Fano : https://www.youtube.com/watch?v=DSdTiFc3Aws
 
 codage de Huffman : https://www.youtube.com/watch?v=UAY-wpHZCs4
 
-### Autres algorithmes de compression
+### 5.4.6. Autres algorithmes de compression
 
 #### Compression sans pertes
 
@@ -157,6 +157,6 @@ Les codages de Huffman ou de Shannon-Fano ne sont de loin pas les seuls système
 
 Finalement, il importe de remarquer qu'il existe une pléthore d'autres algorithmes de compression dite "avec pertes", absolument pas évoqués ici, et permettant d'atteindre des taux de compression beaucoup plus élevés que ceux mentionnés plus haut, ceci au prix de la perte d'une partie de l'information contenue dans le signal d'origine. Tout l'art de la compression avec pertes consiste à se débarrasser de l'information qu'on ne perçoit pas ou peu (telle des fréquences inaudibles dans un son, des variations subtiles de bleu dans une photo du ciel, etc.) et à encoder proprement celle qui est nécessaire à une bonne reconstitution du signal. Citons notamment les formats de fichiers MP3, JPEG et MP4 qui utilisent de tels algorithmes de compression avec pertes pour le son, les images et la vidéo, respectivement.
 
-## Conclusion
+## 5.5. Conclusion
 
 Cette activité donne un aperçu du fonctionnement des algorithmes de compression de données, qui sont utilisés en permanence par les systèmes informatiques modernes. Il est à espérer que le côté ludique et interactif de l'activité permette de faire passer quelques idées sur un sujet qui reste quand-même techniquement un peu plus difficile que les autres vus dans ce chapitre. 

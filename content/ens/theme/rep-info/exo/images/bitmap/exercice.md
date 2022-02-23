@@ -1,7 +1,7 @@
 ![invaders](media/invaders.jpg)
 
 (spaceinvaders)=
-# Space Invaders
+# 3. Space Invaders
 
 >**Contenus abordés** : représentation de l'information, représentation des images, codage d'une image, code binaire, notion de bits. 
 
