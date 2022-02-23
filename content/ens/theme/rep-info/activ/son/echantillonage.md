@@ -202,7 +202,78 @@ align: left
 </br> </br>
 
 1ère phase.
-L'enseignant s'assure de la bonne compréhension des phénomènes : notions d'amplitude et de fréquence, dilatation temporelle, fréquences «visibles» des composantes du signal. En particulier, sur la dernière visualisation, on observe qu'on peut mettre en évidence une «quasi-période» entre les instants 0,8320 et 0,8345. Le calcul de la période donne donc 0,8345-0,8320 = 0,0025s, soit une fréquence de 1/0,0025 = 400Hz. L'enseignant questionne les élèves sur cette fréquence : est-elle basse ? haute ? L'enseignant s'appuie ensuite sur la génération d'un son «pur» à 400Hz, via les programmes python tracesinus.py, listensinus.py ou encore puresignalssum.py. Par la visualisation et l'écoute, les élèves peuvent se représenter l'information extraite du fichier audio (composante de fréquence ~ 400Hz).
+L'enseignant s'assure de la bonne compréhension des phénomènes : notions d'amplitude et de fréquence, dilatation temporelle, fréquences «visibles» des composantes du signal. En particulier, sur la dernière visualisation, on observe qu'on peut mettre en évidence une «quasi-période» entre les instants 0,8320 et 0,8345. Le calcul de la période donne donc 0,8345-0,8320 = 0,0025s, soit une fréquence de 1/0,0025 = 400Hz. L'enseignant questionne les élèves sur cette fréquence : est-elle basse ? haute ? L'enseignant s'appuie ensuite sur la génération d'un son «pur» à 400Hz, via les fonctions python **tracesinus**, **listensinus**. Par la visualisation et l'écoute, les élèves peuvent se représenter l'information extraite du fichier audio (composante de fréquence ~ 400Hz), puis comprendre ce qui se passe quand on ajoute plusieurs signaux à différentes fréquences (ici un signal de fréquence fondamentale 400Hz, puis ses 4 harmoniques suivantes : 800, 1200, 1600, 2000Hz) quand l'enseignant utilise la fonction python **puresignalssum**.
+
+
+```
+from __future__ import print_function
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+from pyo import *
+from tkinter import Tk, StringVar, Label, Entry, Button, Frame, DoubleVar, Spinbox
+from functools import partial
+
+def tracesinus(freq):
+#  sinus function at freq(Hz) frequency
+    t = np.arange(0., 0.01, 0.00005)
+    plt.plot(t,np.sin(2*pi*freq*t))
+    label1 = "fonction sinus, fréquence " 
+    label2 = str(freq) 
+    label3 = "Hz"
+    label = label1 + label2 + label3 
+    plt.ylabel(label)
+    plt.show()
+
+tracesinus(400)
+   ```
+```
+from __future__ import print_function
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+from pyo import *
+from tkinter import Tk, StringVar, Label, Entry, Button, Frame, DoubleVar, Spinbox
+from functools import partial
+
+def listensinus(freq):
+#  sinus function at freq(Hz) frequency
+   s = Server().boot()
+   s.start()
+   a = Sine(freq, mul=1, add=0).out()
+   time.sleep(5)
+   s.stop()
+
+listensinus(400)   
+   ```
+```
+from __future__ import print_function
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+from pyo import *
+from tkinter import Tk, StringVar, Label, Entry, Button, Frame, DoubleVar, Spinbox
+from functools import partial
+
+def puresignalssum(freq, harmo):
+#  harmonic signals
+   s = Server().boot()
+   somme = 0
+   for i in range (1,harmo+1):
+      s.start()
+      a = Sine(i*freq, mul=1, add=0).out()
+      time.sleep(1)
+#  graphic vizualisation       
+      namesc = 'Signal '+str(i*freq)+' Hz'
+      somme=somme+a
+   s.stop
+   sc = Scope(somme, 0.003, 0.2, wintitle='somme des signaux')
+   somme.out
+   s.gui(locals())
+
+puresignalssum(400, 5)   
+
+```
 
 </br>
 
