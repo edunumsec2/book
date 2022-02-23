@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Enseigner
-author: Groupe de travail DGEP, EPFL, HEP, UNIL
+author: Groupe de travail DGEP, EPFL, HEP Vaud, UNIL
 logo: logo_modulo.svg
 # exclude_patterns: ['**/eleve.md']
 
