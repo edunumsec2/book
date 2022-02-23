@@ -1,4 +1,4 @@
-# Carte perforée
+# 1. Carte perforée
 
 Une forme de stockage des données 
 permanante 

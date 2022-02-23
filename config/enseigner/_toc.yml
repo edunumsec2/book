@@ -21,7 +21,7 @@ parts:
         sections:
           - file: content/ens/theme/rep-info/activ/entiers/magie-binaire/magie_binaire
           - file: content/ens/theme/rep-info/activ/images/EncoderImages/EncoderImages
-          - file: content/ens/theme/rep-info/activ/son/echantillonage
+          - file: content/ens/theme/rep-info/activ/son/echantillonnage
           - file: content/ens/theme/rep-info/activ/redondance/hamming
           - file: content/ens/theme/rep-info/activ/compression/huffman
 

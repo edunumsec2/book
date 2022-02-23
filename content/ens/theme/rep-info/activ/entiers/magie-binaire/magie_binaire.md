@@ -1,20 +1,20 @@
-# Magie Binaire
+# 1. Magie Binaire
 
-## Introduction
+## 1.1. Introduction
 
 Une introduction au binaire de manière ludique en misant sur la curiosité à comprendre le fonctionnement d’un tour de magie.
 
-## Objectifs du cours
+## 1.2. Objectifs du cours
 
 Faire découvrir le binaire, comment écrire et compter en binaire mais aussi comment utiliser le binaire pour encoder de l’information.  
 Après cette séquence les élèves devraient avoir compris le système de numération des entiers positifs utilisant la base 2.  
 Ils auront également assimilé le fait que n’importe quelle information peut être représentée par une suite ordonnée de 0 et de 1, ce qui est à la base de tout ce qu’ils peuvent voir et faire sur un ordinateur ou un smartphone.
 
-## Durée
+## 1.3. Durée
 
 2 périodes de cours en classe (théorie et exercices *déconnectés*).
 
-## Matériel requis
+## 1.4. Matériel requis
 
 Les 6 cartes ci-dessous pour faire le tour de magie. Le fichier MagieBinaire.png est disponible en annexe pour impression.
 
@@ -26,13 +26,13 @@ Cartes Magie Binaire
 <img src="./MagieBinaire.png" alt="cartes" class="bg-primary" width="600px">
 ````
 
-## Accroche
+## 1.5. Accroche
 
 Vous allez faire un tour de magie !
 
-## Marche à suivre
+## 1.6. Marche à suivre
 
-### Étape 1 - Tour de magie [10-15 min.]
+### 1.6.1. Étape 1 - Tour de magie [10-15 min.]
 
 #### Objectif : Attiser la curiosité
 
@@ -54,7 +54,7 @@ Le secret du tour est simple, il suffit d'additionner le nombre en haut à gauch
 
 Vous allez faire ce qu’aucun magicien ne fait, vous allez expliquer le fonctionnement d'un tour de magie, mais comme c’est un tour de magie binaire, il faut d’abord acquérir les bases du binaire...
 
-### Étape 2 - Compter en binaire [15-20 min.]
+### 1.6.2. Étape 2 - Compter en binaire [15-20 min.]
 
 #### Objectif
 
@@ -70,7 +70,7 @@ Faire la même démonstration en base 2.
 
 Faire compter les élèves de 0 à 20 (ou plus) en binaire sur papier, ils peuvent écrire le nombre correspondant en base 10 à côté.
 
-### Étape 3 - Passage de la base 2 à la base 10 [15-20 min.]
+### 1.6.3. Étape 3 - Passage de la base 2 à la base 10 [15-20 min.]
 
 Revenez ensuite sur la numérotation en base 10 pour présenter la forme canonique.  
 Dans un système de position, comme le nôtre, pour connaître la valeur de chaque chiffre qui compose un nombre, il faut décomposer ce nombre pour identifier chaque chiffre et son coefficient.  
@@ -208,7 +208,7 @@ La dernière conversion de l'exercice 3 peut être obtenue rapidement si on rema
 À l'aide du tableau de l'exercice 2, comment peut-on passer de la base 10 à la base 2 ?  
 Faire les conversions binaires de différents nombres décimaux.
 
-### Étape 4 - Encodage de l'information [10-15 min.]
+### 1.6.4. Étape 4 - Encodage de l'information [10-15 min.]
 
 A l’instar du morse (0 = . ; 1 = - ), on peut utiliser le binaire pour (en)coder autre chose que des nombres. Introduire la notion du nombre de “mots” différents en fonction du nombre de bits.
 
@@ -234,7 +234,7 @@ Combien de bits faut-il pour représenter :
 * la présence/absence des élèves étant donnée la liste de présence ?
 * ...
 
-### Étape 5 - Explication du tour [10-15 min.]
+### 1.6.5. Étape 5 - Explication du tour [10-15 min.]
 
 L’idée ici est d’essayer d’amener les élèves à comprendre en observant les cartes et guidées par des questions telles que :
 
@@ -261,9 +261,9 @@ Chaque carte représente donc 1 des 6 bits nécessaire à l’encodage des entie
 Par conséquent l’information donnée par l’élève de présence ou non de son nombre sur une carte équivaut à la notion de 0 ou 1 sur un certain bit.  
 Une fois toutes les cartes passées en revue il a donné le code binaire de son nombre secret !
 
-## Pour aller plus loin
+## 1.7. Pour aller plus loin
 
-### Mise en pratique
+### 1.7.1. Mise en pratique
 
 Si on a du temps pour escalader la pyramide d’Anderson et Krathwohl[^1].
 
@@ -275,13 +275,13 @@ Les élèves doivent créer la version du tour pour le petit frère (ou petite s
 
 [^1]: LW, Anderson & DR, Krathwohl Eds. (2001). A Taxonomy for Learning, Teaching, and Assessing: A Revision of Bloom's Taxonomy of Educational Objectives.
 
-### Ouverture et questionnement
+### 1.7.2. Ouverture et questionnement
 
 * Les valeurs des puissances de 2 sont des valeurs qu’ils connaissent déjà ! Capacité de stockage des clés USB, smartphones, SSD, etc.. Pourquoi ?
 * Comment peut-on faire pour écrire des nombres négatifs, décimaux en binaire ?
 * À compléter...
 
-### Mobiliser les connaissances
+### 1.7.3. Mobiliser les connaissances
 
 Voici une énigme dont la solution utilise le principe de codage binaire.
 
