@@ -28,7 +28,7 @@ L'activité permet de réactiver, confirmer ou souligner des savoirs mécaniques
 
 ### 3.2.1. Mode
 
-**«branché/débranché»** utilisation de l'ordinateur et du logiciel Audacity - pas d'environnement de développement.  Cette activité peut permettre de faire utiliser le tableur et ses fonctionnalités aux élèves et coïncider avec un enseignement de type bureautique - science informatique transversal.
+**«Branché/débranché»** utilisation de l'ordinateur et du logiciel Audacity - pas d'environnement de développement.  Cette activité peut permettre de faire utiliser le tableur et ses fonctionnalités aux élèves et coïncider avec un enseignement de type bureautique - science informatique transversal.
 
 ### 3.2.2. Pré-requis  
 
@@ -87,9 +87,9 @@ Les éléments principaux à évoquer sont :
 
 - Notion de fréquence : nombre de battements par seconde. Nombre de fois où le signal redevient identique par seconde.
 
-- Avec les codes python [tracesinus.py](https://enseigner.modulo-info.ch/_static/copy-button.svg) et [listensinus.py](https://enseigner.modulo-info.ch/_static/copy-button.svg), l'enseignant affiche et fait écouter quelques exemples de sons «purs» (grave médium et aigu).
+- Avec les fonctions python [**tracesinus**](#tracesinus) et [**listensinus**](#listensinus), l'enseignant affiche et fait écouter quelques exemples de sons «purs» (grave médium et aigu).
 
-- L'enseignant ajoute ensuite plusieurs signaux sinusoïdaux avec le programme python [puresignalssum.py](https://enseigner.modulo-info.ch/_static/copy-button.svg) : somme d’harmoniques écoutée et visualisée.
+- L'enseignant ajoute ensuite plusieurs signaux sinusoïdaux avec la fonction python [**puresignalssum**](#puresignalssum)  : somme d’harmoniques écoutée et visualisée.
 
 - À la fin de la première période : l'enseignant sensibilise les élèves à l'utilisation d'Audacity : ouverture du logiciel, écoute d'un ou plusieurs morceaux. Les élèves commencent à manipuler en toute fin de séance et s'exerceront concrètement au cours de la suivante.
 
@@ -204,6 +204,7 @@ align: left
 1ère phase.
 L'enseignant s'assure de la bonne compréhension des phénomènes : notions d'amplitude et de fréquence, dilatation temporelle, fréquences «visibles» des composantes du signal. En particulier, sur la dernière visualisation, on observe qu'on peut mettre en évidence une «quasi-période» entre les instants 0,8320 et 0,8345. Le calcul de la période donne donc 0,8345-0,8320 = 0,0025s, soit une fréquence de 1/0,0025 = 400Hz. L'enseignant questionne les élèves sur cette fréquence : est-elle basse ? haute ? L'enseignant s'appuie ensuite sur la génération d'un son «pur» à 400Hz, via les fonctions python **tracesinus**, **listensinus**. Par la visualisation et l'écoute, les élèves peuvent se représenter l'information extraite du fichier audio (composante de fréquence ~ 400Hz), puis comprendre ce qui se passe quand on ajoute plusieurs signaux à différentes fréquences (ici un signal de fréquence fondamentale 400Hz, puis ses 4 harmoniques suivantes : 800, 1200, 1600, 2000Hz) quand l'enseignant utilise la fonction python **puresignalssum**.
 
+<a name="tracesinus"></a>
 
 ```
 from __future__ import print_function
@@ -227,6 +228,8 @@ def tracesinus(freq):
 
 tracesinus(400)
    ```
+
+<a name="listensinus"></a>   
 ```
 from __future__ import print_function
 import math
@@ -246,6 +249,8 @@ def listensinus(freq):
 
 listensinus(400)   
    ```
+
+<a name="puresignalssum"></a>   
 ```
 from __future__ import print_function
 import math
