@@ -56,7 +56,7 @@ La différence est que dans un appareil photo numérique cette paroi, le capteur
 L'image numérique ne sera alors rien d'autre que la collection des mesures de tous les capteurs à un temps précis. Comme ces mesures sont organisées sous forme de tableau (grille), on parle souvent d'images matricielles. Plus le nombre de capteurs est grand, plus la résolution de cette image le sera aussi. 
 
 
-```{figure} media/captimage.png
+```{figure} media/captimage.png
 ---
 height: 16em
 align: left
@@ -85,14 +85,7 @@ Principe de la capture numérique d'une image
 ```
 ````
 
-Un bit est l'unité minimale d'information qu'un ordinateur manipule : 1 ou 0, allumé ou éteint. L'image la plus simple qu'un ordinateur puisse afficher est constituée uniquement de noir et blanc. Ainsi, un pixel pourrait être à l'état soit «noir», soit «blanc». 
-
-````{role} prof
-```{admonition} Suggestion d'activité
-:class: caution
-Voilà une [activité débranchée](https://maitre.edunumsec2.ch/content/theme/representation-information/activites/representation-images/bitmap/bitmap.html) facilitant l'introduction des notions de bits noirs et blancs pour représenter une image.
-```
-````
+Un bit est l'unité minimale d'information qu'un ordinateur manipule : 1 ou 0, allumé ou éteint. L'image la plus simple qu'un ordinateur puisse afficher est constituée uniquement de noir et blanc. Ainsi, un pixel pourrait être à l'état soit «noir», soit «blanc».
 
 
 ```{figure} media/bitmap1.png
