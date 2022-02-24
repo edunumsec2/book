@@ -7,16 +7,6 @@ parts:
   chapters: 
   - file: content/ens/theme/rep-info/intro
     sections:
-      - file: content/ens/theme/rep-info/support/presentation
-        sections:
-          - file: content/ens/theme/rep-info/support/son/visu-et-ecoute-son
-          - file: content/ens/theme/rep-info/support/redondance/shannon2
-      - file: content/ens/theme/rep-info/exo/presentation
-        sections:
-          - file: content/ens/theme/rep-info/exo/caracteres/carte-perforee/exercice
-          - file: content/ens/theme/rep-info/exo/redondance/radiotelephonie/exercice
-          - file: content/ens/theme/rep-info/exo/images/bitmap/exercice
-          - file: content/ens/theme/rep-info/exo/images/tableur/exercice
       - file: content/ens/theme/rep-info/activ/presentation
         sections:
           - file: content/ens/theme/rep-info/activ/entiers/magie-binaire/magie_binaire
@@ -24,6 +14,16 @@ parts:
           - file: content/ens/theme/rep-info/activ/son/echantillonnage
           - file: content/ens/theme/rep-info/activ/redondance/hamming
           - file: content/ens/theme/rep-info/activ/compression/huffman
+      - file: content/ens/theme/rep-info/exo/presentation
+        sections:
+          - file: content/ens/theme/rep-info/exo/caracteres/carte-perforee/exercice
+          - file: content/ens/theme/rep-info/exo/redondance/radiotelephonie/exercice
+          - file: content/ens/theme/rep-info/exo/images/bitmap/exercice
+          - file: content/ens/theme/rep-info/exo/images/tableur/exercice    
+      - file: content/ens/theme/rep-info/support/presentation
+        sections:
+          - file: content/ens/theme/rep-info/support/son/visu-et-ecoute-son
+          - file: content/ens/theme/rep-info/support/redondance/shannon2    
 
   - file: content/ens/theme/prog1/maitre
     sections:
