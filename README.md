@@ -117,6 +117,50 @@ Pour ceux et celles qui souhaitent utiliser l'environnement Jupyter Book pour te
 
 ### Installation recommandée
 
+
+![modulo-banner](https://github.com/edunumsec2/modulo2/blob/main/source/_static/assets/modulo-head-banner.svg)
+
+Modulo2 est basé sur le générateur de documentation [Sphinx](https://www.sphinx-doc.org/en/master/) et utilise le template [Furo](https://github.com/pradyunsg/furo).
+
+# Pré-requis
+- Python 3.x et pip ([Installation MacOSX](https://docs.python-guide.org/starting/install3/osx/)) ([Installation Windows](https://docs.python-guide.org/starting/install3/win/)) ([Installation rapide](https://www.python.org/downloads/))
+- [virtualenv](https://virtualenv.pypa.io/en/latest/) (`$ pip install virtualenv`)
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+Pour vérifier la bonne installation de l'environnement de base :
+- `$ python --version`
+- `$ virtualenv --version`
+- `$ git --version`
+
+Pour simplifier les actions fréquentes (build, clean), le projet contient un workspace pour [Visual Studio Code](https://code.visualstudio.com/). L'utilisation de VSCode est optionnelle, vous pouvez bien sûr utiliser votre éditeur de code préféré.
+
+# Installation rapide
+1. Récupération du projet : `git clone git@github.com:edunumsec2/book.git`
+2. Vers la racine du projet : `cd book` 
+3. Création d'un environnement virtuel : `virtualenv .env`
+4. Activation de l'environnement virtuel : 
+  - Sur MacOS : `source .env/bin/activate`
+  - Sur Windows : `.env\Scripts\activate`
+5. Installation des librairies dans l'environnement virtuel : `pip install -r requirements.txt -U`
+
+**Remarque** : à chaque fois que vous travaillez sur le projet, l'environnement virtuel devrait être activé (point 4).
+
+# Utilisation
+Le projet utilise [sphinx-autobuild](https://github.com/executablebooks/sphinx-autobuild) qui démarre un serveur sur http://localhost:8000 (ou http://127.0.0.1:8000) et rebuild la documentation automatiquement lorsqu'un changement est détecté. 
+1. Activation de l'environnement virtuel (si pas déjà fait)
+2. Activation du serveur local :
+  - Documentation 'Apprendre' : `sphinx-autobuild config/apprendre build/apprendre --watch source --open-browser -a --delay 1`
+  - Documentation 'Enseigner' : `sphinx-autobuild config/enseigner build/enseigner --watch source --open-browser -a --delay 1`
+
+Pour arrêter le serveur : <kbd>CTRL</kbd>+<kbd>c</kbd> ou <kbd>⌘</kbd>+<kbd>c</kbd>
+
+# Génération de build
+- Génération du build 'Apprendre' : `sphinx-build -b html docs/apprendre build/apprendre`
+- Génération du build 'Enseigner' : `sphinx-build -b html docs/enseigner build/enseigner`
+
+
+**OLD**
+
  1. Seulement si pas encore présent: [installer git](https://git-scm.com/downloads) sur votre machine
    * Sous Windows, il faut activer les symlinks de git. Après l'installation de git, éditer le fichier `C:\ProgramData\Git\config` et y insérer:
 
