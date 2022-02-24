@@ -1,0 +1,9 @@
+h1 {
+    color: rgb(60, 201, 72);
+}
+
+.codeframe {
+    height: 250px;
+    width: 100%;
+    overflow: scroll;
+}

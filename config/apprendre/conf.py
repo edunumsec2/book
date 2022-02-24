@@ -32,10 +32,7 @@ release = '0.1'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-sys.path.append(os.path.abspath("../extensions/codeplay"))
-sys.path.append(os.path.abspath("../extensions/glossary"))
-sys.path.append(os.path.abspath("../extensions/questions"))
-sys.path.append(os.path.abspath("../extensions/videos"))
+sys.path.append(os.path.abspath("../source/extensions"))
 extensions = [
     'codeplay',
     'glossary',
@@ -69,9 +66,8 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 html_theme = 'furo'
-html_favicon = '../source/_static/modulo-icon.ico'
+html_favicon = '../source/_static/favicon.ico'
 html_title = 'Apprendre'
-
 html_theme_options = {
     "light_logo": "modulo-logo-light.svg",
     "dark_logo": "modulo-logo-dark.svg",
