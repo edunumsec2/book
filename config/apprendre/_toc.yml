@@ -21,6 +21,29 @@ parts:
       - file: content/appr/theme/rep-info/cours/conclusion/eleve
 
   ### Programmation    
+  - file: content/appr/theme/prog1/new/intro
+    sections:
+      - file: content/appr/theme/prog1/new/dessiner
+      - file: content/appr/theme/prog1/new/definir
+      - file: content/appr/theme/prog1/new/colorier
+      - file: content/appr/theme/prog1/new/repeter
+      - file: content/appr/theme/prog1/new/cercler
+      - file: content/appr/theme/prog1/new/parcourir
+      - file: content/appr/theme/prog1/new/questionner
+      - file: content/appr/theme/prog1/new/calculer
+      - file: content/appr/theme/prog1/new/decider
+      - file: content/appr/theme/prog1/new/ecrire
+      - file: content/appr/theme/prog1/new/write
+      - file: content/appr/theme/prog1/new/iterer
+      - file: content/appr/theme/prog1/new/attendre
+      - file: content/appr/theme/prog1/new/parametrer
+      - file: content/appr/theme/prog1/new/renvoyer
+      - file: content/appr/theme/prog1/new/grouper 
+      - file: content/appr/theme/prog1/new/randomiser
+      - file: content/appr/theme/prog1/new/trier
+      - file: content/appr/theme/prog1/new/turtleart
+      - file: content/appr/theme/prog1/new/annexe
+
   - file: content/appr/theme/prog1/accueil/elevenew
     sections:
       - file: content/appr/theme/prog1/cours/1_intro/intro 
@@ -32,7 +55,8 @@ parts:
       - file: content/appr/theme/prog1/cours/7_fonc/fonc
       - file: content/appr/theme/prog1/cours/8_mod/mod
 #     - file: content/appr/theme/prog1/cours/9_app/app 
-      - file: content/appr/theme/prog1/cours/10_conclusion/concl 
+      - file: content/appr/theme/prog1/cours/10_conclusion/concl
+      - file: content/appr/theme/prog1/intro
 
   ### Algorithmique         
   - file: content/appr/theme/algo1/accueil/eleve

@@ -1,5 +1,5 @@
 (programmation)=
-# Programmation I
+# Programmation I (ancienne approche)
 
 
 Notre vie moderne est imprégnée de nos interactions avec des ordinateurs. La communication, la recherche d'information, les divertissements, les processus, les réseaux sociaux ou encore les object connectés sont autant d'exemples de choses qui font désormais partie de notre quotidien. En sachant programmer un ordinateur, on se dote d'un outil considérable pour simplifier, multiplier et accélérer certaines actions comme la gestion de réservations pour un grand hôtel, effectuer une quantité importante de calculs dans un projet de recherche et même la bonne réalisation d’une recette de cuisine. 
