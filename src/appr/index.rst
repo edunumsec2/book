@@ -24,7 +24,10 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    :maxdepth: 3
    :hidden:
 
-   rep-info/accueil/eleve.md
+   rep-info/index
+   prog1/index
+   algo1/index
+   archi/index
 
 .. toctree::
    :name: Deuxième année
