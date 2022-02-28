@@ -75,13 +75,67 @@ html_theme_options = {
     "dark_logo": "modulo-logo-dark.svg",
     "announcement": (
         "version : 2021-12-03b"
-    )
+    ),
+    "navigation_with_keys": True,
+    "light_css_variables": {
+        # Base colors
+        "color-foreground-primary": "black",
+        "color-foreground-secondary": "#5a5c63", # for secondary text,
+        "color-foreground-muted": "#646776", # for muted text
+        "color-foreground-border": "#878787", # for content borders
+
+        "color-background-primary": "white", # for content
+        "color-background-secondary": "#f8f9fb", # for navigation + ToC
+        "color-background-hover": "#efeff4ff", # for navigation-item hover
+        "color-background-over--transparent": "#efeff400", 
+        "color-background-border": "#eeebee", # for UI borders
+
+        # Announcement colors
+        "color-announcement-background": "#000000dd",
+        "color-announcement-text": "#eeebee",
+
+        # Brand colors
+        "color-brand-primary": "#8044FF", # violet
+        "color-brand-content": "#8044FF", # violet
+        
+        # Admonition font size
+        "admonition-font-size": "0.9rem",
+        "admonition-title-font-size": "0.9rem",
+    },
+    "dark_css_variables": {
+        # Base colors
+        "color-foreground-primary": "#ffffffcc",
+        "color-foreground-secondary": "#9ca0a5", # for secondary text,
+        "color-foreground-muted": "#81868d", # for muted text
+        "color-foreground-border": "#666666", # for content borders
+
+        "color-background-primary": "#131416", # for content
+        "color-background-secondary": "#131416", # for navigation + ToC
+        "color-background-hover": "#1e2124ff", # for navigation-item hover
+        "color-background-over--transparent": "#1e212400", 
+        "color-background-border": "#303335", # for UI borders
+
+        # Announcement colors
+        "color-announcement-background": "#000000dd",
+        "color-announcement-text": "#eeebee",
+
+        # Brand colors
+        "color-brand-primary": "#06CCC0", # bleu clair
+        "color-brand-content": "#06CCC0", # bleu clair
+        
+        # Admonition font size
+        "admonition-font-size": "0.9rem",
+        "admonition-title-font-size": "0.9rem",
+    },
 }
 
-html_css_files = ['../static/styles/global.css']
+html_css_files = ['styles/global.css']
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['../static']
+html_static_path = ['../../source/_static']
 html_js_files = ['https://unpkg.com/@popperjs/core@2', 'scripts/frames.js']
+
+pygments_sytle = "sphinx"
+pygments_dark_style = "monokai"
