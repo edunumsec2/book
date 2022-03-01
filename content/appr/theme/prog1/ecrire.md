@@ -196,7 +196,7 @@ Les chaînes de texte peuvent être préfixées par la lettre `r`; de telles cha
 :file: str12.py
 print(r'c\'est bien')
 print(r"\"citation\"")
-print(r'c\'est la \\barre oblique\\ en arière.')
+print(r'c\'est la \\barre oblique\\ en arrière.')
 ```
 
 ## Retour à la ligne
@@ -225,9 +225,9 @@ print('12\tclavier\t25.95')
 
 ## Les émojis
 
-Un  émoji (絵文字), est un terme issu du japonais pour désigner les pictogrammes utilisés dans les messages électroniques et les pages web japonaises, qui se sont répandus dans le monde entier.
+Un  émoji (絵文字) est un terme issu du japonais pour désigner les pictogrammes utilisés dans les messages électroniques et les pages web japonaises, qui se sont répandus dans le monde entier.
 
-Le mot emoji signifie littéralement « image » (e) + « lettre » (moji) ; la ressemblance avec « émotion » est un jeu de mot interculturel.
+Le mot émoji signifie littéralement « image » (e) + « lettre » (moji) ; la ressemblance avec « émotion » est un jeu de mot interculturel.
 
 Un émoji peut être utilisée comme un caractère à l'intérieur d'un texte.
 Nous pouvons le répéter avec l'opérateur `*` et obtenir son code **Unicode** avec la fonction `ord(c)`.
@@ -345,7 +345,7 @@ for c in mot:
 
 ## Narration
 
-Voici un exemple qui affiche une conversation entre deux personnes, affiché en ralenti, lettre par lettre, pour simuler une sorte de communication chat en ligne.
+Voici un exemple qui reproduit une conversation entre deux personnes, affichée au ralenti, lettre par lettre, pour simuler une sorte de communication chat en ligne.
 
 La méthode `split('\n')` découpe la chaine `histoire` en lignes séparées, et retourne une liste.
 
@@ -361,7 +361,7 @@ B: très bien !
 A: veux-tu faire un voyage ?
 B: oui, vers où ?
 A: à Rio de Janeiro.
-B: choutte, on part quand ?
+B: chouette, on part quand ?
 A: il y a un vol ce soir.
 """
 
@@ -474,7 +474,7 @@ hideturtle()
 
 ### Structurer le code
 
-Nous découpons le programme en sous-programme que nous nommons avec des noms descriptifs. Ensuite nous appelons tous les fonctions pour dessiner la potence avec le pendu.
+Nous découpons le programme en sous-programme que nous nommons avec des noms descriptifs. Ensuite nous appelons toutes les fonctions pour dessiner la potence avec le pendu.
 
 ```{codeplay}
 from turtle import *
@@ -535,7 +535,7 @@ jambe2()
 
 ### Jeu final
 
-Pour pouvoir exécuter les fonctions du pendu au bon moment, nous placeons les fonctions dans un tuple. Nous allons accéder la fonction avec un indice.
+Pour pouvoir exécuter les fonctions du pendu au bon moment, nous plaçons les fonctions dans un tuple. Nous allons accéder la fonction avec un indice.
 
 ```{codeplay}
 :output_lines: 5
@@ -612,7 +612,7 @@ for i in range(10):
 
 ### Le pendu
 
-Créez le jeu du pendu avec un répertoire de 50 mots dans un tuple. Votre programme choisi un de ces mots aléatoirement avec la fonction `choice()` du module `random`, comme montré ci-dessous.
+Créez le jeu du pendu avec un répertoire de 50 mots dans un tuple. Votre programme choisit un de ces mots aléatoirement avec la fonction `choice()` du module `random`, comme montré ci-dessous.
 
 ```{codeplay}
 from random import *
