@@ -347,7 +347,7 @@ align: left
 Une fois le tableau complété, il est projeté : l'enseignant questionne les élèves sur l'interprétation qu'ils peuvent donner des graphes issus du tableau de données. Il doit faire ainsi ressortir la qualité perçue à partie de la fréquence d'échantillonnage de 44100Hz. La nécessité d'une *fréquence d'échantillonnage minimale* doit ici apparaître.
 Dans un deuxième temps, l'enseignant interroge sur les résultats pour les fréquences supérieures. L'inutilité d'aller au-delà d'une certaine fréquence (en l'occurence 44100 Hz) doit ressortir.
 L'étape suivante consiste à identifier cette valeur de 44100 Hz : à quoi correspond-elle ? L'enseignant revient sur le champ audible par l'oreille humaine : 20Hz - 20000Hz... Il situe alors 44100Hz par rapport à la fréquence la plus élevée que peut percevoir l'oreille humaine, 20000Hz... La fréquence d'échantillonnage apparaît comme devant être au moins égale au double de cette fréquence de 20000Hz.
-En dernier lieu, l'enseignant revient sur la notion même de fréquence d'échantillonnage. Que signifie-t-elle ? C'est le nombre d'échantillons pris par unité de temps. L'enseignant illustre son propos par le dernier visuel de la figure 4 : entre les temps 6,8310s et 6,8315s, on dénombre à peu près 23 échantillons, soit 23/0,0005 = 46000Hz. On retrouve quasiment la fréquence 44100 Hz apparaissant en bas à gauche de la fenêtre Audacity - <span style="color:violet">15-20mn</span>.
+Ensuite, l'enseignant revient sur la notion même de fréquence d'échantillonnage. Que signifie-t-elle ? C'est le nombre d'échantillons pris par unité de temps. L'enseignant illustre son propos par le dernier visuel de la figure 4 : entre les temps 6,8310s et 6,8315s, on dénombre à peu près 23 échantillons, soit 23/0,0005 = 46000Hz. On retrouve quasiment la fréquence 44100 Hz apparaissant en bas à gauche de la fenêtre Audacity.
 
 ```{figure} png/Im41.png
 ---
@@ -357,6 +357,24 @@ align: left
 ---
 **Identification de la fréquence d'échantillonnage (ici 44100Hz).**
 ```
+En dernier lieu, il convient de s'interroger sur les conséquences de l'augmentation de la fréquence d'échantillonnage. L'enseignant affiche la deuxième feuille du fichier excel intégrant à présent la taille des fichiers numérisés aux différentes fréquences. 
+
+```{figure} png/EchOccMem.png
+---
+alt:
+width: 100%
+align: left
+---
+**Echantillonnage et occupation mémoire.**
+```
+
+
+
+
+
+
+Le graphique affiche clairement la croissance forte de l'occupation mémoire en fonction de la fréquence d'échantillonnage, au delà de 48000Hz... ainsi que le changement du mode de compression (on passe d'un format MP3 à un format WAV). L'analyse avec les élèves de la courbe permet de comprendre explicitement la nécessité de borner la fréquence d'échantillonnage : pas trop faible pour garantir une bonne qualité audio, pas trop élevée pour ne pas occuper inutilement de la place mémoire - <span style="color:violet">20-25 mn</span>.
+
 
 ### 3.3.4. Evaluation : quizz moodle maison
 
