@@ -450,6 +450,99 @@ for i in range(3):
 - Editez-le dans un éditeur.
 - Déposez-le sur Moodle.
 
+
+### Minecraft - escalier
+
+Avec les cubes de Minecraft créez un escalier avec 4 marches.
+
+```{codeplay}
+:file: minecraft_ex1.py
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+
+def cube():      
+    for c in ('lime', 'peru', 'sienna'):
+        fillcolor(c)
+        begin_fill()
+        losange()
+        end_fill()
+        left(120)
+
+speed(0)
+left(30)
+cube()
+```
+
+### Minecraft - portail
+
+Avec les cubes de Minecraft créez un portail 4x4 en forme de π.
+
+```{codeplay}
+:file: minecraft_ex2.py
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+
+def cube():      
+    for c in ('lime', 'peru', 'sienna'):
+        fillcolor(c)
+        begin_fill()
+        losange()
+        end_fill()
+        left(120)
+
+speed(0)
+left(30)
+cube()
+```
+
+### Pavage hexagonal
+
+Le pavage hexagonal est, en géométrie, un pavage du plan euclidien constitué d'hexagones réguliers.
+
+![pavage](media/pavage_hex.png)
+
+Parcourez les 3 couleurs pour dessiner une surface tricolore, soit aligné linéairement, soit autour d'un point commun. Répétez ensuite cette surface élémentaire pour créer un pavage.
+
+```{codeplay}
+:file: pavage.py
+from turtle import *
+
+def hexagone():
+    for i in range(6):
+        forward(40)
+        left(60)
+
+hexagone()
+```
+
+### Cube de Rubik
+
+A l'aide de tuples de couleurs, dessinez le cube de Rubik suivant.
+
+![pavage](media/rubik.jpg)
+
+
+```{codeplay}
+:file: rubik.py
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+
+
+losange()
+```
+
 ### Tetris
 
 Le jeu vidéo [Tetris](https://fr.wikipedia.org/wiki/Tetris) est un puzzle conçu par l'informaticien russe Alekseï Pajitnov en 1984.
