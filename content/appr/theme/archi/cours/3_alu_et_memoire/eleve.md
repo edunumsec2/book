@@ -4,7 +4,7 @@
 Dans cette section, nous continuons notre exploration de comment les portes logiques, selon leur assemblage, fournissent les fonctionnalités de base des ordinateurs. En particulier, nous nous intéressons à comment faire effectuer plusieurs opérations à un ordinateur via ce qui s'appelle une unité arithmétique et logique, puis nous voyons comment l'ordinateur se rappelle les résultats des calculs intermédiaires via des bascules.
 
 
-## Unité arithmétique et logique
+## 3.1. Unité arithmétique et logique
 
 Dans la section précédente, nous avons vu comment créer, via un assemblage de portes logiques, un circuit qui réalise l'addition de deux nombres de 4 bits. Ce circuit était fixe : avec les deux nombres d'entrées, il réalisait toujours une addition et ne servait ainsi qu'à ça.
 
@@ -438,7 +438,7 @@ Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effec
 
 ```{logic}
 :height: 400
-:showonly: LogicInput LogicOutput DisplayNibble
+:showonly: in in.nibble out out.nibble
 
 {
   "v": 1,
@@ -529,7 +529,7 @@ Ce qui nous intéresse spécialement, c'est la comparaison à la ligne 3. Cette 
 
 ```{logic}
 :height: 330
-:showonly: ALU LogicInput LogicOutput NOT OR AND XOR
+:showonly: ALU in out NOT OR AND XOR
 
 {
   "v": 1,
@@ -742,7 +742,7 @@ Notez que grâce à la représentation en complément à deux, la circuiterie in
 ````
 
 
-## Mémoire
+## 3.3. Mémoire
 
 Les {glo}`transistor|transistors`, les {glo}`portelogique|portes logiques` et leur représentation en {glo}`tableverite|tables de vérités`, permettent de manipuler des 0 et des 1 au niveau physique.. Tant qu'un courant électrique se déplace dans les {glo}`circuit|circuits`, on est capable de le transformer, de le laisser passer ou de l'arrêter, dans le but d'exprimer des portes « ouvertes » ou des portes « fermées » et donc des nombres binaires. L'ALU va une étape plus loin et permet de choisir une opération à effectuer en fonction de bits de contrôle supplémentaire, et livre le résultat de l'opération arithmétique ou logique choisie.
 
@@ -936,7 +936,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 
 ```{logic}
 :height: 400
-:showonly: AND OR NOT XOR FlipflopD
+:showonly: AND OR NOT XOR Flipflop-D
 
 {
   "v": 1,
@@ -1015,7 +1015,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 
 ```{logic}
 :height: 300
-:showonly: AND OR NOT XOR FlipflopD
+:showonly: AND OR NOT XOR Flipflop-D
 
 {
   "v": 1,
@@ -1058,7 +1058,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 
 
 `````{admonition} Exercice 8 : jeu de fréquences
-Observez le circuit ci-dessous. L'horloge principale $A$ fonctionne ici toute seule et produit un coup d'horloge par seconde (elle a donc une fréquence d'un hertz — 1 Hz). Que pouvez-vous dire des signaux $B$ et $C$ par rapport au signal $A$ ? Comment expliquer cela avec ce que vous savez des bascules ?
+Observez le circuit ci-dessous. L'horloge principale $A$ fonctionne ici toute seule et produit un coup d'horloge par seconde (elle a donc une fréquence d'un hertz — 1 Hz). Que pouvez-vous dire des signaux $B$ et $C$ par rapport au signal $A$ ? Comment expliquer cela avec ce que vous savez des bascules ? (Pour simplifier, le délai de propagation est ici presque nul.)
 
 Vous pouvez mettre l'animation en pause et exécuter chaque transition pas à pas pour mieux comprendre ce qui se passe.
 
@@ -1068,6 +1068,7 @@ Vous pouvez mettre l'animation en pause et exécuter chaque transition pas à pa
 
 {
   "v": 1,
+  "opts": {"propagationDelay": 0},
   "in": [{"type": "clock", "pos": [40, 30], "id": 30, "period": 1000}],
   "out": [
     {"pos": [380, 30], "id": 7, "name": "A"},
@@ -1454,7 +1455,7 @@ montrer circuit corrigé
 `````
 -->
 
-## Récapitulatif
+## 3.4. Récapitulatif
 
 Au cours des trois chapitres précédents, nous avons vu comment les portes logiques sont utilisées comme composants de base des ordinateurs. Nous avons d'abord exploré des portes simples comme **OU** et **ET**, puis montré comment ces portes peuvent être combinées en systèmes logiques plus complexes.
 

@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Enseigner
-author: Groupe de travail DGEP, EPFL, HEP, UNIL
+author: Groupe de travail DGEP, EPFL, HEP Vaud, UNIL
 logo: logo_modulo.svg
 # exclude_patterns: ['**/eleve.md']
 
@@ -37,6 +37,8 @@ sphinx:
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     html_favicon: favicon.ico
     html_extra_path: ['../assets']
+    html_theme_options:
+      search_bar_text: "Rechercher…"
     myst_enable_extensions:
       - amsmath
       - colon_fence

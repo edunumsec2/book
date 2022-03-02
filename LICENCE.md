@@ -8,5 +8,5 @@ Toute personne qui réutilise les ressources est priée de le faire de la façon
 
 * 💰 Pas d'utilisation commerciale. 
 * ♻️ Possibilité de modifier les ressources à souhait. 
-* 📗 Crédit : "Par le groupe de travail DGEP, EPFL, HEP, UNIL". 
+* 📗 Crédit : "Par le groupe de travail DGEP, EPFL, HEP Vaud, UNIL". 
 * 🤝 Partage selon les mêmes conditions. Donc en ajoutant simplement le logo ci-dessus pour toute publication éventuelle. 

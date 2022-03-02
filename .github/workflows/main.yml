@@ -8,7 +8,7 @@ on:
 
 # This job installs dependencies, builds the book, and pushes it to `gh-pages`
 jobs:
-  deploy-book:
+  deploy-book-appr:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -30,10 +30,40 @@ jobs:
       working-directory: ./config/apprendre
     # Push the book's HTML to Infomaniak FTP
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.0-beta
       with:
         server: 31826.ftp.infomaniak.com
         username: 31826_elliot
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: config/apprendre/_build/html/
         server-dir: sites/dev-apprendre.modulo-info.ch/
+
+  deploy-book-ens:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    # Install dependencies
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+      working-directory: ./config/enseigner
+    # Build the book
+    - name: Build the book
+      run: |
+        jupyter-book build .
+      working-directory: ./config/enseigner
+    # Push the book's HTML to Infomaniak FTP
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.0-beta
+      with:
+        server: 31826.ftp.infomaniak.com
+        username: 31826_elliot
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: config/enseigner/_build/html/
+        server-dir: sites/dev-enseigner.modulo-info.ch/

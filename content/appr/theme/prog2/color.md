@@ -33,7 +33,7 @@ from turtle import *
 up()
 
 color(1, 0, 0)  # rouge
-back(200)
+backward(200)
 dot(80)
 
 color(1, 1, 0)  # jaune
@@ -77,7 +77,7 @@ colormode(255)
 up()
 
 color(255, 0, 0)  # rouge
-back(200)
+backward(200)
 dot(80)
 
 color(255, 255, 0)  # jaune
@@ -107,7 +107,7 @@ from turtle import *
 up()
 
 color(0, 0, 0)  # 0%
-back(200)
+backward(200)
 dot(80)
 
 color(0.25, 0, 0)  # 25%
@@ -242,7 +242,7 @@ def axe(angle, couleur):
     forward(180)
     stamp()
     write('  '+couleur, font=(None, 18))
-    back(180)
+    backward(180)
     
 getscreen().bgcolor('black')
 color('white')
@@ -333,6 +333,85 @@ for x in ('blue', 'red', 'lime', 'black'):
         if i == 2:
             end_fill()
     right(60 if x == 'lime' else 120)  
+```
+
+## Dégradé radial
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+
+for x in range(255):
+    dot(255-x, (x, x, x))
+```
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+
+for x in range(0, 255, 5):
+    dot(255-x, (x, x, x))
+    forward(0.5)
+```
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+
+for x in range(0, 255, 5):
+    dot(255-x, (x, x, 0))
+    forward(0.5)
+```
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+
+for x in range(0, 255, 5):
+    dot(255-x, (x, 0, 0))
+    forward(0.5)
+```
+
+## Dégradé linaire
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+speed(0)
+
+def ligne(p, q):
+    goto(p)
+    down()
+    goto(q)
+    up()
+
+for x in range(255):
+    color(x, x, x)
+    ligne((x, -200), (x, 200))
+```
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+left(90)
+width(7)
+speed(0)
+
+def ligne(p, q):
+    goto(p)
+    down()
+    goto(q)
+    up()
+
+for x in range(0, 255, 5):
+    color(x, x, x)
+    ligne((x, -200), (x, 200))
 ```
 
 ## Quiz

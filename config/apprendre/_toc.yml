@@ -21,41 +21,29 @@ parts:
       - file: content/appr/theme/rep-info/cours/conclusion/eleve
 
   ### Programmation    
-#  - file: content/appr/theme/prog1/accueil/elevenew
-  - file: content/appr/theme/prog1/new/intro
-
+  - file: content/appr/theme/prog1/intro
     sections:
-#      - file: content/appr/theme/prog1/cours/1_intro/intro 
-#      - file: content/appr/theme/prog1/cours/2_pyth/pyth
-#      - file: content/appr/theme/prog1/cours/3_var/var
-#      - file: content/appr/theme/prog1/cours/4_flux/flux
-#      - file: content/appr/theme/prog1/cours/5_list/list
-#      - file: content/appr/theme/prog1/cours/6_dict/dict
-#      - file: content/appr/theme/prog1/cours/7_fonc/fonc
-#      - file: content/appr/theme/prog1/cours/8_mod/mod
-
-      - file: content/appr/theme/prog1/new/dessiner
-      - file: content/appr/theme/prog1/new/definir
-      - file: content/appr/theme/prog1/new/colorier
-      - file: content/appr/theme/prog1/new/repeter
-      - file: content/appr/theme/prog1/new/cercler
-      - file: content/appr/theme/prog1/new/parcourir
-      - file: content/appr/theme/prog1/new/questionner
-      - file: content/appr/theme/prog1/new/ecrire
-      - file: content/appr/theme/prog1/new/calculer
-      - file: content/appr/theme/prog1/new/iterer
-      - file: content/appr/theme/prog1/new/attendre
-      - file: content/appr/theme/prog1/new/decider
-      - file: content/appr/theme/prog1/new/parametrer
-      - file: content/appr/theme/prog1/new/renvoyer
-      - file: content/appr/theme/prog1/new/grouper 
-      - file: content/appr/theme/prog1/new/randomiser
-      - file: content/appr/theme/prog1/new/trier
-      - file: content/appr/theme/prog1/new/turtleart
+      - file: content/appr/theme/prog1/dessiner
+      - file: content/appr/theme/prog1/definir
+      - file: content/appr/theme/prog1/colorier
+      - file: content/appr/theme/prog1/repeter
+      - file: content/appr/theme/prog1/cercler
+      - file: content/appr/theme/prog1/parcourir
+      - file: content/appr/theme/prog1/questionner
+      - file: content/appr/theme/prog1/calculer
+      - file: content/appr/theme/prog1/decider
+      - file: content/appr/theme/prog1/ecrire
+      - file: content/appr/theme/prog1/write
+      - file: content/appr/theme/prog1/iterer
+      - file: content/appr/theme/prog1/attendre
+      - file: content/appr/theme/prog1/parametrer
+      - file: content/appr/theme/prog1/renvoyer
+      - file: content/appr/theme/prog1/grouper 
+      - file: content/appr/theme/prog1/randomiser
+      - file: content/appr/theme/prog1/trier
+      - file: content/appr/theme/prog1/turtleart
+      - file: content/appr/theme/prog1/annexe
       
-#     - file: content/appr/theme/prog1/cours/9_app/app 
-#     - file: content/appr/theme/prog1/cours/10_conclusion/concl 
-
   ### Algorithmique         
   - file: content/appr/theme/algo1/accueil/eleve
     sections:
@@ -75,7 +63,13 @@ parts:
       - file: content/appr/theme/archi/cours/4_archi_gen_comp/eleve
       - file: content/appr/theme/archi/cours/5_micropro/eleve
       - file: content/appr/theme/archi/cours/6_conclusion/eleve
-      
+
+
+
+  ### Histoire de l'informatique  
+  - file: content/appr/theme/hist/eleve
+    sections:
+      - file: content/appr/theme/hist/main1
 
 - caption: Deuxième année
   numbered: false
@@ -99,7 +93,6 @@ parts:
       - file: content/appr/theme/prog2/class
       - file: content/appr/theme/prog2/inherit
       - file: content/appr/theme/prog2/math
-      - file: content/appr/theme/prog2/time
       - file: content/appr/theme/prog2/dict
       - file: content/appr/theme/prog2/compter
       - file: content/appr/theme/prog2/color
@@ -107,6 +100,8 @@ parts:
       - file: content/appr/theme/prog2/bool
       - file: content/appr/theme/prog2/bit
       - file: content/appr/theme/prog2/recursif
+      - file: content/appr/theme/prog2/vector
+      - file: content/appr/theme/prog2/force
       - file: content/appr/theme/prog2/idees
       
   - file: content/appr/theme/projets/intro
@@ -117,8 +112,10 @@ parts:
       - file: content/appr/theme/projets/snake
       - file: content/appr/theme/projets/game_of_life
       - file: content/appr/theme/projets/cartes
+      - file: content/appr/theme/projets/tetris
       - file: content/appr/theme/projets/art_absurde
       - file: content/appr/theme/projets/microbit/microbit
+      - file: content/appr/theme/projets/crypto
       - file: content/appr/theme/projets/idees
 
   - file: content/appr/theme/reseaux/eleve

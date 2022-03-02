@@ -12,21 +12,23 @@ Dans ce chapitre, nous aborderons la question de l'architecture des ordinateurs,
 
 Comme vous avez pu le voir dans le chapitre lié à la représentation de l'information, tout ce qui apparaît sur votre écran est représenté par l'ordinateur par suite de 0 et de 1. Pour comprendre comment ces <span commented>{glo}`codebinaire|0 et 1` sont traités par l'ordinateur, il faut avoir en tête que les ordinateurs sont construits à partir d'une couche et de multiples niveaux, comme un mille-feuille, dont chacun possède ses propres règles. 
 
-<!--
+
 ```{figure} media/abstractionlight.png
 ---
 height: 400px
 width: 250px
+align: left
 ---
 Les différents niveaux d'abstraction de l'informatique, en partant des électrons, jusqu'aux «programmes» 
 ```
--->
 
+<!---
 ```{image} media/abstractionlight.png
 :width: 500
 :height: 550
 ```
 Les différents niveaux d'abstraction de l'informatique, en partant des électrons, jusqu'aux «programmes»
+-->
 
 <br>
 
@@ -40,32 +42,38 @@ Les ordinateurs ne comprennent que les {glo}`codebinaire|nombres binaires`. La l
 
 De l'électricité  !
 
-<!--
+
 ```{figure} media/iphonecpu.jpeg
 ---
 height: 350px
 width: 500px
+align: left
 ---
 Vos photos, vos vidéos, vos messages, tout ce que vous consultez sur votre téléphone portable, sont traitées par un processeur similaire au modèle A9 de Apple, commercialisé dans les iPhone SE. 
 ```
--->
 
+<!---
 ```{image} media/iphonecpu.jpeg
 :width: 600
 :height: 500
 ```
 Photos, vidéos, messages, tout ce qui est consulté sur un téléphone portable, est traité par un processeur similaire au modèle A9 de Apple, commercialisé dans les iPhone SE
+
+-->
+
 <br> <br>
 
-<!--
+
 ```{figure} media/datacenter.jpeg
 ---
 height: 350px
 width: 500px
+align: left
 ---
 Vos likes, vos partages, vos vidéos transmises via des applications telles que WhatsApp, Instagram, TikTok, Snapchat, YouTube, sont stockées dans des centres de données aux quatre coins de la planète. 
 ```
--->
+
+<!---
 
 ```{image} media/datacenter.jpeg
 :width: 600
@@ -73,6 +81,7 @@ Vos likes, vos partages, vos vidéos transmises via des applications telles que 
 ```
 Likes, partages, vidéos transmises via des applications telles que WhatsApp, Instagram, TikTok, Snapchat, YouTube, etc. : tout est stocké dans des centres de données (Data Center) aux quatre coins de la planète
 
+-->
 
 ## Électricité et nombres binaires
 
@@ -89,21 +98,24 @@ La grande idée derrière la conception des ordinateurs et de leur circuits éle
 
 Dans les premiers ordinateurs entre les années 1950 et 1960, ce sont les [tubes à vide](https://fr.wikipedia.org/wiki/Tube_électronique) qui ont rempli cette fonction. Mais les tubes à vides étaient gros, consommaient beaucoup d'électricité, et avaient une durée de vie limitée : il fallait souvent les changer, un peu comme de vieilles ampoules à incandescence. En utilisant des tubes à vide, on pouvait certes construire des ordinateurs, mais certainement pas ceux que l'on connaît aujourd'hui.
 
-<!--
+
 ```{figure} media/vaccum_tubes.jpeg
 ---
 height: 350px
+align: left
 ---
 Différents modèles de tubes à vide. Photographie de Stefan Riepl, 2008, CC BY-SA.
 ```
--->
 
 
+<!---
 ```{image} media/vaccum_tubes.jpeg
 :width: 500
 :height: 300
 ```
 Différents modèles de tubes à vide. Photographie de Stefan Riepl, 2008, CC BY-SA
+-->
+
 <br>
 
 
@@ -113,40 +125,47 @@ Il a fallu attendre une invention majeure pour permettre aux ordinateurs de se m
 
 Le {glo}`transistor|transistor` est aujourd'hui la brique de base de construction des systèmes informatiques. Il a été développé dans les années 1940 dans les [laboratoires Bell](https://fr.wikipedia.org/wiki/Laboratoires_Bell), aux Etats-Unis. Ce n'est que vers la fin des années 1950 que l'on commence à construire des ordinateurs commerciaux qui utilisent des transistors plutôt que des tubes à vide. Le transistor est à l'origine d'une révolution dans la taille, la fiabilité, et les performances générales des ordinateurs de l'époque. 
 
-<!--
+
 ```{figure} media/transistor.jpeg
 ---
 height: 350px
 width: 500px
+align: left
 ---
 Différents modèles de transistor. On les reconnaît à leurs trois «pattes» aussi appelées: émetteur, base, collecteur. 
 ```
--->
+
+<!---
 
 ```{image} media/transistor.jpeg
 :width: 600
 :height: 350
 ```
 Différents modèles de transistor. On les reconnaît à leurs trois «pattes» aussi appelées : émetteur, base, collecteur
+-->
+
 <br> <br>
 
 
 <span commented>Le {glo}`transistor|transistor`, comme le tube à vide qu'il remplace, fonctionne comme un interrupteur automatique. Il laissera ou non passer du courant entre deux de ses pattes en fonction de ce qui se passe sur sa troisième. On peut aussi le comparer à un robinet d'eau qui peut être ouvert ou fermé, et qu'on peut ouvrir ou fermer automatiquement sans devoir l'activer manuellement. 
 
-<!--
+
 ```{figure} media/transistorgif.gif
 ---
 height: 350px
 width: 500px
+align: left
 ---
 En appliquant un courant qui va de la base à l'émetteur (en rose pâle), on permet au courant de circuler entre le collecteur et l'émetteur (appelés ainsi parce que l'émetteur *émet* des électrons, et le collecteur les *collecte*). Envoyer du courant dans la base, c'est donc *ouvrir* le transistor; ne plus en envoyer a, inversement, l'effet de *fermer* le transistor. 
 ```
--->
+
+<!---
 
 ```{image} media/transistorgif.gif
 :width: 450
 :height: 450
 ```
+-->
 
 En appliquant un courant qui va de la base à l'émetteur (en rose pâle), on permet au courant de circuler entre le collecteur et l'émetteur (appelés ainsi parce que l'émetteur *émet* des électrons, et le collecteur les *collecte*). Envoyer du courant dans la base, c'est donc *ouvrir* le transistor ; ne plus en envoyer a, inversement, l'effet de *fermer* le transistor
 

@@ -15,7 +15,7 @@ color('brown')
 def branche():
     width(1)
     forward(30)
-    back(30)
+    backward(30)
 
 def branche2():
     width(2)
@@ -25,7 +25,7 @@ def branche2():
     right(100)
     branche()
     left(50)
-    back(40)
+    backward(40)
     
 def branche4():
     width(4)
@@ -35,7 +35,7 @@ def branche4():
     right(100)
     branche2()
     left(50)
-    back(50)
+    backward(50)
     
 def branche8():
     width(8)
@@ -45,10 +45,10 @@ def branche8():
     right(100)
     branche4()
     left(50)
-    back(50)
+    backward(50)
 
 left(90)
-back(50)
+backward(50)
 branche8()
 ```
 
@@ -128,7 +128,7 @@ print('shapes =', shapes)
 
 left(90)
 up()
-back(180)
+backward(180)
 
 for s in shapes:
     forward(50)
@@ -190,7 +190,7 @@ def etoile(n, m):
         forward(100)
         left(360/n*m)
 
-back(200)
+backward(200)
 print('tracer =', tracer())
 etoile(7, 3)
 
@@ -280,33 +280,6 @@ for x in range(-300, 300, 10):
     setx(x)
     dot(40, 'red')
     update()
-```
-
-## Narration
-
-Voici un exemple qui affiche une conversation entre deux personnes, affiché en ralenti, lettre par lettre, pour simuler une sorte de communication chat en ligne.
-
-```{codeplay}
-from time import sleep
-
-histoire = """
-Une histoire d'aventure
------------------------
-A: comment vas-tu ?
-B: très bien !
-A: veux-tu faire un voyage ?
-B: oui, vers où ?
-A: à Rio de Janeiro.
-B: choutte, on part quand ?
-A: il y a un vol ce soir.
-"""
-
-for line in histoire.split('\n'):
-    for c in line:
-        print(c, end='')
-        sleep(0.1)
-    sleep(1)
-    print()
 ```
 
 ## Le Zen de Python

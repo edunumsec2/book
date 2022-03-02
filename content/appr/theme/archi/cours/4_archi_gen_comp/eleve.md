@@ -7,11 +7,14 @@ Il est commun d’entendre parler du microprocesseur comme du « cœur de l’
 Si l’on suit l'évolution de l'ordinateur, depuis les années 50 jusqu’à aujourd’hui, on peut distinguer les éléments caractéristiques illustrés sur la figure suivante.
 
 
-```{image} media/Bus_ROM_RAM_CPU.png
-:width: 600
-:height: 300
+```{figure} media/Bus_ROM_RAM_CPU.png
+---
+height: 350px
+width: 500px
+align: left
+---
+Schéma simplifié d'un ordinateur
 ```
-**Schéma simplifié d'un ordinateur**
 <br> <br>
 
 D'un point de vue matériel, on distingue :
@@ -28,7 +31,7 @@ On peut également citer les cartes sons, réseau, sorties USB etc. Ce type de m
 On distingue ce matériel, partie intégrante de la machine, avec les périphériques externes qui lui sont reliés par des câbles ou des moyens de communication sans fil.
 <br> <br>
 
-## La mémoire
+## 4.1. La mémoire
 
 **ROM** (Read-Only Memory) : ce que l’on nomme ROM constitue une mémoire « fixe », statique de la machine, dont la taille est définie à la conception. On parle de mémoire morte, ou mémoire en lecture seule. Ce qu’elle stocke ne « part pas » lors de la mise hors tension de la machine. 
       
@@ -44,12 +47,14 @@ Cette mémoire fixe va intégrer tous les éléments nécessaires en particulier
 
 Il s’agit d’une mémoire à long terme.
 
-     
-```{image} media/ROM.png
-:width: 600
-:height: 300
+```{figure} media/ROM.png
+---
+height: 350px
+width: 500px
+align: left
+---
+Barrettes ROM
 ```
-**Barrettes ROM**
 
 <br> 
 
@@ -59,11 +64,15 @@ Il s’agit d’une mémoire à long terme.
 
 **RAM** (Random Access Memory) : cette mémoire est une mémoire volatile, c’est à dire que son contenu va «disparaître» lorsque l’ordinateur est hors tension. On parle aussi de mémoire tampon. L’information étant stockée sous forme électrique dans les transistors, elle disparaît quand l’alimentation est coupée. 
     
-```{image} media/barrettes_RAM.png
-:width: 600
-:height: 300
+```{figure} media/barrettes_RAM.png
+---
+width: 600
+height: 300
+align: left
+---
+Barettes RAM
 ```
-**Barrettes RAM**
+
 
 <br>     
     
@@ -80,9 +89,13 @@ Les composants de mémoire RAM existent en général en «barrettes» allant de 
 
 <br> 
 
-```{image} media/RAM-Vs-ROM.jpeg
-:width: 600
-:height: 250
+```{figure} media/RAM-Vs-ROM.jpeg
+---
+width: 600
+height: 250
+align: left
+---
+RAM versus ROM
 ```
 
 <br> <br>
@@ -103,9 +116,13 @@ Il est relié à la carte mère grâce à une nappe (câble plat) de type IDE ou
 
 Les disques durs aujourd'hui peuvent contenir des centaines de giga-octets, voire plusieurs terra-octets de données.
 
-```{image} media/second_disquedur_23.png
-:width: 700
-:height: 400
+```{figure} media/second_disquedur_23.png
+---
+width: 700
+height: 400
+align: left
+---
+Disque dur mécanique
 ```
 
 Les ordinateurs récents sont de plus en plus équipés de SSD (Solid-State Drive) qui permettent de stocker des données tout comme les disques durs, mais leur conception est purement électronique et non plus mécanique. Ils sont donc plus résistant aux chocs et plus légers - et donc particulièrement adaptés aux ordinateurs portables - et beaucoup plus rapides. Ils ont une taille de plus en plus réduite et des gains de performance importants : temps d'accès réduits, meilleure bande passante que les disques durs traditionnels.
@@ -113,9 +130,13 @@ Les ordinateurs récents sont de plus en plus équipés de SSD (Solid-State Driv
 La fiabilité et les capacités des disques durs classiques pérennisent cependant leur utilisation.
 
 
-```{image} media/Ssd.png
-:width: 500
-:height: 200
+```{figure} media/Ssd.png
+---
+width: 500
+height: 200
+align: left
+---
+Disque dur SSD
 ```
 
 Sur certains ordinateurs portables d'entrée de gamme, le disque dur ou le SSD sont parfois remplacés par un stockage sous forme d'eMMC, solution peu coûteuse comme les cartes SD ou Multimedia Card.
@@ -126,16 +147,20 @@ Sur certains ordinateurs portables d'entrée de gamme, le disque dur ou le SSD s
 **Le lecteur/graveur CD/DVD**
 Un ordinateur peut encore aujourd'hui être équipé d'un graveur, vissé au boîtier, glissé dans un emplacement ouvert sur l'avant du PC, permettant ainsi l'ouverture du tiroir qui recevra le disque optique que l'on appelle plus communément CD (Compact Disc) ou DVD (Digital Versatile Disc). Il est connecté à la carte mère par un câble plat (nappe) IDE ou SATA. 
 
-```{image} media/LecterCD.png
-:width: 700
-:height: 400
+```{figure} media/LecterCD.png
+---
+width: 700
+height: 400
+align: left
+---
+Lecteur CD
 ```
 
 
 <br> <br>
 
 
-## Le CPU (Central Processing Unit)
+## 4.2. Le CPU (Central Processing Unit)
 
 Il s’agit du processeur de l’ordinateur. C’est le cœur de l’ordinateur, c’est à dire l’espace où va se dérouler l’ensemble des opérations et instructions de la machine. C’est un peu le «cerveau» de la machine. 
 Le CPU va aller chercher les informations dans la ROM en passant par la RAM qui est donc essentielle pour le traitement du processeur. On parle d’Unité Centrale de Traitement en français. Le processeur sert à l’échange de données entre composants informatiques : disques durs – carte graphique – ROM – RAM. Il coordonne, interprète, calcule, exécute.
@@ -143,11 +168,15 @@ Le CPU va aller chercher les informations dans la ROM en passant par la RAM qui 
 La puissance du CPU est caractérisée par son nombre de bits, 32 ou 64 bits aujourd’hui, et la fréquence de traitement de l’information qu’il assure caractérise la rapidité avec laquelle il traite les informations. Cette puissance de traitement des cycles CPU, qui est donc la puissance de l’ordinateur, représente la capacité d’un ordinateur à manipuler des données. La puissance de calcul et la rapidité de traitement se trouvent multipliées par le nombres de cœurs éventuellement présents sur la puce. Nombre de bits et fréquence de traitement sont donc deux paramètres essentiels, mais également le nombre de cœurs que le processeur comporte.
 
 
-```{image} media/PROCESSEURS.png
-:width: 600
-:height: 400
+```{figure} media/PROCESSEURS.png
+---
+width: 600
+height: 400
+align: left
+---
+Différents types de microprocesseurs simple cœur et multicœurs
 ```
-**Différents types de microprocesseurs simple cœur et multicœurs**
+
 <br> <br>
 
 Le cœur du processeur est en fait une unité de traitement qui permet de lire des instructions pour effectuer des actions spécifiques. Ainsi, quelle que soit l'action que l'on souhaite effectuer sur la machine, elle est exécutée par le cœur, et s'il y a plusieurs cœurs, qui sont en fait des unités de traitement, on peut effectuer toutes les actions rapidement et en même temps.
@@ -159,22 +188,31 @@ Les principaux acteurs du marché sont Intel et AMD.
 Une carte mère est le composant central de l'ordinateur. Elle est vissée au boîtier du PC, et possède les connecteurs (slots) pour accueillir des dizaines de composants et périphériques en plus des éléments indispensables décrits ici, et gérer les flux logiciels, chaque information envoyée ou reçue par le matériel ou un programme transitant par elle. 
 
 Elle intègre également la ROM sur laquelle est enregistrée le BIOS, petit programme gérant la configuration «de base» du matériel et se chargeant de faire le lien avec le système d'exploitation. Ces réglages sont conservés en mémoire même en l'absence de courant grâce au [CMOS](https://fr.wikipedia.org/wiki/Complementary_metal_oxide_semi-conductor), alimenté par la pile de carte mère.
-```{image} media/CarteMere.png
-:width: 700
-:height: 400
+
+```{figure} media/CarteMere.png
+---
+width: 700
+height: 400
+align: left
+---
+Carte mère
 ```
 
 <br> <br>
 
-## Les entrées-sorties
+## 4.3. Les entrées-sorties
 Un ordinateur traite de l'information au niveau de sa mémoire et de son processeur. Il récupère donc cette information via des ports d'entrée et redistribue une information après traitement via des ports de sortie. L'ensemble de cet environnement d'entrées-sorties constitue ce que l'on nomme les périphériques : clavier, écran, enceintes audio ou casque, imprimante, souris ou pad, disques externes, microphone, réseau ethernet ou wifi, etc.
 Certains périphériques sont par nature destinés uniquement à l'entrée de données (claviers et souris, microphones), tandis que d'autres s'occupent avant tout de la sortie (imprimantes, écrans non-tactiles) ; d'autres encore permettent à la fois l'entrée et la sortie de données (disques durs, disquettes, CD-ROM inscriptibles, clés usb).
 
-```{image} media/peripheriques1.png
-:width: 650
-:height: 500
+```{figure} media/peripheriques1.png
+---
+width: 650
+height: 500
+align: left
+---
+Unité centrale et périphériques
 ```
-**Unité centrale et périphériques**
+
 <br> <br>
 
 ### Interfaçage
@@ -187,18 +225,22 @@ Le système d'exploitation d'un ordinateur ne connait pas toujours le fonctionne
 
 <br> <br>
 
-## Les bus
+## 4.4 Les bus
 Un bus informatique est un dispositif de transmission de données partagé entre plusieurs composants d'un système informatique. Le bus informatique est la réunion des parties matérielles et immatérielles qui permet la transmission de données entre les composants de la machine.
 On distingue deux types de bus : le FSB (Front Side Bus), ou *bus système*, et le bus d'extension. Le premier permet au processeur de communiquer avec la mémoire vive, le second est une voie de liaison entre le processeur et les cartes d'extension. Des connecteurs d'extension présents sur la carte mère permettent d'y ajouter de nouveaux composants : cartes d'extension tels que carte son, carte d'acquisition vidéo, carte réseau, etc.
 Il existe différents types de bus d'extension : [ISA, EISA, PCI, PCMCIA, VESA.](http://www.dicofr.com/cgi-bin/n.pl/dicofr/definition/20010101000612)
 On se propose ici de décrire exclusivement les différents types de bus système : bus de données, d'adressage et de commande.
 
 
-```{image} media/Schéma_ordi.png
-:width: 600
-:height: 400
+```{figure} media/Schéma_ordi.png
+---
+width: 600
+height: 400
+align: left
+---
+Schéma général d'un ordinateur
 ```
-**Schéma général d'un ordinateur**
+
 <br> <br>
 
 
@@ -229,7 +271,7 @@ Le bus de contrôle est constitué de lignes de contrôle qui envoient chacune u
 
 <br> <br>
 
-## Autres composants matériels
+## 4.5. Autres composants matériels
 
 ### L'alimentation
 L'alimentation branchée sur le secteur transforme et fournit l'énergie nécessaire à la carte mère, mais l'alimentation est aussi directement reliée à certains composants tel que le lecteur/graveur de DVD ou le disque dur par exemple. 
@@ -238,9 +280,13 @@ La transformation du courant cause une déperdition d'énergie thermique, un sys
 
 Une puissance de 400 watts est généralement suffisante pour les ordinateurs en «configuration bureautique» même si certaines alimentations peuvent atteindre les 1000 watts pour des configurations gourmandes en énergie (gaming par exemple).
 
-```{image} media/Alim.png
-:width: 700
-:height: 400
+```{imfigureage} media/Alim.png
+---
+width: 700
+height: 400
+align: left
+---
+Alimentation
 ```
 
 
@@ -250,7 +296,11 @@ La carte graphique, bien que très importante pour certains usages, est placée 
 La carte graphique s'insère dans un connecteur de la carte mère : le port AGP ou le port PCI Express pour les plus récentes. Une fois connectée, les entrées et sorties de la carte sont accessibles par l'arrière du boîtier afin de fournir une image au système de visualisation (écran, TV, projecteur).
 
 
-```{image} media/CarteVidéo.png
-:width: 700
-:height: 400
+```{figure} media/CarteVidéo.png
+---
+width: 700
+height: 400
+align: left
+---
+Carte graphique
 ```

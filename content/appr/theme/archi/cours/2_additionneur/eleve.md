@@ -54,7 +54,7 @@ Le circuit fonctionne correctement. Il faut tester les quatre combinaisons qui a
 ```
 ````
 
-## Additionneur complet
+## 2.1. Additionneur complet
 
 Le circuit précédent est particulièrement intéressant, car il montre qu'il est possible d'utiliser des opérateurs logiques pour réaliser l'opération arithmétique de l'addition. L'additionneur est limité: en fait, on l'appelle un _demi-additionneur_. Il n'est capable d'additionner que deux nombres à 1 {glo}`bit|bit` — c'est très limité. En fait, il serait intéressant d'avoir un additionneur de _trois_ nombres à un {glo}`bit|bit`. Pourquoi ? À cause de la manière dont on pose les additions en colonnes.
 
@@ -108,7 +108,7 @@ En faisant pour l'instant abstraction des détails d'un additionneur complet, on
 ```
 
 
-## Chaînage d'additionneurs
+## 2.2. Chaînage d'additionneurs
 
 La flexibilité de ce composant fait qu'on peut maintenant facilement l'utiliser pour construire un circuit qui additionne deux nombres $A$ et $B$ à 2 {glo}`bit|bits` chacun (donc de $0 + 0 = 0$ à $3 + 3 = 6$).
 
@@ -162,7 +162,7 @@ Les entrées sont déjà disposées. Glissez autant d'additionneurs et de bits d
 
 ```{logic}
 :height: 500
-:showonly: LogicOutput Adder
+:showonly: out adder
 
 {
   "v": 1,

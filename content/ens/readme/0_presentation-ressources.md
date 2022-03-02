@@ -1,7 +1,7 @@
 (presentationressources)=
 # Présentation des ressources
 
-Les ressources pour l'enseignement de la branche *Informatique* au niveau secondaire II ont été produites par le `groupe de travail DGEP, EPFL, HEP, UNIL`, dans le cadre du projet **EduNum** du canton de Vaud. Leur objectif est la mise à disposition de contenus théoriques, de séries d'exercices, et d'idées d'activités pour les enseignantes et enseignants de ladite matière au Gymnase. 
+Les ressources pour l'enseignement de la branche *Informatique* au niveau secondaire II ont été produites par le `groupe de travail DGEP, EPFL, HEP Vaud, UNIL`, dans le cadre du projet **EduNum** du canton de Vaud. Leur objectif est la mise à disposition de contenus théoriques, de séries d'exercices, et d'idées d'activités pour les enseignantes et enseignants de ladite matière au Gymnase. 
 
 Voici une liste non-exhaustive des usages potentiels de ces ressources : 
 
@@ -80,7 +80,7 @@ Toute personne qui réutilise les ressources est priée de le faire de la façon
 
 * 💰 Pas d'utilisation commerciale. 
 * ♻️ Possibilité de modifier les ressources à souhait. 
-* 📗 Crédit : "Par le groupe de travail DGEP, EPFL, HEP, UNIL". 
+* 📗 Crédit : "Par le groupe de travail DGEP, EPFL, HEP Vaud, UNIL". 
 * 🤝 Partage selon les mêmes conditions. Donc en ajoutant simplement le logo ci-dessus pour toute publication éventuelle. 
 
 ## Exécution des cellules interactives
@@ -113,3 +113,4 @@ Les ressources sont affichées sous la forme du site statique ici-présent par l
 
 ````{image} media/presentation/code.gif
 ```` 
+test

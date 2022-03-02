@@ -15,12 +15,6 @@ En Python `lambda` est
 {f}`une variable`
 ```
 
-Nous allons également voir que :
-
-- la fonction `xcor()` renvoie la coordonnée x de la tortue,
-- la fonction `pos()` renvoie les deux coordonnées x et y de la tortue,
-- la fonction `setx(val)` assigne une nouvelle valeur la coordonnée x.
-
 ## Fonction lambda
 
 Parfois nous avons besoin d'une petite fonction, sans que ça vaut la peine de la définir de façon explicite avec le mot clé `def` et un nom de fonction.
@@ -232,4 +226,68 @@ getscreen().onkey(lambda : ecrire(8), '8')
 getscreen().onkey(lambda : ecrire(9), '9')
 getscreen().onkey(reset, 'r')
 getscreen().listen()
+```
+
+La fonction lambda nous permet de simplifier aussi la création des fonctions de rappel. Nous pouvons les créer dans une boucle, en parcourant une chaine de caractères auxquels nous voulons associer une fonction de rappel. Nous utilisons ici l'astuce de la valeur par défaut, pour passer un argument à la fonction `f()`.
+
+Ce programme interactive permet d'utiliser les 10 chiffres pour écrire un nombre.
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+speed(0)
+
+def f(x):
+    write(x, font=(None, 24), move=True)
+
+for c in '0123456789':
+    s.onkey(lambda x=c: f(x), c)
+    
+s.listen()
+done()
+```
+
+## Ecrire des lettres
+
+Ce programme interactive permet d'utiliser les 26 lettres pour écrire un mot.
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+speed(0)
+
+def f(x):
+    write(x, font=(None, 24), move=True)
+
+for c in 'abcdefghijklmnopqrstuvwxyz':
+    s.onkey(lambda x=c: f(x), c)
+    
+s.listen()
+done()
+```
+
+## Ecrire des couleurs
+
+Ce programme permet d'utiliser les 26 touches de l'alphabet pour écrire des pixels avec des couleurs aléatoires.
+
+```{codeplay}
+from turtle import *
+from random import *
+s = getscreen()
+speed(0)
+
+d = 60
+goto(-300+d/2, 200-d/2)
+
+def f(x):
+    dot(d, (random(), random(), random()))
+    if xcor() < 300 - d/2:
+        forward(d)
+    else:
+        goto(-300+d/2, ycor()-d)
+
+for c in 'abcdefghijklmnopqrstuvwxyz':
+    s.onkey(lambda x=c: f(x), c)
+    
+s.listen()
 ```

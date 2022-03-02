@@ -197,3 +197,24 @@ Essayez de créer autre image
 ```python
 pomme = Image('05050:50505:50005:50005:05550')
 ```
+
+## The Zen of MicroPython
+
+Comme Pyhton, MicroPython aussi a un *Easter egg*. Tapez `ìmport this` à la console et exécutez la commande. 
+La machine va répondre avec le Zen de MicroPython.
+
+```python
+>>> import this
+The Zen of MicroPython, by Nicholas H. Tollervey
+
+Code,
+Hack it,
+Less is more,
+Keep it simple,
+Small is beautiful,
+
+Be brave! Break things! Learn and have fun!
+Express yourself with MicroPython.
+
+Happy hacking! :-)
+```
