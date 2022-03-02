@@ -230,7 +230,7 @@ for i in range(6):
 
 ## Paquebot
 
-Une boucle `for` est utilisé dans l'exemple suivant pour dessiner les hublots d'un paquebot.
+Une boucle `for` est utilisée dans l'exemple suivant pour dessiner les hublots d'un paquebot.
 
 ```{codeplay}
 from turtle import *
@@ -414,7 +414,7 @@ for i in range(n):
 
 ### TypeError
 
-Cette erreur survient lorsque vous ne mettez pas le nombre d'arguments correct pour une fonction.
+Cette erreur survient lorsque vous ne mettez pas le nombre d'arguments corrects pour une fonction.
 
 ```{codeplay}
 from turtle import *
