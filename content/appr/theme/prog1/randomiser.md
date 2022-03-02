@@ -114,7 +114,7 @@ for i in range(200):
 
 ## La voie lactée
 
-Pour arranger les étoiles plus dans une bande horizontale, comme dans la voie lactée, nous utilisons pour la variable `y` une distribution normale (gauss) avec une moyenne de 0 et un sigma de 50.
+Pour arranger les étoiles plus dans une bande horizontale, comme dans la voie lactée, nous utilisons pour la variable `y` une distribution normale (de Gauss) avec une moyenne de 0 et un sigma de 50.
 
 ```{codeplay}
 :file: random7.py
@@ -202,7 +202,7 @@ for y in range(200-n, -200, -n):
 
 ## Cube de Rubik
 
-Depuis une liste avec les 6 couleurs du cube de Rubik nous choisissons une aléatoirement, pour en dessiner un cube dans son état défait.
+Depuis une liste avec les 6 couleurs du cube de Rubik nous en choisissons une aléatoirement, pour dessiner un cube dans son état défait.
 
 ```{codeplay}
 from turtle import *
@@ -236,7 +236,7 @@ for i in range(3):
 
 ## Distribution normale
 
-Dans l'exemple suivant les variables x e y suivent une distribution normale avec mu=0 et sigma=50.
+Dans l'exemple suivant les variables x e y suivent une distribution normale avec une moyenne de 0 et un sigma de 50.
 
 ```{codeplay}
 :file: random11.py
@@ -255,7 +255,7 @@ for i in range(1000):
 
 ## Zoo
 
-Pour simuler la perspectives, nous dessinons les animaux proches plus grand.
+Pour simuler la perspective, nous dessinons les animaux proches plus grands.
 
 ```{codeplay}
 :file: random12.py
@@ -278,7 +278,7 @@ hideturtle()
 
 ## Champs de fleurs
 
-Pour simuler la perspectives, nous dessinons les fleurs proches plus grandes.
+Pour simuler la perspective, nous dessinons les fleurs proches plus grandes.
 
 ```{codeplay}
 :file: random13.py
@@ -368,7 +368,7 @@ for n in range(1, 7):
     clear()
 ```
 
-**Exercice** : Modifiez le code pour afficher avec le dé avec un nombre aléatoire entre 1 et 6.
+**Exercice** : Modifiez le code pour afficher le dé avec un nombre aléatoire entre 1 et 6.
 
 ## Permuter
 
