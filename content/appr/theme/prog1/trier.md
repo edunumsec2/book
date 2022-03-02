@@ -164,8 +164,8 @@ for i in range(n):
 
 ## L'indice du minimum
 
-Souvent on ne doit pas seulement trouver la valeur minimum, mais aussi son indice dans la liste.
-Différent au cas précédent, nous ne parcourons pas les valeurs, mais les indices.
+Souvent, on ne doit pas seulement trouver la valeur minimum, mais aussi son indice dans la liste.
+Contrairement au cas précédent, ici nous ne parcourons pas les valeurs, mais les indices.
 
 ```{codeplay}
 :file: sort6.py
@@ -314,7 +314,7 @@ swap(3, 13)
 
 ## Echanger tous les points
 
-Dans l'exemple suivant nous échangeons deux points successives pour toute la liste. Nous observons que :
+Dans l'exemple suivant nous échangeons deux points successifs pour toute la liste. Nous observons que :
 
 - le premier point avance complètement de gauche à droite
 - tous les autres points reculent d'une position
@@ -396,7 +396,7 @@ for i in range(n-1):
     print(liste)
 ```
 
-Avec les fonctions `min()` et `index()` nous pouvons écrire cet algorithme de façon encore plus compact.
+Avec les fonctions `min()` et `index()` nous pouvons écrire cet algorithme de façon encore plus compacte.
 
 ```{codeplay}
 :file: sort13.py
@@ -554,7 +554,7 @@ L’algorithme du **tri à bulles** compare les éléments voisins, deux par deu
 :width: 300px
 ```
 
-Dans l'exemple suivant, nous pouvons voir comment le `4` flotte vers le haut, jusqu'à c'qu'il rencontre le le `6` qui monte alors tout vers la surface, comme des bulles dans une boisson.
+Dans l'exemple suivant, nous pouvons voir comment le `4` flotte vers le haut, jusqu'à ce qu'il rencontre le le `6` qui monte alors tout vers la surface, comme des bulles dans une boisson.
 
 ```{image} media/tri_bulles.jpg
 :width: 200px
