@@ -27,16 +27,30 @@
 			"loadNpmCommands": false,
 			"commands": [
 				{
-					"name": "Apprendre",
+					"name": "appr_auto",
 					"color": "white",
 					"command": "source .env/bin/activate; kill -9 $(lsof -t -i:8000) 2> /dev/null; sphinx-autobuild src/appr build --watch source --open-browser -a --delay 1",
 					"cwd": "${workspaceFolder}",
 					"singleInstance": true,
 				},
 				{
-					"name": "Enseigner",
+					"name": "appr",
+					"color": "white",
+					"command": "source .env/bin/activate; kill -9 $(lsof -t -i:8000) 2> /dev/null; sphinx-autobuild src/appr build",
+					"cwd": "${workspaceFolder}",
+					"singleInstance": true,
+				},
+				{
+					"name": "ens_auto",
 					"color": "white",
 					"command": "source .env/bin/activate; kill -9 $(lsof -t -i:8000) 2> /dev/null; sphinx-autobuild src/ens build --watch source --open-browser -a --delay 1",
+					"cwd": "${workspaceFolder}",
+					"singleInstance": true,
+				},
+				{
+					"name": "ens",
+					"color": "white",
+					"command": "source .env/bin/activate; kill -9 $(lsof -t -i:8000) 2> /dev/null; sphinx-autobuild src/ens build",
 					"cwd": "${workspaceFolder}",
 					"singleInstance": true,
 				},
