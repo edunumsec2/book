@@ -93,7 +93,8 @@
 			"latex",
 			"plaintext"
 		],
-		"jupyter.useNotebookEditor": false
+		"jupyter.useNotebookEditor": false,
+		"ltex.language": "fr"
 	},
 	"extensions": {
 		"recommendations": [
