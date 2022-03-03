@@ -73,9 +73,6 @@ html_title = 'Apprendre'
 html_theme_options = {
     "light_logo": "modulo-logo-light.svg",
     "dark_logo": "modulo-logo-dark.svg",
-    "announcement": (
-        "version : 2021-12-03b"
-    ),
     "navigation_with_keys": True,
     "light_css_variables": {
         # Base colors
