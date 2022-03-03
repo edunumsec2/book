@@ -7,7 +7,7 @@ Dans ce chapitre, nous découvrons une nouvelle structure de données - la liste
 - la notion de tranche `liste[i:j]` permet d'accéder à une sous-liste.
 
 ```{question}
-En informatique une liste est
+En informatique, une liste est
 
 {v}`ordonnée`  
 {f}`jamais vide`  

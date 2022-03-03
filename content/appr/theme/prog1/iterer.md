@@ -10,7 +10,7 @@ Une boucle ne représente pas seulement une économie de lignes de code, mais do
 - le parcours est possible sur des plages numériques, du texte, et des listes.
 
 ```{question}
-En informatique itérer c'est
+En informatique, itérer c'est
 
 {v}`parcourir`  
 {f}`bifurquer`  
@@ -59,7 +59,7 @@ Le sens des paramètres :
 - `stop` est la valeur finale, mais sans l'inclure,
 - `step` est l'incrément.
 
-La fonction `print()` utilise le paramètre optionnel `end` pour ne pas terminer avec un retour à la ligne mais par une simple espace.
+La fonction `print()` utilise le paramètre optionnel `end` pour ne pas terminer avec un retour à la ligne mais par un simple espace.
 
 ```{codeplay}
 :file: range3.py
@@ -162,7 +162,7 @@ for y in range(100, -150, -50):
 
 ## Grille de points
 
-Le programme suivant dessine des points sur une grilles régulières avec une distance `d` entre les points. Nous utilisons deux boucles imbriquées avec les variables d'itération `x` et `y`.
+Le programme suivant dessine des points sur une grille régulière avec une distance `d` entre les points. Nous utilisons deux boucles imbriquées avec les variables d'itération `x` et `y`.
 
 ```{codeplay}
 from turtle import *
@@ -203,7 +203,7 @@ for x in range(-x0, x0+1, d):
 
 ## Grille de Sudoku
 
-Le programme suivant dessine une grille de Sudoku 3x3 avec une distance `d` entre les lignes. La particularité de la grille Sudoku est que chaque 3e ligne est accentué. Nous utilisons la condition modulo `i%3` pour ceci.
+Le programme suivant dessine une grille de Sudoku 3x3 avec une distance `d` entre les lignes. La particularité de la grille Sudoku est que chaque 3e ligne est accentuée. Nous utilisons la condition modulo `i%3` pour ceci.
 
 ```{codeplay}
 from turtle import *
@@ -229,7 +229,7 @@ for x in range(-x0, x0+1, d):
 
 ## Grille de tic-tac-toe
 
-La grille du jeu tic-tac-toe est une grille 3x3. Nous ajoutons des étiquette a-c pour les colonnes et 1-3 pour les lignes.
+La grille du jeu tic-tac-toe est une grille 3x3. Nous ajoutons des étiquettes a-c pour les colonnes et 1-3 pour les lignes.
 
 ```{codeplay}
 from turtle import *
@@ -265,7 +265,7 @@ for c in '123':
 
 ## Jouer au tic-tac-toe
 
-Pour jouer au tic-tac-toe nous devons déchiffrer les noms des cellules qui sont constitué d'une lettre (a-c) et d'un chiffre (1-3). En alternance nous plaçons une croix et un cercle.
+Pour jouer au tic-tac-toe nous devons déchiffrer les noms des cellules qui sont constituées d'une lettre (a-c) et d'un chiffre (1-3). En alternance nous plaçons une croix et un cercle.
 
 ```{codeplay}
 :output_lines: 5
@@ -310,7 +310,7 @@ for i in range(9):
 
 ## Plateau d'échec
 
-Le plateau d'échec est constitué de 64 carrés qui sont alternativement noir et blancs.
+Le plateau d'échec est constitué de 64 carrés qui sont alternativement noirs ou blancs.
 
 ```{codeplay}
 from turtle import *
@@ -357,7 +357,7 @@ for i in range(60):
 
 ### Plateau d'échec
 
-Dessiner un chéquier, numérotez les lignes 1-8 et les colonnes a-h, et placez les pions noirs et blancs aux positions de départ.
+Dessiner un échiquier, numérotez les lignes 1-8 et les colonnes a-h, et placez les pions noirs et blancs aux positions de départ.
 
 ```{codeplay}
 from turtle import *

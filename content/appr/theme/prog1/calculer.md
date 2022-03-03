@@ -1,21 +1,21 @@
 # Calculer - `int`
 
 Dans ce chapitre, nous allons voir comment un programme peut calculer avec des nombres.
-Ceci est utilisé dans une calculatrice ou un programme de tableur.
+Ceci est utilisé dans une calculatrice ou un tableur.
 
-Les nombres entiers forment une catégorie très importante. En anglais un entier est appelé **integer** (`int`). Nous allons voir que :
+Les nombres entiers forment une catégorie très importante. En anglais, un entier est appelé **integer** (`int`). Nous allons voir que :
 
-- les opérateurs de base sont `+-*/`,
+- les opérateurs de base sont `+`, `-`, `*` et `/`,
 - les nombres sont du type `int` ou `float`,
 - un texte est du type `str`.
 
 ```{question}
-En informatique `int` est l'abbréviation pour
+En informatique, `int` est l'abbréviation pour
 
 {f}`international`  
 {v}`entier`  
 {f}`interne`  
-{f}`intélligent`
+{f}`intelligent`
 ```
 
 ## Un calcul simple
@@ -377,7 +377,7 @@ En utilisant les calculs, nous allons rencontrer encore d'autres types d'erreurs
 
 ### SyntaxError
 
-Cette erreur se produit quand vous oubliez un signe de ponctuation (parenthèse, virgule, apostrophe).
+Cette erreur survient lorsque vous oubliez un signe de ponctuation (parenthèse, virgule, apostrophe).
 
 ```{codeplay}
 print('hello'
@@ -385,11 +385,11 @@ print(12 34)
 print('bonjour)
 ```
 
-**Exercice** : Corrigez les 3 erreurs de syntaxe.
+**Exercice** : Corrigez les trois erreurs de syntaxe.
 
 ### TypeError
 
-Cette erreur se produit quand vous mettez des opérandes dont le type n'est pas approprié pour l'opérateur.
+Cette erreur survient lorsque vous mettez des opérandes dont le type n'est pas approprié pour l'opérateur.
 
 ```{codeplay}
 print('10' > 0)
@@ -397,11 +397,11 @@ print('10' * '10')
 print('10' + 10)
 ```
 
-**Exercice** : Corrigez les 3 erreurs de type.
+**Exercice** : Corrigez les trois erreurs de type.
 
 ### ZeroDivisionError
 
-Cette erreur se produit quand vous essayez de diviser par zéro.
+Cette erreur survient lorsque vous essayez de diviser par zéro.
 
 ```{codeplay}
 print(10 / 0)
@@ -409,11 +409,11 @@ print(10 // 0)
 print(10 % 0)
 ```
 
-**Exercice** : Corrigez les 3 erreurs de division par zéro.
+**Exercice** : Corrigez les trois erreurs de division par zéro.
 
 ### RangeError
 
-Cette erreur se produit quand une fonction récursive s'appelle elle-même un trop grand nombre de fois.
+Cette erreur survient lorsqu'une fonction récursive s'appelle elle-même un trop grand nombre de fois.
 
 ```{codeplay}
 def f(x):

@@ -63,7 +63,7 @@ print('Bonjour', x)
 
 ## La fonction `print()`
 
-Le fonction `print()` peut accepter un ou plusieurs arguments, séparé par une virgule. Un espace est inséré à la place de la virgule.
+Le fonction `print()` peut accepter un ou plusieurs arguments, séparés par une virgule. Un espace est inséré à la place de la virgule.
 Appeler la fonction `print()` sans argument insère une ligne vide.
 
 ```{codeplay}
@@ -80,7 +80,7 @@ print(x, 'voit', x, 'qui voit', x)  # cinq arguments
 ## La variable
 
 Une variable est une place en mémoire pour stocker de l'information.
-Vous êtes complètement libre dans le choix des noms pour les variables, mais c'est recommandé de choisir des noms qui sont le plus explicite possible. C'est mieux d'utiliser des noms de variable parlants, comme `nom` et `age`, même si on aurait pu utiliser `x` et `y`.  
+Vous êtes complètement libres dans le choix des noms pour les variables, mais il est recommandé de choisir des noms qui sont le plus explicites possible. C'est mieux d'utiliser des noms de variable parlants, comme `nom` et `age`, même si on aurait pu utiliser `x` et `y`.  
 
 ```{codeplay}
 :file: input3.py
@@ -95,9 +95,9 @@ print('Très bien', nom, 'vous avez', age, 'ans')
 
 ## Nommer une variable
 
-Normalement, c'est conseillé d'utiliser des variables très explicites, comme `age`, `prenom`, `nom`, `longuer`, `hauteur`, etc. Cela aide à la compréhension du code.
+Normalement, il est conseillé d'utiliser des variables très explicites, comme `age`, `prenom`, `nom`, `longuer`, `hauteur`, etc. Cela aide à la compréhension du code.
 
-Mais dans des boucles et dans un contexte local, nous adoptons la convention suivante d'utiliser des variables courte d'une seule lettre.
+Mais dans des boucles et dans un contexte local, nous adoptons la convention suivante, consistant à utiliser des variables courtes d'une seule lettre.
 
 - `a` pour un angle, ou une longueur
 - `c` pour un caractère, ou une couleur
@@ -160,7 +160,7 @@ end_fill()
 ## Demander en boucle
 
 La boucle `for` permet de répéter les instructions qui se trouvent dans son bloc en indentation.
-A chaque tour nous demandons une couleur et nous dessinons une disque colorié avec cette couleur. Si la couleur ne correspond pas à un nom de couleur standard, alors le disque est noire la première fois, et répète la couleur précédente pour les cas suivants.
+A chaque tour nous demandons une couleur et nous dessinons un disque colorié avec cette couleur. Si la couleur ne correspond pas à un nom de couleur standard, alors le disque est noir la première fois, et répète la couleur précédente pour les cas suivants.
 
 ```{codeplay}
 :file: input6.py
@@ -177,7 +177,7 @@ print('fini')
 
 ## Dessiner un drapeau
 
-Nous reprenons l'exemple des formes ouvertes, avec les deux équerres colories. 
+Nous reprenons l'exemple des formes ouvertes, avec les deux équerres coloriées. 
 
 ```{codeplay}
 from turtle import *
@@ -255,7 +255,7 @@ for (q, s) in quiz:
 
 ### Poser une question
 
-Nous pouvons maintenant extraire la question et les poser tous dans une boucle `for`. Avec `input()` nous demandons la réponse. Nous séparons les questions avec un `print()` sans argument pour insérer une ligne vide entre les questions.
+Nous pouvons maintenant extraire la question et la poser plusieurs fois dans une boucle `for`. Avec `input()` nous demandons la réponse. Nous séparons les questions avec un `print()` sans argument pour insérer une ligne vide entre les questions.
 
 ```{codeplay}
 
@@ -295,7 +295,7 @@ for (question, solution) in quiz:
 
 ## Erreurs
 
-Dans des chapitres précédent nous avons déjà vu quelques messages d'erreurs. Mais il y en a d'autres que nous allons voir ici.
+Dans des chapitres précédents nous avons déjà vu quelques messages d'erreurs. Mais il y en a d'autres que nous allons voir ici.
 Il est important de bien comprendre les messages d'erreur.
 Dans cette section, vous allez découvrir les différentes catégories d'erreur et comment les corriger.
 

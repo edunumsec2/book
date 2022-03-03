@@ -404,7 +404,7 @@ de plus en plus cruciaux.
 -   1995, **PHP**, langage conçu pour rendre les pages Web interactives,
     avant leur envoi par le serveur.
 
--   1995, **Javascript**, langage conçu pour rendre les pages
+-   1995, **JavaScript**, langage conçu pour rendre les pages
     interactives du côté du client et développé par Netscape[^6].
 
 ### Démocratisation
