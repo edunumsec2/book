@@ -39,7 +39,7 @@ En tant que membre du projet pilote, nous vous remercions par avance pour votre 
 
 ## Utilisation
 
-L'utilisation **standard** des ressources ne requiert pas d'installation particulière et peut-être effectuée immédiatement à l'adresse https://edunumsec2.ch. 
+L'utilisation **standard** des ressources ne requiert pas d'installation particulière et peut-être effectuée immédiatement à l'adresse https://modulo-info.ch. 
 
 Dans le cadre du projet pilote, nous vous saurions gré de suivre le protocole minimal décrit ci-dessous :  
 
@@ -61,7 +61,7 @@ Après la phase **pilote**, les enseignant.es pourront en outre :
 
 6. Proposer et rédiger des modifications via la création d'une [branche](https://github.com/edunumsec2/book/branches). 
 7. Forker le dépôt pour en faire un clone indépendant via le mécanisme de [fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo). 
-8. Utiliser l'environnement [Jupyter-book](#installation) pour tester ses améliorations en local sur sa propre machine. 
+8. Utiliser l'environnement [Sphinx- ](#installation) pour tester ses améliorations en local sur sa propre machine. 
 
 ## Documents importants
 
