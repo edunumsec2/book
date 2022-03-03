@@ -18,7 +18,7 @@ En informatique, le mot-clé `return` est utilisé pour
 ## Valeur de retour
 
 L'instruction `return` permet de retourner une valeur.
-Le grand intérêt d'une valeur de retour est qu'on peut l'utiliser de nouveau dans des expression.
+Le grand intérêt d'une valeur de retour est qu'on peut l'utiliser de nouveau dans des expressions.
 
 Par exemple, nous pouvons créer une expression comme celle-ci : `square(x) + cube(x)`
 

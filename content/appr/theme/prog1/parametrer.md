@@ -18,7 +18,7 @@ En Python, `def` est un raccourci pour
 ## Paramétrer la fonction
 
 Jusqu'à maintenant, notre carré a toujours eu la même taille.
-Il serait très utile si notre nouvelle commande `carre(longueur)` pouvait dessiner des carrés de tailles différentes.
+Il serait très utile que notre nouvelle commande `carre(longueur)` puisse dessiner des carrés de tailles différentes.
 C'est possible en spécifiant un paramètre pour la fonction.
 Le paramètre de la fonction est une variable locale qui est utilisée dans sa définition.
 

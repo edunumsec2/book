@@ -93,7 +93,8 @@
 			"latex",
 			"plaintext"
 		],
-		"jupyter.useNotebookEditor": false
+		"jupyter.useNotebookEditor": false,
+		"ltex.language": "fr"
 	},
 	"extensions": {
 		"recommendations": [
@@ -103,7 +104,8 @@
 			"executablebookproject.myst-highlight",
 			"seunlanlege.action-buttons",
 			"github.vscode-pull-request-github",
-			"ban.spellright",
+			"valentjn.vscode-ltex",
+			"vscode-icons-team.vscode-icons"
 		]
 	},
 	"launch": {
