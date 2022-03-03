@@ -7,9 +7,7 @@
 	],
 	"settings": {
 		"files.exclude": {
-			"config/apprendre/content": true,
-			"config/enseigner/content": true,
-			"**/_build": true,
+			"build": true,
 			"**/.git": true,
 			"**/.svn": true,
 			"**/.hg": true,
@@ -17,68 +15,31 @@
 			"**/.DS_Store": true
 		},
 		"search.exclude": {
-			"config/apprendre/content": true,
-			"config/enseigner/content": true,
-			"config/apprendre/_build": true,
-			"config/enseigner/_build": true,
-			"**/_build": true,
-			"**/node_modules": true,
-			"**/bower_components": true,
-			"**/*.code-search": true
+			"build": true,
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true
 		},
 		"actionButtons": {
 			"defaultColor": "white",
 			"loadNpmCommands": false,
 			"commands": [
 				{
-					"name": "Init venv",
-					"color": "#faa",
-					"command": "test -d venv && echo 'Python virtual environment seems to already exist in folder venv' || python3 -m venv venv; source venv/bin/activate",
+					"name": "Apprendre",
+					"color": "white",
+					"command": "source .env/bin/activate; kill -9 $(lsof -t -i:8000) 2> /dev/null; sphinx-autobuild src/appr build --watch source --open-browser -a --delay 1",
 					"cwd": "${workspaceFolder}",
-					"singleInstance": false,
+					"singleInstance": true,
 				},
 				{
-					"name": "Build “apprendre”",
-					"color": "#cfc",
-					"command": "test -f venv/bin/activate && source venv/bin/activate; (cd config/apprendre && jupyter-book build . && (cd _build/html; kill $(lsof -t -i:8000) 2>/dev/null; python3 -m http.server 8000 &)) && open http://localhost:8000",
+					"name": "Enseigner",
+					"color": "white",
+					"command": "source .env/bin/activate; kill -9 $(lsof -t -i:8000) 2> /dev/null; sphinx-autobuild src/ens build --watch source --open-browser -a --delay 1",
 					"cwd": "${workspaceFolder}",
-					"singleInstance": false,
+					"singleInstance": true,
 				},
-				{
-					"name": "Clean “apprendre”",
-					"color": "#fcc",
-					"command": "kill $(lsof -t -i:8000) 2>/dev/null; test -f venv/bin/activate && source venv/bin/activate; (cd config/apprendre && jupyter-book clean .)",
-					"cwd": "${workspaceFolder}",
-					"singleInstance": false,
-				},
-				{
-					"name": "Build “enseigner”",
-					"color": "#cfc",
-					"command": "test -f venv/bin/activate && source venv/bin/activate; (cd config/enseigner && jupyter-book build . && (cd _build/html; kill $(lsof -t -i:8001) 2>/dev/null; python3 -m http.server 8001 &)) && open http://localhost:8001",
-					"cwd": "${workspaceFolder}",
-					"singleInstance": false,
-				},
-				{
-					"name": "Clean “enseigner”",
-					"color": "#fcc",
-					"command": "kill $(lsof -t -i:8001) 2>/dev/null; test -f venv/bin/activate && source venv/bin/activate; (cd config/enseigner && jupyter-book clean .)",
-					"cwd": "${workspaceFolder}",
-					"singleInstance": false,
-				},
-				{
-					"name": "git pull",
-					"color": "#caa",
-					"command": "git pull origin $(git rev-parse --abbrev-ref HEAD)",
-					"cwd": "${workspaceFolder}",
-					"singleInstance": false,
-				},
-				{
-					"name": "Update jupyter-book",
-					"color": "#ccf",
-					"command": "test -f venv/bin/activate && source venv/bin/activate; pip3 install -U jupyter-book",
-					"cwd": "${workspaceFolder}",
-					"singleInstance": false,
-				}
 			]
 		},
 		"files.watcherExclude": {
@@ -93,13 +54,11 @@
 			"latex",
 			"plaintext"
 		],
-		"jupyter.useNotebookEditor": false,
 		"ltex.language": "fr"
 	},
 	"extensions": {
 		"recommendations": [
 			"ms-python.python",
-			"ms-toolsai.jupyter",
 			"redhat.vscode-yaml",
 			"executablebookproject.myst-highlight",
 			"seunlanlege.action-buttons",
@@ -110,9 +69,6 @@
 	"launch": {
 		"version": "0.2.0",
 		"configurations": [
-			
-
-
 			{
 				"type": "pwa-node",
 				"request": "launch",
