@@ -4,6 +4,30 @@ Dans la première partie nous avons appris les bases de la programmation en Pyth
 
 Dans la deuxième partie nous allons découvrir la programmation orientée objet. Maintenant nous pouvons créer autant de tortues que nous voulons. Nos tortues deviennent également interactives et elles réagissent aux touches du clavier et aux clics de la souris.
 
+```{toctree}
+:maxdepth: 2
+:numbered:
+:hidden:
+Déclencher <onkey>
+Formaliser <lambda>
+Cliquer <onclick>
+Interrompre <ontimer>
+Cloner <turtle>
+Créer <class>
+Hériter <inherit>
+Tracer <math>
+Associer <dict>
+Compter <compter>
+Nuancer <color>
+Appartenir <set>
+Raisonner <bool>
+Manipuler <bit>
+Revenir <recursif>
+Vecteurs <vector>
+Forces <force>
+Idées <idees>
+```
+
 ## Objectifs
 
 {fa}`check, text-success mr-1` Découvrir la programmation orientée objet
