@@ -1,28 +1,28 @@
-# Redondance et code de Hamming
+# 4. Redondance et code de Hamming
 
-## Introduction
+## 4.1. Introduction
 
 Une introduction à la redondance et au code de Hamming.
 
-## Objectifs du cours
+## 4.2. Objectifs du cours
 
 
-## Durée
+## 4.3. Durée
 
 2 périodes de cours en classe (théorie et exercices *déconnectés*).
 
-## Matériel requis
+## 4.4. Matériel requis
 
 Des jetons avec 2 faces différentiables avec un support pour les positionner.
 Les activités décrites ci-dessous sont basées sur des messages de 4 bits, le support doit pouvoir en contenir le double, soit 8.
 
-## Accroche
+## 4.5. Accroche
 
 Nous allons voir ce qui peut se passer lorsque des messages numériques sont enregistrés ou envoyés depuis un expéditeur vers un destinataire.
 
-## Marche à suivre
+## 4.6. Marche à suivre
 
-### Étape 1 - Envoyer un message
+### 4.6.1. Étape 1 - Envoyer un message
 
 #### Objectif : Mettre en place le contexte et le principe de l'activité
 

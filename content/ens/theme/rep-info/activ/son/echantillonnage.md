@@ -28,7 +28,7 @@ L'activité permet de réactiver, confirmer ou souligner des savoirs mécaniques
 
 ### 3.2.1. Mode
 
-**«branché/débranché»** utilisation de l'ordinateur et du logiciel Audacity - pas d'environnement de développement.  Cette activité peut permettre de faire utiliser le tableur et ses fonctionnalités aux élèves et coïncider avec un enseignement de type bureautique - science informatique transversal.
+**«Branché/débranché»** utilisation de l'ordinateur et du logiciel Audacity - pas d'environnement de développement.  Cette activité peut permettre de faire utiliser le tableur et ses fonctionnalités aux élèves et coïncider avec un enseignement de type bureautique - science informatique transversal.
 
 ### 3.2.2. Pré-requis  
 
@@ -56,7 +56,7 @@ L'activité permet de réactiver, confirmer ou souligner des savoirs mécaniques
 </br> **3ème moment didactique.** Moment technique et technologique : les élèves manipulent le programme Audacity, lancent les exécutions, manipulent les fenêtres graphiques (interfaces), observent les graphes et écoutent différentes portions de morceaux de musique (3 maximum) - <span style="color:violet">20-30mn</span>
 </br> **4ème moment didactique.** Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, interprétation. Interprétation du visuel de la courbe sonore dilatée temporellement : la *discrétisation numérique* est mise en évidence. L'enseignant recueille de manière guidée les appréciations des élèves sur la qualité du morceau de musique écouté à différentes *fréquences d'échantillonnage*. Cette notion est simplement posée à ce stade, elle sera reprise et développée dans le temps suivant. Le recueil des appréciations concernant la qualité sonore peut être réalisé via un tableau où figurent en première ligne toutes les fréquences autour de la fréquence médiane 48000 Hz, et dans la ligne suivante la qualité perçue par les élèves : Mauvaise / Convenable / Bonne ; l'enseignant inscrit un segment (représentation au tableau) pour chaque choix de chaque qualité associée, ou travaille de préférence directement sur un [tableau excel](/tab/appqualson.ods) complété avec les retours élèves  - <span style="color:violet">20-30mn</span>
 </br> **5ème moment didactique.** Travail sur la technique : les élèves sont laissés en autonomie une bonne partie du temps sur leurs postes de travail, expérimentent les outils et concepts institutionnalisés en manipulant les paramètres d'Audacity en fin de troisième séance - <span style="color:violet">15-25mn</span>
-</br> **6ème moment didactique.** Evaluation. Devoir maison de type quizz moodle - <span style="color:violet">15-25mn</span>
+</br> **6ème moment didactique.** Evaluation. {download}`Devoir - évaluation maison de type quizz moodle<quizzech.ods>`  - <span style="color:violet">20-30mn</span>
 </br>
 
 
@@ -87,9 +87,9 @@ Les éléments principaux à évoquer sont :
 
 - Notion de fréquence : nombre de battements par seconde. Nombre de fois où le signal redevient identique par seconde.
 
-- Avec les codes python [tracesinus.py](https://enseigner.modulo-info.ch/_static/copy-button.svg) et [listensinus.py](https://enseigner.modulo-info.ch/_static/copy-button.svg), l'enseignant affiche et fait écouter quelques exemples de sons «purs» (grave médium et aigu).
+- Avec les fonctions python [**tracesinus**](#tracesinus) et [**listensinus**](#listensinus), l'enseignant affiche et fait écouter quelques exemples de sons «purs» (grave médium et aigu).
 
-- L'enseignant ajoute ensuite plusieurs signaux sinusoïdaux avec le programme python [puresignalssum.py](https://enseigner.modulo-info.ch/_static/copy-button.svg) : somme d’harmoniques écoutée et visualisée.
+- L'enseignant ajoute ensuite plusieurs signaux sinusoïdaux avec la fonction python [**puresignalssum**](#puresignalssum)  : somme d’harmoniques écoutée et visualisée.
 
 - À la fin de la première période : l'enseignant sensibilise les élèves à l'utilisation d'Audacity : ouverture du logiciel, écoute d'un ou plusieurs morceaux. Les élèves commencent à manipuler en toute fin de séance et s'exerceront concrètement au cours de la suivante.
 
@@ -202,7 +202,83 @@ align: left
 </br> </br>
 
 1ère phase.
-L'enseignant s'assure de la bonne compréhension des phénomènes : notions d'amplitude et de fréquence, dilatation temporelle, fréquences «visibles» des composantes du signal. En particulier, sur la dernière visualisation, on observe qu'on peut mettre en évidence une «quasi-période» entre les instants 0,8320 et 0,8345. Le calcul de la période donne donc 0,8345-0,8320 = 0,0025s, soit une fréquence de 1/0,0025 = 400Hz. L'enseignant questionne les élèves sur cette fréquence : est-elle basse ? haute ? L'enseignant s'appuie ensuite sur la génération d'un son «pur» à 400Hz, via les programmes python tracesinus.py, listensinus.py ou encore puresignalssum.py. Par la visualisation et l'écoute, les élèves peuvent se représenter l'information extraite du fichier audio (composante de fréquence ~ 400Hz).
+L'enseignant s'assure de la bonne compréhension des phénomènes : notions d'amplitude et de fréquence, dilatation temporelle, fréquences «visibles» des composantes du signal. En particulier, sur la dernière visualisation, on observe qu'on peut mettre en évidence une «quasi-période» entre les instants 0,8320 et 0,8345. Le calcul de la période donne donc 0,8345-0,8320 = 0,0025s, soit une fréquence de 1/0,0025 = 400Hz. L'enseignant questionne les élèves sur cette fréquence : est-elle basse ? haute ? L'enseignant s'appuie ensuite sur la génération d'un son «pur» à 400Hz, via les fonctions python **tracesinus**, **listensinus**. Par la visualisation et l'écoute, les élèves peuvent se représenter l'information extraite du fichier audio (composante de fréquence ~ 400Hz), puis comprendre ce qui se passe quand on ajoute plusieurs signaux à différentes fréquences (ici un signal de fréquence fondamentale 400Hz, puis ses 4 harmoniques suivantes : 800, 1200, 1600, 2000Hz) quand l'enseignant utilise la fonction python **puresignalssum**.
+
+<a name="tracesinus"></a>
+
+```
+from __future__ import print_function
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+from pyo import *
+from tkinter import Tk, StringVar, Label, Entry, Button, Frame, DoubleVar, Spinbox
+from functools import partial
+
+def tracesinus(freq):
+#  sinus function at freq(Hz) frequency
+    t = np.arange(0., 0.01, 0.00005)
+    plt.plot(t,np.sin(2*pi*freq*t))
+    label1 = "fonction sinus, fréquence " 
+    label2 = str(freq) 
+    label3 = "Hz"
+    label = label1 + label2 + label3 
+    plt.ylabel(label)
+    plt.show()
+
+tracesinus(400)
+   ```
+
+<a name="listensinus"></a>   
+```
+from __future__ import print_function
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+from pyo import *
+from tkinter import Tk, StringVar, Label, Entry, Button, Frame, DoubleVar, Spinbox
+from functools import partial
+
+def listensinus(freq):
+#  sinus function at freq(Hz) frequency
+   s = Server().boot()
+   s.start()
+   a = Sine(freq, mul=1, add=0).out()
+   time.sleep(5)
+   s.stop()
+
+listensinus(400)   
+   ```
+
+<a name="puresignalssum"></a>   
+```
+from __future__ import print_function
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+from pyo import *
+from tkinter import Tk, StringVar, Label, Entry, Button, Frame, DoubleVar, Spinbox
+from functools import partial
+
+def puresignalssum(freq, harmo):
+#  harmonic signals
+   s = Server().boot()
+   somme = 0
+   for i in range (1,harmo+1):
+      s.start()
+      a = Sine(i*freq, mul=1, add=0).out()
+      time.sleep(1)
+#  graphic vizualisation       
+      namesc = 'Signal '+str(i*freq)+' Hz'
+      somme=somme+a
+   s.stop
+   sc = Scope(somme, 0.003, 0.2, wintitle='somme des signaux')
+   somme.out
+   s.gui(locals())
+
+puresignalssum(400, 5)   
+
+```
 
 </br>
 
@@ -271,7 +347,7 @@ align: left
 Une fois le tableau complété, il est projeté : l'enseignant questionne les élèves sur l'interprétation qu'ils peuvent donner des graphes issus du tableau de données. Il doit faire ainsi ressortir la qualité perçue à partie de la fréquence d'échantillonnage de 44100Hz. La nécessité d'une *fréquence d'échantillonnage minimale* doit ici apparaître.
 Dans un deuxième temps, l'enseignant interroge sur les résultats pour les fréquences supérieures. L'inutilité d'aller au-delà d'une certaine fréquence (en l'occurence 44100 Hz) doit ressortir.
 L'étape suivante consiste à identifier cette valeur de 44100 Hz : à quoi correspond-elle ? L'enseignant revient sur le champ audible par l'oreille humaine : 20Hz - 20000Hz... Il situe alors 44100Hz par rapport à la fréquence la plus élevée que peut percevoir l'oreille humaine, 20000Hz... La fréquence d'échantillonnage apparaît comme devant être au moins égale au double de cette fréquence de 20000Hz.
-En dernier lieu, l'enseignant revient sur la notion même de fréquence d'échantillonnage. Que signifie-t-elle ? C'est le nombre d'échantillons pris par unité de temps. L'enseignant illustre son propos par le dernier visuel de la figure 4 : entre les temps 6,8310s et 6,8315s, on dénombre à peu près 23 échantillons, soit 23/0,0005 = 46000Hz. On retrouve quasiment la fréquence 44100 Hz apparaissant en bas à gauche de la fenêtre Audacity - <span style="color:violet">15-20mn</span>.
+Ensuite, l'enseignant revient sur la notion même de fréquence d'échantillonnage. Que signifie-t-elle ? C'est le nombre d'échantillons pris par unité de temps. L'enseignant illustre son propos par le dernier visuel de la figure 4 : entre les temps 6,8310s et 6,8315s, on dénombre à peu près 23 échantillons, soit 23/0,0005 = 46000Hz. On retrouve quasiment la fréquence 44100 Hz apparaissant en bas à gauche de la fenêtre Audacity.
 
 ```{figure} png/Im41.png
 ---
@@ -281,10 +357,29 @@ align: left
 ---
 **Identification de la fréquence d'échantillonnage (ici 44100Hz).**
 ```
+En dernier lieu, il convient de s'interroger sur les conséquences de l'augmentation de la fréquence d'échantillonnage. L'enseignant affiche la deuxième feuille du fichier excel intégrant à présent la taille des fichiers numérisés aux différentes fréquences. 
+
+```{figure} png/EchOccMem.png
+---
+alt:
+width: 100%
+align: left
+---
+**Echantillonnage et occupation mémoire.**
+```
 
 
 
 
+
+
+Le graphique affiche clairement la croissance forte de l'occupation mémoire en fonction de la fréquence d'échantillonnage, au delà de 48000Hz... ainsi que le changement du mode de compression (on passe d'un format MP3 à un format WAV). L'analyse avec les élèves de la courbe permet de comprendre explicitement la nécessité de borner la fréquence d'échantillonnage : pas trop faible pour garantir une bonne qualité audio, pas trop élevée pour ne pas occuper inutilement de la place mémoire - <span style="color:violet">20-25 mn</span>.
+
+
+### 3.3.4. Evaluation : quizz moodle maison
+
+L'évaluation pourra être réalisée via un quizz moodle open-book, en temps limité (<span style="color:violet">20-30mn</span>) créé par l'enseignant, et comportant 10-15 questions tirées du fichier excel {download}`Devoir - évaluation maison de type quizz moodle<quizzech.ods>`.
+L'enseignant pourra également programmer un cycle d'entrainement préliminaire avec une partie des questions proposées dans ce fichier excel.
 
 
 

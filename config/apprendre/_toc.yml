@@ -74,11 +74,12 @@ parts:
 - caption: Deuxième année
   numbered: false
   chapters:
-  - file: content/appr/theme/algo2/0_landing
+  - file: content/appr/theme/algo2/landing
     sections:
-      - file: content/appr/theme/algo2/cours/introduction/eleve
-      - file: content/appr/theme/algo2/cours/terminaison/eleve
-      - file: content/appr/theme/algo2/cours/complexite/eleve
+      - file: content/appr/theme/algo2/intro
+      - file: content/appr/theme/algo2/principes
+      - file: content/appr/theme/algo2/recherche
+      - file: content/appr/theme/algo2/tris
       - file: content/appr/theme/algo2/cours/heuristiques/eleve
       - file: content/appr/theme/algo2/cours/recursivite/eleve
       - file: content/appr/theme/algo2/cours/conclusion/eleve

@@ -429,7 +429,7 @@ Fin Pour
 Répéter Pour i = 1 à 3 
     [1 fois sur 2] Aller jusque la première ligne verticale 
     Séparer espace avec une ligne horizontale noire
-    [1 fois sur 2] arrêter avant la dernière ligne verticale
+    [1 fois sur 2] Arrêter avant la dernière ligne verticale
 Fin Pour
 
 Répéter Pour couleur_choisie dans ([Rouge, Bleu, Jaune] ou [Rouge, Bleu, Jaune, Noir])

@@ -87,7 +87,7 @@ forward(30)
 porte()
 ```
 
-A l'aide d'une séquence, nous pouvons l'écrire ces fonctions de manière bien plus compacte.
+A l'aide d'une séquence, nous pouvons écrire ces fonctions de manière bien plus compacte.
 
 ```{codeplay}
 :file: tuple3.py
@@ -112,7 +112,7 @@ batiment()
 
 ## Parcourir des angles
 
-Nous allons reprendre nos fonctions `maison()` et, à l'aide d'une séquence, nous pouvons l'écrire de manière bien plus compacte. Cette fois-ci, la séquence représente des angles, donc nous nommons notre variable `a` pour nous rappeler que c'est un angle.
+Nous allons reprendre notre fonction `maison()` et, à l'aide d'une séquence, nous pouvons l'écrire de manière bien plus compacte. Cette fois-ci, la séquence représente des angles, donc nous nommons notre variable `a` pour nous rappeler que c'est un angle.
 
 ```{codeplay}
 :file: tuple4.py
@@ -247,7 +247,7 @@ for w in (1, 5, 10, 20):
     left(5)
 ```
 
-**Exercice** : Faites varier un autre paramètres, par exemple la distance des yeux, ou la taille d'un œil.
+**Exercice** : Faites varier un autre paramètre, par exemple la distance des yeux, ou la taille d'un œil.
 
 ## Etonnement
 
@@ -301,7 +301,7 @@ for i in range(3):
 ## Cube en couleur
 
 Avec l'utilisation de trois couleurs, l'effet 3D est accentué.
-Nous choisissons des couleurs clair pour les surfaces du haut, et des couleurs sombres pour les surfaces vers le bas.
+Nous choisissons des couleurs claires pour les surfaces du haut, et des couleurs sombres pour les surfaces vers le bas.
 
 ```{codeplay}
 from turtle import *
@@ -388,7 +388,7 @@ for c in ('red', 'green', 'blue'):
 
 ## Minecraft
 
-[Minecraft](https://fr.wikipedia.org/wiki/Minecraft) est un jeu vidéo de type aventure *bac à sable* développé par le Suédois Markus Persson, puis par la société Mojang Studios, sortie en 2011. Il s'agit d'un univers composé de voxels.
+[Minecraft](https://fr.wikipedia.org/wiki/Minecraft) est un jeu vidéo de type aventure *bac à sable* développé par le Suédois Markus Persson, puis par la société Mojang Studios, sorti en 2011. Il s'agit d'un univers composé de voxels.
 
 Le voxel (mot créé en contractant *volume* et *element*) est à la 3D ce que le pixel est à la 2D.
 
@@ -449,6 +449,99 @@ for i in range(3):
 - Téléchargez un exercice.
 - Editez-le dans un éditeur.
 - Déposez-le sur Moodle.
+
+
+### Minecraft - escalier
+
+Avec les cubes de Minecraft créez un escalier avec 4 marches.
+
+```{codeplay}
+:file: minecraft_ex1.py
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+
+def cube():      
+    for c in ('lime', 'peru', 'sienna'):
+        fillcolor(c)
+        begin_fill()
+        losange()
+        end_fill()
+        left(120)
+
+speed(0)
+left(30)
+cube()
+```
+
+### Minecraft - portail
+
+Avec les cubes de Minecraft créez un portail 4x4 en forme de π.
+
+```{codeplay}
+:file: minecraft_ex2.py
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+
+def cube():      
+    for c in ('lime', 'peru', 'sienna'):
+        fillcolor(c)
+        begin_fill()
+        losange()
+        end_fill()
+        left(120)
+
+speed(0)
+left(30)
+cube()
+```
+
+### Pavage hexagonal
+
+Le pavage hexagonal est, en géométrie, un pavage du plan euclidien constitué d'hexagones réguliers.
+
+![pavage](media/pavage_hex.png)
+
+Parcourez les 3 couleurs pour dessiner une surface tricolore, soit alignée linéairement, soit autour d'un point commun. Répétez ensuite cette surface élémentaire pour créer un pavage.
+
+```{codeplay}
+:file: pavage.py
+from turtle import *
+
+def hexagone():
+    for i in range(6):
+        forward(40)
+        left(60)
+
+hexagone()
+```
+
+### Cube de Rubik
+
+A l'aide de tuples de couleurs, dessinez le cube de Rubik suivant.
+
+![pavage](media/rubik.jpg)
+
+
+```{codeplay}
+:file: rubik.py
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+
+
+losange()
+```
 
 ### Tetris
 
