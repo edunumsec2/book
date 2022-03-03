@@ -5,6 +5,22 @@ Aujourd'hui, tout le monde peut créer un produit informatique révolutionnaire,
 Marc Zuckerberg avait 19 ans quand il lançait le projet Facebook depuis sa chambre de dortoir à l'université de Harvard.
 Dans cette partie vous allez, tout seul ou en groupe, mettre en pratique vos connaissances de l'informatique pour créer un projet plus conséquent. Et qui sait, peut-être vous serez le prochain Mark Zuckerberg.
 
+````{toctree}
+:maxdepth: 2
+:numbered:
+:hidden:
+Tic-tac-toe <tic_tac_toe>
+Puissance 4 <puissance4>
+Démineur <mines>
+Snake <snake>
+Game of life <game_of_life>
+Poker <cartes>
+Tetris <tetris>
+Art absurde <art_absurde>
+Micro:bit </microbit/microbit>
+Cryptographie <crypto>
+````
+
 ## Objectifs
 
 {fa}`check, text-success mr-1` Créer un projet d'informatique
