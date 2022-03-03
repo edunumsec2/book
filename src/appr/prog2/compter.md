@@ -33,7 +33,7 @@ for i in range(16):
     print(bin(i), end=' ')
 ```
 
-En informatique nous utilisons fréquemment trois autres représentations :
+En informatique, nous utilisons fréquemment trois autres représentations :
 
 - binaire (base 2)
 - octale (base 8)
