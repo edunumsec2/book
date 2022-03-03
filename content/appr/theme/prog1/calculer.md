@@ -1,6 +1,6 @@
 # Calculer - `int`
 
-Dans ce chapitre, nous allons voir comment un programme peut calculer avec des nombres.
+Dans ce chapitre là, nous allons voir comment un programme peut calculer avec des nombres.
 Ceci est utilisé dans une calculatrice ou un tableur.
 
 Les nombres entiers forment une catégorie très importante. En anglais, un entier est appelé **integer** (`int`). Nous allons voir que :
@@ -20,7 +20,7 @@ En informatique, `int` est l'abbréviation pour
 
 ## Un calcul simple
 
-Dans ce chapitre, nous allons explorer comment nous pouvons calculer avec des nombres. Voici un exemple qui affiche dans une première ligne sous forme de texte une expression mathématique, et dans une deuxième ligne une expression mathématique qui sera évaluée vers son résultat numérique.
+Dans ce chapitre là, nous allons explorer comment nous pouvons calculer avec des nombres. Voici un exemple qui affiche dans une première ligne sous forme de texte une expression mathématique, et dans une deuxième ligne une expression mathématique qui sera évaluée vers son résultat numérique.
 
 ```{codeplay}
 :file: int0.py
