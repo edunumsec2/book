@@ -36,6 +36,15 @@ L'activité permet de réactiver, confirmer ou souligner des savoirs mécaniques
         <span style="color:green">utilisation de l'ordinateur et familiarisation avec l'environnement informatique
         </span> 
         
+    Pour l'enseignant : il est recommandé d'utiliser python à partir de la version 3.9. Il faut préalablement réaliser les installations des librairies via la commande pip :
+
+        pip install numpy   
+        pip install matplotlib   
+        pip install pyo  
+        pip install WxPython 
+
+        python3.9 /Users/.../Puresignalsum.py
+        
     
 - Mathématique :
         <span style="color:orange">fonctions,</span>
