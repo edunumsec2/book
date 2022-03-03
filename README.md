@@ -149,8 +149,8 @@ Pour simplifier les actions fréquentes (build, clean), le projet contient un wo
 Le projet utilise [sphinx-autobuild](https://github.com/executablebooks/sphinx-autobuild) qui démarre un serveur sur http://localhost:8000 (ou http://127.0.0.1:8000) et rebuild la documentation automatiquement lorsqu'un changement est détecté. 
 1. Activation de l'environnement virtuel (si pas déjà fait)
 2. Activation du serveur local :
-  - Documentation 'Apprendre' : `sphinx-autobuild config/apprendre build/apprendre --watch source --open-browser -a --delay 1`
-  - Documentation 'Enseigner' : `sphinx-autobuild config/enseigner build/enseigner --watch source --open-browser -a --delay 1`
+  - Documentation 'Apprendre' : `sphinx-autobuild src/appr build --watch source --open-browser -a --delay 1`
+  - Documentation 'Enseigner' : `sphinx-autobuild src/ens build --watch source --open-browser -a --delay 1`
 
 Pour arrêter le serveur : <kbd>CTRL</kbd>+<kbd>c</kbd> ou <kbd>⌘</kbd>+<kbd>c</kbd>
 
