@@ -343,14 +343,14 @@ getscreen().onclick(board.click)
 getscreen().listen()
 ```
 
-<!-- ```{codeplay}
-
-```
-
 ```{codeplay}
 
 ```
 
 ```{codeplay}
 
-``` -->
+```
+
+```{codeplay}
+
+```

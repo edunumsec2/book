@@ -277,10 +277,6 @@ board = Board()
 getscreen().onclick(board.click)
 getscreen().listen()
 ```
-<!-- 
-```{codeplay}
-
-```
 
 ```{codeplay}
 
@@ -288,4 +284,8 @@ getscreen().listen()
 
 ```{codeplay}
 
-``` -->
+```
+
+```{codeplay}
+
+```
