@@ -8,7 +8,6 @@ L’**<span style="color:rgb(89, 51, 209)">algorithmique</span>** étudie les pr
 
 ```{toctree}
 :maxdepth: 2
-:numbered:
 :hidden:
 Introduction <intro>
 Terminaison et complexité <complexite>

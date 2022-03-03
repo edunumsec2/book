@@ -10,7 +10,6 @@ Dans cette section, nous allons comprendre comment les ordinateurs parviennent Ã
 
 ```{toctree}
 :maxdepth: 2
-:numbered:
 :hidden:
 Introduction <intro>
 Les entiers <entiers>

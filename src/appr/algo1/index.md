@@ -60,7 +60,6 @@ Nous avons tous entendu parler des ALGORITHMES. Normal, c’est le mot à la mod
 
 ```{toctree}
 :maxdepth: 2
-:numbered:
 :hidden:
 Introduction <intro>
 Les algorithmes <algorithmes>

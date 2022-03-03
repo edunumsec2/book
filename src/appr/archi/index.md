@@ -17,7 +17,6 @@ Dans ce chapitre, vous découvrirez comment sont construits les ordinateurs, com
 
 ```{toctree}
 :maxdepth: 2
-:numbered:
 :hidden:
 Introduction <intro>
 Portes logiques <sys-log>

@@ -6,7 +6,6 @@ Dans la deuxième partie nous allons découvrir la programmation orientée objet
 
 ```{toctree}
 :maxdepth: 2
-:numbered:
 :hidden:
 Déclencher <onkey>
 Formaliser <lambda>
