@@ -221,10 +221,15 @@ La boucle `while` exécute un bloc tant qu'une condition est vraie.
 On peut l'utiliser pour créer un compteur à rebours.
 Pour l'attente d'une seconde la fonction `sleep()` du module `time` est importée.
 
+La fonction `input()` ne retourne que le type `string`.
+La fonction `int()` transforme le type string (chaine) en entier (integer).
+
 ```{codeplay}
 from time import sleep
 
 n = input('Entrez la valeur de départ: ')
+n = int(n)
+
 while n > 0:
     print(n)
     sleep(1)
@@ -236,9 +241,6 @@ print('boum!!!')
 On peut aussi l'utiliser pour deviner un nombre.
 Ici on importe la fonction `randint()` du module `random`.
 Elle fournit un nombre entier aléatoire entre deux bornes (1, 99).
-
-La fonction `input()` ne retourne que le type `string`.
-La fonction `int()` transforme le type string (chaine) en entier (integer).
 
 ```{codeplay}
 from random import randint
