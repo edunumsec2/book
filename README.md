@@ -1,5 +1,4 @@
- ````{image} modulo_banner3.svg
-````
+![modulo-banner](https://github.com/edunumsec2/modulo2/blob/main/source/_static/assets/modulo-head-banner.svg)
 
 # Informatique au Gymnase / Pilote
 
@@ -116,9 +115,6 @@ Toute personne qui réutilise les ressources est priée de le faire de la façon
 Pour ceux et celles qui souhaitent utiliser l'environnement Jupyter Book pour tester des contenus et participer au développement, la marche à suivre est la suivante : 
 
 ### Installation recommandée
-
-
-![modulo-banner](https://github.com/edunumsec2/modulo2/blob/main/source/_static/assets/modulo-head-banner.svg)
 
 Modulo2 est basé sur le générateur de documentation [Sphinx](https://www.sphinx-doc.org/en/master/) et utilise le template [Furo](https://github.com/pradyunsg/furo).
 
