@@ -19,7 +19,6 @@ Les ressources sont accessibles via le [site web](https://edunumsec2.ch) (Userna
 - [Documents importants](#documents-importants)
 - [Chapitrage du livre](#chapitrage)
 - [Structure du dépôt GitHub : à modifier](#structure-dépôt-GitHub)
-- [Licence du projet](#licence-du-projet)
 - [Installation](#installation)
   - [Installation recommandée](#installation-recommandée)
   - [Pré-requis](#pré-requis)
@@ -77,16 +76,16 @@ Après la phase **pilote**, les enseignant.es pourront en outre :
 
 Les ressources sont découpées selon un chapitrage qui correspond au plan d'études romand (voir ci-dessus). Elles sont divisées en quatre parties, dont nulle n'a de préséance sur les autres. Il appartient à l'enseignante ou l'enseignant de choisir l'ordre dans lequel les contenus sont abordés. Le fait que les chapitres soient successifs est le résultat des limitations de l'affichage. Pour atténuer quelque peu ce problème, nous avons choisi de renoncer à une numérotation des chapitres. 
 
-[Représentation de l'information](https://eleve.edunumsec2.ch/content/theme/representation-information/accueil/eleve.html)
+[Représentation de l'information](https://apprendre.modulo-info.ch/content/appr/theme/rep-info/accueil/eleve.html)
 : Où il est question du passage du système décimal au *système binaire*, ainsi que des problématiques de traitement des données telles que *l'encodage*, *la compression*, *l'échantillonnage*, *le cryptage*, et la *représentation des caractères, des images et des sons* sous forme de bits. 
 
-[Algorithmique I](https://eleve.edunumsec2.ch/content/theme/introduction-algorithmique/accueil/eleve.html)
+[Algorithmique I](https://apprendre.modulo-info.ch/content/appr/theme/algo1/accueil/eleve.html)
 : Ce chapitre propose une *définition générale de l'algorithmique*, ainsi qu'une présentation de certains *algorithmes classiques*. 
 
-[Programmation I](https://eleve.edunumsec2.ch/content/theme/programmation/accueil/eleve.html)
+[Programmation I](https://apprendre.modulo-info.ch/content/appr/theme/prog1/accueil/elevenew.html)
 : Après avoir présenté un échantillon de langages de programmation et leurs différences respectives, ce chapitre *pose les bases du langage Python*. 
 
-[Architecture des ordinateurs](https://eleve.edunumsec2.ch/content/theme/architecture-ordinateurs/accueil/eleve.html)
+[Architecture des ordinateurs](https://apprendre.modulo-info.ch/content/appr/theme/archi/accueil/eleve.html)
 : Il est question ici de notions telles que *les portes logiques*, *les transistors*, *l'architecture de Von Neumann*, et autres concepts essentiels à la compréhension de ce qui se passe au niveau physique et électronique dans un ordinateur.
 
 ## Structure dépôt GitHub (:warning: à modifier)
@@ -94,20 +93,6 @@ Les ressources sont découpées selon un chapitrage qui correspond au plan d'ét
 * [config](https://github.com/edunumsec2/book/tree/master/config) contient essentiellement les documents .yml et .py qui servent à générer la version html statique de la documentation. Ce qui est présent dans ce dossier tire sa source dans la documentation [Sphinx](https://www.sphinx-doc.org/en/master/index.html), ainsi que la documentation [jupyter-book](https://jupyterbook.org/intro.html). 
 * [content](https://github.com/edunumsec2/book/tree/master/content) contient le contenu du cours, découpé en *annexes*, *enjeux* (pour enjeux de société), *readme*, *theme*. C'est dans le dossier *theme* que vous trouverez les documents sources des différentes thématiques. Dans les documents sources, il existe deux extensions : les documents .md, et les .ipynb. Les documents .md sont rédigés dans une sytanxe Mardown étendue, le [MyST](https://myst-parser.readthedocs.io/en/latest/). Les documents .ipynb sont à l'origine des documents créés pour [jupyter notebook](https://jupyter.org/). Les deux syntaxes sont tolérées pour la génération du site html statique via l'outil [jupyter-book](https://jupyterbook.org/intro.html). 
 * [docs](https://github.com/edunumsec2/book/tree/master/docs) contient les *archives* de la documentation, à savoir des fichiers qui ne sont plus utilisés dans la version actuelle du livre. Le dossier *landing*, contient le .html qui génère la [page d'accueil](https://edunumsec2.ch/). *media*, comme d'ailleurs tous les autres dossiers portant ce nom, contient les media utilisés dans le dossier parent en question. *palette* contient des indications relatives à la palette graphique du projet. *wiki* contient les tutoriels nécessaires à l'utilisation du dépôt GitHub. 
-
-
-## Licence du projet
-
-Les ressources sont publiées sous licence Creatives Commons *Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions (CC BY-NC-SA)*. Cela signifie qu'elles peuvent être copiées, transformées, adaptées, et diffusées, hormis à des fins commerciales, tant qu'elles créditent le groupe de travail présenté ci-dessus, et qu'elles utilisent la même licence pour le partage futur. Les conditions sont disponibles [ici](https://creativecommons.org/licenses/?lang=fr). 
-
-![](docs/media/by-nc-sa.png)
-
-Toute personne qui réutilise les ressources est priée de le faire de la façon suivante : 
-
-* 💰 Pas d'utilisation commerciale. 
-* ♻️ Possibilité de modifier les ressources à souhait. 
-* 📗 Crédit : "Par le groupe de travail DGEP, EPFL, HEP Vaud, UNIL". 
-* 🤝 Partage selon les mêmes conditions. Donc en ajoutant simplement le logo ci-dessus pour toute publication éventuelle. 
 
 ## Installation 
 
@@ -120,6 +105,7 @@ Pour ceux et celles qui souhaitent utiliser l'environnement Jupyter Book pour te
 Modulo2 est basé sur le générateur de documentation [Sphinx](https://www.sphinx-doc.org/en/master/) et utilise le template [Furo](https://github.com/pradyunsg/furo).
 
 ### Pré-requis
+
 - Python 3.x et pip ([Installation MacOSX](https://docs.python-guide.org/starting/install3/osx/)) ([Installation Windows](https://docs.python-guide.org/starting/install3/win/)) ([Installation rapide](https://www.python.org/downloads/))
 - [virtualenv](https://virtualenv.pypa.io/en/latest/) (`$ pip install virtualenv`)
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
@@ -132,6 +118,7 @@ Pour vérifier la bonne installation de l'environnement de base :
 Pour simplifier les actions fréquentes (build, clean), le projet contient un workspace pour [Visual Studio Code](https://code.visualstudio.com/). L'utilisation de VSCode est optionnelle, vous pouvez bien sûr utiliser votre éditeur de code préféré.
 
 ### Installation rapide
+
 1. Récupération du projet : `git clone git@github.com:edunumsec2/book.git`
 2. Vers la racine du projet : `cd book` 
 3. Création d'un environnement virtuel : `virtualenv .env`
@@ -143,6 +130,7 @@ Pour simplifier les actions fréquentes (build, clean), le projet contient un wo
 **Remarque** : à chaque fois que vous travaillez sur le projet, l'environnement virtuel devrait être activé (point 4).
 
 ### Utilisation
+
 Le projet utilise [sphinx-autobuild](https://github.com/executablebooks/sphinx-autobuild) qui démarre un serveur sur http://localhost:8000 (ou http://127.0.0.1:8000) et rebuild la documentation automatiquement lorsqu'un changement est détecté. 
 1. Activation de l'environnement virtuel (si pas déjà fait)
 2. Activation du serveur local :
@@ -152,6 +140,7 @@ Le projet utilise [sphinx-autobuild](https://github.com/executablebooks/sphinx-a
 Pour arrêter le serveur : <kbd>CTRL</kbd>+<kbd>c</kbd> ou <kbd>⌘</kbd>+<kbd>c</kbd>
 
 ### Génération de build
+
 - Génération du build 'Apprendre' : `sphinx-build -b html docs/apprendre build/apprendre`
 - Génération du build 'Enseigner' : `sphinx-build -b html docs/enseigner build/enseigner`
 
