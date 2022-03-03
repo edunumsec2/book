@@ -1,7 +1,4 @@
 
- <!DOCTYPE html>
-<html>
-<head>
 <style>
 .button {
   background-color: white;
@@ -40,10 +37,7 @@
     font-size:14px;
     font-weight:bold;
     }
-
 </style>
-</head>
-</html>
 
 <div align="right"> 
     <a href="http://files.edunumsec2.ch/algo.pdf" target="_blank" class="round-button">
