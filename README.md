@@ -119,7 +119,7 @@ Pour ceux et celles qui souhaitent utiliser l'environnement Jupyter Book pour te
 
 Modulo2 est basé sur le générateur de documentation [Sphinx](https://www.sphinx-doc.org/en/master/) et utilise le template [Furo](https://github.com/pradyunsg/furo).
 
-#### Pré-requis
+### Pré-requis
 - Python 3.x et pip ([Installation MacOSX](https://docs.python-guide.org/starting/install3/osx/)) ([Installation Windows](https://docs.python-guide.org/starting/install3/win/)) ([Installation rapide](https://www.python.org/downloads/))
 - [virtualenv](https://virtualenv.pypa.io/en/latest/) (`$ pip install virtualenv`)
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
@@ -131,7 +131,7 @@ Pour vérifier la bonne installation de l'environnement de base :
 
 Pour simplifier les actions fréquentes (build, clean), le projet contient un workspace pour [Visual Studio Code](https://code.visualstudio.com/). L'utilisation de VSCode est optionnelle, vous pouvez bien sûr utiliser votre éditeur de code préféré.
 
-#### Installation rapide
+### Installation rapide
 1. Récupération du projet : `git clone git@github.com:edunumsec2/book.git`
 2. Vers la racine du projet : `cd book` 
 3. Création d'un environnement virtuel : `virtualenv .env`
