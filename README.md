@@ -22,9 +22,10 @@ Les ressources sont accessibles via le [site web](https://edunumsec2.ch) (Userna
 - [Licence du projet](#licence-du-projet)
 - [Installation](#installation)
   - [Installation recommandée](#installation-recommandée)
-  - [Installation Ubuntu 20.04 LTS](#installation-ubuntu-20.04-lts)
-  - [Références](#références)
-  - [Build](#build)
+  - [Pré-requis](#pré-requis)
+  - [Installation rapide](#installation-rapide)
+  - [Utilisation](#utiisation)
+  - [Génération de build](#génération-de-build)
 - [Exemples d'utilisation des ressources](#exemples-dutilisation-des-ressources)
   - [Utilisation en ligne](#utilisation-en-ligne)
   - [Modifications indépendantes](#modifications-indépendantes)
@@ -118,7 +119,7 @@ Pour ceux et celles qui souhaitent utiliser l'environnement Jupyter Book pour te
 
 Modulo2 est basé sur le générateur de documentation [Sphinx](https://www.sphinx-doc.org/en/master/) et utilise le template [Furo](https://github.com/pradyunsg/furo).
 
-# Pré-requis
+#### Pré-requis
 - Python 3.x et pip ([Installation MacOSX](https://docs.python-guide.org/starting/install3/osx/)) ([Installation Windows](https://docs.python-guide.org/starting/install3/win/)) ([Installation rapide](https://www.python.org/downloads/))
 - [virtualenv](https://virtualenv.pypa.io/en/latest/) (`$ pip install virtualenv`)
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
@@ -130,7 +131,7 @@ Pour vérifier la bonne installation de l'environnement de base :
 
 Pour simplifier les actions fréquentes (build, clean), le projet contient un workspace pour [Visual Studio Code](https://code.visualstudio.com/). L'utilisation de VSCode est optionnelle, vous pouvez bien sûr utiliser votre éditeur de code préféré.
 
-# Installation rapide
+#### Installation rapide
 1. Récupération du projet : `git clone git@github.com:edunumsec2/book.git`
 2. Vers la racine du projet : `cd book` 
 3. Création d'un environnement virtuel : `virtualenv .env`
@@ -141,7 +142,7 @@ Pour simplifier les actions fréquentes (build, clean), le projet contient un wo
 
 **Remarque** : à chaque fois que vous travaillez sur le projet, l'environnement virtuel devrait être activé (point 4).
 
-# Utilisation
+### Utilisation
 Le projet utilise [sphinx-autobuild](https://github.com/executablebooks/sphinx-autobuild) qui démarre un serveur sur http://localhost:8000 (ou http://127.0.0.1:8000) et rebuild la documentation automatiquement lorsqu'un changement est détecté. 
 1. Activation de l'environnement virtuel (si pas déjà fait)
 2. Activation du serveur local :
@@ -150,128 +151,9 @@ Le projet utilise [sphinx-autobuild](https://github.com/executablebooks/sphinx-a
 
 Pour arrêter le serveur : <kbd>CTRL</kbd>+<kbd>c</kbd> ou <kbd>⌘</kbd>+<kbd>c</kbd>
 
-# Génération de build
+### Génération de build
 - Génération du build 'Apprendre' : `sphinx-build -b html docs/apprendre build/apprendre`
 - Génération du build 'Enseigner' : `sphinx-build -b html docs/enseigner build/enseigner`
-
-
-**OLD**
-
- 1. Seulement si pas encore présent: [installer git](https://git-scm.com/downloads) sur votre machine
-   * Sous Windows, il faut activer les symlinks de git. Après l'installation de git, éditer le fichier `C:\ProgramData\Git\config` et y insérer:
-
-     ```
-     [core]
-         symlinks = true
-     ```
-
-     ([Plus d'info](https://www.joshkel.com/2018/01/18/symlinks-in-windows/) si ça ne marche pas sous Windows.)
-
- 2. Cloner ce repository git
-    * Soit depuis un terminal avec les commandes directes de `git`
-    * Soit avec application [GitHub Desktop](https://desktop.github.com)
-
- 3. Installer une version récente (3.x, x ≥ 8) de **Python**
-    * [Téléchargement](https://www.python.org/downloads/)
-      * Pour macOS, un excellent tuto si l'installation pose problème (mais il faut bien lire la deuxième partie): [Tuto](https://opensource.com/article/19/5/python-3-default-mac#what-to-do)<sup>1</sup>
-
- 4. (Optionnel) Créer un environnement virtuel pour que les autres installs de Python n'interfèrent pas avec celle utilisée ici:
-    * Avec Python 3, depuis de dossier `book`:
-      ```bash
-      python3 -m venv venv
-      ```
-      Bien utiliser le nom `venv` (pas `.env` ou `.venv`); c'est celui qui sera reconnu par les scripts de compilation.
-
- 5. Installer [Jupyter Book](https://jupyterbook.org).  Ceci **met aussi à jour** Jupyter Book lorsqu'une nouvelle version est disponible. Si l'équipe de rédaction utilise de nouvelles fonctions de Jupyter Book, il faut faire retourner ceci pour l'obtenir.
-    * Avec Python 3, depuis de dossier `book`:
-      ```bash
-      source venv/bin/activate # si vous utilisez un environnement virtuel (recommandé), sinon à sauter
-      pip3 install -U jupyter-book
-      ```
-      * [Instructions complètes](https://jupyterbook.org/intro.html#install-jupyter-book) si la version ci-dessus ne marche pas
-
- 6. Installer [Visual Studio Code](https://code.visualstudio.com) 
-    * Permer d'éditer le Markdown et le format Jupyter (et le format YAML pour la config, si nécessaire)
-    * Fournit des boutons pour produire l'output sans passer par le terminal
-
- 7. Ouvrir le fichier `workspace.code-workspace` dans VS Code
-    * L'installation des extensions suivantes de VS Code sera proposée:
-      * `ms-python.python` pour avoir un éditeur/linter Python
-      * `ms-toolsai.jupyter` pour ouvrir et éditer des fichier Jupyter `*.ipynb`
-      * `redhat.vscode-yaml` pour éditer des fichiers de configuration YAML
-      * `executablebookproject.myst-highlight` pour utiliser la syntaxe Markdown étendue prise en charge par `jupyter-book`
-      * `seunlanlege.action-buttons` pour avoir des boutons directement dans VS Code pour faire un build
-      * `ban.spellright` pour une correction orthographique de base dans VS Code
-      
-      Accepter l'installation de ces recommandations à l'ouverture du workspace:
-      
-      ![](docs/media/extension_recommendations.png)
-
-    * Si l'installation des extensions ne vous est pas proposée, le faire manuellement via l'interface graphique de VS Code ou via le terminal:
-      ```bash
-      code --install-extension <extension-id>
-      ```
-<sup>1</sup> *Note de Philippe: J'ai pris la version 3.9.0 et tout ce qui suit fonctionne parfaitement.*
-
-### Installation Ubuntu 20.04 LTS
-
-* Cloner le dépôt  dans un dossier de votre choix
-
-```bash
-# install git if needed
-sudo apt install -y git
-
-# clone in the directory of your choice
-cd {BASE_FOLDER}
-git clone https://github.com/edunum-sec2/ressources.git
-cd ressources
-```
-
-* Lancer le script d'installation
-
-```bash
-./install_ubuntu.sh
-```
-
-### Références
-
-* Syntaxe Mardown utilisée: [MyST](https://jupyterbook.org/reference/glossary.html#term-MyST)
-
-
-### Build
-
-**Pour produire l'output HTML statique depuis les fichiers source**
-
-Avec VS Code si installé comme ci-dessous, cliquer sur un des boutons en bas de la fenêtre:
-
-![](docs/media/build_screenshot.png)
-
-Sinon, via le terminal. Pour la partie élèves:
-
-```bash
-cd <dossier-du-checkout>/edunum-sec2/config/eleve
-jupyter-book build .
-```
-
-Pour la partie enseignant·e·s:
-
-```bash
-cd <dossier-du-checkout>/edunum-sec2/config/maitre
-jupyter-book build .
-```
-
-Ouvrir ensuite le fichier `_build/html/index.html`, par exemple (macOS):
-
-Si nécessaire (erreurs, vieux fichiers qui traînent dans `_build`):
-
-```bash
-cd <dossier-du-checkout>/edunum-sec2/config/eleve
-# ou:
-cd <dossier-du-checkout>/edunum-sec2/config/maitre
-
-#puis:
-jupyter-book clean .
-```
 
 ## Exemples d'utilisation des ressources
 
@@ -311,6 +193,3 @@ jupyter-book clean .
 - Plateforme : Romain Edelmann (romain.edelmann@epfl.ch) - EPFL & Grégoire Gavin (gregoire.gavin@epfl.ch) - EPFL
 - Charte éditoriale, plateforme, rédaction : Elliot Vaucher (elliot.vaucher@epfl.ch) - EPFL
 - Coordination : Nathalie Farenc (nathalie.farenc@epfl.ch) - EPFL
-
-
-Test actions
