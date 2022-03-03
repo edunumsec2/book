@@ -10,7 +10,7 @@ Une boucle ne représente pas seulement une économie de lignes de code, mais do
 - le parcours est possible sur des plages numériques, du texte, et des listes.
 
 ```{question}
-En informatique itérer c'est
+En informatique, itérer c'est
 
 {v}`parcourir`  
 {f}`bifurquer`  

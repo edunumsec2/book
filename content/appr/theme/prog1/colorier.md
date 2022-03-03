@@ -513,7 +513,7 @@ done()
 
 ### Tetris
 
-Les carrés de base d'un tétromino mesurent 40 × 40 pixels. Il y a 7 formes différentes de tétrominos, qui sont nommés d'après les lettres auxquelles ils ressemblent et qui ont des couleurs standard :
+Les carrés de base d'un tétromino mesurent 40 × 40 pixels. Il y a 7 formes différentes de tétrominos, qui sont nommées d'après les lettres auxquelles ils ressemblent et qui ont des couleurs standard :
 
 ![](media/tetromino.png)
 
