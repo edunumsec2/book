@@ -6,12 +6,18 @@ Pour résoudre un problème, il faut commencer par le décomposer en sous-probl�
 
 L’**<span style="color:rgb(89, 51, 209)">algorithmique</span>** étudie les propriétés de ces {glo}`algo|algorithmes`. Cette analyse est nécessaire pour nous aider à décider quel {glo}`algo|algorithme` utiliser. On se propose à présent de passer en revue quelques propriétés importantes des {glo}`algo|algorithmes`. 
 
-<!-- 
-## Contenu de la thématique
-
-```{tableofcontents}
-``` 
--->
+```{toctree}
+:maxdepth: 2
+:numbered:
+:hidden:
+Introduction <intro>
+Terminaison et complexité <complexite>
+Algorithmes de recherche <recherche>
+Algorithmes de tri <tris>
+Solutions heuristiques <heuristiques>
+Focus sur la récursivité <recursivite>
+Conclusion <conclusion>
+```
 
 
 ## Objectifs de la thématique

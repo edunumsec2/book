@@ -35,6 +35,11 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    :maxdepth: 3
    :hidden:
 
+   algo2/index
+   prog2/index
+   projets/index
+   resx/index
+
 .. toctree::
    :name: Outils
    :caption: Outils
