@@ -150,7 +150,7 @@ Pour arrêter le serveur : <kbd>CTRL</kbd>+<kbd>c</kbd> ou <kbd>⌘</kbd>+<kbd>c
 
 ### Utilisation en ligne
 
-1. Je me rends sur https://edunumsec2.ch
+1. Je me rends sur https://modulo-info.ch
 2. Je navigue à travers les différents chapitres du cours. 
 3. Si une information m'intéresse, par exemple une anecdote historique, un angle d'attaque pour une notion, un exemple particulier, voire même une séquence entière de cours théorique, je prends des notes et la réutilise à souhait dans mes leçons. 
 4. Je parcours les idées d'activité et je choisis celles qui m'intéressent. 
