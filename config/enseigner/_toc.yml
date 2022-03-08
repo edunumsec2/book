@@ -23,6 +23,7 @@ parts:
       - file: content/ens/theme/rep-info/support/presentation
         sections:
           - file: content/ens/theme/rep-info/support/son/visu-et-ecoute-son
+          - file: content/ens/theme/rep-info/support/reels/reels
           - file: content/ens/theme/rep-info/support/redondance/shannon2    
 
   - file: content/ens/theme/prog1/maitre
