@@ -359,7 +359,7 @@ Pour dessiner un cube de Rubik, nous dessinons
 - 3 lignes pour former une surface,
 - 3 surfaces pour former un cube.
 
-A chaque fois nous retournons au point de départ.
+Dans chaque fonction (losange, ligne, surface) nous retournons au point de départ.
 
 ```{codeplay}
 from turtle import *
