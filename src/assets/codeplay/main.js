@@ -399,9 +399,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     createTooltip();
   }
-
-
-  if (parent && parent.frameResized) {
+  function initialise() {
+    if (!parent.frameResized) {
+      setTimeout(initialise, 100);
+      return;
+    }
     parent.populateFrame(self, function(frame) {
       codeElem.setValue(b64DecodeUnicode(frame.dataset.code));
       if (frame.hasAttribute("data-prelude")) {
@@ -456,5 +458,9 @@ document.addEventListener("DOMContentLoaded", function() {
         runInterpreter()
       }
     });
+  }
+
+  if (parent) {
+    initialise();
   }
 });
