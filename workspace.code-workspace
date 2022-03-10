@@ -27,14 +27,35 @@
 			"loadNpmCommands": false,
 			"commands": [
 				{
-					"name": "Apprendre",
+					"name": "Start web server",
+					"color": "white",
+					"command": "source .env/bin/activate; cd build; kill -9 $(lsof -t -i:8000) 2> /dev/null; python -m http.server 8000 ",
+					"cwd": "${workspaceFolder}",
+					"singleInstance": true,
+				},
+				{
+					"name": "Apprendre (build)",
+					"color": "white",
+					"command": "source .env/bin/activate; sphinx-build src/appr build -E",
+					"cwd": "${workspaceFolder}",
+					"singleInstance": true,
+				},
+				{
+					"name": "Enseigner (build)",
+					"color": "white",
+					"command": "source .env/bin/activate; sphinx-build src/appr build -E",
+					"cwd": "${workspaceFolder}",
+					"singleInstance": true,
+				},
+				{
+					"name": "Apprendre (auto-build)",
 					"color": "white",
 					"command": "source .env/bin/activate; kill -9 $(lsof -t -i:8000) 2> /dev/null; sphinx-autobuild src/appr build --watch source --open-browser -a --delay 1",
 					"cwd": "${workspaceFolder}",
 					"singleInstance": true,
 				},
 				{
-					"name": "Enseigner",
+					"name": "Enseigner (auto-build)",
 					"color": "white",
 					"command": "source .env/bin/activate; kill -9 $(lsof -t -i:8000) 2> /dev/null; sphinx-autobuild src/ens build --watch source --open-browser -a --delay 1",
 					"cwd": "${workspaceFolder}",
