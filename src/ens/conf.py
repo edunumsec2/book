@@ -14,6 +14,8 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+import os
+import sys
 
 # -- Project information -----------------------------------------------------
 
@@ -30,7 +32,18 @@ release = '0.1'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['myst_parser']
+sys.path.append(os.path.abspath("../exts"))
+extensions = [
+    'codeplay',
+    'glossary',
+    'myst_parser',
+    'questions',
+    'sphinx_panels',
+    'videos',
+    'logic',
+    'blanks',
+    'timeline'
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['../../source/_templates']

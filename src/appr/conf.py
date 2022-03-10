@@ -41,7 +41,8 @@ extensions = [
     'sphinx_panels',
     'videos',
     'logic',
-    'blanks'
+    'blanks',
+    'timeline'
 ]
 
 glossary_doc = 'glossaire'
