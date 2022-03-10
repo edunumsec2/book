@@ -45,3 +45,5 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    :caption: Outils
    :maxdepth: 3
    :hidden:
+
+   glossaire

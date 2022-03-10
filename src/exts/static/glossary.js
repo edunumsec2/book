@@ -6,7 +6,7 @@ function b64DecodeUnicode(str) {
 }
 
 function references_ready() {
-    const main_content = document.getElementById("main-content").children.item(0);
+    const main_content = document.querySelector(".main");
     const tooltip = document.createElement("div");
     tooltip.setAttribute("id", "tooltip");
     tooltip.innerHTML =
