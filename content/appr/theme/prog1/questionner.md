@@ -369,11 +369,12 @@ Créez un programme qui demande trois couleurs et dessine ensuite un drapeau tri
 from turtle import *
 
 def rectangle():
+    forward(100)
     ...
 
 for i in range(3): 
     c = input('Couleur du rectangle: ')
-...
+    ...
 ```
 
 ### Smileys
@@ -393,7 +394,7 @@ def smiley():
 
 for i in range(3): 
     c = input('Couleur : ')
-...
+    ...
 ```
 
 ### Quiz

@@ -460,13 +460,11 @@ s.onkey(gauche, 'Left')
 s.onkey(droite, 'Right')
 s.onkey(clear, 'c')
 s.listen()
-
-print("Utilisez les flèches pour bouger le snake.")
 ```
 
 ### Tetris
 
-Programmez 
+Les flèches gauche/droite permettent de déplacer le tétronimo. Programmez les touches haut/bas pour le tourner.
 
 ```{codeplay}
 :file: tetris.py

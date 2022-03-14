@@ -95,6 +95,34 @@ Ceci est dû au fait que dans ce site votre code est traduit en JavaScript et ex
 Le module en JavaScript ne traduit pas tous les objets, mais les méthodes essentielles sont tous présentes.
 ```
 
+## Une tortue texte
+
+Nous allons maintenant introduire une deuxième tortue qui sera responsable uniquement pour écrire du texte. L'expression `text = Turtle()` crée une nouvelle tortue appelé `text`. Pour appeler des méthodes sur cette nouvelle tortue nous devons utiliser la méthode doté, donc précéder les instructions par `text.`
+
+```{codeplay}
+:file: onkey3.py
+from turtle import *
+text = Turtle()
+text.up()
+text.hideturtle()
+text.goto(-290, 180)
+text.write('a–avancer  h–home  c–clear', font=('Arial', 14))
+
+shape('turtle')
+color('red')
+
+def avancer():
+    forward(20)
+
+s = getscreen()
+s.onkey(avancer, 'a')
+s.onkey(home, 'h')
+s.onkey(clear, 'c')
+s.listen()
+```
+
+**Exercice** : Ajoutez une fonction de rappel pour faire tourner la tortue.
+
 ## Bouger deux tortues
 
 Nous pouvons utiliser des fonctions de rappel pour faire bouger les deux tortues à l'aide des touches du clavier.
