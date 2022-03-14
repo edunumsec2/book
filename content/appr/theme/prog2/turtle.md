@@ -77,16 +77,93 @@ s.listen()
 
 ## Les méthodes
 
-La fonction `dir()` permet d'afficher toutes les méthodes que possède la classe `Turtle`. Il y en a environ 87 et vous en connaissez déjà une grande partie.
+La fonction `dir()` permet d'afficher toutes les méthodes que possède la classe `Turtle`. Il y en a environ 72 et vous en connaissez déjà une grande partie.
 
 ```{codeplay}
 :file: turtle2.py
 from turtle import *
 
-methodes = dir(Turtle)
+methodes = [x for x in dir(Turtle) if not x.startswith('_')]
 print(methodes)
 print(len(methodes))
 ```
+
+Nous y trouvons les 4 méthodes de mouvement et leurs abréviations
+
+- `forward`, `fd` - avancer
+- `backward`, `back`, `bk` - reculer
+- `left`, `lt` - tourner à gauche
+- `right`, `rt` - tourner à droite
+
+Les fonctions pour colorier
+
+- `begin_fill`, `end_fill` - pour entourer la forme à remplir
+- `color` - les 2 couleurs (ligne et remplissage)
+- `colormode` - le mode (1 ou 255)
+- `pencolor` - couleur de ligne
+- `fillcolor` - couleur de remplissage
+
+Les fonctions de dessin
+
+- `dot` - dessiner un point
+- `circle` - dessiner un cercle
+- `stamp` - laisser un tampon de la tortue
+- `write` - écrire un texte
+
+Les fonctions d'initialisation
+
+- `clear` - effacer les traces
+- `home` - retourner à l'origine
+- `reset` - réinitialiser la tortue
+
+Les fonctions de la tortue
+
+- `shape` - choisir la forme
+- `speed` - choisir la vitesse
+- `width`, `pensize` - épaisseur du trait
+- `hideturtle`, `ht` - masquer la tortue
+- `showturtle`, `st` - afficher la tortue
+- `down`, `pendown`, `pd` - baisser le stylo
+- `up`, `penup`, `pu` - lever le stylo
+- `isdown`, `isvisible`, `fill` - info sur l'état (True/False)
+- `clone` - créer une copie de la tortue
+
+Les fonctions de position
+
+- `position`, `pos` - lire la position
+- `setposition`, `setpos`, `goto` - changer la position
+- `xcor`, `ycor` - lire une coordonnée
+- `setx`, `sety` - changer une coordonnée
+- `towards`, `heading` - lire l'orientation
+- `setheading`, `seth` - changer l'orientation
+- `distance` - distance vers une tortue
+- `degrees`, `radians` - choisir l'unité
+
+Les références aux objets Turtle et Screen
+
+- `getpen`, `getturtle` - objet tortue
+- `getscreen` - objet écran
+
+Taille de la fenêtre
+
+- `window_height`
+- `window_width`
+
+Les fonctions de rappel
+
+- `onclick`
+- `ondrag`
+- `onrelease`
+
+Entrer dans la boucle principale
+
+- `done`, `mainloop`
+
+Fonctions pour contrôler l'animation de la tortue
+
+- `delay`
+- `tracer`
+- `update`
 
 ```{caution}
 Si vous exécutez ce code directement en Python avec un éditeur externe comme Thonny, vous constatez un nombre bien plus élévé d'objets (plus que 130).
@@ -141,6 +218,7 @@ ana.color('red')
 
 bob = ana.clone()
 bob.color('blue')
+bob.goto(0, 50)
 
 def bouger(tortue, dir):
     tortue.seth(dir)
@@ -226,33 +304,34 @@ Cliquez sur une tortue pour la sélectionner, ensuite utiliser les touches flèc
 ```{codeplay}
 :file: turtle6.py
 from turtle import *
-from random import *
 s = getscreen()
 d = 50
 
 def f(tortue, x, y):
     global t
+    t.color('black')
     t = tortue
+    t.color('red')
 
-ana = Turtle()
+ana = getturtle()
 ana.shape('turtle')
 ana.speed(0)
 
 bob = ana.clone()
-bob.color('lime')
+bob.goto(0, d)
 
 lea = ana.clone()
-lea.color('red')
+lea.goto(d, 0)
 t = ana
 
 ana.onclick(lambda x, y:f(ana, x, y))
 bob.onclick(lambda x, y:f(bob, x, y))
 lea.onclick(lambda x, y:f(lea, x, y))
 
-s.onkey(lambda : t.setx(t.xcor() + d), 'Right')
-s.onkey(lambda : t.setx(t.xcor() - d), 'Left')
-s.onkey(lambda : t.sety(t.ycor() + d), 'Up')
-s.onkey(lambda : t.sety(t.ycor() - d), 'Down')
+s.onkey(lambda : t.right(30), 'Right')
+s.onkey(lambda : t.left(30), 'Left')
+s.onkey(lambda : t.forward(d), 'Up')
+s.onkey(lambda : t.backward(d), 'Down')
 s.listen()
 ```
 
@@ -265,36 +344,26 @@ from random import *
 s = getscreen()
 d = 50
 
-def f(tortue, x, y):
+def f(x, y, tortue):
     global t
-    tortue.color('red')
+    t.color('black')
     t = tortue
-
-from turtle import *
-from random import *
-s = getscreen()
+    t.color('red')
 
 for i in range(10):
+    t = getturtle() if i == 0 else Turtle()
+    t.speed(0)
+    t.shape('turtle')
+    
     x = randint(-300, 300)
     y = randint(-200, 200)
-    dir = randint(0, 360)
-    col = (random(), random(), random())
-    
-    t = getturtle() if i == 0 else Turtle()
-    t.up()
-    t.color(col)
-    t.speed(0)
-    t.seth(t.towards(x, y))
-    t.shape('turtle')
     t.goto(x, y)
-    t.seth(dir)
-    t.down()
-    t.onclick(lambda x, y : f(t, x, y))
+    t.onclick(lambda x, y, tortue=t : f(x, y, tortue))
 
-s.onkey(lambda : t.setx(t.xcor() + d), 'Right')
-s.onkey(lambda : t.setx(t.xcor() - d), 'Left')
-s.onkey(lambda : t.sety(t.ycor() + d), 'Up')
-s.onkey(lambda : t.sety(t.ycor() - d), 'Down')
+s.onkey(lambda : t.right(30), 'Right')
+s.onkey(lambda : t.left(30), 'Left')
+s.onkey(lambda : t.forward(d), 'Up')
+s.onkey(lambda : t.backward(d), 'Down')
 s.listen()
 ```
 
