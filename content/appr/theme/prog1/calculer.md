@@ -312,11 +312,7 @@ ligne(p, (0, 100))
 ligne((-300, 0), (300, 0))
 ```
 
-## Créer un quiz
-
-Nous continuons ici avec nos quiz. D'abord nous allons ajouter un score. Ensuite nous allons voir comment créer  des quiz mathématiques.
-
-### Ajouter un score
+## Quiz avec score
 
 Nous reprenons l'exemple du chapitre précédent et nous ajoutons le calcul du score
 
@@ -339,29 +335,14 @@ for (question, solution) in quiz:
 print('Votre score: ', score, 'sur', len(quiz))
 ```
 
-### Valeurs aléatoires
+## Quiz mathématique
 
-Pour les exercices mathématiques il serait pratique d'avoir des valeurs aléatoire. 
-Nous allons utiliser la fonction `randint(a, b)` du module `random` qui renvoie un entier aléatoire du l'intervalle [a, b].
-
-```{codeplay}
-from random import *
-
-for i in range(10):
-    print(randint(10, 99))
-```
-
-### Quiz mathématique
-
-Nous utilisons deux valeurs aléatoires pour faire un quiz d'addition.
+Nous utilisond un tuple avec deux valeurs (a, b) que nous mettons dans un deuxième tuple.
+Cette fois nous avons pas besoin de donner une solution, car nous pouvons la calculer.
 
 ```{codeplay}
-from random import *
-
 print('Quiz addition')
-for i in range(3):
-    a = randint(10, 50)
-    b = randint(10, 50)
+for (a, b) in ((12, 35), (23, 11), (55, 23)):
     print(a, '+', b, '=')
     reponse = int(input())
     if reponse == a + b:
@@ -370,6 +351,8 @@ for i in range(3):
         print('FAUX. La bonne réponse est', a + b)
     print()
 ```
+
+**Exercice** : Faites un petit quiz mathématique sur la multiplication.
 
 ## Erreurs
 
