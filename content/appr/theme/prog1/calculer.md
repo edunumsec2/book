@@ -55,32 +55,54 @@ Quel est le résultat de l'expression `'12' + '12'` ?
 {f}`1221`  
 ```
 
-## Opérateurs avancés
 
-En Python, nous avons également 3 opérateurs supplémentaires :
+## Puissance
 
-- puissance (`**`),
-- division entière (`//`),
-- reste de la division entière ou modulo (`%`).
+En Python l'opérateur de puissance est `**`. Ne le confondez pas avec le symbole `^` utilisé dans d'autre langages tel que Excel.
 
 ```{codeplay}
-:file: int2.py
-print('7 ** 3 =', 7 ** 3)
+print('le carré de 7 est')
+print(7 ** 2)
+print()
+print('le cube de 4 est')
+print(4 ** 3)
+```
+
+Nous pouvons utiliser une puissance de 0.5 pour calculer une racine.
+
+```{codeplay}
+print('la racine de 2 est')
+print(2 ** 0.5)
+```
+
+Nous pouvons maintenant calculer une diagonale, en utilisant le théorème de Pythagore.
+
+```{codeplay}
+print("la diagonale d'un rectangle de 3 sur 6 est")
+print((3 ** 2 + 6 ** 2) ** 0.5)
+```
+
+
+## Division entière
+
+En Python, nous avons un opérateur spéciale pour la division entière (`//`) ainsi que pour le reste de la division entière. L'opérateur pour le reste de la division entière est `%` est s'appelle **modulo**.
+
+```{codeplay}
+print('division')
+print('7 / 3 =', 7 / 3)
+print('division entière')
 print('7 // 3 =', 7 // 3)
+print('modulo')
 print('7 % 3 =', 7 % 3)
 ```
 
-**Exercice** : Modifiez les 3 calculs et exécutez de nouveau.
-
 ```{question}
-Quel est le résultat de l'expression `1 + 2 * 3` ?
+Quel est le résultat de l'expression `10 % 3` ?
 
-{f}`1`
-{f}`2`
-{f}`3`
-{f}`6`
-{v}`7`
-{f}`9`
+{v}`1`  
+{f}`2`  
+{f}`3`  
+{f}`3.333333`
 ```
 
 ## Les variables
@@ -92,15 +114,16 @@ La forme générique d'une affectation est `var = expression`.
 
 ```{codeplay}
 :file: int3.py
-r = 2
+r = 3
 pi = 3.14
 
 print('rayon =', r)
 print('diamètre =', 2 * r)
-print('circonférence =', pi * 2 * r)
+print('circonférence =')
+print('surface =')
 ```
 
-**Exercice** : Ajoutez le calcul de la surface du cercle.
+**Exercice** : Ajoutez le calcul de la circonférence et de la surface du cercle.
 
 Pour nommer une variable vous pouvez utiliser :
 
@@ -188,12 +211,11 @@ Les trois fonctions `str()`, `int()` et `float()` permettent de transformer d'un
 Par exemple, la chaîne `'123'` peut être transformée soit en entier, soit en nombre à virgule flottante.
 
 ```{codeplay}
-:file: int6.py
 a = '123'
-b = int(123)
-c = float(123)
+b = int(a)
+c = float(a)
 
-print(b, c)
+print(a, b, c)
 print(type(a))
 print(type(b))
 print(type(c))
@@ -203,10 +225,19 @@ Nous reconnaissons la différence entre un entier (`int`) et un nombre à virgul
 
 ## Obtenir un nombre
 
-La fonction `input()` permet d'obtenir une entrée de l'utilisateur. La valeur retournée est une chaine de caractères. Pour pouvoir l'utiliser dans un calcul nous devons la transformer en virgule flottante avec la fonction de conversion `float()`.
+La fonction `input()` permet d'obtenir une entrée de l'utilisateur. Mais attention !
+La valeur retournée est une chaine de caractères (de type string `str`). 
 
 ```{codeplay}
-:file: int7.py
+x = input('Entrez un nombre entier: ')
+print(type(x))
+print(x * 5)
+print(int(x) * 5)
+```
+
+Pour pouvoir l'utiliser dans un calcul nous devons la transformer en virgule flottante avec la fonction de conversion `float()`.
+
+```{codeplay}
 r = float(input('Entrez le rayon: '))
 pi = 3.14
 
@@ -232,48 +263,25 @@ print('diagonale =')
 
 **Exercice** : Complétez le programme pour afficher le périmètre et la diagonale.
 
-## Affectation multiple
-
-Python permet d'affecter plusieurs variables sur une même ligne.
-Ceci est parfois utilisé pour assigner des coordonnées.
-
-```{codeplay}
-:file: int9.py
-x, y = 3, 4
-print(x, y)
-```
-
-L'affectation multiple est une manière élégante d'échanger les valeurs de deux variables.
-
-```{codeplay}
-:file: int10.py
-x, y = 3, 4
-print(x, y)
-
-x, y = y, x
-print(x, y)
-```
-
-**Exercice** : Ajoutez une 3e variable et faites une permutation cyclique.
 
 ## Revisiter le `tuple`
 
-L'affectation multiple utilise le format du tuple.
-Un **n-uplet** (tuple) est une séquence d'objets. Ce sont :
+Nous avons déjà vu qu'un **n-uplet** (tuple) est une séquence d'objets. Ce sont :
 
 - multiple valeurs séparé par une virgule,
 - une seule valeur terminé par une virgule,
 - des parenthèses vides pour le tuple vide.
 
 ```{codeplay}
-x = 1, 2    # deux valeurs
-y = 1,      # une seul valeur (virgule !)
-z = ()      # tuple vide
+a = ()      # tuple vide
+b = 1       # un entier
+c = 1,      # tuple avec une valeur
+d = 1, 2    # tuple avec deux valeurs
 
-print(x)
-print(y)    
-print(z)
-print(type(x))
+print(a)
+print(b)
+print(c)
+print(d)
 ```
 
 ## Position `(x, y)`
@@ -290,8 +298,6 @@ La fonction `goto()` accepte :
 - deux coordonnées séparés `goto(x, y)`
 - deux coordonnées dans un tuple `goto(p)`
 
-Nous pouvons maintenant définir une fonction compacte et élégante pour dessiner une ligne entre deux points `p` et `q`.
-
 ```{codeplay}
 from turtle import *
 up()
@@ -301,6 +307,13 @@ p = (100, -120)
 print('p =', p)
 print('x =', p[0])
 print('y =', p[1])
+```
+
+Nous pouvons définir une fonction `ligne()` qui dessine une ligne entre deux points.
+
+```{codeplay}
+from turtle import *
+up()
 
 def ligne(p, q):
     goto(p)
@@ -308,8 +321,14 @@ def ligne(p, q):
     goto(q)
     up()
 
-ligne(p, (0, 100))
-ligne((-300, 0), (300, 0))
+p = 100, 50
+
+goto(p)
+dot(20)
+ligne(p, (0, 200))
+ligne(p, (0, -200))
+ligne(p, (300, 0))
+ligne(p, (-300, 0))
 ```
 
 ## Quiz avec score
