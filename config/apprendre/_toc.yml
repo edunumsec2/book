@@ -80,6 +80,7 @@ parts:
       - file: content/appr/theme/algo2/principes
       - file: content/appr/theme/algo2/recherche
       - file: content/appr/theme/algo2/tris
+      - file: content/appr/theme/algo2/recursivite
       - file: content/appr/theme/algo2/cours/heuristiques/eleve
       - file: content/appr/theme/algo2/cours/recursivite/eleve
       - file: content/appr/theme/algo2/cours/conclusion/eleve
