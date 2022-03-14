@@ -34,11 +34,11 @@ Entrez une expression en Python, par exemple `1 + 2`. Appuyez sur la touche `Ent
 
 Essayez d'entrer une commande multi-ligne, par exemple une boucle `for`. L'invite change alors vers un invite de continuation (`...`). Pour évaluer une séquence multi-ligne, terminez par une ligne vide. 
 
-Vous ne pouvez pas éditer une expression qui est déjà exécuté. Vous ne pouvez seulement ajouter une nouvelle expression après l'invite (`>>>`) de la dernière ligne.
+Vous ne pouvez pas éditer une expression qui est déjà exécutée. Vous ne pouvez seulement ajouter une nouvelle expression après l'invite (`>>>`) de la dernière ligne.
 
 ![](media/fleches-clavier.png)
 
-Par contre vous pouvez utiliser les flèches haut/bas pour accéder à l'historique de vos expressions. Ceci vous permet de réutiliser et modifier des expressions que vous avez déjà utilisées au-paravant.
+Par contre vous pouvez utiliser les flèches haut/bas pour accéder à l'historique de vos expressions. Ceci vous permet de réutiliser et modifier des expressions que vous avez déjà utilisées auparavant.
 
 Pour quitter tapez la commande `quit()`.
 
@@ -79,9 +79,13 @@ L'éditeur IDLE
 ![](media/IDLE_console.png)
 
 L'éditeur IDLE permet également d'éditer un fichier code et de l'exécuter avec la commande **Run > Run Module** (F5). 
-Plusieurs fenêtres de code peuvent être ouvertes simultanément. Vous pouvez les regrouper k
+Plusieurs fenêtres de code peuvent être ouvertes simultanément. Vous pouvez les regrouper dans une seule fenêtre avec la commande **Window > Merge All Windows**.
 
 ![](media/IDLE_editor.png)
+
+Dans le menu **Help > Turtle Demo** vous trouvez des exemples programmés avec le module `turtle`. Dans le menu **Exemple** choisissez par exemple `clock` et appuyez sur **Start**.
+
+![](media/IDLE_clock.png)
 
 Les avantages par rapport à Thonny:
 
@@ -148,7 +152,7 @@ Un fichier Jupyter notebook permet de combiner code et documentation. Le noteboo
 ## Configuration turtle
 
 L'apparence de la fenêtre du module `turtle` peut être configuré par un  fichier de configuration.  
-Vous pouvez télécharger ce fichier et le placer dans le même dossier ou vous gardez vous programmes Python.
+Vous pouvez télécharger ce fichier et le placer dans le même dossier ou vous gardez vos programmes Python.
 
 Comme dans le navigateur web, il met la taille de la fenêtre à 600 x 400 pixels. Le curseur a la forme de tortue (`shape = turtle`) et la couleur de base est indigo, une des couleurs du logo Modulo.
 
@@ -179,11 +183,11 @@ using_IDLE = False
 
 ## Exporter en EPS
 
-Pour exporter un dessin en format EPS (Encapsulated PostScript) il suffit de copier les 2 lignes ci-dessous à la fin de votre code. Remplacez `file.eps` par le nom de votre fichier, par exemple `rubik.eps`.
+Pour exporter un dessin en format EPS (Encapsulated PostScript) il suffit de copier les 2 lignes ci-dessous à la fin de votre code. Remplacez `fichier.eps` par le nom de votre fichier, par exemple `rubik.eps`.
 
 ```python
 from tkinter import * 
-Screen().getcanvas().postscript(file='file.eps')
+Screen().getcanvas().postscript(file='fichier.eps')
 ```
 
 ## Exporter en JPG ou PNG
