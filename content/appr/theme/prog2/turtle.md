@@ -89,11 +89,11 @@ s.onkey(b, 'b')
 s.listen()
 ```
 
-## Les méthodes
+## Méthodes Turtle
 
 La fonction `dir()` permet d'afficher toutes les méthodes que possède la classe `Turtle`. Il y en a environ 72 et vous en connaissez déjà une grande partie.
 
-Dans la liste de compréhension, nous excluons les fonctions spéciales qui commencent avec un tiret bas `_`.
+Dans la liste de compréhension, nous excluons les méthodes spéciales qui commencent avec un tiret bas `_` et affichons toutes les méthodes pour un objet `Turtle`.
 
 ```{codeplay}
 :file: turtle2.py
@@ -104,14 +104,14 @@ print(methodes)
 print(len(methodes))
 ```
 
-Nous y trouvons les 4 méthodes de mouvement et leurs raccourcis.
+Les 4 méthodes de mouvement et leurs raccourcis
 
 - `forward`, `fd` - avancer
 - `backward`, `back`, `bk` - reculer
 - `left`, `lt` - tourner à gauche
 - `right`, `rt` - tourner à droite
 
-Les fonctions pour colorier
+Les méthodes pour colorier
 
 - `begin_fill`, `end_fill` - pour entourer la forme à remplir
 - `color` - les 2 couleurs (ligne et remplissage)
@@ -119,20 +119,20 @@ Les fonctions pour colorier
 - `pencolor` - couleur de ligne
 - `fillcolor` - couleur de remplissage
 
-Les fonctions de dessin
+Les méthodes de dessin
 
 - `dot` - dessiner un point
 - `circle` - dessiner un cercle
 - `stamp` - dessiner un tampon de la tortue
 - `write` - écrire un texte
 
-Les fonctions d'initialisation
+Les méthodes d'initialisation
 
 - `clear` - effacer les traces
 - `home` - retourner à l'origine
 - `reset` - réinitialiser la tortue
 
-Les fonctions de la tortue
+Les méthodes de la tortue
 
 - `shape` - choisir la forme
 - `speed` - choisir la vitesse
@@ -144,7 +144,7 @@ Les fonctions de la tortue
 - `isdown`, `isvisible`, `fill` - info sur l'état (True/False)
 - `clone` - créer une copie de la tortue
 
-Les fonctions de position et leurs raccourcis
+Les méthodes de position et leurs raccourcis
 
 - `position`, `pos` - lire la position
 - `setposition`, `setpos`, `goto` - changer la position
@@ -155,27 +155,27 @@ Les fonctions de position et leurs raccourcis
 - `distance` - distance vers une tortue
 - `degrees`, `radians` - choisir l'unité
 
-Les références aux objets Turtle et Screen
+Les méthodes pour trouver la référence aux objets
 
 - `getpen`, `getturtle` - objet tortue
 - `getscreen` - objet écran
 
-Taille de la fenêtre
+Les méthodes pour la taille de la fenêtre
 
 - `window_height`
 - `window_width`
 
-Les fonctions de rappel
+Les méthodes pour définir les fonctions de rappel
 
 - `onclick` - cliquer la tortue
 - `ondrag` - tirer la tortue
 - `onrelease` - relâcher la tortue
 
-Entrer dans la boucle principale
+La méthode pour entrer dans la boucle principale
 
 - `done`, `mainloop`
 
-Fonctions pour contrôler l'animation de la tortue
+Les méthodes pour contrôler l'animation de la tortue
 
 - `delay` - délai entre les animations
 - `tracer` - activer ou désactiver l'animation
