@@ -51,10 +51,10 @@ Une classe est comme un moule qui nous permet de créer des copies, à partir d'
 class Point():
     "Definition d'un point géométrique"
 
-p0 = Point()
-p1 = Point()
+p = Point()
+q = Point()
 
-print(p0, p1)
+print(p, q)
 ```
 
 **Exercice** : Créez encore d'autres instances de la classe `Point`,
@@ -98,7 +98,7 @@ print(p.x, p.y)
 print(p)
 ```
 
-## Le méthode `__str__()`
+## La méthode `__str__()`
 
 Toutes les classes possède aussi une méthode spéciale `__str__()` qui retourne une chaîne de caractères. Cette chaîne est un descripteur de l'objet. Il est utilisé quand on affiche l'objet avec la fonction `print()`.
 
@@ -115,9 +115,9 @@ class Point():
         return f'Point({self.x}, {self.y})'
 
 p = Point()
-p1 = Point(20, 30)
+q = Point(20, 30)
 print(p)
-print(p1)
+print(q)
 ```
 
 ## Définir une méthode
@@ -181,15 +181,15 @@ class Dot():
     def __str__(self):
         return f'Dot({self.pos}, {self.d}, {self.color})'
         
-p0 = Dot()
-p1 = Dot((-100, 100))
-p2 = Dot((-200, -100), 60, 'lime')
-p3 = Dot((100, 100), 100, 'yellow')
+d0 = Dot()
+d1 = Dot((-100, 100))
+d2 = Dot((-200, -100), 60, 'lime')
+d3 = Dot((100, 100), 100, 'yellow')
 ```
 
 ## Objet cliquable
 
-Nous ajoutons maintenant une fonction de rappel pour basculer la couleur du disque quand on y clique avec la souris.
+Nous ajoutons maintenant une fonction de rappel pour basculer la couleur du disque entre rouge et vert quand on y clique avec la souris.
 
 ```{codeplay}
 :file: class7.py
@@ -213,24 +213,21 @@ class Dot():
        
     def inside(self, x, y):
         dx = self.pos[0] - x
-        dy = self.pos[1] -y
-        r = self.d/2 
+        dy = self.pos[1] - y
+        r = self.d / 2 
         return dx*dx + dy*dy < r*r
     
     def toggle(self):
-        self.state = not self.state
-        self.color = 'lime' if self.state else 'red'
+        self.color = 'lime' if self.color == 'red' else 'red'
         self.draw()
         
-p0 = Dot((-100, 0))
-p1 = Dot((100, 0))
+d0 = Dot((-100, 0))
+d1 = Dot((100, 0))
 
 def f(x, y):
-    if p0.inside(x, y):
-        p0.toggle()
-        
-    if p1.inside(x, y):
-        p1.toggle()
+    for d in (d0, d1):
+        if d.inside(x, y):
+            d.toggle()
           
 getscreen().onclick(f)
 getscreen().listen()
@@ -276,195 +273,15 @@ class Dot():
     def toggle(self):
         self.set(not self.state)    
         
-p0 = Dot((-100, 100))
-p1 = Dot((-100, -100))
-p2 = Dot((100, 0))
+d0 = Dot((-100, 100))
+d1 = Dot((-100, -100))
+d2 = Dot((100, 0))
 
 def f(x, y):
-    if p0.inside(x, y):
-        p0.toggle()   
-    if p1.inside(x, y):
-        p1.toggle()
-    p2.set(p0.state and p1.state)
-            
-getscreen().onclick(f)
-getscreen().listen()
-```
-
-## Nombre binaire 4-bits
-
-Le programme suivant définit une classe `Bin4`. Elle:
-
-- dessine un nombre à 4 digits binaires
-- à la position (x, y)
-- vérifie si un click est dedans
-- incrémente le nombre
-
-```{codeplay}
-:file: class9.py
-from turtle import *
-hideturtle()
-speed(0)
-up()
-
-class Bin4(): 
-    def __init__(self, pos=(0, 0)):
-        self.pos = pos
-        self.n = 0
-        self.draw()
-        
-    def draw(self):
-        goto(self.pos)
-        dot(60, 'linen')
-        sety(self.pos[1]-8)
-        write(f'{self.n:04b}', font=('Courier', 16), align='center')
-    
-    def inside(self, x, y):
-        return (-30 < x-self.pos[0] < 30) and (-30 < y-self.pos[1] < 30)
-    
-    def inc(self):
-        self.n = (self.n + 1) % 16
-        self.draw()
-        
-    def set(self, n):
-        self.n = n % 16
-        self.draw()
-        
-    def click(self, x, y):
-        if self.inside(x, y):
-            self.inc()
-        
-b0 = Bin4((-100, 100))
-b1 = Bin4((100, 100))
-b2 = Bin4((0, -100))
-
-def f(x, y):
-    b0.click(x, y)    
-    b1.click(x, y)
-    b2.set(b0.n + b1.n)
-            
-getscreen().onclick(f)
-getscreen().listen()
-```
-
-## Dessiner une ALU
-
-L'unité arithmétique et logique (en anglais arithmetic–logic unit, ALU), est la partie de l'ordinateur chargé d'effectuer les calculs.
-
-```{codeplay}
-:file: class10.py
-from turtle import *
-
-def alu():
-    a = 60
-    left(a)
-    forward(50)
-    right(a)
-    forward(150)
-    right(180-a)
-    forward(150)
-    right(a)
-    forward(200)
-    right(a)
-    forward(150)
-    right(180-a)
-    forward(150)
-    right(a)
-    forward(50)
-    up()
-
-def line(x, y):
-    goto(x, y)
-    seth(-90)
-    down()
-    goto(x, y-50)
-    stamp()
-    up()
-
-alu()
-line(-100, 100)
-line(100, 100)
-line(0, -90) 
-```
-
-## Une ALU interactive
-
-Dans cette ALU (en anglais arithmetic–logic unit, ALU), nous allons simuler une addition de deux opérandes de 4 bits. En cliquant avec la souris sur une des opérandes d'entrée, la valeur est incrémenté de 1. Les valeurs peuvent aller de 0 à 15.
-
-```{codeplay}
-:file: class11.py
-from turtle import *
-
-def alu():
-    a = 60
-    left(a)
-    forward(50)
-    right(a)
-    forward(150)
-    right(180-a)
-    forward(150)
-    right(a)
-    forward(200)
-    right(a)
-    forward(150)
-    right(180-a)
-    forward(150)
-    right(a)
-    forward(50)
-    up()
-
-def line(x, y):
-    goto(x, y)
-    seth(-90)
-    down()
-    goto(x, y-50)
-    stamp()
-    up()
-
-class Bin4(): 
-    def __init__(self, x=0, y=0):
-        self.x = x
-        self.y = y
-        self.n = 0
-        self.draw()
-        
-    def draw(self):
-        goto(self.x, self.y)
-        dot(60, 'lightgray')
-        goto(self.x, self.y-8)
-        write(f'{self.n:04b}', font=('Courier', 16), align='center')
-    
-    def inside(self, x, y):
-        return (-30 < x-self.x < 30) and (-30 < y-self.y < 30)
-    
-    def inc(self):
-        self.n = (self.n + 1) % 16
-        self.draw()
-        
-    def set(self, n):
-        self.n = n % 16
-        self.draw()
-        
-    def click(self, x, y):
-        if self.inside(x, y):
-            self.inc()
-===
-alu()
-line(-100, 100)
-line(100, 100)
-line(0, -90) 
-    
-b0 = Bin4(-100, 120)
-b1 = Bin4(100, 120)
-b2 = Bin4(0, -170)
-
-hideturtle()
-speed(0)
-
-def f(x, y):
-    b0.click(x, y)    
-    b1.click(x, y)
-    b2.set(b0.n + b1.n)
+    for d in (d0, d1):
+        if d.inside(x, y):
+            d.toggle()   
+    d2.set(d0.state and d1.state)
             
 getscreen().onclick(f)
 getscreen().listen()
