@@ -47,7 +47,21 @@ mia.forward(100)
 
 ## La course des tortues
 
-Dans le programme ci-dessous deux tortues, Ana et Bob, font la course. Pour les faire bouger d'un pixel vous devez appuyer sur les touches `a` et `b`.
+Dans le programme ci-dessous deux tortues, Ana et Bob, font la course. 
+
+On crée d'abord la tortue `ana` qui est la tortue par défaut `getturtle()` et on configure 
+
+- sa forme
+- sa vitesse
+- sa couleur
+- son épaisseur de trait
+
+Ensuite nous faisons une copie identique avec `ana.clone()`.
+
+Pour les faire bouger vous devez appuyer sur les touches
+
+- `a` pour faire avancer `ana` (rouge).
+- `b` pour faire avancer `bob` (bleu).
 
 ```{codeplay}
 from turtle import *
@@ -79,6 +93,8 @@ s.listen()
 
 La fonction `dir()` permet d'afficher toutes les méthodes que possède la classe `Turtle`. Il y en a environ 72 et vous en connaissez déjà une grande partie.
 
+Dans la liste de compréhension, nous excluons les fonctions spéciales qui commencent avec un tiret bas `_`.
+
 ```{codeplay}
 :file: turtle2.py
 from turtle import *
@@ -88,7 +104,7 @@ print(methodes)
 print(len(methodes))
 ```
 
-Nous y trouvons les 4 méthodes de mouvement et leurs abréviations
+Nous y trouvons les 4 méthodes de mouvement et leurs raccourcis.
 
 - `forward`, `fd` - avancer
 - `backward`, `back`, `bk` - reculer
@@ -107,7 +123,7 @@ Les fonctions de dessin
 
 - `dot` - dessiner un point
 - `circle` - dessiner un cercle
-- `stamp` - laisser un tampon de la tortue
+- `stamp` - dessiner un tampon de la tortue
 - `write` - écrire un texte
 
 Les fonctions d'initialisation
@@ -128,7 +144,7 @@ Les fonctions de la tortue
 - `isdown`, `isvisible`, `fill` - info sur l'état (True/False)
 - `clone` - créer une copie de la tortue
 
-Les fonctions de position
+Les fonctions de position et leurs raccourcis
 
 - `position`, `pos` - lire la position
 - `setposition`, `setpos`, `goto` - changer la position
@@ -151,9 +167,9 @@ Taille de la fenêtre
 
 Les fonctions de rappel
 
-- `onclick`
-- `ondrag`
-- `onrelease`
+- `onclick` - cliquer la tortue
+- `ondrag` - tirer la tortue
+- `onrelease` - relâcher la tortue
 
 Entrer dans la boucle principale
 
@@ -161,9 +177,9 @@ Entrer dans la boucle principale
 
 Fonctions pour contrôler l'animation de la tortue
 
-- `delay`
-- `tracer`
-- `update`
+- `delay` - délai entre les animations
+- `tracer` - activer ou désactiver l'animation
+- `update` - redessiner la scène
 
 ```{caution}
 Si vous exécutez ce code directement en Python avec un éditeur externe comme Thonny, vous constatez un nombre bien plus élévé d'objets (plus que 130).
@@ -210,6 +226,7 @@ La fonction `clone()` permet de cloner la tortue `ana`. La nouvelle tortue est u
 :file: turtle3.py
 from turtle import *
 s = getscreen()
+d = 20
 
 ana = getturtle()
 ana.shape('turtle')
@@ -218,11 +235,11 @@ ana.color('red')
 
 bob = ana.clone()
 bob.color('blue')
-bob.goto(0, 50)
+bob.goto(0, d)
 
 def bouger(tortue, dir):
     tortue.seth(dir)
-    tortue.forward(50)
+    tortue.forward(d)
     
 s.onkey(lambda : bouger(ana, 0), 'Right')
 s.onkey(lambda : bouger(ana, 90), 'Up')
@@ -240,7 +257,7 @@ s.listen()
 
 Dans l'exemple suivant nous allons créer 10 tortues à des positions aléatoires, avec des couleurs aléatoires.
 
-Appuyer sur la touche espace fait les avancer de 10 pixels.
+Appuyer sur la touche espace fait les avancer de 10 pixels. La fonction `s.turtles()` renvoie une liste de tous les tortues créés. Dans une boucle nous déplaçons chaque tortue de 10 pixels.
 
 ```{codeplay}
 :file: turtle4.py
@@ -313,47 +330,9 @@ s.onkey(move, 'Space')
 s.listen()
 ```
 
-## Une tortue parmi 3
-
-Cliquez sur une tortue pour la sélectionner, ensuite utiliser les touches flèches pour la déplacer.
-
-```{codeplay}
-:file: turtle6.py
-from turtle import *
-s = getscreen()
-d = 50
-
-def f(tortue, x, y):
-    global t
-    t.color('black')
-    t = tortue
-    t.color('red')
-
-ana = getturtle()
-ana.shape('turtle')
-ana.speed(0)
-
-bob = ana.clone()
-bob.goto(0, d)
-
-lea = ana.clone()
-lea.goto(d, 0)
-t = ana
-
-ana.onclick(lambda x, y:f(ana, x, y))
-bob.onclick(lambda x, y:f(bob, x, y))
-lea.onclick(lambda x, y:f(lea, x, y))
-
-s.onkey(lambda : t.right(30), 'Right')
-s.onkey(lambda : t.left(30), 'Left')
-s.onkey(lambda : t.forward(d), 'Up')
-s.onkey(lambda : t.backward(d), 'Down')
-s.listen()
-```
-
 ## Une tortue parmi 10
 
-Dans l'exemple suivant nous allons créer 10 tortues à des endroits aléatoires. 
+Dans l'exemple suivant nous allons créer 10 tortues à des endroits aléatoires.
 Cliquer sur une des tortues, change sa couleur en rouge et la rend active. Son déplacement peut être contrôlé par les touches flèches.
 
 ```{codeplay}
@@ -361,7 +340,7 @@ Cliquer sur une des tortues, change sa couleur en rouge et la rend active. Son d
 from turtle import *
 from random import *
 s = getscreen()
-d = 50
+d = 20
 
 def f(x, y, tortue):
     global t
@@ -390,7 +369,7 @@ s.listen()
 
 ### La course
 
-Dans la course des tortues : 
+Dans la course des tortues :
 
 - ajoutez une ligne de départ une ligne d'arrivé,
 - affichez le nom du gagnant,
