@@ -240,6 +240,8 @@ s.listen()
 
 Dans l'exemple suivant nous allons créer 10 tortues à des positions aléatoires, avec des couleurs aléatoires.
 
+Appuyer sur la touche espace fait les avancer de 10 pixels.
+
 ```{codeplay}
 :file: turtle4.py
 from turtle import *
@@ -260,6 +262,13 @@ for i in range(10):
     t.shape('turtle')
     t.goto(x, y)
     t.seth(dir)
+
+def move():
+    for t in s.turtles():
+        t.forward(10)
+
+s.onkey(move, 'Space')
+s.listen()
 ```
 
 ## Créer par un clic
@@ -273,6 +282,8 @@ La stratégie adopte est de crée une première tortue caché au centre qui a le
 - stylo levé
 
 A chaque clique de souris cette tortue invisible au centre est cloné. Il suffit alors de la colorier, placer, orienter et montrer.
+
+Appuyer sur la touche espace fait les avancer de 10 pixels.
 
 ```{codeplay}
 :file: turtle5.py
@@ -293,7 +304,12 @@ def f(x, y):
     t.seth(dir)
     t.showturtle()
 
+def move():
+    for t in s.turtles():
+        t.forward(10)
+
 s.onclick(f)
+s.onkey(move, 'Space')
 s.listen()
 ```
 
@@ -336,6 +352,9 @@ s.listen()
 ```
 
 ## Une tortue parmi 10
+
+Dans l'exemple suivant nous allons créer 10 tortues à des endroits aléatoires. 
+Cliquer sur une des tortues, change sa couleur en rouge et la rend active. Son déplacement peut être contrôlé par les touches flèches.
 
 ```{codeplay}
 :file: turtle7.py
