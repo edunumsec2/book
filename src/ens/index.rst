@@ -1,20 +1,47 @@
-.. Modulo2 documentation master file, created by
-   sphinx-quickstart on Fri Oct 22 12:34:36 2021.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. image:: ../static/assets/modulo-head-banner.svg
+   :alt: "Bannière Modulo"
 
-Welcome to Modulo2's ENSEIGNER
+ENSEIGNER l'informatique au gymnase
 ===================================
 
+| Bienvenue dans les ressources pour l'enseignement de l'informatique au gymnase.
+| Ces ressources ont été conçues pour vous accompagner dans votre enseignement.
+
+Vous pouvez faire un tour à travers les différentes catégories dans l'ordre que vous souhaitez. La plateforme est améliorée
+de manière continue grâce à vos retours, n'hésitez pas à nous les partager sur team@modulo-info.ch !
+
+.. IMPORTANT:: 
+   Le document présenté ici ne représente qu'une **étape intermédiaire** de travail. 
+   Il n'a pas force de référence, ni au niveau des thématiques abordées, ni au niveau des contenus 
+   spécifiques décrits dans les chapitres. Ce que vous consultez ici est susceptible 
+   de **modifications**, tant sur la forme que sur le fond. Certaines pages n'ont pas encore subi 
+   de relectures orthographique ou syntaxique. Nous vous remercions de votre compréhension. 
+   Bonne lecture !
+
 .. toctree::
+   :name: Première année
+   :caption: Première année
    :maxdepth: 3
-   
-   thematiques/test
+   :hidden:
 
+   rep-info/activ/index
+   rep-info/exo/index
+   rep-info/support/index
+   prog1/activ/index
+   algo1/activ/index
 
-Indices and tables
-==================
+.. toctree::
+   :name: Enjeux sociaux
+   :caption: Enjeux sociaux
+   :maxdepth: 3
+   :hidden:
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   enjx/index
+
+.. toctree::
+   :name: Outils
+   :caption: Outils
+   :maxdepth: 3
+   :hidden:
+
+   glossaire

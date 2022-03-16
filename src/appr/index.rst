@@ -5,7 +5,7 @@ APPRENDRE l'informatique au gymnase
 ===================================
 
 | Bienvenue dans les ressources pour l'informatique au gymnase.
-| Ces ressources ont été conçues pour vous accompagner dans votre enseignement.
+| Ces ressources ont été conçues pour vous accompagner dans votre découverte de l'informatique.
 
 Vous pouvez faire un tour à travers les différentes catégories dans l'ordre que vous souhaitez. La plateforme est améliorée
 de manière continue grâce à vos retours, n'hésitez pas à nous les partager sur team@modulo-info.ch !
