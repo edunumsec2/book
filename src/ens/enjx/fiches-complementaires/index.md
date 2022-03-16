@@ -3,6 +3,8 @@
 ```{toctree}
 :maxdepth: 2
 :hidden:
-Économie du numérique <economie-numerique>
-Vie privée et surveillance <surveillance>
+Le digital labor <digital-labor>
+Wikipédia <wikipedia>
+L'affaire Snowden <affaire-snowden>
+Genre et numérique <genre-numerique>
 ```

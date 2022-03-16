@@ -1,7 +1,3 @@
-```{image} media/cover2.jpeg
-:height: 250px
-:width: 700px
-```
 # L'algorithme du plus court chemin de Dijkstra
 
 ------
