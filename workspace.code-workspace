@@ -50,14 +50,14 @@
 				{
 					"name": "Apprendre (auto-build)",
 					"color": "white",
-					"command": "source .env/bin/activate; kill -9 $(lsof -t -i:8000) 2> /dev/null; sphinx-autobuild src/appr build --watch source --open-browser -a --delay 1",
+					"command": "source .env/bin/activate; kill -9 $(lsof -t -i:8000) 2> /dev/null; sphinx-autobuild src/appr build --watch src --open-browser -a --delay 1",
 					"cwd": "${workspaceFolder}",
 					"singleInstance": true,
 				},
 				{
 					"name": "Enseigner (auto-build)",
 					"color": "white",
-					"command": "source .env/bin/activate; kill -9 $(lsof -t -i:8000) 2> /dev/null; sphinx-autobuild src/ens build --watch source --open-browser -a --delay 1",
+					"command": "source .env/bin/activate; kill -9 $(lsof -t -i:8000) 2> /dev/null; sphinx-autobuild src/ens build --watch src --open-browser -a --delay 1",
 					"cwd": "${workspaceFolder}",
 					"singleInstance": true,
 				},

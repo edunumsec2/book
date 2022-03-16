@@ -275,6 +275,3 @@ Que signifie informatique ?
 * {v}`Information + automatique.`
 * {f}`Information + pratique`
 ```
-
-
-
