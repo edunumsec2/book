@@ -201,7 +201,7 @@ Sur un Mac un document en format EPS s'ouvre avec le programme Aperçu. Vous pou
 
 ![](media/eps_jpg.png)
 
-## Créer une fond d'écran
+## Créer un fond d'écran
 
 Un écran HD (High définition) a une résolution de 1920 x 1080 pixels.
 Avec la tortue nous allons d'abord créer une image avec la moitié de cette résolution qui est 960 x 540 pixels.

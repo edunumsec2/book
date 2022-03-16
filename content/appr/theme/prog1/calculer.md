@@ -154,7 +154,6 @@ Lesquels des noms de variable sont valides ?
 {v}`var2`  
 {f}`2var`  
 {f}`if`  
-{v}`IF_VAR`
 ```
 
 Voici un autre calcul où `a` et `b` désignent largeur et hauteur d'un rectangle.
@@ -204,9 +203,7 @@ L'exemple ci-dessus nous montre que
 - `int` (integer) désigne des nombres entiers,
 - `float` (floating point) désigne des nombres à virgule flottante.
 
-## Conversion de type
-
-Les trois fonctions `str()`, `int()` et `float()` permettent de transformer d'un type à un autre.
+Les trois fonctions `str()`, `int()` et `float()` permettent de transformer un objet d'un type à un autre.
 
 Par exemple, la chaîne `'123'` peut être transformée soit en entier, soit en nombre à virgule flottante.
 
@@ -215,7 +212,7 @@ a = '123'
 b = int(a)
 c = float(a)
 
-print(a, b, c)
+print(b, c)
 print(type(a))
 print(type(b))
 print(type(c))
@@ -223,7 +220,7 @@ print(type(c))
 
 Nous reconnaissons la différence entre un entier (`int`) et un nombre à virgule flottante (`float`) par la présence du point décimal (`123.0`).
 
-## Obtenir un nombre
+## Demander un nombre
 
 La fonction `input()` permet d'obtenir une entrée de l'utilisateur. Mais attention !
 La valeur retournée est une chaine de caractères (de type string `str`). 
@@ -241,6 +238,7 @@ Pour pouvoir l'utiliser dans un calcul nous devons la transformer en virgule flo
 r = float(input('Entrez le rayon: '))
 pi = 3.14
 
+print('Circle')
 print('rayon =', r)
 print('diamètre =', 2 * r)
 print('circonférence =', pi * 2 * r)
@@ -253,6 +251,7 @@ Nous pouvons également créer des programmes où nous demandons plusieurs valeu
 
 ```{codeplay}
 :file: int8.py
+print('Rectangle')
 a = int(input('Entrez la largeur: '))
 b = int(input('Entrez la longeur: '))
 
@@ -262,74 +261,6 @@ print('diagonale =')
 ```
 
 **Exercice** : Complétez le programme pour afficher le périmètre et la diagonale.
-
-
-## Revisiter le `tuple`
-
-Nous avons déjà vu qu'un **n-uplet** (tuple) est une séquence d'objets. Ce sont :
-
-- multiple valeurs séparé par une virgule,
-- une seule valeur terminé par une virgule,
-- des parenthèses vides pour le tuple vide.
-
-```{codeplay}
-a = ()      # tuple vide
-b = 1       # un entier
-c = 1,      # tuple avec une valeur
-d = 1, 2    # tuple avec deux valeurs
-
-print(a)
-print(b)
-print(c)
-print(d)
-```
-
-## Position `(x, y)`
-
-Un tuple est la forme idéale pour représenter les deux coordonnées `(x, y)` d'un point. Nous allons dorénavant utiliser la lettre `p` pour point (ou position). Si deux points sont nécessaire, nous les appellerons `p` et `q`.
-
-Pour accéder aux coordonnées `x` et `y` du point `p` nous utilisons un indice (un entier entre crochets) :
-
-- `x = p[0]`
-- `y = p[1]`
-
-La fonction `goto()` accepte :
-
-- deux coordonnées séparés `goto(x, y)`
-- deux coordonnées dans un tuple `goto(p)`
-
-```{codeplay}
-from turtle import *
-up()
-
-p = (100, -120)
-
-print('p =', p)
-print('x =', p[0])
-print('y =', p[1])
-```
-
-Nous pouvons définir une fonction `ligne()` qui dessine une ligne entre deux points.
-
-```{codeplay}
-from turtle import *
-up()
-
-def ligne(p, q):
-    goto(p)
-    down()
-    goto(q)
-    up()
-
-p = 100, 50
-
-goto(p)
-dot(20)
-ligne(p, (0, 200))
-ligne(p, (0, -200))
-ligne(p, (300, 0))
-ligne(p, (-300, 0))
-```
 
 ## Quiz avec score
 
@@ -356,7 +287,7 @@ print('Votre score: ', score, 'sur', len(quiz))
 
 ## Quiz mathématique
 
-Nous utilisond un tuple avec deux valeurs (a, b) que nous mettons dans un deuxième tuple.
+Nous utilisons un tuple avec deux valeurs (a, b) que nous mettons dans un deuxième tuple.
 Cette fois nous avons pas besoin de donner une solution, car nous pouvons la calculer.
 
 ```{codeplay}
@@ -371,7 +302,7 @@ for (a, b) in ((12, 35), (23, 11), (55, 23)):
     print()
 ```
 
-**Exercice** : Faites un petit quiz mathématique sur la multiplication.
+**Exercice** : Ajoutez le score pour ce quiz.
 
 ## Erreurs
 
@@ -432,7 +363,140 @@ print(f(20000))
 
 ## Exercices
 
-### Kahoot
+- Téléchargez l'exercice
+- Lancez un éditeur externe (tel que Thonny)
+- Depuis l'éditeur ouvrez le fichier téléchargé
+- Remplacez ... par votre code
+- Déposez vos exercices sur Moodle
+
+### Rectangle
+
+Faites un programme qui demande à l'utilisateur les côtés a et b d'un rectangle et calcule ensuite 
+
+le périmètre
+
+$$ p = 2 (a+b) $$
+
+la surface
+
+$$ S = ab $$
+
+et la diagonale
+
+$$ d = \sqrt{a^2 + b^2} $$
+
+```{codeplay}
+:file: rectangle.py
+print('Le rectangle')
+
+a = float(input('Entrez la longuer a: '))
+...
+
+```
+
+### Cercle
+
+Faites un programme qui demande à l'utilisateur le rayon d'un cercle et calcule ensuite 
+
+le diamètre
+
+$$ d = 2r $$
+
+la circonférence
+
+$$ c = 2 \pi r $$
+
+et la surface
+
+$$ S = \pi r^2 $$
+
+```{codeplay}
+:file: cercle.py
+print('Le cercle')
+
+r = float(input('Entrez le rayon r: '))
+...
+
+```
+
+### Sphère
+
+Faites un programme qui demande à l'utilisateur le rayon d'une sphère et calcule ensuite 
+
+le diamètre
+
+$$ d = 2r $$
+
+la surface
+
+$$ A = 4 \pi r^2 $$
+
+et le volume
+
+$$ V = \frac{4 \pi r^3}{3} $$
+
+```{codeplay}
+:file: sphere.py
+print('La sphère')
+
+r = floatt(input('Entrez le rayon r: '))
+...
+
+```
+
+### Quiz de multiplication
+
+Créez un quiz de multiplication. 
+
+- Complétez pour avoir 10 questions
+- Corrigez les erreurs
+- Ajoutez le calcul du score
+
+```{codeplay}
+:file: quiz_mul.py
+print('Quiz de multiplication')
+score = 0
+
+for (a, b) in ((4, 6), (5, 6)):
+    print(a, '*', b, '=')
+    reponse = int(input())
+    if reponse == a * b:
+        print('correct')
+    else:
+        print('FAUX. La bonne réponse est', a + b)
+    print()
+
+print('Votre score est')
+```
+
+### Quiz de vocabulaire
+
+Créez un quiz de vocabulaire français-anglais. 
+
+- Complétez pour avoir 10 questions
+- Corrigez les erreurs
+- Ajoutez le calcul du score
+
+```{codeplay}
+:file: quiz_mul.py
+print('Quiz de vocabulaire anglais')
+score = 0
+quiz = (('ordinateur', 'computer'),
+        ('clavier', 'keyboard'),
+        ('souris', 'display'))
+
+for (question, solution) in quiz:
+    reponse = input(question + ': ')
+    if reponse == solution:
+        print('correct')
+    else:
+        print('FAUX. La bonne réponse est', question)
+    print()
+
+print('Votre score est')
+```
+
+### Quiz Kahoot
 
 La plate-forme d'apprentissage ludique [Kahoot!](https://fr.wikipedia.org/wiki/Kahoot!) est utilisée comme technologie éducative dans les écoles et autres établissements d'enseignement.
 
@@ -440,8 +504,28 @@ Ses jeux d’apprentissage, *Kahoots*, sont des questionnaires à choix multiple
 
 Créez un quiz avec des question sur un sujet de culture générale, dans le style des quiz sur le site Kahoot.
 
+- Complétez pour avoir 10 questions
+- Ajoutez le calcul du score
+
 ```{codeplay}
 :file: kahoot.py
+print('Quiz Kahoot Disney')
+print()
+score = 0
 
-print('Quiz Kahoot')
+quiz = (("Quel est le nom du cowboy dans Toy Story", 'Woody'),
+        ("Comment s'appelle le garçon dont le nez grandit quand il ment", 'Pinocchio'),
+        ("Quel est le nom de la fée dans Peter Pan", 'Tinkerbell'))
+
+
+for (question, solution) in quiz:
+    print(question + '?')
+    reponse = input()
+    if reponse == solution:
+        ...
+    else:
+        ...
+    print()
+
+print('Votre score est', ...)
 ```

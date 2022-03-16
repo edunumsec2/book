@@ -175,6 +175,8 @@ for i in range(6):
 print('fini')
 ```
 
+**Exercice** Entrez les couleurs de l'arc en ciel.
+
 ## Dessiner un drapeau
 
 Nous reprenons l'exemple des formes ouvertes, avec les deux équerres coloriées. 
@@ -198,31 +200,6 @@ def drapeau():
 drapeau()
 ```
 
-Maintenant nous l'affichons en boucle
-
-```{codeplay}
-from turtle import *
-
-def equerre():
-    begin_fill()
-    for i in range(2):
-        forward(80)
-        left(90)
-    end_fill()
-
-def drapeau():
-    for i in range(2):
-        x = input('Couleur: ')
-        fillcolor(x)
-        equerre()
-    
-for i in range(3):
-    drapeau()
-    print()
-    up()
-    forward(100)
-    down()
-```
 
 ## Créer un quiz
 
@@ -341,6 +318,34 @@ print(chr(10000000))
 **Exercice** : Corrigez l'erreur de valeur.
 
 ## Exercices
+
+- Téléchargez l'exercice
+- Lancez un éditeur externe (tel que Thonny)
+- Depuis l'éditeur ouvrez le fichier téléchargé
+- Remplacez ... par votre code
+- Déposez vos exercices sur Moodle
+
+### Chatbot
+
+Créez un programme qui vous pose des questions
+- votre nom
+- votre age
+- votre couleurs préféré
+- votre groupe de musique préféré
+- votre classe
+- votre meilleur ami
+
+A chaque fois le chatbot mémorise votre réponse dans une variable qu'il utilise dans la phrase suivante.
+
+```{codeplay}
+:file: chatbot.py
+print('Je suis un chatbot')
+print('Quel est ton nom ?')
+nom = input()
+print('Salut', nom)
+...
+...
+```
 
 ### Maison
 
