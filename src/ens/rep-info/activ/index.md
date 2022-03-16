@@ -5,9 +5,9 @@ Page de description des séquences et activités disponibles pour cette thémati
 ```{toctree}
 :maxdepth: 2
 :hidden:
-Magie binaire <entiers/magie-binaire/magie_binaire>
-Images numériques <images/EncoderImages>
-Echantillonnage <son/echantillonnage>
-Redondance et code de Hamming <redondance/hamming>
-Compression et codage de Huffman <compression/huffman>
+Magie binaire <magie-binaire/magie_binaire>
+Images numériques <EncoderImages>
+Echantillonnage <echantillonnage>
+Redondance et code de Hamming <hamming>
+Compression et codage de Huffman <huffman>
 ```

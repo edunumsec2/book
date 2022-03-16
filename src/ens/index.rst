@@ -24,9 +24,7 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    :maxdepth: 3
    :hidden:
 
-   rep-info/activ/index
-   rep-info/exo/index
-   rep-info/support/index
+   rep-info/index
    prog1/activ/index
    algo1/activ/index
 

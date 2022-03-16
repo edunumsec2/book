@@ -68,12 +68,7 @@ On utilise les blocs `allumer` et `éteindre` du menu `LED`. Ces blocs ont besoi
 
 ##### Résultat attendu
 
-````{panels}
-:column: col-sd
-
-^^^
-<img src="./tomberfruit1.png" alt="" class="bg-primary" width="300px">
-````
+![img](media/tomberfruit1.png)
 
 ##### Problèmes
 
@@ -102,12 +97,7 @@ Introduction de la notion de `variable` dont on va se servir tout de suite aprè
 
 ##### Résultat attendu
 
-````{panels}
-:column: col-sd
-
-^^^
-<img src="./tomberfruit2.png" alt="" class="bg-primary" width="300px">
-````
+![img](media/tomberfruit2.png)
 
 ##### Problèmes
 
@@ -128,12 +118,7 @@ Dès l'instant où on veut stocker de l'information pour pouvoir la réutiliser,
 
 ##### Résultat attendu
 
-````{panels}
-:column: col-sd
-
-^^^
-<img src="./tomberfruit3.png" alt="" class="bg-primary" width="300px">
-````
+![img](media/tomberfruit3.png)
 
 Fin de l'étape 1, on a un fruit qui tombe dans une colonne choisie aléatoirement.
 
@@ -159,12 +144,7 @@ Si on oublie d'allumer les leds correspondantes, on ne verra pas le panier !
 
 ##### Résultat attendu
 
-````{panels}
-:column: col-sd
-
-^^^
-<img src="./panier1.png" alt="" class="bg-primary" width="300px">
-````
+![img](media/panier1.png)
 
 ##### Problèmes
 
@@ -183,12 +163,7 @@ On doit donc éteindre les leds du pannier, faire le déplacement, allumer les l
 
 ##### Résultat attendu
 
-````{panels}
-:column: col-sd
-
-^^^
-<img src="./panier2.png" alt="" class="bg-primary" width="500px">
-````
+![img](media/panier2.png)
 
 ##### Problèmes
 
@@ -209,12 +184,7 @@ On introduit ici la structure de contrôle conditionnelle `si ... alors ...` et 
 
 ##### Résultat attendu
 
-````{panels}
-:column: col-sd
-
-^^^
-<img src="./panier3.png" alt="" class="bg-primary" width="500px">
-````
+![img](media/panier3.png)
 
 ##### Problèmes
 
@@ -235,12 +205,7 @@ Comme pour la chute du fruit, si on oublie la `pause`, le panier se déplace d'u
 
 ##### Résultat attendu
 
-````{panels}
-:column: col-sd
-
-^^^
-<img src="./panier4.png" alt="" class="bg-primary" width="500px">
-````
+![img](media/panier4.png)
 
 Fin de l'étape 2, on a un pannier qui bouge lorsque le micro:bit est incliné.
 Certains élèves auron surement remarqué que lorsque le fruit tombe dans le panier, le panier disparait.
@@ -268,12 +233,7 @@ Avant de traduire cette condition avec des blocs, il faut insister sur les prior
 
 ##### Résultat attendu
 
-````{panels}
-:column: col-sd
-
-^^^
-<img src="./collision1.png" alt="" class="bg-primary" width="800px">
-````
+![img](media/collision1.png)
 
 ##### Problèmes
 
@@ -295,12 +255,7 @@ En outre, on peut également *fortement* suggérer de donner un signal visuel au
 
 ##### Résultat attendu
 
-````{panels}
-:column: col-sd
-
-^^^
-<img src="./collision2.png" alt="" class="bg-primary" width="800px">
-````
+![img](media/collision2.png)
 
 ##### Problèmes
 
@@ -330,12 +285,7 @@ Là aussi, une fois les réponses déterminées, l'implémentation ne pose pas d
 
 ##### Résultat attendu
 
-````{panels}
-:column: col-sd
-
-^^^
-<img src="./echec.png" alt="" class="bg-primary" width="800px">
-````
+![img](media/echec.png)
 
 ##### Problèmes
 
@@ -364,12 +314,7 @@ L'arrêt du jeu s'implémente simplement en conditionnant la chute des fruits au
 
 ##### Résultat attendu
 
-````{panels}
-:column: col-sd
-
-^^^
-<img src="./gameover1.png" alt="" class="bg-primary" width="800px">
-````
+![img](media/gameover1.png)
 
 #### Exercice 11
 
@@ -385,12 +330,7 @@ Pour finir, aucune difficulté d'implémentation, il reste simplement à tester 
 
 ##### Résultat attendu
 
-````{panels}
-:column: col-sd
-
-^^^
-<img src="./gameover2.png" alt="" class="bg-primary" width="300px">
-````
+![img](media/gameover2.png)
 
 Ceci termine l'implémentation de base de ce jeu sur micro:bit.  
 Une version du jeu complet est disponible [ici](./FruitCatch.hex), il suffit de le déposer dans la fenêtre Makecode ouverte dans votre navigateur.
@@ -407,10 +347,4 @@ Des suggestions qui reviennent régulièrement :
 * Perturber la chute du fruit qui ne reste plus sur sa colonne initiale (attention aux cas en bord de l'écran)
 * Inverser les commandes
 
-
-````{panels}
-:column: col-sd
-
-^^^
-<img src="./gameall.png" alt="" class="bg-primary" width="800px">
-````
+![img](media/gameall.png)
