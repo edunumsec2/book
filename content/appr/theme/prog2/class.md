@@ -210,7 +210,7 @@ class Dot():
         color(self.color)
         goto(self.pos)
         dot(self.d)
-       
+
     def inside(self, x, y):
         dx = self.pos[0] - x
         dy = self.pos[1] - y
@@ -256,23 +256,23 @@ class Dot():
         self.pos = pos
         self.state = False
         self.draw()
-        
+
     def draw(self):
         goto(self.pos)
         dot(40, 'yellow' if self.state else 'lightgray')
         sety(self.pos[1] - 10)
         write(int(self.state), font=(None, 18), align='center')
-       
+
     def inside(self, x, y):
         return (x - self.pos[0]) ** 2 + (y - self.pos[1]) ** 2 < (20 ** 2)
-    
+
     def set(self, state):
         self.state = state
         self.draw()
-    
+
     def toggle(self):
         self.set(not self.state)    
-        
+
 d0 = Dot((-100, 100))
 d1 = Dot((-100, -100))
 d2 = Dot((100, 0))
@@ -282,7 +282,7 @@ def f(x, y):
         if d.inside(x, y):
             d.toggle()   
     d2.set(d0.state and d1.state)
-            
+
 getscreen().onclick(f)
 getscreen().listen()
 ```
@@ -305,14 +305,14 @@ class Card:
         self.r = r
         self.fill = fill
         self.show()
-        
+
     def outline(self):
         down()
         for d in self.size * 2:
             forward(d)
             circle(self.r, 90)
         up()
-        
+
     def show(self):
         goto(self.pos)
         fillcolor(self.fill)
@@ -322,8 +322,82 @@ class Card:
         color('red')
         sety(self.pos[1]+5)
         write('♥', font=(None, 30))
-        
+
 Card()
 Card((50, 20), fill='pink')
 Card((100, -120), fill='azure')
 ```
+
+## Class Rectangle
+
+Par la suite nous allons voire comment nous pouvons transformer une programmation procédurale en programmation orienté objet. Prenons le cas d'un rectangle.
+
+Dessinons un rectangle de taille (a, b) à la position (x, y).
+
+```{codeplay}
+from turtle import *
+up()
+
+def rectangle(x, y, a, b):
+    goto(x, y)
+    down()
+    for x in (a, b, a, b):
+        forward(x)
+        left(90)
+    up()
+
+rectangle(-20, 100, 150, 50)
+rectangle(0, 0, 100, 50)
+rectangle(20, -100, 100, 50)
+```
+
+Maintenant implémentons une class `Rectangle`. Nous allons ajouter plusieurs options
+
+- angle d'inclinaison
+- couleur du trait
+- épaisseur du trait
+- couleur de remplissage
+
+Nous utilisons `None` si il n'y a pas de remplissage ou pas de trait.
+
+```{codeplay}
+from turtle import *
+up()
+
+class Rectangle:
+
+    def __init__(self, pos, size, angle=0, pen=1, color=('black', 'white')):
+        self.pos = pos
+        self.size = size
+        self.angle = angle
+        self.pen = pen
+        self.color = color
+        self.draw()
+
+    def draw(self):
+        color(*self.color)
+        width(self.pen)
+        goto(self.pos)
+        setheading(self.angle)
+
+        if self.color[0] == None:
+            self.draw_box()
+        else:
+            begin_fill()
+            self.draw_box()
+            end_fill()
+
+    def draw_box(self):
+        down()
+        for x in (self.size) * 2:
+            forward(x)
+            left(90)
+        up()
+
+p = (-50, 20)
+size = (100, 50)
+Rectangle(p, size)
+Rectangle(p, size, angle=45)
+Rectangle((-150, 30), (150, 70), -30, 5, ('red', 'yellow'))
+```
+ 
