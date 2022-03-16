@@ -16,8 +16,6 @@ Un programme informatique est
 {v}`une séquence d'instructions`  
 {f}`un algorithme`  
 {f}`une recette de cuisine`
-===
-Un algorithme est la description générale des étappes de résolution d'un problème. Il peut être traduit en un programme informatique. 
 ```
 
 ## Le module `turtle`
@@ -52,8 +50,6 @@ En Python, `turtle` est
 {f}`un éditeur de dessin`  
 {f}`une tortue`  
 {f}`une commande`
-===
-Le module `turtle` fait partie de la distribution standard de Python. Nous le trouvons donc inclus avec Python sur toutes les plateformes.
 ```
 
 ## Se déplacer
