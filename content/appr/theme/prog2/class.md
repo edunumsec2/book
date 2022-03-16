@@ -143,7 +143,7 @@ print('p.norme() =', p.norme())
 print('p =', p)
 ```
 
-## Définir la classe `Dot`
+## Classe `Dot`
 
 Essayons maintenant de créer une classe pour un objet graphique. Définissons la classe `Dot` avec les attributs:
 
@@ -287,48 +287,7 @@ getscreen().onclick(f)
 getscreen().listen()
 ```
 
-## Classe Card
-
-Les cartes de jeux sont représentées avec un rectangle arrondi et un des 4 symboles (coeur, pique, carreau, trèfle).
-
-```{codeplay}
-:file: class12.py
-from turtle import *
-up()
-
-class Card:
-    couleur = '♥♦'
-
-    def __init__(self, pos=(0, 0), size=(50, 80), r=10, fill='white'):
-        self.pos = pos
-        self.size = size
-        self.r = r
-        self.fill = fill
-        self.show()
-
-    def outline(self):
-        down()
-        for d in self.size * 2:
-            forward(d)
-            circle(self.r, 90)
-        up()
-
-    def show(self):
-        goto(self.pos)
-        fillcolor(self.fill)
-        begin_fill()
-        self.outline()
-        end_fill()
-        color('red')
-        sety(self.pos[1]+5)
-        write('♥', font=(None, 30))
-
-Card()
-Card((50, 20), fill='pink')
-Card((100, -120), fill='azure')
-```
-
-## Class Rectangle
+## Classe Rectangle
 
 Par la suite nous allons voire comment nous pouvons transformer une programmation procédurale en programmation orienté objet. Prenons le cas d'un rectangle.
 
@@ -400,4 +359,97 @@ Rectangle(p, size)
 Rectangle(p, size, angle=45)
 Rectangle((-150, 30), (150, 70), -30, 5, ('red', 'yellow'))
 ```
- 
+
+## Classe Ellipse
+
+Commençons de nouveau avec une fonction procédurale pour dessiner une ellipse.
+
+```{codeplay}
+from turtle import *
+from math import *
+
+speed(0)
+up()
+
+def ellipse(x0, y0, a, b):
+    for i in range(37):
+        x = x0 + a/2 * sin(pi * i / 18)
+        y = y0 + b/2 * cos(pi * i / 18)
+        goto(x, y)
+        down()
+    up()
+
+ellipse(-20, 100, 150, 50)
+ellipse(0, 0, 100, 250)
+ellipse(20, -100, 100, 50)
+```
+
+Et maintenant la même chose en programmation orienté objet.
+
+```{codeplay}
+from turtle import *
+from math import *
+speed(0)
+up()
+
+class Ellipse:
+
+    def __init__(self, pos, size):
+        self.pos = pos
+        self.size = size
+        self.draw()
+
+    def draw(self):
+        for i in range(37):
+            x = self.pos[0] + self.size[0]/2 * sin(pi * i / 18)
+            y = self.pos[1] + self.size[1]/2 * cos(pi * i / 18)
+            goto(x, y)
+            down()
+        up()
+
+p = (100, 0)
+Ellipse(p, (100, 50))
+Ellipse(p, (50, 100))
+Ellipse((-100, 30), (150, 270))
+```
+
+## Classe Card
+
+Les cartes de jeux sont représentées avec un rectangle arrondi et un des 4 symboles (coeur, pique, carreau, trèfle).
+
+```{codeplay}
+:file: class12.py
+from turtle import *
+up()
+
+class Card:
+    couleur = '♥♦'
+
+    def __init__(self, pos=(0, 0), size=(50, 80), r=10, fill='white'):
+        self.pos = pos
+        self.size = size
+        self.r = r
+        self.fill = fill
+        self.show()
+
+    def outline(self):
+        down()
+        for d in self.size * 2:
+            forward(d)
+            circle(self.r, 90)
+        up()
+
+    def show(self):
+        goto(self.pos)
+        fillcolor(self.fill)
+        begin_fill()
+        self.outline()
+        end_fill()
+        color('red')
+        sety(self.pos[1]+5)
+        write('♥', font=(None, 30))
+
+Card()
+Card((50, 20), fill='pink')
+Card((100, -120), fill='azure')
+```
