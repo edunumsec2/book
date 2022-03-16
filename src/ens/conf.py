@@ -70,7 +70,7 @@ exclude_patterns = []
 #
 html_theme = 'furo'
 html_favicon = '../static/modulo-icon.ico'
-html_title = 'Apprendre'
+html_title = 'Enseigner'
 html_theme_options = {
     "light_logo": "modulo-logo-light.svg",
     "dark_logo": "modulo-logo-dark.svg",
