@@ -34,8 +34,6 @@ body:
     attributes:
       label: Sur quel navigateur ?
       multiple: true
-      validations:
-      required: true
       options:
         - Firefox
         - Chrome
