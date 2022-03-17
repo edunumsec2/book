@@ -123,7 +123,7 @@ class GlossaryListDirective(SphinxDirective):
 
 def load_glossary_csv(app, env, docnames):
     entries = []
-    with open(_glossary_file_name(app), newline='') as csv_file:
+    with open(_glossary_file_name(app), newline='', encoding='utf-8') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',', quotechar='"')
         for i, line in enumerate(csv_reader):
             entries.append({
