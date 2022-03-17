@@ -42,7 +42,8 @@ extensions = [
     'videos',
     'logic',
     'blanks',
-    'timeline'
+    'timeline',
+    'exercise',
 ]
 
 glossary_doc = 'glossaire'
