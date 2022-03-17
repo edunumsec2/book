@@ -1,5 +1,5 @@
 name: Rapport de bug
-description: File a bug report
+description: Soumettre un rapport de bug
 title: "[Bug]: "
 labels: ["bug"]
 assignees:
@@ -29,6 +29,8 @@ body:
     attributes:
       label: Quel résultat était attendu ?
       value: "Résultat attendu"
+    validations:
+      required: true
   - type: dropdown
     id: browsers
     attributes:
