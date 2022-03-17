@@ -38,6 +38,8 @@ def visit_interactive_code_html(self, node):
       ('data-run="true" ' if node["exec"] else '') +
       ('data-static="true" ' if node["static"] else '') +
       ('data-nocontrols="true" ' if node["nocontrols"] else '') +
+      ('data-download-hide-prelude="true" ' if node["hide_prelude_in_download"] else '') +
+      ('data-download-hide-afterword="true" ' if node["hide_afterword_in_download"] else '') +
       'class="codeframe" frameborder="0" border="0" cellspacing="0">')
 
 def depart_interactive_code_html(self, node):
@@ -59,6 +61,8 @@ class InteractiveCode(SphinxDirective):
         "output_lines": directives.nonnegative_int,
         "min_output_lines": directives.nonnegative_int,
         "max_output_lines": directives.nonnegative_int,
+        "hide_prelude_in_download": directives.flag,
+        "hide_afterword_in_download": directives.flag,
     }
     has_content = True
 
@@ -140,7 +144,9 @@ class InteractiveCode(SphinxDirective):
           exec="exec" in self.options,
           file=self.options["file"] if "file" in self.options else "code.py",
           min_height=min_height,
-          max_height=max_height)
+          max_height=max_height,
+          hide_prelude_in_download="hide_prelude_in_download" in self.options,
+          hide_afterword_in_download="hide_afterword_in_download" in self.options)
         self.set_source_info(container)
 
         return [container]

@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
   var readOnly = false;
   var alwaysShowOutput = false;
   var alwaysHideOutput = false;
+  var includePreludeInDownload = true;
+  var includeAfterwordInDownload = true;
 
   var rejectInput = null;
 
@@ -291,7 +293,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var clipboard = new ClipboardJS('#copy', {
       text: function(trigger) {
-          return codeElem.getValue();
+          let data = codeElem.getValue();
+          if (includePreludeInDownload) {
+            data = prelude + "\n" + data;
+          }
+          if (includeAfterwordInDownload) {
+            data += "\n" + afterword;
+          }
+          return data;
       }
   });
 
@@ -324,7 +333,13 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   downloadBtn.addEventListener("click", function() {
-    const data = codeElem.getValue();
+    var data = codeElem.getValue();
+    if (includePreludeInDownload) {
+      data = prelude + "\n" + data;
+    }
+    if (includeAfterwordInDownload) {
+      data += "\n" + afterword;
+    }
     saveFile(downloadFileName, data);
   });
 
@@ -430,6 +445,12 @@ document.addEventListener("DOMContentLoaded", function() {
       if (frame.hasAttribute("data-static")) {
         codeElem.setOption("readOnly", true);
         readOnly = true;
+      }
+      if (frame.hasAttribute("data-download-hide-prelude")) {
+        includePreludeInDownload = false;
+      }
+      if (frame.hasAttribute("data-download-hide-afterword")) {
+        includeAfterwordInDownload = false;
       }
       if (frame.hasAttribute("data-file")) {
         downloadFileName = b64DecodeUnicode(frame.dataset.file);
