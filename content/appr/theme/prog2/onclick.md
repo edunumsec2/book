@@ -405,3 +405,60 @@ onrelease(h)
 ```
 
 **Exercice** : Essayez de tirez la tortue lentement avec la souris.
+
+## Exercices
+
+### Jeu de Go
+
+Le jeu de go est un jeu de société originaire de Chine qui oppose deux adversaires qui placent à tour de rôle des pierres, respectivement noires et blanches, sur les intersections d'un tablier quadrillé. Le but est de contrôler le plan de jeu en y construisant des « territoires ». Les pierres encerclées deviennent des « prisonniers », le gagnant étant le joueur ayant totalisé le plus de territoires et de prisonniers.
+
+![](media/go_board.png)
+
+Deux pierres noires en atari (à gauche), capturées au coup suivant (à droite).
+
+![](media/Go_capturing.png)
+
+Modifiez le jeu pour 
+
+- avoir une grille de 19 x 19 lignes
+- colorier le tableau en beige
+- avoir 3 x 3 points de repères sur les lignes 4, 10 et 16
+- placer les pions sur les intersections
+- alterner les pions noir et blanches
+
+```{codeplay}
+:file: go.py
+from turtle import *
+s = getscreen()
+hideturtle()
+speed(0)
+up()
+
+x0, y0, d = 160, 160, 40
+
+def ligne(p, q):
+    goto(p)
+    down()
+    goto(q)
+    up()
+
+for x in range(-x0, x0+1, d):
+    ligne((x, -y0), (x, y0))
+
+for y in range(-y0, y0+1, d):
+    ligne((-x0, y), (x0, y))
+
+def f(x, y):
+    if -x0 < x < x0 and -y0 < y < y0:
+        x = x//d * d + d//2
+        y = y//d * d + d//2
+        goto(x, y)
+        dot(d) 
+    
+s.onclick(f)
+s.listen()
+```
+
+Voici une partie d'un jeu de go sur un board annoté avec les lettres et nombres pour identifier les pions.
+
+![](media/go_partie.png)
