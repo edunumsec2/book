@@ -29,8 +29,6 @@ body:
     attributes:
       label: Quel résultat était attendu ?
       value: "Résultat attendu"
-    validations:
-      required: true
   - type: dropdown
     id: browsers
     attributes:
