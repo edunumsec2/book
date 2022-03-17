@@ -1,5 +1,5 @@
 name: Rapport de bug
-description: Soumettre un rapport de bug
+description: Pour soumettre un problème fonctionnel (UX/UI, installation de l'environnement, exécution du book, etc.)
 title: "[Bug]: "
 labels: ["bug"]
 assignees:
