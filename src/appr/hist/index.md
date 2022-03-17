@@ -23,3 +23,25 @@ Voici la toute première vidéo YouTube !
 ````
 
 ``````
+
+## Exercices
+
+```{exercise} Analyser un circuit
+Voici un test !
+```
+
+````{exercise} Dessiner une maison
+
+Et un autre test !
+
+```{codeplay}
+:hide_afterword_in_download:
+
+print("AVANT")
+======
+print("DEDANS")
+======
+print("APRES")
+```
+
+````
