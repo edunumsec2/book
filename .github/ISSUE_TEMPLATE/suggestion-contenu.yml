@@ -8,7 +8,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        **Remarque**: pour les demandes plus complexes, nous vous invitons à dialoguer avec nous via [Discord](https://discord.gg/b8qu79t6HQ) ou sur [modulo-team@epfl.ch](modulo-team@epfl.ch).
+        **Remarque**: pour les demandes plus complexes, nous vous invitons à dialoguer avec nous via [Discord](https://discord.gg/b8qu79t6HQ) ou sur [modulo-team@epfl.ch](mailto:modulo-team@epfl.ch).
   - type: input
     id: page
     attributes:
