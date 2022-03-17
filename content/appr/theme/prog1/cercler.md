@@ -321,6 +321,10 @@ circle(50)
 
 Avec des rails de chemin de fer, dessinez un circuit en forme d'un rond (deux rails avec les traverses).
 
+![rails](media/rails2.png)
+
+Utilisez une boucle `for` pour la répétition des traverses.
+
 ```{codeplay}
 :file: circuit_rond.py
 from turtle import *

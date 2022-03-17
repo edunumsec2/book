@@ -2,6 +2,10 @@
 
 Le but de cette section est de présenter de manière abordable une partie du travail important accompli par Claude Shannon dans les années 50 sur la "communication en présence de bruit". Elle peut être vue comme une extension au chapitre sur la représentation de l'information.
 
+```{admonition} Avertissement
+Même si elle se veut introductive, cette section est globalement plus difficile à appréhender que les autres, notamment du fait qu'elle nécessite des notions de base de probabilités, que les élèves n'ont pas encore acquises en 1M ou 2M. Elle pourrait être utilisée par contre en option complémentaire.
+```
+
 ## Mise en situation : Bob est perdu au milieu de la forêt
 
 Supposons que deux personnes, disons Alice et Bob, désirent communiquer, et imaginons le scénario où Bob est perdu au milieu d'une forêt ; Alice, qui connaît la position GPS de Bob et qui a aussi la carte de la forêt devant elle, voit dans quelle direction (N, S E ou W) Bob devrait aller pour en sortir au plus vite.

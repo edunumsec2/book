@@ -177,6 +177,53 @@ for y in range(-x0, x0+1, d):
         dot()
 ```
 
+## Position `(x, y)`
+
+Un tuple est la forme idéale pour représenter les deux coordonnées `(x, y)` d'un point. Nous allons dorénavant utiliser la lettre `p` pour point (ou position). Si deux points sont nécessaire, nous les appellerons `p` et `q`.
+
+Pour accéder aux coordonnées `x` et `y` du point `p` nous utilisons un indice (un entier entre crochets) :
+
+- `p[0]` pour la coordonnée x
+- `p[1]` pour la coordonnée y
+
+```{codeplay}
+from turtle import *
+up()
+
+p = (100, -120)
+
+print('p =', p)
+print('x =', p[0])
+print('y =', p[1])
+```
+
+La fonction `goto()` accepte :
+
+- deux coordonnées séparés `goto(x, y)`
+- deux coordonnées dans un tuple `goto(p)`
+
+Nous pouvons définir une fonction `ligne()` qui dessine une ligne entre deux points.
+
+```{codeplay}
+from turtle import *
+up()
+
+def ligne(p, q):
+    goto(p)
+    down()
+    goto(q)
+    up()
+
+p = 100, 50
+
+goto(p)
+dot(20)
+ligne(p, (0, 200))
+ligne(p, (0, -200))
+ligne(p, (300, 0))
+ligne(p, (-300, 0))
+```
+
 ## Grille de lignes
 
 Le programme suivant dessine une grille de lignes qui sont à une distance `d` les unes des autres. Nous utilisons deux boucles séparées avec les variables d'itération `x` et `y`.

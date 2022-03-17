@@ -451,7 +451,11 @@ forward(200)
 
 ### Chemin de fer
 
-Dessinez les rails d'un chemin de fer. Utilisez une boucle `for` pour la répétition des traverses.
+Dessinez les rails d'un chemin de fer. 
+
+![rails](media/rails.png)
+
+Utilisez une boucle `for` pour la répétition des traverses.
 
 ```{codeplay}
 :file: rails.py

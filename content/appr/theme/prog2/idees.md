@@ -2,112 +2,26 @@
 
 Les programmes de ce chapitre sont des idées sous construction, à développer et à placer à leur endroit approprié.
 
-## Arbre
-
-Cet exemple montre la construction hiérarchique d'un arbre, a partir d'une simple branche.
-
-```{codeplay}
-from turtle import *
-
-getscreen().bgcolor('lightblue')
-color('brown')
-
-def branche():
-    width(1)
-    forward(30)
-    backward(30)
-
-def branche2():
-    width(2)
-    forward(40)
-    left(50)
-    branche()
-    right(100)
-    branche()
-    left(50)
-    backward(40)
-    
-def branche4():
-    width(4)
-    forward(50)
-    left(50)
-    branche2()
-    right(100)
-    branche2()
-    left(50)
-    backward(50)
-    
-def branche8():
-    width(8)
-    forward(50)
-    left(50)
-    branche4()
-    right(100)
-    branche4()
-    left(50)
-    backward(50)
-
-left(90)
-backward(50)
-branche8()
-```
-
-## Méthodes `Turtle`
-
-Ce code affiche tous les méthodes et attributs de la classe `Turtle`.
-
-```{codeplay}
-from turtle import *
-
-print(dir(Turtle))
-```
-
-On y retrouve les 6 comparaisons standard.
-
-```{codeplay}
-from turtle import *
-
-print('__eq__ =', Turtle.__eq__)
-print('__ge__ =', Turtle.__ge__)
-print('__gt__ =', Turtle.__gt__)
-print('__le__ =', Turtle.__le__)
-print('__lt__ =', Turtle.__lt__)
-print('__ne__ =', Turtle.__ne__)
-```
-
-On y retrouve également 9 autres méthodes privées.
-
-```{codeplay}
-from turtle import *
-
-print('__format__ =', Turtle.__format__)
-print('__getattribute__ =', Turtle.__getattribute__)
-print('__hash__ =', Turtle.__hash__)
-print('__init__ =', Turtle.__init__)
-print('__module__ =', Turtle.__module__)
-print('__new__ =', Turtle.__new__)
-print('__repr__ =', Turtle.__repr__)
-print('__setattr__ =', Turtle.__setattr__)
-print('__str__ =', Turtle.__str__)
-```
-
 ## Méthodes `Screen`
 
-Cet exemple de code affiche tous les méthodes et attributs de la classe `Screen`. Nous constatons la présence des 15 mêmes méthodes spéciales que nous avons vues dans la classe `Turtle`.
+Cet exemple de code affiche tous les méthodes de la classe `Screen`. Nous constatons d'en avoir environs 26 méthodes.
 
 ```{codeplay}
 from turtle import *
 
-print(dir(Screen))
+methodes = [x for x in dir(Screen) if not x.startswith('_')]
+print(methodes)
+print(len(methodes))
 ```
 
-Voici quelques fonctions qui renvoient l'état.
+## Etat de la tortue
+
+Voici quelques méthodes qui renvoient l'état actuel de la tortue.
 
 ```{codeplay}
 from turtle import *
 
 print('Tortue:')
-print('shapes =', getscreen().getshapes())
 print('shape =', shape())
 print('down =', isdown())
 print('visible =', isvisible())
@@ -118,7 +32,7 @@ print('delay =', delay())
 
 ## Fonction `shape()`
 
-Voici les 6 formes de tortue.
+Voici les 6 formes de la tortue.
 
 ```{codeplay}
 from turtle import *
@@ -296,16 +210,16 @@ import this
 
 Ce module contient la liste de tous des mot-clés de Python. Le nombre des mots-clés est relativement limité. Nous en avons seulement une trentaine. Ces mots-clé concernent :
 
-- les opérateurs logiques : and, or, not
-- les boucles : for, in, while, break, continue
-- l'exécution conditionnelle : if, elif, else
-- les fonctions : def, return, lambda
-- l'importation : import, from
-- les classes : class
-- les variables : global
+- les opérateurs logiques : `and`, `or`, `not`
+- les boucles : `for`, `in`, `while`, `break`, `continue`
+- l'exécution conditionnelle : `if`, `elif`, `else`
+- les fonctions : `def`, `return`, `lambda`
+- l'importation : `import`, `from`
+- les classes : `class`
+- les variables : `global`
 
 Les mots-clés que nous avons pas encore vus sont :  
-as, assert, del, except, exec, finally, is, pass, raise, try, with, yield
+`as`, `assert`, `del`, `except`, `exec`, `finally`, `is`, `pass`, `raise`, `try`, `with`, `yield`
 
 ```{codeplay}
 import keyword
@@ -510,6 +424,8 @@ while True:
 ## Tortue par pixel
 
 Est-ce que le programme est beaucoup ralenti si nous créons une nouvelle tortue pour chaque pixel ?
+
+Effectivement avec 600 tortues, nous occupons beaucoup plus d'espace en mémoire, avec les paramètre propre à chaque tortue (`shape`, `color`, `width`, `speed`, etc.)
 
 ```{codeplay}
 from turtle import *

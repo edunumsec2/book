@@ -238,7 +238,10 @@ def f(x, y):
     if state:
         p = x, y
     else:
-        ellipse(p, (2 * (x - p[0]), 2 * (y - p[1])))
+        a = x - p[0]
+        b = y - p[1]
+        center = p[0] + a/2, p[1] + b/2
+        ellipse(center, (a, b))
     state = not state
 
 s.onclick(f)

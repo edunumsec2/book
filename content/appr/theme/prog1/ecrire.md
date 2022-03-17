@@ -254,6 +254,8 @@ for i in range(10):
 Utiliser des émojis dans Thonny ne fonctionne pas. Ceci fait planter Thonny !  
 Le module graphique utilisé actuellement (Tk 8.6.8) ne supporte pas des émojis.
 Ce bug sera corrigé avec Thonny 4.0 qui utilisera la version Tk 8.6.12.
+
+Vous pouvez utiliser les émojis sans problème avec l'éditeur IDLE qui lui utilise Tk 8.6.11.
 ```
 
 Vous pouvez utilisez dans Thonny sans problème les anciens pictogrammes en noir et blanc. Voici les codes Unicode de

@@ -318,6 +318,48 @@ if not (a < x < b):
 
 ## Exercices
 
+- Téléchargez l'exercice
+- Lancez un éditeur externe (tel que Thonny)
+- Depuis l'éditeur ouvrez le fichier téléchargé
+- Remplacez ... par votre code
+- Déposez vos exercices sur Moodle
+
+### Equation quadratique
+
+En mathématiques, une équation quadratique est une équation polynomiale qui peux s'écrire sous la forme
+
+$$ a x^2 + b x + c = 0 $$
+
+Calculez d'abord le déterminant
+
+$$ det = b^2 - 4 a c $$
+
+Selon le déterminant vous avez 3 cas. Si le déterminant est : 
+
+négatif : pas de solution
+
+zéro : une solution
+
+$$ x = \frac{-b}{2a} $$
+
+positif : deux solutions
+
+$$ x_1 = \frac{-b + \sqrt{det}}{2a},  x_2 = \frac{-b - \sqrt{det}}{2a} $$ 
+
+Ecrivez un programme qui calcule la solution d'une équation quadratique.
+
+```{codeplay}
+:file: equation_quad.py
+print('Equation quadratique')
+print()
+a = int(input('a='))
+b = int(input('b='))
+c = int(input('c='))
+
+print(a, 'x^2 +', b, 'x +', c, '= 0')
+...
+```
+
 ### Jeu multi-langue
 
 Adaptez le jeux `pierre-papier-ciseaux` pour qu'on puisse choisir la langue du jeu entre :
@@ -327,15 +369,31 @@ Adaptez le jeux `pierre-papier-ciseaux` pour qu'on puisse choisir la langue du j
 - Allemand
 
 ```{codeplay}
-
 langue = input('1=Français, 2=Anglais, 3=Allemand: ')
 ```
 
 ### Big Bang Theory
 
-Une nouvelle variante de pierre-papier-ciseaux a été popularisée par la série américaine The Big Bang Theory. Il s'agit de **Pierre-Papier-Ciseaux-Lézard-Spock**. Ici, les règles classiques s'appliquent, mais il faut ajouter que le lézard mange le papier, empoisonne Spock, est écrasé par la pierre et est décapité par les ciseaux. Spock vaporise la pierre, casse les ciseaux, et est discrédité par le papier. Cette variante augmente le nombre de combinaisons de 3 à 10, et est censée réduire le nombre d'égalités entre deux joueurs qui se connaissent (bien qu'entre les personnages de la série, cette variante amène systématiquement à une égalité Spock vs. Spock).
+Une nouvelle variante de pierre-papier-ciseaux a été popularisée par la série américaine The Big Bang Theory. Il s'agit de **Pierre-Papier-Ciseaux-Lézard-Spock**. Ici, les règles classiques s'appliquent, mais il faut ajouter que le lézard mange le papier, empoisonne Spock, est écrasé par la pierre et est décapité par les ciseaux. Spock vaporise la pierre, casse les ciseaux, et est discrédité par le papier. 
+
+```{youtube} x5Q6-wMx-K8
+```
+
+Cette variante augmente le nombre de combinaisons de 3 à 10, et est censée réduire le nombre d'égalités entre deux joueurs qui se connaissent (bien qu'entre les personnages de la série, cette variante amène systématiquement à une égalité Spock vs. Spock).
+
+|               |humain | pierre| papier    | ciseaux   | lézard| Spock |
+| ---           |---    |---    |---        |---        |---    |---    |
+| ordinateur    |       | 1     | 2         | 3         | 4     | 5     |
+| pierre        | 1     | nul   | gagne     | perd      | perd  | gagne |
+| papier        | 2     | perd  | nul       | gagne     | gagne | perd  |
+| ciseaux       | 3     | gagne | perd      | nul       | perd  | gagne |
+| lézard        | 4     | gagne | perd      | gagne     | nul   | perd  |
+| Spock         | 5     | perd  | gagne     | perd      | gagne | nul   |
 
 ```{codeplay}
-
+:file: bigbang.py
 objets = ('pierre', 'papier', 'ciseaux', 'lézard', 'Spock')
+
+print('Choisissez parmis')
+print(*objets)
 ```

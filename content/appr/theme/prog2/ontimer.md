@@ -256,3 +256,64 @@ def horloge():
 horloge()
 done()
 ```
+
+## Exercice
+
+### Tetris
+
+Les flèches gauche/droite permettent de déplacer le tétronimo. Programmez les touches 
+
+- haut/bas pour le tourner,
+- espace pour le faire tomber.
+
+```{codeplay}
+:file: tetris.py
+from turtle import *
+hideturtle()
+tracer(0)
+up()
+d = 20
+sety(200 - d)
+
+def L():
+    fillcolor('orange')
+    begin_fill()
+    for a in 0, 90, 90, -90, 0, 90, 90, 0, 0, 90:
+        forward(d)
+        left(a)
+    end_fill()
+    
+L()
+update()
+
+def gauche():
+    clear()
+    backward(d)
+    L()
+    update()
+    
+def droite():
+    clear()
+    forward(d)
+    L()
+    update()
+
+def fall():
+    clear()
+    sety(ycor() - d)
+    L()
+    update()
+    if ycor() <= -200:
+        sety(200 - d)
+        s.ontimer(fall, 2000)
+    else:
+        s.ontimer(fall, 500)
+
+s = getscreen()
+s.onkey(gauche, 'Left')
+s.onkey(droite, 'Right')
+s.onkey(clear, 'c')
+s.listen()
+fall()
+```
+

@@ -353,7 +353,13 @@ for i in range(3):
 
 ## Cube de Rubik
 
-Pour dessiner un cube de Rubik, nous dessinons 3 × 3 losanges pour obtenir la surface du cube. Ceci nécessite deux boucles imbriquées avec les deux variables d'itération distinctes `i` et `j`.
+Pour dessiner un cube de Rubik, nous dessinons 
+
+- 3 losanges pour former une ligne,
+- 3 lignes pour former une surface,
+- 3 surfaces pour former un cube.
+
+Dans chaque fonction (losange, ligne, surface) nous retournons au point de départ.
 
 ```{codeplay}
 from turtle import *
