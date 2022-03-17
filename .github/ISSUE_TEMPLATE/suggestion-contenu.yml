@@ -18,7 +18,13 @@ body:
     validations:
       required: true
   - type: textarea
-    id: description
+    id: probleme
+    attributes:
+      label: Quelle est le problème relevé ?
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
     attributes:
       label: Quelle est votre suggestion ?
     validations:
