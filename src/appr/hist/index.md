@@ -1,5 +1,12 @@
 # Histoire
 
+
+```{toctree}
+:maxdepth: 2
+:hidden:
+Histoire des machines <machines>
+```
+
 ## Timeline
 
 ``````{timeline}
@@ -23,6 +30,7 @@ Voici la toute première vidéo YouTube !
 ````
 
 ``````
+
 
 ## Exercices
 
