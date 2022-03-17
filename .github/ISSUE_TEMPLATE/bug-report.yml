@@ -43,11 +43,13 @@ body:
         - Microsoft Edge
         - Opera
         - Autre
+    validations:
+      required: true
   - type: textarea
     id: logs
     attributes:
       label: Logs pertinents
-      description: Copiez ici tout log pertinent pour aider au debug (la mise en forme se fait automatiquement)
+      description: Copiez ici tout log pertinent pour aider au debug (la mise en forme shell se fait automatiquement)
       render: shell
   - type: checkboxes
     id: terms
