@@ -45,6 +45,16 @@ body:
         - Autre
     validations:
       required: true
+  - type: dropdown
+    id: mobile
+    attributes:
+      label: Quel format ?
+      multiple: true
+      options:
+        - Mobile
+        - Desktop
+    validations:
+      required: true
   - type: textarea
     id: logs
     attributes:
