@@ -2,8 +2,20 @@
 
 Classe : 1M, 2M
 
-<span style="color:green">Difficulté : basique </span> 
+<span style="color:green">Difficulté de manipulation : basique </span> 
 <sup> [1](#myfootnote1)</sup>
+
+<span style="color:green">Difficulté conceptuelle : élevée </span>  
+
+Prérequis structurel:
+3 séances de 45mn, les deux dernières séances devant machines pour les élèves. 
+
+Configuration pour la machine enseignant : un éditeur python (Visual Studio, Thonny , ou autre) avec les librairies installées et code fourni en annexe. 
+
+Pour les élèves, des machines avec le logiciel Audacity installé, accès à des écouteurs personnels, connexion internet pour les élèves pour la dernière période (accès à Moodle).
+
+Les fichiers suivants sont à télécharger pour l'activité complète : ...
+
     
 
 ## 3.1. Objectifs 
@@ -11,16 +23,28 @@ Classe : 1M, 2M
 ### 3.1.1. Objectif informatique
 
 Le premier objet de cette activité est de permettre à l'élève d'appréhender la problématique de la représentation de l'information au sens large, comme le passage d'un univers symbolique à un autre.  
-Il s'agit tout d'abord de passer d'un espace physique sensoriel (l'audition) à un autre espace sensoriel (la vue) et à la modélisation mathématique permettant de représenter ce phénomène acoustique : la représentation pseudo-sinusoïdale continue d'une onde sonore théorique, puis sa représentation numérique discrète.  
-Ce premier travail intellectuel doit permettre aux élèves d'une part de se familiariser avec le matériau servant de support aux activités suivantes (quelques notions élémentaires relatives au son), et d'autre part de faciliter leur compréhension du changement de paradigme ultérieur entre l'espace physique (plutôt que mathématique) et l'espace numérique et le codage binaire de l'information.  
+Il s'agit tout d'abord de passer d'un espace physique sensoriel (l'audition) à un autre espace sensoriel (la vue) 
+en utilisant la modélisation mathématique du son avec des variations sinusoïdales, puis sa représentation numérique discrète avec une qualité variable qui sera présente par exemple dans les téléphones et autres objets numériques des élèves.
+<!--
+et à la modélisation mathématique permettant de représenter ce phénomène acoustique : la représentation pseudo-sinusoïdale continue d'une onde sonore théorique, puis sa représentation numérique discrète. 
+-->
 
-Le second objet de cette activité est de permettre aux élèves de se familiariser avec l'outil Audacity, ses fonctionnalités de visualisation graphique et de reproduction sonore, offrant deux modes de représentation du son.  
-En particulier la notion de fréquence d'échantillonnage et le critère de Shannon, essentiel en traitement du signal, sont perçus visuellement et auditivement (découpage de l'onde sonore en une multitude de points et perception des effets de la fréquence d'échantillonnage sur la qualité du rendu).
+Ce premier travail intellectuel doit permettre aux élèves d'une part de se familiariser avec le matériau servant de support aux activités suivantes (quelques notions élémentaires relatives au son), et d'autre part de faciliter leur compréhension du codage binaire du son en faisant un lien entre la réalité physique et le binaire.
+
+
+<!--
+et d'autre part de faciliter leur compréhension du changement de paradigme ultérieur entre l'espace physique (plutôt que mathématique) et l'espace numérique et le codage binaire de l'information.  
+-->
+
+
+Le second objet de cette activité est de permettre aux élèves de se familiariser avec lun outil tel qu'Audacity, qui permet de visualiser graphiquement le son et de le reproduire auditivement, offrant deux modes de représentation du son.  
+En particulier la notion de fréquence d'échantillonnage et le niveau de segmentation minimal en lien avec la qualité du son peuvent être perçus visuellement et auditivement (découpage de l'onde sonore en une multitude de points et perception des effets de la fréquence d'échantillonnage sur la qualité du rendu).
     
+Enfin la notion de taille de fichier directement liée au nombre de points pris sur l'onde sonore permet de faire le lien entre binaire et qualité du son.    
 
 ### 3.1.2. Objectif mathématique et physique (transversal)
 
-L'activité permet de réactiver, confirmer ou souligner des savoirs mathématiques relatifs aux relations fonctionnelles,  aux représentations dans le plan et à la trigonométrie.
+L'activité permet de réactiver, confirmer ou souligner des savoirs mathématiques relatifs aux relations fonctionnelles, aux représentations dans le plan et à la trigonométrie.
 L'activité permet de réactiver, confirmer ou souligner des savoirs mécaniques et physiques relativement aux ondes, à la notion de milieu de propagation, de période et de fréquence.
 </br> </br>
 
@@ -36,7 +60,7 @@ L'activité permet de réactiver, confirmer ou souligner des savoirs mécaniques
         <span style="color:green">utilisation de l'ordinateur et familiarisation avec l'environnement informatique
         </span> 
         
-    Pour l'enseignant : il est recommandé d'utiliser python à partir de la version 3.9. Il faut préalablement réaliser les installations des librairies via la commande pip :
+    Pour l'enseignant : il est recommandé d'utiliser python à partir de la version 3.9. Il faut préalablement réaliser les installations des librairies via la commande pip dans la console :
 
         pip install numpy   
         pip install matplotlib   
@@ -60,12 +84,12 @@ L'activité permet de réactiver, confirmer ou souligner des savoirs mécaniques
 
 ### 3.2.3. Moments didactiques
 
- **1er moment didactique.** Mise en situation - Première séance (cours) - <span style="color:violet">45mn</span>
+ **1er moment didactique.** Mise en situation, apport théorique initial - Première séance (cours) - <span style="color:violet">45mn</span>
 </br> **2ème moment didactique.** Exploration individuelle : chaque élève prend possession du matériel, des outils : ordinateur, environnement de travail, logiciel Audacity, matériel audio - Deuxième séance (activité proprement dite) - <span style="color:violet">15-25mn</span>
 </br> **3ème moment didactique.** Moment technique et technologique : les élèves manipulent le programme Audacity, lancent les exécutions, manipulent les fenêtres graphiques (interfaces), observent les graphes et écoutent différentes portions de morceaux de musique (3 maximum) - <span style="color:violet">20-30mn</span>
 </br> **4ème moment didactique.** Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, interprétation. Interprétation du visuel de la courbe sonore dilatée temporellement : la *discrétisation numérique* est mise en évidence. L'enseignant recueille de manière guidée les appréciations des élèves sur la qualité du morceau de musique écouté à différentes *fréquences d'échantillonnage*. Cette notion est simplement posée à ce stade, elle sera reprise et développée dans le temps suivant. Le recueil des appréciations concernant la qualité sonore peut être réalisé via un tableau où figurent en première ligne toutes les fréquences autour de la fréquence médiane 48000 Hz, et dans la ligne suivante la qualité perçue par les élèves : Mauvaise / Convenable / Bonne ; l'enseignant inscrit un segment (représentation au tableau) pour chaque choix de chaque qualité associée, ou travaille de préférence directement sur un [tableau excel](/tab/appqualson.ods) complété avec les retours élèves  - <span style="color:violet">20-30mn</span>
-</br> **5ème moment didactique.** Travail sur la technique : les élèves sont laissés en autonomie une bonne partie du temps sur leurs postes de travail, expérimentent les outils et concepts institutionnalisés en manipulant les paramètres d'Audacity en fin de troisième séance - <span style="color:violet">15-25mn</span>
-</br> **6ème moment didactique.** Evaluation. {download}`Devoir - évaluation maison de type quizz moodle<quizzech.ods>`  - <span style="color:violet">20-30mn</span>
+</br> **5ème moment didactique.** Travail sur la technique : les élèves sont laissés en autonomie une bonne partie du temps sur leurs postes de travail, expérimentent les outils et concepts institutionnalisés en manipulant les paramètres d'Audacity (zoom temporel, visualisation de parties du morceau, identification de l'aspect «sinusoïdal») en fin de troisième séance - <span style="color:violet">15-25mn</span>
+</br> **6ème moment didactique.** Evaluation formative ou sommative portant sur les aspects théoriques disciplinaires ou transdisciplinaires. {download}`Devoir - évaluation maison de type quiz moodle<quizzech.ods>`  - <span style="color:violet">20-30mn</span>
 </br>
 
 
@@ -83,7 +107,7 @@ La séquence d'enseignement se découpe en <span style="color:violet">trois séa
 
 ### 3.3.1. Première séance : éléments de cours sur l'information et le son en particulier
 
-Cette première séance doit être vue comme une introduction à la problématique traitée par l'activité proprement dite. Elle est l'occasion de travailler la transdisciplinarité avec d'autres disciplines fondamentales (mathématiques, physique) mais également une discipline artistique, la musique.  
+Cette première séance doit être vue comme une introduction à la problématique traitée par l'activité proprement dite. Elle est aussi l'occasion de travailler la transdisciplinarité avec d'autres disciplines fondamentales (mathématiques, physique) mais également d'aborder la discipline artistique que les élèves affectionnent tout particulièrement qu'est la musique..  
 Elle peut donc s'effectuer en parallèle d'un de ces enseignements, en coordination avec un enseignant de ces disciplines : mathématiques, physique, ou musique.  
 Les éléments mathématiques et physiques théoriques suffisants sont présentés dans cet ouvrage à la section 1.1 : Signal analogique (physique) temporel. L'enseignant peut également s'appuyer sur certains éléments de la section 1.2 Contenu fréquentiel (analyse spectrale).  
 Une introduction sous l'angle de la musique pourra s'appuyer sur une approche instrumentale mettant en évidence les notions de hauteur (fréquence), de timbre (richesse harmonique), d'onde de pression transmise dans un espace matériel : ceci devra être fait en collaboration avec un enseignant de musique, avec le concours d'instruments divers : piano, flute, cordes, cuivres ou vents...  
@@ -387,9 +411,9 @@ Le graphique affiche clairement la croissance forte de l'occupation mémoire en 
 
 ### 3.3.4. Evaluation : quizz moodle maison
 
-L'évaluation pourra être réalisée via un quizz moodle open-book, en temps limité (<span style="color:violet">20-30mn</span>) créé par l'enseignant, et comportant 10-15 questions tirées du fichier excel {download}`Devoir - évaluation maison de type quizz moodle<quizzech.ods>`.
+L'évaluation pourra être réalisée via un quizz moodle open-book, en temps limité (<span style="color:violet">20-30mn</span>) créé par l'enseignant selon les compétences qu'il souhaite évaluer, et comportant 10-15 questions tirées du fichier excel {download}`Devoir - évaluation maison de type quizz moodle<quizzech.ods>`.
 L'enseignant pourra également programmer un cycle d'entrainement préliminaire avec une partie des questions proposées dans ce fichier excel.
-
+   
 
 
 
