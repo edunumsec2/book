@@ -1,4 +1,12 @@
-pandoc -s main.tex -o tmp.md
+pandoc --wrap=preserve -s main.tex -o tmp.md
+sed -i.bak -e 's/{\#une-brève-histoire-de-linformatique \.unnumbered}//' \
+            -e 's/^r[0-9]*\.[0-9]*//g' \
+            -e 's/.*!\[image\]/!\[image\]/g' \
+            -e 's/.*!\[[^]]*\](\(.*\)){.*width=\"\(.*\)\"}/```{image} \1 \
+:width: \2 \
+:align: right \
+```/g' tmp.md
+
 { echo  '# Histoire de l'\''informatique 
 
 ```{admonition} Attention
