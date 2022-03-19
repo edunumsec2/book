@@ -5,7 +5,8 @@ sed -i.bak -e 's/{\#une-brève-histoire-de-linformatique \.unnumbered}//' \
             -e 's/.*!\[[^]]*\](\(.*\)){.*width=\"\(.*\)\"}/```{image} \1 \
 :width: \2 \
 :align: right \
-```/g' tmp.md
+```/g' \
+            -e 's/\[\([XI]*\)\][{]\.smallcaps[}]/\1e/g' tmp.md
 
 { echo  '# Histoire de l'\''informatique 
 

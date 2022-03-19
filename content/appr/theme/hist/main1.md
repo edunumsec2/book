@@ -8,7 +8,7 @@ Ce document est en cours de rédaction.
 Une (brève) histoire de l'informatique 
 ======================================
 
-Si l'histoire de l'informatique prend ses racines loin dans notre histoire, cette science, encore très jeune, trouve sa place au milieu du [XX]{.smallcaps} siècle. L'éclosion de l'informatique se situe en 1940, à la croisée d'opportunités technologiques, d'enjeux stratégiques et de contributions d'autres branches. C'est ainsi au coeur des conflits de la Deuxième guerre mondiale que l'importance de calculateurs programmables se fait sentir.
+Si l'histoire de l'informatique prend ses racines loin dans notre histoire, cette science, encore très jeune, trouve sa place au milieu du XXe siècle. L'éclosion de l'informatique se situe en 1940, à la croisée d'opportunités technologiques, d'enjeux stratégiques et de contributions d'autres branches. C'est ainsi au coeur des conflits de la Deuxième guerre mondiale que l'importance de calculateurs programmables se fait sentir.
 
 Le terme \"informatik\" apparaît en 1957 pour le traitement automatique de l'information dans un article de Karl Steinbuch. Il est officialisé en Français en 1962 par Philippe Dreyfus. En Anglais, pour des questions de droits des marques, le terme restera *computer science*.
 
@@ -30,19 +30,19 @@ Les premiers dispositifs de calcul utilisent des petits cailloux (*calculus* en 
 :align: right 
 ```
 
-La machine d'Anticythère, plus de 100 ans av. J.-C., propose une représentation mécanique des mouvements astronomiques. En 1642, Blaise Pascal conçoit la Pascaline, une machine à calculer mécanique qui se base cette fois sur une représentation arithmétique traduite dans des rouages mécaniques. Au tout début du [XIX]{.smallcaps} siècle, la machine de Joseph Jacquard dispose d'un mécanisme programmable basé sur des aiguilles et des cartes perforées. Enfin, cette histoire des machines mécaniques se termine en 1948 avec la calculatrice Curta, probablement le dispositif le plus abouti avant l'avènement des calculettes électroniques, fabriquée au Lichtenstein et vendue à plus de 140'000 exemplaires.
+La machine d'Anticythère, plus de 100 ans av. J.-C., propose une représentation mécanique des mouvements astronomiques. En 1642, Blaise Pascal conçoit la Pascaline, une machine à calculer mécanique qui se base cette fois sur une représentation arithmétique traduite dans des rouages mécaniques. Au tout début du XIXe siècle, la machine de Joseph Jacquard dispose d'un mécanisme programmable basé sur des aiguilles et des cartes perforées. Enfin, cette histoire des machines mécaniques se termine en 1948 avec la calculatrice Curta, probablement le dispositif le plus abouti avant l'avènement des calculettes électroniques, fabriquée au Lichtenstein et vendue à plus de 140'000 exemplaires.
 
 ```{image} media/machines/Curta_II_Mechanical_Calculator.jpeg 
 :width: 40% 
 :align: right 
 ```
 
-Mise au point au début du [XX]{.smallcaps} siècle, la machine *enigma*, utilisée par les Nazis pendant la Deuxième guerre mondiale, est une machine électromécanique qui lance la transition entre les dispositifs mécaniques et les systèmes électroniques. Elle joue également le rôle de catalyseur pour une partie des travaux d'Alan Turing.
+Mise au point au début du XXe siècle, la machine *enigma*, utilisée par les Nazis pendant la Deuxième guerre mondiale, est une machine électromécanique qui lance la transition entre les dispositifs mécaniques et les systèmes électroniques. Elle joue également le rôle de catalyseur pour une partie des travaux d'Alan Turing.
 
 ### Du simple calcul à la séquence
 
-Le mot algorithme découle de la latinisaton du nom de Muhammad Ibn Mūsā al-Khuwārizmī au [VIII]{.smallcaps} et [IX]{.smallcaps} siècles. Les boites à musique utilisent par la suite un cylindre hérissé de picots, tout comme les automates, à l'instar du canard de Vaucanson[^1] (1734). Ces cylindres deviennent par la suite des bandes ou cartes perforées comme dans les métiers de Jacquard ou les orgues de barbarie.
-Au début du [IX]{.smallcaps} siècle, Georges Boole formalise la logique moderne et ce qu'on appelle aujourd'hui en son honneur l'algèbre de Boole. Cet algèbre est repris plus tard dans la construction des systèmes logiques à la base du fonctionnement des ordinateurs.
+Le mot algorithme découle de la latinisaton du nom de Muhammad Ibn Mūsā al-Khuwārizmī au [VIII]{.smallcaps} et IXe siècles. Les boites à musique utilisent par la suite un cylindre hérissé de picots, tout comme les automates, à l'instar du canard de Vaucanson[^1] (1734). Ces cylindres deviennent par la suite des bandes ou cartes perforées comme dans les métiers de Jacquard ou les orgues de barbarie.
+Au début du IXe siècle, Georges Boole formalise la logique moderne et ce qu'on appelle aujourd'hui en son honneur l'algèbre de Boole. Cet algèbre est repris plus tard dans la construction des systèmes logiques à la base du fonctionnement des ordinateurs.
 
 
 ```{image} media/machines/Babbage-1-450x355.png 
@@ -69,7 +69,7 @@ L'informatique prend son essor à la croisée de trois enjeux majeurs : les dév
 
 Le radar constitue un dispositif plus que stratégique pendant la Deuxième guerre mondiale pour prévenir les raids aériens de l'Allemagne nazie. La RAF (Royal Air Force) défend jalousement cette technologie et l'entoure du secret le plus absolu. Pour justifier les interventions au bon endroit et au bon moment de ses forces aériennes, la propagande diffusera largement l'idée fausse que les aviateurs de la RAF voyaient mieux la nuit parce qu'il mangeaient beaucoup de carottes. D'ailleurs, ce boniment a encore cours aujourd'hui pour convaincre les enfants.
 Les radio-communications représentent aussi un outil stratégique largement développé en particulier dans la résistance française. Des entreprises suisses comme Kudelski y trouvent leurs racines.
-L'usage du *tube électronique* ou *tube à vide* ou encore *lampe* développée au début du [XX]{.smallcaps} siècle constitue un appui essentiel à ces développements, en particulier pour le radar. On retrouve également cette technologie utilisée à large échelle dans les premiers ordinateurs qui apparaissent au sortir de la guerre.
+L'usage du *tube électronique* ou *tube à vide* ou encore *lampe* développée au début du XXe siècle constitue un appui essentiel à ces développements, en particulier pour le radar. On retrouve également cette technologie utilisée à large échelle dans les premiers ordinateurs qui apparaissent au sortir de la guerre.
 
 ### Balistique et projet Manhattan
 
