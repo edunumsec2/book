@@ -11,7 +11,7 @@ Idée d'un sondage réalisé en introduction puis en conclusion au chapitre : Qu
 -->
 
 
-La large diffusion de l'ordinateur individuel dans les foyers depuis près de 40 ans a bouleversé nos sociétés, nos comportements, nos habitudes. Pour beaucoup, ordinateur reste cependant synonyme de complexité, et si la confrontation à la machine aujourd'hui concerne quasiment tout un chacun dans les pays développés, la perception de l'univers numérique, de l'informatique et de la machine «ordinateur» varie considérablement d'une personne à une autre. Interrogations, réactions épidermiques, peurs pour les uns, ou au contraire passion, voire dépendance pour les autres, la discipline ne laisse personne indifférent, et suscite souvent perplexité et angoisse.
+La large diffusion de l'ordinateur individuel dans les foyers depuis près de 40 ans a bouleversé nos sociétés, nos comportements, nos habitudes. Pour beaucoup, l'ordinateur reste cependant synonyme de complexité, et si la confrontation à la machine aujourd'hui concerne quasiment tout un chacun dans les pays développés, la perception de l'univers numérique, de l'informatique et de la machine «ordinateur» varie considérablement d'une personne à une autre. Interrogations, réactions épidermiques, peurs pour les uns, ou au contraire passion, voire dépendance pour les autres, la discipline ne laisse personne indifférent, et suscite souvent perplexité et angoisse.
 
 
 ```{image} media/angoisse_ordi.png
