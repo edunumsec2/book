@@ -276,12 +276,28 @@ Il est précédé du VIC-20 de la même marque et de nombreuses autres propositi
 
 Les ordinateurs ne sont pas encore connectés, mais les utilisateurs, souvent très jeunes, fondent des clubs, se réunissent et échangent des programmes de démonstration. C'est dans ces communautés que naissent souvent les premiers *hackers* qui se lancent des défis pour concevoir sur ces machines à petit budget des animations souvent impressionnantes.
 
+### La micro en Suisse
+
+Smaky[^7] est une famille de micro-ordinateurs développés en Suisse dès 1974 au LAMI-EPFL, dirigé par le Professeur Jean-Daniel Nicoud. Commercialisé dès 1978 par la société EPSITEC SA, il intègre rapidement des fonctionalités réseau et surtout présente dès 1980, avec le Smaky 8, un système d'exploitation multitâche préemptif [^8]qui en fait un ordinateur puissant qui dispose déjà d'une interface avec des fenêtres. Le développement du Smaky a complètement cessé en 1995 et la société EPSITEC SA s'oriente vers le développement de logiciels comme CRESUS, un logiciel de comptabilité adapté au marché suisse.
+
+```{image} media/machines/smaky8_bolo.jpeg 
+:width: 40% 
+:align: right 
+```
+
+Parallèlement aux Smakys, le Professeur Jean-Daniel Nicoud, développe des machines bon marché à l'intention des clubs d'électronique, d'abord le crocus, puis le Dauphin en 1977 pour 270 CHF. Ce dernier, abondamment utilisé dans les cours du LAMI, est encore aujourd'hui une référence pour apprendre à programmer en langage machine et si ça production a cessé, on trouve un simulateur (disponible à l'adresse : <https://www.epsitec.ch/dauphin/> avec toute la documentation nécessaire) qui permet d'en explorer le fonctionnement.
+
+```{image} media/machines/DauphinEcouteur.jpeg 
+:width: 40% 
+:align: right 
+```
+
 Internet
 --------
 
 Internet, le réseau des réseaux, est d'abord un projet de l'armée américaine pour mettre en place un réseau décentralisé capable de résister à une attaque nucléaire. En effet, les réseaux de télécommunications, initialement, sont conçus sur une architecture en étoile avec un central (téléphonique) dont la destruction entraîne la mise hors service de l'ensemble du réseau.
 
-Le réseau ARPANET[^7] est opérationnel pour la première fois en septembre 1969. Il connecte d'abord quelques universités américaines, comme on peut le voir sur la carte figure [0.5](#arpanet){reference-type="ref" reference="arpanet"}.
+Le réseau ARPANET[^9] est opérationnel pour la première fois en septembre 1969. Il connecte d'abord quelques universités américaines, comme on peut le voir sur la carte figure [0.7](#arpanet){reference-type="ref" reference="arpanet"}.
 
 ```{image} media/Arpanet_1974.svg.png 
 :width: 80% 
@@ -299,23 +315,42 @@ Les connexions au réseau Internet se font souvent avec des MODEM qui permettent
 Le logiciel libre
 -----------------
 
-Alors que le monde industriel s'organise au début des années huitante pour protéger la propriété intellectuelle liée à la conception de programmes, Richard Stallman, chercheur au laboratoire d'intelligence artificielle du MIT[^8] s'irrite de cette opacité. L'anecdote rapporte qu'il aurait été particulièrement agacé lorsqu'un de ses anciens collègues aurait refusé de lui confier le code source d'un pilote d'imprimante *buggé*. Il aurait alors ré-écrit complètement le pilote en question et se serait ensuite interrogé sur la meilleure façon de protéger la diffusion libre du programme en question.
+Alors que le monde industriel s'organise au début des années huitante pour protéger la propriété intellectuelle liée à la conception de programmes, Richard Stallman, chercheur au laboratoire d'intelligence artificielle du MIT[^10] s'irrite de cette opacité. L'anecdote rapporte qu'il aurait été particulièrement agacé lorsqu'un de ses anciens collègues aurait refusé de lui confier le code source d'un pilote d'imprimante *buggé*. Il aurait alors ré-écrit complètement le pilote en question et se serait ensuite interrogé sur la meilleure façon de protéger la diffusion libre du programme en question.
 
 ```{image} media/portraits/440px-Richard_Matthew_Stallman.jpeg 
 :width: 40% 
 :align: right 
 ```
 
-Il invente alors la notion de *copyleft*, par opposition au *copyright* : cette licence garantit la libre distribution et l'impossibilité d'aliéner ce droit. En 1984 il crée le projet GNU[^9] et fonde la *Free Software Foundation*.
+Il invente alors la notion de *copyleft*, par opposition au *copyright* : cette licence garantit la libre distribution et l'impossibilité d'aliéner ce droit. En 1984 il crée le projet GNU[^11] et fonde la *Free Software Foundation*.
 
 Son idée de logiciel libre va durablement modifier le paysage du logiciel informatique et concerne aujourd'hui des millions de produits.
 
 Le World Wide Web
 -----------------
 
-Invention en Suisse, CERN
+Time Berners Lee, collaborateur du CERN, constate en 1989 que ces collègues commandent régulièrement des copies d'articles scientifiques ce qui occupe plusieurs employés et utilise beaucoup de papier. Il décide alors de mettre au point un système qui permettrait de partager plus efficacement sur le réseau les résultats des chercheurs et invente pour cela trois protocoles :
 
-Web 2.0
+-   **HTTP** pour Hyper Text Transfer Protocol, un protocole de transfert de documents hypertextes.
+
+-   **HTML** pour Hyper Text Markup Language, un langage de description qui permet la mise en forme de documents.
+
+-   **URL** pour Uniform Resource Locator, qui définit un adressage universel  pour identifier et localiser les documents sur le réseau.
+
+En 1992, il donne à cet ensemble le nom de World Wide Web, la toile mondiale, qui permet de disposer sur Internet des documents liés entre eux par des liens hypertextes. En 1993 il obtient du CERNE l'autorisation d'ouvrir la toile  au domaine public.
+En 1992 également, deux étudiants du NCSA (National Center for Supercomputing Applications), Eric Bina et Marc Andreessen, développent le premier navigateur Internet : NCSA Mosaic qui sera disponible pour le public dès 1993. Une bonne partie de l'équipe de développement de Mosaic fonde l'entreprise Netscape[^12] qui sera pionnière dans le développement du Web.
+
+### Le Web 2.0
+
+Alors que Microsoft et Netscape se plongent dans la guerre des navigateurs, avec Netscape qui représente 90% des navigateurs en 1996, les innovations se succèdent à rythme effréné. Netscape propose trois innocations majeures :
+
+-   Les cookies qui permettent de stocker des informations persistant au file des interactions avec un utilisateur.
+
+-   Les CSS (Cascading Style Sheet) qui permettent une mise en forme beaucoup plus riche et cohérente des documents Web.
+
+-   Le Javascript qui permet l'exécution de script au sein des documents et permet ainsi des interaction encore plus élaborées avec l'utilisateur.
+
+En 2006 le nombre d'utilisateurs de Netscape tombe à 1%, mais toutes ces innovations permettent le développement du Web 2.0, terme qui apparaît pour la première fois en 2004 et accompagne la naissance d'un nouveau WWW avec en particulier l'apparition des réseaux sociaux.
 
 Ubiquité
 --------
@@ -339,7 +374,7 @@ Dans une science qui évolue vite, en perpétuel changement, il est difficile de
 
 ### La suprématie quantique
 
-En octobre 2019, Google a annoncé avoir mis au point un ordinateur quantique capable de faire mieux que les meilleurs super-calculateurs traditionnels. Alors qu'un ordinateur classique manipule des informations élémentaires faites de $0$ et de $1$ (des bits), un ordinateur quantique manipule des q-bits. Ces derniers stockent de l'information comme une superposition de $0$ et de $1$ avec une proportion variable. La quantité d'informations ainsi stockée et traitée s'accroît de manière exponentielle. Deux algorithmes sont réputés dans le domaine de l'informatique quantique : l'algorithme de Glover et l'algorithme de Shor. Le premier permet une recherche beaucoup plus efficace dans un index et le deuxième permet une décomposition beaucoup plus efficace en nombres premiers et donne la possibilité de *casser* les codes utilisés couramment aujourd'hui très rapidement. Cela signifierait que la sécurité liée au cryptage de bon nombre de communications et de transactions serait compromise [^10].
+En octobre 2019, Google a annoncé avoir mis au point un ordinateur quantique capable de faire mieux que les meilleurs super-calculateurs traditionnels. Alors qu'un ordinateur classique manipule des informations élémentaires faites de $0$ et de $1$ (des bits), un ordinateur quantique manipule des q-bits. Ces derniers stockent de l'information comme une superposition de $0$ et de $1$ avec une proportion variable. La quantité d'informations ainsi stockée et traitée s'accroît de manière exponentielle. Deux algorithmes sont réputés dans le domaine de l'informatique quantique : l'algorithme de Glover et l'algorithme de Shor. Le premier permet une recherche beaucoup plus efficace dans un index et le deuxième permet une décomposition beaucoup plus efficace en nombres premiers et donne la possibilité de *casser* les codes utilisés couramment aujourd'hui très rapidement. Cela signifierait que la sécurité liée au cryptage de bon nombre de communications et de transactions serait compromise [^13].
 
 ### Coloniser l'espace ?
 
@@ -399,10 +434,16 @@ Une (encore plus brève) histoire du jeu vidéo
 
 [^6]: Aujourd'hui disparue, la société Netscape a été fondée par les premiers acteurs du World Wide Web et créateurs du premier navigateur, ancêtre de Firefox
 
-[^7]: Advanced Research Projects Agency Network
+[^7]: [smaky.ch](smaky.ch)
 
-[^8]: Massachusetts Institute of Technology
+[^8]: le multitâche préemptif désigne la capacité d'un système d'exploitation à exécuter ou arrêter une tâche planifiée en cours (Source : *Wikipedia*). Ce n'est qu'à partir des années 2000 que Windows supporte pleinement ce mécanisme
 
-[^9]: Gnu is Not Unix est un projet de réaliser un système équivalent au système UNIX, mais dont le code source serait librement distribué. Ce projet sera intégré par Linus Torvald qui crée le noyau *Linux*
+[^9]: Advanced Research Projects Agency Network
 
-[^10]: Problème que certaines sociétés ont déjà anticipé, comme ID Quantique : <https://en.wikipedia.org/wiki/ID_Quantique>
+[^10]: Massachusetts Institute of Technology
+
+[^11]: Gnu is Not Unix est un projet de réaliser un système équivalent au système UNIX, mais dont le code source serait librement distribué. Ce projet sera intégré par Linus Torvald qui crée le noyau *Linux*
+
+[^12]: l'ancêtre de Firefox et d'une bonne partie des développements encore d'actualité
+
+[^13]: Problème que certaines sociétés ont déjà anticipé, comme ID Quantique : <https://en.wikipedia.org/wiki/ID_Quantique>

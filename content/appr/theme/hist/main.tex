@@ -217,6 +217,7 @@ Dès les années septante, les langages suivant apparaissent :
 \section{Apparition de la micro-informatique : \guillemotleft Small is beautifull\guillemotright}
 En 1973 apparaissent les premiers \textit{micro-ordinateurs} qui sont destinés à un usage personnel (simultanément en France et en Allemagne). Le coût des mini-ordinateurs est prohibitif pour certaines sociétés et certains champs d'applications, la micro-informatique permet une diffusion encore plus large de la technologie informatique. Citons parmi ces pionniers l'Apple I de Steve Jobs et Steve Wozniak (figure \ref{AppleI}), le Commodore PET (figure \ref{PET}).
 
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{media/machines/1920px-Apple_I_Computer.jpeg}
@@ -265,6 +266,26 @@ Il est précédé du VIC-20 de la même marque et de nombreuses autres propositi
 
 Les ordinateurs ne sont pas encore connectés, mais les utilisateurs, souvent très jeunes, fondent des clubs, se réunissent et échangent des programmes de démonstration. C'est dans ces communautés que naissent souvent les premiers \textit{hackers} qui se lancent des défis pour concevoir sur ces machines à petit budget des animations souvent impressionnantes.
 
+\subsection{La micro en Suisse}
+Smaky\footnote{\url{smaky.ch}} est une famille de micro-ordinateurs développés en Suisse dès 1974 au LAMI-EPFL, dirigé par le Professeur Jean-Daniel Nicoud. Commercialisé dès 1978 par la société EPSITEC SA, il intègre rapidement des fonctionalités réseau et surtout présente dès 1980, avec le Smaky 8, un système d'exploitation multitâche préemptif \footnote{le multitâche préemptif désigne la capacité d'un système d'exploitation à exécuter ou arrêter une tâche planifiée en cours (Source : \textit{Wikipedia}). Ce n'est qu'à partir des années 2000 que Windows supporte pleinement ce mécanisme}qui en fait un ordinateur puissant qui dispose déjà d'une interface avec des fenêtres. Le développement du Smaky a complètement cessé en 1995 et la société EPSITEC SA s'oriente vers le développement de logiciels comme CRESUS, un logiciel de comptabilité adapté au marché suisse.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{media/machines/smaky8_bolo.jpeg}
+    \caption{Smaky 8}
+    \label{smaky8}
+\end{figure}
+
+Parallèlement aux Smakys, le Professeur Jean-Daniel Nicoud, développe des machines bon marché à l'intention des clubs d'électronique, d'abord le crocus, puis le Dauphin en 1977 pour 270 CHF. Ce dernier, abondamment utilisé dans les cours du LAMI, est encore aujourd'hui une référence pour apprendre à programmer en langage machine et si ça production a cessé, on trouve un simulateur (disponible à l'adresse : \url{https://www.epsitec.ch/dauphin/} avec toute la documentation nécessaire) qui permet d'en explorer le fonctionnement.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{media/machines/DauphinEcouteur.jpeg}
+    \caption{Ordinateur Dauphin}
+    \label{dauphin}
+\end{figure}
+
+
 \section{Internet}
 
 Internet, le réseau des réseaux, est d'abord un projet de l'armée américaine pour mettre en place un réseau décentralisé capable de résister à une attaque nucléaire. En effet, les réseaux de télécommunications, initialement, sont conçus sur une architecture en étoile avec un central (téléphonique) dont la destruction entraîne la mise hors service de l'ensemble du réseau. 
@@ -300,9 +321,24 @@ Il invente alors la notion de \textit{copyleft}, par opposition au \textit{copyr
 Son idée de logiciel libre va durablement modifier le paysage du logiciel informatique et concerne aujourd'hui des millions de produits.
 
 \section{Le World Wide Web}
-Invention en Suisse, CERN
+Time Berners Lee, collaborateur du CERN, constate en 1989 que ces collègues commandent régulièrement des copies d'articles scientifiques ce qui occupe plusieurs employés et utilise beaucoup de papier. Il décide alors de mettre au point un système qui permettrait de partager plus efficacement sur le réseau les résultats des chercheurs et invente pour cela trois protocoles :
+\begin{itemize}
+    \item \textbf{HTTP} pour Hyper Text Transfer Protocol, un protocole de transfert de documents hypertextes.
+    \item \textbf{HTML} pour Hyper Text Markup Language, un langage de description qui permet la mise en forme de documents.
+    \item \textbf{URL} pour Uniform Resource Locator, qui définit un adressage \guillemotleft universel \guillemotright~pour identifier et localiser les documents sur le réseau.
+\end{itemize} 
+En 1992, il donne à cet ensemble le nom de World Wide Web, la toile mondiale, qui permet de disposer sur Internet des documents liés entre eux par des liens hypertextes. En 1993 il obtient du CERNE l'autorisation d'ouvrir la \guillemotleft toile \guillemotright~au domaine public.
+En 1992 également, deux étudiants du NCSA (National Center for Supercomputing Applications), Eric Bina et Marc Andreessen, développent le premier navigateur Internet : NCSA Mosaic qui sera disponible pour le public dès 1993. Une bonne partie de l'équipe de développement de Mosaic fonde l'entreprise Netscape\footnote{l'ancêtre de Firefox et d'une bonne partie des développements encore d'actualité} qui sera pionnière dans le développement du Web. 
 
-Web 2.0 
+\subsection{Le Web 2.0}
+Alors que Microsoft et Netscape se plongent dans la \guillemotleft guerre des navigateurs\guillemotright, avec Netscape qui représente 90\% des navigateurs en 1996, les innovations se succèdent à rythme effréné. Netscape propose trois innocations majeures : 
+\begin{itemize}
+    \item Les cookies qui permettent de stocker des informations persistant au file des interactions avec un utilisateur.
+    \item Les CSS (Cascading Style Sheet) qui permettent une mise en forme beaucoup plus riche et cohérente des documents Web.
+    \item Le Javascript qui permet l'exécution de script au sein des documents et permet ainsi des interaction encore plus élaborées avec l'utilisateur.
+\end{itemize}
+En 2006 le nombre d'utilisateurs de Netscape tombe à 1\%, mais toutes ces innovations permettent le développement du Web 2.0, terme qui apparaît pour la première fois en 2004 et accompagne la naissance d'un nouveau WWW avec en particulier l'apparition des réseaux sociaux.
+
 
 \section{Ubiquité}
 Le réseau devient sans fil au milieu des années nonante. D'abord une solution marginale, la bande passante disponible évolue de manière continue et permet d'imaginer de plus en plus d'applications sans installation filaire compliquée et coûteuse à mettre en place.
