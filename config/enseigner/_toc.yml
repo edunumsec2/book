@@ -59,6 +59,14 @@ parts:
 #      - file: content/ens/theme/archi/informatique-embarquee/maitre
 #      - file: content/ens/theme/archi/histoire-informatique/maitre
 
+### Histoire de l'informatique  
+- caption: Histoire
+  chapters:
+  - file: content/ens/theme/hist/main.md
+    sections:
+      - file: content/ens/theme/hist/jeuimitation.md
+
+
 - caption: Enjeux sociaux
   numbered: false
   chapters:
