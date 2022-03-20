@@ -1,5 +1,12 @@
 # Introduction
 
+```{admonition} Attention
+:class: note
+Ce document doit être retravaillé ...
+```
+<!-- Ph.R. - 20.03.2022-->
+
+
 <!--
 Idée d'un sondage réalisé en introduction puis en conclusion au chapitre : Qu'est ce qu'un ordinateur (nuages de mots sortis) ? Comment fonctionne selon vous un ordinateur ? L'ordinateur a-t-il selon vous évolué depuis 70 ans d'existence ? Justifiez
 
@@ -8,7 +15,7 @@ Idée d'un sondage réalisé en introduction puis en conclusion au chapitre : Qu
 -->
 
 
-Dans ce chapitre, nous aborderons la question de l'architecture des ordinateurs, c'est à dire les multiples couches physiques qui rendent possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
+Dans ce chapitre, nous aborderons la question de l'architecture des ordinateurs, c'est-à-dire les multiples couches physiques qui rendent possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
 
 Comme vous avez pu le voir dans le chapitre lié à la représentation de l'information, tout ce qui apparaît sur votre écran est représenté par l'ordinateur par suite de 0 et de 1. Pour comprendre comment ces <span commented>{glo}`codebinaire|0 et 1` sont traités par l'ordinateur, il faut avoir en tête que les ordinateurs sont construits à partir d'une couche et de multiples niveaux, comme un mille-feuille, dont chacun possède ses propres règles. 
 
@@ -94,7 +101,7 @@ En informatique, si nous avons choisi d'utiliser un {glo}`codebinaire|code binai
 On aurait pu choisir un code possédant plus de deux signaux différents. Par exemple, avec trois signaux, on pourrait coder trois valeurs avec un courant faible, un courant moyen, un courant fort, ou encore mieux : une tension négative, une tension nulle et une tension positive. On appelle cette dernière proposition le ternaire balancé. En fait, cela s'est déjà fait: les soviétiques ont développé en 1958 un ordinateur nommé [Setun](https://en.wikipedia.org/wiki/Setun) basé sur ce principe, réputé très fiable et extrêmement peformant dans le développement d'applications dans certains domaines.  Mais ce projet, pour des raisons politiques, n'a pas reçu le soutient qu'il aurait mérité. D'autre part, il est plus simple de concevoir des circuits électroniques qui ne doivent traiter que deux valeurs.
 ```
 
-La grande idée derrière la conception des ordinateurs et de leur circuits électroniques repose sur l'utilisation de sortes d'« interrupteurs automatiques ». Ce composant fonctionne donc comme un interrupteur (en laissant ou non passer le courant sur un fil donné), mais de façon automatique: ce n'est pas un humain qui doit venir commuter l'interrupteur, mais l'interrupteur commute automatiquement en fonction de si oui ou non du courant passe sur un _autre_ fil du système. Historiquement, on a réalisé que si l'on disposait d'un tel composant, on pouvait en assembler plusieurs (en fait, plusieurs milliers) et ainsi construire des systèmes à même de manipuler des données représentées par des 0 et des 1. Nous allons voir comment dans les prochaines sections.
+La grande idée derrière la conception des ordinateurs et de leurs circuits électroniques repose sur l'utilisation de sortes d'« interrupteurs automatiques ». Ce composant fonctionne donc comme un interrupteur (en laissant ou non passer le courant sur un fil donné), mais de façon automatique: ce n'est pas un humain qui doit venir commuter l'interrupteur, mais l'interrupteur commute automatiquement en fonction de si oui ou non du courant passe sur un _autre_ fil du système. Historiquement, on a réalisé que si l'on disposait d'un tel composant, on pouvait en assembler plusieurs (en fait, plusieurs milliers) et ainsi construire des systèmes à même de manipuler des données représentées par des 0 et des 1. Nous allons voir comment dans les prochaines sections.
 
 Dans les premiers ordinateurs entre les années 1950 et 1960, ce sont les [tubes à vide](https://fr.wikipedia.org/wiki/Tube_électronique) qui ont rempli cette fonction. Mais les tubes à vides étaient gros, consommaient beaucoup d'électricité, et avaient une durée de vie limitée : il fallait souvent les changer, un peu comme de vieilles ampoules à incandescence. En utilisant des tubes à vide, on pouvait certes construire des ordinateurs, mais certainement pas ceux que l'on connaît aujourd'hui.
 
