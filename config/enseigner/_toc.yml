@@ -50,7 +50,11 @@ parts:
       - file: content/ens/theme/algo1/activ/formulation-solutions/maitre
       - file: content/ens/theme/algo1/consequences-automatisation/maitre
 
-  - file: content/ens/theme/archi/accueil/maitre
+  - file: content/ens/theme/archi/main
+    sections:
+      - file: content/ens/theme/archi/activites
+        sections:
+        - file: content/ens/theme/archi/ordinateurantique
 #    sections:
 #      - file: content/ens/theme/archi/systemes-logiques/maitre
 #      - file: content/ens/theme/archi/microprocesseur/maitre
