@@ -20,7 +20,7 @@ body:
   - type: textarea
     id: probleme
     attributes:
-      label: Quelle est le problème relevé ?
+      label: Quel est le problème relevé ?
     validations:
       required: true
   - type: textarea
