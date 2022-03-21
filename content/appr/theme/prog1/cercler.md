@@ -38,7 +38,7 @@ for i in range(36):
 
 ## Périmètre et rayon
 
-Quel est le rayon `r` du cercle approximé par par le polygone ?
+Quel est le rayon `r` du cercle approximé par le polygone ?
 Nous pouvons le trouver à partir du périmètre avec la relation suivante :
 
 $$ p = 2r \pi $$
@@ -141,7 +141,7 @@ for i in range(4):
 
 ## Pac-Man
 
-Pac-Man est un jeu vidéo créé par l’entreprise japonaise Namco, sorti au Japon en 1980. Le jeu consiste à déplacer Pac-Man, un personnage qui ressemble à un diagramme circulaire à l’intérieur d’un labyrinthe, afin de lui faire manger toutes les pac-gommes qui s’y trouvent en évitant d’être touché par des fantômes.
+Pac-Man est un jeu vidéo créé par l’entreprise japonaise Namco, sorti au Japon en 1980. Le jeu consiste à déplacer Pac-Man, un personnage qui ressemble à un diagramme circulaire à l’intérieur d’un labyrinthe, afin de lui faire manger toutes les pac-gommes qui s’y trouvent en évitant d’être touchées par des fantômes.
 
 ```{codeplay}
 :file: circle6.py

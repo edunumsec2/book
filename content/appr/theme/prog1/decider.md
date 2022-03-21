@@ -3,7 +3,7 @@
 Dans ce chapitre, nous allons voir comment un programme peut faire des choix, et comment il peut exécuter du code de façon sélective. Nous allons voir que :
 
 - le mot-clé `if` permet une exécution conditionnelle,
-- les mot-clés `if-else` permettent de choisir entre deux alternatives,
+- les mots-clés `if-else` permettent de choisir entre deux alternatives,
 - le mot-clé `elif` (else if) permet d'ajouter différentes conditions.
 
 
@@ -18,11 +18,11 @@ En Python, `if` est suivi
 
 ## Êtes-vous majeur ?
 
-Basé sur votre âge, le programme exécute soit le premier bloc (`if`) soit le  deuxième bloc (`else`).  Il affiche si vous vous êtes majeur ou pas.
+Basé sur votre âge, le programme exécute soit le premier bloc (`if`) soit le  deuxième bloc (`else`).  Il affiche si vous êtes majeur ou pas.
 
 ```{codeplay}
 :file: if1.py
-age = input('Entrez votre age: ')
+age = input('Entrez votre âge: ')
 
 if int(age) < 18:
     print('accès interdit - vous êtes mineur')
@@ -115,9 +115,9 @@ else:
 
 Le jeu [pierre-papier-ciseaux](https://fr.wikipedia.org/wiki/Pierre-papier-ciseaux) est effectué avec les mains et oppose deux joueurs. Il possède de nombreux noms alternatifs, notamment en remplaçant certains mots comme « papier » par « feuille » ou « pierre » par « caillou ». Le terme **chifoumi** est également une appellation courante.
 
-Pour le choix du jouer on pourrait lui faire entrer les mots `pierre`, `papier`, et `ciseaux`. Mais c'est plus simple si nous utilisons juste un nombre entier pour choisir un des trois options.
+Pour le choix du jouer on pourrait lui faire entrer les mots `pierre`, `papier`, et `ciseaux`. Mais c'est plus simple si nous utilisons juste un nombre entier pour choisir une des trois options.
 
-En interne, nous utilisons 1, 2, et 3 pour désigner les 3 choix. Dans un programme informatique c'est plus efficace d'utiliser des entiers pour designer des choses. Pour l'utilisateur humain par contre, des mots sont plus compréhensibles. Nous utilisons un tuple pour faire la conversion d'un entier vers un mot. Comme l'indexage en Python commence toujours avec 0, nous devons décaler l'index de un avec l'expression `[i-1]`.
+En interne, nous utilisons 1, 2, et 3 pour désigner les 3 choix. Dans un programme informatique, c'est plus efficace d'utiliser des entiers pour designer des choses. Pour l'utilisateur humain par contre, des mots sont plus compréhensibles. Nous utilisons un tuple pour faire la conversion d'un entier vers un mot. Comme l'indexage en Python commence toujours avec 0, nous devons décaler l'index de un avec l'expression `[i-1]`.
 
 Un grand avantage de séparer la logique abstraite du jeu, et les mots concrets, c'est qu'il devient très facile de traduire le jeux dans une autre langue. Par exemple, il suffit de changer le tuple `objets` en `('rock', 'paper', 'cissors')` pour traduire en anglais, ou `('Stein', 'Papier', 'Schere')` pour le traduire en allemand.
 
@@ -150,7 +150,7 @@ print('ordinateur choisit: ', objets[j-1])
 
 ### Décider qui gagne
 
-Une fois le choix est fait par les deux joueurs (humain et ordinateur) nous devons décider qui va gagner. Nous pouvons représenter la situation pour l'humain avec ce tableaux.
+Une fois le choix est fait par les deux joueurs (humain et ordinateur) nous devons décider qui va gagner. Nous pouvons représenter la situation pour l'humain avec ce tableau.
 
 |               | humain| pierre        | papier    | ciseaux   |
 | ---           |---    |---            |---        |---        |
@@ -159,7 +159,7 @@ Une fois le choix est fait par les deux joueurs (humain et ordinateur) nous devo
 | papier        | 2     | perd          | match nul | gagne     |
 | ciseaux       | 3     | gagne         | perd      | match nul |
 
-Avec les instruction conditionnelles `if-elif-else` nous pouvons décider alors qui gagne pour une combinaison donnée. Avec un choix judicieux, nous pouvons décider avec seulement 4 tests les 9 combinaisons différentes.
+Avec les instructions conditionnelles `if-elif-else` nous pouvons décider alors qui gagne pour une combinaison donnée. Avec un choix judicieux, nous pouvons décider avec seulement 4 tests les 9 combinaisons différentes.
 
 ```{codeplay}
 from random import *
@@ -190,7 +190,7 @@ else:
 ### Jouer en boucle
 
 Maintenant nous pouvons tous mettre dans une boucle pour jouer multiples fois.
-Dans la première ligne nous indiquons le tour. Comme pour l'indexage des objets, quand nous affichons le nombre du tour, nous le décalons de un avec l'expression `n+1`.
+Dans la première ligne, nous indiquons le tour. Comme pour l'indexage des objets, quand nous affichons le nombre du tour, nous le décalons d’un avec l'expression `n+1`.
 
 ```{codeplay}
 from random import *
@@ -232,7 +232,7 @@ Un programme de dessin avec la tortue est une séquence d'instructions. Si la to
 - `l` = tourner à gauche
 - `r` = tourner à droite
 
-Nous pouvons insérer des espaces dans `chemin` pour rendre la description plus lisible. Lors de l'exécution ils ne sont pas pris en considération.
+Nous pouvons insérer des espaces dans `chemin` pour rendre la description plus lisible. Lors de l'exécution, ils ne sont pas pris en considération.
 
 ```{codeplay}
 :file: if8.py
@@ -298,7 +298,7 @@ print('not p =', not p)
 print('not not p =', not not p)
 ```
 
-## Dans une intervalle ?
+## Dans un intervalle ?
 
 Python permet de remplacer `(a < x) and (x < b)` par l'expression plus compacte `a < x < b`.
 
@@ -320,13 +320,13 @@ if not (a < x < b):
 
 - Téléchargez l'exercice
 - Lancez un éditeur externe (tel que Thonny)
-- Depuis l'éditeur ouvrez le fichier téléchargé
+- Depuis l'éditeur, ouvrez le fichier téléchargé
 - Remplacez ... par votre code
 - Déposez vos exercices sur Moodle
 
-### Equation quadratique
+### Équation quadratique
 
-En mathématiques, une équation quadratique est une équation polynomiale qui peux s'écrire sous la forme
+En mathématiques, une équation quadratique est une équation polynomiale qui peut s'écrire sous la forme
 
 $$ a x^2 + b x + c = 0 $$
 
@@ -346,11 +346,11 @@ positif : deux solutions
 
 $$ x_1 = \frac{-b + \sqrt{det}}{2a},  x_2 = \frac{-b - \sqrt{det}}{2a} $$ 
 
-Ecrivez un programme qui calcule la solution d'une équation quadratique.
+Écrivez un programme qui calcule la solution d'une équation quadratique.
 
 ```{codeplay}
 :file: equation_quad.py
-print('Equation quadratique')
+print('Équation quadratique')
 print()
 a = int(input('a='))
 b = int(input('b='))
@@ -360,9 +360,9 @@ print(a, 'x^2 +', b, 'x +', c, '= 0')
 ...
 ```
 
-### Jeu multi-langue
+### Jeu multilangue
 
-Adaptez le jeux `pierre-papier-ciseaux` pour qu'on puisse choisir la langue du jeu entre :
+Adaptez le jeu `pierre-papier-ciseaux` pour qu'on puisse choisir la langue du jeu entre :
 
 - Français
 - Anglais
@@ -394,6 +394,6 @@ Cette variante augmente le nombre de combinaisons de 3 à 10, et est censée ré
 :file: bigbang.py
 objets = ('pierre', 'papier', 'ciseaux', 'lézard', 'Spock')
 
-print('Choisissez parmis')
+print('Choisissez parmi')
 print(*objets)
 ```

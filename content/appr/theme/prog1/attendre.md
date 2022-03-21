@@ -60,7 +60,7 @@ Nous utilisons une boucle `while` pour demander des nombres à l'utilisateur.
 On ne peut pas savoir à l'avance combien de nombres il y aura, et donc nous ne pouvons pas utiliser la boucle `for`. Nous prenons comme condition de terminaison une réponse avec une chaîne vide (`''`).
 
 Au lieu d'écrire `while x != '':` nous pouvons simplifier vers  `while x:`.
-La raison est que la chaîne vide est associée à `False` et toute autre chaîne non-vide est associée à `True`.
+La raison est que la chaîne vide est associée à `False` et toute autre chaîne non vide est associée à `True`.
 
 ```{codeplay}
 :file: while3.py
@@ -168,7 +168,7 @@ print(code)
 
 On appelle **bloc** une ou plusieurs lignes d'instructions qui forment un ensemble.
 Dans les langages C ou JavaScript un bloc est délimité avec des accolades `{...}`.
-L'indentation est encouragée mais reste optionnelle.
+L'indentation est encouragée, mais reste optionnelle.
 
 En Python, l'indentation est obligatoire. C'est la façon officielle de designer un bloc.
 Ceci présente deux avantages :
@@ -187,7 +187,7 @@ Des blocs marqués par une indentation se trouvent après les mots-clés pour 
 - la boucle (`for/while`).
 
 En Python, le symbole `:` en fin de ligne introduit un sous-bloc qui doit être indenté.
-Voici 5 sous-blocs à la suite des mot-clés `def`, `if`, `elif`, `else`, `for` :
+Voici 5 sous-blocs à la suite des mots-clés `def`, `if`, `elif`, `else`, `for` :
 
 ```{codeplay}
 :file: while6.py
@@ -203,7 +203,7 @@ for i in range(-2, 2):
     print(i, f(i)) 
 ```
 
-Dans l'exemple suivant nous avons une boucle qui fait trois itérations.
+Dans l'exemple suivant, nous avons une boucle qui fait trois itérations.
 Les deux instructions `print()` font partie du bloc de la boucle.
 
 ```{codeplay}

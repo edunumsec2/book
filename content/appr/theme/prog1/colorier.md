@@ -12,7 +12,7 @@ Une couleur sur un écran d'ordinateur est produite par
 
 {f}`des pigments`  
 {f}`du mouvement rapide`  
-{f}`un liquide colorié`  
+{f}`un liquide coloré`  
 {v}`la combinaison de trois lumières`
 ```
 
@@ -72,7 +72,7 @@ forward(150)
 dot(80, 'blue')
 ```
 
-**Exercice** : Modifiez la taille et la couleurs des 3 points.
+**Exercice** : Modifiez la taille et la couleur des 3 points.
 
 ### Drapeau du Japon
 
@@ -207,8 +207,8 @@ Le drapeau au soleil rouge a été utilisé pour la première fois en 1971. Le r
 ```{caution}
 La fonction `bgcolor()` ne fonctionne pas pour l'exportation vers un fichier image au format `.eps`. 
 
-Pour remédier à ce problème nous utilisons une solution simpliste.
-A la place de `bgcolor()` nous utilisons tout simplement un très grand disque `dot()` qui dépasse les bornes de l'image.
+Pour remédier à ce problème, nous utilisons une solution simpliste.
+À la place de `bgcolor()` nous utilisons tout simplement un très grand disque `dot()` qui dépasse les bornes de l'image.
 ```
 
 Le disque est décentré, légèrement décalé vers la fixation, de manière à apparaître centré lorsque le drapeau flotte dans le vent.
@@ -257,7 +257,7 @@ equerre()
 end_fill()
 ```
 
-**Exercice** : Dessinez le drapeau bi-colore du canton de Zurich.
+**Exercice** : Dessinez le drapeau bicolore du canton de Zurich.
 
 ## Smiley
 
@@ -420,7 +420,7 @@ if len(dir(Turtle)) > 100:
 ## Exercices
 
 - Téléchargez un exercice.
-- Editez-le dans un éditeur externe tel que Thonny.
+- Éditez-le dans un éditeur externe tel que Thonny.
 - Déposez-le sur Moodle (ou une plateforme équivalente dans votre école).
 
 ### Arc-en-ciel

@@ -42,6 +42,7 @@ parts:
       - file: content/appr/theme/prog1/randomiser
       - file: content/appr/theme/prog1/trier
       - file: content/appr/theme/prog1/turtleart
+      - file: content/appr/theme/prog1/projet
       - file: content/appr/theme/prog1/annexe
       
   ### Algorithmique         
