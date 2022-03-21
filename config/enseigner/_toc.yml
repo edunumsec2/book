@@ -65,6 +65,7 @@ parts:
   - file: content/ens/theme/hist/main.md
     sections:
       - file: content/ens/theme/hist/jeuimitation.md
+      - file: content/ens/theme/hist/smaky.md
 
 
 - caption: Enjeux sociaux
