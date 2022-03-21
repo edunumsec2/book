@@ -1,6 +1,6 @@
 # Raisonner - `bool`
 
-Raisonner c'est lier logiquement entre elles des propositions pour aboutir à une proposition nouvelle, à une conclusion. La logique analyse de façon rigoureux des propositions qui sont soit vrai soit faux. On parle de la logique booléenne. Nous allons voir que :
+Raisonner c'est lier logiquement entre elles des propositions pour aboutir à une proposition nouvelle, à une conclusion. La logique analyse de façon rigoureuse des propositions qui sont soit vraies soit fausses. On parle de la logique booléenne. Nous allons voir que :
 
 - les deux valeurs logiques sont `True` et `False`,
 - l'opération de négation `not` donne l'inverse,
@@ -12,7 +12,7 @@ Une porte logique est
 {f}`un port d'entrée`  
 {f}`une table de vérité`  
 {v}`un circuit électronique`  
-{f}`une opération booléénne`
+{f}`une opération booléenne`
 ```
 
 ## Table de vérité
@@ -48,7 +48,7 @@ for p in (False, True):
 
 ## Et logique
 
-La fonction `et` donne vrai si toutes les entrées sont vrai.
+La fonction `et` donne vrai si toutes les entrées sont vraies.
 
 p     | q     | p and q
 ------|-------|--------
@@ -73,7 +73,7 @@ for p in (False, True):
 
 ## Ou logique
 
-La fonction `or` donne vrai si au moins une des entrées est vrai.
+La fonction `or` donne vrai si au moins une des entrées est vraie.
 
 p   | q   | p and q
 ----|-----|---------
@@ -121,7 +121,7 @@ for p in (False, True):
 
 ## Porte OUI (identité)
 
-C'est un opérateur logique dont la sortie est égal à l'état de l'entrée. Cette fonction ne présente pas d'intérêt d'un point de vue logique mais peut être utile d'un point de vue technologique.
+C'est un opérateur logique dont la sortie est égale à l'état de l'entrée. Cette fonction ne présente pas d'intérêt d'un point de vue logique, mais peut être utile d'un point de vue technologique.
 
 Voici son schéma technique.
 
@@ -391,7 +391,7 @@ getscreen().listen()
 
 ## Porte XOR
 
-La fonction OU exclusif, souvent appelée XOR (eXclusive OR) ou disjonction exclusive, produit un résultat qui a lui-même la valeur VRAI seulement si les deux opérandes ont des valeurs distinctes.
+La fonction OU exclusif, souvent appelé XOR (eXclusive OR) ou disjonction exclusive, produit un résultat qui a lui-même la valeur VRAI seulement si les deux opérandes ont des valeurs distinctes.
 
 ```{codeplay}
 :file: bool9.py
@@ -599,7 +599,7 @@ line(100, 100)
 line(0, -90) 
 ```
 
-Dans cette ALU (en anglais arithmetic–logic unit, ALU), nous allons simuler une addition de deux opérandes de 4 bits. En cliquant avec la souris sur une des opérandes d'entrée, la valeur est incrémenté de 1. Les valeurs peuvent aller de 0 à 15.
+Dans cette ALU (en anglais arithmetic–logic unit, ALU), nous allons simuler une addition de deux opérandes de 4 bits. En cliquant avec la souris sur un des opérandes d'entrée, la valeur est incrémentée de 1. Les valeurs peuvent aller de 0 à 15.
 
 ```{codeplay}
 :file: class11.py

@@ -49,7 +49,7 @@ print(mot, 'en allemand est', allemand[mot])
 
 ## Traduire une phrase
 
-A l'aide d'un dictionnaire, nous pouvons traduire maintenant toute une phrase.
+À l'aide d'un dictionnaire, nous pouvons traduire maintenant toute une phrase.
 Pour pouvoir accéder à chaque mot d'une phrase, nous allons découper la phrase en mots en utilisant la méthode `split()`.
 Nous obtenons alors une liste qui contient les mots de la phrase.
 
@@ -60,7 +60,7 @@ print('phrase =', phrase)
 print('liste =', phrase.split())
 ```
 
-A l'aide d'une boucle `for` nous pouvons traduire la phrase entière.
+À l'aide d'une boucle `for` nous pouvons traduire la phrase entière.
 
 ```{codeplay}
 :file: dict4.py
@@ -79,7 +79,7 @@ for mot in phrase.split():
 
 ## Traduire un texte
 
-Un texte est constitué de plusieurs lignes. Pour découper un texte multi-ligne en lignes,
+Un texte est constitué de plusieurs lignes. Pour découper un texte multiligne en lignes,
 nous utilisons de nouveau la méthode `split('\')`, mais cette fois avec un séparateur (newline).
 
 ```{codeplay}
@@ -161,7 +161,7 @@ for c in phrase:
         print(Morse[c], end='  ')
 ```
 
-**Exercice** : Ecrivez votre nom en Morse.
+**Exercice** : Écrivez votre nom en Morse.
 
 ## Système de login
 
@@ -194,9 +194,9 @@ while True:
 
 ## Un dictionnaire de couleurs
 
-Un spécialiste de la publication, de la mode, ou du web, utilise une centaine des mots spécifiques pour designer un ton de couleur particulier. Ces couleurs peuvent être spécifié avec les 3 couleurs de base : rouge, vert, bleu (RVB).
+Un spécialiste de la publication, de la mode, ou du web, utilise une centaine des mots spécifiques pour désigner un ton de couleur particulier. Ces couleurs peuvent être spécifiées avec les 3 couleurs de base : rouge, vert, bleu (RVB).
 
-Nous pouvons utiliser un dictionnaire `RVB` pour associer des nom de couleurs à des triplets de nombres qui indiquent les 3 composantes RVB.
+Nous pouvons utiliser un dictionnaire `RVB` pour associer des noms de couleurs à des triplets de nombres qui indiquent les 3 composantes RVB.
 
 ```{codeplay}
 :file: dict10.py
@@ -221,12 +221,12 @@ for x in couleurs:
 ## Compter des lettres
 
 Avec un dictionnaire nous pouvons facilement compter les lettres dans un texte.
-Compter le nombre d'occurence de quelque chose est appelé faire un histogram.
+Compter le nombre d'occurrences de quelque chose est appelé faire un histogramme.
 
 Notre dictionnaire s'appelle `histogram` et au début il est vide.
-Les clés du histogramme sont des caractères que nous désignons par `c`.
+Les clés de l’histogramme sont des caractères que nous désignons par `c`.
 
-Si le caractère `c` fait déjà partie du histogramme, alors on ajoute 1 au compte, sinon on met le compte à 1.
+Si le caractère `c` fait déjà partie de l’histogramme, alors on ajoute 1 au compte, sinon on met le compte à 1.
 
 ```{codeplay}
 :file: dict11.py
@@ -253,7 +253,7 @@ Nous pouvons maintenant établir un histogramme sur un texte de plus grande tail
 texte = """Le monde numérique est extrêmement vaste. 
 Au moyen d’applications dédiées, il est possible d’y travailler sur 
 une certaine représentation du réel. Des textes, des images, 
-des sons ou des données financières peuvent y être manipulées.
+des sons ou des données financières peuvent y être manipulés.
 Pourtant, il faut avoir conscience qu’aussi «réelles» que ces 
 représentations puissent paraître, elles n’en sont pas moins des 
 représentations.
@@ -270,14 +270,14 @@ for c in texte:
     if c in histogram:
         histogram[c] += 1
     else:
-        histogram[c] = 1
+        histogramme[c] = 1
         
 print(histogram)
 ```
 
 ## Visualiser un histogramme
 
-Pour visualiser cet histogramme nous allons dessiner un diagramme de barres.
+Pour visualiser cet histogramme, nous allons dessiner un diagramme de barres.
 
 ```{codeplay}
 :file: dict13.py
@@ -285,7 +285,7 @@ texte = """
 Le monde numérique est extrêmement vaste. 
 Au moyen d’applications dédiées, il est possible d’y travailler sur 
 une certaine représentation du réel. Des textes, des images, 
-des sons ou des données financières peuvent y être manipulées.
+des sons ou des données financières peuvent y être manipulés.
 Pourtant, il faut avoir conscience qu’aussi «réelles» que ces 
 représentations puissent paraître, elles n’en sont pas moins des 
 représentations.
@@ -302,7 +302,7 @@ for c in texte:
         if c in histogram:
             histogram[c] += 1
         else:
-            histogram[c] = 1
+            histogramme[c] = 1
         
 ===
 from turtle import *
@@ -360,7 +360,7 @@ print(histogram)
 
 ## Color typewriter
 
-Ce programme interactive permet d'écrire une image ligne par ligne en utilisant les 26 touches du clavier, comme une machine à écrire (typewriter).
+Ce programme interactif permet d'écrire une image ligne par ligne en utilisant les 26 touches du clavier, comme une machine à écrire (typewriter).
 
 Nous utilisons ici un dictionnaire pour associer une lettre à une couleur.
 

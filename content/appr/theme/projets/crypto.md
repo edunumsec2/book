@@ -58,7 +58,7 @@ while n != 1:
 
 ## Nombre premier
 
-Un entier naturel est dit **premier** s'il est supérieur ou égale à 2 et n'est divisible que par 1 et lui-même.
+Un entier naturel est dit **premier** s'il est supérieur ou égal à 2 et n'est divisible que par 1 et lui-même.
 
 Pourquoi les nombres premiers sont-ils tellement importants ?
 

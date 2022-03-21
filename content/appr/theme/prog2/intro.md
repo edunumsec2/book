@@ -1,8 +1,8 @@
 # Programmation II
 
-Dans la première partie nous avons appris les bases de la programmation en Python. Nous avons vu comment une tortue peut dessiner, colorier, répéter, parcourir et faire plein d'autres choses.
+Dans la première partie, nous avons appris les bases de la programmation en Python. Nous avons vu comment une tortue peut dessiner, colorier, répéter, parcourir et faire plein d'autres choses.
 
-Dans la deuxième partie nous allons découvrir la programmation orientée objet. Maintenant nous pouvons créer autant de tortues que nous voulons. Nos tortues deviennent également interactives et elles réagissent aux touches du clavier et aux clics de la souris.
+Dans la deuxième partie, nous allons découvrir la programmation orientée objet. Maintenant nous pouvons créer autant de tortues que nous voulons. Nos tortues deviennent également interactives et elles réagissent aux touches du clavier et aux clics de la souris.
 
 ## Objectifs
 
@@ -22,7 +22,7 @@ Mary Kenneth Keller 🇺🇸
 ^^^^^
 ***1913-1985***
 
-Soeur [**Mary Kenneth Keller**](https://fr.wikipedia.org/wiki/Mary_Kenneth_Keller) est la première femme à obtenir un doctorat en informatique aux États-Unis. Elle participe - avec une douzaine d'autres d'étudiants - au développement du [BASIC](https://fr.wikipedia.org/wiki/Basic_(langage)) une des premières langages de haut niveau.
+Soeur [**Mary Kenneth Keller**](https://fr.wikipedia.org/wiki/Mary_Kenneth_Keller) est la première femme à obtenir un doctorat en informatique aux États-Unis. Elle participe - avec une douzaine d'autres d'étudiants - au développement du [BASIC](https://fr.wikipedia.org/wiki/Basic_(langage)) une des premiers langages de haut niveau.
 
 ----
 :img-top: media/urban.jpg

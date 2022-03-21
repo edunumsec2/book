@@ -20,7 +20,7 @@ write('B', font=('Arial', 12))
 
 ## Balle rebondissante
 
-Voici une balle rebondissante sur les 4 murs. Dans une première approche nous utilisons deux variables pour la position, et deux variables pour la vitesse.
+Voici une balle rebondissante sur les 4 murs. Dans une première approche, nous utilisons deux variables pour la position, et deux variables pour la vitesse.
 
 ```{codeplay}
 from turtle import *

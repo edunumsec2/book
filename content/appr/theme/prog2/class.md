@@ -2,10 +2,10 @@
 
 La programmation orientée objet met au centre de la programmation la notion d'objet. Des objets individuels sont créés à partir d'un modèle qu'on appelle classe.
 
-Un objet est caractérisé par ses **attributs** (variables) et **méthodes** (fonctions). La programmation orientée objet attache les attributs et méthodes à l'objet-même et permet de cette façon un code très structuré et facilement extensible.  Nous allons voir que :
+Un objet est caractérisé par ses **attributs** (variables) et **méthodes** (fonctions). La programmation orientée objet attache les attributs et méthodes à l'objet même et permet de cette façon un code très structuré et facilement extensible.  Nous allons voir que :
 
 - le mot-clé `class` permet de définir un modèle pour créer des objets,
-- l'expression `point = Point()` crée un nouveau objet à partir d'une classe,
+- l'expression `point = Point()` crée un nouvel objet à partir d'une classe,
 - un objet possède des  **attributs** et des **méthodes**.
 
 ```{question}
@@ -20,7 +20,7 @@ En programmation orientée objet une classe est
 ## Définir une classe
 
 Le mot-clé `class` permet de définir une classe, ici la classe `Point`.
-C'est une convention en Python, que le nom de classe soit écrit avec une majuscule. Pour définir une classe nous écrivons :
+C'est une convention en Python, que le nom de classe soit écrit avec une majuscule. Pour définir une classe, nous écrivons :
 
 1. le mot-clé `class`
 1. le nom de la class (avec une majuscule)
@@ -30,7 +30,7 @@ C'est une convention en Python, que le nom de classe soit écrit avec une majusc
 
 ```{codeplay}
 class Point:
-    "Definition d'un point géométrique"
+    "Définition d'un point géométrique"
 
 print(Point)
 print(Point.__name__)
@@ -40,16 +40,16 @@ print(Point.__name__)
 
 ## Créer des objets
 
-A partir d'une class, nous pouvons créer autant d'objets que nous voulons. L'expression `Point()` crée un objet de type `Point`. On dit aussi qu'on crée une **instance** de la classe `Point`.
+À partir d'une class, nous pouvons créer autant d'objets que nous voulons. L'expression `Point()` crée un objet de type `Point`. On dit aussi qu'on crée une **instance** de la classe `Point`.
 
-Pour créer une instance on utilise le nom de la classe suivi de parenthèses. Plus tard nous verrons qu'il peux y avoir des arguments entre ces parenthèses.
+Pour créer une instance, on utilise le nom de la classe suivi de parenthèses. Plus tard nous verrons qu'il peut y avoir des arguments entre ces parenthèses.
 
 Une classe est comme un moule qui nous permet de créer des copies, à partir d'une définition de classe.
 
 ```{codeplay}
 :file: class1.py
 class Point():
-    "Definition d'un point géométrique"
+    "Définition d'un point géométrique"
 
 p = Point()
 q = Point()
@@ -61,7 +61,7 @@ print(p, q)
 
 ## Définir des attributs
 
-La notation doté permet de définir des attribut à un objet.
+La notation dotée permet de définir des attributs à un objet.
 Par exemple le point peut avoir un attribut `x` et `y`.
 Il pourrait avoir une couleur, une épaisseur, etc.
 
@@ -83,7 +83,7 @@ print(dir(p))
 
 ## La méthode `__init__()`
 
-Chaque classe possède une méthode spéciale `__init__()` que nous appelons **constructeur**. Cette méthode est appelé lors de la création de l'objet. Son premier paramètres est toujours `self`, qui représente l'objet lui-même. Cette fonction est utilisé pour initialiser les attributs avec les valeurs intiales.
+Chaque classe possède une méthode spéciale `__init__()` que nous appelons **constructeur**. Cette méthode est appelée lors de la création de l'objet. Son premier paramètre est toujours `self`, qui représente l'objet lui-même. Cette fonction est utilisée pour initialiser les attributs avec les valeurs initiales.
 
 ```{codeplay}
 :file: class3.py
@@ -100,7 +100,7 @@ print(p)
 
 ## La méthode `__str__()`
 
-Toutes les classes possède aussi une méthode spéciale `__str__()` qui retourne une chaîne de caractères. Cette chaîne est un descripteur de l'objet. Il est utilisé quand on affiche l'objet avec la fonction `print()`.
+Toutes les classes possèdent aussi une méthode spéciale `__str__()` qui retourne une chaîne de caractères. Cette chaîne est un descripteur de l'objet. Il est utilisé quand on affiche l'objet avec la fonction `print()`.
 
 Souvent la représentation d'un objet sous forme de texte ressemble à son constructeur, et affiche le nom de la classe et quelques attributs essentiels.
 
@@ -122,7 +122,7 @@ print(q)
 
 ## Définir une méthode
 
-Dans la définition de classe, nous pouvons définir des méthodes supplémentaires. Le premier paramètres de toute méthode est `self`, la variable qui représente l'objet lui-même.
+Dans la définition de classe, nous pouvons définir des méthodes supplémentaires. Le premier paramètre de toute méthode est `self`, la variable qui représente l'objet lui-même.
 
 ```{codeplay}
 :file: class5.py
@@ -289,7 +289,7 @@ getscreen().listen()
 
 ## Classe Rectangle
 
-Par la suite nous allons voire comment nous pouvons transformer une programmation procédurale en programmation orienté objet. Prenons le cas d'un rectangle.
+Par la suite nous allons voir comment nous pouvons transformer une programmation procédurale en programmation orientée objet. Prenons le cas d'un rectangle.
 
 Dessinons un rectangle de taille (a, b) à la position (x, y).
 
@@ -310,7 +310,7 @@ rectangle(0, 0, 100, 50)
 rectangle(20, -100, 100, 50)
 ```
 
-Maintenant implémentons une class `Rectangle`. Nous allons ajouter plusieurs options
+Maintenant implémentons une class `Rectangle`. Nous allons ajouter plusieurs options :
 
 - angle d'inclinaison
 - couleur du trait
@@ -384,7 +384,7 @@ ellipse(0, 0, 100, 250)
 ellipse(20, -100, 100, 50)
 ```
 
-Et maintenant la même chose en programmation orienté objet.
+Et maintenant la même chose en programmation orientée objet.
 
 ```{codeplay}
 from turtle import *

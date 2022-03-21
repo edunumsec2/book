@@ -4,7 +4,7 @@ Les programmes de ce chapitre sont des idées sous construction, à développer 
 
 ## Méthodes `Screen`
 
-Cet exemple de code affiche tous les méthodes de la classe `Screen`. Nous constatons d'en avoir environs 26 méthodes.
+Cet exemple de code affiche toutes les méthodes de la classe `Screen`. Nous constatons d'en avoir environs 26 méthodes.
 
 ```{codeplay}
 from turtle import *
@@ -14,7 +14,7 @@ print(methodes)
 print(len(methodes))
 ```
 
-## Etat de la tortue
+## État de la tortue
 
 Voici quelques méthodes qui renvoient l'état actuel de la tortue.
 
@@ -51,7 +51,7 @@ for s in shapes:
     stamp()
 ```
 
-La taille des 3 formes géométriques `square`,  `triangle` et `circle` est de 20 pixels. Ces formes peuvent être utilisés dans des animations ou des jeux vidéos.
+La taille des 3 formes géométriques `square`,  `triangle` et `circle` est de 20 pixels. Ces formes peuvent être utilisées dans des animations ou des jeux vidéos.
 
 ```{codeplay}
 from turtle import *
@@ -94,7 +94,7 @@ forward(50) # delai de 500 ms tous les 5 pixels
 ## Fonction `tracer()`
 
 La fonction `tracer(0/1)` active ou désactive les animations des tortues.
-Lorsque le traceur est désactivé vous devez utiliser la fonction `update()` pour mettre à jour le dessin sur l'écran.
+Lorsque le traceur est désactivé, vous devez utiliser la fonction `update()` pour mettre à jour le dessin sur l'écran.
 
 ```{codeplay}
 from turtle import *
@@ -119,7 +119,7 @@ etoile(9, 4)
 update()
 ```
 
-La fonction `tracer(n)` contrôle la fréquence des mises à jour du dessin. Seulement les n-ièmes mises à jours régulières de l'écran seront vraiment effectuées. Cette fonction peut être utilisé pour accélérer le dessin de graphiques complexes. Lorsqu'appelé sans arguments, elle renvoie la valeur actuelle de n.
+La fonction `tracer(n)` contrôle la fréquence des mises à jour du dessin. Seulement les n-ièmes mises à jour régulières de l'écran seront vraiment effectuées. Cette fonction peut être utilisée pour accélérer le dessin de graphiques complexes. Lorsqu'appelée sans arguments, elle renvoie la valeur actuelle de n.
 
 ```{codeplay}
 from turtle import *
@@ -206,9 +206,9 @@ Il est aussi inclus comme **Easter egg** dans Python, et apparait quand on tape 
 import this
 ```
 
-## Mot-clés
+## Mots-clés
 
-Ce module contient la liste de tous des mot-clés de Python. Le nombre des mots-clés est relativement limité. Nous en avons seulement une trentaine. Ces mots-clé concernent :
+Ce module contient la liste de tous des mots-clés de Python. Le nombre des mots-clés est relativement limité. Nous en avons seulement une trentaine. Ces mots-clés concernent :
 
 - les opérateurs logiques : `and`, `or`, `not`
 - les boucles : `for`, `in`, `while`, `break`, `continue`
@@ -218,7 +218,7 @@ Ce module contient la liste de tous des mot-clés de Python. Le nombre des mots-
 - les classes : `class`
 - les variables : `global`
 
-Les mots-clés que nous avons pas encore vus sont :  
+Les mots-clés que nous n’avons pas encore vus sont :  
 `as`, `assert`, `del`, `except`, `exec`, `finally`, `is`, `pass`, `raise`, `try`, `with`, `yield`
 
 ```{codeplay}
