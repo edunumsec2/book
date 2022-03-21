@@ -5,7 +5,7 @@ from docutils import nodes
 from docutils.parsers.rst import directives
 from docutils.statemachine import StringList
 from sphinx.util.docutils import SphinxDirective
-from sphinx.util.osutil import relative_uri
+from sphinx.util.osutil import relative_uri, canon_path
 
 class interactive_code(nodes.Element, nodes.General):
     pass
@@ -68,7 +68,7 @@ class InteractiveCode(SphinxDirective):
 
     def run(self):
         self.assert_has_content()
-        filename = self.env.doc2path(self.env.docname, base=None)
+        filename = canon_path(self.env.doc2path(self.env.docname, base=None))
         codeplay, _ = self.env.relfn2path("/codeplay/frame.html")
         relative_path = relative_uri(filename, codeplay)
 
