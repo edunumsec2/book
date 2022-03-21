@@ -154,3 +154,4 @@ class InteractiveCode(SphinxDirective):
 def setup(app):
     app.add_directive("codeplay", InteractiveCode)
     app.add_node(interactive_code, html=(visit_interactive_code_html, depart_interactive_code_html))
+    app.add_css_file("codeplay.css")
