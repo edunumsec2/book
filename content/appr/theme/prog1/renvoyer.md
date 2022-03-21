@@ -10,7 +10,7 @@ Dans ce chapitre, nous allons voir comment une fonction peut renvoyer une valeur
 En informatique, le mot-clé `return` est utilisé pour
 
 {f}`changer de direction`  
-{v}`renvoier une valeur`  
+{v}`renvoyer une valeur`  
 {f}`répéter encore une fois`  
 {f}`rentrer au début`
 ```
@@ -59,7 +59,7 @@ print(x, 'est', signe(x))
 
 **Exercice** : Testez avec -2, 0 et 3.
 
-## Etat de la tortue
+## État de la tortue
 
 Plusieurs fonctions nous renseignent sur l'état de la tortue :
 
@@ -67,8 +67,6 @@ Plusieurs fonctions nous renseignent sur l'état de la tortue :
 - tortue
 - position
 - fenêtre
-
-
 
 ```{codeplay}
 :file: return3.py
@@ -98,13 +96,13 @@ print('w =', window_width())
 
 ## Renvoyer une couleur
 
-Avec un argument, ces fonctions permettent de définir une couleur de la tortue et renvoyent la valeur `None`.
+Avec un argument, ces fonctions permettent de définir une couleur de la tortue et renvoient la valeur `None`.
 
 - `color(c)`
 - `fillcolor(c)`
 - `pencolor(c)`
 
-Sans un argument ces fonctions renvoyent la couleur actuelle.
+Sans un argument ces fonctions renvoient la couleur actuelle.
 
 ```{codeplay}
 :file: return4.py
@@ -147,7 +145,7 @@ print('h =', seth(90), heading())
 
 ## Fonctions natives
 
-Voici quelques fonctions natives, c'est à dire des fonctions standards qui font partie de Python.
+Voici quelques fonctions natives, c'est-à-dire des fonctions standards qui font partie de Python.
 
 Les fonctions suivantes renvoient un nombre sous forme binaire, octale ou hexadécimale.
 

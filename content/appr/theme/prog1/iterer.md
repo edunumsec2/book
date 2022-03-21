@@ -29,7 +29,7 @@ Dans la boucle `for` une variable d'itération va parcourir une valeur après l'
 La **variable d'itération** prend successivement les valeurs 0 à x-1.
 Quand la variable d'itération est de type entier (`int`) on l'appelle souvent `i`.
 
-Nous reprenons l'exemple précédent du polygone, mais cette fois nous ne dessinons pas les segments mais seulement les sommets. La valeur de la variable d'itération `i` est affichée à chaque sommet du polygone.
+Nous reprenons l'exemple précédent du polygone, mais cette fois nous ne dessinons pas les segments, mais seulement les sommets. La valeur de la variable d'itération `i` est affichée à chaque sommet du polygone.
 
 ```{codeplay}
 :file: range2.py
@@ -59,7 +59,7 @@ Le sens des paramètres :
 - `stop` est la valeur finale, mais sans l'inclure,
 - `step` est l'incrément.
 
-La fonction `print()` utilise le paramètre optionnel `end` pour ne pas terminer avec un retour à la ligne mais par un simple espace.
+La fonction `print()` utilise le paramètre optionnel `end` pour ne pas terminer avec un retour à la ligne, mais par un simple espace.
 
 ```{codeplay}
 :file: range3.py
@@ -109,7 +109,7 @@ for i in range(10, 100, 7):
 
 ## Dessiner une spirale
 
-Si nous dessinons un polygone mais augmentons la longueur de chaque segment successif en utilisant la variable d'itération `i`, nous obtenons une spirale.
+Si nous dessinons un polygone, mais augmentons la longueur de chaque segment successif en utilisant la variable d'itération `i`, nous obtenons une spirale.
 
 ```{codeplay}
 :file: range8.py
@@ -129,7 +129,7 @@ On appelle la première boucle avec `y` la **boucle extérieure** et la deuxièm
 
 Nous concaténons les deux éléments lettre et nombre (`x + y`) et nous ajoutons l'option `end=' '` pour remplacer le retour à la ligne par un espace.
 
-Pour bien montrer l'ordre consécutif nous importons la fonction `sleep()` du module `time` pour ralentir le parcours de la boucle.
+Pour bien montrer l'ordre consécutif, nous importons la fonction `sleep()` du module `time` pour ralentir le parcours de la boucle.
 
 ```{codeplay}
 :file: range9.py
@@ -179,7 +179,7 @@ for y in range(-x0, x0+1, d):
 
 ## Position `(x, y)`
 
-Un tuple est la forme idéale pour représenter les deux coordonnées `(x, y)` d'un point. Nous allons dorénavant utiliser la lettre `p` pour point (ou position). Si deux points sont nécessaire, nous les appellerons `p` et `q`.
+Un tuple est la forme idéale pour représenter les deux coordonnées `(x, y)` d'un point. Nous allons dorénavant utiliser la lettre `p` pour point (ou position). Si deux points sont nécessaires, nous les appellerons `p` et `q`.
 
 Pour accéder aux coordonnées `x` et `y` du point `p` nous utilisons un indice (un entier entre crochets) :
 
@@ -199,7 +199,7 @@ print('y =', p[1])
 
 La fonction `goto()` accepte :
 
-- deux coordonnées séparés `goto(x, y)`
+- deux coordonnées séparées `goto(x, y)`
 - deux coordonnées dans un tuple `goto(p)`
 
 Nous pouvons définir une fonction `ligne()` qui dessine une ligne entre deux points.
@@ -312,7 +312,7 @@ for c in '123':
 
 ## Jouer au tic-tac-toe
 
-Pour jouer au tic-tac-toe nous devons déchiffrer les noms des cellules qui sont constituées d'une lettre (a-c) et d'un chiffre (1-3). En alternance nous plaçons une croix et un cercle.
+Pour jouer au tic-tac-toe, nous devons déchiffrer les noms des cellules qui sont constituées d'une lettre (a-c) et d'un chiffre (1-3). En alternance nous plaçons une croix et un cercle.
 
 ```{codeplay}
 :output_lines: 5
@@ -386,7 +386,7 @@ for i in range(8):
 ## Exercices
 
 - Téléchargez un exercice.
-- Editez-le dans un éditeur.
+- Éditez-le dans un éditeur.
 - Déposez-le sur Moodle.
 
 ### Cadran
@@ -404,7 +404,7 @@ for i in range(60):
 
 ### Plateau d'échec
 
-Dessiner un échiquier, numérotez les lignes 1-8 et les colonnes a-h, et placez les pions noirs et blancs aux positions de départ.
+Dessinez un échiquier, numérotez les lignes 1-8 et les colonnes a-h, et placez les pions noirs et blancs aux positions de départ.
 
 ```{codeplay}
 from turtle import *
@@ -422,7 +422,7 @@ for c in blancs:
     forward(d)
 ```
 
-### Musée d'art de d'histoire
+### Musée d'art et d'histoire
 
 Le [Musée d'art et d'histoire de Genève](http://institutions.ville-geneve.ch/fr/mah/) a mandaté le studio de graphisme zurichois [Hubertus Design](https://hubertus-design.ch) pour renouveler son identité visuelle. Ce logo à la ligne graphique dynamique, sobre et contemporaine symbolise dorénavant la marque MAH.
 

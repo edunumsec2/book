@@ -20,7 +20,7 @@ Auparavant nous avons vu la boucle `for` comme une simple répétition. Nous avo
 ## Parcourir des couleurs
 
 Pour dessiner de multiples couleurs, nous pouvons définir une séquence (tuple) de couleurs et parcourir cette séquence.
-En Python, une séquence est délimitée par des parenthèses `()` et les éléments sont séparé par une virgule.
+En Python, une séquence est délimitée par des parenthèses `()` et les éléments sont séparés par une virgule.
 
 Dans l'expression `for x in (...)`, la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'blue'`, `'cyan'`, `'red'`, etc. Le bloc indenté qui suit la ligne `for` sera répété autant de fois que la séquence contient d'éléments.
 
@@ -39,7 +39,7 @@ for x in ('blue', 'cyan', 'red', 'magenta', 'pink', 'lime'):
 
 ## Parcourir des diamètres
 
-Nous pouvons également parcourir une séquence de nombres et ainsi, par exemple, spécifier une série de diamètres de disques.
+Nous pouvons également parcourir une séquence de nombres et ainsi, spécifier une série de diamètres de disques.
 
 ```{codeplay}
 :file: tuple2.py
@@ -56,7 +56,7 @@ for x in (20, 40, 60, 80, 100):
 
 ## Parcourir des distances
 
-Dans le chapitre **Definir** nous avons vu les fonctions `batiment()` et `porte()` avec 8 lignes pour chaque défintion de fonction.
+Dans le chapitre **Définir** nous avons vu les fonctions `batiment()` et `porte()` avec 8 lignes pour chaque définition de fonction.
 
 ```{codeplay}
 :file: def3.py
@@ -87,7 +87,7 @@ forward(30)
 porte()
 ```
 
-A l'aide d'une séquence, nous pouvons écrire ces fonctions de manière bien plus compacte.
+À l'aide d'une séquence, nous pouvons écrire ces fonctions de manière bien plus compacte.
 
 ```{codeplay}
 :file: tuple3.py
@@ -165,7 +165,7 @@ for c in ('red', 'yellow', 'pink', 'lightblue', 'lightgreen'):
 
 Le [drapeau arc-en-ciel](https://fr.wikipedia.org/wiki/Drapeau_arc-en-ciel), ou également appelé le drapeau de la paix, est un drapeau représentant plusieurs bandes ayant les couleurs d'un arc-en-ciel. L'usage du drapeau arc-en-ciel est une ancienne tradition commune à de nombreuses cultures. Il évoque généralement la paix, la diversité sexuelle et de genre, ainsi que l'harmonie entre les individus dans le monde entier.
 
-Aujourd'hui, le drapeau arc-en-ciel est majoritairement connu comme celui de la communauté lesbienne, gay, bisexuelle, transgenre, (abréviation : LGBT), depuis 1978.
+Aujourd'hui, le drapeau arc-en-ciel est majoritairement connu comme celui de la communauté lesbienne, gay, bisexuelle, transgenre (abréviation : LGBT), depuis 1978.
 
 ```{codeplay}
 :file: LGBT.py
@@ -249,7 +249,7 @@ for w in (1, 5, 10, 20):
 
 **Exercice** : Faites varier un autre paramètre, par exemple la distance des yeux, ou la taille d'un œil.
 
-## Etonnement
+## Étonnement
 
 Cette fois, nous faisons varier le diamètre de la bouche.
 
@@ -353,7 +353,7 @@ for i in range(3):
 
 ## Cube de Rubik
 
-Pour dessiner un cube de Rubik, nous dessinons 
+Pour dessiner un cube de Rubik, nous dessinons
 
 - 3 losanges pour former une ligne,
 - 3 lignes pour former une surface,
@@ -453,13 +453,12 @@ for i in range(3):
 ## Exercices
 
 - Téléchargez un exercice.
-- Editez-le dans un éditeur.
+- Éditez-le dans un éditeur.
 - Déposez-le sur Moodle.
-
 
 ### Minecraft - escalier
 
-Avec les cubes de Minecraft créez un escalier avec 4 marches.
+Avec les cubes de Minecraft, créez un escalier avec 4 marches.
 
 ```{codeplay}
 :file: minecraft_ex1.py
@@ -485,7 +484,7 @@ cube()
 
 ### Minecraft - portail
 
-Avec les cubes de Minecraft créez un portail 4x4 en forme de π.
+Avec les cubes de Minecraft, créez un portail 4x4 en forme de π.
 
 ```{codeplay}
 :file: minecraft_ex2.py
@@ -531,10 +530,9 @@ hexagone()
 
 ### Cube de Rubik
 
-A l'aide de tuples de couleurs, dessinez le cube de Rubik suivant.
+À l'aide de tuples de couleurs, dessinez le cube de Rubik suivant.
 
 ![pavage](media/rubik.jpg)
-
 
 ```{codeplay}
 :file: rubik.py

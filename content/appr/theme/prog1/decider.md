@@ -6,7 +6,6 @@ Dans ce chapitre, nous allons voir comment un programme peut faire des choix, et
 - les mots-clés `if-else` permettent de choisir entre deux alternatives,
 - le mot-clé `elif` (else if) permet d'ajouter différentes conditions.
 
-
 ```{question}
 En Python, `if` est suivi
 
@@ -93,7 +92,6 @@ else:
     else:
         print('zéro')
 ```
-
 
 **Exercice** : Testez le programme avec -2, 0, 3.
 
@@ -258,7 +256,7 @@ dessiner(E)
 
 ## Opérations logiques
 
-Les opérateurs logiques permettent de combiner des valeurs logiques. En Python, nous avons : 
+Les opérateurs logiques permettent de combiner des valeurs logiques. En Python, nous avons :
 
 - *et* logique (`and`),
 - *ou* logique (`or`),
@@ -334,7 +332,7 @@ Calculez d'abord le déterminant
 
 $$ det = b^2 - 4 a c $$
 
-Selon le déterminant vous avez 3 cas. Si le déterminant est : 
+Selon le déterminant vous avez 3 cas. Si le déterminant est :
 
 négatif : pas de solution
 
@@ -344,7 +342,7 @@ $$ x = \frac{-b}{2a} $$
 
 positif : deux solutions
 
-$$ x_1 = \frac{-b + \sqrt{det}}{2a},  x_2 = \frac{-b - \sqrt{det}}{2a} $$ 
+$$ x_1 = \frac{-b + \sqrt{det}}{2a},  x_2 = \frac{-b - \sqrt{det}}{2a} $$
 
 Écrivez un programme qui calcule la solution d'une équation quadratique.
 
@@ -374,7 +372,7 @@ langue = input('1=Français, 2=Anglais, 3=Allemand: ')
 
 ### Big Bang Theory
 
-Une nouvelle variante de pierre-papier-ciseaux a été popularisée par la série américaine The Big Bang Theory. Il s'agit de **Pierre-Papier-Ciseaux-Lézard-Spock**. Ici, les règles classiques s'appliquent, mais il faut ajouter que le lézard mange le papier, empoisonne Spock, est écrasé par la pierre et est décapité par les ciseaux. Spock vaporise la pierre, casse les ciseaux, et est discrédité par le papier. 
+Une nouvelle variante de pierre-papier-ciseaux a été popularisée par la série américaine The Big Bang Theory. Il s'agit de **Pierre-Papier-Ciseaux-Lézard-Spock**. Ici, les règles classiques s'appliquent, mais il faut ajouter que le lézard mange le papier, empoisonne Spock, est écrasé par la pierre et est décapité par les ciseaux. Spock vaporise la pierre, casse les ciseaux, et est discrédité par le papier.
 
 ```{youtube} x5Q6-wMx-K8
 ```

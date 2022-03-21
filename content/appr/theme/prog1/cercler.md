@@ -178,7 +178,6 @@ circle(50, 225)
 
 **Exercice** : Coloriez le cœur en rouge, ajoutez une flèche.
 
-
 ## Infini — ∞
 
 Le mot **infini** (du latin in-, préfixe négatif, et finitus, *limité*) est un adjectif servant à qualifier quelque chose qui n'a pas de limite en nombre ou en taille. L'infini est représenté par le symbole ∞. Nous allons le dessiner.

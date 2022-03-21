@@ -35,7 +35,7 @@ forward(100)
 left(90)
 ```
 
-Ne serait-ce pas pratique de pouvoir dire à la tortue de répéter ces instructions 4 fois ? 
+Ne serait-ce pas pratique de pouvoir dire à la tortue de répéter ces instructions 4 fois ?
 Ceci est possible avec une boucle `for`. La ligne `for i in range(x):` va répéter `x` fois le bloc en indentation qui suit.
 
 Par rapport à l'exemple précédent, nous avons rajouté un `dot()` à chaque sommet, et nous cachons la tortue à la fin avec la fonction `hideturtle()`.
@@ -56,7 +56,7 @@ hideturtle()
 
 ## Polygone régulier
 
-Avec une boucle `for`, nous pouvons simplifier le dessins des formes symétriques.
+Avec une boucle `for`, nous pouvons simplifier le dessin des formes symétriques.
 
 Observez bien la double indentation :
 
@@ -128,7 +128,7 @@ forward(80)
 
 **Exercice** : Dessinez une usine avec un toit en dents de scie.
 
-## Eventail
+## Éventail
 
 Que se passe-t-il si nous dessinons une ligne (`forward()`/`backward()`) et tournons chaque fois d'un petit angle ?
 C'est un peu comme un éventail qui s'ouvre.
@@ -162,7 +162,7 @@ for i in range(18):
 
 **Exercice** : Modifiez les valeurs dans `forward()` et `backward()`.
 
-## Etoile
+## Étoile
 
 Voici une autre façon de toujours avancer, mais en tournant chaque fois d'un angle un peu plus petit que 180°.
 Essayons !
@@ -429,7 +429,7 @@ for i in range():
 ## Exercice
 
 - Téléchargez un exercice.
-- Editez-le dans un éditeur externe.
+- Éditez-le dans un éditeur externe.
 - Déposez-le sur Moodle.
 
 ### Pellicule
@@ -451,7 +451,7 @@ forward(200)
 
 ### Chemin de fer
 
-Dessinez les rails d'un chemin de fer. 
+Dessinez les rails d'un chemin de fer.
 
 ![rails](media/rails.png)
 
@@ -499,6 +499,7 @@ forward(200)
 ```
 
 ### Jeu du moulin
+
 Le [jeu du moulin](https://fr.wikipedia.org/wiki/Jeu_du_moulin) est un jeu de société traditionnel en Europe. Le plateau de jeu existait déjà dans la Rome antique. Aussi appelé **jeu du charret** (en Suisse), certains lui donnent le nom médiéval de jeu de mérelles, voire de marelle.
 
 ```{image} media/moulin.png

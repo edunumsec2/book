@@ -55,7 +55,6 @@ Quel est le résultat de l'expression `'12' + '12'` ?
 {f}`1221`  
 ```
 
-
 ## Puissance
 
 En Python l'opérateur de puissance est `**`. Ne le confondez pas avec le symbole `^` utilisé dans d'autres langages tel qu’Excel.
@@ -81,7 +80,6 @@ Nous pouvons maintenant calculer une diagonale, en utilisant le théorème de Py
 print("la diagonale d'un rectangle de 3 sur 6 est")
 print((3 ** 2 + 6 ** 2) ** 0.5)
 ```
-
 
 ## Division entière
 
@@ -223,7 +221,7 @@ Nous reconnaissons la différence entre un entier (`int`) et un nombre à virgul
 ## Demander un nombre
 
 La fonction `input()` permet d'obtenir une entrée de l'utilisateur. Mais attention !
-La valeur retournée est une chaine de caractères (de type string `str`). 
+La valeur retournée est une chaine de caractères (de type string `str`).
 
 ```{codeplay}
 x = input('Entrez un nombre entier: ')
@@ -371,7 +369,7 @@ print(f(20000))
 
 ### Rectangle
 
-Faites un programme qui demande à l'utilisateur les côtés a et b d'un rectangle et calcule ensuite 
+Faites un programme qui demande à l'utilisateur les côtés a et b d'un rectangle et calcule ensuite
 
 le périmètre
 
@@ -396,7 +394,7 @@ a = float(input('Entrez la longueur a: '))
 
 ### Cercle
 
-Faites un programme qui demande à l'utilisateur le rayon d'un cercle et calcule ensuite 
+Faites un programme qui demande à l'utilisateur le rayon d'un cercle et calcule ensuite
 
 le diamètre
 
@@ -421,7 +419,7 @@ r = float(input('Entrez le rayon r: '))
 
 ### Sphère
 
-Faites un programme qui demande à l'utilisateur le rayon d'une sphère et calcule ensuite 
+Faites un programme qui demande à l'utilisateur le rayon d'une sphère et calcule ensuite
 
 le diamètre
 
@@ -446,7 +444,7 @@ r = float(input('Entrez le rayon r: '))
 
 ### Quiz de multiplication
 
-Créez un quiz de multiplication. 
+Créez un quiz de multiplication.
 
 - Complétez pour avoir 10 questions
 - Corrigez les erreurs
@@ -471,7 +469,7 @@ print('Votre score est')
 
 ### Quiz de vocabulaire
 
-Créez un quiz de vocabulaire français-anglais. 
+Créez un quiz de vocabulaire français-anglais.
 
 - Complétez pour avoir 10 questions
 - Corrigez les erreurs

@@ -76,7 +76,7 @@ dot(80, 'blue')
 
 ### Drapeau du Japon
 
-Le drapeau du Japon est un drapeau blanc avec un grand disque rouge en son centre. Ce disque représente le soleil, plus précisément la déesse shinto du soleil Amaterasu.
+Le drapeau du Japon est un drapeau blanc avec un grand disque rouge en son centre. Ce disque représente le soleil, plus précisément la déesse shintô du soleil Amaterasu.
 
 Le rapport entre la hauteur et la largeur du drapeau est de 2:3, et le diamètre du disque est $\frac{3}{5}$ de la hauteur du drapeau.
 
@@ -317,7 +317,7 @@ dot(80)
 La fonction `bras()` dessine les 3 côtés d'un carré et tourne, à la fin, dans le sens approprié pour la suite.
 Répété 4 fois, ceci donne la forme d'une croix.
 
-Ici, nous utilisons la fonction `color('white')` pour changer simultanément la couleur de ligne *et* la couleur de remplissage en blanc.
+Ici, nous utilisons la fonction `color('white')` pour changer simultanément la couleur de ligne **et** la couleur de remplissage en blanc.
 
 ```{codeplay}
 :file: color13.py
@@ -389,33 +389,14 @@ Pour enregistrer votre dessin vers un fichier image, faites ceci :
 - Exécutez votre code.
 
 ```  python
-if len(dir(Turtle)) > 100:
-    from tkinter import * 
-    Screen().getcanvas().postscript(file='file.eps')
+from tkinter import * 
+Screen().getcanvas().postscript(file='fichier.eps')
 ```
 
-Votre image est exportée vers un fichier `file.eps`, qui se trouve dans le même dossier que votre code.
+Votre image est exportée vers `fichier.eps`, qui se trouve dans le même dossier que votre code.
 Vous pouvez changer le nom du fichier, mais devez garder l'extension `.eps`.
 
 Sur un Mac, vous pouvez ouvrir un fichier `.eps` avec l'application **Aperçu** et ensuite exporter l'image vers le format PDF, JPG ou PNG.
-
-**Exercice**
-
-- Téléchargez le code.
-- Ouvrez-le avec Thonny.
-- Exécutez le code.
-- Ouvrez le ficher image `japon.eps`.
-
-```{codeplay}
-:file: japon.py
-from turtle import *
-dot(240, 'red')
-hideturtle()
-
-if len(dir(Turtle)) > 100:
-    from tkinter import * 
-    Screen().getcanvas().postscript(file='japon.eps')
-```
 
 ## Exercices
 
@@ -515,11 +496,11 @@ done()
 
 Les carrés de base d'un tétromino mesurent 40 × 40 pixels. Il y a 7 formes différentes de tétrominos, qui sont nommées d'après les lettres auxquelles ils ressemblent et qui ont des couleurs standard :
 
-![](media/tetromino.png)
+![tétrominos](media/tetromino.png)
 
 Créez des fonctions pour dessiner les 7 tétrominos avec leurs couleurs appropriées, et composez la forme ci-dessous.
 
-![](media/tetris2.png)
+![tetris](media/tetris2.png)
 
 ```{codeplay}
 :file: tetris2.py
