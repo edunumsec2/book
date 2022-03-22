@@ -55,11 +55,6 @@
     background: rgb(124, 120, 120);
 }
 
-#tooltip-close div {
-    position: relative;
-    top: -10px;
-}
-
 #tooltip p {
     color: white !important;
     margin: 0;

@@ -88,3 +88,4 @@ class LogicDiagram(SphinxDirective):
 def setup(app):
     app.add_directive("logic", LogicDiagram)
     app.add_node(logic_diagram, html=(begin_logic_diagram_html, end_logic_diagram_html))
+    app.add_css_file("logic.css")

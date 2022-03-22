@@ -107,11 +107,9 @@ document.addEventListener("DOMContentLoaded", function() {
     return Sk.builtinFiles["files"][x];
   }
 
-  var isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
   var codeElem = CodeMirror.fromTextArea(document.getElementById("code"), {
     lineNumbers: true,
-    theme: isDarkMode ? "monokai" : "idea",
+    theme: "idea",
     indentUnit: 4,
     indentWithTabs: false,
     smartIndent: true,
@@ -134,10 +132,22 @@ document.addEventListener("DOMContentLoaded", function() {
     },
   });
 
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(event){
-    isDarkMode = event.matches;
-    codeElem.setOption('theme', isDarkMode ? "monokai" : "idea");
-  });
+  function setTheme(theme) {
+    if (theme === "dark" || theme === "auto" && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      codeElem.setOption('theme', "monokai");
+    }
+    else {
+      codeElem.setOption('theme', "idea");
+    }
+  }
+
+  function refreshTheme() {
+    theme = document.body.dataset.theme || "auto";
+    setTheme(theme);
+  }
+  document.refreshTheme = refreshTheme;
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', refreshTheme);
 
   codeElem.on("change", resized);
 
@@ -474,6 +484,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
 
       resized();
+      refreshTheme();
 
       if (frame.hasAttribute("data-run")) {
         runInterpreter()
