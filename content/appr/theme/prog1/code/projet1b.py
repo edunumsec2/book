@@ -238,126 +238,37 @@ def deplacement_plateforme():
     plateforme()
 
 
-def colorier_montagne_PP():
-    # Fait le contour des montagnes pour les colorier
-    right(3)
-    forward(435)
-    left(90)
-    forward(1183)
-    left(90)
-    forward(440)
-    end_fill()
-    deplacement_plateforme()
-
-
-def feuillage():
-    # Crée le feuillage des arbres du premier plan
-    color("green")
-    up()
-    left(90)
-    forward(7)
-    for i in range(8):
-        right(45)
-        dot(40)
-        forward(15)
-    right(90)
-
-
-def arbre_PP(angle):
-    # Dessine les arbres du premier plan
+def arbre(h):
+    # Dessiner un abre de hauteur h
     color("sienna")
-    right(angle)
+    down()
+    width(0.2 * h)
+    sety(ycor() + h)
+    dot(1.0 * h, "green")
     up()
-    forward(20)
-    down()
-    width(30)
-    forward(50)
-    feuillage()
-    up()
-    backward(70)
-    left(angle)
-    color("silver")
-    width(10)
-    down()
+    sety(ycor() - h)
 
-
-def montagne_PP():
-    # Dessine les montagnes en premier plan
-    color("silver")
-    down()
-    width(10)
-    left(38)
-    for x in (80, 110, 62, 97):
-        circle(x, 90)
-        arbre_PP(128)
-        forward(50)
-        circle(-x, 90)
-        if x == 97:
-            left(145)
-        else:
-            arbre_PP(38)
-    colorier_montagne_PP()
-
-
-def colorier_montagne_AP():
-    # Fais les contours des montagnes en arrière-plan pour pouvoir les colorier
-    width(1)
-    right(3)
-    forward(637)
-    left(90)
-    forward(1190)
-    left(90)
-    forward(640)
+def montagne(h, rayons, couleur='lime'):
+    p = pos()       # mémoriser la position de départ
+    arbre_pos = []  # liste des positions des arbres
+    color(couleur)
+    begin_fill()
+    seth(55)
+    for r in rayons:
+        circle(-r, 90)
+        arbre_pos.append(pos())
+        forward(2*h)
+        arbre_pos.append(pos())
+        circle(r, 90)
+        arbre_pos.append(pos())
+    sety(-500)
+    setx(p[0])
+    goto(p)
     end_fill()
-    up()
-    backward(200)
-    begin_fill()
-    montagne_PP()
 
-
-def replacement_montagne_AP():
-    # Replacement sur les bordures avant de créer les montagnes d'arrière-plan
-    up()
-    left(45)
-    forward(93)
-    right(90)
-    forward(300)
-    right(180)
-    begin_fill()
-    montagne_AP()
-
-
-def arbre_AP(angle):
-    # Dessine les arbres d'arrière-plan(=AP)
-    color("sienna")
-    right(angle)
-    forward(30)
-    dot(20, "green")
-    up()
-    backward(30)
-    left(angle)
-    color("limegreen")
-    down()
-
-
-def montagne_AP():
-    # Dessine les montagnes d'arrière-plan
-    color("limegreen")
-    down()
-    width(5)
-    left(38)
-    for x in (100, 45, 150, 72):
-        circle(x, 90)
-        arbre_AP(128)
-        forward(50)
-        arbre_AP(128)
-        circle(-x, 90)
-        if x == 72:
-            left(145)
-        else:
-            arbre_AP(38)
-    colorier_montagne_AP()
-
+    for p in arbre_pos[:-1]:
+        goto(p)
+        arbre(h)
 
 def nuage(taille):
     #Dessine un nuage avec une taille aléatoire
@@ -382,43 +293,46 @@ def nuages():
         setx(xcor() + 400)
 
 
-def soleil():
-    # Dessine un soleil à 3 rayons
-    seth(0)
-    color("yellow")
-    begin_fill()
-    circle(50)
-    end_fill()
-    left(90)
-    forward(50)
-    left(90)
+def soleil(d=100, a=100, angle=45, n=3, couleur='yellow'):
+    color(couleur)
+    dot(d)
+    seth(180)
     down()
     width(10)
-    for i in range(3):
-        forward(100)
-        backward(100)
-        left(45)
+    for i in range(n):
+        forward(a)
+        backward(a)
+        left(angle)
+    up()
 
 
 def main():
-    # fixe la couleur de fond
     getscreen().bgcolor('black')
+    getscreen().setup(width=1200, height=1000, startx=0, starty=0)
+
     seed(2)
     speed("fastest")
     #hideturtle()
     up()
-    # dessine l'arrière-fond du niveau
+
     goto(-600, -500)
     rectangle(1200, 1000, 'cyan')
 
-    goto(-400, 200)
+    goto(-400, 300)
     nuages()
 
-    goto(300, 200)
+    goto(400, 400)
     soleil()
 
-    replacement_montagne_AP()
+    goto(-600, 200)
+    montagne(30, (80, 50, 150, 90))
+    goto(-600, 50)
+    montagne(50, (80, 155, 150, 72), 'silver')
 
+    goto(-600, -150)
+    seth(0)
+    pencolor('black')
+    plateforme()
 
 main()
 done()
