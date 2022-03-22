@@ -56,8 +56,11 @@
 </html>
 
 <!-- Fin du test de mise en page -->
+<<<<<<< HEAD
 <br>
 
+=======
+>>>>>>> edbb566532d45540acd0611447d01b2de9a70831
 
 <div align="right"> 
     <a href="http://files.edunumsec2.ch/enjeux-sociaux/affaire-snowden/affaire-snowden.pdf" class="round-button">
@@ -142,7 +145,11 @@ Ces révélations amènent également à questionner la gouvernance d’Internet
 :class: hint
 La Suisse n’est pas épargnée par la surveillance de masse. L’affaire la plus importante est certainement [le scandale des fiches](https://fr.wikipedia.org/wiki/Scandale_des_fiches). Au cours des années 1980, les autorités suisses ont mis en place un dispositif de surveillance de la population à large échelle. Plus de 900’000 personnes «fichées» faisaient l’objet d’une surveillance plus ou moins active. L’objectif affiché était de protéger le pays de la «menace communiste», dans le  contexte de la Guerre froide. Révélée en 1989, cette affaire suscita l’indignation et ébranla la confiance entre les citoyens et l’État.
 
+<<<<<<< HEAD
 Depuis ce scandale, un tel fichage de la population n’existe plus. Cependant, la menace terroriste incite la Suisse, comme d’autres pays, à se doter  de [nouveaux outils législatifs](https://www.swissinfo.ch/fre/votations-du-13-juin-_vers-un-oui-%C3%A0-la-loi-contre-le-terrorisme/46694930) qui permettent d’étendre la portée de la surveillance d’État. Les [opposants](https://www.amnesty.ch/fr/themes/surveillance/docs/2016/votation-sur-la-loi-sur-le-renseignement-lrens) à ses mesures dénoncent le risque d’une surveillance sans indices concrets d’une activité illégale et s’inquiètent du non-respect des droits fondamentaux. 
+=======
+Depuis ce scandale, un tel fichage de la population n’existe plus. Cependant, la menace terroriste incite la Suisse, comme d’autres pays, à se doter  de [nouveaux outils législatifs](https://www.swissinfo.ch/fre/votations-du-13-juin-_vers-un-oui-%C3%A0-la-loi-contre-le-terrorisme/46694930) qui permettent d’étendre la portée de la surveillance d’État. Les [opposants](https://www.amnesty.ch/fr/themes/surveillance/docs/2016/votation-sur-la-loi-sur-le-renseignement-lrens) à ces mesures dénoncent le risque d’une surveillance sans indices concrets d’une activité illégale et s’inquiètent du non-respect des droits fondamentaux. 
+>>>>>>> edbb566532d45540acd0611447d01b2de9a70831
 ```
 
 
@@ -152,6 +159,10 @@ Depuis ce scandale, un tel fichage de la population n’existe plus. Cependant, 
 *  [Un article](https://www.lemonde.fr/pixels/article/2019/09/13/ce-que-les-revelations-snowden-ont-change-depuis-2013_5509864_4408996.html) sur ce que les révélations d’Edward Snowden ont changé (Le Monde)
 * [Un petit guide](https://www.amnesty.org/fr/latest/campaigns/2015/03/easy-guide-to-mass-surveillance/) sur la surveillance de masse (Amnesty International)
 * ​[Un article](https://www.cairn.info/revue-hermes-la-revue-2015-3-page-209.htm) de la chercheuse Francesca Musiani sur les enjeux autour de ces révélations
+<<<<<<< HEAD
+=======
+* [Une conférence](https://www.ted.com/talks/glenn_greenwald_why_privacy_matters?language=en) de Glenn Greenwald, l’un des premiers journalistes qui publia les révélations de Snowden (sous-titres disponibles en français)
+>>>>>>> edbb566532d45540acd0611447d01b2de9a70831
 
 
 ## Glossaire
@@ -185,7 +196,11 @@ g) Qu’est-ce qu’un «lanceur d’alerte»?
 Les réponses aux question a) à f) figurent dans les pages 1 et 2.
 Question g) : Selon la définition donnée par Amnesty International, un lanceur d’alerte est «une personne qui, dans le contexte de sa relation de travail, révèle ou signale un état de fait mettant en lumière des comportements illicites ou dangereux qui constituent une menace pour l’homme, l’économie, la société, l’État ou l’environnement, c’est-à-dire pour le bien commun, l’intérêt général».
    
+<<<<<<< HEAD
 Il existe des lanceurs d’alerte dans de nombreux domaine mais les noms couramment associés à celui de Snowden sont :  
+=======
+Il existe des lanceurs d’alerte dans de nombreux domaines mais les noms couramment associés à celui de Snowden sont :  
+>>>>>>> edbb566532d45540acd0611447d01b2de9a70831
 * **Julian Assange**, fondateur du média Wikileaks qui, dès 2010, publie des documents classifiés démontrant les agissements et bavures de l’armée américaine en Irak et en Afghanistan.
    
 * **Chelsea Manning**, ancienne analyste militaire qui a fait fuité des milliers de documents confidentiels sur l’armée américaine via Wikileaks.
