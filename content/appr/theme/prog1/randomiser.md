@@ -17,7 +17,7 @@ En Python, `random` est
 
 ## Le contenu du module
 
-Le module `random` permet de créer des nombres pseudo-aléatoires. Il met à disposition 13 fonctions.
+Le module `random` permet de créer des nombres pseudoaléatoires. Il met à disposition 13 fonctions.
 
 ```{codeplay}
 :file: random1.py
@@ -132,9 +132,9 @@ for i in range(500):
     dot(d, 'white')
 ```
 
-## Fleurs dans un champs
+## Fleurs dans un champ
 
-Dans l'exemple suivant nous plaçons des fleurs à des positions aléatoires dans un champ.
+Dans l'exemple suivant, nous plaçons des fleurs à des positions aléatoires dans un champ.
 
 ```{codeplay}
 :file: random8.py
@@ -165,7 +165,7 @@ for i in range(10):
 ## Choisir dans une liste
 
 La fonction `choice(liste)` retourne un élément aléatoire d'une liste.
-Dans l'exemple suivant nous choisissons parmis 5 couleurs.
+Dans l'exemple suivant, nous choisissons parmi 5 couleurs.
 
 ```{codeplay}
 :file: random9.py

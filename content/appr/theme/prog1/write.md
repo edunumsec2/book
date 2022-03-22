@@ -18,7 +18,7 @@ write('ceci est une phrase écrite par la tortue.')
 
 ## Taille
 
-La fonction `write()` possède un paramètres optionnel `font` pour indiquer la police, la taille et le style.
+La fonction `write()` possède un paramètre optionnel `font` pour indiquer la police, la taille et le style.
 La valeur par défaut est `('Arial', 8, 'normal')`
 
 ```{codeplay}
@@ -33,7 +33,7 @@ for t in (8, 12, 18, 24, 36, 64):
 
 ## Police
 
-En typographie, une **police d'écriture** est un ensembles de signes graphiques (caractères) dont le style est coordonnée, afin de former un alphabet. Voici quelques polices notoires : 
+En typographie, une **police d'écriture** est un ensemble de signes graphiques (caractères) dont le style est coordonné, afin de former un alphabet. Voici quelques polices notoires :
 
 - **Arial** - utilisé sur l'écran
 - **Times** - utilisé dans des livres, journaux
@@ -119,7 +119,7 @@ for c in ('red', 'blue', 'lime', 'indigo'):
 ```
 
 ```{caution}
-Si vous exécutez `write()` dans ce site avec [Skulpt](https://skulpt.org), la couleur du texte est définie par `fillcolor()`. Quand vous exécutez `write()` dans un éditeur externe avec Python standard, la couleur du texte est défini par `pencolor()`.
+Si vous exécutez `write()` dans ce site avec [Skulpt](https://skulpt.org), la couleur du texte est définie par `fillcolor()`. Quand vous exécutez `write()` dans un éditeur externe avec Python standard, la couleur du texte est définie par `pencolor()`.
 ```
 
 ## Aligner des mots
@@ -199,7 +199,7 @@ for t in lignes:
 
 ## Ajuster un texte
 
-Pour ajuster un texte, il faut connaitre la longueur des mots. On ajuste alors les espaces entre les mots, pour faire aligner un ligne de texte des deux cotés.
+Pour ajuster un texte, il faut connaitre la longueur des mots. On ajuste alors les espaces entre les mots, pour faire aligner une ligne de texte des deux côtés.
 
 ```{codeplay}
 from turtle import *
@@ -300,7 +300,7 @@ for c in 'SCRABBLE':
 
 ## WhatsApp
 
-L'application [WhatsApp](https://fr.wikipedia.org/wiki/WhatsApp) fournit un système de messagerie instantanée chiffrée de bout en bout aussi bien via les réseaux de téléphonie mobiles que par Internet.
+L'application [WhatsApp](https://fr.wikipedia.org/wiki/WhatsApp) fournit un système de messagerie instantanée chiffrée de bout en bout aussi bien via les réseaux de téléphonie mobile que par Internet.
 
 WhatsApp a remporté un grand succès au tournant des années 2010. L'application est créée en 2009 par Jan Koum et Brian Acton, deux anciens employés de la société américaine Yahoo! avec pour objectif de remplacer le SMS. Elle est utilisée par plus de deux milliards de personnes en 2020.
 
@@ -350,7 +350,7 @@ for ligne in lignes:
 
 ### Sudoku
 
-Reproduisez l'image ci dessous
+Reproduisez l'image ci-dessous
 
 ```{image} media/sudoku.png
 :width: 200

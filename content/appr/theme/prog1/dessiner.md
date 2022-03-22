@@ -5,7 +5,7 @@ Dans ce chapitre, nous explorons ce que c'est un programme et nous prenons
 
 Allons de l'avant (forward) avec la programmation. Nous allons voir que :
 
-- l'expression `from turtle import *` met a disposition les fonctions de dessin,
+- l'expression `from turtle import *` met à disposition les fonctions de dessin,
 - les instructions `forward()`, `backward()` permettent de tracer une ligne,
 - les instructions `left()`, `right()` permettent de changer de direction.
 
@@ -17,7 +17,7 @@ Un programme informatique est
 {f}`un algorithme`  
 {f}`une recette de cuisine`
 ===
-Un algorithme est la description générale des étappes de résolution d'un problème. Il peut être traduit en un programme informatique. 
+Un algorithme est la description générale des étapes de résolution d'un problème. Il peut être traduit en un programme informatique. 
 ```
 
 ## Le module `turtle`
@@ -103,7 +103,7 @@ La largeur de la zone de dessin de la tortue est
 
 ## Une séquence
 
-Un programme est une séquence d'instructions. Le bloc de 8 instructions ci-dessous indique comment dessiner un carré. La tortue doit avancer, tourner, avancer, tourner etc.
+Un programme est une séquence d'instructions. Le bloc de 8 instructions ci-dessous indique comment dessiner un carré. La tortue doit avancer, tourner, avancer, tourner, etc.
 
 ```{admonition} Exercice
 :class: note
@@ -166,7 +166,7 @@ L'expression `left(90)` est équivalent à
 {f}`left(-90)`  
 ```
 
-## Epaisseur de ligne
+## Épaisseur de ligne
 
 La fonction `width(d)` (épaisseur en anglais) permet de définir l'épaisseur de la ligne.
 Voici un triangle où chaque côté a une épaisseur différente.
@@ -270,7 +270,7 @@ Jusqu'à maintenant, nous avons exécuté nos petits programmes ici dans cette p
 Nous vous proposons d'utiliser [Thonny](https://thonny.org), qui est un logiciel libre, facile à installer, et un excellent éditeur pour débuter avec Python. Essayez de faire ceci :
 
 1. Ouvrez l'éditeur Thonny
-1. Ecrivez le code pour dessiner une maison
+1. Écrivez le code pour dessiner une maison
 1. Sauvegardez le programme sous `maison.py`
 1. Exécutez le programme
 

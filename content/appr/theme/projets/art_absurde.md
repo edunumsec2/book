@@ -4,11 +4,11 @@ Ce chapitre montre la création d'un texte aléatoire. On s'imagine ici l'autobi
 
 - la fonction `nom = choice(liste)` permet de choisir un élément aléatoire dans une liste,
 - la **f-string** de forme `f"{nom} est {adj}."` permet d'insérer des variables dans une phrase,
-- les variables à insérer doivent être entourés d'accolades `{nom}`.
+- les variables à insérer doivent être entourées d'accolades `{nom}`.
 
 ## Inventer un personnage
 
-Pour inventer un nom d'artiste il suffit de choisir aléatoirement un prénom et un nom avec la fonction `choice()` et de les combiner avec un **f-string** pour former une phrase.
+Pour inventer un nom d'artiste, il suffit de choisir aléatoirement un prénom et un nom avec la fonction `choice()` et de les combiner avec un **f-string** pour former une phrase.
 
 ```{codeplay}
 from random import choice
@@ -22,11 +22,11 @@ phrase = f"{prenom} {nom} est un {artiste} {adjectif}."
 print(phrase)
 ```
 
-**Exercice** : Exécutez le programme multiples fois et observez le résultat.
+**Exercice** : Exécutez le programme multiple fois et observez le résultat.
 
 ## Inventer une introduction
 
-Voici un exemple un peu plus long, avec deux phrases. Les variables `nom` et `prenom` sont utilisés dans les deux phrases pour faire une continuité.
+Voici un exemple un peu plus long, avec deux phrases. Les variables `nom` et `prenom` sont utilisées dans les deux phrases pour faire une continuité.
 
 ```{codeplay}
 from random import choice
@@ -127,7 +127,7 @@ print(phrase3, phrase4)
 
 ## Suite
 
-Voici encore un paragraphe consistante de trois phrases.
+Voici encore un paragraphe consistant de trois phrases.
 
 ```{codeplay}
 from random import choice

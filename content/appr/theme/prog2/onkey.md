@@ -13,7 +13,7 @@ Dans ce chapitre nous découvrons comment utiliser le clavier de l'ordinateur po
 ```{question}
 Une fonction de rappel
 
-{f}`retourne à l'origne`  
+{f}`retourne à l'origine`  
 {f}`renvoie une valeur`  
 {f}`renforce la mémoire`  
 {v}`réagit à un événement`
@@ -83,13 +83,13 @@ s.listen()
 
 ## Effacer la trace
 
-Dans le prochain programme nous ajoutons des touches supplémentaires pour les fonctions suivantes :
+Dans le prochain programme, nous ajoutons des touches supplémentaires pour les fonctions suivantes :
 
 - `h` pour ramener la tortue à l'origine avec `home()`,
 - `c` pour effacer la trace avec `clear()`,
 - `r` pour effacer la trace et ramener la tortue à l'origine avec `reset()`.
 
-Le désavantage de ce programme, c'est que `clear()` va aussi effacer le texte explicatif. Ca serait bien si ce texte serait indépendant de la tortue qui bouge.
+Le désavantage de ce programme, c'est que `clear()` va aussi effacer le texte explicatif. Ça serait bien si ce texte était indépendant de la tortue qui bouge.
 
 ```{codeplay}
 :file: onkey3.py
@@ -151,7 +151,7 @@ print("h:home     c:clear   r:reset")
 
 ## Les flèches
 
-Les touches de flèche portent les nom `Left`, `Right`, `Up` et `Down`.
+Les touches de flèche portent les noms `Left`, `Right`, `Up` et `Down`.
 Nous pouvons utiliser les 4 flèches pour faire bouger la tortue.
 
 - `↑` pour avancer
@@ -268,7 +268,7 @@ print("a:avancer  g:gauche  d:droite")
 
 ## Dessiner une maison
 
-Appuyer sur la touche `m` va dessiner un maison.
+Appuyer sur la touche `m` va dessiner une maison.
 
 ```{codeplay}
 :file: onkey8.py
@@ -402,9 +402,9 @@ print("a:avancer  t:tourner  r:rouge  v:vert  b:bleu")
 
 **Exercice** : Modifiez les couleurs.
 
-## Ecrire dans le canevas
+## Écrire dans le canevas
 
-Nous pouvons aussi utiliser les touches pour écrire dans le canevas de la tortue. Pour avancer la tortue avec la lettre nous choisissons l'option `move=True`
+Nous pouvons aussi utiliser les touches pour écrire dans le canevas de la tortue. Pour avancer la tortue avec la lettre, nous choisissons l'option `move=True`
 
 ```{codeplay}
 :file: onkey12.py

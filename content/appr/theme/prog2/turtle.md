@@ -1,17 +1,17 @@
 # Cloner - `Turtle`
 
-Dans **Programmation I** nous avons fait connaissance avec un style de programmation que nous appelons **programmation procédurale**. Dans cette deuxième partie nous allons découvrir un nouveau style de programmation qui s'appelle **programmation orientée objet**.
+Dans **Programmation I** nous avons fait connaissance avec un style de programmation que nous appelons **programmation procédurale**. Dans cette deuxième partie, nous allons découvrir un nouveau style de programmation qui s'appelle **programmation orientée objet**.
 
 Le premier changement que nous allons voir est que nous pouvons créer des tortues à volonté. Jusqu'à maintenant nous avons travaillé avec une seule tortue. Dès maintenant nous allons créer autant de tortues que nous voulons. Les tortues sont des objets dérivés de la classe `Turtle`. Nous allons voir que :
 
 - la classe `Turtle` permet de produire multiples tortues,
-- la ligne de code `bob = Turtle()` crée une nouvelle tortue appelé `bob`,
+- la ligne de code `bob = Turtle()` crée une nouvelle tortue appelée `bob`,
 - la méthode `bob.clone()` crée un clone de la tortue `bob`.
 
 ```{question}
 L'expression `ana = bob.clone()` crée
 
-{f}`un clone de ana`  
+{f}`un clone d’ana`  
 {v}`une copie identique de bob`  
 {f}`une nouvelle tortue avec les valeurs par défaut`  
 {f}`une référence vers l'objet bob`
@@ -19,7 +19,7 @@ L'expression `ana = bob.clone()` crée
 
 ## Reproduire des tortues
 
-Jusqu'à maintenant, nous avons utilisé une seule tortue. Mais nous pouvons en créer autant que nous voulons. Chaque tortue possède sa couleur, sa position, sa orientation, sa vitesse, sa forme, etc.  Dans le programme suivant nous créons une tortue `ana`, une tortue `bob` et une tortue `mia`.
+Jusqu'à maintenant, nous avons utilisé une seule tortue. Mais nous pouvons en créer autant que nous voulons. Chaque tortue possède sa couleur, sa position, son orientation, sa vitesse, sa forme, etc.  Dans le programme suivant nous créons une tortue `ana`, une tortue `bob` et une tortue `mia`.
 
 ```{codeplay}
 :file: turtle1.py
@@ -58,7 +58,7 @@ On crée d'abord la tortue `ana` qui est la tortue par défaut `getturtle()` et 
 
 Ensuite nous faisons une copie identique avec `ana.clone()`.
 
-Pour les faire bouger vous devez appuyer sur les touches
+Pour les faire bouger, vous devez appuyer sur les touches
 
 - `a` pour faire avancer `ana` (rouge).
 - `b` pour faire avancer `bob` (bleu).
@@ -182,15 +182,15 @@ Les méthodes pour contrôler l'animation de la tortue
 - `update` - redessiner la scène
 
 ```{caution}
-Si vous exécutez ce code directement en Python avec un éditeur externe comme Thonny, vous constatez un nombre bien plus élévé d'objets (plus que 130).
+Si vous exécutez ce code directement en Python avec un éditeur externe comme Thonny, vous constatez un nombre bien plus élevé d'objets (plus que 130).
 
 Ceci est dû au fait que dans ce site votre code est traduit en JavaScript et exécuté par [Skulpt](https://skulpt.org) directement dans votre navigateur.
-Le module en JavaScript ne traduit pas tous les objets, mais les méthodes essentielles sont tous présentes.
+Le module en JavaScript ne traduit pas tous les objets, mais les méthodes essentielles sont toutes présentes.
 ```
 
 ## Une tortue texte
 
-Nous allons maintenant introduire une deuxième tortue qui sera responsable uniquement pour écrire du texte. L'expression `text = Turtle()` crée une nouvelle tortue appelé `text`. Pour appeler des méthodes sur cette nouvelle tortue nous devons utiliser la méthode doté, donc précéder les instructions par `text.`
+Nous allons maintenant introduire une deuxième tortue qui sera responsable uniquement pour écrire du texte. L'expression `text = Turtle()` crée une nouvelle tortue appelée `text`. Pour appeler des méthodes sur cette nouvelle tortue nous devons utiliser la méthode dotée, donc précéder les instructions par `text.`
 
 ```{codeplay}
 :file: onkey3.py
@@ -255,9 +255,9 @@ s.listen()
 
 ## Créer en boucle
 
-Dans l'exemple suivant nous allons créer 10 tortues à des positions aléatoires, avec des couleurs aléatoires.
+Dans l'exemple suivant, nous allons créer 10 tortues à des positions aléatoires, avec des couleurs aléatoires.
 
-Appuyer sur la touche espace fait les avancer de 10 pixels. La fonction `s.turtles()` renvoie une liste de tous les tortues créés. Dans une boucle nous déplaçons chaque tortue de 10 pixels.
+Appuyer sur la touche espace fait les avancer de 10 pixels. La fonction `s.turtles()` renvoie une liste de toutes les tortues créées. Dans une boucle nous déplaçons chaque tortue de 10 pixels.
 
 ```{codeplay}
 :file: turtle4.py
@@ -290,15 +290,15 @@ s.listen()
 
 ## Créer par un clic
 
-Dans l'exemple suivant nous créons des tortues en cliquant avec la souris.
+Dans l'exemple suivant, nous créons des tortues en cliquant avec la souris.
 
-La stratégie adopte est de crée une première tortue caché au centre qui a les propriété suivantes:
+La stratégie adopte est de crée une première tortue cachée au centre qui a les propriétés suivantes:
 
 - forme de tortue
 - vitesse maximale
 - stylo levé
 
-A chaque clique de souris cette tortue invisible au centre est cloné. Il suffit alors de la colorier, placer, orienter et montrer.
+À chaque clic de souris, cette tortue invisible au centre est clonée. Il suffit alors de la colorier, placer, orienter et montrer.
 
 Appuyer sur la touche espace fait les avancer de 10 pixels.
 
@@ -332,7 +332,7 @@ s.listen()
 
 ## Une tortue parmi 10
 
-Dans l'exemple suivant nous allons créer 10 tortues à des endroits aléatoires.
+Dans l'exemple suivant, nous allons créer 10 tortues à des endroits aléatoires.
 Cliquer sur une des tortues, change sa couleur en rouge et la rend active. Son déplacement peut être contrôlé par les touches flèches.
 
 ```{codeplay}

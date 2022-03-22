@@ -1,7 +1,7 @@
 # Cliquer - `onclick`
 
-Dans ce chapitre nous explorons comment un programme peux détecter un clic de souris et y réagir.
-Cliquer (toucher) est la méthode principale pour interagir avec un smartphone : quand le doigt touche une certaine position de l'écran le programme y réagit. Nous allons voir que :
+Dans ce chapitre nous explorons comment un programme peut détecter un clic de souris et y réagir.
+Cliquer (toucher) est la méthode principale pour interagir avec un smartphone : quand le doigt touche une certaine position de l'écran, le programme y réagit. Nous allons voir que :
 
 - la méthode `onclick(f)` permet de définir une fonction de rappel,
 - la fonction de rappel `f(x, y)` est appelée lors d'un clic de souris,
@@ -22,7 +22,7 @@ En informatique, une fonction de rappel (**callback** en anglais) ou fonction de
 
 ## Fonction `onclick`
 
-La méthode `onclick(f)` permet de définir une fonction `f` qui est alors appelé à chaque fois quand on clique avec la souris dans le canevas. A ce moment la fonction `f` est appelé avec les coordonnés `(x, y)` de la souris au moment du clic.
+La méthode `onclick(f)` permet de définir une fonction `f` qui est alors appelée à chaque fois quand on clique avec la souris dans le canevas. À ce moment la fonction `f` est appelée avec les coordonnés `(x, y)` de la souris au moment du clic.
 
 La variable `s` fait référence à l’objet `Screen` qui possède les deux méthodes :
 
@@ -125,7 +125,7 @@ s.listen()
 ## Tortue ou écran
 
 Une fonction `onclick()` existe pour l'écran et pour chaque tortue.
-Donc nous avons deux fonctions de rappel différents: une pour des clics dans l'écran en générale, et une que pour des clics dans la tortue.
+Donc nous avons deux fonctions de rappel différentes: une pour des clics dans l'écran en général, et une que pour des clics dans la tortue.
 
 La fonction de rappel …
 
@@ -160,7 +160,7 @@ s.listen()
 Dans ce programme nous dessinons une ligne entre les clics successifs.
 C'est pour cette raison nous appelons la fonction `ligne(x, y)` au lieu de `f(x, y)`.
 
-Nous réagissons également à deus touches du clavier :
+Nous réagissons également à deux touches du clavier :
 
 - `u` (up) pour lever le stylo
 - `c` (clear) pour effacer le canevas
@@ -191,7 +191,7 @@ s.listen()
 Dans ce programme nous dessinons une ligne entre les clics successifs.
 C'est pour cette raison nous appelons la fonction `ligne(x, y)` au lieu de `f(x, y)`.
 
-Nous réagissons également à deus touches du clavier :
+Nous réagissons également à deux touches du clavier :
 
 - `u` (up) pour lever le stylo
 - `c` (clear) pour effacer le canevas
@@ -333,7 +333,7 @@ s.onclick(f)
 s.listen()
 ```
 
-## Echiquier
+## Échiquier
 
 Ici nous dessinons d'abord un tableau de jeu. Ensuite nous détectons la case dans laquelle le clic a eu lieu et y ajoutons un disque noir.
 
@@ -422,9 +422,9 @@ Modifiez le jeu pour
 
 - avoir une grille de 19 x 19 lignes
 - colorier le tableau en beige
-- avoir 3 x 3 points de repères sur les lignes 4, 10 et 16
+- avoir 3 x 3 points de repère sur les lignes 4, 10 et 16
 - placer les pions sur les intersections
-- alterner les pions noir et blanches
+- alterner les pions noir et blancs
 
 ```{codeplay}
 :file: go.py
@@ -459,6 +459,6 @@ s.onclick(f)
 s.listen()
 ```
 
-Voici une partie d'un jeu de go sur un board annoté avec les lettres et nombres pour identifier les pions.
+Voici une partie d'un jeu de go sur un tableau de jeux annoté avec les lettres et nombres pour identifier les pions.
 
 ![](media/go_partie.png)

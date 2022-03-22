@@ -11,7 +11,7 @@ En informatique, une variable est
 
 {v}`une place en mémoire`  
 {v}`une étiquette pour un objet`  
-{v}`un endroit spécific de stockage`  
+{v}`un endroit spécifique de stockage`  
 {v}`un nom pour une valeur`
 ```
 
@@ -28,7 +28,7 @@ print('hello world.')
 
 **Exercice** : Affichez encore 2-3 lignes de texte en plus avec la fonction `print()`.
 
-## Ecrire et dessiner
+## Écrire et dessiner
 
 Votre programme peut faire les deux choses dans un même programme : dessiner une image et écrire un texte.
 Le texte apparait dans la console, qui apparait directement après le programme.
@@ -63,8 +63,8 @@ print('Bonjour', x)
 
 ## La fonction `print()`
 
-Le fonction `print()` peut accepter un ou plusieurs arguments, séparés par une virgule. Un espace est inséré à la place de la virgule.
-Appeler la fonction `print()` sans argument insère une ligne vide.
+La fonction `print()` peut accepter un ou plusieurs arguments, séparés par une virgule. Un espace est inséré à la place de la virgule.
+Appeler la fonction `print()` sans argument, insère une ligne vide.
 
 ```{codeplay}
 :file: input3.py
@@ -80,14 +80,14 @@ print(x, 'voit', x, 'qui voit', x)  # cinq arguments
 ## La variable
 
 Une variable est une place en mémoire pour stocker de l'information.
-Vous êtes complètement libres dans le choix des noms pour les variables, mais il est recommandé de choisir des noms qui sont le plus explicites possible. C'est mieux d'utiliser des noms de variable parlants, comme `nom` et `age`, même si on aurait pu utiliser `x` et `y`.  
+Vous êtes complètement libres dans le choix des noms pour les variables, mais il est recommandé de choisir des noms qui sont le plus explicites possible. C'est mieux d'utiliser des noms de variable parlants, comme `nom` et `âge`, même si on avait pu utiliser `x` et `y`.  
 
 ```{codeplay}
 :file: input3.py
 nom = input('Entrez votre nom: ')
 print('Bonjour', nom)
 
-age = input('Entrez votre age: ')
+age = input('Entrez votre âge: ')
 print('Très bien', nom, 'vous avez', age, 'ans')
 ```
 
@@ -95,7 +95,7 @@ print('Très bien', nom, 'vous avez', age, 'ans')
 
 ## Nommer une variable
 
-Normalement, il est conseillé d'utiliser des variables très explicites, comme `age`, `prenom`, `nom`, `longuer`, `hauteur`, etc. Cela aide à la compréhension du code.
+Normalement, il est conseillé d'utiliser des variables très explicites, comme `âge`, `prenom`, `nom`, `longueur`, `hauteur`, etc. Cela aide à la compréhension du code.
 
 Mais dans des boucles et dans un contexte local, nous adoptons la convention suivante, consistant à utiliser des variables courtes d'une seule lettre.
 
@@ -112,10 +112,10 @@ Mais dans des boucles et dans un contexte local, nous adoptons la convention sui
 ```{question}
 La variable `i` désigne normalement
 
-{f}`une longeur`  
+{f}`une longueur`  
 {f}`un caractère`  
 {v}`un entier`  
-{f}`une coordonné`
+{f}`une coordonnée`
 ```
 
 ## Demander une couleur
@@ -160,7 +160,7 @@ end_fill()
 ## Demander en boucle
 
 La boucle `for` permet de répéter les instructions qui se trouvent dans son bloc en indentation.
-A chaque tour nous demandons une couleur et nous dessinons un disque colorié avec cette couleur. Si la couleur ne correspond pas à un nom de couleur standard, alors le disque est noir la première fois, et répète la couleur précédente pour les cas suivants.
+À chaque tour nous demandons une couleur et nous dessinons un disque colorié avec cette couleur. Si la couleur ne correspond pas à un nom de couleur standard, alors le disque est noir la première fois, et répète la couleur précédente pour les cas suivants.
 
 ```{codeplay}
 :file: input6.py
@@ -175,11 +175,11 @@ for i in range(6):
 print('fini')
 ```
 
-**Exercice** Entrez les couleurs de l'arc en ciel.
+**Exercice** Entrez les couleurs de l'arc-en-ciel.
 
 ## Dessiner un drapeau
 
-Nous reprenons l'exemple des formes ouvertes, avec les deux équerres coloriées. 
+Nous reprenons l'exemple des formes ouvertes, avec les deux équerres coloriées.
 
 ```{codeplay}
 from turtle import *
@@ -199,7 +199,6 @@ def drapeau():
     
 drapeau()
 ```
-
 
 ## Créer un quiz
 
@@ -272,7 +271,7 @@ for (question, solution) in quiz:
 
 ## Erreurs
 
-Dans des chapitres précédents nous avons déjà vu quelques messages d'erreurs. Mais il y en a d'autres que nous allons voir ici.
+Dans des chapitres précédents, nous avons déjà vu quelques messages d'erreurs. Mais il y en a d'autres que nous allons voir ici.
 Il est important de bien comprendre les messages d'erreur.
 Dans cette section, vous allez découvrir les différentes catégories d'erreur et comment les corriger.
 
@@ -328,14 +327,15 @@ print(chr(10000000))
 ### Chatbot
 
 Créez un programme qui vous pose des questions
+
 - votre nom
-- votre age
-- votre couleurs préféré
+- votre âge
+- votre couleur préférée
 - votre groupe de musique préféré
 - votre classe
 - votre meilleur ami
 
-A chaque fois le chatbot mémorise votre réponse dans une variable qu'il utilise dans la phrase suivante.
+À chaque fois le chatbot mémorise votre réponse dans une variable qu'il utilise dans la phrase suivante.
 
 ```{codeplay}
 :file: chatbot.py
@@ -367,7 +367,7 @@ col_house = input('Color of the house: ')
 
 ### Tricolore
 
-Créez un programme qui demande trois couleurs et dessine ensuite un drapeau tricolore. 
+Créez un programme qui demande trois couleurs et dessine ensuite un drapeau tricolore.
 
 ```{codeplay}
 :file: tricolore.py
@@ -404,8 +404,7 @@ for i in range(3):
 
 ### Quiz
 
-Faites un quiz avec 10 questions. Pour chaque question vérifiez si la réponse est correcte.
-
+Faites un quiz avec 10 questions. Pour chaque question, vérifiez si la réponse est correcte.
 
 ```{codeplay}
 :file: quiz.py

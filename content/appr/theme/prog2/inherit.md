@@ -3,7 +3,7 @@
 Dans ce chapitre nous découvrons comment une classe `E` peut hériter les attributs et les méthodes d'une classe parents `P`. Ceci permet de hiérarchiser notre code, et de facilement réutiliser des méthodes et des attributs, tout en laissant la liberté de les changer ou d'en ajouter des autres. Nous allons voir que :
 
 - l'expression `class E(P):` désigne un héritage depuis la classe `P`,
-- la fonction `super()` renvoie la classe parent,
+- la fonction `super()` renvoie la classe parente,
 - une méthode enfant avec le nom d'une méthode parent, remplace celle-ci.
 
 ```{question}
@@ -96,7 +96,7 @@ print('tranche:', maison[-3:])
 print(dir(tuple()))
 ```
 
-En Python, des noms de méthodes qui commencent et terminent par `__` (2 tirets bas) sont des méthodes spéciales. Ce sont ces méthodes qui font fonctionner les opérateurs tel que `+` ou `*`:
+En Python, des noms de méthodes qui commencent et terminent par `__` (2 tirets bas) sont des méthodes spéciales. Ce sont ces méthodes qui font fonctionner les opérateurs tels que `+` ou `*`:
 
 Ces opérations 'surchargent' les opérateurs standards. Les opérateurs standard (`+`, `*`) vont acquérir une nouvelle signification pour des objets de cette classe.
 
@@ -128,7 +128,7 @@ print('a.index(2) =', a.index(2))
 
 ## classe Vec2D
 
-La classe `Vec2D` définit des vecteurs 2D. Elle définit les opérations
+La classe `Vec2D` définit des vecteurs 2D. Elle définit les opérations :
 
 - addition
 - soustraction
@@ -210,7 +210,7 @@ c.show('red')
 
 ## Classe Dot, Rect, Text
 
-Dans l'exemple suivant nous définissons une classe parent `Object`. Elle possède les méthodes
+Dans l'exemple suivant, nous définissons une classe parente `Object`. Elle possède les méthodes.
 
 - `draw_box()` pour dessiner un contour rectangulaire
 - `fill_box()` pour dessiner un rectangle rempli
@@ -317,4 +317,4 @@ getscreen().onclick(f)
 getscreen().listen()
 ```
 
-**Exercice** : Cliquez dans tout les objets et observez les info affichés dans la console.
+**Exercice** : Cliquez dans tous les objets et observez les infos affichées dans la console.

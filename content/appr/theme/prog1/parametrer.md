@@ -22,7 +22,7 @@ Il serait très utile que notre nouvelle commande `carre(longueur)` puisse dessi
 C'est possible en spécifiant un paramètre pour la fonction.
 Le paramètre de la fonction est une variable locale qui est utilisée dans sa définition.
 
-Lors de l'appel de la fonction nous donnons une valeur à la fonction.
+Lors de l'appel de la fonction, nous donnons une valeur à la fonction.
 Cette valeur placée entre parenthèses s'appelle l'**argument** de la fonction.
 Ici, la fonction `carre()` est appelée successivement avec les valeurs 50, 100 et 150.
 
@@ -40,7 +40,7 @@ carre(100)
 carre(150)
 ```
 
-Une fonction peut être appelée avec une valeur numérique directe tel que `carre(50)`, mais aussi avec une valeur numérique donnée par une variable tel que `carre(x)`, obtenu par une variable d'itération sur une plage numérique donnée avec `range(start, stop, step)`.
+Une fonction peut être appelée avec une valeur numérique directe telle que `carre(50)`, mais aussi avec une valeur numérique donnée par une variable telle que `carre(x)`, obtenu par une variable d'itération sur une plage numérique donnée avec `range(start, stop, step)`.
 
 ```{codeplay}
 :file: def2.py
@@ -76,7 +76,7 @@ for x in range(30, 180, 30):
     forward(x)
 ```
 
-**Exercice** : Ecartez les carrés de 20 pixels.
+**Exercice** : Écartez les carrés de 20 pixels.
 
 ## Dessiner une maison
 
@@ -126,7 +126,7 @@ maison(120, 40)
 
 ## Taille de la maison
 
-Maintenant nous modifions la fonction pour inclure non seulement la position mais aussi la taille de la maison comme paramètres.
+Maintenant nous modifions la fonction pour inclure non seulement la position, mais aussi la taille de la maison comme paramètres.
 
 ```{codeplay}
 :file: def6.py
@@ -151,7 +151,7 @@ maison(120, 40, 40)
 
 ## Couleur de la maison
 
-Maintenant nous modifions la fonction pour inclure non seulement la position, la taille mais également la couleur de la maison comme paramètres.
+Maintenant nous modifions la fonction pour inclure non seulement la position, la taille, mais également la couleur de la maison comme paramètres.
 
 ```{codeplay}
 :file: def7.py

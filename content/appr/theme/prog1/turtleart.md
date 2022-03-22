@@ -6,7 +6,7 @@ Dans ce chapitre, nous présentons toute une série d'idées artistiques, inspir
 – Albert Einstein
 
 ```{question}
-Quand vous programmez vous pouvez
+Quand vous programmez, vous pouvez
 
 {v}`créer`  
 {v}`inventer`  
@@ -14,7 +14,7 @@ Quand vous programmez vous pouvez
 {v}`comprendre`
 ```
 
-## Etoile
+## Étoile
 
 Une **étoile** est un point lumineux dans le ciel nocturne, et par extension, une figure géométrique représentant des rayons partant du centre.
 
@@ -351,7 +351,7 @@ branche(70, 6, 60)
 
 ## Bulles
 
-Les bulles de savon sont des cercles multi-colores.
+Les bulles de savon sont des cercles multicolores.
 
 ```{codeplay}
 :file: art15.py
@@ -393,7 +393,7 @@ for i in range(3):
 
 ## Modulo
 
-Le nom Modulo fait référence à l'opérateur **modulo** en mathématique `%` et à la structure **modulaire** du cour.
+Le nom Modulo fait référence à l'opérateur **modulo** en mathématique `%` et à la structure **modulaire** du cours.
 
 ```{codeplay}
 :file: art17.py

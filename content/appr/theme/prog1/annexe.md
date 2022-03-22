@@ -1,6 +1,6 @@
 # Annexe
 
-Dans ce chapitre, nous présentons quelques outils pour écrire du code en Python : 
+Dans ce chapitre, nous présentons quelques outils pour écrire du code en Python :
 
 - console
 - éditeur geek nano
@@ -24,19 +24,19 @@ IDE est l'abbréviation de *Integrated Development Environment*.  Il comporte un
 
 ## Console
 
-Vous pouvez lancer une séance Python directement dans un terminal. Sur un Mac, démarrez l'application **Terminal**. Dans la console qui s'ouvre, tapez `python3`. Ceci ouvre une séance interactive de Python. 
+Vous pouvez lancer une séance Python directement dans un terminal. Sur un Mac, démarrez l'application **Terminal**. Dans la console qui s'ouvre, tapez `python3`. Ceci ouvre une séance interactive de Python.
 
 Après avoir affiché la version de Python (ci-dessous c'est 3.10.0), la console Python affiche un invite (prompt en anglais) qui consiste de 3 chevrons (`>>>`).
 
-![](media/terminal.png)
+![terminal](media/terminal.png)
 
 Entrez une expression en Python, par exemple `1 + 2`. Appuyez sur la touche `Enter` pour évaluer l'expression et afficher le résultat sur la ligne suivante. Un nouveau invite est alors présenté.
 
-Essayez d'entrer une commande multi-ligne, par exemple une boucle `for`. L'invite change alors vers un invite de continuation (`...`). Pour évaluer une séquence multi-ligne, terminez par une ligne vide. 
+Essayez d'entrer une commande multi-ligne, par exemple une boucle `for`. L'invite change alors vers un invite de continuation (`...`). Pour évaluer une séquence multi-ligne, terminez par une ligne vide.
 
 Vous ne pouvez pas éditer une expression qui est déjà exécutée. Vous ne pouvez seulement ajouter une nouvelle expression après l'invite (`>>>`) de la dernière ligne.
 
-![](media/fleches-clavier.png)
+![touches flèches](media/fleches-clavier.png)
 
 Par contre vous pouvez utiliser les flèches haut/bas pour accéder à l'historique de vos expressions. Ceci vous permet de réutiliser et modifier des expressions que vous avez déjà utilisées auparavant.
 
@@ -49,17 +49,17 @@ L'éditeur **nano** est un simple éditeur de texte pour Unix, Linux et Mac. Ce 
 
 Ceci ouvre l'éditeur nano avec un nouveau fichier nommé `hello.py`. Entrez alors les deux lignes de code suivant.
 
-![](media/nano.png)
+![éditeur nano](media/nano.png)
 
-L'éditeur nano utilise la touche `ctrl` pour ses commandes : 
+L'éditeur nano utilise la touche `ctrl` pour ses commandes :
 
 - appuyez sur `ctrl+O` pour sauvegarder le fichier,
 - appuyez sur `ctrl+X` pour quitter nano.
 
-Ensuite vous pouvez lancer votre programme depuis la console avec 
+Ensuite vous pouvez lancer votre programme depuis la console avec
 `python3 hello.py` qui affiche quelque chose comme ceci :
 
-```
+```text
 Entrez votre nom: Guido
 bonjour Guido
 ```
@@ -76,16 +76,16 @@ L'éditeur IDLE
 - propose l'auto-complétion des commandes,
 - gère automatiquement l'indentation.
 
-![](media/IDLE_console.png)
+![console IDLE](media/IDLE_console.png)
 
-L'éditeur IDLE permet également d'éditer un fichier code et de l'exécuter avec la commande **Run > Run Module** (F5). 
+L'éditeur IDLE permet également d'éditer un fichier code et de l'exécuter avec la commande **Run > Run Module** (F5).
 Plusieurs fenêtres de code peuvent être ouvertes simultanément. Vous pouvez les regrouper dans une seule fenêtre avec la commande **Window > Merge All Windows**.
 
-![](media/IDLE_editor.png)
+![éditeur IDLE](media/IDLE_editor.png)
 
 Dans le menu **Help > Turtle Demo** vous trouvez des exemples programmés avec le module `turtle`. Dans le menu **Exemple** choisissez par exemple `clock` et appuyez sur **Start**.
 
-![](media/IDLE_clock.png)
+![IDLE démo](media/IDLE_clock.png)
 
 Les avantages par rapport à Thonny:
 
@@ -98,7 +98,7 @@ Pour débuter avec Python, nous proposons d'utiliser l'éditeur Thonny, qui a é
 
 Comme IDLE, l'éditeur Thonny est aussi entièrement programmé en Python en utilisant l'interface graphique Tkinter.
 
-![](media/thonny_ide.png)
+![éditeur Thonny](media/thonny_ide.png)
 
 Les avantages de Thonny par rapport à IDLE sont qu'il :
 
@@ -114,7 +114,7 @@ Visual Studio Code est un éditeur de code multi-plateforme, open source et grat
 
 Dans le sondage auprès des développeurs réalisé par Stack Overflow en 2021, Visual Studio Code a été classé comme l'outil d'environnement de développement le plus populaire, avec 71 % des 82 000 répondants déclarant l'utiliser.
 
-![](media/vscode.png)
+![éditeur VS Code](media/vscode.png)
 
 ## Jupyter Lab
 
@@ -124,7 +124,7 @@ Jupyter Lab est un environnement de programmation qui combine code et document d
 - Cherchez le module `jupyterlab``
 - Cliquez sur **Installer**
 
-![](media/jupyterlab_install.png)
+![éditeur Jupyter Lab](media/jupyterlab_install.png)
 
 Ensuite vous devez lancer un serveur Jupyter en local sur votre ordinateur.
 
@@ -136,7 +136,7 @@ La commande `cd` (changer directory) vous place dans votre dossier de l'utilisat
 
 Vous devez laisser ouvert le terminal, pour pouvoir utiliser Jupyter Lab dans le navigateur.
 
-Jupyter Lab est un éditeur qui vous permet d'afficher un navigateur de fichier qui vous permet d'ouvrir et afficher : 
+Jupyter Lab est un éditeur qui vous permet d'afficher un navigateur de fichier qui vous permet d'ouvrir et afficher :
 
 - des Jupyter notebooks (.ipynb)
 - des consoles
@@ -199,7 +199,7 @@ Sur un Mac un document en format EPS s'ouvre avec le programme Aperçu. Vous pou
 - Choisissez la qualité (entre minimale/maximale)
 - Choisissez la résolution (pixels/pouce)
 
-![](media/eps_jpg.png)
+![exporter en JPG](media/eps_jpg.png)
 
 ## Créer un fond d'écran
 
@@ -221,11 +221,9 @@ Screen().getcanvas().postscript(file='wallpaper.eps')
 done()
 ```
 
-Avec Aperçu ouvrez le fichier `wallpaper.eps`. 
+Avec Aperçu ouvrez le fichier `wallpaper.eps`.
 Doublez la résolution de 72 à 144 pixels/pouce
 
-![](media/eps_png.png)
+![exporter en PNG](media/eps_png.png)
 
 Ceci donne comme résultat un fichier PNG avec une résolution de 1920 x 1080 pixels.
-
-

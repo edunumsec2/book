@@ -1,10 +1,10 @@
 # Interrompre - `ontimer`
 
-Dans ce chapitre nous allons voir comment un programme peut planifier d'appeler une fonction dans le future. Cette fonctionnalité est importante pour programmer des simulations, des animations, des jeux-vidéos, des horloges, etc. Nous allons voir que :
+Dans ce chapitre nous allons voir comment un programme peut planifier d'appeler une fonction dans le futur. Cette fonctionnalité est importante pour programmer des simulations, des animations, des jeux vidéos, des horloges, etc. Nous allons voir que :
 
 - la fonction `ontimer(f, t)` installe une fonction qui va être appelée après `t` ms,
 - après `t` ms le programme actuel s'interrompt pour exécuter la fonction `f()`,
-- le module `time` met a disposition des fonctions de date et de temps.
+- le module `time` met à disposition des fonctions de date et de temps.
 
 ```{question}
 La méthode `ontimer()` installe une fonction de rappel qui
@@ -133,7 +133,7 @@ write(date, font=(None, 40), align='center')
 ## Horloge automatique
 
 La fonction `horloge()` affiche le temps et la date.
-Comme dernière instructions nous installons une fonction de rappel, cette même fonction, qui sera appelé de nouveau dans 1000 ms.
+Comme dernière instruction nous installons une fonction de rappel, cette même fonction, qui sera appelée de nouveau dans 1000 ms.
 
 ```{codeplay}
 :file: ontimer7.py
@@ -152,7 +152,7 @@ horloge()
 
 ## Chronométrer
 
-Pour avoir une idée du temps d'exécutions d'une itération, nous mesurons le temps pour `n` itérations et nous calculons la durée d'une itération en micro-secondes (um).
+Pour avoir une idée du temps d'exécutions d'une itération, nous mesurons le temps pour `n` itérations et nous calculons la durée d'une itération en microsecondes (um).
 
 ```{codeplay}
 :file: ontimer8.py
@@ -184,9 +184,9 @@ chrono('multiplication')
 
 ```{caution}
 Sur ce site votre code Python est traduit en JavaScript et exécuté par [Skulpt](https://skulpt.org) directement dans votre navigateur.
-Une instruction de base prends environs 10 µs. 
+Une instruction de base prend environ 10 µs. 
 
-Si vous téléchargez le fichier et exécutez votre code directement en Python avec un éditeur externe comme Thonny, les instructions de base exécutent 100 fois plus vite (environs 0.1 µs). Par contre pour ce qui concerne l'affichage, les vitesses sont très comparable, ce que vous pouvez constater danas l'exemple suivant.
+Si vous téléchargez le fichier et exécutez votre code directement en Python avec un éditeur externe comme Thonny, les instructions de base exécutent 100 fois plus vite (environ 0.1 µs). Par contre pour ce qui concerne l'affichage, les vitesses sont très comparables, ce que vous pouvez constater dans l'exemple suivant.
 ```
 
 ## Vitesse d'affichage
@@ -261,7 +261,7 @@ done()
 
 ### Tetris
 
-Les flèches gauche/droite permettent de déplacer le tétronimo. Programmez les touches 
+Les flèches gauche/droite permettent de déplacer le tétronimo. Programmez les touches :
 
 - haut/bas pour le tourner,
 - espace pour le faire tomber.

@@ -6,7 +6,7 @@ Le but du jeu est d'aligner une suite de 4 pions de même couleur sur une grille
 
 ![puissance4](media/puissance4.png)
 
-Tour à tour, les deux joueurs placent un pion dans la colonne de leur choix, le pion coulisse alors jusqu'à la position la plus basse possible dans la dite colonne à la suite de quoi c'est à l'adversaire de jouer. Le vainqueur est le joueur qui réalise le premier un alignement (horizontal, vertical ou diagonal) consécutif d'au moins quatre pions de sa couleur.
+Tour à tour, les deux joueurs placent un pion dans la colonne de leur choix, le pion coulisse alors jusqu'à la position la plus basse possible dans ladite colonne à la suite de laquelle c'est à l'adversaire de jouer. Le vainqueur est le joueur qui réalise le premier un alignement (horizontal, vertical ou diagonal) consécutif d'au moins quatre pions de sa couleur.
 
 ## Version console
 
@@ -39,7 +39,7 @@ x = int(input('Entrez votre colonne: '))
 
 ## Alterner les tours
 
-Le jeux peux continuer pour un maximum de 42 tours.
+Le jeu peut continuer pour un maximum de 42 tours.
 
 ```{codeplay}
 state = [[0, 0, 0, 0, 0, 0, 0],
@@ -206,7 +206,7 @@ for k in range(m + n - 1):
 
 ## Puissance 4
 
-Voici un débout d'une version graphique.
+Voici un début d'une version graphique.
 Essayez de compléter le jeu.
 
 ```{codeplay}

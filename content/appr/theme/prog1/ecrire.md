@@ -1,6 +1,6 @@
 # Ecrire - `str`
 
-Dans ce chapitre, nous allons nous intéresser au texte. Le texte est une catégorie d'information qui est essentiel dans beaucoup de programmes, tel qu'une application de messagerie ou un programme de traitement de texte.
+Dans ce chapitre, nous allons nous intéresser au texte. Le texte est une catégorie d'information qui est essentielle dans beaucoup de programmes, tels qu'une application de messagerie ou un programme de traitement de texte.
 
 <!-- ![text-based](media/text_game.jpg)
 
@@ -28,7 +28,7 @@ Un string informatique est
 
 ## Délimiter un texte
 
-Tout caractère imprimable peux être utilisé pour créer un texte :
+Tout caractère imprimable peut être utilisé pour créer un texte :
 
 - lettres (`a...z` et `A...Z`)
 - chiffres (`0...9`)
@@ -47,7 +47,7 @@ Pour différencier un morceau de texte du reste d'un programme, il doit être d�
 print('apostrophe')
 print("guillemets doubles")
 print("""
-Délimité avec trois guillements, 
+Délimité avec trois guillemets, 
 le texte peut s'étaler sur plusieurs lignes.
 """)
 ```
@@ -91,7 +91,7 @@ La chaîne vide (`""`) a une longueur de 0.
 print(len('bonjour'))
 print(len(""))
 print(len("""
-Délimité avec trois guillements, 
+Délimité avec trois guillemets, 
 le texte peut s'étaler sur plusieurs lignes.
 """))
 ```
@@ -112,7 +112,7 @@ print('=' * len(x))
 
 ## Le code ASCII
 
-Le code ASCII  (American Standard Code for Information Interchange) était un des premiers standards utilisé pour représenter des symboles dans un ordinateur. Avec initialement 7 et plus tard 8 bits il désigne un ensemble de lettres, chiffres, symboles et ponctuations.
+Le code ASCII  (American Standard Code for Information Interchange) était un des premiers standards utilisés pour représenter des symboles dans un ordinateur. Avec initialement 7 et plus tard 8 bits, il désigne un ensemble de lettres, chiffres, symboles et ponctuations.
 
 Aujourd'hui le standard Unicode permet d'encoder la totalité des symboles utilisés dans les différents langages du monde.
 
@@ -170,7 +170,7 @@ print(r"""
 
 **Exercice** : Le site [asciiart.eu](https://www.asciiart.eu) contient beaucoup d'exemples d'art ASCII. Trouvez-en un et copiez-le dans un programme Python.
 
-## Echapper un caractère
+## Échapper un caractère
 
 Les symboles `'` et `"` sont utilisés pour délimiter du texte.
 Si nous voulons utiliser ces caractères à l'intérieur de la chaîne, nous devons les échapper avec une barre oblique en arrière `\`.
@@ -185,7 +185,7 @@ Si nous voulons imprimer le symbole d'échappement, nous devons l'échapper éga
 
 ```{codeplay}
 :file: str11.py
-print('c\'est la \\barre oblique\\ en arière.')
+print('c\'est la \\barre oblique\\ en arrière.')
 ```
 
 ## Une chaîne brute
@@ -202,7 +202,7 @@ print(r'c\'est la \\barre oblique\\ en arrière.')
 ## Retour à la ligne
 
 Chaque commande `print()` se termine avec un retour à la ligne.
-Pour insérer un retour à la ligne à l'intérieur d'une chaîne de caractères nous utilisons la séquences d'échappement `\n` (newline).
+Pour insérer un retour à la ligne à l'intérieur d'une chaîne de caractères nous utilisons la séquence d'échappement `\n` (newline).
 
 ```{codeplay}
 :file: str13.py
@@ -227,9 +227,9 @@ print('12\tclavier\t25.95')
 
 Un  émoji (絵文字) est un terme issu du japonais pour désigner les pictogrammes utilisés dans les messages électroniques et les pages web japonaises, qui se sont répandus dans le monde entier.
 
-Le mot émoji signifie littéralement « image » (e) + « lettre » (moji) ; la ressemblance avec « émotion » est un jeu de mot interculturel.
+Le mot émoji signifie littéralement « image » (e) + « lettre » (moji) ; la ressemblance avec « émotion » est un jeu de mots interculturel.
 
-Un émoji peut être utilisée comme un caractère à l'intérieur d'un texte.
+Un émoji peut être utilisé comme un caractère à l'intérieur d'un texte.
 Nous pouvons le répéter avec l'opérateur `*` et obtenir son code **Unicode** avec la fonction `ord(c)`.
 
 ```{codeplay}
@@ -258,7 +258,7 @@ Ce bug sera corrigé avec Thonny 4.0 qui utilisera la version Tk 8.6.12.
 Vous pouvez utiliser les émojis sans problème avec l'éditeur IDLE qui lui utilise Tk 8.6.11.
 ```
 
-Vous pouvez utilisez dans Thonny sans problème les anciens pictogrammes en noir et blanc. Voici les codes Unicode de
+Vous pouvez utiliser dans Thonny sans problème les anciens pictogrammes en noir et blanc. Voici les codes Unicode de
 [symboles divers](https://fr.wikipedia.org/wiki/Table_des_caractères_Unicode_(2000-2FFF)#Symboles_divers).
 
 ```{codeplay}
@@ -381,7 +381,7 @@ Le jeu du [pendu](https://fr.wikipedia.org/wiki/Pendu_(jeu)) consiste à trouver
 
 ### Dévoiler un mot
 
-Dans le jeu du pendu un mot est affiché avec des traits au début `_ _ _ _ _`
+Dans le jeu du pendu, un mot est affiché avec des traits au début `_ _ _ _ _`
 
 ```{codeplay}
 mot = 'potiron'
@@ -398,7 +398,7 @@ for c in mot:
 print(mot2)
 ```
 
-Nous pouvons écrire ce code plus compacte en utilisant l'expression
+Nous pouvons écrire ce code plus compact en utilisant l'expression
 `valeur1 if condition else valeur2`
 
 ```{codeplay}
@@ -612,7 +612,7 @@ for i in range(10):
 
 ## Exercices
 
-### Le pendu
+### Le jeu du pendu
 
 Créez le jeu du pendu avec un répertoire de 50 mots dans un tuple. Votre programme choisit un de ces mots aléatoirement avec la fonction `choice()` du module `random`, comme montré ci-dessous.
 

@@ -55,10 +55,9 @@ Quel est le résultat de l'expression `'12' + '12'` ?
 {f}`1221`  
 ```
 
-
 ## Puissance
 
-En Python l'opérateur de puissance est `**`. Ne le confondez pas avec le symbole `^` utilisé dans d'autre langages tel que Excel.
+En Python l'opérateur de puissance est `**`. Ne le confondez pas avec le symbole `^` utilisé dans d'autres langages tel qu’Excel.
 
 ```{codeplay}
 print('le carré de 7 est')
@@ -82,10 +81,9 @@ print("la diagonale d'un rectangle de 3 sur 6 est")
 print((3 ** 2 + 6 ** 2) ** 0.5)
 ```
 
-
 ## Division entière
 
-En Python, nous avons un opérateur spéciale pour la division entière (`//`) ainsi que pour le reste de la division entière. L'opérateur pour le reste de la division entière est `%` est s'appelle **modulo**.
+En Python, nous avons un opérateur spécial pour la division entière (`//`) ainsi que pour le reste de la division entière. L'opérateur pour le reste de la division entière est `%` est s'appelle **modulo**.
 
 ```{codeplay}
 print('division')
@@ -107,7 +105,7 @@ Quel est le résultat de l'expression `10 % 3` ?
 
 ## Les variables
 
-Une **variable** est une manière de designer une valeur par un nom. Le terme technique pour associer une valeur à une variable est **affectation** et elle utilise le symbole `=` (égal).
+Une **variable** est une manière de désigner une valeur par un nom. Le terme technique pour associer une valeur à une variable est **affectation** et elle utilise le symbole `=` (égal).
 
 Mais faites attention ! Il ne s'agit pas d'une équation dans le sens mathématique. La variable doit toujours figurer seule à gauche.
 La forme générique d'une affectation est `var = expression`.
@@ -125,7 +123,7 @@ print('surface =')
 
 **Exercice** : Ajoutez le calcul de la circonférence et de la surface du cercle.
 
-Pour nommer une variable vous pouvez utiliser :
+Pour nommer une variable, vous pouvez utiliser :
 
 - lettres (`a...z` et `A...Z`),
 - chiffres (`0...9`),
@@ -223,7 +221,7 @@ Nous reconnaissons la différence entre un entier (`int`) et un nombre à virgul
 ## Demander un nombre
 
 La fonction `input()` permet d'obtenir une entrée de l'utilisateur. Mais attention !
-La valeur retournée est une chaine de caractères (de type string `str`). 
+La valeur retournée est une chaine de caractères (de type string `str`).
 
 ```{codeplay}
 x = input('Entrez un nombre entier: ')
@@ -232,7 +230,7 @@ print(x * 5)
 print(int(x) * 5)
 ```
 
-Pour pouvoir l'utiliser dans un calcul nous devons la transformer en virgule flottante avec la fonction de conversion `float()`.
+Pour pouvoir l'utiliser dans un calcul, nous devons la transformer en virgule flottante avec la fonction de conversion `float()`.
 
 ```{codeplay}
 r = float(input('Entrez le rayon: '))
@@ -247,13 +245,13 @@ print('surface =')
 
 **Exercice** : Complétez le programme pour afficher la surface du cercle.
 
-Nous pouvons également créer des programmes où nous demandons plusieurs valeurs à l'utilisateur. Cette fois, nous permettons seulement l'utilisation de nombres entiers, et donc transformons la chaine obtenu avec `int()` en nombre entier.
+Nous pouvons également créer des programmes où nous demandons plusieurs valeurs à l'utilisateur. Cette fois, nous permettons seulement l'utilisation de nombres entiers, et donc transformons la chaine obtenue avec `int()` en nombre entier.
 
 ```{codeplay}
 :file: int8.py
 print('Rectangle')
 a = int(input('Entrez la largeur: '))
-b = int(input('Entrez la longeur: '))
+b = int(input('Entrez la longueur: '))
 
 print('surface =', a * b)
 print('périmètre =')
@@ -306,7 +304,7 @@ for (a, b) in ((12, 35), (23, 11), (55, 23)):
 
 ## Erreurs
 
-En utilisant les calculs, nous allons rencontrer encore d'autres types d'erreurs. Pour bien programmer vous devez savoir interpréter les messages d'erreur. Ces messages vous indiquent sur quelle ligne du programme il y a quel type d'erreur.
+En utilisant les calculs, nous allons rencontrer encore d'autres types d'erreurs. Pour bien programmer, vous devez savoir interpréter les messages d'erreur. Ces messages vous indiquent sur quelle ligne du programme il y a quel type d'erreur.
 
 ### SyntaxError
 
@@ -365,13 +363,13 @@ print(f(20000))
 
 - Téléchargez l'exercice
 - Lancez un éditeur externe (tel que Thonny)
-- Depuis l'éditeur ouvrez le fichier téléchargé
+- Depuis l'éditeur, ouvrez le fichier téléchargé
 - Remplacez ... par votre code
 - Déposez vos exercices sur Moodle
 
 ### Rectangle
 
-Faites un programme qui demande à l'utilisateur les côtés a et b d'un rectangle et calcule ensuite 
+Faites un programme qui demande à l'utilisateur les côtés a et b d'un rectangle et calcule ensuite
 
 le périmètre
 
@@ -389,14 +387,14 @@ $$ d = \sqrt{a^2 + b^2} $$
 :file: rectangle.py
 print('Le rectangle')
 
-a = float(input('Entrez la longuer a: '))
+a = float(input('Entrez la longueur a: '))
 ...
 
 ```
 
 ### Cercle
 
-Faites un programme qui demande à l'utilisateur le rayon d'un cercle et calcule ensuite 
+Faites un programme qui demande à l'utilisateur le rayon d'un cercle et calcule ensuite
 
 le diamètre
 
@@ -421,7 +419,7 @@ r = float(input('Entrez le rayon r: '))
 
 ### Sphère
 
-Faites un programme qui demande à l'utilisateur le rayon d'une sphère et calcule ensuite 
+Faites un programme qui demande à l'utilisateur le rayon d'une sphère et calcule ensuite
 
 le diamètre
 
@@ -439,14 +437,14 @@ $$ V = \frac{4 \pi r^3}{3} $$
 :file: sphere.py
 print('La sphère')
 
-r = floatt(input('Entrez le rayon r: '))
+r = float(input('Entrez le rayon r: '))
 ...
 
 ```
 
 ### Quiz de multiplication
 
-Créez un quiz de multiplication. 
+Créez un quiz de multiplication.
 
 - Complétez pour avoir 10 questions
 - Corrigez les erreurs
@@ -471,7 +469,7 @@ print('Votre score est')
 
 ### Quiz de vocabulaire
 
-Créez un quiz de vocabulaire français-anglais. 
+Créez un quiz de vocabulaire français-anglais.
 
 - Complétez pour avoir 10 questions
 - Corrigez les erreurs
@@ -500,9 +498,9 @@ print('Votre score est')
 
 La plate-forme d'apprentissage ludique [Kahoot!](https://fr.wikipedia.org/wiki/Kahoot!) est utilisée comme technologie éducative dans les écoles et autres établissements d'enseignement.
 
-Ses jeux d’apprentissage, *Kahoots*, sont des questionnaires à choix multiples qui permettent à plusieurs utilisateurs de jouer simultanément. Le site est accessible via un navigateur Web mais aussi téléchargable sur smartphone.
+Ses jeux d’apprentissage, *Kahoots*, sont des questionnaires à choix multiples qui permettent à plusieurs utilisateurs de jouer simultanément. Le site est accessible via un navigateur Web, mais aussi téléchargeable sur smartphone.
 
-Créez un quiz avec des question sur un sujet de culture générale, dans le style des quiz sur le site Kahoot.
+Créez un quiz avec des questions sur un sujet de culture générale, dans le style des quiz sur le site Kahoot.
 
 - Complétez pour avoir 10 questions
 - Ajoutez le calcul du score

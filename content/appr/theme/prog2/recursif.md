@@ -1,6 +1,6 @@
 # Revenir - `f(n)`
 
-Dans ce chapitre nous allons découvrir la **récursivité**. La définition d'une fonction `f(n)` qui contient à l'intérieur de sa définition le terme `f(n-1)` représente une **fonction récursive**, c'est-à-dire une fonction qui revient vers elle-même. Elle s'auto-appelle souvent avec une valeur plus simple, par exemple `n-1` au lieu de `n`. Vous allez voir que :
+Dans ce chapitre, nous allons découvrir la **récursivité**. La définition d'une fonction `f(n)` qui contient à l'intérieur de sa définition le terme `f(n-1)` représente une **fonction récursive**, c'est-à-dire une fonction qui revient vers elle-même. Elle s'autoappelle souvent avec une valeur plus simple, par exemple `n-1` au lieu de `n`. Vous allez voir que :
 
 - une boucle `while True:` donne une boucle infinie,
 - le nombre de fois une fonction peut s'appeler soi-même est limité,
@@ -10,16 +10,16 @@ Dans ce chapitre nous allons découvrir la **récursivité**. La définition d'u
 Une fonction récursive est souvent choisie parce qu'elle
 
 {f}`est plus rapide`  
-{f}`utilise moins de mémoire intérmédiaire`  
+{f}`utilise moins de mémoire intermédiaire`  
 {v}`est plus facile à comprendre`  
 {v}`est plus facile à écrire`
 ```
 
 ## Boucle infinie
 
-Il est très facile de créer une boucle qui ne se termine jamais. La façon standard pour une boucle infini est d'utiliser le terme `while True:` qui répète à l'infini le bloc qui suit, car la condition de terminaison est toujours vraie.
+Il est très facile de créer une boucle qui ne se termine jamais. La façon standard pour une boucle infinie est d'utiliser le terme `while True:` qui répète à l'infini le bloc qui suit, car la condition de terminaison est toujours vraie.
 
-Souvent ceci est un bug, et représente le cas ou l'exécution reste bloqué dans une boucle et le programme ne réagit plus.
+Souvent ceci est un bug, et représente le cas où l'exécution reste bloquée dans une boucle et le programme ne réagit plus.
 
 ```{codeplay}
 :file: fn1.py
@@ -57,7 +57,7 @@ print('continuer')
 
 ## Fonction récursive
 
-Nous faisons maintenant la même chose, mais cette fois en utilisant une fonction récursive. Dans ce premier exemple nous avons pas de condition de terminaison, et donc la fonction est appelée en continue. La fonction `f(n)` imprime la valeur `n` et s'appelle ensuite elle même avec une valeur plus petite `f(n-1)` et ainsi de suite.
+Nous faisons maintenant la même chose, mais cette fois en utilisant une fonction récursive. Dans ce premier exemple, nous n’avons pas de condition de terminaison, et donc la fonction est appelée en continu. La fonction `f(n)` imprime la valeur `n` et s'appelle ensuite elle-même avec une valeur plus petite `f(n-1)` et ainsi de suite.
 
 ```{codeplay}
 :file: fn4.py
@@ -68,7 +68,7 @@ def f(n):
 f(100)
 ```
 
-Le comportement est différent. Nous constatons que la fonction s'arrête après quelques centaines d'appels récursifs. C'est une limite qui peut être défini dans le compilateur Python.
+Le comportement est différent. Nous constatons que la fonction s'arrête après quelques centaines d'appels récursifs. C'est une limite qui peut être définie dans le compilateur Python.
 
 ## Condition de terminaison
 
@@ -122,7 +122,7 @@ for i in range(1, 14):
 
 ## Flocon de Koch
 
-La courbe de Koch est un ligne coupé en 3 avec un triangle isocèle dessiné sur le segment du milieu. Il est possible d'appliquer cette règle de nouveau sur les 4 segments obtenus, et ainsi de suite.
+La courbe de Koch est une ligne coupée en 3 avec un triangle isocèle dessiné sur le segment du milieu. Il est possible d'appliquer cette règle de nouveau sur les 4 segments obtenus, et ainsi de suite.
 
 ```{codeplay}
 :file: fn8.py
