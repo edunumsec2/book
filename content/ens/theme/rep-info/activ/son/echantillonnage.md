@@ -172,7 +172,7 @@ Enfin, une troisième vidéo diffusée à vitesse lente (0,25) permet de compren
 ```{youtube} XFyT1bsSnHI
 `````
 
-La molécule (le bouchon ici) vibre verticalement ; dans le phénomène de propagation du son, les molécules vibrent horizontalement.
+La molécule (illustrée par le bouchon ici) vibre verticalement ; dans le phénomène de propagation du son, les molécules vibrent horizontalement.
 <br>
 
 L'image animée ci dessous illustre la propagation d'une onde telle qu'elle pourrait se visualiser après l'impact d'une pierre à la surface de l'eau par exemple.
