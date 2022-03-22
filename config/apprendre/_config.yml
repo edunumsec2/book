@@ -3,7 +3,7 @@
 
 title: Apprendre
 subtitle: Version du 1 décembre 2021
-author: Groupe de travail DGEP, EPFL, HEP, UNIL
+author: Groupe de travail DGEP, EPFL, HEP Vaud, UNIL
 logo: logo_modulo.svg
 exclude_patterns: ['**/maitre.md', 'content/ens/**', '**/old_**']
 
@@ -34,6 +34,7 @@ sphinx:
     html_favicon: favicon.ico
     html_extra_path: ['../assets']
     html_theme_options:
+      search_bar_text: "Rechercher…"
       use_download_button: true
       repository_url: https://github.com/edunumsec2/book
       use_issues_button: true

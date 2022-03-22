@@ -24,7 +24,7 @@ Un microprocesseur est un processeur construit avec un circuit intégré, c'est-
 ```
 
 
-## L'horloge
+## 5.1. Horloge et accès mémoire
 Un processeur est un dispositif synchrone, ce qui signifie que les opérations à l'intérieur du processeur se déroulent de manière synchrone à un temps donné. Pour assurer cette simultanéité, il faut comme pour un orchestre, donner le tempo. Cette fonction de métronome est assurée par une horloge, ou un signal d'horloge. Cette horloge est constituée d'un simple signal carré <!-- TODO: ajouter image --> dont la fréquence atteint aujourd'hui plusieurs gigahertz, c'est-à-dire plusieurs milliards de cycles par seconde.
 
 ```{admonition} La notion de *synchronisation*
@@ -103,20 +103,24 @@ Le compteur de programme (registre **PC** pour *Program Counter*) contient l'adr
 ### Le compteur de pile
 Le compteur de pile (registre **SP** pour *Stack Pointer*) contient la position sur une pile. Cette dernière est une zone mémoire à laquelle on ne peut pas accéder aléatoirement, mais uniquement en empilant ou dépilant des éléments.
 
-### L'unité arithmétique et logique
+## 5.2. L'unité arithmétique et logique
 L'unité arithmétique et logique (UAL plus communément appelée ALU en abréviation anglaise) effectue tous les calculs arithmétiques et logiques. Quelques-uns de ces composants comme l'additionneur ont été abordés dans le chapitre *De la logique à l'arithmétique*.
 
 
-#### <u> Exemple : le 6502 </u>
+### <u> Exemple : le 6502 </u>
 
 Le 6502, conçu en 1975, est le premier microprocesseur grand public avec un prix de 25$ (bien en-dessous des concurrents de cette époque). Une de ses premières utilisations pour le grand public fut la console de jeux vidéo Atari 2600. A partir de 1985, Nintendo équipe la NES d'une version modifiée du 6502. Il a équipé également le célèbre Apple II. Il a donné lieu à de nombreuses versions, jusqu'aux processeurs 16 bits actuels de dernière génération.
 
 
-```{image} media/6502_pad_annot_07.png
-:width: 600
-:height: 400
+```{figure} media/6502_pad_annot_07.png
+---
+width: 600
+height: 400
+align: left
+---
+Ce schéma détaille l'ensemble des transistors du 6502. On voit également quelques-uns des éléments principaux (horloge, registres, etc)
 ```
-**Ce schéma détaille l'ensemble des transistors du 6502. On voit également quelques-uns des éléments principaux (horloge, registres, etc)**
+
 
 
 ```{admonition} Activité
@@ -145,7 +149,8 @@ Ce simulateur reproduit le fonctionnement complet du 6502 jusque dans l'activit�
 
 La partie qui suit présente de manière plus approfondie certaines spécificités des processeurs modernes.
 
-### Processeur à noyau unique
+
+## 5.3. Processeur à noyau unique
 C'est le processeur standard : un processeur à noyau unique ou CPU utilise un seul noyau à l'intérieur du processeur. 
 
 Avantages :
@@ -159,15 +164,19 @@ Inconvénients :
 C'est un processeur relativement lent. Il n'a pas une grande puissance de calcul pour traiter de grandes opérations complexes, ou plusieurs opérations à la fois.
 Comme les applications modernes nécessitent une grande puissance de traitement, un processeur monocœur qui les fait fonctionner peut se bloquer, paralysant ainsi l'ensemble du système alors « planté ».
 
-### Processeur à double cœur
+## 5.4. Processeur à double cœur
 Un processeur à double cœur possède deux cœurs pour exécuter les opérations, intégrés dans un circuit unique pour se comporter comme une seule unité - un seul processeur -, à la différence d'un système multiprocesseur ; toutefois, ces cœurs possèdent leurs propres contrôleurs et caches, ce qui leur permet de travailler plus rapidement que les processeurs à cœur unique.
 
 
-```{image} media/2coeurs.png
-:width: 600
-:height: 400
+```{figure} media/2coeurs.png
+---
+width: 600
+height: 400
+align: left
+---
+Microprocesseur bicœur
 ```
-**Microprocesseur bicœur**
+
 <br> <br>
 
 
@@ -182,21 +191,29 @@ Peu d'opérations nécessitent réellement la puissance des processeurs double c
 Pour ces raisons, de nombreux développeurs d'applications mobiles ne programment pas leurs applications pour qu'elles fonctionnent avec des processeurs à multiple cœur, les rendant ainsi incompatibles avec les mobiles qui fonctionnent toujours avec des processeurs à double ou multiple cœur.
 
 
-### Les processeurs quadricœur et autres processeurs à cœurs multiples
+## 5.5. Les processeurs quadricœur et autres processeurs à cœurs multiples
 En termes simples, un processeur quadricœur possède quatre cœurs et il en va de même pour un processeur hexacœur (six cœurs), octocœur (huit cœurs), etc.. Ces cœurs peuvent être soit sur le même circuit intégré, soit sur le même boîtier de puce.
 
-```{image} media/4coeurs.png
-:width: 600
-:height: 400
+```{figure} media/4coeurs.png
+---
+width: 600
+height: 400
+align: left
+---
+Microprocesseur quadricœur
 ```
-**Microprocesseur quadricœur**
+
 <br> 
 
-```{image} media/8coeurs.png
-:width: 600
-:height: 400
+```{figure} media/8coeurs.png
+---
+width: 600
+height: 400
+align: left
+---
+Microprocesseur octocœur
 ```
-**Microprocesseur octocœur**
+
 <br> <br>
 
 
@@ -221,7 +238,7 @@ La plupart de la gamme Ryzen d’AMD propose le multithreading, y compris les mo
 
 
 
-### Le pipeline
+## 5.6. Le pipeline
 
 On l'a vu, l'exécution d'une instruction par le microprocesseur implique plusieurs opérations : accès à la mémoire en lecture et en écriture, accès aux registres en lecture et en écriture, opération logique. Pour optimiser la vitesse d'exécution, les processeurs modernes effectuent en série ces opérations. Ainsi, alors que les opérations logiques d'une instruction sont effectuées, l'instruction précédente est déjà chargée en mémoire. La difficulté de ce type d'optimisation réside dans le fait que des branchements conditionnels provoquent l'annulation des instructions déjà chargées. Pour optimiser encore ce genre de procédé, les processeurs font de la prédiction dans l'exécution. Ces optimisations sont extrêmement compliquées à gérer.
 

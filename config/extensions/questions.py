@@ -51,8 +51,9 @@ def depart_question_html(self, node):
 def visit_check_buttons_html(self, node):
     tag = self.starttag(node, "div", CLASS="controls")
     self.body.append(tag.strip())
-    self.body.append("<input type=\"button\" class=\"check btn btn-primary\" value=\"Vérifier ma réponse\" />")
-    self.body.append("<input type=\"button\" class=\"show btn btn-secondary\" value=\"Afficher la réponse\" />")
+    self.body.append("<button type=\"button\" class=\"reset btn btn-secondary\"><i class=\"fa fa-redo\"></i> Effacer</button>")
+    self.body.append("<button type=\"button\" class=\"show btn btn-secondary\"><i class=\"fa fa-eye\"></i> Montrer</button>")
+    self.body.append("<button type=\"button\" class=\"check btn btn-primary\"><i class=\"fa fa-question\"></i> Vérifier</button>")
 
 def depart_check_buttons_html(self, node):
     self.body.append("</div>")
@@ -79,15 +80,35 @@ class Question(SphinxDirective):
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
+        admonition += label
+
+        def isSeparatorLine(line):
+            line = line.strip()
+            return len(line) >= 3 and line == "=" * len(line)
+        
+        feedback_start = None
+        for i, line in enumerate(self.content):
+            if isSeparatorLine(line):
+                feedback_start = i
+                break
+        
+        question_content = self.content
+        feedback_content = None
+        if feedback_start is not None:
+            question_content = self.content[:feedback_start]
+            feedback_content = self.content[feedback_start+1:]
 
         content = nodes.container("", is_div=True, classes=["question-content"])
-        self.state.nested_parse(self.content, self.content_offset, content)
+        self.state.nested_parse(question_content, self.content_offset, content)
+        admonition += content
 
         buttons = check_buttons("")
-
-        admonition += label
-        admonition += content
         admonition += buttons
+
+        if feedback_content is not None:
+            feedback = nodes.container("", is_div=True, classes=["question-feedback"])
+            self.state.nested_parse(feedback_content, self.content_offset, feedback)
+            admonition += feedback
 
         container += admonition
 

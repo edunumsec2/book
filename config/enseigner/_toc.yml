@@ -7,19 +7,24 @@ parts:
   chapters: 
   - file: content/ens/theme/rep-info/intro
     sections:
-      - file: content/ens/theme/rep-info/support/presentation
+      - file: content/ens/theme/rep-info/activ/presentation
         sections:
-          - file: content/ens/theme/rep-info/support/son/visu-et-ecoute-son
+          - file: content/ens/theme/rep-info/activ/entiers/magie-binaire/magie_binaire
+          - file: content/ens/theme/rep-info/activ/images/EncoderImages/EncoderImages
+          - file: content/ens/theme/rep-info/activ/son/echantillonnage
+          - file: content/ens/theme/rep-info/activ/redondance/hamming
+          - file: content/ens/theme/rep-info/activ/compression/huffman
       - file: content/ens/theme/rep-info/exo/presentation
         sections:
           - file: content/ens/theme/rep-info/exo/caracteres/carte-perforee/exercice
           - file: content/ens/theme/rep-info/exo/redondance/radiotelephonie/exercice
           - file: content/ens/theme/rep-info/exo/images/bitmap/exercice
-          - file: content/ens/theme/rep-info/exo/images/tableur/exercice
-      - file: content/ens/theme/rep-info/activ/presentation
+          - file: content/ens/theme/rep-info/exo/images/tableur/exercice    
+      - file: content/ens/theme/rep-info/support/presentation
         sections:
-          - file: content/ens/theme/rep-info/activ/entiers/magie-binaire/magie_binaire
-          - file: content/ens/theme/rep-info/activ/images/EncoderImages/EncoderImages
+          - file: content/ens/theme/rep-info/support/son/visu-et-ecoute-son
+          - file: content/ens/theme/rep-info/support/reels/reels
+          - file: content/ens/theme/rep-info/support/redondance/shannon2    
 
   - file: content/ens/theme/prog1/maitre
     sections:
@@ -45,7 +50,11 @@ parts:
       - file: content/ens/theme/algo1/activ/formulation-solutions/maitre
       - file: content/ens/theme/algo1/consequences-automatisation/maitre
 
-  - file: content/ens/theme/archi/accueil/maitre
+  - file: content/ens/theme/archi/main
+    sections:
+      - file: content/ens/theme/archi/activites
+        sections:
+        - file: content/ens/theme/archi/ordinateurantique
 #    sections:
 #      - file: content/ens/theme/archi/systemes-logiques/maitre
 #      - file: content/ens/theme/archi/microprocesseur/maitre
@@ -54,14 +63,18 @@ parts:
 #      - file: content/ens/theme/archi/informatique-embarquee/maitre
 #      - file: content/ens/theme/archi/histoire-informatique/maitre
 
-- caption: Deuxième année
-  numbered: false
-  chapters: 
-  - file: content/ens/theme/reseaux/maitre
+### Histoire de l'informatique  
+- caption: Histoire
+  chapters:
+  - file: content/ens/theme/hist/main.md
     sections:
-    - file: content/ens/theme/reseaux/activ/routage_paquets/routage_paquets
-    - file: content/ens/theme/reseaux/activ/diffie-hellman/diffie-hellman
-    - file: content/ens/theme/reseaux/faq/maitre
+      - file: content/ens/theme/hist/jeuimitation.md
+      - file: content/ens/theme/hist/smaky.md
+  - file: content/ens/theme/hist/eval.md    
+    sections:
+      - file: content/ens/theme/hist/eval1.md
+
+
 - caption: Enjeux sociaux
   numbered: false
   chapters:

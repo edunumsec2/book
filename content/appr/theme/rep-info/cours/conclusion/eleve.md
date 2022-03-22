@@ -11,12 +11,17 @@ Dès lors se pose la problématique de la *fidélité* de la représentation, et
 
 
 
-```{image} media/la-voix-de-son-maitre_1956.jpg
-:width: 600px
-:height: 400px
-```
+```{figure} media/la-voix-de-son-maitre_1956.jpg
+---
+width: 600px
+height: 400px
+align: left
+---
 Publicité «iconique» pour la société française Pathé Marconi, du nom d'Émile Pathé (1860-1937), leader du disque phonographique dès le xixe siècle, et de Guglielmo Marconi (1874-1937), pionnier de la radio et prix Nobel de physique en 1909 
-<br> <br>
+```
+
+
+<br> 
 
 La mission de la phase d'encodage est d'assurer au mieux cela. Le codage binaire d'entiers ou de caractères s'effectue sans perte, étant effectué entre deux espaces *discrets* ou discontinus : en effet, l'espace des entiers ou des caractères se parcourt par sauts successifs d'une valeur à une autre et trouve une correspondance parfaite avec le codage binaire. Chaque entier distinct va pouvoir trouver sa représentation parfaite comme nous l'avons vu au premier chapitre via son codage binaire et sa représentation décimale associée. De même, chaque caractère trouve son équivalent binaire via la table de représentation ASCCI ou mieux UTF présentées au chapitre deux. Représenter un grand nombre entier, ou une palette plus large de caractères ne dépend dès lors que de la capacité de la machine et du nombre de bits de codage : 4, 8, 16, 32, 64 bits...
 
@@ -25,18 +30,22 @@ Le problème est tout autre dès lors qu'on s'intéresse à la représentation m
 Le dialogue entre *discret* et *continu* est caractéristique de la science notamment depuis le début du XXème siècle, en mathématiques, physique, chimie, biologie et... en informatique.
 
 
-```{image} media/image_3.png
-:width: 600px
-:height: 500px
-```
+```{figure} media/image_3.png
+---
+width: 600px
+height: 500px
+align: left
+---
 [Günther Uecker, Spirale I 1997](https://www.echosciences-grenoble.fr/articles/l-artiste-gunther-uecker-avec-ses-tableaux-de-clous-rencontre-le-discret-et-le-continu-de-la-science)
+```
+
 
 <br>
  
 
 Ce que l’oeil perçoit est en réalité une information physique *continue*, tout comme un son. Dès lors, la représentation d’une image dans l'espace *fini* de la machine - l'ordinateur - ne pourra être que partielle ; la puissance de l’ordinateur va définir la précision avec laquelle l’information va pouvoir être transmise, sa *fidélité*.
 
-La chaine complète émetteur - canal de transmission - récepteur participe de cette fidélité, et tout se joue alors dans l'ajustement entre cette chaine et la puissance de l'encodage, c'est à dire la capacité de la machine : la complexité de la représentation matricielle pour l'image (pixellisation), la finesse de discrétisation pour le son (échantillonage).
+La chaine complète émetteur - canal de transmission - récepteur participe de cette fidélité, et tout se joue alors dans l'ajustement entre cette chaine et la puissance de l'encodage, c'est à dire la capacité de la machine : la complexité de la représentation matricielle pour l'image (pixellisation), la finesse de discrétisation pour le son (échantillonnage).
 
 
 

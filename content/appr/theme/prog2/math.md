@@ -74,7 +74,7 @@ Pour utiliser un objet d'un module importé, il faut écrire de façon `module.o
 - le point `.` (dot)
 - le nom de l'objet
 
-comme par exemple `math.pi` pour la constante $\pi$. Voici quelques exemples.
+Par exemple `math.pi` pour la constante $\pi$. Voici quelques exemples.
 
 ```{codeplay}
 :file: math3.py
@@ -120,7 +120,7 @@ print('tau =', tau)
 Voici les fonctions trigonométriques:
 
 - `sin/cos` fonction sinus/cosinus
-- `sinh/cosh` fonctions sinus/cosinus hyperbolique
+- `sinh/cosh` fonctions sinus/cosinus hyperboliques
 - `tan/tan2` fonction tangente avec 1 ou 2 arguments
 - `tanh` fonction tangente hyperbolique
 
@@ -240,7 +240,7 @@ for y in range(-180, 180+1, d):
     ligne((-280, y), (280, y))
 ```
 
-**Exercice** : Mettez la distance `d` à 20 et à 10 et ré-exécutez le programme.
+**Exercice** : Mettez la distance `d` à 20 et à 10 et réexécutez le programme.
 
 ## Echelle
 
@@ -331,19 +331,19 @@ graph(atan, 'red', 'atan')
 graph(cos, 'blue', 'cos')
 ```
 
-## Equation de 2e degré
+## Équation de 2e degré
 
 ```{codeplay}
 :file: math14.py
 from turtle import *
 
 def axes():
-    back(280)
+    backward(280)
     forward(560)
     stamp()
-    back(280)
+    backward(280)
     left(90)
-    back(180)
+    backward(180)
     forward(360)
     stamp()
     up()

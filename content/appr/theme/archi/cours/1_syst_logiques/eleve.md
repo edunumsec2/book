@@ -9,7 +9,7 @@ C'est assez fascinant de se dire que des tâches a priori non mathématiques, co
 En parallèle à ce qui leur permet de faire des calculs, les ordinateurs disposent et utilisent de la mémoire. Il y en a au cœur des microprocesseurs, les _registres_, ce qu'on appelle la _mémoire vive_ — appelée aussi RAM (_Random-Access Memory_). La mémoire servant au stockage de longue durée comme disques durs et autres SSD n'est pas discutée dans cette section. L'étude des systèmes logiques permet de comprendre les principes derrière la gestion de cette mémoire et de voir comment les ordinateurs peuvent y lire et écrire des données entre deux calculs.
 
 
-## Exemple suivi : addition de deux nombres
+## 1.1. Exemple suivi : addition de deux nombres
 
 On s'intéresse à une des opérations arithmétiques les plus simples : l'**addition**. Comment l'ordinateur additionne-t-il deux nombres ? On va définir le cadre de travail et s'intéresser aux {glo}`circuitelectronique|circuits électroniques` qui vont être à même de réaliser une addition.
 
@@ -47,7 +47,7 @@ Finalement, on comprendra comment un ordinateur est capable, avec un circuit log
 
 Les opérations arithmétiques et logiques et l'accès à la mémoire ne suffisent pas à constituer un ordinateur complet. C'est dans le chapitre suivant que sera traité la problématique de l'agencement de ces sous-systèmes afin de constituer une machine capable d'exécuter une suite d'instructions, c'est à dire un programme.
 
-## Portes logiques
+## 1.2. Portes logiques
 
 Les {glo}`circuitelectronique|circuits électroniques` qui composent un ordinateur sont constitués de composants électroniques comme des {glo}`resistance|résistances`, des {glo}`condensateur|condensateurs`, des {glo}`transistor|transistors`, etc., qui déterminent où va passer le courant électrique et sur quelles parties du {glo}`circuitelectronique|circuit` règnera quelle {glo}`tension|tension`.
 
@@ -55,7 +55,7 @@ Quand on parle de {glo}`portelogique|portes` et de {glo}`syslogique|circuits log
 
 Les {glo}`portelogique|portes` logiques sont des composants électroniques (elles-même constituées en général de {glo}`transistor|transistors` et {glo}`resistance|résistances`) qui ont une ou plusieurs entrées et qui combinent ces entrées pour produire une sortie donnée. La manière dont la sortie est calculée dépend du type de la porte. On se propose à présent d'étudier en détails l'ensemble de ces portes.
 
-## Portes ET
+## 1.3. Porte ET
 
 Une de ces portes est la porte **ET**. Elle a deux entrées, qu'on appellera $X$ et $Y$, et une sortie $Z$. $Z$ sera $1$ si et seulement si aussi bien $X$ que $Y$ valent $1$. D'où son nom: il faut que $X$ **_et_** $Y$ soient à 1 pour obtenir un 1 sur la sortie.
 
@@ -113,7 +113,7 @@ Ici, les deux transistors sont les composants symbolisés par un cercle. Rappelo
 
 
 
-## Portes OU
+## 1.4. Porte OU
 
 Pour que la sortie de la porte **OU** vaille 1, il suffit que l'une des deux entrées $X$ ou $Y$ vaille 1.
 
@@ -146,7 +146,7 @@ Essayez la porte **OU** :
 }
 ```
 
-## Portes NON
+## 1.5.  NON
 
 Cette porte est plus simple: elle n'a qu'une entrée, et sa sortie se contente d'inverser la valeur en entrée. On l'appelle d'ailleurs aussi un _inverseur_.
 
@@ -197,7 +197,7 @@ Une application pour s'exercer à l'interprétation des conjonctions, disjonctio
 Dans le tableau qui précède, si on reprend notre exemple de la piscine, on pourrait dire que A représente «il fait beau», B représente «mes amies m'accompagnent», et le résultat Q est «je vais à la piscine». 1 signifie qu'une proposition est vraie, 0 qu'elle est fausse. Le tableau ci-dessus représente donc l'opération logique ET, ou {glo}`conjonction|conjonction`.  -->
 
 
-## Combinaisons de portes
+## 1.6. Combinaisons de portes
 
 Les {glo}`portelogique|portes` peuvent être connectées les unes aux autres. Voici par exemple un diagramme logique réalisant en sortie $Z$ la fonction appelée **OU-X**, qui est un «ou exclusif» et dont la sortie $Z$ vaut 1 lorsque soit $A$, soit $B$ vaut $1$, mais pas les deux en même temps :
 

@@ -19,9 +19,9 @@ L'expression `set('belle')` contient
 
 Un **ensemble** est une collection d'objets ayant une propriété commune.
 
-Dans l'exemple suivant nous dessinons d'abord un cercle de rayon `r`.
+Dans l'exemple suivant, nous dessinons d'abord un cercle de rayon `r`.
 Ensuite nous définissons une liste de 10 points à l'aide d'une compréhension de liste.
-Chaque points est désigné par son indice qui va de 0 à 9.
+Chaque point est désigné par son indice qui va de 0 à 9.
 
 Nous définissons comme ensemble `A` les points qui se trouvent à l'intérieur du cercle et nous les affichons en rouge.
 Les points qui ne font pas partie de l'ensemble `A` sont affichés en bleu.
@@ -64,7 +64,7 @@ print('A =', A)
 
 Un **diagramme de Venn** montre graphiquement la relation entre différents ensembles.
 
-Dans l'exemple suivant nous montrons les 3 situations :
+Dans l'exemple suivant, nous montrons les 3 situations :
 
 - les deux ensembles A et B sont disjoints,
 - les deux ensembles A et B ont une intersection non vide,
@@ -122,13 +122,13 @@ print('ensemble =', ensemble)
 
 ## Les méthodes `set`
 
-Voici toutes les méthodes définis pour le type `set`.
+Voici toutes les méthodes définies pour le type `set`.
 
 ```{codeplay}
 print(dir(set()))
 ```
 
-A l'aide d'une liste de compréhension nous allons afficher seulement les méthodes qui ne commencent pas avec un tiret bas.
+À l'aide d'une liste de compréhension, nous allons afficher seulement les méthodes qui ne commencent pas avec un tiret bas.
 
 ```{codeplay}
 :file: set3.py
@@ -143,7 +143,7 @@ print([x for x in dir(list()) if not x.startswith('_')])
 
 ## L'union
 
-L'union de deux ensemble est l'ensemble des éléments qui fait partie des deux.
+L'union de deux ensembles est l'ensemble des éléments qui font partie des deux.
 
 ```{codeplay}
 :file: set4.py
@@ -177,7 +177,7 @@ left(60)
 circle(r, 120)
 ```
 
-**Exercice** : Ajoutez un ensemble `C` qui a une intersection non-vide avec `A` et `B`.
+**Exercice** : Ajoutez un ensemble `C` qui a une intersection non vide avec `A` et `B`.
 
 ## L'intersection
 
@@ -213,7 +213,7 @@ Dans l'exemple suivant, nous créons une classe `Ensemble` qui permet de dessine
 
 La méthode `inside(x, y)` permet de déterminer si un point `(x, y)` fait partie de l'ensemble.
 
-Ensuite nous créons des points aléatoires dans toutes la surface du canevas.
+Ensuite nous créons des points aléatoires dans toute la surface du canevas.
 Avec `A.inside(x, y) and B.inside(x, y)` nous sélectionnons la réunion.
 
 ```{codeplay}
@@ -258,7 +258,7 @@ while i < 200:
 
 ## La différence
 
-La différence entre deux ensembles `A` et `B` sont tous les éléments de `A` sans ceux de `B`. En Python, la différence d'ensemble peut être exprimé par la méthode `difference()` ou bien par l'opérateur `-` comme montré dans l'exemple suivant.
+La différence entre deux ensembles `A` et `B` sont tous les éléments de `A` sans ceux de `B`. En Python, la différence d'ensemble peut être exprimée par la méthode `difference()` ou bien par l'opérateur `-` comme montré dans l'exemple suivant.
 
 ```{codeplay}
 :file: set8.py
@@ -269,7 +269,7 @@ print('A =', A)
 print('B =', B)
 print()
 
-print('A - B =', A.difference(B))
+print('A - B =', A.différence(B))
 print('A - B =', A - B)
 print('B - A =', B - A)
 ```
@@ -305,7 +305,7 @@ print('A est  sur-ensemble de B =', A.issuperset(B))
 
 ## Les opérateurs
 
-En Python, les méthodes pour les ensembles ont des opérateurs plus court :
+En Python, les méthodes pour les ensembles ont des opérateurs plus courts :
 
 - union (`|`)
 - intersection (`&`)
@@ -324,7 +324,7 @@ print('A | B (union) =', A | B)
 print('A & B (intersection) =', A & B)
 print('A - B (différence) =', A - B)
 print('B - A (différence) =', B - A)
-print('A ^ B (difference symétrique) =', A ^ B)
+print('A ^ B (différence symétrique) =', A ^ B)
 ```
 
-**Exercice** : Modifiez les ensemble A et B et re-évaluez.
+**Exercice** : Modifiez les ensembles A et B et reévaluez.

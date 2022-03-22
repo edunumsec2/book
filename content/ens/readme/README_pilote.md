@@ -16,7 +16,7 @@ Attention, le document présenté ici ne représente qu'une **étape intermédia
 
 ## Introduction
 
-Des moyens d'enseignement pour l'informatique en discipline obligatoire au niveau Secondaire II ont été produits par un groupe de travail issu d'une collaboration entre la DGEP, l'EPFL, la HEP et l'UNIL. Dans le cadre de l’introduction de cette discipline, prévue à la rentrée 2022 dans le canton de Vaud, l'objectif de ces ressources est de proposer aux enseignant·e·s d'informatique des contenus théoriques, des séries d'exercices et des idées d'activités.
+Des moyens d'enseignement pour l'informatique en discipline obligatoire au niveau Secondaire II ont été produits par un groupe de travail issu d'une collaboration entre la DGEP, l'EPFL, la HEP Vaud et l'UNIL. Dans le cadre de l’introduction de cette discipline, prévue à la rentrée 2022 dans le canton de Vaud, l'objectif de ces ressources est de proposer aux enseignant·e·s d'informatique des contenus théoriques, des séries d'exercices et des idées d'activités.
 
 En accord avec la DGEP, une partie de ce matériel est déjà mise à disposition des enseignant·e·s vaudois·e·s pour une première phase pilote.
 
@@ -33,19 +33,17 @@ Toute personne qui réutilise les ressources est priée de le faire de la façon
 
 * 💰 Pas d'utilisation commerciale. 
 * ♻️ Possibilité de modifier les ressources à souhait. 
-* 📗 Crédit : "Par le groupe de travail DGEP, EPFL, HEP, UNIL". 
+* 📗 Crédit : "Par le groupe de travail DGEP, EPFL, HEP Vaud, UNIL". 
 * 🤝 Partage selon les mêmes conditions. Donc en ajoutant simplement le logo ci-dessus pour toute publication éventuelle. 
 
 
 ## Comité de rédaction
 
 * Représentation de l'information : David Da Silva - Gymnase de Chamblandes & Javier Iglesias - Gymnase de Renens
-* Algorithmique : Biljana Petreska - Gymnase d'Yverdon & Micha Hersch Gymnase de Renens / HEP
+* Algorithmique : Biljana Petreska - Gymnase d'Yverdon & Micha Hersch Gymnase de Renens / HEP Vaud
 * Programmation : Raphaël Holzer - Gymnase du Bugnon & Gilles Racine - Gymnase de Sevelin
-* Architecture des ordinateurs : Philippe Rochat - Gymnase de Morges & Jean-Philippe Pellet - HEP
+* Architecture des ordinateurs : Philippe Rochat - Gymnase de Morges & Jean-Philippe Pellet - HEP Vaud
 * Enjeux sociaux : Lucile Berset - EPFL, Virginia Haussauer - EPFL, Frank Dayen - Gymnase de Morges 
 * Plateforme : Romain Edelmann - EPFL & Grégoire Gavin - EPFL
 * Charte éditoriale, plateforme, rédaction : Christophe Dumas - EPFL & Elliot Vaucher - EPFL
 * Coordination : Nathalie Farenc - EPFL
-
-

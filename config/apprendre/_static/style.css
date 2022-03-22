@@ -1,9 +1,14 @@
 p {
     /* font-family: 'Poppins', sans-serif; */
-    text-align: justify;
+    /* text-align: justify;*/
     font-size: 16px;
     font-weight: 350;
     line-height: 1.5;
+}
+
+.right-next:only-child p {
+    text-align: right;
+    padding-right: 20px;
 }
 
 /* a.reference.internal {

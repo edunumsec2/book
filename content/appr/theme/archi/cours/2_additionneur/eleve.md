@@ -54,7 +54,7 @@ Le circuit fonctionne correctement. Il faut tester les quatre combinaisons qui a
 ```
 ````
 
-## Additionneur complet
+## 2.1. Additionneur complet
 
 Le circuit précédent est particulièrement intéressant, car il montre qu'il est possible d'utiliser des opérateurs logiques pour réaliser l'opération arithmétique de l'addition. L'additionneur est limité: en fait, on l'appelle un _demi-additionneur_. Il n'est capable d'additionner que deux nombres à 1 {glo}`bit|bit` — c'est très limité. En fait, il serait intéressant d'avoir un additionneur de _trois_ nombres à un {glo}`bit|bit`. Pourquoi ? À cause de la manière dont on pose les additions en colonnes.
 
@@ -108,7 +108,7 @@ En faisant pour l'instant abstraction des détails d'un additionneur complet, on
 ```
 
 
-## Chaînage d'additionneurs
+## 2.2. Chaînage d'additionneurs
 
 La flexibilité de ce composant fait qu'on peut maintenant facilement l'utiliser pour construire un circuit qui additionne deux nombres $A$ et $B$ à 2 {glo}`bit|bits` chacun (donc de $0 + 0 = 0$ à $3 + 3 = 6$).
 
@@ -234,7 +234,7 @@ On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et 
 ````
 `````
 
-Cet exercice démontre l'opportunité de penser en termes {glo}`modulo|modulaires`, ce qui revient souvent en informatique. Ici, on a réalisé qu'un additionneur complet résout un sous-problème bien défini d'une addition générale d'un nombre à $n$ {glo}`bit|bits`, et qu'une fois qu'on a créé un tel additionneur, il suffit d'en connecter plusieurs les uns derrière les autres de manière structurée pour additionner des nombres plus grands.
+Cet exercice démontre l'opportunité de penser en termes modulaires, ce qui revient souvent en informatique. Ici, on a réalisé qu'un additionneur complet résout un sous-problème bien défini d'une addition générale d'un nombre à $n$ {glo}`bit|bits`, et qu'une fois qu'on a créé un tel additionneur, il suffit d'en connecter plusieurs les uns derrière les autres de manière structurée pour additionner des nombres plus grands.
 
 
 ````{admonition} Exercice 5 : overflow

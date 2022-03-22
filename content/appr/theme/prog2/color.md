@@ -1,13 +1,13 @@
 # Nuancer - `color`
 
-Dans ce chapitre nous allons voir les couleurs dans toutes leurs nuances. En informatique les couleurs sont basées sur les trois couleurs primaires **rouge**, **vert** et **bleu**. Leur combinaison respective permet de créer tout le spectre des couleurs visibles. Nous allons voir que :
+Dans ce chapitre nous allons voir les couleurs dans toutes leurs nuances. En informatique, les couleurs sont basées sur les trois couleurs primaires **rouge**, **vert** et **bleu**. Leur combinaison respective permet de créer tout le spectre des couleurs visibles. Nous allons voir que :
 
 - la fonction `color(r, v, b)` représente une couleur avec trois nombres,
 - la fonction `color('#rvb')` représente une couleur avec un hexadécimal,
 - la fonction `color(r, v, b, a)` ajoute la transparence `a` (alpha).
 
 ```{question}
-L'expression `color('#facc00')` represente une couleur
+L'expression `color('#facc00')` représente une couleur
 
 {f}`bleu`  
 {f}`très sombre`  
@@ -17,15 +17,15 @@ L'expression `color('#facc00')` represente une couleur
 
 ## Rouge-Vert-Bleu (RVB)
 
-Dans un ordinateur les couleurs sont exprimé par un triplet de nombres.
+Dans un ordinateur les couleurs sont exprimées par un triplet de nombres.
 Ces nombres indiquent l'intensité des trois couleurs de base : rouge-vert-bleu (RVB)
 
-L'intensité de couleur est exprimé soit :
+L'intensité de couleur est exprimée soit :
 
-- en virgule flottante sur dans une plage de 0.0 ... 1.0
-- en entiers sur une plage de 0 ... 255
+- en virgule flottante dans une plage de 0.0 ... 1.0
+- en entier sur une plage de 0 ... 255
 
-En utilisant la définition précédente nous pouvons exprimer les couleurs aussi avec un triplet.
+En utilisant la définition précédente, nous pouvons exprimer les couleurs aussi avec un triplet.
 
 ```{codeplay}
 :file: color1.py
@@ -33,7 +33,7 @@ from turtle import *
 up()
 
 color(1, 0, 0)  # rouge
-back(200)
+backward(200)
 dot(80)
 
 color(1, 1, 0)  # jaune
@@ -55,12 +55,12 @@ dot(80)
 
 ## Mode couleur
 
-Il a deux façon d'exprimer les 3 composantes RVB :
+Il a deux façons d'exprimer les 3 composantes RVB :
 
 - avec un nombre à virgule flottante dans l'intervalle [0, 1]
 - avec un entier dans l'intervalle [0, 255]
 
-La fonction `colormode()` retourne le mode actuelle si utilisé sans argument. Si un argument est fourni (1 ou 255), ce mode est activé.
+La fonction `colormode()` retourne le mode actuel si utilisé sans argument. Si un argument est fourni (1 ou 255), ce mode est activé.
 
 ```{codeplay}
 :file: color2.py
@@ -77,7 +77,7 @@ colormode(255)
 up()
 
 color(255, 0, 0)  # rouge
-back(200)
+backward(200)
 dot(80)
 
 color(255, 255, 0)  # jaune
@@ -99,7 +99,7 @@ dot(80)
 
 ## Intensité
 
-Voici un programme qui affiche les intensité pour rouge en incréments de 25%.
+Voici un programme qui affiche les intensités pour rouge en incréments de 25%.
 
 ```{codeplay}
 :file: color3.py
@@ -107,7 +107,7 @@ from turtle import *
 up()
 
 color(0, 0, 0)  # 0%
-back(200)
+backward(200)
 dot(80)
 
 color(0.25, 0, 0)  # 25%
@@ -127,7 +127,7 @@ forward(100)
 dot(80)
 ```
 
-**Exercice** : Faites un dégradé pour la couleur bleu.
+**Exercice** : Faites un dégradé pour la couleur bleue.
 
 ## Mélanger RVB
 
@@ -167,7 +167,7 @@ dot(d)
 
 ## Intensité des couleurs
 
-Dans l'exemple ci-dessous nous agissons sur la cou
+Dans l'exemple ci-dessous, nous agissons sur la composante rouge.
 
 ```{codeplay}
 :file: color5.py
@@ -215,7 +215,7 @@ for y in range(0, 255, d):
 
 ## Cube des couleurs
 
-Dans l'exemple suivant nous dessinons les 3 axes
+Dans l'exemple suivant, nous dessinons les 3 axes
 
 - rouge
 - vert
@@ -242,7 +242,7 @@ def axe(angle, couleur):
     forward(180)
     stamp()
     write('  '+couleur, font=(None, 18))
-    back(180)
+    backward(180)
     
 getscreen().bgcolor('black')
 color('white')
@@ -266,7 +266,7 @@ for z in range(n):
 
 La **synthèse additive** des couleurs est le procédé consistant à combiner trois lumières colorées dans le but d'obtenir une lumière colorée quelconque.
 
-Dans un écran d'ordinateur (ou smartphone) on utilise les couleurs rouge, vert, et bleu, d'ou l'acronyme **RVB**. Le mélange de :
+Dans un écran d'ordinateur (ou smartphone) on utilise les couleurs rouge, vert, et bleu, d'où l'acronyme **RVB**. Le mélange de :
 
 - rouge et bleu donne magenta,
 - rouge et vert donne jaune,
@@ -300,9 +300,9 @@ for x in ('yellow', 'cyan', 'magenta', 'white'):
 
 ## Synthèse soustractive
 
-La **synthèse soustractive** des couleurs et le procédé consistant à combiner l'absorption de trois colorant pour obtenir les nuances des couleurs.
+La **synthèse soustractive** des couleurs et le procédé consistant à combiner l'absorption de trois colorants pour obtenir les nuances des couleurs.
 
-Les trois colorant généralement utilisé en impression sont cyan, jaune et magenta, d'ou le terme CJM.
+Les trois colorants généralement utilisés en impression sont cyan, jaune et magenta, d'où le terme CJM.
 
 Le mélange de :
 
@@ -333,6 +333,85 @@ for x in ('blue', 'red', 'lime', 'black'):
         if i == 2:
             end_fill()
     right(60 if x == 'lime' else 120)  
+```
+
+## Dégradé radial
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+
+for x in range(255):
+    dot(255-x, (x, x, x))
+```
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+
+for x in range(0, 255, 5):
+    dot(255-x, (x, x, x))
+    forward(0.5)
+```
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+
+for x in range(0, 255, 5):
+    dot(255-x, (x, x, 0))
+    forward(0.5)
+```
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+
+for x in range(0, 255, 5):
+    dot(255-x, (x, 0, 0))
+    forward(0.5)
+```
+
+## Dégradé linaire
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+speed(0)
+
+def ligne(p, q):
+    goto(p)
+    down()
+    goto(q)
+    up()
+
+for x in range(255):
+    color(x, x, x)
+    ligne((x, -200), (x, 200))
+```
+
+```{codeplay}
+from turtle import *
+colormode(255)
+hideturtle()
+left(90)
+width(7)
+speed(0)
+
+def ligne(p, q):
+    goto(p)
+    down()
+    goto(q)
+    up()
+
+for x in range(0, 255, 5):
+    color(x, x, x)
+    ligne((x, -200), (x, 200))
 ```
 
 ## Quiz

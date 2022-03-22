@@ -15,15 +15,9 @@ En Python `lambda` est
 {f}`une variable`
 ```
 
-Nous allons également voir que :
-
-- la fonction `xcor()` renvoie la coordonnée x de la tortue,
-- la fonction `pos()` renvoie les deux coordonnées x et y de la tortue,
-- la fonction `setx(val)` assigne une nouvelle valeur la coordonnée x.
-
 ## Fonction lambda
 
-Parfois nous avons besoin d'une petite fonction, sans que ça vaut la peine de la définir de façon explicite avec le mot clé `def` et un nom de fonction.
+Parfois nous avons besoin d'une petite fonction, sans que ça vaille la peine de la définir de façon explicite avec le mot clé `def` et un nom de fonction.
 
 ```{codeplay}
 :file: lambda1.py
@@ -56,11 +50,11 @@ print(f(5))
 
 ## Visualiser
 
-L'utilisation principale pour la fonction lambda sont les fonctions qui demandent comme argument une fonction.
+L'utilisation principale de la fonction lambda est pour les fonctions qui demandent comme argument une fonction.
 
-Jusqu'à maintenant les arguments de nos fonctions étaient des valeurs tel que: nombres, angles, distances, couleurs.
+Jusqu'à maintenant les arguments de nos fonctions étaient des valeurs tels que: nombres, angles, distances, couleurs.
 
-Avoir une fonction comme argument est nouveau. Pour montrer ce nouveau principe nous allons définir la fonction `tracer()`. Elle prend comme argument une fonction `f` qu'elle va évaluer dans un intervalle [-300, 300].
+Avoir une fonction comme argument est nouveau. Pour montrer ce nouveau principe, nous allons définir la fonction `tracer()`. Elle prend comme argument une fonction `f` qu'elle va évaluer dans un intervalle [-300, 300].
 
 ```{codeplay}
 :file: lambda4.py
@@ -83,7 +77,7 @@ tracer(lambda x : 0.5 * x, 'lime')  # fonction linéaire
 
 Voici encore 3 exemples de fonctions
 
-- la fonction `abs()` renvoie la valeur absolu
+- la fonction `abs()` renvoie la valeur absolue
 - la fonction constante renvoie la valeur 100 partout
 - la fonction modulo renvoie une trace en dent de scie
 
@@ -127,7 +121,7 @@ tracer(lambda x : 0.005 * x ** 2 - x - 100, 'blue')
 
 ## La fonction de rappel
 
-Revenons vers notre tout premier programme avec la fonction `onkey()`. Nous voulons faire avancer la tortue quand la touche `a` est appuyée. Nous sommes tenté de simplifier le programme et d'écrire ceci. Essayez-le, mais malheureusement ça ne fonctionne pas.
+Revenons vers notre tout premier programme avec la fonction `onkey()`. Nous voulons faire avancer la tortue quand la touche `a` est appuyée. Nous sommes tentés de simplifier le programme et d'écrire ceci. Essayez-le, mais malheureusement ça ne fonctionne pas.
 
 ```{codeplay}
 :file: lambda7.py
@@ -155,7 +149,7 @@ s.listen()
 
 ## Bouger la tortue
 
-Avec la fonction lambda notre programme de définition des fonctions de rappel devient beaucoup plus compacte. Nous utilisons les fonctions
+Avec la fonction lambda, notre programme de définition des fonctions de rappel devient beaucoup plus compact. Nous utilisons les fonctions :
 
 - `xcor()` pour lire la position actuelle de la coordonnée `x`.
 - `setx(val)` pour assigner une nouvelle valeur à la coordonnée `x`.
@@ -207,9 +201,9 @@ s.onkey(lambda : circle(50), 'c')
 s.listen()
 ```
 
-## Ecrire un nombre
+## Écrire un nombre
 
-Nous pouvons utiliser les touches pour écrire dans le canevas de la tortue. Pour avancer la tortue avec la lettre nous choisissons l'option `move=True`.
+Nous pouvons utiliser les touches pour écrire dans le canevas de la tortue. Pour avancer la tortue avec chaque lettre, nous choisissons l'option `move=True`.
 
 Il est nécessaire de définir une fonction de rappel pour chaque touche du clavier que nous voulons utiliser.
 
@@ -232,4 +226,68 @@ getscreen().onkey(lambda : ecrire(8), '8')
 getscreen().onkey(lambda : ecrire(9), '9')
 getscreen().onkey(reset, 'r')
 getscreen().listen()
+```
+
+La fonction lambda nous permet de simplifier aussi la création des fonctions de rappel. Nous pouvons les créer dans une boucle, en parcourant une chaine de caractères auxquels nous voulons associer une fonction de rappel. Nous utilisons ici l'astuce de la valeur par défaut, pour passer un argument à la fonction `f()`.
+
+Ce programme interactif permet d'utiliser les 10 chiffres pour écrire un nombre.
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+speed(0)
+
+def f(x):
+    write(x, font=(None, 24), move=True)
+
+for c in '0123456789':
+    s.onkey(lambda x=c: f(x), c)
+    
+s.listen()
+done()
+```
+
+## Écrire des lettres
+
+Ce programme interactif permet d'utiliser les 26 lettres pour écrire un mot.
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+speed(0)
+
+def f(x):
+    write(x, font=(None, 24), move=True)
+
+for c in 'abcdefghijklmnopqrstuvwxyz':
+    s.onkey(lambda x=c: f(x), c)
+    
+s.listen()
+done()
+```
+
+## Écrire des couleurs
+
+Ce programme permet d'utiliser les 26 touches de l'alphabet pour écrire des pixels avec des couleurs aléatoires.
+
+```{codeplay}
+from turtle import *
+from random import *
+s = getscreen()
+speed(0)
+
+d = 60
+goto(-300+d/2, 200-d/2)
+
+def f(x):
+    dot(d, (random(), random(), random()))
+    if xcor() < 300 - d/2:
+        forward(d)
+    else:
+        goto(-300+d/2, ycor()-d)
+
+for c in 'abcdefghijklmnopqrstuvwxyz':
+    s.onkey(lambda x=c: f(x), c)
+    
+s.listen()
 ```

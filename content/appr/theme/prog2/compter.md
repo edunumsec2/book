@@ -1,13 +1,13 @@
 # Compter - `bin`
 
-Compter est l'opération utilisée pour savoir combien d'objets il y a dans un ensemble de taille fini. Nous utilisons alors les nombres naturels, aussi appelés les entiers non-négatifs.
-Le fait que nous humains avons dix doigts nous a mené à adopter le système décimal (base 10).
+Compter est l'opération utilisée pour savoir combien d'objets il y a dans un ensemble de taille fini. Nous utilisons alors les nombres naturels, aussi appelés les entiers non négatifs.
+Le fait que nous humains avons dix doigts nous a menés à adopter le système décimal (base 10).
 
 Un ordinateur par contre représente les nombres en système binaire (base 2). Une des principales raisons est l'extrême simplicité de représentation de l'information dans un système matériel avec seulement 2 états (électrique, magnétique ou optique). Nous allons voir que :
 
 - la fonction `bin(d)` retourne un code binaire (précédé par `0b`),
-- la fonction `oct(d)` retourne un code octale (précédé par `0o`),
-- la fonction `hex(d)` retourne un code hexadécimale (précédé par `0x`).
+- la fonction `oct(d)` retourne un code octal (précédé par `0o`),
+- la fonction `hex(d)` retourne un code hexadécimal (précédé par `0x`).
 
 ```{question}
 La fonction `bin()` renvoie une valeur de type
@@ -33,7 +33,7 @@ for i in range(16):
     print(bin(i), end=' ')
 ```
 
-En informatique nous utilisons fréquemment trois autres représentations :
+En informatique, nous utilisons fréquemment trois autres représentations :
 
 - binaire (base 2)
 - octale (base 8)
@@ -49,7 +49,7 @@ print('octal =', oct(n))
 print('hexadécimal =', hex(n))
 ```
 
-**Exercice** : Modifier le nombre `n` et ré-exécutez le code.
+**Exercice** : Modifier le nombre `n` et réexécutez le code.
 
 ## Compter avec les doigts
 
@@ -76,7 +76,7 @@ def finger(x):
 for i in range(6):
     reset()
     speed(0)
-    back(40)
+    backward(40)
     write(i, font=('Courier', 100), align='right')
     left(90)
     fillcolor('pink')

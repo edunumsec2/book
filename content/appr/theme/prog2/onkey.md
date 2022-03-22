@@ -7,22 +7,17 @@ Dans ce chapitre nous allons voir une autre façon d'utiliser les touches du cla
 Dans ce chapitre nous découvrons comment utiliser le clavier de l'ordinateur pour interagir avec un programme. Nous allons voir que :
 
 - la fonction `onkey(f, 'a')` installe une fonction de rappel `f()`,
-- la fonction `f()` est appelée à chaque fois que la touche `a` est appuyée.
+- la fonction `f()` est appelée à chaque fois que la touche `a` est appuyée,
+- la fonction `listen()` démarre l'*écoute* des événements du clavier.
 
 ```{question}
 Une fonction de rappel
 
-{f}`retourne à l'origne`  
+{f}`retourne à l'origine`  
 {f}`renvoie une valeur`  
 {f}`renforce la mémoire`  
 {v}`réagit à un événement`
 ```
-
-Nous allons également voir que :
-
-- la fonction `home()` ramène la tortue à l'origine,
-- la fonction `clear()` efface les traces de la tortue,
-- la fonction `reset()` met la tortue à l'état d'origine
 
 ## Fonction de rappel
 
@@ -61,9 +56,17 @@ print("Appuyez sur la touche 'a' pour avancer.")
 
 La fonction `home()` ramène la tortue à son origine. Nous avons changé le nom de la fonction de rappel `f()` en `avancer()`. C'est plus clair. La fonction `home()` existe déjà, donc nous n'avons pas besoin de la définir.
 
+Au lieu d'écrire les explications dans la console, nous allons les écrire directement dans la fenêtre de la tortue.
+
 ```{codeplay}
 :file: onkey2.py
 from turtle import *
+up()
+goto(-290, 180)
+write('a–avancer  h–home', font=('Arial', 14))
+
+home()
+down()
 shape('turtle')
 color('red')
 
@@ -74,24 +77,28 @@ s = getscreen()
 s.onkey(avancer, 'a')
 s.onkey(home, 'h')
 s.listen()
-
-print("Appuyez sur la touche 'a' pour avancer.")
-print("Appuyez sur la touche 'h' pour home.")
 ```
 
 **Exercice** Ajoutez une fonction de rappel pour faire reculer la tortue.
 
 ## Effacer la trace
 
-Dans le prochain programme nous ajoutons des touches supplémentaires pour les fonctions suivantes :
+Dans le prochain programme, nous ajoutons des touches supplémentaires pour les fonctions suivantes :
 
 - `h` pour ramener la tortue à l'origine avec `home()`,
 - `c` pour effacer la trace avec `clear()`,
 - `r` pour effacer la trace et ramener la tortue à l'origine avec `reset()`.
 
+Le désavantage de ce programme, c'est que `clear()` va aussi effacer le texte explicatif. Ça serait bien si ce texte était indépendant de la tortue qui bouge.
+
 ```{codeplay}
 :file: onkey3.py
 from turtle import *
+up()
+goto(-290, 180)
+write('a–avancer  h–home  c–clear', font=('Arial', 14))
+home()
+down()
 shape('turtle')
 color('red')
 
@@ -102,12 +109,8 @@ s = getscreen()
 s.onkey(avancer, 'a')
 s.onkey(home, 'h')
 s.onkey(clear, 'c')
-s.onkey(reset, 'r')
 s.listen()
-print("a:avancer  h:home  c:clear  r:reset")
 ```
-
-**Exercice** : Ajoutez une fonction de rappel pour faire tourner la tortue.
 
 ## Tourner la tortue
 
@@ -148,7 +151,7 @@ print("h:home     c:clear   r:reset")
 
 ## Les flèches
 
-Les touches de flèche portent les nom `Left`, `Right`, `Up` et `Down`.
+Les touches de flèche portent les noms `Left`, `Right`, `Up` et `Down`.
 Nous pouvons utiliser les 4 flèches pour faire bouger la tortue.
 
 - `↑` pour avancer
@@ -168,7 +171,7 @@ def avancer():
     forward(50)
 
 def reculer():
-    back(50)
+    backward(50)
 
 def gauche():
     left(30)
@@ -237,9 +240,9 @@ print("Utilisez les touches WASD pour bouger la tortue.")
 
 **Exercice** : Ajoutez les fonctions de rappel `home()`, `clean()` et `reset()` pour effacer la trace et ramener la tortue à l'origine.
 
-## Dessiner un cercle
+## Courbes en cercle
 
-Appuyer sur la touche `c` va dessiner un cercle.
+Appuyer sur la touche `g` va dessiner un quart de cercle à gauche. Appuyer sur la touche `d` va dessiner un quart de cercle vers la droite.
 
 ```{codeplay}
 :file: onkey7.py
@@ -249,19 +252,23 @@ shape('turtle')
 def avancer():
     forward(50)
     
-def cercle():
-    circle(50)
-
+def gauche():
+    circle(50, 90)
+    
+def droite():
+    circle(-50, 90)
+    
 s = getscreen()
 s.onkey(avancer, 'a')
-s.onkey(cercle, 'c')
+s.onkey(gauche, 'g')
+s.onkey(droite, 'd')
 s.listen()
-print("a:avancer  c:cercle")
+print("a:avancer  g:gauche  d:droite")
 ```
 
 ## Dessiner une maison
 
-Appuyer sur la touche `m` va dessiner un maison.
+Appuyer sur la touche `m` va dessiner une maison.
 
 ```{codeplay}
 :file: onkey8.py
@@ -313,7 +320,7 @@ getscreen().onkey(maison, 'm')
 getscreen().onkey(up, 'u')
 getscreen().onkey(down, 'd')
 getscreen().listen()
-print("a:avancer, u:up, d:down, m:maison")
+print("a:avancer  u:up  d:down  m:maison")
 ```
 
 ## Choisir l'épaisseur
@@ -350,7 +357,7 @@ getscreen().onkey(fin, '1')
 getscreen().onkey(normal, '2')
 getscreen().onkey(epais, '3')
 getscreen().listen()
-print("a:avancer, t:tourner, 1:fin, 2:normal, 3:épais")
+print("a:avancer  t:tourner  1:fin  2:normal  3:épais")
 ```
 
 **Exercice** : Modifiez les épaisseurs.
@@ -390,14 +397,14 @@ getscreen().onkey(rouge, 'r')
 getscreen().onkey(vert, 'v')
 getscreen().onkey(bleu, 'b')
 getscreen().listen()
-print("a:avancer, t:tourner, r:rouge, v:vert, b:bleu")
+print("a:avancer  t:tourner  r:rouge  v:vert  b:bleu")
 ```
 
 **Exercice** : Modifiez les couleurs.
 
-## Ecrire dans le canevas
+## Écrire dans le canevas
 
-Nous pouvons aussi utiliser les touches pour écrire dans le canevas de la tortue. Pour avancer la tortue avec la lettre nous choisissons l'option `move=True`
+Nous pouvons aussi utiliser les touches pour écrire dans le canevas de la tortue. Pour avancer la tortue avec la lettre, nous choisissons l'option `move=True`
 
 ```{codeplay}
 :file: onkey12.py
@@ -409,3 +416,92 @@ def x():
 getscreen().onkey(x, 'x')
 getscreen().listen()
 ```
+
+## Exercice
+
+### Snake
+
+Utilisez une liste pour limiter le nombre de segments du serpent à 10.
+
+```{codeplay}
+:file: snake.py
+from turtle import *
+shape('square')
+color('red')
+
+d = 20
+speed(0)
+dot(d)
+
+def haut():
+    seth(90)
+    forward(d)
+    dot(d)
+
+def bas():
+    seth(-90)
+    forward(d)
+    dot(d)
+
+def gauche():
+    seth(180)
+    forward(d)
+    dot(d)
+    
+def droite():
+    seth(0)
+    forward(d)
+    dot(d)
+
+s = getscreen()
+s.onkey(haut, 'Up')
+s.onkey(bas, 'Down')
+s.onkey(gauche, 'Left')
+s.onkey(droite, 'Right')
+s.onkey(clear, 'c')
+s.listen()
+```
+
+### Tetris
+
+Les flèches gauche/droite permettent de déplacer le tétronimo. Programmez les touches haut/bas pour le tourner.
+
+```{codeplay}
+:file: tetris.py
+from turtle import *
+hideturtle()
+tracer(0)
+up()
+d = 20
+
+def L():
+    fillcolor('orange')
+    begin_fill()
+    for a in 0, 90, 90, -90, 0, 90, 90, 0, 0, 90:
+        forward(d)
+        left(a)
+    end_fill()
+    
+L()
+update()
+
+def gauche():
+    clear()
+    backward(d)
+    L()
+    update()
+    
+def droite():
+    clear()
+    forward(d)
+    L()
+    update()
+
+s = getscreen()
+s.onkey(gauche, 'Left')
+s.onkey(droite, 'Right')
+s.onkey(clear, 'c')
+s.listen()
+```
+
+

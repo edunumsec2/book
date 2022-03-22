@@ -4,7 +4,7 @@
 Dans cette section, nous continuons notre exploration de comment les portes logiques, selon leur assemblage, fournissent les fonctionnalités de base des ordinateurs. En particulier, nous nous intéressons à comment faire effectuer plusieurs opérations à un ordinateur via ce qui s'appelle une unité arithmétique et logique, puis nous voyons comment l'ordinateur se rappelle les résultats des calculs intermédiaires via des bascules.
 
 
-## Unité arithmétique et logique
+## 3.1. Unité arithmétique et logique
 
 Dans la section précédente, nous avons vu comment créer, via un assemblage de portes logiques, un circuit qui réalise l'addition de deux nombres de 4 bits. Ce circuit était fixe : avec les deux nombres d'entrées, il réalisait toujours une addition et ne servait ainsi qu'à ça.
 
@@ -742,7 +742,7 @@ Notez que grâce à la représentation en complément à deux, la circuiterie in
 ````
 
 
-## Mémoire
+## 3.3. Mémoire
 
 Les {glo}`transistor|transistors`, les {glo}`portelogique|portes logiques` et leur représentation en {glo}`tableverite|tables de vérités`, permettent de manipuler des 0 et des 1 au niveau physique.. Tant qu'un courant électrique se déplace dans les {glo}`circuit|circuits`, on est capable de le transformer, de le laisser passer ou de l'arrêter, dans le but d'exprimer des portes « ouvertes » ou des portes « fermées » et donc des nombres binaires. L'ALU va une étape plus loin et permet de choisir une opération à effectuer en fonction de bits de contrôle supplémentaire, et livre le résultat de l'opération arithmétique ou logique choisie.
 
@@ -1455,7 +1455,7 @@ montrer circuit corrigé
 `````
 -->
 
-## Récapitulatif
+## 3.4. Récapitulatif
 
 Au cours des trois chapitres précédents, nous avons vu comment les portes logiques sont utilisées comme composants de base des ordinateurs. Nous avons d'abord exploré des portes simples comme **OU** et **ET**, puis montré comment ces portes peuvent être combinées en systèmes logiques plus complexes.
 

@@ -5,7 +5,7 @@ encodés sous forme binaire par des 0 et des 1. Se pose alors la question
 de la représentation des caractères, ne serait-ce que parce que la communication
 entre les utilisateurs et les ordinateurs s'opère essentiellement sous forme textuelle. 
 
-## Principe
+## 2.1. Principe
 
 La solution est simple : on associe chaque caractère à un code binaire.
 
@@ -100,7 +100,7 @@ En réalité, il n'existe pas une table de conversion unique, mais des dizaines
 de tables de conversion. Certaines tables ont été proposées à l'origine
 par des constructeurs d'ordinateurs ou des éditeurs de systèmes d'exploitation.
 
-## Table ASCII
+## 2.2. Table ASCII
 
 Le code américain normalisé pour l’échange d’information ASCII (pour American Standard Code for Information Interchange) est apparu dans les année 1960.
 Malgré sa large acceptation, avec ses **7 bits par caractère**,
@@ -124,7 +124,7 @@ La table de représentation des caractères ASCII
 :height: 700
 ```
 
-La table de représentation des caractères ASCII
+**Tab. 1** La table de représentation des caractères ASCII
 
 <br>
 L'exemple ci-dessous renvoie la valeur binaire du texte écrit.
@@ -185,7 +185,7 @@ intégrant le contenu de toutes les tables existantes, via le standard UTF.
 
 
 
-## Standard UTF
+## 2.3. Standard UTF
 
 Le [standard Unicode](https://home.unicode.org/) UTF (Universal Character Set Transformation Format)
 s'est imposé pour l'échange, car il permet d'agréger sur 8 bits, 16 bits ou 32 bits par caractère la totalité des caractères utilisés dans toutes les langues humaines… et même extraterrestres,
@@ -243,7 +243,7 @@ Définition du nombre d'octets utilisés
 :width: 500
 :height: 200
 ```
-Définition du nombre d'octets utilisés
+**Tab. 2** Définition du nombre d'octets utilisés
 
 Puisqu'on peut dire quel type d'octet on regarde à partir des premiers bits du premier octet à gauche, alors même si quelque chose est altéré quelque part, la séquence entière n'est pas perdue : ce codage est appelé *codage auto-synchronisant*.
 
@@ -274,7 +274,7 @@ Exemples de codage UTF-8
 :width: 500
 :height: 200
 ```
-Définition du nombre d'octets utilisés
+**Tab. 3** Définition du nombre d'octets utilisés
 
 
 Par exemple le caractère « € » (euro) est le 8365e caractère du répertoire Unicode ; son index, ou point de code, est donc 8364, il se code en UTF-8 sur 3 octets : 226, 130, et 172 exprimé en décimal (11100010 10000010 10101100 exprimé en binaire).
@@ -296,12 +296,12 @@ width: 750px
 :width: 700
 :height: 400
 ```
-Extrait de la table de représentation UTF-8
+**Tab. 4** Extrait de la table de représentation UTF-8
 
 
-## Exercices
+## 2.4. Exercices
 
-````{admonition} Exercice 1 : utilisation de la table ASCII ✏️📒
+````{admonition} Exercice 2.4.1. - Utilisation de la table ASCII ✏️📒
 :class: note 
 <!--- <span style="color:orange">Niveau intermédiaire</span> -->
 
@@ -315,7 +315,7 @@ Extrait de la table de représentation UTF-8
 ````
 
 
-`````{admonition} Exercice 2 : activité codage et internet 🔌
+`````{admonition} Exercice 2.4.2. - Activité codage et internet 🔌
 :class: note
 <!--- <span style="color:green">Niveau débutant</span> -->
 
@@ -347,7 +347,7 @@ En allant dans «Outils», «Informations sur la page», on voit que cette page 
 
 
 
-````{admonition} Exercice 3 : coder en UTF-8 ✏️📒
+````{admonition} Exercice 2.4.3. - Coder en UTF-8 ✏️📒
 :class: note
 <!--- <span style="color:orange">Niveau intermédiaire</span> -->
 
@@ -364,7 +364,7 @@ Le symbole Ø correspond à la valeur décimale 8709.
 
 
 
-````{admonition} Exercice 4 : activité Hexadécimal ✏️📒
+````{admonition} Exercice 2.4.4. - Activité Hexadécimal ✏️📒
 :class: note
 <!--- <span style="color:red">Niveau avancé</span> -->
 

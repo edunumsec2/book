@@ -2,112 +2,26 @@
 
 Les programmes de ce chapitre sont des idées sous construction, à développer et à placer à leur endroit approprié.
 
-## Arbre
-
-Cet exemple montre la construction hiérarchique d'un arbre, a partir d'une simple branche.
-
-```{codeplay}
-from turtle import *
-
-getscreen().bgcolor('lightblue')
-color('brown')
-
-def branche():
-    width(1)
-    forward(30)
-    back(30)
-
-def branche2():
-    width(2)
-    forward(40)
-    left(50)
-    branche()
-    right(100)
-    branche()
-    left(50)
-    back(40)
-    
-def branche4():
-    width(4)
-    forward(50)
-    left(50)
-    branche2()
-    right(100)
-    branche2()
-    left(50)
-    back(50)
-    
-def branche8():
-    width(8)
-    forward(50)
-    left(50)
-    branche4()
-    right(100)
-    branche4()
-    left(50)
-    back(50)
-
-left(90)
-back(50)
-branche8()
-```
-
-## Méthodes `Turtle`
-
-Ce code affiche tous les méthodes et attributs de la classe `Turtle`.
-
-```{codeplay}
-from turtle import *
-
-print(dir(Turtle))
-```
-
-On y retrouve les 6 comparaisons standard.
-
-```{codeplay}
-from turtle import *
-
-print('__eq__ =', Turtle.__eq__)
-print('__ge__ =', Turtle.__ge__)
-print('__gt__ =', Turtle.__gt__)
-print('__le__ =', Turtle.__le__)
-print('__lt__ =', Turtle.__lt__)
-print('__ne__ =', Turtle.__ne__)
-```
-
-On y retrouve également 9 autres méthodes privées.
-
-```{codeplay}
-from turtle import *
-
-print('__format__ =', Turtle.__format__)
-print('__getattribute__ =', Turtle.__getattribute__)
-print('__hash__ =', Turtle.__hash__)
-print('__init__ =', Turtle.__init__)
-print('__module__ =', Turtle.__module__)
-print('__new__ =', Turtle.__new__)
-print('__repr__ =', Turtle.__repr__)
-print('__setattr__ =', Turtle.__setattr__)
-print('__str__ =', Turtle.__str__)
-```
-
 ## Méthodes `Screen`
 
-Cet exemple de code affiche tous les méthodes et attributs de la classe `Screen`. Nous constatons la présence des 15 mêmes méthodes spéciales que nous avons vues dans la classe `Turtle`.
+Cet exemple de code affiche toutes les méthodes de la classe `Screen`. Nous constatons d'en avoir environs 26 méthodes.
 
 ```{codeplay}
 from turtle import *
 
-print(dir(Screen))
+methodes = [x for x in dir(Screen) if not x.startswith('_')]
+print(methodes)
+print(len(methodes))
 ```
 
-Voici quelques fonctions qui renvoient l'état.
+## État de la tortue
+
+Voici quelques méthodes qui renvoient l'état actuel de la tortue.
 
 ```{codeplay}
 from turtle import *
 
 print('Tortue:')
-print('shapes =', getscreen().getshapes())
 print('shape =', shape())
 print('down =', isdown())
 print('visible =', isvisible())
@@ -118,7 +32,7 @@ print('delay =', delay())
 
 ## Fonction `shape()`
 
-Voici les 6 formes de tortue.
+Voici les 6 formes de la tortue.
 
 ```{codeplay}
 from turtle import *
@@ -128,7 +42,7 @@ print('shapes =', shapes)
 
 left(90)
 up()
-back(180)
+backward(180)
 
 for s in shapes:
     forward(50)
@@ -137,7 +51,7 @@ for s in shapes:
     stamp()
 ```
 
-La taille des 3 formes géométriques `square`,  `triangle` et `circle` est de 20 pixels. Ces formes peuvent être utilisés dans des animations ou des jeux vidéos.
+La taille des 3 formes géométriques `square`,  `triangle` et `circle` est de 20 pixels. Ces formes peuvent être utilisées dans des animations ou des jeux vidéos.
 
 ```{codeplay}
 from turtle import *
@@ -180,7 +94,7 @@ forward(50) # delai de 500 ms tous les 5 pixels
 ## Fonction `tracer()`
 
 La fonction `tracer(0/1)` active ou désactive les animations des tortues.
-Lorsque le traceur est désactivé vous devez utiliser la fonction `update()` pour mettre à jour le dessin sur l'écran.
+Lorsque le traceur est désactivé, vous devez utiliser la fonction `update()` pour mettre à jour le dessin sur l'écran.
 
 ```{codeplay}
 from turtle import *
@@ -190,7 +104,7 @@ def etoile(n, m):
         forward(100)
         left(360/n*m)
 
-back(200)
+backward(200)
 print('tracer =', tracer())
 etoile(7, 3)
 
@@ -205,7 +119,7 @@ etoile(9, 4)
 update()
 ```
 
-La fonction `tracer(n)` contrôle la fréquence des mises à jour du dessin. Seulement les n-ièmes mises à jours régulières de l'écran seront vraiment effectuées. Cette fonction peut être utilisé pour accélérer le dessin de graphiques complexes. Lorsqu'appelé sans arguments, elle renvoie la valeur actuelle de n.
+La fonction `tracer(n)` contrôle la fréquence des mises à jour du dessin. Seulement les n-ièmes mises à jour régulières de l'écran seront vraiment effectuées. Cette fonction peut être utilisée pour accélérer le dessin de graphiques complexes. Lorsqu'appelée sans arguments, elle renvoie la valeur actuelle de n.
 
 ```{codeplay}
 from turtle import *
@@ -282,33 +196,6 @@ for x in range(-300, 300, 10):
     update()
 ```
 
-## Narration
-
-Voici un exemple qui affiche une conversation entre deux personnes, affiché en ralenti, lettre par lettre, pour simuler une sorte de communication chat en ligne.
-
-```{codeplay}
-from time import sleep
-
-histoire = """
-Une histoire d'aventure
------------------------
-A: comment vas-tu ?
-B: très bien !
-A: veux-tu faire un voyage ?
-B: oui, vers où ?
-A: à Rio de Janeiro.
-B: choutte, on part quand ?
-A: il y a un vol ce soir.
-"""
-
-for line in histoire.split('\n'):
-    for c in line:
-        print(c, end='')
-        sleep(0.1)
-    sleep(1)
-    print()
-```
-
 ## Le Zen de Python
 
 Le Zen de Python est un ensemble de 19 principes qui influencent la conception du langage de programmation Python, et sont utiles pour comprendre et utiliser le langage.
@@ -319,20 +206,20 @@ Il est aussi inclus comme **Easter egg** dans Python, et apparait quand on tape 
 import this
 ```
 
-## Mot-clés
+## Mots-clés
 
-Ce module contient la liste de tous des mot-clés de Python. Le nombre des mots-clés est relativement limité. Nous en avons seulement une trentaine. Ces mots-clé concernent :
+Ce module contient la liste de tous des mots-clés de Python. Le nombre des mots-clés est relativement limité. Nous en avons seulement une trentaine. Ces mots-clés concernent :
 
-- les opérateurs logiques : and, or, not
-- les boucles : for, in, while, break, continue
-- l'exécution conditionnelle : if, elif, else
-- les fonctions : def, return, lambda
-- l'importation : import, from
-- les classes : class
-- les variables : global
+- les opérateurs logiques : `and`, `or`, `not`
+- les boucles : `for`, `in`, `while`, `break`, `continue`
+- l'exécution conditionnelle : `if`, `elif`, `else`
+- les fonctions : `def`, `return`, `lambda`
+- l'importation : `import`, `from`
+- les classes : `class`
+- les variables : `global`
 
-Les mots-clés que nous avons pas encore vus sont :  
-as, assert, del, except, exec, finally, is, pass, raise, try, with, yield
+Les mots-clés que nous n’avons pas encore vus sont :  
+`as`, `assert`, `del`, `except`, `exec`, `finally`, `is`, `pass`, `raise`, `try`, `with`, `yield`
 
 ```{codeplay}
 import keyword
@@ -537,6 +424,8 @@ while True:
 ## Tortue par pixel
 
 Est-ce que le programme est beaucoup ralenti si nous créons une nouvelle tortue pour chaque pixel ?
+
+Effectivement avec 600 tortues, nous occupons beaucoup plus d'espace en mémoire, avec les paramètre propre à chaque tortue (`shape`, `color`, `width`, `speed`, etc.)
 
 ```{codeplay}
 from turtle import *

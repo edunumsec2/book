@@ -15,7 +15,7 @@ Demandez à vos camarades de classe de suivre ces instructions. Sont-ils arrivé
 
 # 3. Des algorithmes aux programmes
 
-Une fois que l’on a déterminé le meilleur {glo}`algo|algorithme` à utiliser, pour l'automatiser, il faut le retranscrire dans un programme qu’une machine peut comprendre. Nous allons détailler ce processus pour l’{glo}`algo|algorithme` du <a href="../algorithmes-classiques/eleve.html#tri-selection">**<span style="color:rgb(89, 51, 209)">tri par sélection</span>**</a>. 
+Une fois que l’on a déterminé le meilleur {glo}`algo|algorithme` à utiliser, pour l'automatiser, il faut le retranscrire dans un programme qu’une machine peut comprendre. Nous allons détailler ce processus pour l’{glo}`algo|algorithme` du <a href="../2_trie_cherche_trouve/eleve.html#tri-selection">**<span style="color:rgb(89, 51, 209)">tri par sélection</span>**</a>. 
 
 Cet {glo}`algo|algorithme` consiste à parcourir la liste à trier plusieurs fois. A chaque {glo}`iteration|itération`, on sélectionne le plus petit élément et on l’échange avec le premier élément de la liste non triée. Comment pourrait-on traduire ceci en Python ? Comment représenter les rectangles dans un langage de programmation ? 
 
@@ -106,7 +106,7 @@ L’étape suivante consiste à encapsuler tout le code dans une **<span style="
 
 ```
 # Tri par sélection
-def fonction tri_selection(rect) :
+def tri_selection(rect) :
     
     # pour tous les rectangles de la liste non triée
     for j in range(0,len(rect)-1):
@@ -123,7 +123,7 @@ Finalement le terme `rect` n’est pas assez général, car le tri par sélectio
 
 ```
 # Tri par sélection
-def fonction tri_selection(liste) :
+def tri_selection(liste) :
     
     # pour tous les éléments de la liste non triée
     for j in range(0,len(liste)-1):
@@ -140,7 +140,8 @@ Pour trier la liste `rect` définie au tout début, il suffit d’appeler la {gl
 ```
 # trier la liste de rectangles par sélection
 rect = [3,4,1,2,6,5]
-print(tri_selection(rect))
+tri_selection(rect)
+print(rect)
 ```
 
 En traduisant les étapes intermédiaires du tri par sélection en des lignes de code, nous avons automatisé l'algorithme. Nous l'avons trsncrit en un programme informatique qui peut être exécuté sur une machine.
@@ -157,9 +158,9 @@ Mais est-ce que derrière chaque programme se cache un algorithme ?
 -->
 
 
-## Exercices
+## 3.1 Exercices
 
-````{admonition} Exercice 0. Jeu de la devinette 🔌
+````{admonition} Exercice 3.1.1. Jeu de la devinette 🔌
 :class: note
 
 Ecrire le programme suivant : le programme pense à un nombre au hasard. Lorsque vous lui proposez un nombre, il vous dit si « c'est plus » ou si « c'est moins » jusqu'à ce que vous trouvez le bon nombre. Conseil : utiliser le module Python *random*.
@@ -168,7 +169,7 @@ Y a-t-il une stratégie gagnante ?
  
 ````
 
-````{admonition} Exercice 1. Plus petit nombre 🔌
+````{admonition} Exercice 3.1.2. Plus petit nombre 🔌
 :class: note
 
 Transcrire l’algorithme de l’exercice qui permet de déterminer le plus petit nombre d’une liste, en un programme Python.
@@ -176,7 +177,7 @@ Transcrire l’algorithme de l’exercice qui permet de déterminer le plus peti
 ````
 
 
-````{admonition} Exercice 2. Programmes de tri 🔌
+````{admonition} Exercice 3.1.3. Programmes de tri 🔌
 :class: note
 
 Implémenter le tri à bulles et/ou le tri par insertion vus au cours.
@@ -215,7 +216,18 @@ Lancer votre programme avec 100000 éléments et comparez le temps obtenu avec v
 ````
 -->
 
-````{admonition} Exercice 3. Tri de Bogo🔌
+````{admonition} Exercice 3.1.4. Tri de Bogo🔌
+:class: note
+
+Coder l’algorithme du tri de Bogo en Python (voir chapitre 2 : Le saviez-vous ?). 
+
+Relancer l'algorithme plusieurs fois, en notant le nombre d'itérations nécessaires pour qu'il termine.
+
+A partir de quelle taille de liste cet algorithme est-il inutilisable ?
+ 
+````
+
+````{admonition} Exercice 3.1.5. Tri de Bogo🔌
 :class: note
 
 Coder l’algorithme du tri de Bogo en Python (voir chapitre 2 : Le saviez-vous ?). 
@@ -227,14 +239,11 @@ A partir de quelle taille de liste cet algorithme est-il inutilisable ?
 ````
 
 
-````{admonition} Exercice 4. Fibonacci 🔌
+````{admonition} Exercice 3.1.6. Tri par sélection amélioré 🔌
 :class: note
 
-Ecrire un algorithme qui calcule la suite des nombres de Fibonacci. 
+La version de l’algorithme proposée pour le tri par sélection, ne fonctionne pas le même élément est présent plusieurs fois. Modifier l’algorithme pour que le programme fonctionne avec des doublons.
 
-Traduire l’algorithme en une fonction Python. 
-
-Comparer avec les solutions trouvées par vos camarades de classe.
 ````
 
 

@@ -8,9 +8,9 @@ Voici une partie gagnante pour le joueur X.
 
 ## Représenter le tableau
 
-La structure de donnée approprié pour représenter un tel jeu est un tableau 2D (en 2 dimension). L'état initiale est le tableau avec toutes les éléments à 0.
+La structure de donnée appropriée pour représenter un tel jeu est un tableau 2D (en 2 dimensions). L'état initial est le tableau avec tous les éléments à 0.
 
-Nous allons utiliser les entier 1 et 2 pour représenter les pions du joueur 1 et 2.
+Nous allons utiliser les entiers 1 et 2 pour représenter les pions du joueur 1 et 2.
 
 ```{codeplay}
 state = [[0, 0, 0],
@@ -21,7 +21,16 @@ for line in state:
     print(line)
 ```
 
-Mais une façons plus joli est d'utiliser l'opérateur `*` avec la liste à imprimer.
+Pour améliorer la présentation, nous allons utiliser le *packing* et *unpacking* d'une séquence.
+Utiliser l'opérateur `*` est l'équivalent de déballer (unpacking) de la séquence et d'afficher `print(1, 2, 3)`.
+
+```{codeplay}
+a = (1, 2, 3)
+print(a)
+print(*a)   # unpacking de la séquence
+````
+
+Donc nous allons utiliser l'opérateur `*` avec la liste à imprimer pour créer une apparence plus compact.
 
 ```{codeplay}
 state = [[0, 0, 0],
