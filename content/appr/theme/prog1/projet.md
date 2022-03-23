@@ -1,6 +1,6 @@
 # Projet
 
-Dans ce chapitre, nous allons faire un projet de dessin, qui va utiliser un certain nombre de concepts du dessin avec la tortue. Dans ce projet vous allez :
+Dans ce chapitre, nous allons faire un projet de dessin. Nous allons mettre en pratique un certain nombre de concepts de ce cours :
 
 - dessiner
 - définir
@@ -13,9 +13,10 @@ Dans ce chapitre, nous allons faire un projet de dessin, qui va utiliser un cert
 - itérer
 - paramétrer
 - randomiser
-## Consignes - Projet 1
 
-Vous devez créer un dessin avec un programme Python en utilisant le module turtle.
+## Consignes
+
+Vous devez créer un dessin avec un programme Python.
 
 En concret, vous devez :
 
@@ -44,9 +45,9 @@ En concret, vous devez :
 - répéter avec for en 2D (par exemple: fenêtres, grilles, pixels, etc.)
 - utiliser des fonctions aléatoires (module random) pour introduire de la variété
 - utiliser la perspective : des objets plus près sont plus grands
-- utiliser random.seed(n) pour rendre votre dessin reproductible
+- utiliser `random.seed(n)` pour rendre votre dessin reproductible
 - exporter en format image : EPS, PNG, JPG
-- déposer sur Moodle 4 fichiers avec un nom de forme prénom_projet1 (par exemple alice_projet1.py, alice_projet1.eps, etc.)
+- déposer sur Moodle les 4 fichiers avec un nom de forme `prénom_projet1` (par exemple `alice_projet1.py`, `alice_projet1.eps`, etc.)
 
 ## Exemples
 
@@ -126,9 +127,9 @@ Le document [PEP 8](https://peps.python.org/pep-0008/) présente les bonnes conv
 
 Espaces
 
-- Ne mettez pas d'espace entre nom de fonction et parenthèse (ceci est faux: `f (x)`)
-- Ne mettez pas d'espace à l'intérieur des parenthèses (ceci faux: `f( x, y )`)
-- Ne mettez pas d'espace avant `,`, `;`, `:` (ceci est faux: `def f(x , y) :`)
+- Ne mettez pas d'espace entre nom de fonction et parenthèse (faux: `f (x)`)
+- Ne mettez pas d'espace à l'intérieur des parenthèses (faux: `f( x, y )`)
+- Ne mettez pas d'espace avant `,`, `;`, `:` (faux: `def f(x , y) :`)
 - Mettez un espace avant et après un opérateur (`+`, `-`, `*`, `/`, etc.)
 - Mettez un espace avant et après le symbole d'affectation `=`
 
@@ -143,10 +144,12 @@ Corrigez les 77 erreurs de styles.
 
 ## Nom de fonction
 
-En Python les variables sont écrites avec des minuscules. Si une variable consiste en plusieurs mots, les mots sont séparés par le tiret bas `_`.
+En Python les variables sont écrites avec des minuscules. Si une variable consiste en plusieurs mots, utilisez un tiret bas (`_`) pour séparer les mots.
 En Python, les noms commençant avec des majuscules sont réservés pour les classes. Par exemple
 
 `player = Player()`
+
+Donc changez le noms suivants : 
 
 - Exporter → exporter
 - Niveau → niveau
@@ -161,7 +164,7 @@ En Python, les noms commençant avec des majuscules sont réservés pour les cla
 - ReplacementMur → replacement_mur
 - Plateforme → plateforme
 
-Comme le nom de fonctions est utilisé multiples fois nous avons avantage d'utiliser la fonction rechercher et remplacer
+Comme un nom de fonction peut être utilisé à différents endroits nous avons avantage d'utiliser la fonction **rechercher et remplacer**
 ![dialogue remplacer](media/projet_remplacer.png)
 
 Dans VS Code nous avons aussi une fonction **Remplacer Symbol F2**
@@ -170,102 +173,19 @@ Dans VS Code nous avons aussi une fonction **Remplacer Symbol F2**
 
 ## Conseils
 
-Ce programme est récursif.
+Ce programme est récursif - La fonction `main()` appelle `begin()` qui appelle `nuages()` qui appelle `soleil()` etc.
+Pour avoir des fonctions réutilisable au maximum, vous devez écrire des fonctions indépendantes les unes des autres, avec beaucoup de paramètres.
 
-La fonction `main()` appelle `begin()` qui appelle `nuages()` qui appelle `soleil()` etc.
+Donc voici les conseils essentiels :
 
-Chaque fonction doit être indépendant des autres
-ne doit pas inclure sa position.
-
-## Rectangle
-
-Pour dessiner un rectangle, définissez une fonction rectangle. La fonction `begin` dessine un rectangle de taille 1200 x 1000 en cyan.
-
-```python
-def main():
-    # Mets la tortue au bon endroit,
-    # permet de lancer le reste du code et fixe la couleur de fond
-    getscreen().bgcolor('black')
-    seed(2)
-    speed("fastest")
-    up()
-    backward(600)
-    right(90)
-    forward(500)
-    begin()
-    done()
-```
-
-```python
-def begin():
-    # dessine les bordures du Niveau
-    down()
-    fillcolor("cyan")
-    begin_fill()
-    width(10)
-    for x in (1200, 1000, 1200, 1000):
-        left(90)
-        forward(x)
-    end_fill()
-    width(1)
-    up()
-```
-
-Définissons donc une fonction `rectangle` qui fait tout cela en 1 ligne de code
-
-```python
-def rectangle(a, b, couleur):
-    fillcolor(couleur)
-    begin_fill()
-    for x in (a, b, a, b):
-        print(x)
-        forward(x)
-        left(90)
-    end_fill()
-```
-
-Maintenant `begin()` n'est plus nécessaire et nous pouvons simplifier `main()`
-
-```python
-def main():
-    # fixe la couleur de fond
-    getscreen().bgcolor('black')
-    seed(2)
-    speed("fastest")
-    up()
-    # dessine l'arrière-fond du niveau
-    goto(-600, -500)
-    rectangle(1200, 1000, 'cyan')
-```
-
-La fonction `brique` dessine un rectangle de 150 x 90 en darkgoldenrod.
-
-```python
-def brique():
-    # Composition du mur (voir fonction Mur() ci-dessous)
-    width(1)
-    color("black")
-    fillcolor("darkgoldenrod")
-    begin_fill()
-    forward(150)
-    right(90)
-    forward(50)
-    right(90)
-    forward(150)
-    right(90)
-    forward(50)
-    end_fill()
-    backward(50)
-    right(90)
-```
+- utilisez la fonction `goto()` pour positionner la tortue (il ne faut pas inclure la position dans la fonction)
+- créez des fonctions indépendants (il ne faut pas les enchaîner)
+- créez des fonctions avec plein de paramètres (taille, couleur, épaisseur, etc.)
+- utilisez des valeurs par défaut pour préconfigurer les paramètres de la fonction
 
 ## Soleil
 
-La fonction `soleil()`  :
-
-- n'a pas d'argument
-- utilise un cercle pour dessiner un disque
-- n'est pas positionné au centre du disque
+La fonction `soleil()` m'a pas d'argument et utilise un cercle pour dessiner un disque. La position de départ est le bord inférieur du disque.
 
 ```{codeplay}
 from turtle import *
@@ -294,13 +214,13 @@ goto(100, 80)
 soleil()
 ```
 
-Une meilleure façon est de créer une fonction `soleil(d, couleur, a, angle, n)` avec :
+Une meilleure façon est de créer une fonction `soleil(d, col, a, angle, n)` avec :
 
 - un diamètre `d`
 - une longueur de rayons `a`
 - un angle entre les rayons `angle`
 - un nombre de rayons `n`
-- une couleur `couleur`
+- une couleur `col`
 - une position initiale au centre du cercle
 
 ```{codeplay}
@@ -309,8 +229,8 @@ getscreen().bgcolor('cyan')
 speed(0)
 up()
 
-def soleil(d=100, a=100, angle=45, n=3, couleur='yellow'):
-    color(couleur)
+def soleil(d=100, a=100, angle=45, n=3, col='yellow'):
+    color(col)
     dot(d)
     seth(180)
     down()
@@ -366,7 +286,7 @@ hideturtle()
 up()
 
 def nuage(taille):
-    #Dessine un nuage avec une taille aléatoire
+    # Dessine un nuage avec une taille aléatoire
     seth(0)
     for x in ("darkgray", "darkgray","lightgray") :
         dot(taille * randint(2, 4), x)
@@ -609,12 +529,12 @@ def player():
 player()
 ```
 
-Une meilleure façon est de créer une fonction `joueur(a, bras, jambes, couleur)` qui :
+Une meilleure façon est de créer une fonction `joueur(a, bras, jambes, col)` qui :
 
 - accepte la taille des membres `a`
 - accepte une liste d'angles pour les `bras`
 - accepte une liste d'angles pour les `jambes`
-- accepte une `couleur`
+- accepte une couleur `col`
 
 ```{codeplay}
 from turtle import *
@@ -626,8 +546,8 @@ def member(angle, a):
     forward(a)
     backward(a)
 
-def player(a=50, bras=(45, 45), jambes=(45, 90), couleur='black'):
-    color(couleur)
+def player(a=50, bras=(45, 45), jambes=(45, 90), col='black'):
+    color(col)
     down()
     seth(-90)
     width(a/5)
@@ -643,5 +563,227 @@ def player(a=50, bras=(45, 45), jambes=(45, 90), couleur='black'):
 
 player()
 goto(180, 0)
-player(70, bras=(80, 100), couleur='red')
+player(70, bras=(80, 100), col='red')
 ```
+
+## Mur
+
+Nous utilisons la fonction `rectangle` pour dessiner un mur.
+La fonction `mur(h, w, a, b)` dessine un mur avec h x w briques de taille a x b.
+
+```{codeplay}
+from turtle import *
+speed(0)
+up()
+
+def rectangle(a, b, couleur='darkgoldenrod'):
+    fillcolor(couleur)
+    begin_fill()
+    for x in (a, b, a, b):
+        forward(x)
+        left(90)
+    end_fill()
+
+def mur(h=5, w=1, a=150, b=50):
+    # Mur de Brique qui forme la plateforme où le joueur peut se déplacer
+    width(1)
+    down()
+    for j in range(w):
+        for i in range(h):
+            rectangle(a, b)
+            sety(ycor()+b)
+        sety(ycor() - h*b)
+        forward(a)
+    up()
+
+goto(-280, -180)
+mur()
+
+goto(0, -180)
+mur(5, 2, 80, 40)
+```
+
+## Piques
+
+La fonction `piques()` dessine une série de 6 triangles de taille fixe.
+
+```{codeplay}
+from turtle import *
+speed(0)
+up()
+
+def piques():
+    # Dessine les piques
+    fillcolor("gray")
+    for i in range(6):
+        begin_fill()
+        for x in (60, 240, 240):
+            left(x)
+            forward(70)
+        end_fill()
+        backward(70)
+        right(180)
+
+goto(-200, -100)
+down()
+piques()
+```
+
+Une meilleure façon est de créer deux fonctions. Une fonction `triangle(a)` qui :
+
+- peut être utilisé seul
+- avec un côté `a``
+
+et une fonction `piques(n, a)` qui répète le triangle `n` fois.
+
+```{codeplay}
+from turtle import *
+speed(0)
+up()
+
+def triangle(a):
+    begin_fill()
+    for i in range(3):
+        forward(a)
+        left(120)
+    end_fill()
+
+def piques(n=6, a=70):
+    down()
+    fillcolor('gray')
+    for i in range(n):
+        triangle(a)
+        forward(a)
+    up()
+
+goto(-200, -100)
+piques()
+goto(-200, -180)
+piques(10, 40)
+```
+
+## Drapeau
+
+La fonction `drapeau()` dessine un seul type de drapeau.
+
+```{codeplay}
+from turtle import *
+
+def triangle_drapeau():
+    # drap du drapeau
+    fillcolor("red")
+    begin_fill()
+    right(120)
+    forward(50)
+    right(120)
+    forward(50)
+    right(120)
+    forward(50)
+    end_fill()
+    backward(32)
+    up()
+    right(90)
+    forward(5)
+    color('black')
+    write("WIN")
+
+def baton_drapeau():
+    # Baton du drapeau
+    left(90)
+    width(3)
+    forward(100)
+
+def drapeau():
+    # Création du drapeau à atteindre
+    baton_drapeau()
+    triangle_drapeau()
+
+drapeau()
+```
+
+Une meilleure façon est de créer une fonction `drapeau(h, a, col, text)` qui dessine un drapeau avec :
+
+- une hauteur `h`
+- un triangle de côté `a`
+- de couleur `col`
+- qui affiche `text`
+
+```{codeplay}
+from turtle import *
+
+def triangle(a):
+    begin_fill()
+    for i in range(3):
+        forward(a)
+        left(120)
+    end_fill()
+
+def drapeau(h=100, a=50, col='red', text='WIN'):
+    seth(90)
+    down()
+    forward(h)
+    fillcolor(col)
+    triangle(-a)
+    backward(a/2)
+    color('black')
+    write(' '+ text)
+    up()
+
+drapeau()
+goto(100, 0)
+drapeau(150, 70, 'yellow', 'You loose')
+```
+
+## Plateforme
+
+La fonction `plateforme_piques()` dessine deux plateformes fixes.
+
+```{codeplay}
+from turtle import *
+hideturtle()
+
+def plateformes_piques():
+    # Plateformes qui se trouvent au-dessus des piques
+    down()
+    width(5)
+    color("blue")
+    forward(100)
+    left(90)
+    up()
+    forward(70)
+    right(90)
+    forward(70)
+    down()
+    color("red")
+    forward(100)
+    up()
+
+plateforme_piques()
+```
+
+Une meilleure façon est de créer une fonction `plateforme(col, a, w)` qui dessine une plateforme :
+
+- de couleur `col`
+- de longueur `a` et
+- d'une épaisseur `w`
+
+```{codeplay}
+from turtle import *
+hideturtle()
+up()
+
+def plateforme(col='red', a=100, w=5):
+    down()
+    width(w)
+    color(col)
+    forward(a)
+    up()
+
+plateforme()
+goto(100, 50)
+plateforme('blue')
+goto(200, 100)
+plateforme'lime')
+```
+
+Téléchargez le code source du projet réusiné {download}`project1b.py <code/projet1b.py>`
