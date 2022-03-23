@@ -183,9 +183,22 @@ Donc voici les conseils essentiels :
 - créez des fonctions avec plein de paramètres (taille, couleur, épaisseur, etc.)
 - utilisez des valeurs par défaut pour préconfigurer les paramètres de la fonction
 
-## Soleil
+## Jeu vidéo
 
-La fonction `soleil()` m'a pas d'argument et utilise un cercle pour dessiner un disque. La position de départ est le bord inférieur du disque.
+Cette image utilise beaucoup d'éléments réutilisables:
+
+- nuages
+- arbres
+- briques
+- murs
+- piques
+- drapeau
+
+![projet](media/projet_alex.png)
+
+### Soleil
+
+La fonction `soleil()` n'a pas d'argument et utilise un cercle pour dessiner un disque. La position de départ est le bord inférieur du disque.
 
 ```{codeplay}
 from turtle import *
@@ -245,7 +258,7 @@ goto(100, 100)
 soleil(80, a=400, n=10)
 ```
 
-## Nuage
+### Nuage
 
 Dans ce projet, les nuages sont créés par 6 disques de taille aléatoire avec 2 niveaux de gris.
 
@@ -306,7 +319,7 @@ goto(0, 0)
 nuage(30)
 ```
 
-## Arbre
+### Arbre
 
 La fonction `arbre_AP(angle)` (AP = arrière-plan):
 
@@ -367,7 +380,7 @@ forward(120)
 arbre(90)
 ```
 
-## Montagne
+### Montagne
 
 La fonction `montagne_AP()`:
 
@@ -471,7 +484,7 @@ goto(-280, -50)
 montagne(40, (80, 155, 150, 72), 'silver')
 ```
 
-## Joueur
+### Joueur
 
 La fonction `joueur()` n'a aucun argument.
 
@@ -566,7 +579,7 @@ goto(180, 0)
 player(70, bras=(80, 100), col='red')
 ```
 
-## Mur
+### Mur
 
 Nous utilisons la fonction `rectangle` pour dessiner un mur.
 La fonction `mur(h, w, a, b)` dessine un mur avec h x w briques de taille a x b.
@@ -603,7 +616,7 @@ goto(0, -180)
 mur(5, 2, 80, 40)
 ```
 
-## Piques
+### Piques
 
 La fonction `piques()` dessine une série de 6 triangles de taille fixe.
 
@@ -632,7 +645,7 @@ piques()
 Une meilleure façon est de créer deux fonctions. Une fonction `triangle(a)` qui :
 
 - peut être utilisé seul
-- avec un côté `a``
+- avec un côté `a`
 
 et une fonction `piques(n, a)` qui répète le triangle `n` fois.
 
@@ -662,7 +675,7 @@ goto(-200, -180)
 piques(10, 40)
 ```
 
-## Drapeau
+### Drapeau
 
 La fonction `drapeau()` dessine un seul type de drapeau.
 
@@ -734,7 +747,7 @@ goto(100, 0)
 drapeau(150, 70, 'yellow', 'You loose')
 ```
 
-## Plateforme
+### Plateforme
 
 La fonction `plateforme_piques()` dessine deux plateformes fixes.
 
@@ -787,3 +800,332 @@ plateforme'lime')
 ```
 
 Téléchargez le code source du projet réusiné {download}`project1b.py <code/projet1b.py>`
+
+## Champignon
+
+Ce projet utilise principalement la fonction `circle(r, angle)` qui permet de dessiner un arc de cercle de rayon `r` et d'une longueur défini par `angle`.
+
+Par défaut, un cercle entier est dessiné avec 36 segments.
+Si une meilleure précision est nécessaire, on peut augmenter le nombre de segments, en spécifiant le paramètre optionnel `step` de la façon suivante: 
+`circle(r, angle, steps=200)`.
+
+![projet](media/projet_samuel.png)
+
+Ci-dessous nous donnons quelques explications comment créer les éléments de ce type d'image.
+
+### Sol et Base
+
+Beaucoup d'éléments sont créés par des ovales. Par exemple le sol, la serrure et les ronds sur le chapeau.
+
+```{codeplay}
+from turtle import *
+hideturtle()
+up()
+
+def ovale(r1, r2, angle=90, col='lime'):
+    down()
+    fillcolor(col)
+    begin_fill()
+    for i in range(2):
+        circle(r1, angle/2)
+        circle(r2, 180-angle)
+        circle(r1, angle/2)
+    end_fill()
+    up()
+
+def base(col='violet'):
+    down()
+    fillcolor(col)
+    begin_fill()
+    right(30)
+    circle(50, 75)
+    left(40)
+    circle(180, 40)
+    left(30)
+    circle(30, 85)
+    left(25)
+    circle(400, 15)
+    end_fill()
+    up()
+
+goto(0, -150)
+ovale(100, 50, 40)
+goto(-30, -100)
+base()
+
+goto(-150, 100)
+ovale(20, 30, col='lightgreen')
+
+goto(50, 100)
+ovale(40, 30, col='lightgreen')
+```
+
+### Porte
+
+La porte est composée de 4 segments courbés. Nous tournons à gauche (rayon `r` positif). La fonction `porte` possède un paramètre `r` pour la taille.
+Ceci nous permet de dessiner un ombre de la porte plus grand (à 110%) et plus foncé, pour donner un effet 3D.
+
+Pour bien fermer la forme, nous mémorisons la position de départ dans la variable locale `p`.
+En fin du dessin nous fermons la courbe avec l'instruction `goto(p)`.
+
+```{codeplay}
+from turtle import *
+hideturtle()
+up()
+
+def porte(r=100, col='bisque'):
+    p = position()
+    down()
+    fillcolor(col)
+    begin_fill()
+    circle(r, 38)           # segement bas
+    left(45)
+    circle(1.1 * r, 60)     # segement gauche
+    left(30)
+    circle(0.7 * r, 40)     # segment haut
+    left(45)
+    circle(1.25 * r, 50)    # segment droite
+    goto(p)                 # fermer la forme
+    end_fill()
+    up()
+
+seth(-10)
+porte(110, 'darkviolet')
+seth(-10)
+porte()
+```
+
+### Fenêtre
+
+L'origine de la fenêtre est au centre. Elle peut être dessinée avec deux disques. La vitre est en noir et elle a une taille de 80% par rapport au diamètre extérieur.
+Le cadre est fait avec 4 lignes qui partent du centre.
+
+```{codeplay}
+from turtle import *
+from random import *
+getscreen().bgcolor('violet')
+hideturtle()
+up()
+
+def fenetre(p=(0, 0), d=60, col='yellow'):
+    goto(p)
+    color(col)
+    dot(d)
+    color('black')
+    dot(0.8 * d)
+
+    color(col)
+    width(d/30)
+    down()
+    for i in range(4):
+        forward(0.4 * d)
+        backward(0.4 * d) 
+        left(90)
+    up()
+
+left(10)
+fenetre()
+fenetre((100, 60), 100, 'aqua')
+```
+
+### Chapeau
+
+Le chapeau est composé d'arcs de différents rayons.
+
+```{codeplay}
+from turtle import *
+hideturtle()
+up()
+
+def chapeau_dessus(col='aqua') :
+    p = position()
+    fillcolor(col)
+    begin_fill()
+    down()
+    width(3)
+    circle(800, 9)    
+    circle(60, 98)
+    circle(350, 50)
+    left(13)
+    circle(180, 50)
+    circle(300, 35)
+    circle(30, 45)
+    circle(140, 65)
+    goto(p)
+    end_fill()
+    up()
+
+def chapeau_dessous(col='violet'):
+    fillcolor(col)
+    p = position()
+    down()
+    begin_fill()
+    width(8)
+    circle(500, 15)
+    circle(30, 125)
+    circle(500, 20)
+    circle(150, 30)
+    circle(500, 20)
+    circle(30, 105)
+    circle(150, 50)
+    goto(p)
+    end_fill()
+    up()
+
+goto(50, -150)
+chapeau_dessus()
+goto(60, -130)
+chapeau_dessous()
+```
+
+### Fentes
+
+Pour dessiner les fentes du champignon, nous utilisons deux arcs de cercle.
+
+L'arc commence en position `p` et pointe vers `center`. L'arc a une courbure donnée par `rayon`.
+La longueur de l'arc est exprimée par une valeur décimale entre 0 et 1 (0.5 par défaut).
+Au bout de l'arc nous tournons d'une valeur `angle` et nous revenons en arrière le même arc.
+
+```{codeplay}
+from turtle import *
+hideturtle()
+up()
+
+def fente(p, rayon, angle, longueur=0.5, center=(0, 0), col='violet'):
+    up()
+    goto(p)
+    down()
+    
+    d = distance(q)
+    setheading(towards(q))
+    # conversion de radiant en degrés (360/2/pi = 57)
+    arc = longueur * d / rayon * 57
+    
+    fillcolor(col)
+    begin_fill()
+    circle(rayon, arc)   
+    left(angle)
+    circle(rayon, -arc)
+    end_fill()
+
+speed(10)
+q = -55, 65
+goto(q)
+dot()
+
+positions = (-200, 0), (-150, 130), (-10, 140), (150, 70), (200, -30), (50, -130), (-70, -100)
+
+for p in positions:
+    fente(p, 600, 10, center=q)
+```
+
+### Arrière-fond
+
+Pour dessiner les lignes psychédéliques de l'arrière-fond, nous réutilisons les fentes de tout à l'heure.
+
+Les fentes commencent le long des 4 bordes avec des coordonnées `(x, y)` et pointent vers `center`. 
+
+```{codeplay}
+from turtle import *
+from random import *
+tracer(0)
+up()
+
+couleurs = ('coral', 'bisque', 'orange', 'pink', 'turquoise', 'lightblue', 
+            'violet', 'gold', 'olive', 'tan')
+
+def ombre(p, rayon, angle, longueur=0.5, center=(0, 0), col='violet'):
+    up()
+    goto(p)
+    down()
+    
+    d = distance(q)
+    setheading(towards(q))
+    # conversion de radiant en degrés (360/2/pi = 57)
+    arc = longueur * d / rayon * 57
+    
+    fillcolor(col)
+    begin_fill()
+    circle(rayon, arc, steps=100)   
+    left(angle)
+    circle(rayon, -arc, steps=100)
+    end_fill()
+    
+q = -55, 25
+goto(q)
+dot()
+
+for x in range(-300, 320, 10):
+    ombre((x, 220), 600, 2, 0.8, center=q, col=choice(couleurs))
+
+for y in range(200, -220, -10):
+    ombre((320, y), 600, 2, 0.8, center=q, col=choice(couleurs))
+
+for x in range(300, -320, -10):
+    ombre((x, -220), 600, 2, 0.8, center=q, col=choice(couleurs))
+
+for y in range(-200, 220, 10):
+    ombre((-320, y), 600, 2, 0.8, center=q, col=choice(couleurs))
+update()
+```
+
+## Loups
+
+Ce projet utilise des polygones.
+
+![projet](media/projet_hugo.jpg)
+
+La façon la plus efficace est de mettre les coordonnées de chaque polygone dans un tuple.
+Ici nous commençons le tuple du polygone avec la couleur et nous ajoutons ensuite les points.
+
+```{codeplay}
+from turtle import *
+
+polygons = (
+('dimgray', (0, -300), (60, -265), (100, -195), (44, -216), (0, -300), ),
+('darkgrey', (0, -300), (-74, -247), (24, -239), (0, -300), ),
+('darkgrey', (24, -239), (44, -216), (-55, -219), (-74, -247), ),
+('darkgrey', (-226, -205), (-200, -170), (-55, -219), (-80, -300), ),
+('darkgrey', (-216, -270), (-226, -205), ),
+('darkgrey', (-74, -247), (-80, -300), (-216, -270), (-226, -205), ),
+('silver', (-55, -219), (-54, -159), (-167, -93), (-55, -219), ),
+('grey', (44, -216), (59, -190), (64, -160), (64, -60), (-55, -159), (-55, -219), ),
+('silver', (64, -60), (64, -60), (63, -300), (87, -308), (117, -303), (99, -278), (119, -59), (127, -41), (102, 1), (-12, 98), (29, -40), (64, -60), ),
+('dimgray', (0, -300), (60, -265), (100, -195), (44, -216), (0, -300), ),
+('darkgrey', (-12, 97), (-12, 97), (-96, 26), (-55, -159), (29, -40), (-12, 37), (-12, 97), ),
+('lightgrey', (-133, -76), (-168, -94), (-55, -159), (-133, -76), ),
+('darkgrey', (127, -42), (172, -3), (152, -59), (133, -278), (154, -300), (117, -304), (100, -279), (119, -60), (127, -42), ),
+('grey', (173, -3), (193, 53), (188, 113), (102, 1), (127, -42), ),
+('silver', (189, 112), (189, 112), (169, 110), (146, 143), (102, 1), (159, 49), (189, 112), ),
+('darkgrey', (96, 139), (28, 157), (-12, 97), (102, 1), (96, 139), ),
+('grey', (189, 112), (195, 151), (203, 241), (203, 261), (223, 295), (227, 325), (218, 327), (206, 317), (186, 317), (174, 295), (146, 143), (169, 110), (189, 112), ),
+('darkgrey', (96, 139), (28, 157), (28, 157), (61, 229), (76, 233), (90, 253), (84, 267), (112, 308), (174, 296), (174, 256), (146, 143), ),
+('grey', (62, 229), (77, 233), (91, 254), (85, 267), (85, 267), (49, 267), (8, 217), (62, 229), ),
+('silver', (8, 217), (85, 267), (50, 267), (8, 217), ),
+('black', (186, 318), (201, 343), (206, 318), (186, 318), ),
+('silver', (210, 348), (211, 367), (205, 392), (195, 392), (133, 340), (50, 267), (85, 267), (113, 308), (143, 311), (174, 296), (186, 318), (201, 343), (210, 348), ),
+('black', (135, 320), (145, 337), (135, 320), ),
+('black', (195, 393), (212, 368), (205, 393), (195, 393)),
+)
+
+for polygon in polygons:
+    fillcolor(polygon[0])
+    begin_fill()
+    for p in polygon[1:]:
+        goto(p[0]/2, p[1]/2)
+        down()
+
+    end_fill()
+    up()
+
+for polygon in polygons:
+    fillcolor(polygon[0])
+    begin_fill()
+    for p in polygon[1:]:
+        goto(200 + p[0]/4, p[1]/4)
+        down()
+    end_fill()
+    up()
+
+done()
+```
