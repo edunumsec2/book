@@ -165,3 +165,4 @@ Pour chaque thématique présente dans les ressources, il existe un certain nomb
 TODO
 Une charte d'écriture est proposée, qui contient des règles à suivre pour la contribution et/ou l'écriture de nouveaux documents. 
 
+cc
