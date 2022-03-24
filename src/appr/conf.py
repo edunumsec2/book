@@ -69,6 +69,7 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages. See the documentation for
 # a list of builtin themes.
 #
+
 html_theme = 'furo'
 html_favicon = '../static/modulo-icon.ico'
 html_title = 'Apprendre'
@@ -77,6 +78,10 @@ html_theme_options = {
     "dark_logo": "modulo-logo-dark.svg",
     "navigation_with_keys": True,
     "light_css_variables": {
+
+        # Fonts
+        'font-stack': "Montserrat, system-ui, -apple-system, BlinkMacSystemFont,\"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif,\"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+
         # Base colors
         "color-foreground-primary": "black",
         "color-foreground-secondary": "#5a5c63", # for secondary text,
@@ -94,14 +99,18 @@ html_theme_options = {
         "color-announcement-text": "#eeebee",
 
         # Brand colors
-        "color-brand-primary": "#8044FF", # violet
-        "color-brand-content": "#8044FF", # violet
+        "color-brand-primary": "#5933D1", # violet
+        "color-brand-content": "#5933D1", # violet
         
         # Admonition font size
         "admonition-font-size": "0.9rem",
         "admonition-title-font-size": "0.9rem",
     },
     "dark_css_variables": {
+
+        # Fonts
+        'font-stack': "Montserrat, system-ui, -apple-system, BlinkMacSystemFont,\"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif,\"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+
         # Base colors
         "color-foreground-primary": "#ffffffcc",
         "color-foreground-secondary": "#9ca0a5", # for secondary text,
@@ -128,13 +137,13 @@ html_theme_options = {
     },
 }
 
-html_css_files = ['styles/global.css', 'styles/reactions.css', 'styles/progress.css', 'normalize.css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']
+html_css_files = ['styles/global.css', 'styles/reactions.css', 'styles/progress.css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['../static']
-html_js_files = ['https://unpkg.com/@popperjs/core@2', 'scripts/reactions.js', 'scripts/progress.js', 'scripts/frames.js']
+html_js_files = ['https://unpkg.com/@popperjs/core@2', 'scripts/reactions.js', 'scripts/progress.js', 'scripts/dark.js', 'scripts/frames.js']
 
 pygments_sytle = "sphinx"
 pygments_dark_style = "monokai"

@@ -1,4 +1,3 @@
-(representationinformation)=
 Représentation de l'information
 ==================================
 
@@ -20,8 +19,6 @@ Redondance <redondance>
 Conclusion <conclusion>
 ```
 
-
-
 ## Objectifs de la thématique
 
 {fa}`check, text-success mr-1`Découvrir la **représentation binaire** des nombres entiers, des caractères, des images et des sons.
@@ -36,7 +33,7 @@ Conclusion <conclusion>
 
 :img-top: media/gracehopper.jpeg
 
-Grace Hopper  🇺🇸
+Grace Hopper 🇺🇸
 ^^^^^
 ***1906-1992***
 
