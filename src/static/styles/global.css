@@ -1,3 +1,69 @@
-h1 {
+:root {
+    --primary-light: #5933D1;
+    --primary-dark: #06CCC0;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* HEADING */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
     color: #5933D1;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+/* PROSE */
+
+p {
+    line-height: 1.625;
+    --baseline-multiplier: 0.179;
+    --x-height-multiplier: 0.35;
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+
+
+
+a {
+    color: var(--primary-light);
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+/* SIDEBAR */
+
+.sidebar-brand-text {
+    text-align: center;
+}
+
+/* CUSTOM CLASSES */
+
+.admonition {
+    margin: 1.75rem 0 1.75rem 0;
 }

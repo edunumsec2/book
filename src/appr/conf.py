@@ -69,6 +69,7 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages. See the documentation for
 # a list of builtin themes.
 #
+
 html_theme = 'furo'
 html_favicon = '../static/modulo-icon.ico'
 html_title = 'Apprendre'
@@ -77,6 +78,10 @@ html_theme_options = {
     "dark_logo": "modulo-logo-dark.svg",
     "navigation_with_keys": True,
     "light_css_variables": {
+
+        # Fonts
+        'font-stack': "Montserrat, system-ui, -apple-system, BlinkMacSystemFont,\"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif,\"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+
         # Base colors
         "color-foreground-primary": "black",
         "color-foreground-secondary": "#5a5c63", # for secondary text,
@@ -94,14 +99,18 @@ html_theme_options = {
         "color-announcement-text": "#eeebee",
 
         # Brand colors
-        "color-brand-primary": "#8044FF", # violet
-        "color-brand-content": "#8044FF", # violet
+        "color-brand-primary": "#5933D1", # violet
+        "color-brand-content": "#5933D1", # violet
         
         # Admonition font size
         "admonition-font-size": "0.9rem",
         "admonition-title-font-size": "0.9rem",
     },
     "dark_css_variables": {
+
+        # Fonts
+        'font-stack': "Montserrat, system-ui, -apple-system, BlinkMacSystemFont,\"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif,\"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+
         # Base colors
         "color-foreground-primary": "#ffffffcc",
         "color-foreground-secondary": "#9ca0a5", # for secondary text,
