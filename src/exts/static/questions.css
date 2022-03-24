@@ -66,31 +66,15 @@
 
 /* Next, settings for dark theme: */
 
-@media (prefers-color-scheme: dark) {
-
-  body[data-theme="auto"] .question .admonition-title {
-    background-color: rgb(32, 32, 56);
-  }
-  
-  body[data-theme="auto"] .question .admonition {
-    background-color: rgb(var(--inf-offblack));
-    border-color: hsl(211, 48%, 50%);
-  }
-  
-  body[data-theme="auto"] .question .admonition-title:before {
-    color:#667081;
-  }
-}
-
-body[data-theme="dark"] .question .admonition-title {
+body.modulo-dark .question .admonition-title {
   background-color: rgb(32, 32, 56);
 }
 
-body[data-theme="dark"] .question .admonition {
+body.modulo-dark .question .admonition {
   background-color: rgb(var(--inf-offblack));
   border-color: hsl(211, 48%, 50%);
 }
 
-body[data-theme="dark"] .question .admonition-title:before {
+body.modulo-dark .question .admonition-title:before {
   color:#667081;
 }
