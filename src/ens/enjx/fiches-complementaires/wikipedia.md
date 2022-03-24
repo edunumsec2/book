@@ -1,11 +1,3 @@
-
-
-
-<!-- Test de mise en page -->
-
- <!DOCTYPE html>
-<html>
-<head>
 <style>
 .button {
   background-color: white;
@@ -47,11 +39,6 @@
 }
 
 </style>
-</head>
-</html>
-
-<!-- Fin du test de mise en page -->
-
 
 <div align="right"> 
     <a href="http://files.edunumsec2.ch/enjeux-sociaux/wikipedia.pdf" class="round-button">

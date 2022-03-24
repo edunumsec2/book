@@ -1,7 +1,3 @@
-
- <!DOCTYPE html>
-<html>
-<head>
 <style>
 .button {
   background-color: white;
@@ -42,8 +38,6 @@
     }
 
 </style>
-</head>
-</html>
 
 <div align="right"> 
     <a href="http://files.modulo-info.ch/enjeux-sociaux/environnement/numerique-environnement.pdf" class="round-button">

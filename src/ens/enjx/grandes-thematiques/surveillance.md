@@ -1,7 +1,3 @@
-
- <!DOCTYPE html>
-<html>
-<head>
 <style>
 .button {
   background-color: white;
@@ -43,8 +39,6 @@
 
 }
 </style>
-</head>
-</html>
 
 <br>
 

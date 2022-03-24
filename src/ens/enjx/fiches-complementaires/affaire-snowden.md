@@ -1,12 +1,3 @@
-
-
-
-<!-- Test de mise en page -->
-
- <!DOCTYPE html>
-<html>
-<head>
-
 <style>
 .button {
   background-color: white;
@@ -52,10 +43,7 @@
     }
 
 </style>
-</head>
-</html>
 
-<!-- Fin du test de mise en page -->
 <br>
 
 
