@@ -14,8 +14,9 @@ Configuration pour la machine enseignant : un éditeur python (Visual Studio, Th
 
 Pour les élèves, des machines avec le logiciel Audacity installé, accès à des écouteurs personnels, connexion internet pour les élèves pour la dernière période (accès à Moodle).
 
+<!--
 Les fichiers suivants sont à télécharger pour l'activité complète : ...
-
+--> 
     
 
 ## 3.1. Objectifs 
@@ -126,7 +127,69 @@ Les éléments principaux à évoquer sont :
 
 - À la fin de la première période : l'enseignant sensibilise les élèves à l'utilisation d'Audacity : ouverture du logiciel, écoute d'un ou plusieurs morceaux. Les élèves commencent à manipuler en toute fin de séance et s'exerceront concrètement au cours de la suivante.
 
-*Problématique de la représentation :* fonction sinus, amplitude, fréquence, période. Rappels mathématiques et physiques sur les notions abordées : notion d'onde de pression, compression-dilatation, compréhension de la représentation graphique (sinus). L'enseignant traite rapidement la notion d'onde sonore comme la somme de «sons élémentaires».
+
+Une idée intéressante est de proposer d'aborder les notions fondamentales physiques de manière accessible via de courtes séquences vidéo explicités et reprises ensuite par l'enseignant.
+
+Une première vidéo de 2 mn résume de manière assez complète l'ensemble des paramètres physiques mis en jeu lors du processus de production - transmission - réception sonore.
+
+
+```{youtube} QEpk6feHMxQ
+`````
+
+<br>
+
+Les éléments mentionnés peuvent être repris en temps réel ou différé par l'enseignant au tableau ou en déroulant un document powerpoint, pour permettre leur développement ensuite :
+- cerveau de l'émetteur du son -> impulsions électriques -> cordes vocales -> ondulations -> molécules qui s'entrechoquent -> oreille -> tympan vibrant -> message électrique -> cerveau du récepteur du son
+
+- musique = onde générée par une vibration
+
+- signal analogique (physique) -> micro -> signal électrique
+
+- signal électrique -> enceinte -> signal analogique (physique)
+
+- son = onde = molécules vibrant à une certaine vitesse (fréquence), avec une certaine force (amplitude)
+
+- vitesse de vibration des molécules = nombre de vibration par seconde = fréquence, unité le hertz (Hz)
+
+- fréquence haute <=> vitesse des molécules élevée <=> son aigu
+
+- amplitude élevée <=> ampleur importante du mouvement des molécules <=> son fort
+
+- molécules => milieu matériel nécessaire : sans molécules (dans le vide par exemple), pas de son
+
+
+Une deuxième vidéo très courte (27 s) permet de revenir sur le rôle du milieu de propagation et l'oscillation des molécules permettant la transmission du son.
+
+
+```{youtube} kW9nwkrfGFw
+`````
+
+<br>
+
+Enfin, une troisième vidéo diffusée à vitesse lente (0,25) permet de comprendre la relation entre le déplacement de ces molécules et la forme sinusoïdale caractéristique de la description d'une onde sonore.
+
+
+```{youtube} XFyT1bsSnHI
+`````
+
+La molécule (illustrée par le bouchon ici) vibre verticalement ; dans le phénomène de propagation du son, les molécules vibrent horizontalement.
+<br>
+
+L'image animée ci dessous illustre la propagation d'une onde telle qu'elle pourrait se visualiser après l'impact d'une pierre à la surface de l'eau par exemple.
+
+<br>
+
+<center>
+
+```{image} png/son_couv1.gif
+:width: 750
+:height: 400
+```
+</center>
+
+<br> <br>
+
+*Problématique de la représentation :* fonction sinus (non détaillée, simplement citée), amplitude, fréquence, période. Rappels mathématiques et physiques sur les notions abordées : notion d'onde de pression, compression-dilatation, compréhension de la représentation graphique (sinus). L'enseignant peut traiter rapidement la notion d'onde sonore comme la somme de «sons élémentaires», en fonction du niveau et de la sensibilité de la classe.
 
 </br>
 
@@ -235,7 +298,7 @@ align: left
 </br> </br>
 
 1ère phase.
-L'enseignant s'assure de la bonne compréhension des phénomènes : notions d'amplitude et de fréquence, dilatation temporelle, fréquences «visibles» des composantes du signal. En particulier, sur la dernière visualisation, on observe qu'on peut mettre en évidence une «quasi-période» entre les instants 0,8320 et 0,8345. Le calcul de la période donne donc 0,8345-0,8320 = 0,0025s, soit une fréquence de 1/0,0025 = 400Hz. L'enseignant questionne les élèves sur cette fréquence : est-elle basse ? haute ? L'enseignant s'appuie ensuite sur la génération d'un son «pur» à 400Hz, via les fonctions python **tracesinus**, **listensinus**. Par la visualisation et l'écoute, les élèves peuvent se représenter l'information extraite du fichier audio (composante de fréquence ~ 400Hz), puis comprendre ce qui se passe quand on ajoute plusieurs signaux à différentes fréquences (ici un signal de fréquence fondamentale 400Hz, puis ses 4 harmoniques suivantes : 800, 1200, 1600, 2000Hz) quand l'enseignant utilise la fonction python **puresignalssum**.
+L'enseignant s'assure de la bonne compréhension des phénomènes : notions d'amplitude et de fréquence, dilatation temporelle, fréquences «visibles» des composantes du signal. En particulier, sur la dernière visualisation, on observe qu'on peut mettre en évidence une «quasi-période» entre les instants 06,8320 et 06,8345. Le calcul de la période donne donc 06,8345-06,8320 = 0,0025s, soit une fréquence de 1/0,0025 = 400Hz. L'enseignant questionne les élèves sur cette fréquence : est-elle basse ? haute ? L'enseignant s'appuie ensuite sur la génération d'un son «pur» à 400Hz, via les fonctions python **tracesinus**, **listensinus**. Par la visualisation et l'écoute, les élèves peuvent se représenter l'information extraite du fichier audio (composante de fréquence ~ 400Hz), puis comprendre ce qui se passe quand on ajoute plusieurs signaux à différentes fréquences (ici un signal de fréquence fondamentale 400Hz, puis ses 4 harmoniques suivantes : 800, 1200, 1600, 2000Hz) quand l'enseignant utilise la fonction python **puresignalssum**.
 
 <a name="tracesinus"></a>
 
