@@ -10,6 +10,10 @@
   filter: drop-shadow( 2px 3px 8px rgba(0, 0, 0, .35))
 }
 
+body.modulo-dark #progress-ring {
+  background-color: #272822;
+}
+
 #progress-ring .progress {
   stroke: #5933d1ff;
   stroke-width: 6;

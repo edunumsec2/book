@@ -34,14 +34,6 @@ Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi q
 :width: 500px
 ```
 ````
-<!-- 
-````{tabbed} Crétois
-```{image} media/cretois.png
-:height: 250px
-:width: 250px
-```
-```` 
--->
 
 ````{tabbed} Chinois
 ```{image} media/chinois.gif
@@ -102,17 +94,6 @@ align: left
 Le codage de la lettre «s» dans le carré de Polybe est quatre torches à gauche, trois torches à droite. 
 
 ````
-</center>
-
-<!---
-
-```{image} media/polybe.png
-:width: 400px
-:height: 300px
-```
-Le codage de la lettre «s» dans le carré de Polybe est quatre torches à gauche, trois torches à droite 
--->
-
 
 ````{admonition} Anecdote
 :class: hint
@@ -126,7 +107,6 @@ Grâce à l'invention du [télescope](https://fr.wikipedia.org/wiki/T%C3%A9lesco
 [Claude Chappe](https://fr.wikipedia.org/wiki/Claude_Chappe), inventeur français, développe en 1794 un {glo}`telegraphe|télégraphe` capable de relier des villes entre elles sur plusieurs dizaines de kilomètres grâce à un système de bras mobiles, qui ressemblent aux signaux que pourrait faire un être humain sur le tarmac d'un aéroport. 
 
 
-
 ````{figure} media/chappe.jpeg
 ---
 height: 400px
@@ -136,17 +116,6 @@ align: left
 ---
 Le télégraphe de Chappe émet des signaux ressemblant aux bras d'un être humain. 
 ````
-</center>
-
-<!---
-
-```{image} media/chappe.jpeg
-:width: 400px
-:height: 300px
-```
-Le télégraphe de Chappe émet des signaux ressemblant aux bras d'un être humain
--->
-
 
 ````{admonition} Anecdote
 :class: hint
@@ -164,8 +133,6 @@ Bien sûr, le Morse peut être utilisé aussi avec des signaux lumineux, ou sono
 
 [Vous trouverez ici](https://morsedecoder.com/) un traducteur du langage naturel vers le Morse.
 
-
-
 ````{figure} media/morse.png
 ---
 height: 550px
@@ -176,33 +143,12 @@ align: left
 Le code Morse est le système de représentation de l'information qui se rapproche le plus du langage binaire de l'informatique moderne. 
 ````
 
-
-<!---
-
-```{image} media/morse.png
-:width: 500
-:height: 500
-```
-Le code Morse est le système de représentation de l'information qui se rapproche le plus du langage binaire de l'informatique moderne
--->
-
-
 ````{admonition} Micro-activité
 :class: note
 Amusez-vous avec votre assistant vocal en lui demandant par exemple : «Salut Siri. Quel est le code Morse pour *j'ai envie de dormir* ?».
 ````
 
 Si vous observez le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), vous remarquerez que les signaux utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet, puisqu'il est plus économique de coder les lettres les plus fréquentes avec les codes les plus courts.
-
-<!---
-```{image} media/letterdistribution.png
-:width: 500
-:height: 350
-```
-Ceci est une représentation de la fréquence moyenne de distribution des lettres dans la langue anglaise
--->
-
-
 
 
 ````{admonition} Le saviez-vous ? 
@@ -219,8 +165,6 @@ Le désavantage de ces codex d'abréviations est leur faible degré de standardi
 La réponse à cette question est l'apport le plus essentiel de l'introduction du code binaire, et des standards de représentation de l'information qui l'ont suivi : un langage pour les contrôler tous. 
 ````
 
-
-
 ```{figure} media/letterdistribution.png
 ---
 height: 400px
@@ -231,9 +175,6 @@ align: left
 Ceci est une représentation de la fréquence moyenne de distribution des lettres dans la langue anglaise. 
 ```
 
-
-
-
 ### Le binaire
 
 À partir du moment où le [Morse](https://fr.wikipedia.org/wiki/Code_Morse_international) a été inventé comme système de {glo}`codage|codage` et de {glo}`transmission|transmission` de l'information par l'électricité, il ne manquait plus que quelques éléments pour commencer à construire les {glo}`ordinateur|ordinateurs`.
@@ -243,22 +184,6 @@ Une pièce technologique, qui permettrait de {glo}`transmission|transmettre` pou
 Un {glo}`codage|code` plus élaboré que le Morse pour pouvoir représenter tous les types d'informations possibles à partir d'une alternative entre deux états : courant ou pas courant ; allumé ou éteint ; vrai ou faux ; 1 ou 0.  
 
 Ce {glo}`codage|code` est le {glo}`codebinaire|code binaire`. Il permet, en utilisant uniquement des 0 et des 1, de représenter n'importe quel type d'information : des chiffres, du texte, des images, du son, des vidéos, etc. 
-
-<!--
-<center>
-
-````{figure} media/binary.gif
----
-height: 450px
-width: 350px
-name: fig-binary
----
-
-Dans le code [ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange), chaque lettre de l'alphabet est codée sur 8 bits. 
-
-````
-</center>
--->
 
 ```{question} Question 1
 Pourquoi la lettre «e», en Morse, est-elle représentée par un seul point ? 

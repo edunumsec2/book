@@ -9,13 +9,13 @@ entre les utilisateurs et les ordinateurs s'opère essentiellement sous forme te
 
 La solution est simple : on associe chaque caractère à un code binaire.
 
-| Caractère | Décimal | Hexadécimal |   Binaire    | | | | | Caractère | Décimal | Hexadécimal |   Binaire    |
-|-----------|---------|-------------|--------------|-|-|-|-|-----------|---------|-------------|--------------|
-|     A     |    65   |    0x41     | 01**0**00001 | | | | |     a     |    97   |    0x61     | 01**1**00001 |
-|     B     |    66   |    0x42     | 01**0**00010 | | | | |     b     |    98   |    0x62     | 01**1**00010 |
-|     C     |    67   |    0x43     | 01**0**00011 | | | | |     c     |    99   |    0x63     | 01**1**00011 |
-|     …     |    …    |     …       |        …     | | | | |     …     |    …    |     …       |      …       |
-|     Z     |    90   |    0x5A     | 01**0**11010 | | | | |     z     |   122   |    0x7A     | 01**1**11010 |
+| Caractère | Décimal | Hexadécimal |   Binaire    |
+|-----------|---------|-------------|--------------|
+|     A     |    65   |    0x41     | 01**0**00001 |
+|     B     |    66   |    0x42     | 01**0**00010 |
+|     C     |    67   |    0x43     | 01**0**00011 |
+|     …     |    …    |     …       |        …     |
+|     Z     |    90   |    0x5A     | 01**0**11010 |
 
 
 Chaque caractère frappé sur le clavier est représenté par le code correspondant dans ce tableau.
@@ -26,11 +26,6 @@ de 0 et 1.
 
 Lorsqu'il s'agit de représenter ce texte à l'écran ou à l'impression, les logiciels utilisent la table
 dans l'autre sens pour trouver le caractère correspondant au nombre binaire.
-
-
-
-
-
 
 ````{panels}
 :column: col-lg
@@ -76,9 +71,6 @@ print('-'*42)
 ```
 ````
 
-
-
-
 En plus des lettres, les caractères qui représentent
 les chiffres sont eux-mêmes listés dans la table de conversion.
 Contre-intuitivement, la valeur binaire du caractère
@@ -108,22 +100,10 @@ cette table avait pour principal défaut de ne pas prendre en compte
 les caractères qui n'existent pas dans la langue anglaise,
 ne serait-ce que les lettres accentuées.
 
-<!---
-```{figure} media/ASCII-Table.png
----
-height: 600px
-width: 700px
----
-La table de représentation des caractères ASCII
-```
--->
-
-
 ```{image} media/ASCII-Table.png
 :width: 600
 :height: 700
 ```
-
 **Tab. 1** La table de représentation des caractères ASCII
 
 <br>
@@ -139,8 +119,6 @@ res = ' '.join(format(ord(i), 'b') for i in texte)
 
 print("Le texte en binaire est : " + res)
 ```
-
-
 
 `````{admonition} Le saviez-vous ? 
 :class: hint
@@ -168,7 +146,6 @@ print ("""
 [Cet outil](https://www.patorjk.com/software/taag/#p=display&f=Small&t=Entrez%20votre%20texte)
 vous permet de transformer n'importe quel texte en ASCII.
 
-
 La vidéo suivante présente "l'asciiquarium",
 un aquarium en ASCII dans le terminal.
 
@@ -183,8 +160,6 @@ l'augmentation de l'interconnexion des ordinateurs personnels a amené
 au début des années 2000 à la mise en place d'une énorme table
 intégrant le contenu de toutes les tables existantes, via le standard UTF.
 
-
-
 ## 2.3. Standard UTF
 
 Le [standard Unicode](https://home.unicode.org/) UTF (Universal Character Set Transformation Format)
@@ -192,8 +167,6 @@ s'est imposé pour l'échange, car il permet d'agréger sur 8 bits, 16 bits ou 3
 puisque le [Klingon](https://www.kli.org/about-klingon/klingon-history/) est également intégré. 
 
 Les caractères liés à l'édition des partitions de musique ou les émojis sont également intégrés.
-
-
 
 ### Variantes
 
@@ -229,16 +202,6 @@ Les points de code multi-octets commencent chacun par quelques bits à 1 du prem
 Enfin, les octets qui suivent ces codes de démarrage sont tous de la forme : 10xx xxxx.
 Les bits représentés par le caractère «x» représentent ce que l'on appelle la *charge utile*, c'est à dire l'encodage du caractère proprement dit.    
 
-<!---
-```{figure} media/UTF8_nboctets.png
----
-height: 200px
-width: 600px
----
-Définition du nombre d'octets utilisés
-```
--->
-
 ```{image} media/UTF8_nboctets.png
 :width: 500
 :height: 200
@@ -260,16 +223,6 @@ Si l'on prend à présent, par exemple, le caractère «æ», on lit sur la tabl
 On constate bien le passage du codage sur deux octets. L'adresse décimale 195 du premier octet correspond a la valeur binaire 11000011. On retrouve la suite de deux "1" en début de ce premier octet en partant de la gauche, indiquant ce codage total sur deux octets ; il reste 000011 pour la charge utile du premier octet du codage UTF-8. L'adresse décimale de 166 est 10100110 et commence donc bien par 10 comme bits de poids fort ; la charge utile du deuxième octet du codage UTF-8 est donc 100110.
 L'encodage binaire UTF-8 global s'écrit donc, en concaténant les deux charges utiles : 000011100110, ce qui correspond à 230 en décimal, valeur qu'on peut vérifier sur cette autre [table UTF-8](https://kellykjones.tripod.com/webtools/ascii_utf8_table.html) indiquant également le codage décimal.
 
-<!---
-```{figure} media/UTF8_exemples.png
----
-height: 150px
-width: 600px
----
-Exemples de codage UTF-8
-```
--->
-
 ```{image} media/UTF8_exemples.png
 :width: 500
 :height: 200
@@ -280,17 +233,6 @@ Exemples de codage UTF-8
 Par exemple le caractère « € » (euro) est le 8365e caractère du répertoire Unicode ; son index, ou point de code, est donc 8364, il se code en UTF-8 sur 3 octets : 226, 130, et 172 exprimé en décimal (11100010 10000010 10101100 exprimé en binaire).
 
 <br>
-
-<!---
-```{figure} media/UTF8.png
----
-height: 400px
-width: 750px
----
-
-```
-
--->
 
 ```{image} media/UTF8.png
 :width: 700
@@ -359,10 +301,7 @@ Le symbole Ø correspond à la valeur décimale 8709.
 
 3 - Donnez le codage UTF-8 correspondant.
 
-
 `````
-
-
 
 ````{admonition} Exercice 2.4.4. - Activité Hexadécimal ✏️📒
 :class: note
@@ -379,8 +318,6 @@ Nous avons vu au cours du chapitre précédent deux systèmes de numération, d�
 4 - En prenant la valeur décimale 154, essayez de décrire une méthode permettant de passer du système décimal au système hexadécimal.
 
 5 - En reprenant la valeur hexadécimale 9A, essayez de décrire une méthode permettant de passer du système hexadécimal au système décimal.
-
-
 ````
 
 

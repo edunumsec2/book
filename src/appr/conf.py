@@ -128,8 +128,8 @@ html_theme_options = {
         "color-announcement-text": "#eeebee",
 
         # Brand colors
-        "color-brand-primary": "#06CCC0", # bleu clair
-        "color-brand-content": "#06CCC0", # bleu clair
+        "color-brand-primary": "#7C3EFF", # violet clair
+        "color-brand-content": "#7C3EFF", # violet clair
         
         # Admonition font size
         "admonition-font-size": "0.9rem",

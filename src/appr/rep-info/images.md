@@ -1,23 +1,8 @@
 # 3. Les images
 
-
-<!-- ````{role} prof
-```{admonition} Suggestion de déroulé
-:class: danger
-Voilà un déroulé de cours pour cette section représentation des images : 
-1. Activité image Bitmap
-2. Activité Kirby
-3. Présentation des images matricielles
-4. Exercice sur les résolutions
-5. Questionnaire d'auto-contrôle
-```
-```` 
--->
-
 ## 3.1. Les images matricielles
 
 Depuis des siècles les humains gardent des traces de leur environnement sous forme d'images. Plus le temps passe, plus ces traces sont fidèles. On découvre par exemple la perspective autour du XV<sup>e</sup> siècle, les progrès en optique et en chimie permettent ensuite la création de la camera obscura et de la photographie argentique. Enfin l'informatique se développe permettant l'invention de la photographie numérique.
-
 
 ```{figure} media/camera_obscura.jpg
 ---
@@ -25,25 +10,16 @@ height: 16em
 align: left
 name: camera_obscura
 ---
+Principe de fonctionnement de la camera obscura.
 ```
 
 ```{figure} media/camobscura.png
 ---
 height: 16em
-align: left
 name: camobscura
 ---
-La caméra obscura.
+Une caméra obscura.
 ```
-
-
-<!---
-
-<img src="media/camera_obscura.jpg" height="300" width="400"/> <img src="media/camobscura.png" height="300" width="400"/>
-
-La caméra obscura
-
---->
 
 ### De la camera obscura à la caméra numérique
 
@@ -53,24 +29,15 @@ Dans un appareil analogique, la paroi illuminée est recouverte d'une pellicule 
 
 La différence est que dans un appareil photo numérique cette paroi, le capteur photographique, est recouverte d'une grille de capteurs électroniques photosensibles (photosites) produisant de l'électricité quand ils reçoivent de la lumière. Chaque photosite est recouvert d'un filtre coloré ne laissant passer que les rayons d'une seule couleur (grille de Bayer): le rouge, le vert ou le bleu. Les filtres sont répartis par carré de quatre : deux verts, un rouge et un bleu. La tension électrique produite par chaque photosite est convertie numériquement et transmise au processeur de l'appareil photo.
 
-L'image numérique ne sera alors rien d'autre que la collection des mesures de tous les capteurs à un temps précis. Comme ces mesures sont organisées sous forme de tableau (grille), on parle souvent d'images matricielles. Plus le nombre de capteurs est grand, plus la résolution de cette image le sera aussi. 
-
+L'image numérique ne sera alors rien d'autre que la collection des mesures de tous les capteurs à un temps précis. Comme ces mesures sont organisées sous forme de tableau (grille), on parle souvent d'images matricielles. Plus le nombre de capteurs est grand, plus la résolution de cette image le sera aussi.
 
 ```{figure} media/captimage.png
 ---
 height: 16em
-align: left
 name: fig-repr-img-obscur3
 ---
 Principe de la capture numérique d'une image.
 ```
-<!---
-<img src="media/captimage.png" height="300" width="400"/> 
-
-Principe de la capture numérique d'une image
---->
-
-
 
 ## 3.2. Représentation d'une image en noir et blanc
 
@@ -87,7 +54,6 @@ Principe de la capture numérique d'une image
 
 Un bit est l'unité minimale d'information qu'un ordinateur manipule : 1 ou 0, allumé ou éteint. L'image la plus simple qu'un ordinateur puisse afficher est constituée uniquement de noir et blanc. Ainsi, un pixel pourrait être à l'état soit «noir», soit «blanc».
 
-
 ```{figure} media/bitmap1.png
 ---
 name: fig-bitmap-1
@@ -98,15 +64,6 @@ width: 250px
 Tous les pixels marqués d'un 1 s'affichent en blanc, tous ceux marqués d'un 0 s'affichent en noir. 
 Ceci nous permet de construire des images simples, dessinées seulement en noir et blanc.
 ```
-
-<!--
-<img src="media/bitmap1.png" height="300" width="400"/> 
-
-Tous les pixels marqués d'un 1 s'affichent en blanc, tous ceux marqués d'un 0 s'affichent en noir
-
--->
-
-
 
 ```{codeplay}
 import turtle
@@ -176,16 +133,11 @@ alien = [
 drawImg(alien)
 ```
 
-
-
 Un {glo}`pixel|pixel`, de l'anglais "**pic**ture **el**ement", est le composant minimal d'une image. C'est à dire que c'est le plus petit élément avec lequel on construit une image sur un écran d'ordinateur. Dans notre exemple minimaliste, chaque pixel peut être soit noir, soit blanc, ce qui nous permet de construire une image.
-
-
 
 ## 3.3. Représentation d'une image en niveaux de gris
 
 Dans ce type d’image seul le niveau de l'intensité est codé sur un octet (256 valeurs). Par convention, la valeur 0 représente le noir (intensité lumineuse nulle) et la valeur 255 le blanc (intensité lumineuse maximale) :
-
 
 ```{figure} media/Niveaux_gris.png
 ---
@@ -195,26 +147,7 @@ align: left
 Niveaux de gris, codage sur 8 bits.
 ```
 
-<!---
-<img src="media/Niveaux_gris.png" height="100" width="600"/>
-
-Niveaux de gris, codage sur 8 bits
-
-````{tabbed} Image
-```{image} media/kirbygrey.png
-:width: 300px
-```
-````
-````{tabbed} Code
-```{image} media/kirbygrey2.png
-:width: 300px
-```
-````
--->
-
-
 En général, les images sont représentées sous forme de tableau numérique, aussi appelé format {glo}`matrice|matriciel`. Une image en niveau de gris sera ainsi représentée par un tableau de valeurs correspondant à la {glo}`luminance|luminance` de chaque pixel. Les valeurs de luminance sont des nombres allant de 0 (noir) à 255 (blanc). Pour encoder une image en niveaux de gris, chaque pixel nécessite donc 8 bits. 
-
 
 ```{figure} media/image_et_pixels.svg
 ---
@@ -223,13 +156,6 @@ align: left
 ---
 Image monochrome, pixels et luminance.
 ```
-
-<!---
-
-<img src="media/image_et_pixels.svg" height="200" width="450"/>
-
-Image monochrome, pixels et luminance
--->
 
 Pour accéder à un pixel particulier, il faut indiquer à quelle ligne et à quelle colonne de l'image ce pixel se trouve. Le pixel (0,0) correspondra normalement au pixel de la première ligne et de la première colonne.
 
@@ -245,17 +171,10 @@ Ce mode de fonctionnement est similaire à celui des tableurs pour lesquels il e
 [The Million Dollar Homepage](https://fr.wikipedia.org/wiki/The_Million_Dollar_Homepage) est un site web conçu en 2005 par Alex Tew, un étudiant anglais, dans le but de financer ses études supérieures. La page d'accueil est une grille de 1000 X 1000 pixels. Chaque pixel était vendu 1$ en tant qu'espace publicitaire. Ils ont tous été vendus...
 
 
-<!--
 ```{figure} media/milliondollarhomepage.png
 ```
--->
-
-
-<img src="media/milliondollarhomepage.png" height="250" width="400"/>
 
 ````
-
-
 
 ````{tabbed} Image
 ```{image} media/kirbycolor.png
@@ -281,13 +200,6 @@ align: left
 ---
 Système additif et écran au microscope.
 ```
-
-<!---
-<img src="media/SyntheseAdd_pixels.svg" height="200" width="400"/>
-
-Système additif et écran au microscope
-</br>
--->
 
 Chaque couleur est donc représentée comme un mélange de ces trois couleurs et donc sous forme de trois entiers (triplet). Comme pour les images en niveaux de gris, ces entiers sont généralement représentés sur 8 bits ; les valeurs de luminance sont chacune déclarées comme un nombre allant de 0 (intensité nulle) à 255 (intensité maximale). Pour représenter une image en couleurs il faut donc 8 bits pour le niveau de rouge, 8 bits pour le niveau de vert, et 8 bits pour le niveau de bleu, soit 24 bits. 
 
@@ -496,7 +408,6 @@ drawImg(mario)
 
 Les formats matriciels sont Portable Network Graphics (.png), Joint Photographic Experts Group (.jpeg), Tagged Image File Format (.tiff), BITMAP (.bmp), Graphics Interchange Format (.gif) pour citer les plus courants.
 
-
 ### Définition et résolution
 
 On appelle *définition* le nombre de points (pixel) constituant l'image, c'est-à-dire sa « dimension informatique » (le nombre de colonnes de l'image que multiplie son nombre de lignes). Une image possédant 640 pixels en largeur et 480 en hauteur aura une définition de 640 pixels par 480, notée 640x480 soit 307200 pixels.
@@ -508,6 +419,7 @@ Les dimensions d'une image sont donc définies par :
 - hauteur = nombre de lignes / résolution.
 
 ### Compression
+
 La plupart de ces formats utilisent des algorithmes de compression, afin de réduire la taille de l’image sur les mémoires de masse de l'ordinateur (disque durs, …).
 
 On définit alors le taux de compression par : (1 - (taille du fichier image))/(taille de l'image en mémoire)
@@ -522,7 +434,6 @@ La compression peut être réalisée avec ou sans perte :
 
 ## 3.5. Les images vectorielles
 
-
 Pour reproduire une image sur une feuille, on peut la diviser en grille et définir un niveau de gris pour chaque case, mais on peut aussi tout simplement dessiner une figure, par exemple un trait d'un millimètre d'épaisseur allant d'un point A à un point B de l'image. De la même manière, en informatique, il est possible de représenter des images sous forme de grilles de pixels, comme nous l'avons vu, mais il est en effet également possible de définir une image comme une collection d'objets graphiques élémentaires (un segment, un carré, une ellipse...) sur un espace plan : c'est le principe des images vectorielles.
 
 L'image vectorielle est dépourvue de matrice. Elle est en fait créée à partir d'équations mathématiques. Cette image numérique est composée d'objets géométriques individuels, des *primitives géométriques* (segments de droite, arcs de cercle, polygones, etc.), définies chacunes par différents attributs (forme, position, couleur, remplissage, visibilité, etc.) et auxquels on peut appliquer différentes transformations (rotations, écrasement, mise à l'échelle, inclinaison, effet miroir, symétrie, translation, et bien d'autres ...).
@@ -531,20 +442,12 @@ L'image vectorielle est dépourvue de matrice. Elle est en fait créée à parti
 ```{figure} media/matvect.png
 ---
 name: fig-bitmap-2
-align: left
 height: 250px
 width: 400px
 ---
 Un même cercle en représentation matricielle et vectorielle. 
 ```
-
-
-<!---
-<img src="media/matvect.png" height="300" width="500"/>
-
-Un même cercle en représentation matricielle et vectorielle
--->
-<br>
+<br />
 
 À l'inverse de l'image matricielle composée de pixels, l'image vectorielle peut être **redimensionnée** sans pour autant perdre en qualité. Elle est contenue dans un **fichier beaucoup plus léger** qu'une image pixelisée, indépendamment de sa taille et de sa résolution.
 En revanche, chaque forme d'une image vectorielle est remplie d'une seule couleur dite solide ou d'un dégradé de couleurs. Elle reste donc **limitée en termes de réalisme**, et donc inutilisable en photographie par exemple. De plus une image vectorielle ne peut être **créée qu'à partir d'un logiciel dédié**, et n'est pas reconnue par les navigateurs internet.
@@ -588,7 +491,6 @@ Quelle est la définition d’une feuille scannée de largeur 6,5 pouces, de h
 
 ````
 
-
 ````{admonition} Exercice 3.7.2. - Carte graphique ✏️📒
 :class: note
 <!--- <span style="color:orange">Niveau intermédiaire</span> -->
@@ -623,7 +525,6 @@ C'est la quantité de mémoire vive minimale que nécessite la carte graphique (
 
 ````
 
-
 ````{admonition} Exercice 3.7.3. - Compression ✏️📒
 :class: note
 <!--- <span style="color:orange">Niveau intermédiaire</span> -->
@@ -645,7 +546,6 @@ Comme le taux de compression est 50, on divise par 2 : 1048576/2 = 524288 octets
 
 ````
 
-
 ````{admonition} Exercice 3.7.4. - Appareil photo ✏️📒
 :class: note
 <!--- <span style="color:orange">Niveau intermédiaire</span> -->
@@ -654,8 +554,6 @@ Comme le taux de compression est 50, on divise par 2 : 1048576/2 = 524288 octets
 L’appareil numérique FinePix2400Z (Fujifilm) permet la prise de vue avec trois résolutions : a) 640x480 pixels ; b) 1280x960 pixels ; c) 1600x1200 pixels.
 
 Calculez pour chaque type de résolution la taille de l’image non-compressée.
-
-
 ......
 
 ````
@@ -671,23 +569,6 @@ Une image numérique de définition 1024×768 mesure 30 cm de large et 20 cm de 
 2. On a une photographie de 10 cm sur 5 cm que l'on scanne avec une résolution de 300 ppi. Quelle sera alors la taille de l'image (en nombre de pixels) ?
 
 3. Soit une image 15×9 cm, définie en RVB, que l'on scanne en 72, 300 et 1200 ppi. Quels seront les poids des images, pour une profondeur de 16 bits ?
-
-
 ......
 
 ````
-
-<!-- ## Auto-contrôle
-
-### Texte à trous
-
-La résolution d'une image se calcule en {bl}`centimètres|>pixels|niveaux de gris`. La plupart des {bl}`courroies|>images|bananes` sont représentées au format {bl}`matrix|magique|>matriciel`. 
-
-### Questions
-
-```{question} Question
-S'il faut 8 bits pour coder un chiffre entre 0 et 255, combien faut-il de bits pour coder un seul pixel d'une image couleur ? 
-* {v}`24, car il y a trois fois 8 bits.`
-* {f}`3, car il y a trois couleurs qui se mélangent.`
-* {f}`765, car il faut multiplier 255 par 3.`
-``` -->

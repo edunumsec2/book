@@ -1,6 +1,6 @@
 :root {
     --primary-light: #5933D1;
-    --primary-dark: #06CCC0;
+    --primary-dark: #7C3EFF;
 }
 
 html {
@@ -20,19 +20,17 @@ h6 {
     margin-bottom: 1.5rem;
     line-height: 1.1;
     letter-spacing: -0.025em;
-    color: #5933D1;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
+    color: var(--primary-light);
     font-weight: 700;
 }
 
-h1 {
-    font-weight: 700;
+body.modulo-dark h1,
+body.modulo-dark h2,
+body.modulo-dark h3,
+body.modulo-dark h4,
+body.modulo-dark h5,
+body.modulo-dark h6 {
+    color: var(--primary-dark);
 }
 
 /* PROSE */
@@ -45,10 +43,12 @@ p {
     padding: 0;
 }
 
-
-
 a {
     color: var(--primary-light);
+}
+
+body.modulo-dark a {
+    color: var(--primary-dark);
 }
 
 a:hover,
@@ -60,6 +60,11 @@ a:focus {
 
 .sidebar-brand-text {
     text-align: center;
+}
+
+/* SPHINX CLASSES */
+body.modulo-dark .dropdown {
+    background-color: black;
 }
 
 /* CUSTOM CLASSES */
