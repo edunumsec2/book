@@ -13,9 +13,9 @@ Ce qui est intéressant ici, c'est que c'est le joueur qui a dû trouver la comm
 
 Techniquement un texte est appelé une **chaîne de caractères**, ou string en anglais (`str`). Nous allons voir que :
 
-- un texte est délimité par une apostrophe `'` ou un guillemet double `"`,
+- un texte est délimité par une apostrophe `'text'` ou un guillemet double `"text"`,
 - l'opérateur `*` répète un texte,
-- la fonction `ord(c)` retourne le code pour représenter un caractère.
+- la fonction `ord(c)` retourne l'entier `i` qui représenter le caractère `c`.
 
 ```{question}
 Un string informatique est
@@ -295,6 +295,10 @@ for i in  range(n, n + 10):
 ```
 
 **Exercice** : Affichez les 10 kanjis qui suivent 語 (langage).
+
+```{exercice}
+Affichez les 10 kanjis qui suivent 語 (langage).
+```
 
 ## Les commentaires
 
