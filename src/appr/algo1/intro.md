@@ -49,7 +49,7 @@
 
 ## Quoi ?
 
-Il y a de fortes chances que vous ayez déjà entendu parler d'{glo}`algo|algorithmes` dans les médias. Il y a aussi de fortes chances que ce mot évoque pour vous des notions bien différentes de celles de votre voisin. L'objectif de ce chapitre est de vous éclairer sur la notion d'algorithme et la distinction avec la notion de programme informatique.
+Il y a de fortes chances que vous ayez déjà entendu parler {glo}`algo|d'algorithmes` dans les médias. Il y a aussi de fortes chances que ce mot évoque pour vous des notions bien différentes de celles de votre voisin. L'objectif de ce chapitre est de vous éclairer sur la notion d'algorithme et la distinction avec la notion de programme informatique.
 
 ## Pourquoi ?
 
