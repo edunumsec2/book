@@ -22,7 +22,7 @@
   - [Commit](#commit)
   - [Pull request](#pull-request)
   - [Processus de validation](#processus-de-validation)
-    - [Branches protégées](#branches-protegees)
+    - [Branches protégées](#branches-protégées)
     - [Reviews](#reviews)
   - [Charte](#charte)
  - [Conclusion](#conclusion)
@@ -36,7 +36,7 @@ Le document ci-présent explique les étapes permettant une contribution saine e
 
 ## Principes 
 
-Les contributions sont purement optionnelles, et engagent le bon vouloir des personnes qui s'y adonnent. Il est donc d'autant plus important de comprendre que pour une raison évidente de cohérence et de continuité du projet, l'équipe [modulo](https://github.com/edunumsec2/book#comit%C3%A9-de-r%C3%A9daction) possède un droit de regard sur ce qui est accepté et, en dernier lieu, publié. Les contributions doivent donc être faites avec une approche détaillée dans le [code de conduite](https://github.com/edunumsec2/book/blob/master/CODE_OF_CONDUCT.md). 
+Les contributions sont optionnelles, et engagent le bon vouloir des personnes qui s'y adonnent. Il est donc d'autant plus important de comprendre que pour une raison évidente de cohérence et de continuité du projet, l'équipe [modulo](https://github.com/edunumsec2/book#comit%C3%A9-de-r%C3%A9daction) possède un droit de regard sur ce qui est accepté et, en dernier lieu, publié. Les contributions doivent donc être faites avec une approche détaillée dans le [code de conduite](https://github.com/edunumsec2/book/blob/master/CODE_OF_CONDUCT.md). 
 
 Le document ci-présent explique la marche à suivre pour effectuer des contributions. En aucun cas il ne prétend qu'une contribution, même si elle remplit les critères détaillés ci-dessous, soit *de facto* acceptée. 
 
@@ -92,7 +92,7 @@ Les ["Good First Issue"](https://github.com/edunumsec2/book/issues) sont, dans l
 
 ### Fork 
 
-[Un fork](https://github.com/edunumsec2/book/wiki/Fork) est une copie non-linkée des fichiers sources du dépôt. Il permet à quiconque de dupliquer toutes les sources et les aménager à sa guise sans qu'un suivi soit efectué depuis le dépôt source. 
+[Un fork](https://github.com/edunumsec2/book/wiki/Fork) est une copie non-linkée des fichiers sources du dépôt. Il permet à quiconque de dupliquer toutes les sources et les aménager à sa guise sans qu'un suivi soit efectué depuis le dépôt source. Pour la définition détaillée, voir [ici](https://github.com/edunumsec2/book/blob/master/docs/wiki/fork.md). 
 
 Une des utilisations possibles de ces ressources via GitHub consiste simplement à les "forker", c'est à dire les dupliquer mais sans conserver la "parentalité" du dépôt source (a contrario du processus appelé "clône", qui conserve les attaches entre les sources et le clone, cf : ci-dessous). 
 
@@ -102,13 +102,13 @@ N'oubliez simplement pas de faire mention de la [licence](https://github.com/edu
 
 ### Clone
 
-[Un clône](https://github.com/edunumsec2/book/wiki/Clones) est une copie "linkée" des ressources, qui conserve les liens de parentalité et donc d'interation entre source et clône. Un clône comprend les différentes branches du dépôt source. 
+[Un clône](https://github.com/edunumsec2/book/wiki/Clones) est une copie "linkée" des ressources, qui conserve les liens de parentalité et donc d'interation entre source et clône. Un clône comprend les différentes branches du dépôt source. Pour la définition détaillée, voir [ici](https://github.com/edunumsec2/book/blob/master/docs/wiki/clones.md). 
 
 <img width="1280" alt="Screenshot 2022-02-09 at 09 49 56" src="https://user-images.githubusercontent.com/67040832/153159315-ac344fde-1d3f-4ea0-ab14-3778569afa5f.png">
 
 ### Branche
 
-[Une branche](https://github.com/edunumsec2/book/wiki/Branches) est un duplicata des fichiers sources à un moment donné, qui permet de travailler sur l'un ou l'autre aspect des sources sans affecter la version "principale" (appelée ici "master", aussi appelée parfois "main"). 
+[Une branche](https://github.com/edunumsec2/book/wiki/Branches) est un duplicata des fichiers sources à un moment donné, qui permet de travailler sur l'un ou l'autre aspect des sources sans affecter la version "principale" (appelée ici "master", aussi appelée parfois "main"). Pour la définition détaillée, voir [ici](https://github.com/edunumsec2/book/blob/master/docs/wiki/branches.md). 
 
 #### Branches spéciales
 
@@ -140,7 +140,7 @@ Concrètement, ces étapes permettent aux modérateurs du dépôt de traiter le 
 
 ### Pull request 
 
-[Un pull request](https://github.com/edunumsec2/book/wiki/Pull-Request) est une requête dont le destinateur est la branche qui souhaite amener une modification, et le destinataire est la branche sur laquelle on souhaite que cette modification soit apportée. En d'autres termes, c'est une demande que l'utilisateur d'une branche adresse à l'administrateur d'une autre branche pour que celle-ci "tire vers soi", un certain nombre de modifications contenues dans la branche.
+[Un pull request](https://github.com/edunumsec2/book/wiki/Pull-Request) est une requête dont le destinateur est la branche qui souhaite amener une modification, et le destinataire est la branche sur laquelle on souhaite que cette modification soit apportée. En d'autres termes, c'est une demande que l'utilisateur d'une branche adresse à l'administrateur d'une autre branche pour que celle-ci "tire vers soi", un certain nombre de modifications contenues dans la branche. 
 
 Lorsqu'il est proposé le pull request est l'objet d'un processus de validation décrit ci-dessous. 
 
@@ -162,6 +162,5 @@ Pour chaque thématique présente dans les ressources, il existe un certain nomb
 
 #### Charte
 
-TODO
-Une charte d'écriture est proposée, qui contient des règles à suivre pour la contribution et/ou l'écriture de nouveaux documents. 
+Une charte rédactionnelle, [disponible ici](https://github.com/edunumsec2/book/blob/master/docs/wiki/charte.md), décrit les contraintes d'écriture. 
 
