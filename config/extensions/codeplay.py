@@ -31,6 +31,9 @@ def visit_interactive_code_html(self, node):
     self.body.append('<iframe src="' + node["codeplay_path"] + '" ' +
       prelude_attr + afterword_attr + hints_attr +
       'data-code="' + b64encode(node["code"].encode("UTF-8")).decode("UTF-8") + '" ' +
+      'data-file="' + b64encode(node["file"].encode("UTF-8")).decode("UTF-8") + '" ' +
+      ('data-output-min-lines="' + str(node["min_height"]) + '" ' if node["min_height"] is not None else "") +
+      ('data-output-max-lines="' + str(node["max_height"]) + '" ' if node["max_height"] is not None else "") +
       'scrolling="no" ' + 
       ('data-run="true" ' if node["exec"] else '') +
       ('data-static="true" ' if node["static"] else '') +
@@ -51,7 +54,11 @@ class InteractiveCode(SphinxDirective):
         "noprelude": directives.flag,
         "static": directives.flag,
         "nocontrols": directives.flag,
-        "hints": directives.unchanged
+        "hints": directives.unchanged,
+        "file": directives.unchanged,
+        "output_lines": directives.nonnegative_int,
+        "min_output_lines": directives.nonnegative_int,
+        "max_output_lines": directives.nonnegative_int,
     }
     has_content = True
 
@@ -109,6 +116,18 @@ class InteractiveCode(SphinxDirective):
         hints_node = nodes.paragraph()
         self.state.nested_parse(StringList(hints), 0, hints_node)
 
+        min_height = None
+        max_height = None
+        if "output_lines" in self.options:
+            min_height = self.options["output_lines"]
+            max_height = self.options["output_lines"]
+        if "min_output_lines" in self.options:
+            min_height = self.options["min_output_lines"]
+        if "max_output_lines" in self.options:
+            max_height = self.options["max_output_lines"]
+        if min_height is not None and max_height is not None and min_height > max_height:
+            raise ValueError("Min output line count cannot be greater than max.")
+
         container = interactive_code("",
           code='\n'.join(code_lines),
           prelude='\n'.join(pre_lines),
@@ -118,7 +137,10 @@ class InteractiveCode(SphinxDirective):
           static="static" in self.options,
           nocontrols="nocontrols" in self.options,
           codeplay_path=relative_path,
-          exec="exec" in self.options)
+          exec="exec" in self.options,
+          file=self.options["file"] if "file" in self.options else "code.py",
+          min_height=min_height,
+          max_height=max_height)
         self.set_source_info(container)
 
         return [container]
