@@ -26,8 +26,8 @@ Dans la boucle `for` une variable d'itération va parcourir une valeur après l'
 - une chaîne de caractères,
 - une liste.
 
-La **variable d'itération** prend successivement les valeurs 0 à x-1.
-Quand la variable d'itération est de type entier (`int`) on l'appelle souvent `i`.
+La **variable d'itération** prend successivement les valeurs 0 à n-1.
+Comme la variable d'itération est de type entier (`int`) on l'appelle souvent `i`.
 
 Nous reprenons l'exemple précédent du polygone, mais cette fois nous ne dessinons pas les segments, mais seulement les sommets. La valeur de la variable d'itération `i` est affichée à chaque sommet du polygone.
 
@@ -35,16 +35,14 @@ Nous reprenons l'exemple précédent du polygone, mais cette fois nous ne dessin
 :file: range2.py
 from turtle import *
 
-x = int(input('Nombre de sommets: '))
+n = 9       # nombre de sommets
+a = 50      # longueur du côté
 up()
-forward(200)
-left(90)
 
-for i in range(x):
-    forward(1000/x)
-    left(360/x)
-    dot(20, 'pink')
-    write(i, align='center')
+for i in range(n):
+    forward(a)
+    left(360/n)
+    write(i)
 ```
 
 **Exercice** : Testez avec des nombres différents entre 5 et 13.
@@ -63,49 +61,19 @@ La fonction `print()` utilise le paramètre optionnel `end` pour ne pas terminer
 
 ```{codeplay}
 :file: range3.py
-start = int(input('start = '))
-stop = int(input('stop = '))
-step = int(input('step = '))
+from turtle import *
+up()
 
-for i in range(start, stop, step):
-    print(i, end=' ')
+start = -250
+stop = 250
+step = 50
+
+for x in range(start, stop, step):
+    goto(x, 0)
+    write(x)
 ```
 
-**Exercice** : Affichez les entiers entre 100 et 200 avec un incrément de 3.
-
-La fonction `range()` fonctionne aussi dans l'ordre décroissant. Dans ce cas, il faut choisir pour `step` une valeur négative.
-
-```{codeplay}
-:file: range4.py
-for i in range(-100, -200, -3):
-    print(i, end=' ')
-```
-
-**Exercice** : Affichez les entiers de +10 à -10.
-
-La fonction `range()` peut fonctionner avec 1, 2 ou 3 paramètres. Les valeurs par défaut sont :
-
-- 0 pour `start`,
-- 1 pour `step`.
-
-```{codeplay}
-:file: range5.py
-from time import sleep
-
-for i in range(10):
-    print(i, end=' ')
-    sleep(0.1)
-print()
-
-for i in range(10, 20):
-    print(i, end=' ')
-    sleep(0.1)
-print()
-
-for i in range(10, 100, 7):
-    print(i, end=' ')
-    sleep(0.1)
-```
+**Exercice** : Affichez les entiers entre -50 et 200 avec un incrément de 25.
 
 ## Dessiner une spirale
 
@@ -156,8 +124,8 @@ up()
 for y in range(100, -150, -50):
     for x in range(-200, 300, 100):
         goto(x, y)
-        dot(30, 'silver')
-        write((x, y))
+        dot(45, 'silver')
+        write((x, y), align='center')
 ```
 
 ## Grille de points
