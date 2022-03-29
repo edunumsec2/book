@@ -10,25 +10,25 @@ Ce sont des programmes qui disent à votre ordinateur comment manipuler une imag
 ````{toctree}
 :maxdepth: 2
 :hidden:
-Dessiner <dessiner>
-Définir <definir>
-Colorier <colorier>
-Répéter <repeter>
-Cercler <cercler>
-Parcourir <parcourir>
-Questionner <questionner>
-Calculer <calculer>
-Décider <decider>
-Ecrire <ecrire>
-Typographier <typographier>
-Itérer <iterer>
-Attendre <attendre>
-Paramétrer <parametrer>
-Renvoyer <renvoyer>
-Grouper <grouper>
-Lister <randomiser>
-Trier <trier>
-Créer <creer>
+Dessiner - forward <dessiner>
+Définir - def <definir>
+Colorier - color <colorier>
+Répéter - for <repeter>
+Cercler - circle <cercler>
+Parcourir - tuple <parcourir>
+Questionner - input <questionner>
+Calculer - int <calculer>
+Décider - if <decider>
+Ecrire - str <ecrire>
+Typographier - write <typographier>
+Itérer - range <iterer>
+Attendre - while <attendre>
+Paramétrer - f(x) <parametrer>
+Renvoyer - return <renvoyer>
+Grouper - list <grouper>
+Lister - random <randomiser>
+Trier - sort <trier>
+Créer - turtle <creer>
 Annexe <annexe>
 ````
 
