@@ -161,7 +161,7 @@ Enjeux sociaux :
 
 ## Nomenclature des fichiers
 
-Le titre des fichiers correspond au contenu, sans chiffre, sans caractères spéciaux, en cherchant à être le plus court possible. Idéalement, il devrait être le titre de niveau 1 de la page en question (exemple, nouvelle version de prog1 : les fichiers s’appellent  «colorier.md, dessiner.md», etc..). 
+Le titre des fichiers correspond au contenu, sans chiffre, sans caractères spéciaux, en cherchant à être le plus court possible. Idéalement, il devrait être le titre de niveau 1 de la page en question (exemple, nouvelle version de prog1 : les fichiers s’appellent  «colorier.md, dessiner.md», etc.). 
 
 Le chemin naturel d’un fichier est «book/src/appr/theme/prog1/attendre.md» ou en remplaçant «appr» par «ens» respectivement, dans lequel "book" = dépôt, "src" = sources (par opposition à "docs" par exemple, qui contient la documentation GitHub du projet qui ne figure pas dans les cours), "appr" = apprendre, "prog1" = programmation I (par opposition aux autres thématiques et/ou à programmation II), "attendre.md" = page de cours sur la fonction attendre (`wait`). 
 
