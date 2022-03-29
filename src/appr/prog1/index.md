@@ -29,6 +29,7 @@ Grouper - list <grouper>
 Lister - random <randomiser>
 Trier - sort <trier>
 Créer - turtle <creer>
+Projet <projet>
 Annexe <annexe>
 ````
 
