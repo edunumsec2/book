@@ -27,20 +27,25 @@ parts:
       - file: content/appr/theme/prog1/definir
       - file: content/appr/theme/prog1/colorier
       - file: content/appr/theme/prog1/repeter
+
       - file: content/appr/theme/prog1/cercler
+      - file: content/appr/theme/prog1/memoriser
       - file: content/appr/theme/prog1/parcourir
+      - file: content/appr/theme/prog1/write
+
+      - file: content/appr/theme/prog1/iterer
+      - file: content/appr/theme/prog1/parametrer
+      - file: content/appr/theme/prog1/randomiser
+
       - file: content/appr/theme/prog1/questionner
-      - file: content/appr/theme/prog1/calculer
       - file: content/appr/theme/prog1/decider
       - file: content/appr/theme/prog1/ecrire
-      - file: content/appr/theme/prog1/write
-      - file: content/appr/theme/prog1/iterer
       - file: content/appr/theme/prog1/attendre
-      - file: content/appr/theme/prog1/parametrer
+
       - file: content/appr/theme/prog1/renvoyer
       - file: content/appr/theme/prog1/grouper 
-      - file: content/appr/theme/prog1/randomiser
       - file: content/appr/theme/prog1/trier
+
       - file: content/appr/theme/prog1/turtleart
       - file: content/appr/theme/prog1/projet
       - file: content/appr/theme/prog1/annexe

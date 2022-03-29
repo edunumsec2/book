@@ -374,7 +374,7 @@ langue = input('1=Français, 2=Anglais, 3=Allemand: ')
 
 Une nouvelle variante de pierre-papier-ciseaux a été popularisée par la série américaine The Big Bang Theory. Il s'agit de **Pierre-Papier-Ciseaux-Lézard-Spock**. Ici, les règles classiques s'appliquent, mais il faut ajouter que le lézard mange le papier, empoisonne Spock, est écrasé par la pierre et est décapité par les ciseaux. Spock vaporise la pierre, casse les ciseaux, et est discrédité par le papier.
 
-```{youtube} x5Q6-wMx-K8
+```{youtube} llq528pnv9c
 ```
 
 Cette variante augmente le nombre de combinaisons de 3 à 10, et est censée réduire le nombre d'égalités entre deux joueurs qui se connaissent (bien qu'entre les personnages de la série, cette variante amène systématiquement à une égalité Spock vs. Spock).

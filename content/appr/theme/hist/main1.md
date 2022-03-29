@@ -240,7 +240,7 @@ En 1973 apparaissent les premiers *micro-ordinateurs* qui sont destinés à un u
 :align: right 
 ```
 
-#### Langages de programmation
+### Langages de programmation
 
 Avec l'extension de l'informatique à de nombreux domaines, une nouvelle discipline voit le jour dans les années huitantes : le génie logiciel ou la science de la construction logicielle. De nouveaux langages apparaissent pour appuyer ce domaine et renforcer une production de programmes sous pression alors que les besoins en fiabilité deviennent de plus en plus cruciaux.
 
@@ -359,11 +359,11 @@ Le réseau devient sans fil au milieu des années nonante. D'abord une solution 
 
 La miniaturisation de puces électroniques intégrant de plus en plus de fonctionnalités et en particulier la capacité de communiquer par ondes radio permet d'envisager des dispositifs intelligents disséminés un peu partout, on parle d'*ubiquité* du réseau.
 
-#### Les smartphones
+### Les smartphones
 
 L'iPhone a été présenté pour la première fois en juin 2007 par Steve Jobs. Ce n'est pas le premier smartphone commercialisé, puisque Blackberry et Treo proposaient déjà des téléphones portables avec des caractéristiques d'ordinateurs dès 1999 pour le premier et 2002 pour le second.
 
-#### l'IoT
+### l'IoT
 
 Alors que le marché de la téléphonie mobile explose dès la fin des années nonante, il trouve rapidement sa place dans les applications industrielles avec la mise en place de réseaux de capteurs et de commandes distantes. Avec le développement des smartphones et l'accès au réseau Internet, ce développement connaît un second souffle sous l'appellation *Internet of Things (IoT)*, Internet des Objets. La voiture, la cafetière et même la machine à laver le linge voient leurs possibilités décuplées par l'adjonction de puces électroniques connectées.
 

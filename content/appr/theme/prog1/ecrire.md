@@ -13,9 +13,9 @@ Ce qui est intéressant ici, c'est que c'est le joueur qui a dû trouver la comm
 
 Techniquement un texte est appelé une **chaîne de caractères**, ou string en anglais (`str`). Nous allons voir que :
 
-- un texte est délimité par une apostrophe `'` ou un guillemet double `"`,
+- un texte est délimité par une apostrophe `'text'` ou un guillemet double `"text"`,
 - l'opérateur `*` répète un texte,
-- la fonction `ord(c)` retourne le code pour représenter un caractère.
+- la fonction `ord(c)` retourne l'entier `i` qui représenter le caractère `c`.
 
 ```{question}
 Un string informatique est
@@ -25,6 +25,19 @@ Un string informatique est
 {v}`un enchaînement de lettres`  
 {f}`un instrument de musique`
 ```
+
+## Dire bonjour
+
+Nous commençons par le grand classique des livres d'introduction à la programmation : afficher la fameuse phrase *hello world*.
+La fonction `print()` permet d'écrire du texte vers la console.
+Ici, la console est la zone rectangulaire qui s'affiche sous le code du programme.
+
+```{codeplay}
+:file: input0.py
+print('hello world.')
+```
+
+**Exercice** : Affichez encore 2-3 lignes de texte en plus avec la fonction `print()`.
 
 ## Délimiter un texte
 

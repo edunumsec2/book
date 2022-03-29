@@ -22,7 +22,9 @@ Auparavant nous avons vu la boucle `for` comme une simple répétition. Nous avo
 Pour dessiner de multiples couleurs, nous pouvons définir une séquence (tuple) de couleurs et parcourir cette séquence.
 En Python, une séquence est délimitée par des parenthèses `()` et les éléments sont séparés par une virgule.
 
-Dans l'expression `for x in (...)`, la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'blue'`, `'cyan'`, `'red'`, etc. Le bloc indenté qui suit la ligne `for` sera répété autant de fois que la séquence contient d'éléments.
+Dans l'expression `for x in (...)`, la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'yellow'`, `'cyan'`, `'red'`, etc. Le bloc indenté qui suit la ligne `for` sera répété autant de fois que la séquence contient d'éléments.
+
+La fonction `write(x)` utilise l'option d'alignement `align='center'` pour centrer le nom de la couleur.
 
 ```{codeplay}
 :file: tuple1.py
@@ -30,8 +32,9 @@ from turtle import *
 up()
 
 backward(200)
-for x in ('blue', 'cyan', 'red', 'magenta', 'pink', 'lime'):
+for x in ('yellow', 'cyan', 'red', 'magenta', 'pink', 'lime'):
     dot(80, x)
+    write(x, align='center')
     forward(80)
 ```
 
@@ -48,7 +51,8 @@ up()
 
 backward(220)
 for x in (20, 40, 60, 80, 100):
-    dot(x, 'red')
+    dot(x, 'pink')
+    write(x, align='center')
     forward(x + 40)
 ```
 
@@ -396,7 +400,62 @@ for c in ('red', 'green', 'blue'):
 
 [Minecraft](https://fr.wikipedia.org/wiki/Minecraft) est un jeu vidéo de type aventure *bac à sable* développé par le Suédois Markus Persson, puis par la société Mojang Studios, sorti en 2011. Il s'agit d'un univers composé de voxels.
 
+### Cube de base
+
 Le voxel (mot créé en contractant *volume* et *element*) est à la 3D ce que le pixel est à la 2D.
+
+```{codeplay}
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+
+def cube():      
+    for c in ('lime', 'peru', 'sienna'):
+        fillcolor(c)
+        begin_fill()
+        losange()
+        end_fill()
+        left(120)
+
+left(30)
+cube()
+```
+
+### Stratégie
+
+Le dessin d'un cube commence au centre.
+Pour aligner ou empiler des blocs, il faut trouver le déplacement vers le prochain bloc, en suivant les 3 axes principaux du cube. Ici nous nous déplaçons un cube en avant avec `forward(-50)`.
+
+```{codeplay}
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+
+def cube():      
+    for c in ('lime', 'peru', 'sienna'):
+        fillcolor(c)
+        begin_fill()
+        losange()
+        end_fill()
+        left(120)
+===
+speed(5)
+left(30)
+cube()
+
+color('red')
+dot(20, 'red')
+forward(-50)
+dot(20)
+```
+
+### Aligner
 
 Le programme suivant aligne 3 blocs pour former une rangée.
 
@@ -415,7 +474,7 @@ def cube():
         losange()
         end_fill()
         left(120)
-
+===
 speed(5)
 left(30)
 for i in range(3):
@@ -423,7 +482,19 @@ for i in range(3):
     forward(-50)
 ```
 
+### Empiler
+
 Ce programme empile 3 blocs pour former une colonne.
+
+Ici nous utilisons un déplacement vers le haut.
+
+```python
+left(60)
+forward(50)
+right(60)
+```
+
+Avant de dessiner un bloc, l'orientation de la tortue doit être rétablie.
 
 ```{codeplay}
 from turtle import *
@@ -440,7 +511,7 @@ def cube():
         losange()
         end_fill()
         left(120)
-
+===
 speed(5)
 left(30)
 for i in range(3):

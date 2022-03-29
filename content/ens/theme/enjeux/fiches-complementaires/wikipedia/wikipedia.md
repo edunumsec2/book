@@ -115,7 +115,7 @@ En dépit de ces critiques, Wikipédia est la preuve qu'une alternative pérenne
 
 ## Références
 
-* [Un documentaire](https://www.youtube.com/watch?v=NJRihPXdk7A) réalisé à l'occasion des 20 ans de Wikipédia (Arte)
+* [Un documentaire](https://www.youtube.com/watch?v=pUmLoTI4l00) réalisé à l'occasion des 20 ans de Wikipédia (Arte)
 * [Une conférence](https://www.ted.com/talks/jimmy_wales_the_birth_of_wikipedia) de Jimmy Wales, fondateur de Wikipédia
 * [Le livre](https://presses.parisnanterre.fr/?p=2355) *Wikipédia,un objet scientifique non identifié* de Lionel Barbe, Louise Merzeau et Valérie Schafer (dir), 2015
 * [Une vidéo](https://www.youtube.com/watch?v=r2NVH21MEe0&feature=emb_logo) qui éclaire les règles d'édition de Wikipédia au travers d'une anecdote sur l'écrivain Philip Roth
