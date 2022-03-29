@@ -1,5 +1,5 @@
 ````{admonition} Matière à réfléchir. Lieu mystère
-:class: attention
+:class: hint
 
 Pensez à un lieu connu, qui se trouve à proximité. Ecrivez les étapes à suivre pour s’y rendre, sans mentionner le lieu. Vous ne pouvez utiliser que les instructions : **<span style="color:rgb(89, 51, 209)">avancer</span>**, **<span style="color:rgb(89, 51, 209)">tourner à gauche</span>** et **<span style="color:rgb(89, 51, 209)">tourner à droite</span>**.
 

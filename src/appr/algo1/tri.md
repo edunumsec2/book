@@ -1,6 +1,6 @@
 
 ````{admonition} Matière à réfléchir. Bibliothèque inutile
-:class: attention
+:class: hint
 
 Imaginez une bibliothèque scolaire un peu spéciale : les livres n’y sont pas rangés par ordre alphabétique ! Ils sont bien rangés sur des étagères, mais sans aucune logique particulière. Vous entrez dans cette bibliothèque un peu spéciale et vous vous mettez à chercher l’ouvrage ***<span style="color:rgb(13, 204, 166)">Le Guide du voyageur galactique.</span>***
 
