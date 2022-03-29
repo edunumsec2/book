@@ -56,9 +56,9 @@ Nous avons tous entendu parler des algorithmes. Normal, c’est le mot à la mod
 :maxdepth: 2
 :hidden:
 Introduction <intro>
-Les algorithmes <algorithmes>
-Trie, cherche et trouve <tri>
-Des algorithmes aux programmes <algo-prog>
+1. Les algorithmes <algorithmes>
+2. Trie, cherche et trouve <tri>
+3. Des algorithmes aux programmes <algo-progs>
 Conclusion <conclusion>
 ```
 

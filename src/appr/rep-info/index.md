@@ -11,11 +11,11 @@ Dans cette section, nous allons comprendre comment les ordinateurs parviennent �
 :maxdepth: 2
 :hidden:
 Introduction <intro>
-Les entiers <entiers>
-Les caractères <caracteres>
-Les images <images>
-Le son <son>
-Redondance <redondance>
+1. Les entiers <entiers>
+2. Les caractères <caracteres>
+3. Les images <images>
+4. Le son <son>
+5. Redondance <redondance>
 Conclusion <conclusion>
 ```
 
