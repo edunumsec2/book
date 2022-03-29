@@ -29,7 +29,7 @@ La syntaxe utilisée pour écrire les fichiers sources est détaillée [ici](htt
 
 Certains fichiers sources contiennent aussi du [rST](https://docutils.sourceforge.io/docs/user/rst/quickref.html).
 
-# Apprendre 
+# Apprendre 
 
 ## Niveaux de titres
 
