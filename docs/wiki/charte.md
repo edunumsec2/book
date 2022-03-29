@@ -141,6 +141,8 @@ Les guillemets adoptés sont les guillemets français. Un espace insécable fin
 
 # Enseigner
 
+*Note : dans l'ensemble, les prescriptions données pour la partie "apprendre" s'appliquent aussi à la partie "enseigner".*
+
 ## Contenus
 
 Pour chaque thématique du plan d'études : 
