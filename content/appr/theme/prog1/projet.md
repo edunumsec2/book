@@ -149,7 +149,7 @@ En Python, les noms commençant avec des majuscules sont réservés pour les cla
 
 `player = Player()`
 
-Donc, changez les noms suivants : 
+Donc, changez les noms suivants :
 
 - Exporter → exporter
 - Niveau → niveau
@@ -806,7 +806,7 @@ Téléchargez le code source du projet réusiné {download}`project1b.py <code/p
 Ce projet utilise principalement la fonction `circle(r, angle)` qui permet de dessiner un arc de cercle de rayon `r` et d'une longueur défini par `angle`.
 
 Par défaut, un cercle entier est dessiné avec 36 segments.
-Si une meilleure précision est nécessaire, on peut augmenter le nombre de segments, en spécifiant le paramètre optionnel `step` de la façon suivante: 
+Si une meilleure précision est nécessaire, on peut augmenter le nombre de segments, en spécifiant le paramètre optionnel `step` de la façon suivante:
 `circle(r, angle, steps=200)`.
 
 ![projet](media/projet_samuel.png)
@@ -1023,7 +1023,7 @@ for p in positions:
 
 Pour dessiner les lignes psychédéliques de l'arrière-fond, nous réutilisons les fentes de tout à l'heure.
 
-Les fentes commencent le long des 4 bordes avec des coordonnées `(x, y)` et pointent vers `center`. 
+Les fentes commencent le long des 4 bordes avec des coordonnées `(x, y)` et pointent vers `center`.
 
 ```{codeplay}
 from turtle import *

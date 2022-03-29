@@ -26,6 +26,19 @@ Un string informatique est
 {f}`un instrument de musique`
 ```
 
+## Dire bonjour
+
+Nous commençons par le grand classique des livres d'introduction à la programmation : afficher la fameuse phrase *hello world*.
+La fonction `print()` permet d'écrire du texte vers la console.
+Ici, la console est la zone rectangulaire qui s'affiche sous le code du programme.
+
+```{codeplay}
+:file: input0.py
+print('hello world.')
+```
+
+**Exercice** : Affichez encore 2-3 lignes de texte en plus avec la fonction `print()`.
+
 ## Délimiter un texte
 
 Tout caractère imprimable peut être utilisé pour créer un texte :
@@ -295,10 +308,6 @@ for i in  range(n, n + 10):
 ```
 
 **Exercice** : Affichez les 10 kanjis qui suivent 語 (langage).
-
-```{exercice}
-Affichez les 10 kanjis qui suivent 語 (langage).
-```
 
 ## Les commentaires
 
