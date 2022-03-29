@@ -135,7 +135,7 @@ def fonction tri_selection(liste) :
         liste[j], liste[indice_min] = liste[indice_min], liste[j]
 ```
 
-Pour trier la liste `rect` définie au tout début, il suffit d’appeler la {glo}`fonction|fonction` `tri_selection` avec la liste `rect` en {glo}`argument|argument`. La fonction **<span style="color:rgb(89, 51, 209)">print()</span>** permet d'afficher la liste triée :
+Pour trier la liste `rect` définie au tout début, il suffit d’appeler la fonction `tri_selection` avec la liste `rect` en {glo}`argument|argument`. La fonction **<span style="color:rgb(89, 51, 209)">print()</span>** permet d'afficher la liste triée :
 
 ```
 # trier la liste de rectangles par sélection
