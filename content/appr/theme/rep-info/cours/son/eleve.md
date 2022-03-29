@@ -36,12 +36,12 @@ Chaque «son élémentaire» peut ainsi être assimilé à une courbe comme cell
 <left> 
 <html>
     <head>
-        <title> Util_Audacity.mov </title>
+        <title> starwars.mov </title>
     </head>
     <body>
         <div id="player">
         <video width="500" height="300" controls>
-        <source src="https://maitre.edunumsec2.ch/_videos/Util_Audacity.mov" type="video/quicktime">
+        <source src="https://apprendre.modulo-info.ch/content/appr/theme/rep-info/cours/son/starwars.mov" type="video/quicktime">
         </audio> 
         </div>
     </body> 
@@ -63,6 +63,8 @@ Les casques à conduction osseuse transmettent les vibrations directement à l�
 ```{admonition} Le saviez-vous ?
 :class: hint
 Vous rappelez-vous de l’explosion de l’étoile de la mort dans Star Wars ? et bien un son pareil ne peut exister dans l'espace : il n’y a pas assez de molécules à agiter, l’énergie transmise par l'explosion ne peut pas se propager de la sorte.
+
+
 `````
 
 ## 4.1. Numérisation
