@@ -15,12 +15,12 @@ Ce document regroupe un ensemble de recommandations concernant la rédaction des
     - [Listes numérotées](#listes-numérotées)
     - [Exercices inline](#exercices-inline)
     - [Exercices fin de cours](#exercices-fin-de-cours)
-    - [Hiérarchisation](#hiérarchisation)
     - [Titres et niveaux de titre](#titres-et-niveaux-de-titres)
     - [Formulation](#formulation)
-- [Enseigner](#eneigner)
+- [Enseigner](#enseigner)
+    - [Contenus](#contenus)
 - [Autres](#autres)   
-    - [Nomenclature fichiers](#nomenclature-fichiers)
+    - [Nomenclature des fichiers](#nomenclature-des-fichiers)
     - [Glossaire](#glossaire)
 
 # Syntaxe MySt et ReST
@@ -119,6 +119,52 @@ Des exercices en fin de cours sont proposés à titre d'auto-contrôle pour les 
 
 Par exemple le 2ème exercice du chapitre 1, dans la partie exercice, sera nommé : Exercice  1.2. 
 
+## Formulation
+
+Le texte est rédigé de manière simple, précise, sans formes «alambiquées», en veillant attentivement aux règles grammaticales et orthographiques usuelles. Pas de familiarité, de considération  personnelle ou partisane.  
+
+L’utilisation de l’infinitif et des tournures impersonnelles (le «on») est recommandée dans le corps  de texte, celle de la 2ème personne du pluriel plutôt dans les activités. 
+
+<!-- Quand un élément conflictuel entre les us précédentes et la réforme de 1990 apparaît (en fait... pose  problème), le rédacteur pose le problème par mail, on en discute et on tranche : par exemple on écrit souvent porte-plume (<1990), également souvent «elle s'est laissée mourir» (toujours <1990), mais  en revanche souvent également la «serpillère»… voire «panosse» ! --> 
+
+Concernant l’écriture inclusive, les tournures impersonnelles ainsi que l’utilisation du «on» seront  favorisés. Les auteurs veilleront à se conformer aux recommandations cantonales décrites dans la  charte officielle : https://www.vd.ch/guide-typo3/les-principes-de-redaction/redaction-egalitaire/ exemples-et-conseils-pour-la-redaction-epicene/ 
+
+L’utilisation d’acronymes implique une unique définition en début d’utilisation dans le chapitre.
+
+La mise en exergue dans le texte est possible avec des balises gras et violet, ainsi que italique et vert. 
+
+Un espace est mis avant (caractère insécable étroit U+202F) et après les deux-points et les points virgule (caractère insécable normal U+00A0). Le même espace insécable (espace insécable étroite  U+202F) est mis avant le point d’exclamation et le point d’interrogation, mais après ces deux ponctuations, on place l’espace normal (caractère sécable U+0020). 
+
+Les chiffres et nombres sont en lettres dans le texte, sauf cas particulier : énumération, citation  explicite de nombres, etc.
+
+Les guillemets adoptés sont les guillemets français. Un espace insécable fine (U+202F) est insérée  après le guillemet ouvrant et avant le guillemet fermant. 
+
 # Enseigner
 
+## Contenus
 
+Pour chaque thématique du plan d'études : 
+
+- Activités : activités "clés en main" pour illustrer une notion de science informatique. 
+- Exercices : idées ou séries d'exercices pour illustrer une notion de science informatique. 
+- Approfondissements : matériel pédagogique utile pour l'approfondissement de l'un ou l'autre aspect du plan d'études. 
+- Planifications : suggestion de calendrier pour planifier l'une ou l'autre thématique du plan d'études. 
+
+Enjeux sociaux : 
+
+- Introduction : présentation des enjeux sociaux du numérique. 
+- Grandes thématiques : grands dossiers thématiques qui correspondent aux 7 sujets “enjeux de société” figurant dans le plan d’études vaudois de la discipline “Science informatique”.
+- Fiches complémentaires : fiches complémentaires qui permettent d’enrichir les dossiers thématiques en éclairant une notion, un événement ou une controverse.
+- Bibliographie et références : ressources utiles pour l'approfondissement de certaines notions abordées dans les grandes thématiques ou les fiches complémentaires. 
+
+# Autres
+
+## Nomenclature des fichiers
+
+Le titre des fichiers correspond au contenu, sans chiffre, sans caractères spéciaux, en cherchant à être le plus court possible. Idéalement, il devrait être le titre de niveau 1 de la page en question (exemple, nouvelle version de prog1 : les fichiers s’appellent  «colorier.md, dessiner.md», etc..). 
+
+Le chemin naturel d’un fichier est «book/src/appr/theme/prog1/attendre.md» ou en remplaçant «appr» par «ens» respectivement, dans lequel "book" = dépôt, "src" = sources (par opposition à "docs" par exemple, qui contient la documentation GitHub du projet qui ne figure pas dans les cours), "appr" = apprendre, "prog1" = programmation I (par opposition aux autres thématiques et/ou à programmation II), "attendre.md" = page de cours sur la fonction attendre (`wait`). 
+
+## Glossaire
+
+Seule la première occurrence d'un mot présent dans le glossaire est signalée pour une page de cours donnée. 
