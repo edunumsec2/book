@@ -8,6 +8,7 @@ from sphinx.util.osutil import relative_uri
 
 import urllib
 import zlib
+import lzstring
 
 
 class logic_diagram(nodes.Element, nodes.General):
@@ -31,13 +32,16 @@ def begin_logic_diagram_html(self, node):
         params["mode"] = mode
     if showonly:
         params["showonly"] = showonly
-    if content:
-        params["data"] = b64encode(content.encode("utf-8"), b"-_").decode("utf-8")
 
-    param_str = urllib.parse.urlencode(params)
+    param_str = urllib.parse.urlencode(params) if len(params) > 0 else ""
+
+    compressor = lzstring.LZString()
+    data_param = "data=" + compressor.compressToEncodedURIComponent(content)
+
+    param_str = data_param if len(param_str) == 0 else param_str + "&" + data_param
 
     self.body.append(
-        '<iframe src="https://jp.pellet.name/hep/logiga?'
+        '<iframe src="https://logic.modulo-info.ch/?'
         + param_str
         + '" class="logicframe" frameborder="0" border="0" cellspacing="0">'
         + str(node)
