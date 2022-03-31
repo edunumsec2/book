@@ -10,7 +10,7 @@ Une boucle ne représente pas seulement une économie de lignes de code, mais do
 - le parcours est possible sur des plages numériques, du texte, et des listes.
 
 ```{question}
-En informatique itérer c'est
+En informatique, itérer c'est
 
 {v}`parcourir`  
 {f}`bifurquer`  
@@ -26,25 +26,23 @@ Dans la boucle `for` une variable d'itération va parcourir une valeur après l'
 - une chaîne de caractères,
 - une liste.
 
-La **variable d'itération** prend successivement les valeurs 0 à x-1.
-Quand la variable d'itération est de type entier (`int`) on l'appelle souvent `i`.
+La **variable d'itération** prend successivement les valeurs 0 à n-1.
+Comme la variable d'itération est de type entier (`int`) on l'appelle souvent `i`.
 
-Nous reprenons l'exemple précédent du polygone, mais cette fois nous ne dessinons pas les segments mais seulement les sommets. La valeur de la variable d'itération `i` est affichée à chaque sommet du polygone.
+Nous reprenons l'exemple précédent du polygone, mais cette fois nous ne dessinons pas les segments, mais seulement les sommets. La valeur de la variable d'itération `i` est affichée à chaque sommet du polygone.
 
 ```{codeplay}
 :file: range2.py
 from turtle import *
 
-x = int(input('Nombre de sommets: '))
+n = 9       # nombre de sommets
+a = 50      # longueur du côté
 up()
-forward(200)
-left(90)
 
-for i in range(x):
-    forward(1000/x)
-    left(360/x)
-    dot(20, 'pink')
-    write(i, align='center')
+for i in range(n):
+    forward(a)
+    left(360/n)
+    write(i)
 ```
 
 **Exercice** : Testez avec des nombres différents entre 5 et 13.
@@ -59,57 +57,27 @@ Le sens des paramètres :
 - `stop` est la valeur finale, mais sans l'inclure,
 - `step` est l'incrément.
 
-La fonction `print()` utilise le paramètre optionnel `end` pour ne pas terminer avec un retour à la ligne mais par une simple espace.
+La fonction `print()` utilise le paramètre optionnel `end` pour ne pas terminer avec un retour à la ligne, mais par un simple espace.
 
 ```{codeplay}
 :file: range3.py
-start = int(input('start = '))
-stop = int(input('stop = '))
-step = int(input('step = '))
+from turtle import *
+up()
 
-for i in range(start, stop, step):
-    print(i, end=' ')
+start = -250
+stop = 250
+step = 50
+
+for x in range(start, stop, step):
+    goto(x, 0)
+    write(x)
 ```
 
-**Exercice** : Affichez les entiers entre 100 et 200 avec un incrément de 3.
-
-La fonction `range()` fonctionne aussi dans l'ordre décroissant. Dans ce cas, il faut choisir pour `step` une valeur négative.
-
-```{codeplay}
-:file: range4.py
-for i in range(-100, -200, -3):
-    print(i, end=' ')
-```
-
-**Exercice** : Affichez les entiers de +10 à -10.
-
-La fonction `range()` peut fonctionner avec 1, 2 ou 3 paramètres. Les valeurs par défaut sont :
-
-- 0 pour `start`,
-- 1 pour `step`.
-
-```{codeplay}
-:file: range5.py
-from time import sleep
-
-for i in range(10):
-    print(i, end=' ')
-    sleep(0.1)
-print()
-
-for i in range(10, 20):
-    print(i, end=' ')
-    sleep(0.1)
-print()
-
-for i in range(10, 100, 7):
-    print(i, end=' ')
-    sleep(0.1)
-```
+**Exercice** : Affichez les entiers entre -50 et 200 avec un incrément de 25.
 
 ## Dessiner une spirale
 
-Si nous dessinons un polygone mais augmentons la longueur de chaque segment successif en utilisant la variable d'itération `i`, nous obtenons une spirale.
+Si nous dessinons un polygone, mais augmentons la longueur de chaque segment successif en utilisant la variable d'itération `i`, nous obtenons une spirale.
 
 ```{codeplay}
 :file: range8.py
@@ -129,7 +97,7 @@ On appelle la première boucle avec `y` la **boucle extérieure** et la deuxièm
 
 Nous concaténons les deux éléments lettre et nombre (`x + y`) et nous ajoutons l'option `end=' '` pour remplacer le retour à la ligne par un espace.
 
-Pour bien montrer l'ordre consécutif nous importons la fonction `sleep()` du module `time` pour ralentir le parcours de la boucle.
+Pour bien montrer l'ordre consécutif, nous importons la fonction `sleep()` du module `time` pour ralentir le parcours de la boucle.
 
 ```{codeplay}
 :file: range9.py
@@ -156,13 +124,13 @@ up()
 for y in range(100, -150, -50):
     for x in range(-200, 300, 100):
         goto(x, y)
-        dot(30, 'silver')
-        write((x, y))
+        dot(45, 'silver')
+        write((x, y), align='center')
 ```
 
 ## Grille de points
 
-Le programme suivant dessine des points sur une grilles régulières avec une distance `d` entre les points. Nous utilisons deux boucles imbriquées avec les variables d'itération `x` et `y`.
+Le programme suivant dessine des points sur une grille régulière avec une distance `d` entre les points. Nous utilisons deux boucles imbriquées avec les variables d'itération `x` et `y`.
 
 ```{codeplay}
 from turtle import *
@@ -175,6 +143,53 @@ for y in range(-x0, x0+1, d):
     for x in range(-x0, x0+1, d):
         goto(x, y)
         dot()
+```
+
+## Position `(x, y)`
+
+Un tuple est la forme idéale pour représenter les deux coordonnées `(x, y)` d'un point. Nous allons dorénavant utiliser la lettre `p` pour point (ou position). Si deux points sont nécessaires, nous les appellerons `p` et `q`.
+
+Pour accéder aux coordonnées `x` et `y` du point `p` nous utilisons un indice (un entier entre crochets) :
+
+- `p[0]` pour la coordonnée x
+- `p[1]` pour la coordonnée y
+
+```{codeplay}
+from turtle import *
+up()
+
+p = (100, -120)
+
+print('p =', p)
+print('x =', p[0])
+print('y =', p[1])
+```
+
+La fonction `goto()` accepte :
+
+- deux coordonnées séparées `goto(x, y)`
+- deux coordonnées dans un tuple `goto(p)`
+
+Nous pouvons définir une fonction `ligne()` qui dessine une ligne entre deux points.
+
+```{codeplay}
+from turtle import *
+up()
+
+def ligne(p, q):
+    goto(p)
+    down()
+    goto(q)
+    up()
+
+p = 100, 50
+
+goto(p)
+dot(20)
+ligne(p, (0, 200))
+ligne(p, (0, -200))
+ligne(p, (300, 0))
+ligne(p, (-300, 0))
 ```
 
 ## Grille de lignes
@@ -203,7 +218,7 @@ for x in range(-x0, x0+1, d):
 
 ## Grille de Sudoku
 
-Le programme suivant dessine une grille de Sudoku 3x3 avec une distance `d` entre les lignes. La particularité de la grille Sudoku est que chaque 3e ligne est accentué. Nous utilisons la condition modulo `i%3` pour ceci.
+Le programme suivant dessine une grille de Sudoku 3x3 avec une distance `d` entre les lignes. La particularité de la grille Sudoku est que chaque 3e ligne est accentuée. Nous utilisons la condition modulo `i%3` pour ceci.
 
 ```{codeplay}
 from turtle import *
@@ -229,7 +244,7 @@ for x in range(-x0, x0+1, d):
 
 ## Grille de tic-tac-toe
 
-La grille du jeu tic-tac-toe est une grille 3x3. Nous ajoutons des étiquette a-c pour les colonnes et 1-3 pour les lignes.
+La grille du jeu tic-tac-toe est une grille 3x3. Nous ajoutons des étiquettes a-c pour les colonnes et 1-3 pour les lignes.
 
 ```{codeplay}
 from turtle import *
@@ -265,7 +280,7 @@ for c in '123':
 
 ## Jouer au tic-tac-toe
 
-Pour jouer au tic-tac-toe nous devons déchiffrer les noms des cellules qui sont constitué d'une lettre (a-c) et d'un chiffre (1-3). En alternance nous plaçons une croix et un cercle.
+Pour jouer au tic-tac-toe, nous devons déchiffrer les noms des cellules qui sont constituées d'une lettre (a-c) et d'un chiffre (1-3). En alternance nous plaçons une croix et un cercle.
 
 ```{codeplay}
 :output_lines: 5
@@ -310,7 +325,7 @@ for i in range(9):
 
 ## Plateau d'échec
 
-Le plateau d'échec est constitué de 64 carrés qui sont alternativement noir et blancs.
+Le plateau d'échec est constitué de 64 carrés qui sont alternativement noirs ou blancs.
 
 ```{codeplay}
 from turtle import *
@@ -339,7 +354,7 @@ for i in range(8):
 ## Exercices
 
 - Téléchargez un exercice.
-- Editez-le dans un éditeur.
+- Éditez-le dans un éditeur.
 - Déposez-le sur Moodle.
 
 ### Cadran
@@ -357,7 +372,7 @@ for i in range(60):
 
 ### Plateau d'échec
 
-Dessiner un chéquier, numérotez les lignes 1-8 et les colonnes a-h, et placez les pions noirs et blancs aux positions de départ.
+Dessinez un échiquier, numérotez les lignes 1-8 et les colonnes a-h, et placez les pions noirs et blancs aux positions de départ.
 
 ```{codeplay}
 from turtle import *
@@ -375,7 +390,7 @@ for c in blancs:
     forward(d)
 ```
 
-### Musée d'art de d'histoire
+### Musée d'art et d'histoire
 
 Le [Musée d'art et d'histoire de Genève](http://institutions.ville-geneve.ch/fr/mah/) a mandaté le studio de graphisme zurichois [Hubertus Design](https://hubertus-design.ch) pour renouveler son identité visuelle. Ce logo à la ligne graphique dynamique, sobre et contemporaine symbolise dorénavant la marque MAH.
 

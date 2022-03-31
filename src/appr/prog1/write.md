@@ -13,12 +13,12 @@ La fonction `write()` permet d'afficher un texte à la position de la tortue.
 ```{codeplay}
 from turtle import *
 
-write('ceci est une phrase écrit par la tortue.')
+write('ceci est une phrase écrite par la tortue.')
 ```
 
 ## Taille
 
-La fonction `write()` possède un paramètres optionnel `font` pour indiquer la police, la taille et le style.
+La fonction `write()` possède un paramètre optionnel `font` pour indiquer la police, la taille et le style.
 La valeur par défaut est `('Arial', 8, 'normal')`
 
 ```{codeplay}
@@ -33,11 +33,11 @@ for t in (8, 12, 18, 24, 36, 64):
 
 ## Police
 
-En typographie, une **police d'écriture** est un ensembles de signes graphiques (caractères) dont le style est coordonnée, afin de former un alphabet. Voici quelques polices représentatifs.
+En typographie, une **police d'écriture** est un ensemble de signes graphiques (caractères) dont le style est coordonné, afin de former un alphabet. Voici quelques polices notoires :
 
 - **Arial** - utilisé sur l'écran
 - **Times** - utilisé dans des livres, journaux
-- **Courier** - police mono-espace, utilisé pour du code
+- **Courier** - police mono-espace, utilisée pour du code
 - **Didot** - police ancienne et élégante
 - **Zapfino** - police manuscrite
 
@@ -119,14 +119,14 @@ for c in ('red', 'blue', 'lime', 'indigo'):
 ```
 
 ```{caution}
-Si vous exécutez `write()` dans ce site avec [Skulpt](https://skulpt.org), la couleur du texte est définie par `fillcolor()`. Quand vous exécutez `write()` dans un éditeur externe avec Python standard, la couleur du texte est défini par `pencolor()`.
+Si vous exécutez `write()` dans ce site avec [Skulpt](https://skulpt.org), la couleur du texte est définie par `fillcolor()`. Quand vous exécutez `write()` dans un éditeur externe avec Python standard, la couleur du texte est définie par `pencolor()`.
 ```
 
 ## Aligner des mots
 
-Le texte suivant est un extrait du *Petit Prince* d'Antoine de Saint-Exupéry. Pour ne pas introduire des retours à la ligne, la phrase est défini avec le symbole `\` en fin de ligne.
+Le texte suivant est un extrait du *Petit Prince* d'Antoine de Saint-Exupéry. Pour ne pas introduire des retours à la ligne, la phrase est délimitée avec le symbole `\` en fin de ligne.
 
-Les mots sont aligné à gauche, au centre et à droite.
+Les mots sont alignés à gauche, au centre et à droite.
 
 ```{codeplay}
 from turtle import *
@@ -160,9 +160,9 @@ for t in mots:
 
 ## Aligner des phrases
 
-Ici, plusieurs mots sont affiché, jusqu'à ce que la position finale dépasse une limite.
+Ici, plusieurs mots sont affichés, jusqu'à ce que la position finale dépasse une limite.
 
-Chaque ligne est ajouté à la liste `lignes`. Cette liste est utilisé pour afficher le texte avec un alignement à droite.
+Chaque ligne est ajoutée à la liste `lignes`. Cette liste est utilisée pour afficher le texte avec un alignement à droite.
 
 ```{codeplay}
 from turtle import *
@@ -199,7 +199,7 @@ for t in lignes:
 
 ## Ajuster un texte
 
-Pour ajuster un texte, il faut connaitre la longueur des mots. On ajuste alors les espaces entre les mots, pour faire aligner un ligne de texte des deux cotés.
+Pour ajuster un texte, il faut connaitre la longueur des mots. On ajuste alors les espaces entre les mots, pour faire aligner une ligne de texte des deux côtés.
 
 ```{codeplay}
 from turtle import *
@@ -273,7 +273,7 @@ for i in range(10):
 ## Scrabble
 
 Le [Scrabble](https://fr.wikipedia.org/wiki/Scrabble) est un jeu de société et un jeu de lettres où l'objectif est de cumuler des points, sur la base de tirages aléatoires de lettres, en créant des mots sur une grille carrée.
-Le jeu a été conçu par l'architecte new-yorkais Alfred Mosher Butts  pendant la crise de 1929, et publié en 1931.
+Le jeu a été conçu par l'architecte new-yorkais Alfred Mosher Butts pendant la crise de 1929, et publié en 1931.
 
 ```{codeplay}
 :file: scrabble.py
@@ -300,13 +300,13 @@ for c in 'SCRABBLE':
 
 ## WhatsApp
 
-L'application [WhatsApp](https://fr.wikipedia.org/wiki/WhatsApp) fournit un système de messagerie instantanée chiffrée de bout en bout aussi bien via les réseaux de téléphonie mobiles que par Internet.
+L'application [WhatsApp](https://fr.wikipedia.org/wiki/WhatsApp) fournit un système de messagerie instantanée chiffrée de bout en bout aussi bien via les réseaux de téléphonie mobile que par Internet.
 
 WhatsApp a remporté un grand succès au tournant des années 2010. L'application est créée en 2009 par Jan Koum et Brian Acton, deux anciens employés de la société américaine Yahoo! avec pour objectif de remplacer le SMS. Elle est utilisée par plus de deux milliards de personnes en 2020.
 
 En 2014, WhatsApp est acquis par Facebook pour un montant d'environ 22 milliards soit environ 350 millions de dollars par employé ou 40 dollars par utilisateur.
 
-Dans le programme ci-dessous nous allons afficher une conversation entre deux personnes dans le style d'une application messager.
+Dans le programme ci-dessous nous allons afficher une conversation entre deux personnes dans le style d'une application de messagerie.
 
 ```{codeplay}
 from turtle import *
@@ -350,7 +350,7 @@ for ligne in lignes:
 
 ### Sudoku
 
-Reproduisez l'image ci dessous
+Reproduisez l'image ci-dessous
 
 ```{image} media/sudoku.png
 :width: 200
@@ -378,7 +378,7 @@ from turtle import *
 
 ### Scrabble
 
-Affichez deux mots qui ont une lettre en commun. Un mot en horizontale, le deuxième mot en verticale.
+Affichez deux mots qui ont une lettre en commun. Un mot à l'horizontale, le deuxième mot à la verticale.
 
 ```{codeplay}
 :file: scrabble.py
@@ -389,7 +389,7 @@ from turtle import *
 
 ### Nuage de mots-clés
 
-Le [nuage de mots-clés](https://fr.wikipedia.org/wiki/Nuage_de_mots-clés), ou nuage de tags (en anglais **tag cloud**) est une représentation visuelle des mots-clés (tags) les plus utilisés sur un site web. Généralement, les mots s'affichent dans des tailles et graisses de caractères d'autant plus visibles qu'ils sont utilisés ou populaires.
+Le [nuage de mots-clés](https://fr.wikipedia.org/wiki/Nuage_de_mots-clés), ou nuage de tags (en anglais **tag cloud**) est une représentation visuelle des mots-clés (tags) très souvent utilisée en web. Généralement, les mots s'affichent dans des tailles et graisses de caractères d'autant plus visibles qu'ils sont utilisés ou populaires.
 
 Choisissez 10 mots et affichez-les avec 10 tailles différentes. La taille la plus grande doit apparaitre au milieu. Les mots ne doivent pas se superposer. Utilisez des tuples avec 10 mots, 10 tailles et 10 positions.
 

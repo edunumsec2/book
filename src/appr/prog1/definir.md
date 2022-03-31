@@ -17,7 +17,7 @@ Une fonction permet de
 
 ## Nommer une séquence
 
-Dessiner un rectangle est assez utile. C'est une forme qu'on pourra réutiliser certainement souvent. Il serait pratique de définir un nom pour ces 8 lignes de code. Pouvons-nous définir des nouvelles commandes ?
+Dessiner un rectangle est assez utile. C'est une forme qu'on pourra réutiliser certainement souvent. Il serait pratique de définir un nom pour ces 8 lignes de code. Pouvons-nous définir de nouvelles commandes ?
 <!--  -->
 ```python
 forward(160)
@@ -116,7 +116,7 @@ forward(30)
 porte()
 ```
 
-La définition d'une fonction permet d'ajouter des nouveaux mots à un langage de programmation. Contrairement aux commandes natives de Python qui sont toutes en anglais, nous sommes libres de les choisir en français.
+La définition d'une fonction permet d'ajouter de nouveaux mots à un langage de programmation. Contrairement aux commandes natives de Python qui sont toutes en anglais, nous sommes libres de les choisir en français.
 
 **Attention** : écrivez les fonctions sans accents et sans circonflexes : `batiment()`, `carre()`, `boite()`.
 
@@ -165,7 +165,7 @@ porte()
 
 ## Définir une fonction
 
-Le fait de donner un nom à une séquence d'instructions est appelé **définir un fonction**. Une **définition de fonction** comporte :
+Le fait de donner un nom à une séquence d'instructions est appelé **définir une fonction**. Une **définition de fonction** comporte :
 
 1. le mot-clé `def` (définir),
 1. le nom de la fonction (`batiment/porte`),
@@ -302,7 +302,7 @@ Contrairement aux fonctions `forward(d)` et `backward(d)` qui nécessitent un ar
 
 ## Maison avec fenêtre
 
-Dans le programme ci-dessous, nous allons dessiner de nouveau une maison, mais avec une fenêtre cette fois-ci. Les fonctions `up()`/`down()` nous permettent de dessiner des formes disjointes, telle qu'une fenêtre à l'intérieur de la maison.
+Dans le programme ci-dessous, nous allons dessiner de nouveau une maison, mais avec une fenêtre cette fois-ci. Les fonctions `up()`/`down()` nous permettent de dessiner des formes disjointes, telles qu'une fenêtre à l'intérieur de la maison.
 
 ```{admonition} Exercice
 :class: note
@@ -429,7 +429,7 @@ Combien de lignes de code sont exécutées par la fonction `fenetre()`?
 
 ### Rectangles
 
-Définissez une fonction pour dessiner un rectangle. 
+Définissez une fonction pour dessiner un rectangle.
 Ensuite, dessinez 3 rectangles qui ne se touchent pas, à des endroits différents.
 
 ```{codeplay}
@@ -447,7 +447,7 @@ done()
 
 ### Maisons
 
-Définissez une fonction pour dessiner une maison. 
+Définissez une fonction pour dessiner une maison.
 Ensuite, dessinez 3 maisons qui ne sont pas connectées, à des endroits différents.
 
 ```{codeplay}
@@ -484,7 +484,7 @@ done()
 
 ### Tables
 
-Définissez une fonction pour dessiner une table. 
+Définissez une fonction pour dessiner une table.
 Ensuite, dessinez 3 tables à des endroits différents.
 
 ```{codeplay}

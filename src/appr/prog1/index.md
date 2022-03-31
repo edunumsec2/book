@@ -41,7 +41,7 @@ Annexe <annexe>
 
 {fa}`check, text-success mr-1` Comprendre la logique d'un programme
 
-## Personnages-clés
+## Personnages clés
 
 ````{panels}
 
@@ -60,5 +60,5 @@ Guido van Rossum 🇳🇱
 ^^^^^
 ***Né en 1954***
 
-[**Guido van Rossum**](https://fr.wikipedia.org/wiki/Guido_van_Rossum) est le créateur du langage de programmation **Python**. Au sein de la communauté pythonienne, il est connue comme « dictateur bienveillant à vie », ce qui signifie qu'il suit le développement de Python et arbitre lorsque la situation le requiert.
+[**Guido van Rossum**](https://fr.wikipedia.org/wiki/Guido_van_Rossum) est le créateur du langage de programmation **Python**. Au sein de la communauté pythonienne, il est connu comme « dictateur bienveillant à vie », ce qui signifie qu'il suit le développement de Python et arbitre lorsque la situation le requiert.
 ````

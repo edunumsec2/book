@@ -6,47 +6,6 @@ Dans ce chapitre, nous découvrons comment un programme peut poser une question 
 - une variable, par exemple `x`, mémorise une information,
 - la fonction `print()` affiche un texte (une réponse).
 
-```{question}
-En informatique, une variable est
-
-{v}`une place en mémoire`  
-{v}`une étiquette pour un objet`  
-{v}`un endroit spécific de stockage`  
-{v}`un nom pour une valeur`
-```
-
-## Dire bonjour
-
-Nous commençons par le grand classique des livres d'introduction à la programmation : afficher la fameuse phrase *hello world*.
-La fonction `print()` permet d'écrire du texte vers la console.
-Ici, la console est la zone rectangulaire qui s'affiche sous le code du programme.
-
-```{codeplay}
-:file: input0.py
-print('hello world.')
-```
-
-**Exercice** : Affichez encore 2-3 lignes de texte en plus avec la fonction `print()`.
-
-## Ecrire et dessiner
-
-Votre programme peut faire les deux choses dans un même programme : dessiner une image et écrire un texte.
-Le texte apparait dans la console, qui apparait directement après le programme.
-Le dessin apparait dans une fenêtre spéciale après la console.
-
-```{codeplay}
-:file: input1.py
-from turtle import *
-
-print('ce programme dessine un carré')
-
-for i in range(4):
-    forward(100)
-    left(90)
-```
-
-**Exercice** : Ajoutez du code pour dessiner un triangle, et annoncez-le dans le texte.
-
 ## La fonction `input()`
 
 La fonction `input('question')` permet de demander une entrée (input) à l'utilisateur.
@@ -63,8 +22,8 @@ print('Bonjour', x)
 
 ## La fonction `print()`
 
-Le fonction `print()` peut accepter un ou plusieurs arguments, séparé par une virgule. Un espace est inséré à la place de la virgule.
-Appeler la fonction `print()` sans argument insère une ligne vide.
+La fonction `print()` peut accepter un ou plusieurs arguments, séparés par une virgule. Un espace est inséré à la place de la virgule.
+Appeler la fonction `print()` sans argument, insère une ligne vide.
 
 ```{codeplay}
 :file: input3.py
@@ -80,153 +39,158 @@ print(x, 'voit', x, 'qui voit', x)  # cinq arguments
 ## La variable
 
 Une variable est une place en mémoire pour stocker de l'information.
-Vous êtes complètement libre dans le choix des noms pour les variables, mais c'est recommandé de choisir des noms qui sont le plus explicite possible. C'est mieux d'utiliser des noms de variable parlants, comme `nom` et `age`, même si on aurait pu utiliser `x` et `y`.  
+Vous êtes complètement libres dans le choix des noms pour les variables, mais il est recommandé de choisir des noms qui sont le plus explicites possible. C'est mieux d'utiliser des noms de variable parlants, comme `nom` et `âge`, même si on avait pu utiliser `x` et `y`.  
 
 ```{codeplay}
 :file: input3.py
 nom = input('Entrez votre nom: ')
 print('Bonjour', nom)
 
-age = input('Entrez votre age: ')
+age = input('Entrez votre âge: ')
 print('Très bien', nom, 'vous avez', age, 'ans')
 ```
 
 **Exercice** : Ajoutez une troisième question et utilisez la réponse dans un `print()`.
 
-## Nommer une variable
+## Demander un nombre
 
-Normalement, c'est conseillé d'utiliser des variables très explicites, comme `age`, `prenom`, `nom`, `longuer`, `hauteur`, etc. Cela aide à la compréhension du code.
+La fonction `input()` permet d'obtenir une entrée de l'utilisateur. Mais attention !
+La valeur retournée est une chaine de caractères (de type string `str`). Nous pouvons le prouver avec la fonction `type()`.
 
-Mais dans des boucles et dans un contexte local, nous adoptons la convention suivante d'utiliser des variables courte d'une seule lettre.
+```{codeplay}
+x = input('Entrez un nombre: ')
+print(type(x))
+```
 
-- `a` pour un angle, ou une longueur
-- `c` pour un caractère, ou une couleur
-- `d` pour un diamètre, ou une distance
-- `i` pour un entier dans une boucle
-- `j` pour un deuxième entier
-- `n` pour un nombre donné
-- `r` pour un rayon
-- `x` pour une coordonnée en direction x
-- `y` pour une coordonnée en direction y
+Pour pouvoir l'utiliser dans un calcul, nous devons la transformer en nombre à virgule flottante avec la fonction de conversion `float()` de la façon suivante.
+
+```{codeplay}
+x = '1.5'
+print(type(x))          # la variable x contient une chaîne
+print(type(float(x)))   # la fonction float(x) renvoie un nombre
+```
+
+## Opérations de base
+
+En Python, nous retrouvons les 4 opérations arithmétiques de base :
+
+- addition (`+`)
+- soustraction (`-`)
+- multiplication (`*`)
+- division (`/`)
+
+```{codeplay}
+print('Opérations de base')
+a = float(input('Entrez un nombre: '))
+b = float(input('Entrez un nombre: '))
+print()
+print('Addition      ', a + b)
+print('Soustraction  ', a - b)
+print('Multiplication', a * b)
+print('Division      ', a / b)
+```
+
+## Puissance
+
+En Python l'opérateur de puissance est `**`. Ne le confondez pas avec le symbole `^` utilisé dans d'autres langages tel qu’Excel.
+
+```{codeplay}
+print('Puissance')
+a = float(input('Entrez un nombre: '))
+n = float(input('Entrez un exposant: '))
+print()
+print(a, 'puissance', n, '=', a ** n)
+```
+
+Nous pouvons utiliser une puissance de 0.5 pour calculer une racine.
+
+```{codeplay}
+print('Racine')
+a = float(input('Entrez un nombre: '))
+print('La racine de', a, 'est', a ** 0.5)
+```
+
+Nous pouvons maintenant calculer une diagonale, en utilisant le théorème de Pythagore.
+
+```{codeplay}
+print('Pythagore')
+a = float(input('Entrez un nombre a: '))
+b = float(input('Entrez un nombre b: '))
+print()
+print('La diagonale est', (a ** 2 + b ** 2) ** 0.5)
+```
+
+## Division entière
+
+En Python, nous avons un opérateur spécial pour la division entière (`//`) ainsi que pour le reste de la division entière. L'opérateur pour le reste de la division entière est `%` est s'appelle **modulo**.
+
+Cette fois-ci nous transformons la chaine pas en nombre à virgule flottante (`float`), mais en nombre enter (`int`).
+
+```{codeplay}
+print('Division entière')
+a = int(input('Entrez un entier a: '))
+b = int(input('Entrez un entier b: '))
+print()
+print('Division normale    ', a / b)
+print('Division entière    ', a // b)
+print('Reste de la division', a % b)
+```
 
 ```{question}
-La variable `i` désigne normalement
+Quel est le résultat de l'expression `10 % 3` ?
 
-{f}`une longeur`  
-{f}`un caractère`  
-{v}`un entier`  
-{f}`une coordonné`
+{v}`1`  
+{f}`2`  
+{f}`3`  
+{f}`3.333333`
 ```
 
-## Demander une couleur
+```{question}
+En informatique, `int` est l'abréviation pour
 
-Nous pouvons utiliser la fonction `input()` pour créer une entrée interactive qui demande à l'utilisateur d'entrer une couleur pour l'arrière-plan.
+{f}`international`  
+{v}`entier`  
+{f}`interne`  
+{f}`intelligent`
+```
+
+## Calcul géométrique
+
+Dans l'exemple suivant, on demande le rayon et on affiche rayon, diamètre et circonférence. Ajoutez la surface du cercle en utilisant la formule :
+
+$$ S = \pi r^2 $$
 
 ```{codeplay}
-:file: input4.py
-from turtle import *
-
-x = input('Entrez une couleur: ')
-getscreen().bgcolor(x)
+print('Circle')
+r = float(input('Entrez le rayon: '))
+pi = 3.14
+print()
+print('rayon =', r)
+print('diamètre =', 2 * r)
+print('circonférence =', pi * 2 * r)
+print('surface =', ...)
 ```
 
-**Exercice** : Entrez différentes couleurs valides.
+**Exercice** : Complétez le programme pour afficher la surface du cercle.
 
-Nous pouvons continuer les questions avec une couleur de ligne et une couleur de remplissage, pour dessiner un carré.
+Nous pouvons également créer des programmes où nous demandons plusieurs valeurs à l'utilisateur. Cette fois, nous permettons seulement l'utilisation de nombres entiers, et donc transformons la chaine obtenue avec `int()` en nombre entier.
 
 ```{codeplay}
-:file: input5.py
-from turtle import *
+:file: int8.py
+print('Rectangle')
+a = float(input('Entrez la largeur: '))
+b = float(input('Entrez la longueur: '))
 
-x = input('Entrez une couleur de arrière-fond: ')
-getscreen().bgcolor(x)
-
-y = input('Entrez une couleur de ligne: ')
-pencolor(y)
-
-z = input('Entrez une couleur de remplissage: ')
-fillcolor(z)
-
-width(10)
-begin_fill()
-for i in range(4):
-    forward(100)
-    left(90)
-end_fill()
+print('surface =', a * b)
+print('périmètre =', ...)
+print('diagonale =', ...)
 ```
 
-**Exercice** : Ajoutez une quatrième question pour demander la couleur des points (dot) et ajoutez un point colorié à chaque sommet du carré.
-
-## Demander en boucle
-
-La boucle `for` permet de répéter les instructions qui se trouvent dans son bloc en indentation.
-A chaque tour nous demandons une couleur et nous dessinons une disque colorié avec cette couleur. Si la couleur ne correspond pas à un nom de couleur standard, alors le disque est noire la première fois, et répète la couleur précédente pour les cas suivants.
-
-```{codeplay}
-:file: input6.py
-from turtle import *
-up()
-
-backward(200)
-for i in range(6):
-    x = input('Entrez une couleur: ')
-    dot(80, x)
-    forward(80)
-print('fini')
-```
-
-## Dessiner un drapeau
-
-Nous reprenons l'exemple des formes ouvertes, avec les deux équerres colories. 
-
-```{codeplay}
-from turtle import *
-
-def equerre():
-    begin_fill()
-    for i in range(2):
-        forward(80)
-        left(90)
-    end_fill()
-
-def drapeau():
-    for i in range(2):
-        x = input('Couleur: ')
-        fillcolor(x)
-        equerre()
-    
-drapeau()
-```
-
-Maintenant nous l'affichons en boucle
-
-```{codeplay}
-from turtle import *
-
-def equerre():
-    begin_fill()
-    for i in range(2):
-        forward(80)
-        left(90)
-    end_fill()
-
-def drapeau():
-    for i in range(2):
-        x = input('Couleur: ')
-        fillcolor(x)
-        equerre()
-    
-for i in range(3):
-    drapeau()
-    print()
-    up()
-    forward(100)
-    down()
-```
+**Exercice** : Complétez le programme pour afficher le périmètre et la diagonale.
 
 ## Créer un quiz
 
-Pour faire des petits quiz nous créons des paires de mots qui vont ensemble. Par exemple pays et capitale dans un cours de géographie, ou une liste de vocabulaire en deux langues, pour un cours de langue.
+Pour faire des petits quiz, nous créons des paires de mots qui vont ensemble. Par exemple pays et capitale dans un cours de géographie, ou une liste de vocabulaire en deux langues, pour un cours de langue.
 
 ### Séquence de questions
 
@@ -255,7 +219,7 @@ for (q, s) in quiz:
 
 ### Poser une question
 
-Nous pouvons maintenant extraire la question et les poser tous dans une boucle `for`. Avec `input()` nous demandons la réponse. Nous séparons les questions avec un `print()` sans argument pour insérer une ligne vide entre les questions.
+Nous pouvons maintenant extraire la question et la poser plusieurs fois dans une boucle `for`. Avec `input()` nous demandons la réponse. Nous séparons les questions avec un `print()` sans argument pour insérer une ligne vide entre les questions.
 
 ```{codeplay}
 
@@ -293,13 +257,75 @@ for (question, solution) in quiz:
     print()
 ```
 
+### Quiz avec score
+
+Comment ajouter un score ?
+
+Il faut ajouter 3 éléments de code pour:
+
+- initialiser une variable au début
+- augmenter la valeur avec chaque bonne réponse
+- afficher le score à la fin
+
+```{codeplay}
+score = 0   # initialiser au début
+
+print('avant', score)
+score = score + 1
+print('après', score)
+
+print('Votre score est', score)
+```
+
+Nous reprenons l'exemple du chapitre précédent et nous ajoutons le calcul du score
+
+```{codeplay}
+score = 0
+quiz = (('France', 'Paris'),
+        ('Allemagne', 'Berlin'),
+        ('Suisse', 'Berne'))
+
+for (question, solution) in quiz:
+    print('Quelle est la capitale de', question)
+    reponse = input('Votre réponse: ')
+    if reponse == solution:
+        print('correct')
+        score = score + 1
+    else:
+        print('FAUX! La bonne réponse est', solution)
+    print()
+
+print('Votre score: ', score, 'sur', len(quiz))
+```
+
+### Quiz mathématique
+
+Nous utilisons un tuple avec deux valeurs (a, b) que nous mettons dans un deuxième tuple.
+Cette fois nous avons pas besoin de donner une solution, car nous pouvons la calculer.
+
+```{codeplay}
+print('Quiz addition')
+quiz = ((12, 35), (23, 11), (55, 23))
+
+for (a, b) in quiz:
+    print(a, '+', b, '=')
+    reponse = int(input())
+    if reponse == a + b:
+        print('correct')
+    else:
+        print('FAUX. La bonne réponse est', a + b)
+    print()
+```
+
+**Exercice** : Ajoutez le score pour ce quiz.
+
 ## Erreurs
 
-Dans des chapitres précédent nous avons déjà vu quelques messages d'erreurs. Mais il y en a d'autres que nous allons voir ici.
+Dans des chapitres précédents, nous avons déjà vu quelques messages d'erreurs. Mais il y en a d'autres que nous allons voir ici.
 Il est important de bien comprendre les messages d'erreur.
 Dans cette section, vous allez découvrir les différentes catégories d'erreur et comment les corriger.
 
-### SyntaxError
+### SyntaxError - accents
 
 Cette erreur survient lorsque vous utilisez des accents dans des noms de fonctions ou de variables.
 
@@ -316,7 +342,7 @@ carré()
 
 **Exercice** : Corrigez les trois erreurs de syntaxe'.
 
-### SyntaxError: EOF
+### SyntaxError - parenthèses
 
 Cette erreur survient lorsque vous oubliez de fermer une parenthèse.
 
@@ -330,88 +356,217 @@ forward(100
 
 **Exercice** : Corrigez l'erreur de syntaxe.
 
-### ValueError
+### SyntaxError - ponctuation
 
-Cette erreur survient lorsque la valeur numérique est trop grande pour correspondre à un Unicode.
+Cette erreur survient lorsque vous oubliez un signe de ponctuation (parenthèse, virgule, apostrophe).
 
 ```{codeplay}
-print(chr(10000000))
+print('hello'
+print(12 34)
+print('bonjour)
 ```
 
-**Exercice** : Corrigez l'erreur de valeur.
+**Exercice** : Corrigez les trois erreurs de syntaxe.
+
+### TypeError
+
+Cette erreur survient lorsque vous mettez des opérandes dont le type n'est pas approprié pour l'opérateur, par exemple une comparaison entre une chaîne et un entier.
+
+```{codeplay}
+print('10' > 0)
+print('10' * '10')
+print('10' + 10)
+```
+
+**Exercice** : Corrigez les trois erreurs de type.
 
 ## Exercices
 
-### Maison
+- Téléchargez l'exercice
+- Lancez un éditeur externe (tel que Thonny)
+- Depuis l'éditeur ouvrez le fichier téléchargé
+- Remplacez ... par votre code
+- Déposez vos exercices sur Moodle
 
-Créez un programme qui dessine une maison et demande :
+### Chatbot
 
-- la couleur de la maison
-- la couleur de la porte
-- la couleur de la fenêtre
+Créez un programme qui vous pose des questions
 
-Comme nous devons indiquer les noms des couleurs en anglais, nous allons écrire ce programme en anglais.
+- votre nom
+- votre âge
+- votre couleur préférée
+- votre groupe de musique préféré
+- votre classe
+- votre meilleur ami
+
+À chaque fois le chatbot mémorise votre réponse dans une variable qu'il utilise dans la phrase suivante.
 
 ```{codeplay}
-:file: maison.py
-from turtle import *
-
-col_house = input('Color of the house: ')
+:file: chatbot.py
+print('Je suis un chatbot')
+print('Quel est ton nom ?')
+nom = input()
+print('Salut', nom)
 ...
 ```
 
-### Tricolore
+### Rectangle
 
-Créez un programme qui demande trois couleurs et dessine ensuite un drapeau tricolore. 
+Faites un programme qui demande à l'utilisateur les côtés a et b d'un rectangle et calcule ensuite
+
+le périmètre
+
+$$ p = 2 (a+b) $$
+
+la surface
+
+$$ S = ab $$
+
+et la diagonale
+
+$$ d = \sqrt{a^2 + b^2} $$
 
 ```{codeplay}
-:file: tricolore.py
-from turtle import *
+:file: rectangle.py
+print('Le rectangle')
 
-def rectangle():
-    ...
-
-for i in range(3): 
-    c = input('Couleur du rectangle: ')
+a = float(input('Entrez la longueur a: '))
 ...
+
 ```
 
-### Smileys
+### Cercle
 
-Créez un programme qui demande les couleurs d'un smiley.
+Faites un programme qui demande à l'utilisateur le rayon d'un cercle et calcule ensuite
 
-- visage
-- yeux
-- bouche
+le diamètre
+
+$$ d = 2r $$
+
+la circonférence
+
+$$ c = 2 \pi r $$
+
+et la surface
+
+$$ S = \pi r^2 $$
 
 ```{codeplay}
-:file: smiley.py
-from turtle import *
+:file: cercle.py
+print('Le cercle')
 
-def smiley():
-    ...
-
-for i in range(3): 
-    c = input('Couleur : ')
+r = float(input('Entrez le rayon r: '))
 ...
+
 ```
 
-### Quiz
+### Sphère
 
-Faites un quiz avec 10 questions. Pour chaque question vérifiez si la réponse est correcte.
+Faites un programme qui demande à l'utilisateur le rayon d'une sphère et calcule ensuite
 
+le diamètre
+
+$$ d = 2r $$
+
+la surface
+
+$$ A = 4 \pi r^2 $$
+
+et le volume
+
+$$ V = \frac{4 \pi r^3}{3} $$
 
 ```{codeplay}
-:file: quiz.py
-quiz = (('question1', 'solution1'),
-        ('question2', 'solution2'))
+:file: sphere.py
+print('La sphère')
+
+r = float(input('Entrez le rayon r: '))
+...
+
+```
+
+### Quiz de multiplication
+
+Créez un quiz de multiplication.
+
+- Complétez pour avoir 10 questions
+- Corrigez les erreurs
+- Ajoutez le calcul du score
+
+```{codeplay}
+:file: quiz_mul.py
+print('Quiz de multiplication')
+score = 0
+
+for (a, b) in ((4, 6), (5, 6)):
+    print(a, '*', b, '=')
+    reponse = int(input())
+    if reponse == a * b:
+        print('correct')
+    else:
+        print('FAUX. La bonne réponse est', a + b)
+    print()
+
+print('Votre score est')
+```
+
+### Quiz de vocabulaire
+
+Créez un quiz de vocabulaire français-anglais.
+
+- Complétez pour avoir 10 questions
+- Corrigez les erreurs
+- Ajoutez le calcul du score
+
+```{codeplay}
+:file: quiz_mul.py
+print('Quiz de vocabulaire anglais')
+score = 0
+quiz = (('ordinateur', 'computer'),
+        ('clavier', 'keyboard'),
+        ('souris', 'display'))
 
 for (question, solution) in quiz:
-    print(question)
-    reponse = input('Votre réponse: ')
+    reponse = input(question + ': ')
     if reponse == solution:
         print('correct')
     else:
-        print('FAUX! La bonne réponse est', solution)
+        print('FAUX. La bonne réponse est', question)
     print()
+
+print('Votre score est')
+```
+
+### Quiz Kahoot
+
+La plate-forme d'apprentissage ludique [Kahoot!](https://fr.wikipedia.org/wiki/Kahoot!) est utilisée comme technologie éducative dans les écoles et autres établissements d'enseignement.
+
+Ses jeux d’apprentissage, *Kahoots*, sont des questionnaires à choix multiples qui permettent à plusieurs utilisateurs de jouer simultanément. Le site est accessible via un navigateur Web, mais aussi téléchargeable sur smartphone.
+
+Créez un quiz avec des questions sur un sujet de culture générale, dans le style des quiz sur le site Kahoot.
+
+- Complétez pour avoir 10 questions
+- Ajoutez le calcul du score
+
+```{codeplay}
+:file: kahoot.py
+print('Quiz Kahoot Disney')
+print()
+score = 0
+
+quiz = (("Quel est le nom du cowboy dans Toy Story", 'Woody'),
+        ("Comment s'appelle le garçon dont le nez grandit quand il ment", 'Pinocchio'),
+        ("Quel est le nom de la fée dans Peter Pan", 'Tinkerbell'))
+
+
+for (question, solution) in quiz:
+    print(question + '?')
+    reponse = input()
+    if reponse == solution:
+        ...
+    else:
+        ...
+    print()
+
+print('Votre score est', ...)
 ```

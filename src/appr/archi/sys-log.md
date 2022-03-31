@@ -68,7 +68,7 @@ On peut dessiner des diagrammes avec des portes logiques. Ce ne sont pas des dia
 :height: 60
 :mode: static
 
-{"v": 1, "gates": [{"type": "AND", "pos": [50, 30], "in": [0, 1], "out": 2}]}
+{"v": 1, "opts": {"showDisconnectedPins": true}, "gates": [{"type": "AND", "pos": [50, 30], "in": [0, 1], "out": 2}]}
 ```
 
 Sur ce schéma logique, les entrées sont à gauche, la sortie à droite et la porte est connectée au milieu. Les circuits sont représentés en noir s'ils véhiculent un «0» et avec une couleur s'ils véhiculent un «1».

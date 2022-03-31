@@ -67,6 +67,7 @@ L'idée est maintenant de combiner ces sorties intermédiaires pour n'en avoir p
 
 {
   "v": 1,
+  "opts": {"showDisconnectedPins": true},
   "in": [
     {"pos": [50, 170], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 250], "id": 1, "name": "Y", "val": 0},
@@ -411,6 +412,7 @@ Nous présentons ici une ALU simple à 4 bits :
 
 {
   "v": 1,
+  "opts": {"showDisconnectedPins": true},
   "components": [
     {
       "type": "alu",
@@ -1140,6 +1142,7 @@ Cela nous donne ce début de circuit, qui pour l'instant n'est pas fonctionnel�
 
 {
   "v": 1,
+  "opts": {"showDisconnectedPins": true},
   "in": [
     {
       "pos": [340, 450],
@@ -1224,6 +1227,7 @@ L'entrée $B$ de l'ALU est le nouveau nombre à additionner. Pour cela, nous ajo
 
 {
   "v": 1,
+  "opts": {"showDisconnectedPins": true},
   "in": [
     {
       "pos": [340, 490],

@@ -1,13 +1,13 @@
 # Grouper - `list`
 
-Dans ce chapitre, nous découvrons une nouvelle structure de données - la liste. C'est une séquence ordonnée d'objets quelconques. Contrairement au `tuple` qui est immuable, la liste est *muable*, c'est à dire que nous pouvons réassigner ces éléments. Nous allons voir que :
+Dans ce chapitre, nous découvrons une nouvelle structure de données - la liste. C'est une séquence ordonnée d'objets quelconques. Contrairement au `tuple` qui est immuable, la liste est *muable*, c'est-à-dire que nous pouvons réassigner ces éléments. Nous allons voir que :
 
 - la liste est une séquence d'objets entre crochets tels que `[2, 3, 5]`,
 - la notion d'index `liste[i]` permet d'accéder au i-ème élément de la liste,
 - la notion de tranche `liste[i:j]` permet d'accéder à une sous-liste.
 
 ```{question}
-En informatique une liste est
+En informatique, une liste est
 
 {v}`ordonnée`  
 {f}`jamais vide`  
@@ -41,7 +41,7 @@ En Python, une liste est délimitée par des crochets `[]` et ses éléments son
 
 ## La fonction `len()`
 
-La fonction `len()` retourne la longueur d'une liste, c'est à dire le nombre d'éléments qu'elle contient.
+La fonction `len()` retourne la longueur d'une liste, c'est-à-dire le nombre d'éléments qu'elle contient.
 
 ```{codeplay}
 :file: list2.py
@@ -166,7 +166,7 @@ print(5 * [1])
 ## Ajouter des éléments
 
 Une **méthode** fonctionne comme une fonction, mais est rattachée à une liste avec la notation (`.`).
-Par exemple, si `a` désigne une liste, on peux ajouter un élément `x` à la fin de cette liste avec l'expression `a.append(x)`.
+Par exemple, si `a` désigne une liste, on peut ajouter un élément `x` à la fin de cette liste avec l'expression `a.append(x)`.
 
 <!-- Ne devrait-on pas préciser qu'une méthode peut-être utilisée avec d'autres objets Python que des listes ?  -->
 
@@ -183,7 +183,7 @@ a.append(99)
 print(a)
 ```
 
-La méthode `extend(sequence)` ajoute plusieurs éléments d'une **séquence** telle qu'une liste ou une chaîne de caractères (texte).
+La méthode `extend(sequence)` ajoute plusieurs éléments d'une **séquence** tels qu'une liste ou une chaîne de caractères (texte).
 
 ```{codeplay}
 :file: list11.py
@@ -193,7 +193,7 @@ a.extend('abc')
 print(a)
 ```
 
-La méthode `insert(i, x)` insère un nouvel élément `x` à la position `i`.
+La méthode `insert(i, x)` insère un nouveau élément `x` à la position `i`.
 
 ```{codeplay}
 :file: list12.py

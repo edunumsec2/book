@@ -4,10 +4,10 @@ Les programmes de ce chapitre sont des idées sous construction, à développer 
 
 ## Processing
 
-L'environnement [Processing](https://processing.org) est une plateforme de programmation conçu par des artistes pour la création graphique interactive. Le principe majeur de Processing est de simplifier au maximum la mise en œuvre des programmes. Il existe aussi une impémantation en
+L'environnement [Processing](https://processing.org) est une plateforme de programmation conçue par des artistes pour la création graphique interactive. Le principe majeur de Processing est de simplifier au maximum la mise en œuvre des programmes. Il existe aussi une implémentation en
 
 - JavaScript ([p5.js](https://p5js.org)),
-- Pyton ([Processing.py](https://py.processing.org)).
+- Python ([Processing.py](https://py.processing.org)).
 
 Le programme suivant place des disques noirs quand on clique avec la souris.
 
@@ -41,7 +41,7 @@ forward(200)
 
 ## Hello mouse
 
-Ce programme interactive dessine une ligne qui commence au centre et va vers l'endroit du clic de la souris.
+Ce programme interactif dessine une ligne qui commence au centre et va vers l'endroit du clic de la souris.
 
 ```{codeplay}
 from turtle import *
@@ -62,7 +62,7 @@ s.onclick(f)
 
 ## Astérisque
 
-Ce programme interactive dessine une astérisque avec des lignes qui commencent tous au centre et vont vers le clic de la souris.
+Ce programme interactif dessine un astérisque avec des lignes qui commencent toutes au centre et vont vers le clic de la souris.
 
 ```{codeplay}
 from turtle import *
@@ -84,7 +84,7 @@ s.onclick(f)
 
 ## Niveau de gris
 
-Dans le `colormode(255)` les niveau de gris sont représenté par des entiers allant de 0 (noir) à 255 (blanc).
+Dans le `colormode(255)` les niveaux de gris sont représentés par des entiers allant de 0 (noir) à 255 (blanc).
 
 ```{codeplay}
 from turtle import *
@@ -101,7 +101,7 @@ for x in range(0, 255, 20):
 
 ## Formes
 
-Le programme suivant definis 4 fonctions pour dessiner des formes géométriques de base :
+Le programme suivant définit 4 fonctions pour dessiner des formes géométriques de base :
 
 - `point(p)` pour dessiner un point à la position `p`,
 - `ligne(p, q)` pour dessiner une ligne entre deux points,
@@ -150,7 +150,7 @@ rectangle((0, 0), (80, 120))
 ellipse((200, 0), (80, 120))
 ```
 
-A ajouter :
+À ajouter :
 
 - Position mode `rectangle(p, size)`
 - Center mode `rectangle(c, size)`
@@ -158,7 +158,7 @@ A ajouter :
 
 ## Dessine ligne
 
-Ce programme interactive dessine une ligne avec deux clics de souris.
+Ce programme interactif dessine une ligne avec deux clics de souris.
 
 ```{codeplay}
 from turtle import *
@@ -182,7 +182,7 @@ s.listen()
 
 ## Dessine rectangle
 
-Ce programme interactive dessine un rectangle avec deux clics de souris.
+Ce programme interactif dessine un rectangle avec deux clics de souris.
 
 ```{codeplay}
 from turtle import *
@@ -214,7 +214,7 @@ s.listen()
 
 ## Dessine ellipse
 
-Ce programme interactive dessine une ellipse avec deux clics de souris.
+Ce programme interactif dessine une ellipse avec deux clics de souris.
 
 ```{codeplay}
 from turtle import *
@@ -238,7 +238,10 @@ def f(x, y):
     if state:
         p = x, y
     else:
-        ellipse(p, (2 * (x - p[0]), 2 * (y - p[1])))
+        a = x - p[0]
+        b = y - p[1]
+        center = p[0] + a/2, p[1] + b/2
+        ellipse(center, (a, b))
     state = not state
 
 s.onclick(f)
@@ -343,7 +346,7 @@ print('s.lower() =', s.lower())
 
 La méthode `split()` permet de découper une `phrase` en mots, basé sur les espaces, et de renvoyer une liste de mots.
 
-La méthode `join()` fait l'opposé. Elle permet de joindre des mots d'une `liste` en utilisant un ou plusieures caractères de jonction (`##`).
+La méthode `join()` fait l'opposé. Elle permet de joindre des mots d'une `liste` en utilisant un ou plusieurs caractères de jonction (`##`).
 
 ```{codeplay}
 phrase = 'hello how are you'
@@ -358,7 +361,7 @@ print(phrase2)
 
 ## Glissière
 
-La glissière (slider en anglais) est un élément de l'interface utilisateur (UI = user interface) qui permet de choisir une valeur numérique à l'aide d'un ouvement de souris.
+La glissière (slider en anglais) est un élément de l'interface utilisateur (UI = user interface) qui permet de choisir une valeur numérique à l'aide d'un mouvement de souris.
 
 ```{codeplay}
 from turtle import *
@@ -381,7 +384,7 @@ def f(x, y):
 ondrag(f)
 ```
 
-Voici la version amélioré qui permet de cliquer également dans la région de la glissière, pour faire sauter directement à l'endroit du click.
+Voici la version améliorée qui permet de cliquer également dans la région de la glissière, pour faire sauter directement à l'endroit du click.
 
 ```{codeplay}
 from turtle import *

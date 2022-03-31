@@ -20,9 +20,11 @@ Auparavant nous avons vu la boucle `for` comme une simple répétition. Nous avo
 ## Parcourir des couleurs
 
 Pour dessiner de multiples couleurs, nous pouvons définir une séquence (tuple) de couleurs et parcourir cette séquence.
-En Python, une séquence est délimitée par des parenthèses `()` et les éléments sont séparé par une virgule.
+En Python, une séquence est délimitée par des parenthèses `()` et les éléments sont séparés par une virgule.
 
-Dans l'expression `for x in (...)`, la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'blue'`, `'cyan'`, `'red'`, etc. Le bloc indenté qui suit la ligne `for` sera répété autant de fois que la séquence contient d'éléments.
+Dans l'expression `for x in (...)`, la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'yellow'`, `'cyan'`, `'red'`, etc. Le bloc indenté qui suit la ligne `for` sera répété autant de fois que la séquence contient d'éléments.
+
+La fonction `write(x)` utilise l'option d'alignement `align='center'` pour centrer le nom de la couleur.
 
 ```{codeplay}
 :file: tuple1.py
@@ -30,8 +32,9 @@ from turtle import *
 up()
 
 backward(200)
-for x in ('blue', 'cyan', 'red', 'magenta', 'pink', 'lime'):
+for x in ('yellow', 'cyan', 'red', 'magenta', 'pink', 'lime'):
     dot(80, x)
+    write(x, align='center')
     forward(80)
 ```
 
@@ -39,7 +42,7 @@ for x in ('blue', 'cyan', 'red', 'magenta', 'pink', 'lime'):
 
 ## Parcourir des diamètres
 
-Nous pouvons également parcourir une séquence de nombres et ainsi, par exemple, spécifier une série de diamètres de disques.
+Nous pouvons également parcourir une séquence de nombres et ainsi, spécifier une série de diamètres de disques.
 
 ```{codeplay}
 :file: tuple2.py
@@ -48,7 +51,8 @@ up()
 
 backward(220)
 for x in (20, 40, 60, 80, 100):
-    dot(x, 'red')
+    dot(x, 'pink')
+    write(x, align='center')
     forward(x + 40)
 ```
 
@@ -56,7 +60,7 @@ for x in (20, 40, 60, 80, 100):
 
 ## Parcourir des distances
 
-Dans le chapitre **Definir** nous avons vu les fonctions `batiment()` et `porte()` avec 8 lignes pour chaque défintion de fonction.
+Dans le chapitre **Définir** nous avons vu les fonctions `batiment()` et `porte()` avec 8 lignes pour chaque définition de fonction.
 
 ```{codeplay}
 :file: def3.py
@@ -87,7 +91,7 @@ forward(30)
 porte()
 ```
 
-A l'aide d'une séquence, nous pouvons l'écrire ces fonctions de manière bien plus compacte.
+À l'aide d'une séquence, nous pouvons écrire ces fonctions de manière bien plus compacte.
 
 ```{codeplay}
 :file: tuple3.py
@@ -112,7 +116,7 @@ batiment()
 
 ## Parcourir des angles
 
-Nous allons reprendre nos fonctions `maison()` et, à l'aide d'une séquence, nous pouvons l'écrire de manière bien plus compacte. Cette fois-ci, la séquence représente des angles, donc nous nommons notre variable `a` pour nous rappeler que c'est un angle.
+Nous allons reprendre notre fonction `maison()` et, à l'aide d'une séquence, nous pouvons l'écrire de manière bien plus compacte. Cette fois-ci, la séquence représente des angles, donc nous nommons notre variable `a` pour nous rappeler que c'est un angle.
 
 ```{codeplay}
 :file: tuple4.py
@@ -165,7 +169,7 @@ for c in ('red', 'yellow', 'pink', 'lightblue', 'lightgreen'):
 
 Le [drapeau arc-en-ciel](https://fr.wikipedia.org/wiki/Drapeau_arc-en-ciel), ou également appelé le drapeau de la paix, est un drapeau représentant plusieurs bandes ayant les couleurs d'un arc-en-ciel. L'usage du drapeau arc-en-ciel est une ancienne tradition commune à de nombreuses cultures. Il évoque généralement la paix, la diversité sexuelle et de genre, ainsi que l'harmonie entre les individus dans le monde entier.
 
-Aujourd'hui, le drapeau arc-en-ciel est majoritairement connu comme celui de la communauté lesbienne, gay, bisexuelle, transgenre, (abréviation : LGBT), depuis 1978.
+Aujourd'hui, le drapeau arc-en-ciel est majoritairement connu comme celui de la communauté lesbienne, gay, bisexuelle, transgenre (abréviation : LGBT), depuis 1978.
 
 ```{codeplay}
 :file: LGBT.py
@@ -247,9 +251,9 @@ for w in (1, 5, 10, 20):
     left(5)
 ```
 
-**Exercice** : Faites varier un autre paramètres, par exemple la distance des yeux, ou la taille d'un œil.
+**Exercice** : Faites varier un autre paramètre, par exemple la distance des yeux, ou la taille d'un œil.
 
-## Etonnement
+## Étonnement
 
 Cette fois, nous faisons varier le diamètre de la bouche.
 
@@ -301,7 +305,7 @@ for i in range(3):
 ## Cube en couleur
 
 Avec l'utilisation de trois couleurs, l'effet 3D est accentué.
-Nous choisissons des couleurs clair pour les surfaces du haut, et des couleurs sombres pour les surfaces vers le bas.
+Nous choisissons des couleurs claires pour les surfaces du haut, et des couleurs sombres pour les surfaces vers le bas.
 
 ```{codeplay}
 from turtle import *
@@ -353,7 +357,13 @@ for i in range(3):
 
 ## Cube de Rubik
 
-Pour dessiner un cube de Rubik, nous dessinons 3 × 3 losanges pour obtenir la surface du cube. Ceci nécessite deux boucles imbriquées avec les deux variables d'itération distinctes `i` et `j`.
+Pour dessiner un cube de Rubik, nous dessinons
+
+- 3 losanges pour former une ligne,
+- 3 lignes pour former une surface,
+- 3 surfaces pour former un cube.
+
+Dans chaque fonction (losange, ligne, surface) nous retournons au point de départ.
 
 ```{codeplay}
 from turtle import *
@@ -388,9 +398,64 @@ for c in ('red', 'green', 'blue'):
 
 ## Minecraft
 
-[Minecraft](https://fr.wikipedia.org/wiki/Minecraft) est un jeu vidéo de type aventure *bac à sable* développé par le Suédois Markus Persson, puis par la société Mojang Studios, sortie en 2011. Il s'agit d'un univers composé de voxels.
+[Minecraft](https://fr.wikipedia.org/wiki/Minecraft) est un jeu vidéo de type aventure *bac à sable* développé par le Suédois Markus Persson, puis par la société Mojang Studios, sorti en 2011. Il s'agit d'un univers composé de voxels.
+
+### Cube de base
 
 Le voxel (mot créé en contractant *volume* et *element*) est à la 3D ce que le pixel est à la 2D.
+
+```{codeplay}
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+
+def cube():      
+    for c in ('lime', 'peru', 'sienna'):
+        fillcolor(c)
+        begin_fill()
+        losange()
+        end_fill()
+        left(120)
+
+left(30)
+cube()
+```
+
+### Stratégie
+
+Le dessin d'un cube commence au centre.
+Pour aligner ou empiler des blocs, il faut trouver le déplacement vers le prochain bloc, en suivant les 3 axes principaux du cube. Ici nous nous déplaçons un cube en avant avec `forward(-50)`.
+
+```{codeplay}
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+
+def cube():      
+    for c in ('lime', 'peru', 'sienna'):
+        fillcolor(c)
+        begin_fill()
+        losange()
+        end_fill()
+        left(120)
+===
+speed(5)
+left(30)
+cube()
+
+color('red')
+dot(20, 'red')
+forward(-50)
+dot(20)
+```
+
+### Aligner
 
 Le programme suivant aligne 3 blocs pour former une rangée.
 
@@ -409,7 +474,7 @@ def cube():
         losange()
         end_fill()
         left(120)
-
+===
 speed(5)
 left(30)
 for i in range(3):
@@ -417,7 +482,19 @@ for i in range(3):
     forward(-50)
 ```
 
+### Empiler
+
 Ce programme empile 3 blocs pour former une colonne.
+
+Ici nous utilisons un déplacement vers le haut.
+
+```python
+left(60)
+forward(50)
+right(60)
+```
+
+Avant de dessiner un bloc, l'orientation de la tortue doit être rétablie.
 
 ```{codeplay}
 from turtle import *
@@ -434,7 +511,7 @@ def cube():
         losange()
         end_fill()
         left(120)
-
+===
 speed(5)
 left(30)
 for i in range(3):
@@ -447,8 +524,99 @@ for i in range(3):
 ## Exercices
 
 - Téléchargez un exercice.
-- Editez-le dans un éditeur.
+- Éditez-le dans un éditeur.
 - Déposez-le sur Moodle.
+
+### Minecraft - escalier
+
+Avec les cubes de Minecraft, créez un escalier avec 4 marches.
+
+```{codeplay}
+:file: minecraft_ex1.py
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+
+def cube():      
+    for c in ('lime', 'peru', 'sienna'):
+        fillcolor(c)
+        begin_fill()
+        losange()
+        end_fill()
+        left(120)
+
+speed(0)
+left(30)
+cube()
+```
+
+### Minecraft - portail
+
+Avec les cubes de Minecraft, créez un portail 4x4 en forme de π.
+
+```{codeplay}
+:file: minecraft_ex2.py
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+
+def cube():      
+    for c in ('lime', 'peru', 'sienna'):
+        fillcolor(c)
+        begin_fill()
+        losange()
+        end_fill()
+        left(120)
+
+speed(0)
+left(30)
+cube()
+```
+
+### Pavage hexagonal
+
+Le pavage hexagonal est, en géométrie, un pavage du plan euclidien constitué d'hexagones réguliers.
+
+![pavage](media/pavage_hex.png)
+
+Parcourez les 3 couleurs pour dessiner une surface tricolore, soit alignée linéairement, soit autour d'un point commun. Répétez ensuite cette surface élémentaire pour créer un pavage.
+
+```{codeplay}
+:file: pavage.py
+from turtle import *
+
+def hexagone():
+    for i in range(6):
+        forward(40)
+        left(60)
+
+hexagone()
+```
+
+### Cube de Rubik
+
+À l'aide de tuples de couleurs, dessinez le cube de Rubik suivant.
+
+![pavage](media/rubik.jpg)
+
+```{codeplay}
+:file: rubik.py
+from turtle import *
+
+def losange():
+    for a in (120, 60, 120, 60):
+        forward(50)
+        left(a)
+
+
+losange()
+```
 
 ### Tetris
 

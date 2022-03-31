@@ -1,7 +1,7 @@
 # Trier - `sort`
 
 Dans ce chapitre, nous allons découvrir quelques algorithmes de tri.
-Pouvoir trier les éléments d'une liste est une fonctionnalité fondamentale dans l'informatique. Le succès énorme de Google est basé sur un tri efficace de l'information, car dans une liste triée on peux trouver un élément **beaucoup** plus vite. Nous allons voir que :
+Pouvoir trier les éléments d'une liste est une fonctionnalité fondamentale dans l'informatique. Le succès énorme de Google est basé sur un tri efficace de l'information, car dans une liste triée on peut trouver un élément **beaucoup** plus vite. Nous allons voir que :
 
 - la fonction `min(liste)` retourne le minimum,
 - la fonction `max(liste)` retourne le maximum,
@@ -26,7 +26,7 @@ print(min(liste))
 print(max(liste))
 ```
 
-**Exercice** : Modifiez la liste avec des nouvelles valeurs et essayez de nouveau.
+**Exercice** : Modifiez la liste avec de nouvelles valeurs et essayez de nouveau.
 
 ## Trouver le minimum
 
@@ -113,7 +113,7 @@ show()
 
 ## Visualiser un algorithme
 
-Pour visualiser l'algorithme du minimum nous dessinons en rouge les valeurs du minimum courant.
+Pour visualiser l'algorithme du minimum, nous dessinons en rouge les valeurs du minimum courant.
 Cet algorithme :
 
 - prend la première valeur comme minimum courant,
@@ -164,8 +164,8 @@ for i in range(n):
 
 ## L'indice du minimum
 
-Souvent on ne doit pas seulement trouver la valeur minimum, mais aussi son indice dans la liste.
-Différent au cas précédent, nous ne parcourons pas les valeurs, mais les indices.
+Souvent, on ne doit pas seulement trouver la valeur minimum, mais aussi son indice dans la liste.
+Contrairement au cas précédent, ici nous ne parcourons pas les valeurs, mais les indices.
 
 ```{codeplay}
 :file: sort6.py
@@ -185,9 +185,9 @@ print(i_min)
 
 **Exercice** : Modifiez l'algorithme pour trouver l'indice du minimum ET maximum.
 
-## Echanger deux éléments
+## Échanger deux éléments
 
-Pour échanger deux éléments d'une liste nous utilisons une affectation multiple.
+Pour échanger deux éléments d'une liste, nous utilisons une affectation multiple.
 Ici nous échangeons les deux premiers éléments, donc les éléments avec les indices 0 et 1.
 
 ```{codeplay}
@@ -258,7 +258,7 @@ speed(3)
 move(3, 13)
 ```
 
-## Echanger deux points
+## Échanger deux points
 
 Pour échanger deux points, il faut :
 
@@ -312,9 +312,9 @@ speed(3)
 swap(3, 13)
 ```
 
-## Echanger tous les points
+## Échanger tous les points
 
-Dans l'exemple suivant nous échangeons deux points successives pour toute la liste. Nous observons que :
+Dans l'exemple suivant, nous échangeons deux points successifs pour toute la liste. Nous observons que :
 
 - le premier point avance complètement de gauche à droite
 - tous les autres points reculent d'une position
@@ -396,7 +396,7 @@ for i in range(n-1):
     print(liste)
 ```
 
-Avec les fonctions `min()` et `index()` nous pouvons écrire cet algorithme de façon encore plus compact.
+Avec les fonctions `min()` et `index()` nous pouvons écrire cet algorithme de façon encore plus compacte.
 
 ```{codeplay}
 :file: sort13.py
@@ -471,7 +471,7 @@ show()
 
 ## Tri par insertion
 
-L'algorithme du **tri par insertion** est utilisé par la plupart des personnes pour trier des cartes à jouer. On prends les cartes non-triées depuis la table, et on les insère à l'endroit correcte dans sa main.
+L'algorithme du **tri par insertion** est utilisé par la plupart des personnes pour trier des cartes à jouer. On prend les cartes non triées depuis la table, et on les insère à l'endroit correct dans sa main.
 
 ```{image} media/tri_insertion.jpg
 :width: 200px
@@ -548,13 +548,13 @@ show()
 
 ## Tri à bulles
 
-L’algorithme du **tri à bulles** compare les éléments voisins, deux par deux, et les met dans le bon ordre. Le mot 'bulles' fait références aux bulles dans une boissons qui montent à la surface.
+L’algorithme du **tri à bulles** compare les éléments voisins, deux par deux, et les met dans le bon ordre. Le mot 'bulles' fait référence aux bulles dans une boisson qui montent à la surface.
 
 ```{image} media/bulles.jpg
 :width: 300px
 ```
 
-Dans l'exemple suivant, nous pouvons voir comment le `4` flotte vers le haut, jusqu'à c'qu'il rencontre le le `6` qui monte alors tout vers la surface, comme des bulles dans une boisson.
+Dans l'exemple suivant, nous pouvons voir comment le `4` flotte vers le haut, jusqu'à ce qu'il rencontre le le `6` qui monte alors tout vers la surface, comme des bulles dans une boisson.
 
 ```{image} media/tri_bulles.jpg
 :width: 200px

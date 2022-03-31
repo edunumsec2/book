@@ -13,7 +13,7 @@ Dans ce chapitre nous découvrons comment utiliser le clavier de l'ordinateur po
 ```{question}
 Une fonction de rappel
 
-{f}`retourne à l'origne`  
+{f}`retourne à l'origine`  
 {f}`renvoie une valeur`  
 {f}`renforce la mémoire`  
 {v}`réagit à un événement`
@@ -83,13 +83,13 @@ s.listen()
 
 ## Effacer la trace
 
-Dans le prochain programme nous ajoutons des touches supplémentaires pour les fonctions suivantes :
+Dans le prochain programme, nous ajoutons des touches supplémentaires pour les fonctions suivantes :
 
 - `h` pour ramener la tortue à l'origine avec `home()`,
 - `c` pour effacer la trace avec `clear()`,
 - `r` pour effacer la trace et ramener la tortue à l'origine avec `reset()`.
 
-Le désavantage de ce programme, c'est que `clear()` va aussi effacer le texte explicatif. Ca serait bien si ce texte serait indépendant de la tortue qui bouge.
+Le désavantage de ce programme, c'est que `clear()` va aussi effacer le texte explicatif. Ça serait bien si ce texte était indépendant de la tortue qui bouge.
 
 ```{codeplay}
 :file: onkey3.py
@@ -111,34 +111,6 @@ s.onkey(home, 'h')
 s.onkey(clear, 'c')
 s.listen()
 ```
-
-## Une tortue texte
-
-Nous allons maintenant introduire une deuxième tortue qui sera responsable uniquement pour écrire du texte. L'expression `text = Turtle()` crée une nouvelle tortue appelé `text`. Pour appeler des méthodes sur cette nouvelle tortue nous devons utiliser la méthode doté, donc précéder les instructions par `text.`
-
-```{codeplay}
-:file: onkey3.py
-from turtle import *
-text = Turtle()
-text.up()
-text.hideturtle()
-text.goto(-290, 180)
-text.write('a–avancer  h–home  c–clear', font=('Arial', 14))
-
-shape('turtle')
-color('red')
-
-def avancer():
-    forward(20)
-
-s = getscreen()
-s.onkey(avancer, 'a')
-s.onkey(home, 'h')
-s.onkey(clear, 'c')
-s.listen()
-```
-
-**Exercice** : Ajoutez une fonction de rappel pour faire tourner la tortue.
 
 ## Tourner la tortue
 
@@ -179,7 +151,7 @@ print("h:home     c:clear   r:reset")
 
 ## Les flèches
 
-Les touches de flèche portent les nom `Left`, `Right`, `Up` et `Down`.
+Les touches de flèche portent les noms `Left`, `Right`, `Up` et `Down`.
 Nous pouvons utiliser les 4 flèches pour faire bouger la tortue.
 
 - `↑` pour avancer
@@ -268,9 +240,9 @@ print("Utilisez les touches WASD pour bouger la tortue.")
 
 **Exercice** : Ajoutez les fonctions de rappel `home()`, `clean()` et `reset()` pour effacer la trace et ramener la tortue à l'origine.
 
-## Dessiner un cercle
+## Courbes en cercle
 
-Appuyer sur la touche `c` va dessiner un cercle.
+Appuyer sur la touche `g` va dessiner un quart de cercle à gauche. Appuyer sur la touche `d` va dessiner un quart de cercle vers la droite.
 
 ```{codeplay}
 :file: onkey7.py
@@ -280,19 +252,23 @@ shape('turtle')
 def avancer():
     forward(50)
     
-def cercle():
-    circle(50)
-
+def gauche():
+    circle(50, 90)
+    
+def droite():
+    circle(-50, 90)
+    
 s = getscreen()
 s.onkey(avancer, 'a')
-s.onkey(cercle, 'c')
+s.onkey(gauche, 'g')
+s.onkey(droite, 'd')
 s.listen()
-print("a:avancer  c:cercle")
+print("a:avancer  g:gauche  d:droite")
 ```
 
 ## Dessiner une maison
 
-Appuyer sur la touche `m` va dessiner un maison.
+Appuyer sur la touche `m` va dessiner une maison.
 
 ```{codeplay}
 :file: onkey8.py
@@ -344,7 +320,7 @@ getscreen().onkey(maison, 'm')
 getscreen().onkey(up, 'u')
 getscreen().onkey(down, 'd')
 getscreen().listen()
-print("a:avancer, u:up, d:down, m:maison")
+print("a:avancer  u:up  d:down  m:maison")
 ```
 
 ## Choisir l'épaisseur
@@ -381,7 +357,7 @@ getscreen().onkey(fin, '1')
 getscreen().onkey(normal, '2')
 getscreen().onkey(epais, '3')
 getscreen().listen()
-print("a:avancer, t:tourner, 1:fin, 2:normal, 3:épais")
+print("a:avancer  t:tourner  1:fin  2:normal  3:épais")
 ```
 
 **Exercice** : Modifiez les épaisseurs.
@@ -421,14 +397,14 @@ getscreen().onkey(rouge, 'r')
 getscreen().onkey(vert, 'v')
 getscreen().onkey(bleu, 'b')
 getscreen().listen()
-print("a:avancer, t:tourner, r:rouge, v:vert, b:bleu")
+print("a:avancer  t:tourner  r:rouge  v:vert  b:bleu")
 ```
 
 **Exercice** : Modifiez les couleurs.
 
-## Ecrire dans le canevas
+## Écrire dans le canevas
 
-Nous pouvons aussi utiliser les touches pour écrire dans le canevas de la tortue. Pour avancer la tortue avec la lettre nous choisissons l'option `move=True`
+Nous pouvons aussi utiliser les touches pour écrire dans le canevas de la tortue. Pour avancer la tortue avec la lettre, nous choisissons l'option `move=True`
 
 ```{codeplay}
 :file: onkey12.py
@@ -440,3 +416,92 @@ def x():
 getscreen().onkey(x, 'x')
 getscreen().listen()
 ```
+
+## Exercice
+
+### Snake
+
+Utilisez une liste pour limiter le nombre de segments du serpent à 10.
+
+```{codeplay}
+:file: snake.py
+from turtle import *
+shape('square')
+color('red')
+
+d = 20
+speed(0)
+dot(d)
+
+def haut():
+    seth(90)
+    forward(d)
+    dot(d)
+
+def bas():
+    seth(-90)
+    forward(d)
+    dot(d)
+
+def gauche():
+    seth(180)
+    forward(d)
+    dot(d)
+    
+def droite():
+    seth(0)
+    forward(d)
+    dot(d)
+
+s = getscreen()
+s.onkey(haut, 'Up')
+s.onkey(bas, 'Down')
+s.onkey(gauche, 'Left')
+s.onkey(droite, 'Right')
+s.onkey(clear, 'c')
+s.listen()
+```
+
+### Tetris
+
+Les flèches gauche/droite permettent de déplacer le tétronimo. Programmez les touches haut/bas pour le tourner.
+
+```{codeplay}
+:file: tetris.py
+from turtle import *
+hideturtle()
+tracer(0)
+up()
+d = 20
+
+def L():
+    fillcolor('orange')
+    begin_fill()
+    for a in 0, 90, 90, -90, 0, 90, 90, 0, 0, 90:
+        forward(d)
+        left(a)
+    end_fill()
+    
+L()
+update()
+
+def gauche():
+    clear()
+    backward(d)
+    L()
+    update()
+    
+def droite():
+    clear()
+    forward(d)
+    L()
+    update()
+
+s = getscreen()
+s.onkey(gauche, 'Left')
+s.onkey(droite, 'Right')
+s.onkey(clear, 'c')
+s.listen()
+```
+
+
