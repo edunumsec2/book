@@ -456,6 +456,8 @@ Card((100, -120), fill='azure')
 
 ## Exercices
 
+Les exercices ci-dessous utilisent la classe `Button`. C'est une classe extrêmement important pour une interface graphique. Toute interface graphique, et encore plus les smartphones et tablettes utilisent des boutons pour interagir avec l'utilisateur.
+
 ### Jeu avec boutons
 
 Retournez au jeux de Go dans les exercices du chapitre **Cliquer** intégrez des boutons pour 
@@ -542,3 +544,93 @@ s.onclick(f)
 s.listen()
 done()
 ```
+
+### Calculatrice
+
+Ci-dessous vous avez le début du code pour une calculatrice.
+La classe `Button` est utilisée également pour afficher le résultat.
+Dans l'objet `display` nous changeons donc la taille, la couleur et l'alignement.
+
+Votre tâche est d'ajouter le code pour faire fonctionner la calculatrice.
+Pour vous donner une idée, le bouton `1` a été implémenté. Vous devez ajouter le code pour les 18 autres boutons.
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+hideturtle()
+speed(0)
+up()
+
+class Button:
+    def __init__(self, pos, text, size=(80, 40), color='lightgray', align='center'):
+        self.pos = pos
+        self.size = size
+        self.text = text
+        self.color = color
+        self.align = align
+        self.draw()
+        
+    def draw(self):
+        goto(self.pos)
+        fillcolor(self.color)
+        begin_fill()
+        down()
+        for x in self.size * 2:     # parcourir 2 fois longeur et hauteur
+            forward(x)
+            left(90)
+        up()
+        end_fill()
+        x, y = self.pos
+        w, h = self.size
+        if self.align == 'center':
+            goto(x+w/2, y+h/4)
+        elif self.align == 'right':
+            goto(x+w-h/4, y+h/4)
+        else:
+            goto(x+h/4, y+h/4)
+        color('black')
+        write(self.text, font=('Arial', h//2), align=self.align)
+        
+    def __str__(self):
+        return f'Button({self.text})'
+    
+    def inside(self, p):
+        x, y = self.pos
+        w, h = self.size
+        
+        return 0 < p[0]-x < w and 0 < p[1]-y < h
+
+texts = ('AC', '+/-', '%', '÷', '7', '8', '9', '×', '4', '5',
+         '6', '–', '1', '2', '3', '+', '0', '.', '=', '')
+
+display = Button((-160, 40), '0', size=(320, 100), color='white', align='right')
+    
+buttons = []
+for i in range(len(texts)):
+    x = -160 + i%4 * 80
+    y = 0 - i//4 * 40
+    button = Button((x, y), texts[i])
+    buttons.append(button)
+
+number = 0
+
+def f(x, y):
+    global number
+    p = (x, y)
+    for b in buttons:  
+        if b.inside(p):
+            print(b)
+            if b.text == '1':
+                if number == 0:
+                    number = 1
+                else:
+                    number = 10 * number + 1
+                display.text = str(number)
+                display.draw()
+
+s.onclick(f)
+s.listen()
+done()
+```
+
+**Challenge** : Transformer le code en calculatrice scientifique avec les fonctions trigonométriques et autres.
