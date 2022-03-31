@@ -19,6 +19,7 @@ Tetris <tetris>
 Art absurde <art_absurde>
 Micro:bit </microbit/microbit>
 Cryptographie <crypto>
+Idées <idees>
 ````
 
 ## Objectifs

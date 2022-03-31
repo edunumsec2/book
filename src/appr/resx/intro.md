@@ -54,7 +54,7 @@ Dans le reste de ce chapitre nous allons aborder plus concrètement les notions 
 considérons la situation suivante
 
 
-# Exemple: l'application aux champignons
+## Exemple: l'application aux champignons
 Imaginons qu'Alice est partie à la cueillette aux champignons dans la forêt.
 Elle pense avoir trouvé un beau bolet, mais pour plus de sécurité, consulte
 avec son téléphone portable un site web spécialisé dans les champigons de notre région,
