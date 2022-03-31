@@ -27,6 +27,15 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    rep-info/index
    prog1/activ/index
    algo1/activ/index
+   archi/activ/index
+
+.. toctree::
+   :name: Histoire
+   :caption: Histoire
+   :maxdepth: 3
+   :hidden:
+
+   hist/index   
 
 .. toctree::
    :name: Enjeux sociaux
