@@ -43,7 +43,7 @@
 				{
 					"name": "Enseigner (build)",
 					"color": "white",
-					"command": "source .env/bin/activate; sphinx-build src/appr build -E",
+					"command": "source .env/bin/activate; sphinx-build src/ens build -E",
 					"cwd": "${workspaceFolder}",
 					"singleInstance": true,
 				},
