@@ -453,3 +453,92 @@ Card()
 Card((50, 20), fill='pink')
 Card((100, -120), fill='azure')
 ```
+
+## Exercices
+
+### Jeu avec boutons
+
+Retournez au jeux de Go dans les exercices du chapitre **Cliquer** intégrez des boutons pour 
+
+- recommencer une nouvelle partie
+- quitter le jeu
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+hideturtle()
+speed(0)
+up()
+
+x0, y0, d = 160, 160, 40
+
+class Button:
+    def __init__(self, pos, text, size=(80, 30), color='lightgray'):
+        self.pos = pos
+        self.size = size
+        self.text = text
+        self.color = color
+        self.draw()
+        
+    def draw(self):
+        goto(self.pos)
+        fillcolor(self.color)
+        begin_fill()
+        down()
+        for x in self.size * 2:     # parcourir 2 fois longeur et hauteur
+            forward(x)
+            left(90)
+        up()
+        end_fill()
+        x, y = self.pos
+        w, h = self.size
+        goto(x+w/2, y+h/4)
+        color('black')
+        write(self.text, font=('Arial', h//2), align='center')
+        
+    def __str__(self):
+        return f'Button({self.pos}, {self.text})'
+    
+    def inside(self, p):
+        x, y = self.pos
+        w, h = self.size
+        
+        return 0 < p[0]-x < w and 0 < p[1]-y < h    
+
+def ligne(p, q):
+    goto(p)
+    down()
+    goto(q)
+    up()
+
+def grid():
+    for x in range(-x0, x0+1, d):
+        ligne((x, -y0), (x, y0))
+
+    for y in range(-y0, y0+1, d):
+        ligne((-x0, y), (x0, y))
+
+def f(x, y):
+    if -x0 < x < x0 and -y0 < y < y0:
+        x = x//d * d + d//2
+        y = y//d * d + d//2
+        goto(x, y)
+        dot(d)
+        
+    if button0.inside((x, y)):
+        clear()
+        button0.draw()
+        button1.draw()
+        grid()
+        
+    if button1.inside((x, y)):
+        bye()
+
+button0 = Button((200, 30), 'New')
+button1 = Button((200, -60), 'Quit')
+grid()
+
+s.onclick(f)
+s.listen()
+done()
+```

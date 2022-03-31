@@ -462,3 +462,7 @@ s.listen()
 Voici une partie d'un jeu de go sur un tableau de jeux annoté avec les lettres et nombres pour identifier les pions.
 
 ![](media/go_partie.png)
+
+
+
+
