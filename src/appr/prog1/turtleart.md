@@ -1,4 +1,4 @@
-# Créer - `turtle`
+# TurtleArt
 
 Dans ce chapitre, nous présentons toute une série d'idées artistiques, inspirées du travail d'Artemis Papert que vous trouvez sur le site [TurtleArt](https://turtleart.org).
 
@@ -22,7 +22,7 @@ Une **étoile** est un point lumineux dans le ciel nocturne, et par extension, u
 :file: art1.py
 from turtle import *
 
-_dot(1000, 'midnightblue')
+dot(1000, 'midnightblue')
 color('white')
 width(1)
 
