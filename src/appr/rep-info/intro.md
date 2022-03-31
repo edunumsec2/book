@@ -112,7 +112,6 @@ Grâce à l'invention du [télescope](https://fr.wikipedia.org/wiki/T%C3%A9lesco
 height: 400px
 width: 500px
 name: fig-chappe
-align: left
 ---
 Le télégraphe de Chappe émet des signaux ressemblant aux bras d'un être humain. 
 ````
