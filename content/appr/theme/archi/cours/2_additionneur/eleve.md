@@ -104,7 +104,7 @@ En faisant pour l'instant abstraction des détails d'un additionneur complet, on
 :height: 120
 :mode: static
 
-{"v": 1, "components": [{"type": "adder", "pos": [60, 60], "in": [0, 1, 2], "out": [3, 4]}]}
+{"v": 1, "opts": {"showDisconnectedPins": true}, "components": [{"type": "adder", "pos": [60, 60], "in": [0, 1, 2], "out": [3, 4]}]}
 ```
 
 
@@ -120,6 +120,7 @@ Si $A$ est formé de deux {glo}`bit|bits` $A_0$ et $A_1$ et que $B$ est formé d
 
 {
   "v": 1,
+  "opts": {"showDisconnectedPins": true},
   "in": [
     {"pos": [190, 40], "orient": "s", "id": 10, "name": "A0", "val": 0},
     {"pos": [90, 40], "orient": "s", "id": 11, "name": "A1", "val": 0},
@@ -188,6 +189,7 @@ On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et 
 
 {
   "v": 1,
+  "opts": {"showDisconnectedPins": true},
   "in": [
     {"pos": [90, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
     {"pos": [190, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
@@ -256,6 +258,7 @@ Réglez les entrées du circuit de manière à lui faire effectuer les additions
 
 {
   "v": 1,
+  "opts": {"showDisconnectedPins": true},
   "in": [
     {"pos": [100, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
     {"pos": [200, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
@@ -333,6 +336,7 @@ Déterminez quel composant est défectueux dans ce circuit et comment il faudrai
 
 {
   "v": 1,
+  "opts": {"showDisconnectedPins": true},
   "in": [
     {"pos": [100, 40], "orient": "s", "id": 3, "name": "A3", "val": 1},
     {"pos": [200, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
@@ -416,6 +420,7 @@ En s'aidant de la table de vérité d'un seul additionneur complet, créer un ci
 
 {
   "v": 1,
+  "opts": {"showDisconnectedPins": true},
   "in": [
     {"pos": [60, 30], "id": 0, "name": "A", "val": 0},
     {"pos": [60, 90], "id": 1, "name": "B", "val": 0},

@@ -40,8 +40,12 @@ def begin_logic_diagram_html(self, node):
 
     param_str = data_param if len(param_str) == 0 else param_str + "&" + data_param
 
+    base_url = "https://jp.pellet.name/hep/logiga"
+    # base_url = "https://dev-logic.modulo-info.ch"
+    # base_url = "https://logic.modulo-info.ch"
+
     self.body.append(
-        '<iframe src="https://logic.modulo-info.ch/?'
+        '<iframe src="' + base_url + '/?'
         + param_str
         + '" class="logicframe" frameborder="0" border="0" cellspacing="0">'
         + str(node)
