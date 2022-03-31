@@ -138,3 +138,6 @@ html_js_files = ['https://unpkg.com/@popperjs/core@2', 'scripts/reactions.js', '
 
 pygments_sytle = "sphinx"
 pygments_dark_style = "monokai"
+
+myst_enable_extensions = ['amsmath', 'colon_fence', 'deflist', 'dollarmath', 'html_admonition', 'html_image', 'replacements', 'smartquotes', 'substitution']
+myst_url_schemes = ['mailto', 'http', 'https']
