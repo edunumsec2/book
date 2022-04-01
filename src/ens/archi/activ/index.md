@@ -3,5 +3,5 @@
 ```{toctree}
 :maxdepth: 2
 :hidden:
-Ordinateur quantique <ordinateurantique>
+Ordinateur antique <ordinateurantique>
 ```
