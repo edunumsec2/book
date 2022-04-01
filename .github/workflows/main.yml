@@ -27,7 +27,7 @@ jobs:
     - name: Build the book
       run: |
         sphinx-build src/appr build -E
-      working-directory: ./src/appr
+      working-directory: .
     # Push the book's HTML to Infomaniak FTP
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.0-beta
@@ -57,7 +57,7 @@ jobs:
     - name: Build the book
       run: |
         sphinx-build src/ens build -E
-      working-directory: ./src/ens
+      working-directory: .
     # Push the book's HTML to Infomaniak FTP
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.0-beta
