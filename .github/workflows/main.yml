@@ -22,12 +22,12 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-      working-directory: ./config/apprendre
+      working-directory: ./src/appr
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build .
-      working-directory: ./config/apprendre
+        sphinx-build src/appr build -E
+      working-directory: ./src/appr
     # Push the book's HTML to Infomaniak FTP
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.0-beta
@@ -52,12 +52,12 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-      working-directory: ./config/enseigner
+      working-directory: ./src/ens
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build .
-      working-directory: ./config/enseigner
+        sphinx-build src/ens build -E
+      working-directory: ./src/ens
     # Push the book's HTML to Infomaniak FTP
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.0-beta
