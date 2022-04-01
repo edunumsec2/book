@@ -466,9 +466,6 @@ align: left
 
 
 
-
-
-
 Le graphique affiche clairement la croissance forte de l'occupation mémoire en fonction de la fréquence d'échantillonnage, au delà de 48000Hz... ainsi que le changement du mode de compression (on passe d'un format MP3 à un format WAV). L'analyse avec les élèves de la courbe permet de comprendre explicitement la nécessité de borner la fréquence d'échantillonnage : pas trop faible pour garantir une bonne qualité audio, pas trop élevée pour ne pas occuper inutilement de la place mémoire - <span style="color:violet">20-25 mn</span>.
 
 
@@ -477,6 +474,10 @@ Le graphique affiche clairement la croissance forte de l'occupation mémoire en 
 L'évaluation pourra être réalisée via un quizz moodle open-book, en temps limité (<span style="color:violet">20-30mn</span>) créé par l'enseignant selon les compétences qu'il souhaite évaluer, et comportant 10-15 questions tirées du fichier excel {download}`Devoir - évaluation maison de type quizz moodle<quizzech.ods>`.
 L'enseignant pourra également programmer un cycle d'entrainement préliminaire avec une partie des questions proposées dans ce fichier excel.
    
+### 3.3.5. Retours enseignant et élèves : questionnaires
+
+La séquence propose deux types de questionnaires, un premier à destination de l'[enseignant](https://www.surveymonkey.com/r/actens1), le second à destination des [élèves](https://www.surveymonkey.com/r/acteleve1).
+Ces outils à destination de l'enseignant permettent une analyse
 
 
 
