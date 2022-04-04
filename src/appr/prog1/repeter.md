@@ -36,7 +36,7 @@ left(90)
 ```
 
 Ne serait-ce pas pratique de pouvoir dire à la tortue de répéter ces instructions 4 fois ?
-Ceci est possible avec une boucle `for`. La ligne `for i in range(x):` va répéter `x` fois le bloc en indentation qui suit.
+Ceci est possible avec une boucle `for`. La ligne `for i in range(4):` va répéter `4` fois le bloc en indentation qui suit.
 
 Par rapport à l'exemple précédent, nous avons rajouté un `dot()` à chaque sommet, et nous cachons la tortue à la fin avec la fonction `hideturtle()`.
 
@@ -367,7 +367,7 @@ Pour sauvegarder en format JPG appelez tout simplement votre fichier `'file.jpg'
 
 ## Erreurs
 
-Il est important de bien comprendre les messages d'erreur.
+Il est important de bien lire et comprendre les messages d'erreur.
 Dans cette section, vous allez découvrir les différentes catégories d'erreur et comment les corriger.
 
 ### ImportError
@@ -386,7 +386,7 @@ for i in range(3):
 
 ### SyntaxError
 
-Cette erreur survient lorsque vous écrivez mal un mot-clé, ou si vous oubliez une ponctuation. Dans ce cas, le mot-clé mal écrit n'est pas reconnu et il n'est la plupart du temps pas stylisé correctement dans votre code.
+Cette erreur survient lorsque vous écrivez mal un mot-clé, ou si vous oubliez une ponctuation. Dans ce cas, le mot-clé mal écrit n'est pas reconnu et il n'est pas colorié correctement dans votre code.
 
 ```{codeplay}
 fro turtle import *

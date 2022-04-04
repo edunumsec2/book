@@ -190,7 +190,7 @@ triangle()
 
 La combinaison `getscreen().bgcolor()` permet de définir la couleur d'arrière-fond (bg = background).
 
-Dans l'exemple suivant, nous dessinons le drapeau du Bangladesh. Il est vert frappé d'un disque rouge.
+Dans l'exemple suivant, nous dessinons le drapeau du Bangladesh. Il est vert avec un disque rouge.
 
 ```{codeplay}
 :file: color8.py
