@@ -55,6 +55,16 @@ Les casques à conduction osseuse transmettent les vibrations directement à l�
 ```{admonition} Le saviez-vous ?
 :class: hint
 Vous rappelez-vous de l’explosion de l’étoile de la mort dans Star Wars ? et bien un son pareil ne peut exister dans l'espace : il n’y a pas assez de molécules à agiter, l’énergie transmise par l'explosion ne peut pas se propager de la sorte.
+
+<title> starwars.mov </title>
+<body>
+    <div id="player">
+    <video width="500" height="300" controls>
+    <source src="https://apprendre.modulo-info.ch/content/appr/theme/rep-info/cours/son/starwars.mov"type="video/quicktime">
+    </audio> 
+    </div>
+</body> 
+
 ```
 
 ## 4.1. Numérisation
