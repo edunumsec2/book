@@ -1,5 +1,70 @@
 # 4. Le son
 
+Un son est une histoire d’énergie et de vibrations. Un son émerge quand des molécules subissent une pression initiale, ce qui va les amener à avancer et entrainer ce mouvement sur les molécules devant immédiatement voisines en leur transmettant une grande partie de cette énergie. Suite à ce nouveau mouvement, elles repartent en arrière pour retrouver leur position d'équilibre ayant transmis cette énergie initiale aux molécules voisines qui à leur tour vont se comporter de la même manière. 
+
+
+```{youtube} kW9nwkrfGFw
+```
+
+
+Toutes ces «tranches» de molécules vont donc osciller successivement, formant une onde qui va se déplacer au sein du milieu matériel : air, eau, caoutchouc par exemple. C'est ce que l'on peut observer lorsqu'un projectile heurte une flaque d’eau : à partir du point d'impact, se forme progressivement une onde circulaire qui s'étend et se propage à la surface de l'eau.
+
+
+
+```{youtube} Yi3LW5riHfc
+```
+
+Le son est donc une **vibration mécanique**, nécessitant un **milieu matériel** : s'agissant des sons que nous entendons tous les jours, le milieu matériel est bien évidemment l'air ambiant.
+
+On appelle **fréquence** du son, la vitesse avec laquelle ces molécules vibrent. Plus la vibration des molécules est rapide, plus le son est aigu : on parle de fréquence élevée. Inversement, plus la vibration est lente, plus basse est la fréquence. Une corde de guitare détendue vibre moins vite que sa voisine très tendue, elle va produire un son plus grave avec une oscillation bien plus lente. 
+
+Le niveau sonore correspond lui à la hauteur de l’oscillation : on parle d’**amplitude**. 
+
+Ce phénomène physique d’oscillation des molécules dans l’air est capté par notre oreille en mettant en vibration nos organes qui vont convertir cette pression reçue en signaux électriques transmis au cerveau. Votre musique préférée est donc une addition de sons avec des fréquences et amplitudes différentes qui vont vous fait vibrer au sens propre... comme au figuré !
+
+
+Entre phénomène physique et organe sensoriel, le son physique (on parle également de son **analogique**) va être un ensemble d’oscillations, de vibrations, définies par des fréquences et des amplitudes.
+
+
+```{youtube} XFyT1bsSnHI
+```
+
+Chaque «son élémentaire» peut ainsi être assimilé à une courbe comme celle décrite dans la vidéo : on parle de courbe sinusoïdale, ou encore de sinusoïde. Les sons ou la musique que vous écoutez n'est autre qu'une somme de ces courbes «convenablement» arrangées.
+
+<center>
+
+<left> 
+<html>
+    <head>
+        <title> Util_Audacity.mov </title>
+    </head>
+    <body>
+        <div id="player">
+        <video width="500" height="300" controls>
+        <source src="https://maitre.edunumsec2.ch/_videos/Util_Audacity.mov" type="video/quicktime">
+        </audio> 
+        </div>
+    </body> 
+</html>     
+
+</center>
+
+La question est de savoir comment ramener ces oscillations sinusoïdales combinées ensemble en un ensemble de 0 et 1 pour être stockées numériquement dans un ordinateur, comme les nombres, images et les caractères.
+
+
+```{admonition} Le saviez-vous ?
+:class: hint
+Les casques à conduction osseuse transmettent les vibrations directement à l’os temporal du crâne : la cochlée qui est nichée dans cet os va vibrer et transmettre les informations électriques au cerveau, comme le ferait un signal passant par le tympan et le marteau.
+```
+
+
+
+
+```{admonition} Le saviez-vous ?
+:class: hint
+Vous rappelez-vous de l’explosion de l’étoile de la mort dans Star Wars ? et bien un son pareil ne peut exister dans l'espace : il n’y a pas assez de molécules à agiter, l’énergie transmise par l'explosion ne peut pas se propager de la sorte.
+```
+
 ## 4.1. Numérisation
 
 La conversion d’une grandeur physique analogique continue – température, vitesse du vent, position d'une girouette, etc. – en données numériques digitales est appelée **numérisation**. Elle est réalisée en trois étapes : un **échantillonnage**, une **quantification** puis un **encodage**.
@@ -11,7 +76,6 @@ Il s'agit donc d'un compromis entre la qualité de la représentation et les co�
 Ci-après, un signal continu sera numérisé, mettant en évidence le rôle et les effets des différents paramètres de la numérisation. Il s'agira pour l'exemple de l'intensité sonore telle qu'elle peut être capturée par un microphone.
 
 ```{figure} media/soncontinu.png
----
 height: 16em
 name: fig-repr-num-sig
 ---
@@ -37,7 +101,6 @@ L'intervalle temporel entre deux mesures est appelé la période d'échantillonn
 Les limites pratiques d’un échantillonnage sont fixées par la fréquence de Nyquist, qui, de façon très simplifiée, indique que l’information découlant d’un processus dont la fréquence est supérieure à la moitié de la fréquence d'échantillonnage sera perdue lors de la numérisation. Il ne sera donc jamais possible d'avoir une représentation complète d'un processus complexe, tout au mieux une représentation suffisante. Comme toute activité d'ingénierie, la solution retenue  résulte d'une pesée d'intérêts  et non d'une évidence  pointant  vers une solution unique. 
 
 ```{figure} media/numerisation-01.png
----
 height: 16em
 name: fig-repr-num-freq
 align: left
@@ -79,7 +142,6 @@ La quantification d'une valeur échantillonnée requiert de déterminer la **pr�
 La précision de l'encodage est donnée par la **profondeur de l'échantillonnage** (bit depth) exprimée en bits (binary digits). Comme pour l'échantillonnage, plus la profondeur de l'échantillonnage est importante, plus la quantité d'information générée est importante.
 
 ```{figure} media/numerisation-02.png
----
 height: 16em
 name: fig-repr-num-depth
 align : left
@@ -102,7 +164,6 @@ La **distorsion** découle d’un signal dont l’amplitude dépasse les capacit
 La numérisation d’un signal dont l’amplitude serait par trop réduite débouche au contraire sur un encodage qui contient moins d’information, ce qui limite les opérations réalisables numériquement par la suite sans détériorer la qualité du signal.
 
 ```{figure} media/numerisation-04.png
----
 height: 16em
 name: fig-repr-num-dist
 align : left
