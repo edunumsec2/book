@@ -1,4 +1,4 @@
-# Questionner - `input`
+# Questionner - `input()`
 
 Dans ce chapitre, nous découvrons comment un programme peut poser une question lors de son exécution. L'utilisateur du programme peut alors répondre et entrer une information. La réponse sera stockée dans la mémoire de l'ordinateur et sera associée à une variable. Grâce à cette variable, le programme peut traiter la réponse fournie, et le résultat peut être affiché. Nous allons voir que :
 
