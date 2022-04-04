@@ -1,4 +1,4 @@
-# Trier - `sort`
+# Trier - `sort()`
 
 Dans ce chapitre, nous allons découvrir quelques algorithmes de tri.
 Pouvoir trier les éléments d'une liste est une fonctionnalité fondamentale dans l'informatique. Le succès énorme de Google est basé sur un tri efficace de l'information, car dans une liste triée on peut trouver un élément **beaucoup** plus vite. Nous allons voir que :

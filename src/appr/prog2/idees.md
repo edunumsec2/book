@@ -453,3 +453,57 @@ update()
 print('time =', time() - t0)
 print('objets =', len(tortues))
 ```
+
+```{tip}
+This is a tip
+```
+
+```{warning}
+This is a warning
+```
+
+```{note}
+This is a note
+```
+
+```{attention}
+This is a attention
+```
+
+```{important}
+This is important
+```
+
+
+```{exercise}
+This is an exercice.  
+```
+
+```{exercise}
+This is an exercice.  
+This is an exercice.  
+```
+
+```{exercise}
+This is an exercice.  
+This is an exercice.  
+This is an exercice.  
+```
+
+```{admonition}
+This is an exercice.  
+```
+
+```{admonition} Exercice
+This is an exercice.  
+```
+
+```{admonition} Exercice
+:class: tip
+This is an exercice of class tip.  
+```
+
+```{admonition} Exercice
+:class: note
+This is an exercice of class note.  
+```

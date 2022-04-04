@@ -24,10 +24,11 @@ Dans un premier temps nous allons nous intéresser à la notion de complexité�
 Dans un deuxième temps, si vous le souhaitez, vous pouver ouvrir la porte merveilleuse de la récursivité, à la manière des *Infinity Mirror Room* de Yayoi Kusama.
 <br>
 
-
+<!--
 ```{figure} media/Kusama.jpeg
 ---
 alt: Infinity Mirror Room de Yayoi Kusama
 width: 600px
 
 ```
+-->

@@ -1,4 +1,4 @@
-# Déclencher - `onkey`
+# Déclencher - `onkey()`
 
 Avec la fonction `input()` nous avons pu questionner l'utilisateur à un moment spécifique du programme. C'est utilisé pour demander une information spécifique à un moment précis.
 
