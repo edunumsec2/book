@@ -68,8 +68,8 @@ Il s'agit donc d'un compromis entre la qualité de la représentation et les co�
 Ci-après, un signal continu sera numérisé, mettant en évidence le rôle et les effets des différents paramètres de la numérisation. Il s'agira pour l'exemple de l'intensité sonore telle qu'elle peut être capturée par un microphone.
 
 ```{figure} media/soncontinu.png
-height: 16em
-name: fig-repr-num-sig
+:height: 16em
+:name: fig-repr-num-sig
 ---
 Signal continu à numériser, par exemple un son.
 ```
@@ -93,9 +93,9 @@ L'intervalle temporel entre deux mesures est appelé la période d'échantillonn
 Les limites pratiques d’un échantillonnage sont fixées par la fréquence de Nyquist, qui, de façon très simplifiée, indique que l’information découlant d’un processus dont la fréquence est supérieure à la moitié de la fréquence d'échantillonnage sera perdue lors de la numérisation. Il ne sera donc jamais possible d'avoir une représentation complète d'un processus complexe, tout au mieux une représentation suffisante. Comme toute activité d'ingénierie, la solution retenue  résulte d'une pesée d'intérêts  et non d'une évidence  pointant  vers une solution unique. 
 
 ```{figure} media/numerisation-01.png
-height: 16em
-name: fig-repr-num-freq
-align: left
+:height: 16em
+:name: fig-repr-num-freq
+:align: left
 ---
 Effet de la fréquence d'échantillonnage (sampling rate : 100, 200 et 400 Hz) sur la représentation obtenue par numérisation. <br> Plus la fréquence est élevée, plus la quantité d'information collectée est importante. Dans tous les cas, les détails du signal qui se déroulent entre les échantillonnages sont perdus.
 
@@ -134,9 +134,9 @@ La quantification d'une valeur échantillonnée requiert de déterminer la **pr�
 La précision de l'encodage est donnée par la **profondeur de l'échantillonnage** (bit depth) exprimée en bits (binary digits). Comme pour l'échantillonnage, plus la profondeur de l'échantillonnage est importante, plus la quantité d'information générée est importante.
 
 ```{figure} media/numerisation-02.png
-height: 16em
-name: fig-repr-num-depth
-align : left
+:height: 16em
+:name: fig-repr-num-depth
+:align : left
 ---
 Effet de la profondeur de l'échantillonnage (bit depth : 3, 4 et 5 bits) sur la représentation obtenue par numérisation. </br>  Plus la profondeur est importante, plus la discrimination du signal et la différence entre les basses et les hautes intensités est importante. La quantité d'information générée (le nombre de 0 et de 1) devient également plus importante.
 ```
@@ -156,9 +156,9 @@ La **distorsion** découle d’un signal dont l’amplitude dépasse les capacit
 La numérisation d’un signal dont l’amplitude serait par trop réduite débouche au contraire sur un encodage qui contient moins d’information, ce qui limite les opérations réalisables numériquement par la suite sans détériorer la qualité du signal.
 
 ```{figure} media/numerisation-04.png
-height: 16em
-name: fig-repr-num-dist
-align : left
+:height: 16em
+:name: fig-repr-num-dist
+:align: left
 ---
 Effet du gain (trop haut, correct, trop bas) sur la représentation obtenue par numérisation. La distorsion résulte de valeurs très différentes de celles du signal original. </br> Cette aberration du processus de numérisation ne peut plus être corrigée, car de l'information a été perdue au passage. À l'inverse, un gain trop faible nuit à la dynamique de l'information collectée, c'est-à-dire que l'écart entre la valeur retenue la plus faible et la plus élevée n'est qu'une fraction de l'intervalle disponible. Il en résulte une perte de précision.
 ```
@@ -168,10 +168,9 @@ On notera finalement que la numérisation et la quantification travaillent ensem
 Pour l'intensité sonore par exemple, une fréquence d'échantillonnage insuffisante ne peut pas être compensée par une profondeur d'échantillonnage supérieure. La qualité du résultat n'est pas améliorée.
 
 ```{figure} media/numerisation-03.png
----
-height: 16em
-name: fig-repr-num-bal
-align: left
+:height: 16em
+:name: fig-repr-num-bal
+:align: left
 ---
 Effet de la fréquence d'échantillonnage (sampling rate : 400, 200 et 100 Hz) sur la représentation obtenue par numérisation à une profondeur donnée (sampling depth : 5 bits). Une importante profondeur d'échantillonnage ne compense pas une fréquence d'échantillonnage insuffisante.
 ```
