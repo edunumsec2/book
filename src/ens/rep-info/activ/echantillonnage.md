@@ -192,7 +192,21 @@ L'image animée ci-dessous illustre la propagation d'une onde telle qu'elle pour
 ```
 </center>
 
+
+
+Dernier point : un son est donc une vibration qui se transmet dans l'air généralement. Mais peut-on «entendre» toutes ces vibrations ?
+
+La vidéo ci-dessous permet d'apprécier justement ce que l'oreille humaine perçoit selon la fréquence du signal sonore :
+
+
+```{youtube} o-lYdioQMfY
+`````
+
+La gamme de fréquences audibles apparait d'environ **20 Hz à 20000 Hz (ou 20 KHz)**. En-dessous, ou au-dessus, l'oreille humaine ne perçoit rien ou quasiment rien. En revanche, la physiologie humaine reste sensible à ces fréquences extrêmes.
+
+
 <br> <br>
+
 
 *Problématique de la représentation :* fonction sinus (non détaillée, simplement citée), amplitude, fréquence, période. Rappels mathématiques et physiques sur les notions abordées : notion d'onde de pression, compression-dilatation, compréhension de la représentation graphique (sinus). L'enseignant peut traiter rapidement la notion d'onde sonore comme la somme de «sons élémentaires», en fonction du niveau et de la sensibilité de la classe.
 
