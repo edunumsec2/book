@@ -393,14 +393,17 @@ Mathématique continues
 Du continu au discontinu
 ------------------------
 
+<!--
 ```{image} media/TMP/Frise-Notions.jpg 
 :width: 80% 
 :align: right 
 ```
+-->
 
 Technologies
 ============
 
+<!--
 ```{image} media/TMP/Frise_Technologies.jpg 
 :width: 80% 
 :align: right 
@@ -410,6 +413,7 @@ Technologies
 :width: 80% 
 :align: right 
 ```
+-->
 
 Le musée Bolo
 =============
@@ -434,7 +438,7 @@ Une (encore plus brève) histoire du jeu vidéo
 
 [^6]: Aujourd'hui disparue, la société Netscape a été fondée par les premiers acteurs du World Wide Web et créateurs du premier navigateur, ancêtre de Firefox
 
-[^7]: [smaky.ch](smaky.ch)
+[^7]: [smaky.ch](http://www.smaky.ch)
 
 [^8]: le multitâche préemptif désigne la capacité d'un système d'exploitation à exécuter ou arrêter une tâche planifiée en cours (Source : *Wikipedia*). Ce n'est qu'à partir des années 2000 que Windows supporte pleinement ce mécanisme
 
