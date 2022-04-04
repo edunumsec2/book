@@ -17,23 +17,69 @@ En informatique, une variable est
 
 ## Rectangle
 
-Dans ce programme nous définissons deux variables `a` et `b` au début du programme. Nous leur donnons les valeurs 100 et 50. Avec un commentaire nous expliquons leur signification dans le programme. Plus tard dans le programme nous pouvons utiliser ces variables.
+Dans le chapitre **Dessiner**,  nous avons vu un programme commme une séquence d'instructions.
 
 ```{codeplay}
 from turtle import *
 
-a = 100     # longueur du rectangle
-b = 50      # largeur du rectangle
+forward(160)
+left(90)
+forward(100)
+left(90)
+forward(160)
+left(90)
+forward(100)
+left(90)
+```
 
-def rectangle():
-    forward(a)
+Dans le chapitre **Définir**, nous avons vu que nous pouvons définir nos propres instructions avec le mot-clé `def` en donnant un nom à une séquence.
+
+```{codeplay}
+from turtle import *
+
+def rectangle():    # définir une fonction
+    forward(160)    # séquence de 8 instructions
     left(90)
-    forward(b)
+    forward(100)
     left(90)
-    forward(a)
+    forward(160)
     left(90)
-    forward(b)
+    forward(100)
     left(90)
+
+rectangle()         # appeler une fonction
+```
+
+Dans le chapitre **Répéter**, nous avons vu que nous pouvons répéter des instructions pluseurs fois avec le mot-clé `for`.
+
+```{codeplay}
+from turtle import *
+
+def rectangle():            # définir une fonction
+    for i in range(2):      # répéter 2 fois
+        forward(160)        # sequence de 4 instructions
+        left(90)
+        forward(100)
+        left(90)
+
+rectangle()                 # appeler une fonction
+```
+
+Dans ce chapitre **Mémoriser**, nous allons définissons deux variables `a` et `b` au début du programme.  Avec un commentaire nous expliquons leur signification dans le programme. Plus tard dans le programme nous pouvons utiliser ces variables.
+
+
+```{codeplay}
+from turtle import *
+
+a = 160     # longueur du rectangle
+b = 100      # largeur du rectangle
+
+def rectangle():            # définir une fonction
+    for i in range(2):      # répéter 2 fois
+        forward(a)          # sequence de 4 instructions
+        left(90)
+        forward(b)
+        left(90)
 
 rectangle()
 ```
