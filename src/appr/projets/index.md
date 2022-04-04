@@ -17,7 +17,7 @@ Game of life <game_of_life>
 Poker <cartes>
 Tetris <tetris>
 Art absurde <art_absurde>
-Micro:bit </microbit/microbit>
+Micro:bit <microbit/microbit>
 Cryptographie <crypto>
 Idées <idees>
 ````

@@ -67,12 +67,15 @@ rectangle()                 # appeler une fonction
 
 Dans ce chapitre **Mémoriser**, nous allons définissons deux variables `a` et `b` au début du programme.  Avec un commentaire nous expliquons leur signification dans le programme. Plus tard dans le programme nous pouvons utiliser ces variables.
 
+```{exercise}
+Aujoutez une variable `alpha` pour l'angle.
+```
 
 ```{codeplay}
 from turtle import *
 
 a = 160     # longueur du rectangle
-b = 100      # largeur du rectangle
+b = 100     # largeur du rectangle
 
 def rectangle():            # définir une fonction
     for i in range(2):      # répéter 2 fois
