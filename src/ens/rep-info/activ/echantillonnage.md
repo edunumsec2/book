@@ -282,13 +282,16 @@ width: 100%
 **Manipulation d'un morceau de musique sur Audacity**
 ```
 
+
 <br> <br>
+
 
 
 Les élèves travaillent de manière autonome, au casque individuel, les échanges sont limités. L'enseignant circule dans la classe et s'assure de l'appropriation des outils. Il revient au tableau régulièrement afin de dérouler les consignes : lancement d'Audacity, manipulation, écoute des différents morceaux, zoom. 
 
 
-<br> <br>
+
+
 
 
 ```{figure} media/Im38.png
@@ -323,9 +326,6 @@ width: 100%
 ---
 **Zoom sur une partie du morceau visualisé sous Audacity : dilatation temporelle, composition fréquentielle.**
 ```
-
-
-
 
 1ère phase.
 L'enseignant s'assure de la bonne compréhension des phénomènes : notions d'amplitude et de fréquence, dilatation temporelle, fréquences «visibles» des composantes du signal. En particulier, sur la dernière visualisation, on observe qu'on peut mettre en évidence une «quasi-période» entre les instants 06,8320 et 06,8345. Le calcul de la période donne donc 06,8345-06,8320 = 0,0025s, soit une fréquence de 1/0,0025 = 400Hz. L'enseignant questionne les élèves sur cette fréquence : est-elle basse ? haute ? L'enseignant s'appuie ensuite sur la génération d'un son «pur» à 400Hz, via les fonctions python **tracesinus**, **listensinus**. Par la visualisation et l'écoute, les élèves peuvent se représenter l'information extraite du fichier audio (composante de fréquence ~ 400Hz), puis comprendre ce qui se passe quand on ajoute plusieurs signaux à différentes fréquences (ici un signal de fréquence fondamentale 400Hz, puis ses 4 harmoniques suivantes : 800, 1200, 1600, 2000Hz) quand l'enseignant utilise la fonction python **puresignalssum**.
@@ -459,7 +459,7 @@ width: 100%
 
 Après une dizaine de minutes d'écoute autonome, l'enseignant questionne les élèves sur ce qu'ils ont écouté et sur leur interprétation des fréquences indiquées - <span style="color:violet">10-15mn</span>.
 
-<br> <br>
+
 
 **<span style="color:red">DE T1 À T2 = T1 + 25mn = T0 + 45mn</span>**
 
@@ -506,7 +506,7 @@ Le graphique affiche clairement la croissance forte de l'occupation mémoire en 
 
 ### 3.3.4. Evaluation : quizz moodle maison
 
-L'évaluation pourra être réalisée via un quizz moodle open-book, en temps limité (<span style="color:violet">20-30mn</span>) créé par l'enseignant selon les compétences qu'il souhaite évaluer, et comportant 10-15 questions tirées du fichier excel [Devoir - évaluation maison](activ/media/QuizzEch.ods) de type quizz moodle.
+L'évaluation pourra être réalisée via un quizz moodle open-book, en temps limité (<span style="color:violet">20-30mn</span>) créé par l'enseignant selon les compétences qu'il souhaite évaluer, et comportant 10-15 questions tirées du fichier excel {download}`Devoir - évaluation maison de type quizz moodle <media/QuizzEch.ods>`.
 L'enseignant pourra également programmer un cycle d'entrainement préliminaire avec une partie des questions proposées dans ce fichier excel.
    
 ### 3.3.5. Retours enseignant et élèves : questionnaires
