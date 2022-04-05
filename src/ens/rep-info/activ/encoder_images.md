@@ -1,5 +1,12 @@
 # 2. Images numériques
 
+```{admonition} Notebook Jupyter
+:class: warning
+Attention, cette activité est à effectuer dans un notebook Jupyter. Les instructions dans les cellules codeplay ne sont pas exécutables en l'état. Une version .ipynb est disponible ci-dessous
+```
+
+[Version .ipynb](https://github.com/edunumsec2/book/blob/2e886527094630cbe0259d4c0849b92077aa0a00/src/ens/rep-info/activ/EncoderImages.ipynb)
+
 La grotte de Lascaux est témoin d'une des premières tentatives de
 l'humanité de figer des images sur un support matériel.
 
@@ -53,7 +60,7 @@ pouvoir utiliser leurs fonctionnalités.
 plus loin**, sinon les instructions de ce Notebook ne fonctionneront
 pas.
 
-```{code-cell} ipython3
+```{codeplay} 
 import numpy as np
 import matplotlib.pyplot as plt
 ```
@@ -75,7 +82,7 @@ systématiquement procéder de la même manière, en 2 étapes :
     forme de tableau à 2 dimensions
 2.  Afficher l'image
 
-```{code-cell} ipython3
+```{codeplay} 
 # Créer une variable et lui affecter les données
 twopixel = [[0,1]]
 
@@ -93,7 +100,7 @@ pixel.**
 Si on souhaite ajouter une seconde ligne de pixel à l'exemple
 précédent, il suffit d'écrire :
 
-```{code-cell} ipython3
+```{codeplay} 
 # Créer une variable et lui affecter les données
 twopixel = [[0,1],[1,0]]
 
@@ -103,7 +110,7 @@ img = plt.imshow(twopixel, cmap='gray')
 
 Voici un exemple un tout petit peu plus compliqué d'une image de 11 x 8 pixels : 
 
-```{code-cell} ipython3
+```{codeplay} 
 # On crée la matrice de pixel représentant notre image et on la stocke dans une variable
 alien = [[1,1,0,1,1,1,1,1,0,1,1],
        [1,1,1,0,1,1,1,0,1,1,1],
@@ -113,7 +120,7 @@ alien = [[1,1,0,1,1,1,1,1,0,1,1],
        [0,1,0,0,0,0,0,0,0,1,0],
        [0,1,0,1,1,1,1,1,0,1,0],
        [1,1,1,0,0,1,0,0,1,1,1]]
-#On affiche ensuite notre image avec la fonction imshow en lui donnant en paramètre la variable contenant l'image
+# On affiche ensuite notre image avec la fonction imshow en lui donnant en paramètre la variable contenant l'image
 img = plt.imshow(alien, cmap='gray')
 ```
 
@@ -122,9 +129,9 @@ img = plt.imshow(alien, cmap='gray')
 Reproduisez le code ci-dessus et modifiez-le afin d'obtenir l'alien
 ci-dessous
 
-[Alien Up]{.image}
+![Alien Up](media/alien_up.png)
 
-```{code-cell} ipython3
+```{codeplay} 
 #Votre code ici
 ```
 
@@ -144,7 +151,7 @@ ou diminuer le nombre de niveaux de gris possibles.
 Une alternative serait également d'utiliser une valeur décimale entre 0
 (= noir) et 1 (= blanc)*
 
-```{code-cell} ipython3
+```{codeplay} 
 # On crée la matrice de pixel représentant notre image et on la stocke dans une variable
 ndg = [[0,0.2,0.4,0.6,0.8,1]]
 
@@ -157,9 +164,9 @@ img = plt.imshow(ndg, cmap='gray')
 En utilisant le même principe que l'exercice précédent, créez le cœur
 de Link
 
-[LinkHeart]{.image}
+![LinkHeart](media/heart.png)
 
-```{code-cell} ipython3
+```{codeplay} 
 #Votre code ici
 ```
 
@@ -176,7 +183,7 @@ par un mélange d'autres couleurs.
 Toutes les couleurs peuvent donc être créées avec les couleurs de base
 rouge, vert et bleu.
 
-![]()
+![](https://upload.wikimedia.org/wikipedia/commons/1/14/AdditiveColorMixing.png)
 
 Le mélange des trois couleurs de base donne la couleur blanche.
 
@@ -187,7 +194,7 @@ composantes **Rouge, Vert, Bleu**. Une couleur est donc un tuple
 (collection ordonnée de plusieurs éléments), et nous pouvons définir les
 3 couleurs de base comme ceci:
 
-```{code-cell} ipython3
+```{codeplay} 
 #On défini une couleur comme un tuple RGB stocké dans une variable
 rouge = np.array([255, 0, 0]) 
 vert = np.array([0, 255, 0]) 
@@ -196,7 +203,7 @@ bleu = np.array([0, 0, 255])
 
 Ce qui nous permet de créer une image avec 3 pixels: rouge, vert, bleu
 
-```{code-cell} ipython3
+```{codeplay} 
 rgb = [[rouge, vert, bleu]]
 img = plt.imshow(rgb);
 ```
@@ -206,7 +213,7 @@ img = plt.imshow(rgb);
 Definissez la couleur blanche et créez une image du drapeau d'Italie
 (vert, blanc, rouge) puis de France (bleu, blanc, rouge).
 
-```{code-cell} ipython3
+```{codeplay} 
 #Votre code ici
 ```
 
@@ -221,7 +228,7 @@ Les couleurs sont additives.
 -   rouge + vert donne **jaune**
 -   vert + bleu donne **cyan**
 
-```{code-cell} ipython3
+```{codeplay} 
 magenta = rouge + bleu
 jaune  = rouge  + vert
 cyan   = bleu   + vert
@@ -230,13 +237,13 @@ cyan   = bleu   + vert
 Vérifions les codes RGB de nos mélanges de couleurs
 
 
-```{code-cell} ipython3
+```{codeplay} 
 print(jaune, 'jaune')
 print(cyan, 'cyan')
 print(magenta, 'magenta')
 ```
 
-```{code-cell} ipython3
+```{codeplay} 
 cmj = np.array([[cyan, magenta, jaune]])
 img = plt.imshow(cmj);
 ```
@@ -250,7 +257,7 @@ mélange des deux couleurs à gauche et droite.
     vert  jaune   rouge
     bleu  cyan    vert
 
-```{code-cell} ipython3
+```{codeplay} 
 #Votre code ici
 ```
 
@@ -259,12 +266,12 @@ mélange des deux couleurs à gauche et droite.
 Toutes les couleurs mélangées donnent le blanc. L'absence de toute
 couleur donne le noir.
 
-```{code-cell} ipython3
+```{codeplay} 
 blanc = rouge + vert + bleu
 noir = [0, 0, 0]
 ```
 
-```{code-cell} ipython3
+```{codeplay} 
 cmjn = np.array([[cyan, magenta, jaune, noir, blanc]])
 img  = plt.imshow(cmjn);
 ```
@@ -276,7 +283,7 @@ drapeau Suisse.
 
 [SwissFlag]{.image}
 
-```{code-cell} ipython3
+```{codeplay} 
 #Votre code ici
 ```
 
@@ -292,7 +299,7 @@ transformé en un jeu d'icones utilisables.
 
 Créez une image de taille 32x32 représentant ce que vous souhaitez.
 
-```{code-cell} ipython3
+```{codeplay} 
 #Votre code ici
 ```
 
@@ -305,7 +312,7 @@ juste remplacer `monImage` par la variable qui contient votre image et
 choisir un nom pour votre image à la place de `toto.png`, puis
 d'executer la cellule.
 
-```{code-cell} ipython3
+```{codeplay} 
 #Mettez le le nom de la variable contenant votre image à la place de monImage
 icn = np.array(monImage)
 
@@ -340,7 +347,7 @@ que vous pourrez utiliser pour remplacer l'icone de n'importequel
 fichier ou dossier en le faisant glisser à la place de l'icone actuelle
 dans la fenêtre d'information (cmd + i).
 
-```{code-cell} ipython3
+```{codeplay} 
 import os
 os.system("mkdir myIcon.iconset")
 for s in [16, 32, 128, 256, 512]:
