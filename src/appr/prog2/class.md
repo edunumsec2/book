@@ -558,7 +558,7 @@ Pour vous donner une idée, le bouton `1` a été implémenté. Vous devez ajout
 from turtle import *
 s = getscreen()
 hideturtle()
-speed(0)
+tracer(0)
 up()
 
 class Button:
@@ -590,6 +590,7 @@ class Button:
             goto(x+h/4, y+h/4)
         color('black')
         write(self.text, font=('Arial', h//2), align=self.align)
+        update()
         
     def __str__(self):
         return f'Button({self.text})'

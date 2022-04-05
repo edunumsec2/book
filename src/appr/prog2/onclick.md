@@ -1,4 +1,4 @@
-# Cliquer - `onclick`
+# Cliquer - `onclick()`
 
 Dans ce chapitre nous explorons comment un programme peut détecter un clic de souris et y réagir.
 Cliquer (toucher) est la méthode principale pour interagir avec un smartphone : quand le doigt touche une certaine position de l'écran, le programme y réagit. Nous allons voir que :

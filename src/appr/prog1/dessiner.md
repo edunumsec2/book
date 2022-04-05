@@ -37,19 +37,6 @@ Ci-dessus, vous trouvez notre premier programme de trois lignes :
 Ajoutez d'autres instructions telles que `backward()`, `left()`, et `right()` pour faire un dessin.
 ```
 
-before
-
-```{exercise}
-Ajoutez d'autres instructions telles que `backward()`, `left()`, et `right()` pour faire un dessin.
-```
-
-after
-
-```{exercise}
-Aujoutez une variable `alpha` pour l'angle.
-```
-
-
 ```{codeplay}
 :file: forward1.py
 from turtle import *

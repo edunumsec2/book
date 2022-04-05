@@ -1,4 +1,4 @@
-# Interrompre - `ontimer`
+# Interrompre - `ontimer()`
 
 Dans ce chapitre nous allons voir comment un programme peut planifier d'appeler une fonction dans le futur. Cette fonctionnalité est importante pour programmer des simulations, des animations, des jeux vidéos, des horloges, etc. Nous allons voir que :
 

@@ -67,9 +67,14 @@ rectangle()                 # appeler une fonction
 
 Dans ce chapitre **Mémoriser**, nous allons définissons deux variables `a` et `b` au début du programme.  Avec un commentaire nous expliquons leur signification dans le programme. Plus tard dans le programme nous pouvons utiliser ces variables.
 
-```{exercise}
-Aujoutez une variable `alpha` pour l'angle.
+```{admonition} Exercice
+Aujoutez une variable `alpha` pour l'angle et utilisez-la dans le corps de la fonction.
 ```
+
+```{exercise}
+Aujoutez une variable `alpha` pour l'angle et utilisez-la dans le corps de la fonction.
+```
+
 
 ```{codeplay}
 from turtle import *
@@ -96,6 +101,10 @@ Quel est l'avantage ?
 - toutes les valeurs sont définies au début du programme
 - il devient facile de changer les dimensions
 
+```{admonition} Exercice
+Modifiez la variable `alpha` en mettant 80 et ensuite 90 degrés.
+```
+
 ```{codeplay}
 from turtle import *
 
@@ -104,14 +113,11 @@ b = 100     # largeur du losange
 angle = 60  # premier angle du losange
 
 def losange():
-    forward(a)
-    left(angle)
-    forward(b)
-    left(180-angle)     # angle complémentaire
-    forward(a)
-    left(angle)
-    forward(b)
-    left(180-angle)     # angle complémentaire
+    for i in range(2):
+        forward(a)
+        left(angle)
+        forward(b)
+        left(180-angle)     # angle complémentaire
 
 losange()
 ```
@@ -169,10 +175,12 @@ Nous pouvons donc facilement dessiner une maison qui mesure que la moitié.
 
 ```{codeplay}
 from turtle import *
+up()
 
-a = 100     # longueur de base
+a = 20     # longueur de base
 
 def maison():
+    down()
     forward(1.41 * a)
     left(90)
     forward(a)
@@ -183,11 +191,17 @@ def maison():
     left(45)
     forward(a)
     left(90)
-    
+    up()
+
+backward(200)  
 maison()
 
-forward(200)
+forward(100)
 a = 50
+maison()
+
+forward(150)
+a = 100
 maison()
 ```
 
@@ -227,6 +241,10 @@ Dans le chapitre **Répéter** nous avons vu la structure `for i in range(n)`. Q
 En fait c'est une variable. Elle parcourt les valeurs de 0 à n-1. Reprenons l'exemple du polygone et affichons la valeur de `i` avec la fonction `write()`.
 La valeur de `i` est écrite à la position actuelle de la tortue.
 
+```{admonition} Exercice
+Augmentez `n` par 10 et diminuez en même temps `a` par 10.
+```
+
 ```{codeplay}
 from turtle import *
 
@@ -243,6 +261,10 @@ for i in range(n):
 
 Dans l'exemple suivant, utilisons la fonction `write()` nous affichons le diamètre d'un cercle.
 Nous levons le stylo pendant 20 pixels pour créer un espace au centre du cercle pour y afficher le diamètre du cercle avec la fonction `write(2 * r)`.
+
+```{admonition} Exercice
+Mettez le rayon `r` à 50, ensuite à 100.
+```
 
 ```{codeplay}
 from turtle import *
@@ -324,86 +346,102 @@ Dans ces exercices nous retournons aux formes précédents. Nous utilisons maint
 
 ### Coeur
 
-Définis une fonction `coeur()` dont le rayon et l'épaisseur dépendent de deux variables `r` et `w`. Dessine alors deux coeurs différentes.
+Définissez une fonction `coeur()` dont la taille dépend du rayon `r`. Dessinez alors trois coeurs de tailles différentes.
 
 ```{codeplay}
 :file: coeur.py
 from turtle import *
-r = 50      # rayon du coeur
-w = 1       # épaisseur
+r = 20      # rayon du coeur
 
 def coeur():
-    ...
+    left(90)
+    circle(50, 225)
+    forward(120)
+    left(90)
+    forward(120)
+    circle(50, 225)
+    left(90)
 
 coeur()
 
 r = 100
-w = 5
+forward(40)
 coeur()
 ```
 
 ### Infini
 
-Définis une fonction `infini()` dont le rayon et l'épaisseur dépendent de deux variables `r` et `w`. Dessine alors deux symboles différents.
+Définissez une fonction `infini()` dont la taille dépend du rayon `r`. Dessinez alors trois symboles de tailles différentes.
 
 ```{codeplay}
 :file: infini.py
 from turtle import *
-r = 50      # rayon du symbole
+r = 30      # rayon du symbole
 w = 1       # épaisseur
 
 def infini():
-    ...
+    forward(100)
+    circle(50, 270)
+    forward(100)
+    circle(-50, 270)
 
 infini()
 
 r = 100
-w = 5
+left(20)
 infini()
 ```
 
 ### Bretzel
 
-Définis une fonction `bretzel()` dont le rayon et l'épaisseur dépendent de deux variables `r` et `w`. Dessine alors deux symboles différents.
+Définissez une fonction `bretzel()` dont la taille dépend du rayon `r`. Dessinez alors trois symboles de tailles différentes.
 
 ```{codeplay}
 :file: bretzel.py
 from turtle import *
 r = 50      # rayon du symbole
-w = 1       # épaisseur
 
 def bretzel():
-    ...
+    for i in range(4):
+        forward(80)
+        circle(30, 270)
 
 bretzel()
 
 r = 80
-w = 5
+left(20)
 bretzel()
 ```
 
 ### Lettres
 
-Définis des fonctions de lettres dont la taille et l'épaisseur dépendent de deux variables `a` et `w`. Ecrit alors deux textes avec des tailles différentes.
+Définissez des fonctions de lettres dont la taille dépand de la variable `a`. Ecrivez alors plusieurs textes avec des tailles différentes.
 
 ```{codeplay}
 :file: lettres.py
 from turtle import *
+up()
 a = 50      # hauteur d'une lettre
-w = 1       # épaisseur
 
 def n():
-    ...
+    down()
+    left(90)
+    forward(80)
+    backward(40)
+    circle(-40, 180)
+    forward(40)
+    left(90)
+    up()
+    forward(20)
 
 def o():
-    ...
+    forward(40)
+    down()
+    circle(40)
+    up()
+    forward(60)
 
-n()
-o()
-
-r = 40
-w = 2
-
+backward(200)
 o()
 n()
 ```

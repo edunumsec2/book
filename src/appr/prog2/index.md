@@ -7,24 +7,29 @@ Dans la deuxième partie, nous allons découvrir la programmation orientée obje
 ```{toctree}
 :maxdepth: 2
 :hidden:
-1. Déclencher - onkey <onkey>
-2. Formaliser - lambda <lambda>
-3. Cliquer - onclick <onclick>
-4. Interrompre - ontimer <ontimer>
-5. Cloner - Turtle <turtle>
-6. Créer - class <class>
-7. Hériter - E(P) <inherit>
-8. Tracer - math <math>
-9. Associer - dict <dict>
-10. Compter - bin <compter>
-11. Nuancer - color <color>
-12. Appartenir - set <set>
-13. Raisonner - bool <bool>
-14. Manipuler - & <bit>
-15. Revenir - f(n) <recursif>
-16. Vecteurs <vector>
-17. Forces <force>
-Idées <idees>
+:numbered: 1
+
+onkey
+lambda
+onclick
+ontimer
+turtle
+
+class
+inherit
+math
+dict
+compter
+color
+
+set
+bool
+bit
+recursif
+vector
+
+force
+idees
 ```
 
 ## Objectifs

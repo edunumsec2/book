@@ -125,7 +125,7 @@ ce qui se généralise à :
 - si $A_1,\ldots, A_n$ sont $n$ événements *indépendants*, alors $P \left(\bigcap_{i=1}^n A_i \right) = \prod_{i=1}^n P(A_i)$
 ````
 
-Supposons que le message No 1, donc le mot de code $c_1$, soit envoyé par Alice (on peut refaire le même raisonnement pour n'importe quel message envoyé). Quand est-ce que Bob aura un problème à retrouver ce message? Quand une confusion entre deux mots de code est possible. Et pour cela, il faudrait que les $n \, (1- \varepsilon)$ bits non effacés de $c_1$ soient tous égaux à ceux qu'un autre mot de code $c_m$ parmi les $M-1$ restants. Quelle est la probabilité qu'un tel événement survienne ?
+Supposons que le message No 1, donc le mot de code $c_1$, soit envoyé par Alice (on peut refaire le même raisonnement pour n'importe quel message envoyé). Quand est-ce que Bob aura un problème à retrouver ce message? Quand une confusion entre deux mots de code est possible. Et pour cela, il faudrait que les $n \, (1- \varepsilon)$ bits non effacés de $c_1$ soient tous égaux à ceux d'un autre mot de code $c_m$ parmi les $M-1$ restants. Quelle est la probabilité qu'un tel événement survienne ?
 
 $P($ il existe $m \in \{2,...,M\}$ tel que $n \, (1-\varepsilon)$ bits de $c_1$ et $c_m$ sont identiques $)$
 

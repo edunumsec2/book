@@ -37,8 +37,9 @@ Le code à exécuter suit l'expression `def rectangle():` et se trouve en **inde
 Ensuite, il suffit d'écrire `rectangle()` pour dessiner un rectangle. On appelle ceci **appeler** une fonction.
 Rappelez-vous ceci :
 
-- on définit une fonction une seule fois ;
-- on appelle une fonction autant de fois que l'on veut.
+- on définit une fonction une seule fois,
+- on appelle une fonction autant de fois que l'on veut,
+- si on ne l'appelle pas, elle n'est pas exécutée et il ne se passe rien.
 
 Définir une fonction nous permet de réduire le nombre de lignes de code nécessaires.
 Chaque fois que nous utilisons `rectangle()`,
@@ -112,7 +113,7 @@ En regardant ces 3 lignes de code, on comprend immédiatement le sens du program
 
 ``` python
 batiment()
-forward(30)
+forward(30)     # repositionner la tortue
 porte()
 ```
 
