@@ -1,0 +1,71 @@
+# Ce fichier spécifie les membres du dépôt ayant les droits 
+# de review des pull-requests effectués sur leurs sources. 
+
+# Les utilisateurs suivants sont alertés pour toute 
+# modification sur l'ensemble des sources : 
+* @redelmann @elliotvaucher
+
+# Apprendre
+
+# Pour la partie Représentation de l'information : 
+/content/appr/theme/rep-info/ @dasilvadds
+/content/appr/theme/rep-info/ @ofleveque
+
+# Pour la partie Programmation : 
+/content/appr/theme/prog1/ @rasql
+/content/appr/theme/prog1/ @G-Racine
+/content/appr/theme/prog1/ @rasql
+/content/appr/theme/prog1/ @G-Racine 
+
+# Pour la partie Algorithmique : 
+/content/appr/theme/algo1/ @biljana-petreska-gyyv
+/content/appr/theme/algo1/ @mihersch
+/content/appr/theme/algo1/ @biljana-petreska-gyyv
+/content/appr/theme/algo1/ @mihersch
+
+# Pour la partie Architecture des ordinateurs : 
+/content/appr/theme/archi/ @jppellet
+/content/appr/theme/archi/ @prochat
+
+# Pour la partie Réseaux : 
+/content/appr/theme/reseaux/ @mihersch
+
+# Pour la partie Histoire : 
+/content/appr/theme/reseaux/ @prochat
+
+Enseigner 
+
+# Apprendre
+
+# Pour la partie Représentation de l'information : 
+/content/ens/theme/rep-info/ @dasilvadds
+/content/ens/theme/rep-info/ @ofleveque
+
+# Pour la partie Programmation : 
+/content/ens/theme/prog1/ @rasql
+/content/ens/theme/prog1/ @G-Racine
+/content/ens/theme/prog2/ @rasql
+/content/ens/theme/prog2/ @G-Racine 
+
+# Pour la partie Algorithmique : 
+/content/ens/theme/algo1/ @biljana-petreska-gyyv
+/content/ens/theme/algo1/ @mihersch
+/content/ens/theme/algo2/ @biljana-petreska-gyyv
+/content/ens/theme/algo2/ @mihersch
+
+# Pour la partie Architecture des ordinateurs : 
+/content/ens/theme/archi/ @jppellet
+/content/ens/theme/archi/ @prochat
+
+# Pour la partie Réseaux : 
+/content/ens/theme/reseaux/ @mihersch
+
+# Pour la partie Histoire : 
+/content/ens/theme/reseaux/ @prochat
+
+# Pour la partie Enjeux sociaux : 
+/content/ens/theme/reseaux/ @vhaussau
+/content/ens/theme/reseaux/ @Lucile24
+/content/ens/theme/reseaux/ @noflux
+
+
