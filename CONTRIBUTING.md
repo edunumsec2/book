@@ -154,7 +154,7 @@ GitHub permet d'ajouter des routines de protection des branches, qui consistent 
 
 Dans ce dépôt, les branches protégées sont les [branches spéciales](https://github.com/edunumsec2/book/blob/master/CONTRIBUTING.md#branches-sp%C3%A9ciales). Sur ces branches, seul le [comité de rédaction](https://github.com/orgs/edunumsec2/teams/comite-de-redaction/members) peut effectuer des commits ne nécessitant pas d'être validés par des pairs. 
 
-Pour les autres utilisateurs, toute modification des sources passe par une relecture et une acceptation. 
+Pour les autres utilisateurs, toute modification des sources passe par une relecture et une acceptation. Les membres ayant le droit d'accepter des modifications pour leurs dossiers respectifs sont déclarés dans le document [CODEOWNERS](https://github.com/edunumsec2/book/blob/master/.github/CODEOWNERS)
 
 #### Reviews
 
