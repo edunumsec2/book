@@ -7,7 +7,7 @@ Classe : 1M, 2M
 
 <span style="color:green">Difficulté conceptuelle : élevée </span>  
 
-Prérequis structurel:
+Prérequis structurel :
 2 séances de 45mn, devant machines pour les élèves. 
 
 Configuration pour la machine enseignant : un éditeur python (Visual Studio, Thonny , ou autre) avec les librairies installées et codes fournis dans l'activité. 
