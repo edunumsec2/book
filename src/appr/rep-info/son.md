@@ -61,7 +61,7 @@ Vous rappelez-vous de l’explosion de l’étoile de la mort dans Star Wars ? e
 <body>
     <div id="player">
     <video width="500" height="300" controls>
-    <source src="https://apprendre.modulo-info.ch/content/appr/theme/rep-info/cours/son/starwars.mov"type="video/quicktime">
+    <source src="https://files.modulo-info.ch/starwars.mov"type="video/quicktime">
     </audio> 
     </div>
 </body> 
