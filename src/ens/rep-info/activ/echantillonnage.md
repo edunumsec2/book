@@ -8,11 +8,11 @@ Classe : 1M, 2M
 <span style="color:green">Difficulté conceptuelle : élevée </span>  
 
 Prérequis structurel:
-3 séances de 45mn, les deux dernières séances devant machines pour les élèves. 
+2 séances de 45mn, devant machines pour les élèves. 
 
-Configuration pour la machine enseignant : un éditeur python (Visual Studio, Thonny , ou autre) avec les librairies installées et code fourni en annexe. 
+Configuration pour la machine enseignant : un éditeur python (Visual Studio, Thonny , ou autre) avec les librairies installées et codes fournis dans l'activité. 
 
-Pour les élèves, des machines avec le logiciel Audacity installé, accès à des écouteurs personnels, connexion internet pour les élèves pour la dernière période (accès à Moodle).
+Pour les élèves, des machines avec le logiciel Audacity installé, accès à des écouteurs personnels, connexion internet (accès au support Modulo - apprendre, puis aux questionnaires en fin d'activité).
 
 <!--
 Les fichiers suivants sont à télécharger pour l'activité complète : ...
@@ -38,10 +38,10 @@ et d'autre part de faciliter leur compréhension du changement de paradigme ult�
 -->
 
 
-Le second objet de cette activité est de permettre aux élèves de se familiariser avec lun outil tel qu'Audacity, qui permet de visualiser graphiquement le son et de le reproduire auditivement, offrant deux modes de représentation du son.  
-En particulier la notion de fréquence d'échantillonnage et le niveau de segmentation minimal en lien avec la qualité du son peuvent être perçus visuellement et auditivement (découpage de l'onde sonore en une multitude de points et perception des effets de la fréquence d'échantillonnage sur la qualité du rendu).
+Le second objet de cette activité est de permettre aux élèves de se familiariser avec un outil tel qu'Audacity, qui permet de visualiser graphiquement le son et de le reproduire auditivement, offrant deux modes de représentation du son.  
+En particulier la notion de discrétisation, de fréquence d'échantillonnage et le niveau de segmentation minimal en lien avec la qualité du son peuvent être perçus visuellement et auditivement (découpage de l'onde sonore en une multitude de points et perception des effets de la fréquence d'échantillonnage sur la qualité du rendu).
     
-Enfin la notion de taille de fichier directement liée au nombre de points pris sur l'onde sonore permet de faire le lien entre binaire et qualité du son.    
+Enfin la notion de taille de fichier directement liée au nombre de points pris sur l'onde sonore permet de faire le lien entre codage binaire et qualité du son.    
 
 ### 3.1.2. Objectif mathématique et physique (transversal)
 
@@ -53,7 +53,7 @@ L'activité permet de réactiver, confirmer ou souligner des savoirs mécaniques
 
 ### 3.2.1. Mode
 
-**«Branché/débranché»** utilisation de l'ordinateur et du logiciel Audacity - pas d'environnement de développement.  Cette activité peut permettre de faire utiliser le tableur et ses fonctionnalités aux élèves et coïncider avec un enseignement de type bureautique - science informatique transversal.
+**«Branché/débranché»** utilisation de l'ordinateur et du logiciel Audacity - pas d'environnement de développement.  Cette activité pourrait permettre de faire utiliser le tableur et ses fonctionnalités aux élèves et coïncider avec un enseignement de type bureautique - science informatique transversal.
 
 ### 3.2.2. Pré-requis  
 
@@ -101,19 +101,21 @@ L'activité permet de réactiver, confirmer ou souligner des savoirs mécaniques
 
 ### 3.2.4 Supports didactiques
     
-Ordinateur individuel, logiciel Audacity, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
+Ordinateur individuel, logiciel Audacity, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation en ligne (Modulo - apprendre : https://dev-apprendre.modulo-info.ch/rep-info/son.html), supports papier éventuels pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau, codes python installés et testés.
 
 
 ### 3.2.5. Durée
-La séquence d'enseignement se découpe en <span style="color:violet">trois séances de 45mn</span> : première période de <span style="color:violet">45mn</span> en classe entière, deux périodes suivantes de <span style="color:violet">45mn</span> en demi-classes.
+La séquence d'enseignement se découpe en <span style="color:violet">deux périodes de 45mn</span> en demi-classes.
 
 </br> 
 
 ## 3.3. Déroulement
 
-### 3.3.1. Première séance : éléments de cours sur l'information et le son en particulier, puis manipulation logicielle (Audacity)
+### 3.3.1. Première période : éléments de cours sur l'information et le son en particulier, puis manipulation logicielle (Audacity par les élèves, codes python par l'enseignant)
 
 #### 3.3.1.1 Eléments théoriques
+
+**<span style="color:red">DE T0 À T1 = T0 + 15mn</span>**
 
 Ce premier moment de cette première séance doit être vu comme une introduction à la problématique traitée par l'activité proprement dite. Elle est aussi l'occasion de travailler la transdisciplinarité avec d'autres disciplines fondamentales (mathématiques, physique) mais également d'aborder la discipline artistique que les élèves affectionnent tout particulièrement qu'est la musique..  
 Elle peut donc s'effectuer en parallèle d'un de ces enseignements, en coordination avec un enseignant de ces disciplines : mathématiques, physique, ou musique.  
@@ -216,15 +218,20 @@ La gamme de fréquences audibles apparait d'environ **20 Hz à 20000 Hz (ou 20 K
 
 #### 3.3.1.2. Manipulation logicielle : Audacity - Aspects visuel et auditif d'un signal sonore
 
+**<span style="color:red">DE T1 À TF = T1 + 30mn</span>**
+
 Ce second moment de la séance vise à faire manipuler le logiciel Audacity par les élèves, puis en particulier à tenter de leur faire faire le parallèle entre la forme des signaux qu'ils visualisent et la forme sinusoïdale explicitée dans le premier moment de séance. L'enseignant manipule ses propres codes python afin d'expliciter les notions de fréquence, de hauteur de son (grave / aigu), puis de composition fréquentielle.
 
 1ère phase.
+
+**<span style="color:red">DE T1 À T2 = T1 + 10mn</span>**
+
 L'enseignant communique les recommandations aux élèves afin d'utiliser le logiciel Audacity : ouvrir le logiciel, aller chercher le fichier son dans leur espace, manipuler les touches principales (lire, arrêter, revenir, se déplacer avec la souris sur le fichier son.
 
 Les élèves travaillent de manière autonome, au casque individuel, les échanges entre eux sont limités. L'enseignant circule dans la classe et s'assure de l'appropriation des outils. Il revient au tableau régulièrement afin de dérouler les consignes : lancement d'Audacity, manipulation, écoute du morceau, zoom. 
 
 
-**<span style="color:red">DE T0 À T1 = T0 + 30mn</span>**
+
 
 
 </br>
@@ -339,6 +346,9 @@ En particulier, sur la dernière visualisation, on observe qu'on peut mettre en 
 -->
 
 2ème phase.
+
+**<span style="color:red">DE T2 À TF = T2 + 20mn</span>**
+
 L'enseignant s'appuie ensuite sur la génération d'un son «pur» à 400Hz, 800 puis 1200 Hz, via les codes python **tracesinus**, **listensinus**. Les élèves peuvent ainsi relier fréquence et hauteur, auditivement et graphiquement.
 
 <!--
@@ -432,12 +442,18 @@ puresignalssum(400, 5)
 
 
 
-**<span style="color:red">DE T1 À T2 = T1 + 15mn = T0 + 45mn</span>**
 
 
+### 3.3.2 Deuxième séance : discrétisation et fréquence d'échantillonnage 
 
 
-### 3.3.2 Deuxième séance : discrétisation et fréquence d'échantillonnage
+Cette deuxième période traite des aspects disciplinaires informatiques à proprement parler sur lesquels on souhaite sensibiliser les élèves.
+
+#### 3.3.2.1 Discrétisation
+
+Cette étape aborde la problématique de la discrétisation d'un signal sonore.
+
+**<span style="color:red">DE T0 À T1 = T0 + 15mn</span>**
 
 L'enseignant reprend le logiciel Audacity et poursuit le zoom sur le signal ; il questionne les élèves sur l'interprétation de ce qu'ils voient - une succession de points, et non plus une courbe continue). Il les amène progressivement à la compréhension de la notion de *discrétisation*, résultat du passage d'une représentation continue *apparente* correspondant à la **réalité physique** à une représentation discrète *réelle* correspondant à la **réalité numérique**.
 
@@ -461,11 +477,13 @@ width: 100%
 ```
 
 
+#### 3.3.2.2 Echantillonnage
 
-**<span style="color:red">DE T0 À T1 = T0 + 20mn</span>**
+Cette étape traite de l'échantillonnage d'un signal sonore.
+
+**<span style="color:red">DE T1 À T2 = T1 + 25mn</span>**
 
 
-3ème phase. 
 L'enseignant propose aux élèves d'écouter une partie du morceau de musique choisi à différentes fréquences proposées par Audacity : 8000 Hz, 22050 Hz, 44100 Hz, 88200 Hz, 176400 Hz.
 
 ```{figure} media/Im55.png
@@ -494,7 +512,7 @@ width: 100%
 **Exemple de tableau excel enseignant récoltant les appréciations par les élèves de la qualité sonore de l'échantillon.**
 ```
 
-Une fois le tableau est projeté et complété au fur et à nesure : l'enseignant questionne les élèves sur l'interprétation qu'ils peuvent donner des graphes issus du tableau de données. Il doit faire ainsi ressortir la qualité perçue à partie de la fréquence d'échantillonnage de 44100Hz. La nécessité d'une *fréquence d'échantillonnage minimale* doit ici apparaître.
+Une fois le tableau est projeté et complété au fur et à mesure : l'enseignant questionne les élèves sur l'interprétation qu'ils peuvent donner des graphes issus du tableau de données. Il doit faire ainsi ressortir la qualité perçue à partie de la fréquence d'échantillonnage de 44100Hz. La nécessité d'une *fréquence d'échantillonnage minimale* doit ici apparaître.
 Dans un deuxième temps, l'enseignant interroge sur les résultats pour les fréquences supérieures. L'inutilité d'aller au-delà d'une certaine fréquence (en l'occurence 44100 Hz) doit ressortir.
 L'étape suivante consiste à identifier cette valeur de 44100 Hz : à quoi correspond-elle ? L'enseignant revient sur le champ audible par l'oreille humaine : 20Hz - 20000Hz, en faisant référence à la dernière vidéo projetée lors de la première séance.
 
@@ -526,15 +544,22 @@ width: 100%
 Le graphique affiche clairement la croissance forte de l'occupation mémoire en fonction de la fréquence d'échantillonnage, au delà de 44100Hz... - ainsi que le changement du mode de compression (on passe d'un format MP3 à un format WAV)-. L'analyse avec les élèves de la courbe permet de comprendre explicitement la nécessité de borner la fréquence d'échantillonnage : pas trop faible pour garantir une bonne qualité audio, pas trop élevée pour ne pas occuper inutilement de la place mémoire - <span style="color:violet">20-25 mn</span>.
 
 
-### 3.3.4. Evaluation : quizz moodle maison
+### 3.3.4. Retours enseignant et élèves : questionnaires
+
+Cette étape de «retours» doit permettre à l'enseignant d'apprécier la manière dont son activité est «passée» auprès des élèves, d'améliorer, de modifier ou d'affiner l'organisation de sa séquence d'enseignement.
+
+**<span style="color:red">DE T2 À TF= T2 + 10mn</span>**
+
+
+La séquence propose deux types de questionnaires, un premier à destination de l'[enseignant](https://www.surveymonkey.com/r/actens1), le second à destination des [élèves](https://www.surveymonkey.com/r/acteleve1).
+Ces outils à destination de l'enseignant permettent une analyse a posteriori pour l'enseignant.
+
+
+### 3.3.5. Evaluation : quizz moodle maison
 
 L'évaluation pourra être réalisée via un quizz moodle open-book, en temps limité (<span style="color:violet">20-30mn</span>) créé par l'enseignant selon les compétences qu'il souhaite évaluer, et comportant 10-15 questions tirées du fichier excel {download}`Devoir - évaluation maison de type quizz moodle <media/QuizzEch.ods>`.
 L'enseignant pourra également programmer un cycle d'entrainement préliminaire avec une partie des questions proposées dans ce fichier excel.
    
-### 3.3.5. Retours enseignant et élèves : questionnaires
-
-La séquence propose deux types de questionnaires, un premier à destination de l'[enseignant](https://www.surveymonkey.com/r/actens1), le second à destination des [élèves](https://www.surveymonkey.com/r/acteleve1).
-Ces outils à destination de l'enseignant permettent une analyse a posteriori pour l'enseignant.
 
 
 
