@@ -31,6 +31,7 @@ Entre phénomène physique et organe sensoriel, le son physique (on parle égale
 
 Chaque «son élémentaire» peut ainsi être assimilé à une courbe comme celle décrite dans la vidéo : on parle de courbe sinusoïdale, ou encore de sinusoïde. Les sons ou la musique que vous écoutez n'est autre qu'une somme de ces courbes «convenablement» arrangées.
 
+<center>
 <title> Util_Audacity.mov </title>
 <body>
     <div id="player">
@@ -39,7 +40,7 @@ Chaque «son élémentaire» peut ainsi être assimilé à une courbe comme cell
     </audio> 
     </div>
 </body> 
-
+</center>
 
 La question est de savoir comment ramener ces oscillations sinusoïdales combinées ensemble en un ensemble de 0 et 1 pour être stockées numériquement dans un ordinateur, comme les nombres, images et les caractères.
 
