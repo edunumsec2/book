@@ -16,8 +16,10 @@ Les ressources sont accessibles via le [site web](https://modulo-info.ch/) (User
 
 - [Introduction](#introduction)
 - [Utilisation](#utilisation)
+- [Contributions](#contributions)
+- [Code de conduite](#code-de-conduite)
 - [Documents importants](#documents-importants)
-- [Chapitrage du livre](#chapitrage)
+- [Chapitrage](#chapitrage)
 - [Structure du dépôt GitHub : à modifier](#structure-dépôt-GitHub)
 - [Installation](#installation)
   - [Installation recommandée](#installation-recommandée)
@@ -25,43 +27,20 @@ Les ressources sont accessibles via le [site web](https://modulo-info.ch/) (User
   - [Installation rapide](#installation-rapide)
   - [Utilisation](#utiisation)
   - [Génération de build](#génération-de-build)
-- [Exemples d'utilisation des ressources](#exemples-dutilisation-des-ressources)
-  - [Utilisation en ligne](#utilisation-en-ligne)
-  - [Modifications indépendantes](#modifications-indépendantes)
-  - [Participation au développement](#participation-au-développement)
 - [Comité de rédaction](#comité-de-rédaction)
 
 
-### Votre avis et ceux de vos élèves sont importants
-
-En tant que membre du projet pilote, nous vous remercions par avance pour votre participation au processus d’enquête. Les données recueillies permettront d'évaluer la pertinence des contenus afin de réaliser les ajustements nécessaires. La démarche porte uniquement sur les ressources et les élèves, il ne s'agit en aucun cas d'évaluer la qualité de l'enseignement dispensé. Toutes les données seront traitées de façon confidentielle. En dernier lieu, ces données agrégées et anonymisées feront l'objet d'analyses statistiques à la fin de chaque semestre. 
-  
-
 ## Utilisation
 
-L'utilisation **standard** des ressources ne requiert pas d'installation particulière et peut-être effectuée immédiatement à l'adresse https://modulo-info.ch. 
+L'utilisation des ressources ne requiert pas d'installation particulière et peut-être effectuée immédiatement à l'adresse https://modulo-info.ch. 
 
-Dans le cadre du projet pilote, nous vous saurions gré de suivre le protocole minimal décrit ci-dessous :  
+## Contributions
 
-1. Participer aux sondages suivants (10 min par sondage) : 
-    - [Questionnaire de rentrée / élève](https://www.surveymonkey.com/r/VVZQYRR)
-    - [Questionnaire de rentrée / enseignant·e](https://www.surveymonkey.com/r/s2enspre)
-    - [Questionnaire post-thématique / élève](https://www.surveymonkey.com/r/s2elpostthem)
-    - [Questionnaire post-thématique / enseignant·e](https://www.surveymonkey.com/r/s2enspostthem)
-    - [Questionnaire post thématique enjeux sociaux / enseignant·e](https://www.surveymonkey.com/r/s2postensejs)
+Si vous souhaitez contribuer au projet, la marche à suivre est décrite dans ce [document](https://github.com/edunumsec2/book/blob/master/CONTRIBUTING.md)
 
-2. Ecrire à nathalie.farenc@epfl.ch pour la tenir informée du début et de la fin d'un cours donné sur l'un ou l'autre des sujets du Plan d'études.
-3. Signaler tout défaut éventuel des ressources à nathalie.farenc@epfl.ch ou directement à la personne en charge de la thématique en question, dont vous trouverez l'adresse sous [comité de rédaction](#comité-de-rédaction).
+## Code de conduite
 
-L'utilisation **avancée** des ressources comprend, en outre, les étapes suivantes : 
-
-4. Utiliser les fonctionnalités de GitHub telles que [issues](https://github.com/edunumsec2/book/issues) et [discussions](https://github.com/edunumsec2/book/discussions) pour signaler des améliorations potentielles. 
-
-Après la phase **pilote**, les enseignant.es pourront en outre : 
-
-6. Proposer et rédiger des modifications via la création d'une [branche](https://github.com/edunumsec2/book/branches). 
-7. Forker le dépôt pour en faire un clone indépendant via le mécanisme de [fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo). 
-8. Utiliser l'environnement [Sphinx- ](#installation) pour tester ses améliorations en local sur sa propre machine. 
+Un code de conduite est disponible [ici](https://github.com/edunumsec2/book/blob/master/CODE_OF_CONDUCT.md). 
 
 ## Documents importants
 
@@ -144,33 +123,6 @@ Pour arrêter le serveur : <kbd>CTRL</kbd>+<kbd>c</kbd> ou <kbd>⌘</kbd>+<kbd>c
 - Génération du build 'Apprendre' : `sphinx-build -b html docs/apprendre build/apprendre`
 - Génération du build 'Enseigner' : `sphinx-build -b html docs/enseigner build/enseigner`
 
-## Exemples d'utilisation des ressources
-
-⚠️ *Attention : les utilisations suivantes sont présentes à titre indicatif mais ne seront effectives qu'après la phase pilote.* 
-
-### Utilisation en ligne
-
-1. Je me rends sur https://modulo-info.ch
-2. Je navigue à travers les différents chapitres du cours. 
-3. Si une information m'intéresse, par exemple une anecdote historique, un angle d'attaque pour une notion, un exemple particulier, voire même une séquence entière de cours théorique, je prends des notes et la réutilise à souhait dans mes leçons. 
-4. Je parcours les idées d'activité et je choisis celles qui m'intéressent. 
-5. J'utilise les séries d'exercices à disposition comme "devoirs" pour mes élèves. 
-6. Je demande à mes élèves de lire certains chapitres en préparation des cours. Je reprends les notions essentielles en classe.  
-
-### Modifications indépendantes
-
-1. Si certains contenus m'intéressent mais que je considère qu'ils pourraient être transformés pour être plus efficaces, je peux à tout moment aller consulter les fichiers sources. 
-2. Je reviens sur ce dépôt Github.
-3. Je retrouve le chapitre qui m'intéresse. 
-4. Je télécharge le fichier source. 
-5. Je le retravaille pour en faire ma propre version. 
-
-### Participation au développement
-
-1. Je me réfère au chapitre [installation](#installation). 
-2. Une fois que l'environnement est installé, plusieurs options s'offrent à moi. 
-3. Je peux travailler à l'amélioration des ressources en tant que *correcteur*. Dans ce cas, j'utilise les fonctions [issues](https://github.com/edunumsec2/book/issues) et [discussions](https://github.com/edunumsec2/book/discussions) de Github et je propose des améliorations ou des modifications qui me paraissent importantes. 
-4. Je peux travailler en tant que *rédacteur*. Dans ce cas je crée une branche, je propose des contenus originaux à l'intérieur d'un chapitre - séquences théoriques, activités, séries d'exercices, et je les soumets aux autres utilisateurs pour validation via un pull-request.
 
 ## Comité de rédaction
 
