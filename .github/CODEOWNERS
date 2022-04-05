@@ -8,64 +8,64 @@
 # Apprendre
 
 # Pour la partie Représentation de l'information : 
-/content/appr/theme/rep-info/ @dasilvadds
-/content/appr/theme/rep-info/ @ofleveque
+/src/appr/rep-info/ @dasilvadds
+/src/appr/rep-info/ @ofleveque
 
 # Pour la partie Programmation : 
-/content/appr/theme/prog1/ @rasql
-/content/appr/theme/prog1/ @G-Racine
-/content/appr/theme/prog1/ @rasql
-/content/appr/theme/prog1/ @G-Racine 
+/src/appr/prog1/ @rasql
+/src/appr/prog1/ @G-Racine
+/src/appr/prog1/ @rasql
+/src/appr/prog1/ @G-Racine 
 
 # Pour la partie Algorithmique : 
-/content/appr/theme/algo1/ @biljana-petreska-gyyv
-/content/appr/theme/algo1/ @mihersch
-/content/appr/theme/algo1/ @biljana-petreska-gyyv
-/content/appr/theme/algo1/ @mihersch
+/src/appr/algo1/ @biljana-petreska-gyyv
+/src/appr/algo1/ @mihersch
+/src/appr/algo1/ @biljana-petreska-gyyv
+/src/appr/algo1/ @mihersch
 
 # Pour la partie Architecture des ordinateurs : 
-/content/appr/theme/archi/ @jppellet
-/content/appr/theme/archi/ @prochat
+/src/appr/archi/ @jppellet
+/src/appr/archi/ @prochat
 
 # Pour la partie Réseaux : 
-/content/appr/theme/reseaux/ @mihersch
+/src/appr/resx/ @mihersch
 
 # Pour la partie Histoire : 
-/content/appr/theme/reseaux/ @prochat
+/src/appr/hist/ @prochat
 
 Enseigner 
 
 # Apprendre
 
 # Pour la partie Représentation de l'information : 
-/content/ens/theme/rep-info/ @dasilvadds
-/content/ens/theme/rep-info/ @ofleveque
+/src/ens/rep-info/ @dasilvadds
+/src/ens/rep-info/ @ofleveque
 
 # Pour la partie Programmation : 
-/content/ens/theme/prog1/ @rasql
-/content/ens/theme/prog1/ @G-Racine
-/content/ens/theme/prog2/ @rasql
-/content/ens/theme/prog2/ @G-Racine 
+/src/ens/prog1/ @rasql
+/src/ens/prog1/ @G-Racine
+/src/ens/prog2/ @rasql
+/src/ens/prog2/ @G-Racine 
 
 # Pour la partie Algorithmique : 
-/content/ens/theme/algo1/ @biljana-petreska-gyyv
-/content/ens/theme/algo1/ @mihersch
-/content/ens/theme/algo2/ @biljana-petreska-gyyv
-/content/ens/theme/algo2/ @mihersch
+/src/ens/algo1/ @biljana-petreska-gyyv
+/src/ens/algo1/ @mihersch
+/src/ens/algo2/ @biljana-petreska-gyyv
+/src/ens/algo2/ @mihersch
 
 # Pour la partie Architecture des ordinateurs : 
-/content/ens/theme/archi/ @jppellet
-/content/ens/theme/archi/ @prochat
+/src/ens/archi/ @jppellet
+/src/ens/archi/ @prochat
 
 # Pour la partie Réseaux : 
-/content/ens/theme/reseaux/ @mihersch
+/src/ens/resx/ @mihersch
 
 # Pour la partie Histoire : 
-/content/ens/theme/reseaux/ @prochat
+/src/ens/hist/ @prochat
 
 # Pour la partie Enjeux sociaux : 
-/content/ens/theme/reseaux/ @vhaussau
-/content/ens/theme/reseaux/ @Lucile24
-/content/ens/theme/reseaux/ @noflux
+/src/ens/enjx/ @vhaussau
+/src/ens/enjx/ @Lucile24
+/src/ens/enjx/ @noflux
 
 
