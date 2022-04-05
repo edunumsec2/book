@@ -2,4 +2,8 @@
 Architecture des ordinateurs
 ===========================
 
-Dans ce chapitre ...
+```{toctree}
+:maxdepth: 2
+:hidden:
+Activités <activ/index>
+```
