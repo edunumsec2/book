@@ -3,8 +3,8 @@
 Dans ce chapitre, nous allons voir de plus près le concept de la fonction, concept que nous avons vu dès le deuxième chapitre comme façon de donner un nom à une séquence d'instructions. Ici nous allons voir comment nous pouvons ajouter un ou plusieurs paramètres à une fonction. Nous allons voir que :
 
 - l'expression `def f(x):` permet de définir une fonction,
-- un paramètre `f(par)` est une variable dans la définition de fonction,
-- un argument `f(arg)` est une valeur dans l'appel de fonction.
+- un paramètre `f(x)` est une variable (`x`) dans la définition de fonction,
+- un argument `f(2)` est une valeur (`2`) dans l'appel de fonction.
 
 ```{question}
 En Python, `def` est un raccourci pour
@@ -109,8 +109,8 @@ from turtle import *
 getscreen().bgcolor('lightgreen')
 up()
 
-def maison(x, y):
-    goto(x, y)
+def maison(p):
+    goto(p)
     down()
     forward (70)
     for a in (90, 45, 90, 45):
@@ -119,9 +119,9 @@ def maison(x, y):
     left(90)
     up()
 
-maison(0, -80)
-maison(-200, 20)
-maison(120, 40)
+maison((0, -80))
+maison((-200, 20))
+maison((120, 40))
 ```
 
 ## Taille de la maison
@@ -134,8 +134,8 @@ from turtle import *
 getscreen().bgcolor('lightgreen')
 up()
 
-def maison(x, y, d):
-    goto(x, y)
+def maison(p, d):
+    goto(p)
     down()
     forward (1.4 * d)
     for a in (90, 45, 90, 45):
@@ -144,9 +144,9 @@ def maison(x, y, d):
     left(90)
     up()
 
-maison(-20, -80, 70)
-maison(-200, 20, 50)
-maison(120, 40, 40)
+maison((-20, -80), 70)
+maison((-200, 20), 50)
+maison((120, 40), 40)
 ```
 
 ## Couleur de la maison
@@ -159,8 +159,8 @@ from turtle import *
 getscreen().bgcolor('lightgreen')
 up()
 
-def maison(x, y, d, couleur):
-    goto(x, y)
+def maison(p, d, couleur):
+    goto(p)
     down()
     fillcolor(couleur)
     begin_fill()
@@ -172,9 +172,9 @@ def maison(x, y, d, couleur):
     end_fill()
     up()
 
-maison(-20, -80, 70, 'lightblue')
-maison(-200, 20, 50, 'yellow')
-maison(120, 40, 40, 'pink')
+maison((-20, -80), 70, 'lightblue')
+maison((-200, 20), 50, 'yellow')
+maison((120, 40), 40, 'pink')
 ```
 
 ## Maison avec porte
@@ -199,8 +199,8 @@ def mur(d):
         forward(d)
     left(90)
 
-def maison(x, y, d, col1, col2):
-    goto(x, y)
+def maison(p, d, col1, col2):
+    goto(p)
     down()
     fillcolor(col1)
     begin_fill()
@@ -214,9 +214,9 @@ def maison(x, y, d, col1, col2):
     end_fill()
     up()
 
-maison(-20, -80, 70, 'lightblue', 'red')
-maison(-200, 20, 50, 'yellow', 'blue')
-maison(120, 40, 40, 'pink', 'violet')
+maison((-20, -80), 70, 'lightblue', 'red')
+maison((-200, 20), 50, 'yellow', 'blue')
+maison((120, 40), 40, 'pink', 'violet')
 ```
 
 ## Valeurs par défaut
@@ -241,8 +241,8 @@ def mur(d):
         forward(d)
     left(90)
 
-def maison(x, y, d=50, col1='yellow', col2='blue'):
-    goto(x, y)
+def maison(p, d=50, col1='yellow', col2='blue'):
+    goto(p)
     down()
     fillcolor(col1)
     begin_fill()
@@ -256,10 +256,10 @@ def maison(x, y, d=50, col1='yellow', col2='blue'):
     end_fill()
     up()
 
-maison(-20, -80)
-maison(-200, 20, col1='lime')
-maison(120, 40, col2='red')
-maison(-170, -140, d=80)
+maison((-20, -80))
+maison((-200, 20), col1='lime')
+maison((120, 40), col2='red')
+maison((-170, -140), d=80)
 ```
 
 ## Le coronavirus

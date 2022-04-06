@@ -6,6 +6,15 @@ Dans ce chapitre, nous allons voir la **composition typographique** d'un texte d
 - l'option `font=(police, taille, style)` permet de choisir son style,
 - l'option `align='center'` permet de choisir son alignement.
 
+```{question}
+La fonction `write()` écrit un texte dans le canvas de la tortue. Avec des options nous pouvons changer
+
+{v}`la taille`  
+{v}`la police`  
+{v}`le style`  
+{v}`l'alignement`
+```
+
 ## La fonction `write()`
 
 La fonction `write()` permet d'afficher un texte à la position de la tortue.
