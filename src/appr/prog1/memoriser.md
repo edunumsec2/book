@@ -71,11 +71,6 @@ Dans ce chapitre **Mémoriser**, nous allons définissons deux variables `a` et 
 Aujoutez une variable `alpha` pour l'angle et utilisez-la dans le corps de la fonction.
 ```
 
-```{exercise}
-Aujoutez une variable `alpha` pour l'angle et utilisez-la dans le corps de la fonction.
-```
-
-
 ```{codeplay}
 from turtle import *
 
@@ -102,7 +97,7 @@ Quel est l'avantage ?
 - il devient facile de changer les dimensions
 
 ```{admonition} Exercice
-Modifiez la variable `alpha` en mettant 80 et ensuite 90 degrés.
+Modifiez la variable `angle` en mettant 80 et ensuite 90 degrés.
 ```
 
 ```{codeplay}
@@ -355,17 +350,13 @@ r = 20      # rayon du coeur
 
 def coeur():
     left(90)
-    circle(50, 225)
-    forward(120)
+    circle(50, 225)     # exprimez 50 par r
+    forward(120)        # exprimez 120 par r 
     left(90)
-    forward(120)
-    circle(50, 225)
+    forward(120)        # exprimez 120 par r
+    circle(50, 225)     # exprimez 50 par r
     left(90)
 
-coeur()
-
-r = 100
-forward(40)
 coeur()
 ```
 
@@ -380,15 +371,11 @@ r = 30      # rayon du symbole
 w = 1       # épaisseur
 
 def infini():
-    forward(100)
-    circle(50, 270)
-    forward(100)
-    circle(-50, 270)
+    forward(100)        # exprimez 100 par r
+    circle(50, 270)     # exprimez 50 par r
+    forward(100)        # exprimez 100 par r
+    circle(-50, 270)    # expriemz -50 par r
 
-infini()
-
-r = 100
-left(20)
 infini()
 ```
 
@@ -403,13 +390,9 @@ r = 50      # rayon du symbole
 
 def bretzel():
     for i in range(4):
-        forward(80)
-        circle(30, 270)
+        forward(80)         # exprimez 80 par r
+        circle(30, 270)     # exprimez 30 par r
 
-bretzel()
-
-r = 80
-left(20)
 bretzel()
 ```
 
@@ -426,10 +409,10 @@ a = 50      # hauteur d'une lettre
 def n():
     down()
     left(90)
-    forward(80)
+    forward(80)         # exprimez 80 par a
     backward(40)
-    circle(-40, 180)
-    forward(40)
+    circle(-40, 180)    # exprimez -40 par a
+    forward(40)         # exprimez 40 par a
     left(90)
     up()
     forward(20)

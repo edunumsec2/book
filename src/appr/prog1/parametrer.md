@@ -389,3 +389,97 @@ ligne(('yellow', 'yellow', 'yellow', 'white'))
 ```
 
 **Exercice** : Dessinez un autre Pokemon.
+
+## Exercices
+
+### Stickman
+
+```{codeplay}
+from turtle import *
+up()
+
+
+def leg(angle, a):
+    left(angle)
+    forward(a)
+    backward(a)
+    right(angle)
+
+def stickman(a, bras=(30, -45), jambes=(10, -30)):
+    seth(0)
+    down()
+    circle(a/2)       # tête
+    right(90)
+    forward(a/2)    # cou
+    
+    leg(bras[0], a)
+    leg(bras[1], a)
+    forward(a)
+    
+    leg(jambes[0], a)
+    leg(jambes[1], a)
+    up()
+
+goto(-200, 0)      
+stickman(20)
+
+goto(-100, 0)      
+stickman(20, (90, -110))
+
+goto(0, 0)      
+stickman(30, (90, -110), (110, -24))
+hideturtle()
+```
+
+### Hypnose
+
+```{codeplay}
+from turtle import *
+tracer(0)
+width(10)
+color('blue')
+
+def star(n=7, a=400):
+    for i in range(n):
+        forward(a)
+        backward(a)
+        left(360/n)
+
+while True:
+    clear()
+    star(13)
+    left(1)
+    update()
+```
+
+
+
+### Spiral
+
+```{codeplay}
+from turtle import *
+tracer(0)
+width(5)
+
+a = 0
+b = 0
+
+def spiral(n=10):
+    goto(0, 0)
+    for i in range(200):
+        forward(i)
+        left(360/n)
+
+while True:
+    clear()
+    seth(a)
+    a += 1
+    color('red')
+    spiral()
+    
+    seth(b)
+    b += -1
+    color('blue')
+    spiral(-10)
+    update()
+```
