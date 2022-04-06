@@ -10,6 +10,10 @@ Dans ce chapitre, nous allons voir la **composition typographique** d'un texte d
 
 La fonction `write()` permet d'afficher un texte à la position de la tortue.
 
+```{admonition} Exercice
+Déplacez la tortue quelque part et ajoutez un deuxième bout de texte.
+```
+
 ```{codeplay}
 from turtle import *
 
@@ -20,6 +24,10 @@ write('ceci est une phrase écrite par la tortue.')
 
 La fonction `write()` possède un paramètre optionnel `font` pour indiquer la police, la taille et le style.
 La valeur par défaut est `('Arial', 8, 'normal')`
+
+```{admonition} Exercice
+Essayez de trouvez la taille maxiumum de texte que vous pouvez écrire.
+```
 
 ```{codeplay}
 from turtle import *
@@ -40,6 +48,10 @@ En typographie, une **police d'écriture** est un ensemble de signes graphiques 
 - **Courier** - police mono-espace, utilisée pour du code
 - **Didot** - police ancienne et élégante
 - **Zapfino** - police manuscrite
+
+```{admonition} Exercice
+Ecrivez deux lignes de texte en style manuscrit utilsant la police Zapfino.
+```
 
 ```{codeplay}
 from turtle import *
@@ -77,6 +89,10 @@ Le paramètre optionnel `align` permet de choisir parmi 3 types d'alignements :
 - centre (`'center'`)
 - droite (`'right'`)
 
+```{admonition} Exercice
+Ecrivez 3-4 lignes de texte en forme de poème qui sont centrées.
+```
+
 ```{codeplay}
 from turtle import *
 
@@ -92,6 +108,10 @@ for a in ('left', 'center', 'right'):
 Le paramètre optionnel `move` permet de choisir si la tortue se déplace à la fin du texte. Par défaut ce paramètre est `False`.
 Ce programme place chaque mot en escalier.
 
+```{admonition} Exercice
+Que se passe-t-il si vous mettez `move=False` ?
+```
+
 ```{codeplay}
 from turtle import *
 
@@ -103,9 +123,11 @@ for mot in mots:
     forward(30)
 ```
 
-**Exercice** : Changez l'angle de rotation dans `left()`.
-
 ## Texte en couleur
+
+```{admonition} Exercice
+Ecrivez les lignes sur la même ligne, en utilisant l'option `move=True`.
+```
 
 ```{codeplay}
 from turtle import *
@@ -124,8 +146,7 @@ Si vous exécutez `write()` dans ce site avec [Skulpt](https://skulpt.org), la c
 
 ## Texte aligné
 
-Le texte suivant est un extrait du *Petit Prince* d'Antoine de Saint-Exupéry. Pour ne pas introduire des retours à la ligne, la phrase est délimitée avec le symbole `\` en fin de ligne.
-
+Le texte suivant est une phrase celèbre de *Star Wars*.
 Les mots sont alignés à gauche, au centre et à droite.
 
 ```{codeplay}
@@ -166,7 +187,7 @@ def case(nombre):
         left(90)
     forward(d/2)
     if nombre > 0:
-        write(nombre, font=(None, 36), align='center')
+        write(nombre, font=(None, d), align='center')
     forward(d/2)
     
 back(200)
@@ -254,7 +275,7 @@ ligne1 = (5, 3, 0, 0, 7, 0, 0, 0, 0)
 ligne2 = (6, 0, 0, 1, 9, 5, 0, 0, 0)
 ...
 
-d = 40
+d = 30
 
 def case(nombre):
     for i in range(4):
@@ -262,7 +283,7 @@ def case(nombre):
         left(90)
     forward(d/2)
     if nombre > 0:
-        write(nombre, font=(None, 36), align='center')
+        write(nombre, font=(None, d), align='center')
     forward(d/2)
 
 backward(4.5 * d)
