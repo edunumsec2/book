@@ -10,13 +10,14 @@ Dans cette section, nous allons comprendre comment les ordinateurs parviennent �
 ```{toctree}
 :maxdepth: 2
 :hidden:
-Introduction <intro>
-1. Les entiers <entiers>
-2. Les caractères <caracteres>
-3. Les images <images>
-4. Le son <son>
-5. Redondance <redondance>
-Conclusion <conclusion>
+:numbered: 1
+intro
+entiers
+caracteres
+images
+son
+redondance
+conclusion
 ```
 
 ## Objectifs de la thématique
