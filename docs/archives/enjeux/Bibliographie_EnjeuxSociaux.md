@@ -1,10 +1,3 @@
-
-
-<!-- Test de mise en page -->
-
- <!DOCTYPE html>
-<html>
-<head>
 <style>
 .button {
   background-color: white;
@@ -78,8 +71,6 @@ ol {
 }
 
 </style>
-</head>
-</html>
 
 
 

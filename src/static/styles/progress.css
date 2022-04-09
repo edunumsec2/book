@@ -1,0 +1,35 @@
+#progress-ring {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, .5);
+  -webkit-filter: drop-shadow( 2px 3px 8px rgba(0, 0, 0, .35));
+  filter: drop-shadow( 2px 3px 8px rgba(0, 0, 0, .35))
+}
+
+body.modulo-dark #progress-ring {
+  background-color: #272822;
+}
+
+#progress-ring .progress {
+  stroke: #5933d1ff;
+  stroke-width: 6;
+  transition: stroke-dashoffset 0.25s;
+  transition: stroke-width 0.1s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  fill: transparent;
+  fill-opacity: 0;
+}
+
+#progress-ring .outer {
+  stroke: rgb(187, 187, 187);
+  stroke-width: 6;
+  fill-opacity: 0;
+  transition: stroke-width 0.1s;
+  fill: transparent;
+  fill-opacity: 0;
+}

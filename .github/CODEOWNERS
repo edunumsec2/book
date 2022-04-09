@@ -1,0 +1,71 @@
+# Ce fichier spécifie les membres du dépôt ayant les droits 
+# de review des pull-requests effectués sur leurs sources. 
+
+# Les utilisateurs suivants sont alertés pour toute 
+# modification sur l'ensemble des sources : 
+* @redelmann @elliotvaucher
+
+# Apprendre
+
+# Pour la partie Représentation de l'information : 
+/src/appr/rep-info/ @dasilvadds
+/src/appr/rep-info/ @ofleveque
+
+# Pour la partie Programmation : 
+/src/appr/prog1/ @rasql
+/src/appr/prog1/ @G-Racine
+/src/appr/prog1/ @rasql
+/src/appr/prog1/ @G-Racine 
+
+# Pour la partie Algorithmique : 
+/src/appr/algo1/ @biljana-petreska-gyyv
+/src/appr/algo1/ @mihersch
+/src/appr/algo1/ @biljana-petreska-gyyv
+/src/appr/algo1/ @mihersch
+
+# Pour la partie Architecture des ordinateurs : 
+/src/appr/archi/ @jppellet
+/src/appr/archi/ @prochat
+
+# Pour la partie Réseaux : 
+/src/appr/resx/ @mihersch
+
+# Pour la partie Histoire : 
+/src/appr/hist/ @prochat
+
+Enseigner 
+
+# Apprendre
+
+# Pour la partie Représentation de l'information : 
+/src/ens/rep-info/ @dasilvadds
+/src/ens/rep-info/ @ofleveque
+
+# Pour la partie Programmation : 
+/src/ens/prog1/ @rasql
+/src/ens/prog1/ @G-Racine
+/src/ens/prog2/ @rasql
+/src/ens/prog2/ @G-Racine 
+
+# Pour la partie Algorithmique : 
+/src/ens/algo1/ @biljana-petreska-gyyv
+/src/ens/algo1/ @mihersch
+/src/ens/algo2/ @biljana-petreska-gyyv
+/src/ens/algo2/ @mihersch
+
+# Pour la partie Architecture des ordinateurs : 
+/src/ens/archi/ @jppellet
+/src/ens/archi/ @prochat
+
+# Pour la partie Réseaux : 
+/src/ens/resx/ @mihersch
+
+# Pour la partie Histoire : 
+/src/ens/hist/ @prochat
+
+# Pour la partie Enjeux sociaux : 
+/src/ens/enjx/ @vhaussau
+/src/ens/enjx/ @Lucile24
+/src/ens/enjx/ @noflux
+
+
