@@ -30,7 +30,7 @@ Au travers de cette lecture, l'élève pourra ainsi décourir les notions de :
 
 ## Matériel
 ### Le document
-{download}`document <media/OrdinateurAntique.pdf>`
+{download}`document <../media/OrdinateurAntique.pdf>`
 
 ## Déroulement
 

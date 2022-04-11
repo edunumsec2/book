@@ -32,12 +32,13 @@ Cette vidéo d'introduction, dans la série des shadocks, explique très clairem
 ### Les documents
 
 Nous mettons à disposition cette  
-{download}`video <media/Shadoks ZOx44>`. Attention : la qualité est celle d'un enregistrement VHS.
+<video media/Shadoks ZOx44>. Attention : la qualité est celle d'un enregistrement VHS.
+{download}`document <../media/Shadoks ZOx44>`
 
 ## Déroulement
 
 1. Expliquer la notion de base
 2. Passer la vidéo
-3. Au tableau : construire un tableau d'équivalence entre la base 10, 4, 2 et 16 (hexa)
+3. Au tableau : construire un tableau d'équivalence entre la base 10, 4, 2 et 16 (hexadécimal), pour les valeurs de 0 à 15.
 
 
