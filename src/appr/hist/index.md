@@ -4,6 +4,7 @@
 ```{toctree}
 :maxdepth: 2
 :hidden:
+main1
 Histoire des machines <machines>
 ```
 
