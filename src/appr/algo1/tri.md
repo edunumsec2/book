@@ -12,7 +12,7 @@ Y a-t-il des objets chez vous, que vous feriez mieux de ranger dans un ordre bie
 
 ````
 
-# 2. Trie, cherche et trouve
+# Trie, cherche et trouve
 
 Pour l'instant il faut nous croire sur parole, mais si l'on veut pouvoir trouver une information parmi une avalanche d'informations, il faut que ces informations soient bien rangées. L'exemple de la bibliothèque ci-dessus illustre ce besoin de manière intuitive, mais vous allez pouvoir l'expérimenter concrètement dans le chapitre Algorithmique II. 
 

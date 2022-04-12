@@ -1,5 +1,5 @@
 
-# 1. Les algorithmes
+# Les algorithmes
 
 La première question que l'on va se poser est la suivante : qu'est-ce qu'un {glo}`algo|algorithme` ? Est-ce la même chose qu'un programme informatique, ou s'agit-il d'autre chose ?
 

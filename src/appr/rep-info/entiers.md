@@ -1,4 +1,4 @@
-# 1. Les entiers
+# Les entiers
 
 La plupart des civilisations humaines utilise le système décimal.
 Pourquoi ? Tout simplement parce que nous avons 10 doigts !

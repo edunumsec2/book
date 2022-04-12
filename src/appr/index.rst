@@ -4,7 +4,7 @@
 APPRENDRE l'informatique au gymnase
 ===================================
 
-Bienvenue dans les ressources pour l'informatique au gymnase. 
+Bienvenue dans les ressources pour l'informatique au Gymnase. 
 Ces ressources ont été conçues pour vous accompagner dans votre découverte de l'informatique.
 
 Vous pouvez faire un tour à travers les différentes catégories dans l'ordre que vous souhaitez. 
@@ -43,7 +43,7 @@ n'hésitez pas à nous les partager sur team@modulo-info.ch !
    glossaire
 
 
-Les ressources sont découpées selon un chapitrage qui correspond au `plan d'études <https://files.modulo-info.ch/pe.pdf>`_ romand pour l'informatique au Gymnase. Elles sont divisées en quatre parties, dont nulle n'a de préséance sur les autres. Il appartient à l'enseignante ou l'enseignant de choisir l'ordre dans lequel les contenus sont abordés. Le fait que les chapitres soient successifs est le résultat des limitations de l'affichage. Pour atténuer quelque peu ce problème, nous avons choisi de renoncer à une numérotation des chapitres. 
+Les ressources sont découpées selon un chapitrage qui correspond au `plan d'études <https://files.modulo-info.ch/pe.pdf>`_ romand pour l'informatique au Gymnase. 
 
 `Représentation de l'information <https://apprendre.modulo-info.ch/content/appr/theme/rep-info/accueil/eleve.html>`_
 : ce chapitre traite du passage du système décimal au *système binaire*, ainsi que des problématiques de traitement des données telles que *l'encodage*, *la compression*, *l'échantillonnage*, *le cryptage*, et la *représentation des caractères, des images et des sons* sous forme de bits. 

@@ -55,24 +55,25 @@ Nous avons tous entendu parler des algorithmes. Normal, c’est le mot à la mod
 ```{toctree}
 :maxdepth: 2
 :hidden:
-Introduction <intro>
-1. Les algorithmes <algorithmes>
-2. Trie, cherche et trouve <tri>
-3. Des algorithmes aux programmes <algo-progs>
-Conclusion <conclusion>
+:numbered: 1
+intro
+algorithmes
+tri
+algo-progs
+conclusion
 ```
 
 ## Objectifs de la thématique
 
 À la fin de ce chapitre, vous saurez ce qu'est un algorithme et vous serez capable de transcrire des algorithmes en programmes. Vous saurez résoudre des problèmes, en décomposant leur solution en étapes à suivre. Vous verrez également que pour un même problème, on peut avoir plusieurs solutions avec des propriétés, avantages et désavantages différents. 
 
-{fa}`check, text-success mr-1`Se familiariser avec la notion d’algorithme.
+- Se familiariser avec la notion d’algorithme.
 
-{fa}`check, text-success mr-1`Savoir résoudre des problèmes, en décomposant leur solution en étapes à suivre.
+- Savoir résoudre des problèmes, en décomposant leur solution en étapes à suivre.
 
-{fa}`check, text-success mr-1`Savoir que pour un même problème, on peut avoir plusieurs solutions avec différents propriétés, avantages et désavantages.
+- Savoir que pour un même problème, on peut avoir plusieurs solutions avec différents propriétés, avantages et désavantages.
 
-{fa}`check, text-success mr-1`Être capable de transcrire un algorithme dans un programme.
+- Être capable de transcrire un algorithme dans un programme.
 
 Bienvenue dans le monde fascinant des algorithmes.
 
