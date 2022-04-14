@@ -1,4 +1,4 @@
-# Dessiner - `forward`
+# Dessiner - `forward()`
 
 Dans ce chapitre, nous explorons ce que c'est un programme et nous prenons
  la métaphore du dessin. Ici, un programme est une séquence d'instructions pour dessiner une image.

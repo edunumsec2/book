@@ -41,6 +41,10 @@ Python connait six types de comparaisons :
 - plus grand  (`>`),
 - plus grand ou égal (`>=`).
 
+```{caution}
+Il ne faut pas confondre l'opérateur d'affectation (`x = 3`) avec l'opérateur de comparaison (`x == 2`).
+```
+
 Le résultat d'une comparaison est une valeur booléenne, soit `True` soit `False`.
 
 Voici quelques exemples :
@@ -54,8 +58,13 @@ print('(x < 2) =', x < 2)
 print('(x == 2) =', x == 2)
 ```
 
-```{caution}
-Il ne faut pas confondre l'opérateur d'affectation (`x = 3`) avec l'opérateur de comparaison (`x == 2`).
+```{question}
+L'expression `x == 2`
+
+{f}`met la valeur 2 dans la variable x`  
+{v}`compare deux valeurs`  
+{f}`affecte la variable x avec une valeur`  
+{v}`retourne True ou False`
 ```
 
 ## Le signe d'un nombre
@@ -117,7 +126,7 @@ Pour le choix du jouer on pourrait lui faire entrer les mots `pierre`, `papier`,
 
 En interne, nous utilisons 1, 2, et 3 pour désigner les 3 choix. Dans un programme informatique, c'est plus efficace d'utiliser des entiers pour designer des choses. Pour l'utilisateur humain par contre, des mots sont plus compréhensibles. Nous utilisons un tuple pour faire la conversion d'un entier vers un mot. Comme l'indexage en Python commence toujours avec 0, nous devons décaler l'index de un avec l'expression `[i-1]`.
 
-Un grand avantage de séparer la logique abstraite du jeu, et les mots concrets, c'est qu'il devient très facile de traduire le jeux dans une autre langue. Par exemple, il suffit de changer le tuple `objets` en `('rock', 'paper', 'cissors')` pour traduire en anglais, ou `('Stein', 'Papier', 'Schere')` pour le traduire en allemand.
+Un grand avantage de séparer la logique abstraite du jeu, et les mots concrets, est qu'il devient très facile de traduire le jeu dans une autre langue. Par exemple, il suffit de changer le tuple `objets` en `('rock', 'paper', 'cissors')` pour traduire en anglais, ou `('Stein', 'Papier', 'Schere')` pour le traduire en allemand.
 
 ```{codeplay}
 objets = ('pierre', 'papier', 'ciseaux')
@@ -187,7 +196,7 @@ else:
 
 ### Jouer en boucle
 
-Maintenant nous pouvons tous mettre dans une boucle pour jouer multiples fois.
+Maintenant nous pouvons tout mettre dans une boucle pour jouer multiples fois.
 Dans la première ligne, nous indiquons le tour. Comme pour l'indexage des objets, quand nous affichons le nombre du tour, nous le décalons d’un avec l'expression `n+1`.
 
 ```{codeplay}
@@ -372,7 +381,7 @@ langue = input('1=Français, 2=Anglais, 3=Allemand: ')
 
 ### Big Bang Theory
 
-Une nouvelle variante de pierre-papier-ciseaux a été popularisée par la série américaine The Big Bang Theory. Il s'agit de **Pierre-Papier-Ciseaux-Lézard-Spock**. Ici, les règles classiques s'appliquent, mais il faut ajouter que le lézard mange le papier, empoisonne Spock, est écrasé par la pierre et est décapité par les ciseaux. Spock vaporise la pierre, casse les ciseaux, et est discrédité par le papier.
+Une nouvelle variante de pierre-papier-ciseaux a été popularisée par la série américaine The Big Bang Theory. Il s'agit de **Pierre-Papier-Ciseaux-Lézard-Spock**. Ici, les règles classiques s'appliquent, mais il faut ajouter que le lézard mange le papier, empoisonne Spock, il est écrasé par la pierre et est décapité par les ciseaux. Spock vaporise la pierre, casse les ciseaux, et est discrédité par le papier.
 
 ```{youtube} llq528pnv9c
 ```

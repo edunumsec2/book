@@ -215,47 +215,11 @@ for c in ('pink', 'red', 'pink', 'red', 'pink'):
 
 **Exercice** : Il manque un pétale, corrigez le programme.
 
-## Sourire
+## Smiley
 
-Dans cet exemple nous allons parcourir différentes épaisseurs et nous appelons notre variable `w` (width). Voici quatre smileys avec différentes formes de bouche.
-
-```{codeplay}
-:file: tuple7.py
-from turtle import *
-getscreen().bgcolor('lightgreen')
-up()
-
-def smiley():
-    dot(100, 'yellow')
-
-    left(45)
-    forward(20)
-    dot(15)
-
-    right(45)
-    backward(30)
-    dot(15)
-
-    right(90)
-    forward(30)
-    left(90)
-    down()
-    forward(30)
-    up()
-
-backward(200)
-for w in (1, 5, 10, 20):
-    width(w)
-    smiley()
-    forward(120)
-    left(5)
-```
+Dans cet exemple nous allons parcourir différentes diamètres de la bouche à l'aide d'une variable que nous appelons `d`. Voici quatre smileys avec différentes formes de bouche.
 
 **Exercice** : Faites varier un autre paramètre, par exemple la distance des yeux, ou la taille d'un œil.
-
-## Étonnement
-
-Cette fois, nous faisons varier le diamètre de la bouche.
 
 ```{codeplay}
 :file: tuple8.py

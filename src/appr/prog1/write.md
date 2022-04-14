@@ -1,4 +1,4 @@
-# Typographier - `write`
+# Typographier - `write()`
 
 Dans ce chapitre, nous allons voir la **composition typographique** d'un texte dans un contexte graphique. Nous allons découvrir sa taille, sa couleur, sa police et son alignement. Nous allons voir que :
 
@@ -6,9 +6,22 @@ Dans ce chapitre, nous allons voir la **composition typographique** d'un texte d
 - l'option `font=(police, taille, style)` permet de choisir son style,
 - l'option `align='center'` permet de choisir son alignement.
 
+```{question}
+La fonction `write()` écrit un texte dans le canvas de la tortue. Avec des options nous pouvons changer
+
+{v}`la taille`  
+{v}`la police`  
+{v}`le style`  
+{v}`l'alignement`
+```
+
 ## La fonction `write()`
 
 La fonction `write()` permet d'afficher un texte à la position de la tortue.
+
+```{admonition} Exercice
+Déplacez la tortue quelque part et ajoutez un deuxième bout de texte.
+```
 
 ```{codeplay}
 from turtle import *
@@ -21,14 +34,18 @@ write('ceci est une phrase écrite par la tortue.')
 La fonction `write()` possède un paramètre optionnel `font` pour indiquer la police, la taille et le style.
 La valeur par défaut est `('Arial', 8, 'normal')`
 
+```{admonition} Exercice
+Essayez de trouvez la taille maxiumum de texte que vous pouvez écrire.
+```
+
 ```{codeplay}
 from turtle import *
 
 left(90)
 forward(120)
-for t in (8, 12, 18, 24, 36, 64):
-    backward(1.5 * t)
-    write('taille ' + str(t), font=(None, t))
+for taille in (8, 12, 18, 24, 36, 64):
+    backward(1.5 * taille)
+    write(taille, font=('Arial', taille))
 ```
 
 ## Police
@@ -41,14 +58,18 @@ En typographie, une **police d'écriture** est un ensemble de signes graphiques 
 - **Didot** - police ancienne et élégante
 - **Zapfino** - police manuscrite
 
+```{admonition} Exercice
+Ecrivez deux lignes de texte en style manuscrit utilsant la police Zapfino.
+```
+
 ```{codeplay}
 from turtle import *
 
 left(90)
 forward(150)
-for p in ('Arial', 'Times', 'Courier', 'Didot', 'Zapfino'):
+for police in ('Arial', 'Times', 'Courier', 'Didot', 'Zapfino'):
     back(60)
-    write(p, font=(p, 24))
+    write(police, font=(police, 24))
 ```
 
 ## Style
@@ -64,9 +85,9 @@ from turtle import *
 
 left(90)
 forward(180)
-for s in ('normal', 'italic', 'bold', 'bold italic'):
+for style in ('normal', 'italic', 'bold', 'bold italic'):
     backward(90)
-    write(s, font=(None, 48, s))
+    write(style, font=('Arial', 48, style))
 ```
 
 ## Alignement
@@ -77,6 +98,10 @@ Le paramètre optionnel `align` permet de choisir parmi 3 types d'alignements :
 - centre (`'center'`)
 - droite (`'right'`)
 
+```{admonition} Exercice
+Ecrivez 3-4 lignes de texte en forme de poème qui sont centrées.
+```
+
 ```{codeplay}
 from turtle import *
 
@@ -84,7 +109,7 @@ left(90)
 forward(150)
 for a in ('left', 'center', 'right'):
     backward(100)
-    write(a, font=(None, 48), align=a)
+    write(a, font=('Arial', 48), align=a)
 ```
 
 ## Texte en escalier
@@ -92,152 +117,67 @@ for a in ('left', 'center', 'right'):
 Le paramètre optionnel `move` permet de choisir si la tortue se déplace à la fin du texte. Par défaut ce paramètre est `False`.
 Ce programme place chaque mot en escalier.
 
+```{admonition} Exercice
+Que se passe-t-il si vous mettez `move=False` ?
+```
+
 ```{codeplay}
 from turtle import *
 
-phrase = 'des mots en escalier'
+mots = ('des', 'mots', 'en', 'escalier')
 
 left(90)
-for mot in phrase.split():
-    write(mot, font=(None, 16), move=True)
+for mot in mots:
+    write(mot, font=('Arial', 16), move=True)
     forward(30)
 ```
 
-**Exercice** : Changez l'angle de rotation dans `left()`.
-
 ## Texte en couleur
+
+```{admonition} Exercice
+Ecrivez les lignes sur la même ligne, en utilisant l'option `move=True`.
+```
 
 ```{codeplay}
 from turtle import *
 
 right(90)
 back(100)
-for c in ('red', 'blue', 'lime', 'indigo'):
-    color(c)
+for couleur in ('red', 'blue', 'lime', 'indigo'):
+    color(couleur)
     forward(50)
-    write(c, font=(None, 24, 'bold'))
+    write(couleur, font=('Arial', 24, 'bold'))
 ```
 
 ```{caution}
 Si vous exécutez `write()` dans ce site avec [Skulpt](https://skulpt.org), la couleur du texte est définie par `fillcolor()`. Quand vous exécutez `write()` dans un éditeur externe avec Python standard, la couleur du texte est définie par `pencolor()`.
 ```
 
-## Aligner des mots
+## Texte aligné
 
-Le texte suivant est un extrait du *Petit Prince* d'Antoine de Saint-Exupéry. Pour ne pas introduire des retours à la ligne, la phrase est délimitée avec le symbole `\` en fin de ligne.
-
+Le texte suivant est une phrase celèbre de *Star Wars*.
 Les mots sont alignés à gauche, au centre et à droite.
 
 ```{codeplay}
 from turtle import *
 
-texte = """Les grandes personnes aiment les chiffres. \
-Quand vous leur parlez d'un nouvel ami, elles ne vous questionnent \
-jamais sur l'essentiel. Elles ne vous disent jamais : \
-"Quel est le son de sa voix ? Quels sont les jeux qu'il préfère ?
-"""
+mots = ('que', 'la', 'force', 'soit', 'avec', 'toi')
 
-mots = texte.split(' ')
-print('caractères: ', len(texte))
-print('mots: ', len(mots))
-
-up()
-goto(-200, 180)
-for t in mots:
-    write(t)
-    goto(-200, ycor()-10) 
-
-goto(0, 180)
-for t in mots:
-    write(t, align='center')
-    goto(0, ycor()-10) 
-
-goto(200, 180)
-for t in mots:
-    write(t, align='right')
-    goto(200, ycor()-10) 
-```
-
-## Aligner des phrases
-
-Ici, plusieurs mots sont affichés, jusqu'à ce que la position finale dépasse une limite.
-
-Chaque ligne est ajoutée à la liste `lignes`. Cette liste est utilisée pour afficher le texte avec un alignement à droite.
-
-```{codeplay}
-from turtle import *
-
-texte = """Les grandes personnes aiment les chiffres. \
-Quand vous leur parlez d'un nouvel ami, elles ne vous questionnent \
-jamais sur l'essentiel. Elles ne vous disent jamais : \
-"Quel est le son de sa voix ? Quels sont les jeux qu'il préfère ? \
-Est-ce qu'il collectionne les papillons ?" \
-Elles vous demandent : "Quel âge a-t-il ? Combien a-t-il de frères ? \
-Combien pèse-t-il ? Combien gagne son père ?"
-"""
-
-speed(5)
-mots = texte.split(' ')
-lignes = []
-ligne = ''
-up()
-goto(-220, 175)
-for t in mots:
-    write(t + ' ', move=True, font=('Arial', 12))
-    ligne += t + ' '
-    if xcor() > -100:
-        goto(-220, ycor()-20)
-        lignes.append(ligne)
-        ligne = ''
-
-goto(220, 175)
+goto(-200, 100)
 right(90)
-for t in lignes:
-    write(t, align='right', font=('Arial', 12))
-    forward(20)
-```
+for mot in mots:
+    write(mot, font=('Arial', 24))
+    forward(40)
 
-## Ajuster un texte
+goto(0, 100)
+for mot in mots:
+    write(mot, font=('Arial', 24), align='center')
+    forward(40) 
 
-Pour ajuster un texte, il faut connaitre la longueur des mots. On ajuste alors les espaces entre les mots, pour faire aligner une ligne de texte des deux côtés.
-
-```{codeplay}
-from turtle import *
-
-texte = """Les grandes personnes aiment les chiffres. \
-Quand vous leur parlez d'un nouvel ami, elles ne vous questionnent \
-jamais sur l'essentiel. Elles ne vous disent jamais : \
-"Quel est le son de sa voix ? Quels sont les jeux qu'il préfère ? \
-Est-ce qu'il collectionne les papillons ?" \
-Elles vous demandent : "Quel âge a-t-il ? Combien a-t-il de frères ? \
-Combien pèse-t-il ? Combien gagne son père ?"
-"""
-
-longueurs = []
-up()
-goto(-200, 180)
-for t in texte.split(' '):
-    x0 = xcor()
-    write(t, move=True, font=('Arial', 12))
-    x1 = xcor()
-    write(' ', move=True, font=('Arial', 12))
-    longueurs.append(x1-x0)
-    x0 = x1
-    if xcor() > -100:
-        goto(-200, ycor()-20)
-
-goto(0, 180)
-for i in range(len(mots)):
-    l = 0
-    if 
-    while l < 200:
-        l += longeurs[0]
-for t in texte.split(' '):
-    write(' ' + t, move=True, align='right', font=('Arial', 12))
-    if xcor() < 100:
-        goto(200, ycor()-20)
-
-print(longueurs)
+goto(200, 100)
+for mot in mots:
+    write(mot, font=('Arial', 24), align='right')
+    forward(40)
 ```
 
 ## Sudoku
@@ -256,13 +196,7 @@ def case(nombre):
         left(90)
     forward(d/2)
     if nombre > 0:
-        left(90)
-        up()
-        forward(8)
-        write(nombre, font=(None, 24), align='center')
-        back(8)
-        down()
-        right(90)
+        write(nombre, font=(None, d), align='center')
     forward(d/2)
     
 back(200)
@@ -306,44 +240,30 @@ WhatsApp a remporté un grand succès au tournant des années 2010. L'applicatio
 
 En 2014, WhatsApp est acquis par Facebook pour un montant d'environ 22 milliards soit environ 350 millions de dollars par employé ou 40 dollars par utilisateur.
 
-Dans le programme ci-dessous nous allons afficher une conversation entre deux personnes dans le style d'une application de messagerie.
+Dans le programme ci-dessous nous allons afficher une conversation entre deux personnes dans le style d'une application de messagerie. Nous utilisons la fonctions `goto()` pour placer la tortue à une position `(x, y)` et la fonction `setx()` placer la tortune vers la marge gauche (-280) ou droite (280).
 
 ```{codeplay}
 from turtle import *
 
-texte = """Comment-vas tu?
-Bien
-Et toi ?
-Très bien.
-Moi aussi.
-Super."""
+lignes = (('Comment-vas tu?', 'Bien'), 
+          ('Et toi ?', 'Très bien.'), 
+          ('Moi aussi.', 'Super.'))
 
-lignes = texte.split('\n')
 d = 50
-gauche = True
-width(d)
 up()
-goto(-280, 200-d)
+goto(-280, 150)
+right(90)
 
-for ligne in lignes:
-    if gauche:
-        pencolor('lime')
-        down()
-        write(ligne, font=('Arial', d/2), move=True)
-        up()
-        write(ligne, font=('Arial', d/2), align='right')
-        goto(280, ycor()-d)
-    else:
-        pencolor('skyblue')
-        x0 = xcor()
-        write(ligne, font=('Arial', d/2), move=True)
-        a = xcor() - x0
-        down()
-        backward(2 * a)
-        up()
-        write(ligne, font=('Arial', d/2))
-        goto(-280, ycor()-d)
-    gauche = not gauche
+for (texte1, texte2) in lignes:
+    setx(-280)
+    color('red')
+    write(texte1, font=('Arial', d/2))
+    forward(d)
+
+    setx(280)
+    color('indigo')
+    write(texte2, font=('Arial', d/2), align='right')
+    forward(d)
 ```
 
 ## Exercice
@@ -363,6 +283,22 @@ from turtle import *
 ligne1 = (5, 3, 0, 0, 7, 0, 0, 0, 0)
 ligne2 = (6, 0, 0, 1, 9, 5, 0, 0, 0)
 ...
+
+d = 30
+
+def case(nombre):
+    for i in range(4):
+        forward(d)
+        left(90)
+    forward(d/2)
+    if nombre > 0:
+        write(nombre, font=(None, d), align='center')
+    forward(d/2)
+
+backward(4.5 * d)
+for n in ligne1:
+    case(n)
+
 ```
 
 ### WhatsApp

@@ -1,4 +1,4 @@
-# Questionner - `input`
+# Questionner - `input()`
 
 Dans ce chapitre, nous découvrons comment un programme peut poser une question lors de son exécution. L'utilisateur du programme peut alors répondre et entrer une information. La réponse sera stockée dans la mémoire de l'ordinateur et sera associée à une variable. Grâce à cette variable, le programme peut traiter la réponse fournie, et le résultat peut être affiché. Nous allons voir que :
 
@@ -12,7 +12,7 @@ La fonction `input('question')` permet de demander une entrée (input) à l'util
 L'utilisateur voit le texte `question` affiché à la console et doit répondre à cette question. Il termine son entrée avec la touche Enter.
 
 La réponse de l'utilisateur est ensuite mémorisée dans une variable que nous appelons `x` dans cet exemple.
-Ensuite, nous pouvons utiliser cette variable `x` dans la suite du programme, par exemple dans une expression `print()`.
+Ensuite, nous pouvons utiliser cette variable `x` dans la suite du programme, par exemple comme argument dans une fonction `print()`.
 
 ```{codeplay}
 :file: input2.py
@@ -39,7 +39,7 @@ print(x, 'voit', x, 'qui voit', x)  # cinq arguments
 ## La variable
 
 Une variable est une place en mémoire pour stocker de l'information.
-Vous êtes complètement libres dans le choix des noms pour les variables, mais il est recommandé de choisir des noms qui sont le plus explicites possible. C'est mieux d'utiliser des noms de variable parlants, comme `nom` et `âge`, même si on avait pu utiliser `x` et `y`.  
+Vous êtes complètement libres dans le choix des noms pour les variables, mais il est recommandé de choisir des noms qui sont le plus explicites possible. C'est mieux d'utiliser des noms de variable parlants, comme `nom` et `age`, même si on avait pu utiliser `x` et `y`.  
 
 ```{codeplay}
 :file: input3.py
@@ -62,7 +62,7 @@ x = input('Entrez un nombre: ')
 print(type(x))
 ```
 
-Pour pouvoir l'utiliser dans un calcul, nous devons la transformer en nombre à virgule flottante avec la fonction de conversion `float()` de la façon suivante.
+Pour pouvoir utiliser cette valeur dans un calcul, nous devons la transformer en nombre. Pour convertir une chaine de caractères en un nombre à virgule flottante nous utilisons la fonction de conversion `float()`.
 
 ```{codeplay}
 x = '1.5'
@@ -455,7 +455,7 @@ $$ S = \pi r^2 $$
 :file: cercle.py
 print('Le cercle')
 
-r = float(input('Entrez le rayon r: '))
+r = input('Entrez le rayon r: ')
 ...
 
 ```
@@ -480,7 +480,7 @@ $$ V = \frac{4 \pi r^3}{3} $$
 :file: sphere.py
 print('La sphère')
 
-r = float(input('Entrez le rayon r: '))
+r = input('Entrez le rayon r: ')
 ...
 
 ```

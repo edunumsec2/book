@@ -1,5 +1,11 @@
 # Réseaux
 
+```{toctree}
+:maxdepth: 2
+:hidden:
+Activités <activ/index>
+```
+
 ## Résumé
 Le but de ce chapitre est décrire brièvement le fonctionnement d'internet et du web. Le chapitre a été rédigé dans le but
 de transmettre les notions suivantes aux élèves. 

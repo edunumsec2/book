@@ -1,4 +1,4 @@
-# Colorier - `color`
+# Colorier - `color()`
 
 Dans ce chapitre, nous continuons à dessiner et nous introduisons la couleur.
 Une couleur peut être appliquée à une ligne, à un point, à une forme ou à l'arrière-fond. Nous allons voir que :
@@ -190,7 +190,7 @@ triangle()
 
 La combinaison `getscreen().bgcolor()` permet de définir la couleur d'arrière-fond (bg = background).
 
-Dans l'exemple suivant, nous dessinons le drapeau du Bangladesh. Il est vert frappé d'un disque rouge.
+Dans l'exemple suivant, nous dessinons le drapeau du Bangladesh. Il est vert avec un disque rouge.
 
 ```{codeplay}
 :file: color8.py

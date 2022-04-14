@@ -1,4 +1,4 @@
-# Cercler - `circle`
+# Cercler - `circle()`
 
 Dans ce chapitre, nous explorons les cercles et les arcs de cercle. Nous allons voir que :
 
@@ -51,7 +51,7 @@ La valeur numérique du rayon est
 
 $$ r = \frac{36 \times 15}{6.28} = 86 $$
 
-La fonction `circle(86)` dessine un cercle dont le rayon est 86. L'expérience montre que le polygone (noir) et le cercle (rouge) ont effectivement la même taille.
+La fonction `circle(86)` dessine un cercle dont le rayon est 86. On voit que le polygone (noir) et le cercle (rouge) ont effectivement la même taille.
 
 ```{codeplay}
 :file: circle2.py
@@ -69,7 +69,7 @@ circle(86)
 ## Fonction `circle()`
 
 La fonction `circle(r)` dessine un cercle de rayon `r`.
-Le cercle est dessiné :
+Ce cercle est dessiné :
 
 - vers la gauche si `r` est positif,
 - vers la droite si `r` est négatif.
@@ -284,7 +284,7 @@ for i in range(6):
 
 ### LGBTQ+
 
-On vous demande de dessiner des logos pour les toilettes avec le symbole traditionnel ♂ et ♀. La communauté [LGBT](https://fr.wikipedia.org/wiki/Mouvement_LGBT) vous demande d'y ajouter un troisième logo.
+On vous demande de dessiner des logos pour les toilettes avec le symbole traditionnel ♂ et ♀. La communauté [LGBT](https://fr.wikipedia.org/wiki/Mouvement_LGBT) vous demande d'y ajouter un troisième logo, et c'est à vous d'un créer un.
 
 ```{codeplay}
 :file: LGBTQ.py
@@ -301,8 +301,6 @@ forward(50)
 ### Anneaux olympiques
 
 Les cinq anneaux imbriqués, colorés en bleu, jaune, noir, vert et rouge sur un fond blanc, sont appelés *anneaux olympiques*. Le symbole est créé à l'origine en 1913 par Pierre Coubertin. Il semble avoir voulu que les anneaux représentent les cinq continents : Europe, Asie, Afrique, Amérique et Océanie.
-
-C'est un défi particulier de dessiner les anneaux imbriqués. Observez bien les points d'intersection.
 
 ```{image} media/olympic_rings.png
 :width: 300

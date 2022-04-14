@@ -49,7 +49,7 @@ Tout caractère imprimable peut être utilisé pour créer un texte :
 - parenthèses (`[]{}<>`)
 - symboles (`$*#...`)
 
-Pour différencier un morceau de texte du reste d'un programme, il doit être délimité par des symboles spéciaux qui sont :
+Pour marquer une partie du code comme texte, cette partie doit être délimité par l'un des symboles spéciaux qui sont :
 
 - apostrophe (`'`)
 - guillemets doubles (`"`)

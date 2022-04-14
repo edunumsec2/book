@@ -7,12 +7,12 @@ Classe : 1M, 2M
 
 <span style="color:green">Difficulté conceptuelle : élevée </span>  
 
-Prérequis structurel:
-3 séances de 45mn, les deux dernières séances devant machines pour les élèves. 
+Prérequis structurel :
+2 séances de 45mn, devant machines pour les élèves. 
 
-Configuration pour la machine enseignant : un éditeur python (Visual Studio, Thonny , ou autre) avec les librairies installées et code fourni en annexe. 
+Configuration pour la machine enseignant : un éditeur python (Visual Studio, Thonny , ou autre) avec les librairies installées et codes fournis dans l'activité. 
 
-Pour les élèves, des machines avec le logiciel Audacity installé, accès à des écouteurs personnels, connexion internet pour les élèves pour la dernière période (accès à Moodle).
+Pour les élèves, des machines avec le logiciel Audacity installé, accès à des écouteurs personnels, connexion internet (accès au support Modulo - apprendre, puis aux questionnaires en fin d'activité).
 
 <!--
 Les fichiers suivants sont à télécharger pour l'activité complète : ...
@@ -38,10 +38,10 @@ et d'autre part de faciliter leur compréhension du changement de paradigme ult�
 -->
 
 
-Le second objet de cette activité est de permettre aux élèves de se familiariser avec lun outil tel qu'Audacity, qui permet de visualiser graphiquement le son et de le reproduire auditivement, offrant deux modes de représentation du son.  
-En particulier la notion de fréquence d'échantillonnage et le niveau de segmentation minimal en lien avec la qualité du son peuvent être perçus visuellement et auditivement (découpage de l'onde sonore en une multitude de points et perception des effets de la fréquence d'échantillonnage sur la qualité du rendu).
+Le second objet de cette activité est de permettre aux élèves de se familiariser avec un outil tel qu'Audacity, qui permet de visualiser graphiquement le son et de le reproduire auditivement, offrant deux modes de représentation du son.  
+En particulier la notion de discrétisation, de fréquence d'échantillonnage et le niveau de segmentation minimal en lien avec la qualité du son peuvent être perçus visuellement et auditivement (découpage de l'onde sonore en une multitude de points et perception des effets de la fréquence d'échantillonnage sur la qualité du rendu).
     
-Enfin la notion de taille de fichier directement liée au nombre de points pris sur l'onde sonore permet de faire le lien entre binaire et qualité du son.    
+Enfin la notion de taille de fichier directement liée au nombre de points pris sur l'onde sonore permet de faire le lien entre codage binaire et qualité du son.    
 
 ### 3.1.2. Objectif mathématique et physique (transversal)
 
@@ -53,7 +53,7 @@ L'activité permet de réactiver, confirmer ou souligner des savoirs mécaniques
 
 ### 3.2.1. Mode
 
-**«Branché/débranché»** utilisation de l'ordinateur et du logiciel Audacity - pas d'environnement de développement.  Cette activité peut permettre de faire utiliser le tableur et ses fonctionnalités aux élèves et coïncider avec un enseignement de type bureautique - science informatique transversal.
+**«Branché/débranché»** utilisation de l'ordinateur et du logiciel Audacity - pas d'environnement de développement.  Cette activité pourrait permettre de faire utiliser le tableur et ses fonctionnalités aux élèves et coïncider avec un enseignement de type bureautique - science informatique transversal.
 
 ### 3.2.2. Pré-requis  
 
@@ -86,29 +86,38 @@ L'activité permet de réactiver, confirmer ou souligner des savoirs mécaniques
 ### 3.2.3. Moments didactiques
 
  **1er moment didactique.** Mise en situation, apport théorique initial - Première séance (cours) - <span style="color:violet">45mn</span>
+
 </br> **2ème moment didactique.** Exploration individuelle : chaque élève prend possession du matériel, des outils : ordinateur, environnement de travail, logiciel Audacity, matériel audio - Deuxième séance (activité proprement dite) - <span style="color:violet">15-25mn</span>
+
 </br> **3ème moment didactique.** Moment technique et technologique : les élèves manipulent le programme Audacity, lancent les exécutions, manipulent les fenêtres graphiques (interfaces), observent les graphes et écoutent différentes portions de morceaux de musique (3 maximum) - <span style="color:violet">20-30mn</span>
+
 </br> **4ème moment didactique.** Mise en commun et institutionnalisation : l'enseignant reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, interprétation. Interprétation du visuel de la courbe sonore dilatée temporellement : la *discrétisation numérique* est mise en évidence. L'enseignant recueille de manière guidée les appréciations des élèves sur la qualité du morceau de musique écouté à différentes *fréquences d'échantillonnage*. Cette notion est simplement posée à ce stade, elle sera reprise et développée dans le temps suivant. Le recueil des appréciations concernant la qualité sonore peut être réalisé via un tableau où figurent en première ligne toutes les fréquences autour de la fréquence médiane 48000 Hz, et dans la ligne suivante la qualité perçue par les élèves : Mauvaise / Convenable / Bonne ; l'enseignant inscrit un segment (représentation au tableau) pour chaque choix de chaque qualité associée, ou travaille de préférence directement sur un [tableau excel](/tab/appqualson.ods) complété avec les retours élèves  - <span style="color:violet">20-30mn</span>
+
 </br> **5ème moment didactique.** Travail sur la technique : les élèves sont laissés en autonomie une bonne partie du temps sur leurs postes de travail, expérimentent les outils et concepts institutionnalisés en manipulant les paramètres d'Audacity (zoom temporel, visualisation de parties du morceau, identification de l'aspect «sinusoïdal») en fin de troisième séance - <span style="color:violet">15-25mn</span>
+
 </br> **6ème moment didactique.** Evaluation formative ou sommative portant sur les aspects théoriques disciplinaires ou transdisciplinaires. {download}`Devoir - évaluation maison de type quiz moodle<quizzech.ods>`  - <span style="color:violet">20-30mn</span>
 </br>
 
 
 ### 3.2.4 Supports didactiques
     
-Ordinateur individuel, logiciel Audacity, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation papier ou en ligne, supports papier pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau.
+Ordinateur individuel, logiciel Audacity, casque audio individuel connecté sur la sortie audio de l'ordinateur de chaque élève, documentation en ligne (Modulo - apprendre : https://dev-apprendre.modulo-info.ch/rep-info/son.html), supports papier éventuels pour la prise de notes. Ordinateur enseignant avec sortie audio (2 enceintes - stéréo), vidéoprojecteur, tableau, codes python installés et testés.
 
 
 ### 3.2.5. Durée
-La séquence d'enseignement se découpe en <span style="color:violet">trois séances de 45mn</span> : première période de <span style="color:violet">45mn</span> en classe entière, deux périodes suivantes de <span style="color:violet">45mn</span> en demi-classes.
+La séquence d'enseignement se découpe en <span style="color:violet">deux périodes de 45mn</span> en demi-classes.
 
 </br> 
 
 ## 3.3. Déroulement
 
-### 3.3.1. Première séance : éléments de cours sur l'information et le son en particulier
+### 3.3.1. Première période : éléments de cours sur l'information et le son en particulier, puis manipulation logicielle (Audacity par les élèves, codes python par l'enseignant)
 
-Cette première séance doit être vue comme une introduction à la problématique traitée par l'activité proprement dite. Elle est aussi l'occasion de travailler la transdisciplinarité avec d'autres disciplines fondamentales (mathématiques, physique) mais également d'aborder la discipline artistique que les élèves affectionnent tout particulièrement qu'est la musique..  
+#### 3.3.1.1 Eléments théoriques
+
+**<span style="color:red">DE T0 À T1 = T0 + 15mn</span>**
+
+Ce premier moment de cette première séance doit être vu comme une introduction à la problématique traitée par l'activité proprement dite. Elle est aussi l'occasion de travailler la transdisciplinarité avec d'autres disciplines fondamentales (mathématiques, physique) mais également d'aborder la discipline artistique que les élèves affectionnent tout particulièrement qu'est la musique..  
 Elle peut donc s'effectuer en parallèle d'un de ces enseignements, en coordination avec un enseignant de ces disciplines : mathématiques, physique, ou musique.  
 Les éléments mathématiques et physiques théoriques suffisants sont présentés dans cet ouvrage à la section 1.1 : Signal analogique (physique) temporel. L'enseignant peut également s'appuyer sur certains éléments de la section 1.2 Contenu fréquentiel (analyse spectrale).  
 Une introduction sous l'angle de la musique pourra s'appuyer sur une approche instrumentale mettant en évidence les notions de hauteur (fréquence), de timbre (richesse harmonique), d'onde de pression transmise dans un espace matériel : ceci devra être fait en collaboration avec un enseignant de musique, avec le concours d'instruments divers : piano, flute, cordes, cuivres ou vents...  
@@ -175,27 +184,54 @@ Enfin, une troisième vidéo diffusée à vitesse lente (0,25) permet de compren
 La molécule (illustrée par le bouchon ici) vibre verticalement ; dans le phénomène de propagation du son, les molécules vibrent horizontalement.
 <br>
 
-L'image animée ci dessous illustre la propagation d'une onde telle qu'elle pourrait se visualiser après l'impact d'une pierre à la surface de l'eau par exemple.
+L'image animée ci-dessous illustre la propagation d'une onde telle qu'elle pourrait se visualiser après l'impact d'une pierre à la surface de l'eau par exemple.
 
 <br>
 
 <center>
 
-```{image} png/son_couv1.gif
+```{image} media/son_couv1.gif
 :width: 750
 :height: 400
 ```
 </center>
 
+<br>
+
+Dernier point : un son est donc une vibration qui se transmet dans l'air généralement. Mais peut-on «entendre» toutes ces vibrations ?
+
+La vidéo ci-dessous permet d'apprécier justement ce que l'oreille humaine perçoit selon la fréquence du signal sonore :
+
+
+```{youtube} o-lYdioQMfY
+`````
+
+La gamme de fréquences audibles apparait d'environ **20 Hz à 20000 Hz (ou 20 KHz)**. En-dessous, ou au-dessus, l'oreille humaine ne perçoit rien ou quasiment rien. En revanche, la physiologie humaine reste sensible à ces fréquences extrêmes.
+
+
 <br> <br>
+
 
 *Problématique de la représentation :* fonction sinus (non détaillée, simplement citée), amplitude, fréquence, période. Rappels mathématiques et physiques sur les notions abordées : notion d'onde de pression, compression-dilatation, compréhension de la représentation graphique (sinus). L'enseignant peut traiter rapidement la notion d'onde sonore comme la somme de «sons élémentaires», en fonction du niveau et de la sensibilité de la classe.
 
 </br>
 
-### 3.3.2. Deuxième séance : activité proprement dite
+#### 3.3.1.2. Manipulation logicielle : Audacity - Aspects visuel et auditif d'un signal sonore
 
-**<span style="color:red">DE T0 À T1 = T0 + 30mn</span>**
+**<span style="color:red">DE T1 À TF = T1 + 30mn</span>**
+
+Ce second moment de la séance vise à faire manipuler le logiciel Audacity par les élèves, puis en particulier à tenter de leur faire faire le parallèle entre la forme des signaux qu'ils visualisent et la forme sinusoïdale explicitée dans le premier moment de séance. L'enseignant manipule ses propres codes python afin d'expliciter les notions de fréquence, de hauteur de son (grave / aigu), puis de composition fréquentielle.
+
+1ère phase.
+
+**<span style="color:red">DE T1 À T2 = T1 + 10mn</span>**
+
+L'enseignant communique les recommandations aux élèves afin d'utiliser le logiciel Audacity : ouvrir le logiciel, aller chercher le fichier son dans leur espace, manipuler les touches principales (lire, arrêter, revenir, se déplacer avec la souris sur le fichier son.
+
+Les élèves travaillent de manière autonome, au casque individuel, les échanges entre eux sont limités. L'enseignant circule dans la classe et s'assure de l'appropriation des outils. Il revient au tableau régulièrement afin de dérouler les consignes : lancement d'Audacity, manipulation, écoute du morceau, zoom. 
+
+
+
 
 
 </br>
@@ -213,28 +249,32 @@ L'image animée ci dessous illustre la propagation d'une onde telle qu'elle pour
     </body> 
 </html>     
 
-```{figure} png/
+
+```{figure} media/
 ---
+align: left
 alt:
 width: 100%
-align: left
 ---
 **Ecoute d'un morceau de musique sur Audacity**
 ```
 
-</br> </br>
+<br> <br>
 
 
-```{figure} png/Im39.png
+
+
+```{figure} media/Im39.png
 ---
+align: left
 alt:
 width: 100%
-align: left
 ---
 **Visualisation d'un morceau de musique sur Audacity**
 ```
 
-</br> </br>
+<br> <br>
+
 <left> 
 <html>
     <head>
@@ -247,58 +287,80 @@ align: left
         </audio> 
         </div>
     </body> 
-</html>     
+</html>    
 
-```{figure} png/
+
+```{figure} media/
 ---
+align: left
 alt:
 width: 100%
-align: left
 ---
 **Manipulation d'un morceau de musique sur Audacity**
 ```
-</br> </br>
 
-Les élèves travaillent de manière autonome, au casque individuel, les échanges sont limités. L'enseignant circule dans la classe et s'assure de l'appropriation des outils. Il revient au tableau régulièrement afin de dérouler les consignes : lancement d'Audacity, manipulation, écoute des différents morceaux, zoom. 
 
-<br>
+<br> <br>
 
-```{figure} png/Im38.png
+
+
+
+```{figure} media/Im38.png
 ---
+align: left
 alt:
 width: 100%
-align: left
 ---
 ```
 
-```{figure} png/Im37.png 
+```{figure} media/Im37.png 
 ---
+align: left
 alt:
 width: 100%
-align: left
 ---
 ```
 
-```{figure} png/Im36.png
+```{figure} media/Im36.png
 ---
+align: left
 alt:
 width: 100%
-align: left
 ---
 ```
 
-```{figure} png/Im35.png
+```{figure} media/Im35.png
 ---
+align: left
 alt:
 width: 100%
-align: left
 ---
 **Zoom sur une partie du morceau visualisé sous Audacity : dilatation temporelle, composition fréquentielle.**
 ```
-</br> </br>
 
-1ère phase.
-L'enseignant s'assure de la bonne compréhension des phénomènes : notions d'amplitude et de fréquence, dilatation temporelle, fréquences «visibles» des composantes du signal. En particulier, sur la dernière visualisation, on observe qu'on peut mettre en évidence une «quasi-période» entre les instants 06,8320 et 06,8345. Le calcul de la période donne donc 06,8345-06,8320 = 0,0025s, soit une fréquence de 1/0,0025 = 400Hz. L'enseignant questionne les élèves sur cette fréquence : est-elle basse ? haute ? L'enseignant s'appuie ensuite sur la génération d'un son «pur» à 400Hz, via les fonctions python **tracesinus**, **listensinus**. Par la visualisation et l'écoute, les élèves peuvent se représenter l'information extraite du fichier audio (composante de fréquence ~ 400Hz), puis comprendre ce qui se passe quand on ajoute plusieurs signaux à différentes fréquences (ici un signal de fréquence fondamentale 400Hz, puis ses 4 harmoniques suivantes : 800, 1200, 1600, 2000Hz) quand l'enseignant utilise la fonction python **puresignalssum**.
+
+L'enseignant s'assure de la bonne compréhension des phénomènes suivants : notions d'amplitude et de fréquence, dilatation temporelle. Il pose la question de l'interprétation des oscillations perçues sur le signal (fréquences «visibles» des composantes du signal). 
+
+<!--
+En particulier, sur la dernière visualisation, on observe qu'on peut mettre en évidence une «quasi-période» entre les instants 06,8320 et 06,8345. Le calcul de la période donne donc 06,8345-06,8320 = 0,0025s, soit une fréquence de 1/0,0025 = 400Hz. L'enseignant questionne les élèves sur cette fréquence : est-elle basse ? haute ? 
+-->
+
+2ème phase.
+
+**<span style="color:red">DE T2 À TF = T2 + 20mn</span>**
+
+L'enseignant s'appuie ensuite sur la génération d'un son «pur» à 400Hz, 800 puis 1200 Hz, via les codes python **tracesinus**, **listensinus**. Les élèves peuvent ainsi relier fréquence et hauteur, auditivement et graphiquement.
+
+<!--
+Par la visualisation et l'écoute, les élèves peuvent se représenter l'information visible sur le fichier audio (composante de fréquence ~ 400Hz), 
+-->
+
+L'enseignant utilise ensuite le code **puresignalssum** en rentrant la fréquence fondamentale 400Hz, puis ses 4 harmoniques suivantes : 800, 1200, 1600, 2000Hz).
+
+Les élèves observent alors ce qui se passe, toujours auditivement et visuellement, quand on ajoute plusieurs sons élémentaires (synthèse additive).
+
+L'enseignant fait le parallèle entre la représentation graphique ainsi obtenue, et ce que les élèves peuvent observer sur Audacity.
+
 
 <a name="tracesinus"></a>
 
@@ -376,105 +438,126 @@ puresignalssum(400, 5)
 
 ```
 
-</br>
-
-**<span style="color:red">DE T1 À T2 = T1 + 15mn = T0 + 45mn</span>**
-
-
-2ème phase.
-L'enseignant poursuit le zoom sur le signal et questionne les élèves sur l'interprétation de ce qu'ils voient. Il les amène progressivement à la compréhension de la notion de *discrétisation*, résultat du passage d'une représentation continue *apparente* correspondant à la **réalité physique** à une représentation discrète *réelle* correspondant à la **réalité numérique**.
+<br> 
 
 
 
-```{figure} png/Im40.png
+
+
+### 3.3.2 Deuxième séance : discrétisation et fréquence d'échantillonnage 
+
+
+Cette deuxième période traite des aspects disciplinaires informatiques à proprement parler sur lesquels on souhaite sensibiliser les élèves.
+
+#### 3.3.2.1 Discrétisation
+
+Cette étape aborde la problématique de la discrétisation d'un signal sonore.
+
+**<span style="color:red">DE T0 À T1 = T0 + 15mn</span>**
+
+L'enseignant reprend le logiciel Audacity et poursuit le zoom sur le signal ; il questionne les élèves sur l'interprétation de ce qu'ils voient - une succession de points, et non plus une courbe continue). Il les amène progressivement à la compréhension de la notion de *discrétisation*, résultat du passage d'une représentation continue *apparente* correspondant à la **réalité physique** à une représentation discrète *réelle* correspondant à la **réalité numérique**.
+
+
+
+```{figure} media/Im40.png
 ---
+align: left
 alt:
 width: 100%
-align: left
 ---
 ```
 
-```{figure} png/Im41.png
+```{figure} media/Im41.png
 ---
+align: left
 alt:
 width: 100%
-align: left
 ---
 **Zoom sur une partie du morceau visualisé sous Audacity : mise en évidence de la discrétisation.**
 ```
 
-</br> </br>
 
-### 3.3.3. Troisième séance : activité proprement dite - fin
+#### 3.3.2.2 Echantillonnage
 
-**<span style="color:red">DE T0 À T1 = T0 + 20mn</span>**
+Cette étape traite de l'échantillonnage d'un signal sonore.
+
+**<span style="color:red">DE T1 À T2 = T1 + 25mn</span>**
 
 
-3ème phase. 
-L'enseignant propose aux élèves d'écouter une partie du morceau de musique choisi aux différentes fréquences proposées par Audacity, de 8000 à 384000 Hz. 
+L'enseignant propose aux élèves d'écouter une partie du morceau de musique choisi à différentes fréquences proposées par Audacity : 8000 Hz, 22050 Hz, 44100 Hz, 88200 Hz, 176400 Hz.
 
-```{figure} png/Im55.png
+```{figure} media/Im55.png
 ---
+align: left
 alt:
 width: 100%
-align: left
 ---
 **Ecoute à différentes fréquences d'échantillonnage sous Audacity.**
 ```
 
-Après une dizaine de minutes d'écoute autonome, l'enseignant questionne les élèves sur ce qu'ils ont écouté et sur leur interprétation des fréquences indiquées - <span style="color:violet">10-15mn</span>.
+Après une dizaine de minutes d'écoute autonome, l'enseignant questionne les élèves sur ce qu'ils ont écouté, la qualité des sons enregistrés à différentes fréquences et sur leur interprétation des fréquences indiquées. Il leur demande d'enregistrer chaque fichier son à chaque fréquence, en suivant le format : Audio1_8000.mp3 par exemple pour l'enregistrement du fichier Audio1 à la fréquence d'échantillonnage de 8000 Hz. - <span style="color:violet">10-15mn</span>.
 
-</br> </br>
+
 
 **<span style="color:red">DE T1 À T2 = T1 + 25mn = T0 + 45mn</span>**
 
-L'enseignant met ensuite en commun et institutionnalise : il reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, interprétation. Interprétation du visuel de la courbe sonore dilatée temporellement : la *discrétisation numérique* est mise en évidence. L'enseignant recueille de manière guidée les appréciations des élèves sur la qualité du morceau de musique écouté à différentes *fréquences d'échantillonnage*. Cette notion est simplement posée à ce stade, elle sera reprise et développée dans le temps suivant. Le recueil des appréciations concernant la qualité sonore peut être réalisé via un tableau où figurent en première ligne toutes les fréquences autour de la fréquence médiane 48000 Hz, et dans la ligne suivante la qualité perçue par les élèves : Mauvaise / Convenable / Bonne ; l'enseignant inscrit un segment (représentation au tableau) pour chaque choix de chaque qualité associée, ou travaille de préférence directement sur un {download}`fichier de type excel<appqualson.ods>` complété avec les retours élèves. 
+L'enseignant met ensuite en commun et institutionnalise : il reprend la main au tableau et vidéoprojecteur. Examen des modes de représentation visuel et audio : sens, interprétation. Interprétation du visuel de la courbe sonore dilatée temporellement : la *discrétisation numérique* est mise en évidence. L'enseignant recueille de manière guidée les appréciations des élèves sur la qualité du morceau de musique écouté à différentes *fréquences d'échantillonnage*. Le recueil des appréciations concernant la qualité sonore est réalisé via un tableau  {download}`fichier de type excel<media/appqualson.ods>` où figurent en première ligne toutes les fréquences proposées, et dans la ligne suivante la qualité perçue par les élèves : Mauvaise / Convenable / Bonne ; l'enseignant interroge la classe par un vote à main levée sur la qualité du son perçue pour chaque choix de fréquence, et complète en temps réel avec les retours élèves. 
 
-```{figure} png/tabexcel.png
+```{figure} media/tabexcel1.png
 ---
+align: left
 alt: Exemple de tableau excel enseignant récoltant les appréciations par les élèves de la qualité sonore de l'échantillon.
 width: 100%
-align: left
 ---
 **Exemple de tableau excel enseignant récoltant les appréciations par les élèves de la qualité sonore de l'échantillon.**
 ```
 
-
-Une fois le tableau complété, il est projeté : l'enseignant questionne les élèves sur l'interprétation qu'ils peuvent donner des graphes issus du tableau de données. Il doit faire ainsi ressortir la qualité perçue à partie de la fréquence d'échantillonnage de 44100Hz. La nécessité d'une *fréquence d'échantillonnage minimale* doit ici apparaître.
+Une fois le tableau est projeté et complété au fur et à mesure : l'enseignant questionne les élèves sur l'interprétation qu'ils peuvent donner des graphes issus du tableau de données. Il doit faire ainsi ressortir la qualité perçue à partie de la fréquence d'échantillonnage de 44100Hz. La nécessité d'une *fréquence d'échantillonnage minimale* doit ici apparaître.
 Dans un deuxième temps, l'enseignant interroge sur les résultats pour les fréquences supérieures. L'inutilité d'aller au-delà d'une certaine fréquence (en l'occurence 44100 Hz) doit ressortir.
-L'étape suivante consiste à identifier cette valeur de 44100 Hz : à quoi correspond-elle ? L'enseignant revient sur le champ audible par l'oreille humaine : 20Hz - 20000Hz... Il situe alors 44100Hz par rapport à la fréquence la plus élevée que peut percevoir l'oreille humaine, 20000Hz... La fréquence d'échantillonnage apparaît comme devant être au moins égale au double de cette fréquence de 20000Hz.
-Ensuite, l'enseignant revient sur la notion même de fréquence d'échantillonnage. Que signifie-t-elle ? C'est le nombre d'échantillons pris par unité de temps. L'enseignant illustre son propos par le dernier visuel de la figure 4 : entre les temps 6,8310s et 6,8315s, on dénombre à peu près 23 échantillons, soit 23/0,0005 = 46000Hz. On retrouve quasiment la fréquence 44100 Hz apparaissant en bas à gauche de la fenêtre Audacity.
+L'étape suivante consiste à identifier cette valeur de 44100 Hz : à quoi correspond-elle ? L'enseignant revient sur le champ audible par l'oreille humaine : 20Hz - 20000Hz, en faisant référence à la dernière vidéo projetée lors de la première séance.
 
-```{figure} png/Im41.png
+Il situe alors 44100Hz par rapport à la fréquence la plus élevée que peut percevoir l'oreille humaine, 20000Hz... La fréquence d'échantillonnage apparaît comme devant être au moins égale au double de cette fréquence de 20000Hz.
+Ensuite, l'enseignant revient sur la notion même de fréquence d'échantillonnage. Que signifie-t-elle ? C'est le nombre d'échantillons pris par unité de temps. L'enseignant peut illustrer son propos par le dernier visuel de la figure 4 : entre les temps 6,8310s et 6,8315s, on dénombre à peu près 23 échantillons, soit 23/0,0005 = 46000Hz. On retrouve quasiment la fréquence 44100 Hz apparaissant en bas à gauche de la fenêtre Audacity.
+
+```{figure} media/Im41.png
 ---
+align: left
 alt:
 width: 100%
-align: left
 ---
 **Identification de la fréquence d'échantillonnage (ici 44100Hz).**
 ```
-En dernier lieu, il convient de s'interroger sur les conséquences de l'augmentation de la fréquence d'échantillonnage. L'enseignant affiche la deuxième feuille du fichier excel intégrant à présent la taille des fichiers numérisés aux différentes fréquences. 
+En dernier lieu, il convient de s'interroger sur les conséquences de l'augmentation de la fréquence d'échantillonnage. 
+L'enseignant demande à la classe, par l'intermédiaire de quelques élèves, les tailles constatées des fichiers enregistrés aux différentes fréquences, et complète ces valeurs dans le tableau excel situé en partie basse de la feuille du fichier excel intégrant la taille des fichiers numérisés aux différentes fréquences. 
 
-```{figure} png/EchOccMem.png
+```{figure} media/tabexcel2.png
 ---
+align: left
 alt:
 width: 100%
-align: left
 ---
 **Echantillonnage et occupation mémoire.**
 ```
 
 
 
+Le graphique affiche clairement la croissance forte de l'occupation mémoire en fonction de la fréquence d'échantillonnage, au delà de 44100Hz... - ainsi que le changement du mode de compression (on passe d'un format MP3 à un format WAV)-. L'analyse avec les élèves de la courbe permet de comprendre explicitement la nécessité de borner la fréquence d'échantillonnage : pas trop faible pour garantir une bonne qualité audio, pas trop élevée pour ne pas occuper inutilement de la place mémoire - <span style="color:violet">20-25 mn</span>.
 
 
+### 3.3.4. Retours enseignant et élèves : questionnaires
 
-Le graphique affiche clairement la croissance forte de l'occupation mémoire en fonction de la fréquence d'échantillonnage, au delà de 48000Hz... ainsi que le changement du mode de compression (on passe d'un format MP3 à un format WAV). L'analyse avec les élèves de la courbe permet de comprendre explicitement la nécessité de borner la fréquence d'échantillonnage : pas trop faible pour garantir une bonne qualité audio, pas trop élevée pour ne pas occuper inutilement de la place mémoire - <span style="color:violet">20-25 mn</span>.
+Cette étape de «retours» doit permettre à l'enseignant d'apprécier la manière dont son activité est «passée» auprès des élèves, d'améliorer, de modifier ou d'affiner l'organisation de sa séquence d'enseignement.
+
+**<span style="color:red">DE T2 À TF= T2 + 10mn</span>**
 
 
-### 3.3.4. Evaluation : quizz moodle maison
+La séquence propose deux types de questionnaires, un premier à destination de l'[enseignant](https://www.surveymonkey.com/r/actens1), le second à destination des [élèves](https://www.surveymonkey.com/r/acteleve1).
+Ces outils à destination de l'enseignant permettent une analyse a posteriori pour l'enseignant.
 
-L'évaluation pourra être réalisée via un quizz moodle open-book, en temps limité (<span style="color:violet">20-30mn</span>) créé par l'enseignant selon les compétences qu'il souhaite évaluer, et comportant 10-15 questions tirées du fichier excel {download}`Devoir - évaluation maison de type quizz moodle<quizzech.ods>`.
+
+### 3.3.5. Evaluation : quizz moodle maison
+
+L'évaluation pourra être réalisée via un quizz moodle open-book, en temps limité (<span style="color:violet">20-30mn</span>) créé par l'enseignant selon les compétences qu'il souhaite évaluer, et comportant 10-15 questions tirées du fichier excel {download}`Devoir - évaluation maison de type quizz moodle <media/QuizzEch.ods>`.
 L'enseignant pourra également programmer un cycle d'entrainement préliminaire avec une partie des questions proposées dans ce fichier excel.
    
 

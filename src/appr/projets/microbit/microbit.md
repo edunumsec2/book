@@ -65,7 +65,7 @@ Type "help()" for more information.
 
 Comme indiquez, entrons la commande help() pour obtenir:
 
-```bash
+```text
 Welcome to MicroPython on the micro:bit!
 
 Try these commands:
