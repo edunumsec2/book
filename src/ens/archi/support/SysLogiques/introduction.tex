@@ -1,0 +1,102 @@
+\documentclass[a4paper,11pt]{book}
+%\documentclass[class=book,a4paper,11pt,pstricks]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[LGR,T1]{fontenc} % notice LGRx instead of LGR
+\usepackage{lmodern}
+\usepackage[final]{pdfpages} 
+\usepackage[top=2cm, bottom=3cm, outer=3cm, inner=4cm, headsep=14pt]{geometry}
+\usepackage{textgreek}
+\usepackage{csquotes}
+\usepackage[french]{babel}
+\usepackage{fancyhdr}
+\usepackage{xsim}
+\usepackage{tasks}
+\usepackage[absolute]{textpos}
+\usepackage{ascii}
+\usepackage{eurosym}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage[RPvoltages]{circuitikz}
+\usepackage{standalone}
+
+\bibliographystyle{abbrv}
+
+%% Remove chapter number in sections
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\thesection}{\arabic{section}}
+
+\pagestyle{fancy}
+\lhead{SYSTÈMES LOGIQUES}
+\rhead{Introduction}
+\rfoot{Page \thepage}
+\setlength{\headheight}{15pt}
+
+\begin{document}
+\ifstandalone{}
+    \chapter*{Introduction}
+\else{}
+    \chapter{Introduction}
+\fi
+L'idée de construire un ordinateur revient à construire une machine qui traite automatiquement de l'information. Ce modèle coïncide avec le modèle de Turing et sa machine universelle. 
+
+Pour un tel dispositif, il nous faut d'abord une représentation de l'information. Cet objectif a déjà été atteint dans l'histoire des sciences avec la machine d'anticythere plus de 100 ans av. J.-C. proposant une représentation mécanique de mouvements astronomiques. En 1642, Blaise Pascal conçoit la Pascaline, une machine à calculer mécanique proposant cette fois une représentation arithmétique traduite dans des rouages mécaniques.
+
+De leur côté, Lady Ada Lovelace et Charles Babbage font progresser cette technologie dans leurs travaux sur la machine analytique au milieu du \textsc{xix}\ieme ~siècle. À partir d'un système mécanique effectuant des opérations séquentielles sur des nombres, la machine analytique de Charles Babbage, Lady Ada Lovelace conçoit la première traduction en programme d'un algorithme, et c'est à ce titre qu'elle est considérée comme la première informaticienne de l'histoire.
+
+Plus tard, dans le berceau de la deuxième guerre mondiale, l'électronique se développe et va proposer un formidable terrain pour la mise en place des premiers \textit{gros}
+ordinateurs (ENIAC, Colossus, ...) conçus à des fins militaires. Ces derniers vont constituer la première génération et servir de fondation à l'essor de la science informatique.
+
+L'assemblage de ces premières \textit{machines} se fait sur la base d'un ensemble de briques de bases qui se constitue et se normalise sur la base de théories mathématiques comme la logique booléenne et l'arithmétique binaire ainsi que sur l'assemblage circuits logiques, eux-mêmes constitués de portes logiques. Ces assemblages, appelés systèmes logiques, permettent la construction des premiers calculateurs, des processeurs qui constituent le noyau central des ordinateurs.
+
+L'apparition de la technologie des semi-conducteurs apporte un deuxième élan à la constitution de composants dédiés au traitement de l'information de plus en plus performants.
+
+Dans ce cours, nous allons aborder les éléments théoriques et l'architecture des systèmes logiques de base qui constituent les ordinateurs. Ceci devrait nous permettre de mieux comprendre le fonctionnement général des dispositifs utilisés dans l'informatique moderne.
+
+
+%\par\noindent\rule{\textwidth}{0.4pt}
+\begin{exercise}
+    Lire l'article "L'ordinateur Antique" \cite{ordiantique} attentivement (en annexe). On relèvera les éléments suivants :
+    \begin{tasks}(1)
+        \task Quelle représentation de l'information est proposée ?
+        \task Quel type d'opération est proposé ?
+        \task Quelles sont les opérations proposées ?
+        \task Au final, on complète le catalogue de dispositifs par un élément particulier pour atteindre le fonctionnement d'un ordinateur. Quel est ce dispositif ?
+    \end{tasks}
+\end{exercise}
+\par\noindent\rule{\textwidth}{0.8pt}
+\section{Contenus du cours}
+Le but de chapitre d'introduction est de mettre en place les premiers éléments qui conduisent à l'élaboration de systèmes logiques dans le cadre de la compréhension du fonctionnement des ordinateurs.
+
+\textbf{Représentations binaires.}
+Dans le chapitre suivant, nous examinerons plus en détail les principes de la représentation des nombres en binaire.
+
+\textbf{Portes logiques.}
+Par la suite, nous détaillerons les composants que sont les portes logiques qui proposent des opérations de base et qui permettent la conception de systèmes logiques complets.
+
+\textbf{Semi-conducteurs.} Sans entrer dans les détails, nous expliquerons les principes et le fonctionnement des semi-conducteurs.
+
+\textbf{Implémentation\footnote{Implémentation est anglicisme souvent utilisé en informatique pour "réalisation"} des portes logiques.} Nous montrerons dans cette partie comment il est possible de réaliser les différentes portes logiques vues précédemment avec des transistors et donc de réaliser des circuits intégrés proposant des systèmes logiques.
+
+\textbf{Logique analytique.} Dans ce chapitre, nous proposons une construction rigoureuse de l'arithmétique logique en détaillant les bases et les propriétés qui nous seront utiles pour concevoir des systèmes logiques.
+
+\textbf{Optimisation.} Nous mettrons en oeuvre dans cette partie les concepts vus précédemment pour réaliser des circuits efficaces, donc optimisés. Pour cela, nous présenterons un outil \textit{visuel} que sont les tables de Karnaugh.
+
+\textbf{Systèmes logiques.} Nous exposons enfin dans ce chapitre quelques un des systèmes logiques les plus courants que nous avons sélectionner pour illustrer l'ensemble des concepts du cours.
+
+\section{Outils}
+\subsection{La calculatrice du système}
+Que ce soit avec OSX ou Windows, les deux systèmes proposent une calculatrice qui propose un mode \textit{informatique} avec la possibilité de manipuler et convertir des nombres binaires.
+\subsection{logic.ly}
+Le site logic.ly propose un éditeur et simulateur de circuits logiques. Sa mise en oeuvre et son utilisation sont extrêmement simples, mais la version gratuite ne propose pas de sauvegarde des circuits. Nous limiterons donc son utilisation aux premiers exemples à tester.
+\subsection{logisim}
+Logisim est un système complet de conception et de simulation de circuits logiques. Plus compliqué à prendre en main, il permet cependant d'explorer beaucoup plus loin le domaine. Il propose notamment la conception automatique d'un circuit logique à partir de sa table de vérité et affichant la forme canonique de l'expression induite et la visualisation des tables de Karnaugh permettant l'optimisation des circuits.
+
+\section{Objectifs}
+L'objectif de ce cours est de comprendre les bases qui ont permis la conception et la réalisation des \textit{micro}processeurs au coeur des ordinateurs. Après avoir suivi ce cours, on devrait pouvoir appréhender l'ensemble de ce qui se passe dans un microprocesseur comme celui présenté en simulation sur le site \url{visual6502.org}.
+
+%\ifstandalone{}
+%    \bibliography{biblio.bib}
+%\fi
+
+\end{document}
