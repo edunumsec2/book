@@ -1,5 +1,5 @@
 (plandidac1ere)=
-Proposition de plans didactiques pour la 1ère année
+Propositions de plans didactiques pour la 1ère année
 ==================================================
 
 ## Introduction et conditions générales
@@ -19,6 +19,16 @@ Nous avons donc envisagé les plans suivants :
 
 Pour chaque plan didactique, nous respectons l'organisation suivante :
 Le plan est organisé par bloc de deux semaines avec chaque fois deux leçons de théorie en classe complète et une activité "pratique" par demi-classe, de deux périodes chaque fois.
+
+### Évaluations
+Pour les évaluations, le RGY de 2016, art. 78 prévoit :
+ 4 notes pour 2 périodes d'enseignement hebdomadaire pour établir la note annuelle.
+ Le nouveau RGY (art. 11), en cours de validation prévoit :
+ Le nombre minimum de notes nécessaires pour établir la note annuelle d'une discipline
+correspond au nombre de périodes d’enseignement hebdomadaires dans la discipline
+considérée, plus 1. Au moins une note devra porter sur les travaux pratiques.
+
+
 
 ```{toctree}
 :maxdepth: 2

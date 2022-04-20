@@ -12,7 +12,7 @@ Dans cette proposition, nous suivons une logique qui "construit" petit à petit 
 4. Algorithmique
 5. Programmation
 
-## Proposition d'agenda
+## Planification
 ### Semainea 1 & 2
 #### Théorie 1 : Introduction
 Présentation des outils, de la charte informatique de l'établissement, vérification des comptes et accès aux outils informatiques (évtl. distribution des codes d'accès).
@@ -44,7 +44,42 @@ Panorama historique 2 (de la Seconde guerre mondiale à nos jours)
 #### Théorie 16
 Évaluation (théorie) sur les chapitres précédents.
 
+#### Pratique 8 : enjeux sociaux
+[Vie privée et surveillance](../enjx/grandes-thematiques/surveillance.md)
 
+On profitera de cette activité pour rappeler aux élèves quelques règles de base concernant la protection de sa sphère privée.
+
+## Semestre 2
+### Semainea 1 & 2
+#### Théorie 1 
+
+#### Théorie 2 
+
+#### Pratique 1 
+
+### Semaines 3 & 4
+#### Théorie 3 
+
+#### Théorie 4 
+
+#### Pratique 2 
+
+### Semaines 5 & 6
+
+### Semaines 7 & 8
+
+### Semaines 9 & 10
+
+### Semaines 11 & 12
+
+### Semaines 13 & 14
+
+### Semaines 15 & 16
+#### Théorie 16
+Évaluation (théorie) sur les chapitres précédents.
+
+#### Pratique 8 : enjeux sociaux
+[Économie du numérique](../enjx/grandes-thematiques/economie-numerique.md)
 
 
 
