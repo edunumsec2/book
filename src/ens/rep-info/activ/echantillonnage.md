@@ -10,7 +10,7 @@ Classe : 1M, 2M
 Prérequis structurel :
 2 séances de 45mn, devant machines pour les élèves. 
 
-Configuration pour la machine enseignant : un éditeur python (Visual Studio, Thonny , ou autre) avec les librairies installées et codes fournis dans l'activité. 
+Configuration pour la machine enseignant : le logiciel Audacity installé avec une sortie son de qualité, un éditeur python (Visual Studio, Thonny , ou autre) avec les librairies installées et codes fournis dans l'activité. 
 
 Pour les élèves, des machines avec le logiciel Audacity installé, accès à des écouteurs personnels, connexion internet (accès au support Modulo - apprendre, puis aux questionnaires en fin d'activité).
 
