@@ -1,0 +1,293 @@
+\documentclass[a4paper,11pt]{book}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[LGR,T1]{fontenc} % notice LGRx instead of LGR
+\usepackage{lmodern}
+\usepackage[final]{pdfpages} 
+\usepackage[top=2cm, bottom=3cm, outer=3cm, inner=4cm, headsep=14pt]{geometry}
+\usepackage{textgreek}
+\usepackage{csquotes}
+\usepackage[french]{babel}
+\usepackage{fancyhdr}
+\usepackage{xsim}
+\usepackage{tasks}
+\usepackage[absolute]{textpos}
+\usepackage{ascii}
+\usepackage{eurosym}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{circuitikz}
+
+
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+
+\bibliographystyle{abbrv}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\thesection}{\arabic{section}}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\lhead{Architecture des ordinateurs}
+\rhead{Logique analytique}
+\rfoot{Page \thepage}
+
+\begin{document}
+
+\chapter{Logique analytique}
+Dans ce chapitre, nous allons aborder quelques fondamentaux de la logique. Contrairement à la physique, la biologie ou la chimie, la logique ne cherche pas à modéliser des systèmes de la nature, mais elle couvre des techniques élaborées par l'humanité pour répondre à des fonctions réflexives.
+La logique s'appuie sur un certain nombre de concepts fondamentaux que nous allons présenter dans ce chapitre. 
+Ce cours est largement inspiré de \cite{systemeslogiquesI}, dont certains extraits sont repris tels quels, notamment les définitions.
+
+\section{Définitions}
+
+\begin{definition}[Variable continue]
+Quantité, représentée par un symbole, qui peut prendre une infinité de valeurs.
+\end{definition}
+
+\begin{definition}[Variable discrète]
+Variable susceptible de prendre un nombre limité de valeurs prédéfinies et discontinues.
+\end{definition}
+
+\begin{definition}[Variable binaire]
+Une variable binaire est une variable qui prend deux valeurs uniquement (en général 0 ou 1).
+\end{definition}
+
+\begin{definition}[Variable logique]
+Variable binaire qui peut prendre deux états associés au caractère vrai ou faux d’un événement.
+\end{definition}
+
+\begin{definition}[État logique]
+Valeur attribuée à une variable logique. L’état d’une variable peut être vrai ou faux. On représente l’état vrai par "1" et l’état faux par "0". Une variable dans son état vrai est dite
+"active".
+\end{definition}
+
+\begin{definition}[Opérateur logique]
+Les opérateurs logiques de base sont ET, OU et NON.
+\end{definition}
+
+\begin{definition}[Fonction logique]
+Ensemble de variables logiques reliées par des opérateurs logiques. Une fonction logique
+ne peut prendre que deux valeurs: 0 ou 1.
+\end{definition}
+
+\begin{definition}[Signal logique]
+Quantité physique qui représente une variable logique dans l'un ou l'autre de ses deux états possibles.
+\end{definition}
+
+\begin{definition}[Système logique]
+Ensemble de composants qui effectuent des fonctions sur des signaux logiques dans le but de stocker, communiquer ou de transformer de l'information.
+\end{definition}
+
+\section{Éléments de base}
+Pour les portes logiques qui sont les éléments de base, on se référera aux chapitre sur les portes logiques.
+
+\section{Schémas logiques}
+Il existe une concordance stricte et directe entre une fonction logique et son schéma logique équivalent. On peut donc traduire de manière univoque un schéma logique dans sa fonction logique et inversement. Il faut prendre garde à la priorité des opérations comme on le voit dans l'exemple de la figure \ref{fig:schema1}.
+\begin{figure}
+\begin{circuitikz}
+ \ctikzset{logic ports origin=center}
+ \draw (0,2) node[or port] (myor) {}
+    (myor.in 1) node[anchor=east] {A}
+    (myor.in 2) node[anchor=east] {B}
+    (myor.out) node[anchor=west]  {$A+B$};
+
+ \draw (0,0) node[nand port] (mynand) {}
+    (mynand.in 1) node[anchor=east] {C}
+    (mynand.in 2) node[anchor=east] {D}
+    (mynand.out) node[anchor=west] {$A \cdot B$};
+
+ \draw(4,1) node[xor port] (myxor) {}
+    (myxor.out) node[anchor=west] { $ S = (A + B) \oplus (\overline{C \cdot D} ) $ };
+
+ \draw (myor.out) |- (myxor.in 1); 
+ \draw (mynand.out) |- (myxor.in 2);
+\end{circuitikz}
+    \centering
+    \caption{Exemple d'un schéma logique et de sa fonction logique}
+    \label{fig:schema1}
+\end{figure}
+
+\begin{exercise}
+Nous avons une lampe $L$ avec trois commutateurs: $C_A, C_B\:et\: C_C$. Les commutateurs sont activés par un levier à deux positions. La lampe doit être éteinte si tous les commutateurs sont en position basse. Aussitôt qu'un commutateur est changé, l'état de la lampe s'inversera.
+
+Nous avons donc un système avec une sortie : $L$ et trois variables:
+\begin{itemize}
+    \item A = Le levier du commutateur $C_A$ est haut (actif).
+    \item B = Le levier du commutateur $C_B$ est haut (actif).
+    \item C = Le levier du commutateur $C_C$ est haut (actif).
+\end{itemize}
+\begin{tasks}(1)
+    \task Trouver la fonction logique de notre dispositif. \emph{Indication : lorsque le commutateur $C_A$ est activé, nous avons par exemple : $A\overline{B}\overline{C}$}.
+    \task Proposer un schéma logique qui reproduise cette fonction.
+\end{tasks}
+
+\end{exercise}
+
+\section{Algèbre de Boole}
+Nous allons ici aborder les règles algébriques de l'algèbre de Boole. Celles-ci devraient nous permettre d'appliquer des transformations (élémentaires) aux fonctions logiques dans le but de les simplifier.
+Le but de la simplification d'une expression logique est d'une part de permettre une lecture plus facile, d'autre part, de concevoir des circuits nécessitant moins de portes logiques.
+\subsection{Propriétés de base de l'algèbre de Boole}
+\subsubsection{L'addition (porte logique OU)}
+\begin{itemize}
+    \item $A + 0 = A$ ; \emph{0 est l'élément neutre}
+    \item $A + 1 = 1$
+    \item $A + A = A$
+    \item $A + \overline{A} = 1$
+\end{itemize}
+\subsubsection{La multiplication (porte logique ET)}
+\begin{itemize}
+    \item $A \cdot 0 = 0$ ; \emph{0 est l'élément absorbant}
+    \item $A \cdot 1 = A$ ; \emph{1 est l'élément neutre}
+    \item $A \cdot A = A$
+    \item $A \cdot \overline{A} = 0$
+\end{itemize}
+\subsubsection{Le ou exclusif (porte logique OU-X)}
+\emph{Appelée disjonction exclusive ou somme binaire.}
+\begin{itemize}
+    \item $A \oplus A = 0$ ; \emph{se démontre par induction parfaite, voir ci-dessous}
+    \item $A \oplus 0 = A$ ; \emph{0 est l'élément neutre}
+    \item $A \oplus 1 = \overline{A}$ 
+    \item $A \oplus \overline{A} = 1$ \\
+    
+    \item $A \oplus B = 0 \Leftrightarrow A = B$ ; \emph{démonstration évidente en utilisation l'associativité et $A \oplus 0 = A$.}
+    \item $A \oplus B = \overline{A}\cdot B + A\cdot \overline{B}$ ; \emph{On déduit de cette propriété :}
+    \begin{itemize}
+        \item $\overline{A \oplus B} = A \cdot B + \overline{A} \cdot \overline{B}$
+        \item $\overline{A \oplus B} = \overline{A} \oplus B = A \oplus \overline{B}$
+        \item $A \oplus B = \overline{A} \oplus \overline{B}$
+    \end{itemize}
+    \item $A \oplus B = C \Leftrightarrow C + B = A \Leftrightarrow A \oplus C = B $
+    \item $(A \oplus B) \oplus B = A$ ; \emph{Découle des deux premières propriétés ci-dessus. On utilise cette propriété en cryptographie.}
+\end{itemize}
+\subsubsection{La négation (porte logique NON, NOT)}
+\begin{itemize}
+    \item $\overline{\overline{A}} = A$ ; \emph{double négation}
+    \item $\overline{A} + \overline{B} \neq \overline{A + B}$ ; \emph{alors qu'en arithmétique, $-1 \cdot (A + B) = -1 \cdot A + -1 \cdot B$}
+    \item $\overline{A}\cdot\overline{B} \neq \overline{A\cdot B} $
+\end{itemize}
+
+\subsubsection{Priorité des opérations}
+La fonction ET est prioritaire sur OU. Dans une expression sans parenthèses, on effectue d'abord les opérations "ET" et, par la
+suite, les "OU".
+\subsubsection{Induction parfaite}
+Dans le domaine linéaire, il n'est pas possible de prouver une équation en la vérifiant pour toutes les valeurs des variables. En logique, puisque les variables sont limitées à deux états, on peut prouver une relation en la vérifiant pour toutes les combinaisons de valeurs pour les variables d'entrée.
+\subsubsection{Équivalence}
+Corollaire du précédent : Deux fonctions sont équivalentes si on peut leur faire correspondre la même table de vérité.
+\emph{On utilisera cette méthode pour démontrer la loi de De Morgan par exemple}.
+\subsubsection{Complémentarité}
+Deux fonctions sont dites complémentaires si l'une est l'inverse de l'autre pour toutes les combinaisons d'entrées possibles.
+
+\textbf{Exemple :}
+Soit deux fonctions :
+\[ F = \overline{A} \cdot \overline{B}\]
+\[ G = A + B\]
+On constate (par induction parfaite par exemple) que :
+\[ F = \overline{G}\]
+Et on dit que ces deux fonction sont complémentaires.
+On peut aussi démontrer cette égalité avec le théorème de De Morgan (plus loin).
+\subsubsection{Dualité}
+Deux expressions se correspondent par dualité si l'on obtient l'une en changeant dans l'autre, les "ET" par des "OU", les "OU" par des "ET", les "1" par des "0" et les "0" par des "1".
+
+\textbf{Exemple :}
+\[\overline{A\cdot B} = \overline{A} + \overline{B}
+\Leftrightarrow \overline{A + B} = \overline{A} \cdot \overline{B}\] par dualité.
+
+
+\subsubsection{Associativité}
+Les trois opérations sont associatives.
+
+\textbf{Exemples :}
+\[A + B + C = (A + B) + C = A + (B + C)\]
+\[A \cdot B \cdot C = (A \cdot B) \cdot C = A \cdot (B \cdot C)\]
+\[A \oplus B \oplus C = (A \oplus B) \oplus C = A \oplus (B \oplus C)\]
+
+
+\subsubsection{Commutativité}
+Les trois opérations sont commutatives.
+
+\textbf{Exemples :}
+\[A + B = B + A\]
+\[A \cdot B = B \cdot A\]
+\[A \oplus B = B \oplus A\]
+
+\subsubsection{Distributivité}
+La multiplication est ditributive sur l'addition et sur le ou exclusif.
+
+\textbf{Exemples :}
+\[A\cdot (B + C) = A\cdot B + A\cdot C = AB + AC \]
+\[A\cdot (B \oplus C) = A\cdot B \oplus A\cdot C = AB \oplus AC \]
+
+\subsubsection{Théorème de De Morgan}
+\emph{Théorème puisqu'il peut se démontrer par induction parfaite}
+
+Première forme : $\overline{A+B+C+...} = \overline{A} \cdot \overline{B} \cdot \overline{C} \cdot ...$
+
+Deuxième forme : $\overline{A\cdot B\cdot C\cdot ...} = \overline{A} + \overline{B} + \overline{C} + ...$
+\subsubsection{Forme canonique}
+Une expression est sous sa forme canonique si tous les symboles qui représentent les variables apparaissent dans tous les termes qui la constituent.
+
+Si une fonction est une somme de produits, on a une somme canonique.
+
+\textbf{Exemples :} $F = \overline{A}BC + ABC + A\overline{B}\overline{C} + \overline{A}\overline{B}\overline{C}$
+
+Si une fonction est un produit de sommes, on a un produit canonique.
+
+\textbf{Exemples :} $G = (\overline{A} + B+ C)\cdot(A + B + C)\cdot(A + \overline{B}+ \overline{C})\cdot(\overline{A} + \overline{B} + \overline{C})$
+
+Lorsque l'on traduit une table de vérité en fonction logique, on obtient généralement une somme canonique.
+
+\textbf{Exemples :}
+
+Soit la table de vérité suivante pour la fonction $L$:
+
+  \begin{tabular}{|ccc|c|}
+    \hline
+         & & & \\
+        $A$ & $B$ & $C$ & $L$ \\
+    \hline 
+        0 & 0 & 0 & 0 \\
+        0 & 0 & 1 & 1 \\
+        0 & 1 & 0 & 1 \\
+        0 & 1 & 1 & 0 \\
+        1 & 0 & 0 & 1 \\
+        1 & 0 & 1 & 0 \\
+        1 & 1 & 0 & 0 \\
+        1 & 1 & 1 & 1 \\
+    \hline
+  \end{tabular}
+
+Pour laquelle on trouve immédiatement la somme canonique suivante:
+
+\[L = \overline{A}\overline{B}C + \overline{A}B\overline{C}+A\overline{B}\overline{C}+ABC \]
+
+
+\begin{exercise}
+Nous avons un message chiffré, sous forme d'une suite de bits:
+\\
+$C = 10011111$
+\\
+Nous savons que le message chiffré a été obtenu en effectuant, bit à bit la somme sans reste (XOR) au moyen de la clé suivante:
+\\
+$K = 10101010$
+\\
+Selon la formule: $C = M \oplus K$
+\\
+Retrouver maintenant le message décrypté $M$
+\end{exercise}
+
+\begin{exercise}
+Reprendre l'exemple de la somme canonique, introduire la table de vérité dans logisim, vérifier que l'on obtient la même expression et produire le circuit logique équivalent.
+\end{exercise}
+
+\begin{exercise}
+Convertisseur BCD [A COMPLETER]
+\end{exercise}
+
+%\bibliography{biblio.bib}
+
+\end{document}

@@ -1,0 +1,366 @@
+\documentclass[a4paper,11pt]{book}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[LGR,T1]{fontenc} % notice LGRx instead of LGR
+\usepackage{lmodern}
+\usepackage[final]{pdfpages} 
+\usepackage[top=2cm, bottom=3cm, outer=3cm, inner=4cm, headsep=14pt]{geometry}
+\usepackage{textgreek}
+\usepackage{csquotes}
+\usepackage[french]{babel}
+\usepackage{fancyhdr}
+\usepackage{xsim}
+\usepackage{tasks}
+\usepackage[absolute]{textpos}
+\usepackage{ascii}
+\usepackage{eurosym}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{circuitikz}
+\usepackage{multirow}
+\usepackage{xcolor,colortbl}
+
+
+
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+
+\bibliographystyle{abbrv}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\thesection}{\arabic{section}}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\lhead{Architecture des ordinateurs}
+\rhead{Optimisation}
+\rfoot{Page \thepage}
+
+\begin{document}
+
+\chapter{Optimisation}
+Dans ce chapitre nous allons aborder d'abord des démarches analytiques pour optimiser des fonctions logiques, puis nous verrons ensuite, à partir d'une table de vérité et de l'expression en somme canonique, comment trouver une expression optimisée au moyen des tables de Karnaugh.
+L'optimisation efficace des expressions logiques est intéressante car elle permet une mise en oeuvre avec un minimum de portes logiques, et donc l'élaboration de circuits plus efficaces, plus denses et moins onéreux.
+
+\section{Optimisation analytique}
+L'optimisation analytique s'opère en appliquant des opérations arithmétiques parmi celles présentées précédemment (chapitre : Logique analytique). Il faut de la pratique et de l'intuition pour trouver le "chemin" qui aboutisse à la meilleure solution.
+
+\textbf{Exemple :}
+
+Soit l'équation :
+\[ S = A\overline{C} + \overline{A}B + BC\]
+Que l'on peut reformuler sous sa forme canonique:
+\[ S = A\overline{C}(B+\overline{B}) + \overline{A}B(C+\overline{C}) + BC(A+\overline{A}) \]
+\[ S = AB\overline{C} + A\overline{B}\overline{C} + \overline{A}BC + \overline{A}B\overline{C}+ABC+\overline{A}BC \]
+Le terme : $\overline{A}BC$ apparaît deux fois et peut donc être simplifié :
+\[ S = AB\overline{C} + A\overline{B}\overline{C} + \overline{A}BC + \overline{A}B\overline{C}+ABC \]
+On regroupe (réorganise) en vue de mettre $AB$ et $\overline{A}B$ en facteur :
+\[ S = AB\overline{C} + ABC + \overline{A}BC + \overline{A}B\overline{C} + A\overline{B}\overline{C}\]
+Ainsi : 
+\[ S = AB(\overline{C} + C) +  \overline{A}B(C + \overline{C}) + A\overline{B}\overline{C}\]
+Soit:
+\[ S = AB +  \overline{A}B + A\overline{B}\overline{C}\]
+On peut maintenant mettre B en facteur :
+\[ S = B(A +  \overline{A}) + A\overline{B}\overline{C}\]
+Soit:
+\[ S = B + A\overline{B}\overline{C}\]
+
+\begin{exercise}
+Reproduire le schéma et la table de vérité en utilisant le logiciel logisim (trouver la méthode la plus efficace pour cette démarche !). Vérifier également dans le logiciel que l'expression optimale trouvée par logisim est la même.
+
+\end{exercise}
+
+\newpage
+
+\section{Karnaugh}
+
+\subsection{Thorème d'adjacence}
+\textbf{Définition :} deux mots binaires sont dits adjacents s'ils ne diffèrent que par la complémentarité d'une, et seulement une variable. 
+
+Par exemple $ABC$ et$AB\overline{C}$ sont adjacents.
+
+\textbf{Théorème :} si deux termes adjacents sont sommés, ils peuvent être fusionnés et la variable qui diffère disparaît.
+
+Par exemple $ABC + AB\overline{C} = AB$.
+
+Preuve : $ABC + AB\overline{C} = AB(C + \overline{C}) = AB\cdot 1 = AB$
+
+\subsubsection{Adjacence et codage de Gray}
+On notera, et c'est important, que dans un codage de Gray, deux nombres consécutifs sont adjacents. Par conséquent, si dans le processus de création d'un circuit logique, on établit une table de vérité organisée selon le codage de Gray, alors les adjacences devraient pouvoir être mises en évidence.
+Ainsi l'expression sous forme de somme canonique devient plus facile à simplifier.
+
+\subsection{Tables de Karnaugh}
+La table de Karnaugh est justement organisée de façon à rendre \textit{visuellement} les codes adjacents. Dans les figures \ref{tab:karnaugh2},\ref{tab:karnaugh3} et \ref{tab:karnaugh4} on voit des tables de Karnaugh à respectivement deux, trois et quatre variables. Au-delà de quatre variables, on décompose en tables à quatre. Par exemple avec cinq variables $ABCDE$, on aura deux tables, une pour $E=0$ et une pour $E=1$.
+
+\begin{figure}
+  \centering
+  \begin{tabular}{|cc|c|c|}
+    \hline
+         & &  \multicolumn{2}{r|}{\underline{$\:A\:$}} \\
+         & & 00 & 01 \\
+    \hline
+         & 00 & & \\
+    \cline{2-4}
+         C| & 01 & &\\
+    \hline
+  \end{tabular}
+  \caption{Table de Karnaugh à deux variables}
+  \label{tab:karnaugh2}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \begin{tabular}{|cc|c|c|c|c|}
+    \hline
+         & & \multicolumn{2}{c}{} & \multicolumn{2}{c|}{\underline{$\:\:\:B\:\:\:$}} \\
+         & & \multicolumn{1}{c}{}& \multicolumn{2}{c}{\underline{$\:\:\:A\:\:\:$}} & \\
+         & &  00 & 01 & 11 & 10 \\
+    \hline 
+         & 00 & & & & \\
+    \cline{2-6}
+         C| & 01 & & & & \\
+    \hline
+  \end{tabular}
+  \caption{Table de Karnaugh à trois variables}
+  \label{tab:karnaugh3}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \begin{tabular}{|ccc|c|c|c|c|}
+    \hline
+         & & & \multicolumn{2}{c}{} & \multicolumn{2}{c|}{\underline{$\:\:\:B\:\:\:$}} \\
+         & & & \multicolumn{1}{c}{}& \multicolumn{2}{c}{\underline{$\:\:\:A\:\:\:$}} & \\
+         & & &  00 & 01 & 11 & 10 \\
+    \hline 
+         & & 00 & & & & \\
+    \cline{3-7}
+         & \multirow{2}{1em}{C|} & 01 & & & & \\
+    \cline{3-7}
+         \multirow{2}{1em}{D|} & & 11 & & & & \\
+    \cline{3-7}
+         & & 10 & & & & \\
+    \hline
+  \end{tabular}
+  \caption{Table de Karnaugh à quatre variables}
+  \label{tab:karnaugh4}
+\end{figure}
+
+\subsection{Méthode de Karnaugh}
+La méthode de Karnaugh consiste à remplir dans la table les cases correspondant aux états de variables d'entrée produisant une sortie vraie. On transcrit ainsi toute la table de vérité dans la table.
+
+Lorsque la table de Karnaugh est complétée, on procède alors à des regroupements de "1". Comme la table de Karnaugh utilise une organisation qui reproduit le code de Gray, on identifie ainsi des termes adjacents et on peut donc procéder à des simplifications.
+
+Il est important de noter que les regroupements forment toujours des rectanbles (un carré est aussi un rectangle) contenant un nombre d'éléments qui est une puissance de deux (1, 2, 4, 8).
+
+\begin{figure}
+  \centering
+  \begin{tabular}{|ccc|c|c|c|c|}
+    \hline
+         & & & \multicolumn{2}{c}{} & \multicolumn{2}{c|}{\underline{$\:\:\:B\:\:\:$}} \\
+         & & & \multicolumn{1}{c}{}& \multicolumn{2}{c}{\underline{$\:\:\:A\:\:\:$}} & \\
+         & & &  00 & 01 & 11 & 10 \\
+    \hline 
+         & & 00 & 0 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & 0\\
+    \cline{3-7}
+         & \multirow{2}{1em}{C|} & 01 & 0 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & 0\\
+    \cline{3-7}
+         \multirow{2}{1em}{D|} & & 11 & 0 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & 0\\
+    \cline{3-7}
+         & & 10 & 0 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & 0\\
+    \hline
+  \end{tabular}
+  \caption{Regroupement mettant en évidence : S=A}
+  \label{tab:karnaughEx1}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \begin{tabular}{|ccc|c|c|c|c|}
+    \hline
+         & & & \multicolumn{2}{c}{} & \multicolumn{2}{c|}{\underline{$\:\:\:B\:\:\:$}} \\
+         & & & \multicolumn{1}{c}{}& \multicolumn{2}{c}{\underline{$\:\:\:A\:\:\:$}} & \\
+         & & &  00 & 01 & 11 & 10 \\
+    \hline 
+         & & 00 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1\\
+    \cline{3-7}
+         & \multirow{2}{1em}{C|} & 01 & 0 & 0 & 0 & 0\\
+    \cline{3-7}
+         \multirow{2}{1em}{D|} & & 11 & 0 & 0 & 0 & 0\\
+    \cline{3-7}
+         & & 10 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1\\
+    \hline
+  \end{tabular}
+  \caption{Regroupement mettant en évidence : $S=\overline{C}$}
+  \label{tab:karnaughEx2}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \begin{tabular}{|ccc|c|c|c|c|}
+    \hline
+         & & & \multicolumn{2}{c}{} & \multicolumn{2}{c|}{\underline{$\:\:\:B\:\:\:$}} \\
+         & & & \multicolumn{1}{c}{}& \multicolumn{2}{c}{\underline{$\:\:\:A\:\:\:$}} & \\
+         & & &  00 & 01 & 11 & 10 \\
+    \hline 
+         & & 00 & 0 & 0 & 0 & 0\\
+    \cline{3-7}
+         & \multirow{2}{1em}{C|} & 01 & 0 & 0 & 0 & 0\\
+    \cline{3-7}
+         \multirow{2}{1em}{D|} & & 11 & 0 & 0 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1\\
+    \cline{3-7}
+         & & 10 & 0 & 0 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1\\
+    \hline
+  \end{tabular}
+  \caption{Regroupement mettant en évidence : S=DB}
+  \label{tab:karnaughEx3}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \begin{tabular}{|ccc|c|c|c|c|}
+    \hline
+         & & & \multicolumn{2}{c}{} & \multicolumn{2}{c|}{\underline{$\:\:\:B\:\:\:$}} \\
+         & & & \multicolumn{1}{c}{}& \multicolumn{2}{c}{\underline{$\:\:\:A\:\:\:$}} & \\
+         & & &  00 & 01 & 11 & 10 \\
+    \hline 
+         & & 00 & 0 & 0 & 0 & 0\\
+    \cline{3-7}
+         & \multirow{2}{1em}{C|} & 01 & \cellcolor{blue!25}1 & 0 & 0 & \cellcolor{blue!25}1\\
+    \cline{3-7}
+         \multirow{2}{1em}{D|} & & 11 & \cellcolor{blue!25}1 & 0 & 0 & \cellcolor{blue!25}1\\
+    \cline{3-7}
+         & & 10 & 0 & 0 & 0 & 0\\
+    \hline
+  \end{tabular}
+  \caption{Regroupement mettant en évidence : $S=C\overline{A}$}
+  \label{tab:karnaughEx4}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \begin{tabular}{|ccc|c|c|c|c|}
+    \hline
+         & & & \multicolumn{2}{c}{} & \multicolumn{2}{c|}{\underline{$\:\:\:B\:\:\:$}} \\
+         & & & \multicolumn{1}{c}{}& \multicolumn{2}{c}{\underline{$\:\:\:A\:\:\:$}} & \\
+         & & &  00 & 01 & 11 & 10 \\
+    \hline 
+         & & 00 & \cellcolor{blue!25}1 & 0 & 0 & \cellcolor{blue!25}1\\
+    \cline{3-7}
+         & \multirow{2}{1em}{C|} & 01 & 0 & 0 & 0 & 0\\
+    \cline{3-7}
+         \multirow{2}{1em}{D|} & & 11 & 0 & 0 & 0 & 0\\
+    \cline{3-7}
+         & & 10 & \cellcolor{blue!25}1 & 0 & 0 & \cellcolor{blue!25}1\\
+    \hline
+  \end{tabular}
+  \caption{Regroupement mettant en évidence : $S=\overline{C}\overline{A}$}
+  \label{tab:karnaughEx5}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \begin{tabular}{|ccc|c|c|c|c|}
+    \hline
+         & & & \multicolumn{2}{c}{} & \multicolumn{2}{c|}{\underline{$\:\:\:B\:\:\:$}} \\
+         & & & \multicolumn{1}{c}{}& \multicolumn{2}{c}{\underline{$\:\:\:A\:\:\:$}} & \\
+         & & &  00 & 01 & 11 & 10 \\
+    \hline 
+         & & 00 & 0 & 0 & 0 & 0\\
+    \cline{3-7}
+         & \multirow{2}{1em}{C|} & 01 & 0 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & 0\\
+    \cline{3-7}
+         \multirow{2}{1em}{D|} & & 11 & 0 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & 0\\
+    \cline{3-7}
+         & & 10 & 0 & 0 & 0 & 0\\
+    \hline
+  \end{tabular}
+  \caption{Regroupement mettant en évidence : $S=CA$}
+  \label{tab:karnaughEx6}
+\end{figure}
+
+\textbf{Indications :}
+\begin{itemize}
+    \item La table est cyclique sur les deux axes (espace refermné).
+    \item Lorsqu'un impliquant couvre $2^n$ cellules, $2^n$ termes sont fusionnés et $n$ variables sont éliminées.
+    \item Des implicants peuvent se chevaucher.
+    \item Dans le cas d'un système avec plusieurs sorties, il faut appliquer la méthode de Karnaugh indépendemment pour chaque sortie.
+\end{itemize}
+
+\subsection{Exemple plus complet}
+On veut simplifier l'expression (vue précédemment):
+
+\[ S = A\overline{C} + \overline{A}B + BC\]
+
+Qui possède donc trois variables. On remarque d'abord que la forme n'est pas canonique. Ce qui veut dire que dans un terme, lorsqu'une variable n'apparaît pas, ce terme produit un 1 quelle que soit la valeur de la variable qui n'apparaît pas, donc le terme couvre deux cellules (exemple: $A\overline{C}$ ne dépend pas de B, donc vaut 1 pour B = 0 \textbf{et} pour B = 1).
+
+On obtient donc la table de la figure \ref{tab:karnaughEx1.1}.
+
+
+\begin{figure}
+  \centering
+  \begin{tabular}{|cc|c|c|c|c|}
+    \hline
+         & & \multicolumn{2}{c}{} & \multicolumn{2}{c|}{\underline{$\:\:\:B\:\:\:$}} \\
+         & & \multicolumn{1}{c}{}& \multicolumn{2}{c}{\underline{$\:\:\:A\:\:\:$}} & \\
+         & &  00 & 01 & 11 & 10 \\
+    \hline 
+         & 00 &  & 1 & 1 & 1\\
+    \cline{2-6}
+         C| & 01 & & & 1 & 1\\
+    \hline
+  \end{tabular}
+  \caption{Table de Karnaugh remplie}
+  \label{tab:karnaughEx1.1}
+\end{figure}
+
+On va maintenant procéder aux regroupements comme sur la figure \ref{tab:karnaughEx1.2}, en veillant avec attention à ne pas laisser de 1 non regroupés.
+
+\begin{figure}
+  \centering
+  \begin{tabular}{|cc|c|c|c|c|}
+    \hline
+         & & \multicolumn{2}{c}{} & \multicolumn{2}{c|}{\underline{$\:\:\:B\:\:\:$}} \\
+         & & \multicolumn{1}{c}{}& \multicolumn{2}{c}{\underline{$\:\:\:A\:\:\:$}} & \\
+         & &  00 & 01 & 11 & 10 \\
+    \hline 
+         & 00 &  & \cellcolor{red!25}1 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1\\
+    \cline{2-6}
+         C| & 01 & & & \cellcolor{blue!25}1 & \cellcolor{blue!25}1\\
+    \hline
+  \end{tabular}
+  \caption{Formation des impliquants : $S=\overline{C}\overline{B}A+B$}
+  \label{tab:karnaughEx1.2}
+\end{figure}
+
+On peut cependant faire mieux, pour cela il faut créer les regroupements (impliquants) les plus grands possibles, quitte à introduire des recouvrements. On obtient ainsi la forme otimale de la figure \ref{tab:karnaughEx1.3}
+\begin{figure}
+  \centering
+  \begin{tabular}{|cc|c|c|c|c|}
+    \hline
+         & & \multicolumn{2}{c}{} & \multicolumn{2}{c|}{\underline{$\:\:\:B\:\:\:$}} \\
+         & & \multicolumn{1}{c}{}& \multicolumn{2}{c}{\underline{$\:\:\:A\:\:\:$}} & \\
+         & &  00 & 01 & 11 & 10 \\
+    \hline 
+         & 00 &  & \cellcolor{red!25}1 & \cellcolor{purple!50}1 & \cellcolor{blue!25}1\\
+    \cline{2-6}
+         C| & 01 & & & \cellcolor{blue!25}1 & \cellcolor{blue!25}1\\
+    \hline
+  \end{tabular}
+  \caption{Formation optimale des impliquants : $S=\overline{C}A+B$}
+  \label{tab:karnaughEx1.3}
+\end{figure}
+
+\begin{exercise}
+En utilisant le circuit établi dans logisim à l'exercice précédent, examiner les tables de Karnaugh et les impliquants proposés par le logiciel. Vérifier si cela correspond à nos résultats.
+
+\end{exercise}
+
+\subsubsection{Impliquant redondants}
+Un impliquant est dit redondant si toutes les cellules qu'il couvre sont déjà couvertes par d'autres impliquants. On peut alors le supprimer, en prenant toujours la précaution de garder les impliquants les plus textit{grands} possibles.
+
+
+\end{document}

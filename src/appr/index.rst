@@ -4,10 +4,12 @@
 APPRENDRE l'informatique au gymnase
 ===================================
 
-Bienvenue dans les ressources pour l'informatique au gymnase. Ces ressources ont été conçues pour vous accompagner dans votre découverte de l'informatique.
+Bienvenue dans les ressources pour l'informatique au gymnase. 
+Ces ressources ont été conçues pour vous accompagner dans votre découverte de l'informatique.
 
-Vous pouvez faire un tour à travers les différentes catégories dans l'ordre que vous souhaitez. La plateforme est améliorée
-de manière continue grâce à vos retours, n'hésitez pas à nous les partager sur team@modulo-info.ch !
+Vous pouvez faire un tour à travers les différentes catégories dans l'ordre que vous souhaitez. 
+La plateforme est améliorée de manière continue grâce à vos retours, 
+n'hésitez pas à nous les partager sur team@modulo-info.ch !
 
 .. toctree::
    :name: Première année
@@ -46,8 +48,10 @@ Les ressources sont découpées selon un chapitrage qui correspond au `plan d'é
 `Représentation de l'information <https://apprendre.modulo-info.ch/content/appr/theme/rep-info/accueil/eleve.html>`_
 : ce chapitre traite du passage du système décimal au *système binaire*, ainsi que des problématiques de traitement des données telles que *l'encodage*, *la compression*, *l'échantillonnage*, *le cryptage*, et la *représentation des caractères, des images et des sons* sous forme de bits. 
 
-`Programmation I <https://apprendre.modulo-info.ch/content/appr/theme/prog1/accueil/elevenew.html>`_
-: après avoir présenté un échantillon de langages de programmation et leurs différences respectives, ce chapitre *pose les bases du langage Python*. 
+`Programmation I <https://dev-apprendre.modulo-info.ch/prog1/index.html>`_
+: ce chapitre présente la programmation sous une approche visuelle et graphique. 
+A travers des activités familières (dessiner, définir, colorier, répèter, etc.) 
+nous faisons connaissance avec les concepts informatiques tel que fonctions, boucles et variables. 
 
 `Algorithmique I <https://apprendre.modulo-info.ch/content/appr/theme/algo1/accueil/eleve.html>`_
 : ce chapitre propose une *définition générale de l'algorithmique*, ainsi qu'une présentation de certains *algorithmes classiques*. 
