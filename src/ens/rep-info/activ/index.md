@@ -5,7 +5,7 @@ Page de description des séquences et activités disponibles pour cette thémati
 ```{toctree}
 :maxdepth: 2
 :hidden:
-Magie binaire <magie-binaire/magie_binaire>
+Magie binaire <magie_binaire>
 Images numériques <encoder_images>
 Echantillonnage <echantillonnage>
 Redondance et code de Hamming <hamming>
