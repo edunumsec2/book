@@ -1,3 +1,4 @@
+(prog1.questionner)=
 # Questionner - `input()`
 
 Dans ce chapitre, nous découvrons comment un programme peut poser une question lors de son exécution. L'utilisateur du programme peut alors répondre et entrer une information. La réponse sera stockée dans la mémoire de l'ordinateur et sera associée à une variable. Grâce à cette variable, le programme peut traiter la réponse fournie, et le résultat peut être affiché. Nous allons voir que :
@@ -277,7 +278,7 @@ print('après', score)
 print('Votre score est', score)
 ```
 
-Nous reprenons l'exemple du chapitre précédent et nous ajoutons le calcul du score
+Nous reprenons l'exemple du [chapitre précédent](prog1.randomiser) et nous ajoutons le calcul du score
 
 ```{codeplay}
 score = 0

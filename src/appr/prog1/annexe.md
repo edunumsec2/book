@@ -1,4 +1,5 @@
-# Annexe
+(prog1.annexes)=
+# Annexes
 
 Dans ce chapitre, nous présentons quelques outils pour écrire du code en Python :
 

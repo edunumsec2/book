@@ -1,3 +1,4 @@
+(prog1.attendre)=
 # Attendre - `while`
 
 Dans ce chapitre, nous découvrons un deuxième type de boucle, la boucle `while`. Elle est souvent utilisée pour attendre quelque chose. Nous allons voir que :
