@@ -1,5 +1,4 @@
-(programmation)=
-
+(prog1.programmation)=
 # Programmation I
 
 Programmer, c'est facile. Si vous savez dessiner, écrire et calculer, alors vous savez aussi programmer.

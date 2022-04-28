@@ -1,3 +1,4 @@
+(prog1.renvoyer)=
 # Renvoyer - `return`
 
 Dans ce chapitre, nous allons voir comment une fonction peut renvoyer une valeur. Ceci est très important pour pouvoir utiliser une fonction dans une expression mathématique. Nous allons voir que :

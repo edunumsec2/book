@@ -1,3 +1,4 @@
+(prog1.colorier)=
 # Colorier - `color()`
 
 Dans ce chapitre, nous continuons à dessiner et nous introduisons la couleur.
@@ -348,7 +349,7 @@ end_fill()
 
 ## Maison
 
-Nous reprenons l'exemple du chapitre précédent de la fonction `maison()`. Cette fois, nous y intégrons `begin_fill()` et `end_fill()` pour pouvoir les colorier..
+Nous reprenons [l'exemple du chapitre précédent](prog1.dessiner) de la fonction `maison()`. Cette fois, nous y intégrons `begin_fill()` et `end_fill()` pour pouvoir les colorier..
 
 ```{codeplay}
 :file: color9.py
