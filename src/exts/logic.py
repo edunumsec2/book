@@ -115,13 +115,13 @@ class LogicHighlightRefRole(SphinxRole):
         node = logic_highlight("", "",
             diagramref=diagramref,
             componentref=componentref,
-            display=display
+            display=_render_inline(display, self.env)
         )
         # self.state.nested_parse(display, self.content_offset, node)
         return [node], []
 
-def _render_inline(source: str) -> str:
-    html = str(to_html(source)).strip()
+def _render_inline(source: str, env) -> str:
+    html = str(to_html(source, config=env.myst_config)).strip()
     if html.startswith("<p>") and html.endswith("</p>"):
         html = html[3:-4]
     return html
@@ -137,7 +137,7 @@ def begin_logic_highlight_html(self, node):
         onclick=js_on_click,
     )
     self.body.append(tag.strip())
-    self.body.append(_render_inline(node["display"]))
+    self.body.append(node["display"])
 
 
 
