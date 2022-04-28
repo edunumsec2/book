@@ -361,6 +361,7 @@ Pourquoi rajouter une porte **ET**: On utilise ici le fait que connecter une por
 
 {
   "v": 1,
+  "opts": {"showDisconnectedPins": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
@@ -606,6 +607,7 @@ C'est une porte **OU**.
 Analysez ce circuit. De quel type de portes est-il constitué ? Fonctionne-t-il correctement ? Déterminez ce qui pose problème. Dites ce que fait ce circuit une fois corrigé et écrivez sa table de vérité.
 
 ````{logic}
+:ref: faulty_and
 :height: 140
 :mode: tryout
 
@@ -619,7 +621,7 @@ Analysez ce circuit. De quel type de portes est-il constitué ? Fonctionne-t-i
   "out": [{"pos": [320, 70], "id": 5, "name": "Z"}],
   "gates": [
     {"type": "AND", "pos": [150, 50], "in": [0, 1], "out": 2},
-    {"type": "OR", "pos": [260, 70], "in": [7, 8], "out": 9, "poseAs": "AND"}
+    {"type": "OR", "pos": [260, 70], "in": [7, 8], "out": 9, "poseAs": "AND", "ref": "faulty"}
   ],
   "wires": [[3, 0], [4, 1], [6, 8], [2, 7], [9, 5]]
 }
@@ -649,7 +651,7 @@ Voici le circuit corrigé (il a la même apparence que le circuit de la question
 ````
 
 ````{dropdown} Corrigé
-Ce circuit est constitué de deux portes **ET**. Mais la porte **ET** de droite semble poser problème, parce qu'elle se comporte comme une porte **OU** ! Le circuit montré dans l'indice se comporte correctement.
+Ce circuit est constitué de deux portes **ET**. Mais {logicref}`faulty_and.faulty|la porte **ET** de droite` semble poser problème, parce qu'elle se comporte comme une porte **OU** ! Le circuit montré dans l'indice se comporte correctement.
 
 Ce circuit, une fois corrigé, implémente en fait un **ET** à trois entrée $X$, $Y$ et $W$, où la sortie $Z$ ne vaut 1 que si les trois entrées valent 1. Sa table de vérité, à huit lignes dues aux trois entrées, est ainsi la suivante :
 
@@ -667,7 +669,7 @@ Ce circuit, une fois corrigé, implémente en fait un **ET** à trois entrée $X
 `````
 
 
-````{admonition} Exercice 6 : conception d'un circuit
+`````{admonition} Exercice 6 : conception d'un circuit
 
 Écrivez la table de vérité de ce circuit, dont une partie est masquée :
 
@@ -713,15 +715,15 @@ Réalisez ensuite un circuit logique avec les mêmes deux entrées $X$ et $Y$ et
 }
 ```
 
-```{dropdown} Indice 1
+````{dropdown} Indice 1
 On peut lire cette fonction comme «$Z$ vaut 1 lorsque $X$ et $Y$ sont les deux à 0 (la première ligne de la table de vérité) ou lorsque $X$ est à 1 (les deux dernières lignes)».
-```
+````
 
-```{dropdown} Indice 2
+````{dropdown} Indice 2
 $Z$ est donc le **OU** de $X$ et du **ET** de l'inverse de $X$ et de $Y$.
-```
+````
 
-```{dropdown} Corrigé
+````{dropdown} Corrigé
 Il y plusieurs solutions possibles. Celle qui correspond aux indices est la suivante:
 
 ```{logic}
@@ -764,5 +766,6 @@ Voici un circuit plus simple, qui fait la même chose mais qui est plus difficil
   "wires": [[3, 6], [8, 5], [4, 11], [12, 7]]
 }
 ```
-
 ````
+
+`````
