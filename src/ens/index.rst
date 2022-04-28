@@ -47,6 +47,14 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    enjx/index
 
 .. toctree::
+   :name: Suppléments
+   :caption: Suppléments
+   :maxdepth: 3
+   :hidden:
+
+   art/index
+
+.. toctree::
    :name: Outils
    :caption: Outils
    :maxdepth: 3
