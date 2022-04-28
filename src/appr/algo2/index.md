@@ -2,7 +2,7 @@ Algorithmique II
 ==============================
 
 
-Pour résoudre un problème, il faut commencer par le décomposer en sous-problèmes. Pour chaque sous-problème à résoudre, on décrit les opérations à réaliser sous la forme d’un {glo}`algo|algorithme`. Il existe une multitude d’algorithmes pour résoudre un problème, mais ils ne se valent pas tous. 
+Pour résoudre un problème, il faut commencer par le décomposer en sous-problèmes. Pour chaque sous-problème à résoudre, on décrit les opérations à réaliser sous la forme d’un {glo}`algo|algorithme`. Il existe une multitude d’{glo}`algo|algorithmes` pour résoudre un problème, mais ils ne se valent pas tous. 
 
 L’**<span style="color:rgb(89, 51, 209)">algorithmique</span>** étudie les propriétés de ces {glo}`algo|algorithmes`. Cette analyse est nécessaire pour nous aider à décider quel {glo}`algo|algorithme` utiliser. On se propose à présent de passer en revue quelques propriétés importantes des {glo}`algo|algorithmes`. 
 

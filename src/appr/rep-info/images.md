@@ -1,4 +1,4 @@
-# Les images
+# 3. Les images
 
 ## 3.1. Les images matricielles
 

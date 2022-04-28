@@ -1,4 +1,4 @@
-# Les caractères
+# 2. Les caractères
 
 Toute l'information est représentée dans un ordinateur par des nombres
 encodés sous forme binaire par des 0 et des 1. Se pose alors la question
