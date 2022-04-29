@@ -11,4 +11,9 @@
 
 .logic-highlight:hover {
     border-bottom: 2px solid var(--color-link-underline--hover);
+    background-color: rgba(128,128,128,0.05);
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-left: -2px;
+    margin-right: -2px;
 }
