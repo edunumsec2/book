@@ -32,6 +32,9 @@ Panorama historique 2 (de la Seconde guerre mondiale à nos jours)
 
 ### Semaines 5 & 6
 
+[Bloc architecture des ordinateurs](../archi/PlanDidac/plandidacarchi1.md)
+
+
 ### Semaines 7 & 8
 
 ### Semaines 9 & 10
