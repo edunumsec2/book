@@ -22,7 +22,7 @@ Que se passe-t-il pour l'addition de deux nombres entiers ? On va utiliser leu
 | 0   | 1   | 1   |
 | 1   | 1   | 10  |
 
-La dernière ligne est intéressante : on sait que $1+1=2$, mais en {glo}`codebinaire|binaire`, on sait aussi que n'existent que des 0 et des 1, et 2 s'écrit ainsi $10$ (voir le chapitre {ref}`représentation de l'information <representationinformation>`). Cela veut dire que, pour traiter tous les cas d'une addition de deux {glo}`bit|bits`, on a besoin aussi de deux bits de sortie, et qu'un seul ne suffit pas. En explicitant chaque fois le deuxième bit de sortie, notre tableau devient :
+La dernière ligne est intéressante : on sait que $1+1=2$, mais en {glo}`codebinaire|binaire`, on sait aussi que n'existent que des 0 et des 1, et 2 s'écrit ainsi 10 (voir le chapitre {ref}`représentation de l'information <representationinformation>`). Cela veut dire que, pour traiter tous les cas d'une addition de deux {glo}`bit|bits`, on a besoin aussi de deux bits de sortie, et qu'un seul ne suffit pas. En explicitant chaque fois le deuxième bit de sortie, notre tableau devient :
 
 | $A$ | $B$ | $S$ |
 | :-: | :-: | :-: |
@@ -51,7 +51,7 @@ Les portes logiques sont des composants électroniques (eux-mêmes constitués e
 
 ## 1.3. Porte ET
 
-Une de ces portes est la porte **ET**. Elle a deux entrées, qu'on appellera $X$ et $Y$, et une sortie $Z$. $Z$ sera $1$ si et seulement si aussi bien $X$ que $Y$ valent $1$. D'où son nom: il faut que $X$ **_et_** $Y$ soient à 1 pour obtenir un 1 sur la sortie.
+Une de ces portes est la porte **ET**. Elle a deux entrées, qu'on appellera $X$ et $Y$, et une sortie $Z$. $Z$ sera 1 si et seulement si aussi bien $X$ que $Y$ valent 1. D'où son nom: il faut que $X$ **_et_** $Y$ soient à 1 pour obtenir un 1 sur la sortie.
 
 En énumérant les quatre possibilités pour les entrées, on peut écrire ce qu'on appelle {glo}`tableverite|table de vérité` pour la porte **ET** :
 
@@ -73,19 +73,20 @@ On peut dessiner des diagrammes avec des portes logiques. Ce ne sont pas des dia
 
 Sur ce schéma logique, les entrées sont à gauche, la sortie à droite et la porte est connectée au milieu. Les circuits sont représentés en noir s'ils véhiculent un «0» et avec une couleur s'ils véhiculent un «1».
 
-Cliquez sur les entrées $X$ et $Y$ pour changer leurs valeurs et observez le comportement de la sortie $Z$. Est-ce que cela correspond à la table de vérité ci-dessus ?
+Cliquez sur {logicref}`tryout_and.x|l'entrée $X$` ou {logicref}`tryout_and.y|l'entrée $Y$` pour changer leurs valeurs et observez le comportement de la {logicref}`tryout_and.z|sortie $Z$`. Est-ce que cela correspond à la table de vérité ci-dessus ?
 
 ```{logic}
+:ref: tryout_and
 :height: 100
 :mode: tryout
 
 {
   "v": 1,
   "in": [
-    {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
-    {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
+    {"pos": [50, 30], "id": 3, "ref": "x", "name": "X", "val": 0},
+    {"pos": [50, 70], "id": 4, "ref": "y", "name": "Y", "val": 0}
   ],
-  "out": [{"pos": [220, 50], "id": 5, "name": "Z"}],
+  "out": [{"pos": [220, 50], "id": 5, "ref": "z", "name": "Z"}],
   "gates": [{"type": "AND", "pos": [150, 50], "in": [0, 1], "out": 2}],
   "wires": [[3, 0], [4, 1], [2, 5]]
 }
@@ -120,7 +121,7 @@ Voici sa table de vérité:
 | 0   | 1   | 1   |
 | 1   | 1   | 1   |
 
-On notera que le **OU** logique est un peu différent du «ou» que l'on utilise en général à l'oral : on voit à la dernière ligne de la table de vérité que la sortie $Z$ vaut également $1$ si les deux entrées $X$ et $Y$ valent $1$. À l'oral, le «ou» est en général interprété comme _exclusif_: si l'on propose à un ami un bonbon _ou_ une glace, on exclut la possibilité qu'il choisisse les deux. Ce n'est pas le cas pour le **OU** logique.
+On notera que le **OU** logique est un peu différent du «ou» que l'on utilise en général à l'oral : on voit à la dernière ligne de la table de vérité que la sortie $Z$ vaut également 1 si les deux entrées $X$ et $Y$ valent 1. À l'oral, le «ou» est en général interprété comme _exclusif_: si l'on propose à un ami un bonbon _ou_ une glace, on exclut la possibilité qu'il choisisse les deux. Ce n'est pas le cas pour le **OU** logique.
 
 Essayez la porte **OU** :
 
@@ -193,38 +194,40 @@ Dans le tableau qui précède, si on reprend notre exemple de la piscine, on pou
 
 ## 1.6. Combinaisons de portes
 
-Les portes peuvent être connectées les unes aux autres. Voici par exemple un diagramme logique réalisant en sortie $Z$ la fonction appelée **OU-X**, qui est un «ou exclusif» et dont la sortie $Z$ vaut 1 lorsque soit $A$, soit $B$ vaut $1$, mais pas les deux en même temps :
+Les portes peuvent être connectées les unes aux autres. Voici par exemple un diagramme logique réalisant la fonction appelée **OU-X**, qui est un «ou exclusif» et dont {logicref}`xor_circuit_tryout.z|la sortie $Z$` vaut 1 lorsque soit {logicref}`xor_circuit_tryout.x|$X$`, soit {logicref}`xor_circuit_tryout.y|$Y$` vaut 1, mais pas les deux en même temps :
 
 ```{logic}
+:ref: xor_circuit_tryout
 :height: 150
 :mode: tryout
 
 {
   "v": 1,
+  "opts": {"showGateTypes": true},
   "in": [
-    {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
-    {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
+    {"pos": [50, 30], "id": 0, "ref": "x", "name": "X", "val": 0},
+    {"pos": [50, 90], "id": 1, "ref": "y", "name": "Y", "val": 0}
   ],
-  "out": [{"pos": [390, 50], "id": 2, "name": "Z"}],
+  "out": [{"pos": [390, 50], "id": 2, "ref": "z", "name": "Z"}],
   "gates": [
-    {"type": "OR", "pos": [190, 40], "in": [3, 4], "out": 5},
-    {"type": "AND", "pos": [330, 50], "in": [6, 7], "out": 8},
-    {"type": "NOT", "pos": [230, 120], "in": 9, "out": 10},
-    {"type": "AND", "pos": [160, 120], "in": [11, 12], "out": 13}
+    {"type": "OR", "pos": [190, 40], "in": [3, 4], "ref": "or", "out": 5},
+    {"type": "AND", "pos": [330, 50], "in": [6, 7], "ref": "and2", "out": 8},
+    {"type": "NOT", "pos": [230, 120], "in": 9, "ref": "inv", "out": 10},
+    {"type": "AND", "pos": [160, 120], "in": [11, 12], "ref": "and1", "out": 13}
   ],
   "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
 }
 ```
 
 
-Ce circuit contient une porte **OU**, deux portes **ET** et un inverseur, tous interconnectés.
+Ce circuit contient {logicref}`xor_circuit_tryout.or|une porte **OU**`, {logicref}`xor_circuit_tryout.{and1,and2}|deux portes **ET**` et {logicref}`xor_circuit_tryout.inv|un inverseur`, tous interconnectés.
 
 Ce diagramme n'est pas forcément facile à lire — discutons d'abord comment l'interpréter avec papier et crayon pour vérifier s'il effectue bien un **OU-X**.
 
 
 ### Analyse d'un circuit
 
-Pour analyser un circuit logique comme celui présenté ci-dessus, on cherchera à établir sa table de vérité. En l'occurrence, comme pour les portes précédentes, ce circuit a deux entrées: si chaque entrée peut valoir $1$ ou $0$, on a en tout, de nouveau, quatre configurations possibles à examiner dans le but de remplir la dernière colonne :
+Pour analyser un circuit logique comme celui présenté ci-dessus, on cherchera à établir sa table de vérité. En l'occurrence, comme pour les portes précédentes, ce circuit a {logicref}`xor_circuit_tryout.{x,y}|deux entrées`: si chaque entrée peut valoir 1 ou 0, on a en tout, de nouveau, quatre configurations possibles à examiner dans le but de remplir la dernière colonne :
 
 | $X$ | $Y$ | $Z$   |
 | :-: | :-: | :-:   |
@@ -234,81 +237,110 @@ Pour analyser un circuit logique comme celui présenté ci-dessus, on cherchera 
 | 1   | 1   | $???$ |
 
 
- Pour remplir chaque ligne, on va changer les entrées selon les valeurs de $X$ et $Y$ et observer l'effet des portes et ainsi voir comment le circuit se comporte. Prenons $X=Y=0$: c'est le cas représenté par l'état initial du circuit ci-dessus. Rappelons qu'un segment noir véhicule un «0», alors qu'un segment coloré véhicule un «1».
+ Pour remplir chaque ligne, on va changer les entrées selon les valeurs de $X$ et $Y$ et observer l'effet des portes et ainsi voir comment le circuit se comporte. Prenons $X=Y=0$: c'est le cas représenté par le diagramme fixe ci-dessous. Rappelons qu'un segment noir véhicule un «0», alors qu'un segment coloré véhicule un «1».
 
-Le résultat intermédiaire des deux portes de gauche sera 0. L'inverseur transforme en 1 la sortie de la porte **ET**, mais la porte finale, qui est aussi une porte **ET**, n'obtient qu'un seul 1 en entrée et donc livre une sortie de 0.
+ ```{logic}
+:ref: xor_circuit_00
+:height: 150
+:mode: static
+
+{
+  "v": 1,
+  "opts": {"showGateTypes": true},
+  "in": [
+    {"pos": [50, 30], "id": 0, "ref": "x", "name": "X", "val": 0},
+    {"pos": [50, 90], "id": 1, "ref": "y", "name": "Y", "val": 0}
+  ],
+  "out": [{"pos": [390, 50], "id": 2, "ref": "z", "name": "Z"}],
+  "gates": [
+    {"type": "OR", "pos": [190, 40], "in": [3, 4], "ref": "or", "out": 5},
+    {"type": "AND", "pos": [330, 50], "in": [6, 7], "ref": "and2", "out": 8},
+    {"type": "NOT", "pos": [230, 120], "in": 9, "ref": "inv", "out": 10},
+    {"type": "AND", "pos": [160, 120], "in": [11, 12], "ref": "and1", "out": 13}
+  ],
+  "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
+}
+```
+
+Le résultat intermédiaire des {logicref}`xor_circuit_00.{or,and1}|deux portes de gauche` sera 0. L'{logicref}`xor_circuit_00.inv|inverseur` transforme en 1 la sortie de la porte **ET**, mais la {logicref}`xor_circuit_00.and2|porte finale`, qui est aussi une porte **ET**, n'obtient qu'un seul 1 en entrée et donc livre une {logicref}`xor_circuit_00.z|sortie de 0`.
 
 Le cas est différent si l'une des deux entrées vaut 1. Voici deux diagrammes fixes, une fois pour $X=1, Y=0$ et une fois pour $Y=1, X=0$ :
 
 ```{logic}
+:ref: xor_circuit_10
 :height: 150
 :mode: static
 
 {
   "v": 1,
+  "opts": {"showGateTypes": true},
   "in": [
-    {"pos": [50, 30], "id": 0, "name": "X", "val": 1},
-    {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
+    {"pos": [50, 30], "id": 0, "ref": "x", "name": "X", "val": 1},
+    {"pos": [50, 90], "id": 1, "ref": "y", "name": "Y", "val": 0}
   ],
-  "out": [{"pos": [390, 50], "id": 2, "name": "Z"}],
+  "out": [{"pos": [390, 50], "id": 2, "ref": "z", "name": "Z"}],
   "gates": [
-    {"type": "OR", "pos": [190, 40], "in": [3, 4], "out": 5},
-    {"type": "AND", "pos": [330, 50], "in": [6, 7], "out": 8},
-    {"type": "NOT", "pos": [230, 120], "in": 9, "out": 10},
-    {"type": "AND", "pos": [160, 120], "in": [11, 12], "out": 13}
+    {"type": "OR", "pos": [190, 40], "in": [3, 4], "ref": "or", "out": 5},
+    {"type": "AND", "pos": [330, 50], "in": [6, 7], "ref": "and2", "out": 8},
+    {"type": "NOT", "pos": [230, 120], "in": 9, "ref": "inv", "out": 10},
+    {"type": "AND", "pos": [160, 120], "in": [11, 12], "ref": "and1", "out": 13}
   ],
   "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
 }
 ```
 
 ```{logic}
+:ref: xor_circuit_01
 :height: 150
 :mode: static
 
 {
   "v": 1,
+  "opts": {"showGateTypes": true},
   "in": [
-    {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
-    {"pos": [50, 90], "id": 1, "name": "Y", "val": 1}
+    {"pos": [50, 30], "id": 0, "ref": "x", "name": "X", "val": 0},
+    {"pos": [50, 90], "id": 1, "ref": "y", "name": "Y", "val": 1}
   ],
-  "out": [{"pos": [390, 50], "id": 2, "name": "Z"}],
+  "out": [{"pos": [390, 50], "id": 2, "ref": "z", "name": "Z"}],
   "gates": [
-    {"type": "OR", "pos": [190, 40], "in": [3, 4], "out": 5},
-    {"type": "AND", "pos": [330, 50], "in": [6, 7], "out": 8},
-    {"type": "NOT", "pos": [230, 120], "in": 9, "out": 10},
-    {"type": "AND", "pos": [160, 120], "in": [11, 12], "out": 13}
+    {"type": "OR", "pos": [190, 40], "in": [3, 4], "ref": "or", "out": 5},
+    {"type": "AND", "pos": [330, 50], "in": [6, 7], "ref": "and2", "out": 8},
+    {"type": "NOT", "pos": [230, 120], "in": 9, "ref": "inv", "out": 10},
+    {"type": "AND", "pos": [160, 120], "in": [11, 12], "ref": "and1", "out": 13}
   ],
   "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
 }
 ```
 
 
-Ici, dans les deux cas, la porte **OU**, en haut, livrera un 1, dont a besoin la porte **ET** finale de droite pour donner une sortie de 1. La porte **ET** du bas, elle, continue de livrer un 0.
+Ici, dans les deux cas, {logicref}`{xor_circuit_01,xor_circuit_10}.or|la porte **OU**, en haut`, livrera un 1, dont a besoin {logicref}`{xor_circuit_01,xor_circuit_10}.and2|la porte **ET** finale de droite` pour donner {logicref}`{xor_circuit_01,xor_circuit_10}.z|une sortie de 1`. {logicref}`{xor_circuit_01,xor_circuit_10}.and1|La porte **ET** du bas`, elle, continue de livrer un 0.
 
 Mais dans le cas $X = Y = 1$, représenté ici, la situation est différente :
 
 ```{logic}
+:ref: xor_circuit_11
 :height: 150
 :mode: static
 
 {
   "v": 1,
+  "opts": {"showGateTypes": true},
   "in": [
-    {"pos": [50, 30], "id": 0, "name": "X", "val": 1},
-    {"pos": [50, 90], "id": 1, "name": "Y", "val": 1}
+    {"pos": [50, 30], "id": 0, "ref": "x", "name": "X", "val": 1},
+    {"pos": [50, 90], "id": 1, "ref": "y", "name": "Y", "val": 1}
   ],
-  "out": [{"pos": [390, 50], "id": 2, "name": "Z"}],
+  "out": [{"pos": [390, 50], "id": 2, "ref": "z", "name": "Z"}],
   "gates": [
-    {"type": "OR", "pos": [190, 40], "in": [3, 4], "out": 5},
-    {"type": "AND", "pos": [330, 50], "in": [6, 7], "out": 8},
-    {"type": "NOT", "pos": [230, 120], "in": 9, "out": 10},
-    {"type": "AND", "pos": [160, 120], "in": [11, 12], "out": 13}
+    {"type": "OR", "pos": [190, 40], "in": [3, 4], "ref": "or", "out": 5},
+    {"type": "AND", "pos": [330, 50], "in": [6, 7], "ref": "and2", "out": 8},
+    {"type": "NOT", "pos": [230, 120], "in": 9, "ref": "inv", "out": 10},
+    {"type": "AND", "pos": [160, 120], "in": [11, 12], "ref": "and1", "out": 13}
   ],
   "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
 }
 ```
 
-La porte **ET** du bas livre un 1, qui est inversé en 0 avant d'atteindre la porte finale, qui ne peut dès lors elle-même que livrer un 0 comme sortie.
+{logicref}`xor_circuit_11.and1|La porte **ET** du bas` livre un 1, qui est {logicref}`xor_circuit_11.inv|inversé en 0` avant d'atteindre {logicref}`xor_circuit_11.and2|la porte finale`, qui ne peut dès lors elle-même que {logicref}`xor_circuit_11.z|livrer un 0 comme sortie`.
 
 La table de vérité complétée de ce circuit est ainsi :
 
@@ -319,9 +351,10 @@ La table de vérité complétée de ce circuit est ainsi :
 | 0   | 1   | 1   |
 | 1   | 1   | 0   |
 
-Cette fonction s'appelle «ou exclusif», car pour avoir un 1 de sortie, elle exclut le cas où les deux entrées sont 1 en même temps. Elle est souvent utilisée, au point qu'on la représente en fait dans les diagrammes simplement par le dessin de cette porte, appelée **OU-X**, comme simplification du diagramme ci-dessus :
+Cette fonction s'appelle «ou exclusif», car pour avoir un 1 de sortie, elle exclut le cas où les deux entrées sont 1 en même temps. Elle est souvent utilisée, au point qu'on la représente en fait dans les diagrammes simplement par {logicref}`xor_tryout.xor|le dessin de cette porte`, appelée **OU-X**, comme simplification du diagramme ci-dessus :
 
 ```{logic}
+:ref: xor_tryout
 :height: 100
 :mode: tryout
 
@@ -332,7 +365,7 @@ Cette fonction s'appelle «ou exclusif», car pour avoir un 1 de sortie, elle ex
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
   ],
   "out": [{"pos": [220, 50], "id": 5, "name": "Z"}],
-  "gates": [{"type": "XOR", "pos": [150, 50], "in": [0, 1], "out": 2}],
+  "gates": [{"type": "XOR", "pos": [150, 50], "in": [0, 1], "ref": "xor", "out": 2}],
   "wires": [[3, 0], [4, 1], [2, 5]]
 }
 ```
@@ -349,60 +382,63 @@ On s'intéresse à présent à la création de ce diagramme réalisant un **OU-X
 
 **Approche ad hoc**
 
-On se dit donc, selon la table de vérité, que la sortie de notre circuit «ou exclusif» doit être 1, donc l'une ou l'autre des entrées $X$ ou $Y$ est à 1, mais pas les deux. On peut ainsi commencer par insérer une porte **OU** dans le diagramme, qui fait une partie du travail. Mais il faut modifier sa sortie, pour ne pas avoir la valeur 1 lorsque les deux entrées sont à 1: cela contredirait la quatrième ligne de la table de vérité. Comment effectuer cela: En connectant la sortie de cette porte **OU** à une nouvelle porte **ET** à droite (dont on n'a pas encore déterminé la seconde entrée).
+On se dit donc, selon la table de vérité, que la sortie de notre circuit «ou exclusif» doit être 1, donc l'une ou l'autre des entrées $X$ ou $Y$ est à 1, mais pas les deux. On peut ainsi commencer par {logicref}`xor_build_step1.or|insérer une porte **OU**` dans le diagramme, qui fait une partie du travail. Mais il faut modifier sa sortie, pour ne pas avoir la valeur 1 lorsque les deux entrées sont à 1 : cela contredirait la quatrième ligne de la table de vérité. Comment effectuer cela ? En connectant la sortie de {logicref}`xor_build_step1.or|cette porte **OU**` à {logicref}`xor_build_step1.and2|une nouvelle porte **ET** à droite` (dont on n'a pas encore déterminé la seconde entrée).
 
-Pourquoi rajouter une porte **ET**: On utilise ici le fait que connecter une porte **ET** à un signal peut _restreindre_ les conditions sous lesquelles la nouvelle sortie $Z$ sera 1 (alors qu'au contraire, on aurait pu _étendre_ ces conditions si on avait connecté une nouvelle porte **OU**). Comme si, pour être d'accord de finalement livrer 1 sur la sortie, la porte **ET** voulait la «confirmation» d'un autre signal avant de livrer 1...
+Pourquoi rajouter une porte **ET** ? On utilise ici le fait que connecter une porte **ET** à un signal peut _restreindre_ les conditions sous lesquelles la nouvelle sortie $Z$ sera 1 (alors qu'au contraire, on aurait pu _étendre_ ces conditions si on avait connecté une nouvelle porte **OU**). Comme si, pour être d'accord de finalement livrer 1 sur la sortie, {logicref}`xor_build_step1.and2|la porte **ET**` voulait la «confirmation» d'un autre signal avant de livrer 1...
 
-À ce moment, on a ce diagramme partiel, qui peut être lu comme: «la sortie $Z$ sera $1$ lorsque ces deux conditions sont vraies en même temps: (1) le **OU** de $X$ et $Y$ vaut 1, et (2) quelque chose qui reste ici à définir, qui sera connecté à la seconde entrée de la porte **ET**».
+À ce moment, on a ce diagramme partiel, qui peut être lu comme : «la sortie $Z$ sera 1 lorsque ces deux conditions sont vraies en même temps: (1) le **OU** de $X$ et $Y$ vaut 1, et (2) quelque chose qui reste ici à définir, qui sera connecté à la seconde entrée de la porte **ET**».
 
 ```{logic}
+:ref: xor_build_step1
 :height: 120
 :mode: tryout
 
 {
   "v": 1,
-  "opts": {"showDisconnectedPins": true},
+  "opts": {"showDisconnectedPins": true, "showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
   ],
   "out": [{"pos": [390, 50], "id": 2, "name": "Z"}],
   "gates": [
-    {"type": "OR", "pos": [190, 40], "in": [3, 4], "out": 5},
-    {"type": "AND", "pos": [330, 50], "in": [6, 7], "out": 8}
+    {"type": "OR", "pos": [190, 40], "in": [3, 4], "ref": "or", "out": 5},
+    {"type": "AND", "pos": [330, 50], "in": [6, 7], "ref": "and2", "out": 8}
   ],
   "wires": [[0, 3], [1, 4], [5, 6], [8, 2]]
 }
 ```
 
 
-Ce qui reste à définir en complétant avant la porte **ET**, c'est l'exclusion du cas où $X$ et $Y$ valent les deux 1, de manière à ce que la condition (2) puisse être lue comme «$X$ et $Y$ ne sont pas en même temps les deux à 1». Avec une porte **ET** connectée directement aux deux entrées $X$ et $Y$, on obtient une partie de ceci en créant le signal «$X$ et $Y$ sont les deux à 1» C'est en fait la condition inverse que celle que l'on cherche: Pour l'inverser, on insère à la sortie de cette nouvelle porte **ET** un inverseur, ce qui complète le circuit :
+Ce qui reste à définir en complétant avant la porte **ET**, c'est l'exclusion du cas où $X$ et $Y$ valent les deux 1, de manière à ce que la condition (2) puisse être lue comme «$X$ et $Y$ ne sont pas en même temps les deux à 1». Avec {logicref}`xor_build_step2.and1|une porte **ET** connectée directement aux deux entrées $X$ et $Y$`, on obtient une partie de ceci en créant le signal «$X$ et $Y$ sont les deux à 1». Mais c'est en fait la condition inverse que celle que l'on cherche. Pour l'inverser, on insère à la sortie de {logicref}`xor_build_step2.and1|cette nouvelle porte **ET**` {logicref}`xor_build_step2.inv|un inverseur`, ce qui complète le circuit :
 
 ```{logic}
+:ref: xor_build_step2
 :height: 150
 :mode: tryout
 
 {
   "v": 1,
+  "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
   ],
   "out": [{"pos": [390, 50], "id": 2, "name": "Z"}],
   "gates": [
-    {"type": "OR", "pos": [190, 40], "in": [3, 4], "out": 5},
-    {"type": "AND", "pos": [330, 50], "in": [6, 7], "out": 8},
-    {"type": "NOT", "pos": [230, 120], "in": 9, "out": 10},
-    {"type": "AND", "pos": [160, 120], "in": [11, 12], "out": 13}
+    {"type": "OR", "pos": [190, 40], "in": [3, 4], "ref": "or", "out": 5},
+    {"type": "AND", "pos": [330, 50], "in": [6, 7], "ref": "and2", "out": 8},
+    {"type": "NOT", "pos": [230, 120], "in": 9, "ref": "inv", "out": 10},
+    {"type": "AND", "pos": [160, 120], "in": [11, 12], "ref": "and1", "out": 13}
   ],
   "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
 }
 ```
 
-La lecture finale du circuit est donc «la sortie $Z$ sera $1$ lorsque ces deux conditions sont vraies en même temps: (1) le **OU** de $X$ et $Y$ vaut 1, et (2) $X$ et $Y$ ne sont pas les deux en même temps à 1».
+La lecture finale du circuit est donc «la sortie $Z$ sera 1 lorsque ces deux conditions sont vraies en même temps (selon {logicref}`xor_build_step2.and2|la porte **ET** de droite`) : (1) {logicref}`xor_build_step2.or|le **OU** de $X$ et $Y$ vaut 1`, et (2) {logicref}`xor_build_step2.{and1,inv}|$X$ et $Y$ ne sont pas les deux en même temps à 1`».
 
 ````{admonition} Exercice 2 : analyse d'un circuit
-Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la place, on a inséré deux sorties intermédiaires, $I$ et $J$, qui sont les deux signaux qui allaient précédemment à la porte **ET**:
+Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la place, on a inséré deux sorties intermédiaires, $I$ et $J$, qui sont les deux signaux qui allaient précédemment à la porte **ET** :
 
 ```{logic}
 :height: 150
@@ -410,6 +446,7 @@ Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la
 
 {
   "v": 1,
+  "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
@@ -459,9 +496,10 @@ Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la
 
 Il est parfois difficile d'avoir l'«intuition» nécessaire pour suivre une telle approche ad hoc. Voici donc une autre technique, illustrée avec le même exemple.
 
-La table de vérité montre qu'il y a deux lignes où la sortie doit valoir $1$ : (a) la ligne où $X=1$ et $Y=0$, et (b) la ligne où $X=0$ et $Y=1$. Si l'on pouvait créer un sous-circuit qui livre un $1$ lorsque qu'on se trouve dans la circonstance (a) et un autre qui livre un $1$ lorsqu'on se trouve dans la circonstance (b), on pourrait ensuite les combiner avec une porte **OU** et ainsi construire notre sortie $Z$ ainsi :
+La table de vérité montre qu'il y a deux lignes où la sortie doit valoir 1 : (a) la ligne où $X=1$ et $Y=0$, et (b) la ligne où $X=0$ et $Y=1$. Si l'on pouvait créer {logicref}`xor_build2_step1.sub1|un premier sous-circuit` qui livre un 1 lorsque qu'on se trouve dans la circonstance (a) et {logicref}`xor_build2_step1.sub2|un autre sous-circuit` qui livre un 1 lorsqu'on se trouve dans la circonstance (b), on pourrait ensuite les combiner avec {logicref}`xor_build2_step1.or|une porte **OU**` et ainsi construire notre sortie $Z$ ainsi :
 
 ```{logic}
+:ref: xor_build2_step1
 :height: 180
 :mode: static
 
@@ -474,9 +512,9 @@ La table de vérité montre qu'il y a deux lignes où la sortie doit valoir $1$�
   ],
   "out": [{"pos": [400, 90], "id": 2, "name": "Z"}],
   "gates": [
-    {"type": "OR", "pos": [340, 90], "in": [6, 7], "out": 8},
-    {"type": "AND", "pos": [200, 60], "in": [3, 4], "out": 5, "showAsUnknown": true},
-    {"type": "AND", "pos": [200, 130], "in": [9, 10], "out": 11, "showAsUnknown": true}
+    {"type": "OR", "pos": [340, 90], "in": [6, 7], "ref": "or", "out": 8},
+    {"type": "AND", "pos": [200, 60], "in": [3, 4], "out": 5, "ref": "sub1", "showAsUnknown": true},
+    {"type": "AND", "pos": [200, 130], "in": [9, 10], "out": 11, "ref": "sub2", "showAsUnknown": true}
   ],
   "wires": [[8, 2], [0, 3], [1, 10], [5, 6], [11, 7], [0, 9], [1, 4]]
 }
@@ -484,11 +522,12 @@ La table de vérité montre qu'il y a deux lignes où la sortie doit valoir $1$�
 
 Ici, les deux sous-circuits notés avec «?» et encadrés donc encore à définir — potentiellement avec plus d'une seule porte. Essayons de les créer.
 
-Disons que le sous-circuit du haut correspond à la deuxième ligne de la table de vérité, le cas de figure (a). Pour cette ligne, nous voulons un $1$ de sortie lorsque $X=1$ et $Y=0$. En lisant littéralement cette dernière phrase, on y détecte un **ET** de deux conditions qui doivent être remplies: $X=1$ et $Y=0$. Mais ajouter une porte **ET** directement avec les signaux $X$ et $Y$ ne fera pas l'affaire, parce que cela livrerait un $1$ lors que les _deux_ entrées $X$ et $Y$ sont à $1$. La solution ici, c'est d'_inverser_ $Y$ avant l'entrée dans la porte **ET** — ce qui donne bel et bien la condition (a).
+Disons que le sous-circuit du haut correspond à la deuxième ligne de la table de vérité, le cas de figure (a). Pour cette ligne, nous voulons un 1 de sortie lorsque $X=1$ et $Y=0$. En lisant littéralement cette dernière phrase, on y détecte un **ET** de deux conditions qui doivent être remplies: $X=1$ et $Y=0$. Mais ajouter une porte **ET** directement avec les signaux $X$ et $Y$ ne fera pas l'affaire, parce que cela livrerait un 1 lors que les _deux_ entrées $X$ et $Y$ sont à 1. La solution ici, c'est d'{logicref}`xor_build2_step2.inv1|_inverser_ $Y$` avant l'entrée dans {logicref}`xor_build2_step2.and1|la porte **ET**` — ce qui donne bel et bien la condition (a).
 
 On avance ainsi à ceci :
 
 ```{logic}
+:ref: xor_build2_step2
 :height: 180
 :mode: static
 
@@ -502,19 +541,20 @@ On avance ainsi à ceci :
   "out": [{"pos": [400, 90], "id": 2, "name": "Z"}],
   "gates": [
     {"type": "OR", "pos": [340, 90], "in": [6, 7], "out": 8},
-    {"type": "AND", "pos": [230, 50], "in": [3, 4], "out": 5},
+    {"type": "AND", "pos": [230, 50], "in": [3, 4], "ref": "and1", "out": 5},
     {"type": "AND", "pos": [200, 130], "in": [9, 10], "out": 11, "showAsUnknown": true},
-    {"type": "NOT", "pos": [160, 60], "in": 12, "out": 13}
+    {"type": "NOT", "pos": [160, 60], "in": 12, "out": 13, "ref": "inv1"}
   ],
   "wires": [[8, 2], [13, 4], [0, 3], [1, 12], [1, 10], [5, 6], [11, 7], [0, 9]]
 }
 ```
 
-Pour la condition (b), qui correspond à la troisième ligne de la table de vérité, un raisonnement similaire s'applique. À la place d'inverser $X$, on inversera cette fois $Y$ afin d'obtenir, à la sortie de la nouvelle porte **ET** du bas, un signal qui vaut $1$ lorsque $X=1$ et $Y=0$.
+Pour la condition (b), qui correspond à la troisième ligne de la table de vérité, un raisonnement similaire s'applique. À la place d'inverser $X$, on {logicref}`xor_build2_step3.inv2|inversera cette fois $Y$` afin d'obtenir, à la sortie de {logicref}`xor_build2_step3.and2|la nouvelle porte **ET** du bas`, un signal qui vaut 1 lorsque $X=1$ et $Y=0$.
 
 Voici le circuit final ainsi réalisé :
 
 ```{logic}
+:ref: xor_build2_step3
 :height: 180
 :mode: static
 
@@ -527,11 +567,11 @@ Voici le circuit final ainsi réalisé :
   ],
   "out": [{"pos": [400, 90], "id": 2, "name": "Z"}],
   "gates": [
-    {"type": "OR", "pos": [340, 90], "in": [6, 7], "out": 8},
-    {"type": "AND", "pos": [230, 50], "in": [3, 4], "out": 5},
-    {"type": "AND", "pos": [230, 130], "in": [9, 10], "out": 11},
-    {"type": "NOT", "pos": [160, 60], "in": 12, "out": 13},
-    {"type": "NOT", "pos": [160, 120], "in": 14, "out": 15}
+    {"type": "OR", "pos": [340, 90], "in": [6, 7], "out": 8, "ref": "or"},
+    {"type": "AND", "pos": [230, 50], "in": [3, 4], "out": 5, "ref": "and1"},
+    {"type": "AND", "pos": [230, 130], "in": [9, 10], "out": 11, "ref": "and2"},
+    {"type": "NOT", "pos": [160, 60], "in": 12, "out": 13, "ref": "inv1"},
+    {"type": "NOT", "pos": [160, 120], "in": 14, "out": 15, "ref": "inv2"}
   ],
   "wires": [
     [8, 2], [13, 4], [15, 9], [0, 3], [0, 14], [1, 12], [1, 10],
@@ -542,7 +582,7 @@ Voici le circuit final ainsi réalisé :
 
 (Ce schéma ne peut être simulé que dans l'indice de l'exercice suivant.)
 
-Ce que cette approche systématique apprend, c'est qu'un circuit peut toujours être pensé comme un **OU** de toutes les conditions sous lesquelles la sortie doit être à $1$. Ces conditions sont elles-mêmes réalisables avec les entrées du circuit avec des portes **ET** et des inverseurs.
+Ce que cette approche systématique apprend, c'est qu'un circuit peut toujours être pensé comme {logicref}`xor_build2_step3.or|un **OU**` de toutes les conditions sous lesquelles la sortie doit être à 1. Ces conditions sont elles-mêmes réalisables avec les entrées du circuit avec {logicref}`xor_build2_step3.{and1,and2,inv1,inv2}|des portes **ET** et des inverseurs` directement connectés aux entrées.
 
 On fait également les constats suivants :
  * plusieurs circuits logiques différents peuvent réaliser la même fonction de sortie,
@@ -559,6 +599,7 @@ En annotant le schéma logique avec les quatre cas de figure possibles pour les 
 
 {
   "v": 1,
+  "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 150], "id": 1, "name": "Y", "val": 0}
@@ -613,6 +654,7 @@ Analysez ce circuit. De quel type de portes est-il constitué ? Fonctionne-t-i
 
 {
   "v": 1,
+  "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0},
@@ -620,7 +662,7 @@ Analysez ce circuit. De quel type de portes est-il constitué ? Fonctionne-t-i
   ],
   "out": [{"pos": [320, 70], "id": 5, "name": "Z"}],
   "gates": [
-    {"type": "AND", "pos": [150, 50], "in": [0, 1], "out": 2},
+    {"type": "AND", "pos": [150, 50], "in": [0, 1], "out": 2, "ref": "ok"},
     {"type": "OR", "pos": [260, 70], "in": [7, 8], "out": 9, "poseAs": "AND", "ref": "faulty"}
   ],
   "wires": [[3, 0], [4, 1], [6, 8], [2, 7], [9, 5]]
@@ -635,6 +677,7 @@ Voici le circuit corrigé (il a la même apparence que le circuit de la question
 
 {
   "v": 1,
+  "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0},
@@ -651,7 +694,7 @@ Voici le circuit corrigé (il a la même apparence que le circuit de la question
 ````
 
 ````{dropdown} Corrigé
-Ce circuit est constitué de deux portes **ET**. Mais {logicref}`faulty_and.faulty|la porte **ET** de droite` semble poser problème, parce qu'elle se comporte comme une porte **OU** ! Le circuit montré dans l'indice se comporte correctement.
+Ce circuit est constitué de {logicref}`faulty_and.{ok,faulty}|deux portes **ET**`. Mais {logicref}`faulty_and.faulty|la porte **ET** de droite` semble poser problème, parce qu'elle se comporte comme une porte **OU** ! Le circuit montré dans l'indice se comporte correctement.
 
 Ce circuit, une fois corrigé, implémente en fait un **ET** à trois entrée $X$, $Y$ et $W$, où la sortie $Z$ ne vaut 1 que si les trois entrées valent 1. Sa table de vérité, à huit lignes dues aux trois entrées, est ainsi la suivante :
 
@@ -702,11 +745,12 @@ Ce circuit, une fois corrigé, implémente en fait un **ET** à trois entrée $X
 Réalisez ensuite un circuit logique avec les mêmes deux entrées $X$ et $Y$ et la même sortie $Z$ qui implémente cette table de vérité. On peut utiliser des portes **ET** et **OU** et des inverseurs. Glissez les portes depuis la gauche pour en ajouter, et glissez entre les connecteurs rond pour les connecter.
 
 ```{logic}
-:height: 200
+:height: 350
 :showonly: AND OR NOT
 
 {
   "v": 1,
+  "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 40], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 160], "id": 4, "name": "Y", "val": 0}
@@ -732,6 +776,7 @@ Il y plusieurs solutions possibles. Celle qui correspond aux indices est la suiv
 
 {
   "v": 1,
+  "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 40], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 160], "id": 4, "name": "Y", "val": 0}
@@ -754,6 +799,7 @@ Voici un circuit plus simple, qui fait la même chose mais qui est plus difficil
 
 {
   "v": 1,
+  "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 40], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 80], "id": 4, "name": "Y", "val": 0}

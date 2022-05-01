@@ -100,35 +100,45 @@ class logic_highlight(nodes.Inline, nodes.TextElement):
 
 
 def _parse_highlight_content(string):
+    def _parse_ids(string):
+        if string.startswith("{") and string.endswith("}"):
+            return string[1:-1].split(",")
+        return [string]
+
     if '|' in string:
         [refs, display] = string.split('|', 2)
         if '.' in refs:
-            [diagramref, componentref] = refs.split('.', 2)
-            return diagramref, componentref, display
+            [diagramrefs, componentrefs] = refs.split('.', 2)
+            return _parse_ids(diagramrefs), _parse_ids(componentrefs), display
 
     return "", "", string
 
 
 class LogicHighlightRefRole(SphinxRole):
     def run(self):
-        diagramref, componentref, display = _parse_highlight_content(self.text)
+        diagramrefs, componentrefs, display = _parse_highlight_content(self.text)
         node = logic_highlight("", "",
-            diagramref=diagramref,
-            componentref=componentref,
-            display=display
+            diagramrefs=diagramrefs,
+            componentrefs=componentrefs,
+            display=_render_inline(display, self.env)
         )
         # self.state.nested_parse(display, self.content_offset, node)
         return [node], []
 
-def _render_inline(source: str) -> str:
-    html = str(to_html(source)).strip()
+def _render_inline(source: str, env) -> str:
+    html = str(to_html(source, config=env.myst_config)).strip()
     if html.startswith("<p>") and html.endswith("</p>"):
         html = html[3:-4]
     return html
 
 def begin_logic_highlight_html(self, node):
+    def _to_js_string(refs):
+        if len(refs) == 1:
+            return '"' + refs[0] + '"'
+        return '[' + ', '.join(['"' + r + '"' for r in refs]) + ']'
+
     js_on_click = (
-        'Logic.highlight("' + node["diagramref"] + '", "' + node["componentref"] + '")'
+        'Logic.highlight(' + _to_js_string(node["diagramrefs"]) + ', ' + _to_js_string(node["componentrefs"]) + ')'
     )
     tag = self.starttag(
         node,
@@ -137,7 +147,7 @@ def begin_logic_highlight_html(self, node):
         onclick=js_on_click,
     )
     self.body.append(tag.strip())
-    self.body.append(_render_inline(node["display"]))
+    self.body.append(node["display"])
 
 
 
