@@ -120,8 +120,8 @@ Pour arrêter le serveur : <kbd>CTRL</kbd>+<kbd>c</kbd> ou <kbd>⌘</kbd>+<kbd>c
 
 ### Génération de build
 
-- Génération du build 'Apprendre' : `sphinx-build -b html docs/apprendre build/apprendre`
-- Génération du build 'Enseigner' : `sphinx-build -b html docs/enseigner build/enseigner`
+- Génération du build 'Apprendre' : `sphinx-build -b html src/appr build/appr`
+- Génération du build 'Enseigner' : `sphinx-build -b html src/ens build/ens`
 
 
 ## Comité de rédaction
