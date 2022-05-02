@@ -1,3 +1,4 @@
+(prog1.ecrire)=
 # Ecrire - `str`
 
 Dans ce chapitre, nous allons nous intéresser au texte. Le texte est une catégorie d'information qui est essentielle dans beaucoup de programmes, tels qu'une application de messagerie ou un programme de traitement de texte.

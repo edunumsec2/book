@@ -1,3 +1,4 @@
+(prog1.dessiner)=
 # Dessiner - `forward()`
 
 Dans ce chapitre, nous explorons ce que c'est un programme et nous prenons
