@@ -103,7 +103,7 @@ width: 200px
 Construction d'une porte logique **ET** à partir de deux transistors (et de résistances).
 ```
 
-Ici, les deux transistors sont les composants symbolisés par un cercle. Rappelons qu'ils laissent passer du courant de haut en bas lorsqu'ils détectent un courant sur l'entrée qui vient de la droite. Ici, si **V** représente un courant continu de, disons, 5 volts, on aura donc un courant sur la sortie **Out** que si à la fois **A** et **B**, qui sont ici les entrées du circuit, sont «actives» — donc lorsque les deux transistors sont «ouverts».
+Ici, les deux transistors sont les composants symbolisés par un cercle. Rappelons qu'ils laissent passer du courant de haut en bas lorsqu'ils détectent un courant sur l'entrée qui vient de la droite. Ici, si **V** représente une tension continue de, disons, 5 volts, on aura donc une tension similaire sur la sortie **Out** que si à la fois **A** et **B**, qui sont ici les entrées du circuit, sont «actives» — donc lorsque les deux transistors sont «ouverts». Sinon, on aura une tension de 0 volts sur la sortie **Out**.
 ````
 
 
@@ -410,7 +410,7 @@ Pourquoi rajouter une porte **ET** ? On utilise ici le fait que connecter une 
 ```
 
 
-Ce qui reste à définir en complétant avant la porte **ET**, c'est l'exclusion du cas où $X$ et $Y$ valent les deux 1, de manière à ce que la condition (2) puisse être lue comme «$X$ et $Y$ ne sont pas en même temps les deux à 1». Avec {logicref}`xor_build_step2.and1|une porte **ET** connectée directement aux deux entrées $X$ et $Y$`, on obtient une partie de ceci en créant le signal «$X$ et $Y$ sont les deux à 1». Mais c'est en fait la condition inverse que celle que l'on cherche. Pour l'inverser, on insère à la sortie de {logicref}`xor_build_step2.and1|cette nouvelle porte **ET**` {logicref}`xor_build_step2.inv|un inverseur`, ce qui complète le circuit :
+Ce qui reste à définir en complétant avant la porte **ET**, c'est l'exclusion du cas où $X$ et $Y$ valent les deux 1, de manière à ce que la condition (2) puisse être lue comme «$X$ et $Y$ ne sont pas en même temps les deux à 1». Avec {logicref}`xor_build_step2.and1|une porte **ET** connectée directement aux deux entrées $X$ et $Y$`, on obtient une partie de ceci en créant le signal «$X$ et $Y$ sont les deux à 1». Mais c'est en fait la condition inverse de celle que l'on cherche. Pour l'inverser, on insère {logicref}`xor_build_step2.inv|un inverseur` à la sortie de {logicref}`xor_build_step2.and1|cette nouvelle porte **ET**`, ce qui complète le circuit :
 
 ```{logic}
 :ref: xor_build_step2
