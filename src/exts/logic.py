@@ -5,10 +5,9 @@ from docutils.parsers.rst import directives
 from sphinx.util.docutils import SphinxDirective, SphinxRole
 from myst_parser.main import to_html
 
-import urllib
-import zlib
-import lzstring
-
+# import urllib
+# import zlib
+# import lzstring
 
 class logic_diagram(nodes.Element, nodes.General):
     pass
@@ -120,13 +119,16 @@ class LogicHighlightRefRole(SphinxRole):
         node = logic_highlight("", "",
             diagramrefs=diagramrefs,
             componentrefs=componentrefs,
-            display=_render_inline(display, self.env)
+            display=display,
+            config=self.env.myst_config,
         )
-        # self.state.nested_parse(display, self.content_offset, node)
         return [node], []
 
-def _render_inline(source: str, env) -> str:
-    html = str(to_html(source, config=env.myst_config)).strip()
+
+def _render_inline(source: str, config) -> str:
+    # WARNING: this should not be called when creating the nodes
+    # as it screws up the global parser state
+    html = str(to_html(source, config=config)).strip()
     if html.startswith("<p>") and html.endswith("</p>"):
         html = html[3:-4]
     return html
@@ -147,7 +149,8 @@ def begin_logic_highlight_html(self, node):
         onclick=js_on_click,
     )
     self.body.append(tag.strip())
-    self.body.append(node["display"])
+    content = _render_inline(node["display"], node["config"])
+    self.body.append(content)
 
 
 
