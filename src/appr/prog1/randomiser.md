@@ -1,4 +1,3 @@
-(prog1.randomiser)=
 # Randomiser - `random`
 
 Dans ce chapitre, nous verrons comment un programme peut introduire un élément aléatoire dans un calcul ou dans un raisonnement. Ceci est très important pour programmer certains jeux. Nous allons voir que :

@@ -1,4 +1,3 @@
-(prog1.projet)=
 # Projet
 
 Dans ce chapitre, nous allons faire un projet de dessin. Nous allons mettre en pratique un certain nombre de concepts de ce cours :

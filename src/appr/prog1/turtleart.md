@@ -1,4 +1,3 @@
-(prog1.turtleart)=
 # TurtleArt
 
 Dans ce chapitre, nous présentons toute une série d'idées artistiques, inspirées du travail d'Artemis Papert que vous trouvez sur le site [TurtleArt](https://turtleart.org).

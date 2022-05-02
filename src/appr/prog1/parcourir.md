@@ -1,4 +1,3 @@
-(prog1.parcourir)=
 # Parcourir - `tuple`
 
 Dans ce chapitre, nous allons découvrir le concept très important de la séquence. Ce concept s'appelle `tuple` en langage Python ou **n-uplet** en français. Une séquence est un regroupement d'objets, par exemple de couleurs, de distances ou d'angles. Ce qui est très intéressant, c'est que nous pouvons parcourir les valeurs d'une séquence l'une après l'autre avec une boucle. Nous allons voir que :
@@ -61,7 +60,7 @@ for x in (20, 40, 60, 80, 100):
 
 ## Parcourir des distances
 
-Dans le chapitre [Définir](prog1.definir) nous avons vu les fonctions `batiment()` et `porte()` avec 8 lignes pour chaque définition de fonction.
+Dans le chapitre **Définir** nous avons vu les fonctions `batiment()` et `porte()` avec 8 lignes pour chaque définition de fonction.
 
 ```{codeplay}
 :file: def3.py

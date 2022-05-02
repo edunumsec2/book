@@ -1,4 +1,3 @@
-(prog1.decider)=
 # Décider - `if`
 
 Dans ce chapitre, nous allons voir comment un programme peut faire des choix, et comment il peut exécuter du code de façon sélective. Nous allons voir que :

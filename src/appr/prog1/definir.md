@@ -1,4 +1,3 @@
-(prog1.definir)=
 # Définir - `def`
 
 Dans ce chapitre, nous allons découvrir comment augmenter le vocabulaire de notre langage de programmation en définissant de nouvelles instructions. Ceci permet de rendre un code plus compact, mais surtout plus lisible. Nous allons voir que :

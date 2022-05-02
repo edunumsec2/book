@@ -1,4 +1,3 @@
-(prog1.trier)=
 # Trier - `sort()`
 
 Dans ce chapitre, nous allons découvrir quelques algorithmes de tri.

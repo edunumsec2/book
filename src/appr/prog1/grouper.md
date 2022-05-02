@@ -1,4 +1,3 @@
-(prog1.grouper)=
 # Grouper - `list`
 
 Dans ce chapitre, nous découvrons une nouvelle structure de données - la liste. C'est une séquence ordonnée d'objets quelconques. Contrairement au `tuple` qui est immuable, la liste est *muable*, c'est-à-dire que nous pouvons réassigner ces éléments. Nous allons voir que :

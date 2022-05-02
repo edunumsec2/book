@@ -1,4 +1,3 @@
-(prog1.memoriser)=
 # Mémoriser - `a=100`
 
 Dans ce chapitre, nous allons voir comment un programme peut mémoriser des valeurs et les utiliser par la suite pour dessiner et pour calculer. Ces valeurs sont associées à des variables que nous définissons au début du programme. Nous allons voir que :
@@ -18,7 +17,7 @@ En informatique, une variable est
 
 ## Rectangle
 
-Dans le chapitre [Dessiner](prog1.dessiner), nous avons vu un programme commme une séquence d'instructions.
+Dans le chapitre **Dessiner**,  nous avons vu un programme commme une séquence d'instructions.
 
 ```{codeplay}
 from turtle import *
@@ -33,7 +32,7 @@ forward(100)
 left(90)
 ```
 
-Dans le chapitre [Définir](prog1.definir), nous avons vu que nous pouvons définir nos propres instructions avec le mot-clé `def` en donnant un nom à une séquence.
+Dans le chapitre **Définir**, nous avons vu que nous pouvons définir nos propres instructions avec le mot-clé `def` en donnant un nom à une séquence.
 
 ```{codeplay}
 from turtle import *
@@ -51,7 +50,7 @@ def rectangle():    # définir une fonction
 rectangle()         # appeler une fonction
 ```
 
-Dans le chapitre [Répéter](prog1.repeter), nous avons vu que nous pouvons répéter des instructions pluseurs fois avec le mot-clé `for`.
+Dans le chapitre **Répéter**, nous avons vu que nous pouvons répéter des instructions pluseurs fois avec le mot-clé `for`.
 
 ```{codeplay}
 from turtle import *
@@ -66,7 +65,7 @@ def rectangle():            # définir une fonction
 rectangle()                 # appeler une fonction
 ```
 
-Maintenant, nous allons définir deux variables `a` et `b` au début du programme.  Avec un commentaire nous expliquons leur signification dans le programme. Plus tard dans le programme nous pouvons utiliser ces variables.
+Dans ce chapitre **Mémoriser**, nous allons définissons deux variables `a` et `b` au début du programme.  Avec un commentaire nous expliquons leur signification dans le programme. Plus tard dans le programme nous pouvons utiliser ces variables.
 
 ```{admonition} Exercice
 Aujoutez une variable `alpha` pour l'angle et utilisez-la dans le corps de la fonction.
@@ -232,7 +231,7 @@ Lesquels des noms de variable sont valides ?
 
 ## Variable d'itération `i`
 
-Dans le chapitre [Répéter](prog1.repeter) nous avons vu la structure `for i in range(n)`. Que signifie le `i` ?
+Dans le chapitre **Répéter** nous avons vu la structure `for i in range(n)`. Que signifie le `i` ?
 
 En fait c'est une variable. Elle parcourt les valeurs de 0 à n-1. Reprenons l'exemple du polygone et affichons la valeur de `i` avec la fonction `write()`.
 La valeur de `i` est écrite à la position actuelle de la tortue.

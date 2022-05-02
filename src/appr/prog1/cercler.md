@@ -1,4 +1,3 @@
-(prog1.cercler)=
 # Cercler - `circle()`
 
 Dans ce chapitre, nous explorons les cercles et les arcs de cercle. Nous allons voir que :

@@ -1,4 +1,3 @@
-(prog1.repeter)=
 # Répéter - `for`
 
 Dans ce chapitre, nous découvrons comment utiliser une boucle `for` pour répéter un bloc d'instructions un certain nombre de fois. Nous allons voir que :

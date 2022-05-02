@@ -1,4 +1,3 @@
-(prog1.iterer)=
 # Itérer - `range()`
 
 Dans ce chapitre, nous allons voir de près comment une variable peut parcourir ou itérer sur une plage numérique.
