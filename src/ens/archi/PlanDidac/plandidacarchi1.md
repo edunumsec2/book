@@ -8,7 +8,7 @@ Cette première proposition de plan s'articule sur les éléments suivants :
 
 
 ## Planification
-### Semainea 1 & 2 (Introduction aux portes logiques)
+### Semaines 1 & 2 (Introduction aux portes logiques)
 ```{dropdown} Contenu Théorique 1
 :animate: fade-in-slide-down
 Activité en classe : [ordinateur antique](../activ/ordinateurantique.md).

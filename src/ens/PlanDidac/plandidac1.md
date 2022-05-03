@@ -13,7 +13,7 @@ Dans cette proposition, nous suivons une logique qui "construit" petit à petit 
 5. Programmation
 
 ## Planification
-### Semainea 1 & 2
+### Semaines 1 & 2
 #### Théorie 1 : Introduction
 Présentation des outils, de la charte informatique de l'établissement, vérification des comptes et accès aux outils informatiques (évtl. distribution des codes d'accès).
 #### Théorie 2 : Histoire 1
@@ -52,7 +52,7 @@ Panorama historique 2 (de la Seconde guerre mondiale à nos jours)
 On profitera de cette activité pour rappeler aux élèves quelques règles de base concernant la protection de sa sphère privée.
 
 ## Semestre 2
-### Semainea 1 & 2
+### Semaines 1 & 2
 #### Théorie 1 
 
 #### Théorie 2 
