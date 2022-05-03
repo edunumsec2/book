@@ -1,0 +1,19 @@
+.video {
+  text-align: center;
+}
+
+.video iframe {
+  margin: auto;
+}
+
+.cnrs {
+  width: 560px;
+  height: 315px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.cnrs iframe {
+  transform: scale(0.7);
+  transform-origin: 0 0;
+}

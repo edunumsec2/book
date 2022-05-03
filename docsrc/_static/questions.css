@@ -1,0 +1,77 @@
+.answer input {
+  margin-right: 5px;
+}
+
+.question .controls {
+  margin-top: 10px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.question .controls button {
+  margin-left: 10px;
+}
+
+.question .controls button i {
+  margin-right: 5px;
+}
+
+.question .admonition {
+  border-radius: 10px;
+  border: solid 0.5px;
+}
+
+.show-answers .correct {
+  font-weight: bold;
+}
+
+.question .question-feedback {
+  margin-top: 15px;
+  display: none;
+  border-left: 3px solid rgb(66, 125, 189);
+  margin-left: 22px;
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 870px) {
+  .question .controls button {
+    font-size: 0;
+  }
+
+  .question .controls button i {
+    font-size: initial;
+    margin-left: 5px;
+  }
+}
+
+/* Next, settings for light theme: */
+
+.question .admonition-title {
+  background-color: rgb(233, 242, 249);
+}
+
+.question .admonition {
+  background-color: white;
+  border-color: hsl(211, 48%, 50%);
+}
+
+.question .admonition-title:before {
+  color:#05245e;
+}
+
+
+/* Next, settings for dark theme: */
+
+body.modulo-dark .question .admonition-title {
+  background-color: rgb(32, 32, 56);
+}
+
+body.modulo-dark .question .admonition {
+  background-color: rgb(var(--inf-offblack));
+  border-color: hsl(211, 48%, 50%);
+}
+
+body.modulo-dark .question .admonition-title:before {
+  color:#667081;
+}
