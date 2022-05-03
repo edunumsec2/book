@@ -1,5 +1,5 @@
 (gabuzomeu)=
-Ga-Bu-Zo_Meu
+Ga-Bu-Zo-Meu
 ===========================
 
 ```{admonition} Attention
