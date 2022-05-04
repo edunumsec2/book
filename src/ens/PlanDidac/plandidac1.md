@@ -20,7 +20,7 @@ Présentation des outils, de la charte informatique de l'établissement, vérifi
 Panorama historique 1 (jusqu'à la Seconde guerre mondiale)
 #### Pratique 1 (par demi-classe)
 1. Activité par groupes de deux : [Le jeu de l'imitation](../hist/jeuimitation.md)
-
+...
 ### Semaines 3 & 4
 #### Théorie 3 : Histoire 2
 Panorama historique 2 (de la Seconde guerre mondiale à nos jours)
