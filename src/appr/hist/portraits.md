@@ -2,9 +2,11 @@
 Galerie de portraits
 ===========================
 
+## Gordon Moore
+
 ````{panels}
 
-:img-top: media/Gordon_Moore.jpeg
+:img-top: media/portraits/Gordon_Moore.jpeg
 
 Gordon Moore
 ^^^^^
@@ -16,26 +18,30 @@ Gordon Earle Moore est le cofondateur d'Intel en 1968. Intel est le premier fabr
 
 ````
 
+## Anita Borg
 ````{panels}
 
-:img-top: media/anitaborg.jpg
+:img-top: media/portraits/anitaborg.jpg
 
 Anita Borg 🇺🇸 
 ^^^^^
 ***1949-2003***
 
+```{dropdown} Bio
 [**Anita Borg**](https://fr.wikipedia.org/wiki/Anita_Borg) est une informaticienne américaine. Elle a notamment travaillé pour Digital Equipment Corporation où elle a développé une méthode permettant de concevoir des systèmes mémoriels à haute vitesse. 
-
-----
-:img-top: media/babbage.jpeg
-
+```
 ````
 
+## Charles Babbage
 ````{panels}
+----
+:img-top: media/portraits/babbage.jpeg
 
 Charles Babbage 🇬🇧 
 ^^^^^
 ***1791-1871***
 
+```{dropdown} Bio
 [**Charles Babbage**](https://fr.wikipedia.org/wiki/Charles_Babbage) fut le premier inventeur à énoncer le principe d'un ordinateur. C'est en 1834, pendant le développement d'une machine à calculer destinée au calcul et à l'impression de tables mathématiques, qu'il eut l'idée d'y incorporer des cartes du métier Jacquard, dont la lecture séquentielle donnerait des instructions et des données à sa machine. 
+```
 ````
