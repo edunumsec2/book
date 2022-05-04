@@ -15,6 +15,7 @@ Les notions qui ont jalonné l'histoire de l'informatique <notions>
 Les technologies qui ont jalonné l'histoire de l'informatique <technologies>
 Les entreprises qui ont jalonné l'histoire de l'informatique <entreprises>
 ```
+
 Le [musée bolo](https://www.museebolo.ch/)
 
 
