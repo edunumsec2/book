@@ -1,0 +1,576 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="9. Associer - dict" href="dict.html" /><link rel="prev" title="7. Hériter - E(P)" href="inherit.html" />
+
+    <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>8. Tracer - math - Apprendre</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #5933D1;
+  --color-brand-content: #5933D1;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Apprendre</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Apprendre</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Première année</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rep-info/index.html">Représentation de l’information</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/entiers.html">2. 1. Les entiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/caracteres.html">3. 2. Les caractères</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/images.html">4. 3. Les images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/son.html">5. 4. Le son</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/redondance.html">6. 5. Redondance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/conclusion.html">7. Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/dessiner.html">1. Dessiner - <code class="docutils literal notranslate"><span class="pre">forward()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/definir.html">2. Définir - <code class="docutils literal notranslate"><span class="pre">def</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/repeter.html">4. Répéter - <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/cercler.html">5. Cercler - <code class="docutils literal notranslate"><span class="pre">circle()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/memoriser.html">6. Mémoriser - <code class="docutils literal notranslate"><span class="pre">a=100</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/parcourir.html">7. Parcourir - <code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/write.html">8. Typographier - <code class="docutils literal notranslate"><span class="pre">write()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/iterer.html">9. Itérer - <code class="docutils literal notranslate"><span class="pre">range()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/parametrer.html">10. Paramétrer - <code class="docutils literal notranslate"><span class="pre">f(x)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/randomiser.html">11. Randomiser - <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/questionner.html">12. Questionner - <code class="docutils literal notranslate"><span class="pre">input()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/decider.html">13. Décider - <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/ecrire.html">14. Ecrire - <code class="docutils literal notranslate"><span class="pre">str</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/attendre.html">15. Attendre - <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/renvoyer.html">16. Renvoyer - <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/grouper.html">17. Grouper - <code class="docutils literal notranslate"><span class="pre">list</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/trier.html">18. Trier - <code class="docutils literal notranslate"><span class="pre">sort()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/turtleart.html">19. TurtleArt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/projet.html">20. Projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/annexe.html">21. Annexes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../algo1/index.html">Algorithmique I</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/algorithmes.html">1. Les algorithmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/tri.html">2. Trie, cherche et trouve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/algo-progs.html">3. Des algorithmes aux programmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../archi/index.html">Architecture des ordinateurs</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../archi/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/sys-log.html">1. Portes logiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/additionneur.html">2. Additionneur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/alu-mem.html">3. ALU et mémoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/archi-gen.html">4. Architecture générale et composants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/micro-pro.html">5. Le microprocesseur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html">Histoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#une-breve-histoire-de-linformatique">Une (brève) histoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#portraits">Portraits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#notions">Notions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#technologies">Technologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#le-musee-bolo">Le musée Bolo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#les-grandes-entreprises-de-linformatique">Les grandes entreprises de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#une-encore-plus-breve-histoire-du-jeu-video">Une (encore plus brève) histoire du jeu vidéo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/machines.html">Histoire des machines</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
+<ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../algo2/index.html">Algorithmique II</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/complexite.html">1. Terminaison et complexité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recherche.html">2. Algorithmes de recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/tris.html">3. Algorithmes de tri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/heuristiques.html">4. Solutions heuristiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html">4. Récursivité [en option]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html#focus-sur-la-recursivite">4.1 Focus sur la récursivité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Programmation II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="onkey.html">1. Déclencher - <code class="docutils literal notranslate"><span class="pre">onkey()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="lambda.html">2. Formaliser - <code class="docutils literal notranslate"><span class="pre">lambda</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="onclick.html">3. Cliquer - <code class="docutils literal notranslate"><span class="pre">onclick()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ontimer.html">4. Interrompre - <code class="docutils literal notranslate"><span class="pre">ontimer()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="turtle.html">5. Cloner - <code class="docutils literal notranslate"><span class="pre">Turtle</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="class.html">6. Créer - <code class="docutils literal notranslate"><span class="pre">class</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="inherit.html">7. Hériter - <code class="docutils literal notranslate"><span class="pre">E(P)</span></code></a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">8. Tracer - <code class="docutils literal notranslate"><span class="pre">math</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dict.html">9. Associer - <code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="compter.html">10. Compter - <code class="docutils literal notranslate"><span class="pre">bin</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="color.html">11. Nuancer - <code class="docutils literal notranslate"><span class="pre">color</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="set.html">12. Appartenir - <code class="docutils literal notranslate"><span class="pre">set</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bool.html">13. Raisonner - <code class="docutils literal notranslate"><span class="pre">bool</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bit.html">14. Manipuler - <code class="docutils literal notranslate"><span class="pre">&amp;</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="recursif.html">15. Revenir - <code class="docutils literal notranslate"><span class="pre">f(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector.html">16. Vecteurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="force.html">17. Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idees.html">18. Idées</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../projets/index.html">Projets</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projets/tic_tac_toe.html">1. Tic-tac-toe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/puissance4.html">2. Puissance 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/mines.html">3. Démineur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/snake.html">4. Snake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/game_of_life.html">5. Game of life</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/cartes.html">6. Poker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/tetris.html">7. Tetris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/art_absurde.html">8. Art absurde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/microbit/microbit.html">9. Micro:bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/crypto.html">10. Cryptographie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/idees.html">11. Idées</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resx/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/adressage.html">1. Adressage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/tcp-ip.html">2. TCP-IP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/routage.html">3. Routage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/web.html">4. Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/couches.html">5. Couches</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="tracer-math">
+<h1><span class="section-number">8. </span>Tracer - <code class="docutils literal notranslate"><span class="pre">math</span></code><a class="headerlink" href="#tracer-math" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Dans ce chapitre nous allons découvrir comment nous pouvons tracer des fonctions mathématiques pour les visualiser. Le module <code class="docutils literal notranslate"><span class="pre">math</span></code> met à disposition toute une série de constantes et de fonctions mathématiques. Nous allons explorer :</p>
+<ul class="simple">
+<li><p>les fonctions trigonométriques <code class="docutils literal notranslate"><span class="pre">sin()</span></code>, <code class="docutils literal notranslate"><span class="pre">cos()</span></code> et <code class="docutils literal notranslate"><span class="pre">tan()</span></code>,</p></li>
+<li><p>la fonction exponentielle <code class="docutils literal notranslate"><span class="pre">exp()</span></code>,</p></li>
+<li><p>la fonction logarithmique <code class="docutils literal notranslate"><span class="pre">log()</span></code>.</p></li>
+</ul>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Le module <code class="docutils literal notranslate"><span class="pre">math</span></code> met à disposition</p>
+<p><label class="answer incorrect"><input type="checkbox"/>des nouveaux opérateurs mathématiques</label><br/>
+<label class="answer correct"><input type="checkbox"/>des constantes</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>des fonctions matricielles</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>des fonctions statistiques</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
+</form></div><section id="tracer-une-fonction">
+<h2>Tracer une fonction<a class="headerlink" href="#tracer-une-fonction" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour donner une idée de ce que nous allons faire, voici tout de suite un exemple de comment tracer les deux fonctions trigonométriques <code class="docutils literal notranslate"><span class="pre">sin()</span></code> et <code class="docutils literal notranslate"><span class="pre">cos()</span></code>.</p>
+<p>Au début du programme nous importons le module <code class="docutils literal notranslate"><span class="pre">math</span></code>. Par la suite nous pouvons accéder aux nouvelles fonctions importées <code class="docutils literal notranslate"><span class="pre">math.sin()</span></code> et <code class="docutils literal notranslate"><span class="pre">math.cos()</span></code>.</p>
+<p>Dans l’intervalle [-300, 300] nous prenons une valeur tous les 10, ce qui nous fait 60 valeurs.</p>
+<p>Pour adapter la fonction à l’échelle de la tortue nous changeons :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> par un facteur de 50,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">y</span></code> par un facteur de 100.</p></li>
+</ul>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKaW1wb3J0IG1hdGgKdXAoKQoKY29sb3IoJ3JlZCcpCmZvciB4IGluIHJhbmdlKC0zMDAsIDMwMCwgMTApOgogICAgeSA9IDEwMCAqIG1hdGguc2luKHgvNTApCiAgICBzZXRwb3MoeCwgeSkKICAgIGRvd24oKQogICAgZG90KCkKICAgIAp1cCgpCmNvbG9yKCdibHVlJykKZm9yIHggaW4gcmFuZ2UoLTMwMCwgMzAwLCAxMCk6CiAgICB5ID0gMTAwICogbWF0aC5jb3MoeC81MCkKICAgIHNldHBvcyh4LCB5KQogICAgZG93bigpCiAgICBkb3QoKQ==" data-file="bWF0aDEucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Modifiez couleur, amplitude, fréquence ou nombre de points de la courbe.</p>
+</section>
+<section id="importer-un-module">
+<h2>Importer un module<a class="headerlink" href="#importer-un-module" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le mot-clé <code class="docutils literal notranslate"><span class="pre">import</span></code> permet d’importer un module. Normalement c’est dans la première ligne d’un programme qu’on importe un module. La fonction <code class="docutils literal notranslate"><span class="pre">dir()</span></code> permet de voir le contenu du module.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IG1hdGgKbSA9IFt4IGZvciB4IGluIGRpcihtYXRoKSBpZiBub3QgeC5zdGFydHN3aXRoKCdfJyldCnByaW50KG0pCnByaW50KGxlbihtKSk=" data-file="bWF0aDIucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Importez le module <code class="docutils literal notranslate"><span class="pre">random</span></code> et affichez son contenu avec <code class="docutils literal notranslate"><span class="pre">dir</span></code>.</p>
+</section>
+<section id="format-module-objet">
+<h2>Format <code class="docutils literal notranslate"><span class="pre">module.objet</span></code><a class="headerlink" href="#format-module-objet" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour utiliser un objet d’un module importé, il faut écrire de façon <code class="docutils literal notranslate"><span class="pre">module.objet</span></code></p>
+<ul class="simple">
+<li><p>le nom du module</p></li>
+<li><p>le point <code class="docutils literal notranslate"><span class="pre">.</span></code> (dot)</p></li>
+<li><p>le nom de l’objet</p></li>
+</ul>
+<p>Par exemple <code class="docutils literal notranslate"><span class="pre">math.pi</span></code> pour la constante <span class="math notranslate nohighlight">\(\pi\)</span>. Voici quelques exemples.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IG1hdGgKCnByaW50KCdlID0nLCBtYXRoLmUpCnByaW50KCdwaSA9JywgbWF0aC5waSkKcHJpbnQoJ2ZhY3QoNykgPScsIG1hdGguZmFjdG9yaWFsKDcpKQ==" data-file="bWF0aDMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Essayez la fonction <code class="docutils literal notranslate"><span class="pre">pow()</span></code> (puissance) et affichez le résultat.</p>
+</section>
+<section id="constantes">
+<h2>Constantes<a class="headerlink" href="#constantes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Avec l’expression <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">obj1,</span> <span class="pre">obj2</span></code> nous pouvons explicitement importer des objets par nom.</p>
+<p>Ceci nous permet de directement accéder à l’objet sans ajouter le nom du module. Nous pouvons donc écrire directement <code class="docutils literal notranslate"><span class="pre">pi</span></code> au lieu de <code class="docutils literal notranslate"><span class="pre">math.pi</span></code>.</p>
+<p>Le module <code class="docutils literal notranslate"><span class="pre">math</span></code> contient 5 constantes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">e</span></code> base des logarithmes naturels (nombre d’Euler)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inf</span></code> symbole pour infinité</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nan</span></code> symbole pour <em>not a number</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pi</span></code> rapport de la circonférence d’un cercle à son diamètre</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tau</span></code> rapport de la circonférence d’un cercle à son rayon</p></li>
+</ul>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSBtYXRoIGltcG9ydCBlLCBpbmYsIG5hbiwgcGksIHRhdQoKcHJpbnQoJ0NvbnN0YW50ZXM6JykKcHJpbnQoJ2UgICA9JywgZSkKcHJpbnQoJ2luZiA9JywgaW5mKQpwcmludCgnbmFuID0nLCBuYW4pCnByaW50KCdwaSAgPScsIHBpKQpwcmludCgndGF1ID0nLCB0YXUp" data-file="bWF0aDQucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Vérifiez de façon numérique que <span class="math notranslate nohighlight">\(2\pi = \tau\)</span>.</p>
+</section>
+<section id="fonction-trigo">
+<h2>Fonction trigo<a class="headerlink" href="#fonction-trigo" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Voici les fonctions trigonométriques:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sin/cos</span></code> fonction sinus/cosinus</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sinh/cosh</span></code> fonctions sinus/cosinus hyperboliques</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tan/tan2</span></code> fonction tangente avec 1 ou 2 arguments</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tanh</span></code> fonction tangente hyperbolique</p></li>
+</ul>
+<p>Et leurs fonctions inverses (arc):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">asin/asinh</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">acos/acosh</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">atan/atanh</span></code></p></li>
+</ul>
+<p>Dorénavant nous utilisons l’expression <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">math</span> <span class="pre">import</span> <span class="pre">*</span></code> pour importer tous les objets du module <code class="docutils literal notranslate"><span class="pre">math</span></code>. Le symbole <code class="docutils literal notranslate"><span class="pre">*</span></code> représente tous les objets.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSBtYXRoIGltcG9ydCAqCnVwKCkKCmNvbG9yKCdyZWQnKQpmb3IgeCBpbiByYW5nZSgtMzAwLCAzMDAsIDEwKToKICAgIHkgPSAxMDAgKiBzaW4oeC81MCkKICAgIHNldHBvcyh4LCB5KQogICAgZG93bigpCiAgICBkb3QoKQ==" data-file="bWF0aDUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Ajoutez et tracez une deuxième fonction trigonométrique dans une autre couleur.</p>
+</section>
+<section id="afficher-les-axes">
+<h2>Afficher les axes<a class="headerlink" href="#afficher-les-axes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dessinons aussi des axes, nous allons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">stamp</span></code> pour dessiner la flèche de l’axe.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKd2lkdGgoMSkKdXAoKQoKZ290bygtMjgwLCAwKQpkb3duKCkKZ290bygyODAsIDApCnN0YW1wKCkKdXAoKQoKZ290bygwLCAtMTgwKQpsZWZ0KDkwKQpkb3duKCkKZ290bygwLCAxODApCnN0YW1wKCkKdXAoKQ==" data-file="bWF0aDYucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Nous pouvons re-écrire le code de façon plus court et plus lisible en définissant une fonction <code class="docutils literal notranslate"><span class="pre">axe()</span></code>.</p>
+<p>Cette fonction utilise deux paramètres <code class="docutils literal notranslate"><span class="pre">p</span></code> et <code class="docutils literal notranslate"><span class="pre">q</span></code> qui sont un tuple qui représente^ les coordonnées du point de départ et du point d’arrivée.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQoKZGVmIGF4ZShwLCBxKToKICAgIGdvdG8ocCkKICAgIGRvd24oKQogICAgc2V0aCh0b3dhcmRzKHEpKQogICAgZ290byhxKQogICAgc3RhbXAoKQogICAgdXAoKQogICAgCmF4ZSgoLTI4MCwgMCksICgyODAsIDApKQpheGUoKDAsIC0xODApLCAoMCwgMTgwKSk=" data-file="bWF0aDcucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="afficher-une-grille">
+<h2>Afficher une grille<a class="headerlink" href="#afficher-une-grille" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Avec multiples lignes horizontales et verticales nous dessinons une grille.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKd2lkdGgoMSkKc3BlZWQoMCkKdXAoKQoKZCA9IDQwCmZvciB4IGluIHJhbmdlKC0yODAsIDI4MCsxLCBkKToKICAgIGdvdG8oeCwgLTE4MCkKICAgIGRvd24oKQogICAgZ290byh4LCAxODApCiAgICB1cCgpCiAgICAKZm9yIHkgaW4gcmFuZ2UoLTE4MCwgMTgwKzEsIGQpOgogICAgZ290bygtMjgwLCB5KQogICAgZG93bigpCiAgICBnb3RvKDI4MCwgeSkKICAgIHVwKCk=" data-file="bWF0aDgucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>En définissant la fonction <code class="docutils literal notranslate"><span class="pre">ligne()</span></code> nous pouvons rendre le programme plus lisible.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKc3BlZWQoMCkKdXAoKQpkID0gNDAKCmRlZiBsaWduZShwLCBxKToKICAgIGdvdG8ocCkKICAgIGRvd24oKQogICAgZ290byhxKQogICAgdXAoKQoKZm9yIHggaW4gcmFuZ2UoLTI4MCwgMjgwKzEsIGQpOgogICAgbGlnbmUoKHgsIC0xODApLCAoeCwgMTgwKSkKICAgIApmb3IgeSBpbiByYW5nZSgtMTgwLCAxODArMSwgZCk6CiAgICBsaWduZSgoLTI4MCwgeSksICgyODAsIHkpKQ==" data-file="bWF0aDkucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Mettez la distance <code class="docutils literal notranslate"><span class="pre">d</span></code> à 20 et à 10 et réexécutez le programme.</p>
+</section>
+<section id="echelle">
+<h2>Echelle<a class="headerlink" href="#echelle" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IG1hdGgKZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQoKbiA9IDYwCnBsYWdlID0gLTMsIDYKZCA9IHBsYWdlWzFdIC0gcGxhZ2VbMF0KCmZvciBpIGluIHJhbmdlKG4pOgogICAgeCA9IC0zMDAgKyBpICogNjAwL24KICAgIHhfID0gcGxhZ2VbMF0gKyBpICogZC9uCiAgICBnb3RvKHgsIDApCiAgICBpZiBpICUgMTAgPT0gMDoKICAgICAgICBkb3QoKQogICAgICAgIHdyaXRlKGYne3hfOi4xfScp" data-file="bWF0aDEwLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="tracer-des-fonctions">
+<h2>Tracer des fonctions<a class="headerlink" href="#tracer-des-fonctions" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSBtYXRoIGltcG9ydCAqCnVwKCkKICAgIApkZWYgdHJhY2VyKGYsIGNvdWxldXI9J3JlZCcsIG5vbT0nZicpOgogICAgY29sb3IoY291bGV1cikKICAgIGZvciB4IGluIHJhbmdlKC0zMDAsIDI1MCwgMTApOgogICAgICAgIHkgPSAxMDAgKiBmKHgvNTApCiAgICAgICAgZ290byh4LCB5KQogICAgICAgIGRvd24oKQogICAgICAgIGRvdCgpCiAgICB1cCgpCiAgICB3cml0ZSgnICcgKyBub20sIGZvbnQ9KE5vbmUsIDE4KSkKCnRyYWNlcihzaW4sICdncmVlbicsICdzaW4nKQp0cmFjZXIoY29zKQ==" data-file="bWF0aDExLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Voici du code à développer.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSBtYXRoIGltcG9ydCAqCnVwKCkKY29sb3IoJ3JlZCcpCm4gPSA2MApwbGFnZSA9IC0zLCA2CmQgPSBwbGFnZVsxXSAtIHBsYWdlWzBdCgpmb3IgaSBpbiByYW5nZShuKToKICAgIHggPSAtMzAwICsgaSAqIDYwMC9uCiAgICB4XyA9IHBsYWdlWzBdICsgaSAqIGQvbgogICAgeV8gPSBzaW4oeF8pCiAgICB5ID0gMjAwLzIgKiBzaW4oeF8pCiAgICBnb3RvKHgsIHkpCiAgICBkb3duKCkKICAgIGlmIGkgJSA1ID09IDA6CiAgICAgICAgZG90KCkKICAgICAgICB3cml0ZShmJ3t4XzouMn0sIHt5XzouMn0nKQ==" data-file="bWF0aDEyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="arc-tangente">
+<h2>arc tangente<a class="headerlink" href="#arc-tangente" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSBtYXRoIGltcG9ydCAqCnVwKCkKICAgIApkZWYgZ3JhcGgoZiwgY29sLCBuYW1lKToKICAgIGNvbG9yKGNvbCkKICAgIGZvciB4IGluIHJhbmdlKC0zMDAsIDI1MCwgMTApOgogICAgICAgIHkgPSAxMDAgKiBmKHgvNTApCiAgICAgICAgZ290byh4LCB5KQogICAgICAgIGRvd24oKQogICAgICAgIGRvdCgpCiAgICB1cCgpCiAgICB3cml0ZSgnICcgKyBuYW1lLCBmb250PShOb25lLCAxOCkpCgpncmFwaChhdGFuLCAncmVkJywgJ2F0YW4nKQpncmFwaChjb3MsICdibHVlJywgJ2Nvcycp" data-file="bWF0aDEzLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="equation-de-2e-degre">
+<h2>Équation de 2e degré<a class="headerlink" href="#equation-de-2e-degre" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBheGVzKCk6CiAgICBiYWNrd2FyZCgyODApCiAgICBmb3J3YXJkKDU2MCkKICAgIHN0YW1wKCkKICAgIGJhY2t3YXJkKDI4MCkKICAgIGxlZnQoOTApCiAgICBiYWNrd2FyZCgxODApCiAgICBmb3J3YXJkKDM2MCkKICAgIHN0YW1wKCkKICAgIHVwKCkKCmRlZiBmKHgpOiAKICAgIHJldHVybiAzICogeCAqKiAyIC0gNSAqIHggLSA0MAoKZGVmIHRyYWNlcigpOgogICAgY29sb3IoJ3JlZCcpICAgIAogICAgZm9yIHggaW4gcmFuZ2UoLTUsIDYpOgogICAgICAgIGdvdG8oNTAgKiB4LCAyICogZih4KSkKICAgICAgICBkb3duKCkKICAgICAgICBkb3QoKQogICAgICAgIApheGVzKCkKdHJhY2VyKCk=" data-file="bWF0aDE0LnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="dict.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title"><span class="section-number">9. </span>Associer - <code class="docutils literal notranslate"><span class="pre">dict</span></code></div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="inherit.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title"><span class="section-number">7. </span>Hériter - <code class="docutils literal notranslate"><span class="pre">E(P)</span></code></div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; CC-BY-NC |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
+            <a class="muted-link" href="../_sources/prog2/math.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">8. Tracer - <code class="docutils literal notranslate"><span class="pre">math</span></code></a><ul>
+<li><a class="reference internal" href="#tracer-une-fonction">Tracer une fonction</a></li>
+<li><a class="reference internal" href="#importer-un-module">Importer un module</a></li>
+<li><a class="reference internal" href="#format-module-objet">Format <code class="docutils literal notranslate"><span class="pre">module.objet</span></code></a></li>
+<li><a class="reference internal" href="#constantes">Constantes</a></li>
+<li><a class="reference internal" href="#fonction-trigo">Fonction trigo</a></li>
+<li><a class="reference internal" href="#afficher-les-axes">Afficher les axes</a></li>
+<li><a class="reference internal" href="#afficher-une-grille">Afficher une grille</a></li>
+<li><a class="reference internal" href="#echelle">Echelle</a></li>
+<li><a class="reference internal" href="#tracer-des-fonctions">Tracer des fonctions</a></li>
+<li><a class="reference internal" href="#arc-tangente">arc tangente</a></li>
+<li><a class="reference internal" href="#equation-de-2e-degre">Équation de 2e degré</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/glossary.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/timeline.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>

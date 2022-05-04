@@ -1,0 +1,744 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="3. ALU et mémoire" href="alu-mem.html" /><link rel="prev" title="1. Portes logiques" href="sys-log.html" />
+
+    <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>2. Additionneur - Apprendre</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #5933D1;
+  --color-brand-content: #5933D1;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Apprendre</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Apprendre</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Première année</span></p>
+<ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rep-info/index.html">Représentation de l’information</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/entiers.html">2. 1. Les entiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/caracteres.html">3. 2. Les caractères</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/images.html">4. 3. Les images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/son.html">5. 4. Le son</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/redondance.html">6. 5. Redondance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/conclusion.html">7. Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/dessiner.html">1. Dessiner - <code class="docutils literal notranslate"><span class="pre">forward()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/definir.html">2. Définir - <code class="docutils literal notranslate"><span class="pre">def</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/repeter.html">4. Répéter - <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/cercler.html">5. Cercler - <code class="docutils literal notranslate"><span class="pre">circle()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/memoriser.html">6. Mémoriser - <code class="docutils literal notranslate"><span class="pre">a=100</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/parcourir.html">7. Parcourir - <code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/write.html">8. Typographier - <code class="docutils literal notranslate"><span class="pre">write()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/iterer.html">9. Itérer - <code class="docutils literal notranslate"><span class="pre">range()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/parametrer.html">10. Paramétrer - <code class="docutils literal notranslate"><span class="pre">f(x)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/randomiser.html">11. Randomiser - <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/questionner.html">12. Questionner - <code class="docutils literal notranslate"><span class="pre">input()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/decider.html">13. Décider - <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/ecrire.html">14. Ecrire - <code class="docutils literal notranslate"><span class="pre">str</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/attendre.html">15. Attendre - <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/renvoyer.html">16. Renvoyer - <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/grouper.html">17. Grouper - <code class="docutils literal notranslate"><span class="pre">list</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/trier.html">18. Trier - <code class="docutils literal notranslate"><span class="pre">sort()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/turtleart.html">19. TurtleArt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/projet.html">20. Projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/annexe.html">21. Annexes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../algo1/index.html">Algorithmique I</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/algorithmes.html">1. Les algorithmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/tri.html">2. Trie, cherche et trouve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/algo-progs.html">3. Des algorithmes aux programmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Architecture des ordinateurs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sys-log.html">1. Portes logiques</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">2. Additionneur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alu-mem.html">3. ALU et mémoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="archi-gen.html">4. Architecture générale et composants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro-pro.html">5. Le microprocesseur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html">Histoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#une-breve-histoire-de-linformatique">Une (brève) histoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#portraits">Portraits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#notions">Notions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#technologies">Technologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#le-musee-bolo">Le musée Bolo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#les-grandes-entreprises-de-linformatique">Les grandes entreprises de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#une-encore-plus-breve-histoire-du-jeu-video">Une (encore plus brève) histoire du jeu vidéo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/machines.html">Histoire des machines</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../algo2/index.html">Algorithmique II</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/complexite.html">1. Terminaison et complexité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recherche.html">2. Algorithmes de recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/tris.html">3. Algorithmes de tri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/heuristiques.html">4. Solutions heuristiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html">4. Récursivité [en option]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html#focus-sur-la-recursivite">4.1 Focus sur la récursivité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../prog2/index.html">Programmation II</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/onkey.html">1. Déclencher - <code class="docutils literal notranslate"><span class="pre">onkey()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/lambda.html">2. Formaliser - <code class="docutils literal notranslate"><span class="pre">lambda</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/onclick.html">3. Cliquer - <code class="docutils literal notranslate"><span class="pre">onclick()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/ontimer.html">4. Interrompre - <code class="docutils literal notranslate"><span class="pre">ontimer()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/turtle.html">5. Cloner - <code class="docutils literal notranslate"><span class="pre">Turtle</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/class.html">6. Créer - <code class="docutils literal notranslate"><span class="pre">class</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/inherit.html">7. Hériter - <code class="docutils literal notranslate"><span class="pre">E(P)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/math.html">8. Tracer - <code class="docutils literal notranslate"><span class="pre">math</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/dict.html">9. Associer - <code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/compter.html">10. Compter - <code class="docutils literal notranslate"><span class="pre">bin</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/color.html">11. Nuancer - <code class="docutils literal notranslate"><span class="pre">color</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/set.html">12. Appartenir - <code class="docutils literal notranslate"><span class="pre">set</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/bool.html">13. Raisonner - <code class="docutils literal notranslate"><span class="pre">bool</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/bit.html">14. Manipuler - <code class="docutils literal notranslate"><span class="pre">&amp;</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/recursif.html">15. Revenir - <code class="docutils literal notranslate"><span class="pre">f(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/vector.html">16. Vecteurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/force.html">17. Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/idees.html">18. Idées</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../projets/index.html">Projets</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projets/tic_tac_toe.html">1. Tic-tac-toe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/puissance4.html">2. Puissance 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/mines.html">3. Démineur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/snake.html">4. Snake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/game_of_life.html">5. Game of life</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/cartes.html">6. Poker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/tetris.html">7. Tetris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/art_absurde.html">8. Art absurde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/microbit/microbit.html">9. Micro:bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/crypto.html">10. Cryptographie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/idees.html">11. Idées</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resx/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/adressage.html">1. Adressage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/tcp-ip.html">2. TCP-IP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/routage.html">3. Routage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/web.html">4. Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/couches.html">5. Couches</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="additionneur">
+<h1>2. Additionneur<a class="headerlink" href="#additionneur" title="Lien permanent vers ce titre">¶</a></h1>
+<p>On a découvert quelques <span class="target" id="gl-portelogique-0"></span><span class="glossary-ref" data-definition="PHA+TGVzIHBvcnRlcyBsb2dpcXVlcyBzb250IGRlcyB1bml0w6lzIG1pY3Jvw6lsZWN0cm9uaXF1ZXMsIG91IHN5bWJvbGlxdWVzLCBwZXJtZXR0YW50IGRlIHJlcHJvZHVpcmUgbGEgbG9naXF1ZSBib29sw6llbm5lIHZpYSBkZXMgdGVuc2lvbnMgw6lsZWN0cmlxdWVzLjwvcD4K" data-entry-name="UG9ydGVzIGxvZ2lxdWVz" data-glossary-uri="../glossaire.html#gl-def-portelogique-1" data-number="1">portes logiques</span> ainsi que la possibilité de les connecter pour en faire des circuits logiques plus complexes. Ces portes logiques vont maintenant permettre de réaliser l’additionneur annoncé en début de chapitre précédent.</p>
+<p>On rappelle qu’on a deux <span class="target" id="gl-bit-0"></span><span class="glossary-ref" data-definition="PHA+VW4gYml0IGVzdCB1biBjaGlmZnJlIGJpbmFpcmUgKDAgb3UgMSkuIEMnZXN0IGwndW5pdMOpIMOpbMOpbWVudGFpcmUgZOKAmWluZm9ybWF0aW9uLCDDoCBuZSBwYXMgY29uZm9uZHJlIGF2ZWMgbGUgYnl0ZSAocGFxdWV0IGRlIDggYml0cykuPC9wPgo=" data-entry-name="Qml0" data-glossary-uri="../glossaire.html#gl-def-bit-1" data-number="1">bits</span> de sortie à calculer pour la sortie <span class="math notranslate nohighlight">\(S = A + B\)</span>. <span class="math notranslate nohighlight">\(S\)</span> est donc constitué de <span class="math notranslate nohighlight">\(S_0\)</span>, le bit des unités, et de <span class="math notranslate nohighlight">\(S_1\)</span>, le bit représentant la valeur décimale 2. On rappelle ici la <span class="target" id="gl-tableverite-0"></span><span class="glossary-ref" data-definition="PHA+RW4gbG9naXF1ZSwgdW5lIHRhYmxlIGRlIHbDqXJpdMOpIGVzdCB1bmUgZmHDp29uIGRlIHJlcHLDqXNlbnRlciBsZXMg4oCcZW50csOpZXPigJ0gZXQgbGVzIOKAnHNvcnRpZXPigJ0gZOKAmXVuIHN5c3TDqG1lIGxvZ2lxdWUgZGUgZmHDp29uIGdyYXBoaXF1ZS48L3A+Cg==" data-entry-name="VGFibGUgZGUgdsOpcml0w6k=" data-glossary-uri="../glossaire.html#gl-def-tableverite-1" data-number="1">table de vérité</span> pour <span class="math notranslate nohighlight">\(S_0\)</span>, tirée directement du chapitre précédent :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(B\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(S_0\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>En comparant cette table de vérité avec celles des portes logiques, on se rend compte que <span class="math notranslate nohighlight">\(S_0\)</span> n’est autre qu’un <strong>OU-X</strong> (OU exclusif) de <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p>La table de vérité pour <span class="math notranslate nohighlight">\(S_1\)</span> est:</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(B\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(S_1\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Et on constate que <span class="math notranslate nohighlight">\(S_1\)</span> n’est autre qu’un <strong>ET</strong> logique de <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span>. On peut dessiner l’additionneur de deux bits ainsi :</p>
+<div class="logic_diagram" style="height: 140px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAZloF0HJ0ATHeqaAQwA2Pdpn4BbAKY5IAQUgBfVBEIkKVOg0SJW7LjhR8hIqGKkyAQorRs0kUgFcALlQJgiZSglwAmTWAAWXQxuBAAOUQlpBEgAZVpFZRUPdW8-Xh1gjlCwAE5I8xjYxGsIWwhIAHN+J0kvPDciJwBPYmioAA0AeQAlSHZPKkQw3iC2DGw0hkZx+2ccAKVGyBa2mVkAOQARfqhB72GM2iysDQYANlnHFwQAdgUbJMgAd3QAJzqqXF4fcdxDGYMb4Mah-QyXIEBBhhP63Bi5FgsEAKIA"><logic_diagram "a"},="" "and",="" "b"}="" "gates":="" "id":="" "in":="" "name":="" "out":="" "pos":="" "s0"},="" "s1"}="" "val":="" "wires":="" "xor",="" 0,="" 1,="" 100],="" 110],="" 2],="" 30],="" 3],="" 40],="" 4},="" 5],="" 6],="" 7}="" 8,="" 8],="" 9,="" 9]]="" [="" [0,="" [1,="" [180,="" [2,="" [250,="" [4,="" [5,="" [50,="" [7,="" [[0,="" ],="" content="{
+  " height="140" mode="tryout" showonly="" v":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div><div class="admonition-exercice-1 admonition">
+<p class="admonition-title">Exercice 1</p>
+<p>Vérifiez que ce circuit livre bien les bonnes valeurs de sortie qui correspondent aux tables de vérité ci-dessous. Combien de combinaisons différentes devrez-vous tester ?</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Corrigé<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Le circuit fonctionne correctement. Il faut tester les quatre combinaisons qui apparaissent dans les tables de vérité.</p>
+</div>
+</details></div>
+<section id="additionneur-complet">
+<h2>2.1. Additionneur complet<a class="headerlink" href="#additionneur-complet" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le circuit précédent est particulièrement intéressant, car il montre qu’il est possible d’utiliser des opérateurs logiques pour réaliser l’opération arithmétique de l’addition. L’additionneur est limité: en fait, on l’appelle un <em>demi-additionneur</em>. Il n’est capable d’additionner que deux nombres à 1 bit — c’est très limité. En fait, il serait intéressant d’avoir un additionneur de <em>trois</em> nombres à un bit. Pourquoi ? À cause de la manière dont on pose les additions en colonnes.</p>
+<p>Lorsqu’on additionne deux nombres à plusieurs chiffres, que ce soit en base 10 ou en base 2, on commence par la colonne de droite, les unités. On connait le concept de <em>retenue</em>: en base 10, si l’addition des unités dépasse 9, on retient 1 dans la colonne des dizaines. En base 2, de façon similaire, si l’addition des unités dépasse… 1, on retient 1 dans la colonne suivante à gauche. C’est ce qu’on a fait avec le demi-additionneur: on peut considérer que la sortie <span class="math notranslate nohighlight">\(S_0\)</span> représente la colonne des unités dans la somme, et la sortie <span class="math notranslate nohighlight">\(S_1\)</span> représente la retenue à prendre en compte dans la colonne suivante.</p>
+<p>C’est ici que ça se complique : pour additionner les chiffres de la deuxième colonne, on doit potentiellement additionner <em>trois</em> chiffres, et plus seulement deux. On a donc, en entrée, les deux bits <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> qui viennent des nombres à additionner, et aussi potentiellement cette retenue qui vient de la colonne des unités, qu’on appellera <span class="math notranslate nohighlight">\(C_{in}\)</span> (pour <em>carry</em>, « retenue » en anglais). Ceci est vrai en base 2 comme en base 10. Il faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s’appelle <em>additionneur complet</em> et livrera deux sorties: le bit de somme, appelé simplement <span class="math notranslate nohighlight">\(S\)</span>, et la retenue à reporter pour la colonne suivante, appelée <span class="math notranslate nohighlight">\(C_{out}\)</span>.</p>
+<div class="admonition-exercice-2-bases-de-l-additionneur-complet admonition">
+<p class="admonition-title">Exercice 2 : bases de l’additionneur complet</p>
+<ul class="simple">
+<li><p>Déterminez combien de combinaisons différentes sont possibles pour trois signaux d’entrée <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span> et <span class="math notranslate nohighlight">\(C_{in}\)</span> qui chacun peuvent valoir soit <span class="math notranslate nohighlight">\(1\)</span> soit <span class="math notranslate nohighlight">\(0\)</span>.</p></li>
+<li><p>Listez toutes ces combinaisons.</p></li>
+<li><p>Pour chaque combinaison, déterminez la valeur binaire qui est la somme des trois signaux d’entrée.</p></li>
+<li><p>Finalement, avec les informations ainsi obtenues, complétez la table de vérité d’un additionneur complet qui a deux sorties <span class="math notranslate nohighlight">\(S\)</span> et <span class="math notranslate nohighlight">\(C_{out}\)</span></p></li>
+</ul>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Corrigé<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Il y a <span class="math notranslate nohighlight">\(2 \cdot 2 \cdot 2 = 2^3 = 8\)</span> combinaisons différentes. Avec la notation <span class="math notranslate nohighlight">\(A + B + C =\)</span> valeur en décimal <span class="math notranslate nohighlight">\(=\)</span> valeur en binaire, les voici :</p>
+<ul class="simple">
+<li><p class="card-text"><span class="math notranslate nohighlight">\(0 + 0 + 0 = 0_{(10)} = 00_{(2)}\)</span></p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(0 + 0 + 1 = 1_{(10)} = 01_{(2)}\)</span></p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(0 + 1 + 0 = 1_{(10)} = 01_{(2)}\)</span></p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(0 + 1 + 1 = 2_{(10)} = 10_{(2)}\)</span></p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(1 + 0 + 0 = 1_{(10)} = 01_{(2)}\)</span></p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(1 + 0 + 1 = 2_{(10)} = 10_{(2)}\)</span></p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(1 + 1 + 0 = 2_{(10)} = 10_{(2)}\)</span></p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(1 + 1 + 1 = 3_{(10)} = 11_{(2)}\)</span></p></li>
+</ul>
+<p class="card-text">La table de vérité est ainsi:</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p class="card-text"><span class="math notranslate nohighlight">\(A\)</span></p></th>
+<th class="text-align:center head"><p class="card-text"><span class="math notranslate nohighlight">\(B\)</span></p></th>
+<th class="text-align:center head"><p class="card-text"><span class="math notranslate nohighlight">\(C_{in}\)</span></p></th>
+<th class="text-align:center head"><p class="card-text"><span class="math notranslate nohighlight">\(C_{out}\)</span></p></th>
+<th class="text-align:center head"><p class="card-text"><span class="math notranslate nohighlight">\(S\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details></div>
+<p>En faisant pour l’instant abstraction des détails d’un additionneur complet, on peut se dire qu’on le dessine simplement ainsi :</p>
+<div class="logic_diagram" style="height: 120px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=static&amp;data=N4IgbiBcAECMA00QGMD2BbADqgdgUxwBcBnKaAbVEIE9M8yQBDAE2bwCcRERtSZyAbAAZEwgLrcAljjLkRcRACYJSVAFdCsgMyIALGIC+hoA"><logic_diagram "adder",="" "components":="" "in":="" "out":="" "pos":="" 1,="" 2],="" 4]}]}"="" 60],="" [0,="" [3,="" [60,="" [{"type":="" content="{" height="120" mode="static" showonly="" v":=""></logic_diagram></iframe></div></section>
+<section id="chainage-dadditionneurs">
+<h2>2.2. Chaînage d’additionneurs<a class="headerlink" href="#chainage-dadditionneurs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La flexibilité de ce composant fait qu’on peut maintenant facilement l’utiliser pour construire un circuit qui additionne deux nombres <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> à 2 bits chacun (donc de <span class="math notranslate nohighlight">\(0 + 0 = 0\)</span> à <span class="math notranslate nohighlight">\(3 + 3 = 6\)</span>).</p>
+<p>Si <span class="math notranslate nohighlight">\(A\)</span> est formé de deux bits <span class="math notranslate nohighlight">\(A_0\)</span> et <span class="math notranslate nohighlight">\(A_1\)</span> et que <span class="math notranslate nohighlight">\(B\)</span> est formé des deux bits <span class="math notranslate nohighlight">\(B_0\)</span> et <span class="math notranslate nohighlight">\(B_1\)</span> et avec une sortie <span class="math notranslate nohighlight">\(S\)</span> sur trois bits <span class="math notranslate nohighlight">\(S_0\)</span>, <span class="math notranslate nohighlight">\(S_1\)</span> et <span class="math notranslate nohighlight">\(S_2\)</span>, on a :</p>
+<div class="logic_diagram" style="height: 280px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx10QE4AGZMAFjoF1HJSAndAU0wAuOSJQ7oAJjkQMomAIYBbXsICCdSB2hyANjjoBfVBEIkKVeoxbso3PoOGiMkhIhSzFyhJBWINULboIBkbGRGSUCLgATADMMtJsHLb8Ql6OkBJSURzySsIAQuqaOnqGBGBhZpGIcYwJ1pw8KQ5+Gc5IMTkeBb7FgWAGaOxonACuqXjllRF4UdKMUVZJTfZprZkuTF15XgDK6mXGFaYz1PNgi4k2KxMi6+2IAKzbnlC7voehJ1S1F0vXdlu6Q2SAAbC9hLsopB9EMQpAAMakBRkTApU5TSACACexFekDk4nEvC4rXCVDm8QA7FcMthIvEFg1SOMfpZWJ8TDi8cJCcTSRxydVzogaQ0sFRnmBwWAqczWZEAByMGgcuEjADu6C4vFOuC2sus1BkVzOjEeRpqjFBluySCNnSQTCNyqQFsYuBodRtrBA+iAA"><logic_diagram "a0",="" "a1",="" "adder",="" "b0",="" "b1",="" "components":="" "id":="" "in":="" "name":="" "orient":="" "out":="" "pos":="" "s",="" "s0"},="" "s1"},="" "s2"}="" "val":="" "wires":="" 0],="" 0}="" 0},="" 1,="" 10,="" 100],="" 11,="" 12,="" 13,="" 14,="" 14],="" 15,="" 15],="" 16,="" 16]]="" 170],="" 1],="" 240],="" 2],="" 40],="" 4]},="" 5],="" 6,="" 6],="" 7],="" 9]}="" [="" [0,="" [10,="" [11,="" [110,="" [12,="" [13,="" [130,="" [190,="" [210,="" [230,="" [3,="" [30,="" [5,="" [8,="" [9,="" [90,="" [[4,="" ],="" content="{
+  " height="280" mode="tryout" showonly="" v":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div><p>L’additionneur du haut, comme précédemment, additionne les deux bits des unités: <span class="math notranslate nohighlight">\(A_0\)</span> et <span class="math notranslate nohighlight">\(B_0\)</span>. Son entrée <span class="math notranslate nohighlight">\(C_{in}\)</span>, qui représente l’éventuel troisième chiffre à additionner issu d’une retenue, n’est pas connectée et est toujours 0, vu qu’il n’y a aucune colonne précédente dans l’addition qui aurait pu en livrer une. Il livre comme première sortie <span class="math notranslate nohighlight">\(S_0\)</span>, le chiffre des unités, et sa seconde sortie <span class="math notranslate nohighlight">\(C_{out}\)</span> est la retenue à utiliser pour l’addition des chiffres suivants. C’est pourquoi elle est connectée à l’entrée de la retenue du second additionneur <span class="math notranslate nohighlight">\(C_{in}\)</span>, qui va lui ajouter également les deux bits de la colonne suivante, <span class="math notranslate nohighlight">\(A_1\)</span> et <span class="math notranslate nohighlight">\(B_1\)</span>. Les sorties du second additionneur livrent le deuxième bit <span class="math notranslate nohighlight">\(S_1\)</span> de la valeur de sortie, ainsi que la retenue pour la troisième colonne. Comme il n’y a plus de bits d’entrée pour la troisième colonne, cette retenue peut directement être considérée comme le troisième bit de sortie <span class="math notranslate nohighlight">\(S_2\)</span>.</p>
+<div class="admonition-exercice-3-limite-de-cet-additionneur-a-2-bits admonition">
+<p class="admonition-title">Exercice 3 : limite de cet additionneur à 2 bits</p>
+<p>Avec l’additionneur ci-dessus, est-il possible d’obtenir des <span class="math notranslate nohighlight">\(1\)</span> sur toutes les sorties, donc d’avoir <span class="math notranslate nohighlight">\(S_2 = S_1 = S_0 = 1\)</span> ?</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Indice<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Déterminez quel est le nombre décimal qui serait représenté par <span class="math notranslate nohighlight">\(S_2 = S_1 = S_0 = 1\)</span>: <span class="math notranslate nohighlight">\(111_{(2)} =\;???_{(10)}\)</span>  Ensuite, déterminez les nombres les plus grands représentables sur les deux fois 2 bits d’entrée et tirez-en une conclusion.</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Corrigé<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">La configuration <span class="math notranslate nohighlight">\(S_2 = S_1 = S_0 = 1\)</span> représente le nombre décimal <span class="math notranslate nohighlight">\(7\)</span>. Ce serait le résultat de l’addition. Il faudrait ainsi chercher une configuration des bits d’entrées qui, une fois additionnés, donnent <span class="math notranslate nohighlight">\(7\)</span>. Mais ceci n’est pas possible, car sur chacune des entrées <span class="math notranslate nohighlight">\((A_1, A_0)\)</span> et <span class="math notranslate nohighlight">\((B_1, B_0)\)</span>, la plus grande valeur représentable est <span class="math notranslate nohighlight">\(11_{(2)}\)</span>, autrement dit <span class="math notranslate nohighlight">\(3_{(10)}\)</span> — et c’est impossible d’atteindre <span class="math notranslate nohighlight">\(7\)</span> en évaluant au maximum <span class="math notranslate nohighlight">\(3+3\)</span>.</p>
+</div>
+</details></div>
+<div class="admonition-exercice-4-additionneur-de-demi-octets admonition">
+<p class="admonition-title">Exercice 4 : additionneur de demi-octets</p>
+<p>En connectant des additionneurs complets, réalisez un circuit qui additionne deux nombres <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> de quatre bits, numérotés <span class="math notranslate nohighlight">\(A_0\)</span> à <span class="math notranslate nohighlight">\(A_3\)</span> et <span class="math notranslate nohighlight">\(B_0\)</span> à <span class="math notranslate nohighlight">\(B_3\)</span>, respectivement. Combien de bits de sortie doit-il y avoir pour traiter toutes les valeurs possibles ?</p>
+<p>Les entrées sont déjà disposées. Glissez autant d’additionneurs et de bits de sortie que nécessaire et connectez les composants du circuit.</p>
+<div class="logic_diagram" style="height: 500px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?showonly=out+adder&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wE4AGZMAFloF0HJSAndAU0wBcckSu3QATHAGZ2mAIYBbHkICCkyO2iyANjloBfVBEIkKVRHQbM2ULrwFCRGCQnpQ5ilQCZ1UTTpcGBGBEZJQIuJ4WTKzstnyCCMI+kOI4KG4KSonKiMl+uoFGwSZheJJRVrHc8Q7JqQieMpkqtHnaBYZGIabhiJKudNYc1faJjinOSACsTR6JAEJqGu0BncahVJ79DINVdglQ4-VIjLNZUPPey-5g+mvFG+GS22C7NiMHSaKTfWdC87lrh0gt1SrhGC83sN9rVvmlGhk5hdWkCAmgWCA9EA"><logic_diagram "a0",="" "a1",="" "a2",="" "a3",="" "b0",="" "b1",="" "b2",="" "b3",="" "id":="" "in":="" "name":="" "orient":="" "s",="" "val":="" 0,="" 0}="" 0},="" 1,="" 12,="" 13,="" 14,="" 15,="" 2,="" 3,="" 40],="" 90],="" [="" [130,="" [190,="" [230,="" [290,="" [330,="" [390,="" [430,="" [90,="" ]="" content="{
+  " height="500" mode="" showonly="out adder" v":="" {"pos":="" }"=""></logic_diagram></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Corrigé<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et de droite à gauche pour être proche de la représentation selon laquelle les additions se résolvent en colonne, est :</p>
+<div class="logic_diagram" style="height: 300px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wE4AGZMAFloF0HJSAndAU0wBcckSu3QATHAGZ2mAIYBbHkICCkyO2iyANjloBfVBEIkKVRHQbM2ULrwFCRGCQnpQ5ilQCZ1UTTpcGBGBEZJQIuJ4WTKzstnyCCMI+kOI4KG4KSonKiMl+uoFGwSZheJJRVrHc8Q7JqQieMpkqtHnaBYZGIabhiJKudNYc1faJjinOSACsTR6JAEJqGu0BncahVJ79DINVdglQ4-VIjLNZUPPey-5g+mvFG+GS22C7NiMHSaKTfWdC87lrh0gt1SrhGC83sN9rVvmlGhk5hdWkCAmg2GgOABXA74IqgqgvTwANhi7xhYzqk0kAHY-okAMqMSCFLolMyIVwksnQmqUuEISTE+lQBlqVnrHp4TychjcoZxUaHKlSAAcIsgDO8EoeUtwkllYHlez5yoFYHKGoZuR1BPCjENxvJpq+ThwzCtrT06M6kAAxqR5GRMPEwSDIPwAJ7Ec6QWRiMQ8TjJR54B2ucw8rBmYVIOlIVUKnFmahy1i2iPR2PxxPJ9ip-WGzNDbPhGVyhFbIu4zynI1TFgVqMxoQ1pMpvUyjNQ1vS3OefOeQuxYtt0sW8v3IjD6sJ8f1vWIJsz7BPdKSBHPbuEvuSAfeiAYiCQADu6E4PDDRQiXMkT6MEQzEay5BPqrhXvcEQMIgxL-hAuCIAiiA0nBeDpDKqEIdIRqeJhXKwZBiB9gumHYQamGIEBF6kVRKGQZIt4EaBkQMJIIHfr2rHUBR65WOiIB6EAA"><logic_diagram "a0",="" "a1",="" "a2",="" "a3",="" "adder",="" "b0",="" "b1",="" "b2",="" "b3",="" "components":="" "id":="" "in":="" "name":="" "orient":="" "out":="" "pos":="" "s",="" "s0"}="" "s1"},="" "s2"},="" "s3"},="" "s4"},="" "val":="" "wires":="" 0,="" 0}="" 0},="" 1,="" 12,="" 13,="" 14,="" 15,="" 16],="" 17,="" 17],="" 18],="" 190],="" 2,="" 20]},="" 21],="" 22,="" 22],="" 23],="" 25]},="" 260],="" 26],="" 27,="" 27],="" 28],="" 3,="" 30]},="" 31],="" 32,="" 32],="" 33],="" 35]}="" 36,="" 36],="" 37,="" 37],="" 38,="" 38],="" 39,="" 39],="" 40,="" 40]="" 40],="" 90],="" [="" [0,="" [1,="" [110,="" [12,="" [13,="" [130,="" [14,="" [15,="" [16,="" [19,="" [190,="" [2,="" [20,="" [21,="" [210,="" [230,="" [24,="" [25,="" [26,="" [29,="" [290,="" [3,="" [30,="" [31,="" [310,="" [330,="" [34,="" [35,="" [390,="" [410,="" [430,="" [90,="" ]="" ],="" content="{
+  " height="300" mode="tryout" showonly="" v":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div></div>
+</details></div>
+<p>Cet exercice démontre l’opportunité de penser en termes <span class="target" id="gl-modulo-0"></span><span class="glossary-ref" data-definition="PHA+TCdvcMOpcmF0aW9uIG1vZHVsbyAobW9kIG91ICUpIGVzdCBsJ29ww6lyYXRpb24gcXVpIHJldG91cm5lIGxlIHJlc3RlIGQndW5lIGRpdmlzaW9uLiBFbiBQeXRob24sIDE1JTQgKDE1IG1vZHVsbyA0KSByZXRvdXJuZSAzLjwvcD4K" data-entry-name="QXJpdGhtw6l0aXF1ZSBtb2R1bGFpcmU=" data-glossary-uri="../glossaire.html#gl-def-modulo-1" data-number="1">modulaires</span>, ce qui revient souvent en informatique. Ici, on a réalisé qu’un additionneur complet résout un sous-problème bien défini d’une addition générale d’un nombre à <span class="math notranslate nohighlight">\(n\)</span> bits, et qu’une fois qu’on a créé un tel additionneur, il suffit d’en connecter plusieurs les uns derrière les autres de manière structurée pour additionner des nombres plus grands.</p>
+<div class="admonition-exercice-5-overflow admonition">
+<p class="admonition-title">Exercice 5 : overflow</p>
+<p>Le schéma ci-dessous montre le même additionneur de demi-octets de l’exercice précédent, mais, de plus, la valeur en base 10 de ses 4 bits d’entrée pour <span class="math notranslate nohighlight">\(A\)</span> et pour <span class="math notranslate nohighlight">\(B\)</span> est affichée avec un module d’affichage spécial à droite. La même chose est faite pour représenter la valeur <span class="math notranslate nohighlight">\(S = A + B\)</span> (mais seulement sur les quatre premiers bits de <span class="math notranslate nohighlight">\(S\)</span>). Actuellement, le circuit effectue le calcul <span class="math notranslate nohighlight">\(0 + 0 = 0\)</span>.</p>
+<p>Réglez les entrées du circuit de manière à lui faire effectuer les additions suivantes, et vérifiez le résultat. Dans quelles circonstances est-il correct et pourquoi est-il de temps en temps incorrect: Comment, en regard de ceci, interpréter le bit de sortie <span class="math notranslate nohighlight">\(S_4\)</span>, qui est la retenue de l’additionneur de gauche :</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(1 + 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3 + 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3 + 3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(10 + 5\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(14 + 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(14 + 2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(15 + 15\)</span></p></li>
+</ol>
+<div class="logic_diagram" style="height: 490px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx10QAYbkwAWGgXQclICd0BTTAFxyRK7dABMcAZnaYAhgFseQgIKTI7aLIA2OGgF9UEQiQpUATHQbM2ULrwFCRGCQnpQ5ilWfVRNO1wYEYERklAi4kpZMrOx2fIIIwj6Q4jgo7gpKicqIyX66gUbBJmF4zG7WsdzxjsmpCGYymSo0edoFhkYhpuGIzAyIABwxttUOiU4pLkgArE2eiQBCahrtAZ3Goeb9SMM2HGMJUJP1SIzzWVCL3qv+YPobxVvhkjtDIwf2R0mi04jSGQWV1ytw6QW6pVwjDeeyqX1qvzSjUBl0gi1aoICaDYaA4AFcjvgihCqJErDMPnFxsc6tNJAB2C5CADKjEghS6JSoiAs5MphwRzikADYmYlmWoOZsengzLymBT9lTvic6YMxVBmd4pU8ZRF5YxFXCahNaVIAJwayDM3I6knhRgGo2jeGmxEIHaQDyo5mtO2QfgAT2IqMw6AARuGtEp2M88DMyUg6PtTlCGHMwKKwPT9t6VOzHkQgyGhGHI9HknHcAm3GZKkLwuqwJakwNELnmksC+CA8HQxGozGoFWawxJOaPqnGOlHVYAdCO0DrezsZ1IABjUjyMiYeKQnvF1GyMRiHicSt6x1uSQWFPYXpZxCM3ZKgnclu3-2HoTH0-n2N6je163qI96yukcoMGYkivoSdZQTMLBfn2P4nmeF6QnKwGTmBuBmFmZjPmYgyweYLaREhha9iWiS-uhAGQjy2F3qS6Q3mOMGxG+LznGAkiIXoq64gA7ugnA8PuRTUMiJGPNQALmjiUl9AMMRBNQGaIO2cnIowSlGNQ6b6RAuBuMKxl4ACOY6bWnHqWYGbERZETXnZUnIog5lyTyAzWepEHaf5AJys5tZef5vGEc5AKSIFykZjezmIC207OfBTBmGlKVuQZrxWHpcn8WOflSXlfHhe55GyfZvHjklKWsNiIB6EAA"><logic_diagram "a"},="" "a0",="" "a1",="" "a2",="" "a3",="" "adder",="" "b"},="" "b0",="" "b1",="" "b2",="" "b3",="" "components":="" "id":="" "in":="" "name":="" "nibble",="" "orient":="" "out":="" "pos":="" "s",="" "s"}="" "s0"},="" "s1"},="" "s2"},="" "s3"},="" "s4"},="" "val":="" "wires":="" 0,="" 0}="" 0},="" 1,="" 10,="" 100],="" 10],="" 11],="" 12,="" 13,="" 14,="" 15,="" 16],="" 17,="" 17],="" 180],="" 18],="" 2,="" 20]},="" 21],="" 22,="" 22],="" 23],="" 240],="" 25]},="" 26],="" 27,="" 27],="" 28],="" 3,="" 30]},="" 31],="" 32,="" 320],="" 32],="" 33],="" 35]}="" 36,="" 36],="" 37,="" 37],="" 38,="" 38],="" 39,="" 390],="" 39],="" 40,="" 40]="" 40],="" 41],="" 42,="" 42],="" 43,="" 43],="" 44],="" 450],="" 4],="" 5,="" 5],="" 6,="" 6],="" 7],="" 8],="" 9,="" 9],="" [="" [0,="" [1,="" [100,="" [12,="" [120,="" [13,="" [14,="" [140,="" [15,="" [16,="" [19,="" [2,="" [20,="" [200,="" [21,="" [220,="" [24,="" [240,="" [25,="" [26,="" [29,="" [3,="" [30,="" [300,="" [31,="" [320,="" [34,="" [340,="" [35,="" [4,="" [400,="" [41,="" [420,="" [440,="" [530,="" [8,="" ]="" ],="" content="{
+  " height="490" mode="tryout" showonly="" v":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Corrigé<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Dès que la somme dépasse 15, elle n’est plus représentable sur les 4 bits qui sont affichés sur la sortie. La plupart des ordinateurs et smartphones actuels représentent les nombres non pas sur 4 bits, mais sur 64. Mais même avec 64 bits, il y a un nombre maximal que l’on peut représenter (en l’occurrence, <span class="math notranslate nohighlight">\(2^{64} - 1 = 18\,446\,744\,073\,709\,551\,615\)</span>.) La retenue du dernier additionneur s’appelle le bit de dépassement (<em>overflow</em> en anglais). Il vaut 1 lorsque le résultat de l’addition n’est pas correctement représenté avec les 4 (ou 64) bits de sortie. Dans les processeurs, il porte souvent le nom de <span class="math notranslate nohighlight">\(V\)</span> (deuxième lettre d’<em>oVerflow</em>). On utilisera dorénavant aussi ce nom.</p>
+</div>
+</details></div>
+<div class="admonition-exercice-6-circuit-defectueux admonition">
+<p class="admonition-title">Exercice 6 : circuit défectueux</p>
+<p>L’additionneur de demi-octets ci-dessous a été endommagé et ne fonctionne plus correctement. Par exemple, lorsqu’on lui demande d’effectuer le calcul <span class="math notranslate nohighlight">\(11 + 1\)</span>, il livre comme réponse <span class="math notranslate nohighlight">\(8\)</span>.</p>
+<p>Déterminez quel composant est défectueux dans ce circuit et comment il faudrait le réparer. Vous pouvez changer les entrées pour vérifier ce qui ne fonctionne pas.</p>
+<div class="logic_diagram" style="height: 490px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx10QAYbkwAWGgXQclICd0BTTAFxyRK7dABMcAZnaYAhgFseQgIKTI7aLIA2ORAF9UEQiQpUATHQbM2ULrwFCRGCQnpQ5ilWfVRNO1wYEYERklAi4kpZMrOx2fIIIwj6Q4royCkqJyojJfrqBRsEmYXjMbtax3PGOyakIZumeWTS52vmGRiGm4YjMDIgAHDG2VQ6JTikuSACsjZlQAEJqGm0BHcah5n1IQzYcowlQE3VIjHNCC94r-mA0BZ3FVJLbg8P79odJolOI0u4ZFxy1xwd3WRU24UYL12lQ+NW+uga-yaixawIQ+jQbDQHAArod8IUuiUIuVpm84mMjrUppIAOznRIANUg9w23TwiAsVnJe0pn2OtIAbIyoABlNRs8Ec3BmblMXmw6rjGlSAaiyBi7xS4lPeWMRUjOEqhEISQATg1YpyOsekP1hveyuppuiVpatv4AE9iPNIJh0AAjQNaJTsCF4aaRfp0PYnXBnMCzMAisB0vYeP3KVlgoje31CAPB0PJCO4KNuMwVZxUdVgS1INyIRAZgGJBY5oJ5n1+oshsNQMsVhgWt7xxgoJhIxh-KGtlGa1lYjqQADGpHkZEw8RJXcg+b9sjEYh4nFLMsY8skFjj2B6qcQDJ2fPxVEQDZvnp7QiPJ7P4Zla83CA29zEnOUGDMSQXwJKsGCIE4zGTSAADMuFXeY7hYL8C0SX9T3PEk5WAm9RDvPAzFTMwnzMAYYPMBtImw3N92-PDjwIgCSS5Eix3IiJJ2vEdoNiV9wmeEdpmw5ccQAd3QTgeF3QpqCROiwWoP5zWxFTehjHSjGoZNmwMiBZSsUzOQYKSNLcIVLIiBh0w0+UoIcpDIPUoJSWE9z+nsjSuX6ZzvPAltAr+OUHMrALQsTaiHL+SRwtC5Nrwc98rBSlS4KndyGxnRLEznDTJDSkKVIksBJFinLGK8nLEwtDKCtYLEQD0IA"><logic_diagram "a"},="" "a0",="" "a1",="" "a2",="" "a3",="" "adder",="" "b"},="" "b0",="" "b1",="" "b2",="" "b3",="" "components":="" "force":="" "id":="" "in":="" "name":="" "nibble",="" "orient":="" "out":="" "pos":="" "s",="" "s"}="" "s0"},="" "s1"},="" "s2"},="" "s3"},="" "v"},="" "val":="" "wires":="" 0,="" 0},="" 0}]},="" 1,="" 10,="" 100],="" 10],="" 11],="" 12,="" 13,="" 14,="" 15,="" 16],="" 17,="" 17],="" 180],="" 18],="" 1}="" 1},="" 2,="" 20]},="" 21],="" 22,="" 22],="" 23],="" 240],="" 25,="" 26],="" 27,="" 27],="" 28],="" 3,="" 30]},="" 31],="" 32,="" 320],="" 32],="" 33],="" 35]}="" 36,="" 36],="" 37,="" 37],="" 38,="" 38],="" 39,="" 390],="" 39],="" 40,="" 40]="" 40],="" 41],="" 42,="" 42],="" 43,="" 43],="" 44],="" 450],="" 4],="" 5,="" 5],="" 6,="" 6],="" 7],="" 8],="" 9,="" 9],="" [="" [0,="" [1,="" [100,="" [12,="" [120,="" [13,="" [14,="" [140,="" [15,="" [16,="" [19,="" [2,="" [20,="" [200,="" [21,="" [220,="" [24,="" [240,="" [25,="" [26,="" [29,="" [3,="" [30,="" [300,="" [31,="" [320,="" [34,="" [340,="" [35,="" [4,="" [400,="" [41,="" [420,="" [440,="" [530,="" [8,="" ]="" ],="" content="{
+  " height="490" mode="tryout" showonly="" v":="" {"id":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Corrigé<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">La retenue sortant du deuxième additionneur depuis la droite est bloquée à 0 à la place de correctement changer de valeur suivant ses entrées.</p>
+</div>
+</details></div>
+<div class="admonition-exercice-7-design-d-un-additionneur-complet admonition">
+<p class="admonition-title">Exercice 7 : design d’un additionneur complet</p>
+<p><em><strong>Note :</strong> exercice difficile et actuellement peu guidé ici ; prochainement complété par davantage d’indications.</em></p>
+<p>En s’aidant de la table de vérité d’un seul additionneur complet, créer un circuit logique qui calcule ses sorties <span class="math notranslate nohighlight">\(S\)</span> et <span class="math notranslate nohighlight">\(C_{out}\)</span> en fonction des entrées <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span> et <span class="math notranslate nohighlight">\(C_{in}\)</span>.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Indice<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ul class="simple">
+<li><p class="card-text">La sortie <span class="math notranslate nohighlight">\(S\)</span> doit être <span class="math notranslate nohighlight">\(1\)</span> soit lorsque les trois entrées valent <span class="math notranslate nohighlight">\(1\)</span>, soit lorsqu’une seule des trois entrée vaut <span class="math notranslate nohighlight">\(1\)</span>.</p></li>
+<li><p class="card-text">La sortie <span class="math notranslate nohighlight">\(C_{out}\)</span>, qui est la retenue, doit être <span class="math notranslate nohighlight">\(1\)</span> lorsque deux ou trois des trois entrées valent <span class="math notranslate nohighlight">\(1\)</span>.</p></li>
+</ul>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Corrigé<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="logic_diagram" style="height: 200px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wDYAGZMAZloF0HJ0ATHeqTAQwC2AUxyQAgpHbR+AGx4BfVBEIkKVOgwCcrdlxwo+Q0QkgAhKVBnyEtJQTBEylBDV6IArLozcEAJnYBETEAYSxLGDlFNDY0SFIAVwAXKgcndVcAFkzeLzYfHEZA4zEAZUh7FUc1Fzxs9xz8jl8wTOLg0xDElIUY5SgAc34k4Vr8KqIkgE9iEygADQB5ACUI5ypEAHZeRr1sVw8GaibunE3KlUmZucgl1fZ11z8dBjy9qgAObRPkgzt+1TTWZicQAOQAImsMng-JokIhvBx9nhEIZEH4fikEIhGBdAdcQRCoWNYe5tk1wq5EG0kB5MQZqHjqkCbitiVRGNsGNTEZSUZtuR96ditL0ILEIJAAO7oABOo1SVVwCIYjAlKlwArAQoBeFy6ogyqOBph311yqKSE2JuV1EFNsQWgYmRtWtRNoCSAx5oaDu5dJiIAUQA"><logic_diagram "a",="" "and",="" "b",="" "cin",="" "cout"}="" "gates":="" "id":="" "in":="" "name":="" "or",="" "out":="" "pos":="" "s"},="" "val":="" "wires":="" "xor",="" 0,="" 0}="" 0},="" 1,="" 10},="" 110],="" 11],="" 12],="" 13},="" 140],="" 14],="" 150],="" 15]="" 15],="" 16},="" 170],="" 17],="" 18],="" 19}="" 2,="" 3,="" 30],="" 3],="" 4,="" 40],="" 4],="" 50],="" 5],="" 6],="" 7},="" 8],="" 90],="" 9],="" [="" [0,="" [1,="" [10,="" [11,="" [13,="" [14,="" [16,="" [17,="" [170,="" [19,="" [2,="" [260,="" [290,="" [370,="" [440,="" [5,="" [60,="" [7,="" [8,="" ]="" ],="" content="{
+  " height="200" mode="tryout" showonly="" v":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div></div>
+</details></div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="alu-mem.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">3. ALU et mémoire</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="sys-log.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">1. Portes logiques</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; CC-BY-NC |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
+            <a class="muted-link" href="../_sources/archi/additionneur.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">2. Additionneur</a><ul>
+<li><a class="reference internal" href="#additionneur-complet">2.1. Additionneur complet</a></li>
+<li><a class="reference internal" href="#chainage-dadditionneurs">2.2. Chaînage d’additionneurs</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/glossary.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/timeline.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>

@@ -1,0 +1,978 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="2. Additionneur" href="additionneur.html" /><link rel="prev" title="Introduction" href="intro.html" />
+
+    <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>1. Portes logiques - Apprendre</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #5933D1;
+  --color-brand-content: #5933D1;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Apprendre</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Apprendre</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Première année</span></p>
+<ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rep-info/index.html">Représentation de l’information</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/entiers.html">2. 1. Les entiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/caracteres.html">3. 2. Les caractères</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/images.html">4. 3. Les images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/son.html">5. 4. Le son</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/redondance.html">6. 5. Redondance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/conclusion.html">7. Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/dessiner.html">1. Dessiner - <code class="docutils literal notranslate"><span class="pre">forward()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/definir.html">2. Définir - <code class="docutils literal notranslate"><span class="pre">def</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/repeter.html">4. Répéter - <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/cercler.html">5. Cercler - <code class="docutils literal notranslate"><span class="pre">circle()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/memoriser.html">6. Mémoriser - <code class="docutils literal notranslate"><span class="pre">a=100</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/parcourir.html">7. Parcourir - <code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/write.html">8. Typographier - <code class="docutils literal notranslate"><span class="pre">write()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/iterer.html">9. Itérer - <code class="docutils literal notranslate"><span class="pre">range()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/parametrer.html">10. Paramétrer - <code class="docutils literal notranslate"><span class="pre">f(x)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/randomiser.html">11. Randomiser - <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/questionner.html">12. Questionner - <code class="docutils literal notranslate"><span class="pre">input()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/decider.html">13. Décider - <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/ecrire.html">14. Ecrire - <code class="docutils literal notranslate"><span class="pre">str</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/attendre.html">15. Attendre - <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/renvoyer.html">16. Renvoyer - <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/grouper.html">17. Grouper - <code class="docutils literal notranslate"><span class="pre">list</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/trier.html">18. Trier - <code class="docutils literal notranslate"><span class="pre">sort()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/turtleart.html">19. TurtleArt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/projet.html">20. Projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/annexe.html">21. Annexes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../algo1/index.html">Algorithmique I</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/algorithmes.html">1. Les algorithmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/tri.html">2. Trie, cherche et trouve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/algo-progs.html">3. Des algorithmes aux programmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Architecture des ordinateurs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">1. Portes logiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="additionneur.html">2. Additionneur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alu-mem.html">3. ALU et mémoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="archi-gen.html">4. Architecture générale et composants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro-pro.html">5. Le microprocesseur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html">Histoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#une-breve-histoire-de-linformatique">Une (brève) histoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#portraits">Portraits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#notions">Notions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#technologies">Technologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#le-musee-bolo">Le musée Bolo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#les-grandes-entreprises-de-linformatique">Les grandes entreprises de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#une-encore-plus-breve-histoire-du-jeu-video">Une (encore plus brève) histoire du jeu vidéo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/machines.html">Histoire des machines</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../algo2/index.html">Algorithmique II</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/complexite.html">1. Terminaison et complexité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recherche.html">2. Algorithmes de recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/tris.html">3. Algorithmes de tri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/heuristiques.html">4. Solutions heuristiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html">4. Récursivité [en option]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html#focus-sur-la-recursivite">4.1 Focus sur la récursivité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../prog2/index.html">Programmation II</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/onkey.html">1. Déclencher - <code class="docutils literal notranslate"><span class="pre">onkey()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/lambda.html">2. Formaliser - <code class="docutils literal notranslate"><span class="pre">lambda</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/onclick.html">3. Cliquer - <code class="docutils literal notranslate"><span class="pre">onclick()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/ontimer.html">4. Interrompre - <code class="docutils literal notranslate"><span class="pre">ontimer()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/turtle.html">5. Cloner - <code class="docutils literal notranslate"><span class="pre">Turtle</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/class.html">6. Créer - <code class="docutils literal notranslate"><span class="pre">class</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/inherit.html">7. Hériter - <code class="docutils literal notranslate"><span class="pre">E(P)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/math.html">8. Tracer - <code class="docutils literal notranslate"><span class="pre">math</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/dict.html">9. Associer - <code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/compter.html">10. Compter - <code class="docutils literal notranslate"><span class="pre">bin</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/color.html">11. Nuancer - <code class="docutils literal notranslate"><span class="pre">color</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/set.html">12. Appartenir - <code class="docutils literal notranslate"><span class="pre">set</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/bool.html">13. Raisonner - <code class="docutils literal notranslate"><span class="pre">bool</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/bit.html">14. Manipuler - <code class="docutils literal notranslate"><span class="pre">&amp;</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/recursif.html">15. Revenir - <code class="docutils literal notranslate"><span class="pre">f(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/vector.html">16. Vecteurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/force.html">17. Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/idees.html">18. Idées</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../projets/index.html">Projets</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projets/tic_tac_toe.html">1. Tic-tac-toe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/puissance4.html">2. Puissance 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/mines.html">3. Démineur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/snake.html">4. Snake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/game_of_life.html">5. Game of life</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/cartes.html">6. Poker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/tetris.html">7. Tetris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/art_absurde.html">8. Art absurde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/microbit/microbit.html">9. Micro:bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/crypto.html">10. Cryptographie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/idees.html">11. Idées</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resx/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/adressage.html">1. Adressage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/tcp-ip.html">2. TCP-IP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/routage.html">3. Routage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/web.html">4. Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/couches.html">5. Couches</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="portes-logiques">
+<h1>1. Portes logiques<a class="headerlink" href="#portes-logiques" title="Lien permanent vers ce titre">¶</a></h1>
+<p>En informatique, les <span class="target" id="gl-syslogique-0"></span><span class="glossary-ref" data-definition="PHA+QXJjaGlvcmRpPC9wPgo=" data-entry-name="U3lzdMOobWUgbG9naXF1ZQ==" data-glossary-uri="../glossaire.html#gl-def-syslogique-1" data-number="1">systèmes logiques</span> décrivent comment sont connectés les <span class="target" id="gl-circuitelectronique-0"></span><span class="glossary-ref" data-definition="PHA+QXJjaGlvcmRpPC9wPgo=" data-entry-name="Q2lyY3VpdCDDqWxlY3Ryb25pcXVl" data-glossary-uri="../glossaire.html#gl-def-circuitelectronique-1" data-number="1">circuits électroniques</span> des ordinateurs afin de leur permettre, d’une part, d’effectuer des calculs et de traiter des données et, d’autre part, d’utiliser leur mémoire de travail, où sont stockées les données qu’ils traitent.</p>
+<p>Même si on a l’impression que les ordinateurs peuvent faire toutes sortes de choses, il y a un ensemble limité d’opérations de base que l’électronique d’une machine peut faire. Parmi ces quelques opérations de base, on trouve l’addition, la soustraction, la multiplication ou la division de nombres. La plupart des tâches que l’ordinateur exécute reposent sur ces quelques opérations (ainsi que sur quelques opérations dites <em>logiques</em>, qui vont être explicitées).</p>
+<p>C’est assez fascinant de se dire que des tâches a priori non mathématiques, comme corriger l’orthographe ou la grammaire d’un texte automatiquement, sont réalisées avec ces opérations de base.</p>
+<p>En parallèle à ce qui leur permet de faire des calculs, les ordinateurs disposent et utilisent de la mémoire. Il y en a au cœur des microprocesseurs, les <em>registres</em>, ce qu’on appelle la <em>mémoire vive</em> — appelée aussi RAM (<em>Random-Access Memory</em>). La mémoire servant au stockage de longue durée comme disques durs et autres SSD n’est pas discutée dans cette section. L’étude des systèmes logiques permet de comprendre les principes derrière la gestion de cette mémoire et de voir comment les ordinateurs peuvent y lire et écrire des données entre deux calculs.</p>
+<section id="exemple-suivi-addition-de-deux-nombres">
+<h2>1.1. Exemple suivi : addition de deux nombres<a class="headerlink" href="#exemple-suivi-addition-de-deux-nombres" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On s’intéresse à une des opérations arithmétiques les plus simples : l’<strong>addition</strong>. Comment l’ordinateur additionne-t-il deux nombres ? On va définir le cadre de travail et s’intéresser aux circuits électroniques qui vont être à même de réaliser une addition.</p>
+<p>Que se passe-t-il pour l’addition de deux nombres entiers ? On va utiliser leur représentation binaire (avec uniquement des 1 et des 0). Pour faire simple, on va chercher à additionner simplement deux bits, disons <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span>, où chacun peut valoir soit 0 soit 1. Posons que la somme <span class="math notranslate nohighlight">\(S = A + B\)</span>. En énumérant tous les cas de figure, on a :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(B\)</span></p></th>
+<th class="text-align:right head"><p><span class="math notranslate nohighlight">\(S\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:right"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:right"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:right"><p>10</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>La dernière ligne est intéressante : on sait que <span class="math notranslate nohighlight">\(1+1=2\)</span>, mais en <span class="target" id="gl-codebinaire-0"></span><span class="glossary-ref" data-definition="PHA+VW4gY29kZSBiaW5haXJlIHJlcHLDqXNlbnRlIHVuIHRleHRlLCBkZXMgaW5zdHJ1Y3Rpb25zIGRlIHByb2Nlc3NldXIgb3UgdG91dGUgYXV0cmUgZG9ubsOpZSB1dGlsaXNhbnQgdW4gc3lzdMOobWUgw6AgZGV1eCBzeW1ib2xlcy4gTGVzICZxdW90OzAmcXVvdDsgZXQgJnF1b3Q7MSZxdW90OyBzb250IGxlIHBsdXMgc291dmVudCB1dGlsaXPDqXMgZGFucyBsZSBzeXN0w6htZSBkZSBudW3DqXJhdGlvbiBiaW5haXJlLjwvcD4K" data-entry-name="Q29kZSBiaW5haXJl" data-glossary-uri="../glossaire.html#gl-def-codebinaire-1" data-number="1">binaire</span>, on sait aussi que n’existent que des 0 et des 1, et 2 s’écrit ainsi <span class="math notranslate nohighlight">\(10\)</span> (voir le chapitre <span class="xref std std-ref">représentation de l’information</span>). Cela veut dire que, pour traiter tous les cas d’une addition de deux <span class="target" id="gl-bit-0"></span><span class="glossary-ref" data-definition="PHA+VW4gYml0IGVzdCB1biBjaGlmZnJlIGJpbmFpcmUgKDAgb3UgMSkuIEMnZXN0IGwndW5pdMOpIMOpbMOpbWVudGFpcmUgZOKAmWluZm9ybWF0aW9uLCDDoCBuZSBwYXMgY29uZm9uZHJlIGF2ZWMgbGUgYnl0ZSAocGFxdWV0IGRlIDggYml0cykuPC9wPgo=" data-entry-name="Qml0" data-glossary-uri="../glossaire.html#gl-def-bit-1" data-number="1">bits</span>, on a besoin aussi de deux bits de sortie, et qu’un seul ne suffit pas. En explicitant chaque fois le deuxième bit de sortie, notre tableau devient :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(B\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(S\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>00</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>01</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>01</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>10</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>La question est de déterminer comment faire calculer les deux bits de la somme <span class="math notranslate nohighlight">\(S\)</span> à partir de <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> à un circuit électronique. Pour cela, on a besoin du concept de <span class="target" id="gl-portelogique-0"></span><span class="glossary-ref" data-definition="PHA+TGVzIHBvcnRlcyBsb2dpcXVlcyBzb250IGRlcyB1bml0w6lzIG1pY3Jvw6lsZWN0cm9uaXF1ZXMsIG91IHN5bWJvbGlxdWVzLCBwZXJtZXR0YW50IGRlIHJlcHJvZHVpcmUgbGEgbG9naXF1ZSBib29sw6llbm5lIHZpYSBkZXMgdGVuc2lvbnMgw6lsZWN0cmlxdWVzLjwvcD4K" data-entry-name="UG9ydGVzIGxvZ2lxdWVz" data-glossary-uri="../glossaire.html#gl-def-portelogique-1" data-number="1">portes logiques</span>. Ces portes logiques sont elles-mêmes constituées de <em>transistors</em>, dont on a parlé en début de chapitre.</p>
+<p>Dans un premier temps, on détaille les portes logiques et on s’intéresse à la réalisation des circuits logiques.</p>
+<p>Ensuite, on regarde comment, fort de cette connaissance des portes logiques, il est possible de concevoir un circuit qui effectuera l’addition en question.</p>
+<p>Finalement, on comprendra comment un ordinateur est capable, avec un circuit logique, de stocker le résultat d’un tel calcul afin qu’il soit réutilisable plus tard.</p>
+<p>Les opérations arithmétiques et logiques et l’accès à la mémoire ne suffisent pas à constituer un ordinateur complet. C’est dans le chapitre suivant que sera traité la problématique de l’agencement de ces sous-systèmes afin de constituer une machine capable d’exécuter une suite d’instructions, c’est à dire un programme.</p>
+</section>
+<section id="id1">
+<h2>1.2. Portes logiques<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les circuits électroniques qui composent un ordinateur sont constitués de composants électroniques comme des <span class="target" id="gl-resistance-0"></span><span class="glossary-ref" data-definition="PHA+QXJjaGlvcmRpPC9wPgo=" data-entry-name="UsOpc2lzdGFuY2U=" data-glossary-uri="../glossaire.html#gl-def-resistance-1" data-number="1">résistances</span>, des <span class="target" id="gl-condensateur-0"></span><span class="glossary-ref" data-definition="PHA+QXJjaGlvcmRpPC9wPgo=" data-entry-name="Q29uZGVuc2F0ZXVy" data-glossary-uri="../glossaire.html#gl-def-condensateur-1" data-number="1">condensateurs</span>, des <span class="target" id="gl-transistor-0"></span><span class="glossary-ref" data-definition="PHA+TGXCoHRyYW5zaXN0b3LCoGVzdCB1bsKgY29tcG9zYW50wqBxdWkgZXN0IHV0aWxpc8OpIGRhbnMgbGEgcGx1cGFydCBkZXPCoGNpcmN1aXRzIMOpbGVjdHJvbmlxdWVzwqAoY2lyY3VpdCBsb2dpcXVlLMKgYW1wbGlmaWNhdGV1ciwgc3RhYmlsaXNhdGV1ciBkZcKgdGVuc2lvbizCoG1vZHVsYXRpb27CoGRlwqBzaWduYWwswqBldGMuKS48L3A+Cg==" data-entry-name="VHJhbnNpc3Rvcg==" data-glossary-uri="../glossaire.html#gl-def-transistor-1" data-number="1">transistors</span>, etc., qui déterminent où va passer le courant électrique et sur quelles parties du circuit règnera quelle <span class="target" id="gl-tension-0"></span><span class="glossary-ref" data-definition="PHA+QXJjaGlvcmRpPC9wPgo=" data-entry-name="VGVuc2lvbg==" data-glossary-uri="../glossaire.html#gl-def-tension-1" data-number="1">tension</span>.</p>
+<p>Quand on parle de portes et de circuits logiques, on simplifie tout cela. On considèrera simplement qu’un segment de circuit électronique où la tension est nulle (0 volt) représente la valeur binaire 0, alors qu’une tension non nulle (par exemple, 3 volts) représente la valeur binaire 1. Ainsi, pour véhiculer deux bits comme <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> dans un circuit, on a besoin de deux «fils».</p>
+<p>Les portes logiques sont des composants électroniques (eux-mêmes constitués en général de transistors et résistances) qui ont une ou plusieurs entrées et qui combinent ces entrées pour produire une sortie donnée. La manière dont la sortie est calculée dépend du type de la porte. On se propose à présent d’étudier en détails l’ensemble de ces portes.</p>
+</section>
+<section id="porte-et">
+<h2>1.3. Porte ET<a class="headerlink" href="#porte-et" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une de ces portes est la porte <strong>ET</strong>. Elle a deux entrées, qu’on appellera <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span>, et une sortie <span class="math notranslate nohighlight">\(Z\)</span>. <span class="math notranslate nohighlight">\(Z\)</span> sera <span class="math notranslate nohighlight">\(1\)</span> si et seulement si aussi bien <span class="math notranslate nohighlight">\(X\)</span> que <span class="math notranslate nohighlight">\(Y\)</span> valent <span class="math notranslate nohighlight">\(1\)</span>. D’où son nom: il faut que <span class="math notranslate nohighlight">\(X\)</span> <strong><em>et</em></strong> <span class="math notranslate nohighlight">\(Y\)</span> soient à 1 pour obtenir un 1 sur la sortie.</p>
+<p>En énumérant les quatre possibilités pour les entrées, on peut écrire ce qu’on appelle <span class="target" id="gl-tableverite-0"></span><span class="glossary-ref" data-definition="PHA+RW4gbG9naXF1ZSwgdW5lIHRhYmxlIGRlIHbDqXJpdMOpIGVzdCB1bmUgZmHDp29uIGRlIHJlcHLDqXNlbnRlciBsZXMg4oCcZW50csOpZXPigJ0gZXQgbGVzIOKAnHNvcnRpZXPigJ0gZOKAmXVuIHN5c3TDqG1lIGxvZ2lxdWUgZGUgZmHDp29uIGdyYXBoaXF1ZS48L3A+Cg==" data-entry-name="VGFibGUgZGUgdsOpcml0w6k=" data-glossary-uri="../glossaire.html#gl-def-tableverite-1" data-number="1">table de vérité</span> pour la porte <strong>ET</strong> :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><span class="math notranslate nohighlight">\(X\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(Y\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(Z\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>On peut dessiner des diagrammes avec des portes logiques. Ce ne sont pas des diagrammes électroniques, ils cachent une partie de la complexité réelle des circuits. Dans un tel diagramme logique, la porte <strong>ET</strong> est représentée ainsi :</p>
+<div class="logic_diagram" style="height: 60px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=static&amp;data=N4IgbiBcAECMA00QHsAOAXAzlapMAtkB3AEQEtMBjZAOxoFNL16ATABTJuxnQCcBXegF9EIAOYBDZt2gBtUOgCeqejhABBAHIkQo1MhmyArAAZEAZhMBdUZxyyzcG0mT90OAExCrQoA"><logic_diagram "and",="" "gates":="" "in":="" "opts":="" "out":="" "pos":="" 1,="" 1],="" 2}]}"="" 30],="" [0,="" [50,="" [{"type":="" content="{" height="60" mode="static" showonly="" true},="" v":="" {"showdisconnectedpins":=""></logic_diagram></iframe></div><p>Sur ce schéma logique, les entrées sont à gauche, la sortie à droite et la porte est connectée au milieu. Les circuits sont représentés en noir s’ils véhiculent un «0» et avec une couleur s’ils véhiculent un «1».</p>
+<p>Cliquez sur les entrées <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span> pour changer leurs valeurs et observez le comportement de la sortie <span class="math notranslate nohighlight">\(Z\)</span>. Est-ce que cela correspond à la table de vérité ci-dessus ?</p>
+<div class="logic_diagram" style="height: 100px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAZloF0HJ0ATHR9zAQwC2AUxyQAGpHbR+AGxy0AvqgiESFKnQYB2Vuy44ALHyGiEkAJpSoM+QiVo2aSKQCuAFypEylBLgBM-vRgdGwY3AjUJiJiAFqQik4QkADm-O7CvnhE7gCexGZQAIIAcgAi1upZuIhaIXoY2H7BiGEuHjj+iSpQAO7oAE6ZVLi8YA24xkhhAQzULCwgikA"><logic_diagram "and",="" "gates":="" "id":="" "in":="" "name":="" "out":="" "pos":="" "val":="" "wires":="" "x",="" "y",="" "z"}],="" 0],="" 0}="" 0},="" 1,="" 1],="" 2}],="" 3,="" 30],="" 4,="" 5,="" 50],="" 5]]="" 70],="" [="" [0,="" [150,="" [2,="" [220,="" [4,="" [50,="" [[3,="" [{"pos":="" [{"type":="" ],="" content="{
+  " height="100" mode="tryout" showonly="" v":="" {"pos":="" }"=""></logic_diagram></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Pour aller plus loin<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Comment une porte <strong>ET</strong> est-elle elle-même construite ? Cela a déjà été mentionné : avec d’autres composants électroniques plus simples. En simplifiant un peu, on peut considérer qu’une porte <strong>ET</strong> est constituée de deux transistors :</p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/andgatetransistor.png"><img alt="../_images/andgatetransistor.png" src="../_images/andgatetransistor.png" style="width: 200px; height: 300px;"/></a>
+<figcaption>
+<p><span class="caption-text">Construction d’une porte logique <strong>ET</strong> à partir de deux transistors (et de résistances).</span><a class="headerlink" href="#id2" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+<p class="card-text">Ici, les deux transistors sont les composants symbolisés par un cercle. Rappelons qu’ils laissent passer du courant de haut en bas lorsqu’ils détectent un courant sur l’entrée qui vient de la droite. Ici, si <strong>V</strong> représente un courant continu de, disons, 5 volts, on aura donc un courant sur la sortie <strong>Out</strong> que si à la fois <strong>A</strong> et <strong>B</strong>, qui sont ici les entrées du circuit, sont «actives» — donc lorsque les deux transistors sont «ouverts».</p>
+</div>
+</details></section>
+<section id="porte-ou">
+<h2>1.4. Porte OU<a class="headerlink" href="#porte-ou" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour que la sortie de la porte <strong>OU</strong> vaille 1, il suffit que l’une des deux entrées <span class="math notranslate nohighlight">\(X\)</span> ou <span class="math notranslate nohighlight">\(Y\)</span> vaille 1.</p>
+<p>Voici sa table de vérité:</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><span class="math notranslate nohighlight">\(X\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(Y\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(Z\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>On notera que le <strong>OU</strong> logique est un peu différent du «ou» que l’on utilise en général à l’oral : on voit à la dernière ligne de la table de vérité que la sortie <span class="math notranslate nohighlight">\(Z\)</span> vaut également <span class="math notranslate nohighlight">\(1\)</span> si les deux entrées <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span> valent <span class="math notranslate nohighlight">\(1\)</span>. À l’oral, le «ou» est en général interprété comme <em>exclusif</em>: si l’on propose à un ami un bonbon <em>ou</em> une glace, on exclut la possibilité qu’il choisisse les deux. Ce n’est pas le cas pour le <strong>OU</strong> logique.</p>
+<p>Essayez la porte <strong>OU</strong> :</p>
+<div class="logic_diagram" style="height: 100px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAZloF0HJ0ATHR9zAQwC2AUxyQAGpHbR+AGxy0AvqgiESFKnQYB2Vuy44ALHyGiEkAJpSoM+QiVo2aSKQCuAFypEylBLgBM-vRgdGwY3AjUJiJiAFqQik4QkADm-O7CvnhE7gCexGZQAPIAStbqWbiIWiF6GNh+wYhhLh44-okqUADu6ABOmVS4vGB1uMZIYQEM1CwsIIpAA"><logic_diagram "gates":="" "id":="" "in":="" "name":="" "or",="" "out":="" "pos":="" "val":="" "wires":="" "x",="" "y",="" "z"}],="" 0],="" 0}="" 0},="" 1,="" 1],="" 2}],="" 3,="" 30],="" 4,="" 5,="" 50],="" 5]]="" 70],="" [="" [0,="" [150,="" [2,="" [220,="" [4,="" [50,="" [[3,="" [{"pos":="" [{"type":="" ],="" content="{
+  " height="100" mode="tryout" showonly="" v":="" {"pos":="" }"=""></logic_diagram></iframe></div></section>
+<section id="non">
+<h2>1.5.  NON<a class="headerlink" href="#non" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Cette porte est plus simple: elle n’a qu’une entrée, et sa sortie se contente d’inverser la valeur en entrée. On l’appelle d’ailleurs aussi un <em>inverseur</em>.</p>
+<p>Voici sa table de vérité :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><span class="math notranslate nohighlight">\(X\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(Z\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Essayez l’inverseur :</p>
+<div class="logic_diagram" style="height: 60px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNrEgAcB7AZx1wFYAGZMAZmoF07J0ATHWqTAQwFsApjkgANSK2i8ANlwC+LNJGIBXAC4UCJcglwAmPd0YsMnBHtZ8hIgFqQFqCJADmvNYJ14CagJ6FhCJAAcgDyACoSUNoUiIx0xqxYOChQqhoI9A5KAO7oAE4eFLjciCa49HR6TEwgckA"><logic_diagram "gates":="" "id":="" "in":="" "name":="" "not",="" "out":="" "pos":="" "val":="" "wires":="" "x",="" "z"}],="" 0,="" 0}],="" 1,="" 1],="" 2,="" 2]]="" 30],="" 3}],="" [130,="" [220,="" [3,="" [50,="" [[0,="" [{"pos":="" [{"type":="" content="{
+  " height="60" mode="tryout" showonly="" v":="" }"=""></logic_diagram></iframe></div><p>Ensemble, les portes <strong>ET</strong>, <strong>OU</strong> et <strong>NON</strong> représentent les relations logiques de la <span class="target" id="gl-conjonction-0"></span><span class="glossary-ref" data-definition="PHA+RW4gbG9naXF1ZSwgbGEgY29uam9uY3Rpb24gZXN0IMOpcXVpdmFsZW50ZSBhdSDigJxldOKAnSBkYW5zIGxlIGxhbmdhZ2UgY291cmFudC4gSWwg4oCcY29tYmluZeKAnSB1biDDqWzDqW1lbnQgZXQgdW4gYXV0cmUuPC9wPgo=" data-entry-name="Q29uam9uY3Rpb24=" data-glossary-uri="../glossaire.html#gl-def-conjonction-1" data-number="1">conjonction</span>, la <span class="target" id="gl-disjonction-0"></span><span class="glossary-ref" data-definition="PHA+RW4gbG9naXF1ZSwgbGEgZGlzam9uY3Rpb24gZXN0IMOpcXVpdmFsZW50ZSBhdSDigJxvdeKAnSBkYW5zIGxlIGxhbmdhZ2UgY291cmFudC4gSWwg4oCcYWx0ZXJuZeKAnSBlbnRyZSB1biDDqWzDqW1lbnQgZXQgdW4gYXV0cmUuPC9wPgo=" data-entry-name="RGlzam9uY3Rpb24=" data-glossary-uri="../glossaire.html#gl-def-disjonction-1" data-number="1">disjonction</span> et la <span class="target" id="gl-negation-0"></span><span class="glossary-ref" data-definition="PHA+RW4gbG9naXF1ZSwgbGEgbsOpZ2F0aW9uIGVzdCDDqXF1aXZhbGVudGUgYXUg4oCcbmUgcGFz4oCdIGRhbnMgbGUgbGFuZ2FnZSBjb3VyYW50LiBJbCDigJxkw6lmZW5k4oCdIMOgIHVuIMOpbMOpbWVudCBk4oCZw6p0cmUgYWN0aXbDqS48L3A+Cg==" data-entry-name="TsOpZ2F0aW9u" data-glossary-uri="../glossaire.html#gl-def-negation-1" data-number="1">négation</span>. Même si on ne les appelle pas ainsi, on utilise tous les jours des relations logiques de conjonction, de disjonction et de négation.</p>
+<ul class="simple">
+<li><p>La <strong>conjonction</strong> est ainsi l’«intersection logique» de deux propositions. Si on dit «je vais à la piscine s’<em>il fait beau</em> <strong>ET</strong> <em>que mes amis m’accompagnent</em>», on utilise la conjonction.</p></li>
+<li><p>Au contraire, si on dit «je vais à la piscine s’<em>il fait beau</em> <strong>OU</strong> <em>que mes amis m’accompagnent</em>», on utilise la <strong>disjonction</strong>, qui est comme une sorte de «somme logique» de deux propositions (même si, comme noté plus haut, le «ou», dans le langage courant, est généralement exclusif, contrairement au <strong>OU</strong> logique, qui est inclusif).</p></li>
+<li><p>La <strong>négation</strong> est encore plus évidente, puisque la proposition «je ne vais pas à la piscine» est simplement la négation, ou l’inverse, de la proposition «je vais à la piscine».</p></li>
+</ul>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Ressource complémentaire</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">Une application pour s’exercer à l’interprétation des conjonctions, disjonctions et négations logiques: <a class="reference external" href="https://booleangame.com/">The Boolean Game</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pour simplifier la représentation de ces relations logiques, on les exprime sous la forme de {glo}`tableverite|tables de vérité`.
+
+| $A$ | $B$ | $Q$ |
+|:-: |:-: |:-: |
+| 0   | 0   | 0   |
+| 1   | 0   | 0   |
+| 0   | 1   | 0   |
+| 1   | 1   | 1   |
+
+Dans le tableau qui précède, si on reprend notre exemple de la piscine, on pourrait dire que A représente «il fait beau», B représente «mes amies m'accompagnent», et le résultat Q est «je vais à la piscine». 1 signifie qu'une proposition est vraie, 0 qu'elle est fausse. Le tableau ci-dessus représente donc l'opération logique ET, ou {glo}`conjonction|conjonction`.  -->
+</section>
+<section id="combinaisons-de-portes">
+<h2>1.6. Combinaisons de portes<a class="headerlink" href="#combinaisons-de-portes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les portes peuvent être connectées les unes aux autres. Voici par exemple un diagramme logique réalisant en sortie <span class="math notranslate nohighlight">\(Z\)</span> la fonction appelée <strong>OU-X</strong>, qui est un «ou exclusif» et dont la sortie <span class="math notranslate nohighlight">\(Z\)</span> vaut 1 lorsque soit <span class="math notranslate nohighlight">\(A\)</span>, soit <span class="math notranslate nohighlight">\(B\)</span> vaut <span class="math notranslate nohighlight">\(1\)</span>, mais pas les deux en même temps :</p>
+<div class="logic_diagram" style="height: 150px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAZloF0HJ0ATHeqTAQwC2AUxyQAGpHbR+AGx4BfVBEIkKVOgwCcrdlxwo+Q0QkgBNKVBnyEtBWjZpIpAK4AXKkTKUEuRjoY6NgxuBAAmdgERMQAtSAVHCEgAc343YR88AjAiNwBPYhMoAHkAJUs1TNxEALAAFl0MbF9GBjrg53ccaiVs3IKiyABBADkAEQrvKkZmQMaOZrwANgYAdg7XDwQADl6VHMh8wrER4oAVSfVfMNmkMPmsHC12TYM7ZRV+49NRifYp3yIJa8RD3DqPQGGUEbLoIRCMewQRJQADu6AAThkqLheIxgjiGIhEPjDO0GNVCWESa0wFoSbx1uTqAwlvjtgwqSwQAogA"><logic_diagram "and",="" "gates":="" "id":="" "in":="" "name":="" "not",="" "or",="" "out":="" "pos":="" "val":="" "wires":="" "x",="" "y",="" "z"}],="" 0,="" 0}="" 0},="" 1,="" 10},="" 11],="" 120],="" 12],="" 13}="" 2,="" 2]]="" 30],="" 3],="" 40],="" 4],="" 50],="" 5},="" 6],="" 7],="" 8},="" 9,="" 90],="" 9],="" [="" [0,="" [1,="" [10,="" [11,="" [13,="" [160,="" [190,="" [230,="" [3,="" [330,="" [390,="" [5,="" [50,="" [6,="" [8,="" [[0,="" [{"pos":="" ],="" content="{
+  " height="150" mode="tryout" showonly="" v":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div><p>Ce circuit contient une porte <strong>OU</strong>, deux portes <strong>ET</strong> et un inverseur, tous interconnectés.</p>
+<p>Ce diagramme n’est pas forcément facile à lire — discutons d’abord comment l’interpréter avec papier et crayon pour vérifier s’il effectue bien un <strong>OU-X</strong>.</p>
+<section id="analyse-dun-circuit">
+<h3>Analyse d’un circuit<a class="headerlink" href="#analyse-dun-circuit" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour analyser un circuit logique comme celui présenté ci-dessus, on cherchera à établir sa table de vérité. En l’occurrence, comme pour les portes précédentes, ce circuit a deux entrées: si chaque entrée peut valoir <span class="math notranslate nohighlight">\(1\)</span> ou <span class="math notranslate nohighlight">\(0\)</span>, on a en tout, de nouveau, quatre configurations possibles à examiner dans le but de remplir la dernière colonne :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><span class="math notranslate nohighlight">\(X\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(Y\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(Z\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(???\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(???\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(???\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(???\)</span></p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Pour remplir chaque ligne, on va changer les entrées selon les valeurs de <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span> et observer l’effet des portes et ainsi voir comment le circuit se comporte. Prenons <span class="math notranslate nohighlight">\(X=Y=0\)</span>: c’est le cas représenté par l’état initial du circuit ci-dessus. Rappelons qu’un segment noir véhicule un «0», alors qu’un segment coloré véhicule un «1».</p>
+<p>Le résultat intermédiaire des deux portes de gauche sera 0. L’inverseur transforme en 1 la sortie de la porte <strong>ET</strong>, mais la porte finale, qui est aussi une porte <strong>ET</strong>, n’obtient qu’un seul 1 en entrée et donc livre une sortie de 0.</p>
+<p>Le cas est différent si l’une des deux entrées vaut 1. Voici deux diagrammes fixes, une fois pour <span class="math notranslate nohighlight">\(X=1, Y=0\)</span> et une fois pour <span class="math notranslate nohighlight">\(Y=1, X=0\)</span> :</p>
+<div class="logic_diagram" style="height: 150px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=static&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAZloF0HJ0ATHeqTAQwC2AUxyQAGpHbR+AGxyIAvqgiESFKnQYBOVuy4L2AkWICaUqDPkJaitGzSRSAVwAuVImUoJcjXQzo2DG4EACYjIVEESAAtSEUHCEgAc35XYW88AjAiVwBPYiioAHkAJQt1TNxEfzAAFj0MbB9GBjqgpzccamVs3IKiyABBADkAEQqvKkZmAMaOZrwANgYAdg6XdwQADl7VHMh8wrER4oAVSY0fUNmkUPmsHG12TYVbFVV+4+jRifYpnyIJa8RD3DqPQEoO4bLoIRCMOwQRJQADu6AAThkqLheIwgjiGIhEPioe0GNVCaESa0wNoSbx1uTqAwlvjtgwqSwQIogA"><logic_diagram "and",="" "gates":="" "id":="" "in":="" "name":="" "not",="" "or",="" "out":="" "pos":="" "val":="" "wires":="" "x",="" "y",="" "z"}],="" 0,="" 0}="" 1,="" 10},="" 11],="" 120],="" 12],="" 13}="" 1},="" 2,="" 2]]="" 30],="" 3],="" 40],="" 4],="" 50],="" 5},="" 6],="" 7],="" 8},="" 9,="" 90],="" 9],="" [="" [0,="" [1,="" [10,="" [11,="" [13,="" [160,="" [190,="" [230,="" [3,="" [330,="" [390,="" [5,="" [50,="" [6,="" [8,="" [[0,="" [{"pos":="" ],="" content="{
+  " height="150" mode="static" showonly="" v":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div><div class="logic_diagram" style="height: 150px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=static&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAZloF0HJ0ATHeqTAQwC2AUxyQAGpHbR+AGx4BfVBEIkKVOgwCcrdlxwo+Q0QkgBNKVBnyEiBWjZpIpAK4AXKkTKUEuRjoY6NgxuBAAmdgERMQAtSAVHCEgAc343YR88AjAiNwBPYhMoAHkAJUs1TNxEALAAFl0MbF9GBjrg53ccaiVs3IKiyABBADkAEQrvKkZmQMaOZrwANgYAdg7XDwQADl6VHMh8wrER4oAVSfVfMNmkMPmsHC12TYNaPZV+49NRifYp3yIJa8RD3DqPQGGUEbLq2Rj2CCJKAAd3QACcMlRcLxGMFsQxEIg8YZ2gxqgSwsTWmAtMTeOsydQGEs8dsGJSWCAFEA"><logic_diagram "and",="" "gates":="" "id":="" "in":="" "name":="" "not",="" "or",="" "out":="" "pos":="" "val":="" "wires":="" "x",="" "y",="" "z"}],="" 0,="" 0},="" 1,="" 10},="" 11],="" 120],="" 12],="" 13}="" 1}="" 2,="" 2]]="" 30],="" 3],="" 40],="" 4],="" 50],="" 5},="" 6],="" 7],="" 8},="" 9,="" 90],="" 9],="" [="" [0,="" [1,="" [10,="" [11,="" [13,="" [160,="" [190,="" [230,="" [3,="" [330,="" [390,="" [5,="" [50,="" [6,="" [8,="" [[0,="" [{"pos":="" ],="" content="{
+  " height="150" mode="static" showonly="" v":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div><p>Ici, dans les deux cas, la porte <strong>OU</strong>, en haut, livrera un 1, dont a besoin la porte <strong>ET</strong> finale de droite pour donner une sortie de 1. La porte <strong>ET</strong> du bas, elle, continue de livrer un 0.</p>
+<p>Mais dans le cas <span class="math notranslate nohighlight">\(X = Y = 1\)</span>, représenté ici, la situation est différente :</p>
+<div class="logic_diagram" style="height: 150px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=static&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAZloF0HJ0ATHeqTAQwC2AUxyQAGpHbR+AGxyIAvqgiESFKnQYBOVuy4L2AkWICaUqDPkIlaNmkikArgBcqRMpQS5GuhnTYMbgQAJiMhUQRIAC1IRXsISABzfhdhLzwCMCIXAE9iSKgAeQAlC3UM3EQ-MAAWPQxsb0YGWsDHVxxqZSyc-MLIAEEAOQARcs8qRmZ-Bo4mvAA2BgB2duc3BAAOHtVsyDyCsWGigBUJjW8QmaQQuawcbXYNhVpd1T6jqJHx9knvRCLXiIO7tB4AlC3dadGyMRR2FRQADu6AATukqLheIxAliGIhELjIW0GFV8SEiS0wNoibw1qTqAxFritgwKSwQIogA"><logic_diagram "and",="" "gates":="" "id":="" "in":="" "name":="" "not",="" "or",="" "out":="" "pos":="" "val":="" "wires":="" "x",="" "y",="" "z"}],="" 0,="" 1,="" 10},="" 11],="" 120],="" 12],="" 13}="" 1}="" 1},="" 2,="" 2]]="" 30],="" 3],="" 40],="" 4],="" 50],="" 5},="" 6],="" 7],="" 8},="" 9,="" 90],="" 9],="" [="" [0,="" [1,="" [10,="" [11,="" [13,="" [160,="" [190,="" [230,="" [3,="" [330,="" [390,="" [5,="" [50,="" [6,="" [8,="" [[0,="" [{"pos":="" ],="" content="{
+  " height="150" mode="static" showonly="" v":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div><p>La porte <strong>ET</strong> du bas livre un 1, qui est inversé en 0 avant d’atteindre la porte finale, qui ne peut dès lors elle-même que livrer un 0 comme sortie.</p>
+<p>La table de vérité complétée de ce circuit est ainsi :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><span class="math notranslate nohighlight">\(X\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(Y\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(Z\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Cette fonction s’appelle «ou exclusif», car pour avoir un 1 de sortie, elle exclut le cas où les deux entrées sont 1 en même temps. Elle est souvent utilisée, au point qu’on la représente en fait dans les diagrammes simplement par le dessin de cette porte, appelée <strong>OU-X</strong>, comme simplification du diagramme ci-dessus :</p>
+<div class="logic_diagram" style="height: 100px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAZloF0HJ0ATHR9zAQwC2AUxyQAGpHbR+AGxy0AvqgiESFKnQYB2Vuy44ALHyGiEkAJpSoM+QiVo2aSKQCuAFypEylBLgBM-vRgdGwY3AjUJiJiAFqQik4QkADm-O7CvnhE7gCexGZQ4gDyAErW6lm4iFohehjYfsGIYS4eOP6JKlAA7ugATplUuLxg9bjGSGEBDNQsLCCKQA"><logic_diagram "gates":="" "id":="" "in":="" "name":="" "out":="" "pos":="" "val":="" "wires":="" "x",="" "xor",="" "y",="" "z"}],="" 0],="" 0}="" 0},="" 1,="" 1],="" 2}],="" 3,="" 30],="" 4,="" 5,="" 50],="" 5]]="" 70],="" [="" [0,="" [150,="" [2,="" [220,="" [4,="" [50,="" [[3,="" [{"pos":="" [{"type":="" ],="" content="{
+  " height="100" mode="tryout" showonly="" v":="" {"pos":="" }"=""></logic_diagram></iframe></div><div class="admonition-exercice-1-verification-dune-porte admonition">
+<p class="admonition-title">Exercice 1 : vérification d’une porte</p>
+<p>Vérifiez que la porte <strong>OU-X</strong> se comporte bien comme le circuit ci-dessous réalisé avec des portes <strong>ET</strong>, <strong>OU</strong> et <strong>NON</strong>.</p>
+</div>
+</section>
+<section id="creation-dun-circuit">
+<h3>Création d’un circuit<a class="headerlink" href="#creation-dun-circuit" title="Lien permanent vers ce titre">¶</a></h3>
+<p>On s’intéresse à présent à la création de ce diagramme réalisant un <strong>OU-X</strong> avec les portes à disposition à partir de sa table de vérité. Plusieurs approches sont possibles, et on constatera que, suivant l’approche, on aurait très bien pu créer un circuit logique différent réalisant la même fonction.</p>
+<p><strong>Approche ad hoc</strong></p>
+<p>On se dit donc, selon la table de vérité, que la sortie de notre circuit «ou exclusif» doit être 1, donc l’une ou l’autre des entrées <span class="math notranslate nohighlight">\(X\)</span> ou <span class="math notranslate nohighlight">\(Y\)</span> est à 1, mais pas les deux. On peut ainsi commencer par insérer une porte <strong>OU</strong> dans le diagramme, qui fait une partie du travail. Mais il faut modifier sa sortie, pour ne pas avoir la valeur 1 lorsque les deux entrées sont à 1: cela contredirait la quatrième ligne de la table de vérité. Comment effectuer cela: En connectant la sortie de cette porte <strong>OU</strong> à une nouvelle porte <strong>ET</strong> à droite (dont on n’a pas encore déterminé la seconde entrée).</p>
+<p>Pourquoi rajouter une porte <strong>ET</strong>: On utilise ici le fait que connecter une porte <strong>ET</strong> à un signal peut <em>restreindre</em> les conditions sous lesquelles la nouvelle sortie <span class="math notranslate nohighlight">\(Z\)</span> sera 1 (alors qu’au contraire, on aurait pu <em>étendre</em> ces conditions si on avait connecté une nouvelle porte <strong>OU</strong>). Comme si, pour être d’accord de finalement livrer 1 sur la sortie, la porte <strong>ET</strong> voulait la «confirmation» d’un autre signal avant de livrer 1…</p>
+<p>À ce moment, on a ce diagramme partiel, qui peut être lu comme: «la sortie <span class="math notranslate nohighlight">\(Z\)</span> sera <span class="math notranslate nohighlight">\(1\)</span> lorsque ces deux conditions sont vraies en même temps: (1) le <strong>OU</strong> de <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span> vaut 1, et (2) quelque chose qui reste ici à définir, qui sera connecté à la seconde entrée de la porte <strong>ET</strong>».</p>
+<div class="logic_diagram" style="height: 120px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAZloF0HJ0ATHeqTAQwC2AUxyQAGpHbR+AGx4BfVBEIkKVOgwCcrdlxwo+Q0QkgBNKVBnyEtBWjZpIpAK4AXKkTKUEuRjoY6NgxuBAAmdgERMQAtSAVHCEgAc343YR88AjAiNwBPYhMoAHkAJUs1TNxEALAAFl0MbF9GBjrg53ccaiVs3IKiyABBADkAEQrvKkZmQMaOZrwANgYAdg7XDwQADnsIRKgAd3QAJwyqXF5GYOq2m+oGJZvthjCWFhAFIA"><logic_diagram "and",="" "gates":="" "id":="" "in":="" "name":="" "or",="" "out":="" "pos":="" "val":="" "wires":="" "x",="" "y",="" "z"}],="" 0,="" 0}="" 0},="" 1,="" 2,="" 2]]="" 30],="" 3],="" 40],="" 4],="" 50],="" 5},="" 6],="" 7],="" 8}="" 90],="" [="" [1,="" [190,="" [3,="" [330,="" [390,="" [5,="" [50,="" [6,="" [8,="" [[0,="" [{"pos":="" ],="" content="{
+  " height="120" mode="tryout" showonly="" v":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div><p>Ce qui reste à définir en complétant avant la porte <strong>ET</strong>, c’est l’exclusion du cas où <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span> valent les deux 1, de manière à ce que la condition (2) puisse être lue comme «<span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span> ne sont pas en même temps les deux à 1». Avec une porte <strong>ET</strong> connectée directement aux deux entrées <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span>, on obtient une partie de ceci en créant le signal «<span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span> sont les deux à 1» C’est en fait la condition inverse que celle que l’on cherche: Pour l’inverser, on insère à la sortie de cette nouvelle porte <strong>ET</strong> un inverseur, ce qui complète le circuit :</p>
+<div class="logic_diagram" style="height: 150px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAZloF0HJ0ATHeqTAQwC2AUxyQAGpHbR+AGx4BfVBEIkKVOgwCcrdlxwo+Q0QkgBNKVBnyEtBWjZpIpAK4AXKkTKUEuRjoY6NgxuBAAmdgERMQAtSAVHCEgAc343YR88AjAiNwBPYhMoAHkAJUs1TNxEALAAFl0MbF9GBjrg53ccaiVs3IKiyABBADkAEQrvKkZmQMaOZrwANgYAdg7XDwQADl6VHMh8wrER4oAVSfVfMNmkMPmsHC12TYM7ZRV+49NRifYp3yIJa8RD3DqPQGGUEbLoIRCMewQRJQADu6AAThkqLheIxgjiGIhEPjDO0GNVCWESa0wFoSbx1uTqAwlvjtgwqSwQAogA"><logic_diagram "and",="" "gates":="" "id":="" "in":="" "name":="" "not",="" "or",="" "out":="" "pos":="" "val":="" "wires":="" "x",="" "y",="" "z"}],="" 0,="" 0}="" 0},="" 1,="" 10},="" 11],="" 120],="" 12],="" 13}="" 2,="" 2]]="" 30],="" 3],="" 40],="" 4],="" 50],="" 5},="" 6],="" 7],="" 8},="" 9,="" 90],="" 9],="" [="" [0,="" [1,="" [10,="" [11,="" [13,="" [160,="" [190,="" [230,="" [3,="" [330,="" [390,="" [5,="" [50,="" [6,="" [8,="" [[0,="" [{"pos":="" ],="" content="{
+  " height="150" mode="tryout" showonly="" v":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div><p>La lecture finale du circuit est donc «la sortie <span class="math notranslate nohighlight">\(Z\)</span> sera <span class="math notranslate nohighlight">\(1\)</span> lorsque ces deux conditions sont vraies en même temps: (1) le <strong>OU</strong> de <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span> vaut 1, et (2) <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span> ne sont pas les deux en même temps à 1».</p>
+<div class="admonition-exercice-2-analyse-d-un-circuit admonition">
+<p class="admonition-title">Exercice 2 : analyse d’un circuit</p>
+<p>Ceci est le même circuit que ci-dessus, mais sans la porte <strong>ET</strong> finale. À la place, on a inséré deux sorties intermédiaires, <span class="math notranslate nohighlight">\(I\)</span> et <span class="math notranslate nohighlight">\(J\)</span>, qui sont les deux signaux qui allaient précédemment à la porte <strong>ET</strong>:</p>
+<div class="logic_diagram" style="height: 150px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAZloF0HJ0ATHeqTAQwC2AUxyQAGpHbR+AGx4BfVBEIkKVOgwCcrdlxwo+Q0QkgBNKVBnyEtBWjZpIpAK4AXKgTBEylBLkZEXgAWXQxuBERqdgERMQBJSCUvH3V-QN5EACYwjgikYJjjMQApJIdlKABzfjdhPzwUyDcAT2ITKAB5ACVLNQbcRB0GULYMbHSRsed3HGpklW9mto7IADlOgBU+3yos5gZs3KwcLXZXD0i7StVW9rEAQTWAER20vEQANkyc6ZP-RCGbLTC4GRj2CCOCCQADu6AATvUqLheIwxijDoh0YZgtjDllsYxtNjMriGDRDtQWCwQAogA"><logic_diagram "and",="" "gates":="" "i"},="" "id":="" "in":="" "j"}="" "name":="" "not",="" "or",="" "out":="" "pos":="" "val":="" "wires":="" "x",="" "y",="" 0,="" 0}="" 0},="" 1,="" 10},="" 11],="" 120],="" 12],="" 13}="" 14,="" 14],="" 15,="" 15]]="" 30],="" 3],="" 40],="" 4],="" 5},="" 9,="" 90],="" 9],="" [="" [0,="" [1,="" [10,="" [11,="" [13,="" [160,="" [190,="" [230,="" [3,="" [310,="" [5,="" [50,="" [[0,="" ],="" content="{
+  " height="150" mode="tryout" showonly="" v":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div><ol class="simple">
+<li><p>Combien de lignes a une table de vérité pour <span class="math notranslate nohighlight">\(I\)</span> et <span class="math notranslate nohighlight">\(J\)</span> en fonction des deux entrées <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span> ? Écrivez cette table de vérité.</p></li>
+<li><p>Quelle différence y a-t-il entre <span class="math notranslate nohighlight">\(J\)</span> et ce qu’on obtient en connectant directement une porte <strong>ET</strong> aux entrées <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span> : quel élément du schéma réalise cette différence ?</p></li>
+<li><p>Dans votre table de vérité, ajoutez une colonne et remplissez-là : elle doit représenter une nouvelle sortie <span class="math notranslate nohighlight">\(K\)</span>, qui serait produite si on connectait une porte <strong>OU</strong> en lui donnant <span class="math notranslate nohighlight">\(I\)</span> et <span class="math notranslate nohighlight">\(J\)</span> comme entrées, comme montré ci-dessous. Le schéma représente ici le circuit dans un état indéterminé, mais les types des portes ont été ajoutés pour vous aider. La sortie <span class="math notranslate nohighlight">\(K\)</span> est-elle ici toujours la même que la sortie <span class="math notranslate nohighlight">\(Z\)</span> plus haut ? Quelles sont les éventuelles différences ? Finalement, la sortie <span class="math notranslate nohighlight">\(K\)</span> a-t-elle un intérêt ?</p></li>
+</ol>
+<div class="logic_diagram" style="height: 150px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=static&amp;data=N4KABGBEBukFxgIwBpxQPYAcAuBneYwkuAFugO4DiAhtgKYAqAnpnfgtgE4CudAvqgiQAlgDsCAbTQQimdOzASArAAZkYAMwqAuupEATAmqijqAWzoFIADUh7o1ADZWA-JAHTCkOQuXGAnDp6woYIKCbmlgiQAJp2UA7O0W58aLpokOjc2JKy8pIageqqulAhBABMeqYWVgDS7ulCAOa0bJKeRNgsUVAA8gBK8d75CBKIRWAALEFl4mMa6lOlmdkESh4QMpDdrFaDwz4FWsWzIvOKAGzqAOwrWTkIABybW109VgByfQyHo4oVE5ICpnMQEfx6B4ERAqV7bXa9SAAQU+ABE-r5EJdjIgQSswWNEOFcfc1mENKkIE0oORhJx2mMJMYNKUmeoiazwst1ON2RVOYswP5OcY7jylOpLqynup+doQHwgA"><logic_diagram "?"}="" "?"},="" "and",="" "gates":="" "id":="" "in":="" "k"}],="" "name":="" "not",="" "opts":="" "or",="" "out":="" "pos":="" "val":="" "wires":="" "x",="" "y",="" 0,="" 1,="" 10},="" 11],="" 120],="" 12],="" 13}="" 2,="" 2]]="" 30],="" 3],="" 40],="" 4],="" 50],="" 5},="" 6],="" 7],="" 8},="" 9,="" 90],="" 9],="" [="" [0,="" [1,="" [10,="" [11,="" [13,="" [160,="" [190,="" [230,="" [3,="" [330,="" [390,="" [5,="" [50,="" [6,="" [8,="" [[0,="" [{"pos":="" ],="" content="{
+  " height="150" mode="static" showonly="" true},="" v":="" {"pos":="" {"showgatetypes":="" {"type":="" }"=""></logic_diagram></iframe></div></div>
+<p><strong>Approche systématique</strong></p>
+<p>Il est parfois difficile d’avoir l’«intuition» nécessaire pour suivre une telle approche ad hoc. Voici donc une autre technique, illustrée avec le même exemple.</p>
+<p>La table de vérité montre qu’il y a deux lignes où la sortie doit valoir <span class="math notranslate nohighlight">\(1\)</span> : (a) la ligne où <span class="math notranslate nohighlight">\(X=1\)</span> et <span class="math notranslate nohighlight">\(Y=0\)</span>, et (b) la ligne où <span class="math notranslate nohighlight">\(X=0\)</span> et <span class="math notranslate nohighlight">\(Y=1\)</span>. Si l’on pouvait créer un sous-circuit qui livre un <span class="math notranslate nohighlight">\(1\)</span> lorsque qu’on se trouve dans la circonstance (a) et un autre qui livre un <span class="math notranslate nohighlight">\(1\)</span> lorsqu’on se trouve dans la circonstance (b), on pourrait ensuite les combiner avec une porte <strong>OU</strong> et ainsi construire notre sortie <span class="math notranslate nohighlight">\(Z\)</span> ainsi :</p>
+<div class="logic_diagram" style="height: 180px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=static&amp;data=N4KABGBEBukFxgIwBpxQPYAcAuBneYwkuAFugO4DiAhtgKYAqAnpnfgtgE4CudAvqgiQAlgDsCAbTQQimdOzASArAAZkYAMwqAuupEATAmqijqAWzoFIADUh7o1ADZWA-JAHTCkOQuXHEqrpQwoYIKCbmlgiQAJp2UA7O0W58aLpokOjc2JKy8pIALCrGAJw6eiEEAEx6phZWAFru6UIA5rRskp5E2CxRUADyAErx3vkIEhpF6mVBIuITAGzqAOxzWTkIABweEDKQvaxWAIIAcgAioz6SVcXqi+XBC4oa6gXr2QRKeqQUx7gAVVEAGtRBRnlxeLs9j0+icLldxopbv4tHMxJISupEI9Mp8wuFiGRyP8gaDwQRIfw0oIoORhJxOhMJFt1FUghJjBoOeEcRzvmBFjzwmt1JyZjy3tptCA+EA"><logic_diagram "?"}="" "?"},="" "and",="" "gates":="" "id":="" "in":="" "name":="" "opts":="" "or",="" "out":="" "pos":="" "showasunknown":="" "val":="" "wires":="" "x",="" "y",="" "z"}],="" 0,="" 1,="" 10],="" 11,="" 130],="" 150],="" 2,="" 2],="" 30],="" 3],="" 4],="" 4]]="" 5,="" 60],="" 6],="" 7],="" 8},="" 90],="" 9],="" [="" [0,="" [1,="" [11,="" [200,="" [3,="" [340,="" [400,="" [5,="" [50,="" [6,="" [9,="" [[8,="" [{"pos":="" ],="" content="{
+  " height="180" mode="static" showonly="" true}="" true},="" v":="" {"pos":="" {"showgatetypes":="" {"type":="" }"=""></logic_diagram></iframe></div><p>Ici, les deux sous-circuits notés avec «?» et encadrés donc encore à définir — potentiellement avec plus d’une seule porte. Essayons de les créer.</p>
+<p>Disons que le sous-circuit du haut correspond à la deuxième ligne de la table de vérité, le cas de figure (a). Pour cette ligne, nous voulons un <span class="math notranslate nohighlight">\(1\)</span> de sortie lorsque <span class="math notranslate nohighlight">\(X=1\)</span> et <span class="math notranslate nohighlight">\(Y=0\)</span>. En lisant littéralement cette dernière phrase, on y détecte un <strong>ET</strong> de deux conditions qui doivent être remplies: <span class="math notranslate nohighlight">\(X=1\)</span> et <span class="math notranslate nohighlight">\(Y=0\)</span>. Mais ajouter une porte <strong>ET</strong> directement avec les signaux <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span> ne fera pas l’affaire, parce que cela livrerait un <span class="math notranslate nohighlight">\(1\)</span> lors que les <em>deux</em> entrées <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span> sont à <span class="math notranslate nohighlight">\(1\)</span>. La solution ici, c’est d’<em>inverser</em> <span class="math notranslate nohighlight">\(Y\)</span> avant l’entrée dans la porte <strong>ET</strong> — ce qui donne bel et bien la condition (a).</p>
+<p>On avance ainsi à ceci :</p>
+<div class="logic_diagram" style="height: 180px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=static&amp;data=N4KABGBEBukFxgIwBpxQPYAcAuBneYwkuAFugO4DiAhtgKYAqAnpnfgtgE4CudAvqgiQAlgDsCAbTQQimdOzASArAAZkYAMwqAuupEATAmqijqAWzoFIADUh7o1ADZWA-JAHTCkOQuXHEqrpQwoYIKCbmlgiQAJp2UA7O0W58aLpokOjc2JKy8pIALCrGAJw6eiEEAEx6phZWAFru6UIA5rRskp5E2CxRUADyAErx3vkIEhpF6mVBIuITAGzqAOxzWTkIABweEDKQvaxWAIIAcgAioz6SVVrqgRULihrqBevZBEq7ez19JxdXcaKKrFdSILRzMSSEpg8oYD5hcLEMjkY64ACqogA1qIKE8uLxvvtDv1IKcBgxAb5EItjLTIU9EDV4ZskBpUhAWlByMJOJ0JhItuoqkEJODXqLjBpReEmTLYaKlOpFjLwmt1BJStptCA+EA"><logic_diagram "?"}="" "?"},="" "and",="" "gates":="" "id":="" "in":="" "name":="" "not",="" "opts":="" "or",="" "out":="" "pos":="" "showasunknown":="" "val":="" "wires":="" "x",="" "y",="" "z"}],="" 0,="" 1,="" 10],="" 11,="" 12,="" 12],="" 130],="" 13}="" 150],="" 2,="" 2],="" 30],="" 3],="" 4],="" 50],="" 5},="" 60],="" 6],="" 7],="" 8},="" 90],="" 9]]="" [="" [0,="" [1,="" [11,="" [13,="" [160,="" [200,="" [230,="" [3,="" [340,="" [400,="" [5,="" [50,="" [6,="" [9,="" [[8,="" [{"pos":="" ],="" content="{
+  " height="180" mode="static" showonly="" true},="" v":="" {"pos":="" {"showgatetypes":="" {"type":="" }"=""></logic_diagram></iframe></div><p>Pour la condition (b), qui correspond à la troisième ligne de la table de vérité, un raisonnement similaire s’applique. À la place d’inverser <span class="math notranslate nohighlight">\(X\)</span>, on inversera cette fois <span class="math notranslate nohighlight">\(Y\)</span> afin d’obtenir, à la sortie de la nouvelle porte <strong>ET</strong> du bas, un signal qui vaut <span class="math notranslate nohighlight">\(1\)</span> lorsque <span class="math notranslate nohighlight">\(X=1\)</span> et <span class="math notranslate nohighlight">\(Y=0\)</span>.</p>
+<p>Voici le circuit final ainsi réalisé :</p>
+<div class="logic_diagram" style="height: 180px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=static&amp;data=N4KABGBEBukFxgIwBpxQPYAcAuBneYwkuAFugO4DiAhtgKYAqAnpnfgtgE4CudAvqgiQAlgDsCAbTQQimdOzASArAAZkYAMwqAuupEATAmqijqAWzoFIADUh7o1ADZWA-JAHTCkOQuXHEqrpQwoYIKCbmlgiQAJp2UA7O0W58aLpokOjc2JKy8pIALCrGAJw6eiEEAEx6phZWAFru6UIA5rRskp5E2CxRUADyAErx3vkIEhpF6mVBIuITAGzqAOxzWTkIABweEDKQvaxWAIIAcgAioz6SVVrqgRULihrqBevZBEq7ez19JxdXcaKW7+LRzMSSErqRDlDAfMKIb77Q79SCnAYMQG+RCLYy48FPRA1OGbJAaJFeFFWdGYvTXCY4-xVWHzAiIAp6DZsr5pQRQcjCTidCaeCRbdRVIISRAvMBvdTSpQzKXGDQq6HyxThIlS7XlUVKsCLXXhNZpEB8IA"><logic_diagram "?"}="" "?"},="" "and",="" "gates":="" "id":="" "in":="" "name":="" "not",="" "opts":="" "or",="" "out":="" "pos":="" "val":="" "wires":="" "x",="" "y",="" "z"}],="" 0,="" 1,="" 10],="" 11},="" 12,="" 120],="" 12],="" 130],="" 13},="" 14,="" 14],="" 150],="" 15}="" 2,="" 2],="" 30],="" 3],="" 4],="" 50],="" 5},="" 60],="" 6],="" 7]="" 7],="" 8},="" 90],="" 9],="" [="" [0,="" [1,="" [11,="" [13,="" [15,="" [160,="" [230,="" [3,="" [340,="" [400,="" [5,="" [50,="" [6,="" [8,="" [9,="" [{"pos":="" ]="" ],="" content="{
+  " height="180" mode="static" showonly="" true},="" v":="" {"pos":="" {"showgatetypes":="" {"type":="" }"=""></logic_diagram></iframe></div><p>(Ce schéma ne peut être simulé que dans l’indice de l’exercice suivant.)</p>
+<p>Ce que cette approche systématique apprend, c’est qu’un circuit peut toujours être pensé comme un <strong>OU</strong> de toutes les conditions sous lesquelles la sortie doit être à <span class="math notranslate nohighlight">\(1\)</span>. Ces conditions sont elles-mêmes réalisables avec les entrées du circuit avec des portes <strong>ET</strong> et des inverseurs.</p>
+<p>On fait également les constats suivants :</p>
+<ul class="simple">
+<li><p>plusieurs circuits logiques différents peuvent réaliser la même fonction de sortie,</p></li>
+<li><p>l’approche systématique décrite ici ne livre pas forcément le circuit le plus compact: on a obtenu un circuit avec cinq portes pour réaliser un <strong>OU-X</strong> alors que l’approche ad hoc a conduit à la construction d’un circuit à quatre portes.</p></li>
+</ul>
+<div class="admonition-exercice-3-analyse-d-un-circuit admonition">
+<p class="admonition-title">Exercice 3 : analyse d’un circuit</p>
+<p>En annotant le schéma logique avec les quatre cas de figure possibles pour les entrées <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span>, faites l’analyse du circuit <strong>OU-X</strong> ci-dessus construit avec l’approche systématique et montrez que la table de vérité ainsi reconstituée est la même que celle de la porte <strong>OU-X</strong>.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Indice<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="logic_diagram" style="height: 180px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAZloF0HJ0ATHeqTAQwC2AUxyQAGpHbR+AGx4BfVBEIkKVOg0R02GbghR8hohJACaUqDPkJaCtGzSRSAVwAuVImUoJcAFlpeAE5Wdi4cACZ2ARExAC1IBUcISABzfjdhHzwCMCI3AE9iEygAeQAlSzVs3EYAhhDdDmxfADYGAHYm1w8EAA4lXPyiksgAQQA5ABEq7yoI5gYdMJa8RgY-bvccakGVPMhC4rFJmfY53wXeRGYmrCogrVCoHpxERD2VYePTCdKAFVm6l8iFavDBd1WiCiL22BkYn1UR1Gf0B52BeFB1wiz2abz87FeBl2DmUUAA7ugAE5ZKi5XB9BgRXS4G4bFnaBos3iMblaTYMVlaZmCwyIUL06gMVocwxdBwgBRAA"><logic_diagram "and",="" "gates":="" "id":="" "in":="" "name":="" "not",="" "or",="" "out":="" "pos":="" "val":="" "wires":="" "x",="" "y",="" "z"}],="" 0,="" 0}="" 0},="" 1,="" 10],="" 11},="" 12,="" 120],="" 12],="" 130],="" 13},="" 14,="" 14],="" 150],="" 15}="" 2,="" 2],="" 30],="" 3],="" 4],="" 50],="" 5},="" 60],="" 6],="" 7]="" 7],="" 8},="" 90],="" 9],="" [="" [0,="" [1,="" [11,="" [13,="" [15,="" [160,="" [230,="" [3,="" [340,="" [400,="" [5,="" [50,="" [6,="" [8,="" [9,="" [{"pos":="" ]="" ],="" content="{
+  " height="180" mode="tryout" showonly="" v":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div></div>
+</details></div>
+<div class="admonition-exercice-4-porte-cachee admonition">
+<p class="admonition-title">Exercice 4 : porte cachée</p>
+<p>Quelle est la porte cachée de ce circuit ?</p>
+<div class="logic_diagram" style="height: 100px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAZloF0HJ0ATHR9zAQwC2AUxyQAGpHbR+AGxy0AvqgiESFKnQYB2Vuy44ALHyGiEkAJpSoM+QiVo2aSKQCuAFypEylBLgBM-vRgdGwY3AjUJiJiAFqQik4QkADm-O7CvnhE7gCexGZQAPIAStbqWbiIWiF6GNh+wYhhLh44-uzkABakAO4AguQAqpgA1ph9DWDuAE6uwokqUL3oM5lUuLxgdbjGSGEBDNQsLCCKQA"><logic_diagram "gates":="" "id":="" "in":="" "name":="" "or",="" "out":="" "pos":="" "showasunknown":="" "val":="" "wires":="" "x",="" "y",="" "z"}],="" 0],="" 0}="" 0},="" 1,="" 1],="" 2,="" 3,="" 30],="" 4,="" 5,="" 50],="" 5]]="" 70],="" [="" [0,="" [150,="" [2,="" [220,="" [4,="" [50,="" [[3,="" [{"pos":="" [{"type":="" ],="" content="{
+  " height="100" mode="tryout" showonly="" true}],="" v":="" {"pos":="" }"=""></logic_diagram></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Corrigé<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">C’est une porte <strong>OU</strong>.</p>
+</div>
+</details></div>
+<div class="admonition-exercice-5-circuit-defectueux admonition">
+<p class="admonition-title">Exercice 5 : circuit défectueux</p>
+<p>Analysez ce circuit. De quel type de portes est-il constitué ? Fonctionne-t-il correctement ? Déterminez ce qui pose problème. Dites ce que fait ce circuit une fois corrigé et écrivez sa table de vérité.</p>
+<div class="logic_diagram" style="height: 140px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAZloF0HJ0ATHR9zAQwC2AUxyQAGpHbR+AGxy0AvqgiESFKnQYB2Vuy44ALHyGiEkAJpSoM+QiUrVRMpQQ16SRHozcEANhMRMQB1axg5BUU0NjRIUgBXABcqZw03RgAmD102HxxqQLMoAC1IRRiISABzfkThVzwCMCJEgE9iIsgAQQA5ABEwlypELTA6XI5sNw9ECYTkhAzlJpb2zoB5ACVBtLwMv2zvSaptBgAOOaScAE52F2Euhu7+sujHSAB3dAAneqpcXhgby4YxIXK4AJgC4MXAZHTg25jFgsECKIA"><logic_diagram "and",="" "and"}="" "gates":="" "id":="" "in":="" "name":="" "or",="" "out":="" "pos":="" "poseas":="" "val":="" "w",="" "wires":="" "x",="" "y",="" "z"}],="" 0],="" 0}="" 0},="" 1,="" 110],="" 1],="" 2},="" 3,="" 30],="" 4,="" 5,="" 50],="" 5]]="" 6,="" 70],="" 7],="" 8],="" 9,="" [="" [0,="" [150,="" [2,="" [260,="" [320,="" [4,="" [50,="" [6,="" [7,="" [9,="" [[3,="" [{"pos":="" ],="" content="{
+  " height="140" mode="tryout" showonly="" v":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Indice<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici le circuit corrigé (il a la même apparence que le circuit de la question, mais toutes les portes fonctionnent ici correctement).</p>
+<div class="logic_diagram" style="height: 140px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAZloF0HJ0ATHR9zAQwC2AUxyQAGpHbR+AGxy0AvqgiESFKnQYB2Vuy44ALHyGiEkAJpSoM+QiUrVRMpQQ16SRHozcEANhMRMQB1axg5BUU0NjRIUgBXABcqZw03RgAmD102HxxqQLMoAC1IRRiISABzfkThVzwCMCJEgE9iIsgAQQA5ABEwlypELTA6XI5sNw9ECYTkhAzlJpb2zt6B9iG3DL9s70mqbQYADjmknABOKIgKqAB3dAAneqpcXjBvXGMkXNwAsBnBi4DI6P6XBjUFgsECKIA"><logic_diagram "and",="" "gates":="" "id":="" "in":="" "name":="" "out":="" "pos":="" "val":="" "w",="" "wires":="" "x",="" "y",="" "z"}],="" 0],="" 0}="" 0},="" 1,="" 110],="" 1],="" 2},="" 3,="" 30],="" 4,="" 5,="" 50],="" 5]]="" 6,="" 70],="" 7],="" 8],="" 9}="" [="" [0,="" [150,="" [2,="" [260,="" [320,="" [4,="" [50,="" [6,="" [7,="" [9,="" [[3,="" [{"pos":="" ],="" content="{
+  " height="140" mode="tryout" showonly="" v":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div></div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Corrigé<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Ce circuit est constitué de deux portes <strong>ET</strong>. Mais la porte <strong>ET</strong> de droite semble poser problème, parce qu’elle se comporte comme une porte <strong>OU</strong> ! Le circuit montré dans l’indice se comporte correctement.</p>
+<p class="card-text">Ce circuit, une fois corrigé, implémente en fait un <strong>ET</strong> à trois entrée <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span> et <span class="math notranslate nohighlight">\(W\)</span>, où la sortie <span class="math notranslate nohighlight">\(Z\)</span> ne vaut 1 que si les trois entrées valent 1. Sa table de vérité, à huit lignes dues aux trois entrées, est ainsi la suivante :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p class="card-text"><span class="math notranslate nohighlight">\(X\)</span></p></th>
+<th class="text-align:center head"><p class="card-text"><span class="math notranslate nohighlight">\(Y\)</span></p></th>
+<th class="text-align:center head"><p class="card-text"><span class="math notranslate nohighlight">\(W\)</span></p></th>
+<th class="text-align:center head"><p class="card-text"><span class="math notranslate nohighlight">\(Z\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details></div>
+<div class="admonition-exercice-6-conception-d-un-circuit admonition">
+<p class="admonition-title">Exercice 6 : conception d’un circuit</p>
+<p>Écrivez la table de vérité de ce circuit, dont une partie est masquée :</p>
+<div class="logic_diagram" style="height: 100px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAZloF0HJ0ATHR9zAQwC2AUxyQAGpHbR+AGxy0AvqgiESFKnQYB2Vuy44ALHyGiEkAJpSoM+QiVo2aSKQCuAFypEylBLgBM-vRgdGwY3AjUJiJiAFqQik4QkADm-O7CvnhE7gCexGZQAEoAkgCyAAoAMlbsPlSIWiF6GNh+wYhhLh44-uzkABakAO4AguQAqpgA1pgjbWDuAE6uwokqUMPoS5lUuLxgLbjGSGEBDNQsLCCKQA"><logic_diagram "gates":="" "id":="" "in":="" "name":="" "out":="" "pos":="" "rimply",="" "showasunknown":="" "val":="" "wires":="" "x",="" "y",="" "z"}],="" 0],="" 0}="" 0},="" 1,="" 1],="" 2,="" 3,="" 30],="" 4,="" 5,="" 50],="" 5]]="" 70],="" [="" [0,="" [150,="" [2,="" [220,="" [4,="" [50,="" [[3,="" [{"pos":="" [{"type":="" ],="" content="{
+  " height="100" mode="tryout" showonly="" true}],="" v":="" {"pos":="" }"=""></logic_diagram></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Corrigé<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p class="card-text"><span class="math notranslate nohighlight">\(X\)</span></p></th>
+<th class="text-align:center head"><p class="card-text"><span class="math notranslate nohighlight">\(Y\)</span></p></th>
+<th class="text-align:center head"><p class="card-text"><span class="math notranslate nohighlight">\(Z\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">0</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+<td class="text-align:center"><p class="card-text">1</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details><p>Réalisez ensuite un circuit logique avec les mêmes deux entrées <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span> et la même sortie <span class="math notranslate nohighlight">\(Z\)</span> qui implémente cette table de vérité. On peut utiliser des portes <strong>ET</strong> et <strong>OU</strong> et des inverseurs. Glissez les portes depuis la gauche pour en ajouter, et glissez entre les connecteurs rond pour les connecter.</p>
+<div class="logic_diagram" style="height: 200px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?showonly=AND+OR+NOT&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAFloF0HJ0ATHAZncwCGAWwCmOSAA1I7aAIA2OWgF9UEQiQpU6DRADZW7Ljkb9hYhJACa0qLIUJlaNmkikArgBcqRMpQS4eAA56JFoDDG4EalNRcQAtSCUWECUgA"><logic_diagram "id":="" "in":="" "name":="" "out":="" "val":="" "x",="" "y",="" "z"}]="" 0}="" 0},="" 1,="" 100],="" 160],="" 3,="" 4,="" 40],="" 5,="" [="" [380,="" [50,="" [{"pos":="" ],="" content="{
+  " height="200" mode="" showonly="AND OR NOT" v":="" {"pos":="" }"=""></logic_diagram></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Indice 1<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">On peut lire cette fonction comme «<span class="math notranslate nohighlight">\(Z\)</span> vaut 1 lorsque <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span> sont les deux à 0 (la première ligne de la table de vérité) ou lorsque <span class="math notranslate nohighlight">\(X\)</span> est à 1 (les deux dernières lignes)».</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Indice 2<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\(Z\)</span> est donc le <strong>OU</strong> de <span class="math notranslate nohighlight">\(X\)</span> et du <strong>ET</strong> de l’inverse de <span class="math notranslate nohighlight">\(X\)</span> et de <span class="math notranslate nohighlight">\(Y\)</span>.</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Corrigé<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Il y plusieurs solutions possibles. Celle qui correspond aux indices est la suivante:</p>
+<div class="logic_diagram" style="height: 200px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAFloF0HJ0ATHAZncwCGAWwCmOSAA1I7aAIA2OWgF9UEQiQpU6DRADZW7Ljkb9hYhJACa0qLIUJlaNmkikArgBcqRMpQS4eAA56JFoDDG4EalNRcQAtSCVnCEgAcwEPET88AjAiDwBPYnMoAEEAOQARGw1s3AAmHhDERHCObH9mtih3LwR6lVz8opLIAHkAJRrfKh565rDu9qpdBgB2Jd6cQMG1PMhC4vFysYAVac1-RCadRcMOsABOdi2EVt21YaOLE-P2GauNyQ+iWWBwLRennBAycqigAHd0AAnLJUAIMXTdXCBBjULH1dZYvhPLGtBjhXAmJCIUkEpAsFggJRAA"><logic_diagram "and",="" "gates":="" "id":="" "in":="" "name":="" "not",="" "or",="" "out":="" "pos":="" "val":="" "wires":="" "x",="" "y",="" "z"}],="" 0],="" 0}="" 0},="" 1,="" 100],="" 10},="" 11,="" 110],="" 11],="" 12}="" 160],="" 1],="" 1]]="" 2},="" 3,="" 4,="" 40],="" 5,="" 5],="" 6],="" 7],="" 8},="" 9,="" 9],="" [="" [0,="" [10,="" [12,="" [130,="" [2,="" [230,="" [3,="" [320,="" [380,="" [4,="" [50,="" [6,="" [8,="" [[3,="" [{"pos":="" ],="" content="{
+  " height="200" mode="tryout" showonly="" v":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div></div>
+</details><p>Voici un circuit plus simple, qui fait la même chose mais qui est plus difficile à concevoir d’emblée :</p>
+<div class="logic_diagram" style="height: 120px;"><iframe border="0" cellspacing="0" class="logicframe" frameborder="0" src="https://jp.pellet.name/hep/logiga/?mode=tryout&amp;data=N4KABGBEBukFxgIwBpxQJYDt5gNpomEgAcB7AZx1wFYAGZMAFloF0HJ0ATHAZncwCGAWwCmOSAA1I7aAIA2OWgF9UEQiQpU6DAByt2XHI37CxCSAE1pUWQoTK0bNJFIBXAC5UiZSglwAmAE56MAA2fQxuBGoTUXEALUglJwhIAHMBdxFfPAIwIncAT2IzKAB5ACVrDRyAnhDwtgxsP1CGAHYmlw8cHRU8guLSyAA5MoAVap8qRH8QvS6sHEQUKDdPBFmlR1UoAHd0ACdsqlw+MKbcHQZqS+MkREvZjpYWECUgA"><logic_diagram "gates":="" "id":="" "in":="" "name":="" "not",="" "or",="" "out":="" "pos":="" "val":="" "wires":="" "x",="" "y",="" "z"}],="" 0}="" 0},="" 1,="" 11,="" 11],="" 12}="" 3,="" 4,="" 40],="" 5,="" 5],="" 60],="" 6],="" 7],="" 7]]="" 80],="" 8},="" [="" [12,="" [120,="" [230,="" [290,="" [4,="" [50,="" [6,="" [8,="" [[3,="" [{"pos":="" ],="" content="{
+  " height="120" mode="tryout" showonly="" v":="" {"pos":="" {"type":="" }"=""></logic_diagram></iframe></div></div>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="additionneur.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">2. Additionneur</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="intro.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Introduction</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; CC-BY-NC |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
+            <a class="muted-link" href="../_sources/archi/sys-log.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">1. Portes logiques</a><ul>
+<li><a class="reference internal" href="#exemple-suivi-addition-de-deux-nombres">1.1. Exemple suivi : addition de deux nombres</a></li>
+<li><a class="reference internal" href="#id1">1.2. Portes logiques</a></li>
+<li><a class="reference internal" href="#porte-et">1.3. Porte ET</a></li>
+<li><a class="reference internal" href="#porte-ou">1.4. Porte OU</a></li>
+<li><a class="reference internal" href="#non">1.5.  NON</a></li>
+<li><a class="reference internal" href="#combinaisons-de-portes">1.6. Combinaisons de portes</a><ul>
+<li><a class="reference internal" href="#analyse-dun-circuit">Analyse d’un circuit</a></li>
+<li><a class="reference internal" href="#creation-dun-circuit">Création d’un circuit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/glossary.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/timeline.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>
