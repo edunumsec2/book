@@ -14,8 +14,8 @@ Parmi ces personnages, lesquels ont contribué au développement de l'informatiq
 * {f}`Albert Einstein`
 * {v}`Lady Ada Lovelace`
 * {v}`Alan Turing`
-* {v}`John von Neumann``
-* {f}`Nils Bohr``
+* {v}`John von Neumann`
+* {f}`Nils Bohr`
 ```
 
 ```{question}
