@@ -13,15 +13,14 @@ Dans cette proposition, nous suivons une logique qui "construit" petit à petit 
 5. Programmation
 
 ## Planification
-### Semainea 1 & 2
+### Semaines 1 & 2
 #### Théorie 1 : Introduction
 Présentation des outils, de la charte informatique de l'établissement, vérification des comptes et accès aux outils informatiques (évtl. distribution des codes d'accès).
 #### Théorie 2 : Histoire 1
 Panorama historique 1 (jusqu'à la Seconde guerre mondiale)
 #### Pratique 1 (par demi-classe)
 1. Activité par groupes de deux : [Le jeu de l'imitation](../hist/jeuimitation.md)
-2. Activité : [ordinateur antique](../archi/activ/ordinateurantique.md).
-
+...
 ### Semaines 3 & 4
 #### Théorie 3 : Histoire 2
 Panorama historique 2 (de la Seconde guerre mondiale à nos jours)
@@ -31,6 +30,9 @@ Panorama historique 2 (de la Seconde guerre mondiale à nos jours)
 #### Pratique 2 : 
 
 ### Semaines 5 & 6
+
+[Bloc architecture des ordinateurs](../archi/PlanDidac/plandidacarchi1.md)
+
 
 ### Semaines 7 & 8
 
@@ -50,7 +52,7 @@ Panorama historique 2 (de la Seconde guerre mondiale à nos jours)
 On profitera de cette activité pour rappeler aux élèves quelques règles de base concernant la protection de sa sphère privée.
 
 ## Semestre 2
-### Semainea 1 & 2
+### Semaines 1 & 2
 #### Théorie 1 
 
 #### Théorie 2 

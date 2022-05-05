@@ -25,7 +25,7 @@ Dans cette activité les élèves lisent le texte original de Alan Turing "The i
 ## Matériel
 ### Les documents
 Nous mettons à disposition de l'élève ce
-{download}`document <media/lix-236-433.pdf>` ainsi que sa {download}`traduction <media/lix-236-433_fr.pdf>` (automatique) en français pour ceux qui en auraient besoin.
+{download}`document <../media/lix-236-433.pdf>` ainsi que sa {download}`traduction <../media/lix-236-433_fr.pdf>` (automatique) en français pour ceux qui en auraient besoin.
 
 
 ## Déroulement

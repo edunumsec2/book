@@ -5,6 +5,7 @@ Dans cette partie, nous proposons des activités de cours qui permettent de déc
 ```{toctree}
 :maxdepth: 2
 :hidden:
+Simulateur logique <simulateur>
 Ordinateur antique <ordinateurantique>
 Ga-Bu-Zo-Meu <gabuzomeu>
 ```

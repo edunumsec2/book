@@ -1,12 +1,25 @@
-# Histoire
+
+(Histoire)=
+Histoire de l'informatique
+===========================
 
 
 ```{toctree}
 :maxdepth: 2
 :hidden:
-main1
-Histoire des machines <machines>
+Une brève histoire de l'informatique <main1>
+Galerie de portraits <portraits>
+Une brève histoire du jeu vidéo <jeuxvideo>
+Les machines qui ont jalonné l'histoire <machines>
+Les notions qui ont jalonné l'histoire de l'informatique <notions>
+Les technologies qui ont jalonné l'histoire de l'informatique <technologies>
+Les entreprises qui ont jalonné l'histoire de l'informatique <entreprises>
 ```
+
+Le [musée bolo](https://www.museebolo.ch/)
+
+
+## Tests :
 
 ## Timeline
 
@@ -31,26 +44,3 @@ Voici la toute première vidéo YouTube !
 ````
 
 ``````
-
-
-## Exercices
-
-```{exercise} Analyser un circuit
-Voici un test !
-```
-
-````{exercise} Dessiner une maison
-
-Et un autre test !
-
-```{codeplay}
-:hide_afterword_in_download:
-
-print("AVANT")
-======
-print("DEDANS")
-======
-print("APRES")
-```
-
-````
