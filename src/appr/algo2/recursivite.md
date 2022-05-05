@@ -1,11 +1,11 @@
 
-# 4. Récursivité [en option]
+# Récursivité [en option]
 
 Ce chapitre est prévu en tant que chapitre optionnel. Il présente un autre algorithme de tri célèbre, le **<span style="color:rgb(89, 51, 209)">Tri par fusion</span>**. Cet algorithme utilise la **<span style="color:rgb(89, 51, 209)">récursivité</span>**, une stratégie qui consiste en ce qu'un algorithme s'invoque lui-même. La récursivité, c'est un peu comme si on essayait de définir le terme « définition » en disant c'est une phrase qui nous donne la définition de quelque chose. C'est certes circonvolu que de vouloir utiliser dans une définition *la chose-même* que l'on est en train de définir, mais si on respecte quelques conditions, « ça fonctionne » ! 
 
 
 
-## 4.0. Tri par fusion
+## Tri par fusion
 
 Un autre {glo}`algo|algorithme` de tri célèbre, inventé par John von Neumann en 1945, est le **<span style="color:rgb(89, 51, 209)">Tri par fusion</span>**. L’algorithme se base sur l’idée qu’il est difficile de trier un tableau avec beaucoup d'éléments, mais qu’il est très facile de trier un tableau avec juste deux éléments. Il suffit ensuite de fusionner les plus petits tableaux déjà triés.
 
@@ -75,12 +75,7 @@ Même si le tri rapide et le tri fusion ont la même complexité temporelle, c'e
 
 ````
 
-
-
-
-
-<span id="recursivite"></span>
-# 4.1 Focus sur la récursivité
+## Focus sur la récursivité
 
 Nous allons maintenant programmer l’{glo}`algo|algorithme` du Tri par fusion. Pour rappel, la première phase de l’{glo}`algo|algorithme` divise *continuellement* le tableau par deux, comme illustré dans la première <a href="#diviser">figure</a> ci-dessus. Voici le code qui permet de diviser un tableau en deux une seule fois :
 
@@ -403,7 +398,7 @@ print("\nVoici le tableau trié : ", resultat)
 
 
 
-## 4.2. Exercices supplémentaires
+## Exercices supplémentaires
 
 
 ````{admonition} Exercice 4.1 Fractale 🔌

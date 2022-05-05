@@ -1,5 +1,5 @@
 
-# 1. Terminaison des algorithmes
+# Terminaison des algorithmes
 
 
 ````{admonition} Matière à réfléchir I

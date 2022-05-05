@@ -1,11 +1,11 @@
-# 2. Algorithmes de recherche
+# Algorithmes de recherche
 
 Les ordinateurs passent la majorité de leur temps à chercher : ils cherchent des fichiers, ils cherchent des sites Web, ils cherchent des informations dans un site Web, ils cherchent votre compte lorsque vous vous loguez sur un site Web, ils cherchent des *posts* à vous montrer et des personnes à qui vous connecter. Nous allons commencer par estimer la complexité de deux algorithmes de recherche importants. 
 
 La complexité ne reflète pas la difficulté à implémenter un algorithme, comme on pourrait le croire, mais à quel point l’algorithme se complexifie au fur et à mesure que le nombre des entrées augmente. La complexité mesure le temps d’exécution d’un algorithme (ou sa rapidité) en termes du nombre d’instructions élémentaires exécutées en fonction de la taille des données. 
 
 
-## 2.0. Recherche linéaire 
+## Recherche linéaire 
 
 La manière la plus simple pour rechercher un élément dans un tableau (une liste en Python) consiste à parcourir le tableau et à comparer l’élément recherché à tous les éléments du tableau :
 
@@ -608,7 +608,7 @@ print("Gain     : " + str(resultat_dif))
 `````
 
 
-## 2.2. Exercices
+## Exercices
 
 ```{admonition} Exercice 2.5. Recherche binaire aléatoire 🔌
 :class: note

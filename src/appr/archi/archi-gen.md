@@ -1,4 +1,4 @@
-# 4. Architecture générale et composants
+# Architecture générale et composants
 
 
 
@@ -31,7 +31,7 @@ On peut également citer les cartes sons, réseau, sorties USB etc. Ce type de m
 On distingue ce matériel, partie intégrante de la machine, avec les périphériques externes qui lui sont reliés par des câbles ou des moyens de communication sans fil.
 <br> <br>
 
-## 4.1. La mémoire
+## La mémoire
 
 **ROM** (Read-Only Memory) : ce que l’on nomme ROM constitue une mémoire « fixe », statique de la machine, dont la taille est définie à la conception. On parle de mémoire morte, ou mémoire en lecture seule. Ce qu’elle stocke ne « part pas » lors de la mise hors tension de la machine. 
       
@@ -160,7 +160,7 @@ Lecteur CD
 <br> <br>
 
 
-## 4.2. Le CPU (Central Processing Unit)
+## Le CPU (Central Processing Unit)
 
 Il s’agit du processeur de l’ordinateur. C’est le cœur de l’ordinateur, c’est à dire l’espace où va se dérouler l’ensemble des opérations et instructions de la machine. C’est un peu le «cerveau» de la machine. 
 Le CPU va aller chercher les informations dans la ROM en passant par la RAM qui est donc essentielle pour le traitement du processeur. On parle d’Unité Centrale de Traitement en français. Le processeur sert à l’échange de données entre composants informatiques : disques durs – carte graphique – ROM – RAM. Il coordonne, interprète, calcule, exécute.
@@ -271,7 +271,7 @@ Le bus de contrôle est constitué de lignes de contrôle qui envoient chacune u
 
 <br> <br>
 
-## 4.5. Autres composants matériels
+## Autres composants matériels
 
 ### L'alimentation
 L'alimentation branchée sur le secteur transforme et fournit l'énergie nécessaire à la carte mère, mais l'alimentation est aussi directement reliée à certains composants tel que le lecteur/graveur de DVD ou le disque dur par exemple. 

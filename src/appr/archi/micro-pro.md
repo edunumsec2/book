@@ -1,4 +1,4 @@
-# 5. Le microprocesseur
+# Le microprocesseur
 
 On a précédemment détaillé les différents composants d'un ordinateur, puis étudié le fonctionnement des systèmes logiques à partir desquels on peut construire un processeur. On va à présent évoquer l'architecture de von Neumann qui décrit la façon dont le processeur s'insère dans son environnement. Les différents éléments qui constituent le processeur et qui en assurent le bon fonctionnement seront ensuite détaillés. 
 
@@ -24,7 +24,7 @@ Un microprocesseur est un processeur construit avec un circuit intégré, c'est-
 ```
 
 
-## 5.1. Horloge et accès mémoire
+## Horloge et accès mémoire
 Un processeur est un dispositif synchrone, ce qui signifie que les opérations à l'intérieur du processeur se déroulent de manière synchrone à un temps donné. Pour assurer cette simultanéité, il faut comme pour un orchestre, donner le tempo. Cette fonction de métronome est assurée par une horloge, ou un signal d'horloge. Cette horloge est constituée d'un simple signal carré <!-- TODO: ajouter image --> dont la fréquence atteint aujourd'hui plusieurs gigahertz, c'est-à-dire plusieurs milliards de cycles par seconde.
 
 ```{admonition} La notion de *synchronisation*
@@ -103,7 +103,7 @@ Le compteur de programme (registre **PC** pour *Program Counter*) contient l'adr
 ### Le compteur de pile
 Le compteur de pile (registre **SP** pour *Stack Pointer*) contient la position sur une pile. Cette dernière est une zone mémoire à laquelle on ne peut pas accéder aléatoirement, mais uniquement en empilant ou dépilant des éléments.
 
-## 5.2. L'unité arithmétique et logique
+## L'unité arithmétique et logique
 L'unité arithmétique et logique (UAL plus communément appelée ALU en abréviation anglaise) effectue tous les calculs arithmétiques et logiques. Quelques-uns de ces composants comme l'additionneur ont été abordés dans le chapitre *De la logique à l'arithmétique*.
 
 

@@ -1,4 +1,4 @@
-# 2. Complexité des algorithmes
+# Complexité des algorithmes
 
 
 ````{admonition} Matière à réfléchir III

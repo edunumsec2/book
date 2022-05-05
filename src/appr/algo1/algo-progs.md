@@ -13,7 +13,7 @@ Demandez à vos camarades de classe de suivre ces instructions. Sont-ils arrivé
 
 ````
 
-# 3. Des algorithmes aux programmes
+# Des algorithmes aux programmes
 
 Une fois que l’on a déterminé le meilleur {glo}`algo|algorithme` à utiliser, pour l'automatiser, il faut le retranscrire dans un {glo}`programme|programme` qu’une machine peut comprendre. Nous allons détailler ce processus pour l’algorithme du <a href="../algorithmes-classiques/eleve.html#tri-selection">**<span style="color:rgb(89, 51, 209)">tri par sélection</span>**</a>. 
 
@@ -157,7 +157,7 @@ Mais est-ce que derrière chaque programme se cache un algorithme ?
 -->
 
 
-## 3.1 Exercices
+## Exercices
 
 ````{admonition} Exercice 3.1.1. Jeu de la devinette 🔌
 :class: note

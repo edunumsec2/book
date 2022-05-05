@@ -54,22 +54,6 @@ Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi q
 - Mot en différentes langues, morse, idéogrammes
 - Symboles danger, stop, paix
 ```
-<!-- TODO #14
-<!-- Pour créer une communication efficace entre un point A et un point B, il existe toujours un compromis entre plusieurs paramètres : le nombre de symboles qu'on se donne au départ, le nombre de mots que l'on veut être capable d'exprimer, la longueur de la transmission du message, sa lisibilité, la possibilité technique de la transmission, et ainsi de suite. // Commentaire :   -->
-<!-- 
-````{admonition} Matière à réfléchir
-:class: attention
-Imaginez que vous deviez choisir un *code* pour vous transmettre des informations avec l'une ou l'autre de vos camarades. Si vous utilisez un langage des signes, la distance à laquelle vous pourrez communiquer ne sera pas très grande. À plus de 50m il deviendra difficile de lire les mains de votre camarade. Si vous choisissez des signaux sonores, il suffit qu'il y ait du bruit environnant pour brouiller votre message. Si vous utilisez des signaux lumineux, ils ne seront pas visibles en plein jour. 
-
-On peut aller plus loin dans cette réflexion. Si vous utilisez des signaux trop évidents, n'importe qui pourra décoder vos messages. Ainsi vous devriez peut-être chercher à construire des signaux cryptés. Mais si vous cryptez vos messages, vous courrez le risque que votre camarade oublie, ou perde, l'alphabet commun, et ainsi qu'il ne puisse plus vous comprendre. 
-
-Une autre façon d'aborder le problème est de réfléchir au nombre de signaux différents que vous possédez pour construire vos messages. Imaginez que vous trouviez un signe de la main pour chaque lettre de l'alphabet. Pour communiquer "Salut", le travail est déjà laborieux. Il vous faudrait donc un code qui possède moins de caractères. 
-
-Il y a toujours un équilibre à trouver entre le nombre de caractères que l'on possède dans notre alphabet, la vitesse de la transmission, la possibilité d'exprimer tout ce que l'on cherche à exprimer, et ainsi de suite. 
-
-La beauté de l'informatique moderne, c'est que grâce à l'électricité et sa vitesse fulgurante de transmission, elle est capable de représenter la majorité de l'information contenue dans le monde à partir de seulement deux caractères, 0 et 1. 
-```` 
--->
 
 On trouve des exemples célèbres et bien documentés de {glo}`sysco|systèmes de communication` depuis l'Antiquité grecque.
 

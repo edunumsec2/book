@@ -7,13 +7,14 @@ Histoire de l'informatique
 ```{toctree}
 :maxdepth: 2
 :hidden:
-Une brève histoire de l'informatique <main1>
-Galerie de portraits <portraits>
-Une brève histoire du jeu vidéo <jeuxvideo>
-Les machines qui ont jalonné l'histoire <machines>
-Les notions qui ont jalonné l'histoire de l'informatique <notions>
-Les technologies qui ont jalonné l'histoire de l'informatique <technologies>
-Les entreprises qui ont jalonné l'histoire de l'informatique <entreprises>
+:numbered: 1
+main1
+portraits
+jeuxvideo
+machines
+notions
+technologies
+entreprises
 ```
 
 Le [musée bolo](https://www.museebolo.ch/)

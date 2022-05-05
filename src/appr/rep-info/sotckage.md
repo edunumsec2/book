@@ -27,7 +27,4 @@ Il existe de nombreux **standards** de compression, qui utilisent tous une techn
 
 Tout l'enjeu de la compression consiste à prendre des décisions sur les informations que l'on doit garder, et les informations que l'on peut "supprimer" pour garder une représentation correcte de notre fichier de base. Bien sûr, c'est toujours une décision, et plus on compresse, plus on perd de l'information, ce qui peut conduire à l'extrême à une dégradation de la qualité du fichier qui le rend inutilisable.
 
-## Bases de données
-
-TODO #6 @farenc-c
 

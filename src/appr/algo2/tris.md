@@ -1,8 +1,8 @@
-# 3. Algorithmes de tri
+# Algorithmes de tri
 
 Nous venons de voir que pour rechercher de manière efficace, les données doivent être triées. Mais quelle est la complexité de l'algorithme du Tri par sélection vu dans le chapitre <a href="../algo1/cours/2_trie_cherche_trouve/eleve.html#tri-selection">Trie, cherche et trouve</a> ? C'est sa complexité qui nous donnera une indication sur sa rapidité.
 
-## 3.0. Tri par sélection
+## Tri par sélection
 
 Pour rappel, l'{glo}`algo|algorithme` du <a href="../algo1/cours/2_trie_cherche_trouve/eleve.html#tri-selection">**<span style="color:rgb(89, 51, 209)">Tri par sélection</span>**</a> parcourt le tableau à la recherche des plus petits éléments. Afin de trouver le plus petit élément du tableau, il faut commencer par parcourir tous les éléments du tableau. Cette opération prend `cn` {glo}`instruction|instructions` : `c` instructions pour l’accès et la comparaison des éléments du tableau, multiplié par le nombre d’éléments `n`. Il faut ensuite trouver le plus petit élément des éléments restants `n-1`, et ainsi de suite. Concrètement, on va parcourir jusqu'à `n` éléments, `n` fois (pour chacun des éléments). La complexité du Tri par sélection est donc proportionnelle à `n * n` (`n`<sup>`2`</sup>), on parle de complexité **<span style="color:rgb(89, 51, 209)">quadratique</span>**. 
 
@@ -125,7 +125,7 @@ Dans le cas du Tri à bulles, pour chacun des n éléments on parcourt jusqu'à 
 ```
 ````
 
-## 3.1. Tri rapide
+## Tri rapide
 
 Les trois {glo}`algo|algorithmes` de tri vus dans le chapitre précédent – le Tri par sélection, le Tri par insertion et le Tri à bulles – sont des algorithmes de complexité quadratique. Si on devait utiliser ces tris dans les systèmes numériques en place, on passerait beaucoup de notre temps à attendre. Il existe d’autres algorithmes de tri qui sont bien plus rapides. Nous allons voir un {glo}`algo|algorithme` de tri tellement rapide, qu’on lui a donné le nom **<span style="color:rgb(89, 51, 209)">Tri rapide</span>**.
 
@@ -319,7 +319,7 @@ La notation « Grand O », que l'on utilise pour écrire mathématiquement la
 
 ````
 
-## 3.2. Exercices
+## Exercices
 
 ```{admonition} Exercice 3.4. Une question à un million
 :class: note

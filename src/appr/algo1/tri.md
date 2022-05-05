@@ -12,13 +12,13 @@ Y a-t-il des objets chez vous, que vous feriez mieux de ranger dans un ordre bie
 
 ````
 
-# 2. Trie, cherche et trouve
+# Trie, cherche et trouve
 
 Pour l'instant il faut nous croire sur parole, mais si l'on veut pouvoir trouver une information parmi une avalanche d'informations, il faut que ces informations soient bien rangées. L'exemple de la bibliothèque ci-dessus illustre ce besoin de manière intuitive, mais vous allez pouvoir l'expérimenter concrètement dans le chapitre Algorithmique II. 
 
 Saviez-vous que le succès fulgurant de *Google* est surtout dû à sa capacité à bien ranger l'information disponible sur le Web ? Au moment où vous avez besoin d'une information particulière, leurs algorithmes sont capables de la retrouver parce qu'elle est bien rangée. Ce problème qui consiste à ranger les données a un nom, il s'agit du **<span style="color:rgb(89, 51, 209)">problème du Tri</span>**. Il est si important qu'il est un des problèmes les plus étudiés en algorithmique.
 
-## 2.1. Algorithmes de tri
+## Algorithmes de tri
 
 <span id=fig-trier></span>
 
@@ -78,7 +78,7 @@ Les types d'opérations que vous avez effectuées sont des comparaisons de la ta
 
 Nous allons exposer ici **trois algorithmes de tri simple**, que l'on pourrait utiliser pour trier des objets dans la vie de tous les jours.
 
-## 2.2. Tri par insertion
+## Tri par insertion
 
 L’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri par insertion</span>** parcourt la liste d’éléments à trier du deuxième au dernier élément. Pour chaque nouvel élément considéré, il l'insère à l'emplacement correct dans la liste déjà parcourue. A tout moment, la liste d'éléments déjà parcourus (jusqu’à l’élément que l'on considère à un moment donné) est toujours bien triée.
 
@@ -88,7 +88,7 @@ L’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri par ins
 
 L’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri par sélection</span>** commence par rechercher le plus petit élément de la liste et l’échange avec le premier élément de la liste. Il recherche ensuite le plus petit élément de la liste restante (sans le premier plus petit élément). Il sélectionne ainsi le deuxième plus petit élément de la liste et l’échange avec le deuxième élément de la liste. Et ainsi de suite : il recherche le plus petit élément de la liste restante, en excluant les éléments déjà triés, et échange ce plus petit élément avec le premier élément pas encore trié. Il continue de la sorte jusqu’à arriver au dernier élément de la liste. 
 
-## 2.4. Tri à bulles
+## Tri à bulles
 
 L’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri à bulles</span>** compare les éléments voisins, deux par deux. Il commence par comparer les deux premiers éléments de la liste et les met dans le bon ordre (le plus petit des deux éléments précède le plus grand des deux). Il compare ensuite les deux éléments suivants (le nouveau deuxième et le troisième élément de la liste) et les met dans le bon ordre. Il continue de la sorte jusqu’à la fin de la liste. Après ce premier parcours de la liste, le plus grand élément se retrouve en dernière position de la liste. L'algorithme parcourt à nouveau la liste, en comparant et en déplaçant les éléments voisins deux par deux (en excluant également le dernier élément qui est déjà bien trié). Après le deuxième parcours de la liste, le deuxième plus grand élément se retrouve en avant-dernière position de la liste. L'algorithme parcourt la liste de la sorte, autant de fois qu’elle possède d’éléments, en excluant les éléments bien triés en fin de la liste.
 
@@ -215,7 +215,7 @@ Il existe un algorithme, **Tri de Bogo** (ou *Bogosort*), aussi nommé le *tri l
 ````
 
 
-## 2.5. Comparaison d’algorithmes
+## Comparaison d’algorithmes
 
 Toutes les recettes de cuisine ne se valent pas, de la même manière, un {glo}`algo|algorithme` peut aussi être ***<span style="color:rgb(13, 204, 166)">plus approprié</span>*** qu’un autre algorithme pour résoudre le même problème. Il existe des dizaines d’{glo}`algo|algorithmes` qui trient avec des approches différentes (nous en verrons encore quelques-uns). Certains algorithmes sont plus rapides, d’autres plus économes en mémoire ou encore plus simples à coder. Ainsi, selon la situation, il faut choisir le « bon » {glo}`algo|algorithme`.
 
@@ -243,7 +243,7 @@ Dans cette configuration précise, quel algorithme est le plus rapide  (présent
 
 
 
-## 2.6. Exercices
+## Exercices
 
 
 
