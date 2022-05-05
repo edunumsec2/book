@@ -28,7 +28,7 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    prog1/index
    algo1/index
    archi/index
-   PlanDidac/index.md
+   plan_didac/index
 
 .. toctree::
    :name: Histoire

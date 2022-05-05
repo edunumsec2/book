@@ -8,7 +8,7 @@ Dans ce chapitre, nous proposons des activités que des propositions de calendri
 :maxdepth: 2
 :hidden:
 Activités <activ/index>
-Plan <PlanDidac/index>
+Plan <plan_didac/index>
 Evaluation <eval/index>
 ```
 
