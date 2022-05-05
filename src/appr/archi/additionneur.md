@@ -104,7 +104,11 @@ En faisant pour l'instant abstraction des détails d'un additionneur complet, on
 :height: 120
 :mode: static
 
-{"v": 1, "components": [{"type": "adder", "pos": [60, 60], "in": [0, 1, 2], "out": [3, 4]}]}
+{
+  "v": 1,
+  "opts": {"showDisconnectedPins": true},
+  "components": [{"type": "adder", "pos": [60, 60], "in": [0, 1, 2], "out": [3, 4]}]
+}
 ```
 
 
