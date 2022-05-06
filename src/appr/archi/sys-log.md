@@ -394,16 +394,16 @@ Pourquoi rajouter une porte **ET** ? On utilise ici le fait que connecter une 
 :mode: tryout
 
 {
-  "v": 1,
-  "opts": {"showDisconnectedPins": true, "showGateTypes": true},
+  "v": 2,
+  "opts": {"showGateTypes": true, "showDisconnectedPins": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 90], "id": 1, "name": "Y", "val": 0}
   ],
   "out": [{"pos": [390, 50], "id": 2, "name": "Z"}],
   "gates": [
-    {"type": "OR", "pos": [190, 40], "in": [3, 4], "ref": "or", "out": 5},
-    {"type": "AND", "pos": [330, 50], "in": [6, 7], "ref": "and2", "out": 8}
+    {"type": "OR", "pos": [190, 40], "ref": "or", "in": [3, 4], "out": 5},
+    {"type": "AND", "pos": [330, 50], "ref": "and2", "in": [6, 7], "out": {"id": 8, "force": "?"}}
   ],
   "wires": [[0, 3], [1, 4], [5, 6], [8, 2]]
 }
