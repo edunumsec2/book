@@ -549,7 +549,7 @@ On avance ainsi à ceci :
 }
 ```
 
-Pour la condition (b), qui correspond à la troisième ligne de la table de vérité, un raisonnement similaire s'applique. À la place d'inverser $X$, on {logicref}`xor_build2_step3.inv2|inversera cette fois $Y$` afin d'obtenir, à la sortie de {logicref}`xor_build2_step3.and2|la nouvelle porte **ET** du bas`, un signal qui vaut 1 lorsque $X=1$ et $Y=0$.
+Pour la condition (b), qui correspond à la troisième ligne de la table de vérité, un raisonnement similaire s'applique. À la place d'inverser $Y$, on {logicref}`xor_build2_step3.inv2|inversera cette fois $X$` afin d'obtenir, à la sortie de {logicref}`xor_build2_step3.and2|la nouvelle porte **ET** du bas`, un signal qui vaut 1 lorsque $X=0$ et $Y=1$.
 
 Voici le circuit final ainsi réalisé :
 
