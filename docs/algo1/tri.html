@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="3. Des algorithmes aux programmes" href="algo-progs.html" /><link rel="prev" title="1. Les algorithmes" href="algorithmes.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="4. Des algorithmes aux programmes" href="algo-progs.html" /><link rel="prev" title="2. Les algorithmes" href="algorithmes.html" />
 
     <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>2. Trie, cherche et trouve - Apprendre</title>
+        <title>3. Trie, cherche et trouve - Apprendre</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -224,11 +224,11 @@
 <ul class="current">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../rep-info/index.html">Représentation de l’information</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../rep-info/intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rep-info/entiers.html">2. 1. Les entiers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rep-info/caracteres.html">3. 2. Les caractères</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rep-info/images.html">4. 3. Les images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rep-info/son.html">5. 4. Le son</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rep-info/redondance.html">6. 5. Redondance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/entiers.html">2. Les entiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/caracteres.html">3. Les caractères</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/images.html">4. Les images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/son.html">5. Le son</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/redondance.html">6. Redondance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../rep-info/conclusion.html">7. Conclusion</a></li>
 </ul>
 </li>
@@ -257,47 +257,45 @@
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Algorithmique I</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="algorithmes.html">1. Les algorithmes</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">2. Trie, cherche et trouve</a></li>
-<li class="toctree-l2"><a class="reference internal" href="algo-progs.html">3. Des algorithmes aux programmes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conclusion.html">Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="algorithmes.html">2. Les algorithmes</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">3. Trie, cherche et trouve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="algo-progs.html">4. Des algorithmes aux programmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusion.html">5. Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../archi/index.html">Architecture des ordinateurs</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../archi/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../archi/sys-log.html">1. Portes logiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../archi/additionneur.html">2. Additionneur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../archi/alu-mem.html">3. ALU et mémoire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../archi/archi-gen.html">4. Architecture générale et composants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../archi/micro-pro.html">5. Le microprocesseur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../archi/conclusion.html">Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/sys-log.html">2. Portes logiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/additionneur.html">3. Additionneur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/alu-mem.html">4. ALU et mémoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/archi-gen.html">5. Architecture générale et composants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/micro-pro.html">6. Le microprocesseur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/conclusion.html">7. Conclusion</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html">Histoire de l’informatique</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#une-breve-histoire-de-linformatique">Une (brève) histoire de l’informatique</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#portraits">Portraits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#notions">Notions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#technologies">Technologies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#le-musee-bolo">Le musée Bolo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#les-grandes-entreprises-de-linformatique">Les grandes entreprises de l’informatique</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#une-encore-plus-breve-histoire-du-jeu-video">Une (encore plus brève) histoire du jeu vidéo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hist/machines.html">Histoire des machines</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html">1. Histoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#une-breve-histoire-de-linformatique">2. Une (brève) histoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/portraits.html">3. Galerie de portraits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/jeuxvideo.html">4. Brève histoire des jeux vidéo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/machines.html">5. Histoire des machines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/notions.html">6. Notions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/technologies.html">7. Technologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/entreprises.html">8. Entreprises</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../algo2/index.html">Algorithmique II</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/complexite.html">1. Terminaison et complexité</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/recherche.html">2. Algorithmes de recherche</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/tris.html">3. Algorithmes de tri</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/heuristiques.html">4. Solutions heuristiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html">4. Récursivité [en option]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html#focus-sur-la-recursivite">4.1 Focus sur la récursivité</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/conclusion.html">Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/complexite.html">2. Complexité des algorithmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recherche.html">3. Algorithmes de recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/tris.html">4. Algorithmes de tri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/heuristiques.html">5. Solutions heuristiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html">6. Récursivité [en option]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/conclusion.html">7. Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../prog2/index.html">Programmation II</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -336,12 +334,12 @@
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../resx/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../resx/adressage.html">1. Adressage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../resx/tcp-ip.html">2. TCP-IP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../resx/routage.html">3. Routage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../resx/web.html">4. Web</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../resx/couches.html">5. Couches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/adressage.html">2. Adressage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/tcp-ip.html">3. Paquets et protocoles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/routage.html">4. Routage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/web.html">5. Le World Wide Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/couches.html">6. Interopérabilité</a></li>
 </ul>
 </li>
 </ul>
@@ -382,11 +380,11 @@
 <p>Y a-t-il des objets chez vous, que vous feriez mieux de ranger dans un ordre bien particulier, parce que vous passez beaucoup de temps à les chercher ?</p>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="trie-cherche-et-trouve">
-<h1>2. Trie, cherche et trouve<a class="headerlink" href="#trie-cherche-et-trouve" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">3. </span>Trie, cherche et trouve<a class="headerlink" href="#trie-cherche-et-trouve" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Pour l’instant il faut nous croire sur parole, mais si l’on veut pouvoir trouver une information parmi une avalanche d’informations, il faut que ces informations soient bien rangées. L’exemple de la bibliothèque ci-dessus illustre ce besoin de manière intuitive, mais vous allez pouvoir l’expérimenter concrètement dans le chapitre Algorithmique II.</p>
 <p>Saviez-vous que le succès fulgurant de <em>Google</em> est surtout dû à sa capacité à bien ranger l’information disponible sur le Web ? Au moment où vous avez besoin d’une information particulière, leurs algorithmes sont capables de la retrouver parce qu’elle est bien rangée. Ce problème qui consiste à ranger les données a un nom, il s’agit du <strong><span style="color:rgb(89, 51, 209)">problème du Tri</span></strong>. Il est si important qu’il est un des problèmes les plus étudiés en algorithmique.</p>
 <section id="algorithmes-de-tri">
-<h2>2.1. Algorithmes de tri<a class="headerlink" href="#algorithmes-de-tri" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Algorithmes de tri<a class="headerlink" href="#algorithmes-de-tri" title="Lien permanent vers ce titre">¶</a></h2>
 <p><span id="fig-trier"></span></p>
 <p>Un <strong><span style="color:rgb(89, 51, 209)">algorithme de tri</span></strong> est un algorithme qui permet de résoudre le problème du tri des données, donc d’organiser les données selon <em><strong><span style="color:rgb(13, 204, 166)">une relation d’ordre</span></strong></em>. Dans la figure ci-dessous, les objets sont organisés soit par la luminosité de leur couleur (ligne du haut), soit par leur taille (lignes du bas), dans <strong>un ordre croissant</strong>.</p>
 <figure class="align-left" id="id1">
@@ -426,7 +424,7 @@
 <p>Nous allons exposer ici <strong>trois algorithmes de tri simple</strong>, que l’on pourrait utiliser pour trier des objets dans la vie de tous les jours.</p>
 </section>
 <section id="tri-par-insertion">
-<h2>2.2. Tri par insertion<a class="headerlink" href="#tri-par-insertion" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Tri par insertion<a class="headerlink" href="#tri-par-insertion" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’<span class="target" id="gl-algo-0"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> du <strong><span style="color:rgb(89, 51, 209)">tri par insertion</span></strong> parcourt la liste d’éléments à trier du deuxième au dernier élément. Pour chaque nouvel élément considéré, il l’insère à l’emplacement correct dans la liste déjà parcourue. A tout moment, la liste d’éléments déjà parcourus (jusqu’à l’élément que l’on considère à un moment donné) est toujours bien triée.</p>
 <p><span id="tri-selection"></span></p>
 </section>
@@ -435,7 +433,7 @@
 <p>L’<span class="target" id="gl-algo-1"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> du <strong><span style="color:rgb(89, 51, 209)">tri par sélection</span></strong> commence par rechercher le plus petit élément de la liste et l’échange avec le premier élément de la liste. Il recherche ensuite le plus petit élément de la liste restante (sans le premier plus petit élément). Il sélectionne ainsi le deuxième plus petit élément de la liste et l’échange avec le deuxième élément de la liste. Et ainsi de suite : il recherche le plus petit élément de la liste restante, en excluant les éléments déjà triés, et échange ce plus petit élément avec le premier élément pas encore trié. Il continue de la sorte jusqu’à arriver au dernier élément de la liste.</p>
 </section>
 <section id="tri-a-bulles">
-<h2>2.4. Tri à bulles<a class="headerlink" href="#tri-a-bulles" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Tri à bulles<a class="headerlink" href="#tri-a-bulles" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’<span class="target" id="gl-algo-2"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> du <strong><span style="color:rgb(89, 51, 209)">tri à bulles</span></strong> compare les éléments voisins, deux par deux. Il commence par comparer les deux premiers éléments de la liste et les met dans le bon ordre (le plus petit des deux éléments précède le plus grand des deux). Il compare ensuite les deux éléments suivants (le nouveau deuxième et le troisième élément de la liste) et les met dans le bon ordre. Il continue de la sorte jusqu’à la fin de la liste. Après ce premier parcours de la liste, le plus grand élément se retrouve en dernière position de la liste. L’algorithme parcourt à nouveau la liste, en comparant et en déplaçant les éléments voisins deux par deux (en excluant également le dernier élément qui est déjà bien trié). Après le deuxième parcours de la liste, le deuxième plus grand élément se retrouve en avant-dernière position de la liste. L’algorithme parcourt la liste de la sorte, autant de fois qu’elle possède d’éléments, en excluant les éléments bien triés en fin de la liste.</p>
 <div class="note admonition">
 <p class="admonition-title">Exercice 2.1. Algorithme de tri </p>
@@ -521,7 +519,7 @@
 </div>
 </section>
 <section id="comparaison-dalgorithmes">
-<h2>2.5. Comparaison d’algorithmes<a class="headerlink" href="#comparaison-dalgorithmes" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Comparaison d’algorithmes<a class="headerlink" href="#comparaison-dalgorithmes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Toutes les recettes de cuisine ne se valent pas, de la même manière, un <span class="target" id="gl-algo-5"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> peut aussi être <em><strong><span style="color:rgb(13, 204, 166)">plus approprié</span></strong></em> qu’un autre algorithme pour résoudre le même problème. Il existe des dizaines d’<span class="target" id="gl-algo-6"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithmes</span> qui trient avec des approches différentes (nous en verrons encore quelques-uns). Certains algorithmes sont plus rapides, d’autres plus économes en mémoire ou encore plus simples à coder. Ainsi, selon la situation, il faut choisir le « bon » <span class="target" id="gl-algo-7"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span>.</p>
 <p>La qualité d’un <span class="target" id="gl-algo-8"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> dépend de la propriété que l’on souhaite optimiser (maximiser ou minimiser). Cela pourrait être de maximiser la <strong><span style="color:rgb(89, 51, 209)">vitesse d’exécution</span></strong> (mesurée par le nombre d’<span class="target" id="gl-instruction-0"></span><span class="glossary-ref" data-definition="PHA+VW5lIGluc3RydWN0aW9uIGRpY3RlIGF1IHByb2Nlc3NldXIgbCdhY3Rpb24gw6AgZWZmZWN0dWVyIGF2YW50IGRlIHBhc3NlciDDoCBsJ2luc3RydWN0aW9uIHN1aXZhbnRlLjwvcD4K" data-entry-name="SW5zdHJ1Y3Rpb25z" data-glossary-uri="../glossaire.html#gl-def-instruction-1" data-number="1">instructions</span> élémentaires exécutées), de minimiser la place occupée en <strong><span style="color:rgb(89, 51, 209)">mémoire</span></strong>, de minimiser la <strong><span style="color:rgb(89, 51, 209)">consommation d’énergie</span></strong> ou de maximiser la <strong><span style="color:rgb(89, 51, 209)">précision de la solution</span></strong>. L’<span class="target" id="gl-algo-9"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> utilisé devrait être choisi en fonction de ce qui est important.</p>
 <p><em><strong><span style="color:rgb(13, 204, 166)">La vitesse d’un <span class="target" id="gl-algo-10"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> dépend également des <span class="target" id="gl-data-0"></span><span class="glossary-ref" data-definition="PHA+SW5mb3JtYXRpb25zIGVucmVnaXN0csOpZXM8L3A+Cg==" data-entry-name="RG9ubsOpZXM=" data-glossary-uri="../glossaire.html#gl-def-data-1" data-number="1">données</span> en <span class="target" id="gl-input-0"></span><span class="glossary-ref" data-definition="PHA+SW5mb3JtYXRpb25zIGZvdXJuaWVzIMOgIHVuIGFsZ29yaXRobWUgb3UgdW4gKHNvdXMtKSBwcm9ncmFtbWUuPC9wPgo=" data-entry-name="RW50csOpZXM=" data-glossary-uri="../glossaire.html#gl-def-input-1" data-number="1">entrée</span></span></strong></em>. Selon la configuration initiale des <span class="target" id="gl-data-1"></span><span class="glossary-ref" data-definition="PHA+SW5mb3JtYXRpb25zIGVucmVnaXN0csOpZXM8L3A+Cg==" data-entry-name="RG9ubsOpZXM=" data-glossary-uri="../glossaire.html#gl-def-data-1" data-number="1">données</span> en <span class="target" id="gl-input-1"></span><span class="glossary-ref" data-definition="PHA+SW5mb3JtYXRpb25zIGZvdXJuaWVzIMOgIHVuIGFsZ29yaXRobWUgb3UgdW4gKHNvdXMtKSBwcm9ncmFtbWUuPC9wPgo=" data-entry-name="RW50csOpZXM=" data-glossary-uri="../glossaire.html#gl-def-input-1" data-number="1">entrée</span> (correspond à la ligne du haut de la <a href="#fig-algos-tri">Figure <strong>Algorithmes de tri</strong></a>), un <span class="target" id="gl-algo-11"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> « rapide » peut devenir « lent » et <em>vice versa</em>. Il faut savoir que les <span class="target" id="gl-algo-12"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithmes</span> vus jusqu’ici sont tous des <span class="target" id="gl-algo-13"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithmes</span> lents (nous verrons un <span class="target" id="gl-algo-14"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> de tri rapide ultérieurement).</p>
@@ -536,7 +534,7 @@
 </div>
 </section>
 <section id="exercices">
-<h2>2.6. Exercices<a class="headerlink" href="#exercices" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Exercices<a class="headerlink" href="#exercices" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="note admonition">
 <p class="admonition-title">Exercice 2.6.1. L’algorithme de votre journée</p>
 <p>Réfléchir à votre journée : y a-t-il des actions qui se retrouvent chaque jour ouvrable ? Arrivez-vous à esquisser un algorithme que vous suivez sans que vous en ayez conscience ?</p>
@@ -736,7 +734,7 @@ Si vous avez un niveau de programmation avancé, vous pouvez essayer de coder ce
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">3. Des algorithmes aux programmes</div>
+                <div class="title"><span class="section-number">4. </span>Des algorithmes aux programmes</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -747,7 +745,7 @@ Si vous avez un niveau de programmation avancé, vous pouvez essayer de coder ce
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">1. Les algorithmes</div>
+                <div class="title"><span class="section-number">2. </span>Les algorithmes</div>
                 
               </div>
             </a>
@@ -779,13 +777,13 @@ Si vous avez un niveau de programmation avancé, vous pouvez essayer de coder ce
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">2. Trie, cherche et trouve</a><ul>
-<li><a class="reference internal" href="#algorithmes-de-tri">2.1. Algorithmes de tri</a></li>
-<li><a class="reference internal" href="#tri-par-insertion">2.2. Tri par insertion</a></li>
+<li><a class="reference internal" href="#">3. Trie, cherche et trouve</a><ul>
+<li><a class="reference internal" href="#algorithmes-de-tri">Algorithmes de tri</a></li>
+<li><a class="reference internal" href="#tri-par-insertion">Tri par insertion</a></li>
 <li><a class="reference internal" href="#tri-par-selection">2.3. Tri par sélection</a></li>
-<li><a class="reference internal" href="#tri-a-bulles">2.4. Tri à bulles</a></li>
-<li><a class="reference internal" href="#comparaison-dalgorithmes">2.5. Comparaison d’algorithmes</a></li>
-<li><a class="reference internal" href="#exercices">2.6. Exercices</a></li>
+<li><a class="reference internal" href="#tri-a-bulles">Tri à bulles</a></li>
+<li><a class="reference internal" href="#comparaison-dalgorithmes">Comparaison d’algorithmes</a></li>
+<li><a class="reference internal" href="#exercices">Exercices</a></li>
 </ul>
 </li>
 </ul>
@@ -804,6 +802,7 @@ Si vous avez un niveau de programmation avancé, vous pouvez essayer de coder ce
     <script src="../_static/scripts/main.js"></script>
     <script src="../_static/glossary.js"></script>
     <script src="../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
     <script src="../_static/blanks.js"></script>
     <script src="../_static/timeline.js"></script>
     <script src="../_static/translations.js"></script>

@@ -18,13 +18,14 @@ Dans ce chapitre, vous découvrirez comment sont construits les ordinateurs, com
 ```{toctree}
 :maxdepth: 2
 :hidden:
-Introduction <intro>
-1. Portes logiques <sys-log>
-2. Additionneur <additionneur>
-3. ALU et mémoire <alu-mem>
-4. Architecture générale et composants <archi-gen>
-5. Le microprocesseur <micro-pro>
-Conclusion <conclusion>
+:numbered: 1
+intro
+sys-log
+additionneur
+alu-mem
+archi-gen
+micro-pro
+conclusion
 ```
 
 ## Objectifs de la thématique

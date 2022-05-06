@@ -1,4 +1,4 @@
-# 5. Redondance
+# Redondance
 
 Pourrait-on construire un véhicule qui ne tombe jamais en panne ?
 
@@ -10,7 +10,7 @@ La **redondance** est une technique qui consiste à dupliquer les fonctions crit
 
 La redondance se retrouve à tous les niveaux des systèmes informatiques, qu'ils soient embarqués dans un avion ou non. Ces redondances ont toujours un coût qui se mesure dans ce cas par une **augmentation** de la **quantité de données** et/ou du **temps de traitement** requis. Ils contribuent en échange à la sécurité des données, en augmentant l'**intégrité** (cohérence) et/ou la **disponibilité** de l'information.
 
-## 5.1. Somme de contrôle (checksum)
+## Somme de contrôle (checksum)
 
 Pour s'assurer qu'une information est reçue **intégralement** (sans omissions) et **parfaitement** (sans erreurs), un expéditeur pourrait naïvement l'envoyer deux fois, par deux moyens indépendants, dans un SMS et sur une carte postale par exemple. Le destinataire devrait alors renvoyer une confirmation… par deux moyens indépendants ?!
 
@@ -89,7 +89,7 @@ La mémoire vive RAM (*Random Access Memory*) de type ECC (*Error-Correcting Cod
 Cette fonction supplémentaire explique leur coût plus élevé.
 ````
 
-## 5.2. Fonction de hachage
+## Fonction de hachage
 
 L'exemple de bit de parité permet grossièrement de contrôler une communication caractère par caractère. Une forme plus élaborée du même concept prend la forme du **hachage** de l'information qui peut alors s'appliquer à des quantités d'information beaucoup plus importantes, de type et de longueurs variables.
 
@@ -187,7 +187,7 @@ On notera qu'une empreinte numérique est une simplification de l'information ha
 
 Toutefois, grâce à leurs propriétés (déterministes et rapides), des **fonctions de hachage** plus complexes (**SHA**, **MD5**…) trouvent des applications dans de nombreux contextes : authenticité (signatures numériques), intégrité (erreurs de transfert, stockage, blockchains…), identification (fichiers, connexions réseau…), authentification (stockage et vérification des mots de passe)…
 
-## 5.3. Disques RAID
+## Disques RAID
 
 Les pannes de disques durs sont très communes et entrainent des pertes de données aux conséquences parfois irrécupérables.
 
@@ -200,7 +200,7 @@ Ici encore, en exploitant le principe des bits de parité décrits précédemmen
 
 Ce type d'infrastructure, malgré son coût plus élevé, est à la base des systèmes critiques qui ne peuvent se permettre de perdre des informations, ce qui pourrait inclure, à terme, les copies de sécurité des postes personnels, quand les données traitées sont sensibles.
 
-## 5.4. Cloud computing
+## Cloud computing
 
 Les systèmes informatiques récents sont distribués à l'échelle d'Internet, tant pour leurs parties matérielles que logicielles.
 On parle de systèmes *cloud* ou **informatique en nuage**.

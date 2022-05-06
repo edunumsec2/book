@@ -1,6 +1,6 @@
-# 3. Les images
+# Les images
 
-## 3.1. Les images matricielles
+## Les images matricielles
 
 Depuis des siècles les humains gardent des traces de leur environnement sous forme d'images. Plus le temps passe, plus ces traces sont fidèles. On découvre par exemple la perspective autour du XV<sup>e</sup> siècle, les progrès en optique et en chimie permettent ensuite la création de la camera obscura et de la photographie argentique. Enfin l'informatique se développe permettant l'invention de la photographie numérique.
 
@@ -39,7 +39,7 @@ name: fig-repr-img-obscur3
 Principe de la capture numérique d'une image.
 ```
 
-## 3.2. Représentation d'une image en noir et blanc
+## Représentation d'une image en noir et blanc
 
 ````{tabbed} Image
 ```{image} media/thuglife.png
@@ -135,7 +135,7 @@ drawImg(alien)
 
 Un {glo}`pixel|pixel`, de l'anglais "**pic**ture **el**ement", est le composant minimal d'une image. C'est à dire que c'est le plus petit élément avec lequel on construit une image sur un écran d'ordinateur. Dans notre exemple minimaliste, chaque pixel peut être soit noir, soit blanc, ce qui nous permet de construire une image.
 
-## 3.3. Représentation d'une image en niveaux de gris
+## Représentation d'une image en niveaux de gris
 
 Dans ce type d’image seul le niveau de l'intensité est codé sur un octet (256 valeurs). Par convention, la valeur 0 représente le noir (intensité lumineuse nulle) et la valeur 255 le blanc (intensité lumineuse maximale) :
 
@@ -164,7 +164,7 @@ Pour accéder à un pixel particulier, il faut indiquer à quelle ligne et à qu
 Ce mode de fonctionnement est similaire à celui des tableurs pour lesquels il est possible d'accéder à la valeur d'une case en utilisant sa référence. On pourrait d'ailleurs utiliser le formatage conditionnel pour transformer un tableau de valeurs dans un tableur en image matricielle.
 ```
 
-## 3.4. Représentation d'une image en couleurs
+## Représentation d'une image en couleurs
 
 ````{admonition} Anecdote
 :class: hint
@@ -432,7 +432,7 @@ La compression peut être réalisée avec ou sans perte :
 
 
 
-## 3.5. Les images vectorielles
+## Les images vectorielles
 
 Pour reproduire une image sur une feuille, on peut la diviser en grille et définir un niveau de gris pour chaque case, mais on peut aussi tout simplement dessiner une figure, par exemple un trait d'un millimètre d'épaisseur allant d'un point A à un point B de l'image. De la même manière, en informatique, il est possible de représenter des images sous forme de grilles de pixels, comme nous l'avons vu, mais il est en effet également possible de définir une image comme une collection d'objets graphiques élémentaires (un segment, un carré, une ellipse...) sur un espace plan : c'est le principe des images vectorielles.
 
@@ -473,14 +473,14 @@ Modifier le fichier afin de dessiner quatre carrés différents.
 Identifiez et listez les avantages et les inconvénients du format vectoriel en comparaison avec le système matriciel.
 ```
 
-## 3.6. Bonus
+## Bonus
 
 [Une œuvre d'art numérique signée Andreas Gysin ...](https://play.ertdfgcvb.xyz/#/src/demos/doom_flame_full_color)
 
 <br>
 <br>
 
-## 3.7. Exercices
+## Exercices
 
 ````{admonition} Exercice 3.7.1. - Définition ✏️📒
 :class: note

@@ -1,5 +1,5 @@
 
-# 1. Les algorithmes
+# Les algorithmes
 
 La première question que l'on va se poser est la suivante : qu'est-ce qu'un {glo}`algo|algorithme` ? Est-ce la même chose qu'un programme informatique, ou s'agit-il d'autre chose ?
 
@@ -22,7 +22,7 @@ align: left
 ```
 **Différence entre un algorithme et un programme.** Un algorithme doit être compréhensible par un humain, alors qu'un programme est écrit de façon à ce qu'il soit compréhensible par une machine. -->
 
-## 1.1. Résolution d'un problème par étapes
+## Résolution d'un problème par étapes
 
 Un mode d’emploi, ou une recette, décrit les **<span style="color:rgb(89, 51, 209)">étapes</span>** à suivre pour arriver à une solution. Dans le cas d'une recette de cuisine, la préparation des ingrédients, leur cuisson et leur présentation sont différentes étapes que l'on peut suivre pour réaliser un plat. Prenons un cas précis : *<span style="color:rgb(13, 204, 166)">faire une omelette</span>*. Pour chaque étape de la préparation de l’omelette, il faut prévoir une marche à suivre suffisamment détaillée, afin que la personne qui suit la recette arrive au résultat souhaité. Dans le cas de l’omelette, les opérations pourraient être (voir figure ci-dessous) : 
 
@@ -183,7 +183,7 @@ Lorsqu'on sauve un fichier dans un ordinateur, il est stocké dans une mémoire.
 
 ````
 
-## 1.2. Les ingrédients d’un algorithme
+## Les ingrédients d’un algorithme
 
 L’objectif d’un algorithme est de décrire la solution à un problème donné. Concrètement, pour résoudre un problème, l’algorithme va utiliser des **<span style="color:rgb(89, 51, 209)">données</span>** qu’il reçoit ***<span style="color:rgb(13, 204, 166)">en entrée</span>*** et va retourner un **<span style="color:rgb(89, 51, 209)">résultat</span>** ***<span style="color:rgb(13, 204, 166)">en sortie</span>***. Le résultat en sortie va être la solution au problème sur la base des calculs effectués sur les données en entrée. Un exemple d'algorithme qui détecte les visages reçoit en {glo}`input|entrée` une image (ce sont les {glo}`data|données`) et retourne en sortie «oui» ou «non» (c'est le résultat) selon si l’image contient un visage ou pas. Les données en entrée d’un algorithme qui traduit pourraient être le mot à traduire et un dictionnaire. L’algorithme traiterait ces données pour retourner en {glo}`output|sortie` la traduction du mot dans une autre langue.
 
@@ -296,7 +296,7 @@ Nous avons donc la confirmation que la solution obtenue résout correctement not
 `````
 
 
-## 1.3. Exercices
+## Exercices
 
 ````{admonition} Exercice 1.3.1. Forme mystère
 :class: note

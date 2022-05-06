@@ -1,4 +1,4 @@
-# 5. Le microprocesseur
+# Le microprocesseur
 
 On a précédemment détaillé les différents composants d'un ordinateur, puis étudié le fonctionnement des systèmes logiques à partir desquels on peut construire un processeur. On va à présent évoquer l'architecture de von Neumann qui décrit la façon dont le processeur s'insère dans son environnement. Les différents éléments qui constituent le processeur et qui en assurent le bon fonctionnement seront ensuite détaillés. 
 
@@ -24,7 +24,7 @@ Un microprocesseur est un processeur construit avec un circuit intégré, c'est-
 ```
 
 
-## 5.1. Horloge et accès mémoire
+## Horloge et accès mémoire
 Un processeur est un dispositif synchrone, ce qui signifie que les opérations à l'intérieur du processeur se déroulent de manière synchrone à un temps donné. Pour assurer cette simultanéité, il faut comme pour un orchestre, donner le tempo. Cette fonction de métronome est assurée par une horloge, ou un signal d'horloge. Cette horloge est constituée d'un simple signal carré <!-- TODO: ajouter image --> dont la fréquence atteint aujourd'hui plusieurs gigahertz, c'est-à-dire plusieurs milliards de cycles par seconde.
 
 ```{admonition} La notion de *synchronisation*
@@ -103,7 +103,7 @@ Le compteur de programme (registre **PC** pour *Program Counter*) contient l'adr
 ### Le compteur de pile
 Le compteur de pile (registre **SP** pour *Stack Pointer*) contient la position sur une pile. Cette dernière est une zone mémoire à laquelle on ne peut pas accéder aléatoirement, mais uniquement en empilant ou dépilant des éléments.
 
-## 5.2. L'unité arithmétique et logique
+## L'unité arithmétique et logique
 L'unité arithmétique et logique (UAL plus communément appelée ALU en abréviation anglaise) effectue tous les calculs arithmétiques et logiques. Quelques-uns de ces composants comme l'additionneur ont été abordés dans le chapitre *De la logique à l'arithmétique*.
 
 
@@ -251,3 +251,44 @@ La vulnérabilité Spectre (ainsi que d'autres vulnérabilités similaires) expl
 
 ````
 
+::::{panels}
+:column: col-lg-12 p-2
+:card: bg-info
+
+**Vite ... très vite**
+^^^^
+Nous avons démontré que finalement nos ordinateurs ont un cerveau très simple dans le fonctionnement de ses éléments de base: des portes logiques qui traitent des **0** ou des **1**. Il est cependant très difficile de se représenter à quel point ces traitements vont vite.
+Imaginons pour cela que le processeur écrive toutes les opérations qu'il effectue sur un ruban de papier et calculons la vitesse de défilement de ce papier. 
+
+Pour cela nous faisons les hypothèses suivantes:
+* Les processeurs actuels ont une cadence d'horloge de 3GHz, c'est à dire $3·10^9 [s^{-1}]$. Pour simplifier nous allons supposer qu'ils effectuent une opération par cycle[^1].
+* Nous transcrivons un mot de 64 bit (taille standard pour les processeurs) sur une longueur de 15cm, ce qui correspond à $15·10^{-2}[m]$.
+
+Le calcul devient alors:
+
+$$
+    3·10^9 [s^{-1}] · 15·10^{-2}[m] \\
+    45·10^7 [m/s]
+$$
+
+Que nous convertissons en km:
+
+$$
+    45·10^5 [km/s] ou encore: 450'000 [km/s]
+$$
+
+Rappelons que la vitesse de la lumière est:
+
+$$
+    c \cong 300'000 [km/s]
+$$
+
+Ce qui veut dire que si un microprocesseur, tel que ceux que l'on trouve dans notre ordinateur ou notre smartphone, écrivait sur un ruban de papier tout ce qu'il fait, ce ruban de papier devrait se déplacer à une fois et demi la vitesse de la lumière. Ou encore, ce ruban ferait chaque seconde plus de 11 fois le tour de la terre.
+
+Si les éléments de base sont simples, la complexité et la richesse des expériences numériques comme l'immersion dans un jeu vidéo proviennent de la quantité extraordinaire d'opérations effectuées.
+
+[^1]: En fait le opérations d'un processeur prennent plus d'un cycle pour être réalisées, mais comme les processeurs ont plusieurs cœurs et un pipeline dont nous n'abordons pas ici le fonctionnement, la simplification proposée n'est pas aberrante.
+
+
+
+::::

@@ -55,11 +55,12 @@ Nous avons tous entendu parler des algorithmes. Normal, c’est le mot à la mod
 ```{toctree}
 :maxdepth: 2
 :hidden:
-Introduction <intro>
-1. Les algorithmes <algorithmes>
-2. Trie, cherche et trouve <tri>
-3. Des algorithmes aux programmes <algo-progs>
-Conclusion <conclusion>
+:numbered: 1
+intro
+algorithmes
+tri
+algo-progs
+conclusion
 ```
 
 ## Objectifs de la thématique

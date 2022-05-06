@@ -1,4 +1,4 @@
-# 5. Solutions heuristiques
+# Solutions heuristiques
 
 
 ````{admonition} Matière à réfléchir VI

@@ -1,11 +1,11 @@
-# 2. Les caractères
+# Les caractères
 
 Toute l'information est représentée dans un ordinateur par des nombres
 encodés sous forme binaire par des 0 et des 1. Se pose alors la question
 de la représentation des caractères, ne serait-ce que parce que la communication
 entre les utilisateurs et les ordinateurs s'opère essentiellement sous forme textuelle. 
 
-## 2.1. Principe
+## Principe
 
 La solution est simple : on associe chaque caractère à un code binaire.
 
@@ -92,7 +92,7 @@ En réalité, il n'existe pas une table de conversion unique, mais des dizaines
 de tables de conversion. Certaines tables ont été proposées à l'origine
 par des constructeurs d'ordinateurs ou des éditeurs de systèmes d'exploitation.
 
-## 2.2. Table ASCII
+## Table ASCII
 
 Le code américain normalisé pour l’échange d’information ASCII (pour American Standard Code for Information Interchange) est apparu dans les année 1960.
 Malgré sa large acceptation, avec ses **7 bits par caractère**,
@@ -160,7 +160,7 @@ l'augmentation de l'interconnexion des ordinateurs personnels a amené
 au début des années 2000 à la mise en place d'une énorme table
 intégrant le contenu de toutes les tables existantes, via le standard UTF.
 
-## 2.3. Standard UTF
+## Standard UTF
 
 Le [standard Unicode](https://home.unicode.org/) UTF (Universal Character Set Transformation Format)
 s'est imposé pour l'échange, car il permet d'agréger sur 8 bits, 16 bits ou 32 bits par caractère la totalité des caractères utilisés dans toutes les langues humaines… et même extraterrestres,
@@ -184,7 +184,7 @@ l'on rencontre parfois avec les caractères accentués. Il est donc préférable
 
 UTF-8 est donc un encodage des caractères basé sur UNICODE, de longueur variable qui utilise de 1 à 4 octets par symbole.
 
-#### **Comment s'opère le codage sur plusieurs octets ?**
+#### Comment s'opère le codage sur plusieurs octets ?
 
 En UTF-8, chaque point de code de 0 à 127 est stocké dans un seul octet. Seuls les points de code 128 et supérieurs sont stockés en utilisant 2, 3 ou 4 octets.
 Chaque octet commence alors par quelques bits qui indiquent s'il s'agit d'un point de code à un octet, d'un point de code à plusieurs octets ou de la continuation d'un point de code à plusieurs octets :
@@ -210,7 +210,7 @@ Les bits représentés par le caractère «x» représentent ce que l'on appelle
 
 Puisqu'on peut dire quel type d'octet on regarde à partir des premiers bits du premier octet à gauche, alors même si quelque chose est altéré quelque part, la séquence entière n'est pas perdue : ce codage est appelé *codage auto-synchronisant*.
 
-#### **Codage UTF-8 en détail**
+#### Codage UTF-8 en détail
 
 Le premier octet en partant de la droite sert lui à encoder les caractères ASCII, donnant ainsi au jeu de caractères une **totale compatibilité avec ASCII**.
 
@@ -241,7 +241,7 @@ Par exemple le caractère « € » (euro) est le 8365e caractère du répertoir
 **Tab. 4** Extrait de la table de représentation UTF-8
 
 
-## 2.4. Exercices
+## Exercices
 
 ````{admonition} Exercice 2.4.1. - Utilisation de la table ASCII ✏️📒
 :class: note 

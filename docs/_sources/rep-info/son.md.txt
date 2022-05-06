@@ -1,4 +1,4 @@
-# 4. Le son
+# Le son
 
 Un son est une histoire d’énergie et de vibrations. Un son émerge quand des molécules subissent une pression initiale, ce qui va les amener à avancer et entrainer ce mouvement sur les molécules devant immédiatement voisines en leur transmettant une grande partie de cette énergie. Suite à ce nouveau mouvement, elles repartent en arrière pour retrouver leur position d'équilibre ayant transmis cette énergie initiale aux molécules voisines qui à leur tour vont se comporter de la même manière. 
 
@@ -68,7 +68,7 @@ Vous rappelez-vous de l’explosion de l’étoile de la mort dans Star Wars ? e
 
 ```
 
-## 4.1. Numérisation
+## Numérisation
 
 La conversion d’une grandeur physique analogique continue – température, vitesse du vent, position d'une girouette, etc. – en données numériques digitales est appelée **numérisation**. Elle est réalisée en trois étapes : un **échantillonnage**, une **quantification** puis un **encodage**.
 
@@ -97,7 +97,7 @@ En échange, un signal électrique qui stimule un haut-parleur produit des oscil
 ```
 ````
 
-## 4.2. Échantillonnage
+## Échantillonnage
 
 L'intervalle temporel entre deux mesures est appelé la période d'échantillonnage. La **fréquence d'échantillonnage** (sampling rate) est le nombre de mesures prises par seconde, exprimée en Hz.
 
@@ -138,7 +138,7 @@ Une fréquence d’échantillonnage supérieure génère une plus grande quantit
 
 Le choix de la fréquence d'échantillonnage résulte donc d'une délicate balance entre coûts (taille des données) et bénéfices (qualité de la numérisation).
 
-## 4.3. Quantification
+## Quantification
 
 La quantification d'une valeur échantillonnée requiert de déterminer la **précision** de chaque échantillon, ce qui détermine le volume de données générées. Cela découle de la [représentation des nombres](../entiers/eleve.ipynb) par les ordinateurs.
 
@@ -188,7 +188,7 @@ Effet de la fréquence d'échantillonnage (sampling rate : 400, 200 et 100 Hz) s
 
 Les dispositifs électroniques dont la fonction est l'échantillonnage et la quantification des signaux sont appelés des convertisseurs analogique-numérique (CAN) ou **analog to digital converter** (ADC), en anglais.
 
-## 4.4. Encodage
+## Encodage
 
 L'encodage de l'information numérisée se fait dans des formats de fichiers spécifiques aux applications.
 
@@ -202,7 +202,7 @@ C'est ainsi que des fichiers optimisés différents sont disponibles pour stocke
 
 Par exemple, la reproduction exacte des nuances de bleu du ciel importe peu pour un film d'action. Pourtant, ces mêmes nuances sont essentielles pour la reproduction d'un tableau de Monnet...
 
-## 4.5. Reconstruction
+## Reconstruction
 
 On appelle **reconstruction** le processus qui transforme un signal numérisé en une variation continue d'une grandeur physique.
 

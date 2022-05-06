@@ -376,55 +376,11 @@ Dans une science qui évolue vite, en perpétuel changement, il est difficile de
 
 En octobre 2019, Google a annoncé avoir mis au point un ordinateur quantique capable de faire mieux que les meilleurs super-calculateurs traditionnels. Alors qu'un ordinateur classique manipule des informations élémentaires faites de $0$ et de $1$ (des bits), un ordinateur quantique manipule des q-bits. Ces derniers stockent de l'information comme une superposition de $0$ et de $1$ avec une proportion variable. La quantité d'informations ainsi stockée et traitée s'accroît de manière exponentielle. Deux algorithmes sont réputés dans le domaine de l'informatique quantique : l'algorithme de Glover et l'algorithme de Shor. Le premier permet une recherche beaucoup plus efficace dans un index et le deuxième permet une décomposition beaucoup plus efficace en nombres premiers et donne la possibilité de *casser* les codes utilisés couramment aujourd'hui très rapidement. Cela signifierait que la sécurité liée au cryptage de bon nombre de communications et de transactions serait compromise [^13].
 
-### Coloniser l'espace ?
 
-cf étude du JPL :
-https://youtu.be/efrNLTVrpwg?t=397
 
-Portraits
-=========
 
-Notions
-=======
 
-Mathématique continues
-----------------------
 
-Du continu au discontinu
-------------------------
-
-<!--
-```{image} media/TMP/Frise-Notions.jpg 
-:width: 80% 
-:align: right 
-```
--->
-
-Technologies
-============
-
-<!--
-```{image} media/TMP/Frise_Technologies.jpg 
-:width: 80% 
-:align: right 
-```
-
-```{image} media/TMP/Frise_Technologie2.jpg 
-:width: 80% 
-:align: right 
-```
--->
-
-Le musée Bolo
-=============
-
-Les grandes entreprises de l'informatique
-=========================================
-
-IBM, Dec, SUN, Oracle, Microsoft, Netscape, Google, Apple, Facebook \....
-
-Une (encore plus brève) histoire du jeu vidéo
-=============================================
 
 [^1]: Souvent décrit comme la première tentative de robotisation, mais son comportement ne suit qu'un automatisme pré-établi
 

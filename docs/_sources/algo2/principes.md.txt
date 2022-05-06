@@ -1,5 +1,5 @@
 
-# 1. Terminaison et complexité 
+# Terminaison et complexité 
 
 
 ````{admonition} Matière à réfléchir. Compte à rebours
@@ -24,7 +24,7 @@ Qu’arrive-t-il lorsque l’on exécute la nouvelle version du  programme avec 
 
 ````
 
-## 1.0. Principe de terminaison
+## Principe de terminaison
 
 La **<span style="color:rgb(89, 51, 209)">terminaison</span>** est une propriété essentielle des {glo}`algo|algorithmes`, qui garantit que les calculs de l’algorithme finiront par s’arrêter. Lorsque l’on conçoit un algorithme, il est important de faire en sorte que les calculs s’arrêtent à un moment donné. Cette garantie doit tenir pour toutes les entrées possibles. Voici un exemple d’algorithme qui compte et qui ne se termine pas :
 
@@ -120,7 +120,7 @@ def Collatz(n) :
 
 
 
-## 1.1. Principe de complexité
+## Principe de complexité
 
 ````{admonition} Matière à réfléchir. Record de vitesse
 :class: attention
