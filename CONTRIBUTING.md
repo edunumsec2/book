@@ -163,4 +163,3 @@ Pour chaque thématique présente dans les ressources, il existe un certain nomb
 #### Charte
 
 Une charte rédactionnelle, [disponible ici](https://github.com/edunumsec2/book/blob/master/docs/wiki/charte.md), décrit les contraintes d'écriture. 
-

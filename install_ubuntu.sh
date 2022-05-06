@@ -24,6 +24,6 @@ code --install-extension seunlanlege.action-buttons
 code --install-extension ban.spellright
 
 # install virtual environment and Python dependencies
-python -m venv .env
+python3 -m venv .env
 source .env/bin/activate
-pip install -r requirements.txt
+pip3 install -r requirements.txt

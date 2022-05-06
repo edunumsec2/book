@@ -1,0 +1,682 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="15. Attendre - while" href="attendre.html" /><link rel="prev" title="13. Décider - if" href="decider.html" />
+
+    <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>14. Ecrire - str - Apprendre</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #5933D1;
+  --color-brand-content: #5933D1;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Apprendre</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Apprendre</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Première année</span></p>
+<ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rep-info/index.html">Représentation de l’information</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/entiers.html">2. 1. Les entiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/caracteres.html">3. 2. Les caractères</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/images.html">4. 3. Les images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/son.html">5. 4. Le son</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/redondance.html">6. 5. Redondance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/conclusion.html">7. Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Programmation I</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dessiner.html">1. Dessiner - <code class="docutils literal notranslate"><span class="pre">forward()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="definir.html">2. Définir - <code class="docutils literal notranslate"><span class="pre">def</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="colorier.html">3. Colorier - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="repeter.html">4. Répéter - <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="cercler.html">5. Cercler - <code class="docutils literal notranslate"><span class="pre">circle()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="memoriser.html">6. Mémoriser - <code class="docutils literal notranslate"><span class="pre">a=100</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="parcourir.html">7. Parcourir - <code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="write.html">8. Typographier - <code class="docutils literal notranslate"><span class="pre">write()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="iterer.html">9. Itérer - <code class="docutils literal notranslate"><span class="pre">range()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="parametrer.html">10. Paramétrer - <code class="docutils literal notranslate"><span class="pre">f(x)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="randomiser.html">11. Randomiser - <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="questionner.html">12. Questionner - <code class="docutils literal notranslate"><span class="pre">input()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="decider.html">13. Décider - <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">14. Ecrire - <code class="docutils literal notranslate"><span class="pre">str</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="attendre.html">15. Attendre - <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="renvoyer.html">16. Renvoyer - <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="grouper.html">17. Grouper - <code class="docutils literal notranslate"><span class="pre">list</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="trier.html">18. Trier - <code class="docutils literal notranslate"><span class="pre">sort()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="turtleart.html">19. TurtleArt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projet.html">20. Projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="annexe.html">21. Annexes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../algo1/index.html">Algorithmique I</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/algorithmes.html">1. Les algorithmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/tri.html">2. Trie, cherche et trouve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/algo-progs.html">3. Des algorithmes aux programmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../archi/index.html">Architecture des ordinateurs</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../archi/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/sys-log.html">1. Portes logiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/additionneur.html">2. Additionneur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/alu-mem.html">3. ALU et mémoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/archi-gen.html">4. Architecture générale et composants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/micro-pro.html">5. Le microprocesseur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html">Histoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#une-breve-histoire-de-linformatique">Une (brève) histoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#portraits">Portraits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#notions">Notions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#technologies">Technologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#le-musee-bolo">Le musée Bolo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#les-grandes-entreprises-de-linformatique">Les grandes entreprises de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#une-encore-plus-breve-histoire-du-jeu-video">Une (encore plus brève) histoire du jeu vidéo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/machines.html">Histoire des machines</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../algo2/index.html">Algorithmique II</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/complexite.html">1. Terminaison et complexité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recherche.html">2. Algorithmes de recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/tris.html">3. Algorithmes de tri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/heuristiques.html">4. Solutions heuristiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html">4. Récursivité [en option]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html#focus-sur-la-recursivite">4.1 Focus sur la récursivité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../prog2/index.html">Programmation II</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/onkey.html">1. Déclencher - <code class="docutils literal notranslate"><span class="pre">onkey()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/lambda.html">2. Formaliser - <code class="docutils literal notranslate"><span class="pre">lambda</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/onclick.html">3. Cliquer - <code class="docutils literal notranslate"><span class="pre">onclick()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/ontimer.html">4. Interrompre - <code class="docutils literal notranslate"><span class="pre">ontimer()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/turtle.html">5. Cloner - <code class="docutils literal notranslate"><span class="pre">Turtle</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/class.html">6. Créer - <code class="docutils literal notranslate"><span class="pre">class</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/inherit.html">7. Hériter - <code class="docutils literal notranslate"><span class="pre">E(P)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/math.html">8. Tracer - <code class="docutils literal notranslate"><span class="pre">math</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/dict.html">9. Associer - <code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/compter.html">10. Compter - <code class="docutils literal notranslate"><span class="pre">bin</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/color.html">11. Nuancer - <code class="docutils literal notranslate"><span class="pre">color</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/set.html">12. Appartenir - <code class="docutils literal notranslate"><span class="pre">set</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/bool.html">13. Raisonner - <code class="docutils literal notranslate"><span class="pre">bool</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/bit.html">14. Manipuler - <code class="docutils literal notranslate"><span class="pre">&amp;</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/recursif.html">15. Revenir - <code class="docutils literal notranslate"><span class="pre">f(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/vector.html">16. Vecteurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/force.html">17. Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/idees.html">18. Idées</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../projets/index.html">Projets</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projets/tic_tac_toe.html">1. Tic-tac-toe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/puissance4.html">2. Puissance 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/mines.html">3. Démineur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/snake.html">4. Snake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/game_of_life.html">5. Game of life</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/cartes.html">6. Poker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/tetris.html">7. Tetris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/art_absurde.html">8. Art absurde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/microbit/microbit.html">9. Micro:bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/crypto.html">10. Cryptographie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/idees.html">11. Idées</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resx/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/adressage.html">1. Adressage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/tcp-ip.html">2. TCP-IP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/routage.html">3. Routage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/web.html">4. Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/couches.html">5. Couches</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="ecrire-str">
+<span id="prog1-ecrire"></span><h1><span class="section-number">14. </span>Ecrire - <code class="docutils literal notranslate"><span class="pre">str</span></code><a class="headerlink" href="#ecrire-str" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Dans ce chapitre, nous allons nous intéresser au texte. Le texte est une catégorie d’information qui est essentielle dans beaucoup de programmes, tels qu’une application de messagerie ou un programme de traitement de texte.</p>
+<!-- ![text-based](media/text_game.jpg)
+
+```{admonition} Le saviez-vous ?
+:class: hint
+Les tout premiers jeux vidéos sur ordinateur utilisaient presque exclusivement du texte, et quelques dessins en ASCII art, pour plonger le joueur dans un univers d'aventure et de découvertes. Dans l'image ci-dessus, le texte dit "Vous êtes maintenant à la fin d'une route, en face d'un petit bâtiment en briques. Autour de vous il y a une forêt. Un ruisseau sort du bâtiment et s'écoule dans une rigole. - *Entrer dans le bâtiment*. Vous êtes à l'intérieur du bâtiment (...)"
+Ce qui est intéressant ici, c'est que c'est le joueur qui a dû trouver la commande lui permettant de réaliser une action qui l'a fait avancer dans le jeu. "Colossal Cave Adventure", dont l'extrait est issu, est un jeu de 1975, qui a fasciné une génération entière d'informaticiens qui ont cherché à résoudre les énigmes posées par le jeu pour arriver au bout de l'aventure. Aujourd'hui, il existe de nombreux outils en ligne vous permettant d'écrire des histoires interactives où vos lecteurs peuvent prendre des décisions sur la suite de l'aventure. 
+``` 
+-->
+<p>Techniquement un texte est appelé une <strong>chaîne de caractères</strong>, ou string en anglais (<code class="docutils literal notranslate"><span class="pre">str</span></code>). Nous allons voir que :</p>
+<ul class="simple">
+<li><p>un texte est délimité par une apostrophe <code class="docutils literal notranslate"><span class="pre">'text'</span></code> ou un guillemet double <code class="docutils literal notranslate"><span class="pre">"text"</span></code>,</p></li>
+<li><p>l’opérateur <code class="docutils literal notranslate"><span class="pre">*</span></code> répète un texte,</p></li>
+<li><p>la fonction <code class="docutils literal notranslate"><span class="pre">ord(c)</span></code> retourne l’entier <code class="docutils literal notranslate"><span class="pre">i</span></code> qui représenter le caractère <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p></li>
+</ul>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Un string informatique est</p>
+<p><label class="answer incorrect"><input type="checkbox"/>un sous-vêtement pour informaticien</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>une ficelle de données</label><br/>
+<label class="answer correct"><input type="checkbox"/>un enchaînement de lettres</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>un instrument de musique</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
+</form></div><section id="dire-bonjour">
+<h2>Dire bonjour<a class="headerlink" href="#dire-bonjour" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous commençons par le grand classique des livres d’introduction à la programmation : afficher la fameuse phrase <em>hello world</em>.
+La fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code> permet d’écrire du texte vers la console.
+Ici, la console est la zone rectangulaire qui s’affiche sous le code du programme.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoJ2hlbGxvIHdvcmxkLicp" data-file="aW5wdXQwLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Affichez encore 2-3 lignes de texte en plus avec la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</p>
+</section>
+<section id="delimiter-un-texte">
+<h2>Délimiter un texte<a class="headerlink" href="#delimiter-un-texte" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Tout caractère imprimable peut être utilisé pour créer un texte :</p>
+<ul class="simple">
+<li><p>lettres (<code class="docutils literal notranslate"><span class="pre">a...z</span></code> et <code class="docutils literal notranslate"><span class="pre">A...Z</span></code>)</p></li>
+<li><p>chiffres (<code class="docutils literal notranslate"><span class="pre">0...9</span></code>)</p></li>
+<li><p>ponctuations (<code class="docutils literal notranslate"><span class="pre">.,;:?!</span></code>)</p></li>
+<li><p>parenthèses (<code class="docutils literal notranslate"><span class="pre">[]{}&lt;&gt;</span></code>)</p></li>
+<li><p>symboles (<code class="docutils literal notranslate"><span class="pre">$*#...</span></code>)</p></li>
+</ul>
+<p>Pour marquer une partie du code comme texte, cette partie doit être délimité par l’un des symboles spéciaux qui sont :</p>
+<ul class="simple">
+<li><p>apostrophe (<code class="docutils literal notranslate"><span class="pre">'</span></code>)</p></li>
+<li><p>guillemets doubles (<code class="docutils literal notranslate"><span class="pre">"</span></code>)</p></li>
+<li><p>trois guillemets doubles (<code class="docutils literal notranslate"><span class="pre">"""</span></code>)</p></li>
+</ul>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoJ2Fwb3N0cm9waGUnKQpwcmludCgiZ3VpbGxlbWV0cyBkb3VibGVzIikKcHJpbnQoIiIiCkTDqWxpbWl0w6kgYXZlYyB0cm9pcyBndWlsbGVtZXRzLCAKbGUgdGV4dGUgcGV1dCBzJ8OpdGFsZXIgc3VyIHBsdXNpZXVycyBsaWduZXMuCiIiIik=" data-file="c3RyMS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Ajoutez des lignes supplémentaires au texte qui est délimité par <code class="docutils literal notranslate"><span class="pre">"""</span></code>.</p>
+</section>
+<section id="repeter-un-texte">
+<h2>Répéter un texte<a class="headerlink" href="#repeter-un-texte" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’opérateur <code class="docutils literal notranslate"><span class="pre">*</span></code> permet de répéter un texte composé d’un ou de plusieurs caractères.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoJ2hhJyAqIDEwKQpwcmludCgnPScgKiAyMCkKcHJpbnQoJ2hlbGxvICcgKiAzKQ==" data-file="c3RyMi5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Répétez une chaîne plus longue.</p>
+</section>
+<section id="concatener-un-texte">
+<h2>Concaténer un texte<a class="headerlink" href="#concatener-un-texte" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le mot <strong>concaténer</strong> veut dire enchaîner ou coller ensemble.</p>
+<p>L’opérateur <code class="docutils literal notranslate"><span class="pre">+</span></code> permet de concaténer deux chaînes de texte.
+Mais juxtaposer deux chaînes de texte et les séparer par zéro ou plusieurs espaces va aussi concaténer la chaîne.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoJ2JvbicgICAgJ2pvdXInKQpwcmludCgnYm9uJydqb3VyJykKcHJpbnQoJ2JvbicgKyAnam91cicp" data-file="c3RyMy5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="la-longueur-dune-chaine">
+<h2>La longueur d’une chaîne<a class="headerlink" href="#la-longueur-dune-chaine" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">len()</span></code> retourne la longueur d’une chaîne.
+La chaîne vide (<code class="docutils literal notranslate"><span class="pre">""</span></code>) a une longueur de 0.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQobGVuKCdib25qb3VyJykpCnByaW50KGxlbigiIikpCnByaW50KGxlbigiIiIKRMOpbGltaXTDqSBhdmVjIHRyb2lzIGd1aWxsZW1ldHMsIApsZSB0ZXh0ZSBwZXV0IHMnw6l0YWxlciBzdXIgcGx1c2lldXJzIGxpZ25lcy4KIiIiKSk=" data-file="c3RyNC5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Ajoutez quelques caractères et re-exécutez le code.</p>
+<p>Pour savoir combien de fois il faut répéter un symbole dans le but d’obtenir la même longueur qu’un texte donné, nous pouvons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">len()</span></code> et ainsi créer des lignes qui ont la même longueur qu’un texte.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="eCA9IGlucHV0KCdFbnRyZXogdW5lIHBocmFzZTogJykKcHJpbnQoJz0nICogbGVuKHgpKQpwcmludCh4KQpwcmludCgnPScgKiBsZW4oeCkp" data-file="c3RyNS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Entourez votre texte d’un autre symbole.</p>
+</section>
+<section id="le-code-ascii">
+<h2>Le code ASCII<a class="headerlink" href="#le-code-ascii" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le code ASCII  (American Standard Code for Information Interchange) était un des premiers standards utilisés pour représenter des symboles dans un ordinateur. Avec initialement 7 et plus tard 8 bits, il désigne un ensemble de lettres, chiffres, symboles et ponctuations.</p>
+<p>Aujourd’hui le standard Unicode permet d’encoder la totalité des symboles utilisés dans les différents langages du monde.</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">ord(c)</span></code> retourne le code ASCII (Unicode) qui est associé au caractère <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoJ0EgPScsIG9yZCgnQScpKQpwcmludCgnQiA9Jywgb3JkKCdCJykpCnByaW50KCdhID0nLCBvcmQoJ2EnKSk=" data-file="c3RyNi5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Nous constatons que :</p>
+<ul class="simple">
+<li><p>le code ASCII pour la lettre A est 65,</p></li>
+<li><p>les codes suivent l’ordre de l’alphabet,</p></li>
+<li><p>les codes des minuscules ont un écart de 32 par rapport au code des majuscules.</p></li>
+</ul>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Zm9yIGMgaW4gJ1B5dGhvbic6CiAgICBwcmludChjLCAnPScsIG9yZChjKSk=" data-file="c3RyNy5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>La fonction <code class="docutils literal notranslate"><span class="pre">chr(i)</span></code> retourne le caractère qui correspond au code <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Zm9yIGkgaW4gcmFuZ2UoNjUsIDc1KToKICAgIHByaW50KGksICc9JywgY2hyKGkpKQ==" data-file="c3RyOC5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="lart-ascii">
+<h2>L’art ASCII<a class="headerlink" href="#lart-ascii" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’<strong>art ASCII</strong> consiste à réaliser des images uniquement à l’aide des lettres et caractères spéciaux contenus dans le code ASCII.</p>
+<p>Précéder la chaîne de caractères avec <code class="docutils literal notranslate"><span class="pre">r</span></code> permet de ne pas tenir compte des symboles d’échappement (barre oblique en arrière <code class="docutils literal notranslate"><span class="pre">\</span></code>).</p>
+<p>Voici un exemple :</p>
+<p><img alt="rabbit" src="../_images/ascii-art.jpeg"/></p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQociIiIgogICAgICAgICAoKGBcIAogICAgICBfX18gXFwgJy0tLl8KICAgLidgICAgYCcgICAgbyAgKQogIC8gICAgXCAgICcuIF9fLicKIF98ICAgIC9fICBcIFxfXF8Ke19cX19fX19fXC0nXF9fXF9cCiIiIik=" data-file="c3RyOS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Le site <a class="reference external" href="https://www.asciiart.eu">asciiart.eu</a> contient beaucoup d’exemples d’art ASCII. Trouvez-en un et copiez-le dans un programme Python.</p>
+</section>
+<section id="echapper-un-caractere">
+<h2>Échapper un caractère<a class="headerlink" href="#echapper-un-caractere" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les symboles <code class="docutils literal notranslate"><span class="pre">'</span></code> et <code class="docutils literal notranslate"><span class="pre">"</span></code> sont utilisés pour délimiter du texte.
+Si nous voulons utiliser ces caractères à l’intérieur de la chaîne, nous devons les échapper avec une barre oblique en arrière <code class="docutils literal notranslate"><span class="pre">\</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoJ2NcJ2VzdCBiaWVuJykKcHJpbnQoIlwiY2l0YXRpb25cIiIp" data-file="c3RyMTAucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Si nous voulons imprimer le symbole d’échappement, nous devons l’échapper également.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoJ2NcJ2VzdCBsYSBcXGJhcnJlIG9ibGlxdWVcXCBlbiBhcnJpw6hyZS4nKQ==" data-file="c3RyMTEucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="une-chaine-brute">
+<h2>Une chaîne brute<a class="headerlink" href="#une-chaine-brute" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les chaînes de texte peuvent être préfixées par la lettre <code class="docutils literal notranslate"><span class="pre">r</span></code>; de telles chaînes sont appelées chaines brutes (raw strings en anglais) et traitent la barre oblique inversée comme un caractère normal.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQocidjXCdlc3QgYmllbicpCnByaW50KHIiXCJjaXRhdGlvblwiIikKcHJpbnQocidjXCdlc3QgbGEgXFxiYXJyZSBvYmxpcXVlXFwgZW4gYXJyacOocmUuJyk=" data-file="c3RyMTIucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="retour-a-la-ligne">
+<h2>Retour à la ligne<a class="headerlink" href="#retour-a-la-ligne" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Chaque commande <code class="docutils literal notranslate"><span class="pre">print()</span></code> se termine avec un retour à la ligne.
+Pour insérer un retour à la ligne à l’intérieur d’une chaîne de caractères nous utilisons la séquence d’échappement <code class="docutils literal notranslate"><span class="pre">\n</span></code> (newline).</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoJ2NoYXF1ZVxubW90XG5zdXJcbnVuZVxubGlnbmUnKQpwcmludCgnXG5oZWxsbyB3b3JsZCcgKiA1KQ==" data-file="c3RyMTMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Ajoutez une nouvelle ligne de code qui contient des <code class="docutils literal notranslate"><span class="pre">\n</span></code>.</p>
+</section>
+<section id="aligner-en-colonnes">
+<h2>Aligner en colonnes<a class="headerlink" href="#aligner-en-colonnes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La séquence <code class="docutils literal notranslate"><span class="pre">\t</span></code> (tabulateur) permet d’aligner des éléments de texte en colonne. Les colonnes sont espacées de 8 caractères.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoJ3F0ZVx0YXJ0Llx0cHJpeCcpCnByaW50KCc0XHRzb3VyaXNcdDE1Ljk1JykKcHJpbnQoJzEyXHRjbGF2aWVyXHQyNS45NScp" data-file="c3RyMTQucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="les-emojis">
+<h2>Les émojis<a class="headerlink" href="#les-emojis" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un  émoji (絵文字) est un terme issu du japonais pour désigner les pictogrammes utilisés dans les messages électroniques et les pages web japonaises, qui se sont répandus dans le monde entier.</p>
+<p>Le mot émoji signifie littéralement « image » (e) + « lettre » (moji) ; la ressemblance avec « émotion » est un jeu de mots interculturel.</p>
+<p>Un émoji peut être utilisé comme un caractère à l’intérieur d’un texte.
+Nous pouvons le répéter avec l’opérateur <code class="docutils literal notranslate"><span class="pre">*</span></code> et obtenir son code <strong>Unicode</strong> avec la fonction <code class="docutils literal notranslate"><span class="pre">ord(c)</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoJ/CfmIAnICogMTApCgpwcmludChvcmQoJ/CfjY4nKSkKcHJpbnQob3JkKCfwn5iAJykp" data-file="c3RyMTUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Avec la fonction <code class="docutils literal notranslate"><span class="pre">chr(i)</span></code> nous pouvons afficher les 10 caractères qui suivent l’émoji de pomme.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Zm9yIGkgaW4gcmFuZ2UoMTApOgogICAgcHJpbnQoY2hyKGkgKyAxMjc4MjIpKQ==" data-file="c3RyMTYucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Affichez les 10 emojis qui suivent 😀.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Utiliser des émojis dans Thonny ne fonctionne pas. Ceci fait planter Thonny !<br/>
+Le module graphique utilisé actuellement (Tk 8.6.8) ne supporte pas des émojis.
+Ce bug sera corrigé avec Thonny 4.0 qui utilisera la version Tk 8.6.12.</p>
+<p>Vous pouvez utiliser les émojis sans problème avec l’éditeur IDLE qui lui utilise Tk 8.6.11.</p>
+</div>
+<p>Vous pouvez utiliser dans Thonny sans problème les anciens pictogrammes en noir et blanc. Voici les codes Unicode de
+<a class="reference external" href="https://fr.wikipedia.org/wiki/Table_des_caract%C3%A8res_Unicode_(2000-2FFF)#Symboles_divers">symboles divers</a>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YyA9ICfimIAnCnByaW50KGMpCgpmb3IgaSBpbiByYW5nZSgyMCk6CiAgICBwcmludChjaHIoMHgyNjYwICsgaSksIGVuZD0nICcp" data-file="c3RyMTcucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="les-kanji">
+<h2>Les kanji<a class="headerlink" href="#les-kanji" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le japonais est écrit avec des pictogrammes qui s’appellent des kanjis.
+Avec la fonction <code class="docutils literal notranslate"><span class="pre">ord(c)</span></code> nous pouvons obtenir leur <strong>Unicode</strong>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoJ+aXpeacrOiqnicpCnByaW50KCduaWhvbmdvJykKcHJpbnQoJ2phcG9uYWlzXG4nKQoKZm9yIGMgaW4gICfml6XmnKzoqp4nOiAKICAgIHByaW50KGMsIG9yZChjKSk=" data-file="c3RyMTgucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Avec la fonction <code class="docutils literal notranslate"><span class="pre">chr(i)</span></code> nous pouvons afficher les 10 kanjis qui suivent le kanji 日 qui signifie soleil. Si vous regardez bien, vous remarquez qu’ils contiennent tous le radical pour soleil.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="biA9IG9yZCgn5pelJykKZm9yIGkgaW4gIHJhbmdlKG4sIG4gKyAxMCk6IAogICAgcHJpbnQoaSwgY2hyKGkpKQ==" data-file="c3RyMTkucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Affichez les 10 kanjis qui suivent 語 (langage).</p>
+</section>
+<section id="les-commentaires">
+<h2>Les commentaires<a class="headerlink" href="#les-commentaires" title="Lien permanent vers ce titre">¶</a></h2>
+<p>En Python, un commentaire est un bout de code qui est ignoré par Python.
+Un commentaire commence par le symbole hashtag (<code class="docutils literal notranslate"><span class="pre">#</span></code>).</p>
+<p>Les commentaires sont utilisés pour ajouter à un programme des informations supplémentaires :</p>
+<ul class="simple">
+<li><p>explications,</p></li>
+<li><p>nom de l’auteur,</p></li>
+<li><p>révision.</p></li>
+</ul>
+<p>Parfois un commentaire est utilisé pour désactiver une ligne de code.
+La plupart des éditeurs marquent les commentaires en couleur grisée.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBjb21tZW50YWlyZSBzdXIgdW5lIGxpZ25lCgpwcmludCgnYm9uam91cicpICAjIGNvbW1lbnRhaXJlIGVuIGZpbiBkZSBsaWduZQpwcmludCgiIyBjZWNpIG4nZXN0IHBhcyB1biBjb21tZW50YWlyZSIpCiMgcHJpbnQoJ2F1IHJldm9pcicpCgoiIiIKQ2VjaSBlc3QgCnVuIGxvbmcgY29tbWVudGFpcmUKc3VyIHBsdXNpZXVycyBsaWduZXMuCiIiIg==" data-file="c3RyMjAucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Enlever le # devant <code class="docutils literal notranslate"><span class="pre">print('au</span> <span class="pre">revoir')</span></code> pour l’exécuter.</p>
+</section>
+<section id="parcourir-une-chaine">
+<h2>Parcourir une chaîne<a class="headerlink" href="#parcourir-une-chaine" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La ligne de code <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">c</span> <span class="pre">in</span> <span class="pre">mot:</span></code> signifie que la variable <code class="docutils literal notranslate"><span class="pre">c</span></code> va prendre à chaque répétition un caractère différent de la chaîne <code class="docutils literal notranslate"><span class="pre">mot</span></code>.</p>
+<p>Quand la variable d’itération est un caractère on l’appelle souvent <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0aW1lIGltcG9ydCBzbGVlcAptb3QgPSBpbnB1dCgnRW50cmV6IHVuIG1vdDogJykKCmZvciBjIGluIG1vdDoKICAgIHByaW50KGMpCiAgICBzbGVlcCgwLjEp" data-file="c3RyMjEucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Testez avec des textes différents.</p>
+</section>
+<section id="narration">
+<h2>Narration<a class="headerlink" href="#narration" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Voici un exemple qui reproduit une conversation entre deux personnes, affichée au ralenti, lettre par lettre, pour simuler une sorte de communication chat en ligne.</p>
+<p>La méthode <code class="docutils literal notranslate"><span class="pre">split('\n')</span></code> découpe la chaine <code class="docutils literal notranslate"><span class="pre">histoire</span></code> en lignes séparées, et retourne une liste.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0aW1lIGltcG9ydCBzbGVlcAoKaGlzdG9pcmUgPSAiIiIKVW5lIGhpc3RvaXJlIGQnYXZlbnR1cmUKLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KQTogY29tbWVudCB2YXMtdHUgPwpCOiB0csOocyBiaWVuICEKQTogdmV1eC10dSBmYWlyZSB1biB2b3lhZ2UgPwpCOiBvdWksIHZlcnMgb8O5ID8KQTogw6AgUmlvIGRlIEphbmVpcm8uCkI6IGNob3VldHRlLCBvbiBwYXJ0IHF1YW5kID8KQTogaWwgeSBhIHVuIHZvbCBjZSBzb2lyLgoiIiIKCmZvciBsaW5lIGluIGhpc3RvaXJlLnNwbGl0KCdcbicpOgogICAgZm9yIGMgaW4gbGluZToKICAgICAgICBwcmludChjLCBlbmQ9JycpCiAgICAgICAgc2xlZXAoMC4xKQogICAgc2xlZXAoMSkKICAgIHByaW50KCk=" data-file="bmFycmF0aW9uLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="le-pendu">
+<h2>Le pendu<a class="headerlink" href="#le-pendu" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le jeu du <a class="reference external" href="https://fr.wikipedia.org/wiki/Pendu_(jeu)">pendu</a> consiste à trouver un mot en devinant les lettres qui le composent. Le jeu se joue traditionnellement à deux, avec un papier et un crayon, avec le dessin d’une potence, dans lequel pour chaque erreur un trait d’un bonhomme allumette est ajouté.</p>
+<section id="devoiler-un-mot">
+<h3>Dévoiler un mot<a class="headerlink" href="#devoiler-un-mot" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Dans le jeu du pendu, un mot est affiché avec des traits au début <code class="docutils literal notranslate"><span class="pre">_</span> <span class="pre">_</span> <span class="pre">_</span> <span class="pre">_</span> <span class="pre">_</span></code></p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bW90ID0gJ3BvdGlyb24nCmxldHRyZXMgPSAnYWJjdGluJwoKbW90MiA9ICcnCmZvciBjIGluIG1vdDoKICAgIGlmIGMgaW4gbGV0dHJlczoKICAgICAgICBtb3QyICs9IGMKICAgIGVsc2U6CiAgICAgICAgbW90MiArPSAnXycKICAgIG1vdDIgKz0gJyAnCgpwcmludChtb3QyKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Nous pouvons écrire ce code plus compact en utilisant l’expression
+<code class="docutils literal notranslate"><span class="pre">valeur1</span> <span class="pre">if</span> <span class="pre">condition</span> <span class="pre">else</span> <span class="pre">valeur2</span></code></p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bW90ID0gJ3BvdGlyb24nCmxldHRyZXMgPSAnYWJjdGluJwoKbW90MiA9ICcnCmZvciBjIGluIG1vdDoKICAgIG1vdDIgKz0gYyBpZiBjIGluIGxldHRyZXMgZWxzZSAnXycKICAgIG1vdDIgKz0gJyAnCgpwcmludChtb3QyKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="jouer-en-boucle">
+<h3>Jouer en boucle<a class="headerlink" href="#jouer-en-boucle" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bW90ID0gJ3BvdGlyb24nCmxldHRyZXMgPSAnJwpuID0gMAoKZm9yIGkgaW4gcmFuZ2UoMTApOgogICAgbW90MiA9ICcnCiAgICBmb3IgYyBpbiBtb3Q6CiAgICAgICAgbW90MiArPSBjIGlmIGMgaW4gbGV0dHJlcyBlbHNlICdfJwogICAgICAgIG1vdDIgKz0gJyAnCgogICAgeCA9IGlucHV0KG1vdDIgKyAnICBsZXR0cmU6ICcpCiAgICBpZiB4IGluIG1vdDoKICAgICAgICBsZXR0cmVzICs9IHgKICAgIGVsc2U6CiAgICAgICAgbiA9IG4gKyAx" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="dessin-du-pendu">
+<h3>Dessin du pendu<a class="headerlink" href="#dessin-du-pendu" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une première approche pour dessiner la potence avec le pendu pourrait être d’enchaîner les instructions de dessin sans aucune structure.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmEgPSA0MApmb3J3YXJkKDEwMCkKYmFja3dhcmQoNTApCmxlZnQoOTApCmZvcndhcmQoMTgwKQpyaWdodCg5MCkKZm9yd2FyZCg0MCkKbGVmdCg0NSkKYmFja3dhcmQoNTYpCmZvcndhcmQoNTYpCnJpZ2h0KDQ1KQpmb3J3YXJkKDUwKQpyaWdodCg5MCkKZm9yd2FyZCg0MCkKZG90KDIwKQpmb3J3YXJkKDIwKQpyaWdodCg0NSkKZm9yd2FyZChhKQpiYWNrd2FyZChhKQpsZWZ0KDkwKQpmb3J3YXJkKGEpCmJhY2t3YXJkKGEpCnJpZ2h0KDQ1KQpmb3J3YXJkKGEpCnJpZ2h0KDQ1KQpmb3J3YXJkKGEpCmJhY2t3YXJkKGEpCmxlZnQoOTApCmZvcndhcmQoYSkKYmFja3dhcmQoYSkKcmlnaHQoNDUpCmhpZGV0dXJ0bGUoKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="structurer-le-code">
+<h3>Structurer le code<a class="headerlink" href="#structurer-le-code" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Nous découpons le programme en sous-programme que nous nommons avec des noms descriptifs. Ensuite nous appelons toutes les fonctions pour dessiner la potence avec le pendu.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmEgPSA0MApkZWYgcG90ZW5jZSgpOgogICAgZm9yd2FyZCgxMDApCiAgICBiYWNrd2FyZCg1MCkKICAgIGxlZnQoOTApCiAgICBmb3J3YXJkKDE4MCkKICAgIHJpZ2h0KDkwKQogICAgZm9yd2FyZCg0MCkKICAgIGxlZnQoNDUpCiAgICBiYWNrd2FyZCg1NikKICAgIGZvcndhcmQoNTYpCiAgICByaWdodCg0NSkKICAgIGZvcndhcmQoNTApCiAgICByaWdodCg5MCkKICAgIGZvcndhcmQoNDApCgpkZWYgdGV0ZSgpOgogICAgZG90KDIwKQogICAgZm9yd2FyZCgyMCkKCmRlZiBicmFzMSgpOgogICAgcmlnaHQoNDUpCiAgICBmb3J3YXJkKGEpCiAgICBiYWNrd2FyZChhKQoKZGVmIGJyYXMyKCk6CiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZChhKQogICAgYmFja3dhcmQoYSkKCmRlZiB0b3JzZSgpOgogICAgcmlnaHQoNDUpCiAgICBmb3J3YXJkKGEpCgpkZWYgamFtYmUxKCk6CiAgICByaWdodCg0NSkKICAgIGZvcndhcmQoYSkKICAgIGJhY2t3YXJkKGEpCgpkZWYgamFtYmUyKCk6CiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZChhKQogICAgYmFja3dhcmQoYSkKICAgIGhpZGV0dXJ0bGUoKQoKcG90ZW5jZSgpCnRldGUoKQpicmFzMSgpCmJyYXMyKCkKdG9yc2UoKQpqYW1iZTEoKQpqYW1iZTIoKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="jeu-final">
+<h3>Jeu final<a class="headerlink" href="#jeu-final" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour pouvoir exécuter les fonctions du pendu au bon moment, nous plaçons les fonctions dans un tuple. Nous allons accéder la fonction avec un indice.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVzc2luID0gKHRldGUsIGJyYXMxLCBicmFzMiwgdG9yc2UsIGphbWJlMSwgamFtYmUyKQoKbW90ID0gJ3BvdGlyb24nCmxldHRyZXMgPSAnJwpuID0gMAoKZm9yIGkgaW4gcmFuZ2UoMTApOgogICAgbW90MiA9ICcnCiAgICBmb3IgYyBpbiBtb3Q6CiAgICAgICAgbW90MiArPSBjIGlmIGMgaW4gbGV0dHJlcyBlbHNlICdfJwogICAgICAgIG1vdDIgKz0gJyAnCgogICAgeCA9IGlucHV0KG1vdDIgKyAnICBsZXR0cmU6ICcpCiAgICBpZiB4IGluIG1vdDoKICAgICAgICBsZXR0cmVzICs9IHgKICAgIGVsc2U6CiAgICAgICAgZGVzc2luW25dKCkKICAgICAgICBuID0gbiArIDE=" data-file="Y29kZS5weQ==" data-output-max-lines="5" data-output-min-lines="5" data-prelude="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmEgPSA0MApkZWYgcG90ZW5jZSgpOgogICAgZm9yd2FyZCgxMDApCiAgICBiYWNrd2FyZCg1MCkKICAgIGxlZnQoOTApCiAgICBmb3J3YXJkKDE4MCkKICAgIHJpZ2h0KDkwKQogICAgZm9yd2FyZCg0MCkKICAgIGxlZnQoNDUpCiAgICBiYWNrd2FyZCg1NikKICAgIGZvcndhcmQoNTYpCiAgICByaWdodCg0NSkKICAgIGZvcndhcmQoNTApCiAgICByaWdodCg5MCkKICAgIGZvcndhcmQoNDApCgpkZWYgdGV0ZSgpOgogICAgZG90KDIwKQogICAgZm9yd2FyZCgyMCkKCmRlZiBicmFzMSgpOgogICAgcmlnaHQoNDUpCiAgICBmb3J3YXJkKGEpCiAgICBiYWNrd2FyZChhKQoKZGVmIGJyYXMyKCk6CiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZChhKQogICAgYmFja3dhcmQoYSkKCmRlZiB0b3JzZSgpOgogICAgcmlnaHQoNDUpCiAgICBmb3J3YXJkKGEpCgpkZWYgamFtYmUxKCk6CiAgICByaWdodCg0NSkKICAgIGZvcndhcmQoYSkKICAgIGJhY2t3YXJkKGEpCgpkZWYgamFtYmUyKCk6CiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZChhKQogICAgYmFja3dhcmQoYSkKICAgIGhpZGV0dXJ0bGUoKQoKcG90ZW5jZSgp" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+</section>
+<section id="exercices">
+<h2>Exercices<a class="headerlink" href="#exercices" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="le-jeu-du-pendu">
+<h3>Le jeu du pendu<a class="headerlink" href="#le-jeu-du-pendu" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Créez le jeu du pendu avec un répertoire de 50 mots dans un tuple. Votre programme choisit un de ces mots aléatoirement avec la fonction <code class="docutils literal notranslate"><span class="pre">choice()</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>, comme montré ci-dessous.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSByYW5kb20gaW1wb3J0ICoKCm1vdHMgPSAoJ2luZm9ybWF0aXF1ZScsICdvcmRpbmF0ZXVyJywgJ2NhbGN1bGF0cmljZScsICdtYWNoaW5lJywKICAgICAgICAncHJvY2Vzc2V1cicsICdtw6ltb2lyZScsICdhbGdvcml0aG1lJywgJ2JpbmFpcmUnKQoKbW90ID0gY2hvaWNlKG1vdHMpCnByaW50KG1vdCk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="attendre.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title"><span class="section-number">15. </span>Attendre - <code class="docutils literal notranslate"><span class="pre">while</span></code></div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="decider.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title"><span class="section-number">13. </span>Décider - <code class="docutils literal notranslate"><span class="pre">if</span></code></div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; CC-BY-NC |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
+            <a class="muted-link" href="../_sources/prog1/ecrire.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">14. Ecrire - <code class="docutils literal notranslate"><span class="pre">str</span></code></a><ul>
+<li><a class="reference internal" href="#dire-bonjour">Dire bonjour</a></li>
+<li><a class="reference internal" href="#delimiter-un-texte">Délimiter un texte</a></li>
+<li><a class="reference internal" href="#repeter-un-texte">Répéter un texte</a></li>
+<li><a class="reference internal" href="#concatener-un-texte">Concaténer un texte</a></li>
+<li><a class="reference internal" href="#la-longueur-dune-chaine">La longueur d’une chaîne</a></li>
+<li><a class="reference internal" href="#le-code-ascii">Le code ASCII</a></li>
+<li><a class="reference internal" href="#lart-ascii">L’art ASCII</a></li>
+<li><a class="reference internal" href="#echapper-un-caractere">Échapper un caractère</a></li>
+<li><a class="reference internal" href="#une-chaine-brute">Une chaîne brute</a></li>
+<li><a class="reference internal" href="#retour-a-la-ligne">Retour à la ligne</a></li>
+<li><a class="reference internal" href="#aligner-en-colonnes">Aligner en colonnes</a></li>
+<li><a class="reference internal" href="#les-emojis">Les émojis</a></li>
+<li><a class="reference internal" href="#les-kanji">Les kanji</a></li>
+<li><a class="reference internal" href="#les-commentaires">Les commentaires</a></li>
+<li><a class="reference internal" href="#parcourir-une-chaine">Parcourir une chaîne</a></li>
+<li><a class="reference internal" href="#narration">Narration</a></li>
+<li><a class="reference internal" href="#le-pendu">Le pendu</a><ul>
+<li><a class="reference internal" href="#devoiler-un-mot">Dévoiler un mot</a></li>
+<li><a class="reference internal" href="#jouer-en-boucle">Jouer en boucle</a></li>
+<li><a class="reference internal" href="#dessin-du-pendu">Dessin du pendu</a></li>
+<li><a class="reference internal" href="#structurer-le-code">Structurer le code</a></li>
+<li><a class="reference internal" href="#jeu-final">Jeu final</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#exercices">Exercices</a><ul>
+<li><a class="reference internal" href="#le-jeu-du-pendu">Le jeu du pendu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/glossary.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/timeline.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>

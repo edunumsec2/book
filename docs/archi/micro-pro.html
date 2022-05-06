@@ -1,0 +1,695 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Conclusion" href="conclusion.html" /><link rel="prev" title="4. Architecture générale et composants" href="archi-gen.html" />
+
+    <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>5. Le microprocesseur - Apprendre</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #5933D1;
+  --color-brand-content: #5933D1;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Apprendre</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Apprendre</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Première année</span></p>
+<ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rep-info/index.html">Représentation de l’information</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/entiers.html">2. 1. Les entiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/caracteres.html">3. 2. Les caractères</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/images.html">4. 3. Les images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/son.html">5. 4. Le son</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/redondance.html">6. 5. Redondance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/conclusion.html">7. Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/dessiner.html">1. Dessiner - <code class="docutils literal notranslate"><span class="pre">forward()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/definir.html">2. Définir - <code class="docutils literal notranslate"><span class="pre">def</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/repeter.html">4. Répéter - <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/cercler.html">5. Cercler - <code class="docutils literal notranslate"><span class="pre">circle()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/memoriser.html">6. Mémoriser - <code class="docutils literal notranslate"><span class="pre">a=100</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/parcourir.html">7. Parcourir - <code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/write.html">8. Typographier - <code class="docutils literal notranslate"><span class="pre">write()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/iterer.html">9. Itérer - <code class="docutils literal notranslate"><span class="pre">range()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/parametrer.html">10. Paramétrer - <code class="docutils literal notranslate"><span class="pre">f(x)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/randomiser.html">11. Randomiser - <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/questionner.html">12. Questionner - <code class="docutils literal notranslate"><span class="pre">input()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/decider.html">13. Décider - <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/ecrire.html">14. Ecrire - <code class="docutils literal notranslate"><span class="pre">str</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/attendre.html">15. Attendre - <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/renvoyer.html">16. Renvoyer - <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/grouper.html">17. Grouper - <code class="docutils literal notranslate"><span class="pre">list</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/trier.html">18. Trier - <code class="docutils literal notranslate"><span class="pre">sort()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/turtleart.html">19. TurtleArt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/projet.html">20. Projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/annexe.html">21. Annexes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../algo1/index.html">Algorithmique I</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/algorithmes.html">1. Les algorithmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/tri.html">2. Trie, cherche et trouve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/algo-progs.html">3. Des algorithmes aux programmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Architecture des ordinateurs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sys-log.html">1. Portes logiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="additionneur.html">2. Additionneur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alu-mem.html">3. ALU et mémoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="archi-gen.html">4. Architecture générale et composants</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">5. Le microprocesseur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html">Histoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#une-breve-histoire-de-linformatique">Une (brève) histoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#portraits">Portraits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#notions">Notions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#technologies">Technologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#le-musee-bolo">Le musée Bolo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#les-grandes-entreprises-de-linformatique">Les grandes entreprises de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#une-encore-plus-breve-histoire-du-jeu-video">Une (encore plus brève) histoire du jeu vidéo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/machines.html">Histoire des machines</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../algo2/index.html">Algorithmique II</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/complexite.html">1. Terminaison et complexité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recherche.html">2. Algorithmes de recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/tris.html">3. Algorithmes de tri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/heuristiques.html">4. Solutions heuristiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html">4. Récursivité [en option]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html#focus-sur-la-recursivite">4.1 Focus sur la récursivité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../prog2/index.html">Programmation II</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/onkey.html">1. Déclencher - <code class="docutils literal notranslate"><span class="pre">onkey()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/lambda.html">2. Formaliser - <code class="docutils literal notranslate"><span class="pre">lambda</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/onclick.html">3. Cliquer - <code class="docutils literal notranslate"><span class="pre">onclick()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/ontimer.html">4. Interrompre - <code class="docutils literal notranslate"><span class="pre">ontimer()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/turtle.html">5. Cloner - <code class="docutils literal notranslate"><span class="pre">Turtle</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/class.html">6. Créer - <code class="docutils literal notranslate"><span class="pre">class</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/inherit.html">7. Hériter - <code class="docutils literal notranslate"><span class="pre">E(P)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/math.html">8. Tracer - <code class="docutils literal notranslate"><span class="pre">math</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/dict.html">9. Associer - <code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/compter.html">10. Compter - <code class="docutils literal notranslate"><span class="pre">bin</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/color.html">11. Nuancer - <code class="docutils literal notranslate"><span class="pre">color</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/set.html">12. Appartenir - <code class="docutils literal notranslate"><span class="pre">set</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/bool.html">13. Raisonner - <code class="docutils literal notranslate"><span class="pre">bool</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/bit.html">14. Manipuler - <code class="docutils literal notranslate"><span class="pre">&amp;</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/recursif.html">15. Revenir - <code class="docutils literal notranslate"><span class="pre">f(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/vector.html">16. Vecteurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/force.html">17. Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/idees.html">18. Idées</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../projets/index.html">Projets</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projets/tic_tac_toe.html">1. Tic-tac-toe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/puissance4.html">2. Puissance 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/mines.html">3. Démineur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/snake.html">4. Snake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/game_of_life.html">5. Game of life</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/cartes.html">6. Poker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/tetris.html">7. Tetris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/art_absurde.html">8. Art absurde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/microbit/microbit.html">9. Micro:bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/crypto.html">10. Cryptographie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/idees.html">11. Idées</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resx/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/adressage.html">1. Adressage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/tcp-ip.html">2. TCP-IP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/routage.html">3. Routage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/web.html">4. Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/couches.html">5. Couches</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="le-microprocesseur">
+<h1>5. Le microprocesseur<a class="headerlink" href="#le-microprocesseur" title="Lien permanent vers ce titre">¶</a></h1>
+<p>On a précédemment détaillé les différents composants d’un ordinateur, puis étudié le fonctionnement des systèmes logiques à partir desquels on peut construire un processeur. On va à présent évoquer l’architecture de von Neumann qui décrit la façon dont le processeur s’insère dans son environnement. Les différents éléments qui constituent le processeur et qui en assurent le bon fonctionnement seront ensuite détaillés.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<img alt="img-top" class="card-img-top" src="../_images/Gordon_Moore.jpeg"/>
+<div class="card-header docutils">
+<p class="card-text">Gordon Moore</p>
+</div>
+<div class="card-body docutils">
+<ul class="simple">
+<li><p class="card-text"><strong>Naissance</strong> 1929 / San Francisco 🇺🇸</p></li>
+</ul>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+Bio<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Gordon Earle Moore est le cofondateur d’Intel en 1968. Intel est le premier fabricant mondial de microprocesseurs. Gordon Moore est célèbre pour avoir formulé en 1965 une loi empirique portant son nom : <strong>loi de Moore</strong>. Cette loi prédit un doublement de la complexité, et donc du nombre de transistors présents dans les microprocesseurs tous les deux ans. Bien que nous ayons atteint certaines limites physiques au niveau atomique et des effets de bruits parasites liés aux effets quantiques et à la désintégration alpha, la loi est toujours vérifiée aujourd’hui malgré un ralentissement de la progression pour certaines caractéristiques. Ces limites sont aujourd’hui compensées par des puces intégrant de plus en plus de composants de plus en plus complexes.</p>
+</div>
+</details></div>
+</div>
+</div>
+</div>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">(micro)-processeur</p>
+<p>Le processeur est l’unité de traitement central de l’ordinateur. Il est construit avec des circuits regroupés en systèmes qui produisent des fonctions logiques et arithmétiques en suivant un programme et en utilisant des éléments de mémoire appelés registres.
+Un microprocesseur est un processeur construit avec un circuit intégré, c’est-à-dire un dispositif qui tient sur quelques cm<sup>2</sup>. Il n’y a donc que la taille qui fasse la différence.</p>
+</div>
+<section id="horloge-et-acces-memoire">
+<h2>5.1. Horloge et accès mémoire<a class="headerlink" href="#horloge-et-acces-memoire" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un processeur est un dispositif synchrone, ce qui signifie que les opérations à l’intérieur du processeur se déroulent de manière synchrone à un temps donné. Pour assurer cette simultanéité, il faut comme pour un orchestre, donner le tempo. Cette fonction de métronome est assurée par une horloge, ou un signal d’horloge. Cette horloge est constituée d’un simple signal carré <!-- TODO: ajouter image --> dont la fréquence atteint aujourd’hui plusieurs gigahertz, c’est-à-dire plusieurs milliards de cycles par seconde.</p>
+<div class="attention admonition">
+<p class="admonition-title">La notion de <em>synchronisation</em></p>
+<p>La notion de synchronisation est centrale.
+Les systèmes numériques synchrones sont ceux dont les opérations (instructions, calculs, logique, etc.) sont coordonnées par un ou plusieurs signaux d’horloge centralisés, par opposition, aux systèmes asynchrones qui n’ont pas d’horloge globale.
+Les systèmes asynchrones ne dépendent pas d’heures d’arrivée strictes des signaux ou des messages pour un fonctionnement fiable. La coordination est obtenue via des tests sur l’arrivée des évènements.</p>
+<p>Sans entrer dans les détails ici, on notera que dans un système synchrone, il est possible d’assurer une coordination et une cohérence des opérations, ce qui est impossible autrement. Cet aspect devient crucial dans les systèmes distribués qui ne disposent plus de la garantie de synchronisation.</p>
+<p>Les circuits asynchrones ont été envisagés comme une alternative possible aux circuits synchrones, plus répandus, particulièrement pour diminuer la consommation d’énergie, augmenter la vitesse, faciliter la conception et augmenter la fiabilité. Il semblerait qu’après avoir été un peu délaissée par le monde de la recherche et du développement depuis les années 1990 et 2000, la thématique des circuits asynchrones suscite à nouveau un regain d’intérêt, en particulier relativement aux impératifs de faible consommation énergétique en relation avec le changement climatique.</p>
+</div>
+<section id="lacces-a-la-memoire">
+<h3>L’accès à la mémoire<a class="headerlink" href="#lacces-a-la-memoire" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="danger admonition">
+<p class="admonition-title">Rappel</p>
+<p>Comme on l’a vu dans l’architecture de von Neumman, la mémoire contient le programme et les données du programme. Un programme peut donc théoriquement se modifier lui-même en se modifiant dans la mémoire, même si, en pratique, toutes les architectures modernes l’interdisent (c’est rarement un effet souhaité !).</p>
+</div>
+<p>L’UCT doit accéder à la mémoire RAM en lecture ou en écriture. Les deux mécanismes sont très similaires, mais avant de regarder plus en détail comment cela fonctionne, il faut d’abord définir comment la mémoire est structurée. La mémoire RAM permet, comme on l’a vu au premier chapitre, d’accéder à tout moment à n’importe quel emplacement.</p>
+<p>Pour y accéder, le processeur envoie d’abord l’adresse au module mémoire, puis lit ou écrit la valeur via le bus d’adressage.</p>
+<div class="attention admonition">
+<p class="admonition-title">Anecdote</p>
+<p>Le processeur Intel 80286 (ancêtre des processeurs Pentium), sorti en 1982, présentait un bus de données de 16 bits et un bus d’adresses de 24 bits. De plus l’adressage par segments (relativement compliqué) réduisait l’adressage physique à un adressage sur 20 bits.</p>
+</div>
+<p>Il manque encore un élément : lorsque la mémoire voit une adresse apparaître elle doit pouvoir déterminer s’il s’agit d’une lecture ou d’une écriture. Pour cela deux connexions supplémentaires relient le processeur à la mémoire : une ligne <em>enable</em> et une ligne <em>set</em>. Lorsque la ligne <em>enable</em> est à 1, alors le processeur accède à la mémoire en lecture et sur le bus de données doit apparaître les données qui sont stockées dans la mémoire à l’adresse indiquée sur le bus d’adressage. Lorsque c’est la ligne <em>set</em> qui est à 1, alors la mémoire doit enregistrer les données à l’adresse indiquée.</p>
+<div class="hint admonition">
+<p class="admonition-title">Le contenu de la mémoire</p>
+<p><strong>Les instructions</strong> :
+la mémoire contient le programme sous forme de codes qui représentent des instructions à exécuter par le processeur. Ces codes correspondent à un jeu d’instructions propre à chaque modèle de processeur. On parle de langage machine. Pour écrire de tels programmes, on utilise un programme et un langage assembleur, proche de la machine : c’est une représentation exacte du langage machine, mais qui est une interface plus lisible dans la communication machine. C’est le langage de plus bas niveau qui représente le langage machine sous une forme lisible par un humain.</p>
+<p><strong>Les données</strong> :
+les données stockées dans la mémoire peuvent être des nombres, des lettres, des chaînes de caractères ainsi que des adresses d’autres emplacements en mémoire. On trouvera plus de détails à ce sujet dans le chapitre <span class="xref myst"><em>Représentation de l’information</em></span>.</p>
+</div>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question 1</p>
+<div class="question-content docutils">
+<p>Avec un bus d’adressage de 24 bits, quelle est la taille maximum de la mémoire ?</p>
+<ul class="simple">
+<li><p><label class="answer incorrect"><input type="checkbox"/>32ko</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>16Mo</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>16Go</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
+</form></div><div class="question"><form><div class="admonition">
+<p class="admonition-title">Question 2</p>
+<div class="question-content docutils">
+<p>Quelle est la taille maximale de la mémoire pour un processeur 80286, sachant que l’adressage physique est finalement réduit à 20 bits ?</p>
+<ul class="simple">
+<li><p><label class="answer incorrect"><input type="checkbox"/>32ko</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>16Mo</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>1Mo</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
+</form></div></section>
+<section id="lunite-de-controle">
+<h3>L’unité de contrôle<a class="headerlink" href="#lunite-de-controle" title="Lien permanent vers ce titre">¶</a></h3>
+<p>L’unité de contrôle reçoit les instructions en provenance de la RAM. Elle s’occupe d’activer les composants qui doivent l’être dans le microprocesseur.</p>
+</section>
+<section id="les-registres">
+<h3>Les registres<a class="headerlink" href="#les-registres" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les registres permettent de stocker des valeurs, comme la RAM, mais directement à l’intérieur du processeur. Ils fonctionnent aussi en mode lecture ou écriture. C’est l’unité de contrôle qui détermine si un registre est utilisé en lecture ou en écriture avec deux fils de connexion: <em>enable</em> et <em>set</em>.
+En principe ces registres stockent les informations en provenance de la mémoire ou le résultat d’un calcul.
+Il existe trois registres plus spécifiques :</p>
+<section id="u-le-registre-detat-u">
+<h4><u> Le registre d’état </u><a class="headerlink" href="#u-le-registre-detat-u" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Le registre d’état regroupe les drapeaux (en anglais <em>flags</em>). Ils servent à renseigner l’état d’exécution du processeur. Par exemple le drapeau <em>dépassement</em> s’il est mis à 1 signale qu’un dépassement de capacité est survenu, ou encore le drapeau <em>division par zéro</em> signale une division par zéro.</p>
+</section>
+</section>
+<section id="le-compteur-de-programme">
+<h3>Le compteur de programme<a class="headerlink" href="#le-compteur-de-programme" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le compteur de programme (registre <strong>PC</strong> pour <em>Program Counter</em>) contient l’adresse mémoire de la prochaine instruction devant être exécutée. En principe l’unité de contrôle l’incrémente de un après chaque instruction, mais certaines instructions qui permettent de se <em>brancher</em> ailleurs dans le programme modifient différemment ce registre.</p>
+</section>
+<section id="le-compteur-de-pile">
+<h3>Le compteur de pile<a class="headerlink" href="#le-compteur-de-pile" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le compteur de pile (registre <strong>SP</strong> pour <em>Stack Pointer</em>) contient la position sur une pile. Cette dernière est une zone mémoire à laquelle on ne peut pas accéder aléatoirement, mais uniquement en empilant ou dépilant des éléments.</p>
+</section>
+</section>
+<section id="lunite-arithmetique-et-logique">
+<h2>5.2. L’unité arithmétique et logique<a class="headerlink" href="#lunite-arithmetique-et-logique" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’unité arithmétique et logique (UAL plus communément appelée ALU en abréviation anglaise) effectue tous les calculs arithmétiques et logiques. Quelques-uns de ces composants comme l’additionneur ont été abordés dans le chapitre <em>De la logique à l’arithmétique</em>.</p>
+<section id="u-exemple-le-6502-u">
+<h3><u> Exemple : le 6502 </u><a class="headerlink" href="#u-exemple-le-6502-u" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le 6502, conçu en 1975, est le premier microprocesseur grand public avec un prix de 25$ (bien en-dessous des concurrents de cette époque). Une de ses premières utilisations pour le grand public fut la console de jeux vidéo Atari 2600. A partir de 1985, Nintendo équipe la NES d’une version modifiée du 6502. Il a équipé également le célèbre Apple II. Il a donné lieu à de nombreuses versions, jusqu’aux processeurs 16 bits actuels de dernière génération.</p>
+<figure class="align-left" id="id1">
+<a class="reference internal image-reference" href="../_images/6502_pad_annot_07.png"><img alt="../_images/6502_pad_annot_07.png" src="../_images/6502_pad_annot_07.png" style="width: 600px; height: 400px;"/></a>
+<figcaption>
+<p><span class="caption-text">Ce schéma détaille l’ensemble des transistors du 6502. On voit également quelques-uns des éléments principaux (horloge, registres, etc)</span><a class="headerlink" href="#id1" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+<div class="note admonition">
+<p class="admonition-title">Activité</p>
+<p><a class="reference external" href="http://visual6502.org/JSSim/index.html">Simulateur visuel du 6502</a></p>
+<p>Ce simulateur reproduit le fonctionnement complet du 6502 jusque dans l’activité de chaque transistor. On peut clairement visualiser la façon dont la complexité du fonctionnement de ce qu’on appelle communément le <em>cerveau</em> de l’ordinateur émerge de la quantité de dispositifs triviaux pris individuellement.</p>
+<ol>
+<li><p>Observer le déroulement du programme proposé et tenter d’en déduire le fonctionnement. On pourra s’aider du désassembleur proposé sur la même page.</p>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Que fait le programme en exemple sur le site visual6502 ?
+<label class="answer incorrect"><input type="checkbox"/>Il parcourt la mémoire et recopie la valeur 40 à des adresses successives.</label>
+<label class="answer correct"><input type="checkbox"/>Il effectue une boucle et incrémente une valeur en mémoire à l’adresse FF.</label>
+<label class="answer incorrect"><input type="checkbox"/>Il additionne deux registres et stocke le résultat dans un autre registre.</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
+</form></div></li>
+</ol>
+<p><br/> 2. Modifier ou écrire un nouveau programme en allant sur la page <em>Avanced</em>.</p>
+<!-- REVIEW/Olivier: Alors là, sérieusement, c'est super-difficile à voir ce qui se passe... Un peu en effet ! Mais bon.../CD -->
+</div>
+<p><br/> <br/></p>
+<div class="note admonition">
+<p class="admonition-title">Aller plus loin</p>
+<p>La partie qui suit présente de manière plus approfondie certaines spécificités des processeurs modernes.</p>
+</div>
+</section>
+</section>
+<section id="processeur-a-noyau-unique">
+<h2>5.3. Processeur à noyau unique<a class="headerlink" href="#processeur-a-noyau-unique" title="Lien permanent vers ce titre">¶</a></h2>
+<p>C’est le processeur standard : un processeur à noyau unique ou CPU utilise un seul noyau à l’intérieur du processeur.</p>
+<p>Avantages :</p>
+<p>Un processeur à un seul cœur consomme moins d’énergie que les processeurs à plusieurs cœurs. Ceci est surtout problématique pour les appareils mobiles, oû le problème de l’autonomie de la batterie est essentiel.
+Comme les processeurs à cœur unique consomment moins d’énergie, l’ensemble du système qu’ils font fonctionner chauffe moins.
+Un processeur à un seul cœur est toujours adapté pour la plupart des applications : vérification du courrier, navigation sur Internet, téléchargement de données, etc. peuvent toujours être traitées par un processeur à noyau unique.</p>
+<p>Inconvénients :</p>
+<p>C’est un processeur relativement lent. Il n’a pas une grande puissance de calcul pour traiter de grandes opérations complexes, ou plusieurs opérations à la fois.
+Comme les applications modernes nécessitent une grande puissance de traitement, un processeur monocœur qui les fait fonctionner peut se bloquer, paralysant ainsi l’ensemble du système alors « planté ».</p>
+</section>
+<section id="processeur-a-double-coeur">
+<h2>5.4. Processeur à double cœur<a class="headerlink" href="#processeur-a-double-coeur" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un processeur à double cœur possède deux cœurs pour exécuter les opérations, intégrés dans un circuit unique pour se comporter comme une seule unité - un seul processeur -, à la différence d’un système multiprocesseur ; toutefois, ces cœurs possèdent leurs propres contrôleurs et caches, ce qui leur permet de travailler plus rapidement que les processeurs à cœur unique.</p>
+<figure class="align-left" id="id2">
+<a class="reference internal image-reference" href="../_images/2coeurs.png"><img alt="../_images/2coeurs.png" src="../_images/2coeurs.png" style="width: 600px; height: 400px;"/></a>
+<figcaption>
+<p><span class="caption-text">Microprocesseur bicœur</span><a class="headerlink" href="#id2" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+<p><br/> <br/></p>
+<p>Avantages :</p>
+<p>Un processeur double cœur exécute l’ensemble des tâches beaucoup plus rapidement. Si un processeur à noyau unique est chargé de deux tâches différentes, il ne peut pas les effectuer simultanément. Il passe à toutes les tâches une par une, en série, alors qu’un processeur à double cœur peut effectuer les deux opérations en même temps, en parallèle.
+Un processeur double cœur « équivaut » à deux ordinateurs en un… mais à un tarif moindre.</p>
+<p>Inconvénients :</p>
+<p>Peu d’opérations nécessitent réellement la puissance des processeurs double cœur. Une grande partie de la puissance est ainsi gaspillée et vide rapidement la batterie. Un appareil mobile utilisé à des fins informatiques générales, telles que la vérification du courrier électronique, la navigation sur Internet, la saisie de documents et le partage de données, ne nécessite pas réellement la puissance d’un processeur double cœur.
+Pour ces raisons, de nombreux développeurs d’applications mobiles ne programment pas leurs applications pour qu’elles fonctionnent avec des processeurs à multiple cœur, les rendant ainsi incompatibles avec les mobiles qui fonctionnent toujours avec des processeurs à double ou multiple cœur.</p>
+</section>
+<section id="les-processeurs-quadricoeur-et-autres-processeurs-a-coeurs-multiples">
+<h2>5.5. Les processeurs quadricœur et autres processeurs à cœurs multiples<a class="headerlink" href="#les-processeurs-quadricoeur-et-autres-processeurs-a-coeurs-multiples" title="Lien permanent vers ce titre">¶</a></h2>
+<p>En termes simples, un processeur quadricœur possède quatre cœurs et il en va de même pour un processeur hexacœur (six cœurs), octocœur (huit cœurs), etc… Ces cœurs peuvent être soit sur le même circuit intégré, soit sur le même boîtier de puce.</p>
+<figure class="align-left" id="id3">
+<a class="reference internal image-reference" href="../_images/4coeurs.png"><img alt="../_images/4coeurs.png" src="../_images/4coeurs.png" style="width: 600px; height: 400px;"/></a>
+<figcaption>
+<p><span class="caption-text">Microprocesseur quadricœur</span><a class="headerlink" href="#id3" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+<br/>
+<figure class="align-left" id="id4">
+<a class="reference internal image-reference" href="../_images/8coeurs.png"><img alt="../_images/8coeurs.png" src="../_images/8coeurs.png" style="width: 600px; height: 400px;"/></a>
+<figcaption>
+<p><span class="caption-text">Microprocesseur octocœur</span><a class="headerlink" href="#id4" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+<p><br/> <br/></p>
+<p>Avantages :</p>
+<p>Le multitâche est le principal avantage des processeurs quadri ou octocœurs. Un plus grand nombre de cœurs offre évidemment une plus grande capacité à effectuer plusieurs tâches en parallèle.
+Ces processeurs sont utiles pour exécuter des applications qui sont plutôt intensives et nécessitent beaucoup de ressources. Ces applications comprennent les éditeurs vidéo, les antivirus, les programmes graphiques, etc.
+Les nouveaux processeurs quadricœurs consomment moins d’énergie, dégagent moins de chaleur, et sont donc très efficaces.
+Ces processeurs sont en fait très en avance sur la technologie actuelle de développement d’applications mobiles, car tous les développeurs ne sont pas capables de programmer des applications fonctionnant sur ces processeurs multiples. De nombreux programmes sont encore écrits pour des processeurs à double ou simple cœur.</p>
+<p>Inconvénients :</p>
+<p>… encore et toujours la consommation énergétique, vidant très rapidement la batterie.</p>
+<p>Le nombre de cœurs de processeur est important dans certaines activités comme le <em>gaming</em> : il est de plus en plus courant de trouver des processeurs hexa-cœurs, ou octo-cœurs ; <a class="reference external" href="https://www.futura-sciences.com/tech/comparatifs/meilleur-processeur-comparatif">les dernières générations de multiprocesseurs possèdent jusqu’à 12 ou 16 cœurs</a> !</p>
+<p>On doit également mentionner les cœurs logiques, c’est-à-dire les <em>threads</em>, comme on les appelle plus communément (tâches en français). La performance d’un monoprocesseur est jugée sur sa capacité à gérer plusieurs « fils » d’instructions. Du point de vue de l’utilisateur, ces exécutions semblent se dérouler en parallèle. Toutefois, là où chaque processus possède sa propre mémoire virtuelle, les threads d’un même processus se partagent sa mémoire virtuelle. Par contre, tous les threads possèdent leur propre pile d’exécution.</p>
+<p>Les technologies d’hyperthreading d’Intel et de multithreading d’AMD permettent à un seul cœur physique de gérer deux tâches simultanément, fonctionnant ainsi comme deux cœurs logiques distincts. Cette technologie est aujourd’hui très performante.
+La plupart de la gamme Ryzen d’AMD propose le multithreading, y compris les modèles de milieu et de haut de gamme, tandis que l’hyperthreading est pour l’instant réservé aux processeurs i7 et i9 haut de gamme d’Intel.</p>
+</section>
+<section id="le-pipeline">
+<h2>5.6. Le pipeline<a class="headerlink" href="#le-pipeline" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On l’a vu, l’exécution d’une instruction par le microprocesseur implique plusieurs opérations : accès à la mémoire en lecture et en écriture, accès aux registres en lecture et en écriture, opération logique. Pour optimiser la vitesse d’exécution, les processeurs modernes effectuent en série ces opérations. Ainsi, alors que les opérations logiques d’une instruction sont effectuées, l’instruction précédente est déjà chargée en mémoire. La difficulté de ce type d’optimisation réside dans le fait que des branchements conditionnels provoquent l’annulation des instructions déjà chargées. Pour optimiser encore ce genre de procédé, les processeurs font de la prédiction dans l’exécution. Ces optimisations sont extrêmement compliquées à gérer.</p>
+<div class="attention admonition">
+<p class="admonition-title">Anecdote</p>
+<p>La vulnérabilité Spectre (ainsi que d’autres vulnérabilités similaires) exploite justement cette fonction de prédiction dans l’exécution de branchements conditionnels pour accéder à des emplacements mémoire auxquels le programme ne devrait en principe pas accéder.</p>
+</div>
+<br/>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="conclusion.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Conclusion</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="archi-gen.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">4. Architecture générale et composants</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; CC-BY-NC |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
+            <a class="muted-link" href="../_sources/archi/micro-pro.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">5. Le microprocesseur</a><ul>
+<li><a class="reference internal" href="#horloge-et-acces-memoire">5.1. Horloge et accès mémoire</a><ul>
+<li><a class="reference internal" href="#lacces-a-la-memoire">L’accès à la mémoire</a></li>
+<li><a class="reference internal" href="#lunite-de-controle">L’unité de contrôle</a></li>
+<li><a class="reference internal" href="#les-registres">Les registres</a><ul>
+<li><a class="reference internal" href="#u-le-registre-detat-u"><u> Le registre d’état </u></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#le-compteur-de-programme">Le compteur de programme</a></li>
+<li><a class="reference internal" href="#le-compteur-de-pile">Le compteur de pile</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lunite-arithmetique-et-logique">5.2. L’unité arithmétique et logique</a><ul>
+<li><a class="reference internal" href="#u-exemple-le-6502-u"><u> Exemple : le 6502 </u></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#processeur-a-noyau-unique">5.3. Processeur à noyau unique</a></li>
+<li><a class="reference internal" href="#processeur-a-double-coeur">5.4. Processeur à double cœur</a></li>
+<li><a class="reference internal" href="#les-processeurs-quadricoeur-et-autres-processeurs-a-coeurs-multiples">5.5. Les processeurs quadricœur et autres processeurs à cœurs multiples</a></li>
+<li><a class="reference internal" href="#le-pipeline">5.6. Le pipeline</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/glossary.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/timeline.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>

@@ -1,0 +1,566 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="10. Compter - bin" href="compter.html" /><link rel="prev" title="8. Tracer - math" href="math.html" />
+
+    <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>9. Associer - dict - Apprendre</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #5933D1;
+  --color-brand-content: #5933D1;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Apprendre</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Apprendre</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Première année</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rep-info/index.html">Représentation de l’information</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/entiers.html">2. 1. Les entiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/caracteres.html">3. 2. Les caractères</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/images.html">4. 3. Les images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/son.html">5. 4. Le son</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/redondance.html">6. 5. Redondance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rep-info/conclusion.html">7. Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/dessiner.html">1. Dessiner - <code class="docutils literal notranslate"><span class="pre">forward()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/definir.html">2. Définir - <code class="docutils literal notranslate"><span class="pre">def</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/repeter.html">4. Répéter - <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/cercler.html">5. Cercler - <code class="docutils literal notranslate"><span class="pre">circle()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/memoriser.html">6. Mémoriser - <code class="docutils literal notranslate"><span class="pre">a=100</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/parcourir.html">7. Parcourir - <code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/write.html">8. Typographier - <code class="docutils literal notranslate"><span class="pre">write()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/iterer.html">9. Itérer - <code class="docutils literal notranslate"><span class="pre">range()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/parametrer.html">10. Paramétrer - <code class="docutils literal notranslate"><span class="pre">f(x)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/randomiser.html">11. Randomiser - <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/questionner.html">12. Questionner - <code class="docutils literal notranslate"><span class="pre">input()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/decider.html">13. Décider - <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/ecrire.html">14. Ecrire - <code class="docutils literal notranslate"><span class="pre">str</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/attendre.html">15. Attendre - <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/renvoyer.html">16. Renvoyer - <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/grouper.html">17. Grouper - <code class="docutils literal notranslate"><span class="pre">list</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/trier.html">18. Trier - <code class="docutils literal notranslate"><span class="pre">sort()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/turtleart.html">19. TurtleArt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/projet.html">20. Projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/annexe.html">21. Annexes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../algo1/index.html">Algorithmique I</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/algorithmes.html">1. Les algorithmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/tri.html">2. Trie, cherche et trouve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/algo-progs.html">3. Des algorithmes aux programmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../archi/index.html">Architecture des ordinateurs</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../archi/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/sys-log.html">1. Portes logiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/additionneur.html">2. Additionneur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/alu-mem.html">3. ALU et mémoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/archi-gen.html">4. Architecture générale et composants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/micro-pro.html">5. Le microprocesseur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html">Histoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#une-breve-histoire-de-linformatique">Une (brève) histoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#portraits">Portraits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#notions">Notions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#technologies">Technologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#le-musee-bolo">Le musée Bolo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#les-grandes-entreprises-de-linformatique">Les grandes entreprises de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#une-encore-plus-breve-histoire-du-jeu-video">Une (encore plus brève) histoire du jeu vidéo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/machines.html">Histoire des machines</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
+<ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../algo2/index.html">Algorithmique II</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/complexite.html">1. Terminaison et complexité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recherche.html">2. Algorithmes de recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/tris.html">3. Algorithmes de tri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/heuristiques.html">4. Solutions heuristiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html">4. Récursivité [en option]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html#focus-sur-la-recursivite">4.1 Focus sur la récursivité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Programmation II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="onkey.html">1. Déclencher - <code class="docutils literal notranslate"><span class="pre">onkey()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="lambda.html">2. Formaliser - <code class="docutils literal notranslate"><span class="pre">lambda</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="onclick.html">3. Cliquer - <code class="docutils literal notranslate"><span class="pre">onclick()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ontimer.html">4. Interrompre - <code class="docutils literal notranslate"><span class="pre">ontimer()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="turtle.html">5. Cloner - <code class="docutils literal notranslate"><span class="pre">Turtle</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="class.html">6. Créer - <code class="docutils literal notranslate"><span class="pre">class</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="inherit.html">7. Hériter - <code class="docutils literal notranslate"><span class="pre">E(P)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="math.html">8. Tracer - <code class="docutils literal notranslate"><span class="pre">math</span></code></a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">9. Associer - <code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="compter.html">10. Compter - <code class="docutils literal notranslate"><span class="pre">bin</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="color.html">11. Nuancer - <code class="docutils literal notranslate"><span class="pre">color</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="set.html">12. Appartenir - <code class="docutils literal notranslate"><span class="pre">set</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bool.html">13. Raisonner - <code class="docutils literal notranslate"><span class="pre">bool</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bit.html">14. Manipuler - <code class="docutils literal notranslate"><span class="pre">&amp;</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="recursif.html">15. Revenir - <code class="docutils literal notranslate"><span class="pre">f(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector.html">16. Vecteurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="force.html">17. Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idees.html">18. Idées</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../projets/index.html">Projets</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projets/tic_tac_toe.html">1. Tic-tac-toe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/puissance4.html">2. Puissance 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/mines.html">3. Démineur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/snake.html">4. Snake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/game_of_life.html">5. Game of life</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/cartes.html">6. Poker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/tetris.html">7. Tetris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/art_absurde.html">8. Art absurde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/microbit/microbit.html">9. Micro:bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/crypto.html">10. Cryptographie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/idees.html">11. Idées</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resx/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/adressage.html">1. Adressage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/tcp-ip.html">2. TCP-IP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/routage.html">3. Routage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/web.html">4. Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/couches.html">5. Couches</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="associer-dict">
+<h1><span class="section-number">9. </span>Associer - <code class="docutils literal notranslate"><span class="pre">dict</span></code><a class="headerlink" href="#associer-dict" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Un <strong>dictionnaire</strong> est une structure de données qui, comme une liste, contient plusieurs éléments, mais qui est plus puissante. Dans une liste les indices sont des entiers. Dans un dictionnaire les indices peuvent être de n’importe quel type immuable (entier, nombre, texte). Nous allons voir que :</p>
+<ul class="simple">
+<li><p>un dictionnaire est composé de paires <code class="docutils literal notranslate"><span class="pre">clé:valeur</span></code>,</p></li>
+<li><p>l’expression <code class="docutils literal notranslate"><span class="pre">dico[clé]</span></code> renvoie la valeur associée à la clé,</p></li>
+<li><p>la méthode <code class="docutils literal notranslate"><span class="pre">dico.get(clé,</span> <span class="pre">défaut)</span></code> renvoie la valeur ou son défaut.</p></li>
+</ul>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>L’expression <code class="docutils literal notranslate"><span class="pre">dict([(1,</span> <span class="pre">2)])</span></code> est un dictionnaire</p>
+<p><label class="answer incorrect"><input type="checkbox"/>dont une clé est 2</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>dont une valeur est 1</label><br/>
+<label class="answer correct"><input type="checkbox"/>avec une entrée</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>avec deux entrées</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
+</form></div><section id="un-dictionnaire-de-mots">
+<h2>Un dictionnaire de mots<a class="headerlink" href="#un-dictionnaire-de-mots" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un dictionnaire classique associe un mot d’une langue au mot correspondant d’une autre langue.
+Nous pouvons utiliser la structure du dictionnaire en Python de cette façon et l’utiliser pour associer des mots en français à des mots d’une autre langue.</p>
+<p>De façon générale, un dictionnaire associe une série de <strong>clés</strong> à une autre série de <strong>valeurs</strong>.
+Toutes les clés d’un dictionnaire sont uniques.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YW5nbGFpcyA9IHsnbWFpc29uJzonaG91c2UnLCAndm9pdHVyZSc6J2NhcicsICdvcmRpbmF0ZXVyJzonY29tcHV0ZXInfQoKcHJpbnQoJ2RpY3Rpb25uYWlyZSA9JywgYW5nbGFpcykKcHJpbnQoYW5nbGFpc1snbWFpc29uJ10p" data-file="ZGljdDEucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Nous pouvons très bien définir un deuxième dictionnaire.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YW5nbGFpcyA9IHsnbWFpc29uJzonaG91c2UnLCAndm9pdHVyZSc6J2NhcicsICdvcmRpbmF0ZXVyJzonY29tcHV0ZXInfQphbGxlbWFuZCA9IHsnbWFpc29uJzonSG91c2UnLCAndm9pdHVyZSc6J0F1dG8nLCAnb3JkaW5hdGV1cic6J1JlY2huZXInfQoKcHJpbnQoJ2FuZ2xhaXMgPScsIGFuZ2xhaXMpCnByaW50KCdhbGxlbWFuZCA9JywgYWxsZW1hbmQpCnByaW50KCkKCm1vdCA9ICd2b2l0dXJlJwpwcmludChtb3QsICdlbiBhbmdsYWlzIGVzdCcsIGFuZ2xhaXNbbW90XSkKcHJpbnQobW90LCAnZW4gYWxsZW1hbmQgZXN0JywgYWxsZW1hbmRbbW90XSk=" data-file="ZGljdDIucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="traduire-une-phrase">
+<h2>Traduire une phrase<a class="headerlink" href="#traduire-une-phrase" title="Lien permanent vers ce titre">¶</a></h2>
+<p>À l’aide d’un dictionnaire, nous pouvons traduire maintenant toute une phrase.
+Pour pouvoir accéder à chaque mot d’une phrase, nous allons découper la phrase en mots en utilisant la méthode <code class="docutils literal notranslate"><span class="pre">split()</span></code>.
+Nous obtenons alors une liste qui contient les mots de la phrase.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cGhyYXNlID0gJ2xhIG1haXNvbiBlc3QgZ3JhbmRlJwpwcmludCgncGhyYXNlID0nLCBwaHJhc2UpCnByaW50KCdsaXN0ZSA9JywgcGhyYXNlLnNwbGl0KCkp" data-file="ZGljdDMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>À l’aide d’une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> nous pouvons traduire la phrase entière.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YW5nbGFpcyA9IHsnbGEnOid0aGUnLCAnbWFpc29uJzonaG91c2UnLCAnZXN0JzonaXMnLCAncm91Z2UnOidyZWQnLCAKICAgICAgICAgICAnZXQnOidhbmQnLCAnZ3JhbmRlJzonYmlnJywgJ3ZvaXR1cmUnOidjYXInLCAncmFwaWRlJzonZmFzdCcsIAogICAgICAgICAgICd0csOocyc6J3ZlcnknLCAnc3ltcGEnOiduaWNlJ30KCnBocmFzZSA9ICdsYSBtYWlzb24gZXN0IHJvdWdlIGV0IGdyYW5kZScKcHJpbnQocGhyYXNlKQoKZm9yIG1vdCBpbiBwaHJhc2Uuc3BsaXQoKToKICAgIHByaW50KGFuZ2xhaXNbbW90XSwgZW5kPScgJyk=" data-file="ZGljdDQucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Avec les mots donnés dans le dictionnaire, faites une nouvelle phrase.</p>
+</section>
+<section id="traduire-un-texte">
+<h2>Traduire un texte<a class="headerlink" href="#traduire-un-texte" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un texte est constitué de plusieurs lignes. Pour découper un texte multiligne en lignes,
+nous utilisons de nouveau la méthode <code class="docutils literal notranslate"><span class="pre">split('\')</span></code>, mais cette fois avec un séparateur (newline).</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="dGV4dGUgPSAiIiJsYSBtYWlzb24gZXN0IGdyYW5kZQpsYSB2b2l0dXJlIGVzdCByYXBpZGUKbGEgdm9pdHVyZSBldCBsYSBtYWlzb24gZXN0IHRyw6hzIHN5bXBhIiIiCgpwcmludCh0ZXh0ZS5zcGxpdCgnXG4nKSk=" data-file="ZGljdDUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Nous pouvons maintenant traduire un texte de plusieurs lignes.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YW5nbGFpcyA9IHsnbGEnOid0aGUnLCAnbWFpc29uJzonaG91c2UnLCAnZXN0JzonaXMnLCAncm91Z2UnOidyZWQnLCAKICAgICAgICAgICAnZXQnOidhbmQnLCAnZ3JhbmRlJzonYmlnJywgJ3ZvaXR1cmUnOidjYXInLCAncmFwaWRlJzonZmFzdCcsIAogICAgICAgICAgICd0csOocyc6J3ZlcnknLCAnc3ltcGEnOiduaWNlJ30KCnRleHRlID0gIiIiCmxhIG1haXNvbiBlc3QgZ3JhbmRlCmxhIHZvaXR1cmUgZXN0IHJhcGlkZQpsYSB2b2l0dXJlIGV0IGxhIG1haXNvbiBlc3QgdHLDqHMgc3ltcGEiIiIKCnByaW50KHRleHRlKQoKZm9yIHBocmFzZSBpbiB0ZXh0ZS5zcGxpdCgnXG4nKToKICAgIGZvciBtb3QgaW4gcGhyYXNlLnNwbGl0KCk6CiAgICAgICAgcHJpbnQoYW5nbGFpc1ttb3RdLCBlbmQ9JyAnKQogICAgcHJpbnQoKQ==" data-file="ZGljdDYucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="traduire-en-code-morse">
+<h2>Traduire en code Morse<a class="headerlink" href="#traduire-en-code-morse" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le code Morse est composé de points et de traits. Il associe à chaque lettre de l’alphabet un code.</p>
+<a class="reference internal image-reference" href="../_images/Morse.jpg"><img alt="../_images/Morse.jpg" src="../_images/Morse.jpg" style="width: 400px;"/></a>
+<p>Un autre exemple pour un dictionnaire est la table du code Morse.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="TW9yc2UgPSB7J2EnOicuLScsICdiJzonLS4uLicsICdjJzonLS4tLicsICdkJzonLi0tJywgJ2UnOicuJywgJ2YnOicuLi0uJywgCiAgICAgICAgICdnJzonLS0uJywgJ2gnOicuLi4uJywgJ2knOicuLicsICdqJzonLi0tLScsICdrJzonLS4tJywgJ2wnOicuLS4uJywgCiAgICAgICAgICdtJzonLS0nLCAnbic6Jy0uJywgJ28nOictLS0nLCAncCc6Jy4tLS4nLCAncSc6Jy0tLi0nLCAncic6Jy4tLicsIAogICAgICAgICAncyc6Jy4uLicsICd0JzonLScsICd1JzonLi4tJywgJ3YnOicuLi4uLScsICd3JzonLi0tJywgJ3gnOictLi4tJywgCiAgICAgICAgICd5JzonLS4tLScsICd6JzonLS0uLid9CiAgICAgICAgIApwcmludChNb3JzZSkKcHJpbnQobGVuKE1vcnNlKSkKcHJpbnQoKQoKZm9yIGMgaW4gJ3B5dGhvbic6CiAgICBwcmludChjLCAnPScsIE1vcnNlW2NdKQ==" data-file="ZGljdDcucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Maintenant nous pouvons traduire une phrase entière. Ici nous devons faire attention aux espaces :</p>
+<ul class="simple">
+<li><p>les caractères sont séparés par 2 espaces,</p></li>
+<li><p>les mots sont séparés par 4 espaces.</p></li>
+</ul>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cGhyYXNlID0gJ2xlIG1vcnNlIGVzdCBiZWF1JwpwcmludChwaHJhc2UpCgpmb3IgYyBpbiBwaHJhc2U6CiAgICBpZiBjID09ICcgJzoKICAgICAgICBwcmludChlbmQ9JyAgJykKICAgIGVsc2U6CiAgICAgICAgcHJpbnQoTW9yc2VbY10sIGVuZD0nICAnKQ==" data-file="ZGljdDgucHk=" data-prelude="TW9yc2UgPSB7J2EnOicuLScsICdiJzonLS4uLicsICdjJzonLS4tLicsICdkJzonLi0tJywgJ2UnOicuJywgJ2YnOicuLi0uJywgCiAgICAgICAgICdnJzonLS0uJywgJ2gnOicuLi4uJywgJ2knOicuLicsICdqJzonLi0tLScsICdrJzonLS4tJywgJ2wnOicuLS4uJywgCiAgICAgICAgICdtJzonLS0nLCAnbic6Jy0uJywgJ28nOictLS0nLCAncCc6Jy4tLS4nLCAncSc6Jy0tLi0nLCAncic6Jy4tLicsIAogICAgICAgICAncyc6Jy4uLicsICd0JzonLScsICd1JzonLi4tJywgJ3YnOicuLi4uLScsICd3JzonLi0tJywgJ3gnOictLi4tJywgCiAgICAgICAgICd5JzonLS4tLScsICd6JzonLS0uLid9" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Écrivez votre nom en Morse.</p>
+</section>
+<section id="systeme-de-login">
+<h2>Système de login<a class="headerlink" href="#systeme-de-login" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’exemple suivant simule le processus de login à un système informatique.
+Dans le dictionnaire <code class="docutils literal notranslate"><span class="pre">passwords</span></code> nous gardons les informations de connexion sous forme de paires <code class="docutils literal notranslate"><span class="pre">user:password</span></code>.</p>
+<p>L’opérateur spécial <code class="docutils literal notranslate"><span class="pre">in</span></code> permet de tester si une clé donnée fait partie du dictionnaire.</p>
+<p>Dans un premier temps on vérifie que l’utilisateur existe avec <code class="docutils literal notranslate"><span class="pre">user</span> <span class="pre">in</span> <span class="pre">passwords</span></code>.
+Dans un deuxième temps on vérifie si c’est le bon mot de passe avec <code class="docutils literal notranslate"><span class="pre">pw</span> <span class="pre">==</span> <span class="pre">passwords[user]</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cGFzc3dvcmRzID0geydtYXJrJzonMTIzNCcsICdzdGV2ZSc6J2FiUUYkMTInLCAnc2FyYWgnOicwMVsrXWEuJ30KCndoaWxlIFRydWU6CiAgICB1c2VyID0gaW5wdXQoJ2xvZ2luOiAnKQogICAgaWYgdXNlciBpbiBwYXNzd29yZHM6CiAgICAgICAgcHcgPSBpbnB1dCgnbW90IGRlIHBhc3NlOiAnKQogICAgICAgIGlmIHB3ID09IHBhc3N3b3Jkc1t1c2VyXToKICAgICAgICAgICAgcHJpbnQoJ3ZvdXMgw6p0ZXMgY29ubmVjdMOpIGF1IHN5c3TDqG1lJykKICAgICAgICAgICAgYnJlYWsKICAgICAgICBlbHNlOgogICAgICAgICAgICBwcmludCgnbW90IGRlIHBhc3NlIGluY29ycmVjdGUnKQogICAgZWxzZToKICAgICAgICBwcmludCh1c2VyLCAibidlc3QgcGFzIHVuIHV0aWxpc2F0ZXVyIHJlY29ubnUiKQ==" data-file="ZGljdDkucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Essayez avec utilisateur <code class="docutils literal notranslate"><span class="pre">mar</span></code>, <code class="docutils literal notranslate"><span class="pre">mark</span></code> et les mots de passe <code class="docutils literal notranslate"><span class="pre">123</span></code>, <code class="docutils literal notranslate"><span class="pre">1234</span></code>.</p>
+</section>
+<section id="un-dictionnaire-de-couleurs">
+<h2>Un dictionnaire de couleurs<a class="headerlink" href="#un-dictionnaire-de-couleurs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un spécialiste de la publication, de la mode, ou du web, utilise une centaine des mots spécifiques pour désigner un ton de couleur particulier. Ces couleurs peuvent être spécifiées avec les 3 couleurs de base : rouge, vert, bleu (RVB).</p>
+<p>Nous pouvons utiliser un dictionnaire <code class="docutils literal notranslate"><span class="pre">RVB</span></code> pour associer des noms de couleurs à des triplets de nombres qui indiquent les 3 composantes RVB.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQoKUlZCID0geydyb3VnZSc6KDEsIDAsIDApLCAndmVydCc6KDAsIDEsIDApLCAnYmxldSc6KDAsIDAsIDEpLAogICAgICAnamF1bmUnOigxLCAxLCAwKSwgJ2N5YW4nOigwLCAxLCAxKSwgJ21hZ2VudGEnOigxLCAwLCAxKSwKICAgICAgJ29yYW5nZSc6KDEsIDAuNSwgMCl9Cgpjb3VsZXVycyA9ICdyb3VnZScsICdvcmFuZ2UnLCAnamF1bmUnLCAndmVydCcsICdtYWdlbnRhJywgJ2JsZXUnCgpkID0gNTAKYmFja3dhcmQoMjAwKQpmb3IgeCBpbiBjb3VsZXVyczoKICAgIGRvdChkLCBSVkJbeF0pCiAgICBmb3J3YXJkKGQp" data-file="ZGljdDEwLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><strong>Exercice</strong> : Ajoutez 2-3 couleurs du domaine de la mode.</p>
+</section>
+<section id="compter-des-lettres">
+<h2>Compter des lettres<a class="headerlink" href="#compter-des-lettres" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Avec un dictionnaire nous pouvons facilement compter les lettres dans un texte.
+Compter le nombre d’occurrences de quelque chose est appelé faire un histogramme.</p>
+<p>Notre dictionnaire s’appelle <code class="docutils literal notranslate"><span class="pre">histogram</span></code> et au début il est vide.
+Les clés de l’histogramme sont des caractères que nous désignons par <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
+<p>Si le caractère <code class="docutils literal notranslate"><span class="pre">c</span></code> fait déjà partie de l’histogramme, alors on ajoute 1 au compte, sinon on met le compte à 1.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cGhyYXNlID0gJ2hlbGxvIHdvcmxkJwpoaXN0b2dyYW0gPSB7fQoKZm9yIGMgaW4gcGhyYXNlOgogICAgaWYgYyBpbiBoaXN0b2dyYW06CiAgICAgICAgaGlzdG9ncmFtW2NdICs9IDEKICAgIGVsc2U6CiAgICAgICAgaGlzdG9ncmFtW2NdID0gMQogICAgICAgIApwcmludChoaXN0b2dyYW0p" data-file="ZGljdDExLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Nous constatons que la lettre <code class="docutils literal notranslate"><span class="pre">l</span></code> apparait 3 fois.</p>
+</section>
+<section id="faire-un-histogramme">
+<h2>Faire un histogramme<a class="headerlink" href="#faire-un-histogramme" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous pouvons maintenant établir un histogramme sur un texte de plus grande taille.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="dGV4dGUgPSAiIiJMZSBtb25kZSBudW3DqXJpcXVlIGVzdCBleHRyw6ptZW1lbnQgdmFzdGUuIApBdSBtb3llbiBk4oCZYXBwbGljYXRpb25zIGTDqWRpw6llcywgaWwgZXN0IHBvc3NpYmxlIGTigJl5IHRyYXZhaWxsZXIgc3VyIAp1bmUgY2VydGFpbmUgcmVwcsOpc2VudGF0aW9uIGR1IHLDqWVsLiBEZXMgdGV4dGVzLCBkZXMgaW1hZ2VzLCAKZGVzIHNvbnMgb3UgZGVzIGRvbm7DqWVzIGZpbmFuY2nDqHJlcyBwZXV2ZW50IHkgw6p0cmUgbWFuaXB1bMOpcy4KUG91cnRhbnQsIGlsIGZhdXQgYXZvaXIgY29uc2NpZW5jZSBxdeKAmWF1c3NpIMKrcsOpZWxsZXPCuyBxdWUgY2VzIApyZXByw6lzZW50YXRpb25zIHB1aXNzZW50IHBhcmHDrnRyZSwgZWxsZXMgbuKAmWVuIHNvbnQgcGFzIG1vaW5zIGRlcyAKcmVwcsOpc2VudGF0aW9ucy4KRGFucyBjZXR0ZSBzZWN0aW9uLCBub3VzIGFsbG9ucyBjb21wcmVuZHJlIGNvbW1lbnQgbGVzIG9yZGluYXRldXJzIApwYXJ2aWVubmVudCDDoCByZXByw6lzZW50ZXIgbGUgbW9uZGUgZXQgbGVzIGNvbXByb21pcyBxdWkgZG9pdmVudCDDqnRyZSAKZmFpdHMgcG91ciBzaW1wbGlmaWVyIGxlIHLDqWVsIGp1c3F14oCZw6AgY2UgcXVlIHNhIHJlcHLDqXNlbnRhdGlvbiBwdWlzc2UgCsOqdHJlIG1hbmlwdWzDqWUgYXV0b21hdGlxdWVtZW50IGF1IG1veWVuIGRlIGNhbGN1bHMgw6lsw6ltZW50YWlyZXMuIiIiCgpwcmludChsZW4odGV4dGUpKQpoaXN0b2dyYW0gPSB7fQoKZm9yIGMgaW4gdGV4dGU6CiAgICBjID0gYy5sb3dlcigpCiAgICBpZiBjIGluIGhpc3RvZ3JhbToKICAgICAgICBoaXN0b2dyYW1bY10gKz0gMQogICAgZWxzZToKICAgICAgICBoaXN0b2dyYW1tZVtjXSA9IDEKICAgICAgICAKcHJpbnQoaGlzdG9ncmFtKQ==" data-file="ZGljdDEyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="visualiser-un-histogramme">
+<h2>Visualiser un histogramme<a class="headerlink" href="#visualiser-un-histogramme" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour visualiser cet histogramme, nous allons dessiner un diagramme de barres.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQp3aWR0aCg1KQpjb2xvcignYmx1ZScpCmxlZnQoOTApCgpnb3RvKC0yODAsIDApCgpmb3IgYyBpbiBoaXN0b2dyYW06CiAgICB3cml0ZShjLCBmb250PShOb25lLCAxMiksIGFsaWduPSdjZW50ZXInKQogICAgZCA9IGhpc3RvZ3JhbVtjXQogICAgZm9yd2FyZCgyMCkKICAgIGRvd24oKQogICAgZm9yd2FyZChkKQogICAgdXAoKQogICAgZm9yd2FyZCgxMCkKICAgIHdyaXRlKGQsIGZvbnQ9KE5vbmUsIDEyKSwgYWxpZ249J2NlbnRlcicpCiAgICBiYWNrd2FyZChkICsgMzApCiAgICBzZXR4KHhjb3IoKSArIDI1KQ==" data-file="ZGljdDEzLnB5" data-prelude="dGV4dGUgPSAiIiIKTGUgbW9uZGUgbnVtw6lyaXF1ZSBlc3QgZXh0csOqbWVtZW50IHZhc3RlLiAKQXUgbW95ZW4gZOKAmWFwcGxpY2F0aW9ucyBkw6lkacOpZXMsIGlsIGVzdCBwb3NzaWJsZSBk4oCZeSB0cmF2YWlsbGVyIHN1ciAKdW5lIGNlcnRhaW5lIHJlcHLDqXNlbnRhdGlvbiBkdSByw6llbC4gRGVzIHRleHRlcywgZGVzIGltYWdlcywgCmRlcyBzb25zIG91IGRlcyBkb25uw6llcyBmaW5hbmNpw6hyZXMgcGV1dmVudCB5IMOqdHJlIG1hbmlwdWzDqXMuClBvdXJ0YW50LCBpbCBmYXV0IGF2b2lyIGNvbnNjaWVuY2UgcXXigJlhdXNzaSDCq3LDqWVsbGVzwrsgcXVlIGNlcyAKcmVwcsOpc2VudGF0aW9ucyBwdWlzc2VudCBwYXJhw650cmUsIGVsbGVzIG7igJllbiBzb250IHBhcyBtb2lucyBkZXMgCnJlcHLDqXNlbnRhdGlvbnMuCkRhbnMgY2V0dGUgc2VjdGlvbiwgbm91cyBhbGxvbnMgY29tcHJlbmRyZSBjb21tZW50IGxlcyBvcmRpbmF0ZXVycyAKcGFydmllbm5lbnQgw6AgcmVwcsOpc2VudGVyIGxlIG1vbmRlIGV0IGxlcyBjb21wcm9taXMgcXVpIGRvaXZlbnQgw6p0cmUgCmZhaXRzIHBvdXIgc2ltcGxpZmllciBsZSByw6llbCBqdXNxdeKAmcOgIGNlIHF1ZSBzYSByZXByw6lzZW50YXRpb24gcHVpc3NlIArDqnRyZSBtYW5pcHVsw6llIGF1dG9tYXRpcXVlbWVudCBhdSBtb3llbiBkZSBjYWxjdWxzIMOpbMOpbWVudGFpcmVzLiIiIgoKaGlzdG9ncmFtID0ge30KCmZvciBjIGluIHRleHRlOgogICAgaWYgYy5pc2FscGhhKCk6CiAgICAgICAgYyA9IGMubG93ZXIoKQogICAgICAgIGlmIGMgaW4gaGlzdG9ncmFtOgogICAgICAgICAgICBoaXN0b2dyYW1bY10gKz0gMQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGhpc3RvZ3JhbW1lW2NdID0gMQogICAgICAgIA==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="la-fonction-get">
+<h2>La fonction <code class="docutils literal notranslate"><span class="pre">get()</span></code><a class="headerlink" href="#la-fonction-get" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Adresser une clé qui n’existe pas dans un dictionnaire produit une erreur de type <code class="docutils literal notranslate"><span class="pre">KeyError</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YW5nbGFpcyA9IHsnbWFpc29uJzonaG91c2UnfQpwcmludChhbmdsYWlzWyd2b2l0dXJlJ10pICAgICAgICMgS2V5RXJyb3I6ICd2b2l0dXJlJw==" data-file="ZGljdDE0LnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>La méthode <code class="docutils literal notranslate"><span class="pre">get(clé,</span> <span class="pre">val_défaut)</span></code> permet d’obtenir une valeur par défaut et d’éviter une erreur si la clé n’existe pas encore dans le dictionnaire.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YW5nbGFpcyA9IHsnbWFpc29uJzonaG91c2UnfQpwcmludCgnbWFpc29uID0nLCBhbmdsYWlzLmdldCgnbWFpc29uJywgJ25vdCBkZWZpbmVkJykpCnByaW50KCd2b2l0dXJlID0nLCBhbmdsYWlzLmdldCgndm9pdHVyZScsICdub3QgZGVmaW5lZCcpKQ==" data-file="ZGljdDE1LnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Ceci nous permet de compacter encore davantage le programme de l’histogramme.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cGhyYXNlID0gJ2hlbGxvIHdvcmxkJwoKaGlzdG9ncmFtID0ge30KZm9yIGMgaW4gcGhyYXNlOgogICAgaGlzdG9ncmFtW2NdID0gaGlzdG9ncmFtLmdldChjLCAwKSArIDEKCnByaW50KGhpc3RvZ3JhbSk=" data-file="ZGljdDE2LnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="color-typewriter">
+<h2>Color typewriter<a class="headerlink" href="#color-typewriter" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ce programme interactif permet d’écrire une image ligne par ligne en utilisant les 26 touches du clavier, comme une machine à écrire (typewriter).</p>
+<p>Nous utilisons ici un dictionnaire pour associer une lettre à une couleur.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKcyA9IGdldHNjcmVlbigpCnNwZWVkKDApCmQgPSA2MApnb3RvKC0zMDArZC8yLCAyMDAtZC8yKQoKY291bGV1cnMgPSBkaWN0KCkKY291bGV1cnNbJ2EnXSA9ICdhcXVhJwpjb3VsZXVyc1snYiddID0gJ2JsdWUnCmNvdWxldXJzWydjJ10gPSAnY2hvY29sYXRlJwpjb3VsZXVyc1snZCddID0gJ2RvZGdlcmJsdWUnCmNvdWxldXJzWydmJ10gPSAnZnVjaHNpYScKY291bGV1cnNbJ2cnXSA9ICdncmVlbicKY291bGV1cnNbJ2snXSA9ICdibGFjaycKY291bGV1cnNbJ2wnXSA9ICdsaW1lJwpjb3VsZXVyc1snaSddID0gJ2luZGlnbycKY291bGV1cnNbJ20nXSA9ICdtaXN0eXJvc2UnCmNvdWxldXJzWyduJ10gPSAnbmF2eScKY291bGV1cnNbJ28nXSA9ICdvcmFuZ2UnCmNvdWxldXJzWydwJ10gPSAncGluaycKY291bGV1cnNbJ3InXSA9ICdyZWQnCmNvdWxldXJzWydzJ10gPSAnc2lsdmVyJwpjb3VsZXVyc1sndCddID0gJ3RhbicKY291bGV1cnNbJ3YnXSA9ICd2aW9sZXQnCmNvdWxldXJzWyd3J10gPSAnd2hpdGUnCmNvdWxldXJzWyd5J10gPSAneWVsbG93JwoKZGVmIGYoeCk6CiAgICBjb2wgPSBjb3VsZXVycy5nZXQoeCwgJ2xpZ2h0Z3JheScpCiAgICBkb3QoZCwgY29sKQogICAgd3JpdGUoY29sLCBhbGlnbj0nY2VudGVyJykKICAgIGlmIHhjb3IoKSA8IDMwMCAtIGQvMjoKICAgICAgICBmb3J3YXJkKGQpCiAgICBlbHNlOgogICAgICAgIGdvdG8oLTMwMCtkLzIsIHljb3IoKS1kKQoKZm9yIGMgaW4gJ2FiY2RlZmdoaWprbG1ub3BxcnN0dXZ3eHl6JzoKICAgIHMub25rZXkobGFtYmRhIHg9YzogZih4KSwgYykKICAgIApzLmxpc3Rlbigp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="compter.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title"><span class="section-number">10. </span>Compter - <code class="docutils literal notranslate"><span class="pre">bin</span></code></div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="math.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title"><span class="section-number">8. </span>Tracer - <code class="docutils literal notranslate"><span class="pre">math</span></code></div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; CC-BY-NC |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
+            <a class="muted-link" href="../_sources/prog2/dict.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">9. Associer - <code class="docutils literal notranslate"><span class="pre">dict</span></code></a><ul>
+<li><a class="reference internal" href="#un-dictionnaire-de-mots">Un dictionnaire de mots</a></li>
+<li><a class="reference internal" href="#traduire-une-phrase">Traduire une phrase</a></li>
+<li><a class="reference internal" href="#traduire-un-texte">Traduire un texte</a></li>
+<li><a class="reference internal" href="#traduire-en-code-morse">Traduire en code Morse</a></li>
+<li><a class="reference internal" href="#systeme-de-login">Système de login</a></li>
+<li><a class="reference internal" href="#un-dictionnaire-de-couleurs">Un dictionnaire de couleurs</a></li>
+<li><a class="reference internal" href="#compter-des-lettres">Compter des lettres</a></li>
+<li><a class="reference internal" href="#faire-un-histogramme">Faire un histogramme</a></li>
+<li><a class="reference internal" href="#visualiser-un-histogramme">Visualiser un histogramme</a></li>
+<li><a class="reference internal" href="#la-fonction-get">La fonction <code class="docutils literal notranslate"><span class="pre">get()</span></code></a></li>
+<li><a class="reference internal" href="#color-typewriter">Color typewriter</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/glossary.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/timeline.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+\documentclass{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[LGR,T1]{fontenc} % notice LGRx instead of LGR
+\usepackage{lmodern}
+\usepackage[final]{pdfpages} 
+\usepackage[top=2cm, bottom=3cm, outer=3cm, inner=4cm, headsep=14pt]{geometry}
+\usepackage{textgreek}
+\usepackage{csquotes}
+\usepackage[french]{babel}
+\usepackage{fancyhdr}
+\usepackage{xsim}
+\usepackage{tasks}
+\usepackage[absolute]{textpos}
+\usepackage{ascii}
+\usepackage{eurosym}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage[RPvoltages]{circuitikz}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{multirow}
+\usepackage{xcolor,colortbl}
+\usepackage{amsmath}
+\usepackage{standalone}
+
+%% Rendre nocite accessible
+\makeatletter
+\def\@documentnocite#1{\@bsphack
+  \@for\@citeb:=#1\do{%
+    \edef\@citeb{\expandafter\@firstofone\@citeb}%
+    \if@filesw\immediate\write\@auxout{\string\citation{\@citeb}}\fi
+    \@ifundefined{b@\@citeb}{\G@refundefinedtrue
+      \@latex@warning{Citation `\@citeb' undefined}}{}}%
+  \@esphack}
+\AtBeginDocument{\let\nocite\@documentnocite}
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+%% Remove chapter number in sections
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\thesection}{\arabic{section}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{SYSTÈMES LOGIQUES}
+\rhead{\leftmark}
+\rfoot{Page \thepage}
+\setlength{\headheight}{15pt}
+
+
+\title{Systèmes logiques \\[1ex] \large Option Complémentaire d'Informatique}
+\author{philippe.rochat@eduvaud.ch }
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+
+\input{standalone} % use before any ’\documentclass’
+\input{introduction}
+\input{representation}
+\input{portesLogiques}
+\input{semiconducteurs}
+\input{implemportes}
+\input{logique}
+\input{optimisation}
+\input{systemesLogiques}
+
+\bibliographystyle{ieeetr}
+\bibliography{biblio}
+
+\begin{appendix}
+\input{corriges}
+
+\chapter{Ordinateur antique}
+%\includepdf[pages=-]{OrdinateurAntique.pdf}
+\end{appendix}
+
+\end{document}
