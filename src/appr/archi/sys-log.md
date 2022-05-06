@@ -792,6 +792,29 @@ Il y plusieurs solutions possibles. Celle qui correspond aux indices est la suiv
 }
 ```
 
+Une autre solution est la suivante, où on se dit qu'on construit d'abord une {logicref}`imply_exercise_key2.{inv1,and}|partie du circuit` qui identifie le cas où $X=0$ et $Y=1$, et on l'{logicref}`imply_exercise_key2.inv2|inverse` pour correspondre à la table de vérité.
+```{logic}
+:ref: imply_exercise_key2
+:height: 130
+:mode: tryout
+
+{
+  "v": 2,
+  "opts": {"showGateTypes": true},
+  "in": [
+    {"pos": [50, 40], "id": 3, "name": "X", "val": 0},
+    {"pos": [50, 90], "id": 4, "name": "Y", "val": 0}
+  ],
+  "out": [{"pos": [410, 80], "id": 5, "name": "Z"}],
+  "gates": [
+    {"type": "NOT", "pos": [320, 80], "ref": "inv2", "in": 17, "out": 18},
+    {"type": "AND", "pos": [230, 80], "ref": "and", "in": [19, 20], "out": 21},
+    {"type": "NOT", "pos": [130, 40], "ref": "inv1", "in": 22, "out": 23}
+  ],
+  "wires": [[18, 5], [21, 17], [4, 20], [23, 19], [3, 22]]
+}
+```
+
 Voici un circuit plus simple, qui fait la même chose mais qui est plus difficile à concevoir d'emblée :
 ```{logic}
 :height: 120
@@ -812,6 +835,25 @@ Voici un circuit plus simple, qui fait la même chose mais qui est plus difficil
   "wires": [[3, 6], [8, 5], [4, 11], [12, 7]]
 }
 ```
+
+En fait, il existe même une porte spéciale qui réalise exactement la fonction correspondant à la table de vérité, la porte **IMPLIQUE** :
+```{logic}
+:height: 120
+:mode: tryout
+
+{
+  "v": 2,
+  "opts": {"showGateTypes": true},
+  "in": [{
+    "pos": [50, 40], "id": 3, "name": "X", "val": 0},
+    {"pos": [50, 80], "id": 4, "name": "Y", "val": 0}
+  ],
+  "out": [{"pos": [230, 60], "id": 5, "name": "Z"}],
+  "gates": [{"type": "RIMPLY", "pos": [160, 60], "in": [0, 1], "out": 2}],
+  "wires": [[3, 0], [4, 1], [2, 5]]
+}
+```
+
 ````
 
 `````
