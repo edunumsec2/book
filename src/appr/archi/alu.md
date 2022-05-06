@@ -10,7 +10,7 @@ Les ordinateurs ont la propriété d'être programmables : ils savent effectue
 Le composant qui nous permettra de sélectionner une opération ou une autre s'appelle « unité arithmétique et logique », communément appelé simplement « ALU » (de l'anglais _arithmetic logic unit_). Avant d'inspecter une ALU, nous avons besoin de comprendre comment on peut sélectionner une opération ou une autre avec des circuits logiques.
 
 
-## 3.1 Sélection de l'opération
+## 3.1. Sélection de l'opération
 
 Comment créer un circuit qui permet de sélectionner une opération à faire, et comment indiquer l'opération à sélectionner ? Essayons d'abord de créer un circuit à deux entrées qui va calculer soit le **OU** soit le **ET** de ces deux entrées.
 

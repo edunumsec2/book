@@ -46,7 +46,7 @@ Examinons le circuit ci-dessous : c'est le verrou dit « SR », pour _set/
   ],
   "out": [
     {"pos": [290, 40], "id": 10, "name": "Q"},
-    {"pos": [290, 120], "id": 11, "name": "Q'"}
+    {"pos": [290, 120], "id": 11, "name": "Q̅"}
   ],
   "gates": [
     {"type": "OR", "pos": [130, 40], "in": [0, 1], "out": 2},
@@ -80,14 +80,15 @@ On essaie en général d'éviter d'avoir un 1 sur $R$ et sur $S$ en même temps,
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 2,
+  "opts": {"propagationDelay": 0},
   "in": [
     {"pos": [50, 30], "id": 8, "name": "R", "val": 0, "isPushButton": true},
     {"pos": [50, 130], "id": 9, "name": "S", "val": 0, "isPushButton": true}
   ],
   "out": [
     {"pos": [290, 40], "id": 10, "name": "Q"},
-    {"pos": [290, 120], "id": 11, "name": "Q'"}
+    {"pos": [290, 120], "id": 11, "name": "Q̅"}
   ],
   "gates": [
     {"type": "OR", "pos": [130, 40], "in": [0, 1], "out": 2},
@@ -122,7 +123,7 @@ Ces verrous sont communs, et pour le reste du chapitre, on simplifiera la notati
   ],
   "out": [
     {"pos": [210, 30], "id": 12, "name": "Q"},
-    {"pos": [210, 70], "id": 13, "name": "Q'"}
+    {"pos": [210, 70], "id": 13, "name": "Q̅"}
   ],
   "components": [
     {"type": "latch-sr", "pos": [130, 50], "in": [6, 7], "out": [8, 9], "state": 0}
@@ -160,7 +161,7 @@ On va utiliser pour cela un circuit similaire, mais qui fonctionne un peu diffé
   ],
   "out": [
     {"pos": [250, 40], "id": 9, "name": "Q"},
-    {"pos": [250, 80], "id": 10, "name": "Q'"}
+    {"pos": [250, 80], "id": 10, "name": "Q̅"}
   ],
   "components": [
     {

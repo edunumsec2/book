@@ -272,7 +272,7 @@ $$
     45 \cdot 10^5~[km/s]~\textrm{ou encore:}~450'000~[km/s]
 $$
 
-Rappelons que la vitesse de la lumière est:
+Rappelons que la vitesse de la lumière est :
 
 $$
     c \cong 300'000~[km/s]
