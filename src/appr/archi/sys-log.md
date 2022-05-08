@@ -141,9 +141,9 @@ Essayez la porte **OU** :
 }
 ```
 
-## 1.5.  NON
+## 1.5. Porte NON
 
-Cette porte est plus simple: elle n'a qu'une entrée, et sa sortie se contente d'inverser la valeur en entrée. On l'appelle d'ailleurs aussi un _inverseur_.
+Cette porte est plus simple : elle n'a qu'une entrée, et sa sortie se contente d'inverser la valeur en entrée. On l'appelle d'ailleurs aussi un _inverseur_.
 
 Voici sa table de vérité :
 
