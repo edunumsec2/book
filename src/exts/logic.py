@@ -158,6 +158,31 @@ def end_logic_highlight_html(self, node):
     self.body.append("</span>")
 
 
+
+class logic_gate(nodes.Inline, nodes.TextElement):
+    pass
+
+class LogicGateRole(SphinxRole):
+    def run(self):
+        node = logic_gate("", "",
+            display=self.text,
+        )
+        return [node], []
+
+
+def begin_logic_gate_html(self, node):
+    tag = self.starttag(
+        node,
+        "span",
+        CLASS="logic-gate",
+    )
+    self.body.append(tag.strip())
+    self.body.append(node["display"])
+
+def end_logic_gate_html(self, node):
+    self.body.append("</span>")
+
+
 def setup(app):
     app.add_directive("logic", LogicDiagram)
     app.add_node(logic_diagram, html=(begin_logic_diagram_html, end_logic_diagram_html))
@@ -167,4 +192,11 @@ def setup(app):
     app.add_node(
         logic_highlight, html=(begin_logic_highlight_html, end_logic_highlight_html)
     )
+
+    app.add_role("lg", LogicGateRole())
+    app.add_node(
+        logic_gate, html=(begin_logic_gate_html, end_logic_gate_html)
+    )
+
+
     app.add_css_file("logic.css")
