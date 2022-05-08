@@ -35,7 +35,7 @@ De quelle porte logique s'agit-il ?
 :height: 60
 :mode: static
 
-{"v": 1, "opts": {"showDisconnectedPins": true}, "gates": [{"type": "NOT", "pos": [50, 30], "in": [1], "out": 3}]}
+{"v": 1, "opts": {"showDisconnectedPins": true}, "gates": [{"type": "NOT", "pos": [50, 30], "in": 1, "out": 3}]}
 ```
 De quelle porte logique s'agit-il ?
 * {f}`AND (ET)`
@@ -129,7 +129,7 @@ De quelle porte logique s'agit-il ?
   "v": 2,
   "in": [{"pos": [50, 40], "id": 0, "val": 0}],
   "out": [{"pos": [280, 60], "id": 7}],
-  "gates": [{"type": "NOT", "pos": [180, 60], "in": [3], "out": 6, "showAsUnknown": true}],
+  "gates": [{"type": "NOT", "pos": [180, 60], "in": 3, "out": 6, "showAsUnknown": true}],
   "wires": [[0, 3], [6, 7]]
 }
 ```
