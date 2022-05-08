@@ -5,7 +5,11 @@ Dans cette partie, nous proposons des activités de cours qui permettent de déc
 ```{toctree}
 :maxdepth: 2
 :hidden:
-Simulateur logique <simulateur>
+
 Ordinateur antique <ordinateurantique>
+Simulateur logique <simulateur>
+Sélecteur de chien <selecteur-chien>
+Afficheur à 7 segments <afficheur-7seg>
+Soustracteur <soustracteur>
 Ga-Bu-Zo-Meu <gabuzomeu>
 ```

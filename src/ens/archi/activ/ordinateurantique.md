@@ -1,6 +1,6 @@
 (ordinateurantique)=
 L'ordinateur antique
-===========================
+====================
 
 ## Objectifs
 L'objectif de cette activité est de faire découvrir aux élèves le fonctionnement d'un ordinateur dans une version "imaginée" et mécanique. On va ainsi découvrir tous les concepts essentiels qui sont présents dans les ordinateurs modernes.
