@@ -56,7 +56,7 @@ def end_logic_diagram_html(self, node):
 
 
 def directive_mode(argument):
-    return directives.choice(argument, ("static", "tryout", "connect", "full"))
+    return directives.choice(argument, ("static", "tryout", "connect", "design", "full"))
 
 
 class LogicDiagram(SphinxDirective):
