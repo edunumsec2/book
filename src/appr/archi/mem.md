@@ -1,4 +1,4 @@
-# 4. Mémoire
+# * Mémoire
 
 Les {glo}`transistor|transistors`, les {glo}`portelogique|portes logiques` et leur représentation en {glo}`tableverite|tables de vérités`, permettent de manipuler des 0 et des 1 au niveau physique.. Tant qu'un courant électrique se déplace dans les {glo}`circuit|circuits`, on est capable de le transformer, de le laisser passer ou de l'arrêter, dans le but d'exprimer des portes « ouvertes » ou des portes « fermées » et donc des nombres binaires. L'ALU, explorée au chapitre précédent, va une étape plus loin et permet de choisir une opération à effectuer en fonction de bits de contrôle supplémentaire, et livre le résultat de l'opération arithmétique ou logique choisie.
 
@@ -11,7 +11,7 @@ On peut se demander pourquoi on n'utiliserait pas que de la mémoire non volatil
 Dans les sections qui suivent, on propose de s'intéresser au cas le plus simple: la construction d'une cellule de mémoire volatile qui sera à même de stocker un bit. Par la suite, nous discuterons de la manière dont ce genre de mémoire est utilisée au cœur des microprocesseurs.
 
 
-## 4.1. Le verrou SR
+## Le verrou SR
 
 L'idée principale derrière la conception d'un circuit logique qui est capable de stocker un signal est que l'on va utiliser la ou les sorties du circuit en les reconnectant à certaines de ses entrées. Essayons par exemple ce circuit simple avec une seule porte **OU** :
 
@@ -141,7 +141,7 @@ Voici une vidéo qui illustre ce principe de verrou SR.
 ````
 
 
-## 4.2. La bascule D
+## La bascule D
 
 Un souci avec le verrou SR est qu'on a rarement un signal d'entrée qui soit facilement exploitable pour être « converti » en cette logique _set/reset_. La plupart du temps, on a simplement un signal donné, disons $D$, pour « donnée » (ou _data_ en anglais), et c'est ce signal-ci qu'on aimerait stocker. Avec ce système, il serait impossible de connecter $D$ à ce verrou ; on ne peut le brancher directement ni à l'entrée $S$, ni à l'entrée $R$.
 
@@ -370,7 +370,7 @@ Si ce petit circuit fonctionne à 1 Hz, les appareils que nous utilisons aujourd
 `````
 
 
-## 4.3. Addition en plusieurs étapes
+## Addition en plusieurs étapes
 
 Dans cet exemple final, nous allons construire un circuit capable d'effectuer l'addition de plusieurs nombres ; par exemple, d'évaluer la somme $1 + 4 + 5 + 3$ pour trouver $13$.
 
@@ -716,7 +716,7 @@ montrer circuit corrigé
 
 
 
-## 4.4. Récapitulatif
+## Récapitulatif
 
 Au cours des quatre chapitres précédents, nous avons vu comment les portes logiques sont utilisées comme composants de base des ordinateurs. Nous avons d'abord exploré des portes simples comme **OU** et **ET**, puis montré comment ces portes peuvent être combinées en systèmes logiques plus complexes.
 
