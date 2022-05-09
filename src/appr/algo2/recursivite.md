@@ -80,7 +80,7 @@ Même si le tri rapide et le tri fusion ont la même complexité temporelle, c'e
 
 
 <span id="recursivite"></span>
-# 4.1 Focus sur la récursivité
+## 4.1 Focus sur la récursivité
 
 Nous allons maintenant programmer l’{glo}`algo|algorithme` du Tri par fusion. Pour rappel, la première phase de l’{glo}`algo|algorithme` divise *continuellement* le tableau par deux, comme illustré dans la première <a href="#diviser">figure</a> ci-dessus. Voici le code qui permet de diviser un tableau en deux une seule fois :
 
