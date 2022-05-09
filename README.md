@@ -20,7 +20,6 @@ Les ressources sont accessibles via le [site web](https://modulo-info.ch/) (User
 - [Code de conduite](#code-de-conduite)
 - [Documents importants](#documents-importants)
 - [Chapitrage](#chapitrage)
-- [Structure du dépôt GitHub : à modifier](#structure-dépôt-GitHub)
 - [Installation](#installation)
   - [Installation recommandée](#installation-recommandée)
   - [Pré-requis](#pré-requis)
@@ -66,12 +65,6 @@ Les ressources sont découpées selon un chapitrage qui correspond au plan d'ét
 
 [Architecture des ordinateurs](https://apprendre.modulo-info.ch/content/appr/theme/archi/accueil/eleve.html)
 : Il est question ici de notions telles que *les portes logiques*, *les transistors*, *l'architecture de Von Neumann*, et autres concepts essentiels à la compréhension de ce qui se passe au niveau physique et électronique dans un ordinateur.
-
-## Structure dépôt GitHub (:warning: à modifier)
-
-* [config](https://github.com/edunumsec2/book/tree/master/config) contient essentiellement les documents .yml et .py qui servent à générer la version html statique de la documentation. Ce qui est présent dans ce dossier tire sa source dans la documentation [Sphinx](https://www.sphinx-doc.org/en/master/index.html), ainsi que la documentation [jupyter-book](https://jupyterbook.org/intro.html). 
-* [content](https://github.com/edunumsec2/book/tree/master/content) contient le contenu du cours, découpé en *annexes*, *enjeux* (pour enjeux de société), *readme*, *theme*. C'est dans le dossier *theme* que vous trouverez les documents sources des différentes thématiques. Dans les documents sources, il existe deux extensions : les documents .md, et les .ipynb. Les documents .md sont rédigés dans une sytanxe Mardown étendue, le [MyST](https://myst-parser.readthedocs.io/en/latest/). Les documents .ipynb sont à l'origine des documents créés pour [jupyter notebook](https://jupyter.org/). Les deux syntaxes sont tolérées pour la génération du site html statique via l'outil [jupyter-book](https://jupyterbook.org/intro.html). 
-* [docs](https://github.com/edunumsec2/book/tree/master/docs) contient les *archives* de la documentation, à savoir des fichiers qui ne sont plus utilisés dans la version actuelle du livre. Le dossier *landing*, contient le .html qui génère la [page d'accueil](https://edunumsec2.ch/). *media*, comme d'ailleurs tous les autres dossiers portant ce nom, contient les media utilisés dans le dossier parent en question. *palette* contient des indications relatives à la palette graphique du projet. *wiki* contient les tutoriels nécessaires à l'utilisation du dépôt GitHub. 
 
 ## Installation 
 
