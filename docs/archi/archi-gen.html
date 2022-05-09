@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="6. Le microprocesseur" href="micro-pro.html" /><link rel="prev" title="4. ALU et mémoire" href="alu-mem.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="7. Le microprocesseur" href="micro-pro.html" /><link rel="prev" title="5. * Mémoire" href="mem.html" />
 
     <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>5. Architecture générale et composants - Apprendre</title>
+        <title>6. Architecture générale et composants - Apprendre</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -235,7 +235,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/dessiner.html">1. Dessiner - <code class="docutils literal notranslate"><span class="pre">forward()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/definir.html">2. Définir - <code class="docutils literal notranslate"><span class="pre">def</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier* - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/repeter.html">4. Répéter - <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/cercler.html">5. Cercler - <code class="docutils literal notranslate"><span class="pre">circle()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/memoriser.html">6. Mémoriser - <code class="docutils literal notranslate"><span class="pre">a=100</span></code></a></li>
@@ -268,10 +268,11 @@
 <li class="toctree-l2"><a class="reference internal" href="intro.html">1. Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sys-log.html">2. Portes logiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="additionneur.html">3. Additionneur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="alu-mem.html">4. ALU et mémoire</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">5. Architecture générale et composants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="micro-pro.html">6. Le microprocesseur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conclusion.html">7. Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alu.html">4. ALU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mem.html">5. * Mémoire</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">6. Architecture générale et composants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro-pro.html">7. Le microprocesseur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusion.html">8. Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -373,7 +374,7 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="architecture-generale-et-composants">
-<h1><span class="section-number">5. </span>Architecture générale et composants<a class="headerlink" href="#architecture-generale-et-composants" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">6. </span>Architecture générale et composants<a class="headerlink" href="#architecture-generale-et-composants" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Il est commun d’entendre parler du microprocesseur comme du « cœur de l’ordinateur ». On se propose de dégager les caractéristiques essentielles de ce qui constitue cette machine « intelligente » appelée ordinateur, tout en explicitant les composants informatiques spécifiques (le matériel ou « hardware »).</p>
 <p>Si l’on suit l’évolution de l’ordinateur, depuis les années 50 jusqu’à aujourd’hui, on peut distinguer les éléments caractéristiques illustrés sur la figure suivante.</p>
 <figure class="align-left" id="id1">
@@ -397,7 +398,7 @@
 On distingue ce matériel, partie intégrante de la machine, avec les périphériques externes qui lui sont reliés par des câbles ou des moyens de communication sans fil.
 <br/> <br/></p>
 <section id="la-memoire">
-<h2>La mémoire<a class="headerlink" href="#la-memoire" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">6.1. </span>La mémoire<a class="headerlink" href="#la-memoire" title="Lien permanent vers ce titre">¶</a></h2>
 <p><strong>ROM</strong> (Read-Only Memory) : ce que l’on nomme ROM constitue une mémoire « fixe », statique de la machine, dont la taille est définie à la conception. On parle de mémoire morte, ou mémoire en lecture seule. Ce qu’elle stocke ne « part pas » lors de la mise hors tension de la machine.</p>
 <p>Cette mémoire fixe va intégrer tous les éléments nécessaires en particulier au démarrage de la machine, au lancement du système d’exploitation ; il en est de même en ce qui concerne les facteurs de conversion, tables de constantes, instructions propres de la machine. On distingue différents types de ROM :</p>
 <ul class="simple">
@@ -475,7 +476,7 @@ Un ordinateur peut encore aujourd’hui être équipé d’un graveur, vissé au
 </section>
 </section>
 <section id="le-cpu-central-processing-unit">
-<h2>Le CPU (Central Processing Unit)<a class="headerlink" href="#le-cpu-central-processing-unit" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">6.2. </span>Le CPU (Central Processing Unit)<a class="headerlink" href="#le-cpu-central-processing-unit" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il s’agit du processeur de l’ordinateur. C’est le cœur de l’ordinateur, c’est à dire l’espace où va se dérouler l’ensemble des opérations et instructions de la machine. C’est un peu le «cerveau» de la machine.
 Le CPU va aller chercher les informations dans la ROM en passant par la RAM qui est donc essentielle pour le traitement du processeur. On parle d’Unité Centrale de Traitement en français. Le processeur sert à l’échange de données entre composants informatiques : disques durs – carte graphique – ROM – RAM. Il coordonne, interprète, calcule, exécute.</p>
 <p>La puissance du CPU est caractérisée par son nombre de bits, 32 ou 64 bits aujourd’hui, et la fréquence de traitement de l’information qu’il assure caractérise la rapidité avec laquelle il traite les informations. Cette puissance de traitement des cycles CPU, qui est donc la puissance de l’ordinateur, représente la capacité d’un ordinateur à manipuler des données. La puissance de calcul et la rapidité de traitement se trouvent multipliées par le nombres de cœurs éventuellement présents sur la puce. Nombre de bits et fréquence de traitement sont donc deux paramètres essentiels, mais également le nombre de cœurs que le processeur comporte.</p>
@@ -502,7 +503,7 @@ Le CPU va aller chercher les informations dans la ROM en passant par la RAM qui 
 </section>
 </section>
 <section id="les-entrees-sorties">
-<h2>4.3. Les entrées-sorties<a class="headerlink" href="#les-entrees-sorties" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">6.3. </span>Les entrées-sorties<a class="headerlink" href="#les-entrees-sorties" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Un ordinateur traite de l’information au niveau de sa mémoire et de son processeur. Il récupère donc cette information via des ports d’entrée et redistribue une information après traitement via des ports de sortie. L’ensemble de cet environnement d’entrées-sorties constitue ce que l’on nomme les périphériques : clavier, écran, enceintes audio ou casque, imprimante, souris ou pad, disques externes, microphone, réseau ethernet ou wifi, etc.
 Certains périphériques sont par nature destinés uniquement à l’entrée de données (claviers et souris, microphones), tandis que d’autres s’occupent avant tout de la sortie (imprimantes, écrans non-tactiles) ; d’autres encore permettent à la fois l’entrée et la sortie de données (disques durs, disquettes, CD-ROM inscriptibles, clés usb).</p>
 <figure class="align-left" id="id10">
@@ -522,7 +523,7 @@ Pour résoudre ce problème, on intercale des registres d’interfaçage entre l
 </section>
 </section>
 <section id="les-bus">
-<h2>4.4 Les bus<a class="headerlink" href="#les-bus" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">6.4. </span>Les bus<a class="headerlink" href="#les-bus" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Un bus informatique est un dispositif de transmission de données partagé entre plusieurs composants d’un système informatique. Le bus informatique est la réunion des parties matérielles et immatérielles qui permet la transmission de données entre les composants de la machine.
 On distingue deux types de bus : le FSB (Front Side Bus), ou <em>bus système</em>, et le bus d’extension. Le premier permet au processeur de communiquer avec la mémoire vive, le second est une voie de liaison entre le processeur et les cartes d’extension. Des connecteurs d’extension présents sur la carte mère permettent d’y ajouter de nouveaux composants : cartes d’extension tels que carte son, carte d’acquisition vidéo, carte réseau, etc.
 Il existe différents types de bus d’extension : <a class="reference external" href="http://www.dicofr.com/cgi-bin/n.pl/dicofr/definition/20010101000612">ISA, EISA, PCI, PCMCIA, VESA.</a>
@@ -559,7 +560,7 @@ Le bus de contrôle est constitué de lignes de contrôle qui envoient chacune u
 </section>
 </section>
 <section id="autres-composants-materiels">
-<h2>Autres composants matériels<a class="headerlink" href="#autres-composants-materiels" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">6.5. </span>Autres composants matériels<a class="headerlink" href="#autres-composants-materiels" title="Lien permanent vers ce titre">¶</a></h2>
 <section id="lalimentation">
 <h3>L’alimentation<a class="headerlink" href="#lalimentation" title="Lien permanent vers ce titre">¶</a></h3>
 <p>L’alimentation branchée sur le secteur transforme et fournit l’énergie nécessaire à la carte mère, mais l’alimentation est aussi directement reliée à certains composants tel que le lecteur/graveur de DVD ou le disque dur par exemple.</p>
@@ -596,18 +597,18 @@ Le bus de contrôle est constitué de lignes de contrôle qui envoient chacune u
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><span class="section-number">6. </span>Le microprocesseur</div>
+                <div class="title"><span class="section-number">7. </span>Le microprocesseur</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="alu-mem.html">
+          <a class="prev-page" href="mem.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title"><span class="section-number">4. </span>ALU et mémoire</div>
+                <div class="title"><span class="section-number">5. </span>* Mémoire</div>
                 
               </div>
             </a>
@@ -639,26 +640,26 @@ Le bus de contrôle est constitué de lignes de contrôle qui envoient chacune u
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">5. Architecture générale et composants</a><ul>
-<li><a class="reference internal" href="#la-memoire">La mémoire</a><ul>
+<li><a class="reference internal" href="#">6. Architecture générale et composants</a><ul>
+<li><a class="reference internal" href="#la-memoire">6.1. La mémoire</a><ul>
 <li><a class="reference internal" href="#memoire-externe-ou-memoire-de-masse">Mémoire externe ou mémoire de masse</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#le-cpu-central-processing-unit">Le CPU (Central Processing Unit)</a><ul>
+<li><a class="reference internal" href="#le-cpu-central-processing-unit">6.2. Le CPU (Central Processing Unit)</a><ul>
 <li><a class="reference internal" href="#la-carte-mere">La carte mère</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#les-entrees-sorties">4.3. Les entrées-sorties</a><ul>
+<li><a class="reference internal" href="#les-entrees-sorties">6.3. Les entrées-sorties</a><ul>
 <li><a class="reference internal" href="#interfacage">Interfaçage</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#les-bus">4.4 Les bus</a><ul>
+<li><a class="reference internal" href="#les-bus">6.4. Les bus</a><ul>
 <li><a class="reference internal" href="#bus-de-donnees-data-bus">Bus de données (Data Bus)</a></li>
 <li><a class="reference internal" href="#le-bus-dadressage-address-bus">Le bus d’adressage (Address Bus)</a></li>
 <li><a class="reference internal" href="#le-bus-de-commande-control-bus">Le bus de commande (Control Bus)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#autres-composants-materiels">Autres composants matériels</a><ul>
+<li><a class="reference internal" href="#autres-composants-materiels">6.5. Autres composants matériels</a><ul>
 <li><a class="reference internal" href="#lalimentation">L’alimentation</a></li>
 <li><a class="reference internal" href="#la-carte-graphique">La carte graphique</a></li>
 </ul>

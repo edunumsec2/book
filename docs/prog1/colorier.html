@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="4. Répéter - for" href="repeter.html" /><link rel="prev" title="2. Définir - def" href="definir.html" />
 
     <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>3. Colorier - color() - Apprendre</title>
+        <title>3. Colorier* - color() - Apprendre</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -235,7 +235,7 @@
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Programmation I</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="dessiner.html">1. Dessiner - <code class="docutils literal notranslate"><span class="pre">forward()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="definir.html">2. Définir - <code class="docutils literal notranslate"><span class="pre">def</span></code></a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">3. Colorier - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">3. Colorier* - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="repeter.html">4. Répéter - <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="cercler.html">5. Cercler - <code class="docutils literal notranslate"><span class="pre">circle()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="memoriser.html">6. Mémoriser - <code class="docutils literal notranslate"><span class="pre">a=100</span></code></a></li>
@@ -268,10 +268,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../archi/intro.html">1. Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../archi/sys-log.html">2. Portes logiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../archi/additionneur.html">3. Additionneur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../archi/alu-mem.html">4. ALU et mémoire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../archi/archi-gen.html">5. Architecture générale et composants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../archi/micro-pro.html">6. Le microprocesseur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../archi/conclusion.html">7. Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/alu.html">4. ALU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/mem.html">5. * Mémoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/archi-gen.html">6. Architecture générale et composants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/micro-pro.html">7. Le microprocesseur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/conclusion.html">8. Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -373,7 +374,7 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="colorier-color">
-<span id="prog1-colorier"></span><h1><span class="section-number">3. </span>Colorier - <code class="docutils literal notranslate"><span class="pre">color()</span></code><a class="headerlink" href="#colorier-color" title="Lien permanent vers ce titre">¶</a></h1>
+<span id="prog1-colorier"></span><h1><span class="section-number">3. </span>Colorier* - <code class="docutils literal notranslate"><span class="pre">color()</span></code><a class="headerlink" href="#colorier-color" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Dans ce chapitre, nous continuons à dessiner et nous introduisons la couleur.
 Une couleur peut être appliquée à une ligne, à un point, à une forme ou à l’arrière-fond. Nous allons voir que :</p>
 <ul class="simple">
@@ -583,7 +584,7 @@ Vous pouvez changer le nom du fichier, mais devez garder l’extension <code cla
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">3. Colorier - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a><ul>
+<li><a class="reference internal" href="#">3. Colorier* - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a><ul>
 <li><a class="reference internal" href="#liste-de-couleurs">Liste de couleurs</a></li>
 <li><a class="reference internal" href="#couleur-de-ligne">Couleur de ligne</a></li>
 <li><a class="reference internal" href="#couleur-de-point">Couleur de point</a><ul>

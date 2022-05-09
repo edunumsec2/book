@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="7. Conclusion" href="conclusion.html" /><link rel="prev" title="5. Architecture générale et composants" href="archi-gen.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="8. Conclusion" href="conclusion.html" /><link rel="prev" title="6. Architecture générale et composants" href="archi-gen.html" />
 
     <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>6. Le microprocesseur - Apprendre</title>
+        <title>7. Le microprocesseur - Apprendre</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -235,7 +235,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/dessiner.html">1. Dessiner - <code class="docutils literal notranslate"><span class="pre">forward()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/definir.html">2. Définir - <code class="docutils literal notranslate"><span class="pre">def</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier* - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/repeter.html">4. Répéter - <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/cercler.html">5. Cercler - <code class="docutils literal notranslate"><span class="pre">circle()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/memoriser.html">6. Mémoriser - <code class="docutils literal notranslate"><span class="pre">a=100</span></code></a></li>
@@ -268,10 +268,11 @@
 <li class="toctree-l2"><a class="reference internal" href="intro.html">1. Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sys-log.html">2. Portes logiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="additionneur.html">3. Additionneur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="alu-mem.html">4. ALU et mémoire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="archi-gen.html">5. Architecture générale et composants</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">6. Le microprocesseur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conclusion.html">7. Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alu.html">4. ALU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mem.html">5. * Mémoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="archi-gen.html">6. Architecture générale et composants</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">7. Le microprocesseur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusion.html">8. Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -373,7 +374,7 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="le-microprocesseur">
-<h1><span class="section-number">6. </span>Le microprocesseur<a class="headerlink" href="#le-microprocesseur" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">7. </span>Le microprocesseur<a class="headerlink" href="#le-microprocesseur" title="Lien permanent vers ce titre">¶</a></h1>
 <p>On a précédemment détaillé les différents composants d’un ordinateur, puis étudié le fonctionnement des systèmes logiques à partir desquels on peut construire un processeur. On va à présent évoquer l’architecture de von Neumann qui décrit la façon dont le processeur s’insère dans son environnement. Les différents éléments qui constituent le processeur et qui en assurent le bon fonctionnement seront ensuite détaillés.</p>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
@@ -407,7 +408,7 @@ Bio<div class="summary-down docutils">
 Un microprocesseur est un processeur construit avec un circuit intégré, c’est-à-dire un dispositif qui tient sur quelques cm<sup>2</sup>. Il n’y a donc que la taille qui fasse la différence.</p>
 </div>
 <section id="horloge-et-acces-memoire">
-<h2>Horloge et accès mémoire<a class="headerlink" href="#horloge-et-acces-memoire" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">7.1. </span>Horloge et accès mémoire<a class="headerlink" href="#horloge-et-acces-memoire" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Un processeur est un dispositif synchrone, ce qui signifie que les opérations à l’intérieur du processeur se déroulent de manière synchrone à un temps donné. Pour assurer cette simultanéité, il faut comme pour un orchestre, donner le tempo. Cette fonction de métronome est assurée par une horloge, ou un signal d’horloge. Cette horloge est constituée d’un simple signal carré <!-- TODO: ajouter image --> dont la fréquence atteint aujourd’hui plusieurs gigahertz, c’est-à-dire plusieurs milliards de cycles par seconde.</p>
 <div class="attention admonition">
 <p class="admonition-title">La notion de <em>synchronisation</em></p>
@@ -469,8 +470,8 @@ les données stockées dans la mémoire peuvent être des nombres, des lettres, 
 <p>Les registres permettent de stocker des valeurs, comme la RAM, mais directement à l’intérieur du processeur. Ils fonctionnent aussi en mode lecture ou écriture. C’est l’unité de contrôle qui détermine si un registre est utilisé en lecture ou en écriture avec deux fils de connexion: <em>enable</em> et <em>set</em>.
 En principe ces registres stockent les informations en provenance de la mémoire ou le résultat d’un calcul.
 Il existe trois registres plus spécifiques :</p>
-<section id="u-le-registre-detat-u">
-<h4><u> Le registre d’état </u><a class="headerlink" href="#u-le-registre-detat-u" title="Lien permanent vers ce titre">¶</a></h4>
+<section id="le-registre-detat">
+<h4>Le registre d’état<a class="headerlink" href="#le-registre-detat" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Le registre d’état regroupe les drapeaux (en anglais <em>flags</em>). Ils servent à renseigner l’état d’exécution du processeur. Par exemple le drapeau <em>dépassement</em> s’il est mis à 1 signale qu’un dépassement de capacité est survenu, ou encore le drapeau <em>division par zéro</em> signale une division par zéro.</p>
 </section>
 </section>
@@ -484,10 +485,10 @@ Il existe trois registres plus spécifiques :</p>
 </section>
 </section>
 <section id="lunite-arithmetique-et-logique">
-<h2>L’unité arithmétique et logique<a class="headerlink" href="#lunite-arithmetique-et-logique" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">7.2. </span>L’unité arithmétique et logique<a class="headerlink" href="#lunite-arithmetique-et-logique" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’unité arithmétique et logique (UAL plus communément appelée ALU en abréviation anglaise) effectue tous les calculs arithmétiques et logiques. Quelques-uns de ces composants comme l’additionneur ont été abordés dans le chapitre <em>De la logique à l’arithmétique</em>.</p>
-<section id="u-exemple-le-6502-u">
-<h3><u> Exemple : le 6502 </u><a class="headerlink" href="#u-exemple-le-6502-u" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exemple-le-6502">
+<h3>Exemple : le 6502<a class="headerlink" href="#exemple-le-6502" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Le 6502, conçu en 1975, est le premier microprocesseur grand public avec un prix de 25$ (bien en-dessous des concurrents de cette époque). Une de ses premières utilisations pour le grand public fut la console de jeux vidéo Atari 2600. A partir de 1985, Nintendo équipe la NES d’une version modifiée du 6502. Il a équipé également le célèbre Apple II. Il a donné lieu à de nombreuses versions, jusqu’aux processeurs 16 bits actuels de dernière génération.</p>
 <figure class="align-left" id="id3">
 <a class="reference internal image-reference" href="../_images/6502_pad_annot_07.png"><img alt="../_images/6502_pad_annot_07.png" src="../_images/6502_pad_annot_07.png" style="width: 600px; height: 400px;"/></a>
@@ -520,54 +521,10 @@ Il existe trois registres plus spécifiques :</p>
 <p class="admonition-title">Aller plus loin</p>
 <p>La partie qui suit présente de manière plus approfondie certaines spécificités des processeurs modernes.</p>
 </div>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-12 p-2 docutils">
-<div class="card w-100 bg-info docutils">
-<div class="card-header docutils">
-<p class="card-text"><strong>Vite … très vite</strong></p>
-</div>
-<div class="card-body docutils">
-<p class="card-text">Nous avons démontré que finalement nos ordinateurs ont un cerveau très simple dans le fonctionnement de ses éléments de base: des portes logiques qui traitent des <strong>0</strong> ou des <strong>1</strong>. Il est cependant très difficile de se représenter à quel point ces traitements vont vite.
-Imaginons pour cela que le processeur écrive toutes les opérations qu’il effectue sur un ruban de papier et calculons la vitesse de défilement de ce papier.</p>
-<p class="card-text">Pour cela nous faisons les hypothèses suivantes:</p>
-<ul class="simple">
-<li><p class="card-text">Les processeurs actuels ont une cadence d’horloge de 3GHz, c’est à dire <span class="math notranslate nohighlight">\(3·10^9 [s^{-1}]\)</span>. Pour simplifier nous allons supposer qu’ils effectuent une opération par cycle<a class="footnote-reference brackets" href="#id2" id="id1">1</a>.</p></li>
-<li><p class="card-text">Nous transcrivons un mot de 64 bit (taille standard pour les processeurs) sur une longueur de 15cm, ce qui correspond à <span class="math notranslate nohighlight">\(15·10^{-2}[m]\)</span>.</p></li>
-</ul>
-<p class="card-text">Le calcul devient alors:</p>
-<div class="math-wrapper"><div class="math notranslate nohighlight">
-\[\begin{split}
-    3·10^9 [s^{-1}] · 15·10^{-2}[m] \\
-    45·10^7 [m/s]
-\end{split}\]</div></div>
-<p class="card-text">Que nous convertissons en km:</p>
-<div class="math-wrapper"><div class="math notranslate nohighlight">
-\[
-    45·10^5 [km/s] ou encore: 450'000 [km/s]
-\]</div></div>
-<p class="card-text">Rappelons que la vitesse de la lumière est:</p>
-<div class="math-wrapper"><div class="math notranslate nohighlight">
-\[
-    c \cong 300'000 [km/s]
-\]</div></div>
-<p class="card-text">Ce qui veut dire que si un microprocesseur, tel que ceux que l’on trouve dans notre ordinateur ou notre smartphone, écrivait sur un ruban de papier tout ce qu’il fait, ce ruban de papier devrait se déplacer à une fois et demi la vitesse de la lumière. Ou encore, ce ruban ferait chaque seconde plus de 11 fois le tour de la terre.</p>
-<p class="card-text">Si les éléments de base sont simples, la complexité et la richesse des expériences numériques comme l’immersion dans un jeu vidéo proviennent de la quantité extraordinaire d’opérations effectuées.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<hr class="footnotes docutils"/>
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>En fait le opérations d’un processeur prennent plus d’un cycle pour être réalisées, mais comme les processeurs ont plusieurs cœurs et un pipeline dont nous n’abordons pas ici le fonctionnement, la simplification proposée n’est pas aberrante.</p>
-</dd>
-</dl>
 </section>
 </section>
 <section id="processeur-a-noyau-unique">
-<h2>5.3. Processeur à noyau unique<a class="headerlink" href="#processeur-a-noyau-unique" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">7.3. </span>Processeur à noyau unique<a class="headerlink" href="#processeur-a-noyau-unique" title="Lien permanent vers ce titre">¶</a></h2>
 <p>C’est le processeur standard : un processeur à noyau unique ou CPU utilise un seul noyau à l’intérieur du processeur.</p>
 <p>Avantages :</p>
 <p>Un processeur à un seul cœur consomme moins d’énergie que les processeurs à plusieurs cœurs. Ceci est surtout problématique pour les appareils mobiles, oû le problème de l’autonomie de la batterie est essentiel.
@@ -578,7 +535,7 @@ Un processeur à un seul cœur est toujours adapté pour la plupart des applicat
 Comme les applications modernes nécessitent une grande puissance de traitement, un processeur monocœur qui les fait fonctionner peut se bloquer, paralysant ainsi l’ensemble du système alors « planté ».</p>
 </section>
 <section id="processeur-a-double-coeur">
-<h2>5.4. Processeur à double cœur<a class="headerlink" href="#processeur-a-double-coeur" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">7.4. </span>Processeur à double cœur<a class="headerlink" href="#processeur-a-double-coeur" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Un processeur à double cœur possède deux cœurs pour exécuter les opérations, intégrés dans un circuit unique pour se comporter comme une seule unité - un seul processeur -, à la différence d’un système multiprocesseur ; toutefois, ces cœurs possèdent leurs propres contrôleurs et caches, ce qui leur permet de travailler plus rapidement que les processeurs à cœur unique.</p>
 <figure class="align-left" id="id4">
 <a class="reference internal image-reference" href="../_images/2coeurs.png"><img alt="../_images/2coeurs.png" src="../_images/2coeurs.png" style="width: 600px; height: 400px;"/></a>
@@ -595,7 +552,7 @@ Un processeur double cœur « équivaut » à deux ordinateurs en un… mais
 Pour ces raisons, de nombreux développeurs d’applications mobiles ne programment pas leurs applications pour qu’elles fonctionnent avec des processeurs à multiple cœur, les rendant ainsi incompatibles avec les mobiles qui fonctionnent toujours avec des processeurs à double ou multiple cœur.</p>
 </section>
 <section id="les-processeurs-quadricoeur-et-autres-processeurs-a-coeurs-multiples">
-<h2>5.5. Les processeurs quadricœur et autres processeurs à cœurs multiples<a class="headerlink" href="#les-processeurs-quadricoeur-et-autres-processeurs-a-coeurs-multiples" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">7.5. </span>Les processeurs quadricœur et autres processeurs à cœurs multiples<a class="headerlink" href="#les-processeurs-quadricoeur-et-autres-processeurs-a-coeurs-multiples" title="Lien permanent vers ce titre">¶</a></h2>
 <p>En termes simples, un processeur quadricœur possède quatre cœurs et il en va de même pour un processeur hexacœur (six cœurs), octocœur (huit cœurs), etc… Ces cœurs peuvent être soit sur le même circuit intégré, soit sur le même boîtier de puce.</p>
 <figure class="align-left" id="id5">
 <a class="reference internal image-reference" href="../_images/4coeurs.png"><img alt="../_images/4coeurs.png" src="../_images/4coeurs.png" style="width: 600px; height: 400px;"/></a>
@@ -624,13 +581,47 @@ Ces processeurs sont en fait très en avance sur la technologie actuelle de dév
 La plupart de la gamme Ryzen d’AMD propose le multithreading, y compris les modèles de milieu et de haut de gamme, tandis que l’hyperthreading est pour l’instant réservé aux processeurs i7 et i9 haut de gamme d’Intel.</p>
 </section>
 <section id="le-pipeline">
-<h2>5.6. Le pipeline<a class="headerlink" href="#le-pipeline" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">7.6. </span>Le pipeline<a class="headerlink" href="#le-pipeline" title="Lien permanent vers ce titre">¶</a></h2>
 <p>On l’a vu, l’exécution d’une instruction par le microprocesseur implique plusieurs opérations : accès à la mémoire en lecture et en écriture, accès aux registres en lecture et en écriture, opération logique. Pour optimiser la vitesse d’exécution, les processeurs modernes effectuent en série ces opérations. Ainsi, alors que les opérations logiques d’une instruction sont effectuées, l’instruction précédente est déjà chargée en mémoire. La difficulté de ce type d’optimisation réside dans le fait que des branchements conditionnels provoquent l’annulation des instructions déjà chargées. Pour optimiser encore ce genre de procédé, les processeurs font de la prédiction dans l’exécution. Ces optimisations sont extrêmement compliquées à gérer.</p>
 <div class="attention admonition">
 <p class="admonition-title">Anecdote</p>
 <p>La vulnérabilité Spectre (ainsi que d’autres vulnérabilités similaires) exploite justement cette fonction de prédiction dans l’exécution de branchements conditionnels pour accéder à des emplacements mémoire auxquels le programme ne devrait en principe pas accéder.</p>
 </div>
 <br/>
+<div class="hint admonition">
+<p class="admonition-title">Matière à réfléchir. Vite… très vite</p>
+<p>Nous avons démontré que finalement nos ordinateurs ont un cerveau très simple dans le fonctionnement de ses éléments de base: des portes logiques qui traitent des <strong>0</strong> ou des <strong>1</strong>. Il est cependant très difficile de se représenter à quel point ces traitements vont vite.
+Imaginons pour cela que le processeur écrive toutes les opérations qu’il effectue sur un ruban de papier et calculons la vitesse de défilement de ce papier.</p>
+<p>Pour cela, nous faisons les hypothèses suivantes:</p>
+<ul class="simple">
+<li><p>Les processeurs actuels ont une cadence d’horloge de 3 GHz, c’est à dire <span class="math notranslate nohighlight">\(3·10^9~[s^{-1}]\)</span>. Pour simplifier, nous allons supposer qu’ils effectuent une opération par cycle<a class="footnote-reference brackets" href="#id2" id="id1">1</a>.</p></li>
+<li><p>Nous transcrivons un mot de 64 bits (taille standard pour les processeurs actuels) sur une longueur de 15 cm, ce qui correspond à <span class="math notranslate nohighlight">\(15·10^{-2}~[m]\)</span>.</p></li>
+</ul>
+<p>Le calcul devient alors:</p>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[\begin{split}
+    3 \cdot 10^9~[s^{-1}] \times 15 \cdot 10^{-2}~[m] \\
+    45 \cdot 10^7~[m/s]
+\end{split}\]</div></div>
+<p>Que nous convertissons en km:</p>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[
+    45 \cdot 10^5~[km/s]~\textrm{ou encore:}~450'000~[km/s]
+\]</div></div>
+<p>Rappelons que la vitesse de la lumière est :</p>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[
+    c \cong 300'000~[km/s]
+\]</div></div>
+<p>Ce qui veut dire que si un microprocesseur, tel que ceux que l’on trouve dans notre ordinateur ou notre smartphone, écrivait sur un ruban de papier tout ce qu’il fait, ce ruban de papier devrait se déplacer à une fois et demi la vitesse de la lumière. Ou encore, ce ruban ferait chaque seconde plus de 11 fois le tour de la terre.</p>
+<p>Si les éléments de base sont simples, la complexité et la richesse des expériences numériques comme l’immersion dans un jeu vidéo proviennent de la quantité extraordinaire d’opérations effectuées.</p>
+</div>
+<hr class="footnotes docutils"/>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>En fait le opérations d’un processeur prennent plus d’un cycle pour être réalisées, mais comme les processeurs ont plusieurs cœurs et un pipeline dont nous n’abordons pas ici le fonctionnement, la simplification proposée n’est pas aberrante.</p>
+</dd>
+</dl>
 </section>
 </section>
 
@@ -644,7 +635,7 @@ La plupart de la gamme Ryzen d’AMD propose le multithreading, y compris les mo
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><span class="section-number">7. </span>Conclusion</div>
+                <div class="title"><span class="section-number">8. </span>Conclusion</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -655,7 +646,7 @@ La plupart de la gamme Ryzen d’AMD propose le multithreading, y compris les mo
                   <span>Previous</span>
                 </div>
                 
-                <div class="title"><span class="section-number">5. </span>Architecture générale et composants</div>
+                <div class="title"><span class="section-number">6. </span>Architecture générale et composants</div>
                 
               </div>
             </a>
@@ -687,26 +678,26 @@ La plupart de la gamme Ryzen d’AMD propose le multithreading, y compris les mo
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">6. Le microprocesseur</a><ul>
-<li><a class="reference internal" href="#horloge-et-acces-memoire">Horloge et accès mémoire</a><ul>
+<li><a class="reference internal" href="#">7. Le microprocesseur</a><ul>
+<li><a class="reference internal" href="#horloge-et-acces-memoire">7.1. Horloge et accès mémoire</a><ul>
 <li><a class="reference internal" href="#lacces-a-la-memoire">L’accès à la mémoire</a></li>
 <li><a class="reference internal" href="#lunite-de-controle">L’unité de contrôle</a></li>
 <li><a class="reference internal" href="#les-registres">Les registres</a><ul>
-<li><a class="reference internal" href="#u-le-registre-detat-u"><u> Le registre d’état </u></a></li>
+<li><a class="reference internal" href="#le-registre-detat">Le registre d’état</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#le-compteur-de-programme">Le compteur de programme</a></li>
 <li><a class="reference internal" href="#le-compteur-de-pile">Le compteur de pile</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#lunite-arithmetique-et-logique">L’unité arithmétique et logique</a><ul>
-<li><a class="reference internal" href="#u-exemple-le-6502-u"><u> Exemple : le 6502 </u></a></li>
+<li><a class="reference internal" href="#lunite-arithmetique-et-logique">7.2. L’unité arithmétique et logique</a><ul>
+<li><a class="reference internal" href="#exemple-le-6502">Exemple : le 6502</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#processeur-a-noyau-unique">5.3. Processeur à noyau unique</a></li>
-<li><a class="reference internal" href="#processeur-a-double-coeur">5.4. Processeur à double cœur</a></li>
-<li><a class="reference internal" href="#les-processeurs-quadricoeur-et-autres-processeurs-a-coeurs-multiples">5.5. Les processeurs quadricœur et autres processeurs à cœurs multiples</a></li>
-<li><a class="reference internal" href="#le-pipeline">5.6. Le pipeline</a></li>
+<li><a class="reference internal" href="#processeur-a-noyau-unique">7.3. Processeur à noyau unique</a></li>
+<li><a class="reference internal" href="#processeur-a-double-coeur">7.4. Processeur à double cœur</a></li>
+<li><a class="reference internal" href="#les-processeurs-quadricoeur-et-autres-processeurs-a-coeurs-multiples">7.5. Les processeurs quadricœur et autres processeurs à cœurs multiples</a></li>
+<li><a class="reference internal" href="#le-pipeline">7.6. Le pipeline</a></li>
 </ul>
 </li>
 </ul>

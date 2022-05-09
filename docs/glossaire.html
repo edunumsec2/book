@@ -235,7 +235,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="prog1/dessiner.html">1. Dessiner - <code class="docutils literal notranslate"><span class="pre">forward()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="prog1/definir.html">2. Définir - <code class="docutils literal notranslate"><span class="pre">def</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="prog1/colorier.html">3. Colorier - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="prog1/colorier.html">3. Colorier* - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="prog1/repeter.html">4. Répéter - <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="prog1/cercler.html">5. Cercler - <code class="docutils literal notranslate"><span class="pre">circle()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="prog1/memoriser.html">6. Mémoriser - <code class="docutils literal notranslate"><span class="pre">a=100</span></code></a></li>
@@ -268,10 +268,11 @@
 <li class="toctree-l2"><a class="reference internal" href="archi/intro.html">1. Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="archi/sys-log.html">2. Portes logiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="archi/additionneur.html">3. Additionneur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="archi/alu-mem.html">4. ALU et mémoire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="archi/archi-gen.html">5. Architecture générale et composants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="archi/micro-pro.html">6. Le microprocesseur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="archi/conclusion.html">7. Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="archi/alu.html">4. ALU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="archi/mem.html">5. * Mémoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="archi/archi-gen.html">6. Architecture générale et composants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="archi/micro-pro.html">7. Le microprocesseur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="archi/conclusion.html">8. Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -457,7 +458,7 @@ La capacité d’attention des individus est limitée tandis que la quantité d�
 </div>
 <div class="glossary-entry docutils">
 <strong class="glossary-name" id="gl-def-stockage-1">Stockage</strong><p>En informatique, on entend par stockage un processus grâce auquel un certain nombre de bits d’information peuvent être conservés dans le temps. Il existe des stockages de courte et de longue durée, ainsi qu’une multiplicité de techniques permettant de stocker de l’information sous forme de bits.</p>
-<p class="glossary-refs"><strong>Usages:</strong><a class="reference external" href="archi/alu-mem.html#gl-stockage-0">Architecture des ordinateurs/<strong>ALU et mémoire</strong></a><a class="reference external" href="archi/alu-mem.html#gl-stockage-1">Architecture des ordinateurs/<strong>ALU et mémoire</strong></a><a class="reference external" href="archi/intro.html#gl-stockage-0">Architecture des ordinateurs/<strong>Introduction</strong></a><a class="reference external" href="rep-info/intro.html#gl-stockage-0">Représentation de l’information/<strong>Introduction</strong></a></p>
+<p class="glossary-refs"><strong>Usages:</strong><a class="reference external" href="archi/intro.html#gl-stockage-0">Architecture des ordinateurs/<strong>Introduction</strong></a><a class="reference external" href="archi/mem.html#gl-stockage-0">Architecture des ordinateurs/<strong>* Mémoire</strong></a><a class="reference external" href="archi/mem.html#gl-stockage-1">Architecture des ordinateurs/<strong>* Mémoire</strong></a><a class="reference external" href="rep-info/intro.html#gl-stockage-0">Représentation de l’information/<strong>Introduction</strong></a></p>
 </div>
 <div class="glossary-entry docutils">
 <strong class="glossary-name" id="gl-def-transmission-1">Transmission</strong><p>En informatique, la transmission de l’information est l’opération par laquelle des bits sont envoyés d’un endroit à un autre sur terre, ou plus simplement d’un appareil à un autre, ou d’un programme à un autre.</p>
@@ -485,7 +486,7 @@ La capacité d’attention des individus est limitée tandis que la quantité d�
 </div>
 <div class="glossary-entry docutils">
 <strong class="glossary-name" id="gl-def-transistor-1">Transistor</strong><p>Le transistor est un composant qui est utilisé dans la plupart des circuits électroniques (circuit logique, amplificateur, stabilisateur de tension, modulation de signal, etc.).</p>
-<p class="glossary-refs"><strong>Usages:</strong><a class="reference external" href="archi/alu-mem.html#gl-transistor-0">Architecture des ordinateurs/<strong>ALU et mémoire</strong></a><a class="reference external" href="archi/intro.html#gl-transistor-0">Architecture des ordinateurs/<strong>Introduction</strong></a><a class="reference external" href="archi/sys-log.html#gl-transistor-0">Architecture des ordinateurs/<strong>Portes logiques</strong></a><a class="reference external" href="rep-info/intro.html#gl-transistor-0">Représentation de l’information/<strong>Introduction</strong></a></p>
+<p class="glossary-refs"><strong>Usages:</strong><a class="reference external" href="archi/intro.html#gl-transistor-0">Architecture des ordinateurs/<strong>Introduction</strong></a><a class="reference external" href="archi/mem.html#gl-transistor-0">Architecture des ordinateurs/<strong>* Mémoire</strong></a><a class="reference external" href="archi/sys-log.html#gl-transistor-0">Architecture des ordinateurs/<strong>Portes logiques</strong></a><a class="reference external" href="rep-info/intro.html#gl-transistor-0">Représentation de l’information/<strong>Introduction</strong></a></p>
 </div>
 <div class="glossary-entry docutils">
 <strong class="glossary-name" id="gl-def-codebinaire-1">Code binaire</strong><p>Un code binaire représente un texte, des instructions de processeur ou toute autre donnée utilisant un système à deux symboles. Les “0” et “1” sont le plus souvent utilisés dans le système de numération binaire.</p>
@@ -511,7 +512,7 @@ La capacité d’attention des individus est limitée tandis que la quantité d�
 </div>
 <div class="glossary-entry docutils">
 <strong class="glossary-name" id="gl-def-portelogique-1">Portes logiques</strong><p>Les portes logiques sont des unités microélectroniques, ou symboliques, permettant de reproduire la logique booléenne via des tensions électriques.</p>
-<p class="glossary-refs"><strong>Usages:</strong><a class="reference external" href="archi/additionneur.html#gl-portelogique-0">Architecture des ordinateurs/<strong>Additionneur</strong></a><a class="reference external" href="archi/alu-mem.html#gl-portelogique-0">Architecture des ordinateurs/<strong>ALU et mémoire</strong></a><a class="reference external" href="archi/intro.html#gl-portelogique-0">Architecture des ordinateurs/<strong>Introduction</strong></a><a class="reference external" href="archi/sys-log.html#gl-portelogique-0">Architecture des ordinateurs/<strong>Portes logiques</strong></a></p>
+<p class="glossary-refs"><strong>Usages:</strong><a class="reference external" href="archi/additionneur.html#gl-portelogique-0">Architecture des ordinateurs/<strong>Additionneur</strong></a><a class="reference external" href="archi/intro.html#gl-portelogique-0">Architecture des ordinateurs/<strong>Introduction</strong></a><a class="reference external" href="archi/mem.html#gl-portelogique-0">Architecture des ordinateurs/<strong>* Mémoire</strong></a><a class="reference external" href="archi/sys-log.html#gl-portelogique-0">Architecture des ordinateurs/<strong>Portes logiques</strong></a></p>
 </div>
 <div class="glossary-entry docutils">
 <strong class="glossary-name" id="gl-def-conjonction-1">Conjonction</strong><p>En logique, la conjonction est équivalente au “et” dans le langage courant. Il “combine” un élément et un autre.</p>
@@ -527,23 +528,23 @@ La capacité d’attention des individus est limitée tandis que la quantité d�
 </div>
 <div class="glossary-entry docutils">
 <strong class="glossary-name" id="gl-def-tableverite-1">Table de vérité</strong><p>En logique, une table de vérité est une façon de représenter les “entrées” et les “sorties” d’un système logique de façon graphique.</p>
-<p class="glossary-refs"><strong>Usages:</strong><a class="reference external" href="archi/additionneur.html#gl-tableverite-0">Architecture des ordinateurs/<strong>Additionneur</strong></a><a class="reference external" href="archi/alu-mem.html#gl-tableverite-0">Architecture des ordinateurs/<strong>ALU et mémoire</strong></a><a class="reference external" href="archi/sys-log.html#gl-tableverite-0">Architecture des ordinateurs/<strong>Portes logiques</strong></a></p>
+<p class="glossary-refs"><strong>Usages:</strong><a class="reference external" href="archi/additionneur.html#gl-tableverite-0">Architecture des ordinateurs/<strong>Additionneur</strong></a><a class="reference external" href="archi/mem.html#gl-tableverite-0">Architecture des ordinateurs/<strong>* Mémoire</strong></a><a class="reference external" href="archi/sys-log.html#gl-tableverite-0">Architecture des ordinateurs/<strong>Portes logiques</strong></a></p>
 </div>
 <div class="glossary-entry docutils">
 <strong class="glossary-name" id="gl-def-circuit-1">Circuit logique</strong><p>Un circuit logique est une combinaison de portes logiques.</p>
-<p class="glossary-refs"><strong>Usages:</strong><a class="reference external" href="archi/alu-mem.html#gl-circuit-0">Architecture des ordinateurs/<strong>ALU et mémoire</strong></a></p>
+<p class="glossary-refs"><strong>Usages:</strong><a class="reference external" href="archi/mem.html#gl-circuit-0">Architecture des ordinateurs/<strong>* Mémoire</strong></a></p>
 </div>
 <div class="glossary-entry docutils">
 <strong class="glossary-name" id="gl-def-memvolatile-1">Mémoire volatile</strong><p>La mémoire volatile d’un ordinateur est une mémoire dont la durée de vie est limitée à la mise sous tension des circuits.</p>
-<p class="glossary-refs"><strong>Usages:</strong><a class="reference external" href="archi/alu-mem.html#gl-memvolatile-0">Architecture des ordinateurs/<strong>ALU et mémoire</strong></a></p>
+<p class="glossary-refs"><strong>Usages:</strong><a class="reference external" href="archi/mem.html#gl-memvolatile-0">Architecture des ordinateurs/<strong>* Mémoire</strong></a></p>
 </div>
 <div class="glossary-entry docutils">
 <strong class="glossary-name" id="gl-def-memnonvolatile-1">Mémoire non volatile</strong><p>La mémoire non volatile d’un ordinateur est une mémoire dont la durée de vie outrepasse la mise hors tension des circuits.</p>
-<p class="glossary-refs"><strong>Usages:</strong><a class="reference external" href="archi/alu-mem.html#gl-memnonvolatile-0">Architecture des ordinateurs/<strong>ALU et mémoire</strong></a></p>
+<p class="glossary-refs"><strong>Usages:</strong><a class="reference external" href="archi/mem.html#gl-memnonvolatile-0">Architecture des ordinateurs/<strong>* Mémoire</strong></a></p>
 </div>
 <div class="glossary-entry docutils">
 <strong class="glossary-name" id="gl-def-verrou-1">Verrou</strong><p>Archiordi</p>
-<p class="glossary-refs"><strong>Usages:</strong><a class="reference external" href="archi/alu-mem.html#gl-verrou-0">Architecture des ordinateurs/<strong>ALU et mémoire</strong></a></p>
+<p class="glossary-refs"><strong>Usages:</strong><a class="reference external" href="archi/mem.html#gl-verrou-0">Architecture des ordinateurs/<strong>* Mémoire</strong></a></p>
 </div>
 <div class="glossary-entry docutils">
 <strong class="glossary-name" id="gl-def-algo-1">Algorithme</strong><p>Algo</p>
@@ -603,7 +604,6 @@ La capacité d’attention des individus est limitée tandis que la quantité d�
 </div>
 <div class="glossary-entry docutils">
 <strong class="glossary-name" id="gl-def-modulo-1">Arithmétique modulaire</strong><p>L’opération modulo (mod ou %) est l’opération qui retourne le reste d’une division. En Python, 15%4 (15 modulo 4) retourne 3.</p>
-<p class="glossary-refs"><strong>Usages:</strong><a class="reference external" href="archi/additionneur.html#gl-modulo-0">Architecture des ordinateurs/<strong>Additionneur</strong></a></p>
 </div>
 <div class="glossary-entry docutils">
 <strong class="glossary-name" id="gl-def-syslogique-1">Système logique</strong><p>Archiordi</p>

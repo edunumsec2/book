@@ -235,7 +235,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/dessiner.html">1. Dessiner - <code class="docutils literal notranslate"><span class="pre">forward()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/definir.html">2. Définir - <code class="docutils literal notranslate"><span class="pre">def</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier* - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/repeter.html">4. Répéter - <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/cercler.html">5. Cercler - <code class="docutils literal notranslate"><span class="pre">circle()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/memoriser.html">6. Mémoriser - <code class="docutils literal notranslate"><span class="pre">a=100</span></code></a></li>
@@ -268,10 +268,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../archi/intro.html">1. Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../archi/sys-log.html">2. Portes logiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../archi/additionneur.html">3. Additionneur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../archi/alu-mem.html">4. ALU et mémoire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../archi/archi-gen.html">5. Architecture générale et composants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../archi/micro-pro.html">6. Le microprocesseur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../archi/conclusion.html">7. Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/alu.html">4. ALU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/mem.html">5. * Mémoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/archi-gen.html">6. Architecture générale et composants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/micro-pro.html">7. Le microprocesseur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/conclusion.html">8. Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -406,13 +407,13 @@
 <section id="representation-dune-image-en-noir-et-blanc">
 <h2>Représentation d’une image en noir et blanc<a class="headerlink" href="#representation-dune-image-en-noir-et-blanc" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="tabbed-set docutils">
-<input checked="checked" id="2c475d09-8825-41f3-b818-5613567c8763" name="72988dc1-2c4d-4370-8e3d-712882b8b4f8" type="radio"/>
-<label class="tabbed-label" for="2c475d09-8825-41f3-b818-5613567c8763">
+<input checked="checked" id="4307c9bf-2f40-48ca-9568-d08002ebb024" name="16d0dc39-b4de-40cb-9a82-712c6db1d3bd" type="radio"/>
+<label class="tabbed-label" for="4307c9bf-2f40-48ca-9568-d08002ebb024">
 Image</label><div class="tabbed-content docutils">
 <a class="reference internal image-reference" href="../_images/thuglife.png"><img alt="../_images/thuglife.png" src="../_images/thuglife.png" style="width: 300px;"/></a>
 </div>
-<input id="c474ace3-18b6-4346-bb46-7c9c94bb735c" name="72988dc1-2c4d-4370-8e3d-712882b8b4f8" type="radio"/>
-<label class="tabbed-label" for="c474ace3-18b6-4346-bb46-7c9c94bb735c">
+<input id="d33b419f-a70e-46dd-8ce7-d52ee1b64f5b" name="16d0dc39-b4de-40cb-9a82-712c6db1d3bd" type="radio"/>
+<label class="tabbed-label" for="d33b419f-a70e-46dd-8ce7-d52ee1b64f5b">
 Code</label><div class="tabbed-content docutils">
 <a class="reference internal image-reference" href="../_images/thuglife2.png"><img alt="../_images/thuglife2.png" src="../_images/thuglife2.png" style="width: 300px;"/></a>
 </div>
@@ -458,13 +459,13 @@ Ceci nous permet de construire des images simples, dessinées seulement en noir 
 </figure>
 </div>
 <div class="tabbed-set docutils">
-<input checked="checked" id="18154dc7-9c82-4f82-aaa4-708e6f406210" name="4d782135-3c90-447a-8f2d-23dde8bc4185" type="radio"/>
-<label class="tabbed-label" for="18154dc7-9c82-4f82-aaa4-708e6f406210">
+<input checked="checked" id="dcac4ad0-3ac9-4f2f-ae94-e93482d3ff96" name="a8d1b61a-f497-4d63-aa64-db0f10972302" type="radio"/>
+<label class="tabbed-label" for="dcac4ad0-3ac9-4f2f-ae94-e93482d3ff96">
 Image</label><div class="tabbed-content docutils">
 <a class="reference internal image-reference" href="../_images/kirbycolor.png"><img alt="../_images/kirbycolor.png" src="../_images/kirbycolor.png" style="width: 300px;"/></a>
 </div>
-<input id="8ae7e515-8a33-4266-9776-d63063faea12" name="4d782135-3c90-447a-8f2d-23dde8bc4185" type="radio"/>
-<label class="tabbed-label" for="8ae7e515-8a33-4266-9776-d63063faea12">
+<input id="b564c114-020e-4235-8a1a-89576d5cc5dd" name="a8d1b61a-f497-4d63-aa64-db0f10972302" type="radio"/>
+<label class="tabbed-label" for="b564c114-020e-4235-8a1a-89576d5cc5dd">
 Code</label><div class="tabbed-content docutils">
 <a class="reference internal image-reference" href="../_images/kirbycolor2.png"><img alt="../_images/kirbycolor2.png" src="../_images/kirbycolor2.png" style="width: 500px;"/></a>
 </div>

@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="4. ALU et mémoire" href="alu-mem.html" /><link rel="prev" title="2. Portes logiques" href="sys-log.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="4. ALU" href="alu.html" /><link rel="prev" title="2. Portes logiques" href="sys-log.html" />
 
     <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
         <title>3. Additionneur - Apprendre</title>
@@ -235,7 +235,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/dessiner.html">1. Dessiner - <code class="docutils literal notranslate"><span class="pre">forward()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/definir.html">2. Définir - <code class="docutils literal notranslate"><span class="pre">def</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier* - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/repeter.html">4. Répéter - <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/cercler.html">5. Cercler - <code class="docutils literal notranslate"><span class="pre">circle()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/memoriser.html">6. Mémoriser - <code class="docutils literal notranslate"><span class="pre">a=100</span></code></a></li>
@@ -268,10 +268,11 @@
 <li class="toctree-l2"><a class="reference internal" href="intro.html">1. Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sys-log.html">2. Portes logiques</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">3. Additionneur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="alu-mem.html">4. ALU et mémoire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="archi-gen.html">5. Architecture générale et composants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="micro-pro.html">6. Le microprocesseur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conclusion.html">7. Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alu.html">4. ALU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mem.html">5. * Mémoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="archi-gen.html">6. Architecture générale et composants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro-pro.html">7. Le microprocesseur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusion.html">8. Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -403,7 +404,7 @@
 </tbody>
 </table></div>
 <p>En comparant cette table de vérité avec celles des portes logiques, on se rend compte que <span class="math notranslate nohighlight">\(S_0\)</span> n’est autre qu’un <strong>OU-X</strong> (OU exclusif) de <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span>.</p>
-<p>La table de vérité pour <span class="math notranslate nohighlight">\(S_1\)</span> est:</p>
+<p>La table de vérité pour <span class="math notranslate nohighlight">\(S_1\)</span> est :</p>
 <div class="table-wrapper"><table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
@@ -463,10 +464,10 @@ Corrigé<div class="summary-down docutils">
 </div>
 </details></div>
 <section id="additionneur-complet">
-<h2>Additionneur complet<a class="headerlink" href="#additionneur-complet" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le circuit précédent est particulièrement intéressant, car il montre qu’il est possible d’utiliser des opérateurs logiques pour réaliser l’opération arithmétique de l’addition. L’additionneur est limité: en fait, on l’appelle un <em>demi-additionneur</em>. Il n’est capable d’additionner que deux nombres à 1 bit — c’est très limité. En fait, il serait intéressant d’avoir un additionneur de <em>trois</em> nombres à un bit. Pourquoi ? À cause de la manière dont on pose les additions en colonnes.</p>
+<h2><span class="section-number">3.1. </span>Additionneur complet<a class="headerlink" href="#additionneur-complet" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le circuit précédent est particulièrement intéressant, car il montre qu’il est possible d’utiliser des opérateurs logiques pour réaliser l’opération arithmétique de l’addition. L’additionneur est limité: en fait, on l’appelle un <em>demi-additionneur</em>. Il n’est capable d’additionner que deux bits — c’est très limité. En fait, il serait intéressant d’avoir un additionneur de <em>trois</em> bits. Pourquoi ? À cause de la manière dont on pose les additions en colonnes.</p>
 <p>Lorsqu’on additionne deux nombres à plusieurs chiffres, que ce soit en base 10 ou en base 2, on commence par la colonne de droite, les unités. On connait le concept de <em>retenue</em>: en base 10, si l’addition des unités dépasse 9, on retient 1 dans la colonne des dizaines. En base 2, de façon similaire, si l’addition des unités dépasse… 1, on retient 1 dans la colonne suivante à gauche. C’est ce qu’on a fait avec le demi-additionneur: on peut considérer que la sortie <span class="math notranslate nohighlight">\(S_0\)</span> représente la colonne des unités dans la somme, et la sortie <span class="math notranslate nohighlight">\(S_1\)</span> représente la retenue à prendre en compte dans la colonne suivante.</p>
-<p>C’est ici que ça se complique : pour additionner les chiffres de la deuxième colonne, on doit potentiellement additionner <em>trois</em> chiffres, et plus seulement deux. On a donc, en entrée, les deux bits <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> qui viennent des nombres à additionner, et aussi potentiellement cette retenue qui vient de la colonne des unités, qu’on appellera <span class="math notranslate nohighlight">\(C_{in}\)</span> (pour <em>carry</em>, « retenue » en anglais). Ceci est vrai en base 2 comme en base 10. Il faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s’appelle <em>additionneur complet</em> et livrera deux sorties: le bit de somme, appelé simplement <span class="math notranslate nohighlight">\(S\)</span>, et la retenue à reporter pour la colonne suivante, appelée <span class="math notranslate nohighlight">\(C_{out}\)</span>.</p>
+<p>C’est ici que ça se complique : pour additionner les chiffres de la deuxième colonne, on doit potentiellement additionner <em>trois</em> chiffres, et plus seulement deux. On a donc, en entrée, les deux bits <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> qui viennent des nombres à additionner, et aussi potentiellement cette retenue qui vient de la colonne des unités, qu’on appellera <span class="math notranslate nohighlight">\(C_{in}\)</span> (pour <em>carry</em>, « retenue » en anglais). Ceci est vrai en base 2 comme en base 10. Il faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s’appelle <em>additionneur complet</em> et livrera deux sorties : le bit de somme, appelé simplement <span class="math notranslate nohighlight">\(S\)</span>, et la retenue à reporter pour la colonne suivante, appelée <span class="math notranslate nohighlight">\(C_{out}\)</span>.</p>
 <div class="admonition-exercice-2-bases-de-l-additionneur-complet admonition">
 <p class="admonition-title">Exercice 2 : bases de l’additionneur complet</p>
 <ul class="simple">
@@ -566,31 +567,32 @@ Corrigé<div class="summary-down docutils">
 }
 </script></logic-editor></div></section>
 <section id="chainage-dadditionneurs">
-<h2>Chaînage d’additionneurs<a class="headerlink" href="#chainage-dadditionneurs" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">3.2. </span>Chaînage d’additionneurs<a class="headerlink" href="#chainage-dadditionneurs" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La flexibilité de ce composant fait qu’on peut maintenant facilement l’utiliser pour construire un circuit qui additionne deux nombres <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> à 2 bits chacun (donc de <span class="math notranslate nohighlight">\(0 + 0 = 0\)</span> à <span class="math notranslate nohighlight">\(3 + 3 = 6\)</span>).</p>
 <p>Si <span class="math notranslate nohighlight">\(A\)</span> est formé de deux bits <span class="math notranslate nohighlight">\(A_0\)</span> et <span class="math notranslate nohighlight">\(A_1\)</span> et que <span class="math notranslate nohighlight">\(B\)</span> est formé des deux bits <span class="math notranslate nohighlight">\(B_0\)</span> et <span class="math notranslate nohighlight">\(B_1\)</span> et avec une sortie <span class="math notranslate nohighlight">\(S\)</span> sur trois bits <span class="math notranslate nohighlight">\(S_0\)</span>, <span class="math notranslate nohighlight">\(S_1\)</span> et <span class="math notranslate nohighlight">\(S_2\)</span>, on a :</p>
-<div class="logic-container" style="height: 280px;"><logic-editor mode="tryout">
+<div class="logic-container" style="height: 280px;"><logic-editor id="logic_fulladder_2bits" mode="tryout">
 <script type="application/json">
 {
-  "v": 1,
+  "v": 2,
+  "opts": {"showDisconnectedPins": true},
   "in": [
-    {"pos": [190, 40], "orient": "s", "id": 10, "name": "A0", "val": 0},
-    {"pos": [90, 40], "orient": "s", "id": 11, "name": "A1", "val": 0},
-    {"pos": [230, 100], "orient": "s", "id": 12, "name": "B0", "val": 0},
-    {"pos": [130, 100], "orient": "s", "id": 13, "name": "B1", "val": 0}
+    {"pos": [190, 40], "orient": "s", "id": 10, "ref": "a0", "name": "A0", "val": 0},
+    {"pos": [90, 40], "orient": "s", "id": 11, "ref": "a1", "name": "A1", "val": 0},
+    {"pos": [230, 100], "orient": "s", "id": 12, "ref": "b0", "name": "B0", "val": 0},
+    {"pos": [130, 100], "orient": "s", "id": 13, "ref": "b1", "name": "B1", "val": 0}
   ],
   "out": [
-    {"pos": [210, 240], "orient": "s", "id": 14, "name": "S0"},
-    {"pos": [110, 240], "orient": "s", "id": 15, "name": "S1"},
-    {"pos": [30, 240], "orient": "s", "id": 16, "name": "S2"}
+    {"pos": [210, 240], "orient": "s", "id": 14, "ref": "s0", "name": "S0"},
+    {"pos": [110, 240], "orient": "s", "id": 15, "ref": "s1", "name": "S1"},
+    {"pos": [30, 240], "orient": "s", "id": 16, "ref": "s2", "name": "S2"}
   ],
   "components": [
-    {"type": "adder", "pos": [210, 170], "in": [0, 1, 2], "out": [3, 4]},
-    {"type": "adder", "pos": [110, 170], "in": [5, 6, 7], "out": [8, 9]}
+    {"type": "adder", "pos": [210, 170], "ref": "adder0", "in": [0, 1, 2], "out": [3, 4]},
+    {"type": "adder", "pos": [110, 170], "ref": "adder1", "in": [5, 6, 7], "out": [8, 9]}
   ],
-  "wires": [[4, 7], [10, 0], [11, 5], [13, 6], [12, 1], [3, 14], [8, 15], [9, 16]]
+  "wires": [[4, 7, {"ref": "cout1"}], [10, 0], [11, 5], [13, 6], [12, 1], [3, 14], [8, 15], [9, 16, {"ref": "cout2"}]]
 }
-</script></logic-editor></div><p>L’additionneur du haut, comme précédemment, additionne les deux bits des unités: <span class="math notranslate nohighlight">\(A_0\)</span> et <span class="math notranslate nohighlight">\(B_0\)</span>. Son entrée <span class="math notranslate nohighlight">\(C_{in}\)</span>, qui représente l’éventuel troisième chiffre à additionner issu d’une retenue, n’est pas connectée et est toujours 0, vu qu’il n’y a aucune colonne précédente dans l’addition qui aurait pu en livrer une. Il livre comme première sortie <span class="math notranslate nohighlight">\(S_0\)</span>, le chiffre des unités, et sa seconde sortie <span class="math notranslate nohighlight">\(C_{out}\)</span> est la retenue à utiliser pour l’addition des chiffres suivants. C’est pourquoi elle est connectée à l’entrée de la retenue du second additionneur <span class="math notranslate nohighlight">\(C_{in}\)</span>, qui va lui ajouter également les deux bits de la colonne suivante, <span class="math notranslate nohighlight">\(A_1\)</span> et <span class="math notranslate nohighlight">\(B_1\)</span>. Les sorties du second additionneur livrent le deuxième bit <span class="math notranslate nohighlight">\(S_1\)</span> de la valeur de sortie, ainsi que la retenue pour la troisième colonne. Comme il n’y a plus de bits d’entrée pour la troisième colonne, cette retenue peut directement être considérée comme le troisième bit de sortie <span class="math notranslate nohighlight">\(S_2\)</span>.</p>
+</script></logic-editor></div><p>L’<span class="logic-highlight" onclick='Logic.highlight("fulladder_2bits", "adder0")'>additionneur de droite</span>, comme précédemment, additionne <span class="logic-highlight" onclick='Logic.highlight("fulladder_2bits", ["a0", "b0"])'>les deux bits des unités</span> : <span class="math notranslate nohighlight">\(A_0\)</span> et <span class="math notranslate nohighlight">\(B_0\)</span>. Son entrée <span class="math notranslate nohighlight">\(C_{in}\)</span>, qui représente l’éventuel troisième chiffre à additionner issu d’une retenue, n’est pas connectée et est toujours 0, vu qu’il n’y a aucune colonne précédente dans l’addition qui aurait pu en livrer une. Il livre comme <span class="logic-highlight" onclick='Logic.highlight("fulladder_2bits", "s0")'>première sortie</span> <span class="math notranslate nohighlight">\(S_0\)</span>, le chiffre des unités, et sa <span class="logic-highlight" onclick='Logic.highlight("fulladder_2bits", "cout1")'>seconde sortie</span> <span class="math notranslate nohighlight">\(C_{out}\)</span> est la retenue à utiliser pour l’addition des chiffres suivants. C’est pourquoi elle est connectée à l’entrée de la retenue du <span class="logic-highlight" onclick='Logic.highlight("fulladder_2bits", "adder1")'>second additionneur</span> <span class="math notranslate nohighlight">\(C_{in}\)</span>, qui va lui ajouter également <span class="logic-highlight" onclick='Logic.highlight("fulladder_2bits", ["a1", "b1"])'>les deux bits de la colonne suivante</span>, <span class="math notranslate nohighlight">\(A_1\)</span> et <span class="math notranslate nohighlight">\(B_1\)</span>. Les sorties du second additionneur livrent <span class="logic-highlight" onclick='Logic.highlight("fulladder_2bits", "s1")'>le deuxième bit</span> <span class="math notranslate nohighlight">\(S_1\)</span> de la valeur de sortie, ainsi que <span class="logic-highlight" onclick='Logic.highlight("fulladder_2bits", "cout2")'>la retenue pour la troisième colonne</span>. Comme il n’y a plus de bits d’entrée pour la troisième colonne, cette retenue peut directement être considérée comme <span class="logic-highlight" onclick='Logic.highlight("fulladder_2bits", "s2")'>le troisième bit de sortie</span> <span class="math notranslate nohighlight">\(S_2\)</span>.</p>
 <div class="admonition-exercice-3-limite-de-cet-additionneur-a-2-bits admonition">
 <p class="admonition-title">Exercice 3 : limite de cet additionneur à 2 bits</p>
 <p>Avec l’additionneur ci-dessus, est-il possible d’obtenir des 1 sur toutes les sorties, donc d’avoir <span class="math notranslate nohighlight">\(S_2 = S_1 = S_0 = 1\)</span> ?</p>
@@ -688,11 +690,11 @@ Corrigé<div class="summary-down docutils">
 }
 </script></logic-editor></div></div>
 </details></div>
-<p>Cet exercice démontre l’opportunité de penser en termes <span class="target" id="gl-modulo-0"></span><span class="glossary-ref" data-definition="PHA+TCdvcMOpcmF0aW9uIG1vZHVsbyAobW9kIG91ICUpIGVzdCBsJ29ww6lyYXRpb24gcXVpIHJldG91cm5lIGxlIHJlc3RlIGQndW5lIGRpdmlzaW9uLiBFbiBQeXRob24sIDE1JTQgKDE1IG1vZHVsbyA0KSByZXRvdXJuZSAzLjwvcD4K" data-entry-name="QXJpdGhtw6l0aXF1ZSBtb2R1bGFpcmU=" data-glossary-uri="../glossaire.html#gl-def-modulo-1" data-number="1">modulaires</span>, ce qui revient souvent en informatique. Ici, on a réalisé qu’un additionneur complet résout un sous-problème bien défini d’une addition générale d’un nombre à <span class="math notranslate nohighlight">\(n\)</span> bits, et qu’une fois qu’on a créé un tel additionneur, il suffit d’en connecter plusieurs les uns derrière les autres de manière structurée pour additionner des nombres plus grands.</p>
+<p>Cet exercice démontre l’opportunité de penser en termes modulaires, ce qui revient souvent en informatique. Ici, on a réalisé qu’un additionneur complet résout un sous-problème bien défini d’une addition générale d’un nombre à <span class="math notranslate nohighlight">\(n\)</span> bits, et qu’une fois qu’on a créé un tel additionneur, il suffit d’en connecter plusieurs les uns derrière les autres de manière structurée pour additionner des nombres plus grands.</p>
 <div class="admonition-exercice-5-overflow admonition">
 <p class="admonition-title">Exercice 5 : overflow</p>
-<p>Le schéma ci-dessous montre le même additionneur de demi-octets de l’exercice précédent, mais, de plus, la valeur en base 10 de ses 4 bits d’entrée pour <span class="math notranslate nohighlight">\(A\)</span> et pour <span class="math notranslate nohighlight">\(B\)</span> est affichée avec un module d’affichage spécial à droite. La même chose est faite pour représenter la valeur <span class="math notranslate nohighlight">\(S = A + B\)</span> (mais seulement sur les quatre premiers bits de <span class="math notranslate nohighlight">\(S\)</span>). Actuellement, le circuit effectue le calcul <span class="math notranslate nohighlight">\(0 + 0 = 0\)</span>.</p>
-<p>Réglez les entrées du circuit de manière à lui faire effectuer les additions suivantes, et vérifiez le résultat. Dans quelles circonstances est-il correct et pourquoi est-il de temps en temps incorrect: Comment, en regard de ceci, interpréter le bit de sortie <span class="math notranslate nohighlight">\(S_4\)</span>, qui est la retenue de l’additionneur de gauche :</p>
+<p>Le schéma ci-dessous montre le même additionneur de demi-octets de l’exercice précédent, mais, de plus, la valeur en base 10 de ses 4 bits d’entrée pour <span class="math notranslate nohighlight">\(A\)</span> et pour <span class="math notranslate nohighlight">\(B\)</span> est affichée avec <span class="logic-highlight" onclick='Logic.highlight("fulladder_4bits_test", ["displayA", "displayB"])'>un module d’affichage spécial à droite</span>. <span class="logic-highlight" onclick='Logic.highlight("fulladder_4bits_test", "displayS")'>La même chose</span> est faite pour représenter la valeur <span class="math notranslate nohighlight">\(S = A + B\)</span> (mais seulement sur les quatre premiers bits de <span class="math notranslate nohighlight">\(S\)</span>). Actuellement, le circuit effectue le calcul <span class="math notranslate nohighlight">\(0 + 0 = 0\)</span>.</p>
+<p>Réglez les entrées du circuit de manière à lui faire effectuer les additions suivantes, et vérifiez le résultat. Dans quelles circonstances est-il correct et pourquoi est-il de temps en temps incorrect ? Comment, en regard de ceci, interpréter le bit de sortie <span class="math notranslate nohighlight">\(S_4\)</span>, qui est la retenue de l’additionneur de gauche ?</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(1 + 0\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(3 + 1\)</span></p></li>
@@ -702,7 +704,7 @@ Corrigé<div class="summary-down docutils">
 <li><p><span class="math notranslate nohighlight">\(14 + 2\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(15 + 15\)</span></p></li>
 </ol>
-<div class="logic-container" style="height: 490px;"><logic-editor mode="tryout">
+<div class="logic-container" style="height: 490px;"><logic-editor id="logic_fulladder_4bits_test" mode="tryout">
 <script type="application/json">
 {
   "v": 1,
@@ -722,9 +724,9 @@ Corrigé<div class="summary-down docutils">
     {"pos": [220, 450], "orient": "s", "id": 38, "name": "S2"},
     {"pos": [320, 450], "orient": "s", "id": 39, "name": "S1"},
     {"pos": [420, 450], "orient": "s", "id": 40, "name": "S0"},
-    {"type": "nibble", "pos": [530, 100], "id": [4, 5, 6, 7], "name": "A"},
-    {"type": "nibble", "pos": [530, 240], "id": [8, 9, 10, 11], "name": "B"},
-    {"type": "nibble", "pos": [530, 390], "id": [41, 42, 43, 44], "name": "S"}
+    {"type": "nibble", "pos": [530, 100], "ref": "displayA", "id": [4, 5, 6, 7], "name": "A"},
+    {"type": "nibble", "pos": [530, 240], "ref": "displayB", "id": [8, 9, 10, 11], "name": "B"},
+    {"type": "nibble", "pos": [530, 390], "ref": "displayS", "id": [41, 42, 43, 44], "name": "S"}
   ],
   "components": [
     {"type": "adder", "pos": [420, 320], "in": [16, 17, 18], "out": [19, 20]},
@@ -777,7 +779,7 @@ Corrigé<div class="summary-down docutils">
 <p class="admonition-title">Exercice 6 : circuit défectueux</p>
 <p>L’additionneur de demi-octets ci-dessous a été endommagé et ne fonctionne plus correctement. Par exemple, lorsqu’on lui demande d’effectuer le calcul <span class="math notranslate nohighlight">\(11 + 1\)</span>, il livre comme réponse <span class="math notranslate nohighlight">\(8\)</span>.</p>
 <p>Déterminez quel composant est défectueux dans ce circuit et comment il faudrait le réparer. Vous pouvez changer les entrées pour vérifier ce qui ne fonctionne pas.</p>
-<div class="logic-container" style="height: 490px;"><logic-editor mode="tryout">
+<div class="logic-container" style="height: 490px;"><logic-editor id="logic_fulladder_4bits_faulty" mode="tryout">
 <script type="application/json">
 {
   "v": 1,
@@ -817,7 +819,7 @@ Corrigé<div class="summary-down docutils">
     [0, 6],
     [3, 7],
     [20, 23],
-    [25, 28],
+    [25, 28, {"ref": "cout2"}],
     [30, 33],
     [2, 16],
     [12, 17],
@@ -845,7 +847,7 @@ Corrigé<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">La retenue sortant du deuxième additionneur depuis la droite est bloquée à 0 à la place de correctement changer de valeur suivant ses entrées.</p>
+<p class="card-text">La <span class="logic-highlight" onclick='Logic.highlight("fulladder_4bits_faulty", "cout2")'>retenue sortant du deuxième additionneur depuis la droite</span> est bloquée à 0 à la place de correctement changer de valeur suivant ses entrées.</p>
 </div>
 </details></div>
 <div class="admonition-exercice-7-design-d-un-additionneur-complet admonition">
@@ -916,12 +918,12 @@ Corrigé<div class="summary-down docutils">
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="alu-mem.html">
+          <a class="next-page" href="alu.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><span class="section-number">4. </span>ALU et mémoire</div>
+                <div class="title"><span class="section-number">4. </span>ALU</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -965,8 +967,8 @@ Corrigé<div class="summary-down docutils">
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">3. Additionneur</a><ul>
-<li><a class="reference internal" href="#additionneur-complet">Additionneur complet</a></li>
-<li><a class="reference internal" href="#chainage-dadditionneurs">Chaînage d’additionneurs</a></li>
+<li><a class="reference internal" href="#additionneur-complet">3.1. Additionneur complet</a></li>
+<li><a class="reference internal" href="#chainage-dadditionneurs">3.2. Chaînage d’additionneurs</a></li>
 </ul>
 </li>
 </ul>

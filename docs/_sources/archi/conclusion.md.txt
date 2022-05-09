@@ -1,8 +1,5 @@
 # Conclusion
 
-
-
-
 <!--
 Idée d'un sondage réalisé en introduction puis en conclusion au chapitre : Qu'est ce qu'un ordinateur (nuages de mots sortis) ? Comment fonctionne selon vous un ordinateur ? L'ordinateur a-t-il selon vous évolué depuis 70 ans d'existence ? Justifiez
 

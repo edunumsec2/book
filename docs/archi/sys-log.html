@@ -235,7 +235,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/dessiner.html">1. Dessiner - <code class="docutils literal notranslate"><span class="pre">forward()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/definir.html">2. Définir - <code class="docutils literal notranslate"><span class="pre">def</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier* - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/repeter.html">4. Répéter - <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/cercler.html">5. Cercler - <code class="docutils literal notranslate"><span class="pre">circle()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/memoriser.html">6. Mémoriser - <code class="docutils literal notranslate"><span class="pre">a=100</span></code></a></li>
@@ -268,10 +268,11 @@
 <li class="toctree-l2"><a class="reference internal" href="intro.html">1. Introduction</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">2. Portes logiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="additionneur.html">3. Additionneur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="alu-mem.html">4. ALU et mémoire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="archi-gen.html">5. Architecture générale et composants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="micro-pro.html">6. Le microprocesseur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conclusion.html">7. Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alu.html">4. ALU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mem.html">5. * Mémoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="archi-gen.html">6. Architecture générale et composants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro-pro.html">7. Le microprocesseur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusion.html">8. Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -379,7 +380,7 @@
 <p>C’est assez fascinant de se dire que des tâches a priori non mathématiques, comme corriger l’orthographe ou la grammaire d’un texte automatiquement, sont réalisées avec ces opérations de base.</p>
 <p>En parallèle à ce qui leur permet de faire des calculs, les ordinateurs disposent et utilisent de la mémoire. Il y en a au cœur des microprocesseurs, les <em>registres</em>, ce qu’on appelle la <em>mémoire vive</em> — appelée aussi RAM (<em>Random-Access Memory</em>). La mémoire servant au stockage de longue durée comme disques durs et autres SSD n’est pas discutée dans cette section. L’étude des systèmes logiques permet de comprendre les principes derrière la gestion de cette mémoire et de voir comment les ordinateurs peuvent y lire et écrire des données entre deux calculs.</p>
 <section id="exemple-suivi-addition-de-deux-nombres">
-<h2>Exemple suivi : addition de deux nombres<a class="headerlink" href="#exemple-suivi-addition-de-deux-nombres" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.1. </span>Exemple suivi : addition de deux nombres<a class="headerlink" href="#exemple-suivi-addition-de-deux-nombres" title="Lien permanent vers ce titre">¶</a></h2>
 <p>On s’intéresse à une des opérations arithmétiques les plus simples : l’<strong>addition</strong>. Comment l’ordinateur additionne-t-il deux nombres ? On va définir le cadre de travail et s’intéresser aux circuits électroniques qui vont être à même de réaliser une addition.</p>
 <p>Que se passe-t-il pour l’addition de deux nombres entiers ? On va utiliser leur représentation binaire (avec uniquement des 1 et des 0). Pour faire simple, on va chercher à additionner simplement deux bits, disons <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span>, où chacun peut valoir soit 0 soit 1. Posons que la somme <span class="math notranslate nohighlight">\(S = A + B\)</span>. En énumérant tous les cas de figure, on a :</p>
 <div class="table-wrapper"><table class="colwidths-auto docutils align-default">
@@ -442,13 +443,13 @@
 <p>Les opérations arithmétiques et logiques et l’accès à la mémoire ne suffisent pas à constituer un ordinateur complet. C’est dans le chapitre suivant que sera traité la problématique de l’agencement de ces sous-systèmes afin de constituer une machine capable d’exécuter une suite d’instructions, c’est à dire un programme.</p>
 </section>
 <section id="id1">
-<h2>Portes logiques<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2. </span>Portes logiques<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les circuits électroniques qui composent un ordinateur sont constitués de composants électroniques comme des <span class="target" id="gl-resistance-0"></span><span class="glossary-ref" data-definition="PHA+QXJjaGlvcmRpPC9wPgo=" data-entry-name="UsOpc2lzdGFuY2U=" data-glossary-uri="../glossaire.html#gl-def-resistance-1" data-number="1">résistances</span>, des <span class="target" id="gl-condensateur-0"></span><span class="glossary-ref" data-definition="PHA+QXJjaGlvcmRpPC9wPgo=" data-entry-name="Q29uZGVuc2F0ZXVy" data-glossary-uri="../glossaire.html#gl-def-condensateur-1" data-number="1">condensateurs</span>, des <span class="target" id="gl-transistor-0"></span><span class="glossary-ref" data-definition="PHA+TGXCoHRyYW5zaXN0b3LCoGVzdCB1bsKgY29tcG9zYW50wqBxdWkgZXN0IHV0aWxpc8OpIGRhbnMgbGEgcGx1cGFydCBkZXPCoGNpcmN1aXRzIMOpbGVjdHJvbmlxdWVzwqAoY2lyY3VpdCBsb2dpcXVlLMKgYW1wbGlmaWNhdGV1ciwgc3RhYmlsaXNhdGV1ciBkZcKgdGVuc2lvbizCoG1vZHVsYXRpb27CoGRlwqBzaWduYWwswqBldGMuKS48L3A+Cg==" data-entry-name="VHJhbnNpc3Rvcg==" data-glossary-uri="../glossaire.html#gl-def-transistor-1" data-number="1">transistors</span>, etc., qui déterminent où va passer le courant électrique et sur quelles parties du circuit règnera quelle <span class="target" id="gl-tension-0"></span><span class="glossary-ref" data-definition="PHA+QXJjaGlvcmRpPC9wPgo=" data-entry-name="VGVuc2lvbg==" data-glossary-uri="../glossaire.html#gl-def-tension-1" data-number="1">tension</span>.</p>
 <p>Quand on parle de portes et de circuits logiques, on simplifie tout cela. On considèrera simplement qu’un segment de circuit électronique où la tension est nulle (0 volt) représente la valeur binaire 0, alors qu’une tension non nulle (par exemple, 3 volts) représente la valeur binaire 1. Ainsi, pour véhiculer deux bits comme <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> dans un circuit, on a besoin de deux «fils».</p>
 <p>Les portes logiques sont des composants électroniques (eux-mêmes constitués en général de transistors et résistances) qui ont une ou plusieurs entrées et qui combinent ces entrées pour produire une sortie donnée. La manière dont la sortie est calculée dépend du type de la porte. On se propose à présent d’étudier en détails l’ensemble de ces portes.</p>
 </section>
 <section id="porte-et">
-<h2>Porte ET<a class="headerlink" href="#porte-et" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Porte ET<a class="headerlink" href="#porte-et" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Une de ces portes est la porte <strong>ET</strong>. Elle a deux entrées, qu’on appellera <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span>, et une sortie <span class="math notranslate nohighlight">\(Z\)</span>. <span class="math notranslate nohighlight">\(Z\)</span> sera 1 si et seulement si aussi bien <span class="math notranslate nohighlight">\(X\)</span> que <span class="math notranslate nohighlight">\(Y\)</span> valent 1. D’où son nom: il faut que <span class="math notranslate nohighlight">\(X\)</span> <strong><em>et</em></strong> <span class="math notranslate nohighlight">\(Y\)</span> soient à 1 pour obtenir un 1 sur la sortie.</p>
 <p>En énumérant les quatre possibilités pour les entrées, on peut écrire ce qu’on appelle <span class="target" id="gl-tableverite-0"></span><span class="glossary-ref" data-definition="PHA+RW4gbG9naXF1ZSwgdW5lIHRhYmxlIGRlIHbDqXJpdMOpIGVzdCB1bmUgZmHDp29uIGRlIHJlcHLDqXNlbnRlciBsZXMg4oCcZW50csOpZXPigJ0gZXQgbGVzIOKAnHNvcnRpZXPigJ0gZOKAmXVuIHN5c3TDqG1lIGxvZ2lxdWUgZGUgZmHDp29uIGdyYXBoaXF1ZS48L3A+Cg==" data-entry-name="VGFibGUgZGUgdsOpcml0w6k=" data-glossary-uri="../glossaire.html#gl-def-tableverite-1" data-number="1">table de vérité</span> pour la porte <strong>ET</strong> :</p>
 <div class="table-wrapper"><table class="colwidths-auto docutils align-default">
@@ -513,7 +514,7 @@ Pour aller plus loin<div class="summary-down docutils">
 </div>
 </details></section>
 <section id="porte-ou">
-<h2>Porte OU<a class="headerlink" href="#porte-ou" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.4. </span>Porte OU<a class="headerlink" href="#porte-ou" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour que la sortie de la porte <strong>OU</strong> vaille 1, il suffit que l’une des deux entrées <span class="math notranslate nohighlight">\(X\)</span> ou <span class="math notranslate nohighlight">\(Y\)</span> vaille 1.</p>
 <p>Voici sa table de vérité:</p>
 <div class="table-wrapper"><table class="colwidths-auto docutils align-default">
@@ -557,9 +558,9 @@ Pour aller plus loin<div class="summary-down docutils">
   "wires": [[3, 0], [4, 1], [2, 5]]
 }
 </script></logic-editor></div></section>
-<section id="non">
-<h2>NON<a class="headerlink" href="#non" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Cette porte est plus simple: elle n’a qu’une entrée, et sa sortie se contente d’inverser la valeur en entrée. On l’appelle d’ailleurs aussi un <em>inverseur</em>.</p>
+<section id="porte-non">
+<h2><span class="section-number">2.5. </span>Porte NON<a class="headerlink" href="#porte-non" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Cette porte est plus simple : elle n’a qu’une entrée, et sa sortie se contente d’inverser la valeur en entrée. On l’appelle d’ailleurs aussi un <em>inverseur</em>.</p>
 <p>Voici sa table de vérité :</p>
 <div class="table-wrapper"><table class="colwidths-auto docutils align-default">
 <thead>
@@ -618,7 +619,7 @@ Pour aller plus loin<div class="summary-down docutils">
 Dans le tableau qui précède, si on reprend notre exemple de la piscine, on pourrait dire que A représente «il fait beau», B représente «mes amies m'accompagnent», et le résultat Q est «je vais à la piscine». 1 signifie qu'une proposition est vraie, 0 qu'elle est fausse. Le tableau ci-dessus représente donc l'opération logique ET, ou {glo}`conjonction|conjonction`.  -->
 </section>
 <section id="combinaisons-de-portes">
-<h2>Combinaisons de portes<a class="headerlink" href="#combinaisons-de-portes" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.6. </span>Combinaisons de portes<a class="headerlink" href="#combinaisons-de-portes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les portes peuvent être connectées les unes aux autres. Voici par exemple un diagramme logique réalisant la fonction appelée <strong>OU-X</strong>, qui est un «ou exclusif» et dont <span class="logic-highlight" onclick='Logic.highlight("xor_circuit_tryout", "z")'>la sortie <eq>Z</eq></span> vaut 1 lorsque soit <span class="logic-highlight" onclick='Logic.highlight("xor_circuit_tryout", "x")'><eq>X</eq></span>, soit <span class="logic-highlight" onclick='Logic.highlight("xor_circuit_tryout", "y")'><eq>Y</eq></span> vaut 1, mais pas les deux en même temps :</p>
 <div class="logic-container" style="height: 150px;"><logic-editor id="logic_xor_circuit_tryout" mode="tryout">
 <script type="application/json">
@@ -923,7 +924,7 @@ Dans le tableau qui précède, si on reprend notre exemple de la piscine, on pou
   ],
   "wires": [[8, 2], [13, 4], [0, 3], [1, 12], [1, 10], [5, 6], [11, 7], [0, 9]]
 }
-</script></logic-editor></div><p>Pour la condition (b), qui correspond à la troisième ligne de la table de vérité, un raisonnement similaire s’applique. À la place d’inverser <span class="math notranslate nohighlight">\(X\)</span>, on <span class="logic-highlight" onclick='Logic.highlight("xor_build2_step3", "inv2")'>inversera cette fois <eq>Y</eq></span> afin d’obtenir, à la sortie de <span class="logic-highlight" onclick='Logic.highlight("xor_build2_step3", "and2")'>la nouvelle porte <strong>ET</strong> du bas</span>, un signal qui vaut 1 lorsque <span class="math notranslate nohighlight">\(X=1\)</span> et <span class="math notranslate nohighlight">\(Y=0\)</span>.</p>
+</script></logic-editor></div><p>Pour la condition (b), qui correspond à la troisième ligne de la table de vérité, un raisonnement similaire s’applique. À la place d’inverser <span class="math notranslate nohighlight">\(Y\)</span>, on <span class="logic-highlight" onclick='Logic.highlight("xor_build2_step3", "inv2")'>inversera cette fois <eq>X</eq></span> afin d’obtenir, à la sortie de <span class="logic-highlight" onclick='Logic.highlight("xor_build2_step3", "and2")'>la nouvelle porte <strong>ET</strong> du bas</span>, un signal qui vaut 1 lorsque <span class="math notranslate nohighlight">\(X=0\)</span> et <span class="math notranslate nohighlight">\(Y=1\)</span>.</p>
 <p>Voici le circuit final ainsi réalisé :</p>
 <div class="logic-container" style="height: 180px;"><logic-editor id="logic_xor_build2_step3" mode="static">
 <script type="application/json">
@@ -1226,6 +1227,24 @@ Corrigé<div class="summary-down docutils">
   ],
   "wires": [[3, 6], [8, 5], [2, 7], [3, 9], [10, 0], [4, 11], [12, 1]]
 }
+</script></logic-editor></div><p class="card-text">Une autre solution est la suivante, où on se dit qu’on construit d’abord une <span class="logic-highlight" onclick='Logic.highlight("imply_exercise_key2", ["inv1", "and"])'>partie du circuit</span> qui identifie le cas où <span class="math notranslate nohighlight">\(X=0\)</span> et <span class="math notranslate nohighlight">\(Y=1\)</span>, et on l’<span class="logic-highlight" onclick='Logic.highlight("imply_exercise_key2", "inv2")'>inverse</span> pour correspondre à la table de vérité.</p>
+<div class="logic-container" style="height: 130px;"><logic-editor id="logic_imply_exercise_key2" mode="tryout">
+<script type="application/json">
+{
+  "v": 2,
+  "opts": {"showGateTypes": true},
+  "in": [
+    {"pos": [50, 40], "id": 3, "name": "X", "val": 0},
+    {"pos": [50, 90], "id": 4, "name": "Y", "val": 0}
+  ],
+  "out": [{"pos": [410, 80], "id": 5, "name": "Z"}],
+  "gates": [
+    {"type": "NOT", "pos": [320, 80], "ref": "inv2", "in": 17, "out": 18},
+    {"type": "AND", "pos": [230, 80], "ref": "and", "in": [19, 20], "out": 21},
+    {"type": "NOT", "pos": [130, 40], "ref": "inv1", "in": 22, "out": 23}
+  ],
+  "wires": [[18, 5], [21, 17], [4, 20], [23, 19], [3, 22]]
+}
 </script></logic-editor></div><p class="card-text">Voici un circuit plus simple, qui fait la même chose mais qui est plus difficile à concevoir d’emblée :</p>
 <div class="logic-container" style="height: 120px;"><logic-editor mode="tryout">
 <script type="application/json">
@@ -1242,6 +1261,20 @@ Corrigé<div class="summary-down docutils">
     {"type": "NOT", "pos": [120, 80], "in": 11, "out": 12}
   ],
   "wires": [[3, 6], [8, 5], [4, 11], [12, 7]]
+}
+</script></logic-editor></div><p class="card-text">En fait, il existe même une porte spéciale qui réalise exactement la fonction correspondant à la table de vérité, la porte <strong>IMPLIQUE</strong> :</p>
+<div class="logic-container" style="height: 120px;"><logic-editor mode="tryout">
+<script type="application/json">
+{
+  "v": 2,
+  "opts": {"showGateTypes": true},
+  "in": [{
+    "pos": [50, 40], "id": 3, "name": "X", "val": 0},
+    {"pos": [50, 80], "id": 4, "name": "Y", "val": 0}
+  ],
+  "out": [{"pos": [230, 60], "id": 5, "name": "Z"}],
+  "gates": [{"type": "RIMPLY", "pos": [160, 60], "in": [0, 1], "out": 2}],
+  "wires": [[3, 0], [4, 1], [2, 5]]
 }
 </script></logic-editor></div></div>
 </details></div>
@@ -1303,12 +1336,12 @@ Corrigé<div class="summary-down docutils">
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">2. Portes logiques</a><ul>
-<li><a class="reference internal" href="#exemple-suivi-addition-de-deux-nombres">Exemple suivi : addition de deux nombres</a></li>
-<li><a class="reference internal" href="#id1">Portes logiques</a></li>
-<li><a class="reference internal" href="#porte-et">Porte ET</a></li>
-<li><a class="reference internal" href="#porte-ou">Porte OU</a></li>
-<li><a class="reference internal" href="#non">NON</a></li>
-<li><a class="reference internal" href="#combinaisons-de-portes">Combinaisons de portes</a><ul>
+<li><a class="reference internal" href="#exemple-suivi-addition-de-deux-nombres">2.1. Exemple suivi : addition de deux nombres</a></li>
+<li><a class="reference internal" href="#id1">2.2. Portes logiques</a></li>
+<li><a class="reference internal" href="#porte-et">2.3. Porte ET</a></li>
+<li><a class="reference internal" href="#porte-ou">2.4. Porte OU</a></li>
+<li><a class="reference internal" href="#porte-non">2.5. Porte NON</a></li>
+<li><a class="reference internal" href="#combinaisons-de-portes">2.6. Combinaisons de portes</a><ul>
 <li><a class="reference internal" href="#analyse-dun-circuit">Analyse d’un circuit</a></li>
 <li><a class="reference internal" href="#creation-dun-circuit">Création d’un circuit</a></li>
 </ul>

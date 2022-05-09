@@ -142,15 +142,6 @@ align: left
 Différents modèles de transistor. On les reconnaît à leurs trois «pattes» aussi appelées: émetteur, base, collecteur. 
 ```
 
-<!---
-
-```{image} media/transistor.jpeg
-:width: 600
-:height: 350
-```
-Différents modèles de transistor. On les reconnaît à leurs trois «pattes» aussi appelées : émetteur, base, collecteur
--->
-
 <br> <br>
 
 
@@ -165,14 +156,6 @@ align: left
 ---
 En appliquant un courant qui va de la base à l'émetteur (en rose pâle), on permet au courant de circuler entre le collecteur et l'émetteur (appelés ainsi parce que l'émetteur *émet* des électrons, et le collecteur les *collecte*). Envoyer du courant dans la base, c'est donc *ouvrir* le transistor; ne plus en envoyer a, inversement, l'effet de *fermer* le transistor. 
 ```
-
-<!---
-
-```{image} media/transistorgif.gif
-:width: 450
-:height: 450
-```
--->
 
 En appliquant un courant qui va de la base à l'émetteur (en rose pâle), on permet au courant de circuler entre le collecteur et l'émetteur (appelés ainsi parce que l'émetteur *émet* des électrons, et le collecteur les *collecte*). Envoyer du courant dans la base, c'est donc *ouvrir* le transistor ; ne plus en envoyer a, inversement, l'effet de *fermer* le transistor
 

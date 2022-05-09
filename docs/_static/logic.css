@@ -3,9 +3,14 @@
     margin: -1rem 0 1rem 0; 
 }
 
+.logic-gate {
+    font-weight: 500;
+    font-variant-caps: all-small-caps;
+}
+
 .logic-highlight {
     cursor: pointer;
-    border-bottom: 1.5px dashed var(--color-link-underline);
+    border-bottom: 1.5px solid var(--color-link-underline);
     padding-bottom: 1px;
 }
 

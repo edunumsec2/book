@@ -235,7 +235,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/dessiner.html">1. Dessiner - <code class="docutils literal notranslate"><span class="pre">forward()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/definir.html">2. Définir - <code class="docutils literal notranslate"><span class="pre">def</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier* - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/repeter.html">4. Répéter - <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/cercler.html">5. Cercler - <code class="docutils literal notranslate"><span class="pre">circle()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog1/memoriser.html">6. Mémoriser - <code class="docutils literal notranslate"><span class="pre">a=100</span></code></a></li>
@@ -268,10 +268,11 @@
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">1. Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sys-log.html">2. Portes logiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="additionneur.html">3. Additionneur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="alu-mem.html">4. ALU et mémoire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="archi-gen.html">5. Architecture générale et composants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="micro-pro.html">6. Le microprocesseur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conclusion.html">7. Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alu.html">4. ALU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mem.html">5. * Mémoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="archi-gen.html">6. Architecture générale et composants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro-pro.html">7. Le microprocesseur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusion.html">8. Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -403,7 +404,7 @@ Les différents niveaux d'abstraction de l'informatique, en partant des électro
 <br/>
 <p>Dans ce chapitre, nous nous concentrerons sur les couches de bas niveau, et tenterons de remonter progressivement jusqu’aux couches logicielles.</p>
 <section id="de-quoi-sont-faits-les-nombres-binaires">
-<h2>De quoi sont faits les nombres binaires?<a class="headerlink" href="#de-quoi-sont-faits-les-nombres-binaires" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">1.1. </span>De quoi sont faits les nombres binaires?<a class="headerlink" href="#de-quoi-sont-faits-les-nombres-binaires" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les ordinateurs ne comprennent que les nombres binaires. La lettre «A», par exemple, est pour ces derniers une suite de 0 et de 1. Même chose pour une image, une vidéo, une chanson et ainsi de suite. Mais alors comment ces 0 et ces 1 sont-ils <span class="target" id="gl-stockage-0"></span><span class="glossary-ref" data-definition="PHA+RW4gaW5mb3JtYXRpcXVlLCBvbiBlbnRlbmQgcGFyIHN0b2NrYWdlIHVuIHByb2Nlc3N1cyBncsOiY2UgYXVxdWVsIHVuIGNlcnRhaW4gbm9tYnJlIGRlIGJpdHMgZOKAmWluZm9ybWF0aW9uIHBldXZlbnQgw6p0cmUgY29uc2VydsOpcyBkYW5zIGxlIHRlbXBzLiBJbCBleGlzdGUgZGVzIHN0b2NrYWdlcyBkZSBjb3VydGUgZXQgZGUgbG9uZ3VlIGR1csOpZSwgYWluc2kgcXXigJl1bmUgbXVsdGlwbGljaXTDqSBkZSB0ZWNobmlxdWVzIHBlcm1ldHRhbnQgZGUgc3RvY2tlciBkZSBs4oCZaW5mb3JtYXRpb24gc291cyBmb3JtZSBkZSBiaXRzLjwvcD4K" data-entry-name="U3RvY2thZ2U=" data-glossary-uri="../glossaire.html#gl-def-stockage-1" data-number="1">stockés</span> et manipulés physiquement par les ordinateurs ? De quelle matière sont-ils faits ? Un indice : que mettez-vous dans votre smartphone pour le faire fonctionner : de l’essence ? Du gaz ? De l’énergie solaire ?</p>
 <p>De l’électricité  !</p>
 <figure class="align-left" id="id2">
@@ -438,7 +439,7 @@ Likes, partages, vidéos transmises via des applications telles que WhatsApp, In
 -->
 </section>
 <section id="electricite-et-nombres-binaires">
-<h2>Électricité et nombres binaires<a class="headerlink" href="#electricite-et-nombres-binaires" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">1.2. </span>Électricité et nombres binaires<a class="headerlink" href="#electricite-et-nombres-binaires" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les nombres binaires, au niveau le plus élémentaire, sont matérialisés par des <span commented="">courants électriques</span><!-- REVIEW/JPP: discussion courant vs tension? -->, qui traversent les circuits des ordinateurs. Mais pourquoi avoir choisi des 0 et des 1 comme alphabet ? Quel rapport avec l’électricité ?</p>
 <p>En informatique, si nous avons choisi d’utiliser un code binaire, ça n’est pas par hasard. Ce sont les deux signaux les plus élémentaires que l’on puisse transmettre avec l’électricité. Soit le courant passe, soit il ne passe pas. Ouvert ou fermé ; allumé ou éteint ; 1 ou 0.</p>
 <div class="hint admonition">
@@ -464,7 +465,7 @@ Différents modèles de tubes à vide. Photographie de Stefan Riepl, 2008, CC BY
 <p>Il a fallu attendre une invention majeure pour permettre aux ordinateurs de se miniaturiser, de consommer moins, d’être plus efficaces et fiables, pour finalement arriver à ce qu’on a appelé dès la fin des années 1970 des <strong>PC</strong> : des <em>personal computers</em>, des ordinateurs personnels. L’invention qui a permis cette évolution est le <strong>transistor</strong>.</p>
 </section>
 <section id="le-transistor">
-<h2>Le transistor<a class="headerlink" href="#le-transistor" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">1.3. </span>Le transistor<a class="headerlink" href="#le-transistor" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le <span class="target" id="gl-transistor-0"></span><span class="glossary-ref" data-definition="PHA+TGXCoHRyYW5zaXN0b3LCoGVzdCB1bsKgY29tcG9zYW50wqBxdWkgZXN0IHV0aWxpc8OpIGRhbnMgbGEgcGx1cGFydCBkZXPCoGNpcmN1aXRzIMOpbGVjdHJvbmlxdWVzwqAoY2lyY3VpdCBsb2dpcXVlLMKgYW1wbGlmaWNhdGV1ciwgc3RhYmlsaXNhdGV1ciBkZcKgdGVuc2lvbizCoG1vZHVsYXRpb27CoGRlwqBzaWduYWwswqBldGMuKS48L3A+Cg==" data-entry-name="VHJhbnNpc3Rvcg==" data-glossary-uri="../glossaire.html#gl-def-transistor-1" data-number="1">transistor</span> est aujourd’hui la brique de base de construction des systèmes informatiques. Il a été développé dans les années 1940 dans les <a class="reference external" href="https://fr.wikipedia.org/wiki/Laboratoires_Bell">laboratoires Bell</a>, aux Etats-Unis. Ce n’est que vers la fin des années 1950 que l’on commence à construire des ordinateurs commerciaux qui utilisent des transistors plutôt que des tubes à vide. Le transistor est à l’origine d’une révolution dans la taille, la fiabilité, et les performances générales des ordinateurs de l’époque.</p>
 <figure class="align-left" id="id5">
 <a class="reference internal image-reference" href="../_images/transistor.jpeg"><img alt="../_images/transistor.jpeg" src="../_images/transistor.jpeg" style="width: 500px; height: 350px;"/></a>
@@ -472,14 +473,6 @@ Différents modèles de tubes à vide. Photographie de Stefan Riepl, 2008, CC BY
 <p><span class="caption-text">Différents modèles de transistor. On les reconnaît à leurs trois «pattes» aussi appelées: émetteur, base, collecteur.</span><a class="headerlink" href="#id5" title="Lien permanent vers cette image">¶</a></p>
 </figcaption>
 </figure>
-<!---
-
-```{image} media/transistor.jpeg
-:width: 600
-:height: 350
-```
-Différents modèles de transistor. On les reconnaît à leurs trois «pattes» aussi appelées : émetteur, base, collecteur
--->
 <p><br/> <br/></p>
 <p><span commented="">Le transistor, comme le tube à vide qu’il remplace, fonctionne comme un interrupteur automatique. Il laissera ou non passer du courant entre deux de ses pattes en fonction de ce qui se passe sur sa troisième. On peut aussi le comparer à un robinet d’eau qui peut être ouvert ou fermé, et qu’on peut ouvrir ou fermer automatiquement sans devoir l’activer manuellement.</span></p>
 <figure class="align-left" id="id6">
@@ -488,13 +481,6 @@ Différents modèles de transistor. On les reconnaît à leurs trois «pattes» 
 <p><span class="caption-text">En appliquant un courant qui va de la base à l’émetteur (en rose pâle), on permet au courant de circuler entre le collecteur et l’émetteur (appelés ainsi parce que l’émetteur <em>émet</em> des électrons, et le collecteur les <em>collecte</em>). Envoyer du courant dans la base, c’est donc <em>ouvrir</em> le transistor; ne plus en envoyer a, inversement, l’effet de <em>fermer</em> le transistor.</span><a class="headerlink" href="#id6" title="Lien permanent vers cette image">¶</a></p>
 </figcaption>
 </figure>
-<!---
-
-```{image} media/transistorgif.gif
-:width: 450
-:height: 450
-```
--->
 <p>En appliquant un courant qui va de la base à l’émetteur (en rose pâle), on permet au courant de circuler entre le collecteur et l’émetteur (appelés ainsi parce que l’émetteur <em>émet</em> des électrons, et le collecteur les <em>collecte</em>). Envoyer du courant dans la base, c’est donc <em>ouvrir</em> le transistor ; ne plus en envoyer a, inversement, l’effet de <em>fermer</em> le transistor</p>
 <br/>
 <p>De par sa capacité à être ouvert ou fermé, le transistor fonctionne comme une brique fondamentale dans la construction de systèmes informatiques permettant de <span class="target" id="gl-transmission-0"></span><span class="glossary-ref" data-definition="PHA+RW4gaW5mb3JtYXRpcXVlLCBsYSB0cmFuc21pc3Npb24gZGUgbOKAmWluZm9ybWF0aW9uIGVzdCBs4oCZb3DDqXJhdGlvbiBwYXIgbGFxdWVsbGUgZGVzIGJpdHMgc29udCBlbnZvecOpcyBk4oCZdW4gZW5kcm9pdCDDoCB1biBhdXRyZSBzdXIgdGVycmUsIG91IHBsdXMgc2ltcGxlbWVudCBk4oCZdW4gYXBwYXJlaWwgw6AgdW4gYXV0cmUsIG91IGTigJl1biBwcm9ncmFtbWUgw6AgdW4gYXV0cmUuPC9wPgo=" data-entry-name="VHJhbnNtaXNzaW9u" data-glossary-uri="../glossaire.html#gl-def-transmission-1" data-number="1">transmettre</span>, stocker et <span class="target" id="gl-traitement-0"></span><span class="glossary-ref" data-definition="PHA+TGUgdHJhaXRlbWVudCBkZSBs4oCZaW5mb3JtYXRpb24gcmFzc2VtYmxlIHRvdXRlcyBsZXMgb3DDqXJhdGlvbnMgcXVlIGzigJlvbiBwZXV0IGZhaXJlIHN1YmlyIMOgIHVuZSBpbmZvcm1hdGlvbiBwb3VyIGxhIHN0b2NrZXIsIHRyYW5zZm9ybWVyLCBjb21wcmVzc2VyLCBkdXBsaXF1ZXIsIGV0IGFpbnNpIGRlIHN1aXRlLjwvcD4K" data-entry-name="VHJhaXRlbWVudA==" data-glossary-uri="../glossaire.html#gl-def-traitement-1" data-number="1">traiter</span> des nombres binaires.</p>
@@ -531,7 +517,7 @@ Zoom sur un transistor<div class="summary-down docutils">
 </div>
 </section>
 <section id="des-transistors-aux-systemes-logiques">
-<h2>Des transistors aux systèmes logiques<a class="headerlink" href="#des-transistors-aux-systemes-logiques" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">1.4. </span>Des transistors aux systèmes logiques<a class="headerlink" href="#des-transistors-aux-systemes-logiques" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il reste difficile de concevoir des circuits d’ordinateurs en réfléchissant en termes de transistors. Un transistor seul ne peut représenter ou traiter qu’un bit d’information. Oui ou non, ouvert ou fermé, 1 ou 0.</p>
 <p>Dans le chapitre suivant, où nous commençons à voir comment sont conçus les circuits électroniques des ordinateurs, nous parlerons tout d’abord de <strong><span class="target" id="gl-portelogique-0"></span><span class="glossary-ref" data-definition="PHA+TGVzIHBvcnRlcyBsb2dpcXVlcyBzb250IGRlcyB1bml0w6lzIG1pY3Jvw6lsZWN0cm9uaXF1ZXMsIG91IHN5bWJvbGlxdWVzLCBwZXJtZXR0YW50IGRlIHJlcHJvZHVpcmUgbGEgbG9naXF1ZSBib29sw6llbm5lIHZpYSBkZXMgdGVuc2lvbnMgw6lsZWN0cmlxdWVzLjwvcD4K" data-entry-name="UG9ydGVzIGxvZ2lxdWVz" data-glossary-uri="../glossaire.html#gl-def-portelogique-1" data-number="1">portes logiques</span></strong>. Ce sont des composants qui sont eux-mêmes constitués de plusieurs transistors. Réfléchir en termes de portes logiques permet de véritablement concevoir les circuits des ordinateurs qui vont manipuler les bits d’informations formant nos données.</p>
 </section>
@@ -591,10 +577,10 @@ Zoom sur un transistor<div class="summary-down docutils">
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">1. Introduction</a><ul>
-<li><a class="reference internal" href="#de-quoi-sont-faits-les-nombres-binaires">De quoi sont faits les nombres binaires?</a></li>
-<li><a class="reference internal" href="#electricite-et-nombres-binaires">Électricité et nombres binaires</a></li>
-<li><a class="reference internal" href="#le-transistor">Le transistor</a></li>
-<li><a class="reference internal" href="#des-transistors-aux-systemes-logiques">Des transistors aux systèmes logiques</a></li>
+<li><a class="reference internal" href="#de-quoi-sont-faits-les-nombres-binaires">1.1. De quoi sont faits les nombres binaires?</a></li>
+<li><a class="reference internal" href="#electricite-et-nombres-binaires">1.2. Électricité et nombres binaires</a></li>
+<li><a class="reference internal" href="#le-transistor">1.3. Le transistor</a></li>
+<li><a class="reference internal" href="#des-transistors-aux-systemes-logiques">1.4. Des transistors aux systèmes logiques</a></li>
 </ul>
 </li>
 </ul>
