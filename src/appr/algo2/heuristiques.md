@@ -18,7 +18,7 @@ Si le calcul d’un itinéraire prenait 1 milliseconde, combien de temps faudrai
 
 ## 5.0. Complexité exponentielle
 
-Il existe des problèmes difficiles à résoudre. Nous allons nous pencher sur un problème qui s’appelle le **<span style="color:rgb(89, 51, 209)">problème du sac à dos</span>**. Prenons un sac à dos et une multitude d’objets qui ont chacun un poids. Notre objectif est de choisir les objets à mettre dans le sac à dos pour le remplir au maximum, mais sans dépasser sa capacité. Donc la question que l'on se pose est la suivante : quels objets devrions-nous emporter, sans dépaser le poids maximal que le sac à dos peut contenir ?
+Il existe des problèmes difficiles à résoudre. Nous allons nous pencher sur un problème qui s’appelle le **<span style="color:rgb(89, 51, 209)">problème du sac à dos</span>**. Prenons un sac à dos et une multitude d’objets qui ont chacun un poids. Notre objectif est de choisir les objets à mettre dans le sac à dos pour le remplir au maximum, mais sans dépasser sa capacité. Donc la question que l'on se pose est la suivante : quels objets devrions-nous emporter, sans dépasser le poids maximal que le sac à dos peut contenir ?
 
 
 ```{admonition} Exercice 5.0. Le problème du sac à dos
@@ -132,7 +132,7 @@ name : fig-comp-exp
 
 Lorsqu’il est trop difficile de trouver une solution exacte à un problème, nous ne devons pas nous avouer vaincus. Dans ce cas, nous pouvons tout de même rechercher une solution inexacte, mais qui se rapproche autant que possible de la solution optimale. Les algorithmes qui aboutissent à des solutions non optimales ou inexactes, sont appelés des **<span style="color:rgb(89, 51, 209)">heuristiques</span>**.
 
-Un algorithme heuristique pour le problème du sac à dos pourrait être l'algorithme suivant : prendre les objets du plus petit au plus grand poids jusqu’à remplir le sac à dos, ce qui nous permettrait de mettre le plus d'objets possible. En suivant cet algorithme heuristique, dans l'exemple de l'exercice 5.0, on prendrait les trois premiers objets et on aurait un sac à dos rempli à 9 kgs au lieu des 10 kg de capacité maximale du sac à dos. Cette solution est suffisemment proche de la meilleure solution, mais elle n'est pas la meilleure solution.
+Un algorithme heuristique pour le problème du sac à dos pourrait être l'algorithme suivant : prendre les objets du plus petit au plus grand poids jusqu’à remplir le sac à dos, ce qui nous permettrait de mettre le plus d'objets possible. En suivant cet algorithme heuristique, dans l'exemple de l'exercice 5.0, on prendrait les trois premiers objets et on aurait un sac à dos rempli à 9 kgs au lieu des 10 kg de capacité maximale du sac à dos. Cette solution est suffisamment proche de la meilleure solution, mais elle n'est pas la meilleure solution.
 
 
 
@@ -154,7 +154,7 @@ L'algorithme heuristique qu'on vient de voir est en fait un **<span style="color
 
 
 
-Il n’y a pas que des {glo}`heuristique|heuristiques` gloutonnes. Un autre exemple de solution heuristique, très utilisée dans les jeux vidéos, est le calcul de distance entre deux objets. Ce calcul est très important par exemple lorsque l'on souhaite détecter si deux objets sont en collision. Pythagore nous dit que cette distance vaut la racine carrée de la somme de `a` et `b` au carré. Mais ce calcul est difficile, et même si on peut le calculer de manière exacte, il prend beaucoup de temps à calculer s’il y a beaucoup d’objets affichés à l’écran. On préfère ainsi estimer cette distance par un calcul bien plus simple `a+b`, que l'on sait faux, mais qui est suffisemment proche lorsque les objets sont alignés (voir la figure ci-dessous).
+Il n’y a pas que des {glo}`heuristique|heuristiques` gloutonnes. Un autre exemple de solution heuristique, très utilisée dans les jeux vidéos, est le calcul de distance entre deux objets. Ce calcul est très important par exemple lorsque l'on souhaite détecter si deux objets sont en collision. Pythagore nous dit que cette distance vaut la racine carrée de la somme de `a` et `b` au carré. Mais ce calcul est difficile, et même si on peut le calculer de manière exacte, il prend beaucoup de temps à calculer s’il y a beaucoup d’objets affichés à l’écran. On préfère ainsi estimer cette distance par un calcul bien plus simple `a+b`, que l'on sait faux, mais qui est suffisamment proche lorsque les objets sont alignés (voir la figure ci-dessous).
 
 ```{figure} media/Distance.png
 ---
