@@ -81,9 +81,8 @@ parts:
       - file: content/appr/theme/algo2/recherche
       - file: content/appr/theme/algo2/tris
       - file: content/appr/theme/algo2/recursivite
-      - file: content/appr/theme/algo2/cours/heuristiques/eleve
-      - file: content/appr/theme/algo2/cours/recursivite/eleve
-      - file: content/appr/theme/algo2/cours/conclusion/eleve
+      - file: content/appr/theme/algo2/heuristiques
+      - file: content/appr/theme/algo2/conclusion
   - file: content/appr/theme/prog2/intro
     sections:
       - file: content/appr/theme/prog2/onkey

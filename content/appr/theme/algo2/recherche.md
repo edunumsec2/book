@@ -261,7 +261,6 @@ elément_recherché ← entrée  # l'élément recherché en tant que paramètre
 trouvé ← Faux               # indique si l'élément à été retrouvé 
 index_début ← 0             # au début on cherche dans tout le tableau 
 index_fin ← n               # au début on cherche dans tout le tableau 
-i ← 0                       # index pour parcourir la liste
 
 # tant que l'élément n'est pas trouvé et que le sous-tableau retenu n'est pas vide
 Tant que trouvé != Vrai et n > 0 :

@@ -79,7 +79,7 @@ Répéter Pour i ← 1 à longueur(Nombres)      # i prend la valeur de 1, puis 
 Fin Répéter
 ```
 
-Dans un deuxième temps, il nous faut une variable *Nombre_min* qui va stocker le résultat. Il faut lui donner une valeur intiale et on peut supposer que le plus petit élément est le premier élément de *Nombres*.
+Dans un deuxième temps, il nous faut une variable *Nombre_min* qui va stocker le résultat. Il faut lui donner une valeur initiale et on peut supposer que le plus petit élément est le premier élément de *Nombres*.
 
 ```
 Liste Nombres                               # la variable Nombres contient une liste de nombres
@@ -158,7 +158,7 @@ Un ordinateur peut-il réaliser les opérations décrites par votre algorithme ?
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
-Voici une solution possible. Une étape de l'algorithme consiste à demander à chaque élève sa date de naissance.
+Voici une solution possible. La première étape de l'algorithme consiste à demander à chaque élève sa date de naissance.
 
 Une autre étape de l'algorithme consiste à calculer la distance du mois de la date d'anniversaire par rapport au mois courant.
 
@@ -178,7 +178,7 @@ Oui, un ordinateur peut exécuter ces opérations, mais elles doivent être déc
 
 Écrire un algorithme qui effectue la permutation circulaire des variables X, Y et Z : à la fin de l’algorithme, X contient la valeur de Z, Y la valeur de X et Z la valeur de Y. Pour rappel, une variable ne peut contenir qu'une valeur à la fois.
 
-Conseil : mettez-vous à la place de la machine et représentez le contenu de chaque variable sous la forme d'un tiroir, dessinez le tiroir avec l'étiquette et son contenu *après chaque opération de votre algorithme*. Est-ce que votre algorithme donne le résultat attendu ? Si non, modifiez votre algorithme pour qu’il résolve le problème correctement.
+Conseil : mettez-vous à la place de la machine et représentez le contenu de chaque variable sous la forme d'un tiroir, dessinez le tiroir avec l'étiquette et son contenu *après chaque opération de votre algorithme*. Est-ce que l'algorithme donne le résultat attendu ? Si non, modifiez votre algorithme pour qu’il résolve le problème correctement.
 
 ````
 
@@ -196,7 +196,7 @@ X ← Y
 Y ← Z
 Z ← W
 ```
-Supposons que X contient 1, Y contient 2 et Z contient 3. Si on dessine l’état des variables après chacune de ces opérations dans des tiroirs, voici ce qu’on obtient :
+Supposons que X contient 1, Y contient 2 et Z contient 3. Si on dessine l’état des variables après chacune de ces opérations dans des tiroirs, voici ce que l’on obtient :
 
 <img src="media/Swap4.png" width="45%"> &nbsp;  
 
@@ -233,7 +233,7 @@ Imaginons que X contient 1 et Y contient 2.
 
 Après la première opération X ← X + Y, X vaut 1 + 2 = 3. 
 
-Après la deuxième opération Y ← X - Y, Y vaut 3 - 2 = 1. Il faut faire attention à bien utiliser la dernière valeur stockée dans X et non sa veleur initiale.
+Après la deuxième opération Y ← X - Y, Y vaut 3 - 2 = 1. Il faut faire attention à bien utiliser la dernière valeur stockée dans X et non sa valeur initiale.
 
 Après la dernière opération X ← X – Y, X vaut 3 - 1 = 2. 
 
