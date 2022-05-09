@@ -1,4 +1,4 @@
-# Le microprocesseur
+# 6. Le microprocesseur
 
 On a précédemment détaillé les différents composants d'un ordinateur, puis étudié le fonctionnement des systèmes logiques à partir desquels on peut construire un processeur. On va à présent évoquer l'architecture de von Neumann qui décrit la façon dont le processeur s'insère dans son environnement. Les différents éléments qui constituent le processeur et qui en assurent le bon fonctionnement seront ensuite détaillés. 
 
@@ -24,7 +24,7 @@ Un microprocesseur est un processeur construit avec un circuit intégré, c'est-
 ```
 
 
-## Horloge et accès mémoire
+## 6.1. Horloge et accès mémoire
 Un processeur est un dispositif synchrone, ce qui signifie que les opérations à l'intérieur du processeur se déroulent de manière synchrone à un temps donné. Pour assurer cette simultanéité, il faut comme pour un orchestre, donner le tempo. Cette fonction de métronome est assurée par une horloge, ou un signal d'horloge. Cette horloge est constituée d'un simple signal carré <!-- TODO: ajouter image --> dont la fréquence atteint aujourd'hui plusieurs gigahertz, c'est-à-dire plusieurs milliards de cycles par seconde.
 
 ```{admonition} La notion de *synchronisation*
@@ -94,7 +94,7 @@ Les registres permettent de stocker des valeurs, comme la RAM, mais directement 
 En principe ces registres stockent les informations en provenance de la mémoire ou le résultat d'un calcul.
 Il existe trois registres plus spécifiques :
 
-#### <u> Le registre d'état </u>
+#### Le registre d'état
 Le registre d'état regroupe les drapeaux (en anglais *flags*). Ils servent à renseigner l'état d'exécution du processeur. Par exemple le drapeau *dépassement* s'il est mis à 1 signale qu'un dépassement de capacité est survenu, ou encore le drapeau *division par zéro* signale une division par zéro.
 
 ### Le compteur de programme
@@ -103,11 +103,11 @@ Le compteur de programme (registre **PC** pour *Program Counter*) contient l'adr
 ### Le compteur de pile
 Le compteur de pile (registre **SP** pour *Stack Pointer*) contient la position sur une pile. Cette dernière est une zone mémoire à laquelle on ne peut pas accéder aléatoirement, mais uniquement en empilant ou dépilant des éléments.
 
-## L'unité arithmétique et logique
+## 6.2. L'unité arithmétique et logique
 L'unité arithmétique et logique (UAL plus communément appelée ALU en abréviation anglaise) effectue tous les calculs arithmétiques et logiques. Quelques-uns de ces composants comme l'additionneur ont été abordés dans le chapitre *De la logique à l'arithmétique*.
 
 
-### <u> Exemple : le 6502 </u>
+### Exemple : le 6502
 
 Le 6502, conçu en 1975, est le premier microprocesseur grand public avec un prix de 25$ (bien en-dessous des concurrents de cette époque). Une de ses premières utilisations pour le grand public fut la console de jeux vidéo Atari 2600. A partir de 1985, Nintendo équipe la NES d'une version modifiée du 6502. Il a équipé également le célèbre Apple II. Il a donné lieu à de nombreuses versions, jusqu'aux processeurs 16 bits actuels de dernière génération.
 
@@ -148,9 +148,9 @@ Ce simulateur reproduit le fonctionnement complet du 6502 jusque dans l'activit�
 :class: note
 
 La partie qui suit présente de manière plus approfondie certaines spécificités des processeurs modernes.
+````
 
-
-## 5.3. Processeur à noyau unique
+## 6.3. Processeur à noyau unique
 C'est le processeur standard : un processeur à noyau unique ou CPU utilise un seul noyau à l'intérieur du processeur. 
 
 Avantages :
@@ -164,7 +164,7 @@ Inconvénients :
 C'est un processeur relativement lent. Il n'a pas une grande puissance de calcul pour traiter de grandes opérations complexes, ou plusieurs opérations à la fois.
 Comme les applications modernes nécessitent une grande puissance de traitement, un processeur monocœur qui les fait fonctionner peut se bloquer, paralysant ainsi l'ensemble du système alors « planté ».
 
-## 5.4. Processeur à double cœur
+## 6.4. Processeur à double cœur
 Un processeur à double cœur possède deux cœurs pour exécuter les opérations, intégrés dans un circuit unique pour se comporter comme une seule unité - un seul processeur -, à la différence d'un système multiprocesseur ; toutefois, ces cœurs possèdent leurs propres contrôleurs et caches, ce qui leur permet de travailler plus rapidement que les processeurs à cœur unique.
 
 
@@ -191,7 +191,7 @@ Peu d'opérations nécessitent réellement la puissance des processeurs double c
 Pour ces raisons, de nombreux développeurs d'applications mobiles ne programment pas leurs applications pour qu'elles fonctionnent avec des processeurs à multiple cœur, les rendant ainsi incompatibles avec les mobiles qui fonctionnent toujours avec des processeurs à double ou multiple cœur.
 
 
-## 5.5. Les processeurs quadricœur et autres processeurs à cœurs multiples
+## 6.5. Les processeurs quadricœur et autres processeurs à cœurs multiples
 En termes simples, un processeur quadricœur possède quatre cœurs et il en va de même pour un processeur hexacœur (six cœurs), octocœur (huit cœurs), etc.. Ces cœurs peuvent être soit sur le même circuit intégré, soit sur le même boîtier de puce.
 
 ```{figure} media/4coeurs.png
@@ -238,7 +238,7 @@ La plupart de la gamme Ryzen d’AMD propose le multithreading, y compris les mo
 
 
 
-## 5.6. Le pipeline
+## 6.6. Le pipeline
 
 On l'a vu, l'exécution d'une instruction par le microprocesseur implique plusieurs opérations : accès à la mémoire en lecture et en écriture, accès aux registres en lecture et en écriture, opération logique. Pour optimiser la vitesse d'exécution, les processeurs modernes effectuent en série ces opérations. Ainsi, alors que les opérations logiques d'une instruction sont effectuées, l'instruction précédente est déjà chargée en mémoire. La difficulté de ce type d'optimisation réside dans le fait que des branchements conditionnels provoquent l'annulation des instructions déjà chargées. Pour optimiser encore ce genre de procédé, les processeurs font de la prédiction dans l'exécution. Ces optimisations sont extrêmement compliquées à gérer.
 
@@ -249,38 +249,33 @@ La vulnérabilité Spectre (ainsi que d'autres vulnérabilités similaires) expl
 <br>
 
 
-````
+````{admonition} Matière à réfléchir. Vite... très vite
+:class: hint
 
-::::{panels}
-:column: col-lg-12 p-2
-:card: bg-info
-
-**Vite ... très vite**
-^^^^
 Nous avons démontré que finalement nos ordinateurs ont un cerveau très simple dans le fonctionnement de ses éléments de base: des portes logiques qui traitent des **0** ou des **1**. Il est cependant très difficile de se représenter à quel point ces traitements vont vite.
 Imaginons pour cela que le processeur écrive toutes les opérations qu'il effectue sur un ruban de papier et calculons la vitesse de défilement de ce papier. 
 
-Pour cela nous faisons les hypothèses suivantes:
-* Les processeurs actuels ont une cadence d'horloge de 3GHz, c'est à dire $3·10^9 [s^{-1}]$. Pour simplifier nous allons supposer qu'ils effectuent une opération par cycle[^1].
-* Nous transcrivons un mot de 64 bit (taille standard pour les processeurs) sur une longueur de 15cm, ce qui correspond à $15·10^{-2}[m]$.
+Pour cela, nous faisons les hypothèses suivantes:
+* Les processeurs actuels ont une cadence d'horloge de 3 GHz, c'est à dire $3·10^9~[s^{-1}]$. Pour simplifier, nous allons supposer qu'ils effectuent une opération par cycle[^1].
+* Nous transcrivons un mot de 64 bits (taille standard pour les processeurs actuels) sur une longueur de 15 cm, ce qui correspond à $15·10^{-2}~[m]$.
 
 Le calcul devient alors:
 
 $$
-    3·10^9 [s^{-1}] · 15·10^{-2}[m] \\
-    45·10^7 [m/s]
+    3 \cdot 10^9~[s^{-1}] \times 15 \cdot 10^{-2}~[m] \\
+    45 \cdot 10^7~[m/s]
 $$
 
 Que nous convertissons en km:
 
 $$
-    45·10^5 [km/s] ou encore: 450'000 [km/s]
+    45 \cdot 10^5~[km/s]~\textrm{ou encore:}~450'000~[km/s]
 $$
 
-Rappelons que la vitesse de la lumière est:
+Rappelons que la vitesse de la lumière est :
 
 $$
-    c \cong 300'000 [km/s]
+    c \cong 300'000~[km/s]
 $$
 
 Ce qui veut dire que si un microprocesseur, tel que ceux que l'on trouve dans notre ordinateur ou notre smartphone, écrivait sur un ruban de papier tout ce qu'il fait, ce ruban de papier devrait se déplacer à une fois et demi la vitesse de la lumière. Ou encore, ce ruban ferait chaque seconde plus de 11 fois le tour de la terre.
@@ -288,7 +283,4 @@ Ce qui veut dire que si un microprocesseur, tel que ceux que l'on trouve dans no
 Si les éléments de base sont simples, la complexité et la richesse des expériences numériques comme l'immersion dans un jeu vidéo proviennent de la quantité extraordinaire d'opérations effectuées.
 
 [^1]: En fait le opérations d'un processeur prennent plus d'un cycle pour être réalisées, mais comme les processeurs ont plusieurs cœurs et un pipeline dont nous n'abordons pas ici le fonctionnement, la simplification proposée n'est pas aberrante.
-
-
-
-::::
+````

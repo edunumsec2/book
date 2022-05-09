@@ -5,9 +5,3 @@ Le support de cours pour les systèmes logiques ci-dessous va au-delà des exige
 
 Le support de cours peut être téléchargé au format pdf : {download}`document <../media/SysLogiquesCours.pdf>`.
 
-```{toctree}
-:maxdepth: 2
-:hidden:
-Support de court complet <SysLogiques/main.md>
-Ga-Bu-Zo-Meu <gabuzomeu>
-```
