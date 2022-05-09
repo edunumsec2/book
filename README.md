@@ -68,8 +68,6 @@ Les ressources sont découpées selon un chapitrage qui correspond au plan d'ét
 
 ## Installation 
 
-⚠️ *Attention : l'installation qui suit N'EST PAS nécessaire dans le cadre du projet pilote. Elle figure ici à titre informatif pour celles et ceux qui souhaitent comprendre l'architecture globale du projet et veulent avoir une idée de l'intégralité des possibilités qu'offre un modèle de projet open source. Après la première année de pilote, et compte tenu des retours qui auront été faits, le projet se déploiera entièrement, et les enseignant.es d'informatique auront tout le loisir d'installer l'environnement ci-dessous et de s'amuser à leur guise avec la documentation open source de ce dépôt GitHub.* 
-
 Pour ceux et celles qui souhaitent utiliser l'environnement Sphinx pour tester des contenus et participer au développement, la marche à suivre est la suivante : 
 
 ### Installation recommandée
