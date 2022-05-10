@@ -44,6 +44,27 @@ from turtle import *
 
 left(90)
 forward(120)
+
+write(8, font=('Arial', 8))
+
+backward(18)
+write(12, font=('Arial', 12))
+
+backward(24)
+write(18, font=('Arial', 18))
+```
+
+En utilisant une variable ``taille`` nous pouvons aussi parcourir un tuple de nombres. A l'intérieur de la boucle nous utilisons cette variable ``taille`` trois fois :
+
+- pour calculer la distance entre les lignes (dans ``backward()``)
+- pour l'afficher (dans ``write()``)
+- pour choisir la taille (dans l'option ``font=()``)
+
+```{codeplay}
+from turtle import *
+
+left(90)
+forward(120)
 for taille in (8, 12, 18, 24, 36, 64):
     backward(1.5 * taille)
     write(taille, font=('Arial', taille))
@@ -60,8 +81,34 @@ En typographie, une **police d'écriture** est un ensemble de signes graphiques 
 - **Zapfino** - police manuscrite
 
 ```{admonition} Exercice
-Ecrivez deux lignes de texte en style manuscrit utilsant la police Zapfino.
+Ecrivez un poème de 3-4 lignes en style manuscrit utilsant la police Zapfino.
 ```
+
+```{codeplay}
+from turtle import *
+
+left(90)
+forward(100)
+
+write('Arial', font=('Arial', 24))
+back(60)
+
+write('Times', font=('Times', 24))
+back(60)
+
+write('Courier', font=('Courier', 24))
+back(60)
+
+write('Didot', font=('Didot', 24))
+back(60)
+
+write('Zapfino', font=('Zapfino', 24))
+```
+
+En utilisant une variable ``police`` nous pouvons aussi parcourir un tuple de chaînes de caractères qui représentent des polices. A l'intérieur de la boucle nous utilisons cette variable ``police`` deux fois :
+
+- pour l'afficher (dans ``write()``)
+- pour choisir la police (dans l'option ``font=()``)
 
 ```{codeplay}
 from turtle import *
@@ -80,6 +127,30 @@ Le troisième argument présente le style de la police :
 - gras (`bold`)
 - cursive (`italic`)
 - gras et cursive (`bold italic`)
+
+```{admonition} Exercice
+Ajoutez un quatrième texte avec le style gras et cursive.
+```
+
+```{codeplay}
+from turtle import *
+
+left(90)
+forward(100)
+
+write('normal', font=('Arial', 48, 'normal'))
+backward(90)
+
+write('italic', font=('Arial', 48, 'italic'))
+backward(90)
+
+write('bold', font=('Arial', 48, 'bold'))
+```
+
+En utilisant une variable ``style`` nous pouvons aussi parcourir un tuple de chaînes de caractères qui représentent les 4 styles possibles. A l'intérieur de la boucle nous utilisons cette variable ``style`` deux fois :
+
+- pour l'afficher (dans ``write()``)
+- pour choisir le style (dans l'option ``font=()``)
 
 ```{codeplay}
 from turtle import *
