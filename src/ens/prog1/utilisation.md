@@ -242,8 +242,6 @@ Après avoir réalisé le TP, fournissez un document explicitant les points suiv
 - Ai-je critiqué mon travail en mettant en avant les différences ou les ressemblances entre mon scénario d'utilisation et la réalisation de mon jeu ?
 - Ai-je mis correctement en page mon document ?
 
-
-
 | Critères                                                                                                                                            |                                          Niveaux                                         |                                                                                          |                                                                                      |                                                                                                                                  |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------:|
 | Ai-je expliqué le scénario d'utilisation de mon jeu ?                                                                                               |  Non                                                                                     |  Oui                                                                                     |                                                                                      |                                                                                                                                  |
@@ -258,4 +256,3 @@ Après avoir réalisé le TP, fournissez un document explicitant les points suiv
 | Ai-je compris le fonctionnement et puis-je citer une utilisation d'une boucle ?                                                                     |  Le fonctionnent n'est pas compris et la proposition d'utilisation n'est pas pertinente. |  Le fonctionnent n'est pas compris ou la proposition d'utilisation n'est pas pertinente. |  Le fonctionnent est compris et la proposition d'utilisation est pertinente.         |                                                                                                                                  |
 
 #### Exemple 2 - MicroBit et capteur
-
