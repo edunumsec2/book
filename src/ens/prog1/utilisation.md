@@ -188,3 +188,74 @@ Placés à la fin ces chapitres permettent de déboucher sur un projet de progra
 
 ## Evaluation
 
+Avant d'évaluer la programmation il faut définir ce qu'on veut évaluer: Un code fait en peu de lignes, un code bien commenté, un code qui fonctionne, un code utilisant les apprentissages faits en cours ou tout à la fois ? Les différentes sensibilités sont défendables pour autant qu'elles aient été enseignées. Au delà de ces réflexions voici des outils vous permettant de mettre en place des évaluations de programmations:
+
+### CodeRunner sur Moodle
+
+CodeRunner est un plugin Moodle permettant dans l'activité "Quizz" de mettre des question de programmation. Il suffit de poser une question à l'élève et de définir des cas d'utilisation permettant de vérifier le fonctionnement du code que pourra écrire l'élève directement sur Moodle. Dans un cadre formatif, l'élève aura l'occasion de tester plusieurs fois son script moyennant un malus de point sur son quizz. Il pourra voir les instructions de déboggage liées à ses tentatives. Dans un cadre certificatif il pourra simplement soumettre sa réponse et le plugin calculera les points obtenus.
+
+### TP noté
+
+Le canevas d'un rapport de science expérimentale ressemble à ceci:
+
+- But
+- Matériel
+- Méthode
+- Résultats
+- Analyse
+- Conclusion
+
+Il ne serait pas judicieux de transposer cela à l'informatique, en revanche il serait possible de l'adapter comme ceci:
+
+- But
+- Elément théorique
+- Code commenté
+- Conclusion
+
+On retrouve sous une forme classique le but du TP
+
+- Réaliser un script permettant de calculer les solutions d'une équation du deuxième degré avec les valeurs a, b et c de l'équation y=ax2+bx+c
+- Réaliser et comparer deux scripts permettant de réaliser un pixel-art, une fois avec et une fois sans boucle.
+- ...
+
+L'élément théorique pourrait être l'explication du fonctionnement et de la syntaxe d'une instruction conditionnelle, d'une boucle for, ...
+
+### Portfolio
+
+Voici deux exemples d'évaluation sous forme de portfolio. Ceci consiste à donner une liste de question à l'élève et, en répondant à ces questions, il pourra produire un document qui sera évalué avec une grille criteriée.
+
+#### Exemple 1 - un jeu
+
+Avant de réaliser ce TP, explicitez les points suivants:
+
+- Ai-je expliqué le scénario d'utilisation de mon jeu ?
+- Ai-je identifié les variables et les instructions nécessaires pour ce projet ?
+
+Après avoir réalisé le TP, fournissez un document explicitant les points suivants :
+
+- Ai-je présenté l'architecture logicielle pour ce projet ?
+- Comment ai-je utilisé une instruction conditionnelle dans mon scénario ?
+- Comment ai-je utilisé une boucle dans mon scénario ?
+- Ai-je compris le fonctionnement et puis-je citer une utilisation d'une instruction conditionnelle ?
+- Ai-je compris le fonctionnement et puis-je citer une utilisation d'une boucle ?
+- Ai-je conçu un programme permettant de réaliser mon scénario ?
+- Ai-je critiqué mon travail en mettant en avant les différences ou les ressemblances entre mon scénario d'utilisation et la réalisation de mon jeu ?
+- Ai-je mis correctement en page mon document ?
+
+
+
+| Critères                                                                                                                                            |                                          Niveaux                                         |                                                                                          |                                                                                      |                                                                                                                                  |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------:|
+| Ai-je expliqué le scénario d'utilisation de mon jeu ?                                                                                               |  Non                                                                                     |  Oui                                                                                     |                                                                                      |                                                                                                                                  |
+| Ai-je identifié les variables et les instructions nécessaires pour ce projet ?                                                                      |  Non                                                                                     |  Oui                                                                                     |                                                                                      |                                                                                                                                  |
+| Ai-je conçu un programme permettant de réaliser mon scénario ?                                                                                      |  Le programme est inutilisable car il y a trop d'erreurs.                                |  Le programme contient des erreurs mais tourne quand même.                               |  Le programme ne contient pas d'erreurs, en revanche il n'est pas efficient.         |  Le programme ne contient pas d'erreurs, il est efficient et répond à la problématique du scénario.                              |
+| Ai-je compris le fonctionnement et puis-je citer une utilisation d'une instruction conditionnelle ?                                                 |  Le fonctionnent n'est pas compris et la proposition d'utilisation n'est pas pertinente. |  Le fonctionnent n'est pas compris ou la proposition d'utilisation n'est pas pertinente. |  Le fonctionnent est compris et la proposition d'utilisation est pertinente.         |                                                                                                                                  |
+| Comment ai-je utilisé une instruction conditionnelle dans mon scénario ?                                                                            |  Aucune instruction conditionnelle n'est utilisée.                                       |  Une instruction conditionnelle est utilisée de manière sommaire.                        |  Une instruction conditionnelle est utilisée et son utilisation est bien documentée. |                                                                                                                                  |
+| Ai-je critiqué mon travail en mettant en avant les différences ou les ressemblances entre mon scénario d'utilisation et la réalisation de mon jeu ? |  Non                                                                                     |  L'analyse est sommaire.                                                                 |  L'analyse met en avant 1 à 2 points liant le début et la fin du travail.            |  L'analyse met en avant plus de 2 points liant le début et la fin du travail et les causes de la réussite/échec sont identifiées |
+| Ai-je présenté l'architecture logicielle pour ce projet ?                                                                                           |  L'architecture logicielle n'est pas décrite.                                            |  L'architecture logicielle est décrite de manière sommaire.                              |  L'architecture logicielle est décrite de manière pertinente.                        |  L'architecture logicielle est décrite de manière pertinente et une référence à la représentation des données est faite.         |
+| Ai-je mis correctement en page mon document ?                                                                                                       |  La mise en page comporte plusieurs imperfections.                                       |  La mise en page n'est pas optimale, quelques imperfection entravant la lecture.         |  Le texte est bien mis en forme malgré quelques imperfections.                       |  Le texte est correctement mis en forme, la lisibilité est agréable.                                                             |
+| Comment ai-je utilisé une boucle dans mon scénario ?                                                                                                |  Aucune boucle n'est utilisée.                                                           |  Une boucle est utilisée de manière sommaire.                                            |  Une boucle est utilisée et son utilisation est bien documentée.                     |                                                                                                                                  |
+| Ai-je compris le fonctionnement et puis-je citer une utilisation d'une boucle ?                                                                     |  Le fonctionnent n'est pas compris et la proposition d'utilisation n'est pas pertinente. |  Le fonctionnent n'est pas compris ou la proposition d'utilisation n'est pas pertinente. |  Le fonctionnent est compris et la proposition d'utilisation est pertinente.         |                                                                                                                                  |
+
+#### Exemple 2 - MicroBit et capteur
+
