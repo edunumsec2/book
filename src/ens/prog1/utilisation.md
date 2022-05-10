@@ -101,7 +101,7 @@ L'apprentissage de notion simples comme les variables n'est pas à négliger car
 - Variable d’itération i
 - La fonction write()
 - Variables locales
-
+ 
 - Parcourir des couleurs
 - Parcourir des diamètres
 - Cube 3D
@@ -119,7 +119,7 @@ Ici aussi deux sujets sont traités, un nouveau avec la fonction range et l'ité
 - Grille de points
 - Position (x, y)
 - Grille de lignes
-
+ 
 - Paramétrer la fonction
 - Dessiner une maison
 - Position de la maison
@@ -156,6 +156,8 @@ Le chapitre questionner permet de parler d'interaction avec la machine, une syne
 - Créer un quiz
 - Erreurs
 
+ 
+
 - Dire bonjour
 - Délimiter un texte
 - Répéter un texte
@@ -182,7 +184,7 @@ Placés à la fin ces chapitres permettent de déboucher sur un projet de progra
 - En code binaire
 - Indentation
 - Sortir avec break
-
+ 
 - Valeur de retour
 - Points de sortie
 
