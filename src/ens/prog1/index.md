@@ -8,8 +8,7 @@ Cette section présente :
 - des activités supplémentaires
 
 ```{toctree}
-:maxdepth: 2
-:hidden:
+:maxdepth: 1
 :numbered: 1
 
 introduction
