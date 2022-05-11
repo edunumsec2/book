@@ -28,8 +28,9 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    prog1/index
    algo1/index
    archi/index
-   PlanDidac/index.md
+   enjx/index
 
+<! ---
 .. toctree::
    :name: Histoire
    :caption: Histoire
@@ -37,6 +38,7 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    :hidden:
 
    hist/index  
+--- >
 
 .. toctree::
    :name: Deuxième année
@@ -46,6 +48,7 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
 
    resx/index
 
+<! ---
 .. toctree::
    :name: Enjeux sociaux
    :caption: Enjeux sociaux
@@ -53,6 +56,7 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    :hidden:
 
    enjx/index
+--->
 
 
 .. toctree::
@@ -61,7 +65,9 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    :maxdepth: 3
    :hidden:
 
-   art/index   
+   hist/index
+   art/index
+   PlanDidac/index.md   
 
 .. toctree::
    :name: Outils

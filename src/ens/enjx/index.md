@@ -1,12 +1,20 @@
 
-# Introduction
+# Enjeux sociaux
 
 ```{toctree}
 :maxdepth: 2
 :hidden:
-Grandes thématiques <grandes-thematiques/index>
-Fiches complémentaires <fiches-complementaires/index>
-Activités <activ/index>
+:numbered: 1
+
+grandes-thematiques/economie-numerique
+grandes-thematiques/surveillance
+
+fiches-complementaires/digital-labor
+fiches-complementaires/wikipedia
+fiches-complementaires/affaire-snowden
+fiches-complementaires/genre-numerique
+
+activ/encheres
 ```
 
 Si l'enseignement de la science informatique a pour objectif de transmettre des connaissances de base dans des domaines techniques tels que l'algorithmique ou la programmation, la numérisation croissante de la société nécessite également la compréhension des enjeux sociaux, politiques et économiques que ces transformations soulèvent. 

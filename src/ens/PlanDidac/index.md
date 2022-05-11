@@ -1,6 +1,5 @@
 (plandidac1ere)=
-Propositions de plans didactiques pour la 1ère année
-==================================================
+# Plans didactiques
 
 ## Introduction et conditions générales
 
