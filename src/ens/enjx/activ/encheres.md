@@ -23,8 +23,8 @@ La séquence d'enseignement se déroule en une séance de 45 minutes. Une plus l
 
 Les fichiers suivants sont à télécharger pour l'activité complète : 
 
-- {download}`Cartes vendeurs <media/cartes-profils.pdf>`
-- {download}`Diapositives clients <media/slides-clients.pdf>`
+- {download}`Cartes des profils <media/cartes-profils.pdf>`
+- {download}`Cartes/diapositives des visiteurs <media/slides-clients.pdf>`
 
 ## Objectifs 
 
