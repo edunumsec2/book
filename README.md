@@ -1,6 +1,6 @@
 ![modulo-banner](https://github.com/edunumsec2/modulo2/blob/main/source/_static/assets/modulo-head-banner.svg)
 
-# Informatique au Gymnase / Pilote
+# Informatique au Gymnase
 
 ## Introduction
 
