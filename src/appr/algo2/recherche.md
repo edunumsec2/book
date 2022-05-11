@@ -51,7 +51,7 @@ Ecrire un algorithme qui affiche tous les nombres de 1 à `n`.
 
 Combien d’instructions élémentaires sont nécessaires lorsque `n` vaut 100 ? 
 
-Quel est la complexité de cet algorithme ?  
+Quelle est la complexité de cet algorithme ?  
 ```
 
 `````{admonition} Solution 2.0. Compter jusqu'à n
@@ -93,7 +93,7 @@ Ecrire un algorithme qui affiche tous les nombres *pairs* de 1 à `n`.
 
 Combien d’instructions élémentaires sont nécessaires lorsque `n` vaut 100 ? 
 
-Quel est la complexité de cet algorithme ? 
+Quelle est la complexité de cet algorithme ? 
 ```
 
 `````{admonition} Solution 2.1. Compter par pas de 2
