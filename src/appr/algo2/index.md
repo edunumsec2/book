@@ -9,14 +9,13 @@ L’**<span style="color:rgb(89, 51, 209)">algorithmique</span>** étudie les pr
 ```{toctree}
 :maxdepth: 2
 :hidden:
-:numbered: 1
-intro
-complexite
-recherche
-tris
-heuristiques
-recursivite
-conclusion
+Introduction <intro>
+1. Terminaison et complexité <principes>
+2. Algorithmes de recherche <recherche>
+3. Algorithmes de tri <tris>
+4. Algorithmes heuristiques <heuristiques>
+5. Focus sur la récursivité <recursivite>
+Conclusion <conclusion>
 ```
 
 

@@ -227,7 +227,7 @@ Le jeu d’instructions élémentaires dépend du système informatique sur lequ
 
 ````{admonition} Exercice 2. Ingrédients de l'algorithme mystère
 :class: note
-A quoi correspondent les ingrédients d’un algorithme dans l’exemple de la recette de l’omelette ?
+A quoi correspondent « les ingrédients d’un algorithme » dans l’exemple de la recette de l’omelette ?
 ````
 
 ````{admonition} Solution 2. Ingrédients de l'algorithme mystère
@@ -236,7 +236,7 @@ A quoi correspondent les ingrédients d’un algorithme dans l’exemple de la r
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
- Les données en entrée sont les œufs, les opérations sont les étapes 1 à 4 de la recette et finalement le résultat en sortie est l’omelette. On peut considérer le matériel culinaire (bol, fourchette, poêle, spatule) comme du matériel informatique à notre disposition, capable de traiter des données (œufs). En effet on peut cuire plein d’autres aliments dans une poêle.
+ Les données en entrée sont les œufs, les opérations sont les étapes 1 à 4 de la recette et finalement le résultat en sortie est l’omelette. On peut considérer le matériel culinaire (bol, fourchette, poêle, spatule) comme du matériel informatique à notre disposition, capable de traiter des données (œufs). En effet, on peut cuire plein d’autres aliments dans une poêle.
 ```
 ````
 
@@ -439,11 +439,11 @@ Le résultat obtenu est bien le résultat attendu, l'algorithme a trouvé la plu
 ````{admonition} Exercice 1.3.3. Le prochain anniversaire
 :class: note
 
-On souhaite déterminer l’élève dont la date d’anniversaire est la plus proche de la date d’aujourd’hui, dans le futur. Ecrivez un algorithme qui permet de trouver cet élève (utilisez un langage familier). Pensez à décomposer le problème en sous-problèmes. 
+On souhaite déterminer l’élève dont la date d’anniversaire est la plus proche de la date d’aujourd’hui, dans le futur. Ecrire un algorithme (en langage familier) qui permet de trouver cet élève. Penser à décomposer le problème en sous-problèmes. 
 
-Comparez votre solution à celle de la personne à côté de vous. Avez-vous procédé de la même manière ? Si non, expliquez vos raisonnements.
+Comparer la solution trouvée à celle de la personne à côté de vous. Avez-vous procédé de la même manière ? Si non, expliquer vos raisonnements.
 
-Un ordinateur peut-il réaliser les opérations décrites par votre algorithme ?
+Un ordinateur peut-il réaliser les opérations décrites par cet algorithme ?
 
 ````
 <!-- 

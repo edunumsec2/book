@@ -78,3 +78,4 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    :hidden:
 
    glossaire
+   readme/extensions

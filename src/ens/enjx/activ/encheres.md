@@ -21,7 +21,10 @@ La séquence d'enseignement se déroule en une séance de 45 minutes. Une plus l
 - 4 ardoises avec crayons effaçables,
 - Un espace d'affichage, tel qu'un tableau, pour afficher les dépenses et gains des groupes, sous formes de colonnes.
 
-Les fichiers suivants sont à télécharger pour l'activité complète : TODO: Mettre le lien.
+Les fichiers suivants sont à télécharger pour l'activité complète : 
+
+- {download}`Cartes des profils <media/cartes-profils.pdf>`
+- {download}`Cartes/diapositives des visiteurs <media/slides-clients.pdf>`
 
 ## Objectifs 
 
@@ -82,7 +85,7 @@ En échange, la publicité du gagnant est présentée au visiteur par la platefo
 Le visiteur va alors faire une certaine quantité d'achats chez le vendeur ayant gagné l'enchère. On simule le comportement d'achat du visiteur via des lancers de dés, au total 5 lancers de 2 dés. Chaque lancer dont la somme des deux dés atteint ou dépasse un certain seuil est considéré comme une réussite.
 Pour chaque réussite, le groupe d'élèves empoche un gain de 20 CHF.
 
-Chaque visiteur a comme caractéristique son intérêt pour les 4 gammes de produit (bijouterie, sport, informatique et livres). Cet intérêt est illustré par un résultat à atteindre au lancer des 2 dés. Un visiteur trés interessé par les livres par exemple, sera décrit par une valeur basse de dés (3), ainsi toute valeur entre 3 et 12 pour déterminer l'intérêt de l'acheteur permetra un gain de 20 CHF. Seul un double 1 serait un échec. A contrario, un acheteur peu intéressé par les livres aura une valeur de 10+, les dés devront alors présenter soit 10, 11 ou 12 pour que l'achat soit effectué. Ces informations apparaissent sur la carte acheteur de l'animateur.
+Chaque visiteur a comme caractéristique son intérêt pour les 4 gammes de produit (bijouterie, sport, informatique et livres). Cet intérêt est illustré par un résultat à atteindre au lancer des 2 dés. Un visiteur très intéressé par les livres par exemple, sera décrit par une valeur basse de dés (3), ainsi toute valeur entre 3 et 12 pour déterminer l'intérêt de l'acheteur permettra un gain de 20 CHF. Seul un double 1 serait un échec. A contrario, un acheteur peu intéressé par les livres aura une valeur de 10+, les dés devront alors présenter soit 10, 11 ou 12 pour que l'achat soit effectué. Ces informations apparaissent sur la carte acheteur de l'animateur.
 
 En résumé, le gain du vendeur (montant dépensé par l'acheteur moins le prix de revient des articles) est déterminé par des lancers de dés. Par cinq fois, un des élèves du groupe vendeur gagnant lance les 2 dès.
 Chaque lancer dont le total des dés est supérieur ou égal au seuil de réussite (qui dépend de l'acheteur et du produit) engendre un gain de 20 CHF pour le groupe.
@@ -95,14 +98,14 @@ Pour une autre moitié de visiteurs, les seuils sont plus durs à atteindre et p
 ##### Première phase du jeu (10mn)
 
 La première phase du jeu consiste à présenter aux élèves le premier visiteur VISITEUR1. La plateforme informe les vendeurs de cette visite. La plateforme indique qu'elle ne connait rien du visiteur (profil inconnu).
-L'enseignant&middot;e peut rappeler qu'il y a 50% de chance que le visiteur soit intéressé par un de leur produit, et qu'en fonction de l'intêret du visiteurs les gains moyens se situent soit entre 70 et 90 CHF, soit entre 10 et 30 CHF. La plateforme demande aux différents groupes combien ils sont prêts à payer pour que leur publicité soit affichée lors de cette visite.
+L'enseignant&middot;e peut rappeler qu'il y a 50% de chance que le visiteur soit intéressé par un de leur produit, et qu'en fonction de l'intérêt du visiteur les gains moyens se situent soit entre 70 et 90 CHF, soit entre 10 et 30 CHF. La plateforme demande aux différents groupes combien ils sont prêts à payer pour que leur publicité soit affichée lors de cette visite.
 
 Pour déterminer combien chaque groupe est prêt à payer on procède à une enchère cachée. Après 2-3 minutes de réflexion en groupe, les vendeurs, tous ensemble, indiquent via les ardoises les montants qu'ils sont prêts à mettre sur la table. *Un signal sonore peut être donné par l'enseignant pour garantir la confidentialité des montants*
 
 Le vendeur avec le montant le plus haut est facturé selon la deuxième enchère la plus haute.
 L'enseignant&middot;e marque au tableau, dans la colonne "dépenses" du groupe, ce que le groupe a dépensé pour gagner cette enchère.
 
-Aprés les enchères, l'enseignant&middot;e présente brièvement le profil du visiteur et indique le seuil à atteindre pour le groupe gagnant. *Les élèves peuvent identifier les caractéristiques qui auraient pu leur donner des indices sur l'intérêt probable de la personne pour leurs produits. Cela devrait commencer à les faire réfléchir sur les stratégies d'enchères à mettre en place pour obtenir des gains.*
+Après les enchères, l'enseignant&middot;e présente brièvement le profil du visiteur et indique le seuil à atteindre pour le groupe gagnant. *Les élèves peuvent identifier les caractéristiques qui auraient pu leur donner des indices sur l'intérêt probable de la personne pour leurs produits. Cela devrait commencer à les faire réfléchir sur les stratégies d'enchères à mettre en place pour obtenir des gains.*
 
 Le groupe gagnant doit ensuite lancer les dés pour déterminer le montant de ses futurs gains en fonction de l'intérêt du visiteur. Par exemple, selon la carte VISITEUR1, si  le vendeur est dans la catégorie "bijoux" ou la catégorie "sport", le seuil à atteindre avec la somme des deux dés est 5 (5+). Les dés sont lancés 5 fois. Pour chaque lancer, si le vendeur obtient une somme supérieure ou égale à 5, alors le groupe empoche 20CHF, sinon il ne gagne rien pour le lancer. Au total le gain maximum est de 100CHF.
 
@@ -167,9 +170,9 @@ Secondes série de questions :
 - *Pour quel raison est-ce que les plateforme ont un intérêt à collecter vos données et à vous "profiler"?*
 - *Est-il vraisemblable que les plateformes connaissent ce genre d'information?*
 - *Quels traces pensez-vous laisser en ligne?*
-- *Ces trasses peuvent-elles en dire beaucoup sur vous?*
+- *Ces traces peuvent-elles en dire beaucoup sur vous?*
 
-Cette deuxième série de question a pour but d'amener les élèves à identifier l'intérêt des plateforme pour la collecte de données et la mise au point de profils. Ses profils ne sont pas renseignés directement par le visiteurs, mais sont constitués à partir de leurs traces numériques. Recherches effectuées, page webs et vidéos consultées, mouvements de la souris, consultation du téléphone portable ou d'une montre connectée: tout laisse une trace numérique qui permet aux plateformes qui fournissent ces services (comme Google ou Meta) d'établir des profils utilisateurs à l'aide de modèles statistiques.
+Cette deuxième série de question a pour but d'amener les élèves à identifier l'intérêt des plateforme pour la collecte de données et la mise au point de profils. Ses profils ne sont pas renseignés directement par le visiteurs, mais sont constitués à partir de leurs traces numériques. Recherches effectuées, page web et vidéos consultées, mouvements de la souris, consultation du téléphone portable ou d'une montre connectée: tout laisse une trace numérique qui permet aux plateformes qui fournissent ces services (comme Google ou Meta) d'établir des profils utilisateurs à l'aide de modèles statistiques.
 
 Une anecdote pour relancer la discussion: Autour de 2012, Target, chaîne de magasins américaine, aurait proposé des publicités pour des produits pour les nouveau-nés à une adolescente qui ne se savait pas encore enceinte. Dans ce cas, le changement d'habitudes de la cliente (un choix de shampooing sans odeur alors qu'auparavant ses choix étaient parfumés) aurait indiqué à la chaîne que la personne était probablement enceinte. Sources: [Article NYT](https://www.nytimes.com/2012/02/19/magazine/shopping-habits.html), [article Forbes](https://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/?sh=b128b566686d).
 
