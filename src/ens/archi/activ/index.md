@@ -3,9 +3,7 @@
 Dans cette partie, nous proposons des activités de cours qui permettent de découvrir de manière active des éléments clés l'architecture des ordinateurs.
 
 ```{toctree}
-:maxdepth: 2
-:hidden:
-
+:maxdepth: 1
 Ordinateur antique <ordinateurantique>
 Simulateur logique <simulateur>
 Sélecteur de chien <selecteur-chien>
