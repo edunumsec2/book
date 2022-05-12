@@ -1,43 +1,112 @@
-"""Game of Go
+"""Template for a game
 
-This script implements the game of Go.
-Put your description as a doc-string here.
+This script implements general classes for your game.
+Put your description of the game as a doc-string at the beginning.
+A doc-string is a mult-line string enclosed with three double-quotes.
+
+Your game must define at a minimum these 5 classes :
+
+- Rectangle
+- Text
+- Button (composed of class Rectangle and Button)
+- Grid
+- Game (composed of class Grid, Text and Button)
+
+You can modify these classes.
+You can add more classes (ex. Player, Enemy, Score, Room, Level, etc.)
+The last command to be called must be Game()
 
 Author: Raphael Holzer
 Date: 11 May 2022
 """
 
 from turtle import *
-from button import *
 
 def ligne(p, q):
+    """Draws a ligne from point p to point q."""
+
     goto(p)
     down()
     goto(q)
     up()
 
 
+class Rectangle:
+    """Draw a filled rectangle."""
+    
+    def __init__(self, pos, size, color='gray'):
+        """Initialize the rectangle and draw it."""
+        self.pos = pos
+        self.size = size
+        self.color = color
+        self.draw()
+    
+    def outline(self):
+        """Draw just the outline of the rectangle."""
+        goto(self.pos)
+        down()
+        for x in self.size * 2:
+            forward(x)
+            left(90)
+        up()
+        
+    def draw(self):
+        """Draw the outline of the rectangle and fill it a color is defined."""
+        if self.color:
+            fillcolor(self.color)
+            begin_fill()
+            self.outline()
+            end_fill()
+        else:
+            self.outline()
+            
+    def inside(self, p):
+        """Check if the point p is inside the rectangle."""
+        x, y = self.pos
+        w, h = self.size
+        
+        return 0 < p[0]-x < w and 0 < p[1]-y < h
+        
+
 class Text:
-    def __init__(self, pos, text, size=16):
+    """Draw a text at a given position."""
+    
+    def __init__(self, pos, text, size=16, align='left'):
+        """Initilizes the text"""
         self.pos = pos
         self.text = text
         self.size = size
+        self.align = align
         self.draw()
         
     def draw(self):
+        """Draw the text."""
         goto(self.pos)
-        write(self.text, font=('Arial', self.size))
+        write(self.text, font=('Arial', self.size), align=self.align)
+     
+class Button:
+    def __init__(self, pos, text, size=(80, 30), color='lightgray', align='center'):
+        self.rect = Rectangle(pos, size, color)
+        x, y = pos
+        w, h = size
+        self.label = Text((x + w//2, y + h//4), text, h//2, 'center')
         
+    def draw(self):
+        self.rect.draw()
+        self.label.draw()
+    
+    def inside(self, p):
+        return self.rect.inside(p)
 
 class Grid:
-    """Defines a grid class with the size (n x m).
+    """Define a grid class with the size (n x m).
 
     n is the number of lignes,
     m the number of columns.
     """
 
     def __init__(self, n=8, m=8, d=40, ongrid=True):
-        """create a new Grid instance"""
+        """Create a new Grid instance"""
         self.n = n        # vertical (y)
         self.m = m        # horizontal (x)
         self.d = d        # distance
@@ -49,7 +118,7 @@ class Grid:
         print(self)
         
     def draw(self):
-        """draws the grid."""
+        """Draw the grid."""
         for x in range(-self.x0, self.x0+1, self.d):
             ligne((x, -self.y0), (x, self.y0))
 
@@ -57,7 +126,7 @@ class Grid:
             ligne((-self.x0, y), (self.x0, y))
     
     def inside(self, x, y):
-        """Checks if (x, y) is inside the grid."""
+        """Check if (x, y) is inside the grid."""
         x0 = self.x0
         y0 = self.y0
         if self.ongrid:
@@ -102,7 +171,7 @@ class Game:
         self.score = 0
         self.history = []
         self.grid = Grid()
-        self.title = Text((-200,  170), 'The game of Go', 24)
+        self.title = Text((0,  170), 'Title of your Game', 24, 'center')
         self.status = Text((-280, -190), 'status line')
         self.bt_clear = Button((200, 100), 'Clear')
         self.bt_new = Button((200, 50), 'New')
