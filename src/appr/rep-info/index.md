@@ -1,5 +1,5 @@
-Représentation de l'information
-==================================
+(repinfo)=
+# Représentation de l'information
 
 Le monde numérique est extrêmement vaste. Au moyen d’applications dédiées, il est possible d’y travailler sur une certaine représentation du réel. Des textes, des images, des sons ou des données financières peuvent y être manipulées.
 
@@ -22,11 +22,11 @@ conclusion
 
 ## Objectifs de la thématique
 
-{fa}`check, text-success mr-1`Découvrir la **représentation binaire** des nombres entiers, des caractères, des images et des sons.
+* Découvrir la **représentation binaire** des nombres entiers, des caractères, des images et des sons.
 
-{fa}`check, text-success mr-1`Comprendre les notions de **compression** et de **stockage** des données.
+* Comprendre les notions de **compression** et de **stockage** des données.
 
-{fa}`check, text-success mr-1`Appréhender l’importance de la **redondance**.
+* Appréhender l’importance de la **redondance**.
 
 ## Personnages-clés
 

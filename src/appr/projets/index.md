@@ -1,3 +1,4 @@
+(projets)=
 # Projets
 
 Aujourd'hui, tout le monde peut créer un produit informatique révolutionnaire, avec rien d'autre qu'un ordinateur comme investissement initial.
@@ -24,11 +25,11 @@ Idées <idees>
 
 ## Objectifs
 
-{fa}`check, text-success mr-1` Créer un projet d'informatique
+* Créer un projet d'informatique
 
-{fa}`check, text-success mr-1` Découper un problème en sous-problèmes
+* Découper un problème en sous-problèmes
 
-{fa}`check, text-success mr-1` Comprendre l'existant pour créer l'inconnu
+* Comprendre l'existant pour créer l'inconnu
 
 ## Personnages-clés
 

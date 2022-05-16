@@ -40,11 +40,11 @@ annexe
 
 ## Objectifs
 
-{fa}`check, text-success mr-1` Découvrir le langage de programmation Python
+* Découvrir le langage de programmation Python
 
-{fa}`check, text-success mr-1` Dessiner, écrire et calculer en utilisant un ordinateur
+* Dessiner, écrire et calculer en utilisant un ordinateur
 
-{fa}`check, text-success mr-1` Comprendre la logique d'un programme
+* Comprendre la logique d'un programme
 
 ## Personnages clés
 
