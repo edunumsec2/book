@@ -19,7 +19,7 @@ name: modele
 ````
 
 
-# Modularité
+### Modularité
 
 La modularité est directement liée à la pensée computationnelle : la puissance de
 l’informatique tient à sa capacité à décomposer tout problème en éléments et en
@@ -30,7 +30,7 @@ Environnement socio-technique
 Il s’agit de replacer l’objet abordé dans un contexte qui est spécifique, qu’il soit culturel,
 historique, géographique, économique, social ou personnel.
 
-# Délégation
+### Délégation
 
 C’est l’approche qui permet de décider quelle partie d’une tâche confier à une machine,
 ou à un dispositif numérique. Il existe toujours plusieurs possibilités d’organiser
@@ -39,7 +39,7 @@ d’autonomie (automatisation). Prendre conscience de la part que l’humain dé
 à la machine amène nécessairement à s’interroger sur ces aspects: doit-on déléguer
 et jusqu’où ? Qui délègue quoi et pour qui ?
 
-# Responsabilité
+### Responsabilité
 
 Ce dernier angle d’approche est celui de l’éthique, qui invite à mesurer les impacts des
 technologies numériques sur soi, sur autrui et sur l’environnement, ainsi qu’à se poser
@@ -49,7 +49,7 @@ autonomes pour être responsables et s’auto-contrôler dans leur choix, en pre
 compte des considérations éthiques en regard de la durabilité, de la santé, de l’inclusion
 et des libertés.
 
-# Pluralisme
+### Pluralisme
 
 Au centre de ce modèle, le pluralisme est le principe qui en gouverne toutes les
 approches: pluralisme des contextes techniques et socio-culturels (environnement
