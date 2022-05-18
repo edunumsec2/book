@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="4. Algorithmes de tri" href="tris.html" /><link rel="prev" title="2. Complexité des algorithmes" href="complexite.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Algorithmes de tri" href="tris.html" /><link rel="prev" title="Terminaison et complexité" href="principes.html" />
 
     <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>3. Algorithmes de recherche - Apprendre</title>
+        <title>Algorithmes de recherche - Apprendre</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -290,13 +290,13 @@
 <p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Algorithmique II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="complexite.html">2. Complexité des algorithmes</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">3. Algorithmes de recherche</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tris.html">4. Algorithmes de tri</a></li>
-<li class="toctree-l2"><a class="reference internal" href="heuristiques.html">5. Solutions heuristiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="recursivite.html">6. Récursivité [en option]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conclusion.html">7. Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principes.html">Terminaison et complexité</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Algorithmes de recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tris.html">Algorithmes de tri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="heuristiques.html">5. Algorithmes heuristiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recursivite.html">4. Récursivité [en option]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusion.html">6. Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../prog2/index.html">Programmation II</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -374,7 +374,7 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="algorithmes-de-recherche">
-<h1><span class="section-number">3. </span>Algorithmes de recherche<a class="headerlink" href="#algorithmes-de-recherche" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>Algorithmes de recherche<a class="headerlink" href="#algorithmes-de-recherche" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Les ordinateurs passent la majorité de leur temps à chercher : ils cherchent des fichiers, ils cherchent des sites Web, ils cherchent des informations dans un site Web, ils cherchent votre compte lorsque vous vous loguez sur un site Web, ils cherchent des <em>posts</em> à vous montrer et des personnes à qui vous connecter. Nous allons commencer par estimer la complexité de deux algorithmes de recherche importants.</p>
 <p>La complexité ne reflète pas la difficulté à implémenter un algorithme, comme on pourrait le croire, mais à quel point l’algorithme se complexifie au fur et à mesure que le nombre des entrées augmente. La complexité mesure le temps d’exécution d’un algorithme (ou sa rapidité) en termes du nombre d’instructions élémentaires exécutées en fonction de la taille des données.</p>
 <section id="recherche-lineaire">
@@ -409,7 +409,7 @@ Retourner « Non »
 <p class="admonition-title">Exercice 2.0. Compter jusqu’à n</p>
 <p>Ecrire un algorithme qui affiche tous les nombres de 1 à <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 <p>Combien d’instructions élémentaires sont nécessaires lorsque <code class="docutils literal notranslate"><span class="pre">n</span></code> vaut 100 ?</p>
-<p>Quel est la complexité de cet algorithme ?</p>
+<p>Quelle est la complexité de cet algorithme ?</p>
 </div>
 <div class="hint admonition">
 <p class="admonition-title">Solution 2.0. Compter jusqu’à n</p>
@@ -440,7 +440,7 @@ Retourner « Non »
 <p class="admonition-title">Exercice 2.1. Compter par pas de 2</p>
 <p>Ecrire un algorithme qui affiche tous les nombres <em>pairs</em> de 1 à <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 <p>Combien d’instructions élémentaires sont nécessaires lorsque <code class="docutils literal notranslate"><span class="pre">n</span></code> vaut 100 ?</p>
-<p>Quel est la complexité de cet algorithme ?</p>
+<p>Quelle est la complexité de cet algorithme ?</p>
 </div>
 <div class="hint admonition">
 <p class="admonition-title">Solution 2.1. Compter par pas de 2</p>
@@ -510,7 +510,6 @@ elément_recherché ← entrée  # l'élément recherché en tant que paramètre
 trouvé ← Faux               # indique si l'élément à été retrouvé 
 index_début ← 0             # au début on cherche dans tout le tableau 
 index_fin ← n               # au début on cherche dans tout le tableau 
-i ← 0                       # index pour parcourir la liste
 
 # tant que l'élément n'est pas trouvé et que le sous-tableau retenu n'est pas vide
 Tant que trouvé != Vrai et n &gt; 0 :
@@ -656,29 +655,24 @@ Un algorithme avec un ordre de complexité logarithmique est plus rapide qu’un
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><span class="section-number">4. </span>Algorithmes de tri</div>
+                <div class="title">Algorithmes de tri</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="complexite.html">
+          <a class="prev-page" href="principes.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title"><span class="section-number">2. </span>Complexité des algorithmes</div>
+                <div class="title">Terminaison et complexité</div>
                 
               </div>
             </a>
         </div>
 
         <div class="related-information">
-              Copyright &#169; CC-BY-NC |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
             <a class="muted-link" href="../_sources/algo2/recherche.md.txt"
                rel="nofollow">
               Montrer le code source
@@ -699,7 +693,7 @@ Un algorithme avec un ordre de complexité logarithmique est plus rapide qu’un
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">3. Algorithmes de recherche</a><ul>
+<li><a class="reference internal" href="#">Algorithmes de recherche</a><ul>
 <li><a class="reference internal" href="#recherche-lineaire">Recherche linéaire</a></li>
 <li><a class="reference internal" href="#recherche-binaire">2.2. Recherche binaire</a></li>
 <li><a class="reference internal" href="#exercices">Exercices</a></li>

@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="6. Récursivité [en option]" href="recursivite.html" /><link rel="prev" title="4. Algorithmes de tri" href="tris.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="4. Récursivité [en option]" href="recursivite.html" /><link rel="prev" title="Algorithmes de tri" href="tris.html" />
 
     <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>5. Solutions heuristiques - Apprendre</title>
+        <title>5. Algorithmes heuristiques - Apprendre</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -290,13 +290,13 @@
 <p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Algorithmique II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="complexite.html">2. Complexité des algorithmes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="recherche.html">3. Algorithmes de recherche</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tris.html">4. Algorithmes de tri</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">5. Solutions heuristiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="recursivite.html">6. Récursivité [en option]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conclusion.html">7. Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principes.html">Terminaison et complexité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recherche.html">Algorithmes de recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tris.html">Algorithmes de tri</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">5. Algorithmes heuristiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recursivite.html">4. Récursivité [en option]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusion.html">6. Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../prog2/index.html">Programmation II</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -373,38 +373,27 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="solutions-heuristiques">
-<h1><span class="section-number">5. </span>Solutions heuristiques<a class="headerlink" href="#solutions-heuristiques" title="Lien permanent vers ce titre">¶</a></h1>
+          <section class="tex2jax_ignore mathjax_ignore" id="algorithmes-heuristiques">
+<h1>5. Algorithmes heuristiques<a class="headerlink" href="#algorithmes-heuristiques" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="attention admonition">
-<p class="admonition-title">Matière à réfléchir VI</p>
-<p>Vous avez décidé de faire le tour du monde. Choisissez cinq pays que vous souhaitez visiter et placez-les sur une carte. Essayez de trouver le meilleur itinéraire pour visiter ces cinq pays. Quels critères avez-vous pris en compte pour décider du meilleur itinéraire, c’est-à-dire un itinéraire qui minimise la distance parcourue ?</p>
-<p>Vous avez décidé de visiter dix pays. Est-ce qu’il est aussi facile de trouver un itinéraire optimal ?</p>
-<p>Imaginez que vous souhaitez visiter plus de la moitié des pays du monde, environ cent. Combien y a-t‑il d’itinéraires possibles ?  Comment s’appelle ce nombre ?</p>
+<p class="admonition-title">Matière à réfléchir. Tour du monde</p>
+<p>Vous avez décidé de faire le tour du monde. Choisissez cinq pays que vous souhaitez visiter et placez-les sur une carte. Essayez de trouver le meilleur itinéraire pour visiter ces cinq pays.</p>
+<p>Quels critères avez-vous pris en compte pour décider du meilleur itinéraire ? Avez-vous essayé de trouver la plus petite distance à parcourir ?</p>
+<p>Vous avez décidé de visiter dix pays. Est-ce qu’il est aussi facile de trouver un itinéraire optimal ?</p>
+<p>Imaginez que vous souhaitez visiter tous les pays du monde (un peu moins de 200). Combien y a-t‑il d’itinéraires possibles ?  Comment s’appelle ce nombre ?</p>
 <p>Si le calcul d’un itinéraire prenait 1 milliseconde, combien de temps faudrait-il pour trouver la meilleure solution en énumérant toutes les solutions possibles ? Pour comparaison, le nombre d’atomes dans l’univers est d’ordre 10<sup>80</sup>.</p>
 </div>
 <section id="complexite-exponentielle">
-<h2>Complexité exponentielle<a class="headerlink" href="#complexite-exponentielle" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Il existe des problèmes difficiles à résoudre. Nous allons étudier un problème qui s’appelle le <strong><span style="color:rgb(89, 51, 209)">problème du sac à dos</span></strong>. Prenons un sac à dos et une multitude d’objets qui ont chacun un poids et une valeur. Notre objectif est de choisir quels objets mettre dans le sac à dos pour maximiser la valeur totale des objets contenus dans le sac, mais sans dépasser la capacité du sac à dos (le poids maximal qu’il peut contenir).</p>
-<p>Comment procéderiez-vous pour résoudre ce problème ? Prenez le temps d’imaginer un <span class="target" id="gl-algo-0"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> qui puisse résoudre ce problème ? Est-ce que votre <span class="target" id="gl-algo-1"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> donne toujours la meilleure solution ?</p>
-<p>L’<span class="target" id="gl-algo-2"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> le plus simple pour résoudre ce problème consiste à énumérer les différentes possibilités de contenus du sac, l’une après l’autre, et de calculer pour chacune la valeur totale. A la fin de l’<span class="target" id="gl-algo-3"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> il suffit de sélectionner la combinaison qui à la valeur totale la plus grande. Pour 10 objets, combien de combinaisons possibles existe-t-il ? Pour chaque objet, on a deux choix possibles : le mettre dans le sac ou de ne pas le mettre dans le sac. <em><strong><span style="color:rgb(13, 204, 166)">To put or not to put, that is the question.</span></strong></em> Ces deux possibilités existent pour chacun des 10 objets. Donc le nombre de combinaisons possibles est le suivant :</p>
-<p>     2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 = 2<sup>10</sup></p>
-<p>Pour <code class="docutils literal notranslate"><span class="pre">n</span></code> objets, le nombre de solutions possibles est de 2<sup>n</sup>. Si on a 2 objets, il y a 4 combinaisons différentes d’objets dans le sac.  Pour 3 objets, le nombre de combinaisons est 8. Pour 5 objets, nous avons 32 possibilités à explorer. Pour 10 objets, ce nombre monte à 1024. Pour 100 objets, ce nombre devient prohibitif et vaut 10<sup>30</sup>. Si on doit résoudre ce problème avec 270 objets sous la main, le nombre de combinaisons possibles dépasse le nombre d’atomes dans l’univers (10<sup>80</sup>). Si le calcul d’une combinaison prenait une microseconde, il nous faudrait pour résoudre ce problème bien plus que le temps de l’univers. Cela va de soi, nous n’avons pas ce temps à disposition.</p>
-<p>L’ordre de complexité de type 2<sup>n</sup> est un ordre de complexité exponentielle. Cela vaut aussi pour d’autres constantes que 2, par exemple 10<sup>n</sup> ou 1.1<sup>n</sup>. Lorsqu’un <span class="target" id="gl-algo-4"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> est d’ordre de complexité exponentielle ou O(a<sup>n</sup>), cela veut dire que le temps nécessaire pour résoudre le problème croît exponentiellement en fonction de la taille des données <code class="docutils literal notranslate"><span class="pre">n</span></code> (voir figure ci-dessous) et ne peut être résolu dans un temps raisonnable (pour des données à partir d’une certaine taille).</p>
-<figure class="align-default" id="fig-comp-exp">
-<a class="reference internal image-reference" href="../_images/Complexite_exponentielle.png"><img alt="complexité exponentielle" src="../_images/Complexite_exponentielle.png" style="width: 420px;"/></a>
-<figcaption>
-<p><span class="caption-text">Comparaison de l’ordre de complexité exponentielle avec les ordres de complexité vus jusqu’ici. Dans un ordre de complexité exponentielle, le nombre d’instructions élémentaires grandit très rapidement avec la taille des données, et l’algorithme est de plus en plus lent.</span><a class="headerlink" href="#fig-comp-exp" title="Lien permanent vers cette image">¶</a></p>
-</figcaption>
-</figure>
-<p>Lorsqu’il est trop difficile de trouver une solution exacte à un problème, il ne faut pas s’avouer vaincu·e. Dans ce cas on peut tout de même rechercher une solution imparfaite,  mais qui se rapproche autant que possible de la solution optimale. On appelle cela une <strong><span style="color:rgb(89, 51, 209)">solution heuristique</span></strong>.</p>
-<p>Une solution heuristique pour le problème du sac à dos serait la solution suivante : ajouter d’abord les objets avec la plus grande valeur, jusqu’à ce que le sac soit plein. Intuitivement, on comprend pourquoi cette solution est facile à trouver et pourquoi elle s’approche de la solution optimale. Mais en aucun cas, on ne peut garantir que l’on va obtenir la meilleure solution. Dans certains cas même, cette solution sera très mauvaise. On appelle ce type d’<span class="target" id="gl-algo-5"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithmes</span>, c’est-à-dire un <span class="target" id="gl-algo-6"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> qui trouve une solution localement optimale (qui choisit le meilleur objet en apparence, sans se préoccuper des différentes combinaisons), un <strong><span style="color:rgb(89, 51, 209)">algorithme glouton</span></strong>.</p>
-<p>Il n’y a pas que des <span class="target" id="gl-heuristique-0"></span><span class="glossary-ref" data-definition="PHA+U2UgZGl0IGQndW4gYWxnb3JpdGhtZSBxdWkgcGVybWV0IGRlIHLDqXNvdWRyZSByYXBpZGVtZW50IGRlcyBwcm9ibMOobWVzIGNvbXBsZXhlcyBkJ29wdGltaXNhdGlvbiBzYW5zIHNlIGZvbmRlciBzdXIgdW5lIG1vZMOpbGlzYXRpb24gZm9ybWVsbGUsIGNlIG4nZXN0IHBhcyBuZWNlc3NhaXJlbWVudCB1bmUgc29sdXRpb24gb3B0aW1hbGUuPC9wPgo=" data-entry-name="SGV1cmlzdGlxdWU=" data-glossary-uri="../glossaire.html#gl-def-heuristique-1" data-number="1">heuristiques</span> gloutonnes. Il existe d’autres types d’<span class="target" id="gl-heuristique-1"></span><span class="glossary-ref" data-definition="PHA+U2UgZGl0IGQndW4gYWxnb3JpdGhtZSBxdWkgcGVybWV0IGRlIHLDqXNvdWRyZSByYXBpZGVtZW50IGRlcyBwcm9ibMOobWVzIGNvbXBsZXhlcyBkJ29wdGltaXNhdGlvbiBzYW5zIHNlIGZvbmRlciBzdXIgdW5lIG1vZMOpbGlzYXRpb24gZm9ybWVsbGUsIGNlIG4nZXN0IHBhcyBuZWNlc3NhaXJlbWVudCB1bmUgc29sdXRpb24gb3B0aW1hbGUuPC9wPgo=" data-entry-name="SGV1cmlzdGlxdWU=" data-glossary-uri="../glossaire.html#gl-def-heuristique-1" data-number="1">heuristiques</span>, plus lentes, mais qui permettent de s’approcher davantage de la solution optimale. Il existe des stratégies de résolution statistiques, génétiques, neuronales, parmi d’autres. La majorité des problèmes que l’on tente de résoudre aujourd’hui sont difficiles et les solutions de leurs <span class="target" id="gl-algo-7"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithmes</span> ne donnent pas la meilleure solution.</p>
+<h2>5.0. Complexité exponentielle<a class="headerlink" href="#complexite-exponentielle" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il existe des problèmes difficiles à résoudre. Nous allons nous pencher sur un problème qui s’appelle le <strong><span style="color:rgb(89, 51, 209)">problème du sac à dos</span></strong>. Prenons un sac à dos et une multitude d’objets qui ont chacun un poids. Notre objectif est de choisir les objets à mettre dans le sac à dos pour le remplir au maximum, mais sans dépasser sa capacité. Donc la question que l’on se pose est la suivante : quels objets devrions-nous emporter, sans dépasser le poids maximal que le sac à dos peut contenir ?</p>
 <div class="note admonition">
-<p class="admonition-title">Exercice 1 : univers et sac à dos ✏️📒</p>
-<p>L’âge estimé de l’univers est de 14 milliards d’années. Si le calcul d’une combinaison d’objets dans le problème du sac à dos prenait une microseconde, pour quel nombre d’objets est-il possible de trouver une solution exacte sans dépasser l’âge de l’univers ?</p>
+<p class="admonition-title">Exercice 5.0. Le problème du sac à dos</p>
+<p>Comment procéderiez-vous pour résoudre ce problème du sac à dos ? Prenez le temps d’imaginer un <span class="target" id="gl-algo-0"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> qui puisse résoudre ce problème ?</p>
+<p>Appliquer cet algorithme pour 5 objets de poids 1, 3, 5 et 7 kg et un sac de capacité de 10 kg.</p>
+<p>Est-ce que votre algorithme donne toujours la meilleure solution ?</p>
 </div>
 <div class="hint admonition">
-<p class="admonition-title">Solution</p>
+<p class="admonition-title">Solution 5.0. Le problème du sac à dos</p>
 <details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
 <summary class="summary-title card-header">
 <span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
@@ -412,17 +401,121 @@
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">Une micro seconde vaut 10<sup>-6</sup> s. La complexité du problème du sac à dos est de 2<sup>n</sup>.</p>
-<p class="card-text">On recherche un <code class="docutils literal notranslate"><span class="pre">n</span></code> pour lequel 2<sup>n</sup><em>10<sup>-6</sup> = 14 000 000 000 * 3,154</em>10<sup>7</sup> (l’age de l’univers en secondes)</p>
-<p class="card-text">n = log<sub>2</sub>(1.4<em>10<sup>10</sup> / 10<sup>-6</sup>) = log<sub>2</sub>(1.4</em>10<sup>16</sup>) = 88 objets seulement.</p>
+<p class="card-text">La solution est donnée dans le texte qui suit.</p>
+</div>
+</details></div>
+<p>L’algorithme le plus simple pour résoudre ce problème est un <strong><span style="color:rgb(89, 51, 209)">algorithme de force brute</span></strong> (ou un algorithme exhaustif), qui consiste à énumérer toutes les combinaisons d’objets que pourrait contenir le sac à dos, l’une après l’autre, et de calculer le poids total pour chaque combinaison. Après avoir calculé toutes les combinaisons, il suffit de sélectionner la combinaison dont le poids se rapproche le plus de la capacité du sac à dos, sans la dépasser. Vous trouverez ci-dessous la solution pour l’exemple de l’exercice 5.0 (« oui » signifie que l’on met l’objet dans le sac à dos et « non » signifie que l’on ne met pas l’objet dans le sac à dos).</p>
+<div class="table-wrapper"><table style="border: 1px solid; border-collapse: collapse;">
+<thead>
+<tr>
+<th style="border: 1px solid; padding:10px; text-align:center">Combinaison</th><th style="border: 1px solid; padding:10px; text-align:center">1 kg</th><th style="border: 1px solid; padding:10px; text-align:center">3 kg</th><th style="border: 1px solid; padding:10px; text-align:center">5 kg</th><th style="border: 1px solid; padding:10px; text-align:center">7 kg</th><th style="border: 1px solid; padding:10px">Poids total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border: 1px solid; padding:10px">1</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px; text-align:center">0</td>
+</tr><tr>
+<td style="border: 1px solid; padding:10px">2</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td "="" style="border: 1px solid; padding:10px; text-align:center">1</td>
+</tr><tr>
+<td style="border: 1px solid; padding:10px">3</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td "="" style="border: 1px solid; padding:10px; text-align:center">3</td>
+</tr><tr>
+<td style="border: 1px solid; padding:10px">4</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td "="" style="border: 1px solid; padding:10px; text-align:center">4</td>
+</tr><tr>
+<td style="border: 1px solid; padding:10px">5</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td "="" style="border: 1px solid; padding:10px; text-align:center">5</td>
+</tr><tr>
+<td style="border: 1px solid; padding:10px">6</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td "="" style="border: 1px solid; padding:10px; text-align:center">6</td>
+</tr><tr>
+<td style="border: 1px solid; padding:10px">7</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td "="" style="border: 1px solid; padding:10px; text-align:center">8</td>
+</tr><tr>
+<td style="border: 1px solid; padding:10px">8</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td "="" style="border: 1px solid; padding:10px; text-align:center">9</td>
+</tr><tr>
+<td style="border: 1px solid; padding:10px">9</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td "="" style="border: 1px solid; padding:10px; text-align:center">7</td>
+</tr><tr>
+<td style="border: 1px solid; padding:10px">10</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td "="" style="border: 1px solid; padding:10px; text-align:center">8</td>
+</tr><tr>
+<td style="border: 1px solid; padding:10px">11</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td "="" style="border: 1px solid; padding:10px; text-align:center">10</td>
+</tr><tr>
+<td style="border: 1px solid; padding:10px">12</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td "="" style="border: 1px solid; padding:10px; text-align:center">11</td>
+</tr><tr>
+<td style="border: 1px solid; padding:10px">13</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td "="" style="border: 1px solid; padding:10px; text-align:center">12</td>
+</tr><tr>
+<td style="border: 1px solid; padding:10px">14</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td "="" style="border: 1px solid; padding:10px; text-align:center">13</td>
+</tr><tr>
+<td style="border: 1px solid; padding:10px">15</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td "="" style="border: 1px solid; padding:10px; text-align:center">15</td>
+</tr><tr>
+<td style="border: 1px solid; padding:10px">16</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td "="" style="border: 1px solid; padding:10px; text-align:center">16</td>
+</tr>
+</tbody>
+</table></div>
+<br/>
+<p>La meilleure solution se trouve à la 11ème ligne, la capacité du sac à dos (10 kg) est atteinte lorsqu’on y met le deuxième et le quatrième objet.</p>
+<div class="note admonition">
+<p class="admonition-title">Exercice 5.1. Le problème du sac à dos avec 10 objets</p>
+<p>Combien de combinaisons possibles existent pour le problème du sac à dos avec 10 objets ?</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Solution 5.1. Le problème du sac à dos avec 10 objets</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">La solution est donnée dans le texte qui suit.</p>
+</div>
+</details></div>
+<p>Mais, combien y a-t-il de combinaisons possibles si on a 10 objets ? Pour chaque objet, on a deux choix possibles : le mettre dans le sac à dos ou ne pas le mettre dans le sac à dos <em><strong><span style="color:rgb(13, 204, 166)">(to take or not to take, that is the question)</span></strong></em>. Comme ces deux possibilités existent pour chacun des 10 objets, le nombre de combinaisons possibles vaut :</p>
+<p>     2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 = 2<sup>10</sup></p>
+<p>Pour <code class="docutils literal notranslate"><span class="pre">n</span></code> objets, le nombre de solutions possibles est 2<sup>n</sup>. Si on a 2 objets, il y a donc 4 combinaisons différentes d’objets dans le sac à dos (aucun objet, le premier objet, le deuxième objet et les deux objets ensemble). Pour 3 objets, le nombre de combinaisons est 8. Pour 5 objets, nous avons 32 possibilités à explorer. Mais déjà pour 10 objets, ce nombre dépasse les 1000 combinaisons possibles. Pour 100 objets, ce nombre devient prohibitif et vaut 10<sup>30</sup>. Si on doit résoudre ce problème avec 270 objets sous la main, le nombre de combinaisons possibles dépasse le nombre d’atomes dans l’univers, c’est-à-dire 10<sup>80</sup>. Si le calcul du poids d’une combinaison prenait une microseconde, il nous faudrait pour résoudre ce problème bien plus que le temps de l’existence de l’univers, plus de 14 milliards d’années. Ces nombres sont réellement vertigineux. Cela va de soi, nous n’avons pas tout ce temps à disposition…</p>
+<p>L’ordre de complexité de type 2<sup>n</sup> est un ordre de <strong><span style="color:rgb(89, 51, 209)">complexité exponentielle</span></strong>. Cela vaut aussi pour d’autres constantes que 2, par exemple 10<sup>n</sup> ou 1.1<sup>n</sup>. Lorsqu’un algorithme est d’ordre de complexité exponentielle, cela veut dire que le temps nécessaire pour résoudre le problème croît exponentiellement en fonction de la taille des données <code class="docutils literal notranslate"><span class="pre">n</span></code> (voir figure ci-dessous). Les problèmes de complexité exponentielle ne peuvent être résolus dans un temps raisonnable, pour des données à partir d’une certaine taille.</p>
+<figure class="align-default" id="fig-comp-exp">
+<a class="reference internal image-reference" href="../_images/Complexite_exponentielle.png"><img alt="complexité exponentielle" src="../_images/Complexite_exponentielle.png" style="width: 420px;"/></a>
+<figcaption>
+<p><span class="caption-text"><strong>Complexité exponentielle.</strong> Comparaison de l’ordre de complexité exponentielle avec les ordres de complexité vus jusqu’ici. Dans un ordre de complexité exponentielle, le nombre d’instructions élémentaires grandit très rapidement avec la taille des données, et l’algorithme est très lent.</span><a class="headerlink" href="#fig-comp-exp" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+<p>Lorsqu’il est trop difficile de trouver une solution exacte à un problème, nous ne devons pas nous avouer vaincus. Dans ce cas, nous pouvons tout de même rechercher une solution inexacte, mais qui se rapproche autant que possible de la solution optimale. Les algorithmes qui aboutissent à des solutions non optimales ou inexactes, sont appelés des <strong><span style="color:rgb(89, 51, 209)">heuristiques</span></strong>.</p>
+<p>Un algorithme heuristique pour le problème du sac à dos pourrait être l’algorithme suivant : prendre les objets du plus petit au plus grand poids jusqu’à remplir le sac à dos, ce qui nous permettrait de mettre le plus d’objets possible. En suivant cet algorithme heuristique, dans l’exemple de l’exercice 5.0, on prendrait les trois premiers objets et on aurait un sac à dos rempli à 9 kgs au lieu des 10 kg de capacité maximale du sac à dos. Cette solution est suffisamment proche de la meilleure solution, mais elle n’est pas la meilleure solution.</p>
+<p>Une solution heuristique est donc une solution intuitive, qui se base sur une <em><strong><span style="color:rgb(13, 204, 166)">stratégie d’essais et d’erreurs</span></strong></em>, qui en quelque sorte repose sur la chance. Un algorithme heuristique est plus rapide que l’algorithme de force brute qui énumérerait toutes les solutions possibles afin de trouver la meilleure solution, mais on paie le prix de cette efficacité par de la précision. Un algorithme heuristique aboutit à une solution moins précise et moins complète, à une solution sans garantie. Quand un problème est trop complexe, il ne peut être résolu que par des algorithmes heuristiques, aboutissant dans certains cas à des mauvaises solutions.</p>
+<div class="hint admonition">
+<p class="admonition-title">Le saviez-vous ? Que veut dire heuristique ?</p>
+<p>Le mot <strong>heuristique</strong> nous vient du grec ancien, plus précisément du terme <em>heuriskêin</em>, qui veut dire trouver, inventer, découvrir.</p>
+<p>Ce même terme a donné un autre mot bien connu <em>eurêka</em>.</p>
+</div>
+<p>L’algorithme heuristique qu’on vient de voir est en fait un <strong><span style="color:rgb(89, 51, 209)">algorithme glouton</span></strong>, un algorithme qui choisit une solution <em>localement optimale</em> (qui choisit la meilleure solution en apparence à un moment donné) sans se préoccuper de toutes les solutions possibles. On espère ainsi que toutes ces décisions localement optimales mènent vers une très bonne solution. C’est un peu comme si on cherchait à atteindre le plus haut sommet d’une montagne, entourés de brouillard, et qu’on prenait une décision sur le chemin à emprunter uniquement en fonction de ce que l’on peut voir juste autour de nous. On pourrait prendre le chemin le plus pentu en espérant qu’il nous mène à un sommet très haut, mais une fois arrivés en haut d’un sommet, on ne peut savoir si notre sommet est bien le plus haut. On l’espère…</p>
+<p>Il n’y a pas que des <span class="target" id="gl-heuristique-0"></span><span class="glossary-ref" data-definition="PHA+U2UgZGl0IGQndW4gYWxnb3JpdGhtZSBxdWkgcGVybWV0IGRlIHLDqXNvdWRyZSByYXBpZGVtZW50IGRlcyBwcm9ibMOobWVzIGNvbXBsZXhlcyBkJ29wdGltaXNhdGlvbiBzYW5zIHNlIGZvbmRlciBzdXIgdW5lIG1vZMOpbGlzYXRpb24gZm9ybWVsbGUsIGNlIG4nZXN0IHBhcyBuZWNlc3NhaXJlbWVudCB1bmUgc29sdXRpb24gb3B0aW1hbGUuPC9wPgo=" data-entry-name="SGV1cmlzdGlxdWU=" data-glossary-uri="../glossaire.html#gl-def-heuristique-1" data-number="1">heuristiques</span> gloutonnes. Un autre exemple de solution heuristique, très utilisée dans les jeux vidéos, est le calcul de distance entre deux objets. Ce calcul est très important par exemple lorsque l’on souhaite détecter si deux objets sont en collision. Pythagore nous dit que cette distance vaut la racine carrée de la somme de <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code> au carré. Mais ce calcul est difficile, et même si on peut le calculer de manière exacte, il prend beaucoup de temps à calculer s’il y a beaucoup d’objets affichés à l’écran. On préfère ainsi estimer cette distance par un calcul bien plus simple <code class="docutils literal notranslate"><span class="pre">a+b</span></code>, que l’on sait faux, mais qui est suffisamment proche lorsque les objets sont alignés (voir la figure ci-dessous).</p>
+<figure class="align-default" id="heuristique">
+<a class="reference internal image-reference" href="../_images/Distance.png"><img alt="exemple d'heuristique" src="../_images/Distance.png" style="width: 420px;"/></a>
+<figcaption>
+<p><span class="caption-text"><strong>Exemple d’heuristique.</strong> Dans les jeux vidéos, on préfère estimer la distance <code class="docutils literal notranslate"><span class="pre">d</span></code> entre deux objets <code class="docutils literal notranslate"><span class="pre">A</span></code> et <code class="docutils literal notranslate"><span class="pre">B</span></code> par la somme des longueurs des côtés de l’angle droit <code class="docutils literal notranslate"><span class="pre">a+b</span></code>, plutôt que de calculer la racine carrée de la somme des carrés des longueurs des côtés de l’angle droit <code class="docutils literal notranslate"><span class="pre">d</span></code><sup><code class="docutils literal notranslate"><span class="pre">2</span></code></sup> <code class="docutils literal notranslate"><span class="pre">=</span></code> <code class="docutils literal notranslate"><span class="pre">a</span></code><sup><code class="docutils literal notranslate"><span class="pre">2</span></code></sup> <code class="docutils literal notranslate"><span class="pre">+</span></code> <code class="docutils literal notranslate"><span class="pre">b</span></code><sup><code class="docutils literal notranslate"><span class="pre">2</span></code></sup> (théorème de Pythagore). Même si ce calcul est inexact, il est beaucoup plus rapide à calculer quand il y a beaucoup d’objets à afficher à l’écran, et il est suffisemment précis lorsque les deux objets sont alignés.</span><a class="headerlink" href="#heuristique" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+<p>Il existe encore d’autres types d’algorithmes <span class="target" id="gl-heuristique-1"></span><span class="glossary-ref" data-definition="PHA+U2UgZGl0IGQndW4gYWxnb3JpdGhtZSBxdWkgcGVybWV0IGRlIHLDqXNvdWRyZSByYXBpZGVtZW50IGRlcyBwcm9ibMOobWVzIGNvbXBsZXhlcyBkJ29wdGltaXNhdGlvbiBzYW5zIHNlIGZvbmRlciBzdXIgdW5lIG1vZMOpbGlzYXRpb24gZm9ybWVsbGUsIGNlIG4nZXN0IHBhcyBuZWNlc3NhaXJlbWVudCB1bmUgc29sdXRpb24gb3B0aW1hbGUuPC9wPgo=" data-entry-name="SGV1cmlzdGlxdWU=" data-glossary-uri="../glossaire.html#gl-def-heuristique-1" data-number="1">heuristiques</span>, plus lents, mais qui permettent de s’approcher davantage de la solution optimale. Ils utilisent par exemple des stratégies de résolution statistiques, génétiques ou neuronales. L’apprentissage automatique à qui l’on doit les succès récents de l’intelligence artificielle repose sur des algorithmes heuristiques. La majorité des problèmes que l’on tente de résoudre aujourd’hui sont difficiles et leurs algorithmes de résolution ne trouvent pas la meilleure solution.</p>
+<div class="note admonition">
+<p class="admonition-title">Exercice 5.2. L’univers dans un sac à dos </p>
+<p>L’âge estimé de l’univers est de 14 milliards d’années. Si le calcul d’une combinaison d’objets dans le problème du sac à dos prenait une microseconde, pour quel nombre d’objets serait-il possible de trouver une solution exacte sans dépasser l’âge de l’univers ?</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Solution 5.2. L’univers dans un sac à dos </p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Une microseconde vaut 10<sup>-6</sup> s. La complexité du problème du sac à dos est de 2<sup>n</sup>.</p>
+<p class="card-text">On recherche un <code class="docutils literal notranslate"><span class="pre">n</span></code> pour lequel 2<sup>n</sup><em>10<sup>-6</sup> = 14 000 000 000 * 3,154</em>10<sup>7</sup> (l’âge de l’univers en secondes)</p>
+<p class="card-text">n = log<sub>2</sub>(1.4 * 10<sup>10</sup> / 10<sup>-6</sup>) = log<sub>2</sub>(1.4 * 10<sup>16</sup>) = 88 objets seulement.</p>
 </div>
 </details></div>
 <div class="note admonition">
-<p class="admonition-title">Exercice 2 : parcours de tableaux ✏️📒</p>
-<p>Quelle est la complexité d’un algorithme qui doit parcourir un tableau deux fois, pour chacun de ses éléments (au lieu d’une fois comme pour le tri par sélection) ?</p>
+<p class="admonition-title">Exercice 5.3. Parcours du parcours du parcours d’un tableau</p>
+<p>Quelle est la complexité d’un algorithme qui pour chacun de ses éléments doit parcourir le tableau, puis pour chaque combinaison de deux de ses élements doit encore parcourir le tableau ?</p>
 </div>
 <div class="hint admonition">
-<p class="admonition-title">Solution</p>
+<p class="admonition-title">Solution 5.3. Parcours du parcours du parcours d’un tableau</p>
 <details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
 <summary class="summary-title card-header">
 <span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
@@ -431,16 +524,25 @@
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <!-- TODO #21 @edunum-sec2 : Clarification de la consigne car telle que je la comprend, 2 fois un parcours pour chaque élément fais 2 * n * n = O(n^2) -->
-<p class="card-text">Pour chaque élément on doit parcourir le tableau 2 fois, on a donc une complexité de n * n * n = n<sup>3</sup>, ou une complexité cubique.</p>
+<p class="card-text">Pour chaque élément (premier parcours) on doit parcourir le tableau une fois, et pour chacune des combinaisons de deux éléments du tableau, il nous faut parcourir le tableau une troisième fois : on a donc une complexité de n * n * n = n<sup>3</sup>, ou une complexité cubique.</p>
 </div>
 </details></div>
 <div class="attention admonition">
 <p class="admonition-title">Pour aller plus loin</p>
-<p>Voici un problème à un million de dollars, un parmi les sept problèmes mathématiques du prix du millénaire qui rapporteront de l’argent à celui ou celle qui les résoudra.</p>
-<p>On appelle la classe des algorithmes qui sont faciles à résoudre la classe des problèmes P. Ces algorithmes peuvent être résolus en un temps polynomial en fonction de la taille des données n ou log(n<sup>a</sup>).</p>
-<p>Il existe aussi une classe de problèmes difficiles (d’ordre de complexité exponentielle), mais pour lesquels il est facile de vérifier si une solution proposée permet de résoudre le problème. Cette classe de problèmes s’appelle NP ou « non déterministe polynomial ».</p>
-<p>On souhaite savoir si les problèmes NP peuvent être résolus en un temps P, ou en d’autres termes : est-ce que <strong>P = NP</strong> ?</p>
-<p>S’il s’avérait que c’est bien le cas (ce qui est tout de même peu probable), beaucoup de problèmes difficiles à résoudre deviendraient d’un seul coup plus faciles à résoudre, comme le <strong>problème de repliement des protéines</strong> en biologie pour trouver de nouveaux médicaments. Cela pourrait également signifier la fin de la cryptographie telle qu’elle existe actuellement.</p>
+<p>Voici un problème à un million de dollars, un parmi les sept problèmes mathématiques du prix du millénaire qui rapporteront de l’argent à la personne qui les résoudra.</p>
+<p>On appelle la classe des problèmes qui sont faciles à résoudre la classe des problèmes P. Ces algorithmes peuvent être résolus en un temps polynomial en fonction de la taille des données n, ou O(n<sup>a</sup>).</p>
+<p>Une autre classe de problèmes sont les problèmes difficiles à résoudre qui sont d’ordre de complexité exponentielle. Lorsqu’on arrive à vérifier rapidement (en temps polynomial) si une solution proposée permet de résoudre le problème, il s’agit d’une classe de problèmes appellée NP ou « non déterministe polynomial ».</p>
+<p>On souhaite savoir si les problèmes NP peuvent être résolus en un temps P ou non, ou en d’autres termes : est-ce que <strong>P = NP</strong> ?</p>
+<p>S’il s’avérait que c’est bien le cas (ce qui est tout de même peu probable), beaucoup de problèmes difficiles à résoudre deviendraient d’un seul coup plus faciles à résoudre. Un des ces problèmes est le <strong>problème de repliement des protéines</strong> en biologie qui cherche de nouveaux médicaments. Cela pourrait également signifier la fin de la cryptographie telle qu’elle existe actuellement.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Ai-je compris ?</p>
+<ol class="simple">
+<li><p>Je sais reconnaître un algorithme de force brute.</p></li>
+<li><p>Je sais reconnaître un algorithme heuristique.</p></li>
+<li><p>Je sais reconnaître un algorithme glouton.</p></li>
+<li><p>Je comprends pourquoi un algorithme de complexité exponentielle est lent.</p></li>
+</ol>
 </div>
 </section>
 </section>
@@ -455,7 +557,7 @@
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><span class="section-number">6. </span>Récursivité [en option]</div>
+                <div class="title">4. Récursivité [en option]</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -466,18 +568,13 @@
                   <span>Previous</span>
                 </div>
                 
-                <div class="title"><span class="section-number">4. </span>Algorithmes de tri</div>
+                <div class="title">Algorithmes de tri</div>
                 
               </div>
             </a>
         </div>
 
         <div class="related-information">
-              Copyright &#169; CC-BY-NC |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
             <a class="muted-link" href="../_sources/algo2/heuristiques.md.txt"
                rel="nofollow">
               Montrer le code source
@@ -498,8 +595,8 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">5. Solutions heuristiques</a><ul>
-<li><a class="reference internal" href="#complexite-exponentielle">Complexité exponentielle</a></li>
+<li><a class="reference internal" href="#">5. Algorithmes heuristiques</a><ul>
+<li><a class="reference internal" href="#complexite-exponentielle">5.0. Complexité exponentielle</a></li>
 </ul>
 </li>
 </ul>

@@ -70,6 +70,8 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 html_theme = 'furo'
+html_show_copyright = False
+html_show_sphinx = False
 html_favicon = '../static/modulo-icon.ico'
 html_title = 'Enseigner'
 html_theme_options = {

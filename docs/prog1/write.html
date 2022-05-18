@@ -290,13 +290,13 @@
 <p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../algo2/index.html">Algorithmique II</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/complexite.html">2. Complexité des algorithmes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/recherche.html">3. Algorithmes de recherche</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/tris.html">4. Algorithmes de tri</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/heuristiques.html">5. Solutions heuristiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html">6. Récursivité [en option]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/conclusion.html">7. Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/principes.html">Terminaison et complexité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recherche.html">Algorithmes de recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/tris.html">Algorithmes de tri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/heuristiques.html">5. Algorithmes heuristiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html">4. Récursivité [en option]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/conclusion.html">6. Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../prog2/index.html">Programmation II</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -407,6 +407,12 @@ La valeur par défaut est <code class="docutils literal notranslate"><span class
 <p class="admonition-title">Exercice</p>
 <p>Essayez de trouvez la taille maxiumum de texte que vous pouvez écrire.</p>
 </div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmxlZnQoOTApCmZvcndhcmQoMTIwKQoKd3JpdGUoOCwgZm9udD0oJ0FyaWFsJywgOCkpCgpiYWNrd2FyZCgxOCkKd3JpdGUoMTIsIGZvbnQ9KCdBcmlhbCcsIDEyKSkKCmJhY2t3YXJkKDI0KQp3cml0ZSgxOCwgZm9udD0oJ0FyaWFsJywgMTgpKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>En utilisant une variable <code class="docutils literal notranslate"><span class="pre">taille</span></code> nous pouvons aussi parcourir un tuple de nombres. A l’intérieur de la boucle nous utilisons cette variable <code class="docutils literal notranslate"><span class="pre">taille</span></code> trois fois :</p>
+<ul class="simple">
+<li><p>pour calculer la distance entre les lignes (dans <code class="docutils literal notranslate"><span class="pre">backward()</span></code>)</p></li>
+<li><p>pour l’afficher (dans <code class="docutils literal notranslate"><span class="pre">write()</span></code>)</p></li>
+<li><p>pour choisir la taille (dans l’option <code class="docutils literal notranslate"><span class="pre">font=()</span></code>)</p></li>
+</ul>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmxlZnQoOTApCmZvcndhcmQoMTIwKQpmb3IgdGFpbGxlIGluICg4LCAxMiwgMTgsIDI0LCAzNiwgNjQpOgogICAgYmFja3dhcmQoMS41ICogdGFpbGxlKQogICAgd3JpdGUodGFpbGxlLCBmb250PSgnQXJpYWwnLCB0YWlsbGUpKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="police">
 <h2>Police<a class="headerlink" href="#police" title="Lien permanent vers ce titre">¶</a></h2>
@@ -420,8 +426,13 @@ La valeur par défaut est <code class="docutils literal notranslate"><span class
 </ul>
 <div class="admonition-exercice admonition">
 <p class="admonition-title">Exercice</p>
-<p>Ecrivez deux lignes de texte en style manuscrit utilsant la police Zapfino.</p>
+<p>Ecrivez un poème de 3-4 lignes en style manuscrit utilsant la police Zapfino.</p>
 </div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmxlZnQoOTApCmZvcndhcmQoMTAwKQoKd3JpdGUoJ0FyaWFsJywgZm9udD0oJ0FyaWFsJywgMjQpKQpiYWNrKDYwKQoKd3JpdGUoJ1RpbWVzJywgZm9udD0oJ1RpbWVzJywgMjQpKQpiYWNrKDYwKQoKd3JpdGUoJ0NvdXJpZXInLCBmb250PSgnQ291cmllcicsIDI0KSkKYmFjayg2MCkKCndyaXRlKCdEaWRvdCcsIGZvbnQ9KCdEaWRvdCcsIDI0KSkKYmFjayg2MCkKCndyaXRlKCdaYXBmaW5vJywgZm9udD0oJ1phcGZpbm8nLCAyNCkp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>En utilisant une variable <code class="docutils literal notranslate"><span class="pre">police</span></code> nous pouvons aussi parcourir un tuple de chaînes de caractères qui représentent des polices. A l’intérieur de la boucle nous utilisons cette variable <code class="docutils literal notranslate"><span class="pre">police</span></code> deux fois :</p>
+<ul class="simple">
+<li><p>pour l’afficher (dans <code class="docutils literal notranslate"><span class="pre">write()</span></code>)</p></li>
+<li><p>pour choisir la police (dans l’option <code class="docutils literal notranslate"><span class="pre">font=()</span></code>)</p></li>
+</ul>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmxlZnQoOTApCmZvcndhcmQoMTUwKQpmb3IgcG9saWNlIGluICgnQXJpYWwnLCAnVGltZXMnLCAnQ291cmllcicsICdEaWRvdCcsICdaYXBmaW5vJyk6CiAgICBiYWNrKDYwKQogICAgd3JpdGUocG9saWNlLCBmb250PShwb2xpY2UsIDI0KSk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="style">
 <h2>Style<a class="headerlink" href="#style" title="Lien permanent vers ce titre">¶</a></h2>
@@ -430,6 +441,15 @@ La valeur par défaut est <code class="docutils literal notranslate"><span class
 <li><p>gras (<code class="docutils literal notranslate"><span class="pre">bold</span></code>)</p></li>
 <li><p>cursive (<code class="docutils literal notranslate"><span class="pre">italic</span></code>)</p></li>
 <li><p>gras et cursive (<code class="docutils literal notranslate"><span class="pre">bold</span> <span class="pre">italic</span></code>)</p></li>
+</ul>
+<div class="admonition-exercice admonition">
+<p class="admonition-title">Exercice</p>
+<p>Ajoutez un quatrième texte avec le style gras et cursive.</p>
+</div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmxlZnQoOTApCmZvcndhcmQoMTAwKQoKd3JpdGUoJ25vcm1hbCcsIGZvbnQ9KCdBcmlhbCcsIDQ4LCAnbm9ybWFsJykpCmJhY2t3YXJkKDkwKQoKd3JpdGUoJ2l0YWxpYycsIGZvbnQ9KCdBcmlhbCcsIDQ4LCAnaXRhbGljJykpCmJhY2t3YXJkKDkwKQoKd3JpdGUoJ2JvbGQnLCBmb250PSgnQXJpYWwnLCA0OCwgJ2JvbGQnKSk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>En utilisant une variable <code class="docutils literal notranslate"><span class="pre">style</span></code> nous pouvons aussi parcourir un tuple de chaînes de caractères qui représentent les 4 styles possibles. A l’intérieur de la boucle nous utilisons cette variable <code class="docutils literal notranslate"><span class="pre">style</span></code> deux fois :</p>
+<ul class="simple">
+<li><p>pour l’afficher (dans <code class="docutils literal notranslate"><span class="pre">write()</span></code>)</p></li>
+<li><p>pour choisir le style (dans l’option <code class="docutils literal notranslate"><span class="pre">font=()</span></code>)</p></li>
 </ul>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmxlZnQoOTApCmZvcndhcmQoMTgwKQpmb3Igc3R5bGUgaW4gKCdub3JtYWwnLCAnaXRhbGljJywgJ2JvbGQnLCAnYm9sZCBpdGFsaWMnKToKICAgIGJhY2t3YXJkKDkwKQogICAgd3JpdGUoc3R5bGUsIGZvbnQ9KCdBcmlhbCcsIDQ4LCBzdHlsZSkp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="alignement">
@@ -537,11 +557,6 @@ Le jeu a été conçu par l’architecte new-yorkais Alfred Mosher Butts pendant
         </div>
 
         <div class="related-information">
-              Copyright &#169; CC-BY-NC |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
             <a class="muted-link" href="../_sources/prog1/write.md.txt"
                rel="nofollow">
               Montrer le code source

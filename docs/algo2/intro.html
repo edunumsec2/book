@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="2. Complexité des algorithmes" href="complexite.html" /><link rel="prev" title="Algorithmique II" href="index.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Terminaison et complexité" href="principes.html" /><link rel="prev" title="Algorithmique II" href="index.html" />
 
     <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>1. Introduction - Apprendre</title>
+        <title>Introduction - Apprendre</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -290,13 +290,13 @@
 <p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Algorithmique II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="complexite.html">2. Complexité des algorithmes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="recherche.html">3. Algorithmes de recherche</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tris.html">4. Algorithmes de tri</a></li>
-<li class="toctree-l2"><a class="reference internal" href="heuristiques.html">5. Solutions heuristiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="recursivite.html">6. Récursivité [en option]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conclusion.html">7. Conclusion</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principes.html">Terminaison et complexité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recherche.html">Algorithmes de recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tris.html">Algorithmes de tri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="heuristiques.html">5. Algorithmes heuristiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recursivite.html">4. Récursivité [en option]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusion.html">6. Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../prog2/index.html">Programmation II</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -375,7 +375,7 @@
         <article role="main">
           <p><span style="color:rgb(13, 204, 166);font-weight:600; font-size:1.2em">Version du 13 octobre 2021</span></p>
 <section class="tex2jax_ignore mathjax_ignore" id="introduction">
-<h1><span class="section-number">1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
 <section id="quoi">
 <h2>Quoi ?<a class="headerlink" href="#quoi" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Vous avez déjà rencontré plusieurs algorithmes pour arriver jusqu’ici. Encore plus fort, vous avez rencontré plusieurs algorithmes pour résoudre un même problème, ce qui nous met face à un dilemme : quelle algorithme choisir ? Et y a-t-il une solution à tout problème ?</p>
@@ -408,12 +408,12 @@ width: 600px
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="complexite.html">
+          <a class="next-page" href="principes.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><span class="section-number">2. </span>Complexité des algorithmes</div>
+                <div class="title">Terminaison et complexité</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -431,11 +431,6 @@ width: 600px
         </div>
 
         <div class="related-information">
-              Copyright &#169; CC-BY-NC |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
             <a class="muted-link" href="../_sources/algo2/intro.md.txt"
                rel="nofollow">
               Montrer le code source
@@ -456,7 +451,7 @@ width: 600px
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">1. Introduction</a><ul>
+<li><a class="reference internal" href="#">Introduction</a><ul>
 <li><a class="reference internal" href="#quoi">Quoi ?</a></li>
 <li><a class="reference internal" href="#pourquoi">Pourquoi ?</a></li>
 <li><a class="reference internal" href="#comment">Comment ?</a></li>

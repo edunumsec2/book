@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="7. Conclusion" href="conclusion.html" /><link rel="prev" title="5. Solutions heuristiques" href="heuristiques.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="6. Conclusion" href="conclusion.html" /><link rel="prev" title="5. Algorithmes heuristiques" href="heuristiques.html" />
 
     <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>6. Récursivité [en option] - Apprendre</title>
+        <title>4. Récursivité [en option] - Apprendre</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -290,13 +290,13 @@
 <p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Algorithmique II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="complexite.html">2. Complexité des algorithmes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="recherche.html">3. Algorithmes de recherche</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tris.html">4. Algorithmes de tri</a></li>
-<li class="toctree-l2"><a class="reference internal" href="heuristiques.html">5. Solutions heuristiques</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">6. Récursivité [en option]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conclusion.html">7. Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principes.html">Terminaison et complexité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recherche.html">Algorithmes de recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tris.html">Algorithmes de tri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="heuristiques.html">5. Algorithmes heuristiques</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">4. Récursivité [en option]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusion.html">6. Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../prog2/index.html">Programmation II</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -374,10 +374,10 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="recursivite-en-option">
-<h1><span class="section-number">6. </span>Récursivité [en option]<a class="headerlink" href="#recursivite-en-option" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>4. Récursivité [en option]<a class="headerlink" href="#recursivite-en-option" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Ce chapitre est prévu en tant que chapitre optionnel. Il présente un autre algorithme de tri célèbre, le <strong><span style="color:rgb(89, 51, 209)">Tri par fusion</span></strong>. Cet algorithme utilise la <strong><span style="color:rgb(89, 51, 209)">récursivité</span></strong>, une stratégie qui consiste en ce qu’un algorithme s’invoque lui-même. La récursivité, c’est un peu comme si on essayait de définir le terme « définition » en disant c’est une phrase qui nous donne la définition de quelque chose. C’est certes circonvolu que de vouloir utiliser dans une définition <em>la chose-même</em> que l’on est en train de définir, mais si on respecte quelques conditions, « ça fonctionne » !</p>
 <section id="tri-par-fusion">
-<h2>Tri par fusion<a class="headerlink" href="#tri-par-fusion" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>4.0. Tri par fusion<a class="headerlink" href="#tri-par-fusion" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Un autre <span class="target" id="gl-algo-0"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> de tri célèbre, inventé par John von Neumann en 1945, est le <strong><span style="color:rgb(89, 51, 209)">Tri par fusion</span></strong>. L’algorithme se base sur l’idée qu’il est difficile de trier un tableau avec beaucoup d’éléments, mais qu’il est très facile de trier un tableau avec juste deux éléments. Il suffit ensuite de fusionner les plus petits tableaux déjà triés.</p>
 <p><span id="diviser"></span></p>
 <p>L’algorithme commence par une phase de <em><strong><span style="color:rgb(13, 204, 166)">division</span></strong></em> : on divise le tableau en deux, puis on divise <em>à nouveau</em> les tableaux ainsi obtenus en deux, et ceci jusqu’à arriver à des tableaux avec un seul élément (voir la Figure ci-dessous). Comme pour la recherche binaire, le nombre d’étapes nécessaires pour arriver à des tableaux de 1 élément, en divisant toujours par deux, est <code class="docutils literal notranslate"><span class="pre">log(n)</span></code>.</p>
@@ -419,9 +419,10 @@
 <p class="admonition-title">Pour aller plus loin</p>
 <p>Même si le tri rapide et le tri fusion ont la même complexité temporelle, c’est-à-dire qu’ils prennent un temps comparable pour trier des données, le tri rapide prend beaucoup moins de place en mémoire. On dit qu’il a une plus petite <strong><span style="color:rgb(89, 51, 209)">« complexité spatiale »</span></strong>.</p>
 </div>
+<p><span id="recursivite"></span></p>
 </section>
 <section id="focus-sur-la-recursivite">
-<h2>Focus sur la récursivité<a class="headerlink" href="#focus-sur-la-recursivite" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>4.1 Focus sur la récursivité<a class="headerlink" href="#focus-sur-la-recursivite" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous allons maintenant programmer l’<span class="target" id="gl-algo-1"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> du Tri par fusion. Pour rappel, la première phase de l’<span class="target" id="gl-algo-2"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> divise <em>continuellement</em> le tableau par deux, comme illustré dans la première <a href="#diviser">figure</a> ci-dessus. Voici le code qui permet de diviser un tableau en deux une seule fois :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tri par fusion </span>
 <span class="k">def</span> <span class="nf">tri_par_fusion</span><span class="p">(</span><span class="n">elements</span><span class="p">):</span>
@@ -438,8 +439,8 @@
 	<span class="n">elements_droite</span> <span class="o">=</span> <span class="n">elements</span><span class="p">[</span><span class="n">milieu</span><span class="p">:]</span>
 </pre></div>
 </div>
-<p>La division utilisée pour déterminer le milieu du tableau est une division entière <code class="docutils literal notranslate"><span class="pre">//</span></code> au lieu de <code class="docutils literal notranslate"><span class="pre">/</span></code>. En effet, on souhaite opbtenir un résultat entier et non un nombre à virgule, car les indices pour accéder aux éléments du tableau doivent être des entiers. Par exemple, si le tableau contient 5 éléments, cela n’aurait pas de sens de prendre les premiers 2.5 éléments, et 5//2 nous retournerait 2.</p>
-<p>Ce qui suit est très intéressant. Dans l’étape d’après, on souhaite faire exactement la même chose pour les nouveaux tableaux <code class="docutils literal notranslate"><span class="pre">elements_gauche</span></code> (équivalent à <code class="docutils literal notranslate"><span class="pre">elements[:milieu]</span></code>) et <code class="docutils literal notranslate"><span class="pre">elements_droite</span></code> (équivalent à <code class="docutils literal notranslate"><span class="pre">elements[milieu:]</span></code>), c’est-à dire que l’on souhaite à nouveau les diviser en deux, comme sur la deuxième ligne dans la première <a href="#diviser">figure</a>  ci-dessus. On va donc appeller la fonction <code class="docutils literal notranslate"><span class="pre">tri_par_fusion</span></code> sur les deux moitiés de tableaux :</p>
+<p>La division utilisée pour déterminer le milieu du tableau est une division entière <code class="docutils literal notranslate"><span class="pre">//</span></code> au lieu de <code class="docutils literal notranslate"><span class="pre">/</span></code>. En effet, on souhaite obtenir un résultat entier et non un nombre à virgule, car les indices pour accéder aux éléments du tableau doivent être des entiers. Par exemple, si le tableau contient 5 éléments, cela n’aurait pas de sens de prendre les premiers 2.5 éléments, et 5//2 nous retournerait 2.</p>
+<p>Ce qui suit est très intéressant. Dans l’étape d’après, on souhaite faire exactement la même chose pour les nouveaux tableaux <code class="docutils literal notranslate"><span class="pre">elements_gauche</span></code> (équivalent à <code class="docutils literal notranslate"><span class="pre">elements[:milieu]</span></code>) et <code class="docutils literal notranslate"><span class="pre">elements_droite</span></code> (équivalent à <code class="docutils literal notranslate"><span class="pre">elements[milieu:]</span></code>), c’est-à dire que l’on souhaite à nouveau les diviser en deux, comme sur la deuxième ligne dans la première <a href="#diviser">figure</a>  ci-dessus. On va donc appeler la fonction <code class="docutils literal notranslate"><span class="pre">tri_par_fusion</span></code> sur les deux moitiés de tableaux :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tri par fusion</span>
 <span class="k">def</span> <span class="nf">tri_par_fusion</span><span class="p">(</span><span class="n">elements</span><span class="p">):</span>
 
@@ -455,7 +456,7 @@
 	<span class="n">elements_droite</span> <span class="o">=</span> <span class="n">tri_par_fusion</span><span class="p">(</span><span class="n">elements</span><span class="p">[</span><span class="n">milieu</span><span class="p">:])</span>
 </pre></div>
 </div>
-<p>Regardez bien ce qui se passe. Nous avons fait appel à la même <span class="target" id="gl-fonction-0"></span><span class="glossary-ref" data-definition="PHA+U291cy1wcm9ncmFtbWUgcG91dmFudCDDqnRyZSBhcHBlbMOpIMOgIGzigJlpbnTDqXJpZXVyIGTigJl1biBwcm9ncmFtbWUgZXQgcG91dmFudCBhdm91ciBkZXMgZW50csOpZXMgZXQgZGVzIHNvcnRpZXMuPC9wPgo=" data-entry-name="Rm9uY3Rpb24=" data-glossary-uri="../glossaire.html#gl-def-fonction-1" data-number="1">fonction</span> <code class="docutils literal notranslate"><span class="pre">tri_par_fusion</span></code> que l’on est en train de définir ! Pour l’instant cette fonction ne fait que diviser le tableau <code class="docutils literal notranslate"><span class="pre">elements</span></code> en deux, elle va donc diviser le tableau reçu en entrée en deux. Au début le tableau en entrée sera le tableau entier, mais ensuite il s’agira des deux moitiés du tableau, puis des moitiés de la moitié et ainsi de suite. La fonction <code class="docutils literal notranslate"><span class="pre">tri_par_fusion</span></code> appelle la fonction <code class="docutils literal notranslate"><span class="pre">tri_par_fusion</span></code> (elle s’appelle donc elle-même), qui va à nouveau s’appeller et ainsi de suite…</p>
+<p>Regardez bien ce qui se passe. Nous avons fait appel à la même <span class="target" id="gl-fonction-0"></span><span class="glossary-ref" data-definition="PHA+U291cy1wcm9ncmFtbWUgcG91dmFudCDDqnRyZSBhcHBlbMOpIMOgIGzigJlpbnTDqXJpZXVyIGTigJl1biBwcm9ncmFtbWUgZXQgcG91dmFudCBhdm91ciBkZXMgZW50csOpZXMgZXQgZGVzIHNvcnRpZXMuPC9wPgo=" data-entry-name="Rm9uY3Rpb24=" data-glossary-uri="../glossaire.html#gl-def-fonction-1" data-number="1">fonction</span> <code class="docutils literal notranslate"><span class="pre">tri_par_fusion</span></code> que l’on est en train de définir ! Pour l’instant cette fonction ne fait que diviser le tableau <code class="docutils literal notranslate"><span class="pre">elements</span></code> en deux, elle va donc diviser le tableau reçu en entrée en deux. Au début le tableau en entrée sera le tableau entier, mais ensuite il s’agira des deux moitiés du tableau, puis des moitiés de la moitié et ainsi de suite. La fonction <code class="docutils literal notranslate"><span class="pre">tri_par_fusion</span></code> appelle la fonction <code class="docutils literal notranslate"><span class="pre">tri_par_fusion</span></code> (elle s’appelle donc elle-même), qui va à nouveau s’appeler et ainsi de suite…</p>
 <p>Si on laisse le programme tel quel, on est face à un problème. La fonction <code class="docutils literal notranslate"><span class="pre">tri_par_fusion</span></code> continue de s’appeler elle-même et ce processus ne s’arrête jamais. En réalité, il faut arrêter de diviser lorsque les tableaux obtenus ont au moins un élément ou lorsqu’ils sont vides, car dans ces cas on ne peut plus les diviser en deux. On rajoute donc cette <strong><span style="color:rgb(89, 51, 209)">condition d’arrêt</span></strong> de la récursion :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tri par fusion</span>
 <span class="k">def</span> <span class="nf">tri_par_fusion</span><span class="p">(</span><span class="n">elements</span><span class="p">):</span>
@@ -593,7 +594,7 @@
 <p>Ces deux <span class="target" id="gl-fonction-2"></span><span class="glossary-ref" data-definition="PHA+U291cy1wcm9ncmFtbWUgcG91dmFudCDDqnRyZSBhcHBlbMOpIMOgIGzigJlpbnTDqXJpZXVyIGTigJl1biBwcm9ncmFtbWUgZXQgcG91dmFudCBhdm91ciBkZXMgZW50csOpZXMgZXQgZGVzIHNvcnRpZXMuPC9wPgo=" data-entry-name="Rm9uY3Rpb24=" data-glossary-uri="../glossaire.html#gl-def-fonction-1" data-number="1">fonctions</span> ensemble implémentent l’<span class="target" id="gl-algo-3"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> du Tri par fusion de manière <span class="target" id="gl-recursivite-0"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="UsOpY3Vyc2l2aXTDqQ==" data-glossary-uri="../glossaire.html#gl-def-recursivite-1" data-number="1">récursive</span>. La <span class="target" id="gl-recursivite-1"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="UsOpY3Vyc2l2aXTDqQ==" data-glossary-uri="../glossaire.html#gl-def-recursivite-1" data-number="1">récursivité</span> est un concept difficile à appréhender. Le mieux est d’essayer de coder différents <span class="target" id="gl-algo-4"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithmes</span> <span class="target" id="gl-recursivite-2"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="UsOpY3Vyc2l2aXTDqQ==" data-glossary-uri="../glossaire.html#gl-def-recursivite-1" data-number="1">récursifs</span> et d’afficher ce qui se passe au fur et à mesure. Voici le programme appliqué sur l’exemple de la figure :</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBQaGFzZSBkZSBmdXNpb24gZHUgVHJpIHBhciBmdXNpb24KZGVmIGZ1c2lvbihlbGVtZW50c19nYXVjaGUsIGVsZW1lbnRzX2Ryb2l0ZSk6CgoJIyBjb25kaXRpb25zIGTigJlhcnLDqnQgZGUgbGEgcsOpY3Vyc2l2aXTDqQoJaWYgZWxlbWVudHNfZ2F1Y2hlID09IFtdOgoJCXByaW50KCJcbjQuIFRhYmxlYXUgZ2F1Y2hlIHZpZGUgOiIsIGVsZW1lbnRzX2Ryb2l0ZSkKCQlyZXR1cm4oZWxlbWVudHNfZHJvaXRlKQoJaWYgZWxlbWVudHNfZHJvaXRlID09IFtdOgoJCXByaW50KCJcbjUuIFRhYmxlYXUgZHJvaXRlIHZpZGUgOiIsIGVsZW1lbnRzX2Ryb2l0ZSkKCQlyZXR1cm4oZWxlbWVudHNfZ2F1Y2hlKQoJCgkjIHRyb3V2ZSBsZSBwbHVzIHBldGl0IHByZW1pZXIgw6lsw6ltZW50IGRlcyBkZXV4IGxpc3RlcwoJaWYgZWxlbWVudHNfZ2F1Y2hlWzBdIDwgZWxlbWVudHNfZHJvaXRlWzBdOgoKCQkjIGFwcGVsbGUgZnVzaW9uIHLDqWN1cnNpdmVtZW50IGF2ZWMgbGUgcmVzdGUgZGVzIGxpc3RlcwoJCWVsZW1lbnRzX3Jlc3RlID0gZnVzaW9uKGVsZW1lbnRzX2dhdWNoZVsxOl0sIGVsZW1lbnRzX2Ryb2l0ZSkgCgkJCgkJIyBjcsOpZSB1bmUgbGlzdGUgZnVzaW9ubsOpZSBhdmVjIGxlIHLDqXN1bHRhdAoJCWVsZW1lbnRzX2Z1c2lvbiA9IFtlbGVtZW50c19nYXVjaGVbMF1dICsgZWxlbWVudHNfcmVzdGUKCgkJIyBhZmZpY2hlIGNlIHF1aSBzZSBwYXNzZQoJCXByaW50KCJcbjYuIFJldG91ciBmdXNpb24gOiIsIFtlbGVtZW50c19nYXVjaGVbMF1dLCAnKycsIGVsZW1lbnRzX3Jlc3RlKQoJCQoJZWxzZToKCQkKCQkjIGFwcGVsbGUgZnVzaW9uIHLDqWN1cnNpdmVtZW50IGF2ZWMgbGUgcmVzdGUgZGVzIGxpc3RlcwoJCWVsZW1lbnRzX3Jlc3RlID0gZnVzaW9uKGVsZW1lbnRzX2dhdWNoZSwgZWxlbWVudHNfZHJvaXRlWzE6XSkgCgkJCgkJIyBjcsOpZSB1bmUgbGlzdGUgZnVzaW9ubsOpZSBhdmVjIGxlIHLDqXN1bHRhdAoJCWVsZW1lbnRzX2Z1c2lvbiA9IFtlbGVtZW50c19kcm9pdGVbMF1dICsgZWxlbWVudHNfcmVzdGUKCgkJIyBhZmZpY2hlIGNlIHF1aSBzZSBwYXNzZQoJCXByaW50KCJcbjcuIFJldG91ciBmdXNpb24gOiIsIFtlbGVtZW50c19kcm9pdGVbMF1dLCAnKycsIGVsZW1lbnRzX3Jlc3RlKQoKCSMgcmV0b3VybmVyIGxlIHLDqXN1bHRhdAoJcmV0dXJuKGVsZW1lbnRzX2Z1c2lvbikKCgoKIyBUcmkgcGFyIGZ1c2lvbiA6IHBoYXNlIGRlIGRpdmlzaW9uCmRlZiBkaXZpc2lvbihlbGVtZW50cywgbGlnbmUsIHNpZGU9MCk6CgoJIyBub3VzIGRpdCBvw7kgb24gZW4gZXN0CglwcmludCgiXG4xLiBBcHBlbCBkZSBsYSBmb25jdGlvbiBkaXZpc2lvbiBhdmVjICIsIHN0cihlbGVtZW50cyksICJsaWduZSIsIGxpZ25lLCAiZGVwdWlzIiwgc2lkZSkKCgkjIGNvcnJlc3BvbmQgw6AgbGEgbGlnbmUgc3VyIGxhIGZpZ3VyZSBkaXZpc2lvbiBkdSB0cmkgcGFyIGZ1c2lvbgoJbGlnbmUgPSBsaWduZSArIDEKCgkjIGNvbmRpdGlvbiBkJ2FycsOqdCBsYSByw6ljdXJzaW9uCglpZiBsZW4oZWxlbWVudHMpIDw9IDE6CgkJcmV0dXJuKGVsZW1lbnRzKQoKCSMgZMOpdGVybWluZSBsJ2luZGljZSBhdSBtaWxpZXUgZHUgdGFibGVhdSAoZGl2aXNpb24gZW50acOocmUpCgltaWxpZXUgPSBsZW4oZWxlbWVudHMpLy8yCQoKCSMgcHJlbmQgdG91cyBsZXMgw6lsw6ltZW50cyBkZXB1aXMgbGUgZMOpYnV0LCBqdXNxdSfDoCAoZXQgc2FucykgbWlsaWV1CgllbGVtZW50c19nYXVjaGUgPSBkaXZpc2lvbihlbGVtZW50c1s6bWlsaWV1XSwgbGlnbmUsICdnYXVjaGUnKQoJaWYgZWxlbWVudHNfZ2F1Y2hlIDoKCQlwcmludCgnXG4yLiBFbMOpbWVudHMgw6AgZ2F1Y2hlIDogJywgZWxlbWVudHNfZ2F1Y2hlLCAnZGUgOicsIGVsZW1lbnRzLCAibGlnbmUiLCBsaWduZSkKCgkjIHByZW5kIHRvdXMgbGVzIMOpbMOpbWVudHMgZGVwdWlzIGxlIG1pbGlldSAoeSBjb21wcmlzKSwganVzcXUnw6AgbGEgZmluCgllbGVtZW50c19kcm9pdGUgPSBkaXZpc2lvbihlbGVtZW50c1ttaWxpZXU6XSwgbGlnbmUsICdkcm9pdGUnKQoJaWYgZWxlbWVudHNfZHJvaXRlIDoKCQlwcmludCgnXG4zLiBFbMOpbWVudHMgw6AgZHJvaXRlIDogJywgZWxlbWVudHNfZHJvaXRlLCAnZGUgOicsIGVsZW1lbnRzLCAibGlnbmUiLCBsaWduZSkKCgkjwqBmdXNpb25uZSBsZXMgw6lsw6ltZW50cyB1biBwYXIgdW4sIHB1aXMgZGV1eCBwYXIgZGV1eCwgZXRjLi4KCXJlc3VsdGF0ID0gZnVzaW9uKGVsZW1lbnRzX2dhdWNoZSwgZWxlbWVudHNfZHJvaXRlKQoKCSMgcmV0b3VybmVyIGxlIHLDqXN1bHRhdAoJcmV0dXJuKHJlc3VsdGF0KQoKcmVzdWx0YXQgPSBkaXZpc2lvbihbMyw1LDEsMiw2LDRdLCAwKQoKcHJpbnQoIlxuVm9pY2kgbGUgdGFibGVhdSB0cmnDqSA6ICIsIHJlc3VsdGF0KQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="exercices-supplementaires">
-<h2>Exercices supplémentaires<a class="headerlink" href="#exercices-supplementaires" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>4.2. Exercices supplémentaires<a class="headerlink" href="#exercices-supplementaires" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="note admonition">
 <p class="admonition-title">Exercice 4.1 Fractale 🔌</p>
 <p>Une fractale est un objet géométrique, dont la définition récursive est naturelle. Essayez le code suivant pour différentes valeurs de <code class="docutils literal notranslate"><span class="pre">n</span></code> (augmenter à chaque fois de 1).</p>
@@ -691,7 +692,7 @@ print(tri_par_fusion(elements))
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><span class="section-number">7. </span>Conclusion</div>
+                <div class="title">6. Conclusion</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -702,18 +703,13 @@ print(tri_par_fusion(elements))
                   <span>Previous</span>
                 </div>
                 
-                <div class="title"><span class="section-number">5. </span>Solutions heuristiques</div>
+                <div class="title">5. Algorithmes heuristiques</div>
                 
               </div>
             </a>
         </div>
 
         <div class="related-information">
-              Copyright &#169; CC-BY-NC |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
             <a class="muted-link" href="../_sources/algo2/recursivite.md.txt"
                rel="nofollow">
               Montrer le code source
@@ -734,10 +730,10 @@ print(tri_par_fusion(elements))
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">6. Récursivité [en option]</a><ul>
-<li><a class="reference internal" href="#tri-par-fusion">Tri par fusion</a></li>
-<li><a class="reference internal" href="#focus-sur-la-recursivite">Focus sur la récursivité</a></li>
-<li><a class="reference internal" href="#exercices-supplementaires">Exercices supplémentaires</a></li>
+<li><a class="reference internal" href="#">4. Récursivité [en option]</a><ul>
+<li><a class="reference internal" href="#tri-par-fusion">4.0. Tri par fusion</a></li>
+<li><a class="reference internal" href="#focus-sur-la-recursivite">4.1 Focus sur la récursivité</a></li>
+<li><a class="reference internal" href="#exercices-supplementaires">4.2. Exercices supplémentaires</a></li>
 </ul>
 </li>
 </ul>

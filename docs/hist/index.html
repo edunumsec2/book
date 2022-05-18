@@ -196,7 +196,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -290,13 +290,13 @@
 <p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../algo2/index.html">Algorithmique II</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/complexite.html">2. Complexité des algorithmes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/recherche.html">3. Algorithmes de recherche</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/tris.html">4. Algorithmes de tri</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/heuristiques.html">5. Solutions heuristiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html">6. Récursivité [en option]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algo2/conclusion.html">7. Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/principes.html">Terminaison et complexité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recherche.html">Algorithmes de recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/tris.html">Algorithmes de tri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/heuristiques.html">5. Algorithmes heuristiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html">4. Récursivité [en option]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/conclusion.html">6. Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../prog2/index.html">Programmation II</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -367,29 +367,17 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="histoire-de-linformatique">
-<span id="histoire"></span><h1>Histoire de l’informatique<a class="headerlink" href="#histoire-de-linformatique" title="Lien permanent vers ce titre">¶</a></h1>
+<span id="hist"></span><h1>Histoire de l’informatique<a class="headerlink" href="#histoire-de-linformatique" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <p>Le <a class="reference external" href="https://www.museebolo.ch/">musée bolo</a></p>
-<section id="tests">
-<h2>Tests :<a class="headerlink" href="#tests" title="Lien permanent vers ce titre">¶</a></h2>
-</section>
-<section id="timeline">
-<h2>Timeline<a class="headerlink" href="#timeline" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="timeline">
-<div class="bar">
-<div></div>
-</div>
-<div class="items">
-<div class="item"><div class="date"><div>1991</div></div><div class="content"><h2 class="item-title">Première version publique de Python</h2><div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoIkhlbGxvIHdvcmxkISIp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div></div><div class="item"><div class="date"><div>2005</div></div><div class="content"><h2 class="item-title">Première vidéo YouTube</h2><p>Voici la toute première vidéo YouTube !</p>
-<div class="video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" mozallowfullscreen="" src="https://www.youtube-nocookie.com/embed/jNQXAC9IVRw" webkitallowfullscreen="" width="560">"</iframe></div></div></div></div></div></section>
 </section>
 
         </article>
@@ -420,11 +408,6 @@
         </div>
 
         <div class="related-information">
-              Copyright &#169; CC-BY-NC |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
             <a class="muted-link" href="../_sources/hist/index.md.txt"
                rel="nofollow">
               Montrer le code source
@@ -433,28 +416,8 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            Contenu
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Histoire de l’informatique</a><ul>
-<li><a class="reference internal" href="#tests">Tests :</a></li>
-<li><a class="reference internal" href="#timeline">Timeline</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

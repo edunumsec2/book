@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="1. Introduction" href="intro.html" /><link rel="prev" title="8. Entreprises" href="../hist/entreprises.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Introduction" href="intro.html" /><link rel="prev" title="8. Entreprises" href="../hist/entreprises.html" />
 
     <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
         <title>Algorithmique II - Apprendre</title>
@@ -290,13 +290,13 @@
 <p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Algorithmique II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="complexite.html">2. Complexité des algorithmes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="recherche.html">3. Algorithmes de recherche</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tris.html">4. Algorithmes de tri</a></li>
-<li class="toctree-l2"><a class="reference internal" href="heuristiques.html">5. Solutions heuristiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="recursivite.html">6. Récursivité [en option]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conclusion.html">7. Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principes.html">Terminaison et complexité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recherche.html">Algorithmes de recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tris.html">Algorithmes de tri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="heuristiques.html">5. Algorithmes heuristiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recursivite.html">4. Récursivité [en option]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusion.html">6. Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../prog2/index.html">Programmation II</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -374,7 +374,7 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="algorithmique-ii">
-<h1>Algorithmique II<a class="headerlink" href="#algorithmique-ii" title="Lien permanent vers ce titre">¶</a></h1>
+<span id="algo2"></span><h1>Algorithmique II<a class="headerlink" href="#algorithmique-ii" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Pour résoudre un problème, il faut commencer par le décomposer en sous-problèmes. Pour chaque sous-problème à résoudre, on décrit les opérations à réaliser sous la forme d’un <span class="target" id="gl-algo-0"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span>. Il existe une multitude d’<span class="target" id="gl-algo-1"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithmes</span> pour résoudre un problème, mais ils ne se valent pas tous.</p>
 <p>L’<strong><span style="color:rgb(89, 51, 209)">algorithmique</span></strong> étudie les propriétés de ces <span class="target" id="gl-algo-2"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithmes</span>. Cette analyse est nécessaire pour nous aider à décider quel <span class="target" id="gl-algo-3"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> utiliser. On se propose à présent de passer en revue quelques propriétés importantes des <span class="target" id="gl-algo-4"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithmes</span>.</p>
 <div class="toctree-wrapper compound">
@@ -382,9 +382,11 @@
 <section id="objectifs-de-la-thematique">
 <h2>Objectifs de la thématique<a class="headerlink" href="#objectifs-de-la-thematique" title="Lien permanent vers ce titre">¶</a></h2>
 <p>A la fin de ce chapitre, vous saurez ce qui fait qu’un algorithme est un bon algorithme et quels critères prendre en considération pour choisir le meilleur algorithme. Vous verrez également qu’il existe des problèmes relativement simples que l’on n’arrive toujours pas à résoudre.</p>
-<p><span class="fa fa-check text-success mr-1"></span>Pouvoir déterminer quelle est la meilleure solution pour un problème donné, en fonction de critères objectifs.</p>
-<p><span class="fa fa-check text-success mr-1"></span>Comprendre pourquoi certains problème simples n’ont pas de solution exacte.</p>
-<p><span class="fa fa-check text-success mr-1"></span>[Optionnel] Créer des fonctions récursives, qui s’appellent elles-mêmes.</p>
+<ul class="simple">
+<li><p>Pouvoir déterminer quelle est la meilleure solution pour un problème donné, en fonction de critères objectifs.</p></li>
+<li><p>Comprendre pourquoi certains problème simples n’ont pas de solution exacte.</p></li>
+<li><p>[Optionnel] Créer des fonctions récursives, qui s’appellent elles-mêmes.</p></li>
+</ul>
 </section>
 </section>
 
@@ -398,7 +400,7 @@
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><span class="section-number">1. </span>Introduction</div>
+                <div class="title">Introduction</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -416,11 +418,6 @@
         </div>
 
         <div class="related-information">
-              Copyright &#169; CC-BY-NC |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
             <a class="muted-link" href="../_sources/algo2/index.md.txt"
                rel="nofollow">
               Montrer le code source

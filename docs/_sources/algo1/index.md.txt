@@ -46,9 +46,8 @@
 </div>
 
 
-(algorithmique)=
-Algorithmique I
-==============================
+(algo1)=
+# Algorithmique I
 
 Nous avons tous entendu parler des algorithmes. Normal, c’est le mot à la mode et que tout le monde utilise sans vraiment le comprendre. Ils sont partout, ils font toutes sortes de choses, ils nous manipulent. Pourquoi en parle-t-on de la même manière que des extraterrestres ? Dans ce cours, nous allons tenter de revenir sur terre, parce que les algorithmes ce n’est pas si compliqué que ça. On apprendra à les définir, à les faire fonctionner et surtout à reconnaître la différence entre un « bon » et un « mauvais » algorithme. 
 
@@ -67,13 +66,13 @@ conclusion
 
 À la fin de ce chapitre, vous saurez ce qu'est un algorithme et vous serez capable de transcrire des algorithmes en programmes. Vous saurez résoudre des problèmes, en décomposant leur solution en étapes à suivre. Vous verrez également que pour un même problème, on peut avoir plusieurs solutions avec des propriétés, avantages et désavantages différents. 
 
-{fa}`check, text-success mr-1`Se familiariser avec la notion d’algorithme.
+* Se familiariser avec la notion d’algorithme.
 
-{fa}`check, text-success mr-1`Savoir résoudre des problèmes, en décomposant leur solution en étapes à suivre.
+* Savoir résoudre des problèmes, en décomposant leur solution en étapes à suivre.
 
-{fa}`check, text-success mr-1`Savoir que pour un même problème, on peut avoir plusieurs solutions avec différents propriétés, avantages et désavantages.
+* Savoir que pour un même problème, on peut avoir plusieurs solutions avec différents propriétés, avantages et désavantages.
 
-{fa}`check, text-success mr-1`Être capable de transcrire un algorithme dans un programme.
+* Être capable de transcrire un algorithme dans un programme.
 
 Bienvenue dans le monde fascinant des algorithmes.
 
