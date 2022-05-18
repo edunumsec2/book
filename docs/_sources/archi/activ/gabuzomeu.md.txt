@@ -1,6 +1,6 @@
 (gabuzomeu)=
 Ga-Bu-Zo-Meu
-===========================
+============
 
 ```{admonition} Attention
 :class: note
@@ -31,9 +31,8 @@ Cette vidéo d'introduction, dans la série des shadocks, explique très clairem
 ## Matériel
 ### Les documents
 
-Nous mettons à disposition cette  
-<video media/Shadoks ZOx44>. Attention : la qualité est celle d'un enregistrement VHS.
-{download}`document <../media/Shadoks ZOx44>`
+Nous mettons à disposition cette vidéo: {download}`Shadoks ZOx44.avi <../media/Shadoks ZOx44.avi>`. Attention: la qualité est celle d'un enregistrement VHS.
+
 
 ## Déroulement
 
