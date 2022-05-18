@@ -1,4 +1,5 @@
 _build/
+_docs/
 
 # General
 .DS_Store
@@ -40,6 +41,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
+docs/
 develop-eggs/
 dist/
 downloads/
