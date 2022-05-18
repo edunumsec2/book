@@ -28,15 +28,6 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    prog1/index
    algo1/index
    archi/index
-   plan_didac/index
-
-.. toctree::
-   :name: Histoire
-   :caption: Histoire
-   :maxdepth: 3
-   :hidden:
-
-   hist/index  
 
 .. toctree::
    :name: Deuxième année
@@ -44,24 +35,20 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    :maxdepth: 3
    :hidden:
 
+   algo2/index
+   prog2/index
+   projets/index
    resx/index
 
 .. toctree::
-   :name: Enjeux sociaux
-   :caption: Enjeux sociaux
+   :name: Thématiques transversales
+   :caption: Thématiques transversales
    :maxdepth: 3
    :hidden:
 
+   hist/index
    enjx/index
-
-
-.. toctree::
-   :name: Suppléments
-   :caption: Suppléments
-   :maxdepth: 3
-   :hidden:
-
-   art/index   
+   art/index
 
 .. toctree::
    :name: Suppléments
@@ -77,5 +64,6 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    :maxdepth: 3
    :hidden:
 
+   PlanDidac/index.md   
    glossaire
    readme/extensions

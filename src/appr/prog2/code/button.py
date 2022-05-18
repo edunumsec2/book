@@ -3,6 +3,10 @@ hideturtle()
 tracer(0)
 up()
 s = getscreen()
+setup(600, 400)
+
+# Documenting Python code
+# https://realpython.com/documenting-python-code/
 
 class Button:
     def __init__(self, pos, text, size=(80, 30), color='lightgray', align='center'):

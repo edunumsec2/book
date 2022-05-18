@@ -1,8 +1,7 @@
 # Réseaux
 
 ```{toctree}
-:maxdepth: 2
-:hidden:
+:maxdepth: 1
 Activités <activ/index>
 ```
 
