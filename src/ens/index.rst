@@ -41,6 +41,7 @@ et autres concepts essentiels à la compréhension de ce qui se passe au niveau 
    prog1/index
    algo1/index
    archi/index
+   enjx1/index
 
 .. toctree::
    :name: Deuxième année
@@ -52,6 +53,7 @@ et autres concepts essentiels à la compréhension de ce qui se passe au niveau 
    prog2/index
    projets/index
    resx/index
+   enjx2/index
 
 .. toctree::
    :name: Thématiques transversales
@@ -60,7 +62,6 @@ et autres concepts essentiels à la compréhension de ce qui se passe au niveau 
    :hidden:
 
    hist/index
-   enjx/index
    art/index
 
 .. toctree::
