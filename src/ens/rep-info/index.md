@@ -13,6 +13,7 @@ Afin d'enseigner cette thématique, les ressources présentées ici peuvent êtr
 
 ```{toctree}
 :maxdepth: 1
+:numbered: 1
 Activités <activ/index>
 Exercices <exo/index>
 Supports de cours <support/index>
