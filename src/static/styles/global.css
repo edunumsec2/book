@@ -3,6 +3,16 @@
     --primary-dark: #7C3EFF;
 }
 
+@page {
+    size: A4;
+}
+
+@media print {
+    header, aside, footer, #progress-ring {
+        display: none !important;
+    }
+}
+
 html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
