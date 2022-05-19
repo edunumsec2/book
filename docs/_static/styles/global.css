@@ -72,3 +72,9 @@ body.modulo-dark .dropdown {
 .admonition {
     margin: 1.75rem 0 1.75rem 0;
 }
+
+
+body {
+    --sidebar-item-spacing-vertical: 0.3rem;
+
+}
