@@ -28,6 +28,7 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    prog1/index
    algo1/index
    archi/index
+   enjx1/index
 
 .. toctree::
    :name: Deuxième année
@@ -39,6 +40,7 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    prog2/index
    projets/index
    resx/index
+   enjx2/index
 
 .. toctree::
    :name: Thématiques transversales
@@ -47,7 +49,6 @@ de manière continue grâce à vos retours, n'hésitez pas à nous les partager 
    :hidden:
 
    hist/index
-   enjx/index
    art/index
 
 .. toctree::
