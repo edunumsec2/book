@@ -12,6 +12,7 @@ Dans ce chapitre, nous proposons des activités, des supports de cours et des é
 ```{toctree}
 :maxdepth: 2
 :hidden:
+:numbered: 1
 Supports de cours <support/index>
 Evaluations <eval/index>
 Activités <activ/index>
