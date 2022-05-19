@@ -7,7 +7,6 @@
 :numbered: 1
 
 grandes-thematiques/environnement
-grandes-thematiques/IA-et-enjeux-de-lautomatisation
 activ/index
 fiches-complementaires/index
 ```
