@@ -338,7 +338,7 @@ Cette structure s'appele **buffer** en anglais ou **FIFO** (first in first out)
 tampon = ['h', 'a']
 tampon.append('m')
 print(tampon)
-pop(0)
+tampon.pop(0)
 print(tampon)
 ```
 <br> <br>
