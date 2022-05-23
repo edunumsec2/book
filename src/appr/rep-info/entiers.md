@@ -219,17 +219,17 @@ Par exemple, la conversion du nombre décimal 666 en binaire s'obtient
 avec les étapes suivantes :
 
 ```{math}
-$$\begin{align}
-666 = 512 + 154 \\
-154 = 128 + 26 \\
-26 = 16 + 10 \\
-10 = 8 + 2 \\
-2 = 2 + 0
-\end{align}$$
+\begin{align}
+666 &= 512 + 154 \\
+154 &= 128 + 26 \\
+26 &= 16 + 10 \\
+10 &= 8 + 2 \\
+2 &= 2 + 0
+\end{align}
 ```
 
 ```{math}
-$\begin{array}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+\begin{array}{|l|c|c|c|c|c|c|c|c|c|c|c|}
 %\hline
 %\text{Coefficient} & 2^{10} & 2^9 & 2^8 & 2^7 & 2^6 & 2^5 & 2^4 & 2^3 & 2^2 & 2^1 & 2^0  \\ 
 \hline
@@ -237,7 +237,7 @@ $\begin{array}{|l|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 \text{Bit} &  & 1 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 0\\ 
 \hline 
-\end{array}$
+\end{array}
 ```
 
 Résultat : $(666_{(10)} = 1010011010_{(2)})$
@@ -285,9 +285,9 @@ trajectoire fatal.
 
 ## Représentation des entiers négatifs
 
-Après la représentation des entiers naturels $(\(\mathbb{N}\))$, on
+Après la représentation des entiers naturels $(\mathbb{N})$, on
 souhaite évidement pouvoir représenter les entiers négatifs afin d'avoir
-une représentation des entiers relatifs $(\(\mathbb{Z}\))$.  
+une représentation des entiers relatifs $(\mathbb{Z})$.  
 Un entier relatif est un entier naturel auquel on a ajoute un signe
 positif ou négatif indiquant sa position **relative** par rapport à 0.
 
@@ -305,21 +305,21 @@ Avec cette approche, un entier relatif est représenté par sa valeur
 absolue (entier naturel) auquel on associe un signe. Le domaine couvert
 se trouve donc divisé par deux, un bit étant utilisé pour le signe.  
 Ainsi, avec un octet, 7 bits sont utilisés pour encoder la valeur
-absolue, soit $\[0, 127\]$, ce qui permet de représenter les entiers
-relatifs dans l'intervalle $\[-127, 127\]$.
+absolue, soit $[0, 127]$, ce qui permet de représenter les entiers
+relatifs dans l'intervalle $[-127, 127]$.
 
 ```` {panels}
 :column: col-sm
 La représentation de -21 est :
 ^^^
 ```{math}
-$$\begin{array}{|l|c|c|c|c|c|c|c|}
+\begin{array}{|l|c|c|c|c|c|c|c|}
 \hline
 \text{signe} & 2^6 & 2^5 & 2^4 & 2^3 & 2^2 & 2^1 & 2^0  \\
 \hline
 1 & 0 & 0 & 1 & 0 & 1 & 0 & 1\\ 
 \hline 
-\end{array}$$ 
+\end{array}
 ```
 ````
 
@@ -331,7 +331,7 @@ problèmes majeurs :
     Le résultat de cette opération devrait être 0, mais, sans rentrer
     dans le détail de l'arithmétique binaire qui sera abordée plus tard,
     l'addition bit à bit avec cette représentation donne
-    $(-2 \lvert x \rvert\)$. En effet, l'addition des bits de signe donne
+    $(-2 \lvert x \rvert)$. En effet, l'addition des bits de signe donne
     toujours 1 et le reste des bits représente l'addition de deux fois
     la valeur absolue.
 
