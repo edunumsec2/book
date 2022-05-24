@@ -2,6 +2,7 @@
 
 ```{toctree}
 :maxdepth: 1
+:numbered: 1
 Activités <activ/index>
 ```
 

@@ -1,8 +1,8 @@
 .. image:: ../static/assets/modulo-head-banner.svg
    :alt: "Bannière Modulo"
 
-Informatique au gymnase
-===================================
+Informatique au gymnase : enseigner
+=====================================
 
 Bienvenue dans les ressources pour l'enseignement de l'informatique au gymnase.
 Ces ressources ont été conçues pour vous accompagner dans votre enseignement.

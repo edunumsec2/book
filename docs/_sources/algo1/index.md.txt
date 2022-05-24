@@ -3,7 +3,7 @@ Les activités décrites ci-dessous sont proposées dans le but d'inciter les é
 
 ```{toctree}
 :maxdepth: 2
-:hidden:
+:numbered: 1
 Activités <activ/index>
 Exercices <exo/index>
 ```

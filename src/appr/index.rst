@@ -1,8 +1,8 @@
 .. image:: ../static/assets/modulo-head-banner.svg
    :alt: "Bannière Modulo"
 
-Informatique au gymnase
-===================================
+Informatique au gymnase : apprendre
+====================================
 
 Bienvenue dans le cours d'informatique au gymnase. 
 Ce cours a été conçu pour vous accompagner dans votre découverte de l'informatique. Il est 

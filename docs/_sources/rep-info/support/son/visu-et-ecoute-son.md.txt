@@ -43,7 +43,9 @@
 </br>
 
 <a name="Introduction"></a>
-# Introduction
+
+## Introduction
+
 Le lien entre mathématiques et musique n’est pas récent puisque dès l'antiquité la musique est associée aux mathématiques. Elle est même considérée par Pythagore au VI<sup>e</sup> siècle avant J.C. comme étant une science mathématique, au même titre que l'arithmétique, l'astronomie et la géométrie.
 </br>
 <center> 
@@ -545,7 +547,7 @@ ordinateur individuel, logiciel Audacity, casque audio individuel connecté sur 
 <br/>
 
 
-# Activité 1
+## Activité 1
 **Signaux sonores élémentaires** 
 
 Classe : 1M, 2M
