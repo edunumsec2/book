@@ -1,8 +1,7 @@
 # Activités
 
 ```{toctree}
-:maxdepth: 2
-:numbered:
+:maxdepth: 1
 Algorithmes de tri <algo-tri_new>
 Modéliser une épidémie <epidemie/index_new>
 Dijkstra et le plus court chemin <dijkstra_new>
