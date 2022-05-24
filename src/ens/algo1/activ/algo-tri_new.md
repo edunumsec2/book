@@ -25,21 +25,22 @@ Un dispositif physique ainsi qu'un catalogue d'opérations sont définis afin de
 
 ```{dropdown} **Déroulement**
 
-1. **Mise en situation générale** (5-10 mn) autour du concept de l'archivage traditionnel, son histoire, son utilité, son organisation, ce qu'il a permis comme pratique, et la fonction fondamentale du tri dans cette technique
+1. {ref}`Mise en situation générale<algo-tri.situation>` (5-10 mn) autour du concept de l'archivage traditionnel, son histoire, son utilité, son organisation, ce qu'il a permis comme pratique, et la fonction fondamentale du tri dans cette technique
 
-1. **Exploration** (20-30 mn) en groupe au cours de laquelle les élèves explorent des procédures de tri induites par un dispositif physique
+1. {ref}`Exploration<algo-tri.exploration>` (20-30 mn) en groupe au cours de laquelle les élèves explorent des procédures de tri induites par un dispositif physique
 
-1. **Mise en commun** (15 mn) au cours de laquelle les élèves discute et présentent les résultats de
+1. {ref}`Mise en commun<algo-tri.miseencommun>` (15 mn) au cours de laquelle les élèves discute et présentent les résultats de
 leurs recherche
 
-1. **Formalisation (et institutionnalisation)** (20 mn) des divers algorithmes de tri. 
+1. {ref}`Formalisation<algo-tri.formalisation>` (20 mn) des divers algorithmes de tri. 
 
-1. **Exercices (ou exemples)** (10-15 mn) d'application des algorithmes.
+1. {ref}`Exercices<algo-tri.exercices>` (10-15 mn) d'application des algorithmes.
 
-1. **Conclusion** (5-10 mn) en bouclant la boucle sur l'archivage informatisé et les pratiques (positives et négatives) qu'il permet.
+1. {ref}`Conclusion<algo-tri.conclusion>` (5-10 mn) en bouclant la boucle sur l'archivage informatisé et les pratiques (positives et négatives) qu'il permet.
 
 ```
 
+(algo-tri.situation)=
 ## Mise en situation générale
 
 *Durée : 5-10 mn*
@@ -57,6 +58,7 @@ fait "naturellement". L'enseignant-e indique que cette méthode fonctionne bien 
 d'instructions beaucoup plus précises (ce qui sera clair pour ceux qui ont déjà fait de la programmation) et que c'est à cela que la classe va
 s'atteller: quelle procédure donner à un ordinateur pour le rendre capable de trier des nombres (ou des mots). 
 
+(algo-tri.exploration)=
 ## Exploration
 
 *Durée : 20-30 mn*
@@ -109,6 +111,7 @@ S'ils pensent avoir trouvé un algorithme qui fonctionne, ils doivent le "rédig
 Pendant cette phase, l'enseigant-e passe dans les groupes, clarifie au besoin, oriente la recherche des élèves, propose éventuellement des
 simplifications potentielle, et valide les méthodes trouvées.
 
+(algo-tri.miseencommun)=
 ## Mise en commun
 
 *Durée : 15 mn*
@@ -118,6 +121,7 @@ Selon le temps à disposition, il est de regrouper deux groupes de deux (ayant c
 Chaque groupe va décrire sa méthode au reste de la classe, et l'illustrer en triant les élèves des autres groupes. Chaque élève prend une feuille
 de papier est écrit un nombre dessus. Les élève se disposent ensuite en file, ce qui représente l'équivalent du tas de carte. L'enseigant-e indique au sol (par exemple avec du scotch carrossier) la position du comparateur. Le groupe qui présente sa méthode trie ainsi les élèves selon le numéros qu'ils ont indiqué sur leur feuille. Pendant ce temps les élèves essaient de comprendre la méthode exposée. L'enseignant peut ensuite présenter les algorithmes qu'il souhaite également aborder. 
 
+(algo-tri.formalisation)=
 ## Formalisation
 
 *Durée : 20 mn*
@@ -167,7 +171,7 @@ Le tri par sélection n'est pas vraiment adaptés à ce dispositif physique bas�
 piles. Une variante de l'activité consisterait à donner au autre dispositif basé sur les tableaux à une partie de la classe afin de faire émerger ces algorithmes. 
 ```
  
-
+(algo-tri.exercices)=
 ## Exercices
 
 *Durée : 10-15 mn*
@@ -179,7 +183,7 @@ Ensuite, l'enseignant-e donne une suite de noms non triés et les élèves doive
 
 Une correction commune est ensuite effectuée. 
 
-
+(algo-tri.conclusion)=
 ## Conclusion
 
 *Durée : 5-10 mn*

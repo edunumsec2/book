@@ -1,12 +1,10 @@
-# Découvrir l'algorithme minimax en programmant un jeu de puissance 4
+# Minimax / Puissance 4
 
 ---- 
 
-`à compléter`
-
+Découvrir l'algorithme minimax en programmant un jeu de puissance 4
 
 Attention : cette activité a comme prérequis que les élèves aient déjà une certaine maitrise de la programmation, en particulier qu'ils soient à l'aise avec l'utilisation des fonctions et les types composés (dictionnaires, listes, tuples, etc.)
-
 
 ----
 
@@ -30,36 +28,37 @@ Attention : cette activité a comme prérequis que les élèves aient déjà une
 
 **Séance 1**
 
-1. **Mise en situation** (10 mn) au cours de laquelle les élèves se familiarisent avec le jeu du puissance 4.
+1. {ref}`Mise en situation<puissance4.miseensituation>` (10 mn) au cours de laquelle les élèves se familiarisent avec le jeu du puissance 4.
 
-1. **Conceptualisation / discussion** (10mn) au cours de laquelle les élèves prennent conscience des éléments nécessaires à la programmation d'un tel jeu, notamment:
+1. {ref}`Conceptualisation<puissance4.conceptualisation>` (10mn) au cours de laquelle les élèves prennent conscience des éléments nécessaires à la programmation d'un tel jeu, notamment:
 
-1. **Discussion** (10 mn) par groupe.
+1. {ref}`Discussion<puissance4.discussion>` (10 mn) par groupe.
 
-1. **Synthèse des discussions** (10 mn) par l'enseignant·e.
+1. {ref}`Synthèse des discussions<puissance4.synthese>` (10 mn) par l'enseignant·e.
 
-1. **Programmation** (30 mn) par deux avec le soutien de l'enseignant·e.
+1. {ref}`Programmation<puissance4.programmation>`(30 mn) par deux avec le soutien de l'enseignant·e.
 
-1. **Compétition** (15 mn) durant laquelle l'enseignant·e montre comment deux groupes peuvent faire jouer leur programme l'un contre l'autre. 
+1. {ref}`Compétition<puissance4.competition>`(15 mn) durant laquelle l'enseignant·e montre comment deux groupes peuvent faire jouer leur programme l'un contre l'autre. 
 
 **Séance 2**
 
-1. **Mise en situation** (5-10 mn), où les équipes peuvent présenter leur stratégie.
+1. {ref}`Mise en situation<puissance4.miseensituation2>` (5-10 mn), où les équipes peuvent présenter leur stratégie.
 
-1. **Présentation théorique** (10 mn) de l'algorithme minimax. 
+1. {ref}`Présentation théorique<puissance4.presentation>`(10 mn) de l'algorithme minimax. 
 
-1. **Exercices** (10 mn) d'application de l'algorithme minimax.
+1. {ref}`Exercices<puissance4.exercices>` (10 mn) d'application de l'algorithme minimax.
 
-1. **Présentation théorique** (5 mn) des différentes manière d'implémenter minimax
+1. {ref}`Présentation théorique<puissance4.presentation2>` (5 mn) des différentes manière d'implémenter minimax
 
-1. **Programmationdage** (30 mn) de l'algorithme minimax.
+1. {ref}`Programmation<puissance4.programmation2>` (30 mn) de l'algorithme minimax.
 
-1. **Finalisation** (15 mn) avec présentation des résultats, éventuellement en faisant jouer les programmes les uns contre les autres. 
+1. {ref}`Finalisation<puissance4.finalisation>` (15 mn) avec présentation des résultats, éventuellement en faisant jouer les programmes les uns contre les autres. 
 
 ```
 
 **Séance 1**
 
+(puissance4.miseensituation)=
 ## Mise en situation 
 
 *Durée : 10 mn*
@@ -70,7 +69,8 @@ Plusieurs dispositifs sont envisageables. Par exemples, on peut faire jouer deux
 
 Afin de pouvoir désigner sans ambiguïté les position du jeu, il sera utile de numéroter les coordonnées de la matrice du jeu, de façon analogue au langage utiliser (par exemple en commençant à 0
 
-##  Conceptualisation / discussion
+(puissance4.conceptualisation)=
+## Conceptualisation
 
 *Durée : 10 mn*
 
@@ -81,6 +81,7 @@ sans doute aucune idée de comment commencer et le but de cette discussion sera 
 1. le déroulement du jeu (tour de rôle et déclaration du vainqueur)
 1. la représentation de l'état du jeu (comment savoir quelle est l'état ou la situation du jeu)
 
+(puissance4.discussion)=
 ## Discussion en groupe
 
 *Durée : 10 mn*
@@ -91,6 +92,7 @@ Par groupe de deux ou trois élèves, ils doivent discuter et proposer dans cet 
 
 Pendant ce temps, l'enseignant·e passe dans les rangs afin de comprendre et d'orienter les propositions des élèves. A la fin, les élèves résument leur proposition sur papier.
 
+(puissance4.synthese)=
 ## Synthèse des discussions par l'enseignant·e
 
 *Durée : 10 mn*
@@ -104,6 +106,7 @@ L'enseignant·e propose ensuite une représentation adéquate, soit une proposé
 
 L'enseignant·e commente ensuite les propositions de stratégie et propose, pour commencer une stratégie toute simple qui consiste à essayer tous les coups possibles. Si un des coups est gagnant, le jouer, sinon en choisir un autre au hasard. 
 
+(puissance4.programmation)=
 ## Programmation
 
 *Durée : 30 mn*
@@ -115,7 +118,7 @@ définies par l'enseignant·e.
 Les élèves doivent ensuite coder la fonction de stratégie, ce qui leur permettra de tester le jeu. Iels se rendront vite compte de la faiblesse de la stratégie. L'étape suivante consiste à améliorer la stratégie, en excluant les coups qui permettent à l'adversaire de gagner en utilisant testant toutes ses possibilité. Il est ensuite possible d'améliorer la stratégie en regardant un coup en avance, puis deux, puis trois, etc. L'enseignant·e tentera d'orienter les élèves afin de
 leur faire découvrir par eux-même la stratégie du minimax. 
 
-
+(puissance4.competition)=
 ## Compétition
 
 *Durée : 15 mn*
@@ -130,12 +133,14 @@ Les groupes qui le veulent peuvent se confronter les uns les autres et continuer
 Les plus rapides auront déjà eu le temps d'implémenter une stratégie, alors que les plus lent-e-s n'auront que la stratégie de base
 ```
 
+(puissance4.miseensituation2)=
 ## Mise en situation
 
 *Durée : 5-10 mn*
 
 Certaines équipes peuvent venir présenter leur jeu et parler de leur stratégie. 
 
+(puissance4.presentation)=
 ## Présentation théorique
 
 *Durée : 10 mn*
@@ -144,25 +149,28 @@ L'enseignant·e récapitule pour tout le monde la stratégie du minimax, en indi
 
 Eventuellement, l'enseignant·e peut aussi présenter la stratégie du alpha-beta pruning. 
 
-## Exercice
+(puissance4.exercices)=
+## Exercices
 
 *Durée : 10 mn*
 
 Les élèves font individuellement sur papier un exercice d'application de la stratégie minimax, suivi immédiatement d'une correction en commun. 
 
+(puissance4.presentation2)=
 ## Présentation théorique
 
 *Durée : 5 mn*
 
 L'enseignant·e parle des différentes manière d'implémenter minimax (in place, en copie, éventuellement en récursion si cela a déjà été abordé). 
 
-
+(puissance4.programmation2)=
 ## Programmation
 
 *Durée : 30 mn*
 
 Les élèves continuent à programmer leur stratégie et peuvent tenter d'implémenter une fonction d'évaluation de l'état du jeu, par exemple en comptant le nombre de rangée ouverte. Optionnellement, en fonction du niveau des élèves, le développement de l'interface graphique peut être considéré. 
 
+(puissance4.finalisation)=
 ## Finalisation 
 
 *Durée : 15 mn*

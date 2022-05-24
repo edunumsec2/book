@@ -23,21 +23,20 @@ Activité collaborative et débranchée pour introduire l'algorithme du plus cou
 ```
 
 ```{dropdown} **Déroulement**
-1. **Mise en situation générale** (5 mn) pour comprendre un contexte de la vie quotidienne dans lequel cet algorithme est utilisé et qui constituera un fil rouge concret tout au long de l'activité.  
+1. {ref}`Mise en situation générale<dijkstra.miseensituation>` (5 mn) pour comprendre un contexte de la vie quotidienne dans lequel cet algorithme est utilisé et qui constituera un fil rouge concret tout au long de l'activité.  
 
-1. **Mise en situation spécifique** (15 mn) pour passer à un niveau d'abstraction et de généralisation plus élévé. 
+1. {ref}`Mise en situation spécifique<dijkstra.miseensituation2>`  (15 mn) pour passer à un niveau d'abstraction et de généralisation plus élévé. 
 
-1. **Identification du problème** (5 mn), identification de l'objectif, explication de la non-trivialité du problème.
+1. {ref}`Identification<dijkstra.identification>`  (5 mn), identification de l'objectif, explication de la non-trivialité du problème.
 
-1. **Découverte** (15 mn) par essais-erreurs de l'algorithme et de sa justification par simulation humaine.
+1. {ref}`Découverte<dijkstra.decouverte>`  (15 mn) par essais-erreurs de l'algorithme et de sa justification par simulation humaine.
 
-1. **Formalisation** (10 mn) de l'algorithme.
+1. {ref}`Formalisation<dijkstra.formalisation>`  (10 mn) de l'algorithme.
 
-1. **Exemples d'utilisation** (15 mn) de l'algorithme et exercices.
+1. {ref}`Exemples d'utilisation<dijkstra.utilisation>`  (15 mn) de l'algorithme et exercices.
 
-1. **Réflexions** plus approfondie sur l'algorithme *pour aller plus loin*.
 ```
-
+(dijkstra.miseensituation)=
 ## Mise en situation générale
 
 *Durée : 5 mn*
@@ -54,6 +53,7 @@ L'enseignant va sur une page de navigation (p.ex [OpenStreetMap](https://www.ope
 * Les croisements et embranchements sont représentés par les *sommets* du graphe et les routes qui les relient sont représentées par les *arêtes* du graphe.
 ````
 
+(dijkstra.miseensituation2)=
 ## Mise en situation spécifique
 
 *Durée : 15 mn*
@@ -92,12 +92,14 @@ On retrouve le même graphe qu'avant, mais cette fois on a le temps de parcours 
 * Que faut-il faire pour être sûr-e que ce soit vraiment le plus court ?
 ```
 
+(dijkstra.identification)=
 ## Identification du problème
 
 *Durée : 5 mn*
 
 Le problème est donc donné sous forme d'un graphe constitué de *sommets* reliés par des *arêtes* qui ont une certaine *longueur*. Dans le cas ci-desssus, les sommets représentent des villes, les arêtes les routes, et les longueurs la durée du trajet. La *longueur totale* est donnée par la somme des longueurs des arêtes empruntée.
 
+(dijkstra.decouverte)=
 ## Découverte 
 
 *Durée : 15 mn*
@@ -136,6 +138,7 @@ Si tout se passe bien, les élèves vont se déplacer dans les **<span style="co
 Cette activité implémente dans les faits une version distribuée de l'algorithme où les sommets peuvent changer de zone en parallèle. Il est conseillé de bien marquer la transition à l'algorithme séquentiel.
 ```
 
+(dijkstra.formalisation)=
 ## Formalisation
 
 *Durée : 10 mn*
@@ -153,6 +156,7 @@ L'enseignant formalise l'algorithme au tableau avec l'aide des élèves. Pour ai
 ![step123](media/steps.gif)
 ```
 
+(dijkstra.utilisation)=
 ## Exemples d'utilisation 
 
 *Durée : 15 mn*
