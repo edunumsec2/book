@@ -32,16 +32,16 @@ Au travers de cette lecture, l'élève pourra ainsi décourir les notions de :
 
 ```{dropdown} **Déroulement**
 
-1. {ref}`Lecture<ordinateurantique.lecture>` (5-10 mn) autour du concept de l'archivage traditionnel, son histoire, son utilité, son organisation, ce qu'il a permis comme pratique, et la fonction fondamentale du tri dans cette technique
+1. {ref}`Lecture<ordinateurantique.lecture>` (`durée : à compléter`) autour du concept de l'archivage traditionnel, son histoire, son utilité, son organisation, ce qu'il a permis comme pratique, et la fonction fondamentale du tri dans cette technique
 
-1. {ref}`Sondage<ordinateurantique.sondage>` (20-30 mn) en groupe au cours de laquelle les élèves explorent des procédures de tri induites par un dispositif physique
+1. {ref}`Sondage<ordinateurantique.sondage>` (`durée : à compléter`) en groupe au cours de laquelle les élèves explorent des procédures de tri induites par un dispositif physique
 
-1. {ref}`Discussion<ordinateurantique.discussion>` (20 mn) des divers algorithmes de tri. 
+1. {ref}`Discussion<ordinateurantique.discussion>` (`durée : à compléter`) des divers algorithmes de tri. 
 
-1. {ref}`Questions<ordinateurantique.questions>` (15 mn) au cours de laquelle les élèves discute et présentent les résultats de
+1. {ref}`Questions<ordinateurantique.questions>` (`durée : à compléter`) au cours de laquelle les élèves discute et présentent les résultats de
 leurs recherche
 
-1. {ref}`Explications<ordinateurantique.explications>` (10-15 mn) d'application des algorithmes.
+1. {ref}`Explications<ordinateurantique.explications>` (`durée : à compléter`) d'application des algorithmes.
 
 ```
 
