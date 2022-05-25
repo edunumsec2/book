@@ -5,11 +5,6 @@
 
 Cette fiche a surtout pour objectif de permettre une introduction rapide et récréative aux notions de bases, grâce à une vidéo des Shadoks. Elle est particulièrement utile dans le cas où le chapitre **représentation de l'information** n'a pas été vu avant le chapitre architecture des ordinateurs.
 
-```{admonition} Attention
-:class: note
-Cette activité pourrait être déplacée dans le chapitre "représentation de l'information" et référencée dans le chapitre architecture.
-```
-
 ----
 
 ```{admonition} Caractéristiques

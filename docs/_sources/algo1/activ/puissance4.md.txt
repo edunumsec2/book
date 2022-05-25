@@ -1,8 +1,8 @@
-# Découvrir l'algorithme minimax en programmant un jeu de puissance 4
+# Minimax / Puissance 4
 
 ---- 
 
-`à compléter`
+Découvrir l'algorithme minimax en programmant un jeu de puissance 4
 
 Attention : cette activité a comme prérequis que les élèves aient déjà une certaine maitrise de la programmation, en particulier qu'ils soient à l'aise avec l'utilisation des fonctions et les types composés (dictionnaires, listes, tuples, etc.)
 
@@ -149,8 +149,8 @@ L'enseignant·e récapitule pour tout le monde la stratégie du minimax, en indi
 
 Eventuellement, l'enseignant·e peut aussi présenter la stratégie du alpha-beta pruning. 
 
-(puissance4.exercice)=
-## Exercice
+(puissance4.exercices)=
+## Exercices
 
 *Durée : 10 mn*
 

@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Recherche" href="../../search.html" /><link rel="next" title="&lt;no title&gt;" href="../exo/index.html" /><link rel="prev" title="L’algorithme du plus court chemin de Dijkstra" href="dijkstra_new.html" />
 
     <link rel="shortcut icon" href="../../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>Découvrir l’algorithme minimax en programmant un jeu de puissance 4 - Enseigner</title>
+        <title>Minimax / Puissance 4 - Enseigner</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/codeplay.css" />
@@ -283,7 +283,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../archi/activ/selecteur-chien.html">Sélecteur de chien</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../archi/activ/afficheur-7seg.html">Afficheur à 7 segments</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../archi/activ/soustracteur.html">Soustracteur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/gabuzomeu.html">Ga-Bu-Zo-Meu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/gabuzomeu_new.html">Ga-Bu-Zo-Meu</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../archi/PlanDidac/index.html">4. Plan</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -390,10 +390,10 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="decouvrir-lalgorithme-minimax-en-programmant-un-jeu-de-puissance-4">
-<h1>Découvrir l’algorithme minimax en programmant un jeu de puissance 4<a class="headerlink" href="#decouvrir-lalgorithme-minimax-en-programmant-un-jeu-de-puissance-4" title="Lien permanent vers ce titre">¶</a></h1>
+          <section class="tex2jax_ignore mathjax_ignore" id="minimax-puissance-4">
+<h1>Minimax / Puissance 4<a class="headerlink" href="#minimax-puissance-4" title="Lien permanent vers ce titre">¶</a></h1>
 <hr class="docutils"/>
-<p><code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p>
+<p>Découvrir l’algorithme minimax en programmant un jeu de puissance 4</p>
 <p>Attention : cette activité a comme prérequis que les élèves aient déjà une certaine maitrise de la programmation, en particulier qu’ils soient à l’aise avec l’utilisation des fonctions et les types composés (dictionnaires, listes, tuples, etc.)</p>
 <hr class="docutils"/>
 <div class="hint admonition">
@@ -432,7 +432,7 @@
 <ol class="simple">
 <li><p class="card-text"><a class="reference internal" href="#puissance4-miseensituation2"><span class="std std-ref">Mise en situation</span></a> (5-10 mn), où les équipes peuvent présenter leur stratégie.</p></li>
 <li><p class="card-text"><a class="reference internal" href="#puissance4-presentation"><span class="std std-ref">Présentation théorique</span></a>(10 mn) de l’algorithme minimax.</p></li>
-<li><p class="card-text"><span class="xref std std-ref">Exercices</span> (10 mn) d’application de l’algorithme minimax.</p></li>
+<li><p class="card-text"><a class="reference internal" href="#puissance4-exercices"><span class="std std-ref">Exercices</span></a> (10 mn) d’application de l’algorithme minimax.</p></li>
 <li><p class="card-text"><a class="reference internal" href="#puissance4-presentation2"><span class="std std-ref">Présentation théorique</span></a> (5 mn) des différentes manière d’implémenter minimax</p></li>
 <li><p class="card-text"><a class="reference internal" href="#puissance4-programmation2"><span class="std std-ref">Programmation</span></a> (30 mn) de l’algorithme minimax.</p></li>
 <li><p class="card-text"><a class="reference internal" href="#puissance4-finalisation"><span class="std std-ref">Finalisation</span></a> (15 mn) avec présentation des résultats, éventuellement en faisant jouer les programmes les uns contre les autres.</p></li>
@@ -511,8 +511,8 @@ leur faire découvrir par eux-même la stratégie du minimax.</p>
 <p>L’enseignant·e récapitule pour tout le monde la stratégie du minimax, en indiquant qu’elle peut aussi être utilisée avec une fonction d’évaluation à plus de trois états comme ici (perdu, gagné, non-décidé).</p>
 <p>Eventuellement, l’enseignant·e peut aussi présenter la stratégie du alpha-beta pruning.</p>
 </section>
-<section id="exercice">
-<span id="puissance4-exercice"></span><h2>Exercice<a class="headerlink" href="#exercice" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="exercices">
+<span id="puissance4-exercices"></span><h2>Exercices<a class="headerlink" href="#exercices" title="Lien permanent vers ce titre">¶</a></h2>
 <p><em>Durée : 10 mn</em></p>
 <p>Les élèves font individuellement sur papier un exercice d’application de la stratégie minimax, suivi immédiatement d’une correction en commun.</p>
 </section>
@@ -581,7 +581,7 @@ leur faire découvrir par eux-même la stratégie du minimax.</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Découvrir l’algorithme minimax en programmant un jeu de puissance 4</a><ul>
+<li><a class="reference internal" href="#">Minimax / Puissance 4</a><ul>
 <li><a class="reference internal" href="#mise-en-situation">Mise en situation</a></li>
 <li><a class="reference internal" href="#conceptualisation">Conceptualisation</a></li>
 <li><a class="reference internal" href="#discussion-en-groupe">Discussion en groupe</a></li>
@@ -590,7 +590,7 @@ leur faire découvrir par eux-même la stratégie du minimax.</p>
 <li><a class="reference internal" href="#competition">Compétition</a></li>
 <li><a class="reference internal" href="#puissance4-miseensituation2">Mise en situation</a></li>
 <li><a class="reference internal" href="#presentation-theorique">Présentation théorique</a></li>
-<li><a class="reference internal" href="#exercice">Exercice</a></li>
+<li><a class="reference internal" href="#exercices">Exercices</a></li>
 <li><a class="reference internal" href="#puissance4-presentation2">Présentation théorique</a></li>
 <li><a class="reference internal" href="#puissance4-programmation2">Programmation</a></li>
 <li><a class="reference internal" href="#finalisation">Finalisation</a></li>

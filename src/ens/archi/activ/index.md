@@ -4,10 +4,10 @@ Dans cette partie, nous proposons des activités de cours qui permettent de déc
 
 ```{toctree}
 :maxdepth: 1
-Ordinateur antique <ordinateurantique>
+Ordinateur antique <ordinateurantique_new>
 Simulateur logique <simulateur>
 Sélecteur de chien <selecteur-chien>
 Afficheur à 7 segments <afficheur-7seg>
 Soustracteur <soustracteur>
-Ga-Bu-Zo-Meu <gabuzomeu>
+Ga-Bu-Zo-Meu <gabuzomeu_new>
 ```

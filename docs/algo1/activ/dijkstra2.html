@@ -283,7 +283,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../archi/activ/selecteur-chien.html">Sélecteur de chien</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../archi/activ/afficheur-7seg.html">Afficheur à 7 segments</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../archi/activ/soustracteur.html">Soustracteur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/gabuzomeu.html">Ga-Bu-Zo-Meu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/gabuzomeu_new.html">Ga-Bu-Zo-Meu</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../archi/PlanDidac/index.html">4. Plan</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -436,16 +436,16 @@
 <h2>1. Mise en situation générale<a class="headerlink" href="#mise-en-situation-generale" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’enseignant va sur une page de navigation (p.ex <a class="reference external" href="https://www.openstreetmap.org/#map=8/46.825/8.224">OpenStreetMap</a>) et montre un exemple de requête de chemin pour relier deux points.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="d3f96ce4-48c3-447c-9888-262fceed2b08" name="5729fbd1-7461-47b1-911c-1610727f2100" type="radio"/>
-<label class="tabbed-label" for="d3f96ce4-48c3-447c-9888-262fceed2b08">
+<input checked="checked" id="88bd98dd-ab50-47a5-88dd-35164b22bb63" name="2ce6f0ad-aad7-4a55-9fd0-899e4dc69e6d" type="radio"/>
+<label class="tabbed-label" for="88bd98dd-ab50-47a5-88dd-35164b22bb63">
 Questions</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Comment le site web a-t-il déterminé le chemin qu’il nous indique ?</p></li>
 <li><p>Quelles données a-t-il à sa disposition pour déterminer ce chemin ?</p></li>
 </ul>
 </div>
-<input id="db4d76c1-5179-4dfe-9a09-d66c774f9e3a" name="5729fbd1-7461-47b1-911c-1610727f2100" type="radio"/>
-<label class="tabbed-label" for="db4d76c1-5179-4dfe-9a09-d66c774f9e3a">
+<input id="a78ffc3c-661c-4405-b72f-68fbe265e51d" name="2ce6f0ad-aad7-4a55-9fd0-899e4dc69e6d" type="radio"/>
+<label class="tabbed-label" for="a78ffc3c-661c-4405-b72f-68fbe265e51d">
 Réponses</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Tout le réseau routier est représenté sous forme d’un graphe.</p></li>
@@ -457,8 +457,8 @@ Réponses</label><div class="tabbed-content docutils">
 <section id="mise-en-situation-specifique">
 <h2>2. Mise en situation spécifique<a class="headerlink" href="#mise-en-situation-specifique" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="tabbed-set docutils">
-<input checked="checked" id="6af0ff98-e1bb-4182-9999-155b2bd07aa5" name="ed8e3339-bfc0-4979-aa89-520c20962e6d" type="radio"/>
-<label class="tabbed-label" for="6af0ff98-e1bb-4182-9999-155b2bd07aa5">
+<input checked="checked" id="4d97f631-1989-40f5-8000-93c1c85ee541" name="44afca27-a335-49d1-9b28-f4ed9dd5c4ea" type="radio"/>
+<label class="tabbed-label" for="4d97f631-1989-40f5-8000-93c1c85ee541">
 Exemple 1</label><div class="tabbed-content docutils">
 <p>L’enseignant distribue à chaque élève un graphe suffisamment compliqué dans lequels la longueur des
 arêtes est indiquée. Ils doivent trouver, individuellement, le plus court chemin reliant deux points.
@@ -472,8 +472,8 @@ Le graphe est tel qu’il y a plusieurs plus courts chemins.</p>
 <li><p>Y a-t-il des chemins plus courts que ça ?</p></li>
 </ul>
 </div>
-<input id="4995b16d-48b4-4627-baca-38e8ffbd2f3b" name="ed8e3339-bfc0-4979-aa89-520c20962e6d" type="radio"/>
-<label class="tabbed-label" for="4995b16d-48b4-4627-baca-38e8ffbd2f3b">
+<input id="0c4db98c-c042-44d8-9321-2d4d76909448" name="44afca27-a335-49d1-9b28-f4ed9dd5c4ea" type="radio"/>
+<label class="tabbed-label" for="0c4db98c-c042-44d8-9321-2d4d76909448">
 Exemple 2</label><div class="tabbed-content docutils">
 <p>Dans un voyage en voiture, on ne veut pas forcément le plus court chemin, mais souvent le plus rapide.</p>
 <p>Par exemple, on va prendre l’autoroute de contournement de Lausanne qui est plus longue, mais plus rapide que
@@ -570,8 +570,8 @@ Formalisation<div class="summary-down docutils">
 <h2>6. Exemples d’utilisation<a class="headerlink" href="#exemples-dutilisation" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’enseignant fait un exemple au tableau avec les élèves et leur propose ensuite d’essayer seuls ou par deux sur des graphes donnés.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="16e2146b-b2fd-4f64-b804-4c56611d8095" name="032b1ee1-d8c4-47cf-8029-164afaf41ec3" type="radio"/>
-<label class="tabbed-label" for="16e2146b-b2fd-4f64-b804-4c56611d8095">
+<input checked="checked" id="481d4d18-17d8-413c-8066-24078abcccf5" name="c1b8296c-441a-4314-86c0-049f6f24b728" type="radio"/>
+<label class="tabbed-label" for="481d4d18-17d8-413c-8066-24078abcccf5">
 Jeu : de VERSE à LITRE</label><div class="tabbed-content docutils">
 <p>Ce jeu consiste à trouver une manière de relier deux mots ayant le même nombre de lettres (par exemple VERSE et LITRE) avec une série de mots existants dont chaque mot ne diffère du précédent que d’une seule lettre. Dans notre exemple, une solution est donnée par :</p>
 <p>VERSE - VERRE - SERRE - SEVRE - LEVRE - LIVRE - LITRE</p>
@@ -581,8 +581,8 @@ quel graphe serait-il nécessaire de construire, à quoi correspondrait ses nœu
 <p>Selon le niveau atteint en programmation, une petite application proposant ce jeu et les solutions correspondantes pourrait être
 programmée par exemple en utilisant une libraire de graphe telle que igraph ou networkX en python.</p>
 </div>
-<input id="9a58fd01-72c1-412b-b12e-a4ddd58b0609" name="032b1ee1-d8c4-47cf-8029-164afaf41ec3" type="radio"/>
-<label class="tabbed-label" for="9a58fd01-72c1-412b-b12e-a4ddd58b0609">
+<input id="32ed34a9-2c69-4d13-a480-76f951491cb4" name="c1b8296c-441a-4314-86c0-049f6f24b728" type="radio"/>
+<label class="tabbed-label" for="32ed34a9-2c69-4d13-a480-76f951491cb4">
 Réseautage</label><div class="tabbed-content docutils">
 <p>L’autre jour, vous avez flashé sur quelqu’un que vous ne connaissez pas mais dont vous avez réussi à obtenir
 le nom. Après avoir passé beaucoup de temps sur son profil dans votre réseau social préféré, vous recevez
