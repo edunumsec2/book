@@ -4,6 +4,6 @@ Dans cette partie, nous proposons des activités de cours qui permettent de déc
 
 ```{toctree}
 :maxdepth: 1
-Jeu de l'imitation <jeuimitation>
-Smaky <smaky>
+Jeu de l'imitation <jeuimitation_new>
+Smaky <smaky_new>
 ```
