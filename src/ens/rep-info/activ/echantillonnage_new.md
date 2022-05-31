@@ -373,7 +373,9 @@ puresignalssum(400, 5)
 ```
 
 (echantillonnage.discretisation)=
-## Deuxième séance : discrétisation et fréquence d'échantillonnage 
+## Deuxième séance
+
+Résumé : Discrétisation et fréquence d'échantillonnage 
 
 *Durée totale : 45 mn*
 

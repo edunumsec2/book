@@ -21,6 +21,12 @@ Description de l'activité
 * Dynamique (groupe / individuel) : 
 * Taille du groupe : 
 ```
+(optionnel)
+(formatbmp.objectifs)=
+### Objectifs pédagogiques détaillés
+
+(formatbmp.materiel)= 
+### Matériel détaillé
 
 ```{dropdown} **Déroulement**
 

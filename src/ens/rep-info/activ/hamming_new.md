@@ -1,37 +1,54 @@
-# 4. Redondance et code de Hamming
+# Redondance et code de Hamming
 
-## 4.1. Introduction
+---- 
 
 Une introduction à la redondance et au code de Hamming.
 
-## 4.2. Objectifs du cours
-
-
-## 4.3. Durée
-
-2 périodes de cours en classe (théorie et exercices *déconnectés*).
-
-## 4.4. Matériel requis
-
-Des jetons avec 2 faces différentiables avec un support pour les positionner.
-Les activités décrites ci-dessous sont basées sur des messages de 4 bits, le support doit pouvoir en contenir le double, soit 8.
-
-## 4.5. Accroche
-
 Nous allons voir ce qui peut se passer lorsque des messages numériques sont enregistrés ou envoyés depuis un expéditeur vers un destinataire.
 
-## 4.6. Marche à suivre
+----
 
-### 4.6.1. Étape 1 - Envoyer un message
+```{admonition} Caractéristiques
+:class: hint
 
-#### Objectif : Mettre en place le contexte et le principe de l'activité
+* Nom : Redondance et code de Hamming
+* Durée : 2 périodes
+* Thème : Représentation de l'information
+* Objectifs d’apprentissage : `à compléter`
+* Notions fondamentales : `à compléter`
+* Approche pédagogique : Débranchée
+* Matériel : Des jetons avec 2 faces différentiables avec un support pour les positionner.
+Les activités décrites ci-dessous sont basées sur des messages de 4 bits, le support doit pouvoir en contenir le double, soit 8.
+* Niveau : `à compléter`
+* Mots-clés : `à compléter`
+* Dynamique (groupe / individuel) : `à compléter`
+* Taille du groupe : `à compléter`
+```
+
+```{dropdown} **Déroulement**
+
+1. {ref}`Contexte<hamming.contexte>` (`durée : à compléter`) de l'activité, avec présentation des enjeux. 
+
+1. {ref}`Envoyer un message<hamming.envoyer>` (`durée : à compléter`), où l'enseignant·e explique le coeur de l'activité.
+```
+
+(algo-tri.conclusion)=
+## Conclusion
+
+*Durée : 5-10 mn*
+
+
+(hamming.contexte)=
+## Contexte
+
+*Durée : `à compléter`*
 
 On définit 16 mots pouvant former différentes phrases (sujet-verbe ; complément ; adjectif), le tout peut donc être encodé sur 4 bits.  
 On sépare la classe en 2 groupes, les expéditeurs et les destinataires, chaque groupe pouvant lui aussi être subdivisé en sous-groupe qui se charge d'une partie de la phrase.  
 Les expéditeurs définissent le message, l'encode en positionnant les jetons sur les supports et envoient le message en passant par le prof
 
-
-#### Déroulement
+(hamming.envoyer)=
+## Envoyer un message
 
 Commencer par définir les mots qui vont être utilisés pour écrire les messages, on peut par exemple utiliser 4 phrases ayant la même structure.
 Ainsi, il sera possible de générer des erreurs qui rendront la phrase transmise incompréhensible, ou pas.
