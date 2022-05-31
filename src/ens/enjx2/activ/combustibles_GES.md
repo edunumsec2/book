@@ -1,4 +1,8 @@
-# Numérique et environnement : le problème de l'énergie (consommée pendant le cycle de vie des produits numériques) : combustibles fossiles / non fossiles et GES
+# Numérique et environnement - le problème de l'énergie (consommée pendant le cycle de vie des produits numériques) : combustibles fossiles / non fossiles et GES - Deux activités
+
+On propose ici deux activités sur la thématique :
+- activité 1 : combustibles fossiles versus bois
+- activité 2 : combustibles fossiles versus éolien
 
 Classe : 1M, 2M
 
@@ -8,9 +12,9 @@ Difficulté conceptuelle : moyenne
 
 ## Prérequis structurel
 
-L'activité se déroule sur une séance de 45 minutes. Elle s'intègre idéalement dans une séquence de deux périodes, la première comprenant une partie d'exposé (30 mn), puis une activité courte sur les effets de la commercialisation et de l'obsolescence programmée sur la production de GES (données Iphones Apple). L'intégralité de cette séquence est présentée dans le document Numérique et environnement.odp.
+Chaque activité se déroule sur une séance de 45 minutes. Chacune s'intègre idéalement dans une séquence de deux périodes, la première comprenant une partie d'exposé (30 mn), puis une activité courte sur les effets de la commercialisation et de l'obsolescence programmée sur la production de GES (données Iphones Apple). L'intégralité de cette séquence est présentée dans le document Numérique et environnement.odp.
 
-L'activité est présentée par l'enseignant au **vidéo-projecteur** (fichier présentation de type powerpoint).
+Chaque activité est présentée par l'enseignant au **vidéo-projecteur** (fichier présentation de type powerpoint).
 Il dispose de sa **fiche enseignant** reprenant la fiche élève, avec les réponses.
 Les élèves travaillent en autonomie devant leurs postes, seuls ou en binômes ; la **fiche élève** (fichier excel) est accessible sur leur espace, cette fiche reprenant les éléments de l'énoncé ; ils disposent d'une **feuille** et de **stylos**, ainsi que d'une **calculatrice** physique ou en ligne afin d'effectuer des calculs, et de prendre des notes éventuelles.
 
@@ -23,11 +27,11 @@ Configuration pour les machines élèves : logiciel **excel**, connexion **inter
 
 ### Objectif informatique lié aux enjeux environnementaux du numérique
 
-Le premier objet de cette activité est de permettre à l'élève d'appréhender la complexité d'une réflexion pertinente sur le sujet ! Quantifier, ordonner, comparer des ordres de grandeurs (donc "re-mathématiser" l'information), relier énergie et types de combustibles (fossiles / non fossiles), rendement énergétique, stockage (masse, volume), émission de gaz à effets de serre (GES, plus précisément CO2)...
+Le premier objet de chaque activité est de permettre à l'élève d'appréhender la complexité d'une réflexion pertinente sur le sujet ! Quantifier, ordonner, comparer des ordres de grandeurs (donc "re-mathématiser" l'information), relier énergie et types de combustibles (fossiles / non fossiles), rendement énergétique, stockage (masse, volume), émission de gaz à effets de serre (GES, plus précisément CO2)...
 
 ### Objectif informatique lié à l'utilisation «informatique» du tableur
 
-Le deuxième objet de cette activité est d'établir un pont entre la perception bureautique que peuvent avoir les élèves du tableur, issue du cycle d'orientation, et une perception informatique de l'outil à travers ses fonctionnalités calculatoires et d'automatisation.
+Le deuxième objet de chaque activité est d'établir un pont entre la perception bureautique que peuvent avoir les élèves du tableur, issue du cycle d'orientation, et une perception informatique de l'outil à travers ses fonctionnalités calculatoires et d'automatisation.
 
 
 ## Spécifications
@@ -44,6 +48,12 @@ Mathématique : proportionnalité
 
 ### Moments didactiques
 
+Activité 1
+
+à compléter ...
+
+Activité 2
+
 à compléter ...
 
 ### Supports didactiques
@@ -51,14 +61,15 @@ Mathématique : proportionnalité
 - Tableur Excel sur fiche élève intégrant l'énoncé.
 - Tableau et vidéoprojecteur pour la visualisation de l'énoncé et la manipulation en direct du tableur, tableau blanc.
 
-Les fichiers suivants sont à télécharger pour l'activité complète : {download}`présentation <media/Numérique et environnement.odp>`,{download}`fiche élève <media/Activité Numérique et Environnement Fiche élève.ods>`, {download}`fiche enseignant <media/Activité Numérique et Environnement Fiche enseignant.ods>`.
+Activités 1 & 2 : les fichiers suivants sont à télécharger pour l'activité complète : {download}`présentation <media/Numérique et environnement.odp>`,{download}`fiche élève <media/Activité Numérique et Environnement Fiche élève.ods>`, {download}`fiche enseignant <media/Activité Numérique et Environnement Fiche enseignant.ods>`.
+
 
 
 ### Durée
-L'activité se déroule sur une période de 45 mn en demi-classe, la séquence globale sur deux périodes.
+Chaque activité se déroule sur une période de 45 mn en demi-classe, la séquence globale sur deux périodes.
 
 
-### Déroulement
+### Déroulement Activité 1
 
 #### Présentation de l'activité globale, puis explicitation de l'énoncé de la première activité : combustibles fossiles et bois (10 mn)
 
@@ -123,3 +134,7 @@ En diapositive 47, l'enseignant invite les élèves à réfléchir sur nos compo
 
 Les élèves sont invités à compléter le questionnaire dont ils trouvent le lien sur leur fiche, et qui s'affiche au tableau (diapositive 48).
  
+
+
+### Déroulement Activité 2
+
