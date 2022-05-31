@@ -1,14 +1,12 @@
 ![modulo-banner](https://github.com/edunumsec2/modulo2/blob/main/source/_static/assets/modulo-head-banner.svg)
 
-# Informatique au Gymnase / Pilote
+# Informatique au Gymnase
 
 ## Introduction
 
 Des moyens d'enseignement pour l'informatique en discipline obligatoire au niveau Secondaire II ont été produits par un groupe de travail issu d'une collaboration entre la DGEP, l'EPFL, la HEP Vaud et l'UNIL. Dans le cadre de l’introduction de cette discipline, prévue à la rentrée 2022 dans le canton de Vaud, l'objectif de ces ressources est de proposer aux enseignant·e·s d'informatique des contenus théoriques, des séries d'exercices et des idées d'activités.
 
-En accord avec la DGEP, une partie de ce matériel est déjà mise à disposition des enseignant·e·s vaudois·e·s pour une première phase pilote.
-
-Les ressources sont accessibles via le [site web](https://modulo-info.ch/) (Username : edunum, Password : Edunumsecondaire2). Elles peuvent être utilisées telles quelles ou modifiées via un [dépôt GitHub](https://github.com/edunumsec2/book).
+Les ressources sont accessibles via le [site web](https://modulo-info.ch/) (Pour la partie "enseigner" ; Username : edunum, Password : Edunumsecondaire2). Elles peuvent être utilisées telles quelles ou modifiées via un [dépôt GitHub](https://github.com/edunumsec2/book).
 
 ## Table des matières
 
@@ -20,7 +18,6 @@ Les ressources sont accessibles via le [site web](https://modulo-info.ch/) (User
 - [Code de conduite](#code-de-conduite)
 - [Documents importants](#documents-importants)
 - [Chapitrage](#chapitrage)
-- [Structure du dépôt GitHub : à modifier](#structure-dépôt-GitHub)
 - [Installation](#installation)
   - [Installation recommandée](#installation-recommandée)
   - [Pré-requis](#pré-requis)
@@ -67,21 +64,13 @@ Les ressources sont découpées selon un chapitrage qui correspond au plan d'ét
 [Architecture des ordinateurs](https://apprendre.modulo-info.ch/content/appr/theme/archi/accueil/eleve.html)
 : Il est question ici de notions telles que *les portes logiques*, *les transistors*, *l'architecture de Von Neumann*, et autres concepts essentiels à la compréhension de ce qui se passe au niveau physique et électronique dans un ordinateur.
 
-## Structure dépôt GitHub (:warning: à modifier)
-
-* [config](https://github.com/edunumsec2/book/tree/master/config) contient essentiellement les documents .yml et .py qui servent à générer la version html statique de la documentation. Ce qui est présent dans ce dossier tire sa source dans la documentation [Sphinx](https://www.sphinx-doc.org/en/master/index.html), ainsi que la documentation [jupyter-book](https://jupyterbook.org/intro.html). 
-* [content](https://github.com/edunumsec2/book/tree/master/content) contient le contenu du cours, découpé en *annexes*, *enjeux* (pour enjeux de société), *readme*, *theme*. C'est dans le dossier *theme* que vous trouverez les documents sources des différentes thématiques. Dans les documents sources, il existe deux extensions : les documents .md, et les .ipynb. Les documents .md sont rédigés dans une sytanxe Mardown étendue, le [MyST](https://myst-parser.readthedocs.io/en/latest/). Les documents .ipynb sont à l'origine des documents créés pour [jupyter notebook](https://jupyter.org/). Les deux syntaxes sont tolérées pour la génération du site html statique via l'outil [jupyter-book](https://jupyterbook.org/intro.html). 
-* [docs](https://github.com/edunumsec2/book/tree/master/docs) contient les *archives* de la documentation, à savoir des fichiers qui ne sont plus utilisés dans la version actuelle du livre. Le dossier *landing*, contient le .html qui génère la [page d'accueil](https://edunumsec2.ch/). *media*, comme d'ailleurs tous les autres dossiers portant ce nom, contient les media utilisés dans le dossier parent en question. *palette* contient des indications relatives à la palette graphique du projet. *wiki* contient les tutoriels nécessaires à l'utilisation du dépôt GitHub. 
-
 ## Installation 
 
-⚠️ *Attention : l'installation qui suit N'EST PAS nécessaire dans le cadre du projet pilote. Elle figure ici à titre informatif pour celles et ceux qui souhaitent comprendre l'architecture globale du projet et veulent avoir une idée de l'intégralité des possibilités qu'offre un modèle de projet open source. Après la première année de pilote, et compte tenu des retours qui auront été faits, le projet se déploiera entièrement, et les enseignant.es d'informatique auront tout le loisir d'installer l'environnement ci-dessous et de s'amuser à leur guise avec la documentation open source de ce dépôt GitHub.* 
-
-Pour ceux et celles qui souhaitent utiliser l'environnement Jupyter Book pour tester des contenus et participer au développement, la marche à suivre est la suivante : 
+Pour ceux et celles qui souhaitent utiliser l'environnement Sphinx pour tester des contenus et participer au développement, la marche à suivre est la suivante : 
 
 ### Installation recommandée
 
-Modulo2 est basé sur le générateur de documentation [Sphinx](https://www.sphinx-doc.org/en/master/) et utilise le template [Furo](https://github.com/pradyunsg/furo).
+Modulo est basé sur le générateur de documentation [Sphinx](https://www.sphinx-doc.org/en/master/) et utilise le template [Furo](https://github.com/pradyunsg/furo).
 
 ### Pré-requis
 

@@ -63,3 +63,5 @@ nous faisons connaissance avec les concepts informatiques tel que fonctions, bou
    Le document présenté ici ne représente qu'une **étape intermédiaire** de travail. Une version officielle existera pour la rentrée d'août 2022. 
    Ce que vous consultez ici est susceptible de **modifications**, tant sur la forme que sur le fond. Nous vous remercions de votre compréhension. 
    Bonne lecture !
+
+Cette documentation est produite via le template Sphinx : https://github.com/pradyunsg/furo

@@ -1,4 +1,4 @@
-# 4. Architecture générale et composants
+# 5. Architecture générale et composants
 
 
 
@@ -31,7 +31,7 @@ On peut également citer les cartes sons, réseau, sorties USB etc. Ce type de m
 On distingue ce matériel, partie intégrante de la machine, avec les périphériques externes qui lui sont reliés par des câbles ou des moyens de communication sans fil.
 <br> <br>
 
-## 4.1. La mémoire
+## 5.1. La mémoire
 
 **ROM** (Read-Only Memory) : ce que l’on nomme ROM constitue une mémoire « fixe », statique de la machine, dont la taille est définie à la conception. On parle de mémoire morte, ou mémoire en lecture seule. Ce qu’elle stocke ne « part pas » lors de la mise hors tension de la machine. 
       
@@ -160,7 +160,7 @@ Lecteur CD
 <br> <br>
 
 
-## 4.2. Le CPU (Central Processing Unit)
+## 5.2. Le CPU (Central Processing Unit)
 
 Il s’agit du processeur de l’ordinateur. C’est le cœur de l’ordinateur, c’est à dire l’espace où va se dérouler l’ensemble des opérations et instructions de la machine. C’est un peu le «cerveau» de la machine. 
 Le CPU va aller chercher les informations dans la ROM en passant par la RAM qui est donc essentielle pour le traitement du processeur. On parle d’Unité Centrale de Traitement en français. Le processeur sert à l’échange de données entre composants informatiques : disques durs – carte graphique – ROM – RAM. Il coordonne, interprète, calcule, exécute.
@@ -200,7 +200,7 @@ Carte mère
 
 <br> <br>
 
-## 4.3. Les entrées-sorties
+## 5.3. Les entrées-sorties
 Un ordinateur traite de l'information au niveau de sa mémoire et de son processeur. Il récupère donc cette information via des ports d'entrée et redistribue une information après traitement via des ports de sortie. L'ensemble de cet environnement d'entrées-sorties constitue ce que l'on nomme les périphériques : clavier, écran, enceintes audio ou casque, imprimante, souris ou pad, disques externes, microphone, réseau ethernet ou wifi, etc.
 Certains périphériques sont par nature destinés uniquement à l'entrée de données (claviers et souris, microphones), tandis que d'autres s'occupent avant tout de la sortie (imprimantes, écrans non-tactiles) ; d'autres encore permettent à la fois l'entrée et la sortie de données (disques durs, disquettes, CD-ROM inscriptibles, clés usb).
 
@@ -225,7 +225,7 @@ Le système d'exploitation d'un ordinateur ne connait pas toujours le fonctionne
 
 <br> <br>
 
-## 4.4 Les bus
+## 5.4 Les bus
 Un bus informatique est un dispositif de transmission de données partagé entre plusieurs composants d'un système informatique. Le bus informatique est la réunion des parties matérielles et immatérielles qui permet la transmission de données entre les composants de la machine.
 On distingue deux types de bus : le FSB (Front Side Bus), ou *bus système*, et le bus d'extension. Le premier permet au processeur de communiquer avec la mémoire vive, le second est une voie de liaison entre le processeur et les cartes d'extension. Des connecteurs d'extension présents sur la carte mère permettent d'y ajouter de nouveaux composants : cartes d'extension tels que carte son, carte d'acquisition vidéo, carte réseau, etc.
 Il existe différents types de bus d'extension : [ISA, EISA, PCI, PCMCIA, VESA.](http://www.dicofr.com/cgi-bin/n.pl/dicofr/definition/20010101000612)
@@ -271,7 +271,7 @@ Le bus de contrôle est constitué de lignes de contrôle qui envoient chacune u
 
 <br> <br>
 
-## 4.5. Autres composants matériels
+## 5.5. Autres composants matériels
 
 ### L'alimentation
 L'alimentation branchée sur le secteur transforme et fournit l'énergie nécessaire à la carte mère, mais l'alimentation est aussi directement reliée à certains composants tel que le lecteur/graveur de DVD ou le disque dur par exemple. 

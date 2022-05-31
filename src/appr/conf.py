@@ -71,6 +71,8 @@ exclude_patterns = []
 #
 
 html_theme = 'furo'
+html_show_sphinx = False
+html_show_copyright = False
 html_favicon = '../static/modulo-icon.ico'
 html_title = 'Apprendre'
 html_theme_options = {

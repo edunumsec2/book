@@ -1,9 +1,15 @@
-# Histoire de l'informatique
+(histoire)=
+Histoire de l'informatique
+===========================
+
+Dans ce chapitre, nous proposons des activités que des propositions de calendrier (plans didactiques)
 
 ```{toctree}
-:maxdepth: 2
-:hidden:
-Jeu de l'imitation <jeuimitation>
-Smaky <smaky>
-Évalutation <eval>
+:maxdepth: 1
+:numbered: 1
+
+Activités <activ/index>
+Plan <PlanDidac/index>
+Evaluation <eval/index>
 ```
+

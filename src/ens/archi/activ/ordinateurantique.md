@@ -1,6 +1,6 @@
 (ordinateurantique)=
 L'ordinateur antique
-===========================
+====================
 
 ## Objectifs
 L'objectif de cette activité est de faire découvrir aux élèves le fonctionnement d'un ordinateur dans une version "imaginée" et mécanique. On va ainsi découvrir tous les concepts essentiels qui sont présents dans les ordinateurs modernes.
@@ -19,7 +19,7 @@ Fiche
 
 Résumé
 ^^^^^
-Dans un contexte pseudo-archéologique, l'article propose d'analyser le fonctionnement d'un ordinateur mécanique qui repose sur les mêmes principes que les ordinateurs modernes. Même si la proposition est invraissemblable, elle propose une machine imaginaire qui reproduit le fonctionnement des ordianteurs modernes en évaquant tous les aspects technologiques liés à l'électronique.
+Dans un contexte pseudo-archéologique, l'article propose d'analyser le fonctionnement d'un ordinateur mécanique qui repose sur les mêmes principes que les ordinateurs modernes. Même si la proposition est invraissemblable, elle propose une machine imaginaire qui reproduit le fonctionnement des ordinateurs modernes en évaquant tous les aspects technologiques liés à l'électronique.
 Au travers de cette lecture, l'élève pourra ainsi décourir les notions de :
 * Représentation binaire
 * Porte logique

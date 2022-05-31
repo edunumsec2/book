@@ -100,6 +100,7 @@ Présentation des différents éléments qui complètent l'ALU pour obtenir main
 ```
 ```{dropdown} Contenu Théorique 2 ()
 
+Visual 6502 et calcul de la vitesse si tout était écrit sur un ruban.
 ```
 ```{dropdown} Pratique
 

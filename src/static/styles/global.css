@@ -3,6 +3,26 @@
     --primary-dark: #7C3EFF;
 }
 
+@page {
+    size: A4;
+    margin: 25mm 25mm 25mm 25mm;
+}
+
+@media print {
+    header, aside, footer, #progress-ring, .content-icon-container {
+        display: none !important;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid !important;
+    }
+
+    html {
+        height: 100%;
+        overflow: scroll;
+    }
+}
+
 html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -71,4 +91,10 @@ body.modulo-dark .dropdown {
 
 .admonition {
     margin: 1.75rem 0 1.75rem 0;
+}
+
+
+body {
+    --sidebar-item-spacing-vertical: 0.3rem;
+
 }

@@ -93,8 +93,8 @@ Une solution possible est la suivante:
 ```
 répeter jusqu'à courant.vide():
     courant.mettre()
-    droite.disposer(petite,au-dessous)
-droite.courant()
+    gauche.disposer(petite,au-dessous)
+gauche.courant()
 ```
 Cette on peut appler cette fonction courant.classer() et l'ajouter à notre répertoire de fonctions 
 

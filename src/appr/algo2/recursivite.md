@@ -80,7 +80,7 @@ Même si le tri rapide et le tri fusion ont la même complexité temporelle, c'e
 
 
 <span id="recursivite"></span>
-# 4.1 Focus sur la récursivité
+## 4.1 Focus sur la récursivité
 
 Nous allons maintenant programmer l’{glo}`algo|algorithme` du Tri par fusion. Pour rappel, la première phase de l’{glo}`algo|algorithme` divise *continuellement* le tableau par deux, comme illustré dans la première <a href="#diviser">figure</a> ci-dessus. Voici le code qui permet de diviser un tableau en deux une seule fois :
 
@@ -100,9 +100,9 @@ def tri_par_fusion(elements):
 	elements_droite = elements[milieu:]
 ```
 
-La division utilisée pour déterminer le milieu du tableau est une division entière `//` au lieu de `/`. En effet, on souhaite opbtenir un résultat entier et non un nombre à virgule, car les indices pour accéder aux éléments du tableau doivent être des entiers. Par exemple, si le tableau contient 5 éléments, cela n’aurait pas de sens de prendre les premiers 2.5 éléments, et 5//2 nous retournerait 2.
+La division utilisée pour déterminer le milieu du tableau est une division entière `//` au lieu de `/`. En effet, on souhaite obtenir un résultat entier et non un nombre à virgule, car les indices pour accéder aux éléments du tableau doivent être des entiers. Par exemple, si le tableau contient 5 éléments, cela n’aurait pas de sens de prendre les premiers 2.5 éléments, et 5//2 nous retournerait 2.
 
-Ce qui suit est très intéressant. Dans l’étape d’après, on souhaite faire exactement la même chose pour les nouveaux tableaux `elements_gauche` (équivalent à `elements[:milieu]`) et `elements_droite` (équivalent à `elements[milieu:]`), c'est-à dire que l'on souhaite à nouveau les diviser en deux, comme sur la deuxième ligne dans la première <a href="#diviser">figure</a>  ci-dessus. On va donc appeller la fonction `tri_par_fusion` sur les deux moitiés de tableaux :
+Ce qui suit est très intéressant. Dans l’étape d’après, on souhaite faire exactement la même chose pour les nouveaux tableaux `elements_gauche` (équivalent à `elements[:milieu]`) et `elements_droite` (équivalent à `elements[milieu:]`), c'est-à dire que l'on souhaite à nouveau les diviser en deux, comme sur la deuxième ligne dans la première <a href="#diviser">figure</a>  ci-dessus. On va donc appeler la fonction `tri_par_fusion` sur les deux moitiés de tableaux :
 
 
 ```{code-block} python
@@ -122,7 +122,7 @@ def tri_par_fusion(elements):
 
 ```
 
-Regardez bien ce qui se passe. Nous avons fait appel à la même {glo}`fonction|fonction` `tri_par_fusion` que l’on est en train de définir ! Pour l’instant cette fonction ne fait que diviser le tableau `elements` en deux, elle va donc diviser le tableau reçu en entrée en deux. Au début le tableau en entrée sera le tableau entier, mais ensuite il s'agira des deux moitiés du tableau, puis des moitiés de la moitié et ainsi de suite. La fonction `tri_par_fusion` appelle la fonction `tri_par_fusion` (elle s'appelle donc elle-même), qui va à nouveau s'appeller et ainsi de suite...
+Regardez bien ce qui se passe. Nous avons fait appel à la même {glo}`fonction|fonction` `tri_par_fusion` que l’on est en train de définir ! Pour l’instant cette fonction ne fait que diviser le tableau `elements` en deux, elle va donc diviser le tableau reçu en entrée en deux. Au début le tableau en entrée sera le tableau entier, mais ensuite il s'agira des deux moitiés du tableau, puis des moitiés de la moitié et ainsi de suite. La fonction `tri_par_fusion` appelle la fonction `tri_par_fusion` (elle s'appelle donc elle-même), qui va à nouveau s'appeler et ainsi de suite...
 
 Si on laisse le programme tel quel, on est face à un problème. La fonction `tri_par_fusion` continue de s'appeler elle-même et ce processus ne s’arrête jamais. En réalité, il faut arrêter de diviser lorsque les tableaux obtenus ont au moins un élément ou lorsqu'ils sont vides, car dans ces cas on ne peut plus les diviser en deux. On rajoute donc cette **<span style="color:rgb(89, 51, 209)">condition d'arrêt</span>** de la récursion :
 
