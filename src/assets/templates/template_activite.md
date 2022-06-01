@@ -2,6 +2,8 @@
 
 ---- 
 
+Accroche de l'activité (si existante)
+
 Description de l'activité
 
 ----
@@ -12,77 +14,63 @@ Description de l'activité
 * Nom : 
 * Durée : 
 * Thème : 
-* Objectifs d’apprentissage : 
+* Objectifs d’apprentissage : (si objectifs pédagogiques détaillés, utiliser syntaxe {ref}`voir ci-dessous<nomactivite.objectifsdetailles>)
 * Notions fondamentales : 
 * Approche pédagogique : 
-* Matériel : 
+* Matériel : (si matériel détaillé, utiliser syntaxe {ref}`voir ci-dessous<nomactivite.materieldetaille>`)
 * Niveau : 
 * Mots-clés : 
 * Dynamique (groupe / individuel) : 
 * Taille du groupe : 
+* Pré-requis : (si pré-requis détaillés, utiliser syntaxe {ref}`voir ci-dessous<nomactivite.prerequis>`)
 ```
-(optionnel)
-(formatbmp.objectifs)=
-### Objectifs pédagogiques détaillés
 
-(formatbmp.materiel)= 
-### Matériel détaillé
+(nomactivite.objectifsdetailles)=
+**Objectifs pédagogiques détaillés**^1
+
+(nomactivite.materieldetaille)= 
+**Matériel détaillé**
+
+(nomactivite.prerequis)= 
+**Pré-requis détaillés**
 
 ```{dropdown} **Déroulement**
 
-*note : les catégories ci-dessous sont des exemples*
+1. {ref}`Nom de l'étape 1<nomactivite.nomdeletape1>` (5-10 mn) brève description de l'étape, si possible. 
 
-1. {ref}`Mise en situation générale<algo-tri.situation>` (5-10 mn) autour du concept de l'archivage traditionnel, son histoire, son utilité, son organisation, ce qu'il a permis comme pratique, et la fonction fondamentale du tri dans cette technique
+1. {ref}`Nom de l'étape 2<nomactivite.nomdeletape2>` (5-10 mn) brève description de l'étape, si possible. 
 
-1. {ref}`Exploration<algo-tri.exploration>` (20-30 mn) en groupe au cours de laquelle les élèves explorent des procédures de tri induites par un dispositif physique
+1. {ref}`Nom de l'étape 3<nomactivite.nomdeletape3>` (5-10 mn) brève description de l'étape, si possible. 
 
-1. {ref}`Mise en commun<algo-tri.miseencommun>` (15 mn) au cours de laquelle les élèves discute et présentent les résultats de
-leurs recherche
-
-1. {ref}`Formalisation<algo-tri.formalisation>` (20 mn) des divers algorithmes de tri. 
-
-1. {ref}`Exercices<algo-tri.exercices>` (10-15 mn) d'application des algorithmes.
-
-1. {ref}`Conclusion<algo-tri.conclusion>` (5-10 mn) en bouclant la boucle sur l'archivage informatisé et les pratiques (positives et négatives) qu'il permet.
-
+1. {ref}`Nom de l'étape n<nomactivite.nomdeletapen>` (5-10 mn) brève description de l'étape, si possible. 
 ```
 
-(algo-tri.situation)=
-## Mise en situation générale
+(nomactivite.nomdeletape1)=
+## Nom de l'étape 1 
 
 *Durée : 5-10 mn*
 
+Description de l'étape. Possibilité d'utiliser des sous-titres. 
 
-(algo-tri.exploration)=
-## Exploration
-
-*Durée : 20-30 mn*
-
-
-(algo-tri.miseencommun)=
-## Mise en commun
-
-*Durée : 15 mn*
-
-
-(algo-tri.formalisation)=
-## Formalisation
-
-*Durée : 20 mn*
-
-```{admonition} Remarque
-Le tri par sélection n'est pas vraiment adaptés à ce dispositif physique basé sur les
-piles. Une variante de l'activité consisterait à donner au autre dispositif basé sur les tableaux à une partie de la classe afin de faire émerger ces algorithmes. 
-```
- 
-
-(algo-tri.exercices)=
-## Exercices
-
-*Durée : 10-15 mn*
-
-(algo-tri.conclusion)=
-## Conclusion
+(nomactivite.nomdeletape2)=
+## Nom de l'étape 2
 
 *Durée : 5-10 mn*
 
+Description de l'étape. Possibilité d'utiliser des sous-titres. 
+
+(nomactivite.nomdeletape3)=
+## Nom de l'étape 3
+
+*Durée : 5-10 mn*
+
+Description de l'étape. Possibilité d'utiliser des sous-titres. 
+
+(nomactivite.nomdeletapen)=
+## Nom de l'étape n
+
+*Durée : 5-10 mn*
+
+Description de l'étape. Possibilité d'utiliser des sous-titres. 
+
+[^1] : les éléments "détaillés" sont optionnels. On peut se contenter de ce qui apparaît dans les "Caractéristiques de l'activité". On peut aussi ajouter d'autres éléments "détaillés" (durée, notions fondamentales, niveau, etc.), si on le souhaite. 
