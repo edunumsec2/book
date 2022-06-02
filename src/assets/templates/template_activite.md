@@ -23,6 +23,7 @@ Description de l'activité
 * Dynamique (groupe / individuel) : 
 * Taille du groupe : 
 * Pré-requis : (si pré-requis détaillés, utiliser syntaxe {ref}`voir ci-dessous<nomactivite.prerequis>`)
+* Date de création de l'activité : 
 ```
 
 (nomactivite.objectifsdetailles)=
@@ -74,3 +75,5 @@ Description de l'étape. Possibilité d'utiliser des sous-titres.
 Description de l'étape. Possibilité d'utiliser des sous-titres. 
 
 [^1] : les éléments "détaillés" sont optionnels. On peut se contenter de ce qui apparaît dans les "Caractéristiques de l'activité". On peut aussi ajouter d'autres éléments "détaillés" (durée, notions fondamentales, niveau, etc.), si on le souhaite. 
+
+Pied de page modulo ? 
