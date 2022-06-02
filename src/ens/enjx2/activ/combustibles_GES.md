@@ -170,7 +170,7 @@ Les élèves sont invités à compléter le questionnaire dont ils trouvent le l
 à rédiger ...
 
 
-### Expérimentation en classe
+### Expérimentation en classe 
 
 La séquence complète (exposé théorique, activité courte et activité 1) a été expérimentée sur plusieurs classes au collège de Genève.
 
