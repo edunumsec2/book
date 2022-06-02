@@ -1,56 +1,44 @@
-# Magie Binaire
+# 1. Magie Binaire
 
----- 
-
-*Vous allez faire un tour de magie !*
+## 1.1. Introduction
 
 Une introduction au binaire de manière ludique en misant sur la curiosité à comprendre le fonctionnement d’un tour de magie.
 
-----
+## 1.2. Objectifs du cours
 
-```{admonition} Caractéristiques
-:class: hint
-
-* Nom : Magie Binaire
-* Durée : 2 périodes
-* Thème : Représentation de l'information
-* Objectifs d’apprentissage : Faire découvrir le binaire, comment écrire et compter en binaire mais aussi comment utiliser le binaire pour encoder de l’information. Après cette séquence les élèves devraient avoir compris le système de numération des entiers positifs utilisant la base 2.  
+Faire découvrir le binaire, comment écrire et compter en binaire mais aussi comment utiliser le binaire pour encoder de l’information.  
+Après cette séquence les élèves devraient avoir compris le système de numération des entiers positifs utilisant la base 2.  
 Ils auront également assimilé le fait que n’importe quelle information peut être représentée par une suite ordonnée de 0 et de 1, ce qui est à la base de tout ce qu’ils peuvent voir et faire sur un ordinateur ou un smartphone.
-* Notions fondamentales : `à compléter`
-* Approche pédagogique : Débranchée
-* Matériel : Les 6 cartes pour faire le tour de magie. Disponible ici : {download}`fichier MagieBinaire.png<media/MagieBinaire.png>`
-* Niveau : `à compléter`
-* Mots-clés : `à compléter`
-* Dynamique (groupe / individuel) : `à compléter`
-* Taille du groupe : `à compléter`
-```
 
-```{dropdown} **Déroulement**
+## 1.3. Durée
 
-1. {ref}`Présentation du tour de magie<magiebinaire.presentation>` (10-15 mn) en le faisant aux élèves. 
+2 périodes de cours en classe (théorie et exercices *déconnectés*).
 
-1. {ref}`Compter en binaire<magiebinaire.compter>` (15-20 mn) et présentation de la différence entre base 2 et base 10. 
+## 1.4. Matériel requis
 
-1. {ref}`Retour en base 10<magiebinaire.retour>` (15-20 mn) où vous evenez sur la numérotation en base 10 pour présenter la forme canonique.  
+Les 6 cartes ci-dessous pour faire le tour de magie. Le fichier MagieBinaire.png est disponible en annexe pour impression.
 
-1. {ref}`Encodage de l'information<magiebinaire.encodage>` (10-15 mn) où vous introduisez la notion du nombre de “mots” différents en fonction du nombre de bits. 
+````{panels}
+:column: col-md
 
-1. {ref}`Explication du tour<magiebinaire.explication>` (10-15 mn) où il s'agit d'expliquer le fonctionnement du tour. 
+Cartes Magie Binaire
+^^^
+<img src="./MagieBinaire.png" alt="cartes" class="bg-primary" width="600px">
+````
 
-1. {ref}`Pour aller plus loin<magiebinaire.plusloin>`, vous avez différentes possibilités dont une version allégée du tour que les élèves doivent être capables de mettre en place. 
+## 1.5. Accroche
 
-```
+Vous allez faire un tour de magie !
 
-(magiebinaire.presentation)=
-## Présentation du tour de magie
+## 1.6. Marche à suivre
 
-*Durée : 10-15 mn*
+### 1.6.1. Étape 1 - Tour de magie [10-15 min.]
 
-*Objectif : attiser la curiosité*
+#### Objectif : Attiser la curiosité
 
-Faire le tour de magie suivant à différents élèves. Il est possible que certains d’entre eux le connaissent, soient peut-être capable de le réaliser mais il est très peu probable qu’ils puissent expliquer pourquoi ça marche. Interrogez-les au préalable et concentrez-vous sur ceux qui ne le connaissent pas.
+Faire le tour de magie suivant à différents élèves, il est possible que certains d’entre eux le connaissent, soient peut-être capable de le réaliser mais il est très peu probable qu’ils puissent expliquer pourquoi ça marche. Interrogez-les au préalable et concentrez-vous sur ceux qui ne le connaissent pas.
 
-### Tour de magie
+#### Tour de magie
 
 Demandez à un élève de choisir un nombre entre 1 et 63 et de le mémoriser sans vous le révéler. A l’aide des cartes vous allez lui révéler le nombre qu’il a secrètement choisi.
 
@@ -62,13 +50,15 @@ Variante 2
 
 Le secret du tour est simple, il suffit d'additionner le nombre en haut à gauche de chaque carte où son nombre est présent.
 
+#### Accroche
 
-(magiebinaire.compter)=
-## Compter en binaire
+Vous allez faire ce qu’aucun magicien ne fait, vous allez expliquer le fonctionnement d'un tour de magie, mais comme c’est un tour de magie binaire, il faut d’abord acquérir les bases du binaire...
 
-*Durée : 15-20 mn*
+### 1.6.2. Étape 2 - Compter en binaire [15-20 min.]
 
-*Objectif : Comprendre comment représenter des nombres entiers positifs à l'aide de la numération de position avec seulement deux chiffres : le 0 et le 1.*
+#### Objectif
+
+Comprendre comment représenter des nombres entiers positifs à l'aide de la numération de position avec seulement deux chiffres : le 0 et le 1.
 
 Commencez par expliquer le fonctionnement en base 10.
 
@@ -76,15 +66,11 @@ Pour compter, on commence par 0 et on ajoute 1 pour passer au chiffre suivant et
 
 Faire la même démonstration en base 2.
 
-### Exercice 1
+#### Exercice 1
 
 Faire compter les élèves de 0 à 20 (ou plus) en binaire sur papier, ils peuvent écrire le nombre correspondant en base 10 à côté.
 
-
-(magiebinaire.retour)=
-## Retour de base 2 à base 10
-
-*Durée : 15-20 mn*
+### 1.6.3. Étape 3 - Passage de la base 2 à la base 10 [15-20 min.]
 
 Revenez ensuite sur la numérotation en base 10 pour présenter la forme canonique.  
 Dans un système de position, comme le nôtre, pour connaître la valeur de chaque chiffre qui compose un nombre, il faut décomposer ce nombre pour identifier chaque chiffre et son coefficient.  
@@ -173,7 +159,8 @@ La forme canonique nous permet de faire facilement le passage de la base 2 à la
 10101_{(2)} = 1.2^4 + 0.2^3 + 1.2^2 + 0.2^1 + 1.2^0 = 21_{(10)}
 \end{equation*}
 ````
-### Exercice 2
+
+#### Exercice 2
 
 Réalisation d'un tableau de conversion des 11 premières puissances de 2.
 
@@ -187,7 +174,7 @@ Réalisation d'un tableau de conversion des 11 premières puissances de 2.
 \end{array} 
 ```
 
-### Exercice 3
+#### Exercice 3
 
 Faire les conversions décimales de plusieurs nombres binaires
 
@@ -196,7 +183,7 @@ Faire les conversions décimales de plusieurs nombres binaires
 * $1111_{(2)}$
 * $1111111_{(2)}$
 
-### Exercice 4
+#### Exercice 4
 
 Faire les conversions décimales de nombres binaires spécifiques
 
@@ -216,22 +203,12 @@ La dernière conversion de l'exercice 3 peut être obtenue rapidement si on rema
 \end{equation*}
 ````
 
-### Exercice 5
+#### Exercice 5
 
 À l'aide du tableau de l'exercice 2, comment peut-on passer de la base 10 à la base 2 ?  
 Faire les conversions binaires de différents nombres décimaux.
 
-*Durée : 10-15 mn*
-
-(algo-tri.conclusion)=
-## Conclusion
-
-*Durée : 5-10 mn*
-
-(magiebinaire.encodage)=
-## Encodage de l'information
-
-*Durée : 10-15 mn*
+### 1.6.4. Étape 4 - Encodage de l'information [10-15 min.]
 
 A l’instar du morse (0 = . ; 1 = - ), on peut utiliser le binaire pour (en)coder autre chose que des nombres. Introduire la notion du nombre de “mots” différents en fonction du nombre de bits.
 
@@ -245,7 +222,7 @@ A l’instar du morse (0 = . ; 1 = - ), on peut utiliser le binaire pour (en)cod
 \hline
 \end{array} 
 ```
-### Exercice 6
+#### Exercice 6
 
 Quelques questions pour ancrer l’idée. Au début l’encodage par l’intermédiaire des nombres rassure puis on essaye de s’en éloigner.
 
@@ -257,20 +234,17 @@ Combien de bits faut-il pour représenter :
 * la présence/absence des élèves étant donnée la liste de présence ?
 * ...
 
-(magiebinaire.explication)=
-## Explication du tour
-
-*Durée : 10-15 min.*
+### 1.6.5. Étape 5 - Explication du tour [10-15 min.]
 
 L’idée ici est d’essayer d’amener les élèves à comprendre en observant les cartes et guidées par des questions telles que :
 
 1. Combien faut-il de bits pour encoder les chiffres de 1 (ou 0) à 63 ?
-2. Combien y a-t-il de cartes pour le tour ?
+2. Combien y a-t-il de cartes  pour le tour ?
 3. Avec 6 bits je peux coder 64 “mots” différents, avec 1 bit de moins, combien ?
 4. Combien y a-t-il de nombres sur une carte ?
 5. Qu’on en commun les nombres d’une même carte ?
 
-### La solution
+#### La solution
 
 Regardez attentivement la carte qui contient un 2 en haut à gauche.  
 Voici comment s'écrivent les nombres de cette carte en binaire:
@@ -280,15 +254,16 @@ Voici comment s'écrivent les nombres de cette carte en binaire:
 
 Représentation binaire des chiffres de la carte n°2
 ^^^
-<img src="./media/Carte2.png" alt="carte2" class="bg-primary" width="600px">
+<img src="./Carte2.png" alt="carte2" class="bg-primary" width="600px">
 ````
 
 Chaque carte représente donc 1 des 6 bits nécessaire à l’encodage des entiers de 0 à 63 et les nombres présents sur la carte sont tous ceux dont ce bit est à 1 dans leur code binaire.  
 Par conséquent l’information donnée par l’élève de présence ou non de son nombre sur une carte équivaut à la notion de 0 ou 1 sur un certain bit.  
 Une fois toutes les cartes passées en revue il a donné le code binaire de son nombre secret !
 
-(magiebinaire.plusloin)=
-## Pour aller plus loin
+## 1.7. Pour aller plus loin
+
+### 1.7.1. Mise en pratique
 
 Si on a du temps pour escalader la pyramide d’Anderson et Krathwohl[^1].
 
@@ -300,35 +275,31 @@ Les élèves doivent créer la version du tour pour le petit frère (ou petite s
 
 [^1]: LW, Anderson & DR, Krathwohl Eds. (2001). A Taxonomy for Learning, Teaching, and Assessing: A Revision of Bloom's Taxonomy of Educational Objectives.
 
-### Ouvertures et questionnements
+### 1.7.2. Ouverture et questionnement
 
 * Les valeurs des puissances de 2 sont des valeurs qu’ils connaissent déjà ! Capacité de stockage des clés USB, smartphones, SSD, etc.. Pourquoi ?
 * Comment peut-on faire pour écrire des nombres négatifs, décimaux en binaire ?
 * À compléter...
 
-### Mobiliser les connaissances
+### 1.7.3. Mobiliser les connaissances
 
 Voici une énigme dont la solution utilise le principe de codage binaire.
 
 #### L’énigme
 
 Vous êtes le seigneur du canton de Vaud, et préparez votre mariage qui a lieu demain. Pour cette occasion, vous avez commandé 1000 bouteilles d’un excellent cru du Valais. Mauvaise idée, on vous apprend qu'une des bouteilles (et une seule) est empoisonnée. Le poison incolore, insipide et inodore, dont les effets sont dévastateurs (vomissements, convulsions, ...), provoque la mort en moins de 24h.  
-
 Pour trouver la bouteille empoisonnée, vous disposez de 10 rats testeurs (vous avez malheureusement aboli l’esclavage et personne ne souhaite faire ce métier). Votre problème, il est midi et les bouteilles doivent être servies demain à 14h. Comment allez-vous procéder pour pouvoir servir les 999 bouteilles non empoisonnées à votre mariage ?
 
 #### La solution
 
-Le fait qu'un rat meurt ou non nous donne de l'information. Ce qu'on doit trouver, c'est comment cette information peut nous permettre d'identifier la bouteille empoisonnée. 
-
+Le fait qu'un rat meurt ou non nous donne de l'information. Ce qu'on doit trouver, c'est comment cette information peut nous permettre d'identifier la bouteille empoisonnée.  
 Il suffit d’identifier chaque bouteille par un nombre binaire unique, et chaque rat par un numéro (non binaire celui-ci).  
-
 Ce nombre binaire comportera autant de bits que de rats, et la position d'un bit dans le nombre  correspondra à un numéro de rat (avec 10 rats on a 1024 possibilités donc un peu de marge). Si ce bit est à 1, alors cela signifie que ce rat aura gouté cette bouteille.  
-
 Par exemple la bouteille 3 sera codée 0110 (si on code sur 4 bits, c'est à dire 4 rats), ce qui signifie que les rats 2 et 3 l’auront gouté.
 
-Une fois que toutes les bouteilles ont été goutées, on regarde les numéros des rats décédés. Tous ont leur bit à 1 dans la bouteille empoisonnée, leur mort nous apporte l'information nécessaire.  
-
+Une fois que toutes les bouteilles ont été goutées, on regarde les numéros des rats décédés. Tous on leur bit à 1 dans la bouteille empoisonnée, leur mort nous apporte l'information nécessaire.  
 Si par exemple on avait le rat 1 et le 3 de mort, alors la bouteille correspondante serait (0101), c'est à dire la numéro 5 !
+
 
 
 
