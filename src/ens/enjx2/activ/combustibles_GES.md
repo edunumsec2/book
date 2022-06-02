@@ -50,7 +50,35 @@ Mathématique : proportionnalité
 
 Activité 1
 
-à compléter ...
+
+1er moment : première «rencontre» avec l'étude.
+C'est la phase de présentation de l'activité, très guidée par l'enseignant : il s'agit d'identifier les grandeurs caractéristiques manipulées dans cette activité : matériaux combustibles (fossiles et non fossile), capacité calorifique et volume de GES pour chaque matériau consumé. L'enjeu de l'étude se dessine : il est principalement de quantifier, mesurer, estimer, travailler sur des ordres de grandeurs afin de pouvoir émettre un avis éclairé.
+
+2ème moment : exploration. 
+Une fois les éléments du tableau présentés par l'enseignant, les élèves vont manipuler mathématiquement ces grandeurs par des règles de 3. L'élève élabore bien entendu des techniques mathématiques héritées de ses savoirs actuels ou passés, ici représentés de manière basique par la proportionnalité. En même temps qu'il utilise ces techniques, il les élabore dans le champ cognitif qui nous intéresse ici, donner du sens aux grandeurs représentatives de notre problème... afin de pouvoir décider que penser des différents types d'énergie. On se réfère ici à une vision classique de la praxéologie au sens de Chevallard en mathématique [^1] : *«étudier des problèmes est un moyen permettant de créer et de mettre au point une technique relative aux problèmes de même type, technique qui elle-même sera ensuite le moyen de résoudre de manière quasi routinière des problèmes de ce type»*. En l'occurence ici, il s'agit de remettre en place des outils d'analyse scientifique, mathématique (proportionnalité), et donc de remettre d'actualité dans l'approche faite de la problématique qui nous intéresse (Numérique et Environnement), la technique mathématique.
+Le deuxième point concerne les aspects techniques informatiques : ils sont présents dès lors que l'enseignant propose d'utiliser la fonction calcul d'excel, puis l'automatisation par le «drag & drop», et que les élèves expérimentent. En fait l'enseignant se donne les moyens de faire émerger ces techniques informatiques en faisant travailler les élèves «papier-crayon» préalablement. Les élèves expérimentent les calculs à la main, puis le calcul effectué directement par excel, puis le calcul automatique effectué en «tirant» la fenêtre (drag & drop).
+
+3ème moment : constitution de l'environnement technologico-théorique.
+Il se crée bien entendu tout au long de la séquence s'agissant de l'environnement mathématique, mais on peut considérer que sur les aspects purement informatiques (automatisation, notion de cellule), il se dessine lors du moment précédent en réactivant un environnement technologico-théorique antérieurement élaboré lors du déroulement de l'enseignement d'informatique de l'année, mais également dans divers aspects de la vie courante : le rapprochement avec l'algorithmique expérimenté lors de la réalisation d'une recette par exemple, ou plus généralement du séquençage de tâches organisées afin de sécuriser, d'aller plus vite, ou de rendre atteignable de manière plus sure ou plus rapide un objectif qu'on s'est fixé. Le passage du travail «papier-crayon» au travail avec excel amorce cet environnement.
+
+
+4ème moment : travail de la technique.
+Une fois les premiers résultats trouvés par les élèves et exprimés en utilisant les fonctionnalités du tableur (masse des combustibles), les élèves remettent en pratique l'utilisation automatique d'excel sur le calcul de la masse de CO2 produit (2ème colonne du tableau). Idéalement, il faudrait prolonger cette phase soit par un jeu de données plus important, soit simplement en faisant travailler les élèves à la maison sur l'activité 2, reprenant les mêmes techniques.
+
+5ème moment : institutionnalisation.
+L'institutionnalisation porte ici sur la thématique elle-même et non sur les objectifs informatiques. On pourrait imaginer une phase d'institutionnalisation sur la fonctionnalité «drag & drop» d'excel, positionnée par exemple en fin de partie calculatoire de chaque activité.
+En ce qui concerne la thématique, la diapositive 30 présente un classement des différentes énergies selon le rendement énergétique et la production de GES.
+C'est à ce stade qu'on institutionnalise réellement la notion la plus importante de cette activité : appréhender la complexité du problème énergétique lié à la production de GES relative au cycle de vie des objets numériques.
+Le tableau fait apparaître clairement gaz et fioul en tête, que ce soit en matière de rendement énergétique ou en terme de production de GES ! Le bois apparaît en dernière et avant dernière position !
+Il s'agit de jouer sur l'étonnement que peut provoquer un tel constat, compte-tenu de l'environnement ambiant dans lequel les médias nous placent (recommandation des énergies renouvelables / fossiles).
+En passant à la diapositive 31, l'enseignant reprend la main et éclaircit les choses : il met en opposition la lenteur de formation des énergies fossiles (plusieurs millions d'années) par rapport au bois (50 ans en moyenne). L'exemple du temps de combustion d'un litre de gasoil par exemple dans une auto est parlant : quelques minutes pour consumer ce qui a mis des millions d'années à se former.
+L'aspect «puits de carbone» pendant la croissance des arbres est également un paramètre important, posant la question du réservoir de carbone constitué par la végétation et la déforestation.
+
+6ème moment : évaluation.
+Cette phase est à réfléchir et construire. On peut imaginer un exercice proposé aux élèves avec une fiche excel pré-remplie, puis des cellules à compléter ; le correcteur pourra s'assurer de la bonne mise en oeuvre du «drag & drop»), au-delà du constat sur la justesse des résultats. On pourra donc évaluer la fonctionnalité informatique, tout comme le raisonnement mathématique (secondaire s'agissant de ce qui est objectivé au cours de la séance, essentiel si l'on s'en tient à l'aspect formateur de la séquence).
+S'ensuivra une demande d'analyse des résultats aux élèves retrouvant les conclusions auxquelles l'activité présentée ici nous a amené.
+
+[^1]: Chevallard Yves, (1998). Analyse des pratiques enseignantes et didactique des mathématiques : l’approche anthropologique. Cours donné à l’université d’été Analyse des pratiques enseignantes et didactique des mathématiques, La Rochelle, 4-11 juillet 1998 ; paru dans les actes de cette université d’été, IREM de Clermont-Ferrand
 
 Activité 2
 
@@ -66,6 +94,7 @@ Activités 1 & 2 : les fichiers suivants sont à télécharger pour l'activité 
 
 
 ### Durée
+
 Chaque activité se déroule sur une période de 45 mn en demi-classe, la séquence globale sur deux périodes.
 
 
@@ -81,7 +110,7 @@ L'enseignant présente l'activité (diapositive 21) qui se décompose en deux pa
 
 L'enseignant projette la diapositive (22) présentant la question : il s'agit de calculer les masses de combustibles, puis les masses de CO2 produites relatives, pour 1 kWh d'énergie produite.
 
-A nouveau, l'enseignant explicite, en amenant les élèves au constat qu'il s'agit de faire des règles de 3 (ou tableaux de proportionnalité, ou produits en croix).
+À nouveau, l'enseignant explicite, en amenant les élèves au constat qu'il s'agit de faire des règles de 3 (ou tableaux de proportionnalité, ou produits en croix).
 Il travaille en particulier au tableau, avec les élèves.
 
 
@@ -96,15 +125,15 @@ Puis ils retranscrivent leurs résultats directement dans le tableau excel. Les 
 L'enseignant passe dans les rangs s'assurer de l'avancée et de la justesse des calculs. 
 Puis il revient au tableau en affichant les valeurs (diapositive 24). Il évoque les aspects relatifs à la précision décimale en montrant les icônes permettant d'ajuster le nombre de chiffres significatifs après la virgule.
 Puis il introduit la fonctionnalité calcul du tableur : il tape directement dans la première cellule "=1/12". S'affiche alors le résultat du calcul. En jouant sur la précision décimale, il montre ainsi aux élèves qui doivent également effectuer la manipulation que le tableur calcule la valeur "réelle" (même si tronquée par la machine).
-Les élèves expérimentent cette première "magie" du tableur.
+Les élèves expérimentent cette première «magie» du tableur.
 
 L'enseignant questionne, évite d'intervenir directement sur l'espace de l'élève (clavier, souris), ou le fait dans une démarche de montrer/démontrer.
 
-L'enseignant introduit ensuite la fonctionnalité permettant d'effectuer des calculs entre cellules, et donc une fonctionnalité "informatique" du tableur : ce n'est pas la valeur "en dur" qui est prise, mais bien un **contenu** d'une case, en quelque sorte une **variable**. C'est la "deuxième magie" du tableur.
+L'enseignant introduit ensuite la fonctionnalité permettant d'effectuer des calculs entre cellules, et donc une fonctionnalité «informatique» du tableur : ce n'est pas la valeur «en dur» qui est prise, mais bien un **contenu** d'une case, en quelque sorte une **variable**. C'est la «deuxième magie» du tableur.
 
 L'enseignant manipule directement le tableur projeté en effectuant le calcul. Puis il projette la diapositive 25. Les élèves sont invités à faire de même.
-Il s'assure de la bonne réalisation de l'opération : les élèves ont tendance à se satisfaire parfois du premier travail réalisé, l'écriture "en dur" de la valeur numérique.
-Il revient ensuite à son poste et propose aux élèves d'observer ce qu'il se passe quand il prend le côté en bas à droite de la cellule de calcul et la "tire" vers le bas, recouvrant les trois autres. En lâchant la souris, il laisse apparaître les calculs réalisés. Cette "troisième magie du tableur", c'est l'**automatisation intelligente** du tableur, fonctionnalité typiquement informatique, appelée "drag & drop".
+Il s'assure de la bonne réalisation de l'opération : les élèves ont tendance à se satisfaire parfois du premier travail réalisé, l'écriture «en dur» de la valeur numérique.
+Il revient ensuite à son poste et propose aux élèves d'observer ce qu'il se passe quand il prend le côté en bas à droite de la cellule de calcul et la «tire» vers le bas, recouvrant les trois autres. En lâchant la souris, il laisse apparaître les calculs réalisés. Cette «troisième magie du tableur», c'est l'**automatisation intelligente** du tableur, fonctionnalité typiquement informatique, appelée «drag & drop».
 
 Les élèves manipulent, expérimentent. L'enseignant projette au tableau la diapositive 26, puis la 27 illustrant le même processus appliqué au calcul de la masse de CO2. La diapositive 28 présente les résultats finaux.
 
@@ -117,13 +146,13 @@ Le gaz apparait en premier sur les deux aspects, puis le fioul. Enfin le charbon
 
 Ces résultats semblent aller à l'encontre du discours entendu sur les énergies fossiles très productrices de CO2, surtout par rapport au bois...
 
-L'enseignant bascule ensuite sur la diapositive 31 où il apporte l'élément de compréhension, qui est la durée de production des énergies fossiles. Il faut quelques minutes pour consumer un litre de fioul qui a mis des millions d'années à se former. Il faut environ une cinquantaine d'années pour produire un arbre, période pendant laquelle ce dernier joue le rôle de puits de CO2, pour un durée de consumation du même ordre de grandeur que celle du fioul.
+L'enseignant bascule ensuite sur la diapositive 31 où il apporte l'élément de compréhension, qui est la durée de production des énergies fossiles. Il faut quelques minutes pour consumer un litre de fioul qui a mis des millions d'années à se former. Il faut environ une cinquantaine d'années pour produire un arbre, période pendant laquelle ce dernier joue le rôle de puits de CO2, pour un durée de consumation du même ordre de grandeur que celle du fioul à quantités comparables.
 
 
 
 #### Conclusion (3 mn)
 
-En diapositive 32, l'enseignant conclue l'activité en relevant les deux aspects essentiels à retenir de cette activité s'agissant de notre action visant à réduire l'impact du numérique :
+En diapositive 32, l'enseignant conclue l'activité en relevant les deux aspects essentiels à retenir de cette activité s'agissant de notre action visant à réduire l'impact du numérique sur les émissions GES :
 - réduire la consommation énergétique,
 - limiter le recours aux énergies fossiles.
 
@@ -138,3 +167,26 @@ Les élèves sont invités à compléter le questionnaire dont ils trouvent le l
 
 ### Déroulement Activité 2
 
+à rédiger ...
+
+
+### Expérimentation en classe 
+
+La séquence complète (exposé théorique, activité courte et activité 1) a été expérimentée sur plusieurs classes au collège de Genève.
+
+On présente ici les résultats du questionnaire soumis à une classe de première maturité de 16 élèves (11 présents), dont 6 soit ont démissionné (réorientation), soit sont en grande difficulté.
+
+
+```{figure} media/quest1M1.1.png
+```
+
+```{figure} media/quest1M1.2.png
+Commentaires élèves relatifs à l'expérimentation de la séquence complète (2 périodes)
+```
+  
+<br/>
+
+Ces retours montrent une forte adhésion de l'ensemble de la classe à la thématique et la manière dont elle a été traitée. Les critères plaisir, utilité et compréhension sont très forts.
+La clarté des objectifs et la structuration de l'ensemble de la séquence ont indéniablement joué dans l'adhésion des élèves (critères 5, 6, 7).
+Concernant le recours aux notions transdisciplinaires (mathématiques / physique) et le travail effectué, le résultat est satisfaisant si l'on intègre l'hétérogénéité de la classe mais interroge néanmoins compte-tenu des éléments mathématiques (proportionnalité...) et physique (masse, énergie) abordés.
+Aborder sérieusement une réflexion concernant la thématique se passe difficilement d'une activité de quantification des grandeurs élémentaires dont il est question : combustibles, rendement énergétique, production de GES. 

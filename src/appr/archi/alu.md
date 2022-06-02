@@ -82,9 +82,7 @@ L'idée est maintenant de combiner ces sorties intermédiaires pour n'en avoir p
 }
 ```
 
-Pour la suite, nous avons besoin de nous rappeler ceci. Lorsqu'un signal, disons $A$, passe à travers une porte logique **ET** dont la seconde entrée vaut 0, la sortie de cette porte-là sera toujours identique à 0. Cela nous permet ainsi d'annuler le signal $A$. De manière similaire, si cette seconde entrée vaut 1, le signal $A$ passera tel quel. On peut ainsi voir la porte **ET** comme un annulateur de signal. Vérifiez ceci ici :
-
-<!-- TODO the aux inputs constant once we can in the simulator and remove their names -->
+Pour la suite, nous avons besoin de nous rappeler ceci. Lorsqu'un signal, disons $A$, passe à travers une porte logique **ET** dont la seconde entrée vaut 0 (ici affichée sans qu'on puisse la changer en cliquant dessus), la sortie de cette porte-là sera toujours identique à 0. Cela nous permet ainsi d'annuler le signal $A$. De manière similaire, si cette seconde entrée vaut 1, le signal $A$ passera tel quel. On peut ainsi voir la porte **ET** comme un annulateur de signal. Vérifiez ceci ici :
 
 ```{logic}
 :height: 190
@@ -95,8 +93,8 @@ Pour la suite, nous avons besoin de nous rappeler ceci. Lorsqu'un signal, disons
   "in": [
     {"pos": [50, 40], "id": 0, "name": "A", "val": 0},
     {"pos": [50, 130], "id": 1, "name": "A'", "val": 0},
-    {"pos": [130, 150], "id": 2, "name": "1", "val": 1},
-    {"pos": [130, 60], "id": 7, "name": "0", "val": 0}
+    {"pos": [130, 150], "id": 2, "val": 1, "isConstant": true},
+    {"pos": [130, 60], "id": 7, "val": 0, "isConstant": true}
   ],
   "out": [
     {"pos": [270, 50], "id": 8, "name": "A annulé"},
@@ -120,7 +118,7 @@ Ensuite, lorsqu'un signal, disons $B$ cette fois, passe à travers une porte log
   "v": 1,
   "in": [
     {"pos": [50, 30], "id": 1, "name": "B", "val": 0},
-    {"pos": [130, 50], "id": 2, "name": "0", "val": 0}
+    {"pos": [130, 50], "id": 2, "val": 0, "isConstant": true}
   ],
   "out": [{"pos": [270, 40], "id": 12, "name": "B tel quel"}],
   "gates": [{"type": "OR", "pos": [200, 40], "in": [9, 10], "out": 11}],
