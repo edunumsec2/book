@@ -174,4 +174,19 @@ Les élèves sont invités à compléter le questionnaire dont ils trouvent le l
 
 La séquence complète (exposé théorique, activité courte et activité 1) a été expérimentée sur plusieurs classes au collège de Genève.
 
-On présente ici les résultats du questionnaire soumis à une classe de première maturité de 16 élèves, dont plus de la moitié soit ont démissionné, soit sont en grande difficulté.
+On présente ici les résultats du questionnaire soumis à une classe de première maturité de 16 élèves (11 présents), dont 6 soit ont démissionné (réorientation), soit sont en grande difficulté.
+
+
+```{figure} media/quest1M1.1.png
+```
+
+```{figure} media/quest1M1.2.png
+Commentaires élèves relatifs à l'expérimentation de la séquence complète (2 périodes)
+```
+  
+<br/>
+
+Ces retours montrent une forte adhésion de l'ensemble de la classe à la thématique et la manière dont elle a été traitée. Les critères plaisir, utilité et compréhension sont très forts.
+La clarté des objectifs et la structuration de l'ensemble de la séquence ont indéniablement joué dans l'adhésion des élèves (critères 5, 6, 7).
+Concernant le recours aux notions transdisciplinaires (mathématiques / physique) et le travail effectué, le résultat est satisfaisant si l'on intègre l'hétérogénéité de la classe mais interroge néanmoins compte-tenu des éléments mathématiques (proportionnalité...) et physique (masse, énergie) abordés.
+Aborder sérieusement une réflexion concernant la thématique se passe difficilement d'une activité de quantification des grandeurs élémentaires dont il est question : combustibles, rendement énergétique, production de GES. 
