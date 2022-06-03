@@ -13,6 +13,6 @@ Cette section présente :
 
 introduction
 planification
-evaluation
 Activités <activ/index>
+evaluation
 ```

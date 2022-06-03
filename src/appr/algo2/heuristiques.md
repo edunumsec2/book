@@ -1,4 +1,4 @@
-# 5. Algorithmes heuristiques
+# Algorithmes heuristiques
 
 
 ````{admonition} Matière à réfléchir. Tour du monde
@@ -16,7 +16,7 @@ Si le calcul d’un itinéraire prenait 1 milliseconde, combien de temps faudrai
 
 ````
 
-## 5.0. Complexité exponentielle
+## Complexité exponentielle
 
 Il existe des problèmes difficiles à résoudre. Nous allons nous pencher sur un problème qui s’appelle le **<span style="color:rgb(89, 51, 209)">problème du sac à dos</span>**. Prenons un sac à dos et une multitude d’objets qui ont chacun un poids. Notre objectif est de choisir les objets à mettre dans le sac à dos pour le remplir au maximum, mais sans dépasser sa capacité. Donc la question que l'on se pose est la suivante : quels objets devrions-nous emporter, sans dépasser le poids maximal que le sac à dos peut contenir ?
 

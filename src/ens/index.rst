@@ -65,14 +65,6 @@ et autres concepts essentiels à la compréhension de ce qui se passe au niveau 
    art/index
 
 .. toctree::
-   :name: Suppléments
-   :caption: Suppléments
-   :maxdepth: 3
-   :hidden:
-
-   art/index
-
-.. toctree::
    :name: Outils
    :caption: Outils
    :maxdepth: 3

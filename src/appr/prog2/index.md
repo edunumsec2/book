@@ -8,7 +8,7 @@ Dans la deuxième partie, nous allons découvrir la programmation orientée obje
 ```{toctree}
 :maxdepth: 2
 :hidden:
-:numbered: 1
+:numbered: 2
 
 onkey
 lambda

@@ -13,8 +13,8 @@ Dans ce chapitre, nous proposons des activités, des supports de cours et des é
 :maxdepth: 2
 :hidden:
 :numbered: 1
-Supports de cours <support/index>
-Evaluations <eval/index>
+Planification <PlanDidac/index>
 Activités <activ/index>
-Plan <PlanDidac/index>
+Evaluations <eval/index>
+Supports de cours <support/index>
 ```

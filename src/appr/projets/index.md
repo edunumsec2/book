@@ -8,19 +8,20 @@ Dans cette partie vous allez, tout seul ou en groupe, mettre en pratique vos con
 
 ````{toctree}
 :maxdepth: 2
-:numbered:
+:numbered: 2
 :hidden:
-Tic-tac-toe <tic_tac_toe>
-Puissance 4 <puissance4>
-Démineur <mines>
-Snake <snake>
-Game of life <game_of_life>
-Poker <cartes>
-Tetris <tetris>
-Art absurde <art_absurde>
-Micro:bit <microbit/microbit>
-Cryptographie <crypto>
-Idées <idees>
+tic_tac_toe
+puissance4
+mines
+snake
+game_of_life
+
+cartes
+tetris
+art_absurde
+microbit/microbit
+crypto
+idees
 ````
 
 ## Objectifs

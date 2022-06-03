@@ -8,8 +8,8 @@ Dans ce chapitre, nous proposons des activités que des propositions de calendri
 :maxdepth: 1
 :numbered: 1
 
-Activités <activ/index>
 Plan <plan_didac/index>
+Activités <activ/index>
 Evaluation <eval/index>
 ```
 

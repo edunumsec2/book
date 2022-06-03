@@ -9,7 +9,7 @@ Ce sont des programmes qui disent à votre ordinateur comment manipuler une imag
 ````{toctree}
 :maxdepth: 2
 :hidden:
-:numbered: 1
+:numbered: 2
 
 dessiner
 definir

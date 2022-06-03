@@ -10,7 +10,7 @@ Dans cette section, nous allons comprendre comment les ordinateurs parviennent �
 ```{toctree}
 :maxdepth: 2
 :hidden:
-:numbered: 1
+:numbered: 2
 intro
 entiers
 caracteres
@@ -20,7 +20,7 @@ redondance
 conclusion
 ```
 
-## Objectifs de la thématique
+## Objectifs
 
 * Découvrir la **représentation binaire** des nombres entiers, des caractères, des images et des sons.
 

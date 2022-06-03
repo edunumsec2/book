@@ -54,7 +54,7 @@ Nous avons tous entendu parler des algorithmes. Normal, c’est le mot à la mod
 ```{toctree}
 :maxdepth: 2
 :hidden:
-:numbered: 1
+:numbered: 2
 intro
 algorithmes
 tri
@@ -62,7 +62,7 @@ algo-progs
 conclusion
 ```
 
-## Objectifs de la thématique
+## Objectifs
 
 À la fin de ce chapitre, vous saurez ce qu'est un algorithme et vous serez capable de transcrire des algorithmes en programmes. Vous saurez résoudre des problèmes, en décomposant leur solution en étapes à suivre. Vous verrez également que pour un même problème, on peut avoir plusieurs solutions avec des propriétés, avantages et désavantages différents. 
 

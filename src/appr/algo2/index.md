@@ -10,17 +10,19 @@ L’**<span style="color:rgb(89, 51, 209)">algorithmique</span>** étudie les pr
 ```{toctree}
 :maxdepth: 2
 :hidden:
+:numbered: 2
 intro
 principes
 recherche
 tris
+
 heuristiques
 recursivite
 conclusion
 ```
 
 
-## Objectifs de la thématique
+## Objectifs
 
 A la fin de ce chapitre, vous saurez ce qui fait qu'un algorithme est un bon algorithme et quels critères prendre en considération pour choisir le meilleur algorithme. Vous verrez également qu'il existe des problèmes relativement simples que l'on n'arrive toujours pas à résoudre.
 

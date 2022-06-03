@@ -6,7 +6,7 @@
 ```{toctree}
 :maxdepth: 2
 :hidden:
-:numbered: 1
+:numbered: 2
 main1
 portraits
 jeuxvideo

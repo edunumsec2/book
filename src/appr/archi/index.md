@@ -28,7 +28,7 @@ micro-pro
 conclusion
 ```
 
-## Objectifs de la thématique
+## Objectifs
 
 * Découvrir les **éléments de base** qui composent l'ordinateur.
 
