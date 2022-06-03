@@ -1,4 +1,4 @@
-# Titre
+# Titre de l'activité
 
 ---- 
 
@@ -8,43 +8,32 @@ Description de l'activité
 
 ----
 
-```{admonition} Caractéristiques
+```{admonition} Titre de l'activité
 :class: hint
 
-* Nom : 
-* Durée : 
-* Thème : 
-* Objectifs d’apprentissage : (si objectifs pédagogiques détaillés, utiliser syntaxe {ref}`voir ci-dessous<nomactivite.objectifsdetailles>)
+* Thème : eg. `Représentation de l'information`
+* Niveau : `facile`, `moyen`, `difficile`(considérant que l'indication 1M, 2M est donnée par l'emplacement de l'activité)
+* Durée : en minutes ou en périodes
+* Taille du groupe : `classe entière`, `demi-classe`
+* Objectifs pédagogiques : (si objectifs pédagogiques détaillés, utiliser syntaxe {ref}`voir ci-dessous<nomactivite.objectifsdetailles>`)
 * Notions fondamentales : 
+* Modalité : `branché/débranché`
 * Approche pédagogique : 
-* Matériel : (si matériel détaillé, utiliser syntaxe {ref}`voir ci-dessous<nomactivite.materieldetaille>`)
-* Niveau : 
+* Matériel : 
+* Pré-requis : 
 * Mots-clés : 
-* Dynamique (groupe / individuel) : 
-* Taille du groupe : 
-* Pré-requis : (si pré-requis détaillés, utiliser syntaxe {ref}`voir ci-dessous<nomactivite.prerequis>`)
-* Date de création de l'activité : 
 ```
 
 (nomactivite.objectifsdetailles)=
-**Objectifs pédagogiques détaillés**^1
+*Objectifs pédagogiques détaillés*[^1] : déclaration d'objectifs pédagoqiques plus détaillés, avec commentaire de ces objectifs, exemples, etc. 
 
-(nomactivite.materieldetaille)= 
-**Matériel détaillé**
+| Nom de l'étape                          | Durée  | Logique didactique    | 
+|:---------------------------------------:|:------:|:---------------------:|
+| {ref}`Étape 1<nomactivite.nomdeletape1>`| 15 mn  | Exploration           |
+| {ref}`Étape 2<nomactivite.nomdeletape2>`| 10 mn  | Institutionnalisation |
+| {ref}`Étape 3<nomactivite.nomdeletape3>`| 5 mn   | Évalutation           |
+| Etape n                                 | n mn   | Logique n             |
 
-(nomactivite.prerequis)= 
-**Pré-requis détaillés**
-
-```{dropdown} **Déroulement**
-
-1. {ref}`Nom de l'étape 1<nomactivite.nomdeletape1>` (5-10 mn) brève description de l'étape, si possible. 
-
-1. {ref}`Nom de l'étape 2<nomactivite.nomdeletape2>` (5-10 mn) brève description de l'étape, si possible. 
-
-1. {ref}`Nom de l'étape 3<nomactivite.nomdeletape3>` (5-10 mn) brève description de l'étape, si possible. 
-
-1. {ref}`Nom de l'étape n<nomactivite.nomdeletapen>` (5-10 mn) brève description de l'étape, si possible. 
-```
 
 (nomactivite.nomdeletape1)=
 ## Nom de l'étape 1 
@@ -74,6 +63,4 @@ Description de l'étape. Possibilité d'utiliser des sous-titres.
 
 Description de l'étape. Possibilité d'utiliser des sous-titres. 
 
-[^1] : les éléments "détaillés" sont optionnels. On peut se contenter de ce qui apparaît dans les "Caractéristiques de l'activité". On peut aussi ajouter d'autres éléments "détaillés" (durée, notions fondamentales, niveau, etc.), si on le souhaite. 
-
-Pied de page modulo ? 
+[^1]: les éléments "détaillés" sont optionnels. On peut se contenter de ce qui apparaît dans les caractéristiques de l'activité. On peut aussi ajouter d'autres éléments "détaillés" (durée, notions fondamentales, niveau, etc.), si on le souhaite. 

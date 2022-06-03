@@ -93,6 +93,17 @@ body.modulo-dark .dropdown {
     margin: 1.75rem 0 1.75rem 0;
 }
 
+.admonition.hint>.admonition-title {
+    background-color: rgb(92 201 191 / 10%)!important;
+}
+
+.admonition.hint {
+    border-left-color: rgb(92 201 191)!important;
+}
+
+.admonition.hint>.admonition-title:before {
+    background-color: rgb(92 201 191)!important;
+}
 
 body {
     --sidebar-item-spacing-vertical: 0.3rem;

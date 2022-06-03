@@ -224,7 +224,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/magie_binaire_new.html">Magie binaire</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/encoder_images.html">Images numériques</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/format_BMP_new.html">Format BMP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/echantillonnage.html">Echantillonnage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/echantillonnage_new.html">Echantillonnage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/hamming_new.html">Redondance et code de Hamming</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/huffman.html">Compression et codage de Huffman</a></li>
 </ul>
@@ -269,6 +269,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="dijkstra_new.html">Dijkstra et le plus court chemin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="puissance4.html">Puissance 4/Minimax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="template_activite.html">Titre de l’activité</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../exo/solutions.html">2. Solutions des exercices</a></li>
@@ -313,8 +314,9 @@
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx2/index.html">Enjeux sociaux II</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../enjx2/grandes-thematiques/environnement.html">1. Numérique et environnement</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/activ/index.html">2. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/encheres.html">1. Les enchères du web</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/combustibles_GES.html">2. Numérique et environnement : le problème de l'énergie (consommée pendant le cycle de vie des produits numériques) : combustibles fossiles / non fossiles et GES</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/fiches-complementaires/index.html">Fiches complémentaires</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -436,16 +438,16 @@
 <h2>1. Mise en situation générale<a class="headerlink" href="#mise-en-situation-generale" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’enseignant va sur une page de navigation (p.ex <a class="reference external" href="https://www.openstreetmap.org/#map=8/46.825/8.224">OpenStreetMap</a>) et montre un exemple de requête de chemin pour relier deux points.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="528456c2-4906-4f94-9b0d-43285ce7850a" name="700b2c03-2206-4c3e-9e61-be803d58a8e1" type="radio"/>
-<label class="tabbed-label" for="528456c2-4906-4f94-9b0d-43285ce7850a">
+<input checked="checked" id="a83b7dc1-aacf-483b-b4de-8e44f23cdaf1" name="473bc5ee-56c7-4aa2-8a39-de2eb5e8ee11" type="radio"/>
+<label class="tabbed-label" for="a83b7dc1-aacf-483b-b4de-8e44f23cdaf1">
 Questions</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Comment le site web a-t-il déterminé le chemin qu’il nous indique ?</p></li>
 <li><p>Quelles données a-t-il à sa disposition pour déterminer ce chemin ?</p></li>
 </ul>
 </div>
-<input id="c49038fa-b7ae-4ee6-bed4-68f2ceac3e9b" name="700b2c03-2206-4c3e-9e61-be803d58a8e1" type="radio"/>
-<label class="tabbed-label" for="c49038fa-b7ae-4ee6-bed4-68f2ceac3e9b">
+<input id="44710bd8-0875-4652-b5e8-11deebf33dbf" name="473bc5ee-56c7-4aa2-8a39-de2eb5e8ee11" type="radio"/>
+<label class="tabbed-label" for="44710bd8-0875-4652-b5e8-11deebf33dbf">
 Réponses</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Tout le réseau routier est représenté sous forme d’un graphe.</p></li>
@@ -457,8 +459,8 @@ Réponses</label><div class="tabbed-content docutils">
 <section id="mise-en-situation-specifique">
 <h2>2. Mise en situation spécifique<a class="headerlink" href="#mise-en-situation-specifique" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="tabbed-set docutils">
-<input checked="checked" id="b6914b6f-d807-4c50-8e80-0df0ce3d0824" name="2b1f6450-329f-42b2-a8ed-0ae521edbb2f" type="radio"/>
-<label class="tabbed-label" for="b6914b6f-d807-4c50-8e80-0df0ce3d0824">
+<input checked="checked" id="bc6e4d19-309e-4a72-b630-e273297d4544" name="e5d393e5-1171-4ba4-9486-5308859a5e34" type="radio"/>
+<label class="tabbed-label" for="bc6e4d19-309e-4a72-b630-e273297d4544">
 Exemple 1</label><div class="tabbed-content docutils">
 <p>L’enseignant distribue à chaque élève un graphe suffisamment compliqué dans lequels la longueur des
 arêtes est indiquée. Ils doivent trouver, individuellement, le plus court chemin reliant deux points.
@@ -472,8 +474,8 @@ Le graphe est tel qu’il y a plusieurs plus courts chemins.</p>
 <li><p>Y a-t-il des chemins plus courts que ça ?</p></li>
 </ul>
 </div>
-<input id="56506427-f752-43fe-b62b-711f1a832bc0" name="2b1f6450-329f-42b2-a8ed-0ae521edbb2f" type="radio"/>
-<label class="tabbed-label" for="56506427-f752-43fe-b62b-711f1a832bc0">
+<input id="c79562cd-ade3-47be-a4c0-74f7f5c28c46" name="e5d393e5-1171-4ba4-9486-5308859a5e34" type="radio"/>
+<label class="tabbed-label" for="c79562cd-ade3-47be-a4c0-74f7f5c28c46">
 Exemple 2</label><div class="tabbed-content docutils">
 <p>Dans un voyage en voiture, on ne veut pas forcément le plus court chemin, mais souvent le plus rapide.</p>
 <p>Par exemple, on va prendre l’autoroute de contournement de Lausanne qui est plus longue, mais plus rapide que
@@ -570,8 +572,8 @@ Formalisation<div class="summary-down docutils">
 <h2>6. Exemples d’utilisation<a class="headerlink" href="#exemples-dutilisation" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’enseignant fait un exemple au tableau avec les élèves et leur propose ensuite d’essayer seuls ou par deux sur des graphes donnés.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="f85ba646-fbef-4ce3-a6d0-6597bb196c2e" name="cf120233-d3e7-47a3-84e9-31379bcd81bb" type="radio"/>
-<label class="tabbed-label" for="f85ba646-fbef-4ce3-a6d0-6597bb196c2e">
+<input checked="checked" id="a8ae012d-86b9-49b6-8090-058d2226a426" name="730e01a6-6df7-45be-a07a-e826aae0db56" type="radio"/>
+<label class="tabbed-label" for="a8ae012d-86b9-49b6-8090-058d2226a426">
 Jeu : de VERSE à LITRE</label><div class="tabbed-content docutils">
 <p>Ce jeu consiste à trouver une manière de relier deux mots ayant le même nombre de lettres (par exemple VERSE et LITRE) avec une série de mots existants dont chaque mot ne diffère du précédent que d’une seule lettre. Dans notre exemple, une solution est donnée par :</p>
 <p>VERSE - VERRE - SERRE - SEVRE - LEVRE - LIVRE - LITRE</p>
@@ -581,8 +583,8 @@ quel graphe serait-il nécessaire de construire, à quoi correspondrait ses nœu
 <p>Selon le niveau atteint en programmation, une petite application proposant ce jeu et les solutions correspondantes pourrait être
 programmée par exemple en utilisant une libraire de graphe telle que igraph ou networkX en python.</p>
 </div>
-<input id="bc589183-0929-408f-a3f0-1eeab2a432a6" name="cf120233-d3e7-47a3-84e9-31379bcd81bb" type="radio"/>
-<label class="tabbed-label" for="bc589183-0929-408f-a3f0-1eeab2a432a6">
+<input id="dedd348d-7caf-4096-99a7-078a425d825d" name="730e01a6-6df7-45be-a07a-e826aae0db56" type="radio"/>
+<label class="tabbed-label" for="dedd348d-7caf-4096-99a7-078a425d825d">
 Réseautage</label><div class="tabbed-content docutils">
 <p>L’autre jour, vous avez flashé sur quelqu’un que vous ne connaissez pas mais dont vous avez réussi à obtenir
 le nom. Après avoir passé beaucoup de temps sur son profil dans votre réseau social préféré, vous recevez

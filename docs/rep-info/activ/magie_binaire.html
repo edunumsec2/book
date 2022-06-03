@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Recherche" href="../../search.html" />
 
     <link rel="shortcut icon" href="../../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>1. Magie Binaire - Enseigner</title>
+        <title>Magie Binaire - Enseigner</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/codeplay.css" />
@@ -224,7 +224,7 @@
 <li class="toctree-l3"><a class="reference internal" href="magie_binaire_new.html">Magie binaire</a></li>
 <li class="toctree-l3"><a class="reference internal" href="encoder_images.html">Images numériques</a></li>
 <li class="toctree-l3"><a class="reference internal" href="format_BMP_new.html">Format BMP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="echantillonnage.html">Echantillonnage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="echantillonnage_new.html">Echantillonnage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="hamming_new.html">Redondance et code de Hamming</a></li>
 <li class="toctree-l3"><a class="reference internal" href="huffman.html">Compression et codage de Huffman</a></li>
 </ul>
@@ -269,6 +269,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/dijkstra_new.html">Dijkstra et le plus court chemin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/puissance4.html">Puissance 4/Minimax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/template_activite.html">Titre de l’activité</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../algo1/exo/solutions.html">2. Solutions des exercices</a></li>
@@ -313,8 +314,9 @@
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx2/index.html">Enjeux sociaux II</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../enjx2/grandes-thematiques/environnement.html">1. Numérique et environnement</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/activ/index.html">2. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/encheres.html">1. Les enchères du web</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/combustibles_GES.html">2. Numérique et environnement : le problème de l'énergie (consommée pendant le cycle de vie des produits numériques) : combustibles fossiles / non fossiles et GES</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/fiches-complementaires/index.html">Fiches complémentaires</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -391,53 +393,51 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="magie-binaire">
-<h1>1. Magie Binaire<a class="headerlink" href="#magie-binaire" title="Lien permanent vers ce titre">¶</a></h1>
-<section id="introduction">
-<h2>1.1. Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h2>
+<h1>Magie Binaire<a class="headerlink" href="#magie-binaire" title="Lien permanent vers ce titre">¶</a></h1>
+<hr class="docutils"/>
+<p><em>Vous allez faire un tour de magie !</em></p>
 <p>Une introduction au binaire de manière ludique en misant sur la curiosité à comprendre le fonctionnement d’un tour de magie.</p>
-</section>
-<section id="objectifs-du-cours">
-<h2>1.2. Objectifs du cours<a class="headerlink" href="#objectifs-du-cours" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Faire découvrir le binaire, comment écrire et compter en binaire mais aussi comment utiliser le binaire pour encoder de l’information.<br/>
-Après cette séquence les élèves devraient avoir compris le système de numération des entiers positifs utilisant la base 2.<br/>
-Ils auront également assimilé le fait que n’importe quelle information peut être représentée par une suite ordonnée de 0 et de 1, ce qui est à la base de tout ce qu’ils peuvent voir et faire sur un ordinateur ou un smartphone.</p>
-</section>
-<section id="duree">
-<h2>1.3. Durée<a class="headerlink" href="#duree" title="Lien permanent vers ce titre">¶</a></h2>
-<p>2 périodes de cours en classe (théorie et exercices <em>déconnectés</em>).</p>
-</section>
-<section id="materiel-requis">
-<h2>1.4. Matériel requis<a class="headerlink" href="#materiel-requis" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les 6 cartes ci-dessous pour faire le tour de magie. Le fichier MagieBinaire.png est disponible en annexe pour impression.</p>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-md docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-header docutils">
-<p class="card-text">Cartes Magie Binaire</p>
+<hr class="docutils"/>
+<div class="hint admonition">
+<p class="admonition-title">Caractéristiques</p>
+<ul class="simple">
+<li><p>Nom : Magie Binaire</p></li>
+<li><p>Durée : 2 périodes</p></li>
+<li><p>Thème : Représentation de l’information</p></li>
+<li><p>Objectifs d’apprentissage : Faire découvrir le binaire, comment écrire et compter en binaire mais aussi comment utiliser le binaire pour encoder de l’information. Après cette séquence les élèves devraient avoir compris le système de numération des entiers positifs utilisant la base 2.<br/>
+Ils auront également assimilé le fait que n’importe quelle information peut être représentée par une suite ordonnée de 0 et de 1, ce qui est à la base de tout ce qu’ils peuvent voir et faire sur un ordinateur ou un smartphone.</p></li>
+<li><p>Notions fondamentales : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+<li><p>Approche pédagogique : Débranchée</p></li>
+<li><p>Matériel : Les 6 cartes pour faire le tour de magie. Disponible ici : <a class="reference download internal" download="" href="../../_downloads/5f0f8fb3f1aa7b92fda7be20805231c1/MagieBinaire.png"><code class="xref download docutils literal notranslate"><span class="pre">fichier</span> <span class="pre">MagieBinaire.png</span></code></a></p></li>
+<li><p>Niveau : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+<li><p>Mots-clés : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+<li><p>Dynamique (groupe / individuel) : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+<li><p>Taille du groupe : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+</ul>
 </div>
-<div class="card-body docutils">
-<a class="bg-primary reference internal image-reference" href="rep-info/activ/MagieBinaire.png"><img alt="cartes" class="bg-primary" src="rep-info/activ/MagieBinaire.png" style="width: 600px;"/></a>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Déroulement</strong><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ol class="simple">
+<li><p class="card-text"><a class="reference internal" href="magie_binaire_new.html#magiebinaire-presentation"><span class="std std-ref">Présentation du tour de magie</span></a> (10-15 mn) en le faisant aux élèves.</p></li>
+<li><p class="card-text"><a class="reference internal" href="magie_binaire_new.html#magiebinaire-compter"><span class="std std-ref">Compter en binaire</span></a> (15-20 mn) et présentation de la différence entre base 2 et base 10.</p></li>
+<li><p class="card-text"><a class="reference internal" href="magie_binaire_new.html#magiebinaire-retour"><span class="std std-ref">Retour en base 10</span></a> (15-20 mn) où vous evenez sur la numérotation en base 10 pour présenter la forme canonique.</p></li>
+<li><p class="card-text"><a class="reference internal" href="magie_binaire_new.html#magiebinaire-encodage"><span class="std std-ref">Encodage de l’information</span></a> (10-15 mn) où vous introduisez la notion du nombre de “mots” différents en fonction du nombre de bits.</p></li>
+<li><p class="card-text"><a class="reference internal" href="magie_binaire_new.html#magiebinaire-explication"><span class="std std-ref">Explication du tour</span></a> (10-15 mn) où il s’agit d’expliquer le fonctionnement du tour.</p></li>
+<li><p class="card-text"><a class="reference internal" href="magie_binaire_new.html#magiebinaire-plusloin"><span class="std std-ref">Pour aller plus loin</span></a>, vous avez différentes possibilités dont une version allégée du tour que les élèves doivent être capables de mettre en place.</p></li>
+</ol>
 </div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="accroche">
-<h2>1.5. Accroche<a class="headerlink" href="#accroche" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Vous allez faire un tour de magie !</p>
-</section>
-<section id="marche-a-suivre">
-<h2>1.6. Marche à suivre<a class="headerlink" href="#marche-a-suivre" title="Lien permanent vers ce titre">¶</a></h2>
-<section id="etape-1-tour-de-magie-10-15-min">
-<h3>1.6.1. Étape 1 - Tour de magie [10-15 min.]<a class="headerlink" href="#etape-1-tour-de-magie-10-15-min" title="Lien permanent vers ce titre">¶</a></h3>
-<section id="objectif-attiser-la-curiosite">
-<h4>Objectif : Attiser la curiosité<a class="headerlink" href="#objectif-attiser-la-curiosite" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Faire le tour de magie suivant à différents élèves, il est possible que certains d’entre eux le connaissent, soient peut-être capable de le réaliser mais il est très peu probable qu’ils puissent expliquer pourquoi ça marche. Interrogez-les au préalable et concentrez-vous sur ceux qui ne le connaissent pas.</p>
-</section>
+</details><section id="presentation-du-tour-de-magie">
+<span id="magiebinaire-presentation"></span><h2>Présentation du tour de magie<a class="headerlink" href="#presentation-du-tour-de-magie" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : 10-15 mn</em></p>
+<p><em>Objectif : attiser la curiosité</em></p>
+<p>Faire le tour de magie suivant à différents élèves. Il est possible que certains d’entre eux le connaissent, soient peut-être capable de le réaliser mais il est très peu probable qu’ils puissent expliquer pourquoi ça marche. Interrogez-les au préalable et concentrez-vous sur ceux qui ne le connaissent pas.</p>
 <section id="tour-de-magie">
-<h4>Tour de magie<a class="headerlink" href="#tour-de-magie" title="Lien permanent vers ce titre">¶</a></h4>
+<h3>Tour de magie<a class="headerlink" href="#tour-de-magie" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Demandez à un élève de choisir un nombre entre 1 et 63 et de le mémoriser sans vous le révéler. A l’aide des cartes vous allez lui révéler le nombre qu’il a secrètement choisi.</p>
 <dl class="simple myst">
 <dt>Variante 1</dt><dd><p>Montrez les cartes une à une à l’élève en lui demandant simplement de vous indiquer si oui ou non son nombre apparaît sur la carte.</p>
@@ -447,27 +447,22 @@ Ils auront également assimilé le fait que n’importe quelle information peut 
 </dl>
 <p>Le secret du tour est simple, il suffit d’additionner le nombre en haut à gauche de chaque carte où son nombre est présent.</p>
 </section>
-<section id="id1">
-<h4>Accroche<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Vous allez faire ce qu’aucun magicien ne fait, vous allez expliquer le fonctionnement d’un tour de magie, mais comme c’est un tour de magie binaire, il faut d’abord acquérir les bases du binaire…</p>
 </section>
-</section>
-<section id="etape-2-compter-en-binaire-15-20-min">
-<h3>1.6.2. Étape 2 - Compter en binaire [15-20 min.]<a class="headerlink" href="#etape-2-compter-en-binaire-15-20-min" title="Lien permanent vers ce titre">¶</a></h3>
-<section id="objectif">
-<h4>Objectif<a class="headerlink" href="#objectif" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Comprendre comment représenter des nombres entiers positifs à l’aide de la numération de position avec seulement deux chiffres : le 0 et le 1.</p>
+<section id="compter-en-binaire">
+<span id="magiebinaire-compter"></span><h2>Compter en binaire<a class="headerlink" href="#compter-en-binaire" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : 15-20 mn</em></p>
+<p><em>Objectif : Comprendre comment représenter des nombres entiers positifs à l’aide de la numération de position avec seulement deux chiffres : le 0 et le 1.</em></p>
 <p>Commencez par expliquer le fonctionnement en base 10.</p>
 <p>Pour compter, on commence par 0 et on ajoute 1 pour passer au chiffre suivant et on recommence. Après l’utilisation de tous les chiffres (0…9) on en rajoute 1 devant et on recommence…</p>
 <p>Faire la même démonstration en base 2.</p>
-</section>
 <section id="exercice-1">
-<h4>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h4>
+<h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Faire compter les élèves de 0 à 20 (ou plus) en binaire sur papier, ils peuvent écrire le nombre correspondant en base 10 à côté.</p>
 </section>
 </section>
-<section id="etape-3-passage-de-la-base-2-a-la-base-10-15-20-min">
-<h3>1.6.3. Étape 3 - Passage de la base 2 à la base 10 [15-20 min.]<a class="headerlink" href="#etape-3-passage-de-la-base-2-a-la-base-10-15-20-min" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="retour-de-base-2-a-base-10">
+<span id="magiebinaire-retour"></span><h2>Retour de base 2 à base 10<a class="headerlink" href="#retour-de-base-2-a-base-10" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : 15-20 mn</em></p>
 <p>Revenez ensuite sur la numérotation en base 10 pour présenter la forme canonique.<br/>
 Dans un système de position, comme le nôtre, pour connaître la valeur de chaque chiffre qui compose un nombre, il faut décomposer ce nombre pour identifier chaque chiffre et son coefficient.<br/>
 En effet, le 2 de 1924 et celui de 2004 n’ont pas la même valeur : Le premier vaut 20, alors que le second vaut 2000.</p>
@@ -533,7 +528,7 @@ En effet, le 2 de 1924 et celui de 2004 n’ont pas la même valeur : Le premie
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p class="card-text">Niveau</p></th>
-<th class="head"><p class="card-text">Nom<a class="footnote-reference brackets" href="#id5" id="id2">0</a></p></th>
+<th class="head"><p class="card-text">Nom<a class="footnote-reference brackets" href="#id4" id="id1">0</a></p></th>
 <th class="head"><p class="card-text">Coefficient</p></th>
 </tr>
 </thead>
@@ -596,7 +591,7 @@ En effet, le 2 de 1924 et celui de 2004 n’ont pas la même valeur : Le premie
 </div>
 </div>
 <section id="exercice-2">
-<h4>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h4>
+<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Réalisation d’un tableau de conversion des 11 premières puissances de 2.</p>
 <div class="math-wrapper"><div class="math notranslate nohighlight">
 \[\begin{split}\begin{array}{|l|c|c|c|c|c|c|c|c|c|c|c|}
@@ -608,7 +603,7 @@ En effet, le 2 de 1924 et celui de 2004 n’ont pas la même valeur : Le premie
 \end{array} \end{split}\]</div></div>
 </section>
 <section id="exercice-3">
-<h4>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h4>
+<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Faire les conversions décimales de plusieurs nombres binaires</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(10101101_{(2)}\)</span></p></li>
@@ -618,7 +613,7 @@ En effet, le 2 de 1924 et celui de 2004 n’ont pas la même valeur : Le premie
 </ul>
 </section>
 <section id="exercice-4">
-<h4>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h4>
+<h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Faire les conversions décimales de nombres binaires spécifiques</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(1_{(2)}\)</span></p></li>
@@ -640,13 +635,19 @@ En effet, le 2 de 1924 et celui de 2004 n’ont pas la même valeur : Le premie
 </div>
 </section>
 <section id="exercice-5">
-<h4>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h4>
+<h3>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h3>
 <p>À l’aide du tableau de l’exercice 2, comment peut-on passer de la base 10 à la base 2 ?<br/>
 Faire les conversions binaires de différents nombres décimaux.</p>
+<p><em>Durée : 10-15 mn</em></p>
 </section>
 </section>
-<section id="etape-4-encodage-de-linformation-10-15-min">
-<h3>1.6.4. Étape 4 - Encodage de l’information [10-15 min.]<a class="headerlink" href="#etape-4-encodage-de-linformation-10-15-min" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="conclusion">
+<span id="algo-tri-conclusion"></span><h2>Conclusion<a class="headerlink" href="#conclusion" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : 5-10 mn</em></p>
+</section>
+<section id="encodage-de-linformation">
+<span id="magiebinaire-encodage"></span><h2>Encodage de l’information<a class="headerlink" href="#encodage-de-linformation" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : 10-15 mn</em></p>
 <p>A l’instar du morse (0 = . ; 1 = - ), on peut utiliser le binaire pour (en)coder autre chose que des nombres. Introduire la notion du nombre de “mots” différents en fonction du nombre de bits.</p>
 <div class="math-wrapper"><div class="math notranslate nohighlight">
 \[\begin{split}\begin{array}{|l|c|c|c|c|c|c|c|c|c|c|}
@@ -658,7 +659,7 @@ Faire les conversions binaires de différents nombres décimaux.</p>
 \hline
 \end{array} \end{split}\]</div></div>
 <section id="exercice-6">
-<h4>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h4>
+<h3>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Quelques questions pour ancrer l’idée. Au début l’encodage par l’intermédiaire des nombres rassure puis on essaye de s’en éloigner.</p>
 <p>Combien de bits faut-il pour représenter :</p>
 <ul class="simple">
@@ -670,18 +671,19 @@ Faire les conversions binaires de différents nombres décimaux.</p>
 </ul>
 </section>
 </section>
-<section id="etape-5-explication-du-tour-10-15-min">
-<h3>1.6.5. Étape 5 - Explication du tour [10-15 min.]<a class="headerlink" href="#etape-5-explication-du-tour-10-15-min" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="explication-du-tour">
+<span id="magiebinaire-explication"></span><h2>Explication du tour<a class="headerlink" href="#explication-du-tour" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : 10-15 min.</em></p>
 <p>L’idée ici est d’essayer d’amener les élèves à comprendre en observant les cartes et guidées par des questions telles que :</p>
 <ol class="simple">
 <li><p>Combien faut-il de bits pour encoder les chiffres de 1 (ou 0) à 63 ?</p></li>
-<li><p>Combien y a-t-il de cartes  pour le tour ?</p></li>
+<li><p>Combien y a-t-il de cartes pour le tour ?</p></li>
 <li><p>Avec 6 bits je peux coder 64 “mots” différents, avec 1 bit de moins, combien ?</p></li>
 <li><p>Combien y a-t-il de nombres sur une carte ?</p></li>
 <li><p>Qu’on en commun les nombres d’une même carte ?</p></li>
 </ol>
 <section id="la-solution">
-<h4>La solution<a class="headerlink" href="#la-solution" title="Lien permanent vers ce titre">¶</a></h4>
+<h3>La solution<a class="headerlink" href="#la-solution" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Regardez attentivement la carte qui contient un 2 en haut à gauche.<br/>
 Voici comment s’écrivent les nombres de cette carte en binaire:</p>
 <div class="sphinx-bs container pb-4 docutils">
@@ -692,7 +694,7 @@ Voici comment s’écrivent les nombres de cette carte en binaire:</p>
 <p class="card-text">Représentation binaire des chiffres de la carte n°2</p>
 </div>
 <div class="card-body docutils">
-<a class="bg-primary reference internal image-reference" href="rep-info/activ/Carte2.png"><img alt="carte2" class="bg-primary" src="rep-info/activ/Carte2.png" style="width: 600px;"/></a>
+<a class="bg-primary reference internal image-reference" href="../../_images/Carte2.png"><img alt="carte2" class="bg-primary" src="../../_images/Carte2.png" style="width: 600px;"/></a>
 </div>
 </div>
 </div>
@@ -703,21 +705,17 @@ Par conséquent l’information donnée par l’élève de présence ou non de s
 Une fois toutes les cartes passées en revue il a donné le code binaire de son nombre secret !</p>
 </section>
 </section>
-</section>
 <section id="pour-aller-plus-loin">
-<h2>1.7. Pour aller plus loin<a class="headerlink" href="#pour-aller-plus-loin" title="Lien permanent vers ce titre">¶</a></h2>
-<section id="mise-en-pratique">
-<h3>1.7.1. Mise en pratique<a class="headerlink" href="#mise-en-pratique" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Si on a du temps pour escalader la pyramide d’Anderson et Krathwohl<a class="footnote-reference brackets" href="#id6" id="id3">1</a>.</p>
+<span id="magiebinaire-plusloin"></span><h2>Pour aller plus loin<a class="headerlink" href="#pour-aller-plus-loin" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Si on a du temps pour escalader la pyramide d’Anderson et Krathwohl<a class="footnote-reference brackets" href="#id5" id="id2">1</a>.</p>
 <p>Les élèves doivent créer la version du tour pour le petit frère (ou petite sœur) avec 4 cartes.</p>
 <ol class="simple">
 <li><p>Quels sont les nombres possibles ?</p></li>
 <li><p>Combien y a-t-il de nombres par carte ?</p></li>
 <li><p>Quels sont ces nombres ?</p></li>
 </ol>
-</section>
-<section id="ouverture-et-questionnement">
-<h3>1.7.2. Ouverture et questionnement<a class="headerlink" href="#ouverture-et-questionnement" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="ouvertures-et-questionnements">
+<h3>Ouvertures et questionnements<a class="headerlink" href="#ouvertures-et-questionnements" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p>Les valeurs des puissances de 2 sont des valeurs qu’ils connaissent déjà ! Capacité de stockage des clés USB, smartphones, SSD, etc… Pourquoi ?</p></li>
 <li><p>Comment peut-on faire pour écrire des nombres négatifs, décimaux en binaire ?</p></li>
@@ -725,27 +723,27 @@ Une fois toutes les cartes passées en revue il a donné le code binaire de son 
 </ul>
 </section>
 <section id="mobiliser-les-connaissances">
-<h3>1.7.3. Mobiliser les connaissances<a class="headerlink" href="#mobiliser-les-connaissances" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Mobiliser les connaissances<a class="headerlink" href="#mobiliser-les-connaissances" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Voici une énigme dont la solution utilise le principe de codage binaire.</p>
 <section id="lenigme">
 <h4>L’énigme<a class="headerlink" href="#lenigme" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Vous êtes le seigneur du canton de Vaud, et préparez votre mariage qui a lieu demain. Pour cette occasion, vous avez commandé 1000 bouteilles d’un excellent cru du Valais. Mauvaise idée, on vous apprend qu’une des bouteilles (et une seule) est empoisonnée. Le poison incolore, insipide et inodore, dont les effets sont dévastateurs (vomissements, convulsions, …), provoque la mort en moins de 24h.<br/>
-Pour trouver la bouteille empoisonnée, vous disposez de 10 rats testeurs (vous avez malheureusement aboli l’esclavage et personne ne souhaite faire ce métier). Votre problème, il est midi et les bouteilles doivent être servies demain à 14h. Comment allez-vous procéder pour pouvoir servir les 999 bouteilles non empoisonnées à votre mariage ?</p>
+<p>Vous êtes le seigneur du canton de Vaud, et préparez votre mariage qui a lieu demain. Pour cette occasion, vous avez commandé 1000 bouteilles d’un excellent cru du Valais. Mauvaise idée, on vous apprend qu’une des bouteilles (et une seule) est empoisonnée. Le poison incolore, insipide et inodore, dont les effets sont dévastateurs (vomissements, convulsions, …), provoque la mort en moins de 24h.</p>
+<p>Pour trouver la bouteille empoisonnée, vous disposez de 10 rats testeurs (vous avez malheureusement aboli l’esclavage et personne ne souhaite faire ce métier). Votre problème, il est midi et les bouteilles doivent être servies demain à 14h. Comment allez-vous procéder pour pouvoir servir les 999 bouteilles non empoisonnées à votre mariage ?</p>
 </section>
-<section id="id4">
-<h4>La solution<a class="headerlink" href="#id4" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Le fait qu’un rat meurt ou non nous donne de l’information. Ce qu’on doit trouver, c’est comment cette information peut nous permettre d’identifier la bouteille empoisonnée.<br/>
-Il suffit d’identifier chaque bouteille par un nombre binaire unique, et chaque rat par un numéro (non binaire celui-ci).<br/>
-Ce nombre binaire comportera autant de bits que de rats, et la position d’un bit dans le nombre  correspondra à un numéro de rat (avec 10 rats on a 1024 possibilités donc un peu de marge). Si ce bit est à 1, alors cela signifie que ce rat aura gouté cette bouteille.<br/>
-Par exemple la bouteille 3 sera codée 0110 (si on code sur 4 bits, c’est à dire 4 rats), ce qui signifie que les rats 2 et 3 l’auront gouté.</p>
-<p>Une fois que toutes les bouteilles ont été goutées, on regarde les numéros des rats décédés. Tous on leur bit à 1 dans la bouteille empoisonnée, leur mort nous apporte l’information nécessaire.<br/>
-Si par exemple on avait le rat 1 et le 3 de mort, alors la bouteille correspondante serait (0101), c’est à dire la numéro 5 !</p>
+<section id="id3">
+<h4>La solution<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Le fait qu’un rat meurt ou non nous donne de l’information. Ce qu’on doit trouver, c’est comment cette information peut nous permettre d’identifier la bouteille empoisonnée.</p>
+<p>Il suffit d’identifier chaque bouteille par un nombre binaire unique, et chaque rat par un numéro (non binaire celui-ci).</p>
+<p>Ce nombre binaire comportera autant de bits que de rats, et la position d’un bit dans le nombre  correspondra à un numéro de rat (avec 10 rats on a 1024 possibilités donc un peu de marge). Si ce bit est à 1, alors cela signifie que ce rat aura gouté cette bouteille.</p>
+<p>Par exemple la bouteille 3 sera codée 0110 (si on code sur 4 bits, c’est à dire 4 rats), ce qui signifie que les rats 2 et 3 l’auront gouté.</p>
+<p>Une fois que toutes les bouteilles ont été goutées, on regarde les numéros des rats décédés. Tous ont leur bit à 1 dans la bouteille empoisonnée, leur mort nous apporte l’information nécessaire.</p>
+<p>Si par exemple on avait le rat 1 et le 3 de mort, alors la bouteille correspondante serait (0101), c’est à dire la numéro 5 !</p>
 <hr class="footnotes docutils"/>
 <dl class="footnote brackets">
-<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">0</a></span></dt>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">0</a></span></dt>
 <dd><p>Les noms sont au singulier car il ne peut pas y en avoir plus que 1 par niveau…</p>
 </dd>
-<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>LW, Anderson &amp; DR, Krathwohl Eds. (2001). A Taxonomy for Learning, Teaching, and Assessing: A Revision of Bloom’s Taxonomy of Educational Objectives.</p>
 </dd>
 </dl>
@@ -784,47 +782,36 @@ Si par exemple on avait le rat 1 et le 3 de mort, alors la bouteille corresponda
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">1. Magie Binaire</a><ul>
-<li><a class="reference internal" href="#introduction">1.1. Introduction</a></li>
-<li><a class="reference internal" href="#objectifs-du-cours">1.2. Objectifs du cours</a></li>
-<li><a class="reference internal" href="#duree">1.3. Durée</a></li>
-<li><a class="reference internal" href="#materiel-requis">1.4. Matériel requis</a></li>
-<li><a class="reference internal" href="#accroche">1.5. Accroche</a></li>
-<li><a class="reference internal" href="#marche-a-suivre">1.6. Marche à suivre</a><ul>
-<li><a class="reference internal" href="#etape-1-tour-de-magie-10-15-min">1.6.1. Étape 1 - Tour de magie [10-15 min.]</a><ul>
-<li><a class="reference internal" href="#objectif-attiser-la-curiosite">Objectif : Attiser la curiosité</a></li>
+<li><a class="reference internal" href="#">Magie Binaire</a><ul>
+<li><a class="reference internal" href="#presentation-du-tour-de-magie">Présentation du tour de magie</a><ul>
 <li><a class="reference internal" href="#tour-de-magie">Tour de magie</a></li>
-<li><a class="reference internal" href="#id1">Accroche</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#etape-2-compter-en-binaire-15-20-min">1.6.2. Étape 2 - Compter en binaire [15-20 min.]</a><ul>
-<li><a class="reference internal" href="#objectif">Objectif</a></li>
+<li><a class="reference internal" href="#compter-en-binaire">Compter en binaire</a><ul>
 <li><a class="reference internal" href="#exercice-1">Exercice 1</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#etape-3-passage-de-la-base-2-a-la-base-10-15-20-min">1.6.3. Étape 3 - Passage de la base 2 à la base 10 [15-20 min.]</a><ul>
+<li><a class="reference internal" href="#retour-de-base-2-a-base-10">Retour de base 2 à base 10</a><ul>
 <li><a class="reference internal" href="#exercice-2">Exercice 2</a></li>
 <li><a class="reference internal" href="#exercice-3">Exercice 3</a></li>
 <li><a class="reference internal" href="#exercice-4">Exercice 4</a></li>
 <li><a class="reference internal" href="#exercice-5">Exercice 5</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#etape-4-encodage-de-linformation-10-15-min">1.6.4. Étape 4 - Encodage de l’information [10-15 min.]</a><ul>
+<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
+<li><a class="reference internal" href="#encodage-de-linformation">Encodage de l’information</a><ul>
 <li><a class="reference internal" href="#exercice-6">Exercice 6</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#etape-5-explication-du-tour-10-15-min">1.6.5. Étape 5 - Explication du tour [10-15 min.]</a><ul>
+<li><a class="reference internal" href="#explication-du-tour">Explication du tour</a><ul>
 <li><a class="reference internal" href="#la-solution">La solution</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a class="reference internal" href="#pour-aller-plus-loin">1.7. Pour aller plus loin</a><ul>
-<li><a class="reference internal" href="#mise-en-pratique">1.7.1. Mise en pratique</a></li>
-<li><a class="reference internal" href="#ouverture-et-questionnement">1.7.2. Ouverture et questionnement</a></li>
-<li><a class="reference internal" href="#mobiliser-les-connaissances">1.7.3. Mobiliser les connaissances</a><ul>
+<li><a class="reference internal" href="#pour-aller-plus-loin">Pour aller plus loin</a><ul>
+<li><a class="reference internal" href="#ouvertures-et-questionnements">Ouvertures et questionnements</a></li>
+<li><a class="reference internal" href="#mobiliser-les-connaissances">Mobiliser les connaissances</a><ul>
 <li><a class="reference internal" href="#lenigme">L’énigme</a></li>
-<li><a class="reference internal" href="#id4">La solution</a></li>
+<li><a class="reference internal" href="#id3">La solution</a></li>
 </ul>
 </li>
 </ul>
