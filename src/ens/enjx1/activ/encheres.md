@@ -14,7 +14,7 @@ La séquence d'enseignement se déroule en une séance de 45 minutes. Une plus l
 
 ### Supports didactiques
 
-- Un jeu de cartes comprenant des cartes *visiteurs* pour les élèves (format A4 ou numérique pour être projetés),
+- Un jeu de cartes comprenant des cartes *visiteurs* (2 visiteurs inconnus (puis dévoilés), 6 visiteurs connus) à présenter aux élèves (format A4 ou numérique pour être projetés),
 - Ces mêmes cartes  *visiteurs* avec des indications pour l'enseignant&middot;e,
 - 4 cartes *vendeurs* représentant les groupes de vendeurs qui vont essayer de remporter des enchères afin de faire des gains via la plateforme web,
 - 2 dés à 6 faces,
@@ -42,16 +42,16 @@ Afin d'illustrer comment une entreprise mets un en place un modèle économique 
 Le jeu se déroule en mode **«Débranché»**.
 Le jeu utilise des cartes pour représenter les vendeurs et les visiteurs.
 L'enseignant joue le rôle de la plateforme web qui dirige les enchères pour des encarts publicitaires.
-Les élèves, en groupes, jouent les vendeurs et enchérissent au moyen d'ardoise.
+Les élèves, en groupes, jouent les vendeurs et enchérissent au moyen d'ardoises.
 Les achats des visiteurs auprès des vendeurs sont simulés avec des lancers de dés.
 Les dépenses et gains de chaque groupe sont reportés au tableau sous forme de colonnes.
 
 
-### Moments didactiques
+### Déroulement
 
-#### 1<sup>er</sup> moment didactique (20 mn)
+#### 1<sup>ère</sup> étape (20 mn)
 
-Dans ce premier moment didactique, l'enseignant&middot;e présente les objectifs du jeu et ses règles.
+Dans cette première étape, l'enseignant&middot;e présente les objectifs du jeu et ses règles.
 Deux premières visites, avec des visiteurs au profil inconnu, sont ensuite effectuées.
 
 ##### Explications du jeu (5mn)
@@ -60,7 +60,7 @@ L'enseignant&middot;e explique le fonctionnement du jeu qui est détaillé dans 
 
 L'activité se déroule autour d'un jeu de rôle avec quatre vendeurs (chacun joué par un groupe d'élèves) qui passent par une plateforme publicitaire web (jouée par l'enseignant&middot;e) pour atteindre des clients potentiels. 
 
-Les clients représentent des internautes qui visitent la plateforme (ou un site affilié) et qui peuvent se voir afficher de la publicité pour les produits des clients. En jeu, ils sont représentés par des cartes *visiteurs* et leur comportement d'achat est modélisé par des lancers de dés.
+Les visiteurs représentent des internautes qui visitent la plateforme (ou un site affilié) et qui peuvent se voir afficher de la publicité pour les produits des vendeurs. En jeu, ils sont représentés par des cartes *visiteurs* et leur comportement d'achat est modélisé par des lancers de dés.
 
 Les produits en vente sont répartis en 4 catégories, chaque groupe d'élèves étant responsable d'une catégorie de produits :
 
@@ -69,7 +69,7 @@ Les produits en vente sont répartis en 4 catégories, chaque groupe d'élèves 
 - les articles informatique et multimédia et enfin
 - les livres et BD avec un libraire généraliste.
 
-*L'enseignant forme les groupes et attribue les produits selon la méthode de son choix.
+*L'enseignant&middot; forme les groupes et attribue les produits selon la méthode de son choix.
 L'enseignant&middot;e distribue ensuite le matériel à chaque groupe.*
 
 ##### Déroulement d'une visite (5mn)
@@ -115,9 +115,9 @@ La plateforme annonce l'arrivée d'un nouveau visiteur et le processus d'enchèr
 
 *Les deux premiers clients sont des clients inconnus, non profilés par la plateforme et donnent lieu à deux enchères.*
 
-#### 2ème moment didactique (20 - 25mn)
+#### 2<sup>ème</sup> étape (20 - 25mn)
 
-Durant ce deuxième moment didactique, plusieurs tours d'enchères sont joués sur des visiteurs décrits par des profils plus ou moins détaillés. Les élèves enchérissent et des ventes sont actées.
+Durant cette deuxième étape, plusieurs tours d'enchères sont joués sur des visiteurs décrits par des profils plus ou moins détaillés. Les élèves enchérissent et des ventes sont actées.
 
 ##### Enchères (15 - 20mn)
 
@@ -139,15 +139,15 @@ Question ouverte : "D'après vous, quelles conclusions peut-on tirer de ce jeu d
 
 Ce jeu représente le fonctionnement actuel des plateformes publicitaires sur le web. Le résultat de ces ventes, avec des gains pour les vendeurs et la plateforme, sont le reflet des mécanismes de jeux des individus : notion de compétition entre les vendeurs, prise de risque, probabilité de gain.
 
-Les enchères fermée utilisées dans le cadre de ce jeu sont des enchères de Vickrey.
+Les enchères fermées utilisées dans le cadre de ce jeu sont des enchères de Vickrey.
 Une enchère de Vikrey est un protocole d'enchère à plis fermés où le lot est attribué au plus offrant, mais au prix donné par le deuxième plus offrant. Elles portent le nom de [William Vickrey](https://fr.wikipedia.org/wiki/William_Vickrey), qui a démontré que ce type d'enchères incite les enchérisseurs à indiquer la valeur réelle qu'ils attribuent au lot. La stratégie d'enchère optimale est d'indiquer le gain réel projeté, la marge se faisant ainsi sur la différence de l'enchère effectivement payée.
 Ce genre d'enchères est utilisée par les plateformes publicitaires sur le web.
 Pour information, Google a réalisé 61 milliards de bénéfice en 2021 avec la publicité.
 
 
-#### 3ème moment didactique (20-30mn)
+#### 3<sup>ème</sup> étape (20-30mn)
 
-Dans ce dernier moment, l'enseignant&middot;e mène un dialogue autour des différentes notions observées.
+Dans cette dernière étape, l'enseignant&middot;e mène un dialogue autour des différentes notions observées.
 
 Nous proposons des clefs pour discuter et dialoguer autour d'autres points que les enchères proprement dites. L'idée est de permettre aux élèves de se questionner sur le déroulement du jeu, sur les acteurs et leurs points de vue, puis sur la bascule au 3ème tour d'enchère pour l'aspect données, source des données avec les implications sur la vie privée, éthique et perceptions des acteurs clients sur la récolte de données.
 
@@ -158,7 +158,7 @@ Première série de questions :
 - *Êtes-vous sensibles à la publicité?*
 - *Que peut apporter la publicité pour les annonceurs?*
 - *Que peut apporter la publicité pour les visiteurs?*
-- *Quel est l'intérêt pour les plateforme de collecter des données?*
+- *Quel est l'intérêt pour les plateformes de collecter des données?*
 
 L'idée est de balayer les différents acteurs impliqués par les enchères et plus globalement la vente en ligne (de service ou de publicité).
 
@@ -167,12 +167,12 @@ Secondes série de questions :
 - *Avez-vous noté une bascule au 3<sup>ème</sup> visiteur, comment le jeu a évolué?*
 - *Quel type d'informations ont étés affichées?*
 - *Comment les enchères ont-elles évolué à ce stade?*
-- *Pour quel raison est-ce que les plateforme ont un intérêt à collecter vos données et à vous "profiler"?*
+- *Pour quel raison est-ce que les plateformes ont un intérêt à collecter vos données et à vous "profiler"?*
 - *Est-il vraisemblable que les plateformes connaissent ce genre d'information?*
 - *Quels traces pensez-vous laisser en ligne?*
 - *Ces traces peuvent-elles en dire beaucoup sur vous?*
 
-Cette deuxième série de question a pour but d'amener les élèves à identifier l'intérêt des plateforme pour la collecte de données et la mise au point de profils. Ses profils ne sont pas renseignés directement par le visiteurs, mais sont constitués à partir de leurs traces numériques. Recherches effectuées, page web et vidéos consultées, mouvements de la souris, consultation du téléphone portable ou d'une montre connectée: tout laisse une trace numérique qui permet aux plateformes qui fournissent ces services (comme Google ou Meta) d'établir des profils utilisateurs à l'aide de modèles statistiques.
+Cette deuxième série de question a pour but d'amener les élèves à identifier l'intérêt des plateformes pour la collecte de données et la mise au point de profils. Ces profils ne sont pas renseignés directement par les visiteurs, mais sont constitués à partir de leurs traces numériques. Recherches effectuées, page web et vidéos consultées, mouvements de la souris, consultation du téléphone portable ou d'une montre connectée : tout laisse une trace numérique qui permet aux plateformes qui fournissent ces services (comme Google ou Facebook/Meta) d'établir des profils utilisateurs à l'aide de modèles statistiques.
 
 Une anecdote pour relancer la discussion: Autour de 2012, Target, chaîne de magasins américaine, aurait proposé des publicités pour des produits pour les nouveau-nés à une adolescente qui ne se savait pas encore enceinte. Dans ce cas, le changement d'habitudes de la cliente (un choix de shampooing sans odeur alors qu'auparavant ses choix étaient parfumés) aurait indiqué à la chaîne que la personne était probablement enceinte. Sources: [Article NYT](https://www.nytimes.com/2012/02/19/magazine/shopping-habits.html), [article Forbes](https://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/?sh=b128b566686d).
 
@@ -181,7 +181,7 @@ Une anecdote pour relancer la discussion: Autour de 2012, Target, chaîne de mag
 ### Ressources supplémentaires pour l'enseignant
 
 - Le livre de Shoshana Zuboff: *The Age of Surveillance Capitalism*, disponible en traduction française
-- Un article qui présente [le coup au clic pour les mot-clés les plus compétitifs sur Google](https://blog.hubspot.com/marketing/most-expensive-keywords-google)
+- Un article qui présente [le coût au clic pour les mot-clés les plus compétitifs sur Google](https://blog.hubspot.com/marketing/most-expensive-keywords-google)
 - Un article qui présente [comment fonctionne le système d'enchères publicitaires de Facebook](https://neomedia.io/blog/encheres-publicitaire-facebook/)
 
 
