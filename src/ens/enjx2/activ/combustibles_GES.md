@@ -1,8 +1,8 @@
 # Numérique et environnement - le problème de l'énergie (consommée pendant le cycle de vie des produits numériques) : combustibles fossiles / non fossiles et GES - Deux activités
 
 On propose ici deux activités sur la thématique :
-- activité 1 : combustibles fossiles versus bois
-- activité 2 : combustibles fossiles versus éolien
+- activité 1.1 : combustibles fossiles versus bois
+- activité 1.2 : combustibles fossiles versus éolien
 
 Classe : 1M, 2M
 
@@ -48,7 +48,7 @@ Mathématique : proportionnalité
 
 ### Moments didactiques
 
-Activité 1
+Activité 1.1
 
 
 1er moment : première «rencontre» avec l'étude.
@@ -80,16 +80,16 @@ S'ensuivra une demande d'analyse des résultats aux élèves retrouvant les conc
 
 [^1]: Chevallard Yves, (1998). Analyse des pratiques enseignantes et didactique des mathématiques : l’approche anthropologique. Cours donné à l’université d’été Analyse des pratiques enseignantes et didactique des mathématiques, La Rochelle, 4-11 juillet 1998 ; paru dans les actes de cette université d’été, IREM de Clermont-Ferrand
 
-Activité 2
+Activité 1.2
 
-à compléter ...
+à compléter ;)
 
 ### Supports didactiques
 
 - Tableur Excel sur fiche élève intégrant l'énoncé.
 - Tableau et vidéoprojecteur pour la visualisation de l'énoncé et la manipulation en direct du tableur, tableau blanc.
 
-Activités 1 & 2 : les fichiers suivants sont à télécharger pour l'activité complète : {download}`présentation <media/Numérique et environnement.odp>`,{download}`fiche élève <media/Activité Numérique et Environnement Fiche élève.ods>`, {download}`fiche enseignant <media/Activité Numérique et Environnement Fiche enseignant.ods>`.
+Activités 1.1 & 1.2 : les fichiers suivants sont à télécharger pour l'activité complète : {download}`présentation <media/Numérique et environnement.odp>`,{download}`fiche élève <media/Activité Numérique et Environnement Fiche élève.ods>`, {download}`fiche enseignant <media/Activité Numérique et Environnement Fiche enseignant.ods>`.
 
 
 
@@ -98,7 +98,7 @@ Activités 1 & 2 : les fichiers suivants sont à télécharger pour l'activité 
 Chaque activité se déroule sur une période de 45 mn en demi-classe, la séquence globale sur deux périodes.
 
 
-### Déroulement Activité 1
+### Déroulement Activité 1.1
 
 #### Présentation de l'activité globale, puis explicitation de l'énoncé de la première activité : combustibles fossiles et bois (10 mn)
 
@@ -120,11 +120,11 @@ Il travaille en particulier au tableau, avec les élèves.
 Recommandations et directives de l'enseignant - Travail en autonomie des élèves
 
 Les élèves sont invités à effectuer des calculs à la main sur feuille, ou à utiliser leurs calculatrices physiques ou en ligne.
-Puis ils retranscrivent leurs résultats directement dans le tableau excel. Les résultats sont donc inscrits "en dur".
+Puis ils retranscrivent leurs résultats directement dans le tableau excel. Les résultats sont donc inscrits «en dur».
 
 L'enseignant passe dans les rangs s'assurer de l'avancée et de la justesse des calculs. 
 Puis il revient au tableau en affichant les valeurs (diapositive 24). Il évoque les aspects relatifs à la précision décimale en montrant les icônes permettant d'ajuster le nombre de chiffres significatifs après la virgule.
-Puis il introduit la fonctionnalité calcul du tableur : il tape directement dans la première cellule "=1/12". S'affiche alors le résultat du calcul. En jouant sur la précision décimale, il montre ainsi aux élèves qui doivent également effectuer la manipulation que le tableur calcule la valeur "réelle" (même si tronquée par la machine).
+Puis il introduit la fonctionnalité calcul du tableur : il tape directement dans la première cellule «=1/12». S'affiche alors le résultat du calcul. En jouant sur la précision décimale, il montre ainsi aux élèves qui doivent également effectuer la manipulation que le tableur calcule la valeur "réelle" (même si tronquée par la machine).
 Les élèves expérimentent cette première «magie» du tableur.
 
 L'enseignant questionne, évite d'intervenir directement sur l'espace de l'élève (clavier, souris), ou le fait dans une démarche de montrer/démontrer.
@@ -163,17 +163,7 @@ En diapositive 47, l'enseignant invite les élèves à réfléchir sur nos compo
 
 Les élèves sont invités à compléter le questionnaire dont ils trouvent le lien sur leur fiche, et qui s'affiche au tableau (diapositive 48).
  
-
-
-### Déroulement Activité 2
-
-à rédiger ...
-
-
-### Expérimentation en classe 
-
-La séquence complète (exposé théorique, activité courte et activité 1) a été expérimentée sur plusieurs classes au collège de Genève.
-
+<!-- 
 On présente ici les résultats du questionnaire soumis à une classe de première maturité de 16 élèves (11 présents), dont 6 soit ont démissionné (réorientation), soit sont en grande difficulté.
 
 
@@ -190,3 +180,73 @@ Ces retours montrent une forte adhésion de l'ensemble de la classe à la théma
 La clarté des objectifs et la structuration de l'ensemble de la séquence ont indéniablement joué dans l'adhésion des élèves (critères 5, 6, 7).
 Concernant le recours aux notions transdisciplinaires (mathématiques / physique) et le travail effectué, le résultat est satisfaisant si l'on intègre l'hétérogénéité de la classe mais interroge néanmoins compte-tenu des éléments mathématiques (proportionnalité...) et physique (masse, énergie) abordés.
 Aborder sérieusement une réflexion concernant la thématique se passe difficilement d'une activité de quantification des grandeurs élémentaires dont il est question : combustibles, rendement énergétique, production de GES. 
+-->
+
+### Déroulement Activité 1.2
+
+Cette activité doit être vue comme une activité complémentaire à la précédente, en reprenant certaines informations (pouvoir calorifique du fioul, masse de CO2 produite lors de la combustion de 1 kg de fioul). 
+Elle est alors une activité de confirmation des techniques et éléments abordés lors de l'activité 1.1, et donc un moyen pour les élèves de travailler l'ensemble des points déjà traités : grandeurs, proportionnalité, utilisation «informatique» du tableur (4ème moment didactique).
+
+Compte-tenu du nombre de périodes restreint alloué à cette thématique dans les divers plans d'études, on peut l'adapter afin de la rendre autonome.
+
+
+#### Présentation de l'activité globale, puis explicitation de l'énoncé de l'activité : combustibles fossiles et éolien (10 mn)
+
+L'enseignant présente l'activité (diapositive 33) qui propose 4 questions. Il explicite l'énoncé en insistant en particulier sur la période de chauffage (6 mois de l'année) et revient sur l'unité d'énergie, le kWh.
+
+
+#### Question a (5 - 7 mn)
+
+L'enseignant guide fortement cette phase en amenant les élèves au calcul de l'énergie nécessaire par jour de chauffage. Il invite les élèves à effectuer ce calcul directement avec le tableur.
+
+La valeur trouvée (111 kWh) est validée par l'indication de la cellule E32 : «oui c'est suffisant». Un détour de l'enseignant peut alors être fait par le détail de cette cellule permettant un affichage en fonction de la valeur trouvée dans la cellule C32 : test de type IF THEN ELSE (diapositive 37).
+
+La diapositive 35, puis la 36 sont affichées au tableau par l'enseignant.
+
+#### Question b (5 - 7 mn)
+
+L'enseignant réalise au tableau avec les élèves le calcul posé par la question b : il souligne alors à nouveau le recours à la règle de 3 (proportionnalité).
+Il affiche les diapositives 38 et 39.
+
+#### Question c (5 - 7 mn)
+
+Les élèves sont laissés en autonomie pour répondre à cette question, devant mettre en oeuvre tous les outils déjà présentés et expérimentés.
+
+L'enseignant passe dans les rangs s'assurer de l'avancée et de la justesse des calculs. 
+Puis il revient au tableau en affichant les valeurs (diapositives 40 et 41). 
+
+#### Question d (5 - 7 mn)
+
+Les élèves sont à nouveau laissés en autonomie dans cette phase, pour les mêmes raisons que pour la question précédente.
+
+L'enseignant passe dans les rangs s'assurer de l'avancée et de la justesse des calculs. 
+Puis il revient au tableau en affichant les valeurs (diapositives 43, 44, 45). 
+
+#### Interprétation des résultats (5 - 7 mn)
+
+À la diapositive 45, l'enseignant propose de s'attarder sur les résultats afin d'en extraire le sens. 
+254 kg de CO2 émis par l'éolien versus 6000 kg émis par le fioul, pour la même quantité d'énergie nécessaire (chauffer une maison l'hiver).
+
+L'enseignant insiste bien sur le fait qu'il s'agisse d'émission de CO2 globale sur le cycle de vie du combustible fioul d'un côté, et de l'appareil (éolienne) de l'autre.
+
+
+
+
+#### Conclusion (3 mn)
+
+L'enseignant bascule ensuite sur la diapositive 46 présentant avantages et inconvénients des deux types d'énergie.
+
+En diapositive 47, l'enseignant invite les élèves à réfléchir sur nos comportements pour nous-mêmes et nos enfants (le futur).
+
+
+#### Questionnaire élèves (1 - 2 mn)
+
+Les élèves sont invités à compléter le questionnaire dont ils trouvent le lien sur leur fiche, et qui s'affiche au tableau (diapositive 48).
+ 
+
+
+
+### Expérimentation en classe 
+
+Cette activité n'a pas encore été expérimentée en classe.
+

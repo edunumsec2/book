@@ -103,7 +103,7 @@ width: 200px
 Construction d'une porte logique **ET** à partir de deux transistors (et de résistances).
 ```
 
-Ici, les deux transistors sont les composants symbolisés par un cercle. Rappelons qu'ils laissent passer du courant de haut en bas lorsqu'ils détectent un courant sur l'entrée qui vient de la droite. Ici, si **V** représente une tension continue de, disons, 5 volts, on aura donc une tension similaire sur la sortie **Out** que si à la fois **A** et **B**, qui sont ici les entrées du circuit, sont «actives» — donc lorsque les deux transistors sont «ouverts». Sinon, on aura une tension de 0 volts sur la sortie **Out**.
+Ici, les deux transistors sont les composants symbolisés par un cercle. Rappelons qu'ils laissent passer du courant de haut en bas lorsqu'ils détectent un courant sur l'entrée qui vient de la gauche. Ici, si **V** représente une tension continue de, disons, 5 volts, on aura donc une tension similaire sur la sortie **Out** que si à la fois **A** et **B**, qui sont ici les entrées du circuit, sont «actives» — donc lorsque les deux transistors sont «ouverts». Sinon, on aura une tension de 0 volts sur la sortie **Out**.
 ````
 
 
