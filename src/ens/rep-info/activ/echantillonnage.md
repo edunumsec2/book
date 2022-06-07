@@ -105,7 +105,7 @@ Ordinateur individuel, logiciel Audacity, casque audio individuel connecté sur 
 
 
 ### 3.2.5. Durée
-La séquence d'enseignement se découpe en <span style="color:violet">deux périodes de 45mn</span> en demi-classes.
+La séquence d'enseignement se découpe en <span style="color:violet"> deux périodes de 45mn </span> en demi-classes.
 
 </br> 
 
@@ -495,8 +495,10 @@ width: 100%
 **Ecoute à différentes fréquences d'échantillonnage sous Audacity.**
 ```
 
-Après une dizaine de minutes d'écoute autonome, l'enseignant questionne les élèves sur ce qu'ils ont écouté, la qualité des sons enregistrés à différentes fréquences et sur leur interprétation des fréquences indiquées. Il leur demande d'enregistrer chaque fichier son à chaque fréquence, en suivant le format : Audio1_8000.mp3 par exemple pour l'enregistrement du fichier Audio1 à la fréquence d'échantillonnage de 8000 Hz. - <span style="color:violet">10-15mn</span>.
-
+Après une dizaine de minutes d'écoute autonome, l'enseignant questionne les élèves sur ce qu'ils ont écouté, la qualité des sons enregistrés à différentes fréquences et sur leur interprétation des fréquences indiquées. Il leur demande d'enregistrer chaque fichier son à chaque fréquence, en suivant le format : {download}`Audio1_8000.mp3<media/Audio1_8000.mp3>` par exemple pour l'enregistrement du fichier Audio1 à la fréquence d'échantillonnage de 8000 Hz. - <span style="color:violet">10-15mn</span>. Les fichiers suivants sont en particulier obtenus (ceux aux fréquences supérieures ne sont volontairement pas chargés):
+{download}`Audio1_8000.mp3<media/Audio1_8000.mp3>`, 
+{download}`Audio1_22050.mp3<media/Audio1_22050.mp3>`,
+{download}`Audio1_44100.mp3<media/Audio1_44100.mp3>`.
 
 
 **<span style="color:red">DE T1 À T2 = T1 + 25mn = T0 + 45mn</span>**
