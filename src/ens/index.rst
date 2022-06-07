@@ -21,7 +21,7 @@ ainsi que des problématiques de traitement des données telles que *l'encodage*
 
 `Programmation I <https://dev-apprendre.modulo-info.ch/prog1/index.html>`_
 : ce chapitre présente la programmation sous une approche visuelle et graphique. 
-A travers des activités familières (dessiner, définir, colorier, répèter, etc.) 
+A travers des activités familières (dessiner, définir, colorier, répéter, etc.) 
 nous faisons connaissance avec les concepts informatiques tel que fonctions, boucles et variables. 
 
 `Algorithmique I <https://apprendre.modulo-info.ch/content/appr/theme/algo1/accueil/eleve.html>`_
