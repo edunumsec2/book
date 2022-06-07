@@ -495,7 +495,7 @@ width: 100%
 **Ecoute à différentes fréquences d'échantillonnage sous Audacity.**
 ```
 
-Après une dizaine de minutes d'écoute autonome, l'enseignant questionne les élèves sur ce qu'ils ont écouté, la qualité des sons enregistrés à différentes fréquences et sur leur interprétation des fréquences indiquées. Il leur demande d'enregistrer chaque fichier son à chaque fréquence, en suivant le format : {download}`Audio1_8000.mp3<media/Audio1_8000.mp3>` par exemple pour l'enregistrement du fichier Audio1 à la fréquence d'échantillonnage de 8000 Hz. - <span style="color:violet">10-15mn</span>. Les fichiers suivants sont en particulier obtenus (ceux aux fréquences supérieures ne sont volontairement pas chargés):
+Après une dizaine de minutes d'écoute autonome, l'enseignant questionne les élèves sur ce qu'ils ont écouté, la qualité des sons enregistrés à différentes fréquences et sur leur interprétation des fréquences indiquées. Il leur demande d'enregistrer chaque fichier son à chaque fréquence, en suivant le format : {download}`Audio1_8000.mp3<media/Audio1_8000.mp3>` par exemple pour l'enregistrement du fichier Audio1 à la fréquence d'échantillonnage de 8000 Hz. - <span style="color:violet">10-15mn</span>. Les fichiers suivants sont en particulier obtenus (ceux aux fréquences supérieures, lourds, ne sont volontairement pas chargés):
 {download}`Audio1_8000.mp3<media/Audio1_8000.mp3>`, 
 {download}`Audio1_22050.mp3<media/Audio1_22050.mp3>`,
 {download}`Audio1_44100.mp3<media/Audio1_44100.mp3>`.
