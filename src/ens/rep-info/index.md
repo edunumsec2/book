@@ -23,6 +23,7 @@ Dans la partie apprendre, vous trouverez les chapitres suivants :
 
 - [Introduction](lien)
 - [Les entiers](lien)
+- [Les caractères](lien)
 - [Les images](lien)
 - [Le son](lien)
 - [Redondance](lien)
