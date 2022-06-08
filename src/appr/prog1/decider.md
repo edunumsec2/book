@@ -338,11 +338,11 @@ En mathématiques, une équation quadratique est une équation polynomiale qui p
 
 $$ a x^2 + b x + c = 0 $$
 
-Calculez d'abord le déterminant
+Calculez d'abord le discriminant
 
-$$ det = b^2 - 4 a c $$
+$$ delta = b^2 - 4 a c $$
 
-Selon le déterminant vous avez 3 cas. Si le déterminant est :
+Selon le discriminant vous avez 3 cas. Si le discriminant est :
 
 négatif : pas de solution
 
@@ -352,7 +352,7 @@ $$ x = \frac{-b}{2a} $$
 
 positif : deux solutions
 
-$$ x_1 = \frac{-b + \sqrt{det}}{2a},  x_2 = \frac{-b - \sqrt{det}}{2a} $$
+$$ x_1 = \frac{-b + \sqrt{delta}}{2a},  x_2 = \frac{-b - \sqrt{delta}}{2a} $$
 
 Écrivez un programme qui calcule la solution d'une équation quadratique.
 
