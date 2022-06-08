@@ -8,9 +8,27 @@ Le plan d'études pour l'informatique en tant que discipline obligatoire à l'É
 images, sons
 - Stockage et manipulation des données
 
-## Planification
+## Objectifs de la thématique `à compléter`
 
+Les objectifs pédagogiques du chapitre sont les suivants : 
 
+- Comprendre le passage du système décimal au **système binaire**. 
+- Comprendre la logique sur laquelle repose la **représentation binaire** des nombres entiers, des caractères, des images et des sons.
+- Comprendre la notion de **compression** des données.
+- Appréhender l’importance de la **redondance**.
+
+## Découpage de la thématique 
+
+Dans la partie apprendre, vous trouverez les chapitres suivants : 
+
+- [Introduction](lien)
+- [Les entiers](lien)
+- [Les images](lien)
+- [Le son](lien)
+- [Redondance](lien)
+- [Conclusion](lien)
+
+Dans la partie enseigner, vous trouverez des : 
 
 ```{toctree}
 :maxdepth: 1

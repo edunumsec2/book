@@ -1,4 +1,4 @@
-# Evaluation
+# Evaluations
 
 Dans ce chapitre nous présentons quelques pistes pour évaluer la programmation.
 

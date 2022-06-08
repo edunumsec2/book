@@ -1,33 +1,39 @@
 # Algorithmique I
-Les activités décrites ci-dessous sont proposées dans le but d'inciter les élèves, en partant d'éléments aussi concrets que possible, à se poser les questions propres aux concepts informatiques traités et à y réfléchir en mobilisant leurs propres ressources. Idéalement, la théorie devrait apporter des réponses à des questions que les élèves se sont déjà posées, voire confirmer et formaliser des réponses qu'ils ou elles ont déjà obtenues de manière autonomes (ou presque). 
+
+Le plan d'études pour l'informatique en tant que discipline obligatoire à l'École de maturité propose les contenus suivants pour **l'introduction à l'algorithmique**, ici appelée algorithmique I : 
+
+- Décomposition d’un problème
+- Algorithmes classiques
+- Conception d’algorithmes simples
+
+## Objectifs de la thématique `à compléter`
+
+
+À la fin de ce chapitre, vous saurez ce qu'est un algorithme et vous serez capable de transcrire des algorithmes en programmes. Vous saurez résoudre des problèmes, en décomposant leur solution en étapes à suivre. Vous verrez également que pour un même problème, on peut avoir plusieurs solutions avec des propriétés, avantages et désavantages différents. 
+
+- Se familiariser avec la notion d’algorithme.
+- Savoir résoudre des problèmes, en décomposant leur solution en étapes à suivre.
+- Savoir que pour un même problème, on peut avoir plusieurs solutions avec différents propriétés, - avantages et désavantages.
+- Être capable de transcrire un algorithme dans un programme.
+
+## Découpage de la thématique 
+
+Dans la partie apprendre, vous trouverez les chapitres suivants : 
+
+- [Introduction](lien)
+- [Les algorithmes](lien)
+- [Trie, cherche et trouve](lien)
+- [Des algorithmes aux programmes](lien)
+- [Conclusion](lien)
+
+Dans la partie enseigner, vous trouverez des : 
+
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 1
 :numbered: 1
+Planification <plan/planification>
 Activités <activ/index>
 Exercices <exo/index>
 ```
-
-## Planification
-
-Il existe plusieurs manières possibles de planifier les activités
-de ce chapitre. Une possibilité serait la suivante en faisant
-l'hypothèse que les élèves ont une periode de théorie hebdomadaire et deux
-périodes de pratique en demi-classe (groupes A et B) toutes les deux semaines et que la programmation a déjà été vue. 
-
-
-|Semaine | Cours | Labo|
-|------- | ------| ----|
-|1       | Intro. 1| Activité algo tri (A)| 
-|2       | Intro. 2| Activité algo tri (B)|
-|3       | Algo tri 1| Activité monochrome (A)| 
-|4       | Algo tri 2| Activité monochrome (B)|
-|5       | Théorie transcription d'algorithme | Activité épidémie (A)| 
-|6       | Exercices transcription d'algorithme| Activité épidémie (B)|
-|7       | Séance de récapitulation| ...| 
-|8       | Test | ...|
-
-
-<!--- Si le chapitre programmation n'a pas encore été abordée, il est possible de faire les activités Dijkstra et PageRank à la place de l'activité minimax et d'inclure la transcription d'algorithmes dans le chapitre de programmation. --->
-
 
