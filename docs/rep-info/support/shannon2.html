@@ -1,0 +1,704 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Recherche" href="../../search.html" /><link rel="next" title="Programmation I" href="../../prog1/index.html" /><link rel="prev" title="Représentation du son" href="son/visu-et-ecoute-son.html" />
+
+    <link rel="shortcut icon" href="../../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>Le rôle de l’aléatoire en informatique et en communication : l’exemple des codes correcteurs d’erreurs - Enseigner</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #06CCC0;
+  --color-brand-content: #06CCC0;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #06CCC0;
+  --color-brand-content: #06CCC0;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Enseigner</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Enseigner</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Première année</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Représentation de l’information</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../activ/index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../activ/magie_binaire_new.html">Magie binaire</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../activ/encoder_images.html">Images numériques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../activ/format_BMP_new.html">Format BMP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../activ/echantillonnage_new.html">Echantillonnage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../activ/hamming_new.html">Redondance et code de Hamming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../activ/huffman.html">Compression et codage de Huffman</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../exo/index.html">2. Exercices</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../exo/carte.html">Carte perforée</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exo/radiotel.html">Radiotéléphonie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exo/space.html">Space Invaders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exo/tableur.html">Tableur</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">3. Supports de cours</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="son/visu-et-ecoute-son.html">Représentation du son</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Second théorème de Shannon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/introduction.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/planification.html">2. Planification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/evaluation.html">3. Evaluation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../prog1/activ/index.html">4. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../prog1/activ/catchfruit.html">Catch the fruit</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../prog1/activ/microbit-python/index.html">Python avec le micro:bit</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../prog1/activ/microbit-python/instructions.html">Instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../prog1/activ/microbit-python/condition.html">Exécution conditionnelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../prog1/activ/microbit-python/variables.html">Variables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../algo1/index.html">Algorithmique I</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo1/activ/index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/algo-tri_new.html">Algorithmes de tri</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../algo1/activ/epidemie/index_new.html">Modéliser une épidémie</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../algo1/activ/epidemie/m_a_s.html">Marche à suivre</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../algo1/activ/epidemie/solution.html">Corrigé</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/dijkstra_new.html">Dijkstra et le plus court chemin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/puissance4.html">Puissance 4/Minimax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/template_activite.html">Titre de l’activité</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo1/exo/solutions.html">2. Solutions des exercices</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../archi/index.html">Architecture des ordinateurs</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../archi/support/index.html">1. Supports de cours</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../archi/eval/index.html">2. Evaluations</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../archi/activ/index.html">3. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/ordinateurantique_new.html">Ordinateur antique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/simulateur.html">Simulateur logique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/selecteur-chien_new.html">Sélecteur de chien</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/afficheur-7seg.html">Afficheur à 7 segments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/soustracteur.html">Soustracteur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/gabuzomeu_new.html">Ga-Bu-Zo-Meu</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../archi/PlanDidac/index.html">4. Plan</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/PlanDidac/plandidacarchi1.html">Proposition 1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx1/index.html">Enjeux sociaux I</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../enjx1/grandes-thematiques/economie-numerique.html">1. Économie du numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../enjx1/grandes-thematiques/surveillance.html">2. Vie privée et surveillance</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../algo2/index.html">Algorithmique II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../prog2/index.html">Programmation II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projets/index.html">Projets</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../resx/activ/index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../resx/activ/diffie-hellman/diffie-hellman.html">Diffie Hellman</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resx/activ/routage_paquets/routage_paquets.html">Routage des Paquets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx2/index.html">Enjeux sociaux II</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../enjx2/grandes-thematiques/environnement.html">1. Numérique et environnement</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/activ/index.html">2. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/encheres.html">1. Les enchères du web</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/combustibles_GES.html">2. Numérique et environnement : le problème de l'énergie (consommée pendant le cycle de vie des produits numériques) : combustibles fossiles / non fossiles et GES</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/fiches-complementaires/index.html">Fiches complémentaires</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/digital-labor.html">1. Le digital labor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/wikipedia.html">2. Wikipédia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/affaire-snowden.html">3. L’affaire Snowden</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/genre-numerique.html">4. Genre et numérique</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Thématiques transversales</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/activ/index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hist/activ/jeuimitation_new.html">Jeu de l'imitation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hist/activ/smaky_new.html">Smaky</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/plan_didac/index.html">2. Plan</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/eval/index.html">3. Evaluation</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hist/eval/eval1.html">Évalutation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../art/index.html">Art numérique</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../art/ai.html">1. AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/autonomy_cube.html">2. Autonomy Cube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/gloomy_sunday.html">3. Learning to See : Gloomy Sunday</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Suppléments</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../art/index.html">Art numérique</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../art/ai.html">1. AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/autonomy_cube.html">2. Autonomy Cube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/gloomy_sunday.html">3. Learning to See : Gloomy Sunday</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossaire.html">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../readme/extensions.html">Extensions</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="le-role-de-laleatoire-en-informatique-et-en-communication-lexemple-des-codes-correcteurs-derreurs">
+<h1>Le rôle de l’aléatoire en informatique et en communication : l’exemple des codes correcteurs d’erreurs<a class="headerlink" href="#le-role-de-laleatoire-en-informatique-et-en-communication-lexemple-des-codes-correcteurs-derreurs" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Le but de cette section est de présenter (sans entrer dans trop de détails techniques) une partie du travail important accompli dans les années 50 par Claude Shannon sur le sujet de la communication en présence de bruit. Elle peut être vue comme une extension au chapitre sur la représentation de l’information.</p>
+<div class="admonition-avertissement admonition">
+<p class="admonition-title">Avertissement</p>
+<p>Même si elle se veut introductive, cette section est globalement plus difficile à appréhender que les autres, notamment du fait qu’elle nécessite des notions de base de probabilités, que les élèves n’ont pas encore acquises en 1M ou 2M. Elle pourrait être utilisée par contre en option complémentaire.</p>
+</div>
+<section id="mise-en-situation-bob-est-perdu-au-milieu-de-la-foret">
+<h2>Mise en situation : Bob est perdu au milieu de la forêt<a class="headerlink" href="#mise-en-situation-bob-est-perdu-au-milieu-de-la-foret" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Supposons que deux personnes, disons Alice et Bob, désirent communiquer, et imaginons le scénario où Bob est perdu au milieu d’une forêt ; Alice, qui connaît la position GPS de Bob et qui a aussi la carte de la forêt devant elle, voit dans quelle direction (N, S, E, W) Bob devrait aller pour en sortir au plus vite.</p>
+<p>Supposons maintenant que pour communiquer avec Bob, Alice ne puisse envoyer que des suites de 0 et de 1. On voit ici que 2 bits suffisent à Alice pour transmettre l’information requise, en utilisant le dictionnaire suivant (sur lequel elle se sera mise d’accord au préalable avec Bob) :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>direction</p></th>
+<th class="head"><p>N</p></th>
+<th class="head"><p>S</p></th>
+<th class="head"><p>E</p></th>
+<th class="head"><p>W</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>mot de code</p></td>
+<td><p>11</p></td>
+<td><p>10</p></td>
+<td><p>01</p></td>
+<td><p>00</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Disons qu’elle lui transmette justement le message d’aller au nord en envoyant le mot de code 11. Il se peut qu’à cause du “bruit sur la ligne”, un des deux bits transmis ne parvienne pas correctement à Bob (on dit alors qu’il est “effacé”) : par exemple, si le deuxième bit est effacé, Bob recevra la séquence “1?” (le point d’interrogation symbolisant l’effacement) et ne saura donc pas s’il faut aller au nord ou au sud pour sortir rapidement de la forêt.</p>
+<p>Pour remédier à ce problème, Alice pourrait utiliser plutôt le dictionnaire suivant, où chaque bit est doublé, ce qui ajoute de la <em>redondance</em> au mot de code transmis :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>direction</p></th>
+<th class="head"><p>N</p></th>
+<th class="head"><p>S</p></th>
+<th class="head"><p>E</p></th>
+<th class="head"><p>W</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>mot de code</p></td>
+<td><p>1111</p></td>
+<td><p>1100</p></td>
+<td><p>0011</p></td>
+<td><p>0000</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Ainsi, si un bit est effacé au cours de la transmission, disons le 3e, Bob reçoit le mot de code “11?1”, et par identification avec le tableau ci-dessus, il voit bien qu’Alice lui dit d’aller au nord ; l’erreur de transmission a donc pu être corrigée.</p>
+<p>Fondamentalement, ce qui se passe ici est que les mots de codes potentiellement envoyés par Alice sont plus <em>distants</em> les uns des autres que dans le premier cas : en effet, il y a toujours au moins deux bits de différence entre chaque paire de mots de code (entre 1111 et 1100, par exemple), ce qui permet de corriger un effacement.</p>
+<p>Toutefois, avec un tel schéma de communication, Alice doit utiliser quatre bits pour ne transmettre que deux bits réels d’information. On dit que le <em>taux</em> de cette transmission vaut R = 2/4 = 1/2.</p>
+<p>Pour atteindre le même but de corriger un effacement, il aurait été possible d’économiser un bit en utilisant le dictionnaire suivant :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>direction</p></th>
+<th class="head"><p>N</p></th>
+<th class="head"><p>S</p></th>
+<th class="head"><p>E</p></th>
+<th class="head"><p>W</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>mot de code</p></td>
+<td><p>11<strong>0</strong></p></td>
+<td><p>10<strong>1</strong></p></td>
+<td><p>01<strong>1</strong></p></td>
+<td><p>00<strong>0</strong></p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Ici, le troisième bit est appelé <em>bit de parité</em> : tout mot de code s’écrit comme une séquence de trois bits <span class="math notranslate nohighlight">\(x_1x_2b_1\)</span>, où <span class="math notranslate nohighlight">\(b_1\)</span> vaut 1 si et seulement si la somme des bits <span class="math notranslate nohighlight">\(x_1\)</span> et <span class="math notranslate nohighlight">\(x_2\)</span> est impaire. On écrit aussi que <span class="math notranslate nohighlight">\(b_1=x_1 \oplus x_2\)</span>, où le symbole <span class="math notranslate nohighlight">\(\oplus\)</span> représente l’addition modulo 2.</p>
+<p>Vous pouvez vérifier qu’avec ce nouveau dictionnaire, si Bob reçoit par exemple le message 1?0, alors il saura qu’il faut aller au nord ; de manière générale, il saura dans quelle direction aller, quel que soit le message envoyé par Alice et quelle que soit la position du bit effacé (possiblement celle du bit de parité). La raison est qu’avec ce schéma, il y a toujours au moins deux bits de différence entre chaque paire de mots de code, comme avec le schéma précédent. Mais le taux de transmission vaut maintenant R=2/3 : ce nouveau système d’encodage est clairement plus efficace !</p>
+</section>
+<section id="indiquer-une-direction-plus-precise">
+<h2>Indiquer une direction plus précise<a class="headerlink" href="#indiquer-une-direction-plus-precise" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Supposons maintenant qu’Alice désire envoyer non pas une direction parmi 4 possibilités différentes (N, S, E, W), mais une parmi les 16 suivantes :</p>
+<p>N, NNE, NE, ENE, E, ESE, SE, SSE, S, SSW, SW, WSW, W, WNW, NW, NNW</p>
+<p>Pour ceci, elle pourrait utiliser 4 bits par message avec le dictionnaire suivant :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>direction</p></th>
+<th class="head"><p>N</p></th>
+<th class="head"><p>NNE</p></th>
+<th class="head"><p>NE</p></th>
+<th class="head"><p>ENE</p></th>
+<th class="head"><p>E</p></th>
+<th class="head"><p>…</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>mot de code</p></td>
+<td><p>1111</p></td>
+<td><p>1110</p></td>
+<td><p>1101</p></td>
+<td><p>1100</p></td>
+<td><p>1011</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>C’est certainement la façon la plus économe d’encoder 16 messages différents, mais à nouveau, en cas d’effacement de l’un ou de l’autre des bits envoyés, Bob ne saura pas dans quelle direction marcher (si par exemple il reçoit le message 11?1, il ne saura pas s’il doit aller au nord ou au nord-est).</p>
+<p>Pour pallier à ce problème, Alice et Bob peuvent à nouveau utiliser le même principe que ci-dessus et rajouter un bit de parité aux messages transmis :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>direction</p></th>
+<th class="head"><p>N</p></th>
+<th class="head"><p>NNE</p></th>
+<th class="head"><p>NE</p></th>
+<th class="head"><p>ENE</p></th>
+<th class="head"><p>E</p></th>
+<th class="head"><p>…</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>mot de code</p></td>
+<td><p>1111<strong>0</strong></p></td>
+<td><p>1110<strong>1</strong></p></td>
+<td><p>1101<strong>1</strong></p></td>
+<td><p>1100<strong>0</strong></p></td>
+<td><p>1011<strong>1</strong></p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Chaque mot de code s’écrit donc maintenant <span class="math notranslate nohighlight">\(x_1x_2x_3x_4b_1\)</span>, avec <span class="math notranslate nohighlight">\(b_1=x_1 \oplus x_2 \oplus x_3 \oplus x_4\)</span>.</p>
+<p>Comme avant, si un bit est effacé, Bob pourra retrouver la direction à prendre (par exemple, s’il reçoit le message 11?11, il saura qu’il faut aller au nord-est). Et ici, le taux de transmission vaut R=4/5.</p>
+<p>Mais vu que plus de bits sont transmis, il y a sans doute aussi en pratique une plus grande probabilité que plus d’un bit soit effacé lors de la transmission. Que faire si par exemple deux bits sont effacés ? Dans ce cas, le bit de parité unique ajouté ci-dessus ne permet plus un décodage approprié (si par exemple Bob reçoit le message 11??1). Dans ce cas, il va donc falloir ajouter plus de bits de parité pour protéger le message.</p>
+<p>Il se trouve que la bonne chose à faire dans ce cas (découverte par Richard Hamming en 1950) est de rajouter non pas deux, mais trois bits de parité au message d’origine : ainsi, les mots de code envoyés seront de la forme <span class="math notranslate nohighlight">\(x_1x_2x_3x_4b_1b_2b_3\)</span>, avec</p>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[b_1 = x_1 \oplus x_2 \oplus x_3, \quad b_2 = x_1 \oplus x_2 \oplus x_4 \quad \text{et} \quad b_3 = x_1 \oplus x_3 \oplus x_4\]</div></div>
+<p>ce qui donne le dictionnaire suivant :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>direction</p></th>
+<th class="head"><p>N</p></th>
+<th class="head"><p>NNE</p></th>
+<th class="head"><p>NE</p></th>
+<th class="head"><p>ENE</p></th>
+<th class="head"><p>E</p></th>
+<th class="head"><p>…</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>mot de code</p></td>
+<td><p>1111<strong>111</strong></p></td>
+<td><p>1110<strong>100</strong></p></td>
+<td><p>1101<strong>110</strong></p></td>
+<td><p>1100<strong>001</strong></p></td>
+<td><p>1011<strong>001</strong></p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Dans ce dernier cas, on peut vérifier qu’il y a toujours au moins trois bits de différence entre chaque paire de mots de code, ce qui permet de corriger deux effacements. A noter que le taux de transmission vaut maintenant R=4/7. Il n’y a pas de miracle : pour se protéger de plus d’erreurs éventuelles, il a fallu ajouter plus de bits de parité et donc réduire le taux de transmission.</p>
+</section>
+<section id="generalisation">
+<h2>Généralisation<a class="headerlink" href="#generalisation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Supposons maintenant qu’Alice désire envoyer un message parmi <span class="math notranslate nohighlight">\(M=2^k\)</span> messages possibles, pour un nombre entier positif <span class="math notranslate nohighlight">\(k\)</span> donné. Dans ce cas, <span class="math notranslate nohighlight">\(k\)</span> bits suffisent a priori pour cette transmission, mais supposons encore qu’en moyenne, une proportion <span class="math notranslate nohighlight">\(\varepsilon\)</span> des bits envoyés par Alice soient effacés lors de la transmission, et que ces effacements surviennent de façon aléatoire. Ceci veut dire concrètement que si Alice envoie <span class="math notranslate nohighlight">\(n\)</span> bits, alors seuls <span class="math notranslate nohighlight">\(n \, (1-\varepsilon)\)</span> d’entre eux parviennent à Bob ; de plus, il n’y a aucun moyen de savoir à l’avance lesquels seront effacés.</p>
+<div class="admonition-remarque admonition">
+<p class="admonition-title">Remarque</p>
+<p>La lettre grecque <span class="math notranslate nohighlight">\(\varepsilon\)</span> utilisée ici ne fait pas référence au <span class="math notranslate nohighlight">\(\varepsilon\)</span> infinitésimal en mathématiques ! Ici, la lettre <span class="math notranslate nohighlight">\(\varepsilon\)</span> veut juste faire penser au “e” de “erreur” ou “effacement”.</p>
+</div>
+<p>Comment s’assurer dans cette situation que Bob puisse toujours retrouver le message envoyé par Alice ? Clairement, si Alice envoie le message “tel quel” en l’encodant sur <span class="math notranslate nohighlight">\(k\)</span> bits, ça ne fonctionnera pas. Il faut donc qu’Alice ajoute ici de la redondance pour protéger son message des effacements qui surviennent, en envoyant plus de <span class="math notranslate nohighlight">\(k\)</span> bits.</p>
+<p>La question est maintenant de savoir quelle redondance ajouter pour protéger <em>efficacement</em> le message transmis. Au vu de la solution proposée ci-dessus par Hamming pour le cas k=4, on est en droit de se dire que le problème est a priori complexe à résoudre pour une valeur quelconque de k… Mais c’est là qu’intervient en 1948 l’idée de génie de Claude Shannon d’utiliser le hasard pour s’attaquer à ce problème !</p>
+<!--
+Par exemple, la stratégie utilisée précédemment de doubler chaque bit fonctionne moyennement ici, car si plusieurs bits de suite sont effacés, alors il est impossible de retrouver le message d'origine. De plus, doubler chaque bit implique de doubler la taille du message envoyé (c'est-à-dire d'envoyer $2k$ bits au lieu de $k$), ce qui n'est pas efficace...
+-->
+<p>Avant d’essayer de résoudre celui-ci, voyons d’abord ce qu’on peut espérer faire dans le meilleur des cas : si par exemple un sympathique génie révélait <em>à l’avance</em> à Alice non seulement la proportion <span class="math notranslate nohighlight">\(\varepsilon\)</span> des bits effacés, mais aussi <em>quels</em> bits sont effacés lors de la transmission, alors celle-ci pourrait faire la chose suivante : envoyer <span class="math notranslate nohighlight">\(n\)</span> bits, en choisissant <span class="math notranslate nohighlight">\(n\)</span> tel que <span class="math notranslate nohighlight">\(k = n \, (1-\varepsilon)\)</span>, et utiliser justement les <span class="math notranslate nohighlight">\(k\)</span> bits non-effacés pour encoder le message. Ainsi, <span class="math notranslate nohighlight">\(M=2^k\)</span> messages différents pourraient être transmis sans problème à Bob, en utilisant en tout <span class="math notranslate nohighlight">\(n\)</span> bits. Le taux de transmission vaudrait donc dans ce cas :</p>
+<p><span class="math notranslate nohighlight">\(R = \frac{k}{n} = \frac{n \, (1-\varepsilon)}{n} = 1 - \varepsilon\)</span></p>
+<p>En bref, Alice aurait là un moyen de transmission très efficace: en ajoutant un peu de redondance, elle pourrait envoyer beaucoup de message différents.</p>
+<p>Mais évidemment, les génies n’existent que dans les contes… il faut donc penser à autre chose ! Or nous allons voir que même sans l’aide du génie, et de façon très surprenante, Alice est capable de transmettre <span class="math notranslate nohighlight">\(M=2^k\)</span> messages différents à Bob en utilisant à peine plus de redondance !</p>
+<p>Pour ce faire, Alice a recours au hasard. Elle se met ainsi d’accord au préalable avec Bob sur un dictionnaire construit de la façon suivante : à chaque message <span class="math notranslate nohighlight">\(m \in \{1,...,M\}\)</span> correspond un mot de code <span class="math notranslate nohighlight">\(c_m\)</span> d’une longueur de <span class="math notranslate nohighlight">\(n\)</span> bits qui sont tous tirés au hasard indépendamment les uns des autres. Ainsi, dans le cas où <span class="math notranslate nohighlight">\(M=8\)</span> (i.e., <span class="math notranslate nohighlight">\(k=3\)</span>) et <span class="math notranslate nohighlight">\(n=5\)</span>, elle pourrait obtenir le dictionnaire suivant, par exemple :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>message No</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>2</p></th>
+<th class="head"><p>3</p></th>
+<th class="head"><p>4</p></th>
+<th class="head"><p>5</p></th>
+<th class="head"><p>6</p></th>
+<th class="head"><p>7</p></th>
+<th class="head"><p>8</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>mot de code</p></td>
+<td><p>10111</p></td>
+<td><p>11100</p></td>
+<td><p>01100</p></td>
+<td><p>00111</p></td>
+<td><p>01010</p></td>
+<td><p>11110</p></td>
+<td><p>00101</p></td>
+<td><p>11001</p></td>
+</tr>
+</tbody>
+</table></div>
+<div class="admonition-remarque admonition">
+<p class="admonition-title">Remarque</p>
+<p>Une objection valide à l’utilisation du hasard dans ce cadre est qu’il se peut bien sûr que deux mots de code tirés au hasard soient identiques, ce qui pose évidemment un problème pour Bob si l’un des deux messages correspondants est transmis par Alice. La réponse est que pour de relativement grandes valeurs de <span class="math notranslate nohighlight">\(n\)</span>, cette probabilité est extrêmement faible (pour être plus précis, elle est de l’ordre de <span class="math notranslate nohighlight">\(n^2/2^n\)</span>, donc plus petite que <span class="math notranslate nohighlight">\(10^{-25}\)</span> lorsque <span class="math notranslate nohighlight">\(n=100\)</span>, par exemple).</p>
+</div>
+<p>Ce que nous allons montrer dans ce qui suit, c’est que si Alice choisit la valeur de <span class="math notranslate nohighlight">\(n\)</span> telle que <span class="math notranslate nohighlight">\(k = n \, (1-\delta)\)</span> avec <span class="math notranslate nohighlight">\(\delta\)</span> juste un peu plus grand que <span class="math notranslate nohighlight">\(\varepsilon\)</span> (donc un taux de transmission <span class="math notranslate nohighlight">\(R=1-\delta\)</span>, autrement dit, juste un peu plus de redondance que dans la situation idéale décrite plus haut avec le génie), alors Bob sera capable de décoder le message envoyé par Alice avec une probabilité extrêmement proche de 1, et ceci quels que soient les <span class="math notranslate nohighlight">\(n \, \varepsilon\)</span> bits effacés (qui ne sont pas connus à l’avance ici).</p>
+<div class="admonition-prealable admonition">
+<p class="admonition-title">Préalable</p>
+<p>Pour ce qui suit, nous allons utiliser quelques concepts de probabilités, et notamment :</p>
+<ul class="simple">
+<li><p>si <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> sont deux événements, alors <span class="math notranslate nohighlight">\(P(A \cup B) \le P(A) + (B)\)</span></p></li>
+<li><p>si <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> sont deux événements <em>indépendants</em>, alors <span class="math notranslate nohighlight">\(P(A \cap B) = P(A) \cdot P(B)\)</span></p></li>
+</ul>
+<p>ce qui se généralise à :</p>
+<ul class="simple">
+<li><p>si <span class="math notranslate nohighlight">\(A_1,\ldots, A_n\)</span> sont <span class="math notranslate nohighlight">\(n\)</span> événements, alors <span class="math notranslate nohighlight">\(P \left(\bigcup_{i=1}^n A_i \right) \le \sum_{i=1}^n P(A_i)\)</span></p></li>
+<li><p>si <span class="math notranslate nohighlight">\(A_1,\ldots, A_n\)</span> sont <span class="math notranslate nohighlight">\(n\)</span> événements <em>indépendants</em>, alors <span class="math notranslate nohighlight">\(P \left(\bigcap_{i=1}^n A_i \right) = \prod_{i=1}^n P(A_i)\)</span></p></li>
+</ul>
+</div>
+<p>Supposons que le message No 1, donc le mot de code <span class="math notranslate nohighlight">\(c_1\)</span>, soit envoyé par Alice (on peut refaire le même raisonnement pour n’importe quel message envoyé). Quand est-ce que Bob aura un problème à retrouver ce message? Quand une confusion entre deux mots de code est possible. Et pour cela, il faudrait que les <span class="math notranslate nohighlight">\(n \, (1- \varepsilon)\)</span> bits non effacés de <span class="math notranslate nohighlight">\(c_1\)</span> soient tous égaux à ceux d’un autre mot de code <span class="math notranslate nohighlight">\(c_m\)</span> parmi les <span class="math notranslate nohighlight">\(M-1\)</span> restants. Quelle est la probabilité qu’un tel événement survienne ?</p>
+<p><span class="math notranslate nohighlight">\(P(\)</span> il existe <span class="math notranslate nohighlight">\(m \in \{2,...,M\}\)</span> tel que <span class="math notranslate nohighlight">\(n \, (1-\varepsilon)\)</span> bits de <span class="math notranslate nohighlight">\(c_1\)</span> et <span class="math notranslate nohighlight">\(c_m\)</span> sont identiques <span class="math notranslate nohighlight">\()\)</span></p>
+<p><span class="math notranslate nohighlight">\(\le \sum_{m=2}^M P(n \, (1-\varepsilon)\)</span> bits de <span class="math notranslate nohighlight">\(c_1\)</span> et <span class="math notranslate nohighlight">\(c_m\)</span> sont identiques <span class="math notranslate nohighlight">\()\)</span></p>
+<p><span class="math notranslate nohighlight">\(= \sum_{m=2}^M \left(\frac{1}{2} \right)^{n \, (1-\varepsilon)} \le M \, \left(\frac{1}{2} \right)^{n \, (1-\varepsilon)} = 2^{k - n\, (1-\varepsilon)} = 2^{n \, (1-\delta) - n \, (1-\varepsilon)} = 2^{n \, (\varepsilon-\delta)}\)</span></p>
+<p>Cette probabilité tend donc rapidement vers <span class="math notranslate nohighlight">\(0\)</span> lorsque <span class="math notranslate nohighlight">\(n\)</span> est grand et <span class="math notranslate nohighlight">\(\delta&gt;\varepsilon\)</span>. CQFD</p>
+<p>La magie du hasard semble donc opérer pleinement ici ! Ceci dit, il faut relativiser, car un aspect de la communication a été complètement passé sous silence : comment Bob peut-il décoder le message envoyé ? Il peut bien sûr parcourir tous les mots de code du dictionnaire pour trouver celui qui correspond aux <span class="math notranslate nohighlight">\(n \, (1-\varepsilon)\)</span> emplacements où les bits n’ont pas été effacés. Mais le nombre <span class="math notranslate nohighlight">\(M\)</span> de mots de codes dans le dictionnaire est gigantesque ! Une recherche exhaustive qui parcourt celui-ci est donc vouée à l’échec en pratique ; si le résultat ci-dessus est très intéressant du point de vue théorique, il reste un problème d’envergure à régler…</p>
+<p>Ce problème a occupé de nombreuses et nombreux scientifiques depuis les années 50, et n’a été résolu que récemment, dans les années 2000. Les solutions sont en fait multiples, avec un principe commun consistant à construire des dictionnaires structurés pour permettre un décodage beaucoup plus efficace qu’avec des dictionnaires complètement aléatoires. Il n’empêche que l’intuition de départ de Claude Shannon d’utiliser le hasard a le mérite d’avoir démontré que c’était théoriquement possible, et ainsi encouragé de très nombreuses personnes dans le monde à travailler activement sur le sujet pendant plusieurs années !</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../../prog1/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Programmation I</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="son/visu-et-ecoute-son.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Représentation du son</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../../_sources/rep-info/support/shannon2.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Le rôle de l’aléatoire en informatique et en communication : l’exemple des codes correcteurs d’erreurs</a><ul>
+<li><a class="reference internal" href="#mise-en-situation-bob-est-perdu-au-milieu-de-la-foret">Mise en situation : Bob est perdu au milieu de la forêt</a></li>
+<li><a class="reference internal" href="#indiquer-une-direction-plus-precise">Indiquer une direction plus précise</a></li>
+<li><a class="reference internal" href="#generalisation">Généralisation</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/main.js"></script>
+    <script src="../../_static/glossary.js"></script>
+    <script src="../../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="../../_static/blanks.js"></script>
+    <script src="../../_static/timeline.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../../_static/scripts/reactions.js"></script>
+    <script src="../../_static/scripts/progress.js"></script>
+    <script src="../../_static/scripts/dark.js"></script>
+    <script src="../../_static/scripts/frames.js"></script>
+    </body>
+</html>

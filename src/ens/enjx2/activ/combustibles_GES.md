@@ -1,4 +1,6 @@
-# Numérique et environnement - le problème de l'énergie (consommée pendant le cycle de vie des produits numériques) : combustibles fossiles / non fossiles et GES - Deux activités
+# Numérique et environnement
+
+Sous-titre : le problème de l'énergie (consommée pendant le cycle de vie des produits numériques) : combustibles fossiles / non fossiles et GES - Deux activités.
 
 On propose ici deux activités sur la thématique :
 - activité 1.1 : combustibles fossiles versus bois

@@ -1,0 +1,849 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Recherche" href="../../search.html" />
+
+    <link rel="shortcut icon" href="../../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>Magie Binaire - Enseigner</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #06CCC0;
+  --color-brand-content: #06CCC0;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #06CCC0;
+  --color-brand-content: #06CCC0;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Enseigner</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Enseigner</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Première année</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../index.html">Représentation de l’information</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="magie_binaire_new.html">Magie binaire</a></li>
+<li class="toctree-l3"><a class="reference internal" href="encoder_images.html">Images numériques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="format_BMP_new.html">Format BMP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="echantillonnage_new.html">Echantillonnage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hamming_new.html">Redondance et code de Hamming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="huffman.html">Compression et codage de Huffman</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../exo/index.html">2. Exercices</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../exo/carte.html">Carte perforée</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exo/radiotel.html">Radiotéléphonie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exo/space.html">Space Invaders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exo/tableur.html">Tableur</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../support/index.html">3. Supports de cours</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../support/son/visu-et-ecoute-son.html">Représentation du son</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/shannon2.html">Second théorème de Shannon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/introduction.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/planification.html">2. Planification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/evaluation.html">3. Evaluation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../prog1/activ/index.html">4. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../prog1/activ/catchfruit.html">Catch the fruit</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../prog1/activ/microbit-python/index.html">Python avec le micro:bit</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../prog1/activ/microbit-python/instructions.html">Instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../prog1/activ/microbit-python/condition.html">Exécution conditionnelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../prog1/activ/microbit-python/variables.html">Variables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../algo1/index.html">Algorithmique I</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo1/activ/index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/algo-tri_new.html">Algorithmes de tri</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../algo1/activ/epidemie/index_new.html">Modéliser une épidémie</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../algo1/activ/epidemie/m_a_s.html">Marche à suivre</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../algo1/activ/epidemie/solution.html">Corrigé</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/dijkstra_new.html">Dijkstra et le plus court chemin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/puissance4.html">Puissance 4/Minimax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/template_activite.html">Titre de l’activité</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo1/exo/solutions.html">2. Solutions des exercices</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../archi/index.html">Architecture des ordinateurs</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../archi/support/index.html">1. Supports de cours</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../archi/eval/index.html">2. Evaluations</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../archi/activ/index.html">3. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/ordinateurantique_new.html">Ordinateur antique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/simulateur.html">Simulateur logique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/selecteur-chien_new.html">Sélecteur de chien</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/afficheur-7seg.html">Afficheur à 7 segments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/soustracteur.html">Soustracteur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/gabuzomeu_new.html">Ga-Bu-Zo-Meu</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../archi/PlanDidac/index.html">4. Plan</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/PlanDidac/plandidacarchi1.html">Proposition 1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx1/index.html">Enjeux sociaux I</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../enjx1/grandes-thematiques/economie-numerique.html">1. Économie du numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../enjx1/grandes-thematiques/surveillance.html">2. Vie privée et surveillance</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../algo2/index.html">Algorithmique II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../prog2/index.html">Programmation II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projets/index.html">Projets</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../resx/activ/index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../resx/activ/diffie-hellman/diffie-hellman.html">Diffie Hellman</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resx/activ/routage_paquets/routage_paquets.html">Routage des Paquets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx2/index.html">Enjeux sociaux II</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../enjx2/grandes-thematiques/environnement.html">1. Numérique et environnement</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/activ/index.html">2. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/encheres.html">1. Les enchères du web</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/combustibles_GES.html">2. Numérique et environnement : le problème de l'énergie (consommée pendant le cycle de vie des produits numériques) : combustibles fossiles / non fossiles et GES</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/fiches-complementaires/index.html">Fiches complémentaires</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/digital-labor.html">1. Le digital labor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/wikipedia.html">2. Wikipédia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/affaire-snowden.html">3. L’affaire Snowden</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/genre-numerique.html">4. Genre et numérique</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Thématiques transversales</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/activ/index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hist/activ/jeuimitation_new.html">Jeu de l'imitation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hist/activ/smaky_new.html">Smaky</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/plan_didac/index.html">2. Plan</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/eval/index.html">3. Evaluation</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hist/eval/eval1.html">Évalutation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../art/index.html">Art numérique</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../art/ai.html">1. AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/autonomy_cube.html">2. Autonomy Cube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/gloomy_sunday.html">3. Learning to See : Gloomy Sunday</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Suppléments</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../art/index.html">Art numérique</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../art/ai.html">1. AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/autonomy_cube.html">2. Autonomy Cube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/gloomy_sunday.html">3. Learning to See : Gloomy Sunday</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossaire.html">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../readme/extensions.html">Extensions</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="magie-binaire">
+<h1>Magie Binaire<a class="headerlink" href="#magie-binaire" title="Lien permanent vers ce titre">¶</a></h1>
+<hr class="docutils"/>
+<p><em>Vous allez faire un tour de magie !</em></p>
+<p>Une introduction au binaire de manière ludique en misant sur la curiosité à comprendre le fonctionnement d’un tour de magie.</p>
+<hr class="docutils"/>
+<div class="hint admonition">
+<p class="admonition-title">Caractéristiques</p>
+<ul class="simple">
+<li><p>Nom : Magie Binaire</p></li>
+<li><p>Durée : 2 périodes</p></li>
+<li><p>Thème : Représentation de l’information</p></li>
+<li><p>Objectifs d’apprentissage : Faire découvrir le binaire, comment écrire et compter en binaire mais aussi comment utiliser le binaire pour encoder de l’information. Après cette séquence les élèves devraient avoir compris le système de numération des entiers positifs utilisant la base 2.<br/>
+Ils auront également assimilé le fait que n’importe quelle information peut être représentée par une suite ordonnée de 0 et de 1, ce qui est à la base de tout ce qu’ils peuvent voir et faire sur un ordinateur ou un smartphone.</p></li>
+<li><p>Notions fondamentales : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+<li><p>Approche pédagogique : Débranchée</p></li>
+<li><p>Matériel : Les 6 cartes pour faire le tour de magie. Disponible ici : <a class="reference download internal" download="" href="../../_downloads/5f0f8fb3f1aa7b92fda7be20805231c1/MagieBinaire.png"><code class="xref download docutils literal notranslate"><span class="pre">fichier</span> <span class="pre">MagieBinaire.png</span></code></a></p></li>
+<li><p>Niveau : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+<li><p>Mots-clés : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+<li><p>Dynamique (groupe / individuel) : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+<li><p>Taille du groupe : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+</ul>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Déroulement</strong><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ol class="simple">
+<li><p class="card-text"><a class="reference internal" href="magie_binaire_new.html#magiebinaire-presentation"><span class="std std-ref">Présentation du tour de magie</span></a> (10-15 mn) en le faisant aux élèves.</p></li>
+<li><p class="card-text"><a class="reference internal" href="magie_binaire_new.html#magiebinaire-compter"><span class="std std-ref">Compter en binaire</span></a> (15-20 mn) et présentation de la différence entre base 2 et base 10.</p></li>
+<li><p class="card-text"><a class="reference internal" href="magie_binaire_new.html#magiebinaire-retour"><span class="std std-ref">Retour en base 10</span></a> (15-20 mn) où vous evenez sur la numérotation en base 10 pour présenter la forme canonique.</p></li>
+<li><p class="card-text"><a class="reference internal" href="magie_binaire_new.html#magiebinaire-encodage"><span class="std std-ref">Encodage de l’information</span></a> (10-15 mn) où vous introduisez la notion du nombre de “mots” différents en fonction du nombre de bits.</p></li>
+<li><p class="card-text"><a class="reference internal" href="magie_binaire_new.html#magiebinaire-explication"><span class="std std-ref">Explication du tour</span></a> (10-15 mn) où il s’agit d’expliquer le fonctionnement du tour.</p></li>
+<li><p class="card-text"><a class="reference internal" href="magie_binaire_new.html#magiebinaire-plusloin"><span class="std std-ref">Pour aller plus loin</span></a>, vous avez différentes possibilités dont une version allégée du tour que les élèves doivent être capables de mettre en place.</p></li>
+</ol>
+</div>
+</details><section id="presentation-du-tour-de-magie">
+<span id="magiebinaire-presentation"></span><h2>Présentation du tour de magie<a class="headerlink" href="#presentation-du-tour-de-magie" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : 10-15 mn</em></p>
+<p><em>Objectif : attiser la curiosité</em></p>
+<p>Faire le tour de magie suivant à différents élèves. Il est possible que certains d’entre eux le connaissent, soient peut-être capable de le réaliser mais il est très peu probable qu’ils puissent expliquer pourquoi ça marche. Interrogez-les au préalable et concentrez-vous sur ceux qui ne le connaissent pas.</p>
+<section id="tour-de-magie">
+<h3>Tour de magie<a class="headerlink" href="#tour-de-magie" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Demandez à un élève de choisir un nombre entre 1 et 63 et de le mémoriser sans vous le révéler. A l’aide des cartes vous allez lui révéler le nombre qu’il a secrètement choisi.</p>
+<dl class="simple myst">
+<dt>Variante 1</dt><dd><p>Montrez les cartes une à une à l’élève en lui demandant simplement de vous indiquer si oui ou non son nombre apparaît sur la carte.</p>
+</dd>
+<dt>Variante 2</dt><dd><p>Demandez à l’élève de séparer les cartes en 2 paquets, le premier avec les cartes ou son nombre est présent, le second avec les autres.</p>
+</dd>
+</dl>
+<p>Le secret du tour est simple, il suffit d’additionner le nombre en haut à gauche de chaque carte où son nombre est présent.</p>
+</section>
+</section>
+<section id="compter-en-binaire">
+<span id="magiebinaire-compter"></span><h2>Compter en binaire<a class="headerlink" href="#compter-en-binaire" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : 15-20 mn</em></p>
+<p><em>Objectif : Comprendre comment représenter des nombres entiers positifs à l’aide de la numération de position avec seulement deux chiffres : le 0 et le 1.</em></p>
+<p>Commencez par expliquer le fonctionnement en base 10.</p>
+<p>Pour compter, on commence par 0 et on ajoute 1 pour passer au chiffre suivant et on recommence. Après l’utilisation de tous les chiffres (0…9) on en rajoute 1 devant et on recommence…</p>
+<p>Faire la même démonstration en base 2.</p>
+<section id="exercice-1">
+<h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Faire compter les élèves de 0 à 20 (ou plus) en binaire sur papier, ils peuvent écrire le nombre correspondant en base 10 à côté.</p>
+</section>
+</section>
+<section id="retour-de-base-2-a-base-10">
+<span id="magiebinaire-retour"></span><h2>Retour de base 2 à base 10<a class="headerlink" href="#retour-de-base-2-a-base-10" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : 15-20 mn</em></p>
+<p>Revenez ensuite sur la numérotation en base 10 pour présenter la forme canonique.<br/>
+Dans un système de position, comme le nôtre, pour connaître la valeur de chaque chiffre qui compose un nombre, il faut décomposer ce nombre pour identifier chaque chiffre et son coefficient.<br/>
+En effet, le 2 de 1924 et celui de 2004 n’ont pas la même valeur : Le premier vaut 20, alors que le second vaut 2000.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-sd docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Base 10</p>
+</div>
+<div class="card-body docutils">
+<div class="table-wrapper"><table class="docutils align-default" id="example-table-1">
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p class="card-text">Niveau</p></th>
+<th class="head"><p class="card-text">Nom</p></th>
+<th class="head"><p class="card-text">Coefficient</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="card-text">0</p></td>
+<td><p class="card-text">Unités</p></td>
+<td><p class="card-text"><span class="math notranslate nohighlight">\(10^{0} = 1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text">1</p></td>
+<td><p class="card-text">Dizaines</p></td>
+<td><p class="card-text"><span class="math notranslate nohighlight">\(10^{1} = 10\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p class="card-text">2</p></td>
+<td><p class="card-text">Centaines</p></td>
+<td><p class="card-text"><span class="math notranslate nohighlight">\(10^{2} = 100\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text">3</p></td>
+<td><p class="card-text">Milliers</p></td>
+<td><p class="card-text"><span class="math notranslate nohighlight">\(10^{3} = 1000\)</span></p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>La forme canonique de 3528 est : <span class="math notranslate nohighlight">\(3 \cdot 10^3 + 5 \cdot 10^2 + 2 \cdot 10^1 + 8 \cdot 10^0\)</span>.</p>
+<p>En binaire c’est la même chose sauf qu’il n’y a que 2 chiffres qui composent la base, le 0 et le 1.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-sd docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Base 2</p>
+</div>
+<div class="card-body docutils">
+<div class="table-wrapper"><table class="docutils align-default" id="example-table">
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p class="card-text">Niveau</p></th>
+<th class="head"><p class="card-text">Nom<a class="footnote-reference brackets" href="#id4" id="id1">0</a></p></th>
+<th class="head"><p class="card-text">Coefficient</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="card-text">0</p></td>
+<td><p class="card-text">Unité</p></td>
+<td><p class="card-text"><span class="math notranslate nohighlight">\(2^{0} = 1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text">1</p></td>
+<td><p class="card-text"><em>Deuzaine</em></p></td>
+<td><p class="card-text"><span class="math notranslate nohighlight">\(2^{1} = 2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p class="card-text">2</p></td>
+<td><p class="card-text"><em>Quatraine</em></p></td>
+<td><p class="card-text"><span class="math notranslate nohighlight">\(2^{2} = 4\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text">3</p></td>
+<td><p class="card-text"><em>Huitaine</em></p></td>
+<td><p class="card-text"><span class="math notranslate nohighlight">\(2^{3} = 8\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p class="card-text">4</p></td>
+<td><p class="card-text"><em>Seizaine</em></p></td>
+<td><p class="card-text"><span class="math notranslate nohighlight">\(2^{4} = 16\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text">5</p></td>
+<td><p class="card-text">…</p></td>
+<td><p class="card-text"><span class="math notranslate nohighlight">\(2^{5} = 32\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p class="card-text">6</p></td>
+<td><p class="card-text">…</p></td>
+<td><p class="card-text"><span class="math notranslate nohighlight">\(2^{6} = 64\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text">7</p></td>
+<td><p class="card-text">…</p></td>
+<td><p class="card-text"><span class="math notranslate nohighlight">\(2^{7} = 128\)</span></p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>La forme canonique du nombre binaire <span class="math notranslate nohighlight">\(10101_{(2)}\)</span> est : <span class="math notranslate nohighlight">\(1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0\)</span></p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-md docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">La forme canonique nous permet de faire facilement le passage de la base 2 à la base 10 :</p>
+</div>
+<div class="card-body docutils">
+<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+10101_{(2)} = 1.2^4 + 0.2^3 + 1.2^2 + 0.2^1 + 1.2^0 = 21_{(10)}
+\end{equation*}\]</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="exercice-2">
+<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Réalisation d’un tableau de conversion des 11 premières puissances de 2.</p>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\text{Coefficient} &amp; 2^{10} &amp; 2^9 &amp; 2^8 &amp; 2^7 &amp; 2^6 &amp; 2^5 &amp; 2^4 &amp; 2^3 &amp; 2^2 &amp; 2^1 &amp; 2^0  \\ 
+\hline
+\text{Valeur} &amp; 1024 &amp; 512 &amp; 256 &amp; 128 &amp; 64 &amp; 32 &amp; 16 &amp; 8 &amp; 4 &amp; 2 &amp; 1\\ 
+\hline
+\end{array} \end{split}\]</div></div>
+</section>
+<section id="exercice-3">
+<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Faire les conversions décimales de plusieurs nombres binaires</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(10101101_{(2)}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(01110010_{(2)}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1111_{(2)}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1111111_{(2)}\)</span></p></li>
+</ul>
+</section>
+<section id="exercice-4">
+<h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Faire les conversions décimales de nombres binaires spécifiques</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(1_{(2)}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(10_{(2)}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(100_{(2)}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1000_{(2)}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(10000_{(2)}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(100000_{(2)}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1000000_{(2)}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(10000000_{(2)}\)</span></p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>La dernière conversion de l’exercice 3 peut être obtenue rapidement si on remarque qu’il s’agit de</p>
+<div class="math-wrapper"><div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+10000000000_{(2)} - 1 = 2^{10} - 1 = 1023_{(10)}
+\end{equation*}\]</div></div>
+</div>
+</section>
+<section id="exercice-5">
+<h3>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h3>
+<p>À l’aide du tableau de l’exercice 2, comment peut-on passer de la base 10 à la base 2 ?<br/>
+Faire les conversions binaires de différents nombres décimaux.</p>
+<p><em>Durée : 10-15 mn</em></p>
+</section>
+</section>
+<section id="conclusion">
+<span id="algo-tri-conclusion"></span><h2>Conclusion<a class="headerlink" href="#conclusion" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : 5-10 mn</em></p>
+</section>
+<section id="encodage-de-linformation">
+<span id="magiebinaire-encodage"></span><h2>Encodage de l’information<a class="headerlink" href="#encodage-de-linformation" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : 10-15 mn</em></p>
+<p>A l’instar du morse (0 = . ; 1 = - ), on peut utiliser le binaire pour (en)coder autre chose que des nombres. Introduire la notion du nombre de “mots” différents en fonction du nombre de bits.</p>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{|l|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\text{Nombre de bits} &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 &amp; 10 \\
+\hline
+\text{Nombre} &amp; 2^1 &amp; 2^2 &amp; 2^3 &amp; 2^4 &amp; 2^5 &amp; 2^6 &amp; 2^7 &amp; 2^8 &amp; 2^9 &amp; 2^{10}  \\ 
+ \text{de mots} &amp; 2 &amp; 4 &amp; 8 &amp; 16 &amp; 32 &amp; 64 &amp; 128 &amp; 256 &amp; 512 &amp; 1024\\ 
+\hline
+\end{array} \end{split}\]</div></div>
+<section id="exercice-6">
+<h3>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Quelques questions pour ancrer l’idée. Au début l’encodage par l’intermédiaire des nombres rassure puis on essaye de s’en éloigner.</p>
+<p>Combien de bits faut-il pour représenter :</p>
+<ul class="simple">
+<li><p>les mois de l’année ?</p></li>
+<li><p>les lettres de l’alphabet (préciser lequel) ?</p></li>
+<li><p>le nombre d’élèves du gymnase ?</p></li>
+<li><p>la présence/absence des élèves étant donnée la liste de présence ?</p></li>
+<li><p>…</p></li>
+</ul>
+</section>
+</section>
+<section id="explication-du-tour">
+<span id="magiebinaire-explication"></span><h2>Explication du tour<a class="headerlink" href="#explication-du-tour" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : 10-15 min.</em></p>
+<p>L’idée ici est d’essayer d’amener les élèves à comprendre en observant les cartes et guidées par des questions telles que :</p>
+<ol class="simple">
+<li><p>Combien faut-il de bits pour encoder les chiffres de 1 (ou 0) à 63 ?</p></li>
+<li><p>Combien y a-t-il de cartes pour le tour ?</p></li>
+<li><p>Avec 6 bits je peux coder 64 “mots” différents, avec 1 bit de moins, combien ?</p></li>
+<li><p>Combien y a-t-il de nombres sur une carte ?</p></li>
+<li><p>Qu’on en commun les nombres d’une même carte ?</p></li>
+</ol>
+<section id="la-solution">
+<h3>La solution<a class="headerlink" href="#la-solution" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Regardez attentivement la carte qui contient un 2 en haut à gauche.<br/>
+Voici comment s’écrivent les nombres de cette carte en binaire:</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-md docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Représentation binaire des chiffres de la carte n°2</p>
+</div>
+<div class="card-body docutils">
+<a class="bg-primary reference internal image-reference" href="../../_images/Carte2.png"><img alt="carte2" class="bg-primary" src="../../_images/Carte2.png" style="width: 600px;"/></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Chaque carte représente donc 1 des 6 bits nécessaire à l’encodage des entiers de 0 à 63 et les nombres présents sur la carte sont tous ceux dont ce bit est à 1 dans leur code binaire.<br/>
+Par conséquent l’information donnée par l’élève de présence ou non de son nombre sur une carte équivaut à la notion de 0 ou 1 sur un certain bit.<br/>
+Une fois toutes les cartes passées en revue il a donné le code binaire de son nombre secret !</p>
+</section>
+</section>
+<section id="pour-aller-plus-loin">
+<span id="magiebinaire-plusloin"></span><h2>Pour aller plus loin<a class="headerlink" href="#pour-aller-plus-loin" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Si on a du temps pour escalader la pyramide d’Anderson et Krathwohl<a class="footnote-reference brackets" href="#id5" id="id2">1</a>.</p>
+<p>Les élèves doivent créer la version du tour pour le petit frère (ou petite sœur) avec 4 cartes.</p>
+<ol class="simple">
+<li><p>Quels sont les nombres possibles ?</p></li>
+<li><p>Combien y a-t-il de nombres par carte ?</p></li>
+<li><p>Quels sont ces nombres ?</p></li>
+</ol>
+<section id="ouvertures-et-questionnements">
+<h3>Ouvertures et questionnements<a class="headerlink" href="#ouvertures-et-questionnements" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Les valeurs des puissances de 2 sont des valeurs qu’ils connaissent déjà ! Capacité de stockage des clés USB, smartphones, SSD, etc… Pourquoi ?</p></li>
+<li><p>Comment peut-on faire pour écrire des nombres négatifs, décimaux en binaire ?</p></li>
+<li><p>À compléter…</p></li>
+</ul>
+</section>
+<section id="mobiliser-les-connaissances">
+<h3>Mobiliser les connaissances<a class="headerlink" href="#mobiliser-les-connaissances" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Voici une énigme dont la solution utilise le principe de codage binaire.</p>
+<section id="lenigme">
+<h4>L’énigme<a class="headerlink" href="#lenigme" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Vous êtes le seigneur du canton de Vaud, et préparez votre mariage qui a lieu demain. Pour cette occasion, vous avez commandé 1000 bouteilles d’un excellent cru du Valais. Mauvaise idée, on vous apprend qu’une des bouteilles (et une seule) est empoisonnée. Le poison incolore, insipide et inodore, dont les effets sont dévastateurs (vomissements, convulsions, …), provoque la mort en moins de 24h.</p>
+<p>Pour trouver la bouteille empoisonnée, vous disposez de 10 rats testeurs (vous avez malheureusement aboli l’esclavage et personne ne souhaite faire ce métier). Votre problème, il est midi et les bouteilles doivent être servies demain à 14h. Comment allez-vous procéder pour pouvoir servir les 999 bouteilles non empoisonnées à votre mariage ?</p>
+</section>
+<section id="id3">
+<h4>La solution<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Le fait qu’un rat meurt ou non nous donne de l’information. Ce qu’on doit trouver, c’est comment cette information peut nous permettre d’identifier la bouteille empoisonnée.</p>
+<p>Il suffit d’identifier chaque bouteille par un nombre binaire unique, et chaque rat par un numéro (non binaire celui-ci).</p>
+<p>Ce nombre binaire comportera autant de bits que de rats, et la position d’un bit dans le nombre  correspondra à un numéro de rat (avec 10 rats on a 1024 possibilités donc un peu de marge). Si ce bit est à 1, alors cela signifie que ce rat aura gouté cette bouteille.</p>
+<p>Par exemple la bouteille 3 sera codée 0110 (si on code sur 4 bits, c’est à dire 4 rats), ce qui signifie que les rats 2 et 3 l’auront gouté.</p>
+<p>Une fois que toutes les bouteilles ont été goutées, on regarde les numéros des rats décédés. Tous ont leur bit à 1 dans la bouteille empoisonnée, leur mort nous apporte l’information nécessaire.</p>
+<p>Si par exemple on avait le rat 1 et le 3 de mort, alors la bouteille correspondante serait (0101), c’est à dire la numéro 5 !</p>
+<hr class="footnotes docutils"/>
+<dl class="footnote brackets">
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">0</a></span></dt>
+<dd><p>Les noms sont au singulier car il ne peut pas y en avoir plus que 1 par niveau…</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>LW, Anderson &amp; DR, Krathwohl Eds. (2001). A Taxonomy for Learning, Teaching, and Assessing: A Revision of Bloom’s Taxonomy of Educational Objectives.</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../../_sources/rep-info/activ/magie_binaire.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Magie Binaire</a><ul>
+<li><a class="reference internal" href="#presentation-du-tour-de-magie">Présentation du tour de magie</a><ul>
+<li><a class="reference internal" href="#tour-de-magie">Tour de magie</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#compter-en-binaire">Compter en binaire</a><ul>
+<li><a class="reference internal" href="#exercice-1">Exercice 1</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#retour-de-base-2-a-base-10">Retour de base 2 à base 10</a><ul>
+<li><a class="reference internal" href="#exercice-2">Exercice 2</a></li>
+<li><a class="reference internal" href="#exercice-3">Exercice 3</a></li>
+<li><a class="reference internal" href="#exercice-4">Exercice 4</a></li>
+<li><a class="reference internal" href="#exercice-5">Exercice 5</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
+<li><a class="reference internal" href="#encodage-de-linformation">Encodage de l’information</a><ul>
+<li><a class="reference internal" href="#exercice-6">Exercice 6</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#explication-du-tour">Explication du tour</a><ul>
+<li><a class="reference internal" href="#la-solution">La solution</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pour-aller-plus-loin">Pour aller plus loin</a><ul>
+<li><a class="reference internal" href="#ouvertures-et-questionnements">Ouvertures et questionnements</a></li>
+<li><a class="reference internal" href="#mobiliser-les-connaissances">Mobiliser les connaissances</a><ul>
+<li><a class="reference internal" href="#lenigme">L’énigme</a></li>
+<li><a class="reference internal" href="#id3">La solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/main.js"></script>
+    <script src="../../_static/glossary.js"></script>
+    <script src="../../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="../../_static/blanks.js"></script>
+    <script src="../../_static/timeline.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../../_static/scripts/reactions.js"></script>
+    <script src="../../_static/scripts/progress.js"></script>
+    <script src="../../_static/scripts/dark.js"></script>
+    <script src="../../_static/scripts/frames.js"></script>
+    </body>
+</html>

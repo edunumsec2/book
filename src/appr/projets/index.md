@@ -1,3 +1,4 @@
+(projets)=
 # Projets
 
 Aujourd'hui, tout le monde peut créer un produit informatique révolutionnaire, avec rien d'autre qu'un ordinateur comme investissement initial.
@@ -7,28 +8,29 @@ Dans cette partie vous allez, tout seul ou en groupe, mettre en pratique vos con
 
 ````{toctree}
 :maxdepth: 2
-:numbered:
+:numbered: 2
 :hidden:
-Tic-tac-toe <tic_tac_toe>
-Puissance 4 <puissance4>
-Démineur <mines>
-Snake <snake>
-Game of life <game_of_life>
-Poker <cartes>
-Tetris <tetris>
-Art absurde <art_absurde>
-Micro:bit <microbit/microbit>
-Cryptographie <crypto>
-Idées <idees>
+tic_tac_toe
+puissance4
+mines
+snake
+game_of_life
+
+cartes
+tetris
+art_absurde
+microbit/microbit
+crypto
+idees
 ````
 
 ## Objectifs
 
-{fa}`check, text-success mr-1` Créer un projet d'informatique
+* Créer un projet d'informatique
 
-{fa}`check, text-success mr-1` Découper un problème en sous-problèmes
+* Découper un problème en sous-problèmes
 
-{fa}`check, text-success mr-1` Comprendre l'existant pour créer l'inconnu
+* Comprendre l'existant pour créer l'inconnu
 
 ## Personnages-clés
 
