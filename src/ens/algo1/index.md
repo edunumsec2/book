@@ -6,7 +6,7 @@ Le plan d'études pour l'informatique en tant que discipline obligatoire à l'É
 - Algorithmes classiques
 - Conception d’algorithmes simples
 
-## Objectifs de la thématique `à compléter`
+## Objectifs de la thématique
 
 
 À la fin de ce chapitre, vous saurez ce qu'est un algorithme et vous serez capable de transcrire des algorithmes en programmes. Vous saurez résoudre des problèmes, en décomposant leur solution en étapes à suivre. Vous verrez également que pour un même problème, on peut avoir plusieurs solutions avec des propriétés, avantages et désavantages différents. 
@@ -18,7 +18,7 @@ Le plan d'études pour l'informatique en tant que discipline obligatoire à l'É
 
 ## Découpage de la thématique 
 
-Dans la partie apprendre, vous trouverez les chapitres suivants : 
+Dans la partie **apprendre**, vous trouverez les chapitres suivants : 
 
 - [Introduction](lien)
 - [Les algorithmes](lien)
@@ -26,7 +26,7 @@ Dans la partie apprendre, vous trouverez les chapitres suivants :
 - [Des algorithmes aux programmes](lien)
 - [Conclusion](lien)
 
-Dans la partie enseigner, vous trouverez des : 
+Dans la partie **enseigner**, vous trouverez des : 
 
 
 ```{toctree}

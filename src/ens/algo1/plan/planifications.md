@@ -1,4 +1,4 @@
-# Planification
+# Planifications
 
 Il existe plusieurs manières possibles de planifier les activités
 de ce chapitre. Une possibilité serait la suivante en faisant

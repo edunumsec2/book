@@ -7,7 +7,7 @@ Le plan d'études pour l'informatique en tant que discipline obligatoire à l'É
 - Microprocesseur
 - Composants de base d’un ordinateur
 
-## Objectifs de la thématique `à compléter`
+## Objectifs de la thématique
 
 Les objectifs pédagogiques du chapitre sont les suivants : 
 
@@ -17,7 +17,7 @@ Les objectifs pédagogiques du chapitre sont les suivants :
 
 ## Découpage de la thématique 
 
-Dans la partie apprendre, vous trouverez les chapitres suivants : 
+Dans la partie **apprendre**, vous trouverez les chapitres suivants : 
 
 - [Introduction](lien)
 - [Portes logiques](lien)
@@ -28,12 +28,12 @@ Dans la partie apprendre, vous trouverez les chapitres suivants :
 - [Le microprocesseur](lien)
 - [Conclusion](lien)
 
-Dans la partie enseigner, vous trouverez des : 
+Dans la partie **enseigner**, vous trouverez des : 
 
 ```{toctree}
 :maxdepth: 1
 :numbered: 1
-Planification <PlanDidac/index>
+Planifications <PlanDidac/index>
 Activités <activ/index>
 Evaluations <eval/index>
 Supports de cours <support/index>

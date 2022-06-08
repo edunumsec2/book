@@ -8,7 +8,7 @@ Le plan d'études pour l'informatique en tant que discipline obligatoire à l'É
 - Fonctions
 - Transcription d’algorithmes
 
-## Objectifs de la thématique `à compléter`
+## Objectifs de la thématique
 
 Les objectifs pédagogiques du chapitre sont les suivants : 
 
@@ -18,7 +18,7 @@ Les objectifs pédagogiques du chapitre sont les suivants :
 
 ## Découpage de la thématique 
 
-Dans la partie apprendre, vous trouverez les chapitres suivants : 
+Dans la partie **apprendre**, vous trouverez les chapitres suivants : 
 
 - [Dessiner](lien)
 - [Définir](lien)
@@ -42,7 +42,7 @@ Dans la partie apprendre, vous trouverez les chapitres suivants :
 - [Projet](lien)
 - [Annexe](lien)
 
-Dans la partie enseigner, vous trouverez des : 
+Dans la partie **enseigner**, vous trouverez des : 
 
 ```{toctree}
 :maxdepth: 1
