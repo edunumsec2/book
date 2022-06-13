@@ -16,7 +16,7 @@ Une introduction au binaire de manière ludique en misant sur la curiosité à c
 * Thème : Représentation de l'information
 * Objectifs d’apprentissage : Faire découvrir le binaire, comment écrire et compter en binaire mais aussi comment utiliser le binaire pour encoder de l’information. Après cette séquence les élèves devraient avoir compris le système de numération des entiers positifs utilisant la base 2.  
 Ils auront également assimilé le fait que n’importe quelle information peut être représentée par une suite ordonnée de 0 et de 1, ce qui est à la base de tout ce qu’ils peuvent voir et faire sur un ordinateur ou un smartphone.
-* Notions fondamentales : `à compléter`
+* Notions fondamentales : la base 10 est le mode de calcul du quotidien, le binaire est celui de l'informatique. Un chiffre dans un nombre, de par sa place et sa base peut avoir des valeurs différentes. On peut passer un nombre d'une base à une autre.
 * Approche pédagogique : Débranchée
 * Matériel : Les 6 cartes pour faire le tour de magie. Disponible ici : {download}`fichier MagieBinaire.png<media/MagieBinaire.png>`
 * Niveau : `à compléter`
@@ -60,7 +60,14 @@ Variante 1
 Variante 2
 : Demandez à l’élève de séparer les cartes en 2 paquets, le premier avec les cartes ou son nombre est présent, le second avec les autres.
 
-Le secret du tour est simple, il suffit d'additionner le nombre en haut à gauche de chaque carte où son nombre est présent.
+Après avoir manipulé la recherche plusieurs fois, demandez des hypothèses sur le fonctionnement puis proposez de découvrir le secret du tour de magie via les activités qui suivent.
+
+Informations complémentaires
+Le secret du tour est simple, il suffit d'additionner le nombre en haut à gauche de chaque carte où son nombre est présent. Ce nombre pour la carte i, correspond à la valeur 2<sup>i-1</sup>.Une carte représente tous les nombres entre 1 et 63 dont l'écriture binaire nécessite 1 pour la valeur 2<sup>i-1</sup>.
+
+ Si le nombre choisis est présent dans les cartes 1(2<sup>0</sup>), 3(2<sup>4</sup>) et 4(<sup>5</sup>) alors le nombre recherché sera 
+1 X 2<sup>0</sup> + 0 X 2<sup>1</sup> + 0 X 2<sup>2</sup> + 0 X 2<sup>3</sup> + 1 X 2<sup>4</sup> + 1 X 2<sup>5</sup> + 0 X 2<sup>6</sup> = 1+8+16 =25 présenté en base binaire ainsi 110001.
+
 
 
 (magiebinaire.compter)=
