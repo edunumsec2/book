@@ -18,7 +18,6 @@ découpé en **quatre thématiques**.
    prog1/index
    algo1/index
    archi/index
-   hist/index
 
 .. toctree::
    :name: Deuxième année
@@ -30,6 +29,14 @@ découpé en **quatre thématiques**.
    prog2/index
    projets/index
    resx/index
+
+.. toctree::
+   :name: Thématiques transversales
+   :caption: Thématiques transversales
+   :maxdepth: 3
+   :hidden:
+
+   hist/index
 
 .. toctree::
    :name: Outils
