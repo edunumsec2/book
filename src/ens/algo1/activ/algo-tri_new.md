@@ -13,24 +13,23 @@ Un dispositif physique ainsi qu'un catalogue d'opérations sont définis afin de
 * Nom : Les algorithmes de tri
 * Durée : 2 périodes consécutives
 * Thème : Algorithmique
-* Objectifs d’apprentissage : Découvrir les algorithmes de tri et leur pertinence sociétale
-* Notions fondamentales : `à compléter`
+* Objectifs d’apprentissage : Découvrir quelques algorithmes de tri et leur pertinence sociétale
+* Notions fondamentales : instruction, algorithme, tri, éventuellement complexité
 * Approche pédagogique : Débranché
 * Matériel : plusieurs set de cartes numérotées (p.ex. jeu de Uno), papier, feuille comparateur (une feuille sur laquelles sont dessinés deux rectangle pour poser les deux cartes que l'on veut comparer), un peu d'espace pour se mouvoir dans la classe
-* Niveau : `à compléter`
-* Mots-clés : `à compléter`
-* Dynamique (groupe / individuel) : `à compléter`
-* Taille du groupe : `à compléter`
+* Niveau : débutant
+* Mots-clés : tri
+* Dynamique (groupe / individuel) : activité coopérative
+* Taille du groupe : classe entière ou demi-classe (plus facile à gérer)
 ```
 
 ```{dropdown} **Déroulement**
 
-1. {ref}`Mise en situation générale<algo-tri.situation>` (5-10 mn) autour du concept de l'archivage traditionnel, son histoire, son utilité, son organisation, ce qu'il a permis comme pratique, et la fonction fondamentale du tri dans cette technique
+1. {ref}`Mise en situation générale<algo-tri.situation>` (5-10 mn) autour du concept de l'archivage traditionnel, son histoire, son utilité, son organisation, ce qu'il a permis comme pratiques, et la fonction fondamentale du tri dans cette technique
 
 1. {ref}`Exploration<algo-tri.exploration>` (20-30 mn) en groupe au cours de laquelle les élèves explorent des procédures de tri induites par un dispositif physique
 
-1. {ref}`Mise en commun<algo-tri.miseencommun>` (15 mn) au cours de laquelle les élèves discute et présentent les résultats de
-leurs recherche
+1. {ref}`Mise en commun<algo-tri.miseencommun>` (15 mn) au cours de laquelle les élèves discutent et présentent les résultats de leurs recherches
 
 1. {ref}`Formalisation<algo-tri.formalisation>` (20 mn) des divers algorithmes de tri. 
 
@@ -47,7 +46,7 @@ leurs recherche
 
 L'enseignant-e introduit la notion d'archivage de dossiers par l'état en en retraçant un bref historique. En particulier, le besoin pour les états naissants d'avoir un registres des habitants à taxer ou à enrôler dans l'armée, registres qui vont se développer avec l'apparition de
 l'état social (pour déterminer le droits aux prestations) ou qui vont parfois tourner à la surveillance généralisée comme en RDA ou avec l'affaire
-des fiches en Suisse. Cette introduction peut se faire avec des images historiques ou des vidéos, par exemple https://www.rts.ch/info/suisse/10886146-le-scandale-des-fiches-eclatait-en-suisse-il-y-a-tout-juste-trente-ans.html. L'idéal serait que les élèves visualisent bien les armoires contenants des miliers de dossiers afin de bien saisir l'importance du classement.
+des fiches en Suisse. Cette introduction peut se faire avec des images historiques ou des vidéos, par exemple [celle-ci](https://www.rts.ch/play/tv/19h30/video/30-ans-apres-le-scandale-des-fiches?urn=urn:rts:video:10887317). L'idéal serait que les élèves visualisent bien les armoires contenants des miliers de dossiers afin de bien saisir l'importance du classement.
 
 Ensuite l'enseignant-e insiste sur l'importance du classement afin de rendre ceci opérationnel, tout ce système fonctionne grâce à des personnes (souvent des secrétaires) capables de classer les dossiers selon un ordre donnée (alphabétique, numérique, etc.). Dans ce contexte, la digitalisation
 des administrations publiques va nécessiter, entre autres, de transférer à l'ordinateur la capacité de tri des humains. C'est ce qu'on va voir pendant cette activité.  
