@@ -40,6 +40,7 @@ Examinons le circuit ci-dessous : c'est le verrou dit « SR », pour _set/
 
 {
   "v": 3,
+  "opts": {"propagationDelay": 10},
   "in": [
     {"pos": [50, 30], "id": 8, "name": "R", "val": 0},
     {"pos": [50, 130], "id": 9, "name": "S", "val": 0}
@@ -52,7 +53,7 @@ Examinons le circuit ci-dessous : c'est le verrou dit « SR », pour _set/
     {"type": "OR", "pos": [130, 40], "in": [0, 1], "out": 2},
     {"type": "OR", "pos": [130, 120], "in": [4, 5], "out": 6},
     {"type": "NOT", "pos": [200, 120], "in": 3, "out": 7},
-    {"type": "NOT", "pos": [200, 40], "in": 12, "out": 13}
+    {"type": "NOT", "pos": [200, 40], "in": 12, "out": {"id": 13, "initialValue": 0}}
   ],
   "wires": [
     [8, 0],
@@ -94,7 +95,7 @@ On essaie en général d'éviter d'avoir un 1 sur $R$ et sur $S$ en même temps,
     {"type": "OR", "pos": [130, 40], "in": [0, 1], "out": 2},
     {"type": "OR", "pos": [130, 120], "in": [4, 5], "out": 6},
     {"type": "NOT", "pos": [200, 120], "in": 3, "out": 7},
-    {"type": "NOT", "pos": [200, 40], "in": 12, "out": 13}
+    {"type": "NOT", "pos": [200, 40], "in": 12, "out": {"id": 13, "initialValue": 0}}
   ],
   "wires": [
     [8, 0],
