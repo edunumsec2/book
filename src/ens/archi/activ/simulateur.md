@@ -116,7 +116,7 @@ Exemple avec un délai de propagation de 100 ms ([lien](https://logic.modulo-inf
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "in": [{"pos": [80, 60], "id": 0, "val": 0}, {"pos": [80, 110], "id": 1, "val": 1}, {"pos": [80, 160], "id": 2, "val": 1}],
   "gates": [{"type": "AND", "pos": [220, 80], "in": [3, 4], "out": 5}, {"type": "AND", "pos": [350, 100], "in": [6, 7], "out": 8}],
   "out": [{"pos": [480, 100], "id": 9}],
@@ -131,7 +131,7 @@ Même exemple, avec un délai de propagation de 1000 ms ([lien](https://logic.mo
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "opts": {"propagationDelay": 1000},
   "in": [{"pos": [80, 60], "id": 0, "val": 0}, {"pos": [80, 110], "id": 1, "val": 1}, {"pos": [80, 160], "id": 2, "val": 1}],
   "gates": [{"type": "AND", "pos": [220, 80], "in": [3, 4], "out": 5}, {"type": "AND", "pos": [350, 100], "in": [6, 7], "out": 8}],
@@ -158,7 +158,7 @@ D'habitude, les circuits, même statiques, montrent les valeurs véhiculées ([l
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "in": [
     {"pos": [50, 90], "id": 3, "name": "X", "val": 1},
     {"pos": [50, 180], "id": 4, "name": "Y", "val": 0},
@@ -183,7 +183,7 @@ Via les mêmes réglages du circuit que décrit plus haut, on peut les afficher 
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "opts": {"hideWireColors": true, "hideOutputColors": true},
   "in": [
     {"pos": [50, 90], "id": 3, "name": "X", "val": 1},
@@ -209,7 +209,7 @@ Toujours via ces réglages, on peut également afficher le type des portes pour 
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "opts": {"showGateTypes": true, "hideWireColors": true, "hideOutputColors": true},
   "in": [
     {"pos": [50, 90], "id": 3, "name": "X", "val": 1},
@@ -237,7 +237,7 @@ Inversément, on peut décider de masquer une porte, dont la fonction doit être
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "in": [{"pos": [50, 40], "id": 0, "val": 0}, {"pos": [50, 80], "id": 1, "val": 0}, {"pos": [50, 120], "id": 2, "val": 0}],
   "out": [{"pos": [280, 80], "id": 7}],
   "gates": [{"type": "XOR3", "pos": [180, 80], "in": [3, 4, 5], "out": 6, "showAsUnknown": true}],
@@ -258,7 +258,7 @@ On peut faire en sorte qu’une porte s’affiche en fait comme une autre porte.
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0},
@@ -286,7 +286,7 @@ On peut aussi forcer une sortie à avoir une valeur autre que sa valeur normale,
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "in": [
     {"pos": [100, 40], "orient": "s", "id": 3, "name": "A3", "val": 1},
     {"pos": [200, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
@@ -358,7 +358,7 @@ Ceci se fait avec un clic droit sur un composant, puis via le sous-menu «Forcer
 :mode: connect
 
 {
-  "v": 2,
+  "v": 3,
   "in": [{"pos": [90, 100], "id": 0, "val": 0}, {"pos": [90, 140], "id": 1, "val": 0}, {"pos": [90, 180], "id": 2, "val": 0}],
   "out": [{"pos": [320, 140], "id": 7}],
   "gates": [{"type": "XOR3", "pos": [220, 140], "in": [3, 4, 5], "out": 6}],
@@ -430,7 +430,7 @@ Pour faire un sorte qu'un simulateur affiche déjà un circuit donnée, on peut 
       <logic-editor>
         <script type="application/json">
           {
-            "v": 2,
+            "v": 3,
             "in": [
               {"pos": [50, 50], "id": 0, "val": 0},
               {"pos": [60, 130], "id": 1, "val": 0}
