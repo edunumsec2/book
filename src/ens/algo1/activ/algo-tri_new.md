@@ -55,16 +55,16 @@ Enfin l'enseignant-e demande à un-e élève de venir devant et de trier un tas 
 L'enseignant-e demande ensuite à l'élève comment iel a fait. L'élève sera probablement en peine de donner une méthode précise, iel l'aura
 fait "naturellement". L'enseignant-e indique que cette méthode fonctionne bien pour des humains, mais pas pour des ordinateurs qui ont besoin
 d'instructions beaucoup plus précises (ce qui sera clair pour ceux qui ont déjà fait de la programmation) et que c'est à cela que la classe va
-s'atteller: quelle procédure donner à un ordinateur pour le rendre capable de trier des nombres (ou des mots). 
+s'atteler: quelle procédure donner à un ordinateur pour le rendre capable de trier des nombres (ou des mots). 
 
 (algo-tri.exploration)=
 ## Exploration
 
 *Durée : 20-30 mn*
 
-Pour ceci, on va s'aider d'un dispositif matériel constitué d'un paquet de cartes numérotées, d'un "comparateur" c'est-à-dire une feuille de papier sur laquelle on peut disposer exactement deux cartes à comparer, un marqueur (par exemple un jeton ou une gomme) et d'une table. Le tas de cartes ne dois pas contenir uniquement des nombres consécutifs, ce qui permettrait de classer directement la carte à la bonne position. Il peut contenir des doublons. 
+Pour ceci, on va s'aider d'un dispositif matériel constitué d'un paquet de cartes numérotées, d'un "comparateur" c'est-à-dire une feuille de papier sur laquelle on peut disposer exactement deux cartes à comparer, un marqueur (par exemple un jeton ou une gomme) et d'une table. Le tas de cartes ne doit pas contenir uniquement des nombres consécutifs, ce qui permettrait de classer directement la carte à la bonne position. Il peut contenir des doublons. 
 
-Ensuite, l'enseignant-e décrit et affiche ou projette au tableau
+Ensuite, l'enseignant-e démontre et affiche ou projette au tableau
 les opérations disponibles qui sont:
 
 Manipulation des cartes:
@@ -77,7 +77,7 @@ Manipulation des tas:
 1. `superposer(gauche/droite, au-dessus/en-dessous)`: Superposer le tas courant sur/sous le tas de gauche/droite
 
 Manipulation du markeur:
-1. `courant.déplacer(gauche/droite)`: Déplacer le marqueur du tas courante d'un tas à gauche/droite.
+1. `déplacer(gauche/droite)`: Déplacer le marqueur du tas courante d'un tas à gauche/droite.
 
 Tests:
 1. `vide`: Condition 1, le tas est vide.
@@ -88,13 +88,13 @@ Structures de contrôle:
 1. `répéter jusqu'à` : Répéter jusqu'à ce que condition 1/2.
 1. `si`: Si condition 1/2.
 
-Toutes ces opérations, à l'exception des quatre derniüres sont effectuée sur un tas donné, qui est indiqué en préfix de l'opération, par exemple `droite.mettre(haut)` qui signifie que cette opération s'applique sur le tas de droite. 
+Toutes ces opérations, à l'exception des quatre dernières sont effectuée sur un tas donné, qui est indiqué en préfix de l'opération, par exemple `droite.mettre(haut)` qui signifie que cette opération s'applique sur le tas de droite. 
 Dans la situation initiale, il n'y a qu'un seul tas mélangé sur la table.
 
 
 Par groupe de deux ou trois, les élèves reçoivent un dispositif matériel et doivent tenter de trouver une procédure, un algorithme utilisant les opérations ci-dessus et permettant de trier le tas de carte. Ils doivent rédiger cet algorithme en utilisant les opérations ci-dessus. L'idée à ce stade n'est pas de bloquer les élèves avec les aspects formels, mais de les faire réfléchir sur une manière rigoureuse de trier les cartes. 
 
-En guise d'exemple, la classe résoud ensemble un problème plus simple qui consiste à insérer une nouvelle carte dans un tas de carte déjà ordonné. Dans la situation initiale, la carte se trouve dans le comparateur. 
+En guise d'exemple, la classe résout ensemble un problème plus simple qui consiste à insérer une nouvelle carte dans un tas de carte déjà ordonné. Dans la situation initiale, la carte se trouve dans le comparateur. 
 Une solution possible est la suivante:
 ```
 répeter jusqu'à courant.vide():
@@ -102,10 +102,10 @@ répeter jusqu'à courant.vide():
     gauche.disposer(petite,au-dessous)
 gauche.courant()
 ```
-Cette on peut appler cette fonction courant.classer() et l'ajouter à notre répertoire de fonctions 
+Cette on peut appler cette fonction classer() et l'ajouter à notre répertoire de fonctions 
 
-S'ils pensent avoir trouvé un algorithme qui fonctionne, ils doivent le "rédiger" de manière non ambigüe et réessayer en remélangeant les cartes pour voir si la procédure fonctionne encore. Si c'est le cas, ils doivent essayer encore une fois, mais cette fois un-e élève fait les manipulations avec les cartes faces cachées
-(cet élève ne peut pas voir les nombres sur les cartes et l'autre élève prend le rôle du comparateur et ne fait qu'indiquer quelle carte du comparateur est plus grande ou plus petite. De cette manière les élèves peuvent être certain-e-s que l'algorithme fonctionne sans jugement humain.
+Si les élèves pensent avoir trouvé un algorithme qui fonctionne, iels doivent le "rédiger" de manière non ambigüe et réessayer en remélangeant les cartes pour voir si la procédure fonctionne encore. Si c'est le cas, iels doivent essayer encore une fois, mais cette fois un-e élève fait les manipulations avec les cartes faces cachée.
+Cet-te élève ne peut pas voir les nombres sur les cartes et l'autre élève prend le rôle du comparateur et ne fait qu'indiquer quelle carte du comparateur est plus grande ou plus petite. De cette manière les élèves peuvent être certain-e-s que l'algorithme fonctionne sans jugement humain.
 
 Pendant cette phase, l'enseigant-e passe dans les groupes, clarifie au besoin, oriente la recherche des élèves, propose éventuellement des
 simplifications potentielle, et valide les méthodes trouvées.
@@ -115,10 +115,10 @@ simplifications potentielle, et valide les méthodes trouvées.
 
 *Durée : 15 mn*
 
-Selon le temps à disposition, il est de regrouper deux groupes de deux (ayant chcun un autre algorithhme, si possible) et chacun présente son algorithme à l'autre groupe qui doit essayer de l'exécuter à l'aveugle. 
+Selon le temps à disposition, il est possible de regrouper deux groupes de deux (ayant chacun un autre algorithme, si possible) et chacun présente son algorithme à l'autre groupe qui doit essayer de l'exécuter à l'aveugle. 
 
 Chaque groupe va décrire sa méthode au reste de la classe, et l'illustrer en triant les élèves des autres groupes. Chaque élève prend une feuille
-de papier est écrit un nombre dessus. Les élève se disposent ensuite en file, ce qui représente l'équivalent du tas de carte. L'enseigant-e indique au sol (par exemple avec du scotch carrossier) la position du comparateur. Le groupe qui présente sa méthode trie ainsi les élèves selon le numéros qu'ils ont indiqué sur leur feuille. Pendant ce temps les élèves essaient de comprendre la méthode exposée. L'enseignant peut ensuite présenter les algorithmes qu'il souhaite également aborder. 
+de papier est écrit un nombre dessus. Les élève se disposent ensuite en file, ce qui représente l'équivalent du tas de carte. L'enseignant-e indique au sol (par exemple avec du scotch carrossier) la position du comparateur. Le groupe qui présente sa méthode trie ainsi les élèves selon le numéros qu'ils ont indiqué sur leur feuille. Pendant ce temps les élèves essaient de comprendre la méthode exposée. L'enseignant peut ensuite présenter les algorithmes qu'il souhaite également aborder. 
 
 (algo-tri.formalisation)=
 ## Formalisation

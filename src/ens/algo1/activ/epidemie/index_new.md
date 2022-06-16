@@ -14,7 +14,7 @@ Cette activité consiste à modéliser la propagation d'une épidémie dans une 
 Là où cela peut être un peu déroutant pour les élèves, c'est qu'on fait quelque chose qui ressemble à des calculs (et donc des mathématiques), mais il n'y a pas de juste ou faux, mais des modèles qui représentent plus ou moins bien la réalité d'un phénomène. L'objectif de cette activité est de faire réfléchir les élèves sur ce phénomène et les orienter vers une modélisation possible. On peut ensuite réfléchir sur ce qui fait la cohérence, la force ou la faiblessse d'un modèle et effectuer une analyse critique de ce modèle. C'est pourquoi il est préférable de modéliser un phénomène familier afin de pouvoir plus facilement le comparer à son modèle. 
 
 
-Le modèle proposé se base sur le modèle SIR classique (Kermack & McKendrick, 1927)[lien wikipedia](https://fr.wikipedia.org/wiki/Mod%C3%A8les_compartimentaux_en_%C3%A9pid%C3%A9miologie). Une des difficultés auxquelles il faut faire attention est que la méthode proposée repose implicitement sur une ODE intégrée numériquement avec la méthode d'Euler ce qui peut poser des problèmes de précision et de stabilité qu'il faudra autant que possible "cacher" aux élèves. Cela vaut donc la peine se faire quelques essais à l'avance pour s'assurer qu'on est bien en zone stable avec les paramètre choisis.
+Le modèle proposé se base sur le modèle SIR classique (Kermack & McKendrick, 1927)[lien wikipedia](https://fr.wikipedia.org/wiki/Mod%C3%A8les_compartimentaux_en_%C3%A9pid%C3%A9miologie). Une des difficultés auxquelles il faut faire attention est que la méthode proposée repose implicitement sur une ODE intégrée numériquement avec la méthode d'Euler ce qui peut poser des problèmes de précision et de stabilité qu'il faudra autant que possible "cacher" aux élèves. Cela vaut donc la peine se faire quelques essais à l'avance pour s'assurer qu'on est bien en zone stable avec les paramètres choisis.
 
 Cette activité peut être effectuée dans une éditeur python ou sur un jupyter-notebook. L'avantage du notebook est que les élèves ont tout dans un seul fichier (consignes, codes, graphes, réponses aux questions), le désavantage est qu'il faut une infrastructure informatique plus importante pour faire tourner le code à la maison (jupyter-lab).
 
@@ -23,24 +23,25 @@ Cette activité peut être effectuée dans une éditeur python ou sur un jupyter
 ```{admonition} Caractéristiques
 :class: hint
 
-* Nom : 
-* Durée : 
-* Thème : 
-* Objectifs d’apprentissage : 
-* Notions fondamentales : 
-* Approche pédagogique : 
-* Matériel : 
-* Niveau : 
-* Mots-clés : 
-* Dynamique (groupe / individuel) : 
-* Taille du groupe : 
+* Nom : Modéliser une épidémie
+* Durée : 90 minutes
+* Thème : modélisation
+* Objectifs d’apprentissage : comprendre la démarche de modélisation, évaluer un modèle
+* Notions fondamentales : modèle 
+* Approche pédagogique : branchée
+* Matériel : ordinateur
+* Niveau : intermédiaire,
+* Pré-requis: une certaine expérience en programmation (variables et boucle)
+* Mots-clés : modèle SIR,  
+* Dynamique (groupe / individuel) : par groupes
+* Taille du groupe : demi-classe ou classe entière
 ```
 
 ```{dropdown} **Déroulement**
 
 1. {ref}`Mise en situation<epidemie.misenensituation>` (5 mn) autour de l'évènement historique de la fermeture des écoles le 13 mars 2020. 
 
-1. {ref}`Conception du modèle<epidemie.conception>` (15 mn) par groupe de deux, pendant que l'enseignant passe dans les rangs pour orienter le travail. 
+1. {ref}`Conception du modèle<epidemie.conception>` (15 mn) par groupe de deux ou trois, pendant que l'enseignant passe dans les rangs pour orienter le travail. 
 
 1. {ref}`Évaluation<epidemie.evaluation>` (5 mn) durant laquelle chaque groupe fait un commentaire sur le modèle d'un autre groupe. 
 
@@ -72,7 +73,7 @@ Le but de la leçon sera de faire et analyser un modèle de propagation d'une é
 
 *Durée : 15 mn*
 
-Par groupe de deux, les élèves font les points 1 à 4 de la {ref}`marche à suivre<m_a_s>`, pendant que l'enseignant passe dans les groupes pour les orienter. L'enseignant choisit parmi les modèles des élèves ceux qui sont intéressants à discuter.
+Par groupe de deux ou trois, les élèves font les points 1 à 4 de la {ref}`marche à suivre<m_a_s>`, pendant que l'enseignant passe dans les groupes pour les orienter. L'enseignant choisit parmi les modèles des élèves ceux qui sont intéressants à discuter.
 
 (epidemie.evaluation)=
 ## Évaluation
