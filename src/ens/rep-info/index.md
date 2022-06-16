@@ -1,15 +1,35 @@
 # Représentation de l'information
 
-Les ressources à disposition pour la représentation de l'information sont organisées en 3 catégories.
-* Activités : séquences prêtes à être utilisées en classe pour aborder un sujet en particulier de cette thématique.
-* Exercices : bibliothèque d'exercices disponibles qui peuvent être utilisés pour illustrer ou servir d'exemple pour des aspects spécifiques.
-* Supports de cours : rappels et apport théoriques afin de vous permettre de facilement vous remettre à niveau ou approfondir vos connaissances sur un sujet donné.
+Le plan d'études pour l'informatique en tant que discipline obligatoire à l'École de maturité propose les contenus suivants pour la **représentation de l'information** : 
 
-Afin d'enseigner cette thématique, les ressources présentées ici peuvent être orchestrées de la manière suivante.
+- Système et arithmétique binaire
+- Représentation des entiers
+- Représentation numérique de données telles que caractères,
+images, sons
+- Stockage et manipulation des données
 
-## Planification
+## Objectifs de la thématique
 
+Les objectifs pédagogiques du chapitre sont les suivants : 
 
+- Comprendre le passage du système décimal au **système binaire**. 
+- Comprendre la logique sur laquelle repose la **représentation binaire** des nombres entiers, des caractères, des images et des sons.
+- Comprendre la notion de **compression** des données.
+- Appréhender l’importance de la **redondance**.
+
+## Découpage de la thématique 
+
+Dans la partie **apprendre**, vous trouverez les chapitres suivants : 
+
+- [Introduction](lien)
+- [Les entiers](lien)
+- [Les caractères](lien)
+- [Les images](lien)
+- [Le son](lien)
+- [Redondance](lien)
+- [Conclusion](lien)
+
+Dans la partie **enseigner**, vous trouverez des : 
 
 ```{toctree}
 :maxdepth: 1

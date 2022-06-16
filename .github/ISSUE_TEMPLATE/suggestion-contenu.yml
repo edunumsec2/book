@@ -1,0 +1,39 @@
+name: Suggestion liée au contenu
+description: Pour suggérer un ajout de contenu ou une modification de contenu existant.
+title: "[Contenu]: "
+labels: ["contenu"]
+assignees:
+  - elliotvaucher
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Remarque**: pour les demandes plus complexes, nous vous invitons à dialoguer avec nous via [Discord](https://discord.gg/b8qu79t6HQ) ou sur [modulo-team@epfl.ch](mailto:modulo-team@epfl.ch).
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Quelle est la page ou la section concernée ?
+      placeholder: Nom de la page / URL
+    validations:
+      required: true
+  - type: textarea
+    id: probleme
+    attributes:
+      label: Quel est le problème relevé ?
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Quelle est votre suggestion ?
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: En soumettant, vous acceptez de suivre notre [Code de conduite](https://github.com/edunumsec2/book/blob/master/CODE_OF_CONDUCT.md)
+      options:
+        - label: J'accepte de suivre le code de conduite.
+          required: true

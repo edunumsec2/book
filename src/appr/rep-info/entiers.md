@@ -1,4 +1,4 @@
-# 1. Les entiers
+# Les entiers
 
 La plupart des civilisations humaines utilise le système décimal.
 Pourquoi ? Tout simplement parce que nous avons 10 doigts !
@@ -9,7 +9,7 @@ courant, il n'y a pas de courant ; allumé, éteint ; vrai, faux ; 1 ou 0.
 
 **On dit qu'il travaille dans un système binaire, ou en base deux.**
 
-## 1.1. Les systèmes de numération
+## Les systèmes de numération
 
 ### Le système décimal
 
@@ -283,7 +283,7 @@ trajectoire fatal.
 
 <div class="cell markdown">
 
-## 1.2. Représentation des entiers négatifs
+## Représentation des entiers négatifs
 
 Après la représentation des entiers naturels $(\mathbb{N})$, on
 souhaite évidement pouvoir représenter les entiers négatifs afin d'avoir

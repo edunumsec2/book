@@ -1,5 +1,5 @@
 
-# 2. Additionneur
+# Additionneur
 
 On a découvert quelques {glo}`portelogique|portes logiques` ainsi que la possibilité de les connecter pour en faire des circuits logiques plus complexes. Ces portes logiques vont maintenant permettre de réaliser l'additionneur annoncé en début de chapitre précédent.
 
@@ -54,7 +54,7 @@ Le circuit fonctionne correctement. Il faut tester les quatre combinaisons qui a
 ```
 ````
 
-## 2.1. Additionneur complet
+## Additionneur complet
 
 Le circuit précédent est particulièrement intéressant, car il montre qu'il est possible d'utiliser des opérateurs logiques pour réaliser l'opération arithmétique de l'addition. L'additionneur est limité: en fait, on l'appelle un _demi-additionneur_. Il n'est capable d'additionner que deux bits — c'est très limité. En fait, il serait intéressant d'avoir un additionneur de _trois_ bits. Pourquoi ? À cause de la manière dont on pose les additions en colonnes.
 
@@ -112,7 +112,7 @@ En faisant pour l'instant abstraction des détails d'un additionneur complet, on
 ```
 
 
-## 2.2. Chaînage d'additionneurs
+## Chaînage d'additionneurs
 
 La flexibilité de ce composant fait qu'on peut maintenant facilement l'utiliser pour construire un circuit qui additionne deux nombres $A$ et $B$ à 2 bits chacun (donc de $0 + 0 = 0$ à $3 + 3 = 6$).
 

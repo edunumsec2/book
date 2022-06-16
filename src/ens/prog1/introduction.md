@@ -1,5 +1,4 @@
 # Introduction
-
 Au lieu d'aborder la programmation en Python sous ses éléments techniques et théoriques tel que *variable, flux, boucle, liste, dictionnaire et module*, nous avons choisi de présenter la programmation comme une série d'activités ludiques de dessin ce qui nous donne un feedback immédiat.
 
 L'approche est basée sur les méthodes présentées dans les 3 livres :

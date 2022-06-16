@@ -40,7 +40,7 @@
 </style>
 
 <div align="right"> 
-    <a href="http://files.edunumsec2.ch/algo.pdf" target="_blank" class="round-button">
+    <a href="https://files.modulo-info.ch/Algorithmique_20220322_I.pdf" target="_blank" class="round-button">
          <font color=white id="demo">Voir <br>dossier</font>
     </a>
 </div>
