@@ -1,0 +1,768 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Recherche" href="../../search.html" /><link rel="next" title="2. Exercices" href="../exo/index.html" /><link rel="prev" title="Redondance et code de Hamming" href="hamming_new.html" />
+
+    <link rel="shortcut icon" href="../../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>Compression et codage de Huffman - Enseigner</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #06CCC0;
+  --color-brand-content: #06CCC0;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #06CCC0;
+  --color-brand-content: #06CCC0;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Enseigner</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Enseigner</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Première année</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Représentation de l’information</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">1. Activités</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="magie_binaire_new.html">Magie binaire</a></li>
+<li class="toctree-l3"><a class="reference internal" href="encoder_images.html">Images numériques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="format_BMP_new.html">Format BMP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="echantillonnage_new.html">Echantillonnage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hamming_new.html">Redondance et code de Hamming</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Compression et codage de Huffman</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../exo/index.html">2. Exercices</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../exo/carte.html">Carte perforée</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exo/radiotel.html">Radiotéléphonie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exo/space.html">Space Invaders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exo/tableur.html">Tableur</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../support/index.html">3. Supports de cours</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../support/son/visu-et-ecoute-son.html">Représentation du son</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/shannon2.html">Second théorème de Shannon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/introduction.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/planification.html">2. Planification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/evaluation.html">3. Evaluation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../prog1/activ/index.html">4. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../prog1/activ/catchfruit.html">Catch the fruit</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../prog1/activ/microbit-python/index.html">Python avec le micro:bit</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../prog1/activ/microbit-python/instructions.html">Instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../prog1/activ/microbit-python/condition.html">Exécution conditionnelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../prog1/activ/microbit-python/variables.html">Variables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../algo1/index.html">Algorithmique I</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo1/activ/index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/algo-tri_new.html">Algorithmes de tri</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../algo1/activ/epidemie/index_new.html">Modéliser une épidémie</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../algo1/activ/epidemie/m_a_s.html">Marche à suivre</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../algo1/activ/epidemie/solution.html">Corrigé</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/dijkstra_new.html">Dijkstra et le plus court chemin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/puissance4.html">Puissance 4/Minimax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/template_activite.html">Titre de l’activité</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo1/exo/solutions.html">2. Solutions des exercices</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../archi/index.html">Architecture des ordinateurs</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../archi/support/index.html">1. Supports de cours</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../archi/eval/index.html">2. Evaluations</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../archi/activ/index.html">3. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/ordinateurantique_new.html">Ordinateur antique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/simulateur.html">Simulateur logique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/selecteur-chien_new.html">Sélecteur de chien</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/afficheur-7seg.html">Afficheur à 7 segments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/soustracteur.html">Soustracteur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/gabuzomeu_new.html">Ga-Bu-Zo-Meu</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../archi/PlanDidac/index.html">4. Plan</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/PlanDidac/plandidacarchi1.html">Proposition 1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx1/index.html">Enjeux sociaux I</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../enjx1/grandes-thematiques/economie-numerique.html">1. Économie du numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../enjx1/grandes-thematiques/surveillance.html">2. Vie privée et surveillance</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../algo2/index.html">Algorithmique II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../prog2/index.html">Programmation II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projets/index.html">Projets</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../resx/activ/index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../resx/activ/diffie-hellman/diffie-hellman.html">Diffie Hellman</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resx/activ/routage_paquets/routage_paquets.html">Routage des Paquets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx2/index.html">Enjeux sociaux II</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../enjx2/grandes-thematiques/environnement.html">1. Numérique et environnement</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/activ/index.html">2. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/encheres.html">1. Les enchères du web</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/combustibles_GES.html">2. Numérique et environnement : le problème de l'énergie (consommée pendant le cycle de vie des produits numériques) : combustibles fossiles / non fossiles et GES</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/fiches-complementaires/index.html">Fiches complémentaires</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/digital-labor.html">1. Le digital labor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/wikipedia.html">2. Wikipédia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/affaire-snowden.html">3. L’affaire Snowden</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/genre-numerique.html">4. Genre et numérique</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Thématiques transversales</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/activ/index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hist/activ/jeuimitation_new.html">Jeu de l'imitation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hist/activ/smaky_new.html">Smaky</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/plan_didac/index.html">2. Plan</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/eval/index.html">3. Evaluation</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hist/eval/eval1.html">Évalutation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../art/index.html">Art numérique</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../art/ai.html">1. AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/autonomy_cube.html">2. Autonomy Cube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/gloomy_sunday.html">3. Learning to See : Gloomy Sunday</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Suppléments</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../art/index.html">Art numérique</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../art/ai.html">1. AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/autonomy_cube.html">2. Autonomy Cube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/gloomy_sunday.html">3. Learning to See : Gloomy Sunday</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossaire.html">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../readme/extensions.html">Extensions</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="compression-et-codage-de-huffman">
+<h1>Compression et codage de Huffman<a class="headerlink" href="#compression-et-codage-de-huffman" title="Lien permanent vers ce titre">¶</a></h1>
+<hr class="docutils"/>
+<p>Aussi étrange que cela puisse paraître, il est très souvent possible d’enregistrer un fichier de données d’une certaine taille en utilisant moins de place en mémoire que la taille initiale du fichier, et ceci sans perdre aucune information ! Ce sont les techniques de compression de données qui permettent de réaliser ça : l’activité qui suit permet de comprendre le principe de base de la compression de données à travers un jeu interactif avec les élèves.</p>
+<p>Pour introduire le sujet, on peut parler également de manière générale du fait que dans la vie courante, on utilise des algorithmes de compression sans s’en rendre compte, comme Mr Jourdain faisait de la prose : par exemple, quand on écrit “slt” ou “tqt” dans un SMS, ou quand on utilise des acronymes. Le principe consiste à abréger des éléments qui reviennent souvent dans la conversation pour gagner de la place ou du temps.</p>
+<p>Une autre accroche possible est de parler du code Morse qui utilise un seul point pour la lettre E qui revient très souvent en français ou en anglais, tandis que la lettre X, beaucoup moins fréquente, est encodée par un trait, deux points, un trait.</p>
+<hr class="docutils"/>
+<div class="hint admonition">
+<p class="admonition-title">Caractéristiques</p>
+<ul class="simple">
+<li><p>Nom : Compression et codage de Huffman</p></li>
+<li><p>Durée : 1 période</p></li>
+<li><p>Thème : Représentation de l’information</p></li>
+<li><p>Objectifs d’apprentissage : Faire comprendre aux élèves le principe de base derrière la compression de données.</p></li>
+<li><p>Notions fondamentales : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+<li><p>Approche pédagogique : Débranchée</p></li>
+<li><p>Matériel : (optionnel) Quelques dés pour tirer une lettre (uniformément) au hasard parmi 16</p></li>
+<li><p>Niveau : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+<li><p>Mots-clés : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+<li><p>Dynamique (groupe / individuel) : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+<li><p>Taille du groupe : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+</ul>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Déroulement</strong><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ol class="simple">
+<li><p class="card-text"><a class="reference internal" href="#huffman-premierjeu"><span class="std std-ref">Premier jeu</span></a> (durée <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code>)</p></li>
+<li><p class="card-text"><a class="reference internal" href="#huffman-secondjeu"><span class="std std-ref">Second jeu</span></a> (durée <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code>)</p></li>
+<li><p class="card-text"><a class="reference internal" href="#huffman-compression"><span class="std std-ref">Et la compression, dans tout ça ?</span></a> (durée <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code>)</p></li>
+<li><p class="card-text"><a class="reference internal" href="#huffman-developpements"><span class="std std-ref">Développements</span></a> (durée <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code>)</p></li>
+<li><p class="card-text"><a class="reference internal" href="#huffman-autres"><span class="std std-ref">Autres algorithmes de compression</span></a> (durée <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code>)</p></li>
+<li><p class="card-text"><a class="reference internal" href="#huffman-conclusion"><span class="std std-ref">Conclusion</span></a> (durée <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code>)</p></li>
+</ol>
+</div>
+</details><section id="premier-jeu">
+<span id="huffman-premierjeu"></span><h2>Premier jeu<a class="headerlink" href="#premier-jeu" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></em></p>
+<p>Ecrire au tableau la séquence de lettres : “ABCDEFGHIJKLMNOP”, choisir une lettre (éventuellement au hasard, mais ce n’est pas nécessaire), la noter sur une feuille de papier, et demander à un·e volontaire de participer au jeu. Expliquer ensuite la règle du jeu :</p>
+<p>L’élève doit deviner quelle lettre a été choisie, ceci en ne posant que des questions binaires, c’est-à-dire des questions auxquelles on ne peut répondre que par oui ou par non. Et le but pour l’élève est de poser le moins de questions possible pour deviner la lettre.</p>
+<p>Une fois que l’élève a trouvé la lettre, poser la question aux autres : est-ce que la séquence de questions posées par l’élève était optimale ? Aurait-on pu faire mieux ?</p>
+<p>La stratégie optimale consiste à poser des questions qui divisent chaque fois en deux parties égales le nombre de possibilités. Ainsi, en supposant que la lettre choisie soit le D, une séquence possible de questions optimales est :</p>
+<ol class="simple">
+<li><p>Est-ce une lettre entre A et H ? oui</p></li>
+<li><p>Est-ce une lettre entre A et D ? oui</p></li>
+<li><p>Est-ce une lettre entre A et B ? non</p></li>
+<li><p>Est-ce un C ? non</p></li>
+</ol>
+<p>Et donc, la réponse est D dans ce cas : au total, 4 questions suffisent pour deviner de quelle lettre il s’agit. Et cette conclusion reste identique, quelle que soit la lettre choisie au départ.</p>
+<div class="admonition-remarque admonition">
+<p class="admonition-title">Remarque</p>
+<p>Ce premier jeu sert d’introduction au sujet et ne traite pas directement de compression en tant que telle, mais c’est une étape nécessaire pour comprendre le jeu qui suit.</p>
+<p>Il peut être également utile de mentionner que la séquence de questions optimales à poser n’est rien d’autre qu’une mise en oeuvre de l’algorithme de dichotomie. Pour donner une idée de son efficacité, on peut ajouter que ce même algorithme trouverait en 10 questions une lettre choisie au hasard parmi mille et en 20 questions une lettre choisie au hasard parmi un million. En comparaison, un algorithme consistant à essayer à chaque fois de deviner la lettre choisie (“Est-ce un A ?”, “Est-ce un B ?”, etc.) serait bien moins performant, à moins d’un heureux hasard !</p>
+</div>
+</section>
+<section id="second-jeu">
+<span id="huffman-secondjeu"></span><h2>Second jeu<a class="headerlink" href="#second-jeu" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Demander ensuite à un·e autre volontaire de participer à un second jeu, et écrire la phrase “SINGING IN THE RAIN” au tableau, composée de 16 lettres (sans les espaces, qu’on laisse de côté). Puis choisir une de ces 16 lettres (éventuellement au hasard, mais ça n’est pas absolument nécessaire) et la noter sur un bout de papier. Expliquer enfin que la règle du jeu reste la même: l’élève doit trouver la lettre choisie en posant un nombre minimum de questions binaires, mais noter qu’ici plusieurs lettres se répètent, et qu’il n’y a pas besoin de deviner la position précise de la lettre, mais juste la valeur de celle-ci, c’est-à-dire “S”, “I”, “N”, etc.</p>
+<p>Une fois que l’élève a trouvé la lettre, poser à nouveau la question aux autres : est-ce que la séquence de questions posées par l’élève était optimale ? Aurait-on pu faire mieux ?</p>
+<p>Pour ce second jeu, la stratégie optimale consiste à nouveau à diviser chaque fois l’ensemble des possibilités en deux parties égales, mais du fait que des lettres se répètent, on peut optimiser les questions en regroupant les possibilités. Faisons d’abord le compte du nombre d’apparitions de chaque lettre, en prenant soin de les ordonner par ordre décroissant de ce nombre d’apparitions :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>lettre</p></th>
+<th class="head"><p>I</p></th>
+<th class="head"><p>N</p></th>
+<th class="head"><p>G</p></th>
+<th class="head"><p>S</p></th>
+<th class="head"><p>T</p></th>
+<th class="head"><p>H</p></th>
+<th class="head"><p>E</p></th>
+<th class="head"><p>R</p></th>
+<th class="head"><p>A</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>nombre d’apparitions</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>On voit ainsi que les deux premières lettres I et N apparaissent en tout 8 fois, et qu’il en va de même pour le reste des lettres G, S, T, H, E, R et A. La bonne première question à poser est donc : “Est-ce un I ou un N ?”. Si d’aventure la réponse à cette première question est oui, alors il ne reste plus que deux choix, avec chacun le même nombre de possibilités, et donc la deuxième question à poser est : “Est-ce un I ?” Que la réponse à cette question soit un oui ou un non, l’élève aura trouvé la lettre choisie en ne posant que deux questions au total.</p>
+<p>Quelle deuxième question poser maintenant si la réponse à la première question est un non ? Dans ce cas, il reste les 8 possibilités suivantes :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>lettre</p></th>
+<th class="head"><p>G</p></th>
+<th class="head"><p>S</p></th>
+<th class="head"><p>T</p></th>
+<th class="head"><p>H</p></th>
+<th class="head"><p>E</p></th>
+<th class="head"><p>R</p></th>
+<th class="head"><p>A</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>nombre d’apparitions</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Pour séparer cet ensemble de possibilités en deux parties égales, la bonne deuxième question à poser est : “Est-ce un G, un S ou un T ?” Et ainsi de suite : si la réponse à cette deuxième question est oui, alors la troisième question à poser est : “Est-ce un G ?” Si la réponse à cette troisième question est oui, alors on a trouvé la lettre, sinon, il faut encore poser une quatrième question pour départager les deux dernières possibilités S et T.</p>
+<p>Et finalement, si la réponse aux deux premières questions est non, alors il reste 4 possibilités H, E, R et A. Dans ce cas, deux questions supplémentaires sont nécessaires pour trouver la lettre choisie, comme lors du premier jeu, où toutes les lettres apparaissent exactement une fois chacune.</p>
+<p>Le tableau ci-dessous résume le nombre optimal de questions qu’il faut poser pour deviner chaque lettre :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>lettre</p></th>
+<th class="head"><p>I</p></th>
+<th class="head"><p>N</p></th>
+<th class="head"><p>G</p></th>
+<th class="head"><p>S</p></th>
+<th class="head"><p>T</p></th>
+<th class="head"><p>H</p></th>
+<th class="head"><p>E</p></th>
+<th class="head"><p>R</p></th>
+<th class="head"><p>A</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>nombre d’apparitions</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>nombre de questions</p></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>On voit notamment que plus une lettre est fréquente, moins elle nécessite de questions.</p>
+</section>
+<section id="et-la-compression-dans-tout-ca">
+<span id="huffman-compression"></span><h2>Et la compression, dans tout ça?<a class="headerlink" href="#et-la-compression-dans-tout-ca" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Tout ceci semble a priori quelque peu éloigné du sujet, mais en fait, le lien avec l’algorithme de compression de Huffman est presque immédiat ! Voici plus précisément comment établir ce lien.</p>
+<p>Pour encoder les 16 lettres ABCDEFGHIJKLMNOP du premier jeu sous la forme d’une séquence de bits, il n’y a pas d’autre choix que d’utiliser 4 bits par lettre, vu que celles-ci sont toutes différentes. Ainsi, on encode par exemple A par 0000, B par 0001, C par 0010, etc., et le nombre total de bits nécessaires pour encoder la séquence  ABCDEFGHIJKLMNOP vaut donc <span class="math notranslate nohighlight">\(16 \times 4=64\)</span>.</p>
+<p>Il est bien sûr possible de refaire exactement la même chose pour encoder la séquence SINGING IN THE RAIN (en oubliant encore une fois les espaces), mais ce serait ignorer le fait que certaines lettres se répètent. Pour être plus précis, il n’y a que… 9 lettres différentes dans cette séquence ; malheureusement une de trop pour pouvoir représenter chaque lettre avec 3 bits ! Donc il semble a priori qu’on ne gagne rien ici. Cependant, si on utilise l’information additionnelle liée au nombre d’apparitions de chaque lettre, alors on peut faire mieux ! Et c’est là que le second jeu vient en aide pour définir un schéma d’encodage efficace, suivant les deux règles suivantes :</p>
+<ol class="simple">
+<li><p>Chaque lettre est encodée avec un nombre de bits égal au nombre de questions binaires nécessaires pour deviner la lettre.</p></li>
+<li><p>Le mot de code associé à chaque lettre est la séquence de bits correspondant à la séquence de réponses obtenues lors du jeu (avec la correspondance oui=1 et non=0, par exemple).</p></li>
+</ol>
+<p>Ainsi, les mots de code suivants sont obtenus pour la séquence SINGING IN THE RAIN :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>lettre</p></th>
+<th class="head"><p>I</p></th>
+<th class="head"><p>N</p></th>
+<th class="head"><p>G</p></th>
+<th class="head"><p>S</p></th>
+<th class="head"><p>T</p></th>
+<th class="head"><p>H</p></th>
+<th class="head"><p>E</p></th>
+<th class="head"><p>R</p></th>
+<th class="head"><p>A</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>nombre d’apparitions</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>nombre de questions/bits</p></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>mot de code correspondant</p></td>
+<td><p>11</p></td>
+<td><p>10</p></td>
+<td><p>011</p></td>
+<td><p>0101</p></td>
+<td><p>0100</p></td>
+<td><p>0011</p></td>
+<td><p>0010</p></td>
+<td><p>0001</p></td>
+<td><p>0000</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Ce système d’encodage, ou <em>dictionnaire</em>, est clairement plus économe en bits que le système d’encodage classique décrit plus haut, utilisant 4 bits par lettre. Faisons le compte du nombre total de bits utilisés avec ce nouvel encodage :</p>
+<p><span class="math notranslate nohighlight">\(8 \times 2 + 2 \times 3 + 6 \times 4 = 16 + 6 + 24 = 46\)</span> bits</p>
+<p>L’économie de place réalisée est donc de l’ordre de <span class="math notranslate nohighlight">\(\frac{64-46}{64} = \frac{18}{64} \simeq 28\%\)</span> ; un taux de compression à peu près équivalent à celui obtenu lors de la compression de fichiers de données informatiques avec le format ZIP.</p>
+<p>Pour autant, une question importante reste en suspens : quand on encode chaque lettre avec le même nombre de bits, il est trivial de décoder la séquence de bits pour retrouver la séquence de lettres correspondante, en lisant simplement les bits 4 par 4 dans l’exemple vu plus haut. Mais qu’en est-il ici où des lettres d’une même séquence sont encodées avec des nombres de bits différents ? Avec l’encodage ci-dessus, la séquence SINGING IN THE RAIN s’écrit :</p>
+<p>010111100111110011…</p>
+<p>A priori, il peut sembler sans espoir de retrouver le message d’origine… Mais il se trouve que si on lit cette séquence <em>de gauche à droite</em>, alors muni du dictionnaire ci-dessus, le décodage de la séquence est très facile: il suffit de rechercher à quelle lettre peuvent correspondre les premiers bits de la séquence : en essayant avec les deux premiers, on voit que le mot de code 01 n’est pas listé dans le dictionnaire ; en essayant avec les trois premiers, on voit que 010 ne fait pas non plus partie du dictionnaire ; donc la première lettre est forcément celle encodée par les quatre premiers bits 0101, à savoir un S. Puis on refait la même chose avec le reste de la séquence de bits 11100111110011… : ici, on voit que les deux premiers bits forment le mot de code 11 correspondant à la lettre I ; et ainsi de suite… Le message d’origine peut ainsi être entièrement décodé ; il est donc bien vrai qu’aucune information n’est perdue !</p>
+</section>
+<section id="developpements">
+<span id="huffman-developpements"></span><h2>Développements<a class="headerlink" href="#developpements" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Plusieurs remarques méritent d’être faites ici pour compléter la description de cette activité.</p>
+<section id="utilisation-du-hasard-dans-le-jeu">
+<h3>Utilisation du hasard dans le jeu<a class="headerlink" href="#utilisation-du-hasard-dans-le-jeu" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Si on tire uniformément la lettre à deviner parmi les 16 lettres qui composent la séquence (ce qui peut se faire en combinant les résultats de deux dés à 4 faces, par exemple), alors on peut estimer le <em>nombre moyen</em> de questions que posera l’élève suivant une stratégie optimale :</p>
+<p><span class="math notranslate nohighlight">\(\frac{8}{16} \times 2 + \frac{2}{16} \times 3 + \frac{6}{16} \times 4 = \frac{16+6+24}{16} = \frac{46}{16} = 2,875\)</span></p>
+<p>Par définition, ce nombre est aussi égal au nombre moyen de bits utilisés par lettre par le codage de Huffman, et dans cet exemple précis, il correspond aussi à l’<em>entropie</em> de la séquence SINGING IN THE RAIN. Le premier théorème de Shannon stipule que pour n’importe quel système d’encodage qui permet un décodage sans ambiguïté (comme vu ci-dessus), le nombre moyen de bits utilisés par lettre ne peut jamais descendre en dessous de l’entropie de la séquence de lettres (noter cependant que la définition générale de l’entropie d’une séquence de lettres fait intervenir la notion de logarithme et dépasse donc les connaissances des élèves en première année de gymnase).</p>
+</section>
+<section id="dictionnaire-sans-prefixe">
+<h3>Dictionnaire sans préfixe<a class="headerlink" href="#dictionnaire-sans-prefixe" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La magie qui permet de lire la séquence de gauche à droite vient du fait que par construction, aucun mot du dictionnaire construit avec ce système n’est le <em>préfixe</em> d’un autre. Par exemple, on trouve dans le dictionnaire les mots de code 110 et 0101, mais pas 110 et 1101, ni encore 010 et 0101. De cette façon, il n’y a aucune ambiguïté
+à décoder la séquence de gauche à droite.</p>
+</section>
+<section id="faut-il-toujours-recalculer-un-dictionnaire-pour-compresser-chaque-nouvelle-sequence-de-lettres">
+<h3>Faut-il toujours recalculer un dictionnaire pour compresser chaque nouvelle séquence de lettres ?<a class="headerlink" href="#faut-il-toujours-recalculer-un-dictionnaire-pour-compresser-chaque-nouvelle-sequence-de-lettres" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Clairement, non. Si on a affaire à un texte écrit en français, par exemple, on peut se baser sur un dictionnaire établi une fois par toutes pour un texte “standard” (tel que la déclaration des droits de l’homme), en supposant souvent à raison que les fréquences d’apparition des lettres restent similaires d’un texte à l’autre.</p>
+</section>
+<section id="compresser-des-fichiers-binaires">
+<h3>Compresser des fichiers binaires ?<a class="headerlink" href="#compresser-des-fichiers-binaires" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Si la séquence qu’on désire compresser est elle-même une séquence de 0 et de 1 (c’est-à-dire, n’importe fichier de données numériques), que faire ? Dans ce cas, on peut simplement regrouper par 8 les bits de la séquence pour former des séquences de symboles (avec le code ASCII, par exemple), puis appliquer la méthode décrite ci-dessus.</p>
+</section>
+<section id="codages-de-huffman-de-de-shannon-fano">
+<h3>Codages de Huffman de de Shannon-Fano<a class="headerlink" href="#codages-de-huffman-de-de-shannon-fano" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le système d’encodage présenté ci-dessus n’est à proprement parler pas exactement le codage de Huffman, mais plutôt le codage de Shannon-Fano. Ceci dit, dans l’exemple de la séquence SINGING IN THE RAIN, les deux systèmes d’encodage coïncident parfaitement. On observe par contre des différences mineures de performance entre les deux systèmes d’encodage (avec un avantage systématique à Huffman) dans des situations moins idéales où les nombres d’apparitions des lettres dans la séquence sont plus irréguliers.</p>
+<p>Pour plus d’informations sur le sujet, voici des liens vers des vidéos expliquant la notion d’entropie, ainsi que les codages de Shannon-Fano et de Huffman :</p>
+<p>entropie : https://www.youtube.com/watch?v=nAA7UyiCIOE</p>
+<p>codage de Shannon-Fano : https://www.youtube.com/watch?v=DSdTiFc3Aws</p>
+<p>codage de Huffman : https://www.youtube.com/watch?v=UAY-wpHZCs4</p>
+</section>
+</section>
+<section id="autres-algorithmes-de-compression">
+<span id="huffman-autres"></span><h2>Autres algorithmes de compression<a class="headerlink" href="#autres-algorithmes-de-compression" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="compression-sans-pertes">
+<h3>Compression sans pertes<a class="headerlink" href="#compression-sans-pertes" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les codages de Huffman ou de Shannon-Fano ne sont de loin pas les seuls systèmes permettant de faire de la compression sans perte d’information, dite aussi plus simplement “compression sans pertes”. Un défaut important de l’approche évoquée ici est qu’il est nécessaire de connaître (ou au moins estimer) à l’avance les fréquences d’apparition de chaque lettre dans la séquence à compresser, ce qui s’avère trop lent lors de la compression de grands fichiers de données. Dans ce cas, il vaut mieux recourir à des algorithmes de compression dits <em>universels</em>, tels que l’algorithme de Lempel-Ziv, qui “apprend” en quelque sorte les fréquences d’apparition des lettres dans la séquence au fur et à mesure qu’il lit (et compresse) celle-ci.</p>
+</section>
+<section id="compression-avec-pertes">
+<h3>Compression avec pertes<a class="headerlink" href="#compression-avec-pertes" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Finalement, il importe de remarquer qu’il existe une pléthore d’autres algorithmes de compression dite “avec pertes”, absolument pas évoqués ici, et permettant d’atteindre des taux de compression beaucoup plus élevés que ceux mentionnés plus haut, ceci au prix de la perte d’une partie de l’information contenue dans le signal d’origine. Tout l’art de la compression avec pertes consiste à se débarrasser de l’information qu’on ne perçoit pas ou peu (telle des fréquences inaudibles dans un son, des variations subtiles de bleu dans une photo du ciel, etc.) et à encoder proprement celle qui est nécessaire à une bonne reconstitution du signal. Citons notamment les formats de fichiers MP3, JPEG et MP4 qui utilisent de tels algorithmes de compression avec pertes pour le son, les images et la vidéo, respectivement.</p>
+</section>
+</section>
+<section id="conclusion">
+<span id="huffman-conclusion"></span><h2>Conclusion<a class="headerlink" href="#conclusion" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Cette activité donne un aperçu du fonctionnement des algorithmes de compression de données, qui sont utilisés en permanence par les systèmes informatiques modernes. Il est à espérer que le côté ludique et interactif de l’activité permette de faire passer quelques idées sur un sujet qui reste quand-même techniquement un peu plus difficile que les autres vus dans ce chapitre.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../exo/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title"><span class="section-number">2. </span>Exercices</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="hamming_new.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Redondance et code de Hamming</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../../_sources/rep-info/activ/huffman.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Compression et codage de Huffman</a><ul>
+<li><a class="reference internal" href="#premier-jeu">Premier jeu</a></li>
+<li><a class="reference internal" href="#second-jeu">Second jeu</a></li>
+<li><a class="reference internal" href="#et-la-compression-dans-tout-ca">Et la compression, dans tout ça?</a></li>
+<li><a class="reference internal" href="#developpements">Développements</a><ul>
+<li><a class="reference internal" href="#utilisation-du-hasard-dans-le-jeu">Utilisation du hasard dans le jeu</a></li>
+<li><a class="reference internal" href="#dictionnaire-sans-prefixe">Dictionnaire sans préfixe</a></li>
+<li><a class="reference internal" href="#faut-il-toujours-recalculer-un-dictionnaire-pour-compresser-chaque-nouvelle-sequence-de-lettres">Faut-il toujours recalculer un dictionnaire pour compresser chaque nouvelle séquence de lettres ?</a></li>
+<li><a class="reference internal" href="#compresser-des-fichiers-binaires">Compresser des fichiers binaires ?</a></li>
+<li><a class="reference internal" href="#codages-de-huffman-de-de-shannon-fano">Codages de Huffman de de Shannon-Fano</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#autres-algorithmes-de-compression">Autres algorithmes de compression</a><ul>
+<li><a class="reference internal" href="#compression-sans-pertes">Compression sans pertes</a></li>
+<li><a class="reference internal" href="#compression-avec-pertes">Compression avec pertes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/main.js"></script>
+    <script src="../../_static/glossary.js"></script>
+    <script src="../../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="../../_static/blanks.js"></script>
+    <script src="../../_static/timeline.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../../_static/scripts/reactions.js"></script>
+    <script src="../../_static/scripts/progress.js"></script>
+    <script src="../../_static/scripts/dark.js"></script>
+    <script src="../../_static/scripts/frames.js"></script>
+    </body>
+</html>

@@ -9,7 +9,7 @@ Ce sont des programmes qui disent à votre ordinateur comment manipuler une imag
 ````{toctree}
 :maxdepth: 2
 :hidden:
-:numbered: 1
+:numbered: 2
 
 dessiner
 definir
@@ -40,11 +40,11 @@ annexe
 
 ## Objectifs
 
-{fa}`check, text-success mr-1` Découvrir le langage de programmation Python
+* Découvrir le langage de programmation Python
 
-{fa}`check, text-success mr-1` Dessiner, écrire et calculer en utilisant un ordinateur
+* Dessiner, écrire et calculer en utilisant un ordinateur
 
-{fa}`check, text-success mr-1` Comprendre la logique d'un programme
+* Comprendre la logique d'un programme
 
 ## Personnages clés
 
