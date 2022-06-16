@@ -1,5 +1,5 @@
 
-# 2. Additionneur
+# Additionneur
 
 On a découvert quelques {glo}`portelogique|portes logiques` ainsi que la possibilité de les connecter pour en faire des circuits logiques plus complexes. Ces portes logiques vont maintenant permettre de réaliser l'additionneur annoncé en début de chapitre précédent.
 
@@ -30,7 +30,7 @@ Et on constate que $S_1$ n'est autre qu'un **ET** logique de $A$ et $B$. On peut
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [50, 30], "id": 0, "val": 0, "name": "A"},
     {"pos": [50, 110], "id": 1, "val": 0, "name": "B"}
@@ -54,7 +54,7 @@ Le circuit fonctionne correctement. Il faut tester les quatre combinaisons qui a
 ```
 ````
 
-## 2.1. Additionneur complet
+## Additionneur complet
 
 Le circuit précédent est particulièrement intéressant, car il montre qu'il est possible d'utiliser des opérateurs logiques pour réaliser l'opération arithmétique de l'addition. L'additionneur est limité: en fait, on l'appelle un _demi-additionneur_. Il n'est capable d'additionner que deux bits — c'est très limité. En fait, il serait intéressant d'avoir un additionneur de _trois_ bits. Pourquoi ? À cause de la manière dont on pose les additions en colonnes.
 
@@ -105,14 +105,14 @@ En faisant pour l'instant abstraction des détails d'un additionneur complet, on
 :mode: static
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showDisconnectedPins": true},
   "components": [{"type": "adder", "pos": [60, 60], "in": [0, 1, 2], "out": [3, 4]}]
 }
 ```
 
 
-## 2.2. Chaînage d'additionneurs
+## Chaînage d'additionneurs
 
 La flexibilité de ce composant fait qu'on peut maintenant facilement l'utiliser pour construire un circuit qui additionne deux nombres $A$ et $B$ à 2 bits chacun (donc de $0 + 0 = 0$ à $3 + 3 = 6$).
 
@@ -124,7 +124,7 @@ Si $A$ est formé de deux bits $A_0$ et $A_1$ et que $B$ est formé des deux bit
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "opts": {"showDisconnectedPins": true},
   "in": [
     {"pos": [190, 40], "orient": "s", "id": 10, "ref": "a0", "name": "A0", "val": 0},
@@ -171,7 +171,7 @@ Les entrées sont déjà disposées. Glissez autant d'additionneurs et de bits d
 :showonly: out adder
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [90, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
     {"pos": [190, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
@@ -193,7 +193,7 @@ On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et 
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [90, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
     {"pos": [190, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
@@ -262,7 +262,7 @@ Réglez les entrées du circuit de manière à lui faire effectuer les additions
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [100, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
     {"pos": [200, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
@@ -340,7 +340,7 @@ Déterminez quel composant est défectueux dans ce circuit et comment il faudrai
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [100, 40], "orient": "s", "id": 3, "name": "A3", "val": 1},
     {"pos": [200, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
@@ -423,7 +423,7 @@ En s'aidant de la table de vérité d'un seul additionneur complet, créer un ci
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [60, 30], "id": 0, "name": "A", "val": 0},
     {"pos": [60, 90], "id": 1, "name": "B", "val": 0},

@@ -71,6 +71,9 @@ exclude_patterns = []
 #
 
 html_theme = 'furo'
+html_show_copyright = False
+html_show_sphinx = False
+html_show_copyright = False
 html_favicon = '../static/modulo-icon.ico'
 html_title = 'Apprendre'
 html_theme_options = {
@@ -142,7 +145,7 @@ html_css_files = ['styles/global.css', 'styles/reactions.css', 'styles/progress.
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['../static']
+html_static_path = ['./static']
 html_js_files = ['https://unpkg.com/@popperjs/core@2', 'scripts/reactions.js', 'scripts/progress.js', 'scripts/dark.js', 'scripts/frames.js']
 
 pygments_sytle = "sphinx"

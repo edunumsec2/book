@@ -1,3 +1,4 @@
+(prog2)=
 # Programmation II
 
 Dans la première partie, nous avons appris les bases de la programmation en Python. Nous avons vu comment une tortue peut dessiner, colorier, répéter, parcourir et faire plein d'autres choses.
@@ -7,7 +8,7 @@ Dans la deuxième partie, nous allons découvrir la programmation orientée obje
 ```{toctree}
 :maxdepth: 2
 :hidden:
-:numbered: 1
+:numbered: 2
 
 onkey
 lambda
@@ -34,11 +35,11 @@ idees
 
 ## Objectifs
 
-{fa}`check, text-success mr-1` Découvrir la programmation orientée objet
+* Découvrir la programmation orientée objet
 
-{fa}`check, text-success mr-1` Réagir à la souris et au clavier
+* Réagir à la souris et au clavier
 
-{fa}`check, text-success mr-1` Explorer les sujets avancés de Python
+* Explorer les sujets avancés de Python
 
 ## Personnages-clés
 

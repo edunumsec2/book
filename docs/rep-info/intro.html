@@ -1,0 +1,612 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="2. Les entiers" href="entiers.html" /><link rel="prev" title="Représentation de l’information" href="index.html" />
+
+    <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>1. Introduction - Apprendre</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #5933D1;
+  --color-brand-content: #5933D1;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Apprendre</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Apprendre</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Première année</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Représentation de l’information</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entiers.html">2. Les entiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caracteres.html">3. Les caractères</a></li>
+<li class="toctree-l2"><a class="reference internal" href="images.html">4. Les images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="son.html">5. Le son</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redondance.html">6. Redondance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusion.html">7. Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/dessiner.html">1. Dessiner - <code class="docutils literal notranslate"><span class="pre">forward()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/definir.html">2. Définir - <code class="docutils literal notranslate"><span class="pre">def</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/colorier.html">3. Colorier* - <code class="docutils literal notranslate"><span class="pre">color()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/repeter.html">4. Répéter - <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/cercler.html">5. Cercler - <code class="docutils literal notranslate"><span class="pre">circle()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/memoriser.html">6. Mémoriser - <code class="docutils literal notranslate"><span class="pre">a=100</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/parcourir.html">7. Parcourir - <code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/write.html">8. Typographier - <code class="docutils literal notranslate"><span class="pre">write()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/iterer.html">9. Itérer - <code class="docutils literal notranslate"><span class="pre">range()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/parametrer.html">10. Paramétrer - <code class="docutils literal notranslate"><span class="pre">f(x)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/randomiser.html">11. Randomiser - <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/questionner.html">12. Questionner - <code class="docutils literal notranslate"><span class="pre">input()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/decider.html">13. Décider - <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/ecrire.html">14. Ecrire - <code class="docutils literal notranslate"><span class="pre">str</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/attendre.html">15. Attendre - <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/renvoyer.html">16. Renvoyer - <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/grouper.html">17. Grouper - <code class="docutils literal notranslate"><span class="pre">list</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/trier.html">18. Trier - <code class="docutils literal notranslate"><span class="pre">sort()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/turtleart.html">19. TurtleArt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/projet.html">20. Projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog1/annexe.html">21. Annexes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../algo1/index.html">Algorithmique I</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/algorithmes.html">2. Les algorithmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/tri.html">3. Trie, cherche et trouve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/algo-progs.html">4. Des algorithmes aux programmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo1/conclusion.html">5. Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../archi/index.html">Architecture des ordinateurs</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../archi/intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/sys-log.html">2. Portes logiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/additionneur.html">3. Additionneur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/alu.html">4. ALU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/mem.html">5. * Mémoire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/archi-gen.html">6. Architecture générale et composants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/micro-pro.html">7. Le microprocesseur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archi/conclusion.html">8. Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html">1. Histoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#une-breve-histoire-de-linformatique">2. Une (brève) histoire de l’informatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/portraits.html">3. Galerie de portraits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/jeuxvideo.html">4. Brève histoire des jeux vidéo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/machines.html">5. Histoire des machines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/notions.html">6. Notions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/technologies.html">7. Technologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hist/entreprises.html">8. Entreprises</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../algo2/index.html">Algorithmique II</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/principes.html">Terminaison et complexité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recherche.html">Algorithmes de recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/tris.html">Algorithmes de tri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/heuristiques.html">5. Algorithmes heuristiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/recursivite.html">4. Récursivité [en option]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algo2/conclusion.html">6. Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../prog2/index.html">Programmation II</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/onkey.html">1. Déclencher - <code class="docutils literal notranslate"><span class="pre">onkey()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/lambda.html">2. Formaliser - <code class="docutils literal notranslate"><span class="pre">lambda</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/onclick.html">3. Cliquer - <code class="docutils literal notranslate"><span class="pre">onclick()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/ontimer.html">4. Interrompre - <code class="docutils literal notranslate"><span class="pre">ontimer()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/turtle.html">5. Cloner - <code class="docutils literal notranslate"><span class="pre">Turtle</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/class.html">6. Créer - <code class="docutils literal notranslate"><span class="pre">class</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/inherit.html">7. Hériter - <code class="docutils literal notranslate"><span class="pre">E(P)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/math.html">8. Tracer - <code class="docutils literal notranslate"><span class="pre">math</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/dict.html">9. Associer - <code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/compter.html">10. Compter - <code class="docutils literal notranslate"><span class="pre">bin</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/color.html">11. Nuancer - <code class="docutils literal notranslate"><span class="pre">color</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/set.html">12. Appartenir - <code class="docutils literal notranslate"><span class="pre">set</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/bool.html">13. Raisonner - <code class="docutils literal notranslate"><span class="pre">bool</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/bit.html">14. Manipuler - <code class="docutils literal notranslate"><span class="pre">&amp;</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/recursif.html">15. Revenir - <code class="docutils literal notranslate"><span class="pre">f(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/vector.html">16. Vecteurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/force.html">17. Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prog2/idees.html">18. Idées</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../projets/index.html">Projets</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projets/tic_tac_toe.html">1. Tic-tac-toe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/puissance4.html">2. Puissance 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/mines.html">3. Démineur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/snake.html">4. Snake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/game_of_life.html">5. Game of life</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/cartes.html">6. Poker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/tetris.html">7. Tetris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/art_absurde.html">8. Art absurde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/microbit/microbit.html">9. Micro:bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/crypto.html">10. Cryptographie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/idees.html">11. Idées</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resx/intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/adressage.html">2. Adressage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/tcp-ip.html">3. Paquets et protocoles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/routage.html">4. Routage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/web.html">5. Le World Wide Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/couches.html">6. Interopérabilité</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1><span class="section-number">1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Dans ce chapitre on s’intéresse à la manière dont un <span class="target" id="gl-ordinateur-0"></span><span class="glossary-ref" data-definition="PHA+TWFjaGluZSBjYXBhYmxlIGRlIHRyYWl0ZXIgYXV0b21hdGlxdWVtZW50IGRlIGzigJlpbmZvcm1hdGlvbjwvcD4K" data-entry-name="T3JkaW5hdGV1cg==" data-glossary-uri="../glossaire.html#gl-def-ordinateur-1" data-number="1">ordinateur</span> représente l’information afin de pouvoir la traiter automatiquement.</p>
+<div class="hint admonition">
+<p class="admonition-title">Le saviez-vous ?</p>
+<p>Le mot <strong>informatique</strong> est la concaténation de «information» et «automatique».</p>
+</div>
+<p>En informatique, l’information est un élément de connaissance (texte, image, son, …) susceptible d’être <span class="target" id="gl-numerisation-0"></span><span class="glossary-ref" data-definition="PHA+TGEgbnVtw6lyaXNhdGlvbiBlc3QgbGUgcHJvY8OpZMOpIHNlbG9uIGxlcXVlbCBvbiB0cmFuc2Zvcm1lIHVuZSBxdWFudGl0w6kgcsOpZWxsZSBlbiBzYSByZXByw6lzZW50YXRpb24gcGFyIGRlcyBiaXRzLjwvcD4K" data-entry-name="TnVtw6lyaXNhdGlvbg==" data-glossary-uri="../glossaire.html#gl-def-numerisation-1" data-number="1">numérisé</span>, <span class="target" id="gl-stockage-0"></span><span class="glossary-ref" data-definition="PHA+RW4gaW5mb3JtYXRpcXVlLCBvbiBlbnRlbmQgcGFyIHN0b2NrYWdlIHVuIHByb2Nlc3N1cyBncsOiY2UgYXVxdWVsIHVuIGNlcnRhaW4gbm9tYnJlIGRlIGJpdHMgZOKAmWluZm9ybWF0aW9uIHBldXZlbnQgw6p0cmUgY29uc2VydsOpcyBkYW5zIGxlIHRlbXBzLiBJbCBleGlzdGUgZGVzIHN0b2NrYWdlcyBkZSBjb3VydGUgZXQgZGUgbG9uZ3VlIGR1csOpZSwgYWluc2kgcXXigJl1bmUgbXVsdGlwbGljaXTDqSBkZSB0ZWNobmlxdWVzIHBlcm1ldHRhbnQgZGUgc3RvY2tlciBkZSBs4oCZaW5mb3JtYXRpb24gc291cyBmb3JtZSBkZSBiaXRzLjwvcD4K" data-entry-name="U3RvY2thZ2U=" data-glossary-uri="../glossaire.html#gl-def-stockage-1" data-number="1">stocké</span> et/ou <span class="target" id="gl-transmission-0"></span><span class="glossary-ref" data-definition="PHA+RW4gaW5mb3JtYXRpcXVlLCBsYSB0cmFuc21pc3Npb24gZGUgbOKAmWluZm9ybWF0aW9uIGVzdCBs4oCZb3DDqXJhdGlvbiBwYXIgbGFxdWVsbGUgZGVzIGJpdHMgc29udCBlbnZvecOpcyBk4oCZdW4gZW5kcm9pdCDDoCB1biBhdXRyZSBzdXIgdGVycmUsIG91IHBsdXMgc2ltcGxlbWVudCBk4oCZdW4gYXBwYXJlaWwgw6AgdW4gYXV0cmUsIG91IGTigJl1biBwcm9ncmFtbWUgw6AgdW4gYXV0cmUuPC9wPgo=" data-entry-name="VHJhbnNtaXNzaW9u" data-glossary-uri="../glossaire.html#gl-def-transmission-1" data-number="1">transmis</span> à l’aide d’un support et d’un mode de codification normalisé.</p>
+<p>Une des questions centrales de ce chapitre est d’identifier les caractéristiques de la transformation appliquée au réel donnant une représentation suffisamment précise pour permettre aux ordinateurs de la <span class="target" id="gl-traitement-0"></span><span class="glossary-ref" data-definition="PHA+TGUgdHJhaXRlbWVudCBkZSBs4oCZaW5mb3JtYXRpb24gcmFzc2VtYmxlIHRvdXRlcyBsZXMgb3DDqXJhdGlvbnMgcXVlIGzigJlvbiBwZXV0IGZhaXJlIHN1YmlyIMOgIHVuZSBpbmZvcm1hdGlvbiBwb3VyIGxhIHN0b2NrZXIsIHRyYW5zZm9ybWVyLCBjb21wcmVzc2VyLCBkdXBsaXF1ZXIsIGV0IGFpbnNpIGRlIHN1aXRlLjwvcD4K" data-entry-name="VHJhaXRlbWVudA==" data-glossary-uri="../glossaire.html#gl-def-traitement-1" data-number="1">traiter</span> de manière fiable.</p>
+<p>Mais avant de découvrir le code choisi pour représenter l’information à l’intérieur d’un ordinateur, passons en revue un certain nombre d’alphabets et de systèmes de représentation de l’information qui ont été utilisés au cours de l’histoire.</p>
+<section id="alphabets-et-systemes-de-communication">
+<h2>Alphabets et systèmes de communication<a class="headerlink" href="#alphabets-et-systemes-de-communication" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="alphabets-anciens-et-traditionnels">
+<h3>Alphabets anciens et traditionnels<a class="headerlink" href="#alphabets-anciens-et-traditionnels" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Depuis qu’elle existe, l’espèce humaine a créé de nombreux alphabets, ainsi que de nombreux <span class="target" id="gl-sysco-0"></span><span class="glossary-ref" data-definition="PHA+VW4gc3lzdMOobWUgZGUgY29tbXVuaWNhdGlvbiBlc3QgdW4gZW5zZW1ibGUgZOKAmW91dGlscywgZGUgcHJvdG9jb2xlcywgZGUgY29udmVudGlvbnMsIHBlcm1ldHRhbnQgw6AgZGV1eCBvdSBwbHVzaWV1cnMgw6p0cmVzIGh1bWFpbnMgb3UgbWFjaGluZXMgZGUgY29tbXVuaXF1ZXIgZW50cmUgZXV4L2VsbGVzLjwvcD4K" data-entry-name="U3lzdMOobWUgZGUgY29tbXVuaWNhdGlvbg==" data-glossary-uri="../glossaire.html#gl-def-sysco-1" data-number="1">systèmes de communication</span>. Depuis les <a class="reference external" href="https://fr.wikipedia.org/wiki/Sum%C3%A9rien">sumériens</a> qui utilisaient des <span class="target" id="gl-picto-0"></span><span class="glossary-ref" data-definition="PHA+VW7CoHBpY3RvZ3JhbW1lLCDDqWdhbGVtZW50IGFwcGVsw6nCoHBpY3RvZ3JhcGhlLCBlc3QgdW5lwqByZXByw6lzZW50YXRpb24gZ3JhcGhpcXVlwqBzY2jDqW1hdGlxdWUsIHVuIGRlc3NpbiBmaWd1cmF0aWYgc3R5bGlzw6kgYXlhbnQgZm9uY3Rpb24gZGXCoHNpZ25lLjwvcD4K" data-entry-name="UGljdG9ncmFtbWVz" data-glossary-uri="../glossaire.html#gl-def-picto-1" data-number="1">pictogrammes</span> et <a class="reference external" href="https://fr.wikipedia.org/wiki/Cun%C3%A9iforme">l’écriture cunéiforme</a>, en passant par les égyptiens et leurs <a class="reference external" href="https://fr.wikipedia.org/wiki/%C3%89criture_hi%C3%A9roglyphique_%C3%A9gyptienne">hiéroglyphes</a>, les chinois et leurs <a class="reference external" href="https://fr.wikipedia.org/wiki/Caract%C3%A8res_chinois">idéogrammes</a> pour arriver aux symboles de nos alphabets actuels, l’espèce humaine n’a eu de cesse de mettre au point des systèmes pour représenter l’information et la <span class="target" id="gl-transmission-1"></span><span class="glossary-ref" data-definition="PHA+RW4gaW5mb3JtYXRpcXVlLCBsYSB0cmFuc21pc3Npb24gZGUgbOKAmWluZm9ybWF0aW9uIGVzdCBs4oCZb3DDqXJhdGlvbiBwYXIgbGFxdWVsbGUgZGVzIGJpdHMgc29udCBlbnZvecOpcyBk4oCZdW4gZW5kcm9pdCDDoCB1biBhdXRyZSBzdXIgdGVycmUsIG91IHBsdXMgc2ltcGxlbWVudCBk4oCZdW4gYXBwYXJlaWwgw6AgdW4gYXV0cmUsIG91IGTigJl1biBwcm9ncmFtbWUgw6AgdW4gYXV0cmUuPC9wPgo=" data-entry-name="VHJhbnNtaXNzaW9u" data-glossary-uri="../glossaire.html#gl-def-transmission-1" data-number="1">transmettre</span>.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="9cfed27c-5d3d-4eac-90e3-9b4e7d5889f4" name="fff8fe77-b68e-4dc5-9775-384e3448d5bc" type="radio"/>
+<label class="tabbed-label" for="9cfed27c-5d3d-4eac-90e3-9b4e7d5889f4">
+Sumérien</label><div class="tabbed-content docutils">
+<a class="reference internal image-reference" href="../_images/cuneiform.jpg"><img alt="../_images/cuneiform.jpg" src="../_images/cuneiform.jpg" style="width: 500px; height: 350px;"/></a>
+</div>
+<input id="8446cc88-ec96-4ab9-83b8-2d92e2e59031" name="fff8fe77-b68e-4dc5-9775-384e3448d5bc" type="radio"/>
+<label class="tabbed-label" for="8446cc88-ec96-4ab9-83b8-2d92e2e59031">
+Égyptien</label><div class="tabbed-content docutils">
+<a class="reference internal image-reference" href="../_images/hieroglyphs.jpg"><img alt="../_images/hieroglyphs.jpg" src="../_images/hieroglyphs.jpg" style="width: 500px; height: 350px;"/></a>
+</div>
+<input id="32e02638-334b-497c-8269-a422bb832489" name="fff8fe77-b68e-4dc5-9775-384e3448d5bc" type="radio"/>
+<label class="tabbed-label" for="32e02638-334b-497c-8269-a422bb832489">
+Chinois</label><div class="tabbed-content docutils">
+<a class="reference internal image-reference" href="../_images/chinois.gif"><img alt="../_images/chinois.gif" src="../_images/chinois.gif" style="width: 500px; height: 350px;"/></a>
+</div>
+<input id="73837323-22fb-44e4-bad1-29d54a82d90b" name="fff8fe77-b68e-4dc5-9775-384e3448d5bc" type="radio"/>
+<label class="tabbed-label" for="73837323-22fb-44e4-bad1-29d54a82d90b">
+Synoptique</label><div class="tabbed-content docutils">
+<a class="reference internal image-reference" href="../_images/evolution.jpg"><img alt="../_images/evolution.jpg" src="../_images/evolution.jpg" style="width: 500px; height: 350px;"/></a>
+</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Différentes représentations de la même information<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ul class="simple">
+<li><p class="card-text">Nombres en chiffres classiques, romains, lettres</p></li>
+<li><p class="card-text">Mot en différentes langues, morse, idéogrammes</p></li>
+<li><p class="card-text">Symboles danger, stop, paix</p></li>
+</ul>
+</div>
+</details><p>On trouve des exemples célèbres et bien documentés de <span class="target" id="gl-sysco-1"></span><span class="glossary-ref" data-definition="PHA+VW4gc3lzdMOobWUgZGUgY29tbXVuaWNhdGlvbiBlc3QgdW4gZW5zZW1ibGUgZOKAmW91dGlscywgZGUgcHJvdG9jb2xlcywgZGUgY29udmVudGlvbnMsIHBlcm1ldHRhbnQgw6AgZGV1eCBvdSBwbHVzaWV1cnMgw6p0cmVzIGh1bWFpbnMgb3UgbWFjaGluZXMgZGUgY29tbXVuaXF1ZXIgZW50cmUgZXV4L2VsbGVzLjwvcD4K" data-entry-name="U3lzdMOobWUgZGUgY29tbXVuaWNhdGlvbg==" data-glossary-uri="../glossaire.html#gl-def-sysco-1" data-number="1">systèmes de communication</span> depuis l’Antiquité grecque.</p>
+</section>
+<section id="le-carre-de-polybe">
+<h3>Le carré de Polybe<a class="headerlink" href="#le-carre-de-polybe" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Utilisé en Grèce Antique pour transmettre des messages entre cités voisines, ce système utilisait des torches enflammées en guise de signaux.</p>
+<p>Cinq torches «à gauche», cinq torches «à droite», étaient séparées par un espace
+suffisamment grand pour être identifiables à longue distance. Une torche pouvait
+être soit allumée, soit éteinte. Le nombre de torches allumées à gauche, de 1 à
+5, représentait la ligne d’un tableau de décodage, le nombre de torches allumées
+à droite représentait la colonne de ce même tableau.</p>
+<figure class="align-left" id="fig-polybe">
+<a class="reference internal image-reference" href="../_images/polybe.png"><img alt="../_images/polybe.png" src="../_images/polybe.png" style="width: 500px; height: 400px;"/></a>
+<figcaption>
+<p><span class="caption-text">Le codage de la lettre «s» dans le carré de Polybe est quatre torches à gauche, trois torches à droite.</span><a class="headerlink" href="#fig-polybe" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+<div class="hint admonition">
+<p class="admonition-title">Anecdote</p>
+<p>Dans l’exemple ci-dessus, on utilise les lettres de l’alphabet, mais il est plus probable qu’à l’époque les cités voisines utilisaient des expressions toutes faites dans chacune des cases, comme «l’ennemi est à nos portes» ou «envoyez-nous de l’aide».</p>
+</div>
+</section>
+<section id="le-telegraphe-de-chappe">
+<h3>Le télégraphe de Chappe<a class="headerlink" href="#le-telegraphe-de-chappe" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Grâce à l’invention du <a class="reference external" href="https://fr.wikipedia.org/wiki/T%C3%A9lescope">télescope</a> au XVII<sup>e</sup> siècle, les distances avec lesquelles les villes pouvaient communiquer entre elles ont largement augmenté. L’information a commencé à circuler à une vitesse étonnante. Des messages pouvaient être transmis sur une longue distance par l’intermédiaire de relais espacés d’une dizaine de kilomètres et situés sur des hauteurs.</p>
+<p><a class="reference external" href="https://fr.wikipedia.org/wiki/Claude_Chappe">Claude Chappe</a>, inventeur français, développe en 1794 un <span class="target" id="gl-telegraphe-0"></span><span class="glossary-ref" data-definition="PHA+TGXCoHTDqWzDqWdyYXBoZcKgKGR1IGdyZWMgYW5jaWVuIM+EzrfOu861wqB0w6psw6ksIGxvaW4gZXQgzrPPgc6xz4bOtc65zr3CoGdyYXBoZWluLCDDqWNyaXJlKSBlc3QgdW4gc3lzdMOobWUgZGVzdGluw6kgw6AgdHJhbnNtZXR0cmUgZGVzwqBtZXNzYWdlcywgYXBwZWzDqXPCoHTDqWzDqWdyYW1tZXMsIGQndW4gcG9pbnQgw6AgdW4gYXV0cmUgc3VyIGRlIGdyYW5kZXMgZGlzdGFuY2VzLCDDoCBsJ2FpZGUgZOKAmXVuIGNvZGXCoHBvdXIgdW5lIHRyYW5zbWlzc2lvbiByYXBpZGUgZXQgZmlhYmxlLjwvcD4K" data-entry-name="VMOpbMOpZ3JhcGhl" data-glossary-uri="../glossaire.html#gl-def-telegraphe-1" data-number="1">télégraphe</span> capable de relier des villes entre elles sur plusieurs dizaines de kilomètres grâce à un système de bras mobiles, qui ressemblent aux signaux que pourrait faire un être humain sur le tarmac d’un aéroport.</p>
+<figure class="align-default" id="fig-chappe">
+<a class="reference internal image-reference" href="../_images/chappe.jpeg"><img alt="../_images/chappe.jpeg" src="../_images/chappe.jpeg" style="width: 500px; height: 400px;"/></a>
+<figcaption>
+<p><span class="caption-text">Le télégraphe de Chappe émet des signaux ressemblant aux bras d’un être humain.</span><a class="headerlink" href="#fig-chappe" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+<div class="hint admonition">
+<p class="admonition-title">Anecdote</p>
+<p><a class="reference external" href="https://fr.wikipedia.org/wiki/Piratage_du_t%C3%A9l%C3%A9graphe_Chappe">Le piratage du télégraphe Chappe</a> est un détournement du réseau de télégraphie optique français entrepris par deux hommes d’affaires bordelais, Louis et François Blanc, entre 1834 et 1836, afin de connaître avant tout le monde le prix de certaines actions à la Bourse de Paris.</p>
+<p>Le piratage a été rendu possible par la corruption d’un agent télégraphique de Tours, qui ajoutait discrètement le prix actuel des actions aux messages envoyés par l’État.</p>
+</div>
+</section>
+<section id="le-morse">
+<h3>Le Morse<a class="headerlink" href="#le-morse" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Grâce à la découverte de l’électricité au début du XIX<sup>e</sup> siècle, et les améliorations techniques faites pour la capturer et la transmettre, on a pu utiliser le réseau électrique pour envoyer des messages. En 1832, nait le <a class="reference external" href="https://fr.wikipedia.org/wiki/Code_Morse_international">code Morse</a>, qui s’impose rapidement comme un standard de communication.</p>
+<p>Bien sûr, le Morse peut être utilisé aussi avec des signaux lumineux, ou sonores, mais la plupart du temps il est utilisé sur les lignes électriques qui se développent à l’époque.</p>
+<p><a class="reference external" href="https://morsedecoder.com/">Vous trouverez ici</a> un traducteur du langage naturel vers le Morse.</p>
+<figure class="align-left" id="fig-morse">
+<a class="reference internal image-reference" href="../_images/morse.png"><img alt="../_images/morse.png" src="../_images/morse.png" style="width: 450px; height: 550px;"/></a>
+<figcaption>
+<p><span class="caption-text">Le code Morse est le système de représentation de l’information qui se rapproche le plus du langage binaire de l’informatique moderne.</span><a class="headerlink" href="#fig-morse" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+<div class="note admonition">
+<p class="admonition-title">Micro-activité</p>
+<p>Amusez-vous avec votre assistant vocal en lui demandant par exemple : «Salut Siri. Quel est le code Morse pour <em>j’ai envie de dormir</em> ?».</p>
+</div>
+<p>Si vous observez le <a class="reference external" href="https://fr.wikipedia.org/wiki/Code_Morse_international">code Morse</a>, vous remarquerez que les signaux utilisés pour représenter les lettres ne suivent pas simplement l’ordre de l’alphabet, puisqu’il est plus économique de coder les lettres les plus fréquentes avec les codes les plus courts.</p>
+<div class="hint admonition">
+<p class="admonition-title">Le saviez-vous ? </p>
+<p>À l’époque où les transmissions télégraphiques en code Morse sont payées à l’unité d’information, donc la lettre, des codex spécifiques sont développés par les utilisateurs pour utiliser le moins de caractères possibles. C’est exactement la même situation qui s’est produite avec l’arrivée des <a class="reference external" href="https://fr.wikipedia.org/wiki/Short_Message_Service">SMS</a> dans les années 1990, où les utilisateurs payaient au caractère. Aujourd’hui, même s’il est rare de payer à l’unité d’information, ce genre de raccourcis existent encore, mais surtout pour un avantage de vitesse.</p>
+<a class="reference internal image-reference" href="../_images/morsecodeshort.png"><img alt="../_images/morsecodeshort.png" src="../_images/morsecodeshort.png" style="width: 500px; height: 500px;"/></a>
+<p>Le désavantage de ces codex d’abréviations est leur faible degré de standardisation. Comment savoir quel codex est utilisé ? Et surtout : comment faire pour que tout le monde s’accorde sur le codex ?</p>
+<p>La réponse à cette question est l’apport le plus essentiel de l’introduction du code binaire, et des standards de représentation de l’information qui l’ont suivi : un langage pour les contrôler tous.</p>
+</div>
+<figure class="align-left" id="fig-distribution">
+<a class="reference internal image-reference" href="../_images/letterdistribution.png"><img alt="../_images/letterdistribution.png" src="../_images/letterdistribution.png" style="width: 450px; height: 400px;"/></a>
+<figcaption>
+<p><span class="caption-text">Ceci est une représentation de la fréquence moyenne de distribution des lettres dans la langue anglaise.</span><a class="headerlink" href="#fig-distribution" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="le-binaire">
+<h3>Le binaire<a class="headerlink" href="#le-binaire" title="Lien permanent vers ce titre">¶</a></h3>
+<p>À partir du moment où le <a class="reference external" href="https://fr.wikipedia.org/wiki/Code_Morse_international">Morse</a> a été inventé comme système de <span class="target" id="gl-codage-0"></span><span class="glossary-ref" data-definition="PHA+TGUgY29kYWdlIGTigJl1bmUgaW5mb3JtYXRpb24gZXN0IGxlIHByb2PDqWTDqSBwYXIgbGVxdWVsIGNldHRlIGluZm9ybWF0aW9uIGVzdCB0cmFuc2Zvcm3DqWUgcG91ciDDqnRyZSByZXByw6lzZW50w6llIHNvdXMgbGEgZm9ybWUgZOKAmXVuIGNvZGUgY2hvaXNpLjwvcD4K" data-entry-name="Q29kYWdl" data-glossary-uri="../glossaire.html#gl-def-codage-1" data-number="1">codage</span> et de <span class="target" id="gl-transmission-2"></span><span class="glossary-ref" data-definition="PHA+RW4gaW5mb3JtYXRpcXVlLCBsYSB0cmFuc21pc3Npb24gZGUgbOKAmWluZm9ybWF0aW9uIGVzdCBs4oCZb3DDqXJhdGlvbiBwYXIgbGFxdWVsbGUgZGVzIGJpdHMgc29udCBlbnZvecOpcyBk4oCZdW4gZW5kcm9pdCDDoCB1biBhdXRyZSBzdXIgdGVycmUsIG91IHBsdXMgc2ltcGxlbWVudCBk4oCZdW4gYXBwYXJlaWwgw6AgdW4gYXV0cmUsIG91IGTigJl1biBwcm9ncmFtbWUgw6AgdW4gYXV0cmUuPC9wPgo=" data-entry-name="VHJhbnNtaXNzaW9u" data-glossary-uri="../glossaire.html#gl-def-transmission-1" data-number="1">transmission</span> de l’information par l’électricité, il ne manquait plus que quelques éléments pour commencer à construire les <span class="target" id="gl-ordinateur-1"></span><span class="glossary-ref" data-definition="PHA+TWFjaGluZSBjYXBhYmxlIGRlIHRyYWl0ZXIgYXV0b21hdGlxdWVtZW50IGRlIGzigJlpbmZvcm1hdGlvbjwvcD4K" data-entry-name="T3JkaW5hdGV1cg==" data-glossary-uri="../glossaire.html#gl-def-ordinateur-1" data-number="1">ordinateurs</span>.</p>
+<p>Une pièce technologique, qui permettrait de <span class="target" id="gl-transmission-3"></span><span class="glossary-ref" data-definition="PHA+RW4gaW5mb3JtYXRpcXVlLCBsYSB0cmFuc21pc3Npb24gZGUgbOKAmWluZm9ybWF0aW9uIGVzdCBs4oCZb3DDqXJhdGlvbiBwYXIgbGFxdWVsbGUgZGVzIGJpdHMgc29udCBlbnZvecOpcyBk4oCZdW4gZW5kcm9pdCDDoCB1biBhdXRyZSBzdXIgdGVycmUsIG91IHBsdXMgc2ltcGxlbWVudCBk4oCZdW4gYXBwYXJlaWwgw6AgdW4gYXV0cmUsIG91IGTigJl1biBwcm9ncmFtbWUgw6AgdW4gYXV0cmUuPC9wPgo=" data-entry-name="VHJhbnNtaXNzaW9u" data-glossary-uri="../glossaire.html#gl-def-transmission-1" data-number="1">transmettre</span> pour ainsi dire cette information : le <span class="target" id="gl-transistor-0"></span><span class="glossary-ref" data-definition="PHA+TGXCoHRyYW5zaXN0b3LCoGVzdCB1bsKgY29tcG9zYW50wqBxdWkgZXN0IHV0aWxpc8OpIGRhbnMgbGEgcGx1cGFydCBkZXPCoGNpcmN1aXRzIMOpbGVjdHJvbmlxdWVzwqAoY2lyY3VpdCBsb2dpcXVlLMKgYW1wbGlmaWNhdGV1ciwgc3RhYmlsaXNhdGV1ciBkZcKgdGVuc2lvbizCoG1vZHVsYXRpb27CoGRlwqBzaWduYWwswqBldGMuKS48L3A+Cg==" data-entry-name="VHJhbnNpc3Rvcg==" data-glossary-uri="../glossaire.html#gl-def-transistor-1" data-number="1">transistor</span> (voir <span class="xref std std-ref">architecture des ordinateurs</span>).</p>
+<p>Un <span class="target" id="gl-codage-1"></span><span class="glossary-ref" data-definition="PHA+TGUgY29kYWdlIGTigJl1bmUgaW5mb3JtYXRpb24gZXN0IGxlIHByb2PDqWTDqSBwYXIgbGVxdWVsIGNldHRlIGluZm9ybWF0aW9uIGVzdCB0cmFuc2Zvcm3DqWUgcG91ciDDqnRyZSByZXByw6lzZW50w6llIHNvdXMgbGEgZm9ybWUgZOKAmXVuIGNvZGUgY2hvaXNpLjwvcD4K" data-entry-name="Q29kYWdl" data-glossary-uri="../glossaire.html#gl-def-codage-1" data-number="1">code</span> plus élaboré que le Morse pour pouvoir représenter tous les types d’informations possibles à partir d’une alternative entre deux états : courant ou pas courant ; allumé ou éteint ; vrai ou faux ; 1 ou 0.</p>
+<p>Ce <span class="target" id="gl-codage-2"></span><span class="glossary-ref" data-definition="PHA+TGUgY29kYWdlIGTigJl1bmUgaW5mb3JtYXRpb24gZXN0IGxlIHByb2PDqWTDqSBwYXIgbGVxdWVsIGNldHRlIGluZm9ybWF0aW9uIGVzdCB0cmFuc2Zvcm3DqWUgcG91ciDDqnRyZSByZXByw6lzZW50w6llIHNvdXMgbGEgZm9ybWUgZOKAmXVuIGNvZGUgY2hvaXNpLjwvcD4K" data-entry-name="Q29kYWdl" data-glossary-uri="../glossaire.html#gl-def-codage-1" data-number="1">code</span> est le <span class="target" id="gl-codebinaire-0"></span><span class="glossary-ref" data-definition="PHA+VW4gY29kZSBiaW5haXJlIHJlcHLDqXNlbnRlIHVuIHRleHRlLCBkZXMgaW5zdHJ1Y3Rpb25zIGRlIHByb2Nlc3NldXIgb3UgdG91dGUgYXV0cmUgZG9ubsOpZSB1dGlsaXNhbnQgdW4gc3lzdMOobWUgw6AgZGV1eCBzeW1ib2xlcy4gTGVzICZxdW90OzAmcXVvdDsgZXQgJnF1b3Q7MSZxdW90OyBzb250IGxlIHBsdXMgc291dmVudCB1dGlsaXPDqXMgZGFucyBsZSBzeXN0w6htZSBkZSBudW3DqXJhdGlvbiBiaW5haXJlLjwvcD4K" data-entry-name="Q29kZSBiaW5haXJl" data-glossary-uri="../glossaire.html#gl-def-codebinaire-1" data-number="1">code binaire</span>. Il permet, en utilisant uniquement des 0 et des 1, de représenter n’importe quel type d’information : des chiffres, du texte, des images, du son, des vidéos, etc.</p>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question 1</p>
+<div class="question-content docutils">
+<p>Pourquoi la lettre «e», en Morse, est-elle représentée par un seul point ?</p>
+<ul class="simple">
+<li><p><label class="answer correct"><input type="checkbox"/>Parce que c’est la lettre la plus utilisée en anglais.</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Par hasard.</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Parce que c’est la lettre la plus rare en anglais.</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Parce que c’était la lettre préférée de l’inventeur du Morse.</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
+</form></div><div class="question"><form><div class="admonition">
+<p class="admonition-title">Question 2</p>
+<div class="question-content docutils">
+<p>Que signifie informatique ?</p>
+<ul class="simple">
+<li><p><label class="answer incorrect"><input type="checkbox"/>Information + quantique.</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Information + technique.</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>Information + automatique.</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Information + pratique</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
+</form></div></section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="entiers.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title"><span class="section-number">2. </span>Les entiers</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="index.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Représentation de l’information</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../_sources/rep-info/intro.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">1. Introduction</a><ul>
+<li><a class="reference internal" href="#alphabets-et-systemes-de-communication">Alphabets et systèmes de communication</a><ul>
+<li><a class="reference internal" href="#alphabets-anciens-et-traditionnels">Alphabets anciens et traditionnels</a></li>
+<li><a class="reference internal" href="#le-carre-de-polybe">Le carré de Polybe</a></li>
+<li><a class="reference internal" href="#le-telegraphe-de-chappe">Le télégraphe de Chappe</a></li>
+<li><a class="reference internal" href="#le-morse">Le Morse</a></li>
+<li><a class="reference internal" href="#le-binaire">Le binaire</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/glossary.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/timeline.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>

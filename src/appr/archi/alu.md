@@ -1,5 +1,4 @@
-
-# 3. ALU
+# ALU
 
 Dans cette section, nous continuons notre exploration de comment les portes logiques, selon leur assemblage, fournissent les fonctionnalités de base des ordinateurs. En particulier, nous nous intéressons à comment faire effectuer plusieurs opérations à un ordinateur via ce qui s'appelle une **unité arithmétique et logique**, ou simplement une ALU.
 
@@ -10,43 +9,45 @@ Les ordinateurs ont la propriété d'être programmables : ils savent effectue
 Le composant qui nous permettra de sélectionner une opération ou une autre s'appelle « unité arithmétique et logique », communément appelé simplement « ALU » (de l'anglais _arithmetic logic unit_). Avant d'inspecter une ALU, nous avons besoin de comprendre comment on peut sélectionner une opération ou une autre avec des circuits logiques.
 
 
-## 3.1. Sélection de l'opération
+## Sélection de l'opération
 
 Comment créer un circuit qui permet de sélectionner une opération à faire, et comment indiquer l'opération à sélectionner ? Essayons d'abord de créer un circuit à deux entrées qui va calculer soit le **OU** soit le **ET** de ces deux entrées.
 
-Nous savons faire un circuit simple qui calcule le **OU** de deux entrées $X$ et $Y$, avec une seule porte logique :
+Nous savons faire un circuit simple qui calcule le **OU** de deux entrées $X$ et $Y$, avec {logicref}`two_signal_tryout1.or|une seule porte logique` :
 
 ```{logic}
 :height: 140
 :mode: tryout
+:ref: two_signal_tryout1
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
     {"pos": [50, 110], "id": 1, "name": "Y", "val": 0}
   ],
-  "gates": [{"type": "OR", "pos": [180, 40], "in": [6, 7], "out": 8}],
+  "gates": [{"type": "OR", "pos": [180, 40], "ref": "or", "in": [6, 7], "out": 8}],
   "out": [{"pos": [250, 40], "id": 2, "name": "X OU Y"}],
   "wires": [[0, 6], [1, 7], [8, 2]]
 }
 ```
 
-Nous pouvons sans autre y ajouter une porte **ET** pour calculer une autre sortie en parallèle, à partir des mêmes entrées $X$ et $Y$ :
+Nous pouvons sans autre y ajouter {logicref}`two_signal_tryout2.and|une porte **ET**` pour calculer une autre sortie en parallèle, à partir des {logicref}`two_signal_tryout2.{x,y}|mêmes entrées` $X$ et $Y$ :
 
 ```{logic}
 :height: 140
 :mode: tryout
+:ref: two_signal_tryout2
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
-    {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
-    {"pos": [50, 110], "id": 1, "name": "Y", "val": 0}
+    {"pos": [50, 30], "id": 0, "name": "X", "ref": "x", "val": 0},
+    {"pos": [50, 110], "id": 1, "name": "Y", "ref": "y", "val": 0}
   ],
   "gates": [
     {"type": "OR", "pos": [180, 40], "in": [6, 7], "out": 8},
-    {"type": "AND", "pos": [180, 100], "in": [3, 4], "out": 5}
+    {"type": "AND", "pos": [180, 100], "ref": "and", "in": [3, 4], "out": 5}
   ],
   "out": [
     {"pos": [250, 40], "id": 2, "name": "X OU Y"},
@@ -56,101 +57,122 @@ Nous pouvons sans autre y ajouter une porte **ET** pour calculer une autre sorti
 }
 ```
 
-L'idée est maintenant de combiner ces sorties intermédiaires pour n'en avoir plus qu'une, qui sera soit le **OU**, soit le **ET**. Mais comment faire pour indiquer si l'on désire le **OU** ou le **ET** ? Nous pouvons rajouter une entrée pour choisir cette opération. Appelons-la $Op$, pour « opération ». Choisissons une convention : lorsque $Op$ vaut 0, nous souhaitons effectuer l'opération **OU**, et lorsque $Op$ vaut 1, nous souhaitons effectuer l'opération **ET**. Conceptuellement, il nous faut donc compléter ce schéma pour calculer notre sortie finale $Z$ en fonction de $Op$ :
+L'idée est maintenant de combiner ces sorties intermédiaires pour n'en avoir plus qu'une, qui sera soit le **OU**, soit le **ET**. Mais comment faire pour indiquer si l'on désire le **OU** ou le **ET** ? Nous pouvons rajouter une entrée pour choisir cette opération. Appelons-la $Op$, pour « opération ». Choisissons une convention : lorsque $Op$ vaut 0, nous souhaitons effectuer l'opération **OU**, et lorsque $Op$ vaut 1, nous souhaitons effectuer l'opération **ET**.
+
+Ce que nous cherchons à créer est conceptuellement ce que fait {logicref}`mux_tryout.mux|ce composant tout prêt` ci-dessous. Il s’appelle _multiplexeur_ et connecte à {logicref}`mux_tryout.muxout|sa sortie` soit {logicref}`mux_tryout.muxin1|le signal du haut`, soit {logicref}`mux_tryout.muxin2|le signal du bas`, en fonction de la valeur de $Op$. Essayez de changer $Op$ :
 
 ```{logic}
-:height: 300
+:height: 240
 :mode: tryout
+:ref: mux_tryout
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showDisconnectedPins": true},
   "in": [
-    {"pos": [50, 170], "id": 0, "name": "X", "val": 0},
-    {"pos": [50, 250], "id": 1, "name": "Y", "val": 0},
-    {"pos": [260, 50], "orient": "s", "id": 2, "name": "Op", "val": 0}
+    {"pos": [50, 110], "id": 0, "name": "X", "val": 0},
+    {"pos": [50, 190], "id": 1, "name": "Y", "val": 0},
+    {"pos": [290, 50], "orient": "s", "id": 2, "name": "Op", "val": 0}
   ],
-  "out": [
-    {"pos": [440, 200], "id": 20, "name": "Z"},
-    {"pos": [250, 240], "id": 21, "name": "X ET Y"},
-    {"pos": [250, 180], "id": 23, "name": "X OU Y"}
-  ],
+  "out": [{"pos": [390, 150], "id": 20, "name": "Z"}],
   "gates": [
-    {"type": "AND", "pos": [180, 240], "in": [3, 4], "out": 5},
-    {"type": "OR", "pos": [180, 180], "in": [6, 7], "out": 8}
+    {"type": "AND", "pos": [180, 180], "in": [3, 4], "out": 5},
+    {"type": "OR", "pos": [180, 120], "in": [6, 7], "out": 8}
   ],
-  "wires": [[0, 3], [1, 4], [0, 6], [1, 7], [5, 21], [8, 23]]
+  "components": [{"type": "mux-2to1", "pos": [290, 150], "ref": "mux", "in": [9, 10, 11], "out": 12}],
+  "wires": [[0, 3], [1, 4], [0, 6], [1, 7], [12, 20, {"ref": "muxout"}], [8, 9, {"ref": "muxin1"}], [5, 10, {"ref": "muxin2"}], [2, 11]]
 }
 ```
 
-Pour la suite, nous avons besoin de nous rappeler ceci. Lorsqu'un signal, disons $A$, passe à travers une porte logique **ET** dont la seconde entrée vaut 0, la sortie de cette porte-là sera toujours identique à 0. Cela nous permet ainsi d'annuler le signal $A$. De manière similaire, si cette seconde entrée vaut 1, le signal $A$ passera tel quel. On peut ainsi voir la porte **ET** comme un annulateur de signal. Vérifiez ceci ici :
-
-<!-- TODO the aux inputs constant once we can in the simulator and remove their names -->
-
-```{logic}
-:height: 190
-:mode: tryout
-
-{
-  "v": 1,
-  "in": [
-    {"pos": [50, 40], "id": 0, "name": "A", "val": 0},
-    {"pos": [50, 130], "id": 1, "name": "A'", "val": 0},
-    {"pos": [130, 150], "id": 2, "name": "1", "val": 1},
-    {"pos": [130, 60], "id": 7, "name": "0", "val": 0}
-  ],
-  "out": [
-    {"pos": [270, 50], "id": 8, "name": "A annulé"},
-    {"pos": [270, 140], "id": 12, "name": "A' tel quel"}
-  ],
-  "gates": [
-    {"type": "AND", "pos": [200, 50], "in": [4, 5], "out": 6},
-    {"type": "AND", "pos": [200, 140], "in": [9, 10], "out": 11}
-  ],
-  "wires": [[0, 4], [7, 5], [6, 8], [1, 9], [2, 10], [11, 12]]
-}
-```
-
-Ensuite, lorsqu'un signal, disons $B$ cette fois, passe à travers une porte logique **OU** dont la seconde entrée est annulée et vaut 0, la sortie de cette porte sera toujours identique à $B$. Vérifiez ceci ici :
-
-```{logic}
-:height: 80
-:mode: tryout
-
-{
-  "v": 1,
-  "in": [
-    {"pos": [50, 30], "id": 1, "name": "B", "val": 0},
-    {"pos": [130, 50], "id": 2, "name": "0", "val": 0}
-  ],
-  "out": [{"pos": [270, 40], "id": 12, "name": "B tel quel"}],
-  "gates": [{"type": "OR", "pos": [200, 40], "in": [9, 10], "out": 11}],
-  "wires": [[1, 9], [2, 10], [11, 12]]
-}
-```
-
-La porte **OU** peut ainsi servir à combiner deux signaux, pour autant que l'un soit annulé.
-
-Avec tout ceci, on peut ainsi construire un sélecteur de signal. Supposons qu'on ait les deux signaux $A$ et $B$ : nous pouvons construire un circuit qui combine soit $A$ tel quel et $B$ annulé, soit $A$ annulé et $B$ tel quel. Cela nous aidera pour notre projet initial ! Il faut cependant s'assurer que $A$ soit chaque fois annulé quand $B$ passe tel quel, et inversement. Ceci peut se faire en réutilisant l'idée d'une entrée de contrôle $Op$ ainsi. Nous avons ainsi deux cas :
-
- * Lorsque $Op = 0$, on va sélectionner $A$ et annuler $B$. On va donc faire passer $A$ à travers une porte **ET** à laquelle on donne 1 à l'autre entrée, et faire passer $B$ à travers une porte **ET** à laquelle on donne 0 à la seconde entrée.
- * Lorsque $Op = 1$, on va faire exactement l'inverse: sélectionner $B$ et annuler $A$. On donnera donc un 0 à la porte **ET** qui filtre $A$, et 1 à la porte **ET** qui filtre $B$.
-
-En relisant ces lignes, on voit que ce qu'on donne à la seconde entrée de la porte qui filtre $B$ est toujours la même chose que $Op$, et que ce qu'on donne à la seconde entrée de la porte qui filtre $A$ est toujours l'inverse de $Op$. On peut donc construire ce circuit avec un inverseur en plus :
+Mais comment construire ce multiplexeur avec les portes logiques que nous connaissons ? Sans le multiplexeur, voici ce que nous devons compléter :
 
 ```{logic}
 :height: 290
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
+  "opts": {"showDisconnectedPins": true},
+  "in": [
+    {"pos": [50, 160], "id": 0, "name": "X", "val": 0},
+    {"pos": [50, 240], "id": 1, "name": "Y", "val": 0},
+    {"pos": [310, 50], "orient": "s", "id": 2, "name": "Op", "val": 0}
+  ],
+  "out": [{"pos": [430, 200], "id": 20, "name": "Z"}],
+  "gates": [{"type": "AND", "pos": [180, 230], "in": [3, 4], "out": 5}, {"type": "OR", "pos": [180, 170], "in": [6, 7], "out": 8}],
+  "wires": [[0, 3], [1, 4], [0, 6], [1, 7]]
+}
+```
+
+Pour savoir quelles portes utiliser pour recréer le multiplexeur, nous avons besoin de nous rappeler ceci. Lorsqu'un signal, disons $A$, passe à travers {logicref}`and0_tryout.{and0,link0}|une porte logique **ET** dont la seconde entrée vaut 0` (ici affichée sans qu'on puisse la changer en cliquant dessus), la sortie de cette porte-là sera toujours identique à 0. Cela nous permet ainsi d'_annuler_ le signal $A$ — de le mettre à zéro. De manière similaire, si {logicref}`and0_tryout.link1|cette seconde entrée vaut 1`, le signal $A$ passera tel quel. On peut ainsi voir la porte **ET** comme un annulateur de signal. Vérifiez ceci ici :
+
+```{logic}
+:height: 190
+:mode: tryout
+:ref: and0_tryout
+
+{
+  "v": 3,
+  "in": [
+    {"pos": [50, 40], "id": 0, "name": "A", "val": 0},
+    {"pos": [50, 130], "id": 1, "name": "A'", "val": 0},
+    {"pos": [130, 150], "id": 2, "val": 1, "ref": "inconst1", "isConstant": true},
+    {"pos": [130, 60], "id": 7, "val": 0, "ref": "inconst0", "isConstant": true}
+  ],
+  "out": [
+    {"pos": [270, 50], "id": 8, "name": "A annulé, toujours 0"},
+    {"pos": [270, 140], "id": 12, "name": "A' tel quel"}
+  ],
+  "gates": [
+    {"type": "AND", "pos": [200, 50], "ref": "and0", "in": [4, 5], "out": 6},
+    {"type": "AND", "pos": [200, 140], "in": [9, 10], "out": 11}
+  ],
+  "wires": [[0, 4], [7, 5, {"ref": "link0"}], [6, 8], [1, 9], [2, 10, {"ref": "link1"}], [11, 12]]
+}
+```
+
+Ensuite, lorsqu'un signal, disons $B$ cette fois, passe à travers {logicref}`or0_tryout.{or0,link0}|une porte logique **OU** dont la seconde entrée est annulée et vaut 0`, la sortie de cette porte sera toujours identique à $B$. Vérifiez ceci ici :
+
+```{logic}
+:height: 80
+:mode: tryout
+:ref: or0_tryout
+
+{
+  "v": 3,
+  "in": [
+    {"pos": [50, 30], "id": 1, "name": "B", "val": 0},
+    {"pos": [130, 50], "id": 2, "val": 0, "isConstant": true}
+  ],
+  "out": [{"pos": [270, 40], "id": 12, "name": "B tel quel"}],
+  "gates": [{"type": "OR", "pos": [200, 40], "ref": "or0", "in": [9, 10], "out": 11}],
+  "wires": [[1, 9], [2, 10, {"ref": "link0"}], [11, 12]]
+}
+```
+
+La porte **OU** peut ainsi servir à combiner deux signaux, pour autant que l'un soit annulé.
+
+Avec tout ceci, on peut ainsi construire un multiplexeur (un sélecteur de signal). Supposons qu'on ait les deux signaux $A$ et $B$ : nous pouvons construire un circuit qui combine soit $A$ tel quel et $B$ annulé, soit $A$ annulé et $B$ tel quel. Cela nous aidera pour notre projet initial ! Il faut cependant s'assurer que $A$ soit chaque fois annulé quand $B$ passe tel quel, et inversement. Ceci peut se faire en réutilisant l'idée d'une entrée de contrôle $Op$ ainsi. Nous avons ainsi deux cas :
+
+ * Lorsque $Op = 0$, on va sélectionner $A$ et annuler $B$. On va donc faire passer $A$ à travers une porte **ET** à laquelle on donne 1 à l'autre entrée, et faire passer $B$ à travers une porte **ET** à laquelle on donne 0 à la seconde entrée.
+ * Lorsque $Op = 1$, on va faire exactement l'inverse : sélectionner $B$ et annuler $A$. On donnera donc un 0 à la porte **ET** qui filtre $A$, et 1 à la porte **ET** qui filtre $B$.
+
+En relisant ces lignes, on voit que ce qu'on donne à la seconde entrée de la porte qui filtre $B$ est toujours la même chose que $Op$, et que ce qu'on donne à la seconde entrée de la porte qui filtre $A$ est toujours l'inverse de $Op$. On peut donc construire ce circuit avec {logicref}`filter0_tryout.inv|un inverseur` en plus :
+
+```{logic}
+:height: 290
+:mode: tryout
+:ref: filter0_tryout
+
+{
+  "v": 3,
   "in": [
     {"pos": [50, 180], "id": 0, "name": "A", "val": 0},
     {"pos": [50, 240], "id": 1, "name": "B", "val": 0},
     {"pos": [130, 50], "orient": "s", "id": 2, "name": "Op", "val": 0}
   ],
   "gates": [
-    {"type": "NOT", "pos": [170, 120], "orient": "s", "in": 9, "out": 10},
+    {"type": "NOT", "pos": [170, 120], "orient": "s", "ref": "inv", "in": 9, "out": 10},
     {"type": "AND", "pos": [230, 170], "in": [11, 12], "out": 13},
     {"type": "AND", "pos": [230, 230], "in": [14, 15], "out": 16}
   ],
@@ -165,21 +187,22 @@ En relisant ces lignes, on voit que ce qu'on donne à la seconde entrée de la p
     [0, 12],
     [1, 15],
     [10, 11],
-    [2, 14, {"waypoints": [[130, 220]]}]
+    [2, 14, {"via": [[130, 220]]}]
   ]
 }
 ```
 
 Essayez ce circuit. Quand $Op=0$, $B$ filtré sera toujours 0 mais $A$ passera, et inversement.
 
-Pour recombiner ces sorties filtrées, il ne nous reste plus qu'à les connecter par une porte **OU** :
+Pour recombiner ces sorties filtrées, il ne nous reste plus qu'à les connecter par {logicref}`filter1_tryout.or|une porte **OU**` :
 
 ```{logic}
 :height: 290
 :mode: tryout
+:ref: filter1_tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [50, 180], "id": 0, "name": "A", "val": 0},
     {"pos": [50, 240], "id": 1, "name": "B", "val": 0},
@@ -189,7 +212,7 @@ Pour recombiner ces sorties filtrées, il ne nous reste plus qu'à les connecter
     {"type": "NOT", "pos": [170, 120], "orient": "s", "in": 9, "out": 10},
     {"type": "AND", "pos": [230, 170], "in": [11, 12], "out": 13},
     {"type": "AND", "pos": [230, 230], "in": [14, 15], "out": 16},
-    {"type": "OR", "pos": [360, 200], "in": [5, 6], "out": 7}
+    {"type": "OR", "pos": [360, 200], "ref": "or", "in": [5, 6], "out": 7}
   ],
   "out": [{"pos": [430, 200], "id": 8, "name": "Z"}],
   "wires": [
@@ -197,7 +220,7 @@ Pour recombiner ces sorties filtrées, il ne nous reste plus qu'à les connecter
     [0, 12],
     [1, 15],
     [10, 11],
-    [2, 14, {"waypoints": [[130, 220]]}],
+    [2, 14, {"via": [[130, 220]]}],
     [13, 5],
     [16, 6],
     [7, 8]
@@ -205,16 +228,34 @@ Pour recombiner ces sorties filtrées, il ne nous reste plus qu'à les connecter
 }
 ```
 
-Essayez ce circuit pour confirmer qu'il agit comme un sélecteur : lorsque $Op=0$, on aura sur la sortie $Z=A$, et lorsque $Op=1$, on aura $Z=B$.
+Essayez ce circuit pour confirmer qu'il agit comme un sélecteur : lorsque $Op=0$, on aura sur la sortie $Z=A$, et lorsque $Op=1$, on aura $Z=B$. Comparez-le avec le multiplexeur tout seul ci-dessous : est-ce que notre circuit fait bien la même chose ?
 
-Ceci nous permet de compléter le circuit lacunaire de début de chapitre pour sélectionner avec le même mécanisme soit le **OU** soit le **ET** de nos deux entrées $X$ et $Y$. On ajoute notre sélecteur en connectant à l'entrée $A$ le signal représentant $X$ **OU** $Y$, et à l'entrée $B$ le signal représentant $X$ **ET** $Y$ :
+```{logic}
+:height: 230
+:mode: tryout
+
+{
+  "v": 3,
+  "in": [
+    {"pos": [50, 120], "id": 0, "name": "A", "val": 0},
+    {"pos": [50, 180], "id": 1, "name": "B", "val": 0},
+    {"pos": [160, 50], "orient": "s", "id": 2, "name": "Op", "val": 0}
+  ],
+  "out": [{"pos": [260, 150], "id": 8, "name": "Z"}],
+  "components": [{"type": "mux-2to1", "pos": [160, 150], "in": [3, 4, 5], "out": 6}],
+  "wires": [[0, 3], [1, 4], [2, 5], [6, 8]]
+}
+```
+
+Ceci nous permet de compléter le circuit lacunaire de début de chapitre pour sélectionner avec le même mécanisme soit {logicref}`and_or_full.or|le **OU**` soit {logicref}`and_or_full.and|le **ET**` de nos deux entrées $X$ et $Y$. On ajoute {logicref}`and_or_full.{muxinv,muxand0,muxand1,muxor}|les portes de notre sélecteur` en connectant à l'entrée $A$ {logicref}`and_or_full.muxin0|le signal représentant $X$ **OU** $Y$`, et à l'entrée $B$ {logicref}`and_or_full.muxin1|le signal représentant $X$ **ET** $Y$` :
 
 ```{logic}
 :height: 300
 :mode: tryout
+:ref: and_or_full
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [230, 50], "orient": "s", "id": 2, "name": "Op", "val": 0},
     {"pos": [50, 170], "id": 19, "name": "X", "val": 0},
@@ -222,22 +263,22 @@ Ceci nous permet de compléter le circuit lacunaire de début de chapitre pour s
   ],
   "out": [{"pos": [530, 200], "id": 8, "name": "Z"}],
   "gates": [
-    {"type": "NOT", "pos": [270, 120], "orient": "s", "in": 9, "out": 10},
-    {"type": "AND", "pos": [330, 170], "in": [11, 12], "out": 13},
-    {"type": "AND", "pos": [330, 230], "in": [14, 15], "out": 16},
-    {"type": "OR", "pos": [460, 200], "in": [5, 6], "out": 7},
-    {"type": "OR", "pos": [170, 180], "in": [0, 1], "out": 3},
-    {"type": "AND", "pos": [170, 240], "in": [4, 17], "out": 18}
+    {"type": "NOT", "pos": [270, 120], "ref": "muxinv", "orient": "s", "in": 9, "out": 10},
+    {"type": "AND", "pos": [330, 170], "ref": "muxand0", "in": [11, 12], "out": 13},
+    {"type": "AND", "pos": [330, 230], "ref": "muxand1", "in": [14, 15], "out": 16},
+    {"type": "OR", "pos": [460, 200], "ref": "muxor", "in": [5, 6], "out": 7},
+    {"type": "OR", "pos": [170, 180], "ref": "or", "in": [0, 1], "out": 3},
+    {"type": "AND", "pos": [170, 240], "ref": "and", "in": [4, 17], "out": 18}
   ],
   "wires": [
     [2, 9],
     [10, 11],
-    [2, 14, {"waypoints": [[230, 220]]}],
+    [2, 14, {"via": [[230, 220]]}],
     [13, 5],
     [16, 6],
     [7, 8],
-    [3, 12],
-    [18, 15],
+    [3, 12, {"ref": "muxin0"}],
+    [18, 15, {"ref": "muxin1"}],
     [19, 0],
     [19, 4],
     [20, 17],
@@ -264,7 +305,7 @@ En réutilisant les principes appliqués ci-dessus, construisez un circuit à de
 :showonly: AND OR NOT XOR
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [230, 50], "orient": "s", "id": 2, "name": "Op", "val": 0},
     {"pos": [50, 170], "id": 19, "name": "X", "val": 0},
@@ -282,7 +323,7 @@ Voici un circuit qui réutilise le sélecteur de signal et qui fournit à ce sé
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [230, 50], "orient": "s", "id": 2, "name": "Op", "val": 0},
     {"pos": [50, 170], "id": 19, "name": "X", "val": 0},
@@ -300,7 +341,7 @@ Voici un circuit qui réutilise le sélecteur de signal et qui fournit à ce sé
   "wires": [
     [2, 9],
     [10, 11],
-    [2, 14, {"waypoints": [[230, 220]]}],
+    [2, 14, {"via": [[230, 220]]}],
     [13, 5],
     [16, 6],
     [7, 8],
@@ -329,7 +370,7 @@ En réutilisant les principes appliqués ci-dessus, construisez un circuit à un
 :showonly: AND OR NOT XOR
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [230, 50], "orient": "s", "id": 2, "name": "Op", "val": 0},
     {"pos": [50, 170], "id": 19, "name": "X", "val": 0},
@@ -349,7 +390,7 @@ Voici une proposition qui réutilise le sélecteur de signal et qui fournit à c
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [150, 50], "orient": "s", "id": 2, "name": "Op", "val": 0},
     {"pos": [50, 180], "id": 19, "name": "X", "val": 0}
@@ -365,7 +406,7 @@ Voici une proposition qui réutilise le sélecteur de signal et qui fournit à c
   "wires": [
     [2, 9],
     [10, 11],
-    [2, 14, {"waypoints": [[150, 220]]}],
+    [2, 14, {"via": [[150, 220]]}],
     [13, 5],
     [16, 6],
     [7, 8],
@@ -383,7 +424,7 @@ La table de vérité est identique à celle d'une porte **OU-X**. On peut donc s
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [100, 50], "orient": "s", "id": 2, "name": "Op", "val": 0},
     {"pos": [50, 130], "id": 19, "name": "X", "val": 0}
@@ -397,7 +438,7 @@ La table de vérité est identique à celle d'une porte **OU-X**. On peut donc s
 `````
 
 
-## 3.2. Une ALU à 4 bits
+## Une ALU à 4 bits
 
 Une unité arithmétique et logique, ou ALU, est un circuit qui ressemble dans ses principes de base à ce que nous venons de faire. L'ALU réaliste plusieurs opérations et permet de sélectionner, via un ou plusieurs bits de contrôle, l'opération qui est réalisée. Les opérations proposées sont, comme le nom de l'ALU indique, des opérations arithmétiques (typiquement, l'addition et la soustraction) et des opérations logiques (par exemple, un **ET** et un **OU** logiques).
 
@@ -408,13 +449,13 @@ Nous présentons ici une ALU simple à 4 bits :
 :mode: static
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showDisconnectedPins": true},
   "components": [
     {
       "type": "alu",
       "pos": [70, 120],
-      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 16],
       "out": [10, 11, 12, 13, 14, {"id": 15, "force": 0}],
       "showOp": false
     }
@@ -422,7 +463,9 @@ Nous présentons ici une ALU simple à 4 bits :
 }
 ```
 
-Cette ALU sait effectuer l'addition ou la soustraction de deux nombres entiers représentés sur 4 bits. Elle a ainsi 8 bits d'entrée pour les données et 4 bits de sorties, à gauche et à droite. En plus de l'addition et de la soustraction, elle sait aussi faire les opérations logiques **ET** et **OU** — en tout donc, quatre opérations. Pour sélectionner l'une des quatre opérations, on ne peut plus se contenter d'un seul bit de contrôle, mais nous allons en utiliser deux pour avoir quatre combinaisons possibles. Ce sont les deux entrées supérieures de l'ALU. La convention utilisée pour la sélection de l'opération est la suivante :
+Cette ALU sait effectuer l'addition ou la soustraction de deux nombres entiers représentés sur 4 bits. Elle a ainsi 8 bits d'entrée pour les données et 4 bits de sorties, à gauche et à droite. En plus de l'addition et de la soustraction, elle sait aussi faire les opérations logiques **ET** et **OU** — en tout donc, quatre opérations. Pour sélectionner l'une des quatre opérations, on ne peut plus se contenter d'un seul bit de contrôle, mais nous allons en utiliser deux pour avoir quatre combinaisons possibles. Ce sont les deux entrées supérieures gauches de l'ALU (on ignore ici l'entrée $C_{in}$).
+
+La convention utilisée pour la sélection de l'opération est la suivante :
 
 | $Op$ | Opération effectuée |
 | :--: | :-----------------: | 
@@ -440,11 +483,11 @@ Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effec
 :showonly: in in.nibble out out.nibble
 
 {
-  "v": 1,
+  "v": 3,
   "components": [
     {
       "type": "alu", "pos": [300, 200],
-      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], "out": [10, 11, 12, 13, 14, 15]
+      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 16], "out": [10, 11, 12, 13, 14, 15]
     }
   ]
 }
@@ -456,12 +499,12 @@ Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effec
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "components": [
     {
       "type": "alu",
       "pos": [300, 200],
-      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 37],
       "out": [10, 11, 12, 13, 14, 15]
     }
   ],
@@ -528,10 +571,10 @@ Ce qui nous intéresse spécialement, c'est la comparaison à la ligne 3. Cette 
 
 ```{logic}
 :height: 330
-:showonly: ALU in out NOT OR AND XOR
+:showonly: ALU in out NOT OR OR4 AND XOR
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [50, 30], "id": 16, "val": 0},
     {"pos": [50, 60], "id": 17, "val": 0},
@@ -547,7 +590,7 @@ Ce qui nous intéresse spécialement, c'est la comparaison à la ligne 3. Cette 
 ```
 
 ````{dropdown} Indice
-Deux nombres $A$ et $B$ sont égaux si leur différence est nulle — donc si tous les bits de sortie de $A - B$ valent 0.
+Deux nombres $A$ et $B$ sont égaux si leur différence est nulle — donc si tous les bits de sortie de la soustraction $A - B$ valent 0.
 ````
 
 ````{dropdown} Corrigé avec ALU — approche arithmétique
@@ -556,9 +599,10 @@ On connecte les 8 entrées, on règle l'opération de l'ALU sur soustraction et 
 ```{logic}
 :mode: tryout
 :height: 330
+:ref: 4bit_diff_alu
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [50, 30], "id": 16, "val": 0},
     {"pos": [50, 60], "id": 17, "val": 0},
@@ -568,14 +612,14 @@ On connecte les 8 entrées, on règle l'opération de l'ALU sur soustraction et 
     {"pos": [50, 240], "id": 25, "val": 0},
     {"pos": [50, 270], "id": 26, "val": 0},
     {"pos": [50, 300], "id": 27, "val": 0},
-    {"pos": [230, 30], "orient": "s", "id": 54, "val": 1}
+    {"pos": [220, 30], "orient": "s", "id": 54, "val": 1}
   ],
   "out": [{"pos": [410, 160], "id": 37, "name": "Z"}],
   "components": [
     {
       "type": "alu",
       "pos": [220, 150],
-      "in": [38, 39, 40, 41, 42, 43, 44, 45, 46, 47],
+      "in": [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 55],
       "out": [48, 49, 50, 51, 52, 53]
     }
   ],
@@ -607,9 +651,10 @@ Cette solution utilise des portes **OU-X** comme comparateurs. On voit ici que 4
 ```{logic}
 :height: 330
 :mode: tryout
+:ref: 4bit_diff_logic0
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [50, 30], "id": 16, "val": 0},
     {"pos": [50, 60], "id": 17, "val": 0},
@@ -623,9 +668,9 @@ Cette solution utilise des portes **OU-X** comme comparateurs. On voit ici que 4
   "out": [{"pos": [530, 160], "id": 37, "name": "Z"}],
   "gates": [
     {"type": "XOR", "pos": [190, 270], "in": [55, 56], "out": 57},
-    {"type": "OR", "pos": [290, 210], "in": [58, 59], "out": 60},
-    {"type": "OR", "pos": [290, 110], "in": [61, 62], "out": 63},
-    {"type": "OR", "pos": [390, 160], "in": [64, 65], "out": 66},
+    {"type": "OR", "pos": [290, 210], "ref": "or1", "in": [58, 59], "out": 60},
+    {"type": "OR", "pos": [290, 110], "ref": "or2", "in": [61, 62], "out": 63},
+    {"type": "OR", "pos": [390, 160], "ref": "or3", "in": [64, 65], "out": 66},
     {"type": "XOR", "pos": [190, 200], "in": [67, 68], "out": 69},
     {"type": "XOR", "pos": [190, 120], "in": [70, 71], "out": 72},
     {"type": "XOR", "pos": [190, 50], "in": [73, 74], "out": 75},
@@ -651,11 +696,44 @@ Cette solution utilise des portes **OU-X** comme comparateurs. On voit ici que 4
   ]
 }
 ```
+
+Alernativement, à la place d'utiliser {logicref}`4bit_diff_logic0.{or1,or2,or3}|trois portes **OU**` dans le schéma ci-dessus, on aurait pu utiliser {logicref}`4bit_diff_logic1.{bigor}|une grande porte **OU** à quatre entrées` :
+
+```{logic}
+:height: 330
+:mode: tryout
+:ref: 4bit_diff_logic1
+
+{
+  "v": 3,
+  "in": [
+    {"pos": [50, 30], "id": 16, "val": 0},
+    {"pos": [50, 60], "id": 17, "val": 0},
+    {"pos": [50, 90], "id": 18, "val": 0},
+    {"pos": [50, 120], "id": 19, "val": 0},
+    {"pos": [50, 210], "id": 24, "val": 0},
+    {"pos": [50, 240], "id": 25, "val": 0},
+    {"pos": [50, 270], "id": 26, "val": 0},
+    {"pos": [50, 300], "id": 27, "val": 0}
+  ],
+  "out": [{"pos": [530, 160], "id": 37, "name": "Z"}],
+  "gates": [
+    {"type": "XOR", "pos": [190, 270], "in": [55, 56], "out": 57},
+    {"type": "XOR", "pos": [190, 200], "in": [67, 68], "out": 69},
+    {"type": "XOR", "pos": [190, 120], "in": [70, 71], "out": 72},
+    {"type": "XOR", "pos": [190, 50], "in": [73, 74], "out": 75},
+    {"type": "NOT", "pos": [460, 160], "in": 76, "out": 77},
+    {"type": "OR4", "pos": [360, 160], "ref": "bigor", "in": [0, 1, 2, 3], "out": 4}
+  ],
+  "wires": [[16, 73], [24, 74], [17, 70], [25, 71], [18, 67], [26, 68], [19, 55], [27, 56], [77, 37], [4, 76], [75, 0], [72, 1], [69, 2], [57, 3]]
+}
+```
+
 ````
 `````
 
 
-En résumé, nous avons appris ici ce qu'est une unité arithmétique et logique et avons examiné de plus près comment construire un circuit qui est à même de « choisir » parmi plusieurs signaux d'entrées. L'ALU est spécialement intéressante, car c'est le premier composant que nous rencontrons qui incarne une des propriétés de base d'un ordinateur, à savoir d'être programmable, en faisant en sorte que l'opération effectuée ne soit pas préprogrammée mais dépende d'un signal externe.
+En résumé, nous avons appris ici ce qu'est une unité arithmétique et logique et avons examiné de plus près comment construire un multiplexeur, un circuit qui est à même de « choisir » parmi plusieurs signaux d'entrées lequel il va propager sur sa sortie. L'ALU est spécialement intéressante, car c'est le premier composant que nous rencontrons qui incarne une des propriétés de base d'un ordinateur, à savoir d'être programmable, en faisant en sorte que l'opération qu'elle effectue dépende d'un signal externe.
 
 
 ````{admonition} Pour aller plus loin
@@ -668,7 +746,7 @@ Notre petite ALU peut aussi faire des calculs en utilisant une représentation s
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [50, 70], "id": 16, "val": 0},
     {"pos": [50, 100], "id": 17, "val": 1},
@@ -707,7 +785,7 @@ Notre petite ALU peut aussi faire des calculs en utilisant une représentation s
     {
       "type": "alu",
       "pos": [300, 200],
-      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 37],
       "out": [10, 11, 12, 13, 14, 15]
     }
   ],

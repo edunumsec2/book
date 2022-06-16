@@ -1,6 +1,6 @@
 ![modulo-banner](https://github.com/edunumsec2/modulo2/blob/main/source/_static/assets/modulo-head-banner.svg)
 
-# Informatique au Gymnase / Pilote
+# Informatique au Gymnase
 
 ## Introduction
 
@@ -102,15 +102,15 @@ Pour simplifier les actions fréquentes (build, clean), le projet contient un wo
 Le projet utilise [sphinx-autobuild](https://github.com/executablebooks/sphinx-autobuild) qui démarre un serveur sur http://localhost:8000 (ou http://127.0.0.1:8000) et rebuild la documentation automatiquement lorsqu'un changement est détecté. 
 1. Activation de l'environnement virtuel (si pas déjà fait)
 2. Activation du serveur local :
-  - Documentation 'Apprendre' : `sphinx-autobuild src/appr build --watch src --open-browser -a --delay 1`
-  - Documentation 'Enseigner' : `sphinx-autobuild src/ens build --watch src --open-browser -a --delay 1`
+  - Documentation 'Apprendre' : `sphinx-autobuild src/appr docs --watch src --open-browser -a --delay 1`
+  - Documentation 'Enseigner' : `sphinx-autobuild src/ens docs --watch src --open-browser -a --delay 1`
 
 Pour arrêter le serveur : <kbd>CTRL</kbd>+<kbd>c</kbd> ou <kbd>⌘</kbd>+<kbd>c</kbd>
 
 ### Génération de build
 
-- Génération du build 'Apprendre' : `sphinx-build -b html src/appr build/appr`
-- Génération du build 'Enseigner' : `sphinx-build -b html src/ens build/ens`
+- Génération du build 'Apprendre' : `sphinx-build -b html src/appr docs`
+- Génération du build 'Enseigner' : `sphinx-build -b html src/ens docs`
 
 
 ## Comité de rédaction

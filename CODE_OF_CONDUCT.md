@@ -23,10 +23,10 @@ Exemples de comportements qui contribuent à un environnement de travail prolifi
 
 ## Attribution
 
-Ce code de conduite est une version traduite et adaptée de [Contributor Covenant][homepage],
+Ce code de conduite est une version traduite et adaptée de _Contributor Covenant_,
 version 2.0, disponbile ici : 
 https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
 
-Ces guidelins sont inspirées du [code de conduite Mozilla](https://github.com/mozilla/diversity).
+Ces guidelines sont inspirées du [code de conduite Mozilla](https://github.com/mozilla/diversity).
 
 [page d'accueil]: https://www.contributor-covenant.org
