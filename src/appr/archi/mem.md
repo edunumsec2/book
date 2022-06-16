@@ -20,11 +20,11 @@ L'idée principale derrière la conception d'un circuit logique qui est capable 
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [{"pos": [50, 30], "id": 4, "name": "X", "val": 0}],
   "gates": [{"type": "OR", "pos": [140, 40], "in": [5, 6], "out": 7}],
   "out": [{"pos": [240, 40], "id": 0, "name": "Z"}],
-  "wires": [[4, 5], [7, 6, {"waypoints": [[170, 80, "w"], [110, 80, "w"]]}], [7, 0]]
+  "wires": [[4, 5], [7, 6, {"via": [[170, 80, "w"], [110, 80, "w"]]}], [7, 0]]
 }
 ```
 
@@ -39,7 +39,8 @@ Examinons le circuit ci-dessous : c'est le verrou dit « SR », pour _set/
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
+  "opts": {"propagationDelay": 10},
   "in": [
     {"pos": [50, 30], "id": 8, "name": "R", "val": 0},
     {"pos": [50, 130], "id": 9, "name": "S", "val": 0}
@@ -52,7 +53,7 @@ Examinons le circuit ci-dessous : c'est le verrou dit « SR », pour _set/
     {"type": "OR", "pos": [130, 40], "in": [0, 1], "out": 2},
     {"type": "OR", "pos": [130, 120], "in": [4, 5], "out": 6},
     {"type": "NOT", "pos": [200, 120], "in": 3, "out": 7},
-    {"type": "NOT", "pos": [200, 40], "in": 12, "out": 13}
+    {"type": "NOT", "pos": [200, 40], "in": 12, "out": {"id": 13, "initialValue": 0}}
   ],
   "wires": [
     [8, 0],
@@ -61,8 +62,8 @@ Examinons le circuit ci-dessous : c'est le verrou dit « SR », pour _set/
     [7, 11],
     [2, 12],
     [13, 10],
-    [7, 1, {"waypoints": [[80, 50]]}],
-    [13, 4, {"waypoints": [[80, 110]]}]
+    [7, 1, {"via": [[80, 50]]}],
+    [13, 4, {"via": [[80, 110]]}]
   ]
 }
 ```
@@ -80,7 +81,7 @@ On essaie en général d'éviter d'avoir un 1 sur $R$ et sur $S$ en même temps,
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "opts": {"propagationDelay": 0},
   "in": [
     {"pos": [50, 30], "id": 8, "name": "R", "val": 0, "isPushButton": true},
@@ -94,7 +95,7 @@ On essaie en général d'éviter d'avoir un 1 sur $R$ et sur $S$ en même temps,
     {"type": "OR", "pos": [130, 40], "in": [0, 1], "out": 2},
     {"type": "OR", "pos": [130, 120], "in": [4, 5], "out": 6},
     {"type": "NOT", "pos": [200, 120], "in": 3, "out": 7},
-    {"type": "NOT", "pos": [200, 40], "in": 12, "out": 13}
+    {"type": "NOT", "pos": [200, 40], "in": 12, "out": {"id": 13, "initialValue": 0}}
   ],
   "wires": [
     [8, 0],
@@ -103,8 +104,8 @@ On essaie en général d'éviter d'avoir un 1 sur $R$ et sur $S$ en même temps,
     [7, 11],
     [2, 12],
     [13, 10],
-    [7, 1, {"waypoints": [[80, 50]]}],
-    [13, 4, {"waypoints": [[80, 110]]}]
+    [7, 1, {"via": [[80, 50]]}],
+    [13, 4, {"via": [[80, 110]]}]
   ]
 }
 ```
@@ -116,7 +117,7 @@ Ces verrous sont communs, et pour le reste du chapitre, on simplifiera la notati
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [50, 30], "id": 10, "name": "R", "val": 0, "isPushButton": true},
     {"pos": [50, 70], "id": 11, "name": "S", "val": 0, "isPushButton": true}
@@ -154,7 +155,7 @@ On va utiliser pour cela un circuit similaire, mais qui fonctionne un peu diffé
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [90, 40], "id": 0, "name": "D", "val": 0},
     {"pos": [90, 80], "id": 1, "name": "Horloge", "val": 0, "isPushButton": true}
@@ -196,7 +197,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 :showonly: AND OR NOT XOR Flipflop-D
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [100, 50], "id": 24, "name": "X", "val": 1},
     {"pos": [100, 130], "id": 25, "name": "Y", "val": 1},
@@ -216,7 +217,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [100, 50], "id": 24, "name": "X", "val": 1},
     {"pos": [100, 130], "id": 25, "name": "Y", "val": 1},
@@ -258,8 +259,8 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
     [5, 12],
     [26, 7],
     [26, 13],
-    [29, 15, {"waypoints": [[340, 240]]}],
-    [29, 9, {"waypoints": [[340, 130]]}]
+    [29, 15, {"via": [[340, 240]]}],
+    [29, 9, {"via": [[340, 130]]}]
   ]
 }
 ```
@@ -275,7 +276,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 :showonly: AND OR NOT XOR Flipflop-D
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [100, 90], "id": 6, "name": "Horloge", "val": 0, "isPushButton": true}
   ],
@@ -289,7 +290,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "components": [
     {
       "type": "flipflop-d",
@@ -306,7 +307,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
   "wires": [
     [4, 7],
     [6, 1],
-    [5, 0, {"waypoints": [[290, 120, "n"], [290, 40, "n"], [190, 40, "w"]]}]
+    [5, 0, {"via": [[290, 120, "n"], [290, 40, "n"], [190, 40, "w"]]}]
   ]
 }
 ```
@@ -324,7 +325,7 @@ Vous pouvez mettre l'animation en pause et exécuter chaque transition pas à pa
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"propagationDelay": 0},
   "in": [{"type": "clock", "pos": [40, 30], "id": 30, "period": 1000}],
   "out": [
@@ -349,11 +350,11 @@ Vous pouvez mettre l'animation en pause et exécuter chaque transition pas à pa
     }
   ],
   "wires": [
-    [16, 25, {"waypoints": [[250, 120, "s"], [120, 180, "s"]]}],
+    [16, 25, {"via": [[250, 120, "s"], [120, 180, "s"]]}],
     [16, 10],
     [28, 11],
-    [17, 12, {"waypoints": [[230, 120], [230, 50], [140, 50]]}],
-    [29, 24, {"waypoints": [[230, 250], [230, 180], [140, 180]]}],
+    [17, 12, {"via": [[230, 120], [230, 50], [140, 50]]}],
+    [29, 24, {"via": [[230, 250], [230, 180], [140, 180]]}],
     [30, 13],
     [30, 7]
   ]
@@ -396,7 +397,7 @@ Cela nous donne ce début de circuit, qui pour l'instant n'est pas fonctionnel�
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showDisconnectedPins": true},
   "in": [
     {
@@ -420,7 +421,7 @@ Cela nous donne ce début de circuit, qui pour l'instant n'est pas fonctionnel�
     {
       "type": "alu",
       "pos": [180, 170],
-      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 50],
       "out": [10, 11, 12, 13, 14, 15]
     },
     {
@@ -456,18 +457,18 @@ Cela nous donne ce début de circuit, qui pour l'instant n'est pas fonctionnel�
     {"type": "nibble", "pos": [550, 190], "id": [46, 47, 48, 49], "name": "Acc."}
   ],
   "wires": [
-    [40, 37, {"waypoints": [[340, 400]]}],
-    [40, 31, {"waypoints": [[340, 300, "n"]]}],
-    [40, 25, {"waypoints": [[340, 200, "n"]]}],
-    [40, 19, {"waypoints": [[340, 100, "n"]]}],
-    [45, 35, {"waypoints": [[280, 380]]}],
-    [45, 29, {"waypoints": [[280, 280, "n"]]}],
-    [45, 23, {"waypoints": [[280, 180, "n"]]}],
-    [45, 17, {"waypoints": [[280, 80, "n"]]}],
-    [20, 46, {"waypoints": [[480, 40]]}],
-    [26, 47, {"waypoints": [[480, 140]]}],
-    [32, 48, {"waypoints": [[480, 240]]}],
-    [38, 49, {"waypoints": [[480, 340]]}]
+    [40, 37, {"via": [[340, 400]]}],
+    [40, 31, {"via": [[340, 300, "n"]]}],
+    [40, 25, {"via": [[340, 200, "n"]]}],
+    [40, 19, {"via": [[340, 100, "n"]]}],
+    [45, 35, {"via": [[280, 380]]}],
+    [45, 29, {"via": [[280, 280, "n"]]}],
+    [45, 23, {"via": [[280, 180, "n"]]}],
+    [45, 17, {"via": [[280, 80, "n"]]}],
+    [20, 46, {"via": [[480, 40]]}],
+    [26, 47, {"via": [[480, 140]]}],
+    [32, 48, {"via": [[480, 240]]}],
+    [38, 49, {"via": [[480, 340]]}]
   ]
 }
 ```
@@ -481,7 +482,7 @@ L'entrée $B$ de l'ALU est le nouveau nombre à additionner. Pour cela, nous ajo
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showDisconnectedPins": true},
   "in": [
     {
@@ -519,7 +520,7 @@ L'entrée $B$ de l'ALU est le nouveau nombre à additionner. Pour cela, nous ajo
     {
       "type": "alu",
       "pos": [180, 210],
-      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 55],
       "out": [10, 11, 12, 13, 14, 15]
     },
     {
@@ -552,30 +553,30 @@ L'entrée $B$ de l'ALU est le nouveau nombre à additionner. Pour cela, nous ajo
     }
   ],
   "wires": [
-    [40, 37, {"waypoints": [[340, 440]]}],
-    [40, 31, {"waypoints": [[340, 340, "n"]]}],
-    [40, 25, {"waypoints": [[340, 240, "n"]]}],
-    [40, 19, {"waypoints": [[340, 140, "n"]]}],
-    [20, 0, {"waypoints": [[430, 80], [430, 50], [130, 50], [130, 130]]}],
-    [26, 1, {"waypoints": [[440, 180], [440, 40], [120, 40], [120, 150]]}],
-    [32, 2, {"waypoints": [[450, 280], [450, 30], [110, 30], [110, 170]]}],
-    [38, 3, {"waypoints": [[460, 380, "n"], [460, 20], [100, 20], [100, 190]]}],
+    [40, 37, {"via": [[340, 440]]}],
+    [40, 31, {"via": [[340, 340, "n"]]}],
+    [40, 25, {"via": [[340, 240, "n"]]}],
+    [40, 19, {"via": [[340, 140, "n"]]}],
+    [20, 0, {"via": [[430, 80], [430, 50], [130, 50], [130, 130]]}],
+    [26, 1, {"via": [[440, 180], [440, 40], [120, 40], [120, 150]]}],
+    [32, 2, {"via": [[450, 280], [450, 30], [110, 30], [110, 170]]}],
+    [38, 3, {"via": [[460, 380, "n"], [460, 20], [100, 20], [100, 190]]}],
     [41, 4],
     [42, 5],
     [43, 6],
     [44, 7],
-    [45, 35, {"waypoints": [[280, 420]]}],
-    [45, 29, {"waypoints": [[280, 320, "n"]]}],
-    [45, 23, {"waypoints": [[280, 220, "n"]]}],
-    [45, 17, {"waypoints": [[280, 120, "n"]]}],
+    [45, 35, {"via": [[280, 420]]}],
+    [45, 29, {"via": [[280, 320, "n"]]}],
+    [45, 23, {"via": [[280, 220, "n"]]}],
+    [45, 17, {"via": [[280, 120, "n"]]}],
     [41, 50],
     [42, 51],
     [43, 52],
     [44, 53],
-    [20, 46, {"waypoints": [[480, 80]]}],
-    [26, 47, {"waypoints": [[480, 180]]}],
-    [32, 48, {"waypoints": [[480, 280]]}],
-    [38, 49, {"waypoints": [[480, 380]]}]
+    [20, 46, {"via": [[480, 80]]}],
+    [26, 47, {"via": [[480, 180]]}],
+    [32, 48, {"via": [[480, 280]]}],
+    [38, 49, {"via": [[480, 380]]}]
   ]
 }
 ```
@@ -589,7 +590,7 @@ Voici le circuit final :
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {
       "pos": [340, 490],
@@ -626,7 +627,7 @@ Voici le circuit final :
     {
       "type": "alu",
       "pos": [180, 210],
-      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 55],
       "out": [10, 11, 12, 13, 14, 15]
     },
     {
@@ -659,34 +660,34 @@ Voici le circuit final :
     }
   ],
   "wires": [
-    [10, 16, {"waypoints": [[260, 80]]}],
-    [11, 22, {"waypoints": [[260, 180]]}],
-    [12, 28, {"waypoints": [[260, 280]]}],
-    [13, 34, {"waypoints": [[260, 380]]}],
-    [40, 37, {"waypoints": [[340, 440]]}],
-    [40, 31, {"waypoints": [[340, 340, "n"]]}],
-    [40, 25, {"waypoints": [[340, 240, "n"]]}],
-    [40, 19, {"waypoints": [[340, 140, "n"]]}],
-    [20, 0, {"waypoints": [[430, 80], [430, 50], [130, 50], [130, 130]]}],
-    [26, 1, {"waypoints": [[440, 180], [440, 40], [120, 40], [120, 150]]}],
-    [32, 2, {"waypoints": [[450, 280], [450, 30], [110, 30], [110, 170]]}],
-    [38, 3, {"waypoints": [[460, 380, "n"], [460, 20], [100, 20], [100, 190]]}],
+    [10, 16, {"via": [[260, 80]]}],
+    [11, 22, {"via": [[260, 180]]}],
+    [12, 28, {"via": [[260, 280]]}],
+    [13, 34, {"via": [[260, 380]]}],
+    [40, 37, {"via": [[340, 440]]}],
+    [40, 31, {"via": [[340, 340, "n"]]}],
+    [40, 25, {"via": [[340, 240, "n"]]}],
+    [40, 19, {"via": [[340, 140, "n"]]}],
+    [20, 0, {"via": [[430, 80], [430, 50], [130, 50], [130, 130]]}],
+    [26, 1, {"via": [[440, 180], [440, 40], [120, 40], [120, 150]]}],
+    [32, 2, {"via": [[450, 280], [450, 30], [110, 30], [110, 170]]}],
+    [38, 3, {"via": [[460, 380, "n"], [460, 20], [100, 20], [100, 190]]}],
     [41, 4],
     [42, 5],
     [43, 6],
     [44, 7],
-    [45, 35, {"waypoints": [[280, 420]]}],
-    [45, 29, {"waypoints": [[280, 320, "n"]]}],
-    [45, 23, {"waypoints": [[280, 220, "n"]]}],
-    [45, 17, {"waypoints": [[280, 120, "n"]]}],
+    [45, 35, {"via": [[280, 420]]}],
+    [45, 29, {"via": [[280, 320, "n"]]}],
+    [45, 23, {"via": [[280, 220, "n"]]}],
+    [45, 17, {"via": [[280, 120, "n"]]}],
     [41, 50],
     [42, 51],
     [43, 52],
     [44, 53],
-    [20, 46, {"waypoints": [[480, 80]]}],
-    [26, 47, {"waypoints": [[480, 180]]}],
-    [32, 48, {"waypoints": [[480, 280]]}],
-    [38, 49, {"waypoints": [[480, 380]]}]
+    [20, 46, {"via": [[480, 80]]}],
+    [26, 47, {"via": [[480, 180]]}],
+    [32, 48, {"via": [[480, 280]]}],
+    [38, 49, {"via": [[480, 380]]}]
   ]
 }
 ```

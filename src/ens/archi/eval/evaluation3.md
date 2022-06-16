@@ -7,7 +7,7 @@
 :height: 60
 :mode: static
 
-{"v": 1, "opts": {"showDisconnectedPins": true}, "gates": [{"type": "AND", "pos": [50, 30], "in": [0, 1], "out": 2}]}
+{"v": 3, "opts": {"showDisconnectedPins": true}, "gates": [{"type": "AND", "pos": [50, 30], "in": [0, 1], "out": 2}]}
 ```
 De quelle porte logique s'agit-il ?
 * {v}`AND (ET)`
@@ -21,7 +21,7 @@ De quelle porte logique s'agit-il ?
 :height: 60
 :mode: static
 
-{"v": 1, "opts": {"showDisconnectedPins": true}, "gates": [{"type": "OR", "pos": [50, 30], "in": [0, 1], "out": 2}]}
+{"v": 3, "opts": {"showDisconnectedPins": true}, "gates": [{"type": "OR", "pos": [50, 30], "in": [0, 1], "out": 2}]}
 ```
 De quelle porte logique s'agit-il ?
 * {f}`AND (ET)`
@@ -35,7 +35,7 @@ De quelle porte logique s'agit-il ?
 :height: 60
 :mode: static
 
-{"v": 1, "opts": {"showDisconnectedPins": true}, "gates": [{"type": "NOT", "pos": [50, 30], "in": 1, "out": 3}]}
+{"v": 3, "opts": {"showDisconnectedPins": true}, "gates": [{"type": "NOT", "pos": [50, 30], "in": 1, "out": 3}]}
 ```
 De quelle porte logique s'agit-il ?
 * {f}`AND (ET)`
@@ -49,7 +49,7 @@ De quelle porte logique s'agit-il ?
 :height: 60
 :mode: static
 
-{"v": 1, "opts": {"showDisconnectedPins": true}, "gates": [{"type": "XOR", "pos": [50, 30], "in": [0, 1], "out": 2}]}
+{"v": 3, "opts": {"showDisconnectedPins": true}, "gates": [{"type": "XOR", "pos": [50, 30], "in": [0, 1], "out": 2}]}
 ```
 De quelle porte logique s'agit-il ?
 * {f}`AND (ET)`
@@ -66,7 +66,7 @@ Ici, nous cachons la représentation de la porte. Il faut donc trouver de quelle
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "in": [{"pos": [50, 40], "id": 0, "val": 0}, {"pos": [50, 80], "id": 1, "val": 0}],
   "out": [{"pos": [280, 60], "id": 7}],
   "gates": [{"type": "XOR", "pos": [180, 60], "in": [3, 4], "out": 6, "showAsUnknown": true}],
@@ -86,7 +86,7 @@ De quelle porte logique s'agit-il ?
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "in": [{"pos": [50, 40], "id": 0, "val": 0}, {"pos": [50, 80], "id": 1, "val": 0}],
   "out": [{"pos": [280, 60], "id": 7}],
   "gates": [{"type": "AND", "pos": [180, 60], "in": [3, 4], "out": 6, "showAsUnknown": true}],
@@ -106,7 +106,7 @@ De quelle porte logique s'agit-il ?
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "in": [{"pos": [50, 40], "id": 0, "val": 0}, {"pos": [50, 80], "id": 1, "val": 0}],
   "out": [{"pos": [280, 60], "id": 7}],
   "gates": [{"type": "OR", "pos": [180, 60], "in": [3, 4], "out": 6, "showAsUnknown": true}],
@@ -126,7 +126,7 @@ De quelle porte logique s'agit-il ?
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "in": [{"pos": [50, 40], "id": 0, "val": 0}],
   "out": [{"pos": [280, 60], "id": 7}],
   "gates": [{"type": "NOT", "pos": [180, 60], "in": 3, "out": 6, "showAsUnknown": true}],

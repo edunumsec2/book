@@ -61,6 +61,13 @@
 					"cwd": "${workspaceFolder}",
 					"singleInstance": true,
 				},
+				{
+					"name": "git pull",
+					"color": "white",
+					"command": "git pull origin $(git rev-parse --abbrev-ref HEAD)",
+					"cwd": "${workspaceFolder}",
+					"singleInstance": false,
+				}
 			]
 		},
 		"files.watcherExclude": {

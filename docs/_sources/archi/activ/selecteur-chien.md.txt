@@ -37,7 +37,7 @@ Résumé
 :showonly: and,or,xor
 
 {
-  "v": 2,
+  "v": 3,
   "opts": {"showOnly": ["and", "or", "xor", "not"]},
   "in": [
     {"pos": [110, 50], "id": 14, "name": "Gentil", "val": 0},
@@ -56,7 +56,7 @@ Il faut insérer une porte **ET**.
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "in": [{"pos": [110, 50], "id": 14, "name": "Gentil", "val": 0}, {"pos": [110, 110], "id": 16, "name": "Petit", "val": 0}],
   "out": [{"pos": [360, 80], "id": 18, "name": "OK pour ce chien!"}],
   "gates": [{"type": "AND", "pos": [240, 80], "in": [0, 1], "out": 2}],
@@ -87,7 +87,7 @@ Il faut insérer une porte **ET**.
 :showonly: and,or,xor,not
 
 {
-  "v": 2,
+  "v": 3,
   "in": [
     {"pos": [190, 70], "id": 14, "name": "Gentil", "val": 0},
     {"pos": [190, 130], "id": 15, "name": "Bave tout le temps", "val": 0},
@@ -105,7 +105,7 @@ Il faut insérer une porte **ET**.
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "in": [
     {"pos": [190, 70], "id": 14, "name": "Gentil", "val": 0},
     {"pos": [190, 130], "id": 15, "name": "Bave tout le temps", "val": 0},
@@ -146,7 +146,7 @@ D'autres solutions sont possibles.
 :showonly: and,or,xor,not
 
 {
-  "v": 2,
+  "v": 3,
   "in": [
     {"pos": [120, 80], "orient": "s", "id": 0, "val": 0},
     {"pos": [160, 80], "orient": "s", "id": 1, "name": "Code de la race du chien sur 2 bits", "val": 0}
@@ -167,7 +167,7 @@ D'autres solutions sont possibles.
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "in": [
     {"pos": [120, 80], "orient": "s", "id": 0, "val": 0},
     {"pos": [160, 80], "orient": "s", "id": 1, "name": "Code de la race du chien sur 2 bits", "val": 0}

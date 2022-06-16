@@ -30,7 +30,7 @@ Et on constate que $S_1$ n'est autre qu'un **ET** logique de $A$ et $B$. On peut
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [50, 30], "id": 0, "val": 0, "name": "A"},
     {"pos": [50, 110], "id": 1, "val": 0, "name": "B"}
@@ -105,7 +105,7 @@ En faisant pour l'instant abstraction des détails d'un additionneur complet, on
 :mode: static
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showDisconnectedPins": true},
   "components": [{"type": "adder", "pos": [60, 60], "in": [0, 1, 2], "out": [3, 4]}]
 }
@@ -124,7 +124,7 @@ Si $A$ est formé de deux bits $A_0$ et $A_1$ et que $B$ est formé des deux bit
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "opts": {"showDisconnectedPins": true},
   "in": [
     {"pos": [190, 40], "orient": "s", "id": 10, "ref": "a0", "name": "A0", "val": 0},
@@ -171,7 +171,7 @@ Les entrées sont déjà disposées. Glissez autant d'additionneurs et de bits d
 :showonly: out adder
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [90, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
     {"pos": [190, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
@@ -193,7 +193,7 @@ On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et 
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [90, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
     {"pos": [190, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
@@ -262,7 +262,7 @@ Réglez les entrées du circuit de manière à lui faire effectuer les additions
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [100, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
     {"pos": [200, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
@@ -340,7 +340,7 @@ Déterminez quel composant est défectueux dans ce circuit et comment il faudrai
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [100, 40], "orient": "s", "id": 3, "name": "A3", "val": 1},
     {"pos": [200, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
@@ -423,7 +423,7 @@ En s'aidant de la table de vérité d'un seul additionneur complet, créer un ci
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [60, 30], "id": 0, "name": "A", "val": 0},
     {"pos": [60, 90], "id": 1, "name": "B", "val": 0},
