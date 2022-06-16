@@ -6,20 +6,20 @@ Accroche de l'activité
 
 ----
 
-```{admonition} Titre de l'activité
+```{admonition} Notice
 :class: hint
 
-* *Thème : eg. `Représentation de l'information` (peut préciser un sous-chapitre)
-* *Niveau : `facile`, `moyen`, `difficile`(considérant que l'indication 1M, 2M est donnée par l'emplacement de l'activité)
-* *Durée : en minutes ou en périodes
-* *Objectifs pédagogiques : 
-* *Modalité : `branché/débranché`
-* *Matériel : 
-* *Prérequis : 
-* Notions fondamentales : 
-* Taille du groupe : `classe entière`, `demi-classe`
+* **Thème** : eg. `Représentation de l'information` (peut préciser un sous-chapitre)
+* **Niveau** : `facile`, `moyen`, `difficile`(considérant que l'indication 1M, 2M est donnée par l'emplacement de l'activité)
+* **Durée** : en minutes ou en périodes
+* **Objectifs pédagogiques** : 
+* **Modalité** : `branché/débranché`
+* **Matériel** : 
+* **Prérequis** : 
+* **Notions fondamentales** : 
+* **Taille du groupe** : `classe entière`, `demi-classe`
 
-*Note : les éléments précédés d'une étoile sont impératifs, les autres optionnels*
+*Note : les éléments *Notions fondamentales* et *Taille du groupe* sont optionnels
 ```
 
 ## Déroulement
@@ -32,8 +32,8 @@ Accroche de l'activité
 | {ref}`Étape 3<nomactivite.nomdeletape3>`| 5 min   | Évalutation           |
 | Etape n                                 | n min   | Phase n               |
 
-*Note : la logique didactique dans laquelle se situe l'étape est optionnelle*
-Liste de moments à choix : 
+*Note : le moment didactique dans lequelle se situe l'étape est optionnel*
+Liste des phases à choix possibles pour la dernière colonne du tableau ci-dessus: 
 - Mise en situation
 - Enseignement frontal
 - Exploration

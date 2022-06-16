@@ -5,7 +5,7 @@ Page de description des séquences et activités disponibles pour cette thémati
 ```{toctree}
 :maxdepth: 2
 :hidden:
-Magie binaire <magie_binaire_new>
+Magie binaire <magie_binaire>
 Images numériques <encoder_images>
 Format BMP <format_BMP_new>
 Echantillonnage <echantillonnage_new>
