@@ -49,9 +49,9 @@ Essayez ce circuit : quand $Y$ vaut 1, il se comporte comme le circuit précé
   "out": [{"pos": [290, 50], "id": 3, "name": "Z"}],
   "gates": [
     {"type": "OR", "pos": [170, 50], "ref": "or", "in": [0, 1], "out": 2},
-    {"type": "AND", "pos": [150, 100], "ref": "and", "orient": "w", "in": [5, 6], "out": 7}
+    {"type": "AND", "pos": [170, 100], "orient": "w", "ref": "and", "in": [5, 6], "out": 7}
   ],
-  "wires": [[2, 3], [4, 0], [7, 1], [2, 6], [8, 5, {"via": [[200, 140]]}]]
+  "wires": [[2, 3], [4, 0], [7, 1, {"style": "bezier"}], [2, 6, {"style": "bezier"}], [8, 5, {"via": [[210, 140]], "style": "bezier"}]]
 }
 ```
 
@@ -64,14 +64,17 @@ Le circuit est plus facile à utiliser lorsqu'on inverse l'entrée $Y$, comme da
 
 {
   "v": 3,
-  "in": [{"pos": [50, 40], "id": 4, "name": "X", "val": 0}, {"pos": [50, 150], "id": 8, "name": "Y", "val": 0}],
+  "in": [
+    {"pos": [50, 40], "id": 4, "name": "X", "val": 0},
+    {"pos": [50, 150], "id": 8, "name": "Y", "val": 0}
+  ],
   "out": [{"pos": [290, 50], "id": 3, "name": "Z"}],
   "gates": [
     {"type": "OR", "pos": [170, 50], "in": [0, 1], "out": 2},
-    {"type": "AND", "pos": [150, 100], "orient": "w", "in": [5, 6], "out": 7},
-    {"type": "NOT", "pos": [160, 150], "in": 9, "out": 10}
+    {"type": "AND", "pos": [170, 100], "orient": "w", "in": [5, 6], "out": 7},
+    {"type": "NOT", "pos": [170, 150], "in": 9, "out": 10}
   ],
-  "wires": [[2, 3], [4, 0], [7, 1], [2, 6], [8, 9], [10, 5]]
+  "wires": [[2, 3], [4, 0], [7, 1, {"style": "bezier"}], [2, 6, {"style": "bezier"}], [8, 9], [10, 5, {"style": "bezier"}]]
 }
 ```
 
