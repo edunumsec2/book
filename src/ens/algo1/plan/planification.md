@@ -21,7 +21,7 @@ Dans la partie **enseigner**, vous trouverez des :
 -->
 
 
-L'algorithmique pourrait s'insérer de la manière suivante dans un exemple de planification annuelle (voir tableau ci-dessous). On commence par la représentation de l'information pour que les élèves comprennent comment on arrive à représenter le monde (les entiers, les caractères, les images ou le son) dans un ordinateur. En parallèle, lors des périodes branchées en demi-groupe on commence la programmation, car la programmation est synonyme de l'informatique dans la conception des élèves, et cela répond à leur attente, certains sont impatients de programmer. Pour consolider les bases, il est important d'étudier les concepts importants en programmation également en mode débranché. Cela permet de prendre des bonnes pratiques, en particulier le réflexe qui consiste à réfléchir avant de faire, et non pas de faire et refaire et refaire tant que ça ne marche pas. Après chaque thème il est opportun d'aborder une thématique des enjeux sociaux, pour permettre une respiration.
+L'algorithmique pourrait s'insérer de la manière suivante dans un exemple de planification annuelle (voir tableau ci-dessous). On commence par la représentation de l'information pour que les élèves comprennent comment on arrive à représenter le monde (les entiers, les caractères, les images ou le son) dans un ordinateur. En parallèle, lors des périodes branchées en demi-groupe on commence la programmation, car la programmation est synonyme de l'informatique dans la conception des élèves, et cela répond à leur attente, certains sont impatients de programmer. Pour consolider les bases, il est important d'étudier les concepts importants en programmation également en mode débranché. Cela permet de prendre des bonnes pratiques, en particulier le réflexe qui consiste à réfléchir avant de faire, et non pas de faire et refaire et refaire tant que ça ne marche pas. Il faut noter que deux parcours de programmation différents sont possibles, un parcours plus formel basé sur les concepts, et un parcours plus ludique basé sur *turtle*. Le choix dépendra de la classe que vous avez. Après chaque thème il est opportun d'aborder une thématique des enjeux sociaux, pour permettre une respiration.
 
 Au deuxième semestre on aborde la machine, ou comment les 0 et 1 que l'on a vu au premier semestre prennent vie dans une machine. Cela ferme la boucle de la « démystification de l'informatique ». Pour finir, on se pose la question des algorithmes, ou comment résoudre un problème et existe-t-il plusieurs solutions possibles ? En mobilisant les compétences acquises au cours de programmation, on peut utiliser l'ordinateur pour résoudre quelques problèmes concrets, qui font des liens avec le thème de représentation de l'informatique. On redonne ainsi sens à l'intégralité du programme de première année.
 
@@ -67,7 +67,7 @@ Les parties d'algorithmique sont en **gras**.
 |33		 | Réserve                                     |                                                      |  
 |34		 | Réserve			                           |                                                      |  
 
-Il faut noter que deux parcours de programmation différents sont possibles, un parcours plus formel basé sur les concepts, et un parcours plus ludique basé sur *turtle*. Le choix dépendra de la classe que vous avez.
+
 
 
 <!--
