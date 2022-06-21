@@ -29,14 +29,14 @@ Les questions que l'on se pose dans cette activité sont les suivantes :
 
 | Étape                                   | Durée  | Phase de l'activité   | 
 |---------------------------------------|------ |---------------------|
-| {ref}`Jeu sérieux`                    | 20 min  | Apprentissage           |
-| {ref}`Biais de données et biais sociétal`  | 10 min  | Discussion |
-| {ref}`Dangers et risques`          | 10 min   | Apprentissage et discussion           |
-| {ref}`Peut-on faire confiance ?`                       | 5 min   | Objectivation             |
+| {ref}`Jeu sérieux<biais.jeu>`                    | 20 min  | Apprentissage           |
+| {ref}`Biais de données et biais sociétal<biais.biais>`  | 10 min  | Discussion |
+| {ref}`Dangers et risques<biais.dangers>`          | 10 min   | Apprentissage et discussion           |
+| {ref}`Peut-on faire confiance ?<biais.conf>`                       | 5 min   | Objectivation             |
 
 
 
-(nomactivite.nomdeletape1)=
+(biais.jeu)=
 ### Jeu sérieux 
 
 *Durée : 20 min*
@@ -52,7 +52,7 @@ ou
 Les élèves qui terminent en avance peuvent lire les articles proposés dans les hyperliens du jeu.
 
 
-(nomactivite.nomdeletape2)=
+(biais.biais)=
 ### Biais de données et biais sociétal 
 
 *Durée : 10 min*
@@ -64,7 +64,7 @@ Le biais de données, comme son nom l’indique, est un biais qui arrive lorsqu�
 un biais déjà présent dans la société et qui se retrouve amplifié
 dans les solutions proposées par l’algorithme d’intelligence artificielle.
 
-(nomactivite.nomdeletape3)=
+(biais.dangers)=
 ### Dangers et risques
 
 *Durée : 10 min*
@@ -76,7 +76,7 @@ Citer des risques que comportent ces biais et identifier le type du biais. On pe
 - voitures autonomes à Halloween : [dgxy.link/hwn](http://dgxy.link/hwn) [biais des données] 
 - la traduction automatique : [dgxy.link/trd](http://dgxy.link/trd) [biais sociétal]
 
-(nomactivite.nomdeletapen)=
+(biais.conf)=
 ### Peut-on faire confiance ?
 
 *Durée : 5 min*
