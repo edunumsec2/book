@@ -34,14 +34,14 @@ sur le site OpenAI, gratuit pendant 3 mois.
 
 | Étape                                   | Durée  | Phase de l'activité   | 
 |---------------------------------------|------ |---------------------|
-| {ref}`dSimon`                    | 15 min  | Apprentissage et discussion           |
-| {ref}`Découverte d'un générateur de texte : GPT`           | 15 min  | Discussion |
-| {ref}`Générateur de son`    | 5 min  | Enseignement           |
-| {ref}`Générateur de vidéo et *Deepfakes*`    | 10 min  | Enseignement et débat           |
+| {ref}`dSimon<gen.dsimon>`                    | 15 min  | Apprentissage et discussion           |
+| {ref}`Découverte d'un générateur de texte : GPT<gen.gpt>`           | 15 min  | Discussion |
+| {ref}`Générateur de son<gen.son>`    | 5 min  | Enseignement           |
+| {ref}`Générateur de vidéo et *Deepfakes*<gen.deep>`    | 10 min  | Enseignement et débat           |
 
 
 
-(nomactivite.nomdeletape1)=
+(gen.dsimon)=
 ### dSimon
 
 *Durée : 15 min*
@@ -52,7 +52,7 @@ Cet article décrit une performance qui s’est produite au Théâtre de Vidy
 à Lausanne. Les réponses de l’interview ont été écrites par une intelligence artificielle, entraînée sur les communications personnelles de l’artiste genevois Simon Senn.
 
 
-(nomactivite.nomdeletape2)=
+(gen.gpt)=
 ### Découverte d'un générateur de texte : GPT
 
 *Durée : 15 min*
@@ -75,7 +75,7 @@ sur le site OpenAI, gratuit pendant 3 mois].
 
 
 
-(nomactivite.nomdeletape3)=
+(gen.son)=
 ### Activité. Générateur de son 
 
 *Durée : 5 min*
@@ -89,7 +89,7 @@ Pour les Lausannois, faire parler Claire, la voix du métro :
 
 
 
-(nomactivite.nomdeletape4)=
+(gen.deep)=
 ### Activité. Générateur de vidéo et *Deepfakes*
 
 *Durée : 10 min*
