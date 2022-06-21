@@ -110,11 +110,3 @@ L'apprentissage passe par tous les sens, et lorsque possible, nous avons fait ap
 
 
 
-
-```{toctree}
-:maxdepth: 1
-:numbered: 1
-Planification <plan/planification>
-Activités <activ/index>
-Exercices <exo/index>
-```
