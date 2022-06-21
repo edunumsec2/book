@@ -53,8 +53,8 @@ Six activités au choix complètent ces ressources dans la partie *Enseigner* :
 |-------|---------|
 | <a href="../algo1/activ/algo-tri.html"> Les algorithmes de tri  </a>| une activité exploratoire débranchée et collaborative pour découvrir les algorithmes de tri en triant des cartes.|
 | <a href="../algo1/activ/epidemie/index.html"> Modéliser une épidémie </a>| Une introduction à la démarche de modélisation en utilisant python pour des élèves sachant déjà un peu programmer |
-| <a href="../algo1/activ/monochromes.html"> Monochromes </a>| |
-| <a href="../algo1/activ/stroboscope.html"> Stroboscope </a>| |
+| <a href="../algo1/activ/monochromes.html"> Monochromes </a>| Une activité de programmation qui permet d'explorer diverses représentations des couleurs|
+| <a href="../algo1/activ/stroboscope.html"> Stroboscope </a>| ...|
 |<a href="../algo1/activ/dijkstra.html"> L’algorithme du plus court chemin de Dijkstra</a>| Une activité débranchée pour découvrir l'algorithme de Dijkstra en mode collectif et en se déplaçant dans la salle. |
 | <a href="../algo1/activ/puissance4.html"> Minimax / Puissance 4</a>| Une activité de programmation d'un jeu de puissance4 sur 4 périodes pour des élèves maitrisant déjà bien la programmation. |
 
@@ -96,7 +96,7 @@ La conception des activités a suivi les principes suivants :
 
 - Développer une compréhension intuitive des concepts
 
-- Faire réfléchir les élèves (avec leur tête, mais pas seulement …)
+- Faire réfléchir les élèves (avec leur tête, mais aussi avec leur corps)
 
 - Induire des questionnements de type algorithmique
 
