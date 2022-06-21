@@ -62,7 +62,11 @@ Six activités au choix complètent ces ressources dans la partie *Enseigner* :
 
 
 
-## Philosophie de la conception des ressources Algorithmique I [partie Apprendre] 
+## Approche pédagogique de la thématique Algorithmique I
+
+### Partie Apprendre
+
+La partie "apprendre" a été conçue pour être utilisable de manière autonome par les élèves.
 
 Au niveau de la durée, chaque chapitre est conçu comme un **cours de 2 périodes** ou 90 minutes. 
 
@@ -86,9 +90,9 @@ Pour la conception, nous avons suivis quatre principes :
 
 
 
-## Philosophie de la conception des activités Algorithmique I [partie Enseigner] 
+### Activités 
 
-Chaque activité est prévue comme un labo sur **1 à 4 périodes** en branché ou en débranché. 
+Chaque activité proposée dans la partie "enseigner" est prévue comme un labo sur **1 à 4 périodes** en branché ou en débranché. 
 
 La conception des activités a suivi les principes suivants :
 
