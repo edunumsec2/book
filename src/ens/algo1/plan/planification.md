@@ -61,9 +61,9 @@ Les parties d'algorithmique sont en **gras**.
 |27		 | <a href="../../appr/algo1/algorithmes.html">**1. Les algorithmes (suite)**</a>	           |                                                      |
 |28		 | <a href="../../appr/algo1/tri.html">**2. Trie, cherche et trouve**</a>		       | <a href="../rep-info/activ/huffman.html">Compression et codage de Huffman</a>                     |
 |29		 | <a href="../../appr/algo1/tri.html">**2. Trie, cherche et trouve (suite)**</a>	   |	                                                  |
-|30		 | <a href="../../appr/algo1/algo-progs.html">**3. Des algorithmes aux programmes**</a>	   | <a href="../algo1/activ/epidemie/index_new.html">**Epidémie**</a> / <a href="../algo1/activ/epidemie/monochrome.html">**Monochrome** /<a href="../algo1/activ/epidemie/stroboscopes.html"> **Stroboscope**</a> / <a href="../algo1/activ/epidemie/puissance4.html">**Puissance 4 I**</a>  |
+|30		 | <a href="../../appr/algo1/algo-progs.html">**3. Des algorithmes aux programmes**</a>	   | <a href="../algo1/activ/epidemie/index_new.html">**Epidémie**</a> / <a href="../algo1/activ/epidemie/monochromes.html">**Monochromes** /<a href="../algo1/activ/epidemie/stroboscopes.html"> **Stroboscope**</a> / <a href="../algo1/activ/epidemie/puissance4.html">**Puissance 4 I**</a>  |
 |31		 | <a href="../../appr/algo1/algo-progs.html">**3. Des algorithmes aux programmes (suite)**</a>  | 			                                      |
-|32		 | TEST Algorithmique			               | <a href="../algo1/activ/epidemie/index_new.html">**Epidémie**</a> / <a href="../algo1/activ/epidemie/monochrome.html">**Monochrome**</a> / <a href="../algo1/activ/epidemie/stroboscopes.html">**Stroboscope**</a>  / <a href="../algo1/activ/epidemie/puiassance4.html">**Puissance 4 II**</a>      |
+|32		 | TEST Algorithmique			               | <a href="../algo1/activ/epidemie/index_new.html">**Epidémie**</a> / <a href="../algo1/activ/epidemie/monochromes.html">**Monochromes**</a> / <a href="../algo1/activ/epidemie/stroboscopes.html">**Stroboscope**</a>  / <a href="../algo1/activ/epidemie/puiassance4.html">**Puissance 4 II**</a>      |
 |33		 | Réserve                                     |                                                      |  
 |34		 | Réserve			                           |                                                      |  
 

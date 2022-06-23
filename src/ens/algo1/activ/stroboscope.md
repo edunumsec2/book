@@ -1,21 +1,21 @@
-# Monochrome ou l'importance d'une « bonne » représentation. 
+# Stroboscope ou le *random* fait bien les choses 
 
 ---- 
 
-Cette activité amène progressivement l'élève à construire un « variateur de lampe LED ». L'objectif est de créer une prise de conscience qu'une « bonne » représentation est à la base de la résolution d'une tâche.
+Cette activité amène progressivement l'élève à simuler un « stroboscope », construit de manière incrémentale. L'objectif est de créer une prise de conscience sur les possibilités de l'utilisation du hasard dans la programmation.
 
 
 ----
 
-```{admonition} Monochrome ou l'importance d'une « bonne » représentation
+```{admonition} Stroboscope ou le *random* fait bien les choses
 :class: hint
 
 * Thème : Algorithmique et programmation (lors du dernier chapitre d'*Algorithmique I*)
 * Niveau : `moyen`
 * Durée : 2 période ou 90 minutes
-* Objectifs pédagogiques : Résoudre un problème donné de manière progressive en versionnant son code. Choisir la bonne représentation de l'information pour résoudre un problème.
+* Objectifs pédagogiques : Résoudre un problème donné de manière incrémentale, tout en versionnant son code. Utiliser le hasard pour résoudre un problème.
 * Modalité : `branché`
-* Matériel : fichier de départ *monochrome_1_0.py* (téléchargeable en haut de cette page)
+* Matériel : fichier de départ *stroboscope_1_0.py* (téléchargeable en haut de cette page)
 * Prérequis : bases de la programmation
 
 ```
@@ -39,7 +39,7 @@ Cette activité amène progressivement l'élève à construire un « variateur d
 
 *Durée : 10 min*
 
-Télécharger le fichier de base *monochrome_1_0.py* qui permet d'afficher une fenêtre « écran noir » en utilisant le module *pygame*. Prendre le temps d'analyser le code du fichier. 
+Télécharger le fichier de base *monochromes_1_0.py* qui permet d'afficher une fenêtre « écran noir » en utilisant le module *pygame*. Prendre le temps d'analyser le code du fichier. 
 
 Conseil : le raccourci *ctrl+c* permet de quitter le programme plus rapidement qu'en fermant la fenêtre.
 
@@ -49,7 +49,9 @@ Conseil : le raccourci *ctrl+c* permet de quitter le programme plus rapidement q
 
 *Durée : 15 min*
 
-Dupliquer le fichier. Changer le 0 dans le nom du fichier en 1. Modifier le code pour passer progressivement d'un écran blanc à un écran noir. Utiliser la fonction *sleep()* du module *time* pour changer de couleur chaque milliseconde. A votre avis pourquoi l'écran blanc s'affiche à nouveau ? 
+Dupliquer le fichier. Changer le 0 dans le nom du fichier en 1. Modifier le code pour rajouter un écran blanc après  l'écran noir. 
+
+"A votre avis pourquoi l'écran blanc s'affiche à nouveau ?*
 
 
 (apprentissage.plus)=
