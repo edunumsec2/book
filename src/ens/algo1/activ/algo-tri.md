@@ -16,7 +16,7 @@ Un dispositif physique ainsi qu'un catalogue d'opérations sont définis afin de
 * Objectifs d’apprentissage : Découvrir quelques algorithmes de tri et leur pertinence sociétale
 * Notions fondamentales : instruction, algorithme, tri, éventuellement complexité
 * Approche pédagogique : Débranché
-* Matériel : plusieurs set de cartes numérotées (p.ex. jeu de Uno), papier, feuille comparateur (une feuille sur laquelles sont dessinés deux rectangle pour poser les deux cartes que l'on veut comparer), un peu d'espace pour se mouvoir dans la classe
+* Matériel : plusieurs set de cartes numérotées (p.ex. jeu de Uno), papier, feuille comparateur (une feuille sur laquelles sont dessinés deux rectangle pour poser les deux cartes que l'on veut comparer), un peu d'espace pour se mouvoir dans la classs
 * Niveau : débutant
 * Mots-clés : tri
 * Dynamique (groupe / individuel) : activité coopérative

@@ -7,8 +7,25 @@ Marche à suivre <m_a_s>
 Corrigé <solution>
 ```
 
----- 
+----
 
+Une activité consistant à adopter, de manière guidée et collaborative une démarche de modélisation, en l'occurence la propagation d'une épidémie.
+
+
+```{admonition} Modéliser une épidémie
+:class: hint
+* Thème : Algorithmique et programmation (lors du dernier chapitre d'*Algorithmique I*)
+* Niveau : `moyen`
+* Durée : 2 période ou 90 minutes
+* Objectifs pédagogiques : Comprendre la démarche de modélisation d'un phénomène naturel
+* Modalité : `branché`
+* Matériel :
+* Prérequis : bases de la programmation
+* Dynamique (groupe / individuel) : activité coopérative
+* Mots-clés : modèle SIR,  
+```
+
+## Préambule
 Cette activité consiste à modéliser la propagation d'une épidémie dans une population dans le but de prévoir son évolution et les effets potentiels de mesures sanitaires. C'est l'occasion d'introduire les élèves à la modélisation et à la simulation. Le but est de guider les élèves vers une démarche de modélisation en se basant sur leurs propres idées. 
 
 Là où cela peut être un peu déroutant pour les élèves, c'est qu'on fait quelque chose qui ressemble à des calculs (et donc des mathématiques), mais il n'y a pas de juste ou faux, mais des modèles qui représentent plus ou moins bien la réalité d'un phénomène. L'objectif de cette activité est de faire réfléchir les élèves sur ce phénomène et les orienter vers une modélisation possible. On peut ensuite réfléchir sur ce qui fait la cohérence, la force ou la faiblessse d'un modèle et effectuer une analyse critique de ce modèle. C'est pourquoi il est préférable de modéliser un phénomène familier afin de pouvoir plus facilement le comparer à son modèle. 
@@ -18,24 +35,7 @@ Le modèle proposé se base sur le modèle SIR classique (Kermack & McKendrick, 
 
 Cette activité peut être effectuée dans une éditeur python ou sur un jupyter-notebook. L'avantage du notebook est que les élèves ont tout dans un seul fichier (consignes, codes, graphes, réponses aux questions), le désavantage est qu'il faut une infrastructure informatique plus importante pour faire tourner le code à la maison (jupyter-lab).
 
-----
 
-```{admonition} Caractéristiques
-:class: hint
-
-* Nom : Modéliser une épidémie
-* Durée : 90 minutes
-* Thème : modélisation
-* Objectifs d’apprentissage : comprendre la démarche de modélisation, évaluer un modèle
-* Notions fondamentales : modèle 
-* Approche pédagogique : branchée
-* Matériel : ordinateur
-* Niveau : intermédiaire,
-* Pré-requis: une certaine expérience en programmation (variables et boucle)
-* Mots-clés : modèle SIR,  
-* Dynamique (groupe / individuel) : par groupes
-* Taille du groupe : demi-classe ou classe entière
-```
 
 ```{dropdown} **Déroulement**
 

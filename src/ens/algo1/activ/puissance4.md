@@ -4,25 +4,22 @@
 
 Découvrir l'algorithme minimax en programmant un jeu de puissance 4
 
-Attention : cette activité a comme prérequis que les élèves aient déjà une certaine maitrise de la programmation, en particulier qu'ils soient à l'aise avec l'utilisation des fonctions et les types composés (dictionnaires, listes, tuples, etc.)
-
 ----
 
 ```{admonition} Caractéristiques
 :class: hint
+* Thème : Algorithmique et programmation
+* Niveau : difficile
+* Durée : 4 à 6 périodes selon l'aisance des élèves et un éventuel travail en devoir
+* Objectifs pédagogiques : Découvrir et implémenter l'algorithme du minimax dans le cadre d'un jeu de puissance 4. 
+* Notions fondamentales: modélisation, minimax, parcours d'arbre, éventuellement API
+* Modalité : branché
+* Matériel : évenutellement un jeu de puissance 4
+* Prérequis : une certaine aisance en programmation, notamment les fonctions et les types composés (listes, tableaux).
 
-* Nom : Découvrir l'algorithme minimax en programmant un jeu de puissance 4
-* Durée : 4 périodes au total: 2 période consécutives pour lancer le projet, éventuellement à finir à la maison. Puis 2 périodes pour la stratégie (algorithme minimax) et pour présenter le résultat. 
-* Thème : Algorithmique
-* Objectifs d’apprentissage : Découvrir comment on conceptualise et implémente un jeu de stratégie en utilisant la stratégie minimax. Bonus : Découvrir l'utilité des API. 
-* Notions fondamentales : `à compléter`
-* Approche pédagogique : Une partie conceptualisation en débranché, suivie d'une réalisation sur ordinateur.
-* Matériel : Eventuellement un puissance 4.
-* Niveau : `à compléter`
-* Mots-clés : `à compléter`
-* Dynamique (groupe / individuel) : `à compléter`
-* Taille du groupe : `à compléter`
 ```
+
+
 
 ```{dropdown} **Déroulement**
 
@@ -67,7 +64,7 @@ Afin de faire rentrer les élèves dans cette activité et de s'assurer que tous
 
 Plusieurs dispositifs sont envisageables. Par exemples, on peut faire jouer deux équipes d'élèves avec un puissance 4 dessiné au tableau. Une autre option est de faire jouer les élèves contre l'enseignant·e, ce qui lui donne un certain contrôle sur la durée de la partie (potentiellement au détriment de son prestige...). Idéalement il faudrait s'assurer que tous les élèves participent à la réflexion, par exemple en faisant désignant à chaque tour l'élève qui va proposer un coup à son équipe qui en discutera. 
 
-Afin de pouvoir désigner sans ambiguïté les position du jeu, il sera utile de numéroter les coordonnées de la matrice du jeu, de façon analogue au langage utiliser (par exemple en commençant à 0
+Afin de pouvoir désigner sans ambiguïté les position du jeu, il sera utile de numéroter les coordonnées de la matrice du jeu, de façon analogue au langage utilisé (par exemple en commençant à 0)
 
 (puissance4.conceptualisation)=
 ## Conceptualisation
@@ -87,7 +84,7 @@ sans doute aucune idée de comment commencer et le but de cette discussion sera 
 *Durée : 10 mn*
 
 Par groupe de deux ou trois élèves, ils doivent discuter et proposer dans cet ordre:
-1. Une représentation de l'état du jeu en utilisant les structures de données qu'ils connaissent 
+1. Une représentation de l'état du jeu en utilisant les structures de données qu'ils connaissent (par exemple une liste de listes, une matrice numpy, une liste de chaînes de caractères, une liste simple, un dictionnaire,...) 
 1. Une ébauche de stratégie, c'est à dire comment choisir le prochain coup
 
 Pendant ce temps, l'enseignant·e passe dans les rangs afin de comprendre et d'orienter les propositions des élèves. A la fin, les élèves résument leur proposition sur papier.
@@ -115,7 +112,7 @@ L'enseignant·e distribue ensuite un canevas de code contenant déjà la partie 
 par groupe ou individuellement la représentation du jeu, les fonctions d'initialisation, d'accès, et de modification de l'état du jeu. Les API sont déjà
 définies par l'enseignant·e.
 
-Les élèves doivent ensuite coder la fonction de stratégie, ce qui leur permettra de tester le jeu. Iels se rendront vite compte de la faiblesse de la stratégie. L'étape suivante consiste à améliorer la stratégie, en excluant les coups qui permettent à l'adversaire de gagner en utilisant testant toutes ses possibilité. Il est ensuite possible d'améliorer la stratégie en regardant un coup en avance, puis deux, puis trois, etc. L'enseignant·e tentera d'orienter les élèves afin de
+Les élèves doivent ensuite coder la fonction de stratégie, ce qui leur permettra de tester le jeu. Iels se rendront vite compte de la faiblesse de la stratégie. L'étape suivante consiste à améliorer la stratégie, en excluant les coups qui permettent à l'adversaire de gagner en testant toutes ses possibilité. Il est ensuite possible d'améliorer la stratégie en regardant un coup en avance, puis deux, puis trois, etc. L'enseignant·e tentera d'orienter les élèves afin de
 leur faire découvrir par eux-même la stratégie du minimax. 
 
 (puissance4.competition)=
