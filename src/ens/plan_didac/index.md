@@ -31,6 +31,5 @@ considérée, plus 1. Au moins une note devra porter sur les travaux pratiques.
 
 ```{toctree}
 :maxdepth: 1
-:numbered: 1
-Proposition 1 <plandidac1>
+Proposition 1 <plandidac2>
 ```
