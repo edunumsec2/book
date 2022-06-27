@@ -254,23 +254,25 @@ class GlossaryRole(SphinxRole):
         return [target_node, node], []
 
 def setup(app):
+
     app.add_node(glossary_list)
     app.add_node(glossary_reference,
         html=(visit_glossary_reference, depart_glossary_reference))
 
     app.connect('env-before-read-docs', load_glossary_csv)
-    app.connect('doctree-resolved', process_glossary_list)
-    app.connect('env-purge-doc', purge_glossary_references)
-    app.connect('env-merge-info', merge_glossary_references)
+   # app.connect('doctree-resolved', process_glossary_list)
+   # app.connect('env-purge-doc', purge_glossary_references)
+   # app.connect('env-merge-info', merge_glossary_references)
 
-    app.add_directive('definition', GlossaryDefDirective)
-    app.add_directive('glossaire', GlossaryListDirective)
-    app.add_role('glo', GlossaryRole())
+   # app.add_directive('definition', GlossaryDefDirective)
+   # app.add_directive('glossaire', GlossaryListDirective)
+   # app.add_role('glo', GlossaryRole())
 
-    app.add_config_value('glossary_doc', None, 'env')
+   # app.add_config_value('glossary_doc', None, 'env')
 
-    static_dir = os.path.join(os.path.dirname(__file__), "static")
-    app.connect("builder-inited", (lambda app: app.config.html_static_path.append(static_dir)))
+   # static_dir = os.path.join(os.path.dirname(__file__), "static")
+   # app.connect("builder-inited", (lambda app: app.config.html_static_path.append(static_dir)))
+
     app.add_js_file("glossary.js")
     app.add_css_file("glossary.css")
 

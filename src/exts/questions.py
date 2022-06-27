@@ -58,6 +58,40 @@ def visit_check_buttons_html(self, node):
 def depart_check_buttons_html(self, node):
     self.body.append("</div>")
 
+### latex (by Micha) 
+def visit_answer_latex(self, node):
+    classes = ["answer"]
+    if node.is_correct:
+        classes.append("correct")
+    else:
+        classes.append("incorrect")
+
+   
+    self.body.append("start answer")
+
+
+def depart_answer_latex(self, node):
+    self.body.append("end answer")
+
+def visit_question_latex(self, node):
+    classes = ["question"]
+    if node["multi"]:
+        classes.append("multi")
+    self.body.append("start question")
+
+    
+def depart_question_latex(self, node):
+    self.body.append("end question")
+
+def visit_check_buttons_latex(self, node):
+    tag = self.starttag(node, "div", CLASS="controls")
+    self.body.append("start check button")
+
+def depart_check_buttons_latex(self, node):
+    self.body.append("end check button")
+
+
+
 
 class Question(SphinxDirective):
     required_arguments = 0
@@ -113,7 +147,7 @@ class Question(SphinxDirective):
         container += admonition
 
         return [container]
-
+## todo: update Micha
 def setup(app):
     app.add_directive("question", Question)
     app.add_node(question, html=(visit_question_html, depart_question_html))
