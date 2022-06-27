@@ -2,38 +2,38 @@
 
 ------
 
-Activité collaborative et débranchée pour introduire l'algorithme du plus court de chemin de Dijkstra.
+Activité collaborative et débranchée pour introduire l'algorithme du plus court de chemin de Dijkstra en partant d'une exemple de la vie quotidienne
 
 ------
 
-```{admonition} Caractéristiques
+```{admonition} L'algorithme du plus court chemin de Dijkstra
 :class: hint
+* Thème : Algorithmique 2 (graphes)
+* Niveau : `facile`
+* Durée : 2 période ou 90 minutes
+* Objectifs pédagogiques : Découvrir et comprendre l'algorithme de Dijkstra
+* Notions fondamentales: longueur de chemin dans un graphe
+* Modalité : `débranché`
+* Matériel : Un graphe découpé en morceaux (chaque morceaux contient un noeud et tous ses voisins), 3 feuilles de zones, des fiches (une par noeud).
+* Prérequis : aucun
+* Taille du groupe : `demi-classe` (mais peut être éventuellement testée en classe entière)
+* Dynamique (groupe / individuel) : activité coopérative
 
-* Nom : L'algorithme du plus court chemin de Dijkstra
-* Durée : 2 périodes
-* Thème : Algorithmique
-* Objectifs d’apprentissage : Découvrir l'algorithme de Dijkstra, son utilité, son fonctionnement
-* Notions fondamentales : `à compléter`
-* Approche pédagogique : Débranché
-* Matériel : `à compléter`
-* Niveau : `à compléter`
-* Mots-clés : `à compléter`
-* Dynamique (groupe / individuel) : `à compléter`
-* Taille du groupe : `à compléter`
 ```
 
+
+
 ```{dropdown} **Déroulement**
-1. {ref}`Mise en situation générale<dijkstra.miseensituation>` (5 mn) pour comprendre un contexte de la vie quotidienne dans lequel cet algorithme est utilisé et qui constituera un fil rouge concret tout au long de l'activité.  
+|			Etape			| Durée | Phase |
+|-----------------------------------------------| ------|-------|
+| 1. {ref}`Mise en situation générale<dijkstra.miseensituation>`  autour des services de navigation   | 5 min | Mise en situation |
+| 1. {ref}`Mise en situation spécifique<dijkstra.miseensituation2>`  pour passer à un niveau d'abstraction et de généralisation plus élévé.| 15 min | Objectivation et mise en situation |
+| 1. {ref}`Identification<dijkstra.identification>` , identification de l'objectif, explication de la non-trivialité du problème.| 5 min | Formalisation |
+|1. {ref}`Découverte<dijkstra.decouverte>`  par essais-erreurs de l'algorithme et de sa justification par simulation humaine.| 20 min | Exploration |
+|1. {ref}`Formalisation de l'algorithme  <dijkstra.formalisation>`|10 min| Institutionnalisation - Objectivation |
+|1. {ref}`Exemples d'utilisation<dijkstra.utilisation>` de l'algorithme et exercices.|15 min| Application|
+|1. {ref}`Modélisation <dijkstra.modelisation>` pour d'autre contextes |10 min| Réinvestissement|
 
-1. {ref}`Mise en situation spécifique<dijkstra.miseensituation2>`  (15 mn) pour passer à un niveau d'abstraction et de généralisation plus élévé. 
-
-1. {ref}`Identification<dijkstra.identification>`  (5 mn), identification de l'objectif, explication de la non-trivialité du problème.
-
-1. {ref}`Découverte<dijkstra.decouverte>`  (15 mn) par essais-erreurs de l'algorithme et de sa justification par simulation humaine.
-
-1. {ref}`Formalisation<dijkstra.formalisation>`  (10 mn) de l'algorithme.
-
-1. {ref}`Exemples d'utilisation<dijkstra.utilisation>`  (15 mn) de l'algorithme et exercices.
 
 ```
 (dijkstra.miseensituation)=
@@ -58,10 +58,10 @@ L'enseignant va sur une page de navigation (p.ex [OpenStreetMap](https://www.ope
 
 *Durée : 15 mn*
 
-```{tabbed} Exemple 1
+### Exemple 1
 L'enseignant distribue à chaque élève un graphe suffisamment compliqué dans lequels la longueur des
 arêtes est indiquée. Ils doivent trouver, individuellement, le plus court chemin reliant deux points.
-Le graphe est tel qu'il y a plusieurs plus courts chemins. 
+Eventuellement, le graphe peut être tel qu'il y a plusieurs plus courts chemins. 
 
 ![graphe 1](media/graph1.png)
 
@@ -71,8 +71,7 @@ Le graphe est tel qu'il y a plusieurs plus courts chemins.
 * Etes-vous sûr qu'il s'agit du plus court chemin? Le cas échéant, comment le savez-vous ?
 * Chacun donne son plus court chemin. 
 * Y a-t-il des chemins plus courts que ça ?
-```
-```{tabbed} Exemple 2
+###  Exemple 2
 
 Dans un voyage en voiture, on ne veut pas forcément le plus court chemin, mais souvent le plus rapide.
 
@@ -90,78 +89,83 @@ On retrouve le même graphe qu'avant, mais cette fois on a le temps de parcours 
 * Chacun-e donne son plus court chemin. 
 * Y a-t-il des chemins plus courts que ça ?
 * Que faut-il faire pour être sûr-e que ce soit vraiment le plus court ?
-```
+
 
 (dijkstra.identification)=
 ## Identification du problème
 
 *Durée : 5 mn*
 
-Le problème est donc donné sous forme d'un graphe constitué de *sommets* reliés par des *arêtes* qui ont une certaine *longueur*. Dans le cas ci-desssus, les sommets représentent des villes, les arêtes les routes, et les longueurs la durée du trajet. La *longueur totale* est donnée par la somme des longueurs des arêtes empruntée.
+Le problème est donc donné sous forme d'un graphe constitué de *sommets* reliés par des *arêtes* qui ont une certaine *longueur*. Dans le cas ci-desssus, les sommets représentent des villes, les arêtes les routes, et les longueurs la durée du trajet. La *longueur totale* est donnée par la somme des longueurs des arêtes empruntées.
 
 (dijkstra.decouverte)=
 ## Découverte 
 
-*Durée : 15 mn*
+*Durée : 20 mn*
 
 ````{panels}
 :column: col-lg
 🎲 Activité
 ^^^
-Pour déterminer le plus court chemin dans ce graphe, la classe va le faire tous ensemble. Chaque élève représente un sommet et reçoit le sous-graphe constitué de son sommet et ses voisins directs (autrement dit une liste de ses voisins et les distances correspondantes). Chaque élève prend en outre une feuille avec un
-crayon et une gomme.
+Pour déterminer le plus court chemin dans ce graphe, la classe va le faire tous ensemble. Chaque élève représente un sommet et reçoit le sous-graphe constitué de son sommet et ses voisins directs (autrement dit une liste de ses voisins et les distances correspondantes) ainsi qu'une fiche sur laquelle il note le nom de son sommet. Chaque élève prend en outre un crayon ou un stylo. Cette activité demande un peu de doigté de la part de l'enseignant-e pour que les élèves réalisent bien ce qu'il se passe. Au besoin, il faut adapter le graphe au nombre d'élèves prévu. 
+
 ```{dropdown} Déroulement
 
-L'enseignant délimite la classe en trois zones:
-1. La <span style="color:red">**zone A**</span>, contenant les sommets qui ont trouvé la longueur du chemin le plus court depuis le sommet de départ.
-1. La <span style="color:green">**zone B**</span>, contenant les sommets qui ont trouvé une longueur de chemin depuis le sommet de départ, mais pas forcément la plus petite.
-1. La <span style="color:black">**zone C**</span>, contenant les sommets qui n'ont pas trouvé de longueur depuis le sommet de départ.
+L'enseignant délimite la classe en trois zones et affiche les instructions correspondantes:
+1. La <span style="color:red">**zone rouge**</span>, contenant les sommets qui ont trouvé la longueur du chemin le plus court depuis le sommet de départ.
+1. La <span style="color:green">**zone verte**</span>, contenant les sommets qui ont trouvé une longueur de chemin depuis le sommet de départ, mais pas forcément la plus petite.
+1. La <span style="color:black">**zone blanche**</span>, contenant les sommets qui n'ont pas trouvé de longueur depuis le sommet de départ.
 
 Les instructions pour les élèves sont les suivantes:
-1. Les élèves commencent tous dans la <span style="color:black ">**zone C**</span>.
-1. Lorsqu'un·e élève se rend compte qu'elle peut calculer la longueur d'un chemin depuis le sommet de départ, elle écrit sur sa feuille par quel voisin ce chemin passe ainsi que la distance correspondante, et se place dans la <span style="color:green">**zone B**</span>.
+1. Tous les élèves commencent dans la <span style="color:black ">**zone blanche**</span>.
+1. Lorsqu'une élève se rend compte qu'elle peut calculer la longueur d'un chemin depuis le sommet de départ, elle écrit sur sa feuille par quel voisin ce chemin passe ainsi que la distance correspondante, et se place dans la <span style="color:green">**zone verte**</span>.
 1. Les élèves de la <span style="color:green">**zone B**</span> peuvent se voir mutuellement leur feuille
-1. Lorsqu'un·e élève de la <span style="color:green">**zone B**</span> se rend compte qu'il existe un chemin plus court que la longueur indiquée sur sa feuille, elle met sa feuille à jour. 
-1. Lorsqu'un·e élève se rend compte que le chemin indiqué sur sa feuille est le plus court, elle passe dans la <span style="color:red">**zone A**</span>.
-1. Dans la <span style="color:red">**zone A**</span>, toutes les feuilles sont clairement visibles. 
+1. Lorsqu'une élève de la <span style="color:green">**zone  verte**</span> se rend compte qu'il existe un chemin plus court que la longueur indiquée sur sa feuille, elle met sa feuille à jour. 
+1. Lorsqu'une élève se rend compte que le chemin indiqué sur sa feuille est le plus court, elle passe dans la <span style="color:red">**zone rouge**</span>.
+1. Dans la <span style="color:red">**zone rouge**</span>, toutes les feuilles sont clairement visibles de tous le monde.
 
-Si tout se passe bien, les élèves vont se déplacer dans les **<span style="color:green">zones B</span> et <span style="color:red ">C</span>** en commençant par le sommet de départ. Idéalement, elles doivent se rendre compte des principes de base de l'alogrithme de Dijkstra:
+Si tout se passe bien, les élèves vont se déplacer dans la **<span style="color:green">zones  verte</span> puis dans la <span style="color:red "> zone rouge </span>** en commençant par le sommet de départ. Idéalement, elles doivent se rendre compte des principes de base de l'alogrithme de Dijkstra:
 
 1. Si un de leur voisin direct a trouvé une longueur de chemin, il ont également une longueur de chemin en ajoutant la distance qui les sépare.
-1. Si un·e élève a le chemin de plus court de la <span style="color:green">**zone B**</span> et que personne ne s'y ajoute (i.e. tous les voisin des personnes dans la <span style="color:red">**zone A**</span> sont soit dans la <span style="color:red">**zone A**</span> soit dans la <span style="color:green">**zone B**</span>), elle peut passer en <span style="color:red">**zone A**</span>.
+1. Si un·e élève a le chemin de plus court de la <span style="color:green">**zone B**</span> et que personne ne s'y ajoute (i.e. tous les voisin des personnes dans la <span style="color:red">**zone A**</span> sont soit dans la <span style="color:red">**zone rouge**</span> soit dans la <span style="color:green">**zone verte**</span>), elle peut passer en <span style="color:red">**zone rouge **</span>.
 1. A la fin, en suivant les relations de voisinage, on peut reconstituer le chemin le plus court. 
 ```
 ````
 
 ```{admonition} Attention
 :class: caution
-Cette activité implémente dans les faits une version distribuée de l'algorithme où les sommets peuvent changer de zone en parallèle. Il est conseillé de bien marquer la transition à l'algorithme séquentiel.
+Au début, l'ordre des opérations a effectuer sera flou pour les élèves, mais après quelques itérations, une systématique devrait émerger (guidée par l'enseignant-e) dans l'ordre des mises à jour: dès qu'un sommet atteint la zone rouge, ses voisins de la zone blanches peuvent passer en zone verte, ses voisins de la zone verte peuvent se mettre à jour, puis celui avec la plus courte distance peut passer à son tour en zone rouge. Et on recommence...
 ```
 
 (dijkstra.formalisation)=
-## Formalisation
+## Formalisation / Institutionnalisation
 
-*Durée : 10 mn*
+*Durée : 15 mn*
 
-L'enseignant formalise l'algorithme au tableau avec l'aide des élèves. Pour aider à la compréhension et à la représentation, il peut utiliser des couleurs pour dénommer les zones et ainsi pouvoir changer les sommets de zone en modifiant la couleur (ou en utilisant un autre moyen graphique). Ici la **zone A** est "rouge", la **zone B** est "verte" et la **zone C** est "blanche" (non marquée). 
+L'enseignant-e formalise l'algorithme au tableau avec l'aide des élèves. Pour aider à la compréhension et à la représentation, on réutilise les couleurs pour dénommer les zones et ainsi pouvoir changer les sommets de zone en modifiant la couleur. 
 
 
 ```{dropdown} Formalisation
-1. Mettre le <span style="color:black ">sommet de départ (S)</span> en rouge, sa distance au sommet de départ est 0. 
-1. Mettre en vert tous les <span style="color:green">sommets voisins de ce sommet (S)</span> qui sont en blanc et indiquer en vert leur <span style="color:green">distance au sommet de départ</span> en passant par ce sommet S et indiquer le chemin à ce sommet S par une <span style="color:green">flèche verte</span>.
-1. Vérifier tous les <span style="color:green">voisins de ce sommet (S)</span> qui sont en vert si leur <span style="color:black">distance au sommet de départ est plus petite en passant par ce sommet</span>. Si c'est le cas ajuster leur distance au sommet de départ et leur flèche pour qu'elle pointe vers le sommet S.
+1. Mettre le <span style="color:black ">sommet de départ S</span> en rouge, sa distance au sommet de départ est 0. 
+1. Mettre en vert tous les <span style="color:green">sommets voisins de ce sommet S</span> qui sont en blanc et indiquer en vert leur <span style="color:green">distance au sommet de départ</span> en passant par ce sommet S et indiquer le chemin à ce sommet S par une <span style="color:green">flèche verte</span>.
+1. Vérifier tous les <span style="color:green">voisins de ce sommet S</span> qui sont en vert si leur <span style="color:black">distance au sommet de départ est plus petite en passant par ce sommet</span>. Si c'est le cas ajuster leur distance au sommet de départ et leur flèche pour qu'elle pointe vers le sommet S.
 1. Prendre le <span style="color:green">sommet vert</span> avec la plus petite distance au sommet de départ et le <span style="color:red ">mettre en rouge</span> avec sa distance et sa flèche. Ce sommet est le nouveau sommet S.
 1. Si ce sommet S est le sommet d'arrivée, le plus court chemin est obtenu en suivant les flèches, sinon retourner au point 2.
 
-![step123](media/steps.gif)
 ```
+
 
 (dijkstra.utilisation)=
 ## Exemples d'utilisation 
 
 *Durée : 15 mn*
 
-L'enseignant fait un exemple au tableau avec les élèves et leur propose ensuite d'essayer seuls ou par deux sur des graphes donnés. 
+L'enseignant fait un exemple au tableau avec les élèves et leur propose ensuite d'essayer seuls ou par deux sur des graphes donnés. Une correction est en suite proposée.
+
+
+(dijkstra.modelisation)=
+## Modélisation
+*Durée : 10 mn*
 
 ```{tabbed} Jeu : de VERSE à LITRE
 Ce jeu consiste à trouver une manière de relier deux mots ayant le même nombre de lettres (par exemple VERSE et LITRE) avec une série de mots existants dont chaque mot ne diffère du précédent que d'une seule lettre. Dans notre exemple, une solution est donnée par :
