@@ -14,7 +14,7 @@ Activité collaborative et débranchée pour introduire l'algorithme du plus cou
 * Objectifs pédagogiques : Découvrir et comprendre l'algorithme de Dijkstra
 * Notions fondamentales: longueur de chemin dans un graphe
 * Modalité : `débranché`
-* Matériel : Un graphe découpé en morceaux (chaque morceaux contient un noeud et tous ses voisins), 3 feuilles de zones, des fiches (une par noeud).
+* Matériel : Un {download}`graphe découpé en morceaux <media/dijkstra/sommets.pdf>` (chaque morceaux contient un noeud et tous ses voisins), 3 {download}`feuilles de zones<media/dijkstra/zones.pdf>`, des {download}`fiches<media/dijkstra/fiche.pdf>` (une par noeud) du scotch pour accrocher des feuille aux murs de la classe (ou un système d'aimants, des punaise, selon le type de surface disponible) 
 * Prérequis : aucun
 * Taille du groupe : `demi-classe` (mais peut être éventuellement testée en classe entière)
 * Dynamique (groupe / individuel) : activité coopérative
@@ -39,7 +39,7 @@ Activité collaborative et débranchée pour introduire l'algorithme du plus cou
 (dijkstra.miseensituation)=
 ## Mise en situation générale
 
-*Durée : 5 mn*
+*Durée : 5 min*
 
 L'enseignant va sur une page de navigation (p.ex [OpenStreetMap](https://www.openstreetmap.org/#map=8/46.825/8.224)) et montre un exemple de requête de chemin pour relier deux points.
 
@@ -56,14 +56,14 @@ L'enseignant va sur une page de navigation (p.ex [OpenStreetMap](https://www.ope
 (dijkstra.miseensituation2)=
 ## Mise en situation spécifique
 
-*Durée : 15 mn*
+*Durée : 15 min*
 
 ### Exemple 1
 L'enseignant distribue à chaque élève un graphe suffisamment compliqué dans lequels la longueur des
 arêtes est indiquée. Ils doivent trouver, individuellement, le plus court chemin reliant deux points.
 Eventuellement, le graphe peut être tel qu'il y a plusieurs plus courts chemins. 
 
-![graphe 1](media/graph1.png)
+![graphe 1](media/dijkstra/graph1.png)
 
 **Mise en commun**
 
@@ -80,7 +80,7 @@ de traverser la ville.
 
 On retrouve le même graphe qu'avant, mais cette fois on a le temps de parcours entre chaque point qui est indiqué et on ne peut plus se baser sur les aspects géométriques pour trouver le plus courts chemin.
 
-![graphe 2](media/graph2.png)
+![graphe 2](media/dijkstra/graph2.png)
 
 **Mise en commun**
 
@@ -94,14 +94,14 @@ On retrouve le même graphe qu'avant, mais cette fois on a le temps de parcours 
 (dijkstra.identification)=
 ## Identification du problème
 
-*Durée : 5 mn*
+*Durée : 5 min*
 
 Le problème est donc donné sous forme d'un graphe constitué de *sommets* reliés par des *arêtes* qui ont une certaine *longueur*. Dans le cas ci-desssus, les sommets représentent des villes, les arêtes les routes, et les longueurs la durée du trajet. La *longueur totale* est donnée par la somme des longueurs des arêtes empruntées.
 
 (dijkstra.decouverte)=
 ## Découverte 
 
-*Durée : 20 mn*
+*Durée : 20 min*
 
 ````{panels}
 :column: col-lg
@@ -140,7 +140,7 @@ Au début, l'ordre des opérations a effectuer sera flou pour les élèves, mais
 (dijkstra.formalisation)=
 ## Formalisation / Institutionnalisation
 
-*Durée : 15 mn*
+*Durée : 15 min*
 
 L'enseignant-e formalise l'algorithme au tableau avec l'aide des élèves. Pour aider à la compréhension et à la représentation, on réutilise les couleurs pour dénommer les zones et ainsi pouvoir changer les sommets de zone en modifiant la couleur. 
 
@@ -149,7 +149,7 @@ L'enseignant-e formalise l'algorithme au tableau avec l'aide des élèves. Pour 
 1. Mettre le <span style="color:black ">sommet de départ S</span> en rouge, sa distance au sommet de départ est 0. 
 1. Mettre en vert tous les <span style="color:green">sommets voisins de ce sommet S</span> qui sont en blanc et indiquer en vert leur <span style="color:green">distance au sommet de départ</span> en passant par ce sommet S et indiquer le chemin à ce sommet S par une <span style="color:green">flèche verte</span>.
 1. Vérifier tous les <span style="color:green">voisins de ce sommet S</span> qui sont en vert si leur <span style="color:black">distance au sommet de départ est plus petite en passant par ce sommet</span>. Si c'est le cas ajuster leur distance au sommet de départ et leur flèche pour qu'elle pointe vers le sommet S.
-1. Prendre le <span style="color:green">sommet vert</span> avec la plus petite distance au sommet de départ et le <span style="color:red ">mettre en rouge</span> avec sa distance et sa flèche. Ce sommet est le nouveau sommet S.
+1. Prendre le <span style="color:green">sommet vert</span> avec la plus petite dgiistance au sommet de départ et le <span style="color:red ">mettre en rouge</span> avec sa distance et sa flèche. Ce sommet est le nouveau sommet S.
 1. Si ce sommet S est le sommet d'arrivée, le plus court chemin est obtenu en suivant les flèches, sinon retourner au point 2.
 
 ```
@@ -158,14 +158,14 @@ L'enseignant-e formalise l'algorithme au tableau avec l'aide des élèves. Pour 
 (dijkstra.utilisation)=
 ## Exemples d'utilisation 
 
-*Durée : 15 mn*
+*Durée : 15 min*
 
 L'enseignant fait un exemple au tableau avec les élèves et leur propose ensuite d'essayer seuls ou par deux sur des graphes donnés. Une correction est en suite proposée.
 
 
 (dijkstra.modelisation)=
 ## Modélisation
-*Durée : 10 mn*
+*Durée : 10 min*
 
 ```{tabbed} Jeu : de VERSE à LITRE
 Ce jeu consiste à trouver une manière de relier deux mots ayant le même nombre de lettres (par exemple VERSE et LITRE) avec une série de mots existants dont chaque mot ne diffère du précédent que d'une seule lettre. Dans notre exemple, une solution est donnée par :
