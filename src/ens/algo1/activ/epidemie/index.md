@@ -19,10 +19,10 @@ Une activité consistant à adopter, de manière guidée et collaborative une d�
 * Durée : 2 période ou 90 minutes
 * Objectifs pédagogiques : Comprendre la démarche de modélisation d'un phénomène naturel
 * Modalité : `branché`
-* Matériel :
+* Matériel : aucun
 * Prérequis : bases de la programmation
 * Dynamique (groupe / individuel) : activité coopérative
-* Mots-clés : modèle SIR,  
+* Notions fondamentales: modélisation, modèle SIR,  
 ```
 
 ## Préambule
@@ -37,27 +37,20 @@ Cette activité peut être effectuée dans une éditeur python ou sur un jupyter
 
 
 
-```{dropdown} **Déroulement**
+## Déroulement 
+|			Etape			| Durée | Phase |
+|-----------------------------------------------| ------|-------|
+|{ref}`Mise en situation<epidemie.misenensituation>`  autour de l'évènement historique de la fermeture des écoles le 13 mars 2020.| 5 min | mise en situation |
+| {ref}`Conception du modèle<epidemie.conception>` par groupe de deux ou trois, pendant que l'enseignant passe dans les rangs pour orienter le travail.| 15 min | exploration| 
+| {ref}`Évaluation<epidemie.evaluation>` durant laquelle chaque groupe fait un commentaire sur le modèle d'un autre groupe. | 5 min | évaluation| 
+| {ref}`Présentation des modèles<epidemie.presentation>`  devant le reste de la classe, et discussions des modèles. |15 min| objectivation |
+| {ref}`Gestion des contraintes<epidemie.contraintes>` durant laquelle les étudiant·e·s choisissent un modèle et avancent dans la marche à suivre. | 5 min | Application |
+| {ref}`Discussion<epidemie.discussion>`  où les groupes ayant des résultats négatifs viennent expliquer devant la classe pourquoi ils obtiennent ces chiffres et comment l'éviter.|10 min| Discussion|
+| {ref}`Visualisation<epidemie.visualisation>` des graphes de courbes épidémiologiques.|15 min| Application |
+| {ref}`Recherche des paramètres<epidemie.recherche>`  où les groupes essaient "à la main" de reproduire des courbes semblables à l'une ou à l'autre vague et les affichent en superposition| 15 min | exploration |
+| {ref}`Présentation et discussion des résultats<epidemie.resultats>`| 10 min | objectivation/discussion|
 
-1. {ref}`Mise en situation<epidemie.misenensituation>` (5 mn) autour de l'évènement historique de la fermeture des écoles le 13 mars 2020. 
 
-1. {ref}`Conception du modèle<epidemie.conception>` (15 mn) par groupe de deux ou trois, pendant que l'enseignant passe dans les rangs pour orienter le travail. 
-
-1. {ref}`Évaluation<epidemie.evaluation>` (5 mn) durant laquelle chaque groupe fait un commentaire sur le modèle d'un autre groupe. 
-
-1. {ref}`Présentation des modèles<epidemie.presentation>` (15 mn) devant le reste de la classe, et discussions des modèles. 
-
-1. {ref}`Gestion des contraintes<epidemie.contraintes>` (5 mn) durant laquelle les étudiant·e·s choisissent un modèle et avancent dans la marche à suivre.
-
-1. {ref}`Discussion<epidemie.discussion>` (10 mn) où les groupes ayant des résultats négatifs viennent expliquer devant la classe pourquoi ils obtiennent ces chiffres et comment l'éviter.
-
-1. {ref}`Visualisation<epidemie.visualisation>` (15 mn) des graphes de courbes épidémiologiques.
-
-1. {ref}`Recherche des paramètres<epidemie.recherche>` (15 mn) où les groupes essaient "à la main" de reproduire des courbes semblables à l'une ou à l'autre vague et les affichent en superposition
-
-1. {ref}`Présentation et discussion des résultats<epidemie.resultats>` (10 mn)
-
-```
 
 (epidemie.misenensituation)=
 ## Mise en situation
