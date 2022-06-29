@@ -77,20 +77,20 @@ Pour remplir cette liste, placer l'instruction
 1. Modifier les paramètres du modèle et relancer la simulation. Est-ce que vous observez des choses bizarres? Si oui, essayer d'en déterminer la cause.
 
 1. On souhaite comparer le modèle à l'épidémie de Covid-19 dans le canton de Vaud. Le code suivant vous permet de lire le fichier 'covid_vd.csv' et d'obtenir une liste contenant le nombre de nouveaux cas chaque jour. 
-```
-import csv
-cascumul = []
-ncas = []
-date = []
-with open("covid_vd.csv") as covid_file:
-    reader = csv.reader(covid_file)
-    for row in reader:
-        date.append(row[0])
-        if row[4]== '':
-            cascumul.append(0)
-        else:
-            cascumul.append(int(row[4]))
-            ncas.append(cascumul[-1]-cascumul[-2])`
-
-``` 
+    ```
+    import csv
+    
+    cas = []
+    date = []
+    
+    with open ("covid_vd.csv") as covid_file:
+        reader = csv.reader(covid_file)
+        entete = next(reader)
+        for row in reader:
+            date.append(row[0])
+            if row[1]== '':
+                cas.append(0)
+            else:
+                cas.append(float(row[1]))
+    ``` 
 Essayer de trouver les paramètre de votre modèle qui correspondent le mieux à la première vague, puis à la seconde vague. Quelle vague reflète selon vous le mieux la réelle propagation du virus? 

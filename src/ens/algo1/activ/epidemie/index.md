@@ -122,7 +122,7 @@ Les groupes produisent des graphes de leur courbe épidémiologique, parties 6 �
 
 Les élèves téléchargent les données réelles et les affichent dans un graphique.
 Les données pour la suisse sont disponibles sur le site github de [Daniel Probst](https://github.com/daenuprobst/covid19-cases-switzerland). Il est conseillé d'extraire au préalable les données pour le canton de Vaud (p. ex.) de
-de fournir un fichier csv déjà bien formaté aux élèves, comme [ici](./covid_vd.csv).
+de fournir un fichier csv déjà bien formaté aux élèves, comme {download}`ici<./data/covid_vd.csv>`.
 
 Les groupes essaient "à la main" de reproduire des courbes semblables à l'une ou à l'autre vague et les affichent en superposition (partie 12 de la {ref}`marche à suivre<m_a_s>`).
 
