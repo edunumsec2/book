@@ -19,15 +19,23 @@ class glossary_reference(nodes.Inline, nodes.TextElement):
 def b64(string):
     return b64encode(string.encode("UTF-8")).decode("UTF8")
 
-def visit_glossary_reference(self, node):
+def visit_glossary_reference_html(self, node):
     self.body.append('<span class="glossary-ref" ' + 
         'data-definition="' + b64(to_html(node["definition"])) + '" ' +
         'data-number="' + node["number"] + '" ' +
         ('data-glossary-uri="' + node["uri"] + '" ' if node["uri"] is not None else '') +
         'data-entry-name="' + b64(node["entry_name"]) + '">')
 
-def depart_glossary_reference(self, node):
+def depart_glossary_reference_html(self, node):
     self.body.append('</span>')
+
+def visit_glossary_reference_latex(self, node):
+    self.body.append('\glossaryterm{')
+
+
+def depart_glossary_reference_latex(self, node):
+    self.body.append('}')
+    
 
 def _glossary_file_name(app):
     return os.path.normpath(os.path.join(
@@ -255,18 +263,18 @@ class GlossaryRole(SphinxRole):
         return [target_node, node], []
 
 def setup(app):
-##    app.add_node(glossary_list)
-##    app.add_node(glossary_reference,
-##        html=(visit_glossary_reference, depart_glossary_reference))
-## 
-##    app.connect('env-before-read-docs', load_glossary_csv)
-##    app.connect('doctree-resolved', process_glossary_list)
-##    app.connect('env-purge-doc', purge_glossary_references)
-##    app.connect('env-merge-info', merge_glossary_references)
-##
-##    app.add_directive('definition', GlossaryDefDirective)
-##    app.add_directive('glossaire', GlossaryListDirective)
-##    app.add_role('glo', GlossaryRole())
+    app.add_node(glossary_list)
+    app.add_node(glossary_reference,
+                 html=(visit_glossary_reference_html, depart_glossary_reference_html),
+                 latex=(visit_glossary_reference_latex, depart_glossary_reference_latex))
+ 
+    app.connect('env-before-read-docs', load_glossary_csv)
+    app.connect('doctree-resolved', process_glossary_list)
+    app.connect('env-purge-doc', purge_glossary_references)
+    app.connect('env-merge-info', merge_glossary_references)
+    app.add_directive('definition', GlossaryDefDirective)
+    app.add_directive('glossaire', GlossaryListDirective)
+    app.add_role('glo', GlossaryRole())
 
     app.add_config_value('glossary_doc', None, 'env')
 

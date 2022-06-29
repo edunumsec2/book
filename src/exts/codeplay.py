@@ -47,10 +47,11 @@ def depart_interactive_code_html(self, node):
     self.body.append("</div>")
 
 def visit_interactive_code_latex(self, node):
-    self.body.append("\begin{lstlistings}")
+    self.body.append("\\begin{lstlistings}\n")
+    self.body.append(node["code"].strip())
 
 def depart_interactive_code_latex(self, node):
-    self.body.append("\end{lstlistings}")
+    self.body.append("\n \\end{lstlistings}")
     
 class InteractiveCode(SphinxDirective):
     required_arguments = 0
