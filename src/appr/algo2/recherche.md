@@ -16,7 +16,7 @@ La manière la plus simple pour rechercher un élément dans un tableau (une lis
 Tableau Eléments            # données stockées dans un tableau (une liste en Python)
 n ← longueur(Eléments)      # la variable n contient le nombre d'éléments 
 elément_recherché ← entrée  # l'élément recherché en tant que paramètre de l'algorithme
-i ← 0                       # index pour parcourir la liste
+i ← 1                       # index pour parcourir la liste
 
 Répéter Pour i = 1 à n
     si Eléments[i] == élément_recherché

@@ -1,30 +1,54 @@
 # Le protocole d'échange de clé de Diffie-Hellman
 
-## Informations
-
-Durée: 1 période
-
-Mode: Débranché
-
-Chapitre: Réseaux - Communication - Sécurité
-
-Objectifs: Comprendre le principe de base de la cryptographie à clé publique, et plus précisément le protocole d'échange de clé de Diffie-Hellman (ou du moins une version simplifiée de celui-ci)
-
-Matériel: 2 calculatrices
-
-Durée: 5 minutes d'introduction et de mise en contexte, 20 minutes pour l'activité en elle-même, 20 minutes pour parler des développements
-
-## Introduction et mise en contexte
+----
 
 Le but de cette activité est de faire comprendre aux élèves comment deux personnes qui communiquent "en clair" sur un réseau peuvent se mettre d'accord sur un secret commun. C'est l'occasion d'expliquer aux élèves que c'est un point absolument fondamental de nos jours pour la communication sur internet, quand on veut par exemple s'inscrire sur un site web et transmettre un mot de passe de façon sécurisée: a priori, on n'a aucune relation privilégiée avec le site, ni aucun secret partagé en commun. Le protocole d'échange de clé de Diffie-Hellman permet de résoudre ce problème.
 
 Dans ce qui suit, une version simplifiée du protocole est d'abord présentée, en lien avec l'activité proposée. Puis des indications sont données sur le fonctionnement du vrai protocole.
 
+----
+
+```{admonition} Titre de l'activité
+:class: hint
+* Thème : Réseaux, communication, sécurité
+* Niveau : moyen
+* Durée : 45 minutes
+* Objectifs pédagogiques : comprendre le principe de la cryptographie à clé publique, et plus précisément le protocole d'échange de clé de Diffie-Hellman (ou du moins une version simplifiée de celui-ci)
+* Modalité : débranché
+* Matériel : papier/crayon, deux élèves doivent avoir une calculatrice
+* Prérequis : rien
+* Taille du groupe : classe entière
+```
+
 ## Déroulement
 
-Demander à trois volontaires dans la classe de jouer les rôles d'Alice, Bob et Eve. Le but pour Alice et Bob est de se mettre d'accord sur un secret commun, qu'Eve ne sera pas capable de retrouver, tout ceci sans qu'Alice et Bob ne s'échangent des informations en se transmettant des SMS, des petits bouts de papiers ou encore en se chuchotant à l'oreille, mais seulement en parlant à haute et intelligible voix, de façon à ce que tout le monde dans la classe puisse entendre ce qu'ils se disent.
 
-Comme préliminaire, demander aux élèves s'ils pensent que ceci est possible ou impossible. La bonne réponse est que c'est impossible! Ceci dit, de façon surprenante, l'impossible devient possible si on suppose qu'il existe des opérations dites "à sens unique", c'est-à-dire des opérations qui sont elles-mêmes faciles à réaliser, mais qui sont en même temps très difficiles à inverser.
+| Étape                                   | Durée | 
+|---------------------------------------|------ |
+| {ref}`Introduction<diffie-hellman.intro>`| 5 min  |
+| {ref}`Jeu<diffie-hellman.jeu>`| 20 min  |
+| {ref}`Développements<diffie-hellman.developpements>`| 20 min   |
+
+
+
+(diffie-hellman.intro)=
+## Introduction
+
+*Durée : 5 minutes*
+
+En guise d'introduction, poser la question suivante aux élèves : "Pensez-vous qu'il soit possible pour deux personnes d'établir un secret commun en communiquant entre elles, alors que tout le monde écoute absolument tout ce qu'elles se disent ?"
+
+La première réponse à cette question est "bien sûr que non !"
+
+Mais de façon surprenante, la réponse peut devenir "oui, en pratique", si on dispose d'opérations dites "à sens unique", c'est-à-dire des opérations qui sont elles-mêmes faciles à effectuer, mais qui sont en même temps *très* difficiles à inverser ! C'est ce que vous allez voir maintenant.
+
+
+(diffie-hellman.jeu)=
+## Jeu
+
+*Durée : 20 minutes*
+
+Demander à trois volontaires dans la classe de jouer les rôles d'Alice, Bob et Eve. Le but pour Alice et Bob est de se mettre d'accord sur un secret commun, qu'Eve ne sera pas capable de retrouver, tout ceci sans qu'Alice et Bob ne s'échangent des informations en se transmettant des SMS, des petits bouts de papiers ou encore en se chuchotant à l'oreille, mais seulement en parlant à haute et intelligible voix, de façon à ce que tout le monde dans la classe puisse entendre ce qu'ils se disent.
 
 Pour rester très concret, supposons que l'opération facile à réaliser et difficile à inverser soit la multiplication. Ce n'est bien sûr pas le cas en réalité, mais on peut en tout cas s'accorder sur le fait qu'effectuer une division est plus difficile que d'effectuer une multiplication (en se référant par exemple aux souvenirs que les élèves ont de l'école primaire).
 
@@ -40,7 +64,7 @@ Le protocole est le suivant:
 
 5. Demander à Bob de multiplier le résultat communiqué par Alice par son nombre secret $B$ (et de garder le résultat secret).
 
-A ce stade, révéler qu'Alice et Bob ont en commun un nombre $A \cdot B \cdot C$ d'environ 9 chiffres qu'aucune autre personne dans la classe (et en particulier Eve) n'est capable de retrouver sans effectuer de division: voilà donc leur secret commun!
+A ce stade, révéler qu'Alice et Bob ont en commun un nombre $A \cdot B \cdot C$ d'environ neuf chiffres qu'aucune autre personne dans la classe (et en particulier Eve) n'est capable de retrouver sans effectuer de division: voilà donc leur secret commun!
 
 ````{admonition} Remarque
 :class: hint
@@ -76,7 +100,12 @@ width: 100%
 ```
 ````
 
+(diffie-hellman.developpements)=
 ## Développements
+
+*Durée : 20 minutes*
+
+Cette deuxième partie revient plus à la forme classique d'un cours ex-cathedra. L'enseignant·e est libre de choisir quels points aborder plus précisément avec les élèves.
 
 ### Le vrai protocole de Diffie-Hellman
 
@@ -88,11 +117,11 @@ On peut montrer d'une part qu'il existe une manière efficace d'effectuer cette 
 
 $A^B (\text{mod }P) = C$
 
-alors il est très difficile de retrouver la valeur de l'exposant $B$, et ceci d'autant plus que le nombre premier $P$ est grand. Ce problème s'appelle le problème du *logarithme discret* et fascine les informaticien.ne.s depuis de nombreuses années... Il est bien sûr toujours possible de le résoudre en testant toutes les valeurs possibles de $B$ entre $1$ et $P-1$, mais si $P$ est vraiment un grand nombre, le temps nécessaire pour résoudre ce problème de cette manière peut vite dépasser l'âge de l'univers! Ainsi, tant qu'on n'aura pas trouvé d'autre méthode plus efficace pour résoudre ce problème (et donc inverser facilement l'opération d'exponentiation modulaire), le protocole de Diffie-Hellman restera une valeur sûre pour partager un secret.
+alors il est très difficile de retrouver la valeur de l'exposant $B$, et ceci d'autant plus que le nombre premier $P$ est grand. Ce problème s'appelle le problème du *logarithme discret* et fascine les informaticien.ne.s depuis de nombreuses années... Il est bien sûr toujours possible de le résoudre en testant toutes les valeurs possibles de $B$ entre $1$ et $P-1$, mais si $P$ est vraiment un grand nombre, le temps nécessaire pour résoudre ce problème de cette manière peut vite dépasser l'âge de l'univers! Ainsi, tant qu'on n'aura pas trouvé d'autre méthode plus efficace pour résoudre ce problème (et donc inverser facilement l'opération d'exponentiation modulaire), le protocole de Diffie-Hellman restera une valeur sûre pour partager un secret (pour plus de détails sur ce sujet, voir [cette vidéo](https://tube.switch.ch/videos/m4lqNn2Il9)).
 
 ### Un secret partagé, c'est bien, mais qu'en faire?
 
-Une fois établi un secret commun entre Alice et Bob dans le réseau, il existe de nombreuses façons d'utiliser celui-ci pour chiffrer leur conversation de bout en bout. De manière générique, on peut dire qu'Alice combine ce secret avec le message qu'elle désire envoyer, obtenant ainsi un message chiffré, qu'elle envoie à Bob. Puis Bob réutilise à son tour le secret partagé pour retrouver le message envoyé. Là aussi, il importe de faire en sorte que si Eve lit le message chiffré, elle ne soit pas capable de retrouver le message d'origine (ou seulement au prix d'efforts gigantesques, comme évoqué ci-dessus pour le problème du logarithme discret). Les possibilités de chiffrement sont très nombreuses; citons en particulier la clé à usage unique, le système DES (pour "Data Encryption System") et le système AES (pour "Advanced Encryption System"), qui a succédé au précédent et est toujours en vigueur de nos jours.
+Une fois établi un secret commun entre Alice et Bob dans le réseau, il existe de nombreuses façons d'utiliser celui-ci pour chiffrer leur conversation de bout en bout. De manière générique, on peut dire qu'Alice combine ce secret avec le message qu'elle désire envoyer, obtenant ainsi un message chiffré, qu'elle envoie à Bob. Puis Bob réutilise à son tour le secret partagé pour retrouver le message envoyé. Là aussi, il importe de faire en sorte que si Eve lit le message chiffré, elle ne soit pas capable de retrouver le message d'origine (ou seulement au prix d'efforts gigantesques, comme évoqué ci-dessus pour le problème du logarithme discret). Les possibilités de chiffrement sont très nombreuses; citons en particulier la clé à usage unique, le système DES (pour "Data Encryption Standard") et le système AES (pour "Advanced Encryption Standard"), qui a succédé au précédent et est toujours en vigueur de nos jours (pour plus de détails sur ce sujet, voir [cette vidéo](https://tube.switch.ch/videos/3HC60hBpcm)).
 
 A noter qu'il existe également d'autres protocoles de cryptographie à clé publique qui permettent de directement envoyer un message chiffré en utilisant le même principe de chiffrement à clé publique: ce sont par exemple le protocole d'El Gamal et le protocole RSA.
 

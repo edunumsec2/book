@@ -18,6 +18,7 @@ L'idée principale derrière la conception d'un circuit logique qui est capable 
 ```{logic}
 :height: 100
 :mode: tryout
+:ref: latch_build1
 
 {
   "v": 3,
@@ -30,83 +31,117 @@ L'idée principale derrière la conception d'un circuit logique qui est capable 
 
 Au début, les deux entrées de la porte valent 0, comme sa sortie. Si l'on essaie de faire passer l'entrée $X$ à 1, on voit que la sortie $Z$ passera à 1 elle aussi, comme il s'agit d'une porte **OU**. Mais comme $Z$ est aussi relié à l'autre entrée de la porte, on a maintenant un circuit dont on ne peut plus modifier la sortie : même si $X$ passe de nouveau à 0, l'autre entrée reste à 1 et suffit donc pour que $Z$ vale maintenant 1 indéfiniment. On est obligé de remettre le circuit complètement à zéro (l'équivalent de débrancher la prise de courant et de la rebrancher) pour obtenir à nouveau un 0 sur la sortie $Z$.
 
-Assurément, ce circuit n'est pas très intéressant : il se bloque dans un état sans retour possible. Serait-ce possible de construire un circuit un peu plus élaboré qui permettrait de choisir la valeur de sa sortie et de la conserver ? Ces circuits existent en effet et sont à la base du stockage de l'information dans les microprocesseurs. On appelle ces circuits des {glo}`verrou|verrous`, vu qu'ils « verrouillent » une valeur donnée.
+Assurément, ce circuit n'est pas très intéressant : il se bloque dans un état sans retour possible. Il faudrait pouvoir faire repasser la valeur de sortie à 0. Pour ce faire, une idée est d'ajouter {logicref}`latch_build2.and|une porte **ET**` avant de faire repasser la sortie de {logicref}`latch_build2.or|la porte **OU**` dans sa propre entrée. Cela nous permet d’annuler le signal de retour si la seconde entrée du **ET** (appelons-la $Y$) vaut 0.
 
-Examinons le circuit ci-dessous : c'est le verrou dit « SR », pour _set/reset_, en anglais. 
+Essayez ce circuit : quand $Y$ vaut 1, il se comporte comme le circuit précédent, mais se remettra à 0 dès qu'$Y$ passera à 0.
 
 ```{logic}
-:height: 160
+:height: 180
+:mode: tryout
+:ref: latch_build2
+
+{
+  "v": 3,
+  "in": [
+    {"pos": [50, 40], "id": 4, "name": "X", "val": 0},
+    {"pos": [50, 140], "id": 8, "name": "Y", "val": 1}
+  ],
+  "out": [{"pos": [290, 50], "id": 3, "name": "Z"}],
+  "gates": [
+    {"type": "OR", "pos": [170, 50], "ref": "or", "in": [0, 1], "out": 2},
+    {"type": "AND", "pos": [170, 100], "orient": "w", "ref": "and", "in": [5, 6], "out": 7}
+  ],
+  "wires": [[2, 3], [4, 0], [7, 1, {"style": "bezier"}], [2, 6, {"style": "bezier"}], [8, 5, {"via": [[210, 140]], "style": "bezier"}]]
+}
+```
+
+Le circuit est plus facile à utiliser lorsqu'on inverse l'entrée $Y$, comme dans le circuit suivant :
+
+```{logic}
+:height: 190
+:mode: tryout
+:ref: latch_build3
+
+{
+  "v": 3,
+  "in": [
+    {"pos": [50, 40], "id": 4, "name": "X", "val": 0},
+    {"pos": [50, 150], "id": 8, "name": "Y", "val": 0}
+  ],
+  "out": [{"pos": [290, 50], "id": 3, "name": "Z"}],
+  "gates": [
+    {"type": "OR", "pos": [170, 50], "in": [0, 1], "out": 2},
+    {"type": "AND", "pos": [170, 100], "orient": "w", "in": [5, 6], "out": 7},
+    {"type": "NOT", "pos": [170, 150], "in": 9, "out": 10}
+  ],
+  "wires": [[2, 3], [4, 0], [7, 1, {"style": "bezier"}], [2, 6, {"style": "bezier"}], [8, 9], [10, 5, {"style": "bezier"}]]
+}
+```
+
+Dans ce circuit-ci, on peut considérer que :
+
+ * Tant que $Y$ est inactif (donc vaut 0), le passage de $X$ de 0 à 1 fait passer la sortie $Z$ à 1. Ceci fait donc en sorte que la sortie « verrouille » sur la valeur 1, car elle garde sa valeur même si $X$ repasse à 0.
+ * Tant que $X$ est inactif, le passage de $Y$ de 0 à 1 fait passer la sortie $Z$ à 0, et la sortie se « verrouille » ainsi à 0 même si $Y$ repasse à 0.
+
+On appelle effectivement ce genre de circuits des {glo}`verrou|verrous`. Nous avons ici construit un des plus simples. D'habitude, son entrée $X$ est appelée $S$, pour _set_ en anglais, qui dénote le stockage d'un 1, et son entrée $Y$ est appelée $R$, pour _reset_ en anglais, qui dénote sa remise à zéro. C'est le verrou dit  « SR », pour _set/reset_. Un tel verrou est donc une minicellule mémoire ! La sortie de ces cellules mémoires est fréquemment appelée $Q$ plutôt que $Z$, nous allons donc faire pareil dans la suite du texte.
+
+Voici une représentation équivalente du même circuit[^demorgan], donc du même verrou SR :
+
+[^demorgan]: On peut montrer l'équivalence de ce circuit et du précédent à l'aide des [lois de De Morgan](https://fr.wikipedia.org/wiki/Lois_de_De_Morgan), qui ne sont volontairement pas abordées dans ce chapitre.
+
+```{logic}
+:height: 220
 :mode: tryout
 
 {
   "v": 3,
   "opts": {"propagationDelay": 10},
   "in": [
-    {"pos": [50, 30], "id": 8, "name": "R", "val": 0},
-    {"pos": [50, 130], "id": 9, "name": "S", "val": 0}
+    {"pos": [50, 180], "id": 8, "name": "R", "val": 0},
+    {"pos": [50, 40], "id": 9, "name": "S", "val": 0}
   ],
   "out": [
-    {"pos": [290, 40], "id": 10, "name": "Q"},
-    {"pos": [290, 120], "id": 11, "name": "Q̅"}
+    {"pos": [340, 50], "id": 10, "name": "Q"},
+    {"pos": [340, 170], "id": 11, "name": "Q̅"}
   ],
   "gates": [
-    {"type": "OR", "pos": [130, 40], "in": [0, 1], "out": 2},
-    {"type": "OR", "pos": [130, 120], "in": [4, 5], "out": 6},
-    {"type": "NOT", "pos": [200, 120], "in": 3, "out": 7},
-    {"type": "NOT", "pos": [200, 40], "in": 12, "out": {"id": 13, "initialValue": 0}}
+    {"type": "OR", "pos": [240, 170], "in": [0, 1], "out": 2},
+    {"type": "OR", "pos": [240, 50], "in": [4, 5], "out": 6},
+    {"type": "NOT", "pos": [120, 70], "in": 3, "out": {"id": 7, "initialValue": 0}},
+    {"type": "NOT", "pos": [120, 150], "in": 12, "out": 13}
   ],
-  "wires": [
-    [8, 0],
-    [9, 5],
-    [6, 3],
-    [7, 11],
-    [2, 12],
-    [13, 10],
-    [7, 1, {"via": [[80, 50]]}],
-    [13, 4, {"via": [[80, 110]]}]
-  ]
+  "wires": [[9, 4], [7, 5], [8, 1], [13, 0], [2, 3, {"via": [[90, 100, "w"]]}], [6, 12, {"via": [[90, 120, "w"]]}], [6, 10], [2, 11]]
 }
 ```
 
-Ce circuit stocke un bit de donnée un 0 ou un 1, qu'on va pouvoir lire via la sortie $Q$ et modifier avec les deux entrées $R$ et $S$. (La seconde sortie $\bar{Q}$ est ici toujours l'inverse de $Q$.)
+Ce circuit stocke ainsi un bit de donnée — un 0 ou un 1 — qu'on va pouvoir lire via la sortie $Q$ et modifier avec les deux entrées $R$ et $S$. (La seconde sortie $\bar{Q}$ est ici toujours l'inverse de $Q$.)
 
-Dans l'état normal de ce verrou, la sortie $Q$ vaut soit 1, soit 0, et les deux entrées $S$ et $R$ restent à 0. Testez le circuit ci-dessus et observez l'effet de $R$ et $S$. $S$, pour _set_, sert à changer l'état du verrou pour lui faire dorénavant stocker un 1. « Allumer » $S$ cause ainsi $Q$ à passer à 1. Ce qu'il y a d'intéressant, c'est qu'une fois que $Q$ est passé à 1, on peut sans autre « éteindre » le signal $S$ et le faire repasser à 0, et la sortie $Q$, elle, reste à 1 — alors que les deux entrées du circuit $S$ et $R$ sont maintenant à nouveau les mêmes qu'avant, lorsque la sortie $Q$ valait 0.
+Testez le circuit ci-dessus et observez l'effet de $R$ et $S$ pour vérifier qu'il correspond bien à notre circuit précédent.
 
-De manière similaire, l'entrée $R$, pour _reset_, sert à faire passer la valeur stockée par le du verrou à 0, et cet état reste 0 même lorsque $R$ est de nouveau « éteint ».
-
-On essaie en général d'éviter d'avoir un 1 sur $R$ et sur $S$ en même temps, cela place le verrou dans un état où $\bar{Q}$ n'est plus l'inverse de $Q$. Pour cette raison, nous allons plutôt créer le circuit comme suit — les connexions sont exactement les mêmes, mais les entrées $S$ et $R$ ne restent pas à 1 lorsqu'on clique dessus, elles retombent à 0 dès que le clic se termine.
+On essaie en général d'éviter d'avoir un 1 sur $R$ et sur $S$ en même temps, car cela place le verrou dans un état où $\bar{Q}$ n'est plus l'inverse de $Q$. Pour cette raison, nous allons plutôt créer le circuit comme dans le schéma suivant. Les connexions sont exactement les mêmes, mais les entrées $S$ et $R$ ne restent pas à 1 lorsqu'on clique dessus, elles retombent à 0 dès que le clic se termine — elles se comportent comme des boutons poussoirs.
 
 ```{logic}
-:height: 160
+:height: 220
 :mode: tryout
 
 {
   "v": 3,
   "opts": {"propagationDelay": 0},
   "in": [
-    {"pos": [50, 30], "id": 8, "name": "R", "val": 0, "isPushButton": true},
-    {"pos": [50, 130], "id": 9, "name": "S", "val": 0, "isPushButton": true}
+    {"pos": [50, 180], "id": 8, "name": "R", "val": 0, "isPushButton": true},
+    {"pos": [50, 40], "id": 9, "name": "S", "val": 0, "isPushButton": true}
   ],
   "out": [
-    {"pos": [290, 40], "id": 10, "name": "Q"},
-    {"pos": [290, 120], "id": 11, "name": "Q̅"}
+    {"pos": [340, 50], "id": 10, "name": "Q"},
+    {"pos": [340, 170], "id": 11, "name": "Q̅"}
   ],
   "gates": [
-    {"type": "OR", "pos": [130, 40], "in": [0, 1], "out": 2},
-    {"type": "OR", "pos": [130, 120], "in": [4, 5], "out": 6},
-    {"type": "NOT", "pos": [200, 120], "in": 3, "out": 7},
-    {"type": "NOT", "pos": [200, 40], "in": 12, "out": {"id": 13, "initialValue": 0}}
+    {"type": "OR", "pos": [240, 170], "in": [0, 1], "out": 2},
+    {"type": "OR", "pos": [240, 50], "in": [4, 5], "out": 6},
+    {"type": "NOT", "pos": [120, 70], "in": 3, "out": {"id": 7, "initialValue": 0}},
+    {"type": "NOT", "pos": [120, 150], "in": 12, "out": 13}
   ],
-  "wires": [
-    [8, 0],
-    [9, 5],
-    [6, 3],
-    [7, 11],
-    [2, 12],
-    [13, 10],
-    [7, 1, {"via": [[80, 50]]}],
-    [13, 4, {"via": [[80, 110]]}]
-  ]
+  "wires": [[9, 4], [7, 5], [8, 1], [13, 0], [2, 3, {"via": [[90, 100, "w"]]}], [6, 12, {"via": [[90, 120, "w"]]}], [6, 10], [2, 11]]
 }
 ```
 
@@ -119,8 +154,8 @@ Ces verrous sont communs, et pour le reste du chapitre, on simplifiera la notati
 {
   "v": 3,
   "in": [
-    {"pos": [50, 30], "id": 10, "name": "R", "val": 0, "isPushButton": true},
-    {"pos": [50, 70], "id": 11, "name": "S", "val": 0, "isPushButton": true}
+    {"pos": [50, 70], "id": 10, "name": "R", "val": 0, "isPushButton": true},
+    {"pos": [50, 30], "id": 11, "name": "S", "val": 0, "isPushButton": true}
   ],
   "out": [
     {"pos": [210, 30], "id": 12, "name": "Q"},

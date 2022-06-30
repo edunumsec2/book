@@ -25,7 +25,7 @@ nb_rencontre = 10 # nombres de personnes rencontrées en moyenne par jour (avec 
 
 ```python
 courbe_infection = []
-duree = 50 # nombre de jorus consideres
+duree = 50 # nombre de jours consideres
 ```
 
 
@@ -37,7 +37,8 @@ for i in range(duree):
     guerisons = p_guerison * malades
     deces = p_deces * malades
 
-    ## une version un peu plus élaborée qui tient compte du pourcentage de malades dans nos contacts plutôt que du nombre total de malades pour déterminer risque d'être infecté. 
+    ## une version un peu plus élaborée qui tient compte du pourcentage de malades
+    ## dans nos contacts plutôt que du nombre total de malades pour déterminer le risque d'être infecté. 
     # infections = p_contamination * malades/(malades+gueris+susceptibles) *nb_rencontre * susceptibles
 
 
