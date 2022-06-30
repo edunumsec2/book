@@ -4,7 +4,7 @@ Page de description des séquences et activités disponibles pour cette thémati
 
 ```{toctree}
 :maxdepth: 1
-Magie binaire <magie_binaire_new>
+Magie binaire <magie_binaire>
 Images numériques <encoder_images>
 Echantillonnage <echantillonnage_new>
 Compression et codage de Huffman <huffman>
