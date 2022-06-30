@@ -46,7 +46,7 @@ extensions = [
     'exercise',
 ]
 
-#glossary_doc = 'glossaire'
+glossary_doc = 'glossaire'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['../templates']

@@ -219,6 +219,7 @@ Par exemple, la conversion du nombre décimal 666 en binaire s'obtient
 avec les étapes suivantes :
 
 ```{math}
+:nowrap:
 \begin{align}
 666 &= 512 + 154 \\
 154 &= 128 + 26 \\
@@ -403,7 +404,7 @@ et négatifs représentés. Par exemple, avec 4 bits on peut représenter
 ```
 
 ```{dropdown} Quel est le domaine couvert en utilisant la représentation en complément à deux sur un octet ?
-$[-128, 127\]$
+$[-128, 127]$
 ```
 
 ```{admonition} Micro-activité ✏️📒
