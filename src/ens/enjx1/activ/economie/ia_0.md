@@ -1,4 +1,4 @@
-# Intelligence artificielle. Apprentissage et données
+# IA : Apprentissage et données
 
 ---- 
 

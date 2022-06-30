@@ -6,5 +6,4 @@
 Carte perforée <carte>
 Radiotéléphonie <radiotel>
 Space Invaders <space>
-Tableur <tableur>
 ```

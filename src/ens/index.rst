@@ -49,9 +49,6 @@ La plateforme est améliorée grâce à vos retours, n’hésitez pas à nous le
    :maxdepth: 3
    :hidden:
 
-   algo2/index
-   prog2/index
-   projets/index
    resx/index
    enjx2/index
 

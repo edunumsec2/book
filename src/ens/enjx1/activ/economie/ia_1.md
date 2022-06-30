@@ -1,4 +1,4 @@
-# Intelligence artificielle. Biais de l'intelligence artificielle
+# IA : Biais de l'intelligence artificielle
 
 ---- 
 

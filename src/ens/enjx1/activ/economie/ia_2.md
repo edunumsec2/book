@@ -1,4 +1,4 @@
-# Intelligence artificielle. Bulles de filtre
+# IA : Bulles de filtre
 
 ---- 
 
