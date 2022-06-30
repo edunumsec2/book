@@ -403,7 +403,7 @@ et négatifs représentés. Par exemple, avec 4 bits on peut représenter
 ```
 
 ```{dropdown} Quel est le domaine couvert en utilisant la représentation en complément à deux sur un octet ?
-$[-128, 127\]$
+$[-128, 127]$
 ```
 
 ```{admonition} Micro-activité ✏️📒
