@@ -1,10 +1,14 @@
 
-# Enjeux sociaux II
+# Enjeux sociaux I
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 2
 :hidden:
-grandes-thematiques/environnement
+:numbered: 1
+
+grandes-thematiques/economie-numerique
+grandes-thematiques/surveillance
+
 activ/index
 ```
 
