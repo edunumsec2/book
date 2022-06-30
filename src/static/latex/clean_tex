@@ -1,0 +1,12 @@
+for file in *.svg; do
+  cmd="/Applications/Inkscape.app/Contents/MacOS/inkscape ${file} -o ${file/%.svg/.pdf}"
+  echo $cmd
+  $cmd
+done
+for file in *.gif; do
+  cmd="sips -s format pdf $file --out ${file/%.gif/.pdf}"
+  echo $cmd
+  $cmd
+done
+
+#\input{customize}

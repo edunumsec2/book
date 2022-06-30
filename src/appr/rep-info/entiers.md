@@ -83,11 +83,11 @@ on augmente de 1 le chiffre à sa gauche.
 On répète ces opérations pour tous les chiffres, quelle que soit leur
 position. Ainsi, en base 10 :
 
-$$\begin{equation}
+$$
 0;-;1;-;2;-;3;-;...;-;9;-;10;-;11;-;...;-;99;-;100;-;101;-;...
-\end{equation}$$
+$$
 
-En binaire, on obtient : $\begin{equation}0;-;1;-;10;-;11;-;100;-;101;-;110;-;111;-;1000;-;...\end{equation}$
+En binaire, on obtient : $0;-;1;-;10;-;11;-;100;-;101;-;110;-;111;-;1000;-;...$
 
 ```{admonition} Micro-activité ✏️📒 
 :class: note 
@@ -108,9 +108,9 @@ puissances de 2.
 
 Conversion du nombre 10101
 ^^^
-$$\begin{equation}
+$$
 10101_{(2)} = 1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0 = 21_{(10)}
-\end{equation}$$
+$$
 ```
 
 Le {ref}`tableau <conversion-octet>` ci-dessous permet de convertir un
@@ -151,7 +151,7 @@ octet en nombre décimal.
 ```
 
 L'exemple utilisé ici est l'octet $(00101010_{(2)})$ dont la valeur
-décimale est : $\begin{equation} 00101010\_{(2)} = 0 \cdot 2^7 + 0 \cdot 2^6 + 1 \cdot 2^5 + 0 \cdot 2^4 + 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 0 \cdot 2^0 = 42\_{(10)} \end{equation}$
+décimale est : $ 00101010\_{(2)} = 0 \cdot 2^7 + 0 \cdot 2^6 + 1 \cdot 2^5 + 0 \cdot 2^4 + 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 0 \cdot 2^0 = 42\_{(10)}$
 
 ```{admonition} Important 
 :class: caution 
@@ -219,6 +219,7 @@ Par exemple, la conversion du nombre décimal 666 en binaire s'obtient
 avec les étapes suivantes :
 
 ```{math}
+:nowrap:
 \begin{align}
 666 &= 512 + 154 \\
 154 &= 128 + 26 \\
