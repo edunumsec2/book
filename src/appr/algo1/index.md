@@ -41,7 +41,7 @@
 
 <div align="right"> 
     <a href="https://files.modulo-info.ch/Algorithmique_20220322_I.pdf" target="_blank" class="round-button">
-         <font color=white id="demo">Voir <br>dossier</font>
+         <font color=white id="demo">Cliquer ici pour <br>dossier</font>
     </a>
 </div>
 
