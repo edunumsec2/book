@@ -102,8 +102,8 @@ html_theme_options = {
         "color-announcement-text": "#eeebee",
 
         # Brand colors
-        "color-brand-primary": "#5933D1", # violet
-        "color-brand-content": "#5933D1", # violet
+        "color-brand-primary": "#8044FF", # violet
+        "color-brand-content": "#8044FF", # violet
         
         # Admonition font size
         "admonition-font-size": "0.9rem",

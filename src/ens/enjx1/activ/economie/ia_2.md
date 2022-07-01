@@ -15,7 +15,7 @@ Les questions que l'on se pose dans cette activité sont les suivantes :
 ```{admonition} Intelligence artificielle. Bulles de filtre
 :class: hint
 
-* Thème : eg. `Enjeux sociaux II` (Thèmatique Economie du numérique)
+* Thème : `Enjeux sociaux II` (Thèmatique Economie du numérique)
 * Niveau : `facile`
 * Durée : 1 période ou 45 minutes
 * Objectifs pédagogiques : Comprendre ce qu'est une bulle de filtre. Identifier ses propres bulles de filtres. Savoir percer ses bulles de filtre.
@@ -30,13 +30,13 @@ Les questions que l'on se pose dans cette activité sont les suivantes :
 
 | Étape                                   | Durée  | Phase de l'activité   | 
 |---------------------------------------|------ |---------------------|
-| {ref}`Jeu sérieux`                    | 20 min  | Apprentissage           |
-| {ref}`Mes bulles de filtre`           | 10 min  | Discussion |
-| {ref}`Percer mes bulles de filtre`    | 15 min  | Discussion           |
+| {ref}`Jeu sérieux<bulles.jeu>`                    | 20 min  | Apprentissage           |
+| {ref}`Mes bulles de filtre<bulles.filtre>`           | 10 min  | Discussion |
+| {ref}`Percer mes bulles de filtre<bulles.percer>`    | 15 min  | Discussion           |
 
 
 
-(nomactivite.nomdeletape1)=
+(bulles.jeu)=
 ### Jeu sérieux 
 
 *Durée : 20 min*
@@ -52,7 +52,7 @@ ou
 Les élèves qui terminent en avance peuvent lire les articles proposés dans les hyperliens du jeu.
 
 
-(nomactivite.nomdeletape2)=
+(bulles.filtre)=
 ### Mes bulles de filtre 
 
 *Durée : 10 min*
@@ -63,7 +63,7 @@ Identifier les ressources et les réseaux sociaux où vous vous retrouvez entre 
 
 
 
-(nomactivite.nomdeletape3)=
+(bulles.percer)=
 ### Percer mes bulles de filtre
 
 *Durée : 15 min*

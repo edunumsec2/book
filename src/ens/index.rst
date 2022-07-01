@@ -70,6 +70,6 @@ La plateforme est améliorée grâce à vos retours, n’hésitez pas à nous le
    :maxdepth: 3
    :hidden:
 
-   PlanDidac/index.md   
+   plan_didac/index
    glossaire
    readme/extensions

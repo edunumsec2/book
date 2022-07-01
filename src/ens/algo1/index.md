@@ -49,18 +49,24 @@ Dans la partie *Enseigner* vous trouverez les solutions des exercices proposés 
 
 Six activités au choix complètent ces ressources dans la partie *Enseigner* :
 
-- <a href="../algo1/activ/algo-tri_new.html"> Les algorithmes de tri  </a>
-- <a href="../algo1/activ/epidemie/index_new.html"> Modéliser une épidémie </a>
-- <a href="../algo1/activ/monochromes.html"> Monochromes </a>
-- <a href="../algo1/activ/stroboscope.html"> Stroboscope </a>
-- <a href="../algo1/activ/dijkstra_new.html"> L’algorithme du plus court chemin de Dijkstra</a>
-- <a href="../algo1/activ/puissance4.html"> Minimax / Puissance 4s</a>
+|Nom    | Description |
+|-------|---------|
+| <a href="../algo1/activ/algo-tri.html"> Les algorithmes de tri  </a>| Une activité exploratoire débranchée et collaborative pour découvrir les algorithmes de tri en triant des cartes|
+| <a href="../algo1/activ/epidemie/index.html"> Modéliser une épidémie </a>| Une introduction à la démarche de modélisation en utilisant python pour des élèves sachant déjà un peu programmer |
+| <a href="../algo1/activ/monochromes.html"> Monochromes </a>| Une activité progressive de programmation pour sensibiliser à l'importance de choisir la bonne représentation des données |
+| <a href="../algo1/activ/stroboscope.html"> Stroboscope </a>| Une activité progressive de programmation pour explorer la randomisation |
+|<a href="../algo1/activ/dijkstra.html"> L’algorithme du plus court chemin de Dijkstra</a>| Une activité débranchée pour découvrir l'algorithme de Dijkstra en mode collectif et en se déplaçant dans la salle |
+| <a href="../algo1/activ/puissance4.html"> Minimax / Puissance 4</a>| Une activité de programmation d'un jeu de puissance4 sur 4 périodes pour des élèves maitrisant déjà bien la programmation |
 
 
 
 
 
-## Philosophie de la conception des ressources Algorithmique I [partie Apprendre] 
+## Approche pédagogique de la thématique Algorithmique I
+
+### Partie Apprendre
+
+La partie "apprendre" a été conçue pour être utilisable de manière autonome par les élèves.
 
 Au niveau de la durée, chaque chapitre est conçu comme un **cours de 2 périodes** ou 90 minutes. 
 
@@ -84,9 +90,9 @@ Pour la conception, nous avons suivis quatre principes :
 
 
 
-## Philosophie de la conception des activités Algorithmique I [partie Enseigner] 
+### Activités 
 
-Chaque activité est prévue comme un labo sur **1 à 4 périodes** en branché ou en débranché. 
+Chaque activité proposée dans la partie "enseigner" est prévue comme un labo sur **1 à 4 périodes** en branché ou en débranché. 
 
 La conception des activités a suivi les principes suivants :
 
@@ -94,7 +100,7 @@ La conception des activités a suivi les principes suivants :
 
 - Développer une compréhension intuitive des concepts
 
-- Faire réfléchir les élèves (avec leur tête, mais pas seulement …)
+- Faire réfléchir les élèves (avec leur tête, mais aussi avec leur corps)
 
 - Induire des questionnements de type algorithmique
 
@@ -113,8 +119,10 @@ L'apprentissage passe par tous les sens, et lorsque possible, nous avons fait ap
 
 ```{toctree}
 :maxdepth: 1
-:numbered: 1
+
 Planification <plan/planification>
+
 Activités <activ/index>
-Exercices <exo/index>
+
+Solutions des exercices <exo/solutions>
 ```

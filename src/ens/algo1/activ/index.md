@@ -2,8 +2,11 @@
 
 ```{toctree}
 :maxdepth: 1
-Algorithmes de tri <algo-tri_new>
-Modéliser une épidémie <epidemie/index_new>
-Dijkstra et le plus court chemin <dijkstra_new>
+Algorithmes de tri <algo-tri>
+Modéliser une épidémie <epidemie/index>
+Monochromes <monochromes>
+Stroboscope <stroboscope>
+Dijkstra et le plus court chemin <dijkstra>
 Puissance 4/Minimax <puissance4>
+
 ```

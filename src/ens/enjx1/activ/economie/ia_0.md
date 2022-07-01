@@ -18,7 +18,7 @@ réponse ?
 ```{admonition} Intelligence artificielle. Apprentissage et données
 :class: hint
 
-* Thème : eg. `Enjeux sociaux II` (Thèmatique Economie du numérique)
+* Thème : `Enjeux sociaux II` (Thèmatique Economie du numérique)
 * Niveau : `facile`
 * Durée : 1 période ou 45 minutes
 * Objectifs pédagogiques : Comprendre comment un algorithme d'intelligence artificielle apprend.
@@ -33,14 +33,14 @@ réponse ?
 
 | Étape                                   | Durée  | Phase de l'activité   | 
 |---------------------------------------|------ |---------------------|
-| {ref}`Jeu sérieux`                    | 20 min  | Apprentissage           |
-| {ref}`Apprentissage par des données`  | 5 à 10 min  | Discussion |
-| {ref}`Qualité des solutions`          | 5 à 10 min   | Enseignement et discussion           |
-| {ref}`Big data`                       | 5 à 10 min   | Discussion              |
+| {ref}`Jeu sérieux<apprentissage.jeu>`  | 20 min  | Apprentissage           |
+| {ref}`Apprentissage par des données<apprentissage.app>` | 5 à 10 min  | Discussion |
+| {ref}`Qualité des solutions<apprentissage.quali>`          | 5 à 10 min   | Enseignement et discussion           |
+| {ref}`Big data<apprentissage.big>`                       | 5 à 10 min   | Discussion              |
 
 
 
-(nomactivite.nomdeletape1)=
+(apprentissage.jeu)=
 ### Jeu sérieux 
 
 *Durée : 20 min*
@@ -56,7 +56,7 @@ ou
 Les élèves qui terminent en avance peuvent lire les articles proposés dans les hyperliens du jeu.
 
 
-(nomactivite.nomdeletape2)=
+(apprentissage.app)=
 ### Apprentissage par des données
 
 *Durée : 5-10 min*
@@ -66,7 +66,7 @@ Les élèves qui terminent en avance peuvent lire les articles proposés dans le
 Il faut insister sur le fait que l’algorithme apprend « tout seul »
 en observant. On ne lui a pas dit comment trouver la bonne solution, mais il va la déduire des données qu’il a pu observer.
 
-(nomactivite.nomdeletape3)=
+(apprentissage.quali)=
 ### Qualité des solutions
 
 *Durée : 5-10 min*
@@ -77,7 +77,7 @@ La solution d’un algorithme d’intelligence artificielle est de bonne
 qualité seulement pour les données qu’il a pu bien observer.
 Aller sur [https://translate.google.com/](https://translate.google.com/) et essayer de tromper le système ! Traduire par exemple des mots rares ou locaux comme gouille ou ruper.
 
-(nomactivite.nomdeletapen)=
+(apprentissage.big)=
 ### Big data
 
 *Durée : 5-10 min*

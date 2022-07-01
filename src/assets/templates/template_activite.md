@@ -6,34 +6,34 @@ Accroche de l'activité
 
 ----
 
-```{admonition} Titre de l'activité
+```{admonition} Notice
 :class: hint
 
-* *Thème : eg. `Représentation de l'information` (peut préciser un sous-chapitre)
-* *Niveau : `facile`, `moyen`, `difficile`(considérant que l'indication 1M, 2M est donnée par l'emplacement de l'activité)
-* *Durée : en minutes ou en périodes
-* *Objectifs pédagogiques : 
-* *Modalité : `branché/débranché`
-* *Matériel : 
-* *Prérequis : 
-* Notions fondamentales : 
-* Taille du groupe : `classe entière`, `demi-classe`
+* **Thème** : eg. `Représentation de l'information` (peut préciser un sous-chapitre)
+* **Niveau** : `facile`, `moyen`, `difficile`(considérant que l'indication 1M, 2M est donnée par l'emplacement de l'activité)
+* **Durée** : en minutes ou en périodes
+* **Objectifs pédagogiques** : 
+* **Modalité** : `branché/débranché`
+* **Matériel** : 
+* **Prérequis** : 
+* **Notions fondamentales** : 
+* **Taille du groupe** : `classe entière`, `demi-classe`
 
-*Note : les éléments précédés d'une étoile sont impératifs, les autres optionnels*
+*Note : les éléments *Notions fondamentales* et *Taille du groupe* sont optionnels
 ```
 
 ## Déroulement
 
 
-| Étape                                   | Durée  | Phase de l'activité   | 
+|                                       | Durée  | Phase de l'activité   | 
 |---------------------------------------|------ |---------------------|
 | {ref}`Étape 1<nomactivite.nomdeletape1>`| 15 min  | Exploration           |
 | {ref}`Étape 2<nomactivite.nomdeletape2>`| 10 min  | Institutionnalisation |
 | {ref}`Étape 3<nomactivite.nomdeletape3>`| 5 min   | Évalutation           |
 | Etape n                                 | n min   | Phase n               |
 
-*Note : la logique didactique dans laquelle se situe l'étape est optionnelle*
-Liste de moments à choix : 
+*Note : le moment didactique dans lequelle se situe l'étape est optionnel*
+Liste des phases à choix possibles pour la dernière colonne du tableau ci-dessus: 
 - Mise en situation
 - Enseignement frontal
 - Exploration
@@ -77,6 +77,10 @@ Description de l'étape. Possibilité d'utiliser des sous-titres.
 
 [^1]: les éléments "détaillés" sont optionnels. On peut se contenter de ce qui apparaît dans les caractéristiques de l'activité. On peut aussi ajouter d'autres éléments "détaillés" (durée, notions fondamentales, niveau, etc.), si on le souhaite. 
 
+## Débats
+
 ## Considérations didactiques
+
+## Liens avec les autres thématiques
 
 ## Ressources complémentaires
