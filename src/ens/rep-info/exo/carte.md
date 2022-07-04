@@ -10,8 +10,7 @@ Encoder, sur la carte perforée, son prénom (et nom) en ASCII, sa date de naiss
 
 ![Carte perforée, source: wikimedia](media/carte-perforee.png)
 
-[Version PDF](https://github.com/edunumsec2/book/raw/2e886527094630cbe0259d4c0849b92077aa0a00/src/ens/rep-info/exo/media/carte-perforee.pdf)
 
-Voilà un {download}`lien vers la version PDF<media/carte-perforee.pdf>`
-
-[Version PDF 4x](https://github.com/edunumsec2/book/raw/2e886527094630cbe0259d4c0849b92077aa0a00/src/ens/rep-info/exo/media/carte-perforee_4x.pdf)
+La carte perforée au format PDF ainsi qu'une version avec 4 cartes sur la même page sont téléchargeables ci-dessous :  
+{download}`Version PDF<media/carte-perforee.pdf>`   
+{download}`Version PDF 4x<media/carte-perforee_4x.pdf>`
