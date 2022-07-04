@@ -86,7 +86,7 @@ Pour mieux vous représenter une variable, imaginez un grand meuble avec des tir
 
 
 
-```{figure} media/commode.webp
+```{figure} media/commode.jpg
 ---
 alt: Une variable est un tiroir avec une étiquette.
 width: 50%
