@@ -1,3 +1,4 @@
+(appr:repinfo:conclusion)=
 # Conclusion
 
 Trois éléments clés sous entendent notre description du monde : la matière, l’énergie et l’information. Transmettre l'information est sans aucun doute la révolution de ce 20ème siècle achevé et l'enjeu majeur de ce début du 21ème.

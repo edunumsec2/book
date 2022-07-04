@@ -1,3 +1,4 @@
+(appr:repinfo:images)=
 # Les images
 
 ## Les images matricielles

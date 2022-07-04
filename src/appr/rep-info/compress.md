@@ -1,3 +1,4 @@
+(appr:repinfo:compression)=
 # Compression des données
 
 La compression des données est l'opération par laquelle on réduit la taille d'un fichier pour qu'il prenne moins d'espace sur le disque de sauvegarde. 

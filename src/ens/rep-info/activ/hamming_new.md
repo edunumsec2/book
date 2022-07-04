@@ -1,3 +1,4 @@
+(ens:repinfo:redondancehamming)=
 # Redondance et code de Hamming
 
 ---- 

@@ -1,3 +1,4 @@
+(appr:repinfo:caracteres)=
 # Les caractères
 
 Toute l'information est représentée dans un ordinateur par des nombres

@@ -1,3 +1,4 @@
+(ens:repinfo:magiebinaire)=
 # Magie Binaire
 
 ---- 
