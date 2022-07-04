@@ -1,4 +1,4 @@
-.. image:: ../static/assets/modulo-head-banner.svg
+.. image:: ../static/assets/modulo-head-banner.png
    :alt: "Bannière Modulo"
 
 Informatique au gymnase : apprendre

@@ -268,13 +268,13 @@ def setup(app):
                  html=(visit_glossary_reference_html, depart_glossary_reference_html),
                  latex=(visit_glossary_reference_latex, depart_glossary_reference_latex))
  
-    app.connect('env-before-read-docs', load_glossary_csv)
-    app.connect('doctree-resolved', process_glossary_list)
-    app.connect('env-purge-doc', purge_glossary_references)
-    app.connect('env-merge-info', merge_glossary_references)
-    app.add_directive('definition', GlossaryDefDirective)
-    app.add_directive('glossaire', GlossaryListDirective)
-    app.add_role('glo', GlossaryRole())
+#    app.connect('env-before-read-docs', load_glossary_csv)
+ #   app.connect('doctree-resolved', process_glossary_list)
+ #   app.connect('env-purge-doc', purge_glossary_references)
+ #   app.connect('env-merge-info', merge_glossary_references)
+ #   app.add_directive('definition', GlossaryDefDirective)
+ #   app.add_directive('glossaire', GlossaryListDirective)
+ #   app.add_role('glo', GlossaryRole())
 
     app.add_config_value('glossary_doc', None, 'env')
 

@@ -149,7 +149,7 @@ Niveaux de gris, codage sur 8 bits.
 
 En général, les images sont représentées sous forme de tableau numérique, aussi appelé format {glo}`matrice|matriciel`. Une image en niveau de gris sera ainsi représentée par un tableau de valeurs correspondant à la {glo}`luminance|luminance` de chaque pixel. Les valeurs de luminance sont des nombres allant de 0 (noir) à 255 (blanc). Pour encoder une image en niveaux de gris, chaque pixel nécessite donc 8 bits. 
 
-```{figure} media/image_et_pixels.svg
+```{figure} media/image_et_pixels.png
 ---
 name: fig-repr-img-pixel2
 align: left
@@ -193,7 +193,7 @@ En peinture, pour obtenir toutes les couleurs de l'arc-en-ciel, on utilise un m�
 Pour faire la même chose sur un écran, on utilisera également trois couleurs, mais celles-ci seront le rouge, le vert et le bleu (couleurs primaires). Cela correspond à la {glo}`synthadditive|synthèse additive` : en allumant une LED rouge par exemple, on ajoute de la lumière sur la partie du spectre lumineux correspondant.
 
 
-```{figure} media/SyntheseAdd_pixels.svg
+```{figure} media/SyntheseAdd_pixels.png
 ---
 name: fig-repr-img-sys-pixel
 align: left
