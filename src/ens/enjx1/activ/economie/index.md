@@ -4,6 +4,7 @@ Différentes activités:
 
 ```{toctree}
 :maxdepth: 1
+Les enchères du web <encheres>
 
 IA : Apprentissage et données <ia_0>
 
