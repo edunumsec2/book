@@ -123,12 +123,12 @@ L'enseignant·e montre comment deux groupes peuvent faire jouer leur programme l
 
 Les groupes qui le veulent peuvent se confronter les uns les autres et continuer à développer leur stratégie. Ils peuvent avancer/finir à la maison. 
 
-**Séance 2**
 
 ```{admonition} Remarque
 Les plus rapides auront déjà eu le temps d'implémenter une stratégie, alors que les plus lent-e-s n'auront que la stratégie de base
 ```
-
+**Séance 2**
+    
 (puissance4.miseensituation2)=
 ### Mise en situation
 
