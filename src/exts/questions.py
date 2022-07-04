@@ -58,6 +58,39 @@ def visit_check_buttons_html(self, node):
 def depart_check_buttons_html(self, node):
     self.body.append("</div>")
 
+### latex (by Micha) 
+def visit_answer_latex(self, node):
+    classes = ["answer"]
+    if node.is_correct:
+        classes.append("correct")
+    else:
+        classes.append("incorrect")
+
+   
+    self.body.append("start answer")
+
+
+def depart_answer_latex(self, node):
+    self.body.append("end answer")
+
+def visit_question_latex(self, node):
+    classes = ["question"]
+    if node["multi"]:
+        classes.append("multi")
+    self.body.append("start question")
+
+    
+def depart_question_latex(self, node):
+    self.body.append("end question")
+
+def visit_check_buttons_latex(self, node):
+    self.body.append("start check button")
+
+def depart_check_buttons_latex(self, node):
+    self.body.append("end check button")
+
+
+
 
 class Question(SphinxDirective):
     required_arguments = 0
@@ -113,13 +146,21 @@ class Question(SphinxDirective):
         container += admonition
 
         return [container]
-
+## todo: update Micha
 def setup(app):
     app.add_directive("question", Question)
-    app.add_node(question, html=(visit_question_html, depart_question_html))
-    app.add_node(correct_answer, html=(visit_answer_html, depart_answer_html))
-    app.add_node(incorrect_answer, html=(visit_answer_html, depart_answer_html))
-    app.add_node(check_buttons, html=(visit_check_buttons_html, depart_check_buttons_html))
+    app.add_node(question,
+                 html=(visit_question_html, depart_question_html),
+                 latex=(visit_question_latex, depart_question_latex))
+    app.add_node(correct_answer,
+                 html=(visit_answer_html, depart_answer_html),
+                 latex=(visit_answer_latex, depart_answer_latex))
+    app.add_node(incorrect_answer,
+                 html=(visit_answer_html, depart_answer_html),
+                 latex=(visit_answer_latex, depart_answer_latex))
+    app.add_node(check_buttons,
+                 html=(visit_check_buttons_html, depart_check_buttons_html),
+                 latex=(visit_check_buttons_latex, depart_check_buttons_latex))
     app.add_generic_role("v", correct_answer)
     app.add_generic_role("f", incorrect_answer)
 

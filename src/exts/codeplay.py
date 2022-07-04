@@ -46,7 +46,13 @@ def depart_interactive_code_html(self, node):
     self.body.append("</iframe>")
     self.body.append("</div>")
 
+def visit_interactive_code_latex(self, node):
+    self.body.append("\\begin{lstlisting}\n")
+    self.body.append(node["code"].strip())
 
+def depart_interactive_code_latex(self, node):
+    self.body.append("\n \\end{lstlisting}")
+    
 class InteractiveCode(SphinxDirective):
     required_arguments = 0
     optional_arguments = 0
@@ -66,6 +72,9 @@ class InteractiveCode(SphinxDirective):
     }
     has_content = True
 
+    
+
+        
     def run(self):
         self.assert_has_content()
         filename = canon_path(self.env.doc2path(self.env.docname, base=None))
@@ -153,5 +162,7 @@ class InteractiveCode(SphinxDirective):
 
 def setup(app):
     app.add_directive("codeplay", InteractiveCode)
-    app.add_node(interactive_code, html=(visit_interactive_code_html, depart_interactive_code_html))
+    app.add_node(interactive_code,
+                 html=(visit_interactive_code_html, depart_interactive_code_html),
+                 latex=(visit_interactive_code_latex, depart_interactive_code_latex))
     app.add_css_file("codeplay.css")
