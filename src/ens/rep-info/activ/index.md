@@ -9,3 +9,9 @@ Images numériques <encoder_images>
 Echantillonnage <echantillonnage_new>
 Compression et codage de Huffman <huffman>
 ```
+<!---
+use the :hidden: command below :maxdepth: to hide the TOC 
+
+A ajouter une fois l'activitée finie
+Format BMP <format_BMP_new>
+-->

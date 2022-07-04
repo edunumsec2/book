@@ -212,6 +212,5 @@ périodes de pratique en demi-classe (groupes A et B) toutes les deux semaines e
 :hidden:
 
 Activités <activ/index>
-
 Solutions des exercices <exo/solutions>
 ```

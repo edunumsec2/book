@@ -33,6 +33,18 @@ def visit_timeline_item_html(self, node):
 def depart_timeline_item_html(self, node):
     self.body.append("</div></div>")
 
+def visit_timeline_latex(self, node):
+    self.body.append("timeline:\\")
+    
+def depart_timeline_latex(self, node):
+    pass
+
+def visit_timeline_item_latex(self, node):
+    self.body.append(node['date']+ " " +  node['title']+"\\")
+    
+def depart_timeline_item_latex(self, node):
+    pass
+
 class TimelineItem(SphinxDirective):
     required_arguments = 1
     optional_arguments = 0
@@ -64,8 +76,12 @@ class Timeline(SphinxDirective):
 def setup(app):
     app.add_directive("timeline", Timeline)
     app.add_directive("item", TimelineItem)
-    app.add_node(timeline, html=(visit_timeline_html, depart_timeline_html))
-    app.add_node(timeline_item, html=(visit_timeline_item_html, depart_timeline_item_html))
+    app.add_node(timeline,
+                 html=(visit_timeline_html, depart_timeline_html),
+                 latex=(visit_timeline_latex, depart_timeline_latex))
+    app.add_node(timeline_item,
+                 html=(visit_timeline_item_html, depart_timeline_item_html),
+                 latex=(visit_timeline_item_latex, depart_timeline_item_latex))
 
     static_dir = os.path.join(os.path.dirname(__file__), "static")
     app.connect("builder-inited", (lambda app: app.config.html_static_path.append(static_dir)))

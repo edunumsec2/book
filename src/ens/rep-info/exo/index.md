@@ -4,6 +4,6 @@
 :maxdepth: 2
 :hidden:
 Carte perforée <carte>
-Radiotéléphonie <radiotel>
 Space Invaders <space>
+Radiotéléphonie <radiotel>
 ```

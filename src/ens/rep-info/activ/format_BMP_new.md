@@ -1,3 +1,4 @@
+(ens:repinfo:conceptionimages)=
 # Conception d'images dans un éditeur hexadécimal
 
 ---- 

@@ -1,3 +1,4 @@
+(ens:repinfo:compressionhuffman)=
 # Compression sans pertes et codage de Huffman
 
 ---- 
