@@ -3,8 +3,7 @@
 ```{toctree}
 :maxdepth: 1
 :hidden:
-grandes-thematiques/economie-numerique
-grandes-thematiques/surveillance
+grandes-thematiques/index
 fiches-complementaires/index
 activ/index
 ```

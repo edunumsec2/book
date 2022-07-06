@@ -4,8 +4,9 @@
 ```{toctree}
 :maxdepth: 1
 :hidden:
-grandes-thematiques/environnement
+grandes-thematiques/index
 activ/index
+support/index
 ```
 
 Si l'enseignement de la science informatique a pour objectif de transmettre des connaissances de base dans des domaines techniques tels que l'algorithmique ou la programmation, la numérisation croissante de la société nécessite également la compréhension des enjeux sociaux, politiques et économiques que ces transformations soulèvent. 
