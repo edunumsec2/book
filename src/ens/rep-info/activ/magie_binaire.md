@@ -14,7 +14,7 @@ Une introduction au binaire de manière ludique en misant sur la curiosité à c
 :class: hint
 
 * **Thème** : Représentation de l'information (avant 1. Entiers)
-* **Niveau** : Facile comme toto
+* **Niveau** : Facile 
 * **Durée** : 2 périodes
 * **Objectifs pédagogiques** : Motiver la compréhension des nombres binaires
 * **Notions fondamentales** : Représentation binaire des nombres entiers
@@ -298,6 +298,7 @@ Les élèves doivent créer la version du tour pour le petit frère (ou petite s
 * Comment peut-on faire pour écrire des nombres négatifs, décimaux en binaire ?
 * À compléter...
 
+(magiebinaire.mobiliser)=
 ### Mobiliser les connaissances
 
 Voici une énigme dont la solution utilise le principe de codage binaire.
