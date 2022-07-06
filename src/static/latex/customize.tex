@@ -4,8 +4,17 @@
 \renewenvironment{wrapfigure}[2]{\begin{figure}[htbp]}{\end{figure} \ignorespacesafterend}
 \sphinxpxdimen=.5bp\relax
 \definecolor{light-gray}{gray}{0.95} 
-\lstset{language=Python,upquote=true,showstringspaces=false,columns=fullflexible, basicstyle = \ttfamily,backgroundcolor = \color{light-gray},numbers=right,stepnumber=1,keywordstyle=\color{blue},stringstyle=\color{magenta},commentstyle=\color{red},breaklines=true,inputencoding=utf8/latin1}
+\lstset{language=Python,upquote=true,showstringspaces=false,columns=fullflexible, basicstyle = \ttfamily,backgroundcolor = \color{light-gray},numbers=right,stepnumber=1,keywordstyle=\color{blue},stringstyle=\color{magenta},commentstyle=\color{red},breaklines=true}
+%% for accented characters in lstlisting
+\lstset{inputencoding=utf8/latin1, literate=%
+         {à}{{\`a }}1
+         {é}{{\'e}}1
+         {è}{{\`e}}1
+         {ê}{{\^e}}1
+         {ô}{{\^o}}1
+         {û}{{\^u}}1}
 
+%% undefined unicode characters
 \DeclareUnicodeCharacter{270F}{}
 \DeclareUnicodeCharacter{FE0F}{}
 \DeclareUnicodeCharacter{1F4D2}{}
