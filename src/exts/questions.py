@@ -66,12 +66,10 @@ def visit_answer_latex(self, node):
     else:
         classes.append("incorrect")
 
-   
-    self.body.append("start answer")
 
 
 def depart_answer_latex(self, node):
-    self.body.append("end answer")
+    pass
 
 def visit_question_latex(self, node):
     classes = ["question"]
