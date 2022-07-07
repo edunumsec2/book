@@ -12,22 +12,8 @@ Les ressources sont découpées selon un chapitrage qui correspond au `plan d'é
 romand pour l'informatique au gymnase. Elles sont divisées en quatre parties, dont nulle n'a de préséance sur les autres. 
 Il appartient à l'enseignant·e de choisir l'ordre dans lequel les contenus sont abordés. 
 
-`Représentation de l'information <https://apprendre.modulo-info.ch/content/appr/theme/rep-info/accueil/eleve.html>`_
-: ce chapitre traite du passage du système décimal au *système binaire*, 
-ainsi que des problématiques de traitement des données telles que *l'encodage*, *la compression*, 
-*l'échantillonnage*, et la *représentation des caractères, des images et des sons* sous forme de bits. 
-
-`Programmation I <https://dev-apprendre.modulo-info.ch/prog1/index.html>`_
-: ce chapitre présente la programmation sous une approche visuelle et graphique. 
-A travers des activités familières (dessiner, définir, colorier, répéter, etc.) 
-nous faisons connaissance avec les concepts informatiques tel que fonctions, boucles et variables. 
-
-`Algorithmique I <https://apprendre.modulo-info.ch/content/appr/theme/algo1/accueil/eleve.html>`_
-: ce chapitre propose une *définition générale de l'algorithmique*, ainsi qu'une présentation de certains *algorithmes classiques*. 
-
-`Architecture des ordinateurs <https://apprendre.modulo-info.ch/content/appr/theme/archi/accueil/eleve.html>`_
-: il est question ici de notions telles que *les portes logiques*, *les transistors*, *l'architecture de Von Neumann*, 
-et autres concepts essentiels à la compréhension de ce qui se passe au niveau physique et électronique dans un ordinateur.
+Dans la partie **enseigner** des ressources, vous trouverez des activités, des exercices, des supports de cours, et des planifications,
+pour vous aider dans la création de vos cours. 
 
 La plateforme est améliorée grâce à vos retours, n’hésitez pas à nous les partager à modulo-team@epfl.ch !
 
