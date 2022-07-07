@@ -1,24 +1,42 @@
 \usepackage{listings}
 \usepackage{listingsutf8}
+\usepackage{pifont}
 \newcommand{\glossaryterm}[1]{\textit{#1}}
+\newcommand{\glossarylist}{}
 \renewenvironment{wrapfigure}[2]{\begin{figure}[htbp]}{\end{figure} \ignorespacesafterend}
+\newenvironment{timeline}{}{}
+\newenvironment{timelineitem}[2]{}{}
+
+%% \newenvironment{timeline}{\begin{tabular}{rl}}{\end{tabular}}
+%% \newenvironment{timelineitem}[2]{\textbf{#1} & \textbf{#2} \\ &}{\\}
 \sphinxpxdimen=.5bp\relax
 \definecolor{light-gray}{gray}{0.95} 
 \lstset{language=Python,upquote=true,showstringspaces=false,columns=fullflexible, basicstyle = \ttfamily,backgroundcolor = \color{light-gray},numbers=right,stepnumber=1,keywordstyle=\color{blue},stringstyle=\color{magenta},commentstyle=\color{red},breaklines=true}
 %% for accented characters in lstlisting
 \lstset{inputencoding=utf8/latin1, literate=%
          {à}{{\`a }}1
+         {â}{{\^a }}1
          {é}{{\'e}}1
          {è}{{\`e}}1
          {ê}{{\^e}}1
          {ô}{{\^o}}1
-         {û}{{\^u}}1}
+         {’}{{'}}1
+         {ù}{{\`u}}1
+         {û}{{\^u}}1
+         {À}{{\`A}}1
+         {♣}{{\ding{168}}}1
+         {♦}{{\ding{169}}}1
+         {♥}{{\ding{170}}}1
+         {♠}{{\ding{171}}}1
+}
 
 %% undefined unicode characters
 \DeclareUnicodeCharacter{270F}{}
 \DeclareUnicodeCharacter{FE0F}{}
 \DeclareUnicodeCharacter{1F4D2}{}
 \DeclareUnicodeCharacter{1F50C}{}
+\DeclareUnicodeCharacter{1F1EB}{}
+\DeclareUnicodeCharacter{1F1EE}{}
 \DeclareUnicodeCharacter{1F1F1}{}
 \DeclareUnicodeCharacter{1F1F3}{}
 \DeclareUnicodeCharacter{1F1FA}{}
@@ -30,3 +48,15 @@
 \DeclareUnicodeCharacter{300}{è}
 \DeclareUnicodeCharacter{301}{é}
 \DeclareUnicodeCharacter{302}{ê}
+\DeclareUnicodeCharacter{03B1}{$\alpha$}
+\DeclareUnicodeCharacter{03B2}{$\beta$}
+\DeclareUnicodeCharacter{03B3}{$\gamma$}
+\DeclareUnicodeCharacter{03B4}{$\delta$}
+\DeclareUnicodeCharacter{03B5}{$\epsilon$}
+\DeclareUnicodeCharacter{03B7}{$\eta$}
+\DeclareUnicodeCharacter{03B9}{$\iota$}
+\DeclareUnicodeCharacter{03BB}{$\lambda$}
+\DeclareUnicodeCharacter{03BD}{$\nu$}
+\DeclareUnicodeCharacter{03C1}{$\rho$}
+\DeclareUnicodeCharacter{03C4}{$\tau$}
+\DeclareUnicodeCharacter{03C6}{$\phi$}

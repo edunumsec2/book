@@ -34,16 +34,17 @@ def depart_timeline_item_html(self, node):
     self.body.append("</div></div>")
 
 def visit_timeline_latex(self, node):
-    self.body.append("timeline:\\")
+    self.body.append("\\begin{timeline} \n")
     
 def depart_timeline_latex(self, node):
-    pass
+    self.body.append("\n \\end{timeline}")
 
 def visit_timeline_item_latex(self, node):
-    self.body.append(node['date']+ " " +  node['title']+"\\")
+    self.body.append("\\begin{timelineitem}{"
+        +node['date']+ "}{" +  node['title']+"} \n")
     
 def depart_timeline_item_latex(self, node):
-    pass
+    self.body.append("\n \\end{timelineitem}\n")
 
 class TimelineItem(SphinxDirective):
     required_arguments = 1

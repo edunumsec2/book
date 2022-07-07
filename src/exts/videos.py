@@ -34,7 +34,7 @@ def depart_youtube_html(self, node):
 
 # micha
 def visit_youtube_latex(self, node):
-    self.body.append("Vidéo youtube" + node["vid"]+ "\\")
+    self.body.append("Vidéo youtube " + node["vid"]+ "\\\ \n")
     
 def depart_youtube_latex(self, node):
     pass

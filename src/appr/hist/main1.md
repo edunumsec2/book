@@ -267,9 +267,10 @@ Dès 1982, le commodore 64 (figure [0.3](#commodore64){reference-type="ref" refe
 :align: right 
 ```
 
-Il est précédé du VIC-20 de la même marque et de nombreuses autres propositions d'ordinateurs extrêmement bon marchés et souvent vendus comme des consoles de jeu intelligentes. Dans les plus connus on trouve ainsi le ZX80 (figure [0.4](#zx80){reference-type="ref" reference="zx80"}) ou le micro de la BBC.
+Il est précédé du VIC-20 de la même marque et de nombreuses autres propositions d'ordinateurs extrêmement bon marchés et souvent vendus comme des consoles de jeu intelligentes. Dans les plus connus on trouve ainsi le ZX80 (figure :numref:`zx80`) ou le micro de la BBC.
 
-```{image} media/machines/520px-ZX80.jpeg 
+```{image} media/machines/520px-ZX80.jpeg
+:name: zx80
 :width: 40% 
 :align: right 
 ```
@@ -297,7 +298,7 @@ Internet
 
 Internet, le réseau des réseaux, est d'abord un projet de l'armée américaine pour mettre en place un réseau décentralisé capable de résister à une attaque nucléaire. En effet, les réseaux de télécommunications, initialement, sont conçus sur une architecture en étoile avec un central (téléphonique) dont la destruction entraîne la mise hors service de l'ensemble du réseau.
 
-Le réseau ARPANET[^9] est opérationnel pour la première fois en septembre 1969. Il connecte d'abord quelques universités américaines, comme on peut le voir sur la carte figure [0.7](#arpanet){reference-type="ref" reference="arpanet"}.
+Le réseau ARPANET[^9] est opérationnel pour la première fois en septembre 1969. Il connecte d'abord quelques universités américaines, comme on peut le voir sur la carte ci-dessous:
 
 ```{image} media/Arpanet_1974.svg.png 
 :width: 80% 
