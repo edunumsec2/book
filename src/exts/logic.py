@@ -55,6 +55,14 @@ def end_logic_diagram_html(self, node):
     self.body.append("</div>")
 
 
+def begin_logic_diagram_latex(self, node):
+    self.body.append("\n \\fbox{logic diagram} \\\ ")
+
+def end_logic_diagram_latex(self, node):
+   self.body.append("\n")
+
+    
+
 def directive_mode(argument):
     return directives.choice(argument, ("static", "tryout", "connect", "design", "full"))
 
@@ -157,7 +165,11 @@ def begin_logic_highlight_html(self, node):
 def end_logic_highlight_html(self, node):
     self.body.append("</span>")
 
+def begin_logic_highlight_latex(self, node):
+    self.body.append("\n \\fbox{highlighted logic diagram} \\\ ")
 
+def end_logic_highlight_latex(self, node):
+    self.body.append("\n")
 
 class logic_gate(nodes.Inline, nodes.TextElement):
     pass
@@ -182,20 +194,33 @@ def begin_logic_gate_html(self, node):
 def end_logic_gate_html(self, node):
     self.body.append("</span>")
 
+def begin_logic_gate_latex(self, node):
+    self.body.append("\n \\fbox{logic gate} \\\ ")
 
+def end_logic_gate_latex(self, node):
+    pass
+    
+    
 def setup(app):
     app.add_directive("logic", LogicDiagram)
-    app.add_node(logic_diagram, html=(begin_logic_diagram_html, end_logic_diagram_html))
+    app.add_node(logic_diagram,
+                 html=(begin_logic_diagram_html, end_logic_diagram_html),
+                 latex=(begin_logic_diagram_latex, end_logic_diagram_latex)
+    )
     app.add_js_file("https://logic.modulo-info.ch/simulator/lib/bundle.js")
 
     app.add_role("logicref", LogicHighlightRefRole())
     app.add_node(
-        logic_highlight, html=(begin_logic_highlight_html, end_logic_highlight_html)
+        logic_highlight,
+        html=(begin_logic_highlight_html, end_logic_highlight_html),
+        latex=(begin_logic_highlight_latex, end_logic_highlight_latex)
     )
 
     app.add_role("lg", LogicGateRole())
     app.add_node(
-        logic_gate, html=(begin_logic_gate_html, end_logic_gate_html)
+        logic_gate,
+        html=(begin_logic_gate_html, end_logic_gate_html),
+        latex=(begin_logic_gate_latex, end_logic_gate_latex)
     )
 
 
