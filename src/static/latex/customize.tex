@@ -2,14 +2,16 @@
 \usepackage{listingsutf8}
 \usepackage{pifont}
 \newcommand{\glossaryterm}[1]{\textit{#1}}
-\newcommand{\glossarylist}{}
+\newcommand{\glossarylist}{\\}
 \renewenvironment{wrapfigure}[2]{\begin{figure}[htbp]}{\end{figure} \ignorespacesafterend}
 \newenvironment{timeline}{}{}
 \newenvironment{timelineitem}[2]{}{}
 
+
 %% \newenvironment{timeline}{\begin{tabular}{rl}}{\end{tabular}}
 %% \newenvironment{timelineitem}[2]{\textbf{#1} & \textbf{#2} \\ &}{\\}
 \sphinxpxdimen=.5bp\relax
+
 \definecolor{light-gray}{gray}{0.95} 
 \lstset{language=Python,upquote=true,showstringspaces=false,columns=fullflexible, basicstyle = \ttfamily,backgroundcolor = \color{light-gray},numbers=right,stepnumber=1,keywordstyle=\color{blue},stringstyle=\color{magenta},commentstyle=\color{red},breaklines=true}
 %% for accented characters in lstlisting
@@ -35,7 +37,9 @@
 \DeclareUnicodeCharacter{FE0F}{}
 \DeclareUnicodeCharacter{1F4D2}{}
 \DeclareUnicodeCharacter{1F50C}{}
+\DeclareUnicodeCharacter{1F1E7}{}
 \DeclareUnicodeCharacter{1F1EB}{}
+\DeclareUnicodeCharacter{1F1EC}{}
 \DeclareUnicodeCharacter{1F1EE}{}
 \DeclareUnicodeCharacter{1F1F1}{}
 \DeclareUnicodeCharacter{1F1F3}{}
@@ -60,3 +64,18 @@
 \DeclareUnicodeCharacter{03C1}{$\rho$}
 \DeclareUnicodeCharacter{03C4}{$\tau$}
 \DeclareUnicodeCharacter{03C6}{$\phi$}
+
+
+%% display cards
+%\newenvironment{card}{\begin{minipage}{0.5\textwidth}}{\end{minipage}}
+\makeatletter
+\def\@cardenvironment{minipage}
+\renewenvironment{sphinxuseclass}[1]{%
+\def\myarg{#1}
+\def\cardenv{card}
+\ifx\myarg\cardenv\begin{minipage}{0.5\textwidth}\fi
+}%
+{%
+\ifx\@currenvir\@cardenvironment\end{minipage}\fi
+}
+\makeatother

@@ -37,11 +37,11 @@ def depart_glossary_reference_latex(self, node):
     self.body.append('}')
     
 def visit_glossary_list_latex(self, node):
-    self.body.append('\glossarylist{')
+    self.body.append('\glossarylist')
 
 
 def depart_glossary_list_latex(self, node):
-    self.body.append('}')
+    pass
     
 
     

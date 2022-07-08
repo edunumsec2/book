@@ -165,11 +165,20 @@ def begin_logic_highlight_html(self, node):
 def end_logic_highlight_html(self, node):
     self.body.append("</span>")
 
+
+def _render_latex(source: str) -> str:
+    # ugly hack, should used child nodes instead (micha)
+    source.strip()
+    source = source.replace('_','')
+    return source
+    
+    
 def begin_logic_highlight_latex(self, node):
-    self.body.append("\n \\fbox{highlighted logic diagram} \\\ ")
+    content = _render_latex(node["display"])
+    self.body.append(content)
 
 def end_logic_highlight_latex(self, node):
-    self.body.append("\n")
+    pass
 
 class logic_gate(nodes.Inline, nodes.TextElement):
     pass

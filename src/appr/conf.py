@@ -63,7 +63,7 @@ language = 'fr'
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 #root_doc = 'rep-info/index'
-#exclude_patterns = ['prog1', 'prog2','archi','glossaire', 'hist', 'resx','algo1','algo2']
+exclude_patterns = ['prog1', 'prog2', 'hist','algo2', 'projets','resx']
 
 # -- Options for HTML output -------------------------------------------------
 

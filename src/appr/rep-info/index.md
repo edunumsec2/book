@@ -42,7 +42,6 @@ Grace Hopper 🇺🇸
 
 ----
 :img-top: media/claudeshannon.jpg
-
 Claude Shannon  🇺🇸
 ^^^^^
 ***1916-2001***
