@@ -1,6 +1,7 @@
 \usepackage{listings}
 \usepackage{listingsutf8}
 \usepackage{pifont}
+\usepackage{animate}
 \newcommand{\glossaryterm}[1]{\textit{#1}}
 \newcommand{\glossarylist}{\\}
 \renewenvironment{wrapfigure}[2]{\begin{figure}[htbp]}{\end{figure} \ignorespacesafterend}
@@ -72,7 +73,7 @@
 \def\@cardenvironment{minipage}
 \renewenvironment{sphinxuseclass}[1]{%
 \def\myarg{#1}
-\def\cardenv{card}
+\def\cardenv{col-sm-6}
 \ifx\myarg\cardenv\begin{minipage}{0.5\textwidth}\fi
 }%
 {%
