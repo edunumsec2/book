@@ -5,7 +5,7 @@ import base64
 import os
 import sys
 import hashlib
-from typing import Any, List, Tuple, Union
+from typing import Any, List, Tuple, Union, Optional
 import pyppeteer  # type: ignore
 from pyppeteer.page import Page  # type: ignore
 
@@ -40,7 +40,7 @@ def await_blocking(func: Any) -> Any:
 class LogicDiagramData:
     data_json: str
     mode: str
-    height: int | None
+    height: Optional[int]
 
     @cached_property
     def content_based_filename(self) -> str:
