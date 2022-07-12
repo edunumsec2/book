@@ -28,7 +28,6 @@ découpé en **quatre thématiques**.
    algo2/index
    prog2/index
    projets/index
-   resx/index
 
 .. toctree::
    :name: Thématiques transversales
