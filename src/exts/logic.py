@@ -5,7 +5,7 @@ import base64
 import os
 import sys
 import hashlib
-from typing import Any, Awaitable, List, Tuple, TypeVar, Union
+from typing import Any, Awaitable, List, Tuple, TypeVar, Union, Optional
 import pyppeteer  # type: ignore
 from pyppeteer.page import Page  # type: ignore
 
@@ -45,7 +45,7 @@ def await_blocking(func: Awaitable[T]) -> T:
 class LogicDiagramData:
     data_json: str
     mode: str
-    height: int | None
+    height: Optional[int]
 
     @cached_property
     def content_based_filename(self) -> str:
