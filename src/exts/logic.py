@@ -5,7 +5,7 @@ import base64
 import os
 import sys
 import hashlib
-from typing import Any, List, Tuple, Union
+from typing import Any, Awaitable, List, Tuple, TypeVar, Union
 import pyppeteer  # type: ignore
 from pyppeteer.page import Page  # type: ignore
 
@@ -21,6 +21,8 @@ from myst_parser.main import MdParserConfig, to_html
 # import zlib
 # import lzstring
 
+## REF: https://www.sphinx-doc.org/en/master/extdev/index.html
+
 logger = logging.getLogger(__name__)
 
 StringOrList = Union[str, List[str]]
@@ -32,7 +34,10 @@ def md5(string: str) -> str:
     return md5_builder.hexdigest()
 
 
-def await_blocking(func: Any) -> Any:
+T = TypeVar("T")
+
+
+def await_blocking(func: Awaitable[T]) -> T:
     return asyncio.get_event_loop().run_until_complete(func)
 
 
