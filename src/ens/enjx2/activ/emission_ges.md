@@ -13,7 +13,7 @@ activités numériques relativement à d'autres activités carbonées.
 * Durée : 2 périodes ou 90 minutes
 * Objectifs pédagogiques : Estimer et prendre conscience de l'ordre de grandeur des émission de CO2 de certaines activités numériques relativement à d'autres activités carbonées. 
 * Modalité : `branché`
-* Matériel : Cartes "activités"
+* Matériel : {download}`Cartes activités <media/emissions_cartes.pdf>`
 * Prérequis : éventuellement notions de tableurs, peut-être introduit dans le cadre ce cette activité
 * Notions fondamentales : Réchauffement climatique, émission de gaz à effet de serre, 
 * Taille du groupe : `demi-classe`
@@ -28,7 +28,8 @@ Plus généralement cette activité permet de:
 1. Prendre conscience que ces calculs dépendent de nombreux paramètres, sur lesquels il est possible d'agir (individuellement et collectivement)
 1. Réaliser que les GES émis lors de la production d'appareils numériques sont plus importants que ceux émis lors de leur utilisation. 
 1. Développer son autonomie dans la recherche et l'évaluation d'information sur internet
-1. Utiliser un tableur pour faire des calculs. 
+1. Utiliser un tableur pour faire des calculs.
+
 
 ## Déroulement
 
@@ -54,7 +55,7 @@ causé par les émissions GES et les enjeux actuels s'y rapportant. Un support v
 Les élèves forment des groupes de deux (ou trois) et chaque groupe reçoit une série de cartes représentant une activité
 de la vie courante. Les activités sont les suivantes:
 
-1. Manger une portion de spaghetti à la bolognaise
+1. Manger un steak de boeuf avec des frites
 1. Recharger son téléphone portable une fois tous les jour pendant un an. 
 1. Faire un aller-retour Lausanne - Genève en voiture à essence
 1. Regarder une série d'une heure chaque semaine pendant un an sur son ordinateur
