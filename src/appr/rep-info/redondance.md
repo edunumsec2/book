@@ -1,3 +1,4 @@
+(appr:repinfo:redondance)=
 # Redondance
 
 Pourrait-on construire un véhicule qui ne tombe jamais en panne ?

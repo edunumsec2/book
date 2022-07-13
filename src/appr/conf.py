@@ -62,7 +62,7 @@ language = 'fr'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+# exclude_patterns = ['prog1', 'prog2','archi','glossaire']
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -153,3 +153,10 @@ pygments_dark_style = "monokai"
 
 myst_enable_extensions = ['amsmath', 'colon_fence', 'deflist', 'dollarmath', 'html_admonition', 'html_image', 'replacements', 'smartquotes', 'substitution']
 myst_url_schemes = ['mailto', 'http', 'https']
+
+latex_elements = {
+    'papersize': 'a4paper',
+    'preamble': r'\input{src/static/latex/customize}',
+    'pxunit': '0.5bp',
+    'figure_align': 'H'
+}

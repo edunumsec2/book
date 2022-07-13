@@ -1,3 +1,4 @@
+(ens:repinfo:magiebinaire)=
 # Magie Binaire
 
 ---- 
@@ -8,43 +9,34 @@ Une introduction au binaire de manière ludique en misant sur la curiosité à c
 
 ----
 
-```{admonition} Caractéristiques
+
+```{admonition} Notice
 :class: hint
 
-* Nom : Magie Binaire
-* Durée : 2 périodes
-* Thème : Représentation de l'information
-* Objectifs d’apprentissage : Faire découvrir le binaire, comment écrire et compter en binaire mais aussi comment utiliser le binaire pour encoder de l’information. Après cette séquence les élèves devraient avoir compris le système de numération des entiers positifs utilisant la base 2.  
-Ils auront également assimilé le fait que n’importe quelle information peut être représentée par une suite ordonnée de 0 et de 1, ce qui est à la base de tout ce qu’ils peuvent voir et faire sur un ordinateur ou un smartphone.
-* Notions fondamentales : la base 10 est le mode de calcul du quotidien, le binaire est celui de l'informatique. Un chiffre dans un nombre, de par sa place et sa base peut avoir des valeurs différentes. On peut passer un nombre d'une base à une autre.
-* Approche pédagogique : Débranchée
-* Matériel : Les 6 cartes pour faire le tour de magie. Disponible ici : {download}`fichier MagieBinaire.png<media/MagieBinaire.png>`
-* Niveau : `à compléter`
-* Mots-clés : `à compléter`
-* Dynamique (groupe / individuel) : `à compléter`
-* Taille du groupe : `à compléter`
+* **Thème** : Représentation de l'information (avant 1. Entiers)
+* **Niveau** : Facile 
+* **Durée** : 2 périodes
+* **Objectifs pédagogiques** : Motiver la compréhension des nombres binaires
+* **Notions fondamentales** : Représentation binaire des nombres entiers
+* **Modalité** : Débranchée
+* **Matériel** : Les 6 cartes pour faire le tour de magie. Disponible ici : {download}`fichier MagieBinaire.png<media/MagieBinaire.png>` 
+* **Prérequis** : Aucun
 ```
 
-```{dropdown} **Déroulement**
+| Étapes                                   | Durée          | Phase de l'activité   | 
+|---------------------------------------|------|---------------------|
+| {ref}`Présentation du tour de magie<magiebinaire.presentation>`| 15 min  | Mise en situation    |
+| {ref}`Compter en binaire<magiebinaire.compter>`| 15 min  | Enseignement / Apprentissage |
+| {ref}`Retour en base 10<magiebinaire.retour>`| 15 min   |   Enseignement / Apprentissage     |
+| {ref}`Encodage de l'information<magiebinaire.encodage>`| 15 min   |   Enseignement / Apprentissage    |
+| {ref}`Explication du tour<magiebinaire.explication>`| 15 min   | Objectivation           |
+| {ref}`Pour aller plus loin<magiebinaire.plusloin>` | 10 min   | Réinvestissement              |
 
-1. {ref}`Présentation du tour de magie<magiebinaire.presentation>` (10-15 mn) en le faisant aux élèves. 
-
-1. {ref}`Compter en binaire<magiebinaire.compter>` (15-20 mn) et présentation de la différence entre base 2 et base 10. 
-
-1. {ref}`Retour en base 10<magiebinaire.retour>` (15-20 mn) où vous evenez sur la numérotation en base 10 pour présenter la forme canonique.  
-
-1. {ref}`Encodage de l'information<magiebinaire.encodage>` (10-15 mn) où vous introduisez la notion du nombre de “mots” différents en fonction du nombre de bits. 
-
-1. {ref}`Explication du tour<magiebinaire.explication>` (10-15 mn) où il s'agit d'expliquer le fonctionnement du tour. 
-
-1. {ref}`Pour aller plus loin<magiebinaire.plusloin>`, vous avez différentes possibilités dont une version allégée du tour que les élèves doivent être capables de mettre en place. 
-
-```
 
 (magiebinaire.presentation)=
 ## Présentation du tour de magie
 
-*Durée : 10-15 mn*
+*Durée : 10-15 min*
 
 *Objectif : attiser la curiosité*
 
@@ -60,20 +52,13 @@ Variante 1
 Variante 2
 : Demandez à l’élève de séparer les cartes en 2 paquets, le premier avec les cartes ou son nombre est présent, le second avec les autres.
 
-Après avoir manipulé la recherche plusieurs fois, demandez des hypothèses sur le fonctionnement puis proposez de découvrir le secret du tour de magie via les activités qui suivent.
-
-Informations complémentaires
-Le secret du tour est simple, il suffit d'additionner le nombre en haut à gauche de chaque carte où son nombre est présent. Ce nombre pour la carte i, correspond à la valeur 2<sup>i-1</sup>.Une carte représente tous les nombres entre 1 et 63 dont l'écriture binaire nécessite 1 pour la valeur 2<sup>i-1</sup>.
-
- Si le nombre choisis est présent dans les cartes 1(2<sup>0</sup>), 3(2<sup>4</sup>) et 4(<sup>5</sup>) alors le nombre recherché sera 
-1 X 2<sup>0</sup> + 0 X 2<sup>1</sup> + 0 X 2<sup>2</sup> + 0 X 2<sup>3</sup> + 1 X 2<sup>4</sup> + 1 X 2<sup>5</sup> + 0 X 2<sup>6</sup> = 1+8+16 =25 présenté en base binaire ainsi 110001.
-
+Le secret du tour est simple, il suffit d'additionner le nombre en haut à gauche de chaque carte où son nombre est présent.
 
 
 (magiebinaire.compter)=
 ## Compter en binaire
 
-*Durée : 15-20 mn*
+*Durée : 15-20 min*
 
 *Objectif : Comprendre comment représenter des nombres entiers positifs à l'aide de la numération de position avec seulement deux chiffres : le 0 et le 1.*
 
@@ -91,14 +76,14 @@ Faire compter les élèves de 0 à 20 (ou plus) en binaire sur papier, ils peuve
 (magiebinaire.retour)=
 ## Retour de base 2 à base 10
 
-*Durée : 15-20 mn*
+*Durée : 15-20 min*
 
 Revenez ensuite sur la numérotation en base 10 pour présenter la forme canonique.  
 Dans un système de position, comme le nôtre, pour connaître la valeur de chaque chiffre qui compose un nombre, il faut décomposer ce nombre pour identifier chaque chiffre et son coefficient.  
 En effet, le 2 de 1924 et celui de 2004 n'ont pas la même valeur : Le premier vaut 20, alors que le second vaut 2000.
 
 ````{panels}
-:column: col-sd
+:columin: col-sd
 
 Base 10
 ^^^
@@ -129,7 +114,7 @@ La forme canonique de 3528 est : $3 \cdot 10^3 + 5 \cdot 10^2 + 2 \cdot 10^1 + 8
 En binaire c’est la même chose sauf qu’il n’y a que 2 chiffres qui composent la base, le 0 et le 1.
 
 ````{panels}
-:column: col-sd
+:columin: col-sd
 
 Base 2
 ^^^
@@ -172,7 +157,7 @@ Base 2
 La forme canonique du nombre binaire $10101_{(2)}$ est : $1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0$
 
 ````{panels}
-:column: col-md
+:columin: col-md
 
 La forme canonique nous permet de faire facilement le passage de la base 2 à la base 10 :
 ^^^
@@ -228,17 +213,17 @@ La dernière conversion de l'exercice 3 peut être obtenue rapidement si on rema
 À l'aide du tableau de l'exercice 2, comment peut-on passer de la base 10 à la base 2 ?  
 Faire les conversions binaires de différents nombres décimaux.
 
-*Durée : 10-15 mn*
+*Durée : 10-15 min*
 
 (algo-tri.conclusion)=
 ## Conclusion
 
-*Durée : 5-10 mn*
+*Durée : 5-10 min*
 
 (magiebinaire.encodage)=
 ## Encodage de l'information
 
-*Durée : 10-15 mn*
+*Durée : 10-15 min*
 
 A l’instar du morse (0 = . ; 1 = - ), on peut utiliser le binaire pour (en)coder autre chose que des nombres. Introduire la notion du nombre de “mots” différents en fonction du nombre de bits.
 
@@ -260,7 +245,7 @@ Combien de bits faut-il pour représenter :
 
 * les mois de l’année ?
 * les lettres de l’alphabet (préciser lequel) ? 
-* le nombre d’élèves du gymnase ?
+* le nombre d’élèves du gyminase ?
 * la présence/absence des élèves étant donnée la liste de présence ?
 * ...
 
@@ -283,11 +268,11 @@ Regardez attentivement la carte qui contient un 2 en haut à gauche.
 Voici comment s'écrivent les nombres de cette carte en binaire:
 
 ````{panels}
-:column: col-md
+:columin: col-md
 
 Représentation binaire des chiffres de la carte n°2
 ^^^
-<img src="./media/Carte2.png" alt="carte2" class="bg-primary" width="600px">
+<img src="./Carte2.png" alt="carte2" class="bg-primary" width="600px">
 ````
 
 Chaque carte représente donc 1 des 6 bits nécessaire à l’encodage des entiers de 0 à 63 et les nombres présents sur la carte sont tous ceux dont ce bit est à 1 dans leur code binaire.  
@@ -313,6 +298,7 @@ Les élèves doivent créer la version du tour pour le petit frère (ou petite s
 * Comment peut-on faire pour écrire des nombres négatifs, décimaux en binaire ?
 * À compléter...
 
+(magiebinaire.mobiliser)=
 ### Mobiliser les connaissances
 
 Voici une énigme dont la solution utilise le principe de codage binaire.
@@ -336,6 +322,7 @@ Par exemple la bouteille 3 sera codée 0110 (si on code sur 4 bits, c'est à dir
 Une fois que toutes les bouteilles ont été goutées, on regarde les numéros des rats décédés. Tous ont leur bit à 1 dans la bouteille empoisonnée, leur mort nous apporte l'information nécessaire.  
 
 Si par exemple on avait le rat 1 et le 3 de mort, alors la bouteille correspondante serait (0101), c'est à dire la numéro 5 !
+
 
 
 

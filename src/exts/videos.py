@@ -32,6 +32,13 @@ def depart_youtube_html(self, node):
     self.body.append("</iframe>")
     self.body.append("</div>")
 
+# micha
+def visit_youtube_latex(self, node):
+    self.body.append("Vidéo youtube" + node["vid"]+ "\\")
+    
+def depart_youtube_latex(self, node):
+    pass
+
 class YouTubeVideo(SphinxDirective):
     required_arguments = 1
     optional_arguments = 0
@@ -139,7 +146,9 @@ def setup(app):
     app.add_directive("switchtube", SwitchTubeVideo)
     app.add_directive("cnrs", CNRSVideo)
     
-    app.add_node(youtube_video, html=(visit_youtube_html, depart_youtube_html))
+    app.add_node(youtube_video,
+                 html=(visit_youtube_html, depart_youtube_html),
+                 latex=(visit_youtube_latex, depart_youtube_latex))
     app.add_node(switchtube_video, html=(visit_switchtube_html, depart_switchtube_html))
     app.add_node(cnrs_video, html=(visit_cnrs_html, depart_cnrs_html))
 
