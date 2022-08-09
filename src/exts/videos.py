@@ -1,15 +1,18 @@
 
 import os
 import sys
+import qrcode
+
+from PIL import Image
 
 from docutils import nodes
 from docutils.parsers.rst import directives
 from sphinx.util.docutils import SphinxDirective
 
 class youtube_video(nodes.Element, nodes.General):
-    pass
+    counter = 0
 
-def visit_youtube_html(self, node):
+def get_extra(node):
     extras = []
     if node["start"] is not None:
       extras.append(("start", str(node["start"])))
@@ -19,7 +22,20 @@ def visit_youtube_html(self, node):
     extra = ""
     if len(extras) > 0:
       extra = "?" + '&'.join(key + "=" + value for (key, value) in extras)
+    return extra
 
+def visit_youtube_html(self, node):
+    # extras = []
+    # if node["start"] is not None:
+    #   extras.append(("start", str(node["start"])))
+    # if node["controls"] is not None and not node["controls"]:
+    #   extras.append(("controls", "0"))
+    # extra = ""
+    # if len(extras) > 0:
+    #   extra = "?" + '&'.join(key + "=" + value for (key, value) in extras)
+
+    extra = get_extra(node)
+    
     tag = self.starttag(node, "div", CLASS="video")
     self.body.append(tag.strip())
     self.body.append(
@@ -34,8 +50,23 @@ def depart_youtube_html(self, node):
 
 # micha
 def visit_youtube_latex(self, node):
-    self.body.append("Vidéo youtube " + node["vid"]+ "\\\ \n")
-    
+    extra = get_extra(node)
+    src='"https://www.youtube-nocookie.com/embed/' + node["vid"] + extra + '"'
+    qrcode_folder = os.path.join(self.builder.outdir, "video_png")
+    if not os.path.exists(qrcode_folder):
+        os.makedirs(qrcode_folder)
+    youtube_video.counter += 1
+    qrfilename = os.path.join(qrcode_folder, f"qr{youtube_video.counter}.png")
+    qr = qrcode.QRCode(version=1,box_size=10,border=5)
+    qr.add_data(src)
+    qr.make(fit=True)
+    img = qr.make_image(fill='black', back_color='white')
+    img.save(qrfilename)                              
+
+    #self.body.append("Vidéo youtube "+str(youtube_video.counter) + ": " + src + "\\\ \n")
+    self.body.append(f"\n\insertvideo{{{qrfilename}}}{{{src}}}{{{youtube_video.counter}}}\n")
+   
+                              
 def depart_youtube_latex(self, node):
     pass
 

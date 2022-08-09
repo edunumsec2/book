@@ -47,3 +47,5 @@ virtualenv==20.8.1
 virtualenv-clone==0.5.7
 lzstring
 pyppeteer
+qrcode
+Pillow
