@@ -113,3 +113,20 @@ Les ressources suivantes peuvent être fournies aux élèves pour guider leurs r
 - Electricité: [electricitymap](https://app.electricitymaps.com/map)
 - Transports: [Agence de la Transition Ecologique (France)](https://agirpourlatransition.ademe.fr/particuliers/bureau/deplacements/calculer-emissions-carbone-trajets)
 - Global: [la base de données des émission de gaz à effet de serre](https://bilans-ges.ademe.fr/docutheque/docs/Base_Carbone_V22.0.zip) de Agence de la Transition Ecologique (France)
+
+### Ordres de grandeur (pour ne pas être trop à côté de la plaque)
+
+Les valeurs sont sujettes à débats et beaucoup de variables entrent en jeu, et c'est pour ça qu'il est très important de bien documenter ses sources, ses hypothèses et ses calculs, mais on peut quand même obtenir les ordres de grandeurs suivants:
+
+
+Avion: 200 kgeqCO2
+
+Voiture: 15-20 kgeqCo2
+
+Chauffage: 7-12 kgeqCO2
+
+Viande: 20-40 kgeqCO2/kg boeuf donc 3-4 kg
+
+Série: 2-5 kgeqCO2
+
+Smartphone: 1-3 kgeqCO2
