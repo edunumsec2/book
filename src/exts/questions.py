@@ -82,7 +82,7 @@ def visit_question_latex(self, node):
         classes.append("multi")
     question.correct = []
     question.counter = 0
-#    self.body.append("start question")
+
 
     
 def depart_question_latex(self, node):
@@ -93,7 +93,6 @@ def visit_check_buttons_latex(self, node):
     self.body.append(r"\insertsolution{"+ ",".join(responses)+"}\n")
 
 def depart_check_buttons_latex(self, node):
-    # self.body.append("end check button")
     pass
 
 
