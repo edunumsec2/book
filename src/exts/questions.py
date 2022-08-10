@@ -82,6 +82,7 @@ def visit_question_latex(self, node):
         classes.append("multi")
     question.correct = []
     question.counter = 0
+    self.body.append(r"\smallbreak") #break before question if possible
 
 
     
