@@ -1,6 +1,7 @@
 \usepackage{listings}
 \usepackage{listingsutf8}
 \usepackage{pifont}
+
 %\usepackage{animate}
 \newcommand{\insertvideo}[3]{\begin{flushright}\fbox{Vidéo #3: \sphinxurl{#2}  \includegraphics[scale=0.3]{#1}}\end{flushright}}
 \newcommand{\insertsolution}[1]{\flushright \rotatebox[origin=c]{180}{\textit{Réponse: #1}}}
@@ -68,17 +69,37 @@
 \DeclareUnicodeCharacter{03C4}{$\tau$}
 \DeclareUnicodeCharacter{03C6}{$\phi$}
 
+%% new maketitle
+\makeatletter
+\renewcommand*{\maketitle}{%
+\begin{titlepage}
+ \centering
+ \vspace*{\fill}
+ {\Huge  \@title}\\
+ \vspace*{3cm}
+{\raggedleft\Large\@author}\\
+ \vspace*{3cm}
+{\raggedleft\Large\@date}
+ \vspace*{\fill}       
+\end{titlepage}
+}
+\makeatother
 
 %% display cards
 %\newenvironment{card}{\begin{minipage}{0.5\textwidth}}{\end{minipage}}
 \makeatletter
 \def\@cardenvironment{minipage}
+\def\@tabenvironment{framed}
 \renewenvironment{sphinxuseclass}[1]{%
 \def\myarg{#1}
 \def\cardenv{col-sm-6}
+\def\tabenv{tabbed-container}
 \ifx\myarg\cardenv\begin{minipage}{0.5\textwidth}\fi
+%\ifx\myarg\tabenv\begin{framed}\fi
+\ifx\myarg\tabenv\centering\begin{minipage}{0.5\textwidth}\begin{framed}\fi
 }%
 {%
 \ifx\@currenvir\@cardenvironment\end{minipage}\fi
+\ifx\@currenvir\@tabenvironment\end{framed}\end{minipage}\fi
 }
 \makeatother
