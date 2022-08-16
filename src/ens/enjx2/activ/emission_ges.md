@@ -15,7 +15,7 @@ activités numériques relativement à d'autres activités carbonées.
 * Modalité : `branché`
 * Matériel : {download}`Cartes activités <media/emissions_cartes.pdf>`
 * Prérequis : éventuellement notions de tableurs, peut-être introduit dans le cadre ce cette activité
-* Notions fondamentales : Réchauffement climatique, émission de gaz à effet de serre, 
+* Notions fondamentales : Réchauffement climatique, émissions de gaz à effet de serre, 
 * Taille du groupe : `demi-classe`
 
 ```
@@ -23,8 +23,8 @@ activités numériques relativement à d'autres activités carbonées.
 ## Remarque
 
 Plus généralement cette activité permet de:
-1. Sensibiliser les élèves au phénomène du réchauffement climatique et des émission des gaz à effet de serre (GES)
-1. Comprendre des calculs simples permettant de calculer des émissions de GES de certaines activités
+1. Sensibiliser les élèves au phénomène du réchauffement climatique et des émissions des gaz à effet de serre (GES)
+1. Comprendre des calculs simples permettant de calculer (approximativement) les émissions de GES de certaines activités
 1. Prendre conscience que ces calculs dépendent de nombreux paramètres, sur lesquels il est possible d'agir (individuellement et collectivement)
 1. Réaliser que les GES émis lors de la production d'appareils numériques sont plus importants que ceux émis lors de leur utilisation. 
 1. Développer son autonomie dans la recherche et l'évaluation d'information sur internet
@@ -47,7 +47,8 @@ Plus généralement cette activité permet de:
 ### Introduction au réchauffement climatique
 
 Si possible en partant de l'actualité, l'enseignant introduit la problématique liée au réchauffement climatique
-causé par les émissions GES et les enjeux actuels s'y rapportant. Un support visuel peut être utilisé.
+causé par les émissions GES et les enjeux actuels et futurs s'y rapportant. Un support visuel peut être utilisé.
+Lors de cette introduction, le lien entre réchauffement climatique, émissions de GES et la notion kilo equivalent CO2 (kgCO2eq) sont explicités. 
 
 (nomactivite.devinette)=
 ### Devinette
@@ -67,17 +68,17 @@ préconceptions et ainsi leur attribuer un rang de 1 à 6. On n'inclut pas la pr
 
 L'enseignant-e demande ensuite à chaque groupe le rang obtenu par chaque activité et fait la somme pour obtenir un "résultat de vote" global.
 Le résultat peut être présenté sous forme de coches au tableau afin d'être bien visuel. L'enseignant-e indique ensuite que les élèves vont
-vérifier l'ordonnancement proposer en faisant les calculs par elleux-même. Une activité est donc attribuée à chaque groupe qui va en calculer les émissions de GES. 
+vérifier l'ordonnancement proposé en faisant les calculs par soi-même. Une activité est donc attribuée à chaque groupe qui va en calculer les émissions de GES. 
 
 (nomactivite.notions)=
 ### Rappel des notions de bases
 
-L'enseignant-e rappelle des notions bases utiles pour un calcul d'émission:
-1. Dans le cas de consommation électrique, les notions de puissance (watt), d'énergie (kWh) et de mix électrique (avec un lien vers electriciymap.org)
-1. Dans le cas de consommation d'hydrcarbure (mazout, essence), la quantité de d'hydrocarbure consommée (en litres) et sa conversion en emission de CO2
+L'enseignant-e rappelle des notions bases utiles pour un calcul d'émissions:
+1. Dans le cas de la consommation électrique, les notions de puissance (watt), d'énergie (kWh) et de mix électrique (avec un lien vers electriciymap.org)
+1. Dans le cas de la consommation d'hydrcarbure (mazout, essence), la quantité de d'hydrocarbure consommée (en litres) et sa conversion en emission de CO2
 1. Un rappel sur l'utilisation d'un tableur avec un exemple de mise en page attendue, notamment l'indication explicite de toutes les valeurs utilisées et
 de leur source
-1. Selon le temps à disposition, il est possible de demander aux élève d'estimer non-pas une valeur mais une fourchette selon les choix effectués.
+1. Selon le temps à disposition, il est possible de demander aux élèves d'estimer non pas une valeur mais une fourchette selon les choix effectués.
 
 
 (nomactivite.travail)=
@@ -92,16 +93,16 @@ de l'appareil utilisé.
 Chaque groupe présente à tour de rôle sa feuille de calcul, et justifie les choix effectués. L'enseignant-e corrige au besoin et demande à la classe
 s'il y a des éléments dont il n'a pas été tenu compte dans le calcul. 
 On note le résultat obtenu en vis-a-vis du sondage "à priori".
-On compare ensuite l'ensemble des résultats avec ceux des sondages, et une discussion s'ensuit. Les élèves peuvent partager s'ils et elles sont surpris-es par
+On compare ensuite l'ensemble des résultats avec ceux des sondages, et une discussion s'ensuit. Les élèves peuvent partager s'ils et elles sont surpris-e-s par
 les résultats. 
 
 (nomactivite.conclusion)=
 ### Conclusion
-En guise de conclusion et pour boucler la boucle, l'enseignant présente des graphiques résumant les émissions liées à la production des appareils ainsi que les principaux postes d'émissions de GES par la Suisse (surtout transports et chauffage), explique la distinction entre émissions locales et importées, et montre où en est la Suisse par rapport aux capacités d'absorbtion de la planète (23x en 2015). La conclusion est que pour le numérique, c'est surtout la production des appareils qui est la plus nocive pour le climat, et beaucoup moins la consommation. Pour réduire son empreinte, il faut essentiellement acheter moins d'appareils et en seconde main, plutôt que de réduire son utilisation des appareils.  
+En guise de conclusion et pour boucler la boucle, l'enseignant présente des graphiques résumant les émissions liées à la production des appareils ainsi que les principaux postes d'émissions de GES pour la Suisse (surtout transports et chauffage), explique la distinction entre émissions locales et importées, et montre où en est la Suisse par rapport aux capacités d'absorption de la planète (23x en 2015). La conclusion est que pour le numérique, c'est surtout la production des appareils qui est la plus nocive pour le climat, et beaucoup moins la consommation. Pour réduire son empreinte, il faut essentiellement acheter moins d'appareils et en seconde main, plutôt que de réduire son utilisation des appareils.  
 
 (nomactivite.questions)=
 ### Questions et réactions
-Dans le temps qui reste, l'enseignant-e recueille les réaction et les questions des élèves et une discussion plus générale peut s'ensuivre. 
+Dans le temps qui reste, l'enseignant-e recueille les réactions et les questions des élèves et une discussion plus générale peut s'ensuivre. 
 
 
 ## Ressources
