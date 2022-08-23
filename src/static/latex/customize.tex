@@ -80,7 +80,8 @@
  \vspace*{3cm}
 {\raggedleft\Large\@author}\\
  \vspace*{3cm}
-{\raggedleft\Large\the\day.\the\month.\the\year}
+%{\raggedleft\Large\the\day.\the\month.\the\year}
+{\raggedleft\Large \@date}
  \vspace*{\fill}\\
  \includegraphics[scale=0.5]{../../../src/static/latex/by-nc.eu.png}
 \end{titlepage}
@@ -103,6 +104,7 @@
 {%
 \ifx\@currenvir\@cardenvironment\end{minipage}\fi
 \ifx\@currenvir\@tabenvironment\end{framed}\end{minipage}\fi
+%\vspace{0.5cm}
 }
 \makeatother
 
