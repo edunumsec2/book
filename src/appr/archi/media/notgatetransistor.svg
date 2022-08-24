@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 187 184" style="enable-background:new 0 0 187 184;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#DCDCDC;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st2{font-family:'Helvetica-Oblique';}
+	.st3{font-size:14px;}
+	.st4{stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st5{fill:#DCDCDC;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st6{font-family:'Helvetica';}
+</style>
+<line class="st0" x1="131.55" y1="149.28" x2="131.55" y2="166.28"/>
+<line class="st0" x1="121.21" y1="166.28" x2="141.74" y2="166.28"/>
+<line class="st0" x1="125.71" y1="170.35" x2="137.72" y2="170.35"/>
+<line class="st0" x1="128.71" y1="174.78" x2="134.21" y2="174.78"/>
+<line class="st1" x1="131.84" y1="88.55" x2="160.08" y2="88.55"/>
+<circle class="st1" cx="162.21" cy="88.28" r="2"/>
+<text transform="matrix(1 0 0 1 167.96 94.2454)" class="st2 st3">Z</text>
+<circle class="st4" cx="132.21" cy="88.28" r="2"/>
+<circle class="st0" cx="118.21" cy="126.28" r="27"/>
+<line class="st5" x1="108.21" y1="109.28" x2="108.21" y2="141.96"/>
+<polyline class="st1" points="131.84,77.28 131.84,102.97 108.21,125.62 131.84,149.58 "/>
+<polyline class="st0" points="108.21,126.28 91.21,126.28 74.71,126.28 "/>
+<polygon points="127.21,144.28 123.21,135.28 118.21,140.28 "/>
+<polygon class="st1" points="74.71,132.78 42.71,132.78 42.71,125.62 42.71,119.78 74.71,119.78 "/>
+<polygon class="st1" points="138.21,45.28 138.21,77.28 131.05,77.28 125.21,77.28 125.21,45.28 "/>
+<path class="st1" d="M29.2,125.62"/>
+<line class="st1" x1="42.71" y1="125.62" x2="29.2" y2="125.62"/>
+<line class="st0" x1="131.55" y1="30.28" x2="131.55" y2="45.28"/>
+<circle class="st1" cx="131.21" cy="28.28" r="2"/>
+<circle class="st1" cx="27.21" cy="125.28" r="2"/>
+<text transform="matrix(1 0 0 1 8.96 130.2454)" class="st2 st3">X</text>
+<text transform="matrix(1 0 0 1 122.96 21.2454)" class="st6 st3">5V</text>
+</svg>
