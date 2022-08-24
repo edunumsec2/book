@@ -1,3 +1,4 @@
+(appr:repinfo:entiers)=
 # Les entiers
 
 La plupart des civilisations humaines utilise le système décimal.

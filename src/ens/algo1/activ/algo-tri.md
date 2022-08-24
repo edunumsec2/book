@@ -7,40 +7,36 @@ Un dispositif physique ainsi qu'un catalogue d'opérations sont définis afin de
 
 ----
 
-```{admonition} Caractéristiques
+```{admonition} Les algorithmes de tri 
 :class: hint
-
-* Nom : Les algorithmes de tri
-* Durée : 2 périodes consécutives
 * Thème : Algorithmique
-* Objectifs d’apprentissage : Découvrir quelques algorithmes de tri et leur pertinence sociétale
+* Niveau : `facile`
+* Durée : 2 périodes consécutives
+* Objectifs pédagogique : Découvrir quelques algorithmes de tri et leur pertinence sociétale
+* Modalité : Débranché
+* Matériel : plusieurs set de cartes numérotées (p.ex. jeu de Uno), papier, feuille comparateur (une feuille sur laquelles sont dessinés deux rectangle pour poser les deux cartes que l'on veut comparer), un peu d'espace pour se mouvoir dans la classse
+* Prérequis: aucun
 * Notions fondamentales : instruction, algorithme, tri, éventuellement complexité
-* Approche pédagogique : Débranché
-* Matériel : plusieurs set de cartes numérotées (p.ex. jeu de Uno), papier, feuille comparateur (une feuille sur laquelles sont dessinés deux rectangle pour poser les deux cartes que l'on veut comparer), un peu d'espace pour se mouvoir dans la classs
-* Niveau : débutant
-* Mots-clés : tri
-* Dynamique (groupe / individuel) : activité coopérative
 * Taille du groupe : classe entière ou demi-classe (plus facile à gérer)
-```
-
-```{dropdown} **Déroulement**
-
-1. {ref}`Mise en situation générale<algo-tri.situation>` (5-10 mn) autour du concept de l'archivage traditionnel, son histoire, son utilité, son organisation, ce qu'il a permis comme pratiques, et la fonction fondamentale du tri dans cette technique
-
-1. {ref}`Exploration<algo-tri.exploration>` (20-30 mn) en groupe au cours de laquelle les élèves explorent des procédures de tri induites par un dispositif physique
-
-1. {ref}`Mise en commun<algo-tri.miseencommun>` (15 mn) au cours de laquelle les élèves discutent et présentent les résultats de leurs recherches
-
-1. {ref}`Formalisation<algo-tri.formalisation>` (20 mn) des divers algorithmes de tri. 
-
-1. {ref}`Exercices<algo-tri.exercices>` (10-15 mn) d'application des algorithmes.
-
-1. {ref}`Conclusion<algo-tri.conclusion>` (5-10 mn) en bouclant la boucle sur l'archivage informatisé et les pratiques (positives et négatives) qu'il permet.
 
 ```
+
+
+
+## Déroulement
+
+|     Etape                             | Durée  | Phase de l'activité   | 
+|---------------------------------------|------- |-----------------------|
+|{ref}`Introduction<algo-tri.situation>`  autour du concept de l'archivage traditionnel, son histoire, son utilité, son organisation, ce qu'il a permis comme pratiques, et la fonction fondamentale du tri dans cette technique | 5-10 min | Mise en situation|
+| {ref}`Essais<algo-tri.exploration>`  en groupe au cours de laquelle les élèves explorent des procédures de tri induites par un dispositif physique | 20-25 min | Exploration |
+| {ref}`Mise en commun<algo-tri.miseencommun>` au cours de laquelle les élèves discutent et présentent les résultats de leurs recherches | 15 min | Objectivation / Apprentissage |
+| {ref}`Formalisation<algo-tri.formalisation>`  des divers algorithmes de tri. | 20 min | Institutionnalisation |
+| {ref}`Exercices<algo-tri.exercices>`  d'application des algorithmes.| 10-15 min | Application |
+| {ref}`Conclusion<algo-tri.conclusion>`  en bouclant la boucle sur l'archivage informatisé et les pratiques (positives et négatives) qu'il permet. |5-10 min| Disussion|
+
 
 (algo-tri.situation)=
-## Mise en situation générale
+### Introduction 
 
 *Durée : 5-10 mn*
 
@@ -58,7 +54,7 @@ d'instructions beaucoup plus précises (ce qui sera clair pour ceux qui ont déj
 s'atteler: quelle procédure donner à un ordinateur pour le rendre capable de trier des nombres (ou des mots). 
 
 (algo-tri.exploration)=
-## Exploration
+### Essai par groupes
 
 *Durée : 20-30 mn*
 
@@ -92,7 +88,7 @@ Toutes ces opérations, à l'exception des quatre dernières sont effectuée sur
 Dans la situation initiale, il n'y a qu'un seul tas mélangé sur la table.
 
 
-Par groupe de deux ou trois, les élèves reçoivent un dispositif matériel et doivent tenter de trouver une procédure, un algorithme utilisant les opérations ci-dessus et permettant de trier le tas de carte. Ils doivent rédiger cet algorithme en utilisant les opérations ci-dessus. L'idée à ce stade n'est pas de bloquer les élèves avec les aspects formels, mais de les faire réfléchir sur une manière rigoureuse de trier les cartes. 
+Par groupe de deux ou trois, les élèves reçoivent un dispositif matériel (le comparateur et env. 7 cartes) et doivent tenter de trouver une procédure, un algorithme utilisant les opérations ci-dessus et permettant de trier le tas de carte. Ils doivent rédiger cet algorithme en utilisant les opérations ci-dessus. L'idée à ce stade n'est pas de bloquer les élèves avec les aspects formels, mais de les faire réfléchir sur une manière rigoureuse de trier les cartes. 
 
 En guise d'exemple, la classe résout ensemble un problème plus simple qui consiste à insérer une nouvelle carte dans un tas de carte déjà ordonné. Dans la situation initiale, la carte se trouve dans le comparateur. 
 Une solution possible est la suivante:
@@ -102,34 +98,54 @@ répeter jusqu'à courant.vide():
     gauche.disposer(petite,au-dessous)
 gauche.courant()
 ```
-Cette on peut appler cette fonction classer() et l'ajouter à notre répertoire de fonctions 
+Cette on peut appeler cette fonction classer() et l'ajouter à notre répertoire de fonctions 
 
-Si les élèves pensent avoir trouvé un algorithme qui fonctionne, iels doivent le "rédiger" de manière non ambigüe et réessayer en remélangeant les cartes pour voir si la procédure fonctionne encore. Si c'est le cas, iels doivent essayer encore une fois, mais cette fois un-e élève fait les manipulations avec les cartes faces cachée.
-Cet-te élève ne peut pas voir les nombres sur les cartes et l'autre élève prend le rôle du comparateur et ne fait qu'indiquer quelle carte du comparateur est plus grande ou plus petite. De cette manière les élèves peuvent être certain-e-s que l'algorithme fonctionne sans jugement humain.
+Si les élèves pensent avoir trouvé un algorithme qui fonctionne, iels doivent le
+"rédiger" de manière non ambigüe et réessayer en remélangeant les cartes pour
+voir si la procédure fonctionne encore. Si c'est le cas, iels doivent essayer
+encore une fois, mais cette fois un-e élève fait les manipulations avec les
+cartes faces cachée.
+Cet-te élève ne peut pas voir les nombres sur les cartes et l'autre élève prend
+le rôle du comparateur et ne fait qu'indiquer quelle carte du comparateur est
+plus grande ou plus petite. De cette manière les élèves peuvent être certain-e-s
+que l'algorithme fonctionne sans jugement humain.
 
-Pendant cette phase, l'enseigant-e passe dans les groupes, clarifie au besoin, oriente la recherche des élèves, propose éventuellement des
+Pendant cette phase, l'enseigant-e passe dans les groupes, clarifie au besoin,
+oriente la recherche des élèves, propose éventuellement des
 simplifications potentielle, et valide les méthodes trouvées.
 
 (algo-tri.miseencommun)=
-## Mise en commun
+### Mise en commun
 
 *Durée : 15 mn*
 
-Selon le temps à disposition, il est possible de regrouper deux groupes de deux (ayant chacun un autre algorithme, si possible) et chacun présente son algorithme à l'autre groupe qui doit essayer de l'exécuter à l'aveugle. 
+Selon le temps à disposition, il est possible de regrouper deux groupes de deux
+(ayant chacun un autre algorithme, si possible) et chacun présente son
+algorithme à l'autre groupe qui doit essayer de l'exécuter à l'aveugle. 
 
-Chaque groupe va décrire sa méthode au reste de la classe, et l'illustrer en triant les élèves des autres groupes. Chaque élève prend une feuille
-de papier est écrit un nombre dessus. Les élève se disposent ensuite en file, ce qui représente l'équivalent du tas de carte. L'enseignant-e indique au sol (par exemple avec du scotch carrossier) la position du comparateur. Le groupe qui présente sa méthode trie ainsi les élèves selon le numéros qu'ils ont indiqué sur leur feuille. Pendant ce temps les élèves essaient de comprendre la méthode exposée. L'enseignant peut ensuite présenter les algorithmes qu'il souhaite également aborder. 
+Chaque groupe va décrire sa méthode au reste de la classe, et l'illustrer en
+triant les élèves des autres groupes. Chaque élève prend une feuille
+de papier est écrit un nombre dessus. Les élève se disposent ensuite en file,
+ce qui représente l'équivalent du tas de carte. L'enseignant-e indique au sol
+(par exemple avec du scotch carrossier) la position du comparateur. Le groupe
+qui présente sa méthode trie ainsi les élèves selon le numéros qu'ils ont
+indiqué sur leur feuille. Pendant ce temps les élèves essaient de comprendre la
+méthode exposée. L'enseignant peut ensuite présenter les algorithmes qu'il
+souhaite également aborder. 
 
 (algo-tri.formalisation)=
-## Formalisation
+### Formalisation
 
 *Durée : 20 mn*
 
-Les élèves rejoignent leur place et l'enseignant récapitule (au tableau) avec un exemple les méthodes présentées et indique leur nom. Il peut
-à ce moment également en donner une représentation plus standard, qui s'abstrait du dispositif matériel en s'appuyer sur le
-document de théorie. Cette partie peut être entrelacée avec la partie précédente.
+Les élèves rejoignent leur place et l'enseignant récapitule (au tableau) avec
+un exemple les méthodes présentées et indique leur nom. Il peut
+à ce moment également en donner une représentation plus standard, qui
+s'abstrait du dispositif matériel en s'appuyer sur le
+document de théorie. Cette partie peut être entrelacée avec la partie
+précédente.
 
-### Tri à bulles
+#### Tri à bulles
 ```
 répeter jusqu'à courant.vide():
     courant.mettre(haut)
@@ -140,7 +156,7 @@ répeter jusqu'à courant.vide():
     droite.courant()
 gauche.courant()
 ```    
-### Tri par insertion
+#### Tri par insertion
 ```
 répéter jusqu'à courant.vide():
     courant.mettre(haut)
@@ -148,7 +164,7 @@ répéter jusqu'à courant.vide():
 gauche.courant()
 ```
 
-### Tri par pivot (quicksort)
+#### Tri par pivot (quicksort)
 ````
 répéter tant qu'il y des tas avec au moins deux cartes:
     courant.mettre(haut, gauche):
@@ -171,7 +187,7 @@ piles. Une variante de l'activité consisterait à donner au autre dispositif ba
 ```
  
 (algo-tri.exercices)=
-## Exercices
+### Exercices
 
 *Durée : 10-15 mn*
 
@@ -183,7 +199,7 @@ Ensuite, l'enseignant-e donne une suite de noms non triés et les élèves doive
 Une correction commune est ensuite effectuée. 
 
 (algo-tri.conclusion)=
-## Conclusion
+### Conclusion
 
 *Durée : 5-10 mn*
 

@@ -4,8 +4,9 @@ Différentes activités:
 
 ```{toctree}
 :maxdepth: 1
+:numbered: 1
 Les enchères du web <encheres>
-
-Numérique et environnement : le problème de l'énergie (consommée pendant le cycle de vie des produits numériques) : combustibles fossiles / non fossiles et GES <combustibles_GES>
+Numérique et réchauffement climatique <emission_ges>
+Numérique et environnement <combustibles_GES>
 
 ```

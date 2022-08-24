@@ -62,8 +62,9 @@ language = 'fr'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-#root_doc = 'rep-info/index'
-exclude_patterns = ['prog1', 'prog2', 'hist','algo2', 'projets','resx']
+
+# exclude_patterns = ['prog1', 'prog2','archi','glossaire']
+
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -161,5 +162,3 @@ latex_elements = {
     'pxunit': '0.5bp',
     'figure_align': 'H'
 }
-
-#latex_documents = ('modulo','modulo.tex',"Modulo: une introduction à l'informatique", "John","manual","True")

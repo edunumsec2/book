@@ -1,4 +1,4 @@
-
+(appr:repinfo:intro)=
 # Introduction
 
 Dans ce chapitre on s'intéresse à la manière dont un {glo}`ordinateur|ordinateur` représente l'information afin de pouvoir la traiter automatiquement.   

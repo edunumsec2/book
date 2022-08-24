@@ -1,4 +1,5 @@
-# 2. Images numériques
+(ens:repinfo:imagesnumeriques)=
+# Images numériques
 
 ```{admonition} Notebook Jupyter
 :class: warning
@@ -21,7 +22,7 @@ la télévision, la réalité virtuelle.
 Comment est‐ce qu'on fait pour les afficher concrètement sur un écran
 ?
 
-## 2.1. Comment coder une image
+## Comment coder une image
 
 Une image peut être représentée sous la forme d'une grille de carrés,
 ces carrés sont appelés des **pixels**.
@@ -65,9 +66,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 ```
 
-## 2.2. Trois types de «couleurs»
+## Trois types de «couleurs»
 
-### 2.2.1. Images en noir et blanc
+### Images en noir et blanc
 
 Une image noir et blanc est une image ou chaque pixel peut avoir deux
 valeurs:
@@ -135,7 +136,7 @@ ci-dessous
 #Votre code ici
 ```
 
-### 2.2.2. Images en niveau de gris
+### Images en niveau de gris
 
 Si on veut avoir une image en niveaux de gris, on va pouvoir utiliser
 par exemple huit bits (1 octet) pour chacun des pixels.
@@ -170,7 +171,7 @@ de Link
 #Votre code ici
 ```
 
-### 2.2.3. Images en couleur 
+### Images en couleur 
 
 Enfin, on va pouvoir faire de la couleur en combinant du rouge, du vert
 et du bleu.
@@ -217,10 +218,10 @@ Definissez la couleur blanche et créez une image du drapeau d'Italie
 #Votre code ici
 ```
 
-## 2.3. Mélanger des couleurs 
+## Mélanger des couleurs 
 
 
-### 2.3.1. Additivité des couleurs
+### Additivité des couleurs
 
 Les couleurs sont additives.
 
@@ -261,7 +262,7 @@ mélange des deux couleurs à gauche et droite.
 #Votre code ici
 ```
 
-### 2.3.2. Noir et blanc
+### Noir et blanc
 
 Toutes les couleurs mélangées donnent le blanc. L'absence de toute
 couleur donne le noir.
@@ -287,7 +288,7 @@ drapeau Suisse.
 #Votre code ici
 ```
 
-## 2.4. Création d'icones
+## Création d'icones
 
 Afin de créer votre icone personalisée, vous devez commencer par créer
 une image.
@@ -295,7 +296,7 @@ Cette image devra ensuite être déclinée en plusieurs tailles. Toutes ces
 images devront être rassemblée dans un dossier qui sera ensuite
 transformé en un jeu d'icones utilisables.
 
-### 2.4.1. Première étape - Création de l'image
+### Première étape - Création de l'image
 
 Créez une image de taille 32x32 représentant ce que vous souhaitez.
 
@@ -303,7 +304,7 @@ Créez une image de taille 32x32 représentant ce que vous souhaitez.
 #Votre code ici
 ```
 
-### 2.4.2. Enregistrez votre image
+### Enregistrez votre image
 
 Pour enregistrer votre image, nous allons rendre les axes invisibles et
 choisir le nom de fichier, par exemple `toto.png` .
@@ -324,7 +325,7 @@ img.axes.get_yaxis().set_visible(False)
 plt.imsave(imgName, icn/255)
 ```
 
-### 2.4.3. Générez le jeu d'icones 
+### Générez le jeu d'icones 
 
 Pour générer un jeu d'icones pour OSX, il faut créer l'icone à
 différentes taille, typiquement 16x16, 32x32, 128x128, 256x256 et

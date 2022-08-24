@@ -87,19 +87,22 @@ Ce que nous cherchons à créer est conceptuellement ce que fait {logicref}`mux_
 Mais comment construire ce multiplexeur avec les portes logiques que nous connaissons ? Sans le multiplexeur, voici ce que nous devons compléter :
 
 ```{logic}
-:height: 290
+:height: 270
 :mode: tryout
 
 {
   "v": 3,
   "opts": {"showDisconnectedPins": true},
+  "labels": [
+    {"type": "rect", "pos": [310, 170], "w": 140, "h": 140, "color": "grey", "strokeWidth": 2, "caption": "???", "captionPos": "c"}
+  ],
   "in": [
-    {"pos": [50, 160], "id": 0, "name": "X", "val": 0},
-    {"pos": [50, 240], "id": 1, "name": "Y", "val": 0},
+    {"pos": [50, 140], "id": 0, "name": "X", "val": 0},
+    {"pos": [50, 220], "id": 1, "name": "Y", "val": 0},
     {"pos": [310, 50], "orient": "s", "id": 2, "name": "Op", "val": 0}
   ],
-  "out": [{"pos": [430, 200], "id": 20, "name": "Z"}],
-  "gates": [{"type": "AND", "pos": [180, 230], "in": [3, 4], "out": 5}, {"type": "OR", "pos": [180, 170], "in": [6, 7], "out": 8}],
+  "out": [{"pos": [430, 180], "id": 20, "name": "Z"}],
+  "gates": [{"type": "AND", "pos": [180, 210], "in": [3, 4], "out": 5}, {"type": "OR", "pos": [180, 150], "in": [6, 7], "out": 8}],
   "wires": [[0, 3], [1, 4], [0, 6], [1, 7]]
 }
 ```
@@ -256,24 +259,27 @@ Ceci nous permet de compléter le circuit lacunaire de début de chapitre pour s
 
 {
   "v": 3,
-  "in": [
-    {"pos": [230, 50], "orient": "s", "id": 2, "name": "Op", "val": 0},
-    {"pos": [50, 170], "id": 19, "name": "X", "val": 0},
-    {"pos": [50, 250], "id": 20, "name": "Y", "val": 0}
+  "labels": [
+    {"type": "rect", "pos": [360, 180], "w": 280, "h": 200, "color": "yellow", "strokeWidth": 2, "caption": "Sélecteur", "captionPos": "ne"}
   ],
-  "out": [{"pos": [530, 200], "id": 8, "name": "Z"}],
+  "in": [
+    {"pos": [230, 40], "orient": "s", "id": 2, "name": "Op", "val": 0},
+    {"pos": [50, 180], "id": 19, "name": "X", "val": 0},
+    {"pos": [50, 260], "id": 20, "name": "Y", "val": 0}
+  ],
+  "out": [{"pos": [530, 210], "id": 8, "name": "Z"}],
   "gates": [
-    {"type": "NOT", "pos": [270, 120], "ref": "muxinv", "orient": "s", "in": 9, "out": 10},
-    {"type": "AND", "pos": [330, 170], "ref": "muxand0", "in": [11, 12], "out": 13},
-    {"type": "AND", "pos": [330, 230], "ref": "muxand1", "in": [14, 15], "out": 16},
-    {"type": "OR", "pos": [460, 200], "ref": "muxor", "in": [5, 6], "out": 7},
-    {"type": "OR", "pos": [170, 180], "ref": "or", "in": [0, 1], "out": 3},
-    {"type": "AND", "pos": [170, 240], "ref": "and", "in": [4, 17], "out": 18}
+    {"type": "NOT", "pos": [270, 130], "orient": "s", "ref": "muxinv", "in": 9, "out": 10},
+    {"type": "AND", "pos": [330, 180], "ref": "muxand0", "in": [11, 12], "out": 13},
+    {"type": "AND", "pos": [330, 240], "ref": "muxand1", "in": [14, 15], "out": 16},
+    {"type": "OR", "pos": [460, 210], "ref": "muxor", "in": [5, 6], "out": 7},
+    {"type": "OR", "pos": [170, 190], "ref": "or", "in": [0, 1], "out": 3},
+    {"type": "AND", "pos": [170, 250], "ref": "and", "in": [4, 17], "out": 18}
   ],
   "wires": [
-    [2, 9],
+    [2, 9, {"via": [[230, 90]]}],
     [10, 11],
-    [2, 14, {"via": [[230, 220]]}],
+    [2, 14, {"via": [[230, 230]]}],
     [13, 5],
     [16, 6],
     [7, 8],
@@ -373,8 +379,7 @@ En réutilisant les principes appliqués ci-dessus, construisez un circuit à un
   "v": 3,
   "in": [
     {"pos": [230, 50], "orient": "s", "id": 2, "name": "Op", "val": 0},
-    {"pos": [50, 170], "id": 19, "name": "X", "val": 0},
-    {"pos": [50, 250], "id": 20, "name": "Y", "val": 0}
+    {"pos": [50, 170], "id": 19, "name": "X", "val": 0}
   ],
   "out": [{"pos": [530, 200], "id": 8, "name": "Z"}]
 }
@@ -440,7 +445,7 @@ La table de vérité est identique à celle d'une porte **OU-X**. On peut donc s
 
 ## Une ALU à 4 bits
 
-Une unité arithmétique et logique, ou ALU, est un circuit qui ressemble dans ses principes de base à ce que nous venons de faire. L'ALU réaliste plusieurs opérations et permet de sélectionner, via un ou plusieurs bits de contrôle, l'opération qui est réalisée. Les opérations proposées sont, comme le nom de l'ALU indique, des opérations arithmétiques (typiquement, l'addition et la soustraction) et des opérations logiques (par exemple, un **ET** et un **OU** logiques).
+Une unité arithmétique et logique, ou ALU, est un circuit qui ressemble dans ses principes de base à ce que nous venons de faire. L'ALU réalise plusieurs opérations et permet de sélectionner, via un ou plusieurs bits de contrôle, l'opération qui est réalisée. Les opérations proposées sont, comme le nom de l'ALU indique, des opérations arithmétiques (typiquement, l'addition et la soustraction) et des opérations logiques (par exemple, un **ET** et un **OU** logiques).
 
 Nous présentons ici une ALU simple à 4 bits :
 

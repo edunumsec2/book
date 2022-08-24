@@ -229,12 +229,12 @@ Ce diagramme n'est pas forcément facile à lire — discutons d'abord comment l
 
 Pour analyser un circuit logique comme celui présenté ci-dessus, on cherchera à établir sa table de vérité. En l'occurrence, comme pour les portes précédentes, ce circuit a {logicref}`xor_circuit_tryout.{x,y}|deux entrées`: si chaque entrée peut valoir 1 ou 0, on a en tout, de nouveau, quatre configurations possibles à examiner dans le but de remplir la dernière colonne :
 
-| $X$ | $Y$ | $Z$   |
-| :-: | :-: | :-:   |
-| 0   | 0   | $???$ |
-| 1   | 0   | $???$ |
-| 0   | 1   | $???$ |
-| 1   | 1   | $???$ |
+| $X$ | $Y$ | $Z$ |
+| :-: | :-: | :-: |
+| 0   | 0   | ?   |
+| 1   | 0   | ?   |
+| 0   | 1   | ?   |
+| 1   | 1   | ?   |
 
 
  Pour remplir chaque ligne, on va changer les entrées selon les valeurs de $X$ et $Y$ et observer l'effet des portes et ainsi voir comment le circuit se comporte. Prenons $X=Y=0$: c'est le cas représenté par le diagramme fixe ci-dessous. Rappelons qu'un segment noir véhicule un «0», alors qu'un segment coloré véhicule un «1».

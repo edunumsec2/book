@@ -10,13 +10,13 @@ Une certaine hauteur de vue est nécessaire pour saisir la façon dont le numér
 Voici un modèle de réflexion élaboré par les différents partenaires dont les concepts
 sont autant d’angles d’approche des problématiques pouvant être abordées en contexte numérique.
 
-..
-  ````{figure} images/modele.png
-  ---
-  width: 1672px
-  name: modele
-  ---
-  ````
+
+````{figure} images/modele.png
+---
+width: 1672px
+name: modele
+---
+````
 
 
 ### Modularité

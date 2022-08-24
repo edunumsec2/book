@@ -21,23 +21,22 @@ Activité collaborative et débranchée pour introduire l'algorithme du plus cou
 
 ```
 
+## Déroulement
 
-
-```{dropdown} **Déroulement**
 |			Etape			| Durée | Phase |
 |-----------------------------------------------| ------|-------|
-| 1. {ref}`Mise en situation générale<dijkstra.miseensituation>`  autour des services de navigation   | 5 min | Mise en situation |
-| 1. {ref}`Mise en situation spécifique<dijkstra.miseensituation2>`  pour passer à un niveau d'abstraction et de généralisation plus élévé.| 15 min | Objectivation et mise en situation |
-| 1. {ref}`Identification<dijkstra.identification>` , identification de l'objectif, explication de la non-trivialité du problème.| 5 min | Formalisation |
-|1. {ref}`Découverte<dijkstra.decouverte>`  par essais-erreurs de l'algorithme et de sa justification par simulation humaine.| 20 min | Exploration |
-|1. {ref}`Formalisation de l'algorithme  <dijkstra.formalisation>`|10 min| Institutionnalisation - Objectivation |
-|1. {ref}`Exemples d'utilisation<dijkstra.utilisation>` de l'algorithme et exercices.|15 min| Application|
-|1. {ref}`Modélisation <dijkstra.modelisation>` pour d'autre contextes |10 min| Réinvestissement|
+| {ref}`Mise en situation générale<dijkstra.miseensituation>`  autour des services de navigation   | 5 min | Mise en situation |
+| {ref}`Mise en situation spécifique<dijkstra.miseensituation2>`  pour passer à un niveau d'abstraction et de généralisation plus élévé.| 15 min | Objectivation et mise en situation |
+| {ref}`Identification<dijkstra.identification>` , identification de l'objectif, explication de la non-trivialité du problème.| 5 min | Formalisation |
+| {ref}`Découverte<dijkstra.decouverte>`  par essais-erreurs de l'algorithme et de sa justification par simulation humaine.| 20 min | Exploration |
+| {ref}`Formalisation de l'algorithme  <dijkstra.formalisation>`|10 min| Institutionnalisation - Objectivation |
+| {ref}`Exemples d'utilisation<dijkstra.utilisation>` de l'algorithme et exercices.|15 min| Application|
+| {ref}`Modélisation <dijkstra.modelisation>` pour d'autre contextes |10 min| Réinvestissement|
 
 
-```
+
 (dijkstra.miseensituation)=
-## Mise en situation générale
+### Mise en situation générale
 
 *Durée : 5 min*
 
@@ -54,11 +53,11 @@ L'enseignant va sur une page de navigation (p.ex [OpenStreetMap](https://www.ope
 ````
 
 (dijkstra.miseensituation2)=
-## Mise en situation spécifique
+### Mise en situation spécifique
 
 *Durée : 15 min*
 
-### Exemple 1
+#### Exemple 1
 L'enseignant distribue à chaque élève un graphe suffisamment compliqué dans lequels la longueur des
 arêtes est indiquée. Ils doivent trouver, individuellement, le plus court chemin reliant deux points.
 Eventuellement, le graphe peut être tel qu'il y a plusieurs plus courts chemins. 
@@ -71,7 +70,7 @@ Eventuellement, le graphe peut être tel qu'il y a plusieurs plus courts chemins
 * Etes-vous sûr qu'il s'agit du plus court chemin? Le cas échéant, comment le savez-vous ?
 * Chacun donne son plus court chemin. 
 * Y a-t-il des chemins plus courts que ça ?
-###  Exemple 2
+####  Exemple 2
 
 Dans un voyage en voiture, on ne veut pas forcément le plus court chemin, mais souvent le plus rapide.
 
@@ -92,14 +91,14 @@ On retrouve le même graphe qu'avant, mais cette fois on a le temps de parcours 
 
 
 (dijkstra.identification)=
-## Identification du problème
+### Identification du problème
 
 *Durée : 5 min*
 
 Le problème est donc donné sous forme d'un graphe constitué de *sommets* reliés par des *arêtes* qui ont une certaine *longueur*. Dans le cas ci-desssus, les sommets représentent des villes, les arêtes les routes, et les longueurs la durée du trajet. La *longueur totale* est donnée par la somme des longueurs des arêtes empruntées.
 
 (dijkstra.decouverte)=
-## Découverte 
+### Découverte 
 
 *Durée : 20 min*
 
@@ -138,7 +137,7 @@ Au début, l'ordre des opérations a effectuer sera flou pour les élèves, mais
 ```
 
 (dijkstra.formalisation)=
-## Formalisation / Institutionnalisation
+### Formalisation / Institutionnalisation
 
 *Durée : 15 min*
 
@@ -156,7 +155,7 @@ L'enseignant-e formalise l'algorithme au tableau avec l'aide des élèves. Pour 
 
 
 (dijkstra.utilisation)=
-## Exemples d'utilisation 
+### Exemples d'utilisation 
 
 *Durée : 15 min*
 
@@ -164,7 +163,7 @@ L'enseignant fait un exemple au tableau avec les élèves et leur propose ensuit
 
 
 (dijkstra.modelisation)=
-## Modélisation
+### Modélisation
 *Durée : 10 min*
 
 ```{tabbed} Jeu : de VERSE à LITRE
