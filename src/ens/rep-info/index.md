@@ -44,7 +44,6 @@ La partie *Enseigner* à été conçue pour fournir des ressources prêtes à ê
 
 ```{toctree}
 :maxdepth: 1
-:numbered: 1
 Activités <activ/index>
 Exercices <exo/index>
 Supports de cours <support/index>

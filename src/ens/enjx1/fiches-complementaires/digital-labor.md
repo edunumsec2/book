@@ -42,7 +42,7 @@
 
 <div align="right"> 
     <a href="http://files.edunumsec2.ch/enjeux-sociaux/digital-labour.pdf" class="round-button">
-         <font color=white id="demo">Voir <br>dossier</font>
+         <font color=white id="demo">Cliquer ici pour <br>dossier</font>
     </a>
 </div>
 

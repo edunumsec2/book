@@ -2,6 +2,5 @@
 
 ```{toctree}
 :maxdepth: 1
-
-economie/index
+Les enchères du web <encheres>
 ```

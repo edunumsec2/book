@@ -46,9 +46,7 @@ Dans la partie **enseigner**, vous trouverez des :
 
 ```{toctree}
 :maxdepth: 1
-:numbered: 1
 introduction
-planifications
 Activités <activ/index>
 evaluations
 ```

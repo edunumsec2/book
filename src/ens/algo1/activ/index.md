@@ -8,5 +8,4 @@ Monochromes <monochromes>
 Stroboscope <stroboscope>
 Dijkstra et le plus court chemin <dijkstra>
 Puissance 4/Minimax <puissance4>
-
 ```

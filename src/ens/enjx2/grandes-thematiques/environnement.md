@@ -41,7 +41,7 @@
 
 <div align="right"> 
     <a href="http://files.modulo-info.ch/enjeux-sociaux/environnement/numerique-environnement.pdf" class="round-button">
-         <font color=white id="demo">Voir <br>dossier</font>
+         <font color=white id="demo">Cliquer ici pour <br>dossier</font>
     </a>
 </div>
 

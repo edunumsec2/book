@@ -276,7 +276,7 @@ système inertiel de référence. À un moment donné, un nombre codé en
 virgule flottante sur 64 bits (qui représentait la vitesse horizontale
 de la fusée par rapport à la plate-forme de tir) était converti en un
 entier sur 16 bits. Malheureusement, le nombre en question était plus
-grand que 32768 (le plus grand entier que l'on peut coder sur 16 bits)
+grand que 32767 (le plus grand entier que l'on peut coder en tant qu'entier signé sur 16 bits)
 et la conversion a été incorrecte, induisant un changement de
 trajectoire fatal.
 ```
