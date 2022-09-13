@@ -1,4 +1,4 @@
-# Intelligence artificielle. Générateurs
+# IA : Générateurs
 
 ---- 
 

@@ -245,7 +245,7 @@ Combien de bits faut-il pour représenter :
 
 * les mois de l’année ?
 * les lettres de l’alphabet (préciser lequel) ? 
-* le nombre d’élèves du gyminase ?
+* le nombre d’élèves du gymnase ?
 * la présence/absence des élèves étant donnée la liste de présence ?
 * ...
 
@@ -260,7 +260,7 @@ L’idée ici est d’essayer d’amener les élèves à comprendre en observant
 2. Combien y a-t-il de cartes pour le tour ?
 3. Avec 6 bits je peux coder 64 “mots” différents, avec 1 bit de moins, combien ?
 4. Combien y a-t-il de nombres sur une carte ?
-5. Qu’on en commun les nombres d’une même carte ?
+5. Qu’ont en commun les nombres d’une même carte ?
 
 ### La solution
 

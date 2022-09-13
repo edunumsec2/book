@@ -4,7 +4,6 @@ Les ressources présentées dans ce chapitre ont pour but de tisser des liens en
 
 ```{toctree}
 :maxdepth: 1
-:numbered: 1
 ai
 autonomy_cube
 gloomy_sunday

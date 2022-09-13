@@ -7,7 +7,6 @@ Page de description des séquences et activités disponibles pour cette thémati
 Magie binaire <magie_binaire>
 Images numériques <encoder_images>
 Echantillonnage <echantillonnage_new>
-Redondance et code de Hamming <hamming_new>
 Compression et codage de Huffman <huffman>
 ```
 <!---

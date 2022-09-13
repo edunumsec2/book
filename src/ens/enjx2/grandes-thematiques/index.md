@@ -4,6 +4,7 @@ Vous trouverez ici des dossiers thématiques, qui correspondent aux 7 sujets “
 
 ```{toctree}
 :maxdepth: 1
-Économie du numérique <economie-numerique>
-Vie privée et surveillance <surveillance>
+Numérique et environnement <environnement>
+IA et enjeux de l'automatisation 1<IA_1>
+IA et enjeux de l'automatisation 2<IA_2>
 ```
