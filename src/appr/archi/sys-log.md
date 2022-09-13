@@ -95,15 +95,13 @@ Cliquez sur {logicref}`tryout_and.x|l'entrée $X$` ou {logicref}`tryout_and.y|l'
 ````{dropdown} Pour aller plus loin
 Comment une porte **ET** est-elle elle-même construite ? Cela a déjà été mentionné : avec d'autres composants électroniques plus simples. En simplifiant un peu, on peut considérer qu'une porte **ET** est constituée de deux transistors :
 
-```{figure} media/andgatetransistor.png
+```{figure} media/andgatetransistor.svg
 ---
-height: 300px
 width: 200px
 ---
-Construction d'une porte logique **ET** à partir de deux transistors (et de résistances).
 ```
 
-Ici, les deux transistors sont les composants symbolisés par un cercle. Rappelons qu'ils laissent passer du courant de haut en bas lorsqu'ils détectent un courant sur l'entrée qui vient de la gauche. Ici, si **V** représente une tension continue de, disons, 5 volts, on aura donc une tension similaire sur la sortie **Out** que si à la fois **A** et **B**, qui sont ici les entrées du circuit, sont «actives» — donc lorsque les deux transistors sont «ouverts». Sinon, on aura une tension de 0 volts sur la sortie **Out**.
+Ici, les deux transistors sont les composants symbolisés par un cercle. Rappelons qu'ils laissent passer du courant de haut en bas lorsqu'ils détectent un courant sur l'entrée qui vient de la gauche. Ici, comme on a en haut une tension de 4 volts, on aura une tension similaire sur la sortie **Z** que si à la fois les entrées **X** et **Y** sont «actives» — donc lorsque les deux transistors sont «ouverts». Sinon, on aura une tension de 0 volt sur la sortie **Z**.
 ````
 
 
@@ -141,6 +139,17 @@ Essayez la porte **OU** :
 }
 ```
 
+````{dropdown} Pour aller plus loin
+Voici comment une porte **OU** peut être construite avec deux transistors :
+
+```{figure} media/orgatetransistor.svg
+---
+width: 200px
+---
+```
+````
+
+
 ## Porte NON
 
 Cette porte est plus simple : elle n'a qu'une entrée, et sa sortie se contente d'inverser la valeur en entrée. On l'appelle d'ailleurs aussi un _inverseur_.
@@ -166,6 +175,16 @@ Essayez l'inverseur :
   "wires": [[0, 1], [3, 2]]
 }
 ```
+
+````{dropdown} Pour aller plus loin
+Voici comment un inverseur peut être construit avec un transistor :
+
+```{figure} media/notgatetransistor.svg
+---
+width: 200px
+---
+```
+````
 
 Ensemble, les portes **ET**, **OU** et **NON** représentent les relations logiques de la {glo}`conjonction|conjonction`, la {glo}`disjonction|disjonction` et la {glo}`negation|négation`. Même si on ne les appelle pas ainsi, on utilise tous les jours des relations logiques de conjonction, de disjonction et de négation.
 
@@ -229,12 +248,12 @@ Ce diagramme n'est pas forcément facile à lire — discutons d'abord comment l
 
 Pour analyser un circuit logique comme celui présenté ci-dessus, on cherchera à établir sa table de vérité. En l'occurrence, comme pour les portes précédentes, ce circuit a {logicref}`xor_circuit_tryout.{x,y}|deux entrées`: si chaque entrée peut valoir 1 ou 0, on a en tout, de nouveau, quatre configurations possibles à examiner dans le but de remplir la dernière colonne :
 
-| $X$ | $Y$ | $Z$   |
-| :-: | :-: | :-:   |
-| 0   | 0   | $???$ |
-| 1   | 0   | $???$ |
-| 0   | 1   | $???$ |
-| 1   | 1   | $???$ |
+| $X$ | $Y$ | $Z$ |
+| :-: | :-: | :-: |
+| 0   | 0   | ?   |
+| 1   | 0   | ?   |
+| 0   | 1   | ?   |
+| 1   | 1   | ?   |
 
 
  Pour remplir chaque ligne, on va changer les entrées selon les valeurs de $X$ et $Y$ et observer l'effet des portes et ainsi voir comment le circuit se comporte. Prenons $X=Y=0$: c'est le cas représenté par le diagramme fixe ci-dessous. Rappelons qu'un segment noir véhicule un «0», alors qu'un segment coloré véhicule un «1».

@@ -29,7 +29,7 @@ L'idée principale derrière la conception d'un circuit logique qui est capable 
 }
 ```
 
-Au début, les deux entrées de la porte valent 0, comme sa sortie. Si l'on essaie de faire passer l'entrée $X$ à 1, on voit que la sortie $Z$ passera à 1 elle aussi, comme il s'agit d'une porte **OU**. Mais comme $Z$ est aussi relié à l'autre entrée de la porte, on a maintenant un circuit dont on ne peut plus modifier la sortie : même si $X$ passe de nouveau à 0, l'autre entrée reste à 1 et suffit donc pour que $Z$ vale maintenant 1 indéfiniment. On est obligé de remettre le circuit complètement à zéro (l'équivalent de débrancher la prise de courant et de la rebrancher) pour obtenir à nouveau un 0 sur la sortie $Z$.
+Au début, les deux entrées de la porte valent 0, comme sa sortie. Si l'on essaie de faire passer l'entrée $X$ à 1, on voit que la sortie $Z$ passera à 1 elle aussi, comme il s'agit d'une porte **OU**. Mais comme $Z$ est aussi relié à l'autre entrée de la porte, on a maintenant un circuit dont on ne peut plus modifier la sortie : même si $X$ passe de nouveau à 0, l'autre entrée reste à 1 et suffit donc pour que $Z$ vaille maintenant 1 indéfiniment. On est obligé de remettre le circuit complètement à zéro (l'équivalent de débrancher la prise de courant et de la rebrancher) pour obtenir à nouveau un 0 sur la sortie $Z$.
 
 Assurément, ce circuit n'est pas très intéressant : il se bloque dans un état sans retour possible. Il faudrait pouvoir faire repasser la valeur de sortie à 0. Pour ce faire, une idée est d'ajouter {logicref}`latch_build2.and|une porte **ET**` avant de faire repasser la sortie de {logicref}`latch_build2.or|la porte **OU**` dans sa propre entrée. Cela nous permet d’annuler le signal de retour si la seconde entrée du **ET** (appelons-la $Y$) vaut 0.
 
@@ -191,6 +191,7 @@ On va utiliser pour cela un circuit similaire, mais qui fonctionne un peu diffé
 
 {
   "v": 3,
+  "opts": {"showDisconnectedPins": true},
   "in": [
     {"pos": [90, 40], "id": 0, "name": "D", "val": 0},
     {"pos": [90, 80], "id": 1, "name": "Horloge", "val": 0, "isPushButton": true}
@@ -212,7 +213,7 @@ On va utiliser pour cela un circuit similaire, mais qui fonctionne un peu diffé
 }
 ```
 
-Cette bascule va stocker son entrée $D$ et la propager sur sa sortie $Q$ uniquement lorsque l'entrée spéciale $Horloge$ passe de 0 à 1. Le reste du temps, $Q$ et $\overline{Q}$ garderont leur valeur précédente. Notez que cette bascule a aussi deux entrées $S$ et $R$, qui servent à forcer l'état interne à valoir 1 ou 0, respectivement, indépendamment du signal $D$ et de l'horloge.
+Cette bascule va stocker son entrée $D$ et la propager sur sa sortie $Q$ uniquement lorsque l'entrée spéciale $Horloge$ passe de 0 à 1. Le reste du temps, $Q$ et $\overline{Q}$ garderont leur valeur précédente. Notez que cette bascule a aussi deux entrées $Pre$ et $Clr$, ici déconnectées, qui servent à forcer l'état interne à valoir 1 ou 0, respectivement, indépendamment du signal $D$ et de l'horloge.
 
 Testez cette bascule. Réglez l'entrée de données $D$ à 1 ou 0 et observez comme la bascule ne réagit pas : sa sortie $Q$ reste telle quelle. Donnez ensuite une impulsion en cliquant sur l'entrée $Horloge$ et voyez comme la valeur de $D$ est maintenant stockée sur la bascule.
 
@@ -766,5 +767,5 @@ Il existe bien d'autres éléments qui composent les ordinateurs et nous n'avons
 
 
 ````{dropdown} Jeu pour aller plus loin
-Dans le jeu en ligne « Nandgame » (<https://nandgame.com>), on construit petit à petit un ordinateur complet juste avec, à la base, des portes **NON-ET**. Elles sont la particularité (avec les portes **NON-OU**, d'ailleurs) de pouvoir simuler toutes les autres portes — y compris un inverseur.
+Dans le jeu en ligne « Nandgame » (<https://nandgame.com>), on construit petit à petit un ordinateur complet juste avec, à la base, des portes **NON-ET**. Elles ont la particularité (avec les portes **NON-OU**, d'ailleurs) de pouvoir simuler toutes les autres portes — y compris un inverseur.
 ````
