@@ -1,6 +1,7 @@
 \usepackage{listings}
 \usepackage{listingsutf8}
 \usepackage{pifont}
+
 %\usepackage{animate}
 \newcommand{\insertvideo}[3]{\begin{flushright}\fbox{Vidéo #3: \sphinxurl{#2}  \includegraphics[scale=0.3]{#1}}\end{flushright}}
 \newcommand{\insertsolution}[1]{\flushright \rotatebox[origin=c]{180}{\textit{Réponse: #1}}}
@@ -68,17 +69,72 @@
 \DeclareUnicodeCharacter{03C4}{$\tau$}
 \DeclareUnicodeCharacter{03C6}{$\phi$}
 
+%% new maketitle
+\makeatletter
+\renewcommand*{\maketitle}{%
+\begin{titlepage}
+ \centering
+ \resizebox{\textwidth}{!}{\includegraphics{modulo-head-banner.png}}\\
+ \vspace*{\fill}
+ {\Huge  \@title}\\
+ \vspace*{3cm}
+{\raggedleft\Large\@author}\\
+ \vspace*{3cm}
+%{\raggedleft\Large\the\day.\the\month.\the\year}
+{\raggedleft\Large \@date}
+ \vspace*{\fill}\\
+ \includegraphics[scale=0.5]{by-nc.eu.png}
+\end{titlepage}
+}
+\makeatother
 
 %% display cards
 %\newenvironment{card}{\begin{minipage}{0.5\textwidth}}{\end{minipage}}
 \makeatletter
 \def\@cardenvironment{minipage}
+\def\@tabenvironment{framed}
 \renewenvironment{sphinxuseclass}[1]{%
 \def\myarg{#1}
 \def\cardenv{col-sm-6}
+\def\tabenv{tabbed-container}
 \ifx\myarg\cardenv\begin{minipage}{0.5\textwidth}\fi
+%\ifx\myarg\tabenv\begin{framed}\fi
+\ifx\myarg\tabenv\centering\begin{minipage}{0.5\textwidth}\begin{framed}\fi
 }%
 {%
 \ifx\@currenvir\@cardenvironment\end{minipage}\fi
+\ifx\@currenvir\@tabenvironment\end{framed}\end{minipage}\fi
+%\vspace{0.5cm}
 }
+\makeatother
+
+%% personalizing headers and footers (e,g, removing version number)
+
+\makeatletter
+   \fancypagestyle{normal}{
+    \fancyhf{}
+    \fancyfoot[RO]{{\py@HeaderFamily\thepage}}
+    \fancyfoot[LO]{{\py@HeaderFamily\nouppercase{\rightmark}}}
+    \fancyhead[RO]{{\py@HeaderFamily \@title}}
+    \if@twoside
+     \fancyfoot[LE]{{\py@HeaderFamily\thepage}}
+     \fancyfoot[RE]{{\py@HeaderFamily\nouppercase{\leftmark}}}
+     \fancyhead[LE]{{\py@HeaderFamily \@title}}
+    \fi
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+    % define chaptermark with \@chappos when \@chappos is available for Japanese
+    \ltx@ifundefined{@chappos}{}
+      {\def\chaptermark##1{\markboth{\@chapapp\space\thechapter\space\@chappos\space ##1}{}}}
+    }
+  % Update the plain style so we get the page number & footer line,
+  % but not a chapter or section title.  This is to keep the first
+  % page of a chapter `clean.'
+   \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[RO]{{\py@HeaderFamily\thepage}}
+    \if@twoside\fancyfoot[LE]{{\py@HeaderFamily\thepage}}\fi
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+    }
 \makeatother

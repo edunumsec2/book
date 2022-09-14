@@ -51,7 +51,7 @@ def depart_youtube_html(self, node):
 # micha
 def visit_youtube_latex(self, node):
     extra = get_extra(node)
-    src='"https://www.youtube-nocookie.com/embed/' + node["vid"] + extra + '"'
+    src='https://www.youtube-nocookie.com/embed/' + node["vid"] + extra
     qrcode_folder = os.path.join(self.builder.outdir, "video_png")
     if not os.path.exists(qrcode_folder):
         os.makedirs(qrcode_folder)

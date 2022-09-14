@@ -7,8 +7,10 @@ from sphinx.errors import ExtensionError
 from sphinx.environment.adapters.toctree import TocTree
 from sphinx.util.docutils import SphinxDirective, SphinxRole
 from sphinx.util.nodes import nested_parse_with_titles
+from sphinx.builders.latex import LaTeXBuilder
 from myst_parser.main import to_html
 import os.path
+
 
 class glossary_list(nodes.General, nodes.Element):
     pass
@@ -250,8 +252,10 @@ class GlossaryRole(SphinxRole):
 
         glossary_uri = env.app.config.glossary_doc
         if glossary_uri is not None:
-            glossary_uri = env.app.builder.get_relative_uri(
-                env.docname, glossary_uri)
+            # avoids a presumed bug in the latex builder 
+            if not isinstance(env.app.builder, LaTeXBuilder): 
+                glossary_uri = env.app.builder.get_relative_uri(
+                    env.docname, glossary_uri)
             glossary_uri += '#' + _def_target(key, number)
 
         node = glossary_reference(display, display,
