@@ -141,7 +141,7 @@ Le choix de la fréquence d'échantillonnage résulte donc d'une délicate balan
 
 ## Quantification
 
-La quantification d'une valeur échantillonnée requiert de déterminer la **précision** de chaque échantillon, ce qui détermine le volume de données générées. Cela découle de la [représentation des nombres](../entiers/eleve.ipynb) par les ordinateurs.
+La quantification d'une valeur échantillonnée requiert de déterminer la **précision** de chaque échantillon, ce qui détermine le volume de données générées. Cela découle de la {ref}`représentation des entiers <appr:repinfo:entiers>` par les ordinateurs.
 
 La précision de l'encodage est donnée par la **profondeur de l'échantillonnage** (bit depth) exprimée en bits (binary digits). Comme pour l'échantillonnage, plus la profondeur de l'échantillonnage est importante, plus la quantité d'information générée est importante.
 
