@@ -344,10 +344,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   downloadBtn.addEventListener("click", function() {
     var data = codeElem.getValue();
-    if (includePreludeInDownload) {
+    if (includePreludeInDownload && prelude != "") {
       data = prelude + "\n" + data;
     }
-    if (includeAfterwordInDownload) {
+    if (includeAfterwordInDownload && afterword != "") {
       data += "\n" + afterword;
     }
     saveFile(downloadFileName, data);
