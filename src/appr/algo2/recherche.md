@@ -251,7 +251,7 @@ Quelle propriété du dictionnaire nous permet d’utiliser un autre algorithme 
 
 Si on doit rechercher un élément dans un tableau qui est **déjà trié**, l’{glo}`algo|algorithme` de recherche linéaire n’est pas optimal. Dans le cas de la recherche d'un mot dans un dictionnaire, la recherche linéaire implique que l'on va parcourir tous les mots du dictionnaire dans l’ordre, jusqu'à trouver le mot recherché. Mais nous ne recherchons pas les mots dans un dictionnaire de la sorte. Nous exploitons le fait que les mots du dictionnaire sont triés dans un ordre alphabétique. On commence par ouvrir le dictionnaire sur une page au hasard et on  regarde si le mot recherché se trouve avant ou après cette page. On ouvre ensuite une autre page au hasard dans la partie retenue du dictionnaire. On appelle cette méthode la **<span style="color:rgb(89, 51, 209)">recherche binaire</span>** (ou la recherche dichotomique), car à chaque itération elle ***<span style="color:rgb(13, 204, 166)">divise l’espace de recherche en deux</span>***. En effet, à chaque nouvelle page ouverte, nous éliminons environ la moitié du dictionnaire qui nous restait à parcourir. Voici une description de l'algorithme de recherche binaire :
 
-```{code-block} python
+```{code-block}
 
 # Algorithme de recherche binaire
 
@@ -347,7 +347,7 @@ Pour aller plus
 ---
 alt: comparaison de complexités logarithmique et linéaire
 width: 420px
-name : fig-comp-log
+name : fig-graph-log
 ---
 **Comparaison de complexités logarithmique et linéaire**. Un algorithme de complexité logarithmique est plus rapide qu’un algorithme de complexité linéaire.
 ```
