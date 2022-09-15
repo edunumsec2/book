@@ -27,6 +27,7 @@ découpé en **quatre thématiques**.
 
    algo2/index
    prog2/index
+   resx/index
    projets/index
 
 .. toctree::
