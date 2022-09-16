@@ -22,8 +22,10 @@ Les ressources sont accessibles via le [site web](https://modulo-info.ch/). Elle
   - [Installation recommandée](#installation-recommandée)
   - [Pré-requis](#pré-requis)
   - [Installation rapide](#installation-rapide)
-  - [Utilisation](#utiisation)
+  - [Utilisation](#utilisation)
   - [Génération de build](#génération-de-build)
+  - [Génération de polycopié](#génération-de-pdf)
+  - [Configuration et personnalisation](#configuration-et-personnalisation)
 - [Comité de rédaction](#comité-de-rédaction)
 
 
@@ -111,6 +113,19 @@ Pour arrêter le serveur : <kbd>CTRL</kbd>+<kbd>c</kbd> ou <kbd>⌘</kbd>+<kbd>c
 
 - Génération du build 'Apprendre' : `sphinx-build -b html src/appr docs`
 - Génération du build 'Enseigner' : `sphinx-build -b html src/ens docs`
+
+
+### Génération de polycopié
+* La génération automatique d'un polycopié est actuellement en développement et n'est pas encore stabilisée. De plus elle n'est testée pour l'instant que sur Mac OS.*
+
+Sphinx permet de générer un build LaTeX des sources qui peut ensuite être utilisé pour générer une polycopié au format pdf.
+
+- Génération du fichier latex: `sphinx-build -b latex -t latex_mode src/appr build/latex/appr`
+- Compilation du fichier latex: `cd build/latex/appr && pdflatex modulo.tex`
+
+### Configuration et personnalisation
+
+Les options de build, notamment les chapitres à générer, le titre, le noms des auteurs, les couleurs etc., peuvent être modifées dans le fichier [src/appr/conf.py](src/appr/conf.py) et [src/ens/conf.py](src/ens/conf.py)
 
 
 ## Comité de rédaction

@@ -20,7 +20,7 @@ import sys
 # -- Project information -----------------------------------------------------
 
 project = 'Modulo2'
-copyright = 'CC-BY-NC'
+copyright = 'CC-BY-NC-SA'
 author = 'Groupe de travail DGEP, EPFL, HEP, UNIL'
 
 # The full version, including alpha/beta/rc tags
@@ -28,6 +28,8 @@ release = '0.1'
 
 
 # -- General configuration ---------------------------------------------------
+
+latex_mode = False
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -66,9 +68,14 @@ language = 'fr'
 
 # exclude_patterns = ['prog1', 'prog2','archi','glossaire']
 
-
 #root_doc = 'rep-info/index'
-exclude_patterns = ['prog1', 'prog2', 'hist','algo2', 'projets','resx']
+
+if tags.has('latex_mode'): 
+    latex_mode = True
+
+    
+if latex_mode:
+    exclude_patterns = ['prog1', 'prog2', 'hist','algo2', 'projets','resx']
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -174,7 +181,7 @@ latex_elements = {
 
 #latex_documents = ('modulo','modulo.tex',"Modulo: une introduction à l'informatique", "John","manual","True")
 latex_additional_files = ["../static/assets/modulo-head-banner.png","../static/assets/by-nc.eu.png"]
-latex_documents = [('index','modulo2.tex',"Modulo: un introduction à l'informatique", "Groupe de travail DGEP, EPFL, HEP, UNIL","manual","True")]
+latex_documents = [('index','modulo.tex',"Modulo: un introduction à l'informatique", "Groupe de travail DGEP, EPFL, HEP, UNIL","manual","True")]
 
 latex_show_urls = 'footnote'
 
