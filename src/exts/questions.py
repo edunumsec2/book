@@ -16,7 +16,9 @@ class incorrect_answer(answer):
     is_correct = False
 
 class question(nodes.Element, nodes.General):
-    pass
+    correct = []
+    counter = 0
+
 
 class check_buttons(nodes.Element, nodes.General):
     pass
@@ -31,6 +33,7 @@ def visit_answer_html(self, node):
     tag = self.starttag(node, "label", CLASS=" ".join(classes))
     self.body.append(tag.strip())
     self.body.append("<input type=\"checkbox\" />")
+    
 
 def depart_answer_html(self, node):
     self.body.append("</label>")
@@ -63,32 +66,35 @@ def visit_answer_latex(self, node):
     classes = ["answer"]
     if node.is_correct:
         classes.append("correct")
+        question.correct.append(question.counter)
     else:
         classes.append("incorrect")
-
-   
-    self.body.append("start answer")
+    question.counter += 1
+    
 
 
 def depart_answer_latex(self, node):
-    self.body.append("end answer")
+    pass
 
 def visit_question_latex(self, node):
     classes = ["question"]
     if node["multi"]:
         classes.append("multi")
-    self.body.append("start question")
+    question.correct = []
+    question.counter = 0
+    self.body.append(r"\smallbreak") #break before question if possible
+
 
     
 def depart_question_latex(self, node):
-    self.body.append("end question")
-
+    pass
+   
 def visit_check_buttons_latex(self, node):
-    self.body.append("start check button")
+    responses = [str(i+1) for i in question.correct]
+    self.body.append(r"\insertsolution{"+ ",".join(responses)+"}\n")
 
 def depart_check_buttons_latex(self, node):
-    self.body.append("end check button")
-
+    pass
 
 
 
@@ -126,6 +132,7 @@ class Question(SphinxDirective):
                 break
         
         question_content = self.content
+
         feedback_content = None
         if feedback_start is not None:
             question_content = self.content[:feedback_start]

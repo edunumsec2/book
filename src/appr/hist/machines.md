@@ -24,7 +24,7 @@ La machine d’Anticythère, plus de 100 ans av. J.-C., propose une repré- sent
 
 `````{item} 1642
 :title: La pascaline
-En 1642, Blaise Pascal conçoit la Pascaline, une machine à cal- culer mécanique qui se base cette fois sur une représentation arithmétique tra- duite dans des rouages mécaniques.
+En 1642, Blaise Pascal conçoit la Pascaline, une machine à calculer mécanique qui se base cette fois sur une représentation arithmétique traduite dans des rouages mécaniques.
 `````
 
 `````{item} 1734

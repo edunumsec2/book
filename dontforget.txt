@@ -1,1 +1,2 @@
-update latex.py 
+update latex.py
+panels output cannot be resized

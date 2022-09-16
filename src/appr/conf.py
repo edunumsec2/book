@@ -46,7 +46,7 @@ extensions = [
     'exercise',
 ]
 
-glossary_doc = 'glossaire'
+glossary_doc = 'glossaire.csv'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['../templates']
@@ -62,7 +62,14 @@ language = 'fr'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
+
+
 # exclude_patterns = ['prog1', 'prog2','archi','glossaire']
+
+
+#root_doc = 'rep-info/index'
+exclude_patterns = ['prog1', 'prog2', 'hist','algo2', 'projets','resx']
+
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -154,9 +161,20 @@ pygments_dark_style = "monokai"
 myst_enable_extensions = ['amsmath', 'colon_fence', 'deflist', 'dollarmath', 'html_admonition', 'html_image', 'replacements', 'smartquotes', 'substitution']
 myst_url_schemes = ['mailto', 'http', 'https']
 
+today_fmt = '%d %B %Y' # date format
+
 latex_elements = {
     'papersize': 'a4paper',
-    'preamble': r'\input{src/static/latex/customize}',
+    'preamble': r'\input{../../../src/static/latex/customize}',
     'pxunit': '0.5bp',
-    'figure_align': 'H'
+    'figure_align': 'H',
+    'maketitle':  '\maketitle'
 }
+
+
+#latex_documents = ('modulo','modulo.tex',"Modulo: une introduction à l'informatique", "John","manual","True")
+latex_additional_files = ["../static/assets/modulo-head-banner.png","../static/assets/by-nc.eu.png"]
+latex_documents = [('index','modulo2.tex',"Modulo: un introduction à l'informatique", "Groupe de travail DGEP, EPFL, HEP, UNIL","manual","True")]
+
+latex_show_urls = 'footnote'
+
