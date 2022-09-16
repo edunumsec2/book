@@ -46,6 +46,6 @@ urllib3==1.26.7
 virtualenv==20.8.1
 virtualenv-clone==0.5.7
 lzstring
-pyppeteer==1.0.2
-qrcode==7.3.1
-Pillow==9.2.0
+pyppeteer
+qrcode
+Pillow
