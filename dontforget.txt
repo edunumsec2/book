@@ -1,2 +1,0 @@
-update latex.py
-panels output cannot be resized
