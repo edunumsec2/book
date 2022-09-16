@@ -138,3 +138,37 @@
     \renewcommand{\footrulewidth}{0.4pt}
     }
 \makeatother
+
+%%%% in the fly image conversion taken from here: https://tex.stackexchange.com/questions/574562/inclusion-of-graphics-with-on-the-fly-conversion-using-xetex
+
+\usepackage{graphicx}% including pictures
+\usepackage{shellesc}% run system commands from TeX engine
+\usepackage{etoolbox}% for \csdef, \csletcs
+\makeatletter
+\def\@firstofthree#1#2#3{#1}%
+\def\@secondofthree#1#2#3{#2}%
+\newcommand{\DeclareGraphicsAlien}[3]{%
+  \edef\Gin@extensions{#1,\Gin@extensions}%
+  \DeclareGraphicsRule{#1}{\@gobble#1}{#1}{}%
+  \csdef{Gread@\@gobble#1}##1{%
+    \edef\SourceFile{\Gin@base\Gin@ext}%
+%    \edef\Gin@base{\Gin@base-\@gobble#1-converted-to}%
+%    \edef\Gin@base{\Gin@base-\@gobble#1-converted-to}%
+    \edef\Gin@ext{#2}%
+    \edef\OutputFile{\Gin@base\Gin@ext}%
+    \edef\targetfmt{\expandafter\expandafter\expandafter
+                    \@firstofthree\csname Gin@rule@\Gin@ext\endcsname\relax}%
+    \edef\targetext{\expandafter\expandafter\expandafter
+                    \@secondofthree\csname Gin@rule@\Gin@ext\endcsname\relax}%
+    \IfFileExists{\SourceFile}{\ShellEscape{#3}}{}%
+    \csletcs{Ginclude@\@gobble#1}{Ginclude@\targetfmt}%
+    \csname Gread@\targetfmt\endcsname{\Gin@base\targetext}%
+  }%
+}%
+\makeatother
+
+%%% this needs to be made generalizable
+
+\DeclareGraphicsAlien{.gif}{.pdf}{sips -s format pdf  '\SourceFile[0]' --out \OutputFile}%
+\DeclareGraphicsAlien{.svg}{.pdf}{%
+    /Applications/Inkscape.app/Contents/MacOS/inkscape --export-type=pdf --export-area-page '\SourceFile' -o '\OutputFile' 2>/dev/null}%
