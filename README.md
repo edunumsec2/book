@@ -116,7 +116,7 @@ Pour arrêter le serveur : <kbd>CTRL</kbd>+<kbd>c</kbd> ou <kbd>⌘</kbd>+<kbd>c
 
 
 ### Génération de polycopié
-* La génération automatique d'un polycopié est actuellement en développement et n'est pas encore stabilisée. De plus elle n'est testée pour l'instant que sur Mac OS.*
+*La génération automatique d'un polycopié est actuellement en développement et n'est pas encore stabilisée. De plus elle n'est testée pour l'instant que sur Mac OS.*
 
 Sphinx permet de générer un build LaTeX des sources qui peut ensuite être utilisé pour générer une polycopié au format pdf.
 
