@@ -147,7 +147,7 @@
 \makeatletter
 \def\@firstofthree#1#2#3{#1}%
 \def\@secondofthree#1#2#3{#2}%
-\newcommand{\DeclareGraphicsAlien}[3]{%
+\newcommand{\DeclareGraphicsAlien}[2]{%
   \edef\Gin@extensions{#1,\Gin@extensions}%
   \DeclareGraphicsRule{#1}{\@gobble#1}{#1}{}%
   \csdef{Gread@\@gobble#1}##1{%
@@ -160,7 +160,7 @@
                     \@firstofthree\csname Gin@rule@\Gin@ext\endcsname\relax}%
     \edef\targetext{\expandafter\expandafter\expandafter
                     \@secondofthree\csname Gin@rule@\Gin@ext\endcsname\relax}%
-    \IfFileExists{\SourceFile}{\ShellEscape{#3}}{}%
+    %\IfFileExists{\SourceFile}{\ShellEscape{#3}}{}%
     \csletcs{Ginclude@\@gobble#1}{Ginclude@\targetfmt}%
     \csname Gread@\targetfmt\endcsname{\Gin@base\targetext}%
   }%
@@ -169,6 +169,5 @@
 
 %%% this needs to be made generalizable
 
-\DeclareGraphicsAlien{.gif}{.pdf}{sips -s format pdf  '\SourceFile[0]' --out \OutputFile}%
-\DeclareGraphicsAlien{.svg}{.pdf}{%
-    /Applications/Inkscape.app/Contents/MacOS/inkscape --export-type=pdf --export-area-page '\SourceFile' -o '\OutputFile' 2>/dev/null}%
+\DeclareGraphicsAlien{.gif}{_gen.pdf}{sips -s format pdf  '\SourceFile[0]' --out \OutputFile}%
+\DeclareGraphicsAlien{.svg}{.pdf}
