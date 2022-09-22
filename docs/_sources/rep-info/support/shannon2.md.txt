@@ -108,7 +108,7 @@ message No  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
 mot de code |10111 |11100 |01100 |00111 |01010 |11110 |00101 |11001|
 
 ```{admonition} Remarque
-Une objection valide à l'utilisation du hasard dans ce cadre est qu'il se peut bien sûr que deux mots de code tirés au hasard soient identiques, ce qui pose évidemment un problème pour Bob si l'un des deux messages correspondants est transmis par Alice. La réponse est que pour de relativement grandes valeurs de $n$, cette probabilité est extrêmement faible (pour être plus précis, elle est de l'ordre de $n^2/2^n$, donc plus petite que $10^{-25}$ lorsque $n=100$, par exemple).
+Une objection valide à l'utilisation du hasard dans ce cadre est qu'il se peut que deux mots de code tirés au hasard soient identiques, ce qui pose un problème pour Bob si l'un des deux messages correspondants est transmis par Alice. Il faut effectivement modifier le code tiré complètement au hasard pour répondre proprement à cette objection, mais ceci nous emmènerait un peu plus (voire trop) loin...
 ```
 
 Ce que nous allons montrer dans ce qui suit, c'est que si Alice choisit la valeur de $n$ telle que $k = n \, (1-\delta)$ avec $\delta$ juste un peu plus grand que $\varepsilon$ (donc un taux de transmission $R=1-\delta$, autrement dit, juste un peu plus de redondance que dans la situation idéale décrite plus haut avec le génie), alors Bob sera capable de décoder le message envoyé par Alice avec une probabilité extrêmement proche de 1, et ceci quels que soient les $n \, \varepsilon$ bits effacés (qui ne sont pas connus à l'avance ici).

@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Recherche" href="../../search.html" /><link rel="next" title="2. Exercices" href="../exo/index.html" /><link rel="prev" title="Redondance et code de Hamming" href="hamming_new.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Recherche" href="../../search.html" /><link rel="next" title="Exercices" href="../exo/index.html" /><link rel="prev" title="Echantillonnage" href="echantillonnage_new.html" />
 
     <link rel="shortcut icon" href="../../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>Compression et codage de Huffman - Enseigner</title>
+        <title>Compression sans pertes et codage de Huffman - Enseigner</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../../_static/codeplay.css" />
@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/global.css" />
@@ -220,23 +220,20 @@
   <p class="caption" role="heading"><span class="caption-text">Première année</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Représentation de l’information</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">1. Activités</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="magie_binaire_new.html">Magie binaire</a></li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Activités</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="magie_binaire.html">Magie binaire</a></li>
 <li class="toctree-l3"><a class="reference internal" href="encoder_images.html">Images numériques</a></li>
-<li class="toctree-l3"><a class="reference internal" href="format_BMP_new.html">Format BMP</a></li>
 <li class="toctree-l3"><a class="reference internal" href="echantillonnage_new.html">Echantillonnage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="hamming_new.html">Redondance et code de Hamming</a></li>
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Compression et codage de Huffman</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../exo/index.html">2. Exercices</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../exo/index.html">Exercices</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../exo/carte.html">Carte perforée</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../exo/radiotel.html">Radiotéléphonie</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../exo/space.html">Space Invaders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../exo/tableur.html">Tableur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exo/radiotel.html">Radiotéléphonie</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../support/index.html">3. Supports de cours</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../support/index.html">Supports de cours</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../support/son/visu-et-ecoute-son.html">Représentation du son</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../support/shannon2.html">Second théorème de Shannon</a></li>
 </ul>
@@ -244,10 +241,8 @@
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../prog1/introduction.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../prog1/planification.html">2. Planification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../prog1/evaluation.html">3. Evaluation</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../prog1/activ/index.html">4. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/introduction.html">Introduction</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../prog1/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../prog1/activ/catchfruit.html">Catch the fruit</a></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../prog1/activ/microbit-python/index.html">Python avec le micro:bit</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../prog1/activ/microbit-python/instructions.html">Instructions</a></li>
@@ -257,73 +252,77 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/evaluations.html">Evaluations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../algo1/index.html">Algorithmique I</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo1/activ/index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/algo-tri_new.html">Algorithmes de tri</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../algo1/activ/epidemie/index_new.html">Modéliser une épidémie</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo1/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/algo-tri.html">Algorithmes de tri</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../algo1/activ/epidemie/index.html">Modéliser une épidémie</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../algo1/activ/epidemie/m_a_s.html">Marche à suivre</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../algo1/activ/epidemie/solution.html">Corrigé</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/dijkstra_new.html">Dijkstra et le plus court chemin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/monochromes.html">Monochromes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/stroboscope.html">Stroboscope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/dijkstra.html">Dijkstra et le plus court chemin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/puissance4.html">Puissance 4/Minimax</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/template_activite.html">Titre de l’activité</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../algo1/exo/solutions.html">2. Solutions des exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo1/exo/solutions.html">Solutions des exercices</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../archi/index.html">Architecture des ordinateurs</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../archi/support/index.html">1. Supports de cours</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../archi/eval/index.html">2. Evaluations</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../archi/activ/index.html">3. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../archi/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../archi/activ/ordinateurantique_new.html">Ordinateur antique</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../archi/activ/simulateur.html">Simulateur logique</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../archi/activ/selecteur-chien_new.html">Sélecteur de chien</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/afficheur-7seg.html">Afficheur à 7 segments</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/soustracteur.html">Soustracteur</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../archi/activ/gabuzomeu_new.html">Ga-Bu-Zo-Meu</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../archi/PlanDidac/index.html">4. Plan</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../archi/PlanDidac/plandidacarchi1.html">Proposition 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../archi/eval/index.html">Evaluations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../archi/support/index.html">Supports de cours</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx1/index.html">Enjeux sociaux I</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../enjx1/grandes-thematiques/index.html">Grandes thématiques</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx1/fiches-complementaires/index.html">Fiches complémentaires</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/fiches-complementaires/digital-labor.html">Le digital labor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/fiches-complementaires/wikipedia.html">Wikipédia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/fiches-complementaires/affaire-snowden.html">L'affaire Snowden</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/fiches-complementaires/genre-numerique.html">Genre et numérique</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx1/index.html">Enjeux sociaux I</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../enjx1/grandes-thematiques/economie-numerique.html">1. Économie du numérique</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../enjx1/grandes-thematiques/surveillance.html">2. Vie privée et surveillance</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx1/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/activ/encheres.html">Les enchères du web</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../algo2/index.html">Algorithmique II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../prog2/index.html">Programmation II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../projets/index.html">Projets</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../resx/activ/index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../resx/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../resx/activ/diffie-hellman/diffie-hellman.html">Diffie Hellman</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../resx/activ/routage_paquets/routage_paquets.html">Routage des Paquets</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx2/index.html">Enjeux sociaux II</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../enjx2/grandes-thematiques/environnement.html">1. Numérique et environnement</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/activ/index.html">2. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/encheres.html">1. Les enchères du web</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/combustibles_GES.html">2. Numérique et environnement : le problème de l'énergie (consommée pendant le cycle de vie des produits numériques) : combustibles fossiles / non fossiles et GES</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx2/index.html">Enjeux sociaux II</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../enjx2/grandes-thematiques/index.html">Grandes thématiques</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/encheres.html">Les enchères du web</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/emission_ges.html">Numérique et réchauffement climatique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/ia_0.html">IA : Apprentissage et données</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/ia_1.html">IA : Biais de l'apprentissage des données</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/ia_2.html">IA : Bulles de filtre</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/ia_3.html">IA : Générateurs</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/fiches-complementaires/index.html">Fiches complémentaires</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/digital-labor.html">1. Le digital labor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/wikipedia.html">2. Wikipédia</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/affaire-snowden.html">3. L’affaire Snowden</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/genre-numerique.html">4. Genre et numérique</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/support/index.html">Supports de cours</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/support/combustibles_GES.html">Numérique et environnement</a></li>
 </ul>
 </li>
 </ul>
@@ -331,39 +330,27 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Thématiques transversales</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/activ/index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../hist/activ/jeuimitation_new.html">Jeu de l'imitation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../hist/activ/smaky_new.html">Smaky</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/plan_didac/index.html">2. Plan</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/eval/index.html">3. Evaluation</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../hist/eval/eval1.html">Évalutation</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../art/index.html">Art numérique</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../art/ai.html">1. AI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../art/autonomy_cube.html">2. Autonomy Cube</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../art/gloomy_sunday.html">3. Learning to See : Gloomy Sunday</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Suppléments</span></p>
-<ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../art/index.html">Art numérique</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../art/ai.html">1. AI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../art/autonomy_cube.html">2. Autonomy Cube</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../art/gloomy_sunday.html">3. Learning to See : Gloomy Sunday</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../art/index.html">Art numérique</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../art/ai.html">AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/autonomy_cube.html">Autonomy Cube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/gloomy_sunday.html">Learning to See : Gloomy Sunday</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Outils</span></p>
 <ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../plan_didac/index.html">Plans didactiques</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plan_didac/plandidac2.html">Proposition 1</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossaire.html">Glossaire</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../readme/extensions.html">Extensions</a></li>
 </ul>
@@ -392,27 +379,24 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="compression-et-codage-de-huffman">
-<h1>Compression et codage de Huffman<a class="headerlink" href="#compression-et-codage-de-huffman" title="Lien permanent vers ce titre">¶</a></h1>
+          <section class="tex2jax_ignore mathjax_ignore" id="compression-sans-pertes-et-codage-de-huffman">
+<span id="ens-repinfo-compressionhuffman"></span><h1>Compression sans pertes et codage de Huffman<a class="headerlink" href="#compression-sans-pertes-et-codage-de-huffman" title="Lien permanent vers ce titre">¶</a></h1>
 <hr class="docutils"/>
 <p>Aussi étrange que cela puisse paraître, il est très souvent possible d’enregistrer un fichier de données d’une certaine taille en utilisant moins de place en mémoire que la taille initiale du fichier, et ceci sans perdre aucune information ! Ce sont les techniques de compression de données qui permettent de réaliser ça : l’activité qui suit permet de comprendre le principe de base de la compression de données à travers un jeu interactif avec les élèves.</p>
 <p>Pour introduire le sujet, on peut parler également de manière générale du fait que dans la vie courante, on utilise des algorithmes de compression sans s’en rendre compte, comme Mr Jourdain faisait de la prose : par exemple, quand on écrit “slt” ou “tqt” dans un SMS, ou quand on utilise des acronymes. Le principe consiste à abréger des éléments qui reviennent souvent dans la conversation pour gagner de la place ou du temps.</p>
 <p>Une autre accroche possible est de parler du code Morse qui utilise un seul point pour la lettre E qui revient très souvent en français ou en anglais, tandis que la lettre X, beaucoup moins fréquente, est encodée par un trait, deux points, un trait.</p>
 <hr class="docutils"/>
 <div class="hint admonition">
-<p class="admonition-title">Caractéristiques</p>
+<p class="admonition-title">Compression sans pertes et codage de Huffman</p>
 <ul class="simple">
-<li><p>Nom : Compression et codage de Huffman</p></li>
-<li><p>Durée : 1 période</p></li>
 <li><p>Thème : Représentation de l’information</p></li>
-<li><p>Objectifs d’apprentissage : Faire comprendre aux élèves le principe de base derrière la compression de données.</p></li>
-<li><p>Notions fondamentales : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
-<li><p>Approche pédagogique : Débranchée</p></li>
-<li><p>Matériel : (optionnel) Quelques dés pour tirer une lettre (uniformément) au hasard parmi 16</p></li>
-<li><p>Niveau : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
-<li><p>Mots-clés : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
-<li><p>Dynamique (groupe / individuel) : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
-<li><p>Taille du groupe : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+<li><p>Niveau : moyen</p></li>
+<li><p>Durée : 1 période</p></li>
+<li><p>Objectifs pédagogiques : comprendre le principe de base de la compression sans pertes</p></li>
+<li><p>Modalité : débranché</p></li>
+<li><p>Matériel : (év.) 4 pièces de monnaies ou 4 dés pour tirer une lettre uniformément au hasard parmi 16</p></li>
+<li><p>Prérequis : codage binaire</p></li>
+<li><p>Taille du groupe : classe entière</p></li>
 </ul>
 </div>
 <details class="sphinx-bs dropdown card mb-3">
@@ -423,17 +407,15 @@
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <ol class="simple">
-<li><p class="card-text"><a class="reference internal" href="#huffman-premierjeu"><span class="std std-ref">Premier jeu</span></a> (durée <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code>)</p></li>
-<li><p class="card-text"><a class="reference internal" href="#huffman-secondjeu"><span class="std std-ref">Second jeu</span></a> (durée <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code>)</p></li>
-<li><p class="card-text"><a class="reference internal" href="#huffman-compression"><span class="std std-ref">Et la compression, dans tout ça ?</span></a> (durée <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code>)</p></li>
-<li><p class="card-text"><a class="reference internal" href="#huffman-developpements"><span class="std std-ref">Développements</span></a> (durée <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code>)</p></li>
-<li><p class="card-text"><a class="reference internal" href="#huffman-autres"><span class="std std-ref">Autres algorithmes de compression</span></a> (durée <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code>)</p></li>
-<li><p class="card-text"><a class="reference internal" href="#huffman-conclusion"><span class="std std-ref">Conclusion</span></a> (durée <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code>)</p></li>
+<li><p class="card-text"><a class="reference internal" href="#huffman-premierjeu"><span class="std std-ref">Premier jeu</span></a> (durée : 10 minutes)</p></li>
+<li><p class="card-text"><a class="reference internal" href="#huffman-secondjeu"><span class="std std-ref">Second jeu</span></a> (durée : 15 minutes)</p></li>
+<li><p class="card-text"><a class="reference internal" href="#huffman-compression"><span class="std std-ref">Et la compression, dans tout ça ?</span></a> (durée : 15 minutes)</p></li>
+<li><p class="card-text"><a class="reference internal" href="#huffman-developpements"><span class="std std-ref">Développements</span></a> (durée : 5 minutes ou …)</p></li>
 </ol>
 </div>
 </details><section id="premier-jeu">
 <span id="huffman-premierjeu"></span><h2>Premier jeu<a class="headerlink" href="#premier-jeu" title="Lien permanent vers ce titre">¶</a></h2>
-<p><em>Durée : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></em></p>
+<p><em>Durée : 10 minutes</em></p>
 <p>Ecrire au tableau la séquence de lettres : “ABCDEFGHIJKLMNOP”, choisir une lettre (éventuellement au hasard, mais ce n’est pas nécessaire), la noter sur une feuille de papier, et demander à un·e volontaire de participer au jeu. Expliquer ensuite la règle du jeu :</p>
 <p>L’élève doit deviner quelle lettre a été choisie, ceci en ne posant que des questions binaires, c’est-à-dire des questions auxquelles on ne peut répondre que par oui ou par non. Et le but pour l’élève est de poser le moins de questions possible pour deviner la lettre.</p>
 <p>Une fois que l’élève a trouvé la lettre, poser la question aux autres : est-ce que la séquence de questions posées par l’élève était optimale ? Aurait-on pu faire mieux ?</p>
@@ -453,6 +435,7 @@
 </section>
 <section id="second-jeu">
 <span id="huffman-secondjeu"></span><h2>Second jeu<a class="headerlink" href="#second-jeu" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : 15 minutes</em></p>
 <p>Demander ensuite à un·e autre volontaire de participer à un second jeu, et écrire la phrase “SINGING IN THE RAIN” au tableau, composée de 16 lettres (sans les espaces, qu’on laisse de côté). Puis choisir une de ces 16 lettres (éventuellement au hasard, mais ça n’est pas absolument nécessaire) et la noter sur un bout de papier. Expliquer enfin que la règle du jeu reste la même: l’élève doit trouver la lettre choisie en posant un nombre minimum de questions binaires, mais noter qu’ici plusieurs lettres se répètent, et qu’il n’y a pas besoin de deviner la position précise de la lettre, mais juste la valeur de celle-ci, c’est-à-dire “S”, “I”, “N”, etc.</p>
 <p>Une fois que l’élève a trouvé la lettre, poser à nouveau la question aux autres : est-ce que la séquence de questions posées par l’élève était optimale ? Aurait-on pu faire mieux ?</p>
 <p>Pour ce second jeu, la stratégie optimale consiste à nouveau à diviser chaque fois l’ensemble des possibilités en deux parties égales, mais du fait que des lettres se répètent, on peut optimiser les questions en regroupant les possibilités. Faisons d’abord le compte du nombre d’apparitions de chaque lettre, en prenant soin de les ordonner par ordre décroissant de ce nombre d’apparitions :</p>
@@ -556,6 +539,7 @@
 </section>
 <section id="et-la-compression-dans-tout-ca">
 <span id="huffman-compression"></span><h2>Et la compression, dans tout ça?<a class="headerlink" href="#et-la-compression-dans-tout-ca" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : 15 minutes</em></p>
 <p>Tout ceci semble a priori quelque peu éloigné du sujet, mais en fait, le lien avec l’algorithme de compression de Huffman est presque immédiat ! Voici plus précisément comment établir ce lien.</p>
 <p>Pour encoder les 16 lettres ABCDEFGHIJKLMNOP du premier jeu sous la forme d’une séquence de bits, il n’y a pas d’autre choix que d’utiliser 4 bits par lettre, vu que celles-ci sont toutes différentes. Ainsi, on encode par exemple A par 0000, B par 0001, C par 0010, etc., et le nombre total de bits nécessaires pour encoder la séquence  ABCDEFGHIJKLMNOP vaut donc <span class="math notranslate nohighlight">\(16 \times 4=64\)</span>.</p>
 <p>Il est bien sûr possible de refaire exactement la même chose pour encoder la séquence SINGING IN THE RAIN (en oubliant encore une fois les espaces), mais ce serait ignorer le fait que certaines lettres se répètent. Pour être plus précis, il n’y a que… 9 lettres différentes dans cette séquence ; malheureusement une de trop pour pouvoir représenter chaque lettre avec 3 bits ! Donc il semble a priori qu’on ne gagne rien ici. Cependant, si on utilise l’information additionnelle liée au nombre d’apparitions de chaque lettre, alors on peut faire mieux ! Et c’est là que le second jeu vient en aide pour définir un schéma d’encodage efficace, suivant les deux règles suivantes :</p>
@@ -623,6 +607,7 @@
 </section>
 <section id="developpements">
 <span id="huffman-developpements"></span><h2>Développements<a class="headerlink" href="#developpements" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : 5 minutes de conclusion, ou un autre cours entier!</em></p>
 <p>Plusieurs remarques méritent d’être faites ici pour compléter la description de cette activité.</p>
 <section id="utilisation-du-hasard-dans-le-jeu">
 <h3>Utilisation du hasard dans le jeu<a class="headerlink" href="#utilisation-du-hasard-dans-le-jeu" title="Lien permanent vers ce titre">¶</a></h3>
@@ -653,7 +638,7 @@
 </section>
 </section>
 <section id="autres-algorithmes-de-compression">
-<span id="huffman-autres"></span><h2>Autres algorithmes de compression<a class="headerlink" href="#autres-algorithmes-de-compression" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Autres algorithmes de compression<a class="headerlink" href="#autres-algorithmes-de-compression" title="Lien permanent vers ce titre">¶</a></h2>
 <section id="compression-sans-pertes">
 <h3>Compression sans pertes<a class="headerlink" href="#compression-sans-pertes" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Les codages de Huffman ou de Shannon-Fano ne sont de loin pas les seuls systèmes permettant de faire de la compression sans perte d’information, dite aussi plus simplement “compression sans pertes”. Un défaut important de l’approche évoquée ici est qu’il est nécessaire de connaître (ou au moins estimer) à l’avance les fréquences d’apparition de chaque lettre dans la séquence à compresser, ce qui s’avère trop lent lors de la compression de grands fichiers de données. Dans ce cas, il vaut mieux recourir à des algorithmes de compression dits <em>universels</em>, tels que l’algorithme de Lempel-Ziv, qui “apprend” en quelque sorte les fréquences d’apparition des lettres dans la séquence au fur et à mesure qu’il lit (et compresse) celle-ci.</p>
@@ -664,7 +649,7 @@
 </section>
 </section>
 <section id="conclusion">
-<span id="huffman-conclusion"></span><h2>Conclusion<a class="headerlink" href="#conclusion" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Cette activité donne un aperçu du fonctionnement des algorithmes de compression de données, qui sont utilisés en permanence par les systèmes informatiques modernes. Il est à espérer que le côté ludique et interactif de l’activité permette de faire passer quelques idées sur un sujet qui reste quand-même techniquement un peu plus difficile que les autres vus dans ce chapitre.</p>
 </section>
 </section>
@@ -679,18 +664,18 @@
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><span class="section-number">2. </span>Exercices</div>
+                <div class="title">Exercices</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="hamming_new.html">
+          <a class="prev-page" href="echantillonnage_new.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Redondance et code de Hamming</div>
+                <div class="title">Echantillonnage</div>
                 
               </div>
             </a>
@@ -717,7 +702,7 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Compression et codage de Huffman</a><ul>
+<li><a class="reference internal" href="#">Compression sans pertes et codage de Huffman</a><ul>
 <li><a class="reference internal" href="#premier-jeu">Premier jeu</a></li>
 <li><a class="reference internal" href="#second-jeu">Second jeu</a></li>
 <li><a class="reference internal" href="#et-la-compression-dans-tout-ca">Et la compression, dans tout ça?</a></li>

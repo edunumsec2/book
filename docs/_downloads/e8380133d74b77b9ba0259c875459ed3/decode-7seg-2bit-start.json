@@ -1,5 +1,5 @@
 {
-  "v": 2,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [120, 240], "id": 2, "name": "a", "val": 0},

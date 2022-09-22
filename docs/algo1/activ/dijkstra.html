@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Recherche" href="../../search.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Recherche" href="../../search.html" /><link rel="next" title="Minimax / Puissance 4" href="puissance4.html" /><link rel="prev" title="Stroboscope ou le random fait bien les choses" href="stroboscope.html" />
 
     <link rel="shortcut icon" href="../../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
         <title>L’algorithme du plus court chemin de Dijkstra - Enseigner</title>
@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/global.css" />
@@ -218,25 +218,22 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Première année</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../rep-info/index.html">Représentation de l’information</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../rep-info/activ/index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/magie_binaire_new.html">Magie binaire</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../rep-info/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/magie_binaire.html">Magie binaire</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/encoder_images.html">Images numériques</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/format_BMP_new.html">Format BMP</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/echantillonnage_new.html">Echantillonnage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/hamming_new.html">Redondance et code de Hamming</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/huffman.html">Compression et codage de Huffman</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../rep-info/exo/index.html">2. Exercices</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../rep-info/exo/index.html">Exercices</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../rep-info/exo/carte.html">Carte perforée</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../rep-info/exo/radiotel.html">Radiotéléphonie</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../rep-info/exo/space.html">Space Invaders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../rep-info/exo/tableur.html">Tableur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rep-info/exo/radiotel.html">Radiotéléphonie</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../rep-info/support/index.html">3. Supports de cours</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../rep-info/support/index.html">Supports de cours</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../rep-info/support/son/visu-et-ecoute-son.html">Représentation du son</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../rep-info/support/shannon2.html">Second théorème de Shannon</a></li>
 </ul>
@@ -244,10 +241,8 @@
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../prog1/introduction.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../prog1/planification.html">2. Planification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../prog1/evaluation.html">3. Evaluation</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../prog1/activ/index.html">4. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/introduction.html">Introduction</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../prog1/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../prog1/activ/catchfruit.html">Catch the fruit</a></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../prog1/activ/microbit-python/index.html">Python avec le micro:bit</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../prog1/activ/microbit-python/instructions.html">Instructions</a></li>
@@ -257,73 +252,77 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/evaluations.html">Evaluations</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../index.html">Algorithmique I</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="algo-tri_new.html">Algorithmes de tri</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="epidemie/index_new.html">Modéliser une épidémie</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Algorithmique I</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Activités</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="algo-tri.html">Algorithmes de tri</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="epidemie/index.html">Modéliser une épidémie</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="epidemie/m_a_s.html">Marche à suivre</a></li>
 <li class="toctree-l4"><a class="reference internal" href="epidemie/solution.html">Corrigé</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="dijkstra_new.html">Dijkstra et le plus court chemin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="monochromes.html">Monochromes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stroboscope.html">Stroboscope</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Dijkstra et le plus court chemin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="puissance4.html">Puissance 4/Minimax</a></li>
-<li class="toctree-l3"><a class="reference internal" href="template_activite.html">Titre de l’activité</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../exo/solutions.html">2. Solutions des exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exo/solutions.html">Solutions des exercices</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../archi/index.html">Architecture des ordinateurs</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../archi/support/index.html">1. Supports de cours</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../archi/eval/index.html">2. Evaluations</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../archi/activ/index.html">3. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../archi/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../archi/activ/ordinateurantique_new.html">Ordinateur antique</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../archi/activ/simulateur.html">Simulateur logique</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../archi/activ/selecteur-chien_new.html">Sélecteur de chien</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/afficheur-7seg.html">Afficheur à 7 segments</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/soustracteur.html">Soustracteur</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../archi/activ/gabuzomeu_new.html">Ga-Bu-Zo-Meu</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../archi/PlanDidac/index.html">4. Plan</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../archi/PlanDidac/plandidacarchi1.html">Proposition 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../archi/eval/index.html">Evaluations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../archi/support/index.html">Supports de cours</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx1/index.html">Enjeux sociaux I</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../enjx1/grandes-thematiques/index.html">Grandes thématiques</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx1/fiches-complementaires/index.html">Fiches complémentaires</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/fiches-complementaires/digital-labor.html">Le digital labor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/fiches-complementaires/wikipedia.html">Wikipédia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/fiches-complementaires/affaire-snowden.html">L'affaire Snowden</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/fiches-complementaires/genre-numerique.html">Genre et numérique</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx1/index.html">Enjeux sociaux I</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../enjx1/grandes-thematiques/economie-numerique.html">1. Économie du numérique</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../enjx1/grandes-thematiques/surveillance.html">2. Vie privée et surveillance</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx1/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/activ/encheres.html">Les enchères du web</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../algo2/index.html">Algorithmique II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../prog2/index.html">Programmation II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../projets/index.html">Projets</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../resx/activ/index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../resx/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../resx/activ/diffie-hellman/diffie-hellman.html">Diffie Hellman</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../resx/activ/routage_paquets/routage_paquets.html">Routage des Paquets</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx2/index.html">Enjeux sociaux II</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../enjx2/grandes-thematiques/environnement.html">1. Numérique et environnement</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/activ/index.html">2. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/encheres.html">1. Les enchères du web</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/combustibles_GES.html">2. Numérique et environnement : le problème de l'énergie (consommée pendant le cycle de vie des produits numériques) : combustibles fossiles / non fossiles et GES</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx2/index.html">Enjeux sociaux II</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../enjx2/grandes-thematiques/index.html">Grandes thématiques</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/encheres.html">Les enchères du web</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/emission_ges.html">Numérique et réchauffement climatique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/ia_0.html">IA : Apprentissage et données</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/ia_1.html">IA : Biais de l'apprentissage des données</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/ia_2.html">IA : Bulles de filtre</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/ia_3.html">IA : Générateurs</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/fiches-complementaires/index.html">Fiches complémentaires</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/digital-labor.html">1. Le digital labor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/wikipedia.html">2. Wikipédia</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/affaire-snowden.html">3. L’affaire Snowden</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../enjx2/fiches-complementaires/genre-numerique.html">4. Genre et numérique</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/support/index.html">Supports de cours</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/support/combustibles_GES.html">Numérique et environnement</a></li>
 </ul>
 </li>
 </ul>
@@ -331,39 +330,27 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Thématiques transversales</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/activ/index.html">1. Activités</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../hist/activ/jeuimitation_new.html">Jeu de l'imitation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../hist/activ/smaky_new.html">Smaky</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/plan_didac/index.html">2. Plan</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/eval/index.html">3. Evaluation</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../hist/eval/eval1.html">Évalutation</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../art/index.html">Art numérique</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../art/ai.html">1. AI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../art/autonomy_cube.html">2. Autonomy Cube</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../art/gloomy_sunday.html">3. Learning to See : Gloomy Sunday</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Suppléments</span></p>
-<ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../art/index.html">Art numérique</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../art/ai.html">1. AI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../art/autonomy_cube.html">2. Autonomy Cube</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../art/gloomy_sunday.html">3. Learning to See : Gloomy Sunday</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../art/index.html">Art numérique</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../art/ai.html">AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/autonomy_cube.html">Autonomy Cube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/gloomy_sunday.html">Learning to See : Gloomy Sunday</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Outils</span></p>
 <ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../plan_didac/index.html">Plans didactiques</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plan_didac/plandidac2.html">Proposition 1</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossaire.html">Glossaire</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../readme/extensions.html">Extensions</a></li>
 </ul>
@@ -394,183 +381,226 @@
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="lalgorithme-du-plus-court-chemin-de-dijkstra">
 <h1>L’algorithme du plus court chemin de Dijkstra<a class="headerlink" href="#lalgorithme-du-plus-court-chemin-de-dijkstra" title="Lien permanent vers ce titre">¶</a></h1>
-<section id="informations">
-<h2>Informations<a class="headerlink" href="#informations" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Durée: 2 périodes consécutives avec une suite optionnelle qui porte sur les enjeux de société.</p>
-<p>Mode: Débranché</p>
-<p>Chapitre: Algorithmique</p>
-<p>Objectifs: Découvrir l’algorithme de Dijkstra, à quoi il sert, et pourquoi il fonctionne.</p>
-<p>Matériel: Une connection internet pour la mise en situation.</p>
-</section>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Ceci est une activité collaborative et débranchée pour introduire l’algorithme
-du plus court de chemin de Dijkstra.</p>
-</section>
+<hr class="docutils"/>
+<p>Activité collaborative et débranchée pour introduire l’algorithme du plus court de chemin de Dijkstra en partant d’une exemple de la vie quotidienne</p>
+<hr class="docutils"/>
+<div class="hint admonition">
+<p class="admonition-title">L’algorithme du plus court chemin de Dijkstra</p>
+<ul class="simple">
+<li><p>Thème : Algorithmique 2 (graphes)</p></li>
+<li><p>Niveau : <code class="docutils literal notranslate"><span class="pre">facile</span></code></p></li>
+<li><p>Durée : 2 période ou 90 minutes</p></li>
+<li><p>Objectifs pédagogiques : Découvrir et comprendre l’algorithme de Dijkstra</p></li>
+<li><p>Notions fondamentales: longueur de chemin dans un graphe</p></li>
+<li><p>Modalité : <code class="docutils literal notranslate"><span class="pre">débranché</span></code></p></li>
+<li><p>Matériel : Un <a class="reference download internal" download="" href="../../_downloads/5a1b05f7dc536d6abe60483204d51103/sommets.pdf"><code class="xref download docutils literal notranslate"><span class="pre">graphe</span> <span class="pre">découpé</span> <span class="pre">en</span> <span class="pre">morceaux</span></code></a> (chaque morceaux contient un noeud et tous ses voisins), 3 <a class="reference download internal" download="" href="../../_downloads/eaf8a10e51352e79bac08b23633b69f6/zones.pdf"><code class="xref download docutils literal notranslate"><span class="pre">feuilles</span> <span class="pre">de</span> <span class="pre">zones</span></code></a>, des <a class="reference download internal" download="" href="../../_downloads/703d0469d696b671991c78f962d20e53/fiche.pdf"><code class="xref download docutils literal notranslate"><span class="pre">fiches</span></code></a> (une par noeud) du scotch pour accrocher des feuille aux murs de la classe (ou un système d’aimants, des punaise, selon le type de surface disponible)</p></li>
+<li><p>Prérequis : aucun</p></li>
+<li><p>Taille du groupe : <code class="docutils literal notranslate"><span class="pre">demi-classe</span></code> (mais peut être éventuellement testée en classe entière)</p></li>
+<li><p>Dynamique (groupe / individuel) : activité coopérative</p></li>
+</ul>
+</div>
 <section id="deroulement">
 <h2>Déroulement<a class="headerlink" href="#deroulement" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Cette activité comporte sept phases:</p>
-<ol class="simple">
-<li><p>Une mise en situation générale pour comprendre un contexte de la vie quotidienne dans lequel cet algorithme
-est utilisé et qui constituera un fil rouge concret tout au long de l’activité.</p></li>
-<li><p>Une mise en situation plus spécifique pour passer à un niveau d’abstraction et de généralisation plus élévé.</p></li>
-<li><p>Une phase pour formaliser le problème, mieux en cerner l’objectif, et comprendre pourquoi il n’est pas trivial.</p></li>
-<li><p>Une phase de découverte (potentiellement tâtonnante) de l’algorithme et de sa justification par simulation humaine</p></li>
-<li><p>Une phase de formalisation (et institutionnalisation) de l’algorithme.</p></li>
-<li><p>Une phase d’exercices (ou exemples) d’application de l’algorithme et puis de modélisation</p></li>
-<li><p>Une phase de réflexion plus approfondie sur l’algorithme (pour les plus avancés)</p></li>
-</ol>
-</section>
-<section id="mise-en-situation-generale-5-min">
-<h2>1. Mise en situation générale (5 min)<a class="headerlink" href="#mise-en-situation-generale-5-min" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’enseignant va sur une page de navigation (p.ex OpenStreetMap) et on montre un exemple
-de requête de chemin pour relier deux points.</p>
-<p><strong>Questions:</strong></p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Etape</p></th>
+<th class="head"><p>Durée</p></th>
+<th class="head"><p>Phase</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#dijkstra-miseensituation"><span class="std std-ref">Mise en situation générale</span></a>  autour des services de navigation</p></td>
+<td><p>5 min</p></td>
+<td><p>Mise en situation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#dijkstra-miseensituation2"><span class="std std-ref">Mise en situation spécifique</span></a>  pour passer à un niveau d’abstraction et de généralisation plus élévé.</p></td>
+<td><p>15 min</p></td>
+<td><p>Objectivation et mise en situation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#dijkstra-identification"><span class="std std-ref">Identification</span></a> , identification de l’objectif, explication de la non-trivialité du problème.</p></td>
+<td><p>5 min</p></td>
+<td><p>Formalisation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#dijkstra-decouverte"><span class="std std-ref">Découverte</span></a>  par essais-erreurs de l’algorithme et de sa justification par simulation humaine.</p></td>
+<td><p>20 min</p></td>
+<td><p>Exploration</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#dijkstra-formalisation"><span class="std std-ref">Formalisation de l’algorithme</span></a></p></td>
+<td><p>10 min</p></td>
+<td><p>Institutionnalisation - Objectivation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#dijkstra-utilisation"><span class="std std-ref">Exemples d’utilisation</span></a> de l’algorithme et exercices.</p></td>
+<td><p>15 min</p></td>
+<td><p>Application</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#dijkstra-modelisation"><span class="std std-ref">Modélisation</span></a> pour d’autre contextes</p></td>
+<td><p>10 min</p></td>
+<td><p>Réinvestissement</p></td>
+</tr>
+</tbody>
+</table></div>
+<section id="mise-en-situation-generale">
+<span id="dijkstra-miseensituation"></span><h3>Mise en situation générale<a class="headerlink" href="#mise-en-situation-generale" title="Lien permanent vers ce titre">¶</a></h3>
+<p><em>Durée : 5 min</em></p>
+<p>L’enseignant va sur une page de navigation (p.ex <a class="reference external" href="https://www.openstreetmap.org/#map=8/46.825/8.224">OpenStreetMap</a>) et montre un exemple de requête de chemin pour relier deux points.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="ab43312f-c7e2-48ea-bec7-24d7a5255869" name="760d313e-6ce6-4567-ab53-7ba5c609c6b6" type="radio"/>
+<label class="tabbed-label" for="ab43312f-c7e2-48ea-bec7-24d7a5255869">
+Questions</label><div class="tabbed-content docutils">
 <ul class="simple">
-<li><p>Comment le site web a-t-il déterminé le chemin qu’il nous indique?</p></li>
-<li><p>Quelles données a-t-il à sa disposition pour déterminer ce chemin?</p></li>
+<li><p>Comment le site web a-t-il déterminé le chemin qu’il nous indique ?</p></li>
+<li><p>Quelles données a-t-il à sa disposition pour déterminer ce chemin ?</p></li>
 </ul>
-<p><strong>Réponses:</strong></p>
+</div>
+<input id="2ff4699f-ef85-4f6a-8a95-9eb37d45f3cc" name="760d313e-6ce6-4567-ab53-7ba5c609c6b6" type="radio"/>
+<label class="tabbed-label" for="2ff4699f-ef85-4f6a-8a95-9eb37d45f3cc">
+Réponses</label><div class="tabbed-content docutils">
 <ul class="simple">
-<li><p>Tout le réseau routier est représenté sous forme d’un graphe</p></li>
-<li><p>Les croisements et embranchements sont représentés par les <em>sommets</em> du graphe et les
-routes qui les relient sont représentées par les <em>arêtes</em> du graphe. La <em>longueur</em> de</p></li>
+<li><p>Tout le réseau routier est représenté sous forme d’un graphe.</p></li>
+<li><p>Les croisements et embranchements sont représentés par les <em>sommets</em> du graphe et les routes qui les relient sont représentées par les <em>arêtes</em> du graphe.</p></li>
 </ul>
+</div>
+</div>
 </section>
-<section id="mise-en-situation-specifique-15-min">
-<h2>2. Mise en situation spécifique (15 min)<a class="headerlink" href="#mise-en-situation-specifique-15-min" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="mise-en-situation-specifique">
+<span id="dijkstra-miseensituation2"></span><h3>Mise en situation spécifique<a class="headerlink" href="#mise-en-situation-specifique" title="Lien permanent vers ce titre">¶</a></h3>
+<p><em>Durée : 15 min</em></p>
 <section id="exemple-1">
-<h3>Exemple 1<a class="headerlink" href="#exemple-1" title="Lien permanent vers ce titre">¶</a></h3>
+<h4>Exemple 1<a class="headerlink" href="#exemple-1" title="Lien permanent vers ce titre">¶</a></h4>
 <p>L’enseignant distribue à chaque élève un graphe suffisamment compliqué dans lequels la longueur des
 arêtes est indiquée. Ils doivent trouver, individuellement, le plus court chemin reliant deux points.
-Le graphe est tel qu’il y a plusieurs plus courts chemins.</p>
-<p><img alt="graphe 1" src="algo1/activ/figs/graph1.png"/></p>
-<p><strong>Mise en commun:</strong></p>
+Eventuellement, le graphe peut être tel qu’il y a plusieurs plus courts chemins.</p>
+<p><img alt="graphe 1" src="../../_images/graph1.png"/></p>
+<p><strong>Mise en commun</strong></p>
 <ul class="simple">
-<li><p>Qui a trouvé le plus court chemin?</p></li>
-<li><p>Etes-vous sûr qu’il s’agit du plus court chemin? Le cas échéant, comment le savez-vous?</p></li>
+<li><p>Qui a trouvé le plus court chemin ?</p></li>
+<li><p>Etes-vous sûr qu’il s’agit du plus court chemin? Le cas échéant, comment le savez-vous ?</p></li>
 <li><p>Chacun donne son plus court chemin.</p></li>
-<li><p>Y a-t-il des chemins plus courts que ça?</p></li>
+<li><p>Y a-t-il des chemins plus courts que ça ?</p></li>
 </ul>
 </section>
 <section id="exemple-2">
-<h3>Exemple 2<a class="headerlink" href="#exemple-2" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Dans un voyage en voiture, on ne veut pas forcément le plus court chemin, mais souvent le plus rapide.
-Par exemple, on va prendre l’autoroute de contournement de Lausanne qui est plus longue, mais plus rapide que
-de traverser la ville.
-On retrouve le même graphe qu’avant, mais cette fois on a le temps de parcours entre chaque point qui est
-indiqué et on ne peut plus se baser sur les aspects géométriques pour trouver le plus courts chemin.</p>
-<p><img alt="graphe 2" src="algo1/activ/figs/graph2.png"/></p>
-<p><strong>Mise en commun:</strong></p>
+<h4>Exemple 2<a class="headerlink" href="#exemple-2" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Dans un voyage en voiture, on ne veut pas forcément le plus court chemin, mais souvent le plus rapide.</p>
+<p>Par exemple, on va prendre l’autoroute de contournement de Lausanne qui est plus longue, mais plus rapide que
+de traverser la ville.</p>
+<p>On retrouve le même graphe qu’avant, mais cette fois on a le temps de parcours entre chaque point qui est indiqué et on ne peut plus se baser sur les aspects géométriques pour trouver le plus courts chemin.</p>
+<p><img alt="graphe 2" src="../../_images/graph2.png"/></p>
+<p><strong>Mise en commun</strong></p>
 <ul class="simple">
-<li><p>Qui a trouvé le plus court chemin?</p></li>
-<li><p>Etes-vous sûr qu’il s’agit du plus court chemin? Le cas échéant, comment le savez-vous?</p></li>
+<li><p>Qui a trouvé le plus court chemin ?</p></li>
+<li><p>Etes-vous sûr qu’il s’agit du plus court chemin? Le cas échéant, comment le savez-vous ?</p></li>
 <li><p>Chacun-e donne son plus court chemin.</p></li>
-<li><p>Y a-t-il des chemins plus courts que ça?</p></li>
-<li><p>Que faut-il faire pour être sûr-e que ce soit vraiment le plus court? (Essayer tous les chemins?).</p></li>
+<li><p>Y a-t-il des chemins plus courts que ça ?</p></li>
+<li><p>Que faut-il faire pour être sûr-e que ce soit vraiment le plus court ?</p></li>
 </ul>
 </section>
 </section>
-<section id="formalisation-5-min">
-<h2>3 Formalisation (5 min)<a class="headerlink" href="#formalisation-5-min" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le problème est donc donnée sous forme d’un graphe constitué de <em>sommets</em> reliés par des <em>arêtes</em> qui
-ont une certaine <em>longueur</em>. Dans le cas ci-desssus, les sommets représentent des villes, les arêtes les
-routes, et les longueurs la durée du trajet. La <em>longueur totale</em> est donnée par la somme des longueurs
-des arêtes empruntée.</p>
+<section id="dijkstra-identification">
+<span id="identification-du-probleme"></span><h3>Identification du problème<a class="headerlink" href="#dijkstra-identification" title="Lien permanent vers ce titre">¶</a></h3>
+<p><em>Durée : 5 min</em></p>
+<p>Le problème est donc donné sous forme d’un graphe constitué de <em>sommets</em> reliés par des <em>arêtes</em> qui ont une certaine <em>longueur</em>. Dans le cas ci-desssus, les sommets représentent des villes, les arêtes les routes, et les longueurs la durée du trajet. La <em>longueur totale</em> est donnée par la somme des longueurs des arêtes empruntées.</p>
 </section>
-<section id="decouverte-15-min">
-<h2>4 Découverte (15 min)<a class="headerlink" href="#decouverte-15-min" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour déterminer le plus court chemin dans ce graphe, la classe va le faire tous ensemble. Chaque élèves
-représente un sommet et reçoit le sous-graphe constitué de son sommet et ses voisin directs (autrement dit
-une liste de ses voisins et les distances correspondantes). Chaque élève prend en outre une feuille avec un
-crayon et une gomme.</p>
-<p>L’enseignant délimite la classe en trois zones:</p>
+<section id="decouverte">
+<span id="dijkstra-decouverte"></span><h3>Découverte<a class="headerlink" href="#decouverte" title="Lien permanent vers ce titre">¶</a></h3>
+<p><em>Durée : 20 min</em></p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">🎲 Activité</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">Pour déterminer le plus court chemin dans ce graphe, la classe va le faire tous ensemble. Chaque élève représente un sommet et reçoit le sous-graphe constitué de son sommet et ses voisins directs (autrement dit une liste de ses voisins et les distances correspondantes) ainsi qu’une fiche sur laquelle il note le nom de son sommet. Chaque élève prend en outre un crayon ou un stylo. Cette activité demande un peu de doigté de la part de l’enseignant-e pour que les élèves réalisent bien ce qu’il se passe. Au besoin, il faut adapter le graphe au nombre d’élèves prévu.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Déroulement<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">L’enseignant délimite la classe en trois zones et affiche les instructions correspondantes:</p>
 <ol class="simple">
-<li><p>La zone contenant les sommets qui ont trouvé la longueur du chemin le plus court depuis le sommet de départ.</p></li>
-<li><p>La zone contenant les sommets qui ont trouvé une longueur de chemin depuis le sommet de départ, mais pas forcément la plus petite.</p></li>
-<li><p>La zone contenant les sommets qui n’ont pas trouvé de longueur depuis le sommet de départ.</p></li>
+<li><p class="card-text">La <span style="color:red"><strong>zone rouge</strong></span>, contenant les sommets qui ont trouvé la longueur du chemin le plus court depuis le sommet de départ.</p></li>
+<li><p class="card-text">La <span style="color:green"><strong>zone verte</strong></span>, contenant les sommets qui ont trouvé une longueur de chemin depuis le sommet de départ, mais pas forcément la plus petite.</p></li>
+<li><p class="card-text">La <span style="color:black"><strong>zone blanche</strong></span>, contenant les sommets qui n’ont pas trouvé de longueur depuis le sommet de départ.</p></li>
 </ol>
-<p>Les instructions pour les élèves sont les suivantes:</p>
+<p class="card-text">Les instructions pour les élèves sont les suivantes:</p>
 <ol class="simple">
-<li><p>Les élèves commencent tous dans la zone 3.</p></li>
-<li><p>Lorsqu’une élève se rend compte qu’elle peut calculer la longueur d’un chemin depuis le sommet de départ, elle écrit sur sa
-feuille par quel voisin ce chemin passe ainsi que la distance correspondante, et se place dans la zone 2.</p></li>
-<li><p>Les élèves de la zone 2 peuvent se voir mutuellement leur feuille</p></li>
-<li><p>Lorsqu’une élève de la zone 2 se rend compte qu’il existe un chemin plus court que la longueur indiquée sur sa feuille, elle
-met sa feuille à jour.</p></li>
-<li><p>Lorsqu’une élève se rend compte que le chemin indiqué sur sa feuille est le plus court, elle passe dans la zone 1.</p></li>
-<li><p>Dans la zone 1, toutes les feuilles sont clairement visibles.</p></li>
+<li><p class="card-text">Tous les élèves commencent dans la <span style="color:black "><strong>zone blanche</strong></span>.</p></li>
+<li><p class="card-text">Lorsqu’une élève se rend compte qu’elle peut calculer la longueur d’un chemin depuis le sommet de départ, elle écrit sur sa feuille par quel voisin ce chemin passe ainsi que la distance correspondante, et se place dans la <span style="color:green"><strong>zone verte</strong></span>.</p></li>
+<li><p class="card-text">Les élèves de la <span style="color:green"><strong>zone B</strong></span> peuvent se voir mutuellement leur feuille</p></li>
+<li><p class="card-text">Lorsqu’une élève de la <span style="color:green"><strong>zone  verte</strong></span> se rend compte qu’il existe un chemin plus court que la longueur indiquée sur sa feuille, elle met sa feuille à jour.</p></li>
+<li><p class="card-text">Lorsqu’une élève se rend compte que le chemin indiqué sur sa feuille est le plus court, elle passe dans la <span style="color:red"><strong>zone rouge</strong></span>.</p></li>
+<li><p class="card-text">Dans la <span style="color:red"><strong>zone rouge</strong></span>, toutes les feuilles sont clairement visibles de tous le monde.</p></li>
 </ol>
-<p>Si tout se passe bien, les élèves vont se déplacer dans les zones 2 et 3 en commençant par le sommet de départ. Idéalement, elles
-doivent se rendre compte des principes de base de l’alogrithme de Dijkstra:</p>
+<p class="card-text">Si tout se passe bien, les élèves vont se déplacer dans la <strong><span style="color:green">zones  verte</span> puis dans la <span style="color:red "> zone rouge </span></strong> en commençant par le sommet de départ. Idéalement, elles doivent se rendre compte des principes de base de l’alogrithme de Dijkstra:</p>
 <ol class="simple">
-<li><p>Si un de leur voisin direct a trouvé une longueur de chemin, il ont également une longueur de chemin en ajoutant la distance qui
-les sépare.</p></li>
-<li><p>Si une élève a le chemin de plus court de la zone 2 et que personne ne s’y ajoute (i.e. tous les voisin des personnes dans la zones 1 sont soit dans la zone 1 soit dans la zone 2), elle peut passer en zone 1.</p></li>
-<li><p>A la fin, en suivant les relations de voisinage, on peut reconstituer le chemin le plus court.</p></li>
+<li><p class="card-text">Si un de leur voisin direct a trouvé une longueur de chemin, il ont également une longueur de chemin en ajoutant la distance qui les sépare.</p></li>
+<li><p class="card-text">Si un·e élève a le chemin de plus court de la <span style="color:green"><strong>zone B</strong></span> et que personne ne s’y ajoute (i.e. tous les voisin des personnes dans la <span style="color:red"><strong>zone A</strong></span> sont soit dans la <span style="color:red"><strong>zone rouge</strong></span> soit dans la <span style="color:green"><strong>zone verte</strong></span>), elle peut passer en <span style="color:red">**zone rouge **</span>.</p></li>
+<li><p class="card-text">A la fin, en suivant les relations de voisinage, on peut reconstituer le chemin le plus court.</p></li>
 </ol>
-<section id="remarque">
-<h3>Remarque<a class="headerlink" href="#remarque" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Cette activité implémente dans les faits une version distribuée de l’algorithme où les sommets peuvent changer de zone en parallèle. Il est conseillé de bien marqué la transition à l’algorithme séquentiel.</p>
+</div>
+</details></div>
+</div>
+</div>
+</div>
+</div>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>Au début, l’ordre des opérations a effectuer sera flou pour les élèves, mais après quelques itérations, une systématique devrait émerger (guidée par l’enseignant-e) dans l’ordre des mises à jour: dès qu’un sommet atteint la zone rouge, ses voisins de la zone blanches peuvent passer en zone verte, ses voisins de la zone verte peuvent se mettre à jour, puis celui avec la plus courte distance peut passer à son tour en zone rouge. Et on recommence…</p>
+</div>
 </section>
-</section>
-<section id="formalisation-10-min">
-<h2>5 Formalisation (10 min)<a class="headerlink" href="#formalisation-10-min" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’enseignant formalise l’algorithme au tableau avec l’aide des élèves. Pour aider à la compréhension et à la représentation, il peut utiliser des couleurs pour dénommer les zones et ainsi pouvoir changer les sommets de zone en modifiant la couleur (ou en utilisant un autre moyen graphique). Ici la zone 1 est “rouge”, la zone 2 est “verte” et la zone 3 est “blanche” (non marquée). La formalisation se fait en français de manière à rendre la compréhension la plus intuitive possible, par exemple ainsi:</p>
+<section id="formalisation-institutionnalisation">
+<span id="dijkstra-formalisation"></span><h3>Formalisation / Institutionnalisation<a class="headerlink" href="#formalisation-institutionnalisation" title="Lien permanent vers ce titre">¶</a></h3>
+<p><em>Durée : 15 min</em></p>
+<p>L’enseignant-e formalise l’algorithme au tableau avec l’aide des élèves. Pour aider à la compréhension et à la représentation, on réutilise les couleurs pour dénommer les zones et ainsi pouvoir changer les sommets de zone en modifiant la couleur.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Formalisation<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
 <ol class="simple">
-<li><p>Mettre le sommet de départ (S) en rouge, sa distance au sommet de départ est 0.</p></li>
-<li><p>Mettre en vert tous les sommets voisins de ce sommet S qui sont en blanc et indiquer en vert leur distance au sommet de départ en passant par ce sommet S et indiquer le chemin à ce sommet S par une flèche verte.</p></li>
-<li><p>Vérifier tous les voisins de ce sommet (S) qui sont en vert si leur distance au sommet de départ est plus petite en passant par ce sommet. Si c’est le cas ajuster leur distance au sommet de départ et leur flèche pour qu’elle pointe vers le sommet S.</p></li>
-<li><p>Prendre le sommet vert avec la plus petite distance au sommet de départ et le mettre en rouge avec sa distance et sa flèche. Ce sommet est le nouveau sommet S.</p></li>
-<li><p>Si ce sommet S est le sommet d’arrivée, le plus court chemin est obtenu en suivant les flèches, sinon retourner au point 2.</p></li>
+<li><p class="card-text">Mettre le <span style="color:black ">sommet de départ S</span> en rouge, sa distance au sommet de départ est 0.</p></li>
+<li><p class="card-text">Mettre en vert tous les <span style="color:green">sommets voisins de ce sommet S</span> qui sont en blanc et indiquer en vert leur <span style="color:green">distance au sommet de départ</span> en passant par ce sommet S et indiquer le chemin à ce sommet S par une <span style="color:green">flèche verte</span>.</p></li>
+<li><p class="card-text">Vérifier tous les <span style="color:green">voisins de ce sommet S</span> qui sont en vert si leur <span style="color:black">distance au sommet de départ est plus petite en passant par ce sommet</span>. Si c’est le cas ajuster leur distance au sommet de départ et leur flèche pour qu’elle pointe vers le sommet S.</p></li>
+<li><p class="card-text">Prendre le <span style="color:green">sommet vert</span> avec la plus petite dgiistance au sommet de départ et le <span style="color:red ">mettre en rouge</span> avec sa distance et sa flèche. Ce sommet est le nouveau sommet S.</p></li>
+<li><p class="card-text">Si ce sommet S est le sommet d’arrivée, le plus court chemin est obtenu en suivant les flèches, sinon retourner au point 2.</p></li>
 </ol>
+</div>
+</details></section>
+<section id="exemples-dutilisation">
+<span id="dijkstra-utilisation"></span><h3>Exemples d’utilisation<a class="headerlink" href="#exemples-dutilisation" title="Lien permanent vers ce titre">¶</a></h3>
+<p><em>Durée : 15 min</em></p>
+<p>L’enseignant fait un exemple au tableau avec les élèves et leur propose ensuite d’essayer seuls ou par deux sur des graphes donnés. Une correction est en suite proposée.</p>
 </section>
-<section id="exemples-et-exercices-dapplication-et-de-modelisation-15-min">
-<h2>6 Exemples et exercices d’application et de modélisation (15 min)<a class="headerlink" href="#exemples-et-exercices-dapplication-et-de-modelisation-15-min" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’enseignant fait un exemple au tableau avec les élèves et leur propose ensuite d’essayer seuls ou par deux sur des graphes donnés.</p>
-<section id="jeu-de-verse-a-litre">
-<h3>Jeu: De VERSE à LITRE<a class="headerlink" href="#jeu-de-verse-a-litre" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Ce jeu consiste à trouver une manière de relier deux mots ayant le même nombre de lettres (par exemple VERSE et LITRE) avec une série
-de mots existants dont chaque mot ne diffère du précédent que d’une seule lettre. Dans notre exemple, une solution est donnée par:</p>
+<section id="modelisation">
+<span id="dijkstra-modelisation"></span><h3>Modélisation<a class="headerlink" href="#modelisation" title="Lien permanent vers ce titre">¶</a></h3>
+<p><em>Durée : 10 min</em></p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="9f00583a-744d-4d4f-87e3-86b747455ae2" name="1e68b646-c3e5-4cfc-bef0-00cbbde28605" type="radio"/>
+<label class="tabbed-label" for="9f00583a-744d-4d4f-87e3-86b747455ae2">
+Jeu : de VERSE à LITRE</label><div class="tabbed-content docutils">
+<p>Ce jeu consiste à trouver une manière de relier deux mots ayant le même nombre de lettres (par exemple VERSE et LITRE) avec une série de mots existants dont chaque mot ne diffère du précédent que d’une seule lettre. Dans notre exemple, une solution est donnée par :</p>
 <p>VERSE - VERRE - SERRE - SEVRE - LEVRE - LIVRE - LITRE</p>
-<p>On suppose disposer d’une liste de tous les mots de la langue française.
-Comment l’algorithme du plus cours chemin peut-il être utilisé pour trouver une solution à ce jeu? En particulier,
-quel graphe serait-il nécessaire de construire, à quoi correspondrait ses nœuds et ses arêtes et ses distances?</p>
+<p>On suppose disposer d’une liste de tous les mots de la langue française.</p>
+<p>Comment l’algorithme du plus cours chemin peut-il être utilisé pour trouver une solution à ce jeu ? En particulier,
+quel graphe serait-il nécessaire de construire, à quoi correspondrait ses nœuds et ses arêtes et ses distances ?</p>
 <p>Selon le niveau atteint en programmation, une petite application proposant ce jeu et les solutions correspondantes pourrait être
 programmée par exemple en utilisant une libraire de graphe telle que igraph ou networkX en python.</p>
-</section>
-<section id="reseautage">
-<h3>Réseautage<a class="headerlink" href="#reseautage" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<input id="657a7bad-29fa-4eaa-b32f-bac2eb0b053b" name="1e68b646-c3e5-4cfc-bef0-00cbbde28605" type="radio"/>
+<label class="tabbed-label" for="657a7bad-29fa-4eaa-b32f-bac2eb0b053b">
+Réseautage</label><div class="tabbed-content docutils">
 <p>L’autre jour, vous avez flashé sur quelqu’un que vous ne connaissez pas mais dont vous avez réussi à obtenir
 le nom. Après avoir passé beaucoup de temps sur son profil dans votre réseau social préféré, vous recevez
 une notification vous indiquant quel ami-e pourra sans doute vous aider à vous rapprocher de cette personne.
 Comme ce réseau social a-t-il pu utiliser l’algorithme de Dijkstra pour vous faire cette recommandation?</p>
-</section>
-</section>
-<section id="lien-avec-enjeux-societaux">
-<h2>7 Lien avec enjeux sociétaux<a class="headerlink" href="#lien-avec-enjeux-societaux" title="Lien permanent vers ce titre">¶</a></h2>
-<section id="introduction-5-min">
-<h3>Introduction (5 min)<a class="headerlink" href="#introduction-5-min" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Retour sur openstreetmap et présentation de l’histoire de la startup Waze, rachetée par Google
-https://fr.wikipedia.org/wiki/Waze</p>
-</section>
-<section id="travail-en-groupe-20-min-a-finir-comme-devoir">
-<h3>2 Travail en groupe(20 min, à finir comme devoir)<a class="headerlink" href="#travail-en-groupe-20-min-a-finir-comme-devoir" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Par groupe de 3 ou 4, les élèves doivent proposer une application imaginaire qui utiliserai l’algorithme de Dijkstra
-pour proposer un service à ses utilisateurs. En particulier, ils doivent préciser les points suivants:</p>
-<ol class="simple">
-<li><p>Quel service propose l’application</p></li>
-<li><p>Qui ce service pourrait intéressé.</p></li>
-<li><p>Quelles sont les données dont l’application aurait besoin (et comment elle pourrait les obtenir)</p></li>
-<li><p>En quoi la notion de graphe serait utile pour programmer cette application et comment l’algorithme de Dijkstra serait utilisé (donner un exemple concret)</p></li>
-<li><p>Quels impacts positifs ou négatifs peut-on imaginer pour cette application?</p></li>
-</ol>
-<p>L’enseignant guide les élèves et donnent des idées à ceux qui n’en n’ont pas.</p>
-<p>Les élèves rédigent ensuite un diaporama dans lequel chacun de ces points est abordé par une diapo</p>
-</section>
-<section id="presentation-et-discussion-30-min">
-<h3>Présentation et discussion(30 min)<a class="headerlink" href="#presentation-et-discussion-30-min" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Chaque groupe fait une présentation de son projet en 5 minutes suivi d’une petite discussion avec la classe.</p>
+</div>
+</div>
 </section>
 </section>
 </section>
@@ -580,8 +610,26 @@ pour proposer un service à ses utilisateurs. En particulier, ils doivent préci
       <footer>
         
         <div class="related-pages">
-          
-          
+          <a class="next-page" href="puissance4.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Minimax / Puissance 4</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="stroboscope.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Stroboscope ou le <em>random</em> fait bien les choses</div>
+                
+              </div>
+            </a>
         </div>
 
         <div class="related-information">
@@ -606,30 +654,18 @@ pour proposer un service à ses utilisateurs. En particulier, ils doivent préci
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">L’algorithme du plus court chemin de Dijkstra</a><ul>
-<li><a class="reference internal" href="#informations">Informations</a></li>
-<li><a class="reference internal" href="#introduction">Introduction</a></li>
-<li><a class="reference internal" href="#deroulement">Déroulement</a></li>
-<li><a class="reference internal" href="#mise-en-situation-generale-5-min">1. Mise en situation générale (5 min)</a></li>
-<li><a class="reference internal" href="#mise-en-situation-specifique-15-min">2. Mise en situation spécifique (15 min)</a><ul>
+<li><a class="reference internal" href="#deroulement">Déroulement</a><ul>
+<li><a class="reference internal" href="#mise-en-situation-generale">Mise en situation générale</a></li>
+<li><a class="reference internal" href="#mise-en-situation-specifique">Mise en situation spécifique</a><ul>
 <li><a class="reference internal" href="#exemple-1">Exemple 1</a></li>
 <li><a class="reference internal" href="#exemple-2">Exemple 2</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#formalisation-5-min">3 Formalisation (5 min)</a></li>
-<li><a class="reference internal" href="#decouverte-15-min">4 Découverte (15 min)</a><ul>
-<li><a class="reference internal" href="#remarque">Remarque</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#formalisation-10-min">5 Formalisation (10 min)</a></li>
-<li><a class="reference internal" href="#exemples-et-exercices-dapplication-et-de-modelisation-15-min">6 Exemples et exercices d’application et de modélisation (15 min)</a><ul>
-<li><a class="reference internal" href="#jeu-de-verse-a-litre">Jeu: De VERSE à LITRE</a></li>
-<li><a class="reference internal" href="#reseautage">Réseautage</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#lien-avec-enjeux-societaux">7 Lien avec enjeux sociétaux</a><ul>
-<li><a class="reference internal" href="#introduction-5-min">Introduction (5 min)</a></li>
-<li><a class="reference internal" href="#travail-en-groupe-20-min-a-finir-comme-devoir">2 Travail en groupe(20 min, à finir comme devoir)</a></li>
-<li><a class="reference internal" href="#presentation-et-discussion-30-min">Présentation et discussion(30 min)</a></li>
+<li><a class="reference internal" href="#dijkstra-identification">Identification du problème</a></li>
+<li><a class="reference internal" href="#decouverte">Découverte</a></li>
+<li><a class="reference internal" href="#formalisation-institutionnalisation">Formalisation / Institutionnalisation</a></li>
+<li><a class="reference internal" href="#exemples-dutilisation">Exemples d’utilisation</a></li>
+<li><a class="reference internal" href="#modelisation">Modélisation</a></li>
 </ul>
 </li>
 </ul>

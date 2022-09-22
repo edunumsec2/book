@@ -1,5 +1,5 @@
 {
-  "v": 2,
+  "v": 3,
   "out": [
     {"type": "bar", "pos": [740, 250], "id": 0, "display": "PX"},
     {"type": "bar", "pos": [740, 430], "id": 1, "display": "PX"},
