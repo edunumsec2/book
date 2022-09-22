@@ -1,7 +1,8 @@
 from svglib.svglib import svg2rlg
 from reportlab.graphics import renderPDF
+from PIL import Image
 
-def convert_svgs_to_pdfs(app):
+def convert_images_to_pdfs(app):
     import os
 
     # Check if building LaTeX
@@ -13,21 +14,37 @@ def convert_svgs_to_pdfs(app):
 
     for root, dirs, files in os.walk(app.srcdir):
         for file in files:
-            if file.endswith('.svg'):
-                svg_path = os.path.join(root, file)
-                pdf_path = os.path.join(build_dir, file[:-4] + '.pdf')
+            exts = ['.svg', '.gif', '.webp']
 
-                # Check if pdf exists and is newer than svg
-                if os.path.exists(pdf_path):
-                    if os.path.getmtime(pdf_path) > os.path.getmtime(svg_path):
-                        continue
-                
+            file_ext = os.path.splitext(file)[1]
+
+            if file_ext not in exts:
+                continue
+            
+            print(file_ext)
+
+            src_path = os.path.join(root, file)
+            pdf_path = os.path.join(build_dir, file[:-len(file_ext)] + '.pdf')
+
+            print(pdf_path)
+
+             # Check if pdf exists and is newer than svg
+            if os.path.exists(pdf_path):
+                if os.path.getmtime(pdf_path) > os.path.getmtime(src_path):
+                    continue
+
+            if file_ext == ".svg":
                 # Convert svg to pdf
-                drawing = svg2rlg(svg_path)
+                drawing = svg2rlg(src_path)
                 renderPDF.drawToFile(drawing, pdf_path)
 
+            elif file_ext == ".gif":                
+                # Convert gif to pdf
+                img = Image.open(src_path)
+                img.save(pdf_path, "PDF", resolution=100.0)
+
 def setup(app):
-    app.connect('builder-inited', convert_svgs_to_pdfs)
+    app.connect('builder-inited', convert_images_to_pdfs)
 
     return {
         'version': '0.1',
