@@ -46,6 +46,7 @@ extensions = [
     'blanks',
     'timeline',
     'exercise',
+    'conversions',
 ]
 
 glossary_doc = 'glossaire.csv'
