@@ -10,6 +10,10 @@ def gif2pdf(gif_file, pdf_file):
     img = Image.open(gif_file)
     img.save(pdf_file, "PDF", resolution=100.0)
 
+def webp2pdf(webp_file, pdf_file):
+    img = Image.open(webp_file)
+    img.save(pdf_file, "PDF", resolution=100.0)
+
 def convert_images_to_pdfs(app):
     import os
 
@@ -24,6 +28,7 @@ def convert_images_to_pdfs(app):
     conversions = {
         '.svg': svg2pdf,
         '.gif': gif2pdf,
+        '.webp': webp2pdf,
     }
 
     # Walk the source directory
