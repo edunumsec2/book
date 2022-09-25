@@ -22,9 +22,9 @@ Les ressources sont accessibles via le [site web](https://modulo-info.ch/). Elle
   - [Installation recommandée](#installation-recommandée)
   - [Pré-requis](#pré-requis)
   - [Installation rapide](#installation-rapide)
-  - [Utilisation](#utilisation)
+  - [Serveur local](#serveur-local)
   - [Génération de build](#génération-de-build)
-  - [Génération de polycopié](#génération-de-pdf)
+  - [Génération de polycopié](#génération-de-polycopié)
   - [Configuration et personnalisation](#configuration-et-personnalisation)
 - [Comité de rédaction](#comité-de-rédaction)
 
