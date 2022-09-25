@@ -4,7 +4,7 @@
 
 ## Quoi ?
 
-Vous avez déjà rencontré plusieurs algorithmes pour arriver jusqu'ici. Encore plus fort, vous avez rencontré plusieurs algorithmes pour résoudre un même problème, ce qui nous met face à un dilemme : quelle algorithme choisir ? Et y a-t-il une solution à tout problème ?
+Vous avez déjà rencontré plusieurs algorithmes pour arriver jusqu'ici. Encore plus fort, vous avez rencontré plusieurs algorithmes pour résoudre un même problème, ce qui nous met face à un dilemme : Quel algorithme choisir ? Et y a-t-il une solution à tout problème ?
 
 ```{figure} media/Shadok.jpeg
 ---
