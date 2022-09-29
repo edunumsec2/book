@@ -80,6 +80,10 @@ a:focus {
 
 .sidebar-brand-text {
     text-align: center;
+    color: rgb(92 201 191)!important;
+    overflow-wrap: break-word;
+    font-size: 1.5rem;
+    }
 }
 
 /* SPHINX CLASSES */
