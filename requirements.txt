@@ -49,3 +49,4 @@ lzstring
 pyppeteer
 qrcode
 Pillow
+svglib
