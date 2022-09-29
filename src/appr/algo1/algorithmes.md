@@ -7,7 +7,7 @@ Un algorithme est en quelque sorte « une recette » que l’on peut suivre pour
 
 Ce n'est pas l'algorithme qui est exécuté sur une machine pour nous donner une solution concrète pour tous ces problèmes. *<span style="color:rgb(13, 204, 166)">L’algorithme n’est donc pas un programme</span>*. L’algorithme décrit plutôt un « mode d’emploi », qui permet de réfléchir à un problème de manière générale et ensuite de créer un {glo}`programme|programme`. C'est le programme qui sera exécuté par un système informatique pour concrètement résoudre le problème. En d'autres mots, l'algorithme décrit l'idée humaine derrière la solution d'un problème, alors que c'est le programme qui permet à une machine de trouver une solution numérique dans des cas précis.
 
-```{figure} media/algoprog.png
+```{figure} media/Algoprog.png
 ---
 alt: Différence entre un algorithme et un programme.
 width: 65%
@@ -86,7 +86,7 @@ Pour mieux vous représenter une variable, imaginez un grand meuble avec des tir
 
 
 
-```{figure} media/commode.webp
+```{figure} media/Commode.png
 ---
 alt: Une variable est un tiroir avec une étiquette.
 width: 50%

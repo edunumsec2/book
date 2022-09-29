@@ -66,7 +66,7 @@ la mémoire contient le programme sous forme de codes qui représentent des inst
 
 
 **Les données** : 
-les données stockées dans la mémoire peuvent être des nombres, des lettres, des chaînes de caractères ainsi que des adresses d'autres emplacements en mémoire. On trouvera plus de détails à ce sujet dans le chapitre [*Représentation de l'information*](/content/theme/representation-information/accueil/eleve.html "Représentation de l'information").
+les données stockées dans la mémoire peuvent être des nombres, des lettres, des chaînes de caractères ainsi que des adresses d'autres emplacements en mémoire. On trouvera plus de détails à ce sujet dans le chapitre {ref}`représentation de l'information <repinfo>`.
 
 ```
 
