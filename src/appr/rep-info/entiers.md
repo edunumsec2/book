@@ -392,7 +392,7 @@ naturels est : \[0, 15\], et pour les entiers relatif : \[-8, -7\].
 ```
 Représentation des entiers avec 4 bits.
 La figure ci-dessus illustre la différence du domaine couvert avec 4 bits pour la représentation des entiers naturels ou des entiers relatifs.
-Ainsi, avec 4 bits le domaine couvert pour les entiers naturels est : \[0, 15\], et pour les entiers relatif : \[-8, -7\].  
+Ainsi, avec 4 bits le domaine couvert pour les entiers naturels est : \[0, 15\], et pour les entiers relatif : \[-8, 7\].  
 
 
 ```{admonition} A retenir 
