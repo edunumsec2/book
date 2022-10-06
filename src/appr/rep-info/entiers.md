@@ -96,9 +96,9 @@ Comptez jusqu'à 40 en binaire. Que pouvez vous observer au sujet de la parité 
 binaires ? Pourquoi ?
 ```
 
-#### Conversion du binaire vers le décimal
+#### Conversion du système binaire vers le système décimal
 
-La conversion d'un nombre binaire en nombre décimal se fait aisément
+La conversion d'un nombre binaire en nombre en base 10 se fait aisément
 grâce à la forme canonique.
 
 En effet, il suffit de calculer le résultat de la somme pondérée par les
@@ -166,7 +166,7 @@ représentation décimale.
 :class: note
 <!-- <span style="color:green">Niveau débutant</span> -->
 
-Donnez la conversion décimale des nombres binaires suivants :
+Donnez la conversion en base 10 des nombres binaires suivants :
 
   - 10101101
   - 01110010
@@ -185,9 +185,9 @@ Donnez la conversion décimale des nombres binaires suivants :
 
 ```
 
-#### Conversion du décimal vers le binaire
+#### Conversion du système décimal vers le système binaire
 
-L'opération de conversion du décimal vers le binaire est moins directe.
+L'opération de conversion du système décimal vers le système binaire est moins directe.
 Cependant, à l'aide d'un tableau de conversion et des instructions suivantes, il est possible d'obtenir la représentation binaire de n'importe quel entier positif.
 
 **Tableau de conversion**
@@ -204,7 +204,7 @@ Cependant, à l'aide d'un tableau de conversion et des instructions suivantes, i
 \end{array} 
 ```
 
-**Instructions de conversion d'un entier décimal en binaire**
+**Instructions de conversion d'un entier du système décimal vers le système binaire**
 
 1.  Déterminer le coefficient **maximum** dont la valeur est plus petite
     que l'entier à convertir.
@@ -216,7 +216,7 @@ Cependant, à l'aide d'un tableau de conversion et des instructions suivantes, i
     binaire correspondant est composé de la suite des bits où des 0
     représentent les coefficients non utilisés.
 
-Par exemple, la conversion du nombre décimal 666 en binaire s'obtient
+Par exemple, la conversion du nombre 666 en base 10 vers le binaire s'obtient
 avec les étapes suivantes :
 
 ```{math}
@@ -262,7 +262,7 @@ Donnez la conversion binaire des nombres décimaux suivants :
 ```{admonition} Aller plus loin
 :class: note
 
-Pouvez-vous penser à une autre façon de convertir un entier décimal en binaire ?
+Pouvez-vous penser à une autre façon de convertir un entier du système décimal en binaire ?
 ```
 
 ```{admonition} Anecdote 
