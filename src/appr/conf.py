@@ -48,6 +48,7 @@ extensions = [
     'exercise',
     'conversions',
     'gallery',
+    'media',
 ]
 
 glossary_doc = 'glossaire.csv'
