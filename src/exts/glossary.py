@@ -7,8 +7,10 @@ from sphinx.errors import ExtensionError
 from sphinx.environment.adapters.toctree import TocTree
 from sphinx.util.docutils import SphinxDirective, SphinxRole
 from sphinx.util.nodes import nested_parse_with_titles
+from sphinx.builders.latex import LaTeXBuilder
 from myst_parser.main import to_html
 import os.path
+
 
 class glossary_list(nodes.General, nodes.Element):
     pass
@@ -36,7 +38,15 @@ def visit_glossary_reference_latex(self, node):
 def depart_glossary_reference_latex(self, node):
     self.body.append('}')
     
+def visit_glossary_list_latex(self, node):
+    self.body.append('\glossarylist')
 
+
+def depart_glossary_list_latex(self, node):
+    pass
+    
+
+    
 def _glossary_file_name(app):
     return os.path.normpath(os.path.join(
         app.srcdir, '../glossaire.csv'))
@@ -200,6 +210,10 @@ def process_glossary_list(app, doctree, fromdocname):
         env.glossary_references = {}
 
     for node in doctree.traverse(glossary_list):
+        ## micha
+        if not hasattr(node,"glossary_index"):
+            return
+        ## end micha
         index = node.glossary_index
         refs = env.glossary_references.get(index, [])
         node.replace_self(index_link_node(
@@ -238,8 +252,10 @@ class GlossaryRole(SphinxRole):
 
         glossary_uri = env.app.config.glossary_doc
         if glossary_uri is not None:
-            glossary_uri = env.app.builder.get_relative_uri(
-                env.docname, glossary_uri)
+            # avoids a presumed bug in the latex builder 
+            if not isinstance(env.app.builder, LaTeXBuilder): 
+                glossary_uri = env.app.builder.get_relative_uri(
+                    env.docname, glossary_uri)
             glossary_uri += '#' + _def_target(key, number)
 
         node = glossary_reference(display, display,
@@ -263,7 +279,7 @@ class GlossaryRole(SphinxRole):
         return [target_node, node], []
 
 def setup(app):
-    app.add_node(glossary_list)
+    app.add_node(glossary_list,latex=(visit_glossary_list_latex,depart_glossary_list_latex))
     app.add_node(glossary_reference,
                  html=(visit_glossary_reference_html, depart_glossary_reference_html),
                  latex=(visit_glossary_reference_latex, depart_glossary_reference_latex))

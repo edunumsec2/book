@@ -64,7 +64,7 @@ La forme canonique du nombre binaire $1101_{(2)}$ est : $1 \cdot 2^3 + 1 \cdot 2
 
 ```{admonition} Le saviez-vous ? 
 :class: hint
-vient de la terminologie anglo-saxonne de *binary digit*. Un ensemble
+Le *bit* vient de la terminologie anglo-saxonne de *binary digit*. Un ensemble
 de 8 bits et appelé un **octet**. Un *kilo-octet* (ko) correspond à
 $10^3$ octets soit $1000$ octets, donc $8000$ bits. Attention à ne pas
 confondre les préfixes binaires ($2^{10}$, $2^{20}$, $2^{30}$, etc.) et
@@ -375,7 +375,7 @@ La représentation de -21 en complément à 2 :
 +++
 La représentation de -21 est 11101011, qui additionné à 21, soit 00010101 donne bien zéro : 00000000.
 ```
-
+<!--
 ```{figure} media/4bitsIntegers.jpg 
 alt: Représentation des entiers
 avec 4 bits width: 600px align: left --- Représentation des entiers
@@ -384,16 +384,16 @@ couvert avec 4 bits pour la représentation des entiers naturels ou des
 entiers relatifs. Ainsi, avec 4 bits le domaine couvert pour les entiers
 naturels est : \[0, 15\], et pour les entiers relatif : \[-8, -7\].
 ```
+-->
 
-<!--
 ```{figure} media/4bitsIntegers.jpg
 :width: 550
 :height: 300
 ```
 Représentation des entiers avec 4 bits.
 La figure ci-dessus illustre la différence du domaine couvert avec 4 bits pour la représentation des entiers naturels ou des entiers relatifs.
-Ainsi, avec 4 bits le domaine couvert pour les entiers naturels est : \[0, 15\], et pour les entiers relatif : \[-8, -7\].  
--->
+Ainsi, avec 4 bits le domaine couvert pour les entiers naturels est : \[0, 15\], et pour les entiers relatif : \[-8, 7\].  
+
 
 ```{admonition} A retenir 
 :class: attention

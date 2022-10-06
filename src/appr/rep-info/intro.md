@@ -34,7 +34,7 @@ Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi q
 ````
 
 ````{tabbed} Chinois
-```{image} media/chinois.gif
+```{image} media/chinois.png
 :height: 350px
 :width: 500px
 ```
