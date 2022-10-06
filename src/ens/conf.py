@@ -45,6 +45,7 @@ extensions = [
     'timeline',
     'exercise',
     'conversions',
+    'gallery',
 ]
 
 glossary_doc = 'glossaire'
