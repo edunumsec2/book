@@ -1,4 +1,9 @@
-![modulo-banner](https://github.com/edunumsec2/modulo2/blob/main/source/_static/assets/modulo-head-banner.svg)
+<p align="center">
+    <img alt="Logo Modulo" src="https://user-images.githubusercontent.com/12733352/194828965-61394ce7-7a3e-4de0-8d7b-ceccaae73fb3.png" width="500" />
+</p>
+<h1 align="center">
+  Moyens d'enseignements pour l'informatique au Gymnase
+</h1>
 
 # Informatique au Gymnase
 
