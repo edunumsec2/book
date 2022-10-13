@@ -51,10 +51,10 @@ autre machine (mettre les noms?).
 (Parler des protocoles ouverts et fermés?)
 ## Organisation du chapitre
 Dans le reste de ce chapitre nous allons aborder plus concrètement les notions décrites ci-dessus et en approfondire certains aspects. Pour illustrer notre propos,
-considérons la situation suivante
+considérons la situation suivante.
 
 
-## Exemple: l'application aux champignons
+### Exemple: l'application aux champignons
 Imaginons qu'Alice est partie à la cueillette aux champignons dans la forêt.
 Elle pense avoir trouvé un beau bolet, mais pour plus de sécurité, consulte
 avec son téléphone portable un site web spécialisé dans les champigons de notre région,
