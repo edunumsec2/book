@@ -20,7 +20,7 @@ Ces ressources sont mises à disposition selon les termes de la <a rel="license"
   <span> · </span>
   <a href="https://github.com/edunumsec2/book/blob/documentation/GOVERNANCE.md">Gouvernance</a>
   <span> · </span>
-  <a href="https://discord.gg/b8qu79t6HQ">Discord</a>
-  <span> · </span>
   <a href="https://github.com/edunumsec2/book/blob/documentation/doc/comit%C3%A9.md">Comité</a>
+  <span> · </span>
+  <a href="https://discord.gg/b8qu79t6HQ">Discord</a>
 </h2>
