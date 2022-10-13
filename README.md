@@ -18,6 +18,8 @@ Ces ressources sont mises à disposition selon les termes de la <a rel="license"
   <span> · </span>
   <a href="https://github.com/edunumsec2/book/blob/d44ad2d4a67c6e5e170b4146fb2914e0eed876fd/CODE_OF_CONDUCT.md">Code de conduite</a>
   <span> · </span>
+  <a href="https://github.com/edunumsec2/book/blob/d44ad2d4a67c6e5e170b4146fb2914e0eed876fd/GOVERNANCE.md">Gouvernance</a>
+  <span> · </span>
   <a href="https://github.com/edunumsec2/book/blob/d44ad2d4a67c6e5e170b4146fb2914e0eed876fd/LICENCE.md">License</a>
   <span> · </span>
   <a href="https://github.com/edunumsec2/book/blob/e69c5e65719505fdb130c669bdb2921a30424dab/doc/comit%C3%A9.md">Comité de rédaction</a>
