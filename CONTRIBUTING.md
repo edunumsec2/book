@@ -1,8 +1,8 @@
 # Contribuer
 
-**Nous vous souhaitons la bienvenue dans la communauté Modulo!** 
+**Bienvenue dans la communauté Modulo!** 
 
-Ici, vous trouverez différentes façons de contribuer à ce beau projet. Toutes les contributions sont encouragées et les bienvenues, tant qu'elles respectent le [code de conduite](https://github.com/edunumsec2/book/blob/documentation/CODE_OF_CONDUCT.md) de notre communauté.
+Ici, vous trouverez différentes façons de contribuer au projet. Toutes les contributions sont encouragées et les bienvenues, tant qu'elles respectent le [code de conduite](https://github.com/edunumsec2/book/blob/documentation/CODE_OF_CONDUCT.md) de notre communauté.
 
 ## :beetle: Relever un problème
   - Bug
