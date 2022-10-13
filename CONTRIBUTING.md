@@ -10,6 +10,9 @@ Ici, vous trouverez différentes façons de contribuer à ce beau projet. Toutes
 
 ## :pencil2: Rédiger du contenu
   - Activité
+  - Admonitions disponibles
+  - Installation
+  - Sphinx
 
 ## :computer: Participer au développement
   - Installation
