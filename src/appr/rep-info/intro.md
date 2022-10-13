@@ -15,9 +15,7 @@ Une des questions centrales de ce chapitre est d'identifier les caractéristique
 
 Mais avant de découvrir le code choisi pour représenter l'information à l'intérieur d'un ordinateur, passons en revue un certain nombre d'alphabets et de systèmes de représentation de l'information qui ont été utilisés au cours de l'histoire. 
 
-## Alphabets et systèmes de communication
-
-### Alphabets anciens et traditionnels
+## Alphabets anciens et traditionnels
 
 Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi que de nombreux {glo}`sysco|systèmes de communication`. Depuis les [sumériens](https://fr.wikipedia.org/wiki/Sum%C3%A9rien) qui utilisaient des {glo}`picto|pictogrammes` et [l’écriture cunéiforme](https://fr.wikipedia.org/wiki/Cun%C3%A9iforme), en passant par les égyptiens et leurs [hiéroglyphes](https://fr.wikipedia.org/wiki/%C3%89criture_hi%C3%A9roglyphique_%C3%A9gyptienne), les chinois et leurs [idéogrammes](https://fr.wikipedia.org/wiki/Caract%C3%A8res_chinois) pour arriver aux symboles de nos alphabets actuels, l'espèce humaine n’a eu de cesse de mettre au point des systèmes pour représenter l’information et la {glo}`transmission|transmettre`.
 
@@ -36,7 +34,7 @@ Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi q
 ````
 
 ````{tabbed} Chinois
-```{image} media/chinois.gif
+```{image} media/chinois.png
 :height: 350px
 :width: 500px
 ```
@@ -57,7 +55,7 @@ Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi q
 
 On trouve des exemples célèbres et bien documentés de {glo}`sysco|systèmes de communication` depuis l'Antiquité grecque.
 
-### Le carré de Polybe
+## Le carré de Polybe
 
 Utilisé en Grèce Antique pour transmettre des messages entre cités voisines, ce système utilisait des torches enflammées en guise de signaux. 
 
@@ -84,7 +82,7 @@ Le codage de la lettre «s» dans le carré de Polybe est quatre torches à gauc
 Dans l'exemple ci-dessus, on utilise les lettres de l'alphabet, mais il est plus probable qu'à l'époque les cités voisines utilisaient des expressions toutes faites dans chacune des cases, comme «l'ennemi est à nos portes» ou «envoyez-nous de l'aide». 
 ````
 
-### Le télégraphe de Chappe
+## Le télégraphe de Chappe
 
 Grâce à l'invention du [télescope](https://fr.wikipedia.org/wiki/T%C3%A9lescope) au XVII<sup>e</sup> siècle, les distances avec lesquelles les villes pouvaient communiquer entre elles ont largement augmenté. L'information a commencé à circuler à une vitesse étonnante. Des messages pouvaient être transmis sur une longue distance par l'intermédiaire de relais espacés d'une dizaine de kilomètres et situés sur des hauteurs. 
 
@@ -108,7 +106,7 @@ Le piratage a été rendu possible par la corruption d'un agent télégraphique 
 ````
 
 
-### Le Morse
+## Le Morse
 
 Grâce à la découverte de l'électricité au début du XIX<sup>e</sup> siècle, et les améliorations techniques faites pour la capturer et la transmettre, on a pu utiliser le réseau électrique pour envoyer des messages. En 1832, nait le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), qui s'impose rapidement comme un standard de communication. 
 
@@ -158,7 +156,7 @@ align: left
 Ceci est une représentation de la fréquence moyenne de distribution des lettres dans la langue anglaise. 
 ```
 
-### Le binaire
+## Le binaire
 
 À partir du moment où le [Morse](https://fr.wikipedia.org/wiki/Code_Morse_international) a été inventé comme système de {glo}`codage|codage` et de {glo}`transmission|transmission` de l'information par l'électricité, il ne manquait plus que quelques éléments pour commencer à construire les {glo}`ordinateur|ordinateurs`.
 

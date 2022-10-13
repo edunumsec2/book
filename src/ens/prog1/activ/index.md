@@ -1,4 +1,4 @@
-# Programmation I 
+# Activités
 
 Dans cette section, vous trouverez des activités pour programmation I. 
 

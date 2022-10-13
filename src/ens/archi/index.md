@@ -32,8 +32,6 @@ Dans la partie **enseigner**, vous trouverez des :
 
 ```{toctree}
 :maxdepth: 1
-:numbered: 1
-Planifications <PlanDidac/index>
 Activités <activ/index>
 Evaluations <eval/index>
 Supports de cours <support/index>

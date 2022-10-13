@@ -64,7 +64,7 @@ La forme canonique du nombre binaire $1101_{(2)}$ est : $1 \cdot 2^3 + 1 \cdot 2
 
 ```{admonition} Le saviez-vous ? 
 :class: hint
-vient de la terminologie anglo-saxonne de *binary digit*. Un ensemble
+Le *bit* vient de la terminologie anglo-saxonne de *binary digit*. Un ensemble
 de 8 bits et appelé un **octet**. Un *kilo-octet* (ko) correspond à
 $10^3$ octets soit $1000$ octets, donc $8000$ bits. Attention à ne pas
 confondre les préfixes binaires ($2^{10}$, $2^{20}$, $2^{30}$, etc.) et
@@ -96,9 +96,9 @@ Comptez jusqu'à 40 en binaire. Que pouvez vous observer au sujet de la parité 
 binaires ? Pourquoi ?
 ```
 
-#### Conversion du binaire vers le décimal
+#### Conversion du système binaire vers le système décimal
 
-La conversion d'un nombre binaire en nombre décimal se fait aisément
+La conversion d'un nombre binaire en nombre en base 10 se fait aisément
 grâce à la forme canonique.
 
 En effet, il suffit de calculer le résultat de la somme pondérée par les
@@ -166,7 +166,7 @@ représentation décimale.
 :class: note
 <!-- <span style="color:green">Niveau débutant</span> -->
 
-Donnez la conversion décimale des nombres binaires suivants :
+Donnez la conversion en base 10 des nombres binaires suivants :
 
   - 10101101
   - 01110010
@@ -185,9 +185,9 @@ Donnez la conversion décimale des nombres binaires suivants :
 
 ```
 
-#### Conversion du décimal vers le binaire
+#### Conversion du système décimal vers le système binaire
 
-L'opération de conversion du décimal vers le binaire est moins directe.
+L'opération de conversion du système décimal vers le système binaire est moins directe.
 Cependant, à l'aide d'un tableau de conversion et des instructions suivantes, il est possible d'obtenir la représentation binaire de n'importe quel entier positif.
 
 **Tableau de conversion**
@@ -204,7 +204,7 @@ Cependant, à l'aide d'un tableau de conversion et des instructions suivantes, i
 \end{array} 
 ```
 
-**Instructions de conversion d'un entier décimal en binaire**
+**Instructions de conversion d'un entier du système décimal vers le système binaire**
 
 1.  Déterminer le coefficient **maximum** dont la valeur est plus petite
     que l'entier à convertir.
@@ -216,7 +216,7 @@ Cependant, à l'aide d'un tableau de conversion et des instructions suivantes, i
     binaire correspondant est composé de la suite des bits où des 0
     représentent les coefficients non utilisés.
 
-Par exemple, la conversion du nombre décimal 666 en binaire s'obtient
+Par exemple, la conversion du nombre 666 en base 10 vers le binaire s'obtient
 avec les étapes suivantes :
 
 ```{math}
@@ -262,7 +262,7 @@ Donnez la conversion binaire des nombres décimaux suivants :
 ```{admonition} Aller plus loin
 :class: note
 
-Pouvez-vous penser à une autre façon de convertir un entier décimal en binaire ?
+Pouvez-vous penser à une autre façon de convertir un entier du système décimal en binaire ?
 ```
 
 ```{admonition} Anecdote 
@@ -276,7 +276,7 @@ système inertiel de référence. À un moment donné, un nombre codé en
 virgule flottante sur 64 bits (qui représentait la vitesse horizontale
 de la fusée par rapport à la plate-forme de tir) était converti en un
 entier sur 16 bits. Malheureusement, le nombre en question était plus
-grand que 32768 (le plus grand entier que l'on peut coder sur 16 bits)
+grand que 32767 (le plus grand entier que l'on peut coder en tant qu'entier signé sur 16 bits)
 et la conversion a été incorrecte, induisant un changement de
 trajectoire fatal.
 ```
@@ -375,7 +375,7 @@ La représentation de -21 en complément à 2 :
 +++
 La représentation de -21 est 11101011, qui additionné à 21, soit 00010101 donne bien zéro : 00000000.
 ```
-
+<!--
 ```{figure} media/4bitsIntegers.jpg 
 alt: Représentation des entiers
 avec 4 bits width: 600px align: left --- Représentation des entiers
@@ -384,16 +384,16 @@ couvert avec 4 bits pour la représentation des entiers naturels ou des
 entiers relatifs. Ainsi, avec 4 bits le domaine couvert pour les entiers
 naturels est : \[0, 15\], et pour les entiers relatif : \[-8, -7\].
 ```
+-->
 
-<!--
 ```{figure} media/4bitsIntegers.jpg
 :width: 550
 :height: 300
 ```
 Représentation des entiers avec 4 bits.
 La figure ci-dessus illustre la différence du domaine couvert avec 4 bits pour la représentation des entiers naturels ou des entiers relatifs.
-Ainsi, avec 4 bits le domaine couvert pour les entiers naturels est : \[0, 15\], et pour les entiers relatif : \[-8, -7\].  
--->
+Ainsi, avec 4 bits le domaine couvert pour les entiers naturels est : \[0, 15\], et pour les entiers relatif : \[-8, 7\].  
+
 
 ```{admonition} A retenir 
 :class: attention

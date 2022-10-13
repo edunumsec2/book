@@ -1,4 +1,4 @@
-.. image:: ../static/assets/modulo-head-banner.svg
+.. image:: ../static/assets/modulo-head-banner.png
    :alt: "Bannière Modulo"
 
 Informatique au gymnase : apprendre
@@ -27,8 +27,8 @@ découpé en **quatre thématiques**.
 
    algo2/index
    prog2/index
-   projets/index
    resx/index
+   projets/index
 
 .. toctree::
    :name: Thématiques transversales

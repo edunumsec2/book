@@ -5,9 +5,6 @@
 Ce document est en cours de rédaction.
 ```
 
-Une (brève) histoire de l'informatique 
-======================================
-
 Si l'histoire de l'informatique prend ses racines loin dans notre histoire, cette science, encore très jeune, trouve sa place au milieu du XXe siècle. L'éclosion de l'informatique se situe en 1940, à la croisée d'opportunités technologiques, d'enjeux stratégiques et de contributions d'autres branches. C'est ainsi au coeur des conflits de la Deuxième guerre mondiale que l'importance de calculateurs programmables se fait sentir.
 
 Le terme \"informatik\" apparaît en 1957 pour le traitement automatique de l'information dans un article de Karl Steinbuch. Il est officialisé en Français en 1962 par Philippe Dreyfus. En Anglais, pour des questions de droits des marques, le terme restera *computer science*.
@@ -17,8 +14,7 @@ Le terme \"informatik\" apparaît en 1957 pour le traitement automatique de l'in
 :align: right 
 ```
 
-Préinformatique
----------------
+## Préinformatique
 
 Les premiers dispositifs de calcul utilisent des petits cailloux (*calculus* en latin). Cet artifice était également utilisé pour compter les bêtes d'un troupeau par les bergers.
 
@@ -52,8 +48,7 @@ Au début du IXe siècle, Georges Boole formalise la logique moderne et ce qu'o
 
 En 1837, Charles Babbage propose une machine analytique à l'architecture très innovante. On y trouve une mémoire, une unité arithmétique et logique, ainsi qu'un lecteur de cartes perforées (emprunté aux machines de Jacquard). Lady Ada Lovelace, considérée comme la première informaticienne de l'histoire, collaborera avec Babbage en créant les notions algorithmiques de boucles et de branchements conditionnels, qui déboucheront sur la conception d'une deuxième version de sa machine. Avec les notions de variables et de sous-programme, on trouve esquissés dans cette machine quasiment tous les éléments de l'architecture des ordinateurs modernes. On leur doit notamment la notion de machine générale, au-delà du dispositif dédié à une tâche ou un calcul particulier.
 
-Éclosion
---------
+## Éclosion
 
 La Deuxième guerre mondiale catalyse des développements sans précédent dans les sciences. On voit ainsi apparaître le spatial, le nucléaire et l'informatique. Ces trois domaines répondent à des enjeux stratégiques et reçoivent un soutien considérable. C'est le cas d'Alan Turing dont le projet est soutenu par Winston Churchill lui-même pour décrypter les messages des nazis.
 
@@ -94,8 +89,7 @@ John Von Neumann, un des pères de la bombe atomique, participe au projet Manhat
 Les *U-Boot*[^3], sous-marins de l'Allemagne nazie, font des ravages en mer du nord et dans l'atlantique nord. Ainsi, durant le premier semestre 1942, ce sont 2.5 millions de tonnes de ravitaillement, essentiellement à destination du Royaume-Uni, qui sont envoyés par le fond. L'essentiel de la stratégie des U-Boot reposait sur l'envoi de communications cryptées au moyen d'une version sophistiquée de la machine *Enigma* réputée inviolable.
 À Bletchley Park, principal site de décryptage du Royaume Uni, Alan Turing met au point une machine électro-mécanique capable de déchiffrer les message cryptés en une vingtaine de minutes, alors que cela prenait plusieurs jours dans le meilleur des cas à des humains. Ces calculateurs automatiques exploraient bien plus rapidement les possibilités et les contraintes posées par la machine *Enigma*.
 
-Histoire moderne de l'informatique
-----------------------------------
+## Histoire moderne de l'informatique
 
 À la fin de la Deuxième guerre mondiale, les universités, qui ont reçu l'appui de l'armée, se retrouvent donc avec des ordinateurs, à l'époque de gigantesques machines, relativement lentes (quelques dizaines d'opérations par seconde).
 
@@ -142,8 +136,7 @@ L'histoire des développements informatiques en Russie à cette époque n'est pa
 :align: right 
 ```
 
-Académisation et apparition de la science informatique
-------------------------------------------------------
+## Académisation et apparition de la science informatique
 
 ### Matériel et logiciels
 
@@ -225,8 +218,7 @@ Dès les années septante, les langages suivant apparaissent :
 
 -   1974, **SQL**, un langage de requêtes utilisé encore utilisé aujourd'hui pour l'extraction d'information dans la plupart des bases de données (relationnelles).
 
-Apparition de la micro-informatique : Small is beautifull
----------------------------------------------------------
+## Apparition de la micro-informatique : Small is beautifull
 
 En 1973 apparaissent les premiers *micro-ordinateurs* qui sont destinés à un usage personnel (simultanément en France et en Allemagne). Le coût des mini-ordinateurs est prohibitif pour certaines sociétés et certains champs d'applications, la micro-informatique permet une diffusion encore plus large de la technologie informatique. Citons parmi ces pionniers l'Apple I de Steve Jobs et Steve Wozniak (figure [0.1](#AppleI){reference-type="ref" reference="AppleI"}), le Commodore PET (figure [0.2](#PET){reference-type="ref" reference="PET"}).
 
@@ -267,9 +259,10 @@ Dès 1982, le commodore 64 (figure [0.3](#commodore64){reference-type="ref" refe
 :align: right 
 ```
 
-Il est précédé du VIC-20 de la même marque et de nombreuses autres propositions d'ordinateurs extrêmement bon marchés et souvent vendus comme des consoles de jeu intelligentes. Dans les plus connus on trouve ainsi le ZX80 (figure [0.4](#zx80){reference-type="ref" reference="zx80"}) ou le micro de la BBC.
+Il est précédé du VIC-20 de la même marque et de nombreuses autres propositions d'ordinateurs extrêmement bon marchés et souvent vendus comme des consoles de jeu intelligentes. Dans les plus connus on trouve ainsi le ZX80 (figure :numref:`zx80`) ou le micro de la BBC.
 
-```{image} media/machines/520px-ZX80.jpeg 
+```{image} media/machines/520px-ZX80.jpeg
+:name: zx80
 :width: 40% 
 :align: right 
 ```
@@ -292,12 +285,11 @@ Parallèlement aux Smakys, le Professeur Jean-Daniel Nicoud, développe des mach
 :align: right 
 ```
 
-Internet
---------
+## Internet
 
 Internet, le réseau des réseaux, est d'abord un projet de l'armée américaine pour mettre en place un réseau décentralisé capable de résister à une attaque nucléaire. En effet, les réseaux de télécommunications, initialement, sont conçus sur une architecture en étoile avec un central (téléphonique) dont la destruction entraîne la mise hors service de l'ensemble du réseau.
 
-Le réseau ARPANET[^9] est opérationnel pour la première fois en septembre 1969. Il connecte d'abord quelques universités américaines, comme on peut le voir sur la carte figure [0.7](#arpanet){reference-type="ref" reference="arpanet"}.
+Le réseau ARPANET[^9] est opérationnel pour la première fois en septembre 1969. Il connecte d'abord quelques universités américaines, comme on peut le voir sur la carte ci-dessous:
 
 ```{image} media/Arpanet_1974.svg.png 
 :width: 80% 
@@ -312,8 +304,7 @@ Comme pour les premiers ordinateurs, on retrouve dans le développement d'Intern
 
 Les connexions au réseau Internet se font souvent avec des MODEM qui permettent des transmissions de quelques centaines de caractères par seconde. Les USENET sont des forums d'échanges où les premières communautés de *Hackers* partagent des programmes, des démos et des astuces.
 
-Le logiciel libre
------------------
+## Le logiciel libre
 
 Alors que le monde industriel s'organise au début des années huitante pour protéger la propriété intellectuelle liée à la conception de programmes, Richard Stallman, chercheur au laboratoire d'intelligence artificielle du MIT[^10] s'irrite de cette opacité. L'anecdote rapporte qu'il aurait été particulièrement agacé lorsqu'un de ses anciens collègues aurait refusé de lui confier le code source d'un pilote d'imprimante *buggé*. Il aurait alors ré-écrit complètement le pilote en question et se serait ensuite interrogé sur la meilleure façon de protéger la diffusion libre du programme en question.
 
@@ -326,8 +317,7 @@ Il invente alors la notion de *copyleft*, par opposition au *copyright* : cette
 
 Son idée de logiciel libre va durablement modifier le paysage du logiciel informatique et concerne aujourd'hui des millions de produits.
 
-Le World Wide Web
------------------
+## Le World Wide Web
 
 Time Berners Lee, collaborateur du CERN, constate en 1989 que ces collègues commandent régulièrement des copies d'articles scientifiques ce qui occupe plusieurs employés et utilise beaucoup de papier. Il décide alors de mettre au point un système qui permettrait de partager plus efficacement sur le réseau les résultats des chercheurs et invente pour cela trois protocoles :
 
@@ -352,8 +342,7 @@ Alors que Microsoft et Netscape se plongent dans la guerre des navigateurs, avec
 
 En 2006 le nombre d'utilisateurs de Netscape tombe à 1%, mais toutes ces innovations permettent le développement du Web 2.0, terme qui apparaît pour la première fois en 2004 et accompagne la naissance d'un nouveau WWW avec en particulier l'apparition des réseaux sociaux.
 
-Ubiquité
---------
+## Ubiquité
 
 Le réseau devient sans fil au milieu des années nonante. D'abord une solution marginale, la bande passante disponible évolue de manière continue et permet d'imaginer de plus en plus d'applications sans installation filaire compliquée et coûteuse à mettre en place.
 
@@ -367,8 +356,7 @@ L'iPhone a été présenté pour la première fois en juin 2007 par Steve Jobs. 
 
 Alors que le marché de la téléphonie mobile explose dès la fin des années nonante, il trouve rapidement sa place dans les applications industrielles avec la mise en place de réseaux de capteurs et de commandes distantes. Avec le développement des smartphones et l'accès au réseau Internet, ce développement connaît un second souffle sous l'appellation *Internet of Things (IoT)*, Internet des Objets. La voiture, la cafetière et même la machine à laver le linge voient leurs possibilités décuplées par l'adjonction de puces électroniques connectées.
 
-Futur
------
+## Futur
 
 Dans une science qui évolue vite, en perpétuel changement, il est difficile de prédire le futur sans prendre le risque de la boule de crystal.
 

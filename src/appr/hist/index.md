@@ -8,12 +8,8 @@
 :hidden:
 :numbered: 2
 main1
-portraits
-jeuxvideo
-machines
-notions
-technologies
-entreprises
 ```
 
-Le [musée bolo](https://www.museebolo.ch/)
+Cette section présente une "brève" histoire de l'informatique. 
+
+Pour celles et ceux que cela intéresse, le [musée bolo](https://www.museebolo.ch/) possède une collection fascinante de machines d'époque, ordinateurs et consoles de jeux vidéos du passé.  
