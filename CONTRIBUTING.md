@@ -1,5 +1,15 @@
 # Contribuer au projet
 
+- Relever un problème
+  - Bug
+  - Contenu
+
+- Rédiger une activité
+
+- Participer au développement
+  - Installation
+  - Structure du projet
+
 ## Table des matières
 
 ---
