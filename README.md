@@ -22,5 +22,5 @@ Ces ressources sont mises à disposition selon les termes de la <a rel="license"
   <span> · </span>
   <a href="#">Documents utiles</a>
   <span> · </span>
-  <a href="#">Comité de rédaction</a>
+  <a href="https://github.com/edunumsec2/book/blob/e69c5e65719505fdb130c669bdb2921a30424dab/doc/comit%C3%A9.md">Comité de rédaction</a>
 </h2>
