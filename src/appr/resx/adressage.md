@@ -38,9 +38,12 @@ L'adresse 010100101010... sera décrite comme 128.233.53.23.
 Question:
 Lesquelles des adresses suivantes sont des adresses IP valides:
 
-### Blocs et masques ?
+### Blocs et masques ? -> TODO dans "pour aller plus loin"
 
 ### Gouvernance
+
+TODO: faire le lien avec les indicatifs
+
 Comme les noms de domaine, les adresses IP sont gérée hiérarchiquement. Ainsi, les adresses de la forme 
 46.x.x.x (c'est-à-dire celles qui commencent par 46 = 00101110) sont assignées au Centre de Coordination
 Européeen qui les répartis entre différents *Registres Internet locaux* tels que Switch qui va pouvoir

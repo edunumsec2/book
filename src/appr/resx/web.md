@@ -75,11 +75,12 @@ Si un utilisateur utilise le protocole HTTP pour surfer sur le web, une tierce p
 HTML (HyperText Markup Language) est un langage de description des pages web. Il permet de spécifier le contenu et l'apparence d'une
 page web afin que le navigateur web puisse l'afficher. Supposons par exemple que le site www.champignons.ch envoie à Alice une
 page web contenant le nom d'un champignons ainsi qu'une photo de celui-ci. Une manière de décrire cette page avec le langage HTML serait la suivante:
-```
+
+```html
 <html>
 <body>
- <h1 color="red"> L'amanite tue-mouche </h1>
- <p> L'amanite tue-mouche est très belle mais très dangereuse ! </p>
+ <h1 color="red"> L’amanite tue-mouche </h1>
+ <p> L’amanite tue-mouche est très belle mais très dangereuse ! </p>
  <img src="photo.jpg" height="300" />
 </body>
 </html>
