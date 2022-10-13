@@ -1,5 +1,5 @@
 # GOUVERNANCE
 
 - Validations (review)
-- Issues
-- Branches
+- Issues : 
+- Branches : on les vire après 6 mois 
