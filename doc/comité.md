@@ -18,10 +18,10 @@
     - [Frank Dayen](mailto:frank.dayen@eduvaud.ch) (Gymnase de Morges)
     - [Boris Beaude](mailto:boris.beaude@unil.ch) (Unil)
 
-### Coordination :
+## Coordination
 - [Elliot Vaucher](mailto:elliot.vaucher@epfl.ch) (EPFL)
 - Nathalie Farenc (EPFL)
 
-### Maintenance et évolution plateforme : 
+## Maintenance et évolution plateforme
 - [Romain Edelmann](mailto:romain.edelmann@epfl.ch) (EPFL)
 - [Grégoire Gavin](mailto:gregoire.gavin@epfl.ch) (EPFL)
