@@ -13,6 +13,7 @@ Ici, vous trouverez différentes façons de contribuer au projet. Toutes les con
   - Admonitions disponibles
   - Installation
   - Sphinx
+  - Enrichir du contenu (Admonitions)
 
 ## :computer: Participer au développement
   - Installation
