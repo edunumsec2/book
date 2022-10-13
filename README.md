@@ -14,13 +14,13 @@ Dans le cadre du [plan d'études romand pour l'enseignement de l'informatique au
 Ces ressources sont mises à disposition selon les termes de la <a rel="license" href="https://github.com/edunumsec2/book/blob/d44ad2d4a67c6e5e170b4146fb2914e0eed876fd/LICENCE.md">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 3.0</a>.
 
 <h2 align="center">
-  <a href="https://github.com/edunumsec2/book/blob/d44ad2d4a67c6e5e170b4146fb2914e0eed876fd/CONTRIBUTING.md">Contribuer</a>
+  <a href="https://github.com/edunumsec2/book/blob/documentation/CONTRIBUTING.md">Contribuer</a>
   <span> · </span>
-  <a href="https://github.com/edunumsec2/book/blob/d44ad2d4a67c6e5e170b4146fb2914e0eed876fd/CODE_OF_CONDUCT.md">Code de conduite</a>
+  <a href="https://github.com/edunumsec2/book/blob/documentation/CODE_OF_CONDUCT.md">Code de conduite</a>
   <span> · </span>
-  <a href="https://github.com/edunumsec2/book/blob/e851c462dff78b9329a72b2ceee3e60f1f803bb0/GOVERNANCE.md">Gouvernance</a>
+  <a href="https://github.com/edunumsec2/book/blob/documentation/GOVERNANCE.md">Gouvernance</a>
   <span> · </span>
-  <a href="https://github.com/edunumsec2/book/blob/d44ad2d4a67c6e5e170b4146fb2914e0eed876fd/LICENCE.md">License</a>
+  <a href="https://github.com/edunumsec2/book/blob/documentation/LICENCE.md">License</a>
   <span> · </span>
-  <a href="https://github.com/edunumsec2/book/blob/e69c5e65719505fdb130c669bdb2921a30424dab/doc/comit%C3%A9.md">Comité</a>
+  <a href="https://github.com/edunumsec2/book/blob/documentation/doc/comit%C3%A9.md">Comité</a>
 </h2>
