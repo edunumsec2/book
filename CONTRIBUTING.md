@@ -7,7 +7,7 @@ Ici, vous trouverez différentes façons de contribuer au projet. Toutes les con
 ## :beetle: Relever un problème
 Vous pouvez relever des problèmes via les Issues GitHub. 
   - [Relever un bug](https://github.com/edunumsec2/book/issues/new?assignees=redelman%2Cgrgvn&labels=bug&template=bug-report.yml&title=%5BBug%5D%3A+) (problème d'affichage, UX/UI, problème avec un module, etc.)
-  - [Relever un problème de contenu](https://github.com/edunumsec2/book/blob/documentation/.github/ISSUE_TEMPLATE/suggestion-contenu.yml) (contenu manquant, pas assez clair, orthographe, syntaxe, etc.)
+  - [Relever un problème de contenu](https://github.com/edunumsec2/book/issues/new?assignees=elliotvaucher&labels=contenu&template=suggestion-contenu.yml&title=%5BContenu%5D%3A+) (contenu manquant, pas assez clair, orthographe, syntaxe, etc.)
 
 ## :pencil2: Rédiger du contenu
   - Activité
