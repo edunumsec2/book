@@ -1,6 +1,6 @@
 # Installation
 
-Modulo est basé sur le générateur de documentation [Sphinx](https://www.sphinx-doc.org/en/master/) et utilise le template [Furo](https://github.com/pradyunsg/furo).
+Modulo est basé sur le générateur de documentation [Sphinx](https://www.sphinx-doc.org/en/master/) et utilise le template [Furo](https://github.com/pradyunsg/furo). Les ressources sont rédigées au format [Markdown](https://www.markdownguide.org/basic-syntax/) et sont générées par Sphinx sous la forme d'un site web statique (HTML/CSS/JS).
 
 ## Pré-requis
 
