@@ -10,7 +10,8 @@ Vous pouvez relever des problèmes via les Issues GitHub.
   - [Relever un problème de contenu](https://github.com/edunumsec2/book/issues/new?assignees=elliotvaucher&labels=contenu&template=suggestion-contenu.yml&title=%5BContenu%5D%3A+) (contenu manquant, pas assez clair, orthographe, syntaxe, etc.)
 
 ## :pencil2: Contribuer au contenu
-  - Activité
+Vous pouvez directement proposer du contenu à ajouter dans les ressources. Pour ce faire, vous devrez au préalable installer l'environnement sur votre machine et vous familiariser avec GitHub.
+  - [Rédiger une Activité](https://github.com/edunumsec2/book/blob/df3fb2e3f6400e4aa8cd50816438c9472e2b5696/doc/activite.md)
   - Admonitions disponibles
   - Installation
   - Sphinx
