@@ -1,6 +1,8 @@
 # Structure du projet
 
-Cette structure partielle reflète les dossier utiles pour une contribution à Modulo. Les autres dossiers et fichiers (non représentés ci-dessous) sont liés sont liés à la configuration globale, aux plugins et ne doivent pas être modifiés.
+Cette structure partielle reflète les dossier utiles pour une contribution à Modulo. 
+
+_Les autres dossiers et fichiers (non représentés ci-dessous) sont liés sont liés à la configuration globale, aux plugins et ne doivent pas être modifiés._
 
 ```
 book
