@@ -6,20 +6,18 @@ Ici, vous trouverez différentes façons de contribuer au projet. Toutes les con
 
 ## :beetle: Relever un problème
 Vous pouvez relever des problèmes via les Issues GitHub. 
-  - [Relever un bug](https://github.com/edunumsec2/book/issues/new?assignees=redelman%2Cgrgvn&labels=bug&template=bug-report.yml&title=%5BBug%5D%3A+) (problème d'affichage, UX/UI, problème avec un module, etc.)
-  - [Relever un problème de contenu](https://github.com/edunumsec2/book/issues/new?assignees=elliotvaucher&labels=contenu&template=suggestion-contenu.yml&title=%5BContenu%5D%3A+) (contenu manquant, pas assez clair, orthographe, syntaxe, etc.)
+
+- [Relever un bug](https://github.com/edunumsec2/book/issues/new?assignees=redelman%2Cgrgvn&labels=bug&template=bug-report.yml&title=%5BBug%5D%3A+) (problème d'affichage, UX/UI, problème avec un module, etc.)
+- [Relever un problème de contenu](https://github.com/edunumsec2/book/issues/new?assignees=elliotvaucher&labels=contenu&template=suggestion-contenu.yml&title=%5BContenu%5D%3A+) (contenu manquant, pas assez clair, orthographe, syntaxe, etc.)
 
 ## :pencil2: Contribuer au contenu
-Vous pouvez directement proposer du contenu à ajouter dans les ressources. Pour ce faire, vous devrez au préalable installer l'environnement sur votre machine et vous familiariser avec GitHub.
-  - [Rédiger une Activité](https://github.com/edunumsec2/book/blob/df3fb2e3f6400e4aa8cd50816438c9472e2b5696/doc/activite.md)
-  - Admonitions disponibles
-  - Installation
-  - Sphinx
-  - Enrichir du contenu (Admonitions)
+Vous pouvez directement proposer du contenu à ajouter dans les ressources. Pour ce faire, vous devrez au préalable [installer l'environnement](https://github.com/edunumsec2/book/blob/documentation/doc/installation.md) sur votre machine, comprendre la [structure du projet](https://github.com/edunumsec2/book/blob/documentation/doc/structure.md) et vous [familiariser avec GitHub](https://github.com/edunumsec2/book/blob/documentation/doc/github.md).
+
+  - [Rédiger une Activité](https://github.com/edunumsec2/book/blob/documentation/doc/activite.md)
+  - [Admonitions disponibles](https://github.com/edunumsec2/book/blob/documentation/doc/github.md)
 
 ## :computer: Participer au développement
-  - Installation
-  - Structure du projet
+  - Développer un encart
 
 ## :books: Contribuer à la documentation
 
