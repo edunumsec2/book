@@ -9,7 +9,7 @@ Vous pouvez relever des problèmes via les Issues GitHub.
   - [Relever un bug](https://github.com/edunumsec2/book/issues/new?assignees=redelman%2Cgrgvn&labels=bug&template=bug-report.yml&title=%5BBug%5D%3A+) (problème d'affichage, UX/UI, problème avec un module, etc.)
   - [Relever un problème de contenu](https://github.com/edunumsec2/book/issues/new?assignees=elliotvaucher&labels=contenu&template=suggestion-contenu.yml&title=%5BContenu%5D%3A+) (contenu manquant, pas assez clair, orthographe, syntaxe, etc.)
 
-## :pencil2: Rédiger du contenu
+## :pencil2: Contribuer au contenu
   - Activité
   - Admonitions disponibles
   - Installation
