@@ -10,15 +10,15 @@ book
 └───src
 │   └───appr
 |   |   └───algo1
-|   |       └───media
-|   |       algo-progs.md
-|   |       algorithmes.md
-|   |       conclusion.md
-|   |       index.md
-|   |       intro.md
-|   |       tri.md
+|   |   |   └───media
+|   |   |   algo-progs.md
+|   |   |   algorithmes.md
+|   |   |   conclusion.md
+|   |   |   index.md
+|   |   |   intro.md
+|   |   |   tri.md
 |   |   └───algo2
-|   |       ...
+|   |   |   ...
 |   |   └───...
 |   |   conf.py
 |   |   index.rst
