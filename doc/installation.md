@@ -2,6 +2,8 @@
 
 Modulo est basé sur le générateur de documentation [Sphinx](https://www.sphinx-doc.org/en/master/) et utilise le template [Furo](https://github.com/pradyunsg/furo). Les ressources sont rédigées au format [Markdown](https://www.markdownguide.org/basic-syntax/) et sont générées par Sphinx sous la forme d'un site web statique (HTML/CSS/JS).
 
+_**Remarque**: si vous n'êtes pas familiers avec Git, nous vous recommandons de suivre les explications pour une [installation simplifiée](https://github.com/edunumsec2/book/blob/documentation/doc/installation-simple.md)._
+
 ## Pré-requis
 
 - Python 3.x et pip ([Installation MacOSX](https://docs.python-guide.org/starting/install3/osx/)) ([Installation Windows](https://docs.python-guide.org/starting/install3/win/)) ([Installation rapide](https://www.python.org/downloads/))
@@ -16,7 +18,7 @@ Pour vérifier la bonne installation de l'environnement de base :
 
 Pour simplifier les actions fréquentes (build, clean), le projet contient un Workspace pour [Visual Studio Code](https://code.visualstudio.com/). Lors de l'ouverture du Workspace (à la racine du projet), il vous sera proposé d'installer les plugins suggérés. L'utilisation de VSCode est optionnelle, vous pouvez bien sûr utiliser votre éditeur de code préféré.
 
-## Installation rapide
+## Installation manuelle
 
 1. Récupération du projet : `git clone git@github.com:edunumsec2/book.git`
 1. Déplacement vers la racine du projet : `cd book`
