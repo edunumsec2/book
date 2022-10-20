@@ -6,6 +6,8 @@ Ici, vous trouverez différentes façons de contribuer au projet. Toutes les con
 
 Les contributions au contenu et l'aide au développement nécessitent au préalable d'[installer l'environnement](https://github.com/edunumsec2/book/blob/documentation/doc/installation.md) et de prendre connaissance de la [structure du projet](https://github.com/edunumsec2/book/blob/documentation/doc/structure.md).
 
+Chaque contribution doit être apportée sur une **nouvelle branche** (du nom de votre choix), créée à partir de la branche **[dev](https://github.com/edunumsec2/book/tree/dev)**.
+
 ## :beetle: Relever un problème
 Vous pouvez relever des problèmes via les Issues GitHub. 
 
@@ -13,7 +15,7 @@ Vous pouvez relever des problèmes via les Issues GitHub.
 - [Relever un problème de contenu](https://github.com/edunumsec2/book/issues/new?assignees=elliotvaucher&labels=contenu&template=suggestion-contenu.yml&title=%5BContenu%5D%3A+) (contenu manquant, pas assez clair, orthographe, syntaxe, etc.)
 
 ## :pencil2: Contribuer au contenu
-Vous pouvez directement proposer du contenu à ajouter dans les ressources. Chaque contribution doit être apportée sur une **nouvelle branche** (du nom de votre choix), créée à partir de la branche **dev**.
+Vous pouvez directement proposer du contenu à ajouter dans les ressources.
 
   - [Rédiger une Activité](https://github.com/edunumsec2/book/blob/documentation/doc/activite.md)
   - [Liste des directives disponibles](https://github.com/edunumsec2/book/blob/documentation/doc/directives.md)
