@@ -28,13 +28,11 @@ Pour simplifier les actions fréquentes (build, clean), le projet contient un Wo
     Windows : `.env\Scripts\activate`
 1. Installation des librairies dans l'environnement virtuel : `pip install -r requirements.txt -U`
 
-**Remarque** : à chaque fois que vous travaillez sur le projet, l'environnement virtuel doit être activé (point 4). Si vous utilisez VSCode et le Workspace, les boutons de build/auto-build l'activent automatiquement.
+_**Remarque** : à chaque fois que vous travaillez sur le projet, l'environnement virtuel doit être activé (point 4). Si vous utilisez VSCode et le Workspace, les boutons de build/auto-build l'activent automatiquement._
 
 ## Serveur local
 
 Le projet utilise [sphinx-autobuild](https://github.com/executablebooks/sphinx-autobuild) qui démarre un serveur sur <http://localhost:8000> (ou <http://127.0.0.1:8000>) et rebuild la documentation automatiquement lorsqu'un changement est détecté.
-
-_**Remarque**: si vous utilisez le workspace VSCode, les boutons proposés en bas de l'interface vous évitent d'écrire ces commandes à la main._
 
 1. Activation de l'environnement virtuel (si pas déjà fait)
 2. Activation du serveur local :
@@ -44,12 +42,14 @@ _**Remarque**: si vous utilisez le workspace VSCode, les boutons proposés en ba
 
 Pour arrêter le serveur : <kbd>Ctrl</kbd>+<kbd>c</kbd> ou <kbd>⌘</kbd>+<kbd>c</kbd>
 
-## Génération de build
+_**Remarque**: si vous utilisez le workspace VSCode, vous pouvez utiliser les boutons proposés en bas de l'interface._
 
-_**Remarque**: si vous utilisez le workspace VSCode, les boutons proposés en bas de l'interface vous évitent d'écrire ces commandes à la main._
+## Génération de build
 
 - Génération du build 'Apprendre' : `sphinx-build -b html src/appr docs`
 - Génération du build 'Enseigner' : `sphinx-build -b html src/ens docs`
+
+_**Remarque**: si vous utilisez le workspace VSCode, vous pouvez utiliser les boutons proposés en bas de l'interface._
 
 ## Génération de polycopié
 
