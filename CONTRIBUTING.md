@@ -13,7 +13,7 @@ Vous pouvez relever des problèmes via les Issues GitHub.
 - [Relever un problème de contenu](https://github.com/edunumsec2/book/issues/new?assignees=elliotvaucher&labels=contenu&template=suggestion-contenu.yml&title=%5BContenu%5D%3A+) (contenu manquant, pas assez clair, orthographe, syntaxe, etc.)
 
 ## :pencil2: Contribuer au contenu
-Vous pouvez directement proposer du contenu à ajouter dans les ressources. 
+Vous pouvez directement proposer du contenu à ajouter dans les ressources. Chaque contribution doit être apportée sur une **nouvelle branche** (du nom de votre choix), créée à partir de la branche **dev**.
 
   - [Rédiger une Activité](https://github.com/edunumsec2/book/blob/documentation/doc/activite.md)
   - [Liste des directives disponibles](https://github.com/edunumsec2/book/blob/documentation/doc/directives.md)
