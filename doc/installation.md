@@ -14,7 +14,7 @@ Pour vérifier la bonne installation de l'environnement de base :
 - `$ virtualenv --version`
 - `$ git --version`
 
-_**Remarque** : si vous n'êtes pas à l'aise avec Git, nous vous recommandons l'utilisation de [GitHub Desktop](https://github.com/edunumsec2/book/blob/documentation/doc/github-desktop.md)._
+_**Remarque** : si vous n'êtes pas à l'aise avec les commandes Git, nous vous recommandons l'utilisation de [GitHub Desktop](https://github.com/edunumsec2/book/blob/documentation/doc/github-desktop.md)._
 
 Pour simplifier les actions fréquentes (build, clean), le projet contient un Workspace pour [Visual Studio Code](https://code.visualstudio.com/). Lors de l'ouverture du Workspace (à la racine du projet), il vous sera proposé d'installer les plugins suggérés. L'utilisation de VSCode est optionnelle, vous pouvez bien sûr utiliser votre éditeur de code préféré.
 
@@ -34,6 +34,8 @@ Pour simplifier les actions fréquentes (build, clean), le projet contient un Wo
 
 Le projet utilise [sphinx-autobuild](https://github.com/executablebooks/sphinx-autobuild) qui démarre un serveur sur <http://localhost:8000> (ou <http://127.0.0.1:8000>) et rebuild la documentation automatiquement lorsqu'un changement est détecté.
 
+_**Remarque**: si vous utilisez le workspace VSCode, les boutons proposés en bas de l'interface vous évitent d'écrire ces commandes à la main._
+
 1. Activation de l'environnement virtuel (si pas déjà fait)
 2. Activation du serveur local :
 
@@ -43,6 +45,8 @@ Le projet utilise [sphinx-autobuild](https://github.com/executablebooks/sphinx-a
 Pour arrêter le serveur : `CTRL+c` ou `⌘+c`
 
 ## Génération de build
+
+_**Remarque**: si vous utilisez le workspace VSCode, les boutons proposés en bas de l'interface vous évitent d'écrire ces commandes à la main._
 
 - Génération du build 'Apprendre' : `sphinx-build -b html src/appr docs`
 - Génération du build 'Enseigner' : `sphinx-build -b html src/ens docs`
