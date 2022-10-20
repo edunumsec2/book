@@ -4,6 +4,8 @@
 
 Ici, vous trouverez différentes façons de contribuer au projet. Toutes les contributions sont encouragées et les bienvenues, tant qu'elles respectent le [code de conduite](https://github.com/edunumsec2/book/blob/documentation/CODE_OF_CONDUCT.md) de notre communauté.
 
+Les [contriutions au contenu](https://github.com/edunumsec2/book/edit/documentation/CONTRIBUTING.md#pencil2-contribuer-au-contenu) et [l'aide au développement](https://github.com/edunumsec2/book/edit/documentation/CONTRIBUTING.md#computer-participer-au-d%C3%A9veloppement) nécessitent au préalable d'[installer l'environnement](https://github.com/edunumsec2/book/blob/documentation/doc/installation.md) et de prendre connaissance de la [structure du projet](https://github.com/edunumsec2/book/blob/documentation/doc/structure.md).
+
 ## :beetle: Relever un problème
 Vous pouvez relever des problèmes via les Issues GitHub. 
 
@@ -12,10 +14,6 @@ Vous pouvez relever des problèmes via les Issues GitHub.
 
 ## :pencil2: Contribuer au contenu
 Vous pouvez directement proposer du contenu à ajouter dans les ressources. 
-
-Pour ce faire, vous devrez au préalable [installer l'environnement](https://github.com/edunumsec2/book/blob/documentation/doc/installation.md) sur votre machine et prendre connaissance de la [structure du projet](https://github.com/edunumsec2/book/blob/documentation/doc/structure.md).
-
-Vous pouvez également consulter l'aide pour utiliser [GitHub Desktop](https://github.com/edunumsec2/book/blob/documentation/doc/github-desktop.md).
 
   - [Rédiger une Activité](https://github.com/edunumsec2/book/blob/documentation/doc/activite.md)
   - [Liste des modules disponibles](#)
