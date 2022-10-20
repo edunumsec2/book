@@ -14,13 +14,11 @@ Pour vérifier la bonne installation de l'environnement de base :
 - `$ virtualenv --version`
 - `$ git --version`
 
-_**Remarque** : si vous n'êtes pas à l'aise avec les commandes Git, nous vous recommandons l'utilisation de [GitHub Desktop](https://github.com/edunumsec2/book/blob/documentation/doc/github-desktop.md)._
-
 Pour simplifier les actions fréquentes (build, clean), le projet contient un Workspace pour [Visual Studio Code](https://code.visualstudio.com/). Lors de l'ouverture du Workspace (à la racine du projet), il vous sera proposé d'installer les plugins suggérés. L'utilisation de VSCode est optionnelle, mais le Workspace propose des boutons qui vous éviteront de saisir certaines commandes à la main dans le Terminal.
 
 ## Installation
 
-1. Récupération du projet : `git clone git@github.com:edunumsec2/book.git` (ou alors avec [GitHub Desktop](https://github.com/edunumsec2/book/edit/documentation/github-desktop.md))
+1. Récupération du projet : `git clone git@github.com:edunumsec2/book.git` (ou alors plus simplement avec [GitHub Desktop](https://github.com/edunumsec2/book/edit/documentation/github-desktop.md))
 1. Déplacement vers la racine du projet : `cd book`
 1. Création d'un environnement virtuel : `virtualenv .env`
 1. Activation de l'environnement virtuel  
