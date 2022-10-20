@@ -4,7 +4,7 @@
 
 Ici, vous trouverez différentes façons de contribuer au projet. Toutes les contributions sont encouragées et les bienvenues, tant qu'elles respectent le [code de conduite](https://github.com/edunumsec2/book/blob/documentation/CODE_OF_CONDUCT.md) de notre communauté.
 
-Les [contributions au contenu](https://github.com/edunumsec2/book/edit/documentation/CONTRIBUTING.md#pencil2-contribuer-au-contenu) et [l'aide au développement](https://github.com/edunumsec2/book/edit/documentation/CONTRIBUTING.md#computer-participer-au-d%C3%A9veloppement) nécessitent au préalable d'[installer l'environnement](https://github.com/edunumsec2/book/blob/documentation/doc/installation.md) et de prendre connaissance de la [structure du projet](https://github.com/edunumsec2/book/blob/documentation/doc/structure.md).
+Les contributions au contenu et l'aide au développement nécessitent au préalable d'[installer l'environnement](https://github.com/edunumsec2/book/blob/documentation/doc/installation.md) et de prendre connaissance de la [structure du projet](https://github.com/edunumsec2/book/blob/documentation/doc/structure.md).
 
 ## :beetle: Relever un problème
 Vous pouvez relever des problèmes via les Issues GitHub. 
