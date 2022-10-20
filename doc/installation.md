@@ -42,7 +42,7 @@ _**Remarque**: si vous utilisez le workspace VSCode, les boutons proposés en ba
 - Documentation 'Apprendre' : `sphinx-autobuild src/appr docs --watch src --open-browser -a --delay 1`
 - Documentation 'Enseigner' : `sphinx-autobuild src/ens docs --watch src --open-browser -a --delay 1`
 
-Pour arrêter le serveur : `CTRL+c` ou `⌘+c`
+Pour arrêter le serveur : <kbd>Ctrl</kbd>+<kbd>c</kbd> ou <kbd>⌘</kbd>+<kbd>c</kbd>
 
 ## Génération de build
 
