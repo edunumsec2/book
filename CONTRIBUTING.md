@@ -6,7 +6,7 @@ Ici, vous trouverez différentes façons de contribuer au projet. Toutes les con
 
 Les contributions au contenu et l'aide au développement nécessitent au préalable d'[installer l'environnement](https://github.com/edunumsec2/book/blob/documentation/doc/installation.md) et de prendre connaissance de la [structure du projet](https://github.com/edunumsec2/book/blob/documentation/doc/structure.md).
 
-Chaque contribution doit être apportée sur une **nouvelle branche** (du nom de votre choix), créée à partir de la branche **[dev](https://github.com/edunumsec2/book/tree/dev)**.
+Pour des raisons de [gouvernance](https://github.com/edunumsec2/book/blob/documentation/GOVERNANCE.md), chaque contribution doit être apportée sur une **nouvelle branche** (du nom de votre choix), créée à partir de la branche **[dev](https://github.com/edunumsec2/book/tree/dev)**.
 
 ## :beetle: Relever un problème
 Vous pouvez relever des problèmes via les Issues GitHub. 
