@@ -11,9 +11,12 @@ Vous pouvez relever des problèmes via les Issues GitHub.
 - [Relever un problème de contenu](https://github.com/edunumsec2/book/issues/new?assignees=elliotvaucher&labels=contenu&template=suggestion-contenu.yml&title=%5BContenu%5D%3A+) (contenu manquant, pas assez clair, orthographe, syntaxe, etc.)
 
 ## :pencil2: Contribuer au contenu
-Vous pouvez directement proposer du contenu à ajouter dans les ressources. Pour ce faire, vous devrez au préalable [installer l'environnement](https://github.com/edunumsec2/book/blob/documentation/doc/installation.md) sur votre machine et comprendre la [structure du projet](https://github.com/edunumsec2/book/blob/documentation/doc/structure.md).
+Vous pouvez directement proposer du contenu à ajouter dans les ressources. 
 
-  - [Rédiger une Activité](https://github.com/edunumsec2/book/blob/documentation/doc/activite.md)
+Pour ce faire, vous devrez au préalable [installer l'environnement](https://github.com/edunumsec2/book/blob/documentation/doc/installation.md) sur votre machine.
+  - [Utilisation de GitHub Desktop](https://github.com/edunumsec2/book/blob/documentation/doc/github-desktop.md)
+  - [Structure du projet](https://github.com/edunumsec2/book/blob/documentation/doc/structure.md)
+  - [Rédaction d'une Activité](https://github.com/edunumsec2/book/blob/documentation/doc/activite.md)
   - [Admonitions disponibles](https://github.com/edunumsec2/book/blob/documentation/doc/github.md)
 
 ## :computer: Participer au développement
