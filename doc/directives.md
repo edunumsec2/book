@@ -23,16 +23,7 @@ Les directives suivantes ont été créées sur mesure pour le projet Modulo.
 ### Codeplay
 Cette directive permet d'ajouter un interpréteur Python dans le contenu.
 
-**QUESTIONS** :  
-- à quoi sert le paramètre :file: ?
-- y a-t-il d'autres paramètres ?
-
-**Utilisation**: 
-````
-  ```{codeplay}
-    
-  ```
-````
+à quoi sert le paramètre :file: ? y a-t-il d'autres paramètres ?
 
 ### Exercice
 
