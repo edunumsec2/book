@@ -17,8 +17,19 @@ _Liste complète des directives Sphinx : https://docutils.sourceforge.io/docs/re
 Les directives suivantes ont été créées sur mesure pour le projet Modulo.
 
 ### Blank
+???
 
 ### Codeplay
+Cette directive permet d'ajouter un interpréteur Python dans le contenu.
+
+**Utilisation**: 
+````
+  ```{codeplay}
+    
+  ```
+````
+
+
 
 ### Conversions
 
