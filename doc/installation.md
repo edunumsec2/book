@@ -16,7 +16,7 @@ Pour vérifier la bonne installation de l'environnement de base :
 
 _**Remarque** : si vous n'êtes pas à l'aise avec les commandes Git, nous vous recommandons l'utilisation de [GitHub Desktop](https://github.com/edunumsec2/book/blob/documentation/doc/github-desktop.md)._
 
-Pour simplifier les actions fréquentes (build, clean), le projet contient un Workspace pour [Visual Studio Code](https://code.visualstudio.com/). Lors de l'ouverture du Workspace (à la racine du projet), il vous sera proposé d'installer les plugins suggérés. L'utilisation de VSCode est optionnelle, vous pouvez bien sûr utiliser votre éditeur de code préféré.
+Pour simplifier les actions fréquentes (build, clean), le projet contient un Workspace pour [Visual Studio Code](https://code.visualstudio.com/). Lors de l'ouverture du Workspace (à la racine du projet), il vous sera proposé d'installer les plugins suggérés. L'utilisation de VSCode est optionnelle, mais le workspace propose des boutons qui vous éviteront de saisir certaines commandes à la main dans le Terminal.
 
 ## Installation
 
@@ -28,7 +28,7 @@ Pour simplifier les actions fréquentes (build, clean), le projet contient un Wo
     Windows : `.env\Scripts\activate`
 1. Installation des librairies dans l'environnement virtuel : `pip install -r requirements.txt -U`
 
-**Remarque** : à chaque fois que vous travaillez sur le projet, l'environnement virtuel devrait être activé (point 4).
+**Remarque** : à chaque fois que vous travaillez sur le projet, l'environnement virtuel doit être activé (point 4). Si vous utilisez VSCode et le Workspace, les boutons de build/auto-build l'activent automatiquement.
 
 ## Serveur local
 
