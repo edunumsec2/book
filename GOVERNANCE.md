@@ -11,4 +11,4 @@ Le projet contient deux branches permanentes : [master](https://github.com/edunu
 Chaque changement apporté aux branches `master` et `dev` sont préalablement validés par l'une des trois personnes en charge de la gouvernance. En cas de problème, une discussion liée au Pull Request concerné est ouverte. 
 
 ## Issues
-Les Issues ne sont jamais supprimées, à moins d'
+Les Issues ne sont jamais supprimées, à moins d'avoir été résolues.
