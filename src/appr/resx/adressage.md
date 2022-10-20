@@ -10,7 +10,7 @@ Les noms de domaines sont gérés de manière hierarchique, selon le
 réservé ce nom de domaine auprès de Switch (en passant par un intermédiaire) et peut le conserver moyennant un paiement d'environ CHF 15.- par an.     
 [Faire un encadré sur l'internationalisation des noms de domaines, et les controverses (.sucks)? ]
 
-Si les noms de domaines sont pratiques pour désigner des adresses sur internet, les machines, elles, utilisent des
+Si les noms de domaines sont pratiques pour désigner des adresses sur Internet, les machines, elles, utilisent des
 nombres pour référencer les machines connectées à Internet, c'est ce qu'on appelles les *adresses IP*. Ainsi,
 la personne qui a enregistré le site *champignons.ch* a également reçu une (ou plusieurs) adresses IP de la part de
 Switch ou d'un intermédiaire. 
@@ -66,7 +66,7 @@ louer une partie de ces adresses IP à des organisations, des entreprises (par e
 
 Certains blocs d'adresses IP sont réservés à des usages particuliers. Par exemple les adresses 10.x.x.x  ou
 192.168.x.x sont réservées aux réseaux privés, c'est-à-dire des machines qui ne communiquent pas directement
-avec le reste d'internet. Ainsi, ces adresses peuvent être utilisées au sein du réseau interne des entreprises,
+avec le reste d'Internet. Ainsi, ces adresses peuvent être utilisées au sein du réseau interne des entreprises,
 ou pour faire communiquer différents appareils connectés (lampes, télévision, four, télécommande) au sein d'une
 maison. 
 ** Exercices **
@@ -80,10 +80,10 @@ maison.
 
 Une adresse IP peut être alouée de manière *statique* ou *dynamique*. Dans le cas de l'adressage statique, on configure la machine en lui indiquant son adresse IP, est c'est elle qui annonce au réseau quelle est son
 adresse IP, afin que les messages puisse lui parvenir. La machine conserve ainsi toujours la même adresse IP, de la même façon qu'un téléphone conserve toujours le même numéro (sauf si on le reconfigure en modifiant par exemple la carte SIM). Dans le cas de l'adressage dynamique, la machine demande une adresse IP au moment où elle se connecte à Internet. Cette demande se fait auprès d'un serveur qui va lui allouer une adresse IP disponible parmi celles qu'il a à disposition. C'est un peu comme si chaque fois qu'on allumait son téléphone, on recevait un autre numéro pour être joignable. Si c'est nous qui initions les appels, cela ne pose pas vraimment de problème, mais si on veut être
-joignable, cela devient problématique car les autres ne sauront pas comment nous trouver. Mais cela a d'une part l'avantage d'éviter qu'une machine non connectée monopolise une adresse IP sans l'utiliser et d'autre part, cela donne un (petit) degré d'anonymat et de sécurité en plus, car il sera plus difficile de cible précisément notre machine et intercepter nos messages sur sur internet.
+joignable, cela devient problématique car les autres ne sauront pas comment nous trouver. Mais cela a d'une part l'avantage d'éviter qu'une machine non connectée monopolise une adresse IP sans l'utiliser et d'autre part, cela donne un (petit) degré d'anonymat et de sécurité en plus, car il sera plus difficile de cible précisément notre machine et intercepter nos messages sur sur Internet.
 
 Ainsi les serveurs (les sites web, par exemple), qui doivent être joignable en tout temps ont généralement une adresse IP statique, alors que les machines des utilisateurs et utilisatrices ont souvent une adresse IP dynamique. Lorsqu'on fait un
-abonnement internet, le fournisseur d'accès propose d'habitude une adresse IP dynamique (cela lui permet d'économiser les adresse IP en sa possession), mais il est également possible, en payant un peu plus, d'obtenir une adresse IP statique. 
+abonnement Internet, le fournisseur d'accès propose d'habitude une adresse IP dynamique (cela lui permet d'économiser les adresse IP en sa possession), mais il est également possible, en payant un peu plus, d'obtenir une adresse IP statique. 
 
 Exercice:
 - Déterminer si votre machine a une adresse IP statique ou dynamique
@@ -92,7 +92,7 @@ moyen pourriez-vous imaginer pour que vous puissiez vous joindre.
 - En tant que propriétaire d'un site web, vous avez accès aux adresses IP des machines qui visitent votre site. Que pouvez-vous en déduire 
 
 ### Système de noms de domaine
-Pour récapituler ce qui a été vu précédemment, les humains utilisent les noms de domaines pour les machines, alors que les machines, elles, utilisent les adresses IP. Afin que ces deux modes de recensement des machines soient cohérents entre eux, il est nécessaire de disposer d'un annuaire qui fera correspondre les noms de domaines aux adresses IP. Ceci est analogue aux annuaires téléphoniques qui permettre de faire correspondre le nom des personnes que l'on veut atteindre (qui serait équivalent au nom de domaine) au numéro de téléphone (qui est analogue à l'adresse IP). Cet annuaire est ce qu'on appelle le *système de noms de domaine* (Domain Name System ou DNS selon l'appellation anglaise). Au début d'internet, il s'agissait simplement d'un fichier texte librement accessible qui listait le noms de domaines et les adresses IP correspondantes. Ce fichier était maintenu à la main. Maintenant, il s'agit de machines, les serveurs DNS dans le réseau auprès desquelles il est possible d'obtenir l'adresse IP correspondante à un nom de domaine. Ces machines sont aussi organisée hierarchiquement de telle sorte que chaque serveur DNS ne stocke que les noms de domaines correspondant à une sous partie du réseau. 
+Pour récapituler ce qui a été vu précédemment, les humains utilisent les noms de domaines pour les machines, alors que les machines, elles, utilisent les adresses IP. Afin que ces deux modes de recensement des machines soient cohérents entre eux, il est nécessaire de disposer d'un annuaire qui fera correspondre les noms de domaines aux adresses IP. Ceci est analogue aux annuaires téléphoniques qui permettre de faire correspondre le nom des personnes que l'on veut atteindre (qui serait équivalent au nom de domaine) au numéro de téléphone (qui est analogue à l'adresse IP). Cet annuaire est ce qu'on appelle le *système de noms de domaine* (Domain Name System ou DNS selon l'appellation anglaise). Au début d'Internet, il s'agissait simplement d'un fichier texte librement accessible qui listait le noms de domaines et les adresses IP correspondantes. Ce fichier était maintenu à la main. Maintenant, il s'agit de machines, les serveurs DNS dans le réseau auprès desquelles il est possible d'obtenir l'adresse IP correspondante à un nom de domaine. Ces machines sont aussi organisée hierarchiquement de telle sorte que chaque serveur DNS ne stocke que les noms de domaines correspondant à une sous partie du réseau. 
 
 [Mettre une illlustration]
 [Donner quelques détails du système ? ]

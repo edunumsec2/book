@@ -5,7 +5,7 @@ Dès leur origine, les systèmes de communication se sont développés selon deu
 Dans le second cas de figure, par exemple le courrier postal ou le télégramme, les informations sont envoyées "en bloc", typiquement par messages acheminés en une fois. Dans ce cas, le récepteur peut recevoir des messages de différentes personnes de manière presque simultanée, et le fait d'envoyer un message à quelqu'un ne va pas empêcher quelqu'un d'autre d'entrer en communication et nous envoyer des messages. 
 
 Afin d'éviter de bloquer les lignes de communication, Internet s'est développé selon ce second mode, et c'est pourquoi il était justifié d'évoquer ci-dessus
-des *messages* qui étaient envoyés et circulaient dans le réseau. En effet, toute information envoyée par internet est découpée en petits
+des *messages* qui étaient envoyés et circulaient dans le réseau. En effet, toute information envoyée par Internet est découpée en petits
 *paquets* qui sont envoyés indépendamment les uns des autres. Ainsi, lorsque le serveur hébergeant le
 site www.champignons.ch va envoyer
 une image de champignon à Alice, cette image sera découpé en petits paquets qui seront chacuns envoyés séparément à
@@ -17,7 +17,7 @@ possible de ces paquets.
 [ajouter illustrations]
 
 ## Le protocole IP
-L'envoi d'un paquet par la poste suit certaines règles, telles que la position et le format de l'adresse de destination, la position et le format de l'adresse d'expédition, la position du timbre et son montant en fonction du poids et de la destination. Sans ces règles, l'acheminement du paquet ne peut pas être assuré. De manière analogue l'envoi d'un paquet sur internet doit suivre certaines règles pour être acheminé. C'est le protocole IP qui définit ces règles.
+L'envoi d'un paquet par la poste suit certaines règles, telles que la position et le format de l'adresse de destination, la position et le format de l'adresse d'expédition, la position du timbre et son montant en fonction du poids et de la destination. Sans ces règles, l'acheminement du paquet ne peut pas être assuré. De manière analogue l'envoi d'un paquet sur Internet doit suivre certaines règles pour être acheminé. C'est le protocole IP qui définit ces règles.
 
 Selon ce protocole un paquet est constitué d'une suite de 0 et de 1 que l'on peut séparer en deux parties. 
 1. L'entête qui donne des informations sur le paquet (son émetteur, sa destination, sa taille, etc.)

@@ -1,22 +1,22 @@
 # Routage 
 (ou comment acheminer l'information)
-Nous avons vu précédemment, comment il est possible d'identifier sur internet
+Nous avons vu précédemment, comment il est possible d'identifier sur Internet
 une machine avec laquelle on souhaite communiquer, en ayant recours à son
 adresse IP ou un nom de domaine. Contrairement à un système centralisé comme
 le téléphone, où un opérateur va mettre directement en relation les deux
-machines qui communiquent, sur internet l'acheminement de l'information d'une
+machines qui communiquent, sur Internet l'acheminement de l'information d'une
 machine à une autre se fait de manière décentralisée. C'est le problème du
 *routage*, c'est-à-dire quel chemin (ou quelle route) l'information va emprunter pour
 aller d'un point à l'autre du réseau. [ajouter une illustration]
 
 ## Les routeurs    
 Les *routeurs* sont des ordinateurs spécialisés dont le rôle est de relayer
-et d'orienter correctement les informations qui circulent sur internet. Si
-internet est représenté par un graphe dont les arêtes représentent les canaux
+et d'orienter correctement les informations qui circulent sur Internet. Si
+Internet est représenté par un graphe dont les arêtes représentent les canaux
 de communication, alors les routeurs sont situé aux noeuds du graphes et
 décident dans quelle direction faire suivre une information afin qu'elle atteigne
 son destinataire. Les routeurs sont donc comme des facteurs
-disposés aux intersections du réseau internet qui vont lire la destination des
+disposés aux intersections du réseau Internet qui vont lire la destination des
 messages qui leur arrivent et les rediriger vers la prochaine intersection
 de manière à les rapprocher de leur distination. [ajouter une illustration]
 Pour ceci, les routeurs s'aident de *tables de routage* qui leur indique la

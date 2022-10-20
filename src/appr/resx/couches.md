@@ -9,7 +9,7 @@ Certains de ces choix sont décrits ci-dessous.
 
 ## Un modèle en couches
 
-La communication sur internet se fait selon un pile de protocoles qui s'ajoutent les
+La communication sur Internet se fait selon un pile de protocoles qui s'ajoutent les
 uns aux autres tout en étant indépendant les uns par rapport aux autres selon un
 *modèle en couches*. Ainsi, le protocole HTTP est responsable de l'échange de pages web,
 mais toute la partie s'assurant du bon transfert et de la bonne réception des paquets est
@@ -25,7 +25,7 @@ de paquets, ce qui permettra à ce nouveau support de s'intégrer sans difficult
 On a ainsi définit le modèle suivant en 4 "couches" de protocoles: La première couche "data link"
 définit comment les données sont transmises entre deux appareils directement connectés. Le protocole
 en question dépends donc du type de connnexion entre les deux appareils
-(wifi, cable électrique, fibre optique, etc.). La deuxième couche, "internet", définit comment les données
+(wifi, cable électrique, fibre optique, etc.). La deuxième couche, "Internet", définit comment les données
 sont transmises entre deux machines du réseau, c'est le protocole IP vu précédemment. La troisiène couche "transport", définit comment les données sont segmentées (c'est-à-dire découpée et morceaux) et envoyées par l'émetteur
 et reconstituées et quittancée par le recepteur, c'est le protocole TCP également vu précédemment. La quatrième couche est la couche applicative qui définit comment deux appplications (ou programmes) communiquent entre elles, par exemple le protocole HTTP qui détermine la communication entre un navigateur web et un serveur web. D'autres exemples figurant dans cette couche pourraient inclure la manière dont l'application TikTok
 d'un smartphone communique avec le serveur de TikTok.
@@ -46,13 +46,13 @@ questions de compression et d'encryptage des données. Le modéle résultant, ap
 ## Des protocoles ouverts et négociés
 Les protocoles décrits ci-dessus ont été établis sur proposition de différentes personnes travaillant
 principalement dans les universités ou les entreprises de télécommunication et adoptés par consensus après
-beaucoup de discussion. L'idée principale étant qu'internet n'appartient à personne et qu'il s'agit d'une
+beaucoup de discussion. L'idée principale étant qu'Internet n'appartient à personne et qu'il s'agit d'une
 oeuvre collective à laquelle toute personne dotée des compétences nécessaires peut contribuer. Ces protocoles
 sont *ouverts* dans le sens que chacun peut y avoir accès et les implémenter à sa manière. Par exemple,
 quelqu'un qui souhaiterait développer un routeur peut avoir accès à toutes les informations nécessaires
 pour le faire.
 
-La collaboration autour de la définition des protocoles d'internet est structurée autour l'Internet Society,
+La collaboration autour de la définition des protocoles d'Internet est structurée autour l'Internet Society,
 une association à but non lucratif dont le but est le développement d'Internet. L'Internet
 Engineering Task Force et un groupe de personnes qui discutent des aspects techniques d'Internet. Ce groupe
 est (théoriquement) ouvert à toute personne qui souhaite s'y impliquer. Les discussions s'articulent autour
@@ -89,7 +89,7 @@ permettraient de rivaliser avec leur concurrentes à visée lucrative.
 Une autre tendance qui remet en question la décentralité du web est le développement du cloud. 
 
 
-Enfin, si internet donnait à ses début une impression d'unversalité, on s'est rendu compte que l'utilisation des
+Enfin, si Internet donnait à ses début une impression d'unversalité, on s'est rendu compte que l'utilisation des
 caractères ASCII, la syntaxe d'HTML et de l'URL étaient peu propices aux alphabets non latin, et qui ne
 s'écrivent pas de gauche à droite. Tout choix "technique" est ancré dans un contexte social et culturel...
 

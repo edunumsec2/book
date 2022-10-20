@@ -1,7 +1,7 @@
 # Le World Wide Web 
 ## Historique
 Pendant ses première décennies (jusque dans le année 90), seuls les universitaires, les militaires, certaines entreprises
-et une communauté d'enthousiastes (largement issue du mouvement hippie) utilisaient internet.
+et une communauté d'enthousiastes (largement issue du mouvement hippie) utilisaient Internet.
 Les utilisations principales étaient le *chat* (par un terminal), la connection sur un ordinateur
 à distance, l'email et le transfert de fichiers entre ordinateurs. 
 
@@ -67,7 +67,7 @@ Le navigateur web pourra alors afficher l'"erreur 404" au pour l'utilisateur. [A
 
 Il y a d'autres sortes de requête que le client peut envoyer au serveur, par exemple `POST`pour envoyer une information du client au serveur, utilisée par exemple lorsqu'on remplit un formulaire en ligne. 
 
-Si un utilisateur utilise le protocole HTTP pour surfer sur le web, une tierce personne qui a accès au traffic sur internet peut savoir quelle page web a été visitée par cet utilisateur et ce que le serveur lui a envoyé comme information (par exemple des messages privés). C'est pourquoi on utilise généralement plutôt le protocole HTTPS qui encrypte les requêtes et réponses HTTP. Ainsi un observateur peut toujours savoir avec quel site on communique lorsqu'on surfe sur le web en regardant l'entête IP, mais ne pourra pas connaître le détails des pages demandées et transmises. 
+Si un utilisateur utilise le protocole HTTP pour surfer sur le web, une tierce personne qui a accès au traffic sur Internet peut savoir quelle page web a été visitée par cet utilisateur et ce que le serveur lui a envoyé comme information (par exemple des messages privés). C'est pourquoi on utilise généralement plutôt le protocole HTTPS qui encrypte les requêtes et réponses HTTP. Ainsi un observateur peut toujours savoir avec quel site on communique lorsqu'on surfe sur le web en regardant l'entête IP, mais ne pourra pas connaître le détails des pages demandées et transmises. 
 
 
 ### HTML
