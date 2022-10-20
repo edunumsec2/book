@@ -36,6 +36,6 @@ Une activité doit comporter les informations suivantes :
 _**Remarque**: “objectifs d’apprentissage” et “notions fondamentales” peuvent aussi faire l’objet d’un paragraphe plus étendu, s’ils devaient être précisés plus longuement qu’en une ligne._
 
 
-## Exemples d'activités bien formées :
+## Exemples d'activités bien formées
 - [Monochromes ou l’importance d’une « bonne » représentation](https://enseigner.modulo-info.ch/algo1/activ/monochromes.html)
 - [Magie Binaire](https://enseigner.modulo-info.ch/rep-info/activ/magie_binaire.html)
