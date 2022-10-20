@@ -35,9 +35,6 @@ Si la branche n'est pas encore publiée, vous pouvez la publier.
 
 Puis, vous pouvez faire un pull request (une demande de fusion avec le projet principal). Cette étape se déroule directement sur le site GitHub et non pas dans l'application (un clic dans l'application ouvre votre navigateur internet).
 
-
+![ezgif com-gif-maker(4)](https://user-images.githubusercontent.com/12733352/196892862-6f1a9d15-d7a0-439b-a493-e4cebe743a58.gif)
 
 A partir de là, les modifications seront revues par les modérateurs de la communauté et un retour vous sera donné ! Plus d'informations sur la [gouvernance](https://github.com/edunumsec2/book/blob/documentation/GOVERNANCE.md) du projet.
-
-
-
