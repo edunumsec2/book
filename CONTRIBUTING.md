@@ -13,7 +13,9 @@ Vous pouvez relever des problèmes via les Issues GitHub.
 ## :pencil2: Contribuer au contenu
 Vous pouvez directement proposer du contenu à ajouter dans les ressources. 
 
-Pour ce faire, vous devrez au préalable [installer l'environnement](https://github.com/edunumsec2/book/blob/documentation/doc/installation.md) sur votre machine. Vous pouvez également consulter l'aide pour utiliser [GitHub Desktop](https://github.com/edunumsec2/book/blob/documentation/doc/github-desktop.md) et prendre connaissance de la [structure du projet](https://github.com/edunumsec2/book/blob/documentation/doc/structure.md).
+Pour ce faire, vous devrez au préalable [installer l'environnement](https://github.com/edunumsec2/book/blob/documentation/doc/installation.md) sur votre machine et prendre connaissance de la [structure du projet](https://github.com/edunumsec2/book/blob/documentation/doc/structure.md).
+
+Vous pouvez également consulter l'aide pour utiliser [GitHub Desktop](https://github.com/edunumsec2/book/blob/documentation/doc/github-desktop.md).
 
   - [Rédiger une Activité](https://github.com/edunumsec2/book/blob/documentation/doc/activite.md)
   - [Liste des modules disponibles](#)
