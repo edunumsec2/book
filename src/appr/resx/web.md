@@ -34,11 +34,11 @@ Une exemple d'URL peut être par exemple "https://www.champignons.ch/fichiers/fr
 Une URL comporte tros parties, qui sont les suivantes dans notre exemple |https|://www.champignons.ch|/fichiers/fr/contact.html|.  [mettre en couleur les trois parties]
 Autrement dit, une URL se compose généralement de la manière suivante:
 
-*protocol*:*domaine*/*chemin*
+*protocol*:*hôte*/*chemin*  ** sed s/domaine/hôte/g **
 
 1. Le *protocole*, dans notre exemple `https`, indique le protocole utiliser pour avoir accès à la ressource. Pour le web, ce protocole est toujouts `http`ou `https`, sa version sécurisée. Mais l'URL étant aussi utilisée en dehors du web, il y a d'autres protocoles possibles, par exemple `ftp` pour faire du transfert de fichier. 
 
-1. Le *domaine* spécifie la machine (ou le serveur) où aller chercher le fichier. Cela peut être un nom de domaine, mais également une adresse IP
+1. L'*hôte* spécifie la machine (ou le serveur) où aller chercher le fichier. Cela peut être un nom de domaine, mais également une adresse IP
 
 1. Le *chemin* indique quel fichier on souhaite obtenir de la part du serveur. On part de la racine "/" (connue du serveur) et on descend dans l'arborescence selon les répertoires indiqués. Par exemple `/fichiers/fr/contact.html` est le fichier `contact.html` qui se trouve dans le répertoire  `fr` qui se trouve lui-même dans le répertoire `fichiers`.  [Ajouter une illustration]. 
 

@@ -14,7 +14,7 @@ Alice. Cela a l'avantage qui si, pour une raison ou une autre, une partie de l'i
 Les protocoles IP (Internet Protocol) et TCP (Transmission Control Protocol) décrivent le format ainsi que la gestion
 possible de ces paquets. 
 
-
+[ajouter illustrations]
 
 ## Le protocole IP
 L'envoi d'un paquet par la poste suit certaines règles, telles que la position et le format de l'adresse de destination, la position et le format de l'adresse d'expédition, la position du timbre et son montant en fonction du poids et de la destination. Sans ces règles, l'acheminement du paquet ne peut pas être assuré. De manière analogue l'envoi d'un paquet sur internet doit suivre certaines règles pour être acheminé. C'est le protocole IP qui définit ces règles.

@@ -38,6 +38,21 @@ L'adresse 010100101010... sera décrite comme 128.233.53.23.
 Question:
 Lesquelles des adresses suivantes sont des adresses IP valides:
 
+### Version 6 (IPv6)
+Avec le développement d'Internet, il est vite devenu clair que le nombres de machines connectées à Internet allait dépasser le nombre d'adresses IP différentes, et c'est pourquoi des nouveaux type d'adressage à été développé dès les années 90, IPv6 (Internet Protocol, version 6). Il a été décidé de coder les adresses IP sur 128 bits. Plutôt que
+de les représenter avec 16 nombre entre 0 et 255, il a été décider des coder en 8 nombres hexadécimaux
+entre 0000 et FFFF. Chaque digit de 0 à F représente ainsi 4 bits.
+[montrer un exemple] 
+
+Actuellement, les deux types d'adresses IPv6 et IPv4 coexistent sur Internet, la version IPv4 étant encore largement
+plus répandue. Une adresse IP peut donc soit être sur 32 bits soit sur 128 bits. 
+    
+Exercices:
+- Parmi les adresses suivantes, indiquer lesquelles sont au format IPv4, lesquelles sont IPv6 et lesquelles ne sont pas valides. 
+
+
+
+
 ### Blocs et masques ?
 
 ### Gouvernance
@@ -79,16 +94,4 @@ Pour récapituler ce qui a été vu précédemment, les humains utilisent les no
 [Mettre une illlustration]
 [Donner quelques détails du système ? ]
     
-### Version 6 (IPv6)
-Avec le développement d'Internet, il est vite devenu clair que le nombres de machines connectées à Internet allait dépasser le nombre d'adresses IP différentes, et c'est pourquoi des nouveaux type d'adressage à été développé dès les années 90, IPv6 (Internet Protocol, version 6). Il a été décidé de coder les adresses IP sur 128 bits. Plutôt que
-de les représenter avec 16 nombre entre 0 et 255, il a été décider des coder en 8 nombres hexadécimaux
-entre 0000 et FFFF. Chaque digit de 0 à F représente ainsi 4 bits.
-[montrer un exemple] 
-
-Actuellement, les deux types d'adresses IPv6 et IPv4 coexistent sur Internet, la version IPv4 étant encore largement
-plus répandue. Une adresse IP peut donc soit être sur 32 bits soit sur 128 bits. 
-    
-Exercices:
-- Parmi les adresses suivantes, indiquer lesquelles sont au format IPv4, lesquelles sont IPv6 et lesquelles ne sont pas valides. 
-
 
