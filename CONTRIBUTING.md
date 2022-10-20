@@ -16,7 +16,7 @@ Vous pouvez relever des problèmes via les Issues GitHub.
 Vous pouvez directement proposer du contenu à ajouter dans les ressources. 
 
   - [Rédiger une Activité](https://github.com/edunumsec2/book/blob/documentation/doc/activite.md)
-  - [Liste des directives disponibles](#)
+  - [Liste des directives disponibles](https://github.com/edunumsec2/book/blob/documentation/doc/directives.md)
 
 ## :computer: Participer au développement
 Vous pouvez contribuer au développement, par exemple si vous souhaitez créer un encart à la disposition d'autres contributeurs.
