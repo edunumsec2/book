@@ -7,6 +7,8 @@ Le projet contient deux branches permanentes : [master](https://github.com/edunu
 
 **Tous les 6 mois environ**, durant les périodes d'intersemestre, la branche `dev` est répliquée sur `master` et le nouveau contenu est mis en ligne.
 
+Également, les branches non utilisées depuis plus de 6 mois seront supprimées.
+
 ## Reviews
 Chaque changement apporté aux branches `master` et `dev` sont préalablement validés par l'une des trois personnes en charge de la gouvernance. En cas de problème, une discussion liée au Pull Request concerné est ouverte. 
 
