@@ -19,6 +19,7 @@ Vous pouvez directement proposer du contenu à ajouter dans les ressources.
   - [Liste des modules disponibles](#)
 
 ## :computer: Participer au développement
+Vous pouvez contribuer au développement, par exemple si vous souhaitez créer un encart qui puisse 
   - Développer un encart
   - ... ?
 
