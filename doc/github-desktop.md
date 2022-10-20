@@ -15,7 +15,7 @@ Si vous rencontrez une erreur similaire à celle ci-dessous, il vous faut peut-�
 
 ## 2. Création d'une nouvelle branche
 
-Lorsque vous travailler sur du nouveau contenu, nous vous proposons de travailler avec une nouvelle branche.
+Lorsque vous travailler sur du nouveau contenu, nous vous proposons de travailler avec une nouvelle branche. Ceci permet à chacun de travailler dans son propre environnement, sans modifier le code et le contenu des autres contributeurs.
 
 ![ezgif com-gif-maker(1)](https://user-images.githubusercontent.com/12733352/196887901-e5e2662b-295c-414a-9a12-f1561dac4331.gif)
 
