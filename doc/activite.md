@@ -1,6 +1,6 @@
 # Rédiger une activité
 
-Vous trouverez ici la charte et la structure pour la rédaction d'une activité.
+Vous trouverez ici la charte et la structure pour la rédaction d'une activité, ainsi qu'un [template](https://github.com/edunumsec2/book/blob/documentation/templates/template-activite.md) prêt à l'emploi.
 
 ## Définition
 
@@ -38,9 +38,3 @@ Quelques exemples d'activités bien formées :
 - [Magie Binaire](https://enseigner.modulo-info.ch/rep-info/activ/magie_binaire.html)
 
 *: À noter que “objectifs d’apprentissage” et “notions fondamentales” peuvent aussi faire l’objet d’un paragraphe plus étendu, s’ils devaient être précisés plus longuement qu’en une ligne.
-
-## Template Activité
-
-Vous trouverez ici un [template](https://github.com/edunumsec2/book/blob/documentation/templates/template-activite.md) pour rédiger une Activité.
-
-
