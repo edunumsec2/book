@@ -38,6 +38,7 @@ L'adresse 010100101010... sera décrite comme 128.233.53.23.
 Question:
 Lesquelles des adresses suivantes sont des adresses IP valides:
 
+
 ### Version 6 (IPv6)
 Avec le développement d'Internet, il est vite devenu clair que le nombres de machines connectées à Internet allait dépasser le nombre d'adresses IP différentes, et c'est pourquoi des nouveaux type d'adressage à été développé dès les années 90, IPv6 (Internet Protocol, version 6). Il a été décidé de coder les adresses IP sur 128 bits. Plutôt que
 de les représenter avec 16 nombre entre 0 et 255, il a été décider des coder en 8 nombres hexadécimaux
@@ -51,11 +52,13 @@ Exercices:
 - Parmi les adresses suivantes, indiquer lesquelles sont au format IPv4, lesquelles sont IPv6 et lesquelles ne sont pas valides. 
 
 
+### Blocs et masques ? -> TODO dans "pour aller plus loin"
 
-
-### Blocs et masques ?
 
 ### Gouvernance
+
+TODO: faire le lien avec les indicatifs
+
 Comme les noms de domaine, les adresses IP sont gérée hiérarchiquement. Ainsi, les adresses de la forme 
 46.x.x.x (c'est-à-dire celles qui commencent par 46 = 00101110) sont assignées au Centre de Coordination
 Européeen qui les répartis entre différents *Registres Internet locaux* tels que Switch qui va pouvoir

@@ -9,7 +9,7 @@ Pour aller chercher un fichier se trouvant sur un autre ordinateur, il fallait s
 sur quelle machine celui-ci se trouvait et où il se situait dans cette machine. Il fallait donc
 établir des listes de ressources et de leur location dont la maintenance et l'utilisation étaient fastidieuses.
 
-C'est en voulant résoudre ce problème que Tim Berners-Lee, un scientifique anglais du Centre Européen de la Recherche Nucléaire (CERN)
+C'est en voulant résoudre ce problème que Tim Berners-Lee, un scientifique anglais du Conseil Européen de la Recherche Nucléaire (CERN)
 à Genève, a développé les technologies du Web entre 1989 et 1991. Celles-ci se sont rapidement développées après que le CERN les ait
 gratuitement mises à disposition du public. Des centres de recherche, universités, entreprises (d'informatique et de média) et d'autres
 organisations ont créé leur site web afin de pouvoir facilement diffuser des informations par ce canal. Ceci offrait un usage supplémentaire
@@ -75,11 +75,12 @@ Si un utilisateur utilise le protocole HTTP pour surfer sur le web, une tierce p
 HTML (HyperText Markup Language) est un langage de description des pages web. Il permet de spécifier le contenu et l'apparence d'une
 page web afin que le navigateur web puisse l'afficher. Supposons par exemple que le site www.champignons.ch envoie à Alice une
 page web contenant le nom d'un champignons ainsi qu'une photo de celui-ci. Une manière de décrire cette page avec le langage HTML serait la suivante:
-```
+
+```html
 <html>
 <body>
- <h1 color="red"> L'amanite tue-mouche </h1>
- <p> L'amanite tue-mouche est très belle mais très dangereuse ! </p>
+ <h1 color="red"> L’amanite tue-mouche </h1>
+ <p> L’amanite tue-mouche est très belle mais très dangereuse ! </p>
  <img src="photo.jpg" height="300" />
 </body>
 </html>
