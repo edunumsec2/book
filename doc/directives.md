@@ -17,10 +17,15 @@ _Liste complète des directives Sphinx : https://docutils.sourceforge.io/docs/re
 Les directives suivantes ont été créées sur mesure pour le projet Modulo.
 
 ### Blank
-???
+
+**A quoi ça sert?**
 
 ### Codeplay
 Cette directive permet d'ajouter un interpréteur Python dans le contenu.
+
+**QUESTIONS** :  
+- à quoi sert le paramètre :file: ?
+- y a-t-il d'autres paramètres ?
 
 **Utilisation**: 
 ````
@@ -29,24 +34,38 @@ Cette directive permet d'ajouter un interpréteur Python dans le contenu.
   ```
 ````
 
-
-
-### Conversions
-
 ### Exercice
+
+ça rajoute quoi de nouveau par rapport à une autre Admonition ?
 
 ### Gallery
 
+-> Documenter et tester
+
 ### Glossary
+
+on garde ? on finalise ?
 
 ### Logic
 
+il y a des paramètres ?
+
 ### Media
+
+c'est quoi ?
 
 ### Questions
 
+paramètres ? 
+
 ### Role
+
+c'est quoi ? on garde ?
 
 ### Timeline
 
+on garde ? on finalise ?
+
 ### Videos
+
+paramètres ?
