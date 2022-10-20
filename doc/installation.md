@@ -8,13 +8,13 @@ Modulo est basé sur le générateur de documentation [Sphinx](https://www.sphin
 - [virtualenv](https://virtualenv.pypa.io/en/latest/) (`$ pip install virtualenv`)
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-_Remarque : si vous n'êtes pas à l'aise avec Git, nous vous recommandons l'utilisation de [GitHub Desktop](https://github.com/edunumsec2/book/edit/documentation/github-desktop.md)._
-
 Pour vérifier la bonne installation de l'environnement de base :
 
 - `$ python --version`
 - `$ virtualenv --version`
 - `$ git --version`
+
+_**Remarque** : si vous n'êtes pas à l'aise avec Git, nous vous recommandons l'utilisation de [GitHub Desktop](https://github.com/edunumsec2/book/blob/documentation/doc/github-desktop.md)._
 
 Pour simplifier les actions fréquentes (build, clean), le projet contient un Workspace pour [Visual Studio Code](https://code.visualstudio.com/). Lors de l'ouverture du Workspace (à la racine du projet), il vous sera proposé d'installer les plugins suggérés. L'utilisation de VSCode est optionnelle, vous pouvez bien sûr utiliser votre éditeur de code préféré.
 
