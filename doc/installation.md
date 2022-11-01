@@ -18,7 +18,7 @@ Pour simplifier les actions fréquentes (build, clean), le projet contient un Wo
 
 ## Installation
 
-1. Récupération du projet : `git clone git@github.com:edunumsec2/book.git` (ou alors plus simplement avec [GitHub Desktop](https://github.com/edunumsec2/book/edit/documentation/github-desktop.md))
+1. Récupération du projet : `git clone git@github.com:edunumsec2/book.git` (ou alors plus simplement avec [GitHub Desktop](https://github.com/edunumsec2/book/blob/documentation/doc/github-desktop.md))
 1. Déplacement vers la racine du projet : `cd book`
 1. Création d'un environnement virtuel : `virtualenv .env`
 1. Activation de l'environnement virtuel  
