@@ -9,7 +9,11 @@ Après vous êtres connecté à votre compte GitHub (File \ Options \ Accounts \
 
 ![recuperation-projet](https://user-images.githubusercontent.com/12733352/196887243-3af3e1fe-2e9a-4e05-95bc-16c18bd179af.gif)
 
-Si vous rencontrez une erreur similaire à celle ci-dessous, il vous faut peut-être insérer la commande ci-dessous via le Terminal : git remote set-url origin git@github.com:edunumsec2/book.git`. Cette commande permet de récupérer le projet via SSH au lieu de HTTPS.
+Si vous rencontrez une erreur similaire à celle ci-dessous, il vous faut peut-être insérer la commande ci-dessous via le Terminal : 
+
+`git remote set-url origin git@github.com:edunumsec2/book.git`. 
+
+Cette commande permet de récupérer le projet via SSH au lieu de HTTPS.
 
 ![image](https://user-images.githubusercontent.com/12733352/196886617-91ad5964-6d45-4c8b-94f4-768af2242f00.png)
 
