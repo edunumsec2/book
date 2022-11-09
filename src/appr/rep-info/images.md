@@ -169,7 +169,7 @@ Ce mode de fonctionnement est similaire à celui des tableurs pour lesquels il e
 
 ````{admonition} Anecdote
 :class: hint
-[The Million Dollar Homepage](https://fr.wikipedia.org/wiki/The_Million_Dollar_Homepage) est un site web conçu en 2005 par Alex Tew, un étudiant anglais, dans le but de financer ses études supérieures. La page d'accueil est une grille de 1000 X 1000 pixels. Chaque pixel était vendu 1$ en tant qu'espace publicitaire. Ils ont tous été vendus...
+[The Million Dollar Homepage](https://fr.wikipedia.org/wiki/The_Million_Dollar_Homepage) est un site web conçu en 2005 par Alex Tew, un étudiant anglais, dans le but de financer ses études supérieures. La page d'accueil est une grille de 1000 × 1000 pixels. Chaque pixel était vendu 1$ en tant qu'espace publicitaire. Ils ont tous été vendus...
 
 
 ```{figure} media/milliondollarhomepage.png
@@ -529,20 +529,21 @@ C'est la quantité de mémoire vive minimale que nécessite la carte graphique (
 :class: note
 <!--- <span style="color:orange">Niveau intermédiaire</span> -->
 
-1. Une image de couleur a pour format : 360 X 270. Elle est enregistrée en bitmap 8 bits. Quelle est sa taille sur le disque dur (détaillez les calculs) ? 
+1. Une image de couleur a pour format : 360 × 270. Elle est enregistrée en bitmap 8 bits. Quelle est sa taille sur le disque dur (détaillez les calculs) ? 
 
-3. Une image noir et blanc de format 1024 X 1024 est enregistrée en JPG. Le taux de compression est de 50%. Quelle est sa taille sur le disque dur (détaillez les calculs) ? 
+3. Une image noir et blanc de format 1024 × 1024 est enregistrée en JPG. Le taux de compression est de 50%. Quelle est sa taille sur le disque dur (détaillez les calculs) ? 
 
 ```{admonition} Réponse
 :class: hint
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
-1. On multiplie 360 x 270 = 97200 pour obtenir le nombre de pixels. 
-Poids de chaque pixel : 24 bits/8 = 3 octets
-La taille en ménoire se calcule par 97200 x 3 = 291600 octets = 291600/1024 Ko ~ 285 Ko. 
+1. On multiplie 360 × 270 = 97200 pour obtenir le nombre de pixels. Poids de chaque pixel : 24 bits = 24/8 octets = 3 octets.
 
-2. On multiplie 1024 x 1024 = 1048576 : c'est le nombre de pixels... et la taille initiale de l'image puisque l'image est en noir et blanc (codage 1 bit). 
-Comme le taux de compression est 50, on divise par 2 : 1048576/2 = 524288 octets = 524288/1024 Ko = 512  Ko. 
+   La taille en ménoire se calcule par 97200 × 3 = 291600 octets = 291600/1024 Ko ≈ 285 Ko.
+
+2. On multiplie 1024 × 1024 = 1048576 : c'est le nombre de pixels... et la taille initiale de l'image en bits, puisque l'image est en noir et blanc (codage 1 bit par pixel).
+
+   Comme le taux de compression est de 50%, on divise par 2 : 1048576/2 = 524288 bits = 65536 octets = 65536/1024 Ko = 64 Ko.
 
 ````
 
