@@ -27,20 +27,47 @@ Exercice: déterminer à l'aide du site web <https://www.nic.ch/whois/> qui a en
 
 Afin de pouvoir identifier chacune des machines connectées à Internet, il a été décidé de leur attribuer à chacune
 un nombre, un peu à la manière dont les numéros de téléphone sont attribués à chaque téléphone du réseau téléphonique.
-Dans sa version la plus courante, ce nombre est codé sur 32 bits, c'est-à-dire entre 0 et 2^32-1=4'294'967'295
-(4 milliards 294 millions 967 mille 295). On pensait
-alors (c'était en 1982) que ce serait amplement suffisant pour pouvoir accommoder toutes les machines et qu'Internet
+Dans sa version la plus courante, ce nombre est codé sur 32 bits, c'est-à-dire entre 0 et 4'294'967'295 c'est à dire $2^{32}-1$.
+On pensait alors (c'était en 1982) que 4 millard d'addresses seraient amplement suffisant pour pouvoir accommoder toutes les machines pendant encore beaucoup d'années, et qu'Internet
 ne dépasserait pas les 4 milliards de machines connectées. [dire combien il y en avait à l'époque].
 Afin de rendre ces adresses plus lisibles pour les humains, on décompose d'habitude une adresse IP de 32 bits en
-quatre groupes de 8 bits séparés par un point. Chaque groupe de 8 bits peut alors être représenté comme un nombre
-entre 0 et 2^8-1 = 255.
+quatre groupes de 8 bits séparés par un point. Chaque groupe de 8 bits peut alors être représenté comme un nombre décimal
+entre 0 et 255 ($2^8-1$).
 
-Exemple:
+L'exemple suivant montre comment trouver la representation binaire, d'un tuple de 4 nombres décimaux. L'adresse montrée est 
+`128.233.53.23`
 
-L'adresse 010100101010... sera décrite comme 128.233.53.23.
+```{codeplay}
+addr = (128, 233, 53, 23)
+
+for i in addr:
+    print(bin(i), end=' . ')
+```
+
+Le code suivant montre la transformation d'un tuple de 4 nombres binaires en nombre décimaux, séparés par un point (`.`)
+
+```{codeplay}
+addr = (0b1111_1111, 0b1_1111, 0b11, 0b0000)
+
+for i in addr:
+    print(i, end='.')
+```
 
 Question:
 Lesquelles des adresses suivantes sont des adresses IP valides:
+
+Pour ceci nous pourrions ajouter des testes comme celui-ci.
+
+```{codeplay}
+addr = (0b1111_1111, 0b1_1111, 0b11, 0b1_1111_1111)
+
+for i in addr:
+    print(i, end='.')
+    if i > 255:
+        print()
+        print('erreur:', i, 'supérieur à 255')
+        break
+```
 
 ### Version 6 (IPv6)
 
@@ -78,8 +105,8 @@ maison.
 - Combien y aurait-il eu d'adresses IP possibles s'il avait été décidé de l’encoder sur 24 bits?
 - Déterminer à l'aide du site xxx à quel continent sont allouées les adresses IP suivantes:
 - Déterminer l'entité suisse qui possède le plus d'adresses IP
-- Donner la représentation binaire de l'adresse IP y.y.y.y
-- Combien y a-t-il d'adresses IP de type 192.168.x.x ?
+- Donner la représentation binaire de l'adresse IP `y.y.y.y`
+- Combien y a-t-il d'adresses IP de type `192.168.x.x` ?
 
 ### Adressage statique et dynamique
 
