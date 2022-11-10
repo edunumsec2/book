@@ -6,8 +6,6 @@ import os
 import sys
 import hashlib
 from typing import Any, Awaitable, List, Tuple, TypeVar, Union, Optional
-import pyppeteer  # type: ignore
-from pyppeteer.page import Page  # type: ignore
 
 from sphinx.application import Sphinx
 from sphinx.util import logging
@@ -27,6 +25,7 @@ logger = logging.getLogger(__name__)
 
 StringOrList = Union[str, List[str]]
 
+Page = Any # replaced by conditional import when using latex builder
 
 def md5(string: str) -> str:
     md5_builder = hashlib.md5()
@@ -336,8 +335,11 @@ browser_page: Union[Page, None] = None
 
 
 def build_starting(app: Sphinx) -> None:
-    global browser_page
+    global browser_page, pyppeteer, Page
     if app.builder is not None and app.builder.name == "latex":
+        # conditionally import pyppeteer to avoid hard dependency
+        import pyppeteer  # type: ignore
+        from pyppeteer.page import Page  # type: ignore
         logger.info("starting headless browser")
         browser_page = await_blocking(browser_launch())
 
