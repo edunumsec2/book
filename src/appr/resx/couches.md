@@ -37,9 +37,9 @@ ont été insérées. La "couche de session" qui gère les sessions, par exemple
 son smartphone, celle-ci va ouvrir une session avec le serveur. Enfin la "couche de présentation" gère les
 questions de compression et de cryptage des données. Le modèle résultant, appelé OSI, est illustré ci-dessous.
 
-[Ajouter une figure]
+<!-- [Ajouter une figure] -->
 
-[Ajouter l'exemple complet d'Alice]
+<!-- [Ajouter l'exemple complet d'Alice] -->
 
 ## Des protocoles ouverts et négociés
 

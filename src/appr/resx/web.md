@@ -66,7 +66,8 @@ Si la page `accueil.html` n'existe pas, alors le serveur pourra l'indiquer au cl
 
 `HTTP/1.1 404 Not Found`
 
-Le navigateur web pourra alors afficher l'"erreur 404" au pour l'utilisateur. [Ajouter une illustration]
+Le navigateur web pourra alors afficher l'"erreur 404" au pour l'utilisateur. 
+<!-- [Ajouter une illustration] -->
 
 Il y a d'autres sortes de requêtes que le client peut envoyer au serveur, par exemple `POST`pour envoyer une information du client au serveur, utilisé par exemple lorsqu'on remplit un formulaire en ligne.
 

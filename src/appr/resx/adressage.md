@@ -17,7 +17,7 @@ nombres pour référencer les machines connectées à Internet, c'est ce qu'on a
 la personne qui a enregistré le site *champignons.ch* a également reçu une (ou plusieurs) adresse IP de la part de
 Switch ou d'un intermédiaire.
 
-[Ajouter une illustration de la gestion des noms de domaines? ]
+<!-- Ajouter une illustration de la gestion des noms de domaines?  -->
 
 Exercice: déterminer à l'aide du site web <https://www.nic.ch/whois/> qui a enregistré le nom de domaine champignons.ch.
 
@@ -29,7 +29,8 @@ Afin de pouvoir identifier chacune des machines connectées à Internet, il a é
 un nombre, un peu à la manière dont les numéros de téléphone sont attribués à chaque téléphone du réseau téléphonique.
 Dans sa version la plus courante, ce nombre est codé sur 32 bits, c'est-à-dire entre 0 et 4'294'967'295 c'est à dire $2^{32}-1$.
 On pensait alors (c'était en 1982) que 4 millard d'addresses seraient amplement suffisant pour pouvoir accommoder toutes les machines pendant encore beaucoup d'années, et qu'Internet
-ne dépasserait pas les 4 milliards de machines connectées. [dire combien il y en avait à l'époque].
+ne dépasserait pas les 4 milliards de machines connectées. 
+<!-- [dire combien il y en avait à l'époque]. -->
 Afin de rendre ces adresses plus lisibles pour les humains, on décompose d'habitude une adresse IP de 32 bits en
 quatre groupes de 8 bits séparés par un point. Chaque groupe de 8 bits peut alors être représenté comme un nombre décimal
 entre 0 et 255 ($2^8-1$).
@@ -56,7 +57,7 @@ for i in addr:
 Question:
 Lesquelles des adresses suivantes sont des adresses IP valides:
 
-Pour ceci nous pourrions ajouter des testes comme celui-ci.
+Pour répondre à une telle question automatiquement nous pourrions ajouter des testes comme celui-ci.
 
 ```{codeplay}
 addr = (0b1111_1111, 0b1_1111, 0b11, 0b1_1111_1111)
@@ -71,10 +72,10 @@ for i in addr:
 
 ### Version 6 (IPv6)
 
-Avec le développement d'Internet, il est vite devenu clair que le nombre de machines connectées à Internet allait dépasser le nombre d'adresses IP différentes, et c'est pourquoi des nouveaux types d'adressage a été développé dès les années 90, IPv6 (Internet Protocol, version 6). Il a été décidé de coder les adresses IP sur 128 bits. Plutôt que
-de les représenter avec 16 nombres entre 0 et 255, il a été décider de coder en 8 nombres hexadécimaux
+Avec le développement d'Internet, il est vite devenu clair que le nombre de machines connectées à Internet allait dépasser le nombre d'adresses IP différentes, et c'est pourquoi un nouveau type d'adressage a été développé dès les années 90, IPv6 (Internet Protocol, version 6). Il a été décidé de coder les adresses IP sur 128 bits. Plutôt que
+de les représenter avec 16 nombres entre 0 et 255, il a été décidé de coder en 8 nombres hexadécimaux
 entre 0000 et FFFF. Chaque digit de 0 à F représente ainsi 4 bits.
-[montrer un exemple]
+<!-- [montrer un exemple] -->
 
 Actuellement, les deux types d'adresses IPv6 et IPv4 coexistent sur Internet, la version IPv4 étant encore largement
 plus répandue. Une adresse IP peut donc soit être sur 32 bits soit sur 128 bits.
@@ -83,19 +84,19 @@ Exercices:
 
 - Parmi les adresses suivantes, indiquer lesquelles sont au format IPv4, lesquelles sont IPv6 et lesquelles ne sont pas valides.
 
-### Blocs et masques ? -> TODO dans "pour aller plus loin"
+<!-- ### Blocs et masques ? -> TODO dans "pour aller plus loin" -->
 
 ### Gouvernance
 
-TODO: faire le lien avec les indicatifs
+<!-- TODO: faire le lien avec les indicatifs -->
 
 Comme les noms de domaine, les adresses IP sont gérées hiérarchiquement. Ainsi, les adresses de la forme
-46.x.x.x (c'est-à-dire celles qui commencent par 46 = 00101110) sont assignées au Centre de Coordination
+`46.x.x.x` (c'est-à-dire celles qui commencent par `46 = 00101110`) sont assignées au Centre de Coordination
 Européen qui les répartit entre différents *Registres Internet locaux* tels que Switch qui va pouvoir
 louer une partie de ces adresses IP à des organisations, des entreprises (par exemple des fournisseurs d'accès Internet) ou des particuliers qui en feraient la demande.
 
-Certains blocs d'adresses IP sont réservés à des usages particuliers. Par exemple les adresses 10.x.x.x  ou
-192.168.x.x sont réservées aux réseaux privés, c'est-à-dire des machines qui ne communiquent pas directement
+Certains blocs d'adresses IP sont réservés à des usages particuliers. Par exemple les adresses `10.x.x.x`  ou
+`192.168.x.x` sont réservées aux réseaux privés, c'est-à-dire des machines qui ne communiquent pas directement
 avec le reste d'Internet. Ainsi, ces adresses peuvent être utilisées au sein du réseau interne des entreprises,
 ou pour faire communiquer différents appareils connectés (lampes, télévision, four, télécommande) au sein d'une
 maison.
@@ -103,9 +104,9 @@ maison.
 ### Exercices
 
 - Combien y aurait-il eu d'adresses IP possibles s'il avait été décidé de l’encoder sur 24 bits?
-- Déterminer à l'aide du site xxx à quel continent sont allouées les adresses IP suivantes:
-- Déterminer l'entité suisse qui possède le plus d'adresses IP
-- Donner la représentation binaire de l'adresse IP `y.y.y.y`
+- Déterminez à l'aide du site xxx à quel continent sont allouées les adresses IP suivantes:
+- Déterminez l'entité suisse qui possède le plus d'adresses IP
+- Donnez la représentation binaire de l'adresse IP `y.y.y.y`
 - Combien y a-t-il d'adresses IP de type `192.168.x.x` ?
 
 ### Adressage statique et dynamique
@@ -119,7 +120,7 @@ abonnement Internet, le fournisseur d'accès propose d'habitude une adresse IP d
 
 Exercice:
 
-- Déterminer si votre machine a une adresse IP statique ou dynamique
+- Déterminez si votre machine a une adresse IP statique ou dynamique
 - Vous souhaitez entrer en communication avec votre ami-e, mais vous avez les deux des adresses IP dynamiques. Quel
 moyen pourriez-vous imaginer pour que vous puissiez vous joindre.
 - En tant que propriétaire d'un site web, vous avez accès aux adresses IP des machines qui visitent votre site. Que pouvez-vous en déduire ?
@@ -128,5 +129,5 @@ moyen pourriez-vous imaginer pour que vous puissiez vous joindre.
 
 Pour récapituler ce qui a été vu précédemment, les humains utilisent les noms de domaines pour les machines, alors que les machines, elles, utilisent les adresses IP. Afin que ces deux modes de recensement des machines soient cohérents entre eux, il est nécessaire de disposer d'un annuaire qui fera correspondre les noms de domaines aux adresses IP. Ceci est analogue aux annuaires téléphoniques qui permettent de faire correspondre le nom des personnes que l'on veut atteindre (qui serait équivalent au nom de domaine) au numéro de téléphone (qui est analogue à l'adresse IP). Cet annuaire est ce qu'on appelle le *système de noms de domaine* (Domain Name System ou DNS selon l'appellation anglaise). Au début d'Internet, il s'agissait simplement d'un fichier texte librement accessible qui listait le nom de domaines et les adresses IP correspondantes. Ce fichier était maintenu à la main. Maintenant, il s'agit de machines, les serveurs DNS dans le réseau auprès desquelles il est possible d'obtenir l'adresse IP correspondante à un nom de domaine. Ces machines sont aussi organisées hiérarchiquement de telle sorte que chaque serveur DNS ne stocke que les noms de domaines correspondant à une sous partie du réseau.
 
-[Mettre une illustration]
-[Donner quelques détails du système ? ]
+<!-- [Mettre une illustration] -->
+<!-- [Donner quelques détails du système ? ] -->

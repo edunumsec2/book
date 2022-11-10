@@ -17,7 +17,7 @@ Alice. Cela a l'avantage qui si, pour une raison ou une autre, une partie de l'i
 Les protocoles IP (Internet Protocol) et TCP (Transmission Control Protocol) décrivent le format ainsi que la gestion
 possible de ces paquets.
 
-[ajouter illustrations]
+<!-- [ajouter illustrations] -->
 
 ## Le protocole IP
 
@@ -28,7 +28,7 @@ Selon ce protocole un paquet est constitué d'une suite de 0 et de 1 que l'on pe
 1. L'entête qui donne des informations sur le paquet (son émetteur, sa destination, sa taille, etc.)
 1. Les données qui forment le contenu du paquet, c'est-à-dire les informations que l'on veut transmettre.
 
-[ indiquer la spécification de l'entête IP]
+<!-- [ indiquer la spécification de l'entête IP] -->
 
 ## Le protocole TCP
 
@@ -44,4 +44,4 @@ De manière similaire au protocole IP, le protocole TCP est constitué d'un *en-
 sur les numéros de morceaux envoyés et reçus. En effet, la machine réceptrice va envoyer une quittance (*acknowledgement* en anglais) pour chaque paquet reçu,
 de manière à ce que la machine émettrice puisse renvoyer un paquet qui n'aurait pas été acheminé à destination.
 
-[donner le détail du protocole et le format de l'en-tête]
+<!-- [donner le détail du protocole et le format de l'en-tête] -->

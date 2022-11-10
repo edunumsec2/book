@@ -8,7 +8,8 @@ le téléphone, où un opérateur va mettre directement en relation les deux
 machines qui communiquent, sur Internet l'acheminement de l'information d'une
 machine à une autre se fait de manière décentralisée. C'est le problème du
 *routage*, c'est-à-dire quel chemin (ou quelle route) l'information va emprunter pour
-aller d'un point à l'autre du réseau. [ajouter une illustration]
+aller d'un point à l'autre du réseau. 
+<!-- [ajouter une illustration] -->
 
 ## Les routeurs
 
@@ -20,9 +21,9 @@ décident dans quelle direction faire suivre une information afin qu'elle atteig
 son destinataire. Les routeurs sont donc comme des facteurs
 disposés aux intersections du réseau Internet qui vont lire la destination des
 messages qui leur arrivent et les rediriger vers la prochaine intersection
-de manière à les rapprocher de leur destination. [ajouter une illustration]
-Pour ceci, les routeurs s'aident de *tables de routage* qui leur indique la
-direction à suivre pour chaque destination.
+de manière à les rapprocher de leur destination. 
+<!-- [ajouter une illustration] -->
+Pour ceci, les routeurs s'aident de *tables de routage* qui leur indique la direction à suivre pour chaque destination.
 
 ## Les tables de routage
 
@@ -38,7 +39,7 @@ de routage la ligne contenant le sous-réseau le plus spécifique incluant l'adr
 de destination et le fera suivre dans l'interface correspondante (qui est elle-même connectée soit à un
 autre routeur soit au destinataire).
 
-[Ajouter une illustration]
+<!-- [Ajouter une illustration] -->
 
 ### Format effectif
 
@@ -75,4 +76,4 @@ il l'ajoute à sa table en indiquant comme interface, celle le connectant avec c
 De plus lorsqu'un routeur reçoit une ligne de la table de routage de son voisin dont la destination est incluse dans sa table, mais
 avec une distance plus grande, cela signifie qu'en passant par ce voisin le chemin sera plus court (ou égal) pour atteindre sa destination.
 Le routeur modifie sa table de routage pour faire passer les messages à destination de ce destinateur par ce voisin.
-[ajouter deux exemples]
+<!-- [ajouter deux exemples] -->
