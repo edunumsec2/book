@@ -41,14 +41,15 @@ L'exemple suivant montre comment trouver la representation binaire, d'un tuple d
 ```{codeplay}
 addr = (128, 233, 53, 23)
 
+print(*addr, sep='.')
 for i in addr:
-    print(bin(i), end=' . ')
+    print(f'{i:08b}.', end='')
 ```
 
-Le code suivant montre la transformation d'un tuple de 4 nombres binaires en nombre décimaux, séparés par un point (`.`)
+Le code suivant montre la transformation d'un tuple de 4 nombres binaires en nombres décimaux, séparés par un point (`.`)
 
 ```{codeplay}
-addr = (0b1111_1111, 0b1_1111, 0b11, 0b0000)
+addr = (0b1111_1111, 0b0001_1111, 0b0000_0011, 0b0000_0000)
 
 for i in addr:
     print(i, end='.')
@@ -60,14 +61,20 @@ Lesquelles des adresses suivantes sont des adresses IP valides:
 Pour répondre à une telle question automatiquement nous pourrions ajouter des testes comme celui-ci.
 
 ```{codeplay}
-addr = (0b1111_1111, 0b1_1111, 0b11, 0b1_1111_1111)
+addresses = ((240, 264, 23, 2),
+             (123, 8, 12, 2, 34), 
+             (123, 23, 2),
+             (205, 233, 12, 23))
 
-for i in addr:
-    print(i, end='.')
-    if i > 255:
-        print()
-        print('erreur:', i, 'supérieur à 255')
-        break
+for a in addresses:
+    print(*a, sep='.', end='\t')
+    if len(a) != 4:
+        print('erreur: nombre de composants incorrect')
+        continue
+    if max(a) > 255:
+        print('erreur: composant supérieur à 255')
+        continue
+    print('addresse IP valide')
 ```
 
 ### Version 6 (IPv6)
