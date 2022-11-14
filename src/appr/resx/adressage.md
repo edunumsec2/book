@@ -52,6 +52,13 @@ Exercices:
 - Parmi les adresses suivantes, indiquer lesquelles sont au format IPv4, lesquelles sont IPv6 et lesquelles ne sont pas valides. 
 
 
+
+```{togofurther} Blocs et Masques
+
+
+````
+
+
 ### Blocs et masques ? -> TODO dans "pour aller plus loin"
 
 
