@@ -55,9 +55,9 @@ for i in addr:
     print(i, end='.')
 ```
 
-Question:
+```{exercise}
 Lesquelles des adresses suivantes sont des adresses IP valides:
-
+````
 Pour répondre à une telle question automatiquement nous pourrions ajouter des testes comme celui-ci.
 
 ```{codeplay}
@@ -87,11 +87,16 @@ entre 0000 et FFFF. Chaque digit de 0 à F représente ainsi 4 bits.
 Actuellement, les deux types d'adresses IPv6 et IPv4 coexistent sur Internet, la version IPv4 étant encore largement
 plus répandue. Une adresse IP peut donc soit être sur 32 bits soit sur 128 bits.
 
-Exercices:
+```{exercise}
+Parmi les adresses suivantes, indiquer lesquelles sont au format IPv4, lesquelles sont IPv6 et lesquelles ne sont pas valides.
 
-- Parmi les adresses suivantes, indiquer lesquelles sont au format IPv4, lesquelles sont IPv6 et lesquelles ne sont pas valides.
+````
 
-<!-- ### Blocs et masques ? -> TODO dans "pour aller plus loin" -->
+```{togofurther} Blocs et Masques
+
+Les adresse IP sont structurées hérarchiquement
+
+````
 
 ### Gouvernance
 
@@ -108,13 +113,14 @@ avec le reste d'Internet. Ainsi, ces adresses peuvent être utilisées au sein d
 ou pour faire communiquer différents appareils connectés (lampes, télévision, four, télécommande) au sein d'une
 maison.
 
-### Exercices
+```{exercise}
 
 - Combien y aurait-il eu d'adresses IP possibles s'il avait été décidé de l’encoder sur 24 bits?
 - Déterminez à l'aide du site xxx à quel continent sont allouées les adresses IP suivantes:
 - Déterminez l'entité suisse qui possède le plus d'adresses IP
 - Donnez la représentation binaire de l'adresse IP `y.y.y.y`
 - Combien y a-t-il d'adresses IP de type `192.168.x.x` ?
+````
 
 ### Adressage statique et dynamique
 
