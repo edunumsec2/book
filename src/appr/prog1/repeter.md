@@ -48,13 +48,24 @@ Transformez le rectangle en triangle.
 from turtle import *
 
 for i in range(4):
-    write(i)
     forward(100)
     left(90)
 ```
 
-Que représente `i` dans l'expression `for i in range(n)` ?
+## Variable d'itération `i`
+
+Que représente `i` dans l'expression `for i in range(n)` ?  
 C'est ce qu'on appelle une **variable d'itération**. Cette variable commence à 0 et augmente de 1 à chaque répétition jusqu'à $n-1$. Pour visualiser cette valeur nous pouvons l'afficher dans le dessin avec l'instruction `write(i)`.
+
+```{codeplay}
+:file: for2.py
+from turtle import *
+
+for i in range(4):
+    write(i)
+    forward(100)
+    left(90)
+```
 
 ## Polygone régulier
 
@@ -104,11 +115,11 @@ Pour dessiner un escalier, il faut simplement répéter dans une boucle le dessi
 from turtle import *
 
 for i in range(5):
+    write(i)
     forward(20)
     left(90)
     forward(20)
     right(90)
-    write(i)
 
 forward(100)
 ```

@@ -18,136 +18,78 @@ En Python, `def` est un raccourci pour
 
 ## Paramétrer la fonction
 
-Jusqu'à maintenant, notre carré a toujours eu la même taille.
-Il serait très utile que notre nouvelle commande `carre(longueur)` puisse dessiner des carrés de tailles différentes.
-C'est possible en spécifiant un paramètre pour la fonction.
-Le paramètre de la fonction est une variable locale qui est utilisée dans sa définition.
+Jusqu'à maintenant, notre rectangle était d'une taille fixe.
+Il serait très utile que notre nouvelle commande `rectangle(a, b)` puisse dessiner des rectangles de largeur et hauteur variable.
+C'est possible en spécifiant des **paramètres** pour la fonction.
+Un paramètre de fonction est une variable locale qui peut être utilisée dans sa définition.
 
-Lors de l'appel de la fonction, nous donnons une valeur à la fonction.
-Cette valeur placée entre parenthèses s'appelle l'**argument** de la fonction.
-Ici, la fonction `carre()` est appelée successivement avec les valeurs 50, 100 et 150.
+Lors de l'appel de la fonction, nous donnons des valeurs à la fonction.
+Ces valeurs sont les **argument** de la fonction.
 
 ```{codeplay}
-:file: def1.py
 from turtle import *
 
-def carre(longueur):
-    for i in range(4):
-        forward(longueur)
+def rectangle(a, b):    # paramètres (a, b)
+    for x in (a, b, a, b):
+        forward(x)
         left(90)
         
-carre(50)
-carre(100)
-carre(150)
+rectangle(50, 100)      # arguments (50, 100)
+rectangle(200, 80)
+rectangle(70, 70)
 ```
 
-Une fonction peut être appelée avec une valeur numérique directe telle que `carre(50)`, mais aussi avec une valeur numérique donnée par une variable telle que `carre(x)`, obtenu par une variable d'itération sur une plage numérique donnée avec `range(start, stop, step)`.
+La fonction `losange(a, angle)` a comme paramètre la longueur et le premier angle. Le deuxième anlge du losange est calculé.
 
 ```{codeplay}
-:file: def2.py
 from turtle import *
 
-def carre(a):
-    for i in range(4):
+def losange(a, angle):      # paramètres (a, angle)
+    for i in range(2):
         forward(a)
-        left(90)
+        left(angle)
+        forward(a)
+        left(180-angle)
 
-for x in range(30, 180, 30):
-    carre(x)
+losange(100, 60)            # arguments (100, 60)
+losange(120, 120)
+losange(150, 70)
 ```
 
-Au lieu d'imbriquer les carrés, nous pouvons aussi les dessiner les uns après les autres.
-Le terme technique est de les **juxtaposer**.
+La fonction `polygone(a, n)` a comme paramètre la longueur du côté et le nombre de sommets.
 
 ```{codeplay}
-:file: def3.py
 from turtle import *
 
-def carre(a):
-    down()
-    for i in range(4):
+def polygone(a, n):     # paramètres (a, n)
+    for i in range(n):
         forward(a)
-        left(90)
-    up()
+        left(360/n)
 
-up()
-backward(250)
-for x in range(30, 180, 30):
-    carre(x)
-    forward(x)
+polygone(100, 3)        # arguments (100, 3)
+polygone(100, 4)
+polygone(100, 5)
+polygone(30, 20)
 ```
-
-**Exercice** : Écartez les carrés de 20 pixels.
 
 ## Dessiner une maison
 
 Nous revenons à notre fonction pour dessiner une maison.
 
 ```{codeplay}
-:file: def4.py
 from turtle import *
 
-def maison():
-    forward (70)
-    for a in (90, 45, 90, 45):
-        left(a)
-        forward(50)
+def maison(a):
+    forward (1.41 * a)
+    for angle in (90, 45, 90, 45):
+        left(angle)
+        forward(a)
     left(90)
 
 backward(200)        
-maison()
+maison(50)
 forward(100)
-maison()
-```
-
-## Position de la maison
-
-Maintenant nous modifions la fonction pour inclure la position de la maison comme paramètre.
-
-```{codeplay}
-:file: def5.py
-from turtle import *
-getscreen().bgcolor('lightgreen')
-up()
-
-def maison(p):
-    goto(p)
-    down()
-    forward (70)
-    for a in (90, 45, 90, 45):
-        left(a)
-        forward(50)
-    left(90)
-    up()
-
-maison((0, -80))
-maison((-200, 20))
-maison((120, 40))
-```
-
-## Taille de la maison
-
-Maintenant nous modifions la fonction pour inclure non seulement la position, mais aussi la taille de la maison comme paramètres.
-
-```{codeplay}
-:file: def6.py
-from turtle import *
-getscreen().bgcolor('lightgreen')
-up()
-
-def maison(p, d):
-    goto(p)
-    down()
-    forward (1.4 * d)
-    for a in (90, 45, 90, 45):
-        left(a)
-        forward(d)
-    left(90)
-    up()
-
-maison((-20, -80), 70)
-maison((-200, 20), 50)
-maison((120, 40), 40)
+maison(70)
 ```
 
 ## Couleur de la maison
@@ -155,27 +97,26 @@ maison((120, 40), 40)
 Maintenant nous modifions la fonction pour inclure non seulement la position, la taille, mais également la couleur de la maison comme paramètres.
 
 ```{codeplay}
-:file: def7.py
-from turtle import *
 getscreen().bgcolor('lightgreen')
 up()
 
-def maison(p, d, couleur):
-    goto(p)
+def maison(a, couleur):
     down()
     fillcolor(couleur)
     begin_fill()
-    forward (1.4 * d)
-    for a in (90, 45, 90, 45):
-        left(a)
-        forward(d)
+    forward (1.4 * a)
+    for angle in (90, 45, 90, 45):
+        left(angle)
+        forward(a)
     left(90)
     end_fill()
     up()
 
-maison((-20, -80), 70, 'lightblue')
-maison((-200, 20), 50, 'yellow')
-maison((120, 40), 40, 'pink')
+maison(70, 'lightblue')
+goto(120, 30)
+maison(50, 'yellow')
+goto(-180, -80)
+maison(100, 'pink')
 ```
 
 ## Maison avec porte
@@ -262,6 +203,40 @@ maison((-200, 20), col1='lime')
 maison((120, 40), col2='red')
 maison((-170, -140), d=80)
 ```
+
+## Formes avec cercles
+
+```{codeplay}
+from turtle import *
+
+def coeur(r):
+    circle(r, 225)
+    forward(2.4 * r)
+    left(90)
+    forward(2.4 * r)
+    circle(r, 225)
+    left(180)
+
+left(90)
+coeur(70)
+coeur(50)
+```
+
+```{codeplay}
+from turtle import *
+
+def infini(r):
+    down()
+    forward(r)
+    circle(r, 270)
+    forward(2*r)
+    circle(-r, 270)
+    forward(r)
+    up()
+
+infini(80)
+infini(50)
+````
 
 ## Le coronavirus
 

@@ -1,11 +1,11 @@
 (prog1.parcourir)=
 # Parcourir - `tuple`
 
-Dans ce chapitre, nous allons découvrir le concept très important de la séquence. Ce concept s'appelle `tuple` en langage Python ou **n-uplet** en français. Une séquence est un regroupement d'objets, par exemple de couleurs, de distances ou d'angles. Ce qui est très intéressant, c'est que nous pouvons parcourir les valeurs d'une séquence l'une après l'autre avec une boucle. Nous allons voir que :
+Dans ce chapitre, nous allons découvrir le concept très important de la séquence. Ce concept s'appelle `tuple` en langage Python ou **n-uplet** en français. Un tuple est une séquence d'objets, par exemple de couleurs, de distances ou d'angles. Nous pouvons parcourir les valeurs d'un tuple une après l'autre avec une boucle `for`. Nous allons voir que :
 
-- la structure `(10, 20, 10)` représente une séquence (`tuple`),
-- dans la boucle `for x in (10, 20, 10):` la variable `x` parcourt des nombres,
-- dans la boucle `for x in ('red', 'blue'):` la variable `x` parcourt des couleurs.
+- le tuple `(10, 20, 30)` représente une séquence de valeurs,
+- dans la boucle `for d in (10, 20, 30):` la variable `d` parcourt des nombres,
+- dans la boucle `for c in ('red', 'blue', 'green'):` la variable `c` parcourt des couleurs.
 
 ```{question}
 En informatique, un `tuple` est 
@@ -16,26 +16,45 @@ En informatique, un `tuple` est
 {f}`une chaîne de caractères`
 ```
 
-Auparavant nous avons vu la boucle `for` comme une simple répétition. Nous avons répété x fois exactement les mêmes instructions pour chaque tour. Dans ce chapitre la boucle `for` est différente dans le sens que nous parcourons une séquence et nous utilisons une valeur différente pour chaque tour. En Python, cette idée de *parcourir une séquence* et d'utiliser une *valeur successive* à chaque tour, est un concept fondamental.
+Auparavant nous avons vu la boucle `for` comme une simple répétition. Dans ce chapitre la boucle `for` est différente dans le sens que nous parcourons une séquence et nous utilisons une valeur différente pour chaque tour. En Python, cette idée de *parcourir une séquence* et d'utiliser une *valeur successive* à chaque tour, est un concept fondamental.
+
+## Variable d'itération
+
+Dans des boucles d'itération, nous allons utiliser des variables d'une seule lettre.
+
+- `a` pour un angle, ou une longueur
+- `c` pour un caractère, ou une couleur
+- `d` pour un diamètre, ou une distance
+- `i` pour un entier (indice)
+- `r` pour un rayon
+
+```{question}
+La variable `i` désigne normalement
+
+{f}`une longueur`  
+{f}`un caractère`  
+{v}`un entier`  
+{f}`une coordonnée`
+```
 
 ## Parcourir des couleurs
 
-Pour dessiner de multiples couleurs, nous pouvons définir une séquence (tuple) de couleurs et parcourir cette séquence.
-En Python, une séquence est délimitée par des parenthèses `()` et les éléments sont séparés par une virgule.
+Pour dessiner de multiples couleurs, nous pouvons définir un tuple (séquence) de couleurs et parcourir cette séquence.
+En Python, un tuple est délimité par des parenthèses `()` et les éléments sont séparés par une virgule.
 
-Dans l'expression `for x in (...)`, la variable `x` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `x` prendra successivement les valeurs : `'yellow'`, `'cyan'`, `'red'`, etc. Le bloc indenté qui suit la ligne `for` sera répété autant de fois que la séquence contient d'éléments.
+Dans l'expression `for c in (...)`, la variable `c` va prendre à tour de rôle les valeurs dans la séquence. Dans l'exemple ci-dessous, `c` prendra successivement les valeurs : `'yellow'`, `'cyan'`, `'orange'`, etc. Le bloc indenté qui suit la ligne `for` sera exécuté autant de fois que la séquence contient d'éléments.
 
-La fonction `write(x)` utilise l'option d'alignement `align='center'` pour centrer le nom de la couleur.
+La fonction `dot(80, c)` afficher un disque de diamètre 80 et de couleur `c`.  
+La fonction `write(c)` affiche le nom de la couleur `c`.
 
 ```{codeplay}
-:file: tuple1.py
 from turtle import *
 up()
 
 backward(200)
-for x in ('yellow', 'cyan', 'red', 'magenta', 'pink', 'lime'):
-    dot(80, x)
-    write(x, align='center')
+for c in ('yellow', 'cyan', 'orange', 'pink', 'lime'):
+    dot(80, c)
+    write(c)
     forward(80)
 ```
 
@@ -45,94 +64,69 @@ for x in ('yellow', 'cyan', 'red', 'magenta', 'pink', 'lime'):
 
 Nous pouvons également parcourir une séquence de nombres et ainsi, spécifier une série de diamètres de disques.
 
+La fonction `dot(d, 'pink')` afficher un disque de diamètre `d` de couleur rose.  
+La fonction `write(d)` affiche la distance `d`.
+
 ```{codeplay}
-:file: tuple2.py
 from turtle import *
 up()
 
 backward(220)
-for x in (20, 40, 60, 80, 100):
-    dot(x, 'pink')
-    write(x, align='center')
-    forward(x + 40)
+for d in (40, 60, 80, 60, 40):
+    dot(d, 'pink')
+    write(d)
+    forward(100)
 ```
 
 **Exercice** : Modifiez la séquence des diamètres.
 
 ## Parcourir des distances
 
-Dans le chapitre [Définir](prog1.definir) nous avons vu les fonctions `batiment()` et `porte()` avec 8 lignes pour chaque définition de fonction.
+Dans le chapitre [Définir](prog1.definir) nous avons vu les fonctions `bâtiment()` et `porte()` avec 8 lignes pour chaque définition de fonction qui dessine un rectangle.
+
+À l'aide d'une séquence qui contient ces 4 distances, nous pouvons écrire ces fonctions de manière bien plus compacte. Pour illustrer les distances parcourues, nous l'affichons à chaque itération avec `write(a)`.
 
 ```{codeplay}
-:file: def3.py
 from turtle import *
 
 def batiment():
-    forward(200)
-    left(90)
-    forward(100)
-    left(90)
-    forward(200)
-    left(90)
-    forward(100)
-    left(90)
-
-def porte():
-    forward(30)
-    left(90)
-    forward(50)
-    left(90)
-    forward(30)
-    left(90)
-    forward(50)
-    left(90)
-
-batiment()
-forward(30)
-porte()
-```
-
-À l'aide d'une séquence, nous pouvons écrire ces fonctions de manière bien plus compacte.
-
-```{codeplay}
-:file: tuple3.py
-from turtle import *
-
-def batiment():
-    for x in (200, 100, 200, 100):
-        forward(x)
+    for a in (200, 100, 200, 100):
+        write(a)
+        forward(a)
         left(90)
 
 def porte():
-    for x in (30, 50, 30, 50):
-        forward(x)
+    for b in (30, 50, 30, 50):
+        write(b)
+        forward(b)
         left(90)
 
+bâtiment()
+forward(40)
 porte()
-forward(50)
-batiment()
 ```
 
-**Exercice** : Placez la porte à l'intérieur du bâtiment et coloriez-la en rouge.
+**Exercice** : Modifiez la taille du bâtiment et de la porte.
 
 ## Parcourir des angles
 
-Nous allons reprendre notre fonction `maison()` et, à l'aide d'une séquence, nous pouvons l'écrire de manière bien plus compacte. Cette fois-ci, la séquence représente des angles, donc nous nommons notre variable `a` pour nous rappeler que c'est un angle.
+Nous allons reprendre notre fonction `maison()` et, à l'aide d'une séquence, nous pouvons l'écrire de manière bien plus compacte. Cette fois-ci, la séquence représente des angles, donc nous nommons notre variable `angle` pour nous en rappeler.
+Pour illustrer le parcours des angles, nous les affichons à chaque itération avec `write(angle)`.
 
 ```{codeplay}
-:file: tuple4.py
 from turtle import *
 
 def maison():
     forward (70)
-    for a in (90, 45, 90, 45):
-        left(a)
+    for angle in (90, 45, 90, 45):
+        write(angle)
+        left(angle)
         forward(50)
     left(90)
 
 backward(200)        
 maison()
-forward(100)
+forward(150)
 maison()
 ```
 
@@ -140,7 +134,7 @@ maison()
 
 ## Maisons en couleurs
 
-Dans l'exemple nous allons d'abord parcourir une séquence d'angles avec une variable d'itération `a` pour dessiner une maison.
+Dans l'exemple nous allons d'abord parcourir une séquence d'angles avec une variable d'itération `angle` pour dessiner une maison.
 
 Ensuite, nous allons parcourir une séquence de couleurs avec une variable `c` pour dessiner des maisons de différentes couleurs.
 
@@ -150,8 +144,8 @@ from turtle import *
 
 def maison():
     forward (70)
-    for a in (90, 45, 90, 45):
-        left(a)
+    for angle in (90, 45, 90, 45):
+        left(angle)
         forward(50)
     left(90)
 
@@ -182,8 +176,8 @@ forward(167)
 right(90)
 width(67)
 
-for x in ('red', 'orange', 'yellow', 'green', 'blue', 'purple'):
-    pencolor(x)
+for c in ('red', 'orange', 'yellow', 'green', 'blue', 'purple'):
+    pencolor(c)
     forward(600)
     backward(600)
     right(90)
@@ -203,9 +197,9 @@ getscreen().bgcolor('lightgreen')
 
 def losange():
     begin_fill()
-    for a in (60, 120, 60, 120):
+    for angle in (60, 120, 60, 120):
         forward(100)
-        left(a)
+        left(angle)
     end_fill()
 
 for c in ('pink', 'red', 'pink', 'red', 'pink'):
@@ -218,7 +212,7 @@ for c in ('pink', 'red', 'pink', 'red', 'pink'):
 
 ## Smiley
 
-Dans cet exemple nous allons parcourir différentes diamètres de la bouche à l'aide d'une variable que nous appelons `d`. Voici quatre smileys avec différentes formes de bouche.
+Dans cet exemple nous allons parcourir différents diamètres de la bouche à l'aide d'une variable que nous appelons `d`. Voici quatre smileys avec différentes formes de bouche.
 
 **Exercice** : Faites varier un autre paramètre, par exemple la distance des yeux, ou la taille d'un œil.
 
@@ -258,9 +252,9 @@ Avec trois losanges, nous pouvons dessiner un cube en 3D.
 from turtle import *
 
 def losange():
-    for a in (120, 60, 120, 60):
+    for angle in (120, 60, 120, 60):
         forward(100)
-        left(a)
+        left(angle)
         
 for i in range(3):
     losange()
@@ -276,9 +270,9 @@ Nous choisissons des couleurs claires pour les surfaces du haut, et des couleurs
 from turtle import *
 
 def losange():
-    for a in (120, 60, 120, 60):
+    for angle in (120, 60, 120, 60):
         forward(100)
-        left(a)
+        left(angle)
 
 def cube():      
     for c in ('pink', 'violet', 'darkviolet'):
@@ -301,9 +295,9 @@ Un pavage du plan est un ensemble de portions du plan, par exemple des polygones
 from turtle import *
 
 def losange():
-    for a in (120, 60, 120, 60):
+    for angle in (120, 60, 120, 60):
         forward(100)
-        left(a)
+        left(angle)
         
 def cube():
     for c in ('pink', 'violet', 'darkviolet'):
@@ -573,14 +567,32 @@ hexagone()
 ```{codeplay}
 :file: rubik.py
 from turtle import *
+a = 40
 
 def losange():
-    for a in (120, 60, 120, 60):
-        forward(50)
-        left(a)
+    begin_fill()
+    for angle in (120, 60, 120, 60):
+        forward(a)
+        left(angle)
+    end_fill()
+    forward(a)
+    
+def next():
+    backward(3*a)
+    left(120)
+    forward(a)
+    right(120)
 
+surface = (('red', 'blue', 'orange'),
+           ('white', 'yellow', 'red'),
+           ('blue', 'white', 'green'))
 
-losange()
+left(30)
+for ligne in surface:
+    for c in ligne:
+        fillcolor(c)
+        losange()
+    next()
 ```
 
 ### Tetris

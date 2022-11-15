@@ -1,5 +1,5 @@
 (prog1.write)=
-# Typographier - `write()`
+# Typographier* - `write()`
 
 Dans ce chapitre, nous allons voir la **composition typographique** d'un texte dans un contexte graphique. Nous allons découvrir sa taille, sa couleur, sa police et son alignement. Nous allons voir que :
 

@@ -20,11 +20,11 @@ repeter
 cercler
 memoriser
 parcourir
-goto
-write
-
-iterer
+positionner
 parametrer
+
+write
+iterer
 randomiser
 
 questionner
