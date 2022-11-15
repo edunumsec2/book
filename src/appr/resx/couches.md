@@ -61,8 +61,9 @@ Le premier RFC, RFC1 a été formulé en 1969 pour proposer
 un protocole de communication sur Arpanet, le projet de recherche militaire américain qui a donné naissance à
 Internet. Toutes les technologies d'Internet décrites ci-dessus ont été proposées par le biais de RFC, par exemple IPv4, RIP, HTML, etc.  
 
-Exercice: Chercher et lire le RFC 8962, en particulier l'abstract et les parties 7. et 8. De quoi s'agit-il?
-
+```{micro}
+Chercher et lire le RFC 8962, en particulier l'abstract et les parties 7. et 8. De quoi s'agit-il?
+````
 ## La neutralité d'Internet
 
 ## L'universalité et la décentralisation d'Internet en question

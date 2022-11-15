@@ -19,8 +19,9 @@ Switch ou d'un intermédiaire.
 
 <!-- Ajouter une illustration de la gestion des noms de domaines?  -->
 
-Exercice: déterminer à l'aide du site web <https://www.nic.ch/whois/> qui a enregistré le nom de domaine champignons.ch.
-
+```{micro}
+Déterminer à l'aide du site web <https://www.nic.ch/whois/> qui a enregistré le nom de domaine champignons.ch.
+````
 ## Les adresses IP
 
 ### Version 4 (IPv4)
@@ -131,13 +132,17 @@ joignable, cela devient problématique, car les autres ne sauront pas comment no
 Ainsi les serveurs (les sites web, par exemple), qui doivent être joignables en tout temps ont généralement une adresse IP statique, alors que les machines des utilisateurs et utilisatrices ont souvent une adresse IP dynamique. Lorsqu'on fait un
 abonnement Internet, le fournisseur d'accès propose d'habitude une adresse IP dynamique (cela lui permet d'économiser les adresses IP en sa possession), mais il est également possible, en payant un peu plus, d'obtenir une adresse IP statique.
 
-Exercice:
 
-- Déterminez si votre machine a une adresse IP statique ou dynamique
-- Vous souhaitez entrer en communication avec votre ami-e, mais vous avez les deux des adresses IP dynamiques. Quel
+```{micro}
+Déterminez si votre machine a une adresse IP statique ou dynamique
+````
+```{Exercise}
+1. Vous souhaitez entrer en communication avec votre ami-e, mais vous avez les deux des adresses IP dynamiques. Quel
 moyen pourriez-vous imaginer pour que vous puissiez vous joindre.
-- En tant que propriétaire d'un site web, vous avez accès aux adresses IP des machines qui visitent votre site. Que pouvez-vous en déduire ?
 
+2. En tant que propriétaire d'un site web, vous avez accès aux adresses IP des machines qui visitent votre site. Pouvez-vous dès lors identifier une même personne
+qui revient plusieurs fois sur votre site. 
+````
 ### Système de noms de domaine
 
 Pour récapituler ce qui a été vu précédemment, les humains utilisent les noms de domaines pour les machines, alors que les machines, elles, utilisent les adresses IP. Afin que ces deux modes de recensement des machines soient cohérents entre eux, il est nécessaire de disposer d'un annuaire qui fera correspondre les noms de domaines aux adresses IP. Ceci est analogue aux annuaires téléphoniques qui permettent de faire correspondre le nom des personnes que l'on veut atteindre (qui serait équivalent au nom de domaine) au numéro de téléphone (qui est analogue à l'adresse IP). Cet annuaire est ce qu'on appelle le *système de noms de domaine* (Domain Name System ou DNS selon l'appellation anglaise). Au début d'Internet, il s'agissait simplement d'un fichier texte librement accessible qui listait le nom de domaines et les adresses IP correspondantes. Ce fichier était maintenu à la main. Maintenant, il s'agit de machines, les serveurs DNS dans le réseau auprès desquelles il est possible d'obtenir l'adresse IP correspondante à un nom de domaine. Ces machines sont aussi organisées hiérarchiquement de telle sorte que chaque serveur DNS ne stocke que les noms de domaines correspondant à une sous partie du réseau.

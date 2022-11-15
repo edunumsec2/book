@@ -37,8 +37,8 @@ class ToGoFurther(SphinxDirective):
         admonition = nodes.admonition("")
 
         title ="Pour aller plus loin"
-        #if len(self.arguments) > 0: 
-        #    title += ": " + self.arguments[0]
+        if len(self.arguments) > 0: 
+            title += ": " + self.arguments[0]
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
@@ -50,12 +50,38 @@ class ToGoFurther(SphinxDirective):
 
         return [admonition]
 
+class MicroActivity(SphinxDirective):
+    required_arguments = 0
+    optional_arguments = 1
+    final_argument_whitespace = True
+    has_content = True
+
+    def run(self):
+        self.assert_has_content()
+
+        admonition = nodes.admonition("")
+
+        title ="Micro-activité"
+        if len(self.arguments) > 0: 
+            title += ": " + self.arguments[0]
+
+        textnodes, _ = self.state.inline_text(title, self.lineno)
+        label = nodes.title(title, *textnodes)
+        admonition += label
+
+        content = nodes.container("", is_div=True, classes=["micro-content"])
+        self.state.nested_parse(self.content, self.content_offset, content)
+        admonition += content
+
+        return [admonition]
+
 
 
 
 def setup(app):
     app.add_directive("exercise", Exercise)
     app.add_directive("togofurther", ToGoFurther)
+    app.add_directive("micro", MicroActivity)
     # static_dir = os.path.join(os.path.dirname(__file__), "static")
     # app.connect("builder-inited", (lambda app: app.config.html_static_path.append(static_dir)))
     # app.add_js_file("exercise.js")
