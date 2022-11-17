@@ -4,8 +4,7 @@
 Dans ce chapitre on s'intéresse à la manière dont un {glo}`ordinateur|ordinateur` représente l'information afin de pouvoir la traiter automatiquement.   
 
 
-````{admonition} Le saviez-vous ?
-:class: hint
+````{important} Le saviez-vous ?
 Le mot **informatique** est la concaténation de «information» et «automatique».
 ````
 
