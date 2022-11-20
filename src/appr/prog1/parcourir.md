@@ -101,7 +101,7 @@ def porte():
         forward(b)
         left(90)
 
-bâtiment()
+batiment()
 forward(40)
 porte()
 ```
@@ -159,6 +159,36 @@ for c in ('red', 'yellow', 'pink', 'lightblue', 'lightgreen'):
 ```
 
 **Exercice** : Changez les couleurs des maisons.
+
+## Tetris
+
+Utilisant un tuple, nous pouvons décrire une forme en une seule ligne.
+
+```{codeplay}
+from turtle import *
+
+a = 20
+I = (90, 0, 0, 0, 90, 90, 0, 0, 0, 90), 'cyan'
+O = (0, 90, 0, 90, 0, 90, 0, 90), 'yellow'
+T = (90, -90, 90, 90, 0, 0, 90 ,90, -90, 90), 'magenta'
+J = (0, 90, 0, 0, 90, 90 ,0 ,-90, 90, 90), 'blue'
+L = (0, 90, 90, -90, 0, 90, 90, 0, 0, 90), 'orange'
+S = (0, 90, -90, 90, 90, 0, 90, -90, 90, 90), 'lime'
+Z = (0, 90, 90, -90, 90, 0, 90, 90, -90, 90), 'red'
+
+up()
+backward(280)
+for forme, c in (I, O, T, J, L, S, Z):
+    fillcolor(c)
+    down()
+    begin_fill()
+    for angle in forme:
+        forward(a)
+        left(angle)
+    end_fill()
+    up()
+    forward(4*a)
+```
 
 ## Drapeau LGBT
 

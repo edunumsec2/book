@@ -24,7 +24,7 @@ C'est possible en spécifiant des **paramètres** pour la fonction.
 Un paramètre de fonction est une variable locale qui peut être utilisée dans sa définition.
 
 Lors de l'appel de la fonction, nous donnons des valeurs à la fonction.
-Ces valeurs sont les **argument** de la fonction.
+Ces valeurs sont les **arguments** de la fonction.
 
 ```{codeplay}
 from turtle import *
@@ -97,6 +97,7 @@ maison(70)
 Maintenant nous modifions la fonction pour inclure non seulement la position, la taille, mais également la couleur de la maison comme paramètres.
 
 ```{codeplay}
+from turtle import *
 getscreen().bgcolor('lightgreen')
 up()
 
@@ -163,7 +164,13 @@ maison((120, 40), 40, 'pink', 'violet')
 
 ## Valeurs par défaut
 
-Nous pouvons spécifier des valeurs par défaut.
+Nous pouvons spécifier des valeurs par défaut. Pour ceci nous ajoutons la valeur par défaut dans la liste de paramètres.
+
+    def maison(p, d=50, col1='yellow', col2='blue'):
+
+Il a maintenant différentes façons à appeler la fonction. Tous les paramètres qui ont une valeur par défaut sont optionnels. Au minimum nous devons spécifier les paramètres sans valeur par défaut.
+
+    maison((-20, -80))
 
 ```{codeplay}
 :file: def9.py
@@ -238,135 +245,197 @@ infini(80)
 infini(50)
 ````
 
-## Le coronavirus
+## Rectangle
 
-Le nom « coronavirus » vient du latin et signifie « virus à couronne ». Son apparence sous un microscope électronique montre une frange de grandes projections bulbeuses qui évoquent une couronne solaire.
+La fonction `rectangle(a, b, w=1, pen='black', fill=None)` dessine un rectangle a x b.
+Elle possède les 3 paramètres optionnels (valeur par défaut en parenthèse):
 
-Dans la fonction `corona()` les paramètres sont :
+- `w` -- épaisseur de ligne (`1`)
+- `pen` -- couleur de ligne (`'black'`)
+- `fill` -- couleur de remplissage (`'white'`)
 
-- la distance entre projections `a`
-- la longueur de la projection `d`
-- le nombre de projections `n`
+Le rectangle est dessiné dans la direction actuelle de la tortue. Cette orientation peut être changée avec `seth()`. La tortue se positionne de l'autre côté du point de départ. Ceci permet d'enchainer à dessiner des rectangles.
 
 ```{codeplay}
-:file: def10.py
 from turtle import *
-getscreen().bgcolor('azure')
-up()
 
-def corona(a=10, d=20, n=24):
+def rectangle(a, b, w=1, pen='black', fill='white'):
     down()
-    for i in range(n):
-        left(90  - 180/n)
-        forward(d)
-        dot()
-        backward(d)
-        right(90 + 180/n)
-        forward(a)
+    width(w)
+    pencolor(pen)
+    fillcolor(fill)
+    begin_fill()
+    for x in (a, b, a, b):
+        forward(x)
+        left(90)
+    end_fill()
     up()
+    forward(a)
 
-corona()
+rectangle(40, 30, 3, 'blue', 'lime')
+forward(10)
+rectangle(40, 30, 1, 'orange', 'orange')
+forward(10)
+rectangle(30, 80, fill='yellow')
+seth(45)
+rectangle(40, 30, 5, 'magenta')
+seth(0)
+rectangle(80, 40, 1, 'red', 'pink')
 ```
 
-**Exercice** : Ajoutez 3 autres virus avec d'autres valeurs pour `a`, `d` et `n`.
+## Pixelart
 
-## Squid Game logo
+Nous pouvons utiliser la fonction `rectangle()` pour dessiner du Pixelart.
+Pour ceci nous utilisons deux tuples:
 
-Squid Game, ou Le Jeu du calmar, est une série télévisée dramatique de survie sud-coréenne de 9 épisodes, diffusée dans le monde entier en 2021 sur Netflix.
-La série raconte l'histoire d'un groupe de personnes, fortement endettées, voire ruinées, qui risquent leur vie dans un jeu de survie mystérieux avec comme récompense une somme énorme.
+- `palette` -- un tuple 1D contenant les couleurs (la palette des couleurs)
+- `table` -- un tuple 2D avec les indices des couleurs, ligne par ligne
 
-Nous définissons une fonction `polygone(a, n)` pour dessiner le cercle, le triangle et le carré du logo.
+Les paramètres suivants sont passés à la fonction `rectangle()`:
+
+- `a` -- la taille du pixel (`20`)
+- `w` -- épaisseur de ligne (`1`)
+- `pen` -- couleur de ligne (`'black'`)
 
 ```{codeplay}
-:file: def11.py
 from turtle import *
-getscreen().bgcolor('peru')
-width(5)
-up()
+speed(0)
 
-def polygone(a, n):
+def rectangle(a, b, w=1, pen='black', fill=None):
+    """Dessine un rectangle de taille a x b."""
+    if pen:
+        down()
+        width(w)
+        pencolor(pen)
+    if fill:
+        fillcolor(fill)
+        begin_fill()
+    for x in (a, b, a, b):
+        forward(x)
+        left(90)
+    if fill:
+        end_fill()
+    up()
+    forward(a)
+===
+def pixelart(table, palette, a=20, w=1, pen='black'):
+    for line in table:
+        for i in line:
+            rectangle(a, a, w=w, pen=pen, fill=palette[i])
+        backward(len(line)*a)
+        sety(ycor()-a)
+
+palette = (None, 'black', 'yellow', 'white', 'red', )
+pikachu = ((1, 2, 2, 1),
+            (3, 4, 2, 3),
+            (2, 2, 2, 2),
+            (2, 2, 2, 3))
+
+dot(1000, 'whitesmoke')
+up()
+pixelart(pikachu, palette)
+goto(-180, 0)
+pixelart(pikachu, palette, a=30, w=0, pen=None)
+goto(100, 0)
+pixelart(pikachu, (None, 'green', 'lime', 'cyan', 'pink'), 25, 3, 'red')
+```
+
+## Polygone
+
+La fonction `polygone()` dessine un polygone régulier avec n sommets. Les arguments de la fonction sont :
+
+- `a` -- longueur du segment
+- `n` -- nombre de segments
+- `m` -- paramètre pour polygone étoilé (>1)
+
+La fonction `polygone()` permet également de dessiner un polygone étoilé, en choisissant un paramètre `m` >1.
+
+```{codeplay}
+from turtle import *
+
+def polygon(a, n, m=1, w=1, pen='black', fill='white'):
     down()
+    pencolor(pen)
+    width(w)
+    fillcolor(fill)
+    begin_fill()
     for i in range(n):
         forward(a)
-        left(360/n)
-    up()
+        left(m*360/n)
+    end_fill()
+    forward(a)
+    up()  
+
+up()
+goto(-280, 0)
+for n in range(3, 9):
+    polygon(40, n)
+    forward(60)
     
-backward(150)
-polygone(10, 36)
-forward(100)
-polygone(120, 3)
-forward(170)
-polygone(100, 4)
+goto(-250, -160)
+for m in range(2, 6):
+    polygon(80, 11, m, fill='yellow')
+    forward(60)
 ```
 
-**Exercice** : Ajoutez votre nom et vos coordonnées à la carte de visite en utilisant la fonction `write()`.
+## Ligne polygonale
 
-## Dessiner un pixel
+La fonction `polyline(poly, pos=(0, 0), size=(1, 1), w=1, pen='black', fill='white')` dessine une ligne polygonale définie par un tuple de points. Les arguments sont:
 
-Similaire à notre fonction pour dessiner un carré nous allons définir une fonction `pixel()`, mais cette fois nous ajoutons un deuxième argument :
-
-- `taille` pour la taille du carré,
-- `couleur` pour la couleur du carré.
-
-```{codeplay}
-:file: def12.py
-from turtle import *
-
-def carre(taille):
-    for i in range(4):
-        forward(taille)
-        left(90)
-        
-def pixel(taille, couleur):
-    fillcolor(couleur)
-    begin_fill()
-    carre(taille)
-    end_fill()
-    forward(taille)
-
-backward(200)
-for x in ('yellow', 'orange', 'red'):
-    pixel(100, x)
-```
-
-## Dessiner Pikachu
-
-Nous définissons une nouvelle fonction `ligne(couleurs)` pour dessiner une série de pixels, qui sont donnés par une liste de couleurs.
-Quand le dernier pixel de la ligne est dessiné, la tortue est retournée à la position prête pour dessiner la ligne suivante.
+- `poly` -- tuple de positions (x, y)
+- `pos` -- position de déplacement
+- `size` -- facteur d'échelle
 
 ```{codeplay}
-:file: def13.py
 from turtle import *
 
-def pixel(taille, couleur):
-    fillcolor(couleur)
+def polyline(poly, pos=(0, 0), size=(1, 1), w=1, pen='black', fill='white'):
+    width(w)
+    pencolor(pen)
+    fillcolor(fill)
+    goto(pos)
     begin_fill()
-    for i in range(4):
-        forward(taille)
-        left(90)
+    for p in poly:
+        goto(pos[0]+p[0]*size[0], pos[1]+p[1]*size[1], )
+        down()
     end_fill()
-    forward(taille)
-
-taille = 50
-
-def ligne(couleurs):
-    for couleur in couleurs:
-        pixel(taille, couleur)
-    backward(len(couleurs) * taille)
     up()
-    sety(ycor() - taille)
-    down()
 
-backward(2 * taille)
-ligne(('black', 'yellow', 'yellow', 'black'))
-ligne(('white', 'red', 'yellow', 'white'))
-ligne(('yellow', 'yellow', 'yellow', 'yellow'))
-ligne(('yellow', 'yellow', 'yellow', 'white'))
+house = ((0, 0), (10, 0), (10, 15), (20, 15), (20, 0),
+            (50, 0), (50, 25), (25, 50), (0, 25), (0, 0))
+
+up()
+polyline(house)
+polyline(house, pos=(-150, -50), fill='pink')
+polyline(house, (90, -60), size=(2, 2), w=3)
+polyline(house, (90, -80), size=(2, -1.5))
 ```
-
-**Exercice** : Dessinez un autre Pokemon.
 
 ## Exercices
+
+### Pingpong
+
+La fonction `pingpong()` reprend le dessin du chapitre 1 et ajoute trois paramètres
+
+```{codeplay}
+:file: pingpong.py
+from turtle import *
+
+def pingpong(a, col1, col2):
+    down()
+    color(col1)
+    width(0.15*a)
+    forward(0.6*a)
+    color(col2)
+    width(0.6*a)
+    forward(0.1*a)
+    up()
+
+seth(90)
+pingpong(200, 'brown', 'red')
+goto(100, 0)
+pingpong(100, 'brown', 'blue')
+```
 
 ### Stickman
 
@@ -407,55 +476,3 @@ stickman(30, (90, -110), (110, -24))
 hideturtle()
 ```
 
-### Hypnose
-
-```{codeplay}
-from turtle import *
-tracer(0)
-width(10)
-color('blue')
-
-def star(n=7, a=400):
-    for i in range(n):
-        forward(a)
-        backward(a)
-        left(360/n)
-
-while True:
-    clear()
-    star(13)
-    left(1)
-    update()
-```
-
-
-
-### Spiral
-
-```{codeplay}
-from turtle import *
-tracer(0)
-width(5)
-
-a = 0
-b = 0
-
-def spiral(n=10):
-    goto(0, 0)
-    for i in range(200):
-        forward(i)
-        left(360/n)
-
-while True:
-    clear()
-    seth(a)
-    a += 1
-    color('red')
-    spiral()
-    
-    seth(b)
-    b += -1
-    color('blue')
-    spiral(-10)
-    update()
-```

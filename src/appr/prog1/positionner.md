@@ -24,6 +24,10 @@ La fonction `pos()` du module `turtle`
 
 La fonction `pos()` retourne la position actuelle de la tortue, sous forme d'un tuple `(x, y)`. Dans le dessin de l'escalier, la fonction `write(pos())` affiche les coordonnées de chaque marche, marquée par un point noir.
 
+```{exercise}
+Affichez un point (dot) et les coordonnées de chaque point d'inflexion de l'escalier.
+```
+
 ```{codeplay}
 from turtle import *
 
@@ -41,6 +45,10 @@ forward(80)
 ## Valeur `xcor()` et `ycor()`
 
 Les deux fonctions `xcor()` et `ycor()` retournent que la partie x ou y des coordonnées. Dans le dessin de l'escalier, la fonction `write(xcor())` affiche la coordonnée x, et la fonction `write(ycor())` affiche la coordonnée y de chaque marche.
+
+```{exercise}
+Transformez l'escalier en un escalier qui descend.
+```
 
 ```{codeplay}
 from turtle import *
@@ -60,7 +68,7 @@ forward(80)
 
 ## Positionner avec `goto()`
 
-La fonction `goto(x, y)` positionne la tortue à la position `(x, y)`. Les coordonnées de la position de l’origine de chaque triangle est affichée.
+La fonction `goto(x, y)` positionne la tortue à la position `(x, y)`. Les coordonnées de la position de l’origine de chaque triangle sont affichées.
 
 ```{codeplay}
 from turtle import *
@@ -80,13 +88,40 @@ goto(-200, 80)
 triangle()      # position à (-200, 80)
 ```
 
-## Positionner avec setx()
-
-
-
 ## Dessiner un polygone
 
-Nous représentons un polygone quelconque avec un tuple de points. Ensuite nous dessinons cette forme géométrique avec une boucle à l'aide de la fonction `goto(p)`.
+Avec la fonction `goto(x, y)` nous pouvons facilement dessiner une ligne polygonale.
+
+```{codeplay}
+from turtle import *
+
+goto(0, 0)
+goto(200, 0)
+goto(200, 100)
+goto(100, 150)
+goto(0, 100)
+goto(0, 0)
+```
+
+La fonction `goto()` accepte deux coordonnées x, y séparés sous la forme `goto(x, y)` ou alternativement un seul argument sous forme de tuple `goto(p)`.
+
+```{codeplay}
+from turtle import *
+
+goto(0, 0)
+goto(200, 0)
+goto(200, 100)
+
+p = (100, 150)
+q = (0, 100)
+r = (0, 0)
+
+goto(p)
+goto(q)
+goto(r)
+```
+
+Mais une façon beaucoup plus compacte et flexible, c'est de représenter un polygone avec un tuple de points. Ensuite nous dessinons cette forme géométrique avec une boucle à l'aide de la fonction `goto(p)`.
 
 ```{exercise}
 Ajoutez 4 points supplémentaires dans le tuple du polygone pour insérer une porte de taille 50x30.
@@ -111,7 +146,7 @@ Relier les points est un casse-tête en deux dimensions qui comprend une suite d
 Le programme suivant numérote les points du polygone.
 
 ```{exercise}
-Ne dessinez pas les lignes et placez un point à chaque sommet.
+Ajoutez encore la porte à la maison, mais dessinez que les points avec un numéro, sans dessiner les lignes, comme dans le jeu relier les points.
 ```
 
 ```{codeplay}
@@ -129,6 +164,10 @@ for p in poly:
 ## Déplacer un polygone
 
 Avec le polygone représenté par un tuple de ses coordonnées, il est facile de le déplacer et redessiner le polygone ailleurs.
+
+```{exercise}
+Déplacez la maison vers une position où elle n'est plus superposée à la première maison.
+```
 
 ```{codeplay}
 from turtle import *
@@ -150,6 +189,10 @@ for p in poly:
 
 Avec le polygone représenté par un tuple de ses coordonnées, il est facile de le déplacer et redessiner le polygone ailleurs avec un changement d'échelle.
 
+```{exercise}
+Ajoutez une troisième maison encore plus petite.
+```
+
 ```{codeplay}
 from turtle import *
 
@@ -169,6 +212,10 @@ for p in poly:
 ## Images miroirs
 
 Dans le jeu de Tetris, nous pouvons définir les formes sous forme d'un tuple qui dessine un petit polygone. Multiplier les coordonnées par une variable `a` permet de changer de taille. Changer le signe d'une ou des deux coordonnées permet de trouver l'image miroir.
+
+```{exercise}
+Ajoutez l'image miroir manquante.
+```
 
 ```{codeplay}
 from turtle import *
@@ -220,18 +267,196 @@ for i in range(n):
     left(360/n)
 ```
 
-## Dessiner une grille
+## Orienter avec `seth(a)`
+
+La fonction opposée à `heading()` est `setheading(a)` ou sa version courte `seth(a)` qui permet d'orienter la tortue dans une direction particulière.
+
+Ceci est pratique pour dessiner les pièces dans une direction spécifique.
+Par exemple dans le Tetris, les figures peuvent avoir 4 orientations différentes.
+
+```{exercise}
+Ajoute deux autres L avec une position et orientation appropriée pour créer un remplissage compact.
+```
 
 ```{codeplay}
 from turtle import *
-up()
-a = 40
-n = 5
+a = 20
 
-for i in range(n):
-    for j in range(n):
-        goto(j * a, i * a)
-        dot()
-        write((i, j))
-hideturtle()
+def L():
+    down()
+    for angle in (0, 90, 90, -90, 0, 90, 90, 0, 0, 90):
+        forward(a)
+        left(angle)
+    up()
+
+L()
+goto(3*a, -a)
+seth(90)
+L()
+```
+
+## Tangram
+
+Le tangram, « sept planches de la ruse », ou jeu des sept pièces, est une sorte de puzzle chinois. C'est une dissection du carré en sept pièces élémentaires. Des dissections plus générales, de formes différentes, sont également appelées tangrams.
+
+![tangram](media/tangram0.png)
+
+```{exercise}
+Utilisez les fonctions `goto(x, y)` et `setheading(a)` pour ajouter encore deux triangles et former un carré.
+```
+
+```{codeplay}
+from turtle import *
+a = 50
+
+def triangle():
+    p = pos()
+    forward(2*a)
+    left(90)
+    forward(2*a)
+    goto(p)
+    
+seth(45)
+triangle()
+goto(0, 2.82*a)
+seth(-45)
+triangle()
+```
+
+## Multiples polygones
+
+Pour transformer une image en multiples polygones, nous pouvons placer une grille sur l'image ou imprimer l'image sur du papier carré.
+
+![bird](media/poly_bird.jpg)
+
+L'image origami de l'oiseau est composé de 
+
+- 17 points
+- 7 polygones
+
+Nous repérons d'abord toutes les coordonnées des points dans une liste `points`.  Avec un indexage du tuple tel que `point[0]` on peut accéder ou point 0.
+
+Les 7 polygones sont tout simplement des tuples avec les indices des points.
+
+```{codeplay}
+from turtle import *
+
+points = ((19, 3), (26, 17), (22, 48), (30, 0), (42, 38), 
+          (33, 54), (30, 53),  (13, 85), (2, 87), (64, 50),
+          (61, 72), (8, 92), (82, 68), (85, 78),(68, 80), 
+          (53, 73), (80, 57), (94, 60))
+          
+polygons = ((0, 1, 2),
+            (3, 4, 5, 2),
+            (6, 5, 7, 8),
+            (4, 9, 10, 11),
+            (9, 12, 10),
+            (12, 13, 14, 15, 10),
+            (16, 17, 13))
+
+up()
+i = 0
+for p in points:
+    goto(-150 + 3 *p[0], -150 + 3*p[1])
+    dot(p)
+    write(i)
+    i = i + 1
+```
+
+Pour dessiner multiples polygones, nous devons parcourir la liste des polygones. 
+Pour chaque polygone nous parcourons ses points. 
+
+Avec les deux tuples `pos` et `size` nous pouvons choisir la position et la taille des polygones.
+
+    goto(pos[0] + size[0] * p[0], pos[1] + size[1] * p[1])
+
+Pour fermer le polygone, nous revenons sur le premier point de la liste.
+
+    p = points[poly[0]]
+    goto(pos[0] + size[0] * p[0], pos[1] + size[1] * p[1])
+
+
+```{codeplay}
+from turtle import *
+
+points = ((19, 3), (26, 17), (22, 48), (30, 0), (42, 38), 
+          (33, 54), (30, 53),  (13, 85), (2, 87), (64, 50),
+          (61, 72), (8, 92), (80, 57), (85, 78),(68, 80), 
+          (53, 73), (82, 68), (94, 60))
+          
+polygons = ((0, 1, 2),
+            (3, 4, 5, 2),
+            (6, 5, 7, 8),
+            (4, 9, 10, 11),
+            (9, 12, 10),
+            (12, 13, 14, 15, 10),
+            (16, 17, 13))
+
+up()
+i = 0
+pos = (-150, -150)
+size = (3, 3)
+for poly in polygons:
+    for i in poly:
+        p = points[i]
+        goto(pos[0] + size[0] * p[0], pos[1] + size[1] * p[1])
+        down()
+        dot(p)
+        write(i)
+    p = points[poly[0]]
+    goto(pos[0] + size[0] * p[0], pos[1] + size[1] * p[1])
+    up()
+```
+
+## Exercice
+
+### Tangram
+
+Choisissez un animal est recréez la figure.
+
+![tangram](media/tangram1.jpg)
+
+```{codeplay}
+from turtle import *
+a = 50
+
+def triangle():
+    p = pos()
+    begin_fill()
+    forward(2*a)
+    left(90)
+    forward(2*a)
+    goto(p)
+    end_fill()
+
+seth(90)
+color('red')
+triangle()
+```
+
+### Tangram 2
+
+Choisissez un animal est recréez la figure.
+
+![tangram](media/tangram2.jpg)
+
+```{codeplay}
+from turtle import *
+a = 50
+
+from turtle import *
+a = 50
+
+def triangle():
+    p = pos()
+    begin_fill()
+    forward(2*a)
+    left(90)
+    forward(2*a)
+    goto(p)
+    end_fill()
+
+seth(180)
+color('orange')
+triangle()
 ```
