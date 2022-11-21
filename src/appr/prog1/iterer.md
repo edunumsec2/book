@@ -85,6 +85,7 @@ Si nous dessinons un polygone, mais augmentons la longueur de chaque segment suc
 from turtle import *
 
 for i in range(100):
+    write(i)
     forward(i)
     left(30)
 ```

@@ -1,4 +1,5 @@
 (prog1.colorier)=
+
 # Colorier* - `color()`
 
 Dans ce chapitre, nous continuons à dessiner et nous introduisons la couleur.
@@ -30,6 +31,10 @@ Entre les parenthèses de la fonction, vous devez écrire le nom d'une couleur, 
 
 Voici un triangle avec 3 segments de couleurs différentes.
 
+```{exercise}
+Modifiez les 3 couleurs en vous inspirant de la liste.
+```
+
 ```{codeplay}
 :file: color1.py
 from turtle import *
@@ -48,8 +53,6 @@ forward(150)
 left(120)
 ```
 
-**Exercice** : Modifiez les 3 couleurs en vous inspirant de la liste.
-
 ## Couleur de point
 
 Nous pouvons afficher des points à chaque sommet :
@@ -57,6 +60,10 @@ Nous pouvons afficher des points à chaque sommet :
 - la fonction `dot()` dessine un point standard,
 - la fonction `dot(d)` dessine un disque d'un diamètre `d`,
 - la fonction `dot(d, couleur)` dessine un disque dans la couleur spécifiée.
+
+```{exercise}
+Modifiez la taille et la couleur des 3 points.
+```
 
 ```{codeplay}
 :file: color2.py
@@ -73,13 +80,15 @@ forward(150)
 dot(80, 'blue')
 ```
 
-**Exercice** : Modifiez la taille et la couleur des 3 points.
-
 ### Drapeau du Japon
 
 Le drapeau du Japon est un drapeau blanc avec un grand disque rouge en son centre. Ce disque représente le soleil, plus précisément la déesse shintô du soleil Amaterasu.
 
 Le rapport entre la hauteur et la largeur du drapeau est de 2:3, et le diamètre du disque est $\frac{3}{5}$ de la hauteur du drapeau.
+
+```{exercise}
+Supprimez l'appel de la fonction `hideturtle()`. À quoi sert cette fonction ?
+```
 
 ```{codeplay}
 :file: color3.py
@@ -88,11 +97,13 @@ dot(240, 'red')
 hideturtle()
 ```
 
-**Exercice** : Supprimez l'appel de la fonction `hideturtle()`. À quoi sert cette fonction ?
-
 ### Lignes et points
 
 La fonction `dot()` sans argument de taille, va automatiquement choisir une taille qui est environ le double de l'épaisseur du trait.
+
+```{exercise}
+Augmentez l'épaisseur de la ligne à 10 pour vérifier que la taille des points change en conséquence.
+```
 
 ```{codeplay}
 :file: color4.py
@@ -110,8 +121,6 @@ forward(100)
 left(120)
 dot()
 ```
-
-**Exercice** : Augmentez l'épaisseur de la ligne à 10 pour vérifier que la taille des points change en conséquence.
 
 ### Points et couleurs
 
@@ -144,6 +153,10 @@ Avec la fonction `fillcolor()`, nous pouvons définir une couleur de remplissage
 
 Par exemple, ce programme-ci dessine un triangle vert.
 
+```{exercise}
+Ajoutez un triangle d'une couleur différente.
+```
+
 ```{codeplay}
 :file: color6.py
 from turtle import *
@@ -161,8 +174,6 @@ begin_fill()
 triangle()
 end_fill()
 ```
-
-**Exercice** : Ajoutez un triangle d'une couleur différente.
 
 On aurait pu inclure les deux fonctions qui indiquent le remplissage directement dans la fonction `triangle()`. Ceci simplifie le code quand on dessine plusieurs triangles.
 
@@ -232,33 +243,31 @@ Le résultat est un triangle avec deux bordures et un troisième segment sans bo
 
 Une équerre est un instrument formé de deux pièces ajustées à angle droit. L'équerre est utilisée soit pour vérifier des angles dièdres droits, soit pour tracer des angles plans droits.
 
+```{exercise}
+Dessinez le drapeau bicolore du canton de Zurich.
+```
+
 ```{codeplay}
 :file: color10.py
 from turtle import *
 dot(1000, 'moccasin')
 
 def equerre():
+    down()
+    begin_fill()
     forward(150)
     left(90)
     forward(100)
     left(90)
+    end_fill()
+    up()
 
 fillcolor('sienna')
-begin_fill()
 equerre()
-end_fill()
-
-up()
-forward(50)
-down()
-
+forward(30)
 fillcolor('gold')
-begin_fill()
 equerre()
-end_fill()
 ```
-
-**Exercice** : Dessinez le drapeau bicolore du canton de Zurich.
 
 ## Smiley
 
@@ -349,7 +358,11 @@ end_fill()
 
 ## Maison
 
-Nous reprenons [l'exemple du chapitre précédent](prog1.dessiner) de la fonction `maison()`. Cette fois, nous y intégrons `begin_fill()` et `end_fill()` pour pouvoir les colorier..
+Nous reprenons l'exemple du chapitre précédent de la fonction `maison()`. Cette fois, nous y intégrons `begin_fill()` et `end_fill()` pour pouvoir les colorier..
+
+```{exercise}
+Ajoutez encore une maison d'une autre couleur.
+```
 
 ```{codeplay}
 :file: color9.py
@@ -378,15 +391,13 @@ fillcolor('lightblue')
 maison()
 ```
 
-**Exercice** : Ajoutez encore une maison d'une autre couleur.
-
 ## Exporter une image
 
 Pour enregistrer votre dessin vers un fichier image, faites ceci :
 
 - Téléchargez le code.
 - Ouvrez-le avec un éditeur externe.
-- Ajoutez les 3 lignes de code à la fin.
+- Ajoutez les 2 lignes de code à la fin.
 - Exécutez votre code.
 
 ```  python

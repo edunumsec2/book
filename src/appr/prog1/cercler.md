@@ -1,10 +1,10 @@
 (prog1.cercler)=
-# Cercler - `circle()`
+# Cercler* - `circle()`
 
 Dans ce chapitre, nous explorons les cercles et les arcs de cercle. Nous allons voir que :
 
-- le cercle est approximé par un polygone,
-- la fonction `circle(r)` dessine un cercle de rayon `r`,
+- la fonction `circle(r)` dessine un cercle de rayon `r`, vers la gauche,
+- la fonction `circle(-r)` dessine un cercle de rayon `r`, vers la droite,
 - la fonction `circle(r, a)` dessine un arc de cercle d'un angle `a`.
 
 ```{question}
@@ -16,56 +16,7 @@ Un cercle affiché sur un écran d'ordinateur est créé par
 {f}`une boucle refermée`
 ```
 
-## Du polygone au cercle
 
-Plus un polygone régulier a de côtés, plus il ressemble à un cercle.
-Tandis qu'avec 9 côtés (noir), il ressemble clairement à un polygone,
-avec 36 côtés (rouge), il ressemble déjà raisonnablement à un cercle.
-
-```{codeplay}
-:file: circle1.py
-from turtle import *
-
-for i in range(9):
-    forward(60)
-    left(40)
-
-right(15)
-color('red')
-for i in range(36):
-    forward(15)
-    left(10)
-```
-
-## Périmètre et rayon
-
-Quel est le rayon `r` du cercle approximé par le polygone ?
-Nous pouvons le trouver à partir du périmètre avec la relation suivante :
-
-$$ p = 2r \pi $$
-
-Donc
-
-$$ r = \frac{p}{2 \pi} $$
-
-La valeur numérique du rayon est
-
-$$ r = \frac{36 \times 15}{6.28} = 86 $$
-
-La fonction `circle(86)` dessine un cercle dont le rayon est 86. On voit que le polygone (noir) et le cercle (rouge) ont effectivement la même taille.
-
-```{codeplay}
-:file: circle2.py
-from turtle import *
-
-for i in range(36):
-    forward(15)
-    left(10)
-
-right(5)
-color('red')
-circle(86)
-```
 
 ## Fonction `circle()`
 
@@ -76,24 +27,25 @@ Ce cercle est dessiné :
 - vers la droite si `r` est négatif.
 
 ```{codeplay}
-:file: circle3.py
 from turtle import *
 
-forward(50)
+left(90)
+circle(20)
 circle(40)
-forward(100)
-circle(-30)
-forward(100)
-```
+circle(60)
+circle(80)
 
-**Exercice** : Inversez le signe du rayon dans la fonction `circle()`.
+circle(-20)
+circle(-40)
+circle(-60)
+circle(-80)
+```
 
 ## Fleur
 
 Dessinons des cercles dans une boucle, et tournons chaque fois.
 
 ```{codeplay}
-:file: circle4.py
 from turtle import *
 
 for i in range(6):

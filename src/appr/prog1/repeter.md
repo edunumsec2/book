@@ -39,7 +39,9 @@ left(90)
 Ne serait-ce pas pratique de pouvoir dire à la tortue de répéter ces instructions 4 fois ?
 Ceci est possible avec une boucle `for`. La ligne `for i in range(4):` va répéter `4` fois le bloc en indentation qui suit.
 
-Par rapport à l'exemple précédent, nous avons rajouté un `dot()` à chaque sommet, et nous cachons la tortue à la fin avec la fonction `hideturtle()`.
+```{exercise}
+Transformez le rectangle en triangle.
+```
 
 ```{codeplay}
 :file: for2.py
@@ -48,12 +50,22 @@ from turtle import *
 for i in range(4):
     forward(100)
     left(90)
-    dot()
-    
-hideturtle()
 ```
 
-**Exercice** : Transformez le rectangle en triangle.
+## Variable d'itération `i`
+
+Que représente `i` dans l'expression `for i in range(n)` ?  
+C'est ce qu'on appelle une **variable d'itération**. Cette variable commence à 0 et augmente de 1 à chaque répétition jusqu'à $n-1$. Pour visualiser cette valeur nous pouvons l'afficher dans le dessin avec l'instruction `write(i)`.
+
+```{codeplay}
+:file: for2.py
+from turtle import *
+
+for i in range(4):
+    write(i)
+    forward(100)
+    left(90)
+```
 
 ## Polygone régulier
 
@@ -65,6 +77,10 @@ Observez bien la double indentation :
 - la deuxième pour `for`
 
 Dans les deux cas un `:` est suivi d'un bloc en indentation. En Python vous pouvez avoir multiples niveaux d'indentation.
+
+```{exercise}
+Définissez la fonction `hexagone()` pour dessiner un hexagone, et appelez cette fonction.
+```
 
 ```{codeplay}
 :file: for3.py
@@ -90,17 +106,16 @@ carre()
 pentagone()
 ```
 
-**Exercice** : Définissez la fonction `hexagone()` pour dessiner un hexagone.
-
 ## Escalier
 
-Pour dessiner un escalier, il faut simplement répéter dans une boucle le dessin pour une seule marche.
+Pour dessiner un escalier, il faut simplement répéter dans une boucle le dessin pour une seule marche. Nous utilisons la variable `i` pour numéroter les marches.
 
 ```{codeplay}
 :file: for4.py
 from turtle import *
 
 for i in range(5):
+    write(i)
     forward(20)
     left(90)
     forward(20)
@@ -108,8 +123,6 @@ for i in range(5):
 
 forward(100)
 ```
-
-## Dents de scie
 
 Pour dessiner des dents de scie, il faut simplement répéter dans une boucle le dessin pour une seule dent.
 
@@ -120,6 +133,7 @@ from turtle import *
 for i in range(4):
     left(45)
     forward(71)
+    write(i)
     right(135)
     forward(50)
     left(90)
@@ -132,7 +146,11 @@ forward(80)
 ## Éventail
 
 Que se passe-t-il si nous dessinons une ligne (`forward()`/`backward()`) et tournons chaque fois d'un petit angle ?
-C'est un peu comme un éventail qui s'ouvre.
+C'est un peu comme un éventail qui s'ouvre. Les lignes de l'éventail sont numérotés en utilisant la variable `i`.
+
+```{exercise}
+Doublez l'angle de rotation dans `left()`.
+```
 
 ```{codeplay}
 :file: for6.py
@@ -140,16 +158,17 @@ from turtle import *
 
 for i in range(18):
     forward(100)
+    write(i)
     backward(100)
     left(10)
 ```
 
-**Exercice** : Doublez l'angle de rotation dans `left()`.
-
-## Diaphragme
-
 Que se passe-t-il si nous avançons plus que nous reculons ?
 Une toute petite modification du programme peut faire une chouette différence.
+
+```{exercise}
+Modifiez les valeurs dans `forward()` et `backward()`.
+```
 
 ```{codeplay}
 :file: for7.py
@@ -157,27 +176,29 @@ from turtle import *
 
 for i in range(18):
     forward(100)
+    write(i)
     backward(90)
     left(20)
 ```
-
-**Exercice** : Modifiez les valeurs dans `forward()` et `backward()`.
 
 ## Étoile
 
 Voici une autre façon de toujours avancer, mais en tournant chaque fois d'un angle un peu plus petit que 180°.
 Essayons !
 
+```{exercise}
+Changez le nombre de pics de l'étoile.
+```
+
 ```{codeplay}
 :file: for8.py
 from turtle import *
 
 for i in range(9):
+    write(i)
     forward(200)
     left(160)
 ```
-
-**Exercice** : Changez le nombre de pics de l'étoile.
 
 ## Losange
 
@@ -207,9 +228,11 @@ left(120)
 losange()
 ```
 
-## Fleur
-
 Si nous dessinons un losange 6 fois, nous obtenons une jolie fleur.
+
+```{exercise}
+Tournez un angle plus petit que 60°
+```
 
 ```{codeplay}
 :file: for10.py
@@ -227,11 +250,13 @@ for i in range(6):
     left(60)
 ```
 
-**Exercice** : Tournez un angle plus petit que 60°
-
 ## Paquebot
 
-Une boucle `for` est utilisée dans l'exemple suivant pour dessiner les hublots d'un paquebot.
+Une boucle `for` est utilisée dans l'exemple suivant pour dessiner les hublots d'un paquebot. Les hublots sont numérotés en utilisant la variable `i`.
+
+```{exercise}
+Créez une fonction `paquebot()` et dessinez-en un deuxième.
+```
 
 ```{codeplay}
 from turtle import *
@@ -250,11 +275,10 @@ forward(40)
 right(45)
 
 for i in range(6):
-    dot(20)  
+    dot(20, 'lightgray')
+    write(i)  
     forward(30)
 ```
-
-**Exercice** : Créez une fonction `paquebot()` et dessinez-en un deuxième.
 
 ## Cube de Rubik
 
@@ -305,8 +329,6 @@ for i in range(6):
     stamp()
 ```
 
-**Exercice** : Modifiez le programme pour estamper seulement un sommet sur deux.
-
 ### Forme
 
 Vous pouvez changer la forme de votre tortue avec la fonction `shape()`.
@@ -346,25 +368,7 @@ for i in range(36):
     left(170)
 ```
 
-**Exercice** : Augmentez graduellement la vitesse de la tortue.
-
-## Exporter en PNG/JPG
-
-Pour directement sauvegarder votre dessin en format PNG, ajoutez ces lignes de code à la fin de votre dessin.
-
-``` python
-from tkinter import *
-from PIL import Image
-import io
-
-cn = getscreen().getcanvas()
-ps = cn.postscript(colormode='color')
-file = io.BytesIO(ps.encode('utf-8'))
-img = Image.open(file)
-img.save('file.png')
-```
-
-Pour sauvegarder en format JPG appelez tout simplement votre fichier `'file.jpg'` plutôt que `'file.png'`.
+**Exercice** : Augmentez graduellement la vitesse de la tortue, en utilisant la variable `i` comme argument de vitesse.
 
 ## Erreurs
 

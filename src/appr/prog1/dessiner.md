@@ -1,8 +1,9 @@
 (prog1.dessiner)=
+
 # Dessiner - `forward()`
 
 Dans ce chapitre, nous explorons ce que c'est un programme et nous prenons
- la métaphore du dessin. Ici, un programme est une séquence d'instructions pour dessiner une image.
+ l'exemple du dessin. Ici, un programme est une séquence d'instructions pour dessiner une image.
 
 Allons de l'avant (forward) avec la programmation. Nous allons voir que :
 
@@ -23,19 +24,18 @@ Un algorithme est la description générale des étapes de résolution d'un prob
 
 ## Le module `turtle`
 
-Dans le langage de programmation Python, le module `turtle` (« tortue » en anglais) présente une façon sympathique pour faire des dessins. C'est pour cela que nous commençons notre aventure de programmation avec cet animal qui avance tout doucement à son propre rythme.
+Dans le langage de programmation Python, le module `turtle` (signifiant tortue en anglais) présente une façon sympathique pour faire des dessins. C'est pour cela que nous commençons notre aventure de programmation avec cet animal qui avance tout doucement à son propre rythme.
 
 On s'imagine une tortue qui se déplace sur un canevas et laisse une trace.
 
-Ci-dessus, vous trouvez notre premier programme de trois lignes :
+Ci-dessous, vous trouvez notre premier programme de trois lignes :
 
 - dans la première ligne, nous importons toutes (`*`) les fonctions du module `turtle`,
 - avec `shape('turtle')`, nous affichons une tortue (au lieu de la flèche),
 - avec `forward(150)`, nous faisons avancer la tortue de 150 pixels.
 
-```{admonition} Exercice
-:class: note
-Ajoutez d'autres instructions telles que `backward()`, `left()`, et `right()` pour faire un dessin.
+```{exercise}
+Ajoutez d'autres instructions telles que `backward()`, `left()` et `right()` pour faire un dessin.
 ```
 
 ```{codeplay}
@@ -57,8 +57,6 @@ En Python, `turtle` est
 Le module `turtle` fait partie de la distribution standard de Python. Nous le trouvons donc inclus avec Python sur toutes les plateformes.
 ```
 
-## Se déplacer
-
 La tortue peut se déplacer et dessiner une trace avec les 4 fonctions:
 
 - `forward(d)` pour avancer d'une distance `d` (en pixels)
@@ -68,15 +66,14 @@ La tortue peut se déplacer et dessiner une trace avec les 4 fonctions:
 
 ## Le canevas
 
-Au début, la tortue se trouve au centre d'une zone rectangulaire appelée _canevas_.  Ce rectangle a les propriétés suivantes :
+Au départ, la tortue se trouve au centre d'une zone rectangulaire appelée _canevas_.  Ce rectangle a les propriétés suivantes :
 
 - l'origine (0, 0) se trouve au centre,
-- l'axe X, horizontal, s'étend de -300 (tout à gauche) à +300 (tout à droite),
-- l'axe Y, vertical, s'étend de -200 (tout en bas) à +200 (tout en haut).
+- l'axe horizontal x, s'étend de -300 à +300 (à droite),
+- l'axe vertical y, s'étend de -200 à +200 (en haut).
 
-```{admonition} Exercice
-:class: note
-Ajoutez une instruction dans le code ci-dessous pour mener la tortue tout en bas du canevas.
+```{exercise}
+Ajoutez une instruction dans le code ci-dessous pour mener la tortue tout en bas du canevas. Ensuite, ajoutez une diagonale.
 ```
 
 ```{codeplay}
@@ -90,7 +87,6 @@ forward(300)
 
 left(90)
 forward(200)
-right(180)
 ```
 
 ```{question}
@@ -106,9 +102,8 @@ La largeur de la zone de dessin de la tortue est
 
 Un programme est une séquence d'instructions. Le bloc de 8 instructions ci-dessous indique comment dessiner un carré. La tortue doit avancer, tourner, avancer, tourner, etc.
 
-```{admonition} Exercice
-:class: note
-Modifiez ce code pour en faire un rectangle.
+```{exercise}
+Modifiez ce code pour en faire un rectangle, au lieu d'un carré.
 ```
 
 ```{codeplay}
@@ -134,7 +129,7 @@ Une séquence d'instructions d'un bloc est exécutée
 {f}`aléatoirement`   
 ```
 
-## Equivalence
+## Équivalence
 
 La tortue possède 4 fonctions de déplacement, mais à strictement parler, on pourrait s'en sortir avec seulement deux fonctions, `forward()` et `left()`, car :
 
@@ -153,10 +148,13 @@ forward(100)
 left(90)
 
 backward(-160)  # équivalent à forward(160)
-right(-90)  # équivalent à left(90)
+right(-90)      # équivalent à left(90)
 backward(-100)
 right(-90)
 ```
+
+Le bout de texte qui commence avec le symbole `#` (alt+3 sur Mac) est un commentaire.
+Un commentaire est ignoré par Python, et sert uniquement à documenter un programme.
 
 ```{question}
 L'expression `left(90)` est équivalent à
@@ -172,8 +170,7 @@ L'expression `left(90)` est équivalent à
 La fonction `width(d)` (épaisseur en anglais) permet de définir l'épaisseur de la ligne.
 Voici un triangle où chaque côté a une épaisseur différente.
 
-```{admonition} Exercice
-:class: note
+```{exercise}
 Explorez différentes épaisseurs de ligne.
 ```
 
@@ -190,16 +187,14 @@ left(120)
 
 width(10)
 forward(200)
-left(120)
 ```
 
 ## Maison avec toit
 
 Nous dessinons une maison et marquons le toit par une ligne plus épaisse.
 
-```{admonition} Exercice
-:class: note
-Modifiez l'épaisseur du toit.
+```{exercice}
+Doublez l'épaisseur du toit. Ensuite, doublez la hauteur de la maison.
 ```
 
 ```{codeplay}
@@ -224,8 +219,7 @@ left(90)
 
 L'épaisseur de ligne est très utile dans le dessin.
 
-```{admonition} Exercice
-:class: note
+```{exercise}
 Transformez la raquette de ping-pong en haltères de musculation.
 ```
 
@@ -243,8 +237,7 @@ forward(20)
 
 Voici encore un exemple où, avec un simple changement d'épaisseur, vous obtenez un effet très intéressant.
 
-```{admonition} Exercice
-:class: note
+```{exercice}
 Ajoutez la première branche qui manque.
 ```
 
@@ -264,7 +257,7 @@ left(45)
 forward(60)
 ```
 
-## Editeur de Python
+## Éditeur de Python
 
 Jusqu'à maintenant, nous avons exécuté nos petits programmes ici dans cette page web. Malheureusement, ces programmes disparaissent quand nous rechargeons la page. Pour pouvoir les sauvegarder et programmer indépendamment de ce site web, nous avons besoin d'un éditeur de Python externe.
 
