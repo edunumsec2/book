@@ -83,19 +83,28 @@ for a in addresses:
 Avec le développement d'Internet, il est vite devenu clair que le nombre de machines connectées à Internet allait dépasser le nombre d'adresses IP différentes, et c'est pourquoi un nouveau type d'adressage a été développé dès les années 90, IPv6 (Internet Protocol, version 6). Il a été décidé de coder les adresses IP sur 128 bits. Plutôt que
 de les représenter avec 16 nombres entre 0 et 255, il a été décidé de coder en 8 nombres hexadécimaux
 entre 0000 et FFFF. Chaque digit de 0 à F représente ainsi 4 bits.
-<!-- [montrer un exemple] -->
+
+Par exemple ```4E3F.DEA7.409B.412C.2516.4A2B.2CFE.1282``` pourrait constituer une adresse IPv6 valide. Elle est en effect
+constituée de 8 nombres à quatres chiffres hexadécimaux. 
 
 Actuellement, les deux types d'adresses IPv6 et IPv4 coexistent sur Internet, la version IPv4 étant encore largement
 plus répandue. Une adresse IP peut donc soit être sur 32 bits soit sur 128 bits.
 
 ```{exercise}
-Parmi les adresses suivantes, indiquer lesquelles sont au format IPv4, lesquelles sont IPv6 et lesquelles ne sont pas valides.
+Parmi les adresses suivantes, indiquer lesquelles sont au format IPv4, lesquelles sont IPv6 et lesquelles ne sont pas valides. Justifier sa réponse. 
+
+1. ```128.23.54.45```
+1. ```31.43.132.45.51.654.4355.4325```
+1. ```1923.2123.1323.4324.4241.2434.7657.5757```
+1. ```ADEFE.ACDEA.AABCD.DDEBC.FFEDA.AEABC.ACADE.EFDF```
+1. ```1230.121D.12AEAB.1231D.4324B.2765.5435D.4378```
+1. ``` D2G3.4234.534FG.2141.12GE.12AD.85C2.GE32```
 
 ````
 
 ```{togofurther} Blocs et Masques
 
-Les adresse IP sont structurées hérarchiquement
+Les adresse IP sont structurées hérarchiquement 
 
 ````
 

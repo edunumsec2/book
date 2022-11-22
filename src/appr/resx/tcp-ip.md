@@ -28,6 +28,12 @@ Selon ce protocole un paquet est constitué d'une suite de 0 et de 1 que l'on pe
 1. L'entête qui donne des informations sur le paquet (son émetteur, sa destination, sa taille, etc.)
 1. Les données qui forment le contenu du paquet, c'est-à-dire les informations que l'on veut transmettre.
 
+```{image} media/IPpacket.svg
+:width: 700
+```
+
+
+
 <!-- [ indiquer la spécification de l'entête IP] -->
 
 ## Le protocole TCP
