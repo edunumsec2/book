@@ -1,0 +1,6 @@
+{
+  "v": 3,
+  "in": [{"pos": [170, 40], "id": 0, "name": "commutateur", "val": 1}, {"pos": [170, 80], "id": 2, "name": "poussoir", "val": 1}],
+  "out": [{"pos": [570, 40], "id": 1}],
+  "wires": [[0, 1, {"propagationDelay": 1000}]]
+}

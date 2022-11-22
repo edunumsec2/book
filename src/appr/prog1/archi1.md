@@ -7,6 +7,55 @@ Dans ce chapitre nous allons explorer les circuits logiques.
 - La capteur d'écran contient le code pour réouvrir le circuit dans l'éditeur [Logic](https://logic.modulo-info.ch/)
 - Déposez vos circuits sur Moodle
 
+## Transmission d'un signal
+
+Dans ce premier exemple se trouve une entrée (in) et une sortie (out). Les deux sont lié par un fil de transmission qui transmet un signal binaire identifié avec une couleur:
+
+- 0 (noir)
+- 1 (jaune)
+
+Avec le menu contextuel vous pouvez changez la couleur du fil ainsi que son délai de propagation.
+
+- Ajouter un deuxième fil avec un délai de propagation de 100 ms
+- Ajoutez un troisième fil avec un délai de propagation de 10 ms
+
+```{logic}
+:ref: in_out
+:height: 240
+:showonly: in out
+{
+  "v": 3,
+  "in": [
+    {"pos": [100, 40], "id": 0, "name": "1000ms", "val": 0},
+    {"pos": [100, 80], "id": 2, "name": "100ms", "val": 0},
+    {"pos": [100, 120], "id": 3, "name": "10ms", "val": 1}
+  ],
+  "out": [{"pos": [500, 40], "id": 1}],
+  "wires": [[0, 1, {"propagationDelay": 1000}]]
+}
+```
+
+## Commutateur/poussoir
+
+Les entrées ont deux modes que vous pouvez changer avec le menu contextuel:
+
+- commutateur : bascule entre l'état 0 et 1
+- poussoir : garde la valeur 1 seulement pendant qu'il est appuyé
+
+Changez la deuxième entrée en mdoe **poussoir**
+
+```{logic}
+:ref: poussoir
+:height: 240
+:showonly: in out
+{
+  "v": 3,
+  "in": [{"pos": [170, 40], "id": 0, "name": "commutateur", "val": 1}, {"pos": [170, 80], "id": 2, "name": "poussoir", "val": 1}],
+  "out": [{"pos": [570, 40], "id": 1}],
+  "wires": [[0, 1, {"propagationDelay": 1000}]]
+}
+```
+
 ## Feu de circulation
 
 - Cliquez sur l'entrée pour basculer l'état entre 0 et 1
@@ -15,10 +64,9 @@ Dans ce chapitre nous allons explorer les circuits logiques.
 - Changez les coulers en jaune et rouge
 
 ```{logic}
-:ref:feu
+:ref: feu
 :height: 400
 :showonly: in out.bar
-
 {
   "v": 3,
   "in": [{"pos": [80, 80], "id": 0, "val": 0}],
