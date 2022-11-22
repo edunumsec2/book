@@ -1,0 +1,6 @@
+{
+  "v": 3,
+  "in": [{"type": "clock", "pos": [70, 70], "id": 0, "period": 2000}],
+  "out": [{"type": "bar", "pos": [220, 70], "id": 1, "display": "PX"}],
+  "wires": [[0, 1]]
+}

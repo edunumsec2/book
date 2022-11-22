@@ -1,0 +1,6 @@
+{
+  "v": 3,
+  "in": [{"pos": [80, 80], "id": 0, "val": 0}],
+  "out": [{"type": "bar", "pos": [280, 80], "id": 1, "display": "PX", "color": "red"}],
+  "wires": [[0, 1]]
+}
