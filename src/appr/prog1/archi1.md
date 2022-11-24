@@ -182,7 +182,7 @@ La porte NON inverse un signal.
 
 La porte NON inverse un signal.
 
-- Ajoutez les connexions pour afficher 0 ou 1 selon le signal sur in
+- Ajoutez les connexions pour afficher 0 ou 1 selon le signal sur l'entrée **b0**.
 
 ```{logic}
 :ref: 7seg_01
@@ -190,18 +190,10 @@ La porte NON inverse un signal.
 :showonly: in not out.7seg
 {
   "v": 3,
+  "in": [{"pos": [70, 150], "id": 10, "name": "high", "val": 1, "isConstant": true}, {"pos": [70, 40], "id": 8, "name": "b0", "val": 0}],
   "out": [{"type": "7seg", "pos": [470, 180], "id": [0, 1, 2, 3, 4, 5, 6, 7]}],
-  "in": [
-    {"pos": [70, 40], "id": 8, "name": "b0", "val": 0},
-    {"pos": [70, 90], "id": 9, "name": "b1", "val": 0},
-    {"pos": [70, 150], "id": 10, "name": "high", "val": 1, "isConstant": true}
-  ],
-  "gates": [
-    {"type": "NOT", "pos": [180, 40], "in": 12, "out": 13},
-    {"type": "AND", "pos": [250, 230], "in": [14, 15], "out": 16},
-    {"type": "OR", "pos": [310, 50], "in": [17, 18], "out": 19}
-  ],
-  "wires": [[9, 6], [10, 1], [8, 12], [13, 4], [13, 17], [9, 18], [19, 0]]
+  "gates": [{"type": "NOT", "pos": [180, 40], "in": 12, "out": 13}],
+  "wires": [[10, 1], [8, 12], [13, 0]]
 }
 ```
 
@@ -331,12 +323,12 @@ Le tableau ci-dessous montre les segments à allumer pour afficher les nombres 0
 :showonly: in not or and out.7seg
 {
   "v": 3,
-  "out": [{"type": "7seg", "pos": [470, 180], "id": [0, 1, 2, 3, 4, 5, 6, 7]}],
   "in": [
     {"pos": [70, 40], "id": 8, "name": "b0", "val": 0},
     {"pos": [70, 90], "id": 9, "name": "b1", "val": 0},
-    {"pos": [70, 150], "id": 10, "name": "high", "val": 1}
+    {"pos": [70, 150], "id": 10, "name": "high", "val": 1, "isConstant": true}
   ],
+  "out": [{"type": "7seg", "pos": [470, 180], "id": [0, 1, 2, 3, 4, 5, 6, 7]}],
   "gates": [
     {"type": "NOT", "pos": [180, 40], "in": 12, "out": 13},
     {"type": "AND", "pos": [250, 230], "in": [14, 15], "out": 16},
@@ -346,77 +338,6 @@ Le tableau ci-dessous montre les segments à allumer pour afficher les nombres 0
 }
 ```
 
-## Compteur 4 bits
-
-Le compteur 4 bits utilise un signal d'horloge et incrémenté à chaque coup d'horloge.
-Un un décodeur à 7 segments transforme les 4 signaux qui représentent un nombre binaire de 0 à 16 vers les sorties correspondant pour activer les bonnes lampes de l'affichage à 7 segments.
-
-- Utilisez le signal de sortie V (overflow) pour faire fonctionner un deuxième compteur
-- Ceci donnera un compteur 8 bit, permettant de compter de 0 à FF (255)
-- Diminuez la période de l'horloge à 250 ms
-
-```{logic}
-:ref: counter
-:height: 500
-:showonly: in clock counter out.7seg in decoder-7seg
-{
-  "v": 3,
-  "components": [
-    {"type": "counter", "pos": [130, 70], "in": [0, 1], "out": [2, 3, 4, 5, 6], "count": 13},
-    {"type": "decoder-7seg", "pos": [260, 60], "in": [9, 10, 11, 12], "out": [13, 14, 15, 16, 17, 18, 19]}
-  ],
-  "in": [
-    {"type": "clock", "pos": [60, 110], "id": 7, "period": 2000},
-    {"pos": [130, 160], "orient": "n", "id": 8, "name": "C (Clear, mise à 0)", "val": 0, "isPushButton": true}
-  ],
-  "out": [{"type": "7seg", "pos": [370, 70], "id": [20, 21, 22, 23, 24, 25, 26, 27]}],
-  "wires": [[7, 0], [8, 1], [2, 9], [3, 10], [4, 11], [5, 12], [13, 20], [14, 21], [15, 22], [16, 23], [17, 24], [18, 25], [19, 26]]
-}
-```
-
-## Compteur avec remise
-
-Pour créer une montre, un minuteur ou une alarme, nous devons compter à 60, 12 ou 24.
-L'entrée Reset peut être utilisé pour remettre le compteur. Une porte ET détecte le nombre 6 et remet le compter
-
-- Ajoutez un deuxième compteur
-- Configurez-le pour qu'il compte de 0 à 9
-- Ajoutez le décodeur et un affichage à 7 segments
-- Utilisez les deux compteurs pour faire un compteur qui affiche les nombres 00 à 59
-- Diminuez la période à 1 seconde
-
-```{logic}
-:ref: counter_6
-:height: 500
-:showonly: in clock counter out.7seg in decoder-7seg
-{
-  "v": 3,
-  "components": [
-    {"type": "counter", "pos": [130, 70], "in": [0, 1], "out": [2, 3, 4, 5, 6], "count": 1},
-    {"type": "decoder-7seg", "pos": [380, 60], "in": [9, 10, 11, 12], "out": [13, 14, 15, 16, 17, 18, 19]}
-  ],
-  "in": [{"type": "clock", "pos": [60, 110], "id": 7, "period": 2000}],
-  "out": [{"type": "7seg", "pos": [490, 70], "id": [20, 21, 22, 23, 24, 25, 26, 27]}],
-  "gates": [{"type": "AND", "pos": [220, 150], "orient": "s", "in": [28, 29], "out": 30}],
-  "wires": [
-    [7, 0],
-    [2, 9],
-    [3, 10],
-    [4, 11],
-    [5, 12],
-    [13, 20],
-    [14, 21],
-    [15, 22],
-    [16, 23],
-    [17, 24],
-    [18, 25],
-    [19, 26],
-    [4, 29],
-    [3, 28],
-    [30, 1]
-  ]
-}
-```
 
 ## Loi de Morgan
 
@@ -467,115 +388,29 @@ Avec la porte NON-ET (NAND) on peut en principe créer toutes les autres portes 
 }
 ```
 
+## La porte X-OU
 
-## Parcourir l'alphabet
+La porte X-OU (exclusive-ou) donne 1 si un **nombre impair** d'entrées est à 1.
 
-Les affichages à 16 segments permettent d'afficher les chiffres, lettres et divers symboles.
+Dans le schéma ci-dessous, on peut allumer la lumière d'une chambre à partir de la porte d'entrée et de la cuisine.
 
-- Changez pour afficher 15 minuscules
+Ajoutez un circuit pour qu'on puisse également l'allumer depuis la chambre.
 
 ```{logic}
-:ref: counter_16seg
+:ref: xor
 :height: 500
-:showonly: in in.nibble clock counter decoder-16seg out.16seg
+:showonly: in out not and or xor
 {
   "v": 3,
-  "components": [
-    {"type": "counter", "pos": [110, 70], "in": [0, 1], "out": [2, 3, 4, 5, 6], "count": 7},
-    {
-      "type": "decoder-16seg",
-      "pos": [330, 70],
-      "in": [55, 56, 57, 58, 59, 60, 61],
-      "out": [62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78]
-    }
-  ],
+  "labels": [{"type": "rect", "pos": [290, 120], "w": 300, "h": 200, "color": "yellow", "strokeWidth": 2}],
   "in": [
-    {"type": "clock", "pos": [40, 110], "id": 7, "period": 2000},
-    {"type": "nibble", "pos": [220, 150], "id": [87, 88, 89, 90], "val": [0, 0, 1, 0]},
-    {"pos": [110, 160], "orient": "n", "id": 92, "name": "C (Clear, mise à 0)", "val": 0, "isPushButton": true}
+    {"pos": [100, 150], "id": 9, "name": "entrée", "val": 0},
+    {"pos": [290, 250], "orient": "n", "id": 14, "name": "chambre", "val": 0},
+    {"pos": [470, 120], "orient": "w", "id": 15, "name": "cuisine", "val": 0}
   ],
-  "out": [{"type": "16seg", "pos": [480, 70], "id": [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54]}],
-  "wires": [
-    [7, 0],
-    [62, 38],
-    [63, 39],
-    [64, 40],
-    [65, 41],
-    [66, 42],
-    [67, 43],
-    [68, 44],
-    [69, 45],
-    [70, 46],
-    [71, 47],
-    [72, 48],
-    [73, 49],
-    [74, 50],
-    [75, 51],
-    [76, 52],
-    [77, 53],
-    [78, 54],
-    [2, 55],
-    [3, 56],
-    [4, 57],
-    [5, 58],
-    [87, 59],
-    [88, 60],
-    [89, 61],
-    [92, 1]
-  ]
+  "out": [{"type": "bar", "pos": [300, 40], "id": 10, "display": "px", "color": "yellow"}],
+  "gates": [{"type": "XOR", "pos": [220, 90], "orient": "n", "in": [11, 12], "out": 13}],
+  "wires": [[13, 10], [9, 11], [15, 12]]
 }
 ```
 
-## Rouler un dé
-
-Un dé électronique utilise 7 LEDs pour afficher les points.
-Une horloge rapide, liée par une porte ET vers l'entrée d'un compteur compte rapidement de 0 à 5.
-À 6 le compteur est remis à 0 à l'aide d'une autre porte ET.
-
-Voici la table de vérité pour les 7 LEDS.
-
-| dice | bin | a | b | c | d | e | f | g |
-|:----:|-----|---|---|---|---|---|---|---|
-|   1  | 000 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
-|   2  | 001 | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
-|   3  | 010 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
-|   4  | 011 | 1 | 0 | 1 | 0 | 1 | 0 | 1 |
-|   5  | 100 | 1 | 0 | 1 | 1 | 1 | 0 | 1 |
-|   6  | 101 | 1 | 1 | 1 | 0 | 1 | 1 | 1 |
-
-Ajoutez les portes logiques appropriées pour implémenter ce dé électronique.
-
-```{logic}
-:ref: dice
-:height: 500
-:showonly: in clock not and or out.bar
-{
-  "v": 3,
-  "out": [
-    {"type": "bar", "pos": [440, 290], "id": 0, "display": "px", "name": "a"},
-    {"type": "bar", "pos": [440, 340], "id": 1, "display": "px", "name": "b"},
-    {"type": "bar", "pos": [490, 340], "orient": "s", "id": 2, "display": "px", "name": "d"},
-    {"type": "bar", "pos": [440, 390], "id": 3, "display": "px", "name": "c"},
-    {"type": "bar", "pos": [540, 340], "id": 4, "display": "px", "name": "f"},
-    {"type": "bar", "pos": [540, 290], "id": 5, "display": "px", "name": "e"},
-    {"type": "bar", "pos": [540, 390], "id": 6, "display": "px", "name": "g"}
-  ],
-  "in": [{"type": "clock", "pos": [40, 30], "id": 9, "period": 100}, {"pos": [90, 150], "id": 23, "name": "rouler", "val": 0, "isPushButton": true}],
-  "components": [{"type": "counter", "pos": [210, 80], "in": [10, 11], "out": [12, 13, 14, 15, 16], "count": 4}],
-  "gates": [
-    {"type": "AND", "pos": [290, 210], "orient": "s", "in": [17, 18], "out": 19},
-    {"type": "AND", "pos": [120, 80], "in": [20, 21], "out": 22},
-    {"type": "NOT", "pos": [330, 40], "in": 24, "out": 25}
-  ],
-  "wires": [
-    [13, 17, {"propagationDelay": 10}],
-    [14, 18, {"propagationDelay": 10}],
-    [19, 11, {"propagationDelay": 10}],
-    [22, 10],
-    [9, 20],
-    [23, 21],
-    [12, 24],
-    [25, 2]
-  ]
-}
-```

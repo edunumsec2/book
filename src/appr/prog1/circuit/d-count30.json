@@ -1,0 +1,8 @@
+{
+  "v": 3,
+  "opts": {"propagationDelay": 10},
+  "in": [{"type": "clock", "pos": [40, 90], "id": 7, "period": 2000}],
+  "components": [{"type": "flipflop-d", "pos": [180, 150], "in": [8, 9, 10, 11], "out": [12, 13], "state": 1}],
+  "out": [{"type": "nibble", "pos": [250, 40], "orient": "n", "id": [29, 30, 31, 32]}],
+  "wires": [[13, 11], [12, 30], [7, 29], [7, 8]]
+}

@@ -1,5 +1,6 @@
 {
   "v": 3,
+  "opts": {"propagationDelay": 10},
   "out": [
     {"type": "bar", "pos": [440, 290], "id": 0, "display": "px", "name": "a"},
     {"type": "bar", "pos": [440, 340], "id": 1, "display": "px", "name": "b"},
@@ -17,9 +18,9 @@
     {"type": "NOT", "pos": [330, 40], "in": 24, "out": 25}
   ],
   "wires": [
-    [13, 17, {"propagationDelay": 10}],
-    [14, 18, {"propagationDelay": 10}],
-    [19, 11, {"propagationDelay": 10}],
+    [13, 17],
+    [14, 18],
+    [19, 11],
     [22, 10],
     [9, 20],
     [23, 21],
