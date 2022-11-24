@@ -108,15 +108,13 @@ align: left
 Lorsque l'on dit que i ← 1, ou que i = 1 en Python, cela veut tout simplement dire que la variable *i* vaut maintenant 1. Cette opération signifie que l'on va prendre le tiroir avec étiquette *i* dans la commode (s'il n'existe pas encore on va noter *i* sur l'étiquette d'un tiroir disponible) et on va mettre la valeur 1 dedans. Ce qui se trouvait dans le tiroir avant la valeur 1 ne s'y trouve plus, on dit que *la valeur précédente est écrasée*. A chaque fois que nous utilisons *i* dans l'algorithme ou dans le code, nous faisons référence à la valeur stockée dans le tiroir.
 
 
-````{admonition} Exercice 0. Algorithme mystère
-:class: note
+````{exercise} Algorithme mystère
 
 Lisez bien l'algorithme présenté ci-dessus. Quel problème cet algorithme permet-il de résoudre ? Il est plus facile de répondre à cette question, si l'on imagine que la liste *Nombres* contient par exemple les nombres 4, 5 et 6 (correspond à [4, 5, 6] en Python).
 
 ````
 
-`````{admonition} Solution 0. Algorithme mystère
-:class: hint
+`````{solution}
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -146,8 +144,7 @@ Cet algorithme permet de calculer la somme des nombres contenus dans une liste (
 Pour comprendre ce que fait l'algorithme ci-dessus, il faut se mettre à la place de la machine. On parle de *<span style="color:rgb(13, 204, 166)">simuler</span>* un algorithme, de faire comme si l'algorithme s'exécutait sur une machine. Pour que ce soit plus concret, on peut imaginer des valeurs fictives pour les variables telles que *Nombres*. Dans la vie réelle, *Nombres* pourra contenir tous les nombres possibles, mais cela ne nous aide pas à comprendre. On imagine alors des nombres précis que *Nombres* pourrait contenir, comme par exemple 4, 5 et 6. Lorsqu'on exécute les opérations de l'algorithme l'une après l'autre, avec des valeurs concrètes, on comprend mieux quel effet ces opérations ont sur les valeurs contenues dans les variables. La simulation de l'algorithme nous permet de saisir **<span style="color:rgb(89, 51, 209)">les calculs</span>** réalisés par cet algorithme, ici une simple somme.
 
 
-````{admonition} Exercice 1. Machine mystère
-:class: note
+````{exercise} Machine mystère
 
 Quel objet du quotidien (autre que la calculatrice) fait des additions et utilise cet algorithme pour résoudre un problème ?  
 
@@ -157,8 +154,8 @@ Il y a-t-il des désavantages à automatiser cette tâche ?
 
 ````
 
-`````{admonition} Solution 1. Machine mystère
-:class: hint
+`````{solution}
+
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -225,13 +222,11 @@ Le jeu d’instructions élémentaires dépend du système informatique sur lequ
 ````
 
 
-````{admonition} Exercice 2. Ingrédients de l'algorithme mystère
-:class: note
+````{exercise} Ingrédients de l'algorithme mystère
 A quoi correspondent « les ingrédients d’un algorithme » dans l’exemple de la recette de l’omelette ?
 ````
 
-````{admonition} Solution 2. Ingrédients de l'algorithme mystère
-:class: hint
+````{solution}
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -243,10 +238,9 @@ A quoi correspondent « les ingrédients d’un algorithme » dans l’exemple d
 
 <span id=exercice-echange> </span>
 
-````{admonition} Exercice 3. Echange de deux variables
-:class: note
+````{exercise} Échange de deux variables
 
-Ecrire un algorithme qui échange les valeurs de deux variables. Par exemple, si la première variable X contient 1 et la deuxième variable Y contient 2, à la fin de l'algorithme X contient 2 et Y contient 1. Pour rappel, une variable peut contenir une seule valeur à la fois. 
+Écrire un algorithme qui échange les valeurs de deux variables. Par exemple, si la première variable X contient 1 et la deuxième variable Y contient 2, à la fin de l'algorithme X contient 2 et Y contient 1. Pour rappel, une variable peut contenir une seule valeur à la fois. 
 
 Conseil : cela aide de se mettre à la place de la machine et de représenter le contenu de chaque variable sous la forme d'un tiroir, en la dessinant avec son étiquette et son contenu *après chaque opération de votre algorithme*.
 
@@ -254,8 +248,7 @@ Conseil : cela aide de se mettre à la place de la machine et de représenter 
 
 
 
-`````{admonition} Solution 3. Echange de deux variables
-:class: hint
+`````{solution}
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -298,8 +291,7 @@ Nous avons donc la confirmation que la solution obtenue résout correctement not
 
 ## Exercices
 
-````{admonition} Exercice 1.3.1. Forme mystère
-:class: note
+````{exercise} Forme mystère
 
 L’algorithme suivant contrôle un crayon. Quelle forme dessine-t-il ?
 ```
@@ -309,8 +301,7 @@ Répéter 8 fois :
 ```
 ````
 
-<!-- `````{admonition} Solution 1.3.1 : forme mystère
-:class: hint
+<!-- `````{solution}
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -345,8 +336,7 @@ Un hexagone. Pour vérifier, exécuter le code ci-dessus. On pourrait croire que
 `````
  -->
 
-````{admonition} Exercice 1.3.2. Nombre minimum
-:class: note
+````{exercise} Nombre minimum
 
 Ecrire un algorithme qui permet de trouver le plus petit nombre d’une liste. Penser à décomposer la solution en différentes étapes.
 
@@ -356,8 +346,7 @@ L'algorithme trouve-t-il la bonne solution ? Si non, modifier l'algorithme afin 
 
 ````
 <!-- 
-`````{admonition} Solution 1.3.2. : nombre minimum
-:class: hint
+`````{solution}
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -436,8 +425,7 @@ Le résultat obtenu est bien le résultat attendu, l'algorithme a trouvé la plu
 
 
 
-````{admonition} Exercice 1.3.3. Le prochain anniversaire
-:class: note
+````{exercise} Le prochain anniversaire
 
 On souhaite déterminer l’élève dont la date d’anniversaire est la plus proche de la date d’aujourd’hui, dans le futur. Ecrire un algorithme (en langage familier) qui permet de trouver cet élève. Penser à décomposer le problème en sous-problèmes. 
 
@@ -447,8 +435,7 @@ Un ordinateur peut-il réaliser les opérations décrites par cet algorithme ?
 
 ````
 <!-- 
-`````{admonition} Solution 1.3.3. : le prochain anniversaire
-:class: hint
+`````{solution}
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -468,8 +455,7 @@ Oui, un ordinateur peut exécuter ces opérations, mais elles doivent être déc
  -->
 
 
-````{admonition} Exercice 1.3.4. Echange de trois variables
-:class: note
+````{exercise} Échange de trois variables
 
 Écrire un algorithme qui effectue la permutation circulaire des variables X, Y et Z : à la fin de l’algorithme, X contient la valeur de Z, Y la valeur de X et Z la valeur de Y. Pour rappel, une variable ne peut contenir qu'une valeur à la fois.
 
@@ -477,8 +463,7 @@ Conseil : il est très utile de se mettre à la place de la machine et de repr
 
 ````
 
-<!-- `````{admonition} Solution 1.3.4. : échange de trois variables
-:class: hint
+<!-- `````{solution}
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -504,8 +489,7 @@ Nous avons donc la confirmation que la solution obtenue résout correctement not
 
 
 
-````{admonition} Exercice 1.3.5. Affectations
-:class: note
+````{exercise} Affectations
 
 Quel est le résultat de la suite des trois affectations suivantes ? On parle d'*affectation* lorsqu'on attribue une valeur à une variable.
 
@@ -521,8 +505,7 @@ Vérifier la solution que vous avez trouvée en représentant chaque variable av
 ````
 
 
-<!-- `````{admonition} Solution 1.3.5. : affectations
-:class: hint
+<!-- `````{solution}
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
