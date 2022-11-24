@@ -1,5 +1,5 @@
 (prog1.cercler)=
-# Cercler* - `circle()`
+# *Cercler - `circle()`
 
 Dans ce chapitre, nous explorons les cercles et les arcs de cercle. Nous allons voir que :
 
@@ -120,13 +120,14 @@ Le cœur est le symbole de l'amour : on donne de façon métaphorique son cœu
 ```{codeplay}
 :file: circle7.py
 from turtle import *
+r = 50
 
 left(90)
-circle(50, 225)
-forward(120)
+circle(r, 225)
+forward(2.4*r)
 left(90)
-forward(120)
-circle(50, 225)
+forward(2.4*r)
+circle(r, 225)
 ```
 
 **Exercice** : Coloriez le cœur en rouge, ajoutez une flèche.
@@ -165,10 +166,11 @@ Le pictogramme ⌘ (Unicode 2318), parfois appelé *Gordon loop* ou *bretzel*, a
 ```{codeplay}
 :file: circle9.py
 from turtle import *
+r = 40
 
 for i in range(4):
-    circle(50, 270)
-    forward(150)
+    circle(r, 270)
+    forward(3*r)
 ```
 
 **Exercice** : Modifiez le programme pour obtenir le même effet de croisement comme avec le symbole infini ∞.
@@ -180,27 +182,26 @@ Les lettres sont des signes graphiques qui forment un alphabet et servent à tra
 ```{codeplay}
 :file: circle10.py
 from turtle import *
-width(10)
-
-def espace():
-    up()
-    forward(30)
-    down()
+width(5)
+r = 30
 
 def n():
+    down()
     left(90)
-    forward(80)
-    backward(40)
-    circle(-40, 180)
-    forward(40)
+    forward(2*r)    # montée
+    backward(r)     # retour au miliue
+    circle(-r, 180) # demi-cercle
+    forward(r)      # descente
     left(90)
-    espace()
+    up()
+    forward(r)      # avance vers la prochaine lettre
 
 def o():
-    espace()
-    circle(40)
-    espace()
-    espace()
+    forward(r)      # avance vers milieu
+    down()
+    circle(r)
+    up()
+    forward(2*r)    # avance vers prochaine lettre
 
 n()
 o()
@@ -242,7 +243,7 @@ On vous demande de dessiner des logos pour les toilettes avec le symbole traditi
 ```{codeplay}
 :file: LGBTQ.py
 from turtle import *
-# Votre prénom, nom, classe
+# Prénom Nom, classe
 
 left(135)
 circle(50)
@@ -262,7 +263,7 @@ Les cinq anneaux imbriqués, colorés en bleu, jaune, noir, vert et rouge sur un
 ```{codeplay}
 :file: olympique.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 circle(50)
 ```
@@ -278,7 +279,7 @@ Utilisez une boucle `for` pour la répétition des traverses.
 ```{codeplay}
 :file: circuit_rond.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 def traverse():
     ...
@@ -293,7 +294,7 @@ Avec des rails de chemin de fer, dessinez un circuit en forme de huit (deux rail
 ```{codeplay}
 :file: circuit_huit.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 def traverse():
     ...
@@ -308,7 +309,7 @@ Dessinez et coloriez un jardin. Définissez des fonctions pour des pétales, feu
 ```{codeplay}
 :file: jardin.py
 from turtle import *
-# Votre prénom, nom, classe
+# Prénom Nom, classe
 
 dot(1000, 'lightgreen')  # background
 

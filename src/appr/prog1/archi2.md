@@ -289,7 +289,6 @@ L'entrée Reset peut être utilisé pour remettre le compteur. Une porte ET dét
 }
 ```
 
-
 ## Horloge avec secondes
 
 Un compteur 4 bits avec un circuit de remise à 0 peut être configuré pour afficher les secondes de 00 à 59.

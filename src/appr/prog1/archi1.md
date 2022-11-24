@@ -164,7 +164,6 @@ La porte NON inverse un signal.
 
 - Ajoutez un deuxième segment rouge carré qui s'allume quand la lampe verte est éteinte
 
-
 ```{logic}
 :ref: not
 :height: 400
@@ -338,7 +337,6 @@ Le tableau ci-dessous montre les segments à allumer pour afficher les nombres 0
 }
 ```
 
-
 ## Loi de Morgan
 
 La **loi de Morgan** dit qu'une porte ET peut être fabriquée avec une porte OU et des inverseurs.
@@ -413,4 +411,3 @@ Ajoutez un circuit pour qu'on puisse également l'allumer depuis la chambre.
   "wires": [[13, 10], [9, 11], [15, 12]]
 }
 ```
-

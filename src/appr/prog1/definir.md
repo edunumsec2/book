@@ -20,7 +20,7 @@ Une fonction permet de
 ## Nommer une séquence
 
 Dessiner un rectangle est assez utile. C'est une forme qu'on pourra réutiliser certainement souvent. Il serait pratique de définir un nom pour ces 8 lignes de code. Pouvons-nous définir de nouvelles commandes ?
-<!--  -->
+
 ```python
 forward(160)
 left(90)
@@ -266,75 +266,147 @@ def maison():
 maison()
 ```
 
-## Lever le stylo
+## Variable globale
 
-Les deux commandes `up()` et `down()` permettent de lever et de baisser le stylo.
-Ceci nous permet de dessiner des formes séparées, comme ces deux triangles, car nous nous déplaçons sans laisser de trait derrière nous lorsque le stylo est levé.
+Une variable est le concept d'associer un **nom symbolique** à une valeur.
+
+Avant de pouvoir utiliser une variable, elle doit être créée ou déclarée.
+On appelle ce processus une **affectation** et on dit qu'on associe une valeur à une variable.
+La forme générale est `var = valeur` ou `var` est le nom de la variable et `valeur` est sa valeur.
+Attention, ceci n'est pas une égalité au sens mathématique.
+
+Dans le programme chaque instance de `d` est remplacez par 80. La commande `forward(d)` va donc prendre le sens de `forward(80)` et faire avancer la tortue de 80 pas.
 
 ```{exercise}
-Dessinez un troizième triangle disjoint,  mais pas à la même hauteur.
+Modifiez la valeur de la variable globale `d` et exécutez le programme.
 ```
 
 ```{codeplay}
-:file: def6.py
 from turtle import *
 
+d = 80      # variable globale (d = distance)
+
 def triangle():
-    forward(100)
+    forward(d)
     left(120)
-    forward(100)
+    forward(d)
     left(120)
-    forward(100)
+    forward(d)
+
+triangle()
+triangle()
+triangle()
+```
+
+Une variable globale apparait au début du programme et sert à configurer une propriété générale d'un programme. Ici nous choisissons une variable globale `d` pour indiquer une **distance** de base.
+Cette distance est utilisée pour pouvoir dessiner des formes d'une hauteur standard.
+
+```{caution}
+Utilisez les variables globales avec beaucoup de modération !
+```
+
+## Le point `dot()`
+
+La fonction `dot()` dessine un point à la position actuelle de la tortue.
+
+```{exercise}
+Ajoutez un point (`dot`) au sommet du triangle.
+```
+
+```{codeplay}
+from turtle import *
+
+d = 100      # variable globale (d = distance)
+
+def triangle():
+    dot()
+    forward(d)
     left(120)
+    dot()
+    forward(d)
+    left(120)
+    forward(d)
+
+triangle()
+```
+
+## Lever le stylo
+
+Les deux commandes `up()` et `down()` permettent de lever et de baisser le stylo.
+Ceci nous permet de dessiner des formes séparées, comme ici le petit i avec son point.
+
+```{exercise}
+Transformez le i vers un i avec trema (deux points).
+```
+
+```{codeplay}
+from turtle import *
+d = 50
+
+def i():
+    dot()
+    down()      # poser le stylo
+    left(90)
+    forward(d)
+    up()        # lever le stylo
+    forward(d)
+    dot()
+    backward(2*d)
+    right(90)
+    forward(d/2)    # avancer à la prochaine lettre
     
-triangle()
-up()
-forward(150)
-down()
-triangle()
+i()
+i()
 ```
 
 ```{caution}
 Contrairement aux fonctions `forward(d)` et `backward(d)` qui nécessitent un argument, les fonctions `up()` et `down()` ne nécessitent pas d'argument.
 ```
 
-## Maison avec fenêtre
+## Dessiner des lettres
 
-Dans le programme ci-dessous, nous allons dessiner de nouveau une maison, mais avec une fenêtre cette fois-ci. Les fonctions `up()`/`down()` nous permettent de dessiner des formes disjointes, telles qu'une fenêtre à l'intérieur de la maison.
+Voici quelques astuces pour dessiner des lettres:
 
-```{exercise}
-Modifiez le programme pour que la fenêtre soit dessinée à l'intérieur de la maison. Dessinez une deuxième maison.
-```
+- Basez la dimension de chaque lettre sur la variable `d`. Ceci permet de choisir la taille des lettres.
+- Marquez le point de départ avec un point (dot).
+- Posez le stylo au début de chaque lettre (down), levez-le à la fin (up).
+
+- À la fin, avancez la tortue à la position de la prochaine lettre.
 
 ```{codeplay}
-:file: def7.py
 from turtle import *
+d = 50
 
-def fenetre():
-    forward(20)
+def h():
+    dot()
+    down()
     left(90)
-    forward(20)
+    forward(2*d)
+    backward(d)
+    right(90)
+    forward(d)
+    right(90)
+    forward(d)
     left(90)
-    forward(20)
-    left(90)
-    forward(20)
-    left(90)
+    up()
+    forward(d/2)
 
-def maison():
-    forward(100)
+def i():
+    dot()
+    down()
     left(90)
-    forward(60)
-    left(45)
-    forward(71)
-    left(90)
-    forward(71)
-    left(45)
-    forward(60)
-    left(90)
+    forward(d)
+    up()
+    forward(d)
+    dot()
+    backward(2*d)
+    right(90)
+    forward(d/2)
 
-    fenetre()
-
-maison()
+h()
+i()
+h()
+i()
 ```
 
 ## Trouver des motifs
@@ -346,19 +418,20 @@ Ensuite, il suffit d'**appeler** 4 fois cette fonction pour dessiner une croix.
 En appelant la fonction `bras()`, au lieu d'écrire 6 lignes, nous n'écrivons qu'une ligne de code.
 
 ```{exercise}
-Allongez le bras de la croix à 120 pixels, et diminuez sa largeur à 30 pixels.
+Allongez le bras de la croix à `2*d`, et diminuez sa largeur à `d/2` pour en faire une croix plus mince.
 ```
 
 ```{codeplay}
 :file: def8.py
 from turtle import *
+d = 60
 
 def bras():
-    forward(60)
+    forward(d)
     left(90)
-    forward(60)
+    forward(d)
     left(90)
-    forward(60)
+    forward(d)
     right(90)
     
 def croix():
@@ -370,56 +443,12 @@ def croix():
 croix()
 ```
 
-## Décomposer
-
-Une stratégie importante en programmation est de **décomposer un programme en sous-programmes**. Les fonctions nous permettent de structurer un problème en objets de plus en plus simples.
-
-Ici, nous dessinons une fenêtre composée de 4 carreaux. Nous pouvons décomposer ce problème en une construction hiérarchique :
-
-- la fonction `fenetre()` appelle quatre fois la fonction  `carreau()`,
-- la fonction `carreau()` appelle deux fois la fonction `equerre()`,
-- la fonction `equerre()` appelle deux fois la fonction `ligne()`.
-
-```{codeplay}
-:file: def9.py
-from turtle import *
-
-def ligne():
-    forward(100)
-    left(90)
-
-def equerre():
-    ligne()
-    ligne()
-
-def carreau():
-    equerre()
-    equerre()
-    left(90)
-
-def fenetre():
-    carreau()
-    carreau()
-    carreau()
-    carreau()
-
-fenetre()
-```
-
-```{question}
-Combien de lignes de code sont exécutées par la fonction `fenetre()`?
-
-{f}`16`  
-{f}`32`  
-{v}`36`  
-{f}`40`  
-```
-
 ## Exercices
 
 - Téléchargez un exercice.
 - Ouvrez-le dans un éditeur externe (tel que Thonny).
 - Mettez votre prénom, nom et classe.
+- Basez vos dimensions sur la variable globale `d`
 - Remplacez `...` par votre code.
 - Déposez votre exercice sur Moodle (ou plateforme équivalente).
 
@@ -431,7 +460,8 @@ Ensuite, dessinez 3 rectangles qui ne se touchent pas, à des endroits différen
 ```{codeplay}
 :file: rectangles.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
+d = 100
 
 def rectangle():
     ...
@@ -449,7 +479,8 @@ Ensuite, dessinez 3 maisons qui ne sont pas connectées, à des endroits différ
 ```{codeplay}
 :file: maisons.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
+d = 100
 
 def maison():
     ...
@@ -460,56 +491,62 @@ maison()
 done()
 ```
 
-### Chaises
+### Meubles
 
-Définissez une fonction pour dessiner une chaise.
-Ensuite, dessinez 3 chaises à des endroits différents.
+Définissez 3 fonctions pour dessiner une chaise, une table et un lit.
+Ensuite placez plusieurs meubles dans l'espace
 
 ```{codeplay}
 :file: chaises.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
+d = 100
 
 def chaise():
     ...
 
-chaise()
-...
-done()
-```
-
-### Tables
-
-Définissez une fonction pour dessiner une table.
-Ensuite, dessinez 3 tables à des endroits différents.
-
-```{codeplay}
-:file: tables.py
-from turtle import *
-# Prénom, nom, classe
-
 def table():
     ...
-
-table()
-...
-done()
-```
-
-### Lits
-
-Définissez une fonction pour dessiner un lit.
-Ensuite, dessinez 3 lits à des endroits différents.
-
-```{codeplay}
-:file: lits.py
-from turtle import *
-# Prénom, nom, classe
 
 def lit():
     ...
 
+chaise()
+table()
 lit()
+...
+done()
+```
+
+### ABC
+
+Définissez une fonction pour chaque lettre de l'alphabet.
+Ensuite, ecrivez votre nom.
+
+```{codeplay}
+:file: abc.py
+from turtle import *
+# Prénom Nom, classe
+d = 30
+
+def A():
+    dot()
+    down()
+    left(70)        # demi-montée
+    forward(d)
+    right(70)
+    forward(0.6*d)  # trait du milieu
+    backward(0.6*d)
+    left(70)
+    forward(d)      # partie haute
+    right(140)
+    forward(2*d)    # descente
+    left(70)
+    up()
+    forward(d/2)    # avancer à la prochaine lettre
+
+A()
+A()
 ...
 done()
 ```
@@ -524,47 +561,60 @@ Tetris met le joueur au défi de réaliser des lignes complètes en déplaçant 
 
 Les carrés de base d'un tétromino mesurent 20 × 20 pixels. Il y en a 7 formes différentes, qui sont nommées d'après les lettres auxquelles elles ressemblent :
 
-- S
+- Z
 - L
 - O (carré)
-- Z
+- S
 - I (bâton)
 - J
 - T
 
+Basez les dimensions de vos tétronimos sur la variable globale `d`.
+
 ```{codeplay}
 :file: tetris.py
 from turtle import *
-# Votre prénom, nom, classe
-def I():
+# Prénom Nom, classe
+d = 20
+
+def Z():
     down()
-    forward(20)
+    dot()
+    forward(2*d)
     left(90)
-    forward(80)
+    forward(d)
     left(90)
-    forward(20)
+    forward(d)
+    right(90)
+    forward(d)
     left(90)
-    forward(80)
+    forward(2*d)
+    left(90)
+    forward(d)
+    left(90)
+    forward(d)
+    right(90)
+    forward(d)
     left(90)
     up()
 
-def O():
-    ...
-def T():
-    ...
 def L():
     ...
-def J():
-    ...
-def Z():
+def O():
     ...
 def S():
     ...
+def I():
+    ...
+def J():
+    ...
+def T():
+    ...
 
 up()
-back(250)
-I()
-forward(40)
+back(12*d)
+Z()
+forward(3*d)
 O()
 ...
 done()

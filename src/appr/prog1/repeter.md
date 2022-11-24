@@ -449,7 +449,7 @@ Dessinez une pellicule photographique. Utilisez une boucle `for` pour créer 4 t
 ```{codeplay}
 :file: pellicule.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 forward(200)
 ```
@@ -465,7 +465,7 @@ Utilisez une boucle `for` pour la répétition des traverses.
 ```{codeplay}
 :file: rails.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 def traverse():
     ...
@@ -480,7 +480,7 @@ Dessinez un wagon de métro. Utilisez une boucle `for` pour les fenêtres. Utili
 ```{codeplay}
 :file: metro.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 def wagon():
     ...
@@ -495,7 +495,7 @@ Dessinez un gratte-ciel avec $n \times m$ fenêtres. Pour ceci, utilisez deux bo
 ```{codeplay}
 :file: gratte_ciel.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 def fenetre():
     ...
@@ -518,7 +518,7 @@ Vous constatez aussi une symétrie par 4. Donc avec un choix intelligent de fonc
 ```{codeplay}
 :file: moulin.py
 from turtle import *
-# Votre prénom, nom, classe
+# Prénom Nom, classe
 width(8)
 up()
 forward(50)
