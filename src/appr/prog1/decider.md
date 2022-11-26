@@ -324,6 +324,40 @@ if not (a < x < b):
     print(x, "est dehors l'interval (", a, '...', b, ')')
 ```
 
+## Rouler un dé
+
+```{codeplay}
+:file: random15.py
+from turtle import *
+from random import *
+from time import *
+
+speed(5)
+up()
+a = 80
+d = 50
+
+def dots(points):
+    for (x, y) in points:
+        goto(x*a, y*a)
+        dot(d)
+
+for n in range(1, 7):
+    if n % 2 == 1:
+        dots(((0, 0),))            # centre ·
+    if n >= 2:
+        dots(((-1, 1), (1, -1)))  # diagonale \
+    if n >= 4:
+        dots(((-1, -1), (1, 1))) # diagonale /
+    if n == 6: 
+        dots(((-1, 0), (1, 0)))   # horzonale –
+
+    sleep(1)
+    clear()
+```
+
+**Exercice** : Modifiez le code pour afficher le dé avec un nombre aléatoire entre 1 et 6.
+
 ## Exercices
 
 - Téléchargez l'exercice

@@ -138,13 +138,16 @@ Le programme suivant dessine des points sur une grille régulière avec une dist
 from turtle import *
 up()
 
-x0 = 180
-d = 40
+def grille(p, size, dim):
+    for i in range(dim[0]):         # itérer les lignes i
+        for j in range(dim[1]):     # itérer les colonnes j
+            x = p[0] + j*size[0]    # calculer x
+            y = p[1] + i*size[1]    # calculer y
+            goto(x, y)
+            dot()
 
-for y in range(-x0, x0+1, d):
-    for x in range(-x0, x0+1, d):
-        goto(x, y)
-        dot()
+grille((-200, -100), (20, 20), (8, 8))
+grille((100, 0), (10, 10), (5, 7))
 ```
 
 ## Position `(x, y)`

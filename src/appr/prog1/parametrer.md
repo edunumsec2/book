@@ -1,11 +1,12 @@
 (prog1.parametrer)=
-# Paramétrer - `f(x)`
 
-Dans ce chapitre, nous allons voir de plus près le concept de la fonction, concept que nous avons vu dès le deuxième chapitre comme façon de donner un nom à une séquence d'instructions. Ici nous allons voir comment nous pouvons ajouter un ou plusieurs paramètres à une fonction. Nous allons voir que :
+# Paramétrer - `rect(d, d2)`
 
-- l'expression `def f(x):` permet de définir une fonction,
-- un paramètre `f(x)` est une variable (`x`) dans la définition de fonction,
-- un argument `f(2)` est une valeur (`2`) dans l'appel de fonction.
+Dans ce chapitre, nous revenons sur le concept de la fonction. Dans le chapitre 2 nous avons vu la fonction comme une façon de donner un nom à une séquence d'instructions. Ici nous allons voir comment nous pouvons ajouter un ou plusieurs paramètres à une fonction. Nous allons voir que :
+
+- l'expression `def rect(d, d2):` permet de définir une fonction avec deux paramètres,
+- les paramètres `d, d2` sont des variables locales valides uniqument à l'intérieur de la définition de fonction,
+- ces paramètres prennent une valeur au moment de l'appel  de la fonction avec `rect(50, 30)`.
 
 ```{question}
 En Python, `def` est un raccourci pour
@@ -16,10 +17,11 @@ En Python, `def` est un raccourci pour
 {f}`défavorisé`
 ```
 
-## Paramétrer la fonction
+## Paramétrer une fonction
 
-Jusqu'à maintenant, notre rectangle était d'une taille fixe.
-Il serait très utile que notre nouvelle commande `rectangle(a, b)` puisse dessiner des rectangles de largeur et hauteur variable.
+Jusqu'à maintenant, notre rectangle était d'une taille fixe. La fonction `rectangle()` du chapitre 2 dessine toujours un rectangle de 160 x 100 pixels. Il faudrait faire une nouvelle fonction `rectangle2()` si on voudrait dessiner une taille différente.
+
+Il serait très utile de disposer d'une fonction de la forme `rectangle(d, d2)` qui puisse dessiner des rectangles de largeur et hauteur variable.
 C'est possible en spécifiant des **paramètres** pour la fonction.
 Un paramètre de fonction est une variable locale qui peut être utilisée dans sa définition.
 
@@ -29,14 +31,20 @@ Ces valeurs sont les **arguments** de la fonction.
 ```{codeplay}
 from turtle import *
 
-def rectangle(a, b):    # paramètres (a, b)
-    for x in (a, b, a, b):
-        forward(x)
+def rectangle(d, d2):    # paramètres (d, d2)
+    for i in range(2):
+        forward(d/2)
+        write(d)
+        forward(d/2)
+        left(90)
+
+        forward(d2/2)
+        write(d2)
+        forward(d2/2)
         left(90)
         
-rectangle(50, 100)      # arguments (50, 100)
-rectangle(200, 80)
-rectangle(70, 70)
+rectangle(160, 100)      # largeur=160, hauteur=100 
+rectangle(200, 140)      # largeur=200, hauteur=140 
 ```
 
 La fonction `losange(a, angle)` a comme paramètre la longueur et le premier angle. Le deuxième anlge du losange est calculé.
@@ -44,32 +52,34 @@ La fonction `losange(a, angle)` a comme paramètre la longueur et le premier ang
 ```{codeplay}
 from turtle import *
 
-def losange(a, angle):      # paramètres (a, angle)
+def losange(d, a):      # paramètres (d=distance, a=angle)
     for i in range(2):
-        forward(a)
-        left(angle)
-        forward(a)
-        left(180-angle)
+        forward(d)
+        left(a)
+        write(a)
+        
+        forward(d)
+        left(180-a)
+        write(180-a)
 
-losange(100, 60)            # arguments (100, 60)
-losange(120, 120)
-losange(150, 70)
+losange(100, 60)            # distance=100, angle=60
+losange(140, 100)           # distance=140, angle=100
 ```
 
-La fonction `polygone(a, n)` a comme paramètre la longueur du côté et le nombre de sommets.
+La fonction `polygone(d, n)` a comme paramètre la distance du côté et le nombre de sommets.
 
 ```{codeplay}
 from turtle import *
 
-def polygone(a, n):     # paramètres (a, n)
+def polygone(d, n):     # paramètres (d, n)
     for i in range(n):
-        forward(a)
+        forward(d)
         left(360/n)
+        write(360/n)
 
-polygone(100, 3)        # arguments (100, 3)
-polygone(100, 4)
-polygone(100, 5)
-polygone(30, 20)
+polygone(100, 3)    # triangle
+polygone(100, 4)    # carré    
+polygone(100, 5)    # pentagon
 ```
 
 ## Dessiner une maison
@@ -79,17 +89,22 @@ Nous revenons à notre fonction pour dessiner une maison.
 ```{codeplay}
 from turtle import *
 
-def maison(a):
-    forward (1.41 * a)
-    for angle in (90, 45, 90, 45):
-        left(angle)
-        forward(a)
+def maison(d):
+    forward (1.41*d)  # sol
+    left(90)
+    forward(d)  # mur droit
+    left(45)
+    forward(d)  # toit droit
+    left(90)
+    forward(d)  # toit gauche
+    left(45)
+    forward(d)  # mur gauche
     left(90)
 
 backward(200)        
-maison(50)
+maison(50)      # maison de taille 50
 forward(100)
-maison(70)
+maison(70)      # maison de taille 70
 ```
 
 ## Couleur de la maison
@@ -101,23 +116,135 @@ from turtle import *
 getscreen().bgcolor('lightgreen')
 up()
 
-def maison(a, couleur):
+def maison(d, c):
     down()
-    fillcolor(couleur)
+    fillcolor(c)
     begin_fill()
-    forward (1.4 * a)
-    for angle in (90, 45, 90, 45):
-        left(angle)
-        forward(a)
+    forward (1.41*d)  # sol
+    left(90)
+    forward(d)  # mur droit
+    left(45)
+    forward(d)  # toit droit
+    left(90)
+    forward(d)  # toit gauche
+    left(45)
+    forward(d)  # mur gauche
     left(90)
     end_fill()
     up()
 
 maison(70, 'lightblue')
-goto(120, 30)
+forward(150)
 maison(50, 'yellow')
-goto(-180, -80)
-maison(100, 'pink')
+```
+
+## Arbre
+
+Pour dessiner un arbre simple, nous utilisons un segment droit pour le tronc et un disque (dot) pour le feuillage.
+C'est une fonction qui a 3 paramètres
+
+- `d` -- longueur du tronc
+- `c` -- couleur du tronc
+- `c2` -- couleur du feuillage
+
+```{codeplay}
+from turtle import *
+
+def arbre(d, c, c2):
+    down()
+    left(90)
+    width(d/6)      # tronc
+    pencolor(c)
+    forward(d)
+    dot(d, c2)      # feuillage
+    up()
+    backward(d)     # retourner à la position de départ
+    right(90)
+    
+    
+arbre(100, 'brown', 'lime')
+forward(70)
+arbre(90, 'brown', 'green')
+```
+
+## Bus
+
+Pour dessiner un bus, une voiture ou un camion simple, nous pouvons utiliser des rectangles pour le chassis, et un disque (dot) pour les rous.
+C'est une fonction qui a a paramètres
+
+- `d` -- longueur du bus
+- `c` -- couleur du bus
+
+```{codeplay}
+from turtle import *
+
+def rectangle(d, d2):
+    for i in range(2):
+        forward(d)
+        left(90)
+        forward(d2)
+        left(90)
+        
+def bus(d, c):
+    down()
+    fillcolor(c)        # chassis
+    begin_fill()
+    rectangle(d, d/3)
+    end_fill()
+    forward(d/4)
+    dot(d/5)            # roue arrière
+    dot(d/10, 'white')
+    forward(d/2)
+    dot(d/5)            # roue avant
+    dot(d/10, 'white')
+    up()
+    
+backward(200)
+bus(200, 'red')
+forward(100)
+bus(150, 'lightblue')
+```
+
+## Coeur
+
+```{codeplay}
+from turtle import *
+
+def coeur(r, c):
+    fillcolor(c)
+    begin_fill()
+    left(90)
+    circle(r, 225)
+    forward(2.4*r)
+    left(90)
+    forward(2.4*r)
+    circle(r, 225)
+    left(90)
+    end_fill()
+
+coeur(50, 'red')
+coeur(30, 'pink')
+```
+
+## Escalier
+
+- `d` -- longueur de marche
+- `d2` -- hauteur de marche
+- `n` -- nombre de marches
+
+```{codeplay}
+from turtle import *
+
+def escalier(d, d2, n):
+    for i in range(n):
+        forward(d)
+        left(90)
+        forward(d2)
+        right(90)
+
+escalier(20, 10, 5)
+escalier(10, -20, 5)
+escalier(30, 10, 4)
 ```
 
 ## Maison avec porte
@@ -211,40 +338,6 @@ maison((120, 40), col2='red')
 maison((-170, -140), d=80)
 ```
 
-## Formes avec cercles
-
-```{codeplay}
-from turtle import *
-
-def coeur(r):
-    circle(r, 225)
-    forward(2.4 * r)
-    left(90)
-    forward(2.4 * r)
-    circle(r, 225)
-    left(180)
-
-left(90)
-coeur(70)
-coeur(50)
-```
-
-```{codeplay}
-from turtle import *
-
-def infini(r):
-    down()
-    forward(r)
-    circle(r, 270)
-    forward(2*r)
-    circle(-r, 270)
-    forward(r)
-    up()
-
-infini(80)
-infini(50)
-````
-
 ## Rectangle
 
 La fonction `rectangle(a, b, w=1, pen='black', fill=None)` dessine un rectangle a x b.
@@ -283,132 +376,101 @@ seth(0)
 rectangle(80, 40, 1, 'red', 'pink')
 ```
 
-## Pixelart
 
-Nous pouvons utiliser la fonction `rectangle()` pour dessiner du Pixelart.
-Pour ceci nous utilisons deux tuples:
-
-- `palette` -- un tuple 1D contenant les couleurs (la palette des couleurs)
-- `table` -- un tuple 2D avec les indices des couleurs, ligne par ligne
-
-Les paramètres suivants sont passés à la fonction `rectangle()`:
-
-- `a` -- la taille du pixel (`20`)
-- `w` -- épaisseur de ligne (`1`)
-- `pen` -- couleur de ligne (`'black'`)
-
-```{codeplay}
-from turtle import *
-speed(0)
-
-def rectangle(a, b, w=1, pen='black', fill=None):
-    """Dessine un rectangle de taille a x b."""
-    if pen:
-        down()
-        width(w)
-        pencolor(pen)
-    if fill:
-        fillcolor(fill)
-        begin_fill()
-    for x in (a, b, a, b):
-        forward(x)
-        left(90)
-    if fill:
-        end_fill()
-    up()
-    forward(a)
-===
-def pixelart(table, palette, a=20, w=1, pen='black'):
-    for line in table:
-        for i in line:
-            rectangle(a, a, w=w, pen=pen, fill=palette[i])
-        backward(len(line)*a)
-        sety(ycor()-a)
-
-palette = (None, 'black', 'yellow', 'white', 'red', )
-pikachu = ((1, 2, 2, 1),
-            (3, 4, 2, 3),
-            (2, 2, 2, 2),
-            (2, 2, 2, 3))
-
-dot(1000, 'whitesmoke')
-up()
-pixelart(pikachu, palette)
-goto(-180, 0)
-pixelart(pikachu, palette, a=30, w=0, pen=None)
-goto(100, 0)
-pixelart(pikachu, (None, 'green', 'lime', 'cyan', 'pink'), 25, 3, 'red')
-```
 
 ## Polygone
 
 La fonction `polygone()` dessine un polygone régulier avec n sommets. Les arguments de la fonction sont :
 
-- `a` -- longueur du segment
+- `d` -- distance du segment
 - `n` -- nombre de segments
-- `m` -- paramètre pour polygone étoilé (>1)
-
-La fonction `polygone()` permet également de dessiner un polygone étoilé, en choisissant un paramètre `m` >1.
 
 ```{codeplay}
 from turtle import *
 
-def polygon(a, n, m=1, w=1, pen='black', fill='white'):
+def polygon(d, n, w=1, pen='black', fill='white'):
     down()
     pencolor(pen)
     width(w)
     fillcolor(fill)
     begin_fill()
     for i in range(n):
-        forward(a)
-        left(m*360/n)
+        forward(d)
+        left(360/n)
     end_fill()
-    forward(a)
     up()  
 
 up()
-goto(-280, 0)
+backward(280)
 for n in range(3, 9):
-    polygon(40, n)
-    forward(60)
-    
-goto(-250, -160)
-for m in range(2, 6):
-    polygon(80, 11, m, fill='yellow')
-    forward(60)
+    polygon(40, n, fill='lime')
+    color('black')
+    write(n)
+    forward(100)
 ```
 
-## Ligne polygonale
 
-La fonction `polyline(poly, pos=(0, 0), size=(1, 1), w=1, pen='black', fill='white')` dessine une ligne polygonale définie par un tuple de points. Les arguments sont:
+## Etoile
 
-- `poly` -- tuple de positions (x, y)
-- `pos` -- position de déplacement
-- `size` -- facteur d'échelle
+En ajoutant un paramètre supplémentaire `m`, la fonction `polygone()` permet également de dessiner un polygone étoilé.  Ce paramètre signifie le nombre de pics sauté pour aller au prochain des `n` points répartis dans un cercle. Pour `m=1` un polygone régulier est dessinée.
+
+es arguments de la fonction sont :
+
+- `d` -- distance du segment
+- `n` -- nombre de segments
+- `m` -- paramètre pour polygone étoilé (nombre de pics sautés)
 
 ```{codeplay}
 from turtle import *
 
-def polyline(poly, pos=(0, 0), size=(1, 1), w=1, pen='black', fill='white'):
-    width(w)
+def polygon(d, n, m=1, w=1, pen='black', fill='white'):
+    down()
     pencolor(pen)
+    width(w)
     fillcolor(fill)
-    goto(pos)
     begin_fill()
-    for p in poly:
-        goto(pos[0]+p[0]*size[0], pos[1]+p[1]*size[1], )
-        down()
+    for i in range(n):
+        forward(d)
+        left(m*360/n)
     end_fill()
-    up()
-
-house = ((0, 0), (10, 0), (10, 15), (20, 15), (20, 0),
-            (50, 0), (50, 25), (25, 50), (0, 25), (0, 0))
-
+    up()  
+    
 up()
-polyline(house)
-polyline(house, pos=(-150, -50), fill='pink')
-polyline(house, (90, -60), size=(2, 2), w=3)
-polyline(house, (90, -80), size=(2, -1.5))
+backward(250)
+for m in range(2, 6):
+    polygon(80, 11, m, fill='yellow')
+    color('black')
+    write(m)
+    forward(60)
+```
+
+## Nommer une variable
+
+Pour nommer une variable, vous pouvez utiliser :
+
+- lettres (`a...z` et `A...Z`),
+- chiffres (`0...9`),
+- le tiret bas (`_`).
+
+Le nom de variable :
+
+- est sensible aux majuscules/minuscules,
+- ne peut pas commencer avec un chiffre,
+- ne doit pas consister d'un mot-clé (`if`, `else`, `for`),
+
+Ces noms de variables sont donc valides : `a2`, `_a`, `speed`, `pos_x`, `POS_X`
+
+```{question}
+Lesquels des noms de variable sont valides ?
+
+{f}`var 2`  
+{v}`var2`  
+{f}`2var`  
+{v}`IF`
+===
+`var 2` contient une espace  
+`2var` commence par un chiffre  
+`IF` n'est pas un mot-clé  
 ```
 
 ## Exercices
@@ -421,20 +483,22 @@ La fonction `pingpong()` reprend le dessin du chapitre 1 et ajoute trois paramè
 :file: pingpong.py
 from turtle import *
 
-def pingpong(a, col1, col2):
+def pingpong(d, c, c2):
     down()
-    color(col1)
-    width(0.15*a)
-    forward(0.6*a)
-    color(col2)
-    width(0.6*a)
-    forward(0.1*a)
-    up()
+    left(90)
+    color(c)        # poignée
+    width(d/8)
+    forward(d/2)
+    color(c2)       # plaque
+    width(d/2)
+    forward(d/10)
+    up()            # retourner au point de départ
+    backward(6/10*d)
+    right(90)
 
-seth(90)
 pingpong(200, 'brown', 'red')
-goto(100, 0)
-pingpong(100, 'brown', 'blue')
+forward(100)
+pingpong(150, 'brown', 'blue')
 ```
 
 ### Stickman
@@ -475,4 +539,3 @@ goto(0, 0)
 stickman(30, (90, -110), (110, -24))
 hideturtle()
 ```
-

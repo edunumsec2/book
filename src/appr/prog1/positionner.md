@@ -408,6 +408,41 @@ for poly in polygons:
     up()
 ```
 
+## Ligne polygonale
+
+La fonction `polyline(poly, pos=(0, 0), size=(1, 1), w=1, pen='black', fill='white')` dessine une ligne polygonale définie par un tuple de points. Les arguments sont:
+
+- `poly` -- tuple de positions (x, y)
+- `pos` -- position de déplacement
+- `size` -- facteur d'échelle
+
+```{codeplay}
+from turtle import *
+
+def polyline(poly, pos=(0, 0), size=(1, 1), w=1, pen='black', fill='white'):
+    width(w)
+    pencolor(pen)
+    fillcolor(fill)
+    goto(pos)
+    begin_fill()
+    for p in poly:
+        goto(pos[0]+p[0]*size[0], pos[1]+p[1]*size[1], )
+        down()
+    end_fill()
+    up()
+
+house = ((0, 0), (10, 0), (10, 15), (20, 15), (20, 0),
+            (50, 0), (50, 25), (25, 50), (0, 25), (0, 0))
+
+up()
+polyline(house)
+polyline(house, pos=(-150, -50), fill='pink')
+polyline(house, (90, -60), size=(2, 2), w=3)
+polyline(house, (90, -80), size=(2, -1.5))
+```
+
+
+
 ## Exercice
 
 ### Tangram

@@ -18,14 +18,14 @@ colorier
 repeter
 
 cercler
-memoriser
+parametrer
 parcourir
 positionner
-parametrer
 
 write
 iterer
 randomiser
+arranger
 
 questionner
 decider
@@ -38,7 +38,6 @@ turtleart
 
 projet
 annexe
-extra
 archi1
 archi2
 ````

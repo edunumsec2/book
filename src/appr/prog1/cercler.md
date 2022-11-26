@@ -1,4 +1,5 @@
 (prog1.cercler)=
+
 # *Cercler - `circle()`
 
 Dans ce chapitre, nous explorons les cercles et les arcs de cercle. Nous allons voir que :
@@ -15,8 +16,6 @@ Un cercle affiché sur un écran d'ordinateur est créé par
 {v}`un polygone régulier d'ordre élevé`  
 {f}`une boucle refermée`
 ```
-
-
 
 ## Fonction `circle()`
 

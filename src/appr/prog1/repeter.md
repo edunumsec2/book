@@ -87,8 +87,8 @@ Définissez la fonction `hexagone()` pour dessiner un hexagone, et appelez cette
 from turtle import *
 
 def triangle():
-    for i in range(3):
-        forward(100)
+    for i in range(3):      # indentation 1 (bloc pour def)
+        forward(100)        # indentation 2 (bloc pour for)
         left(120)
 
 def carre():
