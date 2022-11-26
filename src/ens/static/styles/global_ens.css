@@ -3,31 +3,6 @@
     --primary-dark: #7C3EFF;
 }
 
-@page {
-    size: A4;
-    margin: 25mm 25mm 25mm 25mm;
-}
-
-@media print {
-    header, aside, footer, #progress-ring, .content-icon-container {
-        display: none !important;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        page-break-after: avoid !important;
-    }
-
-    html {
-        height: 100%;
-        overflow: scroll;
-    }
-}
-
-html {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 /* HEADING */
 
 h1,
@@ -87,31 +62,8 @@ body.modulo-dark .dropdown {
     background-color: black;
 }
 
-/* CUSTOM CLASSES */
-
-.admonition {
-    margin: 1.75rem 0 1.75rem 0;
-}
-
-.admonition.hint>.admonition-title {
-    background-color: rgb(92 201 191 / 10%)!important;
-}
-
-.admonition.hint {
-    border-left-color: rgb(92 201 191)!important;
-}
-
-.admonition.hint>.admonition-title:before {
-    background-color: rgb(92 201 191)!important;
-}
-
 .sidebar-brand-text {
     color: #5933d1!important;
     overflow-wrap: break-word;
     font-size: 1.5rem;
-}
-
-body {
-    --sidebar-item-spacing-vertical: 0.3rem;
-
 }
