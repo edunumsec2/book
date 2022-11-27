@@ -238,6 +238,22 @@ Cet angle est l'angle à tourner après chaque segment de longeur `d`.
 - `0` continue tout droit,
 - `-90` tourner à droite.
 
+```{exercise}
+Ajoutez les deux derniers angles dans le tuple `T` pour fermer la forme du T.
+```
+
+```{codeplay}
+from turtle import *
+d = 80
+T = (90, -90, 90, 90, 0, 0, 90, 90)
+
+for a in T:
+    dot()
+    forward(d)
+    left(a)
+    write(a)
+```
+
 ### Forme
 
 Nous marquons le point d'origine avec un point (dot).
@@ -452,7 +468,7 @@ def tangram(pieces):
         goto(p[0]*D, p[1]*D)
         seth(h)
         polygon(poly)
-       
+
 tangram(square)
 ```
 
@@ -726,4 +742,44 @@ def pixelart(image, palette, d=20, w=1, pen='black'):
         sety(ycor()-d)
 
 pixelart(image, palette)
+```
+
+### Tetris
+
+Utilisez un tuple pour décrire type, position et orientation de chaque tétronimo.
+
+![tetris](media/tetris_8x5.png)
+
+```{codeplay}
+from turtle import *
+speed(0)
+d = 20      # dimension de base
+
+I = 'cyan', (0, 0, 0, 90, 90, 0, 0, 0, 90, 90)
+O = 'yellow', (0, 90, 0, 90, 0, 90, 0, 90)
+T = 'magenta', (90, -90, 90, 90, 0, 0, 90, 90, -90, 90)
+J = 'blue', (0, 90, 0, 0, 90, 90, 0, -90, 90, 90)
+L = 'orange', (0, 90, 90, -90, 0, 90, 90, 0, 0, 90)
+S = 'lime', (0, 90, -90, 90, 90, 0, 90, -90, 90, 90)
+Z = 'red', (0, 90, 90, -90, 90, 0, 90, 90, -90, 90)
+
+tetris = (  (O, (0, 0), 0),     # tetronimo, position, orientation
+        )
+
+def tetronimo(c, angles):
+    down()
+    dot()
+    fillcolor(c)
+    begin_fill()
+    for a in angles:
+        forward(d)
+        left(a)
+    end_fill()
+    up()
+
+for (t, p, h) in tetris:
+    seth(h)
+    goto(p[0]*d, p[1]*d)
+    c, angles = t
+    tetronimo(c, angles)
 ```
