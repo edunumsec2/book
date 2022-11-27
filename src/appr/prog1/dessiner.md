@@ -157,7 +157,7 @@ forward(200)
 
 Nous dessinons une maison et marquons le toit par une ligne plus épaisse.
 
-```{exercice}
+```{exercise}
 Doublez l'épaisseur du toit. Ensuite, doublez la hauteur de la maison.
 ```
 

@@ -50,6 +50,10 @@ Dans l'expression `for c in (...)`, la variable `c` va prendre à tour de rôle 
 La fonction `dot(80, c)` afficher un disque de diamètre 80 et de couleur `c`.  
 La fonction `write(c)` affiche le nom de la couleur `c`.
 
+```{exercise}
+Modifiez la séquence des couleurs.
+```
+
 ```{codeplay}
 from turtle import *
 up()
@@ -61,14 +65,16 @@ for c in ('yellow', 'cyan', 'orange', 'pink', 'lime'):
     forward(80)
 ```
 
-**Exercice** : Modifiez la séquence des couleurs.
-
 ### Des diamètres
 
 Nous pouvons également parcourir une séquence de nombres et ainsi, spécifier une série de diamètres de disques.
 
 La fonction `dot(d, 'pink')` afficher un disque de diamètre `d` de couleur rose.  
 La fonction `write(d)` affiche la distance `d`.
+
+```{exercise}
+Modifiez la séquence des diamètres.
+```
 
 ```{codeplay}
 from turtle import *
@@ -81,13 +87,15 @@ for d in (40, 60, 80, 60, 40):
     forward(100)
 ```
 
-**Exercice** : Modifiez la séquence des diamètres.
-
 ### Des distances
 
 Dans le chapitre [Définir](prog1.definir) nous avons vu les fonctions `batiment()` et `porte()` avec 8 lignes pour chaque définition de fonction qui dessine un rectangle.
 
 À l'aide d'une séquence qui contient ces 4 distances, nous pouvons écrire ces fonctions de manière bien plus compacte. Pour illustrer les distances parcourues, nous l'affichons à chaque itération avec `write(a)`.
+
+```{exercise}
+Modifiez la taille du bâtiment et de la porte.
+```
 
 ```{codeplay}
 from turtle import *
@@ -111,12 +119,14 @@ forward(40)
 porte()
 ```
 
-**Exercice** : Modifiez la taille du bâtiment et de la porte.
-
 ### Des angles
 
 Nous allons reprendre notre fonction `maison()` et, à l'aide d'une séquence, nous pouvons l'écrire de manière bien plus compacte. Cette fois-ci, la séquence représente des angles, donc nous nommons notre variable `angle` pour nous en rappeler.
 Pour illustrer le parcours des angles, nous les affichons à chaque itération avec `write(angle)`.
+
+```{exercise}
+Ajoutez une porte et une fenêtre à la maison.
+```
 
 ```{codeplay}
 from turtle import *
@@ -136,13 +146,15 @@ forward(150)
 maison(80)
 ```
 
-**Exercice** : Ajoutez une porte et une fenêtre à la maison.
-
 ## Maisons en couleurs
 
 Dans l'exemple nous allons d'abord parcourir une séquence d'angles avec une variable d'itération `angle` pour dessiner une maison.
 
 Ensuite, nous allons parcourir une séquence de couleurs avec une variable `c` pour dessiner des maisons de différentes couleurs.
+
+```{exercise}
+Changez les couleurs des maisons.
+```
 
 ```{codeplay}
 :file: tuple5.py
@@ -163,8 +175,6 @@ for c in ('red', 'yellow', 'pink', 'lightblue', 'lightgreen'):
     maison(50, c)
     forward(100)
 ```
-
-**Exercice** : Changez les couleurs des maisons.
 
 ## Tetris
 
@@ -226,6 +236,10 @@ for c in ('red', 'orange', 'yellow', 'green', 'blue', 'purple'):
 Ci-dessous nous dessinons 6 fois un losange pour obtenir une fleur.
 Avec une boucle `for` nous parcourons une séquence de 6 couleurs alternantes.
 
+```{exercise}
+Il manque un pétale, corrigez le programme.
+```
+
 ```{codeplay}
 :file: tuple6.py
 from turtle import *
@@ -244,13 +258,13 @@ for c in ('pink', 'red', 'pink', 'red', 'pink'):
     left(60)
 ```
 
-**Exercice** : Il manque un pétale, corrigez le programme.
-
 ## Smiley
 
 Dans cet exemple nous allons parcourir différents diamètres de la bouche à l'aide d'une variable que nous appelons `d`. Voici quatre smileys avec différentes formes de bouche.
 
-**Exercice** : Faites varier un autre paramètre, par exemple la distance des yeux, ou la taille d'un œil.
+```{exercise}
+Faites varier un autre paramètre, par exemple la distance des yeux, ou la taille d'un œil.
+```
 
 ```{codeplay}
 :file: tuple8.py
@@ -302,6 +316,10 @@ for i in range(3):
 Avec l'utilisation de trois couleurs, l'effet 3D est accentué.
 Nous choisissons des couleurs claires pour les surfaces du haut, et des couleurs sombres pour les surfaces vers le bas.
 
+```{exercise}
+Tournez le cube de 30°.
+```
+
 ```{codeplay}
 from turtle import *
 
@@ -320,8 +338,6 @@ def cube():
 
 cube()
 ```
-
-**Exercice** : Tournez le cube de 30°.
 
 ## Pavage du plan
 

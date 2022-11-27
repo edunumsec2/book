@@ -44,6 +44,10 @@ Une fonction peut avoir plusieurs points de sortie. En fait quand une ligne avec
 
 La fonction `signe()` possède 3 points de sortie.
 
+```{exercise}
+Testez avec -2, 0 et 3.
+```
+
 ```{codeplay}
 :file: return2.py
 def signe(x):
@@ -57,8 +61,6 @@ def signe(x):
 x = int(input('Entrez un nombre: '))
 print(x, 'est', signe(x))
 ```
-
-**Exercice** : Testez avec -2, 0 et 3.
 
 ## État de la tortue
 

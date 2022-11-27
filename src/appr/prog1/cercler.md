@@ -44,6 +44,10 @@ circle(-80)
 
 Dessinons des cercles dans une boucle, et tournons chaque fois.
 
+```{exercise}
+Modifiez le nombre de répétitions et l'angle de rotation.
+```
+
 ```{codeplay}
 from turtle import *
 
@@ -52,8 +56,6 @@ for i in range(6):
     left(60)
 ```
 
-**Exercice** : Modifiez l'angle le nombre de répétitions et l'angle de rotation.
-
 ## Arc de cercle
 
 Cette fonction peut avoir un deuxième paramètre sous la forme `circle(r, angle)`,
@@ -61,6 +63,10 @@ où `angle` représente l'angle de l'arc de cercle dessiné.
 Par défaut, l'angle est de 360°, donc un cercle entier.
 
 Voici un exemple qui utilise deux demi-cercles de 180°.
+
+```{exercise}
+Dessinez un bonhomme de neige et utilisez `dot()` pour les yeux.
+```
 
 ```{codeplay}
 :file: circle5.py
@@ -74,11 +80,13 @@ forward(50)
 circle(40, 180)
 ```
 
-**Exercice** : Dessinez un bonhomme de neige et utilisez `dot()` pour les yeux.
-
 ## Carré arrondi
 
 Avec la fonction `circle()`, il est maintenant possible de dessiner un carré dont les coins sont arrondis.
+
+```{exercise}
+Dessinez maintenant un rectangle avec des coins arrondis.
+```
 
 ```{codeplay}
 :file: circle6.py
@@ -89,11 +97,13 @@ for i in range(4):
     circle(20, 90)
 ```
 
-**Exercice** : Dessinez maintenant un rectangle avec des coins arrondis.
-
 ## Pac-Man
 
 Pac-Man est un jeu vidéo créé par l’entreprise japonaise Namco, sorti au Japon en 1980. Le jeu consiste à déplacer Pac-Man, un personnage qui ressemble à un diagramme circulaire à l’intérieur d’un labyrinthe, afin de lui faire manger toutes les pac-gommes qui s’y trouvent en évitant d’être touchées par des fantômes.
+
+```{exercise}
+Ajoutez l'œil de Pac-Man, et les points qu'il mange.
+```
 
 ```{codeplay}
 :file: circle6.py
@@ -110,11 +120,13 @@ forward(100)
 end_fill()
 ```
 
-**Exercice** : Ajoutez l'œil de Pac-Man.
-
 ## Cœur
 
 Le cœur est le symbole de l'amour : on donne de façon métaphorique son cœur à la personne que l'on aime pour lui signifier qu'on lui confie sa vie.
+
+```{exercise}
+Coloriez le cœur en rouge, ajoutez une flèche.
+```
 
 ```{codeplay}
 :file: circle7.py
@@ -129,13 +141,15 @@ forward(2.4*r)
 circle(r, 225)
 ```
 
-**Exercice** : Coloriez le cœur en rouge, ajoutez une flèche.
-
 ## Infini — ∞
 
 Le mot **infini** (du latin in-, préfixe négatif, et finitus, *limité*) est un adjectif servant à qualifier quelque chose qui n'a pas de limite en nombre ou en taille. L'infini est représenté par le symbole ∞. Nous allons le dessiner.
 
 Observez l'effet de croisement obtenu lorsqu'on omet de dessiner un petit bout de trait à l'intersection.
+
+```{exercise}
+Augmentez l'épaisseur de la ligne.
+```
 
 ```{codeplay}
 :file: circle8.py
@@ -152,8 +166,6 @@ circle(-100, 270)
 forward(90)
 ```
 
-**Exercice** : Augmentez l'épaisseur de la ligne.
-
 ## Bretzel - ⌘
 
 Le pictogramme ⌘ (Unicode 2318), parfois appelé *Gordon loop* ou *bretzel*, a été dessiné par Susan Kare lors de la création du premier Macintosh pour sa touche de commande. Il sert de préfixe à d'autres touches pour construire des raccourcis tels que :
@@ -161,6 +173,10 @@ Le pictogramme ⌘ (Unicode 2318), parfois appelé *Gordon loop* ou *bretzel*, a
 - ⌘-X pour couper
 - ⌘-C pour copier
 - ⌘-V pour coller
+
+```{exercise}
+Modifiez le programme pour obtenir le même effet de croisement comme avec le symbole infini ∞.
+```
 
 ```{codeplay}
 :file: circle9.py
@@ -172,11 +188,13 @@ for i in range(4):
     forward(3*r)
 ```
 
-**Exercice** : Modifiez le programme pour obtenir le même effet de croisement comme avec le symbole infini ∞.
-
 ## Lettres
 
 Les lettres sont des signes graphiques qui forment un alphabet et servent à transcrire une langue.
+
+```{exercise}
+Ajoutez une fonction `m()` pour écrire le mot `nom`. Ajoutez ensuite des fonctions qui dessinent les lettres pour écrire votre prénom.
+```
 
 ```{codeplay}
 :file: circle10.py
@@ -207,11 +225,13 @@ o()
 n()
 ```
 
-**Exercice** : Ajoutez une fonction `m()` pour écrire le mot `nom`. Ajoutez ensuite des fonctions qui dessinent les lettres qui vous permettront d'écrire votre prénom.
-
 ## Pétales
 
 Un pétale est formé de deux arcs de cercle.
+
+```{exercise}
+Coloriez la fleur.
+```
 
 ```{codeplay}
 :file: circle11.py
@@ -226,8 +246,6 @@ for i in range(6):
     petale()
     left(60)
 ```
-
-**Exercice** : Coloriez la fleur.
 
 ## Exercices
 

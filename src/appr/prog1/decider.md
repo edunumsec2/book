@@ -108,6 +108,10 @@ else:
 Sans le mot-clé `elif` nous devrions mettre le bloc `if` à l'intérieur du bloc  `else` en indentation.
 Avec multiples conditions, les blocs se décalent de plus en plus et rendent le programme illisible.
 
+```{exercise}
+Testez le programme avec -2, 0, 3.
+```
+
 ```{codeplay}
 :file: if4.py
 n = input('Entrez un nombre: ')
@@ -121,8 +125,6 @@ else:
     else:
         print('zéro')
 ```
-
-**Exercice** : Testez le programme avec -2, 0, 3.
 
 ## Pair ou impair ?
 
@@ -261,6 +263,10 @@ Un programme de dessin avec la tortue est une séquence d'instructions. Si la to
 
 Nous pouvons insérer des espaces dans `chemin` pour rendre la description plus lisible. Lors de l'exécution, ils ne sont pas pris en considération.
 
+```{exercise}
+Définissez et dessinez la lettre F.
+```
+
 ```{codeplay}
 :file: if8.py
 from turtle import *
@@ -280,8 +286,6 @@ def dessiner(chemin):
 E = 'lffff rff rrfllf rrfllf rrff'
 dessiner(E)
 ```
-
-**Exercice** : Définissez et dessinez la lettre F.
 
 ## Opérations logiques
 
@@ -345,6 +349,10 @@ if not (a < x < b):
 
 ## Rouler un dé
 
+```{exercise}
+Modifiez le code pour afficher le dé avec un nombre aléatoire entre 1 et 6.
+```
+
 ```{codeplay}
 :file: random15.py
 from turtle import *
@@ -374,8 +382,6 @@ for n in range(1, 7):
     sleep(1)
     clear()
 ```
-
-**Exercice** : Modifiez le code pour afficher le dé avec un nombre aléatoire entre 1 et 6.
 
 ## Exercices
 

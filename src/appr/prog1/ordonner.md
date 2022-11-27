@@ -21,7 +21,8 @@ Voici une image minimaliste de Sonic créée avec seulement 4x4 pixels.
 
 Nous pouvons représenter cette information avec un tuple 2D de 4 lignes, chaque ligne ayant 4 couleurs.
 
-Avec un 
+Avec un
+
 - indexage simple `sonic[0]` nous pouvons accéder à une ligne.
 - indexage double `sonic[2][2]` nous pouvons accéder à la couleur d'un pixel
 
@@ -257,7 +258,7 @@ L = (0, 90, 90, -90, 0, 90, 90, 0, 0, 90)
 S = ()
 Z = (0, 90, 90, -90, 90, 0, 90, 90, -90, 90)
 
-def dessiner(angles):
+def tetronimo(angles):
     down()
     dot()
     for a in angles:
@@ -268,7 +269,7 @@ def dessiner(angles):
 up()
 backward(280)
 for t in (I, O, T, J, L, S, Z):
-    dessiner(t)
+    tetronimo(t)
     forward(4*d)
 ```
 
@@ -293,7 +294,7 @@ L = '', (0, 90, 90, -90, 0, 90, 90, 0, 0, 90)
 S = '', (0, 90, -90, 90, 90, 0, 90, -90, 90, 90)
 Z = '', (0, 90, 90, -90, 90, 0, 90, 90, -90, 90)
 
-def dessiner(c, angles):
+def tetronimo(c, angles):
     down()
     dot()
     fillcolor(c)
@@ -307,7 +308,7 @@ def dessiner(c, angles):
 up()
 backward(280)
 for (c, angles) in (I, O, T, J, L, S, Z):
-    dessiner(c, angles)
+    tetronimo(c, angles)
     forward(4*d)
 ```
 
@@ -366,6 +367,94 @@ for (t, p, h) in tetris:
     tetronimo(c, angles)
 ```
 
+## Tangram
+
+Le tangram, « sept planches de la ruse », ou jeu des sept pièces, est une sorte de puzzle chinois. C'est une dissection du carré en sept pièces élémentaires. Des dissections plus générales, de formes différentes, sont également appelées tangrams.
+
+![tangram](media/tangram0.png)
+
+Nous traitons le carré de base comme ayant 4x4 unités. Ceci nous les 5 formes de base :
+
+- 2 triangles avec hypoténuse 4
+- 1 triangle avec hypoténuse 2.82
+- 1 triangles avec hypoténuse 2
+- 1 carré avec côté 1.41
+- 1 paraléllipiède de coté 2 et 1.41
+
+### Formes
+
+Cette fois nous allons représenter les formes avec des tuples`(d, a)`, distance-angle de chaque segment du polygone (triangle, carrée, losange).
+
+```{codeplay}
+from turtle import *
+
+D = 40
+
+T = ((4, 135), (2.82, 90), (2.82, 135))
+T2 = ((2.82, 135), (2, 90), (2, 135))
+T3 = ((2, 135), (1.41, 90), (1.41, 135))
+S = ((1.41, 90),(1.41, 90),(1.41, 90),(1.41, 90)) 
+L = ((2, 45), (1.41, 135), (2, 45), (1.41, 135)) 
+
+def polygon(poly):
+    down()
+    dot()
+    for (d, a) in poly:
+        forward(d*D)
+        left(a)
+    up()
+
+backward(250)
+for s in T, T2, T3, S, L:
+    polygon(s)
+    forward(100)
+```
+
+### Positions et orientation
+
+Pour désigner une forme spécifique, nous utilisons un tuple avec 7 éléments qui contient un deuxième tuple `(piece, p, h)`
+
+- piece
+- position
+- orientation
+
+Voici le puzzle de base:
+
+```{codeplay}
+from turtle import *
+
+D = 40  # distance de base
+
+T = ((4, 135), (2.82, 90), (2.82, 135))             # grand triangle
+T2 = ((2.82, 135), (2, 90), (2, 135))               # moyen triangle
+T3 = ((2, 135), (1.41, 90), (1.41, 135))            # petit triangle
+C = ((1.41, 90),(1.41, 90),(1.41, 90),(1.41, 90))   # carré
+L = ((2, 45), (1.41, 135), (2, 45), (1.41, 135))    # losange
+
+square =  ((T, (0, 0), 0),      # piece, position, orientation
+           (T, (0, 4), -90),
+           (T2, (2, 4), -45),
+           (T3, (2, 4), -180),
+           (T3, (3, 1), 90),
+           (C, (2, 2), 45),
+           (L, (4, 0), 90))
+
+def polygon(poly):
+    down()
+    dot()
+    for (d, a) in poly:
+        forward(d*D)
+        left(a)
+    up()
+
+def tangram(pieces):
+    for (poly, p, h) in pieces:
+        goto(p[0]*D, p[1]*D)
+        seth(h)
+        polygon(poly)
+       
+tangram(square)
+```
 
 ## Sudoku
 
@@ -398,7 +487,6 @@ def grid(p, d):
 grid((50, 0), 20)
 grid((-280, -180), 30)
 ```
-
 
 ```{codeplay}
 from turtle import *
@@ -467,11 +555,11 @@ for c in 'SCRABBLE':
 
 ### Dessiner le plateau
 
-Pour représenter le plateau des 15x15 cases, nous utilisons un tuple `scrabble` avec 15 chaines de caractères de longueur 15. 
+Pour représenter le plateau des 15x15 cases, nous utilisons un tuple `scrabble` avec 15 chaines de caractères de longueur 15.
 
 Nous parcourons les lettre de chaque ligne pour afficher les cases vides et remplies.
 
-Essayons de reproduire cet état à l'aide du tuple `scrabble`. 
+Essayons de reproduire cet état à l'aide du tuple `scrabble`.
 
 ![scrabble](media/scrabble.jpg)
 
@@ -560,18 +648,21 @@ for p in points:
     i = i + 1
 ```
 
-Pour dessiner multiples polygones, nous devons parcourir la liste des polygones. 
-Pour chaque polygone nous parcourons ses points. 
+Pour dessiner multiples polygones, nous devons parcourir la liste des polygones.
+Pour chaque polygone nous parcourons ses points.
 
 Avec les deux tuples `pos` et `size` nous pouvons choisir la position et la taille des polygones.
 
-    goto(pos[0] + size[0] * p[0], pos[1] + size[1] * p[1])
+```{python}
+goto(pos[0] + size[0] * p[0], pos[1] + size[1] * p[1])
+```
 
 Pour fermer le polygone, nous revenons sur le premier point de la liste.
 
-    p = points[poly[0]]
-    goto(pos[0] + size[0] * p[0], pos[1] + size[1] * p[1])
-
+```{python}
+p = points[poly[0]]
+goto(pos[0] + size[0] * p[0], pos[1] + size[1] * p[1])
+````
 
 ```{codeplay}
 from turtle import *
@@ -603,4 +694,36 @@ for poly in polygons:
     p = points[poly[0]]
     goto(pos[0] + size[0] * p[0], pos[1] + size[1] * p[1])
     up()
+```
+
+## Exercices
+
+### Pixelart
+
+Choisissez un animal et produisez une image avec 8x8 pixels.
+
+![pixelart](media/pixelart_8x8.png)
+
+```{codeplay}
+:file: pix_8x8.py
+from turtle import *
+
+d = 20
+palette = ('red',)
+image = ((0,),)
+
+def pixel(d, c):
+    for i in range(4):
+        forward(d)
+        right(90)
+
+def pixelart(image, palette, d=20, w=1, pen='black'):
+    for line in image:
+        for i in line:
+            c = palette[i]
+            pixe(d, c)
+        backward(len(line)*d)
+        sety(ycor()-d)
+
+pixelart(image, palette)
 ```

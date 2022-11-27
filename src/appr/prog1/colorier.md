@@ -279,6 +279,10 @@ equerre()
 Avec des cercles de tailles différentes dessinées avec `dot(d)`, nous pouvons dessiner un smiley.
 Voici un smiley qui exprime l'indifférence.
 
+```{exercise}
+Ajoutez `up()` au début du programme pour ne plus montrer la trajectoire de la tortue.
+```
+
 ```{codeplay}
 :file: color11.py
 from turtle import *
@@ -301,9 +305,11 @@ width(20)
 forward(100)
 ```
 
-**Exercice** : Ajoutez `up()` au début du programme pour ne plus montrer la trajectoire de la tortue.
-
 Voici un autre smiley qui exprime la surprise.
+
+```{exercise}
+Dessinez encore un autre smiley.
+```
 
 ```{codeplay}
 :file: color12.py
@@ -325,14 +331,16 @@ forward(100)
 dot(80)
 ```
 
-**Exercice** : Dessinez encore un autre smiley.
-
 ## Croix
 
 La fonction `bras()` dessine les 3 côtés d'un carré et tourne, à la fin, dans le sens approprié pour la suite.
 Répété 4 fois, ceci donne la forme d'une croix.
 
 Ici, nous utilisons la fonction `color('white')` pour changer simultanément la couleur de ligne **et** la couleur de remplissage en blanc.
+
+```{exercise}
+Inversez les couleurs pour trouver le drapeau de la Croix-Rouge.
+```
 
 ```{codeplay}
 :file: color13.py
@@ -359,8 +367,6 @@ begin_fill()
 croix()
 end_fill()
 ```
-
-**Exercice** : Inversez les couleurs pour trouver le drapeau de la Croix-Rouge.
 
 ## Maison
 
