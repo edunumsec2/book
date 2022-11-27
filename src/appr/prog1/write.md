@@ -215,10 +215,10 @@ from turtle import *
 
 right(90)
 back(100)
-for couleur in ('red', 'blue', 'lime', 'indigo'):
-    color(couleur)
+for c in ('red', 'blue', 'lime', 'indigo'):
+    color(c)
     forward(50)
-    write(couleur, font=('Arial', 24, 'bold'))
+    write(c, font=('Arial', 24, 'bold'))
 ```
 
 ```{caution}
@@ -274,34 +274,6 @@ def case(nombre):
 back(200)
 for i in range(10):
     case(i)
-```
-
-## Scrabble
-
-Le [Scrabble](https://fr.wikipedia.org/wiki/Scrabble) est un jeu de société et un jeu de lettres où l'objectif est de cumuler des points, sur la base de tirages aléatoires de lettres, en créant des mots sur une grille carrée.
-Le jeu a été conçu par l'architecte new-yorkais Alfred Mosher Butts pendant la crise de 1929, et publié en 1931.
-
-```{codeplay}
-:file: scrabble.py
-from turtle import *
-d = 40
-speed(10)
-
-def case(lettre):
-    for i in range(4):
-        forward(d)
-        left(90)
-    forward(d/2)
-    up()
-    sety(ycor() + 8)
-    write(lettre, font=(None, 24), align='center')
-    sety(ycor() - 8)
-    down()
-    forward(d/2)
-    
-back(200)
-for c in 'SCRABBLE':
-    case(c)
 ```
 
 ## WhatsApp

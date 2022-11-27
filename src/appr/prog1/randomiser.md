@@ -312,26 +312,53 @@ for i in range(10):
 
 
 
-## Distribution normale
+## Distribution gaussienne
 
-Dans l'exemple suivant les variables x e y suivent une distribution normale avec une moyenne de 0 et un sigma de 50.
+La distribution normalle, ou **distribution gaussienne**, est la distribution qui apparait souvent dans la nature. La taille d'une population, le poids d'une population, suit souvent une distribution gaussienne.
+
+La distribution normale `gauss(mu, sigma)` est décrit par deux paramètres :
+
+- son éspérance `mu`
+- son écart-type `sigma`
+
+La fonction `gauss(0, 5)' avec un sigma de 5 va distribuer ses valeurs autour de 0, de sorte placer 67% des points dans l'intervalle [-5, 5]. Le programme suivant montre un histogramme visuel de classification de 400 points.
 
 ```{codeplay}
-:file: random11.py
 from turtle import *
 from random import *
-
 speed(0)
 up()
 
-for i in range(1000):
-    x = gauss(0, 50)
-    y = gauss(0, 50)
-    goto(x, y)
-    dot(10)
+sigma = 5
+d = 10
+y = [-180] * 60
+
+for x in range(-300, 300, 50):
+    goto(x, -200)
+    write(x//d)
+for i in range(400):
+    j = int(gauss(0, sigma))
+    goto(j*d, y[j+30])
+    dot(d)
+    y[j+30] += d
 ```
 
+La distribution des tailles des animaux, ou des humains, est également gaussienne. Ci-dessous nous montrons une distribution avec un sigma de 2 et ensuite avec un sigma de 10.
 
+```{codeplay}
+from turtle import *
+from random import *
+d = 100
+up()
+
+for (y, sigma) in ((50, 2), (-150, 10)):
+    goto(-280, y)
+    write(sigma)
+    for x in range(-300, 300-d, d//2):
+        goto(x, y)
+        d = int(gauss(100, sigma))
+        write('🧍‍', font=(None, d))
+```
 
 ## Champs de fleurs
 

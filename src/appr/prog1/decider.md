@@ -30,6 +30,25 @@ else:
     print('accès OK - vous êtes majeur')
 ```
 
+## Coordonnées x positive
+
+```{codeplay}
+from turtle import *
+from random import *
+    
+d = 20 
+
+for i in range(20):
+    x = randint(-300, 300)
+    y = randint(-200, 200)
+    goto(x, y)
+    if x>0:
+        pencolor('red')
+    else:
+        pencolor('lightblue')
+    dot(d)
+```
+
 ## Comparer
 
 Un programme doit parfois comparer deux valeurs.

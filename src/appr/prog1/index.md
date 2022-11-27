@@ -25,12 +25,13 @@ positionner
 write
 iterer
 randomiser
-arranger
+ordonner
 
 questionner
 decider
 ecrire
 attendre
+
 renvoyer
 grouper
 trier
