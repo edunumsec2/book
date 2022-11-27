@@ -3,7 +3,6 @@
 
 La fonction `goto(x, y)` permet de positionner la tortue à une position `(x, y)`.
 
-
 Nous allons voir que :
 
 - la fonction `pos()` retourne la position actuelle de la tortue,
@@ -275,7 +274,7 @@ Ceci est pratique pour dessiner les pièces dans une direction spécifique.
 Par exemple dans le Tetris, les figures peuvent avoir 4 orientations différentes.
 
 ```{exercise}
-Ajoute deux autres L avec une position et orientation appropriée pour créer un remplissage compact.
+Ajoutez deux autres L avec une position et orientation appropriée pour créer un remplissage compact.
 ```
 
 ```{codeplay}
@@ -323,8 +322,6 @@ seth(-45)
 triangle()
 ```
 
-
-
 ## Ligne polygonale
 
 La fonction `polyline(poly, pos=(0, 0), size=(1, 1), w=1, pen='black', fill='white')` dessine une ligne polygonale définie par un tuple de points. Les arguments sont:
@@ -357,8 +354,6 @@ polyline(house, pos=(-150, -50), fill='pink')
 polyline(house, (90, -60), size=(2, 2), w=3)
 polyline(house, (90, -80), size=(2, -1.5))
 ```
-
-
 
 ## Exercice
 

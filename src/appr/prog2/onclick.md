@@ -31,6 +31,10 @@ La variable `s` fait référence à l’objet `Screen` qui possède les deux mé
 
 Le programme suivant dessine un point à la position du clic et affiche les coordonnées dans la console.
 
+```{exercise}
+Cliquez dans les 4 coins et au centre.
+```
+
 ```{codeplay}
 :file: onclick1.py
 :max_output_lines: 3
@@ -49,8 +53,6 @@ def f(x, y):
 s.onclick(f)
 s.listen()
 ```
-
-**Exercice** : Cliquez dans les 4 coins et au centre.
 
 ## Les coordonnées
 
@@ -134,6 +136,10 @@ La fonction de rappel …
 
 La fonction de rappel de la tortue fait avancer la tortue de 20 pixels.
 
+```{exercise}
+Cliquez dans dans la tortue et à côté et observez la différence.
+```
+
 ```{codeplay}
 :file: onclick4.py
 from turtle import *
@@ -153,8 +159,6 @@ s.onclick(f)
 s.listen()
 ```
 
-**Exercice** : Cliquez dans dans la tortue et à côté et observez la différence.
-
 ## Dessiner une forme
 
 Dans ce programme nous dessinons une ligne entre les clics successifs.
@@ -164,6 +168,10 @@ Nous réagissons également à deux touches du clavier :
 
 - `u` (up) pour lever le stylo
 - `c` (clear) pour effacer le canevas
+
+```{exercise}
+Dessinez une maison. Utilisez la touche `u` (up) pour dessiner une forme disjointe, par exemple la fenêtre.
+```
 
 ```{codeplay}
 :file: onclick5.py
@@ -184,8 +192,6 @@ s.onclick(ligne)
 s.listen()
 ```
 
-**Exercice** : Dessinez une maison. Utilisez la touche `u` (up) pour dessiner une forme disjointe, par exemple la fenêtre.
-
 ## Remplir une forme
 
 Dans ce programme nous dessinons une ligne entre les clics successifs.
@@ -197,6 +203,10 @@ Nous réagissons également à deux touches du clavier :
 - `c` (clear) pour effacer le canevas
 - `b` (begin fill)
 - `e` (end fill)
+
+```{exercise}
+Dessinez une maison. Utilisez la touche `b` (begin) pour commencer le remplissage et la touche `e` (end) pour terminer le remplissage.
+```
 
 ```{codeplay}
 :file: onclick6.py
@@ -220,8 +230,6 @@ s.onkey(end_fill, 'e')
 s.onclick(ligne)
 s.listen()
 ```
-
-**Exercice** : Dessinez une maison. Utilisez la touche `b` (begin) pour commencer le remplissage et la touche `e` (end) pour terminer le remplissage.
 
 ## Une grille
 
@@ -382,6 +390,10 @@ Le programme suivant permet de déplacer la tortue avec la souris.
 La fonction on `onrelease` ne fonction pas dans ce site; la tortue ne devient jamais verte. Par contre ce programme fonctionne dans l'éditeur externe Thonny.
 ```
 
+```{exercise}
+Essayez de tirez la tortue lentement avec la souris.
+```
+
 ```{codeplay}
 :file: onclick12.py
 from turtle import *
@@ -404,21 +416,19 @@ ondrag(g)
 onrelease(h)
 ```
 
-**Exercice** : Essayez de tirez la tortue lentement avec la souris.
-
 ## Exercices
 
 ### Jeu de Go
 
 Le jeu de go est un jeu de société originaire de Chine qui oppose deux adversaires qui placent à tour de rôle des pierres, respectivement noires et blanches, sur les intersections d'un tablier quadrillé. Le but est de contrôler le plan de jeu en y construisant des « territoires ». Les pierres encerclées deviennent des « prisonniers », le gagnant étant le joueur ayant totalisé le plus de territoires et de prisonniers.
 
-![](media/go_board.png)
+![go](media/go_board.png)
 
 Deux pierres noires en atari (à gauche), capturées au coup suivant (à droite).
 
-![](media/Go_capturing.png)
+![go](media/Go_capturing.png)
 
-Modifiez le jeu pour 
+Modifiez le jeu pour
 
 - avoir une grille de 19 x 19 lignes
 - colorier le tableau en beige
@@ -461,8 +471,4 @@ s.listen()
 
 Voici une partie d'un jeu de go sur un tableau de jeux annoté avec les lettres et nombres pour identifier les pions.
 
-![](media/go_partie.png)
-
-
-
-
+![go](media/go_partie.png)

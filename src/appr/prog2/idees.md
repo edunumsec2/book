@@ -515,6 +515,10 @@ Dans la fonction `corona()` les paramètres sont :
 - la longueur de la projection `d`
 - le nombre de projections `n`
 
+```{exercise}
+Ajoutez 3 autres virus avec d'autres valeurs pour `a`, `d` et `n`.
+```
+
 ```{codeplay}
 :file: def10.py
 from turtle import *
@@ -535,14 +539,16 @@ def corona(a=10, d=20, n=24):
 corona()
 ```
 
-**Exercice** : Ajoutez 3 autres virus avec d'autres valeurs pour `a`, `d` et `n`.
-
 ## Squid Game logo
 
 Squid Game, ou Le Jeu du calmar, est une série télévisée dramatique de survie sud-coréenne de 9 épisodes, diffusée dans le monde entier en 2021 sur Netflix.
 La série raconte l'histoire d'un groupe de personnes, fortement endettées, voire ruinées, qui risquent leur vie dans un jeu de survie mystérieux avec comme récompense une somme énorme.
 
 Nous définissons une fonction `polygone(a, n)` pour dessiner le cercle, le triangle et le carré du logo.
+
+```{exercise}
+Ajoutez votre nom et vos coordonnées à la carte de visite en utilisant la fonction `write()`.
+```
 
 ```{codeplay}
 :file: def11.py
@@ -565,8 +571,6 @@ polygone(120, 3)
 forward(170)
 polygone(100, 4)
 ```
-
-**Exercice** : Ajoutez votre nom et vos coordonnées à la carte de visite en utilisant la fonction `write()`.
 
 ## Directives
 
@@ -591,18 +595,18 @@ This is **important**
 ```
 
 ```{exercise}
-This is **exercice**.  
+This is **exercise**.  
 ```
 
 ```{exercise}
-This is an exercice.  
-This is an exercice.  
+This is an exercise.  
+This is an exercise.  
 ```
 
 ```{exercise}
-This is an exercice.  
-This is an exercice.  
-This is an exercice.  
+This is an exercise.  
+This is an exercise.  
+This is an exercise.  
 ```
 
 ```{admonition}

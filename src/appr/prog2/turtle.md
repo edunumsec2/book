@@ -21,6 +21,10 @@ L'expression `ana = bob.clone()` crée
 
 Jusqu'à maintenant, nous avons utilisé une seule tortue. Mais nous pouvons en créer autant que nous voulons. Chaque tortue possède sa couleur, sa position, son orientation, sa vitesse, sa forme, etc.  Dans le programme suivant nous créons une tortue `ana`, une tortue `bob` et une tortue `mia`.
 
+```{exercise}
+Créez encore une autre tortue, choisissez sa couleur et faites la bouger quelque part.
+```
+
 ```{codeplay}
 :file: turtle1.py
 from turtle import *
@@ -43,13 +47,11 @@ mia.left(90)
 mia.forward(100)
 ```
 
-**Exercice** : Créez encore une autre tortue, choisissez sa couleur et faites la bouger quelque part.
-
 ## La course des tortues
 
-Dans le programme ci-dessous deux tortues, Ana et Bob, font la course. 
+Dans le programme ci-dessous deux tortues, Ana et Bob, font la course.
 
-On crée d'abord la tortue `ana` qui est la tortue par défaut `getturtle()` et on configure 
+On crée d'abord la tortue `ana` qui est la tortue par défaut `getturtle()` et on configure
 
 - sa forme
 - sa vitesse
@@ -192,6 +194,10 @@ Le module en JavaScript ne traduit pas tous les objets, mais les méthodes essen
 
 Nous allons maintenant introduire une deuxième tortue qui sera responsable uniquement pour écrire du texte. L'expression `text = Turtle()` crée une nouvelle tortue appelée `text`. Pour appeler des méthodes sur cette nouvelle tortue nous devons utiliser la méthode dotée, donc précéder les instructions par `text.`
 
+```{exercise}
+Ajoutez une fonction de rappel pour faire tourner la tortue.
+```
+
 ```{codeplay}
 :file: onkey3.py
 from turtle import *
@@ -213,8 +219,6 @@ s.onkey(home, 'h')
 s.onkey(clear, 'c')
 s.listen()
 ```
-
-**Exercice** : Ajoutez une fonction de rappel pour faire tourner la tortue.
 
 ## Bouger deux tortues
 

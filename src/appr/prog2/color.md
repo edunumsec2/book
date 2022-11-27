@@ -101,6 +101,10 @@ dot(80)
 
 Voici un programme qui affiche les intensités pour rouge en incréments de 25%.
 
+```{exercise}
+Faites un dégradé pour la couleur bleue.
+```
+
 ```{codeplay}
 :file: color3.py
 from turtle import *
@@ -126,8 +130,6 @@ color(1, 0, 0)  # 100%
 forward(100)
 dot(80)
 ```
-
-**Exercice** : Faites un dégradé pour la couleur bleue.
 
 ## Mélanger RVB
 
@@ -169,6 +171,10 @@ dot(d)
 
 Dans l'exemple ci-dessous, nous agissons sur la composante rouge.
 
+```{exercise}
+Dessinez un dégradé pour vert, bleu, magenta, cyan
+```
+
 ```{codeplay}
 :file: color5.py
 from turtle import *
@@ -188,11 +194,13 @@ for x in [0, 0.2, 0.4, 0.6, 0.8, 1]:
     forward(d + 10) 
 ```
 
-**Exercice** : Dessiner un dégradé pour vert, bleu, magenta, cyan
-
 ## Matrice des couleurs
 
 Dans ce programme les axes x et y correspondent à une des couleurs RVG.
+
+```{exercise}
+Modifiez `color((y, x, x))`, `color((y, 0, x))`, etc.
+```
 
 ```{codeplay}
 :file: color6.py
@@ -210,8 +218,6 @@ for y in range(0, 255, d):
         color((y, x, 0))
         dot(d)
 ```
-
-**Exercice** : Modifiez `color((y, x, x))`, `color((y, 0, x))`, etc.
 
 ## Cube des couleurs
 

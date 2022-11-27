@@ -22,6 +22,7 @@ Switch ou d'un intermédiaire.
 ```{micro}
 Déterminer à l'aide du site web <https://www.nic.ch/whois/> qui a enregistré le nom de domaine champignons.ch.
 ````
+
 ## Les adresses IP
 
 ### Version 4 (IPv4)
@@ -30,13 +31,13 @@ Afin de pouvoir identifier chacune des machines connectées à Internet, il a é
 un nombre, un peu à la manière dont les numéros de téléphone sont attribués à chaque téléphone du réseau téléphonique.
 Dans sa version la plus courante, ce nombre est codé sur 32 bits, c'est-à-dire entre 0 et 4'294'967'295 c'est à dire $2^{32}-1$.
 On pensait alors (c'était en 1982) que 4 millard d'addresses seraient amplement suffisant pour pouvoir accommoder toutes les machines pendant encore beaucoup d'années, et qu'Internet
-ne dépasserait pas les 4 milliards de machines connectées. 
+ne dépasserait pas les 4 milliards de machines connectées.
 <!-- [dire combien il y en avait à l'époque]. -->
 Afin de rendre ces adresses plus lisibles pour les humains, on décompose d'habitude une adresse IP de 32 bits en
 quatre groupes de 8 bits séparés par un point. Chaque groupe de 8 bits peut alors être représenté comme un nombre décimal
 entre 0 et 255 ($2^8-1$).
 
-L'exemple suivant montre comment trouver la representation binaire, d'un tuple de 4 nombres décimaux. L'adresse montrée est 
+L'exemple suivant montre comment trouver la representation binaire, d'un tuple de 4 nombres décimaux. L'adresse montrée est
 `128.233.53.23`
 
 ```{codeplay}
@@ -58,7 +59,8 @@ for i in addr:
 
 ```{exercise}
 Lesquelles des adresses suivantes sont des adresses IP valides:
-````
+```
+
 Pour répondre à une telle question automatiquement nous pourrions ajouter des testes comme celui-ci.
 
 ```{codeplay}
@@ -89,7 +91,7 @@ Actuellement, les deux types d'adresses IPv6 et IPv4 coexistent sur Internet, la
 plus répandue. Une adresse IP peut donc soit être sur 32 bits soit sur 128 bits.
 
 ```{exercise}
-Parmi les adresses suivantes, indiquer lesquelles sont au format IPv4, lesquelles sont IPv6 et lesquelles ne sont pas valides.
+Parmi les adresses suivantes, indiquez lesquelles sont au format IPv4, lesquelles sont IPv6 et lesquelles ne sont pas valides.
 
 ````
 
@@ -115,13 +117,12 @@ ou pour faire communiquer différents appareils connectés (lampes, télévision
 maison.
 
 ```{exercise}
-
 - Combien y aurait-il eu d'adresses IP possibles s'il avait été décidé de l’encoder sur 24 bits?
 - Déterminez à l'aide du site xxx à quel continent sont allouées les adresses IP suivantes:
 - Déterminez l'entité suisse qui possède le plus d'adresses IP
 - Donnez la représentation binaire de l'adresse IP `y.y.y.y`
 - Combien y a-t-il d'adresses IP de type `192.168.x.x` ?
-````
+```
 
 ### Adressage statique et dynamique
 
@@ -132,17 +133,18 @@ joignable, cela devient problématique, car les autres ne sauront pas comment no
 Ainsi les serveurs (les sites web, par exemple), qui doivent être joignables en tout temps ont généralement une adresse IP statique, alors que les machines des utilisateurs et utilisatrices ont souvent une adresse IP dynamique. Lorsqu'on fait un
 abonnement Internet, le fournisseur d'accès propose d'habitude une adresse IP dynamique (cela lui permet d'économiser les adresses IP en sa possession), mais il est également possible, en payant un peu plus, d'obtenir une adresse IP statique.
 
-
 ```{micro}
 Déterminez si votre machine a une adresse IP statique ou dynamique
 ````
-```{Exercise}
+
+```{exercise}
 1. Vous souhaitez entrer en communication avec votre ami-e, mais vous avez les deux des adresses IP dynamiques. Quel
 moyen pourriez-vous imaginer pour que vous puissiez vous joindre.
 
 2. En tant que propriétaire d'un site web, vous avez accès aux adresses IP des machines qui visitent votre site. Pouvez-vous dès lors identifier une même personne
 qui revient plusieurs fois sur votre site. 
-````
+```
+
 ### Système de noms de domaine
 
 Pour récapituler ce qui a été vu précédemment, les humains utilisent les noms de domaines pour les machines, alors que les machines, elles, utilisent les adresses IP. Afin que ces deux modes de recensement des machines soient cohérents entre eux, il est nécessaire de disposer d'un annuaire qui fera correspondre les noms de domaines aux adresses IP. Ceci est analogue aux annuaires téléphoniques qui permettent de faire correspondre le nom des personnes que l'on veut atteindre (qui serait équivalent au nom de domaine) au numéro de téléphone (qui est analogue à l'adresse IP). Cet annuaire est ce qu'on appelle le *système de noms de domaine* (Domain Name System ou DNS selon l'appellation anglaise). Au début d'Internet, il s'agissait simplement d'un fichier texte librement accessible qui listait le nom de domaines et les adresses IP correspondantes. Ce fichier était maintenu à la main. Maintenant, il s'agit de machines, les serveurs DNS dans le réseau auprès desquelles il est possible d'obtenir l'adresse IP correspondante à un nom de domaine. Ces machines sont aussi organisées hiérarchiquement de telle sorte que chaque serveur DNS ne stocke que les noms de domaines correspondant à une sous partie du réseau.

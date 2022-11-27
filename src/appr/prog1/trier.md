@@ -1,4 +1,5 @@
 (prog1.trier)=
+
 # Trier - `sort()`
 
 Dans ce chapitre, nous allons découvrir quelques algorithmes de tri.
@@ -172,7 +173,6 @@ for i in range(n):
     down()
     dot(d/2)
 ```
-
 
 ## L'indice du minimum
 

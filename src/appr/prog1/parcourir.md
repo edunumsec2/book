@@ -1,4 +1,5 @@
 (prog1.parcourir)=
+
 # Parcourir - `tuple`
 
 Dans ce chapitre, nous allons découvrir le concept très important de la séquence. Ce concept s'appelle `tuple` en langage Python ou **n-uplet** en français. Un tuple est une séquence d'objets, par exemple de couleurs, de distances ou d'angles. Nous pouvons parcourir les valeurs d'un tuple une après l'autre avec une boucle `for`. Nous allons voir que :
@@ -40,6 +41,7 @@ La variable `i` désigne normalement
 ## Parcourir
 
 Dans les exemples suivants nous allons parcourir différents types de tuples.
+
 ### Des couleurs
 
 Pour dessiner de multiples couleurs, nous pouvons définir un tuple (séquence) de couleurs et parcourir cette séquence.

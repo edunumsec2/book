@@ -19,6 +19,10 @@ La la classe `P` dans `E(P)` est appelé
 
 Des le tout premier chapitre nous avons vu qu'un programme est une séquence d'instructions. Un tuple est une séquence d'objets.
 
+```{exercise}
+Ajoutez un élément de type `bool`.
+```
+
 ```{codeplay}
 :file: ep1.py
 a = 1, 2, 3
@@ -30,8 +34,6 @@ sequence = 1, 1.2, 'hello'
 for x in sequence:
     print(x, type(x), sep='\t')
 ```
-
-**Exercice** : Ajoutez un élément de type `bool`.
 
 ## Un tuple dans un tuple
 
@@ -218,6 +220,10 @@ Dans l'exemple suivant, nous définissons une classe parente `Object`. Elle poss
 
 Les trois fonctions `Dot`, `Rect` et `Text` héritent tous les méthodes de la classe parent `Object`.
 
+```{exercise}
+Cliquez dans tous les objets et observez les infos affichées dans la console.
+```
+
 ```{codeplay}
 :file: ep10.py
 from turtle import *
@@ -316,5 +322,3 @@ def f(x, y):
 getscreen().onclick(f)
 getscreen().listen()
 ```
-
-**Exercice** : Cliquez dans tous les objets et observez les infos affichées dans la console.
