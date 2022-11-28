@@ -399,7 +399,23 @@ Nous traitons le carré de base comme ayant 4x4 unités. Ceci nous les 5 formes 
 
 ### Formes
 
-Cette fois nous allons représenter les formes avec des tuples`(d, a)`, distance-angle de chaque segment du polygone (triangle, carrée, losange).
+Cette fois nous allons représenter les formes avec des tuples`(d, a)`, distance-angle. Le grand triangle est décrit avec ce tuple.
+
+```{codeplay}
+from turtle import *
+D = 80
+triangle = ((4, 135), (2.82, 90), (2.82, 135))
+
+backward(2*D)
+for (d, a) in triangle:
+    forward(d/2*D)
+    write(d)
+    forward(d/2*D)
+    left(a)
+    write(a)
+```
+
+De la même façons nous procédons a décrire toutes les formes.
 
 ```{codeplay}
 from turtle import *

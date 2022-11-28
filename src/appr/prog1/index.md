@@ -26,6 +26,7 @@ write
 iterer
 randomiser
 ordonner
+reutiliser
 
 questionner
 decider
