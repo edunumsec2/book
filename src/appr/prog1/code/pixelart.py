@@ -34,8 +34,7 @@ def pixel(d, w=1, pen='black', fill=None):
 
 
 def pixelart(image, palette, d=20, w=1, pen='black'):
-    """
-    Dessine une image avec des pixels.
+    """Dessine une image avec des pixels.
 
     Arguments:
     image -- tableau 2D avec les indices des couleurs

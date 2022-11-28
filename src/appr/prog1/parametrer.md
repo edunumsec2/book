@@ -436,12 +436,13 @@ def polygon(d, n, m=1, w=1, pen='black', fill='white'):
     up()  
     
 up()
+speed(0)
 backward(250)
 for m in range(2, 6):
     polygon(80, 11, m, fill='yellow')
     color('black')
     write(m)
-    forward(60)
+    forward(140)
 ```
 
 ## Nommer une variable
@@ -508,25 +509,25 @@ from turtle import *
 up()
 
 
-def leg(angle, a):
+def leg(angle, d):
     left(angle)
-    forward(a)
-    backward(a)
+    forward(d)
+    backward(d)
     right(angle)
 
-def stickman(a, bras=(30, -45), jambes=(10, -30)):
+def stickman(d, bras=(30, -45), jambes=(10, -30)):
     seth(0)
     down()
-    circle(a/2)       # tête
+    circle(d/2)       # tête
     right(90)
-    forward(a/2)    # cou
+    forward(d/2)    # cou
     
     leg(bras[0], a)
     leg(bras[1], a)
-    forward(a)
+    forward(d)
     
-    leg(jambes[0], a)
-    leg(jambes[1], a)
+    leg(jambes[0], d)
+    leg(jambes[1], d)
     up()
 
 goto(-200, 0)      
