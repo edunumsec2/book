@@ -1,4 +1,5 @@
 (prog1.attendre)=
+
 # Attendre - `while`
 
 Dans ce chapitre, nous découvrons un deuxième type de boucle, la boucle `while`. Elle est souvent utilisée pour attendre quelque chose. Nous allons voir que :
@@ -41,6 +42,10 @@ On ne peut pas savoir à l'avance combien de noms il y aura, donc ici nous ne po
 
 La convention est d'utiliser des noms au pluriel (`noms`) pour désigner la liste et le même nom au singulier (`nom`) pour désigner un de ses éléments.
 
+```{exercise}
+Entrez les noms de 3-4 de vos amis.
+```
+
 ```{codeplay}
 :file: while2.py
 noms = []
@@ -53,8 +58,6 @@ while nom != '':
 print(noms)
 ```
 
-**Exercice** : Entrez les noms de 3-4 de vos amis.
-
 ## Faire une somme
 
 Nous utilisons une boucle `while` pour demander des nombres à l'utilisateur.
@@ -62,6 +65,10 @@ On ne peut pas savoir à l'avance combien de nombres il y aura, et donc nous ne 
 
 Au lieu d'écrire `while x != '':` nous pouvons simplifier vers  `while x:`.
 La raison est que la chaîne vide est associée à `False` et toute autre chaîne non vide est associée à `True`.
+
+```{exercise}
+Entrez les frais de vos 3 derniers achats.
+```
 
 ```{codeplay}
 :file: while3.py
@@ -75,12 +82,14 @@ while x:
 print('somme =', somme)
 ```
 
-**Exercice** : Entrez les frais de vos 3 derniers achats.
-
 ## Faire une moyenne
 
 Nous utilisons une boucle `while` pour demander des nombres à l'utilisateur.
 On ne peut pas savoir à l'avance combien de nombres il y aura, et donc nous ne pouvons pas utiliser la boucle `for`.  Nous prenons comme condition de terminaison une réponse avec une chaîne vide (`''`).
+
+```{exercise}
+Entrez vos notes de français.
+```
 
 ```{codeplay}
 :file: while4.py
@@ -96,8 +105,6 @@ while x:
 print('moyenne =', somme/n)
 ```
 
-**Exercice** : Entrez vos notes de français.
-
 ## Deviner un nombre
 
 On peut aussi utiliser une boucle `while` pour deviner un nombre.
@@ -106,6 +113,10 @@ Elle fournit un nombre entier aléatoire entre deux bornes (1, 99).
 
 La fonction `input()` ne retourne que le type `str`.
 La fonction `int()` transforme le type string (chaîne) en entier (integer).
+
+```{exercise}
+Quelle est la meilleure stratégie pour deviner un nombre ?
+```
 
 ```{codeplay}
 :file: while5.py
@@ -124,8 +135,6 @@ while x !=  n:
 
 print('\nBravo. Vous avez réussi!')
 ```
-
-**Exercice** : Quelle est la meilleure stratégie pour deviner un nombre ?
 
 ## Factoriser
 
@@ -180,7 +189,7 @@ Ceci présente deux avantages :
 Une **indentation** est un retrait du code par rapport à la marge gauche de 4 caractères.
 Elle peut être insérée avec la touche tabulateur **TAB** (symbolisée par une flèche à gauche du clavier).
 
-Un bloc est défini comme un ensemble de lignes de même indentation. 
+Un bloc est défini comme un ensemble de lignes de même indentation.
 Des blocs marqués par une indentation se trouvent après les mots-clés pour :
 
 - la définition de fonction (`def`),
@@ -207,14 +216,16 @@ for i in range(-2, 2):
 Dans l'exemple suivant, nous avons une boucle qui fait trois itérations.
 Les deux instructions `print()` font partie du bloc de la boucle.
 
+```{exercise}
+Enlevez l'indentation de l'instruction `print('-' * 11)`.
+```
+
 ```{codeplay}
 :file: while7.py
 for i in range(3):
     print('itération', i)
     print('-' * 11)
 ```
-
-**Exercice** : Enlevez l'indentation de l'instruction `print('-' * 11)`.
 
 ## Sortir avec `break`
 

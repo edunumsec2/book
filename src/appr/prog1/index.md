@@ -18,19 +18,21 @@ colorier
 repeter
 
 cercler
-memoriser
+parametrer
 parcourir
 positionner
-parametrer
 
 write
 iterer
 randomiser
+ordonner
+reutiliser
 
 questionner
 decider
 ecrire
 attendre
+
 renvoyer
 grouper
 trier
@@ -38,7 +40,8 @@ turtleart
 
 projet
 annexe
-extra
+archi1
+archi2
 ````
 
 ## Objectifs

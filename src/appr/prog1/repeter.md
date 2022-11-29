@@ -1,4 +1,5 @@
 (prog1.repeter)=
+
 # Répéter - `for`
 
 Dans ce chapitre, nous découvrons comment utiliser une boucle `for` pour répéter un bloc d'instructions un certain nombre de fois. Nous allons voir que :
@@ -87,8 +88,8 @@ Définissez la fonction `hexagone()` pour dessiner un hexagone, et appelez cette
 from turtle import *
 
 def triangle():
-    for i in range(3):
-        forward(100)
+    for i in range(3):      # indentation 1 (bloc pour def)
+        forward(100)        # indentation 2 (bloc pour for)
         left(120)
 
 def carre():
@@ -126,6 +127,10 @@ forward(100)
 
 Pour dessiner des dents de scie, il faut simplement répéter dans une boucle le dessin pour une seule dent.
 
+```{exercise}
+Dessinez une usine avec un toit en dents de scie.
+```
+
 ```{codeplay}
 :file: for5.py
 from turtle import *
@@ -140,8 +145,6 @@ for i in range(4):
 
 forward(80)
 ```
-
-**Exercice** : Dessinez une usine avec un toit en dents de scie.
 
 ## Éventail
 
@@ -333,6 +336,10 @@ for i in range(6):
 
 Vous pouvez changer la forme de votre tortue avec la fonction `shape()`.
 
+```{exercise}
+Essayez les formes `'triangle'` et `'arrow'`.
+```
+
 ```{codeplay}
 :file: for12.py
 from turtle import *
@@ -351,12 +358,14 @@ shape('square')
 forward(100)
 ```
 
-**Exercice** : Essayez les formes `'triangle'` et `'arrow'`.
-
 ### Vitesse
 
 Vous pouvez changer la vitesse de la tortue avec la fonction `speed(s)`.
 Le paramètre vitesse `s` peut varier entre 1 (le plus lent) et 1000 (le plus rapide). Sa vitesse par défaut est de 3. Mettre la vitesse à 0 choisit automatiquement la vitesse maximum.
+
+```{exercise}
+Augmentez graduellement la vitesse de la tortue, en utilisant la variable `i` comme argument de vitesse.
+```
 
 ```{codeplay}
 :file: for13.py
@@ -368,8 +377,6 @@ for i in range(36):
     left(170)
 ```
 
-**Exercice** : Augmentez graduellement la vitesse de la tortue, en utilisant la variable `i` comme argument de vitesse.
-
 ## Erreurs
 
 Il est important de bien lire et comprendre les messages d'erreur.
@@ -379,6 +386,10 @@ Dans cette section, vous allez découvrir les différentes catégories d'erreur 
 
 Cette erreur survient lorsque vous essayez d'importer un module qui n'existe pas.
 
+```{exercise}
+Corrigez l'erreur d'importation.
+```
+
 ```{codeplay}
 from turtl import *
 
@@ -387,11 +398,13 @@ for i in range(3):
     left(120)
 ```
 
-**Exercice** : Corrigez l'erreur d'importation.
-
 ### SyntaxError
 
 Cette erreur survient lorsque vous écrivez mal un mot-clé, ou si vous oubliez une ponctuation. Dans ce cas, le mot-clé mal écrit n'est pas reconnu et il n'est pas colorié correctement dans votre code.
+
+```{exercise}
+Corrigez les trois erreurs de syntaxe et remarquez les éventuelles différences de stylisation.
+```
 
 ```{codeplay}
 fro turtle import *
@@ -401,11 +414,13 @@ fore i in range(3)
     left(120)
 ```
 
-**Exercice** : Corrigez les trois erreurs de syntaxe et remarquez les éventuelles différences de stylisation.
-
 ### NameError
 
 Cette erreur survient lorsque vous écrivez mal le nom d'une variable ou fonction.
+
+```{exercise}
+Corrigez les trois erreurs de nom.
+```
 
 ```{codeplay}
 from turtle import *
@@ -415,11 +430,13 @@ for i in range(n):
     lefft(120)
 ```
 
-**Exercice** : Corrigez les trois erreurs de nom.
-
 ### TypeError
 
 Cette erreur survient lorsque vous ne mettez pas le nombre d'arguments corrects pour une fonction.
+
+```{exercise}
+Corrigez les trois erreurs de type.
+```
 
 ```{codeplay}
 from turtle import *
@@ -428,8 +445,6 @@ for i in range():
     forward()
     left(100, 120)
 ```
-
-**Exercice** : Corrigez les trois erreurs de type.
 
 ## Exercice
 
@@ -449,7 +464,7 @@ Dessinez une pellicule photographique. Utilisez une boucle `for` pour créer 4 t
 ```{codeplay}
 :file: pellicule.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 forward(200)
 ```
@@ -465,7 +480,7 @@ Utilisez une boucle `for` pour la répétition des traverses.
 ```{codeplay}
 :file: rails.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 def traverse():
     ...
@@ -480,7 +495,7 @@ Dessinez un wagon de métro. Utilisez une boucle `for` pour les fenêtres. Utili
 ```{codeplay}
 :file: metro.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 def wagon():
     ...
@@ -495,7 +510,7 @@ Dessinez un gratte-ciel avec $n \times m$ fenêtres. Pour ceci, utilisez deux bo
 ```{codeplay}
 :file: gratte_ciel.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 def fenetre():
     ...
@@ -518,7 +533,7 @@ Vous constatez aussi une symétrie par 4. Donc avec un choix intelligent de fonc
 ```{codeplay}
 :file: moulin.py
 from turtle import *
-# Votre prénom, nom, classe
+# Prénom Nom, classe
 width(8)
 up()
 forward(50)

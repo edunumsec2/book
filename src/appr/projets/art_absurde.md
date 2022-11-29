@@ -10,6 +10,10 @@ Ce chapitre montre la création d'un texte aléatoire. On s'imagine ici l'autobi
 
 Pour inventer un nom d'artiste, il suffit de choisir aléatoirement un prénom et un nom avec la fonction `choice()` et de les combiner avec un **f-string** pour former une phrase.
 
+```{exercise}
+Exécutez le programme multiple fois et observez le résultat.
+```
+
 ```{codeplay}
 from random import choice
 
@@ -22,11 +26,13 @@ phrase = f"{prenom} {nom} est un {artiste} {adjectif}."
 print(phrase)
 ```
 
-**Exercice** : Exécutez le programme multiple fois et observez le résultat.
-
 ## Inventer une introduction
 
 Voici un exemple un peu plus long, avec deux phrases. Les variables `nom` et `prenom` sont utilisées dans les deux phrases pour faire une continuité.
+
+```{exercise}
+Exécutez le programme multiples fois et observez le résultat.
+```
 
 ```{codeplay}
 from random import choice
@@ -57,8 +63,6 @@ phrase2 = f"Né à {ville1}, {prenom} {nom} découvre {medium} à {ville2}."
 print(phrase1)
 print(phrase2)
 ```
-
-**Exercice** : Exécutez le programme multiples fois et observez le résultat.
 
 ## Inventer un paragraphe
 
@@ -129,6 +133,10 @@ print(phrase3, phrase4)
 
 Voici encore un paragraphe consistant de trois phrases.
 
+```{exercise}
+Exécutez le programme multiples fois et observez le résultat.
+```
+
 ```{codeplay}
 from random import choice
 
@@ -172,5 +180,3 @@ phrase7 = f"Son travail propose de {choice(actions)} {choice(generiques)} tandis
 
 print(phrase5, phrase6, phrase7)
 ```
-
-**Exercice** : Exécutez le programme multiples fois et observez le résultat.

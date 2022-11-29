@@ -1,5 +1,6 @@
 (prog1.write)=
-# Typographier* - `write()`
+
+# *Typographier - `write()`
 
 Dans ce chapitre, nous allons voir la **composition typographique** d'un texte dans un contexte graphique. Nous allons découvrir sa taille, sa couleur, sa police et son alignement. Nous allons voir que :
 
@@ -20,7 +21,7 @@ La fonction `write()` écrit un texte dans le canvas de la tortue. Avec des opti
 
 La fonction `write()` permet d'afficher un texte à la position de la tortue.
 
-```{admonition} Exercice
+```{exercice}
 Déplacez la tortue quelque part et ajoutez un deuxième bout de texte.
 ```
 
@@ -35,7 +36,7 @@ write('ceci est une phrase écrite par la tortue.')
 La fonction `write()` possède un paramètre optionnel `font` pour indiquer la police, la taille et le style.
 La valeur par défaut est `('Arial', 8, 'normal')`
 
-```{admonition} Exercice
+```{exercise}
 Essayez de trouvez la taille maxiumum de texte que vous pouvez écrire.
 ```
 
@@ -80,7 +81,7 @@ En typographie, une **police d'écriture** est un ensemble de signes graphiques 
 - **Didot** - police ancienne et élégante
 - **Zapfino** - police manuscrite
 
-```{admonition} Exercice
+```{exercise}
 Ecrivez un poème de 3-4 lignes en style manuscrit utilsant la police Zapfino.
 ```
 
@@ -128,7 +129,7 @@ Le troisième argument présente le style de la police :
 - cursive (`italic`)
 - gras et cursive (`bold italic`)
 
-```{admonition} Exercice
+```{exercise}
 Ajoutez un quatrième texte avec le style gras et cursive.
 ```
 
@@ -170,7 +171,7 @@ Le paramètre optionnel `align` permet de choisir parmi 3 types d'alignements :
 - centre (`'center'`)
 - droite (`'right'`)
 
-```{admonition} Exercice
+```{exercise}
 Ecrivez 3-4 lignes de texte en forme de poème qui sont centrées.
 ```
 
@@ -189,7 +190,7 @@ for a in ('left', 'center', 'right'):
 Le paramètre optionnel `move` permet de choisir si la tortue se déplace à la fin du texte. Par défaut ce paramètre est `False`.
 Ce programme place chaque mot en escalier.
 
-```{admonition} Exercice
+```{exercise}
 Que se passe-t-il si vous mettez `move=False` ?
 ```
 
@@ -206,7 +207,7 @@ for mot in mots:
 
 ## Texte en couleur
 
-```{admonition} Exercice
+```{exercise}
 Ecrivez les lignes sur la même ligne, en utilisant l'option `move=True`.
 ```
 
@@ -215,10 +216,10 @@ from turtle import *
 
 right(90)
 back(100)
-for couleur in ('red', 'blue', 'lime', 'indigo'):
-    color(couleur)
+for c in ('red', 'blue', 'lime', 'indigo'):
+    color(c)
     forward(50)
-    write(couleur, font=('Arial', 24, 'bold'))
+    write(c, font=('Arial', 24, 'bold'))
 ```
 
 ```{caution}
@@ -274,34 +275,6 @@ def case(nombre):
 back(200)
 for i in range(10):
     case(i)
-```
-
-## Scrabble
-
-Le [Scrabble](https://fr.wikipedia.org/wiki/Scrabble) est un jeu de société et un jeu de lettres où l'objectif est de cumuler des points, sur la base de tirages aléatoires de lettres, en créant des mots sur une grille carrée.
-Le jeu a été conçu par l'architecte new-yorkais Alfred Mosher Butts pendant la crise de 1929, et publié en 1931.
-
-```{codeplay}
-:file: scrabble.py
-from turtle import *
-d = 40
-speed(10)
-
-def case(lettre):
-    for i in range(4):
-        forward(d)
-        left(90)
-    forward(d/2)
-    up()
-    sety(ycor() + 8)
-    write(lettre, font=(None, 24), align='center')
-    sety(ycor() - 8)
-    down()
-    forward(d/2)
-    
-back(200)
-for c in 'SCRABBLE':
-    case(c)
 ```
 
 ## WhatsApp

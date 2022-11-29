@@ -3,7 +3,6 @@
 
 La fonction `goto(x, y)` permet de positionner la tortue à une position `(x, y)`.
 
-
 Nous allons voir que :
 
 - la fonction `pos()` retourne la position actuelle de la tortue,
@@ -275,7 +274,7 @@ Ceci est pratique pour dessiner les pièces dans une direction spécifique.
 Par exemple dans le Tetris, les figures peuvent avoir 4 orientations différentes.
 
 ```{exercise}
-Ajoute deux autres L avec une position et orientation appropriée pour créer un remplissage compact.
+Ajoutez deux autres L avec une position et orientation appropriée pour créer un remplissage compact.
 ```
 
 ```{codeplay}
@@ -323,89 +322,37 @@ seth(-45)
 triangle()
 ```
 
-## Multiples polygones
+## Ligne polygonale
 
-Pour transformer une image en multiples polygones, nous pouvons placer une grille sur l'image ou imprimer l'image sur du papier carré.
+La fonction `polyline(poly, pos=(0, 0), size=(1, 1), w=1, pen='black', fill='white')` dessine une ligne polygonale définie par un tuple de points. Les arguments sont:
 
-![bird](media/poly_bird.jpg)
-
-L'image origami de l'oiseau est composé de 
-
-- 17 points
-- 7 polygones
-
-Nous repérons d'abord toutes les coordonnées des points dans une liste `points`.  Avec un indexage du tuple tel que `point[0]` on peut accéder ou point 0.
-
-Les 7 polygones sont tout simplement des tuples avec les indices des points.
+- `poly` -- tuple de positions (x, y)
+- `pos` -- position de déplacement
+- `size` -- facteur d'échelle
 
 ```{codeplay}
 from turtle import *
 
-points = ((19, 3), (26, 17), (22, 48), (30, 0), (42, 38), 
-          (33, 54), (30, 53),  (13, 85), (2, 87), (64, 50),
-          (61, 72), (8, 92), (82, 68), (85, 78),(68, 80), 
-          (53, 73), (80, 57), (94, 60))
-          
-polygons = ((0, 1, 2),
-            (3, 4, 5, 2),
-            (6, 5, 7, 8),
-            (4, 9, 10, 11),
-            (9, 12, 10),
-            (12, 13, 14, 15, 10),
-            (16, 17, 13))
-
-up()
-i = 0
-for p in points:
-    goto(-150 + 3 *p[0], -150 + 3*p[1])
-    dot(p)
-    write(i)
-    i = i + 1
-```
-
-Pour dessiner multiples polygones, nous devons parcourir la liste des polygones. 
-Pour chaque polygone nous parcourons ses points. 
-
-Avec les deux tuples `pos` et `size` nous pouvons choisir la position et la taille des polygones.
-
-    goto(pos[0] + size[0] * p[0], pos[1] + size[1] * p[1])
-
-Pour fermer le polygone, nous revenons sur le premier point de la liste.
-
-    p = points[poly[0]]
-    goto(pos[0] + size[0] * p[0], pos[1] + size[1] * p[1])
-
-
-```{codeplay}
-from turtle import *
-
-points = ((19, 3), (26, 17), (22, 48), (30, 0), (42, 38), 
-          (33, 54), (30, 53),  (13, 85), (2, 87), (64, 50),
-          (61, 72), (8, 92), (80, 57), (85, 78),(68, 80), 
-          (53, 73), (82, 68), (94, 60))
-          
-polygons = ((0, 1, 2),
-            (3, 4, 5, 2),
-            (6, 5, 7, 8),
-            (4, 9, 10, 11),
-            (9, 12, 10),
-            (12, 13, 14, 15, 10),
-            (16, 17, 13))
-
-up()
-i = 0
-pos = (-150, -150)
-size = (3, 3)
-for poly in polygons:
-    for i in poly:
-        p = points[i]
-        goto(pos[0] + size[0] * p[0], pos[1] + size[1] * p[1])
+def polyline(poly, pos=(0, 0), size=(1, 1), w=1, pen='black', fill='white'):
+    width(w)
+    pencolor(pen)
+    fillcolor(fill)
+    goto(pos)
+    begin_fill()
+    for p in poly:
+        goto(pos[0]+p[0]*size[0], pos[1]+p[1]*size[1], )
         down()
-        dot(p)
-        write(i)
-    p = points[poly[0]]
-    goto(pos[0] + size[0] * p[0], pos[1] + size[1] * p[1])
+    end_fill()
     up()
+
+house = ((0, 0), (10, 0), (10, 15), (20, 15), (20, 0),
+            (50, 0), (50, 25), (25, 50), (0, 25), (0, 0))
+
+up()
+polyline(house)
+polyline(house, pos=(-150, -50), fill='pink')
+polyline(house, (90, -60), size=(2, 2), w=3)
+polyline(house, (90, -80), size=(2, -1.5))
 ```
 
 ## Exercice

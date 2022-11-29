@@ -7,18 +7,58 @@ class Exercise(SphinxDirective):
     final_argument_whitespace = True
     has_content = True
 
+    nextNumberByDoc = {}
+
     def run(self):
         self.assert_has_content()
 
-        admonition = nodes.admonition("")
+        admonition = nodes.admonition("", classes=["admonition", "note"])
 
-        title = self.arguments[0] if len(self.arguments) > 0 else "Exercice"
+        if self.env.docname not in self.nextNumberByDoc:
+            Exercise.nextNumberByDoc[self.env.docname] = 1
+        
+        number = Exercise.nextNumberByDoc[self.env.docname]
+        Solution.lastQuestion[self.env.docname] = number
+        Exercise.nextNumberByDoc[self.env.docname] += 1
+
+        title = "Exercice {}".format(number)
+        if len(self.arguments) > 0:
+            title += " – {}".format(self.arguments[0])
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
         admonition += label
 
         content = nodes.container("", is_div=True, classes=["question-content"])
+        self.state.nested_parse(self.content, self.content_offset, content)
+        admonition += content
+
+        return [admonition]
+
+class Solution(SphinxDirective):
+    required_arguments = 0
+    optional_arguments = 0
+    final_argument_whitespace = True
+    has_content = True
+
+    lastQuestion = {}
+
+    def run(self):
+        self.assert_has_content()
+
+        admonition = nodes.admonition("", classes=["admonition", "hint"])
+
+        title = "Solution"
+        number = Solution.lastQuestion.get(self.env.docname, None)
+        if number is not None:
+            del Solution.lastQuestion[self.env.docname]
+            title += " {}".format(number)
+
+        textnodes, _ = self.state.inline_text(title, self.lineno)
+        label = nodes.title(title, *textnodes)
+        admonition += label
+
+        content = nodes.container("", is_div=True, classes=["solution-content"])
         self.state.nested_parse(self.content, self.content_offset, content)
         admonition += content
 
@@ -302,6 +342,7 @@ class Document(SphinxDirective):
 
 def setup(app):
     app.add_directive("exercise", Exercise)
+    app.add_directive("solution", Solution)
     app.add_directive("togofurther", ToGoFurther)
     app.add_directive("micro", MicroActivity)
     app.add_directive("important", Important)

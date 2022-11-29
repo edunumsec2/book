@@ -1,4 +1,5 @@
 (prog1.parcourir)=
+
 # Parcourir - `tuple`
 
 Dans ce chapitre, nous allons découvrir le concept très important de la séquence. Ce concept s'appelle `tuple` en langage Python ou **n-uplet** en français. Un tuple est une séquence d'objets, par exemple de couleurs, de distances ou d'angles. Nous pouvons parcourir les valeurs d'un tuple une après l'autre avec une boucle `for`. Nous allons voir que :
@@ -22,10 +23,10 @@ Auparavant nous avons vu la boucle `for` comme une simple répétition. Dans ce 
 
 Dans des boucles d'itération, nous allons utiliser des variables d'une seule lettre.
 
-- `a` pour un angle, ou une longueur
-- `c` pour un caractère, ou une couleur
-- `d` pour un diamètre, ou une distance
-- `i` pour un entier (indice)
+- `a` pour un angle
+- `c` pour une couleur
+- `d` pour une distance
+- `i` pour un indice (entier)
 - `r` pour un rayon
 
 ```{question}
@@ -37,7 +38,11 @@ La variable `i` désigne normalement
 {f}`une coordonnée`
 ```
 
-## Parcourir des couleurs
+## Parcourir
+
+Dans les exemples suivants nous allons parcourir différents types de tuples.
+
+### Des couleurs
 
 Pour dessiner de multiples couleurs, nous pouvons définir un tuple (séquence) de couleurs et parcourir cette séquence.
 En Python, un tuple est délimité par des parenthèses `()` et les éléments sont séparés par une virgule.
@@ -46,6 +51,10 @@ Dans l'expression `for c in (...)`, la variable `c` va prendre à tour de rôle 
 
 La fonction `dot(80, c)` afficher un disque de diamètre 80 et de couleur `c`.  
 La fonction `write(c)` affiche le nom de la couleur `c`.
+
+```{exercise}
+Modifiez la séquence des couleurs.
+```
 
 ```{codeplay}
 from turtle import *
@@ -58,14 +67,16 @@ for c in ('yellow', 'cyan', 'orange', 'pink', 'lime'):
     forward(80)
 ```
 
-**Exercice** : Modifiez la séquence des couleurs.
-
-## Parcourir des diamètres
+### Des diamètres
 
 Nous pouvons également parcourir une séquence de nombres et ainsi, spécifier une série de diamètres de disques.
 
 La fonction `dot(d, 'pink')` afficher un disque de diamètre `d` de couleur rose.  
 La fonction `write(d)` affiche la distance `d`.
+
+```{exercise}
+Modifiez la séquence des diamètres.
+```
 
 ```{codeplay}
 from turtle import *
@@ -78,27 +89,31 @@ for d in (40, 60, 80, 60, 40):
     forward(100)
 ```
 
-**Exercice** : Modifiez la séquence des diamètres.
+### Des distances
 
-## Parcourir des distances
-
-Dans le chapitre [Définir](prog1.definir) nous avons vu les fonctions `bâtiment()` et `porte()` avec 8 lignes pour chaque définition de fonction qui dessine un rectangle.
+Dans le chapitre [Définir](prog1.definir) nous avons vu les fonctions `batiment()` et `porte()` avec 8 lignes pour chaque définition de fonction qui dessine un rectangle.
 
 À l'aide d'une séquence qui contient ces 4 distances, nous pouvons écrire ces fonctions de manière bien plus compacte. Pour illustrer les distances parcourues, nous l'affichons à chaque itération avec `write(a)`.
+
+```{exercise}
+Modifiez la taille du bâtiment et de la porte.
+```
 
 ```{codeplay}
 from turtle import *
 
 def batiment():
-    for a in (200, 100, 200, 100):
-        write(a)
-        forward(a)
+    for d in (200, 100, 200, 100):
+        forward(d/2)
+        write(d)
+        forward(d/2)
         left(90)
 
 def porte():
-    for b in (30, 50, 30, 50):
-        write(b)
-        forward(b)
+    for d in (30, 50, 30, 50):
+        forward(d/2)
+        write(d)
+        forward(d/2)
         left(90)
 
 batiment()
@@ -106,31 +121,32 @@ forward(40)
 porte()
 ```
 
-**Exercice** : Modifiez la taille du bâtiment et de la porte.
-
-## Parcourir des angles
+### Des angles
 
 Nous allons reprendre notre fonction `maison()` et, à l'aide d'une séquence, nous pouvons l'écrire de manière bien plus compacte. Cette fois-ci, la séquence représente des angles, donc nous nommons notre variable `angle` pour nous en rappeler.
 Pour illustrer le parcours des angles, nous les affichons à chaque itération avec `write(angle)`.
 
+```{exercise}
+Ajoutez une porte et une fenêtre à la maison.
+```
+
 ```{codeplay}
 from turtle import *
 
-def maison():
-    forward (70)
-    for angle in (90, 45, 90, 45):
-        write(angle)
-        left(angle)
-        forward(50)
+def maison(d):
+    dot()
+    forward (1.41*d)
+    for a in (90, 45, 90, 45):
+        write(a)
+        left(a)
+        forward(d)
     left(90)
 
 backward(200)        
-maison()
+maison(50)
 forward(150)
-maison()
+maison(80)
 ```
-
-**Exercice** : Ajoutez une porte et une fenêtre à la maison.
 
 ## Maisons en couleurs
 
@@ -138,27 +154,29 @@ Dans l'exemple nous allons d'abord parcourir une séquence d'angles avec une var
 
 Ensuite, nous allons parcourir une séquence de couleurs avec une variable `c` pour dessiner des maisons de différentes couleurs.
 
+```{exercise}
+Changez les couleurs des maisons.
+```
+
 ```{codeplay}
 :file: tuple5.py
 from turtle import *
 
-def maison():
-    forward (70)
-    for angle in (90, 45, 90, 45):
-        left(angle)
-        forward(50)
+def maison(d, c):
+    fillcolor(c)
+    begin_fill()     
+    forward (1.41*d)
+    for a in (90, 45, 90, 45):
+        left(a)
+        forward(d)
     left(90)
+    end_fill()
 
 backward(250)
 for c in ('red', 'yellow', 'pink', 'lightblue', 'lightgreen'):
-    fillcolor(c)
-    begin_fill()       
-    maison()
-    end_fill()
+    maison(50, c)
     forward(100)
 ```
-
-**Exercice** : Changez les couleurs des maisons.
 
 ## Tetris
 
@@ -220,31 +238,35 @@ for c in ('red', 'orange', 'yellow', 'green', 'blue', 'purple'):
 Ci-dessous nous dessinons 6 fois un losange pour obtenir une fleur.
 Avec une boucle `for` nous parcourons une séquence de 6 couleurs alternantes.
 
+```{exercise}
+Il manque un pétale, corrigez le programme.
+```
+
 ```{codeplay}
 :file: tuple6.py
 from turtle import *
 getscreen().bgcolor('lightgreen')
 
-def losange():
+def losange(d, c):
+    fillcolor(c)
     begin_fill()
-    for angle in (60, 120, 60, 120):
-        forward(100)
-        left(angle)
+    for a in (60, 120, 60, 120):
+        forward(d)
+        left(a)
     end_fill()
 
 for c in ('pink', 'red', 'pink', 'red', 'pink'):
-    fillcolor(c)
-    losange()
+    losange(100, c)
     left(60)
 ```
-
-**Exercice** : Il manque un pétale, corrigez le programme.
 
 ## Smiley
 
 Dans cet exemple nous allons parcourir différents diamètres de la bouche à l'aide d'une variable que nous appelons `d`. Voici quatre smileys avec différentes formes de bouche.
 
-**Exercice** : Faites varier un autre paramètre, par exemple la distance des yeux, ou la taille d'un œil.
+```{exercise}
+Faites varier un autre paramètre, par exemple la distance des yeux, ou la taille d'un œil.
+```
 
 ```{codeplay}
 :file: tuple8.py
@@ -281,13 +303,13 @@ Avec trois losanges, nous pouvons dessiner un cube en 3D.
 ```{codeplay}
 from turtle import *
 
-def losange():
-    for angle in (120, 60, 120, 60):
-        forward(100)
-        left(angle)
+def losange(d):
+    for a in (120, 60, 120, 60):
+        forward(d)
+        left(a)
         
 for i in range(3):
-    losange()
+    losange(100)
     left(120)
 ```
 
@@ -296,26 +318,28 @@ for i in range(3):
 Avec l'utilisation de trois couleurs, l'effet 3D est accentué.
 Nous choisissons des couleurs claires pour les surfaces du haut, et des couleurs sombres pour les surfaces vers le bas.
 
+```{exercise}
+Tournez le cube de 30°.
+```
+
 ```{codeplay}
 from turtle import *
 
-def losange():
-    for angle in (120, 60, 120, 60):
+def losange(d, c):
+    fillcolor(c)
+    begin_fill()
+    for a in (120, 60, 120, 60):
         forward(100)
-        left(angle)
+        left(a)
+    end_fill()
 
 def cube():      
     for c in ('pink', 'violet', 'darkviolet'):
-        fillcolor(c)
-        begin_fill()
-        losange()
-        end_fill()
+        losange(100, c)
         left(120)
 
 cube()
 ```
-
-**Exercice** : Tournez le cube de 30°.
 
 ## Pavage du plan
 
@@ -324,17 +348,17 @@ Un pavage du plan est un ensemble de portions du plan, par exemple des polygones
 ```{codeplay}
 from turtle import *
 
-def losange():
-    for angle in (120, 60, 120, 60):
+def losange(d, c):
+    fillcolor(c)
+    begin_fill()
+    for a in (120, 60, 120, 60):
         forward(100)
-        left(angle)
+        left(a)
+    end_fill()
         
 def cube():
     for c in ('pink', 'violet', 'darkviolet'):
-        fillcolor(c)
-        begin_fill()
-        losange()
-        end_fill()
+        losange(100, c)
         left(120)
 
 for i in range(3):
@@ -597,20 +621,21 @@ hexagone()
 ```{codeplay}
 :file: rubik.py
 from turtle import *
-a = 40
+d = 50
 
-def losange():
+def losange(c):
+    fillcolor(c)
     begin_fill()
-    for angle in (120, 60, 120, 60):
-        forward(a)
-        left(angle)
+    for a in (120, 60, 120, 60):
+        forward(d)
+        left(a)
     end_fill()
-    forward(a)
+    forward(d)
     
 def next():
-    backward(3*a)
+    backward(3*d)
     left(120)
-    forward(a)
+    forward(d)
     right(120)
 
 surface = (('red', 'blue', 'orange'),
@@ -620,8 +645,7 @@ surface = (('red', 'blue', 'orange'),
 left(30)
 for ligne in surface:
     for c in ligne:
-        fillcolor(c)
-        losange()
+        losange(c)
     next()
 ```
 

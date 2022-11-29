@@ -32,6 +32,10 @@ Comme la variable d'itération est de type entier (`int`) on l'appelle souvent `
 
 Nous reprenons l'exemple précédent du polygone, mais cette fois nous ne dessinons pas les segments, mais seulement les sommets. La valeur de la variable d'itération `i` est affichée à chaque sommet du polygone.
 
+```{exercise}
+Testez avec des nombres différents entre 5 et 13.
+```
+
 ```{codeplay}
 :file: range2.py
 from turtle import *
@@ -46,8 +50,6 @@ for i in range(n):
     write(i)
 ```
 
-**Exercice** : Testez avec des nombres différents entre 5 et 13.
-
 ## Itérer avec `range()`
 
 La fonction `range(start, stop, step)` permet de produire une séquence linéaire d'entiers. Les entiers se trouvent dans l'intervalle semi-fermé `[start, stop[` avec un incrément de `step`.
@@ -59,6 +61,10 @@ Le sens des paramètres :
 - `step` est l'incrément.
 
 La fonction `print()` utilise le paramètre optionnel `end` pour ne pas terminer avec un retour à la ligne, mais par un simple espace.
+
+```{exercise}
+Affichez les entiers entre -50 et 200 avec un incrément de 25.
+```
 
 ```{codeplay}
 :file: range3.py
@@ -73,8 +79,6 @@ for x in range(start, stop, step):
     goto(x, 0)
     write(x)
 ```
-
-**Exercice** : Affichez les entiers entre -50 et 200 avec un incrément de 25.
 
 ## Dessiner une spirale
 
@@ -101,6 +105,10 @@ Nous concaténons les deux éléments lettre et nombre (`x + y`) et nous ajouton
 
 Pour bien montrer l'ordre consécutif, nous importons la fonction `sleep()` du module `time` pour ralentir le parcours de la boucle.
 
+```{exercise}
+Transformez le code pour afficher 20 colonnes de cellules.
+```
+
 ```{codeplay}
 :file: range9.py
 from time import sleep
@@ -111,8 +119,6 @@ for y in '1234567':
         sleep(0.1)
     print()
 ```
-
-**Exercice** : Transformez le code pour afficher 20 colonnes de cellules.
 
 ## Itérer sur x et y
 
@@ -138,13 +144,16 @@ Le programme suivant dessine des points sur une grille régulière avec une dist
 from turtle import *
 up()
 
-x0 = 180
-d = 40
+def grille(p, size, dim):
+    for i in range(dim[0]):         # itérer les lignes i
+        for j in range(dim[1]):     # itérer les colonnes j
+            x = p[0] + j*size[0]    # calculer x
+            y = p[1] + i*size[1]    # calculer y
+            goto(x, y)
+            dot()
 
-for y in range(-x0, x0+1, d):
-    for x in range(-x0, x0+1, d):
-        goto(x, y)
-        dot()
+grille((-200, -100), (20, 20), (8, 8))
+grille((100, 0), (10, 10), (5, 7))
 ```
 
 ## Position `(x, y)`

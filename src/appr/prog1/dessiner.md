@@ -129,42 +129,6 @@ Une séquence d'instructions d'un bloc est exécutée
 {f}`aléatoirement`   
 ```
 
-## Équivalence
-
-La tortue possède 4 fonctions de déplacement, mais à strictement parler, on pourrait s'en sortir avec seulement deux fonctions, `forward()` et `left()`, car :
-
-- `backward(d)` est équivalent à `forward(-d)`
-- `right(a)` est équivalent à `left(-a)`
-
-Dans le programme ci-dessous, les 4 lignes du deuxième bloc sont équivalentes aux 4 instructions du premier bloc et donnent un résultat identique.
-
-```{codeplay}
-:file: forward4.py
-from turtle import *
-
-forward(160)
-left(90)
-forward(100)
-left(90)
-
-backward(-160)  # équivalent à forward(160)
-right(-90)      # équivalent à left(90)
-backward(-100)
-right(-90)
-```
-
-Le bout de texte qui commence avec le symbole `#` (alt+3 sur Mac) est un commentaire.
-Un commentaire est ignoré par Python, et sert uniquement à documenter un programme.
-
-```{question}
-L'expression `left(90)` est équivalent à
-
-{v}`right(-90)`  
-{f}`right(180)`  
-{f}`left(180)`  
-{f}`left(-90)`  
-```
-
 ## Épaisseur de ligne
 
 La fonction `width(d)` (épaisseur en anglais) permet de définir l'épaisseur de la ligne.
@@ -193,7 +157,7 @@ forward(200)
 
 Nous dessinons une maison et marquons le toit par une ligne plus épaisse.
 
-```{exercice}
+```{exercise}
 Doublez l'épaisseur du toit. Ensuite, doublez la hauteur de la maison.
 ```
 
@@ -237,7 +201,7 @@ forward(20)
 
 Voici encore un exemple où, avec un simple changement d'épaisseur, vous obtenez un effet très intéressant.
 
-```{exercice}
+```{exercise}
 Ajoutez la première branche qui manque.
 ```
 
@@ -257,7 +221,91 @@ left(45)
 forward(60)
 ```
 
-## Éditeur de Python
+## Commentaire
+
+Le symbole `#` indique un commentaire. Sur le Mac vous pouvez l'insérer avec **opt+3** ou **alt+3**.
+Un commentaire permet d'ajouter une explication pour le lecteur humain. Il n'a aucune influence sur le programme. Python ignore tout simplement tout commentaire.
+
+```{exercise}
+Expliquez dans chaque ligne ce que fait l'instruction.
+```
+
+```{codeplay}
+from turtle import *
+
+width(50)       # mettre l'épaisseur du trait à 50
+forward(20)     # avancer de 20 pas
+width(10)
+forward(60)
+width(50)
+forward(20)
+width(10)
+forward(40)
+left(45)
+forward(60)
+```
+
+L'exercice précédent servait à expliciter pour un débutant en programmation la signification des commandes écrites en anglais. Normalement on ne fait pas ça, car un programmeur est censé connaitre la signification des commandes.
+
+Les commentaires servent à expliciter la vraie signification d'une partie du programme.
+
+```{exercise}
+Expliquez cette fois ce que dessine chaque partie du programme (verre, pont, verre, charnière, branche).
+```
+
+```{codeplay}
+from turtle import *
+
+width(50)       # dessiner le premier verre
+forward(20)
+width(10)       # dessiner le pont (nez)
+forward(60)
+width(50)
+forward(20)
+width(10)
+forward(40)
+left(45)
+forward(60)
+```
+
+## Équivalence
+
+La tortue possède 4 fonctions de déplacement, mais à strictement parler, on pourrait s'en sortir avec seulement deux fonctions, `forward()` et `left()`, car :
+
+- `backward(d)` est équivalent à `forward(-d)`
+- `right(a)` est équivalent à `left(-a)`
+
+Dans le programme ci-dessous, les 4 lignes du deuxième bloc sont équivalentes aux 4 instructions du premier bloc et donnent un résultat identique.
+
+```{exercise}
+Expliquez avec un commentaire ce que font les 2 dernières lignes.
+```
+
+```{codeplay}
+:file: forward4.py
+from turtle import *
+
+forward(160)
+left(90)
+forward(100)
+left(90)
+
+backward(-160)  # équivalent à forward(160)
+right(-90)      # équivalent à left(90)
+backward(-100)
+right(-90)
+```
+
+```{question}
+L'expression `left(90)` est équivalent à
+
+{v}`right(-90)`  
+{f}`right(180)`  
+{f}`left(180)`  
+{f}`left(-90)`  
+```
+
+## Éditeur
 
 Jusqu'à maintenant, nous avons exécuté nos petits programmes ici dans cette page web. Malheureusement, ces programmes disparaissent quand nous rechargeons la page. Pour pouvoir les sauvegarder et programmer indépendamment de ce site web, nous avons besoin d'un éditeur de Python externe.
 
@@ -288,7 +336,7 @@ Dessinez un rectangle.
 ```{codeplay}
 :file: rectangle.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 forward(200)
 ...
@@ -302,7 +350,7 @@ Dessinez un triangle.
 ```{codeplay}
 :file: triangle.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 forward(200)
 ...
@@ -316,21 +364,7 @@ Dessinez un hexagone.
 ```{codeplay}
 :file: hexagone.py
 from turtle import *
-# Prénom, nom, classe
-
-forward(100)
-...
-done()
-```
-
-### Maison
-
-Dessinez une maison.
-
-```{codeplay}
-:file: maison.py
-from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 forward(100)
 ...
@@ -344,7 +378,7 @@ Dessinez une chaise.
 ```{codeplay}
 :file: chaise.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 left(90)
 forward(100)
@@ -359,7 +393,7 @@ Dessinez une table.
 ```{codeplay}
 :file: table.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 left(90)
 forward(100)
@@ -374,7 +408,7 @@ Dessinez un lit.
 ```{codeplay}
 :file: lit.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 left(90)
 forward(100)
