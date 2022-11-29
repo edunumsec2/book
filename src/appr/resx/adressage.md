@@ -112,18 +112,18 @@ Les adresse IP sont structurées hérarchiquement
 
 ### Gouvernance
 
-<!-- TODO: faire le lien avec les indicatifs -->
-
 Comme les noms de domaine, les adresses IP sont gérées hiérarchiquement. Ainsi, les adresses de la forme
 `46.x.x.x` (c'est-à-dire celles qui commencent par `46 = 00101110`) sont assignées au Centre de Coordination
 Européen qui les répartit entre différents *Registres Internet locaux* tels que Switch qui va pouvoir
-louer une partie de ces adresses IP à des organisations, des entreprises (par exemple des fournisseurs d'accès Internet) ou des particuliers qui en feraient la demande.
+louer une partie de ces adresses IP à des organisations, des entreprises (par exemple des fournisseurs d'accès Internet) ou des particuliers qui en feraient la demande. 
+
 
 Certains blocs d'adresses IP sont réservés à des usages particuliers. Par exemple les adresses `10.x.x.x`  ou
 `192.168.x.x` sont réservées aux réseaux privés, c'est-à-dire des machines qui ne communiquent pas directement
 avec le reste d'Internet. Ainsi, ces adresses peuvent être utilisées au sein du réseau interne des entreprises,
 ou pour faire communiquer différents appareils connectés (lampes, télévision, four, télécommande) au sein d'une
 maison.
+
 
 ```{exercise}
 - Combien y aurait-il eu d'adresses IP possibles s'il avait été décidé de l’encoder sur 24 bits?

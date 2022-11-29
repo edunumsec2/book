@@ -28,13 +28,21 @@ Selon ce protocole un paquet est constitué d'une suite de 0 et de 1 que l'on pe
 1. L'entête qui donne des informations sur le paquet (son émetteur, sa destination, sa taille, etc.)
 1. Les données qui forment le contenu du paquet, c'est-à-dire les informations que l'on veut transmettre.
 
-```{image} media/IPpacket.svg
+```{figure} media/IPpacket.svg
+:width: 600
+```
+L'entête joue le rôle de l'étiquette sur un paquet envoyé par la poste. On y indique l'adresse de destination, l'adresse de
+l'expéditeur (appelée aussi l'adresse source), mais aussi d'autres information telles que la version d'IP utilisée (4 ou 6),
+la longueur totale du paquet, ainsi que sa "durée de vie". Sa durée de vie indique au bout de combien de temps le paquer peut
+être abandonné pour éviter d'avoir des paquets qui circulent indéfiniment sans trouver leur destinataire. Dans la version IPv4,
+l'entête fait au maximum 24 octets, remplis comme dans l'image ci-dessous.
+
+```{figure} media/IPv4header.png
 :width: 700
 ```
+On remarque que les 4 premiers bits indiquent la version de d'IP utilisée (donc 0100 si c'est la version 4), les quatre suivants
+donnent la longueur de l'entête, etc. 
 
-
-
-<!-- [ indiquer la spécification de l'entête IP] -->
 
 ## Le protocole TCP
 
