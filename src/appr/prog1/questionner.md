@@ -1,4 +1,5 @@
 (prog1.questionner)=
+
 # Questionner - `input()`
 
 Dans ce chapitre, nous découvrons comment un programme peut poser une question lors de son exécution. L'utilisateur du programme peut alors répondre et entrer une information. La réponse sera stockée dans la mémoire de l'ordinateur et sera associée à une variable. Grâce à cette variable, le programme peut traiter la réponse fournie, et le résultat peut être affiché. Nous allons voir que :
@@ -42,6 +43,10 @@ print(x, 'voit', x, 'qui voit', x)  # cinq arguments
 Une variable est une place en mémoire pour stocker de l'information.
 Vous êtes complètement libres dans le choix des noms pour les variables, mais il est recommandé de choisir des noms qui sont le plus explicites possible. C'est mieux d'utiliser des noms de variable parlants, comme `nom` et `age`, même si on avait pu utiliser `x` et `y`.  
 
+```{exercise}
+Ajoutez une troisième question et utilisez la réponse dans un `print()`.
+```
+
 ```{codeplay}
 :file: input3.py
 nom = input('Entrez votre nom: ')
@@ -50,8 +55,6 @@ print('Bonjour', nom)
 age = input('Entrez votre âge: ')
 print('Très bien', nom, 'vous avez', age, 'ans')
 ```
-
-**Exercice** : Ajoutez une troisième question et utilisez la réponse dans un `print()`.
 
 ## Demander un nombre
 
@@ -161,6 +164,10 @@ Dans l'exemple suivant, on demande le rayon et on affiche rayon, diamètre et ci
 
 $$ S = \pi r^2 $$
 
+```{exercise}
+Complétez le programme pour afficher la surface du cercle.
+```
+
 ```{codeplay}
 print('Circle')
 r = float(input('Entrez le rayon: '))
@@ -172,9 +179,11 @@ print('circonférence =', pi * 2 * r)
 print('surface =', ...)
 ```
 
-**Exercice** : Complétez le programme pour afficher la surface du cercle.
-
 Nous pouvons également créer des programmes où nous demandons plusieurs valeurs à l'utilisateur. Cette fois, nous permettons seulement l'utilisation de nombres entiers, et donc transformons la chaine obtenue avec `int()` en nombre entier.
+
+```{exercise}
+Complétez le programme pour afficher le périmètre et la diagonale.
+```
 
 ```{codeplay}
 :file: int8.py
@@ -186,8 +195,6 @@ print('surface =', a * b)
 print('périmètre =', ...)
 print('diagonale =', ...)
 ```
-
-**Exercice** : Complétez le programme pour afficher le périmètre et la diagonale.
 
 ## Créer un quiz
 
@@ -304,6 +311,10 @@ print('Votre score: ', score, 'sur', len(quiz))
 Nous utilisons un tuple avec deux valeurs (a, b) que nous mettons dans un deuxième tuple.
 Cette fois nous avons pas besoin de donner une solution, car nous pouvons la calculer.
 
+```{exercise}
+Ajoutez le score pour ce quiz.
+```
+
 ```{codeplay}
 print('Quiz addition')
 quiz = ((12, 35), (23, 11), (55, 23))
@@ -318,8 +329,6 @@ for (a, b) in quiz:
     print()
 ```
 
-**Exercice** : Ajoutez le score pour ce quiz.
-
 ## Erreurs
 
 Dans des chapitres précédents, nous avons déjà vu quelques messages d'erreurs. Mais il y en a d'autres que nous allons voir ici.
@@ -329,6 +338,10 @@ Dans cette section, vous allez découvrir les différentes catégories d'erreur 
 ### SyntaxError - accents
 
 Cette erreur survient lorsque vous utilisez des accents dans des noms de fonctions ou de variables.
+
+```{exercise}
+Corrigez les trois erreurs de syntaxe'.
+```
 
 ```{codeplay}
 from turtle import *
@@ -341,11 +354,13 @@ def carré():
 carré()
 ```
 
-**Exercice** : Corrigez les trois erreurs de syntaxe'.
-
 ### SyntaxError - parenthèses
 
 Cette erreur survient lorsque vous oubliez de fermer une parenthèse.
+
+```{exercise}
+Corrigez l'erreur de syntaxe.
+```
 
 ```{codeplay}
 from turtle import *
@@ -355,11 +370,13 @@ left(90)
 forward(100
 ```
 
-**Exercice** : Corrigez l'erreur de syntaxe.
-
 ### SyntaxError - ponctuation
 
 Cette erreur survient lorsque vous oubliez un signe de ponctuation (parenthèse, virgule, apostrophe).
+
+```{exercise}
+Corrigez les trois erreurs de syntaxe.
+```
 
 ```{codeplay}
 print('hello'
@@ -367,19 +384,19 @@ print(12 34)
 print('bonjour)
 ```
 
-**Exercice** : Corrigez les trois erreurs de syntaxe.
-
 ### TypeError
 
 Cette erreur survient lorsque vous mettez des opérandes dont le type n'est pas approprié pour l'opérateur, par exemple une comparaison entre une chaîne et un entier.
+
+```{exercise}
+Corrigez les trois erreurs de type.
+```
 
 ```{codeplay}
 print('10' > 0)
 print('10' * '10')
 print('10' + 10)
 ```
-
-**Exercice** : Corrigez les trois erreurs de type.
 
 ## Exercices
 

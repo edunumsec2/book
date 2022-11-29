@@ -28,6 +28,10 @@ Pour adapter la fonction à l'échelle de la tortue nous changeons :
 - `x` par un facteur de 50,
 - `y` par un facteur de 100.
 
+```{exercise}
+Modifiez couleur, amplitude, fréquence ou nombre de points de la courbe.
+```
+
 ```{codeplay}
 :file: math1.py
 from turtle import *
@@ -50,11 +54,13 @@ for x in range(-300, 300, 10):
     dot()
 ```
 
-**Exercice** : Modifiez couleur, amplitude, fréquence ou nombre de points de la courbe.
-
 ## Importer un module
 
 Le mot-clé `import` permet d'importer un module. Normalement c'est dans la première ligne d'un programme qu'on importe un module. La fonction `dir()` permet de voir le contenu du module.
+
+```{exercise}
+Importez le module `random` et affichez son contenu avec `dir`.
+```
 
 ```{codeplay}
 :file: math2.py
@@ -63,8 +69,6 @@ m = [x for x in dir(math) if not x.startswith('_')]
 print(m)
 print(len(m))
 ```
-
-**Exercice** : Importez le module `random` et affichez son contenu avec `dir`.
 
 ## Format `module.objet`
 
@@ -76,6 +80,10 @@ Pour utiliser un objet d'un module importé, il faut écrire de façon `module.o
 
 Par exemple `math.pi` pour la constante $\pi$. Voici quelques exemples.
 
+```{exercise}
+Essayez la fonction `pow()` (puissance) et affichez le résultat.
+```
+
 ```{codeplay}
 :file: math3.py
 import math
@@ -84,8 +92,6 @@ print('e =', math.e)
 print('pi =', math.pi)
 print('fact(7) =', math.factorial(7))
 ```
-
-**Exercice** : Essayez la fonction `pow()` (puissance) et affichez le résultat.
 
 ## Constantes
 
@@ -101,6 +107,10 @@ Le module `math` contient 5 constantes:
 - `pi` rapport de la circonférence d'un cercle à son diamètre
 - `tau` rapport de la circonférence d'un cercle à son rayon
 
+```{exercise}
+Vérifiez de façon numérique que $2\pi = \tau$.
+```
+
 ```{codeplay}
 :file: math4.py
 from math import e, inf, nan, pi, tau
@@ -112,8 +122,6 @@ print('nan =', nan)
 print('pi  =', pi)
 print('tau =', tau)
 ```
-
-**Exercice** : Vérifiez de façon numérique que $2\pi = \tau$.
 
 ## Fonction trigo
 
@@ -132,6 +140,10 @@ Et leurs fonctions inverses (arc):
 
 Dorénavant nous utilisons l'expression `from math import *` pour importer tous les objets du module `math`. Le symbole `*` représente tous les objets.
 
+```{exercise}
+Ajoutez et tracez une deuxième fonction trigonométrique dans une autre couleur.
+```
+
 ```{codeplay}
 :file: math5.py
 from turtle import *
@@ -145,8 +157,6 @@ for x in range(-300, 300, 10):
     down()
     dot()
 ```
-
-**Exercice** : Ajoutez et tracez une deuxième fonction trigonométrique dans une autre couleur.
 
 ## Afficher les axes
 
@@ -220,6 +230,10 @@ for y in range(-180, 180+1, d):
 
 En définissant la fonction `ligne()` nous pouvons rendre le programme plus lisible.
 
+```{exercise}
+Mettez la distance `d` à 20 et à 10 et réexécutez le programme.
+```
+
 ```{codeplay}
 :file: math9.py
 from turtle import *
@@ -239,8 +253,6 @@ for x in range(-280, 280+1, d):
 for y in range(-180, 180+1, d):
     ligne((-280, y), (280, y))
 ```
-
-**Exercice** : Mettez la distance `d` à 20 et à 10 et réexécutez le programme.
 
 ## Echelle
 

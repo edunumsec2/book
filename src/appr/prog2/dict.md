@@ -62,6 +62,10 @@ print('liste =', phrase.split())
 
 À l'aide d'une boucle `for` nous pouvons traduire la phrase entière.
 
+```{exercise}
+Avec les mots donnés dans le dictionnaire, faites une nouvelle phrase.
+```
+
 ```{codeplay}
 :file: dict4.py
 anglais = {'la':'the', 'maison':'house', 'est':'is', 'rouge':'red', 
@@ -74,8 +78,6 @@ print(phrase)
 for mot in phrase.split():
     print(anglais[mot], end=' ')
 ```
-
-**Exercice** : Avec les mots donnés dans le dictionnaire, faites une nouvelle phrase.
 
 ## Traduire un texte
 
@@ -143,6 +145,10 @@ Maintenant nous pouvons traduire une phrase entière. Ici nous devons faire atte
 - les caractères sont séparés par 2 espaces,
 - les mots sont séparés par 4 espaces.
 
+```{exercise}
+Écrivez votre nom en Morse.
+```
+
 ```{codeplay}
 :file: dict8.py
 Morse = {'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'.--', 'e':'.', 'f':'..-.', 
@@ -161,8 +167,6 @@ for c in phrase:
         print(Morse[c], end='  ')
 ```
 
-**Exercice** : Écrivez votre nom en Morse.
-
 ## Système de login
 
 L'exemple suivant simule le processus de login à un système informatique.
@@ -172,6 +176,10 @@ L'opérateur spécial `in` permet de tester si une clé donnée fait partie du d
 
 Dans un premier temps on vérifie que l'utilisateur existe avec `user in passwords`.
 Dans un deuxième temps on vérifie si c'est le bon mot de passe avec `pw == passwords[user]`.
+
+```{exercise}
+Essayez avec utilisateur `mar`, `mark` et les mots de passe `123`, `1234`.
+```
 
 ```{codeplay}
 :file: dict9.py
@@ -190,13 +198,15 @@ while True:
         print(user, "n'est pas un utilisateur reconnu")
 ```
 
-**Exercice** : Essayez avec utilisateur `mar`, `mark` et les mots de passe `123`, `1234`.
-
 ## Un dictionnaire de couleurs
 
 Un spécialiste de la publication, de la mode, ou du web, utilise une centaine des mots spécifiques pour désigner un ton de couleur particulier. Ces couleurs peuvent être spécifiées avec les 3 couleurs de base : rouge, vert, bleu (RVB).
 
 Nous pouvons utiliser un dictionnaire `RVB` pour associer des noms de couleurs à des triplets de nombres qui indiquent les 3 composantes RVB.
+
+```{exercise}
+Ajoutez 2-3 couleurs du domaine de la mode.
+```
 
 ```{codeplay}
 :file: dict10.py
@@ -215,8 +225,6 @@ for x in couleurs:
     dot(d, RVB[x])
     forward(d)
 ```
-
-**Exercice** : Ajoutez 2-3 couleurs du domaine de la mode.
 
 ## Compter des lettres
 

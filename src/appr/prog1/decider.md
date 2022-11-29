@@ -30,6 +30,25 @@ else:
     print('accès OK - vous êtes majeur')
 ```
 
+## Coordonnées x positive
+
+```{codeplay}
+from turtle import *
+from random import *
+    
+d = 20 
+
+for i in range(20):
+    x = randint(-300, 300)
+    y = randint(-200, 200)
+    goto(x, y)
+    if x>0:
+        pencolor('red')
+    else:
+        pencolor('lightblue')
+    dot(d)
+```
+
 ## Comparer
 
 Un programme doit parfois comparer deux valeurs.
@@ -89,6 +108,10 @@ else:
 Sans le mot-clé `elif` nous devrions mettre le bloc `if` à l'intérieur du bloc  `else` en indentation.
 Avec multiples conditions, les blocs se décalent de plus en plus et rendent le programme illisible.
 
+```{exercise}
+Testez le programme avec -2, 0, 3.
+```
+
 ```{codeplay}
 :file: if4.py
 n = input('Entrez un nombre: ')
@@ -102,8 +125,6 @@ else:
     else:
         print('zéro')
 ```
-
-**Exercice** : Testez le programme avec -2, 0, 3.
 
 ## Pair ou impair ?
 
@@ -242,6 +263,10 @@ Un programme de dessin avec la tortue est une séquence d'instructions. Si la to
 
 Nous pouvons insérer des espaces dans `chemin` pour rendre la description plus lisible. Lors de l'exécution, ils ne sont pas pris en considération.
 
+```{exercise}
+Définissez et dessinez la lettre F.
+```
+
 ```{codeplay}
 :file: if8.py
 from turtle import *
@@ -261,8 +286,6 @@ def dessiner(chemin):
 E = 'lffff rff rrfllf rrfllf rrff'
 dessiner(E)
 ```
-
-**Exercice** : Définissez et dessinez la lettre F.
 
 ## Opérations logiques
 
@@ -322,6 +345,42 @@ if a < x < b:
 
 if not (a < x < b):
     print(x, "est dehors l'interval (", a, '...', b, ')')
+```
+
+## Rouler un dé
+
+```{exercise}
+Modifiez le code pour afficher le dé avec un nombre aléatoire entre 1 et 6.
+```
+
+```{codeplay}
+:file: random15.py
+from turtle import *
+from random import *
+from time import *
+
+speed(5)
+up()
+a = 80
+d = 50
+
+def dots(points):
+    for (x, y) in points:
+        goto(x*a, y*a)
+        dot(d)
+
+for n in range(1, 7):
+    if n % 2 == 1:
+        dots(((0, 0),))            # centre ·
+    if n >= 2:
+        dots(((-1, 1), (1, -1)))  # diagonale \
+    if n >= 4:
+        dots(((-1, -1), (1, 1))) # diagonale /
+    if n == 6: 
+        dots(((-1, 0), (1, 0)))   # horzonale –
+
+    sleep(1)
+    clear()
 ```
 
 ## Exercices

@@ -26,9 +26,24 @@ False | True  | False
 True  | False | False
 True  | True  | True
 
+
+
 ## Négation
 
 Voici la table de vérité pour l'opérateur `not`.
+
+```{logic}
+:height: 100
+:mode: tryout
+
+{
+  "v": 2,
+  "out": [{"pos": [210, 50], "id": 0}],
+  "gates": [{"type": "NOT", "pos": [140, 50], "in": 1, "out": 2}],
+  "in": [{"pos": [70, 50], "id": 3, "name": "p", "val": 0}],
+  "wires": [[2, 0], [3, 1]]
+}
+```
 
 p     |not p
 ------|-----
@@ -47,6 +62,20 @@ for p in (False, True):
 `not True  =`  {bl}`>False|True`  
 
 ## Et logique
+
+```{logic}
+:height: 140
+:mode: tryout
+
+{
+  "v": 2,
+  "opts": {"showGateTypes": true},
+  "gates": [{"type": "AND", "pos": [160, 70], "in": [0, 1], "out": 2}],
+  "in": [{"pos": [60, 40], "id": 3, "name": "p", "val": 0}, {"pos": [60, 100], "id": 4, "name": "q", "val": 0}],
+  "out": [{"pos": [230, 70], "id": 5}],
+  "wires": [[3, 0], [4, 1], [2, 5]]
+}
+```
 
 La fonction `et` donne vrai si toutes les entrées sont vraies.
 

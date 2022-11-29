@@ -1,8 +1,3 @@
-:root {
-    --primary-light: #8044FF;
-    --primary-dark: #7C3EFF;
-}
-
 @page {
     size: A4;
     margin: 25mm 25mm 25mm 25mm;
@@ -90,6 +85,10 @@ body.modulo-dark .dropdown {
     background-color: black;
 }
 
+body {
+    --sidebar-item-spacing-vertical: 0.3rem;
+}
+
 /* CUSTOM CLASSES */
 
 .admonition {
@@ -108,7 +107,6 @@ body.modulo-dark .dropdown {
     background-color: rgb(92 201 191)!important;
 }
 
-body {
-    --sidebar-item-spacing-vertical: 0.3rem;
-
+.admonition > div:last-child > :last-child {
+    margin-bottom: 2px;
 }

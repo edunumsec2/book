@@ -28,6 +28,10 @@ C'est une convention en Python, que le nom de classe soit écrit avec une majusc
 1. un deux-points `:`
 1. un bloc en indentation
 
+```{exercise}
+Créez une deuxième classe `Rectangle` et affichez son type.
+```
+
 ```{codeplay}
 class Point:
     "Définition d'un point géométrique"
@@ -36,8 +40,6 @@ print(Point)
 print(Point.__name__)
 ```
 
-**Exercice** : Créez une deuxième classe `Rectangle` et affichez son type.
-
 ## Créer des objets
 
 À partir d'une class, nous pouvons créer autant d'objets que nous voulons. L'expression `Point()` crée un objet de type `Point`. On dit aussi qu'on crée une **instance** de la classe `Point`.
@@ -45,6 +47,10 @@ print(Point.__name__)
 Pour créer une instance, on utilise le nom de la classe suivi de parenthèses. Plus tard nous verrons qu'il peut y avoir des arguments entre ces parenthèses.
 
 Une classe est comme un moule qui nous permet de créer des copies, à partir d'une définition de classe.
+
+```{exercise}
+Créez encore d'autres instances de la classe `Point`.
+```
 
 ```{codeplay}
 :file: class1.py
@@ -56,8 +62,6 @@ q = Point()
 
 print(p, q)
 ```
-
-**Exercice** : Créez encore d'autres instances de la classe `Point`,
 
 ## Définir des attributs
 
