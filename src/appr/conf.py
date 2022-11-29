@@ -124,8 +124,6 @@ html_theme_options = {
         "admonition-font-size": "0.9rem",
         "admonition-title-font-size": "0.9rem",
 
-        # Sidebar (left)
-        "color-sidebar-background": "#ebfffc",
     },
     "dark_css_variables": {
 
@@ -155,9 +153,6 @@ html_theme_options = {
         # Admonition font size
         "admonition-font-size": "0.9rem",
         "admonition-title-font-size": "0.9rem",
-
-        # Sidebar (left)
-        "color-sidebar-background": "#131416",
     },
 }
 
