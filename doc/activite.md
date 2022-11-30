@@ -20,7 +20,7 @@ Une activité peut s’insérer dans les ressources de plusieurs façons, listé
 - Par notion : l’activité cible une notion plus précise du plan d’études (par exemple : la notion de variable). 
 - Transversal : l’activité permet un pont entre plusieurs thématiques. 
 
-## En-têtre d'une activité
+## En-tête d'une activité
 Une activité doit comporter les informations suivantes :
 - Nom
 - Durée
