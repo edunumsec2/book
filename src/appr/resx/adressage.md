@@ -59,6 +59,11 @@ for i in addr:
 
 ```{exercise}
 Lesquelles des adresses suivantes sont des adresses IP valides:
+1. ```240.264.23.2```
+1. ```123.8.12.2.34```
+1. ```123.23.2```
+1. ```205.233.12.23```
+
 ```
 
 Pour répondre à une telle question automatiquement nous pourrions ajouter des testes comme celui-ci.
@@ -101,6 +106,8 @@ Parmi les adresses suivantes, indiquer lesquelles sont au format IPv4, lesquelle
 1. ```ADEFE.ACDEA.AABCD.DDEBC.FFEDA.AEABC.ACADE.EFDF```
 1. ```1230.121D.12AEAB.1231D.4324B.2765.5435D.4378```
 1. ``` D2G3.4234.534FG.2141.12GE.12AD.85C2.GE32```
+1. ``` 123A.3213.564E.6746.2DD2.A897```
+1. ``` 124.234.432.21```
 
 ````
 
