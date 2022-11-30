@@ -1,4 +1,5 @@
 (prog1.trier)=
+
 # Trier - `sort()`
 
 Dans ce chapitre, nous allons découvrir quelques algorithmes de tri.
@@ -19,6 +20,10 @@ Lorsque vous jouez aux cartes, vous triez vos cartes par valeur et dans ce cas, 
 Les fonctions `min()` et `max()` retournent le minimum et le maximum d'une liste à l'aide d'un algorithme.  
 Mais comment fonctionne cet algorithme ?
 
+```{exercise}
+Modifiez la liste avec de nouvelles valeurs et essayez de nouveau.
+```
+
 ```{codeplay}
 :file: sort1.py
 liste = [3, 4, 1, 2, 6, 5]
@@ -27,8 +32,6 @@ print(min(liste))
 print(max(liste))
 ```
 
-**Exercice** : Modifiez la liste avec de nouvelles valeurs et essayez de nouveau.
-
 ## Trouver le minimum
 
 Pour trouver le minimum dans une liste il faut :
@@ -36,6 +39,10 @@ Pour trouver le minimum dans une liste il faut :
 - prendre la première valeur comme minimum courant,
 - parcourir le reste de la liste,
 - garder la valeur comme nouveau minimum si elle est plus petite.
+
+```{exercise}
+Modifiez l'algorithme pour trouver le minimum ET le maximum.
+```
 
 ```{codeplay}
 :file: sort2.py
@@ -49,8 +56,6 @@ for val in liste[1:]:
 print(min)
 ```
 
-**Exercice** : Modifiez l'algorithme pour trouver le minimum ET le maximum.
-
 ## Créer une liste
 
 Pour visualiser les algorithmes que nous allons rencontrer dans ce chapitre,
@@ -60,6 +65,10 @@ Avec une compréhension nous allons créer :
 
 - une liste `x` avec des valeurs équidistantes dans l'intervalle [-300, 300]
 - une liste `y` avec des valeurs aléatoires dans l'intervalle [-200, 200]
+
+```{exercise}
+Modifiez `n` à 14.
+```
 
 ```{codeplay}
 :file: sort3.py
@@ -76,11 +85,13 @@ print('x =', x)
 print('y =', y)
 ```
 
-**Exercice** : Modifiez `n` à 14.
-
 ## Visualiser une liste
 
 Nous utilisons les listes `x` et `y` pour afficher des points et visualiser la liste `y`.
+
+```{exercise}
+Modifiez le nombre d'éléments.
+```
 
 ```{codeplay}
 :file: sort4.py
@@ -110,8 +121,6 @@ create(20)
 show()
 ```
 
-**Exercice** Modifiez le nombre d'éléments.
-
 ## Visualiser un algorithme
 
 Pour visualiser l'algorithme du minimum, nous dessinons en rouge les valeurs du minimum courant.
@@ -120,6 +129,10 @@ Cet algorithme :
 - prend la première valeur comme minimum courant,
 - parcourt le reste de la liste,
 - garde la valeur comme nouveau minimum si elle est plus petite.
+
+```{exercise}
+Modifiez l'algorithme pour visualiser le minimum ET le maximum.
+```
 
 ```{codeplay}
 :file: sort5.py
@@ -161,12 +174,14 @@ for i in range(n):
     dot(d/2)
 ```
 
-**Exercice** : Modifiez l'algorithme pour visualiser le minimum ET le maximum.
-
 ## L'indice du minimum
 
 Souvent, on ne doit pas seulement trouver la valeur minimum, mais aussi son indice dans la liste.
 Contrairement au cas précédent, ici nous ne parcourons pas les valeurs, mais les indices.
+
+```{exercise}
+Modifiez l'algorithme pour trouver l'indice du minimum ET maximum.
+```
 
 ```{codeplay}
 :file: sort6.py
@@ -183,8 +198,6 @@ for i in range(1, n):
         
 print(i_min)
 ```
-
-**Exercice** : Modifiez l'algorithme pour trouver l'indice du minimum ET maximum.
 
 ## Échanger deux éléments
 
@@ -415,6 +428,10 @@ tri_selection(liste)
 
 Voici une visualisation du tri par sélection.
 
+```{exercise}
+Modifiez la taille de la liste.
+```
+
 ```{codeplay}
 :file: sort14.py
 from turtle import *
@@ -468,8 +485,6 @@ for i in range(n-1):
 show()
 ```
 
-**Exercice** : Modifiez la taille de la liste.
-
 ## Tri par insertion
 
 L'algorithme du **tri par insertion** est utilisé par la plupart des personnes pour trier des cartes à jouer. On prend les cartes non triées depuis la table, et on les insère à l'endroit correct dans sa main.
@@ -495,6 +510,10 @@ for i in range(1, n):
 ```
 
 Voici une visualisation du tri par insertion.
+
+```{exercise}
+Modifiez la taille de la liste.
+```
 
 ```{codeplay}
 :file: sort16.py
@@ -545,8 +564,6 @@ for i in range(1, n):
 show()
 ```
 
-**Exercice** : Modifiez la taille de la liste.
-
 ## Tri à bulles
 
 L’algorithme du **tri à bulles** compare les éléments voisins, deux par deux, et les met dans le bon ordre. Le mot 'bulles' fait référence aux bulles dans une boisson qui montent à la surface.
@@ -575,6 +592,10 @@ for i in range(n-1):
 ```
 
 Voici une visualisation du tri à bulles.
+
+```{exercise}
+Modifiez la taille de la liste.
+```
 
 ```{codeplay}
 :file: sort18.py
@@ -624,5 +645,3 @@ for i in range(n-1):
             swap(j, j+1)
 show()
 ```
-
-**Exercice** : Modifiez la taille de la liste.

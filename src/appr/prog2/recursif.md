@@ -106,6 +106,10 @@ for i in range(1, 14):
 
 Mais aussi la fonction `carre(n)` peut être écrite sous forme récursive.
 
+```{exercise}
+Définissez la fonction `cube(n)` sous forme récursive.
+```
+
 ```{codeplay}
 :file: fn7.py
 def carre(n):
@@ -118,11 +122,13 @@ for i in range(1, 14):
     print(carre(i))
 ```
 
-**Exercice** : Définissez la fonction `cube(n)` sous forme récursive.
-
 ## Flocon de Koch
 
 La courbe de Koch est une ligne coupée en 3 avec un triangle isocèle dessiné sur le segment du milieu. Il est possible d'appliquer cette règle de nouveau sur les 4 segments obtenus, et ainsi de suite.
+
+```{exercise}
+Calculez la longueur de la courbe.
+```
 
 ```{codeplay}
 :file: fn8.py
@@ -154,11 +160,13 @@ for i in range(5):
     flocon(200, i)
 ```
 
-**Exercice** : Calculez la longueur de la courbe.
-
 ## Pyramide fractale
 
 La règle de construction de cette courbe est similaire à la courbe de Koch. Le segment de départ est coupé en 3 est un carré est dessiné sur le segment du milieu.
+
+```{exercise}
+Calculez la longueur de la courbe.
+```
 
 ```{codeplay}
 :file: fn9.py
@@ -189,9 +197,11 @@ for i in range(6):
     koch(400, i)
 ```
 
-**Exercice** : Calculez la longueur de la courbe.
-
 ## Triangle de Sierpinski
+
+```{exercise}
+Augmentez le degré de la courbe.
+```
 
 ```{codeplay}
 :file: fn10.py
@@ -212,5 +222,3 @@ def sierpinski(d, n):
         
 sierpinski(400, 5)
 ```
-
-**Exercice** : Augmentez le degré de la courbe.

@@ -183,6 +183,7 @@ class Game:
         s.onkey(clear, 'BackSpace')
         s.onkey(self.draw, ' ')  
         s.listen()
+        done()
         
     def click(self, x, y):
         """Reacts to mouse clicks."""
@@ -209,4 +210,5 @@ class Game:
         self.bt_new.draw()
         down()
 
-game = Game()
+if __name__ == '__main__':
+    game = Game()

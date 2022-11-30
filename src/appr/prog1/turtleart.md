@@ -65,9 +65,9 @@ dot(1000, 'pink')
 color('crimson')
 width(3)
 
-def square(a):
+def square(d):
     for i in range(4):
-        forward(a)
+        forward(d)
         left(90)
     
 n = 10
@@ -89,17 +89,17 @@ color('red')
 width(1)
 up()
 
-def dashes(n, a):
+def dashes(d, n):
     for i in range(n):
-        forward(a/2)
+        forward(d/2)
         down()
-        forward(a)
+        forward(d)
         up()
           
 n = 10
 for i in range(n):
     goto(0, 0)
-    dashes(4, 30)
+    dashes(30, 4)
     left(360/n)
 ```
 
@@ -143,7 +143,7 @@ dot(1000, 'orange')
 color('yellow')
 width(3)
 
-def wave(n, r):
+def wave(r, n):
     down()
     for i in range(n):
         circle(r, 120)
@@ -153,7 +153,7 @@ def wave(n, r):
 n = 10
 for i in range(n):
     goto(0, 0)
-    wave(2, 20)
+    wave(20, 2)
     left(360/n)
 ```
 
@@ -169,13 +169,13 @@ dot(1000, 'honeydew')
 color('teal')
 width(3)
 
-def square(a):
+def square(d):
     for i in range(4):
-        forward(a)
+        forward(d)
         left(90)
     
-for x in range(20, 160, 20):
-    square(x)
+for d in range(20, 160, 20):
+    square(d)
 ```
 
 ## Spirale
@@ -190,8 +190,8 @@ dot(1000, 'teal')
 color('yellow')
 width(2)
     
-for x in range(10, 300, 10):
-    forward(x)
+for d in range(10, 300, 10):
+    forward(d)
     right(91)
 ```
 
@@ -207,10 +207,10 @@ dot(1000, 'azure')
 color('red', 'pink')
 width(3)
 
-def triangle(a):
+def triangle(d):
     begin_fill()
     for i in range(3):
-        forward(a)
+        forward(d)
         right(120)
     end_fill()
 
@@ -253,10 +253,10 @@ from turtle import *
 dot(1000, 'aliceblue')
 width(2)
 
-def petale(a):
+def petale(r):
     begin_fill()
     for i in range(2):
-        circle(a, 90)
+        circle(r, 90)
         left(90)
     end_fill()
 
