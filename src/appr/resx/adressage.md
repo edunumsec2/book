@@ -122,14 +122,24 @@ Les adresse IP sont structurées hérarchiquement
 Comme les noms de domaine, les adresses IP sont gérées hiérarchiquement. Ainsi, les adresses de la forme
 `46.x.x.x` (c'est-à-dire celles qui commencent par `46 = 00101110`) sont assignées au Centre de Coordination
 Européen qui les répartit entre différents *Registres Internet locaux* tels que Switch qui va pouvoir
-louer une partie de ces adresses IP à des organisations, des entreprises (par exemple des fournisseurs d'accès Internet) ou des particuliers qui en feraient la demande. 
+louer une partie de ces adresses IP à des organisations, des entreprises (par exemple des fournisseurs d'accès Internet)
+ou des particuliers qui en feraient la demande. 
 
 
 Certains blocs d'adresses IP sont réservés à des usages particuliers. Par exemple les adresses `10.x.x.x`  ou
 `192.168.x.x` sont réservées aux réseaux privés, c'est-à-dire des machines qui ne communiquent pas directement
 avec le reste d'Internet. Ainsi, ces adresses peuvent être utilisées au sein du réseau interne des entreprises,
 ou pour faire communiquer différents appareils connectés (lampes, télévision, four, télécommande) au sein d'une
-maison.
+maison. Dans l'exemple ci-dessous, un fournisseur d'accès à Internet (tel que Swisscom par exemple) à reçu toutes les
+adresses de type 213.221.x.x. Il en garde une partie pour son propre usage, par exemple pour son site web ou ses routeurs,
+c'est-dire les machines qui s'occupe d'acheminer les donnée sur Internet. Une autre partie des adresses sera louée à
+des entreprises ou des particuliers qui sont ses clients. Ceux-ci bénéficieront donc d'une adresse IP leur permettant d'être
+joignable par le reste d'Internet. Les particuliers et entreprises ont généralement un réseau privé, un intranet, qui utilise
+les adresses 10.x.x.x.
+
+```{figure} media/IPnetwork.svg
+:width: 600
+```
 
 
 ```{exercise}
@@ -158,8 +168,23 @@ Déterminez si votre machine a une adresse IP statique ou dynamique
 moyen pourriez-vous imaginer pour que vous puissiez vous joindre.
 
 2. En tant que propriétaire d'un site web, vous avez accès aux adresses IP des machines qui visitent votre site. Pouvez-vous dès lors identifier une même personne
-qui revient plusieurs fois sur votre site. 
+qui revient plusieurs fois sur votre site ?
+
+
+
 ```
+```{solution}
+1. Vous pouvez vous connecter tous deux à un serveur central qui a une adresse IP fixe et qui s'occupera de relayer vos message à vos adresses
+dynamiques. C'est ce que fait un serveur mail ou de messagerie telle que Signal ou Whatsapp. 
+
+2. Si elle a une adresse IP dynamique, alors elle aura probablement des adresses IP différentes lors de ses visites en des jours différents. On
+ne pourra donc pas l'identifier en regardant uniquement son adresse IP. Par contre, en enregistrant d'autres paramètres que son navaigateur
+voudra bien nous transmettre, tels que son système d'exploitation, la langue, l'appareil, etc., on peut reconstituer son empreinte numérique
+et l'identifier ainsi. C'est ce qu'on appelle en anglais le fingerprinting, que l'on peut [bloquer avec certains navigateurs](https://www.mozilla.org/fr/firefox/features/block-fingerprinting/).
+
+
+```
+
 
 ### Système de noms de domaine
 
