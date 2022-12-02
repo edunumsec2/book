@@ -41,6 +41,24 @@ autre routeur soit au destinataire).
 
 <!-- [Ajouter une illustration] -->
 
+```{togofurther} Masques de réseau
+Pour qu'une machine sache si une autre machine est dans le même sous-réseau qu'elle, son sous-réseau est spécifié par un
+*masque* de réseau composé d'une suite de 32 bits (en IPv4) dont les $n$ premiers sont à 1 et les $32-n$ suivants sont à 0.
+Par exemple, une machine peut avoir une adresse IP 128.178.23.132 avec un masque de 11111111.11111111.1111111.000000000.
+Cela signifie que toutes les machines qui ont la même adresse IP là où le masque vaut 1 sont dans le même sous-réseau. Dans
+notre exemple, cela correspond à toutes les adresses IP 128.178.23.x. Pour gagner de la place, les masques sont aussi exprimés
+en 4 nombres décimaux, dans notre exemple 255.255.255.0, ou alors, pour faire encore plus court, on peut simplement spécifier
+le nombre de 1 du masque, ce qui donne, toujours pour le même exemple, 128.178.23.132/24. 
+
+Ainsi toutes les adresses IP qui n'a pas les même $n$ premiers bits, fait partie d'un différent sous-réseau. Pour lui envoyer
+des paquets, il faudra passer par la *passerelle par défault* (*default gateway* en anglais) qui est le routeur qui s'occupe de
+communiquer avec l'extérieur du sous-réseau.
+
+````
+
+
+
+
 ### Format effectif
 
 [Mettre cette information comme facultative, utile si on veut travailler avec un vrai réseau]

@@ -10,7 +10,17 @@ basée aux États-Unis dont la fonction principale est la gestion de l'adressage
 Les noms de domaines sont gérés de manière hiérarchique, selon le
 *nom de domaine de premier niveau*, c'est à dire la "terminaison" de l'adresse (*.ch*, *.org*, *.fr*, etc.)Ainsi la gestion des adresses en *.ch* est confiée à Switch, une fondation suisse dont c'est le rôle principal.La personne qui a créé le site *champignons.ch* a donc
 réservé ce nom de domaine auprès de Switch (en passant par un intermédiaire) et peut le conserver moyennant un paiement d'environ CHF 15.- par an.
-[Faire un encadré sur l'internationalisation des noms de domaines, et les controverses (.sucks)? ]
+
+```{didyouknow}
+Au début, les noms de domaine de premier niveau étaient limités à quelques possibilités, telles que ".com" pour les organisations
+commerciales, ".edu" pour les universités (américaines), ".gov" pour le gouvernement (américain), ".mil" pour l'armée (américaine), ".org"
+pour les organisations (à but non-lucratif) et, dès les années 80, différents pays ont décidé d'enregistrer des noms de domaine de premier
+niveau pour leur pays, par exemple ".ch" pour la Suisse, ".fr" pour la France. Puis il a été décidé d'ouvrir d'autres noms de domaine et
+de les mettre aux enchères. Une entreprise a
+alors décidé de vendre des domaines ".sucks" qu'elle a vendu très cher à certaines grandes entreprises (par exemple apple.sucks) qui avaient
+peur que ce site ne devienne une plateforme pour les critiquer. 
+
+````
 
 Si les noms de domaines sont pratiques pour désigner des adresses sur Internet, les machines, elles, utilisent des
 nombres pour référencer les machines connectées à Internet, c'est ce qu'on appelle les *adresses IP*. Ainsi,
@@ -111,11 +121,6 @@ Parmi les adresses suivantes, indiquer lesquelles sont au format IPv4, lesquelle
 
 ````
 
-```{togofurther} Blocs et Masques
-
-Les adresse IP sont structurées hérarchiquement 
-
-````
 
 ### Gouvernance
 
@@ -149,6 +154,10 @@ les adresses 10.x.x.x.
 - Donnez la représentation binaire de l'adresse IP `y.y.y.y`
 - Combien y a-t-il d'adresses IP de type `192.168.x.x` ?
 ```
+
+
+
+
 
 ### Adressage statique et dynamique
 
