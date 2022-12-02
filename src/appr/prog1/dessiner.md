@@ -415,3 +415,36 @@ forward(100)
 ...
 done()
 ```
+
+### TP
+
+Téléchargez le fichier ci-dessous et utilisez-le comme base de départ pour votre travail pratique.
+
+```{codeplay}
+:file: tp1.py
+"""
+tp1 - introduction
+
+Nom : 
+Classe :
+Date :
+
+- installez Thonny chez vous
+- nommez ce fichier : tp1_classe_prenom.py (minuscules, sans accents)
+- ajoutez 100+ ligne de code pour faire un dessin concrèt
+- ajoutez des commentaires qui expliquent les éléments du dessin
+- exéctutez le code et montrez l'image
+- prenez une capture d'écran entier,
+    qui montre la fênetre code et la fenêtre dessin sans être superposée
+- Déposez sur Moodle :
+    tp1_classe_prenom.py     (code)
+    tp1_classe_preneom.jpg   (capture d'écran en format JPG)
+"""
+
+from turtle import *
+
+# mettez votre code ici !
+forward(100)
+
+done()
+```
