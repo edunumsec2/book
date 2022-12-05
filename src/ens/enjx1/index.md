@@ -33,7 +33,8 @@ l’informatique tient à sa capacité à décomposer tout problème en élémen
 procédures que l’on peut composer, combiner, enchaîner. Il s’agit d’une éducation à
 « ouvrir les boîtes noires » des objets numériques qui nous entourent pour en comprendre
 les rouages, et à tester les différentes manières d’envisager une solution.
-Environnement socio-technique
+
+### Environnement socio-technique
 Il s’agit de replacer l’objet abordé dans un contexte qui est spécifique, qu’il soit culturel,
 historique, géographique, économique, social ou personnel.
 
