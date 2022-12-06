@@ -98,3 +98,68 @@ init_lives()
 update_life()
 ```
 
+## Program 2
+
+```{codeplay}
+from random import choice
+from turtle import *
+
+
+s = Screen()
+cells = {}
+shape('square')
+d = 10
+up()
+n = 10
+
+def initialize():
+    """Randomly initialize the cells."""
+    for x in range(-n, n):
+        for y in range(-n, n):
+            cells[x, y] = False
+
+    for x in range(-5, 5):
+        for y in range(-5, 5):
+            cells[x, y] = choice([True, False])
+
+
+def step():
+    """Compute one step in the Game of Life."""
+    neighbors = {}
+
+    for x in range(-(n-1), n-1):
+        for y in range(-(n-1), n-1):
+            count = -cells[x, y]
+            for h in [-1, 0, 1]:
+                for v in [-1, 0, 1]:
+                    count += cells[x + h, y + v]
+            neighbors[x, y] = count
+
+    for cell, count in neighbors.items():
+        if cells[cell]:
+            if count < 2 or count > 3:
+                cells[cell] = False
+        elif count == 3:
+            cells[cell] = True
+    
+def draw():
+    """Draw all the squares."""
+    step()
+    clear()
+    for (x, y), alive in cells.items():
+        color('green' if alive else 'black')
+        goto(x*d, y*d)
+        stamp()
+    update()
+    s.ontimer(draw, 100)
+    
+
+s.setup(600, 400)
+hideturtle()
+tracer(0)
+initialize()
+draw()
+s.onkey(initialize, ' ')
+s.listen()
+done()
+```

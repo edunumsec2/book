@@ -27,6 +27,10 @@ Nous définissons comme ensemble `A` les points qui se trouvent à l'intérieur 
 Les points qui ne font pas partie de l'ensemble `A` sont affichés en bleu.
 Nous commençons avec un ensemble vide `A = set()` et nous ajoutons des éléments avec l'instruction `A.add(i)`.
 
+```{exercise}
+Doublez le nombre des points.
+```
+
 ```{codeplay}
 :file: set1.py
 from turtle import *
@@ -58,8 +62,6 @@ hideturtle()
 print('A =', A)
 ```
 
-**Exercice** : Doublez le nombre des points.
-
 ## Diagramme de Venn
 
 Un **diagramme de Venn** montre graphiquement la relation entre différents ensembles.
@@ -69,6 +71,10 @@ Dans l'exemple suivant, nous montrons les 3 situations :
 - les deux ensembles A et B sont disjoints,
 - les deux ensembles A et B ont une intersection non vide,
 - l'ensemble B est totalement inclus dans l'ensemble A.
+
+```{exercise}
+Ajoutez un ensemble C.
+```
 
 ```{codeplay}
 :file: set2.py
@@ -102,12 +108,14 @@ ensemble(230, 'B', 30)
 hideturtle()
 ```
 
-**Exercice** : Ajoutez un ensemble C.
-
 ## Des éléments uniques
 
 Les éléments d'un ensemble sont uniques. Chaque élément apparait seulement une fois.
 Le comportement est différent de celui d'une liste, ou des éléments peuvent apparaitre multiple fois.
+
+```{exercise}
+Affichez la longueur de la liste et de l'ensemble.
+```
 
 ```{codeplay}
 :file: set3.py
@@ -117,8 +125,6 @@ ensemble = {1, 2, 4, 2, 1, 3, 1}
 print('liste =', liste)
 print('ensemble =', ensemble)
 ```
-
-**Exercice** : Affichez la longueur de la liste et de l'ensemble.
 
 ## Les méthodes `set`
 
@@ -130,6 +136,10 @@ print(dir(set()))
 
 À l'aide d'une liste de compréhension, nous allons afficher seulement les méthodes qui ne commencent pas avec un tiret bas.
 
+```{exercise}
+Affichez aussi les méthodes pour le type `dict`.
+```
+
 ```{codeplay}
 :file: set3.py
 print('set :')
@@ -138,8 +148,6 @@ print([x for x in dir(set()) if not x.startswith('_')])
 print('\nlist :')
 print([x for x in dir(list()) if not x.startswith('_')])
 ```
-
-**Exercice** : Affichez aussi les méthodes pour le type `dict`.
 
 ## L'union
 
@@ -154,6 +162,10 @@ print('union =', A.union(B))
 ```
 
 Avec un diagramme de Venn nous représentons l'union des deux ensembles A et B avec la région rose.
+
+```{exercise}
+Ajoutez un ensemble `C` qui a une intersection non vide avec `A` et `B`.
+```
 
 ```{codeplay}
 :file: set5.py
@@ -176,8 +188,6 @@ circle(r, 120)
 left(60)
 circle(r, 120)
 ```
-
-**Exercice** : Ajoutez un ensemble `C` qui a une intersection non vide avec `A` et `B`.
 
 ## L'intersection
 
@@ -216,6 +226,10 @@ La méthode `inside(x, y)` permet de déterminer si un point `(x, y)` fait parti
 Ensuite nous créons des points aléatoires dans toute la surface du canevas.
 Avec `A.inside(x, y) and B.inside(x, y)` nous sélectionnons la réunion.
 
+```{exercise}
+Placez les points dans la réunion de A et B.
+```
+
 ```{codeplay}
 :file: set7.py
 from turtle import *
@@ -253,8 +267,6 @@ while i < 200:
         dot(10, 'red')
         i += 1
 ```
-
-**Exercice** : Placez les points dans la réunion de A et B.
 
 ## La différence
 
@@ -311,6 +323,10 @@ En Python, les méthodes pour les ensembles ont des opérateurs plus courts :
 - intersection (`&`)
 - différence symétrique (`^`)
 
+```{exercise}
+Modifiez les ensembles A et B et reévaluez.
+```
+
 ```{codeplay}
 :file: set11.py
 A = {0, 1, 2}
@@ -326,5 +342,3 @@ print('A - B (différence) =', A - B)
 print('B - A (différence) =', B - A)
 print('A ^ B (différence symétrique) =', A ^ B)
 ```
-
-**Exercice** : Modifiez les ensembles A et B et reévaluez.

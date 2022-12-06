@@ -26,6 +26,10 @@ Une liste permet de manipuler des groupes d'objets tels que :
 
 En Python, on peut grouper des objets divers dans une liste. Une liste est ordonnée, ce qui veut dire qu'il y a un premier objet et un dernier objet.
 
+```{exercise}
+Ajoutez une nouvelle liste et affichez-la.
+```
+
 ```{codeplay}
 :file: list1.py
 noms = ['Tim', 'Kim', 'Anna', 'Cindy']
@@ -36,13 +40,15 @@ print(noms)
 print(notes)
 ```
 
-**Exercice** : Ajoutez une nouvelle liste et affichez-la.
-
 En Python, une liste est délimitée par des crochets `[]` et ses éléments sont séparés par des virgules `,`.
 
 ## La fonction `len()`
 
 La fonction `len()` retourne la longueur d'une liste, c'est-à-dire le nombre d'éléments qu'elle contient.
+
+```{exercise}
+Ajoutez des éléments à une liste at affichez de nouveau sa longueur.
+```
 
 ```{codeplay}
 :file: list2.py
@@ -53,8 +59,6 @@ couleurs = ['fuchsia', 'pink', 'orange']
 print(len(noms))
 print(len(notes))
 ```
-
-**Exercice** : Ajoutez des éléments à une liste at affichez de nouveau sa longueur.
 
 ## La fonction `list()`
 
@@ -96,6 +100,10 @@ print(noms[-1][2])
 
 La notation `[i:j]`, après le nom d'une variable qui contient une liste, permet d'extraire une sous-liste de la liste. Cette sous-liste, aussi appelée **tranche**, est une partie de la liste identifiée par les deux index `i` et `j`.
 
+```{exercise}
+Modifiez l'expression de tranche et exécutez de nouveau.
+```
+
 ```{codeplay}
 :file: list6.py
 noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
@@ -107,8 +115,6 @@ print(noms[4:])    # élément 4 et 5
 print(noms[::2])   # chaque 2e élément
 print(noms[1::2])  # chaque 2e élément
 ```
-
-**Exercice** : Modifiez l'expression de tranche et exécutez de nouveau.
 
 ```{question}
 Quel est le résultat de l'expression `'python'[:2]` ?
@@ -269,6 +275,10 @@ print('trié', a)
 
 Le programme suivant montre le même tri de liste sous forme graphique.
 
+```{exercise}
+Ajoutez 5 éléments en plus.
+```
+
 ```{codeplay}
 :file: list18.py
 from turtle import *
@@ -291,8 +301,6 @@ a.sort()
 affiche(a, 'red', 'triée')
 hideturtle()
 ```
-
-**Exercice** : Ajoutez 5 éléments en plus.
 
 ### Inverser une liste
 
@@ -443,6 +451,10 @@ En anglais cette structure s'appelle **stack** ou **LIFO** (last in first out).
 L'exemple suivant est une pile qui accumule des entiers.
 Si répondez avec une chaîne vide, ceci enlève le dernier élément mis sur la pile, jusqu'à ce que la pile soit vide.
 
+```{exercise}
+Ajoutez des objets (nombres, texte) sur la pile. Enlevez un élément avec *Enter*.
+```
+
 ```{codeplay}
 :file: list30.py
 x = input('[] < ')
@@ -458,8 +470,6 @@ while x or len(pile):
 print('fin')
 ```
 
-**Exercice** : Ajoutez des objets (nombres, texte) sur la pile. Enlevez un élément avec *Enter*.
-
 ## La file d'attente
 
 La file d'attente est une structure de données qui permet de gérer l'arrivée et le départ d'éléments.
@@ -470,6 +480,10 @@ En anglais cette structure s'appelle **buffer** ou encore **FIFO** (first in fir
 
 L'exemple suivant est une file d'attente pour des entiers.
 Si vous répondez avec une chaîne vide, ceci enlève le plus ancien élément de la file, jusqu'à ce que la file soit vide.
+
+```{exercise}
+Ajoutez des objets (nombres, texte) à la file. Enlevez avec *Enter*.
+```
 
 ```{codeplay}
 :file: list31.py
@@ -485,5 +499,3 @@ while x or len(file):
 
 print('fin')
 ```
-
-**Exercice** : Ajoutez des objets (nombres, texte) à la file. Enlevez avec *Enter*.

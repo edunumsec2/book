@@ -1,0 +1,7 @@
+{
+  "v": 3,
+  "in": [{"type": "clock", "pos": [110, 130], "id": 0, "period": 2000}, {"pos": [110, 40], "id": 11, "name": "high", "val": 1, "isConstant": true}],
+  "out": [{"type": "7seg", "pos": [360, 90], "id": [1, 2, 3, 4, 5, 6, 7, 8]}],
+  "gates": [{"type": "NOT", "pos": [180, 130], "in": 9, "out": 10}],
+  "wires": [[0, 9], [11, 2], [10, 1]]
+}

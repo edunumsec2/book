@@ -135,6 +135,10 @@ s.listen()
 
 C'est ici que la fonction `lambda` est très pratique. Nous pouvons créer une fonction anonyme (sans nom) et la passer comme argument directement dans `onkey()`.
 
+```{exercise}
+Faites avancer la tortue avec la touche `a`.
+```
+
 ```{codeplay}
 :file: lambda8.py
 from turtle import *
@@ -144,8 +148,6 @@ s = getscreen()
 s.onkey(lambda : forward(50), 'a')
 s.listen()
 ```
-
-**Exercice** : Faites avancer la tortue avec la touche `a`.
 
 ## Bouger la tortue
 

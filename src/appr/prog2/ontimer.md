@@ -193,6 +193,10 @@ Si vous téléchargez le fichier et exécutez votre code directement en Python a
 
 Nous allons mesurer le temps nécessaire pour écrire 600 pixels sur tout l'écran.
 
+```{exercise}
+Diminuez le diamètre `d` des pixels à 5.
+```
+
 ```{codeplay}
 :file: ontimer9.py
 from turtle import *
@@ -212,8 +216,6 @@ for y in range(y0, -y0-1, -d):
 update()
 print(time()-t0)
 ```
-
-**Exercice** : Diminuez le diamètre `d` des pixels à 5.
 
 ## Horloge
 
@@ -316,4 +318,3 @@ s.onkey(clear, 'c')
 s.listen()
 fall()
 ```
-

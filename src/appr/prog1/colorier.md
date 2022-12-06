@@ -1,11 +1,12 @@
 (prog1.colorier)=
-# Colorier* - `color()`
+
+# *Colorier - `color()`
 
 Dans ce chapitre, nous continuons à dessiner et nous introduisons la couleur.
 Une couleur peut être appliquée à une ligne, à un point, à une forme ou à l'arrière-fond. Nous allons voir que :
 
-- la fonction `color()` permet de choisir une couleur,
-- la fonction `dot(d)` dessine un disque de diamètre `d`,
+- la fonction `color(c)` permet de choisir une couleur `c`,
+- la fonction `dot(d, c)` dessine un disque de diamètre `d` et de couleur `c`,
 - la fonction `begin_fill()/end_fill()` permet le remplissage.
 
 ```{question}
@@ -25,30 +26,33 @@ Voici une liste des couleurs disponibles. Pour les utiliser vous devez les écri
 
 ## Couleur de ligne
 
-La fonction `color()` permet de définir la couleur de ligne.
+La fonction `color(c)` permet de définir la couleur de ligne `c`.
 Entre les parenthèses de la fonction, vous devez écrire le nom d'une couleur, entouré d'apostrophes — par exemple `color('red')` pour dessiner une ligne rouge.
 
 Voici un triangle avec 3 segments de couleurs différentes.
 
+```{exercise}
+Modifiez les 3 couleurs en vous inspirant de la liste.
+```
+
 ```{codeplay}
 :file: color1.py
 from turtle import *
+d = 150
 width(20)
 
 color('red')
-forward(150)
+forward(d)
 left(120)
 
 color('lime')
-forward(150)
+forward(d)
 left(120)
 
 color('blue')
-forward(150)
+forward(d)
 left(120)
 ```
-
-**Exercice** : Modifiez les 3 couleurs en vous inspirant de la liste.
 
 ## Couleur de point
 
@@ -56,7 +60,11 @@ Nous pouvons afficher des points à chaque sommet :
 
 - la fonction `dot()` dessine un point standard,
 - la fonction `dot(d)` dessine un disque d'un diamètre `d`,
-- la fonction `dot(d, couleur)` dessine un disque dans la couleur spécifiée.
+- la fonction `dot(d, c)` dessine un disque de diamètre `d` et de couleur `c`.
+
+```{exercise}
+Modifiez la taille et la couleur des 3 points.
+```
 
 ```{codeplay}
 :file: color2.py
@@ -73,13 +81,15 @@ forward(150)
 dot(80, 'blue')
 ```
 
-**Exercice** : Modifiez la taille et la couleur des 3 points.
-
 ### Drapeau du Japon
 
-Le drapeau du Japon est un drapeau blanc avec un grand disque rouge en son centre. Ce disque représente le soleil, plus précisément la déesse shintô du soleil Amaterasu.
+Le drapeau du Japon est un drapeau blanc avec un grand disque rouge en son centre. Ce disque représente le soleil, plus précisément la déesse shinto du soleil Amaterasu.
 
 Le rapport entre la hauteur et la largeur du drapeau est de 2:3, et le diamètre du disque est $\frac{3}{5}$ de la hauteur du drapeau.
+
+```{exercise}
+Supprimez l'appel de la fonction `hideturtle()`. À quoi sert cette fonction ?
+```
 
 ```{codeplay}
 :file: color3.py
@@ -88,30 +98,31 @@ dot(240, 'red')
 hideturtle()
 ```
 
-**Exercice** : Supprimez l'appel de la fonction `hideturtle()`. À quoi sert cette fonction ?
-
 ### Lignes et points
 
 La fonction `dot()` sans argument de taille, va automatiquement choisir une taille qui est environ le double de l'épaisseur du trait.
 
+```{exercise}
+Augmentez l'épaisseur de la ligne à 10 pour vérifier que la taille des points change en conséquence.
+```
+
 ```{codeplay}
 :file: color4.py
 from turtle import *
+d = 100
 
-forward(100)
+forward(d)
 left(120)
 dot()
 
-forward(100)
+forward(d)
 left(120)
 dot()
 
-forward(100)
+forward(d)
 left(120)
 dot()
 ```
-
-**Exercice** : Augmentez l'épaisseur de la ligne à 10 pour vérifier que la taille des points change en conséquence.
 
 ### Points et couleurs
 
@@ -121,16 +132,17 @@ Il est possible de colorier les points différemment de la ligne. Dans ce cas, i
 :file: color5.py
 from turtle import *
 pencolor('blue')
+d = 100
 
-forward(100)
+forward(d)
 left(120)
 dot(10, 'red')
 
-forward(100)
+forward(d)
 left(120)
 dot(10, 'red')
 
-forward(100)
+forward(d)
 left(120)
 dot(10, 'red')
 ```
@@ -144,16 +156,21 @@ Avec la fonction `fillcolor()`, nous pouvons définir une couleur de remplissage
 
 Par exemple, ce programme-ci dessine un triangle vert.
 
+```{exercise}
+Ajoutez un triangle d'une couleur différente.
+```
+
 ```{codeplay}
 :file: color6.py
 from turtle import *
+d = 100
 
 def triangle():
-    forward(100)
+    forward(d)
     left(120)
-    forward(100)
+    forward(d)
     left(120)
-    forward(100)
+    forward(d)
     left(120)
 
 fillcolor('chartreuse')
@@ -162,21 +179,20 @@ triangle()
 end_fill()
 ```
 
-**Exercice** : Ajoutez un triangle d'une couleur différente.
-
 On aurait pu inclure les deux fonctions qui indiquent le remplissage directement dans la fonction `triangle()`. Ceci simplifie le code quand on dessine plusieurs triangles.
 
 ```{codeplay}
 :file: color7.py
 from turtle import *
+d = 100
 
 def triangle():
     begin_fill()
-    forward(100)
+    forward(d)
     left(120)
-    forward(100)
+    forward(d)
     left(120)
-    forward(100)
+    forward(d)
     left(120)
     end_fill()
 
@@ -232,38 +248,40 @@ Le résultat est un triangle avec deux bordures et un troisième segment sans bo
 
 Une équerre est un instrument formé de deux pièces ajustées à angle droit. L'équerre est utilisée soit pour vérifier des angles dièdres droits, soit pour tracer des angles plans droits.
 
+```{exercise}
+Dessinez le drapeau bicolore du canton de Zurich.
+```
+
 ```{codeplay}
 :file: color10.py
 from turtle import *
 dot(1000, 'moccasin')
 
 def equerre():
+    down()
+    begin_fill()
     forward(150)
     left(90)
     forward(100)
     left(90)
+    end_fill()
+    up()
 
 fillcolor('sienna')
-begin_fill()
 equerre()
-end_fill()
-
-up()
-forward(50)
-down()
-
+forward(30)
 fillcolor('gold')
-begin_fill()
 equerre()
-end_fill()
 ```
-
-**Exercice** : Dessinez le drapeau bicolore du canton de Zurich.
 
 ## Smiley
 
 Avec des cercles de tailles différentes dessinées avec `dot(d)`, nous pouvons dessiner un smiley.
 Voici un smiley qui exprime l'indifférence.
+
+```{exercise}
+Ajoutez `up()` au début du programme pour ne plus montrer la trajectoire de la tortue.
+```
 
 ```{codeplay}
 :file: color11.py
@@ -287,9 +305,11 @@ width(20)
 forward(100)
 ```
 
-**Exercice** : Ajoutez `up()` au début du programme pour ne plus montrer la trajectoire de la tortue.
-
 Voici un autre smiley qui exprime la surprise.
+
+```{exercise}
+Dessinez encore un autre smiley.
+```
 
 ```{codeplay}
 :file: color12.py
@@ -311,8 +331,6 @@ forward(100)
 dot(80)
 ```
 
-**Exercice** : Dessinez encore un autre smiley.
-
 ## Croix
 
 La fonction `bras()` dessine les 3 côtés d'un carré et tourne, à la fin, dans le sens approprié pour la suite.
@@ -320,17 +338,22 @@ Répété 4 fois, ceci donne la forme d'une croix.
 
 Ici, nous utilisons la fonction `color('white')` pour changer simultanément la couleur de ligne **et** la couleur de remplissage en blanc.
 
+```{exercise}
+Inversez les couleurs pour trouver le drapeau de la Croix-Rouge.
+```
+
 ```{codeplay}
 :file: color13.py
 from turtle import *
 dot(1000, 'red')
+d = 60
 
 def bras():
-    forward(60)
+    forward(d)
     left(90)
-    forward(60)
+    forward(d)
     left(90)
-    forward(60)
+    forward(d)
     right(90)
 
 def croix():
@@ -345,11 +368,13 @@ croix()
 end_fill()
 ```
 
-**Exercice** : Inversez les couleurs pour trouver le drapeau de la Croix-Rouge.
-
 ## Maison
 
-Nous reprenons [l'exemple du chapitre précédent](prog1.dessiner) de la fonction `maison()`. Cette fois, nous y intégrons `begin_fill()` et `end_fill()` pour pouvoir les colorier..
+Nous reprenons l'exemple du chapitre précédent de la fonction `maison()`. Cette fois, nous y intégrons `begin_fill()` et `end_fill()` pour pouvoir les colorier..
+
+```{exercise}
+Ajoutez encore une maison d'une autre couleur.
+```
 
 ```{codeplay}
 :file: color9.py
@@ -378,15 +403,13 @@ fillcolor('lightblue')
 maison()
 ```
 
-**Exercice** : Ajoutez encore une maison d'une autre couleur.
-
 ## Exporter une image
 
 Pour enregistrer votre dessin vers un fichier image, faites ceci :
 
 - Téléchargez le code.
 - Ouvrez-le avec un éditeur externe.
-- Ajoutez les 3 lignes de code à la fin.
+- Ajoutez les 2 lignes de code à la fin.
 - Exécutez votre code.
 
 ```  python
@@ -412,7 +435,7 @@ Dessinez un arc-en-ciel avec des disques de rayons et de couleurs appropriés.
 ```{codeplay}
 :file: arc_en_ciel.py
 from turtle import *
-# Votre prénom, nom, classe
+# Prénom Nom, classe
 
 left(90)
 back(300)
@@ -426,7 +449,7 @@ Dessinez et coloriez un sapin de Noël. Définissez des fonctions pour des boule
 ```{codeplay}
 :file: sapin.py
 from turtle import *
-# Votre prénom, nom, classe
+# Prénom Nom, classe
 
 def sapin():
     ...
@@ -448,7 +471,7 @@ Dessinez et coloriez une ville. Définissez des fonctions pour des maisons et de
 ```{codeplay}
 :file: ville.py
 from turtle import *
-# Votre prénom, nom, classe
+# Prénom Nom, classe
 
 dot(1000, 'skyblue')  # background
 
@@ -470,7 +493,7 @@ Dessinez une chambre avec des meubles en couleurs, que vous définissez chacun p
 ```{codeplay}
 :file: chambre.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 def chaise():    
     left(90)
@@ -506,18 +529,19 @@ Créez des fonctions pour dessiner les 7 tétrominos avec leurs couleurs appropr
 ```{codeplay}
 :file: tetris2.py
 from turtle import *
-# Votre prénom, nom, classe
+# Prénom Nom, classe
+d = 40
 
 def O():
     fillcolor('yellow')
     begin_fill()
-    forward(80)
+    forward(2*d)
     left(90)
-    forward(80)
+    forward(2*d)
     left(90)
-    forward(80)
+    forward(2*d)
     left(90)
-    forward(80)
+    forward(2*d)
     left(90)
     end_fill()
 

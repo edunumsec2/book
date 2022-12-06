@@ -375,16 +375,6 @@ La représentation de -21 en complément à 2 :
 +++
 La représentation de -21 est 11101011, qui additionné à 21, soit 00010101 donne bien zéro : 00000000.
 ```
-<!--
-```{figure} media/4bitsIntegers.jpg 
-alt: Représentation des entiers
-avec 4 bits width: 600px align: left --- Représentation des entiers
-avec 4 bits. </br> Cette figure illustre la différence du domaine
-couvert avec 4 bits pour la représentation des entiers naturels ou des
-entiers relatifs. Ainsi, avec 4 bits le domaine couvert pour les entiers
-naturels est : \[0, 15\], et pour les entiers relatif : \[-8, -7\].
-```
--->
 
 ```{figure} media/4bitsIntegers.jpg
 :width: 550
