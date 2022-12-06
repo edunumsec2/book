@@ -44,7 +44,7 @@ name : fig-comp-log
 **Complexité linéaire**. La complexité de l'algorithme de recherche linéaire, comme son nom l'indique, est linéaire. La relation entre la taille du tableau `n` et le nombre d'instructions nécessaires pour retrouver un élément dans ce tableau représente une ligne.
 ```
 
-```{admonition} Exercice 2.0. Compter jusqu'à n
+```{admonition} Exercice 2.1. Compter jusqu'à n
 :class: note
 
 Ecrire un algorithme qui affiche tous les nombres de 1 à `n`. 
@@ -54,7 +54,7 @@ Combien d’instructions élémentaires sont nécessaires lorsque `n` vaut 100 ?
 Quelle est la complexité de cet algorithme ?  
 ```
 
-`````{admonition} Solution 2.0. Compter jusqu'à n
+`````{admonition} Solution 2.1. Compter jusqu'à n
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -86,7 +86,7 @@ name : fig-rech-lin2
 `````
 
 
-```{admonition} Exercice 2.1. Compter par pas de 2
+```{admonition} Exercice 2.2. Compter par pas de 2
 :class: note
 
 Ecrire un algorithme qui affiche tous les nombres *pairs* de 1 à `n`. 
@@ -96,7 +96,7 @@ Combien d’instructions élémentaires sont nécessaires lorsque `n` vaut 100 ?
 Quelle est la complexité de cet algorithme ? 
 ```
 
-`````{admonition} Solution 2.1. Compter par pas de 2
+`````{admonition} Solution 2.2. Compter par pas de 2
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -133,7 +133,7 @@ La différence de croissance se cache dans la constante `c` de l’ordre de gra
 
 
 
-```{admonition} Exercice 2.2. Recherche linéaire🔌
+```{admonition} Exercice 2.3. Recherche linéaire🔌
 :class: note
 
 Programmer l'algorithme de recherche linéaire en Python. Rechercher une valeur entre 1 et 1000000 dans un tableau qui contient les valeurs allant de 1 à 1000000.
@@ -145,7 +145,7 @@ Est-ce que ce résultat vaut si les éléments du tableau ne sont pas dans l'ord
 ```
 
 
-`````{admonition} Solution 2.2. Recherche linéaire🔌
+`````{admonition} Solution 2.3. Recherche linéaire🔌
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -375,7 +375,7 @@ Un algorithme avec un ordre de complexité logarithmique est plus rapide qu’un
 -->
 
 
-```{admonition} Exercice 2.3 Recherche binaire 🔌
+```{admonition} Exercice 2.4 Recherche binaire 🔌
 :class: note
 
 Programmer l'algorithme de recherche binaire en Python. Rechercher une valeur entre 0 et 100 dans un tableau qui contient les valeurs allant de 0 à 100.
@@ -386,7 +386,7 @@ Est-ce qu’on peut utiliser l’algorithme de recherche binaire si le tableau n
 
 ```
 
-`````{admonition} Solution 2.3. Recherche binaire 🔌
+`````{admonition} Solution 2.4. Recherche binaire 🔌
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -473,7 +473,7 @@ print("J'ai fini de calculer...")
 
 
 
-```{admonition} Exercice 2.4. Recherche linéaire versus binaire 🔌
+```{admonition} Exercice 2.5. Recherche linéaire versus binaire 🔌
 :class: note
 
 Reprendre les programmes de recherche linéaire et recherche binaire en Python et les utiliser pour rechercher un élément dans un tableau à 100 éléments : quel algorithme est le plus rapide ? 
@@ -484,7 +484,7 @@ Est-ce que **un million** vous semble être un grand nombre pour une taille de d
 
 ```
 
-`````{admonition} Exercice 2.4. Recherche linéaire versus binaire 🔌
+`````{admonition} Exercice 2.5. Recherche linéaire versus binaire 🔌
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -609,12 +609,12 @@ print("Gain     : " + str(resultat_dif))
 
 ## Exercices
 
-```{admonition} Exercice 2.5. Recherche binaire aléatoire 🔌
+```{admonition} Exercice 2.6. Recherche binaire aléatoire 🔌
 :class: note
 
 Modifier votre programme  de recherche binaire : au lieu de diviser l’espace de recherche exactement au milieu, le diviser au hasard. Cette recherche avec une composante aléatoire s’apparente plus à la recherche que l’on fait lorsque l’on cherche un mot dans le dictionnaire.  
 
-````
+```
 
 
 ````{admonition} Ai-je compris ?

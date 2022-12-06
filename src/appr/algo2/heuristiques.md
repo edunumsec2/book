@@ -21,7 +21,7 @@ Si le calcul d’un itinéraire prenait 1 milliseconde, combien de temps faudrai
 Il existe des problèmes difficiles à résoudre. Nous allons nous pencher sur un problème qui s’appelle le **<span style="color:rgb(89, 51, 209)">problème du sac à dos</span>**. Prenons un sac à dos et une multitude d’objets qui ont chacun un poids. Notre objectif est de choisir les objets à mettre dans le sac à dos pour le remplir au maximum, mais sans dépasser sa capacité. Donc la question que l'on se pose est la suivante : quels objets devrions-nous emporter, sans dépasser le poids maximal que le sac à dos peut contenir ?
 
 
-```{admonition} Exercice 5.0. Le problème du sac à dos
+```{admonition} Exercice 4.1. Le problème du sac à dos
 :class: note
 
 Comment procéderiez-vous pour résoudre ce problème du sac à dos ? Prenez le temps d’imaginer un {glo}`algo|algorithme` qui puisse résoudre ce problème ? 
@@ -31,7 +31,7 @@ Appliquer cet algorithme pour 5 objets de poids 1, 3, 5 et 7 kg et un 
 Est-ce que votre algorithme donne toujours la meilleure solution ? 
 ```
 
-````{admonition} Solution 5.0. Le problème du sac à dos
+````{admonition} Solution 4.1. Le problème du sac à dos
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -95,13 +95,13 @@ L'algorithme le plus simple pour résoudre ce problème est un **<span style="co
 La meilleure solution se trouve à la 11ème ligne, la capacité du sac à dos (10 kg) est atteinte lorsqu'on y met le deuxième et le quatrième objet.
 
 
-```{admonition} Exercice 5.1. Le problème du sac à dos avec 10 objets
+```{admonition} Exercice 4.2. Le problème du sac à dos avec 10 objets
 :class: note
 
 Combien de combinaisons possibles existent pour le problème du sac à dos avec 10 objets ? 
 ```
 
-````{admonition} Solution 5.1. Le problème du sac à dos avec 10 objets
+````{admonition} Solution 4.2. Le problème du sac à dos avec 10 objets
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -169,14 +169,14 @@ name : heuristique
 Il existe encore d’autres types d’algorithmes {glo}`heuristique|heuristiques`, plus lents, mais qui permettent de s’approcher davantage de la solution optimale. Ils utilisent par exemple des stratégies de résolution statistiques, génétiques ou neuronales. L'apprentissage automatique à qui l'on doit les succès récents de l'intelligence artificielle repose sur des algorithmes heuristiques. La majorité des problèmes que l’on tente de résoudre aujourd’hui sont difficiles et leurs algorithmes de résolution ne trouvent pas la meilleure solution.
 
 
-```{admonition} Exercice 5.2. L'univers dans un sac à dos 
+```{admonition} Exercice 4.3. L'univers dans un sac à dos 
 :class: note
 
 L’âge estimé de l’univers est de 14 milliards d’années. Si le calcul d’une combinaison d’objets dans le problème du sac à dos prenait une microseconde, pour quel nombre d’objets serait-il possible de trouver une solution exacte sans dépasser l’âge de l’univers ?
 
 ```
 
-````{admonition} Solution 5.2. L'univers dans un sac à dos 
+````{admonition} Solution 4.3. L'univers dans un sac à dos 
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -192,7 +192,7 @@ n = log<sub>2</sub>(1.4 * 10<sup>10</sup> / 10<sup>-6</sup>) = log<sub>2</sub>(1
 ````
 
 
-```{admonition} Exercice 5.3. Parcours du parcours du parcours d'un tableau
+```{admonition} Exercice 4.4. Parcours du parcours du parcours d'un tableau
 :class: note
 
 Quelle est la complexité d’un algorithme qui pour chacun de ses éléments doit parcourir le tableau, puis pour chaque combinaison de deux de ses élements doit encore parcourir le tableau ?
@@ -200,7 +200,7 @@ Quelle est la complexité d’un algorithme qui pour chacun de ses éléments do
 ```
 
 
-````{admonition} Solution 5.3. Parcours du parcours du parcours d'un tableau
+````{admonition} Solution 4.4. Parcours du parcours du parcours d'un tableau
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>

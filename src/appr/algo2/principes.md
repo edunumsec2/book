@@ -40,14 +40,14 @@ La **<span style="color:rgb(89, 51, 209)">terminaison</span>** est une propriét
 
 Si on exécute cet {glo}`algo|algorithme`, le {glo}`programme|programme` ne s’arrête jamais : `i` est {glo}`incrementation|incrémenté` de `1` indéfiniment.  En pratique, si on retranscrit cet algorithme en programme et que l’on exécute le programme, le programme finira par s’arrêter lorsque les nombres représentés seront trop grands pour être représentés.
 
-```{admonition} Exercice 1.0. L'infini en programme
+```{admonition} Exercice 1.1. L'infini en programme
 :class: note
 
 Retranscrire l’algorithme infini en programme. Après combien de boucles le programme s’arrête‑t‑il ?
 
 ```
 
-````{admonition} Solution 1.0. L'infini en programme
+````{admonition} Solution 1.1. L'infini en programme
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -70,14 +70,14 @@ Pour faire en sorte que le programme finisse par s’arrêter, nous pouvons le m
  Fin Tant que
  ```
 
- ```{admonition} Exercice 1.1. L'infini ne finit plus de finir
+ ```{admonition} Exercice 1.2. L'infini ne finit plus de finir
 :class: note
 
 L’algorithme ci-dessus est appelé « Algorithme qui compte toujours infini ». Pourquoi est-il toujours infini ? Dans quel cas cet algorithme ne s’arrête jamais ?
 
 ```
 
-````{admonition} Solution 1.1. L'infini ne finit plus de finir
+````{admonition} Solution 1.2. L'infini ne finit plus de finir
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>

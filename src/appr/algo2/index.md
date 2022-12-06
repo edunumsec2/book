@@ -2,16 +2,41 @@
 # Algorithmique II
 
 
+## Quoi ?
 
 Pour résoudre un problème, il faut commencer par le décomposer en sous-problèmes. Pour chaque sous-problème à résoudre, on décrit les opérations à réaliser sous la forme d’un {glo}`algo|algorithme`. Il existe une multitude d’{glo}`algo|algorithmes` pour résoudre un problème, mais ils ne se valent pas tous. 
 
 L’**<span style="color:rgb(89, 51, 209)">algorithmique</span>** étudie les propriétés de ces {glo}`algo|algorithmes`. Cette analyse est nécessaire pour nous aider à décider quel {glo}`algo|algorithme` utiliser. On se propose à présent de passer en revue quelques propriétés importantes des {glo}`algo|algorithmes`. 
 
+
+
+```{figure} media/Shadok.jpeg
+---
+alt: devise shadok
+width: 300px
+
+```
+
+## Pourquoi ?
+
+Si tous les chemins mènent à Rome, on ne peut en emprunter qu'un. Lorsqu'on est face à plusieurs chemins pour arriver au même résultat, il est important de choisir le chemin le plus optimal. 
+
+Vous avez déjà rencontré plusieurs algorithmes pour arriver jusqu'ici. Encore plus fort, vous avez rencontré plusieurs algorithmes pour résoudre un même problème, ce qui nous met face à un dilemme : quelle algorithme choisir ? Et y a-t-il une solution à tout problème ?
+
+## Comment ?
+
+Dans un premier temps nous allons nous intéresser à la notion de complexité : comment déterminer la vitesse d'un algorithme ? Si plusieurs *bonnes* solutions existent, alors il faut choisir la plus rapide. Mais sera-t-elle toujours la solution la plus rapide ?
+
+Dans un deuxième temps, si vous le souhaitez, vous pouver ouvrir la porte merveilleuse de la récursivité, à la manière des *Infinity Mirror Room* de Yayoi Kusama.
+
+
+
+
 ```{toctree}
 :maxdepth: 2
 :hidden:
 :numbered: 2
-intro
+
 principes
 recherche
 tris
