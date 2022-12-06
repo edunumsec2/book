@@ -14,16 +14,18 @@ class Exercise(SphinxDirective):
 
         admonition = nodes.admonition("", classes=["admonition", "note"])
 
+        label = self.arguments[0] if len(self.arguments) > 0 else None
+
         if self.env.docname not in self.nextNumberByDoc:
             Exercise.nextNumberByDoc[self.env.docname] = 1
-        
+
         number = Exercise.nextNumberByDoc[self.env.docname]
-        Solution.lastQuestion[self.env.docname] = number
+        Solution.lastQuestion[self.env.docname] = (number, label)
         Exercise.nextNumberByDoc[self.env.docname] += 1
 
         title = "Exercice {}".format(number)
-        if len(self.arguments) > 0:
-            title += " – {}".format(self.arguments[0])
+        if label is not None:
+            title += " – {}".format(label)
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
@@ -49,10 +51,13 @@ class Solution(SphinxDirective):
         admonition = nodes.admonition("", classes=["admonition", "hint"])
 
         title = "Solution"
-        number = Solution.lastQuestion.get(self.env.docname, None)
-        if number is not None:
+        last_question = Solution.lastQuestion.get(self.env.docname, None)
+        if last_question is not None:
             del Solution.lastQuestion[self.env.docname]
+            number, label = last_question
             title += " {}".format(number)
+            if label is not None:
+                title += " – {}".format(label)
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
