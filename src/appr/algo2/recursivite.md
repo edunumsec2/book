@@ -202,14 +202,14 @@ Les deux ingrédients indispensables à toute {glo}`fonctionrec|fonction récurs
 
 
 
-```{admonition} Exercice 5.1. Position de la condition d'arrêt
+```{exercise} Position de la condition d'arrêt
 :class: note
 
 Sans la condition d'arrêt, un programme récursif ne se termine pas, et s'appelle soi-même indéfiniment. Il est important que cette condition d’arrêt précède l’appel récursif à la fonction. Pourquoi est-ce le cas ?
 
 ```
 
-````{admonition} Solution 5.1. Position de la condition d'arrêt
+````{solution} Position de la condition d'arrêt
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -406,7 +406,7 @@ print("\nVoici le tableau trié : ", resultat)
 ## Exercices supplémentaires
 
 
-````{admonition} Exercice 5.2 Fractale 🔌
+````{exercise} Fractale 🔌
 :class: note
 
 Une fractale est un objet géométrique, dont la définition récursive est naturelle. Essayez le code suivant pour différentes valeurs de `n` (augmenter à chaque fois de 1). 
@@ -468,7 +468,7 @@ turtle.exitonclick()	 # garde la fenêtre ouverte
 
 
 
-```{admonition} Exercice 5.3. Une question de fusion
+```{exercise} Une question de fusion
 :class: note
 
 Trier le tableau suivant avec l’algorithme de tri par fusion : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main. Représenter l’état du tableau lors de toutes les étapes intermédiaires.
@@ -476,7 +476,7 @@ Trier le tableau suivant avec l’algorithme de tri par fusion : [3, 6, 8, 7,
 ```
 
 
-````{admonition}  Exercice 5.4. Dans l'autre sens 🔌
+````{exercise} Dans l'autre sens 🔌
 :class: note
 
 En Python, proposer une fonction qui inverse l’ordre des lettres dans un mot. Vous pouvez parcourir les lettres du mot directement ou à travers un indice.
@@ -488,7 +488,7 @@ Proposer une autre fonction qui inverse l’ordre des lettres dans un mot de man
 
 
 
-````{admonition}  Exercice 5.5. Factorielle 🔌
+````{exercise} Factorielle 🔌
 :class: note
 
 La fonction factorielle `n!` en mathématiques est le produit de tous les nombres entiers jusqu’à `n`. C’est une des fonctions les plus simples à calculer de manière récursive. Elle peut être définie comme ceci :

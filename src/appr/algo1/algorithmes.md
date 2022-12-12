@@ -1,7 +1,4 @@
 
-# Il était une fois
-
-
 
 # Les algorithmes
 
@@ -118,7 +115,7 @@ Lisez bien l'algorithme présenté ci-dessus. Quel problème cet algorithme perm
 
 ````
 
-`````{solution}
+`````{solution} Algorithme mystère
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down

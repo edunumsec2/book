@@ -48,7 +48,7 @@ align : left
  
 
 
-````{admonition} Exercice 2.1. Problème du tri
+````{exercise} Problème du tri
 :class: note
 
 Trier les rectangles de la ligne du haut de la <a href="#fig-trier">Figure ci-dessus</a> en fonction de leur taille, pour arriver à la disposition de la ligne du bas. Noter toutes les étapes intermédiaires de vos actions et la disposition des rectangles avant d’arriver à la solution finale. Conseil : remplacer les rectangles par un nombre qui représente leur taille.
@@ -59,7 +59,7 @@ Quels types d'opérations avez-vous effectuées ?
 
 ````
 
-````{admonition} Solution 2.1. Problème du tri
+````{solution} Problème du tri
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -93,7 +93,7 @@ L’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri par sé
 L’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri à bulles</span>** compare les éléments voisins, deux par deux. Il commence par comparer les deux premiers éléments de la liste et les met dans le bon ordre (le plus petit des deux éléments précède le plus grand des deux). Il compare ensuite les deux éléments suivants (le nouveau deuxième et le troisième élément de la liste) et les met dans le bon ordre. Il continue de la sorte jusqu’à la fin de la liste. Après ce premier parcours de la liste, le plus grand élément se retrouve en dernière position de la liste. L'algorithme parcourt à nouveau la liste, en comparant et en déplaçant les éléments voisins deux par deux (en excluant également le dernier élément qui est déjà bien trié). Après le deuxième parcours de la liste, le deuxième plus grand élément se retrouve en avant-dernière position de la liste. L'algorithme parcourt la liste de la sorte, autant de fois qu’elle possède d’éléments, en excluant les éléments bien triés en fin de la liste.
 
 
-````{admonition} Exercice 2.2. Algorithme de tri 
+````{exercise} Algorithme de tri 
 :class: note
 
 Il est fortement recommandé de résoudre cet exercice avant d’avancer dans le chapitre. 
@@ -106,7 +106,7 @@ Noter l’ordre des éléments à chaque fois qu’il change. Vous aurez besoin 
 
 ````
 
-````{admonition} Solution 2.2. Algorithme de tri
+````{solution} Algorithme de tri
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -158,13 +158,13 @@ align: left
 
 
 
-````{admonition} Exercice 2.3. Votre algorithme de tri
+````{exercise} Votre algorithme de tri
 :class: note
 
 Rappelez-vous quelle méthode vous avez utilisée pour résoudre l’exercice 0. De quel algorithme de tri se rapproche-t-elle le plus ? 
 ````
 
-````{admonition} Solution 2.3. Votre algorithme de tri
+````{solution} Votre algorithme de tri
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -174,7 +174,7 @@ Cela dépend de votre solution de l’exercice 0. Vous avez probablement utilis�
 ```
 ````
 
-````{admonition} Exercice 2.4. Opérations 
+````{exercise} Opérations 
 :class: note
 
 Pour chaque algorithme de tri, compter le nombre de ***<span style="color:rgb(13, 204, 166)">comparaisons</span>*** de la taille de deux rectangles, ainsi que le nombre de ***<span style="color:rgb(13, 204, 166)">déplacements</span>*** (le nombre de fois que deux rectangles échangent leur place).
@@ -185,7 +185,7 @@ Imaginons que ce qui prend le plus de temps est un ***déplacement***. Dans ce c
 
 ````
 
-````{admonition} Solution 2.4. Opérations
+````{solution} Opérations
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -247,14 +247,14 @@ Dans cette configuration précise, quel algorithme est le plus rapide  (présent
 
 
 
-````{admonition} Exercice 2.5. L'algorithme de votre journée
+````{admonition} {exercise} L'algorithme de votre journée
 :class: note
 
 Réfléchir à votre journée : y a-t-il des actions qui se retrouvent chaque jour ouvrable ? Arrivez-vous à esquisser un algorithme que vous suivez sans que vous en ayez conscience ?
 
 ````
 
-````{admonition} Exercice 2.6. Trois algorithmes de tri
+````{admonition} {exercise} Trois algorithmes de tri
 :class: note
 
 
@@ -263,7 +263,7 @@ Trier la liste [2, 5, 3, 4, 7, 1, 6] en utilisant les trois algorithmes de tri v
 ````
 
 <!-- 
-`````{admonition} Solution 2.5. L'algorithme de votre journée
+`````{admonition} {exercise} L'algorithme de votre journée
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -363,7 +363,7 @@ Voici le détail de toutes les étapes intermédiaires des trois algorithmes de 
 
 
 
-````{admonition} Exercice 2.7. Vérificateur de tri
+````{admonition} {exercise} Vérificateur de tri
 :class: note
 
 Ecrire un algorithme qui vérifie si une liste est triée. 
@@ -378,7 +378,7 @@ Comparer vos algorithmes. Sont-ils différents ?
 
 <!-- 
 
-`````{admonition} Exercice 2.7. vérificateur de tri
+`````{admonition} {exercise} vérificateur de tri
 :class: hint
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -407,7 +407,7 @@ L'algorithme prend une liste (triée ou non triée) en entrée et retourne `Vrai
 -->
 
 
-````{admonition} Exercice 2.8. Mondrian
+````{admonition} {exercise} Mondrian
 :class: note
 
 Analyser les œuvres cubistes de Piet Mondrian. Trouver un algorithme qui permet de créer une œuvre qui pourrait être attribuée à Mondrian.
