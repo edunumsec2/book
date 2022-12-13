@@ -56,6 +56,19 @@ morceaux.
 
 De manière similaire au protocole IP, le protocole TCP est constitué d'un *en-tête* placé au début des données du paquet IP et qui contient des informations
 sur les numéros de morceaux envoyés et reçus. En effet, la machine réceptrice va envoyer une quittance (*acknowledgement* en anglais) pour chaque paquet reçu,
-de manière à ce que la machine émettrice puisse renvoyer un paquet qui n'aurait pas été acheminé à destination.
+de manière à ce que la machine émettrice puisse renvoyer un paquet qui n'aurait pas été acheminé à destination. 
 
-<!-- [donner le détail du protocole et le format de l'en-tête] -->
+
+```{figure} media/IPTCPpacket.svg
+:width: 600
+```
+
+L'en-tête TCP est constitué aussi de 24 octets contenant les informations suivantes:
+
+```{figure} media/TCPheader.png
+:width: 700
+```
+
+
+
+[donner le détail du protocole et le format de l'en-tête] 
