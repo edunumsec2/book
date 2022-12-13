@@ -1,4 +1,5 @@
 
+
 # Les algorithmes
 
 La première question que l'on va se poser est la suivante : qu'est-ce qu'un {glo}`algo|algorithme` ? Est-ce la même chose qu'un programme informatique, ou s'agit-il d'autre chose ?
@@ -114,7 +115,7 @@ Lisez bien l'algorithme présenté ci-dessus. Quel problème cet algorithme perm
 
 ````
 
-`````{solution}
+`````{solution} Algorithme mystère
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down

@@ -81,7 +81,7 @@ Avec une complexité quadratique, le Tri par sélection est un algorithme relati
 
 
 
-```{admonition} Exercice 3.0. Complexité du Tri par insertion
+```{exercise} Complexité du Tri par insertion
 :class: note
 
 Quelle est la complexité de l’algorithme de <a href="../algo1/cours/2_trie_cherche_trouve/eleve.html#tri-insertion">**<span style="color:rgb(89, 51, 209)">Tri par insertion</span>**</a> ? En d’autres termes, si le tableau contient n éléments, combien faut-il d’instructions pour trier ce tableau ? Pour rappel, le Tri par insertion parcourt le tableau dans l'ordre et pour chaque nouvel élément, l'insère à l'emplacement correct des éléments déjà parcourus.
@@ -92,7 +92,7 @@ Est-ce que la complexité du Tri par insertion est la même si les éléments du
 
 ```
 
-````{admonition} Solution 3.0. Complexité du Tri par insertion
+````{solution} Complexité du Tri par insertion
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -107,14 +107,14 @@ Dans le meilleur cas, lorsque les éléments sont déjà dans le bon ordre, on d
 ```
 ````
 
-```{admonition} Exercice 3.1. Complexité du Tri à bulles
+```{exercise} Complexité du Tri à bulles
 :class: note
 
 Quelle est la complexité de l’algorithme de <a href="../algo1/cours/2_trie_cherche_trouve/eleve.html#tri-bulles">**<span style="color:rgb(89, 51, 209)">Tri à bulles</span>**</a> ? En d’autres termes, si le tableau contient n éléments, combien faut-il d’instructions pour trier ce tableau ? Pour rappel, le Tri à bulles compare les éléments deux par deux en les réarrangeant dans le bon ordre, afin que l'élément le plus grand remonte vers la fin du tableau tel une bulle d'air dans de l'eau. Cette opération est répétée n fois, pour chaque élément du tableau.
 
 ```
 
-````{admonition} Solution 3.1. Complexité du Tri à bulles
+````{solution} Complexité du Tri à bulles
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -182,7 +182,7 @@ Est-ce que *<span style="color:rgb(89, 51, 209)">complexe</span>* veut dire la m
 
 ```
 
-```{admonition} Exercice 3.2. Le pire du Tri rapide
+```{exercise} Le pire du Tri rapide
 :class: note
 
 Que se passe-t-il si on essaie de trier un tableau déjà trié avec l'algorithme du **<span style="color:rgb(89, 51, 209)">Tri rapide</span>**, en prenant toujours comme pivot le dernier élément ? Essayer par exemple avec le tableau [1, 2, 3, 4, 5, 6, 7]. 
@@ -193,7 +193,7 @@ Est-ce qu'un autre choix de pivot aurait été plus judicieux ?
 
 ```
 
-````{admonition} Solution 3.2. Le pire du Tri rapide
+````{solution} Le pire du Tri rapide
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -237,7 +237,7 @@ Si on prend comme pivot l'élément du milieu du tableau, on se retrouve avec de
 ````
 
 
-```{admonition} Exercice 3.3. Le meilleur et le pire du Tri par insertion
+```{exercise} Le meilleur et le pire du Tri par insertion
 :class: note
 
 Que se passe-t-il si on essaie de trier un tableau déjà trié avec l'algorithme du **<span style="color:rgb(89, 51, 209)">Tri par insertion</span>** ? Essayer par exemple avec le tableau [1, 2, 3, 4, 5, 6, 7]. 
@@ -248,7 +248,7 @@ Que se passe-t-il si on essaie de trier un tableau déjà trié, mais dans l'ord
 
 ```
 
-````{admonition} Solution 3.3. Le meilleur et le pire du Tri par insertion
+````{solution} Le meilleur et le pire du Tri par insertion
 :class: hint
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -321,14 +321,14 @@ La notation « Grand O », que l'on utilise pour écrire mathématiquement la
 
 ## Exercices
 
-```{admonition} Exercice 3.4. Une question à un million
+```{exercise} Une question à un million
 :class: note
 
 Si une instruction prend 10<sup>-6</sup> secondes, combien de temps faut-il pour trier un tableau d’un million d’éléments avec le tri à sélection comparé au tri rapide (sans tenir compte de la constante) ?
 
 ```
 
-```{admonition} Exercice 3.5. Une question de pivot
+```{exercise} Une question de pivot
 :class: note
 
 Trier le tableau suivant avec l’algorithme de tri rapide : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main, en prenant le dernier élément comme pivot. Représenter l’état du tableau lors de toutes les étapes intermédiaires.
@@ -337,28 +337,28 @@ Est-ce que le choix du pivot est important ?
 
 ```
 
-```{admonition} Exercice 3.6. Une question de sélection
+```{exercise} Une question de sélection
 :class: note
 
 Trier le tableau suivant avec l’algorithme de tri par sélection : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main. Représenter l’état du tableau lors de toutes les étapes intermédiaires.
 
 ```
 
-```{admonition} Exercice 3.7. Une question d'insertion
+```{exercise} Une question d'insertion
 :class: note
 
 Trier le tableau suivant avec l’algorithme de tri par insertion : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main. Représenter l’état du tableau lors de toutes les étapes intermédiaires.
 
 ```
 
-```{admonition} Exercice 3.8. Une question de bulles
+```{exercise} Une question de bulles
 :class: note
 
 Trier le tableau suivant avec l’algorithme de tri à bulles : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main. Représenter l’état du tableau lors de toutes les étapes intermédiaires.
 
 ```
 
-````{admonition} Exercice 3.9. Une question de chronomètre 🔌
+````{exercise} Une question de chronomètre 🔌
 :class: note
 
 Créer une liste qui contient les valeurs de 1 à n dans un ordre aléatoire, où n prend la valeur 100, par exemple. Indice : utiliser la fonction `shuffle()` du module `random`.

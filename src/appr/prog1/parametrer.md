@@ -28,6 +28,10 @@ Un paramètre de fonction est une variable locale qui peut être utilisée dans 
 Lors de l'appel de la fonction, nous donnons des valeurs à la fonction.
 Ces valeurs sont les **arguments** de la fonction.
 
+```{exercise}
+Faites le premier rectangle plus petit, et le deuxième plus grand.
+```
+
 ```{codeplay}
 from turtle import *
 
@@ -86,10 +90,15 @@ polygone(100, 5)    # pentagon
 
 Nous revenons à notre fonction pour dessiner une maison.
 
+```{exercise}
+Ajoutez une maison de taille 100.
+```
+
 ```{codeplay}
 from turtle import *
 
 def maison(d):
+    dot()
     forward (1.41*d)  # sol
     left(90)
     forward(d)  # mur droit
@@ -118,6 +127,7 @@ up()
 
 def maison(d, c):
     down()
+    dot()
     fillcolor(c)
     begin_fill()
     forward (1.41*d)  # sol
@@ -138,6 +148,36 @@ forward(150)
 maison(50, 'yellow')
 ```
 
+## Drapeau tricolore
+
+```{exercise}
+Modifiez les couleurs pour obtenir le drapeau d'un autre pay.  
+Créez une deuxième fonction `drapeau2(d, c, c2, c3)` qui crée un drapeau avec des barres horizontales.
+```
+
+```{codeplay}
+from turtle import *
+
+def rectangle(d, d2, c):
+    fillcolor(c)
+    begin_fill()
+    for i in range(2):
+        forward(d)
+        left(90)
+        forward(d2)
+        left(90)
+    end_fill()
+
+def drapeau(d, c, c2, c3):
+    rectangle(d, 2*d, c)
+    forward(d)
+    rectangle(d, 2*d, c2)
+    forward(d)
+    rectangle(d, 2*d, c3)
+    
+drapeau(50, 'blue', 'white', 'red')
+```
+
 ## Arbre
 
 Pour dessiner un arbre simple, nous utilisons un segment droit pour le tronc et un disque (dot) pour le feuillage.
@@ -146,6 +186,10 @@ C'est une fonction qui a 3 paramètres
 - `d` -- longueur du tronc
 - `c` -- couleur du tronc
 - `c2` -- couleur du feuillage
+
+```{exercise}
+Definissez une fonction `foret(n)` qui dessine `n` arbres.
+```
 
 ```{codeplay}
 from turtle import *
@@ -207,10 +251,16 @@ bus(150, 'lightblue')
 
 ## Coeur
 
+```{exercise}
+Ajoutez deux paramètres: `w` pour l'épaisseur de la ligne (width), et `c2` pour la couleur de ligne.  
+La fonction aura la forme `coeur(r, w, c, c2)`.
+```
+
 ```{codeplay}
 from turtle import *
 
 def coeur(r, c):
+    down()
     fillcolor(c)
     begin_fill()
     left(90)
@@ -221,9 +271,11 @@ def coeur(r, c):
     circle(r, 225)
     left(90)
     end_fill()
+    up()
 
-coeur(50, 'red')
-coeur(30, 'pink')
+coeur(50, 'darkviolet')
+forward(130)
+coeur(40, 'tomato')
 ```
 
 ## Escalier
@@ -236,6 +288,7 @@ coeur(30, 'pink')
 from turtle import *
 
 def escalier(d, d2, n):
+    dot()   # marqueur de début
     for i in range(n):
         forward(d)
         left(90)
@@ -522,8 +575,8 @@ def stickman(d, bras=(30, -45), jambes=(10, -30)):
     right(90)
     forward(d/2)    # cou
     
-    leg(bras[0], a)
-    leg(bras[1], a)
+    leg(bras[0], d)
+    leg(bras[1], d)
     forward(d)
     
     leg(jambes[0], d)

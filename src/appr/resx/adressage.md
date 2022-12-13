@@ -10,7 +10,17 @@ basée aux États-Unis dont la fonction principale est la gestion de l'adressage
 Les noms de domaines sont gérés de manière hiérarchique, selon le
 *nom de domaine de premier niveau*, c'est à dire la "terminaison" de l'adresse (*.ch*, *.org*, *.fr*, etc.)Ainsi la gestion des adresses en *.ch* est confiée à Switch, une fondation suisse dont c'est le rôle principal.La personne qui a créé le site *champignons.ch* a donc
 réservé ce nom de domaine auprès de Switch (en passant par un intermédiaire) et peut le conserver moyennant un paiement d'environ CHF 15.- par an.
-[Faire un encadré sur l'internationalisation des noms de domaines, et les controverses (.sucks)? ]
+
+```{didyouknow}
+Au début, les noms de domaine de premier niveau étaient limités à quelques possibilités, telles que ".com" pour les organisations
+commerciales, ".edu" pour les universités (américaines), ".gov" pour le gouvernement (américain), ".mil" pour l'armée (américaine), ".org"
+pour les organisations (à but non-lucratif) et, dès les années 80, différents pays ont décidé d'enregistrer des noms de domaine de premier
+niveau pour leur pays, par exemple ".ch" pour la Suisse, ".fr" pour la France. Puis il a été décidé d'ouvrir d'autres noms de domaine et
+de les mettre aux enchères. Une entreprise a
+alors décidé de vendre des domaines ".sucks" qu'elle a vendu très cher à certaines grandes entreprises (par exemple apple.sucks) qui avaient
+peur que ce site ne devienne une plateforme pour les critiquer. 
+
+````
 
 Si les noms de domaines sont pratiques pour désigner des adresses sur Internet, les machines, elles, utilisent des
 nombres pour référencer les machines connectées à Internet, c'est ce qu'on appelle les *adresses IP*. Ainsi,
@@ -59,6 +69,11 @@ for i in addr:
 
 ```{exercise}
 Lesquelles des adresses suivantes sont des adresses IP valides:
+1. ```240.264.23.2```
+1. ```123.8.12.2.34```
+1. ```123.23.2```
+1. ```205.233.12.23```
+
 ```
 
 Pour répondre à une telle question automatiquement nous pourrions ajouter des testes comme celui-ci.
@@ -101,28 +116,35 @@ Parmi les adresses suivantes, indiquer lesquelles sont au format IPv4, lesquelle
 1. ```ADEFE.ACDEA.AABCD.DDEBC.FFEDA.AEABC.ACADE.EFDF```
 1. ```1230.121D.12AEAB.1231D.4324B.2765.5435D.4378```
 1. ``` D2G3.4234.534FG.2141.12GE.12AD.85C2.GE32```
+1. ``` 123A.3213.564E.6746.2DD2.A897```
+1. ``` 124.234.432.21```
 
 ````
 
-```{togofurther} Blocs et Masques
-
-Les adresse IP sont structurées hérarchiquement 
-
-````
 
 ### Gouvernance
 
 Comme les noms de domaine, les adresses IP sont gérées hiérarchiquement. Ainsi, les adresses de la forme
 `46.x.x.x` (c'est-à-dire celles qui commencent par `46 = 00101110`) sont assignées au Centre de Coordination
 Européen qui les répartit entre différents *Registres Internet locaux* tels que Switch qui va pouvoir
-louer une partie de ces adresses IP à des organisations, des entreprises (par exemple des fournisseurs d'accès Internet) ou des particuliers qui en feraient la demande. 
+louer une partie de ces adresses IP à des organisations, des entreprises (par exemple des fournisseurs d'accès Internet)
+ou des particuliers qui en feraient la demande. 
 
 
 Certains blocs d'adresses IP sont réservés à des usages particuliers. Par exemple les adresses `10.x.x.x`  ou
 `192.168.x.x` sont réservées aux réseaux privés, c'est-à-dire des machines qui ne communiquent pas directement
 avec le reste d'Internet. Ainsi, ces adresses peuvent être utilisées au sein du réseau interne des entreprises,
 ou pour faire communiquer différents appareils connectés (lampes, télévision, four, télécommande) au sein d'une
-maison.
+maison. Dans l'exemple ci-dessous, un fournisseur d'accès à Internet (tel que Swisscom par exemple) à reçu toutes les
+adresses de type 213.221.x.x. Il en garde une partie pour son propre usage, par exemple pour son site web ou ses routeurs,
+c'est-dire les machines qui s'occupe d'acheminer les donnée sur Internet. Une autre partie des adresses sera louée à
+des entreprises ou des particuliers qui sont ses clients. Ceux-ci bénéficieront donc d'une adresse IP leur permettant d'être
+joignable par le reste d'Internet. Les particuliers et entreprises ont généralement un réseau privé, un intranet, qui utilise
+les adresses 10.x.x.x.
+
+```{figure} media/IPnetwork.svg
+:width: 600
+```
 
 
 ```{exercise}
@@ -132,6 +154,10 @@ maison.
 - Donnez la représentation binaire de l'adresse IP `y.y.y.y`
 - Combien y a-t-il d'adresses IP de type `192.168.x.x` ?
 ```
+
+
+
+
 
 ### Adressage statique et dynamique
 
@@ -151,8 +177,23 @@ Déterminez si votre machine a une adresse IP statique ou dynamique
 moyen pourriez-vous imaginer pour que vous puissiez vous joindre.
 
 2. En tant que propriétaire d'un site web, vous avez accès aux adresses IP des machines qui visitent votre site. Pouvez-vous dès lors identifier une même personne
-qui revient plusieurs fois sur votre site. 
+qui revient plusieurs fois sur votre site ?
+
+
+
 ```
+```{solution}
+1. Vous pouvez vous connecter tous deux à un serveur central qui a une adresse IP fixe et qui s'occupera de relayer vos message à vos adresses
+dynamiques. C'est ce que fait un serveur mail ou de messagerie telle que Signal ou Whatsapp. 
+
+2. Si elle a une adresse IP dynamique, alors elle aura probablement des adresses IP différentes lors de ses visites en des jours différents. On
+ne pourra donc pas l'identifier en regardant uniquement son adresse IP. Par contre, en enregistrant d'autres paramètres que son navaigateur
+voudra bien nous transmettre, tels que son système d'exploitation, la langue, l'appareil, etc., on peut reconstituer son empreinte numérique
+et l'identifier ainsi. C'est ce qu'on appelle en anglais le fingerprinting, que l'on peut [bloquer avec certains navigateurs](https://www.mozilla.org/fr/firefox/features/block-fingerprinting/).
+
+
+```
+
 
 ### Système de noms de domaine
 
