@@ -359,7 +359,7 @@ e) Si Google représente plus de 90% des parts de marché dans le domaine des mo
 
 **DuckDuckGo** : Meta-moteur qui [agrège les résultats de nombreux moteurs de recherche](https://help.duckduckgo.com/duckduckgo-help-pages/results/sources/), dont Bing. Comme Qwant, DuckDuckGo ne propose pas de résultats personnalisés selon le profil des utilisateurs et se positionne comme défenseur de la vie privée. Son financement repose également sur la publicité non-ciblée. Selon DuckDuckGo, il n’est pas nécessaire de [«pister» les internautes pour leur proposer des résultats pertinents](https://spreadprivacy.com/duckduckgo-revenue-model/). Depuis l'éclatement du conflit entre la Russie et l'Ukraine au printemps 2022, DuckDuckGo a [suspendu ses relations](https://www.protocol.com/bulletins/duckduckgo-yandex-ukraine) avec le moteur de recherche russe Yandex. 
 
-**Ecosia** : Moteur de recherche allemand qui investit 80% de ses bénéfices dans des [projets de reforestation](https://info.ecosia.org/privacy), principalement en Amérique du sud et en Afrique. Les résultats du moteur de recherche et les annonces sont générés par Bing. Ecosia reverse un pourcentage de ses gains publicitaires à Microsoft.
+**Ecosia** : Moteur de recherche allemand qui investit 80% de ses bénéfices dans des projets de reforestation, principalement en Amérique du sud et en Afrique. Les résultats du moteur de recherche et les annonces sont [générés par Bing](https://info.ecosia.org/privacy). Ecosia reverse un pourcentage de ses gains publicitaires à Microsoft.
 ````
 
 **Activité complémentaire** (🕑 20 min)
