@@ -95,6 +95,9 @@ Les éléments de cette page sont indiqués par des *balises* indiquées par des
 
 La plupart des navigateurs web permettent de visualiser le *code  HTML* des pages visitées. Un aspect important de la création de sites web consiste à écrire du code HTML qui sera mis sur le serveur pour être transmis au visiteur du site web. Cela peut se faire en écrivant directement du code html dans un fichier texte, ou à l'aide d'un outil de création de sites web qui se charge d'écrire le code HTML selon les indications données par la personne concevant le site.
 
-### Le Web 2.0
+## Le Web 2.0
 
-[brève description]
+Le web 2.0 fait référence à la tendance, initiée au débit des années 2000, de proposer des pages web permettant aux internautes
+de contribuer du contenu, et pas uniquement de lire des fichiers comme c'était le cas jusqu'alors. Les blogs, forums, wikis, et les réseaux sociaux font
+partie de ce développement qui voit exploser l'aspect participatif du web. Ce n'est en effet plus nécessaire de connaître la syntaxe HTML et d'avoir
+son propre serveur pour mettre du contenu à disposition de la planète entière.

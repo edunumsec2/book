@@ -29,7 +29,7 @@ Selon ce protocole un paquet est constitué d'une suite de 0 et de 1 que l'on pe
 1. Les données qui forment le contenu du paquet, c'est-à-dire les informations que l'on veut transmettre.
 
 ```{figure} media/IPpacket.svg
-:width: 600
+:width: 500
 ```
 L'entête joue le rôle de l'étiquette sur un paquet envoyé par la poste. On y indique l'adresse de destination, l'adresse de
 l'expéditeur (appelée aussi l'adresse source), mais aussi d'autres information telles que la version d'IP utilisée (4 ou 6),
@@ -62,7 +62,7 @@ de manière à ce que la machine émettrice puisse renvoyer un paquet qui n'aura
 
 
 ```{figure} media/IPTCPpacket.svg
-:width: 600
+:width: 500
 ```
 
 L'en-tête TCP est constitué aussi de 24 octets contenant les informations suivantes:
