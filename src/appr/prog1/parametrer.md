@@ -355,7 +355,9 @@ Cette fonction possède 3 paramètres optionnels (valeur par défaut en parenth�
 
 Il a maintenant différentes façons à appeler la fonction. Tous les paramètres qui ont une valeur par défaut sont optionnels. Au minimum nous devons spécifier les paramètres sans valeur par défaut.
 
-    rectangle((40, 0), 80, 40)
+```
+rectangle((40, 0), 80, 40)
+```
 
 Le rectangle est dessiné dans la direction actuelle de la tortue. Cette orientation peut être changée avec `seth()`. La tortue se positionne de l'autre côté du point de départ. Ceci permet d'enchainer à dessiner des rectangles.
 
