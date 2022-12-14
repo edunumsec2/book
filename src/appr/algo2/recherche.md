@@ -45,7 +45,6 @@ name : fig-comp-log
 ```
 
 ```{exercise} Compter jusqu'à n
-:class: note
 
 Ecrire un algorithme qui affiche tous les nombres de 1 à `n`. 
 
@@ -54,8 +53,7 @@ Combien d’instructions élémentaires sont nécessaires lorsque `n` vaut 100 ?
 Quelle est la complexité de cet algorithme ?  
 ```
 
-`````{solution} Compter jusqu'à n
-:class: hint
+`````{solution} 
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -87,7 +85,6 @@ name : fig-rech-lin2
 
 
 ```{exercise} Compter par pas de 2
-:class: note
 
 Ecrire un algorithme qui affiche tous les nombres *pairs* de 1 à `n`. 
 
@@ -96,8 +93,7 @@ Combien d’instructions élémentaires sont nécessaires lorsque `n` vaut 100 ?
 Quelle est la complexité de cet algorithme ? 
 ```
 
-`````{solution} Compter par pas de 2
-:class: hint
+`````{solution} 
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -134,7 +130,6 @@ La différence de croissance se cache dans la constante `c` de l’ordre de gra
 
 
 ```{exercise} Recherche linéaire🔌
-:class: note
 
 Programmer l'algorithme de recherche linéaire en Python. Rechercher une valeur entre 1 et 1000000 dans un tableau qui contient les valeurs allant de 1 à 1000000.
 
@@ -145,8 +140,7 @@ Est-ce que ce résultat vaut si les éléments du tableau ne sont pas dans l'ord
 ```
 
 
-`````{solution} Recherche linéaire🔌
-:class: hint
+`````{solution} 
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -317,16 +311,6 @@ name : fig-logn
 ```
 
 
-<!--
-```{image} media/Logn.png
-:width: 400px
-:height: 300px
-```
-Seulement 4 étapes sont suffisantes pour parcourir un tableau trié de 16 éléments à la recherche d’un élément. A chaque étape, l’espace de recherche est divisé par 2
-<br>
--->
-
-
 Si on généralise, le nombre d’étapes `x` nécessaires pour parcourir un tableau de taille `n` est :
 
 &nbsp;&nbsp;&nbsp;&nbsp; 2<sup>x</sup> = n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; par conséquent
@@ -334,13 +318,6 @@ Si on généralise, le nombre d’étapes `x` nécessaires pour parcourir un tab
 &nbsp;&nbsp;&nbsp;&nbsp; x = log<sub>2</sub>(n) ~ log(n)   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  la simplification peut être faite car l’ordre de grandeur est le même
 
 La complexité de l'algorithme de recherche binaire est donc **<span style="color:rgb(89, 51, 209)">logarithmique</span>**, lorsque `n` grandit nous avons besoin de `log(n)` opérations. La figure ci-dessous permet de comparer les ordres de grandeur logarithmique et linéaire. On remarque qu'un algorithme de complexité logarithmique est beaucoup plus rapide qu’un algorithme de complexité linéaire, car il a besoin de beaucoup moins d'instructions élémentaires pour trouver une solution.
-
-<!-- 
-L’ordre de croissance de la recherche binaire est donc logarithmique (`log(n)`) et on l'écrit `O(log(n))`. La figure ci-dessous permet de comparer la croissance linéaire `n` à `log(n)`. Un algorithme de complexité `O(log(n))` est beaucoup plus rapide qu’un algorithme de complexité linéaire `O(n)`. La lettre O ici est pour « Ordre ».
-
-
-Pour aller plus
--->
 
 
 ```{figure} media/Graphique_lin_log.png
@@ -376,7 +353,6 @@ Un algorithme avec un ordre de complexité logarithmique est plus rapide qu’un
 
 
 ```{exercise} Recherche binaire 🔌
-:class: note
 
 Programmer l'algorithme de recherche binaire en Python. Rechercher une valeur entre 0 et 100 dans un tableau qui contient les valeurs allant de 0 à 100.
 
@@ -386,8 +362,7 @@ Est-ce qu’on peut utiliser l’algorithme de recherche binaire si le tableau n
 
 ```
 
-`````{solution} Recherche binaire 🔌
-:class: hint
+`````{solution} 
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -474,7 +449,6 @@ print("J'ai fini de calculer...")
 
 
 ```{exercise} Recherche linéaire versus binaire 🔌
-:class: note
 
 Reprendre les programmes de recherche linéaire et recherche binaire en Python et les utiliser pour rechercher un élément dans un tableau à 100 éléments : quel algorithme est le plus rapide ? 
 
@@ -484,8 +458,7 @@ Est-ce que **un million** vous semble être un grand nombre pour une taille de d
 
 ```
 
-`````{exercise} Recherche linéaire versus binaire 🔌
-:class: hint
+`````{solution} 
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -610,7 +583,6 @@ print("Gain     : " + str(resultat_dif))
 ## Exercices
 
 ```{exercise} Recherche binaire aléatoire 🔌
-:class: note
 
 Modifier votre programme  de recherche binaire : au lieu de diviser l’espace de recherche exactement au milieu, le diviser au hasard. Cette recherche avec une composante aléatoire s’apparente plus à la recherche que l’on fait lorsque l’on cherche un mot dans le dictionnaire.  
 

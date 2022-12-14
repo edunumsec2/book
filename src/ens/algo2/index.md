@@ -1,6 +1,10 @@
 # Algorithmique II
 
-:maxdepth: 1
+Pour les indications pédagogiques voir Algorithmique I.
 
-Solutions des exercices <exo/solutions>
+```{toctree}
+:maxdepth: 1
+:hidden:
+
+Solutions des exercices <exo/index>
 ```

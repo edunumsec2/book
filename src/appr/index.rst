@@ -25,8 +25,8 @@ découpé en **quatre thématiques**.
    :maxdepth: 3
    :hidden:
 
-   algo2/index
    prog2/index
+   algo2/index
    resx/index
    projets/index
 
