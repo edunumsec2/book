@@ -29,11 +29,3 @@ body:
       label: Quelle est votre suggestion ?
     validations:
       required: true
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: En soumettant, vous acceptez de suivre notre [Code de conduite](https://github.com/edunumsec2/book/blob/master/CODE_OF_CONDUCT.md)
-      options:
-        - label: J'accepte de suivre le code de conduite.
-          required: true

@@ -270,12 +270,12 @@ maison()
 
 Une variable est le concept d'associer un **nom symbolique** à une valeur.
 
-Avant de pouvoir utiliser une variable, elle doit être créée ou déclarée.
+Avant de pouvoir utiliser une variable, elle doit être créée.
 On appelle ce processus une **affectation** et on dit qu'on associe une valeur à une variable.
 La forme générale est `var = valeur` ou `var` est le nom de la variable et `valeur` est sa valeur.
 Attention, ceci n'est pas une égalité au sens mathématique.
 
-Dans le programme chaque instance de `d` est remplacez par 80. La commande `forward(d)` va donc prendre le sens de `forward(80)` et faire avancer la tortue de 80 pas.
+Dans le programme chaque instance de `d` est remplacée par 80. La commande `forward(d)` va donc prendre le sens de `forward(80)` et faire avancer la tortue de 80 pas.
 
 ```{exercise}
 Modifiez la valeur de la variable globale `d` et exécutez le programme.
@@ -622,7 +622,17 @@ done()
 
 ### TP
 
-Créez un alphabet et écrivez votre nom.
+Créez une fonction pour dessiner chaque lettre de l'alphabet. 
+La taille de chaque lettre doit être basé sur la variable global `d` qui exprime la dimension (hauteur) d'une lettre. Créez une fonction `ABC()` qui affiche chaque lettre de l'alphabet. Ensuite créez une nouvelle fonction `prenom()` pour écrire votre nom.
+
+Pour démontrer que les expressions basées sur `d` sont corrects, affichez les lettres et votre nom avec deux tailles différents.
+
+Pour sauvegarder votre image vers un fichier EPS (image vectorielle) vous devez enlever les commentaires de ces deux lignes de code.
+
+``` python
+# from tkinter import *
+# Screen().getcanvas().postscript(file='tp2.eps')
+```
 
 ```{codeplay}
 """
@@ -682,6 +692,6 @@ forward(100)
 ABC()
 prenom()
 
-#Screen().getcanvas().postscript(file='tp2.eps')
+# Screen().getcanvas().postscript(file='tp2.eps')
 done()
 ```
