@@ -270,12 +270,12 @@ maison()
 
 Une variable est le concept d'associer un **nom symbolique** à une valeur.
 
-Avant de pouvoir utiliser une variable, elle doit être créée ou déclarée.
+Avant de pouvoir utiliser une variable, elle doit être créée.
 On appelle ce processus une **affectation** et on dit qu'on associe une valeur à une variable.
 La forme générale est `var = valeur` ou `var` est le nom de la variable et `valeur` est sa valeur.
 Attention, ceci n'est pas une égalité au sens mathématique.
 
-Dans le programme chaque instance de `d` est remplacez par 80. La commande `forward(d)` va donc prendre le sens de `forward(80)` et faire avancer la tortue de 80 pas.
+Dans le programme chaque instance de `d` est remplacée par 80. La commande `forward(d)` va donc prendre le sens de `forward(80)` et faire avancer la tortue de 80 pas.
 
 ```{exercise}
 Modifiez la valeur de la variable globale `d` et exécutez le programme.
@@ -617,5 +617,81 @@ Z()
 forward(3*d)
 O()
 ...
+done()
+```
+
+### TP
+
+Créez une fonction pour dessiner chaque lettre de l'alphabet. 
+La taille de chaque lettre doit être basé sur la variable global `d` qui exprime la dimension (hauteur) d'une lettre. Créez une fonction `ABC()` qui affiche chaque lettre de l'alphabet. Ensuite créez une nouvelle fonction `prenom()` pour écrire votre nom.
+
+Pour démontrer que les expressions basées sur `d` sont corrects, affichez les lettres et votre nom avec deux tailles différents.
+
+Pour sauvegarder votre image vers un fichier EPS (image vectorielle) vous devez enlever les commentaires de ces deux lignes de code.
+
+``` python
+# from tkinter import *
+# Screen().getcanvas().postscript(file='tp2.eps')
+```
+
+```{codeplay}
+"""
+tp2 - définir
+
+Nom : 
+Classe :
+Date :
+
+- nommez ce fichier : tp2_classe_prenom (minuscules, sans accents)
+- créez des fonctions pour les lettres de l'abc
+- créer une fonction pour écrire votre nom
+- récrivez l'abc et votre nom une deuxième fois plus petit    
+- déposez sur Moodle :
+    tp2_classe_prenom.py     (code)
+    tp2_classe_prenom.eps    (image vectorielle)
+    tp2_classe_preneom.jpg   (image)
+"""
+from turtle import *
+# from tkinter import *
+
+d = 30
+
+def A():
+    dot()
+    down()
+    left(70)        # demi-montée
+    forward(d)
+    right(70)
+    forward(0.6*d)  # trait du milieu
+    backward(0.6*d)
+    left(70)
+    forward(d)      # partie haute
+    right(140)
+    forward(2*d)    # descente
+    left(70)
+    up()
+    forward(d/2)    # avancer à la prochaine lettre
+
+
+def ABC():
+    A()
+    A()
+    A()
+    
+def prenom():
+    ...
+
+# afficher l'ABC et votre prénom
+backward(280)
+ABC()
+prenom()
+
+# afficher l'ABC et votre prénom avec une autre taille
+d = 10
+forward(100)
+ABC()
+prenom()
+
+# Screen().getcanvas().postscript(file='tp2.eps')
 done()
 ```

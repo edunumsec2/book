@@ -1,4 +1,9 @@
+# Solutions des exercices
+
 ```{toctree}
 :maxdepth: 1
-Solutions des exercices <solutions>
+:numbered:
+Les algorithmes <algorithmes>
+Trie, cherche et trouve <tri>
+Des algorithmes aux programmes <algo-props>
 ```

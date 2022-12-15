@@ -23,14 +23,6 @@ name : fig-div-fus
 **Phase de division.** Illustration de la première phase du Tri par fusion : on commence par diviser le tableau en deux, puis à chaque étape on divise à nouveau les tableaux ainsi obtenus par deux, jusqu’à ce qu’il n'y ait plus que des tableaux à 1 élément.
 ```
 
-<!--
-```{image} media/Tri_fusion_diviser.png
-:width: 400px
-:height: 300px
-```
-**Diviser.** Illustration de la première phase du tri fusion. A chaque étape le tableau est découpé en deux jusqu’à ce qu’il ne reste que des tableaux à 1 élément
-<br> <br>
--->
 
 La deuxième phase de ***<span style="color:rgb(13, 204, 166)">fusion</span>*** commence par fusionner des paires de tableaux à un élément, dans un ***ordre trié***. Il suffit d’assembler les deux éléments du plus petit au plus grand, comme on peut le voir sur la 2<sup>e</sup> ligne de la figure ci-dessous. Dans les prochaines étapes, on continue à fusionner les tableaux par paires de deux, tout en respectant l'ordre de tri (lignes 3 et 4 de la figure). On continue de la sorte jusqu’à ce qu’il n'y  ait plus de tableaux à fusionner. 
 
@@ -48,24 +40,7 @@ name : fig-fus-fus
 
 La fusion de tableaux **déjà triés**, par rapport à des tableaux non-triés, est très facile. Il suffit de comparer les premiers éléments des deux tableaux à fusionner et de prendre le plus petit des deux. Concrètement, on enlève le plus petit élément des deux tableaux pour le mettre dans le nouveau tableau fusionné. On compare ensuite les premiers éléments de ceux qui restent dans les tableaux à fusionner et on prend à nouveau le plus petit des deux pour le mettre à la suite dans le tableau fusionné. 
 
-
-<!--
-
-```{image} media/Tri_fusion_fusionner.png
-:width: 400px
-:height: 300px
-```
-**Fusionner.** Illustration de la deuxième phase du tri fusion. A chaque étape les tableaux sont fusionnés par paires de deux, en faisant attention à respecter l’ordre de tri. On continue ainsi jusqu’à ce qu’il ne reste qu’un tableau unique
-<br> <br>
-
--->
-
-
-
-
 Chaque étape de la phase de fusion consiste à comparer deux éléments `n` fois, autant de fois qu’il y a d’éléments à fusionner. Le temps de calcul grandit donc linéairement en fonction de la taille du tableau `n` (plus il y a d'éléments dans le tableau, plus la fusion prend du temps). En tout il y a besoin de `log(n)` étapes (fusion deux par deux), dont chacune prend un temps qui dépend de `n`, ce qui nous donne un ordre de complexité **linéarithmique**.
-
-
 
 
 ````{admonition} Pour aller plus loin
@@ -74,10 +49,6 @@ Chaque étape de la phase de fusion consiste à comparer deux éléments `n` fo
 Même si le tri rapide et le tri fusion ont la même complexité temporelle, c'est-à-dire qu'ils prennent un temps comparable pour trier des données, le tri rapide prend beaucoup moins de place en mémoire. On dit qu'il a une plus petite **<span style="color:rgb(89, 51, 209)">« complexité spatiale »</spans>**.
 
 ````
-
-
-
-
 
 <span id="recursivite"></span>
 ## 4.1 Focus sur la récursivité
@@ -202,15 +173,13 @@ Les deux ingrédients indispensables à toute {glo}`fonctionrec|fonction récurs
 
 
 
-```{admonition} Exercice 4.0. Position de la condition d'arrêt
-:class: note
+```{exercise} Position de la condition d'arrêt
 
 Sans la condition d'arrêt, un programme récursif ne se termine pas, et s'appelle soi-même indéfiniment. Il est important que cette condition d’arrêt précède l’appel récursif à la fonction. Pourquoi est-ce le cas ?
 
 ```
 
-````{admonition} Solution 4.0. Position de la condition d'arrêt
-:class: hint
+````{solution} 
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -406,8 +375,7 @@ print("\nVoici le tableau trié : ", resultat)
 ## Exercices supplémentaires
 
 
-````{admonition} Exercice 4.1 Fractale 🔌
-:class: note
+````{exercise} Fractale 🔌
 
 Une fractale est un objet géométrique, dont la définition récursive est naturelle. Essayez le code suivant pour différentes valeurs de `n` (augmenter à chaque fois de 1). 
 
@@ -468,16 +436,14 @@ turtle.exitonclick()	 # garde la fenêtre ouverte
 
 
 
-```{admonition} Exercice 4.2. Une question de fusion
-:class: note
+```{exercise} Une question de fusion
 
 Trier le tableau suivant avec l’algorithme de tri par fusion : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main. Représenter l’état du tableau lors de toutes les étapes intermédiaires.
 
 ```
 
 
-````{admonition}  Exercice 4.3. Dans l'autre sens 🔌
-:class: note
+````{exercise} Dans l'autre sens 🔌
 
 En Python, proposer une fonction qui inverse l’ordre des lettres dans un mot. Vous pouvez parcourir les lettres du mot directement ou à travers un indice.
 
@@ -488,8 +454,7 @@ Proposer une autre fonction qui inverse l’ordre des lettres dans un mot de man
 
 
 
-````{admonition}  Exercice 4.4. Factorielle 🔌
-:class: note
+````{exercise} Factorielle 🔌
 
 La fonction factorielle `n!` en mathématiques est le produit de tous les nombres entiers jusqu’à `n`. C’est une des fonctions les plus simples à calculer de manière récursive. Elle peut être définie comme ceci :
 

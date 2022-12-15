@@ -5,7 +5,7 @@
 Dans ce chapitre, nous découvrons comment utiliser une boucle `for` pour répéter un bloc d'instructions un certain nombre de fois. Nous allons voir que :
 
 - la boucle `for` permet de répéter des instructions,
-- la structure `for i in range(x):` permet de répéter un bloc x fois,
+- la structure `for i in range(n):` permet de répéter un bloc un nombre `n` fois,
 - le deux-points `:` est toujours suivi d'un bloc en indentation.
 
 ```{question}
@@ -26,14 +26,15 @@ Si nous regardons le code de près, nous pouvons voir que nous répétons 4 fois
 ```{codeplay}
 :file: for1.py
 from turtle import *
+d = 100
 
-forward(100)
+forward(d)
 left(90)
-forward(100)
+forward(d)
 left(90)
-forward(100)
+forward(d)
 left(90)
-forward(100)
+forward(d)
 left(90)
 ```
 
@@ -47,9 +48,10 @@ Transformez le rectangle en triangle.
 ```{codeplay}
 :file: for2.py
 from turtle import *
+d = 100
 
 for i in range(4):
-    forward(100)
+    forward(d)
     left(90)
 ```
 
@@ -61,10 +63,11 @@ C'est ce qu'on appelle une **variable d'itération**. Cette variable commence à
 ```{codeplay}
 :file: for2.py
 from turtle import *
+d = 100
 
 for i in range(4):
     write(i)
-    forward(100)
+    forward(d)
     left(90)
 ```
 
@@ -158,11 +161,12 @@ Doublez l'angle de rotation dans `left()`.
 ```{codeplay}
 :file: for6.py
 from turtle import *
+d = 100
 
 for i in range(18):
-    forward(100)
+    forward(d)
     write(i)
-    backward(100)
+    backward(d)
     left(10)
 ```
 
@@ -211,17 +215,18 @@ Quelle forme obtenons-nous en dessinant un carré et deux losanges ?
 ```{codeplay}
 :file: for9.py
 from turtle import *
+d = 100
 
 def carre():
     for i in range(4):
         right(90)
-        forward(100)
+        forward(d)
 
 def losange():
     for i in range(2):
-        forward(100)
+        forward(d)
         left(120)
-        forward(100)
+        forward(d)
         left(60)
         
 carre()
@@ -240,12 +245,13 @@ Tournez un angle plus petit que 60°
 ```{codeplay}
 :file: for10.py
 from turtle import *
+d = 100
 
 def losange():
     for i in range(2):
-        forward(100)
+        forward(d)
         left(60)
-        forward(100)
+        forward(d)
         left(120)
 
 for i in range(6):
@@ -291,11 +297,12 @@ Pour dessiner la face rouge, nous dessinons d'abord une ligne, en répétant 3 f
 
 ```{codeplay}
 from turtle import *
+d = 50
 
 def carre():
     begin_fill()
     for i in range(4):
-        forward(50)
+        forward(d)
         left(90)
     end_fill()
 
@@ -303,13 +310,13 @@ def ligne():
     fillcolor('red')
     for i in range(3):
         carre()
-        forward(50)
-    backward(150)
+        forward(d)
+    backward(3*d)
 
 for i in range(3):
     ligne()
     left(90)
-    forward(50)
+    forward(d)
     right(90)
 ```
 
@@ -544,5 +551,55 @@ dot()
 forward(50)
 dot()
 ...
+done()
+```
+
+### TP
+
+Créez une scène de jeu vidéo en utilisant la répétition, des cercles et de la couleur.
+
+```{codeplay}
+:file: tp3.py
+"""
+tp3 - répéter
+
+Nom : 
+Classe :
+Date :
+
+- nommez ce fichier : tp3_classe_prenom (minuscules, sans accents)
+- créez 5+ fonctions qui utilisent la répétion
+- utilisez la variable d (distance) pour vos déplacements
+- composez une scène de jeu vidéo (pacman, tetris, minecraft, etc.
+- utilisez de la couleur
+- déposez sur Moodle :
+    tp3_classe_prenom.py     (code)
+    tp3_classe_prenom.eps    (image vectorielle)
+    tp3_classe_preneom.jpg   (image)
+"""
+from turtle import *
+# from tkinter import *
+
+d = 20
+
+def pacman():
+    down()
+    left(45)
+    forward(d)
+    left(90)
+    circle(d, 270)
+    left(90)
+    forward(d)
+    right(135)   
+    for i in range(5):
+        up()
+        forward(d)
+        dot(d/5)
+
+# ajoutez vos fonctions ici
+
+pacman()
+
+# Screen().getcanvas().postscript(file='tp3.eps')
 done()
 ```

@@ -1,4 +1,5 @@
 (prog1.decider)=
+
 # Décider - `if`
 
 Dans ce chapitre, nous allons voir comment un programme peut faire des choix, et comment il peut exécuter du code de façon sélective. Nous allons voir que :
@@ -16,6 +17,156 @@ En Python, `if` est suivi
 {f}`d'un deux-points`
 ```
 
+## Des positions aléatoires
+
+Dans ce chapitre nous allons prendre des décisions basé sur la position (x, y) d'un point.
+Nous avons donc besoin d'un certain nombre de points, pour ensuite prendre des décisions.
+
+```{codeplay}
+from turtle import *
+from random import *
+
+w, h = 600, 400
+d, n = 10, 100
+up()
+speed(0)
+
+for i in range(n):
+    x, y = randint(-w/2, w/2), randint(-h/2, h/2)
+    goto(x, y)
+    dot(d)
+```
+
+## Pour x positive
+
+La structure `if` ci-dessous permet d'exécuter une action seulement si `condition` est `True`.
+
+``` python
+if condition:
+    action
+```
+
+Dans notre exemple nous affichons un point rouge seulement si x est positif (`x > 0`)
+
+```{exercise}
+Ajoutez une deuxième condition `if` pour colorier un point en bleu clair seulement si x est négatif (`x < 0`).
+```
+
+```{codeplay}
+from turtle import *
+from random import *
+
+w, h = 600, 400
+d, n = 10, 100
+up()
+speed(0)
+
+for i in range(n):
+    x, y = randint(-w/2, w/2), randint(-h/2, h/2)
+    goto(x, y)
+    if x > 0:
+        dot(2*d, 'red')
+    dot(d)
+```
+
+## La structure `if elif else`
+
+La structure `if elif else` ci-dessous permet d'exécuter une action seulement si `condition` est `True`.
+
+``` python
+if condition_1:
+    action_1
+elif condition_2:
+    action_2
+else:
+    action_3
+```
+
+Dans l'exemple ci-dessous nous testons d'abord si `x < -100` et ensuite si `x < 100`.
+
+```{codeplay}
+from turtle import *
+from random import *
+
+w, h = 600, 400
+d, n = 20, 300
+up()
+speed(0)
+
+for i in range(n):
+    x, y = randint(-w/2, w/2), randint(-h/2, h/2)
+    goto(x, y)
+    if x < -100:
+        dot(d, 'red')
+    elif x < 100:
+        dot(d, 'lime')
+    else:
+        dot(d, 'blue')
+```
+
+## Région en diagonale
+
+```{codeplay}
+from turtle import *
+from random import *
+
+w, h = 600, 400
+d, n = 10, 1000
+tracer(0)
+up()
+
+for i in range(n):
+    x, y = randint(-w/2, w/2), randint(-h/2, h/2)
+    goto(x, y)
+    if x > y:
+        dot(d, 'red')
+    else:
+        dot(d, 'blue')
+update()
+```
+
+## Région en cercle
+
+```{codeplay}
+from turtle import *
+from random import *
+
+w, h = 600, 400
+d, n = 10, 2000
+tracer(0)
+up()
+
+for i in range(n):
+    x, y = randint(-w/2, w/2), randint(-h/2, h/2)
+    goto(x, y)
+    if (x**2 + y**2) > 150**2 :
+        dot(d, 'red')
+    else:
+        dot(d, 'blue')
+update()
+```
+
+## L'opération `and`
+
+```{codeplay}
+from turtle import *
+from random import *
+
+w, h = 600, 400
+d, n = 10, 2000
+tracer(0)
+up()
+
+for i in range(n):
+    x, y = randint(-w/2, w/2), randint(-h/2, h/2)
+    goto(x, y)
+    if x > 0 and y > 0:
+        dot(d, 'red')
+    else:
+        dot(d, 'blue')
+update()
+```
+
 ## Êtes-vous majeur ?
 
 Basé sur votre âge, le programme exécute soit le premier bloc (`if`) soit le  deuxième bloc (`else`).  Il affiche si vous êtes majeur ou pas.
@@ -28,25 +179,6 @@ if int(age) < 18:
     print('accès interdit - vous êtes mineur')
 else:
     print('accès OK - vous êtes majeur')
-```
-
-## Coordonnées x positive
-
-```{codeplay}
-from turtle import *
-from random import *
-    
-d = 20 
-
-for i in range(20):
-    x = randint(-300, 300)
-    y = randint(-200, 200)
-    goto(x, y)
-    if x>0:
-        pencolor('red')
-    else:
-        pencolor('lightblue')
-    dot(d)
 ```
 
 ## Comparer
