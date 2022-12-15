@@ -288,21 +288,21 @@ Ajoutez `up()` au début du programme pour ne plus montrer la trajectoire de la 
 from turtle import *
 dot(1000, 'linen')
 
-dot(300, 'yellow')
+dot(300, 'yellow')      # visage
 
 left(45)
 forward(60)
-dot(40)
+dot(40)                 # oeuil droite
 
 right(45)
 backward(100)
-dot(40)
+dot(40)                 # oeuil gauche
 
 right(90)
 forward(100)
 left(90)
 width(20)
-forward(100)
+forward(100)            # bouche
 ```
 
 Voici un autre smiley qui exprime la surprise.
@@ -534,6 +534,7 @@ d = 40
 
 def O():
     fillcolor('yellow')
+    dot()
     begin_fill()
     forward(2*d)
     left(90)
@@ -559,7 +560,6 @@ def S():
     ...
 
 back(200)
-width(3)
 O()
 ...
 done()

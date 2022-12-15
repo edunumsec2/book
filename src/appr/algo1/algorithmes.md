@@ -17,11 +17,6 @@ align: left
 **Différence entre un algorithme et un programme.** </br> Un algorithme doit être compréhensible par un humain, alors qu'un programme est écrit de façon à ce qu'il soit compréhensible par une machine.
 ```
 
-<!-- ```{image} media/algoprog.png
-:width: 600
-:height: 300
-```
-**Différence entre un algorithme et un programme.** Un algorithme doit être compréhensible par un humain, alors qu'un programme est écrit de façon à ce qu'il soit compréhensible par une machine. -->
 
 ## Résolution d'un problème par étapes
 
@@ -55,17 +50,6 @@ Dans le cas de la recette d'une omelette, nous avons décomposé la marche à su
 
 Le langage utilisé pour écrire un programme doit être extrêment précis, sans quoi une machine ne pourrait pas le comprendre. Nous avons vu qu'un algorithme n'a pas besoin d'être compris par une machine, mais seulement par les humains. Ainsi, le langage que l'on va utiliser pour exprimer un algorithme sera plus libre que celui utilisé pour coder un programme. Ce langage **peut varier d'une personne à l'autre** et se rapproche dans notre cas de la langue française, comme le montre cet exemple :
 
-<!-- ```
-Tableau Nombres : numérique
-Variable i : numérique
-Variable Résultat : numérique
-Variable Résultat ← 0
-
-
-Répéter Pour i ← 1 à longueur(Nombres)  # incrémente (augemente) i par pas de 1    
-    Résultat ← Résultat + Nombres[i]
-Fin Pour
-``` -->
 
 ```
 Liste Nombres           # la variable Nombres contient une liste de nombres
@@ -98,14 +82,6 @@ align: left
 
 ```
 
-<!-- ```{image} media/commode.webp
-:width: 600
-:height: 400
-```
-**Une variable est un tiroir avec une étiquette.** Cela peut être utile de voir la variable comme un tiroir qui permet de stocker une valeur (contenu du tiroir) sous un nom (étiquette du tiroir). Attention, le tiroir est petit et ne peut contenir qu'une chose (valeur) à la fois. Deux tiroirs différents ne peuvent porter la même étiquette.
- -->
-
-
 Lorsque l'on dit que i ← 1, ou que i = 1 en Python, cela veut tout simplement dire que la variable *i* vaut maintenant 1. Cette opération signifie que l'on va prendre le tiroir avec étiquette *i* dans la commode (s'il n'existe pas encore on va noter *i* sur l'étiquette d'un tiroir disponible) et on va mettre la valeur 1 dedans. Ce qui se trouvait dans le tiroir avant la valeur 1 ne s'y trouve plus, on dit que *la valeur précédente est écrasée*. A chaque fois que nous utilisons *i* dans l'algorithme ou dans le code, nous faisons référence à la valeur stockée dans le tiroir.
 
 
@@ -115,7 +91,7 @@ Lisez bien l'algorithme présenté ci-dessus. Quel problème cet algorithme perm
 
 ````
 
-`````{solution} Algorithme mystère
+`````{solution} 
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -205,14 +181,6 @@ align: left
 
 ```
 
-<!-- ```{image} media/Diagramme_algorithme.png 
-:width: 600
-:height: 400
-```
-**Schéma des ingrédients d'un algorithme.** Un algorithme reçoit des données en entrée, qu'il traite selon des opérations dans un ordre précis, dans le but de produire un résultat en sortie. Ce résultat représente la solution à un problème donné. -->
-
-
-
 Notez que les opérations d’un algorithme doivent être précises et ***<span style="color:rgb(13, 204, 166)">non ambigües</span>***. Il doit y avoir une seule interprétation possible de l’algorithme. Une recette de cuisine ne serait pas assez précise pour une machine, par exemple, il faudrait indiquer clairement ce que température moyenne et mélange homogène veulent dire. Les êtres humains peuvent interpréter, deviner et supposer, mais pas les machines (pour l'instant).
 
 ````{admonition} Le saviez-vous ? Jeu d'instructions
@@ -237,8 +205,6 @@ A quoi correspondent « les ingrédients d’un algorithme » dans l’exemple d
 ````
 
 
-<span id=exercice-echange> </span>
-
 ````{exercise} Échange de deux variables
 
 Écrire un algorithme qui échange les valeurs de deux variables. Par exemple, si la première variable X contient 1 et la deuxième variable Y contient 2, à la fin de l'algorithme X contient 2 et Y contient 1. Pour rappel, une variable peut contenir une seule valeur à la fois. 
@@ -246,8 +212,6 @@ A quoi correspondent « les ingrédients d’un algorithme » dans l’exemple d
 Conseil : cela aide de se mettre à la place de la machine et de représenter le contenu de chaque variable sous la forme d'un tiroir, en la dessinant avec son étiquette et son contenu *après chaque opération de votre algorithme*.
 
 ````
-
-
 
 `````{solution}
 
@@ -286,7 +250,6 @@ Si on dessine l’état des variables après chacune de ces opérations dans des
 Nous avons donc la confirmation que la solution obtenue résout correctement notre problème d'échange des valeurs de deux variables.
 
 ````
-
 `````
 
 
@@ -302,40 +265,6 @@ Répéter 8 fois :
 ```
 ````
 
-<!-- `````{solution}
-
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-
-```{codeplay}
-
-# import the turtle modules
-import turtle
- 
-# Start a work Screen
-ws = turtle.Screen()
- 
-# Define a Turtle Instance
-crayon = turtle.Turtle()
-
-crayon.speed(1)
-
-for i in range(8):
- 
-    # Avance d'à peu près 2 cm
-    crayon.forward(100) 
-
-    # Tourne à droite de 60°
-    crayon.right(60)
-
-``` 
-
-Un hexagone. Pour vérifier, exécuter le code ci-dessus. On pourrait croire que le fait de répéter l'action qui dessine une ligne 8 fois aboutit à un octogone. Cependant, pour trouver la bonne réponse il faut simuler les effets de l'algorithme sur le crayon. La forme que l'on obtient en tournant de 60° est bien un hexagone et les deux dernières lignes sont dessinées par dessus des lignes déja existantes. Si on change la valeur 8 à 6, on obtient exactement le même dessin.
-
-````
-`````
- -->
 
 ````{exercise} Nombre minimum
 
@@ -346,84 +275,6 @@ Appliquer l'algorithme à la liste [3, 6, 2, 8, 1, 9, 7, 5].
 L'algorithme trouve-t-il la bonne solution ? Si non, modifier l'algorithme afin qu’il trouve la bonne solution.
 
 ````
-<!-- 
-`````{solution}
-
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-Dans un premier temps il faut pouvoir parcourir la liste de nombres.
-
-```
-Liste Nombres                               # la variable Nombres contient une liste de nombres
-i ← 1
-
-Répéter Pour i ← 1 à longueur(Nombres)      # i prend la valeur de 1, puis 2, puis 3, jusqu'à la fin de la liste  
-    afficher Nombres[i]
-Fin Répéter
-```
-
-Dans un deuxième temps, il nous faut une variable *Nombre_min* qui va stocker le résultat. Il faut lui donner une valeur intiale et on peut supposer que le plus petit élément est le premier élément de *Nombres*.
-
-```
-Liste Nombres                               # la variable Nombres contient une liste de nombres
-i ← 1                               
-Nombre_min ← Nombres[1]
-
-Répéter Pour i ← 1 à longueur(Nombres)      # i prend la valeur de 1, puis 2, puis 3, jusqu'à la fin de la liste  
-    afficher Nombres[i]
-Fin Répéter
-```
-
-Finalement, l'algorithme doit comparer les nombres qu'il parcourt par rapport à la valeur de *Nombre_min*. S'il rencontre une valeur plus petite que celle stockée dans *Nombre_min*, il stocke cette nouvelle plus petite valeur dans *Nombre_min*.
-
-```
-Liste Nombres                               # la variable Nombres contient une liste de nombres
-i ← 1
-Nombre_min ← Nombres[1]
-
-Répéter Pour i ← 1 à longueur(Nombres)      # i prend la valeur de 1, puis 2, puis 3, jusqu'à la fin de la liste  
-    Si Nombres[i] < Nombre_min
-       Nombre_min ← Nombres[i]
-    Fin Si 
-Fin Répéter 
-
-Retourner Nombre_min
-```
-
-On peut encore améliorer l'algorithme. La première fois que l'algorithme passe dans la boucle *Répéter*, *Nombre_min* contient la même valeur que *Nombres[1]* et nous n'avons pas besoin de les comparer. Voici une version plus optimale de l'algorithme : 
-
-```
-Liste Nombres                               # la variable Nombres contient une liste de nombres
-i ← 2
-Nombre_min ← Nombres[1]
-
-Répéter Pour i ← 2 à longueur(Nombres)      # i prend la valeur de 2, puis 3, jusqu'à la fin de la liste  
-    Si Nombres[i] < Nombre_min
-       Nombre_min ← Nombres[i]
-    Fin Si 
-Fin Répéter 
-
-Retourner Nombre_min
-```
-
-Il faut encore vérifier que l'algorithme a bien le comportement souhaité. Voici un tableau qui tracke les valeurs des variables après chaque passage dans la boucle *Répéter* :
-
-
-```{figure} media/AlgoMin.png
----
-alt: Valeurs des variables de l'algorithme pour le cas où Nombres contient [3, 6, 2, 8, 1, 9, 7, 5].
-width: 70%
----
-
-```
-
-Le résultat obtenu est bien le résultat attendu, l'algorithme a trouvé la plus petite valeur contenue dans la liste. L'algorithme est correct.
-
-````
-````` 
--->
-
 
 
 ````{exercise} Le prochain anniversaire
@@ -435,25 +286,6 @@ Comparer la solution trouvée à celle de la personne à côté de vous. Avez-vo
 Un ordinateur peut-il réaliser les opérations décrites par cet algorithme ?
 
 ````
-<!-- 
-`````{solution}
-
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-Voici une solution possible. Une étape de l'algorithme consiste à demander à chaque élève sa date de naissance.
-
-Une autre étape de l'algorithme consiste à calculer la distance du mois de la date d'anniversaire par rapport au mois courant.
-
-Ensuite, pour tous les élèves qui ont une distance 0 par rapport au mois courant (ils sont nés ce mois-ci), on calcule la distance du jour de leur naissance par rapport à la date d'aujourd'hui. Si cette distance est négative, leur anniversaire vient de passer et ils ne sont pas retenus. Pour les autres, on choisit l'élève avec la plus petite distance jour.
-
-Si on se retrouve face à une liste vide (par exemple pas d'élèves nés ce mois-ci), on passe au mois d'après et on choisit l'élève avec la plus petite valeur du jour de naissance. Si on se retrouve à nouveau face à une liste vide (pas d'élèves nés le mois d'après), on passe à nouveau au mois d'après t on choisit l'élève avec la plus petite valeur du jour de naissance, et ainsi de suite.
-
-Oui, un ordinateur peut exécuter ces opérations, mais elles doivent être décomposées davantage.
-
-````
-`````
- -->
 
 
 ````{exercise} Échange de trois variables
@@ -463,31 +295,6 @@ Oui, un ordinateur peut exécuter ces opérations, mais elles doivent être déc
 Conseil : il est très utile de se mettre à la place de la machine et de représenter le contenu de chaque variable sous la forme d'un tiroir, en dessinant le tiroir avec son étiquette et son contenu *après chaque opération de l'algorithme*. Est-ce que votre algorithme donne le résultat attendu ? Si non, modifier l'algorithme pour qu’il résolve le problème correctement.
 
 ````
-
-<!-- `````{solution}
-
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-Comme pour l'exercice 3 nous avons besoin d'une variable temporaire W pour nous souvenir de la valeur initiale de X avant qu'elle ne soit écrasée par la valeur de Y :
-
-```
-W ← X
-X ← Y
-Y ← Z
-Z ← W
-```
-Supposons que X contient 1, Y contient 2 et Z contient 3. Si on dessine l’état des variables après chacune de ces opérations dans des tiroirs, voici ce qu’on obtient :
-
-<img src="media/Swap4.png" width="45%"> &nbsp;  
-
-Nous avons donc la confirmation que la solution obtenue résout correctement notre problème d'échange des valeurs de trois variables.
-
-````
-
-````` 
--->
-
 
 
 ````{exercise} Affectations
@@ -502,95 +309,8 @@ X ← X – Y
 
 Vérifier la solution que vous avez trouvée en représentant chaque variable avec une valeur fictive. Suivre les opérations dans l’ordre et dessiner le contenu des variables après chaque étape.
 
-
 ````
 
-
-<!-- `````{solution}
-
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-Imaginons que X contient 1 et Y contient 2. 
-
-Après la première opération X ← X + Y, X vaut 1 + 2 = 3. 
-
-Après la deuxième opération Y ← X - Y, Y vaut 3 - 2 = 1. Il faut faire attention à bien utiliser la dernière valeur stockée dans X et non sa valeur initiale.
-
-Après la dernière opération X ← X – Y, X vaut 3 - 1 = 2. 
-
-De manière générale, il faut remplacer les variables X et Y avec **les dernières valeurs** qu'elles contiennent :
-
-```
-X ← X + Y
-Y ← (X + Y) – Y, donc Y ← X
-X ← X – Y ou X ← (X + Y) - Y, donc X ← Y
-```
-
-Cet algorithme échange les valeurs des deux variables *sans avoir le besoin d'utiliser une variable temporaire*.
-
-```` -->
-<!--
-
-***Exercice 1***
-<span style="color:green"> 🔧 </span> ✏️📒 
-
-L’algorithme suivant contrôle un crayon. Quelle forme dessine-t-il ?
-```
-Répéter 8 fois :
-    Avance de 5 cm
-    Tourne à droite de 60°
-```
-<br>
-<br>
-
-***Exercice 2***
-<span style="color:orange"> 🔧🔧 </span>  ✏️📒
-
-Ecrivez un algorithme qui permet de déterminer le plus petit nombre d’une liste. Pensez à décomposer la solution en différentes étapes.
-
-Appliquez l’algorithme à la liste [3, 6, 2, 8, 1, 9, 7, 5].
-
-`````
-
-Avez-vous trouvé la bonne solution ? Sinon, modifiez votre algorithme afin qu’il permette de trouver la bonne solution.
-
-
-<br>
-<br>
-
-***Exercice 3***
-<span style="color:orange"> 🔧🔧 </span> ✏️📒
-
-On souhaite déterminer l’élève dont la date d’anniversaire est la plus proche de la date d’aujourd’hui dans le futur. Ecrivez un algorithme qui permet de trouver cet élève (utiliser un langage familier). Pensez à décomposer le problème en sous-problèmes. 
-
-Comparez votre solution à celle d’un autre élève : avez-vous procédé de la même manière ? Si non, expliquez vos raisonnements.
-
-Un ordinateur peut-il réaliser les opérations décrites par votre algorithme ?
-
-<br>
-<br>
-
-***Exercice 4***
-<span style="color:red"> 🔧🔧🔧 </span> ✏️📒
-
-Écrivez un algorithme qui effectue la permutation circulaire des variables X, Y et Z : à la fin de l’algorithme, X contient la valeur de Z, Y la valeur de X et Z la valeur de Y. Conseil : pensez à chaque variable comme un tiroir avec une étiquette X, Y ou Z qui contient une valeur. Ce tiroir ne peut stocker qu’une valeur à un moment donné. 
-
-Une fois l’algorithme écrit, représentez les variables par une case qui contient des valeurs de votre choix. Suivez les opérations de l’algorithme une après l’autre et dessinez leur impact sur le contenu des variables. Est-ce que votre algorithme donne le résultat attendu ? Si non, modifiez votre algorithme afin qu’il permette de résoudre le problème correctement.
-
-
-***Exercice 5***
-<span style="color:red"> 🔧🔧🔧 </span> ✏️📒
-
-Quel est le résultat de la suite des trois affectations suivantes ? Vérifiez votre solution en dessinant une case par variable et en y mettant des valeurs fictives. Suivez les opérations dans l’ordre et dessinez le contenu des variables après chaque étape.
-
-```
-X ← X + Y
-Y ← X – Y
-X ← X – Y
-```
-
--->
 
 ````{admonition} Ai-je compris ?
 :class: hint

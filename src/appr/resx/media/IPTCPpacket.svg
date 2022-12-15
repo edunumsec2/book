@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="119.41441mm"
+   height="8.0986643mm"
+   viewBox="0 0 119.41441 8.0986643"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="IPTCPpacket.svg"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview838"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.6687159"
+     inkscape:cx="46.089582"
+     inkscape:cy="26.791911"
+     inkscape:window-width="1387"
+     inkscape:window-height="887"
+     inkscape:window-x="239"
+     inkscape:window-y="75"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs2">
+    <rect
+       x="20.870474"
+       y="55.245373"
+       width="128.90588"
+       height="24.553499"
+       id="rect9492" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-5.0297378,-13.497286)">
+    <rect
+       style="fill:#ff0000;stroke:#ff0000;stroke-width:1.00054;stroke-opacity:1"
+       id="rect846"
+       width="34.945229"
+       height="6.8160725"
+       x="5.5219793"
+       y="14.297379" />
+    <rect
+       style="fill:#6e00ff;fill-opacity:1;stroke:#6e00ff;stroke-width:1.07568;stroke-opacity:1"
+       id="rect1060"
+       width="40.511703"
+       height="6.7958565"
+       x="40.467209"
+       y="14.297379" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;white-space:pre;inline-size:40.278;stroke-width:0.264583"
+       x="19.48934"
+       y="20.463804"
+       id="text24894"
+       transform="translate(1.3359011)"><tspan
+         x="19.48934"
+         y="20.463804"
+         id="tspan14660"><tspan
+           style="font-size:7.05556px;-inkscape-font-specification:'Helvetica Neue, Normal'"
+           id="tspan14658">en-tête IP</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:40.278;stroke-width:0.264583"
+       x="19.48934"
+       y="20.463804"
+       id="text24894-8"
+       transform="translate(39.873033,-0.09902101)"><tspan
+         x="19.48934"
+         y="20.463804"
+         id="tspan14662">en-tête TCP</tspan></text>
+    <rect
+       style="fill:#999999;stroke:#999999;stroke-width:0.737746;stroke-opacity:1"
+       id="rect36566"
+       width="43.499557"
+       height="7.3150291"
+       x="79.952431"
+       y="14.083536" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:40.278;stroke-width:0.264583"
+       x="19.48934"
+       y="20.463804"
+       id="text24894-6"
+       transform="translate(80.770359,-0.49604896)"><tspan
+         x="19.48934"
+         y="20.463804"
+         id="tspan14664">données</tspan></text>
+  </g>
+</svg>
