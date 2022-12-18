@@ -26,6 +26,8 @@ write
 iterer
 randomiser
 ordonner
+
+graphe
 reutiliser
 
 questionner
