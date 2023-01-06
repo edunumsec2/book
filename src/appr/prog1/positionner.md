@@ -359,7 +359,7 @@ polyline(house, (90, -80), size=(2, -1.5))
 
 ### Tangram
 
-Choisissez un animal est recréez la figure.
+Choisissez un animal et recréez la figure.
 
 ![tangram](media/tangram1.jpg)
 
@@ -383,7 +383,7 @@ triangle()
 
 ### Tangram 2
 
-Choisissez un animal est recréez la figure.
+Choisissez un animal et recréez la figure.
 
 ![tangram](media/tangram2.jpg)
 

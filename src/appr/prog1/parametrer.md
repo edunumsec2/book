@@ -5,7 +5,7 @@
 Dans ce chapitre, nous revenons sur le concept de la fonction. Dans le chapitre 2 nous avons vu la fonction comme une façon de donner un nom à une séquence d'instructions. Ici nous allons voir comment nous pouvons ajouter un ou plusieurs paramètres à une fonction. Nous allons voir que :
 
 - l'expression `def rect(d, e):` permet de définir une fonction avec deux paramètres,
-- les paramètres `d, e` sont des variables locales valides uniqument à l'intérieur de la définition de fonction,
+- les paramètres `d, e` sont des variables locales valides uniquement à l'intérieur de la définition de fonction,
 - ces paramètres prennent une valeur au moment de l'appel  de la fonction avec `rect(50, 30)`.
 
 ```{question}

@@ -745,15 +745,18 @@ palette = ('red',)
 image = ((0,),)
 
 def pixel(d, c):
+    fillcolor(c)
+    begin_fill()
     for i in range(4):
         forward(d)
         right(90)
+    end_fill()
 
 def pixelart(image, palette, d=20, w=1, pen='black'):
     for line in image:
         for i in line:
             c = palette[i]
-            pixe(d, c)
+            pixel(d, c)
         backward(len(line)*d)
         sety(ycor()-d)
 

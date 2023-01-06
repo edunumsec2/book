@@ -24,18 +24,18 @@ positionner
 
 write
 iterer
+renvoyer
 randomiser
-ordonner
 
+decider
+ordonner
 graphe
 reutiliser
 
 questionner
-decider
 ecrire
 attendre
 
-renvoyer
 grouper
 trier
 turtleart

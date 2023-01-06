@@ -53,7 +53,7 @@ f = ('Arial', 36)
 write(f, font=f)                    # affiche le résultat d'une variable
 ```
 
-En utilisant une variable `taille` nous pouvons aussi parcourir un tuple de nombres. A l'intérieur de la boucle nous utilisons cette variable `taille` trois fois :
+En utilisant une variable `taille` nous pouvons aussi parcourir un tuple de nombres. À l'intérieur de la boucle, nous utilisons cette variable `taille` trois fois :
 
 - pour calculer la distance entre les lignes, dans `backward(1.5  * taille)`
 - pour l'afficher, dans `write(taille)`
@@ -102,7 +102,7 @@ backward(60)
 write('Courier', font=('Courier', 24))
 ```
 
-En utilisant une variable `police` nous pouvons aussi parcourir un tuple de chaînes de caractères qui représentent des polices. A l'intérieur de la boucle nous utilisons cette variable `police` deux fois :
+En utilisant une variable `police` nous pouvons aussi parcourir un tuple de chaînes de caractères qui représentent des polices. À l'intérieur de la boucle, nous utilisons cette variable `police` deux fois :
 
 - pour l'afficher, dans `write(police)`
 - pour choisir la police, dans l'option `font=(police, ...)`
@@ -144,7 +144,7 @@ backward(90)
 write('bold', font=('Arial', 48, 'bold'))
 ```
 
-En utilisant une variable ``style`` nous pouvons aussi parcourir un tuple de chaînes de caractères qui représentent les 4 styles possibles. A l'intérieur de la boucle nous utilisons cette variable ``style`` deux fois :
+En utilisant une variable ``style`` nous pouvons aussi parcourir un tuple de chaînes de caractères qui représentent les 4 styles possibles. À l'intérieur de la boucle, nous utilisons cette variable ``style`` deux fois :
 
 - pour l'afficher (dans ``write()``)
 - pour choisir le style (dans l'option ``font=()``)
@@ -168,7 +168,7 @@ Le paramètre optionnel `align` permet de choisir parmi 3 types d'alignements :
 - droite (`'right'`)
 
 ```{exercise}
-Ecrivez 3-4 lignes de texte en forme de poème qui sont centrées.
+Écrivez 3-4 lignes de texte en forme de poème qui sont centrées.
 ```
 
 ```{codeplay}
@@ -204,7 +204,7 @@ for mot in mots:
 ## Texte en couleur
 
 ```{exercise}
-Ecrivez les lignes sur la même ligne, en utilisant l'option `move=True`.
+Écrivez les lignes sur la même ligne, en utilisant l'option `move=True`.
 ```
 
 ```{codeplay}
@@ -224,7 +224,7 @@ Si vous exécutez `write()` dans ce site avec [Skulpt](https://skulpt.org), la c
 
 ## Texte aligné
 
-Le texte suivant est une phrase celèbre de *Star Wars*.
+Le texte suivant est une phrase célèbre de *Star Wars*.
 Les mots sont alignés une fois à gauche, une fois au centre et une fois à droite.
 
 ```{codeplay}
@@ -281,7 +281,7 @@ WhatsApp a remporté un grand succès au tournant des années 2010. L'applicatio
 
 En 2014, WhatsApp est acquis par Facebook pour un montant d'environ 22 milliards soit environ 350 millions de dollars par employé ou 40 dollars par utilisateur.
 
-Dans le programme ci-dessous nous allons afficher une conversation entre deux personnes dans le style d'une application de messagerie. Nous utilisons la fonctions `goto()` pour placer la tortue à une position `(x, y)` et la fonction `setx()` placer la tortune vers la marge gauche (-280) ou droite (280).
+Dans le programme ci-dessous nous allons afficher une conversation entre deux personnes dans le style d'une application de messagerie. Nous utilisons la fonction `goto()` pour placer la tortue à une position `(x, y)` et la fonction `setx()` placer la tortue vers la marge gauche (-280) ou droite (280).
 
 ```{codeplay}
 from turtle import *
