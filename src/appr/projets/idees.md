@@ -39,48 +39,6 @@ width(10)
 forward(200)
 ```
 
-## Hello mouse
-
-Ce programme interactif dessine une ligne qui commence au centre et va vers l'endroit du clic de la souris.
-
-```{codeplay}
-from turtle import *
-s = getscreen()
-
-hideturtle()
-speed(0)
-width(10)
-forward(200)
-
-def f(x, y):
-    home()
-    clear()
-    goto(x, y)
-
-s.onclick(f)
-```
-
-## Astérisque
-
-Ce programme interactif dessine un astérisque avec des lignes qui commencent toutes au centre et vont vers le clic de la souris.
-
-```{codeplay}
-from turtle import *
-s = getscreen()
-s.bgcolor('orange')
-
-hideturtle()
-speed(0)
-color('white')
-width(10)
-forward(200)
-
-def f(x, y):
-    home()
-    goto(x, y)
-
-s.onclick(f)
-```
 
 ## Niveau de gris
 
@@ -212,41 +170,6 @@ s.onclick(f)
 s.listen()
 ```
 
-## Dessine ellipse
-
-Ce programme interactif dessine une ellipse avec deux clics de souris.
-
-```{codeplay}
-from turtle import *
-from math import *
-s = getscreen()
-speed(0)
-up()
-state = True
-
-def ellipse(p, size):
-    for i in range(37):
-        x = p[0] + size[0]/2 * sin(pi * i / 18)
-        y = p[1] + size[1]/2 * cos(pi * i / 18)
-        goto(x, y)
-        down()
-    up()
-
-def f(x, y):
-    global state, p
-    goto(x, y)
-    if state:
-        p = x, y
-    else:
-        a = x - p[0]
-        b = y - p[1]
-        center = p[0] + a/2, p[1] + b/2
-        ellipse(center, (a, b))
-    state = not state
-
-s.onclick(f)
-s.listen()
-```
 
 ## Faire défiler un texte
 

@@ -212,22 +212,23 @@ Il est nécessaire de définir une fonction de rappel pour chaque touche du clav
 ```{codeplay}
 :file: lambda11.py
 from turtle import *
+s = getscreen()
 
 def ecrire(x):
     write(str(x), font=(None, 50), move=True)
 
-getscreen().onkey(lambda : ecrire(0), '0')
-getscreen().onkey(lambda : ecrire(1), '1')
-getscreen().onkey(lambda : ecrire(2), '2')
-getscreen().onkey(lambda : ecrire(3), '3')
-getscreen().onkey(lambda : ecrire(4), '4')
-getscreen().onkey(lambda : ecrire(5), '5')
-getscreen().onkey(lambda : ecrire(6), '6')
-getscreen().onkey(lambda : ecrire(7), '7')
-getscreen().onkey(lambda : ecrire(8), '8')
-getscreen().onkey(lambda : ecrire(9), '9')
-getscreen().onkey(reset, 'r')
-getscreen().listen()
+s.onkey(lambda : ecrire(0), '0')
+s.onkey(lambda : ecrire(1), '1')
+s.onkey(lambda : ecrire(2), '2')
+s.onkey(lambda : ecrire(3), '3')
+s.onkey(lambda : ecrire(4), '4')
+s.onkey(lambda : ecrire(5), '5')
+s.onkey(lambda : ecrire(6), '6')
+s.onkey(lambda : ecrire(7), '7')
+s.onkey(lambda : ecrire(8), '8')
+s.onkey(lambda : ecrire(9), '9')
+s.onkey(reset, 'r')
+s.listen()
 ```
 
 La fonction lambda nous permet de simplifier aussi la création des fonctions de rappel. Nous pouvons les créer dans une boucle, en parcourant une chaine de caractères auxquels nous voulons associer une fonction de rappel. Nous utilisons ici l'astuce de la valeur par défaut, pour passer un argument à la fonction `f()`.
@@ -265,6 +266,44 @@ for c in 'abcdefghijklmnopqrstuvwxyz':
     s.onkey(lambda x=c: f(x), c)
     
 s.listen()
+done()
+```
+
+Le programme suivant permet d'écrire du texte.
+Du au limitations de la tortue, nous pouvons écrire seulement les lettres minuscules et l'espace.
+Les signes de ponctuation ne sont pas possible.
+
+Deux touches particuler sont disponible:
+
+- `Enter` pour placer le curseur vers une nouvelle ligne
+- `Back` pour reculer d'un caractère
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+speed(0)
+x, y = -280, 150
+d = 24
+up()
+goto(x, y)
+
+def f(x):
+    write(x, font=('Courier', d), move=True)
+    
+def enter():
+    global x, y
+    y = y - 1.5 * d
+    goto(x, y)
+
+def back():
+    setx(xcor() - 0.8 * d)
+
+for c in 'abcdefghijklmnopqrstuvwxyz ':
+    s.onkey(lambda x=c: f(x), c)
+    
+s.onkey(enter, 'Enter')     # touche Enter
+s.onkey(back, 'Back')       # touche effacer
+s.listen() 
 done()
 ```
 
