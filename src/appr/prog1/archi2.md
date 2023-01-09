@@ -31,7 +31,7 @@ L'additionneur ci-dessous additionne 1 et 2 et affiche 3.
 ```{logic}
 :ref: add2
 :height: 500
-:showonly: fulladder
+:showonly: adder
 {
   "v": 3,
   "components": [
@@ -119,7 +119,7 @@ Ajoutez la deuxième entrée, un bloc de visualisation, un décodeur 7 segments 
 
 ## Multiplexeur
 
-Un multiplexeur permet de choisir entre deux signaux d'entrées et d'en transmettre un à sa sortie.
+Un multiplexeur permet de choisir entre deux signaux d'entrée et d'en transmettre un à sa sortie.
 
 - Créez un multiplexeur à partir des portes NON, ET et OU
 
@@ -170,10 +170,10 @@ Souvent il est nécessaire de comparer deux valeurs numériques.
 
 ## Registre de décalage
 
-Un registre de décalage propagage une information d'un regsitre vers l'autre.
+Un registre de décalage propage une information d'un registre vers l'autre.
 
 - Ajoutez encore des bascules D
-- Créez une girlande lumineuse
+- Créez une guirlande lumineuse
 - Utilisez une horloge comme entrée
 
 ```{logic}
@@ -294,7 +294,7 @@ L'entrée Reset peut être utilisé pour remettre le compteur. Une porte ET dét
 Un compteur 4 bits avec un circuit de remise à 0 peut être configuré pour afficher les secondes de 00 à 59.
 
 - Ajoutez un deuxième compteur, décodeur et affichage à 7 segments
-- Configuerez-le pour compter à 60
+- Configurez-le pour compter à 60
 
 ```{logic}
 :ref: clock09

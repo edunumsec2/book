@@ -9,7 +9,7 @@ Dans ce chapitre nous allons explorer les circuits logiques.
 
 ## Transmission d'un signal
 
-Dans ce premier exemple se trouvent une entrée (in) et une sortie (out). Les deux sont lié par un fil de transmission qui transmet un signal binaire identifié avec une couleur:
+Dans ce premier exemple se trouvent une entrée (in) et une sortie (out). Les deux sont liées par un fil de transmission qui transmet un signal binaire identifié par une couleur:
 
 - 0 (noir)
 - 1 (jaune)
@@ -244,7 +244,7 @@ Complétez le circuit pour un décodeur qui a le comportement suivant :
 
 Quand on appuie sur une touche d'une calculette électronique, en interne l'action d’appuyer le bouton est transformée en une représentation binaire de la touche appuyée.
 
-Complétez le circuit pour une décodeur qui à le comportement suivant :
+Complétez le circuit pour un décodeur qui a le comportement suivant :
 
 - bouton 1 appuyé produit la sortie binaire 001
 - bouton 2 appuyé produit la sortie binaire 010
@@ -279,12 +279,12 @@ Complétez le circuit pour une décodeur qui à le comportement suivant :
 
 Une porte ET donne une sortie 1 seulement si **toutes** les entrées sont à 1.
 
-Complétez le circuit pour obtenir le comportement suivant :
+Complétez le circuit pour contrôler le feu de circulation avec deux entrées :
 
 - 00 tous les lampes éteintes
-- 01 seulement la lampe rouge allumée
-- 10 seulement la lampe jaune allumée
-- 11 seulement la lampe verte allumée
+- 01 seulement la lampe rouge allumée (haut)
+- 10 seulement la lampe jaune allumée (milieu)
+- 11 seulement la lampe verte allumée (bas)
 
 ```{logic}
 :ref: feu_and
