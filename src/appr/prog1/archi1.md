@@ -1,6 +1,6 @@
 # TP Circuits
 
-Dans ce chapitre nous allons explorer les circuits logiques.
+Dans ce chapitre, nous allons explorer les circuits logiques.
 
 - Créez chaque circuit comme demandé
 - Quand le circuit est terminé, cliquez sur **Screenshot** (dans le menu à droite)
@@ -16,8 +16,8 @@ Dans ce premier exemple se trouvent une entrée (in) et une sortie (out). Les de
 
 Avec le menu contextuel, vous pouvez changer la couleur du fil ainsi que son délai de propagation.
 
-- Ajouter un deuxième fil avec un délai de propagation de 100 ms
-- Ajoutez un troisième fil avec un délai de propagation de 10 ms
+- Ajouter un deuxième fil avec un délai de propagation de 100 ms (rapide)
+- Ajoutez un troisième fil avec un délai de propagation de 10 ms (instantané)
 
 ```{logic}
 :ref: in_out
@@ -337,77 +337,3 @@ Le tableau ci-dessous montre les segments à allumer pour afficher les nombres 0
 }
 ```
 
-## Loi de Morgan
-
-La **loi de Morgan** dit qu'une porte ET peut être fabriquée avec une porte OU et des inverseurs.
-
-Créez une porte ET en utilisant des portes OU et NON.
-
-```{logic}
-:ref: morgan
-:height: 300
-:showonly: in out not or
-{
-
-}
-```
-
-Créez une porte OU en utilisant des portes ET et NON.
-
-```{logic}
-:ref: morgan
-:height: 300
-:showonly: in out not and
-{
-
-}
-```
-
-## La porte NAND
-
-Avec la porte NON-ET (NAND) on peut en principe créer toutes les autres portes logiques de base (NON, ET, OU, X-OU).
-
-- Créez la porte OU et X-XOU avec seulment des portes NON-ET
-
-```{logic}
-:ref: nand
-:height: 500
-:showonly: in out nand
-{
-  "v": 3,
-  "gates": [
-    {"type": "NAND", "pos": [160, 50], "in": [20, 21], "out": 22},
-    {"type": "NAND", "pos": [160, 140], "in": [27, 28], "out": 29},
-    {"type": "NAND", "pos": [270, 140], "in": [30, 31], "out": 32}
-  ],
-  "in": [{"pos": [60, 50], "id": 23, "val": 0}, {"pos": [60, 120], "id": 25, "val": 0}, {"pos": [60, 160], "id": 26, "val": 0}],
-  "out": [{"pos": [230, 50], "id": 24, "name": "NON"}, {"pos": [340, 140], "id": 33, "name": "ET"}],
-  "wires": [[23, 20], [23, 21], [22, 24], [25, 27], [26, 28], [29, 30], [29, 31], [32, 33]]
-}
-```
-
-## La porte X-OU
-
-La porte X-OU (exclusive-ou) donne 1 si un **nombre impair** d'entrées est à 1.
-
-Dans le schéma ci-dessous, on peut allumer la lumière d'une chambre à partir de la porte d'entrée et de la cuisine.
-
-Ajoutez un circuit pour qu'on puisse également l'allumer depuis la chambre.
-
-```{logic}
-:ref: xor
-:height: 500
-:showonly: in out not and or xor
-{
-  "v": 3,
-  "labels": [{"type": "rect", "pos": [290, 120], "w": 300, "h": 200, "color": "yellow", "strokeWidth": 2}],
-  "in": [
-    {"pos": [100, 150], "id": 9, "name": "entrée", "val": 0},
-    {"pos": [290, 250], "orient": "n", "id": 14, "name": "chambre", "val": 0},
-    {"pos": [470, 120], "orient": "w", "id": 15, "name": "cuisine", "val": 0}
-  ],
-  "out": [{"type": "bar", "pos": [300, 40], "id": 10, "display": "px", "color": "yellow"}],
-  "gates": [{"type": "XOR", "pos": [220, 90], "orient": "n", "in": [11, 12], "out": 13}],
-  "wires": [[13, 10], [9, 11], [15, 12]]
-}
-```

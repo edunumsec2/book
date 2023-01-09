@@ -117,6 +117,83 @@ Ajoutez la deuxième entrée, un bloc de visualisation, un décodeur 7 segments 
 }
 ```
 
+## Addition et soustraction
+
+Ajoutez un circuit qui calcule a+b-c et affiche le résultat.
+Par exemple pour a=7, b=5, c=3, le résultat affiché devrait être 9.
+
+```{logic}
+:ref: mux
+:height: 500
+:showonly: alu in out.nibble-display
+{
+  "v": 4,
+  "in": [
+    {"type": "nibble", "pos": [60, 80], "id": [11, 12, 13, 14], "val": [1, 1, 1, 0], "name": "a"},
+    {"type": "nibble", "pos": [60, 180], "id": [79, 80, 81, 82], "val": [1, 0, 1, 0], "name": "b"},
+    {"type": "nibble", "pos": [60, 280], "id": [105, 106, 107, 108], "val": [1, 1, 0, 0], "name": "c"}
+  ],
+  "out": [
+    {"type": "nibble-display", "pos": [110, 80], "id": [67, 68, 69, 70]},
+    {"type": "nibble-display", "pos": [110, 180], "id": [83, 84, 85, 86]},
+    {"type": "nibble-display", "pos": [110, 280], "id": [114, 115, 116, 117]}
+  ],
+  "wires": [[11, 67], [12, 68], [13, 69], [14, 70], [79, 83], [80, 84], [81, 85], [82, 86], [105, 114], [106, 115], [107, 116], [108, 117]]
+}
+```
+
+## Addition signée
+
+Interprétez les nombres binaires comme des nombres signés. Vous pouvez le configurer avec le menu contextuel. Complétez l'additionneur 4-bit et montrez que l'addition de -2 et -3 donne bien -5.
+
+```{logic}
+:ref: addsigned
+:height: 500
+:showonly: alu in in.nibble out.nibble-display
+{
+  "v": 4,
+  "in": [
+    {"type": "nibble", "pos": [60, 80], "id": [0, 1, 2, 3], "val": [0, 1, 1, 1]}
+  ],
+  "out": [
+    {"type": "nibble-display", "pos": [110, 80], "id": [4, 5, 6, 7], "radix": -10}
+  ],
+  "components": [
+    {"type": "alu", "pos": [230, 130], "in": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], "out": [19, 20, 21, 22, 23, 24, 25]}
+  ],
+  "wires": [[0, 4], [1, 5], [2, 6], [3, 7], [0, 8], [1, 9], [2, 10], [3, 11]]
+}
+```
+
+## Addition 8-bits
+
+Pour additionner un nombre à 8-bits, il faut combiner deux ALU 4-bits.
+Complétez le circuit pour afficher l'addition de deux nombres binaires 8-bits.
+Ajoutez une option pour soustraire deux nombres.
+
+```{logic}
+:ref: add8
+:height: 500
+:showonly: alu in in.byte out.byte-display
+{
+  "v": 4,
+  "in": [
+    {"type": "byte", "pos": [40, 110], "id": [24, 25, 26, 27, 28, 29, 30, 31], "val": "00001010"},
+    {"type": "byte", "pos": [40, 320], "id": [74, 75, 76, 77, 78, 79, 80, 81], "val": "00000100"}
+  ],
+  "out": [
+    {"type": "byte-display", "pos": [100, 110], "id": [32, 33, 34, 35, 36, 37, 38, 39]},
+    {"type": "byte-display", "pos": [400, 170], "id": [66, 67, 68, 69, 70, 71, 72, 73]}
+  ],
+  "components": [
+    {"type": "alu", "pos": [220, 130], "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "out": [11, 12, 13, 14, 15, 16, 17]},
+    {"type": "alu", "pos": [220, 360], "in": [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58], "out": [59, 60, 61, 62, 63, 64, 65]}
+  ],
+  "wires": [[24, 32], [25, 33], [26, 34], [27, 35], [28, 36], [29, 37], [30, 38], [31, 39], [17, 58], [24, 0], [25, 1], [26, 2], [27, 3], [28, 48], [29, 49], [30, 50], [31, 51], [11, 66], [12, 67], [13, 68], [14, 69], [74, 4], [75, 5], [76, 6]]
+}
+```
+
+
 ## Multiplexeur
 
 Un multiplexeur permet de choisir entre deux signaux d'entrée et d'en transmettre un à sa sortie.
@@ -165,34 +242,6 @@ Souvent il est nécessaire de comparer deux valeurs numériques.
   "components": [{"type": "alu", "pos": [160, 180], "in": [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22], "out": [23, 24, 25, 26, 27, 28]}],
   "out": [{"pos": [380, 170], "id": 30, "name": "Egal"}],
   "wires": [[4, 12], [5, 13], [6, 14], [7, 15], [8, 16], [9, 17], [10, 18], [11, 19], [29, 20], [28, 30]]
-}
-```
-
-## Registre de décalage
-
-Un registre de décalage propage une information d'un registre vers l'autre.
-
-- Ajoutez encore des bascules D
-- Créez une guirlande lumineuse
-- Utilisez une horloge comme entrée
-
-```{logic}
-:ref: shift
-:height: 500
-:showonly: in clock out.bar flipflop-d
-{
-  "v": 3,
-  "in": [
-    {"pos": [160, 70], "id": 8, "name": "D (Données)", "val": 1},
-    {"pos": [200, 180], "id": 33, "name": "Clock (horloge)", "val": 0, "isPushButton": true}
-  ],
-  "components": [
-    {"type": "flipflop-d", "pos": [250, 90], "in": [18, 19, 20, 21], "out": [22, 23], "state": 1},
-    {"type": "flipflop-d", "pos": [360, 90], "in": [34, 35, 36, 37], "out": [38, 39], "state": 1},
-    {"type": "flipflop-d", "pos": [470, 90], "in": [40, 41, 42, 43], "out": [44, 45], "state": 0}
-  ],
-  "out": [{"type": "bar", "pos": [250, 20], "id": 46, "display": "h"}],
-  "wires": [[8, 21], [33, 18], [22, 37], [33, 34], [33, 40], [38, 43], [8, 46]]
 }
 ```
 
