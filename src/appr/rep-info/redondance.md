@@ -46,17 +46,15 @@ Le bit de parité est habituellement placé à la position de poids le plus faib
 |       1111110        |       6        |        0      |   1111110**0**    |
 |       1111111        |       7        |        1      |   1111111**1**    |
 
-````{panels}
-:column: col-lg
 
-Le code suivant permet de tester le calcul de parité et son contrôle.
+Le bloc suivant permet de créer un exemple illustrant le calcul de parité et son contrôle.
 
-```{codeplay}
+````{codeplay}
 
 def getControlBit(number):
     count = 0
     bit = 1
-    while bit < 8:
+    while bit < 128:
         if number & bit:
             count += 1
         bit <<= 1
@@ -68,7 +66,6 @@ print('-'*42)
 print(format(value, ' 38b'))
 value = value & 0x7f
 control = getControlBit(value)
-
 print('-'*42)
 print('  valeur (limitée à 7 bits)  :', value)
 print('  représentation binaire     :', format(value, '07b') + '.')
@@ -76,7 +73,9 @@ print('  bit de contrôle            :', '.'*7 + str(control))
 print('-'*42)
 print('valeur transmise             :', format((value<<1) ^ control, '08b'))
 print('-'*42)
-```
+
+===
+# Cliquez sur Exécuter pour créer un exemple
 ````
 
 On notera que, pour un coût de taille modeste (un huitième des bits transmis) et un calcul rapide à réaliser (une somme et une comparaison), des erreurs de transmission ponctuelles — celles qui ne portent que sur un nombre de positions impair — sont immédiatement détectables. Cela inclut les erreurs qui porteraient sur le bit de parité lui-même.
@@ -114,17 +113,10 @@ Si le texte venait à être modifié, ne serait-ce que très légèrement, l'emp
 
 En effet, la somme des valeurs totalise alors 706 (= 104 +  97 + 99 + 104 +  97 + 104 + 101), soit 0x2**C2** en hexadécimal, alors que la somme des produits totalise 2827 (= 1x104 + 2x97 + 3x99 + 4x104 + 5x97 + 6x104 + 7x101) soit 0xB**0B**, ce qui donne un hash de C20B au lieu de C105 précédemment, alors qu'un seul bit diffère entre les deux messages.
 
-````{panels}
-:column: col-lg
 
-Le code suivant
-permet de tester
-la fonction
-de hachage
-décrite précédemment.
+Le bloc suivant permet de créer un exemple illustrant la fonction de hachage décrite précédemment.
 
-
-```{codeplay}
+````{codeplay}
 
 def getSum(information):
     answer = 0
@@ -164,10 +156,11 @@ print('                    ', hex(prodSum))
 print('-'*42)
 print('hash               :', toHash(text))
 print('-'*42)
-```
+===
+# Cliquez sur Exécuter pour créer un exemple
+````
 
 On notera que les mots 'hat' et 'fer' débouchent sur la même empreinte (3D86), par exemple.
-````
 
 On notera que la suppression d'une lettre au texte ("hachage" => C105) ne change pas la longueur de cette simple empreinte
 mais sa valeur ("hachag" => 5C42) et que cette **fonction de hachage** est aussi sensible à la casse ("Hachage" => A1E5).
