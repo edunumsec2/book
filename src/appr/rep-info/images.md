@@ -30,7 +30,7 @@ Dans un appareil analogique, la paroi illuminée est recouverte d'une pellicule 
 
 La différence est que dans un appareil photo numérique cette paroi, le capteur photographique, est recouverte d'une grille de capteurs électroniques photosensibles (photosites) produisant de l'électricité quand ils reçoivent de la lumière. Chaque photosite est recouvert d'un filtre coloré ne laissant passer que les rayons d'une seule couleur (grille de Bayer): le rouge, le vert ou le bleu. Les filtres sont répartis par carré de quatre : deux verts, un rouge et un bleu. La tension électrique produite par chaque photosite est convertie numériquement et transmise au processeur de l'appareil photo.
 
-L'image numérique ne sera alors rien d'autre que la collection des mesures de tous les capteurs à un temps précis. Comme ces mesures sont organisées sous forme de tableau (grille), on parle souvent d'images matricielles. Plus le nombre de capteurs est grand, plus la résolution de cette image le sera aussi.
+L'image numérique ne sera alors rien d'autre que la collection des mesures de tous les capteurs à un temps précis. Comme ces mesures sont organisées sous forme de tableau (grille), on parle souvent d'images matricielles. Plus le nombre de capteurs est grand, plus la définition de cette image le sera aussi.
 
 ```{figure} media/captimage.png
 ---
@@ -449,7 +449,7 @@ Un même cercle en représentation matricielle et vectorielle.
 ```
 <br />
 
-À l'inverse de l'image matricielle composée de pixels, l'image vectorielle peut être **redimensionnée** sans pour autant perdre en qualité. Elle est contenue dans un **fichier beaucoup plus léger** qu'une image pixelisée, indépendamment de sa taille et de sa résolution.
+À l'inverse de l'image matricielle composée de pixels, l'image vectorielle peut être **redimensionnée** sans pour autant perdre en qualité. Elle est contenue dans un **fichier beaucoup plus léger** qu'une image pixelisée, indépendamment de sa taille et de sa définition.
 En revanche, chaque forme d'une image vectorielle est remplie d'une seule couleur dite solide ou d'un dégradé de couleurs. Elle reste donc **limitée en termes de réalisme**, et donc inutilisable en photographie par exemple. De plus une image vectorielle ne peut être **créée qu'à partir d'un logiciel dédié**, et n'est pas reconnue par les navigateurs internet.
 
 Les formats vectoriels les plus courants sont Postscript (.ps) et Encapsulé Postscript (.eps), Adobe Illustrator (AI), Portable Document Format (PDF), WMF (format Windows).
@@ -521,7 +521,7 @@ Quelle est la définition d’une feuille scannée de largeur 6,5 pouces, de h
 :class: hint
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
-C'est la quantité de mémoire vive minimale que nécessite la carte graphique (VRAM) pour un écran de résolution 1024x768 en true color.
+C'est la quantité de mémoire vive minimale que nécessite la carte graphique (VRAM) pour un écran de définition 1024x768 en true color.
 
 ````
 
@@ -539,7 +539,7 @@ C'est la quantité de mémoire vive minimale que nécessite la carte graphique (
 :animate: fade-in-slide-down
 1. On multiplie 360 × 270 = 97200 pour obtenir le nombre de pixels. Poids de chaque pixel : 24 bits = 24/8 octets = 3 octets.
 
-   La taille en ménoire se calcule par 97200 × 3 = 291600 octets = 291600/1024 Ko ≈ 285 Ko.
+   La taille en mémoire se calcule par 97200 × 3 = 291600 octets = 291600/1024 Ko ≈ 285 Ko.
 
 2. On multiplie 1024 × 1024 = 1048576 : c'est le nombre de pixels... et la taille initiale de l'image en bits, puisque l'image est en noir et blanc (codage 1 bit par pixel).
 
@@ -552,9 +552,9 @@ C'est la quantité de mémoire vive minimale que nécessite la carte graphique (
 <!--- <span style="color:orange">Niveau intermédiaire</span> -->
 
 
-L’appareil numérique FinePix2400Z (Fujifilm) permet la prise de vue avec trois résolutions : a) 640x480 pixels ; b) 1280x960 pixels ; c) 1600x1200 pixels.
+L’appareil numérique FinePix2400Z (Fujifilm) permet la prise de vue avec trois définitions : a) 640x480 pixels ; b) 1280x960 pixels ; c) 1600x1200 pixels.
 
-Calculez pour chaque type de résolution la taille de l’image non-compressée.
+Calculez la taille de l’image non-compressée pour chaque définition.
 ......
 
 ````
@@ -569,7 +569,7 @@ Une image numérique de définition 1024×768 mesure 30 cm de large et 20 cm de 
 
 2. On a une photographie de 10 cm sur 5 cm que l'on scanne avec une résolution de 300 ppi. Quelle sera alors la taille de l'image (en nombre de pixels) ?
 
-3. Soit une image 15×9 cm, définie en RVB, que l'on scanne en 72, 300 et 1200 ppi. Quels seront les poids des images, pour une profondeur de 16 bits ?
+3. Soit une image 15×9 cm, définie en RVB, que l'on scanne en 72, 300 et 1200 ppi. Quels seront les poids des images, pour une profondeur de 16 bits par couleur ?
 ......
 
 ````
