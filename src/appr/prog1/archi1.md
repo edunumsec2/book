@@ -5,7 +5,7 @@ Dans ce chapitre, nous allons explorer les circuits logiques.
 - Créez chaque circuit comme demandé
 - Quand le circuit est terminé, cliquez sur **Screenshot** (dans le menu à droite)
 - La capture d'écran contient le code pour réouvrir le circuit dans l'éditeur [Logic](https://logic.modulo-info.ch/)
-- Déposez vos captures de circuits sur Moodle
+- Déposez vos captures de circuit sur Moodle
 
 ## Transmission d'un signal
 
@@ -14,10 +14,12 @@ Dans ce premier exemple se trouvent une entrée (in) et une sortie (out). Les de
 - 0 (noir)
 - 1 (jaune)
 
-Avec le menu contextuel, vous pouvez changer la couleur du fil ainsi que son délai de propagation.
+Avec le menu contextuel (clic-droit sur le fil), vous pouvez changer la couleur du fil ainsi que son délai de propagation.
 
-- Ajouter un deuxième fil avec un délai de propagation de 100 ms (rapide)
+- Ajoutez un deuxième fil avec un délai de propagation de 100 ms (rapide)
 - Ajoutez un troisième fil avec un délai de propagation de 10 ms (instantané)
+- Ajoutez un point intermédiaire au milieu du fil et déplacez-le un peu
+- Mettez la couleur du fil en rouge
 
 ```{logic}
 :ref: in_out
@@ -44,13 +46,17 @@ Les entrées ont deux modes que vous pouvez changer avec le menu contextuel:
 
 Changez la deuxième entrée en mode **poussoir** et augmentez le délai de propagation du fil à 1000 ms. Vous verrez alors des paquets d'informations se propager le long du fil.
 
+Vous pouvez ajouter des noms aux entrées sorties.
+- Ajoutez une entrée *lumière*, configurez en commutateur, et reliez-la à une sortie *lampe*
+- Ajoutez une entrée *sonnerie*, configurez en poussoir, et reliez-la à une sortie *alarme*
+
 ```{logic}
 :ref: poussoir
 :height: 240
 :showonly: in out
 {
   "v": 3,
-  "in": [{"pos": [110, 30], "id": 0, "name": "comm.", "val": 0}, {"pos": [110, 80], "id": 6, "name": "poussoir", "val": 0}],
+  "in": [{"pos": [140, 30], "id": 0, "name": "commutateur", "val": 0}, {"pos": [140, 80], "id": 6, "name": "poussoir", "val": 0}],
   "out": [{"pos": [460, 30], "id": 1}],
   "wires": [[0, 1, {"propagationDelay": 1000}]]
 }
@@ -62,6 +68,7 @@ Changez la deuxième entrée en mode **poussoir** et augmentez le délai de prop
 - Ajoutez deux autres segments carrés pour compléter un feu de circulation.
 - Changez l'affichage en grand carré
 - Changez les couleurs en jaune et rouge
+- Ajoutez les noms *rouge, jaune, vert*.
 
 ```{logic}
 :ref: feu
@@ -82,6 +89,7 @@ L'entrée horloge (clock) produit un signal qui alterne entre 0 et 1
 - Ajoutez une deuxième horloge
 - Ajoutez une deuxième lampe
 - Configurez l'horloge pour une période de 1 seconde
+- Augmenter la durée d 
 
 Avec le bouton **Pause** vous pouvez arrêter l'horloge.
 
@@ -99,8 +107,15 @@ Avec le bouton **Pause** vous pouvez arrêter l'horloge.
 
 ## Affichage à 7 segments
 
+Les affichages à 7 segments permettet d'afficher des chiffres à l'aide de 7 diodes lumineuses (LED).
+
+![LED](https://electronics-fun.com/wp-content/uploads/2020/11/Seven-segment-display.png)
+
 - Ajoutez les entrées et les lampes qui manquent pour compléter cet affichage à 7 segments.
+- Tournez la barre avec *Affichage > Barre verticale*
 - Ajoutez les étiquettes a à g
+- Ajoutez 7 entrées et ajoutez les étiquettes à à g
+- Affichez un nombre entre 0 et 9
 
 ```{logic}
 :ref: 7seg
@@ -143,6 +158,13 @@ L'état des lampes (a-g) ainsi que du point décimal (p) est déterminé par 8 b
 
 ## Affichage à 16 segments
 
+Les affichages à 16 segments permettent d'afficher aussi les lettres de l'alphabet, ainsi que des symboles de ponctuation.
+
+- Configurez l'affichage pour afficher la lettre Y
+- Ajoutez un deuxième affichage à 16 segments
+- Ajoutez deux entrées 8-bits et connectez-les.
+- Affichez la première lettre de votre nom
+
 - Ajoutez une deuxième entrée à octet
 - Configurez pour afficher la lettre X
 
@@ -167,7 +189,7 @@ La porte NON inverse un signal.
 ```{logic}
 :ref: not
 :height: 400
-:showonly: in not out.bar
+:showonly: in out not out.bar
 {
   "v": 3,
   "in": [{"pos": [40, 70], "id": 0, "val": 0}],
@@ -305,7 +327,7 @@ Complétez le circuit pour contrôler le feu de circulation avec deux entrées :
 
 ## Décoder 0 à 3
 
-Le tableau ci-dessous montre les segments à allumer pour afficher les nombres 0 à 3
+Le tableau ci-dessous montre les segments à allumer pour afficher les nombres 0 à 3 d'un affichage à 7 segments.
 
 | dec | b1 | b0 | a | b | c | d | e | f | g |
 |-----|----|----|---|---|---|---|---|---|---|
@@ -314,7 +336,21 @@ Le tableau ci-dessous montre les segments à allumer pour afficher les nombres 0
 | 2   | 1  | 0  | 1 | 1 | 0 | 1 | 1 | 0 | 1 |
 | 3   | 1  | 1  | 1 | 1 | 1 | 1 | 0 | 0 | 1 |
 
-- Ajoutez des portes NON et AND pour compléter le circuit
+Ajoutez des portes NON, OR, et AND pour compléter le circuit
+
+**Astuce** - Essayez de trouver le circuit logique pour chaque colonne.
+C'est à dire il faut trouver le circuit pour allumer le segment. 
+Par exemple pour le segment a vous avez la table de vérité suivante.
+
+| b1 | b0 | a |
+|----|----|---|
+| 0  | 0  | 1 |
+| 0  | 1  | 0 |
+| 1  | 0  | 1 |
+| 1  | 1  | 1 |
+
+Certaines colonnes sont identiques.  
+Donc vous pouvez utiliser le même signal.
 
 ```{logic}
 :ref: 7seg_0123
