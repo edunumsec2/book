@@ -81,7 +81,7 @@ Ajoutez la deuxième entrée, un bloc de visualisation, un décodeur 7 segments 
 ```{logic}
 :ref: add2
 :height: 500
-:showonly: in.nibble out.nibble decoder-7seg out.7seg
+:showonly: in.nibble out.nibble-display decoder-7seg out.7seg
 {
   "v": 3,
   "components": [{"type": "alu", "pos": [230, 200], "in": [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61], "out": [62, 63, 64, 65, 66, 67]}],
