@@ -32,7 +32,7 @@ Hedy Lamarr 🇺🇸
 ^^^^^
 ***1914-2000***
 
-L'actrice et femme fatale [**Hedy Lamarr**](https://fr.wikipedia.org/wiki/Hedy_Lamarr) a marqué l'histoire scientifique des télécommunications en inventant un moyen de coder des transmissions (étalement de spectre par saut de fréquence) utilisé encore dans le GPS et le Wi-Fi.
+L'actrice [**Hedy Lamarr**](https://fr.wikipedia.org/wiki/Hedy_Lamarr) a marqué l'histoire scientifique des télécommunications en inventant un moyen de coder des transmissions (étalement de spectre par saut de fréquence) utilisé encore dans le GPS et le Wi-Fi.
 
 ----
 :img-top: media/berners.png
