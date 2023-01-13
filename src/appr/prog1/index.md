@@ -1,8 +1,9 @@
 (prog1.programmation)=
+
 # Programmation I
 
-Programmer, c'est facile. Si vous savez dessiner, écrire et calculer, alors vous savez aussi programmer.
-Quand vous envoyez un message avec WhatsApp, postez une image sur Instagram ou parlez à Siri, vous interagissez avec votre smartphone ou votre ordinateur. Vous communiquez avec cette machine.
+Programmer peut être facile. Si vous savez déjà dessiner, écrire et calculer, alors c'est un petit pas pour écrire votre premier programme.
+Quand vous envoyez un message avec WhatsApp, postez une image sur Instagram ou parlez à Siri, vous interagissez avec votre smartphone ou votre ordinateur. Mais comment ça fonctionne ?
 
 Ce sont des programmes qui disent à votre ordinateur comment manipuler une image, un texte ou le son de votre voix. Mais, quelque part, ces programmes ont été écrits par des humains.
 
@@ -17,25 +18,34 @@ colorier
 repeter
 
 cercler
-memoriser
-parcourir
-write
-
-iterer
 parametrer
+parcourir
+positionner
+
+write
+iterer
+renvoyer
 randomiser
 
-questionner
 decider
+ordonner
+graphe
+reutiliser
+
+questionner
 ecrire
 attendre
-renvoyer
+
 grouper
 trier
 turtleart
 
 projet
 annexe
+archi1
+archi2
+archi3
+archi4
 ````
 
 ## Objectifs
