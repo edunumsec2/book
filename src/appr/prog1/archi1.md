@@ -14,7 +14,7 @@ Dans ce premier exemple se trouvent une entrée (in) et une sortie (out). Les de
 - 0 (noir)
 - 1 (jaune)
 
-Avec le menu contextuel (clic-droit sur le fil), vous pouvez changer la couleur du fil ainsi que son délai de propagation.
+Avec le menu contextuel (clic droit sur le fil), vous pouvez changer la couleur du fil ainsi que son délai de propagation.
 
 - Ajoutez un deuxième fil avec un délai de propagation de 100 ms (rapide)
 - Ajoutez un troisième fil avec un délai de propagation de 10 ms (instantané)
@@ -89,7 +89,6 @@ L'entrée horloge (clock) produit un signal qui alterne entre 0 et 1
 - Ajoutez une deuxième horloge
 - Ajoutez une deuxième lampe
 - Configurez l'horloge pour une période de 1 seconde
-- Augmenter la durée d 
 
 Avec le bouton **Pause** vous pouvez arrêter l'horloge.
 
@@ -107,7 +106,7 @@ Avec le bouton **Pause** vous pouvez arrêter l'horloge.
 
 ## Affichage à 7 segments
 
-Les affichages à 7 segments permettet d'afficher des chiffres à l'aide de 7 diodes lumineuses (LED).
+Les affichages à 7 segments permettent d'afficher des chiffres à l'aide de 7 diodes lumineuses (LED).
 
 ![LED](https://electronics-fun.com/wp-content/uploads/2020/11/Seven-segment-display.png)
 
@@ -165,9 +164,6 @@ Les affichages à 16 segments permettent d'afficher aussi les lettres de l'alpha
 - Ajoutez deux entrées 8-bits et connectez-les.
 - Affichez la première lettre de votre nom
 
-- Ajoutez une deuxième entrée à octet
-- Configurez pour afficher la lettre X
-
 ```{logic}
 :ref: 16seg
 :height: 300
@@ -182,20 +178,48 @@ Les affichages à 16 segments permettent d'afficher aussi les lettres de l'alpha
 
 ## Porte NON
 
-La porte NON inverse un signal.
+La porte NON inverse un signal. 
+Montrez sa table de vérité.
 
-- Ajoutez un deuxième segment rouge carré qui s'allume quand la lampe verte est éteinte
+- Mettez la première entrée à 0 et ajoutez une sortie
+- Ajoutez une deuxième porte NON avec l'entrée à 1
+
+Montrez l'effet de multiples portes NON.
+
+- Mettez deux portes NON en série, ajoutez une entrée et une sortie
+- Mettez trois portes NON en série, ajoutez une entrée et une sortie
 
 ```{logic}
-:ref: not
+:ref: not_
 :height: 400
-:showonly: in out not out.bar
+:showonly: in out not
 {
-  "v": 3,
-  "in": [{"pos": [40, 70], "id": 0, "val": 0}],
-  "gates": [{"type": "NOT", "pos": [150, 70], "in": 1, "out": 2}],
-  "out": [{"type": "bar", "pos": [330, 70], "id": 3, "display": "PX"}],
-  "wires": [[0, 1], [2, 3]]
+  "v": 4,
+  "in": [
+    {"pos": [70, 70], "id": 0, "val": 1}
+  ],
+  "gates": [
+    {"type": "NOT", "pos": [140, 70], "in": 1, "out": 2}
+  ],
+  "labels": [
+    {"pos": [120, 30], "text": "table de vérité"},
+    {"pos": [130, 210], "text": "multiples portes NON"}
+  ],
+  "wires": [[0, 1]]
+}
+```
+
+## Clignoter en alternance
+
+Utilisez les composants disponibles pour créer deux grandes lumières vertes qui clignotent en alternance toutes les secondes.  
+Attention au délai de transmission. Chaque fil ajoute un délai de 100 ms.
+
+```{logic}
+:ref: blink
+:height: 400
+:showonly: clock not out.bar
+{
+
 }
 ```
 
@@ -238,6 +262,40 @@ Utilisez une horloge et une porte NON pour afficher les chiffres 0 et 1 en alter
 ## Porte OU
 
 Une porte OU donne une sortie 1 si **au moins une** des entrées est à 1.
+
+- Montrez la table de vérité pour la porte OU. 
+- Ajoutez 3 portes OU et mettez les entrées à 01, 10, et 11
+- Créez une porte OU avec 3 entrées
+
+```{logic}
+:ref: or
+:height: 400
+:showonly: in out or
+{
+  "v": 4,
+  "in": [
+    {"pos": [40, 60], "id": 7, "val": 0},
+    {"pos": [40, 80], "id": 8, "val": 0},
+    {"pos": [270, 50], "id": 16, "val": 0},
+    {"pos": [270, 90], "id": 17, "val": 0},
+    {"pos": [270, 130], "id": 18, "val": 0}
+  ],
+  "out": [
+    {"pos": [180, 70], "id": 9},
+    {"pos": [510, 90], "id": 19}
+  ],
+  "gates": [
+    {"type": "OR", "pos": [110, 70], "in": [4, 5], "out": 6}
+  ],
+  "labels": [
+    {"pos": [110, 20], "text": "table de vérité"},
+    {"pos": [390, 20], "text": "porte OU avec 3 entrées"}
+  ],
+  "wires": [[7, 4], [8, 5], [6, 9]]
+}
+```
+
+## Décodeur de clavier
 
 Complétez le circuit pour un décodeur qui a le comportement suivant :
 
@@ -301,27 +359,69 @@ Complétez le circuit pour un décodeur qui a le comportement suivant :
 
 Une porte ET donne une sortie 1 seulement si **toutes** les entrées sont à 1.
 
-Complétez le circuit pour contrôler le feu de circulation avec deux entrées :
-
-- 00 tous les lampes éteintes
-- 01 seulement la lampe rouge allumée (haut)
-- 10 seulement la lampe jaune allumée (milieu)
-- 11 seulement la lampe verte allumée (bas)
+- Montrez la table de vérité pour la porte ET. 
+- Ajoutez 3 portes ET et mettez les entrées à 01, 10, et 11
+- Créez une porte ET avec 3 entrées
 
 ```{logic}
-:ref: feu_and
+:ref: and
 :height: 400
-:showonly: in not and out.7seg
+:showonly: in out and
 {
-  "v": 3,
-  "in": [{"pos": [60, 70], "id": 0, "name": "a", "val": 1}, {"pos": [60, 120], "id": 1, "name": "b", "val": 1}],
-  "out": [
-    {"type": "bar", "pos": [430, 70], "id": 2, "display": "PX", "color": "red"},
-    {"type": "bar", "pos": [430, 190], "id": 3, "display": "PX", "color": "yellow"},
-    {"type": "bar", "pos": [430, 310], "id": 4, "display": "PX"}
+  "v": 4,
+  "in": [
+    {"pos": [40, 60], "id": 7, "val": 0},
+    {"pos": [40, 80], "id": 8, "val": 0},
+    {"pos": [270, 50], "id": 16, "val": 0},
+    {"pos": [270, 90], "id": 17, "val": 0},
+    {"pos": [270, 130], "id": 18, "val": 0}
   ],
-  "gates": [{"type": "AND", "pos": [280, 310], "in": [5, 6], "out": 7}, {"type": "NOT", "pos": [200, 70], "in": 8, "out": 9}],
-  "wires": [[7, 4], [0, 5], [1, 6], [0, 8]]
+  "out": [
+    {"pos": [180, 70], "id": 9},
+    {"pos": [510, 90], "id": 19}
+  ],
+  "gates": [
+    {"type": "AND", "pos": [110, 70], "in": [4, 5], "out": 6}
+  ],
+  "labels": [
+    {"pos": [110, 20], "text": "table de vérité"},
+    {"pos": [390, 20], "text": "porte ET avec 3 entrées"}
+  ],
+  "wires": [[7, 4], [8, 5], [6, 9]]
+}
+```
+
+## Décodeur binaire
+
+Complétez le circuit pour créer un décodeur binaire. Chaque combinaison des deux entrées binaires allume une et une seule des 4 lampes.
+
+- 00 allume seulement lampe 0
+- 01 allume seulement lampe 1
+- 10 allume seulement lampe 2
+- 11 allume seulement lampe 3
+
+```{logic}
+:ref: 2bit-decoder
+:height: 450
+:showonly: in not and out.bar
+{
+  "v": 4,
+  "in": [
+    {"pos": [70, 60], "id": 0, "name": "b0", "val": 0},
+    {"pos": [70, 110], "id": 1, "name": "b1", "val": 0}
+  ],
+  "out": [
+    {"type": "bar", "pos": [460, 70], "id": 10, "display": "PX", "name": "0"},
+    {"type": "bar", "pos": [460, 270], "id": 11, "display": "PX", "name": "2"},
+    {"type": "bar", "pos": [460, 170], "id": 12, "display": "PX", "name": "1"},
+    {"type": "bar", "pos": [460, 370], "id": 13, "display": "PX", "name": "3"}
+  ],
+  "gates": [
+    {"type": "NOT", "pos": [140, 60], "in": 2, "out": 3},
+    {"type": "NOT", "pos": [140, 110], "in": 4, "out": 5},
+    {"type": "AND", "pos": [350, 70], "in": [6, 7], "out": 8}
+  ],
+  "wires": [[0, 2], [1, 4], [8, 10], [3, 6], [5, 7]]
 }
 ```
 
@@ -339,7 +439,7 @@ Le tableau ci-dessous montre les segments à allumer pour afficher les nombres 0
 Ajoutez des portes NON, OR, et AND pour compléter le circuit
 
 **Astuce** - Essayez de trouver le circuit logique pour chaque colonne.
-C'est à dire il faut trouver le circuit pour allumer le segment. 
+C'est-à-dire il faut trouver le circuit pour allumer le segment. 
 Par exemple pour le segment a vous avez la table de vérité suivante.
 
 | b1 | b0 | a |
@@ -373,3 +473,4 @@ Donc vous pouvez utiliser le même signal.
 }
 ```
 
+Pour ce dernier circuit, faites une capture d'écran pour chacune des 4 conditions.
