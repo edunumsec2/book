@@ -27,7 +27,8 @@ nombres pour référencer les machines connectées à Internet, c'est ce qu'on a
 la personne qui a enregistré le site *champignons.ch* a également reçu une (ou plusieurs) adresse IP de la part de
 Switch ou d'un intermédiaire.
 
-<!-- Ajouter une illustration de la gestion des noms de domaines?  -->
+{itodo}`Ajouter une illustration de la gestion des noms de domaines?`
+
 
 ```{micro}
 Déterminer à l'aide du site web <https://www.nic.ch/whois/> qui a enregistré le nom de domaine champignons.ch.
@@ -42,7 +43,7 @@ un nombre, un peu à la manière dont les numéros de téléphone sont attribué
 Dans sa version la plus courante, ce nombre est codé sur 32 bits, c'est-à-dire entre 0 et 4'294'967'295 c'est à dire $2^{32}-1$.
 On pensait alors (c'était en 1982) que 4 millard d'addresses seraient amplement suffisant pour pouvoir accommoder toutes les machines pendant encore beaucoup d'années, et qu'Internet
 ne dépasserait pas les 4 milliards de machines connectées.
-<!-- [dire combien il y en avait à l'époque]. -->
+{itodo}`[dire combien il y en avait à l'époque]`
 Afin de rendre ces adresses plus lisibles pour les humains, on décompose d'habitude une adresse IP de 32 bits en
 quatre groupes de 8 bits séparés par un point. Chaque groupe de 8 bits peut alors être représenté comme un nombre décimal
 entre 0 et 255 ($2^8-1$).
@@ -199,5 +200,5 @@ et l'identifier ainsi. C'est ce qu'on appelle en anglais le fingerprinting, que 
 
 Pour récapituler ce qui a été vu précédemment, les humains utilisent les noms de domaines pour les machines, alors que les machines, elles, utilisent les adresses IP. Afin que ces deux modes de recensement des machines soient cohérents entre eux, il est nécessaire de disposer d'un annuaire qui fera correspondre les noms de domaines aux adresses IP. Ceci est analogue aux annuaires téléphoniques qui permettent de faire correspondre le nom des personnes que l'on veut atteindre (qui serait équivalent au nom de domaine) au numéro de téléphone (qui est analogue à l'adresse IP). Cet annuaire est ce qu'on appelle le *système de noms de domaine* (Domain Name System ou DNS selon l'appellation anglaise). Au début d'Internet, il s'agissait simplement d'un fichier texte librement accessible qui listait le nom de domaines et les adresses IP correspondantes. Ce fichier était maintenu à la main. Maintenant, il s'agit de machines, les serveurs DNS dans le réseau auprès desquelles il est possible d'obtenir l'adresse IP correspondante à un nom de domaine. Ces machines sont aussi organisées hiérarchiquement de telle sorte que chaque serveur DNS ne stocke que les noms de domaines correspondant à une sous partie du réseau.
 
-<!-- [Mettre une illustration] -->
-<!-- [Donner quelques détails du système ? ] -->
+{itodo}` [Mettre une illustration]`
+{itodo}`[Donner quelques détails du système ?`

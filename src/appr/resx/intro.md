@@ -23,7 +23,7 @@ communication, l'opérateur central les met en relation, c'est-à-dire relie leu
 automatiquement (avec le téléphone à cadran rotatif). Dans un réseau décentralisé, la mise en lien doit se
 faire de manière décentralisée. C'est ce qu'on appelle le *routage*.
 
-<!-- Ajouter une illustration graphique) -->
+{itodo}` Ajouter une illustration graphique)`
 
 ### Commutation par paquets
 
@@ -55,7 +55,7 @@ connecter par wifi à un routeur, le protocole qui régit comment demander le co
 serveur, le protocole qui régit comment envoyer un email sur le réseau, ou se connecter à distance sur une
 autre machine (mettre les noms?).
 
-<!-- Parler des protocoles ouverts et fermés?) -->
+{itodo}` Parler des protocoles ouverts et fermés?) `
 
 ## Organisation du chapitre
 

@@ -17,7 +17,7 @@ Alice. Cela a l'avantage qui si, pour une raison ou une autre, une partie de l'i
 Les protocoles IP (Internet Protocol) et TCP (Transmission Control Protocol) décrivent le format ainsi que la gestion
 possible de ces paquets.
 
-<!-- [ajouter illustrations] -->
+{itodo}`[ajouter illustrations] `
 
 ## Le protocole IP
 

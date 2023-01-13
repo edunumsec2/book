@@ -67,7 +67,7 @@ Si la page `accueil.html` n'existe pas, alors le serveur pourra l'indiquer au cl
 `HTTP/1.1 404 Not Found`
 
 Le navigateur web pourra alors afficher l'"erreur 404" au pour l'utilisateur. 
-<!-- [Ajouter une illustration] -->
+{itodo}`[Ajouter une illustration]`
 
 Il y a d'autres sortes de requêtes que le client peut envoyer au serveur, par exemple `POST`pour envoyer une information du client au serveur, utilisé par exemple lorsqu'on remplit un formulaire en ligne.
 
@@ -91,7 +91,7 @@ page web contenant le nom d'un champignon ainsi qu'une photo de celui-ci. Une ma
 
 Les éléments de cette page sont indiqués par des *balises* indiquées par des crochets pointus (`<>`) et peuvent être imbriqués les uns dans les autres. Ainsi la page (entre `<body>` et `</body>`) contient un titre (entre `<h1>` et `</h1>`) de couleur rouge, un paragraphe de texte (entre `<p>` et `</p>`) ainsi qu'une image (`<img>`) disponible dans le fichier `photo.jpg` et de hauteur 300 pixels. Cette page pourra ainsi être affichée de la manière suivante dans le navigateur web.
 
-<!-- [inclure une image] -->
+{itodo}` [inclure une image]`
 
 La plupart des navigateurs web permettent de visualiser le *code  HTML* des pages visitées. Un aspect important de la création de sites web consiste à écrire du code HTML qui sera mis sur le serveur pour être transmis au visiteur du site web. Cela peut se faire en écrivant directement du code html dans un fichier texte, ou à l'aide d'un outil de création de sites web qui se charge d'écrire le code HTML selon les indications données par la personne concevant le site.
 
