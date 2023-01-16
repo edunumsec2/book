@@ -123,7 +123,14 @@ communication en envoyant un message TCP (juste l'entête, sans les données)
 à la machine serveur. Le protocole TCP spécifie les messages qui doivent être
 envoyés de part et d'autre pour initier la connection, comment ensuite
 envoyer et quittancer les données échangées, et comment mettre fin et terminer
-la connection une fois que tout a été envoyé et quittancé.
+la connexion une fois que tout a été envoyé et quittancé.
+
+La figure ci-dessous indique comment les fanion SYN, FIN sont utilisés pour
+indiquer que l'on veut respectivement initier et terminer une connexion, et comment
+le fanion ACK est utiliser pour confirmer la bonne réception de la demande ou des
+données, avec les numéros des séquences (#seq) et et d'acquittement (#ack). 
 
 
-
+```{figure} media/TCPprot.svg
+:width: 800
+```
