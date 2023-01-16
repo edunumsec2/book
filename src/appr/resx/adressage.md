@@ -151,7 +151,7 @@ les adresses 10.x.x.x.
 
 ```{exercise}
 - Combien y aurait-il eu d'adresses IP possibles s'il avait été décidé de l’encoder sur 24 bits?
-- Déterminez à l'aide du site xxx à quel continent sont allouées les adresses IP suivantes:
+- Déterminez à l'aide du site {itodo}`xxx` à quel continent sont allouées les adresses IP suivantes:
 - Déterminez l'entité suisse qui possède le plus d'adresses IP
 - Donnez la représentation binaire de l'adresse IP `y.y.y.y`
 - Combien y a-t-il d'adresses IP de type `192.168.x.x` ?

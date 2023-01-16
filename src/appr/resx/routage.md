@@ -93,5 +93,5 @@ de la table de routage de son voisin dont la destination n'est pas inclue (au se
 il l'ajoute à sa table en indiquant comme interface, celle le connectant avec ce voisin.
 De plus lorsqu'un routeur reçoit une ligne de la table de routage de son voisin dont la destination est incluse dans sa table, mais
 avec une distance plus grande, cela signifie qu'en passant par ce voisin le chemin sera plus court (ou égal) pour atteindre sa destination.
-Le routeur modifie sa table de routage pour faire passer les messages à destination de ce destinateur par ce voisin.
+Le routeur modifie sa table de routage pour faire passer par ce voisin les messages à destination de ce destinataire.
 {itodo}` [ajouter deux exemples] `

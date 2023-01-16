@@ -75,7 +75,8 @@ le début et la fin d'une conversation (les salutations), etc. Pour les machines
 précisées beaucoup plus précisément, car les machines n'ont pas la faculté d'interprétation et d'adaptation
 des humains. Dans un réseau décentralisé, il faut spécifier quels sont exactement les signaux que doit
 envoyer une machine qui veut se connecter au réseau et établir une communication avec une autre machine.
-C'est ce qu'on appelle le *protocole de communication*, par exemple comment la machine indique qu'elle veut
+C'est ce qu'on appelle le {glo}`protocolecomm|protocole de communication`, par exemple comment
+la machine indique qu'elle veut
 établir ou fermer une communication, comment elle indique avec qui elle veut établir une communication, etc.
 Il y a pleins de protocoles différents, par exemple le protocole qui régit comment une machine veut se
 connecter par wifi à un routeur, le protocole qui régit comment demander le contenu d'une page web à un

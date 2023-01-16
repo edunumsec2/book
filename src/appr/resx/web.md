@@ -38,7 +38,7 @@ Un exemple d'URL peut être par exemple "https://www.champignons.ch/fichiers/fr/
 Une URL comporte trop parties, qui sont les suivantes dans notre exemple |https|://www.champignons.ch|/fichiers/fr/contact.html|.  [mettre en couleur les trois parties]
 Autrement dit, une URL se compose généralement de la manière suivante:
 
-*protocol*:*hôte*/*chemin*  **sed s/domaine/hôte/g**
+*protocol*:*hôte*/*chemin*  {itodo}`**sed s/domaine/hôte/g**`
 
 1. Le *protocole*, dans notre exemple `https`, indique le protocole utilisé pour avoir accès à la ressource. Pour le web, ce protocole est toujours `http`ou `https`, sa version sécurisée. Mais l'URL étant aussi utilisée en dehors du web, il y a d'autres protocoles possibles, par exemple `ftp` pour faire du transfert de fichier.
 
@@ -101,3 +101,5 @@ Le web 2.0 fait référence à la tendance, initiée au débit des années 2000,
 de contribuer du contenu, et pas uniquement de lire des fichiers comme c'était le cas jusqu'alors. Les blogs, forums, wikis, et les réseaux sociaux font
 partie de ce développement qui voit exploser l'aspect participatif du web. Ce n'est en effet plus nécessaire de connaître la syntaxe HTML et d'avoir
 son propre serveur pour mettre du contenu à disposition de la planète entière.
+
+{itodo}` développer ?`

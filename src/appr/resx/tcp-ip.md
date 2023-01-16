@@ -99,7 +99,7 @@ n'a pas été altérée en chemin.
 ```{exercise}
 Un paquet a été intercepté sur Internet avec le contenu initial suivant
 indiqué en hexadécimal:
-
+{itodo}`XXXXX`
 
 
 1. Déterminer quelle partie de cette en-tête correspond à l'en-tête IP,
@@ -125,7 +125,7 @@ envoyés de part et d'autre pour initier la connection, comment ensuite
 envoyer et quittancer les données échangées, et comment mettre fin et terminer
 la connexion une fois que tout a été envoyé et quittancé.
 
-La figure ci-dessous indique comment les fanion SYN, FIN sont utilisés pour
+La figure ci-dessous indique comment les fanions SYN, FIN de l'entête TCP sont utilisés pour
 indiquer que l'on veut respectivement initier et terminer une connexion, et comment
 le fanion ACK est utiliser pour confirmer la bonne réception de la demande ou des
 données, avec les numéros des séquences (#seq) et et d'acquittement (#ack). 
@@ -134,3 +134,39 @@ données, avec les numéros des séquences (#seq) et et d'acquittement (#ack).
 ```{figure} media/TCPprot.svg
 :width: 800
 ```
+
+```{exercise}
+Un serveur reçoit un packet TCP avec le contenu suivant dans l'entête. Que cela signifie-t-il,
+et comment le serveur est-il sensé réagir? 
+
+1. FIN = 1, no de séquence = 257
+2. SYN = 1, no de séquence = 745
+3. ACK = 1, no de séquence = 343, no d'acquittement = 746, 
+````
+
+## Le protocole UDP
+TCP n'est pas l'unique moyen de transmettre des message par internet. Par exemple, si l'important est que les
+données soit transmises rapidement, même si certaines sont perdues en route, on peut utiliser le protocole UDP.
+Avec ce protocole, l'émetteur envoie des paquets au destinataire sans vérifier que ce dernier les reçoit, ou même
+qu'il est présent à l'adresse de destination. L'entête UDP ne contient que quatre champ de 2 octets chacun, déjà
+présents dans l'entête TCP. 
+
+| 2 octets    |2 octets          |2 octets        |2 octets           |
+|:------------|------------------|----------------|-------------------|
+| port source | port destination | longueur totale | somme de contrôle|
+
+Il n'y a donc pas de numérotations des séquences, ni de système d'acquittement, ce qui fait que si un paquet
+est perdu ou s'arrive en retard par rapport aux autres paquets, on l'expéditeur et le destinataire n'ont aucun
+moyen de le savoir. Par contre, cela permet d'aller plus vite, donc ce protocole est surtout utilisé dans les
+applications en temps réel. 
+
+
+```{exercise}
+Indiquer pour les applications suivantes, si le protocole TCP ou UDP serait plus adapté, et indiquer pourquoi. 
+
+1. La lecture d'une page web
+2. Une application de téléphonie par Internet
+3. Le streaming d'une vidéo
+4. Une application bancaire en ligne
+5. Un jeu vidéo en ligne
+````
