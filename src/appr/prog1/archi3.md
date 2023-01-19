@@ -69,7 +69,7 @@ Recréez un tel sélecteur avec des portes NON, ET, OU.
 
 ## Multiplexeur
 
-Le multiplexeur (MUX) permet de choisir entre deux signaux 4-bits nommées a et b.
+Le multiplexeur (MUX) permet de choisir entre deux signaux 4-bits nommés a et b.
 Ajoutez les éléments qui manquent. Ajoutez un décodeur et affichage à 7 segments.
 
 ```{logic}

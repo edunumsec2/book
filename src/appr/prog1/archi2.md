@@ -2,7 +2,7 @@
 
 Dans cette section, nous allons explorer d'abord la porte OU-X, l'additionneur qui sert de base pour
 
-- addtion
+- addition
 - soustraction
 - incrémentation
 - décrémentation
@@ -43,11 +43,13 @@ Créez une deuxième façon pour obtenir une porte OU exclusive en utilisant :
 
 ## Porte OU-X
 
-Une porte OU-X (ou exclusif) donne une sortie 1 si **exactement une** des entrées est à 1.
+Une porte OU-X (ou exclusif) avec 2 entrées donne une sortie 1 si **exactement une** des entrées est à 1.
 
 - Montrez la table de vérité pour la porte OU-X. 
 - Ajoutez 3 portes OU-X et mettez les entrées à 01, 10, et 11
 - Créez une porte OU-X avec 3 entrées et observez son comportement
+
+Comment se comporte une porte OU-X avec plus que 2 entrée ?
 
 ```{logic}
 :ref: or
@@ -106,7 +108,7 @@ Ajoutez encore 6 portes XOR et complétez la table de vérité pour les 8 combin
   ],
   "gates": [
     {"type": "XOR3", "pos": [130, 80], "in": [19, 20, 21], "out": 22},
-    {"type": "NOR3", "pos": [390, 80], "in": [29, 30, 31], "out": 32}
+    {"type": "XOR3", "pos": [390, 80], "in": [29, 30, 31], "out": 32}
   ],
   "labels": [
     {"pos": [110, 20], "text": "entrée pair"},
@@ -248,8 +250,8 @@ Vous constatez que la colonne s représente la parité. On pourra donc la constr
 
 ## Additionneur 4 bits
 
-Pour additionner deux nombres 4-bits (quartets) nous avons besoins de 4 additionneurs complets.
-Chaque sortie `C_out` est lié à la l'entrée `C_in` de l'additionneur suivant.
+Pour additionner deux nombres 4-bits (quartets) nous avons besoin de 4 additionneurs complets.
+Chaque sortie `C_out` est liée à la l'entrée `C_in` de l'additionneur suivant.
 
 - Ajoutez les circuits manquants pour additionner deux nombres 4-bits.
 - Montrez l'addition de 7+5 dont le résultat devrait être 12.
@@ -295,12 +297,12 @@ Chaque sortie `C_out` est lié à la l'entrée `C_in` de l'additionneur suivant.
 
 ## Incrémenter (`i++`)
 
-Additionner 1 à un nombre binaire est une opération très fréquente. Elle est utilisé pour incrémenter le compteur de programe `pc` (program counter), pour pointer à la prochaine instruction.
+Additionner 1 à un nombre binaire est une opération très fréquente. Elle est utilisée pour incrémenter le compteur de programme `pc` (program counter), pour pointer à la prochaine instruction.
 
-Completez le circuit pour incrementer la variable `i`. 
-Dans beaucoup de langages de programmation une variable incrémenté est désigné par `i++`.
+Complétez le circuit pour incrémenter la variable `i`. 
+Dans beaucoup de langages de programmation, une variable incrémentée est désignée par `i++`.
 
-D'ailleur le nom du langauge de programmation C++ est une référence à cet opérateur d'incrémentation.
+D'ailleurs le nom du langage de programmation C++ est une référence à cet opérateur d'incrémentation.
 
 ```{logic}
 :ref: inc
@@ -327,10 +329,10 @@ D'ailleur le nom du langauge de programmation C++ est une référence à cet op�
 
 ## Décrémenter (`i--`)
 
-Soustraire 1 à un nombre binaire est une opération très fréquente. Elle est utilisé pour décrémenter un compteur de boucle `i`, un pointeur de pile `sp` (stack pointer), ou un pointeur `p` vers les addresses de la mémoire.
+Soustraire 1 à un nombre binaire est une opération très fréquente. Elle est utilisée pour décrémenter un compteur de boucle `i`, un pointeur de pile `sp` (stack pointer), ou un pointeur `p` vers les adresses de la mémoire.
 
-Completez le circuit pour décrémenter la variable `i`. 
-Dans beaucoup de langages de programmation une variable incrémenté est désigné par `i--`.
+Complétez le circuit pour décrémenter la variable `i`. 
+Dans beaucoup de langages de programmation, une variable incrémentée est désignée par `i--`.
 
 Astuce : pour décrémenter la valeur `i` il suffit d'additionner `1111` qui représente la valeur -1 en format signé.
 
@@ -359,11 +361,18 @@ Astuce : pour décrémenter la valeur `i` il suffit d'additionner `1111` qui rep
 
 ## Inverser (`-i`)
 
-Les nombres signés sont représenté avec le format *complément à deux*.
+Les nombres signés sont représentés avec le format *complément à deux*. Pour un nombre 4-bits ceci nous donne une plage de -8 à +7 pour des entiers relatifs, et une plage de 0 à 15 pour des entièrs naturels. Nous constatons que la plage signée n'est pas symmétrique: le coté négatif compte un nombre en plus.
 
-L'opération pour trouver le nombre négatif est d'inverser toutes les bits et d'additionner 1.
+![signed](circuit/2add/4bitsIntegers.jpg)
 
-Completez le circuit pour inverser le signe de la variable `i` et obtenir son négatif `-i`
+L'opération pour trouver le nombre négatif est: inverser tous les bits et additionner 1.  
+Mathématiqument nous pouvons éxprimer cette opération comme:
+
+`-i = ~i + 1`
+
+Par exemple, pour obtenir la représentation binaire de -1 nous inversons `0001`, ce qui donne `1110` et nous additionnons 1, ce qui donne `1111`.
+
+Complétez le circuit pour inverser le signe de la variable `i` et obtenir son négatif `-i`
 
 ```{logic}
 :ref: inc
@@ -395,7 +404,7 @@ Completez le circuit pour inverser le signe de la variable `i` et obtenir son n�
 
 Pour soustraire deux nombres `a-b` il suffit d'additionner le nombre négatif du deuxième (`-b`).
 
-Complétez le circuit pour soustraire `a-b`. Le resultat de 10-3 devrait être 7.
+Complétez le circuit pour soustraire `a-b`. Le résultat de 10-3 devrait être 7.
 
 ```{logic}
 :ref: inc
@@ -429,7 +438,7 @@ Complétez le circuit pour soustraire `a-b`. Le resultat de 10-3 devrait être 7
 
 L'inverseur commuté permet d'inverser toutes les 4 bites d'un nombre.
 
-Ajoutez un inverseur commuté pour ouvoir obtenir `~a` ou `a` selon l'état du sélecteur.
+Ajoutez un inverseur commuté pour obtenir `~a` ou `a` selon l'état du sélecteur.
 
 ```{logic}
 :ref: inc
@@ -514,22 +523,26 @@ Les fanions (flag) sont des signaux qui caractérisent un nombre.
 
 - N pour indiquer que le nombre est négatif
 - Z pour indiquer que le nombre est zéro
+- P pour indiquer que le nombre de bits à 1 est pair
 
-Complétez le circuit pour correctement afficher les fanions N et Z.
+Par exemple pour le nombre `1001` (-7) on aura `N=1`, `Z=0` et `P=1`.
+
+Complétez le circuit pour correctement afficher les fanions N, Z et P.
 
 ```{logic}
 :ref: flag
 :height: 400
-:showonly: in out in.nibble nor4
+:showonly: in out in.nibble nor4 xnor4
 {
   "v": 4,
   "in": [
-    {"type": "nibble", "pos": [40, 70], "id": [0, 1, 2, 3], "val": [1, 0, 1, 1], "name": "a"}
+    {"type": "nibble", "pos": [40, 70], "id": [0, 1, 2, 3], "val": [1, 0, 0, 1]}
   ],
   "out": [
     {"type": "nibble-display", "pos": [320, 70], "id": [4, 5, 6, 7], "radix": -10},
     {"pos": [320, 190], "id": 13, "name": "Z"},
-    {"pos": [320, 150], "id": 14, "name": "N"}
+    {"pos": [320, 150], "id": 14, "name": "N"},
+    {"pos": [320, 290], "id": 20, "name": "P"}
   ],
   "wires": [[0, 4], [1, 5], [2, 6], [3, 7]]
 }

@@ -87,7 +87,7 @@ Vous pouvez ajouter des noms aux entrées sorties.
 L'entrée horloge (clock) produit un signal qui alterne entre 0 et 1
 
 - Ajoutez une deuxième horloge
-- Ajoutez une deuxième lampe
+- Ajoutez une deuxième lampe (grand segment carré)
 - Configurez l'horloge pour une période de 1 seconde
 
 Avec le bouton **Pause** vous pouvez arrêter l'horloge.
@@ -112,8 +112,8 @@ Les affichages à 7 segments permettent d'afficher des chiffres à l'aide de 7 d
 
 - Ajoutez les entrées et les lampes qui manquent pour compléter cet affichage à 7 segments.
 - Tournez la barre avec *Affichage > Barre verticale*
-- Ajoutez les étiquettes a à g
-- Ajoutez 7 entrées et ajoutez les étiquettes à à g
+- Ajoutez les étiquettes a-g
+- Ajoutez 7 entrées et ajoutez les étiquettes a-g
 - Affichez un nombre entre 0 et 9
 
 ```{logic}

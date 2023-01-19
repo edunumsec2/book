@@ -1,4 +1,4 @@
-# TP mémoire
+# TP Mémoire
 
 Les circuits que nous avons vus jusqu'à maintenant s'appellent circuits combinatoires.
 La famille de circuits que nous allons découvrir s'appelle circuit séquentiel.
