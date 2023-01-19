@@ -101,7 +101,7 @@ Une bascule D avec une rétroaction de la sorte Q_inv vers son entrée D divise 
 ## Compteur 4 bits
 
 Le compteur 4 bits utilise un signal d'horloge et incrémenté à chaque coup d'horloge.
-Un un décodeur à 7 segments transforme les 4 signaux qui représentent un nombre binaire de 0 à 16 vers les sorties correspondant pour activer les bonnes lampes de l'affichage à 7 segments.
+Un décodeur à 7 segments transforme les 4 signaux qui représentent un nombre binaire de 0 à 16 vers les sorties correspondant pour activer les bonnes lampes de l'affichage à 7 segments.
 
 - Utilisez le signal de sortie V (overflow) pour faire fonctionner un deuxième compteur
 - Ceci donnera un compteur 8 bit, permettant de compter de 0 à FF (255)
