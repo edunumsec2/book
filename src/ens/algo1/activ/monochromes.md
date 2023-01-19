@@ -20,18 +20,22 @@ Cette activité amène progressivement l'élève à simuler un « variateur de l
 
 ```
 
+
 ## Déroulement
 
 
 | Étape                                   | Durée  | Phase de l'activité   | 
 |---------------------------------------|------ |---------------------|
 | {ref}`0. Analyse de code<apprentissage.analyse>`  | 10 min  | Apprentissage           |
-| {ref}`1. Deuxième écran<apprentissage.augmentation>`           | 10 min  | Exploration |
-| {ref}`2. Un intervalle<apprentissage.plus>`  | 15 min   | Exploration          |
-| {ref}`3. Différents intervalles<apprentissage.optimisation>`  | 10 min   | Exploration              |
-| {ref}`4. Stroboscope fixe<apprentissage.alternative>`    | 15 min   | Exploration et institutionnalisation    |
-| {ref}`5. Stroboscope aléatoire<apprentissage.variateur>`    | 15 min   | Enseignement et institutionnalisation  |
-| {ref}`6. Stroboscope paramétré<apprentissage.hsv>`          | 15 min   | Institutionnalisation            |
+| {ref}`1. Parcours de couleurs<apprentissage.augmentation>`           | 15 min  | Exploration |
+| {ref}`2. Double parcours<apprentissage.plus>`  | 10 min   | Exploration          |
+| {ref}`3. Optimisation. Un parcours unique<apprentissage.optimisation>`  | 10 min   | Exploration              |
+| {ref}`4. Alternative. Un parcours unique<apprentissage.alternative>`    | 15 min   | Exploration et institutionnalisation    |
+| {ref}`5. Variateur de lampe LED<apprentissage.variateur>`    | 15 min   | Enseignement et institutionnalisation  |
+| {ref}`6. Système HSV<apprentissage.hsv>`          | 15 min   | Institutionnalisation            |
+
+
+
 
 
 (apprentissage.analyse)=
@@ -45,58 +49,62 @@ Conseil : le raccourci *ctrl+c* permet de quitter le programme plus rapidement q
 
 
 (apprentissage.augmentation)=
-### 1. Deuxième écran
+### 1. Parcours de couleurs
 
-*Durée : 10 min*
+*Durée : 15 min*
 
-Dupliquer le fichier. Changer le 0 dans le nom du fichier en 1. Modifier le code pour passer progressivement d'un écran blanc à un écran noir. 
+Dupliquer le fichier. Changer le 0 dans le nom du fichier en 1. Modifier le code pour rajouter un écran blanc après  l'écran noir. 
 
-*A votre avis pourquoi l'écran blanc s'affiche à nouveau ?* 
+"A votre avis pourquoi l'écran blanc s'affiche à nouveau ?*
 
 
 (apprentissage.plus)=
-### 2. Un intervalle
-
-*Durée : 15 min*
-
-Dupliquer le fichier. Changer le 1 dans le nom du fichier en 2. Contrôler l'alternance entre les deux écrans en changeant de couleur toutes les secondes, grâce à la fonction *sleep()* du module *time*.
-
-
-(apprentissage.optimisation)=
-### 3. Différents intervalles
+### 2. Double parcours
 
 *Durée : 10 min*
 
-[Optionnel] Dupliquer le fichier. Changer le 3 dans le nom du fichier en 4. Essayer différents temps d’attente entre deux écrans. 
+Dupliquer le fichier. Changer le 1 dans le nom du fichier en 2. Rajouter un parcours de couleurs dans l'autre sens, afin d'éviter la transition brusque entre la couleur blanche à noire.
 
-*Attention à ne pas descendre en-dessous de 0.5 si vous êtes épileptique.*
+
+(apprentissage.optimisation)=
+### 3. Optimisation. Un parcours unique
+
+*Durée : 10 min*
+
+[Optionnel] Dupliquer le fichier. Changer le 2 dans le nom du fichier en 3. Plutôt que d’avoir deux parcours de couleurs (noir à blanc, suivi de blanc à noir), essayer d’avoir un parcours unique qui se base sur la valeur d'une variable qui paramètre le sens du parcours dans la fonction *range()*. Changer de sens après un parcours.
 
 (apprentissage.alternative)=
-### 4. Stroboscope fixe
+### 4. Alternative. Un parcours unique
 
 *Durée : 15 min*
 
-[Optionnel] Dupliquer le fichier. Changer le 3 dans le nom du fichier en 4. Mettre le temps d’attente entre deux écrans à une valeur qui permette d’avoir une fréquence de 5Hz, ce qui correspond à un stroboscope. 
+[Optionnel] Dupliquer le fichier. Changer le 3 dans le nom du fichier en 4. Plutôt que d’avoir deux parcours de couleurs (noir à blanc, suivi de blanc à noir), essayer d’avoir un parcours unique qui se base sur la valeur d'une variable qui change le sens du parcours en changeant *background_color*. Changer de sens après un parcours.
 
-*Attention à ne pas descendre en-dessous de 0.5 si vous êtes épileptique.*
 
 (apprentissage.variateur)=
-### 5. Stroboscope aléatoire
+### 5. Variateur de lampe LED
 
 *Durée : 15 min*
 
-5.	Créer une séquence imprévisible, en utilisant la fonction *random()* du module *random*.
+Faire parcourir les couleurs dans l’ordre de l’image ci-dessous, ce qui correspond aux teintes saturées du cercle chromatique. 
 
+```{figure} media/hsv_saturated.png
+---
+alt: couleurs hsv saturées
+width: 420px
+name : hsv_saturated
+---
+```
 
 *Avez-vous pensé à dupliquer le fichier et changer le numéro 4 en 5 dans le nom ?*
 
 
 (apprentissage.hsv)=
-### 6. Stroboscope paramétré
+### 6. Système HSV
 
 *Durée : 15 min*
 
-Ajouter un paramètre pour contrôler la fréquence d’affichage de la séquence imprévisible. [Pour les avancés] Ajouter une interface (boutons ou *scroll bar*) pour contrôler la durée maximale de l'intervalle temporel, ou la variation de l'intervalle temporel.
+[Difficile, pour les avancés] Afficher les valeurs RGB de chaque teinte HSV afin de comprendre la relation qui existe entre ces deux systèmes de représentation numérique des couleurs (utiliser *matplotlib.pyplot*).
 
 
 ## Considérations didactiques
@@ -107,24 +115,51 @@ Si le niveau de la classe est faible, répartir les élèves en équipes de dév
 
 ### Institutionnalisation n° 1
 
-**[A faire après l'étape 2]** Si on ajoute un temps d’attente uniquement après le premier affichage, la fenêtre reste blanche, il faut à ce stade comprendre que le code de la fenêtre noire s’exécute aussi, mais trop rapidement pour être visible à l’œil nu.
+**[A faire après l'étape 4]** La première, ainsi que la deuxième, idée d’implémentation n’est pas la plus compacte. Un même algorithme (objectif) peut être implémenté de plusieurs manières différents, et cela vaut la peine de réfléchir à l’implémentation en amont. 
+
+Pour gagner du temps, il est possible de présenter les 3 manières de résoudre le même problème et de demander aux élèves comment ils ont procéder, et quelle est la meilleure solution d'après eux.
+
+*La première idée qu'on a est souvent la plus simple, mais c'est rarement la meilleure idée*.
 
 ### Institutionnalisation n° 2
 
-**[A faire après l'étape 3]** Insister sur l'importance d'introduire à ce stade une variable (ici *time_interval*), pour éviter de devoir changer la valeur à deux endroits.
+**[A faire après l'étape 5]** Cet exercice est beaucoup plus facile à résoudre lorsqu’on passe en représentation HSV au lieu de RVB, une seule boucle au lieu de 3 boucles imbriquées. La *représentation de couleur* que l’on choisit a un impact fort sur la résolution de l’exercice. Il faut probablement donner cette solution aux élèves, une fois qu’ils ont suffisamment essayé de résoudre l’exercice en utilisant le système RGB, car elle est difficile à trouver.
 
-*Principe de modularité : je ne duplique pas un bout de code, je le définis.*
+```{code-block} 
+color_hsva = pygame.Color(0)
 
+# parcourir les 360 teintes (les limites "se rejoignent")
+for color_value in range(0,360) :
+
+    # passer en représentation HSL pour parcourir les teintes
+    color_hsva.hsva = (color_value,100,100,100)
+```
+
+*Avant de coder, il faut vous poser la question de comment représenter l'information dont vous avez besoin pour résoudre le problème.*
 
 
 ### Institutionnalisation n° 3
 
-**[A faire à la fin]** Il est trop difficile de résoudre un problème du premier coup. Il faut procéder de manière incrémentale, par petits paliers. Si l'on souhaite créer un variateur de couleurs, il faut définir des objectifs intermédiaires plus facilement atteignables, ici le parcours de luminosité ou un variateur noir et blanc.
+**[A faire après l'étape 6]** La relation entre HSV et RGB est visible dans la figure ci-dessous.
+
+```{figure} media/HSV_to_RGB.png
+---
+alt: couleurs hsv saturées
+width: 420px
+name : hsv_saturated
+---
+```
+
+*Dans le système HSV on fait varier les couleurs RGB une à la fois, dans un ordre bien précis. H représente la teinte, S la saturation et V la luminosité.*
+
+### Institutionnalisation n° 4
+
+**[A faire à la fin]** Il est trop difficile de résoudre un problème du premier coup. Il faut procéder de manière progressive, par petits paliers. Si l'on souhaite créer un variateur de couleurs, il faut définir des objectifs intermédiaires plus facilement atteignables, ici le parcours de luminosité ou un variateur noir et blanc.
 
 *Pour résoudre un problème il faut le « découper », et le résoudre un bout à la fois. Il vaut mieux viser de multiples objectifs atteignables, qu'un seul objectif géant.*
 
 
-### Institutionnalisation n° 4
+### Institutionnalisation n° 5
 
 **[A faire à la fin]** Le *versionnage* consiste à garder toutes les versions d'un même code. Le versionnage permet de se souvenir de la progression dans la résolution d'un problème et de ne pas "tout casser" lorsqu'on modifie le programme (on peut toujours revenir à une version qui marche). 
 
@@ -134,10 +169,9 @@ Si le niveau de la classe est faible, répartir les élèves en équipes de dév
 
 ## Liens avec les autres thématiques
 
-Possibilité de faire référence au hasard dans l'algorithmique, par exemple choix du pivot dans le tri rapide ou certaines heuristiques comme les *méthodes de Monte-Carlo*.
+Les images dans *Représentation de l'information*.
 
 
-<!--
 ## Ressources complémentaires
 
-[https://download.tuxfamily.org/linuxgraphic/archives/grokking/node51.html](https://download.tuxfamily.org/linuxgraphic/archives/grokking/node51.html)-->
+[https://download.tuxfamily.org/linuxgraphic/archives/grokking/node51.html](https://download.tuxfamily.org/linuxgraphic/archives/grokking/node51.html)

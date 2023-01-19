@@ -1,0 +1,9 @@
+{
+  "v": 4,
+  "in": [
+    {"pos": [190, 80], "id": 0, "name": "Clock (horloge)", "val": 0, "isPushButton": true}
+  ],
+  "out": [
+    {"pos": [410, 40], "id": 7, "name": "Q (sortie normale)"}
+  ]
+}

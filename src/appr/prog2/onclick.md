@@ -29,34 +29,11 @@ La variable `s` fait référence à l’objet `Screen` qui possède les deux mé
 - `onclick(f)` pour installer une fonction de rappel f() pour un clic de souris,
 - `listen()` pour commencer à *écouter* les événements de la souris.
 
-Le programme suivant dessine un point à la position du clic et affiche les coordonnées dans la console.
+Le programme suivant dessine un point à la position du clic et affiche les coordonnées du point.
 
 ```{exercise}
 Cliquez dans les 4 coins et au centre.
 ```
-
-```{codeplay}
-:file: onclick1.py
-:max_output_lines: 3
-from turtle import *
-s = getscreen()
-
-hideturtle()
-speed(0)
-up()
-
-def f(x, y):
-    print('clic à', x, y)
-    goto(x, y)
-    dot()
-
-s.onclick(f)
-s.listen()
-```
-
-## Les coordonnées
-
-Nous pouvons ajouter les coordonnées.
 
 ```{codeplay}
 :file: onclick2.py
@@ -120,41 +97,6 @@ def f(x, y):
     write(phrase[i], font=(None, 24))
     i = (i + 1) % len(phrase)
 
-s.onclick(f)
-s.listen()
-```
-
-## Tortue ou écran
-
-Une fonction `onclick()` existe pour l'écran et pour chaque tortue.
-Donc nous avons deux fonctions de rappel différentes: une pour des clics dans l'écran en général, et une que pour des clics dans la tortue.
-
-La fonction de rappel …
-
-- `f` est appelé quand nous cliquons dans l'écran
-- `g` est appelé quand nous cliquons dans la tortue
-
-La fonction de rappel de la tortue fait avancer la tortue de 20 pixels.
-
-```{exercise}
-Cliquez dans dans la tortue et à côté et observez la différence.
-```
-
-```{codeplay}
-:file: onclick4.py
-from turtle import *
-s = getscreen()
-t = getturtle()
-shape('turtle')
-
-def f(x, y):
-    print('écran à ', x, y)
-    
-def g(x, y):
-    print('tortue à', x, y)
-    forward(20)
-
-t.onclick(g)
 s.onclick(f)
 s.listen()
 ```
@@ -231,13 +173,93 @@ s.onclick(ligne)
 s.listen()
 ```
 
-## Une grille
+## Lignes aimantées
 
-Par la suite nous allons places les points sur une grille. Voici comment indiquer les positions de la grille.
+Dans un éditeur il peut être pratique de déplacer les cliques vers une ligne de grille la plus proche.
+
+L'expression `x // d * d` divise la coordonnée x par d et perds ainsi la partie décimale.
+En mulitpliant par d nous obtenons des valeurs qui sont des multiples de d.
+
+L'expression `(x + d/2) // d * d` déplace le coordonnée x de la moitié de d.
+Le resultat est un déplacement horizontalement des points vers la ligne la plus proche, comme si les points serait attirés par une ligne aimanté. 
+
+```{exercise}
+Cliquez dans le canevas et observez comment les clics sont attiré horizontalement vers la ligne la plus proche.  
+Modifiez d à 200.
+```
 
 ```{codeplay}
-:file: onclick7.py
 from turtle import *
+s = getscreen()
+speed(0)
+up()
+d = 100
+
+for x in range(-300, 301, d):
+    goto(x, -200)
+    down()
+    goto(x, 200)
+    up()
+
+def f(x, y):
+    goto(x, y)
+    down()
+    dot()
+    q = (x + d/2) // d * d, y
+    seth(towards(q))
+    goto(q)
+    stamp()
+    up()
+
+s.onclick(f)
+```
+
+## Points aimantés
+
+Dans un éditeur il peut être pratique d'aligner les clics de la souris avec des positions d'une grille de points.
+
+L'expression `(x + d/2) // d * d` aligne le point en horizontale.  
+L'expression `(y + d/2) // d * d` aligne le point en verticale.  
+
+```{exercise}
+Cliquez dans le canevas et observez comment les clics sont attiré vers le point le plus proche.  
+Modifiez d à 75.
+```
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+hideturtle()
+speed(0)
+up()
+d = 150
+
+for y in range(-150, 151, d):
+    for x in range(-300, 301, d):
+        goto(x, y)
+        dot(d/5, 'red')
+
+def f(x, y):
+    goto(x, y)
+    down()
+    x = (x + d/2) // d * d
+    y = (y + d/2) // d * d
+    seth(towards(x, y))
+    goto(x, y)
+    stamp()
+    up()
+
+s.onclick(f)
+```
+
+## Aligner sur une grille
+
+Nous pouvons faire en sorte que les points tombent sur les intersections d'une grille.
+
+```{codeplay}
+from turtle import *
+s = getscreen()
+hideturtle()
 speed(0)
 up()
 d = 80
@@ -246,11 +268,19 @@ for y in range(-160, 200, d):
     for x in range(-240, 300, d):
         goto(x, y)
         dot()
+
+def f(x, y):
+    x = (x + d/2) // d * d
+    y = (y + d/2) // d * d
+    goto(x, y)
+    down()
+    dot(d/4, 'red') 
+
+s.onclick(f)
+s.listen
 ```
 
-## Placer en grille
-
-Nous pouvons arranger les disques en grille.
+Nous pouvons arranger les disques noirs en grille.
 
 ```{codeplay}
 :file: onclick8.py
@@ -276,41 +306,12 @@ s.onclick(f)
 s.listen
 ```
 
-## Points aimantés
-
-Nous pouvons faire en sorte que les points tombent sur les intersections d'une
-
-```{codeplay}
-:file: onclick9.py
-from turtle import *
-s = getscreen()
-hideturtle()
-speed(0)
-up()
-d = 80
-
-for y in range(-160, 200, d):
-    for x in range(-240, 300, d):
-        goto(x, y)
-        dot()
-
-def f(x, y):
-    x = (x + d/2) // d * d
-    y = (y + d/2) // d * d
-    goto(x, y)
-    down()
-    dot(d/4, 'red') 
-
-s.onclick(f)
-s.listen
-```
-
-## Dessiner une grille
+## Placer dans des cases
 
 Ici nous dessinons d'abord un tableau de jeu. Ensuite nous détectons la case dans laquelle le clic a eu lieu et y ajoutons un disque.
+Observez que les disques peuvent se placer en dehors du tableau de jeu.
 
 ```{codeplay}
-:file: onclick10.py
 from turtle import *
 s = getscreen()
 hideturtle()
@@ -344,6 +345,7 @@ s.listen()
 ## Échiquier
 
 Ici nous dessinons d'abord un tableau de jeu. Ensuite nous détectons la case dans laquelle le clic a eu lieu et y ajoutons un disque noir.
+Cette fois nous faisons on test pour voir si le clic est dans l'intérieur du tableau de jeu.
 
 ```{codeplay}
 :file: onclick11.py

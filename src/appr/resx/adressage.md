@@ -1,6 +1,6 @@
 # Adressage
 
-(ou comment identifier son interlocuteur)
+ou comment identifier son interlocuteur ou interlocutrice
 
 ## Les noms de domaine
 
@@ -8,7 +8,8 @@ Le nom *champignons.ch* est ce qu'on appelle un *nom de domaine*.
 Les noms de domaines sont gérés par l'ICANN, une organisation non gouvernementale à but non lucratif
 basée aux États-Unis dont la fonction principale est la gestion de l'adressage sur Internet.
 Les noms de domaines sont gérés de manière hiérarchique, selon le
-*nom de domaine de premier niveau*, c'est à dire la "terminaison" de l'adresse (*.ch*, *.org*, *.fr*, etc.)Ainsi la gestion des adresses en *.ch* est confiée à Switch, une fondation suisse dont c'est le rôle principal.La personne qui a créé le site *champignons.ch* a donc
+*nom de domaine de premier niveau*, c'est à dire la "terminaison" de l'adresse (*.ch*, *.org*, *.fr*, etc.) Ainsi la gestion des adresses en *.ch* est
+confiée à Switch, une fondation suisse dont c'est le rôle principal. La personne qui a créé le site *champignons.ch* a donc
 réservé ce nom de domaine auprès de Switch (en passant par un intermédiaire) et peut le conserver moyennant un paiement d'environ CHF 15.- par an.
 
 ```{didyouknow}
@@ -27,7 +28,8 @@ nombres pour référencer les machines connectées à Internet, c'est ce qu'on a
 la personne qui a enregistré le site *champignons.ch* a également reçu une (ou plusieurs) adresse IP de la part de
 Switch ou d'un intermédiaire.
 
-<!-- Ajouter une illustration de la gestion des noms de domaines?  -->
+{itodo}`Ajouter une illustration de la gestion des noms de domaines?`
+
 
 ```{micro}
 Déterminer à l'aide du site web <https://www.nic.ch/whois/> qui a enregistré le nom de domaine champignons.ch.
@@ -42,7 +44,7 @@ un nombre, un peu à la manière dont les numéros de téléphone sont attribué
 Dans sa version la plus courante, ce nombre est codé sur 32 bits, c'est-à-dire entre 0 et 4'294'967'295 c'est à dire $2^{32}-1$.
 On pensait alors (c'était en 1982) que 4 millard d'addresses seraient amplement suffisant pour pouvoir accommoder toutes les machines pendant encore beaucoup d'années, et qu'Internet
 ne dépasserait pas les 4 milliards de machines connectées.
-<!-- [dire combien il y en avait à l'époque]. -->
+{itodo}`[dire combien il y en avait à l'époque]`
 Afin de rendre ces adresses plus lisibles pour les humains, on décompose d'habitude une adresse IP de 32 bits en
 quatre groupes de 8 bits séparés par un point. Chaque groupe de 8 bits peut alors être représenté comme un nombre décimal
 entre 0 et 255 ($2^8-1$).
@@ -149,7 +151,7 @@ les adresses 10.x.x.x.
 
 ```{exercise}
 - Combien y aurait-il eu d'adresses IP possibles s'il avait été décidé de l’encoder sur 24 bits?
-- Déterminez à l'aide du site xxx à quel continent sont allouées les adresses IP suivantes:
+- Déterminez à l'aide du site {itodo}`xxx` à quel continent sont allouées les adresses IP suivantes:
 - Déterminez l'entité suisse qui possède le plus d'adresses IP
 - Donnez la représentation binaire de l'adresse IP `y.y.y.y`
 - Combien y a-t-il d'adresses IP de type `192.168.x.x` ?
@@ -197,7 +199,16 @@ et l'identifier ainsi. C'est ce qu'on appelle en anglais le fingerprinting, que 
 
 ### Système de noms de domaine
 
-Pour récapituler ce qui a été vu précédemment, les humains utilisent les noms de domaines pour les machines, alors que les machines, elles, utilisent les adresses IP. Afin que ces deux modes de recensement des machines soient cohérents entre eux, il est nécessaire de disposer d'un annuaire qui fera correspondre les noms de domaines aux adresses IP. Ceci est analogue aux annuaires téléphoniques qui permettent de faire correspondre le nom des personnes que l'on veut atteindre (qui serait équivalent au nom de domaine) au numéro de téléphone (qui est analogue à l'adresse IP). Cet annuaire est ce qu'on appelle le *système de noms de domaine* (Domain Name System ou DNS selon l'appellation anglaise). Au début d'Internet, il s'agissait simplement d'un fichier texte librement accessible qui listait le nom de domaines et les adresses IP correspondantes. Ce fichier était maintenu à la main. Maintenant, il s'agit de machines, les serveurs DNS dans le réseau auprès desquelles il est possible d'obtenir l'adresse IP correspondante à un nom de domaine. Ces machines sont aussi organisées hiérarchiquement de telle sorte que chaque serveur DNS ne stocke que les noms de domaines correspondant à une sous partie du réseau.
+Pour récapituler ce qui a été vu précédemment, les humains utilisent les noms de domaines pour les machines, alors que les machines, elles, utilisent les adresses IP. Afin que ces deux modes de recensement des machines soient cohérents entre eux, il est nécessaire de disposer d'un annuaire qui fera correspondre les noms de domaines aux adresses IP. Ceci est analogue aux annuaires téléphoniques qui permettent de faire correspondre le nom des personnes que l'on veut atteindre (qui serait équivalent au nom de domaine) au numéro de téléphone (qui est analogue à l'adresse IP). Cet annuaire est ce qu'on appelle le *système de noms de domaine* (Domain Name System ou DNS selon l'appellation anglaise). Au début d'Internet, il s'agissait simplement d'un fichier texte librement accessible qui listait le nom de domaines et les adresses IP correspondantes. Ce fichier était maintenu à la main. Maintenant, il s'agit de machines, les serveurs DNS dans le réseau auprès desquelles il est possible d'obtenir l'adresse IP correspondante à un nom de domaine. Ces machines sont aussi organisées hiérarchiquement de telle sorte que chaque serveur DNS ne stocke que les noms de domaines correspondant à une sous-partie du réseau.
 
-<!-- [Mettre une illustration] -->
-<!-- [Donner quelques détails du système ? ] -->
+
+```{torecall} Le serveur DNS
+```{figure} media/dns.svg
+---
+width: 500
+align: center
+---
+Pour qu'Alice puisse aller sur le site de champignons.ch, son téléphone va envoyer une requête à un serveur DNS avec le nom de domaine "champignons.ch". Cette
+requête transitera par différents serveurs DNS organisés hiérarchiquement jusqu'à ce qu'un serveur DNS puisse y répondre, et la réponse sera retransmise
+jusqu'au téléphone d'Alice.
+```

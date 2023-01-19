@@ -160,7 +160,6 @@ Mais est-ce que derrière chaque programme se cache un algorithme ?
 ## Exercices
 
 ````{exercise} Jeu de la devinette 🔌
-:class: note
 
 Ecrire le programme suivant : le programme pense à un nombre au hasard. Lorsque vous lui proposez un nombre, il vous dit si « c'est plus » ou si « c'est moins » jusqu'à ce que vous trouvez le bon nombre. Conseil : utiliser le module Python *random*.
 
@@ -169,7 +168,6 @@ Y a-t-il une stratégie gagnante ?
 ````
 
 ````{exercise} Plus petit nombre 🔌
-:class: note
 
 Transcrire l’algorithme de l’exercice qui permet de déterminer le plus petit nombre d’une liste, en un programme Python.
 
@@ -177,7 +175,6 @@ Transcrire l’algorithme de l’exercice qui permet de déterminer le plus peti
 
 
 ````{exercise} Programmes de tri 🔌
-:class: note
 
 Implémenter le tri à bulles et/ou le tri par insertion vus au cours.
 
@@ -196,27 +193,7 @@ Lancer le programme avec 100000 éléments et comparer le temps obtenu avec votr
 ````
 
 
-<!--
-
-````{admonition} Exercice 3 : comparaison de tris 🔌
-:class: note
-
-Créer une liste qui contient les valeurs de 1 à n dans un ordre aléatoire, où n prend la valeur 100, par exemple. Vous pouvez utiliser la fonction shuffle() du module random.
-
-Implémenter au moins deux des trois algorithmes de tri vu au cours.
-A l’aide du module time et de sa fonction time(), chronométrez le temps prend le tri d'une liste de 100, 500, 1000, 10000, 20000, 30000, 40000 puis 50000 nombres. 
-
-Noter les temps obtenus et affichez-les sous forme de courbe dans un tableur. Ce graphique permet de visualiser le temps d’exécution du tri en fonction de la taille de la liste. Que constatez‑vous ?
-
-Sur la base de ces mesures, pouvez-vous estimer le temps que prendrait le tri de 100000 éléments ?
-
-Lancer votre programme avec 100000 éléments et comparez le temps obtenu avec votre estimation.
-
-````
--->
-
 ````{exercise} Tri de Bogo🔌
-:class: note
 
 Coder l’algorithme du tri de Bogo en Python (voir chapitre 2 : Le saviez-vous ?). 
 
@@ -228,7 +205,6 @@ A partir de quelle taille de liste cet algorithme est-il inutilisable ?
 
 
 ````{exercise} Fibonacci 🔌
-:class: note
 
 Ecrire un algorithme qui calcule la suite des nombres de Fibonacci. 
 

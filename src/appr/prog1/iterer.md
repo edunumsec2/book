@@ -156,53 +156,6 @@ grille((-200, -100), (20, 20), (8, 8))
 grille((100, 0), (10, 10), (5, 7))
 ```
 
-## Position `(x, y)`
-
-Un tuple est la forme idéale pour représenter les deux coordonnées `(x, y)` d'un point. Nous allons dorénavant utiliser la lettre `p` pour point (ou position). Si deux points sont nécessaires, nous les appellerons `p` et `q`.
-
-Pour accéder aux coordonnées `x` et `y` du point `p` nous utilisons un indice (un entier entre crochets) :
-
-- `p[0]` pour la coordonnée x
-- `p[1]` pour la coordonnée y
-
-```{codeplay}
-from turtle import *
-up()
-
-p = (100, -120)
-
-print('p =', p)
-print('x =', p[0])
-print('y =', p[1])
-```
-
-La fonction `goto()` accepte :
-
-- deux coordonnées séparées `goto(x, y)`
-- deux coordonnées dans un tuple `goto(p)`
-
-Nous pouvons définir une fonction `ligne()` qui dessine une ligne entre deux points.
-
-```{codeplay}
-from turtle import *
-up()
-
-def ligne(p, q):
-    goto(p)
-    down()
-    goto(q)
-    up()
-
-p = 100, 50
-
-goto(p)
-dot(20)
-ligne(p, (0, 200))
-ligne(p, (0, -200))
-ligne(p, (300, 0))
-ligne(p, (-300, 0))
-```
-
 ## Grille de lignes
 
 Le programme suivant dessine une grille de lignes qui sont à une distance `d` les unes des autres. Nous utilisons deux boucles séparées avec les variables d'itération `x` et `y`.
@@ -400,41 +353,6 @@ for c in blancs:
     write(c, font=(None, d))
     forward(d)
 ```
-
-### Musée d'art et d'histoire
-
-Le [Musée d'art et d'histoire de Genève](http://institutions.ville-geneve.ch/fr/mah/) a mandaté le studio de graphisme zurichois [Hubertus Design](https://hubertus-design.ch) pour renouveler son identité visuelle. Ce logo à la ligne graphique dynamique, sobre et contemporaine symbolise dorénavant la marque MAH.
-
-```{codeplay}
-:file: MAH.py
-from turtle import *
-dot(1000, 'yellow')
-
-M = (0, 0), (2, 3), (4, 0), (6, 3), (8, 0), (8, 8), (2, 5), (6, 5), (0, 8), (0, 0)
-A = (0, 0), (6, 3), (2, 3), (8, 0), (4, 8), (0, 0)
-H = (0, 0), (6, 3), (2, 3), (8, 0), (8, 8), (2, 5), (6, 5), (0, 8), (0, 0)
-
-d = 20
-def lettre(L):
-    x0, y0 = pos()
-    for x, y in L:
-        goto(x0 + x * d, y0 + y * d)
-        down()
-    up()
-    
-up()
-goto(-12*d, -4*d)
-for c in (M, A, H):
-    lettre(c)
-    forward(8*d)
-
-goto(-8*d, -10)
-for s in ('MUSÉE', "D'ART", "D'HISTOIRE"):
-    write(s, align='center', font=('Arial', 16))
-    forward(8*d)
-```
-
-Créez 3 autres lettres dans le même style pour un autre musée dans une autre ville. Changez texte et couleur.
 
 ### Logo de l'EPFL
 

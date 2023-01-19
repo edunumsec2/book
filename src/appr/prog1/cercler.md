@@ -145,25 +145,21 @@ circle(r, 225)
 
 Le mot **infini** (du latin in-, préfixe négatif, et finitus, *limité*) est un adjectif servant à qualifier quelque chose qui n'a pas de limite en nombre ou en taille. L'infini est représenté par le symbole ∞. Nous allons le dessiner.
 
-Observez l'effet de croisement obtenu lorsqu'on omet de dessiner un petit bout de trait à l'intersection.
-
 ```{exercise}
-Augmentez l'épaisseur de la ligne.
+Augmentez un des rayons à `2*r` et ajustez la longueur des segments droits.
 ```
 
 ```{codeplay}
 :file: circle8.py
 from turtle import *
+r = 50
 
 right(45)
-up()
-forward(15)
-down()
-forward(85)
-circle(100, 270)
-forward(200)
-circle(-100, 270)
-forward(90)
+forward(r)
+circle(r, 270)  # aumentez le rayon à 2*r
+forward(2*r)
+circle(-r, 270)
+forward(r)
 ```
 
 ## Bretzel - ⌘
@@ -175,7 +171,7 @@ Le pictogramme ⌘ (Unicode 2318), parfois appelé *Gordon loop* ou *bretzel*, a
 - ⌘-V pour coller
 
 ```{exercise}
-Modifiez le programme pour obtenir le même effet de croisement comme avec le symbole infini ∞.
+Modifiez le bretzel pour avoir 3 ou 4 boucles.
 ```
 
 ```{codeplay}
@@ -206,7 +202,7 @@ def n():
     down()
     left(90)
     forward(2*r)    # montée
-    backward(r)     # retour au miliue
+    backward(r)     # retour au milieu
     circle(-r, 180) # demi-cercle
     forward(r)      # descente
     left(90)

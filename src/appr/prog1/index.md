@@ -24,16 +24,18 @@ positionner
 
 write
 iterer
+renvoyer
 randomiser
+
+decider
 ordonner
+graphe
 reutiliser
 
 questionner
-decider
 ecrire
 attendre
 
-renvoyer
 grouper
 trier
 turtleart
@@ -42,6 +44,8 @@ projet
 annexe
 archi1
 archi2
+archi3
+archi4
 ````
 
 ## Objectifs

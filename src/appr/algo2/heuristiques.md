@@ -22,7 +22,6 @@ Il existe des problèmes difficiles à résoudre. Nous allons nous pencher sur u
 
 
 ```{exercise} Le problème du sac à dos
-:class: note
 
 Comment procéderiez-vous pour résoudre ce problème du sac à dos ? Prenez le temps d’imaginer un {glo}`algo|algorithme` qui puisse résoudre ce problème ? 
 
@@ -31,8 +30,7 @@ Appliquer cet algorithme pour 5 objets de poids 1, 3, 5 et 7 kg et un 
 Est-ce que votre algorithme donne toujours la meilleure solution ? 
 ```
 
-````{solution} Le problème du sac à dos
-:class: hint
+````{solution} 
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -96,13 +94,11 @@ La meilleure solution se trouve à la 11ème ligne, la capacité du sac à d
 
 
 ```{exercise} Le problème du sac à dos avec 10 objets
-:class: note
 
 Combien de combinaisons possibles existent pour le problème du sac à dos avec 10 objets ? 
 ```
 
-````{solution} Le problème du sac à dos avec 10 objets
-:class: hint
+````{solution} 
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -169,50 +165,6 @@ name : heuristique
 Il existe encore d’autres types d’algorithmes {glo}`heuristique|heuristiques`, plus lents, mais qui permettent de s’approcher davantage de la solution optimale. Ils utilisent par exemple des stratégies de résolution statistiques, génétiques ou neuronales. L'apprentissage automatique à qui l'on doit les succès récents de l'intelligence artificielle repose sur des algorithmes heuristiques. La majorité des problèmes que l’on tente de résoudre aujourd’hui sont difficiles et leurs algorithmes de résolution ne trouvent pas la meilleure solution.
 
 
-```{exercise} L'univers dans un sac à dos 
-:class: note
-
-L’âge estimé de l’univers est de 14 milliards d’années. Si le calcul d’une combinaison d’objets dans le problème du sac à dos prenait une microseconde, pour quel nombre d’objets serait-il possible de trouver une solution exacte sans dépasser l’âge de l’univers ?
-
-```
-
-````{solution} L'univers dans un sac à dos 
-:class: hint
-
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-Une microseconde vaut 10<sup>-6</sup> s. La complexité du problème du sac à dos est de 2<sup>n</sup>.
-
-On recherche un `n` pour lequel 2<sup>n</sup>*10<sup>-6</sup> = 14 000 000 000 * 3,154*10<sup>7</sup> (l'âge de l'univers en secondes) 
-
-n = log<sub>2</sub>(1.4 * 10<sup>10</sup> / 10<sup>-6</sup>) = log<sub>2</sub>(1.4 * 10<sup>16</sup>) = 88 objets seulement.
-
-```
-````
-
-
-```{exercise} Parcours du parcours du parcours d'un tableau
-:class: note
-
-Quelle est la complexité d’un algorithme qui pour chacun de ses éléments doit parcourir le tableau, puis pour chaque combinaison de deux de ses élements doit encore parcourir le tableau ?
-
-```
-
-
-````{exercise} Parcours du parcours du parcours d'un tableau
-:class: hint
-
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-<!-- TODO #21 @edunum-sec2 : Clarification de la consigne car telle que je la comprend, 2 fois un parcours pour chaque élément fais 2 * n * n = O(n^2) -->
-
-Pour chaque élément (premier parcours) on doit parcourir le tableau une fois, et pour chacune des combinaisons de deux éléments du tableau, il nous faut parcourir le tableau une troisième fois : on a donc une complexité de n * n * n = n<sup>3</sup>, ou une complexité cubique.
-
-```
-````
-
 ````{admonition} Pour aller plus loin
 :class: attention
 
@@ -227,6 +179,29 @@ On souhaite savoir si les problèmes NP peuvent être résolus en un temps P ou 
 S’il s’avérait que c’est bien le cas (ce qui est tout de même peu probable), beaucoup de problèmes difficiles à résoudre deviendraient d’un seul coup plus faciles à résoudre. Un des ces problèmes est le **problème de repliement des protéines** en biologie qui cherche de nouveaux médicaments. Cela pourrait également signifier la fin de la cryptographie telle qu’elle existe actuellement.
 
 ````
+
+## Exercices
+
+```{exercise} L'univers dans un sac à dos 
+
+L’âge estimé de l’univers est de 14 milliards d’années. Si le calcul d’une combinaison d’objets dans le problème du sac à dos prenait une microseconde, pour quel nombre d’objets serait-il possible de trouver une solution exacte sans dépasser l’âge de l’univers ?
+
+```
+
+
+
+```{exercise} Parcours du parcours du parcours de listes
+
+Quelle est la complexité d’un algorithme qui pour chacun des éléments d'une liste de $n$ éléments, doit parcourir tous les éléments d'une autre liste de $n$ éléments, puis pour chacune des combinaisons de deux éléments doit encore parcourir une troisième liste de $n$ éléments ?
+
+Si vous avez besoin de travailler sur un exemple plus concret, quelle est complexité de l'algorithme qui calcule tous les menus possibles à partir d'une liste de $n$ entrées, une liste de $n$ plats et une liste de $n$ desserts ?
+
+```
+
+
+
+
+
 
 ````{admonition} Ai-je compris ?
 :class: attention

@@ -155,7 +155,7 @@ print("a:avancer  g:gauche  d:droite")
 print("h:home     c:clear   r:reset")
 ```
 
-## Les flèches
+## Les touches flèches
 
 Les touches de flèche portent les noms `Left`, `Right`, `Up` et `Down`.
 Nous pouvons utiliser les 4 flèches pour faire bouger la tortue.

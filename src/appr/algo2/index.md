@@ -29,22 +29,15 @@ Dans un premier temps nous allons nous intéresser à la notion de complexité�
 
 Dans un deuxième temps, si vous le souhaitez, vous pouver ouvrir la porte merveilleuse de la récursivité, à la manière des *Infinity Mirror Room* de Yayoi Kusama.
 
+```{figure} media/Kusama.jpeg
+---
+alt: Infinity Mirror Room de Yayoi Kusama
+width: 600px
 
-
-
-```{toctree}
-:maxdepth: 2
-:hidden:
-:numbered: 2
-
-principes
-recherche
-tris
-
-heuristiques
-recursivite
-conclusion
 ```
+
+
+
 
 
 ## Objectifs
@@ -62,7 +55,19 @@ A la fin de ce chapitre, vous saurez ce qui fait qu'un algorithme est un bon alg
 
 
 
+```{toctree}
+:maxdepth: 2
+:hidden:
+:numbered: 2
 
+principes
+recherche
+tris
+
+heuristiques
+recursivite
+conclusion
+```
 
 
 

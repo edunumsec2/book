@@ -17,7 +17,7 @@ Alice. Cela a l'avantage qui si, pour une raison ou une autre, une partie de l'i
 Les protocoles IP (Internet Protocol) et TCP (Transmission Control Protocol) décrivent le format ainsi que la gestion
 possible de ces paquets.
 
-<!-- [ajouter illustrations] -->
+{itodo}`[ajouter illustrations] `
 
 ## Le protocole IP
 
@@ -29,7 +29,7 @@ Selon ce protocole un paquet est constitué d'une suite de 0 et de 1 que l'on pe
 1. Les données qui forment le contenu du paquet, c'est-à-dire les informations que l'on veut transmettre.
 
 ```{figure} media/IPpacket.svg
-:width: 600
+:width: 500
 ```
 L'entête joue le rôle de l'étiquette sur un paquet envoyé par la poste. On y indique l'adresse de destination, l'adresse de
 l'expéditeur (appelée aussi l'adresse source), mais aussi d'autres information telles que la version d'IP utilisée (4 ou 6),
@@ -54,8 +54,119 @@ TCP (Transmission Control Protocol) permet aux machines réceptrice et émettric
 Pour ceci, l'information est découpée en morceaux de taille inférieure à la taille maximale des paquets IP, et chaque morceau est numéroté (avec des nombres consécutifs) et envoyé dans un paquet IP. La machine réceptrice sait ainsi comment reconstituer l'information et peut vérifier qu'il ne lui manque pas de
 morceaux.
 
+### En-tête
+
 De manière similaire au protocole IP, le protocole TCP est constitué d'un *en-tête* placé au début des données du paquet IP et qui contient des informations
 sur les numéros de morceaux envoyés et reçus. En effet, la machine réceptrice va envoyer une quittance (*acknowledgement* en anglais) pour chaque paquet reçu,
-de manière à ce que la machine émettrice puisse renvoyer un paquet qui n'aurait pas été acheminé à destination.
+de manière à ce que la machine émettrice puisse renvoyer un paquet qui n'aurait pas été acheminé à destination. 
 
-<!-- [donner le détail du protocole et le format de l'en-tête] -->
+
+```{figure} media/IPTCPpacket.svg
+:width: 500
+```
+
+L'en-tête TCP est constitué aussi de 24 octets contenant les informations suivantes:
+
+```{figure} media/TCPheader.png
+:width: 700
+```
+
+Comme le montre la figure ci-dessus, les quatre premiers octets
+contiennent les ports source et de destination. Un port est un peu comme une
+boîte aux lettres à l'intérieur d'un ordinateur. Le ports sont numérotés sur 16
+bits, donc de 0 à $2^16-1$. Un ordinateur qui est en connexion simultanée avec
+plusieurs ordinateurs pourra par exemple assigner un port différent à chaque
+connnexion, ce qui lui permettra de ne pas mélanger les messages reçus de ses
+divers interlocuteurs. Dans ce contexte et contrairement à un port USB, un port
+n'a pas de réalité matérielle, il est réalisé de manière logicielle par le
+système d'exploitation.
+
+Les quatre octets suivants contiennent le numéro de séquence qui va permettre
+au programme qui recoit les paquets de les remettre dans l'ordre selon ce
+numéro. La numéro d'aquittement permet au destinataire de renvoyer un paquet
+pour indiquer quel sont les
+paquets qui ont été reçus, permettant ainsi à la machine émetrice de quels
+paquets se sont perdus en chemin et doivent être envoyés à nouveau. Les quatres
+octets suivants contiennent divers éléments permettant aux deux machines en
+communication de se synchroniser, notamment divers fanions indiquant si on veut
+initier, ou terminer la connexion, ainsi que "Fenêtre" par quoi le récepteur
+indique à l'émetteur combien de place il lui reste dans la pile des paquets à
+trier et traiter. Ceci permet à l'émetteur d'adapter la rythme auquel il
+envoie les paquets pour ne pas déborder le récepteur. Enfin la "Somme de
+contrôle" est un code correcteur d'erreur qui permet de vérifier si l'en-tête
+n'a pas été altérée en chemin.
+
+```{exercise}
+Un paquet a été intercepté sur Internet avec le contenu initial suivant
+indiqué en hexadécimal:
+{itodo}`XXXXX`
+
+
+1. Déterminer quelle partie de cette en-tête correspond à l'en-tête IP,
+et laquelle correspond à l'en-tête TCP.
+1. Indiquer l'adresse IP et le port de l'émetteur de ce paquet.
+1. Indiquer l'adresse IP et le port du destinataire de ce paquet.
+1. Combien d'octets du paquet ne sont pas représentés ci-dessus?
+
+```
+
+
+
+
+### Déroulement
+
+Le protocole TCP applique une structure {glo}`clientserveur|client-serveur` à
+communication entre deux machines. Cela signifie qu'une des machines, appelée
+le serveur, va se mettre en mode d'écoute, et attendre que d'autres machines la
+contactent. C'est la machine cliente qui va prendre l'initiative d'initier la
+communication en envoyant un message TCP (juste l'entête, sans les données)
+à la machine serveur. Le protocole TCP spécifie les messages qui doivent être
+envoyés de part et d'autre pour initier la connection, comment ensuite
+envoyer et quittancer les données échangées, et comment mettre fin et terminer
+la connexion une fois que tout a été envoyé et quittancé.
+
+La figure ci-dessous indique comment les fanions SYN, FIN de l'entête TCP sont utilisés pour
+indiquer que l'on veut respectivement initier et terminer une connexion, et comment
+le fanion ACK est utiliser pour confirmer la bonne réception de la demande ou des
+données, avec les numéros des séquences (#seq) et et d'acquittement (#ack). 
+
+
+```{figure} media/TCPprot.svg
+:width: 800
+```
+
+```{exercise}
+Un serveur reçoit un packet TCP avec le contenu suivant dans l'entête. Que cela signifie-t-il,
+et comment le serveur est-il sensé réagir? 
+
+1. FIN = 1, no de séquence = 257
+2. SYN = 1, no de séquence = 745
+3. ACK = 1, no de séquence = 343, no d'acquittement = 746, 
+````
+
+## Le protocole UDP
+TCP n'est pas l'unique moyen de transmettre des message par internet. Par exemple, si l'important est que les
+données soit transmises rapidement, même si certaines sont perdues en route, on peut utiliser le protocole UDP.
+Avec ce protocole, l'émetteur envoie des paquets au destinataire sans vérifier que ce dernier les reçoit, ou même
+qu'il est présent à l'adresse de destination. L'entête UDP ne contient que quatre champ de 2 octets chacun, déjà
+présents dans l'entête TCP. 
+
+| 2 octets    |2 octets          |2 octets        |2 octets           |
+|:------------|------------------|----------------|-------------------|
+| port source | port destination | longueur totale | somme de contrôle|
+
+Il n'y a donc pas de numérotations des séquences, ni de système d'acquittement, ce qui fait que si un paquet
+est perdu ou s'arrive en retard par rapport aux autres paquets, on l'expéditeur et le destinataire n'ont aucun
+moyen de le savoir. Par contre, cela permet d'aller plus vite, donc ce protocole est surtout utilisé dans les
+applications en temps réel. 
+
+
+```{exercise}
+Indiquer pour les applications suivantes, si le protocole TCP ou UDP serait plus adapté, et indiquer pourquoi. 
+
+1. La lecture d'une page web
+2. Une application de téléphonie par Internet
+3. Le streaming d'une vidéo
+4. Une application bancaire en ligne
+5. Un jeu vidéo en ligne
+````

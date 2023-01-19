@@ -18,6 +18,7 @@ Pour l'instant il faut nous croire sur parole, mais si l'on veut pouvoir trouver
 
 Saviez-vous que le succès fulgurant de *Google* est surtout dû à sa capacité à bien ranger l'information disponible sur le Web ? Au moment où vous avez besoin d'une information particulière, leurs algorithmes sont capables de la retrouver parce qu'elle est bien rangée. Ce problème qui consiste à ranger les données a un nom, il s'agit du **<span style="color:rgb(89, 51, 209)">problème du Tri</span>**. Il est si important qu'il est un des problèmes les plus étudiés en algorithmique.
 
+
 ## Algorithmes de tri
 
 <span id=fig-trier></span>
@@ -36,20 +37,8 @@ align : left
 
 ```
 
-<!-- ```{image} media/Tris_base.png
-:width: 600
-:height: 300
-```
-**Problème du tri.** Des objets peuvent être triés selon une relation d’ordre, en lien avec une propriété. Sur la ligne du haut, les rectangles sont organisés selon leur couleur (de la plus sombre à la plus claire), alors que sur la ligne du bas, ils sont triés selon leur taille (du plus petit au plus grand). -->
-
-<!-- Pour apprendre à cuisiner, on commence par suivre des recettes classiques. -->
-<!-- Pour apprendre à cuisiner, on commence par suivre des recettes classiques. Ainsi, pour appréhender l’{glo}`algorithmique|algorithmique`, nous étudierons une classe d’{glo}`algo|algorithmes` classiques : les **<span style="color:rgb(89, 51, 209)">algorithmes de tri</span>**.  -->
-
- 
-
 
 ````{exercise} Problème du tri
-:class: note
 
 Trier les rectangles de la ligne du haut de la <a href="#fig-trier">Figure ci-dessus</a> en fonction de leur taille, pour arriver à la disposition de la ligne du bas. Noter toutes les étapes intermédiaires de vos actions et la disposition des rectangles avant d’arriver à la solution finale. Conseil : remplacer les rectangles par un nombre qui représente leur taille.
 
@@ -59,8 +48,7 @@ Quels types d'opérations avez-vous effectuées ?
 
 ````
 
-````{solution} Problème du tri
-:class: hint
+````{solution} 
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -94,7 +82,6 @@ L’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri à bull
 
 
 ````{exercise} Algorithme de tri 
-:class: note
 
 Il est fortement recommandé de résoudre cet exercice avant d’avancer dans le chapitre. 
 
@@ -106,8 +93,7 @@ Noter l’ordre des éléments à chaque fois qu’il change. Vous aurez besoin 
 
 ````
 
-````{solution} Algorithme de tri
-:class: hint
+````{solution} 
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -149,23 +135,13 @@ align: left
 **Algorithmes de tri**. Etapes intermédiaires lors de l’application des différents algorithmes de tri. La flèche rouge montre les mouvements des éléments suite à une opération. Si l’élément ne bouge pas, la flèche rouge est remplacée par un point rouge. **A gauche**, le tri par insertion. L’étoile dénote l’élément considéré à un moment donné. **Au milieu**, le tri par sélection. L’étoile désigne le plus petit élément de la liste non triée. **A droite**, le tri à bulles. Ici le point rouge signale les éléments triés.
 ```
 
-<!-- ```{image} media/Tris_algorithmes.png
-:width: 700
-:height: 500
-```
-**Algorithmes de tri**. Etapes intermédiaires lors de l’application des différents algorithmes de tri. La flèche rouge montre les mouvements des éléments suite à une opération. Si l’élément ne bouge pas, la flèche rouge est remplacée par un point rouge. **A gauche**, le tri par insertion. L’étoile dénote l’élément considéré à un moment donné. **Au milieu**, le tri par sélection. L’étoile désigne le plus petit élément de la liste non triée. **A droite**, le tri à bulles. Ici le point rouge signale les éléments triés. -->
-
-
-
 
 ````{exercise} Votre algorithme de tri
-:class: note
 
 Rappelez-vous quelle méthode vous avez utilisée pour résoudre l’exercice 0. De quel algorithme de tri se rapproche-t-elle le plus ? 
 ````
 
-````{solution} Votre algorithme de tri
-:class: hint
+````{solution} 
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -174,8 +150,8 @@ Cela dépend de votre solution de l’exercice 0. Vous avez probablement utilis�
 ```
 ````
 
+
 ````{exercise} Opérations 
-:class: note
 
 Pour chaque algorithme de tri, compter le nombre de ***<span style="color:rgb(13, 204, 166)">comparaisons</span>*** de la taille de deux rectangles, ainsi que le nombre de ***<span style="color:rgb(13, 204, 166)">déplacements</span>*** (le nombre de fois que deux rectangles échangent leur place).
 
@@ -185,8 +161,7 @@ Imaginons que ce qui prend le plus de temps est un ***déplacement***. Dans ce c
 
 ````
 
-````{solution} Opérations
-:class: hint
+````{solution} 
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -203,7 +178,6 @@ Si ce qui prend beaucoup de temps est la comparaison de la taille de deux rectan
 
 Ces résultats sont valables pour cette configuration en particulier. Si on trie un autre tableau, la performance des trois algorithmes pourrait changer. Le choix du meilleur algorithme dépend donc de l’implémentation et de la situation initiale. Notez finalement qu’il existe des algorithmes de tri bien plus rapides que les trois algorithmes considérés ici.
 ```
-
 ````
 
 
@@ -238,133 +212,27 @@ Imaginer que les quatre éléments d’une liste sont triés dans le sens invers
 
 Dans cette configuration précise, quel algorithme est le plus rapide  (présente le moins d’étapes intermédiaires) ? Quel algorithme est le plus lent ?
 
-
 ````
-
 
 
 ## Exercices
 
 
-
-````{admonition} {exercise} L'algorithme de votre journée
-:class: note
+````{exercise} L'algorithme de votre journée
 
 Réfléchir à votre journée : y a-t-il des actions qui se retrouvent chaque jour ouvrable ? Arrivez-vous à esquisser un algorithme que vous suivez sans que vous en ayez conscience ?
 
 ````
 
-````{admonition} {exercise} Trois algorithmes de tri
-:class: note
 
+````{exercise} Trois algorithmes de tri
 
 Trier la liste [2, 5, 3, 4, 7, 1, 6] en utilisant les trois algorithmes de tri vus dans le cours. Représenter l’état de la liste après chaque étape.
 
 ````
 
-<!-- 
-`````{admonition} {exercise} L'algorithme de votre journée
-:class: hint
 
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-Cela pourrait ressembler à ça :
-
-```
-Se lever
-Répéter pour i = 1 à 3
-    Faire des étirements
-Fin Pour
-Prendre une douche
-Prendre un petit-déjener
-Se brosser les dents
-Aller au Gymnase
-Répéter pour i = 1 à 5
-    Suivre un cours
-Fin Pour
-Déjeuner
-Répéter pour i = 1 à 5
-    Suivre un cours
-Fin Pour
-Rentrer à la maison
-Dîner
-Lire un livre
-Se brosser les dents
-Se coucher
-```
-````
-````` -->
-
-
-
-
-
-<!-- 
-`````{admonition} Solution 2.6. Trois algorithmes de tri
-:class: hint
-
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-Voici le détail de toutes les étapes intermédiaires des trois algorithmes de tri.
-
-**<span style="color:rgb(89, 51, 209)">Tri par insertion</span>** : 
-
-```
-[2,5,3,4,7,1,6]  # on considère le 2e élément et on l'ordonne par rapport au premier élément
-[2,5,3,4,7,1,6]  # on considère le 3e élément et on l'ordonne par rapport aux deux premiers éléments
-[2,3,5,4,7,1,6]  # on considère le 4e élément et on l'insère au bon endroit du tableau déjà trié
-[2,3,4,5,7,1,6]  # on considère le 5e élément et on l'insère au bon endroit du tableau déjà trié
-[2,3,4,5,7,1,6]  # on considère le 6e élément et on l'insère au bon endroit du tableau déjà trié
-[1,2,3,4,5,7,6]  # on considère le 7e élément et on l'insère au bon endroit du tableau déjà trié
-[1,2,3,4,5,6,7]
-```
-**<span style="color:rgb(89, 51, 209)">Tri par sélection</span>** : 
-
-```
-[2,5,3,4,7,1,6]  # on sélectionne le plus petit élément et on l'échange avec le premier élément
-[1,5,3,4,7,2,6]  # on sélectionne le 2e plus petit élément et on l'échange avec le 2e élément 
-[1,2,3,4,7,5,6]  # on sélectionne le 3e plus petit élément et on l'échange avec le 3e élément 
-[1,2,3,4,7,5,6]  # on sélectionne le 4e plus petit élément et on l'échange avec le 4e élément 
-[1,2,3,4,5,7,6]  # on sélectionne le 5e plus petit élément et on l'échange avec le 5e élément 
-[1,2,3,4,5,6,7]  # on sélectionne le 6e plus petit élément et on l'échange avec le 6e élément 
-```
-
-**<span style="color:rgb(89, 51, 209)">Tri à bulles</span>** : 
-
-```
-[2,5,3,4,7,1,6]  # on compare 2 et 5 et
-[2,5,3,4,7,1,6]  # on compare 5 et 3 et on les déplace
-[2,3,5,4,7,1,6]  # on compare 5 et 4 et on les déplace
-[2,3,4,5,7,1,6]  # on compare 5 et 7
-[2,3,4,5,7,1,6]  # on compare 7 et 1 et on les déplace
-[2,3,4,5,1,7,6]  # on compare 7 et 6 et on les déplace, tableau trié [7]
-[2,3,4,5,1,6,7]  # on compare 2 et 3
-[2,3,4,5,1,6,7]  # on compare 3 et 4
-[2,3,4,5,1,6,7]  # on compare 4 et 5
-[2,3,4,1,5,6,7]  # on compare 5 et 1 et on les déplace
-[2,3,4,1,5,6,7]  # on compare 5 et 6, tableau trié [6, 7]
-[2,3,4,1,5,6,7]  # on compare 2 et 3
-[2,3,4,1,5,6,7]  # on compare 3 et 4
-[2,3,1,4,5,6,7]  # on compare 4 et 1 et on les déplace
-[2,3,1,4,5,6,7]  # on compare 4 et 5, tableau trié [5, 6, 7]
-[2,3,1,4,5,6,7]  # on compare 2 et 3 
-[2,1,3,4,5,6,7]  # on compare 3 et 1 et on les déplace
-[2,1,3,4,5,6,7]  # on compare 3 et 4, tableau trié [4, 5, 6, 7]
-[1,2,3,4,5,6,7]  # on compare 2 et 1 et on les déplace
-[1,2,3,4,5,6,7]  # on compare 2 et 3, tableau trié [3, 4, 5, 6, 7]
-[1,2,3,4,5,6,7]  # on compare 1 et 2, tableau trié [2, 3, 4, 5, 6, 7]
-```
-````
-
-`````
- -->
-
-
-
-````{admonition} {exercise} Vérificateur de tri
-:class: note
+````{exercise} Vérificateur de tri
 
 Ecrire un algorithme qui vérifie si une liste est triée. 
 
@@ -376,81 +244,12 @@ Comparer vos algorithmes. Sont-ils différents ?
 
 ````
 
-<!-- 
 
-`````{admonition} {exercise} vérificateur de tri
-:class: hint
-
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-Voici un algorithme possible. 
-
-```
-Liste Nombres           # la variable Nombres contient une liste de nombres
-i = 2                   # la variable i permet de parcourir Nombres
-
-Répéter Pour i = 2 à Longueur(Nombres)
-    Si Nombres[i-1] > Nombres[i]  # l'élément précédent est plus grand
-        Retourner Faux
-    Fin Si
-Fin Pour
-Retourner Vrai
-```
-
-L'algorithme compare les éléments deux par deux et retourne `Faux` (et se termine) si l'élément d'après est plus petit que l'élément d'avant. Si tous les éléments parcourus sont dans le bon ordre, l'algorithme arrive à la dernière ligne et retourne `Vrai`. 
-
-L'algorithme prend une liste (triée ou non triée) en entrée et retourne `Vrai` ou `Faux` en sortie, selon si la liste est triée. L'algorithme pourrait retourner aussi `Oui` et `Non`, mais *par convention* on préfère les valeurs logiques Vrai et Faux, car ces dernières peuvent être utilisées par la suite dans une condition. Par exemple, si l'algorithme retourne Faux, on pourrait demander à un autre algorithme de trier la liste. `Vrai` et `Faux` correspondent également à 0 et 1, ce qui permet de les utiliser pour faire des calculs. 
-
-````
-````` 
--->
-
-
-````{admonition} {exercise} Mondrian
-:class: note
+````{exercise} Mondrian
 
 Analyser les œuvres cubistes de Piet Mondrian. Trouver un algorithme qui permet de créer une œuvre qui pourrait être attribuée à Mondrian.
 
 ````
-
-<!-- 
-
-`````{admonition} Exercice 2.8. Mondrian
-:class: hint
-
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-Voici un algorithme possible. 
-
-```
-Répéter Pour i = 1 à 3 
-    Séparer espace avec une ligne verticale noire
-Fin Pour
-Répéter Pour i = 1 à 3 
-    [1 fois sur 2] Aller jusque la première ligne verticale 
-    Séparer espace avec une ligne horizontale noire
-    [1 fois sur 2] arrêter avant la dernière ligne verticale
-Fin Pour
-
-Répéter Pour couleur_choisie dans ([Rouge, Bleu, Jaune] ou [Rouge, Bleu, Jaune, Noir])
-    Répéter Pour i = 1 à Nombre allant de 1 à 4
-        Choisir un grand carré 
-        Répéter Tant que carré à côté est égale à couleur_choisie  
-            Choisir un autre carré
-        Fin Tant que
-        Colorier le carré en couleur_choisie
-Fin Pour
-
-```
-
-Cet algorithme est approximatif. Il pourrait être amélioré pour colorier en priorité les grands carrés en rouge et en bleu. Il pourrait aussi donner plus d'indications, sur comment séparer l'espace en précisant les proportions souhaitées.
-
-Si vous avez un niveau de programmation avancé, vous pouvez essayer de coder cet algorithme.
-````
-`````
- -->
 
 
 ````{admonition} Ai-je compris ?

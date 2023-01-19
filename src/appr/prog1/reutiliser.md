@@ -76,6 +76,7 @@ Vous constaterez que:
 - 50% (la moitié) sert à tester le code
 
 ```{codeplay}
+:file: pixelart.py
 """
 Dessine des images PixelArt
 
@@ -258,6 +259,7 @@ Une fonction puissante peut être très compacte, si bien réfléchie.
 La fonction `polyline()` comporte 11 paramètres, pourtant la définition de la fonctions contient seulement 28 lignes de code.
 
 ```{codeplay}
+:file: polyline.py
 """
 Dessine une ligne polygonale.
 

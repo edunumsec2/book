@@ -1,0 +1,6 @@
+{
+  "v": 4,
+  "components": [
+    {"type": "flipflop-d", "pos": [250, 130], "in": [0, 1, 2, 3], "out": [4, 5], "state": 0}
+  ]
+}

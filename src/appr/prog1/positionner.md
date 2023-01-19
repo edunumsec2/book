@@ -129,9 +129,9 @@ Ajoutez 4 points supplémentaires dans le tuple du polygone pour insérer une po
 ```{codeplay}
 from turtle import *
 
-poly = ((0, 0), (200, 0), (200, 100), (100, 150), (0, 100), (0, 0))
+points = ((0, 0), (200, 0), (200, 100), (100, 150), (0, 100), (0, 0))
 
-for p in poly:
+for p in points:
     goto(p)
     write(p)    # affiche la position (x, y)
 ```
@@ -151,10 +151,10 @@ Ajoutez encore la porte à la maison, mais dessinez que les points avec un numé
 ```{codeplay}
 from turtle import *
 
-poly = ((0, 0), (200, 0), (200, 100), (100, 150), (0, 100), (0, 0))
+points = ((0, 0), (200, 0), (200, 100), (100, 150), (0, 100), (0, 0))
 
 i = 0
-for p in poly:
+for p in points:
     goto(p)
     write(i)
     i = i + 1
@@ -171,14 +171,14 @@ Déplacez la maison vers une position où elle n'est plus superposée à la prem
 ```{codeplay}
 from turtle import *
 
-poly = ((0, 0), (200, 0), (200, 100), (100, 150), (0, 100), (0, 0))
+points = ((0, 0), (200, 0), (200, 100), (100, 150), (0, 100), (0, 0))
 
-for p in poly:
+for p in points:
     goto(p)
     write(p)
     
 color('red')
-for p in poly:
+for p in points:
     q = p[0] - 150, p[1] - 50
     goto(q)
     write(q)
@@ -195,14 +195,14 @@ Ajoutez une troisième maison encore plus petite.
 ```{codeplay}
 from turtle import *
 
-poly = ((0, 0), (200, 0), (200, 100), (100, 150), (0, 100), (0, 0))
+points = ((0, 0), (200, 0), (200, 100), (100, 150), (0, 100), (0, 0))
 
-for p in poly:
+for p in points:
     goto(p)
     write(p)
     
 color('red')
-for p in poly:
+for p in points:
     q = 0.7 * p[0] - 200, 0.7 * p[1] - 100
     goto(q)
     write(q)
@@ -324,23 +324,23 @@ triangle()
 
 ## Ligne polygonale
 
-La fonction `polyline(poly, pos=(0, 0), size=(1, 1), w=1, pen='black', fill='white')` dessine une ligne polygonale définie par un tuple de points. Les arguments sont:
+La fonction `polyline(points, p=(0, 0), size=(1, 1), w=1, pen='black', fill='white')` dessine une ligne polygonale définie par un tuple de points. Les arguments sont:
 
-- `poly` -- tuple de positions (x, y)
-- `pos` -- position de déplacement
+- `points` -- tuple de positions (x, y)
+- `p` -- position de déplacement
 - `size` -- facteur d'échelle
 
 ```{codeplay}
 from turtle import *
 
-def polyline(poly, pos=(0, 0), size=(1, 1), w=1, pen='black', fill='white'):
+def polyline(points, p0=(0, 0), size=(1, 1), w=1, pen='black', fill='white'):
     width(w)
     pencolor(pen)
     fillcolor(fill)
-    goto(pos)
+    goto(p0)
     begin_fill()
-    for p in poly:
-        goto(pos[0]+p[0]*size[0], pos[1]+p[1]*size[1], )
+    for p in points:
+        goto(p0[0]+p[0]*size[0], p0[1]+p[1]*size[1], )
         down()
     end_fill()
     up()
@@ -350,7 +350,7 @@ house = ((0, 0), (10, 0), (10, 15), (20, 15), (20, 0),
 
 up()
 polyline(house)
-polyline(house, pos=(-150, -50), fill='pink')
+polyline(house, p=(-150, -50), fill='pink')
 polyline(house, (90, -60), size=(2, 2), w=3)
 polyline(house, (90, -80), size=(2, -1.5))
 ```
@@ -359,7 +359,7 @@ polyline(house, (90, -80), size=(2, -1.5))
 
 ### Tangram
 
-Choisissez un animal est recréez la figure.
+Choisissez un animal et recréez la figure.
 
 ![tangram](media/tangram1.jpg)
 
@@ -383,7 +383,7 @@ triangle()
 
 ### Tangram 2
 
-Choisissez un animal est recréez la figure.
+Choisissez un animal et recréez la figure.
 
 ![tangram](media/tangram2.jpg)
 
@@ -407,3 +407,38 @@ seth(180)
 color('orange')
 triangle()
 ```
+
+### Musée d'art et d'histoire
+
+Le [Musée d'art et d'histoire de Genève](http://institutions.ville-geneve.ch/fr/mah/) a mandaté le studio de graphisme zurichois [Hubertus Design](https://hubertus-design.ch) pour renouveler son identité visuelle. Ce logo à la ligne graphique dynamique, sobre et contemporaine symbolise dorénavant la marque MAH.
+
+```{codeplay}
+:file: MAH.py
+from turtle import *
+dot(1000, 'yellow')
+
+M = (0, 0), (2, 3), (4, 0), (6, 3), (8, 0), (8, 8), (2, 5), (6, 5), (0, 8), (0, 0)
+A = (0, 0), (6, 3), (2, 3), (8, 0), (4, 8), (0, 0)
+H = (0, 0), (6, 3), (2, 3), (8, 0), (8, 8), (2, 5), (6, 5), (0, 8), (0, 0)
+
+d = 20
+def lettre(L):
+    x0, y0 = pos()
+    for x, y in L:
+        goto(x0 + x * d, y0 + y * d)
+        down()
+    up()
+    
+up()
+goto(-12*d, -4*d)
+for c in (M, A, H):
+    lettre(c)
+    forward(8*d)
+
+goto(-8*d, -10)
+for s in ('MUSÉE', "D'ART", "D'HISTOIRE"):
+    write(s, align='center', font=('Arial', 16))
+    forward(8*d)
+```
+
+Créez 3 autres lettres dans le même style pour un autre musée dans une autre ville. Changez texte et couleur.

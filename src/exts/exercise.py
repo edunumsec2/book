@@ -1,11 +1,15 @@
 from docutils import nodes
 from sphinx.util.docutils import SphinxDirective
+from docutils.parsers.rst import directives
 
 class Exercise(SphinxDirective):
     required_arguments = 0
     optional_arguments = 1
     final_argument_whitespace = True
     has_content = True
+    option_spec = {
+        "num": directives.nonnegative_int,
+    }
 
     nextNumberByDoc = {}
 
@@ -16,7 +20,9 @@ class Exercise(SphinxDirective):
 
         label = self.arguments[0] if len(self.arguments) > 0 else None
 
-        if self.env.docname not in self.nextNumberByDoc:
+        if "num" in self.options:
+            Exercise.nextNumberByDoc[self.env.docname] = self.options["num"]
+        elif self.env.docname not in Exercise.nextNumberByDoc:
             Exercise.nextNumberByDoc[self.env.docname] = 1
 
         number = Exercise.nextNumberByDoc[self.env.docname]

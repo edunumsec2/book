@@ -1,31 +1,28 @@
-### 2. Algorithmes de recherche
+# 3. Algorithmes de tri
 
-## Exercices
+## Solutions des exercices
 
-```{admonition} Exercice 2.6. Recherche binaire aléatoire 🔌
-:class: note
+````{exercise} 
+Voir partie Apprendre.
+````
+````{exercise} 
+Voir partie Apprendre.
+````
+````{exercise} 
+Voir partie Apprendre.
+````
+````{exercise} 
+Voir partie Apprendre.
+````
 
-Modifier votre programme  de recherche binaire : au lieu de diviser l’espace de recherche exactement au milieu, le diviser au hasard. Cette recherche avec une composante aléatoire s’apparente plus à la recherche que l’on fait lorsque l’on cherche un mot dans le dictionnaire.  
 
-```
-
-**Solution à compléter**
-
-
-
-
-### 1. Algorithmes de tri
-
-
-```{admonition} Exercice 3.5. Une question à un million
-:class: note
+```{exercise} Une question à un million
 
 Si une instruction prend 10<sup>-6</sup> secondes, combien de temps faut-il pour trier un tableau d’un million d’éléments avec le tri à sélection comparé au tri rapide (sans tenir compte de la constante) ?
 
 ```
 
-````{admonition} Solution 3.5. Une question à un million
-:class: hint
+````{solution} 
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -37,8 +34,7 @@ Cette différence de temps est suffisante pour rendre rédhibitoire l’utilisat
 ````
 
 
-```{admonition} Exercice 3.6. Une question de pivot
-:class: note
+```{exercise} Une question de pivot
 
 Trier le tableau suivant avec l’algorithme de tri rapide : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main, en prenant le dernier élément comme pivot. Représenter l’état du tableau lors de toutes les étapes intermédiaires.
 
@@ -46,8 +42,7 @@ Est-ce que le choix du pivot est important ?
 
 ```
 
-````{admonition} Solution 3.6. Une question de pivot
-:class: hint
+````{solution} 
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -76,15 +71,13 @@ Le choix du pivot est important et à prendre en compte si on a des indications 
 
 
 
-```{admonition} Exercice 3.7. Une question de sélection
-:class: note
+```{exercise} Une question de sélection
 
 Trier le tableau suivant avec l’algorithme de tri par sélection : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main. Représenter l’état du tableau lors de toutes les étapes intermédiaires.
 
 ```
 
-````{admonition} Solution 3.7. Une question de sélection
-:class: hint
+````{solution} 
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -137,15 +130,13 @@ Lorsque le dernier élément du tableau est inséré à la bonne position, tout 
 ````
 
 
-```{admonition} Exercice 3.8. Une question d'insertion
-:class: note
+```{exercise} Une question d'insertion
 
 Trier le tableau suivant avec l’algorithme de tri par insertion : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main. Représenter l’état du tableau lors de toutes les étapes intermédiaires.
 
 ```
 
-````{admonition} Solution 3.8. Une question d'insertion
-:class: hint
+````{solution} 
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -200,16 +191,15 @@ Le septième élément du tableau est déjà à la bonne position, donc il n’y
 
 
 
-```{admonition} Exercice 3.9. Une question de bulles
-:class: note
+```{exercise} Une question de bulles
+
 
 Trier le tableau suivant avec l’algorithme de tri à bulles : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main. Représenter l’état du tableau lors de toutes les étapes intermédiaires.
 
 ```
 
 
-````{admonition} Solution 3.9. Une question de bulles
-:class: hint
+````{solution} 
 
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -309,8 +299,8 @@ Le tableau est désormais trié :
 ````
 
 
-````{admonition} Exercice 3.10. Une question de chronomètre 🔌
-:class: note
+````{exercise} Une question de chronomètre 🔌
+
 
 Créer une liste qui contient les valeurs de 1 à n dans un ordre aléatoire, où n prend la valeur 100, par exemple. Indice : utiliser la fonction `shuffle()` du module `random`.
 
@@ -326,126 +316,4 @@ Lancer votre programme avec 100000 éléments et comparer le temps obtenu avec v
 ````
 
 **Solution à compléter**
-
-
-
-## 4. Récursivité [en option]
-
-
-```{admonition} Exercice 5.3. Une question de fusion
-:class: note
-
-Trier le tableau suivant avec l’algorithme de tri par fusion : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main. Représenter l’état du tableau lors de toutes les étapes intermédiaires.
-
-```
-
-
-**Solution à compléter**
-
-````{admonition}  Exercice 5.4. Dans l'autre sens 🔌
-:class: note
-
-En Python, proposer une fonction qui inverse l’ordre des lettres dans un mot. Vous pouvez parcourir les lettres du mot directement ou à travers un indice.
-
-Proposer une autre fonction qui inverse l’ordre des lettres dans un mot de manière récursive.
-
-````
-
-
-
-`````{admonition} Solution 5.4. Dans l'autre sens 🔌
-:class: hint
-
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-Voici plusieurs implémentations itératives et une récursive de la fonction qui inverse un mot :
-
-```{codeplay}
-
-def inverser_mot_iteratif(mot) :
-	mot_inverse = ""
-	for lettre in mot :
-		mot_inverse = lettre + mot_inverse
-	return mot_inverse
-
-def inverser_mot_iteratif_2(mot) :
-	mot_inverse = ""
-	for indice in range(len(mot)-1,-1,-1) :
-		mot_inverse += mot[indice] 
-	return mot_inverse
-
-def inverser_mot_recursif(mot) :
-	if len(mot) == 1:
-		return mot
-	else :
-		return inverser_mot_recursif(mot[1:]) + mot[0] 
-
-un_mot = "mot"
-
-print(inverser_mot_iteratif(un_mot))
-print(inverser_mot_iteratif_2(un_mot))
-print(inverser_mot_recursif(un_mot))
-
-```
-````
-`````
-
-
-
-
-````{admonition}  Exercice 5.5. Factorielle 🔌
-:class: note
-
-La fonction factorielle `n!` en mathématiques est le produit de tous les nombres entiers jusqu’à `n`. C’est une des fonctions les plus simples à calculer de manière récursive. Elle peut être définie comme ceci :
-
-	n! = (n-1)! * n
-
-Programmer cette fonction de manière récursive en Python. Proposer également une implémentation itérative de la factorielle où les éléments de 1 à `n` sont traités l’un après l’autre.
-
-````
-
-
-`````{admonition} Solution 5.5. Factorielle 🔌
-:class: hint
-
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-Voici une implémentation en Python de la fonction factorielle où la fonction fait appel à elle-même, sans oublier la condition d’arrêt  :
-
-```{codeplay}
-# fonction factorielle (définition récursive)
-def factorielle_recursive(nombre):
-
-	if nombre == 1:
-		res = 1
-	else:
-		res = nombre * factorielle_recursive(nombre-1)
-
-	return res
-
-res = factorielle_recursive(5)
-print(res)
-
-```
-
-Voici une implémentation en Python de la fonction factorielle qui n’est pas récursive :
-
-```{codeplay}
-
-def factorielle(nombre):
-	res = 1
-	for n in range(2,nombre+1) :
-		res = res * n
-	return res
-
-res = factorielle(5)
-print(res)
-
-```
-````
-`````
-
-
 
