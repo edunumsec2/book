@@ -1,0 +1,11 @@
+{
+  "v": 4,
+  "in": [
+    {"type": "byte", "pos": [110, 60], "orient": "s", "id": [0, 1, 2, 3, 4, 5, 6, 7], "val": "10100101", "name": "instruction"}
+  ],
+  "out": [
+    {"type": "nibble-display", "pos": [70, 190], "orient": "s", "id": [8, 9, 10, 11], "name": "opcode", "radix": 16},
+    {"type": "nibble-display", "pos": [170, 190], "orient": "s", "id": [12, 13, 14, 15], "name": "data"}
+  ],
+  "wires": [[7, 11], [6, 10], [5, 9], [4, 8], [3, 15], [2, 14], [1, 13], [0, 12]]
+}

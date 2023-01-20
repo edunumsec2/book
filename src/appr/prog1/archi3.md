@@ -121,6 +121,12 @@ Un clic droit sur la porte quadruple permet de choisir son type (AND, OR, XOR, N
 
 ## ALU
 
+L'unité arithmétique et logique, ALU (arithmetic and logic unit), est la partie de l'ordinateur qui effectue les différents calculs arithmétiques et logiques.
+
+Ci-dessous vous pouvez voir les circuits logiques d'une ALU 4-bits très utilisé dans les années 60 et 70, le modèle 74181.
+
+![ALU](https://upload.wikimedia.org/wikipedia/commons/c/c0/74181aluschematic.png)
+
 L'ALU dont nous disposons peut effectuer 4 opérations :
 
 - addition (00)
