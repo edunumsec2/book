@@ -6,9 +6,10 @@ Mais tout d'abord, nous commençons avec une petite révision des portes logique
 
 ## Loi de Morgan
 
-La **loi de Morgan** dit qu'une porte ET peut être fabriquée avec une porte OU et des inverseurs.
+La **loi de Morgan** dit qu'une porte ET peut être fabriquée avec une porte OU et des inverseurs, et vice-versa.
 
-Créez une porte ET en utilisant des portes OU et NON.
+- Créez une porte ET en utilisant des portes OU et NON.
+- Verifiez son bon fonctionnement.
 
 ```{logic}
 :ref: morgan
@@ -19,7 +20,8 @@ Créez une porte ET en utilisant des portes OU et NON.
 }
 ```
 
-Créez une porte OU en utilisant des portes ET et NON.
+- Créez une porte OU en utilisant des portes ET et NON.
+- Verifiez son bon fonctionnement.
 
 ```{logic}
 :ref: morgan
@@ -70,7 +72,10 @@ Recréez un tel sélecteur avec des portes NON, ET, OU.
 ## Multiplexeur
 
 Le multiplexeur (MUX) permet de choisir entre deux signaux 4-bits nommés a et b.
-Ajoutez les éléments qui manquent. Ajoutez un décodeur et affichage à 7 segments.
+Ajoutez les éléments qui manquent. 
+
+- Ajoutez une deuxième entrée 4-bits avec un affichage.
+- Ajoutez un décodeur et affichage à 7 segments.
 
 ```{logic}
 :ref: mux
@@ -94,6 +99,9 @@ Ajoutez les éléments qui manquent. Ajoutez un décodeur et affichage à 7 segm
 ## Sélection d'opérations
 
 Complétez le circuit qui permet de sélectionner enter les deux opérations `a ET b` et `a OU b`.
+
+- Connectez a et b au portes OU
+- Ajoutez une entrée de sélection pour le multiplexeur
 
 ```{logic}
 :ref: mux
@@ -138,7 +146,7 @@ Ajoutez la deuxième entrée, un bloc de visualisation pour la sortie et les 2 e
 
 ```{logic}
 :ref: alu
-:height: 500
+:height: 400
 :showonly: in out in.nibble out.nibble out.nibble-display
 {
   "v": 4,
@@ -163,7 +171,7 @@ Par exemple pour a=7, b=5, c=3, le résultat affiché devrait être 9.
 
 ```{logic}
 :ref: mux
-:height: 500
+:height: 400
 :showonly: alu in out.nibble-display
 {
   "v": 4,
@@ -187,7 +195,7 @@ Interprétez les nombres binaires comme des nombres signés. Vous pouvez le conf
 
 ```{logic}
 :ref: addsigned
-:height: 500
+:height: 400
 :showonly: alu in in.nibble out.nibble-display
 {
   "v": 4,
@@ -240,7 +248,7 @@ Parfois il est nécessaire de comparer deux valeurs numériques.
 
 ```{logic}
 :ref: mux
-:height: 500
+:height: 300
 :showonly: in alu
 {
   "v": 4,
@@ -258,7 +266,168 @@ Parfois il est nécessaire de comparer deux valeurs numériques.
 }
 ```
 
-## Le registre
+## Multiplier 1 bit
+
+Les règles de la multiplication 1-bit sont très simple. Voici la table de vérité
+
+| a | b | a x b |
+|---|---|:-----:|
+| 0 | 0 |   0   |
+| 0 | 1 |   0   |
+| 1 | 0 |   0   |
+| 1 | 1 |   1   |
+
+On voit tout de suite que ceci correspond à la porte ET.
+Dans l'exemple si dessous vous voyez une porte ET pour multiplier a et b, les deux ayant juste 1 bit.
+
+- Vérifiez le bon fonctionnement du muliplicateur 1-bit
+- Ensuite, utilisez 4 portes ET pour créer un muliplicateur **a** (4-bits) fois **b** (1-bit).
+- Basculez b entre 0 et 1 pour verifier si votre circuit fonctionne correctement.
+
+```{logic}
+:ref: mul1
+:height: 400
+:showonly: in and in.nibble out.nibble-display
+{
+  "v": 4,
+  "in": [
+    {"pos": [70, 50], "id": 0, "name": "a", "val": 1},
+    {"pos": [70, 70], "id": 4, "name": "b", "val": 0},
+    {"type": "nibble", "pos": [70, 200], "id": [6, 7, 8, 9], "val": [0, 0, 1, 0], "name": "a"},
+    {"pos": [70, 290], "id": 10, "name": "b", "val": 1}
+  ],
+  "out": [
+    {"pos": [210, 60], "id": 5, "name": "a x b"},
+    {"type": "nibble-display", "pos": [350, 200], "id": [11, 12, 13, 14], "name": "a x b"}
+  ],
+  "gates": [
+    {"type": "AND", "pos": [140, 60], "in": [1, 2], "out": 3}
+  ],
+  "wires": [[0, 1], [4, 2], [3, 5]]
+}
+```
+
+## Multiplier par 2, 4, 8
+
+La multiplication par une puissance de 2 est facile. Il suffit de décaler les bits.
+Le circuit ci-dessous calcule 2a en décalant d'un bit en direction du poids fort.
+
+- Complétez le circuit pour calculer et afficher 4a et 8a.
+- Verifiez avec a=5. Votre affichage devrait montrer 10, 20 et 40.
+
+```{logic}
+:ref: mul2
+:height: 400
+:showonly: in.nibble out.nibble-display out.byte-display
+{
+  "v": 4,
+  "in": [
+    {"type": "nibble", "pos": [40, 60], "id": [0, 1, 2, 3], "val": [1, 1, 0, 0], "name": "a"}
+  ],
+  "out": [
+    {"type": "byte-display", "pos": [220, 60], "id": [4, 5, 6, 7, 8, 9, 10, 11], "name": "2a"},
+    {"type": "nibble-display", "pos": [90, 60], "id": [12, 13, 14, 15]},
+    {"type": "byte-display", "pos": [220, 160], "id": [16, 17, 18, 19, 20, 21, 22, 23], "name": "4a"},
+    {"type": "byte-display", "pos": [220, 260], "id": [24, 25, 26, 27, 28, 29, 30, 31], "name": "8a"}
+  ],
+  "wires": [[0, 12], [1, 13], [2, 14], [3, 15], [0, 5], [1, 6], [2, 7], [3, 8]]
+}
+```
+
+## Multiplier par bit
+
+Le circuit ci-dessus utilise un multiplexeur 8x4 pour faire l'addition 1-bit, au lieu des 4 portes ET.
+
+Pour les 4 bits b0 à b3, chaque bit contrôle la multiplication par son poids (1, 2, 4, 8)
+
+- a x b0 x 1
+- a x b1 x 2
+- a x b2 x 4
+- a x b3 x 8
+
+Pour compléter l'opération de multiplcation 4x4 bits, la dernière étappe sera d'additioner les 4 nombres.
+
+Complétez le circuit avec :
+
+- deux entrés que vous appelez **b2** et **b3**
+- un affichages 8 bits qui affichent 4a sous contrôle de b2
+- un affichages 8 bits qui affichent 8a sous contrôle de b3
+
+```{logic}
+:ref: mul3
+:height: 450
+:showonly: in in.nibble out.nibble-display out.byte-display mux-8to4
+{
+  "v": 4,
+  "in": [
+    {"type": "nibble", "pos": [40, 230], "id": [0, 1, 2, 3], "val": [1, 0, 1, 0], "name": "a"},
+    {"pos": [150, 50], "orient": "s", "id": 39, "name": "b0", "val": 1},
+    {"pos": [240, 50], "orient": "s", "id": 108, "name": "b1", "val": 1}
+  ],
+  "out": [
+    {"type": "nibble-display", "pos": [250, 340], "id": [35, 36, 37, 38]},
+    {"type": "nibble-display", "pos": [90, 230], "id": [49, 50, 51, 52]},
+    {"type": "byte-display", "pos": [350, 350], "id": [67, 68, 69, 70, 71, 72, 73, 74]}
+  ],
+  "components": [
+    {"type": "mux-8to4", "pos": [150, 180], "in": [22, 23, 24, 25, 26, 27, 28, 29, 30], "out": [31, 32, 33, 34]},
+    {"type": "mux-8to4", "pos": [240, 180], "in": [53, 54, 55, 56, 57, 58, 59, 60, 61], "out": [62, 63, 64, 65]},
+    {"type": "mux-8to4", "pos": [350, 180], "in": [75, 76, 77, 78, 79, 80, 81, 82, 83], "out": [84, 85, 86, 87]},
+    {"type": "mux-8to4", "pos": [460, 180], "in": [95, 96, 97, 98, 99, 100, 101, 102, 103], "out": [104, 105, 106, 107]}
+  ],
+  "wires": [[0, 26], [1, 27], [2, 28], [3, 29], [31, 35], [32, 36], [33, 37], [34, 38], [39, 30], [0, 49], [1, 50], [2, 51], [3, 52], [0, 57], [1, 58], [2, 59], [3, 60], [62, 68], [63, 69], [64, 70], [65, 71], [0, 79], [1, 80], [2, 81], [3, 82], [0, 99], [1, 100], [2, 101], [3, 102], [108, 61]]
+}
+```
+
+## Multiplier 4 bits
+
+La multiplication 4 x 4 bits nécessite:
+
+- 4 multiplexeurs  pour la multiplication 4 x 1 bits
+- 3 additionneurs pour additionner les 4 opérandes décalés
+
+Pour multiplier `0101` x `1001` = `00101101`  (5 x 9 = 45) nous écrivons en colonnes ceci :
+
+```
+1     1001
+0    0000
+1   1001
+0 +0000
+----------
+  00101101
+```
+
+Modifiez a et b dans le circuit multiplicateur 4 x 4 bits ci-dessus verifiez que vous obtenez bien le produit de a et b. Faites une capture avec la plus grande valeur possible.
+
+```{logic}
+:ref: mul4
+:height: 600
+:showonly: in in.nibble out.nibble-display out.byte-display mux-8to4 adder
+{
+  "v": 4,
+  "in": [
+    {"type": "nibble", "pos": [40, 490], "id": [19, 20, 21, 22], "val": [1, 0, 0, 1], "name": "a"},
+    {"type": "nibble", "pos": [40, 70], "id": [23, 24, 25, 26], "val": [1, 0, 1, 0], "name": "b"}
+  ],
+  "out": [
+    {"type": "byte-display", "pos": [630, 420], "id": [115, 116, 117, 118, 119, 120, 121, 122]},
+    {"type": "nibble-display", "pos": [90, 70], "id": [141, 142, 143, 144]},
+    {"type": "nibble-display", "pos": [90, 490], "id": [145, 146, 147, 148]}
+  ],
+  "components": [
+    {"type": "mux-8to4", "pos": [80, 220], "in": [45, 46, 47, 48, 49, 50, 51, 52, 53], "out": [54, 55, 56, 57]},
+    {"type": "mux-8to4", "pos": [140, 340], "in": [58, 59, 60, 61, 62, 63, 64, 65, 66], "out": [67, 68, 69, 70]},
+    {"type": "alu", "pos": [210, 290], "in": [123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133], "out": [134, 135, 136, 137, 138, 139, 140]},
+    {"type": "mux-8to4", "pos": [290, 410], "in": [149, 150, 151, 152, 153, 154, 155, 156, 157], "out": [158, 159, 160, 161]},
+    {"type": "alu", "pos": [360, 360], "in": [162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172], "out": [173, 174, 175, 176, 177, 178, 179]},
+    {"type": "mux-8to4", "pos": [440, 480], "in": [192, 193, 194, 195, 196, 197, 198, 199, 200], "out": [201, 202, 203, 204]},
+    {"type": "alu", "pos": [510, 430], "in": [205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215], "out": [216, 217, 218, 219, 220, 221, 222]}
+  ],
+  "wires": [[19, 49], [20, 50], [21, 51], [22, 52], [23, 53], [19, 62], [20, 63], [21, 64], [22, 65], [67, 127], [68, 128], [69, 129], [70, 130], [55, 123], [56, 124], [57, 125], [24, 66], [54, 115], [134, 116], [23, 141], [24, 142], [25, 143], [26, 144], [19, 145], [20, 146], [21, 147], [22, 148], [19, 153], [20, 154], [21, 155], [22, 156], [135, 162], [136, 163], [137, 164], [158, 166], [159, 167], [160, 168], [161, 169], [25, 157], [173, 117], [140, 165], [139, 152], [174, 205], [175, 206], [176, 207], [178, 195], [201, 209], [202, 210], [203, 211], [204, 212], [19, 196], [20, 197], [21, 198], [22, 199], [179, 208], [216, 118], [217, 119], [218, 120], [219, 121], [222, 122], [26, 200]]
+}
+```
+
+## Registre
 
 Le registre que nous allons voir plus en détail dans le prochain chapitre permet de mémoriser une donnée.
 Avec un coup d'horloge (clock), les 4-bits de données sont mémorisés.
