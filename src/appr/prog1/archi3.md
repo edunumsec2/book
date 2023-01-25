@@ -1,36 +1,15 @@
 # TP ALU
 
-L'unité arithmétique (ALU) et logique permet de choisir parmi un certain nombre d'opérations. Un registre permet de mémoriser un des opérandes de ce calcul.
+L'unité arithmétique (ALU) et logique permet de choisir parmi un certain nombre d'opérations. Nous allons voir comment une ALU peut choisir entre
 
-Mais tout d'abord, nous commençons avec une petite révision des portes logiques.
+- ET
+- OU
+- addition
+- soustraction
 
-## Loi de Morgan
+Nous allons découvrir comment des décalages et additions succésives peuvent constituer une multiplication.
 
-La **loi de Morgan** dit qu'une porte ET peut être fabriquée avec une porte OU et des inverseurs, et vice-versa.
-
-- Créez une porte ET en utilisant des portes OU et NON.
-- Vérifiez son bon fonctionnement.
-
-```{logic}
-:ref: morgan
-:height: 300
-:showonly: in out not or
-{
-
-}
-```
-
-- Créez une porte OU en utilisant des portes ET et NON.
-- Vérifiez son bon fonctionnement.
-
-```{logic}
-:ref: morgan
-:height: 300
-:showonly: in out not and
-{
-
-}
-```
+Finalement, un registre permet de mémoriser un des opérandes de ce calcul.
 
 ## Sélectionneur
 
@@ -100,8 +79,8 @@ Ajoutez les éléments qui manquent.
 
 Complétez le circuit qui permet de sélectionner enter les deux opérations `a ET b` et `a OU b`.
 
-- Connectez a et b au portes OU
-- Ajoutez une entrée de sélection pour le multiplexeur
+- Connectez a et b aux aux entrées des 4 portes OU,
+- Ajoutez une entrée de sélection pour le multiplexeur.
 
 ```{logic}
 :ref: mux
@@ -212,7 +191,7 @@ Interprétez les nombres binaires comme des nombres signés. Vous pouvez le conf
 }
 ```
 
-## Addition 8-bits
+## Addition 8 bits
 
 Pour additionner un nombre à 8-bits, il faut combiner deux ALU 4-bits.
 Complétez le circuit pour afficher l'addition de deux nombres binaires 8-bits.
@@ -242,9 +221,9 @@ Ajoutez une option pour soustraire deux nombres.
 
 ## Égalité (`a == b`)
 
-Parfois il est nécessaire de comparer deux valeurs numériques.
+Parfois il est nécessaire de comparer deux valeurs numériques. En Python une telle comparaison s'écrit `a == b` et donne `True` ou `False`. 
 
-- Créez un comparateur qui met la sortie **Égal** à 1 si les deux nombres a et b sont égaux.
+- Créez un comparateur qui met la sortie **Egal** à 1 si les deux nombres a et b sont égaux.
 
 ```{logic}
 :ref: mux
