@@ -49,7 +49,7 @@ Une porte OU-X (ou exclusif) avec 2 entrées donne une sortie 1 si **exactement 
 - Ajoutez 3 portes OU-X et mettez les entrées à 01, 10, et 11
 - Créez une porte OU-X avec 3 entrées et observez son comportement
 
-Comment se comporte une porte OU-X avec plus que 2 entrée ?
+Comment se comporte une porte OU-X avec plus que 2 entrées ?
 
 ```{logic}
 :ref: or
@@ -150,21 +150,26 @@ Ajoutez un circuit pour qu'on puisse également l'allumer depuis la chambre.
 
 Nous avons maintenant toutes les éléments pour construire un additionneur binaire. Rappelons-nous que l'addition binaire est très simple.
 
-| a | b | a+b |
-|---|---|-----|
-| 0 | 0 | 00  |
-| 0 | 1 | 01  |
-| 1 | 0 | 01  |
-| 1 | 1 | 10  |
+| A | B | A+B | C | S |
+|---|---|:---:|---|---|
+| 0 | 0 |  0  | 0 | 0 |
+| 0 | 1 |  1  | 0 | 1 |
+| 1 | 0 |  1  | 0 | 1 |
+| 1 | 1 |  2  | 1 | 0 |
 
-Nous remarquons que nous avons besoin de deux bits pour représenter le résultat. Si vous regardez les deux colonnes du résultat, vous constatez que
+Le résultat `A+B` peut être 0, 1 ou 2.  Nous avons besoin de deux bits pour représenter le résultat : 
 
-- la colonne du gauche représente la fonction ET (retenue ou *carry* en anglais)
-- la colonne de droite représente la fonction OU-X (somme)
+- le bit de somme `S`
+- le bit de retenue `C` (*carry* en anglais)
+
+En regardant la table de vérité, on constate que :
+
+- la somme `S` est exprimé la fonction OU-X
+- la retenue `C` est exprimée par la fonction ET
 
 Vous trouvez le circuit ci-dessous à droite. Vérifiez sa fonction en cliquant sur ses entrées.
 
-Ajoutez encore 3 demi-additionneurs et montrez la table de vérité pour les 4 conditions d'entrée : 00, 01, 10, 11
+Ajoutez encore 3 demi-additionneurs et montrez la table de vérité pour les 4 conditions d'entrée : 00, 01, 10, 11.
 
 ```{logic}
 :ref: add
@@ -173,14 +178,14 @@ Ajoutez encore 3 demi-additionneurs et montrez la table de vérité pour les 4 c
 {
   "v": 4,
   "in": [
-    {"pos": [370, 270], "id": 0, "name": "a", "val": 0},
-    {"pos": [370, 320], "id": 1, "name": "b", "val": 0},
+    {"pos": [370, 270], "id": 0, "name": "A", "val": 0},
+    {"pos": [370, 320], "id": 1, "name": "B", "val": 0},
     {"pos": [50, 60], "id": 18, "name": "A", "val": 0},
     {"pos": [50, 100], "id": 19, "name": "B", "val": 0}
   ],
   "out": [
-    {"pos": [550, 280], "id": 8, "name": "s"},
-    {"pos": [550, 340], "ref": "c", "id": 9, "name": "c"},
+    {"pos": [550, 280], "id": 8, "name": "S"},
+    {"pos": [550, 340], "ref": "c", "id": 9, "name": "C"},
     {"pos": [190, 60], "id": 20, "name": "S (somme)"},
     {"pos": [190, 100], "id": 21, "name": "C (retenue)"}
   ],
@@ -200,23 +205,23 @@ Ajoutez encore 3 demi-additionneurs et montrez la table de vérité pour les 4 c
 
 ## Additionneur complet
 
-L'additionneur de 2 bits est très limité. Pour le cas général, nous avons besoin d'un additionneur qui additionne 3 bits. Il faut tenir compte de la retenue de la colonne à droite, qu'il faut inclure dans l'addition. Voici donc la table de vérité pour un additionneur complet.
+L'additionneur de 2 bits est très limité. Pour le cas général, nous avons besoin d'un additionneur qui additionne 3 bits. Il faut tenir compte de la retenue (`Cin`), qu'il faut inclure dans l'addition. Voici donc la table de vérité pour un additionneur complet.
 
-| a | b | c_in | c_out | s |
-|:-:|:-:|:-:|:-----:|:-:|
-| 0 | 0 | 0 |   0   | 0 |
-| 0 | 0 | 1 |   0   | 1 |
-| 0 | 1 | 0 |   0   | 1 |
-| 0 | 1 | 1 |   1   | 0 |
-| 1 | 0 | 0 |   0   | 1 |
-| 1 | 0 | 1 |   1   | 0 |
-| 1 | 1 | 0 |   1   | 0 |
-| 1 | 1 | 1 |   1   | 1 |
+| Cin | A | B |Cin+A+B| Cout | S |
+|:---:|:-:|:-:|:-----:|:----:|:-:|
+| 0   | 0 | 0 | 0     |   0  | 0 |
+| 0   | 0 | 1 | 1     |   0  | 1 |
+| 0   | 1 | 0 | 1     |   0  | 1 |
+| 0   | 1 | 1 | 2     |   1  | 0 |
+| 1   | 0 | 0 | 1     |   0  | 1 |
+| 1   | 0 | 1 | 2     |   1  | 0 |
+| 1   | 1 | 0 | 2     |   1  | 0 |
+| 1   | 1 | 1 | 3     |   1  | 1 |
 
 Regardez les colonnes et essayez de comprendre avec quelles portes on pourrait le construire.
-Vous constatez que la colonne s représente la parité. On pourra donc la construire avec des portes OU-X.
+Vous constatez que la colonne `S` représente la parité. On pourra donc la construire avec des portes OU-X.
 
-- Ajoutez les deux fils qui manquent à l'entrée de la porte ET pour que le circuit se comporte comme un additionneur complet.
+- Ajoutez les deux fils qui manquent à l'entrée de la porte ET pour que le circuit produise le signale `Cout` et se comporte comme un additionneur complet.
 - Ajoutez des entrées et sorties au bloc de l'additionneur complet et vérifiez son fonctionnement.
 
 ```{logic}
@@ -226,13 +231,13 @@ Vous constatez que la colonne s représente la parité. On pourra donc la constr
 {
   "v": 4,
   "in": [
-    {"pos": [70, 40], "id": 0, "name": "a", "val": 0},
-    {"pos": [70, 90], "id": 1, "name": "b", "val": 0},
-    {"pos": [70, 140], "id": 2, "name": "c_in", "val": 0}
+    {"pos": [70, 40], "id": 0, "name": "A", "val": 0},
+    {"pos": [70, 90], "id": 1, "name": "B", "val": 0},
+    {"pos": [70, 140], "id": 2, "name": "Cin", "val": 0}
   ],
   "out": [
-    {"pos": [420, 60], "id": 7, "name": "s"},
-    {"pos": [420, 130], "id": 26, "name": "c_out"}
+    {"pos": [420, 60], "id": 7, "name": "S"},
+    {"pos": [420, 130], "id": 26, "name": "Cout"}
   ],
   "gates": [
     {"type": "AND", "pos": [270, 120], "in": [8, 9], "out": 10},
@@ -251,7 +256,7 @@ Vous constatez que la colonne s représente la parité. On pourra donc la constr
 ## Additionneur 4 bits
 
 Pour additionner deux nombres 4-bits (quartets) nous avons besoin de 4 additionneurs complets.
-Chaque sortie `C_out` est liée à la l'entrée `C_in` de l'additionneur suivant.
+Chaque sortie `Cout` est liée à la l'entrée `Cin` de l'additionneur suivant.
 
 - Ajoutez les circuits manquants pour additionner deux nombres 4-bits.
 - Montrez l'addition de 7+5 dont le résultat devrait être 12.
@@ -299,8 +304,9 @@ Chaque sortie `C_out` est liée à la l'entrée `C_in` de l'additionneur suivant
 
 Additionner 1 à un nombre binaire est une opération très fréquente. Elle est utilisée pour incrémenter le compteur de programme `pc` (program counter), pour pointer à la prochaine instruction.
 
-Complétez le circuit pour incrémenter la variable `i`. 
-Dans beaucoup de langages de programmation, une variable incrémentée est désignée par `i++`.
+Complétez le circuit pour incrémenter la variable `i`.
+Dans beaucoup de langages de programmation, une variable incrémentée est désignée par `i++`.  
+En Python nous écrivons ``i = i + 1``.
 
 D'ailleurs le nom du langage de programmation C++ est une référence à cet opérateur d'incrémentation.
 
@@ -332,7 +338,8 @@ D'ailleurs le nom du langage de programmation C++ est une référence à cet op�
 Soustraire 1 à un nombre binaire est une opération très fréquente. Elle est utilisée pour décrémenter un compteur de boucle `i`, un pointeur de pile `sp` (stack pointer), ou un pointeur `p` vers les adresses de la mémoire.
 
 Complétez le circuit pour décrémenter la variable `i`. 
-Dans beaucoup de langages de programmation, une variable incrémentée est désignée par `i--`.
+Dans beaucoup de langages de programmation, une variable incrémentée est désignée par `i--`.  
+En Python nous écrivons ``i = i - 1``.
 
 Astuce : pour décrémenter la valeur `i` il suffit d'additionner `1111` qui représente la valeur -1 en format signé.
 
@@ -359,14 +366,14 @@ Astuce : pour décrémenter la valeur `i` il suffit d'additionner `1111` qui rep
 }
 ```
 
-## Inverser (`-i`)
+## Changer de signe (`-i`)
 
-Les nombres signés sont représentés avec le format *complément à deux*. Pour un nombre 4-bits ceci nous donne une plage de -8 à +7 pour des entiers relatifs, et une plage de 0 à 15 pour des entièrs naturels. Nous constatons que la plage signée n'est pas symmétrique: le coté négatif compte un nombre en plus.
+Les nombres signés sont représentés avec le format *complément à deux*. Pour un nombre 4-bits, ceci nous donne une plage de -8 à +7 pour des entiers relatifs, et une plage de 0 à 15 pour des entiers naturels. Nous constatons que la plage signée n'est pas symétrique: le côté négatif compte un nombre en plus.
 
 ![signed](circuit/2add/4bitsIntegers.jpg)
 
 L'opération pour trouver le nombre négatif est: inverser tous les bits et additionner 1.  
-Mathématiqument nous pouvons éxprimer cette opération comme:
+Mathématiquement nous pouvons exprimer cette opération comme:
 
 `-i = ~i + 1`
 
@@ -402,7 +409,9 @@ Complétez le circuit pour inverser le signe de la variable `i` et obtenir son n
 
 ## Soustraction (`a-b`)
 
-Pour soustraire deux nombres `a-b` il suffit d'additionner le nombre négatif du deuxième (`-b`).
+Pour soustraire deux nombres `a-b` il suffit d'additionner le nombre négatif du deuxième (`-b`). 
+Ce nombre négatif peut être obtenu en inversant tous les bits et additionner 1.  
+Donc ``-b = ~b + 1``.
 
 Complétez le circuit pour soustraire `a-b`. Le résultat de 10-3 devrait être 7.
 
@@ -436,7 +445,7 @@ Complétez le circuit pour soustraire `a-b`. Le résultat de 10-3 devrait être 
 
 ## Inversion commutée (~a)
 
-L'inverseur commuté permet d'inverser toutes les 4 bits d'un nombre.
+L'inverseur commuté permet d'inverser tous les 4 bits d'un nombre.
 
 Ajoutez un inverseur commuté pour obtenir `~a` ou `a` selon l'état du sélecteur.
 
@@ -488,7 +497,10 @@ Complétez le circuit pour pouvoir obtenir `-a` ou `a` selon l'état du sélecte
 
 ## Soustraction commutée
 
-Complétez le circuit pour pouvoir obtenir `a+b` ou `a-b` selon l'état du sélecteur **sub**.
+Complétez le circuit pour pouvoir obtenir une opération différente selon l'état du sélecteur **sub** :
+
+- pour `sub = 1` les opérandes sont soustraits (`a-b`)
+- pour `sub = 0` les opérandes sont additionnés (`a+b`)
 
 ```{logic}
 :ref: neg2
@@ -526,6 +538,12 @@ Les fanions (flag) sont des signaux qui caractérisent un nombre.
 - P pour indiquer que le nombre de bits à 1 est pair
 
 Par exemple pour le nombre `1001` (-7) on aura `N=1`, `Z=0` et `P=1`.
+
+```{caution}
+Faites attention à la différence entre la **parité du nombre** et la **parité des bits**.
+- la parité du nombre est exprimée par le bit de poids faible (b0),
+- la parité du nombre des bits est obtenue avec une opération XOR (ou exclusif).
+```
 
 Complétez le circuit pour correctement afficher les fanions N, Z et P.
 
