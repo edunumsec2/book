@@ -9,7 +9,7 @@ Mais tout d'abord, nous commençons avec une petite révision des portes logique
 La **loi de Morgan** dit qu'une porte ET peut être fabriquée avec une porte OU et des inverseurs, et vice-versa.
 
 - Créez une porte ET en utilisant des portes OU et NON.
-- Verifiez son bon fonctionnement.
+- Vérifiez son bon fonctionnement.
 
 ```{logic}
 :ref: morgan
@@ -21,7 +21,7 @@ La **loi de Morgan** dit qu'une porte ET peut être fabriquée avec une porte OU
 ```
 
 - Créez une porte OU en utilisant des portes ET et NON.
-- Verifiez son bon fonctionnement.
+- Vérifiez son bon fonctionnement.
 
 ```{logic}
 :ref: morgan
@@ -244,7 +244,7 @@ Ajoutez une option pour soustraire deux nombres.
 
 Parfois il est nécessaire de comparer deux valeurs numériques.
 
-- Créez un comparateur qui met la sortie **Egal** à 1 si les deux nombres a et b sont égaux.
+- Créez un comparateur qui met la sortie **Égal** à 1 si les deux nombres a et b sont égaux.
 
 ```{logic}
 :ref: mux
@@ -268,7 +268,7 @@ Parfois il est nécessaire de comparer deux valeurs numériques.
 
 ## Multiplier 1 bit
 
-Les règles de la multiplication 1-bit sont très simple. Voici la table de vérité
+Les règles de la multiplication 1-bit sont très simples. Voici la table de vérité.
 
 | a | b | a x b |
 |---|---|:-----:|
@@ -280,9 +280,9 @@ Les règles de la multiplication 1-bit sont très simple. Voici la table de vér
 On voit tout de suite que ceci correspond à la porte ET.
 Dans l'exemple si dessous vous voyez une porte ET pour multiplier a et b, les deux ayant juste 1 bit.
 
-- Vérifiez le bon fonctionnement du muliplicateur 1-bit
-- Ensuite, utilisez 4 portes ET pour créer un muliplicateur **a** (4-bits) fois **b** (1-bit).
-- Basculez b entre 0 et 1 pour verifier si votre circuit fonctionne correctement.
+- Vérifiez le bon fonctionnement du multiplicateur 1-bit
+- Ensuite, utilisez 4 portes ET pour créer un multiplicateur **a** (4-bits) fois **b** (1-bit).
+- Basculez b entre 0 et 1 pour vérifier si votre circuit fonctionne correctement.
 
 ```{logic}
 :ref: mul1
@@ -313,7 +313,7 @@ La multiplication par une puissance de 2 est facile. Il suffit de décaler les b
 Le circuit ci-dessous calcule 2a en décalant d'un bit en direction du poids fort.
 
 - Complétez le circuit pour calculer et afficher 4a et 8a.
-- Verifiez avec a=5. Votre affichage devrait montrer 10, 20 et 40.
+- Vérifiez avec a=5. Votre affichage devrait montrer 10, 20 et 40.
 
 ```{logic}
 :ref: mul2
@@ -345,13 +345,13 @@ Pour les 4 bits b0 à b3, chaque bit contrôle la multiplication par son poids (
 - a x b2 x 4
 - a x b3 x 8
 
-Pour compléter l'opération de multiplcation 4x4 bits, la dernière étappe sera d'additioner les 4 nombres.
+Pour compléter l'opération de multiplication 4x4 bits, la dernière étape sera d'additionner les 4 nombres.
 
 Complétez le circuit avec :
 
-- deux entrés que vous appelez **b2** et **b3**
-- un affichages 8 bits qui affichent 4a sous contrôle de b2
-- un affichages 8 bits qui affichent 8a sous contrôle de b3
+- deux entrées que vous appelez **b2** et **b3**
+- un affichage 8 bits qui affiche 4a sous contrôle de b2
+- un affichage 8 bits qui affiche 8a sous contrôle de b3
 
 ```{logic}
 :ref: mul3
@@ -383,7 +383,7 @@ Complétez le circuit avec :
 
 La multiplication 4 x 4 bits nécessite:
 
-- 4 multiplexeurs  pour la multiplication 4 x 1 bits
+- 4 multiplexeurs  pour la multiplication 4 x 1 bit
 - 3 additionneurs pour additionner les 4 opérandes décalés
 
 Pour multiplier `0101` x `1001` = `00101101`  (5 x 9 = 45) nous écrivons en colonnes ceci :
@@ -397,7 +397,7 @@ Pour multiplier `0101` x `1001` = `00101101`  (5 x 9 = 45) nous écrivons en col
   00101101
 ```
 
-Modifiez a et b dans le circuit multiplicateur 4 x 4 bits ci-dessus verifiez que vous obtenez bien le produit de a et b. Faites une capture avec la plus grande valeur possible.
+Modifiez a et b dans le circuit multiplicateur 4 x 4 bits ci-dessus vérifiez que vous obtenez bien le produit de a et b. Faites une capture avec la plus grande valeur possible.
 
 ```{logic}
 :ref: mul4
