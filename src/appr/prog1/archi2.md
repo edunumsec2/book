@@ -436,7 +436,7 @@ Complétez le circuit pour soustraire `a-b`. Le résultat de 10-3 devrait être 
 
 ## Inversion commutée (~a)
 
-L'inverseur commuté permet d'inverser toutes les 4 bites d'un nombre.
+L'inverseur commuté permet d'inverser toutes les 4 bits d'un nombre.
 
 Ajoutez un inverseur commuté pour obtenir `~a` ou `a` selon l'état du sélecteur.
 
