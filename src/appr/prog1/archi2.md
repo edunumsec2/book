@@ -205,7 +205,26 @@ Ajoutez encore 3 demi-additionneurs et montrez la table de vérité pour les 4 c
 
 ## Additionneur complet
 
-L'additionneur de 2 bits est très limité. Pour le cas général, nous avons besoin d'un additionneur qui additionne 3 bits. Il faut tenir compte de la retenue (`Cin`), qu'il faut inclure dans l'addition. Voici donc la table de vérité pour un additionneur complet.
+Dans le cas général de l'addition, nous n'additionnons pas deux bits, mais deux nombres à plusieurs bits. Voici l'addition en colonne de deux nombres 4 bits (3+11=14).
+
+```
+ 0011
++1011
+-----
+ 1110
+ ```
+
+ Pour être explicit, nous introduisons une ligne supplémentaire qui représente la retenue (C = carry).
+
+```
+ 0110 (retenue)
+ 0011
++1011
+-----
+ 1110
+ ```
+
+L'additionneur de 2 bits de la section précédente n'est plus suffisant. Pour le cas général, nous avons besoin d'un additionneur qui additionne 3 bits. Il faut tenir compte de la retenue (`Cin`), qu'il faut inclure dans l'addition. Voici donc la table de vérité pour un additionneur complet.
 
 | Cin | A | B |Cin+A+B| Cout | S |
 |:---:|:-:|:-:|:-----:|:----:|:-:|
