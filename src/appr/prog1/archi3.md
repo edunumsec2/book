@@ -1,40 +1,40 @@
 # TP ALU
 
-L'unité arithmétique (ALU) et logique permet de choisir parmi un certain nombre d'opérations. Nous allons voir comment une ALU peut choisir entre
+L'unité arithmétique et logique (ALU) permet de choisir parmi un certain nombre d'opérations. Nous allons voir comment une ALU peut choisir entre
 
 - ET
 - OU
 - addition
 - soustraction
 
-Nous allons découvrir comment des décalages et additions succésives peuvent constituer une multiplication.
+Nous allons découvrir comment des décalages et additions successives peuvent constituer une multiplication.
 
 Finalement, un registre permet de mémoriser un des opérandes de ce calcul.
 
 ## Sélectionneur
 
-Le sélectionneur permet de choisir entre les deux signaux 
+L'entrée **sel** du sélectionneur permet de choisir entre deux signaux d'entrée :
 
-- lent (période de 2 s)
-- rapide (période de 250 ms)
+- entrée 0 : signal lent (période de 2 s)
+- entrée 1 : signal rapide (période de 250 ms)
 
 Recréez un tel sélecteur avec des portes NON, ET, OU.
 
 ```{logic}
 :ref: mux
-:height: 400
+:height: 500
 :showonly: in out clock not and or
 {
   "v": 4,
   "in": [
-    {"type": "clock", "pos": [40, 120], "id": 73, "period": 250},
-    {"type": "clock", "pos": [40, 30], "id": 81, "period": 2000},
-    {"pos": [140, 130], "orient": "n", "id": 82, "name": "S0", "val": 0},
-    {"pos": [80, 310], "id": 91, "name": "sel", "val": 1}
+    {"type": "clock", "pos": [100, 120], "id": 73, "name": "entrée 1", "period": 250},
+    {"type": "clock", "pos": [100, 30], "id": 81, "name": "entrée 0", "period": 2000},
+    {"pos": [200, 130], "orient": "n", "id": 82, "name": "sel", "val": 1},
+    {"pos": [110, 400], "orient": "n", "id": 91, "name": "sel", "val": 1}
   ],
   "out": [
-    {"pos": [470, 70], "id": 74, "name": "Z0"},
-    {"pos": [470, 260], "id": 92}
+    {"pos": [450, 70], "id": 74, "name": "sortie"},
+    {"pos": [450, 260], "id": 92, "name": "sortie"}
   ],
   "gates": [
     {"type": "AND", "pos": [250, 230], "in": [83, 84], "out": 85},
@@ -42,7 +42,7 @@ Recréez un tel sélecteur avec des portes NON, ET, OU.
     {"type": "NOT", "pos": [170, 310], "in": 89, "out": 90}
   ],
   "components": [
-    {"type": "mux-2to1", "pos": [140, 70], "in": [51, 52, 53], "out": 54}
+    {"type": "mux-2to1", "pos": [200, 70], "in": [51, 52, 53], "out": 54}
   ],
   "wires": [[73, 52], [54, 74, {"propagationDelay": 1000}], [81, 51], [82, 53], [90, 87], [91, 89]]
 }
@@ -58,8 +58,8 @@ Ajoutez les éléments qui manquent.
 
 ```{logic}
 :ref: mux
-:height: 400
-:showonly: in in.nibble out.nibble-display out.nibble decoder-7seg out.7seg
+:height: 450
+:showonly: in in.nibble out.nibble decoder-7seg out.7seg
 {
   "v": 4,
   "in": [
@@ -121,7 +121,7 @@ L'ALU dont nous disposons peut effectuer 4 opérations :
 - OU logique (10)
 - ET logique (11)
 
-Ajoutez la deuxième entrée, un bloc de visualisation pour la sortie et les 2 entrées de sélection. Ensuite, testez les 4 opérations.
+Ajoutez la deuxième entrée, un bloc de visualisation pour la sortie et les 2 entrées de sélection. Ensuite, testez les 4 opérations. Montrez une soustraction.
 
 ```{logic}
 :ref: alu
@@ -140,31 +140,6 @@ Ajoutez la deuxième entrée, un bloc de visualisation pour la sortie et les 2 e
     {"type": "alu", "pos": [230, 200], "in": [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61], "out": [62, 63, 64, 65, 92, 67, 66]}
   ],
   "wires": [[62, 68], [63, 69], [64, 70], [65, 71], [72, 51], [73, 52], [74, 53], [75, 54], [72, 80], [73, 81], [74, 82], [75, 83]]
-}
-```
-
-## Addition et soustraction
-
-Ajoutez un circuit qui calcule a+b-c et affiche le résultat.
-Par exemple pour a=7, b=5, c=3, le résultat affiché devrait être 9.
-
-```{logic}
-:ref: mux
-:height: 400
-:showonly: alu in out.nibble-display
-{
-  "v": 4,
-  "in": [
-    {"type": "nibble", "pos": [60, 80], "id": [11, 12, 13, 14], "val": [1, 1, 1, 0], "name": "a"},
-    {"type": "nibble", "pos": [60, 180], "id": [79, 80, 81, 82], "val": [1, 0, 1, 0], "name": "b"},
-    {"type": "nibble", "pos": [60, 280], "id": [105, 106, 107, 108], "val": [1, 1, 0, 0], "name": "c"}
-  ],
-  "out": [
-    {"type": "nibble-display", "pos": [110, 80], "id": [67, 68, 69, 70]},
-    {"type": "nibble-display", "pos": [110, 180], "id": [83, 84, 85, 86]},
-    {"type": "nibble-display", "pos": [110, 280], "id": [114, 115, 116, 117]}
-  ],
-  "wires": [[11, 67], [12, 68], [13, 69], [14, 70], [79, 83], [80, 84], [81, 85], [82, 86], [105, 114], [106, 115], [107, 116], [108, 117]]
 }
 ```
 
@@ -193,7 +168,8 @@ Interprétez les nombres binaires comme des nombres signés. Vous pouvez le conf
 
 ## Addition 8 bits
 
-Pour additionner un nombre à 8-bits, il faut combiner deux ALU 4-bits.
+Pour additionner un nombre à 8-bits, il faut combiner deux ALU 4-bits. Dans ce cas il faut connecter Cout de la première ALU avec Cin de la deuxième.
+
 Complétez le circuit pour afficher l'addition de deux nombres binaires 8-bits.
 Ajoutez une option pour soustraire deux nombres.
 
@@ -219,6 +195,53 @@ Ajoutez une option pour soustraire deux nombres.
 }
 ```
 
+## Carry et Overflow (V)
+
+L'ALU possède deux sorties pour indiquer un dépassement de plage de sortie. Le résultat affiché est alors décalé de 16.  Ce cas est signalé par l'ALU à l'aide de deux signaux de sortie spéciaux.
+
+- C (carry) signale un dépassement pour des nombres non signés,
+- V (overflow) signale un dépassement pour des nombres signés.
+
+Pour les entiers relatifs sur 4 bits ce dépassement se situe entre 7 et -8.  
+Pour les entiers naturels sur 4 bits ce dépassement se situe entre 15 et 0.
+
+![signed](circuit/2add/4bitsIntegers.jpg)
+
+- Dans la première ALU choisissez des valeurs a et b qui produisent un dépassement (C = 1)
+- Complétez la deuxième ALU avec des entrées et sorties
+- Ajoutez 3 affichages configurés (via menu contextuel) en nombres signés
+- Choisissez des valeurs a et b qui produisent un dépassement (V = 1)
+
+```{logic}
+:ref: overflow
+:height: 600
+:showonly: alu in out in.nibble out.nibble-display
+{
+  "v": 4,
+  "in": [
+    {"type": "nibble", "pos": [50, 90], "id": [18, 19, 20, 21], "val": [1, 0, 0, 0], "name": "a"},
+    {"type": "nibble", "pos": [50, 190], "id": [26, 27, 28, 29], "val": [0, 1, 0, 0], "name": "b"}
+  ],
+  "out": [
+    {"type": "nibble-display", "pos": [100, 90], "id": [22, 23, 24, 25]},
+    {"type": "nibble-display", "pos": [100, 190], "id": [30, 31, 32, 33]},
+    {"type": "nibble", "pos": [290, 140], "id": [35, 36, 37, 38]},
+    {"type": "nibble-display", "pos": [370, 140], "id": [39, 40, 41, 42]},
+    {"pos": [290, 250], "id": 43, "name": "Cout (retenue de sortie)"},
+    {"pos": [240, 560], "id": 83, "name": "V (oVerflow)"}
+  ],
+  "components": [
+    {"type": "alu", "pos": [180, 140], "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "out": [11, 12, 13, 14, 15, 16, 17]},
+    {"type": "alu", "pos": [190, 420], "in": [44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54], "out": [55, 56, 57, 58, 59, 60, 61]}
+  ],
+  "labels": [
+    {"pos": [130, 20], "text": "nombres non signés"},
+    {"pos": [100, 290], "text": "nombres signés"}
+  ],
+  "wires": [[18, 0], [19, 1], [20, 2], [21, 3], [18, 22], [19, 23], [20, 24], [21, 25], [26, 4], [27, 5], [28, 6], [29, 7], [26, 30], [27, 31], [28, 32], [29, 33], [11, 35], [12, 36], [13, 37], [14, 38], [11, 39], [12, 40], [13, 41], [14, 42], [17, 43], [59, 83]]
+}
+```
+
 ## Égalité (`a == b`)
 
 Parfois il est nécessaire de comparer deux valeurs numériques. En Python une telle comparaison s'écrit `a == b` et donne `True` ou `False`. 
@@ -227,7 +250,7 @@ Parfois il est nécessaire de comparer deux valeurs numériques. En Python une t
 
 ```{logic}
 :ref: mux
-:height: 300
+:height: 400
 :showonly: in alu
 {
   "v": 4,
@@ -375,6 +398,10 @@ Pour multiplier `0101` x `1001` = `00101101`  (5 x 9 = 45) nous écrivons en col
 ----------
   00101101
 ```
+
+Cet algorithme peut être exprimé mathématiquement comme
+
+$$ produit = \sum^4_{i=0} (b_i \cdot a) \cdot 2^i $$
 
 Modifiez a et b dans le circuit multiplicateur 4 x 4 bits ci-dessus vérifiez que vous obtenez bien le produit de a et b. Faites une capture avec la plus grande valeur possible.
 

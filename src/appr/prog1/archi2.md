@@ -462,7 +462,7 @@ Complétez le circuit pour soustraire `a-b`. Le résultat de 10-3 devrait être 
 }
 ```
 
-## Inversion commutée (~a)
+## Inversion commutée
 
 L'inverseur commuté permet d'inverser tous les 4 bits d'un nombre.
 
@@ -479,13 +479,13 @@ Ajoutez un inverseur commuté pour obtenir `~a` ou `a` selon l'état du sélecte
   ],
   "out": [
     {"type": "nibble-display", "pos": [300, 70], "id": [4, 5, 6, 7], "name": "a"},
-    {"type": "nibble-display", "pos": [300, 180], "id": [22, 23, 24, 25], "name": "~a"}
+    {"type": "nibble-display", "pos": [300, 180], "id": [22, 23, 24, 25], "name": "a/~a"}
   ],
   "wires": [[0, 4], [1, 5], [2, 6], [3, 7]]
 }
 ```
 
-## Négation commutée (`-a`)
+## Négation commutée
 
 Complétez le circuit pour pouvoir obtenir `-a` ou `a` selon l'état du sélecteur **neg**.
 
@@ -501,7 +501,7 @@ Complétez le circuit pour pouvoir obtenir `-a` ou `a` selon l'état du sélecte
   ],
   "out": [
     {"type": "nibble-display", "pos": [160, 70], "id": [4, 5, 6, 7], "name": "a", "radix": -10},
-    {"type": "nibble-display", "pos": [440, 110], "id": [56, 57, 58, 59], "name": "-a", "radix": -10}
+    {"type": "nibble-display", "pos": [440, 110], "id": [56, 57, 58, 59], "name": "a/-a", "radix": -10}
   ],
   "components": [
     {"type": "adder", "pos": [330, 80], "orient": "n", "in": [25, 26, 27], "out": [28, 29]},
