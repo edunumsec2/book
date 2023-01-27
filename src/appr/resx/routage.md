@@ -42,6 +42,10 @@ autre routeur soit au destinataire).
 {itodo}` [Ajouter une illustration]`
 
 ```{togofurther} Masques de réseau
+Si chaque destinataire possible devait figurer dans une ligne de la table de routage, cela ferait des immenses tables de routage
+qui prendraient beaucoup de place en mémoire et seraient très compliquées à gérer. C'est pour ceci que les lignes de la table
+de routage peuvent correspondre, soit à des machines individuelles, soit à des sous-réseaux. 
+
 Pour qu'une machine sache si une autre machine est dans le même sous-réseau qu'elle, son sous-réseau est spécifié par un
 *masque* de réseau composé d'une suite de 32 bits (en IPv4) dont les $n$ premiers sont à 1 et les $32-n$ suivants sont à 0.
 Par exemple, une machine peut avoir une adresse IP 128.178.23.132 avec un masque de 11111111.11111111.1111111.000000000.
@@ -56,14 +60,6 @@ communiquer avec l'extérieur du sous-réseau.
 
 ````
 
-
-
-
-### Format effectif
-
-[Mettre cette information comme facultative, utile si on veut travailler avec un vrai réseau]
-Toutefois, afin de ne pas avoir à conserver en mémoire une ligne par destinataire possible,
-la première colonne utilise les masques de sous-réseaux qui sont représentés par deux colonnes.
 
 Dans des petits réseaux locaux, cette table de routage peut être construite
 manuellement, mais généralement c'est le routeur qui construit sa
@@ -82,14 +78,14 @@ C'est pourquoi un système automatisé de mise à jour des tables de routage
 est utilisé. C'est ce qu'on appelle le *routage dynamique*.
 Cela permet non
 seulement de gérer les changements configuration du réseau, mais également les
-phénomènes de congestion.
+phénomènes de congestion du trafic. 
 
 ### Le protocole RIP
 
 Le protocole RIP (Routing Information Protocol) est une des manières les plus anciennes et
 les plus simples de faire du routage dynamique. Toutes les 30 secondes, chaque routeur
 envoie à tous ses voisins le contenu de sa table de routage. Lorsqu'un routeur reçoit une ligne
-de la table de routage de son voisin dont la destination n'est pas inclue (au sens large [préciser]) dans sa propre table,
+de la table de routage de son voisin dont la destination n'est pas inclue dans sa propre table,
 il l'ajoute à sa table en indiquant comme interface, celle le connectant avec ce voisin.
 De plus lorsqu'un routeur reçoit une ligne de la table de routage de son voisin dont la destination est incluse dans sa table, mais
 avec une distance plus grande, cela signifie qu'en passant par ce voisin le chemin sera plus court (ou égal) pour atteindre sa destination.

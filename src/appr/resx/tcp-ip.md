@@ -15,6 +15,7 @@ une image de champignon à Alice, cette image sera découpée en petits paquets 
 Alice. Cela a l'avantage qui si, pour une raison ou une autre, une partie de l'image se perd en route, il n'y a pas besoin de renvoyer toute l'image, mais uniquement les parties qui se sont perdues. Cela permet aussi à une machine de maintenir plusieurs canaux de communications ouverts simultanément. C'est ce qu'on appelle la *commutation par paquets* parce que ce sont les paquets qui sont adressés individuellement à leur destinataire. À l'inverse, dans le cas du téléphone traditionnel, lorsqu'on appelle quelqu'un, un circuit électrique est établi entre les deux téléphones pour leur permettre de communiquer (à l'exclusion des autres téléphones), c'est ce qu'on appelle la *commutation de circuits*.
 
 
+
 ```{figure} media/packets.svg
 ---
 width: 500
@@ -23,7 +24,6 @@ align: center
 Les données envoyées de Liam à Julie sont découpées en petite paquets (représentés par des carrés oranges). Ces paquets ne prennent pas tous forcément le même chemin pour arriver à destination. Cela permet de partager les lignes avec d'autre utilisateurs et utilisatrices tels que Anna et Tom qui communiquent
 également en s'envoyant des paquets (représentés par des triangles jaunes).
 ```
-
 
 Les protocoles IP (Internet Protocol) et TCP (Transmission Control Protocol) déc
 rivent le format ainsi que la gestion
