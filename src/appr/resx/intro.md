@@ -37,9 +37,45 @@ sécuritaires. Dès les années 70, le mouvement hippie, séduit par les possibi
 a investit cette infrastructure et a developpé une "cyberculture" qui marquera durablement l'histoire d'Internet, de l'émergence des réseaux sociaux
 aux cryptomonnaies. 
 
-## Un réseau décentralisé
+## Structure d'internet
 
-Cette section présente une vue d'ensemble de ce qui sera abordé dans ce chapitre.
+Internet est souvent décrit comme un *réseau de réseaux*. En effet, Internet est construit sur une structure de {glo}`lan|réseaux locaux` interconnectés les
+uns aux autres. Par exemple, les ordinateurs d'une école, d'une entreprise ou d'un appartement peuvent être reliés entre eux par le wifi,
+ou des cables ethernet et constituer un réseau local. Le réseau local est ensuite connecté, par le biais d'un {glo}`routeur|routeur`, au reste d'Internet.
+Ainsi Internet est constitué d'une myriade de sous-réseaux enchassés les uns dans les autres. Ces réseaux sont connecté par les *dorsales d'Internet*, des
+cables de fibre optique capables de transferer des données à haut débit, qui traversent les continents et les océans. 
+
+```{figure} media/struct.svg
+---
+width: 500
+align: center
+---
+Un réseau de sous-réseaux. Les points représentent les machines, alors que les traits indiquent les connexions entre les machines. La couleur
+de fond indique les sous-réseaux. 
+```
+
+
+
+
+```{micro} Les cables sous-marins d'Internet
+Aller sur le site <https://www.fiberatlantic.com/submarinecablemap/> et regarder la carte des cables sous-marins d'Internet. Trouver le cable qui relie
+l'Afrique du Sud à l'Inde. Comment s'appelle-t-il, depuis quand existe-t-il et quelle est sa longueur? A qui appartient-il et quand est-il prévu de le mettre
+hors-service?
+```
+
+
+
+## Fonctionnement d'Internet
+
+Cette section présente une vue d'ensemble des éléments centraux du fonctionnement d'Internet
+et qui seront repris dans la suite du chapitre. 
+
+### Adressage
+
+Tout réseau de communication a besoin d'un système d'adresses afin de pouvoir distinguer et joindre les différents destinataires. 
+Dans un réseau décentralisé qu'est Internet, le système d'adressage doit permettre à chaque machine connectée au réseau d'être identifiable
+et joignable, sans causer de quiproquo. Cela passe par une organisation hiérarchique du réseau.
+
 
 ### Routage
 
@@ -57,8 +93,19 @@ la mise en lien doit se faire de manière décentralisée. C'est ce qu'on appell
 Dans un réseau centralisé comme le téléphone, lorsque deux personnes sont en communication, elles "occupent la ligne": ces deux personnes ne sont pas joignables par d'autres personnes (c'est ce qu'indique le signal "occupé"), mais cela n'implique pas d'autres personnes qui veulent communiquer entre elles (sauf si le standard et surchargé). C'est ce qu'on appelle la *commutation de circuits*, car un circuit électrique est créé entre les deux appareils qui communiquent.
 
 Imaginons maintenant qu'une relation soit établie entre deux appareils d'un réseau décentralisé . Si l'on avait une commutation de circuits, toutes les connexions utilisées pour acheminer
-l'information entre deux appareils seraient inutilisables pour les autres personnes utilisatrices du réseau.
-{itodo}`montrer une image`
+l'information entre deux appareils seraient inutilisables pour les autres personnes utilisatrices du réseau, comme illustré dans la figure ci-dessous.
+
+```{figure} media/packetvscircuit.svg
+---
+width: 400
+align: center
+---
+Si on réservait un circuit entre les ordinateurs de Liam et Julie (en orange) lorsque ceux-ci sont en
+communication par internet, Tom ne pourrait pas entrer en même temps en communication avec Anna, car tous
+les segments oranges seraient occupés. 
+```
+
+
 Cela pourrait conduire rapidement à une saturation du réseau. Pour éviter ce problème, il a été décidé de
 "découper" la communication en petits morceaux (appelés les paquets) et d'envoyer chaque morceau
 individuellement. C'est ce qu'on appelle la *commutation par paquets*. C'est un peu comme si au téléphone on

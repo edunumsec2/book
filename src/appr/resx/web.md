@@ -95,11 +95,48 @@ Les éléments de cette page sont indiqués par des *balises* indiquées par des
 
 La plupart des navigateurs web permettent de visualiser le *code  HTML* des pages visitées. Un aspect important de la création de sites web consiste à écrire du code HTML qui sera mis sur le serveur pour être transmis au visiteur du site web. Cela peut se faire en écrivant directement du code html dans un fichier texte, ou à l'aide d'un outil de création de sites web qui se charge d'écrire le code HTML selon les indications données par la personne concevant le site.
 
-## Le Web 2.0
+## Les évolutions du Web
+
+### Le Web dynamique
+Au début, les pages web étaient des fichiers html stockés sur les serveurs. C'est ce qu'on appelle le
+web *statique*. Si les sites web statiques existent
+toujours, par exemple modulo-info.ch, beaucoup de site web sont dynamiques,
+c'est-à-dire que le fichier html est généré par le site au moment où la requête est faite.
+Cela permet de servir une page différente selon l'utilisateur ou selon les arguments de la requête qui
+sont des indiquations supplémentaires ajoutée à la requête après l'URL.
+
+```{micro}
+Effectuer une recherche sur un navigateur web et consulter la barre de navigation. Quels sont les arguments de votre requête et pouvez-vous en comprendre la signification?
+```
+
+
+```{exercise}
+Parmi les site web suivants, lesquels ont besoin d'être dynamique et lesquel peuvent se contenter de fournir un
+contenu statique?
+
+1. Un site d'achats en ligne
+1. Un site indiquant les horaires d'ouverture et de fermeture d'un magasin. 
+1. Un site de consultation du catalogue d'une bibliothèque
+1. Un site de présentation d'une entreprise
+1. Un site avec les documents d'un cours universitaire ou scolaire
+1. Un site d'e-banking
+
+Pour les sites qui peuvent être statiques, quelles possibilités supplémentaires pourraient être offertes par
+un site dynamique. 
+```
+
+{itodo}`parler de javascript et du web dynamique côté client?`
+
+
+
+### Le Web 2.0
 
 Le web 2.0 fait référence à la tendance, initiée au débit des années 2000, de proposer des pages web permettant aux internautes
 de contribuer du contenu, et pas uniquement de lire des fichiers comme c'était le cas jusqu'alors. Les blogs, forums, wikis, et les réseaux sociaux font
 partie de ce développement qui voit exploser l'aspect participatif du web. Ce n'est en effet plus nécessaire de connaître la syntaxe HTML et d'avoir
-son propre serveur pour mettre du contenu à disposition de la planète entière.
+son propre serveur pour mettre du contenu à disposition des internautes de la planète.
+
+
 
 {itodo}` développer ?`
+
