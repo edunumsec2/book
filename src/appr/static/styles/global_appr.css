@@ -67,3 +67,12 @@ body.modulo-dark .dropdown {
     overflow-wrap: break-word;
     font-size: 1.5rem;
 }
+
+.caption-text {
+    text-align: justify;
+    font-size: 0.8rem;
+}
+
+figure {
+    padding: 30px;
+}
