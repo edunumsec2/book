@@ -1,0 +1,15 @@
+{
+  "v": 4,
+  "in": [
+    {"pos": [100, 40], "orient": "s", "id": 12, "name": "P", "val": 0, "isPushButton": true},
+    {"pos": [100, 180], "orient": "n", "id": 14, "name": "C", "val": 0, "isPushButton": true},
+    {"pos": [70, 260], "id": 16, "name": "clock", "val": 0, "isPushButton": true}
+  ],
+  "components": [
+    {"type": "flipflop-d", "pos": [100, 110], "in": [0, 1, 2, 3], "out": [4, 5], "state": 0},
+    {"type": "flipflop-d", "pos": [220, 110], "in": [6, 7, 8, 9], "out": [10, 11], "state": 0},
+    {"type": "flipflop-d", "pos": [340, 110], "in": [17, 18, 19, 20], "out": [21, 22], "state": 0},
+    {"type": "flipflop-d", "pos": [460, 110], "in": [23, 24, 25, 26], "out": [27, 28], "state": 0}
+  ],
+  "wires": [[12, 1], [14, 2], [16, 0], [21, 26]]
+}

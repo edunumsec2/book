@@ -21,6 +21,28 @@ Le circuit était embarqué dans un boitier en céramique avec seulement 16 broc
 
 ![boitier](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Intel_C4004.jpg/640px-Intel_C4004.jpg)
 
+## Langage Assembleur
+
+On va plonger tout de suite dans la programmation du 4004. Voici un example d'un bout de programme qui additionne deux nombres 4 bits.
+
+```
+ADD2
+; add two 4bit numbers on the Intel 4004
+;
+	FIM P0, $A2	; initialize: R0=2 R1=A
+	LD  R0		; load R0 into accumulator
+	ADD R1		; add R1 into accumulator
+	XCH R1		; and store in R1
+```
+
+Le point-virgule (`;`) sert comme symbole de commentaire.  
+Un programme en assembleur est typiquement structuré en 4 colonnes :
+
+1. Une étiquette pour designer l'addresse (ADD2)
+1. Un opcode (mnemonic) de l'opération (FIM, LD, ADD, XCH)
+1. Des données (P0, $A2, R0, R1)
+1. Des commentaires en fin de ligne
+
 ## Code opération (opcode
 
 Le code opération est l'instruction en code machine qui dit au CPU quelle opération à exécuter. Le opcode inclut souvent les registres sur lesquelles il faut agir.

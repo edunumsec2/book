@@ -1,12 +1,66 @@
 # TP Mémoire
 
-Les circuits que nous avons vus jusqu'à maintenant s'appellent circuits combinatoires.
-La famille de circuits que nous allons découvrir s'appelle circuit séquentiel.
+Les circuits que nous avons vus jusqu'à maintenant s'appellent **circuits combinatoires**. Leur sortie est le seul résultat de leurs entrées. Une même entrée produit toujours la même sortie. Le circuit n'a pas de mémoire.
+
+La famille de circuits que nous allons découvrir s'appelle **circuit séquentiel**.
 Ces circuits permettent de mémoriser un état.
+
+## Cellule de mémoire
+
+Une cellule de mémoire élémentaire peut être créée avec une porte OU, ou la sortie est connectée avec une de ses entrées.
+
+Circuit 1
+
+- Connectez la sortie de la porte OU via la porte OUI avec une de ses entrées
+- Montrez que vous avez une cellule de mémoire qui peut mémoriser une seule fois (fusible)
+
+Circuit 2
+
+- Connectez la sortie de la porte OU via la porte ET avec une de ses entrées
+- Montrez que vous avez une cellule de mémoire qui peut mémoriser S (set) et qui peut être remis avec R (reset)
+
+Circuit 3
+
+- Connectez la sortie de la porte OU via la porte ET avec une de ses entrées
+- Contrôlez la porte ET via une porte NON
+- Mettez l'entrée R en poussoir
+
+**Attention** : Pour éviter des effets d'oscillation, vous devez appuyer sur le bouton pressoir plus longtemps que 200 ms ou diminuer fortement le temps de propagation dans la boucle.
+
+```{logic}
+:ref: sr
+:height: 500
+:showonly: in out not or and
+{
+  "v": 4,
+  "in": [
+    {"pos": [50, 340], "id": 17, "name": "S", "val": 0},
+    {"pos": [50, 160], "id": 29, "name": "S", "val": 0},
+    {"pos": [50, 260], "id": 30, "name": "R", "val": 0},
+    {"pos": [50, 40], "id": 46, "name": "S", "val": 0},
+    {"pos": [50, 450], "id": 51, "name": "R", "val": 0, "isPushButton": true}
+  ],
+  "out": [
+    {"pos": [230, 350], "id": 5, "name": "Q"},
+    {"pos": [220, 50], "id": 47, "name": "Q"},
+    {"pos": [220, 170], "id": 48, "name": "Q"}
+  ],
+  "gates": [
+    {"type": "OR", "pos": [120, 350], "in": [6, 7], "out": 8},
+    {"type": "AND", "pos": [120, 220], "orient": "w", "in": [23, 24], "out": 25},
+    {"type": "OR", "pos": [120, 170], "in": [26, 27], "out": 28},
+    {"type": "AND", "pos": [120, 400], "orient": "w", "in": [38, 39], "out": 40},
+    {"type": "BUF", "pos": [120, 90], "orient": "w", "in": 41, "out": 42},
+    {"type": "OR", "pos": [120, 50], "in": [43, 44], "out": 45},
+    {"type": "NOT", "pos": [120, 450], "in": 49, "out": 50}
+  ],
+  "wires": [[8, 5], [17, 6], [29, 26], [46, 43], [45, 47], [28, 48], [51, 49]]
+}
+```
 
 ## Verrou SR
 
-Un verrou SR (set-reset) permet de mémoriser une information.
+Un verrou SR (set-reset) permet de "verrouiller" (mémoriser) une information.
 
 - Jouez avec le verrou SR pour comprendre son fonctionnement
 - Recréez le verrou SR avec les composants NOT et OR
@@ -42,13 +96,15 @@ Un verrou SR (set-reset) permet de mémoriser une information.
 
 ## Bascule D
 
+La bascule D (data) recopie la donnée sur l'entrée **D** vers sa sortie **Q** à chaque front montant de l'horloge **clock**.
+
 - ajoutez les 6 entrées/sorties à la bascule D,
 - lisez et comprenez les étiquettes,
 - observez et comprenez son comportement.
 
 ```{logic}
 :ref: d
-:height: 500
+:height: 300
 :showonly: in out
 {
   "v": 4,
@@ -58,47 +114,162 @@ Un verrou SR (set-reset) permet de mémoriser une information.
 }
 ```
 
-## Signal alternatif
+## Registre 4 bits
 
-Avec uniquement la bascule D, créez un circuit avec une sortie Q qui s'inverse à chaque coup d'horloge.
+Le **registre** est un circuit qui peut mémoriser multiples bits sur un coup d'horloge. À partir de 4 bascules D, nous pouvons construire un registre pour mémoriser 4 bits.
+
+Ajoutez les connexions qui manquent :
+
+- Connectez chacun des 4 bits d'entrée vers une entrée **D** de la bascule.
+- Connectez chacun des 4 bits de sortie **Q** vers son bit de sortie correspondante.
+- Connectez les 4 entrées **preset**,  **clock** et **clear**
 
 ```{logic}
 :ref: d
 :height: 500
-:showonly: flipflop-d
+:showonly: in out in.nibble out.nibble flipflop-d
 {
   "v": 4,
   "in": [
-    {"pos": [190, 80], "id": 0, "name": "Clock (horloge)", "val": 0, "isPushButton": true}
+    {"type": "nibble", "pos": [60, 190], "id": [0, 1, 2, 3], "val": [1, 0, 0, 1]},
+    {"pos": [110, 420], "id": 37, "name": "clock", "val": 0, "isPushButton": true},
+    {"pos": [110, 40], "id": 42, "name": "preset", "val": 0, "isPushButton": true},
+    {"pos": [110, 460], "id": 43, "name": "clear", "val": 0, "isPushButton": true}
   ],
   "out": [
-    {"pos": [410, 40], "id": 7, "name": "Q (sortie normale)"}
-  ]
+    {"type": "nibble-display", "pos": [110, 190], "id": [4, 5, 6, 7]},
+    {"type": "nibble", "pos": [370, 190], "id": [33, 34, 35, 36]}
+  ],
+  "components": [
+    {"type": "flipflop-d", "pos": [240, 100], "in": [8, 9, 10, 11], "out": [12, 13], "state": 0},
+    {"type": "flipflop-d", "pos": [240, 200], "in": [14, 15, 16, 17], "out": [18, 19], "state": 0},
+    {"type": "flipflop-d", "pos": [240, 300], "in": [20, 21, 22, 23], "out": [24, 25], "state": 0},
+    {"type": "flipflop-d", "pos": [240, 400], "in": [26, 27, 28, 29], "out": [30, 31], "state": 0}
+  ],
+  "wires": [[0, 4], [1, 5], [2, 6], [3, 7], [1, 17], [37, 26], [18, 34]]
 }
 ```
 
-## Compteur avec bascule D
+## Décodeur de touche
 
-Une bascule D avec une rétroaction de la sorte Q_inv vers son entrée D divise la fréquence de l'horloge en 2. Nous avons effectivement un compteur.
+Quand on appuie sur une touche d'une calculatrice électronique, telle que la TI-30, la valeur de la touche est transformée en binaire 4 bits, enregistré dans un **registre 4 bits**, et affiché avec un affichage à 7 segments. Les étapes sont :
 
-- Ajoute 2 bascules D pour compter jusqu'à 15
-- Modifie le circuit pour compter vers le haut (0 à 15)
+- une **touche** 0 - 9 est appuyé
+- une conversion en **binaire** est faite
+- une entrée **clock** est produite
+- la valeur est mémorisée dans un **registre**
+- la valeur est décodée vers les signaux a-g
+- la valeur numérique est montrée sur l'**affichage** à 7 segments
+
+Complétez le circuit pour traiter les touches 0 à 3
+
+```{logic}
+:ref: but
+:height: 500
+:showonly: in or or3 register decoder-7seg out.7seg
+{
+  "v": 4,
+  "in": [
+    {"pos": [50, 80], "id": 63, "name": "0", "val": 0, "isPushButton": true},
+    {"pos": [50, 120], "id": 69, "name": "1", "val": 0, "isPushButton": true},
+    {"pos": [50, 160], "id": 70, "name": "2", "val": 0, "isPushButton": true},
+    {"pos": [50, 200], "id": 71, "name": "3", "val": 0, "isPushButton": true}
+  ],
+  "out": [
+    {"type": "7seg", "pos": [470, 150], "id": [12, 13, 14, 15, 16, 17, 18, 19]}
+  ],
+  "gates": [
+    {"type": "OR", "pos": [150, 130], "in": [64, 65], "out": 66},
+    {"type": "OR", "pos": [150, 190], "in": [77, 78], "out": 79},
+    {"type": "OR3", "pos": [200, 300], "in": [80, 81, 82], "out": 83}
+  ],
+  "components": [
+    {"type": "register", "pos": [310, 140], "in": [41, 42, 43, 44, 45, 46, 47], "out": [48, 49, 50, 51], "state": [1, 0, 0, 0]},
+    {"type": "decoder-7seg", "pos": [390, 140], "in": [52, 53, 54, 55], "out": [56, 57, 58, 59, 60, 61, 62]}
+  ],
+  "labels": [
+    {"pos": [50, 30], "text": "touche"},
+    {"pos": [140, 30], "text": "vers binaire"},
+    {"pos": [230, 30], "text": "clock"},
+    {"pos": [300, 30], "text": "registre"},
+    {"pos": [390, 30], "text": "décodeur"},
+    {"pos": [480, 30], "text": "affichage"}
+  ],
+  "wires": [[48, 52], [49, 53], [50, 54], [51, 55], [56, 12], [57, 13], [58, 14], [59, 15], [60, 16], [61, 17], [62, 18], [69, 64], [71, 78], [83, 41]]
+}
+```
+
+## Décodeur pour 8 touches
+
+Complétez le circuit pour traiter les touches 0 à 7
+
+```{logic}
+:ref: but8
+:height: 500
+:showonly: in or or3 or4 register decoder-7seg out.7seg
+{
+  "v": 4,
+  "in": [
+    {"pos": [50, 80], "id": 63, "name": "0", "val": 0, "isPushButton": true},
+    {"pos": [50, 120], "id": 69, "name": "1", "val": 0, "isPushButton": true},
+    {"pos": [50, 160], "id": 70, "name": "2", "val": 0, "isPushButton": true},
+    {"pos": [50, 200], "id": 71, "name": "3", "val": 0, "isPushButton": true},
+    {"pos": [50, 240], "id": 89, "name": "4", "val": 0, "isPushButton": true},
+    {"pos": [50, 280], "id": 90, "name": "5", "val": 0, "isPushButton": true},
+    {"pos": [50, 320], "id": 91, "name": "6", "val": 0, "isPushButton": true},
+    {"pos": [50, 360], "id": 92, "name": "7", "val": 0, "isPushButton": true}
+  ],
+  "out": [
+    {"type": "7seg", "pos": [470, 150], "id": [12, 13, 14, 15, 16, 17, 18, 19]}
+  ],
+  "components": [
+    {"type": "register", "pos": [310, 140], "in": [41, 42, 43, 44, 45, 46, 47], "out": [48, 49, 50, 51], "state": [1, 0, 0, 0]},
+    {"type": "decoder-7seg", "pos": [390, 140], "in": [52, 53, 54, 55], "out": [56, 57, 58, 59, 60, 61, 62]}
+  ],
+  "labels": [
+    {"pos": [50, 30], "text": "touche"},
+    {"pos": [140, 30], "text": "vers binaire"},
+    {"pos": [230, 30], "text": "clock"},
+    {"pos": [300, 30], "text": "registre"},
+    {"pos": [390, 30], "text": "décodeur"},
+    {"pos": [480, 30], "text": "affichage"}
+  ],
+  "wires": [[48, 52], [49, 53], [50, 54], [51, 55], [56, 12], [57, 13], [58, 14], [59, 15], [60, 16], [61, 17], [62, 18]]
+}
+```
+
+## Compteur 4 bits
+
+Une bascule D avec une rétroaction de la sortie inversée $\bar{Q}$ vers son entrée $D$ divise la fréquence de l'horloge par 2.  Nous avons effectivement un compteur 1 bit.
+
+- Complétez le circuit pour construire un compteur 4 bits.
+- Le circuit final doit compter de `0000` vers `1111`.
+- Connectez aussi les 4 signaux **clear** pour la remise du compteur
 
 ```{logic}
 :ref: shift
 :height: 500
 :showonly: in out out.nibble clock flipflop-d
 {
-  "v": 3,
-  "opts": {"propagationDelay": 10},
-  "in": [{"type": "clock", "pos": [40, 90], "id": 7, "period": 2000}],
-  "components": [{"type": "flipflop-d", "pos": [180, 150], "in": [8, 9, 10, 11], "out": [12, 13], "state": 1}],
-  "out": [{"type": "nibble", "pos": [250, 40], "orient": "n", "id": [29, 30, 31, 32]}],
-  "wires": [[13, 11], [12, 30], [7, 29], [7, 8]]
+  "v": 4,
+  "in": [
+    {"pos": [80, 420], "id": 43, "name": "clear", "val": 0, "isPushButton": true},
+    {"type": "clock", "pos": [50, 80], "id": 44, "period": 1000}
+  ],
+  "out": [
+    {"type": "nibble", "pos": [350, 70], "id": [51, 52, 53, 54]}
+  ],
+  "components": [
+    {"type": "flipflop-d", "pos": [210, 160], "in": [14, 15, 16, 17], "out": [18, 19], "state": 1},
+    {"type": "flipflop-d", "pos": [210, 260], "in": [20, 21, 22, 23], "out": [24, 25], "state": 1},
+    {"type": "flipflop-d", "pos": [210, 360], "in": [26, 27, 28, 29], "out": [30, 31], "state": 1},
+    {"type": "flipflop-d", "pos": [210, 60], "in": [45, 46, 47, 48], "out": [49, 50], "state": 1}
+  ],
+  "wires": [[44, 45], [50, 48], [49, 51]]
 }
 ```
 
-## Compteur 4 bits
+## Compteur 8 bits
 
 Le compteur 4 bits utilise un signal d'horloge et incrémenté à chaque coup d'horloge.
 Un décodeur à 7 segments transforme les 4 signaux qui représentent un nombre binaire de 0 à 16 vers les sorties correspondant pour activer les bonnes lampes de l'affichage à 7 segments.
@@ -170,105 +341,6 @@ L'entrée Reset peut être utilisée pour remettre le compteur. Une porte ET dé
 }
 ```
 
-## Horloge avec secondes
-
-Un compteur 4 bits avec un circuit de remise à 0 peut être configuré pour afficher les secondes de 00 à 59.
-
-- Ajoutez un deuxième compteur, décodeur et affichage à 7 segments
-- Configurez-le pour compter à 60
-
-```{logic}
-:ref: clock09
-:height: 500
-:showonly: clock in counter out.7seg decoder.7seg
-{
-  "v": 3,
-  "opts": {"propagationDelay": 10},
-  "components": [
-    {"type": "counter", "pos": [120, 70], "in": [35, 36], "out": [37, 38, 39, 40, 41], "count": 9},
-    {"type": "decoder-7seg", "pos": [250, 60], "in": [42, 43, 44, 45], "out": [46, 47, 48, 49, 50, 51, 52]}
-  ],
-  "gates": [{"type": "AND", "pos": [200, 170], "orient": "s", "in": [53, 54], "out": 55}],
-  "out": [{"type": "7seg", "pos": [330, 70], "id": [56, 57, 58, 59, 60, 61, 62, 63]}],
-  "in": [{"type": "clock", "pos": [50, 110], "id": 64, "period": 2000}],
-  "wires": [
-    [38, 53],
-    [37, 42],
-    [38, 43],
-    [39, 44],
-    [40, 45],
-    [55, 36],
-    [40, 54],
-    [46, 56],
-    [47, 57],
-    [48, 58],
-    [49, 59],
-    [50, 60],
-    [51, 61],
-    [52, 62],
-    [64, 35]
-  ]
-}
-```
-
-## Parcourir l'alphabet
-
-Les affichages à 16 segments permettent d'afficher les chiffres, lettres et divers symboles.
-
-- Changez pour afficher 15 minuscules
-
-```{logic}
-:ref: counter_16seg
-:height: 500
-:showonly: in in.nibble clock counter decoder-16seg out.16seg
-{
-  "v": 3,
-  "components": [
-    {"type": "counter", "pos": [110, 70], "in": [0, 1], "out": [2, 3, 4, 5, 6], "count": 7},
-    {
-      "type": "decoder-16seg",
-      "pos": [330, 70],
-      "in": [55, 56, 57, 58, 59, 60, 61],
-      "out": [62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78]
-    }
-  ],
-  "in": [
-    {"type": "clock", "pos": [40, 110], "id": 7, "period": 2000},
-    {"type": "nibble", "pos": [220, 150], "id": [87, 88, 89, 90], "val": [0, 0, 1, 0]},
-    {"pos": [110, 160], "orient": "n", "id": 92, "name": "C (Clear, mise à 0)", "val": 0, "isPushButton": true}
-  ],
-  "out": [{"type": "16seg", "pos": [480, 70], "id": [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54]}],
-  "wires": [
-    [7, 0],
-    [62, 38],
-    [63, 39],
-    [64, 40],
-    [65, 41],
-    [66, 42],
-    [67, 43],
-    [68, 44],
-    [69, 45],
-    [70, 46],
-    [71, 47],
-    [72, 48],
-    [73, 49],
-    [74, 50],
-    [75, 51],
-    [76, 52],
-    [77, 53],
-    [78, 54],
-    [2, 55],
-    [3, 56],
-    [4, 57],
-    [5, 58],
-    [87, 59],
-    [88, 60],
-    [89, 61],
-    [92, 1]
-  ]
-}
-```
-
 ## Rouler un dé
 
 Un dé électronique utilise 7 LEDs pour afficher les points.
@@ -324,59 +396,35 @@ Ajoutez les portes logiques appropriées pour implémenter ce dé électronique.
 }
 ```
 
-## Guirlande lumineuse
+## Registre à décalage
 
 Un registre de décalage propage une information d'un registre vers l'autre.
 
-- Ajoutez encore des bascules D
-- Créez une guirlande lumineuse
-- Utilisez une horloge comme entrée
+- Placez tous les entrées P (preset) et C (clear)
+- Connectez la sortie Q avec l'entrée D suivante
+- Connectez tous les entrées clock
+- Testez le circuit à décalage
+
+Si ça fonctionne, connectez la sortie du registre à décalage avec son entrée et connectez une entrée horloge à 1 second à l'entrée clock. Vous avez un **registre à décalage circulaire**.
 
 ```{logic}
 :ref: shift
 :height: 500
-:showonly: in clock out.bar flipflop-d
-{
-  "v": 3,
-  "in": [
-    {"pos": [160, 70], "id": 8, "name": "D (Données)", "val": 1},
-    {"pos": [200, 180], "id": 33, "name": "Clock (horloge)", "val": 0, "isPushButton": true}
-  ],
-  "components": [
-    {"type": "flipflop-d", "pos": [250, 90], "in": [18, 19, 20, 21], "out": [22, 23], "state": 1},
-    {"type": "flipflop-d", "pos": [360, 90], "in": [34, 35, 36, 37], "out": [38, 39], "state": 1},
-    {"type": "flipflop-d", "pos": [470, 90], "in": [40, 41, 42, 43], "out": [44, 45], "state": 0}
-  ],
-  "out": [{"type": "bar", "pos": [250, 20], "id": 46, "display": "h"}],
-  "wires": [[8, 21], [33, 18], [22, 37], [33, 34], [33, 40], [38, 43], [8, 46]]
-}
-```
-
-## Registre à décalage
-
-Le registre à décalage accepte une entrée D à chaque coup d'horloge.
-Ici nous utilisons une entrée aléatoire (symbole du dé).
-
-Nous utilisons un compteur pour faire une remise à chaque fois quand le compteur atteint 4.
-Modifiez le circuit pour que la remise ait lieu quand le compteur atteint 8.
-
-```{logic}
-:ref: shift
-:height: 500
-:showonly: in clock out.shiftbuffer counter
+:showonly: in out clock flipflop-d
 {
   "v": 4,
   "in": [
-    {"type": "clock", "pos": [30, 110], "id": 0, "period": 2000},
-    {"type": "random", "pos": [160, 40], "in": 8, "out": 9}
-  ],
-  "out": [
-    {"type": "shiftbuffer", "pos": [370, 80], "id": [10, 11, 12], "state": "000"}
+    {"pos": [100, 40], "orient": "s", "id": 12, "name": "P", "val": 0, "isPushButton": true},
+    {"pos": [100, 180], "orient": "n", "id": 14, "name": "C", "val": 0, "isPushButton": true},
+    {"pos": [70, 260], "id": 16, "name": "clock", "val": 0, "isPushButton": true}
   ],
   "components": [
-    {"type": "counter", "pos": [150, 170], "in": [1, 2], "out": [3, 4, 5, 6, 7], "count": 3}
+    {"type": "flipflop-d", "pos": [100, 110], "in": [0, 1, 2, 3], "out": [4, 5], "state": 0},
+    {"type": "flipflop-d", "pos": [220, 110], "in": [6, 7, 8, 9], "out": [10, 11], "state": 0},
+    {"type": "flipflop-d", "pos": [340, 110], "in": [17, 18, 19, 20], "out": [21, 22], "state": 0},
+    {"type": "flipflop-d", "pos": [460, 110], "in": [23, 24, 25, 26], "out": [27, 28], "state": 0}
   ],
-  "wires": [[0, 1], [9, 12], [0, 8], [0, 10], [5, 11, {"propagationDelay": 1}], [5, 2, {"propagationDelay": 1}]]
+  "wires": [[12, 1], [14, 2], [16, 0], [21, 26]]
 }
 ```
 
@@ -385,7 +433,14 @@ Modifiez le circuit pour que la remise ait lieu quand le compteur atteint 8.
 La RAM (Random Access Memory) de 16 x 4 bits permet de stocker 16 mots de 4 bits.
 Les quatre bits de l'adresse **Addr** déterminent l'endroit où seront écrites les données **D**.
 
-À l'adresse '0001' (1) se trouvent déjà les données '1001'.  Ceci ressemble à des yeux.
+- **Addr** détermine l'endroit des données
+- **D** signifie les données à écrire
+- **Q** représente les 4 bits des données lus
+- **WE** (Write Enable) permet d'écrire si 1
+- **clock** transmet les données sur D en mémoire
+- **Clr** (clear) remet toute la mémoire à zéro
+
+À l'adresse `0001` (1) se trouvent déjà les données `1001`.  Ceci ressemble à des yeux.
 Ajoutez d’autres valeurs pour en faire un smiley.
 
 ```{logic}
@@ -408,7 +463,7 @@ Ajoutez d’autres valeurs pour en faire un smiley.
 }
 ```
 
-## RAM à contenu aléatoire
+## RAM avec bits aléatoires
 
 Le circuit suivant utilise un compteur pour créer les 16 adresses et écrire un bit aléatoire dans la RAM.
 
@@ -461,4 +516,78 @@ Dans l'image ci-dessous, la RAM est déjà remplie jusqu'à `1010` (10).
 
 ```
 
+## RAM avec image
 
+La mémoire peut contenir des images. Chaque bit représente un pixel.
+Un des premiers jeux vidéo, **Space Invaders**,  utilise des images monocolores pour présenter des envahisseurs extraterrestres.
+
+![invader](media/space_invader.jpg)
+
+Remplissez la mémoire avec l'image d'un *space invader* 8x8 bits.
+L'image sera alors visible dans la partie visualisation du bloc RAM 16x8 bits.
+
+```{logic}
+:ref: invader
+:height: 300
+:showonly: clock in out ram-4x16 counter
+{
+  "v": 4,
+  "in": [
+    {"type": "byte", "pos": [170, 160], "id": [38, 39, 40, 41, 42, 43, 44, 45], "val": "01000010", "name": "data"},
+    {"type": "nibble", "pos": [260, 40], "orient": "s", "id": [51, 52, 53, 54], "val": [0, 0, 0, 0], "name": "addr"}
+  ],
+  "out": [
+    {"type": "byte-display", "pos": [390, 160], "id": [64, 65, 66, 67, 68, 69, 70, 71], "radix": 16}
+  ],
+  "components": [
+    {"type": "ram-16x8", "pos": [260, 160], "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "out": [15, 16, 17, 18, 19, 20, 21, 22]}
+  ],
+  "wires": [[38, 3], [39, 4], [40, 5], [41, 6], [42, 7], [43, 8], [44, 9], [45, 10], [51, 11], [52, 12], [53, 13], [54, 14], [15, 64], [16, 65], [17, 66], [18, 67], [19, 68], [20, 69], [21, 70], [22, 71]]
+}
+```
+
+## RAM avec ASCII
+
+La mémoire peut contenir du code ASCII. Voici les codes ASCII des 6 lettres du mot `ON AIR`, exprimées en binaire et en hexadécimal.
+
+```
+O = 0b1001111 0x4f
+N = 0b1001110 0x4e
+  =  0b100000 0x20
+A = 0b1000001 0x41
+I = 0b1001001 0x49
+R = 0b1010010 0x52
+```
+
+Le circuit ci-dessous contient le mot `HELLO` en mémoire RAM. Un compteur avec une horloge 1 Hz affiche le contenu de la mémoire en boucle vers un affichage à 16 segments.
+
+Remplacez le contenu de la mémoire pour afficher le mot `ON AIR`.
+
+```{logic}
+:ref: ascii
+:height: 500
+:showonly: clock in out ram-4x16 counter
+{
+  "v": 4,
+  "in": [
+    {"type": "byte", "pos": [180, 320], "id": [38, 39, 40, 41, 42, 43, 44, 45], "val": "01001111", "name": "data"},
+    {"pos": [150, 460], "orient": "n", "id": 114, "name": "WE (Write Enable)", "val": 1},
+    {"pos": [200, 380], "id": 115, "name": "Clock (horloge)", "val": 0, "isPushButton": true},
+    {"type": "clock", "pos": [90, 110], "id": 132, "period": 1000},
+    {"pos": [320, 430], "orient": "n", "id": 138, "name": "C (Clear, mise à 0)", "val": 0, "isPushButton": true},
+    {"pos": [200, 180], "id": 141, "name": "C (Clear, mise à 0)", "val": 0, "isPushButton": true},
+    {"pos": [80, 60], "id": 146, "name": "clock", "val": 1},
+    {"pos": [150, 40], "orient": "s", "id": 147, "name": "sel", "val": 1}
+  ],
+  "out": [
+    {"type": "16seg", "pos": [560, 310], "id": [73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89]}
+  ],
+  "components": [
+    {"type": "ram-16x8", "pos": [300, 320], "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "out": [15, 16, 17, 18, 19, 20, 21, 22], "content": ["01001000", "01000101", "01001100", "01001100", "01001111"]},
+    {"type": "decoder-16seg", "pos": [430, 310], "in": [90, 91, 92, 93, 94, 95, 96], "out": [97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113]},
+    {"type": "counter", "pos": [290, 180], "orient": "s", "in": [116, 117], "out": [118, 119, 120, 121, 122], "count": 1},
+    {"type": "mux-2to1", "pos": [150, 100], "in": [142, 143, 144], "out": 145}
+  ],
+  "wires": [[38, 3], [39, 4], [40, 5], [41, 6], [42, 7], [43, 8], [44, 9], [45, 10], [97, 73], [98, 74], [99, 75], [100, 76], [101, 77], [102, 78], [103, 79], [104, 80], [105, 81], [106, 82], [107, 83], [108, 84], [109, 85], [110, 86], [111, 87], [112, 88], [113, 89], [15, 90], [16, 91], [17, 92], [18, 93], [19, 94], [20, 95], [21, 96], [114, 1], [115, 0], [118, 11], [119, 12], [120, 13], [121, 14], [138, 2], [141, 117], [132, 143], [146, 142], [147, 144], [145, 116]]
+}
+```

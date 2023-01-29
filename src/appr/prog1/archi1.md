@@ -47,6 +47,7 @@ Les entrées ont deux modes que vous pouvez changer avec le menu contextuel:
 Changez la deuxième entrée en mode **poussoir** et augmentez le délai de propagation du fil à 1000 ms. Vous verrez alors des paquets d'informations se propager le long du fil.
 
 Vous pouvez ajouter des noms aux entrées sorties.
+
 - Ajoutez une entrée *lumière*, configurez en commutateur, et reliez-la à une sortie *lampe*
 - Ajoutez une entrée *sonnerie*, configurez en poussoir, et reliez-la à une sortie *alarme*
 
@@ -178,7 +179,7 @@ Les affichages à 16 segments permettent d'afficher aussi les lettres de l'alpha
 
 ## Porte NON
 
-La porte NON inverse un signal. 
+La porte NON inverse un signal.
 Montrez sa table de vérité.
 
 - Mettez la première entrée à 0 et ajoutez une sortie
@@ -263,7 +264,7 @@ Utilisez une horloge et une porte NON pour afficher les chiffres 0 et 1 en alter
 
 Une porte OU donne une sortie 1 si **au moins une** des entrées est à 1.
 
-- Montrez la table de vérité pour la porte OU. 
+- Montrez la table de vérité pour la porte OU.
 - Ajoutez 3 portes OU et mettez les entrées à 01, 10, et 11
 - Créez une porte OU avec 3 entrées
 
@@ -359,7 +360,7 @@ Complétez le circuit pour un décodeur qui a le comportement suivant :
 
 Une porte ET donne une sortie 1 seulement si **toutes** les entrées sont à 1.
 
-- Montrez la table de vérité pour la porte ET. 
+- Montrez la table de vérité pour la porte ET.
 - Ajoutez 3 portes ET et mettez les entrées à 01, 10, et 11
 - Créez une porte ET avec 3 entrées
 
@@ -439,7 +440,7 @@ Le tableau ci-dessous montre les segments à allumer pour afficher les nombres 0
 Ajoutez des portes NON, OR, et AND pour compléter le circuit
 
 **Astuce** - Essayez de trouver le circuit logique pour chaque colonne.
-C'est-à-dire il faut trouver le circuit pour allumer le segment. 
+C'est-à-dire il faut trouver le circuit pour allumer le segment.
 Par exemple pour le segment a vous avez la table de vérité suivante.
 
 | b1 | b0 | a |

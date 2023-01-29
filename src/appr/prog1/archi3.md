@@ -51,7 +51,7 @@ Recréez un tel sélecteur avec des portes NON, ET, OU.
 ## Multiplexeur
 
 Le multiplexeur (MUX) permet de choisir entre deux signaux 4-bits nommés a et b.
-Ajoutez les éléments qui manquent. 
+Ajoutez les éléments qui manquent.
 
 - Ajoutez une deuxième entrée 4-bits avec un affichage.
 - Ajoutez un décodeur et affichage à 7 segments.
@@ -197,25 +197,35 @@ Ajoutez une option pour soustraire deux nombres.
 
 ## Carry et Overflow (V)
 
-L'ALU possède deux sorties pour indiquer un dépassement de plage de sortie. Le résultat affiché est alors décalé de 16.  Ce cas est signalé par l'ALU à l'aide de deux signaux de sortie spéciaux.
+L'ALU possède deux sorties pour indiquer un dépassement de plage de résultat. Le résultat affiché est alors décalé de 16.  Ce cas est signalé par l'ALU à l'aide de deux signaux de sortie spéciaux.
 
 - C (carry) signale un dépassement pour des nombres non signés,
 - V (overflow) signale un dépassement pour des nombres signés.
 
-Pour les entiers relatifs sur 4 bits ce dépassement se situe entre 7 et -8.  
-Pour les entiers naturels sur 4 bits ce dépassement se situe entre 15 et 0.
+L'addition de deux nombres naturels (0 à 15) peut produire un résultat de 0 à 30.  
+L'addition de deux nombres relatifs (-8 à 7) peut produire un résultat de -16 à 14.  
+Dans certains cas on aura donc besoin de 5 bits pour représenter correctement le résultat.
 
 ![signed](circuit/2add/4bitsIntegers.jpg)
 
-- Dans la première ALU choisissez des valeurs a et b qui produisent un dépassement (C = 1)
-- Complétez la deuxième ALU avec des entrées et sorties
-- Ajoutez 3 affichages configurés (via menu contextuel) en nombres signés
-- Choisissez des valeurs a et b qui produisent un dépassement (V = 1)
+Pour les nombres non signés (première ALU)
+
+- Choisissez des valeurs a et b qui produisent un dépassement (C = 1), et donc un affichage incorrect sur une sortie de 4 bits.
+- Ajoutez en plus un affichage 8 bits et connectez-y les 4 bits de S et C comme 5e bit, pour afficher le résultat correct.
+
+Pour les nombres signés (deuxième ALU)
+
+- Ajoutez 2 entrées 4 bits et 1 sortie 4 bits.
+- Ajoutez 3 affichages 4 bits configurés (via menu contextuel) en nombres signés.
+- Choisissez des valeurs a et b négatives qui produisent un dépassement (V = 1).
+- Ajoutez un affichage 8 bits configuré (via le menu contextuel) en nombres signés, et connectez-y les 4 bits de S et C comme 5e bit.
+
+**Attention** : Dans ce cas vous devez connecter C également avec les 3 autres bits (b5-b7) pour faire une propagation du bit de signe et traiter correctement le cas des nombres négatifs.
 
 ```{logic}
 :ref: overflow
 :height: 600
-:showonly: alu in out in.nibble out.nibble-display
+:showonly: alu in out in.nibble out.nibble out.nibble-display out.byte-display
 {
   "v": 4,
   "in": [
@@ -239,32 +249,6 @@ Pour les entiers naturels sur 4 bits ce dépassement se situe entre 15 et 0.
     {"pos": [100, 290], "text": "nombres signés"}
   ],
   "wires": [[18, 0], [19, 1], [20, 2], [21, 3], [18, 22], [19, 23], [20, 24], [21, 25], [26, 4], [27, 5], [28, 6], [29, 7], [26, 30], [27, 31], [28, 32], [29, 33], [11, 35], [12, 36], [13, 37], [14, 38], [11, 39], [12, 40], [13, 41], [14, 42], [17, 43], [59, 83]]
-}
-```
-
-## Égalité (`a == b`)
-
-Parfois il est nécessaire de comparer deux valeurs numériques. En Python une telle comparaison s'écrit `a == b` et donne `True` ou `False`. 
-
-- Créez un comparateur qui met la sortie **Egal** à 1 si les deux nombres a et b sont égaux.
-
-```{logic}
-:ref: mux
-:height: 400
-:showonly: in alu
-{
-  "v": 4,
-  "in": [
-    {"type": "nibble", "pos": [40, 130], "id": [4, 5, 6, 7], "val": [1, 0, 1, 0], "name": "a"},
-    {"type": "nibble", "pos": [40, 230], "id": [8, 9, 10, 11], "val": [1, 1, 1, 0], "name": "b"}
-  ],
-  "out": [
-    {"pos": [320, 180], "id": 30, "name": "Egal"}
-  ],
-  "components": [
-    {"type": "alu", "pos": [140, 180], "in": [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22], "out": [23, 24, 25, 26, 31, 28, 27]}
-  ],
-  "wires": [[5, 13], [6, 14], [7, 15], [8, 16], [9, 17], [10, 18], [11, 19], [4, 12]]
 }
 ```
 
@@ -338,14 +322,15 @@ Le circuit ci-dessous calcule 2a en décalant d'un bit en direction du poids for
 
 ## Multiplier par bit
 
-Le circuit ci-dessus utilise un multiplexeur 8x4 pour faire l'addition 1-bit, au lieu des 4 portes ET.
+Le circuit ci-dessous utilise un multiplexeur 8x4 pour faire la multiplication d'un nombre **a** (4 bits) avec un nombre **b** (1 bit), au lieu des 4 portes ET utilisées précédemment.
 
-Pour les 4 bits b0 à b3, chaque bit contrôle la multiplication par son poids (1, 2, 4, 8)
+Nous pouvons représenter un nombre binaire **b** par une séquence de 4 chiffres binaires : $b_3 b_2 b_1 b_0$.
+Chaque bit $b_i$ contrôle la multiplication de son poids ($2^i$) avec $a$.
 
-- a x b0 x 1
-- a x b1 x 2
-- a x b2 x 4
-- a x b3 x 8
+- $b_0 \cdot 2^0 a$
+- $b_1 \cdot 2^1 a$
+- $b_2 \cdot 2^2 a$
+- $b_3 \cdot 2^3 a$
 
 Pour compléter l'opération de multiplication 4x4 bits, la dernière étape sera d'additionner les 4 nombres.
 
@@ -433,6 +418,38 @@ Modifiez a et b dans le circuit multiplicateur 4 x 4 bits ci-dessus vérifiez qu
 }
 ```
 
+## Diviser par 2, 4 et 8
+
+La division par une puissance de 2 est très simple. Il suffit de décaler le nombre binaire. Pour diviser par 2 nous décalons d'une unité, et nous obtenons : 
+
+- La division entière (`a//2`)
+- Le reste de la division, l'opération modulo (`a%2`)
+
+Ajoutez deux affichages 8 bits pour la division par 4 et 8
+Ajoutez deux affichages 4 bits pour le modulo 4 et 8
+Ajoutez les étiquettes (`a%4`, `a//4`, etc.)
+
+Par exemple pour `43//8` vous devriez obtenir 5,  
+et pour `43%8` vous devriez obtenir 3.
+
+```{logic}
+:ref: div
+:height: 400
+:showonly: in out, in.byte out.nibble-display out.byte-display
+{
+  "v": 4,
+  "in": [
+    {"type": "byte", "pos": [40, 160], "id": [0, 1, 2, 3, 4, 5, 6, 7], "val": "00101011", "name": "a"}
+  ],
+  "out": [
+    {"type": "byte-display", "pos": [130, 160], "id": [8, 9, 10, 11, 12, 13, 14, 15]},
+    {"type": "nibble-display", "pos": [220, 60], "id": [20, 21, 22, 23], "name": "a%2"},
+    {"type": "byte-display", "pos": [230, 170], "id": [24, 25, 26, 27, 28, 29, 30, 31], "name": "a//2"}
+  ],
+  "wires": [[0, 8], [1, 9], [2, 10], [3, 11], [4, 12], [5, 13], [6, 14], [7, 15], [0, 20], [1, 24], [2, 25], [3, 26], [4, 27], [5, 28], [6, 29], [7, 30]]
+}
+```
+
 ## Registre
 
 Le registre que nous allons voir plus en détail dans le prochain chapitre permet de mémoriser une donnée.
@@ -496,94 +513,6 @@ Complétez le circuit et calculez la somme 1+3+7.
 }
 ```
 
-## Décodeur de touche
-
-Quand on appuie sur une touche d'une calculatrice électronique, telle que la TI-30, la valeur de la touche est transformée en binaire, enregistré dans un registre, et affiché avec un affichage à 7 segments. Les étapes sont :
-
-- une **touche** 0 - 9 est appuyé
-- une conversion en **binaire** est faite
-- une entrée **clock** est produite
-- la valeur est mémorisée dans un **registre**
-- la valeur est décodée vers les signaux a-g 
-- la valeur numérique est montrée sur l'**affichage** à 7 segments
-
-Complétez le circuit pour traiter les touches 0 à 3
-
-```{logic}
-:ref: but
-:height: 500
-:showonly: in or or3 register decoder-7seg out.7seg
-{
-  "v": 4,
-  "in": [
-    {"pos": [50, 80], "id": 63, "name": "0", "val": 0, "isPushButton": true},
-    {"pos": [50, 120], "id": 69, "name": "1", "val": 0, "isPushButton": true},
-    {"pos": [50, 160], "id": 70, "name": "2", "val": 0, "isPushButton": true},
-    {"pos": [50, 200], "id": 71, "name": "3", "val": 0, "isPushButton": true}
-  ],
-  "out": [
-    {"type": "7seg", "pos": [470, 150], "id": [12, 13, 14, 15, 16, 17, 18, 19]}
-  ],
-  "gates": [
-    {"type": "OR", "pos": [150, 130], "in": [64, 65], "out": 66},
-    {"type": "OR", "pos": [150, 190], "in": [77, 78], "out": 79},
-    {"type": "OR3", "pos": [200, 300], "in": [80, 81, 82], "out": 83}
-  ],
-  "components": [
-    {"type": "register", "pos": [310, 140], "in": [41, 42, 43, 44, 45, 46, 47], "out": [48, 49, 50, 51], "state": [1, 0, 0, 0]},
-    {"type": "decoder-7seg", "pos": [390, 140], "in": [52, 53, 54, 55], "out": [56, 57, 58, 59, 60, 61, 62]}
-  ],
-  "labels": [
-    {"pos": [50, 30], "text": "touche"},
-    {"pos": [140, 30], "text": "vers binaire"},
-    {"pos": [230, 30], "text": "clock"},
-    {"pos": [300, 30], "text": "registre"},
-    {"pos": [390, 30], "text": "décodeur"},
-    {"pos": [480, 30], "text": "affichage"}
-  ],
-  "wires": [[48, 52], [49, 53], [50, 54], [51, 55], [56, 12], [57, 13], [58, 14], [59, 15], [60, 16], [61, 17], [62, 18], [69, 64], [71, 78], [83, 41]]
-}
-```
-
-## Décodeur pour 8 touches
-
-Complétez le circuit pour traiter les touches 0 à 7
-
-```{logic}
-:ref: but8
-:height: 500
-:showonly: in or or3 or4 register decoder-7seg out.7seg
-{
-  "v": 4,
-  "in": [
-    {"pos": [50, 80], "id": 63, "name": "0", "val": 0, "isPushButton": true},
-    {"pos": [50, 120], "id": 69, "name": "1", "val": 0, "isPushButton": true},
-    {"pos": [50, 160], "id": 70, "name": "2", "val": 0, "isPushButton": true},
-    {"pos": [50, 200], "id": 71, "name": "3", "val": 0, "isPushButton": true},
-    {"pos": [50, 240], "id": 89, "name": "4", "val": 0, "isPushButton": true},
-    {"pos": [50, 280], "id": 90, "name": "5", "val": 0, "isPushButton": true},
-    {"pos": [50, 320], "id": 91, "name": "6", "val": 0, "isPushButton": true},
-    {"pos": [50, 360], "id": 92, "name": "7", "val": 0, "isPushButton": true}
-  ],
-  "out": [
-    {"type": "7seg", "pos": [470, 150], "id": [12, 13, 14, 15, 16, 17, 18, 19]}
-  ],
-  "components": [
-    {"type": "register", "pos": [310, 140], "in": [41, 42, 43, 44, 45, 46, 47], "out": [48, 49, 50, 51], "state": [1, 0, 0, 0]},
-    {"type": "decoder-7seg", "pos": [390, 140], "in": [52, 53, 54, 55], "out": [56, 57, 58, 59, 60, 61, 62]}
-  ],
-  "labels": [
-    {"pos": [50, 30], "text": "touche"},
-    {"pos": [140, 30], "text": "vers binaire"},
-    {"pos": [230, 30], "text": "clock"},
-    {"pos": [300, 30], "text": "registre"},
-    {"pos": [390, 30], "text": "décodeur"},
-    {"pos": [480, 30], "text": "affichage"}
-  ],
-  "wires": [[48, 52], [49, 53], [50, 54], [51, 55], [56, 12], [57, 13], [58, 14], [59, 15], [60, 16], [61, 17], [62, 18]]
-}
-```
-
 ## Incrémenter/décrémenter
 
 Certains appareils électroniques ont très peu de touches et on doit utiliser juste deux boutons.
@@ -620,5 +549,54 @@ Attention au délai de transmission par défaut de 100 ms. Il faut soit appuyer 
     {"type": "alu", "pos": [160, 140], "in": [57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67], "out": [68, 69, 70, 71, 72, 73, 74]}
   ],
   "wires": [[7, 16], [8, 17], [9, 18], [10, 19], [20, 27], [21, 28], [22, 29], [23, 30], [24, 31], [25, 32], [26, 33], [7, 57], [8, 58], [9, 59], [10, 60], [68, 3], [69, 4], [70, 5], [71, 6]]
+}
+```
+
+## Comparer
+
+En Python nous disposons de 6 comparateurs pour comparer deux nombres a et b :
+
+- `>` plus grand
+- `>=` plus grand ou égal
+- `==` égal
+- `!=` non égal
+- `<=` plus petit ou égal
+- `<` plus petit
+
+Nous pouvons créer ces 6 comparaisons en utilisant une ALU qui soustrait deux nombres a et b et quelques portes logiques.
+Voici quelques astuces :
+
+- quand a-b est zéro alors `Z=1`, donc **a égal b**
+- quand a-b est négatif, alors `C=1`, donc **a plus petit que b**
+- quand vous combinez les deux `Z=1` ou `C=1`, vous trouvez **a plus petit ou égal à b**
+
+Utilisez les portes ET, OU et NON pour décoder les 6 types de comparaisons.
+
+```{logic}
+:ref: compare
+:height: 600
+:showonly: in out alu not or and 
+{
+  "v": 4,
+  "in": [
+    {"type": "nibble", "pos": [50, 120], "id": [18, 19, 20, 21], "val": [0, 1, 0, 0], "name": "a"},
+    {"type": "nibble", "pos": [50, 220], "id": [26, 27, 28, 29], "val": [1, 1, 0, 0], "name": "b"},
+    {"pos": [200, 40], "orient": "s", "id": 94, "name": "Op0", "val": 1}
+  ],
+  "out": [
+    {"type": "nibble-display", "pos": [100, 120], "id": [22, 23, 24, 25], "radix": -10},
+    {"type": "nibble-display", "pos": [100, 220], "id": [30, 31, 32, 33], "radix": -10},
+    {"type": "nibble-display", "pos": [270, 170], "id": [39, 40, 41, 42], "name": "a-b", "radix": -10},
+    {"pos": [340, 310], "id": 83, "name": "plus grand ou égal (>=)"},
+    {"pos": [340, 260], "id": 93, "name": "plus grand (>)"},
+    {"pos": [340, 360], "id": 95, "name": "égal (==)"},
+    {"pos": [340, 410], "id": 96, "name": "non égal (!=)"},
+    {"pos": [340, 460], "id": 97, "name": "plus petit (<)"},
+    {"pos": [340, 510], "id": 98, "name": "plus petit ou égal (<=)"}
+  ],
+  "components": [
+    {"type": "alu", "pos": [180, 170], "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "out": [11, 12, 13, 14, 15, 16, 17]}
+  ],
+  "wires": [[18, 0], [19, 1], [20, 2], [21, 3], [18, 22], [19, 23], [20, 24], [21, 25], [26, 4], [27, 5], [28, 6], [29, 7], [26, 30], [27, 31], [28, 32], [29, 33], [11, 39], [12, 40], [13, 41], [14, 42], [94, 8], [16, 95]]
 }
 ```

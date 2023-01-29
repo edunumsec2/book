@@ -6,6 +6,7 @@ Dans cette section, nous allons explorer d'abord la porte OU-X, l'additionneur q
 - soustraction
 - incrémentation
 - décrémentation
+
 ## La porte ou exclusif
 
 Le circuit ci-dessous représente une porte OU exclusive (XOR).
@@ -45,7 +46,7 @@ Créez une deuxième façon pour obtenir une porte OU exclusive en utilisant :
 
 Une porte OU-X (ou exclusif) avec 2 entrées donne une sortie 1 si **exactement une** des entrées est à 1.
 
-- Montrez la table de vérité pour la porte OU-X. 
+- Montrez la table de vérité pour la porte OU-X.
 - Ajoutez 3 portes OU-X et mettez les entrées à 01, 10, et 11
 - Créez une porte OU-X avec 3 entrées et observez son comportement
 
@@ -157,7 +158,7 @@ Nous avons maintenant toutes les éléments pour construire un additionneur bina
 | 1 | 0 |  1  | 0 | 1 |
 | 1 | 1 |  2  | 1 | 0 |
 
-Le résultat `A+B` peut être 0, 1 ou 2.  Nous avons besoin de deux bits pour représenter le résultat : 
+Le résultat `A+B` peut être 0, 1 ou 2.  Nous avons besoin de deux bits pour représenter le résultat :
 
 - le bit de somme `S`
 - le bit de retenue `C` (*carry* en anglais)
@@ -356,7 +357,7 @@ D'ailleurs le nom du langage de programmation C++ est une référence à cet op�
 
 Soustraire 1 à un nombre binaire est une opération très fréquente. Elle est utilisée pour décrémenter un compteur de boucle `i`, un pointeur de pile `sp` (stack pointer), ou un pointeur `p` vers les adresses de la mémoire.
 
-Complétez le circuit pour décrémenter la variable `i`. 
+Complétez le circuit pour décrémenter la variable `i`.
 Dans beaucoup de langages de programmation, une variable incrémentée est désignée par `i--`.  
 En Python nous écrivons ``i = i - 1``.
 
@@ -428,7 +429,7 @@ Complétez le circuit pour inverser le signe de la variable `i` et obtenir son n
 
 ## Soustraction (`a-b`)
 
-Pour soustraire deux nombres `a-b` il suffit d'additionner le nombre négatif du deuxième (`-b`). 
+Pour soustraire deux nombres `a-b` il suffit d'additionner le nombre négatif du deuxième (`-b`).
 Ce nombre négatif peut être obtenu en inversant tous les bits et additionner 1.  
 Donc ``-b = ~b + 1``.
 
