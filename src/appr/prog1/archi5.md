@@ -1,10 +1,26 @@
 # TP CPU
 
-Dans cette section nous mettons l'ALU, les registres, et la mémoire ensemble avec des circuits de contrôle, pour simuler un CPU (central processing unit).
+Le processeur, aussi appelé CPU (Central processing Unit) ou unité de traitement central, lit des instructions dans la mémoire programme et les exécute.
+
+Le CPU consiste de :
+
+- l'unité arithmétique et logique (ALU)
+- des registres
+- d'un accumulateur (accumulator)
+- d'un bus de données (data bus)
+- d'un bus d'adresses (adress bus)
+- des fanions (flags)
+- du registre d'instruction (instruction register)
+- du compteur de programme (program counter)
+- du pointeur de pile (stack pointer)
+- de la pile (stack)
+- de l'unité de contrôle (control unit)
+
+Dans cette section nous allons étudier comment encoder des instructions en code binaire, et comment ensuite exécuter ce code dans le CPU. Nous allons nous inspirer du premier microprocesseur, le Intel 4004.
 
 ## Intel 4004
 
-Le premier CPU sur un circuit intégré fut le 4004 produit par Intel en 1971. Il contenait les éléments suivants:
+Le premier CPU sur un seul circuit intégré fut le 4004 produit par Intel en 1971. Il contenait les éléments suivants:
 
 - un bus 4 bits
 - une ALU pour faire des additions et soustractions
@@ -21,35 +37,58 @@ Le circuit était embarqué dans un boitier en céramique avec seulement 16 broc
 
 ![boitier](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Intel_C4004.jpg/640px-Intel_C4004.jpg)
 
-## Langage Assembleur
+## Langage assembleur
 
-On va plonger tout de suite dans la programmation du 4004. Voici un example d'un bout de programme qui additionne deux nombres 4 bits.
+On va commencer tout de suite avec un exemple de programmation du 4004, en langage assembleur. Voici un bout de programme qui additionne deux nombres 4 bits.
 
 ```
 ADD2
 ; add two 4bit numbers on the Intel 4004
 ;
-	FIM P0, $A2	; initialize: R0=2 R1=A
-	LD  R0		; load R0 into accumulator
-	ADD R1		; add R1 into accumulator
-	XCH R1		; and store in R1
+ FIM P0, $A2 ; initialize: R0=2 R1=A
+ LD  R0  ; load R0 into accumulator
+ ADD R1  ; add R1 into accumulator
+ XCH R1  ; and store in R1
 ```
 
 Le point-virgule (`;`) sert comme symbole de commentaire.  
 Un programme en assembleur est typiquement structuré en 4 colonnes :
 
-1. Une étiquette pour designer l'addresse (ADD2)
-1. Un opcode (mnemonic) de l'opération (FIM, LD, ADD, XCH)
+1. Une étiquette pour désigner une adresse (ADD2)
+1. Un opcode (mnémonique) de l'opération (FIM, LD, ADD, XCH)
 1. Des données (P0, $A2, R0, R1)
 1. Des commentaires en fin de ligne
 
-## Code opération (opcode
+## Code opération (opcode)
 
 Le code opération est l'instruction en code machine qui dit au CPU quelle opération à exécuter. Le opcode inclut souvent les registres sur lesquelles il faut agir.
 
-- `1000RRRR` ADD additionner registre `RRRR` à l'accumulateur
-- `1001RRRR` SUB soustraire registre `RRRR` de l'accumulateur
-- `1101DDDD` LDM charger les données `MMMM` vers l'accumulateur
+- `1000RRRR` ADD additionne le registre `RRRR` à l'accumulateur
+- `1001RRRR` SUB soustrait le registre `RRRR` de l'accumulateur
+- `1101DDDD` LDM charge le nombre `DDDD` vers l'accumulateur
+
+L'instruction est composée de deux parties 4 bits :
+
+- Un opcode qui indique l'instruction (`1000=ADD`, `1001=SUB`), et
+- les données (4 bits pour indiquer un registre `RRRR` où un nombre `DDDD`).
+
+Par exemple l'instruction en assembleur `ADD R3` se traduit en code machine comme `10000011`.
+
+Trouvez les deux autres codes machine.
+
+```{logic}
+:ref: opcode
+:height: 300
+:showonly: in.byte
+{
+  "v": 4,
+  "in": [
+    {"type": "byte", "pos": [60, 50], "orient": "s", "id": [0, 1, 2, 3, 4, 5, 6, 7], "val": "10000011", "name": "ADD R3"},
+    {"type": "byte", "pos": [60, 130], "orient": "s", "id": [8, 9, 10, 11, 12, 13, 14, 15], "name": "SUB R15"},
+    {"type": "byte", "pos": [60, 210], "orient": "s", "id": [16, 17, 18, 19, 20, 21, 22, 23], "name": "LDM 13"}
+  ]
+}
+```
 
 ## Instruction registre (IR)
 
@@ -76,9 +115,24 @@ Le CPU 4004 possède des instructions qui ont 8 bits. À chaque pas de l'exécut
 }
 ```
 
+Voici une série d'instructions avec leur mnémonique (NOP, JCN) et leur code machine associé.
+
+```
+No Operation        NOP 00000000
+Jump Conditional    JCN 0001CCCC
+Fetch Immediate     FIM 0010RRR0
+Fetch Indirect      FIN 0011RRR0
+Jump Uncoditional   JUN 0100AAAA
+Jump to Subroutine  JMS 0101AAAA
+Increment           INC 0110RRRR
+Increment and Skip  ISZ 0111RRRR
+Add                 ADD 1000RRRR
+Subtract            SUB 1001RRRR
+```
+
 ## Bus 4 bits
 
-Une ALU doit acheminer différents signaux sur un même ligne de transfert des données. On appelle un tel chemin un bus de données. Pour y connecter plusieurs sources, nous devons utiliser un multiplexeur.
+Une ALU doit acheminer différents signaux sur une même ligne de transfert des données. On appelle un tel chemin un bus de données. Pour y connecter plusieurs sources, nous devons utiliser un multiplexeur.
 
 - Ajoutez une deuxième entrée 4 bits
 - Liez le multiplexeur et le démultiplexeur
@@ -199,7 +253,7 @@ Avec les deux opcode différents, le circuit de décodage du CPU choisit un regi
 }
 ```
 
-## Addition (ADD)
+## Addition (ADD/SUB)
 
 L'addition et la soustraction se distinguent dans l'opcode d'un seul bit.
 
@@ -278,6 +332,98 @@ Le pointeur de programme, PC (program counter), pointe toujours à la prochaine 
     {"pos": [240, 570], "text": "program memory"}
   ],
   "wires": [[23, 3], [24, 4], [25, 5], [26, 6], [27, 7], [28, 8], [29, 9], [30, 10], [15, 34], [16, 35], [17, 36], [18, 37], [19, 45], [20, 46], [21, 47], [53, 0], [54, 1], [22, 48], [38, 56], [39, 57], [40, 58], [41, 59], [49, 60], [50, 61], [51, 62], [52, 63], [75, 85], [76, 86], [77, 87], [78, 88], [93, 74], [96, 84]]
+}
+```
+
+## Le saut (jump)
+
+Le saut est une instruction qui permet de changer l'avancement linéaire du compteur de programme.
+L'instruction de saut a la forme :
+
+`Jump Uncoditional JUN 0100AAAA`
+
+Pour l'exécuter, le CPU doit d'abord détecter l'opcode `0100`. Ceci peut être fait avec une porte ET à 4 entrées et des inverseurs.
+
+Ensuite la valeur actuelle du compteur de programme doit être remplacée par la nouvelle adresse de destination du saut `AAAA`. Pour ceci nous utilisons un multiplexeur 8 vers 4.
+
+Utilisez des portes NON et ET pour décoder l'opcode `0100` et l'utiliser pour sélectionner entre incrémentation normale et destination de saut.
+
+A l'addresse 14 se trouve l'instruction `01000011` (`JUN 3). Si le décodeur fonctionne correctement le programme va faire une boucle entre les addresses 3 et 14.
+
+```{logic}
+:ref: PC
+:height: 600
+:showonly: in out not and4 out.nibble-display
+{
+  "v": 4,
+  "in": [
+    {"type": "byte", "pos": [200, 360], "id": [27, 28, 29, 30, 31, 32, 33, 34], "val": "01000011"},
+    {"pos": [350, 470], "orient": "n", "id": 43, "name": "WE (Write Enable)", "val": 1},
+    {"pos": [270, 420], "id": 44, "name": "Clock (horloge)", "val": 0, "isPushButton": true},
+    {"pos": [50, 150], "id": 87, "name": "B0", "val": 1},
+    {"type": "clock", "pos": [50, 330], "id": 88, "period": 2000}
+  ],
+  "out": [
+    {"type": "byte-display", "pos": [260, 360], "id": [35, 36, 37, 38, 39, 40, 41, 42]},
+    {"type": "nibble-display", "pos": [520, 280], "id": [98, 99, 100, 101], "name": "data"},
+    {"type": "nibble-display", "pos": [520, 370], "id": [115, 116, 117, 118], "name": "opcode"}
+  ],
+  "components": [
+    {"type": "ram-16x8", "pos": [370, 360], "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "out": [15, 16, 17, 18, 19, 20, 21, 22], "content": ["00110011", "00000000", "00000000", "01000011", "00000000", "01000011", "01000011", "00000000", "00000000", "00000000", "00000000", "00110010", "00100000", "00000000", "01000011"]},
+    {"type": "alu", "pos": [120, 130], "in": [45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55], "out": [56, 57, 58, 59, 60, 61, 62]},
+    {"type": "register", "pos": [270, 180], "in": [63, 64, 65, 66, 67, 68, 69], "out": [70, 71, 72, 73], "state": [0, 1, 1, 0]},
+    {"type": "mux-8to4", "pos": [190, 180], "in": [74, 75, 76, 77, 78, 79, 80, 81, 82], "out": [83, 84, 85, 86]}
+  ],
+  "wires": [[27, 3], [28, 4], [29, 5], [30, 6], [31, 7], [32, 8], [33, 9], [34, 10], [27, 35], [28, 36], [29, 37], [30, 38], [31, 39], [32, 40], [33, 41], [34, 42], [43, 1], [44, 0], [83, 66], [84, 67], [85, 68], [86, 69], [56, 74], [57, 75], [58, 76], [59, 77], [87, 49], [70, 45], [71, 46], [72, 47], [73, 48], [88, 63], [73, 14], [72, 13], [71, 12], [70, 11], [15, 98], [16, 99], [17, 100], [18, 101], [15, 78], [16, 79], [17, 80], [19, 115], [20, 116], [21, 117], [22, 118]]
+}
+```
+
+## La pile (stack)
+
+La pile est un espace de sauvegarde temporaire. Elle est utilisée pour sauvegarder les adresses de retour lors d'un saut vers une sous-routine.
+
+Ici nous créons une pile de 16 mots à 4 bits. D'habitude on commence la pile en bas de l'espace mémoire (adresse 15) et on *empile* les valeurs.
+
+Le pointeur de pile (stack pointer) est un registre 4 bit, qui utilise une ALU pour être incrémenté ou décrémenté.
+Si l'entrée `Op = 0` il incrémente. Si l'entrée `Op = 1` il décrémente.
+
+Ajoutez les circuits de contrôle.
+
+- Le signal **clear** efface la pile et met le pointeur de pile à `1111` (tout en bas)
+- Le signal **push** choisit la décrémentation (sp--) et envoie un coup d'horloge vers le registre du pointeur et la pile
+- Le signal **pop** choisit l'incrémentation (sp++) et envoie un coup d'horloge vers le registre du pointeur et la pile
+
+Mettez dans la pile `3141592` (les 7 premiers chiffres du nombre pi) avec l'instruction **push**.  
+Ensuite, lisez ces chiffres dans l'ordre inverse avec l'instruction **pop**
+
+```{logic}
+:ref: stack
+:height: 600
+:showonly: in out out.nibble-display
+{
+  "v": 4,
+  "in": [
+    {"pos": [50, 150], "id": 37, "name": "B0", "val": 1},
+    {"type": "nibble", "pos": [290, 320], "id": [53, 54, 55, 56], "val": [0, 1, 1, 1], "name": "push"},
+    {"pos": [70, 360], "id": 70, "name": "push", "val": 0, "isPushButton": true},
+    {"pos": [70, 420], "id": 74, "name": "pop", "val": 0, "isPushButton": true},
+    {"pos": [70, 480], "id": 75, "name": "clear", "val": 0, "isPushButton": true}
+  ],
+  "out": [
+    {"type": "nibble-display", "pos": [350, 130], "id": [29, 30, 31, 32], "name": "stack pointer"},
+    {"type": "nibble-display", "pos": [340, 320], "id": [58, 59, 60, 61]},
+    {"type": "nibble", "pos": [540, 320], "id": [62, 63, 64, 65]},
+    {"type": "nibble-display", "pos": [590, 320], "id": [66, 67, 68, 69], "name": "pop"}
+  ],
+  "gates": [
+    {"type": "OR", "pos": [160, 410], "in": [71, 72], "out": 73}
+  ],
+  "components": [
+    {"type": "alu", "pos": [120, 130], "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "out": [11, 12, 13, 14, 15, 16, 17]},
+    {"type": "register", "pos": [210, 130], "in": [18, 19, 20, 21, 22, 23, 24], "out": [25, 26, 27, 28], "state": [0, 0, 0, 1]},
+    {"type": "ram-16x4", "pos": [450, 320], "in": [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], "out": [49, 50, 51, 52], "content": ["0000", "0000", "0000", "0000", "0000", "0000", "1110", "1110", "1110", "1001", "1001", "1001", "1001", "1111", "1001", "1001"]}
+  ],
+  "wires": [[13, 23], [14, 24], [25, 29], [26, 30], [27, 31], [28, 32], [11, 21], [12, 22], [25, 0], [26, 1], [27, 2], [28, 3], [37, 4], [25, 45], [26, 46], [27, 47], [28, 48], [53, 41], [54, 42], [55, 43], [56, 44], [53, 58], [54, 59], [55, 60], [56, 61], [49, 62], [50, 63], [51, 64], [52, 65], [49, 66], [50, 67], [51, 68], [52, 69]]
 }
 ```
 
