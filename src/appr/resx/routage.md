@@ -39,6 +39,15 @@ de routage la ligne contenant le sous-réseau le plus spécifique incluant l'adr
 de destination et le fera suivre dans l'interface correspondante (qui est elle-même connectée soit à un
 autre routeur soit au destinataire).
 
+
+| Destinataire | Interface |
+|--------------|-----------|
+| 127.1.1.1    | 0         |
+| 34.234.15.x  | 1         |
+| 87.45.x.x    | 2         |
+| 87.33.x.x    | 2         |
+| ...          | ...       |
+
 {itodo}` [Ajouter une illustration]`
 
 ```{togofurther} Masques de réseau
