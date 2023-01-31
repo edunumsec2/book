@@ -21,8 +21,8 @@ Alice. Cela a l'avantage qui si, pour une raison ou une autre, une partie de l'i
 width: 500
 align: center
 ---
-Les données envoyées de Liam à Julie sont découpées en petite paquets (représentés par des carrés oranges). Ces paquets ne prennent pas tous forcément le même chemin pour arriver à destination. Cela permet de partager les lignes avec d'autre utilisateurs et utilisatrices tels que Anna et Tom qui communiquent
-également en s'envoyant des paquets (représentés par des triangles jaunes).
+Les données envoyées de Liam à Julie sont découpées en petite paquets (représentés par des carrés oranges). Cela permet de partager les lignes avec d'autre utilisateurs et utilisatrices tels que Anna et Tom qui communiquent
+également en s'envoyant des paquets (représentés par des triangles jaunes). On peut noter que ces paquets ne prennent pas tous forcément le même chemin pour arriver à destination.
 ```
 
 Les protocoles IP (Internet Protocol) et TCP (Transmission Control Protocol) déc
@@ -39,8 +39,9 @@ Selon ce protocole un paquet est constitué d'une suite de 0 et de 1 que l'on pe
 1. L'entête qui donne des informations sur le paquet (son émetteur, sa destination, sa taille, etc.)
 1. Les données qui forment le contenu du paquet, c'est-à-dire les informations que l'on veut transmettre.
 
-```{figure} media/IPpacket.svg
+```{image} media/IPpacket.svg
 :width: 500
+:align: center
 ```
 L'entête joue le rôle de l'étiquette sur un paquet envoyé par la poste. On y indique l'adresse de destination, l'adresse de
 l'expéditeur (appelée aussi l'adresse source), mais aussi d'autres information telles que la version d'IP utilisée (4 ou 6),
@@ -72,14 +73,16 @@ sur les numéros de morceaux envoyés et reçus. En effet, la machine réceptric
 de manière à ce que la machine émettrice puisse renvoyer un paquet qui n'aurait pas été acheminé à destination. 
 
 
-```{figure} media/IPTCPpacket.svg
+```{image} media/IPTCPpacket.svg
 :width: 500
+:align: center
 ```
 
 L'en-tête TCP est constitué aussi de 24 octets contenant les informations suivantes:
 
-```{figure} media/TCPheader.png
+```{image} media/TCPheader.png
 :width: 700
+:align: center
 ```
 
 Comme le montre la figure ci-dessus, les quatre premiers octets
@@ -138,12 +141,13 @@ la connexion une fois que tout a été envoyé et quittancé.
 
 La figure ci-dessous indique comment les fanions SYN, FIN de l'entête TCP sont utilisés pour
 indiquer que l'on veut respectivement initier et terminer une connexion, et comment
-le fanion ACK est utiliser pour confirmer la bonne réception de la demande ou des
-données, avec les numéros des séquences (#seq) et et d'acquittement (#ack). 
+le fanion ACK est utilisé pour confirmer la bonne réception de la demande ou
+des données, avec les numéros des séquences (#seq) et et d'acquittement (#ack). 
 
 
-```{figure} media/TCPprot.svg
+```{image} media/TCPprot.svg
 :width: 800
+:align: center
 ```
 
 ```{exercise}

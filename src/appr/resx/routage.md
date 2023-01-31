@@ -22,7 +22,18 @@ son destinataire. Les routeurs sont donc comme des facteurs
 disposés aux intersections du réseau Internet qui vont lire la destination des
 messages qui leur arrivent et les rediriger vers la prochaine intersection
 de manière à les rapprocher de leur destination. 
-{itodo}`[ajouter une illustration] `
+
+```{figure} media/routing.svg
+---
+width: 500
+align: center
+---
+Le routeur regarde le destinataire de chaque paquet qu'il reçoit et le redirige dans la bonne direction vers le prochain routeur ou
+le destinataire. Dans notre exemple, le paquet de données (représenté par le carré orange) qu'Alice veut envoyer au serveur
+champignons.ch transitent par différents routeurs, qui décident par où faire transiter le message en fonction de l'adresse de destination du paquet. 
+```
+
+    
 Pour ceci, les routeurs s'aident de *tables de routage* qui leur indique la direction à suivre pour chaque destination.
 
 ## Les tables de routage
@@ -48,7 +59,7 @@ autre routeur soit au destinataire).
 | 87.33.x.x    | 2         |
 | ...          | ...       |
 
-{itodo}` [Ajouter une illustration]`
+
 
 ```{togofurther} Masques de réseau
 Si chaque destinataire possible devait figurer dans une ligne de la table de routage, cela ferait des immenses tables de routage

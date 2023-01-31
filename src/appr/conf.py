@@ -55,7 +55,7 @@ extensions = [
 
 glossary_doc = 'glossaire'
 # uncomment to show todos (or preferably compile with "-D todo_include_todos=1" flag  to avoid contaminating the git repo and the public online version with todos)
-# todo_include_todos = True
+todo_include_todos = True
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['../templates']
 html_extra_path = ['../assets']
