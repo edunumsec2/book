@@ -21,7 +21,7 @@ Alice. Cela a l'avantage qui si, pour une raison ou une autre, une partie de l'i
 width: 500
 align: center
 ---
-Les données envoyées de Liam à Julie sont découpées en petite paquets (représentés par des carrés oranges). Cela permet de partager les lignes avec d'autre utilisateurs et utilisatrices tels que Anna et Tom qui communiquent
+Les données envoyées de Alice à champignons.ch sont découpées en petite paquets (représentés par des carrés oranges). Cela permet de partager les lignes avec d'autre utilisateurs et utilisatrices tels que Anna et Tom qui communiquent
 également en s'envoyant des paquets (représentés par des triangles jaunes). On peut noter que ces paquets ne prennent pas tous forcément le même chemin pour arriver à destination.
 ```
 
