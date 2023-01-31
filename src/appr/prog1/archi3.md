@@ -1,15 +1,10 @@
 # TP ALU
 
-L'unité arithmétique et logique (ALU) permet de choisir parmi un certain nombre d'opérations. Nous allons voir comment une ALU peut choisir entre
+L'unité arithmétique et logique (ALU) permet de choisir parmi un certain nombre d'opérations. Nous allons voir comment une ALU peut choisir entre différentes opérations (ET, OU, addition, soustraction) à l'aide d'un **multiplexeur**.
 
-- ET
-- OU
-- addition
-- soustraction
+Nous allons découvrir comment des décalages et additions successives peuvent constituer une **multiplication** ou une **division**.
 
-Nous allons découvrir comment des décalages et additions successives peuvent constituer une multiplication.
-
-Finalement, un registre permet de mémoriser un des opérandes de ce calcul.
+Finalement, un **registre** permet de mémoriser les opérandes du calcul. Un registre particulier appelé **accumulateur** permet de faire des additions successives et *accumuler* une somme courante.
 
 ## Sélectionneur
 
@@ -121,7 +116,13 @@ L'ALU dont nous disposons peut effectuer 4 opérations :
 - OU logique (10)
 - ET logique (11)
 
-Ajoutez la deuxième entrée, un bloc de visualisation pour la sortie et les 2 entrées de sélection. Ensuite, testez les 4 opérations. Montrez une soustraction.
+Avec l'ALU ci-dessus ajoutez
+- la deuxième entrée (B) avec un bloc d'affichage 4 bits
+- un bloc d'affichage 4 bits pour la sortie (S)
+- les 3 entrées (Cin, Op0, Op1) 
+- les 3 sorties (Cout, V, Z)
+
+Ensuite, testez les 4 opérations. Montrez une soustraction.
 
 ```{logic}
 :ref: alu
@@ -170,8 +171,9 @@ Interprétez les nombres binaires comme des nombres signés. Vous pouvez le conf
 
 Pour additionner un nombre à 8-bits, il faut combiner deux ALU 4-bits. Dans ce cas il faut connecter Cout de la première ALU avec Cin de la deuxième.
 
-Complétez le circuit pour afficher l'addition de deux nombres binaires 8-bits.
-Ajoutez une option pour soustraire deux nombres.
+- Complétez le circuit pour afficher l'addition de deux nombres binaires 8-bits.
+- Ajoutez une entrée pour soustraire deux nombres.
+- Montrez une soustraction correcte, dont le résultat est plus grand que 30
 
 ```{logic}
 :ref: add8
@@ -481,9 +483,29 @@ Ajoutez un deuxième registre, décodeur et affichage à 7 segments, pour permet
 
 ## Accumulateur
 
-Un accumulateur est un registre spécial qui *accumule* une somme. La sortie de ce registre doit être reliée avec l'entrée B de l'alu. À chaque coup d'horloge du registre, le calcul `a + acc` est effectué et affiché.
+Un accumulateur est un registre spécial qui *accumule* une somme. La sortie de l'accumulateur est reliée avec l'entrée A de l'ALU. À chaque coup d'horloge du registre, le calcul `acc + b` est effectué et affiché.
 
-Complétez le circuit et calculez la somme 1+3+7.
+Par exemple dans le circuit ci-dessous, l'accumulateur contient 3. Au prochain coup d'horloge, l'entrée b qui est 2 y sera additionnée. Ceci permet de calculer une somme courante.
+
+Voici un exemple typique, calculer la somme 1+3+7.
+En Python ceci correspondrait à ceci :
+
+``` Python
+acc = 0     # clear
+acc += 1    # add
+acc += 3    # add
+acc += 7    # add
+print(acc)
+```
+
+Avec le circuit ci-dessus ceci correspond à 4 étapes:
+
+1. **clear**
+1. b=1 et **add**
+1. b=3 et **add**
+1. b=7 et **add**
+
+Connectez les entrées **clear** et **add** au bon endroit et calculez 1+3+7.
 
 **Attention:** tenez le bouton suffisamment longtemps pour laisser propager les signaux jusqu'au bout.
 
@@ -494,22 +516,23 @@ Complétez le circuit et calculez la somme 1+3+7.
 {
   "v": 4,
   "in": [
-    {"type": "nibble", "pos": [50, 80], "id": [0, 1, 2, 3], "val": [1, 0, 0, 0], "name": "a"},
-    {"pos": [340, 280], "orient": "n", "id": 37, "name": "clear", "val": 0, "isPushButton": true},
-    {"pos": [210, 280], "id": 38, "name": "add", "val": 0, "isPushButton": true}
+    {"type": "nibble", "pos": [40, 200], "id": [0, 1, 2, 3], "val": [0, 1, 0, 0], "name": "b"},
+    {"pos": [380, 300], "orient": "n", "id": 37, "name": "clear", "val": 0, "isPushButton": true},
+    {"pos": [200, 300], "id": 38, "name": "add", "val": 0, "isPushButton": true}
   ],
   "out": [
-    {"type": "nibble-display", "pos": [100, 80], "id": [47, 48, 49, 50]},
-    {"type": "nibble-display", "pos": [460, 130], "id": [51, 52, 53, 54]}
+    {"type": "nibble-display", "pos": [90, 200], "id": [47, 48, 49, 50]},
+    {"type": "nibble-display", "pos": [490, 150], "id": [51, 52, 53, 54]},
+    {"type": "nibble-display", "pos": [290, 150], "id": [33, 34, 35, 36]}
   ],
   "components": [
-    {"type": "alu", "pos": [210, 130], "in": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "out": [15, 16, 17, 18, 19, 20, 21]},
-    {"type": "register", "pos": [340, 130], "ref": "acc", "in": [22, 23, 24, 25, 26, 27, 28], "out": [29, 30, 31, 32], "state": [1, 1, 0, 1]}
+    {"type": "alu", "pos": [200, 150], "in": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "out": [15, 16, 17, 18, 19, 20, 21]},
+    {"type": "register", "pos": [380, 150], "ref": "acc", "in": [22, 23, 24, 25, 26, 27, 28], "out": [29, 30, 31, 32], "state": [1, 1, 0, 0]}
   ],
   "labels": [
-    {"pos": [330, 30], "text": "accumulateur"}
+    {"pos": [380, 50], "text": "accumulateur"}
   ],
-  "wires": [[0, 4], [1, 5], [2, 6], [3, 7], [15, 25], [16, 26], [17, 27], [18, 28], [0, 47], [1, 48], [2, 49], [3, 50], [29, 51], [30, 52], [31, 53], [32, 54]]
+  "wires": [[15, 25], [16, 26], [17, 27], [18, 28], [0, 47], [1, 48], [2, 49], [3, 50], [29, 51], [30, 52], [31, 53], [32, 54], [0, 8], [1, 9], [2, 10], [3, 11], [29, 4], [30, 5], [31, 6], [32, 7], [15, 33], [16, 34], [17, 35], [18, 36]]
 }
 ```
 
