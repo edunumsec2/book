@@ -193,7 +193,7 @@ La partie `1101` est l'opcode (LDM) et la partie `DDDD` représente les 4 bits d
 
 L'instruction `LD` (load) charge l'accumulateur avec le contenu d'un des 16 registres.
 
-`1010RRRR``
+`1010RRRR`
 
 La parte `1010` est l'opcode (LD) et la parte `RRRR` représente un des 16 registres
 
@@ -348,7 +348,7 @@ Ensuite la valeur actuelle du compteur de programme doit être remplacée par la
 
 Utilisez des portes NON et ET pour décoder l'opcode `0100` et l'utiliser pour sélectionner entre incrémentation normale et destination de saut.
 
-A l'addresse 14 se trouve l'instruction `01000011` (`JUN 3). Si le décodeur fonctionne correctement le programme va faire une boucle entre les addresses 3 et 14.
+A l'addresse 14 se trouve l'instruction `01000011` (`JUN 3`). Si le décodeur fonctionne correctement le programme va faire une boucle entre les addresses 3 et 14.
 
 ```{logic}
 :ref: PC
