@@ -36,6 +36,10 @@ champignons.ch transitent par différents routeurs, qui décident par où faire 
     
 Pour ceci, les routeurs s'aident de *tables de routage* qui leur indique la direction à suivre pour chaque destination.
 
+
+
+
+
 ## Les tables de routage
 
 Une table de routage est un tableau qui indique dans quelle direction orienter
@@ -59,6 +63,12 @@ autre routeur soit au destinataire).
 | 87.33.x.x    | 2         |
 | ...          | ...       |
 
+
+```{Exercise}
+Remplir les tables de routage simplifiées des routeurs du réseau suivant:
+
+{itodo}`à compléter`
+```
 
 
 ```{togofurther} Masques de réseau
@@ -111,3 +121,16 @@ De plus lorsqu'un routeur reçoit une ligne de la table de routage de son voisin
 avec une distance plus grande, cela signifie qu'en passant par ce voisin le chemin sera plus court (ou égal) pour atteindre sa destination.
 Le routeur modifie sa table de routage pour faire passer par ce voisin les messages à destination de ce destinataire.
 {itodo}` [ajouter deux exemples] `
+
+```{Exercise}
+La table de routage d'un routeur contient les lignes suivantes:
+
+
+Ce routeur recoit de son voisin sur l'interface 2 la table suivante.
+
+
+Mettre à jour la table de routage du routeur. 
+{itodo}`à compléter`
+
+
+```
