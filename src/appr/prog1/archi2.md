@@ -7,41 +7,6 @@ Dans cette section, nous allons explorer d'abord la porte OU-X, l'additionneur q
 - incrémentation
 - décrémentation
 
-## La porte ou exclusif
-
-Le circuit ci-dessous représente une porte OU exclusive (XOR).
-La sortie est 1 seulement si l'une ou l'autre des entrées est à 1.
-Vérifiez le comportement avec les 4 entrées 00, 01, 10, 11.
-
-Créez une deuxième façon pour obtenir une porte OU exclusive en utilisant :
-
-- 2 portes NON
-- 2 portes ET
-- 1 porte OU
-
-```{logic}
-:ref: add
-:height: 400
-:showonly: in out not and or
-{
-  "v": 4,
-  "in": [
-    {"pos": [40, 30], "id": 0, "val": 0},
-    {"pos": [40, 110], "id": 47, "val": 0}
-  ],
-  "out": [
-    {"pos": [430, 50], "id": 59}
-  ],
-  "gates": [
-    {"type": "OR", "pos": [170, 40], "in": [48, 49], "out": 50},
-    {"type": "AND", "pos": [170, 100], "in": [51, 52], "out": 53},
-    {"type": "NOT", "pos": [250, 100], "in": 54, "out": 55},
-    {"type": "AND", "pos": [360, 50], "in": [56, 57], "out": 58}
-  ],
-  "wires": [[0, 48], [47, 49], [0, 51], [47, 52], [53, 54], [50, 56], [55, 57], [58, 59]]
-}
-```
-
 ## Porte OU-X
 
 Une porte OU-X (ou exclusif) avec 2 entrées donne une sortie 1 si **exactement une** des entrées est à 1.
@@ -80,11 +45,60 @@ Comment se comporte une porte OU-X avec plus que 2 entrées ?
 }
 ```
 
+## Construire un OU-X
+
+Comment peut-on construire un circuit OU-X avec des portes de base (NON, OU, ET) ?
+Regardons d'abord la table de vérité.
+
+| a | b | OU-X |
+|---|---|:----:|
+| 0 | 0 |   0  |
+| 0 | 1 |   1  |
+| 1 | 0 |   1  |
+| 1 | 1 |   0  |
+
+Le circuit ci-dessous représente une porte OU exclusive (OU-X). Mais il y a multiples façons de créer un circuit logique spécifique à partir des éléments de base.
+
+Créez une deuxième façon pour obtenir une porte OU exclusive en partant de l'observation :
+
+`(not a and b) or (b and not a)`
+
+Utilisez donc : 
+
+- 2 portes NON
+- 2 portes ET
+- 1 porte OU
+
+```{logic}
+:ref: add
+:height: 400
+:showonly: in out not and or
+{
+  "v": 4,
+  "in": [
+    {"pos": [40, 30], "id": 0, "val": 0},
+    {"pos": [40, 110], "id": 47, "val": 0}
+  ],
+  "out": [
+    {"pos": [430, 50], "id": 59}
+  ],
+  "gates": [
+    {"type": "OR", "pos": [170, 40], "in": [48, 49], "out": 50},
+    {"type": "AND", "pos": [170, 100], "in": [51, 52], "out": 53},
+    {"type": "NOT", "pos": [250, 100], "in": 54, "out": 55},
+    {"type": "AND", "pos": [360, 50], "in": [56, 57], "out": 58}
+  ],
+  "wires": [[0, 48], [47, 49], [0, 51], [47, 52], [53, 54], [50, 56], [55, 57], [58, 59]]
+}
+```
+
+
+
 ## Détecteur de parité
 
 Une porte ou exclusif est un détecteur de parité (pair/impair). La sortie d'une porte ou exclusif est 1 si le nombre des entrées actives est impair.
 
-Ajoutez encore 6 portes XOR et complétez la table de vérité pour les 8 combinaisons possibles:
+Ajoutez encore 6 portes OU-X et complétez la table de vérité pour les 8 combinaisons possibles:
 
 - pair : 000, 011, 101, 110
 - impair : 001, 010, 100, 111
@@ -123,7 +137,7 @@ Pour détecter si un nombre d'entrées est pair, il suffit d'ajouter un NON à l
 
 ## Multiples commutateurs
 
-La porte X-OU permet d'allumer et éteindre une lampe avec des commutateurs multiples.
+La porte OU-X permet d'allumer et éteindre une lampe avec des commutateurs multiples.
 
 Dans le schéma ci-dessous, on peut allumer la lumière dans une pièce à partir de la porte d'entrée et de la cuisine.
 
@@ -132,7 +146,7 @@ Ajoutez un circuit pour qu'on puisse également l'allumer depuis la chambre.
 ```{logic}
 :ref: xor
 :height: 500
-:showonly: in out not and or xor
+:showonly: in out not and or xor label.rect
 {
   "v": 3,
   "labels": [{"type": "rect", "pos": [290, 120], "w": 300, "h": 200, "color": "yellow", "strokeWidth": 2}],
@@ -278,6 +292,8 @@ Vous constatez que la colonne `S` représente la parité. On pourra donc la cons
 Pour additionner deux nombres 4-bits (quartets) nous avons besoin de 4 additionneurs complets.
 Chaque sortie `Cout` est liée à la l'entrée `Cin` de l'additionneur suivant.
 
+Pour additionner **a** et **b** vous devez additionner les bits correspondants: a0+b0, a1+b1, etc.
+
 - Ajoutez les circuits manquants pour additionner deux nombres 4-bits.
 - Montrez l'addition de 7+5 dont le résultat devrait être 12.
 
@@ -286,37 +302,21 @@ Chaque sortie `Cout` est liée à la l'entrée `Cin` de l'additionneur suivant.
 :height: 500
 :showonly: adder
 {
-  "v": 3,
-  "components": [
-    {"type": "adder", "pos": [300, 170], "orient": "n", "in": [25, 26, 27], "out": [28, 29]},
-    {"type": "adder", "pos": [300, 70], "orient": "n", "in": [30, 31, 32], "out": [33, 34]}
-  ],
+  "v": 4,
   "in": [
-    {"type": "nibble", "pos": [30, 160], "id": [37, 38, 39, 40], "val": [1, 0, 0, 0]},
-    {"type": "nibble", "pos": [30, 290], "id": [74, 75, 76, 77], "val": [0, 1, 0, 0]}
+    {"type": "nibble", "pos": [50, 160], "id": [37, 38, 39, 40], "val": [1, 0, 1, 0], "name": "b"},
+    {"type": "nibble", "pos": [50, 290], "id": [74, 75, 76, 77], "val": [0, 1, 1, 0], "name": "a"}
   ],
   "out": [
-    {"type": "nibble", "pos": [410, 180], "id": [41, 42, 43, 44]},
-    {"type": "nibble", "pos": [150, 160], "id": [53, 54, 55, 56]},
-    {"type": "nibble", "pos": [150, 290], "id": [78, 79, 80, 81]}
+    {"type": "nibble-display", "pos": [430, 180], "id": [41, 42, 43, 44], "name": "s"},
+    {"type": "nibble-display", "pos": [170, 160], "id": [53, 54, 55, 56]},
+    {"type": "nibble-display", "pos": [170, 290], "id": [78, 79, 80, 81]}
   ],
-  "wires": [
-    [34, 27],
-    [37, 31],
-    [38, 26],
-    [33, 41],
-    [28, 42],
-    [37, 53],
-    [38, 54],
-    [39, 55],
-    [40, 56],
-    [74, 78],
-    [75, 79],
-    [76, 80],
-    [77, 81],
-    [74, 30],
-    [75, 25]
-  ]
+  "components": [
+    {"type": "adder", "pos": [320, 170], "orient": "n", "in": [25, 26, 27], "out": [28, 29]},
+    {"type": "adder", "pos": [320, 70], "orient": "n", "in": [30, 31, 32], "out": [33, 34]}
+  ],
+  "wires": [[34, 27], [37, 31], [38, 26], [33, 41], [28, 42], [37, 53], [38, 54], [39, 55], [40, 56], [74, 78], [75, 79], [76, 80], [77, 81], [74, 30], [75, 25]]
 }
 ```
 
@@ -465,30 +465,37 @@ Complétez le circuit pour soustraire `a-b`. Le résultat de 10-3 devrait être 
 
 ## Inversion commutée
 
-L'inverseur commuté permet d'inverser tous les 4 bits d'un nombre.
+L'inverseur commuté permet d'inverser tous les 4 bits d'un nombre avec un signal de contrôle `inv` :
+
+- pour `inv = 0` la sortie est inchangée (`a`)
+- pour `inv = 1` la sortie est inversée (`~a`)
 
 Ajoutez un inverseur commuté pour obtenir `~a` ou `a` selon l'état du sélecteur.
 
 ```{logic}
 :ref: inc
 :height: 400
-:showonly: in out in.nibble switched-inverter
+:showonly: in out in.nibble out.nibble switched-inverter
 {
   "v": 4,
   "in": [
-    {"type": "nibble", "pos": [40, 70], "id": [0, 1, 2, 3], "val": [1, 0, 0, 0]}
+    {"type": "nibble", "pos": [60, 60], "id": [0, 1, 2, 3], "val": [1, 1, 0, 0], "name": "a"},
+    {"pos": [60, 130], "id": 32, "name": "inv", "val": 1}
   ],
   "out": [
-    {"type": "nibble-display", "pos": [300, 70], "id": [4, 5, 6, 7], "name": "a"},
-    {"type": "nibble-display", "pos": [300, 180], "id": [22, 23, 24, 25], "name": "a/~a"}
+    {"type": "nibble", "pos": [330, 60], "id": [20, 21, 26, 27], "name": "a"},
+    {"type": "nibble", "pos": [330, 230], "id": [28, 29, 30, 31], "name": "a/~a"}
   ],
-  "wires": [[0, 4], [1, 5], [2, 6], [3, 7]]
+  "wires": [[0, 20], [1, 21], [2, 26], [3, 27]]
 }
 ```
 
 ## Négation commutée
 
-Complétez le circuit pour pouvoir obtenir `-a` ou `a` selon l'état du sélecteur **neg**.
+Complétez le circuit pour pouvoir obtenir `-a` ou `a` selon l'état du sélecteur **neg** :
+
+- pour `neg = 0` la sortie est inchangée (`a`)
+- pour `neg = 1` la sortie change de signe (`-a`)
 
 ```{logic}
 :ref: neg2
@@ -562,7 +569,7 @@ Par exemple pour le nombre `1001` (-7) on aura `N=1`, `Z=0` et `P=1`.
 ```{caution}
 Faites attention à la différence entre la **parité du nombre** et la **parité des bits**.
 - la parité du nombre est exprimée par le bit de poids faible (b0),
-- la parité du nombre des bits est obtenue avec une opération XOR (ou exclusif).
+- la parité du nombre des bits est obtenue avec une opération OU-X (ou exclusif).
 ```
 
 Complétez le circuit pour correctement afficher les fanions N, Z et P.
