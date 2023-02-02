@@ -42,11 +42,6 @@ turtleart
 
 projet
 annexe
-archi1
-archi2
-archi3
-archi4
-archi5
 ````
 
 ## Objectifs

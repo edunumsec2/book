@@ -1,4 +1,4 @@
-# TP Circuits
+# TP Portes logiques
 
 Dans ce chapitre, nous allons explorer les circuits logiques.
 

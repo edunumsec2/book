@@ -26,6 +26,12 @@ mem
 archi-gen
 micro-pro
 conclusion
+
+tp1
+tp2
+tp3
+tp4
+tp5
 ```
 
 ## Objectifs

@@ -390,7 +390,7 @@ Astuce : pour décrémenter la valeur `i` il suffit d'additionner `1111` qui rep
 
 Les nombres signés sont représentés avec le format *complément à deux*. Pour un nombre 4-bits, ceci nous donne une plage de -8 à +7 pour des entiers relatifs, et une plage de 0 à 15 pour des entiers naturels. Nous constatons que la plage signée n'est pas symétrique: le côté négatif compte un nombre en plus.
 
-![signed](circuit/2add/4bitsIntegers.jpg)
+![signed](media/4bitsIntegers.jpg)
 
 L'opération pour trouver le nombre négatif est: inverser tous les bits et additionner 1.  
 Mathématiquement nous pouvons exprimer cette opération comme:
