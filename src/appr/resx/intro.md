@@ -1,18 +1,25 @@
 # Introduction
 
-Internet constitue une infrastructure essentielle de nos existences, qui a remodelé nos comportements et nos manières de faire, que ce soit dans les
+Internet est une infrastructure essentielle qui a complètement changé notre vie, que ce soit dans les
 relations sociales, l'éducation, la recherche, le commerce, la santé, etc. Dans ce chapitre, nous allons voir, dans les grands principes, comment
 internet fonctionne et en quoi son fonctionnement est différents d'autres réseaux de communication qui l'on précédé, tels que les réseaux postal ou
 téléphonique. En effet, une innovation majeure d'internet est qu'il s'agit d'un réseau *décentralisé*, et ceci explique en large partie son succès
-et ce qu'il est devenu, même si certains craignent une recentralisation d'Internet autour des géants du numérique tels que Google et Amazon. 
+et ce qu'il est devenu, même si certains craignent une recentralisation d'Internet autour des géants du numérique tels que Google et Amazon.
 
 ## Origine d'Internet
 
-Les réseaux de communication électroniques existaient bien avant Internet, par exemple le réseau téléphonique, mails ils étaient centralisés.
+Les réseaux de communication existaient bien avant Internet, par exemple
+
+- le réseau de télégraphie optique de Chappe (1794)
+- le réseau de télégraphie électrique de Morse (1843)
+- le réseau téléphonique de Bell (1877)
+- le réseau de télégraphie par ondes radio de Marconi (1896)
+
+Mais tous ces réseaux étaient centralisés.
 Cela signifie qu'il y a toujours un point central du réseau par lequel passent toutes les communications.
 Après la 2e guerre mondiale, qui avait vu le nivellement de villes entières par des bombardements aériens (comme à Dresde)
 et la bombe atomique, l'armée américaine a décidé de financer le développement d'un réseau de communication décentralisé (ou distribué),
-qui serait moins vulnérable à une attaque. L'idée était qu'un réseau de communication centralisé pouvaient facilement être mis hors-service
+qui serait moins vulnérable à une attaque. L'idée était qu'un réseau de communication centralisé pouvait facilement être mis hors service
 par un adversaire en détruisant le point central, alors qu'un réseau de communication sans point central serait beaucoup plus difficile à
 attaquer.
 
@@ -27,23 +34,23 @@ Image tirée de l'article proposant de réaliser un réseau décentralisé. Bara
 ont plus ou moins la même importance.
 Le réseau du milieu représente un intermédiaire décentralisé, entre le réseau complètement centralisé de gauche et le réseau distribué de droite
 ```
+
 ```
 ```
 
-
-Les universitaires américains ont été associés à la conception de ce réseau et l'ont utilisé pour partager des informations et des ressources entre universités. 
+Les universitaires américains ont été associés à la conception de ce réseau et l'ont utilisé pour partager des informations et des ressources entre universités.
 Ainsi est né Internet, par une association entre universitaires attachés surtout à la libre circulation de l'information et des militaires aux visées plutôt
 sécuritaires. Dès les années 70, le mouvement hippie, séduit par les possibilités d'auto-organisation et la philosophie non hiérarchique d'Internet
-a investit cette infrastructure et a developpé une "cyberculture" qui marquera durablement l'histoire d'Internet, de l'émergence des réseaux sociaux
-aux cryptomonnaies. 
+a investi cette infrastructure et a développé une "cyberculture" qui marquera durablement l'histoire d'Internet, de l'émergence des réseaux sociaux
+aux cryptomonnaies.
 
 ## Structure d'internet
 
 Internet est souvent décrit comme un *réseau de réseaux*. En effet, Internet est construit sur une structure de {glo}`lan|réseaux locaux` interconnectés les
 uns aux autres. Par exemple, les ordinateurs d'une école, d'une entreprise ou d'un appartement peuvent être reliés entre eux par le wifi,
-ou des cables ethernet et constituer un réseau local. Le réseau local est ensuite connecté, par le biais d'un {glo}`routeur|routeur`, au reste d'Internet.
-Ainsi Internet est constitué d'une myriade de sous-réseaux enchassés les uns dans les autres. Ces réseaux sont connecté par les *dorsales d'Internet*, des
-cables de fibre optique capables de transferer des données à haut débit, qui traversent les continents et les océans. 
+ou des câbles Ethernet et constituer un réseau local. Le réseau local est ensuite connecté, par le biais d'un {glo}`routeur|routeur`, au reste d'Internet.
+Ainsi Internet est constitué d'une myriade de sous-réseaux enchâssés les uns dans les autres. Ces réseaux sont connectés par les *dorsales d'Internet*, des
+câbles de fibre optique capables de transférer des données à haut débit, qui traversent les continents et les océans.
 
 ```{figure} media/struct.svg
 ---
@@ -54,28 +61,22 @@ Un réseau de sous-réseaux. Les points représentent les machines, alors que le
 de fond indique les sous-réseaux. 
 ```
 
-
-
-
-```{micro} Les cables sous-marins d'Internet
-Aller sur le site <https://www.fiberatlantic.com/submarinecablemap/> et regarder la carte des cables sous-marins d'Internet. Trouver le cable qui relie
-l'Afrique du Sud à l'Inde. Comment s'appelle-t-il, depuis quand existe-t-il et quelle est sa longueur? A qui appartient-il et quand est-il prévu de le mettre
-hors-service?
+```{micro} Les câbles sous-marins d'Internet
+Aller sur le site <https://www.fiberatlantic.com/submarinecablemap/> et regarder la carte des câbles sous-marins d'Internet. Trouver le câble qui relie
+l'Afrique du Sud à l'Inde. Comment s'appelle-t-il, depuis quand existe-t-il et quelle est sa longueur? À qui appartient-il et quand est-il prévu de le mettre
+hors service?
 ```
-
-
 
 ## Fonctionnement d'Internet
 
 Cette section présente une vue d'ensemble des éléments centraux du fonctionnement d'Internet
-et qui seront repris dans la suite du chapitre. 
+et qui seront repris dans la suite du chapitre.
 
 ### Adressage
 
-Tout réseau de communication a besoin d'un système d'adresses afin de pouvoir distinguer et joindre les différents destinataires. 
+Tout réseau de communication a besoin d'un système d'adresses afin de pouvoir distinguer et joindre les différents destinataires.
 Dans un réseau décentralisé qu'est Internet, le système d'adressage doit permettre à chaque machine connectée au réseau d'être identifiable
 et joignable, sans causer de quiproquo. Cela passe par une organisation hiérarchique du réseau.
-
 
 ### Routage
 
@@ -104,7 +105,6 @@ Si on réservait un circuit entre les ordinateurs de Liam et Julie (en orange) l
 communication par internet, Tom ne pourrait pas entrer en même temps en communication avec Anna, car tous
 les segments oranges seraient occupés. 
 ```
-
 
 Cela pourrait conduire rapidement à une saturation du réseau. Pour éviter ce problème, il a été décidé de
 "découper" la communication en petits morceaux (appelés les paquets) et d'envoyer chaque morceau
