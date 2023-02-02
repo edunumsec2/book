@@ -311,7 +311,7 @@ L'entrée Reset peut être utilisée pour remettre le compteur. Une porte ET dé
 ```{logic}
 :ref: counter_6
 :height: 500
-:showonly: in clock counter out.7seg in decoder-7seg
+:showonly: in not and or clock counter out.7seg in decoder-7seg
 {
   "v": 3,
   "components": [
