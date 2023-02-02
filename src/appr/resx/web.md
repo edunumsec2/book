@@ -1,5 +1,7 @@
 # World Wide Web
 
+Le **World Wide Web** (WWW), littéralement la « toile (d’araignée) mondiale », est un système qui permet de consulter avec un navigateur, à travers l'Internet, des pages accessibles sur des sites.
+
 ## Historique
 
 Pendant ses premières décennies (jusque dans les années 90), seuls les universitaires, les militaires, certaines entreprises
@@ -66,8 +68,7 @@ Si la page `accueil.html` n'existe pas, alors le serveur pourra l'indiquer au cl
 
 `HTTP/1.1 404 Not Found`
 
-Le navigateur web pourra alors afficher l'"erreur 404" au pour l'utilisateur. 
-
+Le navigateur web pourra alors afficher l'"erreur 404" au pour l'utilisateur.
 
 ```{figure} media/erreur404.png
 ---
@@ -76,8 +77,6 @@ align: center
 ---
 Le serveur retourne un message d'erreur s'affiche lorsqu'on demande une page qui n'existe pas. 
 ```
-
-
 
 Il y a d'autres sortes de requêtes que le client peut envoyer au serveur, par exemple `POST`pour envoyer une information du client au serveur, utilisé par exemple lorsqu'on remplit un formulaire en ligne.
 
@@ -108,26 +107,25 @@ align: center
 ---
 ```
 
-
-La plupart des navigateurs web permettent de visualiser le *code  HTML* des pages visitées. Un aspect important de la création de sites web consiste à écrire du code HTML qui sera mis sur le serveur pour être transmis au visiteur du site web. Cela peut se faire en écrivant directement du code html dans un fichier texte, ou à l'aide d'un outil de création de sites web qui se charge d'écrire le code HTML selon les indications données par la personne concevant le site.
+La plupart des navigateurs web permettent de visualiser le *code  HTML* des pages visitées. Un aspect important de la création de sites web consiste à écrire du code HTML qui sera mis sur le serveur pour être transmis au visiteur du site web. Cela peut se faire en écrivant directement du code HTML dans un fichier texte, ou à l'aide d'un outil de création de sites web qui se charge d'écrire le code HTML selon les indications données par la personne concevant le site.
 
 ## Les évolutions du Web
 
 ### Le Web dynamique
-Au début, les pages web étaient des fichiers html stockés sur les serveurs. C'est ce qu'on appelle le
+
+Au début, les pages web étaient des fichiers HTML stockés sur les serveurs. C'est ce qu'on appelle le
 web *statique*. Si les sites web statiques existent
-toujours, par exemple modulo-info.ch, beaucoup de site web sont dynamiques,
-c'est-à-dire que le fichier html est généré par le site au moment où la requête est faite.
+toujours, par exemple modulo-info.ch, beaucoup de sites web sont dynamiques,
+c'est-à-dire que le fichier HTML est généré par le site au moment où la requête est faite.
 Cela permet de servir une page différente selon l'utilisateur ou selon les arguments de la requête qui
-sont des indiquations supplémentaires ajoutée à la requête après l'URL.
+sont des indications supplémentaires ajoutée à la requête après l'URL.
 
 ```{micro}
 Effectuer une recherche sur un navigateur web et consulter la barre de navigation. Quels sont les arguments de votre requête et pouvez-vous en comprendre la signification?
 ```
 
-
 ```{exercise}
-Parmi les site web suivants, lesquels ont besoin d'être dynamique et lesquel peuvent se contenter de fournir un
+Parmi les sites web suivants, lesquels ont besoin d'être dynamiques et lesquels peuvent se contenter de fournir un
 contenu statique?
 
 1. Un site d'achats en ligne
@@ -143,8 +141,6 @@ un site dynamique.
 
 {itodo}`parler de javascript et du web dynamique côté client?`
 
-
-
 ### Le Web 2.0
 
 Le web 2.0 fait référence à la tendance, initiée au débit des années 2000, de proposer des pages web permettant aux internautes
@@ -152,7 +148,4 @@ de contribuer du contenu, et pas uniquement de lire des fichiers comme c'était 
 partie de ce développement qui voit exploser l'aspect participatif du web. Ce n'est en effet plus nécessaire de connaître la syntaxe HTML et d'avoir
 son propre serveur pour mettre du contenu à disposition des internautes de la planète.
 
-
-
-{itodo}` développer ?`
-
+{itodo}`développer ?`
