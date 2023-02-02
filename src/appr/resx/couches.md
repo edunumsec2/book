@@ -37,11 +37,11 @@ ont été insérées. La "couche de session" qui gère les sessions, par exemple
 son smartphone, celle-ci va ouvrir une session avec le serveur. Enfin la "couche de présentation" gère les
 questions de compression et de cryptage des données. Le modèle résultant, appelé OSI, est illustré ci-dessous.
 
-{itodo}` [Ajouter une figure]`
+{itodo}`[Ajouter une figure]`
 
-{itodo}` [Ajouter l'exemple complet d'Alice]`
+{itodo}`[Ajouter l'exemple complet d'Alice]`
 
-## Des protocoles ouverts et négociés
+## Des protocoles ouverts
 
 Les protocoles décrits ci-dessus ont été établis sur proposition de différentes personnes travaillant
 principalement dans les universités ou les entreprises de télécommunication et adoptés par consensus après
@@ -58,7 +58,7 @@ est (théoriquement) ouvert à toute personne qui souhaite s'y impliquer. Les di
 de "Requests For Comments" (RFC) qui sont des documents publics qui proposent des idées qui sont discutées,
 et, pour certaines d'entre elles, adoptées par consensus.
 Le premier RFC, RFC1 a été formulé en 1969 pour proposer
-un protocole de communication sur Arpanet, le projet de recherche militaire américain qui a donné naissance à
+un protocole de communication sur ARPANET, le projet de recherche militaire américain qui a donné naissance à
 Internet. Toutes les technologies d'Internet décrites ci-dessus ont été proposées par le biais de RFC, par exemple IPv4, RIP, HTML, etc.  
 
 ```{micro}
@@ -66,26 +66,24 @@ Chercher et lire le RFC 8962, en particulier l'abstract et les parties 7. et 8. 
 ````
 
 ## La neutralité d'Internet
-Un des principes fondateurs d'internet, est sa *neutralité*. Cela signifie que les paquets IP sont acheminés vers leur
-destinaire sans discrimination de source, de destination ou de contenu. Contrairement à la poste Suisse, où certains courriers
+
+Un des principes fondateurs d'internet est sa *neutralité*. Cela signifie que les paquets IP sont acheminés vers leur
+destination sans discrimination de source, de destination ou de contenu. Contrairement à la poste suisse, où certains courriers
 (par exemple le courrier A) sont prioritaires par rapport à d'autres, les paquets IP sont tous logés à la même enseigne sur Internet.
-Cela permet d'éviter que certains services (par exemple un site web) puisse payer plus cher pour que ses paquets arrivent plus rapidement
+Cela permet d'éviter que certains services (par exemple un site web) puissent payer plus cher pour que ses paquets arrivent plus rapidement
 chez leurs destinataires et offrir ainsi un service plus rapide au détriment d'autres services. Certains acteurs, tels que les fournisseurs
-d'accès à Internet se sont opposés à la neutralité du net, car cela leur aurait permis de mettre leur clients en concurrence sur les débits
+d'accès à Internet se sont opposés à la neutralité du net, car cela leur aurait permis de mettre leurs clients en concurrence sur les débits
 fournis et ainsi augmenter leurs tarifs et donc leurs bénéfices. Ou alors, il leur serait possible de privilégier l'acheminement des
-paquets liés à leur propres services (par exemple Swisscom, pourrait privilégier l'acheminement des paquets liés à son service de télévision
+paquets liés à leurs propres services (par exemple Swisscom, pourrait privilégier l'acheminement des paquets liés à son service de télévision
 au détriment d'autres chaînes.)
 
-Le respect de la neutralité d'Internet est différent de pays en pays, certains, comme la Suisse l'ayant inscrite dans la loi.
-
+Le respect de la neutralité d'Internet est différent de pays en pays, certain, comme la Suisse l'ayant inscrite dans la loi.
 
 ```{micro}
 Lire [ l'article 12e](https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/fr#art_12_e) de la loi fédérale sur les télécommunications qui concerne la neutralité d'Internet. Quel alinéa garantit la neutralité du réseau? Cette garantie est-elle absolue? 
 ````
 
-
-
-## L'universalité et la décentralisation d'Internet en question
+## L'universalité d'Internet en question
 
 Avec la montée en puissance des entreprises privées, une partie de l'ouverture qui caractérisait les débuts
 d'Internet est remise en question. Ainsi, les entreprises qui ont développé les réseaux sociaux l'ont fait
@@ -105,10 +103,10 @@ permettraient de rivaliser avec leurs concurrentes à visée lucrative.
 
 Une autre tendance qui remet en question la décentralité d'Internet est le développement du cloud. Avec les services
 de cloud, les documents, les données et les sites web se concentrent dans les serveurs des entreprises offrant ces services.
-Ainsi, si une panne affecte un de ces services offert par Google ou Microsoft, ou si la sécurité d'un tel service est
-compromise, les répercussion seront globles. 
+Ainsi, si une panne affecte un de ces services offerts par Google ou Microsoft, ou si la sécurité d'un tel service est
+compromise, les répercussions seront globales.
 
 Enfin, si Internet donnait à ses débuts une impression d'universalité, on s'est rendu compte que l'utilisation des
-caractères ASCII, la syntaxe d'HTML et de l'URL étaient peu propices aux alphabets non latins, et qui ne
+caractères ASCII, la syntaxe de HTML et de l'URL étaient peu propices aux alphabets non latins, et qui ne
 s'écrivent pas de gauche à droite. Tout choix "technique" est ancré dans un contexte social et culturel duquel il
 est difficile de faire abstraction.
