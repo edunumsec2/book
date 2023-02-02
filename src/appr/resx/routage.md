@@ -1,14 +1,12 @@
 # Routage
 
-(ou comment acheminer l'information)
-Nous avons vu précédemment, comment il est possible d'identifier sur Internet
-une machine avec laquelle on souhaite communiquer, en ayant recours à son
-adresse IP ou un nom de domaine. Contrairement à un système centralisé comme
-le téléphone, où un opérateur va mettre directement en relation les deux
-machines qui communiquent, sur Internet l'acheminement de l'information d'une
-machine à une autre se fait de manière décentralisée. C'est le problème du
-*routage*, c'est-à-dire quel chemin (ou quelle route) l'information va emprunter pour
-aller d'un point à l'autre du réseau. 
+Le **routage** est le mécanisme par lequel des chemins sont sélectionnés dans un réseau pour acheminer les données d'un expéditeur jusqu'à un destination.
+
+Pour effectuer le routage, nous avons besoin deux types de machines :
+
+- le **routeur**, qui sert d'intermédiaire dans la transmission d'un message,
+- le **hôte** qui émettet ou reçoit un message.
+
 {itodo}` [ajouter une illustration] `
 
 ## Les routeurs
@@ -21,7 +19,7 @@ décident dans quelle direction faire suivre une information afin qu'elle atteig
 son destinataire. Les routeurs sont donc comme des facteurs
 disposés aux intersections du réseau Internet qui vont lire la destination des
 messages qui leur arrivent et les rediriger vers la prochaine intersection
-de manière à les rapprocher de leur destination. 
+de manière à les rapprocher de leur destination.
 
 ```{figure} media/routing.svg
 ---
@@ -30,15 +28,10 @@ align: center
 ---
 Le routeur regarde le destinataire de chaque paquet qu'il reçoit et le redirige dans la bonne direction vers le prochain routeur ou
 le destinataire. Dans notre exemple, le paquet de données (représenté par le carré orange) qu'Alice veut envoyer au serveur
-champignons.ch transitent par différents routeurs, qui décident par où faire transiter le message en fonction de l'adresse de destination du paquet. 
+champignons.ch transite par différents routeurs, qui décident par où faire transiter le message en fonction de l'adresse de destination du paquet. 
 ```
 
-    
 Pour ceci, les routeurs s'aident de *tables de routage* qui leur indique la direction à suivre pour chaque destination.
-
-
-
-
 
 ## Les tables de routage
 
@@ -54,7 +47,6 @@ de routage la ligne contenant le sous-réseau le plus spécifique incluant l'adr
 de destination et le fera suivre dans l'interface correspondante (qui est elle-même connectée soit à un
 autre routeur soit au destinataire).
 
-
 | Destinataire | Interface |
 |--------------|-----------|
 | 127.1.1.1    | 0         |
@@ -63,16 +55,14 @@ autre routeur soit au destinataire).
 | 87.33.x.x    | 2         |
 | ...          | ...       |
 
-
 ```{Exercise}
 Remplir les tables de routage simplifiées des routeurs du réseau suivant:
 
 {itodo}`à compléter`
 ```
 
-
 ```{togofurther} Masques de réseau
-Si chaque destinataire possible devait figurer dans une ligne de la table de routage, cela ferait des immenses tables de routage
+Si chaque destinataire possible devait figurer dans une ligne de la table de routage, cela ferait d’immenses tables de routage
 qui prendraient beaucoup de place en mémoire et seraient très compliquées à gérer. C'est pour ceci que les lignes de la table
 de routage peuvent correspondre, soit à des machines individuelles, soit à des sous-réseaux. 
 
@@ -84,12 +74,11 @@ notre exemple, cela correspond à toutes les adresses IP 128.178.23.x. Pour gagn
 en 4 nombres décimaux, dans notre exemple 255.255.255.0, ou alors, pour faire encore plus court, on peut simplement spécifier
 le nombre de 1 du masque, ce qui donne, toujours pour le même exemple, 128.178.23.132/24. 
 
-Ainsi toutes les adresses IP qui n'a pas les même $n$ premiers bits, fait partie d'un différent sous-réseau. Pour lui envoyer
-des paquets, il faudra passer par la *passerelle par défault* (*default gateway* en anglais) qui est le routeur qui s'occupe de
+Ainsi toutes les adresses IP qui n'a pas les mêmes $n$ premiers bits, fait partie d'un différent sous-réseau. Pour lui envoyer
+des paquets, il faudra passer par la *passerelle par défaut* (*default gateway* en anglais) qui est le routeur qui s'occupe de
 communiquer avec l'extérieur du sous-réseau.
 
 ````
-
 
 Dans des petits réseaux locaux, cette table de routage peut être construite
 manuellement, mais généralement c'est le routeur qui construit sa
@@ -108,14 +97,14 @@ C'est pourquoi un système automatisé de mise à jour des tables de routage
 est utilisé. C'est ce qu'on appelle le *routage dynamique*.
 Cela permet non
 seulement de gérer les changements configuration du réseau, mais également les
-phénomènes de congestion du trafic. 
+phénomènes de congestion du trafic.
 
 ### Le protocole RIP
 
 Le protocole RIP (Routing Information Protocol) est une des manières les plus anciennes et
 les plus simples de faire du routage dynamique. Toutes les 30 secondes, chaque routeur
 envoie à tous ses voisins le contenu de sa table de routage. Lorsqu'un routeur reçoit une ligne
-de la table de routage de son voisin dont la destination n'est pas inclue dans sa propre table,
+de la table de routage de son voisin dont la destination n'est pas incluse dans sa propre table,
 il l'ajoute à sa table en indiquant comme interface, celle le connectant avec ce voisin.
 De plus lorsqu'un routeur reçoit une ligne de la table de routage de son voisin dont la destination est incluse dans sa table, mais
 avec une distance plus grande, cela signifie qu'en passant par ce voisin le chemin sera plus court (ou égal) pour atteindre sa destination.
@@ -126,7 +115,7 @@ Le routeur modifie sa table de routage pour faire passer par ce voisin les messa
 La table de routage d'un routeur contient les lignes suivantes:
 
 
-Ce routeur recoit de son voisin sur l'interface 2 la table suivante.
+Ce routeur reçoit de son voisin sur l'interface 2 la table suivante.
 
 
 Mettre à jour la table de routage du routeur. 
