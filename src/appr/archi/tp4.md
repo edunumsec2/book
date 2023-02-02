@@ -349,16 +349,21 @@ Une horloge rapide, liée par une porte ET vers l'entrée d'un compteur compte r
 
 Voici la table de vérité pour les 7 LEDS.
 
-| dice | bin | a | b | c | d | e | f | g |
-|:----:|-----|---|---|---|---|---|---|---|
-|   1  | 000 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
-|   2  | 001 | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
-|   3  | 010 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
-|   4  | 011 | 1 | 0 | 1 | 0 | 1 | 0 | 1 |
-|   5  | 100 | 1 | 0 | 1 | 1 | 1 | 0 | 1 |
-|   6  | 101 | 1 | 1 | 1 | 0 | 1 | 1 | 1 |
+| dice | bin | a,g | b,f | c,e | d |
+|:----:|-----|:---:|:---:|:---:|---|
+|   1  | 000 | 0   | 0   | 0   | 1 |
+|   2  | 001 | 1   | 0   | 0   | 0 |
+|   3  | 010 | 1   | 0   | 0   | 1 |
+|   4  | 011 | 1   | 0   | 1   | 0 |
+|   5  | 100 | 1   | 0   | 1   | 1 |
+|   6  | 101 | 1   | 1   | 1   | 0 |
 
-Ajoutez les portes logiques appropriées pour implémenter ce dé électronique.
+Ajoutez les portes logiques appropriées pour implémenter ce dé électronique.  
+Par exemple, le signal pour lampe a,g correspond à 
+
+`b0 or b1 or b2`
+
+Trouvez les autres circuits et construsez ce dé électronique.
 
 ```{logic}
 :ref: dice

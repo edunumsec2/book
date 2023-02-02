@@ -210,20 +210,6 @@ Montrez l'effet de multiples portes NON.
 }
 ```
 
-## Clignoter en alternance
-
-Utilisez les composants disponibles pour créer deux grandes lumières vertes qui clignotent en alternance toutes les secondes.  
-Attention au délai de transmission. Chaque fil ajoute un délai de 100 ms.
-
-```{logic}
-:ref: blink
-:height: 400
-:showonly: clock not out.bar
-{
-
-}
-```
-
 ## Afficher 0 et 1
 
 La porte NON inverse un signal.
@@ -423,6 +409,50 @@ Complétez le circuit pour créer un décodeur binaire. Chaque combinaison des d
     {"type": "AND", "pos": [350, 70], "in": [6, 7], "out": 8}
   ],
   "wires": [[0, 2], [1, 4], [8, 10], [3, 6], [5, 7]]
+}
+```
+
+## Décodeur de dé
+
+Un dé de jeu peut afficher les nombres 1 à 6 à l'aide de 7 lampes.  
+Plusieurs lampes s'allument par pair. Voici la table de vérité.
+
+| b2 | b1 | b0 |valeur| a,g | b,f | c,e | d |
+|----|----|:--:|:----:|:---:|:---:|:---:|---|
+| 0  | 0  | 0  |      |  0  |  0  |  0  | 0 |
+| 0  | 0  | 1  | 1    |  0  |  0  |  0  | 1 |
+| 0  | 1  | 0  | 2    |  1  |  0  |  0  | 0 |
+| 0  | 1  | 1  | 3    |  1  |  0  |  0  | 1 |
+| 1  | 0  | 0  | 4    |  1  |  0  |  1  | 0 |
+| 1  | 0  | 1  | 5    |  1  |  0  |  1  | 1 |
+| 1  | 1  | 0  | 6    |  1  |  1  |  1  | 0 |
+| 1  | 1  | 1  |      |  1  |  1  |  1  | 1 |
+
+Utilisez des portes logiques OU et ET pour créer le circuit de décodage pour afficher les lampes qui correspondent aux nombres 1 à 6.
+
+Le nombre binaire $b_2 b_1 b_0$ doit allumer les lampes a-g pour afficher ce nombre dans la façon d'un dé à jeu standard.
+
+```{logic}
+:ref: dice
+:height: 300
+:showonly: in and or out.bar
+{
+  "v": 4,
+  "opts": {"propagationDelay": 10},
+  "in": [
+    {"pos": [60, 40], "id": 7, "name": "b0", "val": 1},
+    {"pos": [60, 80], "id": 8, "name": "b1", "val": 0},
+    {"pos": [60, 120], "id": 26, "name": "b2", "val": 1}
+  ],
+  "out": [
+    {"type": "bar", "pos": [380, 30], "id": 0, "display": "px", "name": "a"},
+    {"type": "bar", "pos": [380, 70], "id": 1, "display": "px", "name": "b"},
+    {"type": "bar", "pos": [430, 70], "orient": "s", "id": 2, "display": "px", "name": "d"},
+    {"type": "bar", "pos": [380, 120], "id": 3, "display": "px", "name": "c"},
+    {"type": "bar", "pos": [480, 70], "id": 4, "display": "px", "name": "f"},
+    {"type": "bar", "pos": [480, 30], "id": 5, "display": "px", "name": "e"},
+    {"type": "bar", "pos": [480, 120], "id": 6, "display": "px", "name": "g"}
+  ]
 }
 ```
 
