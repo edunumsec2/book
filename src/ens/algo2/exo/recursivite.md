@@ -1,6 +1,8 @@
-# 5. Récursivité [en option]
+# Algorithmique II
 
-## Solutions des exercices
+## 5. Récursivité [en option]
+
+### Solutions des exercices
 
 
 ````{exercise} 

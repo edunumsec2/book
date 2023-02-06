@@ -1,6 +1,8 @@
-# 3. Des algorithmes aux programmes
+# Algorithmique I
 
-## Solution des exercices 
+## 3. Des algorithmes aux programmes
+
+### Solution des exercices 
 
 ````{exercise} Jeu de la devinette 🔌
 

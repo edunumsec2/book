@@ -1,6 +1,8 @@
-# 4. Algorithmes heuristiques
+# Algorithmique II
 
-## Solutions des exercices
+## 4. Algorithmes heuristiques
+
+### Solutions des exercices
 
 ````{exercise} 
 Voir partie Apprendre.

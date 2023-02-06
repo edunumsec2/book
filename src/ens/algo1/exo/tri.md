@@ -1,6 +1,8 @@
-# 2. Trie, cherche et trouve
+# Algorithmique II
 
-## Solutions des exercices
+## 2. Trie, cherche et trouve
+
+### Solutions des exercices
 
 ````{exercise} 
 Voir partie Apprendre.

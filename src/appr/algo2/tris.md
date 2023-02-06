@@ -1,4 +1,4 @@
-# Algorithmes de tri
+# Algorithmes de tri [complément]
 
 Nous venons de voir que pour rechercher de manière efficace, les données doivent être triées. Mais quelle est la complexité de l'algorithme du Tri par sélection vu dans le chapitre <a href="../algo1/cours/2_trie_cherche_trouve/eleve.html#tri-selection">Trie, cherche et trouve</a> ? C'est sa complexité qui nous donnera une indication sur sa rapidité.
 
