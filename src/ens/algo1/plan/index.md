@@ -1,6 +1,6 @@
 # Algorithmique I
 
-# Planification
+## Planification
 
 Dans le premier chapitre <a href="parcours.html">Planification de la thématique</a> nous suggérons un parcours pour explorer les ressources en classe.
 
