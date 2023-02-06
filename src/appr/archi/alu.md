@@ -557,10 +557,11 @@ Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effec
 ````
 `````
 
-L'ALU a deux sorties en plus, en bas du composant :
+L'ALU a trois sorties en plus, en bas du composant :
 
- * la sortie $V$ (pour _oVerflow_) vaut 1 lors d'un dépassement de capacité (si le résultat de l'opération arithmétique représenté sur la sortie n'est pas valable parce qu'il vaudrait davantage de bits pour le représenter ; par exemple, le résultat de $8 + 8 = 16$ n'est pas représentable sur 4 bits, qui suffisent à représenter les valeurs entières jusqu'à 15 seulement) ;
- * la sortie $Z$ (pour _Zero_) vaut 1 lorsque tous les bits de sortie valent 0.
+ * la sortie $C_{out}$ (pour _carry out_) vaut 1 lors d'un dépassement de capacité (si le résultat de l'opération arithmétique représenté sur la sortie n'est pas valable parce qu'il vaudrait davantage de bits pour le représenter ; par exemple, le résultat de $8 + 8 = 16$ n'est pas représentable sur 4 bits, qui suffisent à représenter les valeurs entières jusqu'à 15 seulement) ;
+ * la sortie $V$ (pour _oVerflow_) vaut 1 lors d'un dépassement de capacité si on considère les entrées et les sorties comme des nombres signés. Nous ne faisons pas cela ici et ignorons cette sortie ;
+ * finalement, la sortie $Z$ (pour _Zero_) vaut 1 lorsque tous les bits de sortie valent 0.
 
 `````{admonition} Exercice 5 : une ALU comme comparateur
 En programmation, c'est fréquent de tester, par exemple dans une condition avec un `if`, si deux valeurs sont égales. Par exemple, ce fragment de code affichera « Ces valeurs sont égales! » uniquement si les deux nombres entiers donnés lors de l'exécution du code sont les mêmes:
@@ -751,7 +752,7 @@ Notre petite ALU peut aussi faire des calculs en utilisant une représentation s
 :mode: tryout
 
 {
-  "v": 3,
+  "v": 4,
   "in": [
     {"pos": [50, 70], "id": 16, "val": 0},
     {"pos": [50, 100], "id": 17, "val": 1},
@@ -761,64 +762,24 @@ Notre petite ALU peut aussi faire des calculs en utilisant une représentation s
     {"pos": [50, 280], "id": 25, "val": 0},
     {"pos": [50, 310], "id": 26, "val": 1},
     {"pos": [50, 340], "id": 27, "val": 1},
-    {"pos": [360, 60], "orient": "w", "id": 36, "name": "Add./Soustr.", "val": 1}
+    {"pos": [370, 60], "orient": "w", "id": 36, "name": {"0": "Addition", "1": "Soustraction"}, "val": 1}
   ],
   "out": [
-    {
-      "type": "nibble",
-      "pos": [220, 50],
-      "id": [20, 21, 22, 23],
-      "name": "A",
-      "radix": -10
-    },
-    {
-      "type": "nibble",
-      "pos": [220, 350],
-      "id": [28, 29, 30, 31],
-      "name": "B",
-      "radix": -10
-    },
-    {
-      "type": "nibble",
-      "pos": [400, 200],
-      "id": [32, 33, 34, 35],
-      "name": "S",
-      "radix": -10
-    }
+    {"type": "nibble-display", "pos": [220, 50], "id": [20, 21, 22, 23], "name": "A", "radix": -10},
+    {"type": "nibble-display", "pos": [220, 350], "id": [28, 29, 30, 31], "name": "B", "radix": -10},
+    {"type": "nibble-display", "pos": [400, 200], "id": [32, 33, 34, 35], "name": "S", "radix": -10},
+    {"pos": [370, 350], "id": 39, "name": {"0": "Résultat correct", "1": "Dépassement"}}
   ],
   "components": [
-    {
-      "type": "alu",
-      "pos": [300, 200],
-      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 37],
-      "out": [10, 11, 12, 13, 14, 15]
-    }
+    {"type": "alu", "pos": [300, 200], "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 37], "out": [10, 11, 12, 13, 38, 15, 14]}
   ],
-  "wires": [
-    [16, 20],
-    [17, 21],
-    [18, 22],
-    [19, 23],
-    [16, 0],
-    [17, 1],
-    [18, 2],
-    [19, 3],
-    [24, 4],
-    [25, 5],
-    [26, 6],
-    [27, 7],
-    [24, 28],
-    [25, 29],
-    [26, 30],
-    [27, 31],
-    [10, 32],
-    [11, 33],
-    [12, 34],
-    [13, 35],
-    [36, 8]
-  ]
+  "wires": [[16, 20], [17, 21], [18, 22], [19, 23], [16, 0], [17, 1], [18, 2], [19, 3], [24, 4], [25, 5], [26, 6], [27, 7], [24, 28], [25, 29], [26, 30], [27, 31], [10, 32], [11, 33], [12, 34], [13, 35], [36, 8], [38, 39]]
 }
 ```
 
 Notez que grâce à la représentation en complément à deux, la circuiterie interne de l'ALU peut se permettre de complètement ignorer si ses entrées sont signées ou pas et livrera le bon résultat tant que la convention d'entrée et de sortie reste la même.
+
+Attention, lorsqu'on interprète les entrées et la sortie comme des nombres signés, ce n'est plus la sortie $C_{out}$ de l'ALU qui indique un dépassement de capacité, mais la sortie $V$, qui est calculée différemment.
+
+Essayez de régler les entrées pour que cette ALU calcule le résultat de $-8 - (-4)$. Vérifiez qu'un dépassement de capacité est signalé et expliquez pourquoi.
 ````

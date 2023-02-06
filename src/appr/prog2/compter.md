@@ -99,7 +99,7 @@ for i in range(16):
     print(i, '=', bin(i))
 ````
 
-La chaîne formaté (f-string) '{i:4b}' à l'intérieur de la fonction `print()` affiche le code binaire sur 4 positions.
+La chaîne formaté (f-string) `{i:4b}` à l'intérieur de la fonction `print()` affiche le code binaire sur 4 positions.
 
 ```{codeplay}
 :file: bin5.py

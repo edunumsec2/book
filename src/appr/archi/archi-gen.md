@@ -1,4 +1,4 @@
-# Architecture générale et composants
+# Architecture générale
 
 
 

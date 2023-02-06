@@ -18,7 +18,7 @@ En Python, `random` est
 
 ## Le contenu du module
 
-Le module `random` permet de créer des nombres pseudoaléatoires. Pour afficher le contenu d'une module, nous pouvons utiliser la fonction `dir()` qui affiche les objets du module.
+Le module `random` permet de créer des nombres pseudoaléatoires. Pour afficher le contenu d'un module, nous pouvons utiliser la fonction `dir()` qui affiche les objets du module.
 
 Le module met à disposition 13 fonctions.
 
@@ -134,8 +134,8 @@ for i in range(200):
 ```
 
 Pour faire un dessin, il est utile de pouvoir spécifier la région des étoiles.
-Nous choisissons ici des régions rectangulaires défini par une position `p` et une taille `size`.
-Les étoiles seront placé dans cette région.
+Nous choisissons ici des régions rectangulaires définies par une position `p` et une taille `size`.
+Les étoiles seront placées dans cette région.
 
 ```{codeplay}
 from turtle import *
@@ -167,7 +167,7 @@ etoiles((-300, -50), (600, 250), 100, 'white')
 
 ### La voie lactée
 
-Pour arranger les étoiles plus dans une bande horizontale, comme dans la voie lactée, nous utilisons pour la variable `y` une distribution normale (de Gauss) avec une moyenne de 0 et un sigma de 50.
+Pour arranger les étoiles plus dans une bande horizontale, comme dans la Voie lactée, nous utilisons pour la variable `y` une distribution normale (de Gauss) avec une moyenne de 0 et un sigma de 50.
 
 ```{codeplay}
 :file: random7.py
@@ -187,7 +187,7 @@ for i in range(500):
 
 ## Couleur aléatoire
 
-La fonction `choice()` retourne un élément aléatoire dans dans une séquencew. 
+La fonction `choice()` retourne un élément aléatoire dans une séquence. 
 
 ```{codeplay}
 from turtle import *
@@ -208,7 +208,7 @@ for i in range(20):
 
 ### Cube de Rubik
 
-Depuis une liste avec les 6 couleurs du cube de Rubik nous en choisissons une aléatoirement, pour dessiner un cube dans son état défait.
+Depuis une liste avec les 6 couleurs du cube de Rubik, nous en choisissons une aléatoirement, pour dessiner un cube dans son état défait.
 
 ```{codeplay}
 from turtle import *
@@ -243,7 +243,7 @@ for i in range(3):
 
 ## Text aléatoire
 
-La fonction 'choice()' permet aussi de choisir parmis un tuple de mots. Ici nous affichons les noms des chapitre à des positions aléatoires. 
+La fonction 'choice()' permet aussi de choisir parmi un tuple de mots. Ici nous affichons les noms des chapitres à des positions aléatoires. 
 Parfois les positions sont superposées. Nous allons voir plus tard, comment nous pouvons résoudre ce problème.
 
 ```{codeplay}
@@ -314,11 +314,11 @@ for i in range(10):
 
 ## Distribution gaussienne
 
-La distribution normalle, ou **distribution gaussienne**, est la distribution qui apparait souvent dans la nature. La taille d'une population, le poids d'une population, suit souvent une distribution gaussienne.
+La distribution normale, ou **distribution gaussienne**, est la distribution qui apparait souvent dans la nature. La taille d'une population, le poids d'une population, suit souvent une distribution gaussienne.
 
-La distribution normale `gauss(mu, sigma)` est décrit par deux paramètres :
+La distribution normale `gauss(mu, sigma)` est décrite par deux paramètres :
 
-- son éspérance `mu`
+- son espérance `mu`
 - son écart-type `sigma`
 
 La fonction `gauss(0, 5)' avec un sigma de 5 va distribuer ses valeurs autour de 0, de sorte placer 67% des points dans l'intervalle [-5, 5]. Le programme suivant montre un histogramme visuel de classification de 400 points.

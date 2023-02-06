@@ -1,0 +1,18 @@
+{
+  "v": 4,
+  "opts": {"propagationDelay": 10},
+  "in": [
+    {"pos": [60, 40], "id": 7, "name": "b0", "val": 1},
+    {"pos": [60, 80], "id": 8, "name": "b1", "val": 0},
+    {"pos": [60, 120], "id": 26, "name": "b2", "val": 1}
+  ],
+  "out": [
+    {"type": "bar", "pos": [380, 30], "id": 0, "display": "px", "name": "a"},
+    {"type": "bar", "pos": [380, 70], "id": 1, "display": "px", "name": "b"},
+    {"type": "bar", "pos": [430, 70], "orient": "s", "id": 2, "display": "px", "name": "d"},
+    {"type": "bar", "pos": [380, 120], "id": 3, "display": "px", "name": "c"},
+    {"type": "bar", "pos": [480, 70], "id": 4, "display": "px", "name": "f"},
+    {"type": "bar", "pos": [480, 30], "id": 5, "display": "px", "name": "e"},
+    {"type": "bar", "pos": [480, 120], "id": 6, "display": "px", "name": "g"}
+  ]
+}

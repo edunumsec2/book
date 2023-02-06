@@ -359,7 +359,7 @@ polyline(house, (90, -80), size=(2, -1.5))
 
 ### Tangram
 
-Choisissez un animal est recréez la figure.
+Choisissez un animal et recréez la figure.
 
 ![tangram](media/tangram1.jpg)
 
@@ -383,7 +383,7 @@ triangle()
 
 ### Tangram 2
 
-Choisissez un animal est recréez la figure.
+Choisissez un animal et recréez la figure.
 
 ![tangram](media/tangram2.jpg)
 
@@ -407,3 +407,38 @@ seth(180)
 color('orange')
 triangle()
 ```
+
+### Musée d'art et d'histoire
+
+Le [Musée d'art et d'histoire de Genève](http://institutions.ville-geneve.ch/fr/mah/) a mandaté le studio de graphisme zurichois [Hubertus Design](https://hubertus-design.ch) pour renouveler son identité visuelle. Ce logo à la ligne graphique dynamique, sobre et contemporaine symbolise dorénavant la marque MAH.
+
+```{codeplay}
+:file: MAH.py
+from turtle import *
+dot(1000, 'yellow')
+
+M = (0, 0), (2, 3), (4, 0), (6, 3), (8, 0), (8, 8), (2, 5), (6, 5), (0, 8), (0, 0)
+A = (0, 0), (6, 3), (2, 3), (8, 0), (4, 8), (0, 0)
+H = (0, 0), (6, 3), (2, 3), (8, 0), (8, 8), (2, 5), (6, 5), (0, 8), (0, 0)
+
+d = 20
+def lettre(L):
+    x0, y0 = pos()
+    for x, y in L:
+        goto(x0 + x * d, y0 + y * d)
+        down()
+    up()
+    
+up()
+goto(-12*d, -4*d)
+for c in (M, A, H):
+    lettre(c)
+    forward(8*d)
+
+goto(-8*d, -10)
+for s in ('MUSÉE', "D'ART", "D'HISTOIRE"):
+    write(s, align='center', font=('Arial', 16))
+    forward(8*d)
+```
+
+Créez 3 autres lettres dans le même style pour un autre musée dans une autre ville. Changez texte et couleur.

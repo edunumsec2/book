@@ -278,7 +278,7 @@ for c in texte:
     if c in histogram:
         histogram[c] += 1
     else:
-        histogramme[c] = 1
+        histogram[c] = 1
         
 print(histogram)
 ```
@@ -310,7 +310,7 @@ for c in texte:
         if c in histogram:
             histogram[c] += 1
         else:
-            histogramme[c] = 1
+            histogram[c] = 1
         
 ===
 from turtle import *

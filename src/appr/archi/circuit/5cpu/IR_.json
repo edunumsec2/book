@@ -1,0 +1,10 @@
+  {
+    "v": 4,
+    "in": [
+      {"type": "byte", "pos": [110, 60], "orient": "s", "id": [0, 1, 2, 3, 4, 5, 6, 7], "name": "instruction"}
+    ],
+    "out": [
+      {"type": "nibble-display", "pos": [170, 190], "orient": "s", "id": [12, 13, 14, 15]},
+      {"type": "nibble-display", "pos": [80, 190], "orient": "s", "id": [43, 44, 45, 46]}
+    ]
+  }

@@ -1,6 +1,8 @@
 # Adressage
 
-(ou comment identifier son interlocuteur)
+L'adresse est une notion importante en communication, qui permet à une personne ou une machine de s'adresser à une autre personne ou machine spécifique.
+Pour qu'il n'y ait pas d'ambiguïté, chaque adresse doit être à unique, une adresse peut donc être un moyen d'identification.
+En revanche il est possible que deux adresses fassent référence à une même entité.
 
 ## Les noms de domaine
 
@@ -8,16 +10,17 @@ Le nom *champignons.ch* est ce qu'on appelle un *nom de domaine*.
 Les noms de domaines sont gérés par l'ICANN, une organisation non gouvernementale à but non lucratif
 basée aux États-Unis dont la fonction principale est la gestion de l'adressage sur Internet.
 Les noms de domaines sont gérés de manière hiérarchique, selon le
-*nom de domaine de premier niveau*, c'est à dire la "terminaison" de l'adresse (*.ch*, *.org*, *.fr*, etc.)Ainsi la gestion des adresses en *.ch* est confiée à Switch, une fondation suisse dont c'est le rôle principal.La personne qui a créé le site *champignons.ch* a donc
+*nom de domaine de premier niveau*, c'est à dire la "terminaison" de l'adresse (*.ch*, *.org*, *.fr*, etc.) Ainsi la gestion des adresses en *.ch* est
+confiée à Switch, une fondation suisse dont c'est le rôle principal. La personne qui a créé le site *champignons.ch* a donc
 réservé ce nom de domaine auprès de Switch (en passant par un intermédiaire) et peut le conserver moyennant un paiement d'environ CHF 15.- par an.
 
 ```{didyouknow}
 Au début, les noms de domaine de premier niveau étaient limités à quelques possibilités, telles que ".com" pour les organisations
 commerciales, ".edu" pour les universités (américaines), ".gov" pour le gouvernement (américain), ".mil" pour l'armée (américaine), ".org"
-pour les organisations (à but non-lucratif) et, dès les années 80, différents pays ont décidé d'enregistrer des noms de domaine de premier
+pour les organisations (à but non lucratif) et, dès les années 80, différents pays ont décidé d'enregistrer des noms de domaine de premier
 niveau pour leur pays, par exemple ".ch" pour la Suisse, ".fr" pour la France. Puis il a été décidé d'ouvrir d'autres noms de domaine et
 de les mettre aux enchères. Une entreprise a
-alors décidé de vendre des domaines ".sucks" qu'elle a vendu très cher à certaines grandes entreprises (par exemple apple.sucks) qui avaient
+alors décidé de vendre des domaines ".sucks" qu'elle a vendus très cher à certaines grandes entreprises (par exemple apple.sucks) qui avaient
 peur que ce site ne devienne une plateforme pour les critiquer. 
 
 ````
@@ -27,7 +30,7 @@ nombres pour référencer les machines connectées à Internet, c'est ce qu'on a
 la personne qui a enregistré le site *champignons.ch* a également reçu une (ou plusieurs) adresse IP de la part de
 Switch ou d'un intermédiaire.
 
-<!-- Ajouter une illustration de la gestion des noms de domaines?  -->
+{itodo}`Ajouter une illustration de la gestion des noms de domaines?`
 
 ```{micro}
 Déterminer à l'aide du site web <https://www.nic.ch/whois/> qui a enregistré le nom de domaine champignons.ch.
@@ -39,15 +42,15 @@ Déterminer à l'aide du site web <https://www.nic.ch/whois/> qui a enregistré 
 
 Afin de pouvoir identifier chacune des machines connectées à Internet, il a été décidé de leur attribuer à chacune
 un nombre, un peu à la manière dont les numéros de téléphone sont attribués à chaque téléphone du réseau téléphonique.
-Dans sa version la plus courante, ce nombre est codé sur 32 bits, c'est-à-dire entre 0 et 4'294'967'295 c'est à dire $2^{32}-1$.
-On pensait alors (c'était en 1982) que 4 millard d'addresses seraient amplement suffisant pour pouvoir accommoder toutes les machines pendant encore beaucoup d'années, et qu'Internet
+Dans sa version la plus courante, ce nombre est codé sur 32 bits, ce qui donne à peu près 4 milliards de possibilités ($2^{32}$).  
+On pensait alors (c'était en 1982) que 4 milliards d'adresses seraient amplement suffisantes pour pouvoir accommoder toutes les machines pendant encore beaucoup d'années, et qu'Internet
 ne dépasserait pas les 4 milliards de machines connectées.
-<!-- [dire combien il y en avait à l'époque]. -->
+{itodo}`[dire combien il y en avait à l'époque]`
 Afin de rendre ces adresses plus lisibles pour les humains, on décompose d'habitude une adresse IP de 32 bits en
 quatre groupes de 8 bits séparés par un point. Chaque groupe de 8 bits peut alors être représenté comme un nombre décimal
 entre 0 et 255 ($2^8-1$).
 
-L'exemple suivant montre comment trouver la representation binaire, d'un tuple de 4 nombres décimaux. L'adresse montrée est
+L'exemple suivant montre comment trouver la représentation binaire, d'un tuple de 4 nombres décimaux. L'adresse montrée est
 `128.233.53.23`
 
 ```{codeplay}
@@ -76,7 +79,7 @@ Lesquelles des adresses suivantes sont des adresses IP valides:
 
 ```
 
-Pour répondre à une telle question automatiquement nous pourrions ajouter des testes comme celui-ci.
+Pour répondre à une telle question automatiquement nous pourrions ajouter des tests comme celui-ci.
 
 ```{codeplay}
 addresses = ((240, 264, 23, 2),
@@ -101,8 +104,8 @@ Avec le développement d'Internet, il est vite devenu clair que le nombre de mac
 de les représenter avec 16 nombres entre 0 et 255, il a été décidé de coder en 8 nombres hexadécimaux
 entre 0000 et FFFF. Chaque digit de 0 à F représente ainsi 4 bits.
 
-Par exemple ```4E3F.DEA7.409B.412C.2516.4A2B.2CFE.1282``` pourrait constituer une adresse IPv6 valide. Elle est en effect
-constituée de 8 nombres à quatres chiffres hexadécimaux. 
+Par exemple ```4E3F.DEA7.409B.412C.2516.4A2B.2CFE.1282``` pourrait constituer une adresse IPv6 valide. Elle est en effet
+constituée de 8 nombres à quatre chiffres hexadécimaux.
 
 Actuellement, les deux types d'adresses IPv6 et IPv4 coexistent sur Internet, la version IPv4 étant encore largement
 plus répandue. Une adresse IP peut donc soit être sur 32 bits soit sur 128 bits.
@@ -121,15 +124,13 @@ Parmi les adresses suivantes, indiquer lesquelles sont au format IPv4, lesquelle
 
 ````
 
-
 ### Gouvernance
 
 Comme les noms de domaine, les adresses IP sont gérées hiérarchiquement. Ainsi, les adresses de la forme
 `46.x.x.x` (c'est-à-dire celles qui commencent par `46 = 00101110`) sont assignées au Centre de Coordination
 Européen qui les répartit entre différents *Registres Internet locaux* tels que Switch qui va pouvoir
 louer une partie de ces adresses IP à des organisations, des entreprises (par exemple des fournisseurs d'accès Internet)
-ou des particuliers qui en feraient la demande. 
-
+ou des particuliers qui en feraient la demande.
 
 Certains blocs d'adresses IP sont réservés à des usages particuliers. Par exemple les adresses `10.x.x.x`  ou
 `192.168.x.x` sont réservées aux réseaux privés, c'est-à-dire des machines qui ne communiquent pas directement
@@ -137,27 +138,22 @@ avec le reste d'Internet. Ainsi, ces adresses peuvent être utilisées au sein d
 ou pour faire communiquer différents appareils connectés (lampes, télévision, four, télécommande) au sein d'une
 maison. Dans l'exemple ci-dessous, un fournisseur d'accès à Internet (tel que Swisscom par exemple) à reçu toutes les
 adresses de type 213.221.x.x. Il en garde une partie pour son propre usage, par exemple pour son site web ou ses routeurs,
-c'est-dire les machines qui s'occupe d'acheminer les donnée sur Internet. Une autre partie des adresses sera louée à
+c'est-dire les machines qui s'occupe d'acheminer les données sur Internet. Une autre partie des adresses sera louée à
 des entreprises ou des particuliers qui sont ses clients. Ceux-ci bénéficieront donc d'une adresse IP leur permettant d'être
-joignable par le reste d'Internet. Les particuliers et entreprises ont généralement un réseau privé, un intranet, qui utilise
+joignables par le reste d'Internet. Les particuliers et entreprises ont généralement un réseau privé, un intranet, qui utilise
 les adresses 10.x.x.x.
 
 ```{figure} media/IPnetwork.svg
 :width: 600
 ```
 
-
 ```{exercise}
 - Combien y aurait-il eu d'adresses IP possibles s'il avait été décidé de l’encoder sur 24 bits?
-- Déterminez à l'aide du site xxx à quel continent sont allouées les adresses IP suivantes:
+- Déterminez à l'aide du site {itodo}`xxx` à quel continent sont allouées les adresses IP suivantes:
 - Déterminez l'entité suisse qui possède le plus d'adresses IP
 - Donnez la représentation binaire de l'adresse IP `y.y.y.y`
 - Combien y a-t-il d'adresses IP de type `192.168.x.x` ?
 ```
-
-
-
-
 
 ### Adressage statique et dynamique
 
@@ -182,22 +178,30 @@ qui revient plusieurs fois sur votre site ?
 
 
 ```
+
 ```{solution}
-1. Vous pouvez vous connecter tous deux à un serveur central qui a une adresse IP fixe et qui s'occupera de relayer vos message à vos adresses
+1. Vous pouvez vous connecter tous deux à un serveur central qui a une adresse IP fixe et qui s'occupera de relayer vos messages à vos adresses
 dynamiques. C'est ce que fait un serveur mail ou de messagerie telle que Signal ou Whatsapp. 
 
 2. Si elle a une adresse IP dynamique, alors elle aura probablement des adresses IP différentes lors de ses visites en des jours différents. On
-ne pourra donc pas l'identifier en regardant uniquement son adresse IP. Par contre, en enregistrant d'autres paramètres que son navaigateur
+ne pourra donc pas l'identifier en regardant uniquement son adresse IP. Par contre, en enregistrant d'autres paramètres que son navigateur
 voudra bien nous transmettre, tels que son système d'exploitation, la langue, l'appareil, etc., on peut reconstituer son empreinte numérique
 et l'identifier ainsi. C'est ce qu'on appelle en anglais le fingerprinting, que l'on peut [bloquer avec certains navigateurs](https://www.mozilla.org/fr/firefox/features/block-fingerprinting/).
 
 
 ```
 
-
 ### Système de noms de domaine
 
-Pour récapituler ce qui a été vu précédemment, les humains utilisent les noms de domaines pour les machines, alors que les machines, elles, utilisent les adresses IP. Afin que ces deux modes de recensement des machines soient cohérents entre eux, il est nécessaire de disposer d'un annuaire qui fera correspondre les noms de domaines aux adresses IP. Ceci est analogue aux annuaires téléphoniques qui permettent de faire correspondre le nom des personnes que l'on veut atteindre (qui serait équivalent au nom de domaine) au numéro de téléphone (qui est analogue à l'adresse IP). Cet annuaire est ce qu'on appelle le *système de noms de domaine* (Domain Name System ou DNS selon l'appellation anglaise). Au début d'Internet, il s'agissait simplement d'un fichier texte librement accessible qui listait le nom de domaines et les adresses IP correspondantes. Ce fichier était maintenu à la main. Maintenant, il s'agit de machines, les serveurs DNS dans le réseau auprès desquelles il est possible d'obtenir l'adresse IP correspondante à un nom de domaine. Ces machines sont aussi organisées hiérarchiquement de telle sorte que chaque serveur DNS ne stocke que les noms de domaines correspondant à une sous partie du réseau.
+Pour récapituler ce qui a été vu précédemment, les humains utilisent les noms de domaines pour les machines, alors que les machines, elles, utilisent les adresses IP. Afin que ces deux modes de recensement des machines soient cohérents entre eux, il est nécessaire de disposer d'un annuaire qui fera correspondre les noms de domaines aux adresses IP. Ceci est analogue aux annuaires téléphoniques qui permettent de faire correspondre le nom des personnes que l'on veut atteindre (qui serait équivalentes au nom de domaine) au numéro de téléphone (qui est analogue à l'adresse IP). Cet annuaire est ce qu'on appelle le *système de noms de domaine* (Domain Name System ou DNS selon l'appellation anglaise). Au début d'Internet, il s'agissait simplement d'un fichier texte librement accessible qui listait le nom de domaines et les adresses IP correspondantes. Ce fichier était maintenu à la main. Maintenant, il s'agit de machines, les serveurs DNS dans le réseau auprès desquelles il est possible d'obtenir l'adresse IP correspondante à un nom de domaine. Ces machines sont aussi organisées hiérarchiquement de telle sorte que chaque serveur DNS ne stocke que les noms de domaines correspondant à une sous-partie du réseau.
 
-<!-- [Mettre une illustration] -->
-<!-- [Donner quelques détails du système ? ] -->
+```{torecall} Le serveur DNS
+```{figure} media/dns.svg
+---
+width: 500
+align: center
+---
+Pour qu'Alice puisse aller sur le site de champignons.ch, son téléphone va envoyer une requête à un serveur DNS avec le nom de domaine "champignons.ch". Cette
+requête transitera par différents serveurs DNS organisés hiérarchiquement jusqu'à ce qu'un serveur DNS puisse y répondre, et la réponse sera retransmise
+jusqu'au téléphone d'Alice.
+```

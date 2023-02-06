@@ -13,6 +13,9 @@ Dans la deuxième partie, nous allons découvrir la programmation orientée obje
 onkey
 lambda
 onclick
+onclick2
+onclick3
+
 ontimer
 turtle
 
@@ -20,7 +23,6 @@ class
 inherit
 math
 dict
-compter
 color
 
 set
