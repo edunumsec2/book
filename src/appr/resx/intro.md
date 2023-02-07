@@ -2,13 +2,13 @@
 
 Internet est une infrastructure essentielle qui a complètement changé notre vie, que ce soit dans les
 relations sociales, l'éducation, la recherche, le commerce, la santé, etc. Dans ce chapitre, nous allons voir, dans les grands principes, comment
-internet fonctionne et en quoi son fonctionnement est différents d'autres réseaux de communication qui l'on précédé, tels que les réseaux postal ou
-téléphonique. En effet, une innovation majeure d'internet est qu'il s'agit d'un réseau *décentralisé*, et ceci explique en large partie son succès
+internet fonctionne et en quoi son fonctionnement est différent d'autres réseaux de communication qui l'ont précédé, tels que les réseaux postaux ou
+téléphoniques. En effet, une innovation majeure d'internet est qu'il s'agit d'un réseau *décentralisé*, et ceci explique dans une large mesure son succès
 et ce qu'il est devenu, même si certains craignent une recentralisation d'Internet autour des géants du numérique tels que Google et Amazon.
 
 ## Origine d'Internet
 
-Les réseaux de communication existaient bien avant Internet, par exemple
+Les réseaux de communication existaient bien avant Internet, par exemple : 
 
 - le réseau de télégraphie optique de Chappe (1794)
 - le réseau de télégraphie électrique de Morse (1843)
@@ -93,7 +93,7 @@ la mise en lien doit se faire de manière décentralisée. C'est ce qu'on appell
 
 Dans un réseau centralisé comme le téléphone, lorsque deux personnes sont en communication, elles "occupent la ligne": ces deux personnes ne sont pas joignables par d'autres personnes (c'est ce qu'indique le signal "occupé"), mais cela n'implique pas d'autres personnes qui veulent communiquer entre elles (sauf si le standard et surchargé). C'est ce qu'on appelle la *commutation de circuits*, car un circuit électrique est créé entre les deux appareils qui communiquent.
 
-Imaginons maintenant qu'une relation soit établie entre deux appareils d'un réseau décentralisé . Si l'on avait une commutation de circuits, toutes les connexions utilisées pour acheminer
+Imaginons maintenant qu'une relation soit établie entre deux appareils d'un réseau décentralisé. Si l'on avait une commutation de circuits, toutes les connexions utilisées pour acheminer
 l'information entre deux appareils seraient inutilisables pour les autres personnes utilisatrices du réseau, comme illustré dans la figure ci-dessous.
 
 ```{figure} media/packetvscircuit.svg
