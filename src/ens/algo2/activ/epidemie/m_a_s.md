@@ -64,7 +64,7 @@ Pour remplir cette liste, placer l'instruction
     ```
     plt.plot(courbe_infection,'-')
     plt.xlabel('jours')
-    plt.ylable("nombre d'infections")
+    plt.ylabel("nombre d'infections")
     plt.show()
     ```
     Vous pouvez fermer la fenêtre du graphique pour terminer le programme. 
