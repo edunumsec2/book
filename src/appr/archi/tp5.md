@@ -136,12 +136,12 @@ Dans le circuit ci-dessous, ajoutez :
 
 ## Le jeu d'instructions
 
-On appelle **jeu d'instruction** (instruction set) la totalité des instructions qu'un processeur peut exécuter. Ces instructions sont représentées par une abréviation à 3 lettres (mnémonique). Les premières 14 instructions sont composées d'une partie: 
+On appelle **jeu d'instruction** (instruction set) la totalité des instructions qu'un processeur peut exécuter. Ces instructions sont représentées par une abréviation à 3 lettres (mnémonique). Les premières 14 instructions sont composées d'une partie:
 
 - instruction (4 bits), appelée **opcode**, de `0000` à `1101`
 - données (4 bits), appelé **data**
 
-La partie `data' peu représenter 3 types de données : 
+La partie `data' peu représenter 3 types de données :
 
 - `AAAA` une adresse dans la mémoire programme
 - `RRRR` un registre dans la banque des registres
@@ -214,8 +214,6 @@ Par exemple à l'adresse `0100` (4) se trouve l'instruction `00010001` (`JCN 1`)
   "wires": [[23, 11], [24, 12], [25, 13], [26, 14], [27, 3], [28, 4], [29, 5], [30, 6], [31, 7], [32, 8], [33, 9], [34, 10], [15, 43], [16, 44], [17, 45], [18, 46], [47, 35], [48, 36], [49, 37], [50, 38], [47, 39], [48, 40], [49, 41], [50, 42], [51, 0], [52, 1], [93, 2], [19, 94], [20, 95], [21, 96], [22, 97], [98, 102], [99, 103], [100, 104], [101, 105], [98, 106], [99, 107], [100, 108], [101, 109], [19, 111], [20, 112], [21, 113], [114, 122], [115, 123], [126, 110], [22, 125], [116, 127]]
 }
 ```
-
-
 
 ## Bus 4 bits
 

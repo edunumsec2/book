@@ -1,6 +1,6 @@
 # TP Portes logiques
 
-Dans ce chapitre, nous allons explorer les portes logiques NON, OU et ET. 
+Dans ce chapitre, nous allons explorer les portes logiques NON, OU et ET.
 
 - Créez chaque circuit comme demandé
 - Quand le circuit est terminé, cliquez sur **Screenshot** (dans le menu à droite)

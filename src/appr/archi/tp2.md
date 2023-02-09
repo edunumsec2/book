@@ -88,7 +88,7 @@ Créez une deuxième façon pour obtenir une porte OU exclusive en partant de l'
 
 `(not a and b) or (b and not a)`
 
-Utilisez donc : 
+Utilisez donc :
 
 - 2 portes NON
 - 2 portes ET
@@ -116,8 +116,6 @@ Utilisez donc :
   "wires": [[0, 48], [47, 49], [0, 51], [47, 52], [53, 54], [50, 56], [55, 57], [58, 59]]
 }
 ```
-
-
 
 ## Détecteur de parité
 
@@ -247,7 +245,7 @@ Ajoutez encore 3 demi-additionneurs et montrez la table de vérité pour les 4 c
 
 Dans le cas général de l'addition, nous n'additionnons pas deux bits, mais deux nombres à plusieurs bits. Voici l'addition en colonne de deux nombres 4 bits (3+11=14).
 
-```
+```text
  0011
 +1011
 -----
@@ -256,7 +254,7 @@ Dans le cas général de l'addition, nous n'additionnons pas deux bits, mais deu
 
  Pour être explicit, nous introduisons une ligne supplémentaire qui représente la retenue (C = carry).
 
-```
+```text
  0110 (retenue)
  0011
 +1011

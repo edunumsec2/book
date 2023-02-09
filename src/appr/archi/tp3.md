@@ -117,9 +117,10 @@ L'ALU dont nous disposons peut effectuer 4 opérations :
 - ET logique (11)
 
 Avec l'ALU ci-dessus ajoutez
+
 - la deuxième entrée (B) avec un bloc d'affichage 4 bits
 - un bloc d'affichage 4 bits pour la sortie (S)
-- les 3 entrées (Cin, Op0, Op1) 
+- les 3 entrées (Cin, Op0, Op1)
 - les 3 sorties (Cout, V, Z)
 
 Ensuite, testez les 4 opérations. Montrez une soustraction.
@@ -377,7 +378,7 @@ La multiplication 4 x 4 bits nécessite:
 
 Pour multiplier `0101` x `1001` = `00101101`  (5 x 9 = 45) nous écrivons en colonnes ceci :
 
-```
+```text
 1     1001
 0    0000
 1   1001
@@ -422,7 +423,7 @@ Modifiez a et b dans le circuit multiplicateur 4 x 4 bits ci-dessus vérifiez qu
 
 ## Diviser par 2, 4 et 8
 
-La division par une puissance de 2 est très simple. Il suffit de décaler le nombre binaire. Pour diviser par 2 nous décalons d'une unité, et nous obtenons : 
+La division par une puissance de 2 est très simple. Il suffit de décaler le nombre binaire. Pour diviser par 2 nous décalons d'une unité, et nous obtenons :
 
 - La division entière (`a//2`)
 - Le reste de la division, l'opération modulo (`a%2`)

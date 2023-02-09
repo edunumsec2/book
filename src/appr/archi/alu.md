@@ -8,7 +8,6 @@ Les ordinateurs ont la propriété d'être programmables : ils savent effectue
 
 Le composant qui nous permettra de sélectionner une opération ou une autre s'appelle « unité arithmétique et logique », communément appelé simplement « ALU » (de l'anglais _arithmetic logic unit_). Avant d'inspecter une ALU, nous avons besoin de comprendre comment on peut sélectionner une opération ou une autre avec des circuits logiques.
 
-
 ## Sélection de l'opération
 
 Comment créer un circuit qui permet de sélectionner une opération à faire, et comment indiquer l'opération à sélectionner ? Essayons d'abord de créer un circuit à deux entrées qui va calculer soit le **OU** soit le **ET** de ces deux entrées.
@@ -157,8 +156,8 @@ La porte **OU** peut ainsi servir à combiner deux signaux, pour autant que l'un
 
 Avec tout ceci, on peut ainsi construire un multiplexeur (un sélecteur de signal). Supposons qu'on ait les deux signaux $A$ et $B$ : nous pouvons construire un circuit qui combine soit $A$ tel quel et $B$ annulé, soit $A$ annulé et $B$ tel quel. Cela nous aidera pour notre projet initial ! Il faut cependant s'assurer que $A$ soit chaque fois annulé quand $B$ passe tel quel, et inversement. Ceci peut se faire en réutilisant l'idée d'une entrée de contrôle $Op$ ainsi. Nous avons ainsi deux cas :
 
- * Lorsque $Op = 0$, on va sélectionner $A$ et annuler $B$. On va donc faire passer $A$ à travers une porte **ET** à laquelle on donne 1 à l'autre entrée, et faire passer $B$ à travers une porte **ET** à laquelle on donne 0 à la seconde entrée.
- * Lorsque $Op = 1$, on va faire exactement l'inverse : sélectionner $B$ et annuler $A$. On donnera donc un 0 à la porte **ET** qui filtre $A$, et 1 à la porte **ET** qui filtre $B$.
+* Lorsque $Op = 0$, on va sélectionner $A$ et annuler $B$. On va donc faire passer $A$ à travers une porte **ET** à laquelle on donne 1 à l'autre entrée, et faire passer $B$ à travers une porte **ET** à laquelle on donne 0 à la seconde entrée.
+* Lorsque $Op = 1$, on va faire exactement l'inverse : sélectionner $B$ et annuler $A$. On donnera donc un 0 à la porte **ET** qui filtre $A$, et 1 à la porte **ET** qui filtre $B$.
 
 En relisant ces lignes, on voit que ce qu'on donne à la seconde entrée de la porte qui filtre $B$ est toujours la même chose que $Op$, et que ce qu'on donne à la seconde entrée de la porte qui filtre $A$ est toujours l'inverse de $Op$. On peut donc construire ce circuit avec {logicref}`filter0_tryout.inv|un inverseur` en plus :
 
@@ -299,7 +298,6 @@ Testez le circuit ci-dessus. Établissez la table de vérité de $Z$ en fonction
 
 Nous avons ici construit un circuit qui, grâce à un bit de contrôle $Op$, sélectionne une opération ou une autre à appliquer à ses deux bits d'entrées $X$ et $Y$.
 
-
 `````{admonition} Exercice 2 : construction d'un sélecteur
 En réutilisant les principes appliqués ci-dessus, construisez un circuit à deux bits d'entrées $X$ et $Y$ et un bit de contrôle $Op$ qui donnera sur sa sortie $Z$ :
 
@@ -361,7 +359,6 @@ Voici un circuit qui réutilise le sélecteur de signal et qui fournit à ce sé
 ```
 ````
 `````
-
 
 `````{admonition} Exercice 3 : inverseur conditionnel
 En réutilisant les principes appliqués ci-dessus, construisez un circuit à une entrée $X$ avec un bit de contrôle $Op$ qui donnera sur sa sortie $Z$ :
@@ -442,7 +439,6 @@ La table de vérité est identique à celle d'une porte **OU-X**. On peut donc s
 ````
 `````
 
-
 ## Une ALU à 4 bits
 
 Une unité arithmétique et logique, ou ALU, est un circuit qui ressemble dans ses principes de base à ce que nous venons de faire. L'ALU réalise plusieurs opérations et permet de sélectionner, via un ou plusieurs bits de contrôle, l'opération qui est réalisée. Les opérations proposées sont, comme le nom de l'ALU indique, des opérations arithmétiques (typiquement, l'addition et la soustraction) et des opérations logiques (par exemple, un **ET** et un **OU** logiques).
@@ -473,12 +469,11 @@ Cette ALU sait effectuer l'addition ou la soustraction de deux nombres entiers r
 La convention utilisée pour la sélection de l'opération est la suivante :
 
 | $Op$ | Opération effectuée |
-| :--: | :-----------------: | 
+| :--: | :-----------------: |
 |  00  |       Addition      |
 |  01  |     Soustraction    |
 |  10  |        **OU**       |
 |  11  |        **ET**       |
-
 
 `````{admonition} Exercice 4 : test de l'ALU
 Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effectuer l'opération $7 + 2 = 9$. Connectez les 4 bits des entrées et de la sortie à des afficheurs de demi-octet pour vérifier leur fonctionnement. Connectez ensuite une entrée pour le bit de contrôle qui permettra d'effectuer la soustraction avec les mêmes données d'entrée, donc $7 - 2 = 5$.
@@ -559,9 +554,9 @@ Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effec
 
 L'ALU a trois sorties en plus, en bas du composant :
 
- * la sortie $C_{out}$ (pour _carry out_) vaut 1 lors d'un dépassement de capacité (si le résultat de l'opération arithmétique représenté sur la sortie n'est pas valable parce qu'il vaudrait davantage de bits pour le représenter ; par exemple, le résultat de $8 + 8 = 16$ n'est pas représentable sur 4 bits, qui suffisent à représenter les valeurs entières jusqu'à 15 seulement) ;
- * la sortie $V$ (pour _oVerflow_) vaut 1 lors d'un dépassement de capacité si on considère les entrées et les sorties comme des nombres signés. Nous ne faisons pas cela ici et ignorons cette sortie ;
- * finalement, la sortie $Z$ (pour _Zero_) vaut 1 lorsque tous les bits de sortie valent 0.
+* la sortie $C_{out}$ (pour_carry out_) vaut 1 lors d'un dépassement de capacité (si le résultat de l'opération arithmétique représenté sur la sortie n'est pas valable parce qu'il vaudrait davantage de bits pour le représenter ; par exemple, le résultat de $8 + 8 = 16$ n'est pas représentable sur 4 bits, qui suffisent à représenter les valeurs entières jusqu'à 15 seulement) ;
+* la sortie $V$ (pour _oVerflow_) vaut 1 lors d'un dépassement de capacité si on considère les entrées et les sorties comme des nombres signés. Nous ne faisons pas cela ici et ignorons cette sortie ;
+* finalement, la sortie $Z$ (pour _Zero_) vaut 1 lorsque tous les bits de sortie valent 0.
 
 `````{admonition} Exercice 5 : une ALU comme comparateur
 En programmation, c'est fréquent de tester, par exemple dans une condition avec un `if`, si deux valeurs sont égales. Par exemple, ce fragment de code affichera « Ces valeurs sont égales! » uniquement si les deux nombres entiers donnés lors de l'exécution du code sont les mêmes:
@@ -738,9 +733,7 @@ Alernativement, à la place d'utiliser {logicref}`4bit_diff_logic0.{or1,or2,or3}
 ````
 `````
 
-
 En résumé, nous avons appris ici ce qu'est une unité arithmétique et logique et avons examiné de plus près comment construire un multiplexeur, un circuit qui est à même de « choisir » parmi plusieurs signaux d'entrées lequel il va propager sur sa sortie. L'ALU est spécialement intéressante, car c'est le premier composant que nous rencontrons qui incarne une des propriétés de base d'un ordinateur, à savoir d'être programmable, en faisant en sorte que l'opération qu'elle effectue dépende d'un signal externe.
-
 
 ````{admonition} Pour aller plus loin
 :class: attention
