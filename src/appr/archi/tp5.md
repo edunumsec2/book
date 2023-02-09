@@ -309,7 +309,7 @@ La parte `1010` est l'opcode (LD) et la parte `RRRR` représente un des 16 regis
 ```{logic}
 :ref: LDM_
 :height: 600
-:showonly: in out not and ram-16x4 out.nibble-display
+:showonly: in in.nibble out not and ram-16x4 out.nibble-display
 {
   "v": 4,
   "in": [
@@ -354,7 +354,7 @@ Avec les deux opcode différents, le circuit de décodage du CPU choisit un regi
 ```{logic}
 :ref: LDM_
 :height: 600
-:showonly: in out not and ram-16x4 mux-8x4 out.nibble-display
+:showonly: in in.nibble out out.nibble not and ram-16x4 mux-8to4 out.nibble-display
 {
   "v": 4,
   "in": [
@@ -403,7 +403,7 @@ Créez le circuit pour décoder et exécuter ces deux instructions.
 ```{logic}
 :ref: LDM_
 :height: 600
-:showonly: in out out.nibble-display
+:showonly: in in.nibble out out.nibble not and ram-16x4 mux-8to4 out.nibble-display
 {
   "v": 4,
   "in": [
