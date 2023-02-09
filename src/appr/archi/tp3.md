@@ -254,7 +254,7 @@ Pour les nombres signés (deuxième ALU)
 }
 ```
 
-## Multiplier 1 bit
+## Multiplier 1x1 bit
 
 Les règles de la multiplication 1-bit sont très simples. Voici la table de vérité.
 
@@ -322,7 +322,7 @@ Le circuit ci-dessous calcule 2a en décalant d'un bit en direction du poids for
 }
 ```
 
-## Multiplier par bit
+## Multiplier 1x4 bit
 
 Le circuit ci-dessous utilise un multiplexeur 8x4 pour faire la multiplication d'un nombre **a** (4 bits) avec un nombre **b** (1 bit), au lieu des 4 portes ET utilisées précédemment.
 
@@ -368,7 +368,7 @@ Complétez le circuit avec :
 }
 ```
 
-## Multiplier 4 bits
+## Multiplier 4x4 bits
 
 La multiplication 4 x 4 bits nécessite:
 

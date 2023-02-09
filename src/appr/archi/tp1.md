@@ -1,6 +1,6 @@
 # TP Portes logiques
 
-Dans ce chapitre, nous allons explorer les circuits logiques.
+Dans ce chapitre, nous allons explorer les portes logiques NON, OU et ET. 
 
 - Créez chaque circuit comme demandé
 - Quand le circuit est terminé, cliquez sur **Screenshot** (dans le menu à droite)
@@ -85,7 +85,7 @@ Vous pouvez ajouter des noms aux entrées sorties.
 
 ## Lampe clignotante
 
-L'entrée horloge (clock) produit un signal qui alterne entre 0 et 1
+L'entrée horloge (clock) produit un signal qui alterne entre 0 et 1.
 
 - Ajoutez une deuxième horloge
 - Ajoutez une deuxième lampe (grand segment carré)

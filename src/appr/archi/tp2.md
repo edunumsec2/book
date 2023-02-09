@@ -1,15 +1,40 @@
 # TP Additionneur
 
-Dans cette section, nous allons explorer d'abord la porte OU-X, l'additionneur qui sert de base pour
+Dans cette section, nous allons explorer d'abord la porte **ou explusif** (OU-X), qui nous sert à construire un **additionneur simple**. Nous modifions l'additionneur simple pour en créer un **additionneur complet** qui prend en compte la retenue. Cet additionneur 1 bit nous sert à construire des circuits pour créer d'autres opérations telles que :
 
 - addition
 - soustraction
 - incrémentation
 - décrémentation
 
+## Clock et fréquence
+
+L'entrée horloge (clock) produit un signal qui alterne entre 0 et 1. L'horloge ci-dessous a une période de 500 ms. Le délai de transmission a été mis à 1000 ms. Ceci fait apparaitre 2 cycles du signal (en jaune). On peut donc visualiser la fréquence du signal qui est de 2 Hz.
+
+- Ajoutez une deuxième horloge avec une période de 250 ms.
+- Visualisez cette fréquence avec un délai de propagation de 1000 ms.
+- Quelle est sa fréquence ? Mettez-la comme étiquette.
+- Faites la même chose avec une troisième horloge qui a une période de 100 ms.
+
+```{logic}
+:ref: clock
+:height: 300
+:showonly: clock out
+{
+  "v": 4,
+  "in": [
+    {"type": "clock", "pos": [40, 30], "id": 5, "period": 500}
+  ],
+  "out": [
+    {"pos": [450, 30], "id": 6, "name": "2 Hz"}
+  ],
+  "wires": [[5, 6, {"propagationDelay": 1000}]]
+}
+```
+
 ## Porte OU-X
 
-Une porte OU-X (ou exclusif) avec 2 entrées donne une sortie 1 si **exactement une** des entrées est à 1.
+Une porte OU-X (ou exclusif) avec 2 entrées donne une sortie 1 si **exactement une** des entrées est 1.
 
 - Montrez la table de vérité pour la porte OU-X.
 - Ajoutez 3 portes OU-X et mettez les entrées à 01, 10, et 11
