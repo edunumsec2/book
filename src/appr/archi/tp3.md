@@ -72,9 +72,9 @@ Ajoutez les éléments qui manquent.
 
 ## Sélection d'opérations
 
-Complétez le circuit qui permet de sélectionner enter les deux opérations `a ET b` et `a OU b`.
+Complétez le circuit qui permet de sélectionner entre les deux opérations `a ET b` et `a OU b`.
 
-- Connectez a et b aux aux entrées des 4 portes OU,
+- Connectez a et b aux entrées des 4 portes OU,
 - Ajoutez une entrée de sélection pour le multiplexeur.
 
 ```{logic}
@@ -105,7 +105,7 @@ Un clic droit sur la porte quadruple permet de choisir son type (AND, OR, XOR, N
 
 L'unité arithmétique et logique, ALU (arithmetic and logic unit), est la partie de l'ordinateur qui effectue les différents calculs arithmétiques et logiques.
 
-Ci-dessous vous pouvez voir les circuits logiques d'une ALU 4-bits très utilisé dans les années 60 et 70, le modèle 74181.
+Ci-dessous vous pouvez voir les circuits logiques d'une ALU 4-bits très utilisée dans les années 60 et 70, le modèle 74181.
 
 ![ALU](https://upload.wikimedia.org/wikipedia/commons/c/c0/74181aluschematic.png)
 
@@ -116,7 +116,7 @@ L'ALU dont nous disposons peut effectuer 4 opérations :
 - OU logique (10)
 - ET logique (11)
 
-Avec l'ALU ci-dessus ajoutez
+Avec l'ALU ci-dessous, ajoutez
 
 - la deuxième entrée (B) avec un bloc d'affichage 4 bits
 - un bloc d'affichage 4 bits pour la sortie (S)
@@ -147,7 +147,7 @@ Ensuite, testez les 4 opérations. Montrez une soustraction.
 
 ## Addition signée
 
-Interprétez les nombres binaires comme des nombres signés. Vous pouvez le configurer avec le menu contextuel. Complétez l'additionneur 4-bit et montrez que l'addition de -2 et -3 donne bien -5.
+Interprétez les nombres binaires comme des nombres signés. Vous pouvez configurer l'afficheur 4 bits avec son menu contextuel. Complétez l'additionneur 4-bit et montrez que l'addition de -2 et -3 donne bien -5.
 
 ```{logic}
 :ref: addsigned
@@ -391,7 +391,7 @@ Cet algorithme peut être exprimé mathématiquement comme
 
 $$ produit = \sum^4_{i=0} (b_i \cdot a) \cdot 2^i $$
 
-Modifiez a et b dans le circuit multiplicateur 4 x 4 bits ci-dessus vérifiez que vous obtenez bien le produit de a et b. Faites une capture avec la plus grande valeur possible.
+Modifiez a et b dans le circuit multiplicateur 4 x 4 bits ci-dessus vérifiez que vous obtenez bien le produit de a et b. Faites une capture d'écran avec la plus grande valeur possible.
 
 ```{logic}
 :ref: mul4
@@ -489,7 +489,7 @@ Un accumulateur est un registre spécial qui *accumule* une somme. La sortie de 
 Par exemple dans le circuit ci-dessous, l'accumulateur contient 3. Au prochain coup d'horloge, l'entrée b qui est 2 y sera additionnée. Ceci permet de calculer une somme courante.
 
 Voici un exemple typique, calculer la somme 1+3+7.
-En Python ceci correspondrait à ceci :
+En Python ceci correspondrait à :
 
 ``` Python
 acc = 0     # clear
@@ -499,7 +499,7 @@ acc += 7    # add
 print(acc)
 ```
 
-Avec le circuit ci-dessus ceci correspond à 4 étapes:
+Avec le circuit ci-dessous ceci correspond à 4 étapes:
 
 1. **clear**
 1. b=1 et **add**

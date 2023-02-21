@@ -393,10 +393,12 @@ Créez le circuit pour décoder et exécuter ces deux instructions.
 
 - Ajoutez la RAM avec les 16 registres
 - Créez le circuit de décodage pour choisir entre `ADD` et `SUB`
-- Placez un affichage à la sortie de l'accumulateur et à la sortie de l'ALU
-- Mettez une valeur dans `R5`
-- Mettez l'instruction `ADD R5` et exécutez l'instruction avec **execute**
-- Mettez l'instruction `SUB R5` et exécutez l'instruction avec **execute**
+- Placez un affichage à la sortie de l'accumulateur et nommez le **acc** (y mettre 9)
+- Placez un affichage à la sortie de la RAM et nommez le **reg**
+- Placez un affichage à la sortie de l'ALU et nommez le **result**
+- Mettez la valeur 3 dans `R5`
+- Mettez l'instruction `ADD R5` et vous devriez avoir **result = 12** (9 + 3)
+- Mettez l'instruction `SUB R5` et vous devriez avoir **result = 6** (9 - 3)
 
 ```{logic}
 :ref: LDM_
@@ -436,6 +438,7 @@ Créez le circuit pour décoder et exécuter ces deux instructions.
 Le pointeur de programme, PC (program counter), pointe toujours à la prochaine instruction dans la mémoire de programme. Le contenu à l'adresse pointé par le PC est celui qui est chargé dans le registre d'instruction (IR) et exécuté au prochain pas.
 
 - Liez la sortie du PC avec l'entrée A du l'ALU pour incrémenter de 1 à chaque pas
+- Placez un affichage à la sortie du registre et nommez le **PC**
 - Liez le PC avec l'entrée adresse de la mémoire de programme
 - Liez l'entrée **clock** avec l'horloge de l'ALU et l'horloge des deux registres IR
 - Faites avancer le PC et chargez des instructions successives dans le registre IR

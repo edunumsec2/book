@@ -1,6 +1,6 @@
 # TP Additionneur
 
-Dans cette section, nous allons explorer d'abord la porte **ou explusif** (OU-X), qui nous sert à construire un **additionneur simple**. Nous modifions l'additionneur simple pour en créer un **additionneur complet** qui prend en compte la retenue. Cet additionneur 1 bit nous sert à construire des circuits pour créer d'autres opérations telles que :
+Dans cette section, nous allons explorer d'abord la porte **ou exclusif** (OU-X), qui nous sert à construire un **additionneur simple**. Nous modifions l'additionneur simple pour en créer un **additionneur complet** qui prend en compte la retenue. Cet additionneur 1 bit nous sert à construire des circuits pour créer d'autres opérations telles que :
 
 - addition
 - soustraction
@@ -186,7 +186,7 @@ Ajoutez un circuit pour qu'on puisse également l'allumer depuis la chambre.
 
 ## Addition binaire
 
-Nous avons maintenant toutes les éléments pour construire un additionneur binaire. Rappelons-nous que l'addition binaire est très simple.
+Nous avons maintenant tous les éléments pour construire un additionneur binaire. Rappelons-nous que l'addition binaire est très simple.
 
 | A | B | A+B | C | S |
 |---|---|:---:|---|---|
@@ -202,7 +202,7 @@ Le résultat `A+B` peut être 0, 1 ou 2.  Nous avons besoin de deux bits pour re
 
 En regardant la table de vérité, on constate que :
 
-- la somme `S` est exprimé la fonction OU-X
+- la somme `S` est exprimée par la fonction OU-X
 - la retenue `C` est exprimée par la fonction ET
 
 Vous trouvez le circuit ci-dessous à droite. Vérifiez sa fonction en cliquant sur ses entrées.
@@ -252,7 +252,7 @@ Dans le cas général de l'addition, nous n'additionnons pas deux bits, mais deu
  1110
  ```
 
- Pour être explicit, nous introduisons une ligne supplémentaire qui représente la retenue (C = carry).
+ Pour être explicite, nous introduisons une ligne supplémentaire qui représente la retenue (C = carry).
 
 ```text
  0110 (retenue)
@@ -278,7 +278,7 @@ L'additionneur de 2 bits de la section précédente n'est plus suffisant. Pour l
 Regardez les colonnes et essayez de comprendre avec quelles portes on pourrait le construire.
 Vous constatez que la colonne `S` représente la parité. On pourra donc la construire avec des portes OU-X.
 
-- Ajoutez les deux fils qui manquent à l'entrée de la porte ET pour que le circuit produise le signale `Cout` et se comporte comme un additionneur complet.
+- Ajoutez les deux fils qui manquent à l'entrée de la porte ET pour que le circuit produise le signal `Cout` et se comporte comme un additionneur complet.
 - Ajoutez des entrées et sorties au bloc de l'additionneur complet et vérifiez son fonctionnement.
 
 ```{logic}
@@ -415,7 +415,7 @@ Les nombres signés sont représentés avec le format *complément à deux*. Pou
 
 ![signed](media/4bitsIntegers.jpg)
 
-L'opération pour trouver le nombre négatif est: inverser tous les bits et additionner 1.  
+L'opération pour trouver le nombre négatif est: inverser tous les bits (symbolisé par ~) et additionner 1.  
 Mathématiquement nous pouvons exprimer cette opération comme:
 
 `-i = ~i + 1`
