@@ -54,7 +54,7 @@ Ajoutez les éléments qui manquent.
 ```{logic}
 :ref: mux
 :height: 450
-:showonly: in in.nibble out.nibble decoder-7seg out.7seg
+:showonly: in in.nibble out.nibble out.nibble-display decoder-7seg out.7seg
 {
   "v": 4,
   "in": [
@@ -75,12 +75,13 @@ Ajoutez les éléments qui manquent.
 Complétez le circuit qui permet de sélectionner entre les deux opérations `a ET b` et `a OU b`.
 
 - Connectez a et b aux entrées des 4 portes OU,
+- Ajoutez une sorie 4-bits pour afficher le résultat des opérations logiques
 - Ajoutez une entrée de sélection pour le multiplexeur.
 
 ```{logic}
 :ref: mux
 :height: 450
-:showonly: in in.nibble out.nibble-display out.nibble quad-gate
+:showonly: in out.nibble-display out.nibble quad-gate
 {
   "v": 4,
   "in": [
@@ -152,7 +153,7 @@ Interprétez les nombres binaires comme des nombres signés. Vous pouvez configu
 ```{logic}
 :ref: addsigned
 :height: 400
-:showonly: alu in in.nibble out.nibble-display
+:showonly: alu in out in.nibble out.nibble-display
 {
   "v": 4,
   "in": [
@@ -343,6 +344,8 @@ Complétez le circuit avec :
 - un affichage 8 bits qui affiche 4a sous contrôle de b2
 - un affichage 8 bits qui affiche 8a sous contrôle de b3
 
+Essayer de multiplier deux nombres, par exemple a=5 et b=5 (0101). Vous trouvez le résultat de la multiplication en additionnant les 4 nombres affichés.
+
 ```{logic}
 :ref: mul3
 :height: 450
@@ -351,13 +354,13 @@ Complétez le circuit avec :
   "v": 4,
   "in": [
     {"type": "nibble", "pos": [40, 230], "id": [0, 1, 2, 3], "val": [1, 0, 1, 0], "name": "a"},
-    {"pos": [150, 50], "orient": "s", "id": 39, "name": "b0", "val": 1},
-    {"pos": [240, 50], "orient": "s", "id": 108, "name": "b1", "val": 1}
+    {"pos": [460, 50], "orient": "s", "id": 39, "name": "b0", "val": 1},
+    {"pos": [350, 50], "orient": "s", "id": 108, "name": "b1", "val": 1}
   ],
   "out": [
-    {"type": "nibble-display", "pos": [250, 340], "id": [35, 36, 37, 38]},
     {"type": "nibble-display", "pos": [90, 230], "id": [49, 50, 51, 52]},
-    {"type": "byte-display", "pos": [350, 350], "id": [67, 68, 69, 70, 71, 72, 73, 74]}
+    {"type": "byte-display", "pos": [590, 360], "id": [4, 5, 6, 7, 8, 9, 10, 11]},
+    {"type": "byte-display", "pos": [480, 360], "id": [12, 13, 14, 15, 16, 17, 18, 19]}
   ],
   "components": [
     {"type": "mux-8to4", "pos": [150, 180], "in": [22, 23, 24, 25, 26, 27, 28, 29, 30], "out": [31, 32, 33, 34]},
@@ -365,7 +368,7 @@ Complétez le circuit avec :
     {"type": "mux-8to4", "pos": [350, 180], "in": [75, 76, 77, 78, 79, 80, 81, 82, 83], "out": [84, 85, 86, 87]},
     {"type": "mux-8to4", "pos": [460, 180], "in": [95, 96, 97, 98, 99, 100, 101, 102, 103], "out": [104, 105, 106, 107]}
   ],
-  "wires": [[0, 26], [1, 27], [2, 28], [3, 29], [31, 35], [32, 36], [33, 37], [34, 38], [39, 30], [0, 49], [1, 50], [2, 51], [3, 52], [0, 57], [1, 58], [2, 59], [3, 60], [62, 68], [63, 69], [64, 70], [65, 71], [0, 79], [1, 80], [2, 81], [3, 82], [0, 99], [1, 100], [2, 101], [3, 102], [108, 61]]
+  "wires": [[0, 26], [1, 27], [2, 28], [3, 29], [0, 49], [1, 50], [2, 51], [3, 52], [0, 57], [1, 58], [2, 59], [3, 60], [0, 79], [1, 80], [2, 81], [3, 82], [0, 99], [1, 100], [2, 101], [3, 102], [39, 103], [108, 83], [104, 4], [105, 5], [106, 6], [107, 7], [84, 13], [85, 14], [86, 15], [87, 16]]
 }
 ```
 
