@@ -175,6 +175,8 @@ moyen pourriez-vous imaginer pour que vous puissiez vous joindre.
 2. En tant que propriétaire d'un site web, vous avez accès aux adresses IP des machines qui visitent votre site. Pouvez-vous dès lors identifier une même personne
 qui revient plusieurs fois sur votre site ?
 
+3. Depuis votre adresse IP dynamique, vous être entré en communication avec un site web illégal. La police peut-elle vous retrouver à partir de votre adresse IP? Si oui comment, si non pourquoi?
+
 
 
 ```
@@ -188,7 +190,7 @@ ne pourra donc pas l'identifier en regardant uniquement son adresse IP. Par cont
 voudra bien nous transmettre, tels que son système d'exploitation, la langue, l'appareil, etc., on peut reconstituer son empreinte numérique
 et l'identifier ainsi. C'est ce qu'on appelle en anglais le fingerprinting, que l'on peut [bloquer avec certains navigateurs](https://www.mozilla.org/fr/firefox/features/block-fingerprinting/).
 
-
+3. Oui, votre fournisseur d'accès à Internet doit garder une trace de quelle adresse IP à été allouée à qui et à quel moment. La police peut dès lors exiger ces informations en cas de soupçons.
 ```
 
 ### Système de noms de domaine
