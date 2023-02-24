@@ -43,11 +43,6 @@ Un code de conduite est disponible [ici](https://github.com/edunumsec2/book/blob
 ## Documents importants
 
 - [Livret de cours](https://files.edunumsec2.ch/livret.pdf) décrivant le découpage du plan d'études dans le détail.
-- [Questionnaire de rentrée / élève](https://www.surveymonkey.com/r/VVZQYRR)
-- [Questionnaire de rentrée / enseignant·e](https://www.surveymonkey.com/r/s2enspre)
-- [Questionnaire post-thématique / élève](https://www.surveymonkey.com/r/s2elpostthem)
-- [Questionnaire post-thématique / enseignant·e](https://www.surveymonkey.com/r/s2enspostthem)
-- [Questionnaire post thématique enjeux sociax / enseignant·e](https://www.surveymonkey.com/r/s2postensejs)
 
 ## Chapitrage
 
