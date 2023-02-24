@@ -2,7 +2,7 @@
 
 # Réseaux
 
-Aujourd'hui quand nous parlons de **réseaux** nous parlons du réseau physique (Wi-Fi, 5G), des réseaux sociaux, ou du plus grand réseau de tous, d'Internet.
+Aujourd'hui quand nous parlons de **réseaux** nous parlons du réseau physique (Wi-Fi, 5G), des réseaux sociaux, ou du plus grand réseau de tous, Internet.
 Il s'agit de la transmission d’informations à distance en utilisant des technologies électronique, informatique, optique ou électromagnétique.
 
 ```{toctree}

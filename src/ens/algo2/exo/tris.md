@@ -1,6 +1,8 @@
-# 3. Algorithmes de tri
+# Algorithmique II
 
-## Solutions des exercices
+## 3. Algorithmes de tri [complément]
+
+### Solutions des exercices
 
 ````{exercise} 
 Voir partie Apprendre.

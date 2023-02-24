@@ -1,6 +1,8 @@
-# 1. Les Algorithmes
+# Algorithmique II
 
-## Solutions des exercices
+## 1. Les Algorithmes
+
+### Solutions des exercices
 
 
 ````{exercise} 

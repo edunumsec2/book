@@ -1,6 +1,8 @@
-# 2. Algorithmes de recherche
+# Algorithmique II
 
-## Solution des exercices
+## 2. Algorithmes de recherche
+
+### Solution des exercices
 
 ````{exercise} 
 Voir partie Apprendre.

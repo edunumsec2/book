@@ -194,7 +194,7 @@ L’âge estimé de l’univers est de 14 milliards d’années. Si le calcul d�
 
 Quelle est la complexité d’un algorithme qui pour chacun des éléments d'une liste de $n$ éléments, doit parcourir tous les éléments d'une autre liste de $n$ éléments, puis pour chacune des combinaisons de deux éléments doit encore parcourir une troisième liste de $n$ éléments ?
 
-Si vous avez besoin de travailler sur un exemple plus concret, quelle est complexité de l'algorithme qui calcule tous les menus possibles à partir d'une liste de $n$ entrées, une liste de $n$ plats et une liste de $n$ desserts ?
+Si vous avez besoin de travailler sur un exemple plus concret, quelle est complexité de l'algorithme qui calcule tous les menus possibles d'un restaurant à partir d'une liste de $n$ entrées, une liste de $n$ plats et une liste de $n$ desserts ?
 
 ```
 
