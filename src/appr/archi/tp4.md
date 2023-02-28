@@ -122,12 +122,13 @@ Ajoutez les connexions qui manquent :
 
 - Connectez chacun des 4 bits d'entrée vers une entrée **D** de la bascule.
 - Connectez chacun des 4 bits de sortie **Q** vers son bit de sortie correspondante.
+- Ajoutez une sortie 4 bits et un affichage 4 bits
 - Connectez les 4 entrées **preset**,  **clock** et **clear**
 
 ```{logic}
 :ref: d
 :height: 500
-:showonly: in out in.nibble out.nibble flipflop-d
+:showonly: in out in.nibble out.nibble out.nibble-display flipflop-d
 {
   "v": 4,
   "in": [
@@ -137,8 +138,7 @@ Ajoutez les connexions qui manquent :
     {"pos": [110, 460], "id": 43, "name": "clear", "val": 0, "isPushButton": true}
   ],
   "out": [
-    {"type": "nibble-display", "pos": [110, 190], "id": [4, 5, 6, 7]},
-    {"type": "nibble", "pos": [370, 190], "id": [33, 34, 35, 36]}
+    {"type": "nibble-display", "pos": [110, 190], "id": [4, 5, 6, 7]}
   ],
   "components": [
     {"type": "flipflop-d", "pos": [240, 100], "in": [8, 9, 10, 11], "out": [12, 13], "state": 0},
@@ -146,7 +146,10 @@ Ajoutez les connexions qui manquent :
     {"type": "flipflop-d", "pos": [240, 300], "in": [20, 21, 22, 23], "out": [24, 25], "state": 0},
     {"type": "flipflop-d", "pos": [240, 400], "in": [26, 27, 28, 29], "out": [30, 31], "state": 0}
   ],
-  "wires": [[0, 4], [1, 5], [2, 6], [3, 7], [1, 17], [37, 26], [18, 34]]
+  "layout": [
+    {"type": "pass-4", "pos": [350, 190], "in": [32, 33, 34, 35], "out": [36, 38, 39, 40]}
+  ],
+  "wires": [[0, 4], [1, 5], [2, 6], [3, 7], [1, 17], [37, 26], [18, 33]]
 }
 ```
 
@@ -244,12 +247,13 @@ Une bascule D avec une rétroaction de la sortie inversée $\bar{Q}$ vers son en
 
 - Complétez le circuit pour construire un compteur 4 bits.
 - Le circuit final doit compter de `0000` vers `1111`.
+- Ajoutez un affichage 4 bits
 - Connectez aussi les 4 signaux **clear** pour la remise du compteur
 
 ```{logic}
-:ref: shift
+:ref: counter_
 :height: 500
-:showonly: in out out.nibble clock flipflop-d
+:showonly: in out out.nibble out.nibble-display clock flipflop-d
 {
   "v": 4,
   "in": [
@@ -257,15 +261,18 @@ Une bascule D avec une rétroaction de la sortie inversée $\bar{Q}$ vers son en
     {"type": "clock", "pos": [50, 80], "id": 44, "period": 1000}
   ],
   "out": [
-    {"type": "nibble", "pos": [350, 70], "id": [51, 52, 53, 54]}
+    {"type": "nibble", "pos": [420, 70], "id": [8, 9, 10, 11]}
   ],
   "components": [
     {"type": "flipflop-d", "pos": [210, 160], "in": [14, 15, 16, 17], "out": [18, 19], "state": 1},
     {"type": "flipflop-d", "pos": [210, 260], "in": [20, 21, 22, 23], "out": [24, 25], "state": 1},
     {"type": "flipflop-d", "pos": [210, 360], "in": [26, 27, 28, 29], "out": [30, 31], "state": 1},
-    {"type": "flipflop-d", "pos": [210, 60], "in": [45, 46, 47, 48], "out": [49, 50], "state": 1}
+    {"type": "flipflop-d", "pos": [210, 60], "in": [45, 46, 47, 48], "out": [49, 50], "state": 0}
   ],
-  "wires": [[44, 45], [50, 48], [49, 51]]
+  "layout": [
+    {"type": "pass-4", "pos": [350, 70], "in": [0, 1, 2, 3], "out": [4, 5, 6, 7]}
+  ],
+  "wires": [[44, 45], [50, 48, {"via": [[210, 30, "w"]]}], [49, 0], [4, 8], [5, 9], [6, 10], [7, 11]]
 }
 ```
 
@@ -275,7 +282,7 @@ Le compteur 4 bits utilise un signal d'horloge et incrémenté à chaque coup d'
 Un décodeur à 7 segments transforme les 4 signaux qui représentent un nombre binaire de 0 à 16 vers les sorties correspondant pour activer les bonnes lampes de l'affichage à 7 segments.
 
 - Utilisez le signal de sortie V (overflow) pour faire fonctionner un deuxième compteur
-- Ceci donnera un compteur 8 bit, permettant de compter de 0 à FF (255)
+- Ceci donnera un compteur 8 bit, permettant de compter de 00 à FF (255)
 - Diminuez la période de l'horloge à 250 ms
 
 ```{logic}
@@ -451,7 +458,7 @@ Ajoutez d’autres valeurs pour en faire un smiley.
 ```{logic}
 :ref: d
 :height: 500
-:showonly: in
+:showonly: in out.nibble-display
 {
   "v": 4,
   "in": [
@@ -477,7 +484,7 @@ Complétez le circuit pour écrié 16 x 4 bits aléatoires dans la mémoire.
 ```{logic}
 :ref: ram_random
 :height: 500
-:showonly: in.random in out ram-4x16 counter
+:showonly: in.random in out  out.nibble-display ram-16x4 counter
 {
   "v": 4,
   "in": [
@@ -510,7 +517,7 @@ Dans l'image ci-dessous, la RAM est déjà remplie jusqu'à `1010` (10).
 ```{logic}
 :ref: ram_counter
 :height: 500
-:showonly: clock in out ram-4x16 counter
+:showonly: clock in out  out.nibble-display ram-16x4 counter
 
 {
   "v": 4,
@@ -533,8 +540,8 @@ L'image sera alors visible dans la partie visualisation du bloc RAM 16x8 bits.
 
 ```{logic}
 :ref: invader
-:height: 300
-:showonly: clock in out ram-4x16 counter
+:height: 400
+:showonly: clock in out out.byte-display ram-16x8
 {
   "v": 4,
   "in": [
@@ -556,12 +563,12 @@ L'image sera alors visible dans la partie visualisation du bloc RAM 16x8 bits.
 La mémoire peut contenir du code ASCII. Voici les codes ASCII des 6 lettres du mot `ON AIR`, exprimées en binaire et en hexadécimal.
 
 ```
-O = 0b1001111 0x4f
-N = 0b1001110 0x4e
-  =  0b100000 0x20
-A = 0b1000001 0x41
-I = 0b1001001 0x49
-R = 0b1010010 0x52
+O = 0b01001111 0x4f
+N = 0b01001110 0x4e
+  = 0b00100000 0x20
+A = 0b01000001 0x41
+I = 0b01001001 0x49
+R = 0b01010010 0x52
 ```
 
 Le circuit ci-dessous contient le mot `HELLO` en mémoire RAM. Un compteur avec une horloge 1 Hz affiche le contenu de la mémoire en boucle vers un affichage à 16 segments.
@@ -571,7 +578,7 @@ Remplacez le contenu de la mémoire pour afficher le mot `ON AIR`.
 ```{logic}
 :ref: ascii
 :height: 500
-:showonly: clock in out ram-4x16 counter
+:showonly: clock in out  out.byte-display ram-16x8 counter
 {
   "v": 4,
   "in": [
