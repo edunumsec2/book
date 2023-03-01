@@ -6,7 +6,7 @@ Dans ce chapitre, nous explorons les cercles et les arcs de cercle. Nous allons 
 
 - la fonction `circle(r)` dessine un cercle de rayon `r`, vers la gauche,
 - la fonction `circle(-r)` dessine un cercle de rayon `r`, vers la droite,
-- la fonction `circle(r, a)` dessine un arc de cercle d'un angle `a`.
+- la fonction `circle(r, a)` dessine un arc de cercle de rayon `r` avec un angle `a`.
 
 ```{question}
 Un cercle affiché sur un écran d'ordinateur est créé par
