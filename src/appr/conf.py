@@ -113,8 +113,8 @@ html_theme_options = {
 
         "color-background-primary": "white", # for content
         "color-background-secondary": "#f8f9fb", # for navigation + ToC
-        "color-background-hover": "#efeff4ff", # for navigation-item hover
-        "color-background-over--transparent": "#efeff400", 
+        "color-background-hover": "white", # for navigation-item hover
+        "color-background-over--transparent": "#efeff400",
         "color-background-border": "#eeebee", # for UI borders
 
         # Announcement colors
@@ -124,10 +124,11 @@ html_theme_options = {
         # Brand colors
         "color-brand-primary": "#8044FF", # violet
         "color-brand-content": "#8044FF", # violet
-        
+
         # Admonition font size
         "admonition-font-size": "0.9rem",
         "admonition-title-font-size": "0.9rem",
+
     },
     "dark_css_variables": {
 
