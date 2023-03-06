@@ -96,7 +96,8 @@ Pour simplifier les actions fréquentes (build, clean), le projet contient un wo
 
 ### Serveur local
 
-Le projet utilise [sphinx-autobuild](https://github.com/executablebooks/sphinx-autobuild) qui démarre un serveur sur <http://localhost:8000> (ou <http://127.0.0.1:8000>) et rebuild la documentation automatiquement lorsqu'un changement est détecté.
+#### Build automatique
+Le projet utilise [sphinx-autobuild](https://github.com/executablebooks/sphinx-autobuild) qui démarre un serveur sur <http://localhost:8000> (ou <http://127.0.0.1:8000>) et rebuild la documentation automatiquement lorsqu'un changement est détecté. Pour contrôler soi-même le build, le build manuel est décrit dans le section suivante. 
 
 1. Activation de l'environnement virtuel (si pas déjà fait)
 2. Activation du serveur local :
@@ -106,10 +107,13 @@ Le projet utilise [sphinx-autobuild](https://github.com/executablebooks/sphinx-a
 
 Pour arrêter le serveur : `CTRL+c` ou `⌘+c`
 
-### Génération de build
+
+#### Buil manuel
 
 - Génération du build 'Apprendre' : `sphinx-build -b html src/appr docs`
 - Génération du build 'Enseigner' : `sphinx-build -b html src/ens docs`
+
+- Démarrage du serveur local : `python -m http.server docs/`
 
 ### Génération de polycopié
 
