@@ -113,7 +113,7 @@ Pour arrêter le serveur : `CTRL+c` ou `⌘+c`
 - Génération du build 'Apprendre' : `sphinx-build -b html src/appr docs`
 - Génération du build 'Enseigner' : `sphinx-build -b html src/ens docs`
 
-- Démarrage du serveur local : `python -m http.server docs/`
+- Démarrage du serveur local (dans un autre terminal): `python -m http.server`
 
 ### Génération de polycopié
 
