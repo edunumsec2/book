@@ -32,6 +32,10 @@ L'entrée horloge (clock) produit un signal qui alterne entre 0 et 1. L'horloge 
 }
 ```
 
+**Rappel** : pour choisir le délai de propagation, cliquez avec le bouton droit sur le fil et sélectionnez le menu contextuel *Délai de propagation spécifique...*. Mettez-le à 1000.
+
+![menu](media/logic_menu_delai.png)
+
 ## Porte OU-X
 
 Une porte OU-X (ou exclusif) avec 2 entrées donne une sortie 1 si **exactement une** des entrées est 1.

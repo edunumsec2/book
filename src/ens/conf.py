@@ -90,8 +90,8 @@ html_theme_options = {
 
         "color-background-primary": "white", # for content
         "color-background-secondary": "#f8f9fb", # for navigation + ToC
-        "color-background-hover": "#efeff4ff", # for navigation-item hover
-        "color-background-over--transparent": "#efeff400", 
+        "color-background-hover": "white", # for navigation-item hover
+        "color-background-over--transparent": "#efeff400",
         "color-background-border": "#eeebee", # for UI borders
 
         # Announcement colors
@@ -105,6 +105,9 @@ html_theme_options = {
         # Admonition font size
         "admonition-font-size": "0.9rem",
         "admonition-title-font-size": "0.9rem",
+
+        # Sidebar (left)
+        "color-sidebar-background": "#f0e9ff",
     },
     "dark_css_variables": {
         # Base colors
@@ -130,6 +133,9 @@ html_theme_options = {
         # Admonition font size
         "admonition-font-size": "0.9rem",
         "admonition-title-font-size": "0.9rem",
+
+        # Sidebar (left)
+        "color-sidebar-background": "#131416",
     },
 }
 
