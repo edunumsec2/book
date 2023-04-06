@@ -81,7 +81,7 @@ if tags.has('latex_mode'):
 
     
 if latex_mode:
-    exclude_patterns = ['prog1', 'prog2', 'hist','algo2', 'projets','resx']
+    exclude_patterns = ['prog1', 'prog2', 'hist','algo2', 'projets', 'archi']
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -188,7 +188,7 @@ latex_elements = {
 
 #latex_documents = ('modulo','modulo.tex',"Modulo: une introduction à l'informatique", "John","manual","True")
 latex_additional_files = ["../static/assets/modulo-head-banner.png","../static/assets/by-nc.eu.png"]
-latex_documents = [('index','modulo.tex',"Modulo: un introduction à l'informatique", "Groupe de travail DGEP, EPFL, HEP, UNIL","manual","True")]
+latex_documents = [('index','modulo.tex',"Modulo: une introduction à l'informatique", "Groupe de travail DGEP, EPFL, HEP, UNIL","manual","True")]
 
 latex_show_urls = 'footnote'
 

@@ -53,6 +53,7 @@
 \DeclareUnicodeCharacter{2009}{}
 \DeclareUnicodeCharacter{200A}{}
 \DeclareUnicodeCharacter{202F}{}
+\DeclareUnicodeCharacter{2248}{$\approx$}
 \DeclareUnicodeCharacter{300}{è}
 \DeclareUnicodeCharacter{301}{é}
 \DeclareUnicodeCharacter{302}{ê}
@@ -68,6 +69,7 @@
 \DeclareUnicodeCharacter{03C1}{$\rho$}
 \DeclareUnicodeCharacter{03C4}{$\tau$}
 \DeclareUnicodeCharacter{03C6}{$\phi$}
+
 
 %% new maketitle
 \makeatletter
@@ -97,9 +99,11 @@
 \def\myarg{#1}
 \def\cardenv{col-sm-6}
 \def\tabenv{tabbed-container}
+%\def\microenv{micro-content}
 \ifx\myarg\cardenv\begin{minipage}{0.5\textwidth}\fi
 %\ifx\myarg\tabenv\begin{framed}\fi
 \ifx\myarg\tabenv\centering\begin{minipage}{0.5\textwidth}\begin{framed}\fi
+%\ifx\myarg\microenv
 }%
 {%
 \ifx\@currenvir\@cardenvironment\end{minipage}\fi
@@ -107,6 +111,18 @@
 %\vspace{0.5cm}
 }
 \makeatother
+
+%\DeclareStringOption[1pt]{\spx@opt@noteMichaborder}
+%\DeclareStringOption[0.5pt]{noteMichaborder}
+%\sphinxDeclareSphinxColorOption{noteMichaBorderColor}{{rgb}{0,0,0}}
+
+
+\usepackage{tcolorbox}
+
+
+\renewenvironment{sphinxnote}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
+%\newenvironment{sphinxnoteMicha}[1]{\begin{tcolorbox}[colframe=red]\sphinxstrong{#1}}{\end{tcolorbox}}
+%\renewenvironment{sphinxnote}[1]{\begin{sphinxheavybox}\sphinxstrong{#1} }{\end{sphinxheavybox}}
 
 %% personalizing headers and footers (e,g, removing version number)
 
