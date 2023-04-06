@@ -104,7 +104,7 @@ Au deuxième passage dans la boucle, *i* vaut 2. On additionne à nouveau *Résu
 
 Il est plus facile de se représenter ces valeurs sous forme de tableau :
 
-```{figure} media/Solution0.png
+```{image} media/Solution0.png
 ---
 alt: Valeurs des variables de l'algorithme pour le cas où Nombres contient 1, 2 et 3.
 width: 70%
