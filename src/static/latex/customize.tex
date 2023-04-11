@@ -1,6 +1,7 @@
 \usepackage{listings}
 \usepackage{listingsutf8}
 \usepackage{pifont}
+\usepackage{tcolorbox}
 
 %\usepackage{animate}
 \newcommand{\insertvideo}[3]{\begin{flushright}\fbox{Vidéo #3: \sphinxurl{#2}  \includegraphics[scale=0.3]{#1}}\end{flushright}}
@@ -11,9 +12,12 @@
 \newenvironment{timeline}{}{}
 \newenvironment{timelineitem}[2]{}{}
 
+%% default admonition type
+\renewenvironment{sphinxnote}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
 
-%% \newenvironment{timeline}{\begin{tabular}{rl}}{\end{tabular}}
-%% \newenvironment{timelineitem}[2]{\textbf{#1} & \textbf{#2} \\ &}{\\}
+%% specific admonition type
+\newenvironment{microactivity}[1]{\begin{tcolorbox}[colframe=green]\sphinxstrong{#1}}{\end{tcolorbox}}
+
 \sphinxpxdimen=.5bp\relax
 
 \definecolor{light-gray}{gray}{0.95} 
@@ -99,11 +103,9 @@
 \def\myarg{#1}
 \def\cardenv{col-sm-6}
 \def\tabenv{tabbed-container}
-%\def\microenv{micro-content}
 \ifx\myarg\cardenv\begin{minipage}{0.5\textwidth}\fi
 %\ifx\myarg\tabenv\begin{framed}\fi
 \ifx\myarg\tabenv\centering\begin{minipage}{0.5\textwidth}\begin{framed}\fi
-%\ifx\myarg\microenv
 }%
 {%
 \ifx\@currenvir\@cardenvironment\end{minipage}\fi
@@ -117,10 +119,8 @@
 %\sphinxDeclareSphinxColorOption{noteMichaBorderColor}{{rgb}{0,0,0}}
 
 
-\usepackage{tcolorbox}
 
 
-\renewenvironment{sphinxnote}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
 %\newenvironment{sphinxnoteMicha}[1]{\begin{tcolorbox}[colframe=red]\sphinxstrong{#1}}{\end{tcolorbox}}
 %\renewenvironment{sphinxnote}[1]{\begin{sphinxheavybox}\sphinxstrong{#1} }{\end{sphinxheavybox}}
 

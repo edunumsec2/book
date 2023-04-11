@@ -81,8 +81,7 @@ if tags.has('latex_mode'):
 
     
 if latex_mode:
-    exclude_patterns = ['prog1', 'prog2', 'hist','algo2', 'projets', 'archi']
-
+    exclude_patterns = ['prog1', 'prog2', 'hist','algo2', 'projets', 'archi','resx']
 
 # -- Options for HTML output -------------------------------------------------
 
