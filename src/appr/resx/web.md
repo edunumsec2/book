@@ -35,7 +35,7 @@ Ces trois technologies sont rassemblées dans un *navigateur web*, un programme 
 
 ```{document}
 
-```{figure} media/navigateur.gif
+```{figure} media/navigateur.png
 ---
 width: 500
 align: center
