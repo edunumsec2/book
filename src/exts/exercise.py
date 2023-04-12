@@ -1,6 +1,7 @@
 from docutils import nodes
 from sphinx.util.docutils import SphinxDirective
 from docutils.parsers.rst import directives
+from sphinx.writers.html import HTMLTranslator
 
 class Exercise(SphinxDirective):
     required_arguments = 0
@@ -451,8 +452,13 @@ class HistoricDocument(SphinxDirective):
         admonition += content
 
         return [admonition]
-def mpass(self, node):
-    pass
+
+def visit_admonition_html(self, node):
+    self.visit_admonition(node)
+
+def depart_admonition_html(self, node):
+    self.depart_admonition(node)
+
 
 def setup(app):
     app.add_directive("exercise", Exercise)
@@ -470,17 +476,29 @@ def setup(app):
     app.add_directive("document", HistoricDocument)
 
     # good for latex compilation but not for html...
-    # app.add_node(micro_activity,latex=(visit_micro_activity_latex,depart_micro_activity_latex),html=(mpass, mpass))
-    # app.add_node(to_go_further,latex=(visit_to_go_further_latex,depart_to_go_further_latex),html=(mpass, mpass))
-    # app.add_node(important,latex=(visit_important_latex,depart_important_latex),html=(mpass, mpass))
-    # app.add_node(did_you_know,latex=(visit_did_you_know_latex,depart_did_you_know_latex),html=(mpass, mpass))
-    # app.add_node(reminder,latex=(visit_reminder_latex,depart_reminder_latex),html=(mpass, mpass))
-    # app.add_node(related,latex=(visit_related_latex,depart_related_latex),html=(mpass, mpass))
-    # app.add_node(evaluation,latex=(visit_eval_latex,depart_eval_latex),html=(mpass, mpass))
-    # app.add_node(thinking_matter,latex=(visit_thinking_matter_latex,depart_thinking_matter_latex),html=(mpass, mpass))
-    # app.add_node(note,latex=(visit_note_latex,depart_note_latex),html=(mpass, mpass))
-    # app.add_node(to_recall,latex=(visit_to_recall_latex,depart_to_recall_latex),html=(mpass, mpass))
-    # app.add_node(document,latex=(visit_document_latex,depart_document_latex),html=(mpass, mpass))
+    
+    app.add_node(micro_activity, latex=(visit_micro_activity_latex, depart_micro_activity_latex),
+                                html=(visit_admonition_html, depart_admonition_html))
+    app.add_node(to_go_further,latex=(visit_to_go_further_latex,depart_to_go_further_latex),
+                                html=(visit_admonition_html, depart_admonition_html))
+    app.add_node(important,latex=(visit_important_latex,depart_important_latex),
+                                html=(visit_admonition_html, depart_admonition_html))
+    app.add_node(did_you_know,latex=(visit_did_you_know_latex,depart_did_you_know_latex),
+                                html=(visit_admonition_html, depart_admonition_html))
+    app.add_node(reminder,latex=(visit_reminder_latex,depart_reminder_latex),
+                                html=(visit_admonition_html, depart_admonition_html))
+    app.add_node(related,latex=(visit_related_latex,depart_related_latex),
+                                html=(visit_admonition_html, depart_admonition_html))
+    app.add_node(evaluation,latex=(visit_eval_latex,depart_eval_latex),
+                                html=(visit_admonition_html, depart_admonition_html))
+    app.add_node(thinking_matter,latex=(visit_thinking_matter_latex,depart_thinking_matter_latex),
+                                html=(visit_admonition_html, depart_admonition_html))
+    app.add_node(note,latex=(visit_note_latex,depart_note_latex),
+                                html=(visit_admonition_html, depart_admonition_html))
+    app.add_node(to_recall,latex=(visit_to_recall_latex,depart_to_recall_latex),
+                                html=(visit_admonition_html, depart_admonition_html))
+    app.add_node(historic_document,latex=(visit_document_latex,depart_document_latex),
+                                html=(visit_admonition_html, depart_admonition_html))
   
 
     # static_dir = os.path.join(os.path.dirname(__file__), "static")
