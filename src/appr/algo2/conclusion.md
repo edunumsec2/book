@@ -59,9 +59,13 @@ Un algorithme avec une **<span style="color:rgb(89, 51, 209)">complexité expone
 
 **<span style="color:rgb(13, 204, 166)">Visualisation de problèmes</span>** 
 
-https://visualgo.net/en
+https://imgur.com/gallery/voutF
 
 https://interstices.info/le-probleme-du-sac-a-dos/
+
+https://visualgo.net/en
+
+https://graphonline.ru/fr
 
 https://clementmihailescu.github.io/Pathfinding-Visualizer/
 
@@ -75,6 +79,6 @@ https://www.lebigdata.fr/algorithme-definition-tout-savoir
 
 **<span style="color:rgb(13, 204, 166)">P = NP ?</span>**
 
-https://www.youtube.com/watch?v=AgtOCNCejQ
+https://www.youtube.com/watch?v=AgtOCNCejQ8
 
 ```

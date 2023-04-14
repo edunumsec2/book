@@ -27,7 +27,7 @@ Une microseconde vaut 10<sup>-6</sup> s. La complexité du problème du sac à d
 
 On recherche un `n` pour lequel 2<sup>n</sup>*10<sup>-6</sup> = 14 000 000 000 * 3,154*10<sup>7</sup> (l'âge de l'univers en secondes) 
 
-n = log<sub>2</sub>(1.4 * 10<sup>10</sup> / 10<sup>-6</sup>) = log<sub>2</sub>(1.4 * 10<sup>16</sup>) = 88 objets seulement.
+n = log<sub>2</sub>(1.4 * 3,154*10<sup>17</sup> / 10<sup>-6</sup>) = log<sub>2</sub>(4.42 * 10<sup>23</sup>) = 78 objets seulement.
 
 ```
 ````

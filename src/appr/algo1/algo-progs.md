@@ -106,7 +106,7 @@ L’étape suivante consiste à encapsuler tout le code dans une **<span style="
 
 ```
 # Tri par sélection
-def fonction tri_selection(rect) :
+def tri_selection(rect) :
     
     # pour tous les rectangles de la liste non triée
     for j in range(0,len(rect)-1):
@@ -123,7 +123,7 @@ Finalement le terme `rect` n’est pas assez général, car le tri par sélectio
 
 ```
 # Tri par sélection
-def fonction tri_selection(liste) :
+def tri_selection(liste) :
     
     # pour tous les éléments de la liste non triée
     for j in range(0,len(liste)-1):
