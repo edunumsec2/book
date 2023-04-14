@@ -4,7 +4,7 @@ from playwright.sync_api import Page, sync_playwright
 class PlaywrightWrapper:
     def __init__(self) -> None:
         self.playwright = sync_playwright().start()
-        self.browser = self.playwright.webkit.launch(headless=False)
+        self.browser = self.playwright.chromium.launch(headless=True)
         self.context = self.browser.new_context()
 
     def close(self) -> None:
