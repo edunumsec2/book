@@ -24,7 +24,7 @@ Pour simplifier les actions fréquentes (build, clean), le projet contient un Wo
 1. Activation de l'environnement virtuel  
     MacOS : `source .env/bin/activate`  
     Windows : `.env\Scripts\activate`
-1. Installation des librairies dans l'environnement virtuel : `pip install -r requirements.txt -U`, puis `playwright install webkit` (nécessaire seulement pour la génération de la version imprimable)
+1. Installation des librairies dans l'environnement virtuel : `pip install -r requirements.txt -U`, puis `playwright install chromium` (nécessaire seulement pour la génération de la version imprimable)
 
 _**Remarque** : à chaque fois que vous travaillez sur le projet, l'environnement virtuel doit être activé (point 4). Si vous utilisez VSCode et le Workspace, les boutons de build/auto-build l'activent automatiquement._
 
