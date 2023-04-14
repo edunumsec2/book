@@ -17,15 +17,19 @@
 %% default admonition type
 \renewenvironment{sphinxnote}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
 
+\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+\definecolor{llgray}{rgb}{0.96, 0.96, 0.96}
+\definecolor{carolinablue}{rgb}{0.6, 0.73, 0.89}
+
 %% specific admonition type - use tcolorbox arguments (or something else) to adapt latex rendering
 \newenvironment{microactivity}[1]{\begin{tcolorbox}[colframe=green]\sphinxstrong{#1}}{\end{tcolorbox}}
 \newenvironment{togofurther}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{important}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{didyouknow}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{important}[1]{\begin{tcolorbox}[colframe=red]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{didyouknow}[1]{\begin{tcolorbox}[colframe=carolinablue, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
 \newenvironment{reminder}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
 \newenvironment{related}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
 \newenvironment{evaluation}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{thinkingmatter}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{thinkingmatter}[1]{\begin{tcolorbox}[colframe=carolinablue]\sphinxstrong{#1}}{\end{tcolorbox}}
 \newenvironment{note}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
 \newenvironment{torecall}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
 \newenvironment{historicdocument}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
@@ -96,7 +100,7 @@
  \centering
  \resizebox{\textwidth}{!}{\includegraphics{modulo-head-banner.png}}\\
  \vspace*{\fill}
- {\Huge  \@title}\\
+ {\Huge \@title}\\
  \vspace*{3cm}
 {\raggedleft\Large\@author}\\
  \vspace*{3cm}
