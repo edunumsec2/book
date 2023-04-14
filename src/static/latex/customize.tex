@@ -22,6 +22,8 @@
 \definecolor{carolinablue}{rgb}{0.6, 0.73, 0.89}
 
 %% specific admonition type - use tcolorbox arguments (or something else) to adapt latex rendering
+% TODO: this is a problem with page breaks, we may want to use activitybox instead
+% (cf. https://tex.stackexchange.com/questions/350316/create-manual-page-break-within-tcolorbox)
 \newenvironment{microactivity}[1]{\begin{tcolorbox}[colframe=green]\sphinxstrong{#1}}{\end{tcolorbox}}
 \newenvironment{togofurther}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
 \newenvironment{important}[1]{\begin{tcolorbox}[colframe=red]\sphinxstrong{#1}}{\end{tcolorbox}}
@@ -144,9 +146,9 @@
 
 %% personalizing headers and footers (e,g, removing version number)
 
+\setlength{\headheight}{16.6pt}
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
-\newcommand{\helv}{%
-\fontfamily{phv}\fontsize{9}{11}\selectfont}
+\newcommand{\helv}{\fontfamily{phv}\fontsize{9}{11}\selectfont}
 
 \makeatletter
    \fancypagestyle{normal}{
