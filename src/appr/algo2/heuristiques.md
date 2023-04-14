@@ -25,7 +25,7 @@ Il existe des problèmes difficiles à résoudre. Nous allons nous pencher sur u
 
 Comment procéderiez-vous pour résoudre ce problème du sac à dos ? Prenez le temps d’imaginer un {glo}`algo|algorithme` qui puisse résoudre ce problème ? 
 
-Appliquer cet algorithme pour 5 objets de poids 1, 3, 5 et 7 kg et un sac de capacité de 10 kg.
+Appliquer cet algorithme pour 4 objets de poids 1, 3, 5 et 7 kg et un sac de capacité de 10 kg.
 
 Est-ce que votre algorithme donne toujours la meilleure solution ? 
 ```
@@ -158,7 +158,7 @@ alt: exemple d'heuristique
 width: 420px
 name : heuristique
 ---
-**Exemple d'heuristique.** Dans les jeux vidéos, on préfère estimer la distance `d` entre deux objets `A` et `B` par la somme des longueurs des côtés de l'angle droit `a+b`, plutôt que de calculer la racine carrée de la somme des carrés des longueurs des côtés de l'angle droit `d`<sup>`2`</sup> `=` `a`<sup>`2`</sup> `+` `b`<sup>`2`</sup> (théorème de Pythagore). Même si ce calcul est inexact, il est beaucoup plus rapide à calculer quand il y a beaucoup d’objets à afficher à l’écran, et il est suffisemment précis lorsque les deux objets sont alignés.
+**Exemple d'heuristique.** Dans les jeux vidéos, on préfère estimer la distance `d` entre deux objets `A` et `B` par la somme des longueurs des côtés de l'angle droit `a+b`, plutôt que de calculer la racine carrée de la somme des carrés des longueurs des côtés de l'angle droit `d`<sup>`2`</sup> `=` `a`<sup>`2`</sup> `+` `b`<sup>`2`</sup> (théorème de Pythagore). Même si ce calcul est inexact, il est beaucoup plus rapide à calculer quand il y a beaucoup d’objets à afficher à l’écran, et il est suffisamment précis lorsque les deux objets sont alignés.
 ```
 
 

@@ -8,8 +8,8 @@ Chaque activité est prévue comme un "labo" sur **1 à 4 périodes** en branch�
 
 |Nom    | Description |
 |-------|---------|
-| <a href="../algo1/activ/epidemie/index.html"> Epidémie </a>| Une introduction à la démarche de modélisation en utilisant python pour des élèves sachant déjà un peu programmer |
-| <a href="../algo1/activ/puissance4.html"> Minimax / Puissance 4</a>| Une activité de programmation d'un jeu de puissance4 sur 4 périodes pour des élèves maitrisant déjà bien la programmation |
+| <a href="epidemie/index.html"> Epidémie </a>| Une introduction à la démarche de modélisation en utilisant python pour des élèves sachant déjà un peu programmer | 
+| <a href="puissance4.html"> Minimax / Puissance 4</a>| Une activité de programmation d'un jeu de puissance4 sur 4 périodes pour des élèves maitrisant déjà bien la programmation |
 
 
 Vous pouvez découvrir les principes qui ont guidé la conception des activités <a href="../peda/philosophie.html#activites">ici</a>, à la fin de la section 
