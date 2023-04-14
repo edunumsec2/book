@@ -40,10 +40,6 @@ def md5(string: str) -> str:
 T = TypeVar("T")
 
 
-# def await_blocking(func: Awaitable[T]) -> T:
-#     return asyncio.get_event_loop().run_until_complete(func)
-
-
 @dataclass
 class LogicDiagramData:
     data_json: str
