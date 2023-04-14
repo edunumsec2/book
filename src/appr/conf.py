@@ -49,6 +49,7 @@ extensions = [
     'conversions',
     'gallery',
     'media',
+    'breaks',
     'todo',
     'sphinx.ext.todo'
 ]

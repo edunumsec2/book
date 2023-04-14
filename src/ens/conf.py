@@ -47,6 +47,7 @@ extensions = [
     'conversions',
     'gallery',
     'media',
+    'breaks',
 ]
 
 glossary_doc = 'glossaire'
