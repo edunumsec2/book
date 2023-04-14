@@ -155,15 +155,38 @@
 % Customizing Bjornstrup
 \ChNameVar{\raggedleft\Large\sffamily\selectfont}
 \ChNumVar{\raggedleft\LARGE\sffamily\bfseries\selectfont\vspace{-14pt}}
-\ChTitleVar{\centering\LARGE\sffamily\bfseries}
+\ChTitleVar{\vspace{8pt}\centering\LARGE\sffamily\bfseries}
 \ChRuleWidth{1.5pt}
 \makeatletter
 
 % légende d'images
-
 \usepackage[width=.8\textwidth, font=small, labelfont=bf]{caption}
 \DeclareCaptionFont{nohyphen}{\hyphenpenalty=10000 \exhyphenpenalty=10000\relax}
 \captionsetup{font+=nohyphen, aboveskip=8pt, belowskip=8pt}
+
+% % commencer chaque section sur une nouvelle page impaire
+% \let\oldsection\section% Store \section in \oldsection
+% \renewcommand{\section}[1]{
+%   \ifnum\value{section}>0
+%   \cleardoublepage\oldsection
+%   \else
+%   \oldsection
+%   \fi
+%   }
+
+\usepackage{etoolbox}
+\preto\section{\ifnum\value{section}=0
+\else\cleardoublepage\fi}
+
+% % first solution
+% \makeatletter
+% \newcommand{\mysection}[1]{%
+%  \ifnum\value{section}=0\relax
+%   \else
+%    \cleardoublepage
+%   \fi
+%  \section{#1}}
+% \makeatother
 
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
 \newcommand{\helv}{%
