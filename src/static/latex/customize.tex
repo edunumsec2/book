@@ -164,19 +164,21 @@
 \DeclareCaptionFont{nohyphen}{\hyphenpenalty=10000 \exhyphenpenalty=10000\relax}
 \captionsetup{font+=nohyphen, aboveskip=8pt, belowskip=8pt}
 
-% % commencer chaque section sur une nouvelle page impaire
-% \let\oldsection\section% Store \section in \oldsection
-% \renewcommand{\section}[1]{
-%   \ifnum\value{section}>0
-%   \cleardoublepage\oldsection
-%   \else
-%   \oldsection
-%   \fi
-%   }
-
+% commencer chaque section sur une nouvelle page impaire
 \usepackage{etoolbox}
-\preto\section{\ifnum\value{section}=0
-\else\cleardoublepage\fi}
+\preto\section{  
+  
+\ifnum\value{section}>0
+\cleardoublepage
+\else
+\fi
+}
+
+
+
+
+
+
 
 % % first solution
 % \makeatletter
@@ -258,3 +260,5 @@
 
 \DeclareGraphicsAlien{.gif}{.pdf}
 \DeclareGraphicsAlien{.svg}{.pdf}
+
+
