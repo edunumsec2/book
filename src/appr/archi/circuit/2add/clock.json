@@ -1,0 +1,10 @@
+{
+  "v": 4,
+  "in": [
+    {"type": "clock", "pos": [40, 30], "id": 5, "period": 500}
+  ],
+  "out": [
+    {"pos": [450, 30], "id": 6, "name": "2 Hz"}
+  ],
+  "wires": [[5, 6, {"propagationDelay": 1000}]]
+}

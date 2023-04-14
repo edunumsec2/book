@@ -34,7 +34,7 @@ Anita Borg 🇺🇸
 
 ## Charles Babbage
 ````{panels}
-----
+
 :img-top: media/portraits/babbage.jpeg
 
 Charles Babbage 🇬🇧 

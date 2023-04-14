@@ -1,6 +1,7 @@
 # World Wide Web
 
-Le **World Wide Web** (WWW), littéralement la « toile (d’araignée) mondiale », est un système qui permet de consulter avec un navigateur, à travers l'Internet, des pages accessibles sur des sites.
+Le **World Wide Web** (WWW), littéralement la « toile (d’araignée) mondiale », est un système qui permet de consulter avec un
+navigateur, à travers l'Internet, des pages accessibles sur des sites.
 
 ## Historique
 
@@ -31,6 +32,20 @@ Ces trois technologies sont rassemblées dans un *navigateur web*, un programme 
 1. spécifier une page web à visiter en indiquant son URL, typiquement dans une barre de navigation
 1. demander la page web au serveur correspondant et la réceptionner en utilisant le protocole HTTP
 1. afficher le contenu de la page web (décrite au format HTML), y compris les liens cliquables permettant d'afficher d'autres pages web.
+
+```{document}
+
+```{figure} media/navigateur.png
+---
+width: 500
+align: center
+---
+Un des premiers navigateurs web développé par Tim Berners-Lee. Les images s'affichaient sur des fenêtres séparées. 
+```
+
+```
+```
+
 
 ### URL
 

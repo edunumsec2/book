@@ -81,8 +81,7 @@ if tags.has('latex_mode'):
 
     
 if latex_mode:
-    exclude_patterns = ['prog1', 'prog2', 'hist','algo2', 'projets','resx']
-
+    exclude_patterns = ['prog1', 'prog2', 'hist','algo2', 'projets', 'archi']
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -113,8 +112,8 @@ html_theme_options = {
 
         "color-background-primary": "white", # for content
         "color-background-secondary": "#f8f9fb", # for navigation + ToC
-        "color-background-hover": "#efeff4ff", # for navigation-item hover
-        "color-background-over--transparent": "#efeff400", 
+        "color-background-hover": "white", # for navigation-item hover
+        "color-background-over--transparent": "#efeff400",
         "color-background-border": "#eeebee", # for UI borders
 
         # Announcement colors
@@ -124,10 +123,11 @@ html_theme_options = {
         # Brand colors
         "color-brand-primary": "#8044FF", # violet
         "color-brand-content": "#8044FF", # violet
-        
+
         # Admonition font size
         "admonition-font-size": "0.9rem",
         "admonition-title-font-size": "0.9rem",
+
     },
     "dark_css_variables": {
 
@@ -187,7 +187,7 @@ latex_elements = {
 
 #latex_documents = ('modulo','modulo.tex',"Modulo: une introduction à l'informatique", "John","manual","True")
 latex_additional_files = ["../static/assets/modulo-head-banner.png","../static/assets/by-nc.eu.png"]
-latex_documents = [('index','modulo.tex',"Modulo: un introduction à l'informatique", "Groupe de travail DGEP, EPFL, HEP, UNIL","manual","True")]
+latex_documents = [('index','modulo.tex',"Modulo: une introduction à l'informatique", "Groupe de travail DGEP, EPFL, HEP, UNIL","manual","True")]
 
 latex_show_urls = 'footnote'
 

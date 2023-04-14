@@ -1,6 +1,7 @@
 \usepackage{listings}
 \usepackage{listingsutf8}
 \usepackage{pifont}
+\usepackage{tcolorbox}
 
 %\usepackage{animate}
 \newcommand{\insertvideo}[3]{\begin{flushright}\fbox{Vidéo #3: \sphinxurl{#2}  \includegraphics[scale=0.3]{#1}}\end{flushright}}
@@ -11,9 +12,24 @@
 \newenvironment{timeline}{}{}
 \newenvironment{timelineitem}[2]{}{}
 
+%% default admonition type
+\renewenvironment{sphinxnote}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
 
-%% \newenvironment{timeline}{\begin{tabular}{rl}}{\end{tabular}}
-%% \newenvironment{timelineitem}[2]{\textbf{#1} & \textbf{#2} \\ &}{\\}
+%% specific admonition type - use tcolorbox arguments (or something else) to adapt latex rendering
+\newenvironment{microactivity}[1]{\begin{tcolorbox}[colframe=green]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{togofurther}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{important}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{didyouknow}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{reminder}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{related}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{evaluation}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{thinkingmatter}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{note}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{torecall}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{historicdocument}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
+
+
+
 \sphinxpxdimen=.5bp\relax
 
 \definecolor{light-gray}{gray}{0.95} 
@@ -53,6 +69,7 @@
 \DeclareUnicodeCharacter{2009}{}
 \DeclareUnicodeCharacter{200A}{}
 \DeclareUnicodeCharacter{202F}{}
+\DeclareUnicodeCharacter{2248}{$\approx$}
 \DeclareUnicodeCharacter{300}{è}
 \DeclareUnicodeCharacter{301}{é}
 \DeclareUnicodeCharacter{302}{ê}
@@ -68,6 +85,7 @@
 \DeclareUnicodeCharacter{03C1}{$\rho$}
 \DeclareUnicodeCharacter{03C4}{$\tau$}
 \DeclareUnicodeCharacter{03C6}{$\phi$}
+
 
 %% new maketitle
 \makeatletter
@@ -107,6 +125,16 @@
 %\vspace{0.5cm}
 }
 \makeatother
+
+%\DeclareStringOption[1pt]{\spx@opt@noteMichaborder}
+%\DeclareStringOption[0.5pt]{noteMichaborder}
+%\sphinxDeclareSphinxColorOption{noteMichaBorderColor}{{rgb}{0,0,0}}
+
+
+
+
+%\newenvironment{sphinxnoteMicha}[1]{\begin{tcolorbox}[colframe=red]\sphinxstrong{#1}}{\end{tcolorbox}}
+%\renewenvironment{sphinxnote}[1]{\begin{sphinxheavybox}\sphinxstrong{#1} }{\end{sphinxheavybox}}
 
 %% personalizing headers and footers (e,g, removing version number)
 

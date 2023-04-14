@@ -1,15 +1,44 @@
 # TP Additionneur
 
-Dans cette section, nous allons explorer d'abord la porte OU-X, l'additionneur qui sert de base pour
+Dans cette section, nous allons explorer d'abord la porte **ou exclusif** (OU-X), qui nous sert à construire un **additionneur simple**. Nous modifions l'additionneur simple pour en créer un **additionneur complet** qui prend en compte la retenue. Cet additionneur 1 bit nous sert à construire des circuits pour créer d'autres opérations telles que :
 
 - addition
 - soustraction
 - incrémentation
 - décrémentation
 
+## Clock et fréquence
+
+L'entrée horloge (clock) produit un signal qui alterne entre 0 et 1. L'horloge ci-dessous a une période de 500 ms. Le délai de transmission a été mis à 1000 ms. Ceci fait apparaitre 2 cycles du signal (en jaune). On peut donc visualiser la fréquence du signal qui est de 2 Hz.
+
+- Ajoutez une deuxième horloge avec une période de 250 ms.
+- Visualisez cette fréquence avec un délai de propagation de 1000 ms.
+- Quelle est sa fréquence ? Mettez-la comme étiquette.
+- Faites la même chose avec une troisième horloge qui a une période de 100 ms.
+
+```{logic}
+:ref: clock
+:height: 300
+:showonly: clock out
+{
+  "v": 4,
+  "in": [
+    {"type": "clock", "pos": [40, 30], "id": 5, "period": 500}
+  ],
+  "out": [
+    {"pos": [450, 30], "id": 6, "name": "2 Hz"}
+  ],
+  "wires": [[5, 6, {"propagationDelay": 1000}]]
+}
+```
+
+**Rappel** : pour choisir le délai de propagation, cliquez avec le bouton droit sur le fil et sélectionnez le menu contextuel *Délai de propagation spécifique...*. Mettez-le à 1000.
+
+![menu](media/logic_menu_delai.png)
+
 ## Porte OU-X
 
-Une porte OU-X (ou exclusif) avec 2 entrées donne une sortie 1 si **exactement une** des entrées est à 1.
+Une porte OU-X (ou exclusif) avec 2 entrées donne une sortie 1 si **exactement une** des entrées est 1.
 
 - Montrez la table de vérité pour la porte OU-X.
 - Ajoutez 3 portes OU-X et mettez les entrées à 01, 10, et 11
@@ -63,7 +92,7 @@ Créez une deuxième façon pour obtenir une porte OU exclusive en partant de l'
 
 `(not a and b) or (b and not a)`
 
-Utilisez donc : 
+Utilisez donc :
 
 - 2 portes NON
 - 2 portes ET
@@ -91,8 +120,6 @@ Utilisez donc :
   "wires": [[0, 48], [47, 49], [0, 51], [47, 52], [53, 54], [50, 56], [55, 57], [58, 59]]
 }
 ```
-
-
 
 ## Détecteur de parité
 
@@ -163,7 +190,7 @@ Ajoutez un circuit pour qu'on puisse également l'allumer depuis la chambre.
 
 ## Addition binaire
 
-Nous avons maintenant toutes les éléments pour construire un additionneur binaire. Rappelons-nous que l'addition binaire est très simple.
+Nous avons maintenant tous les éléments pour construire un additionneur binaire. Rappelons-nous que l'addition binaire est très simple.
 
 | A | B | A+B | C | S |
 |---|---|:---:|---|---|
@@ -179,7 +206,7 @@ Le résultat `A+B` peut être 0, 1 ou 2.  Nous avons besoin de deux bits pour re
 
 En regardant la table de vérité, on constate que :
 
-- la somme `S` est exprimé la fonction OU-X
+- la somme `S` est exprimée par la fonction OU-X
 - la retenue `C` est exprimée par la fonction ET
 
 Vous trouvez le circuit ci-dessous à droite. Vérifiez sa fonction en cliquant sur ses entrées.
@@ -222,16 +249,16 @@ Ajoutez encore 3 demi-additionneurs et montrez la table de vérité pour les 4 c
 
 Dans le cas général de l'addition, nous n'additionnons pas deux bits, mais deux nombres à plusieurs bits. Voici l'addition en colonne de deux nombres 4 bits (3+11=14).
 
-```
+```text
  0011
 +1011
 -----
  1110
  ```
 
- Pour être explicit, nous introduisons une ligne supplémentaire qui représente la retenue (C = carry).
+ Pour être explicite, nous introduisons une ligne supplémentaire qui représente la retenue (C = carry).
 
-```
+```text
  0110 (retenue)
  0011
 +1011
@@ -255,7 +282,7 @@ L'additionneur de 2 bits de la section précédente n'est plus suffisant. Pour l
 Regardez les colonnes et essayez de comprendre avec quelles portes on pourrait le construire.
 Vous constatez que la colonne `S` représente la parité. On pourra donc la construire avec des portes OU-X.
 
-- Ajoutez les deux fils qui manquent à l'entrée de la porte ET pour que le circuit produise le signale `Cout` et se comporte comme un additionneur complet.
+- Ajoutez les deux fils qui manquent à l'entrée de la porte ET pour que le circuit produise le signal `Cout` et se comporte comme un additionneur complet.
 - Ajoutez des entrées et sorties au bloc de l'additionneur complet et vérifiez son fonctionnement.
 
 ```{logic}
@@ -392,7 +419,7 @@ Les nombres signés sont représentés avec le format *complément à deux*. Pou
 
 ![signed](media/4bitsIntegers.jpg)
 
-L'opération pour trouver le nombre négatif est: inverser tous les bits et additionner 1.  
+L'opération pour trouver le nombre négatif est: inverser tous les bits (symbolisé par ~) et additionner 1.  
 Mathématiquement nous pouvons exprimer cette opération comme:
 
 `-i = ~i + 1`

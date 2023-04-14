@@ -54,7 +54,7 @@ Ajoutez les éléments qui manquent.
 ```{logic}
 :ref: mux
 :height: 450
-:showonly: in in.nibble out.nibble decoder-7seg out.7seg
+:showonly: in in.nibble out.nibble out.nibble-display decoder-7seg out.7seg
 {
   "v": 4,
   "in": [
@@ -72,15 +72,16 @@ Ajoutez les éléments qui manquent.
 
 ## Sélection d'opérations
 
-Complétez le circuit qui permet de sélectionner enter les deux opérations `a ET b` et `a OU b`.
+Complétez le circuit qui permet de sélectionner entre les deux opérations `a ET b` et `a OU b`.
 
-- Connectez a et b aux aux entrées des 4 portes OU,
+- Connectez a et b aux entrées des 4 portes OU,
+- Ajoutez une sorie 4-bits pour afficher le résultat des opérations logiques
 - Ajoutez une entrée de sélection pour le multiplexeur.
 
 ```{logic}
 :ref: mux
 :height: 450
-:showonly: in in.nibble out.nibble-display out.nibble quad-gate
+:showonly: in out.nibble-display out.nibble quad-gate
 {
   "v": 4,
   "in": [
@@ -105,7 +106,7 @@ Un clic droit sur la porte quadruple permet de choisir son type (AND, OR, XOR, N
 
 L'unité arithmétique et logique, ALU (arithmetic and logic unit), est la partie de l'ordinateur qui effectue les différents calculs arithmétiques et logiques.
 
-Ci-dessous vous pouvez voir les circuits logiques d'une ALU 4-bits très utilisé dans les années 60 et 70, le modèle 74181.
+Ci-dessous vous pouvez voir les circuits logiques d'une ALU 4-bits très utilisée dans les années 60 et 70, le modèle 74181.
 
 ![ALU](https://upload.wikimedia.org/wikipedia/commons/c/c0/74181aluschematic.png)
 
@@ -116,10 +117,11 @@ L'ALU dont nous disposons peut effectuer 4 opérations :
 - OU logique (10)
 - ET logique (11)
 
-Avec l'ALU ci-dessus ajoutez
+Avec l'ALU ci-dessous, ajoutez
+
 - la deuxième entrée (B) avec un bloc d'affichage 4 bits
 - un bloc d'affichage 4 bits pour la sortie (S)
-- les 3 entrées (Cin, Op0, Op1) 
+- les 3 entrées (Cin, Op0, Op1)
 - les 3 sorties (Cout, V, Z)
 
 Ensuite, testez les 4 opérations. Montrez une soustraction.
@@ -146,12 +148,12 @@ Ensuite, testez les 4 opérations. Montrez une soustraction.
 
 ## Addition signée
 
-Interprétez les nombres binaires comme des nombres signés. Vous pouvez le configurer avec le menu contextuel. Complétez l'additionneur 4-bit et montrez que l'addition de -2 et -3 donne bien -5.
+Interprétez les nombres binaires comme des nombres signés. Vous pouvez configurer l'afficheur 4 bits avec son menu contextuel. Complétez l'additionneur 4-bit et montrez que l'addition de -2 et -3 donne bien -5.
 
 ```{logic}
 :ref: addsigned
 :height: 400
-:showonly: alu in in.nibble out.nibble-display
+:showonly: alu in out in.nibble out.nibble-display
 {
   "v": 4,
   "in": [
@@ -254,7 +256,7 @@ Pour les nombres signés (deuxième ALU)
 }
 ```
 
-## Multiplier 1 bit
+## Multiplier 1x1 bit
 
 Les règles de la multiplication 1-bit sont très simples. Voici la table de vérité.
 
@@ -322,7 +324,7 @@ Le circuit ci-dessous calcule 2a en décalant d'un bit en direction du poids for
 }
 ```
 
-## Multiplier par bit
+## Multiplier 1x4 bit
 
 Le circuit ci-dessous utilise un multiplexeur 8x4 pour faire la multiplication d'un nombre **a** (4 bits) avec un nombre **b** (1 bit), au lieu des 4 portes ET utilisées précédemment.
 
@@ -342,6 +344,8 @@ Complétez le circuit avec :
 - un affichage 8 bits qui affiche 4a sous contrôle de b2
 - un affichage 8 bits qui affiche 8a sous contrôle de b3
 
+Essayer de multiplier deux nombres, par exemple a=5 et b=5 (0101). Vous trouvez le résultat de la multiplication en additionnant les 4 nombres affichés.
+
 ```{logic}
 :ref: mul3
 :height: 450
@@ -350,13 +354,13 @@ Complétez le circuit avec :
   "v": 4,
   "in": [
     {"type": "nibble", "pos": [40, 230], "id": [0, 1, 2, 3], "val": [1, 0, 1, 0], "name": "a"},
-    {"pos": [150, 50], "orient": "s", "id": 39, "name": "b0", "val": 1},
-    {"pos": [240, 50], "orient": "s", "id": 108, "name": "b1", "val": 1}
+    {"pos": [460, 50], "orient": "s", "id": 39, "name": "b0", "val": 1},
+    {"pos": [350, 50], "orient": "s", "id": 108, "name": "b1", "val": 1}
   ],
   "out": [
-    {"type": "nibble-display", "pos": [250, 340], "id": [35, 36, 37, 38]},
     {"type": "nibble-display", "pos": [90, 230], "id": [49, 50, 51, 52]},
-    {"type": "byte-display", "pos": [350, 350], "id": [67, 68, 69, 70, 71, 72, 73, 74]}
+    {"type": "byte-display", "pos": [590, 360], "id": [4, 5, 6, 7, 8, 9, 10, 11]},
+    {"type": "byte-display", "pos": [480, 360], "id": [12, 13, 14, 15, 16, 17, 18, 19]}
   ],
   "components": [
     {"type": "mux-8to4", "pos": [150, 180], "in": [22, 23, 24, 25, 26, 27, 28, 29, 30], "out": [31, 32, 33, 34]},
@@ -364,11 +368,11 @@ Complétez le circuit avec :
     {"type": "mux-8to4", "pos": [350, 180], "in": [75, 76, 77, 78, 79, 80, 81, 82, 83], "out": [84, 85, 86, 87]},
     {"type": "mux-8to4", "pos": [460, 180], "in": [95, 96, 97, 98, 99, 100, 101, 102, 103], "out": [104, 105, 106, 107]}
   ],
-  "wires": [[0, 26], [1, 27], [2, 28], [3, 29], [31, 35], [32, 36], [33, 37], [34, 38], [39, 30], [0, 49], [1, 50], [2, 51], [3, 52], [0, 57], [1, 58], [2, 59], [3, 60], [62, 68], [63, 69], [64, 70], [65, 71], [0, 79], [1, 80], [2, 81], [3, 82], [0, 99], [1, 100], [2, 101], [3, 102], [108, 61]]
+  "wires": [[0, 26], [1, 27], [2, 28], [3, 29], [0, 49], [1, 50], [2, 51], [3, 52], [0, 57], [1, 58], [2, 59], [3, 60], [0, 79], [1, 80], [2, 81], [3, 82], [0, 99], [1, 100], [2, 101], [3, 102], [39, 103], [108, 83], [104, 4], [105, 5], [106, 6], [107, 7], [84, 13], [85, 14], [86, 15], [87, 16]]
 }
 ```
 
-## Multiplier 4 bits
+## Multiplier 4x4 bits
 
 La multiplication 4 x 4 bits nécessite:
 
@@ -377,7 +381,7 @@ La multiplication 4 x 4 bits nécessite:
 
 Pour multiplier `0101` x `1001` = `00101101`  (5 x 9 = 45) nous écrivons en colonnes ceci :
 
-```
+```text
 1     1001
 0    0000
 1   1001
@@ -390,7 +394,7 @@ Cet algorithme peut être exprimé mathématiquement comme
 
 $$ produit = \sum^4_{i=0} (b_i \cdot a) \cdot 2^i $$
 
-Modifiez a et b dans le circuit multiplicateur 4 x 4 bits ci-dessus vérifiez que vous obtenez bien le produit de a et b. Faites une capture avec la plus grande valeur possible.
+Modifiez a et b dans le circuit multiplicateur 4 x 4 bits ci-dessus vérifiez que vous obtenez bien le produit de a et b. Faites une capture d'écran avec la plus grande valeur possible.
 
 ```{logic}
 :ref: mul4
@@ -422,7 +426,7 @@ Modifiez a et b dans le circuit multiplicateur 4 x 4 bits ci-dessus vérifiez qu
 
 ## Diviser par 2, 4 et 8
 
-La division par une puissance de 2 est très simple. Il suffit de décaler le nombre binaire. Pour diviser par 2 nous décalons d'une unité, et nous obtenons : 
+La division par une puissance de 2 est très simple. Il suffit de décaler le nombre binaire. Pour diviser par 2 nous décalons d'une unité, et nous obtenons :
 
 - La division entière (`a//2`)
 - Le reste de la division, l'opération modulo (`a%2`)
@@ -488,7 +492,7 @@ Un accumulateur est un registre spécial qui *accumule* une somme. La sortie de 
 Par exemple dans le circuit ci-dessous, l'accumulateur contient 3. Au prochain coup d'horloge, l'entrée b qui est 2 y sera additionnée. Ceci permet de calculer une somme courante.
 
 Voici un exemple typique, calculer la somme 1+3+7.
-En Python ceci correspondrait à ceci :
+En Python ceci correspondrait à :
 
 ``` Python
 acc = 0     # clear
@@ -498,7 +502,7 @@ acc += 7    # add
 print(acc)
 ```
 
-Avec le circuit ci-dessus ceci correspond à 4 étapes:
+Avec le circuit ci-dessous ceci correspond à 4 étapes:
 
 1. **clear**
 1. b=1 et **add**

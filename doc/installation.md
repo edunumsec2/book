@@ -35,8 +35,8 @@ Le projet utilise [sphinx-autobuild](https://github.com/executablebooks/sphinx-a
 1. Activation de l'environnement virtuel (si pas déjà fait)
 2. Activation du serveur local :
 
-- Documentation 'Apprendre' : `sphinx-autobuild src/appr docs --watch src --open-browser -a --delay 1`
-- Documentation 'Enseigner' : `sphinx-autobuild src/ens docs --watch src --open-browser -a --delay 1`
+- Documentation 'Apprendre' : `sphinx-autobuild src/appr build --watch src --open-browser -a --delay 1`
+- Documentation 'Enseigner' : `sphinx-autobuild src/ens build --watch src --open-browser -a --delay 1`
 
 Pour arrêter le serveur : <kbd>Ctrl</kbd>+<kbd>c</kbd> ou <kbd>⌘</kbd>+<kbd>c</kbd>
 
@@ -44,8 +44,8 @@ _**Remarque**: si vous utilisez le workspace VSCode, vous pouvez utiliser les bo
 
 ## Génération de build
 
-- Génération du build 'Apprendre' : `sphinx-build -b html src/appr docs`
-- Génération du build 'Enseigner' : `sphinx-build -b html src/ens docs`
+- Génération du build 'Apprendre' : `sphinx-build -b html src/appr build`
+- Génération du build 'Enseigner' : `sphinx-build -b html src/ens build`
 
 _**Remarque**: si vous utilisez le workspace VSCode, vous pouvez utiliser les boutons proposés en bas de l'interface._
 

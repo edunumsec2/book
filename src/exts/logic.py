@@ -1,25 +1,27 @@
 import asyncio
-from dataclasses import dataclass
-from functools import cached_property
 import base64
+import hashlib
 import os
 import sys
-import hashlib
-from typing import Any, Awaitable, List, Tuple, TypeVar, Union, Optional
+from dataclasses import dataclass
+from functools import cached_property
+from typing import Any, Awaitable, List, Optional, Tuple, TypeVar, Union
 
-from sphinx.application import Sphinx
-from sphinx.util import logging
-from sphinx.util.docutils import SphinxDirective, SphinxRole, SphinxTranslator
 from docutils import nodes  # type: ignore
 from docutils.nodes import Node, system_message  # type: ignore
 from docutils.parsers.rst import directives  # type: ignore
 from myst_parser.main import MdParserConfig, to_html
+from sphinx.application import Sphinx
+from sphinx.util import logging
+from sphinx.util.docutils import SphinxDirective, SphinxRole, SphinxTranslator
 
 # import urllib
 # import zlib
 # import lzstring
 
 ## REF: https://www.sphinx-doc.org/en/master/extdev/index.html
+
+MAIN_LOGIC_URL = "https://logic.modulo-info.ch"
 
 logger = logging.getLogger(__name__)
 
@@ -65,7 +67,7 @@ async def browser_close(page: Page) -> None:
 
 
 async def to_png(data: LogicDiagramData, output_file: str, page: Page) -> bool:
-    await page.goto("https://logic.modulo-info.ch", waitUntil="networkidle2")
+    await page.goto(MAIN_LOGIC_URL, waitUntil="networkidle2")
     result = await page.evaluate(
         f"""() => {{
         const editor = window.Logic.singleton
@@ -359,7 +361,7 @@ def setup(app: Sphinx) -> None:
         html=(begin_logic_diagram_html, end_logic_diagram_html),
         latex=(begin_logic_diagram_latex, end_logic_diagram_latex),
     )
-    app.add_js_file("https://logic.modulo-info.ch/simulator/lib/bundle.js")
+    app.add_js_file(MAIN_LOGIC_URL + "/simulator/lib/bundle.js")
 
     app.add_role("logicref", LogicHighlightRefRole())
     app.add_node(

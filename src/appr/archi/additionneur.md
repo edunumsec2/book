@@ -60,8 +60,7 @@ Le circuit précédent est particulièrement intéressant, car il montre qu'il e
 
 Lorsqu'on additionne deux nombres à plusieurs chiffres, que ce soit en base 10 ou en base 2, on commence par la colonne de droite, les unités. On connait le concept de _retenue_: en base 10, si l'addition des unités dépasse 9, on retient 1 dans la colonne des dizaines. En base 2, de façon similaire, si l'addition des unités dépasse… 1, on retient 1 dans la colonne suivante à gauche. C'est ce qu'on a fait avec le demi-additionneur: on peut considérer que la sortie $S_0$ représente la colonne des unités dans la somme, et la sortie $S_1$ représente la retenue à prendre en compte dans la colonne suivante.
 
-C'est ici que ça se complique : pour additionner les chiffres de la deuxième colonne, on doit potentiellement additionner _trois_ chiffres, et plus seulement deux. On a donc, en entrée, les deux bits $A$ et $B$ qui viennent des nombres à additionner, et aussi potentiellement cette retenue qui vient de la colonne des unités, qu'on appellera $C_{in}$ (pour _carry_, « retenue » en anglais). Ceci est vrai en base 2 comme en base 10. Il faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s'appelle _additionneur complet_ et livrera deux sorties : le bit de somme, appelé simplement $S$, et la retenue à reporter pour la colonne suivante, appelée $C_{out}$.
-
+C'est ici que ça se complique : pour additionner les chiffres de la deuxième colonne, on doit potentiellement additionner _trois_ chiffres, et plus seulement deux. On a donc, en entrée, les deux bits $A$ et $B$ qui viennent des nombres à additionner, et aussi potentiellement cette retenue qui vient de la colonne des unités, qu'on appellera $C_{in}$ (pour_carry_, « retenue » en anglais). Ceci est vrai en base 2 comme en base 10. Il faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s'appelle_additionneur complet_et livrera deux sorties : le bit de somme, appelé simplement $S$, et la retenue à reporter pour la colonne suivante, appelée $C_{out}$.
 
 ````{admonition} Exercice 2 : bases de l'additionneur complet
 
@@ -97,7 +96,6 @@ La table de vérité est ainsi:
 ```
 ````
 
-
 En faisant pour l'instant abstraction des détails d'un additionneur complet, on peut se dire qu'on le dessine simplement ainsi :
 
 ```{logic}
@@ -110,7 +108,6 @@ En faisant pour l'instant abstraction des détails d'un additionneur complet, on
   "components": [{"type": "adder", "pos": [60, 60], "in": [0, 1, 2], "out": [3, 4]}]
 }
 ```
-
 
 ## Chaînage d'additionneurs
 
@@ -158,7 +155,6 @@ Déterminez quel est le nombre décimal qui serait représenté par $S_2 = S_1 =
 La configuration $S_2 = S_1 = S_0 = 1$ représente le nombre décimal 7. Ce serait le résultat de l'addition. Il faudrait ainsi chercher une configuration des bits d'entrées qui, une fois additionnés, donnent 7. Mais ceci n'est pas possible, car sur chacune des entrées $(A_1, A_0)$ et $(B_1, B_0)$, la plus grande valeur représentable est $11_{(2)}$, autrement dit $3_{(10)}$ — et c'est impossible d'atteindre 7 en évaluant au maximum $3+3$.
 ```
 ````
-
 
 `````{admonition} Exercice 4 : additionneur de demi-octets
 
@@ -241,7 +237,6 @@ On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et 
 `````
 
 Cet exercice démontre l'opportunité de penser en termes modulaires, ce qui revient souvent en informatique. Ici, on a réalisé qu'un additionneur complet résout un sous-problème bien défini d'une addition générale d'un nombre à $n$ bits, et qu'une fois qu'on a créé un tel additionneur, il suffit d'en connecter plusieurs les uns derrière les autres de manière structurée pour additionner des nombres plus grands.
-
 
 ````{admonition} Exercice 5 : dépassement de capacité
 
@@ -327,7 +322,6 @@ Dès que la somme dépasse 15, elle n'est plus représentable sur les 4 bits qui
 ```
 ````
 
-
 ````{admonition} Exercice 6 : circuit défectueux
 
 L'additionneur de demi-octets ci-dessous a été endommagé et ne fonctionne plus correctement. Par exemple, lorsqu'on lui demande d'effectuer le calcul $11 + 1$, il livre comme réponse $8$.
@@ -404,7 +398,6 @@ Déterminez quel composant est défectueux dans ce circuit et comment il faudrai
 La {logicref}`fulladder_4bits_faulty.cout2|retenue sortant du deuxième additionneur depuis la droite` est bloquée à 0 à la place de correctement changer de valeur suivant ses entrées.
 ```
 ````
-
 
 `````{admonition} Exercice 7 : design d'un additionneur complet
 

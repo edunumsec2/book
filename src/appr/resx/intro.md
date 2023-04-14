@@ -15,8 +15,10 @@ Les réseaux de communication existaient bien avant Internet, par exemple :
 - le réseau téléphonique de Bell (1877)
 - le réseau de télégraphie par ondes radio de Marconi (1896)
 
-Mais tous ces réseaux étaient centralisés.
-Cela signifie qu'il y a toujours un point central du réseau par lequel passent toutes les communications.
+Mais beaucoup de ces réseaux, comme la radio et le téléphone, étaient
+centralisés. {itodo}`vraiment?`
+Cela signifie qu'il y a un point central du réseau par lequel passent toutes
+les communications.
 Après la 2e guerre mondiale, qui avait vu le nivellement de villes entières par des bombardements aériens (comme à Dresde)
 et la bombe atomique, l'armée américaine a décidé de financer le développement d'un réseau de communication décentralisé (ou distribué),
 qui serait moins vulnérable à une attaque. L'idée était qu'un réseau de communication centralisé pouvait facilement être mis hors service
