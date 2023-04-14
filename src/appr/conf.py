@@ -182,7 +182,9 @@ latex_elements = {
     'preamble': r'\input{../../../src/static/latex/customize}',
     'pxunit': '0.5bp',
     'figure_align': 'H',
-    'maketitle':  '\maketitle',
+    'maketitle':  r'\maketitle',
+    # some command redefinitions only take effect after the first \tableofcontents, so we add this hook
+    'tableofcontents': '\\sphinxtableofcontents\n\n\\input{../../../src/static/latex/customize_doc}\n',
     'pointsize': '11pt',
 }
 
