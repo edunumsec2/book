@@ -24,7 +24,7 @@ Pour simplifier les actions fréquentes (build, clean), le projet contient un Wo
 1. Activation de l'environnement virtuel  
     MacOS : `source .env/bin/activate`  
     Windows : `.env\Scripts\activate`
-1. Installation des librairies dans l'environnement virtuel : `pip install -r requirements.txt -U`
+1. Installation des librairies dans l'environnement virtuel : `pip install -r requirements.txt -U`, puis `playwright install webkit` (nécessaire seulement pour la génération de la version imprimable)
 
 _**Remarque** : à chaque fois que vous travaillez sur le projet, l'environnement virtuel doit être activé (point 4). Si vous utilisez VSCode et le Workspace, les boutons de build/auto-build l'activent automatiquement._
 
@@ -56,7 +56,7 @@ _**Remarque**: si vous utilisez le workspace VSCode, vous pouvez utiliser les bo
 Sphinx permet de générer un build LaTeX des sources qui peut ensuite être utilisé pour générer une polycopié au format pdf.
 
 - Génération du fichier latex: `sphinx-build -b latex -t latex_mode src/appr build/latex/appr`
-- Compilation du fichier latex: `cd build/latex/appr && pdflatex modulo.tex`
+- Compilation du fichier latex: `cd build/latex/appr && make`
 
 ## Configuration et personnalisation
 

@@ -5,7 +5,7 @@ import os
 import sys
 from dataclasses import dataclass
 from functools import cached_property
-from typing import Any, Awaitable, List, Optional, Tuple, TypeVar, Union
+from typing import Any, Callable, List, Optional, Tuple, TypeVar, Union
 
 from docutils import nodes  # type: ignore
 from docutils.nodes import Node, system_message  # type: ignore
@@ -27,7 +27,9 @@ logger = logging.getLogger(__name__)
 
 StringOrList = Union[str, List[str]]
 
-Page = Any # replaced by conditional import when using latex builder
+# reassigned when importing from playwright
+Page = Any 
+sync_playwright: Callable[[], Any] = None # type: ignore
 
 def md5(string: str) -> str:
     md5_builder = hashlib.md5()
@@ -38,8 +40,8 @@ def md5(string: str) -> str:
 T = TypeVar("T")
 
 
-def await_blocking(func: Awaitable[T]) -> T:
-    return asyncio.get_event_loop().run_until_complete(func)
+# def await_blocking(func: Awaitable[T]) -> T:
+#     return asyncio.get_event_loop().run_until_complete(func)
 
 
 @dataclass
@@ -55,32 +57,62 @@ class LogicDiagramData:
         spec_md5 = md5(spec)  # should be 32 chars hex
         return f"{spec_md5}.png"
 
+class PlaywrightWrapper:
+    def __init__(self) -> None:
+        self.playwright = sync_playwright().start()
+        self.browser = self.playwright.webkit.launch(headless=True)
+        self.context = self.browser.new_context()
 
-async def browser_launch() -> Page:
-    browser = await pyppeteer.launch()
-    page = await browser.newPage()
-    return page
+    def close(self) -> None:
+        self.context.close()
+        self.browser.close()
+        self.playwright.stop()
+
+    def new_page(self) -> Page:
+        return self.context.new_page()
+
+    result: str
+    error: Optional[str]
 
 
-async def browser_close(page: Page) -> None:
-    await page.browser.close()
+def browser_launch() -> PlaywrightWrapper:
+    return PlaywrightWrapper()
 
 
-async def to_png(data: LogicDiagramData, output_file: str, page: Page) -> bool:
-    await page.goto(MAIN_LOGIC_URL, waitUntil="networkidle2")
-    result = await page.evaluate(
-        f"""() => {{
-        const editor = window.Logic.singleton
-        if (typeof editor === 'undefined') {{
-            return "error: no editor"
+def browser_close(browser: Union[PlaywrightWrapper, None]) -> None:
+    if browser is not None:
+        browser.close()
+
+
+def to_png(data: LogicDiagramData, output_file: str, browser: PlaywrightWrapper) -> bool:
+    page = browser.new_page()
+    page.goto(MAIN_LOGIC_URL)
+
+    conversion_function = "toPNG"
+    # conversion_function = "toSVG"
+
+    result = page.evaluate(
+        f"""async () => {{
+        try {{
+            const editor = window.Logic.singleton
+            if (typeof editor === 'undefined') {{
+                return "error: no editor"
+            }}
+
+            const dataJson = JSON.stringify({data.data_json})
+            editor.loadCircuit(dataJson)
+            editor.setModeFromString("{data.mode}")
+            const withMetadata = false
+            const heightHint = {"undefined" if data.height is None else data.height}
+            const blob = await editor.{conversion_function}(withMetadata, heightHint)
+            const asBase64 = await editor.toBase64(blob)
+            return asBase64
+        }} catch (e) {{
+            return "error: " + e
         }}
-
-        const dataJson = JSON.stringify({data.data_json})
-        editor.load(dataJson)
-        editor.setModeFromString("{data.mode}")
-        return editor.toPNGBase64({"undefined" if data.height is None else data.height})
     }}"""
     )
+    page.close()
 
     if result is None:
         logger.error("error: no result from PNG conversion")
@@ -150,10 +182,10 @@ def begin_logic_diagram_latex(self: SphinxTranslator, node: Node) -> None:
     if os.path.exists(target_file):
         include_image = True
     else:
-        if browser_page is None:
+        if browser is None:
             logger.error("browser page is not initialized to generate PNGs for logic diagrams")
         else:
-            include_image = await_blocking(to_png(data, target_file, browser_page))
+            include_image = to_png(data, target_file, browser)
             if include_image:
                 logger.info("Generated logic diagram: %s", target_file)
             else:
@@ -333,25 +365,23 @@ def end_logic_gate_latex(self: SphinxTranslator, node: Node) -> None:
     self.body.append("}")
 
 
-browser_page: Union[Page, None] = None
+browser: Union[PlaywrightWrapper, None] = None
 
 
 def build_starting(app: Sphinx) -> None:
-    global browser_page, pyppeteer, Page
+    global browser, Page, sync_playwright
     if app.builder is not None and app.builder.name == "latex":
-        # conditionally import pyppeteer to avoid hard dependency
-        import pyppeteer  # type: ignore
-        from pyppeteer.page import Page  # type: ignore
+        from playwright.sync_api import Page, sync_playwright
         logger.info("starting headless browser")
-        browser_page = await_blocking(browser_launch())
+        browser = browser_launch()
 
 
 def build_finished(app: Sphinx, exception: Any) -> None:
-    global browser_page
+    global browser
     if app.builder is not None and app.builder.name == "latex":
         logger.info("shutting down headless browser")
-        await_blocking(browser_close(browser_page))
-        browser_page = None
+        browser_close(browser)
+        browser = None
 
 
 def setup(app: Sphinx) -> None:

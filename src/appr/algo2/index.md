@@ -1,6 +1,19 @@
 (algo2)=
 # Algorithmique II
 
+```{toctree}
+:maxdepth: 2
+:hidden:
+:numbered: 2
+
+principes
+recherche
+tris
+
+heuristiques
+recursivite
+conclusion
+```
 
 ## Quoi ?
 
@@ -49,28 +62,4 @@ A la fin de ce chapitre, vous saurez ce qui fait qu'un algorithme est un bon alg
 * Comprendre pourquoi certains problème simples n'ont pas de solution exacte.
 
 * [Optionnel] Créer des fonctions récursives, qui s'appellent elles-mêmes.  
-
-
-
-
-
-
-```{toctree}
-:maxdepth: 2
-:hidden:
-:numbered: 2
-
-principes
-recherche
-tris
-
-heuristiques
-recursivite
-conclusion
-```
-
-
-
-
-
 
