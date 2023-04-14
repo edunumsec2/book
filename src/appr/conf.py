@@ -81,7 +81,7 @@ if tags.has('latex_mode'):
 
     
 if latex_mode:
-    exclude_patterns = ['prog1', 'prog2', 'hist','algo2', 'projets', 'archi']
+    exclude_patterns = ['prog1', 'prog2', 'hist', 'algo2', 'projets', 'archi']
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -181,7 +181,8 @@ latex_elements = {
     'preamble': r'\input{../../../src/static/latex/customize}',
     'pxunit': '0.5bp',
     'figure_align': 'H',
-    'maketitle':  '\maketitle'
+    'maketitle':  '\maketitle',
+    'pointsize': '11pt',
 }
 
 

@@ -1,4 +1,6 @@
 
+```{htmlonly}
+
 <style>
 .button {
   background-color: white;
@@ -45,9 +47,20 @@
     </a>
 </div>
 
+```
 
 (algo1)=
 # Algorithmique I
+
+```{toctree}
+:maxdepth: 2
+:hidden:
+:numbered: 2
+algorithmes
+tri
+algo-progs
+conclusion
+```
 
 ## Quoi ?
 
@@ -109,14 +122,6 @@ Edsger Dijkstra 🇳🇱
 
 
 
-```{toctree}
-:maxdepth: 2
-:hidden:
-:numbered: 2
-algorithmes
-tri
-algo-progs
-conclusion
-```
+
 
 
