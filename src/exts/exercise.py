@@ -3,6 +3,16 @@ from sphinx.util.docutils import SphinxDirective
 from docutils.parsers.rst import directives
 from sphinx.writers.html import HTMLTranslator
 
+
+class exercise(nodes.admonition):
+    pass
+
+def visit_exercise_latex(self, node):
+    self.body.append('\n\\begin{exercise}')
+
+def depart_exercise_latex(self, node):
+    self.body.append('\n\\end{exercise}\n')
+
 class Exercise(SphinxDirective):
     required_arguments = 0
     optional_arguments = 1
@@ -17,7 +27,9 @@ class Exercise(SphinxDirective):
     def run(self):
         self.assert_has_content()
 
-        admonition = nodes.admonition("", classes=["admonition", "note"])
+        # admonition = nodes.admonition("", classes=["admonition", "note"])
+        admonition = exercise()
+        admonition.set_class("note")
 
         label = self.arguments[0] if len(self.arguments) > 0 else None
 
@@ -44,6 +56,18 @@ class Exercise(SphinxDirective):
 
         return [admonition]
 
+
+
+class solution(nodes.admonition, nodes.hint):
+    pass
+
+def visit_solution_latex(self, node):
+    self.body.append('\n\\begin{solution}')
+
+def depart_solution_latex(self, node):
+    self.body.append('\n\\end{solution}\n')
+
+
 class Solution(SphinxDirective):
     required_arguments = 0
     optional_arguments = 0
@@ -55,7 +79,9 @@ class Solution(SphinxDirective):
     def run(self):
         self.assert_has_content()
 
-        admonition = nodes.admonition("", classes=["admonition", "hint"])
+        #admonition = nodes.admonition("", classes=["admonition", "hint"])
+        admonition = solution()
+        admonition.set_class("hint")
 
         title = "Solution"
         last_question = Solution.lastQuestion.get(self.env.docname, None)
@@ -98,7 +124,7 @@ class ToGoFurther(SphinxDirective):
 
         title ="Pour aller plus loin"
         if len(self.arguments) > 0: 
-            title += ": " + self.arguments[0]
+            title += " – " + self.arguments[0]
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
@@ -132,7 +158,7 @@ class MicroActivity(SphinxDirective):
 
         title ="Micro-activité"
         if len(self.arguments) > 0: 
-            title += ": " + self.arguments[0]
+            title += " – " + self.arguments[0]
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
@@ -166,7 +192,7 @@ class Important(SphinxDirective):
 
         title ="Important"
         if len(self.arguments) > 0: 
-            title += ": " + self.arguments[0]
+            title += " – " + self.arguments[0]
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
@@ -200,7 +226,7 @@ class DidYouKnow(SphinxDirective):
 
         title ="Le saviez-vous ?"
         if len(self.arguments) > 0: 
-            title += ": " + self.arguments[0]
+            title += " – " + self.arguments[0]
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
@@ -234,7 +260,7 @@ class Reminder(SphinxDirective):
 
         title ="Rappel"
         if len(self.arguments) > 0: 
-            title += ": " + self.arguments[0]
+            title += " – " + self.arguments[0]
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
@@ -269,7 +295,7 @@ class Related(SphinxDirective):
 
         title ="En lien"
         if len(self.arguments) > 0: 
-            title += ": " + self.arguments[0]
+            title += " – " + self.arguments[0]
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
@@ -303,7 +329,7 @@ class Eval(SphinxDirective):
 
         title ="Ai-je compris ?"
         if len(self.arguments) > 0: 
-            title += ": " + self.arguments[0]
+            title += " – " + self.arguments[0]
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
@@ -338,7 +364,7 @@ class ThinkingMatter(SphinxDirective):
 
         title ="Matière à réfléchir"
         if len(self.arguments) > 0: 
-            title += ": " + self.arguments[0]
+            title += " – " + self.arguments[0]
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
@@ -373,7 +399,7 @@ class Note(SphinxDirective):
 
         title ="Remarque"
         if len(self.arguments) > 0: 
-            title += ": " + self.arguments[0]
+            title += " – " + self.arguments[0]
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
@@ -407,7 +433,7 @@ class ToRecall(SphinxDirective):
 
         title ="À retenir"
         if len(self.arguments) > 0: 
-            title += ": " + self.arguments[0]
+            title += " – " + self.arguments[0]
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
@@ -441,7 +467,7 @@ class HistoricDocument(SphinxDirective):
 
         title ="Document historique"
         if len(self.arguments) > 0: 
-            title += ": " + self.arguments[0]
+            title += " – " + self.arguments[0]
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
@@ -476,7 +502,8 @@ def setup(app):
     app.add_directive("document", HistoricDocument)
 
     # good for latex compilation but not for html...
-    
+
+  
     app.add_node(micro_activity, latex=(visit_micro_activity_latex, depart_micro_activity_latex),
                                 html=(visit_admonition_html, depart_admonition_html))
     app.add_node(to_go_further,latex=(visit_to_go_further_latex,depart_to_go_further_latex),
@@ -499,7 +526,10 @@ def setup(app):
                                 html=(visit_admonition_html, depart_admonition_html))
     app.add_node(historic_document,latex=(visit_document_latex,depart_document_latex),
                                 html=(visit_admonition_html, depart_admonition_html))
-  
+    app.add_node(exercise, latex=(visit_exercise_latex, depart_exercise_latex),
+                                html=(visit_admonition_html, depart_admonition_html))  
+    app.add_node(solution, latex=(visit_solution_latex, depart_solution_latex),
+                                html=(visit_admonition_html, depart_admonition_html))  
 
     # static_dir = os.path.join(os.path.dirname(__file__), "static")
     # app.connect("builder-inited", (lambda app: app.config.html_static_path.append(static_dir)))

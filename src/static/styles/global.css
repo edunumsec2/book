@@ -107,6 +107,21 @@ body {
     background-color: rgb(92 201 191)!important;
 }
 
+
+.admonition.note>.admonition-title {
+    background-color: rgb(89 51 209 / 10%)!important;
+}
+
+.admonition.note {
+    border-left-color: #5933d1ff!important;
+}
+
+.admonition.note>.admonition-title:before {
+    background-color: #5933d1ff!important;
+}
+
+
+
 .admonition > div:last-child > :last-child {
     margin-bottom: 2px;
 }

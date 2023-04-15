@@ -91,10 +91,12 @@ Lisez bien l'algorithme présenté ci-dessus. Quel problème cet algorithme perm
 
 ````
 
-`````{solution} 
+``````{solution} 
+`````{htmlonly}
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
+`````
 
 Pour répondre à cette problématique il faut se poser la question suivante : que contient la variable *Résultat* à la fin de l'algorithme ? 
 
@@ -116,7 +118,7 @@ align: left
 Cet algorithme permet de calculer la somme des nombres contenus dans une liste (ici la liste Nombres).
 
 ````
-`````
+``````
 
 Pour comprendre ce que fait l'algorithme ci-dessus, il faut se mettre à la place de la machine. On parle de *<span style="color:rgb(13, 204, 166)">simuler</span>* un algorithme, de faire comme si l'algorithme s'exécutait sur une machine. Pour que ce soit plus concret, on peut imaginer des valeurs fictives pour les variables telles que *Nombres*. Dans la vie réelle, *Nombres* pourra contenir tous les nombres possibles, mais cela ne nous aide pas à comprendre. On imagine alors des nombres précis que *Nombres* pourrait contenir, comme par exemple 4, 5 et 6. Lorsqu'on exécute les opérations de l'algorithme l'une après l'autre, avec des valeurs concrètes, on comprend mieux quel effet ces opérations ont sur les valeurs contenues dans les variables. La simulation de l'algorithme nous permet de saisir **<span style="color:rgb(89, 51, 209)">les calculs</span>** réalisés par cet algorithme, ici une simple somme.
 
@@ -183,8 +185,7 @@ align: left
 
 Notez que les opérations d’un algorithme doivent être précises et ***<span style="color:rgb(13, 204, 166)">non ambigües</span>***. Il doit y avoir une seule interprétation possible de l’algorithme. Une recette de cuisine ne serait pas assez précise pour une machine, par exemple, il faudrait indiquer clairement ce que température moyenne et mélange homogène veulent dire. Les êtres humains peuvent interpréter, deviner et supposer, mais pas les machines (pour l'instant).
 
-````{admonition} Le saviez-vous ? Jeu d'instructions
-:class: hint
+````{didyouknow} Jeu d'instructions
 
 Le jeu d’instructions élémentaires dépend du système informatique sur lequel elles s'exécutent. Nous avons vu qu'un algorithme spécifie des opérations à suivre dans un ordre donné afin de résoudre un problème. Ces opérations sont transcrites sous la forme d'un programme informatique en instructions élémentaires exécutables par une machine, qui peuvent être très différentes d’une machine à l’autre pour un même algorithme. Ainsi, l’algorithmique permet d’aborder la résolution de problèmes de manière générale, sans se préoccuper des détails d’implémentation sur différents systèmes. 
 

@@ -2,6 +2,8 @@
 \usepackage{listingsutf8}
 \usepackage{pifont}
 \usepackage{tcolorbox}
+\usepackage{setspace}
+
 
 \renewcommand{\baselinestretch}{1.1} 
 
@@ -14,8 +16,10 @@
 \newenvironment{timeline}{}{}
 \newenvironment{timelineitem}[2]{}{}
 
+
+
 %% default admonition type
-\renewenvironment{sphinxnote}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
+%\renewenvironment{sphinxnote}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
 
 \definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
 \definecolor{llgray}{rgb}{0.96, 0.96, 0.96}
@@ -26,19 +30,24 @@
 \definecolor{darkviolet}{rgb}{0.58, 0.0, 0.83}
 \definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
 \definecolor{lapislazuli}{rgb}{0.15, 0.38, 0.61}
+\definecolor{ultraviolet}{RGB}{89, 51, 209}
+\definecolor{ultraturquoise}{RGB}{92, 201, 192}
+
 
 %% specific admonition type - use tcolorbox arguments (or something else) to adapt latex rendering
 % TODO: this is a problem with page breaks, we may want to use activitybox instead
 % (cf. https://tex.stackexchange.com/questions/350316/create-manual-page-break-within-tcolorbox)
-\newenvironment{microactivity}[1]{\begin{tcolorbox}[colframe=darkspringgreen, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{togofurther}[1]{\begin{tcolorbox}[colframe=darkviolet, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{important}[1]{\begin{tcolorbox}[colframe=red, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{didyouknow}[1]{\begin{tcolorbox}[colframe=babyblue, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{reminder}[1]{\begin{tcolorbox}[colframe=orange, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{related}[1]{\begin{tcolorbox}[colframe=brightturquoise, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{evaluation}[1]{\begin{tcolorbox}[colframe=darkgreen, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{thinkingmatter}[1]{\begin{tcolorbox}[colframe=beaublue, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{note}[1]{\begin{tcolorbox}[colframe=carolinablue, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{exercise}[1]{\begin{tcolorbox}[colframe=ultraviolet, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{solution}[1]{\begin{tcolorbox}[colframe=ultraturquoise, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{microactivity}[1]{\begin{tcolorbox}[colframe=darkspringgreen, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{togofurther}[1]{\begin{tcolorbox}[colframe=darkviolet, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{important}[1]{\begin{tcolorbox}[colframe=red, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{didyouknow}[1]{\begin{tcolorbox}[colframe=babyblue, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{reminder}[1]{\begin{tcolorbox}[colframe=orange, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{related}[1]{\begin{tcolorbox}[colframe=brightturquoise, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{evaluation}[1]{\begin{tcolorbox}[colframe=darkgreen, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{thinkingmatter}[1]{\begin{tcolorbox}[colframe=beaublue, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{note}[1]{\begin{tcolorbox}[colframe=carolinablue, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}}
 \newenvironment{torecall}[1]{\begin{tcolorbox}[colframe=red, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
 \newenvironment{historicdocument}[1]{\begin{tcolorbox}[colframe=lapislazuli, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
 
@@ -108,7 +117,7 @@
  \centering
  \resizebox{\textwidth}{!}{\includegraphics{modulo-head-banner.png}}\\
  \vspace*{\fill}
- {\Huge \@title}\\
+ {\Huge \fontfamily{Montserrat-TOsF}\selectfont \begin{spacing}{1.5} \@title \end{spacing}}
  \vspace*{3cm}
 {\raggedleft\Large\@author}\\
  \vspace*{3cm}
@@ -180,25 +189,12 @@
 
 
 
-
-
-
-
-% % first solution
-% \makeatletter
-% \newcommand{\mysection}[1]{%
-%  \ifnum\value{section}=0\relax
-%   \else
-%    \cleardoublepage
-%   \fi
-%  \section{#1}}
-% \makeatother
-
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
 \newcommand{\helv}{%
 \fontfamily{phv}\fontsize{9}{11}\selectfont}
 \setlength{\headheight}{16.59999pt}
 
+\usepackage{datetime}
 
 \makeatletter
    \fancypagestyle{normal}{
@@ -206,10 +202,10 @@
     \renewcommand{\headrulewidth}{0.4pt}
     \renewcommand{\footrulewidth}{0pt}
     \renewcommand{\headruleskip}{3pt}
-    \fancyfoot[CO]{{\py@HeaderFamily \mdseries \small \thepage}}
+    \fancyfoot[CO]{{\py@HeaderFamily \mdseries \small \thepage \textcolor{lightgray}{\; $\mid$ \today}}}
     \fancyhead[RO]{{\py@HeaderFamily \mdseries \small \nouppercase{\rightmark}}}
     \if@twoside
-     \fancyfoot[CE]{{\py@HeaderFamily \mdseries \small \thepage}}
+     \fancyfoot[CE]{{\py@HeaderFamily \mdseries \small \thepage  \textcolor{lightgray}{\; $\mid$ \today}}}
      \fancyhead[LE]{{\py@HeaderFamily \mdseries \small Modulo \nouppercase{\leftmark}}}
     \fi
     
@@ -223,8 +219,8 @@
   % page of a chapter `clean.'
    \fancypagestyle{plain}{
     \fancyhf{}
-    \fancyfoot[RO]{{\py@HeaderFamily \mdseries \small \thepage}}
-    \if@twoside\fancyfoot[CE]{{\py@HeaderFamily \mdseries \small \thepage}}\fi
+    \fancyfoot[CO]{{\py@HeaderFamily \mdseries \small \thepage \textcolor{lightgray}{\; $\mid$ \today}}}
+    \if@twoside\fancyfoot[CE]{{\py@HeaderFamily \mdseries \small \thepage \textcolor{lightgray}{\; $\mid$ \today}}}\fi
     \renewcommand{\headrulewidth}{0pt}
     \renewcommand{\footrulewidth}{0pt}
     \renewcommand{\headruleskip}{3pt}
