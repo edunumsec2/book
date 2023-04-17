@@ -5,7 +5,9 @@ from sphinx.writers.html import HTMLTranslator
 
 
 class exercise(nodes.admonition):
-    pass
+    def __init__(self, rawsource="", *children, **attributes):
+        super().__init__(rawsource, *children, **attributes)
+        self["classes"].append("exercise")
 
 def visit_exercise_latex(self, node):
     self.body.append('\n\\begin{exercise}')
@@ -59,7 +61,9 @@ class Exercise(SphinxDirective):
 
 
 class solution(nodes.admonition, nodes.hint):
-    pass
+    def __init__(self, rawsource="", *children, **attributes):
+        super().__init__(rawsource, *children, **attributes)
+        self["classes"].append("solution")
 
 def visit_solution_latex(self, node):
     self.body.append('\n\\begin{solution}')
@@ -103,7 +107,9 @@ class Solution(SphinxDirective):
         return [admonition]
 
 class to_go_further(nodes.admonition):
-    pass
+    def __init__(self, rawsource="", *children, **attributes):
+        super().__init__(rawsource, *children, **attributes)
+        self["classes"].append("togofurther")
 
 def visit_to_go_further_latex(self, node):
     self.body.append('\n\\begin{togofurther}')
@@ -137,7 +143,9 @@ class ToGoFurther(SphinxDirective):
         return [admonition]
 
 class micro_activity(nodes.admonition):
-    pass
+    def __init__(self, rawsource="", *children, **attributes):
+        super().__init__(rawsource, *children, **attributes)
+        self["classes"].append("microactivity")
 
 def visit_micro_activity_latex(self, node):
     self.body.append('\n\\begin{microactivity}')
@@ -171,7 +179,9 @@ class MicroActivity(SphinxDirective):
         return [admonition]
 
 class important(nodes.admonition):
-    pass
+    def __init__(self, rawsource="", *children, **attributes):
+        super().__init__(rawsource, *children, **attributes)
+        self["classes"].append("important")
 
 def visit_important_latex(self, node):
     self.body.append('\n\\begin{important}')
@@ -205,7 +215,9 @@ class Important(SphinxDirective):
         return [admonition]
 
 class did_you_know(nodes.admonition):
-    pass
+    def __init__(self, rawsource="", *children, **attributes):
+        super().__init__(rawsource, *children, **attributes)
+        self["classes"].append("didyouknow")
 
 def visit_did_you_know_latex(self, node):
     self.body.append('\n\\begin{didyouknow}')
@@ -239,7 +251,9 @@ class DidYouKnow(SphinxDirective):
         return [admonition]
 
 class reminder(nodes.admonition):
-    pass
+    def __init__(self, rawsource="", *children, **attributes):
+        super().__init__(rawsource, *children, **attributes)
+        self["classes"].append("reminder")
 
 def visit_reminder_latex(self, node):
     self.body.append('\n\\begin{reminder}')
@@ -274,7 +288,9 @@ class Reminder(SphinxDirective):
 
 
 class related(nodes.admonition):
-    pass
+    def __init__(self, rawsource="", *children, **attributes):
+        super().__init__(rawsource, *children, **attributes)
+        self["classes"].append("related")
 
 def visit_related_latex(self, node):
     self.body.append('\n\\begin{related}')
@@ -308,7 +324,9 @@ class Related(SphinxDirective):
         return [admonition]
 
 class evaluation(nodes.admonition):
-    pass
+    def __init__(self, rawsource="", *children, **attributes):
+        super().__init__(rawsource, *children, **attributes)
+        self["classes"].append("evaluation")
 
 def visit_eval_latex(self, node):
     self.body.append('\n\\begin{evaluation}')
@@ -343,7 +361,9 @@ class Eval(SphinxDirective):
 
 
 class thinking_matter(nodes.admonition):
-    pass
+    def __init__(self, rawsource="", *children, **attributes):
+        super().__init__(rawsource, *children, **attributes)
+        self["classes"].append("thinkingmatter")
 
 def visit_thinking_matter_latex(self, node):
     self.body.append('\n\\begin{thinkingmatter}')
@@ -378,7 +398,9 @@ class ThinkingMatter(SphinxDirective):
 
 
 class note(nodes.admonition):
-    pass
+    def __init__(self, rawsource="", *children, **attributes):
+        super().__init__(rawsource, *children, **attributes)
+        self["classes"].append("note")
 
 def visit_note_latex(self, node):
     self.body.append('\n\\begin{note}')
@@ -412,7 +434,9 @@ class Note(SphinxDirective):
         return [admonition]
 
 class to_recall(nodes.admonition):
-    pass
+    def __init__(self, rawsource="", *children, **attributes):
+        super().__init__(rawsource, *children, **attributes)
+        self["classes"].append("torecall")
 
 def visit_to_recall_latex(self, node):
     self.body.append('\n\\begin{torecall}')
@@ -447,7 +471,9 @@ class ToRecall(SphinxDirective):
 
 
 class historic_document(nodes.admonition):
-    pass
+    def __init__(self, rawsource="", *children, **attributes):
+        super().__init__(rawsource, *children, **attributes)
+        self["classes"].append("historicdocument")
 
 def visit_document_latex(self, node):
     self.body.append('\n\\begin{historicdocument}')
