@@ -11,6 +11,7 @@
    inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
@@ -23,13 +24,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="3.515417"
-     inkscape:cx="159.58278"
-     inkscape:cy="26.597129"
-     inkscape:window-width="1387"
-     inkscape:window-height="887"
-     inkscape:window-x="327"
-     inkscape:window-y="114"
+     inkscape:zoom="1.1476306"
+     inkscape:cx="215.66173"
+     inkscape:cy="26.576496"
+     inkscape:window-width="1504"
+     inkscape:window-height="859"
+     inkscape:window-x="59"
+     inkscape:window-y="117"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      fit-margin-top="0"
@@ -38,44 +39,54 @@
      fit-margin-bottom="0" />
   <defs
      id="defs2">
+    <linearGradient
+       id="linearGradient150102"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#37c8ab;stop-opacity:1;"
+         offset="0"
+         id="stop150100" />
+    </linearGradient>
     <rect
        x="20.870474"
        y="55.245373"
        width="128.90588"
        height="24.553499"
        id="rect9492" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient150102"
+       id="linearGradient150104"
+       x1="39.674994"
+       y1="17.865228"
+       x2="124.44415"
+       y2="17.865228"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <g
      id="layer1"
      transform="translate(-5.0297378,-13.497286)">
     <rect
-       style="fill:#ff0000;stroke:#ff0000;stroke-width:0.964999;stroke-opacity:1"
-       id="rect846"
-       width="34.106346"
-       height="6.4964466"
-       x="5.5219793"
-       y="14.617004" />
-    <rect
-       style="fill:#ff0000;stroke:#ff0000;stroke-width:0.964999;stroke-opacity:1"
+       style="fill:#0000c0;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-opacity:1"
        id="rect1060"
        width="34.106346"
        height="6.4964466"
-       x="5.5219793"
+       x="6.0511484"
        y="14.617004" />
     <text
        xml:space="preserve"
-       style="font-size:2.11667px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;white-space:pre;inline-size:40.278;stroke-width:0.264583"
+       style="font-size:2.11667px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;white-space:pre;inline-size:40.278;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
        x="19.48934"
        y="20.463804"
        id="text24894"
-       transform="translate(2.9234011)"><tspan
+       transform="translate(2.9234011,0.0119807)"><tspan
          x="19.48934"
          y="20.463804"
-         id="tspan1185"><tspan
+         id="tspan156603"><tspan
            style="font-size:7.05556px;-inkscape-font-specification:'Helvetica Neue, Normal'"
-           id="tspan1183">en-tête IP</tspan></tspan></text>
+           id="tspan156601">en-tête IP</tspan></tspan></text>
     <rect
-       style="fill:#999999;stroke:#999999;stroke-width:0.964999;stroke-opacity:1"
+       style="fill:url(#linearGradient150104);stroke:none;stroke-width:0.964999;stroke-opacity:1;fill-opacity:1"
        id="rect36566"
        width="83.804153"
        height="6.4964466"
@@ -87,9 +98,9 @@
        x="19.48934"
        y="20.463804"
        id="text24894-6"
-       transform="translate(47.597094,-0.39670692)"><tspan
+       transform="translate(60.507753,0.309556)"><tspan
          x="19.48934"
          y="20.463804"
-         id="tspan1187">données</tspan></text>
+         id="tspan156605">données</tspan></text>
   </g>
 </svg>
