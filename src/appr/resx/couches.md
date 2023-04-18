@@ -22,13 +22,25 @@ inventé (par exemple la téléportation quantique), il suffit de développer un
 communication propre à ce support et on pourra utiliser le protocole IP pour la transmission
 de paquets, ce qui permettra à ce nouveau support de s'intégrer sans difficulté à Internet.
 
-On a ainsi défini le modèle suivant en 4 "couches" de protocoles: la première couche "data link"
-définit comment les données sont transmises entre deux appareils directement connectés. Le protocole
+On a ainsi défini le modèle suivant en 4 "couches" de protocoles: la première couche "liaison réseau"
+définit comment les données sont transmises entre deux appareils directement connectés ou du même réseau local. Le protocole
 en question dépend donc du type de connexion entre les deux appareils
 (wifi, câble électrique, fibre optique, etc.). La deuxième couche, "Internet", définit comment les données
 sont transmises entre deux machines du réseau, c'est le protocole IP vu précédemment. La troisième couche "transport" définit comment les données sont segmentées (c'est-à-dire découpée et morceaux) et envoyées par l'émetteur
 et reconstituées et quittancées par le récepteur, c'est le protocole TCP également vu précédemment. La quatrième couche est la couche applicative qui définit comment deux applications (ou programmes) communiquent entre elles, par exemple le protocole HTTP qui détermine la communication entre un navigateur web et un serveur web. D'autres exemples figurant dans cette couche pourraient inclure la manière dont l'application TikTok
 d'un smartphone communique avec le serveur de TikTok.
+
+
+```{figure} media/couches_tcpip.svg
+:width: 600
+:align: center
+```
+
+Ainsi, lorsque le navigateur web d'Alice demande une page au serveur web, ces deux applications (le navigateur et le serveur)
+sont en communication en utilisant le protocole HTML. Pour transmettre la requête HTML d'Alice, une connexion entre Alice
+et le serveur web sera établie en utilisant le procole TCP. Au besoin, ce protocole découpera la requête ou la page web en
+petits morceaux et ajoutera les entêtes TCP à chaque morceau, qui sera envoyé individuellement en utilisant le protocole IP (en ajoutant y donc l'entête IP). Selon le type de connexion, (4G, wifi, cable), les paquets IP seront transmis selon différents protocoles à des routeurs qui les achemineront jusqu'au destinataire qui réassemblera les paquets selon le protocole TCP et fournira la requête HTML d'Alice au serveur web ou la page web demandés au navigateur d'Alice. 
+
 
 Ce modèle en 4 couches a été ensuite développé en un modèle en 7 couches dans lequel a été ajoutée au plus bas
 niveau une "couche physique" qui décrit les caractéristiques physiques utilisées pour la connexion
