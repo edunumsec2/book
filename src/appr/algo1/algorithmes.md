@@ -152,8 +152,7 @@ Au niveau des désavantages, l'automatisation est en général énergivore (avec
 « Chaque étape d’un algorithme doit être définie précisément » (Knuth, 2011). En effet, si on ne décompose pas suffisamment la solution du problème, on peut se retrouver face à une recette inutile, par exemple : prendre des œufs et cuire l'omelette. Cette recette ne nous dit pas vraiment comment procéder pour arriver à faire une omelette...
 
 
-````{admonition} Liens
-:class: hint
+````{related} En lien
 
 Lorsqu'on sauve un fichier dans un ordinateur, il est stocké dans une mémoire. La mémoire d'un ordinateur pourrait être comparée a une grande commode de tiroirs étiquetés. Ainsi, lorsqu'un fichier est stocké en mémoire, la taille du fichier correspond au nombre de tiroirs qu'il occupe. Si c'est un fichier de texte par exemple, on peut imaginer qu'un tiroir contient un caractère simple (un octet). Si c'est une image en couleur, un pixel de cette image occuperait 3 tiroirs (un octet par couleur rouge, vert et bleu).
 
@@ -313,8 +312,7 @@ Vérifier la solution que vous avez trouvée en représentant chaque variable av
 ````
 
 
-````{admonition} Ai-je compris ?
-:class: hint
+````{eval}
 
 1. Je connais la différence entre un algorithme et un programme.
 

@@ -30,9 +30,6 @@ L'artiste **Memo Akten** interroge, à travers cette oeuvre, notre rapport à la
 
 Dans la photographie précédente de l'oeuvre *Learning to See : Gloomy Sunday* on peut voir que le modèle a été entraîné sur des images de feu. 
 
-<!-- ```{youtube} DE3402nH1wA
-``` 
--->
 
 [Lien](https://youtu.be/DE3402nH1wA) vers une version enregistrée de l'oeuvre.
 
@@ -48,9 +45,6 @@ Son oeuvre *Forms*, réalisée en 2011 avec l'artiste italien Davide Quayola, ex
 ![img](media/forms.jpg)
 *Forms, Memo Akten & Davide Quayola 2011, ©http://www.memo.tv/*
 
-<!-- ```{youtube} Xe-C_rv3_p0
-``` 
--->
 
 Vidéo disponible [ici](https://www.youtube.com/watch?v=Xe-C_rv3_p0)
 

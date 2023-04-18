@@ -10,8 +10,7 @@ Les algorithmes sont omniprésents. « Ils » décident de ce que nous voyons su
 
 Comprendre le fonctionnement de base des algorithmes permet de mieux appréhender ce qu’il se passe dans toutes ces situations. Nous y reviendrons plus en détail dans la deuxième partie du cours d'algorithmique.
 
-````{admonition} À retenir
-:class: attention
+````{torecall} À retenir
 
 Un algorithme est **une suite d’instructions dans un ordre bien précis** qui permet de résoudre un problème. L’algorithme va produire un résultat en sortie, en fonction de données reçues en entrée.
 
@@ -64,8 +63,7 @@ Selon un rapport publié en 2017 par DELL et le Think Tank californien « L’in
 **<span style="color:rgb(89, 51, 209)">Souhaiteriez-vous devenir neuro-manageur.euse ou éducateur.rice de robots ?</span>**
 
 
-````{admonition} Extrait. *Intelligence artificielle. Enquête sur ces technologiques qui changent nos vies. Les algorithmes vont-ils tuer l'emploi ?*, éd. Flammarion, 2008, pp. 72-73.
-:class: note
+````{document} Extrait. *Intelligence artificielle. Enquête sur ces technologiques qui changent nos vies. Les algorithmes vont-ils tuer l'emploi ?*, éd. Flammarion, 2008, pp. 72-73.
 
 Résultat, ce ne sont pas seulement les cols-bleus qui sont touchés, mais également les cols blancs, cadres de professions intermédiaires et même supérieures, comptables, traducteurs ou encore traders, etc. Pour l'essayiste Hakim El Karoui, la robotisation pourrait être à ces derniers ce que la mondialisation a été aux premiers. Goldman Sachs, la star des banques d'affaires new-yorkaises, a provoqué une onde de choc dans la profession lorsqu'un de ses responsables a déclaré début 2017 que son *desk* de *trading actions*, qui employait 600 traders à son pic en 2000, n'en comptait plus que deux ! « Ces 600 traders, ils occupaient beaucoup d'espace », a-t-il lâché, sûr de son effet, lors d'un colloque à l'université de Harvard. Des bataillons de traders disparus pour cause de bascule vers le trading électronique à haute fréquence, qui représente aujourd'hui 99% des ordres d'achat et de vente chez Goldman Sachs, 75% chez les concurrents et 45% toutes classes d'actifs confondus dans le secteur bancaire. Ce géant de la finance les a avantageusement remplacés par... 200 ingénieurs. Ce sont eux qui pilotent désormais, pour des salaires jusqu'à cinq fois moins importants, des algorithmes programmés pour gagner des sommes certes infinitésimales, mais sur des millions d'opérations quotidiennes en limitant au maximum le risque. Au suivant ?
 

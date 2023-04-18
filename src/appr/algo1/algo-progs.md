@@ -1,5 +1,4 @@
-````{admonition} Matière à réfléchir. Lieu mystère
-:class: hint
+````{thinkingmatter} Lieu mystère
 
 Pensez à un lieu connu, qui se trouve à proximité. Ecrivez les étapes à suivre pour s’y rendre, sans mentionner le lieu. Vous ne pouvez utiliser que les instructions : **<span style="color:rgb(89, 51, 209)">avancer</span>**, **<span style="color:rgb(89, 51, 209)">tourner à gauche</span>** et **<span style="color:rgb(89, 51, 209)">tourner à droite</span>**.
 
@@ -145,18 +144,6 @@ print(tri_selection(rect))
 
 En traduisant les étapes intermédiaires du tri par sélection en des lignes de code, nous avons automatisé l'algorithme. Nous l'avons trsncrit en un programme informatique qui peut être exécuté sur une machine.
 
-<!-- ````{admonition} Question philosophique
-
-:class: note
-
-Tout algorithme peut être exprimé sous forme de programme. 
-
-Mais est-ce que derrière chaque programme se cache un algorithme ?
-
-```` 
--->
-
-
 ## Exercices
 
 ````{exercise} Jeu de la devinette 🔌
@@ -214,8 +201,7 @@ Comparer avec les solutions trouvées par vos camarades de classe.
 ````
 
 
-````{admonition} Ai-je compris ?
-:class: attention
+````{eval} 
 
 1. Je sais lire et appliquer un algorithme, c’est-à-dire que je peux déduire le résultat que me donnera un algorithme à partir d’un jeu de données particulier.
 

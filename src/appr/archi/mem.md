@@ -217,7 +217,8 @@ Cette bascule va stocker son entrée $D$ et la propager sur sa sortie $Q$ unique
 
 Testez cette bascule. Réglez l'entrée de données $D$ à 1 ou 0 et observez comme la bascule ne réagit pas : sa sortie $Q$ reste telle quelle. Donnez ensuite une impulsion en cliquant sur l'entrée $Horloge$ et voyez comme la valeur de $D$ est maintenant stockée sur la bascule.
 
-````{dropdown} Pour aller plus loin
+````{togofurther} 
+
 Pour aller plus loin, une vidéo de résumé qui parle aussi des bascules et des registres :
 
 ```{youtube} I0-izyq6q5s
@@ -225,7 +226,8 @@ Pour aller plus loin, une vidéo de résumé qui parle aussi des bascules et des
 ````
 
 
-`````{admonition} Exercice 6 : stocker deux bits
+`````{exercise} Stocker deux bits
+
 Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$, et, d'autre part, le **ET** de ces deux mêmes entrées. À l'aide de bascules D, complétez le circuit de manière à ce qu'il stocke ces deux valeurs calculées lors d'un coup d'horloge et les sorte sur les sorties $P$ et $Q$, respectivement. Faites finalement en sorte que le signal $Reset$, si activé, réinitialise les bascules à 0. Vérifiez qu'une fois les valeurs stockées par les bascules, des changements sur les entrées $X$ et $Y$ n'aient pas d'effet direct sur $P$ et $Q$.
 
 ```{logic}
@@ -304,7 +306,8 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 `````
 
 
-`````{admonition} Exercice 7 : signal alternatif
+`````{exercise} Signal alternatif
+
 À l'aide d'une bascule, créez un circuit avec une sortie $Q$ qui s'inverse à chaque coup d'horloge.
 
 ```{logic}
@@ -351,7 +354,8 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 `````
 
 
-`````{admonition} Exercice 8 : jeu de fréquences
+`````{exercise} Jeu de fréquences
+
 Observez le circuit ci-dessous. L'horloge principale $A$ fonctionne ici toute seule et produit un coup d'horloge par seconde (elle a donc une fréquence d'un hertz — 1 Hz). Que pouvez-vous dire des signaux $B$ et $C$ par rapport au signal $A$ ? Comment expliquer cela avec ce que vous savez des bascules ? (Pour simplifier, le délai de propagation est ici presque nul.)
 
 Vous pouvez mettre l'animation en pause et exécuter chaque transition pas à pas pour mieux comprendre ce qui se passe.
@@ -575,26 +579,10 @@ Ce circuit fonctionne ainsi : au début du calcul, on réinitialise les bascul
 
 On réalise ici l'importance du coup d'horloge : si les bascules stockaient immédiatement la valeur livrée par l'ALU sans attendre le coup d'horloge, on retrouverait presque sans délai cette valeur sur la sortie des bascules et donc… à l'entrée $A$ de l'ALU, qui recalculerait immédiatement la somme de cette valeur et de l'entrée $B$, livrerait le résultat sur la sortie vers les bascules, qui feraient à nouveau la propagation immédiate de ceci sur leurs sorties et sur l'entrée $A$ de l'ALU, etc. — le système s'emballerait. Le signal d'horloge veille à ce que l'opération de stockage et de propagation soit coordonnée et se passe au bon moment.
 
-`````{admonition} Exercice 9 : additions avec bascules
+`````{exercise} Additions avec bascules
+
 Suivez la procédure décrite ci-dessus pour effectuer l'addition $1 + 4 + 5 + 3 = 13$.
 `````
-
-
-<!-- TODO avons-nous besoin de cet exercice?
-`````{admonition} Exercice 10 : bit de dépassement
-Un problème avec le circuit actuel est qu'en cas de dépassement de capacité, (décrire problème du carry, comment s'en souvenir? circuit à modifier)
-
-ajouter circuit de départ, mêne qu'en haut mais modifiable
-
-````{dropdown} Corrigé
-La solution consiste à stocker aussi le bit de dépassement $V$ au sortir de l'ALU à chaque coup d'horloge. Pour cela, il nous faut ajouter une nouvelle bascule, dont l'entrée récupère la sortie $V$ de l'ALU et dont l'horloge et le _reset_ dont les mêmes signaux que pour les autres bascules.
-
-montrer circuit corrigé
-````
-`````
--->
-
-
 
 ## Récapitulatif
 

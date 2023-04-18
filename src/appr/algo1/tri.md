@@ -1,6 +1,5 @@
 
-````{admonition} Matière à réfléchir. Bibliothèque inutile
-:class: hint
+````{thinkingmatter} Matière à réfléchir. Bibliothèque inutile
 
 Imaginez une bibliothèque scolaire un peu spéciale : les livres n’y sont pas rangés par ordre alphabétique ! Ils sont bien rangés sur des étagères, mais sans aucune logique particulière. Vous entrez dans cette bibliothèque un peu spéciale et vous vous mettez à chercher l’ouvrage ***<span style="color:rgb(13, 204, 166)">Le Guide du voyageur galactique.</span>***
 
@@ -104,8 +103,7 @@ La solution est donnée dans la suite du chapitre et est illustrée dans la Figu
 ```
 ````
 
-````{admonition} Anecdote
-:class: hint
+````{didyouknow}
 
 Vous passez trop de temps à chercher vos affaires ? Pensez à mieux les trier. Le temps perdu à ranger vos affaires sera bien inférieur à celui que vous passerez à les chercher plus tard.
 
@@ -182,8 +180,8 @@ Ces résultats sont valables pour cette configuration en particulier. Si on trie
 ````
 
 
-````{admonition} Le saviez-vous ? Tri stupide
-:class: hint
+````{didyouknow} Tri stupide
+
 
 Il existe un algorithme, **Tri de Bogo** (ou *Bogosort*), aussi nommé le *tri lent* ou encore le *tri stupide*. C’est un tri qui génère différentes permutations des éléments de la liste et s’arrête lorsque la configuration obtenue par hasard est triée. A votre avis, combien d’opérations prend cet algorithme en moyenne ?
 
@@ -198,16 +196,14 @@ La qualité d’un {glo}`algo|algorithme` dépend de la propriété que l’on s
 
 ***<span style="color:rgb(13, 204, 166)">La vitesse d’un {glo}`algo|algorithme` dépend également des {glo}`data|données` en {glo}`input|entrée`</span>***. Selon la configuration initiale des {glo}`data|données` en {glo}`input|entrée` (correspond à la ligne du haut de la <a href="#fig-algos-tri">Figure **Algorithmes de tri**</a>), un {glo}`algo|algorithme` « rapide » peut devenir « lent » et *vice versa*. Il faut savoir que les {glo}`algo|algorithmes` vus jusqu’ici sont tous des {glo}`algo|algorithmes` lents (nous verrons un {glo}`algo|algorithme` de tri rapide ultérieurement).
 
-````{admonition} Le saviez-vous ? Tri trop lent
-:class: hint
+````{didyouknow} Tri trop lent
 
 Pour trier 1 million d’éléments, selon l’algorithme choisi, cela peut prendre de 20 millions à 1 billion d’opérations. Si chaque opération prenait 1 microseconde (10<sup>-6</sup> s) à s’exécuter, il faudrait 20 secondes pour trier 1 million d’éléments si l'algorithme est efficace. Par contre, pour un des algorithmes ci-dessus, cela pourrait prendre 11 jours !  
 
 ````
 
 
-````{admonition} Pour aller plus loin
-:class: note
+````{togofurther}
 
 Imaginer que les quatre éléments d’une liste sont triés dans le sens inverse de ce que l’on souhaite (ils sont placés du plus grand au plus petit). Trier la liste selon les trois algorithmes de tri vus précédemment : le tri par insertion, le tri par sélection et le tri à bulles. 
 
@@ -253,8 +249,7 @@ Analyser les œuvres cubistes de Piet Mondrian. Trouver un algorithme qui permet
 ````
 
 
-````{admonition} Ai-je compris ?
-:class: attention
+````{eval}
 
 1. Je sais qu’il existe plusieurs manières différentes de résoudre un problème.
 

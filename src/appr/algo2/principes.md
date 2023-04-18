@@ -2,8 +2,7 @@
 # Terminaison et complexité 
 
 
-````{admonition} Matière à réfléchir. Compte à rebours
-:class: attention
+````{thinkingmatter} Compte à rebours
 
 Voici une version naïve du compte à rebours des secondes pour le passage du Nouvel An :
 
@@ -98,8 +97,7 @@ Dans la version ci-dessus, si l’utilisateur entre une valeur plus grande que 1
 
 En programmant, nous devons nous assurer que nos programmes se terminent dans tous les cas, autrement il ne seront pas utilisables. Il ne suffit pas de compter sur la bienveillance des utilisateurs. 
 
-````{admonition} Le saviez-vous ? Conjecture de Syracuse
-:class: hint
+````{didyouknow} Conjecture de Syracuse
 
 De nos jours, on ne sait toujours pas si ce programme termine pour chaque entrée n. Ce problème est connu sous le nom la ***<span style="color:rgb(13, 204, 166)">conjecture de Collatz</span>*** ou ***<span style="color:rgb(13, 204, 166)">la conjecture de Syracuse</span>*** :
 
@@ -118,8 +116,8 @@ def Collatz(n) :
 
 ## Principe de complexité
 
-````{admonition} Matière à réfléchir. Record de vitesse
-:class: attention
+````{thinkingmatter} Record de vitesse
+
 On souhaite comparer deux algorithmes qui permettent de résoudre le même problème, afin d’utiliser l’algorithme qui permet de résoudre le problème plus rapidement. Mais comment pourrait‑on calculer la vitesse d’un algorithme ?
 ````
 
@@ -131,15 +129,13 @@ On pourrait croire qu’il suffit de programmer un algorithme et de chronométre
 
 Pour mesurer le temps d’exécution (ou la vitesse) d’un algorithme, il existe un critère plus objectif : le **<span style="color:rgb(89, 51, 209)">nombre d’instructions élémentaires</span>**.  De manière formelle et rigoureuse, on ne parle pas d’efficacité, mais plutôt de la **<span style="color:rgb(89, 51, 209)">complexité d’un algorithme</span>**, qui est en fait contraire à son efficacité. L’analyse de la complexité d’un algorithme étudie la quantité de ressources, par exemple de temps, nécessaires à son exécution.
 
-```{admonition} Le saviez-vous ? Espace-temps et énergie
-:class: hint
+```{didyouknow} Espace-temps et énergie
 
 Nous allons surtout étudier la complexité des algorithmes en rapport avec le temps. Mais la complexité d’un algorithme peut également être calculée en rapport avec toutes les ressources qu’il utilise, par exemple des ressources d’**espace en mémoire** ou de **consommation d’énergie**. 
 
 ```
 
-````{admonition} Ai-je compris ?
-:class: attention
+````{eval}
 
 1. Je sais que l’on doit garantir la terminaison d’un algorithme.
 

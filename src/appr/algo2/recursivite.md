@@ -43,8 +43,7 @@ La fusion de tableaux **déjà triés**, par rapport à des tableaux non-triés,
 Chaque étape de la phase de fusion consiste à comparer deux éléments `n` fois, autant de fois qu’il y a d’éléments à fusionner. Le temps de calcul grandit donc linéairement en fonction de la taille du tableau `n` (plus il y a d'éléments dans le tableau, plus la fusion prend du temps). En tout il y a besoin de `log(n)` étapes (fusion deux par deux), dont chacune prend un temps qui dépend de `n`, ce qui nous donne un ordre de complexité **linéarithmique**.
 
 
-````{admonition} Pour aller plus loin
-:class: attention
+````{togofurther} 
 
 Même si le tri rapide et le tri fusion ont la même complexité temporelle, c'est-à-dire qu'ils prennent un temps comparable pour trier des données, le tri rapide prend beaucoup moins de place en mémoire. On dit qu'il a une plus petite **<span style="color:rgb(89, 51, 209)">« complexité spatiale »</spans>**.
 
