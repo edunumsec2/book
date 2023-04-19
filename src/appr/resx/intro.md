@@ -35,11 +35,10 @@ align: center
 Image tirée de l'article proposant de réaliser un réseau décentralisé. Baran, *On Distributed Communications: I. Introduction to distributed communications networks*, RAND CORP CALIF, 1964. disponible [ici](https://www.rand.org/pubs/research_memoranda/RM3420.html). Cette image illustre la différence entre un réseau centralisé (à gauche), dans lequel toutes les communications passent par un point central, et un réseau distribué (droite), dans lequel tous les noeuds
 ont plus ou moins la même importance.
 Le réseau du milieu représente un intermédiaire décentralisé, entre le réseau complètement centralisé de gauche et le réseau distribué de droite
-```
 
 ```
 ```
-
+```
 Les universitaires américains ont été associés à la conception de ce réseau et l'ont utilisé pour partager des informations et des ressources entre universités.
 Ainsi est né Internet, par une association entre universitaires attachés surtout à la libre circulation de l'information et des militaires aux visées plutôt
 sécuritaires. Dès les années 70, le mouvement hippie, séduit par les possibilités d'auto-organisation et la philosophie non hiérarchique d'Internet

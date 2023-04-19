@@ -102,7 +102,7 @@ for a in addresses:
 
 Avec le développement d'Internet, il est vite devenu clair que le nombre de machines connectées à Internet allait dépasser le nombre d'adresses IP différentes, et c'est pourquoi un nouveau type d'adressage a été développé dès les années 90, IPv6 (Internet Protocol, version 6). Il a été décidé de coder les adresses IP sur 128 bits. Plutôt que
 de les représenter avec 16 nombres entre 0 et 255, il a été décidé de coder en 8 nombres hexadécimaux
-entre 0000 et FFFF. Chaque digit de 0 à F représente ainsi 4 bits.
+entre 0000 et FFFF. Chaque chiffre de 0 à F représente ainsi 4 bits, et chaque nombre de 4 chiffres hexadécimaux représente donc $4\cdot 4 = 16$ bits. En en prenant 8, on arrive bien à $8\cdot 16 = 128$ bits. 
 
 Par exemple ```4E3F.DEA7.409B.412C.2516.4A2B.2CFE.1282``` pourrait constituer une adresse IPv6 valide. Elle est en effet
 constituée de 8 nombres à quatre chiffres hexadécimaux.
