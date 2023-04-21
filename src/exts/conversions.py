@@ -1,10 +1,13 @@
 from svglib.svglib import svg2rlg
 from reportlab.graphics import renderPDF
+import cairosvg 
+
 from PIL import Image
 
 def svg2pdf(svg_file, pdf_file):
-    drawing = svg2rlg(svg_file)
-    renderPDF.drawToFile(drawing, pdf_file)
+    cairosvg.svg2pdf(url=svg_file,write_to=pdf_file)
+    #drawing = svg2rlg(svg_file)
+    #renderPDF.drawToFile(drawing, pdf_file)
 
 def gif2pdf(gif_file, pdf_file):
     img = Image.open(gif_file)
