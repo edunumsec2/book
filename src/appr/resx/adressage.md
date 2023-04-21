@@ -50,26 +50,27 @@ Afin de rendre ces adresses plus lisibles pour les humains, on décompose d'habi
 quatre groupes de 8 bits séparés par un point. Chaque groupe de 8 bits peut alors être représenté comme un nombre décimal
 entre 0 et 255 ($2^8-1$).
 
-L'exemple suivant montre comment trouver la représentation binaire, d'un tuple de 4 nombres décimaux. L'adresse montrée est
-`128.233.53.23`
-
-```{codeplay}
-addr = (128, 233, 53, 23)
-
-print(*addr, sep='.')
-for i in addr:
-    print(f'{i:08b}.', end='')
-```
-
-Le code suivant montre la transformation d'un tuple de 4 nombres binaires en nombres décimaux, séparés par un point (`.`)
-
-```{codeplay}
-addr = (0b1111_1111, 0b0001_1111, 0b0000_0011, 0b0000_0000)
-
-for i in addr:
-    print(i, end='.')
-```
-
+% L'exemple suivant montre comment trouver la représentation binaire, d'un tuple de 4 nombres décimaux. L'adresse montrée est
+% `128.233.53.23`
+% 
+% 
+% ```{codeplay}
+% addr = (128, 233, 53, 23)
+% 
+% print(*addr, sep='.')
+% for i in addr:
+%     print(f'{i:08b}.', end='')
+% ```
+% 
+% Le code suivant montre la transformation d'un tuple de 4 nombres binaires en nombres décimaux, séparés par un point (`.`)
+% 
+% ```{codeplay}
+% addr = (0b1111_1111, 0b0001_1111, 0b0000_0011, 0b0000_0000)
+% 
+% for i in addr:
+%     print(i, end='.')
+% ```
+% 
 ```{exercise}
 Lesquelles des adresses suivantes sont des adresses IP valides:
 1. ```240.264.23.2```
@@ -78,25 +79,26 @@ Lesquelles des adresses suivantes sont des adresses IP valides:
 1. ```205.233.12.23```
 
 ```
-
-Pour répondre à une telle question automatiquement nous pourrions ajouter des tests comme celui-ci.
-
-```{codeplay}
-addresses = ((240, 264, 23, 2),
-             (123, 8, 12, 2, 34), 
-             (123, 23, 2),
-             (205, 233, 12, 23))
-
-for a in addresses:
-    print(*a, sep='.', end='\t')
-    if len(a) != 4:
-        print('erreur: nombre de composants incorrect')
-        continue
-    if max(a) > 255:
-        print('erreur: composant supérieur à 255')
-        continue
-    print('addresse IP valide')
-```
+% 
+% Pour répondre à une telle question automatiquement nous pourrions ajouter des tests comme celui-ci.
+% 
+% ```{codeplay}
+% addresses = ((240, 264, 23, 2),
+%              (123, 8, 12, 2, 34), 
+%              (123, 23, 2),
+%              (205, 233, 12, 23))
+% 
+% for a in addresses:
+%     print(*a, sep='.', end='\t')
+%     if len(a) != 4:
+%         print('erreur: nombre de composants incorrect')
+%         continue
+%     if max(a) > 255:
+%         print('erreur: composant supérieur à 255')
+%         continue
+%     print('addresse IP valide')
+% ```
+% 
 
 ### Version 6 (IPv6)
 
