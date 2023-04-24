@@ -486,6 +486,9 @@ def depart_admonition_html(self, node):
     self.depart_admonition(node)
 
 
+
+
+
 def setup(app):
     app.add_directive("exercise", Exercise)
     app.add_directive("solution", Solution)
@@ -500,6 +503,7 @@ def setup(app):
     app.add_directive("note", Note)
     app.add_directive("torecall", ToRecall)
     app.add_directive("document", HistoricDocument)
+
 
     # good for latex compilation but not for html...
 

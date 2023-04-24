@@ -1,5 +1,6 @@
-````{admonition} Matière à réfléchir. Lieu mystère
-:class: hint
+# Des algorithmes aux programmes
+
+````{thinkingmatter} Matière à réfléchir. Lieu mystère
 
 Pensez à un lieu connu, qui se trouve à proximité. Ecrivez les étapes à suivre pour s’y rendre, sans mentionner le lieu. Vous ne pouvez utiliser que les instructions : **<span style="color:rgb(89, 51, 209)">avancer</span>**, **<span style="color:rgb(89, 51, 209)">tourner à gauche</span>** et **<span style="color:rgb(89, 51, 209)">tourner à droite</span>**.
 
@@ -12,8 +13,6 @@ Demandez à vos camarades de classe de suivre ces instructions. Sont-ils arrivé
 [Optionnel] Imaginez que votre camarade peut uniquement **<span style="color:rgb(89, 51, 209)">avancer de 1m tout droit</span>** et **<span style="color:rgb(89, 51, 209)">tourner de 15 degrés</span>**. Reformulez votre solution en utilisant en plus le mot clé **<span style="color:rgb(89, 51, 209)">répéter (for)</span>**.
 
 ````
-
-# Des algorithmes aux programmes
 
 Une fois que l’on a déterminé le meilleur {glo}`algo|algorithme` à utiliser, pour l'automatiser, il faut le retranscrire dans un {glo}`programme|programme` qu’une machine peut comprendre. Nous allons détailler ce processus pour l’algorithme du <a href="../algorithmes-classiques/eleve.html#tri-selection">**<span style="color:rgb(89, 51, 209)">tri par sélection</span>**</a>. 
 
@@ -143,7 +142,7 @@ rect = [3,4,1,2,6,5]
 print(tri_selection(rect))
 ```
 
-En traduisant les étapes intermédiaires du tri par sélection en des lignes de code, nous avons automatisé l'algorithme. Nous l'avons trsncrit en un programme informatique qui peut être exécuté sur une machine.
+En traduisant les étapes intermédiaires du tri par sélection en des lignes de code, nous avons automatisé l'algorithme. Nous l'avons transcrit en un programme informatique qui peut être exécuté sur une machine.
 
 <!-- ````{admonition} Question philosophique
 
@@ -214,8 +213,7 @@ Comparer avec les solutions trouvées par vos camarades de classe.
 ````
 
 
-````{admonition} Ai-je compris ?
-:class: attention
+````{eval} 
 
 1. Je sais lire et appliquer un algorithme, c’est-à-dire que je peux déduire le résultat que me donnera un algorithme à partir d’un jeu de données particulier.
 

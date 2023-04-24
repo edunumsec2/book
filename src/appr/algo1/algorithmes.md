@@ -17,7 +17,6 @@ align: left
 **Différence entre un algorithme et un programme.** </br> Un algorithme doit être compréhensible par un humain, alors qu'un programme est écrit de façon à ce qu'il soit compréhensible par une machine.
 ```
 
-
 ## Résolution d'un problème par étapes
 
 Un mode d’emploi, ou une recette, décrit les **<span style="color:rgb(89, 51, 209)">étapes</span>** à suivre pour arriver à une solution. Dans le cas d'une recette de cuisine, la préparation des ingrédients, leur cuisson et leur présentation sont différentes étapes que l'on peut suivre pour réaliser un plat. Prenons un cas précis : *<span style="color:rgb(13, 204, 166)">faire une omelette</span>*. Pour chaque étape de la préparation de l’omelette, il faut prévoir une marche à suivre suffisamment détaillée, afin que la personne qui suit la recette arrive au résultat souhaité. Dans le cas de l’omelette, les opérations pourraient être (voir figure ci-dessous) : 
@@ -26,7 +25,6 @@ Un mode d’emploi, ou une recette, décrit les **<span style="color:rgb(89, 51,
 2. Mélanger les œufs jusqu’à obtenir un mélange homogène.
 3. Cuire le mélange d’œufs dans une poêle à température moyenne.
 4. Lorsque cuite, glisser l’omelette dans une assiette.
-
 
 ```{figure} media/Omelette.png
 ---
@@ -39,19 +37,12 @@ align: left
 
 ```
 
-<!-- ```{image} media/omelette.png
-:width: 700
-:height: 200
-```
-**Un algorithme est un peu comme une recette de cuisine.** Cet exemple illustre les opérations à suivre pour la réalisation d’une omelette. -->
+Dans le cas de la recette d'une omelette, nous avons décomposé la marche à suivre en étapes à réaliser dans un certain ordre. Il en est de même pour un algorithme. Pour résoudre un problème, il faut d'abord **<span style="color:rgb(89, 51, 209)">décomposer le problème en sous-problèmes</span>** que l'on *sait résoudre*. La solution de chaque sous-problème donne lieu à une étape qu'il faudra exécuter pour arriver à un résultat. Voici les sous-problèmes que certaines étapes ci-dessus permettent de résoudre. Afin d'extraire le contenu comestible de l'œuf, il faut casser les œufs. Pour que l'omelette ait une jolie couleur uniforme, il faut mélanger le jaune et le blanc d'œuf. Cette étape ne serait pas du tout pertinente si le problème que l'on essaie de résoudre est la préparation d'un œuf au plat. *<span style="color:rgb(13, 204, 166)">L’algorithme décrit donc toutes les opérations qu'il faut effectuer pour arriver à ce résultat</span>*. Nous allons ainsi définir l’algorithme comme **<span style="color:rgb(89, 51, 209)">une suite d’opérations qui permettent de résoudre un problème</span>**. 
+
+Le langage utilisé pour écrire un programme doit être extrêmement précis, sans quoi une machine ne pourrait pas le comprendre. Nous avons vu qu'un algorithme n'a pas besoin d'être compris par une machine, mais seulement par les humains. Ainsi, le langage que l'on va utiliser pour exprimer un algorithme sera plus libre que celui utilisé pour coder un programme. Ce langage **peut varier d'une personne à l'autre** et se rapproche dans notre cas de la langue française, comme le montre cet exemple :
 
 
-Dans le cas de la recette d'une omelette, nous avons décomposé la marche à suivre en étapes à réaliser dans un certain ordre. Il en est de même pour un algorithme. Pour résoudre un problème, il faut d'abord **<span style="color:rgb(89, 51, 209)">décomposer le problème en sous-problèmes</span>** que l'on *sait résoudre*. La solution de chaque sous-problème donne lieu à une étape qu'il faudra exécuter pour arriver à un résultat. Voici les sous-problèmes que certaines étapes ci-dessus permettent de résoudre. Afin d'extraire le contenu édible de l'œuf, il faut casser les œufs. Pour que l'omelette ait une jolie couleur uniforme, il faut mélanger le jaune et le blanc d'œuf. Cette étape ne serait pas du tout pertinente si le problème que l'on essaie de résoudre est la préparation d'un œuf au plat. *<span style="color:rgb(13, 204, 166)">L’algorithme décrit donc toutes les opérations qu'il faut effectuer pour arriver à ce résultat</span>*. Nous allons ainsi définir l’algorithme comme **<span style="color:rgb(89, 51, 209)">une suite d’opérations qui permettent de résoudre un problème</span>**. 
-
-Le langage utilisé pour écrire un programme doit être extrêment précis, sans quoi une machine ne pourrait pas le comprendre. Nous avons vu qu'un algorithme n'a pas besoin d'être compris par une machine, mais seulement par les humains. Ainsi, le langage que l'on va utiliser pour exprimer un algorithme sera plus libre que celui utilisé pour coder un programme. Ce langage **peut varier d'une personne à l'autre** et se rapproche dans notre cas de la langue française, comme le montre cet exemple :
-
-
-```
+```{code-block}
 Liste Nombres           # la variable Nombres contient une liste de nombres
 n ← longueur(Nombres)   # la variable n contient le nombre d'éléments dans Nombres
 i ← 1                   # la variable i contient 1 pour commencer
@@ -59,7 +50,7 @@ Résultat ← 0            # la variable Résultat contient 0 pour commencer
 
 Répéter Pour i ← 1 à n  # i prend la valeur de 1, puis 2, puis 3, jusqu'à n    
     Résultat ← Résultat + Nombres[i]
-                        # Résultat vaut la somme de lui-même avec l'i-ème élément de Nombres
+                        # Résultat est incrémenté de l'i-ème élément de Nombres
 Fin Répéter             # quand i vaut n l'algorithme se termine
 
 Retourner Résultat      # la solution se trouve dans Résultat 
@@ -91,12 +82,10 @@ Lisez bien l'algorithme présenté ci-dessus. Quel problème cet algorithme perm
 
 ````
 
-``````{solution} 
-`````{htmlonly}
-
+``````{htmlonly} 
+`````{solution}
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
-`````
 
 Pour répondre à cette problématique il faut se poser la question suivante : que contient la variable *Résultat* à la fin de l'algorithme ? 
 
@@ -118,7 +107,33 @@ align: left
 Cet algorithme permet de calculer la somme des nombres contenus dans une liste (ici la liste Nombres).
 
 ````
+`````
 ``````
+`````{latexonly} 
+````{solution}
+
+Pour répondre à cette problématique il faut se poser la question suivante : que contient la variable *Résultat* à la fin de l'algorithme ? 
+
+Pour commencer, la variable *Résultat* vaut 0. En effet, l'opération Résultat ← 0 *<span style="color:rgb(13, 204, 166)">initialise</span>* *Résultat* à 0. Initialiser une variable veut dire qu'on lui assigne une toute première valeur (une valeur initiale). Dans le cas de *Nombres* qui contiendrait les nombres 4, 5 et 6, après le premier passage dans la boucle *Répéter*, *Résultat* vaut 4. En effet, pour commencer *i* vaut 1 et donc Nombres[i] vaut Nombres[1]. Nombres[1] correspond au premier élément de la liste *Nombres* et vaut 4. L'opération Résultat ← Résultat + Nombres[i], additionne alors 0 et 4 (Résultat + Nombres[i]) et l'opérateur ← stocke cette valeur 4 dans la variable *Résultat*.
+
+Au deuxième passage dans la boucle, *i* vaut 2. On additionne à nouveau *Résultat*, qui maintenant vaut 4, au 2ème élément de *Nombres*, qui vaut 5. Après ce deuxième passage de la boucle, *Résultat* contient 9 (4+5). Finalement, au troisième et dernier passage de la boucle, on additionne cette nouvelle valeur de *Résultat* (ou 9) avec le 3ème élément de Nombres, qui vaut 6. Il s'agit du dernier passage de la boucle, parce que lors de ce passage de la boucle *i* atteint la longuer de la liste *Nombres* (ou 3). À la fin de l'algorithme, *Résultat* vaut ainsi 15.
+
+Il est plus facile de se représenter ces valeurs sous forme de tableau :
+
+```{image} media/Solution0.png
+---
+alt: Valeurs des variables de l'algorithme pour le cas où Nombres contient 1, 2 et 3.
+width: 70%
+align: left
+---
+
+```
+
+Cet algorithme permet de calculer la somme des nombres contenus dans une liste (ici la liste Nombres).
+
+````
+`````
+
 
 Pour comprendre ce que fait l'algorithme ci-dessus, il faut se mettre à la place de la machine. On parle de *<span style="color:rgb(13, 204, 166)">simuler</span>* un algorithme, de faire comme si l'algorithme s'exécutait sur une machine. Pour que ce soit plus concret, on peut imaginer des valeurs fictives pour les variables telles que *Nombres*. Dans la vie réelle, *Nombres* pourra contenir tous les nombres possibles, mais cela ne nous aide pas à comprendre. On imagine alors des nombres précis que *Nombres* pourrait contenir, comme par exemple 4, 5 et 6. Lorsqu'on exécute les opérations de l'algorithme l'une après l'autre, avec des valeurs concrètes, on comprend mieux quel effet ces opérations ont sur les valeurs contenues dans les variables. La simulation de l'algorithme nous permet de saisir **<span style="color:rgb(89, 51, 209)">les calculs</span>** réalisés par cet algorithme, ici une simple somme.
 
@@ -133,9 +148,8 @@ Il y a-t-il des désavantages à automatiser cette tâche ?
 
 ````
 
+``````{htmlonly}
 `````{solution}
-
-
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
@@ -144,7 +158,16 @@ Une caisse enregistreuse ! La caisse enregistreuse calcule la somme des prix d
 Au niveau des avantages, la caisse enregistreuse fait bien moins d'erreurs qu'un humain, elle ne se fatigue pas, elle ne se plaint pas et elle est bien plus rapide.
 
 Au niveau des désavantages, l'automatisation est en général énergivore (avec une empreinte environnementale significative) et provoque une certaine « obsolescence des humains » en les remplaçant dans leur travail pour un moindre coût financier.
+````
+`````
+``````
+`````{latexonly}
+````{solution}
+Une caisse enregistreuse ! La caisse enregistreuse calcule la somme des prix des produits contenus dans un panier (une liste de courses) et nous donne le prix total à payer. Il s'agit d'un exemple parmi d'autres.
 
+Au niveau des avantages, la caisse enregistreuse fait bien moins d'erreurs qu'un humain, elle ne se fatigue pas, elle ne se plaint pas et elle est bien plus rapide.
+
+Au niveau des désavantages, l'automatisation est en général énergivore (avec une empreinte environnementale significative) et provoque une certaine « obsolescence des humains » en les remplaçant dans leur travail pour un moindre coût financier.
 ````
 `````
 
@@ -152,8 +175,7 @@ Au niveau des désavantages, l'automatisation est en général énergivore (avec
 « Chaque étape d’un algorithme doit être définie précisément » (Knuth, 2011). En effet, si on ne décompose pas suffisamment la solution du problème, on peut se retrouver face à une recette inutile, par exemple : prendre des œufs et cuire l'omelette. Cette recette ne nous dit pas vraiment comment procéder pour arriver à faire une omelette...
 
 
-````{admonition} Liens
-:class: hint
+````{related} 
 
 Lorsqu'on sauve un fichier dans un ordinateur, il est stocké dans une mémoire. La mémoire d'un ordinateur pourrait être comparée a une grande commode de tiroirs étiquetés. Ainsi, lorsqu'un fichier est stocké en mémoire, la taille du fichier correspond au nombre de tiroirs qu'il occupe. Si c'est un fichier de texte par exemple, on peut imaginer qu'un tiroir contient un caractère simple (un octet). Si c'est une image en couleur, un pixel de cette image occuperait 3 tiroirs (un octet par couleur rouge, vert et bleu).
 
@@ -196,14 +218,21 @@ Le jeu d’instructions élémentaires dépend du système informatique sur lequ
 A quoi correspondent « les ingrédients d’un algorithme » dans l’exemple de la recette de l’omelette ?
 ````
 
+`````{htmlonly}
 ````{solution}
-
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
  Les données en entrée sont les œufs, les opérations sont les étapes 1 à 4 de la recette et finalement le résultat en sortie est l’omelette. On peut considérer le matériel culinaire (bol, fourchette, poêle, spatule) comme du matériel informatique à notre disposition, capable de traiter des données (œufs). En effet, on peut cuire plein d’autres aliments dans une poêle.
 ```
 ````
+`````
+````{latexonly}
+```{solution}
+ Les données en entrée sont les œufs, les opérations sont les étapes 1 à 4 de la recette et finalement le résultat en sortie est l’omelette. On peut considérer le matériel culinaire (bol, fourchette, poêle, spatule) comme du matériel informatique à notre disposition, capable de traiter des données (œufs). En effet, on peut cuire plein d’autres aliments dans une poêle.
+```
+````
+
 
 
 ````{exercise} Échange de deux variables
@@ -214,8 +243,8 @@ Conseil : cela aide de se mettre à la place de la machine et de représenter 
 
 ````
 
+``````{htmlonly}
 `````{solution}
-
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
@@ -252,7 +281,43 @@ Nous avons donc la confirmation que la solution obtenue résout correctement not
 
 ````
 `````
+``````
+`````{htmlonly}
+````{solution}
 
+Pour commencer, la variable X contient 1 et la variable Y contient 2. Une solution naïve consisterait à écrire l’algorithme suivant :
+
+```
+X ← Y
+Y ← X
+```
+
+Cet algorithme met la valeur de Y dans X, puis la valeur de X dans Y. Représentons maintenant ces deux variables par des tiroirs étiquetés. Le premier tiroir s’appelle X et contient 1, le deuxième s'appelle Y et contient 2 : 
+
+<img src="media/Swap0.png" width="25%"> &nbsp;  
+
+Après la première opération où on met la valeur de Y dans la variable X on se retrouve avec cette situation, où la valeur contenue dans Y écrase la valeur qui était contenue dans X :
+
+<img src="media/Swap1.png" width="25%"> &nbsp;   
+
+En effet, un tiroir ne peut contenir qu'une seule valeur ! Nous n’avons donc plus accès à la valeur qui était stockée dans la variable X avant d'y mettre celle de Y. Pour remédier à ce problème, il faut penser à utiliser une variable temporaire Z qui permet de se souvenir de la valeur initiale de X. 
+
+Un algorithme correct pour échanger les valeurs de deux variables est :
+
+```
+Z ← X
+X ← Y
+Y ← Z
+```
+
+Si on dessine l’état des variables après chacune de ces opérations dans des tiroirs, voici ce qu’on obtient :
+
+<img src="media/Swap2.png" width="40%"> &nbsp;  
+
+Nous avons donc la confirmation que la solution obtenue résout correctement notre problème d'échange des valeurs de deux variables.
+
+````
+`````
 
 ## Exercices
 
@@ -313,16 +378,16 @@ Vérifier la solution que vous avez trouvée en représentant chaque variable av
 ````
 
 
-````{admonition} Ai-je compris ?
-:class: hint
+
+```{eval} 
 
 1. Je connais la différence entre un algorithme et un programme.
 
 2. Je sais simuler un algorithme : je représente les valeurs des variables après chaque opération de l'algorithme.
 
-2. Je sais formuler un algorithme : je décompose le problème en sous-problèmes et je décris les opérations qui permettent de résoudre chaque sous-problème.
+3. Je sais formuler un algorithme : je décompose le problème en sous-problèmes et je décris les opérations qui permettent de résoudre chaque sous-problème.
 
-````
+```
 
 
 

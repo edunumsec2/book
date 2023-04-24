@@ -82,7 +82,7 @@ if tags.has('latex_mode'):
 
     
 if latex_mode:
-    exclude_patterns = ['prog1', 'prog2', 'hist', 'algo2', 'projets', 'archi']
+    exclude_patterns = ['prog1', 'prog2', 'hist', 'algo2', 'projets', 'archi', 'rep-info', 'resx']
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -179,13 +179,14 @@ today_fmt = '%d %B %Y' # date format
 
 latex_elements = {
     'papersize': 'a4paper',
-    'preamble': r'\input{../../../src/static/latex/customize}',
+    'preamble': r'\input{../../../src/static/latex/customize} \fvset{fontsize=\small}',
     'pxunit': '0.5bp',
     'figure_align': 'H',
     'maketitle':  r'\maketitle',
     # some command redefinitions only take effect after the first \tableofcontents, so we add this hook
     'tableofcontents': '\\sphinxtableofcontents\n\n\\input{../../../src/static/latex/customize_doc}\n',
     'pointsize': '11pt',
+    'sphinxsetup' : r'verbatimsep=8pt',
 }
 
 

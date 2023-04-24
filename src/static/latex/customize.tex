@@ -32,6 +32,9 @@
 \definecolor{lapislazuli}{rgb}{0.15, 0.38, 0.61}
 \definecolor{ultraviolet}{RGB}{89, 51, 209}
 \definecolor{ultraturquoise}{RGB}{92, 201, 192}
+\definecolor{bondiblue}{rgb}{0.0, 0.58, 0.71}
+\definecolor{neoncarrot}{rgb}{1.0, 0.64, 0.26}
+\definecolor{radicalred}{rgb}{1.0, 0.21, 0.37}
 
 
 \newcommand{\fon}[1]{\fontfamily{#1}\selectfont}
@@ -39,19 +42,21 @@
 %% specific admonition type - use tcolorbox arguments (or something else) to adapt latex rendering
 % TODO: this is a problem with page breaks, we may want to use activitybox instead
 % (cf. https://tex.stackexchange.com/questions/350316/create-manual-page-break-within-tcolorbox)
-\newenvironment{exercise}[1]{\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=ultraviolet, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{solution}[1]{\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=ultraturquoise, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{microactivity}[1]{\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=darkspringgreen, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{togofurther}[1]{\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=darkviolet, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{important}[1]{\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=red, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{didyouknow}[1]{\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=babyblue, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{reminder}[1]{\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=orange, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{related}[1]{\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=brightturquoise, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{evaluation}[1]{\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=darkgreen, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{thinkingmatter}[1]{\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=beaublue, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{note}[1]{\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=carolinablue, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{torecall}[1]{\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=red, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
-\newenvironment{historicdocument}[1]{\begin{tcolorbox}[fontupper=\fontfamily{phv}, colframe=lapislazuli, colback=llgray, boxrule=2pt]\sphinxstrong{#1}}{\end{tcolorbox}}
+\newenvironment{exercise}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{3pt}}
+\newenvironment{solution}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=ultraturquoise, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
+\newenvironment{microactivity}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
+\newenvironment{togofurther}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
+\newenvironment{important}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=radicalred, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
+\newenvironment{didyouknow}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=neoncarrot, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
+\newenvironment{reminder}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=radicalred, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
+\newenvironment{related}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=neoncarrot, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
+\newenvironment{evaluation}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=radicalred, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
+\newenvironment{thinkingmatter}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
+\newenvironment{note}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=neoncarrot, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
+\newenvironment{torecall}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=radicalred, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
+\newenvironment{historicdocument}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, colframe=neoncarrot, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
+
+
 
 
 
@@ -175,16 +180,17 @@
 \makeatletter
 
 % légende d'images
-\usepackage[width=.8\textwidth, font=small, labelfont=bf]{caption}
+\usepackage[width=.9\textwidth, font=small, labelfont=bf]{caption}
 \DeclareCaptionFont{nohyphen}{\hyphenpenalty=10000 \exhyphenpenalty=10000\relax}
-\captionsetup{font+=nohyphen, aboveskip=8pt, belowskip=8pt}
+\captionsetup{font+=nohyphen, aboveskip=4pt, belowskip=8pt}
 
 % commencer chaque section sur une nouvelle page impaire
 \usepackage{etoolbox}
 \preto\section{  
   
-\ifnum\value{section}>0
+\ifnum\value{section}>-1
 \cleardoublepage
+\vspace{100pt}
 \else
 \fi
 }
