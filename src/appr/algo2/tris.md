@@ -6,9 +6,7 @@ Nous venons de voir que pour rechercher de manière efficace, les données doive
 
 Pour rappel, l'{glo}`algo|algorithme` du <a href="../algo1/cours/2_trie_cherche_trouve/eleve.html#tri-selection">**<span style="color:rgb(89, 51, 209)">Tri par sélection</span>**</a> parcourt le tableau à la recherche des plus petits éléments. Afin de trouver le plus petit élément du tableau, il faut commencer par parcourir tous les éléments du tableau. Cette opération prend `cn` {glo}`instruction|instructions` : `c` instructions pour l’accès et la comparaison des éléments du tableau, multiplié par le nombre d’éléments `n`. Il faut ensuite trouver le plus petit élément des éléments restants `n-1`, et ainsi de suite. Concrètement, on va parcourir jusqu'à `n` éléments, `n` fois (pour chacun des éléments). La complexité du Tri par sélection est donc proportionnelle à `n * n` (`n`<sup>`2`</sup>), on parle de complexité **<span style="color:rgb(89, 51, 209)">quadratique</span>**. 
 
-`````{admonition} Pour aller plus loin
-:class: note
-
+`````{togofurther} 
 
 ````{dropdown} <span style="color:grey">Si vous souhaitez connaître les détails du calcul de complexité, cliquez pour lire ce qui suit.</span>
 :animate: fade-in-slide-down
@@ -172,8 +170,7 @@ La première question que l’on se pose lorsqu’on analyse un algorithme est s
 
 
 
-```{admonition} Le saviez-vous ? Compliqué = complexe ?
-:class: hint
+```{didyouknow} Compliqué = complexe ?
 
 Est-ce que *<span style="color:rgb(89, 51, 209)">complexe</span>* veut dire la même chose que *<span style="color:rgb(89, 51, 209)">compliqué</span>* ? Une chose compliquée est difficile à saisir ou à faire, alors qu’une chose complexe est composée d’éléments avec de nombreuses interactions imbriquées. 
 
@@ -303,8 +300,7 @@ Si on trie un tableau qui est en fait déjà trié avec le tri par insertion, la
 Une analyse complète d’un algorithme consiste à calculer la complexité non seulement dans le **<span style="color:rgb(89, 51, 209)">cas moyen</span>**, mais aussi dans le **<span style="color:rgb(89, 51, 209)">meilleur cas</span>** et dans le **<span style="color:rgb(89, 51, 209)">pire cas</span>**. 
 
 
-````{admonition} Pour aller plus loin
-:class: attention
+````{togofurther}
 
 Une analyse complète va également calculer les constantes qui influencent l’ordre de complexité. Ces constantes ne sont pas importantes lors d’une première analyse d’un algorithme. En effet, les constantes n’ont que peu d’effet pour une grande taille des données `n`, c’est uniquement le terme qui grandit le plus rapidement en fonction de `n` qui compte, et qui figure dans un premier temps dans l’ordre de complexité. Par contre, lorsque l’on souhaite comparer deux algorithmes de même complexité, il faut estimer les constantes et choisir l'algorithme avec une constante plus petite.
 
@@ -362,8 +358,7 @@ Lancer votre programme avec 100000 éléments et comparer le temps obtenu avec v
 ````
 
 
-````{admonition} Ai-je compris ?
-:class: attention
+````{eval}
 
 1. Je sais que grâce à la stratégie algorithmique « diviser pour régner », je ne passe pas mon temps à attendre que l’ordinateur me donne une réponse.
 

@@ -2,8 +2,7 @@
 
 
 
-````{admonition} Pourquoi est-ce important ?
-:class: warning
+````{important} Pourquoi est-ce important ?
 
 L’analyse de complexité des algorithmes nous permet de sélectionner les meilleurs algorithmes pour un problème donné et nous permet de comprendre pourquoi certains problèmes ne peuvent pas être (à ce stade) résolus dans un temps raisonnable.
 
@@ -13,8 +12,7 @@ Pour des problèmes difficiles, s’il est impossible de trouver la solution exa
 
 ````
 
-```{admonition} À retenir
-:class: danger
+```{torecall} À retenir
 
 Dans la pratique, il est important de garantir qu’un algorithme va se **<span style="color:rgb(89, 51, 209)">terminer</span>**.
 
@@ -28,8 +26,7 @@ Un algorithme avec une **<span style="color:rgb(89, 51, 209)">complexité expone
 
 ```
 
-```{admonition} Ai-je compris ?
-:class: hint
+```{eval}
 
 <ol>
 <li>Je sais appliquer l'algorithme de recherche binaire.</li>
@@ -52,8 +49,7 @@ Un algorithme avec une **<span style="color:rgb(89, 51, 209)">complexité expone
 
 
 
-```{admonition} Je veux en savoir plus
-:class: hint
+```{togofurther}
 
 <br>
 

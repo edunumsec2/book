@@ -4,8 +4,11 @@ _build/
 .DS_Store
 .AppleDouble
 .LSOverride
-.vscode
 .docx
+
+# IDEs
+.vscode
+.idea
 
 # Icon must end with two \r
 Icon

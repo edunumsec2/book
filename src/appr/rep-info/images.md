@@ -160,15 +160,15 @@ Image monochrome, pixels et luminance.
 
 Pour accéder à un pixel particulier, il faut indiquer à quelle ligne et à quelle colonne de l'image ce pixel se trouve. Le pixel (0,0) correspondra normalement au pixel de la première ligne et de la première colonne.
 
-```{admonition} Le saviez-vous ? 
-:class: hint
+```{didyouknow} 
+
 Ce mode de fonctionnement est similaire à celui des tableurs pour lesquels il est possible d'accéder à la valeur d'une case en utilisant sa référence. On pourrait d'ailleurs utiliser le formatage conditionnel pour transformer un tableau de valeurs dans un tableur en image matricielle.
 ```
 
 ## Représentation d'une image en couleurs
 
-````{admonition} Anecdote
-:class: hint
+````{didyouknow}
+
 [The Million Dollar Homepage](https://fr.wikipedia.org/wiki/The_Million_Dollar_Homepage) est un site web conçu en 2005 par Alex Tew, un étudiant anglais, dans le but de financer ses études supérieures. La page d'accueil est une grille de 1000 × 1000 pixels. Chaque pixel était vendu 1$ en tant qu'espace publicitaire. Ils ont tous été vendus...
 
 
@@ -454,9 +454,7 @@ En revanche, chaque forme d'une image vectorielle est remplie d'une seule couleu
 
 Les formats vectoriels les plus courants sont Postscript (.ps) et Encapsulé Postscript (.eps), Adobe Illustrator (AI), Portable Document Format (PDF), WMF (format Windows).
 
-```{admonition} Micro-activité ✏️📒
-:class: note
-<!--- <span style="color:green">Niveau débutant</span> -->
+```{micro}
 
 Saisissez le texte suivant dans un éditeur de texte et enregistrer le sous forme de fichier *.svg*. Il vous sera ensuite normalement possible d'ouvrir ce fichier avec un logiciel pour afficher les images.
 
@@ -468,8 +466,8 @@ Modifier le fichier afin de dessiner quatre carrés différents.
 ```
 <br>
 
-```{admonition} Aller plus loin
-:class: note
+```{togofurther}
+
 Identifiez et listez les avantages et les inconvénients du format vectoriel en comparaison avec le système matriciel.
 ```
 
@@ -482,18 +480,13 @@ Identifiez et listez les avantages et les inconvénients du format vectoriel en 
 
 ## Exercices
 
-````{admonition} Exercice 3.7.1. - Définition ✏️📒
-:class: note
-<!--- <span style="color:green">Niveau débutant</span> -->
-
+````{exercise} Définition
 
 Quelle est la définition d’une feuille scannée de largeur 6,5 pouces, de hauteur 9 pouces en 400 dpi ?
 
 ````
 
-````{admonition} Exercice 3.7.2. - Carte graphique ✏️📒
-:class: note
-<!--- <span style="color:orange">Niveau intermédiaire</span> -->
+````{exercise} Carte graphique
 
 1 - Calculer, pour chaque définition d'image et chaque couleur, la taille mémoire nécessaire à l'affichage.
 |  Définition de l'image    |   Noir et blanc | 256 couleurs | 65000 couleurs | True color | 
@@ -525,9 +518,7 @@ C'est la quantité de mémoire vive minimale que nécessite la carte graphique (
 
 ````
 
-````{admonition} Exercice 3.7.3. - Compression ✏️📒
-:class: note
-<!--- <span style="color:orange">Niveau intermédiaire</span> -->
+````{exercise} Compression
 
 1. Une image de couleur a pour format : 360 × 270. Elle est enregistrée en bitmap 8 bits. Quelle est sa taille sur le disque dur (détaillez les calculs) ? 
 
@@ -547,10 +538,7 @@ C'est la quantité de mémoire vive minimale que nécessite la carte graphique (
 
 ````
 
-````{admonition} Exercice 3.7.4. - Appareil photo ✏️📒
-:class: note
-<!--- <span style="color:orange">Niveau intermédiaire</span> -->
-
+````{exercise} Appareil photo
 
 L’appareil numérique FinePix2400Z (Fujifilm) permet la prise de vue avec trois définitions : a) 640x480 pixels ; b) 1280x960 pixels ; c) 1600x1200 pixels.
 
@@ -558,10 +546,7 @@ Calculez la taille de l’image non-compressée pour chaque définition.
 ......
 
 ````
-````{admonition} Exercice 3.7.5. - Pixelisation ✏️📒
-:class: note
-<!--- <span style="color:red">Niveau avancé</span> -->
-
+````{exercise} Pixelisation
 
 Une image numérique de définition 1024×768 mesure 30 cm de large et 20 cm de haut. 
 

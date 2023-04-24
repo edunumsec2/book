@@ -23,7 +23,7 @@ de manière à les rapprocher de leur destination.
 
 ```{figure} media/routing.svg
 ---
-width: 500
+width: 600
 align: center
 ---
 Le routeur regarde le destinataire de chaque paquet qu'il reçoit et le redirige dans la bonne direction vers le prochain routeur ou

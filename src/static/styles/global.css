@@ -107,17 +107,149 @@ body {
     background-color: rgb(92 201 191)!important;
 }
 
+.admonition.important>.admonition-title {
+    background-color: rgb(92 201 191 / 10%)!important;
+}
 
-.admonition.note>.admonition-title {
+.admonition.important {
+    border-left-color: rgb(92 201 191)!important;
+}
+
+.admonition.important>.admonition-title:before {
+    background-color: rgb(92 201 191)!important;
+}
+
+.admonition.togofurther>.admonition-title {
+    background-color: rgb(252 177 3 / 10%)!important;
+}
+
+.admonition.togofurther {
+    border-left-color: rgb(252 177 3)!important;
+}
+
+.admonition.togofurther>.admonition-title:before {
+    background-color: rgb(252 177 3)!important;
+}
+
+.admonition.exercise>.admonition-title {
     background-color: rgb(89 51 209 / 10%)!important;
 }
 
+.admonition.exercise {
+    border-left-color: rgb(89 51 209)!important;
+}
+
+.admonition.exercise>.admonition-title:before {
+    background-color: rgb(89 51 209)!important;
+}
+
+.admonition.micro>.admonition-title {
+    background-color: rgb(89 51 209 / 10%)!important;
+}
+
+.admonition.micro {
+    border-left-color: rgb(89 51 209)!important;
+}
+
+.admonition.micro>.admonition-title:before {
+    background-color: rgb(89 51 209)!important;
+}
+
+.admonition.reminder>.admonition-title {
+    background-color: rgb(92 201 191 / 10%)!important;
+}
+
+.admonition.reminder {
+    border-left-color: rgb(92 201 191)!important;
+}
+
+.admonition.reminder>.admonition-title:before {
+    background-color: rgb(92 201 191)!important;
+}
+
+.admonition.related>.admonition-title {
+    background-color: rgb(252 177 3 / 10%)!important;
+}
+
+.admonition.related {
+    border-left-color: rgb(252 177 3)!important;
+}
+
+.admonition.related>.admonition-title:before {
+    background-color: rgb(252 177 3)!important;
+}
+
+.admonition.eval>.admonition-title {
+    background-color: rgb(89 51 209 / 10%)!important;
+}
+
+.admonition.eval {
+    border-left-color: rgb(89 51 209)!important;
+}
+
+.admonition.eval>.admonition-title:before {
+    background-color: rgb(89 51 209)!important;
+}
+
+.admonition.thinkingmatter>.admonition-title {
+    background-color: rgb(89 51 209 / 10%)!important;
+}
+
+.admonition.thinkingmatter {
+    border-left-color: rgb(89 51 209)!important;
+}
+
+.admonition.thinkingmatter>.admonition-title:before {
+    background-color: rgb(89 51 209)!important;
+}
+
+.admonition.note>.admonition-title {
+    background-color: rgb(92 201 191 / 10%)!important;
+}
+
 .admonition.note {
-    border-left-color: #5933d1ff!important;
+    border-left-color: rgb(92 201 191)!important;
 }
 
 .admonition.note>.admonition-title:before {
-    background-color: #5933d1ff!important;
+    background-color: rgb(92 201 191)!important;
+}
+
+.admonition.torecall>.admonition-title {
+    background-color: rgb(92 201 191 / 10%)!important;
+}
+
+.admonition.torecall {
+    border-left-color: rgb(92 201 191)!important;
+}
+
+.admonition.torecall>.admonition-title:before {
+    background-color: rgb(92 201 191)!important;
+}
+
+
+.admonition.didyouknow>.admonition-title {
+    background-color: rgb(252 177 3 / 10%)!important;
+}
+
+.admonition.didyouknow {
+    border-left-color: rgb(252 177 3)!important;
+}
+
+.admonition.didyouknow>.admonition-title:before {
+    background-color: rgb(252 177 3)!important;
+}
+
+.admonition.document>.admonition-title {
+    background-color: rgb(252 177 3 / 10%)!important;
+}
+
+.admonition.document {
+    border-left-color: rgb(252 177 3)!important;
+}
+
+.admonition.document>.admonition-title:before {
+    background-color: rgb(252 177 3)!important;
 }
 
 

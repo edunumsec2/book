@@ -292,13 +292,15 @@ Ceci nous permet de compléter le circuit lacunaire de début de chapitre pour s
 }
 ```
 
-````{admonition} Exercice 1 : test du sélecteur **OU**/**ET**
+````{exercise} Test du sélecteur **OU**/**ET**
+
 Testez le circuit ci-dessus. Établissez la table de vérité de $Z$ en fonction de $X$, $Y$ et $Op$. À l'aide de la table de vérité, montrez que, lorsque $Op=0$, $Z$ représente bien $X$ **OU** $Y$, et que, lorsque $Op=1$, $Z$ représente bien $X$ **ET** $Y$.
 ````
 
 Nous avons ici construit un circuit qui, grâce à un bit de contrôle $Op$, sélectionne une opération ou une autre à appliquer à ses deux bits d'entrées $X$ et $Y$.
 
-`````{admonition} Exercice 2 : construction d'un sélecteur
+`````{exercise} Construction d'un sélecteur
+
 En réutilisant les principes appliqués ci-dessus, construisez un circuit à deux bits d'entrées $X$ et $Y$ et un bit de contrôle $Op$ qui donnera sur sa sortie $Z$ :
 
  * Le **OU** exclusif de $X$ et $Y$, lorsque $Op=0$ ;
@@ -360,7 +362,8 @@ Voici un circuit qui réutilise le sélecteur de signal et qui fournit à ce sé
 ````
 `````
 
-`````{admonition} Exercice 3 : inverseur conditionnel
+`````{exercise} Inverseur conditionnel
+
 En réutilisant les principes appliqués ci-dessus, construisez un circuit à une entrée $X$ avec un bit de contrôle $Op$ qui donnera sur sa sortie $Z$ :
 
  * $X$ tel quel, lorsque $Op=0$ ;
@@ -475,7 +478,8 @@ La convention utilisée pour la sélection de l'opération est la suivante :
 |  10  |        **OU**       |
 |  11  |        **ET**       |
 
-`````{admonition} Exercice 4 : test de l'ALU
+`````{exercise} Test de l'ALU
+
 Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effectuer l'opération $7 + 2 = 9$. Connectez les 4 bits des entrées et de la sortie à des afficheurs de demi-octet pour vérifier leur fonctionnement. Connectez ensuite une entrée pour le bit de contrôle qui permettra d'effectuer la soustraction avec les mêmes données d'entrée, donc $7 - 2 = 5$.
 
 ```{logic}
@@ -559,7 +563,8 @@ L'ALU a trois sorties en plus, en bas du composant :
  * finalement, la sortie $Z$ (pour _Zero_) vaut 1 lorsque tous les bits de sortie valent 0.
 
 
-`````{admonition} Exercice 5 : une ALU comme comparateur
+`````{exercise} Une ALU comme comparateur
+
 En programmation, c'est fréquent de tester, par exemple dans une condition avec un `if`, si deux valeurs sont égales. Par exemple, ce fragment de code affichera « Ces valeurs sont égales! » uniquement si les deux nombres entiers donnés lors de l'exécution du code sont les mêmes:
 
 ```{codeplay}
@@ -687,8 +692,7 @@ Alernativement, à la place d'utiliser {logicref}`4bit_diff_logic0.{or1,or2,or3}
 
 En résumé, nous avons appris ici ce qu'est une unité arithmétique et logique et avons examiné de plus près comment construire un multiplexeur, un circuit qui est à même de « choisir » parmi plusieurs signaux d'entrées lequel il va propager sur sa sortie. L'ALU est spécialement intéressante, car c'est le premier composant que nous rencontrons qui incarne une des propriétés de base d'un ordinateur, à savoir d'être programmable, en faisant en sorte que l'opération qu'elle effectue dépende d'un signal externe.
 
-````{admonition} Pour aller plus loin
-:class: attention
+````{togofurther}
 
 Notre petite ALU peut aussi faire des calculs en utilisant une représentation signée des nombres entiers. Sur 4 bits, une représentation en complément à deux peut représenter les nombres de $-8$ à $+7$. Il est possible d'utiliser les mêmes afficheurs de demi-octets en mode signé pour effectuer des opérations arithmétiques avec des valeurs négatives, par exemple, ici, $-2 - (-4) = 2$ :
 

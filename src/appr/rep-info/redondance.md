@@ -80,8 +80,8 @@ print('-'*42)
 
 On notera que, pour un coût de taille modeste (un huitième des bits transmis) et un calcul rapide à réaliser (une somme et une comparaison), des erreurs de transmission ponctuelles — celles qui ne portent que sur un nombre de positions impair — sont immédiatement détectables. Cela inclut les erreurs qui porteraient sur le bit de parité lui-même.
 
-````{admonition} Le saviez-vous ?
-:class: note
+````{didyouknow}
+
 Les contrôles de bit de parité peuvent être intégrés aux composants électroniques.
 
 La mémoire vive RAM (*Random Access Memory*) de type ECC (*Error-Correcting Code*) s'appuie sur des bits de contrôle pour détecter, voire corriger, les erreurs de stockage qui pourraient affecter les données ou le code des logiciels en cours d'exécution.
@@ -165,8 +165,8 @@ On notera que les mots 'hat' et 'fer' débouchent sur la même empreinte (3D86),
 On notera que la suppression d'une lettre au texte ("hachage" => C105) ne change pas la longueur de cette simple empreinte
 mais sa valeur ("hachag" => 5C42) et que cette **fonction de hachage** est aussi sensible à la casse ("Hachage" => A1E5).
 
-````{admonition} Le saviez-vous ?
-:class: note
+````{didyouknow}
+
 Même si le hachage d'une information est à dessein relativement rapide en soi,
 des contraintes artificielles provoquant délibéremment la multiplication de ces hachages peuvent être imposées lors de l'ajout des blocs dans une **blockchain**. Cela constitue la preuve de travail (*proof-of-Work*, PoW) des cryptomonnaies que l'on nomme communément **minage des cryptomonnaies**.
 

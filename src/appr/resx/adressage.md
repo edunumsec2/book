@@ -50,26 +50,27 @@ Afin de rendre ces adresses plus lisibles pour les humains, on décompose d'habi
 quatre groupes de 8 bits séparés par un point. Chaque groupe de 8 bits peut alors être représenté comme un nombre décimal
 entre 0 et 255 ($2^8-1$).
 
-L'exemple suivant montre comment trouver la représentation binaire, d'un tuple de 4 nombres décimaux. L'adresse montrée est
-`128.233.53.23`
-
-```{codeplay}
-addr = (128, 233, 53, 23)
-
-print(*addr, sep='.')
-for i in addr:
-    print(f'{i:08b}.', end='')
-```
-
-Le code suivant montre la transformation d'un tuple de 4 nombres binaires en nombres décimaux, séparés par un point (`.`)
-
-```{codeplay}
-addr = (0b1111_1111, 0b0001_1111, 0b0000_0011, 0b0000_0000)
-
-for i in addr:
-    print(i, end='.')
-```
-
+% L'exemple suivant montre comment trouver la représentation binaire, d'un tuple de 4 nombres décimaux. L'adresse montrée est
+% `128.233.53.23`
+% 
+% 
+% ```{codeplay}
+% addr = (128, 233, 53, 23)
+% 
+% print(*addr, sep='.')
+% for i in addr:
+%     print(f'{i:08b}.', end='')
+% ```
+% 
+% Le code suivant montre la transformation d'un tuple de 4 nombres binaires en nombres décimaux, séparés par un point (`.`)
+% 
+% ```{codeplay}
+% addr = (0b1111_1111, 0b0001_1111, 0b0000_0011, 0b0000_0000)
+% 
+% for i in addr:
+%     print(i, end='.')
+% ```
+% 
 ```{exercise}
 Lesquelles des adresses suivantes sont des adresses IP valides:
 1. ```240.264.23.2```
@@ -78,31 +79,32 @@ Lesquelles des adresses suivantes sont des adresses IP valides:
 1. ```205.233.12.23```
 
 ```
-
-Pour répondre à une telle question automatiquement nous pourrions ajouter des tests comme celui-ci.
-
-```{codeplay}
-addresses = ((240, 264, 23, 2),
-             (123, 8, 12, 2, 34), 
-             (123, 23, 2),
-             (205, 233, 12, 23))
-
-for a in addresses:
-    print(*a, sep='.', end='\t')
-    if len(a) != 4:
-        print('erreur: nombre de composants incorrect')
-        continue
-    if max(a) > 255:
-        print('erreur: composant supérieur à 255')
-        continue
-    print('addresse IP valide')
-```
+% 
+% Pour répondre à une telle question automatiquement nous pourrions ajouter des tests comme celui-ci.
+% 
+% ```{codeplay}
+% addresses = ((240, 264, 23, 2),
+%              (123, 8, 12, 2, 34), 
+%              (123, 23, 2),
+%              (205, 233, 12, 23))
+% 
+% for a in addresses:
+%     print(*a, sep='.', end='\t')
+%     if len(a) != 4:
+%         print('erreur: nombre de composants incorrect')
+%         continue
+%     if max(a) > 255:
+%         print('erreur: composant supérieur à 255')
+%         continue
+%     print('addresse IP valide')
+% ```
+% 
 
 ### Version 6 (IPv6)
 
 Avec le développement d'Internet, il est vite devenu clair que le nombre de machines connectées à Internet allait dépasser le nombre d'adresses IP différentes, et c'est pourquoi un nouveau type d'adressage a été développé dès les années 90, IPv6 (Internet Protocol, version 6). Il a été décidé de coder les adresses IP sur 128 bits. Plutôt que
 de les représenter avec 16 nombres entre 0 et 255, il a été décidé de coder en 8 nombres hexadécimaux
-entre 0000 et FFFF. Chaque digit de 0 à F représente ainsi 4 bits.
+entre 0000 et FFFF. Chaque chiffre de 0 à F représente ainsi 4 bits, et chaque nombre de 4 chiffres hexadécimaux représente donc $4\cdot 4 = 16$ bits. En en prenant 8, on arrive bien à $8\cdot 16 = 128$ bits. 
 
 Par exemple ```4E3F.DEA7.409B.412C.2516.4A2B.2CFE.1282``` pourrait constituer une adresse IPv6 valide. Elle est en effet
 constituée de 8 nombres à quatre chiffres hexadécimaux.
@@ -198,7 +200,7 @@ et l'identifier ainsi. C'est ce qu'on appelle en anglais le fingerprinting, que 
 Pour récapituler ce qui a été vu précédemment, les humains utilisent les noms de domaines pour les machines, alors que les machines, elles, utilisent les adresses IP. Afin que ces deux modes de recensement des machines soient cohérents entre eux, il est nécessaire de disposer d'un annuaire qui fera correspondre les noms de domaines aux adresses IP. Ceci est analogue aux annuaires téléphoniques qui permettent de faire correspondre le nom des personnes que l'on veut atteindre (qui serait équivalentes au nom de domaine) au numéro de téléphone (qui est analogue à l'adresse IP). Cet annuaire est ce qu'on appelle le *système de noms de domaine* (Domain Name System ou DNS selon l'appellation anglaise). Au début d'Internet, il s'agissait simplement d'un fichier texte librement accessible qui listait le nom de domaines et les adresses IP correspondantes. Ce fichier était maintenu à la main. Maintenant, il s'agit de machines, les serveurs DNS dans le réseau auprès desquelles il est possible d'obtenir l'adresse IP correspondante à un nom de domaine. Ces machines sont aussi organisées hiérarchiquement de telle sorte que chaque serveur DNS ne stocke que les noms de domaines correspondant à une sous-partie du réseau.
 
 ```{torecall} Le serveur DNS
-```{figure} media/dns.svg
+```{figure} media/dns.png
 ---
 width: 500
 align: center

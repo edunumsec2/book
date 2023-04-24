@@ -1,6 +1,4 @@
-# Des algorithmes aux programmes
-
-````{thinkingmatter} Matière à réfléchir. Lieu mystère
+````{thinkingmatter} Lieu mystère
 
 Pensez à un lieu connu, qui se trouve à proximité. Ecrivez les étapes à suivre pour s’y rendre, sans mentionner le lieu. Vous ne pouvez utiliser que les instructions : **<span style="color:rgb(89, 51, 209)">avancer</span>**, **<span style="color:rgb(89, 51, 209)">tourner à gauche</span>** et **<span style="color:rgb(89, 51, 209)">tourner à droite</span>**.
 
@@ -142,19 +140,7 @@ rect = [3,4,1,2,6,5]
 print(tri_selection(rect))
 ```
 
-En traduisant les étapes intermédiaires du tri par sélection en des lignes de code, nous avons automatisé l'algorithme. Nous l'avons transcrit en un programme informatique qui peut être exécuté sur une machine.
-
-<!-- ````{admonition} Question philosophique
-
-:class: note
-
-Tout algorithme peut être exprimé sous forme de programme. 
-
-Mais est-ce que derrière chaque programme se cache un algorithme ?
-
-```` 
--->
-
+En traduisant les étapes intermédiaires du tri par sélection en des lignes de code, nous avons automatisé l'algorithme. Nous l'avons trsncrit en un programme informatique qui peut être exécuté sur une machine.
 
 ## Exercices
 

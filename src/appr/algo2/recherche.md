@@ -220,8 +220,7 @@ print("J'ai fini de calculer...")
 `````
 
 
-````{admonition} Pour aller plus loin
-:class: note
+````{togofurther} 
 
 Pour décrire mathématiquement les ordres de complexité, on utilise la notation « Grand O ». Pour dire qu'un ordre de complexité est linéaire, on écrit par exemple qu'il est O(n).
 
@@ -232,8 +231,8 @@ Pour décrire mathématiquement les ordres de complexité, on utilise la notatio
 <span id=rech-bin></span>
 ## 2.2. Recherche binaire
 
-```{admonition} Matière à réfléchir. Le dictionnaire
-:class: attention
+```{thinkingmatter} Le dictionnaire
+
 Comment faites-vous pour rechercher un mot dans un dictionnaire ? 
 
 Utilisez-vous l’algorithme de recherche linéaire, parcourez-vous tous les éléments un à un ? 
@@ -589,8 +588,7 @@ Modifier votre programme  de recherche binaire : au lieu de diviser l’espace d
 ```
 
 
-````{admonition} Ai-je compris ?
-:class: attention
+````{eval}
 
 1. Je sais que la complexité temporelle donne une indication sur la vitesse d’un algorithme, en mesurant le nombre d’instructions élémentaires.
 

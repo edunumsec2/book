@@ -62,8 +62,8 @@ cette fois, une puissance de 2.
 
 La forme canonique du nombre binaire $1101_{(2)}$ est : $1 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0$
 
-```{admonition} Le saviez-vous ? 
-:class: hint
+```{didyouknow}
+
 Le *bit* vient de la terminologie anglo-saxonne de *binary digit*. Un ensemble
 de 8 bits et appelé un **octet**. Un *kilo-octet* (ko) correspond à
 $10^3$ octets soit $1000$ octets, donc $8000$ bits. Attention à ne pas
@@ -90,8 +90,7 @@ $$
 
 En binaire, on obtient : $0;-;1;-;10;-;11;-;100;-;101;-;110;-;111;-;1000;-;...$
 
-```{admonition} Micro-activité ✏️📒 
-:class: note 
+```{micro}
 Comptez jusqu'à 40 en binaire. Que pouvez vous observer au sujet de la parité des nombres
 binaires ? Pourquoi ?
 ```
@@ -154,17 +153,14 @@ octet en nombre décimal.
 L'exemple utilisé ici est l'octet $(00101010_{(2)})$ dont la valeur
 décimale est : $ 00101010\_{(2)} = 0 \cdot 2^7 + 0 \cdot 2^6 + 1 \cdot 2^5 + 0 \cdot 2^4 + 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 0 \cdot 2^0 = 42\_{(10)}$
 
-```{admonition} Important 
-:class: caution 
+```{important}
 L'utilisation d'un tableau de conversion nécessite d'écrire le nombre binaire de droite à gauche car
 le bit de poids faible ($=2^0$) se trouve à droite, de la même façon que
 le chiffre de poids faible (=l'unité) se trouve à droite en
 représentation décimale.
 ```
 
-```{admonition} Micro-activité ✏️📒 
-:class: note
-<!-- <span style="color:green">Niveau débutant</span> -->
+```{micro}
 
 Donnez la conversion en base 10 des nombres binaires suivants :
 
@@ -244,9 +240,7 @@ avec les étapes suivantes :
 
 Résultat : $(666_{(10)} = 1010011010_{(2)})$
 
-```{admonition} Micro-activité ✏️📒 
-:class: note
-<!-- <span style="color:orange">Niveau intermédiaire</span> -->
+```{micro}
 
 Donnez la conversion binaire des nombres décimaux suivants :
 
@@ -259,14 +253,13 @@ Donnez la conversion binaire des nombres décimaux suivants :
 <!-- end list -->
 ```
 
-```{admonition} Aller plus loin
-:class: note
+```{togofurther}
 
 Pouvez-vous penser à une autre façon de convertir un entier du système décimal en binaire ?
 ```
 
-```{admonition} Anecdote 
-:class: hint
+```{didyouknow}
+
 
 Le 4 juin 1996, le premier vol de la fusée Ariane 5 a explosé 40
 secondes après l'allumage. La fusée et son chargement avaient coûté 500
@@ -385,8 +378,7 @@ La figure ci-dessus illustre la différence du domaine couvert avec 4 bits pour 
 Ainsi, avec 4 bits le domaine couvert pour les entiers naturels est : \[0, 15\], et pour les entiers relatif : \[-8, 7\].  
 
 
-```{admonition} A retenir 
-:class: attention
+```{torecall}
 
 Puisque le nombre d'entiers relatifs représentés est forcément pair et
 que le 0 en fait partie, il y a une asymétrie entre les nombres positifs
@@ -398,9 +390,7 @@ et négatifs représentés. Par exemple, avec 4 bits on peut représenter
 $[-128, 127]$
 ```
 
-```{admonition} Micro-activité ✏️📒
-:class: note
-<!-- <span style="color:green">Niveau débutant</span> -->
+```{micro}
 
 Encodez les entiers relatifs suivants sur un octet :
 
@@ -424,8 +414,7 @@ Source : [xkcd](https://xkcd.com/571/)
 </div>
 
 
-`````{admonition} Activité : pour aller plus loin ... ✏️📒 
-:class: note
+`````{togofurther}
 
 <!-- <span style="color:red">Niveau avancé</span> -->
 

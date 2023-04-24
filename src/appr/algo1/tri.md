@@ -226,7 +226,8 @@ Le décompte des opérations effectuées, en se référant à la <a href="#fig-a
 
 **<span style="color:rgb(89, 51, 209)">Tri par sélection</span>** : 15 comparaisons deux par deux (lignes en dessous) et 3 déplacements deux par deux (flèches rouges).
 
-**<span style="color:rgb(89, 51, 209)">Tri à bulles</span>** : 9 comparaisons deux par deux (lignes en dessous) et 5 déplacements deux par deux (flèches rouges). 
+````{admonition} Le saviez-vous ? Tri stupide
+:class: hint
 
 Si ce qui prend beaucoup de temps est la comparaison de la taille de deux rectangles, il ne faudrait pas utiliser le tri par sélection, car il comporte le plus grand nombre de comparaisons et il serait le plus lent. Si c’est le déplacement de deux rectangles qui coûte beaucoup de temps, cette fois-ci le tri par sélection serait le plus rapide (avec 3 rectangles qui échangent leur position). Donc, selon l'implémentation sur la machine, le tri par sélection serait le plus lent ou le plus rapide des trois algorithmes.
 
@@ -247,13 +248,14 @@ La qualité d’un {glo}`algo|algorithme` dépend de la propriété que l’on s
 ***<span style="color:rgb(13, 204, 166)">La vitesse d’un {glo}`algo|algorithme` dépend également des {glo}`data|données` en {glo}`input|entrée`</span>***. Selon la configuration initiale des {glo}`data|données` en {glo}`input|entrée` (correspond à la ligne du haut de la <a href="#fig-algos-tri">Figure **Algorithmes de tri**</a>), un {glo}`algo|algorithme` « rapide » peut devenir « lent » et *vice versa*. Il faut savoir que les {glo}`algo|algorithmes` vus jusqu’ici sont tous des {glo}`algo|algorithmes` lents (nous verrons un {glo}`algo|algorithme` de tri rapide ultérieurement).
 
 ````{didyouknow} Tri trop lent
+````{didyouknow} Tri trop lent
 
 Pour trier 1&nbsp;million d’éléments, selon l’algorithme choisi, cela peut prendre de 20&nbsp;millions à 1&nbsp;billion d’opérations. Si chaque opération prenait 1 microseconde (10<sup>-6</sup> s) à s’exécuter, il faudrait 20&nbsp;secondes pour trier 1&nbsp;million d’éléments si l'algorithme est efficace. Par contre, pour un des algorithmes ci-dessus, cela pourrait prendre 11&nbsp;jours !  
 
 ````
 
 
-````{togofurther} 
+````{togofurther}
 
 Imaginer que les quatre éléments d’une liste sont triés dans le sens inverse de ce que l’on souhaite (ils sont placés du plus grand au plus petit). Trier la liste selon les trois algorithmes de tri vus précédemment : le tri par insertion, le tri par sélection et le tri à bulles. 
 
@@ -299,7 +301,7 @@ Analyser les œuvres cubistes de Piet Mondrian. Trouver un algorithme qui permet
 ````
 
 
-````{eval} 
+````{eval}
 
 1. Je sais qu’il existe plusieurs manières différentes de résoudre un problème.
 

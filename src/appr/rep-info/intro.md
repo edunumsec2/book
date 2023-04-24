@@ -4,7 +4,8 @@
 Dans ce chapitre on s'intéresse à la manière dont un {glo}`ordinateur|ordinateur` représente l'information afin de pouvoir la traiter automatiquement.   
 
 
-````{didyouknow}
+````{didyouknow} 
+
 Le mot **informatique** est la concaténation de «information» et «automatique».
 ````
 
@@ -73,11 +74,10 @@ name: fig-polybe
 align: left
 ---
 Le codage de la lettre «s» dans le carré de Polybe est quatre torches à gauche, trois torches à droite. 
-
 ````
 
-````{admonition} Anecdote
-:class: hint
+````{note} 
+
 Dans l'exemple ci-dessus, on utilise les lettres de l'alphabet, mais il est plus probable qu'à l'époque les cités voisines utilisaient des expressions toutes faites dans chacune des cases, comme «l'ennemi est à nos portes» ou «envoyez-nous de l'aide». 
 ````
 
@@ -97,13 +97,11 @@ name: fig-chappe
 Le télégraphe de Chappe émet des signaux ressemblant aux bras d'un être humain. 
 ````
 
-````{admonition} Anecdote
-:class: hint
+````{didyouknow}
 [Le piratage du télégraphe Chappe](https://fr.wikipedia.org/wiki/Piratage_du_t%C3%A9l%C3%A9graphe_Chappe) est un détournement du réseau de télégraphie optique français entrepris par deux hommes d'affaires bordelais, Louis et François Blanc, entre 1834 et 1836, afin de connaître avant tout le monde le prix de certaines actions à la Bourse de Paris.
 
 Le piratage a été rendu possible par la corruption d'un agent télégraphique de Tours, qui ajoutait discrètement le prix actuel des actions aux messages envoyés par l'État.
 ````
-
 
 ## Le Morse
 
@@ -115,24 +113,23 @@ Bien sûr, le Morse peut être utilisé aussi avec des signaux lumineux, ou sono
 
 ````{figure} media/morse.png
 ---
-height: 550px
-width: 450px
+height: 400px
+width: 500px
 name: fig-morse
 align: left
 ---
 Le code Morse est le système de représentation de l'information qui se rapproche le plus du langage binaire de l'informatique moderne. 
 ````
 
-````{admonition} Micro-activité
-:class: note
+````{micro}
 Amusez-vous avec votre assistant vocal en lui demandant par exemple : «Salut Siri. Quel est le code Morse pour *j'ai envie de dormir* ?».
 ````
 
 Si vous observez le [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), vous remarquerez que les signaux utilisés pour représenter les lettres ne suivent pas simplement l'ordre de l'alphabet, puisqu'il est plus économique de coder les lettres les plus fréquentes avec les codes les plus courts.
 
 
-````{admonition} Le saviez-vous ? 
-:class: hint
+````{didyouknow}
+
 À l'époque où les transmissions télégraphiques en code Morse sont payées à l'unité d'information, donc la lettre, des codex spécifiques sont développés par les utilisateurs pour utiliser le moins de caractères possibles. C'est exactement la même situation qui s'est produite avec l'arrivée des [SMS](https://fr.wikipedia.org/wiki/Short_Message_Service) dans les années 1990, où les utilisateurs payaient au caractère. Aujourd'hui, même s'il est rare de payer à l'unité d'information, ce genre de raccourcis existent encore, mais surtout pour un avantage de vitesse. 
 
 ```{image} media/morsecodeshort.png

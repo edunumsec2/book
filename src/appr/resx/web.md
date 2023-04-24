@@ -122,9 +122,26 @@ align: center
 ---
 ```
 
-La plupart des navigateurs web permettent de visualiser le *code  HTML* des pages visitées. Un aspect important de la création de sites web consiste à écrire du code HTML qui sera mis sur le serveur pour être transmis au visiteur du site web. Cela peut se faire en écrivant directement du code HTML dans un fichier texte, ou à l'aide d'un outil de création de sites web qui se charge d'écrire le code HTML selon les indications données par la personne concevant le site.
+La plupart des navigateurs web permettent de visualiser le *code  HTML* des pages visitées. Un aspect
+important de la création de sites web consiste à écrire du code HTML qui sera mis sur le serveur pour être
+transmis au visiteur du site web. Cela peut se faire en écrivant directement du code HTML dans un fichier
+texte, ou à l'aide d'un outil de création de sites web qui se charge d'écrire le code HTML selon les
+indications données par la personne concevant le site.
 
 ## Les évolutions du Web
+
+
+### Javascript
+
+Dans la version originale d'HTML, les moyens d'interagir avec une page web étaient très limités,
+par exemple cliquer sur les liens que la page
+proposait. Les personnes utilisant et développant le web ont vite voulu enrichir l'interactivité. C'est
+pourquoi, en 1995, les développeurs de Netscape, le navigateur web populaire de l'époque, ont ajouté la
+possibilité d'intégrer des programmes dans les pages web. Ils ont pour ceci inventé un langage de
+programmation, javascript, qui puisse être interprété et exécuté par le navigateur web. Cela permettait
+d'avoir une page web avec du contenu dynamique qui réagisse aux actions des personnes utilisatrices,
+par exemple pour changer la langue du texte lorsque on appuie sur un petit drapeau. Cela permet aussi de
+programmer des animations sur une page web.
 
 ### Le Web dynamique
 
@@ -154,13 +171,16 @@ Pour les sites qui peuvent être statiques, quelles possibilités supplémentair
 un site dynamique. 
 ```
 
-{itodo}`parler de javascript et du web dynamique côté client?`
 
 ### Le Web 2.0
 
 Le web 2.0 fait référence à la tendance, initiée au débit des années 2000, de proposer des pages web permettant aux internautes
-de contribuer du contenu, et pas uniquement de lire des fichiers comme c'était le cas jusqu'alors. Les blogs, forums, wikis, et les réseaux sociaux font
-partie de ce développement qui voit exploser l'aspect participatif du web. Ce n'est en effet plus nécessaire de connaître la syntaxe HTML et d'avoir
-son propre serveur pour mettre du contenu à disposition des internautes de la planète.
+de contribuer du contenu, et pas uniquement de lire des fichiers comme c'était le cas jusqu'alors. Les blogs, forums, wikis,
+et les réseaux sociaux font
+partie de ce développement qui voit exploser l'aspect participatif du web. Ce n'est en effet plus nécessaire de connaître
+la syntaxe HTML et d'avoir
+son propre serveur pour mettre du contenu à disposition des internautes de la planète. Si les développements techniques qui ont
+permis le web 2.0, étaient peu importants, ils ont eu un effet considérable sur la manière dont la population s'est approprié le web
+pour en faire un espace d'expression et de partage qui duquel ont émergé des réseaux sociaux d'aujourd'hui. 
 
-{itodo}`développer ?`
+{itodo}`ajouter des anciennes pages myspace ou facebook ?`

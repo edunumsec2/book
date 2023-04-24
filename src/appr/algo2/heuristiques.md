@@ -1,8 +1,7 @@
 # Algorithmes heuristiques
 
 
-````{admonition} Matière à réfléchir. Tour du monde
-:class: attention
+````{thinkingmatter} Tour du monde
 
 Vous avez décidé de faire le tour du monde. Choisissez cinq pays que vous souhaitez visiter et placez-les sur une carte. Essayez de trouver le meilleur itinéraire pour visiter ces cinq pays. 
 
@@ -135,8 +134,7 @@ Un algorithme heuristique pour le problème du sac à dos pourrait être l'alg
 Une solution heuristique est donc une solution intuitive, qui se base sur une ***<span style="color:rgb(13, 204, 166)">stratégie d'essais et d'erreurs</span>***, qui en quelque sorte repose sur la chance. Un algorithme heuristique est plus rapide que l'algorithme de force brute qui énumérerait toutes les solutions possibles afin de trouver la meilleure solution, mais on paie le prix de cette efficacité par de la précision. Un algorithme heuristique aboutit à une solution moins précise et moins complète, à une solution sans garantie. Quand un problème est trop complexe, il ne peut être résolu que par des algorithmes heuristiques, aboutissant dans certains cas à des mauvaises solutions. 
 
 
-```{admonition} Le saviez-vous ? Que veut dire heuristique ?
-:class: hint
+```{didyouknow} Que veut dire heuristique ?
 
 Le mot **heuristique** nous vient du grec ancien, plus précisément du terme *heuriskêin*, qui veut dire trouver, inventer, découvrir. 
 
@@ -165,8 +163,7 @@ name : heuristique
 Il existe encore d’autres types d’algorithmes {glo}`heuristique|heuristiques`, plus lents, mais qui permettent de s’approcher davantage de la solution optimale. Ils utilisent par exemple des stratégies de résolution statistiques, génétiques ou neuronales. L'apprentissage automatique à qui l'on doit les succès récents de l'intelligence artificielle repose sur des algorithmes heuristiques. La majorité des problèmes que l’on tente de résoudre aujourd’hui sont difficiles et leurs algorithmes de résolution ne trouvent pas la meilleure solution.
 
 
-````{admonition} Pour aller plus loin
-:class: attention
+````{togofurther}
 
 Voici un problème à un million de dollars, un parmi les sept problèmes mathématiques du prix du millénaire qui rapporteront de l’argent à la personne qui les résoudra.
 
@@ -203,8 +200,7 @@ Si vous avez besoin de travailler sur un exemple plus concret, quelle est comple
 
 
 
-````{admonition} Ai-je compris ?
-:class: attention
+````{eval}
 
 1. Je sais reconnaître un algorithme de force brute.
 
