@@ -5,34 +5,43 @@
 
 Vous avez décidé de faire le tour du monde. Choisissez cinq pays que vous souhaitez visiter et placez-les sur une carte. Essayez de trouver le meilleur itinéraire pour visiter ces cinq pays. 
 
-Quels critères avez-vous pris en compte pour décider du meilleur itinéraire ? Avez-vous essayé de trouver la plus petite distance à parcourir ?
+Quels critères avez-vous pris en compte pour décider du meilleur itinéraire&nbsp;? Avez-vous essayé de trouver la plus petite distance à parcourir&nbsp;?
 
-Vous avez décidé de visiter dix pays. Est-ce qu’il est aussi facile de trouver un itinéraire optimal ?
+Vous avez décidé de visiter dix pays. Est-ce qu’il est aussi facile de trouver un itinéraire optimal&nbsp;?
 
-Imaginez que vous souhaitez visiter tous les pays du monde (un peu moins de 200). Combien y a-t‑il d’itinéraires possibles ?  Comment s’appelle ce nombre ?
+Imaginez que vous souhaitez visiter tous les pays du monde (un peu moins de $200$). Combien y&nbsp;a-t‑il d’itinéraires possibles&nbsp;?  Comment s’appelle ce nombre&nbsp;?
 
-Si le calcul d’un itinéraire prenait 1 milliseconde, combien de temps faudrait-il pour trouver la meilleure solution en énumérant toutes les solutions possibles ? Pour comparaison, le nombre d’atomes dans l’univers est d’ordre 10<sup>80</sup>.
+Si le calcul d’un itinéraire prenait $1$ milliseconde, combien de temps faudrait-il pour trouver la meilleure solution en énumérant toutes les solutions possibles&nbsp;? Pour comparaison, le nombre d’atomes dans l’univers est d’ordre $10^{80}$.
 
 ````
 
 ## Complexité exponentielle
 
-Il existe des problèmes difficiles à résoudre. Nous allons nous pencher sur un problème qui s’appelle le **<span style="color:rgb(89, 51, 209)">problème du sac à dos</span>**. Prenons un sac à dos et une multitude d’objets qui ont chacun un poids. Notre objectif est de choisir les objets à mettre dans le sac à dos pour le remplir au maximum, mais sans dépasser sa capacité. Donc la question que l'on se pose est la suivante : quels objets devrions-nous emporter, sans dépasser le poids maximal que le sac à dos peut contenir ?
+Il existe des problèmes difficiles à résoudre. Nous allons nous pencher sur un problème qui s’appelle le **<span style="color:rgb(89, 51, 209)">problème&nbsp;du&nbsp;sac&nbsp;à&nbsp;dos</span>**. Prenons un sac à dos et une multitude d’objets qui ont chacun un poids. Notre objectif est de choisir les objets à mettre dans le sac à dos pour le remplir au maximum, mais sans dépasser sa capacité. Donc la question que l'on se pose est la suivante : quels objets devrions-nous emporter, sans dépasser le poids&nbsp;maximal que le sac&nbsp;à&nbsp;dos peut contenir ?
 
 
 ```{exercise} Le problème du sac à dos
 
-Comment procéderiez-vous pour résoudre ce problème du sac à dos ? Prenez le temps d’imaginer un {glo}`algo|algorithme` qui puisse résoudre ce problème ? 
+Comment procéderiez-vous pour résoudre ce problème&nbsp;du&nbsp;sac&nbsp;à&nbsp;dos ? Prenez le temps d’imaginer un {glo}`algo|algorithme` qui puisse résoudre ce problème ? 
 
-Appliquer cet algorithme pour 4 objets de poids 1, 3, 5 et 7 kg et un sac de capacité de 10 kg.
+Appliquer cet algorithme pour $4$ objets de poids $1$,&nbsp;$3$,&nbsp;$5$&nbsp;et&nbsp;$7$&nbsp;$kg$ et un sac de capacité de $10$&nbsp;$kg$.
 
 Est-ce que votre algorithme donne toujours la meilleure solution ? 
 ```
 
-````{solution} 
-
+`````{htmlonly} 
+````{solution}
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
+
+La solution est donnée dans le texte qui suit.
+
+```
+````
+`````
+````{latexonly} 
+
+```{solution} 
 
 La solution est donnée dans le texte qui suit.
 
@@ -41,64 +50,39 @@ La solution est donnée dans le texte qui suit.
 
 
 
-L'algorithme le plus simple pour résoudre ce problème est un **<span style="color:rgb(89, 51, 209)">algorithme de force brute</span>** (ou un algorithme exhaustif), qui consiste à énumérer toutes les combinaisons d'objets que pourrait contenir le sac à dos, l’une après l’autre, et de calculer le poids total pour chaque combinaison. Après avoir calculé toutes les combinaisons, il suffit de sélectionner la combinaison dont le poids se rapproche le plus de la capacité du sac à dos, sans la dépasser. Vous trouverez ci-dessous la solution pour l’exemple de l’exercice 5.0 (« oui » signifie que l’on met l’objet dans le sac à dos et « non » signifie que l’on ne met pas l’objet dans le sac à dos). 
+L'algorithme le plus simple pour résoudre ce problème est un **<span style="color:rgb(89, 51, 209)">algorithme&nbsp;de&nbsp;force&nbsp;brute</span>** (ou un algorithme&nbsp;exhaustif), qui consiste à énumérer toutes les combinaisons d'objets que pourrait contenir le sac&nbsp;à&nbsp;dos, l’une après l’autre, et de calculer le poids total pour chaque combinaison. Après avoir calculé toutes les combinaisons, il suffit de sélectionner la combinaison dont le poids se rapproche le plus de la capacité du sac&nbsp;à&nbsp;dos, sans la dépasser. Vous trouverez ci-dessous la solution pour l’exemple de l’exercice&nbsp;5.0 («&nbsp;oui&nbsp;» signifie que l’on met l’objet dans le sac&nbsp;à&nbsp;dos et «&nbsp;non&nbsp;» signifie que l’on ne met pas l’objet dans le sac&nbsp;à&nbsp;dos). 
 
 
-<table style="border: 1px solid; border-collapse: collapse;">
-    <thead>
-        <tr>
-            <th style="border: 1px solid; padding:10px; text-align:center">Combinaison</th><th style="border: 1px solid; padding:10px; text-align:center">1 kg</th><th style="border: 1px solid; padding:10px; text-align:center">3 kg</th><th style="border: 1px solid; padding:10px; text-align:center">5 kg</th><th style="border: 1px solid; padding:10px; text-align:center">7 kg</th><th style="border: 1px solid; padding:10px">Poids total</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td style="border: 1px solid; padding:10px">1</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px; text-align:center">0</td>
-        </tr><tr>
-            <td style="border: 1px solid; padding:10px">2</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px; text-align:center"">1</td>
-        </tr><tr>
-            <td style="border: 1px solid; padding:10px">3</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px; text-align:center"">3</td>
-        </tr><tr>
-            <td style="border: 1px solid; padding:10px">4</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px; text-align:center"">4</td>
-        </tr><tr>
-            <td style="border: 1px solid; padding:10px">5</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px; text-align:center"">5</td>
-        </tr><tr>
-            <td style="border: 1px solid; padding:10px">6</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px; text-align:center"">6</td>
-        </tr><tr>
-            <td style="border: 1px solid; padding:10px">7</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px; text-align:center"">8</td>
-        </tr><tr>
-            <td style="border: 1px solid; padding:10px">8</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px; text-align:center"">9</td>
-        </tr><tr>
-            <td style="border: 1px solid; padding:10px">9</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px; text-align:center"">7</td>
-        </tr><tr>
-            <td style="border: 1px solid; padding:10px">10</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px; text-align:center"">8</td>
-        </tr><tr>
-            <td style="border: 1px solid; padding:10px">11</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px; text-align:center"">10</td>
-        </tr><tr>
-            <td style="border: 1px solid; padding:10px">12</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px; text-align:center"">11</td>
-        </tr><tr>
-            <td style="border: 1px solid; padding:10px">13</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px; text-align:center"">12</td>
-        </tr><tr>
-            <td style="border: 1px solid; padding:10px">14</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px; text-align:center"">13</td>
-        </tr><tr>
-            <td style="border: 1px solid; padding:10px">15</td><td style="border: 1px solid; padding:10px">non</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px; text-align:center"">15</td>
-        </tr><tr>
-            <td style="border: 1px solid; padding:10px">16</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px">oui</td><td style="border: 1px solid; padding:10px; text-align:center"">16</td>
-        </tr>
-    </tbody>
-</table>
++ Combinaison | 	$1 kg$	| $3 kg$	| $5 kg$	| $7 kg$	| Poids total +
+| :--- |:---:| :---:| :---:| :---:| :---:| 
+| 1	| non |	non |	non |	non |	$0 kg$ |
+| 2	| oui |	non |	non |	non |	$1 kg$ |
+| 3	| non |	oui |	non |	non |	$3 kg$ |
+| 4	| oui |	oui |	non |	non |	$4 kg$ |
+| 5	| non |	non |	oui |	non |	$5 kg$ |
+| 6	| oui |	non |	oui |	non |	$6 kg$ |
+| 7	| non |	oui |	oui |	non |	$8 kg$ |
+| 8	| oui |	oui |	oui |	non |	$9 kg$ |
+| 9	| non |	non |	non |	oui |	$7 kg$ |
+| 10 | 	oui |	non |	non |	oui |	$8 kg$ |
+| 11 | 	non |	oui |	non |	oui |	$10 kg$ |
+| 12 | 	oui |	oui |	non |	oui |	$11 kg$ |
+| 13 | 	non |	non |	oui |	oui |	$12 kg$ |
+| 14 | 	oui |	non |	oui |	oui |	$13 kg$ |
+| 15 | 	non |	oui |	oui |	oui |	$15 kg$ |
+| 16 | 	oui |	oui |	oui |	oui |	$16 kg$ |
+ 
 
-<br>
-
-La meilleure solution se trouve à la 11ème ligne, la capacité du sac à dos (10 kg) est atteinte lorsqu'on y met le deuxième et le quatrième objet.
+La meilleure solution se trouve à la 11ème ligne, la capacité du sac&nbsp;à&nbsp;dos ($10$&nbsp;$kg$) est atteinte lorsqu'on y met le deuxième et le quatrième objet.
 
 
 ```{exercise} Le problème du sac à dos avec 10 objets
 
-Combien de combinaisons possibles existent pour le problème du sac à dos avec 10 objets ? 
+Combien de combinaisons possibles existent pour le problème du sac&nbsp;à&nbsp;dos avec 10&nbsp;objets ? 
 ```
 
+`````{htmlonly} 
 ````{solution} 
-
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
@@ -106,20 +90,30 @@ La solution est donnée dans le texte qui suit.
 
 ```
 ````
+`````
 
-Mais, combien y a-t-il de combinaisons possibles si on a 10 objets ? Pour chaque objet, on a deux choix possibles : le mettre dans le sac à dos ou ne pas le mettre dans le sac à dos ***<span style="color:rgb(13, 204, 166)">(to take or not to take, that is the question)</span>***. Comme ces deux possibilités existent pour chacun des 10 objets, le nombre de combinaisons possibles vaut :
+````{latexonly} 
 
-&nbsp;&nbsp;&nbsp;&nbsp; 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 = 2<sup>10</sup>
+```{solution} 
 
-Pour `n` objets, le nombre de solutions possibles est 2<sup>n</sup>. Si on a 2 objets, il y a donc 4 combinaisons différentes d’objets dans le sac à dos (aucun objet, le premier objet, le deuxième objet et les deux objets ensemble). Pour 3 objets, le nombre de combinaisons est 8. Pour 5 objets, nous avons 32 possibilités à explorer. Mais déjà pour 10 objets, ce nombre dépasse les 1000 combinaisons possibles. Pour 100 objets, ce nombre devient prohibitif et vaut 10<sup>30</sup>. Si on doit résoudre ce problème avec 270 objets sous la main, le nombre de combinaisons possibles dépasse le nombre d’atomes dans l’univers, c'est-à-dire 10<sup>80</sup>. Si le calcul du poids d’une combinaison prenait une microseconde, il nous faudrait pour résoudre ce problème bien plus que le temps de l'existence de l’univers, plus de 14 milliards d'années. Ces nombres sont réellement vertigineux. Cela va de soi, nous n’avons pas tout ce temps à disposition... 
+La solution est donnée dans le texte qui suit.
 
-L’ordre de complexité de type 2<sup>n</sup> est un ordre de **<span style="color:rgb(89, 51, 209)">complexité exponentielle</span>**. Cela vaut aussi pour d’autres constantes que 2, par exemple 10<sup>n</sup> ou 1.1<sup>n</sup>. Lorsqu’un algorithme est d’ordre de complexité exponentielle, cela veut dire que le temps nécessaire pour résoudre le problème croît exponentiellement en fonction de la taille des données `n` (voir figure ci-dessous). Les problèmes de complexité exponentielle ne peuvent être résolus dans un temps raisonnable, pour des données à partir d’une certaine taille.
+```
+````
+
+Mais, combien y a-t-il de combinaisons possibles si on a $10$&nbsp;objets ? Pour chaque objet, on a deux choix possibles : le mettre dans le sac&nbsp;à&nbsp;dos ou ne pas le mettre dans le sac&nbsp;à&nbsp;dos ***<span style="color:rgb(13, 204, 166)">(to take or not to take, that is the question)</span>***. Comme ces deux possibilités existent pour chacun des $10$ objets, le nombre de combinaisons possibles vaut :
+
+&nbsp;&nbsp;&nbsp;&nbsp; $2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 = 2^{10}$
+
+Pour $n$ objets, le nombre de solutions possibles est $2^{n}$. Si on a $2$ objets, il y a donc $4$ combinaisons différentes d’objets dans le sac&nbsp;à&nbsp;dos (aucun objet, le premier objet, le deuxième objet et les deux objets ensemble). Pour $3$ objets, le nombre de combinaisons est $8$. Pour $5$ objets, nous avons $32$ possibilités à explorer. Mais déjà pour $10$ objets, ce nombre dépasse les $1000$ combinaisons possibles. Pour $100$ objets, ce nombre devient prohibitif et vaut $10^{30}$. Si on doit résoudre ce problème avec $270$ objets sous la main, le nombre de combinaisons possibles dépasse le nombre d’atomes dans l’univers, c'est-à-dire $10^{80}$. Si le calcul du poids d’une combinaison prenait une microseconde, il nous faudrait pour résoudre ce problème bien plus que le temps de l'existence de l’univers, plus de $14$ milliards d'années. Ces nombres sont réellement vertigineux. Cela va de soi, nous n’avons pas tout ce temps à disposition... 
+
+L’ordre de complexité de type $2^{n}$ est un ordre de **<span style="color:rgb(89, 51, 209)">complexité exponentielle</span>**. Cela vaut aussi pour d’autres constantes que $2$, par exemple $10^{n}$ ou $1.1^{n}$. Lorsqu’un algorithme est d’ordre de complexité exponentielle, cela veut dire que le temps nécessaire pour résoudre le problème croît exponentiellement en fonction de la taille des données $n$ (voir figure ci-dessous). Les problèmes de complexité exponentielle ne peuvent être résolus dans un temps raisonnable, pour des données à partir d’une certaine taille.
 
 
 ```{figure} media/Complexite_exponentielle.png
 ---
 alt: complexité exponentielle
-width: 420px
+width: 500px
 name : fig-comp-exp
 ---
 **Complexité exponentielle.** Comparaison de l’ordre de complexité exponentielle avec les ordres de complexité vus jusqu’ici. Dans un ordre de complexité exponentielle, le nombre d’instructions élémentaires grandit très rapidement avec la taille des données, et l’algorithme est très lent. 
@@ -127,7 +121,7 @@ name : fig-comp-exp
 
 Lorsqu’il est trop difficile de trouver une solution exacte à un problème, nous ne devons pas nous avouer vaincus. Dans ce cas, nous pouvons tout de même rechercher une solution inexacte, mais qui se rapproche autant que possible de la solution optimale. Les algorithmes qui aboutissent à des solutions non optimales ou inexactes, sont appelés des **<span style="color:rgb(89, 51, 209)">heuristiques</span>**.
 
-Un algorithme heuristique pour le problème du sac à dos pourrait être l'algorithme suivant : prendre les objets du plus petit au plus grand poids jusqu’à remplir le sac à dos, ce qui nous permettrait de mettre le plus d'objets possible. En suivant cet algorithme heuristique, dans l'exemple de l'exercice 5.0, on prendrait les trois premiers objets et on aurait un sac à dos rempli à 9 kgs au lieu des 10 kg de capacité maximale du sac à dos. Cette solution est suffisamment proche de la meilleure solution, mais elle n'est pas la meilleure solution.
+Un algorithme heuristique pour le problème du sac à dos pourrait être l'algorithme suivant : prendre les objets du plus petit au plus grand poids jusqu’à remplir le sac à dos, ce qui nous permettrait de mettre le plus d'objets possible. En suivant cet algorithme heuristique, dans l'exemple de l'exercice $5.0$, on prendrait les trois premiers objets et on aurait un sac à dos rempli à $9 kg$ au lieu des $10 kg$ de capacité maximale du sac à dos. Cette solution est suffisamment proche de la meilleure solution, mais elle n'est pas la meilleure solution.
 
 
 
@@ -148,15 +142,15 @@ L'algorithme heuristique qu'on vient de voir est en fait un **<span style="color
 
 
 
-Il n’y a pas que des {glo}`heuristique|heuristiques` gloutonnes. Un autre exemple de solution heuristique, très utilisée dans les jeux vidéos, est le calcul de distance entre deux objets. Ce calcul est très important par exemple lorsque l'on souhaite détecter si deux objets sont en collision. Pythagore nous dit que cette distance vaut la racine carrée de la somme de `a` et `b` au carré. Mais ce calcul est difficile, et même si on peut le calculer de manière exacte, il prend beaucoup de temps à calculer s’il y a beaucoup d’objets affichés à l’écran. On préfère ainsi estimer cette distance par un calcul bien plus simple `a+b`, que l'on sait faux, mais qui est suffisamment proche lorsque les objets sont alignés (voir la figure ci-dessous).
+Il n’y a pas que des {glo}`heuristique|heuristiques` gloutonnes. Un autre exemple de solution heuristique, très utilisée dans les jeux vidéos, est le calcul de distance entre deux objets. Ce calcul est très important par exemple lorsque l'on souhaite détecter si deux objets sont en collision. Pythagore nous dit que cette distance vaut la racine carrée de la somme de $a$ et $b$ au carré. Mais ce calcul est difficile, et même si on peut le calculer de manière exacte, il prend beaucoup de temps à calculer s’il y a beaucoup d’objets affichés à l’écran. On préfère ainsi estimer cette distance par un calcul bien plus simple $a+b$, que l'on sait faux, mais qui est suffisamment proche lorsque les objets sont alignés (voir la figure ci-dessous).
 
 ```{figure} media/Distance.png
 ---
 alt: exemple d'heuristique
-width: 420px
+width: 500px
 name : heuristique
 ---
-**Exemple d'heuristique.** Dans les jeux vidéos, on préfère estimer la distance `d` entre deux objets `A` et `B` par la somme des longueurs des côtés de l'angle droit `a+b`, plutôt que de calculer la racine carrée de la somme des carrés des longueurs des côtés de l'angle droit `d`<sup>`2`</sup> `=` `a`<sup>`2`</sup> `+` `b`<sup>`2`</sup> (théorème de Pythagore). Même si ce calcul est inexact, il est beaucoup plus rapide à calculer quand il y a beaucoup d’objets à afficher à l’écran, et il est suffisamment précis lorsque les deux objets sont alignés.
+**Exemple d'heuristique.** Dans les jeux vidéos, on préfère estimer la distance $d$ entre deux objets $A$ et $B$ par la somme des longueurs des côtés de l'angle droit $a+b$, plutôt que de calculer la racine carrée de la somme des carrés des longueurs des côtés de l'angle droit $d^{2} = a^{2} + b^{2}$ (théorème de Pythagore). Même si ce calcul est inexact, il est beaucoup plus rapide à calculer quand il y a beaucoup d’objets à afficher à l’écran, et il est suffisamment précis lorsque les deux objets sont alignés.
 ```
 
 
@@ -167,11 +161,11 @@ Il existe encore d’autres types d’algorithmes {glo}`heuristique|heuristiques
 
 Voici un problème à un million de dollars, un parmi les sept problèmes mathématiques du prix du millénaire qui rapporteront de l’argent à la personne qui les résoudra.
 
-On appelle la classe des problèmes qui sont faciles à résoudre la classe des problèmes P. Ces algorithmes peuvent être résolus en un temps polynomial en fonction de la taille des données n, ou O(n<sup>a</sup>). 
+On appelle la classe des problèmes qui sont faciles à résoudre la classe des problèmes $P$. Ces algorithmes peuvent être résolus en un temps polynomial en fonction de la taille des données $n$, ou $O(n^{a})$. 
 
-Une autre classe de problèmes sont les problèmes difficiles à résoudre qui sont d’ordre de complexité exponentielle. Lorsqu'on arrive à vérifier rapidement (en temps polynomial) si une solution proposée permet de résoudre le problème, il s'agit d'une classe de problèmes appellée NP ou « non déterministe polynomial ».
+Une autre classe de problèmes sont les problèmes difficiles à résoudre qui sont d’ordre de complexité exponentielle. Lorsqu'on arrive à vérifier rapidement (en temps polynomial) si une solution proposée permet de résoudre le problème, il s'agit d'une classe de problèmes appellée $NP$ ou « non déterministe polynomial ».
 
-On souhaite savoir si les problèmes NP peuvent être résolus en un temps P ou non, ou en d’autres termes : est-ce que **P = NP** ? 
+On souhaite savoir si les problèmes $NP$ peuvent être résolus en un temps $P$ ou non, ou en d’autres termes : est-ce que **$P = NP$** ? 
 
 S’il s’avérait que c’est bien le cas (ce qui est tout de même peu probable), beaucoup de problèmes difficiles à résoudre deviendraient d’un seul coup plus faciles à résoudre. Un des ces problèmes est le **problème de repliement des protéines** en biologie qui cherche de nouveaux médicaments. Cela pourrait également signifier la fin de la cryptographie telle qu’elle existe actuellement.
 

@@ -11,7 +11,7 @@ Ce n'est pas l'algorithme qui est exécuté sur une machine pour nous donner une
 ```{figure} media/Algoprog.png
 ---
 alt: Différence entre un algorithme et un programme.
-width: 65%
+width: 70%
 align: left
 ---
 **Différence entre un algorithme et un programme.** </br> Un algorithme doit être compréhensible par un humain, alors qu'un programme est écrit de façon à ce qu'il soit compréhensible par une machine.
@@ -26,16 +26,16 @@ Un mode d’emploi, ou une recette, décrit les **<span style="color:rgb(89, 51,
 3. Cuire le mélange d’œufs dans une poêle à température moyenne.
 4. Lorsque cuite, glisser l’omelette dans une assiette.
 
-```{figure} media/Omelette.png
+````{figure} media/Omelette.png 
 ---
 alt: Un algorithme est un peu comme une recette de cuisine.
 width: 100%
 align: left
 ---
 
-**Un algorithme est un peu comme une recette de cuisine.** Cet exemple illustre les opérations à suivre pour la réalisation d’une omelette.
+**Un algorithme est un peu comme une recette de cuisine.** Cet exemple illustre les opérations à suivre pour la réalisation d’une omelette.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-```
+````
 
 Dans le cas de la recette d'une omelette, nous avons décomposé la marche à suivre en étapes à réaliser dans un certain ordre. Il en est de même pour un algorithme. Pour résoudre un problème, il faut d'abord **<span style="color:rgb(89, 51, 209)">décomposer le problème en sous-problèmes</span>** que l'on *sait résoudre*. La solution de chaque sous-problème donne lieu à une étape qu'il faudra exécuter pour arriver à un résultat. Voici les sous-problèmes que certaines étapes ci-dessus permettent de résoudre. Afin d'extraire le contenu comestible de l'œuf, il faut casser les œufs. Pour que l'omelette ait une jolie couleur uniforme, il faut mélanger le jaune et le blanc d'œuf. Cette étape ne serait pas du tout pertinente si le problème que l'on essaie de résoudre est la préparation d'un œuf au plat. *<span style="color:rgb(13, 204, 166)">L’algorithme décrit donc toutes les opérations qu'il faut effectuer pour arriver à ce résultat</span>*. Nous allons ainsi définir l’algorithme comme **<span style="color:rgb(89, 51, 209)">une suite d’opérations qui permettent de résoudre un problème</span>**. 
 
@@ -58,7 +58,7 @@ Retourner Résultat      # la solution se trouve dans Résultat
 
 Dans cet algorithme on mentionne le terme *variable*. Pour rappel, les variables associent un nom (ou un identifiant) à une valeur. Par exemple, ci-dessus on va utiliser une variable que l'on va appeler *i* et qui va stocker pour commencer la valeur 1. Le terme variable prend tout son sens dans l'opération *Répéter*, lorsque *i* contient à tour de rôle des valeurs allant de 1 à *n*, car à ce moment-là la valeur stockée dans *i* **varie**. 
 
-Pour mieux vous représenter une variable, imaginez un grand meuble avec des tiroirs (voir Figure ci-dessous). Les variables sont les tiroirs. Chaque tiroir comporte une étiquette, c'est le nom de la variable, et c'est grâce à ce nom que l'on sait quel tiroir ouvrir et quelle valeur utiliser. Le tiroir est petit et ne peut contenir qu'une valeur. Donc *i* peut valoir 1 ou 2, mais pas 1 et 2 à la fois. Par contre *i* pourrait contenir une liste qui contient les valeurs [1, 2]. Cependant, *i* ne peut contenir qu'une seule liste à la fois et pas par exemple deux listes [1, 2] et [3, 4].
+Pour&nbsp;mieux vous représenter une variable, imaginez un grand meuble avec des tiroirs (voir Figure&nbsp;ci&#8209;dessous). Les variables sont les tiroirs. Chaque tiroir comporte une étiquette, c'est le nom de la variable, et c'est grâce à ce nom que l'on sait quel tiroir ouvrir et quelle valeur utiliser. Le tiroir est petit et ne peut contenir qu'une valeur. Donc *i* peut valoir 1 ou 2, mais pas 1 et 2 à la fois. Par contre *i* pourrait contenir une liste qui contient les valeurs [1, 2]. Cependant, *i* ne peut contenir qu'une seule liste à la fois et pas par exemple deux listes [1, 2] et [3, 4].
 
 
 
@@ -91,7 +91,7 @@ Pour répondre à cette problématique il faut se poser la question suivante :
 
 Pour commencer, la variable *Résultat* vaut 0. En effet, l'opération Résultat ← 0 *<span style="color:rgb(13, 204, 166)">initialise</span>* *Résultat* à 0. Initialiser une variable veut dire qu'on lui assigne une toute première valeur (une valeur initiale). Dans le cas de *Nombres* qui contiendrait les nombres 4, 5 et 6, après le premier passage dans la boucle *Répéter*, *Résultat* vaut 4. En effet, pour commencer *i* vaut 1 et donc Nombres[i] vaut Nombres[1]. Nombres[1] correspond au premier élément de la liste *Nombres* et vaut 4. L'opération Résultat ← Résultat + Nombres[i], additionne alors 0 et 4 (Résultat + Nombres[i]) et l'opérateur ← stocke cette valeur 4 dans la variable *Résultat*.
 
-Au deuxième passage dans la boucle, *i* vaut 2. On additionne à nouveau *Résultat*, qui maintenant vaut 4, au 2ème élément de *Nombres*, qui vaut 5. Après ce deuxième passage de la boucle, *Résultat* contient 9 (4+5). Finalement, au troisième et dernier passage de la boucle, on additionne cette nouvelle valeur de *Résultat* (ou 9) avec le 3ème élément de Nombres, qui vaut 6. Il s'agit du dernier passage de la boucle, parce que lors de ce passage de la boucle *i* atteint la longuer de la liste *Nombres* (ou 3). À la fin de l'algorithme, *Résultat* vaut ainsi 15.
+Au deuxième passage dans la boucle, *i* vaut 2. On additionne à nouveau *Résultat*, qui maintenant vaut 4, au 2ème élément de *Nombres*, qui vaut 5. Après ce deuxième passage de la boucle, *Résultat* contient 9 (4+5). Finalement, au troisième et dernier passage de la boucle, on additionne cette nouvelle valeur de *Résultat* (ou 9) avec le 3ème élément de Nombres, qui vaut 6. Il s'agit du dernier passage de la boucle, parce que lors de ce passage de la boucle *i* atteint la longueur de la liste *Nombres* (ou 3). À la fin de l'algorithme, *Résultat* vaut ainsi 15.
 
 Il est plus facile de se représenter ces valeurs sous forme de tableau :
 
@@ -116,7 +116,7 @@ Pour répondre à cette problématique il faut se poser la question suivante :
 
 Pour commencer, la variable *Résultat* vaut 0. En effet, l'opération Résultat ← 0 *<span style="color:rgb(13, 204, 166)">initialise</span>* *Résultat* à 0. Initialiser une variable veut dire qu'on lui assigne une toute première valeur (une valeur initiale). Dans le cas de *Nombres* qui contiendrait les nombres 4, 5 et 6, après le premier passage dans la boucle *Répéter*, *Résultat* vaut 4. En effet, pour commencer *i* vaut 1 et donc Nombres[i] vaut Nombres[1]. Nombres[1] correspond au premier élément de la liste *Nombres* et vaut 4. L'opération Résultat ← Résultat + Nombres[i], additionne alors 0 et 4 (Résultat + Nombres[i]) et l'opérateur ← stocke cette valeur 4 dans la variable *Résultat*.
 
-Au deuxième passage dans la boucle, *i* vaut 2. On additionne à nouveau *Résultat*, qui maintenant vaut 4, au 2ème élément de *Nombres*, qui vaut 5. Après ce deuxième passage de la boucle, *Résultat* contient 9 (4+5). Finalement, au troisième et dernier passage de la boucle, on additionne cette nouvelle valeur de *Résultat* (ou 9) avec le 3ème élément de Nombres, qui vaut 6. Il s'agit du dernier passage de la boucle, parce que lors de ce passage de la boucle *i* atteint la longuer de la liste *Nombres* (ou 3). À la fin de l'algorithme, *Résultat* vaut ainsi 15.
+Au deuxième passage dans la boucle, *i* vaut 2. On additionne à nouveau *Résultat*, qui maintenant vaut 4, au 2ème élément de *Nombres*, qui vaut 5. Après ce deuxième passage de la boucle, *Résultat* contient 9 (4+5). Finalement, au troisième et dernier passage de la boucle, on additionne cette nouvelle valeur de *Résultat* (ou 9) avec le 3ème élément de Nombres, qui vaut 6. Il s'agit du dernier passage de la boucle, parce que lors de ce passage de la boucle *i* atteint la longueur de la liste *Nombres* (ou 3). À la fin de l'algorithme, *Résultat* vaut ainsi 15.
 
 Il est plus facile de se représenter ces valeurs sous forme de tableau :
 
@@ -175,7 +175,7 @@ Au niveau des désavantages, l'automatisation est en général énergivore (avec
 « Chaque étape d’un algorithme doit être définie précisément » (Knuth, 2011). En effet, si on ne décompose pas suffisamment la solution du problème, on peut se retrouver face à une recette inutile, par exemple : prendre des œufs et cuire l'omelette. Cette recette ne nous dit pas vraiment comment procéder pour arriver à faire une omelette...
 
 
-````{related} En lien
+````{related} 
 
 Lorsqu'on sauve un fichier dans un ordinateur, il est stocké dans une mémoire. La mémoire d'un ordinateur pourrait être comparée a une grande commode de tiroirs étiquetés. Ainsi, lorsqu'un fichier est stocké en mémoire, la taille du fichier correspond au nombre de tiroirs qu'il occupe. Si c'est un fichier de texte par exemple, on peut imaginer qu'un tiroir contient un caractère simple (un octet). Si c'est une image en couleur, un pixel de cette image occuperait 3 tiroirs (un octet par couleur rouge, vert et bleu).
 
@@ -386,7 +386,7 @@ Vérifier la solution que vous avez trouvée en représentant chaque variable av
 
 3. Je sais formuler un algorithme : je décompose le problème en sous-problèmes et je décris les opérations qui permettent de résoudre chaque sous-problème.
 
-```
+````
 
 
 
