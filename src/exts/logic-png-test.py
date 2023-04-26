@@ -35,7 +35,7 @@ def run() -> None:
             }}
 
             const dataJson = JSON.stringify({data_json})
-            editor.loadCircuit(dataJson)
+            editor.loadCircuitOrLibrary(dataJson)
             editor.setModeFromString("tryout")
             const withMetadata = false
             const heightHint = undefined

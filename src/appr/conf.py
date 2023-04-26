@@ -82,7 +82,7 @@ if tags.has('latex_mode'):
 
     
 if latex_mode:
-    exclude_patterns = ['prog1', 'prog2', 'hist', 'algo2', 'projets', 'archi', 'rep-info', 'resx']
+    exclude_patterns = ['prog1', 'prog2', 'hist', 'projets', 'resx']
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -182,7 +182,7 @@ latex_elements = {
     'preamble': r'\input{../../../src/static/latex/customize} \fvset{fontsize=\small}',
     'pxunit': '0.5bp',
     'figure_align': 'H',
-    'maketitle':  r'\maketitle',
+    'maketitle':  r'\maketitle\cleardoublepage',
     # some command redefinitions only take effect after the first \tableofcontents, so we add this hook
     'tableofcontents': '\\sphinxtableofcontents\n\n\\input{../../../src/static/latex/customize_doc}\n',
     'pointsize': '11pt',

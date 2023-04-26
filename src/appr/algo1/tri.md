@@ -247,10 +247,10 @@ La qualité d’un {glo}`algo|algorithme` dépend de la propriété que l’on s
 
 ***<span style="color:rgb(13, 204, 166)">La vitesse d’un {glo}`algo|algorithme` dépend également des {glo}`data|données` en {glo}`input|entrée`</span>***. Selon la configuration initiale des {glo}`data|données` en {glo}`input|entrée` (correspond à la ligne du haut de la <a href="#fig-algos-tri">Figure **Algorithmes de tri**</a>), un {glo}`algo|algorithme` « rapide » peut devenir « lent » et *vice versa*. Il faut savoir que les {glo}`algo|algorithmes` vus jusqu’ici sont tous des {glo}`algo|algorithmes` lents (nous verrons un {glo}`algo|algorithme` de tri rapide ultérieurement).
 
-````{didyouknow} Tri trop lent
+
 ````{didyouknow} Tri trop lent
 
-Pour trier 1&nbsp;million d’éléments, selon l’algorithme choisi, cela peut prendre de 20&nbsp;millions à 1&nbsp;billion d’opérations. Si chaque opération prenait 1 microseconde (10<sup>-6</sup> s) à s’exécuter, il faudrait 20&nbsp;secondes pour trier 1&nbsp;million d’éléments si l'algorithme est efficace. Par contre, pour un des algorithmes ci-dessus, cela pourrait prendre 11&nbsp;jours !  
+Pour trier 1&nbsp;million d’éléments, selon l’algorithme choisi, cela peut prendre de 20&nbsp;millions à 1&nbsp;billion d’opérations. Si chaque opération prenait 1 microseconde ($10^{-6} s$) à s’exécuter, il faudrait $20$&nbsp;secondes pour trier 1&nbsp;million d’éléments si l'algorithme est efficace. Par contre, pour un des algorithmes ci-dessus, cela pourrait prendre 11&nbsp;jours !  
 
 ````
 

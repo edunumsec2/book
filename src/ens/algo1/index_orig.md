@@ -17,7 +17,7 @@ En lien avec le plan d'études, nous avons identifié les **objectifs d'apprenti
 - Intégrer la pluralité des algorithmes
 
 
-Ces objectifs pédagogiques sont articulés dans trois chapitres principaux dans la partie *Appprendre*, disponibles également sous la forme d'un document **pdf**, téléchargeable en haut de la <a href="../../appr/algo1/index.html">page d'accueil</a> et de la <a href="../../appr/algo1/intro.html">page d'introduction</a> :
+Ces objectifs pédagogiques sont articulés dans trois chapitres principaux dans la partie *Apprendre*, disponibles également sous la forme d'un document **pdf**, téléchargeable en haut de la <a href="../../appr/algo1/index.html">page d'accueil</a> et de la <a href="../../appr/algo1/intro.html">page d'introduction</a> :
 
 1. <a href="../../appr/algo1/intro.html"> Introduction </a>
 2. <a href="../../appr/algo1/algorithmes.html">  Les algorithmes </a>
@@ -25,7 +25,7 @@ Ces objectifs pédagogiques sont articulés dans trois chapitres principaux dans
 4. <a href="../../appr/algo1/algo-progs.html">  Des algorithmes aux programmes</a>
 5. <a href="../../appr/algo1/conclusion.html">  Conclusion</a>
 
-Dans la partie *Enseigner* vous trouverez les solutions des exercices proposés dans la partie *Appprendre* :
+Dans la partie *Enseigner* vous trouverez les solutions des exercices proposés dans la partie *Apprendre* :
 
 - <a href="../algo1/exo/solutions.html"> Solutions des exercices  </a>
 

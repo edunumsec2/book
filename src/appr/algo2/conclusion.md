@@ -1,8 +1,6 @@
 # Conclusion
 
-
-
-````{important} Pourquoi est-ce important ?
+````{important} 
 
 L’analyse de complexité des algorithmes nous permet de sélectionner les meilleurs algorithmes pour un problème donné et nous permet de comprendre pourquoi certains problèmes ne peuvent pas être (à ce stade) résolus dans un temps raisonnable.
 
@@ -12,7 +10,7 @@ Pour des problèmes difficiles, s’il est impossible de trouver la solution exa
 
 ````
 
-```{torecall} À retenir
+```{torecall} 
 
 Dans la pratique, il est important de garantir qu’un algorithme va se **<span style="color:rgb(89, 51, 209)">terminer</span>**.
 
@@ -28,28 +26,25 @@ Un algorithme avec une **<span style="color:rgb(89, 51, 209)">complexité expone
 
 ```{eval}
 
-<ol>
-<li>Je sais appliquer l'algorithme de recherche binaire.</li>
+1. Je sais appliquer l'algorithme de recherche binaire.</li>
 
-<li>Je comprends comment fonctionne la stratégie algorithmique « diviser pour régner ».</li>
+2. Je comprends comment fonctionne la stratégie algorithmique « diviser pour régner ».</li>
 
-<li>Je sais appliquer l'algorithme de tri rapide.</li>
+3. Je sais appliquer l'algorithme de tri rapide.</li>
 
-<li>Je sais calculer la complexité temporelle d'un algorithme.</li>
+4. Je sais calculer la complexité temporelle d'un algorithme.</li>
 
-<li>[En option] Je comprends comment fonctionne la récursivité.</li>
+5. [En option] Je comprends comment fonctionne la récursivité.</li>
 
-<li>Je sais pourquoi un algorithme de complexité exponentielle est lent.</li>
+6. Je sais pourquoi un algorithme de complexité exponentielle est lent.</li>
 
-<li>Je comprends ce qu'est une solution heuristique.</li>
-
-
+7. Je comprends ce qu'est une solution heuristique.</li>
 
 ```
 
 
 
-```{togofurther}
+```{togofurther} Quelques liens web
 
 <br>
 

@@ -15,7 +15,7 @@ La manière la plus simple pour rechercher un élément dans un tableau (une lis
 
 Tableau Eléments            # données stockées dans un tableau (une liste en Python)
 n ← longueur(Eléments)      # la variable n contient le nombre d'éléments 
-elément_recherché ← entrée  # l'élément recherché en tant que paramètre de l'algorithme
+elément_recherché ← entrée  # l'élément recherché est un paramètre de l'algorithme
 i ← 1                       # index pour parcourir la liste
 
 Répéter Pour i = 1 à n
@@ -27,34 +27,35 @@ Retourner « Non »
 
 ```
 
-Quelle est la complexité de cet {glo}`algo|algorithme` de **<span style="color:rgb(89, 51, 209)">recherche linéaire</span>** ? Pour répondre à cette question, il faut estimer le nombre d’{glo}`instruction|instructions` élémentaires nécessaires pour rechercher un élément dans un tableau. Ce nombre dépend naturellement de la taille du tableau `n` : plus le nombre d'éléments dans le tableau est grand, plus on a besoin d'instructions pour retrouver un élément.
+Quelle est la complexité de cet {glo}`algo|algorithme` de **<span style="color:rgb(89, 51, 209)">recherche linéaire</span>** ? Pour répondre à cette question, il faut estimer le nombre d’{glo}`instruction|instructions` élémentaires nécessaires pour rechercher un élément dans un tableau. Ce nombre dépend naturellement de la taille du tableau $n$ : plus le nombre d'éléments dans le tableau est grand, plus on a besoin d'instructions pour retrouver un élément.
 
-Supposons que le tableau contienne 10 éléments. Pour trouver l’élément recherché, il faut au moins deux {glo}`instruction|instructions` par élément du tableau : une instruction pour accéder à l'élément du tableau (ou `Elements[i]`) et une autre instruction pour le comparer à `élément_recherché`. Dans le cas du tableau à 10 éléments, cet algorithme prendrait 20 instructions élémentaires, 2 (instructions) multiplié par le nombre d'éléments dans le tableau. Mais si le tableau contient 100 éléments, le nombre d’instructions élémentaires monte à 200. De manière  générale, si le nombre d’éléments dans le tableau est `n`, cela prend `2n` instructions pour le parcourir et pour comparer ses éléments. 
+Supposons que le tableau contienne $10$ éléments. Pour trouver l’élément recherché, il faut au moins deux {glo}`instruction|instructions` par élément du tableau : une instruction pour accéder à l'élément du tableau (ou `Elements[i]`) et une autre instruction pour le comparer à `élément_recherché`. Dans le cas du tableau à $10$ éléments, cet algorithme prendrait $20$ instructions élémentaires, $2$ (instructions) multiplié par le nombre d'éléments dans le tableau. Mais si le tableau contient 100 éléments, le nombre d’instructions élémentaires monte à $200$. De manière  générale, si le nombre d’éléments dans le tableau est $n$, cela prend $2n$ instructions pour le parcourir et pour comparer ses éléments. 
 
-Cette estimation n’est pas exacte. Nous n’avons pas pris en compte les instructions élémentaires qui permettent d’incrémenter `i` et de vérifier si `i == longueur(Nombres)`. Lorsqu’on prend en compte ces 2 instructions supplémentaires liées à l'utilisation de `i`, le nombre d’instructions passe de 200 à 400 (ce qui correspond à `4n`). Il faut également y ajouter les 4 instructions d’initialisation avant la {glo}`bouclewhile|boucle`, plus l’instruction de retour à la fin de l'algorithme, ce qui fait monter le nombre d'instructions de 400 à 405 (`4n + 5`). Attention, le nombre exact peut être différent, car il dépend de l'implémentation sur la machine. Mais, ce qui nous intéresse ici n’est pas tant le nombre exact d’instructions, si c'est 205 ou 410 ou 815. Ce qui nous intéresse ici est plutôt l'**<span style="color:rgb(89, 51, 209)">ordre de grandeur</span>** de l'algorithme ou comment le nombre d’instructions élémentaires grandit avec la taille du tableau `n`. 
+Cette estimation n’est pas exacte. Nous n’avons pas pris en compte les instructions élémentaires qui permettent d’incrémenter `i` et de vérifier si `i == longueur(Nombres)`. Lorsqu’on prend en compte ces 2 instructions supplémentaires liées à l'utilisation de `i`, le nombre d’instructions passe de $200$ à $400$ (ce qui correspond à $4n$). Il faut également y ajouter les 4 instructions d’initialisation avant la {glo}`bouclewhile|boucle`, plus l’instruction de retour à la fin de l'algorithme, ce qui fait monter le nombre d'instructions de $400$ à $405 (4n + 5)$. Attention, le nombre exact peut être différent, car il dépend de l'implémentation sur la machine. Mais, ce qui nous intéresse ici n’est pas tant le nombre exact d’instructions, si c'est $205$ ou $410$ ou $815$. Ce qui nous intéresse ici est plutôt l'**<span style="color:rgb(89, 51, 209)">ordre de grandeur</span>** de l'algorithme ou comment le nombre d’instructions élémentaires grandit avec la taille du tableau $n$. 
 
-Cet algorithme est de complexité **<span style="color:rgb(89, 51, 209)">linéaire</span>**. Une complexité linéaire implique que le nombre d’instructions élémentaires croît linéairement en fonction du nombre d’éléments des données : `cn + a`, ou `c` et `a` sont des {glo}`constante|constantes`. Dans ce cas précis, `c` vaut 4 et `a` vaut 5. Si le tableau contient 10 éléments, il faut environ 45 instructions ; pour 100 éléments il faut environ 405 instructions ; pour 1000 éléments il faut environ 4005 instructions et ainsi de suite. Le nombre d’instructions grandit de manière linéaire en fonction de la taille des données `n`, et cette relation est représentée par une ligne lorsqu'on la dessine (voir la figure ci-dessous).
+Cet algorithme est de complexité **<span style="color:rgb(89, 51, 209)">linéaire</span>**. Une complexité linéaire implique que le nombre d’instructions élémentaires croît linéairement en fonction du nombre d’éléments des données : $cn + a$, ou $c$ et $a$ sont des {glo}`constante|constantes`. Dans ce cas précis, $c$ vaut $4$ et $a$ vaut $5$. Si le tableau contient $10$ éléments, il faut environ $45$ instructions ; pour $100$ éléments il faut environ $405$ instructions ; pour $1000$ éléments il faut environ $4005$ instructions et ainsi de suite. Le nombre d’instructions grandit de manière linéaire en fonction de la taille des données $n$, et cette relation est représentée par une ligne lorsqu'on la dessine (voir la figure ci-dessous).
 
 ```{figure} media/Complexité_linéaire.png
 ---
 alt: Ordre de grandeur linéaire
-width: 420px
+width: 500px
 name : fig-comp-log
 ---
-**Complexité linéaire**. La complexité de l'algorithme de recherche linéaire, comme son nom l'indique, est linéaire. La relation entre la taille du tableau `n` et le nombre d'instructions nécessaires pour retrouver un élément dans ce tableau représente une ligne.
+**Complexité linéaire**. La complexité de l'algorithme de recherche linéaire, comme son nom l'indique, est linéaire. La relation entre la taille du tableau $n$ et le nombre d'instructions nécessaires pour retrouver un élément dans ce tableau représente une ligne.
 ```
 
-```{exercise} Compter jusqu'à n
+```{exercise} Compter jusqu'à $n$
 
-Ecrire un algorithme qui affiche tous les nombres de 1 à `n`. 
+Ecrire un algorithme qui affiche tous les nombres de $1$ à $n$. 
 
-Combien d’instructions élémentaires sont nécessaires lorsque `n` vaut 100 ? 
+Combien d’instructions élémentaires sont nécessaires lorsque $n$ vaut $100$ ? 
 
 Quelle est la complexité de cet algorithme ?  
 ```
 
-`````{solution} 
 
+``````{htmlonly} 
+`````{solution} 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
@@ -67,7 +68,7 @@ Répéter Pour i = 1 à n
 Fin Pour
 ```
 
-L’initialisation des variables `n` et `i` compte pour 2 instructions élémentaires. Chaque passage de la boucle correspond à trois instructions élémentaires : 1 instruction qui affiche `i`, 1 instruction qui incrémente `i` de 1 et finalement une instruction qui compare `i` à `n` (pour savoir si la boucle s’arrête ou si elle continue). Le total d’instructions élémentaires pour le cas où `n` vaut 100 est 3 * 100 + 2 ou 302 instructions élémentaires.
+L’initialisation des variables `n` et `i` compte pour $2$ instructions élémentaires. Chaque passage de la boucle correspond à trois instructions élémentaires : $1$ instruction qui affiche `i`, 1 instruction qui incrémente `i` de 1 et finalement une instruction qui compare `i` à `n` (pour savoir si la boucle s’arrête ou si elle continue). Le total d’instructions élémentaires pour le cas où `n` vaut $100$ est $3 * 100 + 2$ ou $302$ instructions élémentaires.
 
 Il faut se rendre compte que cette estimation du nombre d’instructions élémentaires est approximatif, et non pas exact. Par exemple, l’instruction élémentaire `Afficher(i)` englobe certainement plusieurs instructions à l’exécution et prend de plus en plus de temps à mesure que `i` grandit (affiche de plus en plus de caractères).
 
@@ -76,7 +77,37 @@ La complexité (ou l’ordre de grandeur) de cet algorithme est linéaire, comme
 ```{figure} media/Graphique_rech_lin_22.png
 ---
 alt: recherche linéaire
-width: 420px
+width: 500px
+name : fig-rech-lin2
+---
+```
+````
+`````
+``````
+
+`````{latexonly} 
+
+````{solution} 
+
+```{code-block} python
+Variable n : numérique
+Variable i : numérique
+
+Répéter Pour i = 1 à n
+    Afficher(i)
+Fin Pour
+```
+
+L’initialisation des variables `n` et `i` compte pour $2$ instructions élémentaires. Chaque passage de la boucle correspond à trois instructions élémentaires : $1$ instruction qui affiche `i`, 1 instruction qui incrémente `i` de 1 et finalement une instruction qui compare `i` à `n` (pour savoir si la boucle s’arrête ou si elle continue). Le total d’instructions élémentaires pour le cas où `n` vaut $100$ est $3 * 100 + 2$ ou 302 instructions élémentaires.
+
+Il faut se rendre compte que cette estimation du nombre d’instructions élémentaires est approximatif, et non pas exact. Par exemple, l’instruction élémentaire `Afficher(i)` englobe certainement plusieurs instructions à l’exécution et prend de plus en plus de temps à mesure que `i` grandit (affiche de plus en plus de caractères).
+
+La complexité (ou l’ordre de grandeur) de cet algorithme est linéaire, comme illustré dans ce graphique : 
+
+```{figure} media/Graphique_rech_lin_22.png
+---
+alt: recherche linéaire
+width: 500px
 name : fig-rech-lin2
 ---
 ```
@@ -84,17 +115,20 @@ name : fig-rech-lin2
 `````
 
 
+
+
+
 ```{exercise} Compter par pas de 2
 
-Ecrire un algorithme qui affiche tous les nombres *pairs* de 1 à `n`. 
+Ecrire un algorithme qui affiche tous les nombres *pairs* de $1$ à $n$. 
 
-Combien d’instructions élémentaires sont nécessaires lorsque `n` vaut 100 ? 
+Combien d’instructions élémentaires sont nécessaires lorsque $n$ vaut $100$ ? 
 
 Quelle est la complexité de cet algorithme ? 
 ```
 
+``````{htmlonly} 
 `````{solution} 
-
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
@@ -107,21 +141,54 @@ Répéter Pour i = 2 à n, par pas de 2
 Fin Pour
 ```
 
-La seule ligne qui change par rapport à la solution de l’exercice précédent est l’incrément de la boucle par pas de 2. 
+La seule ligne qui change par rapport à la solution de l’exercice précédent est l’incrément de la boucle par pas de $2$. 
 
-L’initialisation des variables `i` et `n` compte pour 2 instructions élémentaires. Chaque passage de la boucle correspond à trois instructions élémentaires : 1 instruction qui affiche `i`, 1 instruction qui incrémente `i` de 2 et finalement 1 instruction qui compare `i` à `n` (pour savoir si la boucle s’arrête ou si elle continue). Pour le cas où `n` vaut 100, la boucle sera parcourue 50 fois (par pas de 2). Le total d’instructions élémentaires est donc 3 * 50 + 2 ou 152 instructions élémentaires.
+L’initialisation des variables `i` et `n` compte pour 2 instructions élémentaires. Chaque passage de la boucle correspond à trois instructions élémentaires : 1 instruction qui affiche `i`, $1$ instruction qui incrémente `i` de $2$ et finalement $1$ instruction qui compare `i` à `n` (pour savoir si la boucle s’arrête ou si elle continue). Pour le cas où `n` vaut 100, la boucle sera parcourue $50$ fois (par pas de $2$). Le total d’instructions élémentaires est donc $3 * 50 + 2$ ou $152$ instructions élémentaires.
 
 La complexité (ou l’ordre de grandeur) de cet algorithme est également linéaire, comme illustré dans le graphique. Il faut noter que l’ordre de grandeur est le même que pour l’exercice précédent, seule la vitesse de croissance change. 
 
 ```{figure} media/Graphique_rech_lin_23.png
 ---
 alt: recherche linéaire
-width: 420px
+width: 500px
 name : fig-rech-lin3
 ---
 ```
 
-La différence de croissance se cache dans la constante `c` de l’ordre de grandeur `cn + a`. La valeur de `c` dans l’exercice précédent est supérieure à la valeur de c dans cet exercice. Dans un premier temps, on peut ignorer la valeur de cette constante `c`. Cependant elle peut devenir importante lorsque l’on doit comparer des algorithmes du même ordre entre eux.  
+La différence de croissance se cache dans la constante $c$ de l’ordre de grandeur $cn + a$. La valeur de $c$ dans l’exercice précédent est supérieure à la valeur de $c$ dans cet exercice. Dans un premier temps, on peut ignorer la valeur de cette constante $c$. Cependant elle peut devenir importante lorsque l’on doit comparer des algorithmes du même ordre entre eux.  
+
+````
+`````
+``````
+
+`````{latexonly} 
+
+````{solution} 
+
+```{code-block} python
+Variable n : numérique
+Variable i : numérique
+
+Répéter Pour i = 2 à n, par pas de 2
+    Afficher(i)
+Fin Pour
+```
+
+La seule ligne qui change par rapport à la solution de l’exercice précédent est l’incrément de la boucle par pas de $2$. 
+
+L’initialisation des variables `i` et `n` compte pour $2$ instructions élémentaires. Chaque passage de la boucle correspond à trois instructions élémentaires : $1$ instruction qui affiche `i`, $1$ instruction qui incrémente `i` de $2$ et finalement $1$ instruction qui compare `i` à `n` (pour savoir si la boucle s’arrête ou si elle continue). Pour le cas où `n` vaut $100$, la boucle sera parcourue $50$ fois (par pas de $2$). Le total d’instructions élémentaires est donc $3 * 50 + 2$ ou $152$ instructions élémentaires.
+
+La complexité (ou l’ordre de grandeur) de cet algorithme est également linéaire, comme illustré dans le graphique. Il faut noter que l’ordre de grandeur est le même que pour l’exercice précédent, seule la vitesse de croissance change. 
+
+```{figure} media/Graphique_rech_lin_23.png
+---
+alt: recherche linéaire
+width: 500px
+name : fig-rech-lin3
+---
+```
+
+La différence de croissance se cache dans la constante $c$ de l’ordre de grandeur $cn + a$. La valeur de $c$ dans l’exercice précédent est supérieure à la valeur de $c$ dans cet exercice. Dans un premier temps, on peut ignorer la valeur de cette constante $c$. Cependant elle peut devenir importante lorsque l’on doit comparer des algorithmes du même ordre entre eux.  
 
 ````
 `````
@@ -131,23 +198,131 @@ La différence de croissance se cache dans la constante `c` de l’ordre de gra
 
 ```{exercise} Recherche linéaire🔌
 
-Programmer l'algorithme de recherche linéaire en Python. Rechercher une valeur entre 1 et 1000000 dans un tableau qui contient les valeurs allant de 1 à 1000000.
+Programmer l'algorithme de recherche linéaire en Python. Rechercher une valeur entre 1 et 1000000 dans un tableau qui contient les valeurs allant de $1$ à $1000000$.
 
-Pour quelle valeur l'algorithme est le plus rapide ? Pour quelle valeur l'algorithme est le plus lent ? Indice : utiliser le module `time` pour chronometrer le temps d'exécution.
-
-Est-ce que ce résultat vaut si les éléments du tableau ne sont pas dans l'ordre ? Essayer en utilisant la fonction `shuffle()` du module `random`.
+Pour quelle valeur l'algorithme est le plus rapide ? Le plus lent ? Indice : utiliser le module `time` pour chronometrer le temps d'exécution.
 
 ```
 
 
+``````{htmlonly} 
 `````{solution} 
 
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
-Voici un programme possible pour l'algorithme de recherche linéaire. Si on chronomètre le temps d'exécution, c'est beaucoup plus lent de rechercher une valeur qui se trouve à la fin du tableau, qu'au début du tableau. La valeur 1 est trouvée très rapidement en comparaison à la valeur 1000000.
+Voici un programme possible pour l'algorithme de recherche linéaire. Si on chronomètre le temps d'exécution, la valeur $1$ est trouvée très rapidement en comparaison à la valeur 1000000. C'est beaucoup plus lent de rechercher une valeur qui se trouve à la fin du tableau, qu'au début du tableau. 
 
-Si on mélange l'ordre des éléments, la valeur 1 pourrait se retrouver en fin de tableau et pourrait prendre très longtemps à retrouver. Au contraire, la valeur 1000000 pourrait se retrouver en début de tableau et pourrait prendre très peu de temps à retrouver. La situation est donc beaucoup moins prévisible.
+```{codeplay}
+
+# algorithme de recherche linéaire
+def search_lin(search_list, search_element, verbose=0) :
+    
+    # boucle pour parcourir la liste
+    for element in search_list :
+
+        if verbose :
+            print("L'élément comparé est : " + str(element) + "\n")
+
+        # l'élément de la liste correspond à l'élément recherché
+        if element == search_element :
+            return True
+
+    # aucun élément ne correspond
+    return False
+
+
+import time
+
+last = 1000000
+ma_liste = list(range(1,last+1)) 
+
+# mettre verbose à 1 pour avoir une vue de ce qui se passe
+# attention, cela fausse les temps de calcul (plus temps d'affichage) 
+verbose = 0
+
+# chronomètre le temps de recherche de l'élément 1000000
+time_start = time.time()
+search_lin(ma_liste, last, verbose)
+time_1000000= time.time() - time_start
+print("Recherche linéaire de 1000000 : "  + str(round(time_1000000,7)) + " secondes.\n")
+
+# chronomètre le temps de recherche de l'élément 1
+time_start = time.time()
+search_lin(ma_liste, 1, verbose)
+time_1 = time.time() - time_start
+print("Recherche linéaire de 1 : "  + str(round(time_1,7)) + " secondes.")
+
+```
+````
+`````
+``````
+
+`````{latexonly} 
+
+````{solution} 
+
+Voici un programme possible pour l'algorithme de recherche linéaire. Si on chronomètre le temps d'exécution, la valeur $1$ est trouvée très rapidement en comparaison à la valeur $1000000$. C'est beaucoup plus lent de rechercher une valeur qui se trouve à la fin du tableau, qu'au début du tableau. 
+
+```{codeplay}
+
+# algorithme de recherche linéaire
+def search_lin(search_list, search_element, verbose=0) :    
+    
+    # boucle pour parcourir la liste
+    for element in search_list :
+    
+        if verbose :
+            print("L'élément comparé est : " + str(element) + "\n")
+
+        # l'élément de la liste correspond à l'élément recherché
+        if element == search_element :
+            return True
+
+    # aucun élément ne correspond
+    return False
+
+
+import time
+
+last = 1000000
+ma_liste = list(range(1,last+1)) 
+
+# mettre verbose à 1 pour avoir une vue de ce qui se passe
+# attention, cela fausse les temps de calcul (plus temps d'affichage) 
+verbose = 0
+
+# chronomètre le temps de recherche de l'élément 1000000
+time_start = time.time()
+search_lin(ma_liste, last, verbose)
+time_1000000 = time.time() - time_start
+print("Recherche linéaire 1000000 : "  + str(round(time_1000000,7)) + " secondes.\n")
+
+# chronomètre le temps de recherche de l'élément 1
+time_start = time.time()
+search_lin(ma_liste, 1, verbose)
+time_1 = time.time() - time_start
+print("Recherche linéaire 1 : "  + str(round(time_1,7)) + " secondes.")
+
+
+
+```
+````
+`````
+
+```{exercise} Recherche linéaire (dans le désordre)🔌
+
+On a vu dans l'exercice précédent que cela prend moins de temps pour trouver un élément au début de la liste qu'un élément de la fin de la liste. Qu'est-ce qui arrive si les éléments de la liste ne sont pas dans l'ordre ? Essayer en utilisant la fonction `shuffle()` du module `random`.
+
+```
+
+``````{htmlonly} 
+`````{solution} 
+
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+
+Si on mélange l'ordre des éléments, la valeur $1$ pourrait se retrouver en fin de tableau et pourrait prendre très longtemps à retrouver. Au contraire, la valeur 1000000 pourrait se retrouver en début de tableau et pourrait prendre très peu de temps à retrouver. La situation est donc beaucoup moins prévisible.
 
 ```{codeplay}
 
@@ -172,64 +347,81 @@ import time
 import random
 
 last = 1000000
-chiffres = 7
-
 ma_liste = list(range(1,last+1)) 
 
 # mettre verbose à 1 pour avoir une vue de ce qui se passe
 # attention, verbose à 1 fausse les temps de calcul (rajoute du temps d'affichage) 
 verbose = 0
 
-print("Je calcule...\n")
-
-print("Les éléments sont dans l'ordre :\n")
-
-# chronomètre le temps de recherche de l'élément 1000000
-time_1 = time.time()
-search_lin(ma_liste, last, verbose)
-time_algo_lin_1000000= time.time() - time_1
-print("Recherche linéaire de 1000000 : "  + str(round(time_algo_lin_1000000,chiffres)) + " secondes\n")
-
-# chronomètre le temps de recherche de l'élément 1
-time_1 = time.time()
-search_lin(ma_liste, 1, verbose)
-time_algo_lin_1 = time.time() - time_1
-print("Recherche linéaire de 1 : "  + str(round(time_algo_lin_1,chiffres)) + " secondes\n")
-
 # mélange les éléments du tableau au hasard
 random.shuffle(ma_liste);
-print("Les éléments ne sont plus dans l'ordre :\n")
+print("Les éléments ne sont plus dans l'ordre.\n")
 
 # chronomètre le temps de recherche de l'élément 1000000
-time_1 = time.time()
+time_start = time.time()
 search_lin(ma_liste, last, verbose)
-time_algo_lin_1000000= time.time() - time_1
-print("Recherche linéaire de 1000000 : "  + str(round(time_algo_lin_1000000,chiffres)) + " secondes\n")
+time_1000000 = time.time() - time_start
+print("Recherche linéaire de 1000000 : "  + str(round(time_1000000,7)) + " secondes.\n")
 
 # chronomètre le temps de recherche de l'élément 1
-time_1 = time.time()
+time_start = time.time()
 search_lin(ma_liste, 1, verbose)
-time_algo_lin_1 = time.time() - time_1
-print("Recherche linéaire de 1 : "  + str(round(time_algo_lin_1,chiffres)) + " secondes\n")
+time_1 = time.time() - time_start
+print("Recherche linéaire de 1 : "  + str(round(time_1,7)) + " secondes.")
 
+```
+````
+`````
+``````
 
-print("J'ai fini de calculer...")
+`````{latexonly} 
+
+````{solution} 
+
+Si on mélange l'ordre des éléments, la valeur $1$ pourrait se retrouver en fin de tableau et pourrait prendre très longtemps à retrouver. Au contraire, la valeur 1000000 pourrait se retrouver en début de tableau et pourrait prendre très peu de temps à retrouver. La situation est donc beaucoup moins prévisible. Le code ci-dessous est à utiliser avec la fonction `search_lin()` de la solution précédente.
+
+```{codeplay}
+import time
+import random
+
+last = 1000000
+ma_liste = list(range(1,last+1)) 
+# mélange les éléments du tableau au hasard
+random.shuffle(ma_liste);
+
+# mettre verbose à 1 pour avoir une vue de ce qui se passe
+# attention, cela fausse les temps de calcul (plus temps d'affichage) 
+verbose = 0
+
+# chronomètre le temps de recherche de l'élément 1000000
+time_start = time.time()
+search_lin(ma_liste, last, verbose)
+time_1000000 = time.time() - time_start
+print("Recherche linéaire 1000000 : "  + str(round(time_1000000,7)) + " secondes.\n")
+
+# chronomètre le temps de recherche de l'élément 1
+time_start = time.time()
+search_lin(ma_liste, 1, verbose)
+time_1 = time.time() - time_start
+print("Recherche linéaire 1 : "  + str(round(time_1,7)) + " secondes.")
 
 ```
 ````
 `````
 
 
+
+
+
 ````{togofurther} 
 
-Pour décrire mathématiquement les ordres de complexité, on utilise la notation « Grand O ». Pour dire qu'un ordre de complexité est linéaire, on écrit par exemple qu'il est O(n).
+Pour décrire mathématiquement les ordres de complexité, on utilise la notation « Grand O ». Pour dire qu'un ordre de complexité est linéaire, on écrit par exemple qu'il est $O(n)$.
 
 ````
 
 
+## Recherche binaire
 
-<span id=rech-bin></span>
-## 2.2. Recherche binaire
 
 ```{thinkingmatter} Le dictionnaire
 
@@ -240,9 +432,7 @@ Utilisez-vous l’algorithme de recherche linéaire, parcourez-vous tous les él
 Quelle propriété du dictionnaire nous permet d’utiliser un autre algorithme de recherche que l’algorithme de recherche linéaire ?
 ```
 
-
-
-Si on doit rechercher un élément dans un tableau qui est **déjà trié**, l’{glo}`algo|algorithme` de recherche linéaire n’est pas optimal. Dans le cas de la recherche d'un mot dans un dictionnaire, la recherche linéaire implique que l'on va parcourir tous les mots du dictionnaire dans l’ordre, jusqu'à trouver le mot recherché. Mais nous ne recherchons pas les mots dans un dictionnaire de la sorte. Nous exploitons le fait que les mots du dictionnaire sont triés dans un ordre alphabétique. On commence par ouvrir le dictionnaire sur une page au hasard et on  regarde si le mot recherché se trouve avant ou après cette page. On ouvre ensuite une autre page au hasard dans la partie retenue du dictionnaire. On appelle cette méthode la **<span style="color:rgb(89, 51, 209)">recherche binaire</span>** (ou la recherche dichotomique), car à chaque itération elle ***<span style="color:rgb(13, 204, 166)">divise l’espace de recherche en deux</span>***. En effet, à chaque nouvelle page ouverte, nous éliminons environ la moitié du dictionnaire qui nous restait à parcourir. Voici une description de l'algorithme de recherche binaire :
+<span id=rech-bin></span> Si on doit rechercher un élément dans un tableau qui est **déjà trié**, l’{glo}`algo|algorithme` de recherche linéaire n’est pas optimal. Dans le cas de la recherche d'un mot dans un dictionnaire, la recherche linéaire implique que l'on va parcourir tous les mots du dictionnaire dans l’ordre, jusqu'à trouver le mot recherché. Mais nous ne recherchons pas les mots dans un dictionnaire de la sorte. Nous exploitons le fait que les mots du dictionnaire sont triés dans un ordre alphabétique. On commence par ouvrir le dictionnaire sur une page au hasard et on  regarde si le mot recherché se trouve avant ou après cette page. On ouvre ensuite une autre page au hasard dans la partie retenue du dictionnaire. On appelle cette méthode la **<span style="color:rgb(89, 51, 209)">recherche binaire</span>** (ou la recherche dichotomique), car à chaque itération elle ***<span style="color:rgb(13, 204, 166)">divise l’espace de recherche en deux</span>***. En effet, à chaque nouvelle page ouverte, nous éliminons environ la moitié du dictionnaire qui nous restait à parcourir. Voici une description de l'algorithme de recherche binaire :
 
 ```{code-block}
 
@@ -250,7 +440,7 @@ Si on doit rechercher un élément dans un tableau qui est **déjà trié**, l�
 
 Tableau Eléments            # les données du tableau (liste en Python) sont triées
 n ← longueur(Eléments)      # la variable n contient le nombre d'éléments 
-elément_recherché ← entrée  # l'élément recherché en tant que paramètre de l'algorithme
+elément_recherché ← entrée  # l'élément recherché est un paramètre de l'algorithme
 trouvé ← Faux               # indique si l'élément à été retrouvé 
 index_début ← 0             # au début on cherche dans tout le tableau 
 index_fin ← n               # au début on cherche dans tout le tableau 
@@ -287,16 +477,17 @@ Retourner trouvé
 
 Prenons le temps d’étudier cet {glo}`algo|algorithme`. Que fait-il ? La {glo}`bouclewhile|boucle Tant que` permet de parcourir le tableau `Eléments` et d'y rechercher `elément_recherché` tant qu’il n’est pas trouvé (tant que `trouvé != Vrai`). A la première itération (au premier passage dans la {glo}`bouclewhile|boucle`, on vérifie si l’élément au milieu du tableau `Eléments` n’est justement pas l'élément recherché. Les éléments de la liste étant triés, si l’élément au milieu du tableau est plus grand que l’élément recherché, cela indique que `elément_recherché` se trouve dans la première partie du tableau. Si l'élément au milieu du tableau est plus petit que l’élément recherché, cela indique que l’élément recherché se trouve au contraire dans la deuxième moitié du tableau. Pour la suite de la recherche, on retient soit la première, soit la deuxième moitié du tableau, selon si l'élément recherché est plus grand ou plus petit que l'élément du milieu. A chaque prochaine itération (à chaque passage dans la {glo}`bouclewhile|boucle`), on vérifie si l’élément au milieu du nouveau sous-tableau retenu n’est pas l’élément recherché. 
 
-Dans la **<span style="color:rgb(89, 51, 209)">recherche linéaire</span>**, chaque passage de la {glo}`bouclewhile|boucle` permettait de comparer un élément à l’élément recherché et l’espace de recherche diminuait seulement de 1 (l'espace de recherche correspond aux nombre d'emplacements encore possibles). Dans la **<span style="color:rgb(89, 51, 209)">recherche binaire</span>**, chaque passage de la {glo}`bouclewhile|boucle` divise l’espace de recherche par deux et nous n’avons besoin de parcourir plus qu’une moitié (de la moitié, de la moitié, de la moitié, etc.) du tableau.
+Dans la **<span style="color:rgb(89, 51, 209)">recherche linéaire</span>**, chaque passage de la {glo}`bouclewhile|boucle` permettait de comparer un élément à l’élément recherché et l’espace de recherche diminuait seulement de $1$ (l'espace de recherche correspond aux nombre d'emplacements encore possibles). Dans la **<span style="color:rgb(89, 51, 209)">recherche binaire</span>**, chaque passage de la {glo}`bouclewhile|boucle` divise l’espace de recherche par deux et nous n’avons besoin de parcourir plus qu’une moitié (de la moitié, de la moitié, de la moitié, etc.) du tableau.
 
-Le nombre d’étapes nécessaires pour rechercher un élément dans un tableau de taille 16 de façon dichotomique correspond donc au nombre de fois que le tableau peut être divisé en 2 et correspond à 4 (comme on peut le voir sur la figure ci-dessous), parce que : 
+Le nombre d’étapes nécessaires pour rechercher un élément dans un tableau de taille $16$ de façon dichotomique correspond donc au nombre de fois que le tableau peut être divisé en $2$ et correspond à $4$ (comme on peut le voir sur la figure ci-dessous), parce que : 
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;  16 / 2 / 2 / 2 / 2 = 1 &nbsp;&nbsp;  donc	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+&nbsp;&nbsp;&nbsp;&nbsp;  $16 / 2 / 2 / 2 / 2 = 1$ &nbsp;&nbsp;  donc	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
 
-&nbsp;&nbsp;&nbsp;&nbsp; 2 * 2 * 2 * 2 = 16 &nbsp;&nbsp;    ou 
+&nbsp;&nbsp;&nbsp;&nbsp; $2 * 2 * 2 * 2 = 16$ &nbsp;&nbsp;    ou 
 
-&nbsp;&nbsp;&nbsp;&nbsp; 2<sup>4</sup> = 16
+
+&nbsp;&nbsp;&nbsp;&nbsp; $ 2^{4} = 16$
 
 
 ```{figure} media/Logn.png
@@ -305,24 +496,26 @@ alt: le parcours d'un tableau trié de 16 éléments
 width: 420px
 name : fig-logn
 ---
-**Exemple de parcours d'un tableau trié.** Seulement 4 étapes sont suffisantes pour parcourir un tableau trié de 16 éléments à la recherche d’un élément qui se trouve à la onzième position. A chaque étape, l’espace de recherche est divisé par 2. Si le tableau n'était pas trié, 11 étapes seraient nécessaires (on doit vérifier chaque élément dans l'ordre). 
+**Exemple de parcours d'un tableau trié.** Seulement 4 étapes sont suffisantes pour parcourir un tableau trié de 16 éléments à la recherche d’un élément qui se trouve à la onzième position. A chaque étape, l’espace de recherche est divisé par $2$. Si le tableau n'était pas trié, 11 étapes seraient nécessaires (on doit vérifier chaque élément dans l'ordre). 
 
 ```
 
 
-Si on généralise, le nombre d’étapes `x` nécessaires pour parcourir un tableau de taille `n` est :
+Si on généralise, le nombre d’étapes $x$ nécessaires pour parcourir un tableau de taille $n$ est :
 
-&nbsp;&nbsp;&nbsp;&nbsp; 2<sup>x</sup> = n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; par conséquent
 
-&nbsp;&nbsp;&nbsp;&nbsp; x = log<sub>2</sub>(n) ~ log(n)   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  la simplification peut être faite car l’ordre de grandeur est le même
+&nbsp;&nbsp;&nbsp;&nbsp; $2^{x}$ = n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; par conséquent
 
-La complexité de l'algorithme de recherche binaire est donc **<span style="color:rgb(89, 51, 209)">logarithmique</span>**, lorsque `n` grandit nous avons besoin de `log(n)` opérations. La figure ci-dessous permet de comparer les ordres de grandeur logarithmique et linéaire. On remarque qu'un algorithme de complexité logarithmique est beaucoup plus rapide qu’un algorithme de complexité linéaire, car il a besoin de beaucoup moins d'instructions élémentaires pour trouver une solution.
+
+&nbsp;&nbsp;&nbsp;&nbsp; $x = log_{2}(n) ~ log(n)$   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  la simplification peut être faite car l’ordre de grandeur est le même
+
+La complexité de l'algorithme de recherche binaire est donc **<span style="color:rgb(89, 51, 209)">logarithmique</span>**, lorsque $n$ grandit nous avons besoin de $log(n)$ opérations. La figure ci-dessous permet de comparer les ordres de grandeur logarithmique et linéaire. On remarque qu'un algorithme de complexité logarithmique est beaucoup plus rapide qu’un algorithme de complexité linéaire, car il a besoin de beaucoup moins d'instructions élémentaires pour trouver une solution.
 
 
 ```{figure} media/Graphique_lin_log.png
 ---
 alt: comparaison de complexités logarithmique et linéaire
-width: 420px
+width: 500px
 name : fig-graph-log
 ---
 **Comparaison de complexités logarithmique et linéaire**. Un algorithme de complexité logarithmique est plus rapide qu’un algorithme de complexité linéaire.
@@ -353,22 +546,18 @@ Un algorithme avec un ordre de complexité logarithmique est plus rapide qu’un
 
 ```{exercise} Recherche binaire 🔌
 
-Programmer l'algorithme de recherche binaire en Python. Rechercher une valeur entre 0 et 100 dans un tableau qui contient les valeurs allant de 0 à 100.
+Programmer l'algorithme de recherche binaire en Python. Rechercher une valeur entre 0 et 100 dans un tableau qui contient les valeurs allant de $1$ à $99$.
 
-Pour quelle valeur l'algorithme est le plus rapide ? Pour quelle valeur l'algorithme est le plus lent ? Indice : mettre le mode verbose pour afficher ce que fait l’algorithme. 
-
-Est-ce qu’on peut utiliser l’algorithme de recherche binaire si le tableau n’est pas trié ? Essayer avec la fonction `shuffle()` du module `random`.
+Pour quelle valeur l'algorithme est le plus rapide ? Pour quelle valeur l'algorithme est le plus lent ? Indice : mettre un mode verbose pour afficher ce que fait l’algorithme. 
 
 ```
 
+``````{htmlonly} 
 `````{solution} 
-
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
-Voici un programme possible pour l'algorithme de recherche binaire. L'algorithme est le plus rapide si on recherche la valeur qui se trouve au milieu du tableau (la valeur 51 avec index 50) et il est le plus lent lorsque l'on recherche la première valeur du tableau (la valeur 1). Il est facile de vérifier ceci en mettant mon_element à 51 et à 1. 
-
-Si le tableau n'est pas trié, l'algorithme n'est pas garanti de trouver l'élément recherché, car il peut facilement passer à côté. Pour essayer, décommenter les deux dernières lignes de code.
+Voici un programme possible pour l'algorithme de recherche binaire. L'algorithme est le plus rapide si on recherche la valeur qui se trouve au milieu du tableau (la valeur $50$) et il est le plus lent lorsque l'on recherche la première ou dernière valeur du tableau (la valeur $1$ ou $99$). 
 
 ```{codeplay}
 # algorithme de recherche binaire
@@ -377,38 +566,151 @@ def search_bin(search_list, search_element, verbose = 0) :
     # détermine les limites de la liste considérée
     start = 0
     end = len(search_list)
-
+    
     # tant que la liste
     while end-start :
-
-        # accède à l'élément du milieu 
-        # la division est entière, car on doit obtenir un index de liste
+    
+        # accède l'élément du milieu, division entière, il faut un index
         middle = (end-start) // 2 + start 
-        
         if verbose :
-            print("L'élément que l'on compare est : " + str(search_list[middle]) + "\n")
-
-	    # compare l'élément au milieu de la liste
+            print("Elément comparé : " + str(search_list[middle]) +"\n")
+    
+        # compare l'élément au milieu de la liste
         if search_element == search_list[middle] :
             if verbose :
-                print("L'élément " + str(search_list[middle]) + " a été retrouvé !\n")
-            return True
-
-	    # l'élément du milieu est plus petit, on cherche dans la fin de la liste
+                print("Elément retrouvé !\n")
+            return True      
+    
+        # l'élément est plus petit que l'élément du milieu
         elif search_element < search_list[middle] :
             # search_list devient dans la première moitié de search_list
             end = middle 
-            
+    
             if verbose :
-                print("L'élément se trouve au début de la liste : " + str(search_list[start:end]) + "\n")
-        
-        # l'élément du milieu est plus grand, on cherche dans la fin de la liste
+                print("1ère moitié de la liste : " + str(search_list[start:end]) + "\n")
+    
+        # l'élément est plus grand que l'élément du milieu
         else :
             # search_list devient la deuxième moitié de search_list
             start = middle + 1  
-            
+
             if verbose :
-                print("L'élément se trouve dans la deuxième moitié de la liste : " + str(search_list[start:end]) + "\n")
+                print("2ème moitié de la liste : " + str(search_list[start:end]) + "\n")
+
+    # aucun élément ne correspond
+    if verbose :
+        print("L'élément " + str(search_list[middle]) + " n'a pas été retrouvé...\n")
+    return False
+
+
+ma_liste = list(range(1,100)) 
+mon_element = 25
+
+# recherche de l’élément mon_element
+search_bin(ma_liste, mon_element, 1)
+
+```
+````
+`````
+``````
+`````{latexonly} 
+````{solution} 
+
+Voici un programme possible pour l'algorithme de recherche binaire. L'algorithme est le plus rapide si on recherche la valeur qui se trouve au milieu du tableau (la valeur $50$) et il est le plus lent lorsque l'on recherche la première ou dernière valeur du tableau (la valeur $1$ ou $99$). 
+
+```{codeplay}
+# algorithme de recherche binaire
+def search_bin(search_list, search_element, verbose = 0) :
+    # détermine les limites de la liste considérée
+    start = 0
+    end = len(search_list)
+    # tant que la liste
+    while end-start :
+        # accède l'élément du milieu, division entière, il faut un index
+        middle = (end-start) // 2 + start 
+        if verbose :
+            print("Elément comparé : " + str(search_list[middle]) +"\n")
+        # compare l'élément au milieu de la liste
+        if search_element == search_list[middle] :
+            if verbose :
+                print("Elément retrouvé !\n")
+            return True      
+        # l'élément est plus petit que l'élément du milieu
+        elif search_element < search_list[middle] :
+            # search_list devient dans la première moitié de search_list
+            end = middle 
+            if verbose :
+                print("1ère moitié de la liste : " + str(search_list[start:end]) + "\n")
+        # l'élément est plus grand que l'élément du milieu
+        else :
+            # search_list devient la deuxième moitié de search_list
+            start = middle + 1  
+            if verbose :
+                print("2ème moitié de la liste : " + str(search_list[start:end]) + "\n")
+    # aucun élément ne correspond
+    if verbose :
+        print("L'élément " + str(search_list[middle]) + " n'a pas été retrouvé...\n")
+    return False
+
+ma_liste = list(range(1,100)) 
+mon_element = 25
+# recherche de l’élément mon_element
+search_bin(ma_liste, mon_element, 1)
+```
+````
+`````
+
+
+```{exercise} Recherche binaire (dans le désordre) 🔌
+
+Est-ce qu’on peut utiliser l’algorithme de recherche binaire si le tableau n’est pas trié ? Essayer avec la fonction `shuffle()` du module `random`.
+
+```
+
+``````{htmlonly} 
+`````{solution} 
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+
+Si le tableau n'est pas trié, l'algorithme n'est pas garanti de trouver l'élément recherché, car il peut facilement passer à côté. 
+
+```{codeplay}
+# algorithme de recherche binaire
+def search_bin(search_list, search_element, verbose = 0) :
+    
+    # détermine les limites de la liste considérée
+    start = 0
+    end = len(search_list)
+    
+    # tant que la liste
+    while end-start :
+    
+        # accède l'élément du milieu, division entière, il faut un index
+        middle = (end-start) // 2 + start 
+        if verbose :
+            print("Elément comparé : " + str(search_list[middle]) +"\n")
+    
+        # compare l'élément au milieu de la liste
+        if search_element == search_list[middle] :
+            if verbose :
+                print("Elément retrouvé !\n")
+            return True      
+    
+        # l'élément est plus petit que l'élément du milieu
+        elif search_element < search_list[middle] :
+            # search_list devient dans la première moitié de search_list
+            end = middle 
+    
+            if verbose :
+                print("1ère moitié de la liste : " + str(search_list[start:end]) + "\n")
+    
+        # l'élément est plus grand que l'élément du milieu
+        else :
+            # search_list devient la deuxième moitié de search_list
+            start = middle + 1  
+
+            if verbose :
+                print("2ème moitié de la liste : " + str(search_list[start:end]) + "\n")
 
     # aucun élément ne correspond
     if verbose :
@@ -418,30 +720,47 @@ def search_bin(search_list, search_element, verbose = 0) :
 
 import random
 
-last = 100
+last = 99
 ma_liste = list(range(1,last+1)) 
+
 mon_element = random.randint(1,last) 
-
-# mettre verbose à 1 pour avoir une vue de ce qui se passe
-# attention, verbose à 1 fausse les temps de calcul (rajoute du temps d'affichage)
-verbose = 1
-
 print("L'élément recherché est : " + str(mon_element) + "\n")
 
-print("Je calcule...\n")
-
 # recherche de l’élément mon_element
-search_bin(ma_liste, mon_element, verbose)
+search_bin(ma_liste, mon_element, 1)
 
-print("J'ai fini de calculer...")
-
-# print("Tableau mélangé... : " + str(random.shuffle(ma_liste)))
-# search_bin(ma_liste, mon_element, verbose)
+random.shuffle(ma_liste)
+print("Tableau mélangé... : " + str(ma_liste) + "\n")
+search_bin(ma_liste, mon_element, 1)
 
 ```
+````
+`````
+``````
+`````{latexonly} 
+````{solution} 
+
+Si le tableau n'est pas trié, l'algorithme n'est pas garanti de trouver l'élément recherché, car il peut facilement passer à côté. Le code ci-dessous est à utiliser avec la fonction `search_bin()` donnée dans la solution précédente.
+
+
+```{codeplay}
+
+import random
+
+last = 99
+ma_liste = list(range(1,last+1)) 
+
+mon_element = random.randint(1,last) 
+print("L'élément recherché est : " + str(mon_element) + "\n")
+
+# recherche de l’élément mon_element
+search_bin(ma_liste, mon_element, 1)
+
+random.shuffle(ma_liste)
+print("Tableau mélangé... : " + str(ma_liste) + "\n")
+search_bin(ma_liste, mon_element, 1)
 
 ````
-
 `````
 
 
@@ -449,16 +768,16 @@ print("J'ai fini de calculer...")
 
 ```{exercise} Recherche linéaire versus binaire 🔌
 
-Reprendre les programmes de recherche linéaire et recherche binaire en Python et les utiliser pour rechercher un élément dans un tableau à 100 éléments : quel algorithme est le plus rapide ? 
+Reprendre les programmes de recherche linéaire et recherche binaire en Python et les utiliser pour rechercher un élément dans un tableau à $100$ éléments : quel algorithme est le plus rapide ? 
 
-Augmenter la taille du tableau à 1000, 10000, 100000, 1000000 et 1000000. Rechercher un élément avec vos deux programmes. Quel algorithme est plus rapide ? Est-ce significatif ? 
+Augmenter la taille du tableau à $1000$, $10000$, $100000$, $1000000$ et $10000000$. Rechercher un élément avec vos deux programmes. Quel algorithme est plus rapide ? Est-ce significatif ? 
 
 Est-ce que **un million** vous semble être un grand nombre pour une taille de données ? 
 
 ```
 
+``````{htmlonly} 
 `````{solution} 
-
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
@@ -500,7 +819,7 @@ def search_bin(search_list, search_element, verbose = 0) :
         middle = (end-start) // 2 + start 
         
         if verbose :
-            print("L'élément que l'on compare est : " + str(search_list[middle]) + "\n")
+            print("L'élément comparé est : " + str(search_list[middle]) + "\n")
 
 	    # compare l'élément au milieu de la liste
         if search_element == search_list[middle] :
@@ -533,51 +852,91 @@ def search_bin(search_list, search_element, verbose = 0) :
 import time
 import random
 
-chiffres = 7
+# stocke les résultats
+resultat_lin, resultat_bin  = [], []
 
-resultat_lin = []
-resultat_bin = []
-resultat_dif = []
+# longueurs des listes
+nb = [100, 1000, 10000, 100000, 1000000, 10000000]
 
-nb = [100, 1000, 10000, 100000, 1000000]
-
+# pour toute les longueurs des listes
 for last in nb :
     
+    # créer la liste
     ma_liste = list(range(1,last+1)) 
-    mon_element = random.randint(1,last) 
 
+    # rechercher un élément au hasard
+    mon_element = random.randint(1,last) 
     print("L'élément recherché est : " + str(mon_element))
 
-    # mettre verbose à 1 pour avoir une vue de ce qui se passe
-    # attention, verbose à 1 fausse les temps de calcul
-    verbose = 0
-
+    # recherche linéaire
     time_1 = time.time()
-    search_lin(ma_liste, mon_element, verbose)
-    time_algo_lin = round(time.time() - time_1, chiffres)
+    search_lin(ma_liste, mon_element, 0)
+    time_algo_lin = round(time.time() - time_1, 7)
     resultat_lin.append(time_algo_lin)
-    print("Recherche linéaire pour " + str(last) + " éléments : " + str(time_algo_lin) + " secondes")
 
+    # recherche binaire
     time_1 = time.time()
     search_bin(ma_liste, mon_element, 0)
     # des fois, c'est tellement rapide que le temps pris vaut 0
-    time_algo_bin = round(max(time.time() - time_1, 0.000001), chiffres)
+    time_algo_bin = round(max(time.time() - time_1, 0.000001), 7)
     resultat_bin.append(time_algo_bin)
-    print("Recherche binaire pour : " + str(last) + " éléments : " + str(time_algo_bin) + " secondes")
-    
-    resultat_dif.append(time_algo_lin/time_algo_bin)
-    print("L'algorithme binaire a été {0:.2f} fois plus rapide.\n".format(resultat_dif[-1]))
 
-print("Linéaire : " + str(resultat_lin))
-print("Binaire  : " + str(resultat_bin))
-print("Gain     : " + str(resultat_dif))
+print("Linéaire (secondes) : " + str(resultat_lin))
+print("Binaire (secondes) : " + str(resultat_bin))
+
+
 
 ```
-
 ````
+`````
+``````
+`````{latexonly} 
+````{solution} 
+Comme prévu par les estimations de complexité, avec sa complexité logarithmique, c'est l'algorithme de la recherche binaire qui est plus rapide. Le gain de temps devient de plus en plus important au fur et à mesure que le nombre d'éléments dans le tableau grandit. Pour cent éléments, la recherche binaire est environ ***<span style="color:rgb(13, 204, 166)">2 fois</span>*** plus rapide que la recherche linéaire, alors que pour un million d'éléments, elle est plus de ***<span style="color:rgb(13, 204, 166)">1000 fois</span>*** plus rapide.
 
+On peut remarquer que le temps pris par la recherche binaire change peu avec la taille du tableau, ce qui n'est pas le cas de la recherche linéaire. Il faut environ ***<span style="color:rgb(13, 204, 166)">10 secondes</span>*** pour trier un million d'éléments avec l'algorithme linéaire, alors que moins de ***<span style="color:rgb(13, 204, 166)">10 millisecondes</span>*** suffisent à l'algorithme binaire. Les systèmes actuels traitent des données bien plus volumineuses qu'un million, pensez à toutes les vidéos sur le Web ou tous les utilisateurs d'un réseau social. Tout serait très lent, trop lent si on n'avait pas pensé à diviser pour régner.
+
+
+```{codeplay}
+import time
+import random
+
+# stocke les résultats
+resultat_lin, resultat_bin  = [], []
+# longueurs des listes
+nb = [100, 1000, 10000, 100000, 1000000, 1000000]
+
+# pour toute les longueurs des listes
+for last in nb :
+    
+    # créer la liste
+    ma_liste = list(range(1,last+1)) 
+    # rechercher un élément au hasard
+    mon_element = random.randint(1,last) 
+    print("L'élément recherché est : " + str(mon_element))
+    # recherche linéaire
+    time_1 = time.time()
+    search_lin(ma_liste, mon_element, 0)
+    time_algo_lin = round(time.time() - time_1, 7)
+    resultat_lin.append(time_algo_lin)
+    # recherche binaire
+    time_1 = time.time()
+    search_bin(ma_liste, mon_element, 0)
+    # des fois, c'est tellement rapide que le temps pris vaut 0
+    time_algo_bin = round(max(time.time() - time_1, 0.000001), 7)
+    resultat_bin.append(time_algo_bin)
+
+print("Linéaire (secondes) : " + str(resultat_lin))
+print("Binaire (secondes) : " + str(resultat_bin))
+```
+````
 `````
 
+```{didyouknow} Espace-temps et énergie
+
+Nous allons surtout étudier la complexité des algorithmes en rapport avec le temps. Mais la complexité d’un algorithme peut également être calculée en rapport avec toutes les ressources qu’il utilise, par exemple des ressources d’**espace en mémoire** ou de **consommation d’énergie**. 
+
+```
 
 ## Exercices
 

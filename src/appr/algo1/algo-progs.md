@@ -1,3 +1,5 @@
+# Des algorithmes aux programmes
+
 ````{thinkingmatter} Lieu mystère
 
 Pensez à un lieu connu, qui se trouve à proximité. Ecrivez les étapes à suivre pour s’y rendre, sans mentionner le lieu. Vous ne pouvez utiliser que les instructions : **<span style="color:rgb(89, 51, 209)">avancer</span>**, **<span style="color:rgb(89, 51, 209)">tourner à gauche</span>** et **<span style="color:rgb(89, 51, 209)">tourner à droite</span>**.
@@ -34,6 +36,7 @@ Nous allons ensuite parcourir la liste à partir du deuxième élément. Pour ch
 ```
 # for permet de parcourir la liste rect
 for i in range(1,len(rect)):  # len(rect) donne la longueur de la liste rect
+
     # identifie l'indice du plus petit élément de la liste
     if rect[i] < rect[indice_min] :
         indice_min = i
@@ -90,7 +93,7 @@ On détecte un motif qui se répète. On fait toujours les mêmes opérations, m
 # pour tous les éléments de la liste non triée
 for j in range(0,len(rect)-1):
 
-    # trouve le rectangle le plus petit de la liste rect[j:] (à partir du j-ème élément)
+    # trouve le rectangle le plus petit de la liste rect[j:] (à partir de l'élément j)
     indice_min = rect.index(min(rect[j:]))
 
     # échange le plus petit élément avec le j-ième élément
@@ -108,7 +111,7 @@ def tri_selection(rect) :
     # pour tous les rectangles de la liste non triée
     for j in range(0,len(rect)-1):
    
-        # trouve le rectangle le plus petit de la liste rect[j:] (à partir du j-ème élément)
+        # trouve le rectangle le plus petit de la liste rect[j:] 
         indice_min = rect.index(min(rect[j:]))
  
         # échange le plus petit élément et le j-ième élément
@@ -126,7 +129,7 @@ def tri_selection(liste) :
     for j in range(0,len(liste)-1):
    
         # trouve l’élément le plus petit de liste[j:]
-	    indice_min = liste.index(min(liste[j:]))
+        indice_min = liste.index(min(liste[j:]))
  
         # échange le plus petit élément et le j-ième élément
         liste[j], liste[indice_min] = liste[indice_min], liste[j]
@@ -140,7 +143,7 @@ rect = [3,4,1,2,6,5]
 print(tri_selection(rect))
 ```
 
-En traduisant les étapes intermédiaires du tri par sélection en des lignes de code, nous avons automatisé l'algorithme. Nous l'avons trsncrit en un programme informatique qui peut être exécuté sur une machine.
+En traduisant les étapes intermédiaires du tri par sélection en des lignes de code, nous avons automatisé l'algorithme. Nous l'avons transcrit en un programme informatique qui peut être exécuté sur une machine.
 
 ## Exercices
 

@@ -16,7 +16,12 @@
 \newenvironment{timeline}{}{}
 \newenvironment{timelineitem}[2]{}{}
 
-
+% reduce outside margin
+\newlength{\margindiff}
+\setlength{\margindiff}{1em}
+\addtolength{\oddsidemargin}{\margindiff}
+\addtolength{\evensidemargin}{-\margindiff}
+\addtolength{\textwidth}{\margindiff}
 
 %% default admonition type
 %\renewenvironment{sphinxnote}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
@@ -35,29 +40,31 @@
 \definecolor{bondiblue}{rgb}{0.0, 0.58, 0.71}
 \definecolor{neoncarrot}{rgb}{1.0, 0.64, 0.26}
 \definecolor{radicalred}{rgb}{1.0, 0.21, 0.37}
+\definecolor{orangemodulo}{RGB}{241, 180, 63}
 
-
-\newcommand{\fon}[1]{\fontfamily{#1}\selectfont}
 
 %% specific admonition type - use tcolorbox arguments (or something else) to adapt latex rendering
 % TODO: this is a problem with page breaks, we may want to use activitybox instead
 % (cf. https://tex.stackexchange.com/questions/350316/create-manual-page-break-within-tcolorbox)
-\newenvironment{exercise}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{3pt}}
-\newenvironment{solution}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=ultraturquoise, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
-\newenvironment{microactivity}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
-\newenvironment{togofurther}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
-\newenvironment{important}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=radicalred, colback=llgray, boxrule=1pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
-\newenvironment{didyouknow}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=neoncarrot, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
-\newenvironment{reminder}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=radicalred, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
-\newenvironment{related}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=neoncarrot, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
-\newenvironment{evaluation}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=radicalred, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
-\newenvironment{thinkingmatter}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
-\newenvironment{note}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=neoncarrot, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
-\newenvironment{torecall}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, parbox=false, colframe=radicalred, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
-\newenvironment{historicdocument}[1]{\vspace{3pt}\begin{tcolorbox}[fontupper=\fontfamily{phv}, colframe=neoncarrot, colback=llgray, boxrule=1.5pt]\sphinxstrong{#1}}{\end{tcolorbox}\vspace{12pt}}
+\newcommand\spacebeforeadmonition{\vspace{10pt}}
+\newcommand\spaceafteradmonition{\vspace{3pt}}
+\newcommand\admonitiontitle[1]{{\fontfamily{phv}\textbf{#1}}}
+\newenvironment{exercise}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
+\newenvironment{solution}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=ultraturquoise, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
+\newenvironment{microactivity}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
+\newenvironment{togofurther}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=orangemodulo, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
+\newenvironment{important}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=radicalred, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
+\newenvironment{didyouknow}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=orangemodulo, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
+\newenvironment{reminder}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=radicalred, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
+\newenvironment{related}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=neoncarrot, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
+\newenvironment{evaluation}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=radicalred, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
+\newenvironment{thinkingmatter}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
+\newenvironment{note}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=neoncarrot, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
+\newenvironment{torecall}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=radicalred, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
+\newenvironment{historicdocument}[1]{\spacebeforeadmonition\begin{tcolorbox}[colframe=neoncarrot, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
 
-
-
+% set toc links color to black
+\hypersetup{linkcolor=black}
 
 
 \sphinxpxdimen=.5bp\relax
@@ -172,7 +179,7 @@
 
 \definecolor{TitleColor}{rgb}{0, 0, 0}
 
-% Customizing Bjornstrup
+% customizing Bjornstrup
 \ChNameVar{\raggedleft\Large\sffamily\selectfont}
 \ChNumVar{\raggedleft\LARGE\sffamily\bfseries\selectfont\vspace{-14pt}}
 \ChTitleVar{\vspace{8pt}\centering\LARGE\sffamily\bfseries}
@@ -182,7 +189,7 @@
 % légende d'images
 \usepackage[width=.9\textwidth, font=small, labelfont=bf]{caption}
 \DeclareCaptionFont{nohyphen}{\hyphenpenalty=10000 \exhyphenpenalty=10000\relax}
-\captionsetup{font+=nohyphen, aboveskip=4pt, belowskip=8pt}
+\captionsetup{font+=nohyphen, aboveskip=12pt, belowskip=8pt}
 
 % commencer chaque section sur une nouvelle page impaire
 \usepackage{etoolbox}
@@ -195,12 +202,19 @@
 \fi
 }
 
+\preto\chapter{\cleardoublepage\cleardoublepage}
+
+
+% éviter les lignes orphelines
+\usepackage[%
+    all,
+    defaultlines=3 % nombre minimum de lignes
+]{nowidow}
 
 
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
 \newcommand{\helv}{%
 \fontfamily{phv}\fontsize{9}{11}\selectfont}
-\setlength{\headheight}{16.59999pt}
 
 \usepackage{datetime}
 
