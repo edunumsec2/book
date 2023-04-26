@@ -96,7 +96,7 @@ def to_png(data: LogicDiagramData, output_file: str, browser: PlaywrightWrapper)
             }}
 
             const dataJson = JSON.stringify({data.data_json})
-            editor.loadCircuit(dataJson)
+            editor.loadCircuitOrLibrary(dataJson)
             editor.setModeFromString("{data.mode}")
             const withMetadata = false
             const heightHint = {"undefined" if data.height is None else data.height}
