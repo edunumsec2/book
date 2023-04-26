@@ -9,22 +9,7 @@ Dans ce chapitre, nous allons parler d'Internet, qui est une infrastructure
 permettant à des machines de communiquer entre elles sans être directement
 connectées entre elles. 
 
-
-
-
-```{toctree}
-:maxdepth: 2
-:hidden:
-:numbered: 2
-intro
-adressage
-tcp-ip
-routage
-web
-couches
-conclusion
-```
-
+`````{htmlonly}
 ## Objectifs
 
 * Découvrir la transmission par _paquets_
@@ -52,3 +37,17 @@ Tim Berners-Lee 🇬🇧
 
 L'informaticien britannique [**Tim Berners-Lee**](https://fr.wikipedia.org/wiki/Tim_Berners-Lee) est le principal inventeur du Web alors qu'il travaillait au CERN à Genève dans les années 90. Il a inventé les adresses URL, le protocole HTTP et le langage HTML.
 ````
+`````
+
+```{toctree}
+:maxdepth: 2
+:hidden:
+:numbered: 2
+intro
+adressage
+tcp-ip
+routage
+web
+couches
+conclusion
+```

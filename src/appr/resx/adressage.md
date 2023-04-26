@@ -1,8 +1,9 @@
 # Adressage
 
 L'adresse est une notion importante en communication, qui permet à une personne ou une machine de s'adresser à une autre personne ou machine spécifique.
-Pour qu'il n'y ait pas d'ambiguïté, chaque adresse doit être à unique, une adresse peut donc être un moyen d'identification.
-En revanche il est possible que deux adresses fassent référence à une même entité.
+Le rôle d'un système d'adressage, tel que celui de la poste, est de permettre d'identifier et de joindre une destination sans ambiguïté, et c'est pour ceci que
+chaque adresse doit être unique. 
+
 
 ## Les noms de domaine
 
@@ -34,7 +35,7 @@ Switch ou d'un intermédiaire.
 
 ```{micro}
 Déterminer à l'aide du site web <https://www.nic.ch/whois/> qui a enregistré le nom de domaine champignons.ch.
-````
+```
 
 ## Les adresses IP
 
@@ -44,8 +45,7 @@ Afin de pouvoir identifier chacune des machines connectées à Internet, il a é
 un nombre, un peu à la manière dont les numéros de téléphone sont attribués à chaque téléphone du réseau téléphonique.
 Dans sa version la plus courante, ce nombre est codé sur 32 bits, ce qui donne à peu près 4 milliards de possibilités ($2^{32}$).  
 On pensait alors (c'était en 1982) que 4 milliards d'adresses seraient amplement suffisantes pour pouvoir accommoder toutes les machines pendant encore beaucoup d'années, et qu'Internet
-ne dépasserait pas les 4 milliards de machines connectées.
-{itodo}`[dire combien il y en avait à l'époque]`
+ne dépasserait pas les 4 milliards de machines connectées. A cette éqpoque, il n'y avait que quelques centaines d'ordinateurs connectés à Internet. 
 Afin de rendre ces adresses plus lisibles pour les humains, on décompose d'habitude une adresse IP de 32 bits en
 quatre groupes de 8 bits séparés par un point. Chaque groupe de 8 bits peut alors être représenté comme un nombre décimal
 entre 0 et 255 ($2^8-1$).
@@ -71,14 +71,14 @@ entre 0 et 255 ($2^8-1$).
 %     print(i, end='.')
 % ```
 % 
-```{exercise}
+````{exercise}
 Lesquelles des adresses suivantes sont des adresses IP valides:
 1. ```240.264.23.2```
 1. ```123.8.12.2.34```
 1. ```123.23.2```
 1. ```205.233.12.23```
 
-```
+````
 % 
 % Pour répondre à une telle question automatiquement nous pourrions ajouter des tests comme celui-ci.
 % 
@@ -112,7 +112,7 @@ constituée de 8 nombres à quatre chiffres hexadécimaux.
 Actuellement, les deux types d'adresses IPv6 et IPv4 coexistent sur Internet, la version IPv4 étant encore largement
 plus répandue. Une adresse IP peut donc soit être sur 32 bits soit sur 128 bits.
 
-```{exercise}
+````{exercise}
 Parmi les adresses suivantes, indiquer lesquelles sont au format IPv4, lesquelles sont IPv6 et lesquelles ne sont pas valides. Justifier sa réponse. 
 
 1. ```128.23.54.45```
@@ -137,16 +137,22 @@ ou des particuliers qui en feraient la demande.
 Certains blocs d'adresses IP sont réservés à des usages particuliers. Par exemple les adresses `10.x.x.x`  ou
 `192.168.x.x` sont réservées aux réseaux privés, c'est-à-dire des machines qui ne communiquent pas directement
 avec le reste d'Internet. Ainsi, ces adresses peuvent être utilisées au sein du réseau interne des entreprises,
-ou pour faire communiquer différents appareils connectés (lampes, télévision, four, télécommande) au sein d'une
+ou pour faire communiquer différents appareils connectés (imprimante, télévision, ordinateurs, ou smartphones) au sein d'une
 maison. Dans l'exemple ci-dessous, un fournisseur d'accès à Internet (tel que Swisscom par exemple) à reçu toutes les
-adresses de type 213.221.x.x. Il en garde une partie pour son propre usage, par exemple pour son site web ou ses routeurs,
-c'est-dire les machines qui s'occupe d'acheminer les données sur Internet. Une autre partie des adresses sera louée à
+adresses de type 213.221.x.x. Il en garde une partie pour son propre usage, par exemple pour son site web et les machines qui opèrent le réseau.
+Une autre partie des adresses sera louée à
 des entreprises ou des particuliers qui sont ses clients. Ceux-ci bénéficieront donc d'une adresse IP leur permettant d'être
 joignables par le reste d'Internet. Les particuliers et entreprises ont généralement un réseau privé, un intranet, qui utilise
-les adresses 10.x.x.x.
+les adresses 10.x.x.x. Le routeur du réseau privé fait la jonction avec le reste d'Internet, il a donc à la fois une adresse locale
+(dans notre exemple 10.0.1.1) pour être joignable depuis le réseau privé et une adresse globale (213.221.190.41 dans l'exemple ci-dessous)
+pour être atteignable depuis le reste d'Internet. 
 
 ```{figure} media/IPnetwork.svg
-:width: 600
+---
+width: 600
+align: center
+---
+Exemple de distribution des adresses IP, avec un fournisseur d'accès ayant obtenu les adresses 213.221.x.x
 ```
 
 ```{exercise}
