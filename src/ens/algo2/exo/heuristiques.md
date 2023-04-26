@@ -14,7 +14,7 @@ Voir partie Apprendre.
 
 ```{exercise} L'univers dans un sac à dos 
 
-L’âge estimé de l’univers est de 14 milliards d’années. Si le calcul d’une combinaison d’objets dans le problème du sac à dos prenait une microseconde, pour quel nombre d’objets serait-il possible de trouver une solution exacte sans dépasser l’âge de l’univers ?
+L’âge estimé de l’univers est de 14 milliards d’années. Si le calcul d’une combinaison d’objets dans le problème du sac&nbsp;à&nbsp;dos prenait une microseconde, pour quel nombre d’objets serait-il possible de trouver une solution exacte sans dépasser l’âge de l’univers ?
 
 ```
 
@@ -23,7 +23,7 @@ L’âge estimé de l’univers est de 14 milliards d’années. Si le calcul d�
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
-Une microseconde vaut 10<sup>-6</sup> s. La complexité du problème du sac à dos est de 2<sup>n</sup>.
+Une microseconde vaut 10<sup>-6</sup> s. La complexité du problème du sac&nbsp;à&nbsp;dos est de 2<sup>n</sup>.
 
 On recherche un `n` pour lequel 2<sup>n</sup>*10<sup>-6</sup> = 14 000 000 000 * 3,154*10<sup>7</sup> (l'âge de l'univers en secondes) 
 
