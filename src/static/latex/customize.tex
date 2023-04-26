@@ -46,11 +46,11 @@
 %% specific admonition type - use tcolorbox arguments (or something else) to adapt latex rendering
 % TODO: this is a problem with page breaks, we may want to use activitybox instead
 % (cf. https://tex.stackexchange.com/questions/350316/create-manual-page-break-within-tcolorbox)
-\newcommand\spacebeforeadmonition{\vspace{10pt}}
-\newcommand\spaceafteradmonition{\vspace{3pt}}
+\newcommand\spacebeforeadmonition{\vspace{6pt}}
+\newcommand\spaceafteradmonition{\vspace{6pt}}
 \newcommand\admonitiontitle[1]{{\fontfamily{phv}\textbf{#1}}}
 \newenvironment{exercise}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{solution}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=ultraturquoise, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
+\newenvironment{solution}[1]{\vspace{0pt}\begin{tcolorbox}[parbox=false, colframe=ultraturquoise, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
 \newenvironment{microactivity}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
 \newenvironment{togofurther}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=orangemodulo, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
 \newenvironment{important}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=radicalred, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
@@ -210,6 +210,11 @@
     all,
     defaultlines=3 % nombre minimum de lignes
 ]{nowidow}
+
+
+%hyphenation
+\pretolerance=5000
+\tolerance=9000
 
 
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}

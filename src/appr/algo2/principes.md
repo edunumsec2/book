@@ -15,11 +15,11 @@ def compte_a_rebours(nb_secondes) :
 
 compte_a_rebours(10)
 ```
-Qu’arrive-t-il lorsqu’on exécute ce {glo}`programme|programme` avec `compte_a_rebours(10)` ?
+Qu’arrive-t-il lorsqu’on exécute ce {glo}`programme|programme` ?
 
-Corriger le programme pour qu’il s’arrête à `0`. 
+Corriger le programme pour qu’il s’arrête à 0. 
 
-Qu’arrive-t-il lorsque l’on exécute la nouvelle version du  programme avec la valeur `-10` en entrée ou `compte_a_rebours(-10)` ?
+Qu’arrive-t-il lorsque l’on exécute la nouvelle version du  programme avec la valeur -10 en entrée ou `compte_a_rebours(-10)` ?
 
 ````
 
@@ -41,7 +41,7 @@ Si on exécute cet {glo}`algo|algorithme`, le {glo}`programme|programme` ne s’
 
 ```{exercise} L'infini en programme
 
-Retranscrire l’algorithme infini en programme. Après combien de boucles le programme s’arrête‑t‑il ?
+Retranscrire l’algorithme infini en programme. Après combien de boucles le programme s’arrête ?
 
 ```
 
@@ -75,7 +75,7 @@ Pour faire en sorte que le programme finisse par s’arrêter, nous pouvons le m
 
  ```{exercise} L'infini ne finit plus de finir
 
-L’algorithme ci-dessus est appelé « Algorithme qui compte toujours infini ». Pourquoi est-il toujours infini ? Dans quel cas cet algorithme ne s’arrête jamais ?
+L’algorithme ci&#8209;dessus est appelé « Algorithme qui compte toujours infini ». Pourquoi est&#8209;il toujours infini ? Dans quel cas cet algorithme ne s’arrête jamais ?
 
 ```
 
@@ -95,7 +95,7 @@ La solution de l'exercice est donnée directement dans le texte qui suit.
 ```
 ````
 
-Dans la version ci-dessus, si l’utilisateur entre une valeur plus grande que 10000, ou encore une valeur à virgule, l’algorithme ne s’arrête pas. Il peut être implicite pour la personne qui programme qu’un décompte se fait toujours avec des nombres entiers, mais il doit prendre des précautions face aux utilisateurs. Voici une version de l'algorithme de décompte qui s’arrête dans tous les cas :  
+Dans la version ci&#8209;dessus, si l’utilisateur entre une valeur plus grande que 10000, ou encore une valeur à virgule, l’algorithme ne s’arrête pas. Il peut être implicite pour la personne qui programme qu’un décompte se fait toujours avec des nombres entiers, mais il doit prendre des précautions face aux utilisateurs. Voici une version de l'algorithme de décompte qui s’arrête dans tous les cas :  
 
 ```{code-block} 
  # Algorithme qui compte et qui s’arrête 
@@ -132,25 +132,27 @@ Collatz(4)
 
 ````{thinkingmatter} Record de vitesse
 
-On souhaite comparer deux algorithmes qui permettent de résoudre le même problème, afin d’utiliser l’algorithme qui permet de résoudre le problème plus rapidement. Mais comment pourrait‑on calculer la vitesse d’un algorithme ?
+On souhaite comparer deux algorithmes qui permettent de résoudre le même problème, afin d’utiliser l’algorithme qui permet de résoudre le problème plus rapidement. Mais&nbsp;comment pourrait&#8209;on calculer la vitesse d’un algorithme ?
 ````
 
-Il est important lorsqu’on utilise un {glo}`algo|algorithme` de nous préoccuper de son {glo}`efficacite|efficacité`. Mais comment calculer l'efficacité d’un algorithme, comment calculer sa vitesse ? 
+Il est important lorsqu’on utilise un {glo}`algo|algorithme` de nous préoccuper de son {glo}`efficacite|efficacité`. Mais&nbsp;comment calculer l'efficacité d’un algorithme, comment calculer sa vitesse ? 
 
-Est-ce qu’on peut utiliser la taille de l’algorithme pour prédire le temps qu’il va prendre à s’exécuter ? En d’autres termes, est-ce qu’un algorithme de 10 lignes est toujours plus lent qu’un algorithme de 5 lignes ? Nous avons vu que l’algorithme infini du chapitre précédent est très court (seulement 5 lignes), mais en théorie il ne s’arrête jamais. Une {glo}`bouclewhile|boucle` rallonge le code de seulement 2 lignes, mais rallonge le temps d’exécution de manière importante. 
+Est&#8209;ce qu’on peut utiliser la taille de l’algorithme pour prédire le temps qu’il va prendre à s’exécuter ? En d’autres termes, est&#8209;ce qu’un algorithme de 10 lignes est toujours plus lent qu’un algorithme de 5 lignes ? Nous avons vu que l’algorithme infini du chapitre précédent est très court (seulement 5 lignes), mais en théorie il ne s’arrête jamais. Une {glo}`bouclewhile|boucle` rallonge le code de seulement 2 lignes, mais rallonge le temps d’exécution de manière importante. 
 
 On pourrait croire qu’il suffit de programmer un algorithme et de chronométrer le temps que ce programme prend à s’exécuter. Cette métrique est problématique, car elle ne permet pas de comparer différents algorithmes entre eux lorsqu’ils sont exécutés sur différentes machines. Un algorithme lent {glo}`implementation|implémenté` sur une machine dernière génération pourrait prendre moins de temps à s’exécuter qu’un algorithme rapide implémenté sur une machine datant d’une dizaine d’années. 
 
-Pour mesurer le temps d’exécution (ou la vitesse) d’un algorithme, il existe un critère plus objectif : le **<span style="color:rgb(89, 51, 209)">nombre d’instructions élémentaires</span>**.  De manière formelle et rigoureuse, on ne parle pas d’efficacité, mais plutôt de la **<span style="color:rgb(89, 51, 209)">complexité d’un algorithme</span>**, qui est en fait contraire à son efficacité. L’analyse de la complexité d’un algorithme étudie la quantité de ressources, par exemple de temps, nécessaires à son exécution.
+Pour mesurer le temps d’exécution (ou&nbsp;la&nbsp;vitesse) d’un algorithme, il existe un critère plus objectif : le **<span style="color:rgb(89, 51, 209)">nombre d’instructions élémentaires</span>**.  De manière formelle et rigoureuse, on ne parle pas d’efficacité, mais plutôt de la **<span style="color:rgb(89, 51, 209)">complexité d’un algorithme</span>**, qui est en fait contraire à son efficacité. L’analyse de la complexité d’un algorithme étudie la quantité de ressources, par exemple de temps, nécessaires à son exécution.
 
 ```{didyouknow} Compliqué = complexe ?
 
-Est-ce que *<span style="color:rgb(89, 51, 209)">complexe</span>* veut dire la même chose que *<span style="color:rgb(89, 51, 209)">compliqué</span>* ? Une chose compliquée est difficile à saisir ou à faire, alors qu’une chose complexe est composée d’éléments avec de nombreuses interactions imbriquées. 
+Est&#8209;ce que *<span style="color:rgb(89, 51, 209)">complexe</span>* veut dire la même chose que *<span style="color:rgb(89, 51, 209)">compliqué</span>* ? Une chose compliquée est difficile à saisir ou à faire, alors qu’une chose complexe est composée d’éléments avec de nombreuses interactions imbriquées. 
 
 ```
 
 
 ````{eval}
+
+Vérifiez votre compréhension :
 
 1. Je sais que l’on doit garantir la terminaison d’un algorithme.
 
