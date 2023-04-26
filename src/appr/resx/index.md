@@ -2,8 +2,15 @@
 
 # Réseaux
 
-Aujourd'hui quand nous parlons de **réseaux** nous parlons du réseau physique (Wi-Fi, 5G), des réseaux sociaux, ou du plus grand réseau de tous, Internet.
-Il s'agit de la transmission d’informations à distance en utilisant des technologies électronique, informatique, optique ou électromagnétique.
+Aujourd'hui quand nous parlons de **réseaux**, il n'est pas toujours clair
+s'il s'agit de réseaux sociaux, du web, de la 4G, du wifi ou plus généralement
+d'Internet, le réseau des réseaux. 
+Dans ce chapitre, nous allons parler d'Internet, qui est une infrastructure
+permettant à des machines de communiquer entre elles sans être directement
+connectées entre elles. 
+
+
+
 
 ```{toctree}
 :maxdepth: 2
