@@ -257,3 +257,24 @@ body {
 .admonition > div:last-child > :last-child {
     margin-bottom: 2px;
 }
+
+figure:has(a.longcaption) figcaption {
+    text-align: left;
+    display: inline-block;
+    width: 90%;
+}
+
+figure.align-default:has(a.longcaption) figcaption {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+figure.align-left:has(a.longcaption) figcaption {
+    margin-left: 0;
+    margin-right: 10%;
+}
+
+figure.align-right:has(a.longcaption) figcaption {
+    margin-left: 10%;
+    margin-right: 0;
+}
