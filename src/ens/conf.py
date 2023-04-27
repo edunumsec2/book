@@ -20,8 +20,8 @@ import sys
 # -- Project information -----------------------------------------------------
 
 project = 'Modulo2'
-copyright = '2022, Groupe de travail DGEP, EPFL, HEP, UNIL'
-author = 'Groupe de travail DGEP, EPFL, HEP, UNIL'
+copyright = '2022, Groupe de travail DGEP, EPFL, HEP-VD, UNIL'
+author = 'Groupe de travail DGEP, EPFL, HEP-VD, UNIL'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'

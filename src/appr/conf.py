@@ -21,7 +21,7 @@ import sys
 
 project = 'Modulo2'
 copyright = 'CC-BY-NC-SA'
-author = 'Groupe de travail DGEP, EPFL, HEP, UNIL'
+author = 'Groupe de travail DGEP, EPFL, HEP-VD, UNIL'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
@@ -192,7 +192,7 @@ latex_elements = {
 
 #latex_documents = ('modulo','modulo.tex',"Modulo: une introduction à l'informatique", "John","manual","True")
 latex_additional_files = ["../static/assets/modulo-head-banner.png","../static/assets/by-nc.eu.png"]
-latex_documents = [('index','modulo.tex',"Modulo. Une~introduction~à~l'informatique", "Groupe de travail DGEP, EPFL, HEP, UNIL","manual","True")]
+latex_documents = [('index','modulo.tex',"Modulo. Une~introduction~à~l'informatique", "Groupe de travail DGEP, EPFL, HEP-VD, UNIL","manual","True")]
 
 latex_show_urls = 'footnote'
 
