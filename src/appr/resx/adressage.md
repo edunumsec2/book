@@ -142,39 +142,68 @@ maison. Dans l'exemple ci-dessous, un fournisseur d'accès à Internet (tel que 
 adresses de type 213.221.x.x. Il en garde une partie pour son propre usage, par exemple pour son site web et les machines qui opèrent le réseau.
 Une autre partie des adresses sera louée à
 des entreprises ou des particuliers qui sont ses clients. Ceux-ci bénéficieront donc d'une adresse IP leur permettant d'être
-joignables par le reste d'Internet. Les particuliers et entreprises ont généralement un réseau privé, un intranet, qui utilise
-les adresses 10.x.x.x. Le routeur du réseau privé fait la jonction avec le reste d'Internet, il a donc à la fois une adresse locale
-(dans notre exemple 10.0.1.1) pour être joignable depuis le réseau privé et une adresse globale (213.221.190.41 dans l'exemple ci-dessous)
-pour être atteignable depuis le reste d'Internet. 
+joignables par le reste d'Internet. 
+
+```{micro}
+- Déterminer à l'aide de cette [page Wikipedia](https://en.wikipedia.org/wiki/List_of_assigned_/8_IPv4_address_blocks) à quel continent sont allouées les adresses IP suivantes:
+  - 212.x.x.x
+  - 154.x.x.x
+  - 20.x.x.x
+- Déterminer à l'aide de [ce site](https://www.nirsoft.net/countryip/ch.html) l'entité suisse qui possède le plus d'adresses IP
+```
+
+
+```{exercise}
+- Combien y a-t-il d'adresses IP de type `192.168.x.x` ?
+- Combien y aurait-il eu d'adresses IP possibles s'il avait été décidé de l’encoder sur 24 bits?
+- Donnez la représentation binaire de l'adresse IP `10.0.45.12`
+```
+
+
+
+### Réseau privé
+
+Les particuliers et entreprises ont généralement un réseau privé, un intranet, qui utilise
+les adresses 10.x.x.x. L'appareil qui permet de connecter ce réseau privé au reste d'Internet est un *routeur*, par exemple
+la boîte wifi qui est fournie par le fournisseur d'accès. Ce routeur a la fois une adresse locale
+(dans notre exemple 10.0.1.1) pour être joignable depuis le réseau privé et une adresse globale (213.221.190.41 dans
+l'exemple ci-dessous) pour être atteignable depuis le reste d'Internet. Le routeur joue un peu le rôle du secrétariat de
+l'école en s'occupant de transmettre le courrier entre l'intérieur et l'extérieur de l'école. De manière similaire,
+le secrétariat a d'habitude deux boites aux lettres, une pour les documents déposés par des personnes qui sont à l'intérieur
+de l'école (élèves, personnel enseignant) et une destinée au facteur qui amène le courrier en provenance de l'extérieur du
+gymnase. 
 
 ```{figure} media/IPnetwork.svg
 ---
 width: 600
 align: center
 ---
-Exemple de distribution des adresses IP, avec un fournisseur d'accès ayant obtenu les adresses 213.221.x.x
+Exemple de distribution des adresses IP, avec un fournisseur d'accès ayant obtenu les adresses 213.221.x.x, rt qui fournit un
+accès Internet à Alice et Bob. Les routeurs, en vert clair, ont deux adresses IP. 
 ```
 
-```{exercise}
-- Combien y aurait-il eu d'adresses IP possibles s'il avait été décidé de l’encoder sur 24 bits?
-- Déterminez à l'aide du site {itodo}`xxx` à quel continent sont allouées les adresses IP suivantes:
-- Déterminez l'entité suisse qui possède le plus d'adresses IP
-- Donnez la représentation binaire de l'adresse IP `y.y.y.y`
-- Combien y a-t-il d'adresses IP de type `192.168.x.x` ?
+```{micro}
+- A l'aide d'un navigateur web, aller sur le site [https://www.whatismyip.com](https://www.whatismyip.com/) et déterminer sa
+propre adresse IP. 
+- Dans un terminal taper la commande suivante qui détermine votre adresse IP:
+  - sur Mac Os ou Linux: `ipconfig getifaddr en0`
+  - sur Windows: `ipconfig`
+- Obtient-on la même réponse? Pourquoi?
 ```
+
 
 ### Adressage statique et dynamique
 
 Une adresse IP peut être allouée de manière *statique* ou *dynamique*. Dans le cas de l'adressage statique, on configure la machine en lui indiquant son adresse IP, est c'est elle qui annonce au réseau quelle est son
 adresse IP, afin que les messages puissent lui parvenir. La machine conserve ainsi toujours la même adresse IP, de la même façon qu'un téléphone conserve toujours le même numéro (sauf si on le reconfigure en modifiant par exemple la carte SIM). Dans le cas de l'adressage dynamique, la machine demande une adresse IP au moment où elle se connecte à Internet. Cette demande se fait auprès d'un serveur qui va lui allouer une adresse IP disponible parmi celles qu'il a à disposition. C'est un peu comme si chaque fois qu'on allumait son téléphone, on recevait un autre numéro pour être joignable. Si c'est nous qui initions les appels, cela ne pose pas vraiment de problème, mais si on veut être
-joignable, cela devient problématique, car les autres ne sauront pas comment nous trouver. Mais cela a d'une part l'avantage d'éviter qu'une machine non connectée monopolise une adresse IP sans l'utiliser et d'autre part, cela donne un (petit) degré d'anonymat et de sécurité en plus, car il sera plus difficile de cible précisément notre machine et intercepter nos messages sur sur Internet.
+joignable, cela devient problématique, car les autres ne sauront pas comment nous trouver. Mais cela a d'une part l'avantage d'éviter qu'une machine non connectée monopolise une adresse IP sans l'utiliser et d'autre part, cela donne un (petit) degré d'anonymat et de sécurité en plus, car il sera plus difficile de cibler précisément notre machine et intercepter nos messages sur sur Internet.
 
 Ainsi les serveurs (les sites web, par exemple), qui doivent être joignables en tout temps ont généralement une adresse IP statique, alors que les machines des utilisateurs et utilisatrices ont souvent une adresse IP dynamique. Lorsqu'on fait un
 abonnement Internet, le fournisseur d'accès propose d'habitude une adresse IP dynamique (cela lui permet d'économiser les adresses IP en sa possession), mais il est également possible, en payant un peu plus, d'obtenir une adresse IP statique.
 
 ```{micro}
-Déterminez si votre machine a une adresse IP statique ou dynamique
-````
+En regardant les paramètre réseaux, déterminer si sa machine a une adresse IP statique (manuel) ou dynamique (DHCP). 
+```
 
 ```{exercise}
 1. Vous souhaitez entrer en communication avec votre ami-e, mais vous avez les deux des adresses IP dynamiques. Quel
@@ -203,7 +232,7 @@ et l'identifier ainsi. C'est ce qu'on appelle en anglais le fingerprinting, que 
 
 ### Système de noms de domaine
 
-Pour récapituler ce qui a été vu précédemment, les humains utilisent les noms de domaines pour les machines, alors que les machines, elles, utilisent les adresses IP. Afin que ces deux modes de recensement des machines soient cohérents entre eux, il est nécessaire de disposer d'un annuaire qui fera correspondre les noms de domaines aux adresses IP. Ceci est analogue aux annuaires téléphoniques qui permettent de faire correspondre le nom des personnes que l'on veut atteindre (qui serait équivalentes au nom de domaine) au numéro de téléphone (qui est analogue à l'adresse IP). Cet annuaire est ce qu'on appelle le *système de noms de domaine* (Domain Name System ou DNS selon l'appellation anglaise). Au début d'Internet, il s'agissait simplement d'un fichier texte librement accessible qui listait le nom de domaines et les adresses IP correspondantes. Ce fichier était maintenu à la main. Maintenant, il s'agit de machines, les serveurs DNS dans le réseau auprès desquelles il est possible d'obtenir l'adresse IP correspondante à un nom de domaine. Ces machines sont aussi organisées hiérarchiquement de telle sorte que chaque serveur DNS ne stocke que les noms de domaines correspondant à une sous-partie du réseau.
+Pour récapituler ce qui a été vu précédemment, les humains utilisent les noms de domaines pour les machines, alors que les machines, elles, utilisent les adresses IP. Afin que ces deux modes de recensement des machines soient cohérents entre eux, il est nécessaire de disposer d'un annuaire qui fera correspondre les noms de domaines aux adresses IP. Ceci est analogue aux annuaires téléphoniques ou aux contacts du smartphone qui permettent de faire correspondre le nom des personnes que l'on veut atteindre (qui serait équivalentes au nom de domaine) au numéro de téléphone (qui est analogue à l'adresse IP). Cet annuaire est ce qu'on appelle le *système de noms de domaine* (Domain Name System ou DNS selon l'appellation anglaise). Au début d'Internet, il s'agissait simplement d'un fichier texte librement accessible qui listait le nom de domaines et les adresses IP correspondantes. Ce fichier était maintenu à la main. Maintenant, il s'agit de machines, les serveurs DNS dans le réseau auprès desquelles il est possible d'obtenir l'adresse IP correspondante à un nom de domaine. Ces machines sont aussi organisées hiérarchiquement de telle sorte que chaque serveur DNS ne stocke que les noms de domaines correspondant à une sous-partie du réseau.
 
 ```{torecall} Le serveur DNS
 ```{figure} media/dns.png
