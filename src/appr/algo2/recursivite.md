@@ -1,13 +1,13 @@
 
 # Récursivité [niveau avancé]
 
-Ce chapitre est prévu en tant que chapitre optionnel. Il présente un autre algorithme de tri célèbre, le **<span style="color:rgb(89, 51, 209)">Tri par fusion</span>**. Cet algorithme utilise la **<span style="color:rgb(89, 51, 209)">récursivité</span>**, une stratégie qui consiste en ce qu'un algorithme s'invoque lui-même. La récursivité, c'est un peu comme si on essayait de définir le terme « définition » en disant c'est une phrase qui nous donne la définition de quelque chose. C'est certes circonvolu que de vouloir utiliser dans une définition *la chose-même* que l'on est en train de définir, mais si on respecte quelques conditions, « ça fonctionne » ! 
+Ce chapitre est prévu en tant que chapitre optionnel. Il présente un autre algorithme de tri célèbre, le **<span style="color:rgb(89, 51, 209)">Tri par fusion</span>**. Cet algorithme utilise la **<span style="color:rgb(89, 51, 209)">récursivité</span>**, une stratégie qui consiste en ce qu'un algorithme s'invoque lui&#8209;même. La récursivité, c'est un peu comme si on essayait de définir le terme « définition » en disant c'est une phrase qui nous donne la définition de quelque chose. C'est certes circonvolu que de vouloir utiliser dans une définition *la chose&#8209;même* que l'on est en train de définir, mais si on respecte quelques conditions, « ça fonctionne » ! 
 
 ## Tri par fusion
 
 Un autre {glo}`algo|algorithme` de tri célèbre, inventé par John von Neumann en 1945, est le **<span style="color:rgb(89, 51, 209)">Tri par fusion</span>**. L’algorithme se base sur l’idée qu’il est difficile de trier un tableau avec beaucoup d'éléments, mais qu’il est très facile de trier un tableau avec juste deux éléments. Il suffit ensuite de fusionner les plus petits tableaux déjà triés.
 
-<span id="diviser"></span>L’algorithme commence par une phase de ***<span style="color:rgb(13, 204, 166)">division</span>*** : on divise le tableau en deux, puis on divise *à nouveau* les tableaux ainsi obtenus en deux, et ceci jusqu’à arriver à des tableaux avec un seul élément (voir la Figure ci-dessous). Comme pour la recherche binaire, le nombre d’étapes nécessaires pour arriver à des tableaux de $1$ élément, en divisant toujours par deux, est $log(n)$.
+<span id="diviser"></span>L’algorithme commence par une phase de ***<span style="color:rgb(13, 204, 166)">division</span>*** : on divise le tableau en deux, puis on divise *à nouveau* les tableaux ainsi obtenus en deux, et ceci jusqu’à arriver à des tableaux avec un seul élément (voir la Figure ci&#8209;dessous). Comme pour la recherche&nbsp;binaire, le nombre d’étapes nécessaires pour arriver à des tableaux de $1$&nbsp;élément, en divisant toujours par deux, est $log(n)$.
 
 ```{figure} media/Tri_fusion_diviser.png
 ---
@@ -15,11 +15,11 @@ alt: phase de division dans le Tri par fusion
 width: 500px
 name : fig-div-fus
 ---
-**Phase de division.** Illustration de la première phase du Tri par fusion : on commence par diviser le tableau en deux, puis à chaque étape on divise à nouveau les tableaux ainsi obtenus par deux, jusqu’à ce qu’il n'y ait plus que des tableaux à 1 élément.
+**Phase de division.** Illustration de la première phase du Tri par fusion : on commence par diviser le tableau en deux, puis à&nbsp;chaque étape on divise à nouveau les tableaux ainsi obtenus par deux, jusqu’à ce qu’il n'y ait plus que des tableaux à $1$&nbsp;élément.
 ```
 
 
-La deuxième phase de ***<span style="color:rgb(13, 204, 166)">fusion</span>*** commence par fusionner des paires de tableaux à un élément, dans un ***ordre trié***. Il suffit d’assembler les deux éléments du plus petit au plus grand, comme on peut le voir sur la $2^{e}$ ligne de la figure ci-dessous. Dans les prochaines étapes, on continue à fusionner les tableaux par paires de deux, tout en respectant l'ordre de tri (lignes 3 et 4 de la figure). On continue de la sorte jusqu’à ce qu’il n'y  ait plus de tableaux à fusionner. 
+La deuxième phase de ***<span style="color:rgb(13, 204, 166)">fusion</span>*** commence par fusionner des paires de tableaux à un élément, dans un ***ordre trié***. Il suffit d’assembler les deux éléments du plus petit au plus grand, comme on peut le voir sur la 2ème ligne de la figure ci&#8209;dessous. Dans les prochaines étapes, on continue à fusionner les tableaux par paires de deux, tout en respectant l'ordre de tri (lignes 3 et 4 de la figure). On continue de la sorte jusqu’à ce qu’il n'y  ait plus de tableaux à fusionner. 
 
 
 
@@ -32,20 +32,17 @@ name : fig-fus-fus
 **Phase de fusion.** Illustration de la deuxième phase du Tri par fusion : on commence par fusionner les tableaux à un élément, en faisant attention à respecter l’ordre de tri (ligne 2) ; puis par fusionner à nouveau les tableaux obtenus à l'étape précédente, toujours en respectant l’ordre de tri (lignes 3 et 4). On continue de la sorte jusqu’à ce qu’il n'y ait plus qu'un tableau unique (ligne 4).
 ```
 
-<span id="fusionner"></span>La fusion de tableaux **déjà triés**, par rapport à des tableaux non-triés, est très facile. Il suffit de comparer les premiers éléments des deux tableaux à fusionner et de prendre le plus petit des deux. Concrètement, on enlève le plus petit élément des deux tableaux pour le mettre dans le nouveau tableau fusionné. On compare ensuite les premiers éléments de ceux qui restent dans les tableaux à fusionner et on prend à nouveau le plus petit des deux pour le mettre à la suite dans le tableau fusionné. 
+<span id="fusionner"></span>La fusion de tableaux **déjà triés**, par rapport à des tableaux non&#8209;triés, est très facile. Il suffit de comparer les premiers éléments des deux tableaux à fusionner et de prendre le plus petit des deux. Concrètement, on enlève le plus petit élément des deux tableaux pour le mettre dans le nouveau tableau fusionné. On compare ensuite les premiers éléments de ceux qui restent dans les tableaux à fusionner et on prend à nouveau le plus petit des deux pour le mettre à la suite dans le tableau fusionné. 
 
-Chaque étape de la phase de fusion consiste à comparer deux éléments $n$ fois, autant de fois qu’il y a d’éléments à fusionner. Le temps de calcul grandit donc linéairement en fonction de la taille du tableau $n$ (plus il y a d'éléments dans le tableau, plus la fusion prend du temps). En tout il y a besoin de $log(n)$ étapes (fusion deux par deux), dont chacune prend un temps qui dépend de $n$, ce qui nous donne un ordre de complexité **linéarithmique**.
-
-
-
+Chaque étape de la phase de fusion consiste à comparer deux éléments $n$&nbsp;fois, autant de fois qu’il y a d’éléments à fusionner. Le temps de calcul grandit donc linéairement en fonction de la taille du tableau n (plus il y a d’éléments dans le tableau, plus la fusion prend du temps). En tout il y a besoin de $log(n)$&nbsp;étapes (fusion deux&nbsp;par&nbsp;deux), dont chacune prend un temps qui dépend de&nbsp;$n$, ce qui nous donne un ordre de complexité&nbsp;linéarithmique.
 
 
 ## Focus sur la récursivité
 
-<span id="recursivite"></span>Nous allons maintenant programmer l’{glo}`algo|algorithme` du Tri par fusion. Pour rappel, la première phase de l’{glo}`algo|algorithme` divise *continuellement* le tableau par deux, comme illustré dans la première <a href="#diviser">figure</a> ci-dessus. Voici le code qui permet de diviser un tableau en deux une seule fois :
+<span id="recursivite"></span>Nous allons maintenant programmer l’{glo}`algo|algorithme` du Tri par fusion. Pour rappel, la première phase de l’{glo}`algo|algorithme` divise *continuellement* le tableau par deux, comme illustré dans la première <a href="#diviser">figure</a> ci&#8209;dessus. Voici le code qui permet de diviser un tableau en deux une seule fois :
 
 ```{code-block} python
-# Tri par fusion 
+# Tri&nbsp;par&nbsp;fusion 
 def tri_par_fusion(elements):
 
 	### Phase DIVISION
@@ -60,9 +57,9 @@ def tri_par_fusion(elements):
 	elements_droite = elements[milieu:]
 ```
 
-La division utilisée pour déterminer le milieu du tableau est une division entière `//` au lieu de `/`. En effet, on souhaite obtenir un résultat entier et non un nombre à virgule, car les indices pour accéder aux éléments du tableau doivent être des entiers. Par exemple, si le tableau contient 5 éléments, cela n’aurait pas de sens de prendre les premiers 2.5 éléments, et 5//2 nous retournerait 2.
+La division utilisée pour déterminer le milieu du tableau est une division entière `//` au lieu de `/`. En effet, on souhaite obtenir un résultat entier et non un nombre à virgule, car les indices pour accéder aux éléments du tableau doivent être des entiers. Par exemple, si le tableau contient `5`&nbsp;éléments, cela n’aurait pas de sens de prendre les premiers `2.5`&nbsp;éléments, et `5//2` nous retournerait `2`.
 
-Ce qui suit est très intéressant. Dans l’étape d’après, on souhaite faire exactement la même chose pour les nouveaux tableaux `elements_gauche` (équivalent à `elements[:milieu]`) et `elements_droite` (équivalent à `elements[milieu:]`), c'est-à dire que l'on souhaite à nouveau les diviser en deux, comme sur la deuxième ligne dans la première <a href="#diviser">figure</a>  ci-dessus. On va donc appeler la fonction `tri_par_fusion` sur les deux moitiés de tableaux :
+Ce qui suit est très intéressant. Dans l’étape d’après, on souhaite faire exactement la même chose pour les nouveaux tableaux `elements_gauche` (équivalent à `elements[:milieu]`) et `elements_droite` (équivalent à `elements[milieu:]`), c'est&#8209;à&#8209;dire que l'on souhaite à nouveau les diviser en deux, comme sur la deuxième ligne dans la première <a href="#diviser">figure</a>  ci&#8209;dessus. On va donc appeler la fonction `tri_par_fusion` sur les deux moitiés de tableaux :
 
 
 ```{code-block} python
@@ -73,9 +70,9 @@ Ce qui suit est très intéressant. Dans l’étape d’après, on souhaite fair
 	elements_droite = tri_par_fusion(elements[milieu:])
 ```
 
-Regardez bien ce qui se passe. Nous avons fait appel à la même {glo}`fonction|fonction` `tri_par_fusion` que l’on est en train de définir ! Pour l’instant cette fonction ne fait que diviser le tableau `elements` en deux, elle va donc diviser le tableau reçu en entrée en deux. Au début le tableau en entrée sera le tableau entier, mais ensuite il s'agira des deux moitiés du tableau, puis des moitiés de la moitié et ainsi de suite. La fonction `tri_par_fusion` appelle la fonction `tri_par_fusion` (elle s'appelle donc elle-même), qui va à nouveau s'appeler et ainsi de suite...
+Regardez bien ce qui se passe. Nous avons fait appel à la même {glo}`fonction|fonction` `tri_par_fusion` que l’on est en train de définir ! Pour l’instant cette fonction ne fait que diviser le tableau `elements` en deux, elle va donc diviser le tableau reçu en entrée en deux. Au début le tableau en entrée sera le tableau entier, mais ensuite il s'agira des deux moitiés du tableau, puis des moitiés de la moitié et ainsi de suite. La fonction `tri_par_fusion` appelle la fonction `tri_par_fusion` (elle s'appelle donc elle&#8209;même), qui va à nouveau s'appeler et ainsi de suite...
 
-Si on laisse le programme tel quel, on est face à un problème. La fonction `tri_par_fusion` continue de s'appeler elle-même et ce processus ne s’arrête jamais. En réalité, il faut arrêter de diviser lorsque les tableaux obtenus ont au moins un élément ou lorsqu'ils sont vides, car dans ces cas on ne peut plus les diviser en deux. On rajoute donc cette **<span style="color:rgb(89, 51, 209)">condition d'arrêt</span>** de la récursion :
+Si on laisse le programme tel quel, on est face à un problème. La fonction `tri_par_fusion` continue de s'appeler elle&#8209;même et ce processus ne s’arrête jamais. En réalité, il faut arrêter de diviser lorsque les tableaux obtenus ont au moins un élément ou lorsqu'ils sont vides, car dans ces cas on ne peut plus les diviser en deux. On rajoute donc cette **<span style="color:rgb(89, 51, 209)">condition d'arrêt</span>** de la récursion :
 
 ```{code-block} python
 	# condition d'arrêt la récursion
@@ -96,13 +93,13 @@ Voici le programme appliqué sur l'exemple de la figure. Essayez de comprendre d
 
 
 ```{codeplay}
-# Tri par fusion : phase de division
+# Tri&nbsp;par&nbsp;fusion : phase de division
 def division(elements, ligne, side=0):
 
 	# nous dit où on en est
 	print("Appel de la fonction division avec ", str(elements), "ligne", ligne, "depuis", side)
 
-	# correspond à la ligne sur la figure division du tri par fusion
+	# correspond à la ligne sur la figure division du tri&nbsp;par&nbsp;fusion
 	ligne = ligne + 1
 
 	# condition d'arrêt la récursion
@@ -128,7 +125,7 @@ division([3,5,1,2,6,4], 0)
 
 <!-- 	return fusion(elements_gauche, elements_droite) -->
 
-Une {glo}`fonction|fonction` qui s’appelle elle-même est appelée **<span style="color:rgb(89, 51, 209)">{glo}`fonctionrec|fonction récursive`</span>**. Il s'agit d'une *mise en abime*, d'une *définition circulaire*. Lorsqu’on entre dans la fonction, des opérations sont exécutées et on fait à nouveau ***<span style="color:rgb(13, 204, 166)">appel à la même fonction</span>***, mais cette fois-ci avec  ***<span style="color:rgb(13, 204, 166)">d’autres éléments en entrée</span>***, afin de refaire les mêmes opérations, comme le montre cette figure :
+Une {glo}`fonction|fonction` qui s’appelle elle&#8209;même est appelée **<span style="color:rgb(89, 51, 209)">{glo}`fonctionrec|fonction récursive`</span>**. Il s'agit d'une *mise en abime*, d'une *définition circulaire*. Lorsqu’on entre dans la fonction, des opérations sont exécutées et on fait à nouveau ***<span style="color:rgb(13, 204, 166)">appel à la même fonction</span>***, mais cette fois&#8209;ci avec  ***<span style="color:rgb(13, 204, 166)">d’autres éléments en entrée</span>***, afin de refaire les mêmes opérations, comme le montre cette figure :
 
 ```{figure} media/Recursivite.png
 ---
@@ -136,12 +133,12 @@ alt: recursivité
 width: 800px
 name : fig-rec
 ---
-**Schéma d’une fonction récursive**. La fonction s'appele elle-même. toujours avec un autre paramètre en entrée, jusqu'à ce que la condition d'arrêt soit remplie. A ce moment-là, un résultat est calculé et retourné à la fonction du dessus (celle qui à appelé la fonction). Ainsi tous les résultats sont retournés au fur et à mesure et permettent de calculer la fonction souhaitée.
+**Schéma d’une fonction récursive**. La fonction s'appele elle&#8209;même. toujours avec un autre paramètre en entrée, jusqu'à ce que la condition d'arrêt soit remplie. A&nbsp;ce moment&#8209;là, un résultat est calculé et retourné à la fonction du dessus (celle qui à appelé la fonction). Ainsi tous les résultats sont retournés au fur et à mesure et permettent de calculer la fonction souhaitée.
 ```
 
 Les deux ingrédients indispensables à toute {glo}`fonctionrec|fonction récursive` sont donc :
 
-1. un **<span style="color:rgb(13, 204, 166)">appel à la fonction elle-même</span>** à l'intérieur de la définition de la fonction.
+1. un **<span style="color:rgb(13, 204, 166)">appel à la fonction elle&#8209;même</span>** à l'intérieur de la définition de la fonction.
 
 2. une **<span style="color:rgb(13, 204, 166)">condition d’arrêt</span>**, qui permet de terminer les appels imbriqués.
 
@@ -149,7 +146,7 @@ Les deux ingrédients indispensables à toute {glo}`fonctionrec|fonction récurs
 
 ```{exercise} Position de la condition d'arrêt
 
-Sans la condition d'arrêt, un programme récursif ne se termine pas, et s'appelle soi-même indéfiniment. Il est important que cette condition d’arrêt précède l’appel récursif à la fonction. Pourquoi est-ce le cas ?
+Sans la condition d'arrêt, un programme récursif ne se termine pas, et s'appelle soi&#8209;même indéfiniment. Il est important que cette condition d’arrêt précède l’appel récursif à la fonction. Pourquoi est&#8209;ce le cas ?
 
 ```
 
@@ -169,7 +166,7 @@ Maintenant que nous avons programmé la première phase de division du Tri par�
 
 ```{code-block} python
 
-# Phase de fusion du Tri par fusion
+# Phase de fusion du Tri&nbsp;par&nbsp;fusion
 def fusion(elements_gauche, elements_droite):
 	
 	# trouve le plus petit premier élément des deux listes
@@ -196,12 +193,12 @@ Quelle est la différence entre le code dans la partie `if` de la condition et d
 
 Dans la partie `if` de la fonction `fusion`, c’est le tableau de gauche qui contient le plus petit élément. On prend cet élément pour le mettre au début d'un nouveau tableau fusionné et on appelle la fonction `fusion` sur les éléments restants. Dans la partie `else` on fait la même chose, sauf que l’on commence notre tableau fusionné par le premier élément du tableau de droite. 
 
-Mais n'y a-t-il pas quelque chose qui manque à cette fonction ? En effet, il manque la condition d’arrêt. Il faut arrêter la fusion lorsqu’un des deux tableaux à fusionner est vide. Dans ce cas la solution de fusionner un tableau vide avec un autre tableau est triviale : c’est l’autre tableau non vide. Mettons ceci sous forme de code :
+Mais&nbsp;n'y a&#8209;t&#8209;il pas quelque chose qui manque à cette fonction ? En&nbsp;effet, il manque la condition d’arrêt. Il faut arrêter la fusion lorsqu’un des deux tableaux à fusionner est vide. Dans ce cas la solution de fusionner un tableau vide avec un autre tableau est triviale : c’est l’autre tableau non vide. Mettons ceci sous forme de code :
 
 
 ```{code-block} python
 
-# Phase de fusion du Tri par fusion
+# Phase de fusion du Tri&nbsp;par&nbsp;fusion
 def fusion(elements_gauche, elements_droite):
 
 	# conditions d’arrêt de la récursivité
@@ -230,11 +227,11 @@ def fusion(elements_gauche, elements_droite):
 	return(elements_fusion)
 ```
 
-Pour que le programme soit complet, il faut faire appel cette fonction `fusion` dans la fonction `tri_fusion` ci-dessus :
+Pour que le programme soit complet, il faut faire appel cette fonction `fusion` dans la fonction `tri_fusion` ci&#8209;dessus :
 
 ```{code-block} python
 
-# Phase de division du Tri par fusion
+# Phase de division du Tri&nbsp;par&nbsp;fusion
 def tri_par_fusion(elements):
 
 	### Phase DIVISION
@@ -260,7 +257,7 @@ def tri_par_fusion(elements):
 ```
 
 
-Ces deux {glo}`fonction|fonctions` `fusion` et `division` ensemble implémentent l’{glo}`algo|algorithme` du Tri par fusion de manière {glo}`recursivite|récursive`. La {glo}`recursivite|récursivité` est un concept difficile à appréhender. Le mieux est d’essayer de coder différents {glo}`algo|algorithmes` {glo}`recursivite|récursifs` et d’afficher ce qui se passe au fur et à mesure. Voici le programme du tri par fusion :
+Ces deux {glo}`fonction|fonctions` `fusion` et `division` ensemble implémentent l’{glo}`algo|algorithme` du Tri par fusion de manière {glo}`recursivite|récursive`. La {glo}`recursivite|récursivité` est un concept difficile à appréhender. Le mieux est d’essayer de coder différents {glo}`algo|algorithmes` {glo}`recursivite|récursifs` et d’afficher ce qui se passe au fur et à mesure. Voici le programme du tri&nbsp;par&nbsp;fusion :
 
 
 ```{codeplay}
@@ -304,7 +301,7 @@ def fusion(elements_gauche, elements_droite):
 	return(elements_fusion)
 ```
 
-La fonction `division` s'appelle elle-même et la fonction `fusion` : 
+La fonction `division` s'appelle aussi elle&#8209;même, mais appelle également la fonction&nbsp;`fusion` précédemment définie : 
 
 ```{codeplay}
 # TRI PAR FUSION
@@ -315,7 +312,7 @@ def division(elements, ligne, side=0):
 	# nous dit où on en est
 	print("\n1. Appel de la fonction division avec ", str(elements), "ligne", ligne, "depuis", side)
 
-	# correspond à la ligne sur la figure division du tri par fusion
+	# correspond à la ligne sur la figure division du tri&nbsp;par&nbsp;fusion
 	ligne = ligne + 1
 
 	# condition d'arrêt la récursion
@@ -349,7 +346,7 @@ print("\nVoici le tableau trié : ", resultat)
 
 ````{exercise} Fractale 🔌
 
-Une fractale est un objet géométrique, dont la définition récursive est naturelle. Essayez le code suivant pour différentes valeurs de $n$ (augmenter à chaque fois de $1$). 
+Une fractale est un objet géométrique, dont la définition récursive est naturelle. Essayez le code suivant pour différentes valeurs de $n$ (augmenter à&nbsp;chaque fois de $1$). 
 
 Essayez de comprendre comment le flocon se construit de manière **récursive**. Vous pouvez aussi varier la longueur du segment dessiné et la vitesse d’affichage en décommentant la ligne correspondante.
 
@@ -398,7 +395,7 @@ turtle.exitonclick()	 # garde la fenêtre ouverte
 
 ```{exercise} Une question de fusion
 
-Trier le tableau suivant avec l’algorithme de tri par fusion : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main. Représenter l’état du tableau lors de toutes les étapes intermédiaires.
+Trier le tableau suivant avec l’algorithme de tri&nbsp;par&nbsp;fusion : [3, 6, 8, 7, 1, 9, 4, 2, 5] à la main. Représenter l’état du tableau lors de toutes les étapes intermédiaires.
 
 ```
 
@@ -434,7 +431,7 @@ Programmer cette fonction de manière récursive en Python. Proposer également 
 :class: note
 
 
-Implémenter l’algorithme du tri rapide de manière récursive, puis comparer sa vitesse à celle de l’algorithme du tri par sélection.
+Implémenter l’algorithme du tri rapide de manière récursive, puis comparer sa vitesse à celle de l’algorithme du tri&nbsp;par&nbsp;sélection.
 
 ````
 

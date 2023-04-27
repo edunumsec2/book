@@ -33,7 +33,7 @@ Ces trois technologies sont rassemblées dans un *navigateur web*, un programme 
 1. demander la page web au serveur correspondant et la réceptionner en utilisant le protocole HTTP
 1. afficher le contenu de la page web (décrite au format HTML), y compris les liens cliquables permettant d'afficher d'autres pages web.
 
-```{document}
+````{document}
 
 ```{figure} media/navigateur.png
 ---
@@ -43,8 +43,7 @@ align: center
 Un des premiers navigateurs web développé par Tim Berners-Lee. Les images s'affichaient sur des fenêtres séparées. 
 ```
 
-```
-```
+````
 
 
 ### URL

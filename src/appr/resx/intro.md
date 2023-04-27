@@ -2,7 +2,7 @@
 
 Internet est une infrastructure essentielle qui a complètement changé notre vie, que ce soit dans les
 relations sociales, l'éducation, la recherche, le commerce, la santé, etc. Dans ce chapitre, nous allons voir, dans les grands principes, comment
-internet fonctionne et en quoi son fonctionnement est différent d'autres réseaux de communication qui l'ont précédé, tels que les réseaux postaux ou
+Internet fonctionne et en quoi son fonctionnement est différent d'autres réseaux de communication qui l'ont précédé, tels que les réseaux postaux ou
 téléphoniques. En effet, une innovation majeure d'internet est qu'il s'agit d'un réseau *décentralisé*, et ceci explique dans une large mesure son succès
 et ce qu'il est devenu, même si certains craignent une recentralisation d'Internet autour des géants du numérique tels que Google et Amazon.
 
@@ -25,7 +25,7 @@ qui serait moins vulnérable à une attaque. L'idée était qu'un réseau de com
 par un adversaire en détruisant le point central, alors qu'un réseau de communication sans point central serait beaucoup plus difficile à
 attaquer.
 
-```{document}
+````{document}
 
 ```{figure} media/baranNetworks.png
 ---
@@ -37,8 +37,8 @@ ont plus ou moins la même importance.
 Le réseau du milieu représente un intermédiaire décentralisé, entre le réseau complètement centralisé de gauche et le réseau distribué de droite
 
 ```
-```
-```
+````
+
 Les universitaires américains ont été associés à la conception de ce réseau et l'ont utilisé pour partager des informations et des ressources entre universités.
 Ainsi est né Internet, par une association entre universitaires attachés surtout à la libre circulation de l'information et des militaires aux visées plutôt
 sécuritaires. Dès les années 70, le mouvement hippie, séduit par les possibilités d'auto-organisation et la philosophie non hiérarchique d'Internet
@@ -92,7 +92,7 @@ la mise en lien doit se faire de manière décentralisée. C'est ce qu'on appell
 
 ### Commutation par paquets
 
-Dans un réseau centralisé comme le téléphone, lorsque deux personnes sont en communication, elles "occupent la ligne": ces deux personnes ne sont pas joignables par d'autres personnes (c'est ce qu'indique le signal "occupé"), mais cela n'implique pas d'autres personnes qui veulent communiquer entre elles (sauf si le standard et surchargé). C'est ce qu'on appelle la *commutation de circuits*, car un circuit électrique est créé entre les deux appareils qui communiquent.
+Dans un réseau centralisé comme le téléphone, lorsque deux personnes sont en communication, elles "occupent la ligne": ces deux personnes ne sont pas joignables par d'autres personnes (c'est ce qu'indique le signal "occupé"), mais cela n'implique pas d'autres personnes qui veulent communiquer entre elles (sauf si le standard est surchargé). C'est ce qu'on appelle la *commutation de circuits*, car un circuit électrique est créé entre les deux appareils qui communiquent.
 
 Imaginons maintenant qu'une relation soit établie entre deux appareils d'un réseau décentralisé. Si l'on avait une commutation de circuits, toutes les connexions utilisées pour acheminer
 l'information entre deux appareils seraient inutilisables pour les autres personnes utilisatrices du réseau, comme illustré dans la figure ci-dessous.
@@ -120,7 +120,7 @@ réponse sur une messagerie.
 Lorsque deux personnes entrent en communication, elles se mettent d'accord (souvent implicitement) sur la
 manière dont elles communiquent, par exemple la langue qu'elles vont utiliser, la manière dont on signifie
 le début et la fin d'une conversation (les salutations), etc. Pour les machines, ces règles doivent être
-précisées beaucoup plus précisément, car les machines n'ont pas la faculté d'interprétation et d'adaptation
+précisées beaucoup plus en détails, car les machines n'ont pas la faculté d'interprétation et d'adaptation
 des humains. Dans un réseau décentralisé, il faut spécifier quels sont exactement les signaux que doit
 envoyer une machine qui veut se connecter au réseau et établir une communication avec une autre machine.
 C'est ce qu'on appelle le {glo}`protocolecomm|protocole de communication`, par exemple comment
