@@ -147,7 +147,7 @@ Sur certains ordinateurs portables d'entrée de gamme, le disque dur ou le SSD s
 **Le lecteur/graveur CD/DVD**
 Un ordinateur peut encore aujourd'hui être équipé d'un graveur, vissé au boîtier, glissé dans un emplacement ouvert sur l'avant du PC, permettant ainsi l'ouverture du tiroir qui recevra le disque optique que l'on appelle plus communément CD (Compact Disc) ou DVD (Digital Versatile Disc). Il est connecté à la carte mère par un câble plat (nappe) IDE ou SATA. 
 
-```{figure} media/LecterCD.png
+```{figure} media/LecteurCD.png
 ---
 width: 700
 height: 400

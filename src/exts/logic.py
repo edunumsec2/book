@@ -1,6 +1,7 @@
 import asyncio
 import base64
 import hashlib
+import json
 import os
 import sys
 from dataclasses import dataclass
@@ -47,11 +48,14 @@ class LogicDiagramData:
     height: Optional[int]
 
     @cached_property
-    def content_based_filename(self) -> str:
+    def content_md5(self) -> str:
         height_str = "-1" if self.height is None else str(self.height)
         spec = "/".join([self.data_json, self.mode, height_str])
-        spec_md5 = md5(spec)  # should be 32 chars hex
-        return f"{spec_md5}.png"
+        return md5(spec)  # should be 32 chars hex
+
+    def content_based_filename(self, use_pdf: bool) -> str:
+        return self.content_md5 + (".pdf" if use_pdf else ".png")
+
 
 class PlaywrightWrapper:
     def __init__(self) -> None:
@@ -80,14 +84,16 @@ def browser_close(browser: Union[PlaywrightWrapper, None]) -> None:
         browser.close()
 
 
-def to_png(data: LogicDiagramData, output_file: str, browser: PlaywrightWrapper) -> bool:
+def convert_for_latex(
+    data: LogicDiagramData, output_file: str, browser: PlaywrightWrapper
+) -> Union[Tuple[int, int], None]:
     page = browser.new_page()
-    page.goto(MAIN_LOGIC_URL)
+    page.goto(MAIN_LOGIC_URL + "?lang=fr")
 
-    conversion_function = "toPNG"
-    # conversion_function = "toSVG"
+    use_pdf = output_file.endswith(".pdf")
+    conversion_function, mime_type = ("toSVG", "image/svg+xml") if use_pdf else ("toPNG", "image/png")
 
-    result = page.evaluate(
+    resultJSON = page.evaluate(
         f"""async () => {{
         try {{
             const editor = window.Logic.singleton
@@ -101,26 +107,67 @@ def to_png(data: LogicDiagramData, output_file: str, browser: PlaywrightWrapper)
             const withMetadata = false
             const heightHint = {"undefined" if data.height is None else data.height}
             const blob = await editor.{conversion_function}(withMetadata, heightHint)
-            const asBase64 = await editor.toBase64(blob)
-            return asBase64
+            const imgData = await editor.toBase64(blob)
+            const size = editor.guessAdequateCanvasSize()
+            return JSON.stringify({{ imgData, size }})
         }} catch (e) {{
             return "error: " + e
         }}
     }}"""
     )
+
+    if resultJSON is None:
+        logger.error("error: no result from PNG conversion")
+        page.close()
+        return None
+
+    if resultJSON.startswith("error:"):
+        logger.error(resultJSON)
+        page.close()
+        return None
+
+    result = json.loads(resultJSON)
+    width, height = result["size"]
+    img_data = result["imgData"]
+
+    if use_pdf:
+        page.set_content(
+            f"""<html>
+            <head>
+                <style>
+                    @page {{
+                        size: {width}px {height}px;
+                        margin: {0}px;
+                    }}
+
+                    html, body {{
+                        width: {width}px;
+                        margin: 0;
+                    }}
+                </style>
+            </head
+            <body>
+                <img style="width: 100%;" src="data:{mime_type};base64,{img_data}">
+            </body>
+        </html>"""
+        )
+
+        page.pdf(
+            path=output_file,
+            page_ranges="1",
+            display_header_footer=False,
+            margin=dict(top="0", left="0", right="0", bottom="0"),
+            prefer_css_page_size=True,
+            print_background=False,
+        )
+
+    else:
+        with open(output_file, "wb") as f:
+            f.write(base64.b64decode(img_data))
+
     page.close()
 
-    if result is None:
-        logger.error("error: no result from PNG conversion")
-        return False
-
-    if result.startswith("error:"):
-        logger.error(result)
-        return False
-
-    with open(output_file, "wb") as f:
-        f.write(base64.b64decode(result))
-    return True
+    return width, height
 
 
 class logic_diagram(nodes.Element, nodes.General):
@@ -167,29 +214,36 @@ def begin_logic_diagram_latex(self: SphinxTranslator, node: Node) -> None:
     height = node["height"]
     mode = node["mode"]
 
-    png_folder = os.path.join(self.builder.outdir, "logic_png")
-    if not os.path.exists(png_folder):
-        os.makedirs(png_folder)
+    assets_folder_name = "logic_assets"
+    assets_folder = os.path.join(self.builder.outdir, assets_folder_name)
+    if not os.path.exists(assets_folder):
+        os.makedirs(assets_folder)
 
+    use_pdf = True
     data = LogicDiagramData(content, mode, height)
-    target_file = os.path.join(png_folder, data.content_based_filename)
+    filename = data.content_based_filename(use_pdf)
+    target_file_absolute = os.path.join(assets_folder, filename)
+    target_file_relative = os.path.join(assets_folder_name, filename)
+    # meta_f
 
     include_image = False
-    if os.path.exists(target_file):
+    if os.path.exists(target_file_absolute):
         include_image = True
     else:
         if browser is None:
             logger.error("browser page is not initialized to generate PNGs for logic diagrams")
         else:
-            include_image = to_png(data, target_file, browser)
+            img_size = convert_for_latex(data, target_file_absolute, browser)
+            include_image = img_size is not None
             if include_image:
-                logger.info("Generated logic diagram: %s", target_file)
+                logger.info("Generated logic diagram: %s", target_file_absolute)
             else:
-                logger.error("Failed to generate logic diagram: %s", target_file)
+                logger.error("Failed to generate logic diagram: %s", target_file_absolute)
 
     if include_image:
+        includegraphics_options = "scale=0.66" if use_pdf else "scale=0.33"
         self.body.append(
-            f"\n\\begin{{center}}\n  \\includegraphics[scale=0.33]{{{target_file}}}\n\\end{{center}}\n"
+            f"\n\\begin{{center}}\n  \\includegraphics[{includegraphics_options}]{{{target_file_relative}}}\n\\end{{center}}\n"
         )
     else:
         self.body.append("\n \\fbox{logic diagram} \\\ ")
@@ -368,6 +422,7 @@ def build_starting(app: Sphinx) -> None:
     global browser, Page, sync_playwright
     if app.builder is not None and app.builder.name == "latex":
         from playwright.sync_api import Page, sync_playwright
+
         logger.info("starting headless browser")
         browser = browser_launch()
 
