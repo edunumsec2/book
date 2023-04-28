@@ -197,24 +197,26 @@
 \makeatother
 
 %% display cards
-%\newenvironment{card}{\begin{minipage}{0.5\textwidth}}{\end{minipage}}
-\makeatletter
-\def\@cardenvironment{minipage}
-\def\@tabenvironment{framed}
-\renewenvironment{sphinxuseclass}[1]{%
-\def\myarg{#1}
-\def\cardenv{col-sm-6}
-\def\tabenv{tabbed-container}
-\ifx\myarg\cardenv\begin{minipage}{0.5\textwidth}\fi
-%\ifx\myarg\tabenv\begin{framed}\fi
-\ifx\myarg\tabenv\centering\begin{minipage}{0.5\textwidth}\begin{framed}\fi
-}%
-{%
-\ifx\@currenvir\@cardenvironment\end{minipage}\fi
-\ifx\@currenvir\@tabenvironment\end{framed}\end{minipage}\fi
-%\vspace{0.5cm}
+\newenvironment{sphinxclasscol-sm-6}{
+  \begin{minipage}{0.5\textwidth}
+}{
+  \end{minipage}
 }
-\makeatother
+
+\newenvironment{sphinxclasstabbed-container}{
+  \centering\begin{minipage}{0.5\textwidth}\begin{framed}
+}{
+\end{framed}\end{minipage}
+}
+
+% add a newline after each glossary-entry
+\newenvironment{sphinxclassglossary-entry}{
+  %\begin{adjustwidth}{3em}{0pt}
+}{
+  %\end{adjustwidth}
+  \\[-5pt]
+}
+
 
 %\DeclareStringOption[1pt]{\spx@opt@noteMichaborder}
 %\DeclareStringOption[0.5pt]{noteMichaborder}
@@ -334,6 +336,8 @@
   }%
 }%
 \makeatother
+
+
 
 %%% this needs to be made generalizable
 
