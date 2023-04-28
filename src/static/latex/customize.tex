@@ -94,11 +94,36 @@
 % set toc links color to black
 \hypersetup{linkcolor=black}
 
-
 \sphinxpxdimen=.5bp\relax
 
-\definecolor{light-gray}{gray}{0.95} 
-\lstset{language=Python,upquote=true,showstringspaces=false,columns=fullflexible, basicstyle = \ttfamily,backgroundcolor = \color{light-gray},numbers=right,stepnumber=1,keywordstyle=\color{blue},stringstyle=\color{magenta},commentstyle=\color{red},breaklines=true}
+\definecolor{line-num-col}{gray}{0.6} % for line numbers
+\definecolor{frame-col}{gray}{0.78} % for line numbers
+
+\lstset{
+  language=Python,
+  upquote=true,
+  showstringspaces=false,
+  columns=fullflexible,
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{llgray}, % same as background color in admonition
+  numbers=right,
+  stepnumber=1,
+  numberstyle=\scriptsize\sffamily\color{line-num-col},
+  keywordstyle=\color{blue},
+  stringstyle=\color{magenta},
+  commentstyle=\color{red},
+  breaklines=true,
+  frame=single,
+  framesep=0pt,
+  xleftmargin=6pt,
+  framexleftmargin=6pt,
+  xrightmargin=25pt,
+  framexrightmargin=25pt,
+  framextopmargin=4pt,
+  framexbottommargin=4pt,
+  rulecolor=\color{frame-col}
+}
+
 %% for accented characters in lstlisting
 \lstset{inputencoding=utf8/latin1, literate=%
          {à}{{\`a }}1
