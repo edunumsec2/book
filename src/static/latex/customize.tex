@@ -1,9 +1,12 @@
 \usepackage{listings}
 \usepackage{listingsutf8}
 \usepackage{pifont}
-\usepackage{tcolorbox}
+\usepackage[hooks]{tcolorbox}
+\tcbuselibrary{skins,breakable}
 \usepackage{setspace}
-
+\usepackage{changepage}
+\usepackage[bottom]{footmisc}
+\usepackage{newunicodechar}
 
 \renewcommand{\baselinestretch}{1.1} 
 
@@ -23,11 +26,18 @@
 \addtolength{\evensidemargin}{-\margindiff}
 \addtolength{\textwidth}{\margindiff}
 
+% TODO
+\usepackage{wasysym}
+\newunicodechar{⌘}{<Cmd>}
+\newunicodechar{♂}{\male}
+\newunicodechar{♀}{\female}
+\newunicodechar{π}{\ensuremath{\pi}}
+
 %% default admonition type
 %\renewenvironment{sphinxnote}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
 
 \definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
-\definecolor{llgray}{rgb}{0.96, 0.96, 0.96}
+\definecolor{llgray}{gray}{0.96}
 \definecolor{carolinablue}{rgb}{0.6, 0.73, 0.89}
 \definecolor{blizzardblue}{rgb}{0.67, 0.9, 0.93}
 \definecolor{beaublue}{rgb}{0.74, 0.83, 0.9}
@@ -44,23 +54,41 @@
 
 
 %% specific admonition type - use tcolorbox arguments (or something else) to adapt latex rendering
-% TODO: this is a problem with page breaks, we may want to use activitybox instead
-% (cf. https://tex.stackexchange.com/questions/350316/create-manual-page-break-within-tcolorbox)
+% Page breaks on given boxes can be enabled by passing these additional options to the
+% \begin{tcolorbox} command: 'breakable, enhanced jigsaw'
+
 \newcommand\spacebeforeadmonition{\vspace{6pt}}
 \newcommand\spaceafteradmonition{\vspace{6pt}}
 \newcommand\admonitiontitle[1]{{\fontfamily{phv}\textbf{#1}}}
-\newenvironment{exercise}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{solution}[1]{\vspace{0pt}\begin{tcolorbox}[parbox=false, colframe=ultraturquoise, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{microactivity}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{togofurther}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=orangemodulo, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{important}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=radicalred, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{didyouknow}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=orangemodulo, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{reminder}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=radicalred, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{related}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=neoncarrot, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{evaluation}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=radicalred, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{thinkingmatter}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{note}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=neoncarrot, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{torecall}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=radicalred, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
+
+% Arguments: name, frame color, title color
+\newcommand\DeclareModuloAdmonition[3]{
+  \newenvironment{#1}[1]{
+    \spacebeforeadmonition{}
+    \begin{tcolorbox}[
+      parbox=false, boxrule=1pt, top=8pt, left=8pt, right=8pt, bottom=8pt,
+      colback=llgray, colframe=#2, coltitle=#3, fonttitle=\fontfamily{phv}\bfseries,
+      toptitle=1mm, bottomtitle=1mm, title=##1,
+      breakable, enhanced jigsaw, lines before break=5]
+  }{
+    \end{tcolorbox}
+    \spaceafteradmonition{}
+  }
+}
+
+\DeclareModuloAdmonition{exercise}{ultraviolet}{white}
+\DeclareModuloAdmonition{solution}{ultraturquoise}{white}
+\DeclareModuloAdmonition{microactivity}{ultraviolet}{white}
+\DeclareModuloAdmonition{togofurther}{orangemodulo}{black}
+\DeclareModuloAdmonition{important}{radicalred}{white}
+\DeclareModuloAdmonition{didyouknow}{orangemodulo}{black}
+\DeclareModuloAdmonition{reminder}{radicalred}{white}
+\DeclareModuloAdmonition{related}{neoncarrot}{black}
+\DeclareModuloAdmonition{evaluation}{radicalred}{white}
+\DeclareModuloAdmonition{thinkingmatter}{ultraviolet}{white}
+\DeclareModuloAdmonition{note}{neoncarrot}{black}
+\DeclareModuloAdmonition{torecall}{radicalred}{white}
+
 \newenvironment{historicdocument}[1]{\spacebeforeadmonition\begin{tcolorbox}[colframe=neoncarrot, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
 
 % set toc links color to black
