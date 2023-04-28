@@ -3,6 +3,7 @@ import os
 import sys
 
 from docutils import nodes
+from docutils.nodes import Node  # type: ignore
 from docutils.parsers.rst import directives
 from sphinx.util.docutils import SphinxDirective
 
@@ -76,12 +77,25 @@ def visit_answer_latex(self, node):
 def depart_answer_latex(self, node):
     pass
 
-def visit_question_latex(self, node):
+
+def visit_question_latex(self, node: Node):
     classes = ["question"]
     if node["multi"]:
         classes.append("multi")
     question.correct = []
     question.counter = 0
+
+    def convert_itemize(node: Node):
+        """Recursively convert all bullet lists to enumerated lists.
+        We want this because we refer to answers by number."""
+        if isinstance(node, nodes.bullet_list):
+            node.__class__ = nodes.enumerated_list
+        else:
+            for child in node.children:
+                convert_itemize(child)
+
+    convert_itemize(node)
+
     self.body.append(r"\smallbreak") #break before question if possible
 
 
