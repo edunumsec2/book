@@ -19,8 +19,8 @@ import sys
 
 # -- Project information -----------------------------------------------------
 
-project = 'Modulo2'
-copyright = '2022, Groupe de travail DGEP, EPFL, HEP-VD, UNIL'
+project = 'Modulo'
+copyright = 'CC BY-NC-SA'
 author = 'Groupe de travail DGEP, EPFL, HEP-VD, UNIL'
 
 # The full version, including alpha/beta/rc tags

@@ -19,8 +19,8 @@ import sys
 
 # -- Project information -----------------------------------------------------
 
-project = 'Modulo2'
-copyright = 'CC-BY-NC-SA'
+project = 'Modulo'
+copyright = 'CC BY-NC-SA'
 author = 'Groupe de travail DGEP, EPFL, HEP-VD, UNIL'
 
 # The full version, including alpha/beta/rc tags
@@ -28,8 +28,6 @@ release = '0.1'
 
 
 # -- General configuration ---------------------------------------------------
-
-latex_mode = False
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -73,14 +71,10 @@ language = 'fr'
 # This pattern also affects html_static_path and html_extra_path.
 
 
-# exclude_patterns = ['prog1', 'prog2','archi','glossaire']
-
-#root_doc = 'rep-info/index'
-
-if tags.has('latex_mode'): 
-    latex_mode = True
-
+latex_mode = tags.has('latex_mode')
     
+Chapters = {"rep-info", "prog1", "algo1", "archi",   "prog2", "algo2", "resx", "projets", "hist", "glossaire"}
+
 if latex_mode:
     exclude_patterns = ['prog1', 'prog2', 'hist', 'projets', 'resx']
 

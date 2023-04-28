@@ -114,7 +114,7 @@ Le disque dur se présente sous la forme d'un boîtier rectangulaire, vissé au 
 
 Il est relié à la carte mère grâce à une nappe (câble plat) de type IDE ou grâce aux interfaces SATA (Serial ATA) ou SCSI. Un cavalier à positionner à l'arrière du boîtier permet généralement de le désigner comme disque «Maître», le disque dur principal (Master) ou comme «Esclave», un disque auxiliaire (Slave). 
 
-Les disques durs aujourd'hui peuvent contenir des centaines de giga-octets, voire plusieurs terra-octets de données.
+Les disques durs aujourd'hui peuvent contenir des centaines de gigaoctets, voire plusieurs téraoctets de données.
 
 ```{figure} media/second_disquedur_23.png
 ---
