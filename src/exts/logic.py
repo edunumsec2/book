@@ -1,9 +1,7 @@
-import asyncio
 import base64
 import hashlib
 import json
 import os
-import sys
 from dataclasses import dataclass
 from functools import cached_property
 from typing import Any, Callable, List, Optional, Tuple, TypeVar, Union
@@ -11,7 +9,7 @@ from typing import Any, Callable, List, Optional, Tuple, TypeVar, Union
 from docutils import nodes  # type: ignore
 from docutils.nodes import Node, system_message  # type: ignore
 from docutils.parsers.rst import directives  # type: ignore
-from myst_parser.main import MdParserConfig, to_html
+from myst_parser.main import MdParserConfig, to_html, to_tokens
 from sphinx.application import Sphinx
 from sphinx.util import logging
 from sphinx.util.docutils import SphinxDirective, SphinxRole, SphinxTranslator
@@ -29,8 +27,9 @@ logger = logging.getLogger(__name__)
 StringOrList = Union[str, List[str]]
 
 # reassigned when importing from playwright
-Page = Any 
-sync_playwright: Callable[[], Any] = None # type: ignore
+Page = Any
+sync_playwright: Callable[[], Any] = None  # type: ignore
+
 
 def md5(string: str) -> str:
     md5_builder = hashlib.md5()
@@ -109,6 +108,9 @@ def convert_for_latex(
             const blob = await editor.{conversion_function}(withMetadata, heightHint)
             const imgData = await editor.toBase64(blob)
             const size = editor.guessAdequateCanvasSize()
+            if (heightHint !== undefined) {{
+                size[1] = heightHint
+            }}
             return JSON.stringify({{ imgData, size }})
         }} catch (e) {{
             return "error: " + e
@@ -362,15 +364,54 @@ def end_logic_highlight_html(self: SphinxTranslator, node: Node) -> None:
     self.body.append("</span>")
 
 
-def _render_latex(source: str) -> str:
-    # ugly hack, should used child nodes instead (micha)
-    source.strip()
-    source = source.replace("_", "")
-    return source
+def _tex_escape(string: str) -> str:
+    return string.replace("&", "\\&").replace("$", "\\$").replace("{", "\\{").replace("}", "\\}").replace("%", "\\%").replace("_", "\\_").replace("#", "\\#").replace("\\", "\\textbackslash{}").replace("~", "\\textasciitilde{}").replace("^", "\\textasciicircum{}")
+
+
+def _render_latex(source: str, config: MdParserConfig) -> str:
+    """Render Markdown to LaTeX.
+    This is a hack to fix the fact that role content is not parsed.
+    Not all Markdown-to-LaTeX is supported here, as the content of
+    roles is not very complicated usually (mostly just bold, italic,
+    and math), but additional tags can be added as needed."""
+
+    tokens = to_tokens(source, config=config)
+
+    while True:
+        # simplify tokens
+        changed = False
+        while (tokens[0].type == "paragraph_open") and (tokens[-1].type == "paragraph_close"):
+            tokens = tokens[1:-1]
+            changed = True
+        if len(tokens) == 1 and tokens[0].type == "inline":
+            tokens = tokens[0].children
+            changed = True
+        if not changed:
+            break
+
+    buf: List[str] = []
+    for token in tokens:
+        if token.type == "text":
+            buf.append(_tex_escape(token.content))
+        elif token.type == "math_inline":
+            buf.append(f"${token.content}$")
+        elif token.type == "strong_open":
+            buf.append("\\textbf{")
+        elif token.type == "em_open":
+            buf.append("\\emph{")
+        elif token.type == "strong_close" or token.type == "em_close":
+            buf.append("}")
+        else:
+            print(
+                f"ERROR: unknown Markdown token type '${token.type}' in inline role; please implement its LaTeX rendering in _render_latex"
+            )
+            buf.append(_tex_escape(token.content))  # fallback
+
+    return "".join(buf)
 
 
 def begin_logic_highlight_latex(self: SphinxTranslator, node: Node) -> None:
-    content = _render_latex(node["display"])
+    content = _render_latex(node["display"], node["config"])
     self.body.append(content)
 
 
