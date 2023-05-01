@@ -417,7 +417,7 @@ Astuce : pour décrémenter la valeur `i` il suffit d'additionner `1111` qui rep
 
 Les nombres signés sont représentés avec le format *complément à deux*. Pour un nombre 4-bits, ceci nous donne une plage de -8 à +7 pour des entiers relatifs, et une plage de 0 à 15 pour des entiers naturels. Nous constatons que la plage signée n'est pas symétrique: le côté négatif compte un nombre en plus.
 
-```{figure} media/4bitsIntegers.svg
+```{figure} media/4bits_Integers.svg
 :width: 100%
 ```
 

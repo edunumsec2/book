@@ -238,7 +238,7 @@ def begin_logic_diagram_latex(self: SphinxTranslator, node: Node) -> None:
             img_size = convert_for_latex(data, target_file_absolute, browser)
             include_image = img_size is not None
             if include_image:
-                logger.info("Generated logic diagram: %s", target_file_absolute)
+                logger.info("Generated image for logic diagram: %s", target_file_absolute)
             else:
                 logger.error("Failed to generate logic diagram: %s", target_file_absolute)
 
