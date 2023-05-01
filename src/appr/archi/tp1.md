@@ -68,7 +68,7 @@ Vous pouvez ajouter des noms aux entrées sorties.
 - Cliquez sur l'entrée pour basculer l'état entre 0 et 1
 - Ajoutez deux autres segments carrés pour compléter un feu de circulation.
 - Changez l'affichage en grand carré
-- Changez les couleurs en jaune et rouge
+- Changez les couleurs en jaune et vert
 - Ajoutez les noms *rouge, jaune, vert*.
 
 ```{logic}
@@ -415,7 +415,7 @@ Complétez le circuit pour créer un décodeur binaire. Chaque combinaison des d
 ## Décodeur de dé
 
 Un dé de jeu peut afficher les nombres 1 à 6 à l'aide de 7 lampes.  
-Plusieurs lampes s'allument par pair. Voici la table de vérité.
+Plusieurs lampes s'allument par paire. Voici la table de vérité.
 
 | b2 | b1 | b0 |valeur| a,g | b,f | c,e | d |
 |----|----|:--:|:----:|:---:|:---:|:---:|---|
