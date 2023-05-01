@@ -210,7 +210,9 @@ L'addition de deux nombres naturels (0 à 15) peut produire un résultat de 0 à
 L'addition de deux nombres relatifs (-8 à 7) peut produire un résultat de -16 à 14.  
 Dans certains cas on aura donc besoin de 5 bits pour représenter correctement le résultat.
 
-![signed](media/4bitsIntegers.jpg)
+```{figure} media/4bitsIntegers.svg
+:width: 100%
+```
 
 Pour les nombres non signés (première ALU)
 

@@ -369,7 +369,7 @@ La représentation de -21 en complément à 2 :
 La représentation de -21 est 11101011, qui additionné à 21, soit 00010101 donne bien zéro : 00000000.
 ```
 
-```{figure} media/4bitsIntegers.jpg
+```{figure} media/4bitsIntegers.svg
 :width: 550
 :height: 300
 ```
