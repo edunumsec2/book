@@ -96,7 +96,7 @@ Bienvenue dans le monde fascinant des algorithmes.
 
 ````{panels}
 
-:img-top: media/Al&#8209;Khwârizmî.png
+:img-top: media/Al-Khwarizmi.png
 
 
 Al&#8209;Khwârizmî 🇺🇿
