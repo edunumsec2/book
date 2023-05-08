@@ -67,7 +67,24 @@ l'entête fait au maximum 24 octets, remplis comme dans l'image ci-dessous.
 ```
 
 On remarque que les 4 premiers bits indiquent la version d'IP utilisée (donc 0100 si c'est la version 4), les quatre suivants
-donnent la longueur de l'entête, etc. 
+donnent la longueur de l'entête, etc.
+
+````{Exercise}
+Un paquet avec l'entête IP suivante (en hexadécimal) circule sur Internet: 
+
+```html
+ 45 00 00 14  
+ 00 01 00 00  
+ 0A 00 BF 88  
+ C1 C8 DC EA  
+ 91 E8 C0 C5  
+```
+ 
+ Déterminer de quelle version de protocole IP il s'agit, ainsi que les adresses
+ IP (en binaire) de l'émetteur et du recepteur. 
+````
+
+
 
 ## Le protocole TCP
 
@@ -132,19 +149,28 @@ envoie les paquets pour ne pas déborder le récepteur. Enfin la "Somme de
 contrôle" est un code correcteur d'erreur qui permet de vérifier si l'entête
 n'a pas été altéré en chemin.
 
-```{exercise}
+````{exercise}
 Un paquet a été intercepté sur Internet avec le contenu initial suivant
 indiqué en hexadécimal:
-{itodo}`XXXXX`
 
-
+   ```html
+   45 00 00 41 00 01 00 00
+   0A 06 C6 77 57 62 A6 3F
+   53 A6 98 F7 00 14 00 50
+   00 00 00 08 00 00 00 02
+   50 02 20 00 F3 7E 00 00
+   47 45 54 20 2F 69 6E 64
+   65 78 2E 68 74 6D 6C 20
+   ```
+ 
 1. Déterminer quelle partie de cet entête correspond à l'entête IP,
 et laquelle correspond à l'entête TCP.
 1. Indiquer l'adresse IP et le port de l'émetteur de ce paquet.
 1. Indiquer l'adresse IP et le port du destinataire de ce paquet.
+1. Quelle est la longueur du paquet?
 1. Combien d'octets du paquet ne sont pas représentés ci-dessus?
 
-```
+````
 
 ### Déroulement
 
