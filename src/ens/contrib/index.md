@@ -4,4 +4,4 @@ Cette section présente des contributions externes apportées par des auteur·e�
 
 |  Auteur |  Titre |  Lien |  Résumé |
 |---|---|---|---|
-| Cédric Donner  |  Programmation dynamique | https://gyminf-ads2-dp.surge.sh/index.html  | La programmation dynamique est une technique de résolution de problèmes d’optimisation développée par Richard Bellman dès les années 1940. Elle revêt une importance capitale en optimisation et en théorie du contrôle.  | 
+| Cédric Donner  |  Programmation dynamique | [https://gyminf-ads2-dp.surge.sh/index.html](https://gyminf-ads2-dp.surge.sh/index.html)  | La programmation dynamique est une technique de résolution de problèmes d’optimisation développée par Richard Bellman dès les années 1940. Elle revêt une importance capitale en optimisation et en théorie du contrôle.  | 
