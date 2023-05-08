@@ -108,15 +108,15 @@ body {
 }
 
 .admonition.important>.admonition-title {
-    background-color: rgb(92 201 191 / 10%)!important;
+    background-color: rgb(245 39 39 / 10%)!important;
 }
 
 .admonition.important {
-    border-left-color: rgb(92 201 191)!important;
+    border-left-color: rgb(245 39 39)!important;
 }
 
 .admonition.important>.admonition-title:before {
-    background-color: rgb(92 201 191)!important;
+    background-color: rgb(245 39 39)!important;
 }
 
 .admonition.togofurther>.admonition-title {
