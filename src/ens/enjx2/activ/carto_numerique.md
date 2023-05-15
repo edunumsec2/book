@@ -13,9 +13,9 @@ qu'aux actions possibles pour les réduire.
 * **Thème** : Numérique et environnement
 * **Niveau** : `moyen`
 * **Durée** : 2 périodes ou 90 minutes
-* **Objectifs pédagogiques** : Objectifs pédagogiques : Prendre conscience de la matérialité du numérique et des impacts environnementaux et sociaux associés et identifier les actions possibles à mettre en œuvre pour les limiter 
+* **Objectifs pédagogiques** : Prendre conscience de la matérialité du numérique et des impacts environnementaux et sociaux associés et identifier les actions possibles à mettre en œuvre pour les limiter 
 * **Modalité** : débranché
-* **Matériel** : pour l'élève, cartes (4 lots) ; pour l'enseignant, slides support de l'activité, dossier de correction détaillée, fiche « solutions »     
+* **Matériel** : par groupe d'élève : 1 grande feuille blanche, un stylo, cartes ([lot 1](https://files.modulo-info.ch/enjeux-sociaux/cartographie/lot1.pdf), [lots 2-4](https://files.modulo-info.ch/enjeux-sociaux/cartographie/lot2-4.pdf)) ; pour l'enseignant·e : [slides support activité](https://files.modulo-info.ch/enjeux-sociaux/cartographie/slides_suport.pptx), [dossier correction détaillée](https://files.modulo-info.ch/enjeux-sociaux/cartographie/correct_detaillee.pdf), [fiche solution](https://files.modulo-info.ch/enjeux-sociaux/cartographie/fiche_solution.jpg).   
 * **Prérequis** : aucun
 * **Notions fondamentales** : Cycle de vie, Sobriété numérique, Impacts environnementaux 
 * **Taille du groupe** : groupe de 5-6 élèves
@@ -39,7 +39,7 @@ Plus généralement cette activité permet de:
     ainsi développer des compétences de discussion et d'écoute par
     groupe
 
-Document détaillé de présentation de l'activité disponible ici
+Document détaillé de présentation de l'activité disponible [ici](https://files.modulo-info.ch/enjeux-sociaux/cartographie/presentation.pdf)
 
 **Déroulement**
 
@@ -65,7 +65,7 @@ Document détaillé de présentation de l'activité disponible ici
 ### Introduction Cartographie
 
 Les élèves forment des groupes de 5-6 autour d'une table et chacun
-positionne sur celle-ci les trois catégories "Usages numériques",
+positionne sur celle-ci les trois cartons "Usages numériques",
 "Infrastructures et équipements" et "Cycle de vie d'un produit"
 comme sur le slide de support.
 
@@ -73,15 +73,15 @@ L'enseignant.e explique aux élèves que l'activité du jour traitera des
 impacts environnementaux liés aux technologies numériques. L'objectif
 sera de développer une vue d'ensemble sur ce qui se cache derrière nos
 pratiques du numérique et de prendre conscience d'une certaine
-"matérialité" associée à ses usages." 
+"matérialité" associée à ses usages.
 
 Iel explique les modalités et les règles de l'activité de cartographie
 ci-dessous :
 
-
  **Modalités :**                                                       
                                                                       
- L'activité est basée sur **l'intelligence collective** et sur **la collaboration**, c'est-à-dire que l'activité se fait en groupe et fait intervenir le savoir et les connaissances de chaque membre du groupe. Concrètement, les élèves doivent exprimer leur opinion, s'écouter les uns les autres, discuter et échanger dans labienveillance                                                                                                                           
+ L'activité est basée sur **l'intelligence collective** et sur **la collaboration**, c'est-à-dire que l'activité se fait en groupe et fait intervenir le savoir et les connaissances de chaque membre du groupe. Concrètement, les élèves doivent exprimer leur opinion, s'écouter les uns les autres, discuter et échanger dans la bienveillance.
+
  **Règles :**                                                         
                                                                       
 L'activité de cartographie se déroule **en 4 temps.** Plusieurs lots de cartes à **placer** seront distribuées. Après chaque lot de cartes, une phase de restitution collective est prévue.
@@ -111,9 +111,6 @@ Une synthèse est ensuite réalisée par l'enseignant.e à l'aide du support
 en pointant les points clefs à retenir. Pour les points clefs se référer
 aux divers encadrés du document de correction détaillés ou aux notes
 sous les slides de support.
-
-
-**Remettre point clefs ?**
 
 (carto.placement1)=
 ### Temps 2 : Placement des implications (2ème lot)
@@ -146,9 +143,6 @@ faux). Il est possible de demander aux élèves de présenter leurs
 différences par rapport à la proposition faite sur le slide (liens
 différents, liens supplémentaires etc...).
 
-
-**Encadré point clef ?**
-
 (carto.placement2)=
 ### Temps 3 : Placement des ressources impliquées (3ème lot)
 
@@ -166,8 +160,6 @@ chaque étape implique en termes de ressources ? 
 
 Une synthèse est ensuite réalisée par l'enseignant.e à nouveau en
 pointant les points clefs à retenir.
-
-**Encadré?**
 
 (carto.placement3)=
 ### Temps 4 : Placement des conséquences (4ème lot)
@@ -188,8 +180,6 @@ impacts et à quoi sont-ils liés ?
 
 Une synthèse est ensuite réalisée par l'enseignant.e à nouveau en
 pointant les points clefs à retenir.
-
-**Encadré ?**
 
 (carto.conclusioncarto)=
 ### Conclusion Cartographie (Facteurs aggravants)
@@ -232,7 +222,7 @@ se poser la question de ce qu'il est possible de faire pour les réduire.
 Les élèves forment des groupes de 4-5 autour d'une table et d'une pile
 de Post-it.
 
-L'enseignant.e écrit (ou affiche) au tableau les 5 catégories d'action
+L'enseignant.e écrit au tableau les 5 catégories d'action
 suivantes :
 
 1.  Allonger la durée de vie des équipements numériques
@@ -269,7 +259,7 @@ correspondent en les présentant au reste de la classe.
 Iel mène ensuite une discussion collective en regroupant les actions
 proposées, en posant des questions sur leur faisabilité, leur difficulté
 etc. L'enseignant.e peut également ajouter des propositions non
-mentionnées de la liste non exhaustive proposée ici
+mentionnées de la liste non exhaustive proposée [ici](https://files.modulo-info.ch/enjeux-sociaux/cartographie/actions.pdf). 
 
 (carto.sobriete)=
 ### Temps 3 : Sobriété numérique
@@ -291,10 +281,6 @@ Dans cette perspective, la sobriété numérique passe par se
 questionner (au niveau de la société et de l'individu) les besoins   
 que comblent l'usage de tout ce numérique. Et parmi ces besoins,     
 lesquels sont réellement essentiels.                                 
-
-> ![Une image contenant texte Description générée
-> automatiquement](media/image1.png){width="6.3in"
-> height="1.5354166666666667in"}
 
 (carto.engagement1)=
 ### Temps 4 : Engagement individuel
@@ -334,7 +320,7 @@ nous de les mettre en œuvre.
 **Ressources complémentaires**
 
 Les ressources suivantes peuvent être fournies aux élèves pour étoffer
-leur connaissance sur le sujet
+leurs connaissances sur le sujet
 
 Infographies "Qu'est-ce qu'on fait ?" :
 
