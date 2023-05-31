@@ -234,7 +234,7 @@ et l'identifier ainsi. C'est ce qu'on appelle en anglais le fingerprinting, que 
 
 Pour récapituler ce qui a été vu précédemment, les humains utilisent les noms de domaines pour les machines, alors que les machines, elles, utilisent les adresses IP. Afin que ces deux modes de recensement des machines soient cohérents entre eux, il est nécessaire de disposer d'un annuaire qui fera correspondre les noms de domaines aux adresses IP. Ceci est analogue aux annuaires téléphoniques ou aux contacts du smartphone qui permettent de faire correspondre le nom des personnes que l'on veut atteindre (qui serait équivalentes au nom de domaine) au numéro de téléphone (qui est analogue à l'adresse IP). Cet annuaire est ce qu'on appelle le *système de noms de domaine* (Domain Name System ou DNS selon l'appellation anglaise). Au début d'Internet, il s'agissait simplement d'un fichier texte librement accessible qui listait le nom de domaines et les adresses IP correspondantes. Ce fichier était maintenu à la main. Maintenant, il s'agit de machines, les serveurs DNS dans le réseau auprès desquelles il est possible d'obtenir l'adresse IP correspondante à un nom de domaine. Ces machines sont aussi organisées hiérarchiquement de telle sorte que chaque serveur DNS ne stocke que les noms de domaines correspondant à une sous-partie du réseau.
 
-```{torecall} Le serveur DNS
+```{note} Le serveur DNS
 ```{figure} media/dns.png
 ---
 width: 500
@@ -243,4 +243,28 @@ align: center
 Pour qu'Alice puisse aller sur le site de champignons.ch, son téléphone va envoyer une requête à un serveur DNS avec le nom de domaine "champignons.ch". Cette
 requête transitera par différents serveurs DNS organisés hiérarchiquement jusqu'à ce qu'un serveur DNS puisse y répondre, et la réponse sera retransmise
 jusqu'au téléphone d'Alice.
+```
+
+```{didyouknow} Le hacking de DNS
+Une méthode de hacking consiste à mettre en ligne un serveur DNS malveillant
+qui va diriger le traffic vers des faux sites web se faisant passer pour des
+vrais. Par exemple, un hacker pourrait mettre en ligne un DNS malveillant
+indiquant une fausse adresse IP pour le site google.com, et à cette adresse,
+mettre un serveur web ayant la même page d'accueil que Google. Lorsque une
+quelqu'un essaiera de se connecter à son compte google sur le faux site,
+ce site enregistrera simplement le login et mot de passe et renverra sur le
+vrai site web. Le hacker aura ainsi le login et mot de passe du compte google
+de la personne, pouvant ainsi avoir accès à ses emails et documents. La
+difficulté pour le hacker est de "convaincre" que son serveur DNS est fiable.
+```
+
+```{didyouknow} La censure par le DNS
+Une des méthodes à disposition d'un état qui souhaite empêcher ses habitants
+d'accéder à certains sites consiste à interdire aux serveurs de DNS du pays
+de répondre correctement aux requêtes concernant certains noms de domaine, voire
+de renovoyer des fausses adresses IP lorsque les requêtes DNS sont interceptées.
+En Chine, par exemple, Facebook.com est interdit, et les DNS chinois vont 
+refuser de retourner l'adresse IP du site de Facebook. Cette censure peut
+parfois être contournées en recourant à des serveurs DNS situés à
+l'extéreur du pays.
 ```
