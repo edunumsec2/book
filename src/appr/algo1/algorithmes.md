@@ -12,14 +12,20 @@ Ce n'est pas l'algorithme qui est exécuté sur une machine pour nous donner une
 ---
 alt: Différence entre un algorithme et un programme.
 width: 70%
-align: left
+align: center
+class: longcaption
 ---
 **Différence entre un algorithme et un programme.** </br> Un algorithme doit être compréhensible par un humain, alors qu'un programme est écrit de façon à ce qu'il soit compréhensible par une machine.
 ```
 
 ## Résolution d'un problème par étapes
 
+```{htmlonly}
 Un mode d’emploi, ou une recette, décrit les **<span style="color:rgb(89, 51, 209)">étapes</span>** à suivre pour arriver à une solution. Dans le cas d'une recette de cuisine, la préparation des ingrédients, leur cuisson et leur présentation sont différentes étapes que l'on peut suivre pour réaliser un plat. Prenons un cas précis : *<span style="color:rgb(13, 204, 166)">faire une omelette</span>*. Pour chaque étape de la préparation de l’omelette, il faut prévoir une marche à suivre suffisamment détaillée, afin que la personne qui suit la recette arrive au résultat souhaité. Dans le cas de l’omelette, les opérations pourraient être (voir figure ci-dessous) : 
+```
+```{latexonly}
+Un mode d’emploi, ou une recette, décrit les **<span style="color:rgb(89, 51, 209)">étapes</span>** à suivre pour arriver à une solution. Dans le cas d'une recette de cuisine, la préparation des ingrédients, leur cuisson et leur présentation sont différentes étapes que l'on peut suivre pour réaliser un plat. Prenons un cas précis : *<span style="color:rgb(13, 204, 166)">faire une omelette</span>*. Pour chaque étape de la préparation de l’omelette, il faut prévoir une marche à suivre suffisamment détaillée, afin que la personne qui suit la recette arrive au résultat souhaité. Dans le cas de l’omelette, les opérations pourraient être (voir la figure suivante) : 
+```
 
 1. Casser les œufs dans un bol. 
 2. Mélanger les œufs jusqu’à obtenir un mélange homogène.
@@ -30,7 +36,8 @@ Un mode d’emploi, ou une recette, décrit les **<span style="color:rgb(89, 51,
 ---
 alt: Un algorithme est un peu comme une recette de cuisine.
 width: 100%
-align: left
+align: center
+class: longcaption
 ---
 
 **Un algorithme est un peu comme une recette de cuisine.** Cet exemple illustre les opérations à suivre pour la réalisation d’une omelette.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -58,15 +65,20 @@ Retourner Résultat      # la solution se trouve dans Résultat
 
 Dans cet algorithme on mentionne le terme *variable*. Pour rappel, les variables associent un nom (ou un identifiant) à une valeur. Par exemple, ci&#8209;dessus on va utiliser une variable que l'on va appeler `i` et qui va stocker pour commencer la valeur `1`. Le terme variable prend tout son sens dans l'opération *Répéter*, lorsque `i` contient à tour de rôle des valeurs allant de `1` à `n`, car à ce moment&#8209;là la valeur stockée dans `i` **varie**. 
 
-Pour&nbsp;mieux vous représenter une variable, imaginez un grand meuble avec des tiroirs (voir Figure&nbsp;ci&#8209;dessous). Les variables sont les tiroirs. Chaque tiroir comporte une étiquette, c'est le nom de la variable, et c'est grâce à ce nom que l'on sait quel tiroir ouvrir et quelle valeur utiliser. Le tiroir est petit et ne peut contenir qu'une valeur. Donc `i` peut valoir `1`&nbsp;ou&nbsp;`2`, mais pas `1`&nbsp;et&nbsp;`2` à la fois. Par contre *i* pourrait contenir une liste qui contient les valeurs `[1, 2]`. Cependant, *i* ne peut contenir qu'une seule liste à la fois et pas par exemple deux listes `[1, 2]` et `[3, 4]`.
-
+```{htmlonly}
+Pour&nbsp;mieux vous représenter une variable, imaginez un grand meuble avec des tiroirs (voir figure&nbsp;ci&#8209;dessous). Les variables sont les tiroirs. Chaque tiroir comporte une étiquette, c'est le nom de la variable, et c'est grâce à ce nom que l'on sait quel tiroir ouvrir et quelle valeur utiliser. Le tiroir est petit et ne peut contenir qu'une valeur. Donc `i` peut valoir `1`&nbsp;ou&nbsp;`2`, mais pas `1`&nbsp;et&nbsp;`2` à la fois. Par contre *i* pourrait contenir une liste qui contient les valeurs `[1, 2]`. Cependant, *i* ne peut contenir qu'une seule liste à la fois et pas par exemple deux listes `[1, 2]` et `[3, 4]`.
+```
+```{latexonly}
+Pour&nbsp;mieux vous représenter une variable, imaginez un grand meuble avec des tiroirs (voir la figure suivante). Les variables sont les tiroirs. Chaque tiroir comporte une étiquette, c'est le nom de la variable, et c'est grâce à ce nom que l'on sait quel tiroir ouvrir et quelle valeur utiliser. Le tiroir est petit et ne peut contenir qu'une valeur. Donc `i` peut valoir `1`&nbsp;ou&nbsp;`2`, mais pas `1`&nbsp;et&nbsp;`2` à la fois. Par contre *i* pourrait contenir une liste qui contient les valeurs `[1, 2]`. Cependant, *i* ne peut contenir qu'une seule liste à la fois et pas par exemple deux listes `[1, 2]` et `[3, 4]`.
+```
 
 
 ```{figure} media/Commode.png
 ---
 alt: Une variable est un tiroir avec une étiquette.
 width: 50%
-align: left
+align: center
+class: longcaption
 ---
 
 **Une variable est un tiroir avec une étiquette.** </br> Cela peut être utile de voir la variable comme un tiroir qui permet de stocker une valeur (contenu du tiroir) sous un nom (étiquette du tiroir). Attention, le tiroir est petit et ne peut contenir qu'une chose (valeur) à la fois. Deux tiroirs différents ne peuvent porter la même étiquette.
@@ -199,7 +211,8 @@ Le dernier ingrédient de l'algorithme, mais tout aussi important, est l’**<sp
 ---
 alt: Schéma des ingrédients d'un algorithme.
 width: 70%
-align: left
+align: center
+class: longcaption
 ---
 **Schéma des ingrédients d'un algorithme.** Un algorithme reçoit des données en entrée, qu'il traite selon des opérations dans un ordre précis, dans le but de produire un résultat en sortie. Ce résultat représente la solution à un problème donné.
 

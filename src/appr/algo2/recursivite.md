@@ -7,7 +7,7 @@ Ce chapitre est prévu en tant que chapitre optionnel. Il présente un autre alg
 
 Un autre {glo}`algo|algorithme` de tri célèbre, inventé par John von Neumann en 1945, est le **<span style="color:rgb(89, 51, 209)">Tri par fusion</span>**. L’algorithme se base sur l’idée qu’il est difficile de trier un tableau avec beaucoup d'éléments, mais qu’il est très facile de trier un tableau avec juste deux éléments. Il suffit ensuite de fusionner les plus petits tableaux déjà triés.
 
-<span id="diviser"></span>L’algorithme commence par une phase de ***<span style="color:rgb(13, 204, 166)">division</span>*** : on divise le tableau en deux, puis on divise *à nouveau* les tableaux ainsi obtenus en deux, et ceci jusqu’à arriver à des tableaux avec un seul élément (voir la Figure ci&#8209;dessous). Comme pour la recherche&nbsp;binaire, le nombre d’étapes nécessaires pour arriver à des tableaux de $1$&nbsp;élément, en divisant toujours par deux, est $log(n)$.
+<span id="diviser"></span>L’algorithme commence par une phase de ***<span style="color:rgb(13, 204, 166)">division</span>*** : on divise le tableau en deux, puis on divise *à nouveau* les tableaux ainsi obtenus en deux, et ceci jusqu’à arriver à des tableaux avec un seul élément (voir la figure ci&#8209;dessous). Comme pour la recherche&nbsp;binaire, le nombre d’étapes nécessaires pour arriver à des tableaux de $1$&nbsp;élément, en divisant toujours par deux, est $log(n)$.
 
 ```{figure} media/Tri_fusion_diviser.png
 ---

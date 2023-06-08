@@ -128,6 +128,7 @@ def tri_bulles(liste, verbose=1):
         for i in range(1, len(liste)):
 
             # on ordonne les éléments deux par deux
+            if liste[i-1] > liste[i] :
                 liste[i-1], liste[i] = liste[i], liste[i-1]
                 if verbose :
                     print('Liste modifiée', liste)
