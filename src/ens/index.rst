@@ -49,6 +49,14 @@ La plateforme est améliorée grâce à vos retours, n’hésitez pas à nous le
    art/index
 
 .. toctree::
+   :name: Contributions
+   :caption: Contributions
+   :maxdepth: 3
+   :hidden:
+
+   contrib/index
+
+.. toctree::
    :name: Outils
    :caption: Outils
    :maxdepth: 3
@@ -57,3 +65,5 @@ La plateforme est améliorée grâce à vos retours, n’hésitez pas à nous le
    plan_didac/index
    glossaire
    readme/extensions
+
+   

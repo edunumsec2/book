@@ -108,15 +108,15 @@ body {
 }
 
 .admonition.important>.admonition-title {
-    background-color: rgb(92 201 191 / 10%)!important;
+    background-color: rgb(245 39 39 / 10%)!important;
 }
 
 .admonition.important {
-    border-left-color: rgb(92 201 191)!important;
+    border-left-color: rgb(245 39 39)!important;
 }
 
 .admonition.important>.admonition-title:before {
-    background-color: rgb(92 201 191)!important;
+    background-color: rgb(245 39 39)!important;
 }
 
 .admonition.togofurther>.admonition-title {
@@ -256,4 +256,25 @@ body {
 
 .admonition > div:last-child > :last-child {
     margin-bottom: 2px;
+}
+
+figure:has(a.longcaption) figcaption {
+    text-align: left;
+    display: inline-block;
+    width: 90%;
+}
+
+figure.align-default:has(a.longcaption) figcaption {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+figure.align-left:has(a.longcaption) figcaption {
+    margin-left: 0;
+    margin-right: 10%;
+}
+
+figure.align-right:has(a.longcaption) figcaption {
+    margin-left: 10%;
+    margin-right: 0;
 }

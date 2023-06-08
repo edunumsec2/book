@@ -43,7 +43,7 @@ Les universitaires américains ont été associés à la conception de ce résea
 Ainsi est né Internet, par une association entre universitaires attachés surtout à la libre circulation de l'information et des militaires aux visées plutôt
 sécuritaires. Dès les années 70, le mouvement hippie, séduit par les possibilités d'auto-organisation et la philosophie non hiérarchique d'Internet
 a investi cette infrastructure et a développé une "cyberculture" qui marquera durablement l'histoire d'Internet, de l'émergence des réseaux sociaux
-aux cryptomonnaies.
+aux cryptomonnaies. En 1983, les militaires ont déconnecté leur partie du réseau du reste d'Internet pour des raisons de sécurité. 
 
 ## Structure d'internet
 

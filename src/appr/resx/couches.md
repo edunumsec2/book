@@ -146,4 +146,9 @@ compromise, les répercussions seront globales.
 Enfin, si Internet donnait à ses débuts une impression d'universalité, on s'est rendu compte que l'utilisation des
 caractères ASCII, la syntaxe de HTML et de l'URL étaient peu propices aux alphabets non latins, et qui ne
 s'écrivent pas de gauche à droite. Tout choix "technique" est ancré dans un contexte social et culturel duquel il
-est difficile de faire abstraction.
+est difficile de faire abstraction. Des inititatives pour rendre Internet plus universel ont été prises, comme le fait
+de pouvoir entrer des URL en caractères chinois. Il n'en reste pas moins que les structures qui gèrent Internet restent
+des entités de droit américain, et que l'occident garde une place prépondérante dans le façonnage d'Internet. Certains
+états plus autoritaires, tels que la Chine ou la Russie, souhaitent avoir un contrôle plus strict de ce que leur population
+font sur Internet et tentent de filtrer certains contenus. A terme, il n'est pas exclu que se développent plusieur réseaux
+en parallèle avec des politiques d'ouverture très différentes. 

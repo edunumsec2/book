@@ -114,7 +114,6 @@ Bien sûr, le Morse peut être utilisé aussi avec des signaux lumineux, ou sono
 ````{figure} media/morse.png
 ---
 height: 400px
-width: 500px
 name: fig-morse
 align: left
 ---

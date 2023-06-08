@@ -1,6 +1,6 @@
 from docutils import nodes
-from sphinx.util.docutils import SphinxDirective
 from docutils.parsers.rst import directives
+from sphinx.util.docutils import SphinxDirective
 from sphinx.writers.html import HTMLTranslator
 
 
@@ -520,13 +520,13 @@ def setup(app):
     app.add_directive("solution", Solution)
     app.add_directive("togofurther", ToGoFurther)
     app.add_directive("micro", MicroActivity)
-    app.add_directive("important", Important)
+    app.add_directive("important", Important, override=True)
     app.add_directive("didyouknow", DidYouKnow)
     app.add_directive("reminder", Reminder)
     app.add_directive("related", Related)
     app.add_directive("eval", Eval)
     app.add_directive("thinkingmatter", ThinkingMatter)
-    app.add_directive("note", Note)
+    app.add_directive("note", Note, override=True)
     app.add_directive("torecall", ToRecall)
     app.add_directive("document", HistoricDocument)
 
@@ -539,7 +539,7 @@ def setup(app):
     app.add_node(to_go_further,latex=(visit_to_go_further_latex,depart_to_go_further_latex),
                                 html=(visit_admonition_html, depart_admonition_html))
     app.add_node(important,latex=(visit_important_latex,depart_important_latex),
-                                html=(visit_admonition_html, depart_admonition_html))
+                                html=(visit_admonition_html, depart_admonition_html), override=True)
     app.add_node(did_you_know,latex=(visit_did_you_know_latex,depart_did_you_know_latex),
                                 html=(visit_admonition_html, depart_admonition_html))
     app.add_node(reminder,latex=(visit_reminder_latex,depart_reminder_latex),
@@ -551,7 +551,7 @@ def setup(app):
     app.add_node(thinking_matter,latex=(visit_thinking_matter_latex,depart_thinking_matter_latex),
                                 html=(visit_admonition_html, depart_admonition_html))
     app.add_node(note,latex=(visit_note_latex,depart_note_latex),
-                                html=(visit_admonition_html, depart_admonition_html))
+                                html=(visit_admonition_html, depart_admonition_html), override=True)
     app.add_node(to_recall,latex=(visit_to_recall_latex,depart_to_recall_latex),
                                 html=(visit_admonition_html, depart_admonition_html))
     app.add_node(historic_document,latex=(visit_document_latex,depart_document_latex),

@@ -1,9 +1,12 @@
 \usepackage{listings}
 \usepackage{listingsutf8}
 \usepackage{pifont}
-\usepackage{tcolorbox}
+\usepackage[hooks]{tcolorbox}
+\tcbuselibrary{skins,breakable}
 \usepackage{setspace}
-
+\usepackage{changepage}
+\usepackage[bottom]{footmisc}
+\usepackage{newunicodechar}
 
 \renewcommand{\baselinestretch}{1.1} 
 
@@ -23,11 +26,18 @@
 \addtolength{\evensidemargin}{-\margindiff}
 \addtolength{\textwidth}{\margindiff}
 
+% TODO
+\usepackage{wasysym}
+\newunicodechar{⌘}{<Cmd>}
+\newunicodechar{♂}{\male}
+\newunicodechar{♀}{\female}
+\newunicodechar{π}{\ensuremath{\pi}}
+
 %% default admonition type
 %\renewenvironment{sphinxnote}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
 
 \definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
-\definecolor{llgray}{rgb}{0.96, 0.96, 0.96}
+\definecolor{llgray}{gray}{0.96}
 \definecolor{carolinablue}{rgb}{0.6, 0.73, 0.89}
 \definecolor{blizzardblue}{rgb}{0.67, 0.9, 0.93}
 \definecolor{beaublue}{rgb}{0.74, 0.83, 0.9}
@@ -44,33 +54,76 @@
 
 
 %% specific admonition type - use tcolorbox arguments (or something else) to adapt latex rendering
-% TODO: this is a problem with page breaks, we may want to use activitybox instead
-% (cf. https://tex.stackexchange.com/questions/350316/create-manual-page-break-within-tcolorbox)
+% Page breaks on given boxes can be enabled by passing these additional options to the
+% \begin{tcolorbox} command: 'breakable, enhanced jigsaw'
+
 \newcommand\spacebeforeadmonition{\vspace{6pt}}
 \newcommand\spaceafteradmonition{\vspace{6pt}}
 \newcommand\admonitiontitle[1]{{\fontfamily{phv}\textbf{#1}}}
-\newenvironment{exercise}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{solution}[1]{\vspace{0pt}\begin{tcolorbox}[parbox=false, colframe=ultraturquoise, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{microactivity}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{togofurther}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=orangemodulo, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{important}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=radicalred, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{didyouknow}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=orangemodulo, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{reminder}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=radicalred, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{related}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=neoncarrot, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{evaluation}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=radicalred, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{thinkingmatter}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=ultraviolet, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{note}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=neoncarrot, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
-\newenvironment{torecall}[1]{\spacebeforeadmonition\begin{tcolorbox}[parbox=false, colframe=radicalred, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
+
+% Arguments: name, frame color, title color
+\newcommand\DeclareModuloAdmonition[3]{
+  \newenvironment{#1}[1]{
+    \spacebeforeadmonition{}
+    \begin{tcolorbox}[
+      parbox=false, boxrule=1pt, top=8pt, left=8pt, right=8pt, bottom=8pt,
+      colback=llgray, colframe=#2, coltitle=#3, fonttitle=\fontfamily{phv}\bfseries,
+      toptitle=1mm, bottomtitle=1mm, title=##1,
+      breakable, enhanced jigsaw, lines before break=5]
+  }{
+    \end{tcolorbox}
+    \spaceafteradmonition{}
+  }
+}
+
+\DeclareModuloAdmonition{exercise}{ultraviolet}{white}
+\DeclareModuloAdmonition{solution}{ultraturquoise}{white}
+\DeclareModuloAdmonition{microactivity}{ultraviolet}{white}
+\DeclareModuloAdmonition{togofurther}{orangemodulo}{black}
+\DeclareModuloAdmonition{important}{radicalred}{white}
+\DeclareModuloAdmonition{didyouknow}{orangemodulo}{black}
+\DeclareModuloAdmonition{reminder}{radicalred}{white}
+\DeclareModuloAdmonition{related}{neoncarrot}{black}
+\DeclareModuloAdmonition{evaluation}{radicalred}{white}
+\DeclareModuloAdmonition{thinkingmatter}{ultraviolet}{white}
+\DeclareModuloAdmonition{note}{neoncarrot}{black}
+\DeclareModuloAdmonition{torecall}{radicalred}{white}
+
 \newenvironment{historicdocument}[1]{\spacebeforeadmonition\begin{tcolorbox}[colframe=neoncarrot, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
 
 % set toc links color to black
 \hypersetup{linkcolor=black}
 
-
 \sphinxpxdimen=.5bp\relax
 
-\definecolor{light-gray}{gray}{0.95} 
-\lstset{language=Python,upquote=true,showstringspaces=false,columns=fullflexible, basicstyle = \ttfamily,backgroundcolor = \color{light-gray},numbers=right,stepnumber=1,keywordstyle=\color{blue},stringstyle=\color{magenta},commentstyle=\color{red},breaklines=true}
+\definecolor{line-num-col}{gray}{0.6} % for line numbers
+\definecolor{frame-col}{gray}{0.78} % for line numbers
+
+\lstset{
+  language=Python,
+  upquote=true,
+  showstringspaces=false,
+  columns=fullflexible,
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{llgray}, % same as background color in admonition
+  numbers=right,
+  stepnumber=1,
+  numberstyle=\scriptsize\sffamily\color{line-num-col},
+  keywordstyle=\color{blue},
+  stringstyle=\color{magenta},
+  commentstyle=\color{red},
+  breaklines=true,
+  frame=single,
+  framesep=0pt,
+  xleftmargin=6pt,
+  framexleftmargin=6pt,
+  xrightmargin=25pt,
+  framexrightmargin=25pt,
+  framextopmargin=4pt,
+  framexbottommargin=4pt,
+  rulecolor=\color{frame-col}
+}
+
 %% for accented characters in lstlisting
 \lstset{inputencoding=utf8/latin1, literate=%
          {à}{{\`a }}1
@@ -144,24 +197,26 @@
 \makeatother
 
 %% display cards
-%\newenvironment{card}{\begin{minipage}{0.5\textwidth}}{\end{minipage}}
-\makeatletter
-\def\@cardenvironment{minipage}
-\def\@tabenvironment{framed}
-\renewenvironment{sphinxuseclass}[1]{%
-\def\myarg{#1}
-\def\cardenv{col-sm-6}
-\def\tabenv{tabbed-container}
-\ifx\myarg\cardenv\begin{minipage}{0.5\textwidth}\fi
-%\ifx\myarg\tabenv\begin{framed}\fi
-\ifx\myarg\tabenv\centering\begin{minipage}{0.5\textwidth}\begin{framed}\fi
-}%
-{%
-\ifx\@currenvir\@cardenvironment\end{minipage}\fi
-\ifx\@currenvir\@tabenvironment\end{framed}\end{minipage}\fi
-%\vspace{0.5cm}
+\newenvironment{sphinxclasscol-sm-6}{
+  \begin{minipage}{0.5\textwidth}
+}{
+  \end{minipage}
 }
-\makeatother
+
+\newenvironment{sphinxclasstabbed-container}{
+  \centering\begin{minipage}{0.5\textwidth}\begin{framed}
+}{
+\end{framed}\end{minipage}
+}
+
+% add a newline after each glossary-entry
+\newenvironment{sphinxclassglossary-entry}{
+  %\begin{adjustwidth}{3em}{0pt}
+}{
+  %\end{adjustwidth}
+  \\[-5pt]
+}
+
 
 %\DeclareStringOption[1pt]{\spx@opt@noteMichaborder}
 %\DeclareStringOption[0.5pt]{noteMichaborder}
@@ -281,6 +336,8 @@
   }%
 }%
 \makeatother
+
+
 
 %%% this needs to be made generalizable
 
