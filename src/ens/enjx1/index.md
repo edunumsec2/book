@@ -79,13 +79,3 @@ Ces ressources, destinées aux enseignant·e·s, visent à fournir à la fois de
 * **Des "fiches complémentaires"**, qui permettent d'enrichir les dossiers thématiques en éclairant une notion, un événement ou une controverse.
 
 Ces deux formats ont été pensés dans l'objectif d'être complémentaires et modulables. Les thématiques ne sont pas cloisonnées et peuvent être aisément combinées, au vu de la proximité de certains enjeux. Par exemple, la question des modèles économiques du numérique amène nécessairement à évoquer la problématique de la surveillance.
-
-
-## Questionnaires et feedbacks
-
-
-Ces contenus étant en cours d'élaboration, nous apprécierions connaître l'avis des enseignant·e·s qui les ont testés.
-
-Si vous souhaitez participer à notre enquête, rendez-vous [ici](https://www.surveymonkey.com/r/s2postensejs).
-
-Nous vous remercions par avance pour votre collaboration.
