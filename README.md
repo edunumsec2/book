@@ -13,5 +13,5 @@ Dans le cadre du [plan d'études romand pour l'enseignement de l'informatique au
 
 Ces ressources sont mises à disposition selon les termes de la <a rel="license" href="https://github.com/edunumsec2/book/blob/d44ad2d4a67c6e5e170b4146fb2914e0eed876fd/LICENCE.md">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 3.0</a>.
 
-### [Installation](doc/installation.md) • [Contribuer](CONTRIBUTING.md)   • [Code de conduite](CODE_OF_CONDUCT.md)  • [Gouvernance](GOUVERNANCE.md)  • [Comité](doc/comite.md)  • [Discord](https://discord.gg/b8qu79t6HQ) 
+### [Installation](doc/installation.md) • [Contribuer](CONTRIBUTING.md)   • [Code de conduite](CODE_OF_CONDUCT.md)  • [Gouvernance](GOUVERNANCE.md)  • [Comité](doc/comite.md)  • [Discord](https://discord.gg/b8qu79t6HQ) • [Plugs-in](TECHNICAL.md) 
 
