@@ -36,14 +36,24 @@ align : left
 ```
 
 
+`````{htmlonly}
 ````{exercise} Problème du tri
 
-Trier les rectangles de la ligne du haut de la <a href="#fig&#8209;trier">Figure ci&#8209;dessus</a> en fonction de leur taille, pour arriver à la disposition de la ligne du bas. Noter toutes les étapes intermédiaires de vos actions et la disposition des rectangles avant d’arriver à la solution finale. Conseil : remplacer les rectangles par un nombre qui représente leur taille.
+Trier les rectangles de la ligne du haut de la <a href="#fig&#8209;trier">figure ci&#8209;dessus</a> en fonction de leur taille, pour arriver à la disposition de la ligne du bas. Noter toutes les étapes intermédiaires de vos actions et la disposition des rectangles avant d’arriver à la solution finale. Conseil : remplacer les rectangles par un nombre qui représente leur taille.
 
 En lien avec les ingrédients d’un algorithme, déterminer les données en entrée et le résultat en sortie de l’algorithme.
 
 Quels types d'opérations avez&#8209;vous effectuées ? 
+````
+`````
+`````{latexonly}
+````{exercise} Problème du tri
 
+Trier les rectangles de la ligne du haut de la figure précédente en fonction de leur taille, pour arriver à la disposition de la ligne du bas. Noter toutes les étapes intermédiaires de vos actions et la disposition des rectangles avant d’arriver à la solution finale. Conseil : remplacer les rectangles par un nombre qui représente leur taille.
+
+En lien avec les ingrédients d’un algorithme, déterminer les données en entrée et le résultat en sortie de l’algorithme.
+
+Quels types d'opérations avez&#8209;vous effectuées ? 
 ````
 
 `````{htmlonly} 
@@ -98,7 +108,7 @@ L’{glo}`algo|algorithme` du **<span style="color:rgb(89, 51, 209)">tri&nbsp;à
 
 Il est fortement recommandé de résoudre cet exercice avant d’avancer dans le chapitre. 
 
-Appliquer au&nbsp;moins&nbsp;un des trois algorithmes ci-dessus (tri&nbsp;par&nbsp;insertion, tri&nbsp;par&nbsp;sélection et tri&nbsp;à&nbsp;bulles) pour trier les rectangles de la ligne du haut de la <a href="#fig-trier">Figure **Problème du tri**</a> en fonction de leur taille (le résultat est illustré dans la ligne du bas). 
+Appliquer au&nbsp;moins&nbsp;un des trois algorithmes ci-dessus (tri&nbsp;par&nbsp;insertion, tri&nbsp;par&nbsp;sélection et tri&nbsp;à&nbsp;bulles) pour trier les rectangles de la ligne du haut de la <a href="#fig-trier">figure **Problème du tri**</a> en fonction de leur taille (le résultat est illustré dans la ligne du bas). 
 
 Noter l’ordre des éléments à&nbsp;chaque fois qu’il change. Vous aurez besoin d’une grande feuille de papier. Vous pouvez aussi représenter la taille des rectangles par un nombre, cela permet de gagner de la place. Si&nbsp;cela vous aide, vous pouvez découper les rectangles ci-dessous et les manipuler. 
 
@@ -111,7 +121,7 @@ Noter l’ordre des éléments à&nbsp;chaque fois qu’il change. Vous aurez be
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
-La solution est donnée dans la suite du chapitre et est illustrée dans la Figure **Algorithmes&nbsp;de&nbsp;tri** ci&#8209;dessous.
+La solution est donnée dans la suite du chapitre et est illustrée dans la figure **Algorithmes&nbsp;de&nbsp;tri** ci&#8209;dessous.
 
 ```
 ````
@@ -119,7 +129,7 @@ La solution est donnée dans la suite du chapitre et est illustrée dans la Figu
 ````{latexonly} 
 ```{solution} 
 
-La solution est donnée dans la suite du chapitre et est illustrée dans la Figure **Algorithmes&nbsp;de&nbsp;tri**.
+La solution est donnée dans la suite du chapitre et est illustrée dans la figure **Algorithmes&nbsp;de&nbsp;tri**.
 
 ```
 ````
@@ -203,7 +213,7 @@ Imaginons que ce qui prend le plus de temps est un ***déplacement***. Dans ce c
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 
-Le décompte des opérations effectuées, en se référant à la <a href="#fig-algos-tri">Figure **Algorithmes de tri**</a> est comme suit :
+Le décompte des opérations effectuées, en se référant à la <a href="#fig-algos-tri">figure **Algorithmes de tri**</a> est comme suit :
 
 **<span style="color:rgb(89, 51, 209)">Tri&nbsp;par&nbsp;insertion</span>** : 9 comparaisons deux par deux (flèches et points rouges) et 5 déplacements deux par deux (flèches rouges). Notez que pour insérer un élément en première position, il faut tout d'abord l'échanger avec l'élément juste devant, puis avec l'élément avant, et ainsi de suite jusqu'à arriver à la première position.
 
@@ -220,7 +230,7 @@ Ces résultats sont valables pour cette configuration en particulier. Si&nbsp;on
 ````{latexonly} 
 ```{solution} 
 
-Le décompte des opérations effectuées, en se référant à la <a href="#fig-algos-tri">Figure **Algorithmes de tri**</a> est comme suit :
+Le décompte des opérations effectuées, en se référant à la <a href="#fig-algos-tri">figure **Algorithmes de tri**</a> est comme suit :
 
 **<span style="color:rgb(89, 51, 209)">Tri&nbsp;par&nbsp;insertion</span>** : 9 comparaisons deux par deux (flèches et points rouges) et 5 déplacements deux par deux (flèches rouges). Notez que pour insérer un élément en première position, il faut tout d'abord l'échanger avec l'élément juste devant, puis avec l'élément avant, et ainsi de suite jusqu'à arriver à la première position.
 
@@ -244,7 +254,7 @@ Toutes les recettes de cuisine ne se valent pas, de la même manière, un {glo}`
 
 La qualité d’un {glo}`algo|algorithme` dépend de la propriété que l’on souhaite optimiser (maximiser ou minimiser). Cela pourrait être de maximiser la **<span style="color:rgb(89, 51, 209)">vitesse&nbsp;d’exécution</span>** (mesurée par le nombre d’{glo}`instruction|instructions` élémentaires exécutées), de minimiser la place occupée en **<span style="color:rgb(89, 51, 209)">mémoire</span>**, de minimiser la **<span style="color:rgb(89, 51, 209)">consommation&nbsp;d'énergie</span>** ou de maximiser la **<span style="color:rgb(89, 51, 209)">précision&nbsp;de la&nbsp;solution</span>**. L'{glo}`algo|algorithme` utilisé devrait être choisi en fonction de ce qui est important.
 
-***<span style="color:rgb(13, 204, 166)">La&nbsp;vitesse&nbsp;d’un {glo}`algo|algorithme` dépend&nbsp;également des&nbsp;{glo}`data|données` en {glo}`input|entrée`</span>***. Selon la configuration initiale des {glo}`data|données` en {glo}`input|entrée` (correspond à la ligne du haut de la <a href="#fig-algos-tri">Figure **Algorithmes de tri**</a>), un {glo}`algo|algorithme` « rapide » peut devenir « lent » et *vice versa*. Il faut savoir que les {glo}`algo|algorithmes` vus jusqu’ici sont tous des {glo}`algo|algorithmes` lents (nous verrons un {glo}`algo|algorithme` de tri&nbsp;rapide ultérieurement).
+***<span style="color:rgb(13, 204, 166)">La&nbsp;vitesse&nbsp;d’un {glo}`algo|algorithme` dépend&nbsp;également des&nbsp;{glo}`data|données` en {glo}`input|entrée`</span>***. Selon la configuration initiale des {glo}`data|données` en {glo}`input|entrée` (correspond à la ligne du haut de la <a href="#fig-algos-tri">figure **Algorithmes de tri**</a>), un {glo}`algo|algorithme` « rapide » peut devenir « lent » et *vice versa*. Il faut savoir que les {glo}`algo|algorithmes` vus jusqu’ici sont tous des {glo}`algo|algorithmes` lents (nous verrons un {glo}`algo|algorithme` de tri&nbsp;rapide ultérieurement).
 
 
 ````{didyouknow} Tri trop lent

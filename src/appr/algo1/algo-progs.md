@@ -18,7 +18,7 @@ Une fois que l’on a déterminé le meilleur {glo}`algo|algorithme` à utiliser
 
 Cet algorithme consiste à parcourir la liste à trier plusieurs fois. A&nbsp;chaque {glo}`iteration|itération`, on sélectionne le plus petit élément et on l’échange avec le premier élément de la liste non triée. Comment pourrait&#8209;on traduire ceci en Python ? Comment représenter les rectangles dans un langage de programmation ? 
 
-Tout d’abord, il faut représenter la taille des rectangles par des nombres. On peut par exemple représenter l’ordre des rectangles de la première ligne de la <a href="../algorithmes-classiques/eleve.html#fig-trier">Figure **Trier**</a> en fonction de leur taille, dans une liste nommée `rect` :
+Tout d’abord, il faut représenter la taille des rectangles par des nombres. On peut par exemple représenter l’ordre des rectangles de la première ligne de la <a href="../algorithmes-classiques/eleve.html#fig-trier">figure **Trier**</a> en fonction de leur taille, dans une liste nommée `rect` :
 
 ```
 rect = [3, 4, 1, 2, 6, 5]
@@ -102,7 +102,7 @@ for j in range(0,len(rect)-1):
 
 Le principal avantage de cette **<span style="color:rgb(89, 51, 209)">factorisation</span>** (réécriture) est que maintenant notre code fonctionne pour toutes les longueurs de listes. Nous n’avons plus besoin de savoir à l’avance combien d’éléments sont contenus dans la liste (combien de fois répéter les opérations). Au lieu de répéter le code un nombre prédéterminé de fois, le code s’exécute autant de fois qu’il y a d’éléments dans la liste (moins&nbsp;`1`, car on compare toujours 2&nbsp;éléments).
 
-L’étape suivante consiste à encapsuler tout le code dans une **<span style="color:rgb(89, 51, 209)">fonction</span>** qui reçoit la liste comme **<span style="color:rgb(89, 51, 209)">{glo}`parametre|paramètre`</span>**, afin de le rendre utilisable par d'autres programmes sans avoir à copier&#8209;coller le code. Cela permet aussi en cas d’erreur de facilement corriger la fonction, plutôt que de corriger le code partout il a été copié&#8209;collé.
+L’étape suivante consiste à encapsuler tout le code dans une **<span style="color:rgb(89, 51, 209)">fonction</span>** qui reçoit la liste comme **<span style="color:rgb(89, 51, 209)">{glo}`parametre|paramètre`</span>**, afin de le rendre utilisable par d'autres programmes sans avoir à copier&#8209;coller le code. Cela permet aussi en cas d’erreur de facilement corriger la fonction, plutôt que de corriger le code partout il a été copié&#8209;collé. Pour que la fonction soit utilisable, il ne faut pas oublier de rajouter le `return` qui retourne le résultat.
 
 ```
 # Tri par sélection
@@ -116,6 +116,8 @@ def tri_selection(rect) :
  
         # échange le plus petit élément et le j-ième élément
         rect[j], rect[indice_min] = rect[indice_min], rect[j]
+
+    return(rect)
 ```
 
 Finalement le terme `rect` n’est pas assez général, car le tri&nbsp;par&nbsp;sélection peut être utilisé pour trier toutes sortes d’éléments et pas seulement des rectangles. Ainsi on peut renommer la {glo}`variable|variable` `rect` par le terme plus général `liste`, partout où `rect` apparait dans le code ci&#8209;dessus :
@@ -133,6 +135,8 @@ def tri_selection(liste) :
  
         # échange le plus petit élément et le j-ième élément
         liste[j], liste[indice_min] = liste[indice_min], liste[j]
+
+    return(liste)
 ```
 
 Pour trier la liste `rect` définie au tout début, il suffit d’appeler la fonction `tri_selection` avec la liste `rect` en {glo}`argument|argument`. La fonction **<span style="color:rgb(89, 51, 209)">print()</span>** permet d'afficher la liste triée :

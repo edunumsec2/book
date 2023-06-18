@@ -83,8 +83,7 @@ Citer des risques que comportent ces biais et identifier le type du biais. On pe
 
 **Peut-on faire confiance à l’intelligence artificielle ?** [discussion de groupe]
 
-En règle générale oui, mais les algorithmes d’intelligence artificielle peuvent se tromper. Il ne faut pas hésiter à remettre en question
-les solutions que les algorithmes d’intelligence artificielle nous proposent.
+Même si les algorithmes d’intelligence artificielle sont performants, ils peuvent se tromper. Il ne faut pas hésiter à remettre en question les solutions que les algorithmes d’intelligence artificielle nous proposent.
 
 ## Ressources complémentaires
 
