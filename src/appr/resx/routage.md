@@ -49,17 +49,32 @@ autre routeur soit au destinataire).
 
 | Destinataire | Interface |
 |--------------|-----------|
-| 127.1.1.1    | 0         |
-| 34.234.15.x  | 1         |
-| 87.45.x.x    | 2         |
-| 87.33.x.x    | 2         |
-| ...          | ...       |
+| 127.1.1.1    | A         |
+| 34.234.15.x  | B         |
+| 87.45.x.x    | C         |
+| 87.33.x.x    | C         |
+| x.x.x.x      | D         |
+
+La dernière ligne représente la *passerelle par défaut* qui indique où envoyer les messages dont l'adresse
+ne correspond à aucune autre ligne de la table. 
 
 ```{Exercise}
 Remplir les tables de routage simplifiées des routeurs du réseau suivant:
 
 {itodo}`à compléter`
 ```
+
+Les tables de routage contiennent souvent des informations, c'est-à-dire des colonnes, supplémentaires. Elle peuvent
+par exemple contenir une colonne "Distance" qui indique le nombre de d'étapes avant d'arriver à destination. Les voisins
+directs sont ainsi une distance de 1, alors que les voisins des voisins ont une distance de 2, etc. D'autres informations
+peuvent figurer comme le coût de transmission d'un paquet, ou le traffic maximal que cette route peut supporter.
+
+```{Exercise}
+Ajouter une colonne "Distance" à la table de routage de l'exercice précédent.
+
+{itodo}`à compléter`
+```
+
 
 ```{togofurther} Masques de réseau
 Si chaque destinataire possible devait figurer dans une ligne de la table de routage, cela ferait d’immenses tables de routage
@@ -78,7 +93,7 @@ Ainsi toutes les adresses IP qui n'a pas les mêmes $n$ premiers bits, fait part
 des paquets, il faudra passer par la *passerelle par défaut* (*default gateway* en anglais) qui est le routeur qui s'occupe de
 communiquer avec l'extérieur du sous-réseau.
 
-````
+```
 
 Dans des petits réseaux locaux, cette table de routage peut être construite
 manuellement, mais généralement c'est le routeur qui construit sa
@@ -112,14 +127,38 @@ Le routeur modifie sa table de routage pour faire passer par ce voisin les messa
 {itodo}` [ajouter deux exemples] `
 
 ```{Exercise}
-La table de routage d'un routeur contient les lignes suivantes:
+La table de routage d'un routeur 1 contient les lignes suivantes:
+| Destinataire | Interface | Distance |
+|--------------|-----------|----------|
+| 127.1.1.1    | A         | 1        |
+| 12.251.x.x   | B         | 2        |
+| 12.25.x.x    | C         | 1        |
+| 87.33.x.x    | C         | 3        |
+| ...          | ...       | ...      |
 
+Ce routeur reçoit de son voisin sur l'interface B une table contenant les lignes suivantes (les interfaces
+ne sont pas indiquées):
 
-Ce routeur reçoit de son voisin sur l'interface 2 la table suivante.
+| Destinataire | Interface | Distance |
+|--------------|-----------|----------|
+| 12.251.x.x   | -         | 1        |
+| 12.252.x.x   | -         | 1        |
+| 87.33.x.x    | -         | 3        |
+| ...          | ...       | ...      |
 
-
-Mettre à jour la table de routage du routeur. 
-{itodo}`à compléter`
-
+Comment le routeur 1 peut-il compléter sa table de routage avec les informations reçue par son voisin? 
 
 ```
+
+Si l'on applique cette méthode telle quelle, cela peut créer des situations ou des erreurs dans les tables de
+routage se propagent à travers le réseau. {itodo}` [ajouter deux exemples] `
+
+C'est pour éviter ces problèmes que la protocole RIP applique un certains nombre de principes, appliqués
+également par d'autres protocoles de routage. 
+
+1. Ne pas transmettre à une interface une information déjà reçue par cette interface. Par exemple si
+
+2. Si une route est bouchée, transmettre  cette information aux voisins. Dans le protocole RIP on indique
+ceci par une distance égale à 16. Toute destination à distance supérieure à 15 est considérée comme inaccessible. 
+
+{itodo}` [ajouter deux exemples] `
