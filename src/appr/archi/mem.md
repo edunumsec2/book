@@ -1,4 +1,4 @@
-# * Mémoire
+# Mémoire
 
 Les {glo}`transistor|transistors`, les {glo}`portelogique|portes logiques` et leur représentation en {glo}`tableverite|tables de vérités`, permettent de manipuler des 0 et des 1 au niveau physique.. Tant qu'un courant électrique se déplace dans les {glo}`circuit|circuits`, on est capable de le transformer, de le laisser passer ou de l'arrêter, dans le but d'exprimer des portes « ouvertes » ou des portes « fermées » et donc des nombres binaires. L'ALU, explorée au chapitre précédent, va une étape plus loin et permet de choisir une opération à effectuer en fonction de bits de contrôle supplémentaire, et livre le résultat de l'opération arithmétique ou logique choisie.
 
@@ -217,7 +217,8 @@ Cette bascule va stocker son entrée $D$ et la propager sur sa sortie $Q$ unique
 
 Testez cette bascule. Réglez l'entrée de données $D$ à 1 ou 0 et observez comme la bascule ne réagit pas : sa sortie $Q$ reste telle quelle. Donnez ensuite une impulsion en cliquant sur l'entrée $Horloge$ et voyez comme la valeur de $D$ est maintenant stockée sur la bascule.
 
-````{dropdown} Pour aller plus loin
+````{togofurther} 
+
 Pour aller plus loin, une vidéo de résumé qui parle aussi des bascules et des registres :
 
 ```{youtube} I0-izyq6q5s
@@ -225,7 +226,8 @@ Pour aller plus loin, une vidéo de résumé qui parle aussi des bascules et des
 ````
 
 
-`````{admonition} Exercice 6 : stocker deux bits
+`````{exercise} Stocker deux bits
+
 Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$, et, d'autre part, le **ET** de ces deux mêmes entrées. À l'aide de bascules D, complétez le circuit de manière à ce qu'il stocke ces deux valeurs calculées lors d'un coup d'horloge et les sorte sur les sorties $P$ et $Q$, respectivement. Faites finalement en sorte que le signal $Reset$, si activé, réinitialise les bascules à 0. Vérifiez qu'une fois les valeurs stockées par les bascules, des changements sur les entrées $X$ et $Y$ n'aient pas d'effet direct sur $P$ et $Q$.
 
 ```{logic}
@@ -304,7 +306,8 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 `````
 
 
-`````{admonition} Exercice 7 : signal alternatif
+`````{exercise} Signal alternatif
+
 À l'aide d'une bascule, créez un circuit avec une sortie $Q$ qui s'inverse à chaque coup d'horloge.
 
 ```{logic}
@@ -351,7 +354,8 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 `````
 
 
-`````{admonition} Exercice 8 : jeu de fréquences
+`````{exercise} Jeu de fréquences
+
 Observez le circuit ci-dessous. L'horloge principale $A$ fonctionne ici toute seule et produit un coup d'horloge par seconde (elle a donc une fréquence d'un hertz — 1 Hz). Que pouvez-vous dire des signaux $B$ et $C$ par rapport au signal $A$ ? Comment expliquer cela avec ce que vous savez des bascules ? (Pour simplifier, le délai de propagation est ici presque nul.)
 
 Vous pouvez mettre l'animation en pause et exécuter chaque transition pas à pas pour mieux comprendre ce qui se passe.
@@ -518,102 +522,25 @@ L'entrée $B$ de l'ALU est le nouveau nombre à additionner. Pour cela, nous ajo
 :mode: tryout
 
 {
-  "v": 3,
+  "v": 5,
   "opts": {"showDisconnectedPins": true},
   "in": [
-    {
-      "pos": [340, 490],
-      "orient": "n",
-      "id": 40,
-      "name": "Reset",
-      "val": 0,
-      "isPushButton": true
-    },
-    {"pos": [40, 220], "id": 41, "val": 0},
-    {"pos": [40, 250], "id": 42, "val": 0},
-    {"pos": [40, 280], "id": 43, "val": 0},
-    {"pos": [40, 310], "id": 44, "val": 0},
-    {
-      "pos": [280, 490],
-      "orient": "n",
-      "id": 45,
-      "name": "Horloge",
-      "val": 0,
-      "isPushButton": true
-    }
+    {"pos": [340, 490], "orient": "n", "id": 40, "name": "Reset", "isPushButton": true},
+    {"pos": [280, 490], "orient": "n", "id": 45, "name": "Horloge", "isPushButton": true},
+    {"bits": 4, "pos": [35, 260], "id": [54, "57-59"]}
   ],
   "out": [
-    {
-      "type": "nibble",
-      "pos": [100, 390],
-      "orient": "s",
-      "id": [50, 51, 52, 53],
-      "name": "B"
-    },
-    {"type": "nibble", "pos": [550, 230], "id": [46, 47, 48, 49], "name": "Acc."}
+    {"type": "display", "pos": [100, 390], "orient": "s", "id": "50-53", "name": "B"},
+    {"type": "display", "pos": [550, 230], "id": "46-49", "name": "Acc."}
   ],
-  "components": [
-    {
-      "type": "alu",
-      "pos": [180, 210],
-      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 55],
-      "out": [10, 11, 12, 13, 14, 15]
-    },
-    {
-      "type": "flipflop-d",
-      "pos": [390, 100],
-      "in": [17, 18, 19, 16],
-      "out": [20, 21],
-      "state": 0
-    },
-    {
-      "type": "flipflop-d",
-      "pos": [390, 200],
-      "in": [23, 24, 25, 22],
-      "out": [26, 27],
-      "state": 0
-    },
-    {
-      "type": "flipflop-d",
-      "pos": [390, 300],
-      "in": [29, 30, 31, 28],
-      "out": [32, 33],
-      "state": 0
-    },
-    {
-      "type": "flipflop-d",
-      "pos": [390, 400],
-      "in": [35, 36, 37, 34],
-      "out": [38, 39],
-      "state": 0
-    }
+  "ic": [
+    {"type": "alu", "pos": [180, 210], "in": ["0-9", 55], "out": ["10-13", 56, 15, 14]},
+    {"type": "flipflop-d", "pos": [390, 100], "in": ["17-19", 16], "out": [20, 21]},
+    {"type": "flipflop-d", "pos": [390, 200], "in": ["23-25", 22], "out": [26, 27]},
+    {"type": "flipflop-d", "pos": [390, 300], "in": ["29-31", 28], "out": [32, 33]},
+    {"type": "flipflop-d", "pos": [390, 400], "in": ["35-37", 34], "out": [38, 39]}
   ],
-  "wires": [
-    [40, 37, {"via": [[340, 440]]}],
-    [40, 31, {"via": [[340, 340, "n"]]}],
-    [40, 25, {"via": [[340, 240, "n"]]}],
-    [40, 19, {"via": [[340, 140, "n"]]}],
-    [20, 0, {"via": [[430, 80], [430, 50], [130, 50], [130, 130]]}],
-    [26, 1, {"via": [[440, 180], [440, 40], [120, 40], [120, 150]]}],
-    [32, 2, {"via": [[450, 280], [450, 30], [110, 30], [110, 170]]}],
-    [38, 3, {"via": [[460, 380, "n"], [460, 20], [100, 20], [100, 190]]}],
-    [41, 4],
-    [42, 5],
-    [43, 6],
-    [44, 7],
-    [45, 35, {"via": [[280, 420]]}],
-    [45, 29, {"via": [[280, 320, "n"]]}],
-    [45, 23, {"via": [[280, 220, "n"]]}],
-    [45, 17, {"via": [[280, 120, "n"]]}],
-    [41, 50],
-    [42, 51],
-    [43, 52],
-    [44, 53],
-    [20, 46, {"via": [[480, 80]]}],
-    [26, 47, {"via": [[480, 180]]}],
-    [32, 48, {"via": [[480, 280]]}],
-    [38, 49, {"via": [[480, 380]]}]
-  ]
+  "wires": [[40, 37, {"via": [[340, 440]]}], [40, 31, {"via": [[340, 340, "n"]]}], [40, 25, {"via": [[340, 240, "n"]]}], [40, 19, {"via": [[340, 140, "n"]]}], [20, 0, {"via": [[430, 80], [430, 50], [130, 50], [130, 130]]}], [26, 1, {"via": [[440, 180], [440, 40], [120, 40], [120, 150]]}], [32, 2, {"via": [[450, 280], [450, 30], [110, 30], [110, 170]]}], [38, 3, {"via": [[460, 380, "n"], [460, 20], [100, 20], [100, 190]]}], [45, 35, {"via": [[280, 420]]}], [45, 29, {"via": [[280, 320, "n"]]}], [45, 23, {"via": [[280, 220, "n"]]}], [45, 17, {"via": [[280, 120, "n"]]}], [20, 46, {"via": [[480, 80]]}], [26, 47, {"via": [[480, 180]]}], [32, 48, {"via": [[480, 280]]}], [38, 49, {"via": [[480, 380]]}], [54, 4], [57, 5], [58, 6], [59, 7], [54, 50], [57, 51], [58, 52], [59, 53]]
 }
 ```
 
@@ -626,105 +553,25 @@ Voici le circuit final :
 :mode: tryout
 
 {
-  "v": 3,
+  "v": 5,
+  "opts": {"showDisconnectedPins": true},
   "in": [
-    {
-      "pos": [340, 490],
-      "orient": "n",
-      "id": 40,
-      "name": "Reset",
-      "val": 0,
-      "isPushButton": true
-    },
-    {"pos": [40, 220], "id": 41, "val": 0},
-    {"pos": [40, 250], "id": 42, "val": 0},
-    {"pos": [40, 280], "id": 43, "val": 0},
-    {"pos": [40, 310], "id": 44, "val": 0},
-    {
-      "pos": [280, 490],
-      "orient": "n",
-      "id": 45,
-      "name": "Horloge",
-      "val": 0,
-      "isPushButton": true
-    }
+    {"pos": [340, 490], "orient": "n", "id": 40, "name": "Reset", "isPushButton": true},
+    {"pos": [280, 490], "orient": "n", "id": 45, "name": "Horloge", "isPushButton": true},
+    {"bits": 4, "pos": [35, 260], "id": [54, "57-59"]}
   ],
   "out": [
-    {
-      "type": "nibble",
-      "pos": [100, 390],
-      "orient": "s",
-      "id": [50, 51, 52, 53],
-      "name": "B"
-    },
-    {"type": "nibble", "pos": [550, 230], "id": [46, 47, 48, 49], "name": "Acc."}
+    {"type": "display", "pos": [100, 390], "orient": "s", "id": "50-53", "name": "B"},
+    {"type": "display", "pos": [550, 230], "id": "46-49", "name": "Acc."}
   ],
-  "components": [
-    {
-      "type": "alu",
-      "pos": [180, 210],
-      "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 55],
-      "out": [10, 11, 12, 13, 14, 15]
-    },
-    {
-      "type": "flipflop-d",
-      "pos": [390, 100],
-      "in": [17, 18, 19, 16],
-      "out": [20, 21],
-      "state": 0
-    },
-    {
-      "type": "flipflop-d",
-      "pos": [390, 200],
-      "in": [23, 24, 25, 22],
-      "out": [26, 27],
-      "state": 0
-    },
-    {
-      "type": "flipflop-d",
-      "pos": [390, 300],
-      "in": [29, 30, 31, 28],
-      "out": [32, 33],
-      "state": 0
-    },
-    {
-      "type": "flipflop-d",
-      "pos": [390, 400],
-      "in": [35, 36, 37, 34],
-      "out": [38, 39],
-      "state": 0
-    }
+  "ic": [
+    {"type": "alu", "pos": [180, 210], "in": ["0-9", 55], "out": ["10-13", 56, 15, 14]},
+    {"type": "flipflop-d", "pos": [390, 100], "in": ["17-19", 16], "out": [20, 21]},
+    {"type": "flipflop-d", "pos": [390, 200], "in": ["23-25", 22], "out": [26, 27]},
+    {"type": "flipflop-d", "pos": [390, 300], "in": ["29-31", 28], "out": [32, 33]},
+    {"type": "flipflop-d", "pos": [390, 400], "in": ["35-37", 34], "out": [38, 39]}
   ],
-  "wires": [
-    [10, 16, {"via": [[260, 80]]}],
-    [11, 22, {"via": [[260, 180]]}],
-    [12, 28, {"via": [[260, 280]]}],
-    [13, 34, {"via": [[260, 380]]}],
-    [40, 37, {"via": [[340, 440]]}],
-    [40, 31, {"via": [[340, 340, "n"]]}],
-    [40, 25, {"via": [[340, 240, "n"]]}],
-    [40, 19, {"via": [[340, 140, "n"]]}],
-    [20, 0, {"via": [[430, 80], [430, 50], [130, 50], [130, 130]]}],
-    [26, 1, {"via": [[440, 180], [440, 40], [120, 40], [120, 150]]}],
-    [32, 2, {"via": [[450, 280], [450, 30], [110, 30], [110, 170]]}],
-    [38, 3, {"via": [[460, 380, "n"], [460, 20], [100, 20], [100, 190]]}],
-    [41, 4],
-    [42, 5],
-    [43, 6],
-    [44, 7],
-    [45, 35, {"via": [[280, 420]]}],
-    [45, 29, {"via": [[280, 320, "n"]]}],
-    [45, 23, {"via": [[280, 220, "n"]]}],
-    [45, 17, {"via": [[280, 120, "n"]]}],
-    [41, 50],
-    [42, 51],
-    [43, 52],
-    [44, 53],
-    [20, 46, {"via": [[480, 80]]}],
-    [26, 47, {"via": [[480, 180]]}],
-    [32, 48, {"via": [[480, 280]]}],
-    [38, 49, {"via": [[480, 380]]}]
-  ]
+  "wires": [[40, 37, {"via": [[340, 440]]}], [40, 31, {"via": [[340, 340, "n"]]}], [40, 25, {"via": [[340, 240, "n"]]}], [40, 19, {"via": [[340, 140, "n"]]}], [20, 0, {"via": [[430, 80], [430, 50], [130, 50], [130, 130]]}], [26, 1, {"via": [[440, 180], [440, 40], [120, 40], [120, 150]]}], [32, 2, {"via": [[450, 280], [450, 30], [110, 30], [110, 170]]}], [38, 3, {"via": [[460, 380, "n"], [460, 20], [100, 20], [100, 190]]}], [45, 35, {"via": [[280, 420]]}], [45, 29, {"via": [[280, 320, "n"]]}], [45, 23, {"via": [[280, 220, "n"]]}], [45, 17, {"via": [[280, 120, "n"]]}], [20, 46, {"via": [[480, 80]]}], [26, 47, {"via": [[480, 180]]}], [32, 48, {"via": [[480, 280]]}], [38, 49, {"via": [[480, 380]]}], [54, 4], [57, 5], [58, 6], [59, 7], [54, 50], [57, 51], [58, 52], [59, 53], [10, 16, {"via": [[275, 80]]}], [11, 22, {"via": [[260, 180]]}], [12, 28, {"via": [[260, 280]]}], [13, 34, {"via": [[260, 380]]}]]
 }
 ```
 
@@ -732,26 +579,10 @@ Ce circuit fonctionne ainsi : au début du calcul, on réinitialise les bascul
 
 On réalise ici l'importance du coup d'horloge : si les bascules stockaient immédiatement la valeur livrée par l'ALU sans attendre le coup d'horloge, on retrouverait presque sans délai cette valeur sur la sortie des bascules et donc… à l'entrée $A$ de l'ALU, qui recalculerait immédiatement la somme de cette valeur et de l'entrée $B$, livrerait le résultat sur la sortie vers les bascules, qui feraient à nouveau la propagation immédiate de ceci sur leurs sorties et sur l'entrée $A$ de l'ALU, etc. — le système s'emballerait. Le signal d'horloge veille à ce que l'opération de stockage et de propagation soit coordonnée et se passe au bon moment.
 
-`````{admonition} Exercice 9 : additions avec bascules
+`````{exercise} Additions avec bascules
+
 Suivez la procédure décrite ci-dessus pour effectuer l'addition $1 + 4 + 5 + 3 = 13$.
 `````
-
-
-<!-- TODO avons-nous besoin de cet exercice?
-`````{admonition} Exercice 10 : bit de dépassement
-Un problème avec le circuit actuel est qu'en cas de dépassement de capacité, (décrire problème du carry, comment s'en souvenir? circuit à modifier)
-
-ajouter circuit de départ, mêne qu'en haut mais modifiable
-
-````{dropdown} Corrigé
-La solution consiste à stocker aussi le bit de dépassement $V$ au sortir de l'ALU à chaque coup d'horloge. Pour cela, il nous faut ajouter une nouvelle bascule, dont l'entrée récupère la sortie $V$ de l'ALU et dont l'horloge et le _reset_ dont les mêmes signaux que pour les autres bascules.
-
-montrer circuit corrigé
-````
-`````
--->
-
-
 
 ## Récapitulatif
 

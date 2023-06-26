@@ -62,8 +62,8 @@ cette fois, une puissance de 2.
 
 La forme canonique du nombre binaire $1101_{(2)}$ est : $1 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0$
 
-```{admonition} Le saviez-vous ? 
-:class: hint
+```{didyouknow}
+
 Le *bit* vient de la terminologie anglo-saxonne de *binary digit*. Un ensemble
 de 8 bits et appelé un **octet**. Un *kilo-octet* (ko) correspond à
 $10^3$ octets soit $1000$ octets, donc $8000$ bits. Attention à ne pas
@@ -90,15 +90,14 @@ $$
 
 En binaire, on obtient : $0;-;1;-;10;-;11;-;100;-;101;-;110;-;111;-;1000;-;...$
 
-```{admonition} Micro-activité ✏️📒 
-:class: note 
+```{micro}
 Comptez jusqu'à 40 en binaire. Que pouvez vous observer au sujet de la parité des nombres
 binaires ? Pourquoi ?
 ```
 
-#### Conversion du binaire vers le décimal
+#### Conversion du système binaire vers le système décimal
 
-La conversion d'un nombre binaire en nombre décimal se fait aisément
+La conversion d'un nombre binaire en nombre en base 10 se fait aisément
 grâce à la forme canonique.
 
 En effet, il suffit de calculer le résultat de la somme pondérée par les
@@ -154,19 +153,16 @@ octet en nombre décimal.
 L'exemple utilisé ici est l'octet $(00101010_{(2)})$ dont la valeur
 décimale est : $ 00101010\_{(2)} = 0 \cdot 2^7 + 0 \cdot 2^6 + 1 \cdot 2^5 + 0 \cdot 2^4 + 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 0 \cdot 2^0 = 42\_{(10)}$
 
-```{admonition} Important 
-:class: caution 
+```{important}
 L'utilisation d'un tableau de conversion nécessite d'écrire le nombre binaire de droite à gauche car
 le bit de poids faible ($=2^0$) se trouve à droite, de la même façon que
 le chiffre de poids faible (=l'unité) se trouve à droite en
 représentation décimale.
 ```
 
-```{admonition} Micro-activité ✏️📒 
-:class: note
-<!-- <span style="color:green">Niveau débutant</span> -->
+```{micro}
 
-Donnez la conversion décimale des nombres binaires suivants :
+Donnez la conversion en base 10 des nombres binaires suivants :
 
   - 10101101
   - 01110010
@@ -185,9 +181,9 @@ Donnez la conversion décimale des nombres binaires suivants :
 
 ```
 
-#### Conversion du décimal vers le binaire
+#### Conversion du système décimal vers le système binaire
 
-L'opération de conversion du décimal vers le binaire est moins directe.
+L'opération de conversion du système décimal vers le système binaire est moins directe.
 Cependant, à l'aide d'un tableau de conversion et des instructions suivantes, il est possible d'obtenir la représentation binaire de n'importe quel entier positif.
 
 **Tableau de conversion**
@@ -204,7 +200,7 @@ Cependant, à l'aide d'un tableau de conversion et des instructions suivantes, i
 \end{array} 
 ```
 
-**Instructions de conversion d'un entier décimal en binaire**
+**Instructions de conversion d'un entier du système décimal vers le système binaire**
 
 1.  Déterminer le coefficient **maximum** dont la valeur est plus petite
     que l'entier à convertir.
@@ -216,7 +212,7 @@ Cependant, à l'aide d'un tableau de conversion et des instructions suivantes, i
     binaire correspondant est composé de la suite des bits où des 0
     représentent les coefficients non utilisés.
 
-Par exemple, la conversion du nombre décimal 666 en binaire s'obtient
+Par exemple, la conversion du nombre 666 en base 10 vers le binaire s'obtient
 avec les étapes suivantes :
 
 ```{math}
@@ -244,9 +240,7 @@ avec les étapes suivantes :
 
 Résultat : $(666_{(10)} = 1010011010_{(2)})$
 
-```{admonition} Micro-activité ✏️📒 
-:class: note
-<!-- <span style="color:orange">Niveau intermédiaire</span> -->
+```{micro}
 
 Donnez la conversion binaire des nombres décimaux suivants :
 
@@ -259,14 +253,13 @@ Donnez la conversion binaire des nombres décimaux suivants :
 <!-- end list -->
 ```
 
-```{admonition} Aller plus loin
-:class: note
+```{togofurther}
 
-Pouvez-vous penser à une autre façon de convertir un entier décimal en binaire ?
+Pouvez-vous penser à une autre façon de convertir un entier du système décimal en binaire ?
 ```
 
-```{admonition} Anecdote 
-:class: hint
+```{didyouknow}
+
 
 Le 4 juin 1996, le premier vol de la fusée Ariane 5 a explosé 40
 secondes après l'allumage. La fusée et son chargement avaient coûté 500
@@ -375,18 +368,8 @@ La représentation de -21 en complément à 2 :
 +++
 La représentation de -21 est 11101011, qui additionné à 21, soit 00010101 donne bien zéro : 00000000.
 ```
-<!--
-```{figure} media/4bitsIntegers.jpg 
-alt: Représentation des entiers
-avec 4 bits width: 600px align: left --- Représentation des entiers
-avec 4 bits. </br> Cette figure illustre la différence du domaine
-couvert avec 4 bits pour la représentation des entiers naturels ou des
-entiers relatifs. Ainsi, avec 4 bits le domaine couvert pour les entiers
-naturels est : \[0, 15\], et pour les entiers relatif : \[-8, -7\].
-```
--->
 
-```{figure} media/4bitsIntegers.jpg
+```{figure} media/4bitsIntegers.svg
 :width: 550
 :height: 300
 ```
@@ -395,8 +378,7 @@ La figure ci-dessus illustre la différence du domaine couvert avec 4 bits pour 
 Ainsi, avec 4 bits le domaine couvert pour les entiers naturels est : \[0, 15\], et pour les entiers relatif : \[-8, 7\].  
 
 
-```{admonition} A retenir 
-:class: attention
+```{torecall}
 
 Puisque le nombre d'entiers relatifs représentés est forcément pair et
 que le 0 en fait partie, il y a une asymétrie entre les nombres positifs
@@ -408,9 +390,7 @@ et négatifs représentés. Par exemple, avec 4 bits on peut représenter
 $[-128, 127]$
 ```
 
-```{admonition} Micro-activité ✏️📒
-:class: note
-<!-- <span style="color:green">Niveau débutant</span> -->
+```{micro}
 
 Encodez les entiers relatifs suivants sur un octet :
 
@@ -434,8 +414,7 @@ Source : [xkcd](https://xkcd.com/571/)
 </div>
 
 
-`````{admonition} Activité : pour aller plus loin ... ✏️📒 
-:class: note
+`````{togofurther}
 
 <!-- <span style="color:red">Niveau avancé</span> -->
 

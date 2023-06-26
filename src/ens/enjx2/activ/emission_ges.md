@@ -73,9 +73,9 @@ vérifier l'ordonnancement proposé en faisant les calculs par soi-même. Une ac
 (nomactivite.notions)=
 ### Rappel des notions de bases
 
-L'enseignant-e rappelle des notions bases utiles pour un calcul d'émissions:
+L'enseignant-e rappelle des notions de bases utiles pour un calcul d'émissions:
 1. Dans le cas de la consommation électrique, les notions de puissance (watt), d'énergie (kWh) et de mix électrique (avec un lien vers electriciymap.org)
-1. Dans le cas de la consommation d'hydrcarbure (mazout, essence), la quantité de d'hydrocarbure consommée (en litres) et sa conversion en emission de CO2
+1. Dans le cas de la consommation d'hydrocarbure (mazout, essence), la quantité de d'hydrocarbure consommée (en litres) et sa conversion en émissions de CO2
 1. Un rappel sur l'utilisation d'un tableur avec un exemple de mise en page attendue, notamment l'indication explicite de toutes les valeurs utilisées et
 de leur source
 1. Selon le temps à disposition, il est possible de demander aux élèves d'estimer non pas une valeur mais une fourchette selon les choix effectués.
@@ -113,7 +113,7 @@ Les ressources suivantes peuvent être fournies aux élèves pour guider leurs r
 - Chauffage: [Energie-environnement.ch](https://www.energie-environnement.ch/economiser-le-chauffage/situer-sa-consommation-de-chauffage)
 - Electricité: [electricitymap](https://app.electricitymaps.com/map)
 - Transports: [Agence de la Transition Ecologique (France)](https://agirpourlatransition.ademe.fr/particuliers/bureau/deplacements/calculer-emissions-carbone-trajets)
-- Global: [la base de données des émission de gaz à effet de serre](https://bilans-ges.ademe.fr/docutheque/docs/Base_Carbone_V22.0.zip) de Agence de la Transition Ecologique (France)
+- Global: [la base de données des émissions de gaz à effet de serre](https://bilans-ges.ademe.fr/docutheque/docs/Base_Carbone_V22.0.zip) de Agence de la Transition Ecologique (France)
 
 ### Ordres de grandeur (pour ne pas être trop à côté de la plaque)
 

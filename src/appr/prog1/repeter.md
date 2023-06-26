@@ -1,10 +1,11 @@
 (prog1.repeter)=
+
 # Répéter - `for`
 
 Dans ce chapitre, nous découvrons comment utiliser une boucle `for` pour répéter un bloc d'instructions un certain nombre de fois. Nous allons voir que :
 
 - la boucle `for` permet de répéter des instructions,
-- la structure `for i in range(x):` permet de répéter un bloc x fois,
+- la structure `for i in range(n):` permet de répéter un bloc un nombre `n` fois,
 - le deux-points `:` est toujours suivi d'un bloc en indentation.
 
 ```{question}
@@ -25,35 +26,50 @@ Si nous regardons le code de près, nous pouvons voir que nous répétons 4 fois
 ```{codeplay}
 :file: for1.py
 from turtle import *
+d = 100
 
-forward(100)
+forward(d)
 left(90)
-forward(100)
+forward(d)
 left(90)
-forward(100)
+forward(d)
 left(90)
-forward(100)
+forward(d)
 left(90)
 ```
 
 Ne serait-ce pas pratique de pouvoir dire à la tortue de répéter ces instructions 4 fois ?
 Ceci est possible avec une boucle `for`. La ligne `for i in range(4):` va répéter `4` fois le bloc en indentation qui suit.
 
-Par rapport à l'exemple précédent, nous avons rajouté un `dot()` à chaque sommet, et nous cachons la tortue à la fin avec la fonction `hideturtle()`.
+```{exercise}
+Transformez le rectangle en triangle.
+```
 
 ```{codeplay}
 :file: for2.py
 from turtle import *
+d = 100
 
 for i in range(4):
-    forward(100)
+    forward(d)
     left(90)
-    dot()
-    
-hideturtle()
 ```
 
-**Exercice** : Transformez le rectangle en triangle.
+## Variable d'itération `i`
+
+Que représente `i` dans l'expression `for i in range(n)` ?  
+C'est ce qu'on appelle une **variable d'itération**. Cette variable commence à 0 et augmente de 1 à chaque répétition jusqu'à $n-1$. Pour visualiser cette valeur nous pouvons l'afficher dans le dessin avec l'instruction `write(i)`.
+
+```{codeplay}
+:file: for2.py
+from turtle import *
+d = 100
+
+for i in range(4):
+    write(i)
+    forward(d)
+    left(90)
+```
 
 ## Polygone régulier
 
@@ -66,13 +82,17 @@ Observez bien la double indentation :
 
 Dans les deux cas un `:` est suivi d'un bloc en indentation. En Python vous pouvez avoir multiples niveaux d'indentation.
 
+```{exercise}
+Définissez la fonction `hexagone()` pour dessiner un hexagone, et appelez cette fonction.
+```
+
 ```{codeplay}
 :file: for3.py
 from turtle import *
 
 def triangle():
-    for i in range(3):
-        forward(100)
+    for i in range(3):      # indentation 1 (bloc pour def)
+        forward(100)        # indentation 2 (bloc pour for)
         left(120)
 
 def carre():
@@ -90,17 +110,16 @@ carre()
 pentagone()
 ```
 
-**Exercice** : Définissez la fonction `hexagone()` pour dessiner un hexagone.
-
 ## Escalier
 
-Pour dessiner un escalier, il faut simplement répéter dans une boucle le dessin pour une seule marche.
+Pour dessiner un escalier, il faut simplement répéter dans une boucle le dessin pour une seule marche. Nous utilisons la variable `i` pour numéroter les marches.
 
 ```{codeplay}
 :file: for4.py
 from turtle import *
 
 for i in range(5):
+    write(i)
     forward(20)
     left(90)
     forward(20)
@@ -109,9 +128,11 @@ for i in range(5):
 forward(100)
 ```
 
-## Dents de scie
-
 Pour dessiner des dents de scie, il faut simplement répéter dans une boucle le dessin pour une seule dent.
+
+```{exercise}
+Dessinez une usine avec un toit en dents de scie.
+```
 
 ```{codeplay}
 :file: for5.py
@@ -120,6 +141,7 @@ from turtle import *
 for i in range(4):
     left(45)
     forward(71)
+    write(i)
     right(135)
     forward(50)
     left(90)
@@ -127,29 +149,33 @@ for i in range(4):
 forward(80)
 ```
 
-**Exercice** : Dessinez une usine avec un toit en dents de scie.
-
 ## Éventail
 
 Que se passe-t-il si nous dessinons une ligne (`forward()`/`backward()`) et tournons chaque fois d'un petit angle ?
-C'est un peu comme un éventail qui s'ouvre.
+C'est un peu comme un éventail qui s'ouvre. Les lignes de l'éventail sont numérotés en utilisant la variable `i`.
+
+```{exercise}
+Doublez l'angle de rotation dans `left()`.
+```
 
 ```{codeplay}
 :file: for6.py
 from turtle import *
+d = 100
 
 for i in range(18):
-    forward(100)
-    backward(100)
+    forward(d)
+    write(i)
+    backward(d)
     left(10)
 ```
 
-**Exercice** : Doublez l'angle de rotation dans `left()`.
-
-## Diaphragme
-
 Que se passe-t-il si nous avançons plus que nous reculons ?
 Une toute petite modification du programme peut faire une chouette différence.
+
+```{exercise}
+Modifiez les valeurs dans `forward()` et `backward()`.
+```
 
 ```{codeplay}
 :file: for7.py
@@ -157,27 +183,29 @@ from turtle import *
 
 for i in range(18):
     forward(100)
+    write(i)
     backward(90)
     left(20)
 ```
-
-**Exercice** : Modifiez les valeurs dans `forward()` et `backward()`.
 
 ## Étoile
 
 Voici une autre façon de toujours avancer, mais en tournant chaque fois d'un angle un peu plus petit que 180°.
 Essayons !
 
+```{exercise}
+Changez le nombre de pics de l'étoile.
+```
+
 ```{codeplay}
 :file: for8.py
 from turtle import *
 
 for i in range(9):
+    write(i)
     forward(200)
     left(160)
 ```
-
-**Exercice** : Changez le nombre de pics de l'étoile.
 
 ## Losange
 
@@ -187,17 +215,18 @@ Quelle forme obtenons-nous en dessinant un carré et deux losanges ?
 ```{codeplay}
 :file: for9.py
 from turtle import *
+d = 100
 
 def carre():
     for i in range(4):
         right(90)
-        forward(100)
+        forward(d)
 
 def losange():
     for i in range(2):
-        forward(100)
+        forward(d)
         left(120)
-        forward(100)
+        forward(d)
         left(60)
         
 carre()
@@ -207,19 +236,22 @@ left(120)
 losange()
 ```
 
-## Fleur
-
 Si nous dessinons un losange 6 fois, nous obtenons une jolie fleur.
+
+```{exercise}
+Tournez un angle plus petit que 60°
+```
 
 ```{codeplay}
 :file: for10.py
 from turtle import *
+d = 100
 
 def losange():
     for i in range(2):
-        forward(100)
+        forward(d)
         left(60)
-        forward(100)
+        forward(d)
         left(120)
 
 for i in range(6):
@@ -227,11 +259,13 @@ for i in range(6):
     left(60)
 ```
 
-**Exercice** : Tournez un angle plus petit que 60°
-
 ## Paquebot
 
-Une boucle `for` est utilisée dans l'exemple suivant pour dessiner les hublots d'un paquebot.
+Une boucle `for` est utilisée dans l'exemple suivant pour dessiner les hublots d'un paquebot. Les hublots sont numérotés en utilisant la variable `i`.
+
+```{exercise}
+Créez une fonction `paquebot()` et dessinez-en un deuxième.
+```
 
 ```{codeplay}
 from turtle import *
@@ -250,11 +284,10 @@ forward(40)
 right(45)
 
 for i in range(6):
-    dot(20)  
+    dot(20, 'lightgray')
+    write(i)  
     forward(30)
 ```
-
-**Exercice** : Créez une fonction `paquebot()` et dessinez-en un deuxième.
 
 ## Cube de Rubik
 
@@ -264,11 +297,12 @@ Pour dessiner la face rouge, nous dessinons d'abord une ligne, en répétant 3 f
 
 ```{codeplay}
 from turtle import *
+d = 50
 
 def carre():
     begin_fill()
     for i in range(4):
-        forward(50)
+        forward(d)
         left(90)
     end_fill()
 
@@ -276,13 +310,13 @@ def ligne():
     fillcolor('red')
     for i in range(3):
         carre()
-        forward(50)
-    backward(150)
+        forward(d)
+    backward(3*d)
 
 for i in range(3):
     ligne()
     left(90)
-    forward(50)
+    forward(d)
     right(90)
 ```
 
@@ -305,11 +339,13 @@ for i in range(6):
     stamp()
 ```
 
-**Exercice** : Modifiez le programme pour estamper seulement un sommet sur deux.
-
 ### Forme
 
 Vous pouvez changer la forme de votre tortue avec la fonction `shape()`.
+
+```{exercise}
+Essayez les formes `'triangle'` et `'arrow'`.
+```
 
 ```{codeplay}
 :file: for12.py
@@ -329,12 +365,14 @@ shape('square')
 forward(100)
 ```
 
-**Exercice** : Essayez les formes `'triangle'` et `'arrow'`.
-
 ### Vitesse
 
 Vous pouvez changer la vitesse de la tortue avec la fonction `speed(s)`.
 Le paramètre vitesse `s` peut varier entre 1 (le plus lent) et 1000 (le plus rapide). Sa vitesse par défaut est de 3. Mettre la vitesse à 0 choisit automatiquement la vitesse maximum.
+
+```{exercise}
+Augmentez graduellement la vitesse de la tortue, en utilisant la variable `i` comme argument de vitesse.
+```
 
 ```{codeplay}
 :file: for13.py
@@ -346,26 +384,6 @@ for i in range(36):
     left(170)
 ```
 
-**Exercice** : Augmentez graduellement la vitesse de la tortue.
-
-## Exporter en PNG/JPG
-
-Pour directement sauvegarder votre dessin en format PNG, ajoutez ces lignes de code à la fin de votre dessin.
-
-``` python
-from tkinter import *
-from PIL import Image
-import io
-
-cn = getscreen().getcanvas()
-ps = cn.postscript(colormode='color')
-file = io.BytesIO(ps.encode('utf-8'))
-img = Image.open(file)
-img.save('file.png')
-```
-
-Pour sauvegarder en format JPG appelez tout simplement votre fichier `'file.jpg'` plutôt que `'file.png'`.
-
 ## Erreurs
 
 Il est important de bien lire et comprendre les messages d'erreur.
@@ -375,6 +393,10 @@ Dans cette section, vous allez découvrir les différentes catégories d'erreur 
 
 Cette erreur survient lorsque vous essayez d'importer un module qui n'existe pas.
 
+```{exercise}
+Corrigez l'erreur d'importation.
+```
+
 ```{codeplay}
 from turtl import *
 
@@ -383,11 +405,13 @@ for i in range(3):
     left(120)
 ```
 
-**Exercice** : Corrigez l'erreur d'importation.
-
 ### SyntaxError
 
 Cette erreur survient lorsque vous écrivez mal un mot-clé, ou si vous oubliez une ponctuation. Dans ce cas, le mot-clé mal écrit n'est pas reconnu et il n'est pas colorié correctement dans votre code.
+
+```{exercise}
+Corrigez les trois erreurs de syntaxe et remarquez les éventuelles différences de stylisation.
+```
 
 ```{codeplay}
 fro turtle import *
@@ -397,11 +421,13 @@ fore i in range(3)
     left(120)
 ```
 
-**Exercice** : Corrigez les trois erreurs de syntaxe et remarquez les éventuelles différences de stylisation.
-
 ### NameError
 
 Cette erreur survient lorsque vous écrivez mal le nom d'une variable ou fonction.
+
+```{exercise}
+Corrigez les trois erreurs de nom.
+```
 
 ```{codeplay}
 from turtle import *
@@ -411,11 +437,13 @@ for i in range(n):
     lefft(120)
 ```
 
-**Exercice** : Corrigez les trois erreurs de nom.
-
 ### TypeError
 
 Cette erreur survient lorsque vous ne mettez pas le nombre d'arguments corrects pour une fonction.
+
+```{exercise}
+Corrigez les trois erreurs de type.
+```
 
 ```{codeplay}
 from turtle import *
@@ -424,8 +452,6 @@ for i in range():
     forward()
     left(100, 120)
 ```
-
-**Exercice** : Corrigez les trois erreurs de type.
 
 ## Exercice
 
@@ -445,7 +471,7 @@ Dessinez une pellicule photographique. Utilisez une boucle `for` pour créer 4 t
 ```{codeplay}
 :file: pellicule.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 forward(200)
 ```
@@ -461,7 +487,7 @@ Utilisez une boucle `for` pour la répétition des traverses.
 ```{codeplay}
 :file: rails.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 def traverse():
     ...
@@ -476,7 +502,7 @@ Dessinez un wagon de métro. Utilisez une boucle `for` pour les fenêtres. Utili
 ```{codeplay}
 :file: metro.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 def wagon():
     ...
@@ -491,7 +517,7 @@ Dessinez un gratte-ciel avec $n \times m$ fenêtres. Pour ceci, utilisez deux bo
 ```{codeplay}
 :file: gratte_ciel.py
 from turtle import *
-# Prénom, nom, classe
+# Prénom Nom, classe
 
 def fenetre():
     ...
@@ -514,7 +540,7 @@ Vous constatez aussi une symétrie par 4. Donc avec un choix intelligent de fonc
 ```{codeplay}
 :file: moulin.py
 from turtle import *
-# Votre prénom, nom, classe
+# Prénom Nom, classe
 width(8)
 up()
 forward(50)
@@ -525,5 +551,55 @@ dot()
 forward(50)
 dot()
 ...
+done()
+```
+
+### TP
+
+Créez une scène de jeu vidéo en utilisant la répétition, des cercles et de la couleur.
+
+```{codeplay}
+:file: tp3.py
+"""
+tp3 - répéter
+
+Nom : 
+Classe :
+Date :
+
+- nommez ce fichier : tp3_classe_prenom (minuscules, sans accents)
+- créez 5+ fonctions qui utilisent la répétion
+- utilisez la variable d (distance) pour vos déplacements
+- composez une scène de jeu vidéo (pacman, tetris, minecraft, etc.
+- utilisez de la couleur
+- déposez sur Moodle :
+    tp3_classe_prenom.py     (code)
+    tp3_classe_prenom.eps    (image vectorielle)
+    tp3_classe_preneom.jpg   (image)
+"""
+from turtle import *
+# from tkinter import *
+
+d = 20
+
+def pacman():
+    down()
+    left(45)
+    forward(d)
+    left(90)
+    circle(d, 270)
+    left(90)
+    forward(d)
+    right(135)   
+    for i in range(5):
+        up()
+        forward(d)
+        dot(d/5)
+
+# ajoutez vos fonctions ici
+
+pacman()
+
+# Screen().getcanvas().postscript(file='tp3.eps')
 done()
 ```

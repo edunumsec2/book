@@ -121,8 +121,8 @@ res = ' '.join(format(ord(i), 'b') for i in texte)
 print("Le texte en binaire est : " + res)
 ```
 
-`````{admonition} Le saviez-vous ? 
-:class: hint
+`````{didyouknow} 
+
 Dès l'introduction de l'encodage ASCII, et jusqu'à aujourd'hui,
 une pratique répandue dans les milieux informatiques
 est d'utiliser les caractères ASCII comme support de créativité artistique. C'est ce qu'on appelle l'ASCII art. 
@@ -244,10 +244,7 @@ Par exemple le caractère « € » (euro) est le 8365e caractère du répertoir
 
 ## Exercices
 
-````{admonition} Exercice 2.4.1. - Utilisation de la table ASCII ✏️📒
-:class: note 
-<!--- <span style="color:orange">Niveau intermédiaire</span> -->
-
+````{exercise} Utilisation de la table ASCII ✏️📒
 
 1 - À l’aide de la table ASCII, codez en binaire la phrase suivante  «L’an qui vient !».
 
@@ -258,9 +255,7 @@ Par exemple le caractère « € » (euro) est le 8365e caractère du répertoir
 ````
 
 
-`````{admonition} Exercice 2.4.2. - Activité codage et internet 🔌
-:class: note
-<!--- <span style="color:green">Niveau débutant</span> -->
+`````{exercise} Activité codage et internet 🔌
 
 Ouvrez un navigateur Internet (Firefox, …). Dans la barre d’outils, on peut voir à «Affichage», «Encodage des caractères» que c’est le format UTF-8 qui est sélectionné par défaut. 
 
@@ -290,9 +285,7 @@ En allant dans «Outils», «Informations sur la page», on voit que cette page 
 
 
 
-````{admonition} Exercice 2.4.3. - Coder en UTF-8 ✏️📒
-:class: note
-<!--- <span style="color:orange">Niveau intermédiaire</span> -->
+````{exercise} Coder en UTF-8
 
 Le symbole Ø correspond à la valeur décimale 8709.
 
@@ -304,9 +297,7 @@ Le symbole Ø correspond à la valeur décimale 8709.
 
 `````
 
-````{admonition} Exercice 2.4.4. - Activité Hexadécimal ✏️📒
-:class: note
-<!--- <span style="color:red">Niveau avancé</span> -->
+````{micro} Hexadécimal
 
 Nous avons vu au cours du chapitre précédent deux systèmes de numération, décimal et binaire. Il existe également un troisième système de numération très utilisé, le système hexadécimal, visible par ailleurs sur les tables. Le système binaire permet d'exprimer n'importe quel nombre en base 2 (soit 0, soit 1), le système décimal en base 10 (de 0 à 9) - c'est notre mode de représentation usuel. Le système hexadécimal permet d'exprimer n'importe quel nombre en base 16 : de 0 à 9... puis les lettres A, B, C, D, E, F.
 

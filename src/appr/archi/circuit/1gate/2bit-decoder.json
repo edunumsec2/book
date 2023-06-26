@@ -1,0 +1,19 @@
+{
+  "v": 4,
+  "in": [
+    {"pos": [70, 60], "id": 0, "name": "b0", "val": 0},
+    {"pos": [70, 110], "id": 1, "name": "b1", "val": 0}
+  ],
+  "out": [
+    {"type": "bar", "pos": [460, 70], "id": 10, "display": "PX", "name": "0"},
+    {"type": "bar", "pos": [460, 270], "id": 11, "display": "PX", "name": "2"},
+    {"type": "bar", "pos": [460, 170], "id": 12, "display": "PX", "name": "1"},
+    {"type": "bar", "pos": [460, 370], "id": 13, "display": "PX", "name": "3"}
+  ],
+  "gates": [
+    {"type": "NOT", "pos": [140, 60], "in": 2, "out": 3},
+    {"type": "NOT", "pos": [140, 110], "in": 4, "out": 5},
+    {"type": "AND", "pos": [350, 70], "in": [6, 7], "out": 8}
+  ],
+  "wires": [[0, 2], [1, 4], [8, 10], [3, 6], [5, 7]]
+}

@@ -42,7 +42,7 @@ Une autre oeuvre photographique, intitulée *NSA taped fiber optic cable* (en fr
 En 2016, il a été écarté du projet Tor, sur fond d'accusations de harcèlement sexuel. Depuis, il vit en Hollande où il prépare une thèse en cyptologie[^2]. 
 
 ![img](media/jacob_appelbaum.jpg)
-*Jacob Appelbaum au Congress on Privacy & Surveillance à l'EPFL; Rama, Wikimedia Commons, Cc-by-sa-2.0-fr, CC BY-SA 2.0 fr*
+*Jacob Appelbaum au Congress on Privacy & Surveillance à l'EPFL; Rama, Wikimedia Commons, CC BY-SA 2.0 fr*
 
 ## Rapports avec la thématique *réseaux*
 

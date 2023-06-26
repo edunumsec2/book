@@ -1,12 +1,14 @@
 _build/
-_docs/
 
 # General
 .DS_Store
 .AppleDouble
 .LSOverride
-.vscode
 .docx
+
+# IDEs
+.vscode
+.idea
 
 # Icon must end with two \r
 Icon
@@ -161,3 +163,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 edunum-sec2/content/theme/representation-information/representation-entiers/eleve.ipynb
+.eps

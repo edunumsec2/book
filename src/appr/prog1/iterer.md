@@ -32,6 +32,10 @@ Comme la variable d'itération est de type entier (`int`) on l'appelle souvent `
 
 Nous reprenons l'exemple précédent du polygone, mais cette fois nous ne dessinons pas les segments, mais seulement les sommets. La valeur de la variable d'itération `i` est affichée à chaque sommet du polygone.
 
+```{exercise}
+Testez avec des nombres différents entre 5 et 13.
+```
+
 ```{codeplay}
 :file: range2.py
 from turtle import *
@@ -46,8 +50,6 @@ for i in range(n):
     write(i)
 ```
 
-**Exercice** : Testez avec des nombres différents entre 5 et 13.
-
 ## Itérer avec `range()`
 
 La fonction `range(start, stop, step)` permet de produire une séquence linéaire d'entiers. Les entiers se trouvent dans l'intervalle semi-fermé `[start, stop[` avec un incrément de `step`.
@@ -59,6 +61,10 @@ Le sens des paramètres :
 - `step` est l'incrément.
 
 La fonction `print()` utilise le paramètre optionnel `end` pour ne pas terminer avec un retour à la ligne, mais par un simple espace.
+
+```{exercise}
+Affichez les entiers entre -50 et 200 avec un incrément de 25.
+```
 
 ```{codeplay}
 :file: range3.py
@@ -74,8 +80,6 @@ for x in range(start, stop, step):
     write(x)
 ```
 
-**Exercice** : Affichez les entiers entre -50 et 200 avec un incrément de 25.
-
 ## Dessiner une spirale
 
 Si nous dessinons un polygone, mais augmentons la longueur de chaque segment successif en utilisant la variable d'itération `i`, nous obtenons une spirale.
@@ -85,6 +89,7 @@ Si nous dessinons un polygone, mais augmentons la longueur de chaque segment suc
 from turtle import *
 
 for i in range(100):
+    write(i)
     forward(i)
     left(30)
 ```
@@ -100,6 +105,10 @@ Nous concaténons les deux éléments lettre et nombre (`x + y`) et nous ajouton
 
 Pour bien montrer l'ordre consécutif, nous importons la fonction `sleep()` du module `time` pour ralentir le parcours de la boucle.
 
+```{exercise}
+Transformez le code pour afficher 20 colonnes de cellules.
+```
+
 ```{codeplay}
 :file: range9.py
 from time import sleep
@@ -110,8 +119,6 @@ for y in '1234567':
         sleep(0.1)
     print()
 ```
-
-**Exercice** : Transformez le code pour afficher 20 colonnes de cellules.
 
 ## Itérer sur x et y
 
@@ -137,60 +144,16 @@ Le programme suivant dessine des points sur une grille régulière avec une dist
 from turtle import *
 up()
 
-x0 = 180
-d = 40
+def grille(p, size, dim):
+    for i in range(dim[0]):         # itérer les lignes i
+        for j in range(dim[1]):     # itérer les colonnes j
+            x = p[0] + j*size[0]    # calculer x
+            y = p[1] + i*size[1]    # calculer y
+            goto(x, y)
+            dot()
 
-for y in range(-x0, x0+1, d):
-    for x in range(-x0, x0+1, d):
-        goto(x, y)
-        dot()
-```
-
-## Position `(x, y)`
-
-Un tuple est la forme idéale pour représenter les deux coordonnées `(x, y)` d'un point. Nous allons dorénavant utiliser la lettre `p` pour point (ou position). Si deux points sont nécessaires, nous les appellerons `p` et `q`.
-
-Pour accéder aux coordonnées `x` et `y` du point `p` nous utilisons un indice (un entier entre crochets) :
-
-- `p[0]` pour la coordonnée x
-- `p[1]` pour la coordonnée y
-
-```{codeplay}
-from turtle import *
-up()
-
-p = (100, -120)
-
-print('p =', p)
-print('x =', p[0])
-print('y =', p[1])
-```
-
-La fonction `goto()` accepte :
-
-- deux coordonnées séparées `goto(x, y)`
-- deux coordonnées dans un tuple `goto(p)`
-
-Nous pouvons définir une fonction `ligne()` qui dessine une ligne entre deux points.
-
-```{codeplay}
-from turtle import *
-up()
-
-def ligne(p, q):
-    goto(p)
-    down()
-    goto(q)
-    up()
-
-p = 100, 50
-
-goto(p)
-dot(20)
-ligne(p, (0, 200))
-ligne(p, (0, -200))
-ligne(p, (300, 0))
-ligne(p, (-300, 0))
+grille((-200, -100), (20, 20), (8, 8))
+grille((100, 0), (10, 10), (5, 7))
 ```
 
 ## Grille de lignes
@@ -390,41 +353,6 @@ for c in blancs:
     write(c, font=(None, d))
     forward(d)
 ```
-
-### Musée d'art et d'histoire
-
-Le [Musée d'art et d'histoire de Genève](http://institutions.ville-geneve.ch/fr/mah/) a mandaté le studio de graphisme zurichois [Hubertus Design](https://hubertus-design.ch) pour renouveler son identité visuelle. Ce logo à la ligne graphique dynamique, sobre et contemporaine symbolise dorénavant la marque MAH.
-
-```{codeplay}
-:file: MAH.py
-from turtle import *
-dot(1000, 'yellow')
-
-M = (0, 0), (2, 3), (4, 0), (6, 3), (8, 0), (8, 8), (2, 5), (6, 5), (0, 8), (0, 0)
-A = (0, 0), (6, 3), (2, 3), (8, 0), (4, 8), (0, 0)
-H = (0, 0), (6, 3), (2, 3), (8, 0), (8, 8), (2, 5), (6, 5), (0, 8), (0, 0)
-
-d = 20
-def lettre(L):
-    x0, y0 = pos()
-    for x, y in L:
-        goto(x0 + x * d, y0 + y * d)
-        down()
-    up()
-    
-up()
-goto(-12*d, -4*d)
-for c in (M, A, H):
-    lettre(c)
-    forward(8*d)
-
-goto(-8*d, -10)
-for s in ('MUSÉE', "D'ART", "D'HISTOIRE"):
-    write(s, align='center', font=('Arial', 16))
-    forward(8*d)
-```
-
-Créez 3 autres lettres dans le même style pour un autre musée dans une autre ville. Changez texte et couleur.
 
 ### Logo de l'EPFL
 

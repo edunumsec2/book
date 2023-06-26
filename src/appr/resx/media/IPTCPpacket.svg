@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="119.41441mm"
+   height="8.0986643mm"
+   viewBox="0 0 119.41441 8.0986643"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="IPTCPpacket.svg"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview838"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="4.3299648"
+     inkscape:cx="355.31467"
+     inkscape:cy="26.674582"
+     inkscape:window-width="1920"
+     inkscape:window-height="999"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient150102"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#37c8ab;stop-opacity:1;"
+         offset="0"
+         id="stop150100" />
+    </linearGradient>
+    <rect
+       x="20.870474"
+       y="55.245373"
+       width="128.90588"
+       height="24.553499"
+       id="rect9492" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient150102"
+       id="linearGradient150104"
+       x1="39.674994"
+       y1="17.865228"
+       x2="124.44415"
+       y2="17.865228"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.78266888,0,0,1,21.910986,-13.497286)" />
+  </defs>
+  <rect
+     style="fill:#0000c0;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-opacity:1"
+     id="rect1060"
+     width="34.106346"
+     height="6.4964466"
+     x="1.0214106"
+     y="1.0044447" />
+  <rect
+     style="fill:url(#linearGradient150104);fill-opacity:1;stroke:none;stroke-width:0.853721;stroke-opacity:1"
+     id="rect36566"
+     width="45.302734"
+     height="6.4895101"
+     x="73.629181"
+     y="1.0044447" />
+  <rect
+     style="fill:#00ccff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-dasharray:1, 1;stroke-opacity:1"
+     id="rect156629"
+     width="38.501427"
+     height="6.4964466"
+     x="35.127754"
+     y="1.0044447"
+     ry="0" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Layer 1"
+     style="display:none" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="Layer 2"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:40.278;stroke-width:0.264583"
+       x="19.48934"
+       y="20.463804"
+       id="text24894-6"
+       transform="translate(69.236357,-13.533551)"><tspan
+         x="19.48934"
+         y="20.463804"
+         id="tspan160447">données</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;white-space:pre;inline-size:40.278;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="19.48934"
+       y="20.463804"
+       id="text24894"
+       transform="translate(-2.1063367,-13.600579)"><tspan
+         x="19.48934"
+         y="20.463804"
+         id="tspan160451"><tspan
+           style="font-size:7.05556px;-inkscape-font-specification:'Helvetica Neue, Normal'"
+           id="tspan160449">en-tête IP</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;white-space:pre;inline-size:40.278;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+       x="19.48934"
+       y="20.463804"
+       id="text24894-5"
+       transform="translate(34.875882,-13.618218)"><tspan
+         x="19.48934"
+         y="20.463804"
+         id="tspan160455"><tspan
+           style="font-size:7.05556px;-inkscape-font-specification:'Helvetica Neue, Normal'"
+           id="tspan160453">en-tête TCP</tspan></tspan></text>
+  </g>
+</svg>

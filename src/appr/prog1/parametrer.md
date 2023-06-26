@@ -1,11 +1,12 @@
 (prog1.parametrer)=
-# Paramétrer - `f(x)`
 
-Dans ce chapitre, nous allons voir de plus près le concept de la fonction, concept que nous avons vu dès le deuxième chapitre comme façon de donner un nom à une séquence d'instructions. Ici nous allons voir comment nous pouvons ajouter un ou plusieurs paramètres à une fonction. Nous allons voir que :
+# Paramétrer - `rect(d, e)`
 
-- l'expression `def f(x):` permet de définir une fonction,
-- un paramètre `f(x)` est une variable (`x`) dans la définition de fonction,
-- un argument `f(2)` est une valeur (`2`) dans l'appel de fonction.
+Dans ce chapitre, nous revenons sur le concept de la fonction. Dans le chapitre 2 nous avons vu la fonction comme une façon de donner un nom à une séquence d'instructions. Ici nous allons voir comment nous pouvons ajouter un ou plusieurs paramètres à une fonction. Nous allons voir que :
+
+- l'expression `def rect(d, e):` permet de définir une fonction avec deux paramètres,
+- les paramètres `d, e` sont des variables locales valides uniquement à l'intérieur de la définition de fonction,
+- ces paramètres prennent une valeur au moment de l'appel  de la fonction avec `rect(50, 30)`.
 
 ```{question}
 En Python, `def` est un raccourci pour
@@ -16,382 +17,503 @@ En Python, `def` est un raccourci pour
 {f}`défavorisé`
 ```
 
-## Paramétrer la fonction
+## Paramétrer une fonction
 
-Jusqu'à maintenant, notre carré a toujours eu la même taille.
-Il serait très utile que notre nouvelle commande `carre(longueur)` puisse dessiner des carrés de tailles différentes.
-C'est possible en spécifiant un paramètre pour la fonction.
-Le paramètre de la fonction est une variable locale qui est utilisée dans sa définition.
+Jusqu'à maintenant, notre rectangle était d'une taille fixe. La fonction `rectangle()` du chapitre 2 dessine toujours un rectangle de 160 x 100 pixels. Il faudrait faire une nouvelle fonction `rectangle2()` si on voulait dessiner une taille différente.
 
-Lors de l'appel de la fonction, nous donnons une valeur à la fonction.
-Cette valeur placée entre parenthèses s'appelle l'**argument** de la fonction.
-Ici, la fonction `carre()` est appelée successivement avec les valeurs 50, 100 et 150.
+Il serait très utile de disposer d'une fonction de la forme `rectangle(d, e)` qui puisse dessiner des rectangles de largeur et hauteur variable.
+C'est possible en spécifiant des **paramètres** pour la fonction.
+Un paramètre de fonction est une variable locale qui peut être utilisée dans sa définition.
+
+Lors de l'appel de la fonction, nous donnons des valeurs à la fonction.
+Ces valeurs sont les **arguments** de la fonction.
+
+```{exercise}
+Aujoutez un deuxième rectangle avec d'autres dimensions.
+```
 
 ```{codeplay}
-:file: def1.py
 from turtle import *
 
-def carre(longueur):
-    for i in range(4):
-        forward(longueur)
+def rectangle(d, e):    # paramètres (d, e)
+    for i in range(2):
+        forward(d/2)
+        write(d)
+        forward(d/2)
+        left(90)
+
+        forward(e/2)
+        write(e)
+        forward(e/2)
         left(90)
         
-carre(50)
-carre(100)
-carre(150)
+rectangle(160, 100)      # largeur=160, hauteur=100 
 ```
 
-Une fonction peut être appelée avec une valeur numérique directe telle que `carre(50)`, mais aussi avec une valeur numérique donnée par une variable telle que `carre(x)`, obtenu par une variable d'itération sur une plage numérique donnée avec `range(start, stop, step)`.
+La fonction `losange(a, angle)` a comme paramètre la longueur et le premier angle. Le deuxième angle du losange est calculé.
 
 ```{codeplay}
-:file: def2.py
 from turtle import *
 
-def carre(a):
-    for i in range(4):
-        forward(a)
-        left(90)
+def losange(d, a):      # paramètres (d=distance, a=angle)
+    for i in range(2):
+        forward(d)
+        left(a)
+        write(a)
+        
+        forward(d)
+        left(180-a)
+        write(180-a)
 
-for x in range(30, 180, 30):
-    carre(x)
+losange(100, 60)            # distance=100, angle=60
+losange(140, 100)           # distance=140, angle=100
 ```
 
-Au lieu d'imbriquer les carrés, nous pouvons aussi les dessiner les uns après les autres.
-Le terme technique est de les **juxtaposer**.
+La fonction `polygone(d, n)` a comme paramètre la distance du côté et le nombre de sommets.
 
 ```{codeplay}
-:file: def3.py
 from turtle import *
 
-def carre(a):
-    down()
-    for i in range(4):
-        forward(a)
-        left(90)
-    up()
+def polygone(d, n):     # paramètres (d, n)
+    for i in range(n):
+        forward(d)
+        left(360/n)
+        write(360/n)
 
-up()
-backward(250)
-for x in range(30, 180, 30):
-    carre(x)
-    forward(x)
+polygone(100, 3)    # triangle
+polygone(100, 4)    # carré    
+polygone(100, 5)    # pentagon
 ```
-
-**Exercice** : Écartez les carrés de 20 pixels.
 
 ## Dessiner une maison
 
 Nous revenons à notre fonction pour dessiner une maison.
 
+```{exercise}
+Ajoutez une maison de taille 100.
+```
+
 ```{codeplay}
-:file: def4.py
 from turtle import *
 
-def maison():
-    forward (70)
-    for a in (90, 45, 90, 45):
-        left(a)
-        forward(50)
+def maison(d):
+    dot()
+    forward (1.41*d)  # sol
+    left(90)
+    forward(d)  # mur droit
+    left(45)
+    forward(d)  # toit droit
+    left(90)
+    forward(d)  # toit gauche
+    left(45)
+    forward(d)  # mur gauche
     left(90)
 
 backward(200)        
-maison()
+maison(50)      # maison de taille 50
 forward(100)
-maison()
+maison(70)      # maison de taille 70
 ```
 
-## Position de la maison
+## Positionner la maison
 
-Maintenant nous modifions la fonction pour inclure la position de la maison comme paramètre.
+La fonction `goto(x, y)` place la tortue à la position `(x, y)`. Cette fonction  permet de positionner notre maison à un endroit précis.
+Pour désigner cette position, nous utilisons la variable `p` (point, position) qui consiste d'un tuple `(x, y)` de coordonnées.
 
-```{codeplay}
-:file: def5.py
-from turtle import *
-getscreen().bgcolor('lightgreen')
-up()
+La fonction `write(p)` écrit la position `p` sur le canevas, à la position actuelle de la tortue. Pour marquer ce point de positionnement, nous ajoutons un point (dot) comme marqueur.
 
-def maison(p):
-    goto(p)
-    down()
-    forward (70)
-    for a in (90, 45, 90, 45):
-        left(a)
-        forward(50)
-    left(90)
-    up()
-
-maison((0, -80))
-maison((-200, 20))
-maison((120, 40))
+```{exercise}
+Aujoutez deux autres maisons de taille différente.
 ```
 
-## Taille de la maison
-
-Maintenant nous modifions la fonction pour inclure non seulement la position, mais aussi la taille de la maison comme paramètres.
-
 ```{codeplay}
-:file: def6.py
 from turtle import *
-getscreen().bgcolor('lightgreen')
-up()
 
 def maison(p, d):
-    goto(p)
+    goto(p)     # aller à la position p
+    write(p)    # afficher cette position p
+    dot()       # ajouter un marquer (dot)
     down()
-    forward (1.4 * d)
-    for a in (90, 45, 90, 45):
-        left(a)
-        forward(d)
+    forward (1.41*d)  # sol
+    left(90)
+    forward(d)  # mur droit
+    left(45)
+    forward(d)  # toit droit
+    left(90)
+    forward(d)  # toit gauche
+    left(45)
+    forward(d)  # mur gauche
     left(90)
     up()
-
-maison((-20, -80), 70)
-maison((-200, 20), 50)
-maison((120, 40), 40)
+    
+maison((0, 0), 50)          # maison à la position (0, 0)
+maison((-150, 50), 70)      # maison à la position (-150, 50)
 ```
 
-## Couleur de la maison
+## Colorier la maison
 
-Maintenant nous modifions la fonction pour inclure non seulement la position, la taille, mais également la couleur de la maison comme paramètres.
+Maintenant nous modifions la fonction pour inclure non seulement la position, la taille, mais également la couleur de la maison comme paramètres. Les arguments de la fonction sont :
+
+- `p` -- position de la maison
+- `d` -- dimension de la maison
+- `c` -- couleur de la maison
+
+```{exercise}
+Aujoutez deux autres maisons de taille et couleur différente.
+```
 
 ```{codeplay}
-:file: def7.py
 from turtle import *
-getscreen().bgcolor('lightgreen')
 up()
 
-def maison(p, d, couleur):
+def maison(p, d, c):
     goto(p)
+    dot()
     down()
-    fillcolor(couleur)
+    fillcolor(c)
     begin_fill()
-    forward (1.4 * d)
-    for a in (90, 45, 90, 45):
-        left(a)
-        forward(d)
+    forward (1.41*d)  # sol
+    left(90)
+    forward(d)  # mur droit
+    left(45)
+    forward(d)  # toit droit
+    left(90)
+    forward(d)  # toit gauche
+    left(45)
+    forward(d)  # mur gauche
     left(90)
     end_fill()
     up()
 
-maison((-20, -80), 70, 'lightblue')
-maison((-200, 20), 50, 'yellow')
-maison((120, 40), 40, 'pink')
+maison((0, 0), 70, 'lightblue')
+maison((150, 30), 50, 'yellow')
 ```
 
-## Maison avec porte
+## Drapeau tricolore
 
-Maintenant nous modifions la fonction pour inclure non seulement la position, la taille, la couleur de la maison comme paramètres, mais nous y ajoutons aussi une porte.
+```{exercise}
+Modifiez les couleurs pour obtenir le drapeau d'un autre pay.  
+Créez une deuxième fonction `drapeau2(d, c, c2, c3)` qui crée un drapeau avec des barres horizontales.
+```
 
 ```{codeplay}
-:file: def8.py
 from turtle import *
-getscreen().bgcolor('lightgreen')
-up()
 
-def porte(d):
-    for x in (1, 1.6, 1, 1.6):
-        forward(d * x)
+def rectangle(d, e, c):
+    fillcolor(c)
+    begin_fill()
+    for i in range(2):
+        forward(d)
         left(90)
-
-def mur(d):
-    forward (1.4 * d)
-    for a in (90, 45, 90, 45):
-        left(a)
-        forward(d)
-    left(90)
-
-def maison(p, d, col1, col2):
-    goto(p)
-    down()
-    fillcolor(col1)
-    begin_fill()
-    mur(d)
+        forward(e)
+        left(90)
     end_fill()
 
-    forward(d/3)
-    fillcolor(col2)
+def drapeau(d, c, c2, c3):
+    rectangle(d, 2*d, c)
+    forward(d)
+    rectangle(d, 2*d, c2)
+    forward(d)
+    rectangle(d, 2*d, c3)
+    
+drapeau(50, 'blue', 'white', 'red')
+```
+
+## Arbre
+
+Pour dessiner un arbre simple, nous utilisons un segment droit pour le tronc et un disque (dot) pour le feuillage.
+C'est une fonction qui a 3 paramètres
+
+- `d` -- longueur du tronc
+- `c` -- couleur du tronc
+- `c2` -- couleur du feuillage
+
+```{exercise}
+Définissez une fonction `foret(n)` qui dessine `n` arbres.
+```
+
+```{codeplay}
+from turtle import *
+
+def arbre(d, c, c2):
+    down()
+    left(90)
+    width(d/6)      # tronc
+    pencolor(c)
+    forward(d)
+    dot(d, c2)      # feuillage
+    up()
+    backward(d)     # retourner à la position de départ
+    right(90)
+    
+    
+arbre(100, 'brown', 'lime')
+forward(70)
+arbre(90, 'brown', 'green')
+```
+
+## Bus
+
+Pour dessiner un bus, une voiture ou un camion simple, nous pouvons utiliser des rectangles pour le châssis, et un disque (dot) pour les roues.
+C'est une fonction qui a a paramètres
+
+- `p` -- position du bus
+- `d` -- dimension (longeur) du bus
+- `c` -- couleur du bus
+
+```{codeplay}
+from turtle import *
+up()
+
+def rectangle(d, e, c):
+    fillcolor(c)
     begin_fill()
-    porte(d/3)
+    for i in range(2):
+        forward(d)
+        left(90)
+        forward(e)
+        left(90)
+    end_fill()
+        
+def bus(p, d, c):
+    goto(p)
+    down()
+    rectangle(d, d/3, c) # chassis
+    forward(d/4)
+    dot(d/5)            # roue arrière
+    dot(d/10, 'white')
+    forward(d/2)
+    dot(d/5)            # roue avant
+    dot(d/10, 'white')
+    up()
+    
+bus((-200, 50), 200, 'red')
+bus((50, 20), 150, 'lightblue')
+```
+
+## Coeur
+
+```{exercise}
+Ajoutez deux paramètres: `w` pour l'épaisseur de la ligne (width), et `c2` pour la couleur de ligne.  
+La fonction aura la forme `coeur(r, w, c, c2)`.
+```
+
+```{codeplay}
+from turtle import *
+
+def coeur(r, c):
+    down()
+    fillcolor(c)
+    begin_fill()
+    left(90)
+    circle(r, 225)
+    forward(2.4*r)
+    left(90)
+    forward(2.4*r)
+    circle(r, 225)
+    left(90)
     end_fill()
     up()
 
-maison((-20, -80), 70, 'lightblue', 'red')
-maison((-200, 20), 50, 'yellow', 'blue')
-maison((120, 40), 40, 'pink', 'violet')
+coeur(50, 'darkviolet')
+forward(130)
+coeur(40, 'tomato')
+```
+
+## Escalier
+
+- `d` -- longueur de marche
+- `e` -- hauteur de marche
+- `n` -- nombre de marches
+
+```{codeplay}
+from turtle import *
+
+def escalier(d, e, n):
+    dot()   # marqueur de début
+    for i in range(n):
+        forward(d)
+        left(90)
+        forward(e)
+        right(90)
+
+escalier(20, 10, 5)
+escalier(10, -20, 5)
+escalier(30, 10, 4)
 ```
 
 ## Valeurs par défaut
 
-Nous pouvons spécifier des valeurs par défaut.
+Quand une fonction possède beaucoup d'arguments, nous pouvons spécifier des valeurs par défaut. Pour ceci nous ajoutons la valeur par défaut dans la liste de paramètres avec le symbole `=`.
+
+La fonction `rectangle(p, d, e, w=1, pen='black', fill='white')` dessine un rectangle aux dimensions `d` x `e` à la position `p`.
+Cette fonction possède 3 paramètres optionnels (valeur par défaut en parenthèse):
+
+- `w` -- épaisseur de ligne (`1`)
+- `pen` -- couleur de ligne (`'black'`)
+- `fill` -- couleur de remplissage (`'white'`)
+
+Il a maintenant différentes façons à appeler la fonction. Tous les paramètres qui ont une valeur par défaut sont optionnels. Au minimum nous devons spécifier les paramètres sans valeur par défaut.
+
+```
+rectangle((40, 0), 80, 40)
+```
+
+Le rectangle est dessiné dans la direction actuelle de la tortue. Cette orientation peut être changée avec `seth()`. La tortue se positionne de l'autre côté du point de départ. Ceci permet d'enchainer à dessiner des rectangles.
 
 ```{codeplay}
-:file: def9.py
 from turtle import *
-getscreen().bgcolor('lightgreen')
 up()
 
-def porte(d):
-    for x in (1, 1.6, 1, 1.6):
-        forward(d * x)
-        left(90)
-
-def mur(d):
-    forward (1.4 * d)
-    for a in (90, 45, 90, 45):
-        left(a)
-        forward(d)
-    left(90)
-
-def maison(p, d=50, col1='yellow', col2='blue'):
+def rectangle(p, d, e, w=1, pen='black', fill='white'):
     goto(p)
     down()
-    fillcolor(col1)
+    width(w)
+    pencolor(pen)
+    fillcolor(fill)
     begin_fill()
-    mur(d)
-    end_fill()
-
-    forward(d/3)
-    fillcolor(col2)
-    begin_fill()
-    porte(d/3)
-    end_fill()
-    up()
-
-maison((-20, -80))
-maison((-200, 20), col1='lime')
-maison((120, 40), col2='red')
-maison((-170, -140), d=80)
-```
-
-## Le coronavirus
-
-Le nom « coronavirus » vient du latin et signifie « virus à couronne ». Son apparence sous un microscope électronique montre une frange de grandes projections bulbeuses qui évoquent une couronne solaire.
-
-Dans la fonction `corona()` les paramètres sont :
-
-- la distance entre projections `a`
-- la longueur de la projection `d`
-- le nombre de projections `n`
-
-```{codeplay}
-:file: def10.py
-from turtle import *
-getscreen().bgcolor('azure')
-up()
-
-def corona(a=10, d=20, n=24):
-    down()
-    for i in range(n):
-        left(90  - 180/n)
+    for i in range(2):
         forward(d)
-        dot()
-        backward(d)
-        right(90 + 180/n)
-        forward(a)
+        left(90)
+        forward(e)
+        left(90)
+    end_fill()
     up()
 
-corona()
+rectangle((-200, 30), 40, 30)
+rectangle((-100, -20), 40, 30, 1, 'orange', 'orange')
+rectangle((100, -40), 30, 80, fill='yellow')
+rectangle((200, 100), 80, 40, 1, 'red', 'pink')
 ```
 
-**Exercice** : Ajoutez 3 autres virus avec d'autres valeurs pour `a`, `d` et `n`.
+## Polygone régulier
 
-## Squid Game logo
+La fonction `polygone()` dessine un polygone régulier avec n sommets. Les arguments de la fonction sont :
 
-Squid Game, ou Le Jeu du calmar, est une série télévisée dramatique de survie sud-coréenne de 9 épisodes, diffusée dans le monde entier en 2021 sur Netflix.
-La série raconte l'histoire d'un groupe de personnes, fortement endettées, voire ruinées, qui risquent leur vie dans un jeu de survie mystérieux avec comme récompense une somme énorme.
-
-Nous définissons une fonction `polygone(a, n)` pour dessiner le cercle, le triangle et le carré du logo.
+- `d` -- distance du segment
+- `n` -- nombre de segments
 
 ```{codeplay}
-:file: def11.py
 from turtle import *
-getscreen().bgcolor('peru')
-width(5)
-up()
 
-def polygone(a, n):
+def polygon(d, n, w=1, pen='black', fill='white'):
     down()
+    pencolor(pen)
+    width(w)
+    fillcolor(fill)
+    begin_fill()
     for i in range(n):
-        forward(a)
+        forward(d)
         left(360/n)
-    up()
-    
-backward(150)
-polygone(10, 36)
-forward(100)
-polygone(120, 3)
-forward(170)
-polygone(100, 4)
+    end_fill()
+    up()  
+
+up()
+backward(280)
+for n in range(3, 9):
+    polygon(40, n, fill='lime')
+    color('black')
+    write(n)
+    forward(100)
 ```
 
-**Exercice** : Ajoutez votre nom et vos coordonnées à la carte de visite en utilisant la fonction `write()`.
+## Polygone étoilé
 
-## Dessiner un pixel
+En ajoutant un paramètre supplémentaire `m`, la fonction `polygone()` permet également de dessiner un polygone étoilé.  Ce paramètre signifie le nombre de pics sauté pour aller au prochain des `n` points répartis dans un cercle. Pour `m=1` un polygone régulier est dessiné.
 
-Similaire à notre fonction pour dessiner un carré nous allons définir une fonction `pixel()`, mais cette fois nous ajoutons un deuxième argument :
+es arguments de la fonction sont :
 
-- `taille` pour la taille du carré,
-- `couleur` pour la couleur du carré.
-
-```{codeplay}
-:file: def12.py
-from turtle import *
-
-def carre(taille):
-    for i in range(4):
-        forward(taille)
-        left(90)
-        
-def pixel(taille, couleur):
-    fillcolor(couleur)
-    begin_fill()
-    carre(taille)
-    end_fill()
-    forward(taille)
-
-backward(200)
-for x in ('yellow', 'orange', 'red'):
-    pixel(100, x)
-```
-
-## Dessiner Pikachu
-
-Nous définissons une nouvelle fonction `ligne(couleurs)` pour dessiner une série de pixels, qui sont donnés par une liste de couleurs.
-Quand le dernier pixel de la ligne est dessiné, la tortue est retournée à la position prête pour dessiner la ligne suivante.
+- `d` -- distance du segment
+- `n` -- nombre de segments
+- `m` -- paramètre pour polygone étoilé (nombre de pics sautés)
 
 ```{codeplay}
-:file: def13.py
 from turtle import *
 
-def pixel(taille, couleur):
-    fillcolor(couleur)
-    begin_fill()
-    for i in range(4):
-        forward(taille)
-        left(90)
-    end_fill()
-    forward(taille)
-
-taille = 50
-
-def ligne(couleurs):
-    for couleur in couleurs:
-        pixel(taille, couleur)
-    backward(len(couleurs) * taille)
-    up()
-    sety(ycor() - taille)
+def polygon(d, n, m=1, w=1, pen='black', fill='white'):
     down()
-
-backward(2 * taille)
-ligne(('black', 'yellow', 'yellow', 'black'))
-ligne(('white', 'red', 'yellow', 'white'))
-ligne(('yellow', 'yellow', 'yellow', 'yellow'))
-ligne(('yellow', 'yellow', 'yellow', 'white'))
+    pencolor(pen)
+    width(w)
+    fillcolor(fill)
+    begin_fill()
+    for i in range(n):
+        forward(d)
+        left(m*360/n)
+    end_fill()
+    up()  
+    
+up()
+speed(0)
+backward(250)
+for m in range(2, 6):
+    polygon(80, 11, m, fill='yellow')
+    color('black')
+    write(m)
+    forward(140)
 ```
 
-**Exercice** : Dessinez un autre Pokemon.
+## Nommer une variable
+
+Pour nommer une variable, vous pouvez utiliser :
+
+- lettres (`a...z` et `A...Z`),
+- chiffres (`0...9`),
+- le tiret bas (`_`).
+
+Le nom de variable :
+
+- est sensible aux majuscules/minuscules,
+- ne peut pas commencer avec un chiffre,
+- ne doit pas consister d'un mot-clé (`if`, `else`, `for`),
+
+Ces noms de variables sont donc valides : `a2`, `_a`, `speed`, `pos_x`, `POS_X`
+
+```{question}
+Lesquels des noms de variable sont valides ?
+
+{f}`var 2`  
+{v}`var2`  
+{f}`2var`  
+{v}`IF`
+===
+`var 2` contient une espace  
+`2var` commence par un chiffre  
+`IF` n'est pas un mot-clé  
+```
 
 ## Exercices
+
+### Pingpong
+
+La fonction `pingpong()` reprend le dessin du chapitre 1 et ajoute trois paramètres
+
+```{codeplay}
+:file: pingpong.py
+from turtle import *
+
+def pingpong(d, c, c2):
+    down()
+    left(90)
+    color(c)        # poignée
+    width(d/8)
+    forward(d/2)
+    color(c2)       # plaque
+    width(d/2)
+    forward(d/10)
+    up()            # retourner au point de départ
+    backward(6/10*d)
+    right(90)
+
+pingpong(200, 'brown', 'red')
+forward(100)
+pingpong(150, 'brown', 'blue')
+```
+
+### Mondrian
+
+Avec la fonction `rectangle(p, d, e, w, pen, fill)` dessinez une copie de ce tableau de Mondrian.
+
+![mondrian](media/mondrian.jpg)
 
 ### Stickman
 
@@ -400,25 +522,25 @@ from turtle import *
 up()
 
 
-def leg(angle, a):
+def leg(angle, d):
     left(angle)
-    forward(a)
-    backward(a)
+    forward(d)
+    backward(d)
     right(angle)
 
-def stickman(a, bras=(30, -45), jambes=(10, -30)):
+def stickman(d, bras=(30, -45), jambes=(10, -30)):
     seth(0)
     down()
-    circle(a/2)       # tête
+    circle(d/2)       # tête
     right(90)
-    forward(a/2)    # cou
+    forward(d/2)    # cou
     
-    leg(bras[0], a)
-    leg(bras[1], a)
-    forward(a)
+    leg(bras[0], d)
+    leg(bras[1], d)
+    forward(d)
     
-    leg(jambes[0], a)
-    leg(jambes[1], a)
+    leg(jambes[0], d)
+    leg(jambes[1], d)
     up()
 
 goto(-200, 0)      
@@ -430,57 +552,4 @@ stickman(20, (90, -110))
 goto(0, 0)      
 stickman(30, (90, -110), (110, -24))
 hideturtle()
-```
-
-### Hypnose
-
-```{codeplay}
-from turtle import *
-tracer(0)
-width(10)
-color('blue')
-
-def star(n=7, a=400):
-    for i in range(n):
-        forward(a)
-        backward(a)
-        left(360/n)
-
-while True:
-    clear()
-    star(13)
-    left(1)
-    update()
-```
-
-
-
-### Spiral
-
-```{codeplay}
-from turtle import *
-tracer(0)
-width(5)
-
-a = 0
-b = 0
-
-def spiral(n=10):
-    goto(0, 0)
-    for i in range(200):
-        forward(i)
-        left(360/n)
-
-while True:
-    clear()
-    seth(a)
-    a += 1
-    color('red')
-    spiral()
-    
-    seth(b)
-    b += -1
-    color('blue')
-    spiral(-10)
-    update()
 ```

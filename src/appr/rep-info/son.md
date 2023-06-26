@@ -46,17 +46,16 @@ Chaque «son élémentaire» peut ainsi être assimilé à une courbe comme cell
 La question est de savoir comment ramener ces oscillations sinusoïdales combinées ensemble en un ensemble de 0 et 1 pour être stockées numériquement dans un ordinateur, comme les nombres, images et les caractères.
 
 
-```{admonition} Le saviez-vous ?
-:class: hint
+```{didyouknow}
+
 Les casques à conduction osseuse transmettent les vibrations directement à l’os temporal du crâne : la cochlée qui est nichée dans cet os va vibrer et transmettre les informations électriques au cerveau, comme le ferait un signal passant par le tympan et le marteau.
 ```
 
 
 
 
-```{admonition} Le saviez-vous ?
-:class: hint
-Vous rappelez-vous de l’explosion de l’étoile de la mort dans Star Wars ? et bien un son pareil ne peut exister dans l'espace : il n’y a pas assez de molécules à agiter, l’énergie transmise par l'explosion ne peut pas se propager de la sorte.
+```{didyouknow}
+Vous rappelez-vous l’explosion de l’étoile de la mort dans Star Wars ? Eh bien un son pareil ne peut exister dans l'espace : il n’y a pas assez de molécules à agiter, l’énergie transmise par l'explosion ne peut pas se propager de la sorte.
 
 <title> starwars.mov </title>
 <body>
@@ -86,8 +85,8 @@ Ci-après, un signal continu sera numérisé, mettant en évidence le rôle et l
 Signal continu à numériser, par exemple un son.
 ```
 
-````{admonition} Le saviez-vous ?
-:class: note
+````{didyouknow}
+
 Les sons, tels que perçus
 par notre ouïe, résultent de la vibration de l'air, prenant la forme d'oscillations cycliques de la pression.
 
@@ -115,8 +114,7 @@ Effet de la fréquence d'échantillonnage (sampling rate : 100, 200 et 400 Hz) s
 
 Sachant que l’oreille humaine ne perçoit globalement que les fréquences comprises entre 20 et 20000 Hz, une fréquence d’échantillonnage supérieure à 40 kHz permettra de restituer l’ensemble de l’information physiologiquement perceptible par l’oreille humaine.
 
-````{admonition} Un peu d'histoire…
-:class: note
+````{didyouknow}
 La fréquence d'échantillonnage de 44.1 kHz a été retenue dans les années 1970 pour permettre l'utilisation des bandes vidéo pour stocker les enregistrements numériques. Ces bandes représentaient le meilleur rapport volume de stockage/prix pour l'époque.
 
 ```{toggle}

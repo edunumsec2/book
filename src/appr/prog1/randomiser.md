@@ -18,84 +18,104 @@ En Python, `random` est
 
 ## Le contenu du module
 
-Le module `random` permet de créer des nombres pseudoaléatoires. Il met à disposition 13 fonctions.
+Le module `random` permet de créer des nombres pseudoaléatoires. Pour afficher le contenu d'un module, nous pouvons utiliser la fonction `dir()` qui affiche les objets du module.
+
+Le module met à disposition 13 fonctions.
 
 ```{codeplay}
 :file: random1.py
 import random
-print(dir(random))
-```
 
-## Nombre aléatoire
-
-La fonction `random()` retourne un nombre aléatoire dans l'intervalle [0, 1].
-
-```{codeplay}
-:file: random2.py
-from random import random
-    
-for i in range(3):
-    print(random())
-```
-
-Nous pouvons visualiser ceci dans un graphique.
-
-```{codeplay}
-:file: random3.py
-from turtle import *
-from random import *
-up()
-
-n = 15
-for i in range(n):
-    x = (i/n - 0.5) * 500
-    goto(x, -150)
-    down()
-    write(i)
-    y = round(random(), 2)
-    sety((y - 0.5) * 300)
-    dot()
-    write(y)
-    sety(-150)
+for f in dir(random):
+    print(f)
 ```
 
 ## Entier aléatoire
 
-La fonction `randint(a, b)` retourne un entier aléatoire dans l'intervalle [a, b].
+La fonction `randint(a, b)` retourne un nombre aléatoire dans l'intervalle [a, b].
+Avec `y = randint(-200, 200)` nous choisissons une valeur `y` aléatoire.
+
+Pour éviter de dessiner une ligne depuis l'origine au premier point, nous levons le stylo au début, et nous le posons dès le premier point atteint avec `goto(x, y)`
 
 ```{codeplay}
-:file: random4.py
-from random import randint
-    
-print('randint - random integer')
-for i in range(15):
-    print(randint(0, 9), end=' ')
-```
-
-Nous pouvons visualiser ceci dans un graphique.
-
-```{codeplay}
-:file: random5.py
 from turtle import *
 from random import *
 
-n = 20
-for i in range(n):
-    setx((i/n - 0.5) * 600)
-    write(i)
+d = 20
+up()
+
+for x in range(-300, 300, d):
     y = randint(-200, 200)
-    sety(y)
+    goto(x, y)
+    down()
+    forward(d)
     dot()
     write(y)
-    sety(0)
 ```
 
-## Sous la belle étoile
+## Position aléatoire
 
-Les étoiles dans le ciel apparaissent à des positions plus au moins aléatoires.
+Nous pouvons également choisir les deux coordonnées `x` et `y` de façon aléatoire.
+
+```{codeplay}
+from turtle import *
+from random import *
+
+for i in range(10):
+    x = randint(-300, 300)
+    y = randint(-200, 200)
+    p = (x, y)
+    goto(p)
+    dot()
+    write(p)
+```
+
+## Angle aléatoire
+
+La fonction `a = randint(-90, 90)` retourne un angle aléatoire dans l'intervalle [-90, 90].
+Le programme produit un parcours aléatoire (**random walk**)
+
+```{codeplay}
+from turtle import *
+from random import *
+    
+d = 20 
+
+for i in range(100):
+    a = randint(-90, 90)
+    dot()
+    write(a)
+    left(a)
+    forward(d)
+```
+
+## Taille aléatoire
+
+La fonction `d = randint(1, 3)` retourne un diamètre aléatoire dans l'intervalle [1, 3]. Chaque taille a la même probabilité.
+
+```{codeplay}
+from turtle import *
+from random import *
+up()
+
+for i in range(20):
+    x = randint(-300, 300)
+    y = randint(-200, 200)
+    d = randint(1, 3)
+    goto(x, y)
+    dot(d*10, 'pink')
+    write(d, align='center')
+```
+
+### Sous la belle étoile
+
+Les étoiles dans le ciel apparaissent à des positions plus ou moins aléatoires.
 Nous calculons `x` et `y` comme des entiers aléatoires, choisis dans l'intervalle de la largeur et de la hauteur de la fenêtre.
 
-Nous choisissons la taille `d` avec une distribution normale (de Gauss) avec une moyenne de 3 et un sigma de 2.
+Nous choisissons la taille `d` avec une distribution normale (de Gauss).
+
+L'expression `d = gauss(3, 2)` renvoie un diamètre avec une moyenne de 3 et un sigma de 2.
+Comme cette valeur pourrait être négative, dans certains cas, nous en prenons la valeur absolue avec la fonction `abs())`.
 
 ```{codeplay}
 :file: random6.py
@@ -113,9 +133,41 @@ for i in range(200):
     dot(d, 'white')
 ```
 
-## La voie lactée
+Pour faire un dessin, il est utile de pouvoir spécifier la région des étoiles.
+Nous choisissons ici des régions rectangulaires définies par une position `p` et une taille `size`.
+Les étoiles seront placées dans cette région.
 
-Pour arranger les étoiles plus dans une bande horizontale, comme dans la voie lactée, nous utilisons pour la variable `y` une distribution normale (de Gauss) avec une moyenne de 0 et un sigma de 50.
+```{codeplay}
+from turtle import *
+from random import *
+speed(0)
+up()
+
+def rectangle(p, size, c):
+    color(c)
+    begin_fill()
+    goto(p)                 # la tortue va au point de départ
+    for d in size * 2:      # équivalent à (w, h, w, h)
+        forward(d)
+        left(90) 
+    end_fill()
+
+def etoiles(p, size, n, c):
+    for i in range(n):
+        x = randint(p[0], p[0] + size[0])
+        y = randint(p[1], p[1] + size[1])
+        d = abs(gauss(3, 2))
+        goto(x, y)
+        dot(d, c)
+    
+rectangle((-300, -200), (600, 150), 'darkgreen')
+rectangle((-300, -50), (600, 250), 'black')
+etoiles((-300, -50), (600, 250), 100, 'white')
+```
+
+### La voie lactée
+
+Pour arranger les étoiles plus dans une bande horizontale, comme dans la Voie lactée, nous utilisons pour la variable `y` une distribution normale (de Gauss) avec une moyenne de 0 et un sigma de 50.
 
 ```{codeplay}
 :file: random7.py
@@ -133,6 +185,101 @@ for i in range(500):
     dot(d, 'white')
 ```
 
+## Couleur aléatoire
+
+La fonction `choice()` retourne un élément aléatoire dans une séquence. 
+
+```{codeplay}
+from turtle import *
+from random import *
+up()
+
+couleurs = ('pink', 'red', 'orange', 'lime', 'cyan', 
+            'beige', 'yellow', 'silver', 'gold', 'skyblue')
+
+for i in range(20):
+    x = randint(-300, 300)
+    y = randint(-200, 200)
+    c = choice(couleurs)
+    goto(x, y)
+    dot(60, c)
+    write(c, align='center')
+```
+
+### Cube de Rubik
+
+Depuis une liste avec les 6 couleurs du cube de Rubik, nous en choisissons une aléatoirement, pour dessiner un cube dans son état défait.
+
+```{codeplay}
+from turtle import *
+from random import *
+speed(0)
+couleurs = 'red', 'green', 'blue', 'yellow', 'orange', 'white'
+
+def losange(d, c):
+    fillcolor(c)
+    begin_fill()
+    for a in (120, 60, 120, 60):
+        forward(d)
+        left(a)
+    end_fill()
+
+def surface():
+    for j in range(3):
+        for i in range(3):
+            c = choice(couleurs)
+            losange(50, c)
+            forward(50)
+        backward(150)
+        left(120)
+        forward(50)
+        right(120)
+    left(120)
+    backward(150)
+    
+for i in range(3):
+    surface()
+```
+
+## Text aléatoire
+
+La fonction 'choice()' permet aussi de choisir parmi un tuple de mots. Ici nous affichons les noms des chapitres à des positions aléatoires. 
+Parfois les positions sont superposées. Nous allons voir plus tard, comment nous pouvons résoudre ce problème.
+
+```{codeplay}
+from turtle import *
+from random import *
+up()
+
+mots = ('dessiner', 'définir', 'colorier', 'répéter', 'cercler', 'paramétrer', 
+        'parcourir', 'positionner', 'typographier', 'itérer', 'randomiser')
+
+for i in range(20):
+    x = randint(-300, 300)
+    y = randint(-200, 200)
+    mot = choice(mots)
+    goto(x, y)
+    write(mot, font=('Courier', 18))
+```
+
+## Emoji aléatoire
+
+
+```{codeplay}
+from turtle import *
+from random import *
+up()
+d = 40
+emojis = list('🐶🐱🐭🐹🐰🦊🐻🐼🐨🐯🦁🐮🐷🐸🐵')
+
+for i in range(20):
+    x = randint(-300, 300-d)
+    y = randint(-200, 200-d)
+    emoji = choice(emojis)
+    goto(x, y)
+    write(emoji, font=('Courier', d))
+```
+
 ## Fleurs dans un champ
 
 Dans l'exemple suivant, nous plaçons des fleurs à des positions aléatoires dans un champ.
@@ -145,7 +292,7 @@ getscreen().bgcolor('green')
 speed(0)
 up()
 
-def fleur(x, y, d):
+def fleur(d):
     for i in range(5):
         dot(d, 'lightyellow')
         forward(d*0.8)
@@ -160,143 +307,81 @@ for i in range(10):
     d = gauss(30, 10)
     seth(0)
     goto(x, y)
-    fleur(x, y, d)
+    fleur(d)
 ```
 
-## Choisir dans une liste
 
-La fonction `choice(liste)` retourne un élément aléatoire d'une liste.
-Dans l'exemple suivant, nous choisissons parmi 5 couleurs.
 
-```{codeplay}
-:file: random9.py
-from turtle import *
-from random import *
-getscreen().bgcolor('black')
+## Distribution gaussienne
 
-colors = ['red', 'lime', 'pink', 'yellow', 'cyan']
-up()
-n = 60
-for y in range(200-n, -200, -n):
-    for x in range(-300+n, 300, n):
-        setpos(x, y)
-        dot(n, choice(colors))
-```
+La distribution normale, ou **distribution gaussienne**, est la distribution qui apparait souvent dans la nature. La taille d'une population, le poids d'une population, suit souvent une distribution gaussienne.
 
-Nous pouvons aussi choisir aléatoirement dans une liste numérique, avec différentes tailles de points, par exemple.
+La distribution normale `gauss(mu, sigma)` est décrite par deux paramètres :
 
-```{codeplay}
-:file: random10.py
-from turtle import *
-from random import *
-getscreen().bgcolor('black')
+- son espérance `mu`
+- son écart-type `sigma`
 
-colors = ['red', 'lime', 'pink', 'yellow', 'cyan']
-size = [20, 30, 40, 50, 60]
-up()
-n = 60
-for y in range(200-n, -200, -n):
-    for x in range(-300+n, 300, n):
-        setpos(x, y)
-        dot(choice(size), choice(colors))
-```
-
-## Cube de Rubik
-
-Depuis une liste avec les 6 couleurs du cube de Rubik nous en choisissons une aléatoirement, pour dessiner un cube dans son état défait.
+La fonction `gauss(0, 5)' avec un sigma de 5 va distribuer ses valeurs autour de 0, de sorte placer 67% des points dans l'intervalle [-5, 5]. Le programme suivant montre un histogramme visuel de classification de 400 points.
 
 ```{codeplay}
 from turtle import *
 from random import *
-speed(8)
-couleurs = 'red', 'green', 'blue', 'yellow', 'orange', 'white'
-
-def losange():
-    fillcolor(choice(couleurs))
-    begin_fill()
-    for a in (120, 60, 120, 60):
-        forward(50)
-        left(a)
-    end_fill()
-
-def surface():
-    for j in range(3):
-        for i in range(3):
-            losange()
-            forward(50)
-        backward(150)
-        left(120)
-        forward(50)
-        right(120)
-    left(120)
-    backward(150)
-    
-for i in range(3):
-    surface()
-```
-
-## Distribution normale
-
-Dans l'exemple suivant les variables x e y suivent une distribution normale avec une moyenne de 0 et un sigma de 50.
-
-```{codeplay}
-:file: random11.py
-from turtle import *
-from random import *
-
 speed(0)
 up()
 
-for i in range(1000):
-    x = gauss(0, 50)
-    y = gauss(0, 50)
-    goto(x, y)
-    dot(10)
+sigma = 5
+d = 10
+y = [-180] * 60
+
+for x in range(-300, 300, 50):
+    goto(x, -200)
+    write(x//d)
+for i in range(400):
+    j = int(gauss(0, sigma))
+    goto(j*d, y[j+30])
+    dot(d)
+    y[j+30] += d
 ```
 
-## Zoo
-
-Pour simuler la perspective, nous dessinons les animaux proches plus grands.
+La distribution des tailles des animaux, ou des humains, est également gaussienne. Ci-dessous nous montrons une distribution avec un sigma de 2 et ensuite avec un sigma de 10.
 
 ```{codeplay}
-:file: random12.py
 from turtle import *
 from random import *
-getscreen().bgcolor('lightgreen')
+d = 100
 up()
 
-animals = list('🐑🦧🐫🐆🦓')
-
-for i in range(30):
-    x = randint(-300, 300)
-    y = randint(-200, 200)
-    d = gauss(30, 5) * (250-y)/400
-    goto(x, y)
-    animal = choice(animals)
-    write(animal, font=(None, int(d)))
-hideturtle()
+for (y, sigma) in ((50, 2), (-150, 10)):
+    goto(-280, y)
+    write(sigma)
+    for x in range(-300, 300-d, d//2):
+        goto(x, y)
+        d = int(gauss(100, sigma))
+        write('🧍‍', font=(None, d))
 ```
 
 ## Champs de fleurs
 
 Pour simuler la perspective, nous dessinons les fleurs proches plus grandes.
+Il est de nouveau utile de définir une fonction de répartition, qui permet de distribuer des listes d'objets dans une région rectangulaire.
 
 ```{codeplay}
-:file: random13.py
 from turtle import *
 from random import *
 getscreen().bgcolor('lightgreen')
 up()
 
-fleurs = list('🌸🌺🌷🌻🌼')
-
-for i in range(30):
-    x = randint(-300, 300)
-    y = randint(-200, 200)
-    d = gauss(40, 5) * (250-y)/400
-    goto(x, y)
-    fleur = choice(fleurs)
-    write(fleur, font=(None, int(d)))
+def repartition(p, size, n, emojis):
+    for i in range(n):
+        x = randint(p[0], p[0] + size[0])
+        y = randint(p[1], p[1] + size[1])
+        d = gauss(40, 5) * (p[1]+size[1]-y)/size[1]
+        goto(x, y)
+        c = choice(emojis)
+        write(c, font=(None, int(d)))
+        
+repartition((-300, -200), (250, 400), 20, '🌸🌺🌷🌻🌼')
+repartition((0, -200), (300, 400), 20, '🍏🍎🍐🍊🍋🍉🍇🍓🫐🍒🍑🥝')      
 hideturtle()
 ```
 
@@ -331,45 +416,6 @@ for i in range(10):
 hideturtle()
 ```
 
-## Rouler un dé
-
-```{codeplay}
-:file: random15.py
-from turtle import *
-from random import *
-from time import *
-
-speed(5)
-up()
-
-a = 80
-d = 50
-
-for n in range(1, 7):
-    if n % 2 == 1:
-        home()
-        dot(d)
-    if n >= 2:
-        goto(-a, a)
-        dot(d)
-        goto(a, -a)
-        dot(d)
-    if n >= 4:
-        goto(-a, -a)
-        dot(d)
-        goto(a, a)
-        dot(d)
-    if n == 6: 
-        goto(-a, 0)
-        dot(d)
-        goto(a, 0)
-        dot(d)
-        
-    sleep(1)
-    clear()
-```
-
-**Exercice** : Modifiez le code pour afficher le dé avec un nombre aléatoire entre 1 et 6.
 
 ## Permuter
 

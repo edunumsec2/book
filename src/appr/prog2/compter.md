@@ -39,6 +39,10 @@ En informatique, nous utilisons fréquemment trois autres représentations :
 - octale (base 8)
 - hexadécimale (base 16)
 
+```{exercise}
+Modifiez le nombre `n` et réexécutez le code.
+```
+
 ```{codeplay}
 :file: bin2.py
 n = 123
@@ -48,8 +52,6 @@ print('binaire =', bin(n))
 print('octal =', oct(n))
 print('hexadécimal =', hex(n))
 ```
-
-**Exercice** : Modifier le nombre `n` et réexécutez le code.
 
 ## Compter avec les doigts
 
@@ -97,7 +99,7 @@ for i in range(16):
     print(i, '=', bin(i))
 ````
 
-La chaîne formaté (f-string) '{i:4b}' à l'intérieur de la fonction `print()` affiche le code binaire sur 4 positions.
+La chaîne formaté (f-string) `{i:4b}` à l'intérieur de la fonction `print()` affiche le code binaire sur 4 positions.
 
 ```{codeplay}
 :file: bin5.py

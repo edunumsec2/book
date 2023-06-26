@@ -4,20 +4,10 @@
 :class: note
 Ce document doit être retravaillé ...
 ```
-<!-- Ph.R. - 20.03.2022-->
-
-
-<!--
-Idée d'un sondage réalisé en introduction puis en conclusion au chapitre : Qu'est ce qu'un ordinateur (nuages de mots sortis) ? Comment fonctionne selon vous un ordinateur ? L'ordinateur a-t-il selon vous évolué depuis 70 ans d'existence ? Justifiez
-
-=> forme d'évaluation formative
-
--->
-
 
 Dans ce chapitre, nous aborderons la question de l'architecture des ordinateurs, c'est-à-dire les multiples couches physiques qui rendent possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
 
-Comme vous avez pu le voir dans le chapitre lié à la représentation de l'information, tout ce qui apparaît sur votre écran est représenté par l'ordinateur par suite de 0 et de 1. Pour comprendre comment ces <span commented>{glo}`codebinaire|0 et 1` sont traités par l'ordinateur, il faut avoir en tête que les ordinateurs sont construits à partir d'une couche et de multiples niveaux, comme un mille-feuille, dont chacun possède ses propres règles. 
+Comme vous avez pu le voir dans le chapitre lié à la représentation de l'information, tout ce qui apparaît sur votre écran est représenté par l'ordinateur par suite de 0 et de 1. Pour comprendre comment ces {glo}`codebinaire|0 et 1` sont traités par l'ordinateur, il faut avoir en tête que les ordinateurs sont construits à partir d'une couche et de multiples niveaux, comme un mille-feuille, dont chacun possède ses propres règles. 
 
 
 ```{figure} media/abstractionlight.png
@@ -96,8 +86,8 @@ Les nombres binaires, au niveau le plus élémentaire, sont matérialisés par d
 
 En informatique, si nous avons choisi d'utiliser un code binaire, ça n'est pas par hasard. Ce sont les deux signaux les plus élémentaires que l'on puisse transmettre avec l'électricité. Soit le courant passe, soit il ne passe pas. Ouvert ou fermé ; allumé ou éteint ; 1 ou 0. 
 
-```{admonition} Le saviez-vous?
-:class: hint
+```{didyouknow}
+
 On aurait pu choisir un code possédant plus de deux signaux différents. Par exemple, avec trois signaux, on pourrait coder trois valeurs avec un courant faible, un courant moyen, un courant fort, ou encore mieux : une tension négative, une tension nulle et une tension positive. On appelle cette dernière proposition le ternaire balancé. En fait, cela s'est déjà fait: les soviétiques ont développé en 1958 un ordinateur nommé [Setun](https://en.wikipedia.org/wiki/Setun) basé sur ce principe, réputé très fiable et extrêmement peformant dans le développement d'applications dans certains domaines.  Mais ce projet, pour des raisons politiques, n'a pas reçu le soutient qu'il aurait mérité. D'autre part, il est plus simple de concevoir des circuits électroniques qui ne doivent traiter que deux valeurs.
 ```
 

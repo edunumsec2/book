@@ -33,6 +33,10 @@ La variable `s` fait référence à l'objet `Screen` qui possède les deux méth
 
 Deux lignes de texte sont affichées au début, pour que l'utilisateur sache qu'il doit d'abord cliquer dans la fenêtre de la tortue pour l'activer.
 
+```{exercise}
+Modifiez la fonction de rappel `f()` pour que la tortue tourne en cercle.
+```
+
 ```{codeplay}
 :file: onkey1.py
 from turtle import *
@@ -50,13 +54,15 @@ print("Cliquz dans la fenêtre pour l'activer.")
 print("Appuyez sur la touche 'a' pour avancer.")
 ```
 
-**Exercice** : Modifiez la fonction de rappel `f()` pour que la tortue tourne en cercle.
-
 ## Retourner à l'origine
 
 La fonction `home()` ramène la tortue à son origine. Nous avons changé le nom de la fonction de rappel `f()` en `avancer()`. C'est plus clair. La fonction `home()` existe déjà, donc nous n'avons pas besoin de la définir.
 
 Au lieu d'écrire les explications dans la console, nous allons les écrire directement dans la fenêtre de la tortue.
+
+```{exercise}
+Ajoutez une fonction de rappel pour faire reculer la tortue.
+```
 
 ```{codeplay}
 :file: onkey2.py
@@ -78,8 +84,6 @@ s.onkey(avancer, 'a')
 s.onkey(home, 'h')
 s.listen()
 ```
-
-**Exercice** Ajoutez une fonction de rappel pour faire reculer la tortue.
 
 ## Effacer la trace
 
@@ -120,6 +124,10 @@ Le programme suivant fait bouger la tortue à l'aide de 3 touches du clavier :
 - `d` pour tourner à droite
 - `g` pour tourner à gauche
 
+```{exercise}
+Ajoutez une fonction de rappel pour faire reculer la tortue.
+```
+
 ```{codeplay}
 :file: onkey4.py
 from turtle import *
@@ -147,9 +155,7 @@ print("a:avancer  g:gauche  d:droite")
 print("h:home     c:clear   r:reset")
 ```
 
-**Exercice** : Ajoutez une fonction de rappel pour faire reculer la tortue.
-
-## Les flèches
+## Les touches flèches
 
 Les touches de flèche portent les noms `Left`, `Right`, `Up` et `Down`.
 Nous pouvons utiliser les 4 flèches pour faire bouger la tortue.
@@ -160,6 +166,10 @@ Nous pouvons utiliser les 4 flèches pour faire bouger la tortue.
 - `→` pour tourner vers la droite
 
 Le référentiel utilisé se rapporte à la tortue. Quand la tortue est en face de nous, c'est difficile de la contrôler, car nous devons inverser les directions dans notre tête.
+
+```{exercise}
+Ajoutez les fonctions de rappel `up()` et `down()` pour monter et descendre le stylo.
+```
 
 ```{codeplay}
 :file: onkey5.py
@@ -192,8 +202,6 @@ s.listen()
 print("Utilisez les flèches pour bouger la tortue.")
 ```
 
-**Exercice** : Ajoutez les fonctions de rappel `up()` et `down()` pour monter et descendre le stylo.
-
 ## Les touches WASD
 
 Les jeux vidéos utilisent souvent les touches WASD pour déplacer le personnage du jeu (player) :
@@ -204,6 +212,10 @@ Les jeux vidéos utilisent souvent les touches WASD pour déplacer le personnage
 - `d` pour aller vers la droite
 
 Cette fois nous utilisons un référentiel absolu, fixé au canevas. La tortue peut se déplacer dans les 4 directions haut, bas, gauche et droite.
+
+```{exercise}
+Ajoutez les fonctions de rappel `home()`, `clean()` et `reset()` pour effacer la trace et ramener la tortue à l'origine.
+```
 
 ```{codeplay}
 :file: onkey6.py
@@ -237,8 +249,6 @@ s.listen()
 
 print("Utilisez les touches WASD pour bouger la tortue.")
 ```
-
-**Exercice** : Ajoutez les fonctions de rappel `home()`, `clean()` et `reset()` pour effacer la trace et ramener la tortue à l'origine.
 
 ## Courbes en cercle
 
@@ -331,6 +341,10 @@ Nous allons introduire des touches pour choisir l'épaisseur du trait.
 - `2` pour un trait normal,
 - `3` pour un trait épais.
 
+```{exercise}
+Modifiez les épaisseurs.
+```
+
 ```{codeplay}
 :file: onkey10.py
 from turtle import *
@@ -360,8 +374,6 @@ getscreen().listen()
 print("a:avancer  t:tourner  1:fin  2:normal  3:épais")
 ```
 
-**Exercice** : Modifiez les épaisseurs.
-
 ## Choisir la couleur
 
 Nous allons introduire des touches pour choisir l'épaisseur du trait.
@@ -369,6 +381,10 @@ Nous allons introduire des touches pour choisir l'épaisseur du trait.
 - `r` pour un trait rouge,
 - `v` pour un trait vert,
 - `b` pour un trait bleu.
+
+```{exercise}
+Modifiez les couleurs.
+```
 
 ```{codeplay}
 :file: onkey11.py
@@ -399,8 +415,6 @@ getscreen().onkey(bleu, 'b')
 getscreen().listen()
 print("a:avancer  t:tourner  r:rouge  v:vert  b:bleu")
 ```
-
-**Exercice** : Modifiez les couleurs.
 
 ## Écrire dans le canevas
 
@@ -503,5 +517,3 @@ s.onkey(droite, 'Right')
 s.onkey(clear, 'c')
 s.listen()
 ```
-
-

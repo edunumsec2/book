@@ -77,6 +77,10 @@ function check_listener(correct_boxes, incorrect_boxes, check_buttons, feedbacks
       for (const feedback of feedbacks) {
         feedback.style.display = "block";
       }
+      question.classList.add("shake");
+      setTimeout(function() {
+        question.classList.remove("shake");
+      }, 500);
     }
   };
 }

@@ -23,8 +23,14 @@ Le grand intérêt d'une valeur de retour est qu'on peut l'utiliser de nouveau d
 
 Par exemple, nous pouvons créer une expression comme celle-ci : `square(x) + cube(x)`
 
+```{exercise}
+Testez le code avec 2, 3 et 4.  
+Ajoutez une fonction `identite(x)` qui renvoie juste `x`.  
+Ajoutez une ligne qui calcule **identité + carré + cube**.
+```
+
 ```{codeplay}
-:file: return1.py
+:file: return.py
 def carre(x):
     return x ** 2
 
@@ -44,8 +50,12 @@ Une fonction peut avoir plusieurs points de sortie. En fait quand une ligne avec
 
 La fonction `signe()` possède 3 points de sortie.
 
+```{exercise}
+Testez avec -2, 0 et 3.
+```
+
 ```{codeplay}
-:file: return2.py
+:file: return.py
 def signe(x):
     if x > 0:
         return 'positif'
@@ -58,134 +68,383 @@ x = int(input('Entrez un nombre: '))
 print(x, 'est', signe(x))
 ```
 
-**Exercice** : Testez avec -2, 0 et 3.
+## Fonction linéaire
 
-## État de la tortue
+En mathématique une fonction linéaire a la forme:
 
-Plusieurs fonctions nous renseignent sur l'état de la tortue :
+$$ f(x) = a x + b $$
 
-- couleur
-- tortue
-- position
-- fenêtre
+Le paramètre `a` est appelé la pente de cette fonction. C'est l'équation d'une droite.
+
+Nous pouvons définir une telle fonction avec la commande `def f(x):` et le mot-clé `return` qui calcule une expression linéaire avec la variable `x`.
+
+Voici la définition de la fonction et cette fonction appelée avec trois valeurs particuliers: 3, 6, et 9.
+
+```{exercise}
+Changez la fonction en $ f(x) = 2x - 3 $. 
+```
 
 ```{codeplay}
-:file: return3.py
+def f(x):
+    return 0.5*x + 2
+
+print('f(3) =', f(3))
+print('f(6) =', f(6))
+print('f(9) =', f(9))
+```
+
+## Tracer une fonction
+
+Nous pouvons tracer une fonction `f(x)` comme graphe dans un système de coordonnées.
+
+La fonction `axis()` affiche l'axe x dans une plage de -5 à +5.
+
+- La fonction `stamp()` ajoute une flèche (c'est la forme de la tortue),
+- La fonction `write('x')` ajoute l'étiquette de l'axe x.
+
+```{codeplay}
 from turtle import *
+hideturtle()
+d = 50
 
-color('red', 'lime')
-forward(100)
-left(90)
-forward(50)
+def axis():
+    for x in range(-5, 6):
+        goto(x*d, 0)
+        dot()
+        write(x)
+    forward(d/2)    # avance la distance d/2
+    stamp()         # ajoute la flèche
+    write('x')      # écrit l'étiquette x
+    up()
 
-print('Couleur:')
-print('color =', color())
-print('pen =', pencolor())
-print('fill =', fillcolor())
-print('mode =', colormode())
-
-print('\nPosition:')
-print('h =', heading())
-print('x =', xcor())
-print('y =', ycor())
-print('pos =', pos())
-
-print('\nFenêtre:')
-print('h =', window_height())
-print('w =', window_width())
+axis()
 ```
 
-## Renvoyer une couleur
+Ensuite nous définissons une fonction `tracer(f, c)` qui permet de tracer une fonction `f` avec une couleur `c`.
 
-Avec un argument, ces fonctions permettent de définir une couleur de la tortue et renvoient la valeur `None`.
+L'argument `f` est la fonction à afficher.
 
-- `color(c)`
-- `fillcolor(c)`
-- `pencolor(c)`
-
-Sans un argument ces fonctions renvoient la couleur actuelle.
+```{exercise}
+Changez la pente de f en 0.4 et la pente de g en -0.3.  
+Définissez une fonction $ h(x) = 0.1 x - 2 $ et affichez-la avec la couleur verte.
+```
 
 ```{codeplay}
-:file: return4.py
 from turtle import *
+hideturtle()
+d = 50
 
-width(10)
-print('color =', color('red', 'blue'), color())
-forward(100)
-print('pencolor =', pencolor('lime'), pencolor())
-print('fillcolor =', fillcolor('pink'), fillcolor())
-forward(100)
+def axis():
+    for x in range(-5, 6):
+        goto(x*d, 0)
+        dot()
+        write(x)
+    forward(d/2)
+    stamp()
+    write('x')
+    up()
+===
+def f(x):
+    return 0.5*x + 1
+
+def g(x):
+    return -0.5*x + 1
+    
+def tracer(f, c):
+    color(c)
+    for x in range(-5, 6):
+        goto(x*d, f(x)*d)
+        down()
+        dot()
+        write(round(f(x), 1))
+    up()
+
+axis()        
+tracer(f, 'red')
+tracer(g, 'blue')
 ```
 
-## Renvoyer la position
+## Fonction quadratique
 
-Ces fonctions permettent de contrôler la position de la tortue et renvoient `None`.
+En mathématique une fonction quadratique a la forme:
 
-- `setx(x)`
-- `setx(y)`
-- `setpos(x, y)`
+$$ f(x) = a x^2 + b x + c $$
 
-Ces fonctions permettent de lire la position actuelle de la tortue et renvoient une valeur numérique.
+Donc voici deux fonctions quadratiques tracées en rouge et bleu.
 
-- `xcor()`
-- `ycor()`
-- `pos()`
-
-Les fonctions `seth(a)` et `geth()` permettent de définir ou renvoyer l'orientation actuelle (heading) de la tortue.
+```{exercise}
+Définissez une troisième fonction `h(x)` et affichez-la avec la couleur verte.
+```
 
 ```{codeplay}
-:file: return5.py
 from turtle import *
+hideturtle()
+d = 50
 
-width(5)
-print('x =', setx(100), xcor())
-print('y =', sety(50), ycor())
-print('pos =', setpos(0, 100), pos())
-print('h =', seth(90), heading())
+def axis():
+    for x in range(-5, 6):
+        goto(x*d, 0)
+        dot()
+        write(x)
+    forward(d/2)
+    stamp()
+    write('x')
+    up()
+===
+def f(x):
+    return 0.2*x**2 - 2
+
+def g(x):
+    return -0.3*x**2 + x + 2
+    
+def tracer(f, c):
+    color(c)
+    for x in range(-5, 6):
+        goto(x*d, f(x)*d)
+        down()
+        dot()
+        write(round(f(x), 1))
+    up()
+
+axis()        
+tracer(f, 'red')
+tracer(g, 'blue')
 ```
 
-## Fonctions natives
+## Renvoyer des tuples
 
-Voici quelques fonctions natives, c'est-à-dire des fonctions standards qui font partie de Python.
+Dans un tuple avec multiples points, nous pouvons extraire un point particulier en utilisant un indice entre crochets. Nous obtenons :
 
-Les fonctions suivantes renvoient un nombre sous forme binaire, octale ou hexadécimale.
+- le premier point avec l'indice 0
+- le dernier point avec l'indice -1
 
 ```{codeplay}
-:file: ret6.py
-n = 123
-print(n)
-print('bin =', bin(n))
-print('oct =', oct(n))
-print('hex =', hex(n))
+points = ((20, 20), (100, -40), (130, 80))
+
+print(points)       # tous les points
+print(points[0])    # le premier point
+print(points[-1])   # le dernier point
 ```
 
-Ces fonctions renvoient la valeur absolue, la puissance et la valeur arrondie.
+La fonction `first(points)` prend comme argument un tuple de points et renvoie seulement le premier point.
 
-```{codeplay}
-:file: return7.py
-n = -3.1415
-print(n)
-print('abs =', abs(n))
-print('pow =', pow(n, 3))
-print('round =', round(n, 2))
+```{exercise}
+Ajoutez une fonction `last(points)` qui renvoie seulement le dernier point et affichez le résultat.
 ```
 
-Ces fonctions renvoient le minimum, le maximum et la somme d'une séquence de nombres.
-
 ```{codeplay}
-:file: return8.py
-seq = (1, 3, 99, 9)
-print(seq)
-print('max =', max(seq))
-print('min =', min(seq))
-print('sum =', sum(seq))
+points = ((20, 20), (100, -40), (130, 80))
+
+def first(points):
+    return points[0]
+
+print('first =', first(points))
 ```
 
-Ces fonctions renvoient la longueur d'une chaine, l'entier du code Unicode, et le symbole Unicode associé à un entier.
+L'opérateur `+` permet de concaténer le premier point à la fin du tuple `points`.  
+Attention de placer le dernier point dans un tuple
 
 ```{codeplay}
-:file: return9.py
-print(len('hello'))
-print(ord('😀'))
-print(chr(128522))
+points = ((20, 20), (100, -40), (130, 80))
+
+print(points + points[0])           # ajoute x et y
+print(points + (points[0]))         # parenthèses mathématiques
+print(points + (points[0], ))       # parenthèses de tuple, ajoute (x, y)
+```
+
+La fonction `polyline(points, c)` affiche le polygone fermé qui est donné par le tuple de coordonnées `points`. 
+
+```{codeplay}
+from turtle import *
+up()
+
+points = ((20, 20), (100, -40), (130, 80))
+
+def polyline(points, c):
+    color(c)
+    for p in points + (points[0],):
+        goto(p)
+        down()
+        dot()
+    up()
+
+polyline(points, 'red')
+```
+
+## Extraire x et y
+
+L'expression `for p in points` parcourt tous les éléments dans `points` et les associe à `p`.
+Nous pouvons l'utiliser pour extraire x ou y.
+
+```{codeplay}
+points = ((20, 20), (100, -40), (130, 80))
+
+print(tuple(p for p in points))         # le point p entier (x, y)
+print(tuple(p[0] for p in points))      # seulement le premier élément (x)
+print(tuple(p[1] for p in points))      # seulement le deuxième élément (y)
+```
+
+Une autre façon d'obtenir la même chose est:
+
+```{codeplay}
+points = ((20, 20), (100, -40), (130, 80))
+
+print(points)
+print(tuple(x for (x, y) in points))
+print(tuple(y for (x, y) in points))
+```
+
+La fonction `xcors(points)` retourne le tuple des coordonnées x des points du polygone défini par `points`.
+
+La fonction `ycors(points)` retourne le tuple des coordonnées y des points du polygone défini par `points`.
+
+
+```{codeplay}
+points = ((20, 20), (100, -40), (130, 80))
+
+def xcors(points):
+    return tuple(x for (x, y) in points)
+
+def ycors(points):
+    return tuple(y for (x, y) in points)
+
+print(points)
+print(xcors(points))
+print(ycors(points))
+```
+
+## Changer l'échelle
+
+La fonction `scale(points, s)` retourne les points du polygone défini par `points` qui est changé d'échelle par le facteur de taille `s` (size ou scale) qui est définie par un tuple `(dx, dy)`.
+
+```{exercise}
+Ajoutez un point supplémentaire au polygone pour en faire un rectangle.  
+En plus, changez l'échelle du polygone d'un facteur (4, 1) et affichez-le avec la couleur verte.
+```
+
+```{codeplay}
+from turtle import *
+dot()
+up()
+
+points = ((-20, -20), (50, -40), (30, 80))
+
+def polyline(points, c):
+    color(c)
+    for p in points + (points[0],):
+        goto(p)
+        down()
+        dot()
+    up()
+
+def scale(points, s):
+    return tuple((x * s[0], y * s[1]) for (x, y) in points)
+
+polyline(points, 'red')
+polyline(scale(points, (2, 2)), 'blue')
+```
+
+## Changer la position
+
+La fonction `place(points, p)` retourne les points du polygone défini par `points` qui est déplacé par le vecteur de position `p`.
+
+```{exercise}
+Ajoutez un point supplémentaire au polygone pour en faire un rectangle.  
+Changez la position du polygone d'un vecteur (-200, 100) et affichez-le avec la couleur verte.
+```
+
+```{codeplay}
+from turtle import *
+dot()
+up()
+
+points = ((-20, -20), (50, -40), (30, 50))
+
+def polyline(points, c):
+    color(c)
+    for p in points + (points[0],):
+        goto(p)
+        down()
+        dot()
+    up()
+
+def place(points, p):
+    return tuple((x+p[0], y+p[1]) for (x, y) in points)
+
+polyline(points, 'red')
+polyline(place(points, (-100, 0)), 'blue')
+```
+
+## Centre du polygone
+
+La fonction `center(points)` retourne le point qui est au centre du polygone défini par `points`.
+
+Le centre est calculé en prenant la valeur moyenne des coordonnées x et la valeur moyenne des coordonnées y.
+
+```{codeplay}
+from turtle import *
+up()
+
+poly1 = ((-20, -20), (50, -40), (30, 50))
+poly2 = ((-120, -120), (-250, -40), (-130, 50))
+
+def polyline(points, c):
+    color(c)
+    for p in points + (points[0],):
+        goto(p)
+        down()
+        dot()
+    up()
+
+def center(points):
+    n = len(points)
+    xc = sum(tuple(x for (x, y) in points))/n
+    yc = sum(tuple(y for (x, y) in points))/n
+    return (xc, yc)
+
+polyline(poly1, 'red')
+goto(center(poly1))
+dot()
+
+polyline(poly2, 'blue')
+goto(center(poly2))
+dot()
+```
+
+## Rectangle du polygone
+
+La fonction `box(points)` retourne les 4 points du rectangle qui entoure le polygone défini par `points`.
+
+```{exercise}
+Ajoutez 1-2 points supplémentaire aux deux polygones.  
+Vérifiez que la boite s'adapte pour toujours entourer exactement les points.
+```
+
+```{codeplay}
+from turtle import *
+up()
+
+poly1 = ((-20, -20), (50, -40), (30, 50))
+poly2 = ((-120, -120), (-250, -40), (-130, 50))
+
+def polyline(points, c):
+    color(c)
+    for p in points + (points[0],):
+        goto(p)
+        down()
+        dot()
+    up()
+
+def box(points):
+    x0 = min(tuple(x for (x, y) in points))
+    x1 = max(tuple(x for (x, y) in points))
+    y0 = min(tuple(y for (x, y) in points))
+    y1 = max(tuple(y for (x, y) in points))
+    return ((x0, y0), (x1, y0), (x1, y1), (x0, y1)) 
+
+polyline(poly1, 'red')
+polyline(box(poly1), 'blue')
+
+polyline(poly2, 'red')
+polyline(box(poly2), 'blue')
 ```

@@ -93,7 +93,7 @@ Cliquez sur {logicref}`tryout_and.x|l'entrée $X$` ou {logicref}`tryout_and.y|l'
 ```
 
 ````{dropdown} Pour aller plus loin
-Comment une porte **ET** est-elle elle-même construite ? Cela a déjà été mentionné : avec d'autres composants électroniques plus simples. En simplifiant un peu, on peut considérer qu'une porte **ET** est constituée de deux transistors :
+Comment une porte **ET** est-elle elle-même construite ? Cela a déjà été mentionné : avec d'autres composants électroniques plus simples. En simplifiant un peu, on peut considérer qu'une porte **ET** est constituée de deux transistors (avec quelques résistances en plus) :
 
 ```{figure} media/andgatetransistor.svg
 ---
@@ -101,7 +101,7 @@ width: 200px
 ---
 ```
 
-Ici, les deux transistors sont les composants symbolisés par un cercle. Rappelons qu'ils laissent passer du courant de haut en bas lorsqu'ils détectent un courant sur l'entrée qui vient de la gauche. Ici, comme on a en haut une tension de 4 volts, on aura une tension similaire sur la sortie **Z** que si à la fois les entrées **X** et **Y** sont «actives» — donc lorsque les deux transistors sont «ouverts». Sinon, on aura une tension de 0 volt sur la sortie **Z**.
+Ici, les deux transistors sont les composants symbolisés par un cercle. Rappelons qu'ils laissent passer du courant de haut en bas lorsqu'ils détectent un courant sur l'entrée qui vient de la gauche. Ici, comme on a en haut une tension de 5 volts, on aura une tension similaire sur la sortie $Z$ que si à la fois les entrées $X$ et $Y$ sont «actives» — donc lorsque les deux transistors sont «ouverts». Sinon, on aura une tension de 0 volt sur la sortie $Z$.
 ````
 
 
@@ -389,7 +389,8 @@ Cette fonction s'appelle «ou exclusif», car pour avoir un 1 de sortie, elle ex
 }
 ```
 
-```{admonition} Exercice 1 : vérification d’une porte
+```{exercise} Vérification d’une porte
+
 Vérifiez que la porte **OU-X** se comporte bien comme le circuit ci-dessous réalisé avec des portes **ET**, **OU** et **NON**.
 ```
 
@@ -456,7 +457,8 @@ Ce qui reste à définir en complétant avant la porte **ET**, c'est l'exclusion
 
 La lecture finale du circuit est donc «la sortie $Z$ sera 1 lorsque ces deux conditions sont vraies en même temps (selon {logicref}`xor_build_step2.and2|la porte **ET** de droite`) : (1) {logicref}`xor_build_step2.or|le **OU** de $X$ et $Y$ vaut 1`, et (2) {logicref}`xor_build_step2.{and1,inv}|$X$ et $Y$ ne sont pas les deux en même temps à 1`».
 
-````{admonition} Exercice 2 : analyse d'un circuit
+````{exercise} Analyse d'un circuit
+
 Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la place, on a inséré deux sorties intermédiaires, $I$ et $J$, qui sont les deux signaux qui allaient précédemment à la porte **ET** :
 
 ```{logic}
@@ -608,7 +610,8 @@ On fait également les constats suivants :
  * l'approche systématique décrite ici ne livre pas forcément le circuit le plus compact: on a obtenu un circuit avec cinq portes pour réaliser un **OU-X** alors que l'approche ad hoc a conduit à la construction d'un circuit à quatre portes.
 
 
-`````{admonition} Exercice 3 : analyse d'un circuit
+`````{exercise} Analyse d'un circuit
+
 En annotant le schéma logique avec les quatre cas de figure possibles pour les entrées $X$ et $Y$, faites l'analyse du circuit **OU-X** ci-dessus construit avec l'approche systématique et montrez que la table de vérité ainsi reconstituée est la même que celle de la porte **OU-X**.
 
 ````{dropdown} Indice
@@ -641,7 +644,8 @@ En annotant le schéma logique avec les quatre cas de figure possibles pour les 
 `````
 
 
-`````{admonition} Exercice 4 : porte cachée
+`````{exercise} Porte cachée
+
 Quelle est la porte cachée de ce circuit ?
 ````{logic}
 :height: 100
@@ -663,7 +667,8 @@ C'est une porte **OU**.
 ```
 `````
 
-`````{admonition} Exercice 5 : circuit défectueux
+`````{exercise} Circuit défectueux
+
 Analysez ce circuit. De quel type de portes est-il constitué ? Fonctionne-t-il correctement ? Déterminez ce qui pose problème. Dites ce que fait ce circuit une fois corrigé et écrivez sa table de vérité.
 
 ````{logic}
@@ -731,7 +736,7 @@ Ce circuit, une fois corrigé, implémente en fait un **ET** à trois entrée $X
 `````
 
 
-`````{admonition} Exercice 6 : conception d'un circuit
+`````{exercise} Conception d'un circuit
 
 Écrivez la table de vérité de ce circuit, dont une partie est masquée :
 

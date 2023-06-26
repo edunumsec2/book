@@ -19,17 +19,15 @@ import sys
 
 # -- Project information -----------------------------------------------------
 
-project = 'Modulo2'
-copyright = 'CC-BY-NC-SA'
-author = 'Groupe de travail DGEP, EPFL, HEP, UNIL'
+project = 'Modulo'
+copyright = 'CC BY-NC-SA'
+author = 'Groupe de travail DGEP, EPFL, HEP-VD, UNIL'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
 
 
 # -- General configuration ---------------------------------------------------
-
-latex_mode = False
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -47,10 +45,16 @@ extensions = [
     'timeline',
     'exercise',
     'conversions',
+    'gallery',
+    'media',
+    'breaks',
+    'todo',
+    'sphinx.ext.todo'
 ]
 
-glossary_doc = 'glossaire.csv'
-
+glossary_doc = 'glossaire'
+# uncomment to show todos (or preferably compile with "-D todo_include_todos=1" flag  to avoid contaminating the git repo and the public online version with todos)
+# todo_include_todos = True
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['../templates']
 html_extra_path = ['../assets']
@@ -67,17 +71,12 @@ language = 'fr'
 # This pattern also affects html_static_path and html_extra_path.
 
 
-# exclude_patterns = ['prog1', 'prog2','archi','glossaire']
-
-#root_doc = 'rep-info/index'
-
-if tags.has('latex_mode'): 
-    latex_mode = True
-
+latex_mode = tags.has('latex_mode')
     
-if latex_mode:
-    exclude_patterns = ['prog1', 'prog2', 'hist','algo2', 'projets','resx']
+Chapters = {"rep-info", "prog1", "algo1", "archi",   "prog2", "algo2", "resx", "projets", "hist", "glossaire"}
 
+if latex_mode:
+    exclude_patterns = ['prog1', 'prog2', 'hist', 'projets', 'resx']
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -108,8 +107,8 @@ html_theme_options = {
 
         "color-background-primary": "white", # for content
         "color-background-secondary": "#f8f9fb", # for navigation + ToC
-        "color-background-hover": "#efeff4ff", # for navigation-item hover
-        "color-background-over--transparent": "#efeff400", 
+        "color-background-hover": "white", # for navigation-item hover
+        "color-background-over--transparent": "#efeff400",
         "color-background-border": "#eeebee", # for UI borders
 
         # Announcement colors
@@ -119,10 +118,11 @@ html_theme_options = {
         # Brand colors
         "color-brand-primary": "#8044FF", # violet
         "color-brand-content": "#8044FF", # violet
-        
+
         # Admonition font size
         "admonition-font-size": "0.9rem",
         "admonition-title-font-size": "0.9rem",
+
     },
     "dark_css_variables": {
 
@@ -155,12 +155,12 @@ html_theme_options = {
     },
 }
 
-html_css_files = ['styles/global.css', 'styles/reactions.css', 'styles/progress.css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']
+html_css_files = ['styles/global.css', 'styles/global_appr.css', 'styles/reactions.css', 'styles/progress.css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['./static']
+html_static_path = ['../static', './static']
 html_js_files = ['https://unpkg.com/@popperjs/core@2', 'scripts/reactions.js', 'scripts/progress.js', 'scripts/dark.js', 'scripts/frames.js']
 
 pygments_sytle = "sphinx"
@@ -173,16 +173,20 @@ today_fmt = '%d %B %Y' # date format
 
 latex_elements = {
     'papersize': 'a4paper',
-    'preamble': r'\input{../../../src/static/latex/customize}',
+    'preamble': r'\input{../../../src/static/latex/customize} \fvset{fontsize=\small}',
     'pxunit': '0.5bp',
     'figure_align': 'H',
-    'maketitle':  '\maketitle'
+    'maketitle':  r'\maketitle\cleardoublepage',
+    # some command redefinitions only take effect after the first \tableofcontents, so we add this hook
+    'tableofcontents': '\\sphinxtableofcontents\n\n\\input{../../../src/static/latex/customize_doc}\n',
+    'pointsize': '11pt',
+    'sphinxsetup' : r'verbatimsep=8pt',
 }
 
 
 #latex_documents = ('modulo','modulo.tex',"Modulo: une introduction à l'informatique", "John","manual","True")
 latex_additional_files = ["../static/assets/modulo-head-banner.png","../static/assets/by-nc.eu.png"]
-latex_documents = [('index','modulo.tex',"Modulo: un introduction à l'informatique", "Groupe de travail DGEP, EPFL, HEP, UNIL","manual","True")]
+latex_documents = [('index','modulo.tex',"Modulo. Une~introduction~à~l'informatique", "Groupe de travail DGEP, EPFL, HEP-VD, UNIL","manual","True")]
 
 latex_show_urls = 'footnote'
 

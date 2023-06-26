@@ -1,4 +1,4 @@
-# Architecture générale et composants
+# Architecture générale
 
 
 
@@ -114,7 +114,7 @@ Le disque dur se présente sous la forme d'un boîtier rectangulaire, vissé au 
 
 Il est relié à la carte mère grâce à une nappe (câble plat) de type IDE ou grâce aux interfaces SATA (Serial ATA) ou SCSI. Un cavalier à positionner à l'arrière du boîtier permet généralement de le désigner comme disque «Maître», le disque dur principal (Master) ou comme «Esclave», un disque auxiliaire (Slave). 
 
-Les disques durs aujourd'hui peuvent contenir des centaines de giga-octets, voire plusieurs terra-octets de données.
+Les disques durs aujourd'hui peuvent contenir des centaines de gigaoctets, voire plusieurs téraoctets de données.
 
 ```{figure} media/second_disquedur_23.png
 ---
@@ -147,7 +147,7 @@ Sur certains ordinateurs portables d'entrée de gamme, le disque dur ou le SSD s
 **Le lecteur/graveur CD/DVD**
 Un ordinateur peut encore aujourd'hui être équipé d'un graveur, vissé au boîtier, glissé dans un emplacement ouvert sur l'avant du PC, permettant ainsi l'ouverture du tiroir qui recevra le disque optique que l'on appelle plus communément CD (Compact Disc) ou DVD (Digital Versatile Disc). Il est connecté à la carte mère par un câble plat (nappe) IDE ou SATA. 
 
-```{figure} media/LecterCD.png
+```{figure} media/LecteurCD.png
 ---
 width: 700
 height: 400

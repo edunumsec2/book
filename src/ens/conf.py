@@ -19,9 +19,9 @@ import sys
 
 # -- Project information -----------------------------------------------------
 
-project = 'Modulo2'
-copyright = '2022, Groupe de travail DGEP, EPFL, HEP, UNIL'
-author = 'Groupe de travail DGEP, EPFL, HEP, UNIL'
+project = 'Modulo'
+copyright = 'CC BY-NC-SA'
+author = 'Groupe de travail DGEP, EPFL, HEP-VD, UNIL'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
@@ -45,6 +45,9 @@ extensions = [
     'timeline',
     'exercise',
     'conversions',
+    'gallery',
+    'media',
+    'breaks',
 ]
 
 glossary_doc = 'glossaire'
@@ -88,8 +91,8 @@ html_theme_options = {
 
         "color-background-primary": "white", # for content
         "color-background-secondary": "#f8f9fb", # for navigation + ToC
-        "color-background-hover": "#efeff4ff", # for navigation-item hover
-        "color-background-over--transparent": "#efeff400", 
+        "color-background-hover": "white", # for navigation-item hover
+        "color-background-over--transparent": "#efeff400",
         "color-background-border": "#eeebee", # for UI borders
 
         # Announcement colors
@@ -103,6 +106,9 @@ html_theme_options = {
         # Admonition font size
         "admonition-font-size": "0.9rem",
         "admonition-title-font-size": "0.9rem",
+
+        # Sidebar (left)
+        # "color-sidebar-background": "#f0e9ff",
     },
     "dark_css_variables": {
         # Base colors
@@ -128,15 +134,18 @@ html_theme_options = {
         # Admonition font size
         "admonition-font-size": "0.9rem",
         "admonition-title-font-size": "0.9rem",
+
+        # Sidebar (left)
+        # "color-sidebar-background": "#131416",
     },
 }
 
-html_css_files = ['styles/global.css', 'styles/reactions.css', 'styles/progress.css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']
+html_css_files = ['styles/global.css', 'styles/global_ens.css', 'styles/reactions.css', 'styles/progress.css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['./static']
+html_static_path = ['../static', './static']
 html_js_files = ['https://unpkg.com/@popperjs/core@2', 'scripts/reactions.js', 'scripts/progress.js', 'scripts/dark.js', 'scripts/frames.js']
 
 pygments_sytle = "sphinx"

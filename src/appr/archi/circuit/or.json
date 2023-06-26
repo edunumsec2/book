@@ -1,0 +1,11 @@
+{
+  "v": 3,
+  "in": [
+    {"pos": [50, 30], "id": 0, "name": "1", "val": 0, "isPushButton": true},
+    {"pos": [50, 80], "id": 1, "name": "2", "val": 0, "isPushButton": true},
+    {"pos": [50, 130], "id": 2, "name": "3", "val": 0, "isPushButton": true}
+  ],
+  "gates": [{"type": "OR", "pos": [220, 40], "in": [6, 7], "out": 8}],
+  "out": [{"pos": [300, 150], "orient": "s", "id": 10}, {"pos": [350, 150], "orient": "s", "id": 11}],
+  "wires": [[0, 6], [2, 7], [8, 11]]
+}

@@ -1,5 +1,6 @@
 (prog1.write)=
-# Typographier - `write()`
+
+# *Typographier - `write()`
 
 Dans ce chapitre, nous allons voir la **composition typographique** d'un texte dans un contexte graphique. Nous allons découvrir sa taille, sa couleur, sa police et son alignement. Nous allons voir que :
 
@@ -20,7 +21,7 @@ La fonction `write()` écrit un texte dans le canvas de la tortue. Avec des opti
 
 La fonction `write()` permet d'afficher un texte à la position de la tortue.
 
-```{admonition} Exercice
+```{exercice}
 Déplacez la tortue quelque part et ajoutez un deuxième bout de texte.
 ```
 
@@ -35,30 +36,32 @@ write('ceci est une phrase écrite par la tortue.')
 La fonction `write()` possède un paramètre optionnel `font` pour indiquer la police, la taille et le style.
 La valeur par défaut est `('Arial', 8, 'normal')`
 
-```{admonition} Exercice
-Essayez de trouvez la taille maxiumum de texte que vous pouvez écrire.
+```{exercise}
+Déplacez la tortue est essayez une taille encore plus grande.
 ```
 
 ```{codeplay}
 from turtle import *
 
-left(90)
-forward(120)
+write(12, font=('Arial', 12))       # affiche un nombre
 
-write(8, font=('Arial', 8))
+goto(100, 100)
+write(pos(), font=('Arial', 18))    # affiche le résultat d'une fonction
 
-backward(18)
-write(12, font=('Arial', 12))
-
-backward(24)
-write(18, font=('Arial', 18))
+goto(-200, 80)
+f = ('Arial', 36)
+write(f, font=f)                    # affiche le résultat d'une variable
 ```
 
-En utilisant une variable ``taille`` nous pouvons aussi parcourir un tuple de nombres. A l'intérieur de la boucle nous utilisons cette variable ``taille`` trois fois :
+En utilisant une variable `taille` nous pouvons aussi parcourir un tuple de nombres. À l'intérieur de la boucle, nous utilisons cette variable `taille` trois fois :
 
-- pour calculer la distance entre les lignes (dans ``backward()``)
-- pour l'afficher (dans ``write()``)
-- pour choisir la taille (dans l'option ``font=()``)
+- pour calculer la distance entre les lignes, dans `backward(1.5  * taille)`
+- pour l'afficher, dans `write(taille)`
+- pour choisir la taille, dans l'option `font=(... taille)`
+
+```{exercise}
+Affichez encore la taille 80.
+```
 
 ```{codeplay}
 from turtle import *
@@ -80,8 +83,8 @@ En typographie, une **police d'écriture** est un ensemble de signes graphiques 
 - **Didot** - police ancienne et élégante
 - **Zapfino** - police manuscrite
 
-```{admonition} Exercice
-Ecrivez un poème de 3-4 lignes en style manuscrit utilsant la police Zapfino.
+```{exercise}
+Ajoutez la police **Didot** qui est une police élégante, et la police **Zapfino** qui est une police manuscrite.
 ```
 
 ```{codeplay}
@@ -91,24 +94,18 @@ left(90)
 forward(100)
 
 write('Arial', font=('Arial', 24))
-back(60)
+backward(60)
 
 write('Times', font=('Times', 24))
-back(60)
+backward(60)
 
 write('Courier', font=('Courier', 24))
-back(60)
-
-write('Didot', font=('Didot', 24))
-back(60)
-
-write('Zapfino', font=('Zapfino', 24))
 ```
 
-En utilisant une variable ``police`` nous pouvons aussi parcourir un tuple de chaînes de caractères qui représentent des polices. A l'intérieur de la boucle nous utilisons cette variable ``police`` deux fois :
+En utilisant une variable `police` nous pouvons aussi parcourir un tuple de chaînes de caractères qui représentent des polices. À l'intérieur de la boucle, nous utilisons cette variable `police` deux fois :
 
-- pour l'afficher (dans ``write()``)
-- pour choisir la police (dans l'option ``font=()``)
+- pour l'afficher, dans `write(police)`
+- pour choisir la police, dans l'option `font=(police, ...)`
 
 ```{codeplay}
 from turtle import *
@@ -125,11 +122,11 @@ for police in ('Arial', 'Times', 'Courier', 'Didot', 'Zapfino'):
 Le troisième argument présente le style de la police :
 
 - gras (`bold`)
-- cursive (`italic`)
-- gras et cursive (`bold italic`)
+- cursif (`italic`)
+- gras et cursif (`bold italic`)
 
-```{admonition} Exercice
-Ajoutez un quatrième texte avec le style gras et cursive.
+```{exercise}
+Ajoutez un quatrième texte avec le style gras et cursif.
 ```
 
 ```{codeplay}
@@ -147,7 +144,7 @@ backward(90)
 write('bold', font=('Arial', 48, 'bold'))
 ```
 
-En utilisant une variable ``style`` nous pouvons aussi parcourir un tuple de chaînes de caractères qui représentent les 4 styles possibles. A l'intérieur de la boucle nous utilisons cette variable ``style`` deux fois :
+En utilisant une variable ``style`` nous pouvons aussi parcourir un tuple de chaînes de caractères qui représentent les 4 styles possibles. À l'intérieur de la boucle, nous utilisons cette variable ``style`` deux fois :
 
 - pour l'afficher (dans ``write()``)
 - pour choisir le style (dans l'option ``font=()``)
@@ -170,8 +167,8 @@ Le paramètre optionnel `align` permet de choisir parmi 3 types d'alignements :
 - centre (`'center'`)
 - droite (`'right'`)
 
-```{admonition} Exercice
-Ecrivez 3-4 lignes de texte en forme de poème qui sont centrées.
+```{exercise}
+Écrivez 3-4 lignes de texte en forme de poème qui sont centrées.
 ```
 
 ```{codeplay}
@@ -189,7 +186,7 @@ for a in ('left', 'center', 'right'):
 Le paramètre optionnel `move` permet de choisir si la tortue se déplace à la fin du texte. Par défaut ce paramètre est `False`.
 Ce programme place chaque mot en escalier.
 
-```{admonition} Exercice
+```{exercise}
 Que se passe-t-il si vous mettez `move=False` ?
 ```
 
@@ -206,8 +203,8 @@ for mot in mots:
 
 ## Texte en couleur
 
-```{admonition} Exercice
-Ecrivez les lignes sur la même ligne, en utilisant l'option `move=True`.
+```{exercise}
+Écrivez les lignes sur la même ligne, en utilisant l'option `move=True`.
 ```
 
 ```{codeplay}
@@ -215,10 +212,10 @@ from turtle import *
 
 right(90)
 back(100)
-for couleur in ('red', 'blue', 'lime', 'indigo'):
-    color(couleur)
+for c in ('red', 'blue', 'lime', 'indigo'):
+    color(c)
     forward(50)
-    write(couleur, font=('Arial', 24, 'bold'))
+    write(c, font=('Arial', 24, 'bold'))
 ```
 
 ```{caution}
@@ -227,8 +224,8 @@ Si vous exécutez `write()` dans ce site avec [Skulpt](https://skulpt.org), la c
 
 ## Texte aligné
 
-Le texte suivant est une phrase celèbre de *Star Wars*.
-Les mots sont alignés à gauche, au centre et à droite.
+Le texte suivant est une phrase célèbre de *Star Wars*.
+Les mots sont alignés une fois à gauche, une fois au centre et une fois à droite.
 
 ```{codeplay}
 from turtle import *
@@ -276,34 +273,6 @@ for i in range(10):
     case(i)
 ```
 
-## Scrabble
-
-Le [Scrabble](https://fr.wikipedia.org/wiki/Scrabble) est un jeu de société et un jeu de lettres où l'objectif est de cumuler des points, sur la base de tirages aléatoires de lettres, en créant des mots sur une grille carrée.
-Le jeu a été conçu par l'architecte new-yorkais Alfred Mosher Butts pendant la crise de 1929, et publié en 1931.
-
-```{codeplay}
-:file: scrabble.py
-from turtle import *
-d = 40
-speed(10)
-
-def case(lettre):
-    for i in range(4):
-        forward(d)
-        left(90)
-    forward(d/2)
-    up()
-    sety(ycor() + 8)
-    write(lettre, font=(None, 24), align='center')
-    sety(ycor() - 8)
-    down()
-    forward(d/2)
-    
-back(200)
-for c in 'SCRABBLE':
-    case(c)
-```
-
 ## WhatsApp
 
 L'application [WhatsApp](https://fr.wikipedia.org/wiki/WhatsApp) fournit un système de messagerie instantanée chiffrée de bout en bout aussi bien via les réseaux de téléphonie mobile que par Internet.
@@ -312,7 +281,7 @@ WhatsApp a remporté un grand succès au tournant des années 2010. L'applicatio
 
 En 2014, WhatsApp est acquis par Facebook pour un montant d'environ 22 milliards soit environ 350 millions de dollars par employé ou 40 dollars par utilisateur.
 
-Dans le programme ci-dessous nous allons afficher une conversation entre deux personnes dans le style d'une application de messagerie. Nous utilisons la fonctions `goto()` pour placer la tortue à une position `(x, y)` et la fonction `setx()` placer la tortune vers la marge gauche (-280) ou droite (280).
+Dans le programme ci-dessous nous allons afficher une conversation entre deux personnes dans le style d'une application de messagerie. Nous utilisons la fonction `goto()` pour placer la tortue à une position `(x, y)` et la fonction `setx()` placer la tortue vers la marge gauche (-280) ou droite (280).
 
 ```{codeplay}
 from turtle import *
@@ -406,4 +375,60 @@ Choisissez 10 mots et affichez-les avec 10 tailles différentes. La taille la pl
 from turtle import *
 
 ...
+```
+
+### TP
+
+Créez une image libre avec un nuage de mots et un poème.
+Pour exporter l'image en EPS vous devez enlever les commentaires dans les 3 lignes suivants:
+
+```
+# from tkinter import *
+# Screen().setup(width=w+40, height=h+40)
+# Screen().getcanvas().postscript(file='tp.eps')
+```
+
+```{codeplay}
+:file: tp10_classe_prenom.py
+"""
+tp10 - typographier
+
+Nom : 
+Classe :
+Date :
+
+- Nommez ce fichier : tpX_classe_prenom (minuscules, sans accents)
+
+Créez une image avec 2 parties : 
+- Nuage de mots (10+ mots)
+- Poésie (5+ lignes)
+
+- Utilisez différentes polices, tailles, et couleurs
+- Déposez sur Moodle les 3 fichiers (py, eps, jpg)
+"""
+from turtle import *
+# from tkinter import *
+
+w, h = 600, 400
+# Screen().setup(width=w+40, height=h+40)
+up()
+
+def rectangle(p, d, e, text):
+    goto(p)
+    write(text, font=('Arial', 12))
+    down()
+    for i in range(2):
+        forward(d)
+        left(90)
+        forward(e)
+        left(90)
+    up()
+     
+rectangle((-w/2, -h/2), w/2, h, 'Nuage de mots')
+rectangle((0, -h/2), w/2, h, 'Poésie')
+
+...
+
+# Screen().getcanvas().postscript(file='tp.eps')
+done()
 ```

@@ -1,6 +1,8 @@
-# Le microprocesseur
+# CPU
 
-On a précédemment détaillé les différents composants d'un ordinateur, puis étudié le fonctionnement des systèmes logiques à partir desquels on peut construire un processeur. On va à présent évoquer l'architecture de von Neumann qui décrit la façon dont le processeur s'insère dans son environnement. Les différents éléments qui constituent le processeur et qui en assurent le bon fonctionnement seront ensuite détaillés. 
+Le processeur, en anglais central processing unit (CPU), est un composant qui exécute les instructions machine des programmes informatiques.
+
+On a précédemment détaillé les différents composants et systèmes logiques à partir desquels on peut construire un processeur. On va à présent évoquer l'architecture de von Neumann qui décrit la façon dont le processeur s'insère dans son environnement. Les différents éléments qui constituent le processeur et qui en assurent le bon fonctionnement seront ensuite détaillés.
 
 ````{panels}
 
@@ -23,8 +25,8 @@ Un microprocesseur est un processeur construit avec un circuit intégré, c'est-
 
 ```
 
-
 ## Horloge et accès mémoire
+
 Un processeur est un dispositif synchrone, ce qui signifie que les opérations à l'intérieur du processeur se déroulent de manière synchrone à un temps donné. Pour assurer cette simultanéité, il faut comme pour un orchestre, donner le tempo. Cette fonction de métronome est assurée par une horloge, ou un signal d'horloge. Cette horloge est constituée d'un simple signal carré <!-- TODO: ajouter image --> dont la fréquence atteint aujourd'hui plusieurs gigahertz, c'est-à-dire plusieurs milliards de cycles par seconde.
 
 ```{admonition} La notion de *synchronisation*
@@ -49,7 +51,7 @@ Comme on l'a vu dans l'architecture de von Neumman, la mémoire contient le prog
 
 L'UCT doit accéder à la mémoire RAM en lecture ou en écriture. Les deux mécanismes sont très similaires, mais avant de regarder plus en détail comment cela fonctionne, il faut d'abord définir comment la mémoire est structurée. La mémoire RAM permet, comme on l'a vu au premier chapitre, d'accéder à tout moment à n'importe quel emplacement.
 
-Pour y accéder, le processeur envoie d'abord l'adresse au module mémoire, puis lit ou écrit la valeur via le bus d'adressage. 
+Pour y accéder, le processeur envoie d'abord l'adresse au module mémoire, puis lit ou écrit la valeur via le bus d'adressage.
 
 ```{admonition} Anecdote
 :class: attention
@@ -70,7 +72,6 @@ les données stockées dans la mémoire peuvent être des nombres, des lettres, 
 
 ```
 
-
 ```{question} Question 1
 Avec un bus d'adressage de 24 bits, quelle est la taille maximum de la mémoire ? 
 * {f}`32ko`
@@ -85,32 +86,35 @@ Quelle est la taille maximale de la mémoire pour un processeur 80286, sachant q
 * {v}`1Mo`
 ```
 
-
 ### L'unité de contrôle
+
 L'unité de contrôle reçoit les instructions en provenance de la RAM. Elle s'occupe d'activer les composants qui doivent l'être dans le microprocesseur.
 
 ### Les registres
+
 Les registres permettent de stocker des valeurs, comme la RAM, mais directement à l'intérieur du processeur. Ils fonctionnent aussi en mode lecture ou écriture. C'est l'unité de contrôle qui détermine si un registre est utilisé en lecture ou en écriture avec deux fils de connexion: *enable* et *set*.
 En principe ces registres stockent les informations en provenance de la mémoire ou le résultat d'un calcul.
 Il existe trois registres plus spécifiques :
 
 #### Le registre d'état
+
 Le registre d'état regroupe les drapeaux (en anglais *flags*). Ils servent à renseigner l'état d'exécution du processeur. Par exemple le drapeau *dépassement* s'il est mis à 1 signale qu'un dépassement de capacité est survenu, ou encore le drapeau *division par zéro* signale une division par zéro.
 
 ### Le compteur de programme
+
 Le compteur de programme (registre **PC** pour *Program Counter*) contient l'adresse mémoire de la prochaine instruction devant être exécutée. En principe l'unité de contrôle l'incrémente de un après chaque instruction, mais certaines instructions qui permettent de se *brancher* ailleurs dans le programme modifient différemment ce registre.
 
 ### Le compteur de pile
+
 Le compteur de pile (registre **SP** pour *Stack Pointer*) contient la position sur une pile. Cette dernière est une zone mémoire à laquelle on ne peut pas accéder aléatoirement, mais uniquement en empilant ou dépilant des éléments.
 
 ## L'unité arithmétique et logique
-L'unité arithmétique et logique (UAL plus communément appelée ALU en abréviation anglaise) effectue tous les calculs arithmétiques et logiques. Quelques-uns de ces composants comme l'additionneur ont été abordés dans le chapitre *De la logique à l'arithmétique*.
 
+L'unité arithmétique et logique (UAL plus communément appelée ALU en abréviation anglaise) effectue tous les calculs arithmétiques et logiques. Quelques-uns de ces composants comme l'additionneur ont été abordés dans le chapitre *De la logique à l'arithmétique*.
 
 ### Exemple : le 6502
 
 Le 6502, conçu en 1975, est le premier microprocesseur grand public avec un prix de 25$ (bien en-dessous des concurrents de cette époque). Une de ses premières utilisations pour le grand public fut la console de jeux vidéo Atari 2600. A partir de 1985, Nintendo équipe la NES d'une version modifiée du 6502. Il a équipé également le célèbre Apple II. Il a donné lieu à de nombreuses versions, jusqu'aux processeurs 16 bits actuels de dernière génération.
-
 
 ```{figure} media/6502_pad_annot_07.png
 ---
@@ -120,8 +124,6 @@ align: left
 ---
 Ce schéma détaille l'ensemble des transistors du 6502. On voit également quelques-uns des éléments principaux (horloge, registres, etc)
 ```
-
-
 
 ```{admonition} Activité
 :class: note
@@ -142,6 +144,7 @@ Ce simulateur reproduit le fonctionnement complet du 6502 jusque dans l'activit�
 <!-- REVIEW/Olivier: Alors là, sérieusement, c'est super-difficile à voir ce qui se passe... Un peu en effet ! Mais bon.../CD -->
 
 ```
+
 <br> <br>
 
 ````{admonition} Aller plus loin
@@ -151,13 +154,14 @@ La partie qui suit présente de manière plus approfondie certaines spécificit�
 ````
 
 ## Processeur à noyau unique
-C'est le processeur standard : un processeur à noyau unique ou CPU utilise un seul noyau à l'intérieur du processeur. 
+
+C'est le processeur standard : un processeur à noyau unique ou CPU utilise un seul noyau à l'intérieur du processeur.
 
 Avantages :
 
-Un processeur à un seul cœur consomme moins d'énergie que les processeurs à plusieurs cœurs. Ceci est surtout problématique pour les appareils mobiles, oû le problème de l'autonomie de la batterie est essentiel. 
+Un processeur à un seul cœur consomme moins d'énergie que les processeurs à plusieurs cœurs. Ceci est surtout problématique pour les appareils mobiles, oû le problème de l'autonomie de la batterie est essentiel.
 Comme les processeurs à cœur unique consomment moins d'énergie, l'ensemble du système qu'ils font fonctionner chauffe moins.
-Un processeur à un seul cœur est toujours adapté pour la plupart des applications : vérification du courrier, navigation sur Internet, téléchargement de données, etc. peuvent toujours être traitées par un processeur à noyau unique. 
+Un processeur à un seul cœur est toujours adapté pour la plupart des applications : vérification du courrier, navigation sur Internet, téléchargement de données, etc. peuvent toujours être traitées par un processeur à noyau unique.
 
 Inconvénients :
 
@@ -165,8 +169,8 @@ C'est un processeur relativement lent. Il n'a pas une grande puissance de calcul
 Comme les applications modernes nécessitent une grande puissance de traitement, un processeur monocœur qui les fait fonctionner peut se bloquer, paralysant ainsi l'ensemble du système alors « planté ».
 
 ## Processeur à double cœur
-Un processeur à double cœur possède deux cœurs pour exécuter les opérations, intégrés dans un circuit unique pour se comporter comme une seule unité - un seul processeur -, à la différence d'un système multiprocesseur ; toutefois, ces cœurs possèdent leurs propres contrôleurs et caches, ce qui leur permet de travailler plus rapidement que les processeurs à cœur unique.
 
+Un processeur à double cœur possède deux cœurs pour exécuter les opérations, intégrés dans un circuit unique pour se comporter comme une seule unité - un seul processeur -, à la différence d'un système multiprocesseur ; toutefois, ces cœurs possèdent leurs propres contrôleurs et caches, ce qui leur permet de travailler plus rapidement que les processeurs à cœur unique.
 
 ```{figure} media/2coeurs.png
 ---
@@ -179,7 +183,6 @@ Microprocesseur bicœur
 
 <br> <br>
 
-
 Avantages :
 
 Un processeur double cœur exécute l'ensemble des tâches beaucoup plus rapidement. Si un processeur à noyau unique est chargé de deux tâches différentes, il ne peut pas les effectuer simultanément. Il passe à toutes les tâches une par une, en série, alors qu'un processeur à double cœur peut effectuer les deux opérations en même temps, en parallèle.
@@ -190,8 +193,8 @@ Inconvénients :
 Peu d'opérations nécessitent réellement la puissance des processeurs double cœur. Une grande partie de la puissance est ainsi gaspillée et vide rapidement la batterie. Un appareil mobile utilisé à des fins informatiques générales, telles que la vérification du courrier électronique, la navigation sur Internet, la saisie de documents et le partage de données, ne nécessite pas réellement la puissance d'un processeur double cœur.
 Pour ces raisons, de nombreux développeurs d'applications mobiles ne programment pas leurs applications pour qu'elles fonctionnent avec des processeurs à multiple cœur, les rendant ainsi incompatibles avec les mobiles qui fonctionnent toujours avec des processeurs à double ou multiple cœur.
 
-
 ## Les processeurs quadricœur et autres processeurs à cœurs multiples
+
 En termes simples, un processeur quadricœur possède quatre cœurs et il en va de même pour un processeur hexacœur (six cœurs), octocœur (huit cœurs), etc.. Ces cœurs peuvent être soit sur le même circuit intégré, soit sur le même boîtier de puce.
 
 ```{figure} media/4coeurs.png
@@ -203,7 +206,7 @@ align: left
 Microprocesseur quadricœur
 ```
 
-<br> 
+<br>
 
 ```{figure} media/8coeurs.png
 ---
@@ -216,7 +219,6 @@ Microprocesseur octocœur
 
 <br> <br>
 
-
 Avantages :
 
 Le multitâche est le principal avantage des processeurs quadri ou octocœurs. Un plus grand nombre de cœurs offre évidemment une plus grande capacité à effectuer plusieurs tâches en parallèle.
@@ -228,15 +230,12 @@ Inconvénients :
 
 ... encore et toujours la consommation énergétique, vidant très rapidement la batterie.
 
-
 Le nombre de cœurs de processeur est important dans certaines activités comme le *gaming* : il est de plus en plus courant de trouver des processeurs hexa-cœurs, ou octo-cœurs ; [les dernières générations de multiprocesseurs possèdent jusqu'à 12 ou 16 cœurs](https://www.futura-sciences.com/tech/comparatifs/meilleur-processeur-comparatif) !
 
 On doit également mentionner les cœurs logiques, c’est-à-dire les *threads*, comme on les appelle plus communément (tâches en français). La performance d'un monoprocesseur est jugée sur sa capacité à gérer plusieurs « fils » d'instructions. Du point de vue de l'utilisateur, ces exécutions semblent se dérouler en parallèle. Toutefois, là où chaque processus possède sa propre mémoire virtuelle, les threads d'un même processus se partagent sa mémoire virtuelle. Par contre, tous les threads possèdent leur propre pile d'exécution.
 
-Les technologies d’hyperthreading d’Intel et de multithreading d’AMD permettent à un seul cœur physique de gérer deux tâches simultanément, fonctionnant ainsi comme deux cœurs logiques distincts. Cette technologie est aujourd'hui très performante. 
+Les technologies d’hyperthreading d’Intel et de multithreading d’AMD permettent à un seul cœur physique de gérer deux tâches simultanément, fonctionnant ainsi comme deux cœurs logiques distincts. Cette technologie est aujourd'hui très performante.
 La plupart de la gamme Ryzen d’AMD propose le multithreading, y compris les modèles de milieu et de haut de gamme, tandis que l’hyperthreading est pour l’instant réservé aux processeurs i7 et i9 haut de gamme d’Intel.
-
-
 
 ## Le pipeline
 
@@ -246,8 +245,8 @@ On l'a vu, l'exécution d'une instruction par le microprocesseur implique plusie
 :class: attention
 La vulnérabilité Spectre (ainsi que d'autres vulnérabilités similaires) exploite justement cette fonction de prédiction dans l'exécution de branchements conditionnels pour accéder à des emplacements mémoire auxquels le programme ne devrait en principe pas accéder.
 ```
-<br>
 
+<br>
 
 ````{admonition} Matière à réfléchir. Vite... très vite
 :class: hint

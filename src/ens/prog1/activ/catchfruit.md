@@ -136,10 +136,10 @@ Pour commencer il faut choisir comment sera représenté le panier, en général
 ##### Questions
 
 * La position du panier va changer au cours du jeu, comment faire pour stocker de l'information qui varie ? (utiliser des variables)
-* Que doit-on représenter avec ces variables ? (la position en X du pannier, Y vaut toujours 4, car sur la dernière ligne)
+* Que doit-on représenter avec ces variables ? (la position en X du panier, Y vaut toujours 4, car sur la dernière ligne)
 * Combien de variables va-t-on utiliser ? (1 suffit, 2 est plus simple à conceptualiser, à choix)
 
-Partons sur 2 variables, `PannierG` et `PannierD`. On choisi la position de départ du pannier et on initialise les variables en conséquence.  
+Partons sur 2 variables, `panierG` et `panierD`. On choisi la position de départ du panier et on initialise les variables en conséquence.  
 Si on oublie d'allumer les leds correspondantes, on ne verra pas le panier !
 
 ##### Résultat attendu
@@ -148,7 +148,7 @@ Si on oublie d'allumer les leds correspondantes, on ne verra pas le panier !
 
 ##### Problèmes
 
-Le pannier est fixe, il faut le faire bouger.
+Le panier est fixe, il faut le faire bouger.
 
 #### Exercice 5
 
@@ -159,7 +159,7 @@ Dans un premier temps, pour faciliter le développement et les tests, on va plut
 * Que signifie déplacer le panier à gauche (resp. à droite) en termes de positions ? (diminuer les valeurs de ses coordonnées de 1, resp. les augmenter de 1)
 * Que doit-il se passer visuellement ? (éteindre les leds de la positon actuelle, faire le déplacement, allumer les leds de la nouvelle position)
 
-On doit donc éteindre les leds du pannier, faire le déplacement, allumer les leds du panier. On le fait avec `A` pour le déplacement à gauche et avec `B` pour le déplacement à droite.
+On doit donc éteindre les leds du panier, faire le déplacement, allumer les leds du panier. On le fait avec `A` pour le déplacement à gauche et avec `B` pour le déplacement à droite.
 
 ##### Résultat attendu
 
@@ -172,11 +172,11 @@ Ce n'est pas le comportement voulu, spécialement si on garde à l'esprit que le
 
 #### Exercice 6
 
-On veut empêcher le pannier d'aller plus loin que les bords de l'écran.
+On veut empêcher le panier d'aller plus loin que les bords de l'écran.
 
 ##### Questions
 
-* Pourquoi est-ce que le pannier sort de l'écran ? (les variables continuent d'être modifiées pour finalement engendrer l'allumage de leds à des coordonnées qui n'existent pas)
+* Pourquoi est-ce que le panier sort de l'écran ? (les variables continuent d'être modifiées pour finalement engendrer l'allumage de leds à des coordonnées qui n'existent pas)
 * Comment empêcher la modification des variables ? (conditionner les modifications selon la position du panier)
 * Sous quelle condition le panier peut se déplacer à gauche (resp. à droite) ? (si la position en X de sa partie gauche (resp. droite) est > 0 (resp. < 4))
 
@@ -198,7 +198,7 @@ Par contre, lors de l'utilisation on remarque que l'inclinaison n'engendre qu'un
 ##### Questions
 
 * Pourquoi seul 1 déplacement est effectué et il est nécessaire de repasser par la position horizontale ? (l'inclinaison est un déclencheur comme l'appui sur `A`)
-* Quel est en fait le comportement attendu ? (le pannier se déplace **tant que** le micro:bit est incliné)
+* Quel est en fait le comportement attendu ? (le panier se déplace **tant que** le micro:bit est incliné)
 
 On rajoute une boucle `tant que` conditionnée par l'inclinaison du micro:bit pour faire les déplacements déclanchés par l'inclinaison.  
 Comme pour la chute du fruit, si on oublie la `pause`, le panier se déplace d'un bord à l'autre instantanément. Laisser les élèves faire le rapprochement.
@@ -207,7 +207,7 @@ Comme pour la chute du fruit, si on oublie la `pause`, le panier se déplace d'u
 
 ![img](media/panier4.png)
 
-Fin de l'étape 2, on a un pannier qui bouge lorsque le micro:bit est incliné.
+Fin de l'étape 2, on a un panier qui bouge lorsque le micro:bit est incliné.
 Certains élèves auron surement remarqué que lorsque le fruit tombe dans le panier, le panier disparait.
 Avant de s'occuper de la collision à proprement parler, on peut remédier ce problème simplement en *rallumant* le panier avant chaque chute de fruit.
 
@@ -223,8 +223,8 @@ Visuellement il est facile de *voir* quand le fruit tombe dans le panier, mais c
 
 ##### Questions
 
-* A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque les coordonnées / positions du fruit et du pannier sont les mêmes. Il est vraisemblable que plusieurs reformulation soient nécessaires pour obtenir la bonne réponse)
-* Quelles sonts les coordonnées respectives du panier et du fruit ? (comme elles changent, varient, elles sont dans des variables. Fruit(`colonne`, `index`) et Panier(`PannierG` ou `PanierD`, `4`))
+* A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque les coordonnées / positions du fruit et du panier sont les mêmes. Il est vraisemblable que plusieurs reformulation soient nécessaires pour obtenir la bonne réponse)
+* Quelles sonts les coordonnées respectives du panier et du fruit ? (comme elles changent, varient, elles sont dans des variables. Fruit(`colonne`, `index`) et Panier(`panierG` ou `PanierD`, `4`))
 * Comment s'écrit l'égalité des coordonnées avec ces variables ?
 
 **(PanierG = colonne OU PanierD = colonne) ET index = 4**
@@ -278,7 +278,7 @@ Il faut donc déterminer comment détecter ces cas là uniquement.
 
 * Quels sont les positions du fruit concernés par le `sinon` du bloc permettant de détecter les collisions ? (toutes les positions sauf celles du panier)
 * Toutes ces positions constituent-elles des échecs ? (non)
-* Quelle condition supplémentaire doit-on avoir pour que le fruit soit tombé à côté du pannier ? (index = 4)
+* Quelle condition supplémentaire doit-on avoir pour que le fruit soit tombé à côté du panier ? (index = 4)
 * Que se passe-t-il lorsqu'on rate un fruit ? (perte de vie, par exemple)
 
 Là aussi, une fois les réponses déterminées, l'implémentation ne pose pas de difficultés particulière. A l'instar de la collision, on peut ajouter un signal visuel pour signifier l'échec au jouer. Dans ce cas, il ne faut pas oublier d'`effacer l'écran`. Il ne faut pas non plus oublier d'initialiser le nombre de `vies` au démarrage.
@@ -324,7 +324,7 @@ Donner au joueur la possibilité de recommencer une partie, par exemple en appuy
 
 * Qu'est-ce qui fait qu'on a perdu, qu'on ne peut plus jouer ? (on a plus de vies)
 * Que faudrait-il pour que le jeu recommence ? (avoir de nouveau des vies)
-* Est-ce qu'il y a autre chose qu'il faudrait faire pour que ce soit une nouvelle partie ? (remettre le score à 0, effacer l'écran, allumer le pannier, tout ce qui est fait au démarrage)
+* Est-ce qu'il y a autre chose qu'il faudrait faire pour que ce soit une nouvelle partie ? (remettre le score à 0, effacer l'écran, allumer le panier, tout ce qui est fait au démarrage)
 
 Pour finir, aucune difficulté d'implémentation, il reste simplement à tester le jeu et vérifier les détails d'affichage.
 
@@ -341,7 +341,7 @@ Pour rendre le jeu plus intéressant et donner aux élèves l'occasion de faire 
 Des suggestions qui reviennent régulièrement : 
 
 * Augmenter la vitesse de chute du fruit tous les X points
-* Diminuer la vitesse de déplacement du pannier tous les Y points
+* Diminuer la vitesse de déplacement du panier tous les Y points
 * Faire tomber de manière aléatoire des fruits pourris / bombes qui font perdre une vie si atttrapés (on peut jouer avec la luminosité pour faire la distinction)
 * Faire tomber plusieurs fruits
 * Perturber la chute du fruit qui ne reste plus sur sa colonne initiale (attention aux cas en bord de l'écran)

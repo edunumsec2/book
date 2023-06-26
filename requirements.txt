@@ -46,7 +46,8 @@ urllib3==1.26.7
 virtualenv==20.8.1
 virtualenv-clone==0.5.7
 lzstring
-pyppeteer
+pytest-playwright
 qrcode
 Pillow
 svglib
+cairosvg

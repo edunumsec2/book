@@ -25,8 +25,8 @@ découpé en **quatre thématiques**.
    :maxdepth: 3
    :hidden:
 
-   algo2/index
    prog2/index
+   algo2/index
    resx/index
    projets/index
 
@@ -51,7 +51,7 @@ découpé en **quatre thématiques**.
 : ce chapitre vous explique comment le monde 
 réel est transformé pour être représenté sur un smartphone ou un ordinateur. 
 
-`Programmation I <https://dev-apprendre.modulo-info.ch/prog1/index.html>`_
+`Programmation I <https://apprendre.modulo-info.ch/prog1/index.html>`_
 : ce chapitre présente la programmation en Python grâce à une approche visuelle et graphique. 
 
 `Algorithmique I <https://apprendre.modulo-info.ch/algo1/index.html>`_

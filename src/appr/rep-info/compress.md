@@ -5,8 +5,8 @@ La compression des données est l'opération par laquelle on réduit la taille d
 
 Il existe de nombreux algorithmes pour compresser ou décompresser un paquet d'information donné. Cela dépend du type de données qui sont traitées, de la qualité que l'on souhaite obtenir à la sortie, de la vitesse d'exécution souhaitée, de la puissance du processeur sur lequel on effectue cette opération, et ainsi de suite. 
 
-````{admonition} Le saviez-vous ? 
-:class: hint
+````{didyouknow} 
+
 Quand vous envoyez une photo via une application de chat, l'application compresse automatiquement l'image pour diminuer les ressources nécessaires à sa transmission. La personne qui reçoit l'image possède donc une version de moins grande qualité. 
 
 Une technique permettant de contourner cette compression automatique consiste à envoyer la photo sous la forme d'un document. 

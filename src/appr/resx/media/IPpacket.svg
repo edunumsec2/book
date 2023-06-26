@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="119.41441mm"
+   height="8.0986643mm"
+   viewBox="0 0 119.41441 8.0986643"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="IPpacket.svg"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview838"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.1476306"
+     inkscape:cx="215.66173"
+     inkscape:cy="26.576496"
+     inkscape:window-width="1504"
+     inkscape:window-height="859"
+     inkscape:window-x="59"
+     inkscape:window-y="117"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient150102"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#37c8ab;stop-opacity:1;"
+         offset="0"
+         id="stop150100" />
+    </linearGradient>
+    <rect
+       x="20.870474"
+       y="55.245373"
+       width="128.90588"
+       height="24.553499"
+       id="rect9492" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient150102"
+       id="linearGradient150104"
+       x1="39.674994"
+       y1="17.865228"
+       x2="124.44415"
+       y2="17.865228"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-5.0297378,-13.497286)">
+    <rect
+       style="fill:#0000c0;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-opacity:1"
+       id="rect1060"
+       width="34.106346"
+       height="6.4964466"
+       x="6.0511484"
+       y="14.617004" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;white-space:pre;inline-size:40.278;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="19.48934"
+       y="20.463804"
+       id="text24894"
+       transform="translate(2.9234011,0.0119807)"><tspan
+         x="19.48934"
+         y="20.463804"
+         id="tspan156603"><tspan
+           style="font-size:7.05556px;-inkscape-font-specification:'Helvetica Neue, Normal'"
+           id="tspan156601">en-tête IP</tspan></tspan></text>
+    <rect
+       style="fill:url(#linearGradient150104);stroke:none;stroke-width:0.964999;stroke-opacity:1;fill-opacity:1"
+       id="rect36566"
+       width="83.804153"
+       height="6.4964466"
+       x="40.157494"
+       y="14.617004" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:40.278;stroke-width:0.264583"
+       x="19.48934"
+       y="20.463804"
+       id="text24894-6"
+       transform="translate(60.507753,0.309556)"><tspan
+         x="19.48934"
+         y="20.463804"
+         id="tspan156605">données</tspan></text>
+  </g>
+</svg>

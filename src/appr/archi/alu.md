@@ -8,7 +8,6 @@ Les ordinateurs ont la propriété d'être programmables : ils savent effectue
 
 Le composant qui nous permettra de sélectionner une opération ou une autre s'appelle « unité arithmétique et logique », communément appelé simplement « ALU » (de l'anglais _arithmetic logic unit_). Avant d'inspecter une ALU, nous avons besoin de comprendre comment on peut sélectionner une opération ou une autre avec des circuits logiques.
 
-
 ## Sélection de l'opération
 
 Comment créer un circuit qui permet de sélectionner une opération à faire, et comment indiquer l'opération à sélectionner ? Essayons d'abord de créer un circuit à deux entrées qui va calculer soit le **OU** soit le **ET** de ces deux entrées.
@@ -157,8 +156,8 @@ La porte **OU** peut ainsi servir à combiner deux signaux, pour autant que l'un
 
 Avec tout ceci, on peut ainsi construire un multiplexeur (un sélecteur de signal). Supposons qu'on ait les deux signaux $A$ et $B$ : nous pouvons construire un circuit qui combine soit $A$ tel quel et $B$ annulé, soit $A$ annulé et $B$ tel quel. Cela nous aidera pour notre projet initial ! Il faut cependant s'assurer que $A$ soit chaque fois annulé quand $B$ passe tel quel, et inversement. Ceci peut se faire en réutilisant l'idée d'une entrée de contrôle $Op$ ainsi. Nous avons ainsi deux cas :
 
- * Lorsque $Op = 0$, on va sélectionner $A$ et annuler $B$. On va donc faire passer $A$ à travers une porte **ET** à laquelle on donne 1 à l'autre entrée, et faire passer $B$ à travers une porte **ET** à laquelle on donne 0 à la seconde entrée.
- * Lorsque $Op = 1$, on va faire exactement l'inverse : sélectionner $B$ et annuler $A$. On donnera donc un 0 à la porte **ET** qui filtre $A$, et 1 à la porte **ET** qui filtre $B$.
+* Lorsque $Op = 0$, on va sélectionner $A$ et annuler $B$. On va donc faire passer $A$ à travers une porte **ET** à laquelle on donne 1 à l'autre entrée, et faire passer $B$ à travers une porte **ET** à laquelle on donne 0 à la seconde entrée.
+* Lorsque $Op = 1$, on va faire exactement l'inverse : sélectionner $B$ et annuler $A$. On donnera donc un 0 à la porte **ET** qui filtre $A$, et 1 à la porte **ET** qui filtre $B$.
 
 En relisant ces lignes, on voit que ce qu'on donne à la seconde entrée de la porte qui filtre $B$ est toujours la même chose que $Op$, et que ce qu'on donne à la seconde entrée de la porte qui filtre $A$ est toujours l'inverse de $Op$. On peut donc construire ce circuit avec {logicref}`filter0_tryout.inv|un inverseur` en plus :
 
@@ -293,14 +292,15 @@ Ceci nous permet de compléter le circuit lacunaire de début de chapitre pour s
 }
 ```
 
-````{admonition} Exercice 1 : test du sélecteur **OU**/**ET**
+````{exercise} Test du sélecteur **OU**/**ET**
+
 Testez le circuit ci-dessus. Établissez la table de vérité de $Z$ en fonction de $X$, $Y$ et $Op$. À l'aide de la table de vérité, montrez que, lorsque $Op=0$, $Z$ représente bien $X$ **OU** $Y$, et que, lorsque $Op=1$, $Z$ représente bien $X$ **ET** $Y$.
 ````
 
 Nous avons ici construit un circuit qui, grâce à un bit de contrôle $Op$, sélectionne une opération ou une autre à appliquer à ses deux bits d'entrées $X$ et $Y$.
 
+`````{exercise} Construction d'un sélecteur
 
-`````{admonition} Exercice 2 : construction d'un sélecteur
 En réutilisant les principes appliqués ci-dessus, construisez un circuit à deux bits d'entrées $X$ et $Y$ et un bit de contrôle $Op$ qui donnera sur sa sortie $Z$ :
 
  * Le **OU** exclusif de $X$ et $Y$, lorsque $Op=0$ ;
@@ -362,8 +362,8 @@ Voici un circuit qui réutilise le sélecteur de signal et qui fournit à ce sé
 ````
 `````
 
+`````{exercise} Inverseur conditionnel
 
-`````{admonition} Exercice 3 : inverseur conditionnel
 En réutilisant les principes appliqués ci-dessus, construisez un circuit à une entrée $X$ avec un bit de contrôle $Op$ qui donnera sur sa sortie $Z$ :
 
  * $X$ tel quel, lorsque $Op=0$ ;
@@ -442,7 +442,6 @@ La table de vérité est identique à celle d'une porte **OU-X**. On peut donc s
 ````
 `````
 
-
 ## Une ALU à 4 bits
 
 Une unité arithmétique et logique, ou ALU, est un circuit qui ressemble dans ses principes de base à ce que nous venons de faire. L'ALU réalise plusieurs opérations et permet de sélectionner, via un ou plusieurs bits de contrôle, l'opération qui est réalisée. Les opérations proposées sont, comme le nom de l'ALU indique, des opérations arithmétiques (typiquement, l'addition et la soustraction) et des opérations logiques (par exemple, un **ET** et un **OU** logiques).
@@ -473,19 +472,19 @@ Cette ALU sait effectuer l'addition ou la soustraction de deux nombres entiers r
 La convention utilisée pour la sélection de l'opération est la suivante :
 
 | $Op$ | Opération effectuée |
-| :--: | :-----------------: | 
+| :--: | :-----------------: |
 |  00  |       Addition      |
 |  01  |     Soustraction    |
 |  10  |        **OU**       |
 |  11  |        **ET**       |
 
+`````{exercise} Test de l'ALU
 
-`````{admonition} Exercice 4 : test de l'ALU
 Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effectuer l'opération $7 + 2 = 9$. Connectez les 4 bits des entrées et de la sortie à des afficheurs de demi-octet pour vérifier leur fonctionnement. Connectez ensuite une entrée pour le bit de contrôle qui permettra d'effectuer la soustraction avec les mêmes données d'entrée, donc $7 - 2 = 5$.
 
 ```{logic}
 :height: 400
-:showonly: in in.nibble out out.nibble
+:showonly: in in.nibble out out.nibble display
 
 {
   "v": 3,
@@ -563,7 +562,9 @@ L'ALU a trois sorties en plus, en bas du composant :
  * la sortie $V$ (pour _oVerflow_) vaut 1 lors d'un dépassement de capacité si on considère les entrées et les sorties comme des nombres signés. Nous ne faisons pas cela ici et ignorons cette sortie ;
  * finalement, la sortie $Z$ (pour _Zero_) vaut 1 lorsque tous les bits de sortie valent 0.
 
-`````{admonition} Exercice 5 : une ALU comme comparateur
+
+`````{exercise} Une ALU comme comparateur
+
 En programmation, c'est fréquent de tester, par exemple dans une condition avec un `if`, si deux valeurs sont égales. Par exemple, ce fragment de code affichera « Ces valeurs sont égales! » uniquement si les deux nombres entiers donnés lors de l'exécution du code sont les mêmes:
 
 ```{codeplay}
@@ -577,21 +578,17 @@ Ce qui nous intéresse spécialement, c'est la comparaison à la ligne 3. Cette 
 
 ```{logic}
 :height: 330
-:showonly: ALU in out NOT OR OR4 AND XOR
+:showonly: ALU in in.nibble out out.nibble NOT OR OR4 AND XOR
 
 {
-  "v": 3,
+  "v": 5,
   "in": [
-    {"pos": [50, 30], "id": 16, "val": 0},
-    {"pos": [50, 60], "id": 17, "val": 0},
-    {"pos": [50, 90], "id": 18, "val": 0},
-    {"pos": [50, 120], "id": 19, "val": 0},
-    {"pos": [50, 210], "id": 24, "val": 0},
-    {"pos": [50, 240], "id": 25, "val": 0},
-    {"pos": [50, 270], "id": 26, "val": 0},
-    {"pos": [50, 300], "id": 27, "val": 0}
+    {"bits": 4, "pos": [60, 90], "id": "0-3"},
+    {"bits": 4, "pos": [60, 240], "id": "4-7"}
   ],
-  "out": [{"pos": [410, 160], "id": 37, "name": "Z"}]
+  "out": [
+    {"pos": [410, 160], "id": 37, "name": "Z"}
+  ]
 }
 ```
 
@@ -608,39 +605,19 @@ On connecte les 8 entrées, on règle l'opération de l'ALU sur soustraction et 
 :ref: 4bit_diff_alu
 
 {
-  "v": 3,
+  "v": 5,
   "in": [
-    {"pos": [50, 30], "id": 16, "val": 0},
-    {"pos": [50, 60], "id": 17, "val": 0},
-    {"pos": [50, 90], "id": 18, "val": 0},
-    {"pos": [50, 120], "id": 19, "val": 0},
-    {"pos": [50, 210], "id": 24, "val": 0},
-    {"pos": [50, 240], "id": 25, "val": 0},
-    {"pos": [50, 270], "id": 26, "val": 0},
-    {"pos": [50, 300], "id": 27, "val": 0},
-    {"pos": [220, 30], "orient": "s", "id": 54, "val": 1}
+    {"bits": 4, "pos": [60, 90], "id": "0-3"},
+    {"bits": 4, "pos": [60, 240], "id": "4-7"},
+    {"pos": [230, 30], "orient": "s", "id": 26, "val": 1}
   ],
-  "out": [{"pos": [410, 160], "id": 37, "name": "Z"}],
-  "components": [
-    {
-      "type": "alu",
-      "pos": [220, 150],
-      "in": [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 55],
-      "out": [48, 49, 50, 51, 52, 53]
-    }
+  "out": [
+    {"pos": [410, 160], "id": 37, "name": "Z"}
   ],
-  "wires": [
-    [16, 38],
-    [17, 39],
-    [18, 40],
-    [19, 41],
-    [24, 42],
-    [25, 43],
-    [26, 44],
-    [27, 45],
-    [54, 46],
-    [53, 37]
-  ]
+  "ic": [
+    {"type": "alu", "pos": [210, 160], "in": "8-18", "out": "19-25"}
+  ],
+  "wires": [[0, 8], [1, 9], [2, 10], [3, 11], [4, 12], [5, 13], [6, 14], [7, 15], [24, 37], [26, 16]]
 }
 ```
 ````
@@ -660,46 +637,25 @@ Cette solution utilise des portes **OU-X** comme comparateurs. On voit ici que 4
 :ref: 4bit_diff_logic0
 
 {
-  "v": 3,
+  "v": 5,
   "in": [
-    {"pos": [50, 30], "id": 16, "val": 0},
-    {"pos": [50, 60], "id": 17, "val": 0},
-    {"pos": [50, 90], "id": 18, "val": 0},
-    {"pos": [50, 120], "id": 19, "val": 0},
-    {"pos": [50, 210], "id": 24, "val": 0},
-    {"pos": [50, 240], "id": 25, "val": 0},
-    {"pos": [50, 270], "id": 26, "val": 0},
-    {"pos": [50, 300], "id": 27, "val": 0}
+    {"bits": 4, "pos": [60, 90], "id": "0-3"},
+    {"bits": 4, "pos": [60, 240], "id": "4-7"}
   ],
-  "out": [{"pos": [530, 160], "id": 37, "name": "Z"}],
+  "out": [
+    {"pos": [515, 160], "id": 37, "name": "Z"}
+  ],
   "gates": [
-    {"type": "XOR", "pos": [190, 270], "in": [55, 56], "out": 57},
-    {"type": "OR", "pos": [290, 210], "ref": "or1", "in": [58, 59], "out": 60},
-    {"type": "OR", "pos": [290, 110], "ref": "or2", "in": [61, 62], "out": 63},
-    {"type": "OR", "pos": [390, 160], "ref": "or3", "in": [64, 65], "out": 66},
-    {"type": "XOR", "pos": [190, 200], "in": [67, 68], "out": 69},
-    {"type": "XOR", "pos": [190, 120], "in": [70, 71], "out": 72},
-    {"type": "XOR", "pos": [190, 50], "in": [73, 74], "out": 75},
-    {"type": "NOT", "pos": [460, 160], "in": 76, "out": 77}
+    {"type": "XOR", "pos": [185, 70], "in": [27, 28], "out": 29},
+    {"type": "XOR", "pos": [185, 130], "in": [30, 31], "out": 32},
+    {"type": "XOR", "pos": [185, 195], "in": [33, 34], "out": 35},
+    {"type": "XOR", "pos": [180, 260], "in": [36, 38], "out": 39},
+    {"type": "OR", "pos": [280, 120], "ref": "or1", "in": [40, 41], "out": 42},
+    {"type": "OR", "pos": [280, 205], "ref": "or2", "in": [43, 44], "out": 45},
+    {"type": "OR", "pos": [380, 160], "ref": "or3", "in": [46, 47], "out": 48},
+    {"type": "NOT", "pos": [445, 160], "in": 49, "out": 50}
   ],
-  "wires": [
-    [16, 73],
-    [24, 74],
-    [17, 70],
-    [25, 71],
-    [18, 67],
-    [26, 68],
-    [19, 55],
-    [27, 56],
-    [75, 61],
-    [72, 62],
-    [63, 64],
-    [60, 65],
-    [69, 58],
-    [57, 59],
-    [66, 76],
-    [77, 37]
-  ]
+  "wires": [[0, 27], [4, 28], [3, 36], [7, 38], [6, 34], [2, 33], [5, 31], [1, 30], [29, 40], [32, 41], [35, 43], [39, 44], [42, 46], [45, 47], [48, 49], [50, 37]]
 }
 ```
 
@@ -711,39 +667,32 @@ Alernativement, à la place d'utiliser {logicref}`4bit_diff_logic0.{or1,or2,or3}
 :ref: 4bit_diff_logic1
 
 {
-  "v": 3,
+  "v": 5,
   "in": [
-    {"pos": [50, 30], "id": 16, "val": 0},
-    {"pos": [50, 60], "id": 17, "val": 0},
-    {"pos": [50, 90], "id": 18, "val": 0},
-    {"pos": [50, 120], "id": 19, "val": 0},
-    {"pos": [50, 210], "id": 24, "val": 0},
-    {"pos": [50, 240], "id": 25, "val": 0},
-    {"pos": [50, 270], "id": 26, "val": 0},
-    {"pos": [50, 300], "id": 27, "val": 0}
+    {"bits": 4, "pos": [60, 90], "id": "0-3"},
+    {"bits": 4, "pos": [60, 240], "id": "4-7"}
   ],
-  "out": [{"pos": [530, 160], "id": 37, "name": "Z"}],
+  "out": [
+    {"pos": [485, 160], "id": 37, "name": "Z"}
+  ],
   "gates": [
-    {"type": "XOR", "pos": [190, 270], "in": [55, 56], "out": 57},
-    {"type": "XOR", "pos": [190, 200], "in": [67, 68], "out": 69},
-    {"type": "XOR", "pos": [190, 120], "in": [70, 71], "out": 72},
-    {"type": "XOR", "pos": [190, 50], "in": [73, 74], "out": 75},
-    {"type": "NOT", "pos": [460, 160], "in": 76, "out": 77},
-    {"type": "OR4", "pos": [360, 160], "ref": "bigor", "in": [0, 1, 2, 3], "out": 4}
+    {"type": "XOR", "pos": [185, 70], "in": [27, 28], "out": 29},
+    {"type": "XOR", "pos": [185, 130], "in": [30, 31], "out": 32},
+    {"type": "XOR", "pos": [185, 195], "in": [33, 34], "out": 35},
+    {"type": "XOR", "pos": [180, 260], "in": [36, 38], "out": 39},
+    {"type": "NOT", "pos": [415, 160], "in": 49, "out": 50},
+    {"type": "OR", "bits": 4, "pos": [320, 160], "ref": "bigor", "in": "54-57", "out": 58}
   ],
-  "wires": [[16, 73], [24, 74], [17, 70], [25, 71], [18, 67], [26, 68], [19, 55], [27, 56], [77, 37], [4, 76], [75, 0], [72, 1], [69, 2], [57, 3]]
+  "wires": [[0, 27], [4, 28], [3, 36], [7, 38], [6, 34], [2, 33], [5, 31], [1, 30], [50, 37], [29, 54], [32, 55], [35, 56], [39, 57], [58, 49]]
 }
 ```
 
 ````
 `````
 
-
 En résumé, nous avons appris ici ce qu'est une unité arithmétique et logique et avons examiné de plus près comment construire un multiplexeur, un circuit qui est à même de « choisir » parmi plusieurs signaux d'entrées lequel il va propager sur sa sortie. L'ALU est spécialement intéressante, car c'est le premier composant que nous rencontrons qui incarne une des propriétés de base d'un ordinateur, à savoir d'être programmable, en faisant en sorte que l'opération qu'elle effectue dépende d'un signal externe.
 
-
-````{admonition} Pour aller plus loin
-:class: attention
+````{togofurther}
 
 Notre petite ALU peut aussi faire des calculs en utilisant une représentation signée des nombres entiers. Sur 4 bits, une représentation en complément à deux peut représenter les nombres de $-8$ à $+7$. Il est possible d'utiliser les mêmes afficheurs de demi-octets en mode signé pour effectuer des opérations arithmétiques avec des valeurs négatives, par exemple, ici, $-2 - (-4) = 2$ :
 
@@ -752,28 +701,22 @@ Notre petite ALU peut aussi faire des calculs en utilisant une représentation s
 :mode: tryout
 
 {
-  "v": 4,
+  "v": 5,
   "in": [
-    {"pos": [50, 70], "id": 16, "val": 0},
-    {"pos": [50, 100], "id": 17, "val": 1},
-    {"pos": [50, 130], "id": 18, "val": 1},
-    {"pos": [50, 160], "id": 19, "val": 1},
-    {"pos": [50, 250], "id": 24, "val": 0},
-    {"pos": [50, 280], "id": 25, "val": 0},
-    {"pos": [50, 310], "id": 26, "val": 1},
-    {"pos": [50, 340], "id": 27, "val": 1},
-    {"pos": [370, 60], "orient": "w", "id": 36, "name": {"0": "Addition", "1": "Soustraction"}, "val": 1}
+    {"pos": [370, 60], "orient": "w", "id": 36, "name": {"0": "Addition", "1": "Soustraction"}, "val": 1},
+    {"bits": 4, "pos": [60, 130], "id": "40-43", "val": "1110"},
+    {"bits": 4, "pos": [60, 280], "id": "48-51", "val": "1100"}
   ],
   "out": [
-    {"type": "nibble-display", "pos": [220, 50], "id": [20, 21, 22, 23], "name": "A", "radix": -10},
-    {"type": "nibble-display", "pos": [220, 350], "id": [28, 29, 30, 31], "name": "B", "radix": -10},
-    {"type": "nibble-display", "pos": [400, 200], "id": [32, 33, 34, 35], "name": "S", "radix": -10},
-    {"pos": [370, 350], "id": 39, "name": {"0": "Résultat correct", "1": "Dépassement"}}
+    {"type": "display", "pos": [220, 50], "id": "20-23", "name": "A", "radix": -10},
+    {"type": "display", "pos": [220, 350], "id": "28-31", "name": "B", "radix": -10},
+    {"type": "display", "pos": [400, 200], "id": "32-35", "name": "S", "radix": -10},
+    {"pos": [370, 350], "id": 39, "name": {"0": "0 – Résultat correct", "1": "1 – Dépassement"}}
   ],
-  "components": [
-    {"type": "alu", "pos": [300, 200], "in": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 37], "out": [10, 11, 12, 13, 38, 15, 14]}
+  "ic": [
+    {"type": "alu", "pos": [300, 200], "in": ["0-9", 37], "out": ["10-13", 38, 15, 14]}
   ],
-  "wires": [[16, 20], [17, 21], [18, 22], [19, 23], [16, 0], [17, 1], [18, 2], [19, 3], [24, 4], [25, 5], [26, 6], [27, 7], [24, 28], [25, 29], [26, 30], [27, 31], [10, 32], [11, 33], [12, 34], [13, 35], [36, 8], [38, 39]]
+  "wires": [[10, 32], [40, 20], [41, 21], [42, 22], [43, 23], [40, 0], [41, 1], [42, 2], [43, 3], [48, 4], [49, 5], [50, 6], [51, 7], [48, 28], [49, 29], [50, 30], [51, 31], [36, 8], [38, 39], [11, 33], [12, 34], [13, 35]]
 }
 ```
 
@@ -781,5 +724,5 @@ Notez que grâce à la représentation en complément à deux, la circuiterie in
 
 Attention, lorsqu'on interprète les entrées et la sortie comme des nombres signés, ce n'est plus la sortie $C_{out}$ de l'ALU qui indique un dépassement de capacité, mais la sortie $V$, qui est calculée différemment.
 
-Essayez de régler les entrées pour que cette ALU calcule le résultat de $-8 - (-4)$. Vérifiez qu'un dépassement de capacité est signalé et expliquez pourquoi.
+Essayez de régler les entrées pour que cette ALU calcule le résultat de $-8 - 4$. Vérifiez qu'un dépassement de capacité est signalé et expliquez pourquoi.
 ````

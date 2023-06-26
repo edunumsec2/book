@@ -1,21 +1,18 @@
-import asyncio
+import base64
+import hashlib
+import json
+import os
 from dataclasses import dataclass
 from functools import cached_property
-import base64
-import os
-import sys
-import hashlib
-from typing import Any, Awaitable, List, Tuple, TypeVar, Union, Optional
-import pyppeteer  # type: ignore
-from pyppeteer.page import Page  # type: ignore
+from typing import Any, Callable, List, Optional, Tuple, TypeVar, Union
 
-from sphinx.application import Sphinx
-from sphinx.util import logging
-from sphinx.util.docutils import SphinxDirective, SphinxRole, SphinxTranslator
 from docutils import nodes  # type: ignore
 from docutils.nodes import Node, system_message  # type: ignore
 from docutils.parsers.rst import directives  # type: ignore
-from myst_parser.main import MdParserConfig, to_html
+from myst_parser.main import MdParserConfig, to_html, to_tokens
+from sphinx.application import Sphinx
+from sphinx.util import logging
+from sphinx.util.docutils import SphinxDirective, SphinxRole, SphinxTranslator
 
 # import urllib
 # import zlib
@@ -23,9 +20,15 @@ from myst_parser.main import MdParserConfig, to_html
 
 ## REF: https://www.sphinx-doc.org/en/master/extdev/index.html
 
+MAIN_LOGIC_URL = "https://logic.modulo-info.ch"
+
 logger = logging.getLogger(__name__)
 
 StringOrList = Union[str, List[str]]
+
+# reassigned when importing from playwright
+Page = Any
+sync_playwright: Callable[[], Any] = None  # type: ignore
 
 
 def md5(string: str) -> str:
@@ -37,10 +40,6 @@ def md5(string: str) -> str:
 T = TypeVar("T")
 
 
-def await_blocking(func: Awaitable[T]) -> T:
-    return asyncio.get_event_loop().run_until_complete(func)
-
-
 @dataclass
 class LogicDiagramData:
     data_json: str
@@ -48,50 +47,129 @@ class LogicDiagramData:
     height: Optional[int]
 
     @cached_property
-    def content_based_filename(self) -> str:
+    def content_md5(self) -> str:
         height_str = "-1" if self.height is None else str(self.height)
         spec = "/".join([self.data_json, self.mode, height_str])
-        spec_md5 = md5(spec)  # should be 32 chars hex
-        return f"{spec_md5}.png"
+        return md5(spec)  # should be 32 chars hex
+
+    def content_based_filename(self, use_pdf: bool) -> str:
+        return self.content_md5 + (".pdf" if use_pdf else ".png")
 
 
-async def browser_launch() -> Page:
-    browser = await pyppeteer.launch()
-    page = await browser.newPage()
-    return page
+class PlaywrightWrapper:
+    def __init__(self) -> None:
+        self.playwright = sync_playwright().start()
+        self.browser = self.playwright.chromium.launch(headless=True)
+        self.context = self.browser.new_context()
+
+    def close(self) -> None:
+        self.context.close()
+        self.browser.close()
+        self.playwright.stop()
+
+    def new_page(self) -> Page:
+        return self.context.new_page()
+
+    result: str
+    error: Optional[str]
 
 
-async def browser_close(page: Page) -> None:
-    await page.browser.close()
+def browser_launch() -> PlaywrightWrapper:
+    return PlaywrightWrapper()
 
 
-async def to_png(data: LogicDiagramData, output_file: str, page: Page) -> bool:
-    await page.goto("https://logic.modulo-info.ch", waitUntil="networkidle2")
-    result = await page.evaluate(
-        f"""() => {{
-        const editor = window.Logic.singleton
-        if (typeof editor === 'undefined') {{
-            return "error: no editor"
+def browser_close(browser: Union[PlaywrightWrapper, None]) -> None:
+    if browser is not None:
+        browser.close()
+
+
+def convert_for_latex(
+    data: LogicDiagramData, output_file: str, browser: PlaywrightWrapper
+) -> Union[Tuple[int, int], None]:
+    page = browser.new_page()
+    page.goto(MAIN_LOGIC_URL + "?lang=fr")
+
+    use_pdf = output_file.endswith(".pdf")
+    conversion_function, mime_type = ("toSVG", "image/svg+xml") if use_pdf else ("toPNG", "image/png")
+
+    resultJSON = page.evaluate(
+        f"""async () => {{
+        try {{
+            const editor = window.Logic.singleton
+            if (typeof editor === 'undefined') {{
+                return "error: no editor"
+            }}
+
+            const dataJson = JSON.stringify({data.data_json})
+            editor.loadCircuitOrLibrary(dataJson)
+            editor.setModeFromString("{data.mode}")
+            const withMetadata = false
+            const heightHint = {"undefined" if data.height is None else data.height}
+            const blob = await editor.{conversion_function}(withMetadata, heightHint)
+            const imgData = await editor.toBase64(blob)
+            const size = editor.guessAdequateCanvasSize()
+            if (heightHint !== undefined) {{
+                size[1] = heightHint
+            }}
+            return JSON.stringify({{ imgData, size }})
+        }} catch (e) {{
+            return "error: " + e
         }}
-
-        const dataJson = JSON.stringify({data.data_json})
-        editor.load(dataJson)
-        editor.setModeFromString("{data.mode}")
-        return editor.toPNGBase64({"undefined" if data.height is None else data.height})
     }}"""
     )
 
-    if result is None:
+    if resultJSON is None:
         logger.error("error: no result from PNG conversion")
-        return False
+        page.close()
+        return None
 
-    if result.startswith("error:"):
-        logger.error(result)
-        return False
+    if resultJSON.startswith("error:"):
+        logger.error(resultJSON)
+        page.close()
+        return None
 
-    with open(output_file, "wb") as f:
-        f.write(base64.b64decode(result))
-    return True
+    result = json.loads(resultJSON)
+    width, height = result["size"]
+    img_data = result["imgData"]
+
+    if use_pdf:
+        page.set_content(
+            f"""<html>
+            <head>
+                <style>
+                    @page {{
+                        size: {width}px {height}px;
+                        margin: {0}px;
+                    }}
+
+                    html, body {{
+                        width: {width}px;
+                        margin: 0;
+                    }}
+                </style>
+            </head
+            <body>
+                <img style="width: 100%;" src="data:{mime_type};base64,{img_data}">
+            </body>
+        </html>"""
+        )
+
+        page.pdf(
+            path=output_file,
+            page_ranges="1",
+            display_header_footer=False,
+            margin=dict(top="0", left="0", right="0", bottom="0"),
+            prefer_css_page_size=True,
+            print_background=False,
+        )
+
+    else:
+        with open(output_file, "wb") as f:
+            f.write(base64.b64decode(img_data))
+
+    page.close()
+
+    return width, height
 
 
 class logic_diagram(nodes.Element, nodes.General):
@@ -138,29 +216,36 @@ def begin_logic_diagram_latex(self: SphinxTranslator, node: Node) -> None:
     height = node["height"]
     mode = node["mode"]
 
-    png_folder = os.path.join(self.builder.outdir, "logic_png")
-    if not os.path.exists(png_folder):
-        os.makedirs(png_folder)
+    assets_folder_name = "logic_assets"
+    assets_folder = os.path.join(self.builder.outdir, assets_folder_name)
+    if not os.path.exists(assets_folder):
+        os.makedirs(assets_folder)
 
+    use_pdf = True
     data = LogicDiagramData(content, mode, height)
-    target_file = os.path.join(png_folder, data.content_based_filename)
+    filename = data.content_based_filename(use_pdf)
+    target_file_absolute = os.path.join(assets_folder, filename)
+    target_file_relative = os.path.join(assets_folder_name, filename)
+    # meta_f
 
     include_image = False
-    if os.path.exists(target_file):
+    if os.path.exists(target_file_absolute):
         include_image = True
     else:
-        if browser_page is None:
+        if browser is None:
             logger.error("browser page is not initialized to generate PNGs for logic diagrams")
         else:
-            include_image = await_blocking(to_png(data, target_file, browser_page))
+            img_size = convert_for_latex(data, target_file_absolute, browser)
+            include_image = img_size is not None
             if include_image:
-                logger.info("Generated logic diagram: %s", target_file)
+                logger.info("Generated image for logic diagram: %s", target_file_absolute)
             else:
-                logger.error("Failed to generate logic diagram: %s", target_file)
+                logger.error("Failed to generate logic diagram: %s", target_file_absolute)
 
     if include_image:
+        includegraphics_options = "scale=0.66" if use_pdf else "scale=0.33"
         self.body.append(
-            f"\n\\begin{{center}}\n  \\includegraphics[scale=0.33]{{{target_file}}}\n\\end{{center}}\n"
+            f"\n\\begin{{center}}\n  \\includegraphics[{includegraphics_options}]{{{target_file_relative}}}\n\\end{{center}}\n"
         )
     else:
         self.body.append("\n \\fbox{logic diagram} \\\ ")
@@ -279,15 +364,54 @@ def end_logic_highlight_html(self: SphinxTranslator, node: Node) -> None:
     self.body.append("</span>")
 
 
-def _render_latex(source: str) -> str:
-    # ugly hack, should used child nodes instead (micha)
-    source.strip()
-    source = source.replace("_", "")
-    return source
+def _tex_escape(string: str) -> str:
+    return string.replace("&", "\\&").replace("$", "\\$").replace("{", "\\{").replace("}", "\\}").replace("%", "\\%").replace("_", "\\_").replace("#", "\\#").replace("\\", "\\textbackslash{}").replace("~", "\\textasciitilde{}").replace("^", "\\textasciicircum{}")
+
+
+def _render_latex(source: str, config: MdParserConfig) -> str:
+    """Render Markdown to LaTeX.
+    This is a hack to fix the fact that role content is not parsed.
+    Not all Markdown-to-LaTeX is supported here, as the content of
+    roles is not very complicated usually (mostly just bold, italic,
+    and math), but additional tags can be added as needed."""
+
+    tokens = to_tokens(source, config=config)
+
+    while True:
+        # simplify tokens
+        changed = False
+        while (tokens[0].type == "paragraph_open") and (tokens[-1].type == "paragraph_close"):
+            tokens = tokens[1:-1]
+            changed = True
+        if len(tokens) == 1 and tokens[0].type == "inline":
+            tokens = tokens[0].children
+            changed = True
+        if not changed:
+            break
+
+    buf: List[str] = []
+    for token in tokens:
+        if token.type == "text":
+            buf.append(_tex_escape(token.content))
+        elif token.type == "math_inline":
+            buf.append(f"${token.content}$")
+        elif token.type == "strong_open":
+            buf.append("\\textbf{")
+        elif token.type == "em_open":
+            buf.append("\\emph{")
+        elif token.type == "strong_close" or token.type == "em_close":
+            buf.append("}")
+        else:
+            print(
+                f"ERROR: unknown Markdown token type '${token.type}' in inline role; please implement its LaTeX rendering in _render_latex"
+            )
+            buf.append(_tex_escape(token.content))  # fallback
+
+    return "".join(buf)
 
 
 def begin_logic_highlight_latex(self: SphinxTranslator, node: Node) -> None:
-    content = _render_latex(node["display"])
+    content = _render_latex(node["display"], node["config"])
     self.body.append(content)
 
 
@@ -332,22 +456,24 @@ def end_logic_gate_latex(self: SphinxTranslator, node: Node) -> None:
     self.body.append("}")
 
 
-browser_page: Union[Page, None] = None
+browser: Union[PlaywrightWrapper, None] = None
 
 
 def build_starting(app: Sphinx) -> None:
-    global browser_page
+    global browser, Page, sync_playwright
     if app.builder is not None and app.builder.name == "latex":
+        from playwright.sync_api import Page, sync_playwright
+
         logger.info("starting headless browser")
-        browser_page = await_blocking(browser_launch())
+        browser = browser_launch()
 
 
 def build_finished(app: Sphinx, exception: Any) -> None:
-    global browser_page
+    global browser
     if app.builder is not None and app.builder.name == "latex":
         logger.info("shutting down headless browser")
-        await_blocking(browser_close(browser_page))
-        browser_page = None
+        browser_close(browser)
+        browser = None
 
 
 def setup(app: Sphinx) -> None:
@@ -357,7 +483,7 @@ def setup(app: Sphinx) -> None:
         html=(begin_logic_diagram_html, end_logic_diagram_html),
         latex=(begin_logic_diagram_latex, end_logic_diagram_latex),
     )
-    app.add_js_file("https://logic.modulo-info.ch/simulator/lib/bundle.js")
+    app.add_js_file(MAIN_LOGIC_URL + "/simulator/lib/bundle.js")
 
     app.add_role("logicref", LogicHighlightRefRole())
     app.add_node(
