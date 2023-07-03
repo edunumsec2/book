@@ -5,7 +5,7 @@ Le **routage** est le mécanisme par lequel des chemins sont sélectionnés dans
 Pour effectuer le routage, nous avons besoin deux types de machines :
 
 - le **routeur**, qui sert d'intermédiaire dans la transmission d'un message,
-- le **hôte** qui émettet ou reçoit un message.
+- le **hôte** qui émettent ou reçoivent un message.
 
 {itodo}` [ajouter une illustration] `
 
@@ -58,11 +58,16 @@ autre routeur soit au destinataire).
 La dernière ligne représente la *passerelle par défaut* qui indique où envoyer les messages dont l'adresse
 ne correspond à aucune autre ligne de la table. 
 
-```{Exercise}
-Remplir les tables de routage simplifiées des routeurs du réseau suivant:
-
-{itodo}`à compléter`
+````{Exercise}
+Remplir les tables de routage simplifiées des routeurs R1 et R2 du réseau suivant dans lequel les interfaces sont représentées
+par les lettres A,B, et C. 
+```{image} media/exo_res.svg
+---
+width: 600
+align: center
+---
 ```
+````
 
 Les tables de routage contiennent souvent des informations, c'est-à-dire des colonnes, supplémentaires. Elle peuvent
 par exemple contenir une colonne "Distance" qui indique le nombre de d'étapes avant d'arriver à destination. Les voisins
@@ -72,7 +77,6 @@ peuvent figurer comme le coût de transmission d'un paquet, ou le traffic maxima
 ```{Exercise}
 Ajouter une colonne "Distance" à la table de routage de l'exercice précédent.
 
-{itodo}`à compléter`
 ```
 
 
@@ -177,6 +181,6 @@ C'est le principe de l'*horizon séparé* (*split horizon*).
 2. Si une route est bouchée, transmettre  cette information aux voisins. Dans le protocole RIP on indique
 ceci par une distance égale à 16. Toute destination à distance supérieure à 15 est considérée comme inaccessible. Dans
 l'exemple si dessus, le routeur 1 remplacera simplement la distance par 16 (au lieu de 1) et transmettra cette information
-au routeur 2 qui mettra à jour sa table de routage. 
+au routeur 2 qui mettra à jour sa table de routage. C'est le principe de l'*empoisonnement de route* (*route poisoning*).
 
 {itodo}` [ajouter deux exemples] `
