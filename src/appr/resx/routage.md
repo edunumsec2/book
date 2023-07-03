@@ -150,15 +150,33 @@ Comment le routeur 1 peut-il compléter sa table de routage avec les information
 
 ```
 
-Si l'on applique cette méthode telle quelle, cela peut créer des situations ou des erreurs dans les tables de
-routage se propagent à travers le réseau. {itodo}` [ajouter deux exemples] `
+Si l'on applique cette méthode telle quelle, cela peut créer des situations où des erreurs dans les tables de
+routage se propagent à travers le réseau. Consédérons par exemple le bout de réseau suivant:
+
+```{image} media/ripsplit.svg
+---
+width: 600
+align: center
+---
+```
+Lorsque la connexion en traitillés fonctionne, le routeur 1 remplit sa table de routage et la transmet au routeur 2.
+Les tables de routage de ces routeurs contiennent donc les lignes indiquées en noir dans la figure. 
+Si la connexion en traitillé se rompt, le routeur 2, va effacer de sa table de routage la ligne 
+concernant la destination `2.3.1.x`, mais il serait tenté d'ajouter la ligne en rouge lorsqu'il
+recevra la table du routeur 2, ce qui serait erroné. 
+
 
 C'est pour éviter ces problèmes que la protocole RIP applique un certains nombre de principes, appliqués
 également par d'autres protocoles de routage. 
 
-1. Ne pas transmettre à une interface une information déjà reçue par cette interface. Par exemple si
+1. Ne pas transmettre à une interface une information déjà reçue par cette interface. Ainsi, dans le l'exemple ci-dessus,
+selon ce principe, le routeur 2 ne pourra pas transmettre sa ligne au routeur 1, car cette information lui vient du routeur 1.
+C'est le principe de l'*horizon séparé* (*split horizon*). 
+
 
 2. Si une route est bouchée, transmettre  cette information aux voisins. Dans le protocole RIP on indique
-ceci par une distance égale à 16. Toute destination à distance supérieure à 15 est considérée comme inaccessible. 
+ceci par une distance égale à 16. Toute destination à distance supérieure à 15 est considérée comme inaccessible. Dans
+l'exemple si dessus, le routeur 1 remplacera simplement la distance par 16 (au lieu de 1) et transmettra cette information
+au routeur 2 qui mettra à jour sa table de routage. 
 
 {itodo}` [ajouter deux exemples] `

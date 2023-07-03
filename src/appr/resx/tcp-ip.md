@@ -47,7 +47,7 @@ L'envoi d'un paquet par la poste suit certaines règles, telles que la position 
 
 Selon ce protocole un paquet est constitué d'une suite de 0 et de 1 que l'on peut séparer en deux parties.
 
-1. L'entête qui donne des informations sur le paquet (son émetteur, sa destination, sa taille, etc.)
+1. L'en-tête qui donne des informations sur le paquet (son émetteur, sa destination, sa taille, etc.)
 1. Les données (appelées aussi la *charge utile*) qui forment le contenu du paquet, c'est-à-dire les
 informations que l'on veut transmettre.
 
