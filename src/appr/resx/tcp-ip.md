@@ -60,14 +60,14 @@ L'entête joue le rôle de l'étiquette sur un paquet envoyé par la poste. On y
 l'expéditeur (appelée aussi l'adresse source), mais aussi d'autres informations telles que la version d'IP utilisée (4 ou 6),
 la longueur totale du paquet, ainsi que sa "durée de vie". Sa durée de vie indique au bout de combien de temps le paquet peut
 être abandonné pour éviter d'avoir des paquets qui circulent indéfiniment sans trouver leur destinataire. Dans la version IPv4,
-l'entête fait au maximum 24 octets, remplis comme dans l'image ci-dessous.
+l'entête fait au minimum 20 octets, remplis comme dans l'image ci-dessous.
 
 ```{figure} media/IPv4header.png
 :width: 700
 ```
 
 On remarque que les 4 premiers bits indiquent la version d'IP utilisée (donc 0100 si c'est la version 4), les quatre suivants
-donnent la longueur de l'entête, etc.
+donnent la longueur de l'entête en lignes de 32 bits, etc.
 
 ````{Exercise}
 Un paquet avec l'entête IP suivante (en hexadécimal) circule sur Internet: 
@@ -84,6 +84,14 @@ Un paquet avec l'entête IP suivante (en hexadécimal) circule sur Internet:
  IP (en binaire) de l'émetteur et du recepteur. 
 ````
 
+```{solution}
+Chaque chiffre hexadécimal représente 4 bits, et donc chaque nombre à deux
+chiffre représente un octet (8 bits). Selon la spécification de l'entête,
+d'IP est donnée par les 4 premiers bits, donc le premier chiffre de
+l'entête qui est 4. C'est donc en entête en IPv4. L'adresse de l'émetteur
+(l'adresse source) est donnée à la quatrième ligne de 32 bits (ou 4 octets),
+c'esr donc `C1 C8 DC EA` en hexadécimal, c'est à dire `1100 0001 1100 1000 1101 1100 1110 1010` en binaire. La ligne suivante donne l'adresse de destination qui est `91 E8 C0 C5` en hexadécimal ou `1001 0001 1110 1100 0000 1100 0101` en binaire. 
+```
 
 
 ## Le protocole TCP
@@ -117,7 +125,7 @@ de manière à ce que la machine émettrice puisse renvoyer un paquet qui n'aura
 :align: center
 ```
 
-L'entête TCP est constitué aussi de 24 octets contenant les informations suivantes:
+L'entête TCP est constitué d'au moins 20 octets contenant les informations suivantes:
 
 ```{image} media/TCPheader.png
 :width: 700
@@ -171,6 +179,32 @@ et laquelle correspond à l'entête TCP.
 1. Combien d'octets du paquet ne sont pas représentés ci-dessus?
 
 ````
+
+````{solution}
+1. Le premier chiffre de l'entête étant un 4, c'est le format IPv4.
+La taille de l'entête IP est donc donnée par les bits 4 à 7, et donc le deuxième chiffre hexadécimal de l'entête qui est un 5 (en mauve). L'entête IP correspond donc aux 5 premiers mots de 32 bits, c'est-à-dire aux 20 premiers, octets donc aux 20 premiers nombres à 2 chiffre hexadécimaux (en bleu dans l'image ci-dessous). 
+L'entête TCP suite directement et sa taille est donnée par le début du 13e octet, qui est un `5` (en mauve) dans notre exemple. L'entête TCP fait donc également $5\cdot4=20$ octets, en cyan. L'image ci-dessous indique comment interpréter
+cet entête. 
+
+```{image} media/header_decoded.svg
+:width: 500
+:align: center
+```
+2. L'adresse IP de la source en hexadécimal est `57 62 A6 3F` ou `87.78.166.63`
+en notation usuelle. Le no de port est `0014` en hexadécimal, donc $1\cdot16+4=20$
+en décimal.
+
+3. L'adresse IP du destinataire en hexadécimal est `53 A6 98 F7` ou `83.166.152.247`
+en notation usuelle. Le no de port est `0050` en hexadécimal, donc $5\cdot16+0 = 80$
+en décimal.
+
+4. La longueur totale est de $41_{16} = 4 \cdot 16+1 = 65$ octets, y compris
+l'entête. 
+
+5. Seuls 56 octets sont représentés ci-dessus, il manque donc $65-56=9$ octets.
+
+````
+
 
 ### Déroulement
 
