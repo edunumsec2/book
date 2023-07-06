@@ -42,6 +42,7 @@ def depart_answer_html(self, node):
     self.body.append("</label>")
 
 def visit_question_html(self, node):
+    self.visit_admonition(node)
     classes = ["question"]
     if node["multi"]:
         classes.append("multi")
@@ -53,6 +54,7 @@ def visit_question_html(self, node):
 def depart_question_html(self, node):
     self.body.append("</form>")
     self.body.append("</div>")
+    self.depart_admonition(node)
 
 def visit_check_buttons_html(self, node):
     tag = self.starttag(node, "div", CLASS="controls")
