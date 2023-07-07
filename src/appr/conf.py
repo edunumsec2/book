@@ -84,9 +84,13 @@ if latex_mode:
     for chap in all_chapters:
         if tags.has(chap):
             selected_chapters.add(chap)
+
+    ## exclude non-selected chapters 
     if len(selected_chapters) > 0:
         exclude_patterns += list(all_chapters - selected_chapters)
-    if len(selected_chapters) == 1: ## print only one chapter
+
+    ## if prints only one chapter, change tex file name to that chapter
+    if len(selected_chapters) == 1: 
         texfname = list(selected_chapters)[0]
     
 # -- Options for HTML output -------------------------------------------------
