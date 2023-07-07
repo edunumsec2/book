@@ -72,12 +72,23 @@ language = 'fr'
 
 
 latex_mode = tags.has('latex_mode')
+texfname = "modulo"
+
     
-Chapters = {"rep-info", "prog1", "algo1", "archi",   "prog2", "algo2", "resx", "projets", "hist", "glossaire"}
-
+all_chapters = {"rep-info", "prog1", "algo1", "archi",   "prog2", "algo2", "resx", "projets", "hist", "glossaire"}
+selected_chapters = set()
 if latex_mode:
-    exclude_patterns = ['prog1', 'prog2', 'hist', 'projets', 'resx']
-
+    exclude_patterns = ['prog1', 'prog2', 'hist', 'projets', "glossaire"]
+    exclude_chapters = []
+    selection = False
+    for chap in all_chapters:
+        if tags.has(chap):
+            selected_chapters.add(chap)
+    if len(selected_chapters) > 0:
+        exclude_patterns += list(all_chapters - selected_chapters)
+    if len(selected_chapters) == 1: ## print only one chapter
+        texfname = list(selected_chapters)[0]
+    
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages. See the documentation for
@@ -186,7 +197,7 @@ latex_elements = {
 
 #latex_documents = ('modulo','modulo.tex',"Modulo: une introduction à l'informatique", "John","manual","True")
 latex_additional_files = ["../static/assets/modulo-head-banner.png","../static/assets/by-nc.eu.png"]
-latex_documents = [('index','modulo.tex',"Modulo. Une~introduction~à~l'informatique", "Groupe de travail DGEP, EPFL, HEP-VD, UNIL","manual","True")]
+latex_documents = [('index',texfname + '.tex',"Modulo. Une~introduction~à~l'informatique", "Groupe de travail DGEP, EPFL, HEP-VD, UNIL","manual","True")]
 
 latex_show_urls = 'footnote'
 
