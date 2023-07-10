@@ -15,8 +15,8 @@ Les réseaux de communication existaient bien avant Internet, par exemple :
 - le réseau téléphonique de Bell (1877)
 - le réseau de télégraphie par ondes radio de Marconi (1896)
 
-Mais beaucoup de ces réseaux, comme la radio et le téléphone, étaient
-centralisés. {itodo}`vraiment?`
+Ces anciens réseaux avaient besoin d'opérateurs ou opératrices pour la transimssion des messages,
+ou, poour les plus récents, ils étaient centralisés.
 Cela signifie qu'il y a un point central du réseau par lequel passent toutes
 les communications.
 Après la 2e guerre mondiale, qui avait vu le nivellement de villes entières par des bombardements aériens (comme à Dresde)
@@ -32,9 +32,13 @@ attaquer.
 width: 500
 align: center
 ---
-Image tirée de l'article proposant de réaliser un réseau décentralisé. Baran, *On Distributed Communications: I. Introduction to distributed communications networks*, RAND CORP CALIF, 1964. disponible [ici](https://www.rand.org/pubs/research_memoranda/RM3420.html). Cette image illustre la différence entre un réseau centralisé (à gauche), dans lequel toutes les communications passent par un point central, et un réseau distribué (droite), dans lequel tous les noeuds
-ont plus ou moins la même importance.
-Le réseau du milieu représente un intermédiaire décentralisé, entre le réseau complètement centralisé de gauche et le réseau distribué de droite
+Image tirée de l'article proposant de réaliser un réseau décentralisé. Baran,
+*On Distributed Communications: I. Introduction to distributed communications networks*, RAND CORP CALIF, 1964,
+disponible [ici](https://www.rand.org/pubs/research_memoranda/RM3420.html). Cette image illustre la différence
+entre un réseau centralisé (à gauche), dans lequel toutes les communications passent par un point central,
+et un réseau distribué (droite), dans lequel tous les noeuds ont plus ou moins la même importance.
+Le réseau du milieu représente un intermédiaire décentralisé, entre le réseau complètement centralisé de gauche
+et le réseau distribué de droite
 
 ```
 ````
@@ -50,7 +54,8 @@ aux cryptomonnaies. En 1983, les militaires ont déconnecté leur partie du rés
 Internet est souvent décrit comme un *réseau de réseaux*. En effet, Internet est construit sur une structure de {glo}`lan|réseaux locaux` interconnectés les
 uns aux autres. Par exemple, les ordinateurs d'une école, d'une entreprise ou d'un appartement peuvent être reliés entre eux par le wifi,
 ou des câbles Ethernet et constituer un réseau local. Le réseau local est ensuite connecté, par le biais d'un {glo}`routeur|routeur`, au reste d'Internet.
-Ainsi Internet est constitué d'une myriade de sous-réseaux enchâssés les uns dans les autres. Ces réseaux sont connectés par les *dorsales d'Internet*, des
+Ainsi Internet est constitué d'une myriade de sous-réseaux connectés (et potentiellement enchâssés) les uns aux autres. Ces réseaux sont connectés par
+les *dorsales d'Internet*, des
 câbles de fibre optique capables de transférer des données à haut débit, qui traversent les continents et les océans.
 
 ```{figure} media/struct.svg
@@ -77,7 +82,7 @@ et qui seront repris dans la suite du chapitre.
 
 Tout réseau de communication a besoin d'un système d'adresses afin de pouvoir distinguer et joindre les différents destinataires.
 Dans un réseau décentralisé qu'est Internet, le système d'adressage doit permettre à chaque machine connectée au réseau d'être identifiable
-et joignable, sans causer de quiproquo. Cela passe par une organisation hiérarchique du réseau.
+et joignable, sans causer de quiproquo. Cela passe par une gestion hiérarchique des adresses.
 
 ### Routage
 
@@ -137,7 +142,7 @@ ou ils peuvent être fermés (ou privés) ce qui limite leur utilisation à l'en
 Dans le reste de ce chapitre, nous allons aborder plus concrètement les notions décrites ci-dessus et en approfondir certains aspects. Pour illustrer notre propos,
 considérons la situation suivante.
 
-```{torecall} l'application aux champignons
+```{note} l'application aux champignons
 
 Imaginons qu'Alice est partie à la cueillette aux champignons dans la forêt.
 Elle pense avoir trouvé un beau bolet, mais pour plus de sécurité, consulte

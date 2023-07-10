@@ -2,22 +2,21 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="55.300709mm"
    height="35.12838mm"
    viewBox="0 0 55.300709 35.12838"
    version="1.1"
    id="svg937"
-   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
-   sodipodi:docname="routing.svg">
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   sodipodi:docname="routing.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <metadata
      id="metadata116">
     <rdf:RDF>
@@ -26,7 +25,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -41,14 +39,14 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="5.14"
-     inkscape:cx="126.1708"
-     inkscape:cy="62.430713"
+     inkscape:cx="126.07004"
+     inkscape:cy="77.918288"
      inkscape:window-width="1863"
      inkscape:window-height="963"
-     inkscape:window-x="456"
-     inkscape:window-y="258"
+     inkscape:window-x="108"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer1"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -60,8 +58,24 @@
   <defs
      id="defs934">
     <linearGradient
+       id="linearGradient1199"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#9955ff;stop-opacity:1;"
+         offset="0"
+         id="stop1197" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient1139"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#5fd3bc;stop-opacity:1;"
+         offset="0"
+         id="stop1137" />
+    </linearGradient>
+    <linearGradient
        id="linearGradient2658"
-       osb:paint="solid">
+       inkscape:swatch="solid">
       <stop
          style="stop-color:#000000;stop-opacity:1;"
          offset="0"
@@ -69,7 +83,7 @@
     </linearGradient>
     <linearGradient
        id="linearGradient2652"
-       osb:paint="solid">
+       inkscape:swatch="solid">
       <stop
          style="stop-color:#e9afaf;stop-opacity:1;"
          offset="0"
@@ -77,7 +91,7 @@
     </linearGradient>
     <linearGradient
        id="linearGradient1329"
-       osb:paint="solid">
+       inkscape:swatch="solid">
       <stop
          style="stop-color:#000000;stop-opacity:1;"
          offset="0"
@@ -699,6 +713,15 @@
        y1="11.946668"
        x2="34.326122"
        y2="11.946668" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1199"
+       id="linearGradient1201"
+       x1="54.482441"
+       y1="71.55748"
+       x2="56.330723"
+       y2="71.55748"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <g
      inkscape:groupmode="layer"
@@ -1003,7 +1026,7 @@
        cy="61.716244"
        r="0.92414063" />
     <circle
-       style="fill:#5fd3bc;stroke:none;stroke-width:3"
+       style="fill:url(#linearGradient1201);stroke:none;stroke-width:3;fill-opacity:1"
        id="path4700-549-3"
        cx="55.406582"
        cy="71.55748"
@@ -1015,13 +1038,13 @@
        cy="61.382645"
        r="0.92414063" />
     <circle
-       style="fill:#5fd3bc;stroke:none;stroke-width:3"
+       style="fill:#9955ff;stroke:none;stroke-width:3"
        id="path4700-549-0"
        cx="76.061104"
        cy="71.557487"
        r="0.92414063" />
     <circle
-       style="fill:#5fd3bc;stroke:none;stroke-width:3"
+       style="fill:#9955ff;stroke:none;stroke-width:3;fill-opacity:1"
        id="path4700-549-2"
        cx="84.067535"
        cy="55.377815"

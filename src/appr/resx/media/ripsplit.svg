@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="89.559662mm"
-   height="33.930569mm"
-   viewBox="0 0 89.559662 33.930569"
-   version="1.1"
-   id="svg1607"
-   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
    sodipodi:docname="ripsplit.svg"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   id="svg1607"
+   version="1.1"
+   viewBox="0 0 89.559662 33.930569"
+   height="33.930569mm"
+   width="89.559662mm"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -25,12 +25,12 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="3.5582879"
-     inkscape:cx="205.99795"
+     inkscape:cx="205.85743"
      inkscape:cy="115.92654"
      inkscape:window-width="1461"
-     inkscape:window-height="727"
-     inkscape:window-x="91"
-     inkscape:window-y="101"
+     inkscape:window-height="699"
+     inkscape:window-x="410"
+     inkscape:window-y="63"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      showguides="true"
@@ -46,6 +46,76 @@
   </sodipodi:namedview>
   <defs
      id="defs1604">
+    <marker
+       style="overflow:visible;"
+       id="marker6051"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path6049" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Sstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Sstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.2) translate(6,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path2033" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker2665"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Send"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.2) rotate(180) translate(6,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path2663" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Send"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Send"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.2) rotate(180) translate(6,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path2036" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path2024" />
+    </marker>
     <linearGradient
        id="linearGradient35599"
        inkscape:swatch="solid">
@@ -107,6 +177,20 @@
        x2="121.22026"
        y2="110.07939"
        gradientTransform="translate(-20.62074)" />
+    <marker
+       style="overflow:visible"
+       id="marker2665-9"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="marker2665-9"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         style="fill:#000000;fill-rule:evenodd;stroke:#130a00;stroke-width:1pt;fill-opacity:0.0"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path2663-0" />
+    </marker>
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -318,5 +402,15 @@
        cy="109.83867"
        rx="14.27614"
        ry="6.3581815" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker2665);fill-opacity:1"
+       d="m 116.58943,119.99993 c -0.47321,3.10213 -0.12046,1.67435 -0.60015,2.665 -0.24867,0.51357 -0.54815,1.6562 -1.08233,1.85677 -0.89148,0.33463 -3.06229,-0.018 -3.06229,-0.018"
+       id="path2661"
+       sodipodi:nodetypes="cssc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker2665);stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 109.28778,117.29474 c 2.52814,-1.85893 1.63718,-1.57197 2.67685,-1.93328 0.53899,-0.18731 1.19067,-0.31031 1.71021,-0.0744 0.86701,0.39376 1.78456,2.23071 1.78456,2.23071"
+       id="path2661-2"
+       sodipodi:nodetypes="cssc" />
   </g>
 </svg>

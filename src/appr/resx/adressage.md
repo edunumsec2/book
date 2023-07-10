@@ -43,9 +43,11 @@ Déterminer à l'aide du site web <https://www.nic.ch/whois/> qui a enregistré 
 
 Afin de pouvoir identifier chacune des machines connectées à Internet, il a été décidé de leur attribuer à chacune
 un nombre, un peu à la manière dont les numéros de téléphone sont attribués à chaque téléphone du réseau téléphonique.
-Dans sa version la plus courante, ce nombre est codé sur 32 bits, ce qui donne à peu près 4 milliards de possibilités ($2^{32}$).  
-On pensait alors (c'était en 1982) que 4 milliards d'adresses seraient amplement suffisantes pour pouvoir accommoder toutes les machines pendant encore beaucoup d'années, et qu'Internet
-ne dépasserait pas les 4 milliards de machines connectées. A cette éqpoque, il n'y avait que quelques centaines d'ordinateurs connectés à Internet. 
+Dans sa version la plus courante, ce nombre est codé sur 32 bits, ce qui donne à peu près 4 milliards de possibilités ($2^{32}$).
+On pensait alors (c'était en 1982) que 4 milliards d'adresses seraient amplement suffisantes pour pouvoir accommoder
+toutes les machines pendant encore beaucoup d'années, et qu'Internet
+ne dépasserait pas les 4 milliards de machines connectées. A cette éqpoque, il n'y avait que quelques centaines d'ordinateurs
+connectés à Internet. 
 Afin de rendre ces adresses plus lisibles pour les humains, on décompose d'habitude une adresse IP de 32 bits en
 quatre groupes de 8 bits séparés par un point. Chaque groupe de 8 bits peut alors être représenté comme un nombre décimal
 entre 0 et 255 ($2^8-1$).
@@ -120,15 +122,15 @@ Parmi les adresses suivantes, indiquer lesquelles sont au format IPv4, lesquelle
 1. ```1923.2123.1323.4324.4241.2434.7657.5757```
 1. ```ADEFE.ACDEA.AABCD.DDEBC.FFEDA.AEABC.ACADE.EFDF```
 1. ```1230.121D.12AEAB.1231D.4324B.2765.5435D.4378```
-1. ``` D2G3.4234.534FG.2141.12GE.12AD.85C2.GE32```
-1. ``` 123A.3213.564E.6746.2DD2.A897```
-1. ``` 124.234.432.21```
+1. ```D2G3.4234.534FG.2141.12GE.12AD.85C2.GE32```
+1. ```123A.3213.564E.6746.2DD2.A897```
+1. ```124.234.432.21```
 
 ````
 
 ### Gouvernance
 
-Comme les noms de domaine, les adresses IP sont gérées hiérarchiquement. Ainsi, les adresses de la forme
+Comme les noms de domaine, les adresses IP sont gérées hiérarchiquement. Ainsi, les adresses IPv4 de la forme
 `46.x.x.x` (c'est-à-dire celles qui commencent par `46 = 00101110`) sont assignées au Centre de Coordination
 Européen qui les répartit entre différents *Registres Internet locaux* tels que Switch qui va pouvoir
 louer une partie de ces adresses IP à des organisations, des entreprises (par exemple des fournisseurs d'accès Internet)
@@ -163,7 +165,7 @@ joignables par le reste d'Internet.
 
 ### Réseau privé
 
-Les particuliers et entreprises ont généralement un réseau privé, un intranet, qui utilise
+Les particuliers et entreprises ont généralement un réseau privé, un *intranet*, qui utilise
 les adresses 10.x.x.x. L'appareil qui permet de connecter ce réseau privé au reste d'Internet est un *routeur*, par exemple
 la boîte wifi qui est fournie par le fournisseur d'accès. Ce routeur a la fois une adresse locale
 (dans notre exemple 10.0.1.1) pour être joignable depuis le réseau privé et une adresse globale (213.221.190.41 dans
@@ -183,7 +185,7 @@ accès Internet à Alice et Bob. Les routeurs, en vert clair, ont deux adresses 
 ```
 
 ```{micro}
-- A l'aide d'un navigateur web, aller sur le site [https://www.whatismyip.com](https://www.whatismyip.com/) et déterminer sa
+- A l'aide d'un navigateur web, aller sur le site <https://www.whatismyip.com> et déterminer sa
 propre adresse IP. 
 - Dans un terminal taper la commande suivante qui détermine votre adresse IP:
   - sur Mac Os ou Linux: `ipconfig getifaddr en0`
@@ -196,7 +198,7 @@ propre adresse IP.
 
 Une adresse IP peut être allouée de manière *statique* ou *dynamique*. Dans le cas de l'adressage statique, on configure la machine en lui indiquant son adresse IP, est c'est elle qui annonce au réseau quelle est son
 adresse IP, afin que les messages puissent lui parvenir. La machine conserve ainsi toujours la même adresse IP, de la même façon qu'un téléphone conserve toujours le même numéro (sauf si on le reconfigure en modifiant par exemple la carte SIM). Dans le cas de l'adressage dynamique, la machine demande une adresse IP au moment où elle se connecte à Internet. Cette demande se fait auprès d'un serveur qui va lui allouer une adresse IP disponible parmi celles qu'il a à disposition. C'est un peu comme si chaque fois qu'on allumait son téléphone, on recevait un autre numéro pour être joignable. Si c'est nous qui initions les appels, cela ne pose pas vraiment de problème, mais si on veut être
-joignable, cela devient problématique, car les autres ne sauront pas comment nous trouver. Mais cela a d'une part l'avantage d'éviter qu'une machine non connectée monopolise une adresse IP sans l'utiliser et d'autre part, cela donne un (petit) degré d'anonymat et de sécurité en plus, car il sera plus difficile de cibler précisément notre machine et intercepter nos messages sur sur Internet.
+joignable, cela devient problématique, car les autres ne sauront pas comment nous trouver. Mais cela a d'une part l'avantage d'éviter qu'une machine non connectée monopolise une adresse IP sans l'utiliser et d'autre part, cela donne un (petit) degré d'anonymat et de sécurité en plus, car il sera plus difficile de cibler précisément notre machine et intercepter nos messages sur Internet.
 
 Ainsi les serveurs (les sites web, par exemple), qui doivent être joignables en tout temps ont généralement une adresse IP statique, alors que les machines des utilisateurs et utilisatrices ont souvent une adresse IP dynamique. Lorsqu'on fait un
 abonnement Internet, le fournisseur d'accès propose d'habitude une adresse IP dynamique (cela lui permet d'économiser les adresses IP en sa possession), mais il est également possible, en payant un peu plus, d'obtenir une adresse IP statique.
@@ -222,19 +224,25 @@ qui revient plusieurs fois sur votre site ?
 1. Vous pouvez vous connecter tous deux à un serveur central qui a une adresse IP fixe et qui s'occupera de relayer vos messages à vos adresses
 dynamiques. C'est ce que fait un serveur mail ou de messagerie telle que Signal ou Whatsapp. 
 
-2. Si elle a une adresse IP dynamique, alors elle aura probablement des adresses IP différentes lors de ses visites en des jours différents. On
-ne pourra donc pas l'identifier en regardant uniquement son adresse IP. Par contre, en enregistrant d'autres paramètres que son navigateur
-voudra bien nous transmettre, tels que son système d'exploitation, la langue, l'appareil, etc., on peut reconstituer son empreinte numérique
-et l'identifier ainsi. C'est ce qu'on appelle en anglais le fingerprinting, que l'on peut [bloquer avec certains navigateurs](https://www.mozilla.org/fr/firefox/features/block-fingerprinting/).
+2. Si elle a une adresse IP dynamique, alors elle aura probablement des adresses IP différentes lors de ses visites
+en des jours différents. On ne pourra donc pas l'identifier en regardant uniquement son adresse IP. Par contre, en enregistrant
+d'autres paramètres que son navigateur voudra bien nous transmettre, tels que son système d'exploitation, la langue,
+l'appareil, etc., on peut reconstituer son empreinte numérique
+et l'identifier ainsi. C'est ce qu'on appelle en anglais le fingerprinting, que l'on
+peut [bloquer avec certains navigateurs](https://www.mozilla.org/fr/firefox/features/block-fingerprinting/).
 
-3. Oui, votre fournisseur d'accès à Internet doit garder une trace de quelle adresse IP à été allouée à qui et à quel moment. La police peut dès lors exiger ces informations en cas de soupçons.
+3. Oui, votre fournisseur d'accès à Internet doit garder une trace de quelle adresse IP a été allouée à qui et à quel moment.
+La police peut dès lors exiger ces informations en cas de soupçons.
 ```
 
 ### Système de noms de domaine
 
-Pour récapituler ce qui a été vu précédemment, les humains utilisent les noms de domaines pour les machines, alors que les machines, elles, utilisent les adresses IP. Afin que ces deux modes de recensement des machines soient cohérents entre eux, il est nécessaire de disposer d'un annuaire qui fera correspondre les noms de domaines aux adresses IP. Ceci est analogue aux annuaires téléphoniques ou aux contacts du smartphone qui permettent de faire correspondre le nom des personnes que l'on veut atteindre (qui serait équivalentes au nom de domaine) au numéro de téléphone (qui est analogue à l'adresse IP). Cet annuaire est ce qu'on appelle le *système de noms de domaine* (Domain Name System ou DNS selon l'appellation anglaise). Au début d'Internet, il s'agissait simplement d'un fichier texte librement accessible qui listait le nom de domaines et les adresses IP correspondantes. Ce fichier était maintenu à la main. Maintenant, il s'agit de machines, les serveurs DNS dans le réseau auprès desquelles il est possible d'obtenir l'adresse IP correspondante à un nom de domaine. Ces machines sont aussi organisées hiérarchiquement de telle sorte que chaque serveur DNS ne stocke que les noms de domaines correspondant à une sous-partie du réseau.
+Pour récapituler ce qui a été vu précédemment, les humains utilisent les noms de domaines pour les machines, alors que les machines, elles, utilisent les adresses IP. Afin que ces deux modes de recensement des machines soient cohérents entre eux, il est nécessaire de disposer d'un annuaire qui fera correspondre les noms de domaines aux adresses IP. Ceci est analogue aux annuaires téléphoniques ou aux contacts du smartphone qui permettent de faire correspondre le nom des personnes que l'on veut atteindre (qui serait équivalentes au nom de domaine) au numéro de téléphone (qui est analogue à l'adresse IP). Cet annuaire est ce qu'on appelle le *système de noms de domaine* (Domain Name System ou DNS selon l'appellation anglaise). Au début d'Internet, il s'agissait simplement d'un fichier texte librement accessible qui listait le nom de domaines et les adresses IP correspondantes. Ce fichier était maintenu à la main. Maintenant, il s'agit de machines, les serveurs DNS dans le réseau auprès desquelles il est possible d'obtenir l'adresse IP correspondante à un nom de domaine. 
 
-```{note} Le serveur DNS
+
+Ces machines sont aussi organisées hiérarchiquement de telle sorte que chaque serveur DNS ne stocke que les noms de domaines correspondant à une sous-partie du réseau.
+
+````{note} Le serveur DNS
 ```{figure} media/dns.png
 ---
 width: 500
@@ -244,6 +252,7 @@ Pour qu'Alice puisse aller sur le site de champignons.ch, son téléphone va env
 requête transitera par différents serveurs DNS organisés hiérarchiquement jusqu'à ce qu'un serveur DNS puisse y répondre, et la réponse sera retransmise
 jusqu'au téléphone d'Alice.
 ```
+````
 
 ```{didyouknow} Le hacking de DNS
 Une méthode de hacking consiste à mettre en ligne un serveur DNS malveillant

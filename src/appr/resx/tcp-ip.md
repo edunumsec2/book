@@ -43,11 +43,14 @@ possible de ces paquets.
 
 ## Le protocole IP
 
-L'envoi d'un paquet par la poste suit certaines règles, telles que la position et le format de l'adresse de destination, la position et le format de l'adresse d'expédition, la position du timbre et son montant en fonction du poids et de la destination. Sans ces règles, l'acheminement du paquet ne peut pas être assuré. De manière analogue l'envoi d'un paquet sur Internet doit suivre certaines règles pour être acheminé. C'est le protocole IP qui définit ces règles.
+L'envoi d'un paquet par la poste suit certaines règles, telles que la position et le format de l'adresse de destination, la position
+et le format de l'adresse d'expédition, la position du timbre et son montant en fonction du poids et de la destination. Sans ces règles,
+l'acheminement du paquet ne peut pas être assuré. De manière analogue l'envoi d'un paquet sur Internet doit suivre certaines règles pour
+être acheminé. C'est le protocole IP qui définit ces règles.
 
 Selon ce protocole un paquet est constitué d'une suite de 0 et de 1 que l'on peut séparer en deux parties.
 
-1. L'en-tête qui donne des informations sur le paquet (son émetteur, sa destination, sa taille, etc.)
+1. L'entête qui donne des informations sur le paquet (son émetteur, sa destination, sa taille, etc.)
 1. Les données (appelées aussi la *charge utile*) qui forment le contenu du paquet, c'est-à-dire les
 informations que l'on veut transmettre.
 
@@ -66,8 +69,10 @@ l'entête fait au minimum 20 octets, remplis comme dans l'image ci-dessous.
 :width: 700
 ```
 
-On remarque que les 4 premiers bits indiquent la version d'IP utilisée (donc 0100 si c'est la version 4), les quatre suivants
-donnent la longueur de l'entête en lignes de 32 bits, etc.
+Ainsi, les 4 premiers bits indiquent la version d'IP utilisée (donc 0100 si c'est la version 4), les quatre suivants
+donnent la longueur de l'entête en lignes de 32 bits, et la longueur totale (en octets) du paquet est données par les
+troisième et quatrième octets de l'entête IP. L'adresse IP de la source occupe les octets 13 à 16, et celle de la destination
+les octets 17 à 20. 
 
 ````{Exercise}
 Un paquet avec l'entête IP suivante (en hexadécimal) circule sur Internet: 
@@ -80,7 +85,7 @@ Un paquet avec l'entête IP suivante (en hexadécimal) circule sur Internet:
  91 E8 C0 C5  
 ```
  
- Déterminer de quelle version de protocole IP il s'agit, ainsi que les adresses
+ Déterminer de quelle version de protocole IP il s'agit, la longueur du paquet ainsi que les adresses
  IP (en binaire) de l'émetteur et du recepteur. 
 ````
 
@@ -88,7 +93,9 @@ Un paquet avec l'entête IP suivante (en hexadécimal) circule sur Internet:
 Chaque chiffre hexadécimal représente 4 bits, et donc chaque nombre à deux
 chiffre représente un octet (8 bits). Selon la spécification de l'entête,
 d'IP est donnée par les 4 premiers bits, donc le premier chiffre de
-l'entête qui est 4. C'est donc en entête en IPv4. L'adresse de l'émetteur
+l'entête qui est 4. C'est donc en entête en IPv4. La longueur du paquet est donnée
+en hexadéximal par les octets 3  et 4, donc `00 14` c'est à dire 20 octets (en décimal).
+Ce paquet ne contient donc pas de données. L'adresse de l'émetteur
 (l'adresse source) est donnée à la quatrième ligne de 32 bits (ou 4 octets),
 c'esr donc `C1 C8 DC EA` en hexadécimal, c'est à dire `1100 0001 1100 1000 1101 1100 1110 1010` en binaire. La ligne suivante donne l'adresse de destination qui est `91 E8 C0 C5` en hexadécimal ou `1001 0001 1110 1100 0000 1100 0101` en binaire. 
 ```
@@ -118,7 +125,8 @@ On désire envoyer par email une photo de 2 Mo. De combien de paquets au minimum
 
 De manière similaire au protocole IP, le protocole TCP est constitué d'un *entête* placé au début des données du paquet IP et qui contient des informations
 sur les numéros de morceaux envoyés et reçus. En effet, la machine réceptrice va envoyer une quittance (*acknowledgement* en anglais) pour chaque paquet reçu,
-de manière à ce que la machine émettrice puisse renvoyer un paquet qui n'aurait pas été acheminé à destination.
+de manière à ce que la machine émettrice puisse renvoyer un paquet qui n'aurait pas été acheminé à destination. Un paquet envoyé par les protocoles TCP et IP,
+contient donc l'entête IP, suivi de l'entête TCP, suivi des données, tel que représenté ci-dessous.
 
 ```{image} media/IPTCPpacket.svg
 :width: 500
@@ -146,7 +154,7 @@ Les quatre octets suivants contiennent le numéro de séquence qui va permettre
 au programme qui reçoit les paquets de les remettre dans l'ordre selon ce
 numéro. Le numéro d'acquittement sont utilisés par le destinataire
 pour indiquer quels sont les
-paquets qui ont été reçus, permettant ainsi à la machine émettrice de quels
+paquets qui ont été reçus, permettant ainsi à la machine émettrice de savoir quels
 paquets se sont perdus en chemin et doivent être envoyés à nouveau. Les quatre
 octets suivants contiennent divers éléments permettant aux deux machines en
 communication de se synchroniser, notamment divers fanions indiquant si on veut
@@ -229,13 +237,23 @@ des données, avec les numéros des séquences (#seq) et et d'acquittement (#ack
 ```
 
 ```{exercise}
-Un serveur reçoit un packet TCP avec le contenu suivant dans l'entête. Que cela signifie-t-il,
-et comment le serveur est-il censé réagir? 
+Un serveur reçoit un paquet TCP avec le contenu suivant dans l'entête. Que cela signifie-t-il,
+et comment le serveur est-il censé réagir si tout se passe bien? 
 
 1. FIN = 1, no de séquence = 257
 2. SYN = 1, no de séquence = 745
 3. ACK = 1, no de séquence = 343, no d'acquittement = 746, 
 ````
+
+```{solution}
+1. Le client souhaite mettre fin à la connexion. Le serveur répond avec ACK=1, no d'acquittement=258
+2. Le client souhaite établir une connection, le serveur répond avec SYN=1, ACK=1, no d'acquittement=746
+et un no de séqence. 
+3. Le client a reçu les paquets jusqu'à l'octet 746 (non compris) et envoie un message numéroté 343. 
+Le serveur envoie un paquet avec l'ACK=1, no d'acquittement 343+m. S'il y a p octet à envoyer
+le serveur l'inclut et un no de séquence 746+p. 
+
+```
 
 ```{exercise}
 - Quelle est no de séquence maximal que l'entête TCP peut contenir?

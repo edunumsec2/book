@@ -16,7 +16,7 @@ mais toute la partie s'assurant du bon transfert et de la bonne réception des p
 gérée par le protocole TCP.
 Mais ce protocole repose sur le protocole IP pour l'envoi des paquets indidivduels qui
 lui-même repose sur différents protocoles selon que les paquets circulent par le wifi, un câble
-sous-marin, des 4G ou de la fibre optique. Ainsi les niveaux supérieurs peuvent s'abstraire
+sous-marin, la 4G ou de la fibre optique. Ainsi les niveaux supérieurs peuvent s'abstraire
 des niveaux inférieurs, et vice-versa. Si un nouveau support physique de communication est
 inventé (par exemple la téléportation quantique), il suffit de développer un protocole de
 communication propre à ce support et on pourra utiliser le protocole IP pour la transmission
@@ -44,7 +44,7 @@ entête TCP numérotée (en bleu ciel) et
 envoyés à leur destinataire par le protocole IP de la couche "Internet". Avec ce protocole, une seconde entête (représentées en bleu
 foncé) est ajoutée à chaque paquet qui est envoyé sur le réseau par un protocole propre au type de réseau utilisé (en y ajoutant
 encore une entête mauve). L'information ne passera d'habitude pas directement d' Alice au serveur web, mais par des routeurs qui
-achemineront les paquets IP jusqu^à leur destination, en utilisant les différents protocoles de la couche d'accès réseau selon les
+achemineront les paquets IP jusqu'à leur destination, en utilisant les différents protocoles de la couche d'accès réseau selon les
 besoins. 
 
 ```
@@ -98,8 +98,8 @@ Le premier RFC, RFC1 a été formulé en 1969 pour proposer
 un protocole de communication sur ARPANET, le projet de recherche militaire américain qui a donné naissance à
 Internet. Toutes les technologies d'Internet décrites ci-dessus ont été proposées par le biais de RFC, par exemple IPv4, RIP, HTML, etc.  
 
-```{micro}
-Chercher et lire le RFC 8962, en particulier l'abstract et les parties 7. et 8. De quoi s'agit-il?
+```{micro} 
+Chercher et lire le RFC 8962, en particulier l'abstract et les parties 7 et 8, ainsi que la date. De quoi s'agit-il?
 ````
 
 ## La neutralité d'Internet
@@ -114,7 +114,7 @@ fournis et ainsi augmenter leurs tarifs et donc leurs bénéfices. Ou alors, il 
 paquets liés à leurs propres services (par exemple Swisscom, pourrait privilégier l'acheminement des paquets liés à son service de télévision
 au détriment d'autres chaînes.)
 
-Le respect de la neutralité d'Internet est différent de pays en pays, certain, comme la Suisse l'ayant inscrite dans la loi.
+Le respect de la neutralité d'Internet est différent de pays en pays, certains, comme la Suisse l'ayant inscrite dans la loi.
 
 ```{micro}
 Lire [ l'article 12e](https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/fr#art_12_e) de la loi fédérale sur les télécommunications qui concerne la neutralité d'Internet. Quel alinéa garantit la neutralité du réseau? Cette garantie est-elle absolue? 
