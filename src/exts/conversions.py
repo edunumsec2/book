@@ -1,13 +1,23 @@
-from svglib.svglib import svg2rlg
-from reportlab.graphics import renderPDF
-import cairosvg 
+import sys
+import os
+# from svglib.svglib import svg2rlg
+# from reportlab.graphics import renderPDF
+
+if sys.platform != 'darwin':
+    import cairosvg 
+
+
 
 from PIL import Image
 
 def svg2pdf(svg_file, pdf_file):
-    cairosvg.svg2pdf(url=svg_file,write_to=pdf_file)
     #drawing = svg2rlg(svg_file)
     #renderPDF.drawToFile(drawing, pdf_file)
+    ## version 3
+    if sys.platform == 'darwin':
+        os.system('/Applications/Inkscape.app/Contents/MacOS/inkscape ' +svg_file + ' --export-area-drawing --export-filename ' + pdf_file)
+    else:
+        cairosvg.svg2pdf(url=svg_file,write_to=pdf_file) ## not tested  
 
 def gif2pdf(gif_file, pdf_file):
     img = Image.open(gif_file)
