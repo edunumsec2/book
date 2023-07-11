@@ -4,7 +4,7 @@ WEB_CHAPTERS = rep-info archi algo1 prog1 resx algo2 prog2 projets hist
 
 PRINT_CHAPTERS = rep-info archi algo1 resx algo2
 
-WEB_BUILD_DIR = build/appr/
+WEB_BUILD_DIR = build/appr
 
 LATEX_BUILD_DIR = build/latex/appr
 
@@ -31,14 +31,18 @@ web: sources scripts
 
 print: sources scripts latex
 	sphinx-build -aE -t latex_mode -b latex $(MD_SOURCE_DIR) $(LATEX_BUILD_DIR)
-	cd $(LATEX_BUILD_DIR) && make && mv $(LATEX_BUILD_DIR)/modulo.pdf .
+	cd $(LATEX_BUILD_DIR) && make
+
+modulo.pdf: print
+	cp $(LATEX_BUILD_DIR)/modulo.pdf .
 
 %.pdf: sources scripts latex
 	sphinx-build -aE -t latex_mode -t $* -b latex $(MD_SOURCE_DIR) $(LATEX_BUILD_DIR)
 	cd $(LATEX_BUILD_DIR) && rm -f $@ && make
 	mv $(LATEX_BUILD_DIR)/$@ .
 
-all: web print $(addsuffix .pdf, $(PRINT_CHAPTERS))
+all: web modulo.pdf $(addsuffix .pdf, $(PRINT_CHAPTERS))
+	mkdir -p  $(WEB_BUILD_DIR)/media && cp *.pdf $(WEB_BUILD_DIR)/media/
 
 clean:
 	rm -rf $(LATEX_BUILD_DIR)/* $(WEB_BUILD_DIR)*
