@@ -38,7 +38,8 @@ modulo.pdf: print
 
 %.pdf: sources scripts latex
 	sphinx-build -aE -t latex_mode -t $* -b latex $(MD_SOURCE_DIR) $(LATEX_BUILD_DIR)
-	cd $(LATEX_BUILD_DIR) && rm -f $@ && make
+	#cd $(LATEX_BUILD_DIR) && rm -f $@ && make
+	make -C $(LATEX_BUILD_DIR)
 	mv $(LATEX_BUILD_DIR)/$@ .
 
 all: web modulo.pdf $(addsuffix .pdf, $(PRINT_CHAPTERS))

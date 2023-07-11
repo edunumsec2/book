@@ -16,6 +16,8 @@ def svg2pdf(svg_file, pdf_file):
     ## version 3
     if sys.platform == 'darwin':
         os.system('/Applications/Inkscape.app/Contents/MacOS/inkscape ' +svg_file + ' --export-area-drawing --export-filename ' + pdf_file)
+    elif sys.platform == 'linux':
+        os.system('inkscape ' +svg_file + ' --export-area-drawing --export-filename ' + pdf_file)
     else:
         cairosvg.svg2pdf(url=svg_file,write_to=pdf_file) ## not tested  
 
