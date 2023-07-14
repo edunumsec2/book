@@ -28,6 +28,7 @@ de 0 et 1.
 Lorsqu'il s'agit de représenter ce texte à l'écran ou à l'impression, les logiciels utilisent la table
 dans l'autre sens pour trouver le caractère correspondant au nombre binaire.
 
+`````{htlmonly}
 ````{panels}
 :column: col-lg
 
@@ -41,6 +42,7 @@ de changer la casse
 d'un caractère
 en agissant sur
 le bit de valeur 32.
+
 
 ```{codeplay}
 
@@ -71,7 +73,7 @@ print("En minuscules :", minuscules)
 print('-'*42)
 ```
 ````
-
+`````
 En plus des lettres, les caractères qui représentent
 les chiffres sont eux-mêmes listés dans la table de conversion.
 Contre-intuitivement, la valeur binaire du caractère
@@ -102,11 +104,10 @@ les caractères qui n'existent pas dans la langue anglaise,
 ne serait-ce que les lettres accentuées.
 
 ```{image} media/ASCII-Table.png
-:width: 600
-:height: 700
+:width: 900
 ```
 **Tab. 1** La table de représentation des caractères ASCII
-
+````{htmlonly}
 <br>
 L'exemple ci-dessous renvoie la valeur binaire du texte écrit.
 
@@ -120,7 +121,8 @@ res = ' '.join(format(ord(i), 'b') for i in texte)
 
 print("Le texte en binaire est : " + res)
 ```
-
+````
+``````{htmlonly}
 `````{didyouknow} 
 
 Dès l'introduction de l'encodage ASCII, et jusqu'à aujourd'hui,
@@ -152,6 +154,7 @@ un aquarium en ASCII dans le terminal.
 
 ```{youtube} pAfvoVtsA64
 `````
+``````
 
 Des tables multiples, mutuellement incompatibles, ont alors émergé : une table
 pour les européens, une autre pour les Japonais et ainsi de suite.
@@ -255,33 +258,35 @@ Par exemple le caractère « € » (euro) est le 8365e caractère du répertoir
 ````
 
 
-`````{exercise} Activité codage et internet 🔌
+```````{exercise} Activité codage et internet 🔌
 
 Ouvrez un navigateur Internet (Firefox, …). Dans la barre d’outils, on peut voir à «Affichage», «Encodage des caractères» que c’est le format UTF-8 qui est sélectionné par défaut. 
 
 1 - Changez la sélection UTF-8 et choisissez à présent Europe Centrale (Windows). De petits caractères désagréables apparaissent. Que s’est-il passé ? 
 
+`````{htmlonly}
 ````{admonition} Réponse
 :class: hint
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 En allant dans «Outils», «Informations sur la page», on voit que cette page est encodée en UTF-8. Lorsque le lecteur est lui aussi en UTF-8 tout va bien. Dès qu’on change le paramètre du lecteur (ici, le navigateur), des incompatibilités apparaissent.
+```
 ````
-
-
+`````
 2 - Utilisez toujours le navigateur web, et allez dans «Affichage», «Source». On lit alors l'entête de la page *html* visitée. Où se situe l’information relative à l’encodage ?
 
+`````{htmlonly}
 ````{admonition} Réponse
 :class: hint
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 <span style="color:green">*meta http-equiv="Content-Type" content="text/html; </span> <span style="color:red">charset=utf-8"*</span>
 ````
-
+`````
 
 3 - On peut aussi dans «Affichage», «Codage», sélectionner Grec (ISO) et se rendre compte en lisant le texte, que le «à» a été remplacé par un «L» à l’envers dit *Gamma*.
 
-``````
+```````
 
 
 
