@@ -167,7 +167,7 @@ joignables par le reste d'Internet.
 
 Les particuliers et entreprises ont généralement un réseau privé, un *intranet*, qui utilise
 les adresses 10.x.x.x. L'appareil qui permet de connecter ce réseau privé au reste d'Internet est un *routeur*, par exemple
-la boîte wifi qui est fournie par le fournisseur d'accès. Ce routeur a la fois une adresse locale
+la boîte wifi qui est fournie par le fournisseur d'accès. Ce routeur a à la fois une adresse locale
 (dans notre exemple 10.0.1.1) pour être joignable depuis le réseau privé et une adresse globale (213.221.190.41 dans
 l'exemple ci-dessous) pour être atteignable depuis le reste d'Internet. Le routeur joue un peu le rôle du secrétariat de
 l'école en s'occupant de transmettre le courrier entre l'intérieur et l'extérieur de l'école. De manière similaire,
@@ -241,18 +241,6 @@ Pour récapituler ce qui a été vu précédemment, les humains utilisent les no
 
 Ces machines sont aussi organisées hiérarchiquement de telle sorte que chaque serveur DNS ne stocke que les noms de domaines correspondant à une sous-partie du réseau.
 
-````{note} Le serveur DNS
-```{figure} media/dns.svg
----
-width: 500
-align: center
----
-Pour qu'Alice puisse aller sur le site de champignons.ch, son téléphone va envoyer une requête à un serveur DNS avec le nom de domaine "champignons.ch". Cette
-requête transitera par différents serveurs DNS organisés hiérarchiquement jusqu'à ce qu'un serveur DNS puisse y répondre, et la réponse sera retransmise
-jusqu'au téléphone d'Alice.
-```
-````
-
 ```{didyouknow} Le hacking de DNS
 Une méthode de hacking consiste à mettre en ligne un serveur DNS malveillant
 qui va diriger le traffic vers des faux sites web se faisant passer pour des
@@ -275,4 +263,16 @@ En Chine, par exemple, Facebook.com est interdit, et les DNS chinois vont
 refuser de retourner l'adresse IP du site de Facebook. Cette censure peut
 parfois être contournées en recourant à des serveurs DNS situés à
 l'extéreur du pays.
+```
+
+
+```{eval} L'exemple d'Alice
+L'organisation qui a développé l'application aux
+champignons, a obtenu le nom de domaine *champignons.ch* et une adresse IP statique. 
+Pour qu'Alice puisse aller sur ce site, son téléphone va envoyer une requête à un
+serveur DNS avec le nom de domaine "champignons.ch". Cette requête transitera par
+différents serveurs DNS organisés hiérarchiquement jusqu'à ce qu'un serveur DNS
+puisse y répondre, et la réponse sera retransmise jusqu'au téléphone d'Alice.
+Le téléphone d'Alice a lui aussi reçu une adresse IP dynamique de la part de son opérateur
+téléphonique afin que le serveur web puisse lui envoyer la page web du site. 
 ```

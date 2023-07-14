@@ -31,10 +31,10 @@ des autres téléphones), c'est ce qu'on appelle la *commutation de circuits*.
 
 ```{figure} media/packets.svg
 ---
-width: 500
+width: 400
 align: center
 ---
-Les données envoyées de Alice à champignons.ch sont découpées en petits paquets (représentés par des carrés orange). Cela permet de partager les lignes avec d'autres utilisateurs et utilisatrices tels que Anna et Tom qui communiquent
+Les données envoyées de Alice à *champignons.ch* sont découpées en petits paquets (représentés par des carrés orange). Cela permet de partager les lignes avec d'autres utilisateurs et utilisatrices tels que Anna et Tom qui communiquent
 également en s'envoyant des paquets (représentés par des triangles jaunes). On peut noter que ces paquets ne prennent pas tous forcément le même chemin pour arriver à destination.
 ```
 
@@ -66,7 +66,7 @@ la longueur totale du paquet, ainsi que sa "durée de vie". Sa durée de vie ind
 l'entête fait au minimum 20 octets, remplis comme dans l'image ci-dessous.
 
 ```{figure} media/IPv4header.png
-:width: 700
+:width: 670
 ```
 
 Ainsi, les 4 premiers bits indiquent la version d'IP utilisée (donc 0100 si c'est la version 4), les quatre suivants
@@ -78,13 +78,8 @@ les octets 17 à 20.
 Un paquet avec l'entête IP suivante (en hexadécimal) circule sur Internet: 
 
 ```html
- 45 00 00 14  
- 00 01 00 00  
- 0A 00 BF 88  
- C1 C8 DC EA  
- 91 E8 C0 C5  
+ 45 00 00 14 00 01 00 00 0A 00 BF 88 C1 C8 DC EA 91 E8 C0 C5
 ```
- 
  Déterminer de quelle version de protocole IP il s'agit, la longueur du paquet ainsi que les adresses
  IP (en binaire) de l'émetteur et du recepteur. 
 ````
@@ -287,3 +282,14 @@ Indiquer pour les applications suivantes, si le protocole TCP ou UDP était plus
 4. Une application bancaire en ligne
 5. Un jeu vidéo en ligne
 ````
+```{eval} L'exemple d'Alice
+Pour entrer en communication avec le serveur web, le téléphone d'Alice va utiliser le protocole TCP. 
+Le téléphone va donc créer un entête TCP dans lequel il indiquera (par l'utilisation du fanion SYN)
+qu'il souhaite établir une connection avec le site web. Devant cet entête il mettra également un entête
+IP dans lequel il indiquera (entre autres) les adresses IP du téléphone d'Alice (comme source) et du site
+web (comme destination). Ces deux entêtes formeront un paquet IP qui sera envoyé à travers le réseau
+jusqu'au serveur web qui répondra par un autre paquet, selon le protocole TCP. Une fois la connection établie,
+le navigateur web d'Alice pourra demander au serveur le contenu de la page web. Celle-ci sera découpée en
+petit morceaux qui seront numérotés et envoyés séparément au téléphone d'Alice qui enverra des acquittement
+pour les paquets reçus. Le serveur pourra ainsi renvoyer les paquets pour lesquel il n'a pas reçu d'acquittement.
+```

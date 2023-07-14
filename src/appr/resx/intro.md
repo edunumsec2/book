@@ -16,7 +16,7 @@ Les réseaux de communication existaient bien avant Internet, par exemple :
 - le réseau de télégraphie par ondes radio de Marconi (1896)
 
 Ces anciens réseaux avaient besoin d'opérateurs ou opératrices pour la transimssion des messages,
-ou, poour les plus récents, ils étaient centralisés.
+ou, pour les plus récents, ils étaient centralisés.
 Cela signifie qu'il y a un point central du réseau par lequel passent toutes
 les communications.
 Après la 2e guerre mondiale, qui avait vu le nivellement de villes entières par des bombardements aériens (comme à Dresde)
@@ -142,7 +142,7 @@ ou ils peuvent être fermés (ou privés) ce qui limite leur utilisation à l'en
 Dans le reste de ce chapitre, nous allons aborder plus concrètement les notions décrites ci-dessus et en approfondir certains aspects. Pour illustrer notre propos,
 considérons la situation suivante.
 
-```{note} l'application aux champignons
+```{eval} l'application aux champignons
 
 Imaginons qu'Alice est partie à la cueillette aux champignons dans la forêt.
 Elle pense avoir trouvé un beau bolet, mais pour plus de sécurité, consulte

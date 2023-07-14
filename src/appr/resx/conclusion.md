@@ -33,7 +33,7 @@ Aller sur le site <https://www.cnil.fr/fr/reglement-europeen-protection-donnees/
 1. Combien d'articles ce réglement contient-il?
 1. Lire l'article 5 et résumer les grand principes de ce réglement.
 ```
-
+````{htmlonly}
 ```{question} Récapitulation
 Indiquer lesquelles des affirmations ci-dessous sont vraies.
 * {f}`Internet est un service géré et proposé par une entreprise.` 
@@ -43,17 +43,19 @@ Indiquer lesquelles des affirmations ci-dessous sont vraies.
 * {f}`Pour communiquer entre eux deux ordinateurs sont forcément reliés directement avec un cable ou une connection sans fil.`
 * {v}`Sans adresse IP, il est possible de créer un site web, mais il restera inaccessible depuis le reste d'Internet`
 * {v}`Le serveur DNS sert à obtenir l'adresse IP à partir d'un nom de domaine`
-* {v}`N'importe qui peut mettre sur Internet un serveur DNS`
 ```
-
-```{eval}
-1. Je sais comment est structuré Internet
-1. Je sais ce qu'est une adresse IP et un nom de domaine et à quoi cela sert
+````
+```{eval} 
+1. Je sais comment est structuré Internet.
+1. Je sais ce qu'est une adresse IP et un nom de domaine et à quoi cela sert.
 1. Je sais ce qu'est un protocole et à quoi cela peut servir.
-1. Je sais à quoi sert un routeur
-1. Je sais ce qu'est une table de routage et comment un routeur peut la créer
-dynamiquement
-1. Je comprends la différence entre Internet et le web. 
+1. Je sais à quoi sert un entête IP et le protocole TCP.
+1. Je sais à quoi sert un routeur.
+1. Je sais à quoi sert une table de routage et quelle information elle contient.
+1. Je sais comment un routeur peut dynamiquement une table de routage.
+1. Je comprends la différence entre Internet et le Web.
+1. Je connais les trois technologies du Web et comment un navigateur web les utilise. 
+1. Je comprends le principes des couches de protocoles.
+1. Je comprends la différence entre un protocole ouvert (public) et fermé (privé) et quels en sont les enjeux pour Internet
 ```
-
 

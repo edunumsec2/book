@@ -22,7 +22,7 @@ inventé (par exemple la téléportation quantique), il suffit de développer un
 communication propre à ce support et on pourra utiliser le protocole IP pour la transmission
 de paquets, ce qui permettra à ce nouveau support de s'intégrer sans difficulté à Internet.
 
-On a ainsi défini le modèle suivant en 4 "couches" de protocoles: la première couche "liaison réseau"
+On a ainsi défini le modèle de la {numref}`figcouches` en 4 "couches" de protocoles: la première couche "liaison réseau"
 définit comment les données sont transmises entre deux appareils directement connectés ou du même réseau local. Le protocole
 en question dépend donc du type de connexion entre les deux appareils
 (wifi, câble électrique, fibre optique, etc.). La deuxième couche, "Internet", définit comment les données
@@ -31,8 +31,14 @@ et reconstituées et quittancées par le récepteur, c'est le protocole TCP éga
 d'un smartphone communique avec le serveur de TikTok.
 
 
+Ainsi, lorsque le navigateur web d'Alice demande une page au serveur web, ces deux applications (le navigateur et le serveur)
+sont en communication en utilisant le protocole HTML. Pour transmettre la requête HTML d'Alice, une connexion entre Alice
+et le serveur web sera établie en utilisant le procole TCP. Au besoin, ce protocole découpera la requête ou la page web en
+petits morceaux et ajoutera les entêtes TCP à chaque morceau, qui sera envoyé individuellement en utilisant le protocole IP (en ajoutant y donc l'entête IP). Selon le type de connexion, (4G, wifi, cable), les paquets IP seront transmis selon différents protocoles à des routeurs qui les achemineront jusqu'au destinataire qui réassemblera les paquets selon le protocole TCP et fournira la requête HTML d'Alice au serveur web ou la page web demandés au navigateur d'Alice. 
+
 ```{figure} media/couches_tcpip.svg
 ---
+name: figcouches
 width: 600
 align: center
 ---
@@ -48,11 +54,6 @@ achemineront les paquets IP jusqu'à leur destination, en utilisant les différe
 besoins. 
 
 ```
-
-Ainsi, lorsque le navigateur web d'Alice demande une page au serveur web, ces deux applications (le navigateur et le serveur)
-sont en communication en utilisant le protocole HTML. Pour transmettre la requête HTML d'Alice, une connexion entre Alice
-et le serveur web sera établie en utilisant le procole TCP. Au besoin, ce protocole découpera la requête ou la page web en
-petits morceaux et ajoutera les entêtes TCP à chaque morceau, qui sera envoyé individuellement en utilisant le protocole IP (en ajoutant y donc l'entête IP). Selon le type de connexion, (4G, wifi, cable), les paquets IP seront transmis selon différents protocoles à des routeurs qui les achemineront jusqu'au destinataire qui réassemblera les paquets selon le protocole TCP et fournira la requête HTML d'Alice au serveur web ou la page web demandés au navigateur d'Alice. 
 
 
 Ce modèle en 4 couches a été ensuite développé en un modèle en 7 couches appelé OSI (pour *Open System Interconnection*).

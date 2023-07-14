@@ -203,3 +203,8 @@ ceci par une distance égale à 16. Toute destination à distance supérieure à
 l'exemple si dessus, le routeur 1 remplacera simplement la distance par 16 (au lieu de 1) et transmettra cette information
 au routeur 2 qui mettra à jour sa table de routage. C'est le principe de l'*empoisonnement de route* (*route poisoning*).
 
+```{eval} L'exemple d'Alice
+Les paquets IP échangés entre le téléphone d'Alice et le serveur sont acheminé de routeur en routeur. Chaque routeur
+consulte sa table de routage pour savoir dans quelle direction transférer le paquet reçu. Ces tables de routage
+se constituent automatiquement en échangeant des informations avec les routeurs voisins. 
+```

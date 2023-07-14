@@ -183,3 +183,10 @@ permis le web 2.0, étaient peu importants, ils ont eu un effet considérable su
 pour en faire un espace d'expression et de partage duquel ont émergé des réseaux sociaux d'aujourd'hui. 
 
 {itodo}`ajouter des anciennes pages myspace ou facebook ?`
+```{eval} L'exemple d'Alice
+Pour demander la page web du site *champigons.ch* le navigateur web d'Alice va utiliser le protocole HTTP (ou HTTPS)
+qui spécifie des mots de code indiquant qu'on veut accéder à une page donnée ou envoyer des informations au serveur. 
+Le serveur va répondre avec le même protocole pour envoyer la page ou un message d'erreur si ce n'est pas possible. 
+La page, elle-même, est envoyée au format HTML, c'est à dire sous forme de texet et d'images. Le navigateur va lire
+ce texte qui va lui indiquer ce qu'il faut afficher pour Alice. 
+```
