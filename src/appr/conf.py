@@ -66,6 +66,10 @@ html_extra_path = ['../assets']
 # Usually you set "language" from the command line for these cases.
 language = 'fr'
 
+## Enable figure numbering
+numfig=True        
+
+
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
@@ -92,7 +96,8 @@ if latex_mode:
     ## if prints only one chapter, change tex file name to that chapter
     if len(selected_chapters) == 1: 
         texfname = list(selected_chapters)[0]
-    
+
+
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages. See the documentation for
