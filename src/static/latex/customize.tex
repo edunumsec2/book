@@ -26,6 +26,9 @@
 \addtolength{\evensidemargin}{-\margindiff}
 \addtolength{\textwidth}{\margindiff}
 
+% Titre de la table des matière
+\addto\captionsfrench{\renewcommand{\contentsname}{Table des matières}}
+
 % TODO
 \usepackage{wasysym}
 \newunicodechar{⌘}{<Cmd>}
@@ -77,6 +80,7 @@
 }
 
 \DeclareModuloAdmonition{exercise}{ultraviolet}{white}
+\DeclareModuloAdmonition{question}{ultraviolet}{white}
 \DeclareModuloAdmonition{solution}{ultraturquoise}{white}
 \DeclareModuloAdmonition{microactivity}{ultraviolet}{white}
 \DeclareModuloAdmonition{togofurther}{orangemodulo}{black}
@@ -309,7 +313,9 @@
     }
 \makeatother
 
-%%%% in the fly image conversion taken from here: https://tex.stackexchange.com/questions/574562/inclusion-of-graphics-with-on-the-fly-conversion-using-xetex
+
+
+%% in the fly image conversion taken from here: https://tex.stackexchange.com/questions/574562/inclusion-of-graphics-with-on-the-fly-conversion-using-xetex
 
 \usepackage{graphicx}% including pictures
 \usepackage{shellesc}% run system commands from TeX engine

@@ -16,10 +16,12 @@ class correct_answer(answer):
 class incorrect_answer(answer):
     is_correct = False
 
-class question(nodes.Element, nodes.General):
+class question(nodes.admonition):
     correct = []
     counter = 0
-
+    def __init__(self, rawsource="", *children, **attributes):
+        super().__init__(rawsource, *children, **attributes)
+        self["classes"].append("question")
 
 class check_buttons(nodes.Element, nodes.General):
     pass
@@ -40,6 +42,7 @@ def depart_answer_html(self, node):
     self.body.append("</label>")
 
 def visit_question_html(self, node):
+    self.visit_admonition(node)
     classes = ["question"]
     if node["multi"]:
         classes.append("multi")
@@ -51,6 +54,7 @@ def visit_question_html(self, node):
 def depart_question_html(self, node):
     self.body.append("</form>")
     self.body.append("</div>")
+    self.depart_admonition(node)
 
 def visit_check_buttons_html(self, node):
     tag = self.starttag(node, "div", CLASS="controls")
@@ -84,6 +88,8 @@ def visit_question_latex(self, node: Node):
         classes.append("multi")
     question.correct = []
     question.counter = 0
+   
+    self.body.append('\n\\begin{question}')
 
     def convert_itemize(node: Node):
         """Recursively convert all bullet lists to enumerated lists.
@@ -96,12 +102,12 @@ def visit_question_latex(self, node: Node):
 
     convert_itemize(node)
 
-    self.body.append(r"\smallbreak") #break before question if possible
+    
 
 
     
 def depart_question_latex(self, node):
-    pass
+     self.body.append('\n\\end{question}\n')
    
 def visit_check_buttons_latex(self, node):
     responses = [str(i+1) for i in question.correct]
@@ -124,12 +130,13 @@ class Question(SphinxDirective):
     def run(self):
         self.assert_has_content()
 
-        container = question("", multi="multi" in self.options)
-        self.set_source_info(container)
-
-        admonition = nodes.admonition("")
+        admonition = question("", multi="multi" in self.options)
+        
 
         title = self.arguments[0] if len(self.arguments) > 0 else "Question"
+        #title ="Question"
+        #if len(self.arguments) > 0: 
+        #    title += " – " + self.arguments[0]
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
@@ -163,10 +170,9 @@ class Question(SphinxDirective):
             feedback = nodes.container("", is_div=True, classes=["question-feedback"])
             self.state.nested_parse(feedback_content, self.content_offset, feedback)
             admonition += feedback
-
-        container += admonition
-
-        return [container]
+    
+        return [admonition]
+    
 ## todo: update Micha
 def setup(app):
     app.add_directive("question", Question)

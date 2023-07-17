@@ -6,7 +6,7 @@ Informatique au gymnase : apprendre
 
 Bienvenue dans le cours d'informatique au gymnase. 
 Ce cours a été conçu pour vous accompagner dans votre découverte de l'informatique. Il est 
-découpé en **quatre thématiques**. 
+découpé en **huit thématiques** réparties sur deux années.
 
 .. toctree::
    :name: Première année
@@ -46,18 +46,35 @@ découpé en **quatre thématiques**.
 
    glossaire
 
+Première année
+--------------
+   
 `Représentation de l'information 
-<https://apprendre.modulo-info.ch/rep-info/index.html>`_
+<rep-info>`_ 
 : ce chapitre vous explique comment le monde 
-réel est transformé pour être représenté sur un smartphone ou un ordinateur. 
+réel est transformé pour être représenté sur un smartphone ou un ordinateur. Il est aussi disponible en version `pdf <media/rep-info.pdf>`_.
 
-`Programmation I <https://apprendre.modulo-info.ch/prog1/index.html>`_
+`Programmation I <prog1>`_
 : ce chapitre présente la programmation en Python grâce à une approche visuelle et graphique. 
 
-`Algorithmique I <https://apprendre.modulo-info.ch/algo1/index.html>`_
+`Algorithmique I <algo1>`_
 : ce chapitre vous fait découvrir les bases de l'algorithmique, 
-qui s'occupe de l'analyse des performances des programmes et leur optimisation. 
+qui s'occupe de l'analyse des performances des programmes et leur optimisation. Il est aussi disponible en version `pdf <media/algo1.pdf>`_.
 
-`Architecture des ordinateurs <https://apprendre.modulo-info.ch/archi/index.html>`_
+`Architecture des ordinateurs <archi>`_
 : ce chapitre vous transporte dans les bases logiques et électroniques
 des ordinateurs modernes. 
+
+Deuxième année
+--------------
+
+`Programmation II <prog2>`_
+: ce chapitre présente les fonctionnalités plus avancées de la programmation.
+
+`Algorithmique II <algo2>`_
+: ce chapitre vous fait découvrir des concepts plus avancés de l'algorithmique. Il est aussi disponible en version `pdf <media/algo2.pdf>`_
+
+`Réseaux <resx>`_
+: ce chapitre vous fait découvrir comment fonctionne Internet. Il est aussi disponible en version `pdf <media/resx.pdf>`_
+
+

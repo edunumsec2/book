@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="123.33971mm"
+   height="54.431171mm"
+   viewBox="0 0 123.33971 54.431171"
+   version="1.1"
+   id="svg124038"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   sodipodi:docname="exo_res.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview124040"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.8756036"
+     inkscape:cx="247.65361"
+     inkscape:cy="121.82745"
+     inkscape:window-width="1654"
+     inkscape:window-height="845"
+     inkscape:window-x="265"
+     inkscape:window-y="36"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
+  <defs
+     id="defs124035">
+    <linearGradient
+       id="linearGradient125887"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop125885" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient125848"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop125846" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient125809"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop125807" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6293"
+       id="linearGradient35595"
+       x1="100.961"
+       y1="110.07939"
+       x2="121.22026"
+       y2="110.07939"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0219983,0,0,0.99832433,-79.911276,20.116764)" />
+    <linearGradient
+       id="linearGradient6293"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#0000c0;stop-opacity:1;"
+         offset="0"
+         id="stop6291" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6293"
+       id="linearGradient125889"
+       x1="45.797459"
+       y1="113.46132"
+       x2="66.703209"
+       y2="113.46132"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6293"
+       id="linearGradient126071"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0219983,0,0,0.99832433,-86.345523,8.167445)"
+       x1="100.961"
+       y1="110.07939"
+       x2="121.22026"
+       y2="110.07939" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6293"
+       id="linearGradient126097"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0219983,0,0,0.99832433,-56.084654,27.876826)"
+       x1="100.961"
+       y1="110.07939"
+       x2="121.22026"
+       y2="110.07939" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6293"
+       id="linearGradient126123"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0219983,0,0,0.99832433,-25.226532,25.487811)"
+       x1="100.961"
+       y1="110.07939"
+       x2="121.22026"
+       y2="110.07939" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6293"
+       id="linearGradient126948"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0219983,0,0,0.99832433,-37.102701,26.447464)"
+       x1="100.961"
+       y1="110.07939"
+       x2="121.22026"
+       y2="110.07939" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6293"
+       id="linearGradient212193"
+       gradientUnits="userSpaceOnUse"
+       x1="45.797459"
+       y1="113.46132"
+       x2="66.703209"
+       y2="113.46132"
+       gradientTransform="translate(-1.3385606,0.04161894)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(14.271779,-75.809145)">
+    <circle
+       style="fill:#5fd3bc;stroke:none;stroke-width:5.06106"
+       id="path4700-549-83-3"
+       cx="47.009396"
+       cy="113.71546"
+       r="1.5590422" />
+    <circle
+       style="fill:#5fd3bc;stroke:none;stroke-width:5.06106"
+       id="path4700-549-83-3-4"
+       cx="68.01918"
+       cy="112.92759"
+       r="1.5590422" />
+    <circle
+       style="fill:#5fd3bc;stroke:none;stroke-width:5.06106"
+       id="path4700-549-83-3-1"
+       cx="74.059494"
+       cy="92.705681"
+       r="1.5590422" />
+    <circle
+       style="fill:#5fd3bc;stroke:none;stroke-width:5.06106"
+       id="path4700-549-83-3-0"
+       cx="24.94912"
+       cy="98.220749"
+       r="1.5590422" />
+    <circle
+       style="fill:#5fd3bc;stroke:none;stroke-width:5.06106"
+       id="path4700-549-83-3-8"
+       cx="28.363211"
+       cy="118.9679"
+       r="1.5590422" />
+    <circle
+       style="fill:#5fd3bc;stroke:none;stroke-width:5.06106"
+       id="path4700-549-83-3-8-9"
+       cx="13.119111"
+       cy="104.38862"
+       r="1.5590422" />
+    <circle
+       style="fill:#5fd3bc;stroke:none;stroke-width:5.06106"
+       id="path4700-549-83-3-14"
+       cx="81.281609"
+       cy="104.655"
+       r="1.5590422" />
+    <path
+       style="fill:none;stroke:url(#linearGradient35595);stroke-width:0.267253px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 29.831126,118.51473 15.976178,-4.27402"
+       id="path33539"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:url(#linearGradient125889);stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 48.836322,113.78636 17.857039,-1.10444"
+       id="path125805"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:url(#linearGradient212193);stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 12.936664,104.65871 23.458287,98.546097"
+       id="path125805-9"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:url(#linearGradient126071);stroke-width:0.267253px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 26.32488,99.182284 45.807304,114.24071"
+       id="path33539-9"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:url(#linearGradient126097);stroke-width:0.267253px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 69.256656,112.04568 11.127842,-6.36985"
+       id="path33539-8"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:url(#linearGradient126123);stroke-width:0.267253px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 80.309234,103.71897 74.744577,93.832724"
+       id="path33539-0"
+       sodipodi:nodetypes="cc" />
+    <circle
+       style="fill:#5fd3bc;stroke:none;stroke-width:5.06106"
+       id="path4700-549-83-3-8-3"
+       cx="57.854248"
+       cy="98.594543"
+       r="1.5590422" />
+    <path
+       style="fill:none;stroke:url(#linearGradient126948);stroke-width:0.267253px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 67.901909,111.36831 58.861885,99.1863"
+       id="path33539-0-5"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g139275"
+       transform="translate(-49.242936,10.40233)">
+      <text
+         xml:space="preserve"
+         style="font-size:7.05556px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="66.215508"
+         y="107.55389"
+         id="text13014"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+           x="66.215508"
+           y="107.55389"
+           id="tspan53062"> réseau</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="65.783752"
+         y="111.21969"
+         id="text63403"><tspan
+           sodipodi:role="line"
+           id="tspan139055"
+           x="65.783752"
+           y="111.21969"
+           style="font-size:3.52778px">25.3.7.x</tspan></text>
+      <ellipse
+         style="fill:none;stroke:#000000;stroke-width:0.3"
+         id="path139031"
+         cx="66.734383"
+         cy="108.32746"
+         rx="11.660962"
+         ry="6.3605247" />
+    </g>
+    <g
+       id="g139275-9"
+       transform="translate(-42.330016,-16.352623)">
+      <text
+         xml:space="preserve"
+         style="font-size:7.05556px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="66.215508"
+         y="107.55389"
+         id="text13014-8"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+           x="66.215508"
+           y="107.55389"
+           id="tspan53062-3"> réseau</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="65.783752"
+         y="111.21969"
+         id="text63403-7"><tspan
+           sodipodi:role="line"
+           id="tspan139055-1"
+           x="65.783752"
+           y="111.21969"
+           style="font-size:3.52778px">8.21.5.x</tspan></text>
+      <ellipse
+         style="fill:none;stroke:#000000;stroke-width:0.3"
+         id="path139031-2"
+         cx="66.734383"
+         cy="108.32746"
+         rx="11.660962"
+         ry="6.3605247" />
+    </g>
+    <g
+       id="g139275-9-9"
+       transform="translate(-64.1952,-0.83539667)">
+      <text
+         xml:space="preserve"
+         style="font-size:7.05556px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="66.215508"
+         y="107.55389"
+         id="text13014-8-8"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+           x="66.215508"
+           y="107.55389"
+           id="tspan53062-3-4" /></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="65.783752"
+         y="111.21969"
+         id="text63403-7-0"><tspan
+           sodipodi:role="line"
+           id="tspan139055-1-6"
+           x="65.783752"
+           y="111.21969"
+           style="font-size:3.52778px">Internet</tspan></text>
+      <ellipse
+         style="fill:none;stroke:#000000;stroke-width:0.3"
+         id="path139031-2-3"
+         cx="66.734383"
+         cy="108.32746"
+         rx="11.660962"
+         ry="6.3605247" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.52777px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="65.323723"
+         y="108.04533"
+         id="text219425"><tspan
+           sodipodi:role="line"
+           id="tspan219423"
+           style="stroke-width:0.264583"
+           x="65.323723"
+           y="108.04533">reste d'</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="53.227158"
+       y="91.624458"
+       id="text13014-1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="53.227158"
+         y="91.624458"
+         id="tspan53062-7"> réseau</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="52.795403"
+       y="95.29026"
+       id="text63403-6"><tspan
+         sodipodi:role="line"
+         id="tspan139055-5"
+         x="52.795403"
+         y="95.29026"
+         style="font-size:3.52778px">3.12.13.x</tspan></text>
+    <ellipse
+       style="fill:none;stroke:#000000;stroke-width:0.3"
+       id="path139031-0"
+       cx="53.746033"
+       cy="92.398033"
+       rx="11.660962"
+       ry="6.3605247" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="47.257011"
+       y="114.96855"
+       id="text200279"><tspan
+         sodipodi:role="line"
+         id="tspan200277"
+         style="font-size:2.82222px;stroke-width:0.264583"
+         x="47.257011"
+         y="114.96855">R1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="68.068932"
+       y="113.97093"
+       id="text200279-0"><tspan
+         sodipodi:role="line"
+         id="tspan200277-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="68.068932"
+         y="113.97093">R2</tspan></text>
+    <g
+       id="g139275-4"
+       transform="translate(14.096264,-21.007792)">
+      <text
+         xml:space="preserve"
+         style="font-size:7.05556px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="66.215508"
+         y="107.55389"
+         id="text13014-5"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+           x="66.215508"
+           y="107.55389"
+           id="tspan53062-1"> réseau</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="65.783752"
+         y="111.21969"
+         id="text63403-2"><tspan
+           sodipodi:role="line"
+           id="tspan139055-3"
+           x="65.783752"
+           y="111.21969"
+           style="font-size:3.52778px">65.1.2.x</tspan></text>
+      <ellipse
+         style="fill:none;stroke:#000000;stroke-width:0.3"
+         id="path139031-7"
+         cx="66.734383"
+         cy="108.32746"
+         rx="11.660962"
+         ry="6.3605247" />
+    </g>
+    <g
+       id="g139275-2"
+       transform="translate(25.522587,-2.387119)">
+      <text
+         xml:space="preserve"
+         style="font-size:7.05556px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="66.215508"
+         y="107.55389"
+         id="text13014-4"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+           x="66.215508"
+           y="107.55389"
+           id="tspan53062-18"> réseau</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="65.783752"
+         y="111.21969"
+         id="text63403-26"><tspan
+           sodipodi:role="line"
+           id="tspan139055-0"
+           x="65.783752"
+           y="111.21969"
+           style="font-size:3.52778px">9.1.6.x</tspan></text>
+      <ellipse
+         style="fill:none;stroke:#000000;stroke-width:0.3"
+         id="path139031-3"
+         cx="66.734383"
+         cy="108.32746"
+         rx="11.660962"
+         ry="6.3605247" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="29.831123"
+       y="118.51472"
+       id="text172216"><tspan
+         sodipodi:role="line"
+         id="tspan172214"
+         style="stroke-width:0.264583"
+         x="29.831123"
+         y="118.51472" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="43.868675"
+       y="118.06181"
+       id="text185606-0"><tspan
+         sodipodi:role="line"
+         id="tspan185604-6"
+         style="stroke-width:0.264583"
+         x="43.868675"
+         y="118.06181">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="65.310661"
+       y="116.65116"
+       id="text185606-7"><tspan
+         sodipodi:role="line"
+         id="tspan185604-0"
+         style="stroke-width:0.264583"
+         x="65.310661"
+         y="116.65116">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="44.715073"
+       y="111.85492"
+       id="text185606-3"><tspan
+         sodipodi:role="line"
+         id="tspan186753"
+         x="44.715073"
+         y="111.85492">B</tspan><tspan
+         sodipodi:role="line"
+         id="tspan186755"
+         x="44.715073"
+         y="116.26463"></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="68.641754"
+       y="110.44427"
+       id="text185606-3-9"><tspan
+         sodipodi:role="line"
+         id="tspan186753-8"
+         x="68.641754"
+         y="110.44427">B</tspan><tspan
+         sodipodi:role="line"
+         id="tspan186755-0"
+         x="68.641754"
+         y="114.85398" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="71.322006"
+       y="114.3941"
+       id="text185606-3-54"><tspan
+         sodipodi:role="line"
+         id="tspan186915"
+         x="71.322006"
+         y="114.3941">C</tspan><tspan
+         sodipodi:role="line"
+         id="tspan186917"
+         x="71.322006"
+         y="118.80381"></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="50.074188"
+       y="116.93507"
+       id="text185606-3-54-9"><tspan
+         sodipodi:role="line"
+         id="tspan186915-3"
+         x="50.074188"
+         y="116.93507">C</tspan><tspan
+         sodipodi:role="line"
+         id="tspan186917-4"
+         x="50.074188"
+         y="121.34478" /></text>
+  </g>
+</svg>
