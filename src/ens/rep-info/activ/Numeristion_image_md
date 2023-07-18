@@ -1,0 +1,55 @@
+(ens:repinfo:magiebinaire)=
+# Magie Binaire
+
+---- 
+
+*Vous allez faire un tour de magie !*
+
+Une introduction au binaire de manière ludique en misant sur la curiosité à comprendre le fonctionnement d’un tour de magie.
+
+----
+
+
+```{admonition} Notice
+:class: hint
+
+* **Thème** : Représentation de l'information (avant 1. Entiers)
+* **Niveau** : Facile 
+* **Durée** : 2 périodes
+* **Objectifs pédagogiques** : Motiver la compréhension des nombres binaires
+* **Notions fondamentales** : Représentation binaire des nombres entiers
+* **Modalité** : Débranchée
+* **Matériel** : Les 6 cartes pour faire le tour de magie. Disponible ici : {download}`fichier MagieBinaire.png<media/MagieBinaire.png>` 
+* **Prérequis** : Aucun
+```
+
+| Étapes                                   | Durée          | Phase de l'activité   | 
+|---------------------------------------|------|---------------------|
+| {ref}`Présentation du tour de magie<magiebinaire.presentation>`| 15 min  | Mise en situation    |
+| {ref}`Compter en binaire<magiebinaire.compter>`| 15 min  | Enseignement / Apprentissage |
+| {ref}`Retour en base 10<magiebinaire.retour>`| 15 min   |   Enseignement / Apprentissage     |
+| {ref}`Encodage de l'information<magiebinaire.encodage>`| 15 min   |   Enseignement / Apprentissage    |
+| {ref}`Explication du tour<magiebinaire.explication>`| 15 min   | Objectivation           |
+| {ref}`Pour aller plus loin<magiebinaire.plusloin>` | 10 min   | Réinvestissement              |
+
+
+(magiebinaire.presentation)=
+## Présentation du tour de magie
+
+*Durée : 10-15 min*
+
+*Objectif : attiser la curiosité*
+
+Faire le tour de magie suivant à différents élèves. Il est possible que certains d’entre eux le connaissent, soient peut-être capable de le réaliser mais il est très peu probable qu’ils puissent expliquer pourquoi ça marche. Interrogez-les au préalable et concentrez-vous sur ceux qui ne le connaissent pas.
+
+### Tour de magie
+
+Demandez à un élève de choisir un nombre entre 1 et 63 et de le mémoriser sans vous le révéler. A l’aide des cartes vous allez lui révéler le nombre qu’il a secrètement choisi.
+
+Variante 1
+: Montrez les cartes une à une à l’élève en lui demandant simplement de vous indiquer si oui ou non son nombre apparaît sur la carte.
+
+Variante 2
+: Demandez à l’élève de séparer les cartes en 2 paquets, le premier avec les cartes ou son nombre est présent, le second avec les autres.
+
+Le secret du tour est simple, il s
