@@ -4,7 +4,7 @@
 Informatique au gymnase : apprendre
 ====================================
 
-Bienvenue venue dans le cours d'informatique au gymnase. 
+Bienvenue dans le cours d'informatique au gymnase. 
 Ce cours a été conçu pour vous accompagner dans votre découverte de l'informatique. Il est 
 découpé en **huit thématiques** réparties sur deux années.
 
