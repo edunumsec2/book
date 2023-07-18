@@ -59,7 +59,7 @@ Ce chapitre propose un éclairage sur l’économie du numérique à travers que
 * Saisir les ressorts et les limites de la notion d’«économie de l’attention»
 
 
-## Enjeux
+## Les enjeux
 <br>
 
 <div align="left"; style="font-size:20px ;color:rgb(0, 0, 0); font-family:helvetica">
