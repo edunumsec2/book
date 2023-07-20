@@ -137,7 +137,7 @@ Avec le recul, nous pouvons dire que Barlow avait largement sous-estimé la mena
 
 **Objectif** : Discuter des utopies véhiculées par les pionniers d’Internet 
 
-### La déclaration de l'indépendance du cyberespace
+**La déclaration de l'indépendance du cyberespace**
 
 🕑 30 min | 👩‍💻 branché
 
@@ -166,7 +166,7 @@ Lire la « Déclaration d’indépendance du cyberespace » de John Perry Barlow
 
 **Objectif** : Replacer l’informatique moderne dans le contexte historique de son développement 
 
-### Mother of all demos
+**Mother of all demos**
 
 🕑 30 min | 👩‍💻 branché
 
