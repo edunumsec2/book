@@ -187,6 +187,7 @@ manière exponentielle dès 1993, avec l’apparition
 des premiers navigateurs. 
 
 ![Alt text](media/berners-lee.gif)
+
 _Extrait du rapport de Tim Berners-Lee expliquant
 un système de gestion de l’information, 1989._
 
