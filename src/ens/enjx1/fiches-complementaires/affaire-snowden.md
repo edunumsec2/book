@@ -69,7 +69,7 @@ Il fut un temps où le simple fait de mettre sur écoute un parti politique adve
 
 Ex-employé de la CIA et informaticien surdoué, l’Américain Edward Snowden, 30 ans, travaille alors comme prestataire externe à la National Security Agency (NSA), principale agence de renseignement américaine, pour laquelle il gère le tri d’informations recueillies électroniquement dans le monde entier.
 
-````{figure} edward-snowden.png
+````{figure} media/edward-snowden.png
 ---
 width: 400px
 name: edward-snowden

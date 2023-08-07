@@ -201,7 +201,7 @@ Impuissant face à certains problèmes structuraux (pauvreté, surendettement, m
 
   <div class="w3-show-inline-block">
   <div class="w3-bar">
-    <a href="#" class="button"> L'affaire Snowden</a>
+    <a href="https://enseigner.modulo-info.ch/enjx1/fiches-complementaires/affaire-snowden.html" class="button"> L'affaire Snowden</a>
   </div>
   </div>
 </div>
@@ -241,12 +241,12 @@ Montrer les deux images ci-dessous et poser les questions suivantes :
 
 ````{panels}
 
-:img-top: internet1.jpg
+:img-top: media/internet1.jpg
 
 The New Yorker, 1993
 
 ----
-:img-top: internet2.jpg
+:img-top: media/internet2.jpg
 
 The New Yorker, 2015
 ````
