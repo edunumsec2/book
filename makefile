@@ -8,17 +8,29 @@ WEB_BUILD_DIR = build/appr
 
 LATEX_BUILD_DIR = build/latex/appr
 
+PDF_BUILD_DIR = build/pdf
+
 MD_SOURCE_DIR = src/appr
 
 EXT_DIR = src/exts
 
 LATEX_FORMAT_DIR = src/static/latex
 
+SOURCES = $(addsuffix /*.md, $(addprefix $(MD_SOURCE_DIR)/, $(CHAPTERS)))
+
+SCRIPTS =  $(MD_SOURCE_DIR)/conf.py
+
+LATEX_FORMAT = $(LATEX_FORMAT_DIR)/*.tex
+
+
 # all: web print
 # 	mkdir -p build/appr/media && cp build/latex/appr/rep_info.pdf build/appr/media/rep-info.pdf && cp build/latex/appr/archi.pdf build/appr/media/archi.pdf
 
 # ext: $(wildcard $(EXT_DIR)*.py):
 # 	echo "$^"
+
+.PHONY: $(addsuffix .pdf, $(PRINT_CHAPTERS)) modulo.pdf web print sources latex scripts
+
 
 sources: $(addsuffix /*.md, $(addprefix $(MD_SOURCE_DIR)/, $(CHAPTERS)))
 
@@ -30,34 +42,26 @@ web: sources scripts
 	sphinx-build -aE -b html $(MD_SOURCE_DIR) $(WEB_BUILD_DIR)
 
 print: sources scripts latex
+	python -m playwright install chromium
 	sphinx-build -aE -t latex_mode -b latex $(MD_SOURCE_DIR) $(LATEX_BUILD_DIR)
 	cd $(LATEX_BUILD_DIR) && make
 
 modulo.pdf: print
-	cp $(LATEX_BUILD_DIR)/modulo.pdf .
+	cp $(LATEX_BUILD_DIR)/modulo.pdf $(PDF_BUILD_DIR)/
 
-%.pdf: sources scripts latex
+$(PDF_BUILD_DIR)/%.pdf:  $(MD_SOURCE_DIR)/$*/*.md scripts latex
+	mkdir -p $(PDF_BUILD_DIR)
+	python -m playwright install chromium
 	sphinx-build -aE -t latex_mode -t $* -b latex $(MD_SOURCE_DIR) $(LATEX_BUILD_DIR)
-	#cd $(LATEX_BUILD_DIR) && rm -f $@ && make
 	make -C $(LATEX_BUILD_DIR)
-	mv $(LATEX_BUILD_DIR)/$@ .
+	mv $(LATEX_BUILD_DIR)/$*.pdf $(PDF_BUILD_DIR)/
+
+%.pdf: 	$(PDF_BUILD_DIR)/%.pdf
+	echo $@ is in $(PDF_BUILD_DIR) 
 
 all: web modulo.pdf $(addsuffix .pdf, $(PRINT_CHAPTERS))
-	mkdir -p  $(WEB_BUILD_DIR)/media && cp *.pdf $(WEB_BUILD_DIR)/media/
+	mkdir -p  $(WEB_BUILD_DIR)/media && cp $(PDF_BUILD_DIR)/*.pdf $(WEB_BUILD_DIR)/media/
 
 clean:
-	rm -rf $(LATEX_BUILD_DIR)/* $(WEB_BUILD_DIR)*
-# archi:
-# 	sphinx-build  -E -b latex -t archi src/appr  build/latex/appr && \
-# 	cd build/latex/appr && pdflatex archi.tex
+	rm -rf $(LATEX_BUILD_DIR)/* $(WEB_BUILD_DIR)/* $(PDF_BUILD_DIR)/*
 
-# rep_info:
-# 	sphinx-build  -E -b latex -t rep_info src/appr  build/latex/appr && \
-# 	cd build/latex/appr && pdflatex rep_info.tex
-
-# pdf:
-# 	sphinx-build  -E -b latex  src/appr  build/latex/appr && \
-# 	cd build/latex/appr && pdflatex modulo2.tex
-
-# html:
-# 	sphinx-build  -E -b html src/appr  build/appr
