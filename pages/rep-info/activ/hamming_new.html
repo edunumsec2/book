@@ -1,0 +1,761 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Recherche" href="../../search.html" />
+
+    <link rel="shortcut icon" href="../../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>Redondance et code de Hamming - Enseigner</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/todo.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/global_ens.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: white;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #06CCC0;
+  --color-brand-content: #06CCC0;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #06CCC0;
+  --color-brand-content: #06CCC0;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Enseigner</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Enseigner</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Première année</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../index.html">Représentation de l’information</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="magie_binaire.html">Magie binaire</a></li>
+<li class="toctree-l3"><a class="reference internal" href="encoder_images.html">Images numériques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="echantillonnage_new.html">Echantillonnage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="huffman.html">Compression et codage de Huffman</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../exo/index.html">Exercices</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../exo/carte.html">Carte perforée</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exo/space.html">Space Invaders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exo/radiotel.html">Radiotéléphonie</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../support/index.html">Supports de cours</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../support/son/visu-et-ecoute-son.html">Représentation du son</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/shannon2.html">Second théorème de Shannon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/introduction.html">Introduction</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../prog1/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../prog1/activ/catchfruit.html">Catch the fruit</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../prog1/activ/microbit-python/index.html">Python avec le micro:bit</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../prog1/activ/microbit-python/instructions.html">Instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../prog1/activ/microbit-python/condition.html">Exécution conditionnelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../prog1/activ/microbit-python/variables.html">Variables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/evaluations.html">Evaluations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/support/support.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../algo1/index.html">Algorithmique I</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo1/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/algo-tri.html">Algorithmes de tri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/monochromes.html">Monochromes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/stroboscope.html">Stroboscope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/dijkstra.html">Algorithme du plus court chemin de Dijkstra</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo1/exo/index.html">Solutions des exercices</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/exo/algorithmes.html">Les algorithmes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/exo/tri.html">Trie, cherche et trouve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/exo/algo-props.html">Des algorithmes aux programmes</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo1/peda/index.html">Pédagogie et didactique</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/peda/objectifs.html">Objectifs d'apprentissage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/peda/philosophie.html">Philosophie</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo1/plan/index.html">Planification</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/plan/parcours.html">Planification de la thématique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/plan/annuelle.html">Planification annuelle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../archi/index.html">Architecture des ordinateurs</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../archi/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/ordinateurantique_new.html">Ordinateur antique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/simulateur.html">Simulateur logique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/selecteur-chien_new.html">Sélecteur de chien</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/gabuzomeu_new.html">Ga-Bu-Zo-Meu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../archi/eval/index.html">Evaluations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../archi/support/index.html">Supports de cours</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx1/index.html">Enjeux sociaux I</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx1/grandes-thematiques/index.html">Grandes thématiques</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/grandes-thematiques/economie-numerique.html">Économie du numérique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/grandes-thematiques/surveillance.html">Vie privée et surveillance</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx1/fiches-complementaires/index.html">Fiches complémentaires</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/fiches-complementaires/digital-labor.html">Le digital labor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/fiches-complementaires/wikipedia.html">Wikipédia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/fiches-complementaires/affaire-snowden.html">L'affaire Snowden</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/fiches-complementaires/genre-numerique.html">Genre et numérique</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx1/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/activ/encheres.html">Les enchères du web</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../algo2/index.html">Algorithmique II</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo2/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../algo2/activ/epidemie/index.html">Epidémie</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../algo2/activ/epidemie/m_a_s.html">Marche à suivre</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../algo2/activ/epidemie/solution.html">Corrigé</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo2/activ/puissance4.html">Minimax / Puissance 4</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo2/exo/index.html">Solutions des exercices</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../algo2/exo/recherche.html">2. Algorithmes de recherche</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo2/exo/tris.html">3. Algorithmes de tri [complément]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo2/exo/heuristiques.html">4. Algorithmes heuristiques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo2/exo/recursivite.html">5. Récursivité [en option]</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo2/peda/index.html">Pédagogie et didactique</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../algo2/peda/objectifs.html">Objectifs d'apprentissage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo2/peda/philosophie.html">Philosophie</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo2/plan/index.html">Planification</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../resx/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../resx/activ/diffie-hellman/diffie-hellman.html">Diffie Hellman</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resx/activ/routage_paquets/routage_paquets.html">Routage des Paquets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resx/activ/web-tracking/web-tracking.html">Suivi en ligne</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx2/index.html">Enjeux sociaux II</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/grandes-thematiques/index.html">Grandes thématiques</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/grandes-thematiques/environnement.html">Numérique et environnement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/grandes-thematiques/IA_1.html">IA et enjeux de l'automatisation 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/grandes-thematiques/IA_2.html">IA et enjeux de l'automatisation 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/grandes-thematiques/histoire_culture_num_1.html">Histoire et culture du numérique 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/grandes-thematiques/histoire_culture_num_2.html">Histoire et culture du numérique 2</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/encheres.html">Les enchères du web</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/emission_ges.html">Numérique et réchauffement climatique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/ia_0.html">IA : Apprentissage et données</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/ia_1.html">IA : Biais de l'apprentissage des données</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/ia_2.html">IA : Bulles de filtre</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/ia_3.html">IA : Générateurs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/activ/carto_numerique.html">Cartographie du numérique</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx2/support/index.html">Supports de cours</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" role="switch" type="checkbox"/><label for="toctree-checkbox-29"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx2/support/combustibles_GES.html">Numérique et environnement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Thématiques transversales</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" role="switch" type="checkbox"/><label for="toctree-checkbox-30"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" role="switch" type="checkbox"/><label for="toctree-checkbox-31"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hist/activ/jeuimitation_new.html">Jeu de l'imitation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hist/activ/smaky_new.html">Smaky</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../art/index.html">Art numérique</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" role="switch" type="checkbox"/><label for="toctree-checkbox-32"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../art/ai.html">AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/autonomy_cube.html">Autonomy Cube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/gloomy_sunday.html">Learning to See : Gloomy Sunday</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/index.html">Contributions externes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../plan_didac/index.html">Plans didactiques</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" role="switch" type="checkbox"/><label for="toctree-checkbox-33"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plan_didac/plandidac2.html">Proposition 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossaire.html">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../readme/extensions.html">Extensions</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="redondance-et-code-de-hamming">
+<span id="ens-repinfo-redondancehamming"></span><h1>Redondance et code de Hamming<a class="headerlink" href="#redondance-et-code-de-hamming" title="Lien permanent vers ce titre">¶</a></h1>
+<hr class="docutils"/>
+<p>Une introduction à la redondance et au code de Hamming.</p>
+<p>Nous allons voir ce qui peut se passer lorsque des messages numériques sont enregistrés ou envoyés depuis un expéditeur vers un destinataire.</p>
+<hr class="docutils"/>
+<div class="hint admonition">
+<p class="admonition-title">Caractéristiques</p>
+<ul class="simple">
+<li><p><strong>Thème</strong> : Représentation de l’information</p></li>
+<li><p><strong>Niveau</strong> : Facile</p></li>
+<li><p><strong>Durée</strong> : 2 périodes</p></li>
+<li><p><strong>Objectifs pédagogiques</strong> : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+<li><p><strong>Notions fondamentales</strong> : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></p></li>
+<li><p><strong>Modalité</strong> : Débranchée</p></li>
+<li><p>Matériel : Des jetons avec 2 faces différentiables avec un support pour les positionner.
+Les activités décrites ci-dessous sont basées sur des messages de 4 bits, le support doit pouvoir en contenir le double, soit 8.</p></li>
+<li><p><strong>Prérequis</strong> : Représentation binaire</p></li>
+</ul>
+</div>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Étapes</p></th>
+<th class="head"><p>Durée</p></th>
+<th class="head"><p>Phase de l’activité</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#hamming-contexte"><span class="std std-ref">Contexte</span></a></p></td>
+<td><p>10 min</p></td>
+<td><p>Mise en situation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hamming-envoyer"><span class="std std-ref">Envoyer un message</span></a></p></td>
+<td><p>15 min</p></td>
+<td><p>Enseignement / Apprentissage</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hamming-securiser"><span class="std std-ref">Sécuriser la transmission</span></a></p></td>
+<td><p>30 min</p></td>
+<td><p>Enseignement / Apprentissage</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hamming-hamming"><span class="std std-ref">Codage de Hamming</span></a></p></td>
+<td><p>20 min</p></td>
+<td><p>Enseignement / Apprentissage</p></td>
+</tr>
+</tbody>
+</table></div>
+<section id="contexte">
+<span id="hamming-contexte"></span><h2>Contexte<a class="headerlink" href="#contexte" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></em></p>
+<p><em>Objectif : Mettre en place le contexte et le principe de l’activité.</em></p>
+<p>On définit 16 mots pouvant former différentes phrases (sujet-verbe ; complément ; adjectif), le tout peut donc être encodé sur 4 bits.<br/>
+On sépare la classe en 2 groupes, les expéditeurs et les destinataires, chaque groupe pouvant lui aussi être subdivisé en sous-groupe qui se charge d’une partie de la phrase.<br/>
+Les expéditeurs définissent le message, l’encode en positionnant les jetons sur les supports et envoient le message en passant par le prof</p>
+</section>
+<section id="envoyer-un-message">
+<span id="hamming-envoyer"></span><h2>Envoyer un message<a class="headerlink" href="#envoyer-un-message" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></em></p>
+<p><em>Objectif : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></em></p>
+<p>Commencer par définir les mots qui vont être utilisés pour écrire les messages, on peut par exemple utiliser 4 phrases ayant la même structure.
+Ainsi, il sera possible de générer des erreurs qui rendront la phrase transmise incompréhensible, ou pas.</p>
+<p>Exemple :</p>
+<ol class="simple">
+<li><p>Mathilde mange des tacos salés</p></li>
+<li><p>Dan joue du violon anglais</p></li>
+<li><p>Anastasia imagine un roman épique</p></li>
+<li><p>Tim écrit un programme compliqué</p></li>
+</ol>
+<p>Il faut ensuite associer un code binaire à chaque mot/morceau de phrase. Il peut être intéressant de la faire de manière réfléchie pour pouvoir maîtriser le résultat de l’erreur introduite.</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p></p></th>
+<th class="text-align:center head"><p>00</p></th>
+<th class="text-align:center head"><p>10</p></th>
+<th class="text-align:center head"><p>01</p></th>
+<th class="text-align:center head"><p>11</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>00</p></td>
+<td class="text-align:center"><p>Mathilde</p></td>
+<td class="text-align:center"><p>Dan</p></td>
+<td class="text-align:center"><p>Anastasia</p></td>
+<td class="text-align:center"><p>Tim</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>10</p></td>
+<td class="text-align:center"><p>mange</p></td>
+<td class="text-align:center"><p>joue</p></td>
+<td class="text-align:center"><p>écrit</p></td>
+<td class="text-align:center"><p>imagine</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>01</p></td>
+<td class="text-align:center"><p>des nems</p></td>
+<td class="text-align:center"><p>du violon</p></td>
+<td class="text-align:center"><p>un programme</p></td>
+<td class="text-align:center"><p>un roman</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>11</p></td>
+<td class="text-align:center"><p>végétarien</p></td>
+<td class="text-align:center"><p>anglais</p></td>
+<td class="text-align:center"><p>compliqué</p></td>
+<td class="text-align:center"><p>épique</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>De cette manière, tous les sujets commencent par 00, tous les verbes par 10, etc. On peut donc facilement décider d’introduire une erreur en restant dans la même catégorie (on change 1 des 2 derniers bits) ou pas.</p>
+<p>Maintenant, le groupe expéditeur choisi une phrase et l’encode sur 4 supports distincts, 1 pour chaque morceau de phrase :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Mathilde</p></th>
+<th class="text-align:center head"><p>joue un</p></th>
+<th class="text-align:center head"><p>roman</p></th>
+<th class="text-align:center head"><p>anglais</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0000</p></td>
+<td class="text-align:center"><p>1010</p></td>
+<td class="text-align:center"><p>0111</p></td>
+<td class="text-align:center"><p>1110</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Pour envoyer le message aux destinataires, les expéditeurs doivent le donner à l’enseignant (= rôle du canal de transmission) qui le transmet aux destinataires.<br/>
+Lors de la <em>transmission</em>, l’enseignant peut introduire des erreurs dans le message, simulant ainsi les incidents impondérables du canal de transmission.
+Au maximum, l’enseignant peut changer 1 bit par mot (c.-à-d. 1 bit sur 4).</p>
+<p>Ainsi la phrase Mathilde joue un roman anglais peut facilement devenir</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Dan</p></th>
+<th class="text-align:center head"><p>joue</p></th>
+<th class="text-align:center head"><p>du violon</p></th>
+<th class="text-align:center head"><p>anglais</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0010</p></td>
+<td class="text-align:center"><p>1010</p></td>
+<td class="text-align:center"><p>0110</p></td>
+<td class="text-align:center"><p>1110</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>ou encore</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Des nems</p></th>
+<th class="text-align:center head"><p>anglais</p></th>
+<th class="text-align:center head"><p>Tim</p></th>
+<th class="text-align:center head"><p>végétarien</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0100</p></td>
+<td class="text-align:center"><p>1110</p></td>
+<td class="text-align:center"><p>0011</p></td>
+<td class="text-align:center"><p>1100</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Les destinataires décodent le message et <strong>avant</strong> de connaitre le message original, doivent estimer s’il y a eu ou pas un problème lors de la transmission.</p>
+<p>Un humain pourra se douter d’une erreur dans le second cas, mais pas dans le premier.
+Une machine, quant à elle, ne sait pas faire de différence entre les 2 cas et n’a pas de moyen pour détecter un problème lors de la transmission.</p>
+</section>
+<section id="securiser-la-transmission">
+<span id="hamming-securiser"></span><h2>Sécuriser la transmission<a class="headerlink" href="#securiser-la-transmission" title="Lien permanent vers ce titre">¶</a></h2>
+<p><em>Durée : <code class="docutils literal notranslate"><span class="pre">à</span> <span class="pre">compléter</span></code></em></p>
+<p><em>Objectif : Trouver un moyen pour que le destinataire puisse détecter un problème lors de la transmission.</em></p>
+<p>Il s’agit ici de guider les élèves pour qu’ils suggèrent et testent différentes solutions permettant aux expéditeurs d’envoyer un message pour lequel les destinataires seront capable de détecter si le message reçu à été altéré durant la transmission.<br/>
+Bien entendu, la solution de sécurisation ne devrait pas prendre plus de bits que le message en lui-même.</p>
+<p>Pour chaque solution proposée par les élèves, l’idée est de procéder toujours de la même façon :</p>
+<ol class="simple">
+<li><p>Explicitation de la solution proposée</p></li>
+<li><p>Mise en oeuvre par les expéditeurs</p></li>
+<li><p>Transmission du message</p></li>
+<li><p>Décodage du message par les destinataires</p></li>
+<li><p>Analyse</p>
+<ul class="simple">
+<li><p>le message reçu est-il identique à celui expédié ?</p></li>
+<li><p>dans le cas d’une erreur de transmission, a-t-elle été détectée ?</p></li>
+<li><p>Avantages et inconvénients de la solution</p></li>
+<li><p>comment peut-on l’améliorer ?</p></li>
+</ul>
+</li>
+</ol>
+<p>Compte tenu de l’objectif, il n’y a, dans ce cas, que 4 possibilités : ajouter x bits au message ou x <span class="math notranslate nohighlight">\(\in\)</span> [1,4]</p>
+<section id="redondance-4-bits">
+<h3>Redondance (+4 bits)<a class="headerlink" href="#redondance-4-bits" title="Lien permanent vers ce titre">¶</a></h3>
+<p>On duplique le message et on transmet le tout, soit :</p>
+<ul class="simple">
+<li><p>en séquence : <span class="math notranslate nohighlight">\(0110 \rightarrow 01100110\)</span></p></li>
+<li><p>entrelacé : <span class="math notranslate nohighlight">\(0110 \rightarrow 00111100\)</span></p></li>
+</ul>
+<p>Les 2 approches sont identiques et cette solution permet effectivement de détecter si le message a été altéré.<br/>
+Par contre, on ne peut pas savoir lequel des 2 messages est le bon et le <em>coût</em> est élevé, deux fois plus de bits que le message original.</p>
+</section>
+<section id="bit-de-parite-1-bit">
+<h3>Bit de parité (+1 bit)<a class="headerlink" href="#bit-de-parite-1-bit" title="Lien permanent vers ce titre">¶</a></h3>
+<p>On fait la somme du nombre de bits à 1 dans le message original puis on donne la valeur 0 au bit de parité lorsque cette somme est paire et la valeur 1 lorsque cette somme est impaire. On notera que, de cette façon, la somme des 5 bits est toujours paire.</p>
+<p>Le bit de parité est habituellement placé à la position de poids le plus faible :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(0110 \rightarrow 01100\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1110 \rightarrow 11101\)</span></p></li>
+</ul>
+<p>Comme pour la redondance, on peut uniquement détecter s’il y a eu erreur de transmission, mais pour un coût bien plus raisonnable.
+De plus, si l’erreur (on reste toujours dans le cas ou 1 bit maximum peut être modifié) se situe sur le bit de parité, celle-ci est aussi détectée. Dans ce cas, on sait que le message est en fait correct.
+Sinon, pour obtenir le message correct, il faut passer par une nouvelle transmission…</p>
+<p>Serait-il possible de pouvoir détecter s’il y a une erreur et la corriger, c.-à-d. savoir quel bit a été modifié ?</p>
+</section>
+<section id="bits-de-position-2-bits">
+<h3>Bits de position (+2 bits)<a class="headerlink" href="#bits-de-position-2-bits" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les 4 positions des bits du message peuvent être encodés sur 2 bits. À l’instar de l’encodage utilisé pour résoudre <a class="reference internal" href="magie_binaire.html#magiebinaire-mobiliser"><span class="std std-ref">le problème des bouteilles empoisonnées</span></a>, on pourrait calculer la parité des bits dont la représentation binaire de leur position ont 1 bit en commun.<br/>
+Soient A et B les 2 bits de parités à ajouter au message de 4 bits avec les positions suivantes :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Position des bits</p></th>
+<th class="text-align:center head"><p>0</p></th>
+<th class="text-align:center head"><p>1</p></th>
+<th class="text-align:center head"><p>2</p></th>
+<th class="text-align:center head"><p>3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>Représentation binaire des positions</p></td>
+<td class="text-align:center"><p>00</p></td>
+<td class="text-align:center"><p>01</p></td>
+<td class="text-align:center"><p>10</p></td>
+<td class="text-align:center"><p>11</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Ainsi A sera le bit de parité pour les positions 1 et 3 tandis que B sera le bit de parité pour les positions 2 et 3.</p>
+<p>Permet de détecter et corriger des erreurs sur les bits aux positions 1 à 3, mais pas sur la position 0, ni sur les bits de parité.</p>
+<p>Par exemple, considérons le message initial <span class="math notranslate nohighlight">\(0010\)</span> qui devient <span class="math notranslate nohighlight">\(001001\)</span> et les 6 différents messages altérés qui peuvent être reçus :</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(101001\)</span> : le bit à la position 0 a été modifié, l’erreur n’est pas détectée</p></li>
+<li><p><span class="math notranslate nohighlight">\(011001\)</span> : le bit à la position 1 a été modifié, le premier bit de parité (A) est incorrect tandis que le second (B) est juste. Par conséquent, l’erreur se trouve sur le bit de position 1 et peut être corrigée.</p></li>
+<li><p><span class="math notranslate nohighlight">\(000001\)</span> : le bit à la position 2 a été modifié, le bit de parité A est correct tandis que B ne l’est pas. Par conséquent, l’erreur se trouve sur le bit de position 2 et peut être corrigée.</p></li>
+<li><p><span class="math notranslate nohighlight">\(001101\)</span> : le bit à la position 3 a été modifié, le bit de parité A est incorrect ainsi que B. Par conséquent, l’erreur se trouve sur le bit de position 3 et peut être corrigée.</p></li>
+<li><p><span class="math notranslate nohighlight">\(001011\)</span> : le bit de parité A a été modifié, le bit de parité A est incorrect tandis que B est juste. On se retrouve dans la même situation qu’au pt. 2, par conséquent, on conclue que l’erreur se trouve sur le bit de position 1 ce qui est faux.</p></li>
+<li><p><span class="math notranslate nohighlight">\(001000\)</span> : le bit de parité B a été modifié, le bit de parité A est correct tandis que B ne l’est pas. On se retrouve dans la même situation qu’au pt. 3, par conséquent, on conclue que l’erreur se trouve sur le bit de position 2 ce qui est faux.</p></li>
+</ol>
+<p>Dans ce cas les erreurs sur les bits aux positions 1 à 3 sont détectées et peuvent être corrigées.<br/>
+Lorsque l’erreur advient sur le bit de position 0, elle n’est pas détectée.<br/>
+Enfin, si l’erreur se trouve sur l’un des 2 bits de parité, cette erreur engendrera une correction sur un des bits des positions 1 à 3 qui n’avaient pas été altérés.</p>
+</section>
+<section id="codage-de-hamming-3-bits">
+<span id="hamming-hamming"></span><h3>Codage de Hamming (+3 bits)<a class="headerlink" href="#codage-de-hamming-3-bits" title="Lien permanent vers ce titre">¶</a></h3>
+<p>To Do</p>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../../_sources/rep-info/activ/hamming_new.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Redondance et code de Hamming</a><ul>
+<li><a class="reference internal" href="#contexte">Contexte</a></li>
+<li><a class="reference internal" href="#envoyer-un-message">Envoyer un message</a></li>
+<li><a class="reference internal" href="#securiser-la-transmission">Sécuriser la transmission</a><ul>
+<li><a class="reference internal" href="#redondance-4-bits">Redondance (+4 bits)</a></li>
+<li><a class="reference internal" href="#bit-de-parite-1-bit">Bit de parité (+1 bit)</a></li>
+<li><a class="reference internal" href="#bits-de-position-2-bits">Bits de position (+2 bits)</a></li>
+<li><a class="reference internal" href="#codage-de-hamming-3-bits">Codage de Hamming (+3 bits)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/main.js"></script>
+    <script src="../../_static/glossary.js"></script>
+    <script src="../../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="../../_static/blanks.js"></script>
+    <script src="../../_static/timeline.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../../_static/scripts/reactions.js"></script>
+    <script src="../../_static/scripts/progress.js"></script>
+    <script src="../../_static/scripts/dark.js"></script>
+    <script src="../../_static/scripts/frames.js"></script>
+    </body>
+</html>

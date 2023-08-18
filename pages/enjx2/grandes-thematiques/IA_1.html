@@ -1,0 +1,1371 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Recherche" href="../../search.html" /><link rel="next" title="IA et enjeux de l’automatisation, partie 2" href="IA_2.html" /><link rel="prev" title="Numérique et environnement" href="environnement.html" />
+
+    <link rel="shortcut icon" href="../../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>IA et enjeux de l’automatisation, partie 1 - Enseigner</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/todo.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/global_ens.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: white;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #06CCC0;
+  --color-brand-content: #06CCC0;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #06CCC0;
+  --color-brand-content: #06CCC0;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Enseigner</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Enseigner</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Première année</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../rep-info/index.html">Représentation de l’information</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../rep-info/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/magie_binaire.html">Magie binaire</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/encoder_images.html">Images numériques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/echantillonnage_new.html">Echantillonnage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rep-info/activ/huffman.html">Compression et codage de Huffman</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../rep-info/exo/index.html">Exercices</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../rep-info/exo/carte.html">Carte perforée</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rep-info/exo/space.html">Space Invaders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rep-info/exo/radiotel.html">Radiotéléphonie</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../rep-info/support/index.html">Supports de cours</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../rep-info/support/son/visu-et-ecoute-son.html">Représentation du son</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rep-info/support/shannon2.html">Second théorème de Shannon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/introduction.html">Introduction</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../prog1/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../prog1/activ/catchfruit.html">Catch the fruit</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../prog1/activ/microbit-python/index.html">Python avec le micro:bit</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../prog1/activ/microbit-python/instructions.html">Instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../prog1/activ/microbit-python/condition.html">Exécution conditionnelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../prog1/activ/microbit-python/variables.html">Variables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/evaluations.html">Evaluations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../prog1/support/support.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../algo1/index.html">Algorithmique I</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo1/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/algo-tri.html">Algorithmes de tri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/monochromes.html">Monochromes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/stroboscope.html">Stroboscope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/activ/dijkstra.html">Algorithme du plus court chemin de Dijkstra</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo1/exo/index.html">Solutions des exercices</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/exo/algorithmes.html">Les algorithmes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/exo/tri.html">Trie, cherche et trouve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/exo/algo-props.html">Des algorithmes aux programmes</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo1/peda/index.html">Pédagogie et didactique</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/peda/objectifs.html">Objectifs d'apprentissage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/peda/philosophie.html">Philosophie</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo1/plan/index.html">Planification</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/plan/parcours.html">Planification de la thématique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo1/plan/annuelle.html">Planification annuelle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../archi/index.html">Architecture des ordinateurs</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../archi/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/ordinateurantique_new.html">Ordinateur antique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/simulateur.html">Simulateur logique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/selecteur-chien_new.html">Sélecteur de chien</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../archi/activ/gabuzomeu_new.html">Ga-Bu-Zo-Meu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../archi/eval/index.html">Evaluations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../archi/support/index.html">Supports de cours</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../enjx1/index.html">Enjeux sociaux I</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx1/grandes-thematiques/index.html">Grandes thématiques</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/grandes-thematiques/economie-numerique.html">Économie du numérique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/grandes-thematiques/surveillance.html">Vie privée et surveillance</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx1/fiches-complementaires/index.html">Fiches complémentaires</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/fiches-complementaires/digital-labor.html">Le digital labor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/fiches-complementaires/wikipedia.html">Wikipédia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/fiches-complementaires/affaire-snowden.html">L'affaire Snowden</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/fiches-complementaires/genre-numerique.html">Genre et numérique</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../enjx1/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../enjx1/activ/encheres.html">Les enchères du web</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
+<ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../algo2/index.html">Algorithmique II</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo2/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../algo2/activ/epidemie/index.html">Epidémie</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../algo2/activ/epidemie/m_a_s.html">Marche à suivre</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../algo2/activ/epidemie/solution.html">Corrigé</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo2/activ/puissance4.html">Minimax / Puissance 4</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo2/exo/index.html">Solutions des exercices</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../algo2/exo/recherche.html">2. Algorithmes de recherche</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo2/exo/tris.html">3. Algorithmes de tri [complément]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo2/exo/heuristiques.html">4. Algorithmes heuristiques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo2/exo/recursivite.html">5. Récursivité [en option]</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algo2/peda/index.html">Pédagogie et didactique</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../algo2/peda/objectifs.html">Objectifs d'apprentissage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../algo2/peda/philosophie.html">Philosophie</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../algo2/plan/index.html">Planification</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../resx/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../resx/activ/diffie-hellman/diffie-hellman.html">Diffie Hellman</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resx/activ/routage_paquets/routage_paquets.html">Routage des Paquets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resx/activ/web-tracking/web-tracking.html">Suivi en ligne</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Enjeux sociaux II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Grandes thématiques</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="environnement.html">Numérique et environnement</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">IA et enjeux de l'automatisation 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="IA_2.html">IA et enjeux de l'automatisation 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="histoire_culture_num_1.html">Histoire et culture du numérique 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="histoire_culture_num_2.html">Histoire et culture du numérique 2</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../activ/encheres.html">Les enchères du web</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../activ/emission_ges.html">Numérique et réchauffement climatique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../activ/ia_0.html">IA : Apprentissage et données</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../activ/ia_1.html">IA : Biais de l'apprentissage des données</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../activ/ia_2.html">IA : Bulles de filtre</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../activ/ia_3.html">IA : Générateurs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../activ/carto_numerique.html">Cartographie du numérique</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../support/index.html">Supports de cours</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" role="switch" type="checkbox"/><label for="toctree-checkbox-29"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../support/combustibles_GES.html">Numérique et environnement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Thématiques transversales</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" role="switch" type="checkbox"/><label for="toctree-checkbox-30"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../hist/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" role="switch" type="checkbox"/><label for="toctree-checkbox-31"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hist/activ/jeuimitation_new.html">Jeu de l'imitation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hist/activ/smaky_new.html">Smaky</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../art/index.html">Art numérique</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" role="switch" type="checkbox"/><label for="toctree-checkbox-32"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../art/ai.html">AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/autonomy_cube.html">Autonomy Cube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../art/gloomy_sunday.html">Learning to See : Gloomy Sunday</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/index.html">Contributions externes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../plan_didac/index.html">Plans didactiques</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" role="switch" type="checkbox"/><label for="toctree-checkbox-33"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plan_didac/plandidac2.html">Proposition 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossaire.html">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../readme/extensions.html">Extensions</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <style>
+.button {
+  background-color: white;
+  border: 1px solid;
+  border-color: black;
+  font-family:"Lato",sans-serif;
+  font-weight:350;
+  color: black!important;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button:hover {
+  text-decoration:none;
+  background-color: black; 
+  color: white!important;
+}
+.round-button {
+    display:block;
+    width:100px;
+    height:100px;
+    line-height:17px;
+    border:0px ;
+    border-radius: 50%;
+    color:#6069db;
+    text-align:center;
+    text-decoration:none;
+    display: table-cell;
+    vertical-align: middle;
+    background: #6069db;
+    box-shadow: 0 0 0px gray;
+    font-size:14px;
+    font-weight:bold;
+    }
+
+</style>
+<div align="right">
+<a class="round-button" href="http://files.modulo-info.ch/enjeux-sociaux/ia-automatisation/IA-automatisationP1.pdf">
+<font color="white" id="demo">Cliquer ici pour <br/>dossier</font>
+</a>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="ia-et-enjeux-de-lautomatisation-partie-1">
+<h1>IA et enjeux de l’automatisation, partie 1<a class="headerlink" href="#ia-et-enjeux-de-lautomatisation-partie-1" title="Lien permanent vers ce titre">¶</a></h1>
+<br/>
+<p>Cette première partie du dossier IA et enjeux de l’automatisation propose une contextualisation historique de l’émergence de l’intelligence artificielle en présentant quelques moments clés de la discipline. Il est complété par un état des lieux concernant les différents usages et applications actuels des technologies de l’apprentissage automatique.</p>
+<section id="objectifs">
+<h2>Objectifs<a class="headerlink" href="#objectifs" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p>Comprendre le contexte
+d’émergence de l’intelligence
+artificielle</p></li>
+<li><p>Différencier les courants
+symbolique et connexionniste</p></li>
+<li><p>Se rendre compte de la pluralité
+des applications de l’IA</p></li>
+<li><p>Identifier des situations du
+quotidien où l’IA intervient</p></li>
+</ul>
+</section>
+<section id="enjeux">
+<h2>Enjeux<a class="headerlink" href="#enjeux" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Depuis la moitié du XXe siècle, les scientifiques essaient de simuler le
+raisonnement grâce aux machines. L’histoire de
+l’intelligence artificielle est d’abord
+marquée par de grandes ambitions et connaît successivement plusieurs
+phases d’engouement et de déceptions. Elle se nourrit et
+nourrit elle-même des récits de science-
+fiction, dont les personnages artificiels, robots, androïdes ou simples
+voix de synthèse, influencent à leur tour les imaginaires collectifs. En
+résultent de nombreuses croyances, des craintes, mais également des
+espoirs, qui ne correspondent pas toujours à l’état des avancées
+technologiques actuelles.</p>
+<p>Les récentes performances dans le domaine de
+l’apprentissage automatique appellent à une réflexion sur
+la définition de l’IA en tant que catégorie générale
+d’une part, et sur les particularités des technologies
+qu’elles englobent d’autre part. Un retour aux
+sources du projet visant à simuler le raisonnement permettra également
+de comprendre les motivations, les ambitions mais aussi les limites de
+certaines applications de l’IA.</p>
+<section id="ia-une-definition">
+<h3>🧠 IA, une définition<a class="headerlink" href="#ia-une-definition" title="Lien permanent vers ce titre">¶</a></h3>
+<p>L’intelligence artificielle est un terme à la mode,
+fréquemment évoqué dans le débat public et dans les médias. Malgré cette
+popularité certaine, rares sont les tentatives d’expliquer
+précisément ce qu’est l’IA. Il
+s’agit en fait d’une notion générique qui
+désigne différentes technologies du traitement automatique de
+l’information, ayant pour objectif de simuler le
+raisonnement. Aujourd’hui, l’IA fait
+principalement référence à l’apprentissage automatique,
+aussi connu dans sa version anglaise de <em>machine learning</em>.</p>
+<p>Les technologies de l’IA partagent des caractéristiques
+communes. Elles sont développées par des informaticiens et visent à
+imiter certaines fonctions cognitives propres à l’être humain:
+l’apprentissage de règles, le raisonnement logique, le
+langage, la planification ou encore la reconnaissance
+d’images ou de sons. Pour ce faire, une modélisation de ces
+processus est nécessaire à l’aide des mathématiques, de
+l’algorithmique et de la programmation.</p>
+<p>Un contexte socio-technique favorable a permis aux premières tentatives
+de simulation de l’intelligence de voir le jour. Dans les
+années 1940, le mathématicien Norbert Wiener développe la cybernétique,
+un courant de pensée permettant d’appréhender conjointement
+le fonctionnement du vivant et des machines à partir des théories de la
+communication. Tous deux auraient les mêmes capacités
+d’adaptation basées sur des capteurs percevant leur
+environnement. Très populaire au sein de l’élite scientifique
+américaine, cette approche pose les bases théoriques nécessaires à
+l’émergence de l’IA.</p>
+<p>Sur le terrain, le développement des premiers calculateurs électroniques
+durant la Seconde Guerre mondiale permet de tester le potentiel de la
+cybernétique. Deux approches principales vont se distinguer et
+s’opposer au fil de l’histoire, avec
+d’un côté l’IA connexionniste et de
+l’autre l’IA symbolique.</p>
+</section>
+<section id="un-peu-dhistoire">
+<h3>📜 Un peu d’histoire<a class="headerlink" href="#un-peu-dhistoire" title="Lien permanent vers ce titre">¶</a></h3>
+<p>L’histoire de l’IA est principalement composée
+de deux courants distincts qui ambitionnent de simuler le raisonnement
+humain grâce aux machines. Longtemps ostracisée par
+l’approche symbolique, l’IA connexionniste
+s’est aujourd’hui imposée avec les
+performances de l’apprentissage automatique et des réseaux
+de neurones, inspirés des connaissances du cerveau humain.</p>
+<p>En 1955, les mathématiciens américains John McCarthy et Marvin Minsky
+organisent le premier projet de recherche sur
+l’intelligence artificielle et fondent l’année
+suivante le domaine scientifique de l’IA. Leurs ambitions
+sont clairement énoncées : ils s’appuient sur la conjecture
+que l’apprentissage et l’intelligence sont des
+processus suffisamment compris pour qu’ils puissent être
+reproduits artificiellement. Ils envisagent ainsi de modéliser le
+raisonnement grâce à des manipulations mathématiques et logiques de
+symboles.</p>
+<p><img alt="Image 1" src="../../_images/image1.png"/></p>
+<p>Fonctionnement d’une machine symbolique (1) et
+connexionniste (2). En haut, les informations nécessaires aux
+calculateurs sont fournies a priori afin d’obtenir les
+résultats. En bas, la machine connexionniste déduit le modèle en
+fonction des entrées et des sorties.<a class="footnote-reference brackets" href="#id2" id="id1">1</a></p>
+<p>Les systèmes experts, qui connaissent un important succès dans les
+années 1980, appartiennent à ce courant. Trop complexes, ils offrent des
+résultats peu satisfaisants et sont abandonnés en une décennie. Débute
+alors une période creuse en terme d’avancées scientifiques,
+parfois appelée hiver de l’IA. Aujourd’hui,
+les systèmes experts sont toujours utilisés dans des domaines tels que
+les jeux vidéo, mais ils ne font plus partie du domaine scientifique de
+l’IA.</p>
+<p>Depuis le milieu des années 2000, les performances de
+l’approche connexionniste permettent un retour en force de
+l’IA. Contrairement à l’IA symbolique, elle
+s’inspire directement du fonctionnement du cerveau humain.
+Ce projet prend racine dès 1943, grâce aux neuroscientifiques
+américains
+Warren McCulloch et Walter Pitts, qui proposent pour la première fois un
+modèle mathématique représentant un neurone. Le terme
+n’existe pas encore à l’époque, mais cette date marque le
+début de l’approche connexionniste de l’IA.
+Sur la base des connaissances en biologie, les neurones formels vont
+être mis en connexion afin de former des réseaux et de simuler
+l’apprentissage. Pour ce faire, les neurones captent les
+signaux de leur environnement et établissent des modèles prédictifs sur
+une base d’entrées et de sorties (cf. Schéma ci-contre).</p>
+<p>En 1989, l’ingénieur français Yann LeCun
+s’inspire de la métaphore des neurones et crée un réseau
+multicouche capable de reconnaître automatiquement des codes postaux
+manuscrits. Cette technique sera reprise par le secteur bancaire afin de
+lire automatiquement des chèques. Il s’agit de
+l’une des premières utilisations à grande échelle
+d’une technique d’apprentissage automatique
+basée sur des réseaux de neurones formels.</p>
+<p>Près de trois décennies plus tard, l’optimisation des
+réseaux de neurones et des algorithmes, associée à
+l’augmentation considérable de la puissance de calcul des
+ordinateurs et aux importants volumes de données disponibles (big data),
+replacent l’IA au centre des intérêts scientifiques et
+technologiques. En effet, les masses de données sont un élément
+essentiel à l’entraînement des modèles
+d’apprentissage</p>
+</section>
+<section id="comment-ca-marche">
+<h3>☝ Comment ça marche ?<a class="headerlink" href="#comment-ca-marche" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour établir des modèles prédictifs efficaces, les réseaux de neurones
+de l’IA connexionniste sont entraînés par des algorithmes à
+traiter et agréger d’importantes quantités de données. On
+parle d’apprentissage automatique puisque les algorithmes
+établissent des modèles à partir des données qui leur sont fournies. Il
+existe plusieurs types d’apprentissages.</p>
+<p>L’apprentissage supervisé requiert
+l’intervention humaine pour labelliser les données,
+corriger les erreurs lors des phases d’entraînement et
+obtenir les modèles souhaités. Par exemple, pour apprendre à reconnaître
+un chat, un algorithme considère des milliers d’images
+préalablement étiquetées “chat” ou “non-chat”
+afin d’établir un modèle prédictif qui pourra être appliqué à des images
+inconnues. Contrairement au cerveau humain, qui n’a besoin
+que de quelques exemples pour reconnaître une forme, l’IA
+connexionniste nécessite des volumes importants de données pour établir
+ses modèles. L’apprentissage non supervisé consiste à
+laisser l’algorithme déterminer ses propres modes de
+classification et catégories sans intervention externe.</p>
+<p>En 2016, le programme AlphaGo de DeepMind (Google) bat pour la première
+fois un joueur professionnel au jeu traditionnel de Go. Une combinaison
+des différentes méthodes prenant en compte des parties disputées par des
+joueurs humains et d’apprentissage par renforcement
+uniquement basé sur l’expérience de la machine permet à
+AlphaGo de déduire les coups optimaux. La dernière version du programme
+baptisée AlphaGo Zero est parvenue à battre n’importe quel
+joueur humain, ainsi qu’AlphaGo lui-même, en ne connaissant
+que les règles du jeu.</p>
+<p>Les performances actuelles de l’apprentissage automatique
+sont certes considérables et dépassent dans certains cas les capacités
+humaines. Leurs perspectives demeurent cependant limitées car chaque
+réseau de neurones est dépendant du contexte dans et pour lequel il est
+développé. Il n’est à ce jour pas possible
+d’envisager de les transférer dans un environnement
+différent sans un important travail de ré-apprentissage supervisé par
+des humains. Pour cette raison, l’IA connexionniste
+actuelle est souvent qualifiée d’IA faible ou étroite, en
+opposition au projet hypothétique d’IA forte, qui
+ambitionne de modéliser toutes les facettes de
+l’intelligence, y compris la conscience et les émotions.</p>
+<p>Par ailleurs, l’IA connexionniste est fréquemment associée
+à un enjeu de transparence. En effet, malgré l’efficacité
+de certains modèles prédictifs, la complexité des réseaux de neurones
+créent l’effet d’une boîte noire,
+caractéristique de l’apprentissage automatique. Même les
+concepteurs des algorithmes ne sont pas en mesure
+d’expliquer précisément les décisions de leurs programmes.
+Cet aspect est souvent présenté comme l’un des défis
+majeurs de l’IA contemporaine. Il est intéressant de
+souligner que l’enjeu de transparence concerne uniquement
+les prises de décision automatisées. En comparaison, les nombreuses
+décisions prises par les êtres humains au quotidien ne semblent pas
+concernées par cette injonction à la transparence. Pourtant, elles ne
+sont pas toujours explicables ni expliquées.</p>
+<p>L’effet boîte noire ne remet cependant pas systématiquement
+en cause l’application de l’apprentissage
+automatique. L’impossibilité d’expliquer
+certains choix doit toutefois être prise en compte, en
+l’intégrant à des processus non automatisés.
+L’appréciation humaine demeure indispensable pour éviter
+des prises de décisions arbitraires.</p>
+</section>
+<section id="pluralite-des-applications">
+<h3>🎆 Pluralité des applications<a class="headerlink" href="#pluralite-des-applications" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La difficulté à définir précisément l’IA réside en partie
+dans la pluralité de ses techniques et de ses applications. Les
+prochains exemples, non-exhaustifs, permettent de se rendre compte de la
+diversité des champs d’application de l’IA et
+de l’évolution de l’utilisation de certaines technologies.</p>
+<p>Les débuts de l’IA sont étroitement liés aux institutions
+militaires américaines. Dans un premier temps, les technologies du
+traitement automatique de l’information reçoivent
+d’importants financements de la part de la marine (ONR) et
+du Département de la défense (DARPA). Elles comprennent les premiers
+programmes de traduction automatique, les logiciels de reconnaissance
+d’images ou encore la conduite autonome.
+Aujourd’hui encore, la maîtrise des technologies de
+l’IA est toujours considérée comme un défi central dans le
+secteur militaire à travers le monde.</p>
+<p>Petit à petit, ces technologies ont été adaptées à des usages plus
+variés. La traduction automatique est désormais utilisée dans nos
+pratiques quotidiennes. La reconnaissance de formes et
+d’images est employée en médecine et contribue notamment à
+l’amélioration de la détection de certaines tumeurs. Google
+et Tesla tentent d’intégrer la conduite autonome au trafic.
+L’IA façonne également les contenus que nous voyons sur le
+Web grâce à ses algorithmes de hiérarchisation et de modération.</p>
+<p>Ces exemples montrent que les motivations initiales à produire de
+nouvelles technologies peuvent être largement détournées en quelques
+décennies. Les technologies ont les mêmes fondements, mais les usages se
+sont diversifiés et banalisés. Désormais, elles sont le plus souvent
+développées et proposées par des entreprises privées.
+L’arrivée de l’IA dans nos quotidiens invite à
+réfléchir aux multiples possibilités d’automatisation et
+aux conséquences que ces dernières peuvent avoir sur les individus et la
+société.</p>
+</section>
+<section id="lia-et-les-pratiques-en-ligne">
+<h3>🖥 L’IA et les pratiques en ligne<a class="headerlink" href="#lia-et-les-pratiques-en-ligne" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Avec l’avènement des médias sociaux, les entreprises
+proposant leurs services sur
+Internet ont accès à des volumes de données inédits concernant leurs
+utilisateurs. L’IA est utilisée pour gérer et trier ces
+importants flux d’informations.</p>
+<p>Les moteurs de recherche, les médias sociaux et les plateformes de
+streaming récoltent et agrègent automatiquement les traces numériques
+laissées par les internautes afin de leur suggérer du contenu
+personnalisé. L’exploitation de ces traces permet,
+d’une part, de fidéliser l’internaute en lui
+proposant du contenu et des services personnalisés et,
+d’autre part, d’optimiser les placements
+publicitaires.</p>
+<p>Plusieurs problèmes émergent face à l’exploitation massive
+des données personnelles. Ces méthodes impliquent que des informations
+parfois sensibles telles que l’orientation politique,
+sexuelle ou religieuse d’une personne soient détenues par
+des entreprises privées. Elles touchent directement à la protection de
+la vie privée. Les interactions avec les contenus, du simple clic aux
+mentions « j’aime », sont également enregistrées et
+utilisées à des fins prédictives. L’ensemble des traces
+récoltées par les différentes plateformes sont exploitées par des
+algorithmes qui établissent des prédictions pour des individus aux
+comportements et aux goûts apparemment similaires.</p>
+<p>Le traitement automatique des données crée ainsi des bulles de filtre,
+qui tendent à enfermer les internautes dans un monde construit
+uniquement sur leurs habitudes en ligne et lses contenus
+qu’ils consultent. Comme les prédictions sont établies à
+partir des traces passées, les publications correspondant à ces
+informations seront suggérées. Bien que les bulles de filtre ne soient
+pas propres aux pratiques numériques, l’automatisation du
+traitement des données tend à les amplifier.</p>
+<p>Les algorithmes sont également utilisés pour modérer les contenus
+illégaux ou qui ne respectent pas les conditions
+d’utilisation des plateformes. Cependant, la modération
+automatique des réseaux sociaux n’est pas toujours efficace
+et l’incapacité à contextualiser une information engendre
+des situations discriminantes. Ainsi, en avril 2019, Facebook a
+automatiquement empêché la création d’un compte de soutien
+LGBT+, sous prétexte que le mot «lesbienne» contrevenait aux règles de
+la plateforme. Plus généralement, la modération automatique
+n’est pas assez performante pour localiser et gérer la
+totalité des contenus problématiques de manière satisfaisante. Elle
+engendre un risque de censure injustifiée, spécialement marqué pour des
+communautés déjà sous-représentées. Le principe de liberté
+d’expression est ainsi menacé par la modération
+automatisée. Pour tenter de résoudre ce problème, une partie du travail
+de modération est externalisée et effectuée par des êtres humains.</p>
+<p>La pluralité des applications de l’IA et la complexité de
+son fonctionnement amènent à réfléchir aux questions de délégation et de
+régulation relatives à ces technologies. Quelles tâches peuvent être
+déléguées à l’IA? Est-il toujours souhaitable
+d’automatiser les prises de décisions? Comment gérer et
+réguler ses décisions? Ces thématiques sont présentées dans la deuxième
+partie du dossier.</p>
+</section>
+<section id="ressources">
+<h3>Ressources<a class="headerlink" href="#ressources" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Le livre du sociologue Dominique Cardon, À quoi rêvent les algorithmes (2015)</p></li>
+<li><p>Le livre de l’informaticien et philosophe Jean-Gabriel Ganascia Le Mythe de la singularité
+(2017), qui déconstruit les croyances autour de l’intelligence artificielle</p></li>
+<li><p>L’article du sociologue Marc Audétat sur la rhétorique de la promesse dans les
+technosciences, publié dans Allez Savoir ! (pour l’activité 1b)</p></li>
+<li><p>Le documentaire AlphaGo sur sa victoire au jeu de Go face à Lee Sedol</p></li>
+<li><p>L’exposition « Intelligence artificielle, nos reflets dans la machine » au Musée de la Main de  Lausanne, jusqu’au 23 avril 2023</p></li>
+</ul>
+</section>
+<section id="glossaire">
+<h3>Glossaire<a class="headerlink" href="#glossaire" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Apprentissage automatique (Machine learning)</p></li>
+<li><p>Apprentissage par renforcement</p></li>
+<li><p>Apprentissage profond (Deep learning)</p></li>
+<li><p>Apprentissage supervisé et non-supervisé</p></li>
+<li><p>Boîte noire</p></li>
+<li><p>Bulle de filtre</p></li>
+<li><p>Cybernétique</p></li>
+<li><p>Hiver de l’IA</p></li>
+<li><p>Intelligence artificielle connexionniste</p></li>
+<li><p>Intelligence artificielle symbolique</p></li>
+<li><p>Réseaux de neurones</p></li>
+<li><p>Système expert</p></li>
+</ul>
+</section>
+</section>
+<section id="pistes-pedagogiques">
+<h2>Pistes pédagogiques<a class="headerlink" href="#pistes-pedagogiques" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour des idées d’activités sur cette thématique, voir le <a class="reference download external" download="" href="http://files.modulo-info.ch/enjeux-sociaux/ia-automatisation/IA-automatisationP1.pdf"><code class="xref download docutils literal notranslate"><span class="pre">dossier</span></code></a>.</p>
+<!-- -----
+
+### Histoire et définitions
+
+**Objectifs**
+
+Se rendre compte de la difficulté de définir l'intelligence humaine et
+l'intelligence artificielle
+
+Identifier les forces et les faiblesses d'un programme informatique face
+à différents types de questions
+
+#### A. Le Test de Turing
+
+30 minutes, débranché
+
+**Contexte**
+
+En 1950, quelques années avant l'institutionnalisation de
+l'IA en tant que domaine scientifique, le mathématicien
+britannique Alan Turing publie un célèbre article, dans lequel il pose
+la question suivante : « Les machines peuvent-elles penser ? ».
+
+Pour y répondre, il propose le jeu de l'imitation.
+L'expérience se résume ainsi : un être humain (A) est mis
+en communication écrite avec deux entités qu'il ne voit pas
+et dont il ignore la nature. D'un côté se trouve un
+ordinateur (B), de l'autre, un humain (C). Si, au bout
+d'un temps donné, l'être humain n'est pas
+capable de savoir qui de (B) et de (C) est l'ordinateur, ce
+dernier passe le test.
+
+Le jeu de l'imitation est avant tout un exemple théorique.
+Alan Turing était conscient que les machines de son époque ne
+permettaient pas d'envisager l'assimilation
+des questions et encore moins la formulation de réponses adaptées.
+Aujourd'hui, les agents conversationnels, appelés aussi
+chat bots, sont ce qui se rapproche le plus du jeu de
+l'imitation. Leurs performances actuelles demeurent
+toujours insuffisantes et sont encore loin de créer la confusion.
+
+Au-delà des limites techniques du jeu de l'imitation, sa
+conceptualisation permet de comprendre comment Turing définissait la
+pensée et l'intelligence. Pour l'ingénieur,
+une machine peut être qualifiée de pensante si elle parvient à se faire
+passer pour un joueur humaine. Néanmoins, l'intitulé de son
+jeu précise qu'il est avant tout question d'«imitation». La
+nuance est importante car ce n'est pas parce
+qu'une machine imite la pensée qu'elle peut
+être qualifiée d'intelligente, au même titre que les êtres
+humains.
+
+**Matériel**
+
+Questions du Test de Turing pour la classe (à projeter)
+
+Une copie des réponses pour l'ordinateur, une feuille blanche pour
+l'être humain
+
+Quatre volontaires pour jouer le rôle de l'ordinateur, de l'humain, et
+deux messagers
+
+**Déroulement**
+
+*Partie 1*
+
+Cette activité consiste à mettre en scène le jeu de l'imitation d'Alan
+Turing. En sélectionnant des questions, les élèves doivent déterminer
+qui des deux volontaires joue le rôle de l'ordinateur et de l'être
+humain. En introduction, demander aux élèves si un ordinateur peut être
+considéré comme intelligent. Les réponses doivent être justifiées.
+
+* a) Présenter et contextualiser ensuite le Test de Turing et expliquer que
+les élèves vont mettre en scène l'activité. Pour ce faire, il faut
+quatre volontaires. Les rôles de l'ordinateur (A) et de l'être humain
+(B) sont distribués secrètement à l'aide de deux enveloppes. L'une
+contient les réponses du jeu, la personne qui la reçoit joue le rôle de
+l'ordinateur. L'autre est vide, l'élève volontaire doit répondre aux
+questions selon ses propres connaissances. Les deux autres volontaires
+sont des messagers. Le reste de la classe forme le public et va devoir
+découvrir les rôles assignés à leurs deux camarades.
+
+* b) Une fois les enveloppes distribuées, les deux volontaires quittent la
+classe et vont découvrir leur rôle dans deux lieux séparés (corridor,
+bibliothèque).
+
+* c) Pendant ce temps, les questions (en annexe) sont projetées à la classe.
+Elle s'accorde pour choisir une première question à poser au volontaire
+afin de savoir qui est l'ordinateur et qui est l'être humain. Les deux
+messagers prennent notes et s'occupent d'aller la poser aux volontaires.
+
+* d) L'ordinateur et l'élève humain n'ont pas le droit de parler, ils
+écoutent la question de la classe posée par le messager et y répondent
+par écrit. L'ordinateur copie la réponse de la feuille-réponse, l'élève
+répond selon ses connaissances, également par écrit. Il/elle peut
+prendre 30 secondes pour effectuer un calcul écrit mais n'a pas le droit
+d'utiliser autre chose qu'un stylo. Les messagers retournent ensuite en
+classe et lisent la réponse qu'il/elle a reçue à la classe.
+
+Le processus est répété 3 à 5 fois en fonction du temps disponible. Une
+fois toutes les questions posées, les volontaires reviennent. La classe
+vote à main lever. Les élèves décident qui de A et B est l'ordinateur
+selon les réponses reçues. Sont-ils/elles parvenues à distinguer
+l'ordinateur de l'être humain sur la base des questions sélectionnées ?
+
+*Partie 2*
+
+Discussion concernant le choix des questions.
+
+L'enseignant-e demande aux élèves d'expliquer leurs choix de questions
+
+Eléments pour préparer la gestion de la discussion :
+
+*Certaines questions permettent de reconnaître rapidement l'ordinateur.
+La réponse à la question de la racine de 2, qui comprend huit chiffres
+après la virgule ne peut pas être donnée par un être humain.*
+
+*Le fait de poser plusieurs fois le même type de question, du type
+"aimes-tu danser/l'école/jouer aux jeux vidéo vont faire apparaître des
+réponses systématiques de la part de l'ordinateur.*
+
+Comment un programme pourrait-il être amélioré pour mieux tromper le
+public ?
+
+*Programmer des réponses intentionnellement erronées*
+
+*Simuler un temps de réponse plus long*
+
+*Varier les réponses qui reprennent les formulations de questions
+(j'aime, je n'aime pas)*
+
+Pour conclure, demander aux élèves si une liste de questions, aussi
+variée soit-elle, peut constituer un test "d'intelligence"?
+
+*L'intelligence est un ensemble de capacités, impliquant la mémoire, la
+logique, la contextualisation, les émotions ou encore la coordination
+entre la pensée et le corps. Il est actuellement techniquement
+impossible d'envisager de pouvoir la reproduire dans son ensemble. C'est
+pour cette raison que le jeu de l'imitation est avant tout un exemple
+théorique et non une réalité, même plus de 70 ans après sa conception.*
+
+*Aujourd'hui, le Test de Turing ne constitue pas un but pour les
+chercheurs en IA. Ils travaillent plutôt sur des tâches sous-jacentes et
+distinctes telles que le traitement automatique du langage, le
+raisonnement et bien sûr, l'apprentissage automatique.*
+
+**Questions à projeter à la classe :**
+
+Comment s'appelle la petite sœur de Bart Simpsons ?
+
+Qui est J.K. Rowling ?
+
+Es-tu un ordinateur ?
+
+Complète la suite 3, 6, 9, 12, 15, ?
+
+Que penses-tu de l'arme nucléaire ?
+
+Combien font 2 x 78 ?
+
+Quelle est la racine carrée de 2 ?
+
+Additionne 3492 et 76282
+
+Aimes-tu l'école ?
+
+Aimes-tu danser ?
+
+Quel jour sommes-nous ?
+
+Quelle heure est-il ?
+
+Combien de jours y a-t-il dans le mois de février lors d'une année
+bisextyle ?
+
+Combien de jours y a-t-il dans une semaine ?
+
+Quel pays a un drapeau représentant une croix blanche sur fond rouge ?
+
+Aimes-tu jouer à des jeux vidéo ?
+
+Qu'aimes-tu manger ?
+
+**Questions et réponses pour le rôle de l'ordinateur :**
+
+Comment s'appelle la petite sœur de Bart Simpsons ? Aucune idée !
+
+Que sais-tu de J.K. Rowling ? Elle écrit des livres supers, j'aime bien
+Harry Potter.
+
+Es-tu un ordinateur ? Es-tu un ordinateur ?
+
+Complète la suite 3, 6, 9, 12, 15, ... ? 18
+
+Que penses-tu de l'arme nucléaire ? L'arme nucléaire est très dangereuse
+et ne devrait pas être utilisée.
+
+Combien font 2 x 78 ? 156
+
+Quelle est la racine carrée de 2 ? 1.41241356.
+
+Additionne 3492 et 76282 Attendre 20 secondes avant de donner la réponse
+79774
+
+Aimes-tu l'école ? Oui, j'aime bien l'école.
+
+Aimes-tu danser ? Oui, j'aime bien danser.
+
+Quel jour sommes-nous ? Indiquer le jour exact.
+
+Quelle heure est-il ? Indiquer l'heure exacte.
+
+Combien de jours y a-t-il dans le mois de février lors d'une année
+bisextyle ? 2000 et 2004 étaient des années bisextiles. (C'est
+volontairement imprécis.)
+
+Combien de jours y a-t-il dans une semaine ? Sept
+
+Quel pays a un drapeau représentant une croix blanche sur fond rouge ?
+Je ne sais pas.
+
+Aimes-tu jouer à des jeux vidéo ? Oui, j'aime jouer aux jeux vidéo.
+
+Qu'aimes-tu manger ? Je n'ai pas faim, merci.
+
+B. **La rhétorique des promesses**
+
+20 minutes -- branché
+
+Matériel
+
+L'article "Les promesses des technosciences n'engagent que ceux qui les
+croient" de Marc Audétat. à faire lire aux élèves en préparation du
+cours
+
+Extrait du texte de Herbert. A. Simon et tweet d'Elon Musk
+
+Projeter ces deux affirmations à la classe :
+
+![Une image contenant texte Description générée
+automatiquement](media/image2.png){width="5.805555555555555in"
+height="2.263888888888889in"}
+
+![Une image contenant texte, intérieur Description générée
+automatiquement](media/image3.png){width="5.527777777777778in"
+height="1.3194444444444444in"}
+
+Par groupe de 2, répondre aux questions suivantes, à l'aide de
+recherches en ligne si nécessaire. Si l'activité est débranchée,
+présenter les auteurs de ces citations et expliquer ce qu'est "summon".
+
+Qui sont les auteurs de ces citations ?
+
+*Herbert A. Simon (1916-2001) est un économiste, politologue, sociologue
+et informaticien américain. Il a notamment travaillé sur l'intelligence
+artificielle et l'automatisation des prises de décision. Il a reçu le
+prix Turing en 1975.*
+
+*Elon Musk est un ingénieur, homme d'affaire et entrepreneur originaire
+d'Afrique du Sud. Il est connu pour avoir fondé les sociétés Paypal,
+SpaceX, et Tesla, qu'il dirige toujours.*
+
+De quoi parle le tweet d'Elon Musk ? Qu'est-ce que "summon" ?
+
+*Il parle de la technologie "summon", aujourd'hui rebaptisée "Smart
+summon", intégrée aux voitures de la marque Tesla. Son appelation vient
+du verbe anglais «to summon» qui signifie appeler ou convoquer. La
+fonction permet en théorie d'appeler sa voiture et de la faire rouler de
+manière autonome depuis une place de stationnement jusqu'à son
+propriétaire. Dans son tweet, Elon Musk annonce qu'il sera possible
+d'utiliser Summon pour traverser les états-Unis dans les deux prochaines
+années (le tweet est publié en 2016). Or, plus de 6 ans après cette
+annonce, la fonction summon pose toujours des problèmes irrésolus sur
+des trajets de quelques mètres seulement. Les multiples avertissements
+publiés sur le site du constructeur sur le sujet adoptent un ton bien
+plus prudent que les déclarations publiques de son directeur.*
+
+*Elon Musk est coutumié des grandes promesses non-tenues. Pour aller
+plus loin, voir par exemple* cet article*.*
+
+Selon les indications historiques, la déclaration de Herbet A. Simon
+s'est-elle révélée exacte ?
+
+*L'extrait a été publié en 1960 et prédit que les machines pourraient
+effectuer n'importe quel travail humain d'ici 20 ans soit en 1980.
+Aujourd'hui, même avec des IA performantes pour effectuer des tâches
+précises de calculs et de prédictions, les machines ne sont pas capables
+d'effectuer la majorité des tâches domestiques.*
+
+Comment ces deux citations s'inscrivent-elles dans la rhétorique de la
+promesse présentée dans l'article de Marc Audétat ?
+
+*Dans les deux cas, espacés de 46 ans, une annonce d'innovation
+technologique relative à l'IA est formulée. Dans les deux cas, ces
+annonces se sont révélées incorrectes.*
+
+*
+*La première partie de l'exercice montre une tendance caractéristique de
+l'histoire de la technologie et de l'IA. Il est important de
+contrebalancer ces exemples en expliquant que d'autres événements n'ont
+pas suivi la rhétorique de la promesse. Demander aux élèves s'ils
+peuvent citer un exemple.
+
+*La victoire d'AlphaGo en 2015 n'était pas attendue avant au moins une
+trentaine d'années. Même les spécialistes ont été surpris que cette
+performance arrive si rapidement.*
+
+*Les performances d'AlphaFold, autre filiale de DeepMind, dans le
+domaine de la bio-informatique n'ont pas non plus été annoncées
+publiquement avant la confirmation des résultats.*
+
+*Le domaine de la traduction automatique a fortement progressé ces
+dernières années, sans répondre à de grandes promesses préalablement
+énoncées.*
+
+2.  IA ou pas
+
+Objectifs :
+
+Identifier des situations où intervient l'IA
+
+Déterminer le type d'IA dont il est question
+
+Différencier l'automatisation d'une tâche et l'application de l'IA
+
+IA et automatisation
+
+20 minutes débranché
+
+Matériel
+
+Slides avec exemples
+
+Déroulement
+
+Après avoir contextualisé la pluralité des applications de l'IA sur le
+Web, projeter les images à la classe. Pour chaque exemple, demander aux
+élèves d'identifier la situation, le type d'IA qui pourrait être utilisé
+ainsi que les données prises en compte.*
+*
+
+*Slide n°1 : Google Search / Google Suggest*
+
+*IA* ✅
+
+*L'outil de suggestion semi-automatique Google Suggest traite
+automatiquement de nombreuses requêtes pour établir des suggestions
+générées algorithmiquement. Elles se basent sur plusieurs variables que
+sont notamment les requêtes d'autres internautes, l'historique des
+recherches de la machine ou encore la position géographique de
+l'utilisateur.*
+
+*Slide n°2 : YouTube (rappeler que YouTube est détenu par Google!)*
+
+*IA* ✅
+
+*Youtube utilise l'IA pour organiser et suggérer des vidéos à ses
+utilisateurs. Comme dans la majorité des cas, l'algorithme de suggestion
+est tenu secret. On sait tout de même que le nombre de vues, le temps de
+visionnage et l'engagement (likes, commentaires, partages), sont des
+variables importantes pour augmenter la visibilité d'une vidéo.*
+
+*L'IA intervient également pour modérer les commentaires.*
+
+*Slide n°3 : Amazon*
+
+*IA* ✅
+
+*Amazon intègre l'IA pour suggérer toujours plus de nouveaux produits à
+ses clients. C'est d'ailleurs l'une des plus anciennes plateformes
+commerciales à avoir intégré la suggestion personnalisée sur son site.
+Historiquement spécialisé dans la vente de livres, Amazon a très tôt
+exploité les données relatives aux habitudes de ses clients. En croisant
+les préférences de différents utilisateurs ayant des goûts similaires,
+elle est parvenue à émettre des suggestions précises pour provoquer les
+futurs achats. Aujourd'hui, ces algorithmes se sont complexifiés et
+améliorés grâce à l'apprentissage profond.*
+
+*Slide n°4: Wikipédia*
+
+*IA* ⛔
+
+*Wikipédia n'utilise pas d'IA dans pour trier ou suggérer ses articles.
+Des hyperliens permettent de se rendre d'une page à une autre. Les
+utilisateurs et utilisatrices contribuent à l'écriture et aux
+modifications de l'encyclopédie en ligne sur la base du crowdsourcing.
+L'IA est appliquée de manière marginale pour détecter le vandalisme de
+certaines pages sensibles.*
+
+*Slide n°5: Instagram*
+
+*IA* ✅
+
+*Instagram fait appel à l'IA à plusieurs fins. Elle permet de
+personnaliser les fils d'actualité, de proposer de nouveaux comptes à
+suivre et de trier les stories. Pour ce faire, les données personnelles
+ainsi que les interactions sont prises en compte. La modération de
+contenu est en partie automatisée grâce à l'IA. Les images, les vidéos
+et les commentaires contrevenant aux règles d'utilisation sont
+automatiquement supprimés, ce qui peut parfois engendrer la suspension
+temporaire ou définitive d'un compte. Les filtres qui s'adaptent aux
+visages se basent également sur de l'IA, grâce à des techniques de
+reconnaissance d'image.*
+
+*Slide n°6: Spotify*
+
+*IA* ✅
+
+*Chaque morceau écouté sur Spotify laisse une trace qui va être prise en
+compte par un algorithme de suggestion, afin de proposer des contenus
+similaires ou des playlists.*
+
+*Slide n°7: Netflix*
+
+*IA* ✅
+
+*Netflix suggère également ses contenus grâce à l'IA. En prenant en
+compte les métadonnées concernant un film (producteur-trice,
+acteur-trice, genre, etc.), les habitudes et la position géographique de
+ses abonné-e-s, Netflix établit des modèles prédictifs. Ils servent à
+adapter les suggestions en fonction des goûts de chacun-e. En tant
+qu'entreprise productrice d'une partie de ses contenus, les modèles
+peuvent aussi servir d'indicateur sur la pertinence de lancer la
+production d'un film ou d'une série pour un marché donné.*
+
+*Slide n°8: Airbnb*
+
+*IA* ✅
+
+*La plateforme de location d'hébergement intègre l'IA pour suggérer des
+lieux adaptés aux habitudes des utilisateurs. Elle a également développé
+un système de reconnaissance d'images pour classer et sélectionner des
+images (piscine, chambre, etc.). La plus récente application de l'IA par
+Airbnb est utilisée pour établir un score de confiance attribué aux
+hôtes.*
+
+*Slide n°9 : Assistant vocal (Siri)*
+
+*IA* ✅
+
+*Les assistants vocaux sont des logiciels basés sur la reconnaissance
+vocal du langage. Ils reposent sur l'IA à la fois pour traiter la
+requête, chercher et formuler une réponse personnalisée. Pour cela, ils
+sont entraînés avec de nombreuses données, notamment les informations
+fournies par l'utilisateur : contacts, recherches, géolocalisation...
+La complexité du traitement du langage demande cependant encore beaucoup
+d'entrainement et une supervision humaine en appui de l'IA.*
+
+*Slide n°10 : Caisse automatique*
+
+*IA* ⛔
+
+*Il n'y a pas d'IA dans les caisses automatiques. Il s'agit d'une base
+de données des articles du magasin.
+*
+ -->
+<hr class="footnotes docutils"/>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Schéma adapté de : Cardon, D., Cointet, J. &amp; Mazières, A. (2018).
+La revanche des neurones: L’invention des machines inductives et la
+controverse de l’intelligence artificielle. <em>Réseaux</em>, 211, 173-220.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="IA_2.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">IA et enjeux de l’automatisation, partie 2</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="environnement.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Numérique et environnement</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../../_sources/enjx2/grandes-thematiques/IA_1.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">IA et enjeux de l’automatisation, partie 1</a><ul>
+<li><a class="reference internal" href="#objectifs">Objectifs</a></li>
+<li><a class="reference internal" href="#enjeux">Enjeux</a><ul>
+<li><a class="reference internal" href="#ia-une-definition">🧠 IA, une définition</a></li>
+<li><a class="reference internal" href="#un-peu-dhistoire">📜 Un peu d’histoire</a></li>
+<li><a class="reference internal" href="#comment-ca-marche">☝ Comment ça marche ?</a></li>
+<li><a class="reference internal" href="#pluralite-des-applications">🎆 Pluralité des applications</a></li>
+<li><a class="reference internal" href="#lia-et-les-pratiques-en-ligne">🖥 L’IA et les pratiques en ligne</a></li>
+<li><a class="reference internal" href="#ressources">Ressources</a></li>
+<li><a class="reference internal" href="#glossaire">Glossaire</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pistes-pedagogiques">Pistes pédagogiques</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/main.js"></script>
+    <script src="../../_static/glossary.js"></script>
+    <script src="../../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="../../_static/blanks.js"></script>
+    <script src="../../_static/timeline.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../../_static/scripts/reactions.js"></script>
+    <script src="../../_static/scripts/progress.js"></script>
+    <script src="../../_static/scripts/dark.js"></script>
+    <script src="../../_static/scripts/frames.js"></script>
+    </body>
+</html>

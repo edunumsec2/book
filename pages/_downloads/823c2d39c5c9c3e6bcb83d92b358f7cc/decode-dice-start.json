@@ -1,0 +1,17 @@
+{
+  "v": 3,
+  "out": [
+    {"type": "bar", "pos": [740, 250], "id": 0, "display": "PX"},
+    {"type": "bar", "pos": [740, 430], "id": 1, "display": "PX"},
+    {"type": "bar", "pos": [740, 620], "id": 2, "display": "PX"},
+    {"type": "bar", "pos": [960, 430], "id": 3, "display": "PX"},
+    {"type": "bar", "pos": [1180, 250], "id": 4, "display": "PX"},
+    {"type": "bar", "pos": [1180, 620], "id": 5, "display": "PX"},
+    {"type": "bar", "pos": [1180, 430], "id": 6, "display": "PX"}
+  ],
+  "in": [
+    {"pos": [230, 270], "id": 7, "name": "a", "val": 0},
+    {"pos": [230, 400], "id": 8, "name": "b", "val": 0},
+    {"pos": [230, 550], "id": 9, "name": "c", "val": 0}
+  ]
+}
