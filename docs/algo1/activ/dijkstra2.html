@@ -16,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/todo.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -34,7 +33,6 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
-  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-foreground-primary: black;
   --color-foreground-secondary: #5a5c63;
   --color-foreground-muted: #646776;
@@ -55,7 +53,6 @@
   body[data-theme="dark"] {
     --color-code-background: #272822;
   --color-code-foreground: #f8f8f2;
-  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-foreground-primary: #ffffffcc;
   --color-foreground-secondary: #9ca0a5;
   --color-foreground-muted: #81868d;
@@ -77,7 +74,6 @@
     body:not([data-theme="light"]) {
       --color-code-background: #272822;
   --color-code-foreground: #f8f8f2;
-  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-foreground-primary: #ffffffcc;
   --color-foreground-secondary: #9ca0a5;
   --color-foreground-muted: #81868d;
@@ -482,16 +478,16 @@
 <h2>1. Mise en situation générale<a class="headerlink" href="#mise-en-situation-generale" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’enseignant va sur une page de navigation (p.ex <a class="reference external" href="https://www.openstreetmap.org/#map=8/46.825/8.224">OpenStreetMap</a>) et montre un exemple de requête de chemin pour relier deux points.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="da26a814-8754-4f2a-9b18-37207c2be5ec" name="5c6fc8bb-8ae1-444c-ae4e-5c04f9fa7733" type="radio"/>
-<label class="tabbed-label" for="da26a814-8754-4f2a-9b18-37207c2be5ec">
+<input checked="checked" id="3bd95caf-aedf-4964-b7c1-2e1226fa5b91" name="3a47ea3d-c5e7-455d-9d9a-34e77ff83f9e" type="radio"/>
+<label class="tabbed-label" for="3bd95caf-aedf-4964-b7c1-2e1226fa5b91">
 Questions</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Comment le site web a-t-il déterminé le chemin qu’il nous indique ?</p></li>
 <li><p>Quelles données a-t-il à sa disposition pour déterminer ce chemin ?</p></li>
 </ul>
 </div>
-<input id="5b7f3547-702a-40b9-88ef-96c2e64a3091" name="5c6fc8bb-8ae1-444c-ae4e-5c04f9fa7733" type="radio"/>
-<label class="tabbed-label" for="5b7f3547-702a-40b9-88ef-96c2e64a3091">
+<input id="308cbd57-caad-4586-91bc-19da714d9673" name="3a47ea3d-c5e7-455d-9d9a-34e77ff83f9e" type="radio"/>
+<label class="tabbed-label" for="308cbd57-caad-4586-91bc-19da714d9673">
 Réponses</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Tout le réseau routier est représenté sous forme d’un graphe.</p></li>
@@ -503,8 +499,8 @@ Réponses</label><div class="tabbed-content docutils">
 <section id="mise-en-situation-specifique">
 <h2>2. Mise en situation spécifique<a class="headerlink" href="#mise-en-situation-specifique" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="tabbed-set docutils">
-<input checked="checked" id="e9c324cd-55b0-4c6d-b925-efbfab0196f8" name="715b3f42-82b8-4e45-a5d2-9d0d3d022a3e" type="radio"/>
-<label class="tabbed-label" for="e9c324cd-55b0-4c6d-b925-efbfab0196f8">
+<input checked="checked" id="eff445c5-3282-4241-ba81-210bfa4fc8dc" name="9862b193-c475-47e5-9345-6e29f27269fc" type="radio"/>
+<label class="tabbed-label" for="eff445c5-3282-4241-ba81-210bfa4fc8dc">
 Exemple 1</label><div class="tabbed-content docutils">
 <p>L’enseignant distribue à chaque élève un graphe suffisamment compliqué dans lequels la longueur des
 arêtes est indiquée. Ils doivent trouver, individuellement, le plus court chemin reliant deux points.
@@ -518,8 +514,8 @@ Le graphe est tel qu’il y a plusieurs plus courts chemins.</p>
 <li><p>Y a-t-il des chemins plus courts que ça ?</p></li>
 </ul>
 </div>
-<input id="43b4bf93-b527-44d3-b399-e93c87a721e3" name="715b3f42-82b8-4e45-a5d2-9d0d3d022a3e" type="radio"/>
-<label class="tabbed-label" for="43b4bf93-b527-44d3-b399-e93c87a721e3">
+<input id="e8437328-b4b3-4686-a12b-bb73ec2676c0" name="9862b193-c475-47e5-9345-6e29f27269fc" type="radio"/>
+<label class="tabbed-label" for="e8437328-b4b3-4686-a12b-bb73ec2676c0">
 Exemple 2</label><div class="tabbed-content docutils">
 <p>Dans un voyage en voiture, on ne veut pas forcément le plus court chemin, mais souvent le plus rapide.</p>
 <p>Par exemple, on va prendre l’autoroute de contournement de Lausanne qui est plus longue, mais plus rapide que
@@ -616,8 +612,8 @@ Formalisation<div class="summary-down docutils">
 <h2>6. Exemples d’utilisation<a class="headerlink" href="#exemples-dutilisation" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’enseignant fait un exemple au tableau avec les élèves et leur propose ensuite d’essayer seuls ou par deux sur des graphes donnés.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="9e4b7e89-cf6e-4fb8-b847-5ea8f3736950" name="a949a370-5819-4b0e-bbe9-0dfbaf3efbb5" type="radio"/>
-<label class="tabbed-label" for="9e4b7e89-cf6e-4fb8-b847-5ea8f3736950">
+<input checked="checked" id="055b8e6a-eae6-49d5-accf-d2a0ae827ead" name="516fee5c-7348-4391-887d-0cecd78fd9a1" type="radio"/>
+<label class="tabbed-label" for="055b8e6a-eae6-49d5-accf-d2a0ae827ead">
 Jeu : de VERSE à LITRE</label><div class="tabbed-content docutils">
 <p>Ce jeu consiste à trouver une manière de relier deux mots ayant le même nombre de lettres (par exemple VERSE et LITRE) avec une série de mots existants dont chaque mot ne diffère du précédent que d’une seule lettre. Dans notre exemple, une solution est donnée par :</p>
 <p>VERSE - VERRE - SERRE - SEVRE - LEVRE - LIVRE - LITRE</p>
@@ -627,8 +623,8 @@ quel graphe serait-il nécessaire de construire, à quoi correspondrait ses nœu
 <p>Selon le niveau atteint en programmation, une petite application proposant ce jeu et les solutions correspondantes pourrait être
 programmée par exemple en utilisant une libraire de graphe telle que igraph ou networkX en python.</p>
 </div>
-<input id="1f39a9de-2ee7-41de-8c8e-25cde9b318c5" name="a949a370-5819-4b0e-bbe9-0dfbaf3efbb5" type="radio"/>
-<label class="tabbed-label" for="1f39a9de-2ee7-41de-8c8e-25cde9b318c5">
+<input id="1a75ba05-0d10-49c3-b18a-9c4d9370b53e" name="516fee5c-7348-4391-887d-0cecd78fd9a1" type="radio"/>
+<label class="tabbed-label" for="1a75ba05-0d10-49c3-b18a-9c4d9370b53e">
 Réseautage</label><div class="tabbed-content docutils">
 <p>L’autre jour, vous avez flashé sur quelqu’un que vous ne connaissez pas mais dont vous avez réussi à obtenir
 le nom. Après avoir passé beaucoup de temps sur son profil dans votre réseau social préféré, vous recevez

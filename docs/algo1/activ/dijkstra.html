@@ -16,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/todo.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -34,7 +33,6 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
-  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-foreground-primary: black;
   --color-foreground-secondary: #5a5c63;
   --color-foreground-muted: #646776;
@@ -55,7 +53,6 @@
   body[data-theme="dark"] {
     --color-code-background: #272822;
   --color-code-foreground: #f8f8f2;
-  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-foreground-primary: #ffffffcc;
   --color-foreground-secondary: #9ca0a5;
   --color-foreground-muted: #81868d;
@@ -77,7 +74,6 @@
     body:not([data-theme="light"]) {
       --color-code-background: #272822;
   --color-code-foreground: #f8f8f2;
-  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-foreground-primary: #ffffffcc;
   --color-foreground-secondary: #9ca0a5;
   --color-foreground-muted: #81868d;
@@ -350,7 +346,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../resx/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../resx/activ/diffie-hellman/diffie-hellman.html">Diffie Hellman</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../resx/activ/routage_paquets/routage_paquets.html">Routage des Paquets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../resx/activ/web-tracking/web-tracking.html">Suivi en ligne</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../resx/activ/web-tracking/web-tracking.html">Suivi sur le web</a></li>
 </ul>
 </li>
 </ul>
@@ -501,16 +497,16 @@
 <p><em>Durée : 5 min</em></p>
 <p>L’enseignant va sur une page de navigation (p.ex <a class="reference external" href="https://www.openstreetmap.org/#map=8/46.825/8.224">OpenStreetMap</a>) et montre un exemple de requête de chemin pour relier deux points.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="3d03c58e-0cc2-4ee3-8976-f3a571186c37" name="74fe3470-7174-472d-b758-b3927b74f2b8" type="radio"/>
-<label class="tabbed-label" for="3d03c58e-0cc2-4ee3-8976-f3a571186c37">
+<input checked="checked" id="429beb9f-98ee-41b4-9091-401906150472" name="3d0ba4bb-8d95-450c-8902-b044134b0445" type="radio"/>
+<label class="tabbed-label" for="429beb9f-98ee-41b4-9091-401906150472">
 Questions</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Comment le site web a-t-il déterminé le chemin qu’il nous indique ?</p></li>
 <li><p>Quelles données a-t-il à sa disposition pour déterminer ce chemin ?</p></li>
 </ul>
 </div>
-<input id="0e47f067-fe78-4eaf-ba35-f16eb36f8075" name="74fe3470-7174-472d-b758-b3927b74f2b8" type="radio"/>
-<label class="tabbed-label" for="0e47f067-fe78-4eaf-ba35-f16eb36f8075">
+<input id="dcb0e5a5-fd9e-435c-a673-8b9c8dd8340b" name="3d0ba4bb-8d95-450c-8902-b044134b0445" type="radio"/>
+<label class="tabbed-label" for="dcb0e5a5-fd9e-435c-a673-8b9c8dd8340b">
 Réponses</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Tout le réseau routier est représenté sous forme d’un graphe.</p></li>
@@ -638,8 +634,8 @@ Formalisation<div class="summary-down docutils">
 <span id="dijkstra-modelisation"></span><h3>Modélisation<a class="headerlink" href="#modelisation" title="Lien permanent vers ce titre">¶</a></h3>
 <p><em>Durée : 10 min</em></p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="859f5d6c-acd7-4d0a-99f4-625506a249d1" name="44b3a35e-2309-465b-a147-dc047c6c5738" type="radio"/>
-<label class="tabbed-label" for="859f5d6c-acd7-4d0a-99f4-625506a249d1">
+<input checked="checked" id="5865523a-48a2-4da8-b00a-1c99257c9812" name="6573d117-6c4a-4415-8cc4-cf3955cdc176" type="radio"/>
+<label class="tabbed-label" for="5865523a-48a2-4da8-b00a-1c99257c9812">
 Jeu : de VERSE à LITRE</label><div class="tabbed-content docutils">
 <p>Ce jeu consiste à trouver une manière de relier deux mots ayant le même nombre de lettres (par exemple VERSE et LITRE) avec une série de mots existants dont chaque mot ne diffère du précédent que d’une seule lettre. Dans notre exemple, une solution est donnée par :</p>
 <p>VERSE - VERRE - SERRE - SEVRE - LEVRE - LIVRE - LITRE</p>
@@ -649,8 +645,8 @@ quel graphe serait-il nécessaire de construire, à quoi correspondrait ses nœu
 <p>Selon le niveau atteint en programmation, une petite application proposant ce jeu et les solutions correspondantes pourrait être
 programmée par exemple en utilisant une libraire de graphe telle que igraph ou networkX en python.</p>
 </div>
-<input id="65ddfa7d-d3ee-42a4-84a8-7454ed5fee0a" name="44b3a35e-2309-465b-a147-dc047c6c5738" type="radio"/>
-<label class="tabbed-label" for="65ddfa7d-d3ee-42a4-84a8-7454ed5fee0a">
+<input id="7e4c39f7-68a0-406a-8ff4-6ec2a0549e11" name="6573d117-6c4a-4415-8cc4-cf3955cdc176" type="radio"/>
+<label class="tabbed-label" for="7e4c39f7-68a0-406a-8ff4-6ec2a0549e11">
 Réseautage</label><div class="tabbed-content docutils">
 <p>L’autre jour, vous avez flashé sur quelqu’un que vous ne connaissez pas mais dont vous avez réussi à obtenir
 le nom. Après avoir passé beaucoup de temps sur son profil dans votre réseau social préféré, vous recevez

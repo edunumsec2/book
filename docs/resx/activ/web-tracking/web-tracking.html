@@ -16,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/todo.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -34,7 +33,6 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
-  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-foreground-primary: black;
   --color-foreground-secondary: #5a5c63;
   --color-foreground-muted: #646776;
@@ -55,7 +53,6 @@
   body[data-theme="dark"] {
     --color-code-background: #272822;
   --color-code-foreground: #f8f8f2;
-  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-foreground-primary: #ffffffcc;
   --color-foreground-secondary: #9ca0a5;
   --color-foreground-muted: #81868d;
@@ -77,7 +74,6 @@
     body:not([data-theme="light"]) {
       --color-code-background: #272822;
   --color-code-foreground: #f8f8f2;
-  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-foreground-primary: #ffffffcc;
   --color-foreground-secondary: #9ca0a5;
   --color-foreground-muted: #81868d;
@@ -350,7 +346,7 @@
 <li class="toctree-l2 current has-children"><a class="reference internal" href="../index.html">Activités</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../diffie-hellman/diffie-hellman.html">Diffie Hellman</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../routage_paquets/routage_paquets.html">Routage des Paquets</a></li>
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Suivi en ligne</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Suivi sur le web</a></li>
 </ul>
 </li>
 </ul>
@@ -568,13 +564,13 @@ Liste des phases à choix possibles pour la dernière colonne du tableau ci-dess
 <figure class="align-default" id="web-search">
 <a class="reference internal image-reference" href="../../../_images/web-search.jpeg"><img alt="ddg screenshot" src="../../../_images/web-search.jpeg" style="width: 650px;"/></a>
 <figcaption>
-<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Résultat d’une recherche sur le web : une liste d’hyperliens</span><a class="headerlink" href="#web-search" title="Lien permanent vers cette image">¶</a></p>
+<p><span class="caption-text">Résultat d’une recherche sur le web : une liste d’hyperliens</span><a class="headerlink" href="#web-search" title="Lien permanent vers cette image">¶</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="web-search-source">
 <a class="reference internal image-reference" href="../../../_images/web-search-source.jpeg"><img alt="ddg source screenshot" src="../../../_images/web-search-source.jpeg" style="width: 650px;"/></a>
 <figcaption>
-<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Code source de la page HTML des résultats de DuckDuckGo (Lite) : une balse <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> symbolise un lien vers une nouvelle page</span><a class="headerlink" href="#web-search-source" title="Lien permanent vers cette image">¶</a></p>
+<p><span class="caption-text">Code source de la page HTML des résultats de DuckDuckGo (Lite) : une balse <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> symbolise un lien vers une nouvelle page</span><a class="headerlink" href="#web-search-source" title="Lien permanent vers cette image">¶</a></p>
 </figcaption>
 </figure>
 <p>Il existe différents types de ressources vers lesquelles peuvent pointer les hyperliens. Les plus connues et répandues sont généralement les <strong>liens vers d’autres pages</strong> (comme dans la page d’une recherche web), mais les <strong>images</strong>, les <strong>feuilles de styles</strong> ou les <strong>scripts</strong> sont aussi des ressources qui sont en permanence référencées par nos pages web !</p>
@@ -682,7 +678,7 @@ Liste des phases à choix possibles pour la dernière colonne du tableau ci-dess
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../../_images/webtools-import-export.jpeg"><img alt="outils web, import-export" src="../../../_images/webtools-import-export.jpeg" style="width: 300px;"/></a>
 <figcaption>
-<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Vous pouvez également montrer la possibilité d’importer et d’exporter des traces réseau directement depuis la console réseau du navigateur. Ceci permettra aux élèves de vous envoyer des traces, sauvegarder leurs traces et les réutiliser, et vous permettra de créer des exercices hors-ligne.</span><a class="headerlink" href="#id1" title="Lien permanent vers cette image">¶</a></p>
+<p><span class="caption-text">Vous pouvez également montrer la possibilité d’importer et d’exporter des traces réseau directement depuis la console réseau du navigateur. Ceci permettra aux élèves de vous envoyer des traces, sauvegarder leurs traces et les réutiliser, et vous permettra de créer des exercices hors-ligne.</span><a class="headerlink" href="#id1" title="Lien permanent vers cette image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -936,7 +932,7 @@ Liste des phases à choix possibles pour la dernière colonne du tableau ci-dess
 <figure class="align-default" id="testvulnweb">
 <a class="reference internal image-reference" href="../../../_images/testvulnweb.jpeg"><img alt="screenshot password plaintext transmission" src="../../../_images/testvulnweb.jpeg" style="width: 650px;"/></a>
 <figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Voir le mot de passe dans l’analyse réseau d’une requête POST d’authentification sur un site web non sécurisé</span><a class="headerlink" href="#testvulnweb" title="Lien permanent vers cette image">¶</a></p>
+<p><span class="caption-text">Voir le mot de passe dans l’analyse réseau d’une requête POST d’authentification sur un site web non sécurisé</span><a class="headerlink" href="#testvulnweb" title="Lien permanent vers cette image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1170,11 +1166,11 @@ Réponse<div class="summary-down docutils">
 <span id="webtracking-commerceweb"></span><h3>Trace réseau et suivi - commerce du web<a class="headerlink" href="#trace-reseau-et-suivi-commerce-du-web" title="Lien permanent vers ce titre">¶</a></h3>
 <p><em>Durée : 5-10 min</em></p>
 <p>Cette partie fait office de rappel et de pont avec la première année du chapitre d’<strong>économie du numérique</strong>. Dans l’idéal, les élèves devraient pouvoir se rappeler de l’activité <a class="reference internal" href="../../../enjx1/activ/encheres.html#encheres"><span class="std std-ref">Les enchères du Web</span></a> pour aborder cette partie. En effet, l’idée est de transmettre aux élèves les <strong>relations économiques des acteurs autour de l’industrie de la publicité</strong>.</p>
-<p>Bien qu’elle ne suffise pas comme support d’enseignement, la <a class="reference internal" href="#adtech-schema"><span class="std std-numref">Fig. 28</span></a> illustre le fonctionnement des technologie de la publicité pour l’un des site web visité dans les exemples. Elle met notamment en avant les relations économique entre <strong>le fournisseur de service</strong> (20 minutes), <strong>le service d’analyse</strong> (Google Analytics), <strong>le vendeur de produit</strong> (par exemple une marque de chaussures) et le <strong>service fournissant la publicité</strong> (Google Ads).</p>
+<p>Bien qu’elle ne suffise pas comme support d’enseignement, la <code class="xref std std-numref docutils literal notranslate"><span class="pre">adtech-schema</span></code> illustre le fonctionnement des technologie de la publicité pour l’un des site web visité dans les exemples. Elle met notamment en avant les relations économique entre <strong>le fournisseur de service</strong> (20 minutes), <strong>le service d’analyse</strong> (Google Analytics), <strong>le vendeur de produit</strong> (par exemple une marque de chaussures) et le <strong>service fournissant la publicité</strong> (Google Ads).</p>
 <figure class="align-default" id="adtech-schema">
 <a class="reference internal image-reference" href="../../../_images/adtech-schema.jpg"><img alt="schema fonctionnement économique technologie de la publicité" src="../../../_images/adtech-schema.jpg" style="width: 700px;"/></a>
 <figcaption>
-<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Illustration schématique du fonctionnement des technologies de la publicité ciblée</span><a class="headerlink" href="#adtech-schema" title="Lien permanent vers cette image">¶</a></p>
+<p><span class="caption-text">Illustration schématique du fonctionnement des technologies de la publicité ciblée</span><a class="headerlink" href="#adtech-schema" title="Lien permanent vers cette image">¶</a></p>
 </figcaption>
 </figure>
 <div class="question admonition">
@@ -1291,7 +1287,7 @@ Réponse<div class="summary-down docutils">
 <span id="webtracking-reinvestissement"></span><h3>Suivi et applications mobiles<a class="headerlink" href="#suivi-et-applications-mobiles" title="Lien permanent vers ce titre">¶</a></h3>
 <p><em>Durée : 5-10 min</em></p>
 <p>Cette dernière étape est un réinvestissement qui permet d’<strong>élargir les compétences acquises</strong> lors de la séquence pour les appliquer à un autre domaine. De nombreuses applications sont possibles, notamment vis à vis de rebonds avec l’accroche. La proposition est d’ici parler brièvement des applications mobiles, et analyser que, même si ce n’est pas dans un navigateur, <strong>la même boucle économique est en fonctionnement</strong> (avec l’ajout intéressant de la commission sur les transactions in-app <a class="reference external" href="https://appleinsider.com/articles/23/01/08/the-cost-of-doing-business-apples-app-store-fees-explained">comme le fait Apple</a> par exemple).</p>
-<p>Le temps étant limité, il est possible d’aborder le sujet sous différents angles, mais il semble intéressant de travailler avec les élèves sur la compréhension des politiques en matières de vie privée des applications. Les <strong>stores Apple et Android</strong> indiquent aujourd’hui avec plus de précision le traitement des données et l’utilisation des périphériques faites par les apps. Par exemple dans la <a class="reference internal" href="#instagram-privacy"><span class="std std-numref">Fig. 29</span></a>, on peut voir un certain nombre de données permettant d’établir un lien avec l’identité de l’utilisateur·trice. Quelques questions peuvent guider une discussion :</p>
+<p>Le temps étant limité, il est possible d’aborder le sujet sous différents angles, mais il semble intéressant de travailler avec les élèves sur la compréhension des politiques en matières de vie privée des applications. Les <strong>stores Apple et Android</strong> indiquent aujourd’hui avec plus de précision le traitement des données et l’utilisation des périphériques faites par les apps. Par exemple dans la <code class="xref std std-numref docutils literal notranslate"><span class="pre">instagram-privacy</span></code>, on peut voir un certain nombre de données permettant d’établir un lien avec l’identité de l’utilisateur·trice. Quelques questions peuvent guider une discussion :</p>
 <ol class="simple">
 <li><p>comment peut-on suivre quelqu’un avec <em>une seule application</em> ?</p></li>
 <li><p><em>pourquoi</em> toutes ces données sont-elles collectées dans le cas d’instagram ?</p></li>
@@ -1302,7 +1298,7 @@ Réponse<div class="summary-down docutils">
 <figure class="align-default" id="instagram-privacy">
 <a class="reference internal image-reference" href="../../../_images/instagram-privacy.jpeg"><img alt="../../../_images/instagram-privacy.jpeg" src="../../../_images/instagram-privacy.jpeg" style="width: 250px;"/></a>
 <figcaption>
-<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Description de l’utilisation des données par l’application Instagram dans l’Apple Store</span><a class="headerlink" href="#instagram-privacy" title="Lien permanent vers cette image">¶</a></p>
+<p><span class="caption-text">Description de l’utilisation des données par l’application Instagram dans l’Apple Store</span><a class="headerlink" href="#instagram-privacy" title="Lien permanent vers cette image">¶</a></p>
 </figcaption>
 </figure>
 <p>Idéalement, l’enseignant·e s’assure que la discussion puisse mettre en valeur les compétences acquises lors de la séquences :</p>

@@ -16,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/todo.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -34,7 +33,6 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
-  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-foreground-primary: black;
   --color-foreground-secondary: #5a5c63;
   --color-foreground-muted: #646776;
@@ -55,7 +53,6 @@
   body[data-theme="dark"] {
     --color-code-background: #272822;
   --color-code-foreground: #f8f8f2;
-  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-foreground-primary: #ffffffcc;
   --color-foreground-secondary: #9ca0a5;
   --color-foreground-muted: #81868d;
@@ -77,7 +74,6 @@
     body:not([data-theme="light"]) {
       --color-code-background: #272822;
   --color-code-foreground: #f8f8f2;
-  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-foreground-primary: #ffffffcc;
   --color-foreground-secondary: #9ca0a5;
   --color-foreground-muted: #81868d;
@@ -350,7 +346,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../resx/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../resx/activ/diffie-hellman/diffie-hellman.html">Diffie Hellman</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../resx/activ/routage_paquets/routage_paquets.html">Routage des Paquets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resx/activ/web-tracking/web-tracking.html">Suivi en ligne</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../resx/activ/web-tracking/web-tracking.html">Suivi sur le web</a></li>
 </ul>
 </li>
 </ul>
@@ -445,16 +441,16 @@
 <section id="declaration-dun-encart-admonition">
 <h2>Déclaration d’un encart {admonition}<a class="headerlink" href="#declaration-dun-encart-admonition" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="tabbed-set docutils">
-<input checked="checked" id="2f81fa25-41bb-4199-9da2-fffee278fd66" name="152e8b90-9af4-4fe3-a06a-a68c90ffca3d" type="radio"/>
-<label class="tabbed-label" for="2f81fa25-41bb-4199-9da2-fffee278fd66">
+<input checked="checked" id="2a565e7b-1500-431d-8e46-a766cb94c9d1" name="38ff83cf-ba86-4fbc-b281-df822783ee7a" type="radio"/>
+<label class="tabbed-label" for="2a565e7b-1500-431d-8e46-a766cb94c9d1">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="note admonition">
 <p class="admonition-title">Aller plus loin</p>
 <p>Mon contenu</p>
 </div>
 </div>
-<input id="59b965e3-55ae-48db-a164-4cd8d86e273a" name="152e8b90-9af4-4fe3-a06a-a68c90ffca3d" type="radio"/>
-<label class="tabbed-label" for="59b965e3-55ae-48db-a164-4cd8d86e273a">
+<input id="424becd7-6644-47b5-ade1-673b78ccaa70" name="38ff83cf-ba86-4fbc-b281-df822783ee7a" type="radio"/>
+<label class="tabbed-label" for="424becd7-6644-47b5-ade1-673b78ccaa70">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{admonition} Aller plus loin
 :class: note
@@ -470,8 +466,8 @@ Mon contenu
 <li><p>les styles <code class="docutils literal notranslate"><span class="pre">:class:</span></code> disponibles sont : <code class="docutils literal notranslate"><span class="pre">note,</span> <span class="pre">hint,</span> <span class="pre">attention,</span> <span class="pre">caution,</span> <span class="pre">danger</span></code>.</p></li>
 </ul>
 <div class="tabbed-set docutils">
-<input checked="checked" id="6a47feb2-85eb-4054-8cca-249de3518a9a" name="e21de205-3bf6-4314-ace1-28b52c394966" type="radio"/>
-<label class="tabbed-label" for="6a47feb2-85eb-4054-8cca-249de3518a9a">
+<input checked="checked" id="e3e0b19d-37ae-445d-b525-d27e54ce9341" name="3d873e60-eb23-4e89-8fcc-f63233856810" type="radio"/>
+<label class="tabbed-label" for="e3e0b19d-37ae-445d-b525-d27e54ce9341">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="note admonition">
 <p class="admonition-title">Aller plus loin</p>
@@ -514,8 +510,8 @@ Aperçu</label><div class="tabbed-content docutils">
 <p>Contenus liés à des avertissements de maintenance du site, des problèmes rencontrés, ou tout autre mise en garde importante.</p>
 </div>
 </div>
-<input id="32f0998a-df6c-4cc6-b96c-262756062cde" name="e21de205-3bf6-4314-ace1-28b52c394966" type="radio"/>
-<label class="tabbed-label" for="32f0998a-df6c-4cc6-b96c-262756062cde">
+<input id="82b079c3-229b-4b56-8abd-0e65a69eefe0" name="3d873e60-eb23-4e89-8fcc-f63233856810" type="radio"/>
+<label class="tabbed-label" for="82b079c3-229b-4b56-8abd-0e65a69eefe0">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{admonition} Aller plus loin
 :class: note
@@ -569,8 +565,8 @@ Contenus liés à des avertissements de maintenance du site, des problèmes renc
 <section id="personnages-cles">
 <h2>Personnages-clés<a class="headerlink" href="#personnages-cles" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="tabbed-set docutils">
-<input checked="checked" id="e1cd5996-5f83-417c-91b3-9c3c602797c6" name="fd66918c-29d7-457f-9a77-011e7b5c3970" type="radio"/>
-<label class="tabbed-label" for="e1cd5996-5f83-417c-91b3-9c3c602797c6">
+<input checked="checked" id="9a49c33d-896f-4f53-a34b-7d67637ce584" name="e1502f22-53ef-42df-bc87-5ecaece3be2e" type="radio"/>
+<label class="tabbed-label" for="9a49c33d-896f-4f53-a34b-7d67637ce584">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
@@ -626,8 +622,8 @@ Bio<div class="summary-down docutils">
 </div>
 </div>
 </div>
-<input id="47c1580c-35db-4033-9f95-c4ee3668c69e" name="fd66918c-29d7-457f-9a77-011e7b5c3970" type="radio"/>
-<label class="tabbed-label" for="47c1580c-35db-4033-9f95-c4ee3668c69e">
+<input id="c102f686-6e5f-460b-bcae-37842e9ef420" name="e1502f22-53ef-42df-bc87-5ecaece3be2e" type="radio"/>
+<label class="tabbed-label" for="c102f686-6e5f-460b-bcae-37842e9ef420">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>````{panels}
 
@@ -683,8 +679,8 @@ Pendant la Seconde Guerre mondiale, [**Claude Shannon**](https://fr.wikipedia.or
 <li><p>on insère une image de la façon suivante :</p></li>
 </ul>
 <div class="tabbed-set docutils">
-<input checked="checked" id="ff5336f3-607b-40f1-b9bd-7db738b10fc8" name="868f5141-95b5-4751-b4f5-64786147f6ee" type="radio"/>
-<label class="tabbed-label" for="ff5336f3-607b-40f1-b9bd-7db738b10fc8">
+<input checked="checked" id="e37492de-dab3-49b0-9d3a-995ad8fda438" name="41403fb2-4634-425c-8ee8-1993fc4e4e4b" type="radio"/>
+<label class="tabbed-label" for="e37492de-dab3-49b0-9d3a-995ad8fda438">
 Aperçu</label><div class="tabbed-content docutils">
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/gracehopper.jpeg"><img alt="titreimage1" src="../_images/gracehopper.jpeg" style="width: 200px;"/></a>
@@ -693,8 +689,8 @@ Aperçu</label><div class="tabbed-content docutils">
 </figcaption>
 </figure>
 </div>
-<input id="6586d92b-f72b-4ca3-8aef-afc6304c25b0" name="868f5141-95b5-4751-b4f5-64786147f6ee" type="radio"/>
-<label class="tabbed-label" for="6586d92b-f72b-4ca3-8aef-afc6304c25b0">
+<input id="c45648e0-4dbf-4fc0-bb06-67c9a08ea69a" name="41403fb2-4634-425c-8ee8-1993fc4e4e4b" type="radio"/>
+<label class="tabbed-label" for="c45648e0-4dbf-4fc0-bb06-67c9a08ea69a">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{figure} media/syntaxemyst/gracehopper.jpeg
 ---
@@ -720,16 +716,16 @@ Voilà une image d'exemple avec une légende d'exemple
 <li><p>les blocs de code se déclarent comme des encarts, mais en spécifiant le language mis en avant, juste après les curly-brackets de la déclaration de l’encart.</p></li>
 </ul>
 <div class="tabbed-set docutils">
-<input checked="checked" id="332ba4a9-0c5c-4f75-b1d2-cacb67b14b0a" name="85502cca-3b22-4661-8a24-2c7f89fa48d4" type="radio"/>
-<label class="tabbed-label" for="332ba4a9-0c5c-4f75-b1d2-cacb67b14b0a">
+<input checked="checked" id="a8e59046-af9e-4427-87c6-fdb4d3d305af" name="f4ee0ae1-c137-4c02-9ae7-f7f9b4412bdf" type="radio"/>
+<label class="tabbed-label" for="a8e59046-af9e-4427-87c6-fdb4d3d305af">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'voilà un print'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<input id="d724379f-c996-4be1-ad9b-c4606813d1dd" name="85502cca-3b22-4661-8a24-2c7f89fa48d4" type="radio"/>
-<label class="tabbed-label" for="d724379f-c996-4be1-ad9b-c4606813d1dd">
+<input id="a9faeaea-a2c0-407f-af94-1e92ff7ff970" name="f4ee0ae1-c137-4c02-9ae7-f7f9b4412bdf" type="radio"/>
+<label class="tabbed-label" for="a9faeaea-a2c0-407f-af94-1e92ff7ff970">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{code-block} python
 a = 2
@@ -745,8 +741,8 @@ print('voilà un print')
 <li><p>voilà un exmple qui résume le tout.</p></li>
 </ul>
 <div class="tabbed-set docutils">
-<input checked="checked" id="fdeadd2d-c52d-459d-9abe-f9c35a2bc43d" name="4b3c4524-3f4d-46fc-b41f-daf60d8c6e99" type="radio"/>
-<label class="tabbed-label" for="fdeadd2d-c52d-459d-9abe-f9c35a2bc43d">
+<input checked="checked" id="f1364f68-45fa-4b8f-80a7-fce1e02bb294" name="1994ba59-d57a-4991-9e68-414b5f5a725a" type="radio"/>
+<label class="tabbed-label" for="f1364f68-45fa-4b8f-80a7-fce1e02bb294">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">10</span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
 </span><span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="s1">'voilà un print'</span><span class="p">)</span>
@@ -754,8 +750,8 @@ Aperçu</label><div class="tabbed-content docutils">
 </span></pre></div>
 </div>
 </div>
-<input id="4d62c4ea-a032-42aa-a6c0-6fdc4ccd654c" name="4b3c4524-3f4d-46fc-b41f-daf60d8c6e99" type="radio"/>
-<label class="tabbed-label" for="4d62c4ea-a032-42aa-a6c0-6fdc4ccd654c">
+<input id="310e317f-4b92-41ac-abab-f8fbd7a2426e" name="1994ba59-d57a-4991-9e68-414b5f5a725a" type="radio"/>
+<label class="tabbed-label" for="310e317f-4b92-41ac-abab-f8fbd7a2426e">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{code-block} python
 ---
@@ -775,8 +771,8 @@ print('voilà un deuxième print')
 <section id="panels">
 <h2>Panels<a class="headerlink" href="#panels" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="tabbed-set docutils">
-<input checked="checked" id="a51c545a-65f5-4975-b488-a223d9b12ba6" name="44e3169d-299d-4ab0-a5ce-9fdba03cf775" type="radio"/>
-<label class="tabbed-label" for="a51c545a-65f5-4975-b488-a223d9b12ba6">
+<input checked="checked" id="2340c9aa-fa66-4f46-9317-7b537b7af2f9" name="004e0f02-c5e2-4813-b623-e5819b5da93d" type="radio"/>
+<label class="tabbed-label" for="2340c9aa-fa66-4f46-9317-7b537b7af2f9">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
@@ -827,8 +823,8 @@ Panel en bas à gauche<div class="summary-down docutils">
 </div>
 </div>
 </div>
-<input id="02696f92-162b-4e45-bde4-74069f1e7c0e" name="44e3169d-299d-4ab0-a5ce-9fdba03cf775" type="radio"/>
-<label class="tabbed-label" for="02696f92-162b-4e45-bde4-74069f1e7c0e">
+<input id="b188246e-5107-4076-bbaf-55cf033fd99b" name="004e0f02-c5e2-4813-b623-e5819b5da93d" type="radio"/>
+<label class="tabbed-label" for="b188246e-5107-4076-bbaf-55cf033fd99b">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>````{panels}
 Contenu du panel en haut à gauche
@@ -870,15 +866,15 @@ Hidden content
 <h2>Couleurs<a class="headerlink" href="#couleurs" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour de la <span style="color:red">couleur</span>, il est possible d’insérer de l’HTML directement dans le texte.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="ce267aac-0cb1-45a5-b221-e4ad9309a4e4" name="a34876a7-5567-4071-bcbd-f481d41a8302" type="radio"/>
-<label class="tabbed-label" for="ce267aac-0cb1-45a5-b221-e4ad9309a4e4">
+<input checked="checked" id="5803b68e-e6ee-4ac7-b441-76246d17565f" name="fe61ee2c-c492-4605-bd31-aaa34fec08e1" type="radio"/>
+<label class="tabbed-label" for="5803b68e-e6ee-4ac7-b441-76246d17565f">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Pour de la <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">"color:red"</span><span class="p">&gt;</span>couleur<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>, il est possible d'insérer de l'HTML directement dans le texte.
 </pre></div>
 </div>
 </div>
-<input id="72f58954-830c-4e2f-a064-6aa3d121b312" name="a34876a7-5567-4071-bcbd-f481d41a8302" type="radio"/>
-<label class="tabbed-label" for="72f58954-830c-4e2f-a064-6aa3d121b312">
+<input id="af143b1e-6bde-4795-8394-798faa9e83d8" name="fe61ee2c-c492-4605-bd31-aaa34fec08e1" type="radio"/>
+<label class="tabbed-label" for="af143b1e-6bde-4795-8394-798faa9e83d8">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```html
 Pour de la &lt;span style="color:red"&gt;couleur&lt;/span&gt;, il est possible d'insérer de l'HTML directement dans le texte.
@@ -925,13 +921,13 @@ Pour de la &lt;span style="color:red"&gt;couleur&lt;/span&gt;, il est possible d
 <section id="good-luck">
 <h3>GOOD LUCK<a class="headerlink" href="#good-luck" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="4a6238fa-e389-4319-b53d-d0ccd02486df" name="ee2d1814-265f-42b7-972d-74c2bcec33e8" type="radio"/>
-<label class="tabbed-label" for="4a6238fa-e389-4319-b53d-d0ccd02486df">
+<input checked="checked" id="18bb0681-5d58-4e84-a33e-2b99aa8cd135" name="a7739f57-5eeb-4f68-a4eb-66fe310bd4c2" type="radio"/>
+<label class="tabbed-label" for="18bb0681-5d58-4e84-a33e-2b99aa8cd135">
 Aperçu</label><div class="tabbed-content docutils">
 <p><img alt="Baby Yoda" src="../_images/babyyoda.gif"/></p>
 </div>
-<input id="738b387e-b741-4a9e-ad2d-21d7be05c36f" name="ee2d1814-265f-42b7-972d-74c2bcec33e8" type="radio"/>
-<label class="tabbed-label" for="738b387e-b741-4a9e-ad2d-21d7be05c36f">
+<input id="5e181882-713a-4f94-b2eb-040ab6e12a3f" name="a7739f57-5eeb-4f68-a4eb-66fe310bd4c2" type="radio"/>
+<label class="tabbed-label" for="5e181882-713a-4f94-b2eb-040ab6e12a3f">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>![Baby Yoda](media/syntaxemyst/babyyoda.gif)
 </pre></div>

@@ -16,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/todo.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -34,7 +33,6 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
-  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-foreground-primary: black;
   --color-foreground-secondary: #5a5c63;
   --color-foreground-muted: #646776;
@@ -55,7 +53,6 @@
   body[data-theme="dark"] {
     --color-code-background: #272822;
   --color-code-foreground: #f8f8f2;
-  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-foreground-primary: #ffffffcc;
   --color-foreground-secondary: #9ca0a5;
   --color-foreground-muted: #81868d;
@@ -77,7 +74,6 @@
     body:not([data-theme="light"]) {
       --color-code-background: #272822;
   --color-code-foreground: #f8f8f2;
-  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-foreground-primary: #ffffffcc;
   --color-foreground-secondary: #9ca0a5;
   --color-foreground-muted: #81868d;
@@ -350,7 +346,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../resx/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../resx/activ/diffie-hellman/diffie-hellman.html">Diffie Hellman</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../resx/activ/routage_paquets/routage_paquets.html">Routage des Paquets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resx/activ/web-tracking/web-tracking.html">Suivi en ligne</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../resx/activ/web-tracking/web-tracking.html">Suivi sur le web</a></li>
 </ul>
 </li>
 </ul>
@@ -474,8 +470,8 @@ Ce contenu ne sera visible que pour la version `prof`.
 <p>Il est possible d’intégrer des questions à choix multiples au fil des pages via la directive <code class="docutils literal notranslate"><span class="pre">question</span></code>.
 Dans le corps de la directive, les bonnes et mauvaises réponses sont indiquées via les rôles <code class="docutils literal notranslate"><span class="pre">{v}</span></code> et <code class="docutils literal notranslate"><span class="pre">{f}</span></code> pour <em>vrai</em> et <em>faux</em>.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="2f254c47-7bbb-4b0c-9024-d8c8f50cfa57" name="d22d34ba-3040-4d08-aca0-360fc565c5a9" type="radio"/>
-<label class="tabbed-label" for="2f254c47-7bbb-4b0c-9024-d8c8f50cfa57">
+<input checked="checked" id="834057c3-ed92-4203-bdb3-711e80b81f74" name="15338bf5-e6d2-4803-ba2a-c413798be651" type="radio"/>
+<label class="tabbed-label" for="834057c3-ed92-4203-bdb3-711e80b81f74">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="question admonition">
 <div class="question"><form><p class="admonition-title">Question</p>
@@ -485,8 +481,8 @@ Je pense qu’il y en a <label class="answer incorrect"><input type="checkbox"/>
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></form></div></div>
 </div>
-<input id="82c2d564-d888-419d-8ae7-209591096f9d" name="d22d34ba-3040-4d08-aca0-360fc565c5a9" type="radio"/>
-<label class="tabbed-label" for="82c2d564-d888-419d-8ae7-209591096f9d">
+<input id="f59557d6-244c-43f9-97c9-ef5db498c24c" name="15338bf5-e6d2-4803-ba2a-c413798be651" type="radio"/>
+<label class="tabbed-label" for="f59557d6-244c-43f9-97c9-ef5db498c24c">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{question}
 Combien y a t'il de bits dans un octet ?
@@ -500,8 +496,8 @@ Je pense qu'il y en a {f}`2`, {f}`4`, {v}`8` ou {f}`64`.
 Le contenu de la question peut lui-même être structuré en text.
 Dans l’exemple ci-dessous, les réponses sont affichées dans une liste.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="7fa70f06-09ae-4709-8330-eac44b6a9acc" name="18654b21-7b03-44c0-a5b9-84456f62c510" type="radio"/>
-<label class="tabbed-label" for="7fa70f06-09ae-4709-8330-eac44b6a9acc">
+<input checked="checked" id="d4e0ab23-c18a-4a3f-914c-3bc36a1a7ef6" name="cdc7ff1a-9d74-4fe9-a6e9-5d197cc7b5ba" type="radio"/>
+<label class="tabbed-label" for="d4e0ab23-c18a-4a3f-914c-3bc36a1a7ef6">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="question admonition">
 <div class="question"><form><p class="admonition-title">Question avec un titre personnalisé</p>
@@ -516,8 +512,8 @@ Aperçu</label><div class="tabbed-content docutils">
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></form></div></div>
 </div>
-<input id="907ced05-23bc-4b04-b1b0-5892b9d104f7" name="18654b21-7b03-44c0-a5b9-84456f62c510" type="radio"/>
-<label class="tabbed-label" for="907ced05-23bc-4b04-b1b0-5892b9d104f7">
+<input id="45f9df67-61f1-4a45-8d8f-40b9fe26f2f3" name="cdc7ff1a-9d74-4fe9-a6e9-5d197cc7b5ba" type="radio"/>
+<label class="tabbed-label" for="45f9df67-61f1-4a45-8d8f-40b9fe26f2f3">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{question} Question avec un titre personnalisé
 Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turing ?
@@ -535,8 +531,8 @@ Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turin
 <p>Par défaut, si il y a uniquement une réponse correcte, les autres réponses se désélectionnent automatiquement.
 Pour que plusieurs réponses puissent être sélectionnées même s’il n’y a qu’une seule réponse, l’option <code class="docutils literal notranslate"><span class="pre">:multi:</span></code> peut être ajoutée.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="6f34121e-886d-492e-a728-98ce866d3c4e" name="d07e9684-6241-4a60-a33c-dc6360c7e8f6" type="radio"/>
-<label class="tabbed-label" for="6f34121e-886d-492e-a728-98ce866d3c4e">
+<input checked="checked" id="be2a9d0d-621d-41a6-8dc9-408e5e3362d9" name="07b31588-0499-4a99-94e1-1dda7ce08845" type="radio"/>
+<label class="tabbed-label" for="be2a9d0d-621d-41a6-8dc9-408e5e3362d9">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="question admonition">
 <div class="question multi"><form><p class="admonition-title">Question</p>
@@ -551,8 +547,8 @@ Aperçu</label><div class="tabbed-content docutils">
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></form></div></div>
 </div>
-<input id="5e6fe713-3a0a-4e7a-a54f-452a14e904b9" name="d07e9684-6241-4a60-a33c-dc6360c7e8f6" type="radio"/>
-<label class="tabbed-label" for="5e6fe713-3a0a-4e7a-a54f-452a14e904b9">
+<input id="56912820-3e78-4bcc-9766-69b45bf38990" name="07b31588-0499-4a99-94e1-1dda7ce08845" type="radio"/>
+<label class="tabbed-label" for="56912820-3e78-4bcc-9766-69b45bf38990">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{question}
 :multi: 
@@ -574,13 +570,13 @@ Parmi les personnes suivantes, laquelle ou lesquelles sont à l'origine du Web ?
 Dans le texte du rôle, les différentes options de réponses sont séparées par un caractère <code class="docutils literal notranslate"><span class="pre">|</span></code>.
 Une réponse valable est précédée d’un caractère <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="8a242405-9b7c-4874-8ee9-b4a512a0943a" name="5e00c2be-6a27-467e-a3ad-101fb41f46cd" type="radio"/>
-<label class="tabbed-label" for="8a242405-9b7c-4874-8ee9-b4a512a0943a">
+<input checked="checked" id="4abd7e71-ac0c-414f-9d98-e5ec08c6dfad" name="c3b41d9b-15bd-4121-b1b1-f83ad6300327" type="radio"/>
+<label class="tabbed-label" for="4abd7e71-ac0c-414f-9d98-e5ec08c6dfad">
 Aperçu</label><div class="tabbed-content docutils">
 <p>Dans le texte suivant, certains <select class="blank"><option class="blank_option" selected="selected" value="-1"></option><option class="correct_option" value="1">mots</option><option class="incorrect_option" value="0">trucs</option><option class="incorrect_option" value="0">machins</option></select> sont laissés <select class="blank"><option class="blank_option" selected="selected" value="-1"></option><option class="incorrect_option" value="0">pour compte</option><option class="correct_option" value="1">blancs</option><option class="incorrect_option" value="0">verts</option><option class="incorrect_option" value="0">seuls</option></select>.</p>
 </div>
-<input id="20fb68ee-39ce-44ae-ab9e-556cc8ace51b" name="5e00c2be-6a27-467e-a3ad-101fb41f46cd" type="radio"/>
-<label class="tabbed-label" for="20fb68ee-39ce-44ae-ab9e-556cc8ace51b">
+<input id="0062c0a0-9833-4370-9f31-32a3bab24570" name="c3b41d9b-15bd-4121-b1b1-f83ad6300327" type="radio"/>
+<label class="tabbed-label" for="0062c0a0-9833-4370-9f31-32a3bab24570">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Dans le texte suivant, certains {bl}`&gt;mots|trucs|machins` sont laissés {bl}`pour compte|&gt;blancs|verts|seuls`.
 </pre></div>
@@ -595,12 +591,12 @@ La directive attend en argument l’identifiant de la vidéo (généralement 11 
 L’identifiant d’une vidéo YouTube peut être trouvé dans l’URL de la video, juste après la chaîne <code class="docutils literal notranslate"><span class="pre">?v=</span></code>.
 Par exemple, l’identifiant de la vidéo à l’URL <code class="docutils literal notranslate"><span class="pre">https://www.youtube.com/watch?v=dQw4w9WgXcQ</span></code> est <code class="docutils literal notranslate"><span class="pre">dQw4w9WgXcQ</span></code>.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="48fc8e88-c9f5-4f5e-ace9-a4e28e692eda" name="8d21042a-7786-40f4-96aa-328109d58993" type="radio"/>
-<label class="tabbed-label" for="48fc8e88-c9f5-4f5e-ace9-a4e28e692eda">
+<input checked="checked" id="6387bc44-bf66-4928-9c40-7fdd0e6db4bd" name="726d618f-feab-456b-9745-6a15cdeb781f" type="radio"/>
+<label class="tabbed-label" for="6387bc44-bf66-4928-9c40-7fdd0e6db4bd">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" mozallowfullscreen="" src="https://www.youtube-nocookie.com/embed/uHKfrz65KSU" webkitallowfullscreen="" width="560">"</iframe></div></div>
-<input id="46154c83-ebae-48ff-b83c-260cb2be19d7" name="8d21042a-7786-40f4-96aa-328109d58993" type="radio"/>
-<label class="tabbed-label" for="46154c83-ebae-48ff-b83c-260cb2be19d7">
+<input id="176b3ded-3ba6-4f5c-893f-67c888416002" name="726d618f-feab-456b-9745-6a15cdeb781f" type="radio"/>
+<label class="tabbed-label" for="176b3ded-3ba6-4f5c-893f-67c888416002">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{youtube} uHKfrz65KSU
 ```
@@ -616,12 +612,12 @@ Code</label><div class="tabbed-content docutils">
 Via l’option <code class="docutils literal notranslate"><span class="pre">:start:</span></code>, il est possible de faire commencer la lecture à un endroit différent de la vidéo.
 L’option <code class="docutils literal notranslate"><span class="pre">:start:</span></code> attend en argument un nombre entier qui indique la seconde à laquelle la lecture doit commencer.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="a4bcad07-09cc-4bf1-b3f6-221fe04a55d7" name="9413d0b2-efef-449b-a801-f051e6216b93" type="radio"/>
-<label class="tabbed-label" for="a4bcad07-09cc-4bf1-b3f6-221fe04a55d7">
+<input checked="checked" id="192b58ca-e628-4d3d-acb4-bb9aeba71d97" name="b7a5e9fe-0d84-4026-92f9-9799147fb39e" type="radio"/>
+<label class="tabbed-label" for="192b58ca-e628-4d3d-acb4-bb9aeba71d97">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" mozallowfullscreen="" src="https://www.youtube-nocookie.com/embed/_OBlgSz8sSM?start=18" webkitallowfullscreen="" width="560">"</iframe></div></div>
-<input id="65d9ec55-b050-489a-8c6a-8b51aa0dfb35" name="9413d0b2-efef-449b-a801-f051e6216b93" type="radio"/>
-<label class="tabbed-label" for="65d9ec55-b050-489a-8c6a-8b51aa0dfb35">
+<input id="38c27883-f4cb-4e36-95b6-86de1447aa0b" name="b7a5e9fe-0d84-4026-92f9-9799147fb39e" type="radio"/>
+<label class="tabbed-label" for="38c27883-f4cb-4e36-95b6-86de1447aa0b">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{youtube} _OBlgSz8sSM
 :start: 18
@@ -636,12 +632,12 @@ Code</label><div class="tabbed-content docutils">
 <p>Par défaut, les boutons de contrôle de la vidéo sont affichés dans une barre en bas de la vidéo.
 Ils peuvent cependant être cachés via l’option <code class="docutils literal notranslate"><span class="pre">:nocontrols:</span></code>.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="b199baad-938a-4d60-a842-78650b1c2e0b" name="7e9c8914-851d-40bf-907f-a63125072ec9" type="radio"/>
-<label class="tabbed-label" for="b199baad-938a-4d60-a842-78650b1c2e0b">
+<input checked="checked" id="2daea751-b82b-4014-89c7-ba7b86bff653" name="6d03191e-aef9-4c71-8d01-c60067ea493b" type="radio"/>
+<label class="tabbed-label" for="2daea751-b82b-4014-89c7-ba7b86bff653">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" mozallowfullscreen="" src="https://www.youtube-nocookie.com/embed/wGGqWwVb3sU?controls=0" webkitallowfullscreen="" width="560">"</iframe></div></div>
-<input id="7521041b-449e-47b0-8990-d7bd6153383e" name="7e9c8914-851d-40bf-907f-a63125072ec9" type="radio"/>
-<label class="tabbed-label" for="7521041b-449e-47b0-8990-d7bd6153383e">
+<input id="c8462a7a-e3b8-4269-b68e-34adf1d30209" name="6d03191e-aef9-4c71-8d01-c60067ea493b" type="radio"/>
+<label class="tabbed-label" for="c8462a7a-e3b8-4269-b68e-34adf1d30209">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{youtube} wGGqWwVb3sU
 :nocontrols:
@@ -660,12 +656,12 @@ La directive attend en argument l’identifiant de la vidéo (généralement une
 L’identifiant d’une vidéo SwitchTube peut être trouvé à la fin de l’URL de la video.
 Par exemple, l’identifiant de la vidéo à l’URL <code class="docutils literal notranslate"><span class="pre">https://tube.switch.ch/videos/f6365946</span></code> est <code class="docutils literal notranslate"><span class="pre">f6365946</span></code>.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="6e1457a0-a29c-4099-83cf-f95d9d283186" name="d4320320-a844-46c0-a78f-4a56f230b117" type="radio"/>
-<label class="tabbed-label" for="6e1457a0-a29c-4099-83cf-f95d9d283186">
+<input checked="checked" id="4ba60de1-4828-4d5e-89bd-d95ea5c29d28" name="76bf304f-1633-4118-8833-63a3967b6057" type="radio"/>
+<label class="tabbed-label" for="4ba60de1-4828-4d5e-89bd-d95ea5c29d28">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="video"><iframe allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen="" frameborder="0" height="315" mozallowfullscreen="" src="https://tube.switch.ch/embed/f6365946" webkitallowfullscreen="" width="560">"</iframe></div></div>
-<input id="420b69e6-d44b-4cbd-9196-5654fa7251d6" name="d4320320-a844-46c0-a78f-4a56f230b117" type="radio"/>
-<label class="tabbed-label" for="420b69e6-d44b-4cbd-9196-5654fa7251d6">
+<input id="585ed0e3-1678-43c9-a637-fa01ca1ca56a" name="76bf304f-1633-4118-8833-63a3967b6057" type="radio"/>
+<label class="tabbed-label" for="585ed0e3-1678-43c9-a637-fa01ca1ca56a">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{switchtube} f6365946
 ```
@@ -681,12 +677,12 @@ Code</label><div class="tabbed-content docutils">
 Via l’option <code class="docutils literal notranslate"><span class="pre">:start:</span></code>, il est possible de faire commencer la lecture à un endroit différent de la vidéo.
 L’option <code class="docutils literal notranslate"><span class="pre">:start:</span></code> attend en argument un nombre entier qui indique la seconde à laquelle la lecture doit commencer.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="10ebffb2-0ec9-4787-894c-9154093dc61b" name="df7cb98d-7368-4b05-945f-e2b8cc875a27" type="radio"/>
-<label class="tabbed-label" for="10ebffb2-0ec9-4787-894c-9154093dc61b">
+<input checked="checked" id="1a0046c5-c66f-4f8a-ac60-28e3c91a9356" name="2203ffc6-7a6e-4ffb-a0c1-2ef2a1b654c1" type="radio"/>
+<label class="tabbed-label" for="1a0046c5-c66f-4f8a-ac60-28e3c91a9356">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="video"><iframe allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen="" frameborder="0" height="315" mozallowfullscreen="" src="https://tube.switch.ch/embed/f6365946#2:2" webkitallowfullscreen="" width="560">"</iframe></div></div>
-<input id="d863a143-572e-4d51-be06-e7fcc1bff18f" name="df7cb98d-7368-4b05-945f-e2b8cc875a27" type="radio"/>
-<label class="tabbed-label" for="d863a143-572e-4d51-be06-e7fcc1bff18f">
+<input id="e8d43e17-1d1e-478e-ac6a-a0c8f112132f" name="2203ffc6-7a6e-4ffb-a0c1-2ef2a1b654c1" type="radio"/>
+<label class="tabbed-label" for="e8d43e17-1d1e-478e-ac6a-a0c8f112132f">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{switchtube} f6365946
 :start: 122
@@ -700,12 +696,12 @@ Code</label><div class="tabbed-content docutils">
 <h4>Cacher le titre<a class="headerlink" href="#cacher-le-titre" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Il est possible d’ajouter l’option <code class="docutils literal notranslate"><span class="pre">:notitle</span></code> pour cacher le titre de la vidéo dans le lecteur.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="e4cc2531-2059-40f5-9cb1-9c6ef6c9c538" name="f2b0c68c-7b72-4b01-9f2c-d85be35a2c93" type="radio"/>
-<label class="tabbed-label" for="e4cc2531-2059-40f5-9cb1-9c6ef6c9c538">
+<input checked="checked" id="facc127e-9a3a-4ef8-9cbd-83d0ec32c0b5" name="62bdbc7a-2db9-4ae3-bbef-aeb194530ec5" type="radio"/>
+<label class="tabbed-label" for="facc127e-9a3a-4ef8-9cbd-83d0ec32c0b5">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="video"><iframe allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen="" frameborder="0" height="315" mozallowfullscreen="" src="https://tube.switch.ch/embed/f6365946?title=hide" webkitallowfullscreen="" width="560">"</iframe></div></div>
-<input id="890e38b3-89ce-4def-ab66-40576f9c42a4" name="f2b0c68c-7b72-4b01-9f2c-d85be35a2c93" type="radio"/>
-<label class="tabbed-label" for="890e38b3-89ce-4def-ab66-40576f9c42a4">
+<input id="e8e72b46-8d79-484a-a3bd-b4b7c4bcb509" name="62bdbc7a-2db9-4ae3-bbef-aeb194530ec5" type="radio"/>
+<label class="tabbed-label" for="e8e72b46-8d79-484a-a3bd-b4b7c4bcb509">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{switchtube} f6365946
 :notitle:
@@ -722,12 +718,12 @@ Code</label><div class="tabbed-content docutils">
 <p>Pour ajouter une vidéo du CNRS directement dans le document, utiliser la directive <code class="docutils literal notranslate"><span class="pre">cnrs</span></code>.
 La directive attend en argument l’identifiant de la vidéo (généralement 8 caractères au format <code class="docutils literal notranslate"><span class="pre">base64url</span></code>). L’identifiant d’une vidéo peut être trouvé dans les sources de la page HTML sur le site du CNRS (par exemple: <a class="reference external" href="https://images.cnrs.fr/video/2975">https://images.cnrs.fr/video/2975</a>), juste après la chaîne de caractère: <code class="docutils literal notranslate"><span class="pre">code=</span></code>. <em>À noter que ce code ne correspond pas au numéro figurant dans l’URL de la page.</em></p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="b9c4bcba-e921-467a-9710-529f928bbf67" name="90214445-7e89-4be6-9db1-10da11796075" type="radio"/>
-<label class="tabbed-label" for="b9c4bcba-e921-467a-9710-529f928bbf67">
+<input checked="checked" id="f7949174-ddb9-41d5-b4cf-63b0cfa97b16" name="08e3f4a5-9e77-4d43-b37b-0fd3e2a907a1" type="radio"/>
+<label class="tabbed-label" for="f7949174-ddb9-41d5-b4cf-63b0cfa97b16">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="video"><div class="cnrs"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="450" mozallowfullscreen="" src="https://mediavideo.cnrs.fr/player_export.php?code=pUV9f15n" webkitallowfullscreen="" width="800">"</iframe></div></div></div>
-<input id="5f9c3956-bbf8-4a4f-8cc3-ba7b76935593" name="90214445-7e89-4be6-9db1-10da11796075" type="radio"/>
-<label class="tabbed-label" for="5f9c3956-bbf8-4a4f-8cc3-ba7b76935593">
+<input id="ac32bde7-c4cc-4920-87db-b5cbd9708d5a" name="08e3f4a5-9e77-4d43-b37b-0fd3e2a907a1" type="radio"/>
+<label class="tabbed-label" for="ac32bde7-c4cc-4920-87db-b5cbd9708d5a">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{cnrs} pUV9f15n
 ```
@@ -741,12 +737,12 @@ Code</label><div class="tabbed-content docutils">
 <p>Il est possible d’insérer un interpréteur Python et éditeur directement dans le document, le tout implémenté en Javascript et qui tourne dans le client Web du visiteur.
 Pour ceci, il suffit d’utiliser la directive <code class="docutils literal notranslate"><span class="pre">codeplay</span></code>.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="1b88a2cc-ce05-4c29-b8db-a538e95f6972" name="ef0ff1a7-8e3e-4af5-8e1b-cec46a61d1af" type="radio"/>
-<label class="tabbed-label" for="1b88a2cc-ce05-4c29-b8db-a538e95f6972">
+<input checked="checked" id="6640668e-ac5e-449f-b269-1a5d14899fd0" name="7b07fdc7-5b3a-46ad-a159-b83519df7c64" type="radio"/>
+<label class="tabbed-label" for="6640668e-ac5e-449f-b269-1a5d14899fd0">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGRvdWJsZSh4KToKICAgIHJldHVybiB4ICsgeAoKcHJpbnQoZG91YmxlKGludChpbnB1dCgieCA9ICIpKSkp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-<input id="fb53fc6f-599b-4265-943c-0bde5ebca16f" name="ef0ff1a7-8e3e-4af5-8e1b-cec46a61d1af" type="radio"/>
-<label class="tabbed-label" for="fb53fc6f-599b-4265-943c-0bde5ebca16f">
+<input id="7606b864-475e-450d-9ea3-38965920728b" name="7b07fdc7-5b3a-46ad-a159-b83519df7c64" type="radio"/>
+<label class="tabbed-label" for="7606b864-475e-450d-9ea3-38965920728b">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{codeplay}
 def double(x):
@@ -764,12 +760,12 @@ print(double(int(input("x = "))))
 <h4>Choix du nom de fichier à télécharger<a class="headerlink" href="#choix-du-nom-de-fichier-a-telecharger" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Via l’option <code class="docutils literal notranslate"><span class="pre">:file:</span></code>, le nom du fichier téléchargé peut être spécifié.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="47a4f1d3-ee67-43aa-b5ab-4939174fb300" name="1aeabb14-1fbf-45e5-be41-88af6b5097cf" type="radio"/>
-<label class="tabbed-label" for="47a4f1d3-ee67-43aa-b5ab-4939174fb300">
+<input checked="checked" id="91193276-bcb2-4907-b63d-01b5ed00596f" name="edd5e0fa-be76-4a25-87da-58684b43207c" type="radio"/>
+<label class="tabbed-label" for="91193276-bcb2-4907-b63d-01b5ed00596f">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGRvdWJsZSh4KToKICAgIHJldHVybiB4ICsgeAoKcHJpbnQoZG91YmxlKGludChpbnB1dCgieCA9ICIpKSkp" data-file="bm9tLWR1LWZpY2hpZXIucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-<input id="27226555-1d10-4a59-bc85-f3699e04759a" name="1aeabb14-1fbf-45e5-be41-88af6b5097cf" type="radio"/>
-<label class="tabbed-label" for="27226555-1d10-4a59-bc85-f3699e04759a">
+<input id="fead1753-5a5f-4c3c-aa4a-2114ac7253a7" name="edd5e0fa-be76-4a25-87da-58684b43207c" type="radio"/>
+<label class="tabbed-label" for="fead1753-5a5f-4c3c-aa4a-2114ac7253a7">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{codeplay}
 :file: nom-du-fichier.py
@@ -787,12 +783,12 @@ print(double(int(input("x = "))))
 <h4>Execution immediate<a class="headerlink" href="#execution-immediate" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Via l’option <code class="docutils literal notranslate"><span class="pre">:exec:</span></code>, le code est exécuté dès le chargement de la page.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="dfad01b5-8139-48ff-b63a-5fd6ca207724" name="ebaeef1b-af8d-4ad3-92c1-f4d13b3a9055" type="radio"/>
-<label class="tabbed-label" for="dfad01b5-8139-48ff-b63a-5fd6ca207724">
+<input checked="checked" id="aa98a0a3-e804-46e4-ac27-c27b32506dfd" name="eb404d9c-d9a0-4d82-9d14-1bdd40c13435" type="radio"/>
+<label class="tabbed-label" for="aa98a0a3-e804-46e4-ac27-c27b32506dfd">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIHB1aXNzYW5jZSh4LCB5KToKICAgIHJldHVybiB4ICoqIHkKCnByaW50KHB1aXNzYW5jZSgyLCAxMCkp" data-file="Y29kZS5weQ==" data-run="true" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-<input id="017198bd-e212-486d-8ff1-78403548afba" name="ebaeef1b-af8d-4ad3-92c1-f4d13b3a9055" type="radio"/>
-<label class="tabbed-label" for="017198bd-e212-486d-8ff1-78403548afba">
+<input id="90ba0316-cac7-4daf-9762-e0f0291fc704" name="eb404d9c-d9a0-4d82-9d14-1bdd40c13435" type="radio"/>
+<label class="tabbed-label" for="90ba0316-cac7-4daf-9762-e0f0291fc704">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{codeplay}
 :exec:
@@ -810,12 +806,12 @@ print(puissance(2, 10))
 <h4>Code statique<a class="headerlink" href="#code-statique" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Via l’option <code class="docutils literal notranslate"><span class="pre">:static:</span></code>, l’éditeur est mis en mode lecture seule.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="19293c99-8b27-4085-8c07-2c4238936dff" name="e9fea4e9-fd65-49ba-ab5d-012243c1017d" type="radio"/>
-<label class="tabbed-label" for="19293c99-8b27-4085-8c07-2c4238936dff">
+<input checked="checked" id="75f1274f-013d-438a-838b-742d319f6e3d" name="e27e20ab-a4ea-4fa4-8037-13c00d0ae52a" type="radio"/>
+<label class="tabbed-label" for="75f1274f-013d-438a-838b-742d319f6e3d">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIHB1aXNzYW5jZSh4LCB5KToKICAgIHJldHVybiB4ICoqIHkKCnByaW50KHB1aXNzYW5jZSgyLCAxMCkp" data-file="Y29kZS5weQ==" data-static="true" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-<input id="84393b66-a3e1-4278-a253-d1cf7f3ca2aa" name="e9fea4e9-fd65-49ba-ab5d-012243c1017d" type="radio"/>
-<label class="tabbed-label" for="84393b66-a3e1-4278-a253-d1cf7f3ca2aa">
+<input id="14f8b2c3-28e2-4aad-bb7e-e990f06884df" name="e27e20ab-a4ea-4fa4-8037-13c00d0ae52a" type="radio"/>
+<label class="tabbed-label" for="14f8b2c3-28e2-4aad-bb7e-e990f06884df">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{codeplay}
 :static:
@@ -834,12 +830,12 @@ print(puissance(2, 10))
 <p>Via l’options <code class="docutils literal notranslate"><span class="pre">:nocontrols:</span></code> les boutons de contrôle sont cachés.
 Le code peut tout de même être lancé via les raccourcis claviers, ainsi qu’initialement via le bouton affiché dans le texte dans la zone de sortie.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="01fa2849-3be6-4c47-94c8-aff7871bde68" name="10865a9c-6f9e-4665-a660-71f4e4118a8e" type="radio"/>
-<label class="tabbed-label" for="01fa2849-3be6-4c47-94c8-aff7871bde68">
+<input checked="checked" id="d70cc3e2-081f-4acb-b0b2-af397454bdc1" name="2ea6aeae-1cc7-42e7-8cf3-cb7ff5f07e31" type="radio"/>
+<label class="tabbed-label" for="d70cc3e2-081f-4acb-b0b2-af397454bdc1">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIHB1aXNzYW5jZSh4LCB5KToKICAgIHJldHVybiB4ICoqIHkKCnByaW50KHB1aXNzYW5jZSgyLCAxMCkp" data-file="Y29kZS5weQ==" data-nocontrols="true" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-<input id="8f445258-3b37-4cd3-a875-dcad17ea3b03" name="10865a9c-6f9e-4665-a660-71f4e4118a8e" type="radio"/>
-<label class="tabbed-label" for="8f445258-3b37-4cd3-a875-dcad17ea3b03">
+<input id="68e0d55a-219e-4a16-9ab0-4131c87b72c0" name="2ea6aeae-1cc7-42e7-8cf3-cb7ff5f07e31" type="radio"/>
+<label class="tabbed-label" for="68e0d55a-219e-4a16-9ab0-4131c87b72c0">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{codeplay}
 :nocontrols:
@@ -858,12 +854,12 @@ print(puissance(2, 10))
 <h3>Prélude<a class="headerlink" href="#prelude" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Par défaut toutes les lignes apparaissant avant la première ligne formée uniquement d’au moins 3 caractères <code class="docutils literal notranslate"><span class="pre">=</span></code> (ignorant les caractères d’espaces avant et après sur la ligne) est considéré comme un préambule qui n’est pas affiché aux utilisateurs du site mais qui est tout de même exécuté.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="1c752d0a-b145-4dc5-998a-ad1761494841" name="ca8b5a69-f310-4a6c-bbe5-28b4a3c51524" type="radio"/>
-<label class="tabbed-label" for="1c752d0a-b145-4dc5-998a-ad1761494841">
+<input checked="checked" id="8b749edc-cd43-4e5e-bfaf-72b6ef4ad292" name="e862eded-b6fa-4bf7-acf9-7cb819af4b1c" type="radio"/>
+<label class="tabbed-label" for="8b749edc-cd43-4e5e-bfaf-72b6ef4ad292">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQocHVpc3NhbmNlKDIsIDEwKSk=" data-file="Y29kZS5weQ==" data-prelude="ZGVmIHB1aXNzYW5jZSh4LCB5KToKICAgIHJldHVybiB4ICoqIHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-<input id="ae57d362-94bd-44dd-b6d0-7b66576f7e9f" name="ca8b5a69-f310-4a6c-bbe5-28b4a3c51524" type="radio"/>
-<label class="tabbed-label" for="ae57d362-94bd-44dd-b6d0-7b66576f7e9f">
+<input id="abe2758e-2f1d-4cc9-a3c5-20d633f1eb1d" name="e862eded-b6fa-4bf7-acf9-7cb819af4b1c" type="radio"/>
+<label class="tabbed-label" for="abe2758e-2f1d-4cc9-a3c5-20d633f1eb1d">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{codeplay}
 def puissance(x, y):
@@ -878,12 +874,12 @@ print(puissance(2, 10))
 <p>De même, lorsqu’au deux délimitations sont faites, seule la seconde est affichée.
 L’ordre d’exécution est préservé.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="4e9426b1-678c-4a26-bde7-57ea0154a4de" name="1109ba1c-730d-4ba1-a2c8-ce62cb0cb179" type="radio"/>
-<label class="tabbed-label" for="4e9426b1-678c-4a26-bde7-57ea0154a4de">
+<input checked="checked" id="dd72b80b-e668-4d21-abaf-0b0c38ec6915" name="a135cf1f-ec35-4ccd-8c0a-0749cc9ca0e9" type="radio"/>
+<label class="tabbed-label" for="dd72b80b-e668-4d21-abaf-0b0c38ec6915">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-afterword="dGVzdChwdWlzc2FuY2UoMiwgMykgPT0gOCwgIk91cHMsIHRvbiBpbXBsw6ltZW50YXRpb24gZXN0IGluY29ycmVjdGUuIik=" data-code="ZGVmIHB1aXNzYW5jZShuLCBtKToKICAgIHBhc3M=" data-file="Y29kZS5weQ==" data-prelude="ZGVmIHRlc3QoY29uZGl0aW9uLCBlcnJldXIpOgogICAgIGlmIG5vdCBjb25kaXRpb246CiAgICAgICAgcHJpbnQoZXJyZXVyKQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-<input id="f1615aca-7c84-4578-86f6-f4c72f289324" name="1109ba1c-730d-4ba1-a2c8-ce62cb0cb179" type="radio"/>
-<label class="tabbed-label" for="f1615aca-7c84-4578-86f6-f4c72f289324">
+<input id="c876ef66-1722-420d-a906-008241ca8a06" name="a135cf1f-ec35-4ccd-8c0a-0749cc9ca0e9" type="radio"/>
+<label class="tabbed-label" for="c876ef66-1722-420d-a906-008241ca8a06">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{codeplay}
 def test(condition, erreur):
@@ -904,12 +900,12 @@ test(puissance(2, 3) == 8, "Oups, ton implémentation est incorrecte.")
 <section id="indices">
 <h3>Indices<a class="headerlink" href="#indices" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="93577343-dfc5-4de4-a327-c48280c7803a" name="74fc5269-026e-48dd-9682-3c0439990593" type="radio"/>
-<label class="tabbed-label" for="93577343-dfc5-4de4-a327-c48280c7803a">
+<input checked="checked" id="2da57253-6256-4c97-9259-23aebf7f0aed" name="325db67a-f550-41dc-bdc2-93ccdcaec084" type="radio"/>
+<label class="tabbed-label" for="2da57253-6256-4c97-9259-23aebf7f0aed">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-afterword="dGVzdChwdWlzc2FuY2UoMiwgMykgPT0gOCwgIk91cHMsIHRvbiBpbXBsw6ltZW50YXRpb24gZXN0IGluY29ycmVjdGUuIik=" data-code="ZGVmIHB1aXNzYW5jZShuLCBtKToKICAgIHBhc3M=" data-file="Y29kZS5weQ==" data-hints="UmFwcGVsbGUgdG9pIGRlIGwnb3DDqXJhdGV1ciBgKipgIQ== VG91am91cnMgcGFzPw==" data-prelude="ZGVmIHRlc3QoY29uZGl0aW9uLCBlcnJldXIpOgogICAgIGlmIG5vdCBjb25kaXRpb246CiAgICAgICAgcHJpbnQoZXJyZXVyKQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-<input id="7a67f718-a390-4b52-b414-c4bf27d3b05c" name="74fc5269-026e-48dd-9682-3c0439990593" type="radio"/>
-<label class="tabbed-label" for="7a67f718-a390-4b52-b414-c4bf27d3b05c">
+<input id="73c0c102-5bfe-47bd-b761-491aad444a26" name="325db67a-f550-41dc-bdc2-93ccdcaec084" type="radio"/>
+<label class="tabbed-label" for="73c0c102-5bfe-47bd-b761-491aad444a26">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{codeplay}
 ---
