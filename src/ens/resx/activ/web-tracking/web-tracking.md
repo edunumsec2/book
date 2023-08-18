@@ -8,10 +8,10 @@ Cela n'a pas pu vous échapper, le web moderne est rempli de "**{glo}`tracker@2|
 * **Thème** : `Réseaux` (transversal avec `Vie privée et surveillance` et `Economie du numérique`)
 * **Niveau** : `moyen` <!-- L'activité n'est pas facile, car elle demande une certaine supervision de l'enseignant·e et car les outils sont probablement inconnus des élèves. Elle n'est toutefois pas difficile car rien n'est à installer, l'activité peut se faire sans outil autre que l'ordinateur et le navigateur ce qui en simplifie l'accessibilité. Les objectifs sont d'une complexité notable mais peu exigeants sur les pré-requis et la technicité. Dépendant de l'aise des élèves et de l'avancée dans le chapitre Web, l'activité prévoit de revoir les points essentiels du web à comprendre pour effectuer l’activité à tout niveau. -->
 * **Durée** : 4 périodes (2 séances de 45 minutes débranchées, 1 séance de 90 minutes branchée)
-* **Objectifs pédagogiques** : les objectifs de cette séquence sont associés aux chapitres réseau, notamment `sécurité et sensibilisation aux bonnes pratiques; notions et modèles d’architectures et de protocoles`. De plus, les objectifs transversaux d'enjeux sociaux sont visés notamment `vie privée et surveillance; économie du numérique`. Plus d'explications sont données dans la partie [](webtracking.didactique)
+* **Objectifs pédagogiques** : les objectifs de cette séquence sont associés à ceux du chapitre réseau, notamment `sécurité et sensibilisation aux bonnes pratiques; notions et modèles d’architectures et de protocoles`. De plus, les objectifs transversaux d'enjeux sociaux sont visés notamment `vie privée et surveillance; économie du numérique`. Plus d'explications sont données dans la partie [](webtracking.didactique)
 * **Modalité** : `branché et débranché`
 * **Matériel** : Ordinateur et navigateur web
-* **Prérequis** : Il est préférable d'avoir étudié les éléments du chapitre [World Wide Wide](https://apprendre.modulo-info.ch/resx/web.html). Ce chapitre le complète (éventuellement conclu) et lui apporte une activité pratique. L'activité {ref}`encheres` ou équivalent sur le fonctionnement de la publicité ciblée est également requis pour comprendre la présence des acteurs et des enjeux (ceci pourrait s'intégrer dans une séance débranchée supplémentaire dans le cadre de cette séquence)
+* **Prérequis** : Il est préférable d'avoir étudié les éléments du chapitre [World Wide Wide](https://apprendre.modulo-info.ch/resx/web.html). Cette activité le complète (éventuellement conclu) et lui apporte une activité pratique. L'activité {ref}`encheres` ou équivalent sur le fonctionnement de la publicité ciblée est également requis pour comprendre la présence des acteurs et des enjeux (ceci pourrait s'intégrer dans une séance préliminaire débranchée)
 * **Notions fondamentales** : Les technologies du web et leur fonctionnement, l'{glo}`adtech|Ad Tech` et l'économie du web, les concepts et l'évaluations de vie privée du numérique, la compréhension d'une trace réseau, la modélisation d'une interaction sur le web avec l'association à des entités et leurs intérêts
 * **Taille du groupe** : `classe entière` pour les séquences débranchées et `demi-classe` pour les séquences branchées
 
@@ -65,8 +65,8 @@ Certaines de ces histoires concernent des sujets pouvant **heurter la sensibilit
 
 - Merck traque les victimes de cancer et utilise la publicité ciblée de Twitter ([lien](https://bokonads.com/medical-targeting-should-be-illegal/)) ({download}`version PDF<media/articles/Protecting_cancer_victims_from_adtech.pdf>`)
 - "Comment Target a su que ma fille était enceinte avant elle" ([lien](https://www.nytimes.com/2012/02/19/magazine/shopping-habits.html)) ({download}`version PDF<media/articles/How_Companies_Learn_Your_Secrets-NYT.pdf>`)
-- Signal utilise les outils de publicité ciblée de Meta pour montrer aux utilisateur·trice·s ce que Meta sait d'eux/elles ([lien](https://signal.org/blog/the-instagram-ads-you-will-never-see/)) ({download}`version PDF<media/articles/Signal_Blog_The_Instagram_ads_Facebook_wont_show_you.pdf>`)
-- L'application Ovia partage les données de maternité aux employeurs des jeunes mères ou futures mères ([lien](https://www.washingtonpost.com/technology/2019/04/10/tracking-your-pregnancy-an-app-may-be-more-public-than-you-think/))({download}`version PDF<media/articles/The_pregnancy-tracking_app_Ovia_lets_women_record_their_most_sensitive_data_for_themselves__and_their_boss-TWP.pdf>`)
+- Signal utilise les outils de publicité ciblée d'Instagram pour montrer aux utilisateur·trice·s ce que Meta sait d'eux/elles ([lien](https://signal.org/blog/the-instagram-ads-you-will-never-see/)) ({download}`version PDF<media/articles/Signal_Blog_The_Instagram_ads_Facebook_wont_show_you.pdf>`)
+- L'application Ovia partage les données de maternité et menstruation de ses employées aux employeurs ([lien](https://www.washingtonpost.com/technology/2019/04/10/tracking-your-pregnancy-an-app-may-be-more-public-than-you-think/))({download}`version PDF<media/articles/The_pregnancy-tracking_app_Ovia_lets_women_record_their_most_sensitive_data_for_themselves__and_their_boss-TWP.pdf>`)
 - Une newsletter Catholique découvre et révèle qu'un prêtre utilise l'application Grindr (réseau de rencontre gay) en ayant simplement acheté ses données auprès de "{glo}`databroker|Data Brokers`" ([lien](https://www.washingtonpost.com/technology/2021/07/22/data-phones-leaks-church/)) ({download}`version PDF<media/articles/How_smartphone_data_can_be_used_to_learn_secrets-TWP.pdf>`)
 - Des groupes "anti-choix" utilise la technologie de la publicité ciblée pour montrer des publicités anti-avortement aux femmes durant leurs visites en clinique ([lien](https://rewirenewsgroup.com/2016/05/25/anti-choice-groups-deploy-smartphone-surveillance-target-abortion-minded-women-clinic-visits/)) ({download}`version PDF<media/articles/Anti-Choice_Groups_Use_Smartphone_Surveillance_to_Target_Abortion-Minded_Women_During_Clinic_Visits.pdf>`)
 
@@ -116,13 +116,13 @@ Il existe différents types de ressources vers lesquelles peuvent pointer les hy
 Traditionnellement, **les pages web référencées ne sont chargées que lorsque l'on clique dessus**, c'est l'utlisateur·trice qui décide quand télécharger la nouvelle ressource. Les images, scripts et feuilles de style sont quand à eux chargés **automatiquement** ! L'utilisateur·trice n'a la plupart du temps pas conscience du moment où sont chargées ces ressources et d'où elles proviennent. C'est un concept clé pour la suite !
 ```
 
-Les liens référençant des ressources peuvent pointer sur des **ressources internes** (des images par exemple) stockées dans le même dossier que la page web (comme dans l'exemple donné dans le [cours HTML](https://apprendre.modulo-info.ch/resx/web.html#html)), ou vers des ressources tierces localisées n'importe où ailleurs, ce que l'on appelle des **ressources tierces**.
+Les liens référençant des ressources peuvent pointer sur des **ressources internes** (des images par exemple) stockées dans le même dossier que la page web (comme dans l'exemple donné dans le [cours HTML](https://apprendre.modulo-info.ch/resx/web.html#html)), ou vers des **ressources tierces** localisées n'importe où ailleurs.
 
 ```{admonition} Micro-activité
 :class: note
 Vous pouvez télécharger les deux fichiers d'exemple {download}`code/example.html` et {download}`code/example_bootstrap.html`. Ces fichiers très simples rappellent les bases de HTML avec le concept de balise. 
 
-Il est ensuite possible d'identifier avec les élèves les **différences entre le code source des deux fichiers**. Les lignes `9-11` du fichier `example_bootstrap.html` sont effectivement des balises spéciales qui servent de **références à des scripts tierces**. Ces derniers sont **chargés automatiquement** et permettent d'améliorer l'apparence de ma page web grâce à des ressources tierce.
+Il est ensuite possible d'identifier avec les élèves les **différences entre le code source des deux fichiers**. Les lignes `9-11` du fichier `example_bootstrap.html` sont effectivement des balises spéciales qui servent de **références à des scripts tierces**. Ces derniers sont **chargés automatiquement** et permettent d'améliorer l'apparence de ma page web grâce à des ressources tierce (sans avoir à coder soi même).
 ```
 
 ```html
@@ -147,7 +147,7 @@ Il est ensuite possible d'identifier avec les élèves les **différences entre 
 
 ```{admonition} Micro-activité
 :class: note
-La première page HTML contient {bl}`une ressource tierce|>une ressource interne` tandis que la seconde contient une {bl}`>une ressource tierce|une ressource interne`. En effet, l'une de ces page charge {bl}`>une image|une feuille de style|un script` hébergé {bl}`sur Moodle|sur Office365|>sur Wikipedia`.
+La première page HTML contient {bl}`une ressource tierce|>une ressource interne` tandis que la seconde contient une {bl}`>une ressource tierce|une ressource interne`. En effet, l'une de ces page charge {bl}`>une image|une feuille de style|un script` hébergé {bl}`sur Moodle|sur Office365|>sur Wikimedia`.
 ```
 
 ```{admonition} Micro-activité
@@ -157,7 +157,7 @@ Notre navigateur chargera la ressource tierce {bl}`>automatiquement|manuellement
 
 #### JavaScript : exécuter du code dans le navigateur
 
-Comme vu dans le cours, **JavaScript est un language de programmation**, comme Python, qui a comme spécificité d'avoir été développé pour **s'exécuter dans un navigateur**. Ainsi, beaucoup des choses complexes qui se passent dans nos pages web sont codées avec le language JavaScript. Par exemple, l'API WebGL permet d'afficher des applications graphiques complexes (le cube tournant sur [](https://get.webgl.org) est un exemple imagé).
+Comme vu dans le cours, **JavaScript est un language de programmation**, comme Python, qui a comme spécificité d'avoir été développé pour **s'exécuter dans un navigateur**. Ainsi, beaucoup des choses complexes qui se passent dans nos pages web sont codées avec le language JavaScript. Par exemple, l'API WebGL permet d'afficher des applications graphiques complexes (le cube tournant sur <https://get.webgl.org> est un exemple imagé).
 
 Il est important que les élèves comprennent qu'utiliser JavaScript dans son navigateur permet d'**en permanence recevoir du code pour exécuter diverses actions de programmation**. Le language de programmation est une interface entre l'humain·e et la machine, cela permet d'obtenir des informations intéressantes sur la machine utilisée.
 
@@ -186,9 +186,9 @@ Les élèves doivent comprendre que la possibilité d’exécuter du code est un
 
 ```{admonition} À retenir
 :class: attention
-- HTTP est le protocole qui est compris par les clients et les serveurs et leur permet d'échanger du contenu sur internet. Les méthode indiquent l'intention de l’interaction (`GET` ou `POST`)
-- HTML est un language qui permet de transmettre du texte mais aussi des liens vers des ressources. Ces dernières peuvent être internes ou tierce, auquel cas, le protocole HTTP permet de les charger auprès du réel hébergeur
-- JavaScript est un language de programmation à part entière qui permet d’exécuter du code dans le navigateur
+- HTTP est le protocole qui est compris par les clients et les serveurs et leur permet d'**échanger du contenu sur internet**. Les méthode indiquent l'**intention de l’interaction** (`GET` ou `POST`)
+- HTML est un language qui permet de transmettre **du texte mais aussi des liens vers des ressources**. Ces dernières peuvent être **internes ou tierce**, auquel cas, le protocole HTTP permet de les charger auprès du réel hébergeur
+- JavaScript est un **language de programmation** à part entière qui permet d’**exécuter du code dans le navigateur**. C'est une capacité puissante pour **extraire des information sur le navigateur**.
 ```
 
 #### (optionnel) Les cookies : les fichiers pour se rappeler des anciennes sessions
@@ -202,7 +202,7 @@ Par nature, le protocole HTTP est ce que l'on appelle "Stateless", ce qui signif
 
 Or, il peut être bien **pratique de garder ces informations entre deux requêtes**, c'est ce qu'on appelle une **session**, et c'est ce qui se passe dans quasiment chacune de nos interactions web. Le meilleur exemple est par exemple celui d'une session sur <https://office.com>. Lorsque vous vous connectez avec votre compte, vous entrez votre mot de passe, puis tant que vous ne fermez pas votre navigateur, vous n'avez **plus besoin de l'entrer de nouveau**. *Comment Office sait que la même personne est connectées si toutes les requêtes sont indépendantes ?* Grâce aux cookies !
 
-Les cookies sont simplement des **fichiers texte enregistrés dans le navigateur qui sont envoyés automatiquement avec la requête HTTP**. Ainsi, si le cookie contient votre mot de passe (ce n'est généralement pas le cas pour des raisons de sécurité, mais l'image est conceptuellement plus simple), à chaque requête, il est possible de vous authentifier automatiquement sans même que vous vous en rendiez compte ! Fermer le navigateur annule en général ceci car il est souvent configuré que la fermeture du navigateur efface les cookies : plus de petit fichier texte avec votre "mot de passe" envoyé en même temps que chaque requête à <https://office.com>
+Les cookies sont simplement des **fichiers texte enregistrés dans le navigateur qui sont envoyés automatiquement avec la requête HTTP**. Ainsi, si le cookie contient votre mot de passe (ce n'est généralement pas le cas pour des raisons de sécurité, mais l'image est conceptuellement plus simple), à chaque requête, il est possible de vous authentifier automatiquement sans même que vous vous en rendiez compte ! Fermer le navigateur annule en général ceci car il est souvent configuré que la fermeture du navigateur efface les cookies : plus de petit fichier texte avec votre "mot de passe" envoyé en même temps que chaque requête à <https://office.com>, il faut vous reconnecter.
 
 (webtracking.theorietracereseau)=
 
@@ -210,16 +210,16 @@ Les cookies sont simplement des **fichiers texte enregistrés dans le navigateur
 
 *Durée : 10-15 min*
 
-Cette étape se veut être une étape d'**introduction de TP avec les élèves** : l'idée est de les accompagner avec l'outil d'analyse du réseau de leur navigateur et leur permettre de progressivement et en autonomie croissante, pouvoir effectuer les exercices demandés. Un **phase introductive frontale et guidée** peut être une bonne idée pour s'assurer d'initialement avoir l'attention de toutes et tous et éviter d'avoir des élèves perdus.
+Cette étape se veut être une étape d'**introduction de TP avec les élèves** : l'idée est de les accompagner avec l'outil d'analyse du réseau de leur navigateur et leur permettre de progressivement et en autonomie croissante, pouvoir effectuer les exercices demandés. Une **phase introductive frontale et guidée** peut être une bonne idée pour s'assurer d'initialement avoir l'attention de toutes et tous et éviter d'avoir des élèves perdus.
 
 ```{admonition} Important
 :class: caution
-Les élèves seront amenés à navigueur par eux/elles même. Ceci est grandement encouragé mais il est important d'appuyer qu'**il sera difficile de comprendre tout le traffique observé sur n'importe quel site web (même pour l'enseignant·e)** ! Expert·e des technologies web est un métier, et même les personnes expertes sont spécialisées dans un domaine : tout comprendre du web est aujourd'hui presque utopique !
+Les élèves seront amenés à naviguer par eux/elles même. Ceci est grandement encouragé mais il est important d'appuyer qu'**il sera difficile de comprendre tout le trafique observé sur n'importe quel site web (même pour l'enseignant·e)** ! Expert·e des technologies web est un métier, et même les personnes expertes sont spécialisées dans un domaine : tout comprendre du web est aujourd'hui presque utopique !
 
-Toutefois, il faut absolument valoriser et expliquer que **les critères de réussite de la tâche ne se mesureront pas en "combien de % des requêtes je suis capable de comprendre"** mais "**suis-je capable d'expliquer le contenu et la nature de certaines requêtes ? Comment puis-je les justifier dans leur contexte ? Suis-je capable d'expliquer une requête particulière sélectionnée volontairement par mon enseignant·e ?**" (c'est ce qui rend la tâche intéressante, authentique et l'éloigne d'une forme d'évaluation mesure 😉).
+Toutefois, il faut absolument valoriser et expliquer que **les critères de réussite de la tâche ne se mesureront pas en "combien de % des requêtes je suis capable de comprendre"** mais "**suis-je capable d'expliquer le contenu et la nature de certaines requêtes ? Comment puis-je les justifier dans leur contexte ? Suis-je capable d'expliquer une requête particulière sélectionnée volontairement par mon enseignant·e ?**" (c'est ce qui rend la tâche intéressante, authentique et l'éloigne d'une forme d'évaluation mesure 😉). Voir [](webtracking.didactique)
 ```
 
-Il existe de nombreux moyens d'observer une trace réseau, et à différents niveaux de la couche OSI (applications de monitoring dans le routeur, application dans le système d'exploitation comme [Wireshark](https://www.wireshark.org/) ou [tcpdump](https://www.tcpdump.org/)). Toutefois, pour cette proposition d'activité, nous utilisons l'outil intégré au navigateur car il est :
+Il existe de nombreux moyens d'observer une trace réseau, et à différents niveaux de la couche OSI (applications de monitoring dans le routeur, application dans le système d'exploitation comme [Wireshark](https://www.wireshark.org/) ou [tcpdump](https://www.tcpdump.org/)). Toutefois, pour cette proposition d'activité, nous utilisons **l'outil intégré au navigateur** car il est :
 
 - intégré : rien n'est à installer sur les ordinateurs du gymnase ou à la maison
 - lisible et axé sur les aspects du web et moins sur les informations de la couche OSI, ce qui permettra d'identifier plus clairement les acteurs
@@ -235,13 +235,13 @@ L'activité est principalement développée en testant **sur Firefox**. Des test
 
 ```{admonition} Micro-activité
 :class: note
-Pour commencer à montrer aux élèves le fonctionnement de l'outil de capture, il est possible de leur proposer de se rendre sur [](example.com), et d'**activer leurs outils de développement web**.
+Pour commencer à montrer aux élèves le fonctionnement de l'outil de capture, il est possible de leur proposer de se rendre sur <example.com>, et d'**activer leurs outils de développement web**.
 ![Activation des outils web sur Firefox](media/images/webtools.jpeg)
 
 Une fois ceci fait, il est possible de les emmener sur **l'onglet "Réseau"** où iels pourront recharger la page et voir la liste des requête réseau faîtes.
 ![Ouverture de l'onglet Réseau sur la console de Firefox](media/images/webtools-network.jpeg)
 
-Afin de toutes et tous partir sur une base commune, il peut être pertinent de leur demander d'activer **les mêmes en-tête pour chacun et chacune** en faisant un clic-droit sur la barre d'en-tête de l'onglet réseau :
+Afin de toutes et tous partir sur une base commune, il peut être pertinent de leur demander d'activer **les mêmes en-tête pour toute le monde** en faisant un clic-droit sur la barre d'en-tête de l'onglet réseau :
 ![Onglets à activer dans les outils de développement réseau](media/images/webtools-headers.jpeg)
 
 Un fois ceci fait, le prochain outil essentiel est la **barre de filtre** où les élèves peuvent ajouter de nombreux types de filtres qui seront utiles plus tard.
@@ -269,7 +269,7 @@ Ainsi, il revient à l'enseignant·e de distinguer vers quels élèves interveni
 
 ```{admonition} Micro-activité
 :class: note
-Demander aux élèves de se rendre sur un site web très simple, comme par exemple https://example.org dans un nouvel onglet. Le but est ici de les forcer à **refaire la procédure d'ouverture des outils de développement web** (et se rappeler que, comme l'indiquent les navigateurs, la page doit être rechargée).
+Demander aux élèves de se rendre sur un site web très simple, comme par exemple <https://example.org> dans un nouvel onglet. Le but est ici de les forcer à **refaire la procédure d'ouverture des outils de développement web** (et se rappeler que, comme l'indiquent les navigateurs, la page doit être rechargée).
 
 Une fois ceci fait, les élèves doivent reporter les informations suivantes (quiz Moodle, quiz papier, ...):
 
@@ -289,7 +289,7 @@ Notez les points suivants qui sont fondamentaux pour poursuivre la séquence :
 
 ```{admonition} Micro-activité
 :class: note
-Demander aux élèves de se rendre sur un site légèrement plus complexe mais toutefois **chargeant principalement des ressources internes** comme par exemple https://fr.wikipedia.org ou https://www.vd.ch. De nouveau, vérifier la bonne compréhension de la mise en place du moniteur de réseau.
+Demander aux élèves de se rendre sur un site légèrement plus complexe mais toutefois **chargeant principalement des ressources internes** comme par exemple <https://fr.wikipedia.org> ou <https://www.vd.ch>. De nouveau, vérifier la bonne compréhension de la mise en place du moniteur de réseau.
 
 Une fois ceci fait, il est possible de par exemple demander aux élèves de reporter les informations suivantes :
 | Nom de ressource            | Méthode HTTP | Domaine contacté | Protocole utilisé | Pourquoi la requête est initiée                                 | Type de document reçu | Intérêt de la requête                                                                 |
@@ -301,13 +301,13 @@ Une fois ceci fait, il est possible de par exemple demander aux élèves de repo
 
 A noter que :
 - vous pouvez librement **pré-remplir certaines lignes** pour sélectionner précisément certaines ressources à étudier, communes pour tous les élèves
-- il est peut être **difficile d'analyser en détail le script chargé**. Une explication simple suffit à justifier de la compréhension de l'élève. Un script comme ressource interne est souvent une ressource qui permet d'afficher le contenu de la page : éléments dynamiques et animations, adaptation aux différents écrans, ...
+- il est peut être **difficile d'analyser en détail le script chargé**. Une explication simple suffit à justifier de la compréhension de l'élève. Un script comme ressource interne permet souvent d'afficher le contenu de la page : éléments dynamiques et animations, adaptation aux différents écrans, ...
 ```
 
 ```{admonition} Micro-activité
 :class: note
 :name: google-post
-Un autre exercice intéressant peut être d'identifier **des requêtes de type POST**. Un bon exemple est la page d'accueil de Google : https://www.google.com/.
+Un autre exercice intéressant peut être d'identifier **des requêtes de type POST**. Un bon exemple est la page d'accueil de Google : <https://www.google.com/>
 
 Une fois ceci fait, il est possible de par exemple demander aux élèves de reporter les informations suivantes :
 | Nom de ressource | Méthode HTTP | Domaine contacté | Protocole utilisé | Pourquoi la requête est initiée                             | Type de document reçu | Intérêt de la requête                                                                 |
@@ -324,7 +324,7 @@ A noter que :
 
 ```{admonition} Micro-activité
 :class: note
-Demander aux élèves de se rendre sur un site légèrement plus complexe et **axé sur le chargement de ressources pouvant être tierces** comme par exemple https://code.org/helloworld. De nouveau, vérifier la bonne compréhension de la mise en place du moniteur de réseau.
+Demander aux élèves de se rendre sur un site légèrement plus complexe et **axé sur le chargement de ressources pouvant être tierces** comme par exemple <https://code.org/helloworld>. De nouveau, vérifier la bonne compréhension de la mise en place du moniteur de réseau.
 
 Une fois ceci fait, il est possible de par exemple demander aux élèves de reporter les informations suivantes :
 | Nom de ressource                   | Méthode HTTP | Domaine contacté      | Protocole utilisé | Pourquoi la requête est initiée                    | Type de document reçu | Intérêt de la requête                                                                                                                        |
@@ -335,21 +335,21 @@ Une fois ceci fait, il est possible de par exemple demander aux élèves de repo
 
 A noter que :
 - dire que **la fonction d'un script est dure à analyser est une réponse valide** (même si elle donne peu d'information, il est important de discerner entre l'analysable et le non analysable). Comme précédemment, les élèves doivent juste pouvoir décrire les fonctions habituelles standard d'un script (pour le différencier d'une image ou d'un document)
-- le site chargeant beaucoup de ressources, il devient essentiel d'**indiquer clairement aux élèves comment se servir de la barre de filtre** pour identifier une ressource, et **quelles ressources cibler**. Il est possible de faire **varier les attributs ciblés pour tester la compréhension des élèves** : "identifiez la ressource chargée auprès de Facebook", "identifiez les requêtes POST" ou "identifiez les ressources de type feuille de style" permettent d'identifier des compétences de discrimination et de ciblage variées chez les élèves. 
+- le site chargeant beaucoup de ressources, il devient essentiel d'**indiquer clairement aux élèves comment se servir de la barre de filtre** pour identifier une ressource, et **quelles ressources cibler**. Il est possible de faire **varier les attributs ciblés pour tester la compréhension des élèves** : "identifiez la ressource chargée auprès de Facebook", "identifiez les requêtes POST" ou "identifiez les ressources de type feuille de style" permettent d'identifier des compétences de discrimination et de ciblage variées chez les élèves. Les élèves moins à l'aise avec la barre de filtre peuvent aussi **cliquer sur l'entête d'une colonne pour trier** selon les valeurs de cette dernière. 
 ```
 
 #### (optionnel) Chargement sécurisé et non-sécurisé
 
 ```{admonition} Aller plus loin
 :class: note
-Cette partie est classée comme **"optionnelle" pour permettre une flexibilité avec des élèves ayant plus de difficultés** avec les contenus précédents et y passer plus de temps. Cette partie s'intéresse spécifiquement aux connections sécurisées contre non-sécurisées. Cela peut être un bon appui pour un rebond lors de la **discussion sur la confidentialité dans la partie [](webtracking.proprietevieprivee)**, mais n'est pas forcément nécessaire pour comprendre les enjeux du suivi sur internet. 
+Cette partie est classée comme **"optionnelle" pour permettre une flexibilité vis à vis des élèves ayant plus de difficultés** avec les contenus précédents et y passer plus de temps. Cette partie s'intéresse spécifiquement aux connections sécurisées contre non-sécurisées. Cela peut être un bon appui pour un rebond lors de la **discussion sur la confidentialité dans la partie [](webtracking.proprietevieprivee)**, mais n'est pas forcément nécessaire pour comprendre les enjeux du suivi sur internet. 
 
 La plupart des navigateurs actuels sont très informatifs sur les implications d'une connection sécurisée, mais un test en condition peut être pertinent pour encadrer et institutionaliser cette situation.
 ```
 
 ```{admonition} Micro-activité
 :class: note
-Afin de tester et identifier une connexion non sécurisée, le site web http://testphp.vulnweb.com/login.php propose une interface volontairement insécure. Il est important de rappeler aux élèves les implications d'une connexion non-sécurisée. La page de login permet de tester l'envoi d'un formulaire non-sécurisé (des identifiants par défauts sont disponibles et les seuls fonctionnels: username `test`, password `test`). Entrer ces informations et appuyer sur "login" permet d'obtenir une trace intéressante.
+Afin de tester et identifier une connexion non sécurisée, le site web <http://testphp.vulnweb.com/login.php> propose une interface volontairement insécure. Il est important de rappeler aux élèves les implications d'une connexion non-sécurisée. La page de login permet de tester l'envoi d'un formulaire non-sécurisé (des identifiants par défauts sont disponibles et les seuls fonctionnels: username `test`, password `test`). Entrer ces informations et appuyer sur "login" permet d'obtenir une trace intéressante.
 
 Une fois ceci fait, il est possible de par exemple demander aux élèves de reporter les informations suivantes :
 | Nom de ressource | Méthode HTTP | Domaine contacté    | Protocole utilisé | Pourquoi la requête est initiée | Type de document reçu | Intérêt de la requête                                                                                    |
@@ -366,7 +366,7 @@ A noter que :
 ---
 alt: screenshot password plaintext transmission
 name: testvulnweb
-width: 550px
+width: 650px
 ---
 Voir le mot de passe dans l'analyse réseau d'une requête POST d'authentification sur un site web non sécurisé
 ```
@@ -383,7 +383,7 @@ Une fois que les élèves sont familiarisé·e·s avec l'observation de trace r�
 
 Le premier moment clé de l'analyse de suivi ou non sur le web est l'identification de ce que sont les traqueurs. De nombreuses définitions existent : {glo}`tracker@1|Ghostery`, {glo}`tracker@2|Wikipedia` ou {glo}`tracker@3|Mozilla` proposent des définitions intéressantes et variées, qui mettent en avant différentes facettes du suivi.
 
-Dans le cadre de cette séquence de TP, nous allons identifier différents types de traqueurs par leur méthode de fonctionnement et l'information qu'ils transmettent, afin de faire un pont entre l'identification de ces derniers dans une trace réseau, et les propriétés de la vie privée mises à mal. L'idée est alors de présenter aux élèves 3 types de traqueurs :
+Dans le cadre de cette séquence de TP, nous allons identifier différents types de traqueurs par **leur méthode de fonctionnement** et **l'information qu'ils transmettent**, afin de faire un pont entre l'identification de ces derniers dans une trace réseau, et les propriétés de la vie privée mises à mal. L'idée est alors de présenter aux élèves 3 types de traqueurs :
 
 | Type de traqueur              | Fonctionnement                                                                                                                                                                                                                                                                                                                       | Information transmise                                                                                                              | Exemple                                                                                                                                                             |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -391,15 +391,15 @@ Dans le cadre de cette séquence de TP, nous allons identifier différents types
 | Fingerprinting                | Le navigateur reçoit du code JavaScript qui permet d'identifier des attributs précis et unique de votre navigateur et les envoie sur un domaine de suivi                                                                                                                                                                             | De nombreux attributs sont transmis, et ils permettent souvent d'identifier uniquement un navigateur (soit un·e utilisateur·trice) | [coveryourtracks.eff.org](https://coveryourtracks.eff.org/) en montre un très bon exemple                                                                           |
 | Cookie tierce                 | Comme vu sous [](webtracking.interractionressourcesweb), les cookies sont des fichiers texte transmis automatiquement avec les requête HTTP. Sans contrôle de la part du navigateur, un site peut déposer et prendre les cookies des autres sites pour traquer un·e utilisateur·trice en lui attribuant un numéro unique par exemple | Quel utilisateur·trice visite quels sites et quand                                                                                 | [La page wikipedia sur le sujet](https://en.wikipedia.org/wiki/HTTP_cookie#Third-party_cookie) apporte un bon exemple                                               |
 
-Le choix de présentation de ces types de traqueurs est libre. Il est possible de s'axer sur la mise en exergue d'exemple, l'utilisation de slides ou d'un tableau de classification. L'idée est de permettre aux élèves de **distinguer que différents types de traqueurs existent et emploient différentes méthodes** : des plus ou moins complexes, permettant d'obtenir des **informations plus ou moins précise** (ce qui sera un rebond essentiel dans l'explication de la partie [](webtracking.proprietevieprivee)). Il est important aussi d'expliquer que la plupart de ces méthodes sont **utilisées en combinaison pour assurer les chances de succès**.
+Le choix de présentation de ces types de traqueurs est libre. Il est possible de s'axer sur la mise en exergue d'exemple, l'utilisation de slides ou d'un tableau de classification. L'idée est de permettre aux élèves de **distinguer que différents types de traqueurs existent et emploient différentes méthodes** : des plus ou moins complexes, permettant d'obtenir des **informations plus ou moins précise** (ce qui sera un rebond essentiel dans l'explication de la partie [](webtracking.proprietevieprivee)). Il est important aussi d'expliquer que la plupart de ces méthodes sont **utilisées en combinaison pour assurer les chances de succès** (les cookies sont transmis en contactant le domaine du domaine si possible, par exemple).
 
 ```{admonition} À retenir
 :class: attention
-- différentes méthodes de suivi existent, elles sont souvent utilisées en combinaison
-  - il sera difficile d'identifier clairement à quelle catégorie de traqueur correspond un élément de trace réseau (et c'est normal, un script peut déclancher un beacon et tenter en même temps du fingerprinting et s'aider de cookies, la nuance est fine dans la réalité)
-  - le but sera d'utiliser le jugement et la compréhension des élèves pour leur faire faire des suppositions sur la nature du traqueur (**GET vers un site tierce : beacon, POST généré automatiquement par JavaScript : fingerprinting**)
-- elles sont plus ou moins complexes et fournissent des informations différentes
-- elles ont globalement pour objectif d'identifier uniquement une personne navigant entre plusieurs pages (concept même de suivi)
+- **différentes méthodes** de suivi existent, elles sont souvent **utilisées en combinaison**
+  - il sera difficile d'identifier clairement à quelle catégorie de traqueur correspond un élément de trace réseau (et c'est normal, un script peut déclencher un beacon et tenter en même temps du fingerprinting et s'aider de cookies, la nuance est fine dans la réalité)
+  - le but sera d'utiliser le jugement et la compréhension des élèves pour **leur faire faire des suppositions sur la nature du traqueur** (**GET vers un site tierce : beacon, POST généré automatiquement par JavaScript : fingerprinting**)
+- elles sont **plus ou moins complexes** et fournissent des **informations différentes**
+- elles ont globalement pour objectif d'**identifier uniquement une personne navigant** entre plusieurs pages (concept même de suivi)
 ```
 
 ```{admonition} Aller plus loin
@@ -409,9 +409,9 @@ Dépendant de l'aise des élèves dans le domaine, il est possible de mettre en 
 
 #### Comment traquer les traqueurs
 
-Une fois les différents types de traqueurs analysés, l'objectif est de pouvoir les identifier dans la communication avec un site web et permettre aux élèves de faire le lien entre les technologies de tracking enseignées aux élèves et la réalité des communications réseau sous-jacente.
+Une fois les différents types de traqueurs analysés, l'objectif est de pouvoir **les identifier dans la communication avec un site web** et permettre aux élèves de faire le lien entre les technologies de tracking enseignées aux élèves et la réalité des communications réseau sous-jacente.
 
-Afin de permettre aux élèves d'avoir les outils nécessaires pour comprendre les interractions entre client, fournisseur de service et traqueur, il semble important de leur donner accès à une base de donnée indexée et répertoriant des traqueurs de sites web connus afin de guider leur recherche. Les sites [whotracks.me](https://whotracks.me) et [trackography.org](https://trackography.org/) fournissent une base de données et des visualisation intéressantes permettant aux élèves de naviguer en autonomie et utiliser leur jugement pour identifier les traqueurs dans une trace réseau.
+Afin de permettre aux élèves d'avoir les outils nécessaires pour comprendre les interactions entre client, fournisseur de service et traqueur, il semble important de leur donner accès à une **base de donnée indexée et répertoriant des traqueurs** de sites web connus afin de guider leur recherche. Les sites [whotracks.me](https://whotracks.me) et [trackography.org](https://trackography.org/) fournissent une base de données et des visualisation intéressantes permettant aux élèves de naviguer en autonomie et utiliser leur jugement pour identifier les traqueurs dans une trace réseau.
 
 ```{admonition} Anecdote
 :class: hint
@@ -423,7 +423,7 @@ Le site web de [whotracks.me](https://whotracks.me) utilise des données open-so
 :name: ricardo-activity
 Demander aux élèves de se rendre sur le site [whotracks.me](https://whotracks.me), et d'utiliser la barre de recherche pour trouver le site ["ricardo.ch"](https://whotracks.me/websites/ricardo.ch.html). En bas de cette page, les élèves trouveront les traqueurs qu'iels peuvent s'attendre à voir et, en cliquant dessus il est possible d'obtenir quelques informations au sujet des entreprises de tracking concernées.
 
-Les élèves peuvent maintenant se rendre sur le site web [ricardo.ch](https://ricardo.ch) et ouvrir leurs outils d'analyse du réseau. A l'aide de la base de données de traqueurs, il est possible de demander aux élèves d'identifier des connexions liées aux 10 traqueurs les plus présents sur le site d'après la base de données. Il est ensuite possible de leur demander de reporter les informations suivantes (notez l'addition d'une nouvelle colonne à droite) : 
+Les élèves peuvent maintenant se rendre sur le site web [ricardo.ch](https://ricardo.ch) et ouvrir leurs outils d'analyse du réseau. A l'aide de la base de données de traqueurs, il est possible de demander aux élèves d'identifier des connexions liées aux 10 traqueurs annoncés comme les plus présents sur le site d'après la base de données. Il est ensuite possible de leur demander de reporter les informations suivantes (notez l'addition d'une nouvelle colonne à droite) : 
 | Nom de ressource | Méthode HTTP | Domaine contacté     | Protocole utilisé | Pourquoi la requête est initiée           | Type de document reçu | Intérêt de la requête                                                                                         | Technologie de tracking potentielle (et pourquoi)                                                                      |
 | ---------------- | ------------ | -------------------- | ----------------- | ----------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | ...              | ...          | ...                  |                   |                                           |                       |                                                                                                               |                                                                                                                        |
@@ -468,7 +468,7 @@ Afin de sélectionner un ou plusieurs sites pour créer cette séquences de repo
 
 ```{admonition} Important
 :class: caution
-Une évaluation complète des critères de réussite de cette séquence requiert d'avoir couvert toute l’activité. Ainsi, dépendant de l'avancée des groupes de TP par rapport aux séances débranchées, il peut être pertinent d'utiliser ce temps et cette séquence formative comme une formation sur une sous-partie d'évaluation ou une évaluation complète. Suite à cela, il serait possible d'ajouter des colonnes comme "risques pour la vie privée" et "moyens de protection" pour permettre aux élèves d'exprimer un raisonnement le plus complet possible.
+Une **évaluation complète des critères de réussite** de cette séquence **requiert d'avoir couvert toute l’activité**. Ainsi, dépendant de l'avancée des groupes de TP par rapport aux séances débranchées, il peut être pertinent d'utiliser ce temps et cette séquence formative comme une formation sur une sous-partie d'évaluation ou une évaluation complète. Suite à cela, il serait possible d'ajouter des colonnes comme "risques pour la vie privée" et "moyens de protection" pour permettre aux élèves d'exprimer un raisonnement le plus complet possible.
 ```
 
 (webtracking.proprietevieprivee)=
@@ -477,23 +477,23 @@ Une évaluation complète des critères de réussite de cette séquence requiert
 
 *Durée : 10-15 min*
 
-Lors de cette dernière partie de la séquence, l'idée est de créer des ponts entre les **relations abstraites de haut-niveaux entre des individus/entreprises** et les **réalités des communications réseau sur le web**. Ainsi, il est important d'amener brièvement ce que l'on appelle des propriétés de la vie privée : des éléments qui, lorsqu'ils sont manquants, peuvent être utilisé dans des contextes intrusifs contre des individus (rappel des histoires de l'[accroche](webtracking.accroche)).
+Lors de cette dernière partie de la séquence, l'idée est de créer des ponts entre les **relations abstraites de haut-niveaux entre des individus/entreprises** et les **réalités des communications réseau sur le web**. Ainsi, il est important d'amener brièvement ce que l'on appelle des propriétés de la vie privée : *des éléments qui, lorsqu'ils sont manquants, peuvent être utilisé dans des contextes intrusifs contre des individus* (rappel des histoires de l'[accroche](webtracking.accroche)).
 
 | Propriété       | Définition                                                                                                                                                   | Cherche à protéger                                                                                                                   | Ne permet pas de protéger (entre autres)                                                                                                                                               | Comment l'atteindre                                                          |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | Confidentialité | le fait de ne permettre qu'aux personnes souhaitées d'accéder à une information                                                                              | des données (mots de passe, codes de carte bleu)                                                                                     | le contexte autour de ces informations (savoir qu'une information existe par exemple)                                                                                                  | Chiffrement                                                                  |
 | Pseudonymité    | le fait de remplacer un identifiant par un autre (un nom de famille par un pseudo par exemple)                                                               | un nom en particulier                                                                                                                | l'association entre un pseudo et différentes actions d'une même personne (sous couvert du même pseudo sur 2 forums, il est possible d'associer nos messages postés à la même personne) | Remplacer les noms par des alternatives                                      |
-| Anonymité       | le fait de rendre indistingables différent·e·s utilisateur·trice·s : il pourrait s'agir à chaque fois de la même personne ou de personnes toutes différentes, aucune information disponible ne permet de distinguer | l'identité des utilisteur·trice·s (protéger leur réelle identité et pouvoir en adopter de nouvelles vis à vis de différents acteurs) | la déniabilité, la possibilité de rendre indistingable le fait d'avoir fait une action ou non                                                                                          | Très complexe et dans beaucoup de cas, impossible sans supprimer des données |
+| Anonymité       | le fait de rendre indistingables différent·e·s utilisateur·trice·s : il pourrait s'agir à chaque fois de la même personne ou de personnes toutes différentes, aucune information disponible ne permet de distinguer | l'identité des utilisteur·trice·s (protéger leur réelle identité et pouvoir en adopter de nouvelles vis à vis de différents acteurs) | la déniabilité, la possibilité de rendre indistingable le fait d'avoir fait une action ou non                                                                                          | Très complexe et dans beaucoup de cas, impossible sans supprimer des données (les [](webtracking.ressources) peuvent donner des exemples intuitifs) |
 
 Ces propriétés permettent d'encadrer en partie ce qu'est la vie privée d'un point de vue plus formel. Dans chacune des histoires de l'accroche, il existe un problème car les individus concernés s'attendent à une forme d'anonymité sur internet vis à vis de certains acteurs (leur entreprise, le publique, les groupes "anti-choix", leur réseau social ...). Il est alors pertinent d'utiliser cette explication en parallèle d'un rappel de l'accroche choisie pour le cours.
 
 ```{admonition} À retenir
 :class: attention
 - il existe différents aspects de la vie privée qu'il est intéressant de protéger
-- la vie privée s'évalue toujours par rapport à un "adversaire", une entité définie dans notre système d’interaction (le service de publicité ciblée, le fournisseur de service, le réseau, l’État, ...)
+- la vie privée s'évalue toujours **par rapport à un "adversaire"**, une entité définie dans notre système d’interaction (le service de publicité ciblée, le fournisseur de service, le réseau, l’État, ...)
 - la pseudonymitié est la plupart du temps la seule propriété qu'il est facile d'obtenir sur le web
-- l'anonymité est une propriété très puissante, loin d'être applicable et encore moins dans le contenu du suivi sur le web
-- les technologie du suivi sur le web ont toutes un dénominateur commun : identifier le plus précisément possible les utilisateur·trice·s. Cependant cela est précisément l'encontre de l'anonymité et peut avoir des répercussions néfastes si ce n'est pas contrôlé
+- l'**anonymité est une propriété très puissant**e, loin d'être applicable et encore moins dans le contenu du suivi sur le web
+- les technologie du suivi sur le web ont toutes un dénominateur commun : **identifier le plus précisément possible les utilisateur·trice·s**. Cependant cela est précisément l'encontre de l'anonymité et peut avoir des répercussions néfastes si ce n'est pas contrôlé
 ```
 
 ```{question}
@@ -576,14 +576,14 @@ La **configuration par défaut de la plupart des navigateurs ne permet pas une p
 
 Il est possible de présenter aux élèves des extensions reconnues et efficace comme [uBlock Origin](https://github.com/gorhill/uBlock#ublock-origin), [Ghostery](https://www.ghostery.com/) ou [Privacy Badger](https://privacybadger.org/). Notamment, ces extensions ont l'avantage précieux d'être open-source ce qui limite les risques d'avoir un logiciel espion mal intentionné ayant accès à notre navigateur.
 
-Il est encouragé de discuter avec les élèves pour identifier des extensions qu'iels connaîtraient déjà et leur expliquer le fonctionnement de ces dernières. Il serait même par exemple pertinent de **montrer sur votre propre ordinateur un "avant-après"** pour attester de l'efficacité des extensions comme peut le montrer la capture d'écran suivante, en lien avec les communications faites et vues en TP.
+Il serait même par exemple pertinent de **montrer sur votre propre ordinateur un "avant-après"** pour attester de l'efficacité des extensions comme peut le montrer la capture d'écran suivante, en lien avec les communications faites et vues en TP.
 
 ![ubo works](media/images/ublock.jpeg)
 ```
 
 ```{admonition} Les VPN
 :class: note
-Au vu du martèlement marketing autour de ce produit, les élèves auront sans doutes entendu parlé de VPN personnels. Il peut être intéressant d'en expliquer les avantages et inconvénients :
+Au vu du martèlement marketing autour de ce produit, les élèves auront sans doutes entendu parlé de VPN personnels. Il peut être intéressant d'en expliquer **les avantages et inconvénients** :
 - ✅ l'idée est de **remplacer votre adresse IP** par celle d'un de leur serveur, les beacons ne seront pas capables de vous identifier par ce biais
 - ❌ vos **cookies et votre empreinte numérique peuvent eux être transmis sans soucis** : cela opère à une **couche applicative**, et pas une couche IP
   - de même, si vous utilisez un compte (compte google ou YouTube), vos données sont sauvegardées dans ce compte, cela peut sembler bête mais important de rappeler conceptuellement
@@ -738,14 +738,19 @@ Cette partie présente donc **les objectifs identifiés du plan d'étude** que l
 
 ### Réseau : interopérabilité
 
-- Dans la partie [](webtracking.protection), il est mentionné que la protection de la vie privée doit passer par des technologies agissant à **différents niveaux de la couche OSI**. En effet, il est pertinent de mentionner que **la sécurité en générale doit être considérée aux différents niveaux de couches**, créant des liens intéressants avec la partie réseaux
+- Dans la partie [](webtracking.protection), il est mentionné que la protection de la vie privée doit passer par des technologies agissant à **différents niveaux de la couche OSI** et que notamment, les cookies et le VPN agissent à différents niveaux. En effet, il est pertinent de mentionner que **la sécurité en générale doit être considérée aux différents niveaux de couches**, créant des liens intéressants avec la partie réseaux
+
+(webtracking.ressources)=
 
 ## Ressources complémentaires
 
-### Le suivi sur internet
+### L'anonymat : une propriété utopique
 
 - Le youtubeur Micode montre comment il fait pour joindre des informations pour retrouver des informations sur quelqu'un à partir d'une photo : un bon exemple de **la complexité d'être anonyme sur internet** - <https://www.youtube.com/watch?v=udYtHVEwbYA>
 - Le youtubeur Great Review raconte l'histoire de l'oeuvre "He will not divide us" et son lien avec le forum 4Chan qui a utilisé des données publiques pour retrouver l'oeuvre d'art à travers le monde : de nouveau, **il est dur d'être anonyme sur internet** - <https://www.youtube.com/watch?v=jDU1uywsoaM>
+
+### Le suivi sur internet
+
 - Un blogpost de l'entreprise SurfShark pour expliquer **leur protocole de mesure de la présence de traqueurs** sur un ensemble de site web populaires - <https://surfshark.com/whos-tracking-you>
 - Un article de la BBC décrivant comment **cliquer sur un lien depuis Google informe des tierces** - <https://www.bbc.com/news/technology-49593830>
 - Une petite BD résumant **le fonctionnement du suivi sur le web** - <https://www.freecodecamp.org/news/what-you-should-know-about-web-tracking-and-how-it-affects-your-online-privacy-42935355525/>
