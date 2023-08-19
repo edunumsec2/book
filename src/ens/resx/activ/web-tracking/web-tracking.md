@@ -8,8 +8,8 @@ Cela n'a pas pu vous échapper, le web moderne est rempli de "**{glo}`tracker@2|
 * **Thème** : `Réseaux` (transversal avec `Vie privée et surveillance` et `Economie du numérique`)
 * **Niveau** : `moyen` <!-- L'activité n'est pas facile, car elle demande une certaine supervision de l'enseignant·e et car les outils sont probablement inconnus des élèves. Elle n'est toutefois pas difficile car rien n'est à installer, l'activité peut se faire sans outil autre que l'ordinateur et le navigateur ce qui en simplifie l'accessibilité. Les objectifs sont d'une complexité notable mais peu exigeants sur les pré-requis et la technicité. Dépendant de l'aise des élèves et de l'avancée dans le chapitre Web, l'activité prévoit de revoir les points essentiels du web à comprendre pour effectuer l’activité à tout niveau. -->
 * **Durée** : 4 périodes (2 séances de 45 minutes débranchées, 1 séance de 90 minutes branchée)
-* **Objectifs pédagogiques** : les objectifs de cette séquence sont associés à ceux du chapitre réseau, notamment `sécurité et sensibilisation aux bonnes pratiques; notions et modèles d’architectures et de protocoles`. De plus, les objectifs transversaux d'enjeux sociaux sont visés notamment `vie privée et surveillance; économie du numérique`. Plus d'explications sont données dans la partie [](webtracking.didactique)
-* **Modalité** : `branché et débranché`
+* **Objectifs pédagogiques** : les objectifs de cette séquence sont associés à ceux du chapitre Réseaux, notamment `sécurité et sensibilisation aux bonnes pratiques; notions et modèles d’architectures et de protocoles`. De plus, les objectifs transversaux d'enjeux sociaux sont visés notamment `vie privée et surveillance; économie du numérique`. Plus d'explications sont données dans la partie [](webtracking.didactique)
+* **Modalité** : `branché` et `débranché`
 * **Matériel** : Ordinateur et navigateur web
 * **Prérequis** : Il est préférable d'avoir étudié les éléments du chapitre [World Wide Wide](https://apprendre.modulo-info.ch/resx/web.html). Cette activité le complète (éventuellement conclu) et lui apporte une activité pratique. L'activité {ref}`encheres` ou équivalent sur le fonctionnement de la publicité ciblée est également requis pour comprendre la présence des acteurs et des enjeux (ceci pourrait s'intégrer dans une séance préliminaire débranchée)
 * **Notions fondamentales** : Les technologies du web et leur fonctionnement, l'{glo}`adtech|Ad Tech` et l'économie du web, les concepts et l'évaluations de vie privée du numérique, la compréhension d'une trace réseau, la modélisation d'une interaction sur le web avec l'association à des entités et leurs intérêts
@@ -214,7 +214,7 @@ Cette étape se veut être une étape d'**introduction de TP avec les élèves**
 
 ```{admonition} Important
 :class: caution
-Les élèves seront amenés à naviguer par eux/elles même. Ceci est grandement encouragé mais il est important d'appuyer qu'**il sera difficile de comprendre tout le trafique observé sur n'importe quel site web (même pour l'enseignant·e)** ! Expert·e des technologies web est un métier, et même les personnes expertes sont spécialisées dans un domaine : tout comprendre du web est aujourd'hui presque utopique !
+Les élèves seront amenés à naviguer par eux/elles même. Ceci est grandement encouragé mais il est important d'appuyer qu'**il sera difficile de comprendre tout le trafic observé sur n'importe quel site web (même pour l'enseignant·e)** ! Expert·e des technologies web est un métier, et même les personnes expertes sont spécialisées dans un domaine : tout comprendre du web est aujourd'hui presque utopique !
 
 Toutefois, il faut absolument valoriser et expliquer que **les critères de réussite de la tâche ne se mesureront pas en "combien de % des requêtes je suis capable de comprendre"** mais "**suis-je capable d'expliquer le contenu et la nature de certaines requêtes ? Comment puis-je les justifier dans leur contexte ? Suis-je capable d'expliquer une requête particulière sélectionnée volontairement par mon enseignant·e ?**" (c'est ce qui rend la tâche intéressante, authentique et l'éloigne d'une forme d'évaluation mesure 😉). Voir [](webtracking.didactique)
 ```
@@ -427,7 +427,7 @@ Les élèves peuvent maintenant se rendre sur le site web [ricardo.ch](https://r
 | Nom de ressource | Méthode HTTP | Domaine contacté     | Protocole utilisé | Pourquoi la requête est initiée           | Type de document reçu | Intérêt de la requête                                                                                         | Technologie de tracking potentielle (et pourquoi)                                                                      |
 | ---------------- | ------------ | -------------------- | ----------------- | ----------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | ...              | ...          | ...                  |                   |                                           |                       |                                                                                                               |                                                                                                                        |
-| gtm.js           | GET          | googletagmanager.com | HTTPS             | Du code javascript a généré cette requête | -                     | Ricardo.ch utilise les services de Google Tag Manager pour analyser le trafique sur son site web             | On suppose un beacon car il s'agit d'un "service de tag" (c'est dans le nom)                                           |
+| gtm.js           | GET          | googletagmanager.com | HTTPS             | Du code javascript a généré cette requête | -                     | Ricardo.ch utilise les services de Google Tag Manager pour analyser le trafic sur son site web             | On suppose un beacon car il s'agit d'un "service de tag" (c'est dans le nom)                                           |
 | map.js           | GET          | maps.google.com      | HTTPS             | Du code javascript a généré cette requête | Code JavaScript       | Ricardo.ch utilise les services de Google Maps pour permettre d'identifier la position de l'utilisateur·trice | On suppose un beacon : Google est informé de notre visite sur Ricardo.ch via cette requête                             |
 | -                | POST         | sentry.io            | HTTPS             | Du code javascript a généré cette requête | -                     | Ricardo.ch utilise les services de Sentry.Io pour analyser la qualité de service de leurs clients             | On suppose du fingerprinting car une requête POST a donné des informations sans que nous n'interagissions avec le site |
 
@@ -611,22 +611,22 @@ Pour limiter l'usage du fingerprinting sur google.com, il vaut mieux que j'utili
 
 #### Des moyens plus respectueux d'utiliser la publicité
 
-Suite à cette discussion, les élèves peuvent éventuellement poser la question de la **rupture de la boucle économique** décrite dans [](webtracking.commerceweb) dans le cas où les pubs seraient bloquées, et à juste titre. Chaque année, le marché de la publicité ciblée rapporte [plus d'une centaine de milliards de dollars à Google](https://www.cnbc.com/2021/05/18/how-does-google-make-money-advertising-business-breakdown-.html) par exemple. Il semble donc clair qu'**aucune entreprise ne veut se passer de ce marché et ces revenus**. C'est pourquoi il peut être judicieux de parler aux élèves en tant que futurs citoyen·ne·s et potentiellement futur·e·s analystes de trafique web : il existe des moyens d'**avoir des informations et de la publicité utiles sans s'introduire à ce point dans la vie privée** :
+Suite à cette discussion, les élèves peuvent éventuellement poser la question de la **rupture de la boucle économique** décrite dans [](webtracking.commerceweb) dans le cas où les pubs seraient bloquées, et à juste titre. Chaque année, le marché de la publicité ciblée rapporte [plus d'une centaine de milliards de dollars à Google](https://www.cnbc.com/2021/05/18/how-does-google-make-money-advertising-business-breakdown-.html) par exemple. Il semble donc clair qu'**aucune entreprise ne veut se passer de ce marché et ces revenus**. C'est pourquoi il peut être judicieux de parler aux élèves en tant que futurs citoyen·ne·s et potentiellement futur·e·s analystes de trafic web : il existe des moyens d'**avoir des informations et de la publicité utiles sans s'introduire à ce point dans la vie privée** :
 
-- [Plausible](https://plausible.io/) est une alternative open-source à Google analytics qui permet d'analyser le trafique de ses sites web de façon plus légère, axée sur la vie privée et sur des infrastructures européennes
+- [Plausible](https://plausible.io/) est une alternative open-source à Google analytics qui permet d'analyser le trafic de ses sites web de façon plus légère, axée sur la vie privée et sur des infrastructures européennes
 - [Matomo](https://matomo.org/) est une alternative également comparable, notamment prisée pour sa capacité à être déployée "on-premise", et donc éviter des communications tierces mais toujours garder les données chez la même entité
 - [Qwant](https://about.qwant.com/) propose un modèle publicitaire axé sur un suivi limité et un ciblage respectueux de la vie privée, c'est même ce qu'ils [promeuvent auprès des annonceurs](https://about.qwant.com/advertising/)
 
 ```{admonition} À retenir
 :class: attention
 - le **choix de navigateur est crucial**, c'est la porte d'entrée du suivi sur le web, si elle ne permet pas de limiter le suivi il sera impossible d'avoir une vie privée
-- les extensions sont efficaces pour **limiter le trafique vers des sites non désirables**. Elles sont nombreuses et il est préférable d'en choisir des reconnues et recommandées
+- les extensions sont efficaces pour **limiter le trafic vers des sites non désirables**. Elles sont nombreuses et il est préférable d'en choisir des reconnues et recommandées
 - pour se protéger, il faut faire **des choix à différents niveaux (réseau, application)** et utiliser des technologies qui limitent les capacités des technologies de tracking :   
   - **limite du fingerprinting en limitant les capacités de JavaScript** ou les capacités des communication avec les sites recevant l'empreinte numérique, éventuellement à l'aide d'une extension 
   - **limite des beacon en cachant son adresse IP** ou empêchant la communication avec les services connus de beacon comme Google Tag Manager, éventuellement à l'aide d'une extension. 
   - Les élèves doivent **comprendre le fonctionnement des technologies de tracking** pour **expliquer ce qui permet de les bloquer**
-- les VPN ne permettent pas une protection mais un **changement d'entité capable d'analyser notre trafique**. C'est notre niveau de confiance qui déterminera la sécurité ou non
-- il existe une **boucle économique respectueuse de la vie privée** tout en permettant d'analyser le trafique et promouvoir ses produits sur le web
+- les VPN ne permettent pas une protection mais un **changement d'entité capable d'analyser notre trafic**. C'est notre niveau de confiance qui déterminera la sécurité ou non
+- il existe une **boucle économique respectueuse de la vie privée** tout en permettant d'analyser le trafic et promouvoir ses produits sur le web
 ```
 
 (webtracking.reinvestissement)=
@@ -694,7 +694,7 @@ Cette partie présente donc **les objectifs identifiés du plan d'étude** que l
 #### Objectifs spécifiques
 
 - Applique
-  - L'élève sait lancer, manipuler et utiliser un logiciel d'analyse de trafique réseau pour présenter des éléments d'une trace en les identifiant avec le vocabulaire adapté du réseau
+  - L'élève sait lancer, manipuler et utiliser un logiciel d'analyse de trafic réseau pour présenter des éléments d'une trace en les identifiant avec le vocabulaire adapté du réseau
 - Analyse
   - L'élève peut décrire et/ou schématiser sa représentation des processus en cours lors d'une communication réseau
   - L'élève peut développer une analyse d'une communication réseau en mettant en avant des risques pour la vie privée et la sécurité des communication en pointant sur des informations sensibles et peut classer ces éléments selon : la confidentialité, la pseudonimitée, l'anonymat et la dissociabilité
@@ -733,7 +733,7 @@ Cette partie présente donc **les objectifs identifiés du plan d'étude** que l
 
 ### Numérique et environnement
 
-- Comme mentionné dans le dossier, l'**impact environnemental de la publicité ciblée** est non négligeable ! Comme vu avec la base de données de la partie [](webtracking.tracereseauetsuivi), il est possible de voir la quantité du trafique (en MB et en pourcentage de contenu chargé par la page) dédiée au suivi et à la publicité ciblée.
+- Comme mentionné dans le dossier, l'**impact environnemental de la publicité ciblée** est non négligeable ! Comme vu avec la base de données de la partie [](webtracking.tracereseauetsuivi), il est possible de voir la quantité du trafic (en MB et en pourcentage de contenu chargé par la page) dédiée au suivi et à la publicité ciblée.
 - De même, dans la partie [](webtracking.protection), les extensions discutées fournissent pour la plupart des **rapports sur le nombre de publicités ciblées bloquées**, et éventuellement le temps de chargement économisé ou la taille des fichiers non-téléchargés. Cela peut aider à se rendre compte de **l'impact en taille et temps informatique de la publicité ciblée**
 
 ### Réseau : interopérabilité
