@@ -33,9 +33,7 @@
 # Pour la partie Histoire : 
 /src/appr/hist/ @prochat
 
-Enseigner 
-
-# Apprendre
+# Enseigner 
 
 # Pour la partie Représentation de l'information : 
 /src/ens/rep-info/ @dasilvadds
@@ -64,8 +62,6 @@ Enseigner
 /src/ens/hist/ @prochat
 
 # Pour la partie Enjeux sociaux : 
-/src/ens/enjx/ @vhaussau
-/src/ens/enjx/ @Lucile24
-/src/ens/enjx/ @noflux
+/src/ens/enjx/ @soniaagrebi
 
 
