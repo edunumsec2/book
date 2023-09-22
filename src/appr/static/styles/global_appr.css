@@ -73,6 +73,12 @@ body.modulo-dark .dropdown {
     font-size: 0.8rem;
 }
 
+.caption-number {
+    font-size: 0.8rem;
+    font-weight: 700;
+    
+}
+
 figure {
     padding: 30px;
 }

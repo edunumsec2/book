@@ -7,7 +7,7 @@ navigateur, à travers l'Internet, des pages accessibles sur des sites.
 
 Pendant ses premières décennies (jusque dans les années 90), seuls les universitaires, les militaires, certaines entreprises
 et une communauté d'enthousiastes (largement issue du mouvement hippie) utilisaient Internet.
-Les utilisations principales étaient le *chat* (par un terminal), la connexion sur un ordinateur
+Les utilisations principales étaient la discussion écrite (le *chat* dans un terminal), la connexion sur un ordinateur
 à distance, l'email et le transfert de fichiers entre ordinateurs.
 
 Pour aller chercher un fichier se trouvant sur un autre ordinateur, il fallait savoir exactement
@@ -56,13 +56,13 @@ Autrement dit, une URL se compose généralement de la manière suivante:
 
 *protocol*:*hôte*/*chemin*  
 
-1. Le *protocole*, dans notre exemple `https`, indique le protocole utilisé pour avoir accès à la ressource. Pour le web, ce protocole est toujours `http`ou `https`, sa version sécurisée. Mais l'URL étant aussi utilisée en dehors du web, il y a d'autres protocoles possibles, par exemple `ftp` pour faire du transfert de fichier.
+1. Le *protocole*, dans notre exemple `https`, indique le protocole utilisé pour avoir accès à la ressource. Pour le web, ce protocole est toujours `http` ou `https`, sa version sécurisée. Mais l'URL étant aussi utilisée en dehors du web, il y a d'autres protocoles possibles, par exemple `ftp` pour faire du transfert de fichier.
 
 1. L'*hôte* spécifie la machine (ou le serveur) où aller chercher le fichier. Cela peut être un nom de domaine, mais également une adresse IP
 
 1. Le *chemin* indique quel fichier on souhaite obtenir de la part du serveur. On part de la racine "/" (connue du serveur) et on descend dans l'arborescence selon les répertoires indiqués. Par exemple `/fichiers/fr/contact.html` est le fichier `contact.html` qui se trouve dans le répertoire  `fr` qui se trouve lui-même dans le répertoire `fichiers`.  {itodo}`ajouter une illustration`
 
-Dans le protocole HTTP, si le chemin est un répertoire (et pas un fichier), le fichier par défaut index.html présent dans ce répertoire est envoyé par le serveur.
+Dans le protocole HTTP, si le chemin est un répertoire (et pas un fichier), le fichier par défaut `index.html` présent dans ce répertoire est envoyé par le serveur.
 
 ### HTTP
 
@@ -92,7 +92,7 @@ align: center
 Le serveur retourne un message d'erreur s'affiche lorsqu'on demande une page qui n'existe pas. 
 ```
 
-Il y a d'autres sortes de requêtes que le client peut envoyer au serveur, par exemple `POST`pour envoyer une information du client au serveur, utilisé par exemple lorsqu'on remplit un formulaire en ligne.
+Il y a d'autres sortes de requêtes que le client peut envoyer au serveur, par exemple `POST` pour envoyer une information du client au serveur, utilisé par exemple lorsqu'on remplit un formulaire en ligne.
 
 Si un utilisateur utilise le protocole HTTP pour surfer sur le web, une tierce personne qui a accès au trafic sur Internet peut savoir quelle page web a été visitée par cet utilisateur et ce que le serveur lui a envoyé comme information (par exemple des messages privés). C'est pourquoi on utilise généralement plutôt le protocole HTTPS qui encrypte les requêtes et réponses HTTP. Ainsi un observateur peut toujours savoir avec quel site on communique lorsqu'on surfe sur le web en regardant l'entête IP, mais ne pourra pas connaître les détails des pages demandées et transmises.
 
@@ -149,7 +149,7 @@ web *statique*. Si les sites web statiques existent
 toujours, par exemple modulo-info.ch, beaucoup de sites web sont dynamiques,
 c'est-à-dire que le fichier HTML est généré par le site au moment où la requête est faite.
 Cela permet de servir une page différente selon l'utilisateur ou selon les arguments de la requête qui
-sont des indications supplémentaires ajoutée à la requête après l'URL.
+sont des indications supplémentaires ajoutée à la requête après l'URL après les le signe `?`. 
 
 ```{micro}
 Effectuer une recherche sur un navigateur web et consulter la barre de navigation. Quels sont les arguments de votre requête et pouvez-vous en comprendre la signification?
@@ -167,7 +167,7 @@ contenu statique?
 1. Un site d'e-banking
 
 Pour les sites qui peuvent être statiques, quelles possibilités supplémentaires pourraient être offertes par
-un site dynamique. 
+un site dynamique?
 ```
 
 
@@ -180,6 +180,13 @@ partie de ce développement qui voit exploser l'aspect participatif du web. Ce n
 la syntaxe HTML et d'avoir
 son propre serveur pour mettre du contenu à disposition des internautes de la planète. Si les développements techniques qui ont
 permis le web 2.0, étaient peu importants, ils ont eu un effet considérable sur la manière dont la population s'est approprié le web
-pour en faire un espace d'expression et de partage qui duquel ont émergé des réseaux sociaux d'aujourd'hui. 
+pour en faire un espace d'expression et de partage duquel ont émergé des réseaux sociaux d'aujourd'hui. 
 
 {itodo}`ajouter des anciennes pages myspace ou facebook ?`
+```{eval} L'exemple d'Alice
+Pour demander la page web du site *champigons.ch* le navigateur web d'Alice va utiliser le protocole HTTP (ou HTTPS)
+qui spécifie des mots de code indiquant qu'on veut accéder à une page donnée ou envoyer des informations au serveur. 
+Le serveur va répondre avec le même protocole pour envoyer la page ou un message d'erreur si ce n'est pas possible. 
+La page, elle-même, est envoyée au format HTML, c'est à dire sous forme de texet et d'images. Le navigateur va lire
+ce texte qui va lui indiquer ce qu'il faut afficher pour Alice. 
+```

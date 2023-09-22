@@ -1,11 +1,11 @@
 # Routage
 
-Le **routage** est le mécanisme par lequel des chemins sont sélectionnés dans un réseau pour acheminer les données d'un expéditeur jusqu'à un destination.
+Le **routage** est le mécanisme par lequel des chemins sont sélectionnés dans un réseau pour acheminer les données d'un expéditeur jusqu'à une destination.
 
-Pour effectuer le routage, nous avons besoin deux types de machines :
+Pour comprendre le routage, il faut distinguer deux types de machines qui font fonctionner Internet :
 
 - le **routeur**, qui sert d'intermédiaire dans la transmission d'un message,
-- le **hôte** qui émettent ou reçoivent un message.
+- l' **hôte** qui émettent ou reçoivent un message.
 
 {itodo}` [ajouter une illustration] `
 
@@ -19,16 +19,19 @@ décident dans quelle direction faire suivre une information afin qu'elle atteig
 son destinataire. Les routeurs sont donc comme des facteurs
 disposés aux intersections du réseau Internet qui vont lire la destination des
 messages qui leur arrivent et les rediriger vers la prochaine intersection
-de manière à les rapprocher de leur destination.
+de manière à les rapprocher de leur destination. Les hôtes sont généralement aux l'extrémités
+du graphe. 
+
 
 ```{figure} media/routing.svg
 ---
 width: 600
 align: center
 ---
-Le routeur regarde le destinataire de chaque paquet qu'il reçoit et le redirige dans la bonne direction vers le prochain routeur ou
+Un routeur regarde le destinataire de chaque paquet qu'il reçoit et le redirige dans la bonne direction vers le prochain routeur ou
 le destinataire. Dans notre exemple, le paquet de données (représenté par le carré orange) qu'Alice veut envoyer au serveur
-champignons.ch transite par différents routeurs, qui décident par où faire transiter le message en fonction de l'adresse de destination du paquet. 
+champignons.ch transite par différents routeurs (représenté en violet), qui décident par où faire transiter le message en fonction
+de l'adresse de destination du paquet. 
 ```
 
 Pour ceci, les routeurs s'aident de *tables de routage* qui leur indique la direction à suivre pour chaque destination.
@@ -81,10 +84,6 @@ Ajouter une colonne "Distance" à la table de routage de l'exercice précédent.
 
 
 ```{togofurther} Masques de réseau
-Si chaque destinataire possible devait figurer dans une ligne de la table de routage, cela ferait d’immenses tables de routage
-qui prendraient beaucoup de place en mémoire et seraient très compliquées à gérer. C'est pour ceci que les lignes de la table
-de routage peuvent correspondre, soit à des machines individuelles, soit à des sous-réseaux. 
-
 Pour qu'une machine sache si une autre machine est dans le même sous-réseau qu'elle, son sous-réseau est spécifié par un
 *masque* de réseau composé d'une suite de 32 bits (en IPv4) dont les $n$ premiers sont à 1 et les $32-n$ suivants sont à 0.
 Par exemple, une machine peut avoir une adresse IP 128.178.23.132 avec un masque de 11111111.11111111.1111111.000000000.
@@ -125,36 +124,57 @@ les plus simples de faire du routage dynamique. Toutes les 30 secondes, chaque r
 envoie à tous ses voisins le contenu de sa table de routage. Lorsqu'un routeur reçoit une ligne
 de la table de routage de son voisin dont la destination n'est pas incluse dans sa propre table,
 il l'ajoute à sa table en indiquant comme interface, celle le connectant avec ce voisin.
-De plus lorsqu'un routeur reçoit une ligne de la table de routage de son voisin dont la destination est incluse dans sa table, mais
-avec une distance plus grande, cela signifie qu'en passant par ce voisin le chemin sera plus court (ou égal) pour atteindre sa destination.
-Le routeur modifie sa table de routage pour faire passer par ce voisin les messages à destination de ce destinataire.
-{itodo}` [ajouter deux exemples] `
+De plus lorsqu'un routeur que son voisin dispose d'un chemin plus court pour atteindre une destination,
+reçoit une ligne de la table de routage de son voisin dont la destination est incluse dans sa table, il
+modifie sa table de routage pour faire passer par ce voisin les messages pour cette destination.
 
 ```{Exercise}
 La table de routage d'un routeur 1 contient les lignes suivantes:
 | Destinataire | Interface | Distance |
 |--------------|-----------|----------|
-| 127.1.1.1    | A         | 1        |
+| 114.2.1.1    | A         | 1        |
 | 12.251.x.x   | B         | 2        |
 | 12.25.x.x    | C         | 1        |
-| 87.33.x.x    | C         | 3        |
+| 87.33.x.x    | C         | 8        |
 | ...          | ...       | ...      |
 
-Ce routeur reçoit de son voisin sur l'interface B une table contenant les lignes suivantes (les interfaces
+Ce routeur reçoit de son voisin, le routeur 2 sur l'interface B une table contenant les lignes suivantes (les interfaces
 ne sont pas indiquées):
 
 | Destinataire | Interface | Distance |
 |--------------|-----------|----------|
 | 12.251.x.x   | -         | 1        |
-| 12.252.x.x   | -         | 1        |
-| 87.33.x.x    | -         | 3        |
+| 12.252.x.x   | -         | 3        |
+| 87.33.x.x    | -         | 5        |
 | ...          | ...       | ...      |
 
 Comment le routeur 1 peut-il compléter sa table de routage avec les informations reçue par son voisin? 
 
 ```
 
-Si l'on applique cette méthode telle quelle, cela peut créer des situations où des erreurs dans les tables de
+```{solution}
+Il peut ajouter la lignes suivante:
+
+| Destinataire | Interface | Distance |
+|--------------|-----------|----------|
+| 12.252.x.x   | B         | 4        |
+
+En effet, c'est une nouvelle destination que le routeur 1 peut maintenant joindre en 
+transmettant les paquets au routeur 2 (sur l'interface B) qui saura les transmettre
+dans la bonne direction. 
+
+Le routeur 1 peut aussi modifier la ligne pour la destination 87.33.x.x en mettant
+
+| Destinataire | Interface | Distance |
+|--------------|-----------|----------|
+| 87.33.x.x    | B         | 6        |
+
+Cette destination déjà existance pour le routeur 1,
+mais elle peut être transmise plus rapidement en passant par le routeur 2 sur l'interface B (en 5+1=6 étapes)
+que par l'interface C (en 8 étapes)
+```
+
+Toutefois, si l'on applique cette méthode telle quelle, cela peut créer des situations où des erreurs dans les tables de
 routage se propagent à travers le réseau. Consédérons par exemple le bout de réseau suivant:
 
 ```{image} media/ripsplit.svg
@@ -183,4 +203,8 @@ ceci par une distance égale à 16. Toute destination à distance supérieure à
 l'exemple si dessus, le routeur 1 remplacera simplement la distance par 16 (au lieu de 1) et transmettra cette information
 au routeur 2 qui mettra à jour sa table de routage. C'est le principe de l'*empoisonnement de route* (*route poisoning*).
 
-{itodo}` [ajouter deux exemples] `
+```{eval} L'exemple d'Alice
+Les paquets IP échangés entre le téléphone d'Alice et le serveur sont acheminé de routeur en routeur. Chaque routeur
+consulte sa table de routage pour savoir dans quelle direction transférer le paquet reçu. Ces tables de routage
+se constituent automatiquement en échangeant des informations avec les routeurs voisins. 
+```

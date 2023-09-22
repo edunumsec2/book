@@ -255,8 +255,8 @@ Nous avons démontré que finalement nos ordinateurs ont un cerveau très simple
 Imaginons pour cela que le processeur écrive toutes les opérations qu'il effectue sur un ruban de papier et calculons la vitesse de défilement de ce papier. 
 
 Pour cela, nous faisons les hypothèses suivantes:
-* Les processeurs actuels ont une cadence d'horloge de 3 GHz, c'est à dire $3·10^9~[s^{-1}]$. Pour simplifier, nous allons supposer qu'ils effectuent une opération par cycle[^1].
-* Nous transcrivons un mot de 64 bits (taille standard pour les processeurs actuels) sur une longueur de 15 cm, ce qui correspond à $15·10^{-2}~[m]$.
+* Les processeurs actuels ont une cadence d'horloge de 3 GHz, c'est à dire $3\cdot 10^9~[s^{-1}]$. Pour simplifier, nous allons supposer qu'ils effectuent une opération par cycle[^1].
+* Nous transcrivons un mot de 64 bits (taille standard pour les processeurs actuels) sur une longueur de 15 cm, ce qui correspond à $15 \cdot 10^{-2}~[m]$.
 
 Le calcul devient alors:
 

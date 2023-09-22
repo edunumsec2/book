@@ -9,6 +9,9 @@
    id="svg5"
    inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
    sodipodi:docname="dns.svg"
+   inkscape:export-filename="/Users/p23914/Documents/hep/moyen/book2/book/src/appr/resx/media/dns.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -27,12 +30,12 @@
      inkscape:object-paths="true"
      inkscape:snap-global="false"
      inkscape:zoom="0.94316065"
-     inkscape:cx="152.14799"
-     inkscape:cy="288.39202"
-     inkscape:window-width="1110"
-     inkscape:window-height="730"
-     inkscape:window-x="511"
-     inkscape:window-y="139"
+     inkscape:cx="139.42482"
+     inkscape:cy="287.86188"
+     inkscape:window-width="1548"
+     inkscape:window-height="729"
+     inkscape:window-x="320"
+     inkscape:window-y="169"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      fit-margin-top="0"
@@ -181,6 +184,17 @@
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
          id="path950-1-0-8" />
     </marker>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath33749">
+      <rect
+         style="fill:none;stroke:none;stroke-width:0.264999"
+         id="rect33751"
+         width="19.075932"
+         height="31.699707"
+         x="87.029778"
+         y="127.74243" />
+    </clipPath>
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -194,7 +208,8 @@
        xlink:href="data:image/png;base64,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 "
        id="image832"
        x="79.822128"
-       y="126.94027" />
+       y="126.94027"
+       clip-path="url(#clipPath33749)" />
     <image
        width="33.290188"
        height="33.290188"
@@ -254,9 +269,9 @@
        transform="translate(-2.6458334,8.9958336)"><tspan
          x="64.588234"
          y="111.17647"
-         id="tspan72602"><tspan
+         id="tspan34436"><tspan
            style="font-size:4.23333px;-inkscape-font-specification:'Helvetica Neue, Normal'"
-           id="tspan72600">www.champignons.ch ?</tspan></tspan></text>
+           id="tspan34434">www.champignons.ch ?</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.11667px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;white-space:pre;inline-size:52.0369;stroke-width:0.264583"
@@ -266,19 +281,19 @@
        transform="translate(-18.757667,-36.292604)"><tspan
          x="64.588234"
          y="111.17647"
-         id="tspan72606"><tspan
+         id="tspan34440"><tspan
            style="font-size:4.23333px;-inkscape-font-specification:'Helvetica Neue, Normal'"
-           id="tspan72604">www.champignons.ch ?</tspan></tspan></text>
+           id="tspan34438">www.champignons.ch ?</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:52.0369;stroke-width:0.264583"
        x="64.588234"
        y="111.17647"
        id="text7105-1-1"
-       transform="translate(23.602118,-52.002194)"><tspan
+       transform="translate(21.63842,-51.721666)"><tspan
          x="64.588234"
          y="111.17647"
-         id="tspan72608">83.166.152.247
+         id="tspan34442">83.166.152.247
 </tspan></text>
     <text
        xml:space="preserve"
@@ -286,10 +301,10 @@
        x="64.588234"
        y="111.17647"
        id="text7105-1-1-9"
-       transform="translate(58.599507,7.842358)"><tspan
+       transform="translate(57.757922,8.1228864)"><tspan
          x="64.588234"
          y="111.17647"
-         id="tspan72610">83.166.152.247
+         id="tspan34444">83.166.152.247
 </tspan></text>
     <text
        xml:space="preserve"
@@ -300,7 +315,7 @@
        transform="translate(65.211108,-22.17418)"><tspan
          x="64.588234"
          y="111.17647"
-         id="tspan72612">serveur DNS 1</tspan></text>
+         id="tspan34446">serveur DNS 1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:52.0369;stroke-width:0.264583"
@@ -310,7 +325,7 @@
        transform="translate(32.271969,54.446053)"><tspan
          x="64.588234"
          y="111.17647"
-         id="tspan72614">client</tspan></text>
+         id="tspan34448">client</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:52.0369;stroke-width:0.264583"
@@ -320,7 +335,7 @@
        transform="translate(-35.896429,-91.709236)"><tspan
          x="64.588234"
          y="111.17647"
-         id="tspan72616">serveur DNS 2</tspan></text>
+         id="tspan34450">serveur DNS 2</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:52.0369;stroke-width:0.264583"
@@ -332,7 +347,7 @@
        inkscape:transform-center-y="-3.646869"><tspan
          x="64.588234"
          y="111.17647"
-         id="tspan72618">serveur DNS 3</tspan></text>
+         id="tspan34452">serveur DNS 3</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:52.0369;stroke-width:0.264583"
@@ -344,6 +359,67 @@
        inkscape:transform-center-y="-3.646869"><tspan
          x="64.588234"
          y="111.17647"
-         id="tspan72620">serveur DNS 4</tspan></text>
+         id="tspan34454">serveur DNS 4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="60.940643"
+       y="115.11867"
+       id="text11549"><tspan
+         sodipodi:role="line"
+         id="tspan11547"
+         style="stroke-width:0.264583"
+         x="60.940643"
+         y="115.11867"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="tspan19615">1.</tspan>.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="45.351677"
+       y="70.771622"
+       id="text11549-8"><tspan
+         sodipodi:role="line"
+         id="tspan11547-1"
+         style="stroke-width:0.264583"
+         x="45.351677"
+         y="70.771622"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="tspan19615-4">2.</tspan>.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="81.481552"
+       y="54.500969"
+       id="text11549-8-8"><tspan
+         sodipodi:role="line"
+         id="tspan11547-1-4"
+         style="stroke-width:0.264583"
+         x="81.481552"
+         y="54.500969"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="tspan19615-4-8"
+   dy="0 0">3.</tspan>.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="34.009922"
+       y="122.97345"
+       id="text14507"><tspan
+         sodipodi:role="line"
+         id="tspan14505"
+         style="stroke-width:0.264583"
+         x="34.009922"
+         y="122.97345" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="120.45406"
+       y="113.93418"
+       id="text11549-8-8-2"><tspan
+         sodipodi:role="line"
+         id="tspan32647"
+         x="120.45406"
+         y="113.93418">4.</tspan></text>
   </g>
 </svg>

@@ -65,7 +65,7 @@ width: 250px
 Tous les pixels marqués d'un 1 s'affichent en blanc, tous ceux marqués d'un 0 s'affichent en noir. 
 Ceci nous permet de construire des images simples, dessinées seulement en noir et blanc.
 ```
-
+````{htmlonly}
 ```{codeplay}
 import turtle
 
@@ -133,6 +133,7 @@ alien = [
 
 drawImg(alien)
 ```
+````
 
 Un {glo}`pixel|pixel`, de l'anglais "**pic**ture **el**ement", est le composant minimal d'une image. C'est à dire que c'est le plus petit élément avec lequel on construit une image sur un écran d'ordinateur. Dans notre exemple minimaliste, chaque pixel peut être soit noir, soit blanc, ce qui nous permet de construire une image.
 
@@ -204,6 +205,7 @@ Système additif et écran au microscope.
 
 Chaque couleur est donc représentée comme un mélange de ces trois couleurs et donc sous forme de trois entiers (triplet). Comme pour les images en niveaux de gris, ces entiers sont généralement représentés sur 8 bits ; les valeurs de luminance sont chacune déclarées comme un nombre allant de 0 (intensité nulle) à 255 (intensité maximale). Pour représenter une image en couleurs il faut donc 8 bits pour le niveau de rouge, 8 bits pour le niveau de vert, et 8 bits pour le niveau de bleu, soit 24 bits. 
 
+````{htmlonly}
 Dans l'exemple qui suit, d'autres matrices de 0 et de 1 ont été configurées dans le programme, pour dessiner de nouveaux personnages. À la place de mario, essayez luigi, link, guerrier, tortueninja1, tortueninja2, homer, pikachu, kirby. 
 
 ```{codeplay}
@@ -401,7 +403,7 @@ drawImg(mario)
 ```
 
 *Conseil : à la place de mario, essayez luigi, link, guerrier, tortueninja1, tortueninja2, homer, pikachu, kirby, kirbycouleur.*
-
+````
 [Dans cette animation](https://www.csfieldguide.org.nz/en/interactives/pixel-viewer/) vous pouvez zoomer sur chacun des pixels qui constituent l'image totale. Chaque pixel possède trois valeurs allant de 0 à 255. RGB signifie en anglais Red, Green, Blue. 
 
 [Dans cette autre animation](https://csfieldguide.org.nz/en/interactives/colour-matcher/) vous pouvez jouer avec la valeur de Rouge, Vert, Bleu, pour créer une couleur finale. L'outil vous permet d'abord de jouer avec des couleurs codées en 24 bits, puis en 8 bits, ce qui illustre bien la précision qu'on arrive à atteindre avec 24 bits. 
@@ -486,7 +488,7 @@ Quelle est la définition d’une feuille scannée de largeur 6,5 pouces, de h
 
 ````
 
-````{exercise} Carte graphique
+`````{exercise} Carte graphique
 
 1 - Calculer, pour chaque définition d'image et chaque couleur, la taille mémoire nécessaire à l'affichage.
 |  Définition de l'image    |   Noir et blanc | 256 couleurs | 65000 couleurs | True color | 
@@ -496,6 +498,7 @@ Quelle est la définition d’une feuille scannée de largeur 6,5 pouces, de h
 |640x480	                |       	      |     	     |      	      |            |
 |800x600	                |       	      |      	     |       	      |            |
 |1024x768	                |                 |      	     |      	      |            |
+````{htmlonly}
 ```{admonition} Réponse
 :class: hint
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -508,22 +511,21 @@ Quelle est la définition d’une feuille scannée de largeur 6,5 pouces, de h
 |800x600	                |58.6 Ko	      |468.7 Ko	     |937.5 Ko	      |1.4 Mo      |
 |1024x768	                |96 Ko	          |768 Ko	     |1.5 Mo	      |2.3 Mo      |
 ```
-
 2 - Que signifie la valeur 2.3 Mo dans le tableau résultat ?
 ```{admonition} Réponse
 :class: hint
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 C'est la quantité de mémoire vive minimale que nécessite la carte graphique (VRAM) pour un écran de définition 1024x768 en true color.
-
 ````
-
-````{exercise} Compression
+`````
+`````{exercise} Compression
 
 1. Une image de couleur a pour format : 360 × 270. Elle est enregistrée en bitmap 8 bits. Quelle est sa taille sur le disque dur (détaillez les calculs) ? 
 
 3. Une image noir et blanc de format 1024 × 1024 est enregistrée en JPG. Le taux de compression est de 50%. Quelle est sa taille sur le disque dur (détaillez les calculs) ? 
 
+````{htmlonly}
 ```{admonition} Réponse
 :class: hint
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -537,13 +539,13 @@ C'est la quantité de mémoire vive minimale que nécessite la carte graphique (
    Comme le taux de compression est de 50%, on divise par 2 : 1048576/2 = 524288 bits = 65536 octets = 65536/1024 Ko = 64 Ko.
 
 ````
-
+`````
 ````{exercise} Appareil photo
 
 L’appareil numérique FinePix2400Z (Fujifilm) permet la prise de vue avec trois définitions : a) 640x480 pixels ; b) 1280x960 pixels ; c) 1600x1200 pixels.
 
 Calculez la taille de l’image non-compressée pour chaque définition.
-......
+
 
 ````
 ````{exercise} Pixelisation
@@ -555,6 +557,5 @@ Une image numérique de définition 1024×768 mesure 30 cm de large et 20 cm de 
 2. On a une photographie de 10 cm sur 5 cm que l'on scanne avec une résolution de 300 ppi. Quelle sera alors la taille de l'image (en nombre de pixels) ?
 
 3. Soit une image 15×9 cm, définie en RVB, que l'on scanne en 72, 300 et 1200 ppi. Quels seront les poids des images, pour une profondeur de 16 bits par couleur ?
-......
 
 ````
