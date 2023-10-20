@@ -134,8 +134,8 @@ la machine indique qu'elle veut
 Il y a pleins de protocoles différents, par exemple le protocole qui régit comment une machine veut se
 connecter par wifi à un routeur, le protocole qui régit comment demander le contenu d'une page web à un
 serveur (HTTP), le protocole qui régit comment envoyer un email sur le réseau (SMTP), ou se connecter à distance sur une
-autre machine (SSH). Ces protocoles peuvent être ouverts (ou publics) est cela permet à chacun ou chacune de les utiliser,
-ou ils peuvent être fermés (ou privés) ce qui limite leur utilisation à l'entreprise ou l'entité qui les a inventés.
+autre machine (SSH). Ces protocoles peuvent être ouverts (ou publics), permettant à chacun ou chacune de les utiliser,
+ou ils peuvent être fermés (ou privés) pour limiter leur utilisation à l'entreprise ou l'entité qui les a inventés.
 
 ## Organisation du chapitre
 
@@ -145,9 +145,8 @@ considérons la situation suivante.
 ```{eval} l'application aux champignons
 
 Imaginons qu'Alice est partie à la cueillette aux champignons dans la forêt.
-Elle pense avoir trouvé un beau bolet, mais pour plus de sécurité, consulte
-avec son téléphone portable un site web spécialisé dans les champignons de notre région,
-*www.champignons.ch*.
- Que se passe-t-il réellement entre derrière l'écran de son téléphone?
+Elle pense avoir trouvé un beau bolet, mais pour plus de sécurité, elle consulte
+avec son téléphone portable un site web spécialisé dans les champignons de notre région.
+ Que se passe-t-il réellement derrière l'écran de son téléphone?
  C'est ce que nous allons découvrir dans ce chapitre.
 ```
