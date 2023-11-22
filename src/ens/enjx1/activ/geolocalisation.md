@@ -183,7 +183,16 @@ align: center
 Onglet *TRAVELS*
 ````
 
-Cela montre le pouvoir d'acquisition des connaissances sur une personne à partir de la géolocalisation 
+Quand on est sur digipower on peut regarder ce qui se passe dans les différents onglets, chaque onglet a différentes vues sur les données et statistiques, on peut utiliser:
+
+- **Trips** : pour parler de multimodalités et transfert modal, et de l'utilité de ces données pour les politiques publiques
+- **Wifi** : près du petit chêne par ex. pour parler sur l'écoute de réseaux wifi pour contribuer a la géolocalisation
+- **Other candidates** : pour vraiment détailler la précision de la surveillance, et comment elle fonctionne - y compris dans ses aspects sociaux.
+
+Pour avoir plus d'informations, utiliser les [personas](https://digipower.academy/story/zoe-moves-around-the-city).
+
+Cela montre le pouvoir d'acquisition des connaissances sur une personne à partir de la géolocalisation.
+
 
 
 **Des considérations et des questionnements ouverts**  
