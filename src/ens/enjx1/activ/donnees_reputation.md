@@ -136,4 +136,4 @@ Il pourra par exemple mentionner :
 
 ---
 
-Activité réalisée en collaboration avec [Dr. J. Pidoux](https://doi.org/10.5075/epfl-thesis-8830)
+Activité réalisée en collaboration avec [Dr. J. Pidoux](https://doi.org/10.5075/epfl-thesis-8830), [PersonalData.IO](https://personaldata.io/) et leur partenaire technologique [Hestia.ai](https://hestia.ai/)
