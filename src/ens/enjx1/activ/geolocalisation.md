@@ -44,7 +44,7 @@ Analyser le pouvoir de la géolocalisation et de son impact sur la qualité de v
 Afin de rendre cette séquence la plus interactive et personnalisée possible, l'enseignant·e invitera les élèves à activer la géolocalisation Google en suivant ce [protocole](https://github.com/hestiaAI/data-catalog/blob/main/workshop/enable-google-location-tracking.md) au moins 1 semaine avant la séquence.  
 Il est important de vérifier que l'activation a bien fonctionné. Pour cela, les élèves pourront ouvrir https://timeline.google.com/ quelques minutes après l’avoir effectuée afin de vérifier que des données s’affichent.
 
-Un certain nombre d'entre eux ne pourront pas ou ne voudront pas le faire (contrôle parental, pas de compte Google, idéologie, etc.), il n'est pas utile de chercher à avoir le 100% de participation, si uniquement quelques élèves le font, cela permettra déjà d'alimenter la discussion.
+Un certain nombre d'élèves ne pourront pas ou ne voudront pas le faire (contrôle parental, pas de compte Google, idéologie, etc.), il n'est pas utile de chercher à avoir le 100% de participation, si uniquement quelques élèves le font, cela permettra déjà d'alimenter la discussion.
 
 Les objectifs de cette séquence sont les suivants : 
 1. Définir la géolocalisation à partir de ses données
@@ -121,7 +121,7 @@ Le fichier ainsi téléchargé devrait être de la forme *takeout-yyyymmddTXXXXX
 
 *Durée : 5-10 min*
 
-L'enseignant·e introduit la notion de géolocalisation en questionnant les élèves sur ce que ça représente et comment elle est mise en oeuvre selon eux.
+L'enseignant·e introduit la notion de géolocalisation en questionnant les élèves sur ce que ça représente et comment elle est mise en oeuvre selon eux/elles.
 
 Questions pour animer la discussion :
 - Comment voyez-vous la géolocalisation sur votre téléphone ? 
@@ -158,7 +158,7 @@ Voici quelques éléments que l'enseignant·e peut discuter avec les élèves en
 
 **Des prédictions algorithmiques**  
 
-En s'appuyant sur la carte, sur une adresse voir par ex. *Type MAIN*, ce qui indique qu'une personne se rend fréquemment à cet endroit, ainsi les probabilités augmentent que ce lieu soit son domicile principal.
+En s'appuyant sur la carte, sur une adresse voir *placeVisitImportance MAIN*, indique qu'une personne se rend fréquemment à cet endroit, ainsi les probabilités augmentent que ce lieu soit son domicile principal.
 
 ````{figure} media/DigipowerAcademy2.png
 ---
@@ -222,7 +222,7 @@ Pendant l'exposé de cette affaire, l'enseignant·e pourra amener et ouvrir le d
 - La lutte des chauffeurs Uber au niveau mondial : sont-ils des employés ?
 - Comment définiriez-vous le temps de travail des chauffeurs Uber ?
 
-Finalement, la résolution de cette affaire a pu se faire principalement grâce à l'analyse des données de géolocalisation récupérées chez Uber qui a pu faire la preuve de l'existence d'une gestion algorithmique de l'attribution des courses et donc de l'existence d'une relation employeur-employé. 
+Finalement, la résolution de cette affaire a pu se faire en partie grâce à l'analyse des données de géolocalisation récupérées chez Uber qui a pu servir comme preuve du temps de travail et des revenus précis des chauffeurs. De plus, ces données servent à démontrer l'existence d'une gestion algorithmique de l'attribution des courses et donc de l'existence d'une relation employeur-employé. 
 
 (geolocalisation.conclusion)=
 ### Conclusion
