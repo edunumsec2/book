@@ -517,26 +517,21 @@ Connectez les entrées **clear** et **add** au bon endroit et calculez 1+3+7.
 :ref: acc
 :height: 500
 :showonly: in in.nibble register alu out.nibble-display
-{
-  "v": 4,
-  "in": [
-    {"type": "nibble", "pos": [40, 200], "id": [0, 1, 2, 3], "val": [0, 1, 0, 0], "name": "b"},
-    {"pos": [380, 300], "orient": "n", "id": 37, "name": "clear", "val": 0, "isPushButton": true},
-    {"pos": [200, 300], "id": 38, "name": "add", "val": 0, "isPushButton": true}
-  ],
-  "out": [
-    {"type": "nibble-display", "pos": [90, 200], "id": [47, 48, 49, 50]},
-    {"type": "nibble-display", "pos": [490, 150], "id": [51, 52, 53, 54]},
-    {"type": "nibble-display", "pos": [290, 150], "id": [33, 34, 35, 36]}
-  ],
-  "components": [
-    {"type": "alu", "pos": [200, 150], "in": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "out": [15, 16, 17, 18, 19, 20, 21]},
-    {"type": "register", "pos": [380, 150], "ref": "acc", "in": [22, 23, 24, 25, 26, 27, 28], "out": [29, 30, 31, 32], "state": [1, 1, 0, 0]}
-  ],
-  "labels": [
-    {"pos": [380, 50], "text": "accumulateur"}
-  ],
-  "wires": [[15, 25], [16, 26], [17, 27], [18, 28], [0, 47], [1, 48], [2, 49], [3, 50], [29, 51], [30, 52], [31, 53], [32, 54], [0, 8], [1, 9], [2, 10], [3, 11], [29, 4], [30, 5], [31, 6], [32, 7], [15, 33], [16, 34], [17, 35], [18, 36]]
+
+{ // JSON5
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [40, 220], id: '0-3', name: 'b', bits: 4, val: '0010'},
+    in1: {type: 'in', pos: [380, 320], orient: 'n', id: 37, name: 'clear', isPushButton: true},
+    in2: {type: 'in', pos: [200, 320], id: 38, name: 'add', isPushButton: true},
+    disp0: {type: 'display', pos: [90, 220], id: '47-50'},
+    disp1: {type: 'display', pos: [520, 170], id: '51-54'},
+    disp2: {type: 'display', pos: [290, 170], id: '33-36'},
+    alu0: {type: 'alu', pos: [200, 170], in: '4-14', out: '15-21'},
+    acc: {type: 'reg', pos: [380, 170], in: '22-28', out: '29-32', content: '3'},
+    label0: {type: 'label', pos: [380, 70], text: 'accumulateur'},
+  },
+  wires: [[15, 25], [16, 26], [17, 27], [18, 28], [0, 47], [1, 48], [2, 49], [3, 50], [29, 51], [30, 52], [31, 53], [32, 54], [0, 8], [1, 9], [2, 10], [3, 11], [29, 4, {via: [[440, 140, 'w'], [440, 50, 'w'], [155, 50, 'w']]}], [30, 5, {via: [[450, 160, 'n'], [450, 40, 'w'], [145, 40, 'w'], [145, 110, 'w']]}], [31, 6, {via: [[460, 180, 'w'], [460, 30, 'w'], [135, 30, 'w'], [135, 130, 'w']]}], [32, 7, {via: [[470, 200, 'w'], [470, 20, 'w'], [125, 20, 'w'], [125, 150, 'w']]}], [15, 33], [16, 34], [17, 35], [18, 36]]
 }
 ```
 
@@ -557,25 +552,20 @@ Attention au délai de transmission par défaut de 100 ms. Il faut soit appuyer 
 :ref: incdec
 :height: 500
 :showonly: in or or3 or4 register decoder-7seg out.7seg
-{
-  "v": 4,
-  "in": [
-    {"pos": [80, 370], "id": 75, "name": "clear", "val": 0, "isPushButton": true},
-    {"pos": [80, 330], "id": 78, "name": "down", "val": 0, "isPushButton": true},
-    {"pos": [80, 290], "id": 82, "name": "up", "val": 0, "isPushButton": true}
-  ],
-  "out": [
-    {"type": "7seg", "pos": [490, 150], "id": [27, 28, 29, 30, 31, 32, 33, 34]}
-  ],
-  "gates": [
-    {"type": "OR", "pos": [210, 320], "in": [79, 80], "out": 81}
-  ],
-  "components": [
-    {"type": "register", "pos": [300, 140], "in": [0, 1, 2, 3, 4, 5, 6], "out": [7, 8, 9, 10], "state": [0, 0, 1, 0]},
-    {"type": "decoder-7seg", "pos": [410, 140], "in": [16, 17, 18, 19], "out": [20, 21, 22, 23, 24, 25, 26]},
-    {"type": "alu", "pos": [160, 140], "in": [57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67], "out": [68, 69, 70, 71, 72, 73, 74]}
-  ],
-  "wires": [[7, 16], [8, 17], [9, 18], [10, 19], [20, 27], [21, 28], [22, 29], [23, 30], [24, 31], [25, 32], [26, 33], [7, 57], [8, 58], [9, 59], [10, 60], [68, 3], [69, 4], [70, 5], [71, 6]]
+
+{ // JSON5
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [80, 400], id: 75, name: 'clear', isPushButton: true},
+    in1: {type: 'in', pos: [80, 360], id: 78, name: 'down', isPushButton: true},
+    in2: {type: 'in', pos: [80, 320], id: 82, name: 'up', isPushButton: true},
+    '7seg0': {type: '7seg', pos: [510, 180], id: '27-34'},
+    or0: {type: 'or', pos: [210, 350], in: [79, 80], out: 81},
+    reg0: {type: 'reg', pos: [300, 170], in: '0-6', out: '7-10', content: '4'},
+    dec0: {type: 'dec-7seg', pos: [430, 170], in: '16-19', out: '20-26'},
+    alu0: {type: 'alu', pos: [165, 170], in: '57-67', out: '68-74'},
+  },
+  wires: [[7, 16], [8, 17], [9, 18], [10, 19], [20, 27], [21, 28], [22, 29], [23, 30], [24, 31], [25, 32], [26, 33], [7, 57, {via: [[350, 55, 'w'], [120, 55, 'w']]}], [8, 58, {via: [[360, 160, 'w'], [360, 45, 'n'], [110, 45, 'w'], [110, 110, 'w']]}], [9, 59, {via: [[370, 180, 'w'], [370, 35, 'w'], [100, 35, 'w'], [100, 130, 'w']]}], [10, 60, {via: [[380, 200, 'n'], [380, 25, 'w'], [90, 25, 'w'], [90, 150, 's']]}], [68, 3], [69, 4], [70, 5], [71, 6]]
 }
 ```
 
