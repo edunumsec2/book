@@ -400,29 +400,27 @@ Modifiez a et b dans le circuit multiplicateur 4 x 4 bits ci-dessus vérifiez qu
 
 ```{logic}
 :ref: mul4
-:height: 600
-:showonly: in in.nibble out.nibble-display out.byte-display mux-8to4 adder
-{
-  "v": 4,
-  "in": [
-    {"type": "nibble", "pos": [40, 490], "id": [19, 20, 21, 22], "val": [1, 0, 0, 1], "name": "a"},
-    {"type": "nibble", "pos": [40, 70], "id": [23, 24, 25, 26], "val": [1, 0, 1, 0], "name": "b"}
-  ],
-  "out": [
-    {"type": "byte-display", "pos": [630, 420], "id": [115, 116, 117, 118, 119, 120, 121, 122]},
-    {"type": "nibble-display", "pos": [90, 70], "id": [141, 142, 143, 144]},
-    {"type": "nibble-display", "pos": [90, 490], "id": [145, 146, 147, 148]}
-  ],
-  "components": [
-    {"type": "mux-8to4", "pos": [80, 220], "in": [45, 46, 47, 48, 49, 50, 51, 52, 53], "out": [54, 55, 56, 57]},
-    {"type": "mux-8to4", "pos": [140, 340], "in": [58, 59, 60, 61, 62, 63, 64, 65, 66], "out": [67, 68, 69, 70]},
-    {"type": "alu", "pos": [210, 290], "in": [123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133], "out": [134, 135, 136, 137, 138, 139, 140]},
-    {"type": "mux-8to4", "pos": [290, 410], "in": [149, 150, 151, 152, 153, 154, 155, 156, 157], "out": [158, 159, 160, 161]},
-    {"type": "alu", "pos": [360, 360], "in": [162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172], "out": [173, 174, 175, 176, 177, 178, 179]},
-    {"type": "mux-8to4", "pos": [440, 480], "in": [192, 193, 194, 195, 196, 197, 198, 199, 200], "out": [201, 202, 203, 204]},
-    {"type": "alu", "pos": [510, 430], "in": [205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215], "out": [216, 217, 218, 219, 220, 221, 222]}
-  ],
-  "wires": [[19, 49], [20, 50], [21, 51], [22, 52], [23, 53], [19, 62], [20, 63], [21, 64], [22, 65], [67, 127], [68, 128], [69, 129], [70, 130], [55, 123], [56, 124], [57, 125], [24, 66], [54, 115], [134, 116], [23, 141], [24, 142], [25, 143], [26, 144], [19, 145], [20, 146], [21, 147], [22, 148], [19, 153], [20, 154], [21, 155], [22, 156], [135, 162], [136, 163], [137, 164], [158, 166], [159, 167], [160, 168], [161, 169], [25, 157], [173, 117], [140, 165], [139, 152], [174, 205], [175, 206], [176, 207], [178, 195], [201, 209], [202, 210], [203, 211], [204, 212], [19, 196], [20, 197], [21, 198], [22, 199], [179, 208], [216, 118], [217, 119], [218, 120], [219, 121], [222, 122], [26, 200]]
+:height: 855
+:showonly: in in.nibble out.nibble-display out.byte-display mux-8to4 alu
+
+{ // JSON5
+  v: 6,
+  opts: {zoom: 90},
+  components: {
+    in0: {type: 'in', pos: [615, 45], orient: 's', id: '19-22', name: 'a', bits: 4, val: '1001'},
+    in1: {type: 'in', pos: [110, 45], orient: 's', id: '23-26', name: 'b', bits: 4, val: '0101'},
+    disp0: {type: 'display', pos: [450, 790], orient: 's', id: '115-122', bits: 8},
+    disp1: {type: 'display', pos: [35, 95], orient: 'w', id: '141-144'},
+    disp2: {type: 'display', pos: [695, 95], id: '145-148'},
+    alu0: {type: 'alu', pos: [575, 385], orient: 's', in: '123-133', out: '134-140'},
+    alu1: {type: 'alu', pos: [505, 515], orient: 's', in: '162-172', out: '173-179'},
+    alu2: {type: 'alu', pos: [435, 650], orient: 's', in: '205-215', out: '216-222'},
+    mux0: {type: 'mux', pos: [645, 200], orient: 's', in: '0-8', out: '9-12', from: 8, to: 4, bottom: true},
+    mux1: {type: 'mux', pos: [500, 260], orient: 's', in: ['13-18', '27-29'], out: '30-33', from: 8, to: 4, bottom: true},
+    mux2: {type: 'mux', pos: [355, 385], orient: 's', in: '34-42', out: '43-46', from: 8, to: 4, bottom: true},
+    mux3: {type: 'mux', pos: [245, 510], orient: 's', in: '47-55', out: '56-59', from: 8, to: 4, bottom: true},
+  },
+  wires: [[19, 4], [20, 5], [21, 6], [22, 7], [19, 17, {via: [[645, 115, 'w'], [480, 115, 'w']]}], [20, 18, {via: [[625, 95, 'w'], [460, 95, 'w']]}], [21, 27, {via: [[605, 80, 'w'], [440, 80, 'w']]}], [22, 28, {via: [[420, 65, 'w']]}], [30, 127], [31, 128], [32, 129], [33, 130], [10, 123], [11, 124], [12, 125], [24, 29, {via: [[150, 260]]}], [9, 115, {via: [[685, 250, 's'], [685, 690, 's']]}], [134, 116, {via: [[630, 465, 's'], [630, 690, 's']]}], [23, 141], [24, 142], [25, 143], [26, 144], [19, 145], [20, 146], [21, 147], [22, 148], [19, 38, {via: [[645, 115, 'w'], [335, 115, 'w']]}], [20, 39, {via: [[625, 95, 'w'], [315, 95, 'w']]}], [21, 40, {via: [[605, 80, 'w'], [295, 80, 'w']]}], [22, 41, {via: [[275, 65, 'w']]}], [135, 162], [136, 163], [137, 164], [43, 166], [44, 167], [45, 168], [46, 169], [25, 42, {via: [[150, 385]]}], [173, 117, {via: [[555, 585, 's'], [555, 690, 's']]}], [140, 165, {via: [[465, 365, 's'], [465, 435, 's'], [525, 435, 's']]}], [174, 205], [175, 206], [176, 207], [56, 209], [57, 210], [58, 211], [59, 212], [19, 51, {via: [[645, 115, 'w'], [225, 115, 'w']]}], [20, 52, {via: [[625, 95, 'w'], [205, 95, 'w']]}], [21, 53, {via: [[605, 80, 'w'], [185, 80, 'w']]}], [22, 54, {via: [[165, 65, 's']]}], [179, 208, {via: [[395, 495, 's'], [395, 565, 's'], [455, 565, 's']]}], [216, 118], [217, 119], [218, 120], [219, 121], [222, 122, {via: [[325, 630, 's'], [325, 690, 's']]}], [26, 55, {via: [[150, 510]]}], [23, 8, {via: [[150, 200]]}]]
 }
 ```
 
@@ -430,15 +428,15 @@ Modifiez a et b dans le circuit multiplicateur 4 x 4 bits ci-dessus vérifiez qu
 
 La division par une puissance de 2 est très simple. Il suffit de décaler le nombre binaire. Pour diviser par 2 nous décalons d'une unité, et nous obtenons :
 
-- La division entière (`a//2`)
-- Le reste de la division, l'opération modulo (`a%2`)
+- La division entière (`a // 2`)
+- Le reste de la division, l'opération modulo (`a % 2`)
 
 Ajoutez deux affichages 8 bits pour la division par 4 et 8
 Ajoutez deux affichages 4 bits pour le modulo 4 et 8
-Ajoutez les étiquettes (`a%4`, `a//4`, etc.)
+Ajoutez les étiquettes (`a % 4`, `a // 4`, etc.)
 
-Par exemple pour `43//8` vous devriez obtenir 5,  
-et pour `43%8` vous devriez obtenir 3.
+Par exemple pour `43 // 8` vous devriez obtenir 5,  
+et pour `43 % 8` vous devriez obtenir 3.
 
 ```{logic}
 :ref: div
