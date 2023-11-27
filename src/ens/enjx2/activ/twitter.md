@@ -1,4 +1,4 @@
-# Analyer les données de twitter
+# Analyser les données de twitter
 
 
 Fouiller et analyser de grandes quantités de tweets
