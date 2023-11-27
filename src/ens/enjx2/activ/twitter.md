@@ -1,7 +1,7 @@
 # Analyer les données de twitter
 
 
-Fouiller et analyser des tonnes de tweets
+Fouiller et analyser de grandes quantités de tweets
 
 
 
@@ -67,6 +67,10 @@ Une fois parvenus au bout du notebook et de l'exploration, les élèves rempliss
 On lance ensuite une discussion basée sur la mise en commun des réponses des élèves. L'enseignant donne ensuite des
 exemples positifs et négatifs de l'utilisation des données issues des réseaux sociaux. Par exemple [l'article
 scienitifique mesurant la vitesse de propagation des informations vraies ou fausses sur twitter](https://www.science.org/doi/full/10.1126/science.aap9559) ou [l'étude d'Amnesty International](https://www.amnesty.org/fr/latest/news/2023/11/tiktok-risks-pushing-children-towards-harmful-content/) montrant les effets délétères de TikTok. 
+
+En fin de discussion, il peut être utile de mentionner que Twitter permettait un accès relativement aisé (et gratuit)
+aux données pour des projets de recherche universitaire, mais qu'avec la reprise du réseau par Elon Musk, il faut
+maintenant payer pour avoir accès à ces données. 
 
 ### Conclusion
 
