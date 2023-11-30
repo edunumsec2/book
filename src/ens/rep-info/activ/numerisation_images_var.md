@@ -177,7 +177,7 @@ Un bon sujet d'activité pour le codage des images en couleur consiste à reprod
 ```
 </center>
 
-```{codeplay} 
+``` 
 # Codage pour germany.ppm
 P3
 6 3 255
