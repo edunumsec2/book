@@ -1,0 +1,276 @@
+
+div#editor-area {
+  position: relative;
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 5px 5px 0 0;
+}
+
+div#output-area {
+  position: relative;
+  background-color: rgb(245, 245, 245);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: rgb(10, 10, 10);
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 0 0 5px 5px;
+  border-top: 0;
+  font-size: 12pt;
+}
+
+div#output-area div#output-message {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25px;
+  text-align: center;
+  margin: auto;
+  color:rgb(169, 169, 169);
+  font-family: Lato, sans-serif;
+}
+
+div#output-area div#output-message span#execute-keyword {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+pre#output {
+  height: auto;
+  min-height: 25px;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  resize: vertical;
+  font-family: monospace;
+  line-height: 1.3em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+div#output-area input {
+  font-family: monospace;
+  font-size: 12pt;
+  background-color: transparent;
+  width: 200px;
+  resize: horizontal;
+}
+
+div#output-area .user-input {
+  color:rgb(51, 51, 51);
+}
+
+div#output-area pre div {
+  line-height: 1.5em;
+  overflow: hidden;
+}
+
+div#output-area pre button {
+  margin-left: 3px;
+  margin-bottom: 3px;
+  line-height: 0.7em;
+}
+
+div#control-area {
+  width: auto;
+  text-align: right;
+  margin-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+div#control-area button {
+  margin-left: 5px;
+  line-height: 0.9em;
+  width: 140px;
+  border-radius: 10px 10px 0 0;
+  cursor: hand;
+}
+
+div#control-area button:disabled {
+  display: none;
+}
+
+div#control-area button i {
+  margin-right: 5px;
+}
+
+div#canvas-area {
+  position: relative;
+  border: 1px solid rgb(215, 215, 215);
+  border-top: 0;
+  background-color: rgb(238, 238, 238);
+  text-align: center;
+  padding: 10px;
+  display: none;
+}
+
+div#canvas {
+  display: inline-block;
+  border: 3px inset rgb(169, 169, 169);
+  background-color: white;
+  transform-origin: top left;
+}
+
+.CodeMirror {
+  height: auto;
+  font-size: 11pt;
+  line-height: 1.6em;
+}
+
+@keyframes shine {
+  0% {opacity: 100%;}
+  50% {opacity: 75%;}
+	100% {opacity: 100%;}
+}
+
+.shine {
+  animation-name: shine;
+  animation-duration: 250ms;
+}
+
+#tooltip {
+  display: none;
+  color: black;
+  background: #fff;
+  padding: 15px;
+  z-index: 3;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  font-family: Lato, sans-serif;
+  user-select: none;
+  cursor: pointer;
+}
+
+#tooltip-arrow,
+#tooltip-arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  z-index: -1;
+}
+
+#tooltip-arrow::before {
+  content: '';
+  transform: rotate(45deg);
+  background: #fff;
+}
+
+#tooltip[data-popper-placement^='top'] > #tooltip-arrow {
+  bottom: -4px;
+}
+
+#tooltip[data-popper-placement^='bottom'] > #tooltip-arrow {
+  top: -4px;
+}
+
+#tooltip[data-popper-placement^='left'] > #tooltip-arrow {
+  right: -4px;
+}
+
+#tooltip[data-popper-placement^='right'] > #tooltip-arrow {
+  left: -4px;
+}
+
+/** Definitions for dark theme **/
+
+:root {
+  /* Inform browsers we support both themes */
+  /* See: https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#handling-user-agent-styles */
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  body[data-theme="auto"] div#editor-area {
+    border: 1px solid rgb(32, 32, 32);
+  }
+  
+  body[data-theme="auto"] div#output-area {
+    background-color: rgb(85, 85, 85);
+    color: rgb(44, 44, 44);
+    border: 1px solid rgb(92, 92, 92);
+  }
+  
+  body[data-theme="auto"] div#output-area div#output-message {
+    color:rgb(169, 169, 169);
+  }
+  
+  body[data-theme="auto"] div#output-area pre {
+    color:rgb(238, 238, 238);
+  }
+  
+  body[data-theme="auto"] div#output-area input {
+    color:rgb(238, 238, 238);
+  }
+  
+  body[data-theme="auto"] div#output-area .user-input {
+    color:rgb(196, 196, 196);
+  }
+  
+  body[data-theme="auto"] div#canvas-area {
+    border: 1px solid rgb(37, 37, 37);
+    background-color: transparent;
+  }
+  
+  body[data-theme="auto"] div#canvas {
+    border: 3px inset rgb(44, 44, 44);
+    background-color: white;
+  }
+}
+
+body[data-theme="dark"] div#editor-area {
+  border: 1px solid rgb(32, 32, 32);
+}
+
+body[data-theme="dark"] div#output-area {
+  background-color: rgb(85, 85, 85);
+  color: rgb(44, 44, 44);
+  border: 1px solid rgb(92, 92, 92);
+}
+
+body[data-theme="dark"] div#output-area div#output-message {
+  color:rgb(169, 169, 169);
+}
+
+body[data-theme="dark"] div#output-area pre {
+  color:rgb(238, 238, 238);
+}
+
+body[data-theme="dark"] div#output-area input {
+  color:rgb(238, 238, 238);
+}
+
+body[data-theme="dark"] div#output-area .user-input {
+  color:rgb(196, 196, 196);
+}
+
+body[data-theme="dark"] div#canvas-area {
+  border: 1px solid rgb(37, 37, 37);
+  background-color: transparent;
+}
+
+body[data-theme="dark"] div#canvas {
+  border: 3px inset rgb(44, 44, 44);
+  background-color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  div#control-area button {
+    width: 40px;
+    height: 30px;
+    color: transparent;
+    padding: 0;
+    text-align: center;
+  }
+
+  div#control-area button i {
+    width: 40px;
+    height: 30px;
+    color: white;
+    margin-top: 7px;
+    margin-right: 0;
+  }
+}
+

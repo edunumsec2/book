@@ -1,0 +1,11 @@
+% Some command redefinitions (like \chapter) will only work
+% if this is done after the tableofcontents has been issued.
+% This file is inputted after it thus offers an additional hook
+% to customize the document.
+
+% Start all sections at 0 instead of 1
+\let\chapterdefault=\chapter
+\renewcommand\chapter[1]{%
+\chapterdefault{#1}%
+\addtocounter{section}{-1}%
+}

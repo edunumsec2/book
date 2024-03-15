@@ -2,9 +2,9 @@
 
 ---- 
 
-Cette activité fait partie d'une série de ressources ayant pour objectif général d'identifier et de discuter des enjeux socio-techniques, politiques et économiques liés à la protection de la vie privée et des données personnelles.
+Cette activité fait partie d'une série de ressources ayant pour objectif général d'identifier et discuter des enjeux socio-techniques et politiques liés à la protection de la vie privée et des données personnelles.
 
-En particulier, le sujet de cette activité est le lien entre les données personnelles et les enjeux de réputation.
+En particulier, le sujet de cette activité est le lien entre les données et les enjeux de réputation.
 
 ---- 
 
@@ -16,7 +16,7 @@ En particulier, le sujet de cette activité est le lien entre les données perso
 * Objectifs pédagogique : Comprendre ce qu’est une donnée. Mettre en relation les données et leur écosystème.
 * Modalité : Débranché
 * Matériel : Article du journal [The Pillar](https://www.pillarcatholic.com/p/pillar-investigates-usccb-gen-sec)
-* Prérequis : Lecture de l'article *Pillar Investigates Burrill* (facultatif) 
+* Prérequis: Lecture de l'article *Pillar Investigates Burrill* (facultatif) 
 * Notions fondamentales : données, collecte de données, base de données, recoupement de données
 * Taille du groupe : classe entière
 
@@ -31,11 +31,11 @@ L'article en version PDF est disponible à télécharger pour distribution aux �
 
 |     Etape                             | Durée  | Phase de l'activité   | 
 |---------------------------------------|------- |-----------------------|
-|{ref}`Introduction <reputation.situation>`  | 5-10 min | Préparation |
-| {ref}`Qu'est-ce qu'une donnée, où et comment sont-elles collectées ? <reputation.exploration>` | 15-20 min | Théorie |
-| {ref}`Étude d'un cas pratique<reputation.cas_pratique>` | 5 min | Présentation |
-| {ref}`Organisation d'un jeu de rôle <reputation.debat>` | 10-20 min | Mise en situation / Discussion |
-| {ref}`Conclusion<reputation.conclusion>` | 5 min| Institutionalisation |
+|{ref}`Introduction <reputation.situation>`  | 5-10 min | Mise en situation|
+| {ref}`Qu'est-ce qu'une donnée et comment sont-elles collectées ? <reputation.exploration>` | 15-20 min | Exploration |
+| {ref}`Étude d'un cas pratique<reputation.cas_pratique>` | 5 min | Application |
+| {ref}`Organisation d'un jeu de rôle <reputation.debat>` | 10-20 min | Objectivation / Discussion |
+| {ref}`Conclusion<reputation.conclusion>` | 5 min| Institutionalisation|
 
 
 (reputation.situation)=
@@ -43,7 +43,7 @@ L'article en version PDF est disponible à télécharger pour distribution aux �
 
 *Durée : 5-10 min*
 
-L'enseignant·e introduit la thématique en questionnant les élèves sur leurs usages des réseaux sociaux (*Instagram, TikTok, Facebook,etc.*) et les données personnelles récoltées selon leur expérience.  
+L'enseignant introduit la thématique en questionnant les élèves sur leurs usages des réseaux sociaux (*Instagram, TikTok, Facebook,etc.*) et quelles données personnelles selon eux sont récoltées.  
 Cette introduction sert à jeter les bases de ce que peut être une donnée personnelle.
 
 (reputation.exploration)=
@@ -51,7 +51,7 @@ Cette introduction sert à jeter les bases de ce que peut être une donnée pers
 
 *Durée : 15-20 min*
 
-Dans cette partie, l'enseignant·e va présenter les différentes notions nécessaires à comprendre les bases de l'économie des données et les enjeux sous-jacents.
+Dans cette partie, l'enseignant va présenter les différentes notions nécessaires à comprendre les bases de l'économie des données et les enjeux sous-jacents.
 
 1. Une donnée c'est quoi ?  
 En questionnant les élèves on définit une donnée comme toute trace ou information issue d'une extraction avec référence au dispositif dont elle est issue.(Marres, N. 2017. Digital sociology: The reinvention of social research. John Wiley & Sons.)  
@@ -60,16 +60,16 @@ Cela peut être un nom, un âge, une date, une localisation, etc., un lien peut 
 2. Comment sont-elles collectées ?  
 Toujours en interaction avec les élèves, un inventaire des moyens de collecte est fait.  
 Les élèves pensent assez vite aux téléphones, aux ordinateurs, aux objets connectés (Internet of Things).  
-Il est moins évident les caméras de surveillances (ville, péages, etc.) ou d'autres organisations qui collectent des données depuis longtemps comme les banques (paiements CB) ou les commerces avec les cartes de fidélités (*la carte cumulus, c'est comme des likes en mode supermarché !*).  
-Il peut être intéressant d'insister sur l'ampleur de cette collecte en parlant des **traceurs** (et kits de développement logiciel, Software Development Kit). Pour l'illustrer, l'utilisation d'*[Exodus Privacy](https://exodus-privacy.eu.org/fr/)* sur une application comme *[Instagram](https://reports.exodus-privacy.eu.org/en/reports/com.instagram.android/latest/)* fait apparaitre le nombre et type d'autorisations demandées par l'application *(le fonctionnement de l'application a-t-il vraiment besoin de tout ça ? est-ce justifié / justifiable ?)*. L'application des CFF (très largement diffusée), qui se veut un exemple en termes de transparence, a une section très détaillée sur la collecte et le traitement des données à caractère personnel. Les élèves peuvent aller voir les longues listes des *Fournisseurs* et *SDK* en allant dans *Profil > Paramètres relatifs à la protection des données*.  
-L'enseignant·e se charge de synthétiser tous les éléments mentionnés afin de mener les élèves à la notion de *profilage* ou *profil d'individu*. Ces profils qui peuvent par exemple alimenter le marketing en se basant sur nos comportements, ont intrinsèquement de la valeur qui peut encore augmenter en fonction de ce qu'on en fait.
+Ils pensent moins aux caméras de surveillances (ville, péages, etc.) ou aux autres institutions qui collectent des données depuis longtemps comme les banques (paiements CB) ou les commerces avec les cartes de fidélités (*la carte cumulus, c'est comme des likes en mode supermarché !*).  
+Il peut être intéressant d'insister sur l'ampleur de cette collecte en parlant des **trackers** (et SDK). Pour l'illustrer, l'utilisation d'*[Exodus Privacy](https://exodus-privacy.eu.org/fr/)* sur une application comme *[Instagram](https://reports.exodus-privacy.eu.org/en/reports/com.instagram.android/latest/)* fait apparaitre le nombre et type d'autorisations demandées par l'application *(le fonctionnement de l'application a-t-il vraiment besoin de tout ça ? est-ce justifié / justifiable ?)*. L'application des CFF (très largement diffusée), qui se veut un exemple en termes de transparence, a une section très détaillée sur la collecte et le traitement des données à caractère personnel. Les élèves peuvent aller voir les longues listes des *Fournisseurs* et *SDK* en allant dans *Profil > Paramètres relatifs à la protection des données*.  
+L'enseignant se charge de synthétiser tous les éléments mentionnés afin de mener les élèves à la notion de *profil d'individu*. Ces profils qui peuvent par exemple alimenter le marketing en se basant sur nos comportements, ont intrinsèquement de la valeur qui peut encore augmenter en fonction de ce qu'on en fait.
 
 3. Où vont ces données ?  
-Ces données peuvent rester dans l'organisation qui les a collectées (banque, gouvernement, commerces), mais pas toujours.  
-Parfois elles sont vendues (légalement ou pas), exemple de [Migros et Coop](https://www.blick.ch/fr/news/suisse/une-veritable-mine-dor-migros-et-coop-revendent-les-donnees-de-leurs-clients-en-toute-legalite-id18997319.html?utm_medium=social&utm_campaign=share-button&utm_source=copy-to-clipboard), à des *annonceurs* ou à des *boursiers des données, *data brokers* qui les revendront à leur tour, et parfois elles sont aussi volées, [Facebook et autres](https://www.lemonde.fr/pixels/article/2021/04/05/cinq-questions-sur-la-fuite-de-donnees-concernant-plus-de-533-millions-de-comptes-facebook_6075616_4408996.html).  
+Ces données peuvent rester dans l'institution qui les a collectées (banque, gouvernement, commerces), mais pas toujours.  
+Parfois elles sont vendues (légalement ou pas), exemple de [Migros et Coop](https://www.blick.ch/fr/news/suisse/une-veritable-mine-dor-migros-et-coop-revendent-les-donnees-de-leurs-clients-en-toute-legalite-id18997319.html?utm_medium=social&utm_campaign=share-button&utm_source=copy-to-clipboard), à des *annonceurs* ou à des *data brokers* qui les revendront à leur tour, et parfois elles sont aussi volées, [Facebook et autres](https://www.lemonde.fr/pixels/article/2021/04/05/cinq-questions-sur-la-fuite-de-donnees-concernant-plus-de-533-millions-de-comptes-facebook_6075616_4408996.html).  
 Dans tous les cas, ces données collectées à un endroit, stockées ailleurs, vendues, revendues, volées, achetées, circulent et génèrent de l'argent, c'est l'économie des données. Il n'est utile de rentrer le détail de son fonctionnement, mais sa complexité et la diversité des acteurs peut être illustrée avec cette {download}`infographie <media/EconomieDonnees.pdf>`.  
 
-Agrégées ou rassemblées, mises en commun et organisées en base de données, toutes ces données permettent d'extraire une grande quantité d'informations qui génère de la connaissance, donc du pouvoir et par conséquent des risques aussi bien au niveau collectif (manipulation de masse, cf. [Cambridge Analytica](https://fr.wikipedia.org/wiki/Scandale_Facebook-Cambridge_Analytica)), qu'individuel ({ref}`cas pratique<reputation.cas_pratique>`).
+Rassemblées, mises en communs et organisées en base de données, toutes ces données permettent d'extraire une grande quantité d'informations qui génère de la connaissance, donc du pouvoir et par conséquent des risques aussi bien au niveau collectif (manipulation de masse, cf. [Cambridge Analytica](https://fr.wikipedia.org/wiki/Scandale_Facebook-Cambridge_Analytica)), qu'individuel ({ref}`cas pratique<reputation.cas_pratique>`).
 
 
 (reputation.cas_pratique)=
@@ -91,37 +91,37 @@ Grâce au croisement des données, les journalistes ont montré que J. Burrill, 
 
 *Durée : 10-20 min*
 
-Afin de sensibiliser les élèves à la complexité du sujet de la collecte et de l'utilisation des données personnelles, l'enseignant·e organise un jeu de rôle / débat ou les élèves sont réparti.e.s en 4 groupes ayant chaque groupe un rôle distinct :
+Afin de sensibiliser les élèves à la complexité du sujet de la collecte et de l'utilisation des données personnelles, l'enseignant organise un jeu de rôle / débat ou les élèves sont répartis en 4 groupes ayant chacun un rôle distinct :
 
 - Groupe A : Une commission de journalistes défendant le droit à informer, protégeant les journalistes, ainsi que les méthodes utilisées par le journal
 - Groupe B : L’entreprise / application transmettant des données personnelles
 - Groupe C : L’autorité de protection des données où une plainte a été déposée
 - Groupe D :La fédération romande des consommateurs (FRC) défendant la personne utilisant l’application
 
-Les élèves devront construire leurs arguments selon leur rôle autour du cas The Pillar. En particulier, il est nécessaire de répondre aux deux questions suivantes :
+Les élèves devront construire leurs arguments selon leur rôle autours du cas The Pillar. En particulier ils devront répondre aux deux questions suivantes :
 
 1. Êtes-vous pour ou contre la collecte de la géolocalisation ?
 2. Quelles mesures demandez-vous à mettre en place pour ou contre la collecte de la géolocalisation ?
 
-L’enseignant·e passe dans les groupes pour rappeler les rôles, les aider à prendre position, guider les réflexions et rappeler le temps accordé pour répondre aux deux questions (~ 5 min).  
-A la fin du temps imparti, l'enseignant·e se positionne au milieu des groupes et :
+L’enseignant passe dans les groupes pour rappeler les rôles, guider les réflexions et rappeler le temps accordé pour répondre aux deux questions (~ 5 min).  
+A la fin du temps imparti, l'enseignant se positionne au milieu des groupes et :
 - demande à chaque groupe de rappeler son rôle et de donner ses réponses aux questions
 - confronte les groupes en fonction des sujets amenés
 - fera de la modération ou stimulera les réactions en fonction des besoins
 
-L'objectif étant que les élèves réalisent que le sujet est délicat et qu'en fonction des rôles et des positions, il est difficile de trouver une solution satisfaisante mais qu'il est crucial de coopérer.
+L'objectif étant que les élèves réalisent que le sujet est délicat et qu'en fonction des rôles et positions, il est difficile de trouver une solution satisfaisante.
 
 (reputation.conclusion)=
 ### Conclusion
 
 *Durée : 5 min*
 
-L'enseignant·e pourra conclure la séquence en notant que :
-- les enjeux de réputation sont au coeur de l'économie des données
+L'enseignant pourra conclure la séquence en notant que :
+- les enjeux de réputations sont au coeur de l'économie des données
 - les conséquences sont au niveau individuel et collectif : diffamation, vol d'identité, discrimination, harcèlement, surveillance, etc...
 - les conséquences sont également au niveau des marques et des plateformes, [principalement financières](https://noyb.eu/fr/eu-58-million-fine-grindr-confirmed)
 
-L'enseignant·e pourra également faire un rappel au droit avec le Règlement Général sur la Protection des Données ([RGPD](https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32016R0679)) en Europe et la nouvelle Loi sur la Protection des Données ([nLPD](https://www.kmu.admin.ch/kmu/fr/home/faits-et-tendances/digitalisation/protection-des-donnees/nouvelle-loi-sur-la-protection-des-donnees-nlpd.html)) entrée en vigueur le 1er septembre 2023.
+L'enseignant pourra également faire un rappel au droit avec le Règlement Général sur la Protection des Données ([RGPD](https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32016R0679)) en Europe et la nouvelle Loi sur la Protection des Données ([nLPD](https://www.kmu.admin.ch/kmu/fr/home/faits-et-tendances/digitalisation/protection-des-donnees/nouvelle-loi-sur-la-protection-des-donnees-nlpd.html)) entrée en vigueur le 1er septembre 2023.
 
 Il pourra par exemple mentionner :
 - droit d'accès
@@ -136,4 +136,4 @@ Il pourra par exemple mentionner :
 
 ---
 
-Activité réalisée en collaboration avec [Dr. J. Pidoux](https://doi.org/10.5075/epfl-thesis-8830), [PersonalData.IO](https://personaldata.io/) et leur partenaire technologique [Hestia.ai](https://hestia.ai/)
+Activité réalisée en collaboration avec [Dr. J. Pidoux](https://doi.org/10.5075/epfl-thesis-8830)

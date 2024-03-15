@@ -1,0 +1,1600 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Recherche" href="../../../search.html" /><link rel="next" title="Enjeux sociaux II" href="../../../enjx2/index.html" /><link rel="prev" title="Routage et paquets sur Internet" href="../routage_paquets/routage_paquets.html" />
+
+    <link rel="shortcut icon" href="../../../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>Suivi sur le web - Enseigner</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/global_ens.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: white;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #06CCC0;
+  --color-brand-content: #06CCC0;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #06CCC0;
+  --color-brand-content: #06CCC0;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">Enseigner</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Enseigner</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Première année</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../rep-info/index.html">Représentation de l’information</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../rep-info/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../rep-info/activ/magie_binaire.html">Magie binaire</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../rep-info/activ/encoder_images.html">Images numériques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../rep-info/activ/echantillonnage_new.html">Echantillonnage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../rep-info/activ/huffman.html">Compression et codage de Huffman</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../rep-info/exo/index.html">Exercices</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../rep-info/exo/carte.html">Carte perforée</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../rep-info/exo/space.html">Space Invaders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../rep-info/exo/radiotel.html">Radiotéléphonie</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../rep-info/support/index.html">Supports de cours</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../rep-info/support/son/visu-et-ecoute-son.html">Représentation du son</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../rep-info/support/shannon2.html">Second théorème de Shannon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../prog1/index.html">Programmation I</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../prog1/introduction.html">Introduction</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../prog1/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../prog1/activ/catchfruit.html">Catch the fruit</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../prog1/activ/microbit-python/index.html">Python avec le micro:bit</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../prog1/activ/microbit-python/instructions.html">Instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../prog1/activ/microbit-python/condition.html">Exécution conditionnelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../prog1/activ/microbit-python/variables.html">Variables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prog1/evaluations.html">Evaluations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../prog1/support/support.html">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../algo1/index.html">Algorithmique I</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../algo1/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo1/activ/algo-tri.html">Algorithmes de tri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo1/activ/monochromes.html">Monochromes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo1/activ/stroboscope.html">Stroboscope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo1/activ/dijkstra.html">Algorithme du plus court chemin de Dijkstra</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../algo1/exo/index.html">Solutions des exercices</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo1/exo/algorithmes.html">Les algorithmes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo1/exo/tri.html">Trie, cherche et trouve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo1/exo/algo-props.html">Des algorithmes aux programmes</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../algo1/peda/index.html">Pédagogie et didactique</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo1/peda/objectifs.html">Objectifs d'apprentissage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo1/peda/philosophie.html">Philosophie</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../algo1/plan/index.html">Planification</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo1/plan/parcours.html">Planification de la thématique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo1/plan/annuelle.html">Planification annuelle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../archi/index.html">Architecture des ordinateurs</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../archi/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../archi/activ/ordinateurantique_new.html">Ordinateur antique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../archi/activ/simulateur.html">Simulateur logique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../archi/activ/selecteur-chien_new.html">Sélecteur de chien</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../archi/activ/gabuzomeu_new.html">Ga-Bu-Zo-Meu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../archi/eval/index.html">Evaluations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../archi/support/index.html">Supports de cours</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../enjx1/index.html">Enjeux sociaux I</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../enjx1/grandes-thematiques/index.html">Grandes thématiques</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx1/grandes-thematiques/economie-numerique.html">Économie du numérique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx1/grandes-thematiques/surveillance.html">Vie privée et surveillance</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../enjx1/fiches-complementaires/index.html">Fiches complémentaires</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx1/fiches-complementaires/digital-labor.html">Le digital labor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx1/fiches-complementaires/wikipedia.html">Wikipédia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx1/fiches-complementaires/affaire-snowden.html">L'affaire Snowden</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx1/fiches-complementaires/genre-numerique.html">Genre et numérique</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../enjx1/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx1/activ/encheres.html">Les enchères du web</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
+<ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../algo2/index.html">Algorithmique II</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../algo2/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../algo2/activ/epidemie/index.html">Epidémie</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../algo2/activ/epidemie/m_a_s.html">Marche à suivre</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../algo2/activ/epidemie/solution.html">Corrigé</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo2/activ/puissance4.html">Minimax / Puissance 4</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../algo2/exo/index.html">Solutions des exercices</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo2/exo/recherche.html">2. Algorithmes de recherche</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo2/exo/tris.html">3. Algorithmes de tri [complément]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo2/exo/heuristiques.html">4. Algorithmes heuristiques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo2/exo/recursivite.html">5. Récursivité [en option]</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../algo2/peda/index.html">Pédagogie et didactique</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo2/peda/objectifs.html">Objectifs d'apprentissage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../algo2/peda/philosophie.html">Philosophie</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../algo2/plan/index.html">Planification</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../../index.html">Réseaux</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../index.html">Activités</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../diffie-hellman/diffie-hellman.html">Diffie Hellman</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../routage_paquets/routage_paquets.html">Routage des Paquets</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Suivi sur le web</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../enjx2/index.html">Enjeux sociaux II</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../enjx2/grandes-thematiques/index.html">Grandes thématiques</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx2/grandes-thematiques/environnement.html">Numérique et environnement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx2/grandes-thematiques/IA_1.html">IA et enjeux de l'automatisation 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx2/grandes-thematiques/IA_2.html">IA et enjeux de l'automatisation 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx2/grandes-thematiques/histoire_culture_num_1.html">Histoire et culture du numérique 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx2/grandes-thematiques/histoire_culture_num_2.html">Histoire et culture du numérique 2</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../enjx2/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx2/activ/encheres.html">Les enchères du web</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx2/activ/emission_ges.html">Numérique et réchauffement climatique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx2/activ/ia_0.html">IA : Apprentissage et données</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx2/activ/ia_1.html">IA : Biais de l'apprentissage des données</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx2/activ/ia_2.html">IA : Bulles de filtre</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx2/activ/ia_3.html">IA : Générateurs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx2/activ/carto_numerique.html">Cartographie du numérique</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../enjx2/support/index.html">Supports de cours</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" role="switch" type="checkbox"/><label for="toctree-checkbox-29"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../enjx2/support/combustibles_GES.html">Numérique et environnement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Thématiques transversales</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" role="switch" type="checkbox"/><label for="toctree-checkbox-30"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../hist/activ/index.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" role="switch" type="checkbox"/><label for="toctree-checkbox-31"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../hist/activ/jeuimitation_new.html">Jeu de l'imitation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../hist/activ/smaky_new.html">Smaky</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../art/index.html">Art numérique</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" role="switch" type="checkbox"/><label for="toctree-checkbox-32"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../art/ai.html">AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../art/autonomy_cube.html">Autonomy Cube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../art/gloomy_sunday.html">Learning to See : Gloomy Sunday</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contrib/index.html">Contributions externes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../plan_didac/index.html">Plans didactiques</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" role="switch" type="checkbox"/><label for="toctree-checkbox-33"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plan_didac/plandidac2.html">Proposition 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossaire.html">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../readme/extensions.html">Extensions</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="suivi-sur-le-web">
+<h1>Suivi sur le web<a class="headerlink" href="#suivi-sur-le-web" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Cela n’a pas pu vous échapper, le web moderne est rempli de “<strong><span class="target" id="gl-tracker-0"></span><span class="glossary-ref" data-definition="PHA+TGUgcGlzdGFnZSB3ZWIsIHBpc3RhZ2UgdXRpbGlzYXRldXIsIG91IGVuY29yZSB0cmHDp2FnZSB3ZWIgKGVuIGFuZ2xhaXMgOiB3ZWIgdHJhY2tpbmcpLCBlc3QgbGEgcHJhdGlxdWUgb3UgbGEgdGVjaG5pcXVlIHBhciBsYXF1ZWxsZSB1biBzaXRlIHdlYiBjb2xsZWN0ZSwgZW5yZWdpc3RyZSBldCBwYXJ0YWdlIGRlcyBpbmZvcm1hdGlvbnMgc3VyIGxlcyBhY3Rpdml0w6lzIGQndW4gaW5kaXZpZHUgc3VyIGxlIFdvcmxkIFdpZGUgV2ViLiBMJ2FuYWx5c2UgZGUgY2VzIGFjdGl2aXTDqXMgKG91IGwnaWRlbnRpZmljYXRpb24gZHUvZGUgbGEgdmlzaXRldXLCt2V1c2UpIHBlcm1ldCBkZSBmb3VybmlyIGRlcyBjb250ZW51cyBhZGFwdMOpcyBhdXggcHLDqWbDqXJlbmNlcyBkdS9kZSBsYSB2aXNpdGV1csK3ZXVzZSBtYWlzIGMnZXN0IGF1c3NpIHVuZSBkb25uw6llIHF1aSBwZXV0IGludMOpcmVzc2VyIGRpZmbDqXJlbnTCt2XCt3MgYWN0ZXVywrd0cmljZcK3cyBkdSB3ZWIuICg8YSBocmVmPSJodHRwczovL2ZyLndpa2lwZWRpYS5vcmcvd2lraS9QaXN0YWdlX3dlYiI+V2lraXBlZGlhPC9hPik8L3A+Cg==" data-entry-name="UGlzdGFnZSBXZWI=" data-glossary-uri="../../../glossaire.html#gl-def-tracker-2" data-number="2">traqueurs</span></strong>”, de “<strong>publicité ciblée</strong>” et de “<strong>collecte de données</strong>”. Selon <a class="reference external" href="https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data">The Economist, en 2017</a>, “<strong>La ressource la plus précieuse du monde n’est plus le pétrole, mais les données</strong>”, mais comment les données sont-elles collectées ? Comment fonctionne ce marché ? Quels sont les risques pour la vie privée ? Quelles sont les bonnes pratiques à adopter en matière de sécurité et vie privée sur le web ? Cette activité va vous guider pour comprendre le fonctionnement technique et économique de cette industrie, et quelles pratiques adoptées pour limiter les risques de sécurité et d’atteinte à la vie privée.</p>
+<div class="hint admonition">
+<p class="admonition-title">Notice</p>
+<ul class="simple">
+<li><p><strong>Thème</strong> : <code class="docutils literal notranslate"><span class="pre">Réseaux</span></code> (transversal avec <code class="docutils literal notranslate"><span class="pre">Vie</span> <span class="pre">privée</span> <span class="pre">et</span> <span class="pre">surveillance</span></code> et <code class="docutils literal notranslate"><span class="pre">Économie</span> <span class="pre">du</span> <span class="pre">numérique</span></code>)</p></li>
+<li><p><strong>Niveau</strong> : <code class="docutils literal notranslate"><span class="pre">moyen</span></code> <!-- L'activité n'est pas facile, car elle demande une certaine supervision de l'enseignant·e et car les outils sont probablement inconnus des élèves. Elle n'est toutefois pas difficile car rien n'est à installer, l'activité peut se faire sans outil autre que l'ordinateur et le navigateur ce qui en simplifie l'accessibilité. Les objectifs sont d'une complexité notable mais peu exigeants sur les pré-requis et la technicité. Dépendant de l'aise des élèves et de l'avancée dans le chapitre Web, l'activité prévoit de revoir les points essentiels du web à comprendre pour effectuer l’activité à tout niveau. --></p></li>
+<li><p><strong>Durée</strong> : 4 périodes (1 séance de 45 minutes débranchées, 1 séance de 90 minutes branchée et une dernière séance de 45 minutes débranchées)</p></li>
+<li><p><strong>Objectifs pédagogiques</strong> : les objectifs de cette séquence sont associés à ceux du chapitre Réseaux, notamment <code class="docutils literal notranslate"><span class="pre">sécurité</span> <span class="pre">et</span> <span class="pre">sensibilisation</span> <span class="pre">aux</span> <span class="pre">bonnes</span> <span class="pre">pratiques;</span> <span class="pre">notions</span> <span class="pre">et</span> <span class="pre">modèles</span> <span class="pre">d’architectures</span> <span class="pre">et</span> <span class="pre">de</span> <span class="pre">protocoles</span></code>. De plus, les objectifs transversaux d’enjeux sociaux sont visés notamment <code class="docutils literal notranslate"><span class="pre">vie</span> <span class="pre">privée</span> <span class="pre">et</span> <span class="pre">surveillance;</span> <span class="pre">économie</span> <span class="pre">du</span> <span class="pre">numérique</span></code>. Plus d’explications sont données dans la partie <a class="reference internal" href="#webtracking-didactique"><span class="std std-ref">Considérations didactiques</span></a></p></li>
+<li><p><strong>Modalité</strong> : <code class="docutils literal notranslate"><span class="pre">branché</span></code> et <code class="docutils literal notranslate"><span class="pre">débranché</span></code></p></li>
+<li><p><strong>Matériel</strong> : Ordinateur et navigateur web</p></li>
+<li><p><strong>Prérequis</strong> : Il est préférable d’avoir étudié les éléments du chapitre <a class="reference external" href="https://apprendre.modulo-info.ch/resx/web.html">World Wide Wide</a>. Cette activité le complète (éventuellement conclut) et lui apporte une activité pratique. L’activité <a class="reference internal" href="../../../enjx1/activ/encheres.html#encheres"><span class="std std-ref">Les enchères du Web</span></a> ou équivalent sur le fonctionnement de la publicité ciblée est également requis pour comprendre la présence des acteurs et des enjeux (ceci pourrait s’intégrer dans une séance préliminaire débranchée)</p></li>
+<li><p><strong>Notions fondamentales</strong> : Les technologies du web et leur fonctionnement, l’<span class="target" id="gl-adtech-0"></span><span class="glossary-ref" data-definition="PHA+TCdBZCBUZWNoIGVzdCB1biBlbnNlbWJsZSBkZSB0ZWNobm9sb2dpZXMgdXRpbGlzw6llcyBwb3VyIGfDqXJlciBsZXMgcHVibGljaXTDqXMgw6AgdHJhdmVycyBsZXMgY2FuYXV4LCB5IGNvbXByaXMgbGEgcmVjaGVyY2hlLCBsJ2FmZmljaGFnZSwgbGEgdmlkw6lvLCBsZSBtb2JpbGUgZXQgbGUgc29jaWFsLCBhdmVjIGRlcyBmb25jdGlvbnMgZGUgY2libGFnZSwgZGUgY29uY2VwdGlvbiwgZGUgZ2VzdGlvbiBkZXMgZW5jaMOocmVzLCBkJ2FuYWx5c2UsIGQnb3B0aW1pc2F0aW9uIGV0IGQnYXV0b21hdGlzYXRpb24gZGUgbGEgcHVibGljaXTDqSBudW3DqXJpcXVlLiAoPGEgaHJlZj0iaHR0cHM6Ly93d3cuZ2FydG5lci5jb20vZW4vaW5mb3JtYXRpb24tdGVjaG5vbG9neS9nbG9zc2FyeS9hZC10ZWNoIj5HYXJ0bmVyIEdsb3NzYXJ5PC9hPiwgdHJhZHVpdCBkZSBsJ2FuZ2xhaXMgYXZlYyBEZWVwTCk8L3A+Cg==" data-entry-name="QWQgVGVjaA==" data-glossary-uri="../../../glossaire.html#gl-def-adtech-1" data-number="1">Ad Tech</span> et l’économie du web, les concepts et l’évaluation de vie privée du numérique, la compréhension d’une trace réseau, la modélisation d’une interaction sur le web avec l’association à des entités et leurs intérêts</p></li>
+<li><p><strong>Taille du groupe</strong> : <code class="docutils literal notranslate"><span class="pre">classe</span> <span class="pre">entière</span></code> pour les séquences débranchées et <code class="docutils literal notranslate"><span class="pre">demi-classe</span></code> pour les séquences branchées</p></li>
+</ul>
+</div>
+<section id="deroulement">
+<h2>Déroulement<a class="headerlink" href="#deroulement" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Durée</p></th>
+<th class="head"><p>Phase de l’activité</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#webtracking-accroche"><span class="std std-ref">Le suivi - l’affaire de tou·te·s</span></a></p></td>
+<td><p>10 min</p></td>
+<td><p>Mise en situation (débranché)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#webtracking-interractionressourcesweb"><span class="std std-ref">Interactions et ressources sur le web</span></a></p></td>
+<td><p>35 min</p></td>
+<td><p>Apprentissage - Institutionalisation (débranché)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#webtracking-theorietracereseau"><span class="std std-ref">Théorie - trace réseau</span></a></p></td>
+<td><p>10 min</p></td>
+<td><p>Apprentissage (branché)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#webtracking-observationdetracereseau"><span class="std std-ref">Pratique - observation de trace réseau</span></a></p></td>
+<td><p>20 min</p></td>
+<td><p>Application (branché)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#webtracking-tracereseauetsuivi"><span class="std std-ref">Trace réseau et suivi - les traqueurs</span></a></p></td>
+<td><p>25 min</p></td>
+<td><p>Exploration (branché)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#webtracking-analysecomplete"><span class="std std-ref">Analyse complète d’interactions web</span></a></p></td>
+<td><p>35 min</p></td>
+<td><p>Objectivation et Évaluation (branché)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#webtracking-proprietevieprivee"><span class="std std-ref">Vie privée - propriétés et menaces</span></a></p></td>
+<td><p>10 min</p></td>
+<td><p>Institutionnalisation (débranché)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#webtracking-commerceweb"><span class="std std-ref">Trace réseau et suivi - commerce du web</span></a></p></td>
+<td><p>10 min</p></td>
+<td><p>Institutionnalisation (débranché)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#webtracking-protection"><span class="std std-ref">Protection de la vie privée</span></a></p></td>
+<td><p>20 min</p></td>
+<td><p>Apprentissage (débranché)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#webtracking-reinvestissement"><span class="std std-ref">Suivi et applications mobiles</span></a></p></td>
+<td><p>5 min</p></td>
+<td><p>Réinvestissement (débranché)</p></td>
+</tr>
+</tbody>
+</table></div>
+<!-- *Note : le moment didactique dans lequel se situe l'étape est optionnel*
+Liste des phases à choix possibles pour la dernière colonne du tableau ci-dessus:
+
+- Mise en situation
+- Enseignement frontal
+- Exploration
+- Apprentissage
+- Application
+- Objectivation
+- Institutionnalisation
+- Évaluation
+- Réinvestissement
+- Discussion -->
+</section>
+<section id="etapes">
+<h2>Étapes<a class="headerlink" href="#etapes" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="le-suivi-laffaire-de-toutes">
+<span id="webtracking-accroche"></span><h3>Le suivi - l’affaire de tou·te·s<a class="headerlink" href="#le-suivi-laffaire-de-toutes" title="Lien permanent vers ce titre">¶</a></h3>
+<p><em>Durée : 10-15 min</em></p>
+<p>Lors de cette étape introductive, l’idée est de <strong>captiver l’attention des élèves</strong> pour leur transmettre que s’intéresser au <strong>suivi sur le web concerne chacun et chacune</strong>. Il est possible que des élèves conçoivent le suivi comme un problème uniquement pour les personnes «ayant quelque chose à se reprocher», ou comme un simple moyen bénin et pratique d’avoir de la publicité plus pertinente : ces conceptions sont intéressantes mais insuffisantes à la compréhension des technologies de la publicité, ce qui est un bon prétexte pour en analyser le fonctionnement au niveau du réseau.</p>
+<p>De nombreuses approches sont possibles, la proposition est de <strong>transmettre aux élèves l’une des histoires suivantes</strong> (via des slides, via un article à étudier, …) pour captiver leur attention. Ainsi, cette activité ne vous proposera pas une étude approfondie pour faire une “étude de cas” en classe, il s’agit simplement d’idées d’accroches (de plus, les articles source sont principalement en anglais). Plusieurs histoires sont proposées pour laisser la possibilité de trouver la plus pertinente dans le contexte des élèves de votre classe :</p>
+<div class="danger admonition">
+<p class="admonition-title">Avertissement</p>
+<p>Certaines de ces histoires concernent des sujets pouvant <strong>heurter la sensibilité de certain·e·s</strong>. Il peut être pertinent de ne pas sélectionner une histoire si elle concerne trop directement l’un ou l’une des élèves (avortement, orientation sexuelle, cancer).</p>
+</div>
+<ul class="simple">
+<li><p>Merck traque les victimes de cancer et utilise la publicité ciblée de Twitter (<a class="reference external" href="https://bokonads.com/medical-targeting-should-be-illegal/">lien</a>) (<a class="reference download internal" download="" href="../../../_downloads/71d8b433fe51a99731a5f6c55c60c9b6/Protecting_cancer_victims_from_adtech.pdf"><code class="xref download docutils literal notranslate"><span class="pre">version</span> <span class="pre">PDF</span></code></a>)</p></li>
+<li><p>“Comment Target a su que ma fille était enceinte avant elle” (<a class="reference external" href="https://www.nytimes.com/2012/02/19/magazine/shopping-habits.html">lien</a>) (<a class="reference download internal" download="" href="../../../_downloads/4915f8bd06e7824ba2f557a70ea2bb38/How_Companies_Learn_Your_Secrets-NYT.pdf"><code class="xref download docutils literal notranslate"><span class="pre">version</span> <span class="pre">PDF</span></code></a>)</p></li>
+<li><p>Signal utilise les outils de publicité ciblée d’Instagram pour montrer aux utilisateur·trice·s ce que Meta sait d’eux/elles (<a class="reference external" href="https://signal.org/blog/the-instagram-ads-you-will-never-see/">lien</a>) (<a class="reference download internal" download="" href="../../../_downloads/721fb6e285f10af9602bfb3e2c63bb40/Signal_Blog_The_Instagram_ads_Facebook_wont_show_you.pdf"><code class="xref download docutils literal notranslate"><span class="pre">version</span> <span class="pre">PDF</span></code></a>)</p></li>
+<li><p>L’application Ovia partage les données de maternité et menstruation de ses employées aux employeurs (<a class="reference external" href="https://www.washingtonpost.com/technology/2019/04/10/tracking-your-pregnancy-an-app-may-be-more-public-than-you-think/">lien</a>)(<a class="reference download internal" download="" href="../../../_downloads/5c67e871438aaaab05122499fd068b94/The_pregnancy-tracking_app_Ovia_lets_women_record_their_most_sensitive_data_for_themselves__and_their_boss-TWP.pdf"><code class="xref download docutils literal notranslate"><span class="pre">version</span> <span class="pre">PDF</span></code></a>)</p></li>
+<li><p>Une newsletter Catholique découvre et révèle qu’un prêtre utilise l’application Grindr (réseau de rencontre gay) en ayant simplement acheté ses données auprès de “<span class="target" id="gl-databroker-0"></span><span class="glossary-ref" data-definition="PHA+VW4gY291cnRpZXIgZW4gZG9ubsOpZXMgZXN0IHVuZSBwZXJzb25uZSBvdSB1bmUgZW50cmVwcmlzZSBzcMOpY2lhbGlzw6llIGRhbnMgbGEgY29sbGVjdGUgZGUgZG9ubsOpZXMgcGVyc29ubmVsbGVzICh0ZWxsZXMgcXVlIGxlIHJldmVudSwgbCdvcmlnaW5lIGV0aG5pcXVlLCBsZXMgY29udmljdGlvbnMgcG9saXRpcXVlcyBvdSBsZXMgZG9ubsOpZXMgZGUgZ8Opb2xvY2FsaXNhdGlvbikgb3UgZGUgZG9ubsOpZXMgc3VyIGxlcyBlbnRyZXByaXNlcywgcHJpbmNpcGFsZW1lbnQgw6AgcGFydGlyIGRlIHJlZ2lzdHJlcyBwdWJsaWNzIG1haXMgcGFyZm9pcyBkZSBzb3VyY2VzIHByaXbDqWVzLCBldCBkYW5zIGxhIHZlbnRlIG91IGxhIGNvbmNlc3Npb24gZGUgbGljZW5jZXMgZGUgY2VzIGluZm9ybWF0aW9ucyDDoCBkZXMgdGllcnMgcG91ciB1bmUgdmFyacOpdMOpIGQndXRpbGlzYXRpb25zLiAoPGEgaHJlZj0iaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGF0YV9icm9rZXIiPldpa2lwZWRpYTwvYT4sIHRyYWR1aXQgZGUgbCdhbmdsYWlzIGF2ZWMgRGVlcEwpPC9wPgo=" data-entry-name="Q291cnRpZXIgZW4gRG9ubsOpZXMgKERhdGEgQnJva2VyKQ==" data-glossary-uri="../../../glossaire.html#gl-def-databroker-1" data-number="1">Data Brokers</span>” (<a class="reference external" href="https://www.washingtonpost.com/technology/2021/07/22/data-phones-leaks-church/">lien</a>) (<a class="reference download internal" download="" href="../../../_downloads/e0bd377d73320701af5c6adce24c7b6c/How_smartphone_data_can_be_used_to_learn_secrets-TWP.pdf"><code class="xref download docutils literal notranslate"><span class="pre">version</span> <span class="pre">PDF</span></code></a>)</p></li>
+<li><p>Des groupes “anti-choix” utilisent la technologie de la publicité ciblée pour montrer des publicités anti-avortement aux femmes durant leurs visites en clinique (<a class="reference external" href="https://rewirenewsgroup.com/2016/05/25/anti-choice-groups-deploy-smartphone-surveillance-target-abortion-minded-women-clinic-visits/">lien</a>) (<a class="reference download internal" download="" href="../../../_downloads/c568efaf2bbd6220715f238b5973b6e0/Anti-Choice_Groups_Use_Smartphone_Surveillance_to_Target_Abortion-Minded_Women_During_Clinic_Visits.pdf"><code class="xref download docutils literal notranslate"><span class="pre">version</span> <span class="pre">PDF</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="interactions-et-ressources-sur-le-web">
+<span id="webtracking-interractionressourcesweb"></span><h3>Interactions et ressources sur le web<a class="headerlink" href="#interactions-et-ressources-sur-le-web" title="Lien permanent vers ce titre">¶</a></h3>
+<p><em>Durée : 30-35 min</em></p>
+<p>L’idée de cette séquence est d’ancrer les contenus étudiés à propos du web (par exemple via la partie <a class="reference external" href="https://apprendre.modulo-info.ch/resx/web.html">World Wide Web de Modulo</a>) avec des exemples concrets. Elle permet ainsi d’institutionnaliser des éléments discutés dans l’accroche, mais remplace difficilement une étude complète des technologies du web.</p>
+<section id="http-transferer-des-documents-hypertexte">
+<h4>HTTP : transférer des documents hypertexte<a class="headerlink" href="#http-transferer-des-documents-hypertexte" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Comme vu en cours, HTTP est le protocole qui permet de définir <strong>comment deux ordinateurs se demandent des fichiers hypertextes sur internet</strong>. Ouvrir une page web ne veut rien dire d’autre que générer une requête <code class="docutils literal notranslate"><span class="pre">GET</span></code> depuis votre navigateur (appelé <strong>client</strong>) vers un autre ordinateur (appelé <strong>serveur</strong>). Ce dernier vous répond généralement qu’il est d’accord (<code class="docutils literal notranslate"><span class="pre">OK</span></code>) et <strong>vous joint le fichier HTML correspondant</strong>. Tout ceci se passe <strong>automatiquement</strong> : une fois que vous cliquez sur un lien, l’ordinateur gère la mise en place du protocole pour vous. Les interactions autorisées par le protocole sont limitées, et seules les suivantes sont importantes pour cette séquence :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Méthode HTTP</p></th>
+<th class="head"><p>Usage</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">GET</span></code></p></td>
+<td><p>Le client demande une information au serveur. Il peut éventuellement lui en transmettre au passage (les URL avec un <code class="docutils literal notranslate"><span class="pre">?</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">POST</span></code></p></td>
+<td><p>Le client donne des informations au serveur.</p></td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section id="html-le-format-de-fichier-hypertexte">
+<h4>HTML : le format de fichier hypertexte<a class="headerlink" href="#html-le-format-de-fichier-hypertexte" title="Lien permanent vers ce titre">¶</a></h4>
+<p>HTML est le format de base des fichiers échangés sur le web. Ce simple fichier texte est “<em>Hyper</em>” notamment car il a pour essence de <strong>créer des liens avec d’autres documents</strong>, on les appelle les <strong>hyperliens</strong> et c’est ainsi que que fonctionne le web ! Sur un moteur de recherche, vous faites une requête et recevez une page qui contient une liste de liens vers d’autres pages. C’est ce qui permet de “<strong>naviguer</strong>” sur le web d’une page à l’autre.</p>
+<figure class="align-default" id="web-search">
+<a class="reference internal image-reference" href="../../../_images/web-search.jpeg"><img alt="ddg screenshot" src="../../../_images/web-search.jpeg" style="width: 650px;"/></a>
+<figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Résultat d’une recherche sur le web : une liste d’hyperliens</span><a class="headerlink" href="#web-search" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="web-search-source">
+<a class="reference internal image-reference" href="../../../_images/web-search-source.jpeg"><img alt="ddg source screenshot" src="../../../_images/web-search-source.jpeg" style="width: 650px;"/></a>
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Code source de la page HTML des résultats de DuckDuckGo (Lite) : une balise <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> symbolise un lien vers une nouvelle page</span><a class="headerlink" href="#web-search-source" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+<p>Il existe différents types de ressources vers lesquelles peuvent pointer les hyperliens. Les plus connues et répandues sont généralement les <strong>liens vers d’autres pages</strong> (comme dans la page d’une recherche web), mais les <strong>images</strong>, les <strong>feuilles de styles</strong> ou les <strong>scripts</strong> sont aussi des ressources qui sont en permanence référencées par nos pages web !</p>
+<div class="caution admonition">
+<p class="admonition-title">Important</p>
+<p>Traditionnellement, <strong>les pages web référencées ne sont chargées que lorsque l’on clique dessus</strong>, c’est l’utlisateur·trice qui décide quand télécharger la nouvelle ressource. Les images, scripts et feuilles de style sont quant à eux chargés <strong>automatiquement</strong> ! L’utilisateur·trice n’a la plupart du temps pas conscience du moment où sont chargées ces ressources et d’où elles proviennent. C’est un concept clé pour la suite !</p>
+</div>
+<p>Les liens référençant des ressources peuvent pointer sur des <strong>ressources internes</strong> (des images par exemple) stockées dans le même dossier que la page web (comme dans l’exemple donné dans le <a class="reference external" href="https://apprendre.modulo-info.ch/resx/web.html#html">cours HTML</a>), ou vers des <strong>ressources tierces</strong> localisées n’importe où ailleurs.</p>
+<div class="note admonition">
+<p class="admonition-title">Micro-activité</p>
+<p>Vous pouvez télécharger les deux fichiers d’exemple <a class="reference download internal" download="" href="../../../_downloads/6ba599d2607f2ecd3ca15f9961708398/example.html"><code class="xref download docutils literal notranslate"><span class="pre">code/example.html</span></code></a> et <a class="reference download internal" download="" href="../../../_downloads/308600bc6e64ce1019d4eca09bdffd66/example_bootstrap.html"><code class="xref download docutils literal notranslate"><span class="pre">code/example_bootstrap.html</span></code></a>. Ces fichiers très simples rappellent les bases de HTML avec le concept de balise.</p>
+<p>Il est ensuite possible d’identifier avec les élèves les <strong>différences entre le code source des deux fichiers</strong>. Les lignes <code class="docutils literal notranslate"><span class="pre">9-11</span></code> du fichier <code class="docutils literal notranslate"><span class="pre">example_bootstrap.html</span></code> sont effectivement des balises spéciales qui servent de <strong>références à des scripts tiers</strong>. Ces derniers sont <strong>chargés automatiquement</strong> et permettent d’améliorer l’apparence de ma page web grâce à des ressources tierces (sans avoir à coder soi même).</p>
+</div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">style</span><span class="o">=</span><span class="s">"color:red"</span><span class="p">&gt;</span> L’amanite tue-mouche <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> L’amanite tue-mouche est très belle mais très dangereuse ! <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"photo.jpg"</span> <span class="na">height</span><span class="o">=</span><span class="s">"250"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">style</span><span class="o">=</span><span class="s">"color:red"</span><span class="p">&gt;</span> L’amanite tue-mouche <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> L’amanite tue-mouche est très belle mais très dangereuse ! <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://upload.wikimedia.org/wikipedia/commons/0/03/Fly_Agaric_mushroom_04.jpg"</span> <span class="na">height</span><span class="o">=</span><span class="s">"250"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Micro-activité</p>
+<p>La première page HTML contient <select class="blank"><option class="blank_option" selected="selected" value="-1"></option><option class="incorrect_option" value="0">une ressource tierce</option><option class="correct_option" value="1">une ressource interne</option></select> tandis que la seconde contient une <select class="blank"><option class="blank_option" selected="selected" value="-1"></option><option class="correct_option" value="1">une ressource tierce</option><option class="incorrect_option" value="0">une ressource interne</option></select>. En effet, l’une de ces page charge <select class="blank"><option class="blank_option" selected="selected" value="-1"></option><option class="correct_option" value="1">une image</option><option class="incorrect_option" value="0">une feuille de style</option><option class="incorrect_option" value="0">un script</option></select> hébergé <select class="blank"><option class="blank_option" selected="selected" value="-1"></option><option class="incorrect_option" value="0">sur Moodle</option><option class="incorrect_option" value="0">sur Office365</option><option class="correct_option" value="1">sur Wikimedia</option></select>.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Micro-activité</p>
+<p>Notre navigateur chargera la ressource tierce <select class="blank"><option class="blank_option" selected="selected" value="-1"></option><option class="correct_option" value="1">automatiquement</option><option class="incorrect_option" value="0">manuellement avec un clic</option></select> et pour ce faire, il <select class="blank"><option class="blank_option" selected="selected" value="-1"></option><option class="incorrect_option" value="0">ira chercher dans sa mémoire vive</option><option class="correct_option" value="1">utilisera le protocole HTTPs</option></select></p>
+</div>
+</section>
+<section id="javascript-executer-du-code-dans-le-navigateur">
+<h4>JavaScript : exécuter du code dans le navigateur<a class="headerlink" href="#javascript-executer-du-code-dans-le-navigateur" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Comme vu dans le cours, <strong>JavaScript est un language de programmation</strong>, comme Python, qui a comme spécificité d’avoir été développé pour <strong>s’exécuter dans un navigateur</strong>. Ainsi, beaucoup des choses complexes (affichages dynamique et animations par exemple) qui se passent dans nos pages web sont codées avec le language JavaScript. Par exemple, l’API WebGL permet d’afficher des applications graphiques complexes (le cube tournant sur <a class="reference external" href="https://get.webgl.org">https://get.webgl.org</a> est un exemple imagé).</p>
+<p>Il est important que les élèves comprennent qu’utiliser JavaScript dans son navigateur permet d’<strong>en permanence recevoir du code pour exécuter diverses actions de programmation</strong>. Le language de programmation est une interface entre l’humain·e et la machine, cela permet d’obtenir des informations intéressantes sur la machine utilisée.</p>
+<p>Par exemple, voici un bout de code Python qui permet d’afficher des informations sur la machine qui exécute ce code. Un code similaire permet de facilement obtenir ce genre d’informations également avec JavaScript.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHBsYXRmb3JtCgpwcmludCgiVHlwZSBkJ29yZGluYXRldXIgOiIsIHBsYXRmb3JtLm1hY2hpbmUoKSkKcHJpbnQoIkxlIHByb2Nlc3NldXIgYSB1bmUgYXJjaGl0ZWN0dXJlIHBvdXIgOiIsIHBsYXRmb3JtLmFyY2hpdGVjdHVyZSgpWzBdKQpwcmludCgiQ2UgcHJvZ3JhbW1lIHMnZXjDqWN1dGUgc3VyIHVuIHN5c3TDqG1lIDoiLHBsYXRmb3JtLnN5c3RlbSgpKQpwcmludCgiQ2Ugc3lzdMOobWUgZXN0IGRhbnMgc2EgdmVyc2lvbiA6IiwgcGxhdGZvcm0ucmVsZWFzZSgpKQpwcmludCgiVm91cyB1dGlsaXNleiBQeXRob24gZGFucyBzYSB2ZXJzaW9uIDoiLCBwbGF0Zm9ybS5weXRob25fdmVyc2lvbigpKQ==" data-file="cGxhdGZvcm0taW5mby5weQ==" frameborder="0" scrolling="no" src="../../../codeplay/frame.html"></iframe></div><div class="hint admonition">
+<p class="admonition-title">Le saviez-vous ?</p>
+<p>Vous pouvez essayer de changer de navigateur et voir les différences des valeurs de retour de ce bout de code ! Vous pouvez même le télécharger et l’exécuter sur votre machine locale.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Pourquoi est-ce important ?</p>
+<p>Les élèves doivent comprendre que la possibilité d’exécuter du code est une capacité très puissante donnée aux pages web. <strong>La plupart des autres applications</strong> que nous avons l’habitude d’utiliser (nos mails, notre calendrier), utilisent <strong>un code prédéfini</strong> qui n’est modifié que lors de mises à jour du logiciel.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">À retenir</p>
+<ul class="simple">
+<li><p>HTTP est le protocole qui est compris par les clients et les serveurs et leur permet d’<strong>échanger du contenu sur internet</strong>. Les méthode indiquent l’<strong>intention de l’interaction</strong> (<code class="docutils literal notranslate"><span class="pre">GET</span></code> ou <code class="docutils literal notranslate"><span class="pre">POST</span></code>)</p></li>
+<li><p>HTML est un language qui permet de transmettre <strong>du texte mais aussi des liens vers des ressources</strong>. Ces dernières peuvent être <strong>internes ou tierces</strong>, auquel cas, le protocole HTTP permet de les charger auprès du réel hébergeur</p></li>
+<li><p>JavaScript est un <strong>language de programmation</strong> à part entière qui permet d’<strong>exécuter du code dans le navigateur</strong>. C’est une capacité puissante pour <strong>extraire des information sur le navigateur</strong>.</p></li>
+</ul>
+</div>
+</section>
+<section id="optionnel-les-cookies-les-fichiers-pour-se-rappeler-des-anciennes-sessions">
+<h4>(optionnel) Les cookies : les fichiers pour se rappeler des anciennes sessions<a class="headerlink" href="#optionnel-les-cookies-les-fichiers-pour-se-rappeler-des-anciennes-sessions" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="caution admonition">
+<p class="admonition-title">Important</p>
+<p>Le reste de l’activité ne couvre pas particulièrement les cookies. Cette partie est à plutôt réserver aux élèves pour qui les notions de HTTP, HTML et JavaScript sont claires, ou simplement pour les élèves les plus curieux·ses.</p>
+</div>
+<p>Par nature, le protocole HTTP est ce que l’on appelle “Stateless”, ce qui signifie que <strong>rien dans le protocole ne s’assure d’avoir une mémoire entre deux requêtes</strong> : si vous faites 2 requêtes d’affilée pour <a class="reference external" href="https://wikipedia.org">https://wikipedia.org</a>, ces deux requêtes seront à priori traitées indépendamment, sans prendre en compte que la même personne a fait cette requête, ni que l’une doit arriver avant l’autre.</p>
+<p>Or, il peut être bien <strong>pratique de garder ces informations entre deux requêtes</strong>, c’est ce qu’on appelle une <strong>session</strong>, et c’est ce qui se passe dans quasiment chacune de nos interactions web. Le meilleur exemple est par exemple celui d’une session sur <a class="reference external" href="https://office.com">https://office.com</a>. Lorsque vous vous connectez avec votre compte, vous entrez votre mot de passe, puis tant que vous ne fermez pas votre navigateur, vous n’avez <strong>plus besoin de l’entrer de nouveau</strong>. <em>Comment Office sait que la même personne est connectées si toutes les requêtes sont indépendantes ?</em> Grâce aux cookies !</p>
+<p>Les cookies sont simplement des <strong>fichiers texte enregistrés dans le navigateur qui sont envoyés automatiquement avec la requête HTTP</strong>. Ainsi, si le cookie contient votre mot de passe (ce n’est généralement pas le cas pour des raisons de sécurité, mais l’image est conceptuellement plus simple), à chaque requête, il est possible de vous authentifier automatiquement sans même que vous vous en rendiez compte ! Fermer le navigateur annule en général ceci car il est souvent configuré que la fermeture du navigateur efface les cookies : plus de petit fichier texte avec votre “mot de passe” envoyé en même temps que chaque requête à <a class="reference external" href="https://office.com">https://office.com</a>, il faut vous reconnecter.</p>
+</section>
+</section>
+<section id="theorie-trace-reseau">
+<span id="webtracking-theorietracereseau"></span><h3>Théorie - trace réseau<a class="headerlink" href="#theorie-trace-reseau" title="Lien permanent vers ce titre">¶</a></h3>
+<p><em>Durée : 10-15 min</em></p>
+<p>Cette étape se veut être une étape d’<strong>introduction de TP avec les élèves</strong> : l’idée est de les accompagner avec l’outil d’analyse du réseau de leur navigateur et leur permettre de progressivement et en autonomie croissante, pouvoir effectuer les exercices demandés. Une <strong>phase introductive frontale et guidée</strong> peut être une bonne idée pour s’assurer d’initialement avoir l’attention de toutes et tous et éviter d’avoir des élèves perdus.</p>
+<div class="caution admonition">
+<p class="admonition-title">Important</p>
+<p>Les élèves seront amenés à naviguer par eux/elles-mêmes. Ceci est grandement encouragé mais il est important d’appuyer qu’<strong>il sera difficile de comprendre tout le trafic observé sur n’importe quel site web (même pour l’enseignant·e)</strong> ! Expert·e des technologies web est un métier, et même les personnes expertes sont spécialisées dans un domaine : tout comprendre du web est aujourd’hui presque utopique !</p>
+<p>Toutefois, il faut absolument valoriser et expliquer que <strong>les critères de réussite de la tâche ne se mesureront pas en “combien de % des requêtes je suis capable de comprendre”</strong> mais “<strong>suis-je capable d’expliquer le contenu et la nature de certaines requêtes ? Comment puis-je les justifier dans leur contexte ? Suis-je capable d’expliquer une requête particulière sélectionnée volontairement par mon enseignant·e ?</strong>” (c’est ce qui rend la tâche intéressante, authentique et l’éloigne d’une forme d’évaluation mesure 😉). Voir <a class="reference internal" href="#webtracking-didactique"><span class="std std-ref">Considérations didactiques</span></a></p>
+</div>
+<p>Il existe de nombreux moyens d’observer une trace réseau, et à différents niveaux de la <a class="reference external" href="https://fr.wikipedia.org/wiki/Mod%C3%A8le_OSI">couche OSI</a> (applications de monitoring dans le routeur, application dans le système d’exploitation comme <a class="reference external" href="https://www.wireshark.org/">Wireshark</a> ou <a class="reference external" href="https://www.tcpdump.org/">tcpdump</a>). Toutefois, pour cette proposition d’activité, nous utilisons <strong>l’outil intégré au navigateur</strong> car il est :</p>
+<ul class="simple">
+<li><p>intégré : rien n’est à installer sur les ordinateurs du gymnase ou à la maison</p></li>
+<li><p>lisible et axé sur les aspects du web et moins sur les informations de la couche OSI, ce qui permettra d’identifier plus clairement les acteurs</p></li>
+<li><p>s’exporte en format <a class="reference external" href="https://fr.wikipedia.org/wiki/Format_HTTP_Archive">HAR</a> ce qui permet d’avoir un format unique malgré les différences de navigateur (et peut permettre de créer des traces à l’avance et les donner aux élèves pour diminuer l’incertitude par exemple en évaluation)</p></li>
+<li><p>étant dans le navigateur, il est possible de toutefois voir les données transmises via HTTPs de manière déchiffrée (vu que le chiffrement se fait dans le navigateur)</p></li>
+</ul>
+<p>Notez toutefois qu’au vu des objectifs pédagogiques visés, l’utilisation d’une autre application permettrait tout à fait de remplir les objectifs pédagogiques visés (voir <a class="reference internal" href="#webtracking-didactique"><span class="std std-ref">Considérations didactiques</span></a>).</p>
+<div class="danger admonition">
+<p class="admonition-title">Avertissement</p>
+<p>L’activité est principalement développée en testant <strong>sur Firefox</strong>. Des tests légers de fonctionnalités sur les autres navigateurs ont été effectués à la conception, mais il pourrait être raisonnable et simplifier grandement la tâche de l’enseignant·e d’<strong>effectuer ce TP sur Firefox</strong>.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Micro-activité</p>
+<p>Pour commencer à montrer aux élèves le fonctionnement de l’outil de capture, il est possible de leur proposer de se rendre sur &lt;example.com&gt;, et d’<strong>activer leurs outils de développement web</strong>.
+<img alt="Activation des outils web sur Firefox" src="../../../_images/webtools.jpeg"/></p>
+<p>Une fois ceci fait, il est possible de les emmener sur <strong>l’onglet “Réseau”</strong> où iels pourront recharger la page et voir la liste des requête réseau faîtes.
+<img alt="Ouverture de l'onglet Réseau sur la console de Firefox" src="../../../_images/webtools-network.jpeg"/></p>
+<p>Afin de toutes et tous partir sur une base commune, il peut être pertinent de leur demander d’activer <strong>les mêmes en-têtes pour toute le monde</strong> en faisant un clic-droit sur la barre d’en-tête de l’onglet réseau :
+<img alt="Onglets à activer dans les outils de développement réseau" src="../../../_images/webtools-headers.jpeg"/></p>
+<p>Un fois ceci fait, le prochain outil essentiel est la <strong>barre de filtre</strong> où les élèves peuvent ajouter de nombreux types de filtres qui seront utiles plus tard.</p>
+</div>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../../_images/webtools-import-export.jpeg"><img alt="outils web, import-export" src="../../../_images/webtools-import-export.jpeg" style="width: 300px;"/></a>
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Vous pouvez également montrer la possibilité d’importer et d’exporter des traces réseau directement depuis la console réseau du navigateur. Ceci permettra aux élèves de vous envoyer des traces, sauvegarder leurs traces et les réutiliser, et vous permettra de créer des exercices hors-ligne.</span><a class="headerlink" href="#id1" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="pratique-observation-de-trace-reseau">
+<span id="webtracking-observationdetracereseau"></span><h3>Pratique - observation de trace réseau<a class="headerlink" href="#pratique-observation-de-trace-reseau" title="Lien permanent vers ce titre">¶</a></h3>
+<p><em>Durée : 15-20 min</em></p>
+<p>Lors de cette partie, l’objectif est de <em>guider les élèves progressivement à travers l’analyse de traces générées par des interactions web de plus en plus complexes</em>. Les élèves sont censés gagner en autonomie au cours de cette étape. Il est toujours essentiel de rappeler que <strong>le but n’est pas de tout comprendre</strong> au fur et à mesure que les interactions sont plus complexes, mais de pouvoir <strong>identifier des éléments clés</strong>.</p>
+<p>Ainsi, il revient à l’enseignant·e de distinguer vers quels élèves intervenir pour expliquer des fondamentaux et vers quels élèves ne pas intervenir pour expliquer des détails de web moderne hors du sujet traité. Pour aider à cette distinction, l’étape suivante <strong>donne des idées de sites où l’interaction web permet de distinguer des éléments clés, et la nature de ces éléments à relever qui sont alignés avec les objectifs de la séquence</strong>.</p>
+<section id="trace-reseau-et-contenu-web">
+<h4>Trace réseau et contenu web<a class="headerlink" href="#trace-reseau-et-contenu-web" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="note admonition">
+<p class="admonition-title">Micro-activité</p>
+<p>Demander aux élèves de se rendre sur un site web très simple, comme par exemple <a class="reference external" href="https://example.org">https://example.org</a> dans un nouvel onglet. Le but est ici de les forcer à <strong>refaire la procédure d’ouverture des outils de développement web</strong> (et se rappeler que, comme l’indiquent les navigateurs, la page doit être rechargée).</p>
+<p>Une fois ceci fait, les élèves doivent reporter les informations suivantes (quiz Moodle, quiz papier, …):</p>
+<p>Choisir une requête parmi celles qui apparaissent à l’écran et compléter le tableau :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nom de ressource</p></th>
+<th class="head"><p>Méthode HTTP</p></th>
+<th class="head"><p>Domaine contacté</p></th>
+<th class="head"><p>Protocole utilisé</p></th>
+<th class="head"><p>Pourquoi la requête est initiée</p></th>
+<th class="head"><p>Type de document reçu</p></th>
+<th class="head"><p>Intérêt de la requête</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>/</p></td>
+<td><p>GET</p></td>
+<td><p>example.com</p></td>
+<td><p>HTTPS</p></td>
+<td><p>Car la page a été rafraîchie</p></td>
+<td><p>HTML</p></td>
+<td><p>Cette requête permet d’obtenir le corps de la page web visualisée</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Notez les points suivants qui sont fondamentaux pour poursuivre la séquence :</p>
+<ul class="simple">
+<li><p>le protocole peut être lu depuis la colonne URL (pas besoin d’activer la colonne protocole, elle ne fait que donner la précision si HTTP 1, 2 ou QUIC est utilisé)</p></li>
+<li><p>la colonne <code class="docutils literal notranslate"><span class="pre">Initiateur</span></code> de la console Réseau peut être difficile à lire (d’autant que la nature de <a class="reference external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1848769">son contenu n’est pas documentée</a>). <strong>Remplir la colonne “<code class="docutils literal notranslate"><span class="pre">Pourquoi</span> <span class="pre">la</span> <span class="pre">requête</span> <span class="pre">est</span> <span class="pre">initiée</span></code>” demande aussi du jugement</strong> : nous venons de charger la page, il est normal que nous recevions un document HTML. La colonne initiator est toutefois intéressante lorsqu’elle précise qu’un <code class="docutils literal notranslate"><span class="pre">script</span></code> ou qu’une <code class="docutils literal notranslate"><span class="pre">feuille</span> <span class="pre">de</span> <span class="pre">style</span></code> sont à l’origine d’une requête.</p></li>
+<li><p>il est important d’introduire la colonne “Intérêt de la requête” pour <strong>guider les élèves vers les bons questionnements</strong> vis à vis des traces et la remise en contexte telle que décrite par les objectifs de la séquence</p></li>
+</ul>
+</div>
+</section>
+<section id="differents-types-de-ressources">
+<h4>Différents types de ressources<a class="headerlink" href="#differents-types-de-ressources" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="note admonition">
+<p class="admonition-title">Micro-activité</p>
+<p>Demander aux élèves de se rendre sur un site légèrement plus complexe mais toutefois <strong>chargeant principalement des ressources internes</strong> comme par exemple <a class="reference external" href="https://fr.wikipedia.org">https://fr.wikipedia.org</a> ou <a class="reference external" href="https://www.vd.ch">https://www.vd.ch</a>. De nouveau, vérifier la bonne compréhension de la mise en place du moniteur de réseau.</p>
+<p>Une fois ceci fait, il est possible de par exemple demander aux élèves de reporter les informations suivantes :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nom de ressource</p></th>
+<th class="head"><p>Méthode HTTP</p></th>
+<th class="head"><p>Domaine contacté</p></th>
+<th class="head"><p>Protocole utilisé</p></th>
+<th class="head"><p>Pourquoi la requête est initiée</p></th>
+<th class="head"><p>Type de document reçu</p></th>
+<th class="head"><p>Intérêt de la requête</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Wikipédia Accueil_Principal</p></td>
+<td><p>GET</p></td>
+<td><p>fr.wikipedia.org</p></td>
+<td><p>HTTPS</p></td>
+<td><p>Car la page a été rafraîchie</p></td>
+<td><p>HTML</p></td>
+<td><p>Cette requête permet d’obtenir le corps de la page web visualisée</p></td>
+</tr>
+<tr class="row-even"><td><p>wikipedia.png</p></td>
+<td><p>GET</p></td>
+<td><p>fr.wikipedia.org</p></td>
+<td><p>HTTPS</p></td>
+<td><p>Une image est intégrée dans le document principal (balise img)</p></td>
+<td><p>PNG</p></td>
+<td><p>La requête permet de charger une ressource référencée dans le document HTML principal</p></td>
+</tr>
+<tr class="row-odd"><td><p>load.php</p></td>
+<td><p>GET</p></td>
+<td><p>fr.wikipedia.org</p></td>
+<td><p>HTTPS</p></td>
+<td><p>Un script est inséré dans le document principal (balise script)</p></td>
+<td><p>Code JavaScript</p></td>
+<td><p>La requête permet de charger une ressource référencée dans le document HTML principal</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>A noter que :</p>
+<ul class="simple">
+<li><p>vous pouvez librement <strong>pré-remplir certaines lignes</strong> pour sélectionner précisément certaines ressources à étudier, communes pour tous les élèves</p></li>
+<li><p>il est peut être <strong>difficile d’analyser en détail le script chargé</strong>. Une explication simple suffit à justifier de la compréhension de l’élève. Un script comme ressource interne permet souvent d’afficher le contenu de la page : éléments dynamiques et animations, adaptation aux différents écrans, …</p></li>
+</ul>
+</div>
+<div class="note admonition" id="google-post">
+<p class="admonition-title">Micro-activité</p>
+<p>Un autre exercice intéressant peut être d’identifier <strong>des requêtes de type POST</strong>. Un bon exemple est la page d’accueil de Google : <a class="reference external" href="https://www.google.com/">https://www.google.com/</a></p>
+<p>Une fois ceci fait, il est possible de par exemple demander aux élèves de reporter les informations suivantes :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nom de ressource</p></th>
+<th class="head"><p>Méthode HTTP</p></th>
+<th class="head"><p>Domaine contacté</p></th>
+<th class="head"><p>Protocole utilisé</p></th>
+<th class="head"><p>Pourquoi la requête est initiée</p></th>
+<th class="head"><p>Type de document reçu</p></th>
+<th class="head"><p>Intérêt de la requête</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>-</p></td>
+<td><p>POST</p></td>
+<td><p>www.google.com</p></td>
+<td><p>HTTPS</p></td>
+<td><p>C’est un script qui la déclenche (Firefox indique (beacon))</p></td>
+<td><p>-</p></td>
+<td><p>Cette requête permet de donner des informations sur notre navigateur et nous à Google</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>A noter que :</p>
+<ul class="simple">
+<li><p>il est attendu que les élèves aient du mal à identifier ce qui a lancé la requête : c’est un contexte où iels doivent <strong>utiliser leur jugement et identifier qu’iels n’ont rien fait d’autre que d’ouvrir la page</strong>, ainsi, seule une action automatique déclenchée par un script permet de générer cette action (dans un contexte où iels auraient lancé une recherche, la réponse serait différente)</p></li>
+<li><p>le concept de <strong>beacon</strong> sera couvert plus tard dans la séance. Cette petite partie d’exercice attire l’attention des élève sur la présence des <strong>requêtes de type POST dans un contexte où iels n’ont pas effectué d’action la générant</strong></p></li>
+</ul>
+</div>
+</section>
+<section id="ressources-internes-et-ressources-tierces">
+<h4>Ressources internes et ressources tierces<a class="headerlink" href="#ressources-internes-et-ressources-tierces" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="note admonition">
+<p class="admonition-title">Micro-activité</p>
+<p>Demander aux élèves de se rendre sur un site légèrement plus complexe et <strong>axé sur le chargement de ressources pouvant être tierces</strong> comme par exemple <a class="reference external" href="https://code.org/helloworld">https://code.org/helloworld</a>. De nouveau, vérifier la bonne compréhension de la mise en place du moniteur de réseau.</p>
+<p>Une fois ceci fait, il est possible de par exemple demander aux élèves de reporter les informations suivantes :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nom de ressource</p></th>
+<th class="head"><p>Méthode HTTP</p></th>
+<th class="head"><p>Domaine contacté</p></th>
+<th class="head"><p>Protocole utilisé</p></th>
+<th class="head"><p>Pourquoi la requête est initiée</p></th>
+<th class="head"><p>Type de document reçu</p></th>
+<th class="head"><p>Intérêt de la requête</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>favicon.ico?0.0035782818514278336=</p></td>
+<td><p>GET</p></td>
+<td><p>facebook.com</p></td>
+<td><p>HTTPS</p></td>
+<td><p>Une balise d’image charge cette ressource</p></td>
+<td><p>SVG</p></td>
+<td><p>La page contient une icône Facebook en bas, celle-ci est téléchargée auprès de Facebook</p></td>
+</tr>
+<tr class="row-even"><td><p>async-api.e9f77430-1.237.1.min.js</p></td>
+<td><p>GET</p></td>
+<td><p>js-agent.newrelic.com</p></td>
+<td><p>HTTPS</p></td>
+<td><p>Un script a chargé cette ressource automatiquement</p></td>
+<td><p>Code JavaScript</p></td>
+<td><p>Cette requête permet de télécharger du code JavaScript auprès d’un fournisseur de contenu externe. Son intérêt spécifique est dûr à analyser</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>A noter que :</p>
+<ul class="simple">
+<li><p>dire que <strong>la fonction d’un script est dure à analyser est une réponse valide</strong> (même si elle donne peu d’information, il est important de discerner entre l’analysable et le non analysable). Comme précédemment, les élèves doivent juste pouvoir décrire les fonctions habituelles standard d’un script (pour le différencier d’une image ou d’un document)</p></li>
+<li><p>le site chargeant beaucoup de ressources, il devient essentiel d’<strong>indiquer clairement aux élèves comment se servir de la barre de filtre</strong> pour identifier une ressource, et <strong>quelles ressources cibler</strong>. Il est possible de faire <strong>varier les attributs ciblés pour tester la compréhension des élèves</strong> : “identifiez la ressource chargée auprès de Facebook”, “identifiez les requêtes POST” ou “identifiez les ressources de type feuille de style” permettent d’identifier des compétences de discrimination et de ciblage variées chez les élèves. Les élèves moins à l’aise avec la barre de filtre peuvent aussi <strong>cliquer sur l’entête d’une colonne pour trier</strong> selon les valeurs de cette dernière.</p></li>
+</ul>
+</div>
+</section>
+<section id="optionnel-chargement-securise-et-non-securise">
+<h4>(optionnel) Chargement sécurisé et non-sécurisé<a class="headerlink" href="#optionnel-chargement-securise-et-non-securise" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="note admonition">
+<p class="admonition-title">Aller plus loin</p>
+<p>Cette partie est classée comme <strong>“optionnelle” pour permettre une flexibilité vis à vis des élèves ayant plus de difficultés</strong> avec les contenus précédents et y passer plus de temps. Cette partie s’intéresse spécifiquement aux connections sécurisées contre non-sécurisées. Cela peut être un bon appui pour un rebond lors de la <strong>discussion sur la confidentialité dans la partie <a class="reference internal" href="#webtracking-proprietevieprivee"><span class="std std-ref">Vie privée - propriétés et menaces</span></a></strong>, mais n’est pas forcément nécessaire pour comprendre les enjeux du suivi sur internet.</p>
+<p>La plupart des navigateurs actuels sont très informatifs sur les implications d’une connection sécurisée, mais un test en condition peut être pertinent pour encadrer et institutionaliser cette situation.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Micro-activité</p>
+<p>Afin de tester et identifier une connexion non sécurisée, le site web <a class="reference external" href="http://testphp.vulnweb.com/login.php">http://testphp.vulnweb.com/login.php</a> propose une interface volontairement insécure. Il est important de rappeler aux élèves les implications d’une connexion non-sécurisée. La page de login permet de tester l’envoi d’un formulaire non-sécurisé (des identifiants par défauts sont disponibles et les seuls fonctionnels: username <code class="docutils literal notranslate"><span class="pre">test</span></code>, password <code class="docutils literal notranslate"><span class="pre">test</span></code>). Entrer ces informations et appuyer sur “login” permet d’obtenir une trace intéressante.</p>
+<p>Une fois ceci fait, il est possible de par exemple demander aux élèves de reporter les informations suivantes :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nom de ressource</p></th>
+<th class="head"><p>Méthode HTTP</p></th>
+<th class="head"><p>Domaine contacté</p></th>
+<th class="head"><p>Protocole utilisé</p></th>
+<th class="head"><p>Pourquoi la requête est initiée</p></th>
+<th class="head"><p>Type de document reçu</p></th>
+<th class="head"><p>Intérêt de la requête</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>-</p></td>
+<td><p>POST</p></td>
+<td><p>testphp.vulnweb.com</p></td>
+<td><p>HTTP</p></td>
+<td><p>Un formulaire a été validé</p></td>
+<td><p>-</p></td>
+<td><p>L’utilisateur·trice doit donner son identifiant et mot de passe pour prouver son droit d’accès au compte</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>A noter que :</p>
+<ul class="simple">
+<li><p>il peut être pertinent d’<strong>étudier avec les élèves les différents types d’avertissements donnés par les navigateurs</strong>, et d’en discuter dans le contexte de la confidentialité (quels adversaire peuvent voir la ressource, comment peuvent-ils opérer, …)</p></li>
+<li><p>cet exercice se prête bien à l’<strong>affichage avancé d’une ligne de la trace</strong>. Notamment en ce qui concerne la trace de POST request : un clic permet d’observer que <strong>la requête contient littéralement le mot de passe</strong> (si celui-ci n’est pas chiffré, il circule sur internet et peut être capturé par n’importe qui) (voir la <a class="reference internal" href="#testvulnweb"><span class="std std-ref">Figure suivante</span></a>)</p></li>
+</ul>
+</div>
+<figure class="align-default" id="testvulnweb">
+<a class="reference internal image-reference" href="../../../_images/testvulnweb.jpeg"><img alt="screenshot password plaintext transmission" src="../../../_images/testvulnweb.jpeg" style="width: 650px;"/></a>
+<figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Voir le mot de passe dans l’analyse réseau d’une requête POST d’authentification sur un site web non sécurisé</span><a class="headerlink" href="#testvulnweb" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="trace-reseau-et-suivi-les-traqueurs">
+<span id="webtracking-tracereseauetsuivi"></span><h3>Trace réseau et suivi - les traqueurs<a class="headerlink" href="#trace-reseau-et-suivi-les-traqueurs" title="Lien permanent vers ce titre">¶</a></h3>
+<p><em>Durée : 20-25 min</em></p>
+<p>Une fois que les élèves sont familiarisé·e·s avec l’observation de trace réseau, iels remarqueront que les sites web modernes ont <strong>des traces réseau complexes</strong>, difficiles à déchiffrer et comprendre. C’est ainsi qu’il faudra familiariser les élèves avec le concept d’<strong>identification des traqueurs</strong>, pour distinguer les requêtes liées au <strong>contenu du site web, et celles qui ont un but de suivi</strong> (et plus tard, parler de leur intérêt économique), toujours dans l’objectif d’enrichir leur modélisation des interactions lors d’une communication réseau sur le web.</p>
+<section id="differents-types-de-traqueurs">
+<h4>Différents types de traqueurs<a class="headerlink" href="#differents-types-de-traqueurs" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Le premier moment clé de l’analyse de suivi ou non sur le web est l’identification de ce que sont les traqueurs. De nombreuses définitions existent : <span class="target" id="gl-tracker-1"></span><span class="glossary-ref" data-definition="PHA+VW4gdHJhcXVldXIgZXN0IHVuZSBzb2Npw6l0w6kgcXVpIHJlY3VlaWxsZSBkZXMgaW5mb3JtYXRpb25zIHN1ciB2b3VzIGxvcnNxdWUgdm91cyBuYXZpZ3VleiBzdXIgbGUgd2ViLiBMZXVycyBzY3JpcHRzIGV0IHBpeGVscyBkZSBzdWl2aSBzb250IGluc8OpcsOpcyBkYW5zIGxlcyBzaXRlcyB3ZWIgcXVlIHZvdXMgdmlzaXRleiBwYXIgbGVzIMOpZGl0ZXVycyBvdSBsZXMgcsOpc2VhdXggcHVibGljaXRhaXJlcywgZ8OpbsOpcmFsZW1lbnQgZW4gw6ljaGFuZ2UgZCd1biBzZXJ2aWNlIGZvdXJuaSBwYXIgbGEgc29jacOpdMOpIGRlIHN1aXZpLiAoPGEgaHJlZj0iaHR0cHM6Ly93aG90cmFja3MubWUvYmxvZy93aGF0X2lzX2FfdHJhY2tlci5odG1sIj5XaG90cmFja3MgTWU8L2E+LCB0cmFkdWl0IGRlIGwnYW5nbGFpcyBwYXIgRGVlcEwpPC9wPgo=" data-entry-name="VHJhcXVldXI=" data-glossary-uri="../../../glossaire.html#gl-def-tracker-1" data-number="1">Ghostery</span>, <span class="target" id="gl-tracker-2"></span><span class="glossary-ref" data-definition="PHA+TGUgcGlzdGFnZSB3ZWIsIHBpc3RhZ2UgdXRpbGlzYXRldXIsIG91IGVuY29yZSB0cmHDp2FnZSB3ZWIgKGVuIGFuZ2xhaXMgOiB3ZWIgdHJhY2tpbmcpLCBlc3QgbGEgcHJhdGlxdWUgb3UgbGEgdGVjaG5pcXVlIHBhciBsYXF1ZWxsZSB1biBzaXRlIHdlYiBjb2xsZWN0ZSwgZW5yZWdpc3RyZSBldCBwYXJ0YWdlIGRlcyBpbmZvcm1hdGlvbnMgc3VyIGxlcyBhY3Rpdml0w6lzIGQndW4gaW5kaXZpZHUgc3VyIGxlIFdvcmxkIFdpZGUgV2ViLiBMJ2FuYWx5c2UgZGUgY2VzIGFjdGl2aXTDqXMgKG91IGwnaWRlbnRpZmljYXRpb24gZHUvZGUgbGEgdmlzaXRldXLCt2V1c2UpIHBlcm1ldCBkZSBmb3VybmlyIGRlcyBjb250ZW51cyBhZGFwdMOpcyBhdXggcHLDqWbDqXJlbmNlcyBkdS9kZSBsYSB2aXNpdGV1csK3ZXVzZSBtYWlzIGMnZXN0IGF1c3NpIHVuZSBkb25uw6llIHF1aSBwZXV0IGludMOpcmVzc2VyIGRpZmbDqXJlbnTCt2XCt3MgYWN0ZXVywrd0cmljZcK3cyBkdSB3ZWIuICg8YSBocmVmPSJodHRwczovL2ZyLndpa2lwZWRpYS5vcmcvd2lraS9QaXN0YWdlX3dlYiI+V2lraXBlZGlhPC9hPik8L3A+Cg==" data-entry-name="UGlzdGFnZSBXZWI=" data-glossary-uri="../../../glossaire.html#gl-def-tracker-2" data-number="2">Wikipedia</span> ou <span class="target" id="gl-tracker-3"></span><span class="glossary-ref" data-definition="PHA+RW4gcsOoZ2xlIGfDqW7DqXJhbGUsIHVuIHRyYWNrZXIgZXN0IHVuIHNjcmlwdCBzdXIgbGVzIHNpdGVzIHdlYiBjb27Dp3UgcG91ciBvYnRlbmlyIGRlcyBkb25uw6llcyBzdXIgdm9zIHByw6lmw6lyZW5jZXMgZXQgdm90cmUgaWRlbnRpdMOpIGxvcnNxdWUgdm91cyBpbnRlcmFnaXNzZXogYXZlYyBsZXVyIHNpdGUuIFBhcmZvaXMsIGNlcyBzY3JpcHRzIHNvbnQgcGxhY8OpcyDDoCBkZXNzZWluIHBhciBsZSBzaXRlIHdlYiBzdXIgbGVxdWVsIHZvdXMgdm91cyB0cm91dmV6LCBkJ2F1dHJlcyBmb2lzIHVuIHNjcmlwdCBwZXV0IHByb3ZlbmlyIGQndW4gc2l0ZSB3ZWIgcXVlIHZvdXMgbidhdmV6IGphbWFpcyB2aXNpdMOpLiBDb21wcmVuZHJlIGNvbW1lbnQgdm9zIGRvbm7DqWVzIHNvbnQgY29sbGVjdMOpZXMgcGV1dCB2b3VzIGFpZGVyIMOgIGxpbWl0ZXIgdm90cmUgZXhwb3NpdGlvbiBhdXggdHJhY2V1cnMgw6AgbCdhdmVuaXIuICg8YSBocmVmPSJodHRwczovL2Jsb2cubW96aWxsYS5vcmcvZW4vdW5jYXRlZ29yaXplZC93aGF0LWlzLWEtd2ViLXRyYWNrZXIvIj5Nb3ppbGxhPC9hPiwgdHJhZHVpdCBkZSBsJ2FuZ2xhaXMgYXZlYyBEZWVwTCk8L3A+Cg==" data-entry-name="VHJhcXVldXI=" data-glossary-uri="../../../glossaire.html#gl-def-tracker-3" data-number="3">Mozilla</span> proposent des définitions intéressantes et variées, qui mettent en avant différentes facettes du suivi.</p>
+<p>Dans le cadre de cette séquence de TP, nous allons identifier différents types de traqueurs par <strong>leur méthode de fonctionnement</strong> et <strong>l’information qu’ils transmettent</strong>, afin de faire un pont entre l’identification de ces derniers dans une trace réseau, et les propriétés de la vie privée mises à mal. L’idée est alors de présenter aux élèves 3 types de traqueurs :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Type de traqueur</p></th>
+<th class="head"><p>Fonctionnement</p></th>
+<th class="head"><p>Information transmise</p></th>
+<th class="head"><p>Exemple</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Beacon ou Pixel espion ou Tag</p></td>
+<td><p>Une ressource (souvent externe) doit être chargée et, ce faisant, contacte un domaine. Le domaine contacté sait que nous sommes censés trouver la ressource sur une page web précise (peut ou pas être combiné avec les cookies)</p></td>
+<td><p>A quelle heure et avec quelle IP une ressource a été rencontrée</p></td>
+<td><p><a class="reference external" href="https://proton.me/support/email-tracker-protection">Cet article</a> de Proton explique le fonctionnement de leur mécanisme de protection des mails contre les beacons</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fingerprinting</p></td>
+<td><p>Le navigateur reçoit du code JavaScript qui permet d’identifier des attributs précis et unique de votre navigateur et les envoie sur un domaine de suivi</p></td>
+<td><p>De nombreux attributs sont transmis, et ils permettent souvent d’identifier uniquement un navigateur (soit un·e utilisateur·trice)</p></td>
+<td><p><a class="reference external" href="https://coveryourtracks.eff.org/">coveryourtracks.eff.org</a> en montre un très bon exemple</p></td>
+</tr>
+<tr class="row-even"><td><p>Cookie tiers</p></td>
+<td><p>Comme vu sous <a class="reference internal" href="#webtracking-interractionressourcesweb"><span class="std std-ref">Interactions et ressources sur le web</span></a>, les cookies sont des fichiers texte transmis automatiquement avec les requêtes HTTP. Sans contrôle de la part du navigateur, un site peut déposer et prendre les cookies des autres sites pour traquer un·e utilisateur·trice en lui attribuant un numéro unique par exemple</p></td>
+<td><p>Quel utilisateur·trice visite quels sites et quand</p></td>
+<td><p><a class="reference external" href="https://en.wikipedia.org/wiki/HTTP_cookie#Third-party_cookie">La page wikipedia sur le sujet</a> apporte un bon exemple</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Le choix de présentation de ces types de traqueurs est libre. Il est possible de s’axer sur la mise en exergue d’exemple, l’utilisation de slides ou d’un tableau de classification. L’idée est de permettre aux élèves de <strong>distinguer que différents types de traqueurs existent et emploient différentes méthodes</strong> : des plus ou moins complexes, permettant d’obtenir des <strong>informations plus ou moins précises</strong> (ce qui sera un rebond essentiel dans l’explication de la partie <a class="reference internal" href="#webtracking-proprietevieprivee"><span class="std std-ref">Vie privée - propriétés et menaces</span></a>). Il est important aussi d’expliquer que la plupart de ces méthodes sont <strong>utilisées en combinaison pour assurer les chances de succès</strong> (la requête tente de transmettre des cookies si possible, sinon elle agit comme un simple beacon, par exemple).</p>
+<div class="attention admonition">
+<p class="admonition-title">À retenir</p>
+<ul class="simple">
+<li><p><strong>différentes méthodes</strong> de suivi existent, elles sont souvent <strong>utilisées en combinaison</strong></p>
+<ul>
+<li><p>il sera difficile d’identifier clairement à quelle catégorie de traqueur correspond un élément de trace réseau (et c’est normal, un script peut déclencher un beacon et tenter en même temps du fingerprinting et s’aider de cookies, la nuance est fine dans la réalité)</p></li>
+<li><p>le but sera d’utiliser le jugement et la compréhension des élèves pour <strong>leur faire faire des suppositions sur la nature du traqueur</strong> (<strong>GET vers un site tiers : beacon, POST généré automatiquement par JavaScript : fingerprinting</strong>)</p></li>
+</ul>
+</li>
+<li><p>elles sont <strong>plus ou moins complexes</strong> et fournissent des <strong>informations différentes</strong></p></li>
+<li><p>elles ont globalement pour objectif d’<strong>identifier uniquement une personne navigant</strong> entre plusieurs pages (concept même de suivi)</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Aller plus loin</p>
+<p>Dépendant de l’aise des élèves dans le domaine, il est possible de mettre en avant le compromis entre <strong>la difficulté de bloquer le traqueur</strong> et <strong>la précision de l’information qu’il apporte</strong> : bloquer les beacons peut empêcher l’apparition de certaines images et la distinction entre traqueur et fournisseur de contenu est fine, cependant, ils apportent une quantité d’information limitée. Le fingerprinting est une solution intermédiaire (<a class="reference external" href="https://github.com/fingerprintjs/fingerprintjs">fingerprintjs</a>, dans sa version payante, promet 99.5% de succès dans l’identification unique), et le cookie est la solution reine en quantité d’information pour l’identification unique mais est aisément bloqué par une politique “First Party Only” comme le <a class="reference external" href="https://blog.mozilla.org/security/2021/02/23/total-cookie-protection/">Firefox Cookie Protection</a></p>
+</div>
+</section>
+<section id="comment-traquer-les-traqueurs">
+<h4>Comment traquer les traqueurs<a class="headerlink" href="#comment-traquer-les-traqueurs" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Une fois les différents types de traqueurs analysés, l’objectif est de pouvoir <strong>les identifier dans la communication avec un site web</strong> et permettre aux élèves de faire le lien entre les technologies de tracking enseignées aux élèves et la réalité des communications réseau sous-jacente.</p>
+<p>Afin de permettre aux élèves d’avoir les outils nécessaires pour comprendre les interactions entre client, fournisseur de service et traqueur, il semble important de leur donner accès à une <strong>base de donnée indexée et répertoriant des traqueurs</strong> de sites web connus afin de guider leur recherche. Les sites <a class="reference external" href="https://whotracks.me">whotracks.me</a> et <a class="reference external" href="https://trackography.org/">trackography.org</a> fournissent une base de données et des visualisation intéressantes permettant aux élèves de naviguer en autonomie et utiliser leur jugement pour identifier les traqueurs dans une trace réseau.</p>
+<div class="hint admonition">
+<p class="admonition-title">Anecdote</p>
+<p>Le site web de <a class="reference external" href="https://whotracks.me">whotracks.me</a> utilise des données open-source et <a class="reference external" href="https://github.com/whotracksme/whotracks.me">leur repo GitHub</a> indique comment construire leur site en local. Il pourrait être envisageable, dans le cadre du cours, d’avoir une version locale du site pour la personnaliser.</p>
+</div>
+<div class="note admonition" id="ricardo-activity">
+<p class="admonition-title">Micro-activité</p>
+<p>Demander aux élèves de se rendre sur le site <a class="reference external" href="https://whotracks.me">whotracks.me</a>, et d’utiliser la barre de recherche pour trouver le site <a class="reference external" href="https://whotracks.me/websites/ricardo.ch.html">“ricardo.ch”</a>. En bas de cette page, les élèves trouveront les traqueurs qu’iels peuvent s’attendre à voir et, en cliquant dessus il est possible d’obtenir quelques informations au sujet des entreprises de tracking concernées.</p>
+<p>Les élèves peuvent maintenant se rendre sur le site web <a class="reference external" href="https://ricardo.ch">ricardo.ch</a> et ouvrir leurs outils d’analyse du réseau. A l’aide de la base de données de traqueurs, il est possible de demander aux élèves d’identifier des connexions liées aux 10 traqueurs annoncés comme les plus présents sur le site d’après la base de données. Il est ensuite possible de leur demander de reporter les informations suivantes (notez l’addition d’une nouvelle colonne à droite) :</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nom de ressource</p></th>
+<th class="head"><p>Méthode HTTP</p></th>
+<th class="head"><p>Domaine contacté</p></th>
+<th class="head"><p>Protocole utilisé</p></th>
+<th class="head"><p>Pourquoi la requête est initiée</p></th>
+<th class="head"><p>Type de document reçu</p></th>
+<th class="head"><p>Intérêt de la requête</p></th>
+<th class="head"><p>Technologie de tracking potentielle (et pourquoi)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>gtm.js</p></td>
+<td><p>GET</p></td>
+<td><p>googletagmanager.com</p></td>
+<td><p>HTTPS</p></td>
+<td><p>Du code javascript a généré cette requête</p></td>
+<td><p>-</p></td>
+<td><p>Ricardo.ch utilise les services de Google Tag Manager pour analyser le trafic sur son site web</p></td>
+<td><p>On suppose un beacon car il s’agit d’un “service de tag” (c’est dans le nom)</p></td>
+</tr>
+<tr class="row-even"><td><p>map.js</p></td>
+<td><p>GET</p></td>
+<td><p>maps.google.com</p></td>
+<td><p>HTTPS</p></td>
+<td><p>Du code javascript a généré cette requête</p></td>
+<td><p>Code JavaScript</p></td>
+<td><p>Ricardo.ch utilise les services de Google Maps pour permettre d’identifier la position de l’utilisateur·trice</p></td>
+<td><p>On suppose un beacon : Google est informé de notre visite sur Ricardo.ch via cette requête</p></td>
+</tr>
+<tr class="row-odd"><td><p>-</p></td>
+<td><p>POST</p></td>
+<td><p>sentry.io</p></td>
+<td><p>HTTPS</p></td>
+<td><p>Du code javascript a généré cette requête</p></td>
+<td><p>-</p></td>
+<td><p>Ricardo.ch utilise les services de Sentry.Io pour analyser la qualité de service de leurs clients</p></td>
+<td><p>On suppose du fingerprinting car une requête POST a donné des informations sans que nous n’interagissions avec le site</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>A noter que :</p>
+<ul class="simple">
+<li><p>il n’est pas attendu que les élèves comprennent le fonctionnement de chaque entreprise de tracking, mais <strong>identifient des moyens et méthodes et les associent à des technologies de tracking</strong> (ce qui permettra notamment de les associer à des risques pour la vie privée)</p></li>
+<li><p><strong>plusieurs réponses</strong> sont possibles pour un même traqueur, l’important est d’évaluer la qualité du jugement de l’élève vis à vis des objectifs</p></li>
+<li><p>l’enseignant·e est libre de <strong>donner des contraintes</strong> : “trouvez quelque chose qui ressemble à du fingerprinting et expliquez pourquoi vous pensez cela” ou “quelle entreprise semble avoir une présence dominante sur le tracking de ce site” pour <strong>guider la recherche de traqueurs</strong></p>
+<ul>
+<li><p>il est bien sûr plus intéressant de chercher des rétroactions auprès des élèves pour permettre de guider leur actions pour résoudre leurs difficultés, cela peut se faire de manière assez fluide en <strong>pré-remplissant certaines colonnes de ce tableau et travaillant spécifiquement sur les autres</strong></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Une fois cet exercice complété, il est possible et intéressant de le réitérer avec un ou plusieurs sites différents (par exemple <a class="reference external" href="https://www.20minutes.ch">20minutes.ch</a> ou tout autre site de news qui sont de bonnes sources de tracking).</p>
+<div class="note admonition" id="trackography">
+<p class="admonition-title">Aller plus loin</p>
+<p>En se rendant sur la carte interactive de Trackography.org, il est possible d’observer un résumé des interactions du tracking sur une carte du monde.</p>
+<p>Par exemple, <a class="reference external" href="https://trackography.org/#CHE_5a27">ce lien</a> vous montre directement le suivi (dans son aspect d’identification et d’association à votre navigation) entre les sites de news SwissInfo.ch et tdg.ch. Cette infographie montre notamment que <strong>c’est aux états-unis que vos données pour le tracking sont envoyées, même en se rendant sur deux sites d’informations suisse</strong> !</p>
+</div>
+</section>
+</section>
+<section id="analyse-complete-dinteractions-web">
+<span id="webtracking-analysecomplete"></span><h3>Analyse complète d’interactions web<a class="headerlink" href="#analyse-complete-dinteractions-web" title="Lien permanent vers ce titre">¶</a></h3>
+<p><em>Durée : 35-40 min</em></p>
+<p>Cette étape se veut être une forme d’objectivation de la tâche effectuée. L’idée est d’y dédier la majeure partie de la seconde période de TP pour :</p>
+<ul class="simple">
+<li><p>mettre en avant les objectifs et critères de réussite attendu de la part des élèves sur la séquence (voir <a class="reference internal" href="#webtracking-didactique"><span class="std std-ref">Considérations didactiques</span></a>)</p></li>
+<li><p>créer des ponts pertinents avec la théorie des cours en classe entière (notamment dû aux différences entre les demi-groupes qui peuvent être en avance ou en retard avec la théorie)</p></li>
+<li><p>expliquer la forme que prendrait une tâche d’évaluation sommative liée à cette séquence (si ceci est effectivement prévu par l’enseignant·e)</p></li>
+<li><p>permettre une phase d’évaluation formative autour de la tâche</p></li>
+</ul>
+<p>Les formes d’évaluations sont libres et diverses. Un exercice de report d’informations sur des interactions avec des sites web permet une bonne évaluation de leur compréhension du système. Il est également possible d’imaginer demander des diagrammes d’interaction pour modéliser la présence des différents acteurs par exemple.</p>
+<p>Afin de sélectionner un ou plusieurs sites pour créer cette séquences de report d’informations, une bonne source de sites web avec traqueurs de types indexés est la base de donnée de <a class="reference external" href="https://whotracks.me/">whotracks.me</a> où vous pouvez créer une collection de sites à visiter pour les élèves, ou préparer des traces à l’avance.</p>
+<div class="caution admonition">
+<p class="admonition-title">Important</p>
+<p>Une <strong>évaluation complète des critères de réussite</strong> de cette séquence <strong>requiert d’avoir couvert toute l’activité</strong>. Ainsi, dépendant de l’avancée des groupes de TP par rapport aux séances débranchées, il peut être pertinent d’utiliser ce temps et cette séquence formative comme une formation sur une sous-partie d’évaluation ou une évaluation complète. Suite à cela, il serait possible d’ajouter des colonnes comme “risques pour la vie privée” et “moyens de protection” pour permettre aux élèves d’exprimer un raisonnement le plus complet possible.</p>
+</div>
+</section>
+<section id="vie-privee-proprietes-et-menaces">
+<span id="webtracking-proprietevieprivee"></span><h3>Vie privée - propriétés et menaces<a class="headerlink" href="#vie-privee-proprietes-et-menaces" title="Lien permanent vers ce titre">¶</a></h3>
+<p><em>Durée : 10-15 min</em></p>
+<p>Lors de cette dernière partie de la séquence, l’idée est de créer des ponts entre les <strong>relations abstraites de haut-niveaux entre des individus/entreprises</strong> et les <strong>réalités des communications réseau sur le web</strong>. Ainsi, il est important d’amener brièvement ce que l’on appelle des propriétés de la vie privée : <em>des éléments qui, lorsqu’ils sont manquants, peuvent être utilisés dans des contextes intrusifs contre des individus</em> (rappel des histoires de l’<a class="reference internal" href="#webtracking-accroche"><span class="std std-ref">accroche</span></a>).</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Propriété</p></th>
+<th class="head"><p>Définition</p></th>
+<th class="head"><p>Cherche à protéger</p></th>
+<th class="head"><p>Ne permet pas de protéger (entre autres)</p></th>
+<th class="head"><p>Comment l’atteindre</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Confidentialité</p></td>
+<td><p>le fait de ne permettre qu’aux personnes souhaitées d’accéder à une information</p></td>
+<td><p>des données (mots de passe, codes de carte bleu)</p></td>
+<td><p>le contexte autour de ces informations (savoir qu’une information existe par exemple)</p></td>
+<td><p>Chiffrement</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pseudonymité</p></td>
+<td><p>le fait de remplacer un identifiant par un autre (un nom de famille par un pseudo par exemple)</p></td>
+<td><p>un nom en particulier</p></td>
+<td><p>l’association entre un pseudo et différentes actions d’une même personne (sous couvert du même pseudo sur 2 forums, il est possible d’associer nos messages postés à la même personne)</p></td>
+<td><p>Remplacer les noms par des alternatives</p></td>
+</tr>
+<tr class="row-even"><td><p>Anonymité</p></td>
+<td><p>le fait de rendre indistingables différent·e·s utilisateur·trice·s : il pourrait s’agir à chaque fois de la même personne ou de personnes toutes différentes, aucune information disponible ne permet de distinguer</p></td>
+<td><p>l’identité des utilisteur·trice·s (protéger leur réelle identité et pouvoir en adopter de nouvelles vis à vis de différents acteurs)</p></td>
+<td><p>la déniabilité, la possibilité de rendre indistingable le fait d’avoir fait une action ou non</p></td>
+<td><p>Très complexe et dans beaucoup de cas, impossible sans supprimer des données (les <a class="reference internal" href="#webtracking-ressources"><span class="std std-ref">Ressources complémentaires</span></a> peuvent donner des exemples intuitifs)</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Ces propriétés permettent d’encadrer en partie ce qu’est la vie privée d’un point de vue plus formel. Dans chacune des histoires de l’accroche, il existe un problème car les individus concernés s’attendent à une forme d’anonymité sur internet vis à vis de certains acteurs (leur entreprise, le public, les groupes “anti-choix”, leur réseau social …). Il est alors pertinent d’utiliser cette explication en parallèle d’un rappel de l’accroche choisie pour le cours.</p>
+<div class="attention admonition">
+<p class="admonition-title">À retenir</p>
+<ul class="simple">
+<li><p>il existe différents aspects de la vie privée qu’il est intéressant de protéger</p></li>
+<li><p>la vie privée s’évalue toujours <strong>par rapport à un “adversaire”</strong>, une entité définie dans notre système d’interaction (le service de publicité ciblée, le fournisseur de service, le réseau, l’État, …)</p></li>
+<li><p>la pseudonymité est la plupart du temps la seule propriété qu’il est facile d’obtenir sur le web</p></li>
+<li><p>l’<strong>anonymité est une propriété très puissant</strong>e, loin d’être applicable et encore moins dans le contenu du suivi sur le web</p></li>
+<li><p>les technologie du suivi sur le web ont toutes un dénominateur commun : <strong>identifier le plus précisément possible les utilisateur·trice·s</strong>. Cependant cela est précisément l’encontre de l’anonymité et peut avoir des répercussions néfastes si ce n’est pas contrôlé</p></li>
+</ul>
+</div>
+<div class="question admonition">
+<div class="question multi"><form><p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Dans <a class="reference internal" href="#trackography"><span class="std std-ref">l’activité “Aller plus loin” de la partie précédente</span></a>, quelles propriétés de la vie privée peut-on espérer avoir vis à vis de l’entité Alphabet (Google) dans notre communication avec les journaux suisses ?</p>
+<ul class="simple">
+<li><p><label class="answer correct"><input type="checkbox"/>Confidentialité</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>Pseudonymité</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Anonymité</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></form></div></div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Réponse<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Cette réponse est bien entendu à nuancer et n’est pas si noire ou blanche avec aussi peu de précisions. Intuitivement :</p>
+<ul class="simple">
+<li><p class="card-text">il ne manque pas de confidentialité car il est désiré de la part des journaux que Google ait accès au contenu visité par l’utilisateur·trice. La question se pose du consentement de ce·tte dernier·ère : on consent ou pas aux cookies, pas aux communication avec les services d’analyse. Comme toujours, la réponse varie selon la considération de “qui se protège de quel adversaire”</p></li>
+<li><p class="card-text">on peut espérer de la pseudonymité pourvu que nous n’ayons transmis notre nom réel ni à Google, ni à la Tribune de Genève ni a Suisse Info. Dans le cas contraire, cette propriété serait en péril</p></li>
+<li><p class="card-text">nous n’avons clairement pas d’anonymité : un acteur commun rassemble nos informations de navigations sur ces deux sites différents et peut lier notre identité et nos actions dans ces deux contextes</p></li>
+</ul>
+<p class="card-text">De nouveau, l’intérêt de cette discussion est d’amener la complexité de ces propriétés et à quel point “elles n’ont de sens” que dans un contexte définit : <strong>que protège-t-on précisément ? De qui le protège-t-on ? Sur quelle(s) interaction(s) ?</strong></p>
+</div>
+</details></section>
+<section id="trace-reseau-et-suivi-commerce-du-web">
+<span id="webtracking-commerceweb"></span><h3>Trace réseau et suivi - commerce du web<a class="headerlink" href="#trace-reseau-et-suivi-commerce-du-web" title="Lien permanent vers ce titre">¶</a></h3>
+<p><em>Durée : 5-10 min</em></p>
+<p>Cette partie fait office de rappel et de pont avec la première année du chapitre d’<strong>économie du numérique</strong>. Dans l’idéal, les élèves devraient pouvoir se rappeler de l’activité <a class="reference internal" href="../../../enjx1/activ/encheres.html#encheres"><span class="std std-ref">Les enchères du Web</span></a> pour aborder cette partie. En effet, l’idée est de transmettre aux élèves la compréhension des <strong>relations économiques des acteurs autour de l’industrie de la publicité</strong>.</p>
+<p>Bien qu’elle ne suffise pas comme support d’enseignement, la <a class="reference internal" href="#adtech-schema"><span class="std std-numref">Fig. 28</span></a> illustre le fonctionnement des technologie de la publicité pour l’un des sites web visité dans les exemples. Elle met notamment en avant les relations économiques entre <strong>le fournisseur de service</strong> (20 minutes), <strong>le service d’analyse</strong> (Google Analytics), <strong>le vendeur de produit</strong> (par exemple une marque de chaussures) et le <strong>service fournissant la publicité</strong> (Google Ads).</p>
+<figure class="align-default" id="adtech-schema">
+<a class="reference internal image-reference" href="../../../_images/adtech-schema.jpg"><img alt="schema fonctionnement économique technologie de la publicité" src="../../../_images/adtech-schema.jpg" style="width: 700px;"/></a>
+<figcaption>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Illustration schématique du fonctionnement des technologies de la publicité ciblée</span><a class="headerlink" href="#adtech-schema" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+<div class="question admonition">
+<div class="question"><form><p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Dans l’activité <a class="reference internal" href="#ricardo-activity"><span class="std std-ref">sur la première analyse de trackers sur un site web</span></a>, quelle est la position économique de Google Tag Manager ?</p>
+<ul class="simple">
+<li><p><label class="answer incorrect"><input type="checkbox"/>Ce site fournit le service principal</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>Ce site effectue un service d’analyse envers Ricardo</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Ce site fournit des publicité ciblées sur la page de Ricardo</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Ce site fournit des produits à vendre via des publicités sur Ricardo</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></form></div></div>
+<div class="question admonition">
+<div class="question multi"><form><p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Sur la page d’accueil de Google comme dans l’activité <a class="reference internal" href="#google-post"><span class="std std-ref">effectuée en début de TP</span></a>, l’entité Google occupe la place de plusieurs acteurs de la boucle économique identifiée. Lesquels ?</p>
+<ul class="simple">
+<li><p><label class="answer correct"><input type="checkbox"/>Le fournisseur de service principal</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>Le service d’analyse</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>Le service de publicité ciblée</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Le vendeur de produit</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></form></div></div>
+</section>
+<section id="protection-de-la-vie-privee">
+<span id="webtracking-protection"></span><h3>Protection de la vie privée<a class="headerlink" href="#protection-de-la-vie-privee" title="Lien permanent vers ce titre">¶</a></h3>
+<p><em>Durée : 15-20 min</em></p>
+<p>La question maintenant évidente est “que faire, si l’on ne veut pas mettre en péril notre vie privée” ? Comment faire pour ne pas tomber dans un monde où la surveillance rapporte tellement que des compagnies privées connaissent et monétisent à qui veut l’acheter nos secrets et l’analyse de notre vie et de notre personnalité ? Évidement, une telle question n’a pas de réponse simple, et les deux approches suivantes ont pour but de montrer aux élèves <strong>des pistes pour se protéger</strong>, et même pour leur futur, <strong>faire des choix plus éthiques</strong> en ce qui concerne ce marché.</p>
+<section id="des-outils-pour-se-proteger">
+<h4>Des outils pour se protéger<a class="headerlink" href="#des-outils-pour-se-proteger" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Comme vu dans la partie <a class="reference internal" href="#webtracking-proprietevieprivee"><span class="std std-ref">Vie privée - propriétés et menaces</span></a>, se protéger fait toujours écho aux questions <strong>“de qui ?” et “de quoi ?”</strong>. Ainsi, pour répondre aux situations et risques ayant été soulevés, l’idée sera de chercher des solutions pour <strong>se protéger des entreprises de suivi</strong> : les services d’analyse et les services de publicité ciblée. L’idée est de <strong>protéger son anonymat autant que possible</strong>, c’est à dire limiter le suivi possible de l’unicité de notre personne lors de la navigation. Plusieurs approches et solutions sont envisageables, notamment les suivantes sont intéressantes à mentionner auprès des élèves.</p>
+<div class="note admonition">
+<p class="admonition-title">Le navigateur</p>
+<p>Comme vu lors de la séance de TP, le navigateur est <strong>la porte d’entrée de la majorité de nos communications web</strong>, c’est donc clairement l’élément le plus crucial à protéger. Choisir un navigateur respectueux de la vie privée est nécessaire pour espérer avoir une vie privée sur le web. Un navigateur respecte la vie privée lorsqu’il permet de <strong>mettre en place simplement des mécanismes limitant le suivi</strong> : le <a class="reference external" href="https://blog.mozilla.org/security/2021/02/23/total-cookie-protection/">Total Cookie Protection</a> ou la <a class="reference external" href="https://support.mozilla.org/en-US/kb/firefox-protection-against-fingerprinting">protection contre le fingerprinting</a> de Firefox en sont des exemples</p>
+<p>Il existe de nombreux choix, les plus accessibles et de meilleure qualité sont sans doutes <a class="reference external" href="https://brave.com/">Brave</a> et <a class="reference external" href="https://librewolf.net/">LibreWolf</a>, respectivement basés sur Chromium et Firefox. Le site web <a class="reference external" href="https://privacytests.org/">PrivacyTests.org</a> fournit très régulièrement des tests très complets comparant les navigateurs sur différents critères d’implémentations de ces technologies limitant les mécanismes de suivi.</p>
+<p>Un point qu’il peut être important d’appuyer est que <strong>Google Chrome est le navigateur le moins respectueux de la vie privée</strong> : et oui, étant donné que la publicité ciblée est <a class="reference external" href="https://www.cnbc.com/2021/05/18/how-does-google-make-money-advertising-business-breakdown-.html">le principal revenu</a> de la société Alphabet, bloquer ces dernières est impensable.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Les extensions du navigateur</p>
+<p>La <strong>configuration par défaut de la plupart des navigateurs ne permet pas une protection contre toutes les stratégie de tracking</strong>. Ainsi, une extension peut permettre d’améliorer la sécurité générale mais aussi aider à préserver la vie privée lors de la navigation.</p>
+<p>Il est possible de présenter aux élèves des extensions reconnues et efficace comme <a class="reference external" href="https://github.com/gorhill/uBlock#ublock-origin">uBlock Origin</a>, <a class="reference external" href="https://www.ghostery.com/">Ghostery</a> ou <a class="reference external" href="https://privacybadger.org/">Privacy Badger</a>. Notamment, ces extensions ont l’avantage précieux d’être open-source ce qui limite les risques d’avoir un logiciel espion mal intentionné ayant accès à notre navigateur.</p>
+<p>Il serait même par exemple pertinent de <strong>montrer sur votre propre ordinateur un “avant-après”</strong> pour attester de l’efficacité des extensions comme peut le montrer la capture d’écran suivante, en lien avec les communications faites et vues en TP.</p>
+<p><img alt="ubo works" src="../../../_images/ublock.jpeg"/></p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Les VPN</p>
+<p>Au vu du martèlement marketing autour de ce produit, les élèves auront sans doutes entendu parlé de VPN personnels. Il peut être intéressant d’en expliquer <strong>les avantages et inconvénients</strong> :</p>
+<ul class="simple">
+<li><p>✅ l’idée est de <strong>remplacer votre adresse IP</strong> par celle d’un de leur serveur, les beacons ne seront pas capables de vous identifier par ce biais</p></li>
+<li><p>❌ vos <strong>cookies et votre empreinte numérique peuvent eux être transmis sans soucis</strong> : cela opère à une <strong>couche applicative</strong>, et pas une couche IP</p>
+<ul>
+<li><p>de même, si vous utilisez un compte (compte google ou YouTube), vos données sont sauvegardées dans ce compte, cela peut sembler bête mais important de rappeler conceptuellement</p></li>
+</ul>
+</li>
+<li><p>❌ si les beacons ne sont plus informés du lien entre votre adresse IP et votre navigation, c’est car c’est à présent le service de VPN qui en est informé, <strong>c’est une question de confiance</strong> : avez-vous confiance en une entreprise d’analyse web ou en une entreprise de VPN. Il est important de <strong>se former une opinion sur le service (et l’entreprise le soutenant) de VPN que l’on veut utiliser</strong> pour faire un choix éclairé, il n’y a pas de protection magique avec ce genre de service.</p></li>
+</ul>
+</div>
+<div class="question admonition">
+<div class="question multi"><form><p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Pour limiter l’usage des beacons sur ricardo.ch, il vaut mieux que j’utilise :</p>
+<ul class="simple">
+<li><p><label class="answer incorrect"><input type="checkbox"/>une extension bloquant les capacités de JavaScript</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>une extension bloquant les communications vers le site googletagmanager.com</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>un VPN d’une entreprise en qui j’ai confiance du bon usage de mes données</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>un navigateur dans lequel sont intégrées des mesures de protections contre les beacons</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></form></div></div>
+<div class="question admonition">
+<div class="question multi"><form><p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Pour limiter l’usage du fingerprinting sur google.com, il vaut mieux que j’utilise :</p>
+<ul class="simple">
+<li><p><label class="answer correct"><input type="checkbox"/>une extension bloquant les capacités de JavaScript</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>une extension bloquant les communications vers le site google.com</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>un VPN d’une entreprise en qui j’ai confiance du bon usage de mes données</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>un navigateur dans lequel sont intégrées des mesures de protections contre le fingerprinting</label></p></li>
+<li><p>(bonus) <label class="answer correct"><input type="checkbox"/>une extension bloquant les requêtes vers le site google.com/log</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></form></div></div>
+</section>
+<section id="des-moyens-plus-respectueux-dutiliser-la-publicite">
+<h4>Des moyens plus respectueux d’utiliser la publicité<a class="headerlink" href="#des-moyens-plus-respectueux-dutiliser-la-publicite" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Suite à cette discussion, les élèves peuvent éventuellement poser la question de la <strong>rupture de la boucle économique</strong> décrite dans <a class="reference internal" href="#webtracking-commerceweb"><span class="std std-ref">Trace réseau et suivi - commerce du web</span></a> dans le cas où les pubs seraient bloquées, et à juste titre. Chaque année, le marché de la publicité ciblée rapporte <a class="reference external" href="https://www.cnbc.com/2021/05/18/how-does-google-make-money-advertising-business-breakdown-.html">plus d’une centaine de milliards de dollars à Google</a> par exemple. Il semble donc clair qu’<strong>aucune entreprise ne veut se passer de ce marché et ces revenus</strong>. C’est pourquoi il peut être judicieux de parler aux élèves en tant que futurs citoyen·ne·s et potentiellement futur·e·s analystes de trafic web : il existe des moyens d’<strong>avoir des informations et de la publicité utiles sans s’introduire à ce point dans la vie privée</strong> :</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://plausible.io/">Plausible</a> est une alternative open-source à Google analytics qui permet d’analyser le trafic de ses sites web de façon plus légère, axée sur la vie privée et sur des infrastructures européennes</p></li>
+<li><p><a class="reference external" href="https://matomo.org/">Matomo</a> est une alternative également comparable, notamment prisée pour sa capacité à être déployée “on-premise”, et donc éviter des communications tierces mais toujours garder les données chez la même entité</p></li>
+<li><p><a class="reference external" href="https://about.qwant.com/">Qwant</a> propose un modèle publicitaire axé sur un suivi limité et un ciblage respectueux de la vie privée, c’est même ce qu’ils <a class="reference external" href="https://about.qwant.com/advertising/">promeuvent auprès des annonceurs</a></p></li>
+</ul>
+<div class="attention admonition">
+<p class="admonition-title">À retenir</p>
+<ul class="simple">
+<li><p>le <strong>choix de navigateur est crucial</strong>, c’est la porte d’entrée du suivi sur le web, si elle ne permet pas de limiter le suivi il sera impossible d’avoir une vie privée</p></li>
+<li><p>les extensions sont efficaces pour <strong>limiter le trafic vers des sites non désirables</strong>. Elles sont nombreuses et il est préférable d’en choisir des reconnues et recommandées</p></li>
+<li><p>pour se protéger, il faut faire <strong>des choix à différents niveaux (réseau, application)</strong> et utiliser des technologies qui limitent les capacités des technologies de tracking :</p>
+<ul>
+<li><p><strong>limite du fingerprinting en limitant les capacités de JavaScript</strong> ou les capacités des communication avec les sites recevant l’empreinte numérique, éventuellement à l’aide d’une extension</p></li>
+<li><p><strong>limite des beacon en cachant son adresse IP</strong> ou empêchant la communication avec les services connus de beacon comme Google Tag Manager, éventuellement à l’aide d’une extension.</p></li>
+<li><p>Les élèves doivent <strong>comprendre le fonctionnement des technologies de tracking</strong> pour <strong>expliquer ce qui permet de les bloquer</strong></p></li>
+</ul>
+</li>
+<li><p>les VPN ne permettent pas une protection mais un <strong>changement d’entité capable d’analyser notre trafic</strong>. C’est notre niveau de confiance qui déterminera la sécurité ou non</p></li>
+<li><p>il existe une <strong>boucle économique respectueuse de la vie privée</strong> tout en permettant d’analyser le trafic et promouvoir ses produits sur le web</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="suivi-et-applications-mobiles">
+<span id="webtracking-reinvestissement"></span><h3>Suivi et applications mobiles<a class="headerlink" href="#suivi-et-applications-mobiles" title="Lien permanent vers ce titre">¶</a></h3>
+<p><em>Durée : 5-10 min</em></p>
+<p>Cette dernière étape est un réinvestissement qui permet d’<strong>élargir les compétences acquises</strong> lors de la séquence pour les appliquer à un autre domaine. De nombreuses applications sont possibles, notamment vis à vis de rebonds avec l’accroche. La proposition est d’ici parler brièvement des applications mobiles, et analyser que, même si ce n’est pas dans un navigateur, <strong>la même boucle économique est en fonctionnement</strong> (avec l’ajout intéressant de la commission sur les transactions in-app <a class="reference external" href="https://appleinsider.com/articles/23/01/08/the-cost-of-doing-business-apples-app-store-fees-explained">comme le fait Apple</a> par exemple).</p>
+<p>Le temps étant limité, il est possible d’aborder le sujet sous différents angles, mais il semble intéressant de travailler avec les élèves sur la compréhension des politiques en matières de vie privée des applications. Les <strong>stores Apple et Android</strong> indiquent aujourd’hui avec plus de précision le traitement des données et l’utilisation des périphériques faites par les apps. Par exemple dans la <a class="reference internal" href="#instagram-privacy"><span class="std std-numref">Fig. 29</span></a>, on peut voir un certain nombre de données permettant d’établir un lien avec l’identité de l’utilisateur·trice. Quelques questions peuvent guider une discussion :</p>
+<ol class="simple">
+<li><p>comment peut-on suivre quelqu’un avec <em>une seule application</em> ?</p></li>
+<li><p><em>pourquoi</em> toutes ces données sont-elles collectées dans le cas d’instagram ?</p></li>
+<li><p>quelle est <em>la position d’instagram dans la boucle économique</em> de la publicité ciblée ?</p></li>
+<li><p>comment <em>protéger sa vie privée</em> en utilisant instagram ?</p></li>
+</ol>
+<p>(Ces questions sont tout à fait ouvertes et peuvent être guidées par les interactions avec les élèves ou des points spécifiques qu’il est utile d’appuyer en réponse à d’autres parties du cours ou même d’autres disciplines)</p>
+<figure class="align-default" id="instagram-privacy">
+<a class="reference internal image-reference" href="../../../_images/instagram-privacy.jpeg"><img alt="../../../_images/instagram-privacy.jpeg" src="../../../_images/instagram-privacy.jpeg" style="width: 250px;"/></a>
+<figcaption>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Description de l’utilisation des données par l’application Instagram dans l’Apple Store</span><a class="headerlink" href="#instagram-privacy" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+<p>Idéalement, l’enseignant·e s’assure que la discussion puisse mettre en valeur les compétences acquises lors de la séquences :</p>
+<ol class="simple">
+<li><p>il est possible de <strong>suivre avec une seule application de nombreuses façons</strong> : navigateur intégré, partage vers d’autres applications (messagerie), dans le cas de Meta, les données peuvent être regroupées avec celles de WhatsApp et Facebook. <strong>Certaines technologies de suivi sont identiques</strong> (fingerprinting, beacon, cookies), mais il y en a également des <strong>propres aux applications mobiles</strong> (suivi inter-application, numéro d’identifiant unique d’appareil, notifications push)</p></li>
+<li><p>ces données sont collectées dans le but de créer <strong>un profil publicitaire</strong> pour la publicités ciblée car</p></li>
+<li><p>Meta est à la fois <strong>fournisseur de service</strong>, <strong>fournisseur de publicité</strong> et s’occupe via les applications d’être <strong>un service d’analyse</strong>. Autrement dit ils ont une position dans laquelle <strong>ils ne font que gagner de l’argent dans la boucle</strong>, d’où l’intérêt d’occuper toutes ces positions</p></li>
+<li><p><strong>c’est plus difficile</strong> ! Pas d’extension, pas de choix de navigateur, et l’application a accès à beaucoup plus de données qu’un navigateur d’ordinateur (données de santé par exemple). La capacité à se protéger <strong>dépend grandement des choix des développeur·euse·s de systèmes d’exploitation (IOS et Android)</strong> pour implémenter des mécanismes de protection</p></li>
+</ol>
+</section>
+</section>
+<section id="considerations-didactiques">
+<span id="webtracking-didactique"></span><h2>Considérations didactiques<a class="headerlink" href="#considerations-didactiques" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Cette activité a été conçue dès le départ avec l’idée en tête d’en faire une activité axée sur <strong>l’alignement curriculaire</strong> autour du plan d’étude vaudois. Notamment, le but de cette tâche est de la créer en résonance d’une <strong>tâche d’évaluation sommative authentique</strong>, qui évalue des <strong>compétences cognitives élevées</strong> chez les élèves et s’inscrive dans une <strong>boucle de rétro-action</strong> avec l’enseignant·e pour aider et attester de l’acquisition de compétences.</p>
+<p>Cette partie présente donc <strong>les objectifs identifiés du plan d’étude</strong> que la tâche cherche à faire atteindre, et les met en perspective avec des <strong>critères d’évaluation</strong> qui seraient applicables pour une évaluation sommative suivant cette séquence.</p>
+<section id="referenciation-restreinte-du-plan-detude">
+<h3>Référenciation restreinte du plan d’étude<a class="headerlink" href="#referenciation-restreinte-du-plan-detude" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="objectifs-generaux">
+<h4>Objectifs généraux<a class="headerlink" href="#objectifs-generaux" title="Lien permanent vers ce titre">¶</a></h4>
+<p><strong>Objectifs généraux</strong> du cursus gymnasial en informatique</p>
+<ul class="simple">
+<li><p>Compétence</p>
+<ul>
+<li><p>Prendre des décisions fondées sur des connaissances techniques</p></li>
+<li><p>Identifier et analyser quelques enjeux sociaux et politiques du numérique</p></li>
+</ul>
+</li>
+<li><p>Savoirs</p>
+<ul>
+<li><p>Principes de communication de l’information</p></li>
+<li><p>Modéliser et simuler</p></li>
+</ul>
+</li>
+<li><p>Savoir-Faire</p>
+<ul>
+<li><p>Développer une réflexion autour des enjeux socio-politiques du numérique</p></li>
+</ul>
+</li>
+<li><p>Attitude</p>
+<ul>
+<li><p>Esprit critique</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Objectifs généraux de deuxième année</strong> en informatique</p>
+<ul class="simple">
+<li><p>Réseaux : sécurité et sensibilisation aux bonnes pratiques; notions et modèles d’architectures et de protocoles</p></li>
+<li><p>Enjeux de société : vie privée et surveillance; économie du numérique</p></li>
+</ul>
+</section>
+<section id="objectifs-specifiques">
+<h4>Objectifs spécifiques<a class="headerlink" href="#objectifs-specifiques" title="Lien permanent vers ce titre">¶</a></h4>
+<ul class="simple">
+<li><p>Applique</p>
+<ul>
+<li><p>L’élève sait lancer, manipuler et utiliser un logiciel d’analyse de trafic réseau pour présenter des éléments d’une trace en les identifiant avec le vocabulaire adapté du réseau</p></li>
+</ul>
+</li>
+<li><p>Analyse</p>
+<ul>
+<li><p>L’élève peut décrire et/ou schématiser sa représentation des processus en cours lors d’une communication réseau</p></li>
+<li><p>L’élève peut développer une analyse d’une communication réseau en mettant en avant des risques pour la vie privée et la sécurité des communication en pointant sur des informations sensibles et peut classer ces éléments selon : la confidentialité, la pseudonimité, l’anonymat et la dissociabilité</p></li>
+<li><p>L’élève peut déterminer les acteurs impliqués dans l’établissement d’une connexion réseau et identifier la position de chacun en ce qui concerne les risques de la vie privée et l’enjeux économique</p></li>
+</ul>
+</li>
+<li><p>Évalue</p>
+<ul>
+<li><p>L’élève peut évaluer si les besoins d’accès aux données/de communication d’une application sont justifiés ou non pour l’usage qu’il/elle en ferait et peut juger des mécanismes à mettre en place pour se protéger ou proposer des alternatives à rechercher</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="tache-devaluation-sommative">
+<h3>Tâche d’évaluation sommative<a class="headerlink" href="#tache-devaluation-sommative" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="criteres-obligatoires-necessaires-pour-avoir-4">
+<h4>Critères obligatoires (nécessaires pour avoir 4)<a class="headerlink" href="#criteres-obligatoires-necessaires-pour-avoir-4" title="Lien permanent vers ce titre">¶</a></h4>
+<ul class="simple">
+<li><p><em>Technique et application</em></p>
+<ul>
+<li><p>L’élève est capable d’<strong>ouvrir un outil de capture de réseau</strong> (e.g. outil de capture d’un navigateur, Wireshark, tcpdump,…). Iel connaît la <strong>manipulation</strong> nécessaire et peut, au besoin, s’aider de recherches autonomes sur le web (en validant un acquis du vocabulaire lié au réseau) mais sans l’aide externe de l’enseignant·e</p></li>
+<li><p>L’élève peut <strong>naviguer sur différents site web en capturant et identifiant</strong> les différentes <strong>communications réseaux</strong> faites par son navigateur via : leur destination, le contenu de leurs cookies, ou d’autres <strong>attributs utiles pour évaluer la pertinence économique et de tracking de cette communication</strong></p></li>
+</ul>
+</li>
+<li><p><em>Analyse de communication : vie privée et économie</em></p>
+<ul>
+<li><p>En observant une trace réseau, l’élève peut <strong>identifier des processus</strong> en cours et <strong>modéliser</strong> (par description ou schématiquement) <strong>le système sous-jacent</strong> avec ses acteurs et leurs interactions</p></li>
+<li><p>L’élève peut se rendre sur un site donné au préalable et <strong>identifier une potentielle menace de la vie privée</strong> qu’iel déterminera en <strong>sélectionnant avec pertinence des informations provenant d’une trace réseau</strong></p></li>
+<li><p>L’élève peut justifier en quoi une menace de la vie privée concerne plus ou moins les domaines de la <strong>confidentialité, la pseudonimité, l’anonymat et/ou la dissociabilité</strong></p></li>
+<li><p>L’élève peut consulter une trace réseau donnée et <strong>identifier des acteurs économiques en jeux</strong> dans la communication parmi le <strong>fournisseur de service, le service d’analyse, l’intermédiaire publicitaire, le revendeur de produit et le client</strong> et fournir une explication du fonctionnement du financement en lien avec la trace observée</p></li>
+</ul>
+</li>
+<li><p><em>Sécurité et bonnes pratiques</em></p>
+<ul>
+<li><p>Étant donnée des risques pour la vie privée identifiés à partir d’une trace réseau, l’élève peut <strong>déterminer un type d’outil permettant d’éliminer un risque</strong> et <strong>justifier de la capacité de l’outil à faire cela</strong></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="criteres-de-perfectionnement">
+<h4>Critères de perfectionnement<a class="headerlink" href="#criteres-de-perfectionnement" title="Lien permanent vers ce titre">¶</a></h4>
+<ul class="simple">
+<li><p>Pour chacun des critères obligatoires, l’élève est capable de fournir le travail pour plusieurs traces réseaux ayant chacune des caractéristiques différentes (sites différents, menaces différentes, acteurs variés ou centralisés, …)</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="liens-avec-les-autres-thematiques">
+<h2>Liens avec les autres thématiques<a class="headerlink" href="#liens-avec-les-autres-thematiques" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="economie-du-numerique">
+<h3>Économie du numérique<a class="headerlink" href="#economie-du-numerique" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p><strong>L’activité “Enchère du numérique”</strong> est clairement en lien puisque expliquant le fonctionnement et les acteurs de la publicité en ligne. Elle met notamment en avant la raison économique <strong>motivant la collecte de données</strong> pour permettre de faire des publicités plus ciblées et donc plus efficaces économiquement</p></li>
+</ul>
+</section>
+<section id="surveillance-et-vie-privee">
+<h3>Surveillance et vie privée<a class="headerlink" href="#surveillance-et-vie-privee" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Toute l’activité, dès son accroche, fait écho aux discussions de ce chapitre, notamment le débat sur <strong>“Rien à cacher ?”</strong>, et approfondit l’explication concrète des <strong>“Traces numériques”</strong></p></li>
+</ul>
+</section>
+<section id="numerique-et-environnement">
+<h3>Numérique et environnement<a class="headerlink" href="#numerique-et-environnement" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Comme mentionné dans le dossier, l’<strong>impact environnemental de la publicité ciblée</strong> est non négligeable ! Comme vu avec la base de données de la partie <a class="reference internal" href="#webtracking-tracereseauetsuivi"><span class="std std-ref">Trace réseau et suivi - les traqueurs</span></a>, il est possible de voir la quantité du trafic (en MB et en pourcentage de contenu chargé par la page) dédiée au suivi et à la publicité ciblée.</p></li>
+<li><p>De même, dans la partie <a class="reference internal" href="#webtracking-protection"><span class="std std-ref">Protection de la vie privée</span></a>, les extensions discutées fournissent pour la plupart des <strong>rapports sur le nombre de publicités ciblées bloquées</strong>, et éventuellement le temps de chargement économisé ou la taille des fichiers non-téléchargés. Cela peut aider à se rendre compte de <strong>l’impact en taille et temps informatique de la publicité ciblée</strong></p></li>
+</ul>
+</section>
+<section id="reseau-interoperabilite">
+<h3>Réseau : interopérabilité<a class="headerlink" href="#reseau-interoperabilite" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Dans la partie <a class="reference internal" href="#webtracking-protection"><span class="std std-ref">Protection de la vie privée</span></a>, il est mentionné que la protection de la vie privée doit passer par des technologies agissant à <strong>différents niveaux de la couche OSI</strong> et que notamment, les cookies et le VPN agissent à différents niveaux. En effet, il est pertinent de mentionner que <strong>la sécurité en général doit être considérée aux différents niveaux de couches</strong>, créant des liens intéressants avec la partie réseaux</p></li>
+</ul>
+</section>
+</section>
+<section id="ressources-complementaires">
+<span id="webtracking-ressources"></span><h2>Ressources complémentaires<a class="headerlink" href="#ressources-complementaires" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="lanonymat-une-propriete-utopique">
+<h3>L’anonymat : une propriété utopique<a class="headerlink" href="#lanonymat-une-propriete-utopique" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Le youtubeur Micode montre comment il fait pour joindre des informations pour retrouver des informations sur quelqu’un à partir d’une photo : un bon exemple de <strong>la complexité d’être anonyme sur internet</strong> - <a class="reference external" href="https://www.youtube.com/watch?v=udYtHVEwbYA">https://www.youtube.com/watch?v=udYtHVEwbYA</a></p></li>
+<li><p>Le youtubeur Great Review raconte l’histoire de l’oeuvre “He will not divide us” et son lien avec le forum 4Chan qui a utilisé des données publiques pour retrouver l’oeuvre d’art à travers le monde : de nouveau, <strong>il est dur d’être anonyme sur internet</strong> - <a class="reference external" href="https://www.youtube.com/watch?v=jDU1uywsoaM">https://www.youtube.com/watch?v=jDU1uywsoaM</a></p></li>
+</ul>
+</section>
+<section id="le-suivi-sur-internet">
+<h3>Le suivi sur internet<a class="headerlink" href="#le-suivi-sur-internet" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Un blogpost de l’entreprise SurfShark pour expliquer <strong>leur protocole de mesure de la présence de traqueurs</strong> sur un ensemble de site web populaires - <a class="reference external" href="https://surfshark.com/whos-tracking-you">https://surfshark.com/whos-tracking-you</a></p></li>
+<li><p>Un article de la BBC décrivant comment <strong>cliquer sur un lien depuis Google informe des tiers</strong> - <a class="reference external" href="https://www.bbc.com/news/technology-49593830">https://www.bbc.com/news/technology-49593830</a></p></li>
+<li><p>Une petite BD résumant <strong>le fonctionnement du suivi sur le web</strong> - <a class="reference external" href="https://www.freecodecamp.org/news/what-you-should-know-about-web-tracking-and-how-it-affects-your-online-privacy-42935355525/">https://www.freecodecamp.org/news/what-you-should-know-about-web-tracking-and-how-it-affects-your-online-privacy-42935355525/</a></p></li>
+</ul>
+</section>
+<section id="le-fingerprinting">
+<h3>Le fingerprinting<a class="headerlink" href="#le-fingerprinting" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Tester <strong>son empreinte numérique</strong> - <a class="reference external" href="https://www.amiunique.org/">https://www.amiunique.org/</a> ou <a class="reference external" href="https://coveryourtracks.eff.org/">https://coveryourtracks.eff.org/</a></p></li>
+<li><p>Tester le fonctionnement de l’empreinte numérique, <strong>moyen d’identification unique sans cookies</strong> - <a class="reference external" href="https://nothingprivate.gkr.pw/">https://nothingprivate.gkr.pw/</a> et leur code source <a class="reference external" href="https://github.com/gautamkrishnar/nothing-private">https://github.com/gautamkrishnar/nothing-private</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../../../enjx2/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Enjeux sociaux II</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../routage_paquets/routage_paquets.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Routage et paquets sur Internet</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../../../_sources/resx/activ/web-tracking/web-tracking.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Suivi sur le web</a><ul>
+<li><a class="reference internal" href="#deroulement">Déroulement</a></li>
+<li><a class="reference internal" href="#etapes">Étapes</a><ul>
+<li><a class="reference internal" href="#le-suivi-laffaire-de-toutes">Le suivi - l’affaire de tou·te·s</a></li>
+<li><a class="reference internal" href="#interactions-et-ressources-sur-le-web">Interactions et ressources sur le web</a><ul>
+<li><a class="reference internal" href="#http-transferer-des-documents-hypertexte">HTTP : transférer des documents hypertexte</a></li>
+<li><a class="reference internal" href="#html-le-format-de-fichier-hypertexte">HTML : le format de fichier hypertexte</a></li>
+<li><a class="reference internal" href="#javascript-executer-du-code-dans-le-navigateur">JavaScript : exécuter du code dans le navigateur</a></li>
+<li><a class="reference internal" href="#optionnel-les-cookies-les-fichiers-pour-se-rappeler-des-anciennes-sessions">(optionnel) Les cookies : les fichiers pour se rappeler des anciennes sessions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#theorie-trace-reseau">Théorie - trace réseau</a></li>
+<li><a class="reference internal" href="#pratique-observation-de-trace-reseau">Pratique - observation de trace réseau</a><ul>
+<li><a class="reference internal" href="#trace-reseau-et-contenu-web">Trace réseau et contenu web</a></li>
+<li><a class="reference internal" href="#differents-types-de-ressources">Différents types de ressources</a></li>
+<li><a class="reference internal" href="#ressources-internes-et-ressources-tierces">Ressources internes et ressources tierces</a></li>
+<li><a class="reference internal" href="#optionnel-chargement-securise-et-non-securise">(optionnel) Chargement sécurisé et non-sécurisé</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#trace-reseau-et-suivi-les-traqueurs">Trace réseau et suivi - les traqueurs</a><ul>
+<li><a class="reference internal" href="#differents-types-de-traqueurs">Différents types de traqueurs</a></li>
+<li><a class="reference internal" href="#comment-traquer-les-traqueurs">Comment traquer les traqueurs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#analyse-complete-dinteractions-web">Analyse complète d’interactions web</a></li>
+<li><a class="reference internal" href="#vie-privee-proprietes-et-menaces">Vie privée - propriétés et menaces</a></li>
+<li><a class="reference internal" href="#trace-reseau-et-suivi-commerce-du-web">Trace réseau et suivi - commerce du web</a></li>
+<li><a class="reference internal" href="#protection-de-la-vie-privee">Protection de la vie privée</a><ul>
+<li><a class="reference internal" href="#des-outils-pour-se-proteger">Des outils pour se protéger</a></li>
+<li><a class="reference internal" href="#des-moyens-plus-respectueux-dutiliser-la-publicite">Des moyens plus respectueux d’utiliser la publicité</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#suivi-et-applications-mobiles">Suivi et applications mobiles</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#considerations-didactiques">Considérations didactiques</a><ul>
+<li><a class="reference internal" href="#referenciation-restreinte-du-plan-detude">Référenciation restreinte du plan d’étude</a><ul>
+<li><a class="reference internal" href="#objectifs-generaux">Objectifs généraux</a></li>
+<li><a class="reference internal" href="#objectifs-specifiques">Objectifs spécifiques</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tache-devaluation-sommative">Tâche d’évaluation sommative</a><ul>
+<li><a class="reference internal" href="#criteres-obligatoires-necessaires-pour-avoir-4">Critères obligatoires (nécessaires pour avoir 4)</a></li>
+<li><a class="reference internal" href="#criteres-de-perfectionnement">Critères de perfectionnement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#liens-avec-les-autres-thematiques">Liens avec les autres thématiques</a><ul>
+<li><a class="reference internal" href="#economie-du-numerique">Économie du numérique</a></li>
+<li><a class="reference internal" href="#surveillance-et-vie-privee">Surveillance et vie privée</a></li>
+<li><a class="reference internal" href="#numerique-et-environnement">Numérique et environnement</a></li>
+<li><a class="reference internal" href="#reseau-interoperabilite">Réseau : interopérabilité</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ressources-complementaires">Ressources complémentaires</a><ul>
+<li><a class="reference internal" href="#lanonymat-une-propriete-utopique">L’anonymat : une propriété utopique</a></li>
+<li><a class="reference internal" href="#le-suivi-sur-internet">Le suivi sur internet</a></li>
+<li><a class="reference internal" href="#le-fingerprinting">Le fingerprinting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/scripts/main.js"></script>
+    <script src="../../../_static/glossary.js"></script>
+    <script src="../../../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="../../../_static/blanks.js"></script>
+    <script src="../../../_static/timeline.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../../../_static/scripts/reactions.js"></script>
+    <script src="../../../_static/scripts/progress.js"></script>
+    <script src="../../../_static/scripts/dark.js"></script>
+    <script src="../../../_static/scripts/frames.js"></script>
+    </body>
+</html>

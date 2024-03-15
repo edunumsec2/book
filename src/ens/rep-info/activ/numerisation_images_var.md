@@ -131,7 +131,7 @@ Les lettres sont très faciles à identifier, même sur des grilles de taille r�
 Il est difficile de produire une image en niveau de gris en codant les pixels individuels. Certains logiciels comme *GIMP* permettent d'enregistrer les fichiers directement sous ce format. Par contre, il est intéressants de produire des dégradés en variant progressivement les valeurs dans le tableau comme le montre l'exemple suivant. En fonction du niveau de connaissance des élèves, il est possible d'utiliser *Excel* pour générer facilement des dégradés numériques que l'on peut ensuite copier-coller.
 
 
-```
+```{codeplay} 
 # Codage du dégradé
 P2
 8 8
@@ -177,7 +177,7 @@ Un bon sujet d'activité pour le codage des images en couleur consiste à reprod
 ```
 </center>
 
-``` 
+```{codeplay} 
 # Codage pour germany.ppm
 P3
 6 3 255
@@ -192,7 +192,7 @@ P3
 
 Pour les élèves plus avancés, on peut proposer de coder des dégradés en couleur. C'est une activité plus difficile et il peut être utile de recourir à un tableur pour générer facilement les valeurs. 
 
-```
+```{codeplay} 
 # Codage pour germany.ppm
 P3
 6 6

@@ -47,7 +47,6 @@ print: sources scripts latex
 	cd $(LATEX_BUILD_DIR) && make
 
 modulo.pdf: print
-	mkdir -p $(PDF_BUILD_DIR)
 	cp $(LATEX_BUILD_DIR)/modulo.pdf $(PDF_BUILD_DIR)/
 
 $(PDF_BUILD_DIR)/%.pdf:  $(MD_SOURCE_DIR)/$*/*.md scripts latex

@@ -1,4 +1,4 @@
-ut # Interopérabilité
+# Interopérabilité
 
 Si Internet a connu un développement aussi remarquable, c'est aussi
 grâce à certains choix techniques et de gouvernance qui ont permis de le
@@ -32,9 +32,9 @@ d'un smartphone communique avec le serveur de TikTok.
 
 
 Ainsi, lorsque le navigateur web d'Alice demande une page au serveur web, ces deux applications (le navigateur et le serveur)
-sont en communication en utilisant le protocole HTTP. Pour transmettre la requête HTTP d'Alice, une connexion entre Alice
+sont en communication en utilisant le protocole HTML. Pour transmettre la requête HTML d'Alice, une connexion entre Alice
 et le serveur web sera établie en utilisant le procole TCP. Au besoin, ce protocole découpera la requête ou la page web en
-petits morceaux et ajoutera les entêtes TCP à chaque morceau, qui sera envoyé individuellement en utilisant le protocole IP (en ajoutant y donc l'entête IP). Selon le type de connexion, (4G, wifi, cable), les paquets IP seront transmis selon différents protocoles à des routeurs qui les achemineront jusqu'au destinataire qui réassemblera les paquets selon le protocole TCP et fournira la requête HTTP d'Alice au serveur web ou la page web demandés au navigateur d'Alice. 
+petits morceaux et ajoutera les entêtes TCP à chaque morceau, qui sera envoyé individuellement en utilisant le protocole IP (en ajoutant y donc l'entête IP). Selon le type de connexion, (4G, wifi, cable), les paquets IP seront transmis selon différents protocoles à des routeurs qui les achemineront jusqu'au destinataire qui réassemblera les paquets selon le protocole TCP et fournira la requête HTML d'Alice au serveur web ou la page web demandés au navigateur d'Alice. 
 
 ```{figure} media/couches_tcpip.svg
 ---

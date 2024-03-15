@@ -1,0 +1,65 @@
+.timeline {
+    position: relative;
+    height: fit-content;
+}
+
+.timeline > .bar {
+    background: black;
+    width: 10px;
+    position: absolute;
+    top: 20px;
+    bottom: 0;
+    left: 50px;
+}
+
+.timeline > .bar > div {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 10px;
+    background: repeating-linear-gradient(white, white 10px, black 10px, black 20px);
+}
+
+.timeline > .items {
+    display: flex;
+    position: relative;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.timeline > .items > .item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.timeline > .items > .item > .date {
+    width: 110px;
+    flex: none;
+    padding-top: 20px;
+}
+
+.timeline > .items > .item > .date > div {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    line-height: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    margin: auto;
+    width: fit-content;
+}
+
+.timeline > .items > .item > .content {
+    background-color: #fefefe;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0.2rem 0.5rem rgb(0 0 0 / 5%), 0 0 0.0625rem rgb(0 0 0 / 10%)
+}
+
+.timeline > .items > .item > .content > .item-title {
+    margin-top: 0;
+}

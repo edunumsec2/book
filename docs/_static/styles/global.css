@@ -1,0 +1,280 @@
+@page {
+    size: A4;
+    margin: 25mm 25mm 25mm 25mm;
+}
+
+@media print {
+    header, aside, footer, #progress-ring, .content-icon-container {
+        display: none !important;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid !important;
+    }
+
+    html {
+        height: 100%;
+        overflow: scroll;
+    }
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* HEADING */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--primary-light);
+    font-weight: 700;
+}
+
+body.modulo-dark h1,
+body.modulo-dark h2,
+body.modulo-dark h3,
+body.modulo-dark h4,
+body.modulo-dark h5,
+body.modulo-dark h6 {
+    color: var(--primary-dark);
+}
+
+/* PROSE */
+
+p {
+    line-height: 1.625;
+    --baseline-multiplier: 0.179;
+    --x-height-multiplier: 0.35;
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+
+a {
+    color: var(--primary-light);
+}
+
+body.modulo-dark a {
+    color: var(--primary-dark);
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+/* SIDEBAR */
+
+.sidebar-brand-text {
+    text-align: center;
+    color: rgb(92 201 191)!important;
+    overflow-wrap: break-word;
+    font-size: 1.5rem;
+}
+
+/* SPHINX CLASSES */
+body.modulo-dark .dropdown {
+    background-color: black;
+}
+
+body {
+    --sidebar-item-spacing-vertical: 0.3rem;
+}
+
+/* CUSTOM CLASSES */
+
+.admonition {
+    margin: 1.75rem 0 1.75rem 0;
+}
+
+.admonition.hint>.admonition-title {
+    background-color: rgb(92 201 191 / 10%)!important;
+}
+
+.admonition.hint {
+    border-left-color: rgb(92 201 191)!important;
+}
+
+.admonition.hint>.admonition-title:before {
+    background-color: rgb(92 201 191)!important;
+}
+
+.admonition.important>.admonition-title {
+    background-color: rgb(245 39 39 / 10%)!important;
+}
+
+.admonition.important {
+    border-left-color: rgb(245 39 39)!important;
+}
+
+.admonition.important>.admonition-title:before {
+    background-color: rgb(245 39 39)!important;
+}
+
+.admonition.togofurther>.admonition-title {
+    background-color: rgb(252 177 3 / 10%)!important;
+}
+
+.admonition.togofurther {
+    border-left-color: rgb(252 177 3)!important;
+}
+
+.admonition.togofurther>.admonition-title:before {
+    background-color: rgb(252 177 3)!important;
+}
+
+.admonition.exercise>.admonition-title {
+    background-color: rgb(89 51 209 / 10%)!important;
+}
+
+.admonition.exercise {
+    border-left-color: rgb(89 51 209)!important;
+}
+
+.admonition.exercise>.admonition-title:before {
+    background-color: rgb(89 51 209)!important;
+}
+
+.admonition.micro>.admonition-title {
+    background-color: rgb(89 51 209 / 10%)!important;
+}
+
+.admonition.micro {
+    border-left-color: rgb(89 51 209)!important;
+}
+
+.admonition.micro>.admonition-title:before {
+    background-color: rgb(89 51 209)!important;
+}
+
+.admonition.reminder>.admonition-title {
+    background-color: rgb(92 201 191 / 10%)!important;
+}
+
+.admonition.reminder {
+    border-left-color: rgb(92 201 191)!important;
+}
+
+.admonition.reminder>.admonition-title:before {
+    background-color: rgb(92 201 191)!important;
+}
+
+.admonition.related>.admonition-title {
+    background-color: rgb(252 177 3 / 10%)!important;
+}
+
+.admonition.related {
+    border-left-color: rgb(252 177 3)!important;
+}
+
+.admonition.related>.admonition-title:before {
+    background-color: rgb(252 177 3)!important;
+}
+
+.admonition.eval>.admonition-title {
+    background-color: rgb(89 51 209 / 10%)!important;
+}
+
+.admonition.eval {
+    border-left-color: rgb(89 51 209)!important;
+}
+
+.admonition.eval>.admonition-title:before {
+    background-color: rgb(89 51 209)!important;
+}
+
+.admonition.thinkingmatter>.admonition-title {
+    background-color: rgb(89 51 209 / 10%)!important;
+}
+
+.admonition.thinkingmatter {
+    border-left-color: rgb(89 51 209)!important;
+}
+
+.admonition.thinkingmatter>.admonition-title:before {
+    background-color: rgb(89 51 209)!important;
+}
+
+.admonition.note>.admonition-title {
+    background-color: rgb(92 201 191 / 10%)!important;
+}
+
+.admonition.note {
+    border-left-color: rgb(92 201 191)!important;
+}
+
+.admonition.note>.admonition-title:before {
+    background-color: rgb(92 201 191)!important;
+}
+
+.admonition.torecall>.admonition-title {
+    background-color: rgb(92 201 191 / 10%)!important;
+}
+
+.admonition.torecall {
+    border-left-color: rgb(92 201 191)!important;
+}
+
+.admonition.torecall>.admonition-title:before {
+    background-color: rgb(92 201 191)!important;
+}
+
+
+.admonition.didyouknow>.admonition-title {
+    background-color: rgb(252 177 3 / 10%)!important;
+}
+
+.admonition.didyouknow {
+    border-left-color: rgb(252 177 3)!important;
+}
+
+.admonition.didyouknow>.admonition-title:before {
+    background-color: rgb(252 177 3)!important;
+}
+
+.admonition.document>.admonition-title {
+    background-color: rgb(252 177 3 / 10%)!important;
+}
+
+.admonition.document {
+    border-left-color: rgb(252 177 3)!important;
+}
+
+.admonition.document>.admonition-title:before {
+    background-color: rgb(252 177 3)!important;
+}
+
+
+
+.admonition > div:last-child > :last-child {
+    margin-bottom: 2px;
+}
+
+figure:has(a.longcaption) figcaption {
+    text-align: left;
+    display: inline-block;
+    width: 90%;
+}
+
+figure.align-default:has(a.longcaption) figcaption {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+figure.align-left:has(a.longcaption) figcaption {
+    margin-left: 0;
+    margin-right: 10%;
+}
+
+figure.align-right:has(a.longcaption) figcaption {
+    margin-left: 10%;
+    margin-right: 0;
+}
