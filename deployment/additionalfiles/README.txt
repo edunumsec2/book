@@ -1,0 +1,1 @@
+This folder contains additional files required on the server but not produced by the Sphinx build (e.g., .htaccess files). Beware, they can be hidden files starting with a dot. They are copied by the deploy script.
