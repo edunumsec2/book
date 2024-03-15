@@ -1,0 +1,127 @@
+.answer input {
+  margin-right: 5px;
+}
+
+.question .controls {
+  margin-top: 10px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.question .controls button {
+  margin-left: 10px;
+}
+
+.question .controls button i {
+  margin-right: 5px;
+}
+
+.question .admonition {
+  border-radius: 10px;
+  border: solid 0.5px;
+}
+
+.show-answers .correct {
+  font-weight: bold;
+}
+
+.question .question-feedback {
+  margin-top: 15px;
+  display: none;
+  border-left: 3px solid rgb(66, 125, 189);
+  margin-left: 22px;
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 870px) {
+  .question .controls button {
+    font-size: 0;
+  }
+
+  .question .controls button i {
+    font-size: initial;
+    margin-left: 5px;
+  }
+}
+
+/* Next, settings for light theme: */
+
+.question .admonition-title {
+  background-color: rgb(233, 242, 249);
+}
+
+.question .admonition {
+  background-color: white;
+  border-color: hsl(211, 48%, 50%);
+}
+
+.question .admonition-title:before {
+  color:#05245e;
+}
+
+
+/* Next, settings for dark theme: */
+
+body.modulo-dark .question .admonition-title {
+  background-color: rgb(32, 32, 56);
+}
+
+body.modulo-dark .question .admonition {
+  background-color: rgb(var(--inf-offblack));
+  border-color: hsl(211, 48%, 50%);
+}
+
+body.modulo-dark .question .admonition-title:before {
+  color:#667081;
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {-webkit-transform: translateX(0) rotate(0deg) translateY(0);}
+  25%, 50%, 75% {-webkit-transform: translateX(-1px) rotate(-1deg) ;}
+  37%, 62% {-webkit-transform: translateX(1px) rotate(1deg); }
+  15%, 40%, 65% {-webkit-transform: translateY(1px);}    
+  47%, 72% {-webkit-transform: translateY(-1px); } 
+}
+@-moz-keyframes shake {
+  0%, 100% {-moz-transform: translateX(0) rotate(0deg) translateY(0);}
+  25%, 50%, 75% {-moz-transform: translateX(-1px) rotate(-1deg) ;}
+  37%, 62% {-moz-transform: translateX(1px) rotate(1deg); }
+  15%, 40%, 65% {-moz-transform: translateY(1px);}    
+  47%, 72% {-moz-transform: translateY(-1px); }  
+}
+
+@-o-keyframes shake {
+  0%, 100% {-o-transform: translateX(0) rotate(0deg) translateY(0);}
+  25%, 50%, 75% {-o-transform: translateX(-1px) rotate(-1deg) ;}
+  37%, 62% {-o-transform: translateX(1px) rotate(1deg); }
+  15%, 40%, 65% {-o-transform: translateY(1px);}    
+  47%, 72% {-o-transform: translateY(-1px); } 
+}
+
+@keyframes shake {
+  0%, 100% {transform: translateX(0) rotate(0deg) translateY(0);}
+  25%, 50%, 75% {transform: translateX(-1px) rotate(-1deg) ;}
+  37%, 62% {transform: translateX(1px) rotate(1deg); }
+  15%, 40%, 65% {transform: translateY(1px);}    
+  47%, 72% {transform: translateY(-1px); }  
+}
+.shake {
+  -webkit-animation-name: shake;
+  -moz-animation-name: shake;
+  -o-animation-name: shake;
+  animation-name: shake;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;    
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-transition-timing-function:linear;    
+}

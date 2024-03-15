@@ -1,0 +1,353 @@
+\usepackage{listings}
+\usepackage{listingsutf8}
+\usepackage{pifont}
+\usepackage[hooks]{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{setspace}
+\usepackage{changepage}
+\usepackage[bottom]{footmisc}
+\usepackage{newunicodechar}
+
+\renewcommand{\baselinestretch}{1.1} 
+
+%\usepackage{animate}
+\newcommand{\insertvideo}[3]{\begin{flushright}\fbox{Vidéo #3: \sphinxurl{#2}  \includegraphics[scale=0.3]{#1}}\end{flushright}}
+\newcommand{\insertsolution}[1]{\flushright \rotatebox[origin=c]{180}{\textit{Réponse: #1}}}
+\newcommand{\glossaryterm}[1]{\textit{#1}}
+\newcommand{\glossarylist}{\\}
+\renewenvironment{wrapfigure}[2]{\begin{figure}[htbp]}{\end{figure} \ignorespacesafterend}
+\newenvironment{timeline}{}{}
+\newenvironment{timelineitem}[2]{}{}
+
+% reduce outside margin
+\newlength{\margindiff}
+\setlength{\margindiff}{1em}
+\addtolength{\oddsidemargin}{\margindiff}
+\addtolength{\evensidemargin}{-\margindiff}
+\addtolength{\textwidth}{\margindiff}
+
+% Titre de la table des matière
+\addto\captionsfrench{\renewcommand{\contentsname}{Table des matières}}
+
+% TODO
+\usepackage{wasysym}
+\newunicodechar{⌘}{<Cmd>}
+\newunicodechar{♂}{\male}
+\newunicodechar{♀}{\female}
+\newunicodechar{π}{\ensuremath{\pi}}
+
+%% default admonition type
+%\renewenvironment{sphinxnote}[1]{\begin{tcolorbox}[colframe=blue]\sphinxstrong{#1}}{\end{tcolorbox}}
+
+\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+\definecolor{llgray}{gray}{0.96}
+\definecolor{carolinablue}{rgb}{0.6, 0.73, 0.89}
+\definecolor{blizzardblue}{rgb}{0.67, 0.9, 0.93}
+\definecolor{beaublue}{rgb}{0.74, 0.83, 0.9}
+\definecolor{brightturquoise}{rgb}{0.03, 0.91, 0.87}
+\definecolor{darkviolet}{rgb}{0.58, 0.0, 0.83}
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
+\definecolor{lapislazuli}{rgb}{0.15, 0.38, 0.61}
+\definecolor{ultraviolet}{RGB}{89, 51, 209}
+\definecolor{ultraturquoise}{RGB}{92, 201, 192}
+\definecolor{bondiblue}{rgb}{0.0, 0.58, 0.71}
+\definecolor{neoncarrot}{rgb}{1.0, 0.64, 0.26}
+\definecolor{radicalred}{rgb}{1.0, 0.21, 0.37}
+\definecolor{orangemodulo}{RGB}{241, 180, 63}
+
+
+%% specific admonition type - use tcolorbox arguments (or something else) to adapt latex rendering
+% Page breaks on given boxes can be enabled by passing these additional options to the
+% \begin{tcolorbox} command: 'breakable, enhanced jigsaw'
+
+\newcommand\spacebeforeadmonition{\vspace{6pt}}
+\newcommand\spaceafteradmonition{\vspace{6pt}}
+\newcommand\admonitiontitle[1]{{\fontfamily{phv}\textbf{#1}}}
+
+% Arguments: name, frame color, title color
+\newcommand\DeclareModuloAdmonition[3]{
+  \newenvironment{#1}[1]{
+    \spacebeforeadmonition{}
+    \begin{tcolorbox}[
+      parbox=false, boxrule=1pt, top=8pt, left=8pt, right=8pt, bottom=8pt,
+      colback=llgray, colframe=#2, coltitle=#3, fonttitle=\fontfamily{phv}\bfseries,
+      toptitle=1mm, bottomtitle=1mm, title=##1,
+      breakable, enhanced jigsaw, lines before break=5]
+  }{
+    \end{tcolorbox}
+    \spaceafteradmonition{}
+  }
+}
+
+\DeclareModuloAdmonition{exercise}{ultraviolet}{white}
+\DeclareModuloAdmonition{question}{ultraviolet}{white}
+\DeclareModuloAdmonition{solution}{ultraturquoise}{white}
+\DeclareModuloAdmonition{microactivity}{ultraviolet}{white}
+\DeclareModuloAdmonition{togofurther}{orangemodulo}{black}
+\DeclareModuloAdmonition{important}{radicalred}{white}
+\DeclareModuloAdmonition{didyouknow}{orangemodulo}{black}
+\DeclareModuloAdmonition{reminder}{radicalred}{white}
+\DeclareModuloAdmonition{related}{neoncarrot}{black}
+\DeclareModuloAdmonition{evaluation}{radicalred}{white}
+\DeclareModuloAdmonition{thinkingmatter}{ultraviolet}{white}
+\DeclareModuloAdmonition{note}{neoncarrot}{black}
+\DeclareModuloAdmonition{torecall}{radicalred}{white}
+
+\newenvironment{historicdocument}[1]{\spacebeforeadmonition\begin{tcolorbox}[colframe=neoncarrot, colback=llgray, boxrule=1pt, top=8pt, left=8pt, right=28pt, bottom=8pt]\admonitiontitle{#1}}{\end{tcolorbox}\spaceafteradmonition}
+
+% set toc links color to black
+\hypersetup{linkcolor=black}
+
+\sphinxpxdimen=.5bp\relax
+
+\definecolor{line-num-col}{gray}{0.6} % for line numbers
+\definecolor{frame-col}{gray}{0.78} % for line numbers
+
+\lstset{
+  language=Python,
+  upquote=true,
+  showstringspaces=false,
+  columns=fullflexible,
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{llgray}, % same as background color in admonition
+  numbers=right,
+  stepnumber=1,
+  numberstyle=\scriptsize\sffamily\color{line-num-col},
+  keywordstyle=\color{blue},
+  stringstyle=\color{magenta},
+  commentstyle=\color{red},
+  breaklines=true,
+  frame=single,
+  framesep=0pt,
+  xleftmargin=6pt,
+  framexleftmargin=6pt,
+  xrightmargin=25pt,
+  framexrightmargin=25pt,
+  framextopmargin=4pt,
+  framexbottommargin=4pt,
+  rulecolor=\color{frame-col}
+}
+
+%% for accented characters in lstlisting
+\lstset{inputencoding=utf8/latin1, literate=%
+         {à}{{\`a }}1
+         {â}{{\^a }}1
+         {é}{{\'e}}1
+         {è}{{\`e}}1
+         {ê}{{\^e}}1
+         {ô}{{\^o}}1
+         {’}{{'}}1
+         {ù}{{\`u}}1
+         {û}{{\^u}}1
+         {À}{{\`A}}1
+         {♣}{{\ding{168}}}1
+         {♦}{{\ding{169}}}1
+         {♥}{{\ding{170}}}1
+         {♠}{{\ding{171}}}1
+}
+
+%% undefined unicode characters
+\DeclareUnicodeCharacter{270F}{}
+\DeclareUnicodeCharacter{FE0F}{}
+\DeclareUnicodeCharacter{1F4D2}{}
+\DeclareUnicodeCharacter{1F50C}{}
+\DeclareUnicodeCharacter{1F1E7}{}
+\DeclareUnicodeCharacter{1F1EB}{}
+\DeclareUnicodeCharacter{1F1EC}{}
+\DeclareUnicodeCharacter{1F1EE}{}
+\DeclareUnicodeCharacter{1F1F1}{}
+\DeclareUnicodeCharacter{1F1F3}{}
+\DeclareUnicodeCharacter{1F1FA}{}
+\DeclareUnicodeCharacter{1F1F8}{}
+\DeclareUnicodeCharacter{1F1FF}{}
+\DeclareUnicodeCharacter{2009}{}
+\DeclareUnicodeCharacter{200A}{}
+\DeclareUnicodeCharacter{202F}{}
+\DeclareUnicodeCharacter{2248}{$\approx$}
+\DeclareUnicodeCharacter{300}{è}
+\DeclareUnicodeCharacter{301}{é}
+\DeclareUnicodeCharacter{302}{ê}
+\DeclareUnicodeCharacter{03B1}{$\alpha$}
+\DeclareUnicodeCharacter{03B2}{$\beta$}
+\DeclareUnicodeCharacter{03B3}{$\gamma$}
+\DeclareUnicodeCharacter{03B4}{$\delta$}
+\DeclareUnicodeCharacter{03B5}{$\epsilon$}
+\DeclareUnicodeCharacter{03B7}{$\eta$}
+\DeclareUnicodeCharacter{03B9}{$\iota$}
+\DeclareUnicodeCharacter{03BB}{$\lambda$}
+\DeclareUnicodeCharacter{03BD}{$\nu$}
+\DeclareUnicodeCharacter{03C1}{$\rho$}
+\DeclareUnicodeCharacter{03C4}{$\tau$}
+\DeclareUnicodeCharacter{03C6}{$\phi$}
+
+
+%% new maketitle
+\makeatletter
+\renewcommand*{\maketitle}{%
+\begin{titlepage}
+ \centering
+ \resizebox{\textwidth}{!}{\includegraphics{modulo-head-banner.png}}\\
+ \vspace*{\fill}
+ {\Huge \fontfamily{Montserrat-TOsF}\selectfont \begin{spacing}{1.5} \@title \end{spacing}}
+ \vspace*{3cm}
+{\raggedleft\Large\@author}\\
+ \vspace*{3cm}
+%{\raggedleft\Large\the\day.\the\month.\the\year}
+{\raggedleft\Large \@date}
+ \vspace*{\fill}\\
+ \includegraphics[scale=0.5]{by-nc.eu.png}
+\end{titlepage}
+}
+\makeatother
+
+%% display cards
+\newenvironment{sphinxclasscol-sm-6}{
+  \begin{minipage}{0.5\textwidth}
+}{
+  \end{minipage}
+}
+
+\newenvironment{sphinxclasstabbed-container}{
+  \centering\begin{minipage}{0.5\textwidth}\begin{framed}
+}{
+\end{framed}\end{minipage}
+}
+
+% add a newline after each glossary-entry
+\newenvironment{sphinxclassglossary-entry}{
+  %\begin{adjustwidth}{3em}{0pt}
+}{
+  %\end{adjustwidth}
+  \\[-5pt]
+}
+
+
+%\DeclareStringOption[1pt]{\spx@opt@noteMichaborder}
+%\DeclareStringOption[0.5pt]{noteMichaborder}
+%\sphinxDeclareSphinxColorOption{noteMichaBorderColor}{{rgb}{0,0,0}}
+
+
+
+
+%\newenvironment{sphinxnoteMicha}[1]{\begin{tcolorbox}[colframe=red]\sphinxstrong{#1}}{\end{tcolorbox}}
+%\renewenvironment{sphinxnote}[1]{\begin{sphinxheavybox}\sphinxstrong{#1} }{\end{sphinxheavybox}}
+
+%% personalizing headers and footers (e,g, removing version number)
+
+\setlength{\headheight}{16.6pt}
+
+\definecolor{TitleColor}{rgb}{0, 0, 0}
+
+% customizing Bjornstrup
+\ChNameVar{\raggedleft\Large\sffamily\selectfont}
+\ChNumVar{\raggedleft\LARGE\sffamily\bfseries\selectfont\vspace{-14pt}}
+\ChTitleVar{\vspace{8pt}\centering\LARGE\sffamily\bfseries}
+\ChRuleWidth{1.5pt}
+\makeatletter
+
+% légende d'images
+\usepackage[width=.9\textwidth, font=small, labelfont=bf]{caption}
+\DeclareCaptionFont{nohyphen}{\hyphenpenalty=10000 \exhyphenpenalty=10000\relax}
+\captionsetup{font+=nohyphen, aboveskip=12pt, belowskip=8pt}
+
+% commencer chaque section sur une nouvelle page impaire
+\usepackage{etoolbox}
+\preto\section{  
+  
+\ifnum\value{section}>-1
+\cleardoublepage
+\vspace{100pt}
+\else
+\fi
+}
+
+\preto\chapter{\cleardoublepage\cleardoublepage}
+
+
+% éviter les lignes orphelines
+\usepackage[%
+    all,
+    defaultlines=3 % nombre minimum de lignes
+]{nowidow}
+
+
+%hyphenation
+\pretolerance=5000
+\tolerance=9000
+
+
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+\newcommand{\helv}{%
+\fontfamily{phv}\fontsize{9}{11}\selectfont}
+
+\usepackage{datetime}
+
+\makeatletter
+   \fancypagestyle{normal}{
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0pt}
+    \renewcommand{\headruleskip}{3pt}
+    \fancyfoot[CO]{{\py@HeaderFamily \mdseries \small \thepage \textcolor{lightgray}{\; $\mid$ \today}}}
+    \fancyhead[RO]{{\py@HeaderFamily \mdseries \small \nouppercase{\rightmark}}}
+    \if@twoside
+     \fancyfoot[CE]{{\py@HeaderFamily \mdseries \small \thepage  \textcolor{lightgray}{\; $\mid$ \today}}}
+     \fancyhead[LE]{{\py@HeaderFamily \mdseries \small Modulo \nouppercase{\leftmark}}}
+    \fi
+    
+    
+    % define chaptermark with \@chappos when \@chappos is available for Japanese
+    \ltx@ifundefined{@chappos}{}
+      {\def\chaptermark##1{\markboth{\@chapapp\space\thechapter\space\@chappos\space ##1}{}}}
+    }
+  % Update the plain style so we get the page number & footer line,
+  % but not a chapter or section title.  This is to keep the first
+  % page of a chapter `clean.'
+   \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[CO]{{\py@HeaderFamily \mdseries \small \thepage \textcolor{lightgray}{\; $\mid$ \today}}}
+    \if@twoside\fancyfoot[CE]{{\py@HeaderFamily \mdseries \small \thepage \textcolor{lightgray}{\; $\mid$ \today}}}\fi
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+    \renewcommand{\headruleskip}{3pt}
+    }
+\makeatother
+
+
+
+%% in the fly image conversion taken from here: https://tex.stackexchange.com/questions/574562/inclusion-of-graphics-with-on-the-fly-conversion-using-xetex
+
+\usepackage{graphicx}% including pictures
+\usepackage{shellesc}% run system commands from TeX engine
+\usepackage{etoolbox}% for \csdef, \csletcs
+\makeatletter
+\def\@firstofthree#1#2#3{#1}%
+\def\@secondofthree#1#2#3{#2}%
+\newcommand{\DeclareGraphicsAlien}[2]{%
+  \edef\Gin@extensions{#1,\Gin@extensions}%
+  \DeclareGraphicsRule{#1}{\@gobble#1}{#1}{}%
+  \csdef{Gread@\@gobble#1}##1{%
+    \edef\SourceFile{\Gin@base\Gin@ext}%
+%    \edef\Gin@base{\Gin@base-\@gobble#1-converted-to}%
+%    \edef\Gin@base{\Gin@base-\@gobble#1-converted-to}%
+    \edef\Gin@ext{#2}%
+    \edef\OutputFile{\Gin@base\Gin@ext}%
+    \edef\targetfmt{\expandafter\expandafter\expandafter
+                    \@firstofthree\csname Gin@rule@\Gin@ext\endcsname\relax}%
+    \edef\targetext{\expandafter\expandafter\expandafter
+                    \@secondofthree\csname Gin@rule@\Gin@ext\endcsname\relax}%
+    %\IfFileExists{\SourceFile}{\ShellEscape{#3}}{}%
+    \csletcs{Ginclude@\@gobble#1}{Ginclude@\targetfmt}%
+    \csname Gread@\targetfmt\endcsname{\Gin@base\targetext}%
+  }%
+}%
+\makeatother
+
+
+
+%%% this needs to be made generalizable
+
+\DeclareGraphicsAlien{.gif}{.pdf}
+\DeclareGraphicsAlien{.svg}{.pdf}
+
+

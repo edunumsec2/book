@@ -1,0 +1,24 @@
+.logic-container {
+    width: 100%;
+    margin: -1rem 0 1rem 0; 
+}
+
+.logic-gate {
+    font-weight: 500;
+    font-variant-caps: all-small-caps;
+}
+
+.logic-highlight {
+    cursor: pointer;
+    border-bottom: 1.5px solid var(--color-link-underline);
+    padding-bottom: 1px;
+}
+
+.logic-highlight:hover {
+    border-bottom: 2px solid var(--color-link-underline--hover);
+    background-color: rgba(128,128,128,0.05);
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-left: -2px;
+    margin-right: -2px;
+}

@@ -1,0 +1,20 @@
+{
+  "v": 3,
+  "opts": {"showGateTypes": true},
+  "in": [
+    {"pos": [80, 280], "id": 2, "name": "a", "val": 1},
+    {"pos": [80, 390], "id": 26, "name": "high", "val": 1},
+    {"pos": [80, 460], "id": 27, "name": "low", "val": 0}
+  ],
+  "out": [
+    {"type": "bar", "pos": [450, 240], "id": 4, "display": "h"},
+    {"type": "bar", "pos": [520, 310], "id": 5, "display": "v"},
+    {"type": "bar", "pos": [380, 310], "id": 6, "display": "v"},
+    {"type": "bar", "pos": [450, 380], "id": 11, "display": "h"},
+    {"type": "bar", "pos": [380, 450], "id": 12, "display": "v"},
+    {"type": "bar", "pos": [520, 450], "id": 13, "display": "v"},
+    {"type": "bar", "pos": [450, 520], "id": 14, "display": "h"}
+  ],
+  "gates": [{"type": "NOT", "pos": [150, 280], "in": 0, "out": 1}],
+  "wires": [[2, 0]]
+}

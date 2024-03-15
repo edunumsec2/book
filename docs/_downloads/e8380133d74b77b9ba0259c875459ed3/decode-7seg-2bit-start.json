@@ -1,0 +1,27 @@
+{
+  "v": 3,
+  "opts": {"showGateTypes": true},
+  "in": [
+    {"pos": [120, 240], "id": 2, "name": "a", "val": 0},
+    {"pos": [120, 440], "id": 26, "name": "high", "val": 1},
+    {"pos": [120, 490], "id": 27, "name": "low", "val": 0},
+    {"pos": [120, 310], "id": 31, "name": "b", "val": 0}
+  ],
+  "out": [
+    {"type": "bar", "pos": [700, 200], "id": 4, "display": "h", "color": "red"},
+    {"type": "bar", "pos": [770, 270], "id": 5, "display": "v", "color": "red"},
+    {"type": "bar", "pos": [630, 270], "id": 6, "display": "v", "color": "red"},
+    {"type": "bar", "pos": [700, 340], "id": 11, "display": "h", "color": "red"},
+    {"type": "bar", "pos": [630, 410], "id": 12, "display": "v", "color": "red"},
+    {"type": "bar", "pos": [770, 410], "id": 13, "display": "v", "color": "red"},
+    {"type": "bar", "pos": [700, 480], "id": 14, "display": "h", "color": "red"}
+  ],
+  "gates": [
+    {"type": "NOT", "pos": [220, 240], "in": 0, "out": 1},
+    {"type": "OR", "pos": [470, 190], "in": [28, 29], "out": 30},
+    {"type": "NOT", "pos": [220, 340], "in": 32, "out": 33},
+    {"type": "OR", "pos": [350, 320], "in": [34, 35], "out": 36},
+    {"type": "NOR", "pos": [470, 270], "in": [7, 8], "out": 9}
+  ],
+  "wires": [[2, 0]]
+}
