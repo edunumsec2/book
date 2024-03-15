@@ -507,7 +507,7 @@ Si on généralise, le nombre d’étapes $x$ nécessaires pour parcourir un tab
 &nbsp;&nbsp;&nbsp;&nbsp; $2^{x}$ = n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; par conséquent
 
 
-&nbsp;&nbsp;&nbsp;&nbsp; $x = log_{2}(n) \sim log(n)$   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  la simplification peut être faite car l’ordre de grandeur est le même
+&nbsp;&nbsp;&nbsp;&nbsp; $x = log_{2}(n) ~ log(n)$   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  la simplification peut être faite car l’ordre de grandeur est le même
 
 La complexité de l'algorithme de recherche&nbsp;binaire est donc **<span style="color:rgb(89, 51, 209)">logarithmique</span>**, lorsque $n$ grandit nous avons besoin de $log(n)$ opérations. La figure ci&#8209;dessous permet de comparer les ordres de grandeur logarithmique et linéaire. On remarque qu'un algorithme de complexité&nbsp;logarithmique est beaucoup plus rapide qu’un algorithme de complexité&nbsp;linéaire, car il a besoin de beaucoup moins d'instructions élémentaires pour trouver une solution.
 
