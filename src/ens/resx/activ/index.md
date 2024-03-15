@@ -5,5 +5,5 @@
 :hidden:
 Diffie Hellman <diffie-hellman/diffie-hellman>
 Routage des Paquets <routage_paquets/routage_paquets>
-Suivi sur le web <web-tracking/web-tracking>
+Suivi sur le web <web-tracking/index>
 ```
