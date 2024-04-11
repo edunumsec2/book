@@ -1,0 +1,10 @@
+# This file shows the last commit on dev that has
+# been inspected for fasttrack and porting to master.
+# It does not mean all commits up to this one were
+# merged (this is done less often), neither that this
+# one itself was actually merged.
+
+56379552 2024-01-08 17:51:56 +0100 Jean-Philippe Pellet Slight change to makefile
+
+
+File updated on 2024-04-11T17:36:37+02:00 by Jean-Philippe Pellet <jppellet@gmail.com>
