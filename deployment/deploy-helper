@@ -122,6 +122,11 @@ devmerge-save() {
 
 
 deploy() {
+    # activate virtualenv if exists
+    test .env && source .env/bin/activate
+    test venv && source venv/bin/activate
+    test  env && source  env/bin/activate
+
     # check if user is defined with default deploy user
     SSH_USER=${SSH_USER:-31826_hep}
 
