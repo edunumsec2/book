@@ -1,0 +1,10 @@
+# This file shows the last commit on dev that has
+# been inspected for fasttrack and porting to master.
+# It does not mean all commits up to this one were
+# merged (this is done less often), neither that this
+# one itself was actually merged.
+
+62931a71 2024-04-18 15:16:09 +0200 Jean-Philippe Pellet Add automatic timestamp to deploy-helper script
+
+
+File updated on 2024-04-18T15:19:17+02:00 by Jean-Philippe Pellet <jppellet@gmail.com>
