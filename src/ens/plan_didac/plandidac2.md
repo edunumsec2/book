@@ -4,7 +4,7 @@
 
 |Semaine |	Classe entière en débranché	(1 période)    | Demi-groupes en branché (2 périodes)                 |
 | ------ | ------------------------------------------- | ---------------------------------------------------- |
-|1		 | <a href="../rep-info/activ/magie_binaire_new.html">Magie binaire</a> et <a href="https://dev-apprendre.modulo-info.ch/rep-info/entiers.html"> 1. Entiers</a> / <a href="../archi/activ/gabuzomeu_new.html">Ga-Bu-Zo-Meu</a> | Types - opérateurs / <a href="https://dev-apprendre.modulo-info.ch/prog1/dessiner.html"> Dessiner</a> - <a href="https://dev-apprendre.modulo-info.ch/prog1/definir.html">Définir</a>*           |
+|1		 | <a href="../rep-info/activ/magie_binaire.html">Magie binaire</a> et <a href="https://dev-apprendre.modulo-info.ch/rep-info/entiers.html"> 1. Entiers</a> / <a href="../archi/activ/gabuzomeu_new.html">Ga-Bu-Zo-Meu</a> | Types - opérateurs / <a href="https://dev-apprendre.modulo-info.ch/prog1/dessiner.html"> Dessiner</a> - <a href="https://dev-apprendre.modulo-info.ch/prog1/definir.html">Définir</a>*           |
 |2		 | <a href="https://dev-apprendre.modulo-info.ch/rep-info/entiers.html">1. Entiers</a>			                       |                                                      |
 |3		 | <a href="https://dev-apprendre.modulo-info.ch/rep-info/caracteres.html">2. Caractères</a> | input() - print() / <a href="https://dev-apprendre.modulo-info.ch/prog1/colorier.html">Colorier</a> - <a href="https://dev-apprendre.modulo-info.ch/prog1/repeter.html">Répéter</a>             | 
 |4		 | <a href="https://dev-apprendre.modulo-info.ch/rep-info/images.html">3. Images</a> |                      |
