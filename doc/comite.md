@@ -13,14 +13,12 @@
     - [Philippe Rochat](mailto:philippe.rochat@fileinformatique.ch) (Gymnase de Morges)
     - [Jean-Philippe Pellet](mailto:jean-philippe.pellet@fileinformatique.ch) (HEP Vaud)
 - **Enjeux sociaux** : 
-    - Nadège Pio (EPFL)
     - [Virginia Haussauer](mailto:virginia.haussauer@unil.ch) (Unil/EPFL)
     - Lucile Berset (EPFL)
     - [Frank Dayen](mailto:frank.dayen@eduvaud.ch) (Gymnase de Morges)
     - [Boris Beaude](mailto:boris.beaude@unil.ch) (Unil)
 
 ## Coordination
-- [Sonia Agrebi](mailto:sonia.agrebi@epfl.ch) (EPFL)
 - [Elliot Vaucher](mailto:elliot.vaucher@epfl.ch) (EPFL)
 - Nathalie Farenc (EPFL)
 

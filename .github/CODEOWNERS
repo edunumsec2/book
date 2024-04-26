@@ -3,7 +3,7 @@
 
 # Les utilisateurs suivants sont alertés pour toute 
 # modification sur l'ensemble des sources : 
-* @redelmann @soniaagrebi
+* @redelmann @elliotvaucher
 
 # Apprendre
 
@@ -33,7 +33,9 @@
 # Pour la partie Histoire : 
 /src/appr/hist/ @prochat
 
-# Enseigner 
+Enseigner 
+
+# Apprendre
 
 # Pour la partie Représentation de l'information : 
 /src/ens/rep-info/ @dasilvadds
@@ -62,6 +64,8 @@
 /src/ens/hist/ @prochat
 
 # Pour la partie Enjeux sociaux : 
-/src/ens/enjx/ @soniaagrebi
+/src/ens/enjx/ @vhaussau
+/src/ens/enjx/ @Lucile24
+/src/ens/enjx/ @noflux
 
 

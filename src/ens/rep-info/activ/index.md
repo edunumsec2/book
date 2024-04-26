@@ -6,7 +6,6 @@ Page de description des séquences et activités disponibles pour cette thémati
 :maxdepth: 1
 Magie binaire <magie_binaire>
 Images numériques <encoder_images>
-Images numériques - Variante <numerisation_images_var>
 Echantillonnage <echantillonnage_new>
 Compression et codage de Huffman <huffman>
 ```
