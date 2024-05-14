@@ -8,3 +8,17 @@ ai
 autonomy_cube
 gloomy_sunday
 ```
+
+<br>
+
+Nous vous proposons également des activités relatives à la thématique Art numérique. 
+
+```{toctree}
+:maxdepth: 1
+Enjeux sociaux de l'IA générative <ia_enjeuxsociaux>
+```
+
+
+
+
+
