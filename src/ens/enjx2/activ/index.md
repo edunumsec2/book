@@ -14,5 +14,6 @@ IA : Générateurs <ia_3>
 Cartographie du numérique <carto_numerique>
 Analyse de tweets <twitter>
 Impacts environnementaux du numérique <impacts_environnementaux>
+Enjeux de l'automatisation <automatisation>
 
 ```
