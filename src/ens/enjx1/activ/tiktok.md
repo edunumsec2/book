@@ -1,4 +1,4 @@
-# Le monde (addictif et lucratif) de Tiktok
+# Le monde (addictif et lucratif) de TikTok
 
 ---- 
 
