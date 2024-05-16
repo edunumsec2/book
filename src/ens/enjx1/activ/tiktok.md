@@ -321,3 +321,6 @@ L'enseignant·e conclut le cours en revenant sur les points suivants :
 * La monétisation de nos profils est de plus en plus forte et elle est souvent bien dissimulée.
 * Les enjeux.socio-économico-politiques sont captivants, essayons de ne pas les oublier entre un tuto mode et une vidéo de LOLcat.
 
+---
+
+Activité réalisée par [Raphaël Mérot.](mailto:raphael.merot@eduvaud.ch)
