@@ -210,4 +210,6 @@ L'enseignant·e peut continuer la discussion en mettant l'accent sur les princip
 
 Finalement, l'enseignant·e peut demander aux élèves les solutions qu'iels imaginent possibles que ce soit au niveau individuel ou collectif. 
 
+---
 
+Activité réalisée par [Vincent Keller](https://vkeller.github.io/modulo-gybe/) en collaboration avec le [Centre de Compétences en Durabilité de l'UNIL.](https://www.unil.ch/centre-durabilite/home.html)
