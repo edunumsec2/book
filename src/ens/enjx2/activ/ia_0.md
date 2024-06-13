@@ -18,7 +18,7 @@ réponse ?
 ```{admonition} Intelligence artificielle. Apprentissage et données
 :class: hint
 
-* Thème : `Enjeux sociaux II` (Thèmatique Economie du numérique)
+* Thème : `Enjeux sociaux II` (Thèmatique IA et enjeux de l’automatisation)
 * Niveau : `facile`
 * Durée : 1 période ou 45 minutes
 * Objectifs pédagogiques : Comprendre comment un algorithme d'intelligence artificielle apprend.

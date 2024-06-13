@@ -18,7 +18,7 @@ Les questions que l'on se pose dans cette activité sont les suivantes :
 ```{admonition} Intelligence artificielle. Générateurs
 :class: hint
 
-* Thème : `Enjeux sociaux II` (Thèmatique Economie du numérique)
+* Thème : `Enjeux sociaux II` (Thèmatique  IA et enjeux de l’automatisation)
 * Niveau : `facile`
 * Durée : 1 période ou 45 minutes
 * Objectifs pédagogiques : Comprendre comment fonctionnent les générateurs de texte, de son et de vidéos. Identifier les capacités et les limites des générateurs basés sur l'intelligence artificielles.
