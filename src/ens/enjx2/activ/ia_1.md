@@ -14,7 +14,7 @@ Les questions que l'on se pose dans cette activité sont les suivantes :
 ```{admonition} Intelligence artificielle. Biais de l'intelligence artificielle
 :class: hint
 
-* Thème : `Enjeux sociaux II` (Thèmatique Economie du numérique)
+* Thème : `Enjeux sociaux II` (Thèmatique IA et enjeux de l’automatisation)
 * Niveau : `facile`
 * Durée : 1 période ou 45 minutes
 * Objectifs pédagogiques : Comprendre ce qui crée les biais en intelligence artificielle. Différencier le biais des données et le biais sociétal.
