@@ -4,7 +4,7 @@
 # merged (this is done less often), neither that this
 # one itself was actually merged.
 
-56379552 2024-01-08 17:51:56 +0100 Jean-Philippe Pellet Slight change to makefile
+33e85847 2024-06-18 10:50:08 +0200 biljana-petreska-gyyv Les robots parmi nous
 
 
-File updated on 2024-04-11T17:36:37+02:00 by Jean-Philippe Pellet <jppellet@gmail.com>
+File updated on 2024-06-18T10:51:43+02:00 by Jean-Philippe Pellet <jppellet@gmail.com>
