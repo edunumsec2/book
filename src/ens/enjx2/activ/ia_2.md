@@ -15,7 +15,7 @@ Les questions que l'on se pose dans cette activité sont les suivantes :
 ```{admonition} Intelligence artificielle. Bulles de filtre
 :class: hint
 
-* Thème : `Enjeux sociaux II` (Thèmatique Economie du numérique)
+* Thème : `Enjeux sociaux II` (Thèmatique  IA et enjeux de l’automatisation)
 * Niveau : `facile`
 * Durée : 1 période ou 45 minutes
 * Objectifs pédagogiques : Comprendre ce qu'est une bulle de filtre. Identifier ses propres bulles de filtres. Savoir percer ses bulles de filtre.

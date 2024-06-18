@@ -75,7 +75,7 @@ commit-save() {
 
     # Assuming everything has been pulled, find last commit on dev branch now
     GIT_PAGER=cat last_dev_commit=$(git log dev -1 --pretty="format:%h  %ci  %an  %s")
-    echo "The last commit on dev branch will be saved as this one:"
+    echo "This commit from dev will be referenced for '${type}':"
     echo "  $last_dev_commit"
     # ask to confirm waiting for newline
     read -p "Do you want to save this commit to the control file? (y/n) " -r
@@ -93,7 +93,7 @@ commit-save() {
     completed "Saved to file $target_file"
 
     git add "$target_file"
-    echo 'git commit -m "New ${type} reference commit"'
+    echo "Please run: git commit -m \"New ${type} reference commit\""
 }
 
 
@@ -122,14 +122,30 @@ devmerge-save() {
 
 
 deploy() {
+    # activate virtualenv if exists
+    test .env && source .env/bin/activate
+    test venv && source venv/bin/activate
+    test  env && source  env/bin/activate
+
     # check if user is defined with default deploy user
     SSH_USER=${SSH_USER:-31826_hep}
 
     part="$1"
     subdomain="$2"
 
+    readable_date=$(date )
+
     rm -rf "${root_dir}/build"
     run "Clean build for '$part'" sphinx-build src/$part build -E
+
+    # replace {{timestamp}} in main file
+    main_file="${root_dir}/build/index.html"
+    timestamp="<div style=\"margin-top: 3em; font-size: 80%; opacity: 75%;\">Version: $(date +"%Y-%m-%d %H:%M:%S") (commit $(git rev-parse --short HEAD))</div>"
+    sed "s|{{timestamp}}|${timestamp}|" < "$main_file" > "$main_file.new"
+    rm "$main_file"
+    mv "$main_file.new" "$main_file"
+
+    cd "${root_dir}" && run "Generating PDFs" make modulo.pdf
 
     server="31826.ftp.infomaniak.com"
     run "Copying"  rsync -avz --progress --delete "${root_dir}/build/"                     "${SSH_USER}@${server}:sites/${subdomain}/"

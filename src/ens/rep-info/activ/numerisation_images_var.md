@@ -1,8 +1,11 @@
 (ens:repinfo:imagesnumeriquesvar)=
 # Images Numériques 
 
-La partie théorique consiste à visionner en premier la vidéo suivante:
-[La numérisation des images](ens:repinfo:imagesnumeriquesvideo)
+La partie théorique consiste à visionner en premier la vidéo suivante qui a pour but de donner les bases de la repérsentation des images en binaire.
+
+```{youtube} I4Fg58jO5Mg
+```
+
 
 Cette activité est une variante qui n'utilise pas de langage de programmation (Python, numpy, matplotlib, etc.). Elle se base sur les formats de fichiers textes suivant:
 
