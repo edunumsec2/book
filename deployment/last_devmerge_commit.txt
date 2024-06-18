@@ -4,7 +4,7 @@
 # can have been cherry-picked during the fasttrack
 # process to be quick to publish small changes.
 
-56379552 2024-01-08 17:51:56 +0100 Jean-Philippe Pellet Slight change to makefile
+33e85847 2024-06-18 10:50:08 +0200 biljana-petreska-gyyv Les robots parmi nous
 
 
-File updated on 2024-01-09T17:18:54+01:00 by Jean-Philippe Pellet <jppellet@gmail.com>
+File updated on 2024-06-18T10:52:04+02:00 by Jean-Philippe Pellet <jppellet@gmail.com>
