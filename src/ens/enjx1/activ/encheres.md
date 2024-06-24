@@ -32,7 +32,7 @@ Les fichiers suivants sont à télécharger pour l'activité complète :
 
 Le premier objet de cette activité est de permettre à l'élève d'appréhender la problématique de la valeur des données personnelles pour l'économie du numérique. Cette activité accompagne le dossier "économie du numérique".
 
-Afin d'illustrer comment une entreprise mets un en place un modèle économique basé sur de la vente d'espaces publicitaires, cette activité consiste à mettre en place un système d'enchères entre un espace de publicités, des vendeurs et des clients. 
+Afin d'illustrer comment une entreprise met en place un modèle économique basé sur la vente d'espaces publicitaires, cette activité consiste à expérimenter avec les élèves un système d'enchères entre un espace de publicités, des vendeurs et des clients. 
 
 
 ## Spécifications
