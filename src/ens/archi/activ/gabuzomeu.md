@@ -31,7 +31,7 @@ Cette vidéo d'introduction, dans la série des shadocks, explique très clairem
 ## Matériel
 ### Les documents
 
-Nous mettons à disposition cette vidéo: {download}`Shadoks ZOx44.avi <../media/Shadoks ZOx44.avi>`. Attention: la qualité est celle d'un enregistrement VHS.
+Nous mettons à disposition cette vidéo: {download}`Shadoks ZOx44.mp4 <../media/Shadoks ZOx44.mp4>`. Attention: la qualité est celle d'un enregistrement VHS.
 
 
 ## Déroulement

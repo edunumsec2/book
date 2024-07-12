@@ -67,3 +67,4 @@ La plateforme est améliorée grâce à vos retours, n’hésitez pas à nous le
    readme/extensions
 
    
+{{timestamp}}
