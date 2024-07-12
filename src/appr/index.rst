@@ -76,6 +76,3 @@ Deuxième année
 
 `Réseaux <resx>`_
 : ce chapitre vous fait découvrir comment fonctionne Internet. Il est aussi disponible en version `pdf <media/resx.pdf>`_
-
-
-{{timestamp}}
