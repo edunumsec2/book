@@ -6,7 +6,8 @@ Informatique au gymnase : apprendre
 
 Bienvenue dans le cours d'informatique au gymnase. 
 Ce cours a été conçu pour vous accompagner dans votre découverte de l'informatique. Il est 
-découpé en **huit thématiques** réparties sur deux années. Il est aussi disponible en version `pdf <pdf/modulo.pdf>`_.
+découpé en **huit thématiques** réparties sur deux années. Il est aussi disponible en version `pdf <media/modulo.pdf>`_.
+
 
 .. toctree::
    :name: Première année
@@ -76,6 +77,3 @@ Deuxième année
 
 `Réseaux <resx>`_
 : ce chapitre vous fait découvrir comment fonctionne Internet. Il est aussi disponible en version `pdf <media/resx.pdf>`_
-
-
-{{timestamp}}

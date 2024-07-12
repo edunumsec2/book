@@ -60,7 +60,7 @@ $(PDF_BUILD_DIR)/%.pdf:  $(MD_SOURCE_DIR)/$*/*.md scripts latex
 %.pdf: 	$(PDF_BUILD_DIR)/%.pdf
 	echo $@ is in $(PDF_BUILD_DIR) 
 
-all: web modulo.pdf $(addsuffix .pdf, $(PRINT_CHAPTERS))
+all: web $(addprefix $(PDF_BUILD_DIR)/, $(addsuffix .pdf, $(PRINT_CHAPTERS))) modulo.pdf
 	mkdir -p  $(WEB_BUILD_DIR)/media && cp $(PDF_BUILD_DIR)/*.pdf $(WEB_BUILD_DIR)/media/
 
 clean:

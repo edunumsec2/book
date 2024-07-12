@@ -15,6 +15,7 @@
 # sys.path.insert(0, os.path.abspath('.'))
 
 import os
+import subprocess
 import sys
 
 # -- Project information -----------------------------------------------------
@@ -25,6 +26,7 @@ author = 'Groupe de travail DGEP, EPFL, HEP-VD, UNIL'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
+commit_id = subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).strip().decode('ascii')
 
 
 # -- General configuration ---------------------------------------------------
@@ -190,6 +192,7 @@ myst_enable_extensions = ['amsmath', 'colon_fence', 'deflist', 'dollarmath', 'ht
 myst_url_schemes = ['mailto', 'http', 'https']
 
 today_fmt = '%d %B %Y' # date format
+html_last_updated_fmt = '%d %B %Y (commit ' + commit_id + ")" # last update format
 
 latex_elements = {
     'papersize': 'a4paper',
