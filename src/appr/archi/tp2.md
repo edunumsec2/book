@@ -90,7 +90,7 @@ Le circuit ci-dessous représente une porte OU exclusive (OU-X). Mais il y a mul
 
 Créez une deuxième façon pour obtenir une porte OU exclusive en partant de l'observation :
 
-`(not a and b) or (b and not a)`
+`(a and not b) or (b and not a)`
 
 Utilisez donc :
 
