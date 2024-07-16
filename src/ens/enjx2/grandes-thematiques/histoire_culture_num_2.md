@@ -337,7 +337,7 @@ sociale de leurs membres (selon le niveau
 de compétence et le genre, notamment) et
 une valorisation des plus méritants. Ainsi, il
 s’avère souvent que les logiciels libres ne sont
-l’oeuvre que d’un petit groupe de personnes
+l’œuvre que d’un petit groupe de personnes
 très actives.
 
 ```{didyouknow} COMMUNS NUMÉRIQUES

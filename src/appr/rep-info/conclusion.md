@@ -30,7 +30,7 @@ height: 500px
 [Günther Uecker, Spirale I 1997](https://www.echosciences-grenoble.fr/articles/l-artiste-gunther-uecker-avec-ses-tableaux-de-clous-rencontre-le-discret-et-le-continu-de-la-science)
 ```
 
-Ce que l’oeil perçoit est en réalité une information physique *continue*, tout comme un son. Dès lors, la représentation d’une image dans l'espace *fini* de la machine - l'ordinateur - ne pourra être que partielle ; la puissance de l’ordinateur va définir la précision avec laquelle l’information va pouvoir être transmise, sa *fidélité*.
+Ce que l’œil perçoit est en réalité une information physique *continue*, tout comme un son. Dès lors, la représentation d’une image dans l'espace *fini* de la machine - l'ordinateur - ne pourra être que partielle ; la puissance de l’ordinateur va définir la précision avec laquelle l’information va pouvoir être transmise, sa *fidélité*.
 
 La chaine complète émetteur - canal de transmission - récepteur participe de cette fidélité, et tout se joue alors dans l'ajustement entre cette chaine et la puissance de l'encodage, c'est à dire la capacité de la machine : la complexité de la représentation matricielle pour l'image (pixellisation), la finesse de discrétisation pour le son (échantillonnage).
 

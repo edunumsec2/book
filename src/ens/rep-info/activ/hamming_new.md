@@ -108,7 +108,7 @@ Bien entendu, la solution de sécurisation ne devrait pas prendre plus de bits q
 Pour chaque solution proposée par les élèves, l'idée est de procéder toujours de la même façon :
 
 1. Explicitation de la solution proposée
-2. Mise en oeuvre par les expéditeurs
+2. Mise en œuvre par les expéditeurs
 3. Transmission du message
 4. Décodage du message par les destinataires
 5. Analyse

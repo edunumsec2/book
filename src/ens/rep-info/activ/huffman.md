@@ -60,7 +60,7 @@ Et donc, la réponse est D dans ce cas : au total, 4 questions suffisent pour de
 
 Ce premier jeu sert d'introduction au sujet et ne traite pas directement de compression en tant que telle, mais c'est une étape nécessaire pour comprendre le jeu qui suit.
 
-Il peut être également utile de mentionner que la séquence de questions optimales à poser n'est rien d'autre qu'une mise en oeuvre de l'algorithme de dichotomie. Pour donner une idée de son efficacité, on peut ajouter que ce même algorithme trouverait en 10 questions une lettre choisie au hasard parmi mille et en 20 questions une lettre choisie au hasard parmi un million. En comparaison, un algorithme consistant à essayer à chaque fois de deviner la lettre choisie ("Est-ce un A ?", "Est-ce un B ?", etc.) serait bien moins performant, à moins d'un heureux hasard !
+Il peut être également utile de mentionner que la séquence de questions optimales à poser n'est rien d'autre qu'une mise en œuvre de l'algorithme de dichotomie. Pour donner une idée de son efficacité, on peut ajouter que ce même algorithme trouverait en 10 questions une lettre choisie au hasard parmi mille et en 20 questions une lettre choisie au hasard parmi un million. En comparaison, un algorithme consistant à essayer à chaque fois de deviner la lettre choisie ("Est-ce un A ?", "Est-ce un B ?", etc.) serait bien moins performant, à moins d'un heureux hasard !
 ```
 
 (huffman.secondjeu)=

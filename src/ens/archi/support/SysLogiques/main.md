@@ -59,7 +59,7 @@ Par la suite, nous détaillerons les composants que sont les portes logiques qui
 
 **Logique analytique.** Dans ce chapitre, nous proposons une construction rigoureuse de l'arithmétique logique en détaillant les bases et les propriétés qui nous seront utiles pour concevoir des systèmes logiques.
 
-**Optimisation.** Nous mettrons en oeuvre dans cette partie les concepts vus précédemment pour réaliser des circuits efficaces, donc optimisés. Pour cela, nous présenterons un outil *visuel* que sont les tables de Karnaugh.
+**Optimisation.** Nous mettrons en œuvre dans cette partie les concepts vus précédemment pour réaliser des circuits efficaces, donc optimisés. Pour cela, nous présenterons un outil *visuel* que sont les tables de Karnaugh.
 
 **Systèmes logiques.** Nous exposons enfin dans ce chapitre quelques un des systèmes logiques les plus courants que nous avons sélectionner pour illustrer l'ensemble des concepts du cours.
 
@@ -72,7 +72,7 @@ Que ce soit avec OSX ou Windows, les deux systèmes proposent une calculatrice q
 
 ### logic.ly
 
-Le site logic.ly propose un éditeur et simulateur de circuits logiques. Sa mise en oeuvre et son utilisation sont extrêmement simples, mais la version gratuite ne propose pas de sauvegarde des circuits. Nous limiterons donc son utilisation aux premiers exemples à tester.
+Le site logic.ly propose un éditeur et simulateur de circuits logiques. Sa mise en œuvre et son utilisation sont extrêmement simples, mais la version gratuite ne propose pas de sauvegarde des circuits. Nous limiterons donc son utilisation aux premiers exemples à tester.
 
 ### logisim
 
@@ -81,7 +81,7 @@ Logisim est un système complet de conception et de simulation de circuits logiq
 Objectifs
 ---------
 
-L'objectif de ce cours est de comprendre les bases qui ont permis la conception et la réalisation des *micro*processeurs au coeur des ordinateurs. Après avoir suivi ce cours, on devrait pouvoir appréhender l'ensemble de ce qui se passe dans un microprocesseur comme celui présenté en simulation sur le site [visual6502.org](visual6502.org).
+L'objectif de ce cours est de comprendre les bases qui ont permis la conception et la réalisation des *micro*processeurs au cœur des ordinateurs. Après avoir suivi ce cours, on devrait pouvoir appréhender l'ensemble de ce qui se passe dans un microprocesseur comme celui présenté en simulation sur le site [visual6502.org](visual6502.org).
 
 Représentation binaire
 ======================
@@ -1179,7 +1179,7 @@ Optimisation
 ============
 
 Dans ce chapitre nous allons aborder d'abord des démarches analytiques pour optimiser des fonctions logiques, puis nous verrons ensuite, à partir d'une table de vérité et de l'expression en somme canonique, comment trouver une expression optimisée au moyen des tables de Karnaugh.
-L'optimisation efficace des expressions logiques est intéressante car elle permet une mise en oeuvre avec un minimum de portes logiques, et donc l'élaboration de circuits plus efficaces, plus denses et moins onéreux.
+L'optimisation efficace des expressions logiques est intéressante car elle permet une mise en œuvre avec un minimum de portes logiques, et donc l'élaboration de circuits plus efficaces, plus denses et moins onéreux.
 
 Optimisation analytique
 -----------------------
@@ -1440,7 +1440,7 @@ On peut maintenant \"chaîner\" des \"boites\" d'additionneurs pour obtenir un a
 
 ![Additionneur 4 bits](media/SysLogiques/add4bit.png){#fig:add4bit width="50%"}
 
-L'additionneur étant au coeur des unités arithmétiques et logiques des micro-processeur, il a fait l'objet d'études et d'optimisations particulières. Le lecteur qui souhaite en savoir plus se référera (pour commencer) à la page wikipedia sur l'additionneur.
+L'additionneur étant au cœur des unités arithmétiques et logiques des micro-processeur, il a fait l'objet d'études et d'optimisations particulières. Le lecteur qui souhaite en savoir plus se référera (pour commencer) à la page wikipedia sur l'additionneur.
 
 Inverseur
 ---------

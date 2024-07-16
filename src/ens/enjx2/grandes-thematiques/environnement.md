@@ -261,7 +261,7 @@ L’optimisation de la gestion des e-mails (suppression des anciens messages, li
 
 **Le bitcoin**
 
-La première envolée boursière du bitcoin en 2017 a attiré l’attention sur la consommation énergétique nécessaire à son fonctionnement. Le principe du « minage », au coeur du processus de sécurisation des cryptomonnaies, implique une puissance de calcul très importante, et donc une consommation énergétique conséquente. Le calcul exact de cette consommation reste cependant délicat et sujet à débat, car les données sont difficilement accessibles et les méthodes d’estimation peuvent varier selon les critères pris en compte (type d’équipement utilisé pour le minage, source d’énergie, besoins en infrastructure de refroidissement). Selon un indicateur développé par l’université de Cambridge, le bitcoin représenterait environ 0.4% de la consommation électrique mondiale en 2020.
+La première envolée boursière du bitcoin en 2017 a attiré l’attention sur la consommation énergétique nécessaire à son fonctionnement. Le principe du « minage », au cœur du processus de sécurisation des cryptomonnaies, implique une puissance de calcul très importante, et donc une consommation énergétique conséquente. Le calcul exact de cette consommation reste cependant délicat et sujet à débat, car les données sont difficilement accessibles et les méthodes d’estimation peuvent varier selon les critères pris en compte (type d’équipement utilisé pour le minage, source d’énergie, besoins en infrastructure de refroidissement). Selon un indicateur développé par l’université de Cambridge, le bitcoin représenterait environ 0.4% de la consommation électrique mondiale en 2020.
 
 **Le streaming vidéo**
 
