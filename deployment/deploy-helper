@@ -138,8 +138,8 @@ deploy-ens() {
     run "HTML build for 'ens'" sphinx-build -aE -b html src/ens "${web_build_dir}"
 
     server="31826.ftp.infomaniak.com"
-    run "Upload for 'ens'"  rsync -avz --progress --delete "${web_build_dir}/"                 "${SSH_USER}@${server}:sites/enseigner.modulo-info.ch2/"
-    run "Upload settings for 'ens'" rsync -avz --progress          "${additional_files_dir}/ens/" "${SSH_USER}@${server}:sites/enseigner.modulo-info.ch2/"
+    run "Upload for 'ens'"  rsync -avz --progress --delete "${web_build_dir}/"                 "${SSH_USER}@${server}:sites/enseigner.modulo-info.ch/"
+    run "Upload settings for 'ens'" rsync -avz --progress          "${additional_files_dir}/ens/" "${SSH_USER}@${server}:sites/enseigner.modulo-info.ch/"
 
 }
 
