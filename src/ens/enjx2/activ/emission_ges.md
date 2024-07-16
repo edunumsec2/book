@@ -56,7 +56,7 @@ Lors de cette introduction, le lien entre réchauffement climatique, émissions 
 Les élèves forment des groupes de deux (ou trois) et chaque groupe reçoit une série de cartes représentant une activité
 de la vie courante. Les activités sont les suivantes:
 
-1. Manger un steak de boeuf avec des frites
+1. Manger un steak de bœuf avec des frites
 1. Recharger son téléphone portable une fois tous les jour pendant un an. 
 1. Faire un aller-retour Lausanne - Genève en voiture à essence
 1. Regarder une série d'une heure chaque semaine pendant un an sur son ordinateur
@@ -126,7 +126,7 @@ Voiture: 15-20 kgeqCo2
 
 Chauffage: 7-12 kgeqCO2
 
-Viande: 20-40 kgeqCO2/kg boeuf donc 3-4 kg
+Viande: 20-40 kgeqCO2/kg bœuf donc 3-4 kg
 
 Série: 2-5 kgeqCO2
 

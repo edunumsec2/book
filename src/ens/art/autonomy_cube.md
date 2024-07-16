@@ -5,15 +5,15 @@
 
 ## Sommaire
 
-- [Description de l'oeuvre](#description-de-l-oeuvre)
+- [Description de l'œuvre](#description-de-loeuvre)
 - [Artistes](#artistes)
-- [Rapports avec la thématique réseaux](#rapports-avec-la-thématique-réseaux)
+- [Rapports avec la thématique réseaux](#rapports-avec-la-thematique-reseaux)
 
-## Description de l'oeuvre
+## Description de l'œuvre
 
 *Autonomy Cube* est un projet artistique créé par Trevor Paglen et Jacob Appelbaum, de 2014 à 2018, consistant à placer des relais pour le réseau Tor dans les musées d'art traditionnels. Le cube s'inscrit dans la lignée de la plupart des œuvres antérieures de Paglen et Appelbaum en ciblant le domaine de la surveillance et de l'espionnage gouvernementaux. Les sculptures consistent en des cubes d'acrylique contenant des routeurs Wifi basés sur deux cartes mères de matériel open source, qui produisent un point d'accès à Internet, via le protocole Tor. 
 
-En plus d'être une oeuvre à laquelle les visiteurs d'une exposition peuvent se connecter, pour obtenir un point d'accès anonyme à Internet, *Autonomy Cube* fonctionne aussi comme un noeud du réseau Tor, renforçant donc l'intégralité du réseau, et transformant l'espace d'art en instituion engagée pour la privacité des données. 
+En plus d'être une œuvre à laquelle les visiteurs d'une exposition peuvent se connecter, pour obtenir un point d'accès anonyme à Internet, *Autonomy Cube* fonctionne aussi comme un nœud du réseau Tor, renforçant donc l'intégralité du réseau, et transformant l'espace d'art en instituion engagée pour la privacité des données. 
 
 
 ## Artistes
@@ -28,7 +28,7 @@ Dans son travail photographique intitulé "Limit Telephotography", il utilise de
 ![img](media/limit_telephotography.jpg)
 *Detachment 3, Air Force Flight Test Center #2; Groom Lake, NV; Distance ~ 26 Miles, 2008*
 
-Une autre oeuvre photographique, intitulée *NSA taped fiber optic cable* (en français "câbles de fibre optique surveillés par la NSA"), montre les lieux, inconnus du public, où les câbles sous-marins d'Internet arrivent sur les côtes. À côté des photos de baigneurs illustrant l'insouciance des foules, ou de panorama côtiers typiques des photographies de vacances, des infographies expliquent différents aspects techniques de cette surveillance de masse furtive.
+Une autre œuvre photographique, intitulée *NSA taped fiber optic cable* (en français "câbles de fibre optique surveillés par la NSA"), montre les lieux, inconnus du public, où les câbles sous-marins d'Internet arrivent sur les côtes. À côté des photos de baigneurs illustrant l'insouciance des foules, ou de panorama côtiers typiques des photographies de vacances, des infographies expliquent différents aspects techniques de cette surveillance de masse furtive.
 
 ![img](media/fiber_optic_cable_2.jpg)
 *NSA-Tapped Fiber Optic Cable Landing Site, Keawaula, Hawaii, United States, 2016*

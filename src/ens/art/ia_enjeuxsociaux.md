@@ -12,7 +12,7 @@ Cette activité s'inscrit dans une série de ressources visant à explorer les r
 * Thèmes : Intelligence artificielle & Art numérique
 * Niveau : `moyen`
 * Durée : 2 périodes 
-* Objectifs pédagogiques : Connaître les 4 périodes de l'art numérique. Être capable de prédire le comportement d'une IA générative avec un *prompt*. Créer une oeuvre d'art numérique à partir d'un sujet défini. Illustrer quelques enjeux sociaux des GANs
+* Objectifs pédagogiques : Connaître les 4 périodes de l'art numérique. Être capable de prédire le comportement d'une IA générative avec un *prompt*. Créer une œuvre d'art numérique à partir d'un sujet défini. Illustrer quelques enjeux sociaux des GANs
 * Modalité : `branchée`
 * Matériel : {download}`Diffusionbee <https://diffusionbee.com/download>`
 * Prérequis : Notions fondamentales sur l'IA
@@ -27,7 +27,7 @@ Cette activité s'inscrit dans une série de ressources visant à explorer les r
 | {ref}`Installation de DiffusionBee <diffusionbee>` |  | Préparer |
 | {ref}`Histoire de l'art numérique <historique>`  | 15 min | Découvrir |
 | {ref}`Prompt battle <prompt.battle>`  | 20 min | Analyser |
-| {ref}`Création d'une oeuvre d'art numérique <creation>` | 25 min | Appliquer
+| {ref}`Création d'une œuvre d'art numérique <creation>` | 25 min | Appliquer
 | {ref}`Discuter des enjeux sociaux des GANs <enjeux.sociaux>` | 25 min | Discuter
 | {ref}`Conclusion <ia.conclusion>` | 5 min | Réfléchir
 
@@ -181,7 +181,7 @@ Pendant ces 25 années, les technologies de vision artificielle ont connu une cr
 
 ### À partir de 2015 : L'IA, l'apprentissage automatique et l'art génératif 
 
-Pour créer des oeuvres d’art avec de l’IA générative, on utilise un logiciel dit *text-to-image* qui produit une image à partir d’un texte qu'on appelle *prompt*. 
+Pour créer des œuvres d’art avec de l’IA générative, on utilise un logiciel dit *text-to-image* qui produit une image à partir d’un texte qu'on appelle *prompt*. 
 
 Exemple : l'image 8 représente un portrait généré par une IA générative. D'autres exemples sont disponibles sur [thispersondoesnotexist.](https://thispersondoesnotexist.com)
 
@@ -235,13 +235,13 @@ Une fois que les élèves ont soumis leurs *prompts* et généré leurs images, 
 
 (creation)=
 
-## Création d'une oeuvre d'art numérique 
+## Création d'une œuvre d'art numérique 
 
 *Durée : 25 minutes*
 
 **Exercice**
 
-L'enseignant·e demande aux élèves de créer une oeuvre en suivant les étapes suivantes : 
+L'enseignant·e demande aux élèves de créer une œuvre en suivant les étapes suivantes : 
 
 1. Choisir un thème : 
     * Option 1 : mon auto-portrait
@@ -249,7 +249,7 @@ L'enseignant·e demande aux élèves de créer une oeuvre en suivant les étapes
 2. Préparer mon *prompt*
 3. Créer une image à l'aide de **Diffusionbee**
 4. Modifier l'image à l'aide de **GIMP**
-5. Écrire un texte qui décrit mon oeuvre (pourquoi?)
+5. Écrire un texte qui décrit mon œuvre (pourquoi?)
 5. Rendre mon travail au format png avec le texte qui l'accompagne (par ex. sur moodle ou par mail)
 
 

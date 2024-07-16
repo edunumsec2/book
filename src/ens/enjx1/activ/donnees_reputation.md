@@ -117,7 +117,7 @@ L'objectif étant que les élèves réalisent que le sujet est délicat et qu'en
 *Durée : 5 min*
 
 L'enseignant·e pourra conclure la séquence en notant que :
-- les enjeux de réputation sont au coeur de l'économie des données
+- les enjeux de réputation sont au cœur de l'économie des données
 - les conséquences sont au niveau individuel et collectif : diffamation, vol d'identité, discrimination, harcèlement, surveillance, etc...
 - les conséquences sont également au niveau des marques et des plateformes, [principalement financières](https://noyb.eu/fr/eu-58-million-fine-grindr-confirmed)
 

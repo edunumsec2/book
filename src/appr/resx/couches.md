@@ -84,7 +84,7 @@ communications, mais il n'est dans la pratique pas toujours entièrement respect
 Les protocoles décrits ci-dessus ont été établis sur proposition de différentes personnes travaillant
 principalement dans les universités ou les entreprises de télécommunication et adoptés par consensus après
 beaucoup de discussion. L'idée principale étant qu'Internet n'appartient à personne et qu'il s'agit d'une
-oeuvre collective à laquelle toute personne dotée des compétences nécessaires peut contribuer. Ces protocoles
+œuvre collective à laquelle toute personne dotée des compétences nécessaires peut contribuer. Ces protocoles
 sont *ouverts* dans le sens que chacun peut y avoir accès et les implémenter à sa manière. Par exemple,
 quelqu'un qui souhaiterait développer un routeur peut avoir accès à toutes les informations nécessaires
 pour le faire.

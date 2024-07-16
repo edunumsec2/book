@@ -46,7 +46,7 @@ En quelques minutes, l'enseignant-e introduit le sujet du "fonctionnement d'Inte
 sur leurs préconceptions et en partant d'un exemple concret de consultation d'un site web, d'échange sur un
 réseau social, ou d'échange d'email. La discussion doit amener la notion d'étapes intermédiaires (par exemple
 l'antenne 4G, la borne wifi) et donc des routeurs. On peut illustrer le propos avec une carte des dorsales d'Internet. 
-On indique qu'Internet peut être représenté par un graphe avec noeuds et arêtes. 
+On indique qu'Internet peut être représenté par un graphe avec nœuds et arêtes. 
 
 
 ## Les tables de routage

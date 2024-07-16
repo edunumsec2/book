@@ -5,7 +5,7 @@
 Ce document est en cours de rédaction.
 ```
 
-Si l'histoire de l'informatique prend ses racines loin dans notre histoire, cette science, encore très jeune, trouve sa place au milieu du XXe siècle. L'éclosion de l'informatique se situe en 1940, à la croisée d'opportunités technologiques, d'enjeux stratégiques et de contributions d'autres branches. C'est ainsi au coeur des conflits de la Deuxième guerre mondiale que l'importance de calculateurs programmables se fait sentir.
+Si l'histoire de l'informatique prend ses racines loin dans notre histoire, cette science, encore très jeune, trouve sa place au milieu du XXe siècle. L'éclosion de l'informatique se situe en 1940, à la croisée d'opportunités technologiques, d'enjeux stratégiques et de contributions d'autres branches. C'est ainsi au cœur des conflits de la Deuxième guerre mondiale que l'importance de calculateurs programmables se fait sentir.
 
 Le terme \"informatik\" apparaît en 1957 pour le traitement automatique de l'information dans un article de Karl Steinbuch. Il est officialisé en Français en 1962 par Philippe Dreyfus. En Anglais, pour des questions de droits des marques, le terme restera *computer science*.
 
@@ -214,7 +214,7 @@ Dès les années septante, les langages suivant apparaissent :
 
 -   1972, **Smalltalk**, premier langage pur objet et qui marque avec ce nouveau paradigme le début d'une nouvelle ère dans la programmation.
 
--   1972, **C**, longtemps le langage de programmation le plus utilisé, à la base du système UNIX et encore aujourd'hui au coeur de la plupart des développements autour du système Linux.
+-   1972, **C**, longtemps le langage de programmation le plus utilisé, à la base du système UNIX et encore aujourd'hui au cœur de la plupart des développements autour du système Linux.
 
 -   1974, **SQL**, un langage de requêtes utilisé encore utilisé aujourd'hui pour l'extraction d'information dans la plupart des bases de données (relationnelles).
 

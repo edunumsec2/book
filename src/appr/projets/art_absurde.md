@@ -53,7 +53,7 @@ ville1 = choice(("Bâle", "Amsterdam", "Rotterdam", "Hong-Kong", "Singapour",
 
 medium = choice(("la poterie", "l'alphabet", "les monstres", "les dinosaures", "l'anglais",
     "les fabriques de sandales", "la guerre", "l'art", "le mouvement néo-classique",
-    "le pointillisme", "l'oeuvre de Van Gogh", "la musique viennoise", "le cinéma expérimental"))
+    "le pointillisme", "l'œuvre de Van Gogh", "la musique viennoise", "le cinéma expérimental"))
 
 ville2 = choice(("Bâle", "Amsterdam", "Rotterdam", "Hong-Kong", "Singapour", "New-York"))
 
@@ -87,7 +87,7 @@ ville1 = choice(("Bâle", "Amsterdam", "Rotterdam", "Hong-Kong", "Singapour",
 
 medium = choice(("la poterie", "l'alphabet", "les monstres", "les dinosaures", "l'anglais",
     "les fabriques de sandales", "la guerre", "l'art", "le mouvement néo-classique",
-    "le pointillisme", "l'oeuvre de Van Gogh", "la musique viennoise", "le cinéma expérimental"))
+    "le pointillisme", "l'œuvre de Van Gogh", "la musique viennoise", "le cinéma expérimental"))
 
 ville2 = choice(("Bâle", "Amsterdam", "Rotterdam", "Hong-Kong", "Singapour", "New-York"))
 ===
@@ -112,12 +112,12 @@ activite1 = choice(("les bacs à sable", "l'énergie éolienne", "les courses d'
 
 activite2 = choice(("l'électricité", "les conduites d'eau", "la navigation en eaux troubles",
     "les vagues scélérates", "l'école enfantine", "la gymnastique", "la marque Coca-Cola",
-    "la danse classique", "l'oeuvre de Chopin", "les montagnes russes", "l'extrême-Orient",
+    "la danse classique", "l'œuvre de Chopin", "les montagnes russes", "l'extrême-Orient",
     "la dilpomatie des mollahs"))
 
 activite3 = choice(("les panneaux de signalisation",  "l'exercice physique", "la gravitation",
     "le surpoids", "le diabète", "Jean-Jacques Rousseau", "l'âge d'or de l'école schubertienne",
-    "les pianos à queue", "les dîners à la campagne", "l'oeuvre de Marc Levy"))
+    "les pianos à queue", "les dîners à la campagne", "l'œuvre de Marc Levy"))
 
 phrase1 = f"{prenom} {nom}, {verbe1} {sujet}."
 phrase2 = f"Né à {ville1}, {prenom} {nom} découvre {medium} à {ville2}.\n"

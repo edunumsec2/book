@@ -53,7 +53,7 @@ Mary Kenneth Keller 🇺🇸
 ^^^^^
 ***1913-1985***
 
-Soeur [**Mary Kenneth Keller**](https://fr.wikipedia.org/wiki/Mary_Kenneth_Keller) est la première femme à obtenir un doctorat en informatique aux États-Unis. Elle participe - avec une douzaine d'autres d'étudiants - au développement du [BASIC](https://fr.wikipedia.org/wiki/Basic_(langage)) une des premiers langages de haut niveau.
+Sœur [**Mary Kenneth Keller**](https://fr.wikipedia.org/wiki/Mary_Kenneth_Keller) est la première femme à obtenir un doctorat en informatique aux États-Unis. Elle participe - avec une douzaine d'autres d'étudiants - au développement du [BASIC](https://fr.wikipedia.org/wiki/Basic_(langage)) une des premiers langages de haut niveau.
 
 ----
 :img-top: media/urban.jpg

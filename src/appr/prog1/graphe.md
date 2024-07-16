@@ -1,7 +1,7 @@
 # Réseauter - `points`
 
 En mathématique un **graphe** est un ensemble de **points** liés par des **lignes**.  
-De façon générale les *points* sont des objets, souvent appelés *noeuds* ou *sommets*.  
+De façon générale les *points* sont des objets, souvent appelés *nœuds* ou *sommets*.  
 Les lignes sont souvent appelées *liens* ou *arêtes*.
 
 La *Théorie des graphes* est une branche des mathématiques. En informatique le graphe est un outil important pour modéliser :
@@ -221,7 +221,7 @@ En plus, chaque point peut comporter encore d'autres informations (attributs) te
 - couleur
 - étiquette
 
-Dans un graphe social (Facebook), chaque noeud (utilisateur) possède un très grand nombre d'attributs, tels que:
+Dans un graphe social (Facebook), chaque nœud (utilisateur) possède un très grand nombre d'attributs, tels que:
 nom, prénom, âge, anniversaire, lieu de résidence, photo de profil, etc.
 
 ```{exercise}
@@ -523,12 +523,12 @@ for (i, j) in lignes:
 
 ### Pays voisins
 
-Créez un graphe avec les pays d'Europe. Chaque pays est un noeud. Si les pays sont voisins, ils possèdent un lien entre eux.
+Créez un graphe avec les pays d'Europe. Chaque pays est un nœud. Si les pays sont voisins, ils possèdent un lien entre eux.
 
 ![europe](media/carte_europe.png)
 
 ### Réseau ferroviaire
 
-Créez un graphe qui représente le réseau ferroviaire suisse. Chaque ville est un noeud. Les lignes de chemin de fer représentent les liens.
+Créez un graphe qui représente le réseau ferroviaire suisse. Chaque ville est un nœud. Les lignes de chemin de fer représentent les liens.
 
 ![suisse](media/suisse.jpg)

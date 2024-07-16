@@ -14,7 +14,7 @@ Pour comprendre le routage, il faut distinguer deux types de machines qui font f
 Les *routeurs* sont des ordinateurs spécialisés dont le rôle est de relayer
 et d'orienter correctement les informations qui circulent sur Internet. Si
 Internet est représenté par un graphe dont les arêtes représentent les canaux
-de communication, alors les routeurs sont situés aux noeuds du graphe et
+de communication, alors les routeurs sont situés aux nœuds du graphe et
 décident dans quelle direction faire suivre une information afin qu'elle atteigne
 son destinataire. Les routeurs sont donc comme des facteurs
 disposés aux intersections du réseau Internet qui vont lire la destination des

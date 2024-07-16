@@ -77,7 +77,7 @@ En passant à la diapositive 31, l'enseignant reprend la main et éclaircit les 
 L'aspect «puits de carbone» pendant la croissance des arbres est également un paramètre important, posant la question du réservoir de carbone constitué par la végétation et la déforestation.
 
 6ème moment : évaluation.
-Cette phase est à réfléchir et construire. On peut imaginer un exercice proposé aux élèves avec une fiche excel pré-remplie, puis des cellules à compléter ; le correcteur pourra s'assurer de la bonne mise en oeuvre du «drag & drop»), au-delà du constat sur la justesse des résultats. On pourra donc évaluer la fonctionnalité informatique, tout comme le raisonnement mathématique (secondaire s'agissant de ce qui est objectivé au cours de la séance, essentiel si l'on s'en tient à l'aspect formateur de la séquence).
+Cette phase est à réfléchir et construire. On peut imaginer un exercice proposé aux élèves avec une fiche excel pré-remplie, puis des cellules à compléter ; le correcteur pourra s'assurer de la bonne mise en œuvre du «drag & drop»), au-delà du constat sur la justesse des résultats. On pourra donc évaluer la fonctionnalité informatique, tout comme le raisonnement mathématique (secondaire s'agissant de ce qui est objectivé au cours de la séance, essentiel si l'on s'en tient à l'aspect formateur de la séquence).
 S'ensuivra une demande d'analyse des résultats aux élèves retrouvant les conclusions auxquelles l'activité présentée ici nous a amené.
 
 [^1]: Chevallard Yves, (1998). Analyse des pratiques enseignantes et didactique des mathématiques : l’approche anthropologique. Cours donné à l’université d’été Analyse des pratiques enseignantes et didactique des mathématiques, La Rochelle, 4-11 juillet 1998 ; paru dans les actes de cette université d’été, IREM de Clermont-Ferrand
@@ -212,7 +212,7 @@ Il affiche les diapositives 38 et 39.
 
 #### Question c (5 - 7 mn)
 
-Les élèves sont laissés en autonomie pour répondre à cette question, devant mettre en oeuvre tous les outils déjà présentés et expérimentés.
+Les élèves sont laissés en autonomie pour répondre à cette question, devant mettre en œuvre tous les outils déjà présentés et expérimentés.
 
 L'enseignant passe dans les rangs s'assurer de l'avancée et de la justesse des calculs. 
 Puis il revient au tableau en affichant les valeurs (diapositives 40 et 41). 
