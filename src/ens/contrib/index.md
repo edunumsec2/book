@@ -7,3 +7,5 @@ Lorsque les sources sont disponibles, dans le tableau ci-dessous, n'hésitez pas
 |  Auteur |  Titre |  Liens |  Résumé | 
 |---|---|---|---|
 | Cédric Donner  |  Programmation dynamique | Contenus : [https://gyminf-ads2-dp.surge.sh/index.html](https://gyminf-ads2-dp.surge.sh/index.html) / Sources : [https://github.com/donnerc/prog-dynamique/ ](https://github.com/donnerc/prog-dynamique/ )  | La programmation dynamique est une technique de résolution de problèmes d’optimisation développée par Richard Bellman dès les années 1940. Elle revêt une importance capitale en optimisation et en théorie du contrôle. |
+| Romain Edelmann | Cours DO info | [https://info.redelmann.ch/index.html](https://info.redelmann.ch/index.html)| Cours de 1e et 2e année|
+| Vincent Keller | Cours DO info | [https://vkeller.github.io/modulo-gybe ](https://vkeller.github.io/modulo-gybe)| Cours de 1e et 2e année|
