@@ -49,18 +49,19 @@ Un des premiers navigateurs web développé par Tim Berners-Lee. Les images s'af
 ### URL
 
 L'URL (*Uniform Resource Locator*) est une manière de spécifier la localisation d'un document disponible sur Internet.
-Un exemple d'URL peut être par exemple "https://www.champignons.ch/fichiers/fr/contact.html".
+Un exemple d'URL peut être par exemple : `https://www.champignons.ch/fichiers/fr/contact.html`
 
-Une URL comporte trop parties, qui sont les suivantes dans notre exemple |https|://www.champignons.ch|/fichiers/fr/contact.html|.  {itodo}`mettre en couleur les trois parties`
-Autrement dit, une URL se compose généralement de la manière suivante:
-
-*protocol*:*hôte*/*chemin*  
+Une URL comporte trois parties, qui sont les suivantes dans notre exemple : `https://`, `www.champignons.ch` et `/fichiers/fr/contact.html`.  {itodo}`mettre en couleur les trois parties`
 
 1. Le *protocole*, dans notre exemple `https`, indique le protocole utilisé pour avoir accès à la ressource. Pour le web, ce protocole est toujours `http` ou `https`, sa version sécurisée. Mais l'URL étant aussi utilisée en dehors du web, il y a d'autres protocoles possibles, par exemple `ftp` pour faire du transfert de fichier.
 
-1. L'*hôte* spécifie la machine (ou le serveur) où aller chercher le fichier. Cela peut être un nom de domaine, mais également une adresse IP
+1. L'*hôte* spécifie la machine (ou le serveur) où aller chercher le fichier. Cela peut être un nom de domaine, mais également une adresse IP. Dans notre exemple, c'est le nom de domaine `www.champignons.ch`. Un exemple d'adresse IP est `127.0.0.1`.
 
 1. Le *chemin* indique quel fichier on souhaite obtenir de la part du serveur. On part de la racine "/" (connue du serveur) et on descend dans l'arborescence selon les répertoires indiqués. Par exemple `/fichiers/fr/contact.html` est le fichier `contact.html` qui se trouve dans le répertoire  `fr` qui se trouve lui-même dans le répertoire `fichiers`.  {itodo}`ajouter une illustration`
+
+Une URL se compose donc de la manière suivante :
+
+`protocole://hôte/chemin`
 
 Dans le protocole HTTP, si le chemin est un répertoire (et pas un fichier), le fichier par défaut `index.html` présent dans ce répertoire est envoyé par le serveur.
 
@@ -68,7 +69,7 @@ Dans le protocole HTTP, si le chemin est un répertoire (et pas un fichier), le 
 
 HTTP (acronyme de HyperText Transfer Protocol) est le protocole qui régit la manière dont un client web (par exemple le navigateur web de Alice) et un serveur web (par exemple le site www.champignons.ch) vont interagir l'un avec l'autre.
 
-Par exemple si le client demande au serveur de lui envoyer la page web `accueil.html`, il lui enverra requête GET suivante:
+Par exemple si le client demande au serveur de lui envoyer la page web `accueil.html`, il lui enverra la requête GET suivante:
 
 `GET accueil.html HTTP/1.1`
 
@@ -148,8 +149,8 @@ Au début, les pages web étaient des fichiers HTML stockés sur les serveurs. C
 web *statique*. Si les sites web statiques existent
 toujours, par exemple modulo-info.ch, beaucoup de sites web sont dynamiques,
 c'est-à-dire que le fichier HTML est généré par le site au moment où la requête est faite.
-Cela permet de servir une page différente selon l'utilisateur ou selon les arguments de la requête qui
-sont des indications supplémentaires ajoutée à la requête après l'URL après les le signe `?`. 
+Cela permet de servir une page différente selon l'utilisateur ou selon les arguments de la requête. Ces arguments
+sont des indications supplémentaires ajoutées après un signe `?` à la fin de l'URL. 
 
 ```{micro}
 Effectuer une recherche sur un navigateur web et consulter la barre de navigation. Quels sont les arguments de votre requête et pouvez-vous en comprendre la signification?
@@ -173,7 +174,7 @@ un site dynamique?
 
 ### Le Web 2.0
 
-Le web 2.0 fait référence à la tendance, initiée au débit des années 2000, de proposer des pages web permettant aux internautes
+Le web 2.0 fait référence à la tendance, initiée au début des années 2000, de proposer des pages web permettant aux internautes
 de contribuer du contenu, et pas uniquement de lire des fichiers comme c'était le cas jusqu'alors. Les blogs, forums, wikis,
 et les réseaux sociaux font
 partie de ce développement qui voit exploser l'aspect participatif du web. Ce n'est en effet plus nécessaire de connaître
@@ -187,6 +188,6 @@ pour en faire un espace d'expression et de partage duquel ont émergé des rése
 Pour demander la page web du site *champigons.ch* le navigateur web d'Alice va utiliser le protocole HTTP (ou HTTPS)
 qui spécifie des mots de code indiquant qu'on veut accéder à une page donnée ou envoyer des informations au serveur. 
 Le serveur va répondre avec le même protocole pour envoyer la page ou un message d'erreur si ce n'est pas possible. 
-La page, elle-même, est envoyée au format HTML, c'est à dire sous forme de texet et d'images. Le navigateur va lire
+La page, elle-même, est envoyée au format HTML, c'est à dire sous forme de texte et d'images. Le navigateur va lire
 ce texte qui va lui indiquer ce qu'il faut afficher pour Alice. 
 ```
