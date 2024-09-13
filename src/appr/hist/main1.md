@@ -37,7 +37,7 @@ Mise au point au début du XXe siècle, la machine *enigma*, utilisée par les 
 
 ### Du simple calcul à la séquence
 
-Le mot algorithme découle de la latinisaton du nom de Muhammad Ibn Mūsā al-Khuwārizmī au VIIIè et IXe siècles. Les boites à musique utilisent par la suite un cylindre hérissé de picots, tout comme les automates, à l'instar du canard de Vaucanson[^1] (1734). Ces cylindres deviennent par la suite des bandes ou cartes perforées comme dans les métiers de Jacquard ou les orgues de barbarie.
+Le mot algorithme découle de la latinisaton du nom de Muhammad Ibn Mūsā al-Khuwārizmī aux VIIIe et IXe siècles. Les boites à musique utilisent par la suite un cylindre hérissé de picots, tout comme les automates, à l'instar du canard de Vaucanson[^1] (1734). Ces cylindres deviennent par la suite des bandes ou cartes perforées comme dans les métiers de Jacquard ou les orgues de barbarie.
 Au début du IXe siècle, Georges Boole formalise la logique moderne et ce qu'on appelle aujourd'hui en son honneur l'algèbre de Boole. Cet algèbre est repris plus tard dans la construction des systèmes logiques à la base du fonctionnement des ordinateurs.
 
 
