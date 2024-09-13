@@ -4,7 +4,7 @@
 # can have been cherry-picked during the fasttrack
 # process to be quick to publish small changes.
 
-33d1807a 2024-07-16 15:26:51 +0200 Jean-Philippe Pellet Correct links; correct œ when needed
+38cfa71f 2024-09-13 15:49:45 +0200 Jean-Philippe Pellet Removed inappropriate conclusion
 
 
-File updated on 2024-07-16T15:29:10+02:00 by Jean-Philippe Pellet <jppellet@gmail.com>
+File updated on 2024-09-13T15:54:46+02:00 by Jean-Philippe Pellet <jppellet@gmail.com>
