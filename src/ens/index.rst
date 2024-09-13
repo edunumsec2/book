@@ -8,7 +8,7 @@ Bienvenue dans les ressources pour **l'enseignement** de l'informatique au gymna
 Ces ressources ont été conçues pour vous accompagner dans votre **enseignement**.
 
 
-Les ressources sont découpées selon un chapitrage qui correspond au `plan d'études <https://files.modulo-info.ch/pe.pdf>`_ 
+Les ressources sont découpées selon un chapitrage qui correspond au `plan d'études <https://www.vd.ch/formation/formations-gymnasiales/ecole-de-maturite>`_ 
 romand pour l'informatique au gymnase. Elles sont divisées en quatre parties, dont nulle n'a de préséance sur les autres. 
 Il appartient à l'enseignant·e de choisir l'ordre dans lequel les contenus sont abordés. 
 

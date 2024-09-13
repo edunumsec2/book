@@ -7,7 +7,7 @@
 
 Ce répertoire contient le code source des moyens d'enseignement [Modulo](https://modulo-info.ch/) mis en place par la DGEP, l'EPFL, la HEP Vaud et l'Unil.
 
-Dans le cadre du [plan d'études romand pour l'enseignement de l'informatique au gymnase](https://files.modulo-info.ch/pe.pdf), Modulo propose une aide qui se compose de deux parties : 
+Dans le cadre du [`plan d'études vaudois pour l'enseignement de l'informatique au gymnase  <https://www.vd.ch/formation/formations-gymnasiales/ecole-de-maturite>`], Modulo propose une aide qui se compose de deux parties : 
 - [**Apprendre**](https://apprendre.modulo-info.ch/): qui propose des ressources didactives à la destination des **élèves** (Représentation de l'information, Programmation I, Programmation II, Algorithmique I, Algorithmique II, Architecture des ordinateurs, Histoire de l'informatique, Projets informatiques) 
 - [**Enseigner**](https://enseigner.modulo-info.ch/): qui propose des ressources pédagogiques aux **enseignant-es** (Enjeux sociaux du numérique, idées d'activités pour chaque thématique, corrections d'exercices proposés sur Apprendre, etc.) 
 
