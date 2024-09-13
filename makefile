@@ -71,7 +71,7 @@ pdf: $(addprefix $(PDF_BUILD_DIR)/, $(addsuffix .pdf, $(PRINT_CHAPTERS))) modulo
 all: web pdf
 
 clean:
-	rm -rf $(LATEX_BUILD_DIR)/* $(WEB_BUILD_DIR)/* $(PDF_BUILD_DIR)/*
+	rm -rf $(LATEX_BUILD_DIR)/* $(PDF_BUILD_DIR)/* $(WEB_BUILD_DIR)/* $(BUILD_DIR)/ens/* 
 
 upload:
 	rsync -avz --progress --delete $(WEB_BUILD_DIR)/             $(SSH_USER)@$(SERVER):sites/apprendre.modulo-info.ch/
