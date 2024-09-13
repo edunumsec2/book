@@ -419,7 +419,7 @@ Ellipse((-100, 30), (150, 270))
 
 ## Classe Card
 
-Les cartes de jeux sont représentées avec un rectangle arrondi et un des 4 symboles (coeur, pique, carreau, trèfle).
+Les cartes de jeux sont représentées avec un rectangle arrondi et un des 4 symboles (cœur, pique, carreau, trèfle).
 
 ```{codeplay}
 :file: class12.py

@@ -13,4 +13,7 @@ IA : Biais de l'apprentissage des données <ia_1>
 IA : Bulles de filtre <ia_2>
 Cartographie du numérique <carto_numerique>
 Analyse de tweets <twitter>
+Impacts environnementaux du numérique <impacts_environnementaux>
+Enjeux de l'automatisation <automatisation>
+
 ```

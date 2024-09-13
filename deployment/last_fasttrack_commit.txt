@@ -1,0 +1,10 @@
+# This file shows the last commit on dev that has
+# been inspected for fasttrack and porting to master.
+# It does not mean all commits up to this one were
+# merged (this is done less often), neither that this
+# one itself was actually merged.
+
+33d1807a 2024-07-16 15:26:51 +0200 Jean-Philippe Pellet Correct links; correct œ when needed
+
+
+File updated on 2024-07-16T15:27:44+02:00 by Jean-Philippe Pellet <jppellet@gmail.com>

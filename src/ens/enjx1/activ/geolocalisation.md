@@ -121,7 +121,7 @@ Le fichier ainsi téléchargé devrait être de la forme *takeout-yyyymmddTXXXXX
 
 *Durée : 5-10 min*
 
-L'enseignant·e introduit la notion de géolocalisation en questionnant les élèves sur ce que ça représente et comment elle est mise en oeuvre selon eux/elles.
+L'enseignant·e introduit la notion de géolocalisation en questionnant les élèves sur ce que ça représente et comment elle est mise en œuvre selon eux/elles.
 
 Questions pour animer la discussion :
 - Comment voyez-vous la géolocalisation sur votre téléphone ? 

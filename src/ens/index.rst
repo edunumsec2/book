@@ -65,5 +65,3 @@ La plateforme est améliorée grâce à vos retours, n’hésitez pas à nous le
    plan_didac/index
    glossaire
    readme/extensions
-
-   

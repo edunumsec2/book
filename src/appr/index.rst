@@ -6,7 +6,7 @@ Informatique au gymnase : apprendre
 
 Bienvenue dans le cours d'informatique au gymnase. 
 Ce cours a été conçu pour vous accompagner dans votre découverte de l'informatique. Il est 
-découpé en **huit thématiques** réparties sur deux années.
+découpé en **huit thématiques** réparties sur deux années. Il est aussi disponible en version `pdf <media/modulo.pdf>`_ (qui comprend tous les chapitres).
 
 .. toctree::
    :name: Première année
@@ -52,18 +52,18 @@ Première année
 `Représentation de l'information 
 <rep-info>`_ 
 : ce chapitre vous explique comment le monde 
-réel est transformé pour être représenté sur un smartphone ou un ordinateur. Il est aussi disponible en version `pdf <media/rep-info.pdf>`_.
+réel est transformé pour être représenté sur un smartphone ou un ordinateur. Il est aussi disponible dans un `pdf <media/rep-info.pdf>`_ qui ne contient que ce chapitre.
 
 `Programmation I <prog1>`_
 : ce chapitre présente la programmation en Python grâce à une approche visuelle et graphique. 
 
 `Algorithmique I <algo1>`_
 : ce chapitre vous fait découvrir les bases de l'algorithmique, 
-qui s'occupe de l'analyse des performances des programmes et leur optimisation. Il est aussi disponible en version `pdf <media/algo1.pdf>`_.
+qui s'occupe de l'analyse des performances des programmes et leur optimisation. Il est aussi disponible en version `pdf <media/algo1.pdf>`_ qui ne contient que ce chapitre.
 
 `Architecture des ordinateurs <archi>`_
 : ce chapitre vous transporte dans les bases logiques et électroniques
-des ordinateurs modernes. 
+des ordinateurs modernes. Il est aussi disponible en version `pdf <media/archi.pdf>`_ qui ne contient que ce chapitre.
 
 Deuxième année
 --------------
@@ -72,9 +72,7 @@ Deuxième année
 : ce chapitre présente les fonctionnalités plus avancées de la programmation.
 
 `Algorithmique II <algo2>`_
-: ce chapitre vous fait découvrir des concepts plus avancés de l'algorithmique. Il est aussi disponible en version `pdf <media/algo2.pdf>`_
+: ce chapitre vous fait découvrir des concepts plus avancés de l'algorithmique. Il est aussi disponible en version `pdf <media/algo2.pdf>`_ qui ne contient que ce chapitre.
 
 `Réseaux <resx>`_
-: ce chapitre vous fait découvrir comment fonctionne Internet. Il est aussi disponible en version `pdf <media/resx.pdf>`_
-
-
+: ce chapitre vous fait découvrir comment fonctionne Internet. Il est aussi disponible en version `pdf <media/resx.pdf>`_ qui ne contient que ce chapitre.

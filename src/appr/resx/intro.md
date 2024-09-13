@@ -36,7 +36,7 @@ Image tirée de l'article proposant de réaliser un réseau décentralisé. Bara
 *On Distributed Communications: I. Introduction to distributed communications networks*, RAND CORP CALIF, 1964,
 disponible [ici](https://www.rand.org/pubs/research_memoranda/RM3420.html). Cette image illustre la différence
 entre un réseau centralisé (à gauche), dans lequel toutes les communications passent par un point central,
-et un réseau distribué (droite), dans lequel tous les noeuds ont plus ou moins la même importance.
+et un réseau distribué (droite), dans lequel tous les nœuds ont plus ou moins la même importance.
 Le réseau du milieu représente un intermédiaire décentralisé, entre le réseau complètement centralisé de gauche
 et le réseau distribué de droite
 

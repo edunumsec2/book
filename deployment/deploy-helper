@@ -9,6 +9,7 @@ helper_dir=$(cd "$helper_dir"; basename "$(pwd)")
 root_dir="$(dirname "$0")/.."
 root_dir=$(cd "$root_dir"; pwd)
 helper_dir="${root_dir}/${helper_dir}"
+additional_files_dir="${helper_dir}/additionalfiles"
 
 # Show some info if in verbose mode
 if [ $VERBOSE -eq 1 ]; then
@@ -75,7 +76,7 @@ commit-save() {
 
     # Assuming everything has been pulled, find last commit on dev branch now
     GIT_PAGER=cat last_dev_commit=$(git log dev -1 --pretty="format:%h  %ci  %an  %s")
-    echo "The last commit on dev branch will be saved as this one:"
+    echo "This commit from dev will be referenced for '${type}':"
     echo "  $last_dev_commit"
     # ask to confirm waiting for newline
     read -p "Do you want to save this commit to the control file? (y/n) " -r
@@ -93,7 +94,7 @@ commit-save() {
     completed "Saved to file $target_file"
 
     git add "$target_file"
-    echo 'git commit -m "New ${type} reference commit"'
+    echo "Please run: git commit -m \"New ${type} reference commit\""
 }
 
 
@@ -121,27 +122,25 @@ devmerge-save() {
 }
 
 
-deploy() {
-    # check if user is defined with default deploy user
-    SSH_USER=${SSH_USER:-31826_hep}
-
-    part="$1"
-    subdomain="$2"
-
-    rm -rf "${root_dir}/build"
-    run "Clean build for '$part'" sphinx-build src/$part build -E
-
-    server="31826.ftp.infomaniak.com"
-    run "Copying"  rsync -avz --progress --delete "${root_dir}/build/"                     "${SSH_USER}@${server}:sites/${subdomain}/"
-    run "Settings" rsync -avz --progress          "${helper_dir}/additionalfiles/${part}/" "${SSH_USER}@${server}:sites/${subdomain}/"
-}
-
 deploy-appr() {
-    deploy "appr" "apprendre.modulo-info.ch"
+    run "HTML build for 'appr'"  make web
+    run "LaTeX build for 'appr'" make pdf
+    run "Upload for 'appr'"      make upload
 }
 
 deploy-ens() {
-    deploy "ens" "enseigner.modulo-info.ch"
+    # check if user is defined with default deploy user
+    SSH_USER=${SSH_USER:-31826_hep}
+
+    # clear
+    rm -rf "${root_dir}/build"
+    web_build_dir="${root_dir}/build/ens"
+    run "HTML build for 'ens'" sphinx-build -aE -b html src/ens "${web_build_dir}"
+
+    server="31826.ftp.infomaniak.com"
+    run "Upload for 'ens'"  rsync -avz --progress --delete "${web_build_dir}/"                 "${SSH_USER}@${server}:sites/enseigner.modulo-info.ch/"
+    run "Upload settings for 'ens'" rsync -avz --progress          "${additional_files_dir}/ens/" "${SSH_USER}@${server}:sites/enseigner.modulo-info.ch/"
+
 }
 
 
@@ -165,6 +164,10 @@ usage() {
     echo
 }
 
+
+test -d .env && source .env/bin/activate
+test -d venv && source venv/bin/activate
+test -d  env && source  env/bin/activate
 
 command="$1"
 case $command in

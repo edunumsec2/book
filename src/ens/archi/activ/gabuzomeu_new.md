@@ -46,7 +46,7 @@ Expliquer la notion de base. `à compléter`
 
 *Durée : 5 mn*
 
-Nous mettons à disposition cette vidéo: {download}`Shadoks ZOx44.avi <../media/Shadoks ZOx44.avi>`. Attention: la qualité est celle d'un enregistrement VHS.
+Nous mettons à disposition cette vidéo: {download}`Shadoks ZOx44.mp4 <../media/Shadoks ZOx44.mp4>`. Attention: la qualité est celle d'un enregistrement VHS.
 
 
 (gabuzomeu.reformulation)=

@@ -14,7 +14,7 @@ Activité collaborative et débranchée pour introduire l'algorithme du plus cou
 * Objectifs pédagogiques : Découvrir et comprendre l'algorithme de Dijkstra
 * Notions fondamentales: longueur de chemin dans un graphe
 * Modalité : `débranché`
-* Matériel : Un {download}`graphe découpé en morceaux <media/dijkstra/sommets.pdf>` (chaque morceaux contient un noeud et tous ses voisins), 3 {download}`feuilles de zones<media/dijkstra/zones.pdf>`, des {download}`fiches<media/dijkstra/fiche.pdf>` (une par noeud) du scotch pour accrocher des feuille aux murs de la classe (ou un système d'aimants, des punaise, selon le type de surface disponible) 
+* Matériel : Un {download}`graphe découpé en morceaux <media/dijkstra/sommets.pdf>` (chaque morceaux contient un nœud et tous ses voisins), 3 {download}`feuilles de zones<media/dijkstra/zones.pdf>`, des {download}`fiches<media/dijkstra/fiche.pdf>` (une par nœud) du scotch pour accrocher des feuille aux murs de la classe (ou un système d'aimants, des punaise, selon le type de surface disponible) 
 * Prérequis : aucun
 * Taille du groupe : `demi-classe` (mais peut être éventuellement testée en classe entière)
 * Dynamique (groupe / individuel) : activité coopérative
