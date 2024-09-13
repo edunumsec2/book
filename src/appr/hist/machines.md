@@ -36,7 +36,7 @@ Le canard de Vaucanson est un automate remarquable construit par Vaucanson en 17
 :title: La machine analytique de Charles Babbage
 ```{figure} media/machines/Babbage-1-450x355.png
 ---
-:scale: 60%
+scale: 60%
 align: right
 ---
 La machine analytique de Charles Babbage
@@ -55,7 +55,7 @@ En 1837, Charles Babbage propose une machine analytique à l’architecture trè
 :title: ENIAC
 ```{figure} media/machines/eniac-femmes.jpeg
 ---
-:scale: 60%
+scale: 60%
 align: right
 ---
 l'ENIAC

@@ -54,6 +54,10 @@ extensions = [
     'sphinx.ext.todo'
 ]
 
+myst_suppress_warnings = [
+    "myst.nested_header", # we have them in {htmlonly} blocks
+]
+
 glossary_doc = 'glossaire'
 # uncomment to show todos (or preferably compile with "-D todo_include_todos=1" flag  to avoid contaminating the git repo and the public online version with todos)
 # todo_include_todos = True

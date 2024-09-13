@@ -609,10 +609,6 @@ This is an exercise.
 This is an exercise.  
 ```
 
-```{admonition}
-This is an exercice xx.  
-```
-
 ```{admonition} Exercice
 This is an exercice.  
 ```

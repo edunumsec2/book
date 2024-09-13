@@ -13,6 +13,7 @@ son
 redondance
 conclusion
 ```
+
 `````{htmlonly}
 Le monde numérique est extrêmement vaste. Au moyen d’applications dédiées, il est possible d’y travailler sur une certaine représentation du réel. Des textes, des images, des sons ou des données financières peuvent y être manipulées.
 
@@ -29,7 +30,6 @@ Dans cette section, nous allons comprendre comment les ordinateurs parviennent �
 
 * Appréhender l’importance de la **redondance**.
 
-````{htmlonly}
 
 ## Personnages-clés
 

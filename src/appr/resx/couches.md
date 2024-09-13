@@ -1,4 +1,4 @@
-ut # Interopérabilité
+# Interopérabilité
 
 Si Internet a connu un développement aussi remarquable, c'est aussi
 grâce à certains choix techniques et de gouvernance qui ont permis de le

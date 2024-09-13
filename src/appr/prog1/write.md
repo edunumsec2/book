@@ -21,7 +21,7 @@ La fonction `write()` écrit un texte dans le canvas de la tortue. Avec des opti
 
 La fonction `write()` permet d'afficher un texte à la position de la tortue.
 
-```{exercice}
+```{exercise}
 Déplacez la tortue quelque part et ajoutez un deuxième bout de texte.
 ```
 

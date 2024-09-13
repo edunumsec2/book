@@ -307,7 +307,7 @@ Un décodeur à 7 segments transforme les 4 signaux qui représentent un nombre 
 ## Compteur avec remise
 
 Pour créer une montre, un minuteur ou une alarme, nous devons compter à 60, 12 ou 24.
-L'entrée Reset peut être utilisée pour remettre le compteur. Une porte ET détecte le nombre 6 et remet le compter
+L'entrée Reset peut être utilisée pour remettre le compteur à zéro. Une porte ET détecte le nombre 6 et réinitialise le compteur.
 
 - Ajoutez un deuxième compteur
 - Configurez-le pour qu'il compte de 0 à 9

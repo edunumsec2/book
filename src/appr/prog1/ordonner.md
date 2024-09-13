@@ -685,13 +685,13 @@ Pour chaque polygone nous parcourons ses points.
 
 Avec les deux tuples `pos` et `size` nous pouvons choisir la position et la taille des polygones.
 
-```{python}
+```python
 goto(pos[0] + size[0] * p[0], pos[1] + size[1] * p[1])
 ```
 
 Pour fermer le polygone, nous revenons sur le premier point de la liste.
 
-```{python}
+```python
 p = points[poly[0]]
 goto(pos[0] + size[0] * p[0], pos[1] + size[1] * p[1])
 ````

@@ -52,6 +52,10 @@ extensions = [
     'breaks',
 ]
 
+myst_suppress_warnings = [
+    "myst.nested_header", # we have them in {htmlonly} blocks
+]
+
 glossary_doc = 'glossaire'
 
 # Add any paths that contain templates here, relative to this directory.

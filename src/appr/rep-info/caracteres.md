@@ -28,7 +28,7 @@ de 0 et 1.
 Lorsqu'il s'agit de représenter ce texte à l'écran ou à l'impression, les logiciels utilisent la table
 dans l'autre sens pour trouver le caractère correspondant au nombre binaire.
 
-`````{htlmonly}
+`````{htmlonly}
 ````{panels}
 :column: col-lg
 

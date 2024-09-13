@@ -172,7 +172,7 @@ mais sa valeur ("hachag" => 5C42) et que cette **fonction de hachage** est aussi
 Même si le hachage d'une information est à dessein relativement rapide en soi,
 des contraintes artificielles provoquant délibéremment la multiplication de ces hachages peuvent être imposées lors de l'ajout des blocs dans une **blockchain**. Cela constitue la preuve de travail (*proof-of-Work*, PoW) des cryptomonnaies que l'on nomme communément **minage des cryptomonnaies**.
 
-```{toggle}
+```{dropdown}
 La quantité faramineuse de calculs ainsi engendrée pour complexifier artificiellement ce hachage est responsable d'une part mesurable de la consommation électrique mondiale.
 
 Le partage de l'intégralité de la blockchain par l'ensemble des membres du réseau constitue en soi une redondance qui favorise la disponibilité de l'information, mais au prix du stockage d'une quantité mirobolante de copies et de la complexité de leur maintenance.
