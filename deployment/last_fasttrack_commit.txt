@@ -4,7 +4,7 @@
 # merged (this is done less often), neither that this
 # one itself was actually merged.
 
-62931a71 2024-04-18 15:16:09 +0200 Jean-Philippe Pellet Add automatic timestamp to deploy-helper script
+33d1807a 2024-07-16 15:26:51 +0200 Jean-Philippe Pellet Correct links; correct œ when needed
 
 
-File updated on 2024-04-18T15:19:17+02:00 by Jean-Philippe Pellet <jppellet@gmail.com>
+File updated on 2024-07-16T15:27:44+02:00 by Jean-Philippe Pellet <jppellet@gmail.com>
