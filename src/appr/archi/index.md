@@ -13,7 +13,6 @@ alu
 mem
 micro-pro
 archi-gen
-conclusion
 
 tp1
 tp2
