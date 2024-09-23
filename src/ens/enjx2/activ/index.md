@@ -5,36 +5,41 @@ Ci-dessous, différentes activités pour chacune des thématiques liées aux « 
 
 **Économie du numérique** 
 
-{toctree}
+```{toctree}
 :maxdepth: 1
 Les enchères du web <encheres>
+```
 
+<br>
 
 **Intelligence artificielle et enjeux de l'automatisation** 
-
-{toctree}
+```{toctree}
 :maxdepth: 1
 IA : Apprentissage et données <ia_0>
 IA : Biais de l'apprentissage des données <ia_1>
 IA : Bulles de filtre <ia_2>
 IA : Générateurs <ia_3>
 Enjeux de l'automatisation <automatisation>
+```
 
+<br>
 
 **Numérique et environnement**
 
-{toctree}
+```{toctree}
 :maxdepth: 1
 Cartographie du numérique <carto_numerique>
 Impacts environnementaux du numérique <impacts_environnementaux>
 Numérique et réchauffement climatique <emission_ges>
 Numérique et environnement <combustibles_GES>
+```
 
+<br>
 
 **Médias sociaux**
 
-{toctree}
+```{toctree}
 :maxdepth: 1
 Analyse de tweets <twitter>
-
+```
 
