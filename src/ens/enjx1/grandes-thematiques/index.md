@@ -6,4 +6,5 @@ Vous trouverez ici des dossiers thématiques, qui correspondent aux 7 sujets “
 :maxdepth: 1
 Économie du numérique <economie-numerique>
 Vie privée et surveillance <surveillance>
+Citoyenneté et gouvernance <citoyennete-gouvernance>
 ```
