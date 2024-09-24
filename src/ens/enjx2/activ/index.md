@@ -19,6 +19,7 @@ IA : Apprentissage et données <ia_0>
 IA : Biais de l'apprentissage des données <ia_1>
 IA : Bulles de filtre <ia_2>
 IA : Générateurs <ia_3>
+IA : Les robots parmi nous <ia_4>
 Enjeux de l'automatisation <automatisation>
 ```
 
