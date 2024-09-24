@@ -40,8 +40,8 @@ La plateforme est améliorée grâce à vos retours, n’hésitez pas à nous le
    enjx2/index
 
 .. toctree::
-   :name: Thématiques transversales
-   :caption: Thématiques transversales
+   :name: Culture numérique
+   :caption: Culture numérique
    :maxdepth: 3
    :hidden:
 
