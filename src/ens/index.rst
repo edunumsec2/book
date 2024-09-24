@@ -47,6 +47,7 @@ La plateforme est améliorée grâce à vos retours, n’hésitez pas à nous le
 
    hist/index
    art/index
+   ethique-ia/index
 
 .. toctree::
    :name: Contributions
