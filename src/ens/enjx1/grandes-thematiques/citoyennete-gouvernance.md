@@ -72,7 +72,7 @@ Sous l’impulsion de ces évolutions, l’image traditionnelle du territoire te
 ### 🏙️ Le numérique urbain
 
 
-***Des villes « intelligentes » ?***
+**Des villes *« intelligentes »* ?**
 
 La gestion des villes constitue un autre échelon de l’administration qui se trouve lui aussi profondément transformé par le numérique. Les villes doivent désormais être « intelligentes », en étant « connectées ». Une *smart city* promet une qualité de vie élevée en fondant sa gestion sur les technologies de l’information et de la communication. 
 
@@ -115,7 +115,217 @@ Que ce soit avec les *smart cities* ou les plateformes, nous avons vu que, loin 
 
 ## Pistes pédagogiques
 
-Pour des idées d’activités sur cette thématique, voir le dossier Citoyenneté et gouvernance, partie 1.
+### Activité 1 : Systèmes d’information géographiques (SIG)
+
+**Objectifs**
+
+* Comprendre comment les SIG articulent des cartes et des données, ainsi que les choix qui fondent toute production cartographique 
+* Saisir le potentiel informatif des SIG tout en conservant un regard critique sur leurs enjeux (méthodes de visualisation, indicateurs sélectionnés, limites des données, contextualisation, etc.)
+* Explorer l’offre cartographique mise à disposition par les autorités suisses
+
+<br>
+
+**A. Créer une cartographie**
+
+🕑 45 min  |  ✍️ branché
+
+[*Magrit*](https://magrit.cnrs.fr/) est une application en ligne, open source (accessible sur [GitHub](https://github.com/riatelab/magrit)), créée par des institutions universitaires françaises (CNRS et Université Paris Cité). Elle permet de produire relativement simplement des cartographies, avec une interface qui accompagne les différentes étapes du processus et qui embarque déjà des fonds de cartes ainsi que des jeux de données (relatifs à la France). Il est également possible d’importer ses propres fichiers. 
+Une [documentation](https://magrit.cnrs.fr/documentation.html) et des [tutoriels](https://magrit.hypotheses.org/category/tuto) permettent de se familiariser rapidement avec son fonctionnement et ses données.  
+
+L’idée de l’exercice est d’accompagner les élèves dans la création d’une cartographie. Le but n’est pas tant de parvenir à la reproduire sans faute mais plutôt de comprendre le processus général, de la configuration du fond de carte à la sélection et visualisation des données. Les élèves devraient notamment parvenir à se familiariser avec les différentes couches, à afficher les données, sélectionner la bonne visualisation par rapport aux données à traiter, et comprendre comment lier la carte aux données pour que celles-ci apparaissent au bon endroit. Il s’agit de prendre conscience des possibilités ouvertes par le numérique (cf. section « territoires ») et de se confronter directement avec un SIG (simplifié). 
+
+Dans un deuxième temps, il convient de prendre du recul par rapport à cet outil. En se frottant concrètement à la création d’une cartographie, les élèves peuvent mesurer l’ampleur et la complexité des choix à faire, que ce soit au niveau technique (système de projection utilisé pour la carte, son centrage, sa mise en forme, etc.) ou des données elles-mêmes (source, méthode de récolte, choix des indicateurs et calculs statistiques, type de visualisation, couleurs, niveau de granularité, etc.). On pourra également leur faire remarquer la facilité avec laquelle on a produit une cartographie sans réellement savoir ce qu’elle veut dire ni ce qu’on cherchait à explorer. Ainsi, les élèves comprendront mieux en quoi les cartographies sont des modélisations (donc le résultat de toute une série de décisions), dont le produit n’est qu’un possible parmi tant d’autres et qui doit par ailleurs s’inscrire dans une démarche analytique plus large pour avoir du sens. 
+Les élèves pourront alors consulter la documentation pour retrouver les informations liées aux données utilisées, afin de mieux comprendre les cartographies produites et de fournir des contextes d’utilisation possibles. Y figurent également des explications et conseils sur les types de données, de couches et de représentations. 
+
+Si les élèves parviennent à produire une cartographie, il peut finalement être intéressant de présenter leurs résultats afin de montrer la pluralité des solutions trouvées. Les élèves auront de plus l’opportunité d’expliciter leurs choix en « défendant » leur cartographie.
+
+
+```{admonition} Note
+:class: note
+L’exercice est faisable avec des [fonds de cartes](https://www.bfs.admin.ch/bfs/fr/home/statistiques/statistique-regions/fonds-cartes.html) et des [données suisses](https://www.bfs.admin.ch/bfs/fr/home/statistiques.html). Cela requiert toutefois une préparation conséquente en amont. Il reste cependant possible de montrer ces ressources aux élèves, qui pourront alors se faire une idée plus concrète des fichiers bruts. Ceux-ci peuvent d’ailleurs provenir de n’importe quelle source du moment que le format est pris en charge par le logiciel utilisé. Des cartographies sont également consultables dans la [galerie](https://magrit.hypotheses.org/galerie) de *Magrit*.
+```
+
+Voici quelques propositions de cartographies à créer avec les élèves 
+
+````{panels}
+
+:img-top: media/magrit1.png
+Une seule variable : densité de population mondiale par pays {download}`carte1 <magrit/magrit_project1.json>`
+----
+:img-top: media/magrit2.png
+Deux variables : population par pays et « région macrogéographique » (Afrique, Amériques, Asie, etc.)
+{download}`carte2 <magrit/magrit_project2.json>`
+````
+
+**B. Explorer les productions cartographiques de l’administration suisse**
+
+🕑 45 min  |  ✍️ branché
+
+**Temps 1**
+
+Les élèves explorent [l’Atlas statistique de la Suisse](https://www.atlas.bfs.admin.ch/maps/13/fr/16894_72_71_70/26209.html). Pour faciliter cet exercice, il est possible de leur faire chercher des informations précises comme : 
+
+* la population du canton de Vaud en 2021 ; 
+* le canton avec le plus de musées ; 
+* celui avec le plus de voitures). 
+
+L’idée est de constater la diversité de l’information à disposition et l’efficacité des SIG pour représenter cette information. Ainsi, il y a des cartes pour tous les domaines d’activité (démographie, culture, transports, éducation, santé, etc.) et une multitude de façon de présenter l’information (couleurs, formes, nombre d’indicateurs présentés, etc.). 
+
+Ce faisant, les élèves devraient également être en mesure de constater la complexité de ces productions. Il n’est en effet pas toujours simple de s’approprier ces informations en tant que non spécialiste : on ne connait pas le jargon (qu’est-ce que la « population résidente permanente » ?), ni les méthodes de récolte des données (donc leurs limites) ou les calculs. Ces informations sont disponibles dans l’atlas (dans l’onglet « informations ») mais il faut y consacrer des ressources importantes pour les rendre familières, sans toutefois avoir la certitude de les interpréter correctement.
+
+Ces cartes sont ainsi le résultat d’une série de choix (méthodes de calcul, sélection des données et des indicateurs, modes de visualisation de l’information, etc.) qui aboutissent à une représentation spécifique de la réalité. 
+
+<br>
+
+**Temps 2** 
+
+Les élèves répondent ensuite aux questions ci-dessous : 
+
+a)	Quelles sont les particularités de ces cartes par rapport à celles que l’on trouve sur Open Street Maps ou Google Maps ? 
+
+  ````{dropdown} Réponse
+  Ce sont des cartographies, autrement dit des analyses spatiales : en plus d’afficher une représentation du territoire, elles contiennent une couche de données supplémentaires. 
+
+  Aussi, les finalités sont différentes : il ne s’agit pas de se repérer dans un territoire ou d’en conserver la mémoire, mais de trouver des informations, les utiliser à d’autres fins, qui sont très diverses, évolutives et orientées vers l’action.
+  
+  ````
+
+b)	Et par rapport à un atlas traditionnel (non numérique) ?  
+
+  ````{dropdown} Réponse
+Un atlas est un livre rassemblant des cartes géographiques qui contiennent des informations territoriales, géologiques, démographiques, économiques, linguistiques, etc. 
+
+Dans leur version numérique, ces cartes sont interactives et dynamiques : il est possible de modifier les couches affichées (passer d’une vue par canton à une vue par commune, ou de paramétrer les éléments affichés dans l’onglet « couches ») ; des infobulles apparaissent lorsque la souris survole une zone géographique, affichant ainsi les données pour cette région. Il est également possible d’obtenir rapidement, via des liens hypertexte, des informations complémentaires sur les sources de données, les indicateurs, les méthodes de calcul, etc.
+  
+  ````
+
+
+c) De telles cartes ne sont donc pas nouvelles. Comment le numérique a-t-il influencé leur développement ?  
+
+  ````{dropdown} Réponse
+La capacité de calcul des SIG améliore considérablement la production de ces cartes (calculs plus rapides, avec plus de données ; possibilité de basculer d’une visualisation à une autre, etc.). 
+
+Les données à disposition sont également beaucoup plus nombreuses puisque récoltées par toute une série de dispositifs numériques. Les internautes peuvent aussi accéder librement, en ligne, à une grande quantité de données officielles. En Suisse, la plateforme [opendata.swiss](https://opendata.swiss/fr/) répertorie ainsi les données de l’administration publique. 
+Le développement d’outils de SIG a simplifié la production des cartographies, qui n’est alors plus réservée aux spécialistes. Désormais, toute personnes disposant des capacités techniques peut les créer.
+
+Finalement, la diffusion de ces cartes s’est largement agrandie, puisqu’elles sont disponibles en ligne. 
+
+  ````
+
+d) Que faut-il pour produire de telles cartes ?
+
+  ````{dropdown} Réponse
+Un logiciel informatique de SIG.
+Au moins un jeu de données, qui sont géolocalisées (les données de géolocalisation peut être ajoutées après-coup, par la personne produisant la carte). 
+Un fond de carte (disponible sur le portail de swisstopo par exemple).
+
+De manière importe, il faut également connaitre les objectifs de la carte : quelles informations on cherche à présenter ou à obtenir. Ces questions guident tout le processus d’analyse : la récolte des données, le choix des indicateurs, la représentation visuelle. 
+
+  ````
+
+
+e) À quoi sert cet Atlas ?
+
+  ````{dropdown} Réponse
+Il s’inscrit dans une politique [d’open government data](https://www.bfs.admin.ch/bfs/fr/home/services/ogd/strategie.html) : l’État publie des données d’intérêt public pour promouvoir la transparence, l’innovation et la participation citoyenne. 
+
+Ces cartes peuvent être utilisées par des personnes, des associations, des services public ou des entreprises. Pour être véritablement utiles, elles doivent s’inscrire de manière pertinente dans un projet ; elles doivent venir informer des décisions. Mais elles ne remplacent pas une étude plus scientifique lorsque celle-ci est nécessaire. 
+
+  ````
+
+
+```{admonition} Note
+:class: note
+Cet exercice est également faisable avec [l’atlas politique de la Suisse](https://www.atlas.bfs.admin.ch/maps/12/fr/17404_17402_15863_259/26943.html), [l’atlas statistique des villes](https://www.atlas.bfs.admin.ch/maps/162/fr/17145_12156_12155_12154/26608.html), ou [le visualiseur de cartes de swisstopo](https://www.geo.admin.ch/fr/visualiseur-de-cartes/). 
+  ````
+
+ ### Activité 2 : *Smart City*
+
+🕑 45 min  |  ✍️ branché
+
+**Objectifs**
+
+* Démystifier le concept de smart city
+* Identifier le solutionnisme technologique qui y est associé
+* Comprendre comment les villes suisses s’approprient ce concept et, plus largement, le numérique - pluralité : même si l’objectif est commun, chacune met l’accent sur divers éléments, en fonction de ses axes, institutions, ressources, profil, etc. 
+* Identifier d’autres acteurs de la transformation numérique des villes
+
+**Temps 1** 
+ 
+Dans un premier temps, et sans recherches préalables, discuter collectivement en demandant aux élèves :
+
+* Qu’est-ce qui définit une smart city ? 
+* Que leur évoque ce concept ? 
+
+Il s’agit d’explorer les imaginaires reliés à ce terme. Il n’y a donc pas de mauvaise réponse possible. Prendre note des descriptions et des références (films, livres, villes, expériences, etc.) fournies par les élèves.
+
+Demander ensuite aux élèves s'il y a des smart cities en Suisse romande ? Si oui lesquelles ?
+
+  ````{dropdown} Réponse
+Plusieurs villes se réclament explicitement de cette démarche : [Pully](https://smart.pully.ch/fr/accueil/), [Neuchâtel](https://www.neuchatelville.ch/medias/actualites/detail/le-monde-de-linnovation-noue-un-partenariat-inedit-pour-developper-la-ville-de-neuchatel-en-smart-city) (+ article RTS, cf. aussi [article swissinfo](https://www.swissinfo.ch/fre/le-projet-de-smart-city-commence-%c3%a0-prendre-forme-%c3%a0-neuch%c3%a2tel/48097842)), [Genève](https://www.ge.ch/dossier/smart-city), [Gland](https://smartcity.gland.ch/). 
+````
+<br>
+
+**Temps 2** 
+
+Par groupes, les élèves se renseignent sur une ville et remplissent le tableau ci-dessous, sur la base des questions suivantes :
+
+* Quelle vision de la smart city promeut la ville ? 
+* Quels sont ses objectifs ?
+* Quels services ou domaines de l’action publique (mobilité, culture, etc.) sont-ils touchés par cette démarche ? 
+* Avec quels partenaires (publics ou privés) la ville travaille-t-elle dans le cadre de son évolution en smart city ?
+* Noter quelques exemples de projets menés dans le cadre de cette démarche.
+
+|            | Vision et objectifs | Services ou domaines concernés | Partenaires | Projet |
+|------------|---------------------|-------------------------------|-------------|--------|
+| Pully      |                     |                               |             |        |
+| Genève     |                     |                               |             |        |
+| Gland      |                     |                               |             |        |
+| Neuchâtel  |                     |                               |             |        |
+
+
+<br>
+
+**Temps 3**
+
+Chaque groupe présente le résultat de ses recherches à la classe. 
+
+Confronter les imaginaires explicités en début de séance avec les résultats trouvés, pour mettre en évidence la vision futuriste et technophile portée par le concept de smart city.
+
+<br>
+
+**Temps 4**
+
+a) Qu'est-ce qui explique la diversité des solutions et des champs d'action des projets smart city d'une ville à l'autre ?
+
+````{dropdown} Réponse
+La mobilisation transversale des TIC : La *smart city* touche une grande diversité de domaines de l’action publique.
+
+La pluralité des solutions implémentées : Même si les objectifs sont semblables d’une ville à l’autre, chacune met l’accent sur des éléments particuliers. Les projets sont d’ailleurs généralement initiés par les villes elles-mêmes ou des entreprises (ils n’émanent pas de la population). De plus, leur champ d’action varie largement : certains sont ciblés sur une problématique précise (éclairage public, circulation autour d’un carrefour, bâtiment connecté, etc.), alors que d’autres touchent plus largement au fonctionnement urbain (participation citoyenne, numérisation de l’administration, etc.). 
+````
+
+b) Qu’en est-il des autres villes romandes ? Ne sont-elles pas smart ? 
+
+````{dropdown} Réponse
+D’autres villes mobilisent le numérique de façon semblable mais sans s’inscrire dans le concept de *smart city*. C’est le cas de [Lausanne](https://www.lausanne.ch/portrait/carte-identite/lausanne-et-la-transformation-numerique/a-propos/vision-et-principes.html) par exemple, qui parle de « transformation numérique ». Le terme de *smart city* a une définition très vague et n’est pas toujours utilisé pour décrire l’équipement numérique des villes. 
+````
+
+c) Certaines *smart cities* disent vouloir appliquer une démarche « non technologique » ([Neuchâtel]()), qui « va au-delà de la vision purement technologique » ([Genève](https://www.ge.ch/dossier/smart-city)). Pourquoi est-ce nécessaire ? 
+
+````{dropdown} Réponse
+Il s’agit de ne pas tomber dans le solutionnisme technologique : les TIC ne peuvent pas, à elles seules, répondre aux problématiques urbaines plus générales. Elles ne peuvent pallier les inégalités ni compenser notre impact sur le climat. 
+
+d) Pour étayer ce point, il est possible de développer l’exemple de la durabilité (cf. section « Des villes intelligentes ? »), qui est systématiquement citée dans les objectifs des smart cities. Dans ce cadre, les technologies pourraient devenir un levier de la transition écologique, à condition de ne pas se limiter au développement de solutions d’efficience énergétique (ce qui est le cas actuellement) mais d’opérer un véritable changement dans la gouvernance urbaine elle-même.
+
+Cette vision entre en tension avec les enjeux économiques liés au marché des solutions de smart city. 
+````
+
+e) La transformation numérique des villes provient-elle uniquement des administrations ? Quels autres acteurs peuvent influencer la vie urbaine ? 
+
+  ````{dropdown} Réponse
+Des plateformes telles que Uber et AirBnB ont introduit d’importantes perturbations, dans les domaines du transport et du logement respectivement. Après des années de contestations sociale, elles font aujourd’hui l’objet de régulations. Celles-ci ne sont toutefois pas uniformes ne Suisse, mais à la discrétion des villes (cf. section « De nouveaux acteurs dans les politiques urbaines »). 
+  ````
+
 
 [^1]: Administration numérique suisse. (2022). Etude nationale sur la cyberadministration 2022. [Accès ici.](https://www.administration-numerique-suisse.ch/application/files/3416/5216/3445/Etude_nationale_sur_la_cyberadministration_2022_compte_rendu.pdf)
 [^2]: Voir dossier [« IA et enjeux de l’automatisation 2 »](https://files.modulo-info.ch/enjeux-sociaux/ia-automatisation/IA-AutomatisationP2.pdf) 
