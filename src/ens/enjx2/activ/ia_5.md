@@ -117,10 +117,6 @@ Peut-il rester une "boîte noire" ?
 
 ````  
 
-## Activité pédagogique associée 
-
-[Les robots parmi nous](../enjx2/activ/ia_4.md)
-
 ## Ressource complémentaire
 
 [Livre de Johan Rochel](https://www.epflpress.org/produit/1054/9782889154586/les-robots-parmi-nous) : ROCHEL Johan. Les robots parmi nous : Pour une éthique des machines. Savoir suisse, mai 2022.

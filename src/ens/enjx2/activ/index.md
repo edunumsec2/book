@@ -20,7 +20,9 @@ IA : Biais de l'apprentissage des données <ia_1>
 IA : Bulles de filtre <ia_2>
 IA : Générateurs <ia_3>
 IA : Les robots parmi nous <ia_4>
+IA : L'éthique de l'IA <ia_5>
 Enjeux de l'automatisation <automatisation>
+
 ```
 
 <br>
