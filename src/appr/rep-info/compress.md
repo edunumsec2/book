@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 (appr:repinfo:compression)=
 # Compression des données
 

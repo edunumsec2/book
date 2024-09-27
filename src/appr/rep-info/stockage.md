@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # Stockage et manipulation des données
 
 ## Stockage
