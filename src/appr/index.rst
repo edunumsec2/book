@@ -31,8 +31,8 @@ découpé en **huit thématiques** réparties sur deux années. Il est aussi dis
    projets/index
 
 .. toctree::
-   :name: Thématiques transversales
-   :caption: Thématiques transversales
+   :name: Culture numérique
+   :caption: Culture numérique
    :maxdepth: 3
    :hidden:
 
