@@ -14,10 +14,6 @@ from sphinx.application import Sphinx
 from sphinx.util import logging
 from sphinx.util.docutils import SphinxDirective, SphinxRole, SphinxTranslator
 
-# import urllib
-# import zlib
-# import lzstring
-
 ## REF: https://www.sphinx-doc.org/en/master/extdev/index.html
 
 MAIN_LOGIC_URL = "https://logic.modulo-info.ch"
