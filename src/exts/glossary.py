@@ -8,7 +8,6 @@ from sphinx.environment.adapters.toctree import TocTree
 from sphinx.util.docutils import SphinxDirective, SphinxRole
 from sphinx.util.nodes import nested_parse_with_titles
 from sphinx.builders.latex import LaTeXBuilder
-from myst_parser.main import to_html
 import os.path
 
 
@@ -23,7 +22,7 @@ def b64(string):
 
 def visit_glossary_reference_html(self, node):
     self.body.append('<span class="glossary-ref" ' + 
-        'data-definition="' + b64(to_html(node["definition"])) + '" ' +
+        'data-definition="' + b64(node["definition"]) + '" ' +
         'data-number="' + node["number"] + '" ' +
         ('data-glossary-uri="' + node["uri"] + '" ' if node["uri"] is not None else '') +
         'data-entry-name="' + b64(node["entry_name"]) + '">')
