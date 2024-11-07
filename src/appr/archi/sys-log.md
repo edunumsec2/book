@@ -192,12 +192,15 @@ Ensemble, les portes **ET**, **OU** et **NON** représentent les relations logiq
  * Au contraire, si on dit «je vais à la piscine s'*il fait beau* **OU** *que mes amis m'accompagnent*», on utilise la **disjonction**, qui est comme une sorte de «somme logique» de deux propositions (même si, comme noté plus haut, le «ou», dans le langage courant, est généralement exclusif, contrairement au **OU** logique, qui est inclusif).
  * La **négation** est encore plus évidente, puisque la proposition «je ne vais pas à la piscine» est simplement la négation, ou l'inverse, de la proposition «je vais à la piscine». 
 
-```{panels}
-:column: col-lg
+:::::{grid} 1
+::::{grid-item}
+:::{card}
 Ressource complémentaire
 ^^^
 Une application pour s'exercer à l'interprétation des conjonctions, disjonctions et négations logiques: [The Boolean Game](https://booleangame.com/)
-```
+:::
+::::
+:::::
 
 <!-- Pour simplifier la représentation de ces relations logiques, on les exprime sous la forme de {glo}`tableverite|tables de vérité`.
 

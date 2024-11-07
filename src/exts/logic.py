@@ -9,7 +9,7 @@ from typing import Any, Callable, List, Optional, Tuple, TypeVar, Union
 from docutils import nodes  # type: ignore
 from docutils.nodes import Node, system_message  # type: ignore
 from docutils.parsers.rst import directives  # type: ignore
-from myst_parser.main import MdParserConfig
+from myst_parser.config.main import MdParserConfig
 from sphinx.application import Sphinx
 from sphinx.util import logging
 from sphinx.util.docutils import SphinxDirective, SphinxRole, SphinxTranslator

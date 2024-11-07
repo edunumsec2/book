@@ -40,7 +40,7 @@ extensions = [
     'glossary',
     'myst_parser',
     'questions',
-    'sphinx_panels',
+    'sphinx_design',
     'videos',
     'logic',
     'blanks',
