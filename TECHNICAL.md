@@ -48,6 +48,16 @@ Le paramètre `mode` peut prendre les valeurs suivantes:
  * `design`: le circuit est affiché en mode interactif, avec possibilité de modification de la structure. Les entrées peuvent être modifiées et la sortie est mise à jour en conséquence. Les composants peuvent être déplacés et les fils peuvent être ajoutés ou supprimés. Le menu des composants est affiché. Si `showonly` est spécifié, seuls les composants listés seront affichés.
  * `full`: le circuit est affiché comme pour `design`, mais permet en plus des interactions comme la création de composants ou de fils défectueux, la création de tests, etc.
 
+## Liens “highlight” depuis le texte
+
+Il est possible de faire en sorte qu'une partie d'un circuit logique soit mis en évidence lorsqu'on clique sur un lien dans le texte principal d'une page. Pour ce faire, on peut utilier le markup suivant:
+
+    {logicref}`fulladder_2bits.{a1,b1}|les deux bits de la colonne suivante`
+
+Ici, `{logicref}` est le nom du _rôle_ à utiliser; il est attribué à la portion de texte entre backticks qui suit sans espaces. Cette portion de texte est séparée en deux parties par `|`. La seconde partie est le texte à afficher; la première partie est une liste de composants à mettre en évidence lors d'un clic. Ils sont tous de la forme `circuit_id.component_id`, où `circuit_id` est l'identifiant du circuit logique (donné au circuit avec le paramètre `ref`; voir ci-dessus), et `component_id` est l'identifiant du composant à mettre en évidence tel qu'attribué par l'éditeur. (Une des options de rendu de l'éditeur en mode `full` est d'afficher les identifiants des composants, ce qui facilite leur repérage.)
+
+Comme on le voit dans cet exemple, il est possible de mettre en évidence plusieurs composants en les séparant par des virgules, et on peut mettre en évidence la référence du circuit logique en faisant des choses du type `fulladder_2bits.{a1,b1}`. On peut également faire l'inverse: mettre en évidence le même composant dans plusieurs circuits différents, avec une syntaxe qui va ressembler à `{xor_circuit_01,xor_circuit_10}.or`, par exemple.
+
 ## Documentation de l'API
 
 Chaque instance d'un `LogicEditor` a une méthode `save(): Circuit` qui retourne un objet représentant le circuit logique. De même, chaque instance a une méthode `loadCircuitOrLibrary(data: string | Circuit)` qui charge un circuit logique à partir d'un objet.
