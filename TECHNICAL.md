@@ -1,62 +1,75 @@
 # Logic
 
-Nom du Plugin : Logic
-Version : [Numéro de version]
-Auteur : [Nom de l'auteur]
-Description : [Description brève du plugin]
+Nom du plugin: Logic  
+Version: _latest_, en ligne sur <https://logic.modulo-info.ch>  
+Auteur: Jean-Philippe Pellet  
+Description: Permet l'édition en ligne de circuits logiques sans installation de logiciel
 
 ## Installation
 
-[Expliquez les étapes nécessaires pour installer le plugin dans le projet]
-
-1. Étape 1
-2. Étape 2
-3. Étape 3
+Aucune installation particulière n'est requise, Logic est directement intégré au projet. L'ajout de blocs de type {logic} cause l'inclusion d'un seul et unique fichier JavaScript via le plugin sphinx, JavaScript qui sera chargé depuis <https://logic.modulo-info.ch>
 
 ## Utilisation
 
-[Expliquez comment utiliser le plugin dans le projet]
+La directive `logic` permet l'inclusion d'un éditeur de circuits logiques. Le contenu doit être du code JSON5 représentant le circuit logique. Une telle représentation peut être obtenue en utilisant l'éditeur graphique en ligne à <https://logic.modulo-info.ch> et en cliquant sur le bouton de partage. Voici un exemple de comment inclure un circuit simple avec deux entrées, une sortie et une porte AND:
 
-[Fournissez des exemples de code ou des instructions pour intégrer le plugin dans le projet]
+    ```{logic}
+    :height: 235
+    :mode: full
+    
+    { // JSON5
+      v: 6,
+      components: {
+        in0: {type: 'in', pos: [110, 85], id: 0},
+        out0: {type: 'out', pos: [380, 140], id: 1},
+        in1: {type: 'in', pos: [110, 150], id: 2},
+        and0: {type: 'and', pos: [225, 130], in: [3, 4], out: 5},
+      },
+      wires: [[0, 3], [2, 4], [5, 1]]
+    }
+    ```
 
-## Configuration
+La directive a plusieurs paramètres:
 
-[Expliquez les options de configuration ou les paramètres disponibles pour le plugin]
+| Nom        | Type      | Description                                                                                            |
+| ---------- | --------- | ------------------------------------------------------------------------------------------------------ |
+| `height`   | int       | [Obligatoire] La hauteur en pixels à réserver dans la page pour cet éditeur                            |
+| `ref`      | string    | [Optionnel] Une référence à utiliser pour ce diagramme au sein de la page dans laquelle il est intégré |
+| `mode`     | enum      | [Optionnel] Le mode d'interaction selon lequel présenter le contenu de cet éditeur (cf. ci-dessous)    |
+| `showonly` | list[str] | [Optionnel] Une liste séparée par des virgules d'identifants de composants à afficher                  |
 
-[Fournissez une liste des options de configuration avec leurs descriptions]
+Si `showonly` est spécifié, seuls les composants dont l'identifiant est dans la liste seront affichés. Les autres composants seront cachés. Les composants sont identifiés par leur identifiant unique, qui est visible dans le tooltip affiché lorsqu'on passe la souris sur un bouton de composant dans l'éditeur principal.
+
+Le paramètre `mode` peut prendre les valeurs suivantes:
+
+ * `static`: le circuit est affiché en mode statique, sans possibilité d'interaction.
+ * `tryout`: le circuit est affiché en mode interactif, mais sans possibilité de modification de la structure. Les entrées peuvent être modifiées et la sortie est mise à jour en conséquence.
+ * `connect`: le circuit est affiché en mode interactif, avec possibilité de modification de la structure. Les entrées peuvent être modifiées et la sortie est mise à jour en conséquence. Les composants peuvent être déplacés et les fils peuvent être ajoutés ou supprimés. Le menu des composants est caché.
+ * `design`: le circuit est affiché en mode interactif, avec possibilité de modification de la structure. Les entrées peuvent être modifiées et la sortie est mise à jour en conséquence. Les composants peuvent être déplacés et les fils peuvent être ajoutés ou supprimés. Le menu des composants est affiché. Si `showonly` est spécifié, seuls les composants listés seront affichés.
+ * `full`: le circuit est affiché comme pour `design`, mais permet en plus des interactions comme la création de composants ou de fils défectueux, la création de tests, etc.
 
 ## Documentation de l'API
 
-[Si le plugin fournit une API, documentez les méthodes disponibles, les paramètres et leurs descriptions]
+Chaque instance d'un `LogicEditor` a une méthode `save(): Circuit` qui retourne un objet représentant le circuit logique. De même, chaque instance a une méthode `loadCircuitOrLibrary(data: string | Circuit)` qui charge un circuit logique à partir d'un objet.
+
+S'il s'agit d'obtenir une représentation textuelle et non objet du circuit, `Serialization.stringifyObject(circuit: Circuit, compact: boolean): string` est à appeler sur le résultat de `save()`. Le résultat peut aussi être passé directement à la méthode `loadCircuitOrLibrary`.
+
+Pour plus de détails sur l'API, voir le code source du plugin et les méthodes publiques de la classe `LogicEditor` [ici](https://github.com/jppellet/Logic-Circuit-Simulator/blob/master/simulator/src/LogicEditor.ts). 
 
 ## Exemples
 
-[Fournissez des exemples concrets ou des cas d'utilisation démontrant les fonctionnalités et l'utilisation du plugin]
+Pour des exemples, on peut s'inspirer du code source des pages du chapitre **Architecture des ordinateurs**.
 
-## Dépannage
+## Licence & autres informations
 
-[Incluez une liste des problèmes ou des erreurs courantes que les utilisateurs peuvent rencontrer et leurs solutions possibles]
-
-## Journal des modifications
-
-[Enregistrez l'historique des versions et les modifications apportées au plugin]
-
-- Version X.X.X :
-  - Changement 1
-  - Changement 2
-
-## Licence
-
-[Spécifiez la licence sous laquelle le plugin est distribué]
-
-[Incluez toute autre information pertinente ou remerciements]
+Voir le repository principal du plugin: <https://github.com/jppellet/Logic-Circuit-Simulator/>
 
 ---
 
 # Codeplay
 
-Nom du Plugin : Codeplay
-Auteur : Romain Edelmann
+Nom du Plugin : Codeplay  
+Auteur : Romain Edelmann  
 Description : Codeplay est un environnement de programmation Python minimaliste basé sur [Skulpt](https://skulpt.org/) et [CodeMirror](https://codemirror.net/). Une directive Sphinx accompagne cet environnement de programmation afin de pouvoir facilement l'inclure dans des documents.
 
 ## Installation
@@ -68,15 +81,15 @@ Aucune installation particulière n'est requise, CodePlay est directement intég
 La directive `codeplay` permet l'inclusion de l'environnement de programmation CodePlay.
 La directive a plusieurs paramètres :
 
-| Nom | Type | Description |
-|---|---|---|
-| `exec` | Flag | Exécute automatiquement le code au chargement de la page. |
-| `static` | Flag | Empêche l'édition du code. |
-| `nocontrols` | Flag | Cache les boutons de contrôle. |
-| `output_lines` | Nonnegative int | Spécifie la taille de la zone de sortie, en nombre de lignes. |
+| Nom                | Type            | Description                                                            |
+| ------------------ | --------------- | ---------------------------------------------------------------------- |
+| `exec`             | Flag            | Exécute automatiquement le code au chargement de la page.              |
+| `static`           | Flag            | Empêche l'édition du code.                                             |
+| `nocontrols`       | Flag            | Cache les boutons de contrôle.                                         |
+| `output_lines`     | Nonnegative int | Spécifie la taille de la zone de sortie, en nombre de lignes.          |
 | `min_output_lines` | Nonnegative int | Spécifie la taille minimale de la zone de sortie, en nombre de lignes. |
 | `max_output_lines` | Nonnegative int | Spécifie la taille maximale de la zone de sortie, en nombre de lignes. |
-| `file` | Text | Spécifie le nom du fichier lors du téléchargement. |
+| `file`             | Text            | Spécifie le nom du fichier lors du téléchargement.                     |
 
 ## Configuration
 
