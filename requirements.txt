@@ -1,7 +1,7 @@
 alabaster==0.7.12
 argcomplete==1.12.3
 attrs==21.2.0
-Babel==2.9.1
+Babel
 backports.entry-points-selectable==1.1.0
 beautifulsoup4==4.10.0
 certifi==2021.10.8
@@ -27,7 +27,7 @@ py==1.11.0
 Pygments==2.10.0
 pyparsing==2.4.7
 pytz==2021.3
-PyYAML==6.0
+PyYAML
 requests==2.26.0
 six==1.16.0
 snowballstemmer==2.1.0
@@ -51,3 +51,4 @@ qrcode
 Pillow
 svglib
 cairosvg
+standard-imghdr
