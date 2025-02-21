@@ -1,0 +1,69 @@
+name: deploy-book-dev
+
+# Only run this when the dev branch changes
+on: 
+  push:
+    branches: 
+      - dev
+
+# This job installs dependencies, builds the book, and pushes it to FTP server
+jobs:
+  deploy-book-appr:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.13'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+      working-directory: .
+
+    - name: Build the book
+      run: |
+        sphinx-build src/appr build -E
+      working-directory: .
+
+    # Push the book's HTML to Infomaniak FTP
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: 31826.ftp.infomaniak.com
+        username: 31826_elliot
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./build/
+        server-dir: sites/dev-apprendre.modulo-info.ch/
+
+  deploy-book-ens:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.13'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+      working-directory: .
+
+    - name: Build the book
+      run: |
+        sphinx-build src/ens build -E
+      working-directory: .
+
+    # Push the book's HTML to Infomaniak FTP
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: 31826.ftp.infomaniak.com
+        username: 31826_elliot
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./build/
+        server-dir: sites/dev-enseigner.modulo-info.ch/
