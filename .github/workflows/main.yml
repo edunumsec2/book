@@ -6,8 +6,33 @@ on:
     branches: 
       - dev
 
-# This job installs dependencies, builds the book, and pushes it to `gh-pages`
+# This job installs dependencies, builds the book, and pushes it to FTP server
 jobs:
+  deploy-landing-page:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+
+      - name: Build the landing page
+        run: |
+          npm run --prefix landing-page build
+        working-directory: .
+
+      # Push the built files to Infomaniak FTP
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: 31826.ftp.infomaniak.com
+          username: 31826_elliot
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./landing-pages/public/
+          server-dir: web/
+
   deploy-book-appr:
     runs-on: ubuntu-latest
     steps:
