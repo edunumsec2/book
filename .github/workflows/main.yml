@@ -35,7 +35,7 @@ jobs:
           server: 31826.ftp.infomaniak.com
           username: 31826_elliot
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./landing-pages/public/
+          local-dir: ./landing-page/public/
           server-dir: web/
 
   deploy-book-appr:
