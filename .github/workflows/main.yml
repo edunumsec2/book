@@ -18,10 +18,15 @@ jobs:
         with:
           node-version: 'latest'
 
-      - name: Build the landing page
+      - name: Install dependencies
+        working-directory: ./landing-page
         run: |
-          npm run --prefix landing-page build
-        working-directory: .
+          npm ci
+
+      - name: Build the landing page
+        working-directory: ./landing-page
+        run: |
+          npm run build
 
       # Push the built files to Infomaniak FTP
       - name: 📂 Sync files
