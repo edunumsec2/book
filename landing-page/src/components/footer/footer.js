@@ -86,8 +86,8 @@ const Footer = () => (
               </a>
             </li>
             <li>
-              <a href="mailto:modulo-team@epfl.ch" className="pt-auto">
-                modulo-team@epfl.ch
+              <a href="mailto:contact@modulo-info.ch" className="pt-auto">
+                contact@modulo-info.ch
               </a>
             </li>
           </ul>

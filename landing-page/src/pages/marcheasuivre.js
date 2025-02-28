@@ -14,7 +14,7 @@ const Contrib = () => (
         Cette variante implique de proposer vos contenus, non formatés,
         directement sur un dépôt FTP. Les contenus sont également disponibles
         pour les autres enseignant-e-s en consultation. Pour cela, il faut
-        contacter l'équipe modulo à l'adresse modulo-team@epfl.ch, qui vous
+        contacter l'équipe modulo à l'adresse contact@modulo-info.ch, qui vous
         transmettra les accès.
       </Text>
       <H2>Contribution formatée</H2>

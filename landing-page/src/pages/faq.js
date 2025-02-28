@@ -14,7 +14,7 @@ const Faq = () => (
         composante participative. Vous trouverez ici une liste de questions
         fréquemment posées à propos du projet. En cas de questions
         supplémentaires, ou si vous souhaitez participer au projet, n'hésitez
-        pas à nous contacter via modulo-team@epfl.ch !
+        pas à nous contacter via contact@modulo-info.ch !
       </p>
     </ContainerVertical>
     <ContainerVertical>
