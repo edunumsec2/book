@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://www.epfl.ch/education/educational-initiatives/center-learn/`,
   },
   plugins: [
+    `gatsby-plugin-no-sourcemaps`,
     `gatsby-plugin-postcss`, // used by Tailwindcss
     `gatsby-plugin-emotion`, // for Taliwindcss styling with styled-components
     {
