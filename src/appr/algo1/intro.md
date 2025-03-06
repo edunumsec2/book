@@ -94,8 +94,11 @@ Bienvenue dans le monde fascinant des algorithmes.
 ## Personnages&#8209;clés
 
 
-````{panels}
+:::::{grid} 1 2 2 2
+:gutter: 2
 
+::::{grid-item}
+:::{card}
 :img-top: media/Al-Khwarizmi.png
 
 
@@ -104,8 +107,11 @@ Al&#8209;Khwârizmî 🇺🇿
 ***780&#8209;850***
 
 Considéré comme le père de l’algèbre [**Al&#8209;Khwârizmî**](https://fr.wikipedia.org/wiki/Al-Khw%C3%A2rizm%C3%AE) a vécu au VIII$^{e}$ siècle dans le Moyen&#8209;Orient. Il est l'auteur de plusieurs ouvrages de mathématiques, d’astronomie et de géographie. Son nom est à l’origine du mot **algorithme**.
+:::
+::::
 
-----
+::::{grid-item}
+:::{card}
 :img-top: media/Dijkstra.jpg
 
 
@@ -114,7 +120,9 @@ Edsger Dijkstra 🇳🇱
 ***1930&#8209;2002***
 
 [**Edsger Wybe Dijkstra**](https://fr.wikipedia.org/wiki/Edsger_Dijkstra) est un mathématicien et informaticien néerlandais du XX$^{e}$ siècle. Il reçoit en 1972 le prix Turing pour ses contributions sur la science et l’art des langages de programmation et au langage Algol. Il est le concepteur de l'algorithme éponyme de recherche du plus court chemin. 
-````
+:::
+::::
+:::::
 
 `````
 

@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+p {
+  font-size: 1em;
+}
+
+li {
+  padding-bottom: 1em;
+}
+
+a {
+  text-decoration: underline;
+}

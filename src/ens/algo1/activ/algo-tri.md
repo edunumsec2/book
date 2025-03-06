@@ -1,7 +1,5 @@
 # Les algorithmes de tri
 
----- 
-
 Activité de dévolution pour découvrir les algorithmes de tri.
 Un dispositif physique ainsi qu'un catalogue d'opérations sont définis afin de forcer un cadrage algorithmique et rendre plus concrète la procédure de tri.  
 

@@ -9,14 +9,10 @@ from typing import Any, Callable, List, Optional, Tuple, TypeVar, Union
 from docutils import nodes  # type: ignore
 from docutils.nodes import Node, system_message  # type: ignore
 from docutils.parsers.rst import directives  # type: ignore
-from myst_parser.main import MdParserConfig, to_html, to_tokens
+from myst_parser.config.main import MdParserConfig
 from sphinx.application import Sphinx
 from sphinx.util import logging
 from sphinx.util.docutils import SphinxDirective, SphinxRole, SphinxTranslator
-
-# import urllib
-# import zlib
-# import lzstring
 
 ## REF: https://www.sphinx-doc.org/en/master/extdev/index.html
 
@@ -330,7 +326,9 @@ class LogicHighlightRefRole(SphinxRole):
 def _render_inline(source: str, config: MdParserConfig) -> str:
     # WARNING: this should not be called when creating the nodes
     # as it screws up the global parser state
-    html = str(to_html(source, config=config)).strip()
+    # TODO MIGRATION
+    #html = str(to_html(source, config=config)).strip()
+    html = str(source).strip()
     if html.startswith("<p>") and html.endswith("</p>"):
         html = html[3:-4]
     return html
@@ -368,6 +366,8 @@ def _tex_escape(string: str) -> str:
     return string.replace("&", "\\&").replace("$", "\\$").replace("{", "\\{").replace("}", "\\}").replace("%", "\\%").replace("_", "\\_").replace("#", "\\#").replace("\\", "\\textbackslash{}").replace("~", "\\textasciitilde{}").replace("^", "\\textasciicircum{}")
 
 
+# TODO MIGRATION
+'''
 def _render_latex(source: str, config: MdParserConfig) -> str:
     """Render Markdown to LaTeX.
     This is a hack to fix the fact that role content is not parsed.
@@ -413,6 +413,7 @@ def _render_latex(source: str, config: MdParserConfig) -> str:
 def begin_logic_highlight_latex(self: SphinxTranslator, node: Node) -> None:
     content = _render_latex(node["display"], node["config"])
     self.body.append(content)
+'''
 
 
 def end_logic_highlight_latex(self: SphinxTranslator, node: Node) -> None:
@@ -489,7 +490,8 @@ def setup(app: Sphinx) -> None:
     app.add_node(
         logic_highlight,
         html=(begin_logic_highlight_html, end_logic_highlight_html),
-        latex=(begin_logic_highlight_latex, end_logic_highlight_latex),
+        # TODO MIGRATION
+        #latex=(begin_logic_highlight_latex, end_logic_highlight_latex),
     )
 
     app.add_role("lg", LogicGateRole())

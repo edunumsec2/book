@@ -45,8 +45,11 @@ Dans ce chapitre, vous découvrirez comment sont construits les ordinateurs, com
 
 ## Personnages-clés
 
-````{panels}
+:::::{grid} 1 2 2 2
+:gutter: 2
 
+::::{grid-item}
+:::{card}
 :img-top: media/anitaborg.jpg
 
 Anita Borg 🇺🇸 
@@ -54,8 +57,11 @@ Anita Borg 🇺🇸
 ***1949-2003***
 
 [**Anita Borg**](https://fr.wikipedia.org/wiki/Anita_Borg) est une informaticienne américaine. Elle a notamment travaillé pour Digital Equipment Corporation où elle a développé une méthode permettant de concevoir des systèmes mémoriels à haute vitesse. 
+:::
+::::
 
-----
+::::{grid-item}
+:::{card}
 :img-top: media/babbage.jpeg
 
 Charles Babbage 🇬🇧 
@@ -63,6 +69,8 @@ Charles Babbage 🇬🇧
 ***1791-1871***
 
 [**Charles Babbage**](https://fr.wikipedia.org/wiki/Charles_Babbage) fut le premier inventeur à énoncer le principe d'un ordinateur. C'est en 1834, pendant le développement d'une machine à calculer destinée au calcul et à l'impression de tables mathématiques, qu'il eut l'idée d'y incorporer des cartes du métier Jacquard, dont la lecture séquentielle donnerait des instructions et des données à sa machine. 
-````
+:::
+::::
+:::::
 
 [^1]:https://www.aei.org/technology-and-innovation/the-a12-chip-estimating-innovation-with-iphone-prices/
