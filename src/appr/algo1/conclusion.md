@@ -18,17 +18,25 @@ Grâce aux algorithmes, la machine a pu remplacer l’homme dans de nombreuses t
 
 <br>
 
-````{panels}
+:::::{grid} 1 2 2 2
+:gutter: 2
 
+::::{grid-item}
+:::{card}
 :img-top: media/Usine_avant.jpeg
 
 **Usine du début du siècle dernier.** Les machines dans cette usine de métallurgie à Vallorbe dans le canton de Vaud sont au service des ouvriers. Source : https://wikivaud.ch/metallurgie-vaudoise/
+:::
+::::
 
-----
+::::{grid-item}
+:::{card}
 :img-top: media/Usine_après.jpeg
 
 **Usine du début de ce siècle.** Les machines dans cette usine de montage Mistubishi en Chine ont remplacé les ouvriers. Source : https://www.lemonde.fr/blog/fredericjoignot/2015
-````
+:::
+::::
+:::::
 
 <br>
 

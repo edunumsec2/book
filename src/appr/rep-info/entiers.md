@@ -29,9 +29,7 @@ Dans ce système, pour connaître la valeur de chaque chiffre qui compose
 un nombre, il faut décomposer ce nombre pour identifier chaque chiffre
 et son coefficient, c'est la **forme canonique**.
 
-``` {panels}
-:column: col-sm
-
+:::{card}
 Décomposition du nombre 3528 :
 ^^^
 * 8 unités
@@ -40,7 +38,7 @@ Décomposition du nombre 3528 :
 * 3 milliers
 +++
 Sa forme canonique est : $3 \cdot 10^3 + 5 \cdot 10^2 + 2 \cdot 10^1 + 8 \cdot 10^0$ 
-```
+:::
 
 On peut alors vérifier que le nombre 3528 est bien dans la base 10, car
 tous ces chiffres appartiennent à la base 10. Les nombres de la base 10
@@ -103,15 +101,13 @@ grâce à la forme canonique.
 En effet, il suffit de calculer le résultat de la somme pondérée par les
 puissances de 2.
 
-```{panels}
-:column: col-md
-
+:::{card}
 Conversion du nombre 10101
 ^^^
 $$
 10101_{(2)} = 1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0 = 21_{(10)}
 $$
-```
+:::
 
 Le {ref}`tableau <conversion-octet>` ci-dessous permet de convertir un
 octet en nombre décimal.
@@ -303,8 +299,7 @@ Ainsi, avec un octet, 7 bits sont utilisés pour encoder la valeur
 absolue, soit $[0, 127]$, ce qui permet de représenter les entiers
 relatifs dans l'intervalle $[-127, 127]$.
 
-```` {panels}
-:column: col-sm
+:::{card}
 La représentation de -21 est :
 ^^^
 ```{math}
@@ -316,7 +311,7 @@ La représentation de -21 est :
 \hline 
 \end{array}
 ```
-````
+:::
 
 Bien que cette approche soit simple et semble convenir, elle pose deux
 problèmes majeurs :
@@ -357,9 +352,7 @@ voici le principe :
 
 <!-- end list -->
 
-```{panels}
-:column: col-sm
-
+:::{card}
 La représentation de -21 en complément à 2 :
 ^^^
 1. Valeur absolue en binaire : 00010101
@@ -367,7 +360,7 @@ La représentation de -21 en complément à 2 :
 3. Ajouter 1 : 11101011
 +++
 La représentation de -21 est 11101011, qui additionné à 21, soit 00010101 donne bien zéro : 00000000.
-```
+:::
 
 ```{figure} media/4bitsIntegers.svg
 :width: 550
@@ -400,16 +393,14 @@ Encodez les entiers relatifs suivants sur un octet :
 * -128
 ```
 
-````{panels}
-:column: col-sm
-
+:::{card}
 Vous pouvez maintenant comprendre ce comic d'un robot comptant des moutons pour s'endormir... d'ailleurs, combien de bits utilise-t-il pour compter ??
 ^^^
 ```{figure} media/cant_sleep.png
 ```
 +++
 Source : [xkcd](https://xkcd.com/571/)
-````
+:::
 
 </div>
 

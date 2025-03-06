@@ -4,8 +4,10 @@ Le processeur, en anglais central processing unit (CPU), est un composant qui ex
 
 On a précédemment détaillé les différents composants et systèmes logiques à partir desquels on peut construire un processeur. On va à présent évoquer l'architecture de von Neumann qui décrit la façon dont le processeur s'insère dans son environnement. Les différents éléments qui constituent le processeur et qui en assurent le bon fonctionnement seront ensuite détaillés.
 
-````{panels}
+:::::{grid} 2
 
+::::{grid-item}
+:::{card}
 :img-top: media/Gordon_Moore.jpeg
 
 Gordon Moore
@@ -15,8 +17,9 @@ Gordon Moore
 :animate: fade-in-slide-down
 Gordon Earle Moore est le cofondateur d'Intel en 1968. Intel est le premier fabricant mondial de microprocesseurs. Gordon Moore est célèbre pour avoir formulé en 1965 une loi empirique portant son nom : **loi de Moore**. Cette loi prédit un doublement de la complexité, et donc du nombre de transistors présents dans les microprocesseurs tous les deux ans. Bien que nous ayons atteint certaines limites physiques au niveau atomique et des effets de bruits parasites liés aux effets quantiques et à la désintégration alpha, la loi est toujours vérifiée aujourd'hui malgré un ralentissement de la progression pour certaines caractéristiques. Ces limites sont aujourd'hui compensées par des puces intégrant de plus en plus de composants de plus en plus complexes.
 ```
-
-````
+:::
+::::
+:::::
 
 ```{admonition} (micro)-processeur
 :class: attention

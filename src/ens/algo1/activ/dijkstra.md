@@ -1,7 +1,5 @@
 # L'algorithme du plus court chemin de Dijkstra
 
-------
-
 Activité collaborative et débranchée pour introduire l'algorithme du plus court de chemin de Dijkstra en partant d'une exemple de la vie quotidienne
 
 ------
@@ -43,14 +41,17 @@ Activité collaborative et débranchée pour introduire l'algorithme du plus cou
 L'enseignant va sur une page de navigation (p.ex [OpenStreetMap](https://www.openstreetmap.org/#map=8/46.825/8.224)) et montre un exemple de requête de chemin pour relier deux points.
 
 
-````{tabbed} Questions
+::::{tab-set}
+:::{tab-item} Questions
 * Comment le site web a-t-il déterminé le chemin qu'il nous indique ?
 * Quelles données a-t-il à sa disposition pour déterminer ce chemin ? 
-````
-````{tabbed} Réponses
+:::
+
+:::{tab-item} Réponses
 * Tout le réseau routier est représenté sous forme d'un graphe.
 * Les croisements et embranchements sont représentés par les *sommets* du graphe et les routes qui les relient sont représentées par les *arêtes* du graphe.
-````
+:::
+::::
 
 (dijkstra.miseensituation2)=
 ### Mise en situation spécifique
@@ -102,8 +103,7 @@ Le problème est donc donné sous forme d'un graphe constitué de *sommets* reli
 
 *Durée : 20 min*
 
-````{panels}
-:column: col-lg
+::::{card}
 🎲 Activité
 ^^^
 Pour déterminer le plus court chemin dans ce graphe, la classe va le faire tous ensemble. Chaque élève représente un sommet et reçoit le sous-graphe constitué de son sommet et ses voisins directs (autrement dit une liste de ses voisins et les distances correspondantes) ainsi qu'une fiche sur laquelle il note le nom de son sommet. Chaque élève prend en outre un crayon ou un stylo. Cette activité demande un peu de doigté de la part de l'enseignant-e pour que les élèves réalisent bien ce qu'il se passe. Au besoin, il faut adapter le graphe au nombre d'élèves prévu. 
@@ -129,7 +129,7 @@ Si tout se passe bien, les élèves vont se déplacer dans la **<span style="col
 1. Si un·e élève a le chemin de plus court de la <span style="color:green">**zone B**</span> et que personne ne s'y ajoute (i.e. tous les voisin des personnes dans la <span style="color:red">**zone A**</span> sont soit dans la <span style="color:red">**zone rouge**</span> soit dans la <span style="color:green">**zone verte**</span>), elle peut passer en <span style="color:red">**zone rouge **</span>.
 1. A la fin, en suivant les relations de voisinage, on peut reconstituer le chemin le plus court. 
 ```
-````
+::::
 
 ```{admonition} Attention
 :class: caution
@@ -166,7 +166,8 @@ L'enseignant fait un exemple au tableau avec les élèves et leur propose ensuit
 ### Modélisation
 *Durée : 10 min*
 
-```{tabbed} Jeu : de VERSE à LITRE
+::::{tab-set}
+:::{tab-item} Jeu : de VERSE à LITRE
 Ce jeu consiste à trouver une manière de relier deux mots ayant le même nombre de lettres (par exemple VERSE et LITRE) avec une série de mots existants dont chaque mot ne diffère du précédent que d'une seule lettre. Dans notre exemple, une solution est donnée par :
 
 VERSE - VERRE - SERRE - SEVRE - LEVRE - LIVRE - LITRE
@@ -178,12 +179,14 @@ quel graphe serait-il nécessaire de construire, à quoi correspondrait ses nœu
 
 Selon le niveau atteint en programmation, une petite application proposant ce jeu et les solutions correspondantes pourrait être
 programmée par exemple en utilisant une libraire de graphe telle que igraph ou networkX en python.
-```
-```{tabbed} Réseautage
+:::
+
+:::{tab-item} Réseautage
 
 L'autre jour, vous avez flashé sur quelqu'un que vous ne connaissez pas mais dont vous avez réussi à obtenir
 le nom. Après avoir passé beaucoup de temps sur son profil dans votre réseau social préféré, vous recevez
 une notification vous indiquant quel ami-e pourra sans doute vous aider à vous rapprocher de cette personne.
 Comme ce réseau social a-t-il pu utiliser l'algorithme de Dijkstra pour vous faire cette recommandation?
-```
+:::
+::::
 

@@ -42,16 +42,19 @@ Principe de la capture numérique d'une image.
 
 ## Représentation d'une image en noir et blanc
 
-````{tabbed} Image
+::::{tab-set}
+:::{tab-item} Image
 ```{image} media/thuglife.png
 :width: 300px
 ```
-````
-````{tabbed} Code
+:::
+
+:::{tab-item} Code
 ```{image} media/thuglife2.png
 :width: 300px
 ```
-````
+:::
+::::
 
 Un bit est l'unité minimale d'information qu'un ordinateur manipule : 1 ou 0, allumé ou éteint. L'image la plus simple qu'un ordinateur puisse afficher est constituée uniquement de noir et blanc. Ainsi, un pixel pourrait être à l'état soit «noir», soit «blanc».
 
@@ -178,17 +181,19 @@ Ce mode de fonctionnement est similaire à celui des tableurs pour lesquels il e
 
 ````
 
-````{tabbed} Image
+::::{tab-set}
+:::{tab-item} Image
 ```{image} media/kirbycolor.png
 :width: 300px
 ```
-````
+:::
 
-````{tabbed} Code
+:::{tab-item} Code
 ```{image} media/kirbycolor2.png
 :width: 500px
 ```
-````
+:::
+::::
 
 En peinture, pour obtenir toutes les couleurs de l'arc-en-ciel, on utilise un mélange de magenta, de cyan et de jaune, qui vont chacune absorber une partie de la lumière ; c'est ce que l'on appelle la {glo}`synthsoustractive|synthèse soustractive` : en ajoutant du pigment à une surface, une partie du spectre lumineux est soustraite. 
 

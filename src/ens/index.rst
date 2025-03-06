@@ -8,14 +8,14 @@ Bienvenue dans les ressources pour **l'enseignement** de l'informatique au gymna
 Ces ressources ont été conçues pour vous accompagner dans votre **enseignement**.
 
 
-Les ressources sont découpées selon un chapitrage qui correspond au `plan d'études <https://www.vd.ch/formation/formations-gymnasiales/ecole-de-maturite>`_ 
-romand pour l'informatique au gymnase. Elles sont divisées en quatre parties, dont nulle n'a de préséance sur les autres. 
-Il appartient à l'enseignant·e de choisir l'ordre dans lequel les contenus sont abordés. 
+Les ressources sont découpées selon un chapitrage qui correspond au `plan d'études <https://www.vd.ch/formation/formations-gymnasiales/ecole-de-maturite>`_
+romand pour l'informatique au gymnase. Elles sont divisées en quatre parties, dont nulle n'a de préséance sur les autres.
+Il appartient à l'enseignant·e de choisir l'ordre dans lequel les contenus sont abordés.
 
 Dans la partie **enseigner** des ressources, vous trouverez des activités, des exercices, des supports de cours, et des planifications,
-pour vous aider dans la création de vos cours. 
+pour vous aider dans la création de vos cours.
 
-La plateforme est améliorée grâce à vos retours, n’hésitez pas à nous les partager à modulo-team@epfl.ch !
+La plateforme est améliorée grâce à vos retours, n’hésitez pas à nous les partager à contact@modulo-info.ch !
 
 .. toctree::
    :name: Première année
