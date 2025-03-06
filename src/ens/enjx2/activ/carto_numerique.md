@@ -15,7 +15,7 @@ qu'aux actions possibles pour les réduire.
 * **Durée** : 2 périodes ou 90 minutes
 * **Objectifs pédagogiques** : Prendre conscience de la matérialité du numérique et des impacts environnementaux et sociaux associés et identifier les actions possibles à mettre en œuvre pour les limiter 
 * **Modalité** : débranché
-* **Matériel** : par groupe d'élève : 1 grande feuille blanche, un stylo, cartes ([lot 1](https://files.modulo-info.ch/enjeux-sociaux/cartographie/lot1.pdf), [lots 2-4](https://files.modulo-info.ch/enjeux-sociaux/cartographie/lot2-4.pdf)) ; pour l'enseignant·e : [slides support activité](https://files.modulo-info.ch/enjeux-sociaux/cartographie/slides_suport.pptx), [dossier correction détaillée](https://files.modulo-info.ch/enjeux-sociaux/cartographie/correct_detaillee.pdf), [fiche solution](https://files.modulo-info.ch/enjeux-sociaux/cartographie/fiche_solution.jpg).   
+* **Matériel** : par groupe d'élève : 1 grande feuille blanche, un stylo, cartes ([lot 1](https://files.modulo-info.ch/enjeux-sociaux/cartographie/lot1.pdf), [lots 2-4](https://files.modulo-info.ch/enjeux-sociaux/cartographie/lot2-4.pdf)) ; pour l'enseignant·e : [slides support activité](https://files.modulo-info.ch/enjeux-sociaux/cartographie/slides_support.pptx), [dossier correction détaillée](https://files.modulo-info.ch/enjeux-sociaux/cartographie/correct_detaillee.pdf), [fiche solution](https://files.modulo-info.ch/enjeux-sociaux/cartographie/fiche_solution.jpg).   
 * **Prérequis** : aucun
 * **Notions fondamentales** : Cycle de vie, Sobriété numérique, Impacts environnementaux 
 * **Taille du groupe** : groupe de 5-6 élèves
