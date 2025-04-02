@@ -409,11 +409,12 @@ def _render_latex(source: str, config: MdParserConfig) -> str:
 
     return "".join(buf)
 
-
-def begin_logic_highlight_latex(self: SphinxTranslator, node: Node) -> None:
-    content = _render_latex(node["display"], node["config"])
-    self.body.append(content)
 '''
+def begin_logic_highlight_latex(self: SphinxTranslator, node: Node) -> None:
+    #content = _render_latex(node["display"], node["config"])
+    content = node["display"].strip("_ ")
+    self.body.append(content)
+
 
 
 def end_logic_highlight_latex(self: SphinxTranslator, node: Node) -> None:
@@ -491,7 +492,7 @@ def setup(app: Sphinx) -> None:
         logic_highlight,
         html=(begin_logic_highlight_html, end_logic_highlight_html),
         # TODO MIGRATION
-        #latex=(begin_logic_highlight_latex, end_logic_highlight_latex),
+        latex=(begin_logic_highlight_latex, end_logic_highlight_latex),
     )
 
     app.add_role("lg", LogicGateRole())
