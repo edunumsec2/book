@@ -23,7 +23,7 @@ En déposant une ressource sur la BDRP, vous avez le choix de la rendre visible 
 pour les personnes disposant d'un compte (c'est-à-dire les enseignant-e-s vaudois-e-s). Vous pouvez également choisir
 la license. 
 
-## 💻: Rédiger du contenu au format Modulo ou développer une fonctionnalité
+## 💻 Rédiger du contenu au format Modulo ou développer une fonctionnalité
 
 Modulo utilise l'outil de documentation [Sphinx](https://www.sphinx-doc.org), basée sur le markdown. Les contributions directes de contenu et
 l'aide au développement nécessitent au préalable d'[installer l'environnement](doc/installation.md)
