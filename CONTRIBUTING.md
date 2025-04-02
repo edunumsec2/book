@@ -23,24 +23,13 @@ En déposant une ressource sur la BDRP, vous avez le choix de la rendre visible 
 pour les personnes disposant d'un compte (c'est-à-dire les enseignant-e-s vaudois-e-s). Vous pouvez également choisir
 la license. 
 
-## :tools: Rédiger du contenu au format Modulo
+## 💻: Rédiger du contenu au format Modulo ou développer une fonctionnalité
 
 Modulo utilise l'outil de documentation [Sphinx](https://www.sphinx-doc.org), basée sur le markdown. Les contributions directes de contenu et
 l'aide au développement nécessitent au préalable d'[installer l'environnement](doc/installation.md)
 et de prendre connaissance de la [documentation](doc/README.md).
 
 Pour des raisons de [gouvernance](GOVERNANCE.md), chaque contribution doit être apportée sur une **nouvelle branche** (du nom de votre choix), créée à partir de la branche **[dev](https://github.com/edunumsec2/book/tree/dev)**.
-
-
-<!-- Vous pouvez directement proposer du contenu à ajouter dans les ressources. -->
-
-<!--   - [Rédiger une Activité](doc/activite.md) -->
-<!--   - [Liste des directives disponibles](doc/directives.md) -->
-
-## :computer: Participer au développement
-Vous pouvez contribuer au développement, par exemple si vous souhaitez créer un encart à la disposition d'autres contributeurs.
-  - Développer un encart
-  - ... ?
 
 ## :raising_hand: Trouver de l'aide
 Si quelque chose n'est pas clair, ou si vous avez besoin d'aide, n'hésitez pas à nous retrouver sur notre [channel Discord](https://discord.gg/b8qu79t6HQ).
