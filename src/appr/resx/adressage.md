@@ -225,7 +225,8 @@ qui revient plusieurs fois sur votre site ?
 dynamiques. C'est ce que fait un serveur mail ou de messagerie telle que Signal ou Whatsapp. 
 
 2. Si elle a une adresse IP dynamique, alors elle aura probablement des adresses IP différentes lors de ses visites
-en des jours différents. On ne pourra donc pas l'identifier en regardant uniquement son adresse IP. Par contre, en enregistrant
+en des jours différents. On ne pourra donc pas l'identifier en regardant uniquement son adresse IP. Par contre, ce sera possible
+de le faire ne déposant un {glo}`cookie|cookie` sur l'ordinateur des personnes qui viennent sur votre site. De plus  en enregistrant
 d'autres paramètres que son navigateur voudra bien nous transmettre, tels que son système d'exploitation, la langue,
 l'appareil, etc., on peut reconstituer son empreinte numérique
 et l'identifier ainsi. C'est ce qu'on appelle en anglais le fingerprinting, que l'on
