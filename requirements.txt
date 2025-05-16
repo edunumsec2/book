@@ -1,6 +1,6 @@
 furo==2024.8.6
 myst-parser==4.0.1
-Sphinx==8.2.0
+Sphinx==8.2.3
 sphinx-autobuild==2024.10.3
 sphinx-design
 lzstring
