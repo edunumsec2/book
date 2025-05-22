@@ -258,7 +258,7 @@ Nous avons démontré que finalement nos ordinateurs ont un cerveau très simple
 Imaginons pour cela que le processeur écrive toutes les opérations qu'il effectue sur un ruban de papier et calculons la vitesse de défilement de ce papier. 
 
 Pour cela, nous faisons les hypothèses suivantes:
-* Les processeurs actuels ont une cadence d'horloge de 3 GHz, c'est à dire $3\cdot 10^9~[s^{-1}]$. Pour simplifier, nous allons supposer qu'ils effectuent une opération par cycle[^1].
+* Les processeurs actuels ont une cadence d'horloge de 3 GHz, c'est à dire $3\cdot 10^9~[s^{-1}]$. Pour simplifier, nous allons supposer qu'ils effectuent une opération par cycle[^f1].
 * Nous transcrivons un mot de 64 bits (taille standard pour les processeurs actuels) sur une longueur de 15 cm, ce qui correspond à $15 \cdot 10^{-2}~[m]$.
 
 Le calcul devient alors:
@@ -284,5 +284,5 @@ Ce qui veut dire que si un microprocesseur, tel que ceux que l'on trouve dans no
 
 Si les éléments de base sont simples, la complexité et la richesse des expériences numériques comme l'immersion dans un jeu vidéo proviennent de la quantité extraordinaire d'opérations effectuées.
 
-[^1]: En fait le opérations d'un processeur prennent plus d'un cycle pour être réalisées, mais comme les processeurs ont plusieurs cœurs et un pipeline dont nous n'abordons pas ici le fonctionnement, la simplification proposée n'est pas aberrante.
+[^f1]: En fait le opérations d'un processeur prennent plus d'un cycle pour être réalisées, mais comme les processeurs ont plusieurs cœurs et un pipeline dont nous n'abordons pas ici le fonctionnement, la simplification proposée n'est pas aberrante.
 ````

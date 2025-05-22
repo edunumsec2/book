@@ -58,6 +58,13 @@ Sphinx permet de générer un build LaTeX des sources qui peut ensuite être uti
 - Génération du fichier latex: `sphinx-build -b latex -t latex_mode src/appr build/latex/appr`
 - Compilation du fichier latex: `cd build/latex/appr && make`
 
+Un makefile est également fourni, si bien qu'il est possible de compiler les polycopiés avec la commande suivante  depuis
+le répertoire racine:
+`make pdf`
+
+Cela génère un fichier pdf par chapitre imprimable ainsi qu'un document contenant tous les chapitres imprimables. Ces fichiers se
+trouvent alors dans le répertoire `build/pdf`.
+
 ## Configuration et personnalisation
 
 Les options de build, notamment les chapitres à générer, le titre, le noms des auteurs, les couleurs etc., peuvent être modifées dans le fichier [src/appr/conf.py](src/appr/conf.py) et [src/ens/conf.py](src/ens/conf.py)
