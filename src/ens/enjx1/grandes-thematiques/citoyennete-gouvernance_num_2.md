@@ -54,7 +54,7 @@
 
 <br>
 
-Ce deuxième volet du dossier « Numérique et citoyenneté » se penche sur le **fonctionnement
+Ce deuxième volet du dossier « Citoyenneté et gouvernance » se penche sur le **fonctionnement
 démocratique** de nos sociétés. Après avoir présenté la façon dont le numérique transforme
 **l’espace public**, il analyse son impact sur différentes formes de **démocratie** (représentative,
 participative). Il montre ensuite comment les dispositifs numériques favorisent actuellement
