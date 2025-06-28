@@ -11,11 +11,11 @@ Cette activité permet de questionner les limites de la surveillance, le respect
 ```{admonition} Cellule de crise
 :class: hint
 
-* Thèmes : Vie privée et surveillance
+* Thèmes : Vie privée et surveillance et intelligence artificielle
 * Niveau : difficile
 * Durée : 2 périodes
 * Modalité : débranchée
-* Matériel :  [slides, fiches rôles, chevalet, documents par rôle, etc. (.zip)](files.modulo-info.ch/enjeux-sociaux/cellule-de-crise/cellule-de-crise.zip) 
+* Matériel :  [slides, fiches rôles, chevalets, documents par rôle, etc. (.zip)](https://files.modulo-info.ch/enjeux-sociaux/cellule-de-crise/cellule-de-crise.zip) 
 * Prérequis : aucun
 * Taille du groupe : classe entière
 
@@ -54,7 +54,7 @@ Il·elle constitue les 6 groupes suivants :
 
 L’enseignant·e joue le rôle du ou de la Président·e, assure le déroulement de la séance et veille au respect des règles et des temps de parole.
 
-Chaque groupe reçoit une [fiche](files.modulo-info.ch/enjeux-sociaux/cellule-de-crise/fiches-roles.pdf) pour découvrir et s’approprier son rôle. Il est possible d’utiliser un [chevalet](files.modulo-info.ch/enjeux-sociaux/cellule-de-crise/chevalets.pdf) pour identifier chaque groupe.
+Chaque groupe reçoit une [fiche](https://files.modulo-info.ch/enjeux-sociaux/cellule-de-crise/fiches-roles.pdf) pour découvrir et s’approprier son rôle. Il est possible d’utiliser un [chevalet](https://files.modulo-info.ch/enjeux-sociaux/cellule-de-crise/chevalets.pdf) pour identifier chaque groupe.
 
 
 ### Jeu de rôle 
@@ -65,11 +65,11 @@ Chaque groupe reçoit une [fiche](files.modulo-info.ch/enjeux-sociaux/cellule-de
 
 Le ou la Président·e présente le contexte de la séance, ses objectifs, les parties présentes ainsi que leurs rôles respectifs, puis en expose le déroulé.
 
-L’enseignant·e peut s’appuyer sur [ce texte](files.modulo-info.ch/enjeux-sociaux/cellule-de-crise/president-e.pdf) pour lancer la séance.
+L’enseignant·e peut s’appuyer sur [ce texte](https://files.modulo-info.ch/enjeux-sociaux/cellule-de-crise/president-e.pdf) pour lancer la séance.
 
 **Temps 1 : Préparation des arguments (20 minutes)**
 
-Distribuer [les dossiers de consultation](files.modulo-info.ch/enjeux-sociaux/cellule-de-crise/dossiers-roles.zip) (matériel spécifique) à chaque groupe. 
+Distribuer [les dossiers de consultation](https://files.modulo-info.ch/enjeux-sociaux/cellule-de-crise/dossiers-roles.zip) (matériel spécifique) à chaque groupe. 
 
 Les élèves disposent de **20 minutes** pour prendre connaissance de leur rôle et préparer au minimum trois arguments pour défendre leur position. 
 
@@ -101,7 +101,7 @@ Une fois les échanges terminés, les ministres se concertent brièvement, puis 
 
 *Durée : 25 minutes*
 
-Lors de la phase d’institutionnalisation, les élèves sont invités à partager leur ressenti sur la séance : le déroulement, leur rôle, les échanges. 
+Lors de la phase d’institutionnalisation, les élèves sont invités à partager leur ressenti sur la séance : le déroulement, leur rôle, les échanges, etc. 
 
 L’enseignant·e recueille ces impressions, puis revient avec la classe sur les principaux arguments formulés pour et contre le recours massif à l’intelligence artificielle, pour faire émerger les principaux enjeux.
 
