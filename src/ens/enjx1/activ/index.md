@@ -10,11 +10,12 @@ Le monde (addictif et lucratif) de TikTok <tiktok>
 ```
 <br>
 
-**Données et vie privée**
+**Vie privée et surveillance**
 ```{toctree}
 :maxdepth: 1
 Données et enjeux de réputation <donnees_reputation>
 La géolocalisation <geolocalisation>
+Cellule de crise <cellule_de_crise>
 ```
 <br>
 
@@ -23,3 +24,4 @@ La géolocalisation <geolocalisation>
 :maxdepth: 1
 Le monde (addictif et lucratif) de TikTok <tiktok>
 ```
+
