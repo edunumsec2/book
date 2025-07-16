@@ -5,10 +5,15 @@
 Ce document doit être retravaillé ...
 ```
 
-Dans ce chapitre, nous aborderons la question de l'architecture des ordinateurs, c'est-à-dire les multiples couches physiques qui rendent possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
+Dans ce chapitre, nous abordons la question de l'architecture des ordinateurs, c'est-à-dire les multiples couches physiques qui rendent
+possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
 
-Comme vous avez pu le voir dans le chapitre lié à la représentation de l'information, tout ce qui apparaît sur votre écran est représenté par l'ordinateur par suite de 0 et de 1. Pour comprendre comment ces {glo}`codebinaire|0 et 1` sont traités par l'ordinateur, il faut avoir en tête que les ordinateurs sont construits à partir d'une couche et de multiples niveaux, comme un mille-feuille, dont chacun possède ses propres règles. 
-
+Comme décrit le chapitre lié à la représentation de l'information, tout ce qui apparaît sur votre écran est représenté par l'ordinateur par suite de 0 et de 1.
+Pour comprendre comment ces {glo}`codebinaire|0 et 1` sont traités par l'ordinateur, il faut avoir en tête que les ordinateurs sont conçus et selon un système
+de couches. La couche inférieure réalise des fonctions simples et chaque couche utilise la couche inférieure pour réaliser des fonctionnalité plus complexe.
+On peut imaginer une conception un peu équivalente pour une maison, où la couche inférieure serait les matériaux de base, qui sont utilisés pour
+la couche suivante qui serait les briques et le ciment, qui à sont tour est utilisée pour concevoir des chambres qui sont combinées pour former la maison. 
+Chaque couche possède ses propres règles de fonctionnement et a son propre rôle bien spécifique. 
 
 ```{figure} media/abstractionlight.png
 ---
