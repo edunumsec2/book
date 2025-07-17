@@ -179,6 +179,18 @@ Chercher à se représenter la taille des transistors utilisés dans les micropr
 
 ## Des transistors aux systèmes logiques
 
-Il reste difficile de concevoir des circuits d'ordinateurs en réfléchissant en termes de transistors. Un transistor seul ne peut représenter ou traiter qu'un bit d'information. Oui ou non, ouvert ou fermé, 1 ou 0.
+Il reste difficile de concevoir des circuits d'ordinateurs en réfléchissant en termes de transistors. Pour s'aider on utilise des circuits électroniques qui réalisent
+des opérations logiques. En effet, on peut convenir que la valeur binaire 1  correspond à la valeur logique "Vrai" et à la présence d'une tension dans à un endroit spécifique
+d'un circuit et que la valeur binaire 0 correspond à la valeur logique "Faux" et à l'absence de tension. On a ainsi une équivalence entre des opérations logiques, des calculs
+binaires et des circuits électroniques. Cela est essentiel pour concevoir des circuits électroniques qui réalisent des calculs binaires comme il en existent dans les ordinateurs
+ou les calculatrices. Cette correspondance est résumée par la tableau suivant: 
 
-Dans le chapitre suivant, où nous commençons à voir comment sont conçus les circuits électroniques des ordinateurs, nous parlerons tout d'abord de **{glo}`portelogique|portes logiques`**. Ce sont des composants qui sont eux-mêmes constitués de plusieurs transistors. Réfléchir en termes de portes logiques permet de véritablement concevoir les circuits des ordinateurs qui vont manipuler les bits d'informations formant nos données.
+|binaire| logique | électronique                 |
+|:-----:|:-------:|:-----------------------------|
+|  0    | Faux    | pas de tension (ou courant)  |
+|  1    | Vrai    | tension (ou courant) présente |
+
+
+Dans le chapitre suivant, où nous commençons à voir comment sont conçus les circuits électroniques des ordinateurs, nous parlerons tout d'abord
+de **{glo}`portelogique|portes logiques`**. Ce sont des composants qui sont eux-mêmes constitués de plusieurs transistors. Réfléchir en termes de
+portes logiques permet de véritablement concevoir les circuits des ordinateurs qui vont manipuler les bits d'informations formant nos données.

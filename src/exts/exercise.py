@@ -512,9 +512,6 @@ def depart_admonition_html(self, node):
     self.depart_admonition(node)
 
 
-
-
-
 def setup(app):
     app.add_directive("exercise", Exercise)
     app.add_directive("solution", Solution)
@@ -557,10 +554,11 @@ def setup(app):
     app.add_node(historic_document,latex=(visit_document_latex,depart_document_latex),
                                 html=(visit_admonition_html, depart_admonition_html))
     app.add_node(exercise, latex=(visit_exercise_latex, depart_exercise_latex),
-                                html=(visit_admonition_html, depart_admonition_html))  
+                                html=(visit_admonition_html, depart_admonition_html))    
     app.add_node(solution, latex=(visit_solution_latex, depart_solution_latex),
                                 html=(visit_admonition_html, depart_admonition_html))  
-
+   
+    ####
     # static_dir = os.path.join(os.path.dirname(__file__), "static")
     # app.connect("builder-inited", (lambda app: app.config.html_static_path.append(static_dir)))
     # app.add_js_file("exercise.js")

@@ -7,6 +7,7 @@
 :hidden:
 :numbered: 2
 intro
+portes
 sys-log
 additionneur
 alu
@@ -68,7 +69,9 @@ Charles Babbage 🇬🇧
 ^^^^^
 ***1791-1871***
 
-[**Charles Babbage**](https://fr.wikipedia.org/wiki/Charles_Babbage) fut le premier inventeur à énoncer le principe d'un ordinateur. C'est en 1834, pendant le développement d'une machine à calculer destinée au calcul et à l'impression de tables mathématiques, qu'il eut l'idée d'y incorporer des cartes du métier Jacquard, dont la lecture séquentielle donnerait des instructions et des données à sa machine. 
+[**Charles Babbage**](https://fr.wikipedia.org/wiki/Charles_Babbage) est le premier inventeur à concevoir le principe et élaborer les plan d'un ordinateur programmable en 1837.
+Sa machine, entièrement mécanique, contient les éléments essentiels des ordinateurs actuels, mais il n'a jamais pu la réaliser faute de financement. Le programme et les
+données étaient fournies sous forme de cartes perforées, comme les "partitions" des orgues de Barbarie ou les motifs des métiers à tisser Jacquard de l'époque. 
 :::
 ::::
 :::::

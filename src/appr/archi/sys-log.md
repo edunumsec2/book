@@ -1,12 +1,90 @@
-# Portes logiques
+# Circuits logiques
 
-En informatique, les {glo}`syslogique|systèmes logiques` décrivent comment sont connectés les circuits électroniques des ordinateurs afin de leur permettre, d'une part, d'effectuer des calculs et de traiter des données et, d'autre part, d'utiliser leur mémoire de travail, où sont stockées les données qu'ils traitent.
+Les portes logiques peuvent être combinées entre elles pour former des circuits logiques qui réalisent des fonctions logiques ou binaires. Certains circuits logiques
+réalisent des calculs sur des nombres binaires, d'autres peuvent servir de mémoire pour stocker des valeurs binaires. 
 
-Même si on a l'impression que les ordinateurs peuvent faire toutes sortes de choses, il y a un ensemble limité d'opérations de base que l'électronique d'une machine peut faire. Parmi ces quelques opérations de base, on trouve l'addition, la soustraction, la multiplication ou la division de nombres. La plupart des tâches que l'ordinateur exécute reposent sur ces quelques opérations (ainsi que sur quelques opérations dites _logiques_, qui vont être explicitées).
 
-C'est assez fascinant de se dire que des tâches a priori non mathématiques, comme corriger l'orthographe ou la grammaire d'un texte automatiquement, sont réalisées avec ces opérations de base. 
+## Des valeurs logiques aux nombres binaires
+Du fait de la correspondance entre les valeurs logiques, les valeurs binaires et l'état d'un circuits électronique, on peut interpréter les entrées et
+les sorties d'un circuit logique comme un nombre donnée en binaire.
 
-En parallèle à ce qui leur permet de faire des calculs, les ordinateurs disposent et utilisent de la mémoire. Il y en a au cœur des microprocesseurs, les _registres_, ce qu'on appelle la _mémoire vive_ — appelée aussi RAM (_Random-Access Memory_). La mémoire servant au stockage de longue durée comme disques durs et autres SSD n'est pas discutée dans cette section. L'étude des systèmes logiques permet de comprendre les principes derrière la gestion de cette mémoire et de voir comment les ordinateurs peuvent y lire et écrire des données entre deux calculs.
+
+````{exercise}
+On considère que les entrées du circuit ci-dessous forment un nombre $x$ s'écrivant $X_2X_1X_0$ en binaire et que les sorties forment également un nombre $y$ s'écrivant
+$Y_2Y_1Y_0$ en binaire. Que vaut $y$ en fonction de $x$, ou autrement dit, quel calcul réalise ce circuit logique composé de trois portes NON? Les affichages rectangulaires
+indiquant la valeur en décimal de $x$ et $y$ ont été ajoutés pour vous aidez, mais ne sont pas forcément nécessaires. 
+
+```{logic}
+:id: KeZJvf
+:height: 278
+:mode: tryout
+
+{ // JSON5
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [100, 55], orient: 's', id: 0, name: 'X2'},
+    in1: {type: 'in', pos: [150, 55], orient: 's', id: 1, name: 'X1'},
+    in2: {type: 'in', pos: [200, 55], orient: 's', id: 2, name: 'X0'},
+    not0: {type: 'not', pos: [100, 135], orient: 's', in: 3, out: 4},
+    out0: {type: 'out', pos: [100, 225], orient: 's', id: 5, name: 'Y2'},
+    not1: {type: 'not', pos: [150, 135], orient: 's', in: 6, out: 7},
+    not2: {type: 'not', pos: [200, 140], orient: 's', in: 8, out: 9},
+    out1: {type: 'out', pos: [150, 225], orient: 's', id: 11, name: 'Y1'},
+    out2: {type: 'out', pos: [200, 225], orient: 's', id: 12, name: 'Y0'},
+    disp0: {type: 'display', pos: [300, 80], id: '13-16', name: 'x'},
+    disp1: {type: 'display', pos: [300, 190], id: '17-20', name: 'y'},
+  },
+  wires: [[0, 3], [4, 5], [1, 6], [2, 8], [9, 12], [7, 11], [1, 14], [2, 13], [0, 15], [4, 19], [7, 18], [9, 17]]
+}
+```
+
+````
+```{solution}
+Le circuit logique réalise le calcul suivant: $y = 7-x$. Autrement dit, ce circuit réalise la fonction $f(x)=7-x$ en binaire. 
+```
+
+## Analyse de circuits logiques
+
+L'analyse d'un circuit logique consiste à établir sa table de vérité, c'est-à-dire déterminer ses sorties pour chaque combinaison
+possible de ces entrées.
+
+````{exercise}
+Remplir la table de vérité du circuit de l'exercice ci-dessus.
+
+|$X_2$ | $X_1$ |$X_0$ | $Y_2$ | $Y_1$ |$Y_0$|
+|----- |------ |------|-------|-------|-----|
+| 0    | 0     | 0    |       |       |     |
+| 0    | 0     | 1    |       | | |
+| 0    | 1     | 0 | | | |
+| 0    | 1     | 1 | | | |
+| 1    | 0     | 0 | | | |
+| 1    | 0     | 1 | | | |
+| 1    | 1     | 0 | | | |
+| 1    | 1     | 1 | | | |
+
+````
+
+```{dropdown} Solution
+|$X_2$ | $X_1$ |$X_0$ | $Y_2$ | $Y_1$ |$Y_0$|
+|----- |------ |------|-------|-------|-----|
+| 0    | 0     | 0    |   1   |  1    |  1  |
+| 0    | 0     | 1    |   1   |  1    |  0  |
+| 0    | 1     | 0    |   1   |  0    |  1  |
+| 0    | 1     | 1    |   1   |  0    |  0  |
+| 1    | 0     | 0    |   0   |  1    |  1  |
+| 1    | 0     | 1 	  |   0   |  1    |  0  |
+| 1    | 1     | 0 	  |   0   |  0    |  1  |
+| 1    | 1     | 1 	  |   0   |  0    |  0  |
+```
+
+
+<!-- En informatique, les {glo}`syslogique|circuits logiques` décrivent comment sont connectés les circuits électroniques des ordinateurs afin de leur permettre, d'une part, d'effectuer des calculs et de traiter des données et, d'autre part, d'utiliser leur mémoire de travail, où sont stockées les données qu'ils traitent. -->
+
+<!-- Même si on a l'impression que les ordinateurs peuvent faire toutes sortes de choses, il y a un ensemble limité d'opérations de base que l'électronique d'une machine peut faire. Parmi ces quelques opérations de base, on trouve l'addition, la soustraction, la multiplication ou la division de nombres. La plupart des tâches que l'ordinateur exécute reposent sur ces quelques opérations (ainsi que sur quelques opérations dites _logiques_, qui vont être explicitées). -->
+
+<!-- C'est assez fascinant de se dire que des tâches a priori non mathématiques, comme corriger l'orthographe ou la grammaire d'un texte automatiquement, sont réalisées avec ces opérations de base.  -->
+
+<!-- En parallèle à ce qui leur permet de faire des calculs, les ordinateurs disposent et utilisent de la mémoire. Il y en a au cœur des microprocesseurs, les _registres_, ce qu'on appelle la _mémoire vive_ — appelée aussi RAM (_Random-Access Memory_). La mémoire servant au stockage de longue durée comme disques durs et autres SSD n'est pas discutée dans cette section. L'étude des systèmes logiques permet de comprendre les principes derrière la gestion de cette mémoire et de voir comment les ordinateurs peuvent y lire et écrire des données entre deux calculs. -->
 
 
 ## Exemple suivi : addition de deux nombres
@@ -40,179 +118,6 @@ Ensuite, on regarde comment, fort de cette connaissance des portes logiques, il 
 Finalement, on comprendra comment un ordinateur est capable, avec un circuit logique, de stocker le résultat d'un tel calcul afin qu'il soit réutilisable plus tard.
 
 Les opérations arithmétiques et logiques et l'accès à la mémoire ne suffisent pas à constituer un ordinateur complet. C'est dans le chapitre suivant que sera traité la problématique de l'agencement de ces sous-systèmes afin de constituer une machine capable d'exécuter une suite d'instructions, c'est à dire un programme.
-
-## Portes logiques
-
-Les circuits électroniques qui composent un ordinateur sont constitués de composants électroniques comme des {glo}`resistance|résistances`, des condensateurs, des {glo}`transistor|transistors`, etc., qui déterminent où va passer le courant électrique et sur quelles parties du circuit règnera quelle {glo}`tension|tension`.
-
-Quand on parle de portes et de circuits logiques, on simplifie tout cela. On considèrera simplement qu'un segment de circuit électronique où la tension est nulle (0 volt) représente la valeur binaire 0, alors qu'une tension non nulle (par exemple, 3 volts) représente la valeur binaire 1. Ainsi, pour véhiculer deux bits comme $A$ et $B$ dans un circuit, on a besoin de deux «fils».
-
-Les portes logiques sont des composants électroniques (eux-mêmes constitués en général de transistors et résistances) qui ont une ou plusieurs entrées et qui combinent ces entrées pour produire une sortie donnée. La manière dont la sortie est calculée dépend du type de la porte. On se propose à présent d'étudier en détails l'ensemble de ces portes.
-
-## Porte ET
-
-Une de ces portes est la porte **ET**. Elle a deux entrées, qu'on appellera $X$ et $Y$, et une sortie $Z$. $Z$ sera 1 si et seulement si aussi bien $X$ que $Y$ valent 1. D'où son nom: il faut que $X$ **_et_** $Y$ soient à 1 pour obtenir un 1 sur la sortie.
-
-En énumérant les quatre possibilités pour les entrées, on peut écrire ce qu'on appelle {glo}`tableverite|table de vérité` pour la porte **ET** :
-
-| $X$ | $Y$ | $Z$ |
-| :-: | :-: | :-: |
-| 0   | 0   | 0   |
-| 1   | 0   | 0   |
-| 0   | 1   | 0   |
-| 1   | 1   | 1   |
-
-On peut dessiner des diagrammes avec des portes logiques. Ce ne sont pas des diagrammes électroniques, ils cachent une partie de la complexité réelle des circuits. Dans un tel diagramme logique, la porte **ET** est représentée ainsi :
-
-```{logic}
-:height: 60
-:mode: static
-
-{"v": 3, "opts": {"showDisconnectedPins": true}, "gates": [{"type": "AND", "pos": [50, 30], "in": [0, 1], "out": 2}]}
-```
-
-Sur ce schéma logique, les entrées sont à gauche, la sortie à droite et la porte est connectée au milieu. Les circuits sont représentés en noir s'ils véhiculent un «0» et avec une couleur s'ils véhiculent un «1».
-
-Cliquez sur {logicref}`tryout_and.x|l'entrée $X$` ou {logicref}`tryout_and.y|l'entrée $Y$` pour changer leurs valeurs et observez le comportement de la {logicref}`tryout_and.z|sortie $Z$`. Est-ce que cela correspond à la table de vérité ci-dessus ?
-
-```{logic}
-:ref: tryout_and
-:height: 100
-:mode: tryout
-
-{
-  "v": 3,
-  "in": [
-    {"pos": [50, 30], "id": 3, "ref": "x", "name": "X", "val": 0},
-    {"pos": [50, 70], "id": 4, "ref": "y", "name": "Y", "val": 0}
-  ],
-  "out": [{"pos": [220, 50], "id": 5, "ref": "z", "name": "Z"}],
-  "gates": [{"type": "AND", "pos": [150, 50], "in": [0, 1], "out": 2}],
-  "wires": [[3, 0], [4, 1], [2, 5]]
-}
-```
-
-````{dropdown} Pour aller plus loin
-Comment une porte **ET** est-elle elle-même construite ? Cela a déjà été mentionné : avec d'autres composants électroniques plus simples. En simplifiant un peu, on peut considérer qu'une porte **ET** est constituée de deux transistors (avec quelques résistances en plus) :
-
-```{figure} media/andgatetransistor.svg
----
-width: 200px
----
-```
-
-Ici, les deux transistors sont les composants symbolisés par un cercle. Rappelons qu'ils laissent passer du courant de haut en bas lorsqu'ils détectent un courant sur l'entrée qui vient de la gauche. Ici, comme on a en haut une tension de 5 volts, on aura une tension similaire sur la sortie $Z$ que si à la fois les entrées $X$ et $Y$ sont «actives» — donc lorsque les deux transistors sont «ouverts». Sinon, on aura une tension de 0 volt sur la sortie $Z$.
-````
-
-
-
-## Porte OU
-
-Pour que la sortie de la porte **OU** vaille 1, il suffit que l'une des deux entrées $X$ ou $Y$ vaille 1.
-
-Voici sa table de vérité:
-
-| $X$ | $Y$ | $Z$ |
-| :-: | :-: | :-: |
-| 0   | 0   | 0   |
-| 1   | 0   | 1   |
-| 0   | 1   | 1   |
-| 1   | 1   | 1   |
-
-On notera que le **OU** logique est un peu différent du «ou» que l'on utilise en général à l'oral : on voit à la dernière ligne de la table de vérité que la sortie $Z$ vaut également 1 si les deux entrées $X$ et $Y$ valent 1. À l'oral, le «ou» est en général interprété comme _exclusif_: si l'on propose à un ami un bonbon _ou_ une glace, on exclut la possibilité qu'il choisisse les deux. Ce n'est pas le cas pour le **OU** logique.
-
-Essayez la porte **OU** :
-
-```{logic}
-:height: 100
-:mode: tryout
-
-{
-  "v": 3,
-  "in": [
-    {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
-    {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
-  ],
-  "out": [{"pos": [220, 50], "id": 5, "name": "Z"}],
-  "gates": [{"type": "OR", "pos": [150, 50], "in": [0, 1], "out": 2}],
-  "wires": [[3, 0], [4, 1], [2, 5]]
-}
-```
-
-````{dropdown} Pour aller plus loin
-Voici comment une porte **OU** peut être construite avec deux transistors :
-
-```{figure} media/orgatetransistor.svg
----
-width: 200px
----
-```
-````
-
-
-## Porte NON
-
-Cette porte est plus simple : elle n'a qu'une entrée, et sa sortie se contente d'inverser la valeur en entrée. On l'appelle d'ailleurs aussi un _inverseur_.
-
-Voici sa table de vérité :
-
-| $X$ | $Z$ |
-| :-: | :-: |
-| 0   | 1   |
-| 1   | 0   |
-
-Essayez l'inverseur :
-
-```{logic}
-:height: 60
-:mode: tryout
-
-{
-  "v": 3,
-  "in": [{"pos": [50, 30], "id": 0, "name": "X", "val": 0}],
-  "out": [{"pos": [220, 30], "id": 2, "name": "Z"}],
-  "gates": [{"type": "NOT", "pos": [130, 30], "in": 1, "out": 3}],
-  "wires": [[0, 1], [3, 2]]
-}
-```
-
-````{dropdown} Pour aller plus loin
-Voici comment un inverseur peut être construit avec un transistor :
-
-```{figure} media/notgatetransistor.svg
----
-width: 200px
----
-```
-````
-
-Ensemble, les portes **ET**, **OU** et **NON** représentent les relations logiques de la {glo}`conjonction|conjonction`, la {glo}`disjonction|disjonction` et la {glo}`negation|négation`. Même si on ne les appelle pas ainsi, on utilise tous les jours des relations logiques de conjonction, de disjonction et de négation.
-
- * La **conjonction** est ainsi l'«intersection logique» de deux propositions. Si on dit «je vais à la piscine s'*il fait beau* **ET** *que mes amis m'accompagnent*», on utilise la conjonction.
- * Au contraire, si on dit «je vais à la piscine s'*il fait beau* **OU** *que mes amis m'accompagnent*», on utilise la **disjonction**, qui est comme une sorte de «somme logique» de deux propositions (même si, comme noté plus haut, le «ou», dans le langage courant, est généralement exclusif, contrairement au **OU** logique, qui est inclusif).
- * La **négation** est encore plus évidente, puisque la proposition «je ne vais pas à la piscine» est simplement la négation, ou l'inverse, de la proposition «je vais à la piscine». 
-
-:::::{grid} 1
-::::{grid-item}
-:::{card}
-Ressource complémentaire
-^^^
-Une application pour s'exercer à l'interprétation des conjonctions, disjonctions et négations logiques: [The Boolean Game](https://booleangame.com/)
-:::
-::::
-:::::
-
-<!-- Pour simplifier la représentation de ces relations logiques, on les exprime sous la forme de {glo}`tableverite|tables de vérité`.
-
-| $A$ | $B$ | $Q$ |
-|:-: |:-: |:-: |
-| 0   | 0   | 0   |
-| 1   | 0   | 0   |
-| 0   | 1   | 0   |
-| 1   | 1   | 1   |
-
-Dans le tableau qui précède, si on reprend notre exemple de la piscine, on pourrait dire que A représente «il fait beau», B représente «mes amies m'accompagnent», et le résultat Q est «je vais à la piscine». 1 signifie qu'une proposition est vraie, 0 qu'elle est fausse. Le tableau ci-dessus représente donc l'opération logique ET, ou {glo}`conjonction|conjonction`.  -->
-
 
 ## Combinaisons de portes
 
@@ -723,7 +628,7 @@ Voici le circuit corrigé (il a la même apparence que le circuit de la question
 ````{dropdown} Corrigé
 Ce circuit est constitué de {logicref}`faulty_and.{ok,faulty}|deux portes **ET**`. Mais {logicref}`faulty_and.faulty|la porte **ET** de droite` semble poser problème, parce qu'elle se comporte comme une porte **OU** ! Le circuit montré dans l'indice se comporte correctement.
 
-Ce circuit, une fois corrigé, implémente en fait un **ET** à trois entrée $X$, $Y$ et $W$, où la sortie $Z$ ne vaut 1 que si les trois entrées valent 1. Sa table de vérité, à huit lignes dues aux trois entrées, est ainsi la suivante :
+Ce circuit, une fois corrigé, implémente en fait un **ET** à trois entrées $X$, $Y$ et $W$, où la sortie $Z$ ne vaut 1 que si les trois entrées valent 1. Sa table de vérité, à huit lignes dues aux trois entrées, est ainsi la suivante :
 
 | $X$ | $Y$ | $W$ | $Z$ |
 | :-: | :-: | :-: | :-: |
