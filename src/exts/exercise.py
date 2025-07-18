@@ -42,6 +42,7 @@ class Exercise(SphinxDirective):
 
         number = Exercise.nextNumberByDoc[self.env.docname]
         Solution.lastQuestion[self.env.docname] = (number, label)
+        SolutionDD.lastQuestion[self.env.docname] = (number, label)
         Exercise.nextNumberByDoc[self.env.docname] += 1
 
         title = "Exercice {}".format(number)
@@ -64,6 +65,18 @@ class solution(nodes.admonition, nodes.hint):
     def __init__(self, rawsource="", *children, **attributes):
         super().__init__(rawsource, *children, **attributes)
         self["classes"].append("solution")
+
+def visit_solution_html(self, node):
+    # Create a <details> block with a <summary> title
+    self.body.append('<details class="dropsol-admonition">\n')
+    self.body.append('<summary>\n')
+    self.body.append('<p class="admonition-title">\n')
+    
+    self.body.append(f'{node.children[0]}</p></summary>\n')
+    self.body.append('<div class="solution-content docutils">\n')
+
+def depart_solution_html(self, node):
+    self.body.append('</div></details>\n')
 
 def visit_solution_latex(self, node):
     self.body.append('\n\\begin{solution}')
@@ -512,6 +525,62 @@ def depart_admonition_html(self, node):
     self.depart_admonition(node)
 
 
+
+
+
+class dropsol_node(nodes.Admonition, nodes.Element):
+    pass
+
+# Visit/Depart functions for HTML builder
+def visit_dropsol_html(self, node):
+    # Create a <details> block with a <summary> title
+    self.body.append(f'<details class="dropsol-admonition">\n')
+    self.body.append(f'<summary>{node["title"]}</summary>\n')
+    self.body.append('<div class="dropsol-content">\n')
+
+def depart_dropsol_html(self, node):
+    self.body.append('</div></details>\n')
+
+# Visit/Depart functions for LaTeX builder
+def visit_dropsol_latex(self, node):
+    # Use LaTeX's standard "note" or "admonition" formatting
+    self.body.append('\n\\begin{solution}{'+node['title'] +'}\n')
+
+def depart_dropsol_latex(self, node):
+    self.body.append('\\end{solution}\n')
+
+class SolutionDD(SphinxDirective):
+    has_content = True
+    optional_arguments = 1
+
+    lastQuestion = {}
+
+    def run(self):
+        self.assert_has_content()
+
+        title = "Solution"
+        ## catch numbering
+        last_question = Solution.lastQuestion.get(self.env.docname, None)
+        if last_question is not None:
+            del Solution.lastQuestion[self.env.docname]
+            number, label = last_question
+            title += " {}".format(number)
+            if label is not None:
+                title += " – {}".format(label)
+        # Use the first argument as the title, or fallback
+
+        # Create node
+        node = dropsol_node('\n'.join(self.content))
+        node['title'] = title
+
+        # Parse the nested content
+        self.state.nested_parse(self.content, self.content_offset, node)
+
+        return [node]
+
+
+
+
 def setup(app):
     app.add_directive("exercise", Exercise)
     app.add_directive("solution", Solution)
@@ -526,40 +595,52 @@ def setup(app):
     app.add_directive("note", Note, override=True)
     app.add_directive("torecall", ToRecall)
     app.add_directive("document", HistoricDocument)
-
+    app.add_directive("dropsol", SolutionDD)
 
     # good for latex compilation but not for html...
 
   
     app.add_node(micro_activity, latex=(visit_micro_activity_latex, depart_micro_activity_latex),
-                                html=(visit_admonition_html, depart_admonition_html))
+                 html=(visit_admonition_html, depart_admonition_html))
     app.add_node(to_go_further,latex=(visit_to_go_further_latex,depart_to_go_further_latex),
-                                html=(visit_admonition_html, depart_admonition_html))
+                 html=(visit_admonition_html, depart_admonition_html))
     app.add_node(important,latex=(visit_important_latex,depart_important_latex),
-                                html=(visit_admonition_html, depart_admonition_html), override=True)
+                 html=(visit_admonition_html, depart_admonition_html), override=True)
     app.add_node(did_you_know,latex=(visit_did_you_know_latex,depart_did_you_know_latex),
-                                html=(visit_admonition_html, depart_admonition_html))
+                 html=(visit_admonition_html, depart_admonition_html))
     app.add_node(reminder,latex=(visit_reminder_latex,depart_reminder_latex),
-                                html=(visit_admonition_html, depart_admonition_html))
+                 html=(visit_admonition_html, depart_admonition_html))
     app.add_node(related,latex=(visit_related_latex,depart_related_latex),
-                                html=(visit_admonition_html, depart_admonition_html))
+                 html=(visit_admonition_html, depart_admonition_html))
     app.add_node(evaluation,latex=(visit_eval_latex,depart_eval_latex),
-                                html=(visit_admonition_html, depart_admonition_html))
+                 html=(visit_admonition_html, depart_admonition_html))
     app.add_node(thinking_matter,latex=(visit_thinking_matter_latex,depart_thinking_matter_latex),
-                                html=(visit_admonition_html, depart_admonition_html))
+                 html=(visit_admonition_html, depart_admonition_html))
     app.add_node(note,latex=(visit_note_latex,depart_note_latex),
-                                html=(visit_admonition_html, depart_admonition_html), override=True)
+                 html=(visit_admonition_html, depart_admonition_html), override=True)
     app.add_node(to_recall,latex=(visit_to_recall_latex,depart_to_recall_latex),
-                                html=(visit_admonition_html, depart_admonition_html))
+                 html=(visit_admonition_html, depart_admonition_html))
     app.add_node(historic_document,latex=(visit_document_latex,depart_document_latex),
-                                html=(visit_admonition_html, depart_admonition_html))
+                 html=(visit_admonition_html, depart_admonition_html))
     app.add_node(exercise, latex=(visit_exercise_latex, depart_exercise_latex),
-                                html=(visit_admonition_html, depart_admonition_html))    
+                 html=(visit_admonition_html, depart_admonition_html))    
     app.add_node(solution, latex=(visit_solution_latex, depart_solution_latex),
-                                html=(visit_admonition_html, depart_admonition_html))  
+                 html=(visit_solution_html, depart_solution_html))  
+    app.add_node(dropsol_node, latex=(visit_dropsol_latex, depart_dropsol_latex),
+                 html=(visit_dropsol_html, depart_dropsol_html))
    
     ####
     # static_dir = os.path.join(os.path.dirname(__file__), "static")
     # app.connect("builder-inited", (lambda app: app.config.html_static_path.append(static_dir)))
     # app.add_js_file("exercise.js")
     # app.add_css_file("exercise.css")
+
+    # Optionally add a CSS file to style the dropsol in HTML
+    # 
+
+    # return {
+    #     "version": "0.1",
+    #     "parallel_read_safe": True,
+    #     "parallel_write_safe": True,
+    # }
+
