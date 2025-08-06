@@ -1,18 +1,22 @@
 # Circuits logiques
 
-Les portes logiques peuvent être combinées entre elles pour former des circuits logiques qui réalisent des fonctions logiques ou binaires. Certains circuits logiques
-réalisent des calculs sur des nombres binaires, d'autres peuvent servir de mémoire pour stocker des valeurs binaires. 
+Les portes logiques peuvent être combinées entre elles pour former des circuits logiques qui réalisent
+des fonctions logiques ou binaires. Certains circuits logiques réalisent des calculs sur des nombres binaires,
+d'autres peuvent servir de mémoire pour stocker des valeurs binaires. 
+
+
+
 
 
 ## Des valeurs logiques aux nombres binaires
 Du fait de la correspondance entre les valeurs logiques, les valeurs binaires et l'état d'un circuits électronique, on peut interpréter les entrées et
-les sorties d'un circuit logique comme un nombre donnée en binaire.
+les sorties d'un circuit logique comme un nombre donné en binaire.
 
 
 ````{exercise}
 On considère que les entrées du circuit ci-dessous forment un nombre $x$ s'écrivant $X_2X_1X_0$ en binaire et que les sorties forment également un nombre $y$ s'écrivant
 $Y_2Y_1Y_0$ en binaire. Que vaut $y$ en fonction de $x$, ou autrement dit, quel calcul réalise ce circuit logique composé de trois portes NON? Les affichages rectangulaires
-indiquant la valeur en décimal de $x$ et $y$ ont été ajoutés pour vous aidez, mais ne sont pas forcément nécessaires. 
+indiquant la valeur en décimal de $x$ et $y$ ont été ajoutés pour vous aider, mais ne sont pas forcément nécessaires. 
 
 ```{logic}
 :id: KeZJvf
@@ -45,26 +49,26 @@ Le circuit logique réalise le calcul suivant: $y = 7-x$. Autrement dit, ce circ
 
 ## Analyse de circuits logiques
 
-L'analyse d'un circuit logique consiste à établir sa table de vérité, c'est-à-dire déterminer ses sorties pour chaque combinaison
-possible de ces entrées.
+L'analyse d'un circuit logique consiste à établir sa table de vérité, c'est-à-dire déterminer ses sorties
+pour chaque combinaison possible de ses entrées.
 
-````{exercise}
+```{exercise}
 Remplir la table de vérité du circuit de l'exercice ci-dessus.
 
 |$X_2$ | $X_1$ |$X_0$ | $Y_2$ | $Y_1$ |$Y_0$|
 |----- |------ |------|-------|-------|-----|
 | 0    | 0     | 0    |       |       |     |
-| 0    | 0     | 1    |       | | |
-| 0    | 1     | 0 | | | |
-| 0    | 1     | 1 | | | |
-| 1    | 0     | 0 | | | |
-| 1    | 0     | 1 | | | |
-| 1    | 1     | 0 | | | |
-| 1    | 1     | 1 | | | |
+| 0    | 0     | 1    |       |       |     |
+| 0    | 1     | 0    |       |       |     |
+| 0    | 1     | 1    |       |       |     |
+| 1    | 0     | 0    |       |       |     |
+| 1    | 0     | 1    |       |       |     |
+| 1    | 1     | 0    |       |       |     |
+| 1    | 1     | 1    |       |       |     |
 
-````
+```
 
-```{dropdown} Solution
+```{solution}
 |$X_2$ | $X_1$ |$X_0$ | $Y_2$ | $Y_1$ |$Y_0$|
 |----- |------ |------|-------|-------|-----|
 | 0    | 0     | 0    |   1   |  1    |  1  |
@@ -75,6 +79,69 @@ Remplir la table de vérité du circuit de l'exercice ci-dessus.
 | 1    | 0     | 1 	  |   0   |  1    |  0  |
 | 1    | 1     | 0 	  |   0   |  0    |  1  |
 | 1    | 1     | 1 	  |   0   |  0    |  0  |
+```
+
+
+### Combinaisons de portes
+
+Les portes peuvent être connectées les unes aux autres. Voici par exemple un circuit logique contient {logicref}`xor_circuit_tryout.or|une porte **OU**`, {logicref}`xor_circuit_tryout.{and1,and2}|deux portes **ET**` et {logicref}`xor_circuit_tryout.inv|un inverseur`, tous interconnectés.
+
+
+```{logic}
+:ref: xor_circuit_tryout
+:height: 150
+:mode: tryout
+
+{
+  "v": 3,
+  "opts": {"showGateTypes": true},
+  "in": [
+    {"pos": [50, 30], "id": 0, "ref": "x", "name": "X", "val": 0},
+    {"pos": [50, 90], "id": 1, "ref": "y", "name": "Y", "val": 0}
+  ],
+  "out": [{"pos": [390, 50], "id": 2, "ref": "z", "name": "Z"}],
+  "gates": [
+    {"type": "OR", "pos": [190, 40], "in": [3, 4], "ref": "or", "out": 5},
+    {"type": "AND", "pos": [330, 50], "in": [6, 7], "ref": "and2", "out": 8},
+    {"type": "NOT", "pos": [230, 120], "in": 9, "ref": "inv", "out": 10},
+    {"type": "AND", "pos": [160, 120], "in": [11, 12], "ref": "and1", "out": 13}
+  ],
+  "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
+}
+```
+
+
+```{exercise}
+
+
+
+
+Ce diagramme n'est pas forcément facile à lire — discutons d'abord comment l'interpréter avec papier et crayon pour vérifier s'il effectue bien un **OU-X**.
+
+
+
+réalisant la fonction appelée **OU-X**, vue précédemment, qui est un «ou exclusif» et dont {logicref}`xor_circuit_tryout.z|la sortie $Z$` vaut 1 lorsque soit {logicref}`xor_circuit_tryout.x|$X$`, soit {logicref}`xor_circuit_tryout.y|$Y$` vaut 1, mais pas les deux en même temps :
+
+
+
+On remarque que le circuit ci-dessus a trois entrées binaires ($X_0$, $X_1$ et $X_2$). Il y a donc $2^3=8$
+combinaisons différentes de ces entrées, et donc 8 lignes à sa table de vérité. En effet, un circuit à une entrée
+binaire n'a que deux valeurs d'entrées possibles, 0 ou 1. Et chaque fois qu'on ajoute une entrée au circuit,
+on double le nombre de combinaisons d'entrées possibles.
+
+```{exercise}
+Compléter le tableau ci-dessous
+
+| Nombre d'entrées             | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|------------------------------|---|---|---|---|---|---|---|
+| Lignes de la table de vérité |   |   |   |   |   |   |   |
+```
+
+```{solution}
+
+| Nombre d'entrées             | 1 | 2 | 3 | 4  | 5  | 6  | 7   |
+|------------------------------|---|---|---|----|----|----|-----|
+| Lignes de la table de vérité | 2 | 4 | 8 | 16 | 32 | 64 | 128 |
 ```
 
 
@@ -118,38 +185,6 @@ Ensuite, on regarde comment, fort de cette connaissance des portes logiques, il 
 Finalement, on comprendra comment un ordinateur est capable, avec un circuit logique, de stocker le résultat d'un tel calcul afin qu'il soit réutilisable plus tard.
 
 Les opérations arithmétiques et logiques et l'accès à la mémoire ne suffisent pas à constituer un ordinateur complet. C'est dans le chapitre suivant que sera traité la problématique de l'agencement de ces sous-systèmes afin de constituer une machine capable d'exécuter une suite d'instructions, c'est à dire un programme.
-
-## Combinaisons de portes
-
-Les portes peuvent être connectées les unes aux autres. Voici par exemple un diagramme logique réalisant la fonction appelée **OU-X**, qui est un «ou exclusif» et dont {logicref}`xor_circuit_tryout.z|la sortie $Z$` vaut 1 lorsque soit {logicref}`xor_circuit_tryout.x|$X$`, soit {logicref}`xor_circuit_tryout.y|$Y$` vaut 1, mais pas les deux en même temps :
-
-```{logic}
-:ref: xor_circuit_tryout
-:height: 150
-:mode: tryout
-
-{
-  "v": 3,
-  "opts": {"showGateTypes": true},
-  "in": [
-    {"pos": [50, 30], "id": 0, "ref": "x", "name": "X", "val": 0},
-    {"pos": [50, 90], "id": 1, "ref": "y", "name": "Y", "val": 0}
-  ],
-  "out": [{"pos": [390, 50], "id": 2, "ref": "z", "name": "Z"}],
-  "gates": [
-    {"type": "OR", "pos": [190, 40], "in": [3, 4], "ref": "or", "out": 5},
-    {"type": "AND", "pos": [330, 50], "in": [6, 7], "ref": "and2", "out": 8},
-    {"type": "NOT", "pos": [230, 120], "in": 9, "ref": "inv", "out": 10},
-    {"type": "AND", "pos": [160, 120], "in": [11, 12], "ref": "and1", "out": 13}
-  ],
-  "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
-}
-```
-
-
-Ce circuit contient {logicref}`xor_circuit_tryout.or|une porte **OU**`, {logicref}`xor_circuit_tryout.{and1,and2}|deux portes **ET**` et {logicref}`xor_circuit_tryout.inv|un inverseur`, tous interconnectés.
-
-Ce diagramme n'est pas forcément facile à lire — discutons d'abord comment l'interpréter avec papier et crayon pour vérifier s'il effectue bien un **OU-X**.
 
 
 ### Analyse d'un circuit

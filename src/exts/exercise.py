@@ -66,18 +66,6 @@ class solution(nodes.admonition, nodes.hint):
         super().__init__(rawsource, *children, **attributes)
         self["classes"].append("solution")
 
-def visit_solution_html(self, node):
-    # Create a <details> block with a <summary> title
-    self.body.append('<details class="dropsol-admonition">\n')
-    self.body.append('<summary>\n')
-    self.body.append('<p class="admonition-title">\n')
-    
-    self.body.append(f'{node.children[0]}</p></summary>\n')
-    self.body.append('<div class="solution-content docutils">\n')
-
-def depart_solution_html(self, node):
-    self.body.append('</div></details>\n')
-
 def visit_solution_latex(self, node):
     self.body.append('\n\\begin{solution}')
 
@@ -583,7 +571,7 @@ class SolutionDD(SphinxDirective):
 
 def setup(app):
     app.add_directive("exercise", Exercise)
-    app.add_directive("solution", Solution)
+    app.add_directive("solution", SolutionDD)
     app.add_directive("togofurther", ToGoFurther)
     app.add_directive("micro", MicroActivity)
     app.add_directive("important", Important, override=True)
@@ -595,9 +583,7 @@ def setup(app):
     app.add_directive("note", Note, override=True)
     app.add_directive("torecall", ToRecall)
     app.add_directive("document", HistoricDocument)
-    app.add_directive("dropsol", SolutionDD)
-
-    # good for latex compilation but not for html...
+ #   app.add_directive("dropsol", SolutionDD)
 
   
     app.add_node(micro_activity, latex=(visit_micro_activity_latex, depart_micro_activity_latex),
@@ -625,7 +611,7 @@ def setup(app):
     app.add_node(exercise, latex=(visit_exercise_latex, depart_exercise_latex),
                  html=(visit_admonition_html, depart_admonition_html))    
     app.add_node(solution, latex=(visit_solution_latex, depart_solution_latex),
-                 html=(visit_solution_html, depart_solution_html))  
+                 html=(visit_admonition_html, depart_admonition_html))  
     app.add_node(dropsol_node, latex=(visit_dropsol_latex, depart_dropsol_latex),
                  html=(visit_dropsol_html, depart_dropsol_html))
    
@@ -635,8 +621,6 @@ def setup(app):
     # app.add_js_file("exercise.js")
     # app.add_css_file("exercise.css")
 
-    # Optionally add a CSS file to style the dropsol in HTML
-    # 
 
     # return {
     #     "version": "0.1",
