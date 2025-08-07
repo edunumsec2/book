@@ -3,12 +3,13 @@ description: Pour suggérer un ajout de contenu ou une modification de contenu e
 title: "[Contenu]: "
 labels: ["contenu"]
 assignees:
-  - elliotvaucher
+  - mihersch
+  - redelmann
 body:
   - type: markdown
     attributes:
       value: |
-        **Remarque**: pour les demandes plus complexes, nous vous invitons à dialoguer avec nous via [Discord](https://discord.gg/b8qu79t6HQ) ou sur [modulo-team@epfl.ch](mailto:modulo-team@epfl.ch).
+        **Remarque**: pour les demandes plus complexes, nous vous invitons à dialoguer avec nous via [Discord](https://discord.gg/b8qu79t6HQ) ou sur [modulo-team@epfl.ch](mailto:contact@modulo-info.ch).
   - type: input
     id: page
     attributes:
