@@ -15,7 +15,7 @@ Vous pouvez relever des problèmes via les Issues GitHub.
 Si vous enseignez dans le canton de Vaud, vous pouvez proposer une activité en la déposant sur la
 [Banque de Ressources Pédagogique (BDRP)](https://www.bdrp.ch), sous forme de fichiers ou sous forme
 de lien. Cela nécessite de se connecter avec ses identifiants DGEP. Veillez à renseigner les mots-clés
-(en particulier le chapitre concerné) en y incluant également le mot-clé Modulo. Ceci permettra à l'équipe
+(en particulier le chapitre concerné) en y incluant également le mot-clé `Modulo`. Ceci permettra à l'équipe
 de modération de recenser les contributions et d'en inclure une sélection dans modulo, soit sous forme de lien,
 soit directement intégrée dans les ressources.
 
