@@ -3,7 +3,7 @@
 
 # Les utilisateurs suivants sont alertés pour toute 
 # modification sur l'ensemble des sources : 
-* @redelmann @soniaagrebi
+* @redelmann @mihersch
 
 # Apprendre
 
@@ -20,8 +20,8 @@
 # Pour la partie Algorithmique : 
 /src/appr/algo1/ @biljana-petreska-gyyv
 /src/appr/algo1/ @mihersch
-/src/appr/algo1/ @biljana-petreska-gyyv
-/src/appr/algo1/ @mihersch
+/src/appr/algo2/ @biljana-petreska-gyyv
+/src/appr/algo2/ @mihersch
 
 # Pour la partie Architecture des ordinateurs : 
 /src/appr/archi/ @jppellet
@@ -62,6 +62,6 @@
 /src/ens/hist/ @prochat
 
 # Pour la partie Enjeux sociaux : 
-/src/ens/enjx/ @soniaagrebi
+/src/ens/enjx/ @mihersch
 
 
