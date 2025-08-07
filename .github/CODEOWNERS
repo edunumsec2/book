@@ -9,7 +9,6 @@
 
 # Pour la partie Représentation de l'information : 
 /src/appr/rep-info/ @dasilvadds
-/src/appr/rep-info/ @ofleveque
 
 # Pour la partie Programmation : 
 /src/appr/prog1/ @rasql
@@ -37,7 +36,6 @@
 
 # Pour la partie Représentation de l'information : 
 /src/ens/rep-info/ @dasilvadds
-/src/ens/rep-info/ @ofleveque
 
 # Pour la partie Programmation : 
 /src/ens/prog1/ @rasql
