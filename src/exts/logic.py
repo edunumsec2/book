@@ -179,6 +179,8 @@ class logic_diagram(nodes.Element, nodes.General):
 def begin_logic_diagram_html(self: SphinxTranslator, node: Node) -> None:
     content = node["content"].strip()
     ref = node["ref"]
+    autosave = node["autosave"]
+    id = node["id"]
     height = node["height"]
     mode = node["mode"]
     showonly = node["showonly"]
@@ -192,12 +194,21 @@ def begin_logic_diagram_html(self: SphinxTranslator, node: Node) -> None:
     self.body.append(tag.strip())
 
     attrs_str = ""
+    id_set = False
+    if id:
+        attrs_str += ' id="' + id + '"'
+        id_set = True
     if ref:
-        attrs_str += ' id="logic_' + ref + '"'
+        if not id_set:
+            attrs_str += ' id="logic_' + ref + '"'
+        else:
+            logger.warning("logic diagram has both id and ref attributes; ignoring ref")
     if mode:
         attrs_str += ' mode="' + mode + '"'
     if showonly:
         attrs_str += ' showonly="' + showonly + '"'
+    if autosave:
+        attrs_str += ' autosave'
 
     self.body.append(
         "<logic-editor" + attrs_str + ">" + "\n" + '<script type="application/json">' + "\n" + content + "\n"
@@ -265,6 +276,8 @@ class LogicDiagram(SphinxDirective):
     final_argument_whitespace = True
     option_spec = {
         "ref": directives.unchanged,
+        "id": directives.unchanged,  # alternative to ref
+        "autosave": directives.flag,
         "height": directives.positive_int,
         "mode": directive_mode,
         "showonly": directives.unchanged,
@@ -275,6 +288,8 @@ class LogicDiagram(SphinxDirective):
         self.assert_has_content()
 
         ref = self.options.get("ref", "")
+        id = self.options.get("id", "")
+        autosave = self.options.get("autosave", False)
         height = self.options.get("height", 500)
         mode = self.options.get("mode", "")
         showonly = self.options.get("showonly", "")
@@ -283,6 +298,8 @@ class LogicDiagram(SphinxDirective):
             "",
             content="\n".join(self.content),
             ref=ref,
+            id=id,
+            autosave=autosave,
             height=height,
             mode=mode,
             showonly=showonly,
@@ -365,7 +382,18 @@ def end_logic_highlight_html(self: SphinxTranslator, node: Node) -> None:
 
 
 def _tex_escape(string: str) -> str:
-    return string.replace("&", "\\&").replace("$", "\\$").replace("{", "\\{").replace("}", "\\}").replace("%", "\\%").replace("_", "\\_").replace("#", "\\#").replace("\\", "\\textbackslash{}").replace("~", "\\textasciitilde{}").replace("^", "\\textasciicircum{}")
+    return (
+        string.replace("&", "\\&")
+        .replace("$", "\\$")
+        .replace("{", "\\{")
+        .replace("}", "\\}")
+        .replace("%", "\\%")
+        .replace("_", "\\_")
+        .replace("#", "\\#")
+        .replace("\\", "\\textbackslash{}")
+        .replace("~", "\\textasciitilde{}")
+        .replace("^", "\\textasciicircum{}")
+    )
 
 
 def _render_latex(source: str, config: MdParserConfig) -> str:
