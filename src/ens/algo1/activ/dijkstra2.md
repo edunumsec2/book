@@ -1,7 +1,5 @@
 # L'algorithme du plus court chemin de Dijkstra
 
-------
-
 Activité collaborative et débranchée pour introduire l'algorithme du plus court de chemin de Dijkstra.
 
 ------

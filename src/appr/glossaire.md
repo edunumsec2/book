@@ -1,6 +1,6 @@
-````{htmlonly}
 Glossaire
 ==========
+````{htmlonly}
 ```{glossaire}
 ```
 ````

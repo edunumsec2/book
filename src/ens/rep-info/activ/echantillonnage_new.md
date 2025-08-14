@@ -1,8 +1,6 @@
 (ens:repinfo:echantillonnage)=
 # Echantillonnage
 
----- 
-
 Découverte de la notion d'échantillonnage à travers la représentation numérique du son. 
 
 ----

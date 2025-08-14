@@ -41,7 +41,7 @@
 </style>
 
 <div align="right"> 
-    <a href="http://files.edunumsec2.ch/enjeux-sociaux/wikipedia.pdf" class="round-button">
+    <a href="http://files.modulo-info.ch/enjeux-sociaux/wikipedia/wikipedia.pdf" class="round-button">
          <font color=white id="demo">Cliquer ici pour <br>dossier</font>
     </a>
 </div>

@@ -1,4 +1,4 @@
-# Enjeux sociaux de l'IA générative 
+# Art numérique et intelligence artificielle
 
 ---- 
 

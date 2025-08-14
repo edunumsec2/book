@@ -192,12 +192,15 @@ Ensemble, les portes **ET**, **OU** et **NON** représentent les relations logiq
  * Au contraire, si on dit «je vais à la piscine s'*il fait beau* **OU** *que mes amis m'accompagnent*», on utilise la **disjonction**, qui est comme une sorte de «somme logique» de deux propositions (même si, comme noté plus haut, le «ou», dans le langage courant, est généralement exclusif, contrairement au **OU** logique, qui est inclusif).
  * La **négation** est encore plus évidente, puisque la proposition «je ne vais pas à la piscine» est simplement la négation, ou l'inverse, de la proposition «je vais à la piscine». 
 
-```{panels}
-:column: col-lg
+:::::{grid} 1
+::::{grid-item}
+:::{card}
 Ressource complémentaire
 ^^^
 Une application pour s'exercer à l'interprétation des conjonctions, disjonctions et négations logiques: [The Boolean Game](https://booleangame.com/)
-```
+:::
+::::
+:::::
 
 <!-- Pour simplifier la représentation de ces relations logiques, on les exprime sous la forme de {glo}`tableverite|tables de vérité`.
 
@@ -543,7 +546,7 @@ La table de vérité montre qu'il y a deux lignes où la sortie doit valoir 1 
 
 Ici, les deux sous-circuits notés avec «?» et encadrés donc encore à définir — potentiellement avec plus d'une seule porte. Essayons de les créer.
 
-Disons que le sous-circuit du haut correspond à la deuxième ligne de la table de vérité, le cas de figure (a). Pour cette ligne, nous voulons un 1 de sortie lorsque $X=1$ et $Y=0$. En lisant littéralement cette dernière phrase, on y détecte un **ET** de deux conditions qui doivent être remplies: $X=1$ et $Y=0$. Mais ajouter une porte **ET** directement avec les signaux $X$ et $Y$ ne fera pas l'affaire, parce que cela livrerait un 1 lors que les _deux_ entrées $X$ et $Y$ sont à 1. La solution ici, c'est d'{logicref}`xor_build2_step2.inv1|_inverser_ $Y$` avant l'entrée dans {logicref}`xor_build2_step2.and1|la porte **ET**` — ce qui donne bel et bien la condition (a).
+Disons que le sous-circuit du haut correspond à la deuxième ligne de la table de vérité, le cas de figure (a). Pour cette ligne, nous voulons un 1 de sortie lorsque $X=1$ et $Y=0$. En lisant littéralement cette dernière phrase, on y détecte un **ET** de deux conditions qui doivent être remplies: $X=1$ et $Y=0$. Mais ajouter une porte **ET** directement avec les signaux $X$ et $Y$ ne fera pas l'affaire, parce que cela livrerait un 1 lors que les _deux_ entrées $X$ et $Y$ sont à 1. La solution ici, c'est d'{logicref}`xor_build2_step2.inv1|inverser $Y$` avant l'entrée dans {logicref}`xor_build2_step2.and1|la porte **ET**` — ce qui donne bel et bien la condition (a).
 
 On avance ainsi à ceci :
 

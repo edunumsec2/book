@@ -164,3 +164,11 @@ dmypy.json
 .pyre/
 edunum-sec2/content/theme/representation-information/representation-entiers/eleve.ipynb
 .eps
+
+# Node modules
+**/node_modules/
+**/.npm
+
+# Gatsby files
+**/.cache/
+**/public/

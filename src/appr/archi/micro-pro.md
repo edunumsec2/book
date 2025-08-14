@@ -4,8 +4,10 @@ Le processeur, en anglais central processing unit (CPU), est un composant qui ex
 
 On a précédemment détaillé les différents composants et systèmes logiques à partir desquels on peut construire un processeur. On va à présent évoquer l'architecture de von Neumann qui décrit la façon dont le processeur s'insère dans son environnement. Les différents éléments qui constituent le processeur et qui en assurent le bon fonctionnement seront ensuite détaillés.
 
-````{panels}
+:::::{grid} 2
 
+::::{grid-item}
+:::{card}
 :img-top: media/Gordon_Moore.jpeg
 
 Gordon Moore
@@ -15,8 +17,9 @@ Gordon Moore
 :animate: fade-in-slide-down
 Gordon Earle Moore est le cofondateur d'Intel en 1968. Intel est le premier fabricant mondial de microprocesseurs. Gordon Moore est célèbre pour avoir formulé en 1965 une loi empirique portant son nom : **loi de Moore**. Cette loi prédit un doublement de la complexité, et donc du nombre de transistors présents dans les microprocesseurs tous les deux ans. Bien que nous ayons atteint certaines limites physiques au niveau atomique et des effets de bruits parasites liés aux effets quantiques et à la désintégration alpha, la loi est toujours vérifiée aujourd'hui malgré un ralentissement de la progression pour certaines caractéristiques. Ces limites sont aujourd'hui compensées par des puces intégrant de plus en plus de composants de plus en plus complexes.
 ```
-
-````
+:::
+::::
+:::::
 
 ```{admonition} (micro)-processeur
 :class: attention
@@ -255,7 +258,7 @@ Nous avons démontré que finalement nos ordinateurs ont un cerveau très simple
 Imaginons pour cela que le processeur écrive toutes les opérations qu'il effectue sur un ruban de papier et calculons la vitesse de défilement de ce papier. 
 
 Pour cela, nous faisons les hypothèses suivantes:
-* Les processeurs actuels ont une cadence d'horloge de 3 GHz, c'est à dire $3\cdot 10^9~[s^{-1}]$. Pour simplifier, nous allons supposer qu'ils effectuent une opération par cycle[^1].
+* Les processeurs actuels ont une cadence d'horloge de 3 GHz, c'est à dire $3\cdot 10^9~[s^{-1}]$. Pour simplifier, nous allons supposer qu'ils effectuent une opération par cycle[^f1].
 * Nous transcrivons un mot de 64 bits (taille standard pour les processeurs actuels) sur une longueur de 15 cm, ce qui correspond à $15 \cdot 10^{-2}~[m]$.
 
 Le calcul devient alors:
@@ -281,5 +284,5 @@ Ce qui veut dire que si un microprocesseur, tel que ceux que l'on trouve dans no
 
 Si les éléments de base sont simples, la complexité et la richesse des expériences numériques comme l'immersion dans un jeu vidéo proviennent de la quantité extraordinaire d'opérations effectuées.
 
-[^1]: En fait le opérations d'un processeur prennent plus d'un cycle pour être réalisées, mais comme les processeurs ont plusieurs cœurs et un pipeline dont nous n'abordons pas ici le fonctionnement, la simplification proposée n'est pas aberrante.
+[^f1]: En fait le opérations d'un processeur prennent plus d'un cycle pour être réalisées, mais comme les processeurs ont plusieurs cœurs et un pipeline dont nous n'abordons pas ici le fonctionnement, la simplification proposée n'est pas aberrante.
 ````

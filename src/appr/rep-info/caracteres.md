@@ -29,8 +29,10 @@ Lorsqu'il s'agit de représenter ce texte à l'écran ou à l'impression, les lo
 dans l'autre sens pour trouver le caractère correspondant au nombre binaire.
 
 `````{htmlonly}
-````{panels}
-:column: col-lg
+:::::{grid} 1
+
+::::{grid-item}
+:::{card}
 
 Les propriétés 
 de la table de conversion 
@@ -72,7 +74,9 @@ for each in saisie:
 print("En minuscules :", minuscules)
 print('-'*42)
 ```
-````
+:::
+::::
+:::::
 `````
 En plus des lettres, les caractères qui représentent
 les chiffres sont eux-mêmes listés dans la table de conversion.

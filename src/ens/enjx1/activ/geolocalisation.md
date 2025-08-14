@@ -1,8 +1,5 @@
 # La géolocalisation, agrégation, connaissance et pouvoir
 
-
----- 
-
 Cette activité fait partie d'une série de ressources ayant pour objectif général d'identifier et de discuter des enjeux socio-techniques, politiques et économiques liés à la protection de la vie privée et des données personnelles.
 
 En particulier, le sujet de cette activité est la géolocalisation et ses effets dans l'agrégation des données qui génère de la connaissance et donc du pouvoir.

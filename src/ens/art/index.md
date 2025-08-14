@@ -15,7 +15,7 @@ Nous vous proposons également des activités relatives à la thématique Art nu
 
 ```{toctree}
 :maxdepth: 1
-Enjeux sociaux de l'IA générative <ia_enjeuxsociaux>
+Art numérique et intelligence artificielle <artnum_ia>
 ```
 
 

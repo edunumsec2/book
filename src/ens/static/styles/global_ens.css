@@ -76,3 +76,50 @@ body.modulo-dark .dropdown {
 figure {
     padding: 30px;
 }
+
+
+/* when printing exercices sheets */
+
+@media print {
+ @page { margin: 1cm; }
+ body { margin: 1.6cm; }
+
+/* reduce the size of headings */ 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+ h1{
+     font-size: 20pt;
+ }
+ h2{
+     font-size: 16pt;
+ }
+ h3{
+     font-size: 14pt;
+ }
+
+ /* don't print footer */
+ .related-pages, .bottom-of-page {display:none;} 
+
+ /* don't print sidebars */
+ .toc-drawer, .sidebar-drawer {display:none;} 
+
+ a.skip-to-content {display:none;} 
+ 
+ /* show tables more clearly */
+ table{
+     border-collapse: collapse;
+     border: 2pt solid black;
+     
+ }
+ table td {
+     border: 2pt solid gray;
+ }
+
+}

@@ -1,29 +1,45 @@
+# Comité de suivi
+Les personnes suivantes sont actuellement dans le comité de suivi de modulo
+ 
+ - Jérôme Amiguet (Gymnase de Morges)
+ - Romain Edelmann (Gymnase de Burier)
+ - Micha Hersch (Gymnase de Renens)
+ - Raphaël Holzer (Gymnase du Bugnon)
+ - Biljana Petreska (Gymnase d'Yverdon)
+ - Philippe Rochat (Gymnase de Morges)
+ - Jonathan Vasseur (Gymnase Auguste Picard)
+ 
+ 
 # Comité de rédaction
 
+Les personnes suivantes ont participé à la conception initiale de ces ressources entre 2020 et 2023. 
+
 - **Représentation de l'information** : 
-    - [David Da Silva](mailto:david.dasilva@eduvaud.ch) (Gymnase de Chamblandes)
-    - [Javier Iglesias](mailto:javier.iglesias@eduvaud.ch) (Gymnase de Renens)
+    - David Da Silva (Gymnase de Chamblandes)
+    - Javier Iglesias (Gymnase de Renens)
 - **Algorithmique** :
-    - [Biljana Petreska](mailto:biljana.petreska@fileinformatique.ch) (Gymnase d'Yverdon)
+    - Biljana Petreska (Gymnase d'Yverdon / HEP Vaud)
     - Micha Hersch (Gymnase de Renens / HEP Vaud)
 - **Programmation** : 
-    - [Raphaël Holzer](mailto:raphael.holzer@eduvaud.ch) (Gymnase du Bugnon)
-    - [Gilles Racine](mailto:gilles.racine@eduvaud.ch) (Gymnase de Sévelin)
+    - Raphaël Holzer (Gymnase du Bugnon)
+    - Gilles Racine (Gymnase de Sévelin)
 - **Architecture des ordinateurs** : 
-    - [Philippe Rochat](mailto:philippe.rochat@fileinformatique.ch) (Gymnase de Morges)
-    - [Jean-Philippe Pellet](mailto:jean-philippe.pellet@fileinformatique.ch) (HEP Vaud)
+    - Philippe Rochat (Gymnase de Morges)
+    - Jean-Philippe Pellet (HEP Vaud)
 - **Enjeux sociaux** : 
+    - Sonia Agrebi (EPFL)
     - Nadège Pio (EPFL)
-    - [Virginia Haussauer](mailto:virginia.haussauer@unil.ch) (Unil/EPFL)
+    - Virginia Haussauer (Unil/EPFL)
     - Lucile Berset (EPFL)
-    - [Frank Dayen](mailto:frank.dayen@eduvaud.ch) (Gymnase de Morges)
-    - [Boris Beaude](mailto:boris.beaude@unil.ch) (Unil)
+    - Frank Dayen (Gymnase de Morges)
+    - Boris Beaude (Unil)
 
 ## Coordination
-- [Sonia Agrebi](mailto:sonia.agrebi@epfl.ch) (EPFL)
-- [Elliot Vaucher](mailto:elliot.vaucher@epfl.ch) (EPFL)
+- Sonia Agrebi (EPFL)
+- Elliot Vaucher (EPFL)
 - Nathalie Farenc (EPFL)
 
 ## Maintenance et évolution plateforme
-- [Romain Edelmann](mailto:romain.edelmann@epfl.ch) (EPFL)
-- [Grégoire Gavin](mailto:gregoire.gavin@epfl.ch) (EPFL)
+- Matvey Khokhlov (EPFL)
+- Romain Edelmann (EPFL)
+- Grégoire Gavin (EPFL)

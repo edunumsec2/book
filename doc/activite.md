@@ -1,6 +1,6 @@
 # Rédiger une activité
 
-Vous trouverez ici la charte et la structure pour la rédaction d'une activité, ainsi qu'un [template](https://github.com/edunumsec2/book/blob/documentation/templates/template-activite.md) prêt à l'emploi.
+Vous trouverez ici la charte et la structure pour la rédaction d'une activité, ainsi qu'un [template](../templates/template-activite.md) prêt à l'emploi.
 
 ## Définition
 

@@ -18,8 +18,11 @@ connectées entre elles.
 
 ## Personnages clés
 
-````{panels}
+:::::{grid} 1 2 2 2
+:gutter: 2
 
+::::{grid-item}
+:::{card}
 :img-top: media/lamarr.jpg
 
 Hedy Lamarr 🇺🇸
@@ -27,8 +30,11 @@ Hedy Lamarr 🇺🇸
 ***1914-2000***
 
 L'actrice [**Hedy Lamarr**](https://fr.wikipedia.org/wiki/Hedy_Lamarr) a marqué l'histoire scientifique des télécommunications en inventant un moyen de coder des transmissions (étalement de spectre par saut de fréquence) utilisé encore dans le GPS et le Wi-Fi.
+:::
+::::
 
-----
+::::{grid-item}
+:::{card}
 :img-top: media/berners.png
 
 Tim Berners-Lee 🇬🇧
@@ -36,7 +42,9 @@ Tim Berners-Lee 🇬🇧
 ***Né en 1955***
 
 L'informaticien britannique [**Tim Berners-Lee**](https://fr.wikipedia.org/wiki/Tim_Berners-Lee) est le principal inventeur du Web alors qu'il travaillait au CERN à Genève dans les années 90. Il a inventé les adresses URL, le protocole HTTP et le langage HTML.
-````
+:::
+::::
+:::::
 `````
 
 ```{toctree}
