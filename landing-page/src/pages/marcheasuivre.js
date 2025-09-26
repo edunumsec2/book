@@ -38,8 +38,7 @@ const Contrib = () => (
 	  Des contributions techniques, telles que des fonctionnalités supplémentaires au site, sont également bienvenues,
 	  veuillez en discuter avec l'équipe de modération (contact@modulo-info.ch). 
 																     
- 																       
-	  
+ 																      
         </a>
         .
       </Text>
