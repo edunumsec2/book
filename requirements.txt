@@ -7,5 +7,6 @@ lzstring
 pytest-playwright
 qrcode
 Pillow
-svglib
 cairosvg
+svglib
+
