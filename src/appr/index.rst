@@ -9,8 +9,8 @@ Ce cours a été conçu pour vous accompagner dans votre découverte de l'inform
 découpé en **huit thématiques** réparties sur deux années. Il est aussi disponible en version PDF (qui comprend tous les chapitres): `modulo.pdf <media/modulo.pdf>`_.
 
 .. toctree::
-   :name: DOMAINES
-   :caption: Domaines
+   :name: Première année
+   :caption: Première année
    :maxdepth: 3
    :hidden:
 
