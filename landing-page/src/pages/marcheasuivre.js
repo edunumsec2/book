@@ -8,43 +8,34 @@ const Contrib = () => (
   <Layout>
     <Container className="flex flex-col">
       <H1>Contribuer à modulo</H1>
-      <Text>Il existe trois variantes de contribution au projet modulo.</Text>
-      <H2>Contribution non formatée</H2>
+      <Text>Il existe trois niveaux de contribution au projet modulo.</Text>
+      <H2>Contributions non modérées </H2>
       <Text>
-        Cette variante implique de proposer vos contenus, non formatés,
-        directement sur un dépôt FTP. Les contenus sont également disponibles
-        pour les autres enseignant-e-s en consultation. Pour cela, il faut
-        contacter l'équipe modulo à l'adresse contact@modulo-info.ch, qui vous
-        transmettra les accès.
+          Cette variante implique de proposer vos contenus, sans contrainte de format,
+          sur la <a href="https://www.bdrp.ch" target="_blank">Banque de Ressources Pédagogiques (BDRP)</a>,
+	  soit sous forme de fichiers, soit sous forme de lien. Veillez à renseigner les mots-clés (en particulier
+	  le chapitre concerné) en y incluant également le mot-clé "Modulo". Ceci permettra à l'équipe de modération de
+	  recenser les contributions et d'en inclure une sélection dans modulo, selon l'un des deux niveau de contribution
+	  ci-dessous.
+
       </Text>
-      <H2>Contribution formatée</H2>
+      <H2>Contributions externes</H2>
       <Text>
-        Cette variante consiste à pré-formater les contenus que vous souhaitez
-        déposer grâce aux templates prévus à cet effet, disponibles{" "}
-        <a
-          href="https://github.com/edunumsec2/book/blob/master/templates/template-activite.md"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ici
-        </a>
-        . Le dépôt du fichier après formatage se fait de la même façon qu'au
-        point précédent. L'avantage de cette solution est qu'elle permet à
-        l'équipe modulo, après processus de validation, d'intégrer
-        potentiellement vos contenus dans le site.
+	  L'équipe de modération mettra en évidence certaines contributions déposées dans la BDRP en
+	  incluant un lien dans la page <a href="https://enseigner.modulo-info.ch/contrib/index.html"> contributions externes </a>
+	  de modulo. Si vous désirez inclure un lien sans passer par la BDRP, vous pouvez nous envoyer un message à contact@modulo-info.ch.
       </Text>
-      <H2>Contribution avancée</H2>
+      <H2>Contributions intégrées</H2>
       <Text>
-        Cette modalité de contribution implique de se créer un compte GitHub et
-        de proposer du contenu directement dpeuis cette plateforme, en suivant
-        la marche à suivre détaillée{" "}
-        <a
-          href="https://github.com/edunumsec2/book/blob/master/CONTRIBUTING.md"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ici
-        </a>
+	  L'équipe de modération pourra également intégrer directement certaines contributions déposées dans la BDRP
+	  à modulo. Il faudra pour ceci formatter les contenus en Sphinx et utiliser les conventions de de modulo, par
+	  exemple pour les <a href="https://github.com/edunumsec2/book/blob/master/doc/activite.md" target="_blank">activités</a>.
+	  Une discussion entre l'équipe de modération et l'auteur-ice de la ressource aura lieu concernant d'éventuelles adaptations
+	  et déterminer qui se charge du reformattage. L'intégration se fait sous forme de pull request directement dans
+	  <a href="https://github.com/edunumsec2/book/blob/master/README.md" target="_blank"> github</a>.
+
+	  Des contributions techniques, telles que des fonctionnalités supplémentaires au site, sont également bienvenues,
+	  veuillez en discuter avec l'équipe de modération (contact@modulo-info.ch). 
         .
       </Text>
     </Container>
