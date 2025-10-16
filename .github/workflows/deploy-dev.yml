@@ -53,7 +53,7 @@ jobs:
       with:
         python-version: '3.13'
 
-     - name: Install libcairo2-dev
+    - name: Install libcairo2-dev
       run: |
         sudo apt-get update
         sudo apt-get -y install libcairo2-dev
