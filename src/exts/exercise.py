@@ -41,7 +41,7 @@ class Exercise(SphinxDirective):
             Exercise.nextNumberByDoc[self.env.docname] = 1
 
         number = Exercise.nextNumberByDoc[self.env.docname]
-        Solution.lastQuestion[self.env.docname] = (number, label)
+#        Solution.lastQuestion[self.env.docname] = (number, label)
         SolutionDD.lastQuestion[self.env.docname] = (number, label)
         Exercise.nextNumberByDoc[self.env.docname] += 1
 
@@ -61,51 +61,51 @@ class Exercise(SphinxDirective):
 
 
 
-class solution(nodes.admonition, nodes.hint):
-    def __init__(self, rawsource="", *children, **attributes):
-        super().__init__(rawsource, *children, **attributes)
-        self["classes"].append("solution")
+# class solution(nodes.admonition, nodes.hint):
+#     def __init__(self, rawsource="", *children, **attributes):
+#         super().__init__(rawsource, *children, **attributes)
+#         self["classes"].append("solution")
 
-def visit_solution_latex(self, node):
-    self.body.append('\n\\begin{solution}')
+# def visit_solution_latex(self, node):
+#     self.body.append('\n\\begin{solution}')
 
-def depart_solution_latex(self, node):
-    self.body.append('\n\\end{solution}\n')
+# def depart_solution_latex(self, node):
+#     self.body.append('\n\\end{solution}\n')
 
 
-class Solution(SphinxDirective):
-    required_arguments = 0
-    optional_arguments = 0
-    final_argument_whitespace = True
-    has_content = True
+# class Solution(SphinxDirective):
+#     required_arguments = 0
+#     optional_arguments = 0
+#     final_argument_whitespace = True
+#     has_content = True
 
-    lastQuestion = {}
+#     lastQuestion = {}
 
-    def run(self):
-        self.assert_has_content()
+#     def run(self):
+#         self.assert_has_content()
 
-        #admonition = nodes.admonition("", classes=["admonition", "hint"])
-        admonition = solution()
-        admonition.set_class("hint")
+#         #admonition = nodes.admonition("", classes=["admonition", "hint"])
+#         admonition = solution()
+#         admonition.set_class("hint")
 
-        title = "Solution"
-        last_question = Solution.lastQuestion.get(self.env.docname, None)
-        if last_question is not None:
-            del Solution.lastQuestion[self.env.docname]
-            number, label = last_question
-            title += " {}".format(number)
-            if label is not None:
-                title += " – {}".format(label)
+#         title = "Solution"
+#         last_question = Solution.lastQuestion.get(self.env.docname, None)
+#         if last_question is not None:
+#             del Solution.lastQuestion[self.env.docname]
+#             number, label = last_question
+#             title += " {}".format(number)
+#             if label is not None:
+#                 title += " – {}".format(label)
 
-        textnodes, _ = self.state.inline_text(title, self.lineno)
-        label = nodes.title(title, *textnodes)
-        admonition += label
+#         textnodes, _ = self.state.inline_text(title, self.lineno)
+#         label = nodes.title(title, *textnodes)
+#         admonition += label
 
-        content = nodes.container("", is_div=True, classes=["solution-content"])
-        self.state.nested_parse(self.content, self.content_offset, content)
-        admonition += content
+#         content = nodes.container("", is_div=True, classes=["solution-content"])
+#         self.state.nested_parse(self.content, self.content_offset, content)
+#         admonition += content
 
-        return [admonition]
+#         return [admonition]
 
 class to_go_further(nodes.admonition):
     def __init__(self, rawsource="", *children, **attributes):
@@ -123,11 +123,12 @@ class ToGoFurther(SphinxDirective):
     optional_arguments = 1
     final_argument_whitespace = True
     has_content = True
-
+   
     def run(self):
         self.assert_has_content()
 
-        admonition = to_go_further("")
+        collapsible= self.options.get("collapsible","closed") # for collapsible (dropdown) admonition
+        admonition = to_go_further("",collapsible=collapsible)
 
         title ="Pour aller plus loin"
         if len(self.arguments) > 0: 
@@ -513,9 +514,6 @@ def depart_admonition_html(self, node):
     self.depart_admonition(node)
 
 
-
-
-
 class dropsol_node(nodes.Admonition, nodes.Element):
     pass
 
@@ -548,9 +546,9 @@ class SolutionDD(SphinxDirective):
 
         title = "Solution"
         ## catch numbering
-        last_question = Solution.lastQuestion.get(self.env.docname, None)
+        last_question = SolutionDD.lastQuestion.get(self.env.docname, None)
         if last_question is not None:
-            del Solution.lastQuestion[self.env.docname]
+            del SolutionDD.lastQuestion[self.env.docname]
             number, label = last_question
             title += " {}".format(number)
             if label is not None:
@@ -610,8 +608,8 @@ def setup(app):
                  html=(visit_admonition_html, depart_admonition_html))
     app.add_node(exercise, latex=(visit_exercise_latex, depart_exercise_latex),
                  html=(visit_admonition_html, depart_admonition_html))    
-    app.add_node(solution, latex=(visit_solution_latex, depart_solution_latex),
-                 html=(visit_admonition_html, depart_admonition_html))  
+   # app.add_node(solution, latex=(visit_solution_latex, depart_solution_latex),
+   #              html=(visit_admonition_html, depart_admonition_html))  
     app.add_node(dropsol_node, latex=(visit_dropsol_latex, depart_dropsol_latex),
                  html=(visit_dropsol_html, depart_dropsol_html))
    
