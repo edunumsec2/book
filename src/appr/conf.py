@@ -187,9 +187,9 @@ html_css_files = ['styles/global.css', 'styles/global_appr.css', 'styles/reactio
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['../static', './static']
-html_js_files = ['https://unpkg.com/@popperjs/core@2', 'scripts/reactions.js', 'scripts/progress.js', 'scripts/dark.js', 'scripts/frames.js']
+html_js_files = ['https://unpkg.com/@popperjs/core@2', 'https://code.jquery.com/jquery-2.2.4.min.js', 'scripts/reactions.js', 'scripts/progress.js', 'scripts/dark.js', 'scripts/frames.js']
 
-pygments_sytle = "sphinx"
+pygments_style = "sphinx"
 pygments_dark_style = "monokai"
 
 myst_enable_extensions = ['amsmath', 'colon_fence', 'deflist', 'dollarmath', 'html_admonition', 'html_image', 'replacements', 'smartquotes', 'substitution']

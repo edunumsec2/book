@@ -6,7 +6,7 @@ on:
     branches:
       - master
 
-# This job installs dependencies, builds the book, and pushes it to FTP server
+# This job installs dependencies, builds the landing page, and pushes it to FTP server
 jobs:
   deploy-landing-page:
     runs-on: ubuntu-latest
