@@ -18,6 +18,11 @@ jobs:
       with:
         python-version: '3.13'
 
+    - name: Install libcairo
+      run: |
+        sudo apt-get update
+        sudo apt-get -y install libcairo2-dev
+        
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
