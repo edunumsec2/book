@@ -6,8 +6,6 @@ d'autres peuvent servir de mémoire pour stocker des valeurs binaires.
 
 
 
-
-
 ## Des valeurs logiques aux nombres binaires
 Du fait de la correspondance entre les valeurs logiques, les valeurs binaires et l'état d'un circuits électronique, on peut interpréter les entrées et
 les sorties d'un circuit logique comme un nombre donné en binaire.
@@ -84,36 +82,131 @@ Remplir la table de vérité du circuit de l'exercice ci-dessus.
 
 ### Combinaisons de portes
 
-Les portes peuvent être connectées les unes aux autres. Voici par exemple un circuit logique contient {logicref}`xor_circuit_tryout.or|une porte **OU**`, {logicref}`xor_circuit_tryout.{and1,and2}|deux portes **ET**` et {logicref}`xor_circuit_tryout.inv|un inverseur`, tous interconnectés.
-
-
+Les portes peuvent être connectées les unes aux autres. Voici par exemple un circuit logique contenant une porte **ET** et une porte
+*NON*. 
 ```{logic}
-:ref: xor_circuit_tryout
+:ref: nand
 :height: 150
 :mode: tryout
+{ // JSON5
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [55, 45], id: 0, name: 'A', val: 1},
+    in1: {type: 'in', pos: [55, 85], id: 1, name: 'B'},
+    and0: {type: 'and', pos: [165, 70], in: [2, 3], out: 4},
+    not0: {type: 'not', pos: [245, 70], in: 5, out: 6},
+    out0: {type: 'out', pos: [320, 70], id: 7, name: 'Z'},
+  },
+  wires: [[0, 2], [1, 3], [4, 5], [6, 7]]
+}
+```
+Sa table de vérité peut s'écrire ainsi:
+| $A$ | $B$ | $A$ ET $B$ | $Z$=NON($A$ ET $B$) |
+|-----|-----|------------|---------------------|
+| 0   | 0   | 0          | 1                   |
+| 0   | 1   | 0          | 1                   |
+| 1   | 0   | 0          | 1                   |
+| 1   | 1   | 1          | 0                   |
+
+Les deux premières colonnes ($A$ et $B$) correspondent aux entrées du circuit. 
+La troisième colonne ($A$ ET $B$) représente la valeur intermédiaire à la sortie de
+la porte ET et la dernière colonne correspond à $Z$, la sortie du circuit. Les valeurs
+intermédiaires d'un circuit logiques sont utiles pour calculer les sorties de ce circuits,
+mais elles ne figurent pas nécessairement dans la table de vérité, contrairement aux valeurs
+d'entrées et de sorties qui sont obligatoires. 
+
+On définit la porte NON-ET comme une porte ET directement suivie par une porte NON, comme dans l'exemple
+ci-dessus. On représente la porte NON-ET comme une porte ET à laquelle on ajoute un petit rond au bout
+pour indiquer la négation, comme ceci:
+
+```{logic}
+:ref: nand2
+:height: 150
+:mode: tryout
+{ // JSON5
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [55, 45], id: 0, name: 'A', val: 1},
+    in1: {type: 'in', pos: [55, 85], id: 1, name: 'B'},
+    nand0: {type: 'nand', pos: [165, 70], in: [2, 3], out: 4},
+	out0: {type: 'out', pos: [320, 70], id: 7, name: 'Z'},
+},
+ wires: [[0, 2], [1, 3], [4, 7]]
+}
+```
+```{micro}
+Vérifier que la porte ci-dessus a la même table de vérité (au niveau des entrées et des sorties) que le circuit précédent.
+```
+
+De la même manière, on définit les porte NON-OU et NON-OU-X en ajoutant un rond
+au bout des portes OU et OU-X. 
+````{exercise}
+Donner les tables de vérité des portes NON-OU et NON-OU-X ci-dessous. 
+```{logic}
+:ref: xnor
+:height: 150
+:mode: tryout
+{ // JSON5
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [55, 45], id: 0, name: 'A', val: 1},
+    in1: {type: 'in', pos: [55, 85], id: 1, name: 'B'},
+    out0: {type: 'out', pos: [255, 85], id: 7, name: 'Z'},
+    xnor0: {type: 'xnor', pos: [170, 85], in: [8, 9], out: 10},
+    nor0: {type: 'nor', pos: [170, 40], in: [11, 12], out: 13},
+    out1: {type: 'out', pos: [255, 40], id: 14, name: 'Y'},
+  },
+  wires: [[0, 8], [1, 9], [10, 7], [0, 11], [1, 12], [13, 14]]
+}
+```
+````
+```{solution}
+| $A$ | $B$ | $Y$=NON($A$ OU $B$) | $Z$=NON($A$ OU-X $B$) |
+|-----|-----|------------|---------------------|
+| 0   | 0   | 1          | 1                   |
+| 0   | 1   | 0          | 0                   |
+| 1   | 0   | 0          | 0                   |
+| 1   | 1   | 0          | 1                   |
+```
+
+````{exercise}
+a. Etablir sans modifier les entrées la table de vérité du circuit logique suivant. 
+
+```{logic}
+:ref: xor_circuit
+:height: 150
+:mode: static
 
 {
   "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
-    {"pos": [50, 30], "id": 0, "ref": "x", "name": "X", "val": 0},
-    {"pos": [50, 90], "id": 1, "ref": "y", "name": "Y", "val": 0}
+    {"pos": [50, 30], "id": 0, "ref": "x", "name": "A", "val": 0},
+    {"pos": [50, 90], "id": 1, "ref": "y", "name": "B", "val": 0}
   ],
   "out": [{"pos": [390, 50], "id": 2, "ref": "z", "name": "Z"}],
   "gates": [
     {"type": "OR", "pos": [190, 40], "in": [3, 4], "ref": "or", "out": 5},
     {"type": "AND", "pos": [330, 50], "in": [6, 7], "ref": "and2", "out": 8},
-    {"type": "NOT", "pos": [230, 120], "in": 9, "ref": "inv", "out": 10},
-    {"type": "AND", "pos": [160, 120], "in": [11, 12], "ref": "and1", "out": 13}
+    {"type": "NAND", "pos": [190, 120], "in": [11, 12], "ref": "and1", "out": 13}
   ],
-  "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 9], [10, 7], [5, 6], [8, 2]]
+  "wires": [[0, 3], [0, 11], [1, 4], [1, 12], [13, 7], [5, 6], [8, 2]]
 }
 ```
 
+b. A quelle porte logique ce circuit est-il équivalent? 
+````
+```{solution}
+a. 
+| $A$ | $B$ | $Z$  |
+|-----|-----|------|
+| 0   | 0   | 0    |
+| 0   | 1   | 1    |
+| 1   | 0   | 1    |
+| 1   | 1   | 0    |
 
-```{exercise}
-
-
+b. Il s'agit de la porte OU-X
+```
 
 
 Ce diagramme n'est pas forcément facile à lire — discutons d'abord comment l'interpréter avec papier et crayon pour vérifier s'il effectue bien un **OU-X**.
