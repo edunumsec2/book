@@ -7,6 +7,7 @@
 \usepackage{changepage}
 \usepackage[bottom]{footmisc}
 \usepackage{newunicodechar}
+\usepackage{answers} %% for putting solutions in the end
 
 \renewcommand{\baselinestretch}{1.1} 
 
@@ -81,7 +82,7 @@
 
 \DeclareModuloAdmonition{exercise}{ultraviolet}{white}
 \DeclareModuloAdmonition{question}{ultraviolet}{white}
-\DeclareModuloAdmonition{solution}{ultraturquoise}{white}
+%\DeclareModuloAdmonition{solution}{ultraturquoise}{white}
 \DeclareModuloAdmonition{microactivity}{ultraviolet}{white}
 \DeclareModuloAdmonition{togofurther}{orangemodulo}{black}
 \DeclareModuloAdmonition{important}{radicalred}{white}
@@ -98,6 +99,11 @@
 % set toc links color to black
 \hypersetup{linkcolor=black}
 
+%% putting solutions at the end of chapter
+\Newassociation{solution}{Soln}{solutions}
+\Opensolutionfile{solutions}[ans0]
+\renewenvironment{Soln}[1]{\par\textbf{#1}}{}
+\AtEndDocument{\Closesolutionfile{solutions}\newpage\section{Solutions des exercices}\input{ans0}}
 \sphinxpxdimen=.5bp\relax
 
 \definecolor{line-num-col}{gray}{0.6} % for line numbers
