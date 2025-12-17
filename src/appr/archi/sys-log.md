@@ -335,25 +335,6 @@ Remplir la table de vérité du circuit de l'exercice ci-dessus.
 
 <!-- ## Exemple suivi : addition de deux nombres -->
 
-<!-- On s'intéresse à une des opérations arithmétiques les plus simples : l'**addition**. Comment l'ordinateur additionne-t-il deux nombres ? On va définir le cadre de travail et s'intéresser aux circuits électroniques qui vont être à même de réaliser une addition. -->
-
-<!-- Que se passe-t-il pour l'addition de deux nombres entiers ? On va utiliser leur représentation binaire (avec uniquement des 1 et des 0). Pour faire simple, on va chercher à additionner simplement deux bits, disons $A$ et $B$, où chacun peut valoir soit 0 soit 1. Posons que la somme $S = A + B$. En énumérant tous les cas de figure, on a : -->
-
-<!-- | $A$ | $B$ | $S$ | -->
-<!-- | :-: | :-: | --: | -->
-<!-- | 0   | 0   | 0   | -->
-<!-- | 1   | 0   | 1   | -->
-<!-- | 0   | 1   | 1   | -->
-<!-- | 1   | 1   | 10  | -->
-
-<!-- La dernière ligne est intéressante : on sait que $1+1=2$, mais en {glo}`codebinaire|binaire`, on sait aussi que n'existent que des 0 et des 1, et 2 s'écrit ainsi 10 (voir le chapitre {ref}`représentation de l'information <repinfo>`). Cela veut dire que, pour traiter tous les cas d'une addition de deux {glo}`bit|bits`, on a besoin aussi de deux bits de sortie, et qu'un seul ne suffit pas. En explicitant chaque fois le deuxième bit de sortie, notre tableau devient : -->
-
-<!-- | $A$ | $B$ | $S$ | -->
-<!-- | :-: | :-: | :-: | -->
-<!-- | 0   | 0   | 00  | -->
-<!-- | 1   | 0   | 01  | -->
-<!-- | 0   | 1   | 01  | -->
-<!-- | 1   | 1   | 10  | -->
 
 <!-- La question est de déterminer comment faire calculer les deux bits de la somme $S$ à partir de $A$ et $B$ à un circuit électronique. Pour cela, on a besoin du concept de {glo}`portelogique|portes logiques`. Ces portes logiques sont elles-mêmes constituées de _transistors_, dont on a parlé en début de chapitre. -->
 
