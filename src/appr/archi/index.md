@@ -14,15 +14,16 @@ alu
 mem
 micro-pro
 archi-gen
-
-tp1
-tp2
-tp3
-tp4
-tp5
+tp1 :only: html
+tp2 :only: html
+tp3 :only: html
+tp4 :only: html
+tp5 :only: html
 ```
 
 <!-- <iframe src='https://timeline.knightlab.com/examples/houston/index.html' width='600' height='600' frameborder='0'></iframe> -->
+
+````{htmlonly}
 
 L'ENIAC, l'un des tout premiers ordinateurs opérationnels, conçu en 1945, à la fin de la Seconde Guerre mondiale, pour calculer des trajectoires de missiles, était constitué de 17 468 tubes électroniques de la taille d'une main, qui cassaient en moyenne une fois par semaine.  Il s'étendait sur 170 mètres carrés et pesait plus de 25 tonnes. Il était capable d'exécuter environ 5000 opérations par seconde.
 
@@ -77,3 +78,4 @@ données étaient fournies sous forme de cartes perforées, comme les "partition
 :::::
 
 [^1]:https://www.aei.org/technology-and-innovation/the-a12-chip-estimating-innovation-with-iphone-prices/
+````

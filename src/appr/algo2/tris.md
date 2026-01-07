@@ -68,7 +68,7 @@ Avec une complexité quadratique, le Tri&nbsp;par&nbsp;sélection est un algorit
 
 
 
-```{exercise} Complexité du Tri&nbsp;par&nbsp;insertion
+```{exercise} Complexité du Tri par insertion
 
 Quelle est la complexité de l’algorithme de <a href="../algo1/cours/2_trie_cherche_trouve/eleve.html#tri-insertion">**<span style="color:rgb(89, 51, 209)">Tri&nbsp;par&nbsp;insertion</span>**</a> ? En d’autres termes, si le tableau contient n éléments, combien faut&#8209;il d’instructions pour trier ce tableau ? Pour rappel, le Tri&nbsp;par&nbsp;insertion parcourt le tableau dans l'ordre et pour chaque nouvel élément, l'insère à l'emplacement correct des éléments déjà parcourus.
 
@@ -147,7 +147,7 @@ Cette somme nous donne le nombre d'éléments parcourus. Mais&nbsp;pour chacun d
 
 `````
 
-```{exercise} Complexité du Tri&nbsp;à&nbsp;bulles
+```{exercise} Complexité du Tri à bulles
 
 Quelle est la complexité de l’algorithme de <a href="../algo1/cours/2_trie_cherche_trouve/eleve.html#tri-bulles">**<span style="color:rgb(89, 51, 209)">Tri&nbsp;à&nbsp;bulles</span>**</a> ? En d’autres termes, si le tableau contient n éléments, combien faut&#8209;il d’instructions pour trier ce tableau ? Pour rappel, le Tri&nbsp;à&nbsp;bulles compare les éléments deux par deux en les réarrangeant dans le bon ordre, afin que l'élément le plus grand remonte vers la fin du tableau tel une bulle d'air dans de l'eau. Cette opération est répétée n fois, pour chaque élément du tableau.
 
@@ -227,7 +227,7 @@ La première question que l’on se pose lorsqu’on analyse un algorithme est s
 
 
 
-```{exercise} Le pire du Tri&nbsp;rapide
+```{exercise} Le pire du Tri rapide
 
 Que se passe-t-il si on essaie de trier un tableau déjà trié avec l'algorithme du **<span style="color:rgb(89, 51, 209)">Tri&nbsp;rapide</span>**, en prenant toujours comme pivot le dernier élément ? Essayer par exemple avec le tableau `[1, 2, 3, 4, 5, 6, 7]`. 
 
@@ -343,7 +343,7 @@ La notation « Grand O », que l'on utilise pour écrire mathématiquement la
 
 ````
 
-```{exercise} Le meilleur et le pire du Tri&nbsp;par&nbsp;insertion
+```{exercise} Le meilleur et le pire du Tri par insertion
 
 Que se passe-t-il si on essaie de trier un tableau déjà trié avec l'algorithme du **<span style="color:rgb(89, 51, 209)">Tri&nbsp;par&nbsp;insertion</span>** ? Essayer par exemple avec le tableau `[1, 2, 3, 4, 5, 6, 7]`. 
 
