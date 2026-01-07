@@ -55,21 +55,47 @@
 
 ## Quoi ? 
 
-Nous avons tous entendu parler des algorithmes dans les médias. Normal, c’est le mot à la mode et que tout le monde utilise sans vraiment le comprendre. Ils sont partout, ils font toutes sortes de choses, même nous manipuler. Pourquoi en parle&#8209;t&#8209;on de la même manière que des extraterrestres ? Dans ce cours, nous allons tenter de revenir sur terre, parce que les algorithmes ce n’est pas si compliqué que ça. On apprendra à les définir, à les faire marcher et surtout à reconnaître la différence entre un programme et un algorithme, ainsi qu'entre un « bon » et un « mauvais » algorithme. 
+Un **<span style="color:rgb(89, 51, 209)">{glo}`algo|algorithme`</span>**  permet de décrire la solution d'un problème étape par étape, afin qu'elle soit intelligible par une machine. Pour résoudre un problème informatique, il faut commencer par le décomposer en sous&#8209;problèmes. Et pour chacun de ces sous&#8209;problèmes, il faut décrire précisément les opérations à réaliser pour le résoudre.
+
+Il existe de nombreux algorithmes qui permettent de résoudre un problème, mais ils ne se valent pas tous. L’**<span style="color:rgb(89, 51, 209)">algorithmique</span>** étudie les propriétés des algorithmes, afin de nous aider à décider quel est le meilleur algorithme à utiliser. 
 
 <!--
+Nous avons tous entendu parler des algorithmes dans les médias. Normal, c’est le mot à la mode et que tout le monde utilise sans vraiment le comprendre. Ils sont partout, ils font toutes sortes de choses, même nous manipuler. Pourquoi en parle&#8209;t&#8209;on de la même manière que des extraterrestres ? Dans ce cours, nous allons tenter de revenir sur terre, parce que les algorithmes ce n’est pas si compliqué que ça. On apprendra à les définir, à les faire marcher et surtout à reconnaître la différence entre un programme et un algorithme, ainsi qu'entre un « bon » et un « mauvais » algorithme. 
+
 Il y a de fortes chances que vous ayez déjà entendu parler {glo}`algo|d'algorithmes` dans les médias. Il y a aussi de fortes chances que ce mot évoque pour vous des notions bien différentes de celles de votre voisin. L'objectif de ce chapitre est de vous éclairer sur la notion d'algorithme et la distinction avec la notion de programme informatique.
 -->
 
+```{figure} media/Shadok.jpeg
+---
+alt: devise shadok
+width: 300px
+
+```
+
 ## Pourquoi ? 
 
+Les algorithmes sont partout. Ils analysent vos photos, vos déplacements et votre activité sur des plateformes informatiques. Ils vous proposent des contenus à regarder et composent votre fil d'actualité. Il est important de comprendre ce qu'il y a derrière.
+
+<!--
 Les algorithmes existent depuis des millénaires. On doit le nom d'algorithme à Al&#8209;Khwârizmî, mathématicien perse né en l'an 780 dont les ouvrages ont contribué à la popularisation des chiffres arabes en Europe, ainsi que la classification de plusieurs algorithmes connus à ce moment. D'ailleurs l'algorithme le plus connu, l'algorithme d'Euclide, date environ de l'an 300 av J.&#8209;C. et permet de calculer le plus grand diviseur commun de deux nombres. Si Euclide a bien laissé des traces écrites de cet algorithme, il est vraisemblable qu'il ait puisé cette connaissance auprès de disciples de Pythagore lui&#8209;même. 
 
 Les algorithmes sont devenus très populaires aujourd'hui grâce à la machine qui a permis de les automatiser. Que ce soit dans votre smartphone, sur un ordinateur ou dans un système embarqué, ils permettent de résoudre une quantité de problèmes, facilement et avec une rapidité impressionnante.
 
+-->
+
 ## Comment ?
 
-Dans un premier temps nous allons nous intéresser à la notion même d'algorithme : qu'est&#8209;ce qui caractérise un algorithme et comment le faire exécuter par une machine ? Nous allons voir que pour un problème donné il existe de nombreuses solutions, mais que toutes ces solutions ne sont pas de *bonnes* solutions, selon le contexte dans lequel on tente de résoudre le problème. 
+Dans un premier temps nous allons nous intéresser à la notion même d'**<span style="color:rgb(89, 51, 209)">algorithme</span>** : comment décomposer la solution d'un problème en étapes ? 
+
+Dans un deuxième temps, nous allons aborder la notion de **<span style="color:rgb(89, 51, 209)">complexité</span>** qui permet de comparer différents algorithmes entre eux.
+
+Finalement, si vous le souhaitez, vous pouvez ouvrir la porte merveilleuse de la **<span style="color:rgb(89, 51, 209)">récursivité</span>**, à la manière des *Infinity Mirror Room* de Yayoi Kusama.
+
+```{figure} media/Kusama.jpeg
+---
+alt: Infinity Mirror Room de Yayoi Kusama
+width: 600px
+```
 
 
 ## Objectifs d'apprentissage
@@ -87,6 +113,18 @@ Dans un premier temps nous allons nous intéresser à la notion même d'algorith
 <br>
 
 Bienvenue dans le monde fascinant des algorithmes.
+
+vous saurez ce qui fait qu'un algorithme est un bon algorithme et quels critères prendre en considération pour choisir le meilleur algorithme. Vous verrez également qu'il existe des problèmes relativement simples que l'on n'arrive toujours pas à résoudre.
+
+<br>
+
+* Pouvoir déterminer quelle est la meilleure solution pour un problème donné, en fonction de critères objectifs.  
+
+* Comprendre pourquoi certains problème simples n'ont pas de solution exacte.
+
+* [Optionnel] Créer des fonctions récursives, qui s'appellent elles&#8209;mêmes.  
+
+
 
 
 `````{htmlonly}
