@@ -15,7 +15,7 @@ Mais avant de découvrir le code choisi pour représenter l’information à l�
 
 ## Alphabets anciens et traditionnels
 
-Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi que de nombreux {glo}`sysco|systèmes de communication`. Depuis les [sumériens](https://fr.wikipedia.org/wiki/Sum%C3%A9rien) qui utilisaient des {glo}`picto|pictogrammes` et [l’écriture cunéiforme](https://fr.wikipedia.org/wiki/Cun%C3%A9iforme), en passant par les égyptiens et leurs [hiéroglyphes](https://fr.wikipedia.org/wiki/%C3%89criture_hi%C3%A9roglyphique_%C3%A9gyptienne), les chinois et leurs [idéogrammes](https://fr.wikipedia.org/wiki/Caract%C3%A8res_chinois) pour arriver aux symboles de nos alphabets actuels (voir le [synoptique ci&#8209;dessous](#fig-synoptique)), l'espèce humaine n’a eu de cesse de mettre au point des systèmes pour représenter l’information et la {glo}`transmission|transmettre`.
+Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi que de nombreux {glo}`sysco|systèmes de communication`. Depuis les [sumériens](https://fr.wikipedia.org/wiki/Sum%C3%A9rien) qui utilisaient des {glo}`picto|pictogrammes` et [l’écriture cunéiforme](https://fr.wikipedia.org/wiki/Cun%C3%A9iforme), en passant par les égyptiens et leurs [hiéroglyphes](https://fr.wikipedia.org/wiki/%C3%89criture_hi%C3%A9roglyphique_%C3%A9gyptienne), les chinois et leurs [idéogrammes](https://fr.wikipedia.org/wiki/Caract%C3%A8res_chinois) pour arriver aux symboles de nos alphabets actuels (voir le synoptique ci&#8209;dessous), l'espèce humaine n’a eu de cesse de mettre au point des systèmes pour représenter l’information et la {glo}`transmission|transmettre`.
 
 ::::{tab-set}
 :::{tab-item} Sumérien
@@ -40,7 +40,7 @@ align: center
 :::
 
 :::{tab-item} Synoptique
-```{image} media/evolution-of-the-alphabet-color.png
+```{image} media/synoptique.png
 :height: 300px
 align: center
 name:fig-synoptique
@@ -143,13 +143,13 @@ La réponse à cette question est l'apport le plus essentiel de l'introduction d
 ````
 
 
-
 ## Le binaire
 
 À partir du moment où le [Morse](https://fr.wikipedia.org/wiki/Code_Morse_international) a été inventé comme système de {glo}`codage|codage` et de {glo}`transmission|transmission` de l'information par l'électricité, il ne manquait plus que quelques éléments pour commencer à construire les {glo}`ordinateur|ordinateurs`.
 
-Tout d'abord une pièce technologique, qui permettrait de {glo}`transmission|transmettre` pour ainsi dire cette information : le {glo}`transistor|transistor` (voir {ref}`architecture des ordinateurs <archi>`).
+;nb une pièce technologique, qui permettrait de {glo}`transmission|transmettre` pour ainsi dire cette information : le {glo}`transistor|transistor` (voir {ref}`architecture des ordinateurs <archi>`).
 
+Ensuite un {glo}`codage|code` plus élaboré que le Morse pour pouvoir représenter tous les types d'informations possibles à partor d'une alternative entre deux états : courant ou pas de courant ; allumé ou éteint ; vrai ou faux ; 1&nbsp;ou&nbsp;0.
 
 Ce {glo}`codage|code` est le {glo}`codebinaire|code binaire`. Il permet, en utilisant uniquement des 0 et des 1, de représenter n'importe quel type d'information : des chiffres, du texte, des images, du son, des vidéos, etc. 
 
