@@ -242,6 +242,20 @@ Parmi les personnes suivantes, laquelle ou lesquelles sont à l'origine du Web ?
 ```
 `````
 
+### Exercices et solutions
+
+Les balises `exercise` et `solution` permettent d'insérer des exercices qui sont numérotés
+automatiquement. Les solution apparaissent dans "dropdown" pour le document html et sont mis en fin de chapitre dans la compilation latex. Ces deux directives peuvent avoir un titre optionnel, placé à côté de
+la directive. 
+
+````{exercice} l'exerice
+Voici l'exercice
+````
+````{solution} la solution
+Voici la solution. 
+````
+
+
 ### Videos
 
 #### Vidéos YouTube
