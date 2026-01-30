@@ -9,3 +9,4 @@ qrcode
 Pillow
 svglib
 cairosvg
+sphinx-subfigure
