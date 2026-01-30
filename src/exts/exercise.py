@@ -125,7 +125,15 @@ class ToGoFurther(SphinxDirective):
     has_content = True
    
     def run(self):
+
+        ## remove from latex docs
+        if self.env.app.builder.name == "latex":
+            return []
+        
         self.assert_has_content()
+
+
+
 
         collapsible= self.options.get("collapsible","closed") # for collapsible (dropdown) admonition
         admonition = to_go_further("",collapsible=collapsible)
