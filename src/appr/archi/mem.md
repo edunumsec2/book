@@ -168,7 +168,7 @@ Ces verrous sont communs, et pour le reste du chapitre, on simplifiera la notati
 }
 ```
 
-````{dropdown} Pour aller plus loin
+````{togofurther} 
 Voici une vidéo qui illustre ce principe de verrou SR.
 
 ```{youtube} KM0DdEaY5sY
@@ -249,7 +249,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 }
 ```
 
-````{dropdown} Corrigé
+````{solution} 
 ```{logic}
 :height: 320
 :mode: tryout
@@ -323,7 +323,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 }
 ```
 
-````{dropdown} Corrigé
+````{solution}
 ```{logic}
 :height: 190
 :mode: tryout
@@ -401,7 +401,7 @@ Vous pouvez mettre l'animation en pause et exécuter chaque transition pas à pa
 }
 ```
 
-````{dropdown} Corrigé
+````{solution}
 Le signal $B$ a une fréquence deux fois plus petite que le signal $A$, et le signal $C$, de façon similaire, a une fréquence deux fois plus petite que le signal $B$. Ainsi, $B$ « bat » à 0.5 Hz et $C$ à 0.25 Hz.
 
 TODO ajouter explication
@@ -597,6 +597,6 @@ Notre dernière étape d'exploration des systèmes logiques nous a menés aux ve
 Il existe bien d'autres éléments qui composent les ordinateurs et nous n'avons pas l'occasion de tous les explorer en détail. Dans la section qui suit, faisons un saut conceptuel et parlons de l'architecture générale des ordinateurs et de la manière dont les grands composants sont interconnectés pour permettre à un ordinateur de remplir les fonctions que nous lui connaissons.
 
 
-````{dropdown} Jeu pour aller plus loin
+````{togofurther} Jeu: the nand game
 Dans le jeu en ligne « Nandgame » (<https://nandgame.com>), on construit petit à petit un ordinateur complet juste avec, à la base, des portes **NON-ET**. Elles ont la particularité (avec les portes **NON-OU**, d'ailleurs) de pouvoir simuler toutes les autres portes — y compris un inverseur.
 ````

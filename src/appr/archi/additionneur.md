@@ -290,6 +290,9 @@ On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et 
 
 Cet exercice démontre l'opportunité de penser en termes modulaires, ce qui revient souvent en informatique. Ici, on a réalisé qu'un additionneur complet résout un sous-problème bien défini d'une addition générale d'un nombre à $n$ bits, et qu'une fois qu'on a créé un tel additionneur, il suffit d'en connecter plusieurs les uns derrière les autres de manière structurée pour additionner des nombres plus grands.
 
+
+`````{htmlonly}
+
 ````{exercise} Dépassement de capacité
 
 Le schéma ci-dessous montre le même additionneur de demi-octets de l'exercice précédent, mais, de plus, la valeur en base 10 de ses 4 bits d'entrée pour $A$ et pour $B$ est affichée avec {logicref}`fulladder_4bits_test.{displayA,displayB}|un module d'affichage spécial à droite`. {logicref}`fulladder_4bits_test.{displayS}|La même chose` est faite pour représenter la valeur $S = A + B$ (mais seulement sur les quatre premiers bits de $S$). Actuellement, le circuit effectue le calcul $0 + 0 = 0$.
@@ -449,4 +452,4 @@ Déterminez quel composant est défectueux dans ce circuit et comment il faudrai
 ```{solution}
 La {logicref}`fulladder_4bits_faulty.cout2|retenue sortant du deuxième additionneur depuis la droite` est bloquée à 0 à la place de correctement changer de valeur suivant ses entrées.
 ```
-
+`````

@@ -321,7 +321,7 @@ En réutilisant les principes appliqués ci-dessus, construisez un circuit à de
 }
 ```
 
-````{dropdown} Corrigé
+````{solution}
 Voici un circuit qui réutilise le sélecteur de signal et qui fournit à ce sélecteur les deux nouvelles entrées décrites, à savoir, en haut, le **OU** exclusif de $X$ et $Y$ tel que fourni par une porte **OU-X**, et en bas, $Y$ une fois inversé par une porte **NON** :
 
 ```{logic}
@@ -386,7 +386,7 @@ En réutilisant les principes appliqués ci-dessus, construisez un circuit à un
 ```
 
 
-````{dropdown} Corrigé
+````{solution}
 
 Voici une proposition qui réutilise le sélecteur de signal et qui fournit à ce sélecteur $X$ en haut et $X$ inversé en bas :
 
@@ -497,7 +497,7 @@ Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effec
 }
 ```
 
-````{dropdown} Corrigé
+````{solution}
 ```{logic}
 :height: 400
 :mode: tryout
@@ -596,7 +596,7 @@ Ce qui nous intéresse spécialement, c'est la comparaison à la ligne 3. Cette 
 Deux nombres $A$ et $B$ sont égaux si leur différence est nulle — donc si tous les bits de sortie de la soustraction $A - B$ valent 0.
 ````
 
-````{dropdown} Corrigé avec ALU — approche arithmétique
+````{solution} avec ALU — approche arithmétique
 On connecte les 8 entrées, on règle l'opération de l'ALU sur soustraction et on utilise la sortie de l'ALU qui indique si tous les bits de sortie sont à zéro. En effet, cela ne se produit que lorsque la différence entre les deux nombres d'entrée est 0 — c'est-à-dire, s'ils sont égaux. On constate qu'on peut ignorer les 4 bits de sorties ici !
 
 ```{logic}
@@ -628,7 +628,7 @@ Plus difficile : essayez de réaliser un circuit qui calcule la même valeur d
 Une porte **OU-X** peut être vue comme un comparateur de deux bits : sa sortie vaudra 1 si et seulement si ses deux entrées sont différentes.
 ````
 
-````{dropdown} Corrigé sans ALU — approche logique
+````{solution} sans ALU — approche logique
 Cette solution utilise des portes **OU-X** comme comparateurs. On voit ici que 4 portes **OU-X** comparent deux à deux les 8 bits d'entrée. Leurs sorties sont ensuite combinées avec des portes **OU**, afin d'obtenir un signal qui vaudra 1 si au moins une différence est détectée, donc si les deux nombres d'entrées ne sont pas égaux. Il ne reste plus qu'à inverser ce signal pour obtenir la sortie demandée qui, selon la donnée, doit valoir 1 lorsque les nombres sont égaux.
 
 ```{logic}

@@ -159,7 +159,7 @@ qui est actionné électroniquement. Le capteur d'humidité (H) retourne un "1" 
 Le robinet (R) s'ouvre lorsqu'il reçoit un "1" est se ferme lorsqu'il reçoit un "0". On veut déterminer le circuit logique reliant le capteur
 d'humidité au robinet pour que le robinet s'ouvre lorsque la terre est sèche. 
 
-Ce circuit a une entrée (H) et un sortie (R). sa table de vérité est donc la suivante, si on veut que le robinet s'allume lorsque la terre est sèche et vice-versa: 
+Ce circuit a une entrée H et une sortie R. Sa table de vérité est donc la suivante, si on veut que le robinet s'allume lorsque la terre est sèche et vice-versa: 
 | $H$ | $R$ |
 |-----|-----|
 | 0   | 1   |
@@ -187,8 +187,8 @@ forme de table de vérité, que l'on convertit ensuite en une fonction logique q
 
 
 ```{exercise}
-Réaliser la table de vérité et le circuit logique qui permet de commander un store élec-
-trique en fonction de la luminosité et du vent. Un capteur de lumière renvoie 1 lorsque
+Réaliser la table de vérité et le circuit logique qui permet de commander un store électrique en fonction de la luminosité
+et du vent. Un capteur de lumière renvoie 1 lorsque
 la luminosité est forte et 0 lorsqu'elle est faible. Un capteur de vent renvoie 1 lorsqu'il
 y a du vent et 0 lorsqu'il n'y en a pas.  
 On veut baisser le store, c'est-à-dire lui envoyer un 1, lorsque la luminosité est forte
