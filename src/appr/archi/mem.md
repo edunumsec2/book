@@ -78,12 +78,69 @@ Le circuit est plus facile à utiliser lorsqu'on inverse l'entrée $Y$, comme da
 }
 ```
 
-Dans ce circuit-ci, on peut considérer que :
+Faisons la table de vérité de ce circuit. Comme sa sortie $Z$ est aussi une entrée, on doit la mettre deux fois dans la table 
+de vérité, une fois comme entrée, c'est-à-dire l'ancienne valeur de $Z$ et une fois indiquée $Z^*$ (avec un astérisque) comme sortie,
+c'est-à-dire comme nouvelle valeur de $Z$. 
+
+| $X$ | $Y$ | $Z$| $Z^*$ |
+|-----|-----|----|-------|
+| 1   |  -  | -  |   1   |
+| 0   |  1  | -  |   0   |
+| 0   |  0  | 0  |   0   |
+| 0   |  0  | 1  |   1   |
+
+Cette table de vérité a donc trois colonnes décrivant les entrées et et une colonne $Z^*$ décrivant la sortie. Pour gagner en place
+et en lisibilité, on a introduit le symbole "-" qui signifie "quelle que soit la veleur prise par cette entrée". Ainsi, si
+considère la première ligne, si $X=1$, alors $Z^*=1$ quelles que soit les valeurs de $Y$ et $Z$. En effet on sait que la sortie
+de la porte **OU** sera 1 si $X=1$, indépendamment de l'autre entrée de la porte **OU**. Cette première ligne de la table de vérité
+est donc une manière condensée d'écrire la sous-table de vérité suivante: 
+
+| $X$ | $Y$ | $Z$| $Z^*$ |
+|-----|-----|----|-------|
+| 1   |  0  | 0  |   1   |
+| 1   |  0  | 1  |   1   |
+| 1   |  1  | 0  |   1   |
+| 1   |  1  | 1  |   1   |
+
+
+
+```{exercise}
+A quelle sous-table de vérité correspond la seconde ligne la table de vérité du circuit ci-dessus ($X=0$,$Y=1$, $Z=-$, $Z^*=0$)? 
+```
+
+```{solution}
+| $X$ | $Y$ | $Z$| $Z^*$ |
+|-----|-----|----|-------|
+| 0   |  1  | 0  |   0   |
+| 0   |  1  | 1  |   0   |
+```
+
+Reprenons la table de vérité en entier de notre circuit: 
+
+| $X$ | $Y$ | $Z$| $Z^*$ |
+|-----|-----|----|-------|
+| 1   |  -  | -  |   1   |
+| 0   |  1  | -  |   0   |
+| 0   |  0  | 0  |   0   |
+| 0   |  0  | 1  |   1   |
+
+On remarque les éléments suivants_: 
+ * Si $X=1$, $Z^*$ passe à 1.
+ * Si $X=0$ et $Y=1$, $Z^*$ passe à 0.
+ * Si $X=0$ et $Y=0$, $Z^*$ conserve son ancienne valeur $Z$. 
+ 
+Autrement dit, ce circuit peur faire office de mémoire d'un bit stocké dans $Z$, car il est possible d'y écrire 1 ($X=1$),
+d'y écrire 0 ($X=0$,$Y=1$) et de conserver la valeur de $Z$ (avec $X=0$,$Y=0$). 
+
+Une autre manière de décrire le comportement de ce circuit est le la suivante:
 
  * Tant que $Y$ est inactif (donc vaut 0), le passage de $X$ de 0 à 1 fait passer la sortie $Z$ à 1. Ceci fait donc en sorte que la sortie « verrouille » sur la valeur 1, car elle garde sa valeur même si $X$ repasse à 0.
  * Tant que $X$ est inactif, le passage de $Y$ de 0 à 1 fait passer la sortie $Z$ à 0, et la sortie se « verrouille » ainsi à 0 même si $Y$ repasse à 0.
 
+
 On appelle effectivement ce genre de circuits des {glo}`verrou|verrous`. Nous avons ici construit un des plus simples. D'habitude, son entrée $X$ est appelée $S$, pour _set_ en anglais, qui dénote le stockage d'un 1, et son entrée $Y$ est appelée $R$, pour _reset_ en anglais, qui dénote sa remise à zéro. C'est le verrou dit  « SR », pour _set/reset_. Un tel verrou est donc une minicellule mémoire ! La sortie de ces cellules mémoires est fréquemment appelée $Q$ plutôt que $Z$, nous allons donc faire pareil dans la suite du texte.
+
+
 
 Voici une représentation équivalente du même circuit[^demorgan], donc du même verrou SR :
 
@@ -116,7 +173,9 @@ Voici une représentation équivalente du même circuit[^demorgan], donc du mêm
 
 Ce circuit stocke ainsi un bit de donnée — un 0 ou un 1 — qu'on va pouvoir lire via la sortie $Q$ et modifier avec les deux entrées $R$ et $S$. (La seconde sortie $\bar{Q}$ est ici toujours l'inverse de $Q$.)
 
-Testez le circuit ci-dessus et observez l'effet de $R$ et $S$ pour vérifier qu'il correspond bien à notre circuit précédent.
+````{Exercise}
+Faire la table de vérité du circuit ci-dessus et vérifier son équivalence au verrou S-R
+````
 
 On essaie en général d'éviter d'avoir un 1 sur $R$ et sur $S$ en même temps, car cela place le verrou dans un état où $\bar{Q}$ n'est plus l'inverse de $Q$. Pour cette raison, nous allons plutôt créer le circuit comme dans le schéma suivant. Les connexions sont exactement les mêmes, mais les entrées $S$ et $R$ ne restent pas à 1 lorsqu'on clique dessus, elles retombent à 0 dès que le clic se termine — elles se comportent comme des boutons poussoirs.
 
@@ -168,6 +227,10 @@ Ces verrous sont communs, et pour le reste du chapitre, on simplifiera la notati
 }
 ```
 
+
+
+
+
 ````{togofurther} 
 Voici une vidéo qui illustre ce principe de verrou SR.
 
@@ -175,6 +238,7 @@ Voici une vidéo qui illustre ce principe de verrou SR.
 :start: 4:58
 ```
 ````
+
 
 
 ## La bascule D
@@ -226,7 +290,7 @@ Pour aller plus loin, une vidéo de résumé qui parle aussi des bascules et des
 ````
 
 
-`````{exercise} Stocker deux bits
+````{exercise} Stocker deux bits
 
 Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$, et, d'autre part, le **ET** de ces deux mêmes entrées. À l'aide de bascules D, complétez le circuit de manière à ce qu'il stocke ces deux valeurs calculées lors d'un coup d'horloge et les sorte sur les sorties $P$ et $Q$, respectivement. Faites finalement en sorte que le signal $Reset$, si activé, réinitialise les bascules à 0. Vérifiez qu'une fois les valeurs stockées par les bascules, des changements sur les entrées $X$ et $Y$ n'aient pas d'effet direct sur $P$ et $Q$.
 
@@ -248,6 +312,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
   ]
 }
 ```
+````
 
 ````{solution} 
 ```{logic}
@@ -303,10 +368,9 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 }
 ```
 ````
-`````
 
 
-`````{exercise} Signal alternatif
+````{exercise} Signal alternatif
 
 À l'aide d'une bascule, créez un circuit avec une sortie $Q$ qui s'inverse à chaque coup d'horloge.
 
@@ -322,7 +386,7 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
   "out": [{"pos": [380, 90], "id": 7, "name": "Q"}]
 }
 ```
-
+````
 ````{solution}
 ```{logic}
 :height: 190
@@ -351,10 +415,9 @@ Créez un circuit qui calcule, d'une part, le **OU** de deux entrées $X$ et $Y$
 }
 ```
 ````
-`````
 
 
-`````{exercise} Jeu de fréquences
+````{exercise} Jeu de fréquences
 
 Observez le circuit ci-dessous. L'horloge principale $A$ fonctionne ici toute seule et produit un coup d'horloge par seconde (elle a donc une fréquence d'un hertz — 1 Hz). Que pouvez-vous dire des signaux $B$ et $C$ par rapport au signal $A$ ? Comment expliquer cela avec ce que vous savez des bascules ? (Pour simplifier, le délai de propagation est ici presque nul.)
 
@@ -400,18 +463,13 @@ Vous pouvez mettre l'animation en pause et exécuter chaque transition pas à pa
   ]
 }
 ```
-
+````
 ````{solution}
 Le signal $B$ a une fréquence deux fois plus petite que le signal $A$, et le signal $C$, de façon similaire, a une fréquence deux fois plus petite que le signal $B$. Ainsi, $B$ « bat » à 0.5 Hz et $C$ à 0.25 Hz.
 
-TODO ajouter explication
-
 Si ce petit circuit fonctionne à 1 Hz, les appareils que nous utilisons aujourd'hui ont des horloges qui fonctionnent à plusieurs gigahertz (GHz), c'est-à-dire plusieurs milliards de fois plus vite. On attend ainsi moins d'une nanoseconde entre deux coups d'horloge.
 ````
-`````
-
-
-## Addition en plusieurs étapes
+````{togofurther} Addition en plusieurs étapes
 
 Dans cet exemple final, nous allons construire un circuit capable d'effectuer l'addition de plusieurs nombres ; par exemple, d'évaluer la somme $1 + 4 + 5 + 3$ pour trouver $13$.
 
@@ -579,10 +637,10 @@ Ce circuit fonctionne ainsi : au début du calcul, on réinitialise les bascul
 
 On réalise ici l'importance du coup d'horloge : si les bascules stockaient immédiatement la valeur livrée par l'ALU sans attendre le coup d'horloge, on retrouverait presque sans délai cette valeur sur la sortie des bascules et donc… à l'entrée $A$ de l'ALU, qui recalculerait immédiatement la somme de cette valeur et de l'entrée $B$, livrerait le résultat sur la sortie vers les bascules, qui feraient à nouveau la propagation immédiate de ceci sur leurs sorties et sur l'entrée $A$ de l'ALU, etc. — le système s'emballerait. Le signal d'horloge veille à ce que l'opération de stockage et de propagation soit coordonnée et se passe au bon moment.
 
-`````{exercise} Additions avec bascules
-
+```{exercise} Additions avec bascules
 Suivez la procédure décrite ci-dessus pour effectuer l'addition $1 + 4 + 5 + 3 = 13$.
-`````
+```
+````
 
 ## Récapitulatif
 

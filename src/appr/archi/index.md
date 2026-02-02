@@ -1,25 +1,46 @@
 (archi)=
 
 # Architecture des ordinateurs
-
+````{htmlonly}
 ```{toctree}
-:maxdepth: 2
-:hidden:
-:numbered: 2
+   :maxdepth: 2
+   :hidden:
+   :numbered: 2
 intro
 portes
 sys-log
 additionneur
 alu
 mem
-micro-pro
-archi-gen
-tp1 :only: html
-tp2 :only: html
-tp3 :only: html
-tp4 :only: html
-tp5 :only: html
+tp1
+tp2
+tp3
+tp4
+tp5
 ```
+````
+
+````{latexonly}
+```{toctree}
+   :maxdepth: 2
+   :hidden:
+   :numbered: 2
+intro
+portes
+sys-log
+additionneur
+alu
+mem
+```
+````
+
+
+
+<!-- tp2.md :only: html -->
+<!-- tp3.md :only: html -->
+<!-- tp4.md :only: html -->
+<!-- tp5.md :only: html -->
+<!-- ``` -->
 
 <!-- <iframe src='https://timeline.knightlab.com/examples/houston/index.html' width='600' height='600' frameborder='0'></iframe> -->
 
