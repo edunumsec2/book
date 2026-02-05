@@ -249,7 +249,7 @@ Essayez ce circuit pour confirmer qu'il agit comme un sélecteur : lorsque $Op
 }
 ```
 
-Ceci nous permet de compléter le circuit lacunaire de début de chapitre pour sélectionner avec le même mécanisme soit {logicref}`and_or_full.or|le **OU**` soit {logicref}`and_or_full.and|le **ET**` de nos deux entrées $X$ et $Y$. On ajoute {logicref}`and_or_full.{muxinv,muxand0,muxand1,muxor}|les portes de notre sélecteur` en connectant à l'entrée $A$ {logicref}`and_or_full.muxin0|le signal représentant $X$ **OU** $Y$`, et à l'entrée $B$ {logicref}`and_or_full.muxin1|le signal représentant $X$ **ET** $Y$` :
+Ceci nous permet de compléter le circuit lacunaire de début de chapitre pour sélectionner avec le même mécanisme soit {logicref}`and_or_full.or|le **OU**` soit {logicref}`and_or_full.and|le **ET**` de nos deux entrées $X$ et $Y$. On ajoute {logicref}`and_or_full.{muxinv,muxand0,muxand1,muxor}|les portes de notre sélecteur` en connectant à l'entrée $A$ {logicref}`and_or_full.muxin0|le signal représentant $X$ **OU** $Y$`, et à l'entrée $B$ {logicref}`and_or_full.muxin1|le signal représentant` $X$ **ET** $Y$:
 
 ```{logic}
 :height: 300

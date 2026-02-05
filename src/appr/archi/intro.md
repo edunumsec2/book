@@ -124,7 +124,7 @@ Le {glo}`transistor|transistor` est aujourd'hui la brique de base de constructio
 
 ````{subfigure} AB
 :height: 350px
-:width: 800px
+:width: 650px
 :align: left
 :gap: 8px
 :subcaptions: below
@@ -157,7 +157,7 @@ Chercher à se représenter la taille des transistors utilisés dans les micropr
 Il reste difficile de concevoir des circuits d'ordinateurs en réfléchissant en termes de transistors. Pour s'aider on utilise des circuits électroniques qui réalisent
 des opérations logiques. En effet, on peut convenir que la valeur binaire 1  correspond à la valeur logique "Vrai" et à la présence d'une tension dans à un endroit spécifique
 d'un circuit et que la valeur binaire 0 correspond à la valeur logique "Faux" et à l'absence de tension. On a ainsi une équivalence entre des opérations logiques, des calculs
-binaires et des circuits électroniques. Cela est essentiel pour concevoir des circuits électroniques qui réalisent des calculs binaires comme il en existent dans les ordinateurs
+binaires et des circuits électroniques. Cela est essentiel pour concevoir des circuits électroniques qui réalisant des calculs binaires comme il en existent dans les ordinateurs
 ou les calculatrices. Cette correspondance est résumée par la tableau suivant: 
 
 |binaire| logique | électronique                 |

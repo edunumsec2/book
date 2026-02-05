@@ -115,7 +115,7 @@ Cela peut se simpifier en $S_0$ = A **OU-X** (B **OU-X** $C_{in}$)
 
 Pour $C_{out}$, on remarque qu'il vaut 1, s'il y a au moins deux 1 parmi les trois entrées. Donc si A est 0 on est obligé d'avoir B et $C_{in}$ à 1 pour que $C_{out}$ soit à 1. Si A est 1, alors il suffit que B ou C vale 1 pour que $C_{out}$ soit à 1.
 
-Autrement dit $C_{out}$ = A **ET** (B **OU** $C_{in}$) **OU** (B **ET** $C_{in}$)
+Autrement dit $C_{out}$ = (A **ET** (B **OU** $C_{in}$)) **OU** (B **ET** $C_{in}$)
 
 Le circuit correspondant est donc le suivant: 
 

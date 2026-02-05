@@ -228,14 +228,62 @@ Ces verrous sont communs, et pour le reste du chapitre, on simplifiera la notati
 ```
 
 
-
-
-
 ````{togofurther} 
 Voici une vidéo qui illustre ce principe de verrou SR.
 
 ```{youtube} KM0DdEaY5sY
 :start: 4:58
+```
+````
+
+````{exercise}
+Déterminer la table de vérité du circuit suivant et indique s'il peut être utilisé comme une mémoire d'un bit. Si oui,
+indiquer comment y écrire un 0, comment y écrire un 1, et comment garder la dernière valeurs écrite. Sinon, indiquer
+pourquoi. 
+```{logic}
+:id: brgnW5
+:height: 195
+:mode: static
+
+{ // JSON5
+  v: 7,
+  opts: {hideWireColors: true, hideInputColors: true, hideOutputColors: true},
+  components: {
+    in0: {type: 'in', pos: [130, 50], id: 0, name: 'A'},
+    in1: {type: 'in', pos: [130, 145], id: 1, name: 'B', val: 1},
+    nand0: {type: 'nand', pos: [290, 60], in: [2, 3], out: 4},
+    nand1: {type: 'nand', pos: [285, 135], in: [5, 6], out: 7},
+    out0: {type: 'out', pos: [420, 60], id: 8, name: 'Q'},
+    out1: {type: 'out', pos: [420, 135], id: 9, name: '~Q'},
+  },
+  wires: [[1, 6], [7, 3], [4, 5], [0, 2], [4, 8], [7, 9]]
+}
+```
+````
+
+
+````{exercise}
+Déterminer la table de vérité du circuit suivant et indique s'il peut être utilisé comme une mémoire d'un bit. Si oui,
+indiquer comment y écrire un 0, comment y écrire un 1, et comment garder la dernière valeurs écrite. Sinon, indiquer
+pourquoi. 
+```{logic}
+:id: brgnW5
+:height: 195
+:mode: static
+
+{ // JSON5
+  v: 7,
+  opts: {hideWireColors: true, hideInputColors: true, hideOutputColors: true},
+  components: {
+    in0: {type: 'in', pos: [130, 50], id: 0, name: 'A'},
+    in1: {type: 'in', pos: [130, 145], id: 1, name: 'B', val: 1},
+    nand0: {type: 'nand', pos: [290, 60], in: [2, 3], out: 4},
+    nand1: {type: 'nor', pos: [285, 135], in: [5, 6], out: 7},
+    out0: {type: 'out', pos: [420, 60], id: 8, name: 'Q'},
+    out1: {type: 'out', pos: [420, 135], id: 9, name: '~Q'},
+  },
+  wires: [[1, 6], [7, 3], [4, 5], [0, 2], [4, 8], [7, 9]]
+}
 ```
 ````
 
