@@ -254,13 +254,35 @@ pourquoi.
     nand0: {type: 'nand', pos: [290, 60], in: [2, 3], out: 4},
     nand1: {type: 'nand', pos: [285, 135], in: [5, 6], out: 7},
     out0: {type: 'out', pos: [420, 60], id: 8, name: 'Q'},
-    out1: {type: 'out', pos: [420, 135], id: 9, name: '~Q'},
+    out1: {type: 'out', pos: [420, 135], id: 9, name: 'Q̅'},
   },
   wires: [[1, 6], [7, 3], [4, 5], [0, 2], [4, 8], [7, 9]]
 }
 ```
 ````
+````{solution}
+La table de vérité de ce circuit est la suivante. 
 
+| $A$ | $B$ | $Q$| $\bar{Q}$ | $Q^{*}$| $\bar{Q}^{*}$ |commentaire
+|-----|-----|----|-----------|----|-------|----------|
+| 0   |  0  | -  |   -   	 | 1  |   1   | inutilisé
+| 0   |  1  | -  |   -   	 | 1  |   0   |écrit 1
+| 1   |  0  | -  |   -   	 | 0  |   1   |écrit 0
+| 1   |  1  | 0  |   0   	 | 0 ou 1  |  1 ou 0   | intdéterminé
+| 1   |  1  | 0  |   1   	 | 0  |  1    | conserve 0
+| 1   |  1  | 1  |   0   	 | 1  |   0   | conserve 1
+| 1   |  1  | 1  |   1   	 | 0 ou 1  |  1 ou 0   | indéterminé
+
+On constate d'abord que deux lignes de cette table de vérité sont indéterminées. En effet, si $A$ et $B$ valent 1 et
+$Q$ et $\bar{Q}$ sont égaux (0 ou 1), alors un parmi $Q$ ou $\bar{Q}$ va basculer à 1 alors que l'autre se mettra à 0.
+(Lequel passera à 0 et lequel à 1 dépendra de la situation initiale est des "impuretés" du circuit, telles que la longueur et résistance des fils, les caractéristiques des transistors, etc.)
+Si on considère que $Q$ est le bit gardé en mémoire, on observe qu'en mettant $A=0$ et $B=1$, on met $Q$$ à 1, quelle
+que soit son ancienne valeur. (2e ligne). Cela
+revient donc à écrire un dans la mémoire. Pour écrire $0$, on met $A=1$ et $B=0$ (3e ligne). Pour conserver la valeur de $Q$
+il fait mettre $A=1$ et $B=1$, (lignes 5 et 6). Dans ce cas, $Q$ conserve sont ancienne valeur. Par conséquent
+ce circuit faire office de mémoire d'un bit. 
+
+````
 
 ````{exercise}
 Déterminer la table de vérité du circuit suivant et indique s'il peut être utilisé comme une mémoire d'un bit. Si oui,
@@ -280,13 +302,33 @@ pourquoi.
     nand0: {type: 'nand', pos: [290, 60], in: [2, 3], out: 4},
     nand1: {type: 'nor', pos: [285, 135], in: [5, 6], out: 7},
     out0: {type: 'out', pos: [420, 60], id: 8, name: 'Q'},
-    out1: {type: 'out', pos: [420, 135], id: 9, name: '~Q'},
+    out1: {type: 'out', pos: [420, 135], id: 9, name: "Q̅"},
   },
   wires: [[1, 6], [7, 3], [4, 5], [0, 2], [4, 8], [7, 9]]
 }
 ```
 ````
 
+````{solution}
+La table de vérité de ce circuit est la suivante. 
+
+| $A$ | $B$ | $Q$| $\bar{Q}$ | $Q^{*}$| $\bar{Q}^{*}$ |commentaire
+|-----|-----|----|-----------|----|-------|----------|
+| -   |  1  | -  |   -   	 | 1  |   0   | écrit 1
+| 0   |  -  | -  |   -   	 | 1  |   0   |écrit 1
+| 1   |  0  | 0  |   0   	 | 0 ou 1  |  1 ou 0   | intdéterminé
+| 1   |  0  | 0  |   1   	 | 0  |  1    | conserve 0
+| 1   |  0  | 1  |   0   	 | 1  |   0   | conserve 1
+| 1   |  0  | 1  |   1   	 | 0 ou 1  |  1 ou 0   | indéterminé
+
+A nouveau, deux lignes de cette table de vérité sont indéterminées.
+Si on considère que $Q$ est le bit gardé en mémoire, on observe qu'en mettant $A=0$ ou $B=1$, on met $Q$ à 1, quelle
+que soit son ancienne valeur. (1e et 2e ligne). Cela
+revient donc à écrire un dans la mémoire. Par contre, il n'y pas moyen d'écrire 0 dans $Q$. Pour conserver la valeur de $Q$
+il fait mettre $A=1$ et $B=0$, (lignes 4 et 5). Dans ce cas, $Q$ conserve sont ancienne valeur. Ainsi
+ce circuit ne peut pas faire office de mémoire d'un bit, car on ne peut y écrire que la valeur 1. 
+
+````
 
 
 ## La bascule D
