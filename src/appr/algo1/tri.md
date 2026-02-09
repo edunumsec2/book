@@ -55,33 +55,17 @@ En lien avec les ingrédients d’un algorithme, déterminer les données en ent
 
 Quels types d'opérations avez&#8209;vous effectuées ? 
 ````
-
-`````{htmlonly} 
-````{solution} 
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-Si&nbsp;on remplace les rectangles de la ligne du haut par un nombre qui représente leur taille, on obtient la liste&nbsp;`[3, 4, 1, 2, 6, 5]`. Le plus important est que l'ordre des nombres conserve l'ordre de la taille des rectangles. Après le tri, si l'algorithme est correct, vous devriez vous retrouver avec la&nbsp;liste&nbsp;`[1, 2, 3, 4, 5, 6]`. Les opérations et les dispositions intermédiaires exactes dépendent de l'algorithme que vous avez utilisé. 
-
-Les données en entrée sont les rectangles sur la ligne du haut : leur taille et l'ordre de leur taille, ici &nbsp;`[3, 4, 1, 2, 6, 5]`. Le résultat en sortie correspond aux rectangles sur la ligne du bas : l'ordre croissant de leur taille, ici&nbsp;`[1, 2, 3, 4, 5, 6]`. 
-
-Les types d'opérations que vous avez effectuées sont des comparaisons de la taille de deux rectangles et des déplacements de rectangles.
-
-```
-````
 `````
-````{latexonly} 
-```{solution} 
+
+````{solution} 
+
 
 Si&nbsp;on remplace les rectangles de la ligne du haut par un nombre qui représente leur taille, on obtient la liste&nbsp;`[3, 4, 1, 2, 6, 5]`. Le plus important est que l'ordre des nombres conserve l'ordre de la taille des rectangles. Après le tri, si l'algorithme est correct, vous devriez vous retrouver avec la&nbsp;liste&nbsp;`[1, 2, 3, 4, 5, 6]`. Les opérations et les dispositions intermédiaires exactes dépendent de l'algorithme que vous avez utilisé. 
 
 Les données en entrée sont les rectangles sur la ligne du haut : leur taille et l'ordre de leur taille, ici &nbsp;`[3, 4, 1, 2, 6, 5]`. Le résultat en sortie correspond aux rectangles sur la ligne du bas : l'ordre croissant de leur taille, ici&nbsp;`[1, 2, 3, 4, 5, 6]`. 
 
 Les types d'opérations que vous avez effectuées sont des comparaisons de la taille de deux rectangles et des déplacements de rectangles.
-
-```
 ````
-
 
 
 <br>
@@ -116,24 +100,10 @@ Noter l’ordre des éléments à&nbsp;chaque fois qu’il change. Vous aurez be
 
 ````
 
-`````{htmlonly} 
+
 ````{solution} 
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
 La solution est donnée dans la suite du chapitre et est illustrée dans la figure **Algorithmes&nbsp;de&nbsp;tri** ci&#8209;dessous.
-
-```
 ````
-`````
-````{latexonly} 
-```{solution} 
-
-La solution est donnée dans la suite du chapitre et est illustrée dans la figure **Algorithmes&nbsp;de&nbsp;tri**.
-
-```
-````
-
 
 ````{note} Quand on cherche on trouve. Vraiment ?
 
@@ -174,22 +144,10 @@ Notez que même si tous les {glo}`algo|algorithmes` arrivent à la même solutio
 Rappelez&#8209;vous quelle méthode vous avez utilisée pour résoudre le premier exercice. De quel algorithme de tri se rapproche-t-elle le plus ? 
 ````
 
-`````{htmlonly} 
+
 ````{solution} 
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
 Cela dépend de votre solution du premier exercice. Vous avez probablement utilisé la méthode du tri&nbsp;par&nbsp;sélection ou du tri&nbsp;à&nbsp;bulles.
-```
 ````
-`````
-````{solution} 
-```{latexonly}
-
-Cela dépend de votre solution du premier exercice. Vous avez probablement utilisé la méthode du tri&nbsp;par&nbsp;sélection ou du tri&nbsp;à&nbsp;bulles.
-```
-````
-
 
 ````{didyouknow} Tri stupide
 
@@ -208,11 +166,7 @@ Imaginons que ce qui prend le plus de temps est un ***déplacement***. Dans ce c
 
 ````
 
-`````{htmlonly} 
 ````{solution} 
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
 Le décompte des opérations effectuées, en se référant à la <a href="#fig-algos-tri">figure **Algorithmes de tri**</a> est comme suit :
 
 **<span style="color:rgb(89, 51, 209)">Tri&nbsp;par&nbsp;insertion</span>** : 9 comparaisons deux par deux (flèches et points rouges) et 5 déplacements deux par deux (flèches rouges). Notez que pour insérer un élément en première position, il faut tout d'abord l'échanger avec l'élément juste devant, puis avec l'élément avant, et ainsi de suite jusqu'à arriver à la première position.
@@ -224,29 +178,7 @@ Le décompte des opérations effectuées, en se référant à la <a href="#fig-a
 Si&nbsp;ce qui prend beaucoup de temps est la comparaison de la taille de deux rectangles, il ne faudrait pas utiliser le tri&nbsp;par&nbsp;sélection, car il comporte le plus grand nombre de comparaisons et il serait le plus lent. Si&nbsp;c’est le déplacement de deux rectangles qui coûte beaucoup de temps, cette fois&#8209;ci le tri&nbsp;par&nbsp;sélection serait le plus rapide (avec 3 rectangles qui échangent leur position). Donc, selon l'implémentation sur la machine, le tri&nbsp;par&nbsp;sélection serait le plus lent ou le plus rapide des trois algorithmes.
 
 Ces résultats sont valables pour cette configuration en particulier. Si&nbsp;on trie un autre tableau, la performance des trois algorithmes pourrait changer. Le choix du meilleur algorithme dépend donc de l’implémentation et de la situation initiale. Notez finalement qu’il existe des algorithmes de tri bien plus rapides que les trois algorithmes considérés ici.
-```
 ````
-`````
-````{latexonly} 
-```{solution} 
-
-Le décompte des opérations effectuées, en se référant à la <a href="#fig-algos-tri">figure **Algorithmes de tri**</a> est comme suit :
-
-**<span style="color:rgb(89, 51, 209)">Tri&nbsp;par&nbsp;insertion</span>** : 9 comparaisons deux par deux (flèches et points rouges) et 5 déplacements deux par deux (flèches rouges). Notez que pour insérer un élément en première position, il faut tout d'abord l'échanger avec l'élément juste devant, puis avec l'élément avant, et ainsi de suite jusqu'à arriver à la première position.
-
-**<span style="color:rgb(89, 51, 209)">Tri&nbsp;par&nbsp;sélection</span>** : 15 comparaisons deux par deux (lignes en dessous) et 3 déplacements deux par deux (flèches rouges).
-
-**<span style="color:rgb(89, 51, 209)">Tri&nbsp;à&nbsp;bulles</span>** : 9 comparaisons deux par deux (lignes en dessous) et 5 déplacements deux par deux (flèches rouges). 
-
-Si&nbsp;ce qui prend beaucoup de temps est la comparaison de la taille de deux rectangles, il ne faudrait pas utiliser le tri&nbsp;par&nbsp;sélection, car il comporte le plus grand nombre de comparaisons et il serait le plus lent. Si&nbsp;c’est le déplacement de deux rectangles qui coûte beaucoup de temps, cette fois&#8209;ci le tri&nbsp;par&nbsp;sélection serait le plus rapide (avec 3 rectangles qui échangent leur position). Donc, selon l'implémentation sur la machine, le tri&nbsp;par&nbsp;sélection serait le plus lent ou le plus rapide des trois algorithmes.
-
-Ces résultats sont valables pour cette configuration en particulier. Si&nbsp;on trie un autre tableau, la performance des trois algorithmes pourrait changer. Le choix du meilleur algorithme dépend donc de l’implémentation et de la situation initiale. Notez finalement qu’il existe des algorithmes de tri bien plus rapides que les trois algorithmes considérés ici.
-```
-````
-
-
-
-
 
 ## Comparaison d’algorithmes
 
