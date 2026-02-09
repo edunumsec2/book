@@ -316,7 +316,7 @@ La table de vérité de ce circuit est la suivante.
 |-----|-----|----|-----------|----|-------|----------|
 | -   |  1  | -  |   -   	 | 1  |   0   | écrit 1
 | 0   |  -  | -  |   -   	 | 1  |   0   |écrit 1
-| 1   |  0  | 0  |   0   	 | 0 ou 1  |  1 ou 0   | intdéterminé
+| 1   |  0  | 0  |   0   	 | 0 ou 1  |  1 ou 0   | indéterminé
 | 1   |  0  | 0  |   1   	 | 0  |  1    | conserve 0
 | 1   |  0  | 1  |   0   	 | 1  |   0   | conserve 1
 | 1   |  0  | 1  |   1   	 | 0 ou 1  |  1 ou 0   | indéterminé
