@@ -1,4 +1,18 @@
+# Comité de suivi
+Les personnes suivantes sont actuellement dans le comité de suivi de modulo
+ 
+ - Jérôme Amiguet (Gymnase de Morges)
+ - Romain Edelmann (Gymnase de Burier)
+ - Micha Hersch (Gymnase de Renens)
+ - Raphaël Holzer (Gymnase du Bugnon)
+ - Biljana Petreska (Gymnase d'Yverdon)
+ - Philippe Rochat (Gymnase de Morges)
+ - Jonathan Vasseur (Gymnase Auguste Picard)
+ 
+ 
 # Comité de rédaction
+
+Les personnes suivantes ont participé à la conception initiale de ces ressources entre 2020 et 2023. 
 
 - **Représentation de l'information** : 
     - David Da Silva (Gymnase de Chamblandes)

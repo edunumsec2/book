@@ -6,7 +6,7 @@ Activités <activ/index>
 ```
 
 ## Résumé
-Le but de ce chapitre est décrire brièvement le fonctionnement d'internet et du web. Le chapitre a été rédigé dans le but
+Le but de ce chapitre est de décrire brièvement le fonctionnement d'Internet et du web. Le chapitre a été rédigé dans le but
 de transmettre les notions suivantes aux élèves. 
 
 1. Internet n'est pas tombé du ciel, il s'est développé dans un certain contexte historique et social et est le résultats
@@ -17,10 +17,10 @@ faire un réseau *décentralisé* était un choix stratégique fondamental.
 de cet adressage sur la base du partage de l'espace en états s'est quand même imposée.
 
 1. Le protocole est le moyen par lequel les humains de mettent d'accord sur la manière dont les machines vont communiquer.
-En soi, le protocole répond à des considération pratiques et a une part d'arbitraire, mais dans un contexte décentralisé
+En soi, le protocole répond à des considérations pratiques et a une part d'arbitraire, mais dans un contexte décentralisé
 l'engagement de tous les acteurs à l'appliquer est fondamental.
 
-1. La commutation par paquets permets de fluidifier la communication en maintenant les lignes ouvertes
+1. La commutation par paquets permet de fluidifier la communication en maintenant les lignes ouvertes
 
 1. Le routage se fait de manière décentralisée. 
 

@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
         <ContainerLarge className="bg-purple-dark">
           <Container>
             <p className="w-full h-full text-center text-white py-1">
-              version actuelle des ressources : 2024-09-13
+              {/* version actuelle des ressources : 2024-09-13 */}
             </p>
           </Container>
         </ContainerLarge>

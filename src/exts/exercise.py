@@ -31,7 +31,7 @@ class Exercise(SphinxDirective):
 
         # admonition = nodes.admonition("", classes=["admonition", "note"])
         admonition = exercise()
-        admonition.set_class("note")
+        admonition["classes"] += "note"
 
         label = self.arguments[0] if len(self.arguments) > 0 else None
 
@@ -84,9 +84,10 @@ class Exercise(SphinxDirective):
 #     def run(self):
 #         self.assert_has_content()
 
+
 #         #admonition = nodes.admonition("", classes=["admonition", "hint"])
 #         admonition = solution()
-#         admonition.set_class("hint")
+#        admonition["classes"] += "hint"
 
 #         title = "Solution"
 #         last_question = Solution.lastQuestion.get(self.env.docname, None)

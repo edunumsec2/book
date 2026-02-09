@@ -12,7 +12,9 @@ const Apropos = () => (
         Modulo s’inscrit dans le projet d’éducation numérique mis en place par
         le canton de Vaud. Parallèlement, il répond à l’ordonnance fédérale
         visant à introduire l’informatique comme discipline obligatoire au
-        gymnase, voie maturité.
+          gymnase, voie maturité. Une description plus détaillée de cette
+	  démarche a été publiée dans un numéro spéacial de la  <a href="https://irem.univ-grenoble-alpes.fr/revues/petit-x/consultation/numero-119-special-informatique-petit-x/1-modulo-des-moyens-d-enseignement-de-l-informatique-a-visee-participative-1351544.kjsp?RH=1702464606726" target="_blank"> revue Petit x </a>. 
+	  
       </Text>
       <H2>Objectifs</H2>
       <Text>
