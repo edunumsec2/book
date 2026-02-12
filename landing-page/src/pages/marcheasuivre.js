@@ -3,6 +3,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 import { Seo } from "../components/seo"
 import { H1, H2, Text, Container } from "../global-styles"
+import Video from "../components/video"
 
 const Contrib = () => (
   <Layout>
@@ -17,7 +18,8 @@ const Contrib = () => (
 	  le chapitre concerné) en y incluant également le mot-clé "Modulo". Ceci permettra à l'équipe de modération de
 	  recenser les contributions et d'en inclure une sélection dans modulo, selon l'un des deux niveau de contribution
 	  ci-dessous.
-
+	  Un petit tutoriel illustrant comment mettre son contenu sur la BDRP est disponible
+	  <a href="https://www.scolcast.ch/podcast/modulo" target="_blank"> ici </a>. 
       </Text>
       <H2>Contributions externes</H2>
       <Text>

@@ -1,7 +1,7 @@
-furo==2024.8.6
-myst-parser==4.0.1
-Sphinx>8.2
-sphinx-autobuild==2024.10.3
+furo==2025.12.19
+myst-parser==5.0.0
+Sphinx==9.1.0
+sphinx-autobuild==2025.08.25
 sphinx-design
 lzstring
 pytest-playwright
