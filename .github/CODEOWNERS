@@ -9,7 +9,6 @@
 
 # Pour la partie Représentation de l'information : 
 /src/appr/rep-info/ @dasilvadds
-/src/appr/rep-info/ @ofleveque
 
 # Pour la partie Programmation : 
 /src/appr/prog1/ @rasql
@@ -20,8 +19,8 @@
 # Pour la partie Algorithmique : 
 /src/appr/algo1/ @biljana-petreska-gyyv
 /src/appr/algo1/ @mihersch
-/src/appr/algo1/ @biljana-petreska-gyyv
-/src/appr/algo1/ @mihersch
+/src/appr/algo2/ @biljana-petreska-gyyv
+/src/appr/algo2/ @mihersch
 
 # Pour la partie Architecture des ordinateurs : 
 /src/appr/archi/ @jppellet
@@ -37,7 +36,6 @@
 
 # Pour la partie Représentation de l'information : 
 /src/ens/rep-info/ @dasilvadds
-/src/ens/rep-info/ @ofleveque
 
 # Pour la partie Programmation : 
 /src/ens/prog1/ @rasql
@@ -62,6 +60,6 @@
 /src/ens/hist/ @prochat
 
 # Pour la partie Enjeux sociaux : 
-/src/ens/enjx/ @soniaagrebi
+/src/ens/enjx/ @mihersch
 
 
