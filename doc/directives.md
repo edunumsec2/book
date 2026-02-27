@@ -248,12 +248,14 @@ Les balises `exercise` et `solution` permettent d'insérer des exercices qui son
 automatiquement. Les solution apparaissent dans "dropdown" pour le document html et sont mis en fin de chapitre dans la compilation latex. Ces deux directives peuvent avoir un titre optionnel, placé à côté de
 la directive. 
 
+`````{tabbed} Aperçu
 ````{exercice} l'exerice
 Voici l'exercice
 ````
 ````{solution} la solution
 Voici la solution. 
 ````
+`````
 
 
 ### Videos
