@@ -524,17 +524,14 @@ Quelle est la définition d’une feuille scannée de largeur 6,5 pouces, de h
 C'est la quantité de mémoire vive minimale que nécessite la carte graphique (VRAM) pour un écran de définition 1024x768 en true color.
 ````
 `````
-`````{exercise} Compression
+```{exercise} Compression
 
 1. Une image de couleur a pour format : 360 × 270. Elle est enregistrée en bitmap 8 bits. Quelle est sa taille sur le disque dur (détaillez les calculs) ? 
 
-3. Une image noir et blanc de format 1024 × 1024 est enregistrée en JPG. Le taux de compression est de 50%. Quelle est sa taille sur le disque dur (détaillez les calculs) ? 
+2. Une image noir et blanc de format 1024 × 1024 est enregistrée en JPG. Le taux de compression est de 50%. Quelle est sa taille sur le disque dur (détaillez les calculs) ? 
 
-````{htmlonly}
-```{admonition} Réponse
-:class: hint
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
+```
+```{solution}
 1. On multiplie 360 × 270 = 97200 pour obtenir le nombre de pixels. Poids de chaque pixel : 24 bits = 24/8 octets = 3 octets.
 
    La taille en mémoire se calcule par 97200 × 3 = 291600 octets = 291600/1024 Ko ≈ 285 Ko.
@@ -543,8 +540,7 @@ C'est la quantité de mémoire vive minimale que nécessite la carte graphique (
 
    Comme le taux de compression est de 50%, on divise par 2 : 1048576/2 = 524288 bits = 65536 octets = 65536/1024 Ko = 64 Ko.
 
-````
-`````
+```
 ````{exercise} Appareil photo
 
 L’appareil numérique FinePix2400Z (Fujifilm) permet la prise de vue avec trois définitions : a) 640x480 pixels ; b) 1280x960 pixels ; c) 1600x1200 pixels.
