@@ -45,7 +45,7 @@ Dans cette partie vous allez, tout seul ou en groupe, mettre en pratique vos con
 
 Limor Fried 🇺🇸
 ^^^^^
-***Né en 1980***
+***Née en 1980***
 
 L'ingénieure [**Limor Fried**](https://fr.wikipedia.org/wiki/Limor_Fried) est la créatrice de la société d'électronique [Adafruit Industries](https://www.adafruit.com). Elle est une personne influente au sein de la communauté de l'open source hardware. Elle est aussi connue sous le pseudo de ladyada, un hommage à [Ada Lovelace](https://en.wikipedia.org/wiki/Ada_Lovelace).
 :::

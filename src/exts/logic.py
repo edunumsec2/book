@@ -173,9 +173,11 @@ class logic_diagram(nodes.Element, nodes.General):
 
 
 def begin_logic_diagram_html(self: SphinxTranslator, node: Node) -> None:
+    Falsy = (False, "false", "False", "0", None)
     content = node["content"].strip()
     ref = node["ref"]
-    autosave = node["autosave"]
+    autosave = node["autosave"] not in Falsy
+    norestore = node["norestore"] not in Falsy
     id = node["id"]
     height = node["height"]
     mode = node["mode"]
@@ -205,6 +207,8 @@ def begin_logic_diagram_html(self: SphinxTranslator, node: Node) -> None:
         attrs_str += ' showonly="' + showonly + '"'
     if autosave:
         attrs_str += ' autosave'
+    if norestore:
+        attrs_str += ' norestore'
 
     self.body.append(
         "<logic-editor" + attrs_str + ">" + "\n" + '<script type="application/json">' + "\n" + content + "\n"
@@ -273,7 +277,8 @@ class LogicDiagram(SphinxDirective):
     option_spec = {
         "ref": directives.unchanged,
         "id": directives.unchanged,  # alternative to ref
-        "autosave": directives.flag,
+        "autosave": directives.unchanged,
+        "norestore": directives.unchanged,
         "height": directives.positive_int,
         "mode": directive_mode,
         "showonly": directives.unchanged,
@@ -286,6 +291,7 @@ class LogicDiagram(SphinxDirective):
         ref = self.options.get("ref", "")
         id = self.options.get("id", "")
         autosave = self.options.get("autosave", False)
+        norestore = self.options.get("norestore", False)
         height = self.options.get("height", 500)
         mode = self.options.get("mode", "")
         showonly = self.options.get("showonly", "")
@@ -296,6 +302,7 @@ class LogicDiagram(SphinxDirective):
             ref=ref,
             id=id,
             autosave=autosave,
+            norestore=norestore,
             height=height,
             mode=mode,
             showonly=showonly,
