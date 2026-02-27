@@ -6,12 +6,9 @@ Nous venons de voir que pour rechercher de manière efficace, les données doive
 
 Pour rappel, l'{glo}`algo|algorithme` du <a href="../algo1/cours/2_trie_cherche_trouve/eleve.html#tri-selection">**<span style="color:rgb(89, 51, 209)">Tri&nbsp;par&nbsp;sélection</span>**</a> parcourt le tableau à la recherche des plus petits éléments. Afin de trouver le plus petit élément du tableau, il faut commencer par parcourir tous les éléments du tableau. Cette opération prend $cn$&nbsp;{glo}`instruction|instructions` :&nbsp;$c$&nbsp;instructions pour l’accès et la comparaison des éléments du tableau, multiplié par le nombre d’éléments&nbsp;$n$. Il faut ensuite trouver le plus petit élément des éléments restants&nbsp;$n-1$, et ainsi de suite. Concrètement, on va parcourir jusqu'à $n$ éléments, $n$&nbsp;fois (pour chacun des éléments). La complexité du Tri&nbsp;par&nbsp;sélection est donc proportionnelle à $n * n$&nbsp;($n^{2}$), on parle de complexité&nbsp;**<span style="color:rgb(89, 51, 209)">quadratique</span>**. 
 
-``````{htmlonly} 
 
-`````{togofurther} Calcul de complexité
 
-````{dropdown} <span style="color:grey">Si vous souhaitez connaître les détails du calcul de complexité, cliquez pour lire ce qui suit.</span>
-:animate: fade-in-slide-down
+```{togofurther} Calcul de complexité
 
 Pour calculer la somme totale d'instructions nécessaires, il faut additionner les termes qui permettent de retrouver le plus petit élément. La première fois que l'on recherche le plus petit élément il faut parcourir $n$&nbsp;éléments. La deuxième fois, il reste à parcourir $n-1$&nbsp;éléments. La&nbsp;troisième fois, il faut parcourir les&nbsp;$n-2$&nbsp;éléments restants. Et ainsi de suite, jusqu'à ce qu'il ne reste plus qu'un élément. 
 
@@ -47,11 +44,7 @@ Le terme dominant dans la somme $n^{2}/2 + n/2$ est $n^{2}/2$, plus n grandit pl
 
 Cette somme nous donne le nombre d'éléments parcourus. Mais&nbsp;pour chacun de ces éléments, plusieurs instructions sont exécutées, comme l'accès aux éléments et leur comparaison. Ces instructions et le terme qui divise par $2$ peuvent être absorbés dans une {glo}`constante|constante` $c$ qui multiplie le terme quadratique $n^{2}$. En ajoutant une constante a pour prendre en compte le nombre d'instructions qui ne dépendent pas de la taille des données (comme les initialisations au début de l’algorithme), on obtient l'ordre de grandeur $cn^{2} + a$. L'ordre de grandeur est donc **<span style="color:rgb(89, 51, 209)">quadratique</span>**.
 
-````
-
-`````
-
-``````
+```
 
 Si on compare les complexités vues jusqu'ici pour un tableau de $1000$ éléments on obtient :
 
@@ -78,30 +71,14 @@ Est&#8209;ce que la complexité du Tri&nbsp;par&nbsp;insertion est la même si l
 
 ```
 
-`````{htmlonly} 
 ````{solution} 
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
 Dans le pire cas, lorsque les éléments sont dans l'ordre inverse, on doit comparer chacun des $n$&nbsp;éléments avec $1$&nbsp;à&nbsp;$n$ éléments. La complexité de l'algorithme du Tri&nbsp;par&nbsp;insertion est donc $n * n = n^{2}$ ou&nbsp;**quadratique**. 
 
 <!--
 Dans le meilleur cas, lorsque les éléments sont déjà dans le bon ordre, on doit comparer chacun des $n$&nbsp;éléments avec $1$&nbsp;élément, l'élément précédent. La complexité du Tri&nbsp;par&nbsp;insertion est donc $n * 1 = n$ ou **linéaire**. 
 -->
-
-```
 ````
-`````
 
-````{latexonly} 
-
-
-```{solution} 
-
-Dans le pire cas, lorsque les éléments sont dans l'ordre inverse, on doit comparer chacun des $n$&nbsp;éléments avec $1$&nbsp;à&nbsp;$n$ éléments. La complexité de l'algorithme du Tri&nbsp;par&nbsp;insertion est donc $n * n = n^{2}$ ou&nbsp;**quadratique**. 
-
-```
-````
 
 `````{latexonly} 
 
@@ -152,28 +129,10 @@ Cette somme nous donne le nombre d'éléments parcourus. Mais&nbsp;pour chacun d
 Quelle est la complexité de l’algorithme de <a href="../algo1/cours/2_trie_cherche_trouve/eleve.html#tri-bulles">**<span style="color:rgb(89, 51, 209)">Tri&nbsp;à&nbsp;bulles</span>**</a> ? En d’autres termes, si le tableau contient n éléments, combien faut&#8209;il d’instructions pour trier ce tableau ? Pour rappel, le Tri&nbsp;à&nbsp;bulles compare les éléments deux par deux en les réarrangeant dans le bon ordre, afin que l'élément le plus grand remonte vers la fin du tableau tel une bulle d'air dans de l'eau. Cette opération est répétée n fois, pour chaque élément du tableau.
 
 ```
-
-`````{htmlonly} 
-````{solution} 
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-Dans le cas du Tri&nbsp;à&nbsp;bulles, pour chacun des $n$&nbsp;éléments on parcourt jusqu'à $n$&nbsp;éléments de la liste, ce qui nous donne une complexité&nbsp;$n * n = n^{2}$ ou une complexité&nbsp;quadratique.
-
-```
-````
-`````
-````{latexonly} 
-
 ```{solution} 
-
 Dans le cas du Tri&nbsp;à&nbsp;bulles, pour chacun des $n$&nbsp;éléments on parcourt jusqu'à $n$&nbsp;éléments de la liste, ce qui nous donne une complexité&nbsp;$n * n = n^{2}$ ou une complexité&nbsp;quadratique.
 
 ```
-````
-
-
-
 
 ## Tri&nbsp;rapide
 
@@ -235,53 +194,8 @@ Combien d'étapes sont nécessaires pour que l'algorithme se termine ? Quelle 
 
 ```
 
-`````{htmlonly} 
-````{solution} 
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-Si on simule l'algorithme de Tri&nbsp;rapide pour le tableau `[1, 2, 3, 4, 5, 6, 7]` avec comme pivot le dernier élément on se retrouve avec les sous-tableaux suivants (le pivot est affiché en gras, les éléments déjà triés sont affichés en italique) :
-
-`[1, 2, 3, 4, 5, 6, **7**]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[1, 2, 3, 4, 5, **6**] [*7*] []`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[1, 2, 3, 4, **5**] [*6*] [] [*7*] []`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[1, 2, 3, **4**] [*5*] [] [*6*] [] [*7*] []`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[1, 2, **3**] [*4*][] [*5*] [] [*6*] [] [*7*] []`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[1, **2**] [*3*] [] [*4*][] [*5*] [] [*6*] [] [*7*] []`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[**1**] [*2*] [] [*3*] [] [*4*][] [*5*] [] [*6*] [] [*7*] []`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[] [*1*] [] [*2*], [*3*] [*4*][] [*5*] [] [*6*] [] [*7*] []`
-
-`[1] [2] [3] [4] [5] [6] [7]` 
-
-Lorsque les éléments du tableau sont déjà triés, l'espace de recherche n'est plus divisé par deux. On se retrouve avec des sous-tableaux déséquilibrés, vides d'un côté et pleins de l'autre. Le nombre d'étapes n'est donc plus $log(n)$, mais vaut&nbsp;$n$ ($7$&nbsp;étapes de traitement). Lorsqu'on multiple le nombre d'étapes (lignes) au nombre d'éléments à comparer par ligne, on est plutôt dans une complexité&nbsp;$n*n$ (ou&nbsp;$n^{2}$), donc quadratique. Dans ce scénario, le tri&nbsp;rapide n'est donc plus si rapide. Le choix du pivot est alors crucial et dépend du contenu du tableau.
-
-Si on prend comme pivot l'élément du milieu du tableau, on se retrouve avec des sous-tableaux équilibrés, qui contiennent un nombre similaire d'éléments. Dans ce cas l'algorithme a besoin de moins d'étapes pour trouver la solution, de l'ordre de $log(n)$, ici $3$&nbsp;lignes et équivalent à&nbsp;$log_{2}(7)$, de traitement au lieu de&nbsp;$7$ auparavant : 
-
-`[1, 2, 3, **4**, 5, 6, 7]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[1, **2**, 3] [*4*], [5, **6**, 7]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[**1**] [*2*] [**3**] [*4*], [**5**] [*6*] [**7**]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[] [*1*] [] [*2*] [] [*3*] [] [*4*] [] [*5*] [] [*6*] [] [*7*]`
-
-`[1] [2] [3] [4] [5] [6] [7]` 
-
-```
-````
-`````
-
-````{latexonly} 
 
 ```{solution} 
-
 Si on simule l'algorithme de Tri&nbsp;rapide pour le tableau `[1, 2, 3, 4, 5, 6, 7]` avec comme pivot le dernier élément on se retrouve avec les sous-tableaux suivants (le pivot est affiché en gras, les éléments déjà triés sont affichés en italique) :
 
 `[1, 2, 3, 4, 5, 6, **7**]`
@@ -317,9 +231,6 @@ Si on prend comme pivot l'élément du milieu du tableau, on se retrouve avec de
 `[1] [2] [3] [4] [5] [6] [7]` 
 
 ```
-````
-
-
 
 ````{togofurther} 
 
@@ -353,67 +264,8 @@ Que se passe-t-il si on essaie de trier un tableau déjà trié, mais dans l'ord
 
 ```
 
-`````{htmlonly} 
-````{solution} 
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-Si on simule l'algorithme de Tri&nbsp;par&nbsp;insertion pour le tableau `[1, 2, 3, 4, 5, 6, 7]` on se retrouve avec la configuration suivante (l'élément inséré est affiché en gras, l'élément auquel on le compare en italique) :
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[**1**, 2, 3, 4, 5, 6, 7]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[*1*] [**2**, 3, 4, 5, 6, 7]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[1, *2*] [**3**, 4, 5, 6, 7]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[1, 2, *3*] [**4**, 5, 6, 7]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[1, 2, 3, *4*] [**5**, 6, 7]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[1, 2, 3, 4, *5*] [**6**, 7]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[1, 2, 3, 4, 5, *6*] [**7**]`
-
-`[1, 2, 3, 4, 5, 6, 7]`
-
-On voit qu'il y a besoin de $7$&nbsp;étapes, ou $n$&nbsp;étapes, car autant que d'éléments dans le tableau. Dans chaque étape on n'a besoin de comparer qu'une fois, avec l'élément précédent. La complexité dans ce cas est $n*1 = n$ ou&nbsp;linéaire. Pour des données presque triées, le Tri&nbsp;par&nbsp;insertion est encore plus rapide que le Tri&nbsp;rapide.
-
-A premier abord, trier le tableau `[5, 4 ,3, 2, 1]` avec le Tri&nbsp;par&nbsp;insertion ne présente pas de difficultés. Regardons ce qui se passe :
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[**5**, 4, 3, 2, 1]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[*5*] [**4**, 3, 2, 1]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[4, *5*] [**3**, 2, 1]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[*4*, **3**, 5] [2, 1]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[3, 4, *5*] [**2**, 1]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[3, *4*, **2**, 5] [1]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[*3*, **2**, 4, 5] [1]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[2, 3, 4, *5*] [**1**]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[2, 3, *4*, **1**, 5]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[2, *3*, **1**, 4, 5]`
-
-&nbsp;&nbsp;&nbsp;&nbsp; `[*2*, **1**, 3, 4, 5]`
-
-`[1, 2, 3, 4, 5]`
-
-Cette fois&#8209;ci on se retrouve dans la pire configuration pour le Tri&nbsp;par&nbsp;insertion, où chaque élément doit être comparé à&nbsp;chaque autre élément. Ici nous avons besoin de $11$&nbsp;étapes de traitement pour trier $5$&nbsp;éléments, alors qu'avant $7$&nbsp;étapes suffisaient pour trier $7$&nbsp;éléments. Lorsqu'on doit trier un grand nombre d'éléments, ces différence est significative et peut rendre un algorithme non utilisable.
-
-```
-````
-`````
-
-````{latexonly} 
 
 ```{solution} 
-
 Si on simule l'algorithme de Tri&nbsp;par&nbsp;insertion pour le tableau `[1, 2, 3, 4, 5, 6, 7]` on se retrouve avec la configuration suivante (l'élément inséré est affiché en gras, l'élément auquel on le compare en italique) :
 
 &nbsp;&nbsp;&nbsp;&nbsp; `[**1**, 2, 3, 4, 5, 6, 7]`
@@ -463,7 +315,6 @@ A premier abord, trier le tableau `[5, 4 ,3, 2, 1]` avec le Tri&nbsp;par&n
 Cette fois&#8209;ci on se retrouve dans la pire configuration pour le Tri&nbsp;par&nbsp;insertion, où chaque élément doit être comparé à&nbsp;chaque autre élément. Ici nous avons besoin de $11$&nbsp;étapes de traitement pour trier $5$&nbsp;éléments, alors qu'avant $7$&nbsp;étapes suffisaient pour trier $7$&nbsp;éléments. Lorsqu'on doit trier un grand nombre d'éléments, ces différence est significative et peut rendre un algorithme non utilisable.
 
 ```
-````
 
 
 ## Exercices
@@ -500,7 +351,7 @@ Trier le tableau suivant avec l’algorithme de tri&nbsp;à&nbsp;bulles : `[3, 6
 
 ```
 
-````{exercise} Une question de chronomètre 🔌
+```{exercise} Une question de chronomètre 🔌
 
 Créer une liste qui contient les valeurs de $1$ à $n$ dans un ordre aléatoire, où $n$ prend la valeur $100$. Implémenter au moins deux des trois algorithmes de tri vu au cours.
 
@@ -508,7 +359,7 @@ A l’aide du module `time` et de sa fonction `time()`, chronométrer le temps p
 
 Ce graphique permet de visualiser le temps d’exécution du tri en fonction de la taille de la liste. Que peut&#8209;on constater ? Sur la base de ces mesures, peut&#8209;on estimer le temps que prendrait le tri de 100000 éléments ? Lancer votre programme avec 100000 éléments et comparer le temps obtenu avec votre estimation.
 
-````
+```
 
 
 ````{eval}
