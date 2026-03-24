@@ -2,14 +2,17 @@ import base64
 import hashlib
 import json
 import os
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from functools import cached_property
 from typing import Any, Callable, List, Optional, Tuple, TypeVar, Union
 
 from docutils import nodes  # type: ignore
 from docutils.nodes import Node, system_message  # type: ignore
 from docutils.parsers.rst import directives  # type: ignore
+from markdown_it.common.utils import escapeHtml
+from markdown_it.renderer import RendererHTML
 from myst_parser.config.main import MdParserConfig
+from myst_parser.parsers.mdit import create_md_parser
 from sphinx.application import Sphinx
 from sphinx.util import logging
 from sphinx.util.docutils import SphinxDirective, SphinxRole, SphinxTranslator
@@ -98,7 +101,7 @@ def convert_for_latex(
 
             const dataJson = JSON.stringify({data.data_json})
             editor.loadCircuitOrLibrary(dataJson)
-            editor.setModeFromString("{data.mode}")
+            editor.setMode("{data.mode}")
             const withMetadata = false
             const heightHint = {"undefined" if data.height is None else data.height}
             const blob = await editor.{conversion_function}(withMetadata, heightHint)
@@ -244,7 +247,7 @@ def begin_logic_diagram_latex(self: SphinxTranslator, node: Node) -> None:
         include_image = True
     else:
         if browser is None:
-            logger.error("browser page is not initialized to generate PNGs for logic diagrams")
+            logger.error("browser page is not initialized to generate images for logic diagrams")
         else:
             img_size = convert_for_latex(data, target_file_absolute, browser)
             include_image = img_size is not None
@@ -259,7 +262,7 @@ def begin_logic_diagram_latex(self: SphinxTranslator, node: Node) -> None:
             f"\n\\begin{{center}}\n  \\includegraphics[{includegraphics_options}]{{{target_file_relative}}}\n\\end{{center}}\n"
         )
     else:
-        self.body.append("\n \\fbox{logic diagram} \\\ ")
+        self.body.append("\n \\fbox{logic diagram} \\\\ ")
 
 
 def end_logic_diagram_latex(self: SphinxTranslator, node: Node) -> None:
@@ -350,9 +353,25 @@ class LogicHighlightRefRole(SphinxRole):
 def _render_inline(source: str, config: MdParserConfig) -> str:
     # WARNING: this should not be called when creating the nodes
     # as it screws up the global parser state
-    # TODO MIGRATION
-    #html = str(to_html(source, config=config)).strip()
-    html = str(source).strip()
+    try:
+        inline_config = config
+        if "dollarmath" not in config.enable_extensions:
+            inline_config = replace(
+                config,
+                enable_extensions=set(config.enable_extensions) | {"dollarmath"},
+            )
+        md_parser = create_md_parser(inline_config, RendererHTML)
+        md_parser.renderer.rules["math_inline"] = (
+            lambda tokens, idx, options, env: (
+                '<span class="math notranslate nohighlight">\\('
+                + escapeHtml(tokens[idx].content)
+                + "\\)</span>"
+            )
+        )
+        html = str(md_parser.renderInline(str(source))).strip()
+    except Exception:
+        logger.exception("failed to render inline Markdown in logic highlight")
+        html = str(source).strip()
     if html.startswith("<p>") and html.endswith("</p>"):
         html = html[3:-4]
     return html

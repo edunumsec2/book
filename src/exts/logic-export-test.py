@@ -49,7 +49,7 @@ def run() -> None:
 
             const dataJson = JSON.stringify({data_json})
             editor.loadCircuitOrLibrary(dataJson)
-            editor.setModeFromString("tryout")
+            editor.setMode("tryout")
             const withMetadata = false
             const heightHint = undefined
             const blob = await editor.{conversion_function}(withMetadata, heightHint)
