@@ -1,27 +1,50 @@
 (archi)=
 
 # Architecture des ordinateurs
-
+````{htmlonly}
 ```{toctree}
-:maxdepth: 2
-:hidden:
-:numbered: 2
+   :maxdepth: 2
+   :hidden:
+   :numbered: 2
 intro
+portes
 sys-log
 additionneur
 alu
 mem
-micro-pro
-archi-gen
-
 tp1
 tp2
 tp3
 tp4
 tp5
 ```
+````
+
+````{latexonly}
+```{toctree}
+   :maxdepth: 2
+   :hidden:
+   :numbered: 2
+intro
+portes
+sys-log
+additionneur
+alu
+mem
+```
+````
+
+
+
+<!-- tp2.md :only: html -->
+<!-- tp3.md :only: html -->
+<!-- tp4.md :only: html -->
+<!-- tp5.md :only: html -->
+<!-- ``` -->
 
 <!-- <iframe src='https://timeline.knightlab.com/examples/houston/index.html' width='600' height='600' frameborder='0'></iframe> -->
+
+````{htmlonly}
 
 L'ENIAC, l'un des tout premiers ordinateurs opérationnels, conçu en 1945, à la fin de la Seconde Guerre mondiale, pour calculer des trajectoires de missiles, était constitué de 17 468 tubes électroniques de la taille d'une main, qui cassaient en moyenne une fois par semaine.  Il s'étendait sur 170 mètres carrés et pesait plus de 25 tonnes. Il était capable d'exécuter environ 5000 opérations par seconde.
 
@@ -68,9 +91,12 @@ Charles Babbage 🇬🇧
 ^^^^^
 ***1791-1871***
 
-[**Charles Babbage**](https://fr.wikipedia.org/wiki/Charles_Babbage) fut le premier inventeur à énoncer le principe d'un ordinateur. C'est en 1834, pendant le développement d'une machine à calculer destinée au calcul et à l'impression de tables mathématiques, qu'il eut l'idée d'y incorporer des cartes du métier Jacquard, dont la lecture séquentielle donnerait des instructions et des données à sa machine. 
+[**Charles Babbage**](https://fr.wikipedia.org/wiki/Charles_Babbage) est le premier inventeur à concevoir le principe et élaborer les plan d'un ordinateur programmable en 1837.
+Sa machine, entièrement mécanique, contient les éléments essentiels des ordinateurs actuels, mais il n'a jamais pu la réaliser faute de financement. Le programme et les
+données étaient fournies sous forme de cartes perforées, comme les "partitions" des orgues de Barbarie ou les motifs des métiers à tisser Jacquard de l'époque. 
 :::
 ::::
 :::::
 
 [^1]:https://www.aei.org/technology-and-innovation/the-a12-chip-estimating-innovation-with-iphone-prices/
+````

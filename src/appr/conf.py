@@ -39,6 +39,7 @@ extensions = [
     'codeplay',
     'glossary',
     'myst_parser',
+    'sphinx_subfigure',
     'questions',
     'sphinx_design',
     'videos',

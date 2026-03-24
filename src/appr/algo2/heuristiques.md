@@ -29,26 +29,11 @@ Appliquer cet algorithme pour $4$ objets de poids $1$,&nbsp;$3$,&nbsp;$5$&nbsp;e
 Est&#8209;ce que votre algorithme donne toujours la meilleure solution ? 
 ```
 
-`````{htmlonly} 
-````{solution}
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
 
+```{solution}
 La solution est donnée dans le texte qui suit.
 
 ```
-````
-`````
-````{latexonly} 
-
-```{solution} 
-
-La solution est donnée dans le texte qui suit.
-
-```
-````
-
-
 
 L'algorithme le plus simple pour résoudre ce problème est un **<span style="color:rgb(89, 51, 209)">algorithme&nbsp;de&nbsp;force&nbsp;brute</span>** (ou un algorithme&nbsp;exhaustif), qui consiste à énumérer toutes les combinaisons d'objets que pourrait contenir le sac&nbsp;à&nbsp;dos, l’une après l’autre, et de calculer le poids total pour chaque combinaison. Après avoir calculé toutes les combinaisons, il suffit de sélectionner la combinaison dont le poids se rapproche le plus de la capacité du sac&nbsp;à&nbsp;dos, sans la dépasser. Vous trouverez ci&#8209;dessous la solution pour l’exemple de l’exercice précédent («&nbsp;oui&nbsp;» signifie que l’on met l’objet dans le sac&nbsp;à&nbsp;dos et «&nbsp;non&nbsp;» signifie que l’on ne met pas l’objet dans le sac&nbsp;à&nbsp;dos). 
 
@@ -81,25 +66,11 @@ La meilleure solution se trouve à la 11ème ligne, la capacité du sac&nbsp;à&
 Combien de combinaisons possibles existent pour le problème du sac&nbsp;à&nbsp;dos avec 10&nbsp;objets ? 
 ```
 
-`````{htmlonly} 
-````{solution} 
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-La solution est donnée dans le texte qui suit.
-
-```
-````
-`````
-
-````{latexonly} 
 
 ```{solution} 
-
 La solution est donnée dans le texte qui suit.
 
 ```
-````
 
 Mais,&nbsp;combien y a&#8209;t&#8209;il de combinaisons possibles si on a $10$&nbsp;objets ? Pour chaque objet, on a deux choix possibles : le mettre dans le sac&nbsp;à&nbsp;dos ou ne pas le mettre dans le sac&nbsp;à&nbsp;dos ***<span style="color:rgb(13, 204, 166)">(to take or not to take, that is the question)</span>***. Comme ces deux possibilités existent pour chacun des $10$ objets, le nombre de combinaisons possibles vaut :
 

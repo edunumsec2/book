@@ -82,3 +82,24 @@ body.modulo-dark .dropdown {
 figure {
     padding: 30px;
 }
+
+
+.dropsol-admonition summary {
+    cursor: pointer;
+    background-color: rgb(92 201 191);
+}
+
+.dropsol-content {
+    padding: 5px;
+  
+}
+
+
+.dropsol-admonition {
+    margin: 1.75rem 0 1.75rem 0;
+    border-left: 3px solid;
+    border-left-color: rgb(92 201 191)!important;
+    border-radius: 4px;
+
+}
+

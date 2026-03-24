@@ -249,7 +249,7 @@ Essayez ce circuit pour confirmer qu'il agit comme un sélecteur : lorsque $Op
 }
 ```
 
-Ceci nous permet de compléter le circuit lacunaire de début de chapitre pour sélectionner avec le même mécanisme soit {logicref}`and_or_full.or|le **OU**` soit {logicref}`and_or_full.and|le **ET**` de nos deux entrées $X$ et $Y$. On ajoute {logicref}`and_or_full.{muxinv,muxand0,muxand1,muxor}|les portes de notre sélecteur` en connectant à l'entrée $A$ {logicref}`and_or_full.muxin0|le signal représentant $X$ **OU** $Y$`, et à l'entrée $B$ {logicref}`and_or_full.muxin1|le signal représentant $X$ **ET** $Y$` :
+Ceci nous permet de compléter le circuit lacunaire de début de chapitre pour sélectionner avec le même mécanisme soit {logicref}`and_or_full.or|le **OU**` soit {logicref}`and_or_full.and|le **ET**` de nos deux entrées $X$ et $Y$. On ajoute {logicref}`and_or_full.{muxinv,muxand0,muxand1,muxor}|les portes de notre sélecteur` en connectant à l'entrée $A$ {logicref}`and_or_full.muxin0|le signal représentant $X$ **OU** $Y$`, et à l'entrée $B$ {logicref}`and_or_full.muxin1|le signal représentant` $X$ **ET** $Y$:
 
 ```{logic}
 :height: 300
@@ -299,7 +299,7 @@ Testez le circuit ci-dessus. Établissez la table de vérité de $Z$ en fonction
 
 Nous avons ici construit un circuit qui, grâce à un bit de contrôle $Op$, sélectionne une opération ou une autre à appliquer à ses deux bits d'entrées $X$ et $Y$.
 
-`````{exercise} Construction d'un sélecteur
+````{exercise} Construction d'un sélecteur
 
 En réutilisant les principes appliqués ci-dessus, construisez un circuit à deux bits d'entrées $X$ et $Y$ et un bit de contrôle $Op$ qui donnera sur sa sortie $Z$ :
 
@@ -320,8 +320,8 @@ En réutilisant les principes appliqués ci-dessus, construisez un circuit à de
   "out": [{"pos": [530, 200], "id": 8, "name": "Z"}]
 }
 ```
-
-````{dropdown} Corrigé
+````
+````{solution}
 Voici un circuit qui réutilise le sélecteur de signal et qui fournit à ce sélecteur les deux nouvelles entrées décrites, à savoir, en haut, le **OU** exclusif de $X$ et $Y$ tel que fourni par une porte **OU-X**, et en bas, $Y$ une fois inversé par une porte **NON** :
 
 ```{logic}
@@ -360,9 +360,8 @@ Voici un circuit qui réutilise le sélecteur de signal et qui fournit à ce sé
 }
 ```
 ````
-`````
 
-`````{exercise} Inverseur conditionnel
+````{exercise} Inverseur conditionnel
 
 En réutilisant les principes appliqués ci-dessus, construisez un circuit à une entrée $X$ avec un bit de contrôle $Op$ qui donnera sur sa sortie $Z$ :
 
@@ -384,9 +383,9 @@ En réutilisant les principes appliqués ci-dessus, construisez un circuit à un
   "out": [{"pos": [530, 200], "id": 8, "name": "Z"}]
 }
 ```
+````
 
-
-````{dropdown} Corrigé
+````{solution}
 
 Voici une proposition qui réutilise le sélecteur de signal et qui fournit à ce sélecteur $X$ en haut et $X$ inversé en bas :
 
@@ -440,7 +439,6 @@ La table de vérité est identique à celle d'une porte **OU-X**. On peut donc s
 }
 ```
 ````
-`````
 
 ## Une ALU à 4 bits
 
@@ -478,7 +476,7 @@ La convention utilisée pour la sélection de l'opération est la suivante :
 |  10  |        **OU**       |
 |  11  |        **ET**       |
 
-`````{exercise} Test de l'ALU
+````{exercise} Test de l'ALU
 
 Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effectuer l'opération $7 + 2 = 9$. Connectez les 4 bits des entrées et de la sortie à des afficheurs de demi-octet pour vérifier leur fonctionnement. Connectez ensuite une entrée pour le bit de contrôle qui permettra d'effectuer la soustraction avec les mêmes données d'entrée, donc $7 - 2 = 5$.
 
@@ -496,8 +494,8 @@ Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effec
   ]
 }
 ```
-
-````{dropdown} Corrigé
+````
+````{solution}
 ```{logic}
 :height: 400
 :mode: tryout
@@ -554,7 +552,6 @@ Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effec
 }
 ```
 ````
-`````
 
 L'ALU a trois sorties en plus, en bas du composant :
 
@@ -563,7 +560,7 @@ L'ALU a trois sorties en plus, en bas du composant :
  * finalement, la sortie $Z$ (pour _Zero_) vaut 1 lorsque tous les bits de sortie valent 0.
 
 
-`````{exercise} Une ALU comme comparateur
+````{exercise} Une ALU comme comparateur
 
 En programmation, c'est fréquent de tester, par exemple dans une condition avec un `if`, si deux valeurs sont égales. Par exemple, ce fragment de code affichera « Ces valeurs sont égales! » uniquement si les deux nombres entiers donnés lors de l'exécution du code sont les mêmes:
 
@@ -592,11 +589,13 @@ Ce qui nous intéresse spécialement, c'est la comparaison à la ligne 3. Cette 
 }
 ```
 
-````{dropdown} Indice
+*Indice:*
 Deux nombres $A$ et $B$ sont égaux si leur différence est nulle — donc si tous les bits de sortie de la soustraction $A - B$ valent 0.
 ````
 
-````{dropdown} Corrigé avec ALU — approche arithmétique
+````{solution} 
+*Avec ALU, approche arithmétique*
+
 On connecte les 8 entrées, on règle l'opération de l'ALU sur soustraction et on utilise la sortie de l'ALU qui indique si tous les bits de sortie sont à zéro. En effet, cela ne se produit que lorsque la différence entre les deux nombres d'entrée est 0 — c'est-à-dire, s'ils sont égaux. On constate qu'on peut ignorer les 4 bits de sorties ici !
 
 ```{logic}
@@ -621,14 +620,16 @@ On connecte les 8 entrées, on règle l'opération de l'ALU sur soustraction et 
 }
 ```
 ````
-
+````{exercise}
 Plus difficile : essayez de réaliser un circuit qui calcule la même valeur de sortie, mais sans utiliser d'ALU.
 
-````{dropdown} Indice
+*Indice:*
 Une porte **OU-X** peut être vue comme un comparateur de deux bits : sa sortie vaudra 1 si et seulement si ses deux entrées sont différentes.
 ````
 
-````{dropdown} Corrigé sans ALU — approche logique
+````{solution}
+*Sans ALU, approche logique*
+
 Cette solution utilise des portes **OU-X** comme comparateurs. On voit ici que 4 portes **OU-X** comparent deux à deux les 8 bits d'entrée. Leurs sorties sont ensuite combinées avec des portes **OU**, afin d'obtenir un signal qui vaudra 1 si au moins une différence est détectée, donc si les deux nombres d'entrées ne sont pas égaux. Il ne reste plus qu'à inverser ce signal pour obtenir la sortie demandée qui, selon la donnée, doit valoir 1 lorsque les nombres sont égaux.
 
 ```{logic}
@@ -688,7 +689,6 @@ Alernativement, à la place d'utiliser {logicref}`4bit_diff_logic0.{or1,or2,or3}
 ```
 
 ````
-`````
 
 En résumé, nous avons appris ici ce qu'est une unité arithmétique et logique et avons examiné de plus près comment construire un multiplexeur, un circuit qui est à même de « choisir » parmi plusieurs signaux d'entrées lequel il va propager sur sa sortie. L'ALU est spécialement intéressante, car c'est le premier composant que nous rencontrons qui incarne une des propriétés de base d'un ordinateur, à savoir d'être programmable, en faisant en sorte que l'opération qu'elle effectue dépende d'un signal externe.
 

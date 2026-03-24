@@ -94,36 +94,7 @@ Lisez bien l'algorithme présenté ci&#8209;dessus. Quel problème cet algorithm
 
 ````
 
-``````{htmlonly} 
-`````{solution}
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-Pour répondre à cette problématique il faut se poser la question suivante : que contient la variable `Résultat` à la fin de l'algorithme ? 
-
-Pour commencer, la variable `Résultat` vaut&nbsp;0. En&nbsp;effet, l'opération `Résultat ← 0` *<span style="color:rgb(13, 204, 166)">initialise</span>* `Résultat` à&nbsp;0. Initialiser une variable veut dire qu'on lui assigne une toute première valeur (une valeur initiale). Dans le cas de `Nombres` qui contiendrait les nombres `4`, `5` et&nbsp;`6`, après le premier passage dans la boucle `Répéter`, `Résultat` vaut&nbsp;`4`. En&nbsp;effet, pour commencer `i` vaut&nbsp;`1` et donc `Nombres[i]` vaut `Nombres[1]`. `Nombres[1]` correspond au premier élément de la liste *Nombres* et vaut&nbsp;`4`. L'opération `Résultat ← Résultat + Nombres[i]`, additionne alors 0 et&nbsp;`4` (`Résultat + Nombres[i]`) et l'opérateur `←` stocke cette valeur 4 dans la variable `Résultat`.
-
-Au deuxième passage dans la boucle, `i` vaut `2`. On additionne à nouveau `Résultat`, qui maintenant vaut `4`, au 2ème élément de *Nombres*, qui vaut 5. Après ce deuxième passage de la boucle, `Résultat` contient&nbsp;`9` (`4`&nbsp;+&nbsp;`5`). Finalement, au troisième et dernier passage de la boucle, on additionne cette nouvelle valeur de `Résultat` (ou&nbsp;`9`) avec le 3ème élément de Nombres, qui vaut&nbsp;`6`. Il s'agit du dernier passage de la boucle, parce que lors de ce passage de la boucle `i` atteint la longueur de la liste `Nombres` (ou&nbsp;`3`). À la fin de l'algorithme, `Résultat` vaut ainsi `15`.
-
-Il est plus facile de se représenter ces valeurs sous forme de tableau :
-
-```{image} media/Solution0.png
----
-alt: Valeurs des variables de l'algorithme pour le cas où `Nombres` contient `1`, `2` et&nbsp;`3`.
-width: 50%
-align: left
----
-
-```
-
-Cet algorithme permet de calculer la somme des nombres contenus dans une liste (ici la liste `Nombres`).
-
-````
-`````
-``````
-`````{latexonly} 
 ````{solution}
-
 Pour répondre à cette problématique il faut se poser la question suivante : que contient la variable `Résultat` à la fin de l'algorithme ? 
 
 Pour commencer, la variable `Résultat` vaut&nbsp;0. En&nbsp;effet, l'opération `Résultat ← 0` *<span style="color:rgb(13, 204, 166)">initialise</span>* `Résultat` à&nbsp;0. Initialiser une variable veut dire qu'on lui assigne une toute première valeur (une valeur initiale). Dans le cas de `Nombres` qui contiendrait les nombres `4`, `5` et&nbsp;`6`, après le premier passage dans la boucle `Répéter`, `Résultat` vaut&nbsp;`4`. En&nbsp;effet, pour commencer `i` vaut&nbsp;`1` et donc `Nombres[i]` vaut `Nombres[1]`. `Nombres[1]` correspond au premier élément de la liste *Nombres* et vaut&nbsp;`4`. L'opération `Résultat ← Résultat + Nombres[i]`, additionne alors 0 et&nbsp;`4` (`Résultat + Nombres[i]`) et l'opérateur `←` stocke cette valeur 4 dans la variable `Résultat`.
@@ -144,8 +115,6 @@ align: left
 Cet algorithme permet de calculer la somme des nombres contenus dans une liste (ici la liste `Nombres`).
 
 ````
-`````
-
 
 Pour comprendre ce que fait l'algorithme ci&#8209;dessus, il faut se mettre à la place de la machine. On parle de *<span style="color:rgb(13, 204, 166)">simuler</span>* un algorithme, de faire comme si l'algorithme s'exécutait sur une machine. Pour que ce soit plus concret, on peut imaginer des valeurs fictives pour les variables telles que `Nombres`. Dans la vie réelle, `Nombres` pourra contenir tous les nombres possibles, mais cela ne nous aide pas à comprendre. On imagine alors des nombres précis que `Nombres` pourrait contenir, comme par exemple `4`, `5` et `6`. Lorsqu'on exécute les opérations de l'algorithme l'une après l'autre, avec des valeurs concrètes, on comprend mieux quel effet ces opérations ont sur les valeurs contenues dans les variables. La simulation de l'algorithme nous permet de saisir **<span style="color:rgb(89, 51, 209)">les calculs</span>** réalisés par cet algorithme, ici une simple somme.
 
@@ -160,20 +129,7 @@ Il y a-t-il des désavantages à automatiser cette tâche ?
 
 ````
 
-``````{htmlonly}
-`````{solution}
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
 
-Une caisse enregistreuse ! La caisse enregistreuse calcule la somme des prix des produits contenus dans un panier (une liste de courses) et nous donne le prix total à payer. Il s'agit d'un exemple parmi d'autres.
-
-Au niveau des avantages, la caisse enregistreuse fait bien moins d'erreurs qu'un humain, elle ne se fatigue pas, elle ne se plaint pas et elle est bien plus rapide.
-
-Au niveau des désavantages, l'automatisation est en général énergivore (avec une empreinte environnementale significative) et provoque une certaine « obsolescence&nbsp;des&nbsp;humains » en les remplaçant dans leur travail pour un moindre coût financier.
-````
-`````
-``````
-`````{latexonly}
 ````{solution}
 Une caisse enregistreuse ! La caisse enregistreuse calcule la somme des prix des produits contenus dans un panier (une liste de courses) et nous donne le prix total à payer. Il s'agit d'un exemple parmi d'autres.
 
@@ -181,8 +137,6 @@ Au niveau des avantages, la caisse enregistreuse fait bien moins d'erreurs qu'un
 
 Au niveau des désavantages, l'automatisation est en général énergivore (avec une empreinte environnementale significative) et provoque une certaine « obsolescence&nbsp;des&nbsp;humains » en les remplaçant dans leur travail pour un moindre coût financier.
 ````
-`````
-
 
 « Chaque étape d’un algorithme doit être définie précisément » (Knuth, 2011). En&nbsp;effet, si on ne décompose pas suffisamment la solution du problème, on peut se retrouver face à une recette inutile, par exemple : prendre des œufs et cuire l'omelette. Cette recette ne nous dit pas vraiment comment procéder pour arriver à faire une omelette...
 
@@ -231,22 +185,11 @@ Le jeu d’instructions élémentaires dépend du système informatique sur lequ
 A quoi correspondent « les ingrédients d’un algorithme » dans l’exemple de la recette de l’omelette ?
 ````
 
-`````{htmlonly}
+
 ````{solution}
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
  Les données en entrée sont les œufs, les opérations sont les étapes 1 à 4 de la recette et finalement le résultat en sortie est l’omelette. On peut considérer le matériel culinaire (bol, fourchette, poêle, spatule) comme du matériel informatique à notre disposition, capable de traiter des données (œufs). En&nbsp;effet, on peut cuire plein d’autres aliments dans une poêle.
-```
-````
-`````
-````{latexonly}
-```{solution}
- Les données en entrée sont les œufs, les opérations sont les étapes 1 à 4 de la recette et finalement le résultat en sortie est l’omelette. On peut considérer le matériel culinaire (bol, fourchette, poêle, spatule) comme du matériel informatique à notre disposition, capable de traiter des données (œufs). En&nbsp;effet, on peut cuire plein d’autres aliments dans une poêle.
-```
-````
 
-
+````
 
 ````{exercise} Échange de deux variables
 
@@ -256,46 +199,7 @@ Conseil : cela aide de se mettre à la place de la machine et de représenter 
 
 ````
 
-``````{htmlonly}
-`````{solution}
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
 
-Pour commencer, la variable&nbsp;`X` contient&nbsp;`1` et la variable&nbsp;`Y` contient&nbsp;`2`. Une solution naïve consisterait à écrire l’algorithme suivant :
-
-```
-X ← Y
-Y ← X
-```
-
-Cet algorithme met la valeur de&nbsp;`Y` dans&nbsp;`X`, puis la valeur de&nbsp;`X` dans&nbsp;`Y`. Représentons maintenant ces deux variables par des tiroirs étiquetés. Le premier tiroir s’appelle&nbsp;`X` et contient&nbsp;`1`, le deuxième s'appelle&nbsp;`Y` et contient&nbsp;`2` : 
-
-<img src="media/Swap0.png" width="25%"> &nbsp;  
-
-Après la première opération où on met la valeur de&nbsp;`Y` dans la variable&nbsp;`X` on se retrouve avec cette situation, où la valeur contenue dans&nbsp;`Y` écrase la valeur qui était contenue dans&nbsp;`X` :
-
-<img src="media/Swap1.png" width="25%"> &nbsp;   
-
-En&nbsp;effet, un tiroir ne peut contenir qu'une seule valeur ! Nous n’avons donc plus accès à la valeur qui était stockée dans la variable&nbsp;`X` avant d'y mettre celle de&nbsp;`Y`. Pour remédier à ce problème, il faut penser à utiliser une variable temporaire&nbsp;`Z` qui permet de se souvenir de la valeur initiale de&nbsp;`X`. 
-
-Un algorithme correct pour échanger les valeurs de deux variables est :
-
-```
-Z ← X
-X ← Y
-Y ← Z
-```
-
-Si on dessine l’état des variables après chacune de ces opérations dans des tiroirs, voici ce qu’on obtient :
-
-<img src="media/Swap2.png" width="40%"> &nbsp;  
-
-Nous avons donc la confirmation que la solution obtenue résout correctement notre problème d'échange des valeurs de deux variables.
-
-````
-`````
-``````
-`````{latexonly}
 ````{solution}
 
 Pour commencer, la variable&nbsp;`X` contient&nbsp;`1` et la variable&nbsp;`Y` contient&nbsp;`2`. Une solution naïve consisterait à écrire l’algorithme suivant :
@@ -330,8 +234,6 @@ Si on dessine l’état des variables après chacune de ces opérations dans des
 Nous avons donc la confirmation que la solution obtenue résout correctement notre problème d'échange des valeurs de deux variables.
 
 ````
-`````
-
 ## Exercices
 
 ````{exercise} Forme mystère

@@ -370,7 +370,7 @@ Ainsi, avec 4 bits le domaine couvert pour les entiers naturels est : \[0, 15\],
 
 ```{torecall}
 
-Puisque le nombre d’entiers relatifs pouvant être représentés est nécessairement pair et que 0 en fait partie, il existe **une asymétrie** entre les nombres positifs et les nombres négatifs représentables. Ainsi, par exemple, avec 4 bits, on peut représenter −8, mais pas 8.
+Puisque le nombre d’entiers relatifs pouvant être représentés est nécessairement pair et que 0 en fait partie, il existe **une asymétrie** entre les nombres positifs et les nombres négatifs représentables. Ainsi, par exemple, avec 4 bits, on peut représenter $-8$, mais pas $8$.
 ```
 
 ```{dropdown} Quel est le domaine couvert par la représentation en complément à deux sur un octet ?

@@ -45,21 +45,9 @@ Retranscrire l’algorithme infini en programme. Après combien de boucles le pr
 
 ```
 
-`````{htmlonly} 
-````{solution} 
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-La solution de l'exercice est donnée directement dans le texte qui suit.
-```
-````
-`````
-````{latexonly} 
 ```{solution} 
-
 La solution de l'exercice est donnée directement dans le texte qui suit.
 ```
-````
 
 Pour faire en sorte que le programme finisse par s’arrêter, nous pouvons le modifier ainsi :
 
@@ -79,21 +67,9 @@ L’algorithme ci&#8209;dessus est appelé « Algorithme qui compte toujours i
 
 ```
 
-`````{htmlonly} 
-````{solution} 
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-La solution de l'exercice est donnée directement dans le texte qui suit.
-```
-````
-`````
-````{latexonly} 
 ```{solution} 
-
 La solution de l'exercice est donnée directement dans le texte qui suit.
 ```
-````
 
 Dans la version ci&#8209;dessus, si l’utilisateur entre une valeur plus grande que 10000, ou encore une valeur à virgule, l’algorithme ne s’arrête pas. Il peut être implicite pour la personne qui programme qu’un décompte se fait toujours avec des nombres entiers, mais il doit prendre des précautions face aux utilisateurs. Voici une version de l'algorithme de décompte qui s’arrête dans tous les cas :  
 

@@ -8,5 +8,7 @@ pytest-playwright
 qrcode
 Pillow
 cairosvg
+sphinx-subfigure
 svglib
+
 

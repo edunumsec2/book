@@ -54,11 +54,8 @@ Quelle est la complexité de cet algorithme ?
 ```
 
 
-``````{htmlonly} 
-`````{solution} 
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
 
+````{solution} 
 ```{code-block} python
 Variable n : numérique
 Variable i : numérique
@@ -82,41 +79,6 @@ name : fig-rech-lin2
 ---
 ```
 ````
-`````
-``````
-
-`````{latexonly} 
-
-````{solution} 
-
-```{code-block} python
-Variable n : numérique
-Variable i : numérique
-
-Répéter Pour i = 1 à n
-    Afficher(i)
-Fin Pour
-```
-
-L’initialisation des variables `n` et `i` compte pour $2$ instructions élémentaires. Chaque passage de la boucle correspond à trois instructions élémentaires : $1$ instruction qui affiche `i`, 1 instruction qui incrémente `i` de 1 et finalement une instruction qui compare `i` à `n` (pour savoir si la boucle s’arrête ou si elle continue). Le&nbsp;total d’instructions élémentaires pour le cas où `n` vaut $100$ est $3 * 100 + 2$ ou 302 instructions élémentaires.
-
-Il faut se rendre compte que cette estimation du nombre d’instructions élémentaires est approximatif, et non pas exact. Par exemple, l’instruction élémentaire `Afficher(i)` englobe certainement plusieurs instructions à l’exécution et prend de plus en plus de temps à mesure que `i` grandit (affiche de plus en plus de caractères).
-
-La complexité (ou l’ordre de grandeur) de cet algorithme est linéaire, comme illustré dans ce graphique : 
-
-```{figure} media/Graphique_rech_lin_22.png
----
-alt: recherche&nbsp;linéaire
-width: 500px
-name : fig-rech-lin2
----
-```
-````
-`````
-
-
-
-
 
 ```{exercise} Compter par pas de 2
 
@@ -127,11 +89,8 @@ Combien d’instructions élémentaires sont nécessaires lorsque $n$ vaut $100$
 Quelle est la complexité de cet algorithme ? 
 ```
 
-``````{htmlonly} 
-`````{solution} 
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
 
+````{solution} 
 ```{code-block} python
 Variable n : numérique
 Variable i : numérique
@@ -158,43 +117,6 @@ name : fig-rech-lin3
 La différence de croissance se cache dans la constante $c$ de l’ordre de grandeur $cn + a$. La valeur de $c$ dans l’exercice précédent est supérieure à la valeur de $c$ dans cet exercice. Dans un premier temps, on peut ignorer la valeur de cette constante $c$. Cependant elle peut devenir importante lorsque l’on doit comparer des algorithmes du même ordre entre eux.  
 
 ````
-`````
-``````
-
-`````{latexonly} 
-
-````{solution} 
-
-```{code-block} python
-Variable n : numérique
-Variable i : numérique
-
-Répéter Pour i = 2 à n, par pas de 2
-    Afficher(i)
-Fin Pour
-```
-
-La seule ligne qui change par rapport à la solution de l’exercice précédent est l’incrément de la boucle par pas de $2$. 
-
-L’initialisation des variables `i` et `n` compte pour $2$ instructions élémentaires. Chaque passage de la boucle correspond à trois instructions élémentaires : $1$ instruction qui affiche `i`, $1$ instruction qui incrémente `i` de $2$ et finalement $1$ instruction qui compare `i` à `n` (pour savoir si la boucle s’arrête ou si elle continue). Pour le cas où `n` vaut $100$, la boucle sera parcourue $50$ fois (par pas de $2$). Le&nbsp;total d’instructions élémentaires est donc $3 * 50 + 2$ ou $152$ instructions élémentaires.
-
-La complexité (ou l’ordre de grandeur) de cet algorithme est également linéaire, comme illustré dans le graphique. Il faut noter que l’ordre de grandeur est le même que pour l’exercice précédent, seule la vitesse de croissance change. 
-
-```{figure} media/Graphique_rech_lin_23.png
----
-alt: recherche&nbsp;linéaire
-width: 500px
-name : fig-rech-lin3
----
-```
-
-La différence de croissance se cache dans la constante $c$ de l’ordre de grandeur $cn + a$. La valeur de $c$ dans l’exercice précédent est supérieure à la valeur de $c$ dans cet exercice. Dans un premier temps, on peut ignorer la valeur de cette constante $c$. Cependant elle peut devenir importante lorsque l’on doit comparer des algorithmes du même ordre entre eux.  
-
-````
-`````
-
-
-
 
 ```{exercise} Recherche linéaire🔌
 
@@ -205,11 +127,8 @@ Pour quelle valeur l'algorithme est le plus rapide ? Le plus lent ? Indice : 
 ```
 
 
-``````{htmlonly} 
-`````{solution} 
 
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
+````{solution} 
 
 Voici un programme possible pour l'algorithme de recherche&nbsp;linéaire. Si on chronomètre le temps d'exécution, la valeur $1$ est trouvée très rapidement en comparaison à la valeur 1000000. C'est beaucoup plus lent de rechercher une valeur qui se trouve à la fin du tableau, qu'au début du tableau. 
 
@@ -255,60 +174,6 @@ print("Recherche linéaire de 1 : "  + str(round(time_1,7)) + " secondes.")
 
 ```
 ````
-`````
-``````
-
-`````{latexonly} 
-
-````{solution} 
-
-Voici un programme possible pour l'algorithme de recherche&nbsp;linéaire. Si on chronomètre le temps d'exécution, la valeur $1$ est trouvée très rapidement en comparaison à la valeur $1000000$. C'est beaucoup plus lent de rechercher une valeur qui se trouve à la fin du tableau, qu'au début du tableau. 
-
-```{codeplay}
-
-# algorithme de recherche&nbsp;linéaire
-def search_lin(search_list, search_element, verbose=0) :    
-    
-    # boucle pour parcourir la liste
-    for element in search_list :
-    
-        if verbose :
-            print("L'élément comparé est : " + str(element) + "\n")
-
-        # l'élément de la liste correspond à l'élément recherché
-        if element == search_element :
-            return True
-
-    # aucun élément ne correspond
-    return False
-
-
-import time
-
-last = 1000000
-ma_liste = list(range(1,last+1)) 
-
-# mettre verbose à 1 pour avoir une vue de ce qui se passe
-# attention, cela fausse les temps de calcul (plus temps d'affichage) 
-verbose = 0
-
-# chronomètre le temps de recherche de l'élément 1000000
-time_start = time.time()
-search_lin(ma_liste, last, verbose)
-time_1000000 = time.time() - time_start
-print("Recherche linéaire 1000000 : "  + str(round(time_1000000,7)) + " secondes.\n")
-
-# chronomètre le temps de recherche de l'élément 1
-time_start = time.time()
-search_lin(ma_liste, 1, verbose)
-time_1 = time.time() - time_start
-print("Recherche linéaire 1 : "  + str(round(time_1,7)) + " secondes.")
-
-
-
-```
-````
-`````
 
 ```{exercise} Recherche linéaire (dans le désordre)🔌
 
@@ -316,12 +181,7 @@ On a vu dans l'exercice précédent que cela prend moins de temps pour trouver u
 
 ```
 
-``````{htmlonly} 
-`````{solution} 
-
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
+````{solution} 
 Si on mélange l'ordre des éléments, la valeur $1$ pourrait se retrouver en fin de tableau et pourrait prendre très longtemps à retrouver. Au contraire, la valeur 1000000 pourrait se retrouver en début de tableau et pourrait prendre très peu de temps à retrouver. La situation est donc beaucoup moins prévisible.
 
 ```{codeplay}
@@ -371,46 +231,6 @@ print("Recherche linéaire de 1 : "  + str(round(time_1,7)) + " secondes.")
 
 ```
 ````
-`````
-``````
-
-`````{latexonly} 
-
-````{solution} 
-
-Si on mélange l'ordre des éléments, la valeur $1$ pourrait se retrouver en fin de tableau et pourrait prendre très longtemps à retrouver. Au contraire, la valeur 1000000 pourrait se retrouver en début de tableau et pourrait prendre très peu de temps à retrouver. La situation est donc beaucoup moins prévisible. Le code ci-dessous est à utiliser avec la fonction `search_lin()` de la solution précédente.
-
-```{codeplay}
-import time
-import random
-
-last = 1000000
-ma_liste = list(range(1,last+1)) 
-# mélange les éléments du tableau au hasard
-random.shuffle(ma_liste);
-
-# mettre verbose à 1 pour avoir une vue de ce qui se passe
-# attention, cela fausse les temps de calcul (plus temps d'affichage) 
-verbose = 0
-
-# chronomètre le temps de recherche de l'élément 1000000
-time_start = time.time()
-search_lin(ma_liste, last, verbose)
-time_1000000 = time.time() - time_start
-print("Recherche linéaire 1000000 : "  + str(round(time_1000000,7)) + " secondes.\n")
-
-# chronomètre le temps de recherche de l'élément 1
-time_start = time.time()
-search_lin(ma_liste, 1, verbose)
-time_1 = time.time() - time_start
-print("Recherche linéaire 1 : "  + str(round(time_1,7)) + " secondes.")
-
-```
-````
-`````
-
-
-
 
 
 ````{togofurther} 
@@ -552,114 +372,61 @@ Pour quelle valeur l'algorithme est le plus rapide ? Pour quelle valeur l'algor
 
 ```
 
-``````{htmlonly} 
-`````{solution} 
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-
-Voici un programme possible pour l'algorithme de recherche&nbsp;binaire. L'algorithme est le plus rapide si on recherche la valeur qui se trouve au milieu du tableau (la valeur $50$) et il est le plus lent lorsque l'on recherche la première ou dernière valeur du tableau (la valeur $1$ ou $99$). 
-
-```{codeplay}
-# algorithme de recherche&nbsp;binaire
-def search_bin(search_list, search_element, verbose = 0) :
-    
-    # détermine les limites de la liste considérée
-    start = 0
-    end = len(search_list)
-    
-    # tant que la liste
-    while end-start :
-    
-        # accède l'élément du milieu, division entière, il faut un index
-        middle = (end-start) // 2 + start 
-        if verbose :
-            print("Elément comparé : " + str(search_list[middle]) +"\n")
-    
-        # compare l'élément au milieu de la liste
-        if search_element == search_list[middle] :
-            if verbose :
-                print("Elément retrouvé !\n")
-            return True      
-    
-        # l'élément est plus petit que l'élément du milieu
-        elif search_element < search_list[middle] :
-            # search_list devient dans la première moitié de search_list
-            end = middle 
-    
-            if verbose :
-                print("1ère moitié de la liste : " + str(search_list[start:end]) + "\n")
-    
-        # l'élément est plus grand que l'élément du milieu
-        else :
-            # search_list devient la deuxième moitié de search_list
-            start = middle + 1  
-
-            if verbose :
-                print("2ème moitié de la liste : " + str(search_list[start:end]) + "\n")
-
-    # aucun élément ne correspond
-    if verbose :
-        print("L'élément " + str(search_list[middle]) + " n'a pas été retrouvé...\n")
-    return False
-
-
-ma_liste = list(range(1,100)) 
-mon_element = 25
-
-# recherche de l’élément mon_element
-search_bin(ma_liste, mon_element, 1)
-
-```
-````
-`````
-``````
-`````{latexonly} 
 ````{solution} 
-
 Voici un programme possible pour l'algorithme de recherche&nbsp;binaire. L'algorithme est le plus rapide si on recherche la valeur qui se trouve au milieu du tableau (la valeur $50$) et il est le plus lent lorsque l'on recherche la première ou dernière valeur du tableau (la valeur $1$ ou $99$). 
 
 ```{codeplay}
 # algorithme de recherche&nbsp;binaire
 def search_bin(search_list, search_element, verbose = 0) :
+    
     # détermine les limites de la liste considérée
     start = 0
     end = len(search_list)
+    
     # tant que la liste
     while end-start :
+    
         # accède l'élément du milieu, division entière, il faut un index
         middle = (end-start) // 2 + start 
         if verbose :
             print("Elément comparé : " + str(search_list[middle]) +"\n")
+    
         # compare l'élément au milieu de la liste
         if search_element == search_list[middle] :
             if verbose :
                 print("Elément retrouvé !\n")
             return True      
+    
         # l'élément est plus petit que l'élément du milieu
         elif search_element < search_list[middle] :
             # search_list devient dans la première moitié de search_list
             end = middle 
+    
             if verbose :
                 print("1ère moitié de la liste : " + str(search_list[start:end]) + "\n")
+    
         # l'élément est plus grand que l'élément du milieu
         else :
             # search_list devient la deuxième moitié de search_list
             start = middle + 1  
+
             if verbose :
                 print("2ème moitié de la liste : " + str(search_list[start:end]) + "\n")
+
     # aucun élément ne correspond
     if verbose :
         print("L'élément " + str(search_list[middle]) + " n'a pas été retrouvé...\n")
     return False
 
+
 ma_liste = list(range(1,100)) 
 mon_element = 25
+
 # recherche de l’élément mon_element
 search_bin(ma_liste, mon_element, 1)
+
 ```
 ````
-`````
-
 
 ```{exercise} Recherche binaire (dans le désordre) 🔌
 
@@ -667,11 +434,8 @@ Est&#8209;ce qu’on peut utiliser l’algorithme de recherche&nbsp;binaire si l
 
 ```
 
-``````{htmlonly} 
-`````{solution} 
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
 
+````{solution} 
 Si le tableau n'est pas trié, l'algorithme n'est pas garanti de trouver l'élément recherché, car il peut facilement passer à côté. 
 
 ```{codeplay}
@@ -735,33 +499,6 @@ search_bin(ma_liste, mon_element, 1)
 
 ```
 ````
-`````
-``````
-`````{latexonly} 
-````{solution} 
-
-Si le tableau n'est pas trié, l'algorithme n'est pas garanti de trouver l'élément recherché, car il peut facilement passer à côté. Le code ci-dessous est à utiliser avec la fonction `search_bin()` donnée dans la solution précédente.
-
-
-```{codeplay}
-
-import random
-
-last = 99
-ma_liste = list(range(1,last+1)) 
-
-mon_element = random.randint(1,last) 
-print("L'élément recherché est : " + str(mon_element) + "\n")
-
-# recherche de l’élément mon_element
-search_bin(ma_liste, mon_element, 1)
-
-random.shuffle(ma_liste)
-print("Tableau mélangé... : " + str(ma_liste) + "\n")
-search_bin(ma_liste, mon_element, 1)
-
-````
-`````
 
 
 
@@ -776,11 +513,8 @@ Est&#8209;ce que **un million** vous semble être un grand nombre pour une taill
 
 ```
 
-``````{htmlonly} 
-`````{solution} 
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
 
+````{solution} 
 Comme prévu par les estimations de complexité, avec sa complexité&nbsp;logarithmique, c'est l'algorithme de la recherche&nbsp;binaire qui est plus rapide. Le gain de temps devient de plus en plus important au fur et à mesure que le nombre d'éléments dans le tableau grandit. Pour $100$&nbsp;éléments, la recherche&nbsp;binaire est environ ***<span style="color:rgb(13, 204, 166)">$2$&nbsp;fois</span>*** plus rapide que la recherche&nbsp;linéaire, alors que pour un million d'éléments, elle est plus de ***<span style="color:rgb(13, 204, 166)">1000 fois</span>*** plus rapide.
 
 On peut remarquer que le temps pris par la recherche&nbsp;binaire change peu avec la taille du tableau, ce qui n'est pas le cas de la recherche&nbsp;linéaire. Il faut environ ***<span style="color:rgb(13, 204, 166)">10 secondes</span>*** pour trier un million d'éléments avec l'algorithme linéaire, alors que moins de ***<span style="color:rgb(13, 204, 166)">10 millisecondes</span>*** suffisent à l'algorithme binaire. Les systèmes actuels traitent des données bien plus volumineuses qu'un million, pensez à toutes les vidéos sur le Web ou tous les utilisateurs d'un réseau social. Tout serait très lent, trop lent si on n'avait pas pensé à diviser&nbsp;pour&nbsp;régner.
@@ -888,49 +622,6 @@ print("Binaire (secondes) : " + str(resultat_bin))
 
 ```
 ````
-`````
-``````
-`````{latexonly} 
-````{solution} 
-Comme prévu par les estimations de complexité, avec sa complexité logarithmique, c'est l'algorithme de la recherche&nbsp;binaire qui est plus rapide. Le gain de temps devient de plus en plus important au fur et à mesure que le nombre d'éléments dans le tableau grandit. Pour cent éléments, la recherche&nbsp;binaire est environ ***<span style="color:rgb(13, 204, 166)">2 fois</span>*** plus rapide que la recherche&nbsp;linéaire, alors que pour un million d'éléments, elle est plus de ***<span style="color:rgb(13, 204, 166)">1000 fois</span>*** plus rapide.
-
-On peut remarquer que le temps pris par la recherche&nbsp;binaire change peu avec la taille du tableau, ce qui n'est pas le cas de la recherche&nbsp;linéaire. Il faut environ ***<span style="color:rgb(13, 204, 166)">10 secondes</span>*** pour trier un million d'éléments avec l'algorithme linéaire, alors que moins de ***<span style="color:rgb(13, 204, 166)">10 millisecondes</span>*** suffisent à l'algorithme binaire. Les systèmes actuels traitent des données bien plus volumineuses qu'un million, pensez à toutes les vidéos sur le Web ou tous les utilisateurs d'un réseau social. Tout serait très lent, trop lent si on n'avait pas pensé à diviser&nbsp;pour&nbsp;régner.
-
-
-```{codeplay}
-import time
-import random
-
-# stocke les résultats
-resultat_lin, resultat_bin  = [], []
-# longueurs des listes
-nb = [100, 1000, 10000, 100000, 1000000, 1000000]
-
-# pour toute les longueurs des listes
-for last in nb :
-    
-    # créer la liste
-    ma_liste = list(range(1,last+1)) 
-    # rechercher un élément au hasard
-    mon_element = random.randint(1,last) 
-    print("L'élément recherché est : " + str(mon_element))
-    # recherche&nbsp;linéaire
-    time_1 = time.time()
-    search_lin(ma_liste, mon_element, 0)
-    time_algo_lin = round(time.time() - time_1, 7)
-    resultat_lin.append(time_algo_lin)
-    # recherche&nbsp;binaire
-    time_1 = time.time()
-    search_bin(ma_liste, mon_element, 0)
-    # des fois, c'est tellement rapide que le temps pris vaut 0
-    time_algo_bin = round(max(time.time() - time_1, 0.000001), 7)
-    resultat_bin.append(time_algo_bin)
-
-print("Linéaire (secondes) : " + str(resultat_lin))
-print("Binaire (secondes) : " + str(resultat_bin))
-```
-````
-`````
 
 ```{didyouknow} Espace&#8209;temps et énergie
 

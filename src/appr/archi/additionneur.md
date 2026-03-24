@@ -1,29 +1,35 @@
 
 # Additionneur
 
-On a découvert quelques {glo}`portelogique|portes logiques` ainsi que la possibilité de les connecter pour en faire des circuits logiques plus complexes. Ces portes logiques vont maintenant permettre de réaliser l'additionneur annoncé en début de chapitre précédent.
+On s'intéresse à une des opérations arithmétiques les plus simples : l'**addition**. Notre but est donc de réaliser un circuit logique capable d'additionner deux nombres entiers. 
 
-On rappelle qu'on a deux {glo}`bit|bits` de sortie à calculer pour la sortie $S = A + B$. $S$ est donc constitué de $S_0$, le bit des unités, et de $S_1$, le bit représentant la valeur décimale 2. On rappelle ici la {glo}`tableverite|table de vérité` pour $S_0$, tirée directement du chapitre précédent :
 
-| $A$ | $B$ |$S_0$|
+## Demi-additionneur
+
+On commence par additionner deux nombres à 1 bit, $A$ et $B$ et leur somme $S$. 
+La table de vérité d'une telle addition est la suivante. 
+
+| $A$ | $B$ | $S=A+B$ |
 | :-: | :-: | :-: |
-| 0   | 0   | 0   |
-| 1   | 0   | 1   |
-| 0   | 1   | 1   |
-| 1   | 1   | 0   |
+| 0   | 0   | 00  |
+| 1   | 0   | 01  |
+| 0   | 1   | 01  |
+| 1   | 1   | 10  |
 
-En comparant cette table de vérité avec celles des portes logiques, on se rend compte que $S_0$ n'est autre qu'un **OU-X** (OU exclusif) de $A$ et $B$.
+On note que la somme de deux bits peut faire $2$, c'est à dire $10$ en binaire.
+La sortie $S$ doit donc être codée sur deux bits, qu'on appelle $S_0$
+(bit des unité, de droite), et $S_1$ (bit de la valeur décimale 2, à gauche).
+On peut donc ré-écrire la table de vérité ci-dessus ainsi: 
 
-La table de vérité pour $S_1$ est :
+| $A$ | $B$ |$S_1$|$S_0$|
+| :-: | :-: | :-: | :-: |
+| 0   | 0   | 0   | 0   |
+| 1   | 0   | 0   | 1   |
+| 0   | 1   | 0   | 1   |
+| 1   | 1   | 1   | 0   |
 
-| $A$ | $B$ |$S_1$|
-| :-: | :-: | :-: |
-| 0   | 0   | 0   |
-| 1   | 0   | 0   |
-| 0   | 1   | 0   |
-| 1   | 1   | 1   |
-
-Et on constate que $S_1$ n'est autre qu'un **ET** logique de $A$ et $B$. On peut dessiner l'additionneur de deux bits ainsi :
+En comparant cette table de vérité avec celles des portes logiques, on se rend compte que $S_0$ n'est autre qu'un **OU-X** (OU exclusif) de $A$ et $B$, tandis quie celle de $S_1$ est un **ET**. 
+On peut dessiner l'additionneur de deux bits (appelé demi-additionneur) ainsi :
 
 ```{logic}
 :height: 140
@@ -47,13 +53,13 @@ Et on constate que $S_1$ n'est autre qu'un **ET** logique de $A$ et $B$. On peut
 }
 ```
 
-````{exercise} 
+```{exercise} 
 
 Vérifiez que ce circuit livre bien les bonnes valeurs de sortie qui correspondent aux tables de vérité ci-dessous. Combien de combinaisons différentes devrez-vous tester ?
-```{dropdown} Corrigé
+```
+```{solution}
 Le circuit fonctionne correctement. Il faut tester les quatre combinaisons qui apparaissent dans les tables de vérité.
 ```
-````
 
 ## Additionneur complet
 
@@ -63,13 +69,13 @@ Lorsqu'on additionne deux nombres à plusieurs chiffres, que ce soit en base 10 
 
 C'est ici que ça se complique : pour additionner les chiffres de la deuxième colonne, on doit potentiellement additionner _trois_ chiffres, et plus seulement deux. On a donc, en entrée, les deux bits $A$ et $B$ qui viennent des nombres à additionner, et aussi potentiellement cette retenue qui vient de la colonne des unités, qu'on appellera $C_{in}$ (pour_carry_, « retenue » en anglais). Ceci est vrai en base 2 comme en base 10. Il faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s'appelle_additionneur complet_et livrera deux sorties : le bit de somme, appelé simplement $S$, et la retenue à reporter pour la colonne suivante, appelée $C_{out}$.
 
-````{exercise} Bases de l'additionneur complet
+```{exercise} Table de vérité de l'additionneur 
  * Déterminez combien de combinaisons différentes sont possibles pour trois signaux d'entrée $A$, $B$ et $C_{in}$ qui chacun peuvent valoir soit 1 soit 0.
  * Listez toutes ces combinaisons.
  * Pour chaque combinaison, déterminez la valeur binaire qui est la somme des trois signaux d'entrée.
- * Finalement, avec les informations ainsi obtenues, complétez la table de vérité d'un additionneur complet qui a deux sorties $S$ et $C_{out}$
-
-```{dropdown} Corrigé
+ * Finalement, avec les informations ainsi obtenues, complétez la table de vérité d'un additionneur complet qui a deux sorties $S_0$ et $C_{out}$ (qui correspond à $S_{1}$). 
+```
+```{solution}
  Il y a $2 \cdot 2 \cdot 2 = 2^3 = 8$ combinaisons différentes. Avec la notation $A + B + C =$ valeur en décimal $=$ valeur en binaire, les voici :
   * $0 + 0 + 0 = 0_{(10)} = 00_{(2)}$
   * $0 + 0 + 1 = 1_{(10)} = 01_{(2)}$
@@ -82,7 +88,7 @@ C'est ici que ça se complique : pour additionner les chiffres de la deuxième
 
 La table de vérité est ainsi:
 
-| $A$ | $B$ |$C_{in}$|$C_{out}$| $S$ |
+| $A$ | $B$ |$C_{in}$|$C_{out}$| $S_0$ |
 | :-: | :-: | :-:    | :-:     | :-: |
 | 0   | 0   | 0      | 0       | 0   |
 | 0   | 0   | 1      | 0       | 1   |
@@ -94,9 +100,57 @@ La table de vérité est ainsi:
 | 1   | 1   | 1      | 1       | 1   |
 
 ```
+
+```{exercise} Circuit de l'additionneur
+Déterminer les fonctions logiques correspondant aux sorties $S$ et $C_{out}$
+de la table de vérité de l'additionneur de l'exercice ci-dessus. En déduire son
+circuit logique
+```
+```{solution}
+On remarque que $S_0$ vaut B **OU-X** $C_{in}$ si A=0 et **NON** (B **OU-X** $C_{in}$) si A=1.
+
+Autrement dit $S_0$ = (**NON** A) **ET** (B **OU-X** $C_{in}$) **OU** (A **ET** **NON** (B **OU-X** $C_{in}$)). 
+
+Cela peut se simpifier en $S_0$ = A **OU-X** (B **OU-X** $C_{in}$) 
+
+Pour $C_{out}$, on remarque qu'il vaut 1, s'il y a au moins deux 1 parmi les trois entrées. Donc si A est 0 on est obligé d'avoir B et $C_{in}$ à 1 pour que $C_{out}$ soit à 1. Si A est 1, alors il suffit que B ou C vale 1 pour que $C_{out}$ soit à 1.
+
+Autrement dit $C_{out}$ = (A **ET** (B **OU** $C_{in}$)) **OU** (B **ET** $C_{in}$)
+
+Le circuit correspondant est donc le suivant: 
+
+
+```{logic}
+:id: YWKujr
+:height: 260
+:mode: tryout
+
+{ // JSON5
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [75, 20], id: 0, name: 'A'},
+    in1: {type: 'in', pos: [70, 135], id: 1, name: 'B'},
+    in2: {type: 'in', pos: [80, 240], id: 2, name: 'Cin'},
+    xor0: {type: 'xor', pos: [315, 55], in: [3, 4], out: 5},
+    xor1: {type: 'xor', pos: [515, 30], in: [6, 7], out: 8},
+    and0: {type: 'and', pos: [315, 220], in: [9, 10], out: 11},
+    and2: {type: 'and', pos: [410, 120], in: [23, 24], out: 25},
+    or1: {type: 'or', pos: [510, 155], in: [26, 27], out: 28},
+    or0: {type: 'or', pos: [310, 130], in: [29, 30], out: 31},
+    out0: {type: 'out', pos: [585, 30], id: 17, name: 'S0'},
+    out1: {type: 'out', pos: [580, 155], id: 18, name: 'Cout'},
+  },
+  wires: [[2, 4], [1, 3], [0, 6], [5, 7], [1, 9], [2, 10], [1, 29], [2, 30], [0, 23], [31, 24], [25, 26], [8, 17], [28, 18], [11, 27]]
+}
+```
+
+
+````{micro}
+Vérifier que le circuit donné dans la solution de l'exercice ci-dessus donne bien en sortie la somme des
+trois entrée. 
 ````
 
-En faisant pour l'instant abstraction des détails d'un additionneur complet, on peut se dire qu'on le dessine simplement ainsi :
+On peut représenter ce circuit comme un nouveau composant à trois entrées et deux sorties, que l'on dessine simplement ainsi :
 
 ```{logic}
 :height: 120
@@ -147,16 +201,15 @@ L'{logicref}`fulladder_2bits.adder0|additionneur de droite`, comme précédemmen
 ````{exercise} Limite de cet additionneur à 2 bits
 Avec l'additionneur ci-dessus, est-il possible d'obtenir des 1 sur toutes les sorties, donc d'avoir $S_2 = S_1 = S_0 = 1$ ?
 
-```{dropdown} Indice
-Déterminez quel est le nombre décimal qui serait représenté par $S_2 = S_1 = S_0 = 1$: $111_{(2)} =\;???_{(10)}$  Ensuite, déterminez les nombres les plus grands représentables sur les deux fois 2 bits d'entrée et tirez-en une conclusion.
-```
-
-```{dropdown} Corrigé
-La configuration $S_2 = S_1 = S_0 = 1$ représente le nombre décimal 7. Ce serait le résultat de l'addition. Il faudrait ainsi chercher une configuration des bits d'entrées qui, une fois additionnés, donnent 7. Mais ceci n'est pas possible, car sur chacune des entrées $(A_1, A_0)$ et $(B_1, B_0)$, la plus grande valeur représentable est $11_{(2)}$, autrement dit $3_{(10)}$ — et c'est impossible d'atteindre 7 en évaluant au maximum $3+3$.
-```
+<!-- ```{dropdown} Indice -->
+<!-- Déterminez quel est le nombre décimal qui serait représenté par $S_2 = S_1 = S_0 = 1$: $111_{(2)} =\;???_{(10)}$  Ensuite, déterminez les nombres les plus grands représentables sur les deux fois 2 bits d'entrée et tirez-en une conclusion. -->
 ````
 
-`````{exercise} Additionneur de demi-octets
+```{Solution}
+La configuration $S_2 = S_1 = S_0 = 1$ représente le nombre décimal 7. Ce serait le résultat de l'addition. Il faudrait ainsi chercher une configuration des bits d'entrées qui, une fois additionnés, donnent 7. Mais ceci n'est pas possible, car sur chacune des entrées $(A_1, A_0)$ et $(B_1, B_0)$, la plus grande valeur représentable est $11_{(2)}$, autrement dit $3_{(10)}$ — et c'est impossible d'atteindre 7 en évaluant au maximum $3+3$.
+```
+
+````{exercise} Additionneur de demi-octets
 
 En connectant des additionneurs complets, réalisez un circuit qui additionne deux nombres $A$ et $B$ de quatre bits, numérotés $A_0$ à $A_3$ et $B_0$ à $B_3$, respectivement. Combien de bits de sortie doit-il y avoir pour traiter toutes les valeurs possibles ?
 
@@ -180,8 +233,8 @@ Les entrées sont déjà disposées. Glissez autant d'additionneurs et de bits d
   ]
 }
 ```
-
-````{dropdown} Corrigé
+````
+````{solution}
 On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et de droite à gauche pour être proche de la représentation selon laquelle les additions se résolvent en colonne, est :
 
 ```{logic}
@@ -234,9 +287,11 @@ On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et 
 }
 ```
 ````
-`````
 
 Cet exercice démontre l'opportunité de penser en termes modulaires, ce qui revient souvent en informatique. Ici, on a réalisé qu'un additionneur complet résout un sous-problème bien défini d'une addition générale d'un nombre à $n$ bits, et qu'une fois qu'on a créé un tel additionneur, il suffit d'en connecter plusieurs les uns derrière les autres de manière structurée pour additionner des nombres plus grands.
+
+
+`````{htmlonly}
 
 ````{exercise} Dépassement de capacité
 
@@ -316,11 +371,11 @@ Réglez les entrées du circuit de manière à lui faire effectuer les additions
   ]
 }
 ```
-
-```{dropdown} Corrigé
+````
+```{solution}
 Dès que la somme dépasse 15, elle n'est plus représentable sur les 4 bits qui sont affichés sur la sortie. La plupart des ordinateurs et smartphones actuels représentent les nombres non pas sur 4 bits, mais sur 64. Mais même avec 64 bits, il y a un nombre maximal que l'on peut représenter (en l'occurrence, $2^{64} - 1 = 18\,446\,744\,073\,709\,551\,615$.) La retenue du dernier additionneur indique si le résultat est valable : il vaut 1 lorsque le résultat de l'addition n'est pas correctement représenté avec les 4 (ou 64) bits de sortie. Dans les processeurs, il porte souvent simplement le nom de $C$ (pour _carry_, retenue). On utilisera dorénavant aussi ce nom.
 ```
-````
+
 
 ````{exercise} Circuit défectueux
 
@@ -393,61 +448,8 @@ Déterminez quel composant est défectueux dans ce circuit et comment il faudrai
   ]
 }
 ```
-
-```{dropdown} Corrigé
+````
+```{solution}
 La {logicref}`fulladder_4bits_faulty.cout2|retenue sortant du deuxième additionneur depuis la droite` est bloquée à 0 à la place de correctement changer de valeur suivant ses entrées.
 ```
-````
-
-`````{exercise} Design d'un additionneur complet
-
-_**Note :** exercice difficile et actuellement peu guidé ici ; prochainement complété par davantage d'indications._
-
-En s'aidant de la table de vérité d'un seul additionneur complet, créer un circuit logique qui calcule ses sorties $S$ et $C_{out}$ en fonction des entrées $A$, $B$ et $C_{in}$.
-
-````{dropdown} Indice
- * La sortie $S$ doit être 1 soit lorsque les trois entrées valent 1, soit lorsqu'une seule des trois entrée vaut 1.
- * La sortie $C_{out}$, qui est la retenue, doit être 1 lorsque deux ou trois des trois entrées valent 1.
-````
-
-````{dropdown} Corrigé
-```{logic}
-:height: 200
-:mode: tryout
-
-{
-  "v": 3,
-  "in": [
-    {"pos": [60, 30], "id": 0, "name": "A", "val": 0},
-    {"pos": [60, 90], "id": 1, "name": "B", "val": 0},
-    {"pos": [60, 150], "id": 2, "name": "Cin", "val": 0}
-  ],
-  "out": [
-    {"pos": [440, 50], "id": 3, "name": "S"},
-    {"pos": [440, 140], "id": 4, "name": "Cout"}
-  ],
-  "gates": [
-    {"type": "XOR", "pos": [170, 40], "in": [5, 6], "out": 7},
-    {"type": "XOR", "pos": [290, 50], "in": [8, 9], "out": 10},
-    {"type": "AND", "pos": [260, 110], "in": [11, 12], "out": 13},
-    {"type": "AND", "pos": [260, 170], "in": [14, 15], "out": 16},
-    {"type": "OR", "pos": [370, 140], "in": [17, 18], "out": 19}
-  ],
-  "wires": [
-    [10, 3],
-    [7, 8],
-    [0, 5],
-    [1, 6],
-    [2, 9],
-    [13, 17],
-    [16, 18],
-    [19, 4],
-    [7, 11],
-    [2, 12],
-    [0, 14],
-    [1, 15]
-  ]
-}
-```
-````
 `````

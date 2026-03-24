@@ -1,14 +1,15 @@
 # Introduction
 
-```{admonition} Attention
-:class: note
-Ce document doit être retravaillé ...
-```
 
-Dans ce chapitre, nous aborderons la question de l'architecture des ordinateurs, c'est-à-dire les multiples couches physiques qui rendent possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
+Dans ce chapitre, nous abordons la question de l'architecture des ordinateurs, c'est-à-dire les multiples couches physiques qui rendent
+possibles des opérations numériques aussi complexes que celles qu'effectuent à chaque instant nos smartphones. 
 
-Comme vous avez pu le voir dans le chapitre lié à la représentation de l'information, tout ce qui apparaît sur votre écran est représenté par l'ordinateur par suite de 0 et de 1. Pour comprendre comment ces {glo}`codebinaire|0 et 1` sont traités par l'ordinateur, il faut avoir en tête que les ordinateurs sont construits à partir d'une couche et de multiples niveaux, comme un mille-feuille, dont chacun possède ses propres règles. 
-
+Comme décrit le chapitre lié à la représentation de l'information, tout ce qui apparaît sur votre écran est représenté par l'ordinateur par suite de 0 et de 1.
+Pour comprendre comment ces {glo}`codebinaire|0 et 1` sont traités par l'ordinateur, il faut avoir en tête que les ordinateurs sont conçus et selon un système
+de couches. La couche inférieure réalise des fonctions simples et chaque couche utilise la couche inférieure pour réaliser des fonctionnalité plus complexe.
+On peut imaginer une conception un peu équivalente pour une maison, où la couche inférieure serait les matériaux de base, qui sont utilisés pour
+la couche suivante qui serait les briques et le ciment, qui à sont tour est utilisée pour concevoir des chambres qui sont combinées pour former la maison. 
+Chaque couche possède ses propres règles de fonctionnement et a son propre rôle bien spécifique. 
 
 ```{figure} media/abstractionlight.png
 ---
@@ -40,14 +41,14 @@ Les ordinateurs ne comprennent que les nombres binaires. La lettre «A», par ex
 De l'électricité  !
 
 
-```{figure} media/iphonecpu.jpeg
----
-height: 350px
-width: 500px
-align: left
----
-Vos photos, vos vidéos, vos messages, tout ce que vous consultez sur votre téléphone portable, sont traitées par un processeur similaire au modèle A9 de Apple, commercialisé dans les iPhone SE. 
-```
+<!-- ```{figure} media/iphonecpu.jpeg -->
+<!-- --- -->
+<!-- height: 350px -->
+<!-- width: 500px -->
+<!-- align: left -->
+<!-- --- -->
+<!-- Vos photos, vos vidéos, vos messages, tout ce que vous consultez sur votre téléphone portable, sont traitées par un processeur similaire au modèle A9 de Apple, commercialisé dans les iPhone SE.  -->
+<!-- ``` -->
 
 <!---
 ```{image} media/iphonecpu.jpeg
@@ -58,17 +59,15 @@ Photos, vidéos, messages, tout ce qui est consulté sur un téléphone portable
 
 -->
 
-<br> <br>
 
-
-```{figure} media/datacenter.jpeg
----
-height: 350px
-width: 500px
-align: left
----
-Vos likes, vos partages, vos vidéos transmises via des applications telles que WhatsApp, Instagram, TikTok, Snapchat, YouTube, sont stockées dans des centres de données aux quatre coins de la planète. 
-```
+<!-- ```{figure} media/datacenter.jpeg -->
+<!-- --- -->
+<!-- height: 350px -->
+<!-- width: 500px -->
+<!-- align: left -->
+<!-- --- -->
+<!-- Vos likes, vos partages, vos vidéos transmises via des applications telles que WhatsApp, Instagram, TikTok, Snapchat, YouTube, sont stockées dans des centres de données aux quatre coins de la planète.  -->
+<!-- ``` -->
 
 <!---
 
@@ -123,57 +122,50 @@ Il a fallu attendre une invention majeure pour permettre aux ordinateurs de se m
 Le {glo}`transistor|transistor` est aujourd'hui la brique de base de construction des systèmes informatiques. Il a été développé dans les années 1940 dans les [laboratoires Bell](https://fr.wikipedia.org/wiki/Laboratoires_Bell), aux Etats-Unis. Ce n'est que vers la fin des années 1950 que l'on commence à construire des ordinateurs commerciaux qui utilisent des transistors plutôt que des tubes à vide. Le transistor est à l'origine d'une révolution dans la taille, la fiabilité, et les performances générales des ordinateurs de l'époque. 
 
 
-```{figure} media/transistor.jpeg
----
-height: 350px
-width: 500px
-align: left
----
-Différents modèles de transistor. On les reconnaît à leurs trois «pattes» aussi appelées: émetteur, base, collecteur. 
+````{subfigure} AB
+:height: 350px
+:width: 650px
+:align: left
+:gap: 8px
+:subcaptions: below
+```{image} media/transistor.jpeg
 ```
-
-<br> <br>
-
-
-<span commented>Le transistor, comme le tube à vide qu'il remplace, fonctionne comme un interrupteur automatique. Il laissera ou non passer du courant entre deux de ses pattes en fonction de ce qui se passe sur sa troisième. On peut aussi le comparer à un robinet d'eau qui peut être ouvert ou fermé, et qu'on peut ouvrir ou fermer automatiquement sans devoir l'activer manuellement. 
-
-
-```{figure} media/transistorgif.gif
----
-height: 350px
-width: 500px
-align: left
----
-En appliquant un courant qui va de la base à l'émetteur (en rose pâle), on permet au courant de circuler entre le collecteur et l'émetteur (appelés ainsi parce que l'émetteur *émet* des électrons, et le collecteur les *collecte*). Envoyer du courant dans la base, c'est donc *ouvrir* le transistor; ne plus en envoyer a, inversement, l'effet de *fermer* le transistor. 
+```{image} media/transistorgif.gif
 ```
-
-En appliquant un courant qui va de la base à l'émetteur (en rose pâle), on permet au courant de circuler entre le collecteur et l'émetteur (appelés ainsi parce que l'émetteur *émet* des électrons, et le collecteur les *collecte*). Envoyer du courant dans la base, c'est donc *ouvrir* le transistor ; ne plus en envoyer a, inversement, l'effet de *fermer* le transistor
-
-<br>
+Gauche: différents modèles de transistor. On les reconnaît à leurs trois «pattes» aussi appelées: émetteur, base, collecteur. Droite: en appliquant un courant qui va de la base à l'émetteur (en rose pâle), on permet au courant de circuler entre le collecteur et l'émetteur (appelés ainsi parce que l'émetteur *émet* des électrons, et le collecteur les *collecte*). Envoyer du courant dans la base, c'est donc *ouvrir* le transistor ; ne plus en envoyer a, inversement, l'effet de *fermer* le transistor
+````
 
 
-De par sa capacité à être ouvert ou fermé, le transistor fonctionne comme une brique fondamentale dans la construction de systèmes informatiques permettant de {glo}`transmission|transmettre`, stocker et {glo}`traitement|traiter` des nombres binaires. 
+
+Le transistor, comme le tube à vide qu'il remplace, fonctionne comme un interrupteur automatique. Il laissera ou non passer du courant entre deux de ses pattes en fonction de ce qui se passe sur sa troisième. On peut aussi le comparer à un robinet d'eau qui peut être ouvert ou fermé, et qu'on peut ouvrir ou fermer automatiquement sans devoir l'activer manuellement. De par sa capacité à être ouvert ou fermé, le transistor fonctionne comme une brique fondamentale dans la construction de systèmes informatiques permettant de {glo}`transmission|transmettre`, stocker et {glo}`traitement|traiter` des nombres binaires. 
 
 
-````{dropdown} Pour aller plus loin
+````{togofurther} Semi-conducteurs
 Les transistors sont faits avec des matériaux dit « semi-conducteurs ». Voici une vidéo qui explique en détail ce qui se passe dans ces semi-conducteurs et qui permet de faire fonctionner un transistor.
 ```{youtube} 33vbFFFn04k
 ```
 ````
 
-
-:::{card}
-Des transistors presque invisibles
-^^^
-Chercher à se représenter la taille des transistors utilisés dans les microprocesseurs actuels n'a pas d'intérêt tellement ils sont petits. À titre d'exemple, disons simplement que le microprocesseur Apple A9 en possède six milliards.
-````{dropdown} Zoom sur un transistor
+````{togofurther} Des transistors presque invisibles
+Chercher à se représenter la taille des transistors utilisés dans les microprocesseurs actuels n'a pas d'intérêt tellement ils sont petits. À titre d'exemple, disons simplement que le microprocesseur Apple A9 en possède six milliards. La vidéo suivante fait un zoom sur un transistor. 
 ```{youtube} Fxv3JoS1uY8
 ```
 ````
-:::
 
 ## Des transistors aux systèmes logiques
 
-Il reste difficile de concevoir des circuits d'ordinateurs en réfléchissant en termes de transistors. Un transistor seul ne peut représenter ou traiter qu'un bit d'information. Oui ou non, ouvert ou fermé, 1 ou 0.
+Il reste difficile de concevoir des circuits d'ordinateurs en réfléchissant en termes de transistors. Pour s'aider on utilise des circuits électroniques qui réalisent
+des opérations logiques. En effet, on peut convenir que la valeur binaire 1  correspond à la valeur logique "Vrai" et à la présence d'une tension dans à un endroit spécifique
+d'un circuit et que la valeur binaire 0 correspond à la valeur logique "Faux" et à l'absence de tension. On a ainsi une équivalence entre des opérations logiques, des calculs
+binaires et des circuits électroniques. Cela est essentiel pour concevoir des circuits électroniques qui réalisant des calculs binaires comme il en existent dans les ordinateurs
+ou les calculatrices. Cette correspondance est résumée par la tableau suivant: 
 
-Dans le chapitre suivant, où nous commençons à voir comment sont conçus les circuits électroniques des ordinateurs, nous parlerons tout d'abord de **{glo}`portelogique|portes logiques`**. Ce sont des composants qui sont eux-mêmes constitués de plusieurs transistors. Réfléchir en termes de portes logiques permet de véritablement concevoir les circuits des ordinateurs qui vont manipuler les bits d'informations formant nos données.
+|binaire| logique | électronique                 |
+|:-----:|:-------:|:-----------------------------|
+|  0    | Faux    | pas de tension (ou courant)  |
+|  1    | Vrai    | tension (ou courant) présente |
+
+
+Dans le chapitre suivant, où nous commençons à voir comment sont conçus les circuits électroniques des ordinateurs, nous parlerons tout d'abord
+de **{glo}`portelogique|portes logiques`**. Ce sont des composants qui sont eux-mêmes constitués de plusieurs transistors. Réfléchir en termes de
+portes logiques permet de véritablement concevoir les circuits des ordinateurs qui vont manipuler les bits d'informations formant nos données.
