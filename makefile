@@ -46,14 +46,10 @@ latex: $(LATEX_FORMAT_DIR)/*.tex
 web: sources scripts
 	sphinx-build -aE -b html $(MD_SOURCE_DIR) $(WEB_BUILD_DIR)
 
-print: sources scripts latex
-	python -m playwright install chromium
-	sphinx-build -aE -t latex_mode -b latex $(MD_SOURCE_DIR) $(LATEX_BUILD_DIR)
-	cd $(LATEX_BUILD_DIR) && make
+print: $(PDF_BUILD_DIR)/modulo.pdf $(addsuffix .pdf, $(addprefix $(PDF_BUILD_DIR)/, $(PRINT_CHAPTERS)));
 
-modulo.pdf: print
-	mkdir -p $(PDF_BUILD_DIR)
-	cp $(LATEX_BUILD_DIR)/modulo.pdf $(PDF_BUILD_DIR)/
+modulo.pdf: $(PDF_BUILD_DIR)/modulo.pdf;
+
 
 $(PDF_BUILD_DIR)/%.pdf:  $(MD_SOURCE_DIR)/$*/*.md scripts latex
 	mkdir -p $(PDF_BUILD_DIR)
@@ -65,7 +61,7 @@ $(PDF_BUILD_DIR)/%.pdf:  $(MD_SOURCE_DIR)/$*/*.md scripts latex
 %.pdf: 	$(PDF_BUILD_DIR)/%.pdf
 	echo $@ is in $(PDF_BUILD_DIR) 
 
-pdf: $(addprefix $(PDF_BUILD_DIR)/, $(addsuffix .pdf, $(PRINT_CHAPTERS))) modulo.pdf
+pdf: print
 	mkdir -p  $(WEB_BUILD_DIR)/media && cp $(PDF_BUILD_DIR)/*.pdf $(WEB_BUILD_DIR)/media/
 
 all: web pdf
