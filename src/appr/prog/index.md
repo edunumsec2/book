@@ -60,7 +60,14 @@ vector
 
 force
 idees
+```
 
+```{toctree}
+:maxdepth: 2
+:hidden:
+:numbered: 0
+
+projets/index
 annexe
 ```
 

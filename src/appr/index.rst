@@ -18,7 +18,6 @@ découpé en **huit thématiques** réparties sur deux années. Il est aussi dis
    archi/index
    resx/index
    hist/index
-   projets/index
    glossaire
 
 
