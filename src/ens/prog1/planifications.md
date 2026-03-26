@@ -3,7 +3,7 @@
 Ce chapitre présente une façon de planifier un semestre en combinant les deux  thématiques:
 
 - Représentation de l'information
-- Programmation I
+- Programmation
 
 <!--
 Créer le tableau dans le classer Excel planification.xlsx

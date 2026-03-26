@@ -86,10 +86,10 @@ latex_mode = tags.has('latex_mode')
 texfname = "modulo"
 
     
-all_chapters = {"rep-info", "prog1", "algo1", "archi",   "prog2", "algo2", "resx", "projets", "hist", "glossaire"}
+all_chapters = {"rep-info", "prog", "algo", "archi", "resx", "projets", "hist", "glossaire"}
 selected_chapters = set()
 if latex_mode:
-    exclude_patterns = ['prog1', 'prog2', 'projets', "glossaire"]
+    exclude_patterns = ['prog', 'projets', "glossaire"]
     exclude_chapters = []
     selection = False
     for chap in all_chapters:

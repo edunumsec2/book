@@ -15,9 +15,9 @@ Pour avoir un polycopié avec tous les chapitre imprimables:
 
 Pour avoir un polycopié avec uniquement une chaptre (par exemple alogrithmique I):
 
-`make algo1.pdf`
+`make algo.pdf`
 
-Les chapitres disponibles sont: `rep-info.pdf algo1.pdf algo2.pdf archi.pdf resx.pdf hist.pdf`. 
+Les chapitres disponibles sont: `rep-info.pdf algo.pdf archi.pdf resx.pdf hist.pdf`. 
 
 Pour générer le tout,  version web et les imprimables de chaque chapitre, et le polycopié global:
 
@@ -34,7 +34,7 @@ va compiler les sources en Markdown pour produire un document `build/latex/appr/
 dans le dossier `build/latex/appr`. Les images aux formats .gif ou .svg qui ne sont pas traités en LaTeX sont converties au format pdf. D'autres conversions sont effectuées (par exemple pour les ciruits logiques). 
 
 Si on ne veut compiler que certains chapitres, il faut ajouter, pour chaque chapitre à inclure,
-des `-t <chap>` à la commande ci-dessus, où `<chap>` est le nom du chapitre à choisir parmi `rep-info algo1 algo2 archi resx hist`.
+des `-t <chap>` à la commande ci-dessus, où `<chap>` est le nom du chapitre à choisir parmi `rep-info algo archi resx hist`.
 
 
 

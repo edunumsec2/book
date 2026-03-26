@@ -31,7 +31,7 @@ Dans cette section, nous allons comprendre comment les ordinateurs parviennent �
 * Appréhender l’importance de la **redondance**.
 
 
-## Personnages-clés
+## Personnages clés
 
 :::::{grid} 1 2 2 2
 :gutter: 2

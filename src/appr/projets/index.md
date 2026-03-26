@@ -34,7 +34,7 @@ Dans cette partie vous allez, tout seul ou en groupe, mettre en pratique vos con
 
 * Comprendre l'existant pour créer l'inconnu
 
-## Personnages-clés
+## Personnages clés
 
 :::::{grid} 1 2 2 2
 :gutter: 2

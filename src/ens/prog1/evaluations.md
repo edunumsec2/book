@@ -27,4 +27,4 @@ Vous pouvez vous connecter au Moodle du Gymnase du Bugnon avec votre compte Eduv
 
 Un projet de dessin permet d'évaluer une grande parti des concepts de l'introduction à la programmation.
 
-[projet dessin](https://dev-apprendre.modulo-info.ch/prog1/projet.html)
+[projet dessin](https://dev-apprendre.modulo-info.ch/prog/projet.html)

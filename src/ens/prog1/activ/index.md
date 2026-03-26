@@ -1,6 +1,6 @@
 # Activités
 
-Dans cette section, vous trouverez des activités pour programmation I. 
+Dans cette section, vous trouverez des activités pour Programmation. 
 
 ```{toctree}
 :maxdepth: 1

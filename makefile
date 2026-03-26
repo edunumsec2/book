@@ -1,8 +1,8 @@
 .ONESHELL:
 
-WEB_CHAPTERS = rep-info archi algo1 prog1 resx algo2 prog2 projets hist
+WEB_CHAPTERS = rep-info archi algo prog resx projets hist
 
-PRINT_CHAPTERS = rep-info archi algo1 resx algo2
+PRINT_CHAPTERS = rep-info archi algo resx
 
 BUILD_DIR = build
 

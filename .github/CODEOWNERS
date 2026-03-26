@@ -11,16 +11,12 @@
 /src/appr/rep-info/ @dasilvadds
 
 # Pour la partie Programmation : 
-/src/appr/prog1/ @rasql
-/src/appr/prog1/ @G-Racine
-/src/appr/prog1/ @rasql
-/src/appr/prog1/ @G-Racine 
+/src/appr/prog/ @rasql
+/src/appr/prog/ @G-Racine
 
 # Pour la partie Algorithmique : 
-/src/appr/algo1/ @biljana-petreska-gyyv
-/src/appr/algo1/ @mihersch
-/src/appr/algo2/ @biljana-petreska-gyyv
-/src/appr/algo2/ @mihersch
+/src/appr/algo/ @biljana-petreska-gyyv
+/src/appr/algo/ @mihersch
 
 # Pour la partie Architecture des ordinateurs : 
 /src/appr/archi/ @jppellet
@@ -38,16 +34,12 @@
 /src/ens/rep-info/ @dasilvadds
 
 # Pour la partie Programmation : 
-/src/ens/prog1/ @rasql
-/src/ens/prog1/ @G-Racine
-/src/ens/prog2/ @rasql
-/src/ens/prog2/ @G-Racine 
+/src/ens/prog/ @rasql
+/src/ens/prog/ @G-Racine
 
 # Pour la partie Algorithmique : 
-/src/ens/algo1/ @biljana-petreska-gyyv
-/src/ens/algo1/ @mihersch
-/src/ens/algo2/ @biljana-petreska-gyyv
-/src/ens/algo2/ @mihersch
+/src/ens/algo/ @biljana-petreska-gyyv
+/src/ens/algo/ @mihersch
 
 # Pour la partie Architecture des ordinateurs : 
 /src/ens/archi/ @jppellet

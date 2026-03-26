@@ -37,7 +37,7 @@ L'œuvre *Vanishing Point* explore quant à elle la frontière fine qui existe e
 
 ## Rapports avec la thématique programmation
 
-l'œuvre *AI* de UVA, même si l'on ne peut pas en être 100% sûr puisque l'on n'a pas accès au code source, utilise une fonction similaire à la fonction `random`en Python, telle qu'elle est présentée [ici](https://dev-apprendre.modulo-info.ch/prog1/randomiser.html).
+l'œuvre *AI* de UVA, même si l'on ne peut pas en être 100% sûr puisque l'on n'a pas accès au code source, utilise une fonction similaire à la fonction `random`en Python, telle qu'elle est présentée [ici](https://dev-apprendre.modulo-info.ch/prog/randomiser.html).
 
 Même si le programme peut-être construit d'une multitude de manières, il est probable qu'il consiste en un certain nombre de listes de mots qui, combinés de façon aléatoires, produisent les textes imprimés durant l'exposition. Vous pouvez trouver un programme du même genre [ici](https://dev-apprendre.modulo-info.ch/projets/art_absurde.html).
 

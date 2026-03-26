@@ -120,7 +120,7 @@ Contenus liés à des avertissements de maintenance du site, des problèmes renc
 
 * tous les contenus présents dans les encarts peuvent être stylisés avec la syntaxe élémentaire du Markdown pour la stylisation des polices de caractères (*italiques*, **gras**, etc.).
 
-## Personnages-clés
+## Personnages clés
 
 `````{tabbed} Aperçu
 ````{panels}

@@ -15,7 +15,7 @@ Le dernier chapitre, « Récursivité [en options] » est prévu **uniquement po
 
 ### Cadre des « Cinq Co »
 
-Pour une description du cadre des « Cinq Co » qui a guidé la rédaction des chapitres, veuillez vous référer à la <a href="../../algo1/peda/philosophie.html#philosophie"> section de même nom</a> dans le  <a href="../../algo1/peda/philosophie.html">chapitre « Philosophie » de l'algorithmique I</a>.
+Pour une description du cadre des « Cinq Co » qui a guidé la rédaction des chapitres, veuillez vous référer à la <a href="../../algo/peda/philosophie.html#philosophie"> section de même nom</a> dans le  <a href="../../algo/peda/philosophie.html">chapitre « Philosophie » de l'algorithmique I</a>.
 
 <img src="Schéma_co_2.png">
 

@@ -37,5 +37,5 @@ _**Remarque**: “objectifs d’apprentissage” et “notions fondamentales” 
 
 
 ## Exemples d'activités bien formées
-- [Monochromes ou l’importance d’une « bonne » représentation](https://enseigner.modulo-info.ch/algo1/activ/monochromes.html)
+- [Monochromes ou l’importance d’une « bonne » représentation](https://enseigner.modulo-info.ch/algo/activ/monochromes.html)
 - [Magie Binaire](https://enseigner.modulo-info.ch/rep-info/activ/magie_binaire.html)

@@ -6,7 +6,7 @@ Cette planification est axée de manière à utiliser les fonctionnalités du mo
 
 ## Planification
 
-Ci-dessous un exemple de planification de la thématique Programmation I sur 16 semaines entrecoupé de 3 séquences sur le thème des enjeux sociaux et 4 séquences sur le thème de la représentation de l'information.
+Ci-dessous un exemple de planification de la première partie de la thématique Programmation sur 16 semaines entrecoupé de 3 séquences sur le thème des enjeux sociaux et 4 séquences sur le thème de la représentation de l'information.
 
 Deux travaux écrits peuvent être faits en classe, le premier sur la programmation ou sur les enjeux sociaux et le deuxième sur la représentation de l'info.
 
