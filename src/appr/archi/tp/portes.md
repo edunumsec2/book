@@ -1,4 +1,4 @@
-# TP Portes logiques
+# Portes logiques
 
 Dans ce chapitre, nous allons explorer les portes logiques NON, OU et ET.
 

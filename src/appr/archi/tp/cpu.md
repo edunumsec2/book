@@ -1,4 +1,4 @@
-# TP CPU
+# CPU
 
 Le processeur, aussi appelé CPU (Central processing Unit) ou unité de traitement central, lit des instructions dans la mémoire programme et les exécute.
 
