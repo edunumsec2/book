@@ -1,4 +1,4 @@
-# TP Mémoire
+# Mémoire
 
 Les circuits que nous avons vus jusqu'à maintenant s'appellent **circuits combinatoires**. Leur sortie est le seul résultat de leurs entrées. Une même entrée produit toujours la même sortie. Le circuit n'a pas de mémoire.
 

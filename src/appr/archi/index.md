@@ -1,39 +1,27 @@
 (archi)=
 
 # Architecture des ordinateurs
+```{toctree}
+   :maxdepth: 2
+   :hidden:
+   :numbered: 2
+intro
+portes
+sys-log
+additionneur
+alu
+mem
+```
+
 ````{htmlonly}
 ```{toctree}
-   :maxdepth: 2
-   :hidden:
-   :numbered: 2
-intro
-portes
-sys-log
-additionneur
-alu
-mem
-tp1
-tp2
-tp3
-tp4
-tp5
+:maxdepth: 2
+:hidden:
+:numbered: 0
+
+tp/index
 ```
 ````
-
-````{latexonly}
-```{toctree}
-   :maxdepth: 2
-   :hidden:
-   :numbered: 2
-intro
-portes
-sys-log
-additionneur
-alu
-mem
-```
-````
-
 
 
 <!-- tp2.md :only: html -->
