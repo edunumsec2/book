@@ -1,29 +1,28 @@
 (appr:repinfo:caracteres)=
 # Les caractères
 
-Toute l'information est représentée dans un ordinateur par des nombres
+<!-- Toute l'information est représentée dans un ordinateur par des nombres
 encodés sous forme binaire par des 0 et des 1. Se pose alors la question
 de la représentation des caractères, ne serait-ce que parce que la communication
-entre les utilisateurs et les ordinateurs s'opère essentiellement sous forme textuelle. 
+entre les utilisateurs et les ordinateurs s'opère essentiellement sous forme textuelle. La solution est simple : on associe chaque caractère à un code binaire. -->
+Dans un ordinateur, toute information est représentée sous forme de nombres encodés en système binaire, c’est-à-dire à l’aide de 0 et de 1. La question de la représentation des caractères se pose alors, d’autant plus que la communication entre les utilisateurs et les ordinateurs s’effectue principalement sous forme textuelle.
 
 ## Principe
 
-La solution est simple : on associe chaque caractère à un code binaire.
+La solution est simple : on associe à chaque caractère un code binaire.
 
 | Caractère | Décimal | Hexadécimal |   Binaire    |
 |-----------|---------|-------------|--------------|
-|     A     |    65   |    0x41     | 01**0**00001 |
-|     B     |    66   |    0x42     | 01**0**00010 |
-|     C     |    67   |    0x43     | 01**0**00011 |
+|     A     |    65   |    0x41     | 01000001 |
+|     B     |    66   |    0x42     | 01000010 |
+|     C     |    67   |    0x43     | 01000011 |
 |     …     |    …    |     …       |        …     |
-|     Z     |    90   |    0x5A     | 01**0**11010 |
+|     Z     |    90   |    0x5A     | 01011010 |
 
 
-Chaque caractère frappé sur le clavier est représenté par le code correspondant dans ce tableau.
+Chaque caractère saisi au clavier est représenté dans l’ordinateur par le code qui lui correspond dans ce tableau.
 
-Chacun des caractères de la phrase que vous lisez (qu'on nomme **chaîne de caractères**) a ainsi été stocké,
-transmis et manipulé par l'ordinateur sous la forme d'une séquence
-de 0 et 1.
+Chaque caractère de la phrase que vous lisez, appelée **chaîne de caractères**, est représenté, stocké et manipulé par l’ordinateur sous forme d’une séquence de 0 et de 1.
 
 Lorsqu'il s'agit de représenter ce texte à l'écran ou à l'impression, les logiciels utilisent la table
 dans l'autre sens pour trouver le caractère correspondant au nombre binaire.
@@ -95,25 +94,25 @@ Ces tables donnent également une représentation des caractères de ponctuation
 et des symboles mathématiques, ainsi que des caractères non-imprimables comme
 le retour à la ligne.
 
-En réalité, il n'existe pas une table de conversion unique, mais des dizaines
-de tables de conversion. Certaines tables ont été proposées à l'origine
-par des constructeurs d'ordinateurs ou des éditeurs de systèmes d'exploitation.
+En réalité, il n’existe pas une unique table de conversion, mais des dizaines. Certaines ont été initialement proposées par des constructeurs d’ordinateurs ou des éditeurs de systèmes d’exploitation. Parmi ces nombreuses tables de conversion, certaines sont devenues des standards. Nous allons maintenant découvrir deux d’entre elles : l’ASCII et l’UTF-8, largement utilisés pour représenter les caractères dans les ordinateurs.
 
 ## Table ASCII
 
-Le code américain normalisé pour l’échange d’information ASCII (pour American Standard Code for Information Interchange) est apparu dans les année 1960.
-Malgré sa large acceptation, avec ses **7 bits par caractère**,
-cette table avait pour principal défaut de ne pas prendre en compte
-les caractères qui n'existent pas dans la langue anglaise,
-ne serait-ce que les lettres accentuées.
+Le code américain normalisé pour l’échange d’information **ASCII** (pour American Standard Code for Information Interchange) est apparu dans les années 1960.
+Malgré sa large adoption, cette table basée sur **7 bits par caractère** présentait un défaut majeur : elle ne permettait pas de représenter les caractères absents de l’anglais, notamment les lettres accentuées.
 
-```{image} media/ASCII-Table.png
+
+
+```{figure} media/ASCII-Table.png
+---
 :width: 900
+---
+Table de codage des caractères ASCII. À chaque caractère est associé un code binaire, également exprimé sous forme décimale et hexadécimale.
 ```
-**Tab. 1** La table de représentation des caractères ASCII
+
 ````{htmlonly}
 <br>
-L'exemple ci-dessous renvoie la valeur binaire du texte écrit.
+L'exemple ci-dessous renvoie la valeur binaire d'un texte écrit.
 
 ```{codeplay}
 
@@ -126,6 +125,7 @@ res = ' '.join(format(ord(i), 'b') for i in texte)
 print("Le texte en binaire est : " + res)
 ```
 ````
+
 ``````{htmlonly}
 `````{didyouknow} 
 
