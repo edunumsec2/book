@@ -14,21 +14,24 @@ redondance
 conclusion
 ```
 
-`````{htmlonly}
-Le monde numérique est extrêmement vaste. Au moyen d’applications dédiées, il est possible d’y travailler sur une certaine représentation du réel. Des textes, des images, des sons ou des données financières peuvent y être manipulées.
+
+
+Le monde numérique est extrêmement vaste. À l’aide d’applications dédiées, il permet de manipuler diverses représentations du réel, qu’il s’agisse de textes, d’images, de sons ou de vidéos. Cependant, il convient de garder à l’esprit que, aussi « réelles » qu’elles puissent paraître, ces représentations demeurent des constructions, parfois approximatives.
+
+Dans cette section, nous verrons comment les ordinateurs parviennent à représenter le monde, ainsi que les compromis nécessaires pour en simplifier la complexité afin de permettre son traitement automatique au moyen de calculs élémentaires.
+
+<!-- Le monde numérique est extrêmement vaste. Au moyen d’applications dédiées, il est possible d’y travailler sur une certaine représentation du réel. Des textes, des images, des sons ou des données financières peuvent y être manipulées.
 
 Pourtant, il faut avoir conscience qu’aussi «réelles» que ces représentations puissent paraître, elles restent des représentations.
 
-Dans cette section, nous allons comprendre comment les ordinateurs parviennent à représenter le monde et les compromis qui doivent être faits pour simplifier le réel jusqu’à ce que sa représentation puisse être manipulée automatiquement au moyen de calculs élémentaires.
+Dans cette section, nous allons comprendre comment les ordinateurs parviennent à représenter le monde et les compromis qui doivent être faits pour simplifier le réel jusqu’à ce que sa représentation puisse être manipulée automatiquement au moyen de calculs élémentaires. -->
 
 
-## Objectifs
+## Objectifs d'apprentissage
 
-* Découvrir la **représentation binaire** des nombres entiers, des caractères, des images et des sons.
+* Comprendre et manipuler des **représentations binaires** de nombres entiers, de caractères, d’images et de sons.
 
-* Comprendre les notions de **compression** et de **stockage** des données.
-
-* Appréhender l’importance de la **redondance**.
+* Expliquer les principes de **compression** et de **stockage des données**, ainsi que le rôle de la **redondance**.
 
 
 ## Personnages clés
@@ -59,5 +62,5 @@ Pendant la Seconde Guerre mondiale, [**Claude Shannon**](https://fr.wikipedia.or
 :::
 ::::
 :::::
-`````
+
 

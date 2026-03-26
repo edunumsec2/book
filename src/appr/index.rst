@@ -1,12 +1,11 @@
 .. image:: ../static/assets/modulo-head-banner.png
    :alt: "Bannière Modulo"
 
-Informatique au gymnase : apprendre
+Apprendre l'informatique au gymnase
 ====================================
 
-Bienvenue dans le cours d'informatique au gymnase. 
-Ce cours a été conçu pour vous accompagner dans votre découverte de l'informatique. Il est 
-découpé en **huit thématiques** réparties sur deux années. Il est aussi disponible en version PDF (qui comprend tous les chapitres): `modulo.pdf <media/modulo.pdf>`_.
+Bienvenue dans le cours d'informatique au gymnase, conçu pour vous accompagner dans votre découverte de l'informatique. Il est 
+structuré en **cinq thématiques** et disponible en **version PDF**.
 
 .. toctree::
    :maxdepth: 3
@@ -22,22 +21,20 @@ découpé en **huit thématiques** réparties sur deux années. Il est aussi dis
 
 
 `Représentation de l'information 
-<rep-info>`_ 
-: ce chapitre vous explique comment le monde 
-réel est transformé pour être représenté sur un smartphone ou un ordinateur. Il est aussi disponible dans un PDF qui ne contient que ce chapitre: `rep-info.pdf <media/rep-info.pdf>`_.
+<rep-info/index.html>`_ 
+: ce chapitre explique comment le monde réel peut être représenté sur un smartphone ou un ordinateur. Ce chapitre est également disponible en version PDF: `rep-info.pdf <media/rep-info.pdf>`_.
 
-`Programmation <prog>`_
+`Programmation <prog/index.html>`_
 : ce chapitre présente la programmation en Python grâce à une approche visuelle et graphique. 
 
-`Algorithmique <algo>`_
-: ce chapitre vous fait découvrir les bases de l'algorithmique, 
-qui s'occupe de l'analyse des performances des programmes et leur optimisation. Il est aussi disponible en version PDF qui ne contient que ce chapitre: `algo.pdf <media/algo.pdf>`_.
+`Algorithmique <algo/index.html>`_
+: ce chapitre vous fait découvrir les bases de l’algorithmique, qui s’intéresse à l’analyse des performances des algorithmes et à leur optimisation.. Ce chapitre est également disponible en version PDF: `algo.pdf <media/algo.pdf>`_.
 
-`Architecture des ordinateurs <archi>`_
+`Architecture des ordinateurs <archi/index.html>`_
 : ce chapitre vous transporte dans les bases logiques et électroniques
-des ordinateurs modernes. Il est aussi disponible en version PDF qui ne contient que ce chapitre: `archi.pdf <media/archi.pdf>`_.
+des ordinateurs modernes. Ce chapitre est également disponible en version PDF: `archi.pdf <media/archi.pdf>`_.
 
-`Réseaux <resx>`_
-: ce chapitre vous fait découvrir comment fonctionne Internet. Il est aussi disponible en version PDF qui ne contient que ce chapitre: `resx.pdf <media/resx.pdf>`_.
+`Réseaux <resx/index.html>`_
+: ce chapitre vous fait découvrir comment fonctionne Internet. Ce chapitre est également disponible en version PDF: `resx.pdf <media/resx.pdf>`_.
 
 
