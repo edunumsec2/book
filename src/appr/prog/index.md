@@ -112,17 +112,6 @@ Ada Lovelace 🇬🇧
 :::
 ::::
 
-<!-- ::::{grid-item}
-:::{card}
-:img-top: media/guido.jpg
-
-Guido van Rossum 🇳🇱
-^^^^^
-***Né en 1954***
-
-[**Guido van Rossum**](https://fr.wikipedia.org/wiki/Guido_van_Rossum) est le créateur du langage de programmation **Python**. Au sein de la communauté pythonienne, il est connu comme « dictateur bienveillant à vie », ce qui signifie qu'il suit le développement de Python et arbitre lorsque la situation le requiert.
-:::
-:::: -->
 
 ::::{grid-item}
 :::{card}
@@ -135,6 +124,7 @@ Mary Kenneth Keller 🇺🇸
 Sœur [**Mary Kenneth Keller**](https://fr.wikipedia.org/wiki/Mary_Kenneth_Keller) est la première femme à obtenir un doctorat en informatique aux États-Unis. Elle participe - avec une douzaine d'autres d'étudiants - au développement du [BASIC](https://fr.wikipedia.org/wiki/Basic_(langage)), une des premiers langages de haut niveau.
 :::
 ::::
+:::::
 
 <!-- ::::{grid-item}
 :::{card}
@@ -147,5 +137,15 @@ Urban Müller 🇨🇭
 L'étudiant physicien [**Urban Müller**](https://fr.wikipedia.org/wiki/Brainfuck), est le créateur de [Brainfuck](https://fr.wikipedia.org/wiki/Brainfuck). Ce langage exotique tire son nom de l’union de brain (cerveau) et fuck (niquer), est volontairement simpliste et met le cerveau dans un état de confusion par sa complexité apparente.
 :::
 :::: -->
+<!-- ::::{grid-item}
+:::{card}
+:img-top: media/guido.jpg
 
-:::::
+Guido van Rossum 🇳🇱
+^^^^^
+***Né en 1954***
+
+[**Guido van Rossum**](https://fr.wikipedia.org/wiki/Guido_van_Rossum) est le créateur du langage de programmation **Python**. Au sein de la communauté pythonienne, il est connu comme « dictateur bienveillant à vie », ce qui signifie qu'il suit le développement de Python et arbitre lorsque la situation le requiert.
+:::
+:::: -->
+

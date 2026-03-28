@@ -6,7 +6,7 @@ d'autres peuvent servir de mémoire pour stocker des valeurs binaires.
 
 
 
-### Combinaisons de portes
+## Combinaisons de portes
 
 Les portes peuvent être connectées les unes aux autres. Voici par exemple un circuit logique contenant une porte **ET** et une porte
 **NON**.

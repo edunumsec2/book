@@ -1,5 +1,8 @@
-# Architecture générale
+---
+orphan: true
+---
 
+# Architecture générale
 
 
 Il est commun d’entendre parler du microprocesseur comme du « cœur de l’ordinateur ». On se propose de dégager les caractéristiques essentielles de ce qui constitue cette machine « intelligente » appelée ordinateur, tout en explicitant les composants informatiques spécifiques (le matériel ou « hardware »).

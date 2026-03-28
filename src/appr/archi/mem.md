@@ -232,7 +232,7 @@ Ces verrous sont communs, et pour le reste du chapitre, on simplifiera la notati
 Voici une vidéo qui illustre ce principe de verrou SR.
 
 ```{youtube} KM0DdEaY5sY
-:start: 4:58
+:start: 298
 ```
 ````
 

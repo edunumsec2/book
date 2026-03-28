@@ -123,9 +123,7 @@ Le {glo}`transistor|transistor` est aujourd'hui la brique de base de constructio
 
 
 ````{subfigure} AB
-:height: 350px
 :width: 650px
-:align: left
 :gap: 8px
 :subcaptions: below
 ```{image} media/transistor.jpeg

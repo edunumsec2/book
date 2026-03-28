@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # CPU
 
 Le processeur, en anglais central processing unit (CPU), est un composant qui exécute les instructions machine des programmes informatiques.

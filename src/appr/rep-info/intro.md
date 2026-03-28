@@ -21,29 +21,28 @@ Depuis qu'elle existe, l'espèce humaine a créé de nombreux alphabets, ainsi q
 :::{tab-item} Sumérien
 ```{image} media/cuneiform.jpg
 :height: 300px
-align: center
+:align: center
 ```
 :::
 
 :::{tab-item} Égyptien
 ```{image} media/hieroglyphs.jpg
 :height: 300px
-align: center
+:align: center
 ```
 :::
 
 :::{tab-item} Chinois
 ```{image} media/chinois.png
 :height: 300px
-align: center
+:align: center
 ```
 :::
 
 :::{tab-item} Synoptique
 ```{image} media/synoptique.png
 :height: 300px
-align: center
-name:fig-synoptique
+:align: center
 ```
 :::
 ::::
