@@ -205,20 +205,20 @@ les jours des relations logiques de conjonction, de disjonction et de négation.
 Identifier les trois portes logiques suivantes en vérifiant la sortie en fonction des entrées:
 ```{logic}
 :id: 1BPIU5
-:height: 210
+:height: 180
 :mode: tryout
 
 { // JSON5
-  v: 6,
+  v: 8,
   components: {
     in0: {type: 'in', pos: [80, 65], id: 0, name: 'A'},
     in1: {type: 'in', pos: [80, 115], id: 1, name: 'B'},
-    or0: {type: 'or', pos: [250, 40], in: [2, 3], out: 4, showAsUnknown: true},
-    xor0: {type: 'xor', pos: [250, 105], in: [8, 9], out: 10, showAsUnknown: true},
-    and0: {type: 'and', pos: [245, 170], in: [11, 12], out: 13, showAsUnknown: true},
-    out0: {type: 'out', pos: [355, 40], id: 14, name: 'X'},
-    out1: {type: 'out', pos: [355, 105], id: 15, name: 'Y'},
-    out2: {type: 'out', pos: [350, 170], id: 16, name: 'Z'},
+    or0: {type: 'or', pos: [245, 30], in: [2, 3], out: 4, showAsUnknown: true},
+    xor0: {type: 'xor', pos: [245, 90], in: [8, 9], out: 10, showAsUnknown: true},
+    and0: {type: 'and', pos: [245, 150], in: [11, 12], out: 13, showAsUnknown: true},
+    out0: {type: 'out', pos: [355, 30], id: 14, name: 'X'},
+    out1: {type: 'out', pos: [355, 90], id: 15, name: 'Y'},
+    out2: {type: 'out', pos: [355, 150], id: 16, name: 'Z'},
   },
   wires: [[0, 2], [1, 9], [1, 12], [4, 14], [10, 15], [13, 16], [0, 8], [0, 11], [1, 3]]
 }

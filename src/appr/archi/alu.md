@@ -553,6 +553,8 @@ Connectez cette ALU à 8 entrées et à 4 sorties de manière à lui faire effec
 ```
 ````
 
+Une ALU est un composant complexe — zoomez sur celle du circuit ci-dessous pour faire apparaître les composants qui la constituent. En zoomant assez, vous retrouverez les additionneurs complets ainsi que les portes **ET** et **OU** qui réalisent les opérations logiques, qui sont suiviens de sélecteurs de signal pour choisir laquelle de ces opérations est réalisée et propagée à la sortie.
+
 L'ALU a trois sorties en plus, en bas du composant :
 
  * la sortie $C_{out}$ (pour _carry out_) vaut 1 lors d'un dépassement de capacité (si le résultat de l'opération arithmétique représenté sur la sortie n'est pas valable parce qu'il vaudrait davantage de bits pour le représenter ; par exemple, le résultat de $8 + 8 = 16$ n'est pas représentable sur 4 bits, qui suffisent à représenter les valeurs entières jusqu'à 15 seulement) ;
@@ -621,7 +623,8 @@ On connecte les 8 entrées, on règle l'opération de l'ALU sur soustraction et 
 ```
 ````
 ````{exercise}
-Plus difficile : essayez de réaliser un circuit qui calcule la même valeur de sortie, mais sans utiliser d'ALU.
+Plus difficile : essayez de réaliser un circuit qui calcule la même valeur de sortie, mais sans utiliser d'ALU. (Pourquoi vouloir se passer de l'ALU? Parce que c'est un composant complexe qui sait faire beaucoup de choses, et que parfois, on n'a pas besoin de toute sa puissance pour faire une opération toute simple!)
+````
 
 *Indice:*
 Une porte **OU-X** peut être vue comme un comparateur de deux bits : sa sortie vaudra 1 si et seulement si ses deux entrées sont différentes.
