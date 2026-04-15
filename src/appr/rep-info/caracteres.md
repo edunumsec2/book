@@ -105,7 +105,7 @@ Malgré sa large adoption, cette table basée sur **7 bits par caractère** pré
 
 ```{figure} media/ASCII-Table.png
 ---
-:width: 900
+width: 900
 ---
 Table de codage des caractères ASCII. À chaque caractère est associé un code binaire, également exprimé sous forme décimale et hexadécimale.
 ```

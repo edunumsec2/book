@@ -26,7 +26,7 @@
 /src/appr/resx/ @mihersch
 
 # Pour la partie Histoire : 
-/src/appr/hist/ @prochat
+/src/appr/compl/ @prochat
 
 # Enseigner 
 
@@ -49,7 +49,7 @@
 /src/ens/resx/ @mihersch
 
 # Pour la partie Histoire : 
-/src/ens/hist/ @prochat
+/src/ens/compl/ @prochat
 
 # Pour la partie Enjeux sociaux : 
 /src/ens/enjx/ @mihersch

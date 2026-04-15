@@ -1,9 +1,4 @@
-# Histoire de l'informatique 
-
-```{admonition} Attention
-:class: note
-Ce document est en cours de rédaction.
-```
+# Brève histoire de l'informatique 
 
 Si l'histoire de l'informatique prend ses racines loin dans notre histoire, cette science, encore très jeune, trouve sa place au milieu du XXe siècle. L'éclosion de l'informatique se situe en 1940, à la croisée d'opportunités technologiques, d'enjeux stratégiques et de contributions d'autres branches. C'est ainsi au cœur des conflits de la Deuxième guerre mondiale que l'importance de calculateurs programmables se fait sentir.
 
@@ -158,7 +153,7 @@ On se rend donc rapidement compte que le logiciel représente un élément essen
 
 ### Les langages de programmation
 
-Nous proposons ici une synthèse de l'histoire des langages de programmation. Il en existe aujourd'hui un nombre incalculable et on ne trouve pas de recensement exact de toutes les bizarreries qui ont été proposées durant les dernières décennies. Par exemple, en 1993, Urban Müller invente le *Brainfuck*, dont l'ambition est de proposer un langage simple et pouvant s'exécuter sur une machine de Turing. Le Brainfuck est effectivement Turing-complet, mais les programmes sont difficiles à lire et peu efficaces.
+Nous proposons ici une synthèse de l'histoire des langages de programmation. Il en existe aujourd'hui un nombre incalculable. Par exemple, le site [esolangs.org](https://esolangs.org/wiki/Main_Page) recense plus de 1500 langages de programmation dits «ésotériques».
 
 #### Avant l'éclosion
 
@@ -242,9 +237,9 @@ Avec l'extension de l'informatique à de nombreux domaines, une nouvelle discipl
 
 -   1983, **C++**, l'évolution orientée-objet du langage C.
 
--   1985, **Postscript**, un langage conçu pour composer des documents et pour être directement compatible avec les imprimantes.
+-   1985, **PostScript**, un langage conçu pour composer des documents et pour être directement compatible avec les imprimantes.
 
--   1991, **Python**, langage d'abord confidentiel  qui a connu par la suite un essort considérable avec son adoption dans de nombreux développements de Google.
+-   1991, **Python**, langage d'abord confidentiel qui a connu par la suite un essort considérable avec son adoption dans de nombreux développements de Google.
 
 -   1995, **Java**, langage inventé par Sun Microsystems pour écrire des logiciels compatibles avec tous types de hardware. Java répond au besoin, créé par l'adoption de plus en plus générale d'Internet, de pouvoir proposer un même logiciel à tous les utilisateurs, indépendamment du type d'ordinateur qu'ils utilisent.
 

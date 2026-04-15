@@ -5,7 +5,8 @@ Apprendre l'informatique au gymnase
 ====================================
 
 Bienvenue dans le cours d'informatique au gymnase, conçu pour vous accompagner dans votre découverte de l'informatique. Il est 
-structuré en **cinq thématiques** et disponible en **version PDF**.
+structuré en **cinq thématiques**, dont la plupart sont disponibles en **version PDF**. Une brève histoire de l'informatique et un glossaire concluent ce parcours.
+
 
 .. toctree::
    :maxdepth: 3
@@ -16,9 +17,7 @@ structuré en **cinq thématiques** et disponible en **version PDF**.
    algo/index
    archi/index
    resx/index
-   hist/index
-   glossaire
-
+   compl/index
 
 `Représentation de l'information 
 <rep-info/index.html>`_ 

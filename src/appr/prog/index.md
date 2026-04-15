@@ -106,7 +106,7 @@ Ensuite, nous allons découvrir la programmation orientée objet. Maintenant nou
 
 Ada Lovelace 🇬🇧
 ^^^^^
-***1815-1852***
+**1815-1852**
 
 [**Ada Lovelace**](https://fr.wikipedia.org/wiki/Ada_Lovelace) est principalement connue pour avoir réalisé le premier programme informatique, lors de son travail sur un ancêtre de l'ordinateur : la machine analytique de Charles Babbage. Le langage de programmation **Ada** est nommé en son honneur.
 :::
@@ -119,7 +119,7 @@ Ada Lovelace 🇬🇧
 
 Mary Kenneth Keller 🇺🇸
 ^^^^^
-***1913-1985***
+**1913-1985**
 
 Sœur [**Mary Kenneth Keller**](https://fr.wikipedia.org/wiki/Mary_Kenneth_Keller) est la première femme à obtenir un doctorat en informatique aux États-Unis. Elle participe - avec une douzaine d'autres d'étudiants - au développement du [BASIC](https://fr.wikipedia.org/wiki/Basic_(langage)), une des premiers langages de haut niveau.
 :::

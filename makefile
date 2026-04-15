@@ -1,6 +1,6 @@
 .ONESHELL:
 
-WEB_CHAPTERS = rep-info archi algo prog resx projets hist
+WEB_CHAPTERS = rep-info archi algo prog resx
 
 PRINT_CHAPTERS = rep-info archi algo resx
 

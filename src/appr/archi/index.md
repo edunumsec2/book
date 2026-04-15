@@ -65,7 +65,7 @@ Dans ce chapitre, vous découvrirez comment sont construits les ordinateurs, com
 
 Anita Borg 🇺🇸 
 ^^^^^
-***1949-2003***
+**1949-2003**
 
 [**Anita Borg**](https://fr.wikipedia.org/wiki/Anita_Borg) est une informaticienne américaine. Elle a notamment travaillé pour Digital Equipment Corporation où elle a développé une méthode permettant de concevoir des systèmes mémoriels à haute vitesse. 
 :::
@@ -77,7 +77,7 @@ Anita Borg 🇺🇸
 
 Charles Babbage 🇬🇧 
 ^^^^^
-***1791-1871***
+**1791-1871**
 
 [**Charles Babbage**](https://fr.wikipedia.org/wiki/Charles_Babbage) est le premier inventeur à concevoir le principe et élaborer les plan d'un ordinateur programmable en 1837.
 Sa machine, entièrement mécanique, contient les éléments essentiels des ordinateurs actuels, mais il n'a jamais pu la réaliser faute de financement. Le programme et les

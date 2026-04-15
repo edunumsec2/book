@@ -45,7 +45,7 @@ Dans cette section, nous allons comprendre comment les ordinateurs parviennent �
 
 Grace Hopper 🇺🇸
 ^^^^^
-***1906-1992***
+**1906-1992**
 
 [**Grace Hopper**](https://fr.wikipedia.org/wiki/Grace_Hopper) est une informaticienne d'origine américaine. À partir de 1957, elle travaille pour IBM, où elle défend l'idée qu'un programme devrait pouvoir être écrit dans un langage proche de l'anglais plutôt que d'être calqué sur le langage machine, comme l'assembleur. De cette idée naît le langage COBOL en 1959.
 :::
@@ -56,7 +56,7 @@ Grace Hopper 🇺🇸
 :img-top: media/claudeshannon.jpg
 Claude Shannon  🇺🇸
 ^^^^^
-***1916-2001***
+**1916-2001**
 
 Pendant la Seconde Guerre mondiale, [**Claude Shannon**](https://fr.wikipedia.org/wiki/Claude_Shannon) travaille pour les services secrets de l'armée américaine, en cryptographie. Il est chargé de localiser de manière automatique dans le code ennemi les parties signifiantes cachées au milieu du brouillage. C'est ce qui le mènera par la suite à développer une mesure mathématique de la quantité d'information contenue dans un message. 
 :::

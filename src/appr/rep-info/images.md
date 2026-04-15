@@ -459,7 +459,7 @@ Un même cercle en représentation matricielle et vectorielle.
 À l'inverse de l'image matricielle composée de pixels, l'image vectorielle peut être **redimensionnée** sans pour autant perdre en qualité. Elle est contenue dans un **fichier beaucoup plus léger** qu'une image pixelisée, indépendamment de sa taille et de sa définition.
 En revanche, chaque forme d'une image vectorielle est remplie d'une seule couleur dite solide ou d'un dégradé de couleurs. Elle reste donc **limitée en termes de réalisme**, et donc inutilisable en photographie par exemple. De plus une image vectorielle ne peut être **créée qu'à partir d'un logiciel dédié**, et n'est pas reconnue par les navigateurs internet.
 
-Les formats vectoriels les plus courants sont Postscript (.ps) et Encapsulé Postscript (.eps), Adobe Illustrator (AI), Portable Document Format (PDF), WMF (format Windows).
+Les formats vectoriels les plus courants sont PostScript (.ps) et *Encapsulated PostScript* (.eps), Adobe Illustrator (AI), Portable Document Format (PDF), WMF (format Windows).
 
 ```{micro}
 

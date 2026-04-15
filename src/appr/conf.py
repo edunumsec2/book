@@ -59,7 +59,7 @@ myst_suppress_warnings = [
     "myst.nested_header", # we have them in {htmlonly} blocks
 ]
 
-glossary_doc = 'glossaire'
+glossary_doc = 'compl/glossaire'
 # uncomment to show todos (or preferably compile with "-D todo_include_todos=1" flag  to avoid contaminating the git repo and the public online version with todos)
 # todo_include_todos = True
 # Add any paths that contain templates here, relative to this directory.
@@ -86,10 +86,10 @@ latex_mode = tags.has('latex_mode')
 texfname = "modulo"
 
     
-all_chapters = {"rep-info", "prog", "algo", "archi", "resx", "projets", "hist", "glossaire"}
+all_chapters = {"rep-info", "prog", "algo", "archi", "resx", "compl"}
 selected_chapters = set()
 if latex_mode:
-    exclude_patterns = ['prog', 'projets', "glossaire"]
+    exclude_patterns = ['prog', "compl"]
     exclude_chapters = []
     selection = False
     for chap in all_chapters:
@@ -145,6 +145,8 @@ html_theme_options = {
         # Brand colors
         "color-brand-primary": "#8044FF", # violet
         "color-brand-content": "#8044FF", # violet
+
+        "color-sidebar-background": "#F8FEFD",
 
         # Admonition font size
         "admonition-font-size": "0.9rem",

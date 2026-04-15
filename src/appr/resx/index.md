@@ -27,7 +27,7 @@ connectées entre elles.
 
 Hedy Lamarr 🇺🇸
 ^^^^^
-***1914-2000***
+**1914-2000**
 
 L'actrice [**Hedy Lamarr**](https://fr.wikipedia.org/wiki/Hedy_Lamarr) a marqué l'histoire scientifique des télécommunications en inventant un moyen de coder des transmissions (étalement de spectre par saut de fréquence) utilisé encore dans le GPS et le Wi-Fi.
 :::
@@ -39,7 +39,7 @@ L'actrice [**Hedy Lamarr**](https://fr.wikipedia.org/wiki/Hedy_Lamarr) a marqué
 
 Tim Berners-Lee 🇬🇧
 ^^^^^
-***Né en 1955***
+**Né en 1955**
 
 L'informaticien britannique [**Tim Berners-Lee**](https://fr.wikipedia.org/wiki/Tim_Berners-Lee) est le principal inventeur du Web alors qu'il travaillait au CERN à Genève dans les années 90. Il a inventé les adresses URL, le protocole HTTP et le langage HTML.
 :::
