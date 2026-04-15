@@ -6,43 +6,46 @@ d'autres peuvent servir de mémoire pour stocker des valeurs binaires.
 
 
 
-### Combinaisons de portes
+## Combinaisons de portes
 
 Les portes peuvent être connectées les unes aux autres. Voici par exemple un circuit logique contenant une porte **ET** et une porte
-*NON*. 
+**NON**.
+
 ```{logic}
 :ref: nand
-:height: 150
+:height: 100
 :mode: tryout
+
 { // JSON5
-  v: 6,
+  v: 8,
   components: {
-    in0: {type: 'in', pos: [55, 45], id: 0, name: 'A', val: 1},
-    in1: {type: 'in', pos: [55, 85], id: 1, name: 'B'},
-    and0: {type: 'and', pos: [165, 70], in: [2, 3], out: 4},
-    not0: {type: 'not', pos: [245, 70], in: 5, out: 6},
-    out0: {type: 'out', pos: [320, 70], id: 7, name: 'Z'},
+    in0: {type: 'in', pos: [55, 30], id: 0, name: 'A', val: 1},
+    in1: {type: 'in', pos: [55, 70], id: 1, name: 'B'},
+    and0: {type: 'and', pos: [165, 50], in: [2, 3], out: 4},
+    not0: {type: 'not', pos: [245, 50], in: 5, out: 6},
+    out0: {type: 'out', pos: [320, 50], id: 7, name: 'Z'},
   },
   wires: [[0, 2], [1, 3], [4, 5], [6, 7]]
 }
 ```
+
 Sa table de vérité peut s'écrire ainsi:
-| $A$ | $B$ | $A$ ET $B$ | $Z$=NON($A$ ET $B$) |
-|-----|-----|------------|---------------------|
-| 0   | 0   | 0          | 1                   |
-| 0   | 1   | 0          | 1                   |
-| 1   | 0   | 0          | 1                   |
-| 1   | 1   | 1          | 0                   |
+| $A$ | $B$ | $A$ ET $B$ | $Z$ = NON($A$ ET $B$) |
+|-----|-----|------------|-----------------------|
+| 0   | 0   | 0          | 1                     |
+| 0   | 1   | 0          | 1                     |
+| 1   | 0   | 0          | 1                     |
+| 1   | 1   | 1          | 0                     |
 
 Les deux premières colonnes ($A$ et $B$) correspondent aux entrées du circuit. 
-La troisième colonne ($A$ ET $B$) représente la valeur intermédiaire à la sortie de
-la porte ET et la dernière colonne correspond à $Z$, la sortie du circuit. Les valeurs
+La troisième colonne ($A$ **ET** $B$) représente la valeur intermédiaire à la sortie de
+la porte **ET** et la dernière colonne correspond à $Z$, la sortie du circuit. Les valeurs
 intermédiaires d'un circuit logiques sont utiles pour calculer les sorties de ce circuits,
 mais elles ne figurent pas nécessairement dans la table de vérité, contrairement aux valeurs
 d'entrées et de sorties qui sont obligatoires. 
 
-On définit la porte NON-ET comme une porte ET directement suivie par une porte NON, comme dans l'exemple
-ci-dessus. On représente la porte NON-ET comme une porte ET à laquelle on ajoute un petit rond au bout
+On définit la porte **NON-ET** comme une porte **ET** directement suivie par une porte **NON**, comme dans l'exemple
+ci-dessus. On représente la porte **NON-ET** comme une porte **ET** à laquelle on ajoute un petit rond au bout
 pour indiquer la négation, comme ceci:
 
 ```{logic}
@@ -64,10 +67,10 @@ pour indiquer la négation, comme ceci:
 Vérifier que la porte ci-dessus a la même table de vérité (au niveau des entrées et des sorties) que le circuit précédent.
 ```
 
-De la même manière, on définit les porte NON-OU et NON-OU-X en ajoutant un rond
-au bout des portes OU et OU-X. 
+De la même manière, on définit les porte **NON-OU** et **NON-OU-X** en ajoutant un rond
+au bout des portes **OU** et **OU-X**. 
 ````{exercise}
-Donner les tables de vérité des portes NON-OU et NON-OU-X ci-dessous. 
+Donner les tables de vérité des portes **NON-OU** et **NON-OU-X** ci-dessous. 
 ```{logic}
 :ref: xnor
 :height: 150
@@ -87,7 +90,7 @@ Donner les tables de vérité des portes NON-OU et NON-OU-X ci-dessous.
 ```
 ````
 ```{solution}
-| $A$ | $B$ | $Y$=NON($A$ OU $B$) | $Z$=NON($A$ OU-X $B$) |
+| $A$ | $B$ | $Y$ = NON($A$ OU $B$) | $Z$ = NON($A$ OU-X $B$) |
 |-----|-----|------------|---------------------|
 | 0   | 0   | 1          | 1                   |
 | 0   | 1   | 0          | 0                   |
@@ -110,7 +113,7 @@ a. Etablir sans modifier les entrées la table de vérité du circuit logique su
 
 {
   "v": 3,
-  "opts": {"showGateTypes": true},
+  "opts": {"showGateTypes": true, "hideWireColors": true},
   "in": [
     {"pos": [50, 30], "id": 0, "ref": "x", "name": "A", "val": 0},
     {"pos": [50, 90], "id": 1, "ref": "y", "name": "B", "val": 0}
@@ -125,7 +128,7 @@ a. Etablir sans modifier les entrées la table de vérité du circuit logique su
 }
 ```
 
-b. A quelle porte logique ce circuit est-il équivalent? 
+b. À quelle porte logique ce circuit est-il équivalent? 
 ````
 ```{solution}
 a. 
@@ -136,36 +139,36 @@ a.
 | 1   | 0   | 1    |
 | 1   | 1   | 0    |
 
-b. Il s'agit de la porte OU-X
+b. Il s'agit de la porte **OU-X**.
 ```
 
 
 Le nombre de lignes dans la table de vérité d'un circuit logique dépend du nombre d'entrées de ce circuit. 
 ```{exercise}
 a. Combien de ligne a la table de vérité d'un circuit à trois entrées? Et si les circuit a 4 entrées? 
-b. Donner le nombres de lignes de la table de vérité d'un circuit à $n$ entrées
+b. Donner le nombres de lignes de la table de vérité d'un circuit à $n$ entrées.
 ```
 ```{solution}
-a. Un circuit à 3 entrées aura 8 lignes dans sa table de vérité, et un circuit à 4 entrées en aura 16
+a. Un circuit à 3 entrées aura 8 lignes dans sa table de vérité, et un circuit à 4 entrées en aura 16.
 
-b. la table de vérité aura $2^{n}$ lignes. En effet à il y a deux lignes si il n'y a qu'une seule entrée, et à chaque ajoût d'une entrée on
-double le nombre de combinaisons possibles d'entrées. (On garde les anciennes combinaisons, soit avec un 0 soit avec un 1 pour la nouvelle entrée). 
+b. La table de vérité aura $2^{n}$ lignes. En effet, il y a deux lignes s'il n'y a qu'une seule entrée, et à chaque ajout d'une entrée, on
+double le nombre de combinaisons possibles d'entrées. (On garde les anciennes combinaisons, soit avec un 0 soit avec un 1 pour la nouvelle entrée.) 
 ```
 
 ## Synthèse de circuits logiques
 La synthèse d'un circuit logique consiste à concevoir le circuit réalisant une certaine fonction. 
 Par exemple, on souhaite réaliser un circuit qui relie un capteur d'humidité planté dans un pot de fleurs à un robinet arrosant ces fleurs et
-qui est actionné électroniquement. Le capteur d'humidité (H) retourne un "1" lorsque la terre est humide, et un "0" lorsqu'elle est sèche. 
-Le robinet (R) s'ouvre lorsqu'il reçoit un "1" est se ferme lorsqu'il reçoit un "0". On veut déterminer le circuit logique reliant le capteur
+qui est actionné électroniquement. Le capteur d'humidité ($H$) retourne un «1» lorsque la terre est humide, et un «0» lorsqu'elle est sèche. 
+Le robinet ($R$) s'ouvre lorsqu'il reçoit un «1» est se ferme lorsqu'il reçoit un «0». On veut déterminer le circuit logique reliant le capteur
 d'humidité au robinet pour que le robinet s'ouvre lorsque la terre est sèche. 
 
-Ce circuit a une entrée H et une sortie R. Sa table de vérité est donc la suivante, si on veut que le robinet s'allume lorsque la terre est sèche et vice-versa: 
+Ce circuit a une entrée $H$ et une sortie $R$. Sa table de vérité est donc la suivante, si on veut que le robinet s'allume lorsque la terre est sèche et vice-versa: 
 | $H$ | $R$ |
 |-----|-----|
 | 0   | 1   |
 | 1   | 0   |
 
-Cette table de vérité correspond à l'opération suivante: $R = NON H$, qui peut être réalisée par la porte NON. Donc le circuit logique est le suivant: 
+Cette table de vérité correspond à l'opération suivante: $R = NON(H)$, qui peut être réalisée par la porte **NON**. Donc le circuit logique est le suivant: 
 ```{logic}
 :id: yUB58I
 :height: 80
@@ -259,25 +262,25 @@ indiquant la valeur en décimal de $x$ et $y$ ont été ajoutés pour vous aider
 
 ```{logic}
 :id: KeZJvf
-:height: 278
+:height: 345
 :mode: tryout
 
 { // JSON5
-  v: 6,
+  v: 8,
   components: {
-    in0: {type: 'in', pos: [100, 55], orient: 's', id: 0, name: 'X2'},
-    in1: {type: 'in', pos: [150, 55], orient: 's', id: 1, name: 'X1'},
-    in2: {type: 'in', pos: [200, 55], orient: 's', id: 2, name: 'X0'},
-    not0: {type: 'not', pos: [100, 135], orient: 's', in: 3, out: 4},
-    out0: {type: 'out', pos: [100, 225], orient: 's', id: 5, name: 'Y2'},
-    not1: {type: 'not', pos: [150, 135], orient: 's', in: 6, out: 7},
-    not2: {type: 'not', pos: [200, 140], orient: 's', in: 8, out: 9},
-    out1: {type: 'out', pos: [150, 225], orient: 's', id: 11, name: 'Y1'},
-    out2: {type: 'out', pos: [200, 225], orient: 's', id: 12, name: 'Y0'},
-    disp0: {type: 'display', pos: [300, 80], id: '13-16', name: 'x'},
-    disp1: {type: 'display', pos: [300, 190], id: '17-20', name: 'y'},
+    in0: {type: 'in', pos: [45, 45], orient: 's', id: 0, name: 'X2'},
+    in1: {type: 'in', pos: [95, 45], orient: 's', id: 1, name: 'X1'},
+    in2: {type: 'in', pos: [145, 45], orient: 's', id: 2, name: 'X0'},
+    not0: {type: 'not', pos: [45, 175], orient: 's', in: 3, out: 4},
+    out0: {type: 'out', pos: [45, 300], orient: 's', id: 5, name: 'Y2'},
+    not1: {type: 'not', pos: [95, 175], orient: 's', in: 6, out: 7},
+    not2: {type: 'not', pos: [145, 175], orient: 's', in: 8, out: 9},
+    out1: {type: 'out', pos: [95, 300], orient: 's', id: 11, name: 'Y1'},
+    out2: {type: 'out', pos: [145, 300], orient: 's', id: 12, name: 'Y0'},
+    disp0: {type: 'display', pos: [245, 105], id: '13-16', name: 'x'},
+    disp1: {type: 'display', pos: [245, 245], id: '17-20', name: 'y'},
   },
-  wires: [[0, 3], [4, 5], [1, 6], [2, 8], [9, 12], [7, 11], [1, 14], [2, 13], [0, 15], [4, 19], [7, 18], [9, 17]]
+  wires: [[0, 3], [4, 5], [1, 6], [2, 8], [9, 12], [7, 11], [1, 14, {via: [[95, 95]]}], [2, 13], [0, 15, {via: [[45, 115]]}], [4, 19, {via: [[45, 255]]}], [7, 18, {via: [[95, 235]]}], [9, 17]]
 }
 ```
 

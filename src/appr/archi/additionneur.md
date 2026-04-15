@@ -29,7 +29,7 @@ On peut donc ré-écrire la table de vérité ci-dessus ainsi:
 | 1   | 1   | 1   | 0   |
 
 En comparant cette table de vérité avec celles des portes logiques, on se rend compte que $S_0$ n'est autre qu'un **OU-X** (OU exclusif) de $A$ et $B$, tandis quie celle de $S_1$ est un **ET**. 
-On peut dessiner l'additionneur de deux bits (appelé demi-additionneur) ainsi :
+On peut dessiner l'additionneur de deux bits (appelé *demi-additionneur*) ainsi :
 
 ```{logic}
 :height: 140
@@ -67,7 +67,7 @@ Le circuit précédent est particulièrement intéressant, car il montre qu'il e
 
 Lorsqu'on additionne deux nombres à plusieurs chiffres, que ce soit en base 10 ou en base 2, on commence par la colonne de droite, les unités. On connait le concept de _retenue_: en base 10, si l'addition des unités dépasse 9, on retient 1 dans la colonne des dizaines. En base 2, de façon similaire, si l'addition des unités dépasse… 1, on retient 1 dans la colonne suivante à gauche. C'est ce qu'on a fait avec le demi-additionneur: on peut considérer que la sortie $S_0$ représente la colonne des unités dans la somme, et la sortie $S_1$ représente la retenue à prendre en compte dans la colonne suivante.
 
-C'est ici que ça se complique : pour additionner les chiffres de la deuxième colonne, on doit potentiellement additionner _trois_ chiffres, et plus seulement deux. On a donc, en entrée, les deux bits $A$ et $B$ qui viennent des nombres à additionner, et aussi potentiellement cette retenue qui vient de la colonne des unités, qu'on appellera $C_{in}$ (pour_carry_, « retenue » en anglais). Ceci est vrai en base 2 comme en base 10. Il faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s'appelle_additionneur complet_et livrera deux sorties : le bit de somme, appelé simplement $S$, et la retenue à reporter pour la colonne suivante, appelée $C_{out}$.
+C'est ici que ça se complique : pour additionner les chiffres de la deuxième colonne, on doit potentiellement additionner _trois_ chiffres, et plus seulement deux. On a donc, en entrée, les deux bits $A$ et $B$ qui viennent des nombres à additionner, et aussi potentiellement cette retenue qui vient de la colonne des unités, qu'on appellera $C_{in}$ (pour _carry_, «retenue» en anglais). Ceci est vrai en base 2 comme en base 10. Il faut donc un additionneur plus puissant, à trois entrées, pour prendre en compte cette retenue. Il s'appelle _additionneur complet_ et livrera deux sorties : le bit de somme, appelé simplement $S$, et la retenue à reporter pour la colonne suivante, appelée $C_{out}$.
 
 ```{exercise} Table de vérité de l'additionneur 
  * Déterminez combien de combinaisons différentes sont possibles pour trois signaux d'entrée $A$, $B$ et $C_{in}$ qui chacun peuvent valoir soit 1 soit 0.
@@ -126,19 +126,20 @@ Le circuit correspondant est donc le suivant:
 :mode: tryout
 
 { // JSON5
-  v: 6,
+  v: 8,
+  opts: {origin: [1, 2]},
   components: {
-    in0: {type: 'in', pos: [75, 20], id: 0, name: 'A'},
-    in1: {type: 'in', pos: [70, 135], id: 1, name: 'B'},
-    in2: {type: 'in', pos: [80, 240], id: 2, name: 'Cin'},
-    xor0: {type: 'xor', pos: [315, 55], in: [3, 4], out: 5},
-    xor1: {type: 'xor', pos: [515, 30], in: [6, 7], out: 8},
-    and0: {type: 'and', pos: [315, 220], in: [9, 10], out: 11},
-    and2: {type: 'and', pos: [410, 120], in: [23, 24], out: 25},
-    or1: {type: 'or', pos: [510, 155], in: [26, 27], out: 28},
-    or0: {type: 'or', pos: [310, 130], in: [29, 30], out: 31},
-    out0: {type: 'out', pos: [585, 30], id: 17, name: 'S0'},
-    out1: {type: 'out', pos: [580, 155], id: 18, name: 'Cout'},
+    in0: {type: 'in', pos: [55, 30], id: 0, name: 'A'},
+    in1: {type: 'in', pos: [60, 130], id: 1, name: 'B'},
+    in2: {type: 'in', pos: [60, 230], id: 2, name: 'Cin'},
+    xor0: {type: 'xor', pos: [265, 65], in: [3, 4], out: 5},
+    xor1: {type: 'xor', pos: [470, 40], in: [6, 7], out: 8},
+    and0: {type: 'and', pos: [265, 220], in: [9, 10], out: 11},
+    and2: {type: 'and', pos: [350, 130], in: [23, 24], out: 25},
+    or1: {type: 'or', pos: [465, 165], in: [26, 27], out: 28},
+    or0: {type: 'or', pos: [265, 140], in: [29, 30], out: 31},
+    out0: {type: 'out', pos: [540, 40], id: 17, name: 'S0'},
+    out1: {type: 'out', pos: [535, 165], id: 18, name: 'Cout'},
   },
   wires: [[2, 4], [1, 3], [0, 6], [5, 7], [1, 9], [2, 10], [1, 29], [2, 30], [0, 23], [31, 24], [25, 26], [8, 17], [28, 18], [11, 27]]
 }
@@ -178,10 +179,10 @@ Si $A$ est formé de deux bits $A_0$ et $A_1$ et que $B$ est formé des deux bit
   "v": 3,
   "opts": {"showDisconnectedPins": true},
   "in": [
-    {"pos": [190, 40], "orient": "s", "id": 10, "ref": "a0", "name": "A0", "val": 0},
-    {"pos": [90, 40], "orient": "s", "id": 11, "ref": "a1", "name": "A1", "val": 0},
-    {"pos": [230, 100], "orient": "s", "id": 12, "ref": "b0", "name": "B0", "val": 0},
-    {"pos": [130, 100], "orient": "s", "id": 13, "ref": "b1", "name": "B1", "val": 0}
+    {"pos": [190, 100], "orient": "s", "id": 10, "ref": "b0", "name": "B0", "val": 0},
+    {"pos": [90,  100], "orient": "s", "id": 11, "ref": "b1", "name": "B1", "val": 0},
+    {"pos": [230, 40], "orient": "s", "id": 12, "ref": "a0", "name": "A0", "val": 0},
+    {"pos": [130, 40], "orient": "s", "id": 13, "ref": "a1", "name": "A1", "val": 0}
   ],
   "out": [
     {"pos": [210, 240], "orient": "s", "id": 14, "ref": "s0", "name": "S0"},
@@ -222,14 +223,14 @@ Les entrées sont déjà disposées. Glissez autant d'additionneurs et de bits d
 {
   "v": 3,
   "in": [
-    {"pos": [90, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
-    {"pos": [190, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
-    {"pos": [290, 40], "orient": "s", "id": 1, "name": "A1", "val": 0},
-    {"pos": [390, 40], "orient": "s", "id": 2, "name": "A0", "val": 0},
-    {"pos": [130, 90], "orient": "s", "id": 15, "name": "B3", "val": 0},
-    {"pos": [230, 90], "orient": "s", "id": 14, "name": "B2", "val": 0},
-    {"pos": [330, 90], "orient": "s", "id": 13, "name": "B1", "val": 0},
-    {"pos": [430, 90], "orient": "s", "id": 12, "name": "B0", "val": 0}
+    {"pos": [90,  90], "orient": "s", "id": 3, "name": "B3", "val": 0},
+    {"pos": [190, 90], "orient": "s", "id": 0, "name": "B2", "val": 0},
+    {"pos": [290, 90], "orient": "s", "id": 1, "name": "B1", "val": 0},
+    {"pos": [390, 90], "orient": "s", "id": 2, "name": "B0", "val": 0},
+    {"pos": [130, 40], "orient": "s", "id": 15, "name": "A3", "val": 0},
+    {"pos": [230, 40], "orient": "s", "id": 14, "name": "A2", "val": 0},
+    {"pos": [330, 40], "orient": "s", "id": 13, "name": "A1", "val": 0},
+    {"pos": [430, 40], "orient": "s", "id": 12, "name": "A0", "val": 0}
   ]
 }
 ```
@@ -244,14 +245,14 @@ On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et 
 {
   "v": 3,
   "in": [
-    {"pos": [90, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
-    {"pos": [190, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
-    {"pos": [290, 40], "orient": "s", "id": 1, "name": "A1", "val": 0},
-    {"pos": [390, 40], "orient": "s", "id": 2, "name": "A0", "val": 0},
-    {"pos": [130, 90], "orient": "s", "id": 15, "name": "B3", "val": 0},
-    {"pos": [230, 90], "orient": "s", "id": 14, "name": "B2", "val": 0},
-    {"pos": [330, 90], "orient": "s", "id": 13, "name": "B1", "val": 0},
-    {"pos": [430, 90], "orient": "s", "id": 12, "name": "B0", "val": 0}
+    {"pos": [90,  90], "orient": "s", "id": 3,  "name": "B3", "val": 0},
+    {"pos": [190, 90], "orient": "s", "id": 0,  "name": "B2", "val": 0},
+    {"pos": [290, 90], "orient": "s", "id": 1,  "name": "B1", "val": 0},
+    {"pos": [390, 90], "orient": "s", "id": 2,  "name": "B0", "val": 0},
+    {"pos": [130, 40], "orient": "s", "id": 15, "name": "A3", "val": 0},
+    {"pos": [230, 40], "orient": "s", "id": 14, "name": "A2", "val": 0},
+    {"pos": [330, 40], "orient": "s", "id": 13, "name": "A1", "val": 0},
+    {"pos": [430, 40], "orient": "s", "id": 12, "name": "A0", "val": 0}
   ],
   "out": [
     {"pos": [30, 260], "orient": "s", "id": 37, "name": "S4"},
@@ -308,67 +309,37 @@ Réglez les entrées du circuit de manière à lui faire effectuer les additions
 
 ```{logic}
 :ref: fulladder_4bits_test
-:height: 490
+:height: 550
 :mode: tryout
 
-{
-  "v": 3,
-  "in": [
-    {"pos": [100, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
-    {"pos": [200, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
-    {"pos": [300, 40], "orient": "s", "id": 1, "name": "A1", "val": 0},
-    {"pos": [400, 40], "orient": "s", "id": 2, "name": "A0", "val": 0},
-    {"pos": [140, 180], "orient": "s", "id": 15, "name": "B3", "val": 0},
-    {"pos": [240, 180], "orient": "s", "id": 14, "name": "B2", "val": 0},
-    {"pos": [340, 180], "orient": "s", "id": 13, "name": "B1", "val": 0},
-    {"pos": [440, 180], "orient": "s", "id": 12, "name": "B0", "val": 0}
-  ],
-  "out": [
-    {"pos": [30, 450], "orient": "s", "id": 37, "name": "S4"},
-    {"pos": [120, 450], "orient": "s", "id": 36, "name": "S3"},
-    {"pos": [220, 450], "orient": "s", "id": 38, "name": "S2"},
-    {"pos": [320, 450], "orient": "s", "id": 39, "name": "S1"},
-    {"pos": [420, 450], "orient": "s", "id": 40, "name": "S0"},
-    {"type": "nibble", "pos": [530, 100], "ref": "displayA", "id": [4, 5, 6, 7], "name": "A"},
-    {"type": "nibble", "pos": [530, 240], "ref": "displayB", "id": [8, 9, 10, 11], "name": "B"},
-    {"type": "nibble", "pos": [530, 390], "ref": "displayS", "id": [41, 42, 43, 44], "name": "S"}
-  ],
-  "components": [
-    {"type": "adder", "pos": [420, 320], "in": [16, 17, 18], "out": [19, 20]},
-    {"type": "adder", "pos": [320, 320], "in": [21, 22, 23], "out": [24, 25]},
-    {"type": "adder", "pos": [220, 320], "in": [26, 27, 28], "out": [29, 30]},
-    {"type": "adder", "pos": [120, 320], "in": [31, 32, 33], "out": [34, 35]}
-  ],
-  "wires": [
-    [12, 8],
-    [13, 9],
-    [14, 10],
-    [15, 11],
-    [2, 4],
-    [1, 5],
-    [0, 6],
-    [3, 7],
-    [20, 23],
-    [25, 28],
-    [30, 33],
-    [2, 16],
-    [12, 17],
-    [1, 21],
-    [13, 22],
-    [0, 26],
-    [14, 27],
-    [3, 31],
-    [15, 32],
-    [19, 41],
-    [24, 42],
-    [29, 43],
-    [34, 44],
-    [35, 37],
-    [34, 36],
-    [29, 38],
-    [24, 39],
-    [19, 40]
-  ]
+{ // JSON5
+  v: 8,
+  opts: {wireStyle: 'vh'},
+  components: {
+    in0: {type: 'in', pos: [100, 195], orient: 's', id: 3, name: 'B3'},
+    in1: {type: 'in', pos: [200, 195], orient: 's', id: 0, name: 'B2'},
+    in2: {type: 'in', pos: [300, 195], orient: 's', id: 1, name: 'B1'},
+    in3: {type: 'in', pos: [400, 195], orient: 's', id: 2, name: 'B0'},
+    in4: {type: 'in', pos: [140, 45], orient: 's', id: 15, name: 'A3'},
+    in5: {type: 'in', pos: [240, 45], orient: 's', id: 14, name: 'A2'},
+    in6: {type: 'in', pos: [340, 45], orient: 's', id: 13, name: 'A1'},
+    in7: {type: 'in', pos: [440, 45], orient: 's', id: 12, name: 'A0'},
+    out0: {type: 'out', pos: [30, 475], orient: 's', id: 37, name: 'S4'},
+    out1: {type: 'out', pos: [120, 475], orient: 's', id: 36, name: 'S3'},
+    out2: {type: 'out', pos: [220, 475], orient: 's', id: 38, name: 'S2'},
+    out3: {type: 'out', pos: [320, 475], orient: 's', id: 39, name: 'S1'},
+    out4: {type: 'out', pos: [420, 475], orient: 's', id: 40, name: 'S0'},
+    displayA: {type: 'display', pos: [530, 255], id: '4-7', name: 'B'},
+    displayB: {type: 'display', pos: [530, 105], id: '8-11', name: 'A'},
+    displayS: {type: 'display', pos: [530, 415], id: '41-44', name: 'S'},
+    adder0: {type: 'adder', pos: [420, 345], orient: 's', in: [17, 16, 18], out: [19, 20]},
+    adder1: {type: 'adder', pos: [320, 345], orient: 's', in: [22, 21, 23], out: [24, 25]},
+    adder2: {type: 'adder', pos: [220, 345], orient: 's', in: [27, 26, 28], out: [29, 30]},
+    adder3: {type: 'adder', pos: [120, 345], orient: 's', in: [32, 31, 33], out: [34, 35]},
+    label0: {type: 'label', pos: [530, 180], text: '+'},
+    label1: {type: 'label', pos: [530, 335], text: '='},
+  },
+  wires: [[12, 8], [13, 9], [14, 10], [15, 11], [2, 4], [1, 5], [0, 6], [3, 7], [20, 23], [25, 28], [30, 33], [2, 16], [12, 17], [1, 21], [13, 22], [0, 26], [14, 27], [3, 31], [15, 32], [19, 41], [24, 42], [29, 43], [34, 44], [35, 37, {style: 'hv'}], [34, 36], [29, 38], [24, 39], [19, 40]]
 }
 ```
 ````
@@ -385,67 +356,37 @@ Déterminez quel composant est défectueux dans ce circuit et comment il faudrai
 
 ```{logic}
 :ref: fulladder_4bits_faulty
-:height: 490
+:height: 550
 :mode: tryout
 
-{
-  "v": 3,
-  "in": [
-    {"pos": [100, 40], "orient": "s", "id": 3, "name": "A3", "val": 1},
-    {"pos": [200, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
-    {"pos": [300, 40], "orient": "s", "id": 1, "name": "A1", "val": 1},
-    {"pos": [400, 40], "orient": "s", "id": 2, "name": "A0", "val": 1},
-    {"pos": [140, 180], "orient": "s", "id": 15, "name": "B3", "val": 0},
-    {"pos": [240, 180], "orient": "s", "id": 14, "name": "B2", "val": 0},
-    {"pos": [340, 180], "orient": "s", "id": 13, "name": "B1", "val": 0},
-    {"pos": [440, 180], "orient": "s", "id": 12, "name": "B0", "val": 1}
-  ],
-  "out": [
-    {"pos": [30, 450], "orient": "s", "id": 37, "name": "V"},
-    {"pos": [120, 450], "orient": "s", "id": 36, "name": "S3"},
-    {"pos": [220, 450], "orient": "s", "id": 38, "name": "S2"},
-    {"pos": [320, 450], "orient": "s", "id": 39, "name": "S1"},
-    {"pos": [420, 450], "orient": "s", "id": 40, "name": "S0"},
-    {"type": "nibble", "pos": [530, 100], "id": [4, 5, 6, 7], "name": "A"},
-    {"type": "nibble", "pos": [530, 240], "id": [8, 9, 10, 11], "name": "B"},
-    {"type": "nibble", "pos": [530, 390], "id": [41, 42, 43, 44], "name": "S"}
-  ],
-  "components": [
-    {"type": "adder", "pos": [420, 320], "in": [16, 17, 18], "out": [19, 20]},
-    {"type": "adder", "pos": [320, 320], "in": [21, 22, 23], "out": [24, {"id": 25, "force": 0}]},
-    {"type": "adder", "pos": [220, 320], "in": [26, 27, 28], "out": [29, 30]},
-    {"type": "adder", "pos": [120, 320], "in": [31, 32, 33], "out": [34, 35]}
-  ],
-  "wires": [
-    [12, 8],
-    [13, 9],
-    [14, 10],
-    [15, 11],
-    [2, 4],
-    [1, 5],
-    [0, 6],
-    [3, 7],
-    [20, 23],
-    [25, 28, {"ref": "cout2"}],
-    [30, 33],
-    [2, 16],
-    [12, 17],
-    [1, 21],
-    [13, 22],
-    [0, 26],
-    [14, 27],
-    [3, 31],
-    [15, 32],
-    [19, 41],
-    [24, 42],
-    [29, 43],
-    [34, 44],
-    [35, 37],
-    [34, 36],
-    [29, 38],
-    [24, 39],
-    [19, 40]
-  ]
+{ // JSON5
+  v: 8,
+  opts: {wireStyle: 'vh', origin: [-41, -26]},
+  components: {
+    in0: {type: 'in', pos: [100, 195], orient: 's', id: 3, name: 'B3'},
+    in1: {type: 'in', pos: [200, 195], orient: 's', id: 0, name: 'B2'},
+    in2: {type: 'in', pos: [300, 195], orient: 's', id: 1, name: 'B1'},
+    in3: {type: 'in', pos: [400, 195], orient: 's', id: 2, name: 'B0', val: 1},
+    in4: {type: 'in', pos: [140, 45], orient: 's', id: 15, name: 'A3', val: 1},
+    in5: {type: 'in', pos: [240, 45], orient: 's', id: 14, name: 'A2'},
+    in6: {type: 'in', pos: [340, 45], orient: 's', id: 13, name: 'A1', val: 1},
+    in7: {type: 'in', pos: [440, 45], orient: 's', id: 12, name: 'A0', val: 1},
+    out0: {type: 'out', pos: [30, 475], orient: 's', id: 37, name: 'S4'},
+    out1: {type: 'out', pos: [120, 475], orient: 's', id: 36, name: 'S3'},
+    out2: {type: 'out', pos: [220, 475], orient: 's', id: 38, name: 'S2'},
+    out3: {type: 'out', pos: [320, 475], orient: 's', id: 39, name: 'S1'},
+    out4: {type: 'out', pos: [420, 475], orient: 's', id: 40, name: 'S0'},
+    displayA: {type: 'display', pos: [530, 255], id: '4-7', name: 'B'},
+    displayB: {type: 'display', pos: [530, 105], id: '8-11', name: 'A'},
+    displayS: {type: 'display', pos: [530, 415], id: '41-44', name: 'S'},
+    adder0: {type: 'adder', pos: [420, 345], orient: 's', in: [17, 16, 18], out: [19, 20]},
+    adder1: {type: 'adder', pos: [320, 345], orient: 's', in: [22, 21, 23], out: [24, {id: 25, force: 0}]},
+    adder2: {type: 'adder', pos: [220, 345], orient: 's', in: [27, 26, 28], out: [29, 30]},
+    adder3: {type: 'adder', pos: [120, 345], orient: 's', in: [32, 31, 33], out: [34, 35]},
+    label0: {type: 'label', pos: [530, 180], text: '+'},
+    label1: {type: 'label', pos: [530, 335], text: '='},
+  },
+  wires: [[12, 8], [13, 9], [14, 10], [15, 11], [2, 4], [1, 5], [0, 6], [3, 7], [20, 23], [25, 28, {ref: "cout2"}], [30, 33], [2, 16], [12, 17], [1, 21], [13, 22], [0, 26], [14, 27], [3, 31], [15, 32], [19, 41], [24, 42], [29, 43], [34, 44], [35, 37, {style: 'hv'}], [34, 36], [29, 38], [24, 39], [19, 40]]
 }
 ```
 ````

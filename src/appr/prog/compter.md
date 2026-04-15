@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # Compter - `bin`
 
 Compter est l'opération utilisée pour savoir combien d'objets il y a dans un ensemble de taille fini. Nous utilisons alors les nombres naturels, aussi appelés les entiers non négatifs.

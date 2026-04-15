@@ -228,7 +228,7 @@ Reprenons la table ASCII de la figure 8 et la [table UTF-8](https://www.utf8-cha
 
 Si l'on prend à présent, par exemple, le caractère «æ», on lit sur la table UTF-8 : 195 166, soit, en binaire : 11000011 10100110.
 
-On constate bien le passage du codage sur deux octets. L'adresse décimale 195 du premier octet correspond a la valeur binaire 11000011. On retrouve la suite de deux "1" en début de ce premier octet en partant de la gauche, indiquant ce codage total sur deux octets ; il reste 000011 pour la charge utile du premier octet du codage UTF-8. L'adresse décimale de 166 est 10100110 et commence donc bien par 10 comme bits de poids fort ; la charge utile du deuxième octet du codage UTF-8 est donc 100110.
+On constate bien le passage du codage sur deux octets. L'adresse décimale 195 du premier octet correspond a la valeur binaire 11000011. On retrouve la suite de deux «1» en début de ce premier octet en partant de la gauche, indiquant ce codage total sur deux octets ; il reste 000011 pour la charge utile du premier octet du codage UTF-8. L'adresse décimale de 166 est 10100110 et commence donc bien par 10 comme bits de poids fort ; la charge utile du deuxième octet du codage UTF-8 est donc 100110.
 L'encodage binaire UTF-8 global s'écrit donc, en concaténant les deux charges utiles : 000011100110, ce qui correspond à 230 en décimal, valeur qu'on peut vérifier sur cette autre [table UTF-8](https://kellykjones.tripod.com/webtools/ascii_utf8_table.html) indiquant également le codage décimal.
 
 ```{image} media/UTF8_exemples.png

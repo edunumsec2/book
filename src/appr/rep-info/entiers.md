@@ -359,7 +359,7 @@ La représentation de -21 est 11101011, qui additionné à 21, soit 00010101 don
 
 ```{figure} media/4bitsIntegers.svg
 ---
-:width: 550
+width: 550
 ---
 Représentation des entiers avec 4 bits.
 ```
@@ -430,7 +430,7 @@ secteurs identiques :
 
 ```{figure} media/bingray.png
 ---
-:width: 300 
+width: 300 
 ---
 Exemples d'une roue codeuse binaire et Gray.
 ```
