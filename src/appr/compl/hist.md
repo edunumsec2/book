@@ -268,14 +268,14 @@ Les ordinateurs ne sont pas encore connectés, mais les utilisateurs, souvent tr
 
 ### La micro en Suisse
 
-Smaky[^7] est une famille de micro-ordinateurs développés en Suisse dès 1974 au LAMI-EPFL, dirigé par le Professeur Jean-Daniel Nicoud. Commercialisé dès 1978 par la société EPSITEC SA, il intègre rapidement des fonctionalités réseau et surtout présente dès 1980, avec le Smaky 8, un système d'exploitation multitâche préemptif[^8] qui en fait un ordinateur puissant qui dispose déjà d'une interface avec des fenêtres. Le développement du Smaky a complètement cessé en 1995 et la société EPSITEC SA s'oriente vers le développement de logiciels comme CRESUS, un logiciel de comptabilité adapté au marché suisse.
+Smaky[^7] est une famille de micro-ordinateurs développés en Suisse dès 1974 au LAMI-EPFL, dirigé par le professeur Jean-Daniel Nicoud. Commercialisé dès 1978 par la société EPSITEC SA, il intègre rapidement des fonctionalités réseau et surtout présente dès 1980, avec le Smaky 8, un système d'exploitation multitâche préemptif[^8] qui en fait un ordinateur puissant qui dispose déjà d'une interface avec des fenêtres. Le développement du Smaky a complètement cessé en 1995 et la société EPSITEC SA s'oriente vers le développement de logiciels comme CRESUS, un logiciel de comptabilité adapté au marché suisse.
 
 ```{image} media/machines/smaky8_bolo.jpeg 
 :width: 40% 
 :align: right 
 ```
 
-Parallèlement aux Smakys, le Professeur Jean-Daniel Nicoud développe des machines bon marché à l'intention des clubs d'électronique : d'abord le crocus, puis le Dauphin en 1977 pour 270 CHF. Ce dernier, abondamment utilisé dans les cours du LAMI, est encore aujourd'hui une référence pour apprendre à programmer en langage machine. Bien que sa production a cessé, un simulateur disponible à l'adresse : <https://www.epsitec.ch/dauphin/> (avec toute la documentation nécessaire) permet d'en explorer le fonctionnement.
+Parallèlement aux Smakys, le professeur Jean-Daniel Nicoud développe des machines bon marché à l'intention des clubs d'électronique : d'abord le crocus, puis le Dauphin en 1977 pour 270 CHF. Ce dernier, abondamment utilisé dans les cours du LAMI, est encore aujourd'hui une référence pour apprendre à programmer en langage machine. Bien que sa production a cessé, un simulateur disponible à l'adresse : <https://www.epsitec.ch/dauphin/> (avec toute la documentation nécessaire) permet d'en explorer le fonctionnement.
 
 ```{image} media/machines/DauphinEcouteur.jpeg 
 :width: 40% 
