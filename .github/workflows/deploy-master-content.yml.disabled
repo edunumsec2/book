@@ -33,7 +33,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: 31826.ftp.infomaniak.com
-        username: 31826_elliot
+        username: 31826_githubactions
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./build/
         server-dir: sites/apprendre.modulo-info.ch/
@@ -63,7 +63,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: 31826.ftp.infomaniak.com
-        username: 31826_elliot
+        username: 31826_githubactions
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./build/
         server-dir: sites/enseigner.modulo-info.ch/
