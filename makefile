@@ -51,7 +51,7 @@ print: $(PDF_BUILD_DIR)/modulo.pdf $(addsuffix .pdf, $(addprefix $(PDF_BUILD_DIR
 modulo.pdf: $(PDF_BUILD_DIR)/modulo.pdf;
 
 
-$(PDF_BUILD_DIR)/%.pdf:  $(MD_SOURCE_DIR)/$*/*.md scripts latex
+$(PDF_BUILD_DIR)/%.pdf:  $(wildcard $(MD_SOURCE_DIR)/$*/*.md) scripts latex
 	mkdir -p $(PDF_BUILD_DIR)
 	python -m playwright install chromium
 	sphinx-build -aE -t latex_mode -t $* -b latex $(MD_SOURCE_DIR) $(LATEX_BUILD_DIR)
