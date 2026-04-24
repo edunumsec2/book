@@ -10,7 +10,7 @@ Tout ce que le processeur fait peut être décrit en 3 lignes:
 
 Dans cette section nous allons étudier comment encoder des instructions en code binaire, et comment ensuite exécuter ce code dans le CPU. Nous allons nous inspirer du premier microprocesseur, la puce Intel 4004, sortie en 1971.
 
-![boitier](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Intel_C4004.jpg/640px-Intel_C4004.jpg)
+![boitier](https://commons.wikimedia.org/wiki/File:Intel_C4004.jpg)
 
 ## Intel 4004
 
