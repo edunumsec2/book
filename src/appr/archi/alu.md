@@ -762,5 +762,9 @@ Ce qui veut dire que si un microprocesseur, tel que ceux que l'on trouve dans no
 
 Si les éléments de base sont simples, la complexité et la richesse des expériences numériques comme l'immersion dans un jeu vidéo proviennent de la quantité extraordinaire d'opérations effectuées.
 
-[^f1]: En fait le opérations d'un processeur prennent plus d'un cycle pour être réalisées, mais comme les processeurs ont plusieurs cœurs et un pipeline dont nous n'abordons pas ici le fonctionnement, la simplification proposée n'est pas aberrante.
+[^f1]: En fait, les opérations d'un processeur prennent plus d'un cycle pour être réalisées, mais comme les processeurs ont plusieurs cœurs et un pipeline dont nous n'abordons pas ici le fonctionnement, la simplification proposée n'est pas aberrante.
+````
+
+````{didyouknow}
+On peut aussi contruire une ALU dans Minecraft. En fait, on peut faire plus, et même simuler un petit microprocesseur. Découvrez comment dans [cette vidéo](https://www.youtube.com/watch?v=8iLduIDZVE4).
 ````
