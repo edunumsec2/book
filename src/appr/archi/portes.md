@@ -147,7 +147,7 @@ Essayez la porte **OU-X** :
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
   ],
   "out": [{"pos": [220, 50], "id": 5, "name": "Z"}],
-  "gates": [{"type": "OR", "pos": [150, 50], "in": [0, 1], "out": 2}],
+  "gates": [{"type": "XOR", "pos": [150, 50], "in": [0, 1], "out": 2}],
   "wires": [[3, 0], [4, 1], [2, 5]]
 }
 ```
