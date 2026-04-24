@@ -1,5 +1,5 @@
 (appr:repinfo:caracteres)=
-# Les caractères
+# Les caractères <img src="../static/pe_1.png" alt="Plan d'études de première année" title="Plan d'études de première année" width="40"/>
 
 <!-- Toute l'information est représentée dans un ordinateur par des nombres
 encodés sous forme binaire par des 0 et des 1. Se pose alors la question

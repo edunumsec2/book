@@ -146,7 +146,7 @@ La réponse à cette question est l'apport le plus essentiel de l'introduction d
 
 À partir du moment où le [Morse](https://fr.wikipedia.org/wiki/Code_Morse_international) a été inventé comme système de {glo}`codage|codage` et de {glo}`transmission|transmission` de l'information par l'électricité, il ne manquait plus que quelques éléments pour commencer à construire les {glo}`ordinateur|ordinateurs`.
 
-;nb une pièce technologique, qui permettrait de {glo}`transmission|transmettre` pour ainsi dire cette information : le {glo}`transistor|transistor` (voir {ref}`architecture des ordinateurs <archi>`).
+Une pièce technologique pour commencer, qui permettrait de {glo}`transmission|transmettre` pour ainsi dire cette information : le {glo}`transistor|transistor` (voir {ref}`architecture des ordinateurs <archi>`).
 
 Ensuite un {glo}`codage|code` plus élaboré que le Morse pour pouvoir représenter tous les types d'informations possibles à partor d'une alternative entre deux états : courant ou pas de courant ; allumé ou éteint ; vrai ou faux ; 1&nbsp;ou&nbsp;0.
 

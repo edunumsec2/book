@@ -1,5 +1,5 @@
 (appr:repinfo:entiers)=
-# Les nombres entiers
+# Les nombres entiers <img src="../static/pe_1.png" alt="Plan d'études de première année" title="Plan d'études de première année" width="40"/>
 
 La plupart des civilisations humaines utilise le système décimal.
 Pourquoi ? Tout simplement parce que nous avons 10 doigts !

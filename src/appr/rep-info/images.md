@@ -1,5 +1,5 @@
 (appr:repinfo:images)=
-# Les images
+# Les images <img src="../static/pe_1.png" alt="Plan d'études de première année" title="Plan d'études de première année" width="40"/>
 
 ## Les images matricielles
 
