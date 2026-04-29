@@ -331,8 +331,8 @@ Pour additionner **a** et **b** vous devez additionner les bits correspondants: 
 {
   "v": 4,
   "in": [
-    {"type": "nibble", "pos": [50, 160], "id": [37, 38, 39, 40], "val": [1, 0, 1, 0], "name": "b"},
-    {"type": "nibble", "pos": [50, 290], "id": [74, 75, 76, 77], "val": [0, 1, 1, 0], "name": "a"}
+    {"type": "nibble", "pos": [50, 160], "id": [37, 38, 39, 40], "val": [1, 0, 1, 0], "name": "a"},
+    {"type": "nibble", "pos": [50, 290], "id": [74, 75, 76, 77], "val": [0, 1, 1, 0], "name": "b"}
   ],
   "out": [
     {"type": "nibble-display", "pos": [430, 180], "id": [41, 42, 43, 44], "name": "s"},
@@ -480,7 +480,7 @@ Complétez le circuit pour soustraire `a-b`. Le résultat de 10-3 devrait être 
     {"type": "nibble-display", "pos": [110, 210], "id": [76, 77, 78, 79], "name": "b"}
   ],
   "gates": [
-    {"type": "NOT", "pos": [250, 90], "in": 86, "out": 87}
+    {"type": "NOT", "pos": [250, 130], "in": 86, "out": 87}
   ],
   "components": [
     {"type": "adder", "pos": [330, 110], "orient": "n", "in": [25, 26, 27], "out": [28, 29]},
@@ -488,7 +488,7 @@ Complétez le circuit pour soustraire `a-b`. Le résultat de 10-3 devrait être 
     {"type": "adder", "pos": [330, 400], "orient": "n", "in": [42, 43, 44], "out": [45, 46]},
     {"type": "adder", "pos": [330, 210], "orient": "n", "in": [47, 48, 49], "out": [50, 51]}
   ],
-  "wires": [[0, 4], [1, 5], [2, 6], [3, 7], [39, 44], [29, 49], [51, 37], [28, 56], [0, 25], [63, 76], [64, 77], [65, 78], [66, 79], [87, 26], [63, 86]]
+  "wires": [[0, 4], [1, 5], [2, 6], [3, 7], [39, 44], [29, 49], [51, 37], [28, 56], [0, 26], [63, 76], [64, 77], [65, 78], [66, 79], [87, 25], [63, 86]]
 }
 ```
 
@@ -502,7 +502,7 @@ L'inverseur commuté permet d'inverser tous les 4 bits d'un nombre avec un signa
 Ajoutez un inverseur commuté pour obtenir `~a` ou `a` selon l'état du sélecteur.
 
 ```{logic}
-:ref: inc
+:ref: invcomm
 :height: 400
 :showonly: in out in.nibble out.nibble switched-inverter
 {
@@ -545,7 +545,7 @@ Complétez le circuit pour pouvoir obtenir `-a` ou `a` selon l'état du sélecte
     {"type": "adder", "pos": [330, 270], "orient": "n", "in": [35, 36, 37], "out": [38, 39]},
     {"type": "adder", "pos": [330, 370], "orient": "n", "in": [42, 43, 44], "out": [45, 46]},
     {"type": "adder", "pos": [330, 180], "orient": "n", "in": [47, 48, 49], "out": [50, 51]},
-    {"type": "switched-inverter", "pos": [160, 190], "in": [17, 18, 19, 20, 21], "out": [22, 23, 24, 30]}
+    {"type": "switched-inverter", "pos": [160, 190], "in": [17, 18, 19, 20, 21], "out": [22, 23, 24, 30], "bottom": true}
   ],
   "wires": [[0, 4], [1, 5], [2, 6], [3, 7], [39, 44], [29, 49], [51, 37], [45, 59], [28, 56], [50, 57], [38, 58], [31, 21]]
 }
@@ -579,7 +579,7 @@ Complétez le circuit pour pouvoir obtenir une opération différente selon l'é
     {"type": "adder", "pos": [330, 260], "orient": "n", "in": [35, 36, 37], "out": [38, 39]},
     {"type": "adder", "pos": [330, 360], "orient": "n", "in": [42, 43, 44], "out": [45, 46]},
     {"type": "adder", "pos": [330, 170], "orient": "n", "in": [47, 48, 49], "out": [50, 51]},
-    {"type": "switched-inverter", "pos": [160, 270], "in": [17, 18, 19, 20, 21], "out": [22, 23, 24, 30]}
+    {"type": "switched-inverter", "pos": [160, 270], "in": [17, 18, 19, 20, 21], "out": [22, 23, 24, 30], "bottom": true}
   ],
   "wires": [[0, 4], [1, 5], [2, 6], [3, 7], [39, 44], [29, 49], [51, 37], [45, 59], [28, 56], [50, 57], [38, 58], [31, 21], [32, 41], [33, 52], [34, 53], [40, 54], [32, 17], [33, 18], [34, 19], [40, 20]]
 }

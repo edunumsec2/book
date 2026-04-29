@@ -259,7 +259,7 @@ def begin_logic_diagram_latex(self: SphinxTranslator, node: Node) -> None:
             f"\n\\begin{{center}}\n  \\includegraphics[{includegraphics_options}]{{{target_file_relative}}}\n\\end{{center}}\n"
         )
     else:
-        self.body.append("\n \\fbox{logic diagram} \\\ ")
+        self.body.append("\n \\fbox{logic diagram} \\\\ ")
 
 
 def end_logic_diagram_latex(self: SphinxTranslator, node: Node) -> None:

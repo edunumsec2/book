@@ -124,10 +124,10 @@ Si $A$ est formé de deux bits $A_0$ et $A_1$ et que $B$ est formé des deux bit
   "v": 3,
   "opts": {"showDisconnectedPins": true},
   "in": [
-    {"pos": [190, 40], "orient": "s", "id": 10, "ref": "a0", "name": "A0", "val": 0},
-    {"pos": [90, 40], "orient": "s", "id": 11, "ref": "a1", "name": "A1", "val": 0},
-    {"pos": [230, 100], "orient": "s", "id": 12, "ref": "b0", "name": "B0", "val": 0},
-    {"pos": [130, 100], "orient": "s", "id": 13, "ref": "b1", "name": "B1", "val": 0}
+    {"pos": [190, 40], "orient": "s", "id": 10, "ref": "b0", "name": "B0", "val": 0},
+    {"pos": [90, 40], "orient": "s", "id": 11, "ref": "b1", "name": "B1", "val": 0},
+    {"pos": [230, 100], "orient": "s", "id": 12, "ref": "a0", "name": "A0", "val": 0},
+    {"pos": [130, 100], "orient": "s", "id": 13, "ref": "a1", "name": "A1", "val": 0}
   ],
   "out": [
     {"pos": [210, 240], "orient": "s", "id": 14, "ref": "s0", "name": "S0"},
@@ -169,14 +169,14 @@ Les entrées sont déjà disposées. Glissez autant d'additionneurs et de bits d
 {
   "v": 3,
   "in": [
-    {"pos": [90, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
-    {"pos": [190, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
-    {"pos": [290, 40], "orient": "s", "id": 1, "name": "A1", "val": 0},
-    {"pos": [390, 40], "orient": "s", "id": 2, "name": "A0", "val": 0},
-    {"pos": [130, 90], "orient": "s", "id": 15, "name": "B3", "val": 0},
-    {"pos": [230, 90], "orient": "s", "id": 14, "name": "B2", "val": 0},
-    {"pos": [330, 90], "orient": "s", "id": 13, "name": "B1", "val": 0},
-    {"pos": [430, 90], "orient": "s", "id": 12, "name": "B0", "val": 0}
+    {"pos": [90, 40], "orient": "s", "id": 3, "name": "B3", "val": 0},
+    {"pos": [190, 40], "orient": "s", "id": 0, "name": "B2", "val": 0},
+    {"pos": [290, 40], "orient": "s", "id": 1, "name": "B1", "val": 0},
+    {"pos": [390, 40], "orient": "s", "id": 2, "name": "B0", "val": 0},
+    {"pos": [130, 90], "orient": "s", "id": 15, "name": "A3", "val": 0},
+    {"pos": [230, 90], "orient": "s", "id": 14, "name": "A2", "val": 0},
+    {"pos": [330, 90], "orient": "s", "id": 13, "name": "A1", "val": 0},
+    {"pos": [430, 90], "orient": "s", "id": 12, "name": "A0", "val": 0}
   ]
 }
 ```
@@ -191,14 +191,14 @@ On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et 
 {
   "v": 3,
   "in": [
-    {"pos": [90, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
-    {"pos": [190, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
-    {"pos": [290, 40], "orient": "s", "id": 1, "name": "A1", "val": 0},
-    {"pos": [390, 40], "orient": "s", "id": 2, "name": "A0", "val": 0},
-    {"pos": [130, 90], "orient": "s", "id": 15, "name": "B3", "val": 0},
-    {"pos": [230, 90], "orient": "s", "id": 14, "name": "B2", "val": 0},
-    {"pos": [330, 90], "orient": "s", "id": 13, "name": "B1", "val": 0},
-    {"pos": [430, 90], "orient": "s", "id": 12, "name": "B0", "val": 0}
+    {"pos": [90, 40], "orient": "s", "id": 3, "name": "B3", "val": 0},
+    {"pos": [190, 40], "orient": "s", "id": 0, "name": "B2", "val": 0},
+    {"pos": [290, 40], "orient": "s", "id": 1, "name": "B1", "val": 0},
+    {"pos": [390, 40], "orient": "s", "id": 2, "name": "B0", "val": 0},
+    {"pos": [130, 90], "orient": "s", "id": 15, "name": "A3", "val": 0},
+    {"pos": [230, 90], "orient": "s", "id": 14, "name": "A2", "val": 0},
+    {"pos": [330, 90], "orient": "s", "id": 13, "name": "A1", "val": 0},
+    {"pos": [430, 90], "orient": "s", "id": 12, "name": "A0", "val": 0}
   ],
   "out": [
     {"pos": [30, 260], "orient": "s", "id": 37, "name": "S4"},
@@ -259,14 +259,14 @@ Réglez les entrées du circuit de manière à lui faire effectuer les additions
 {
   "v": 3,
   "in": [
-    {"pos": [100, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
-    {"pos": [200, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
-    {"pos": [300, 40], "orient": "s", "id": 1, "name": "A1", "val": 0},
-    {"pos": [400, 40], "orient": "s", "id": 2, "name": "A0", "val": 0},
-    {"pos": [140, 180], "orient": "s", "id": 15, "name": "B3", "val": 0},
-    {"pos": [240, 180], "orient": "s", "id": 14, "name": "B2", "val": 0},
-    {"pos": [340, 180], "orient": "s", "id": 13, "name": "B1", "val": 0},
-    {"pos": [440, 180], "orient": "s", "id": 12, "name": "B0", "val": 0}
+    {"pos": [100, 40], "orient": "s", "id": 3, "name": "B3", "val": 0},
+    {"pos": [200, 40], "orient": "s", "id": 0, "name": "B2", "val": 0},
+    {"pos": [300, 40], "orient": "s", "id": 1, "name": "B1", "val": 0},
+    {"pos": [400, 40], "orient": "s", "id": 2, "name": "B0", "val": 0},
+    {"pos": [140, 180], "orient": "s", "id": 15, "name": "A3", "val": 0},
+    {"pos": [240, 180], "orient": "s", "id": 14, "name": "A2", "val": 0},
+    {"pos": [340, 180], "orient": "s", "id": 13, "name": "A1", "val": 0},
+    {"pos": [440, 180], "orient": "s", "id": 12, "name": "A0", "val": 0}
   ],
   "out": [
     {"pos": [30, 450], "orient": "s", "id": 37, "name": "S4"},
@@ -274,8 +274,8 @@ Réglez les entrées du circuit de manière à lui faire effectuer les additions
     {"pos": [220, 450], "orient": "s", "id": 38, "name": "S2"},
     {"pos": [320, 450], "orient": "s", "id": 39, "name": "S1"},
     {"pos": [420, 450], "orient": "s", "id": 40, "name": "S0"},
-    {"type": "nibble", "pos": [530, 100], "ref": "displayA", "id": [4, 5, 6, 7], "name": "A"},
-    {"type": "nibble", "pos": [530, 240], "ref": "displayB", "id": [8, 9, 10, 11], "name": "B"},
+    {"type": "nibble", "pos": [530, 100], "ref": "displayB", "id": [4, 5, 6, 7], "name": "B"},
+    {"type": "nibble", "pos": [530, 240], "ref": "displayA", "id": [8, 9, 10, 11], "name": "A"},
     {"type": "nibble", "pos": [530, 390], "ref": "displayS", "id": [41, 42, 43, 44], "name": "S"}
   ],
   "components": [
@@ -336,14 +336,14 @@ Déterminez quel composant est défectueux dans ce circuit et comment il faudrai
 {
   "v": 3,
   "in": [
-    {"pos": [100, 40], "orient": "s", "id": 3, "name": "A3", "val": 1},
-    {"pos": [200, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
-    {"pos": [300, 40], "orient": "s", "id": 1, "name": "A1", "val": 1},
-    {"pos": [400, 40], "orient": "s", "id": 2, "name": "A0", "val": 1},
-    {"pos": [140, 180], "orient": "s", "id": 15, "name": "B3", "val": 0},
-    {"pos": [240, 180], "orient": "s", "id": 14, "name": "B2", "val": 0},
-    {"pos": [340, 180], "orient": "s", "id": 13, "name": "B1", "val": 0},
-    {"pos": [440, 180], "orient": "s", "id": 12, "name": "B0", "val": 1}
+    {"pos": [100, 40], "orient": "s", "id": 3, "name": "B3", "val": 1},
+    {"pos": [200, 40], "orient": "s", "id": 0, "name": "B2", "val": 0},
+    {"pos": [300, 40], "orient": "s", "id": 1, "name": "B1", "val": 1},
+    {"pos": [400, 40], "orient": "s", "id": 2, "name": "B0", "val": 1},
+    {"pos": [140, 180], "orient": "s", "id": 15, "name": "A3", "val": 0},
+    {"pos": [240, 180], "orient": "s", "id": 14, "name": "A2", "val": 0},
+    {"pos": [340, 180], "orient": "s", "id": 13, "name": "A1", "val": 0},
+    {"pos": [440, 180], "orient": "s", "id": 12, "name": "A0", "val": 1}
   ],
   "out": [
     {"pos": [30, 450], "orient": "s", "id": 37, "name": "V"},
@@ -351,8 +351,8 @@ Déterminez quel composant est défectueux dans ce circuit et comment il faudrai
     {"pos": [220, 450], "orient": "s", "id": 38, "name": "S2"},
     {"pos": [320, 450], "orient": "s", "id": 39, "name": "S1"},
     {"pos": [420, 450], "orient": "s", "id": 40, "name": "S0"},
-    {"type": "nibble", "pos": [530, 100], "id": [4, 5, 6, 7], "name": "A"},
-    {"type": "nibble", "pos": [530, 240], "id": [8, 9, 10, 11], "name": "B"},
+    {"type": "nibble", "pos": [530, 100], "id": [4, 5, 6, 7], "name": "B"},
+    {"type": "nibble", "pos": [530, 240], "id": [8, 9, 10, 11], "name": "A"},
     {"type": "nibble", "pos": [530, 390], "id": [41, 42, 43, 44], "name": "S"}
   ],
   "components": [

@@ -288,14 +288,14 @@ On peut aussi forcer une sortie à avoir une valeur autre que sa valeur normale,
 {
   "v": 3,
   "in": [
-    {"pos": [100, 40], "orient": "s", "id": 3, "name": "A3", "val": 1},
-    {"pos": [200, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
-    {"pos": [300, 40], "orient": "s", "id": 1, "name": "A1", "val": 1},
-    {"pos": [400, 40], "orient": "s", "id": 2, "name": "A0", "val": 1},
-    {"pos": [140, 180], "orient": "s", "id": 15, "name": "B3", "val": 0},
-    {"pos": [240, 180], "orient": "s", "id": 14, "name": "B2", "val": 0},
-    {"pos": [340, 180], "orient": "s", "id": 13, "name": "B1", "val": 0},
-    {"pos": [440, 180], "orient": "s", "id": 12, "name": "B0", "val": 1}
+    {"pos": [100, 40], "orient": "s", "id": 3, "name": "B3", "val": 1},
+    {"pos": [200, 40], "orient": "s", "id": 0, "name": "B2", "val": 0},
+    {"pos": [300, 40], "orient": "s", "id": 1, "name": "B1", "val": 1},
+    {"pos": [400, 40], "orient": "s", "id": 2, "name": "B0", "val": 1},
+    {"pos": [140, 180], "orient": "s", "id": 15, "name": "A3", "val": 0},
+    {"pos": [240, 180], "orient": "s", "id": 14, "name": "A2", "val": 0},
+    {"pos": [340, 180], "orient": "s", "id": 13, "name": "A1", "val": 0},
+    {"pos": [440, 180], "orient": "s", "id": 12, "name": "A0", "val": 1}
   ],
   "out": [
     {"pos": [30, 450], "orient": "s", "id": 37, "name": "V"},
@@ -303,8 +303,8 @@ On peut aussi forcer une sortie à avoir une valeur autre que sa valeur normale,
     {"pos": [220, 450], "orient": "s", "id": 38, "name": "S2"},
     {"pos": [320, 450], "orient": "s", "id": 39, "name": "S1"},
     {"pos": [420, 450], "orient": "s", "id": 40, "name": "S0"},
-    {"type": "nibble", "pos": [530, 100], "id": [4, 5, 6, 7], "name": "A"},
-    {"type": "nibble", "pos": [530, 240], "id": [8, 9, 10, 11], "name": "B"},
+    {"type": "nibble", "pos": [530, 100], "id": [4, 5, 6, 7], "name": "B"},
+    {"type": "nibble", "pos": [530, 240], "id": [8, 9, 10, 11], "name": "A"},
     {"type": "nibble", "pos": [530, 390], "id": [41, 42, 43, 44], "name": "S"}
   ],
   "components": [
