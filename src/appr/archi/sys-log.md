@@ -250,6 +250,64 @@ il aurait aussi été possible de mettre $S = NON(V\ OU\ NON\ L)$, qui correspon
 }
 ```
 
+Il n'est pas forcément évident de trouver une fonction logique correspondant à une table de vérité donnée. Il s'agit de spécifier l'ensemble des
+lignes de la table de vérité dont la sortie vaut 1. Considérons l'exemple donné par la table de vérité ci-dessous, dont on a numéroté les lignes à droite. 
+```{figure} media/table1.png
+---
+width: 400px
+align: center
+---
+Un exemple de table de vérité. En exprimant Z comme l'union des lignes encadrées et rouge et celles encadrées en vert,
+on obtient $Z=(NON A) OU B$. 
+```
+$A$ étant une des entrées de notre circuit, l'expression logique $A$ correspond
+à toutes les lignes de la table pour lesquelles $A=1$, c'est dire les lignes 3,4 encadrée en bleu dans la table
+ci-dessus. A l'inverse, l'expresssion logique $NON\ A$ correspond à toutes les lignes de la table pour
+lesquelles $A=0$, c'est-dire celles encadrée en rouge.  On peut étendre un ensemble de lignes de la table défini
+par une expression logique en la combinant par un $OU$ avec une autre
+expression logique pour obtenir l'union des ensembles de lignes données par ces deux expressions. Dans notre exemple,
+les lignes pour lesquelles la sortie vaut 1 correspond à l'union des lignes 1,2 encadrées en rouges ($NON\ A$) et celles (2,4)
+encadrées en vert ($B$). On obtient ainsi la fonction logique $Z=(NON\ A) OU\ B$.
+
+Inversément, on peut restreindre cette ensemble
+de ligne en combinant par un $ET$ l'expression logique correspondante avec une autre expresssion logique pour obtenir l'intersection des
+ensembles de lignes donnés par ces deux expresssions. Dans notre exemple ci-dessus, la ligne 3 correspond à l'intersection des blocs bleu ($A$) et
+violet ($NON\ B$), c'est-à-dire à l'expression $A\ ET (NON\ B$). C'est en effet la ligne pour laquelle A vaut 1 et B vaut 0. 
+Enfin, en prenant la négation d'un expression, c'est à dire en mettant un $NON$ devant,
+on prend le compément de l'ensemble des lignes correspondant à cette expression, c'est-à-dire toutes les lignes de la table sauf celles-ci.
+Comme $Z$ vaut 1 pour toutes les lignes sauf la ligne 3, correspondant à $A\ ET (NON\ B)$, on a $Z = NON \big(A\ ET\ (NON\ B)\big)$.
+
+A défaut de trouver une expression plus simple, on peut toujours adopter l'*approche systématique* consistant à "lister" toutes les lignes
+pour lesquelles la sortie vaut 1, séparées par des $OU$. Ainsi dans l'exemple ci-dessus, on obtient, en considérant les lignes 1,2,4,
+$Z=\big((NON\ A) ET\ (NON\ B)\big) OU \big(A\ ET\ (NON\ B)\big) OU \big(A\ ET\ B\big)$. 
+
+
+```{exercise}
+On considère la table de vérité ci-dessous, dont les lignes sont numérotées dans la colonne de gauche.
+|    | $A$ | $B$ | $Z$  |
+|--- |-----|-----|------|
+| 1  | 0   | 0   | 1    |
+| 2  | 0   | 1   | 0    |
+| 3  | 1   | 0   | 1    |
+| 4  | 1   | 1   | 1    |
+
+Donner l'expression logique correspondant aux ensemble de lignes suivantes et en
+déduire deux manières d'exprimer la fonction logique correspondant à cette table de vérité. 
+1. $\{1,3\}$
+1. $\{3,4\}$
+1. $\{2\}$
+
+```
+```{solution}
+1. $NON\ B$
+1. $A$
+1. $(NON\ A) ET\ B$
+La première manière est $Z=A OU (NON\ B)$, c'est-à-dire les lignes 3,4 ou 1,3.
+L'autre manière est $Z=NON\big((NON A) ET\ B\big)$ (toutes les lignes sauf la 2). 
+
+```
+
+
 ## Des valeurs logiques aux nombres binaires
 Du fait de la correspondance entre les valeurs logiques, les valeurs binaires et l'état d'un circuits électronique, on peut interpréter les entrées et
 les sorties d'un circuit logique comme un nombre donné en binaire.
