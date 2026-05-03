@@ -67,7 +67,7 @@ pour indiquer la négation, comme ceci:
 Vérifier que la porte ci-dessus a la même table de vérité (au niveau des entrées et des sorties) que le circuit précédent.
 ```
 
-De la même manière, on définit les porte **NON-OU** et **NON-OU-X** en ajoutant un rond
+De la même manière, on définit les portes **NON-OU** et **NON-OU-X** en ajoutant un rond
 au bout des portes **OU** et **OU-X**. 
 ````{exercise}
 Donner les tables de vérité des portes **NON-OU** et **NON-OU-X** ci-dessous. 
@@ -145,8 +145,8 @@ b. Il s'agit de la porte **OU-X**.
 
 Le nombre de lignes dans la table de vérité d'un circuit logique dépend du nombre d'entrées de ce circuit. 
 ```{exercise}
-a. Combien de ligne a la table de vérité d'un circuit à trois entrées? Et si les circuit a 4 entrées? 
-b. Donner le nombres de lignes de la table de vérité d'un circuit à $n$ entrées.
+a. Combien de lignes a la table de vérité d'un circuit à trois entrées? Et si les circuit a 4 entrées? 
+b. Donner le nombre de lignes de la table de vérité d'un circuit à $n$ entrées.
 ```
 ```{solution}
 a. Un circuit à 3 entrées aura 8 lignes dans sa table de vérité, et un circuit à 4 entrées en aura 16.
@@ -159,7 +159,7 @@ double le nombre de combinaisons possibles d'entrées. (On garde les anciennes c
 La synthèse d'un circuit logique consiste à concevoir le circuit réalisant une certaine fonction. 
 Par exemple, on souhaite réaliser un circuit qui relie un capteur d'humidité planté dans un pot de fleurs à un robinet arrosant ces fleurs et
 qui est actionné électroniquement. Le capteur d'humidité ($H$) retourne un «1» lorsque la terre est humide, et un «0» lorsqu'elle est sèche. 
-Le robinet ($R$) s'ouvre lorsqu'il reçoit un «1» est se ferme lorsqu'il reçoit un «0». On veut déterminer le circuit logique reliant le capteur
+Le robinet ($R$) s'ouvre lorsqu'il reçoit un «1» et se ferme lorsqu'il reçoit un «0». On veut déterminer le circuit logique reliant le capteur
 d'humidité au robinet pour que le robinet s'ouvre lorsque la terre est sèche. 
 
 Ce circuit a une entrée $H$ et une sortie $R$. Sa table de vérité est donc la suivante, si on veut que le robinet s'allume lorsque la terre est sèche et vice-versa: 
@@ -261,24 +261,24 @@ Un exemple de table de vérité. En exprimant Z comme l'union des lignes encadr�
 on obtient $Z=(NON A) OU B$. 
 ```
 $A$ étant une des entrées de notre circuit, l'expression logique $A$ correspond
-à toutes les lignes de la table pour lesquelles $A=1$, c'est dire les lignes 3,4 encadrée en bleu dans la table
-ci-dessus. A l'inverse, l'expresssion logique $NON\ A$ correspond à toutes les lignes de la table pour
+à toutes les lignes de la table pour lesquelles $A=1$, c'est dire les lignes {3, 4} encadrées en bleu dans la table
+ci-dessus. A l'inverse, l'expression logique $NON\ A$ correspond à toutes les lignes de la table pour
 lesquelles $A=0$, c'est-dire celles encadrée en rouge.  On peut étendre un ensemble de lignes de la table défini
 par une expression logique en la combinant par un $OU$ avec une autre
 expression logique pour obtenir l'union des ensembles de lignes données par ces deux expressions. Dans notre exemple,
-les lignes pour lesquelles la sortie vaut 1 correspond à l'union des lignes 1,2 encadrées en rouges ($NON\ A$) et celles (2,4)
-encadrées en vert ($B$). On obtient ainsi la fonction logique $Z=(NON\ A) OU\ B$.
+les lignes pour lesquelles la sortie vaut 1 correspond à l'union des lignes {1, 2} encadrées en rouge ($NON\ A$) et celles {2, 4}
+encadrées en vert ($B$). On obtient ainsi la fonction logique $Z=(NON\ A)  OU\ B$.
 
-Inversément, on peut restreindre cette ensemble
+Inversément, on peut restreindre cet ensemble
 de ligne en combinant par un $ET$ l'expression logique correspondante avec une autre expresssion logique pour obtenir l'intersection des
-ensembles de lignes donnés par ces deux expresssions. Dans notre exemple ci-dessus, la ligne 3 correspond à l'intersection des blocs bleu ($A$) et
+ensembles de lignes donnés par ces deux expresssions. Dans notre exemple ci-dessus, la ligne {3} correspond à l'intersection des blocs bleu ($A$) et
 violet ($NON\ B$), c'est-à-dire à l'expression $A\ ET (NON\ B$). C'est en effet la ligne pour laquelle A vaut 1 et B vaut 0. 
 Enfin, en prenant la négation d'un expression, c'est à dire en mettant un $NON$ devant,
-on prend le compément de l'ensemble des lignes correspondant à cette expression, c'est-à-dire toutes les lignes de la table sauf celles-ci.
-Comme $Z$ vaut 1 pour toutes les lignes sauf la ligne 3, correspondant à $A\ ET (NON\ B)$, on a $Z = NON \big(A\ ET\ (NON\ B)\big)$.
+on prend le complément de l'ensemble des lignes correspondant à cette expression, c'est-à-dire toutes les lignes de la table sauf celles-ci.
+Comme $Z$ vaut 1 pour toutes les lignes sauf la ligne {3}, correspondant à $A\ ET (NON\ B)$, on a $Z = NON \big(A\ ET\ (NON\ B)\big)$.
 
 A défaut de trouver une expression plus simple, on peut toujours adopter l'*approche systématique* consistant à "lister" toutes les lignes
-pour lesquelles la sortie vaut 1, séparées par des $OU$. Ainsi dans l'exemple ci-dessus, on obtient, en considérant les lignes 1,2,4,
+pour lesquelles la sortie vaut 1, séparées par des $OU$. Ainsi dans l'exemple ci-dessus, on obtient, en considérant les lignes {1, 2, 4}
 $Z=\big((NON\ A) ET\ (NON\ B)\big) OU \big(A\ ET\ (NON\ B)\big) OU \big(A\ ET\ B\big)$. 
 
 
@@ -293,9 +293,9 @@ On considère la table de vérité ci-dessous, dont les lignes sont numérotées
 
 Donner l'expression logique correspondant aux ensemble de lignes suivantes et en
 déduire deux manières d'exprimer la fonction logique correspondant à cette table de vérité. 
-1. $\{1,3\}$
-1. $\{3,4\}$
-1. $\{2\}$
+1. Les lignes $\{1,3\}$
+1. Les lignes $\{3,4\}$
+1. Les lignes $\{2\}$
 
 ```
 ```{solution}
@@ -309,7 +309,7 @@ L'autre manière est $Z=NON\big((NON A) ET\ B\big)$ (toutes les lignes sauf la 2
 
 
 ## Des valeurs logiques aux nombres binaires
-Du fait de la correspondance entre les valeurs logiques, les valeurs binaires et l'état d'un circuits électronique, on peut interpréter les entrées et
+Du fait de la correspondance entre les valeurs logiques, les valeurs binaires et l'état d'un circuit électronique, on peut interpréter les entrées et
 les sorties d'un circuit logique comme un nombre donné en binaire.
 
 
