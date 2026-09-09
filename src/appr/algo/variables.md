@@ -1,0 +1,1 @@
+Pour arriver à résoudre un problème il faut arriver à se mettre dans la peau d'une machine. En fait il s'agit de connaitre les actions dont la machine est capable et d'exprimer la solution en actions opérationnalisables. Les opérations d'une machine sont par exemple de stocker une valeur en mémoire et de faire de simples calculs mathématiques.

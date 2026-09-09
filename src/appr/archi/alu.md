@@ -766,5 +766,5 @@ Si les éléments de base sont simples, la complexité et la richesse des expér
 ````
 
 ````{didyouknow}
-On peut aussi contruire une ALU dans Minecraft. En fait, on peut faire plus, et même simuler un petit microprocesseur. Découvrez comment dans [cette vidéo](https://www.youtube.com/watch?v=8iLduIDZVE4).
+Un élève de première année de gymnase nous a fait découvrir que l'on peut contruire une ALU dans Minecraft et même y simuler un petit microprocesseur. Découvrez comment dans [cette vidéo](https://www.youtube.com/watch?v=8iLduIDZVE4).
 ````
