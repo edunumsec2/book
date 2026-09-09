@@ -109,7 +109,9 @@ Avec le bouton **Pause** vous pouvez arrêter l'horloge.
 
 Les affichages à 7 segments permettent d'afficher des chiffres à l'aide de 7 diodes lumineuses (LED).
 
-![LED](https://electronics-fun.com/wp-content/uploads/2020/11/Seven-segment-display.png)
+```{figure} media/afficheur_7_segments.png
+:width: 25%
+```
 
 - Ajoutez les entrées et les lampes qui manquent pour compléter cet affichage à 7 segments.
 - Tournez la barre avec *Affichage > Barre verticale*
