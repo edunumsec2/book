@@ -308,6 +308,27 @@ L'autre manière est $Z=NON\big((NON A) ET\ B\big)$ (toutes les lignes sauf la 2
 ```
 
 
+```{exercise}
+Déterminer la fonction logique correspondant à la table de vérité suivante: 
+| $A$ | $B$ | $C$ | $Z$  |
+|--- |-----|-----|------|
+| 0  | 0   | 0   | 1    |
+| 0  | 0   | 1   | 1    |
+| 0  | 1   | 0   | 0    |
+| 0  | 1   | 1   | 0    |
+| 1  | 0   | 0   | 0    |
+| 1  | 0   | 1   | 1    |
+| 1  | 1   | 0   | 0    |
+| 1  | 1   | 1   | 1    |
+
+```
+```{solution}
+Plusieurs solutions sont possibles, par exemple
+
+$Z = \big((NON\ A) ET (NON\ B)\big) OU (A\ ET\ C)$
+
+$Z = \big(NON (A\ OU\ B)\big) OU (A\ ET\ C)$
+```
 ## Des valeurs logiques aux nombres binaires
 Du fait de la correspondance entre les valeurs logiques, les valeurs binaires et l'état d'un circuits électronique, on peut interpréter les entrées et
 les sorties d'un circuit logique comme un nombre donné en binaire.
