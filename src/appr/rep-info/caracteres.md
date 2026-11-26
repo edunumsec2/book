@@ -226,10 +226,10 @@ Chaque caractère non ASCII (c'est à dire dont le point de code - ici le codage
 
 Reprenons la table ASCII de la figure 8 et la [table UTF-8](https://www.utf8-chartable.de/unicode-utf8-table.pl?number=512&utf8=dec) : on observe que le signe ~ par exemple est sur la table ASCII à l'adresse décimale 126 (01111110 en binaire), et sera donc à la même adresse sur la table UTF-8. Même chose pour le caractère suivant, qui est le caractère de contrôle *del* qui se trouve à l'adresse 127 (01111111 en binaire). En revanche, le caractère suivant, qui est également un caractère de contrôle, bien évidemment n'apparaît plus sur la table ASCII ; sur la table [table UTF-8](https://www.utf8-chartable.de/unicode-utf8-table.pl?number=512&utf8=dec), l'adresse décimale est 194 128.
 
-Si l'on prend à présent, par exemple, le caractère «æ», on lit sur la table UTF-8 : 195 166, soit, en binaire : 11000011 10100110.
+Si l'on prend à présent, par exemple, le caractère «æ», on lit sur la table UTF-8 : **195** 166, soit, en binaire : **11000011** 10100110.
 
-On constate bien le passage du codage sur deux octets. L'adresse décimale 195 du premier octet correspond a la valeur binaire 11000011. On retrouve la suite de deux "1" en début de ce premier octet en partant de la gauche, indiquant ce codage total sur deux octets ; il reste 000011 pour la charge utile du premier octet du codage UTF-8. L'adresse décimale de 166 est 10100110 et commence donc bien par 10 comme bits de poids fort ; la charge utile du deuxième octet du codage UTF-8 est donc 100110.
-L'encodage binaire UTF-8 global s'écrit donc, en concaténant les deux charges utiles : 000011100110, ce qui correspond à 230 en décimal, valeur qu'on peut vérifier sur cette autre [table UTF-8](https://kellykjones.tripod.com/webtools/ascii_utf8_table.html) indiquant également le codage décimal.
+On constate bien le passage du codage sur deux octets. L'adresse décimale **195** du premier octet correspond a la valeur binaire **11000011**. On retrouve la suite de deux "1" suivis d'un "0" en début de ce premier octet en partant de la gauche, indiquant ce codage total sur deux octets ; il reste **00011** pour la charge utile du premier octet du codage UTF-8. L'adresse décimale de 166 est 10100110 et commence donc bien par 10 comme bits de poids fort ; la charge utile du deuxième octet du codage UTF-8 est donc 100110.
+L'encodage binaire UTF-8 global s'écrit donc, en concaténant les deux charges utiles : **00011**100110, ce qui correspond à 230 en décimal, valeur qu'on peut vérifier sur cette autre [table UTF-8](https://kellykjones.tripod.com/webtools/ascii_utf8_table.html) indiquant également le codage décimal.
 
 ```{image} media/UTF8_exemples.png
 :width: 500
